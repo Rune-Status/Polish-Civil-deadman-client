@@ -1,14 +1,11 @@
 package com.jagex.runescape;
 
-import java.math.BigInteger;
-
 public final class TextureSampler31 extends AbstractTextureSampler {
 
   private static GameString aClass94_3170 = GameString.create("Loaded textures");
   public static int anInt3158 = -8 + (int) (17.0D * Math.random());
   public static FileCacheRequester fileCacheRequester;
   public static GameString UNDERSCORE = GameString.create("_");
-  public static BigInteger PUBLIC_EXPONENT = new BigInteger("65537");
   public static boolean aBoolean3166;
   public static GameString aClass94_3168 = GameString.create("cross");
   public static GameString aClass94_3169 = GameString.create("Lade Sprites )2 ");
@@ -139,7 +136,7 @@ public final class TextureSampler31 extends AbstractTextureSampler {
   public static void method238(int var0) {
     try {
       if (var0 == 9423) {
-        TextureSampler31.PUBLIC_EXPONENT = null;
+        RSAConfiguration.PUBLIC_EXPONENT = null;
         TextureSampler31.aClass94_3169 = null;
         TextureSampler31.anIntArray3171 = null;
         TextureSampler31.fileCacheRequester = null;

@@ -208,7 +208,7 @@ public final class ClientScriptEnum extends SubNode {
         || ~AbstractSomethingTexture.anInt1108 <= ~var4)) {
         if (-1 == ~var3) {
           byte[] var8 = new byte[var4];
-          var2.method764(0, var4, var8, (byte) 93);
+          var2.copy(0, var4, var8);
           return var8;
         } else {
           int var5 = var2.readInt();

@@ -117,7 +117,7 @@ public final class MidiInstrument extends Node {
       } while (var6 >= 255);
 
       byte[] var7 = new byte[var5];
-      var2.method764(0, var5, var7, (byte) 93);
+      var2.copy(0, var5, var7);
       this.aByteArrayArray2410[var4] = var7;
     }
 

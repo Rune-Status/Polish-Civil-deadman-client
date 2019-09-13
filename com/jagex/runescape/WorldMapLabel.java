@@ -203,9 +203,8 @@ public final class WorldMapLabel {
           var4.writeInt((int) (Math.random() * 9.9999999E7D));
           var4.writeString(GroundItemNode.password);
           var4.writeInt((int) (Math.random() * 9.9999999E7D));
-          int var5 = 9 / ((var3 - 29) / 60);
-          var4.encipherRSA(TextureSampler31.PUBLIC_EXPONENT,
-              TextureSampler10.MODULUS);
+          var4.encipherRSA(RSAConfiguration.PUBLIC_EXPONENT,
+              RSAConfiguration.MODULUS);
           TextureSampler12.secureBuffer.position = 0;
           TextureSampler12.secureBuffer.writeByte(210);
           TextureSampler12.secureBuffer.writeByte(var4.position);

@@ -9,7 +9,8 @@ public final class ISAACCipher {
 
   public static GameString aClass94_965 = GameString.create(":duelfriend:");
   public static int anInt969;
-  public static GameString aClass94_973 = GameString.create(" de votre liste noire)3");
+  public static GameString aClass94_973 = GameString
+      .create(" de votre liste noire)3");
   private int anInt966;
   private int anInt967;
   private int anInt968;
@@ -17,11 +18,7 @@ public final class ISAACCipher {
   private int[] anIntArray971;
   private int anInt972;
 
-
-  private ISAACCipher() {
-  }
-
-  public ISAACCipher(int[] var1 ) {
+  public ISAACCipher(int[] var1) {
     try {
       this.anIntArray970 = new int[256];
       this.anIntArray971 = new int[256];
@@ -33,7 +30,7 @@ public final class ISAACCipher {
       this.method1227(true);
     } catch (RuntimeException var3) {
       throw AbstractGameWorld.cascadeException(var3,
-        "ij.<init>(" + (var1 != null ? "{...}" : "null") + ')');
+          "ij.<init>(" + (var1 != null ? "{...}" : "null") + ')');
     }
   }
 
@@ -173,21 +170,12 @@ public final class ISAACCipher {
     }
   }
 
-  public int getNextValue(int var1 ) {
-    try {
-      if (this.anInt968-- == 0) {
-        this.method1229(-1879);
-        this.anInt968 = 255;
-      }
-
-      if (var1 != -9356) {
-        this.getNextValue(-128);
-      }
-
-      return this.anIntArray970[this.anInt968];
-    } catch (RuntimeException var3) {
-      throw AbstractGameWorld.cascadeException(var3, "ij.C(" + var1 + ')');
+  public int getNextValue() {
+    if (this.anInt968-- == 0) {
+      this.method1229(-1879);
+      this.anInt968 = 255;
     }
+    return this.anIntArray970[this.anInt968];
   }
 
   private void method1229(int var1) {
@@ -215,9 +203,12 @@ public final class ISAACCipher {
         this.anInt972 += this.anIntArray971[128 + var2 & 255];
         int var4;
         this.anIntArray971[var2] = var4 =
-            this.anInt967 + this.anInt972 + this.anIntArray971[ClientScript.bitAnd(var3, 1020) >> 2];
+            this.anInt967 + this.anInt972 + this.anIntArray971[
+                ClientScript.bitAnd(var3, 1020) >> 2];
         this.anIntArray970[var2] =
-            this.anInt967 = var3 + this.anIntArray971[ClientScript.bitAnd(261347, var4) >> 8 >> 2];
+            this.anInt967 =
+                var3 + this.anIntArray971[ClientScript.bitAnd(261347, var4) >> 8
+                    >> 2];
         ++var2;
       }
 
@@ -233,63 +224,73 @@ public final class ISAACCipher {
       int var4 = SomethingQuickChat2.anInt3537;
       int var3 = SomethingWorldMapy.anInt3552;
       if (TextureSampler27.aClass3_Sub28_Sub16_3099 == null
-        || null == DummyClass58.aClass3_Sub28_Sub16_1457) {
-        if (Projectile.sprites.isLoaded(GameWorldSomething.anInt502) && Projectile.sprites.isLoaded(
-          DummyClass54.anInt1400)) {
+          || null == DummyClass58.aClass3_Sub28_Sub16_1457) {
+        if (Projectile.sprites.isLoaded(GameWorldSomething.anInt502)
+            && Projectile.sprites.isLoaded(
+            DummyClass54.anInt1400)) {
           TextureSampler27.aClass3_Sub28_Sub16_3099 =
-            AbstractObjectNode.method562(Projectile.sprites, 0, GameWorldSomething.anInt502,
-              (byte) 39);
+              AbstractObjectNode
+                  .method562(Projectile.sprites, 0, GameWorldSomething.anInt502,
+                      (byte) 39);
           DummyClass58.aClass3_Sub28_Sub16_1457 =
-            AbstractObjectNode.method562(Projectile.sprites, 0, DummyClass54.anInt1400, (byte) 39);
+              AbstractObjectNode
+                  .method562(Projectile.sprites, 0, DummyClass54.anInt1400,
+                      (byte) 39);
           if (GlRenderer.useOpenGlRenderer) {
             if (TextureSampler27.aClass3_Sub28_Sub16_3099 instanceof SoftwareDirectFullColorSprite) {
               TextureSampler27.aClass3_Sub28_Sub16_3099 = new GlDirectFullColorSprite(
-                (SoftwareDirectColorSprite) TextureSampler27.aClass3_Sub28_Sub16_3099);
+                  (SoftwareDirectColorSprite) TextureSampler27.aClass3_Sub28_Sub16_3099);
             } else {
               TextureSampler27.aClass3_Sub28_Sub16_3099 = new GlDirectColorSprite(
-                (SoftwareDirectColorSprite) TextureSampler27.aClass3_Sub28_Sub16_3099);
+                  (SoftwareDirectColorSprite) TextureSampler27.aClass3_Sub28_Sub16_3099);
             }
 
             if (DummyClass58.aClass3_Sub28_Sub16_1457 instanceof SoftwareDirectFullColorSprite) {
               DummyClass58.aClass3_Sub28_Sub16_1457 = new GlDirectFullColorSprite(
-                (SoftwareDirectColorSprite) DummyClass58.aClass3_Sub28_Sub16_1457);
+                  (SoftwareDirectColorSprite) DummyClass58.aClass3_Sub28_Sub16_1457);
             } else {
               DummyClass58.aClass3_Sub28_Sub16_1457 = new GlDirectColorSprite(
-                (SoftwareDirectColorSprite) DummyClass58.aClass3_Sub28_Sub16_1457);
+                  (SoftwareDirectColorSprite) DummyClass58.aClass3_Sub28_Sub16_1457);
             }
           }
         } else if (GlRenderer.useOpenGlRenderer) {
-          GlUtils.fillQuad(var1, var2, var3, 20, WidgetUpdate.anInt3600, -FileTable.anInt963 + 256);
+          GlUtils.fillQuad(var1, var2, var3, 20, WidgetUpdate.anInt3600,
+              -FileTable.anInt963 + 256);
         } else {
           DummyClass47.method1312(var1, var2, var3, 20, WidgetUpdate.anInt3600,
-            -FileTable.anInt963 + 256);
+              -FileTable.anInt963 + 256);
         }
       }
 
       int var5;
       int var6;
       if (TextureSampler27.aClass3_Sub28_Sub16_3099 != null
-        && DummyClass58.aClass3_Sub28_Sub16_1457 != null) {
+          && DummyClass58.aClass3_Sub28_Sub16_1457 != null) {
         var5 = var3 / TextureSampler27.aClass3_Sub28_Sub16_3099.anInt3707;
 
         for (var6 = 0; ~var5 < ~var6; ++var6) {
           TextureSampler27.aClass3_Sub28_Sub16_3099.method643(
-            var6 * TextureSampler27.aClass3_Sub28_Sub16_3099.anInt3707 + var1, var2);
+              var6 * TextureSampler27.aClass3_Sub28_Sub16_3099.anInt3707 + var1,
+              var2);
         }
 
         DummyClass58.aClass3_Sub28_Sub16_1457.method643(var1, var2);
         DummyClass58.aClass3_Sub28_Sub16_1457.method641(
-          -DummyClass58.aClass3_Sub28_Sub16_1457.anInt3707 + (var1 - -var3), var2);
+            -DummyClass58.aClass3_Sub28_Sub16_1457.anInt3707 + (var1 - -var3),
+            var2);
       }
 
-      FloorOverlay.aClass3_Sub28_Sub17_2096.method681(SomethingTexture4.aClass94_2667, var1 - -3,
-        14 + var2, TextureSampler32.anInt3351, -1);
+      FloorOverlay.aClass3_Sub28_Sub17_2096
+          .method681(SomethingTexture4.aClass94_2667, var1 - -3,
+              14 + var2, TextureSampler32.anInt3351, -1);
       if (GlRenderer.useOpenGlRenderer) {
-        GlUtils.fillQuad(var1, 20 + var2, var3, var4 - 20, WidgetUpdate.anInt3600,
-          -FileTable.anInt963 + 256);
+        GlUtils
+            .fillQuad(var1, 20 + var2, var3, var4 - 20, WidgetUpdate.anInt3600,
+                -FileTable.anInt963 + 256);
       } else {
-        DummyClass47.method1312(var1, 20 + var2, var3, -20 + var4, WidgetUpdate.anInt3600,
-          -FileTable.anInt963 + 256);
+        DummyClass47.method1312(var1, 20 + var2, var3, -20 + var4,
+            WidgetUpdate.anInt3600,
+            -FileTable.anInt963 + 256);
       }
 
       var6 = HashTable.anInt1709;
@@ -301,29 +302,39 @@ public final class ISAACCipher {
       int var7;
       int var8;
       for (var7 = 0; TextureSampler25.amountContextActions > var7; ++var7) {
-        var8 = (-var7 + TextureSampler25.amountContextActions - 1) * 15 + var2 + 35;
-        if (var1 < var5 && var5 < var1 - -var3 && ~var6 < ~(-13 + var8) && ~var6 > ~(var8 + 3)) {
+        var8 = (-var7 + TextureSampler25.amountContextActions - 1) * 15 + var2
+            + 35;
+        if (var1 < var5 && var5 < var1 - -var3 && ~var6 < ~(-13 + var8)
+            && ~var6 > ~(var8 + 3)) {
           if (GlRenderer.useOpenGlRenderer) {
             GlUtils.fillQuad(var1, var8 + -13, var3, 16, Mouse.anInt1926,
-              -SceneShadowMap.anInt1771 + 256);
+                -SceneShadowMap.anInt1771 + 256);
           } else {
             DummyClass47.method1312(var1, var8 + -13, var3, 16, Mouse.anInt1926,
-              -SceneShadowMap.anInt1771 + 256);
+                -SceneShadowMap.anInt1771 + 256);
           }
         }
       }
 
       if ((DummyClass53.aClass3_Sub28_Sub16_1339 == null
-        || VertexNormal.aClass3_Sub28_Sub16_824 == null
-        || null == MonoChromaticImageBuffer.aClass3_Sub28_Sub16_2560)
-        && Projectile.sprites.isLoaded(DummyClass39.anInt739) && Projectile.sprites.isLoaded(
-        BitVariable.anInt1126) && Projectile.sprites.isLoaded(GroundItem.anInt2937)) {
+          || VertexNormal.aClass3_Sub28_Sub16_824 == null
+          || null == MonoChromaticImageBuffer.aClass3_Sub28_Sub16_2560)
+          && Projectile.sprites.isLoaded(DummyClass39.anInt739)
+          && Projectile.sprites.isLoaded(
+          BitVariable.anInt1126) && Projectile.sprites
+          .isLoaded(GroundItem.anInt2937)) {
         DummyClass53.aClass3_Sub28_Sub16_1339 =
-          AbstractObjectNode.method562(Projectile.sprites, 0, DummyClass39.anInt739, (byte) 39);
+            AbstractObjectNode
+                .method562(Projectile.sprites, 0, DummyClass39.anInt739,
+                    (byte) 39);
         VertexNormal.aClass3_Sub28_Sub16_824 =
-          AbstractObjectNode.method562(Projectile.sprites, 0, BitVariable.anInt1126, (byte) 39);
+            AbstractObjectNode
+                .method562(Projectile.sprites, 0, BitVariable.anInt1126,
+                    (byte) 39);
         MonoChromaticImageBuffer.aClass3_Sub28_Sub16_2560 =
-          AbstractObjectNode.method562(Projectile.sprites, 0, GroundItem.anInt2937, (byte) 39);
+            AbstractObjectNode
+                .method562(Projectile.sprites, 0, GroundItem.anInt2937,
+                    (byte) 39);
         if (GlRenderer.useOpenGlRenderer) {
           if (DummyClass53.aClass3_Sub28_Sub16_1339 instanceof SoftwareDirectFullColorSprite) {
             DummyClass53.aClass3_Sub28_Sub16_1339 = new GlDirectFullColorSprite(
@@ -353,46 +364,56 @@ public final class ISAACCipher {
 
       int var9;
       if (DummyClass53.aClass3_Sub28_Sub16_1339 != null
-        && null != VertexNormal.aClass3_Sub28_Sub16_824
-        && null != MonoChromaticImageBuffer.aClass3_Sub28_Sub16_2560) {
+          && null != VertexNormal.aClass3_Sub28_Sub16_824
+          && null != MonoChromaticImageBuffer.aClass3_Sub28_Sub16_2560) {
         var7 = var3 / DummyClass53.aClass3_Sub28_Sub16_1339.anInt3707;
 
         for (var8 = 0; var7 > var8; ++var8) {
           DummyClass53.aClass3_Sub28_Sub16_1339.method643(
-            var1 + DummyClass53.aClass3_Sub28_Sub16_1339.anInt3707 * var8,
-            var4 + var2 + -DummyClass53.aClass3_Sub28_Sub16_1339.anInt3696);
+              var1 + DummyClass53.aClass3_Sub28_Sub16_1339.anInt3707 * var8,
+              var4 + var2 + -DummyClass53.aClass3_Sub28_Sub16_1339.anInt3696);
         }
 
         var8 = (-20 + var4) / VertexNormal.aClass3_Sub28_Sub16_824.anInt3696;
 
         for (var9 = 0; var9 < var8; ++var9) {
           VertexNormal.aClass3_Sub28_Sub16_824.method643(var1,
-            var2 + 20 + var9 * VertexNormal.aClass3_Sub28_Sub16_824.anInt3696);
+              var2 + 20
+                  + var9 * VertexNormal.aClass3_Sub28_Sub16_824.anInt3696);
           VertexNormal.aClass3_Sub28_Sub16_824.method641(
-            var1 - (-var3 - -VertexNormal.aClass3_Sub28_Sub16_824.anInt3707),
-            var2 + 20 + var9 * VertexNormal.aClass3_Sub28_Sub16_824.anInt3696);
+              var1 - (-var3 - -VertexNormal.aClass3_Sub28_Sub16_824.anInt3707),
+              var2 + 20
+                  + var9 * VertexNormal.aClass3_Sub28_Sub16_824.anInt3696);
         }
 
         MonoChromaticImageBuffer.aClass3_Sub28_Sub16_2560.method643(var1,
-          var4 + (var2 - MonoChromaticImageBuffer.aClass3_Sub28_Sub16_2560.anInt3696));
+            var4 + (var2
+                - MonoChromaticImageBuffer.aClass3_Sub28_Sub16_2560.anInt3696));
         MonoChromaticImageBuffer.aClass3_Sub28_Sub16_2560.method641(
-          var1 + var3 - MonoChromaticImageBuffer.aClass3_Sub28_Sub16_2560.anInt3707,
-          var2 - -var4 + -MonoChromaticImageBuffer.aClass3_Sub28_Sub16_2560.anInt3696);
+            var1 + var3
+                - MonoChromaticImageBuffer.aClass3_Sub28_Sub16_2560.anInt3707,
+            var2 - -var4
+                + -MonoChromaticImageBuffer.aClass3_Sub28_Sub16_2560.anInt3696);
       }
 
       for (var7 = 0; var7 < TextureSampler25.amountContextActions; ++var7) {
-        var8 = 15 * (TextureSampler25.amountContextActions - 1 + -var7) + var2 + 35;
+        var8 = 15 * (TextureSampler25.amountContextActions - 1 + -var7) + var2
+            + 35;
         var9 = TextureSampler32.anInt3351;
-        if (var1 < var5 && var3 + var1 > var5 && ~(var8 - 13) > ~var6 && ~var6 > ~(var8 - -3)) {
+        if (var1 < var5 && var3 + var1 > var5 && ~(var8 - 13) > ~var6
+            && ~var6 > ~(var8 - -3)) {
           var9 = DummyClass14.anInt1957;
         }
 
-        FloorOverlay.aClass3_Sub28_Sub17_2096.method681(Buffer.method802(var7, true), 3 + var1,
-          var8, var9, 0);
+        FloorOverlay.aClass3_Sub28_Sub17_2096
+            .method681(Buffer.method802(var7, true), 3 + var1,
+                var8, var9, 0);
       }
 
-      LinearHashTable.method1282(AbstractIndexedColorSprite.anInt1462, (byte) 122,
-        TextureSampler29.anInt3395, SomethingQuickChat2.anInt3537, SomethingWorldMapy.anInt3552);
+      LinearHashTable
+          .method1282(AbstractIndexedColorSprite.anInt1462, (byte) 122,
+              TextureSampler29.anInt3395, SomethingQuickChat2.anInt3537,
+              SomethingWorldMapy.anInt3552);
     } catch (RuntimeException var10) {
       throw AbstractGameWorld.cascadeException(var10, "ij.F(" + var0 + ')');
     }
@@ -447,7 +468,7 @@ public final class ISAACCipher {
       }
     } catch (RuntimeException var5) {
       throw AbstractGameWorld.cascadeException(var5,
-        "ij.B(" + (var0 != null ? "{...}" : "null") + ',' + var1 + ')');
+          "ij.B(" + (var0 != null ? "{...}" : "null") + ',' + var1 + ')');
     }
   }
 

@@ -15,8 +15,6 @@ import com.jagex.runescape.opengl.Texture;
 import com.jagex.runescape.opengl.WaterShader;
 import com.jagex.runescape.opengl.shader.MaterialShader4;
 import com.jagex.runescape.opengl.shader.MaterialShader5;
-import com.jogamp.opengl.Threading;
-import com.jogamp.opengl.awt.GLCanvas;
 import java.awt.Component;
 import java.awt.Graphics;
 import java.awt.Insets;
@@ -1084,7 +1082,7 @@ public final class GameClient extends GameStub {
       HashTable.method1774(103);
       AbstractMouseWheel.method2081(0);
       ClanChatUser.method387(103);
-      SomethingPacket116.method1802(25);
+      SomethingPacket116.method1802();
       AudioStreamEncoder4.method491((byte) 85);
       AbstractAudioOutputStream.method2165(0);
       SomethingAudio.method2175((byte) -110);

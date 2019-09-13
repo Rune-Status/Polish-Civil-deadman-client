@@ -363,40 +363,21 @@ public class Buffer extends Node {
   }
 
   public final byte readByteNegate() {
-    try {
       return (byte) (-this.bytes[this.position++]);
-    } catch (RuntimeException var3) {
-      throw AbstractGameWorld.cascadeException(var3, "wa.BC()");
-    }
+
   }
 
-  public final void method764(int var1, int var2, byte[] var3, byte var4) {
-    try {
-      if (var4 != 93) {
-        Buffer.method802(122, true);
-      }
-
-      for (int var5 = var1; var1 + var2 > var5; ++var5) {
-        var3[var5] = this.bytes[this.position++];
-      }
-
-    } catch (RuntimeException var6) {
-      throw AbstractGameWorld.cascadeException(
-          var6, "wa.SB(" + var1 + ',' + var2 + ',' +
-              (var3 != null ? "{...}" : "null") + ',' + var4 + ')');
+  public final void copy(int offset, int size, byte[] data) {
+    for (int index = offset; offset + size > index; ++index) {
+      data[index] = this.bytes[this.position++];
     }
   }
 
   public final void method765(int var1, byte var2) {
-    try {
       this.bytes[this.position++] = (byte) (var1 + 128);
       if (var2 == 3) {
         this.bytes[this.position++] = (byte) (var1 >> 8);
       }
-    } catch (RuntimeException var4) {
-      throw AbstractGameWorld.cascadeException(var4, "wa.MA(" + var1 + ',' +
-          var2 + ')');
-    }
   }
 
   public final int readUnsignedShortLE() {
@@ -712,6 +693,7 @@ public class Buffer extends Node {
           -(this.bytes[-2 + this.position] - 128 & 255);
       if (var1 != -1741292848) {
         //TODO rsa
+        System.out.println("Buffer.method788");
         this.encipherRSA(null, null);
       }
 
@@ -833,23 +815,17 @@ public class Buffer extends Node {
     }
   }
 
-  public final void encipherRSA(BigInteger var1, BigInteger var2) {
-    try {
-      int var4 = this.position;
-      this.position = 0;
-      byte[] var5 = new byte[var4];
-      this.method764(0, var4, var5, (byte) 93);
-      BigInteger var6 = new BigInteger(var5);
-      BigInteger var7 = var6.modPow(var1, var2);
-      byte[] var8 = var7.toByteArray();
-      this.position = 0;
-      this.writeByte(var8.length);
-      this.write(var8, 0, var8.length);
-    } catch (RuntimeException var9) {
-      throw AbstractGameWorld.cascadeException(
-          var9, "wa.KB(" + (var1 != null ? "{...}" : "null") + ',' +
-              (var2 != null ? "{...}" : "null") + ')');
-    }
+  public final void encipherRSA(BigInteger exponent, BigInteger modulus) {
+    int var4 = this.position;
+    this.position = 0;
+    byte[] var5 = new byte[var4];
+    this.copy(0, var4, var5);
+    BigInteger var6 = new BigInteger(var5);
+    BigInteger var7 = var6.modPow(exponent, modulus);
+    byte[] var8 = var7.toByteArray();
+    this.position = 0;
+    this.writeByte(var8.length);
+    this.write(var8, 0, var8.length);
   }
 
   public final void writeFloat(float var2) {

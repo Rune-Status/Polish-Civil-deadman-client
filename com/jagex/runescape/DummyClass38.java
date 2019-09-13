@@ -115,7 +115,7 @@ public final class DummyClass38 {
         var4 = SpotAnimationConfig.gameBuffer.method751((byte) -118);
         byte[] var16 = new byte[var4];
         Buffer var19 = new Buffer(var16);
-        SpotAnimationConfig.gameBuffer.method764(0, var4, var16, (byte) 93);
+        SpotAnimationConfig.gameBuffer.copy(0, var4, var16);
         DummyClass45.configs[var1] = var19;
         var3.parseConfig(var19);
       }

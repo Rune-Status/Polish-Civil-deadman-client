@@ -15,38 +15,36 @@ public class DummyClass5 extends DummyClass6 {
   public static int anInt2993;
   public static int anInt2994;
   public static GameString aClass94_2995 =
-    GameString.create("Veuillez commencer par supprimer ");
+      GameString.create("Veuillez commencer par supprimer ");
   public static GameString aClass94_2991 = DummyClass5.aClass94_2988;
   public static GameString aClass94_2992 = DummyClass5.aClass94_2988;
 
   public static void method2210(byte var0, boolean var1) {
-    try {
-      DummyClass43.method1194(-16385);
-      if (30 == DummyClass15.state || ~DummyClass15.state == -26) {
-        ++TextureSampler18.anInt4032;
-        if (~TextureSampler18.anInt4032 <= -51 || var1) {
-          TextureSampler18.anInt4032 = 0;
-          if (var0 == -90) {
-            if (!GlTexture2d.aBoolean3769 && SomethingVolume15.gameSocket != null) {
-              TextureSampler12.secureBuffer.writePacket(93);
+    DummyClass43.method1194(-16385);
+    if (30 == DummyClass15.state || ~DummyClass15.state == -26) {
+      ++TextureSampler18.anInt4032;
+      if (~TextureSampler18.anInt4032 <= -51 || var1) {
+        TextureSampler18.anInt4032 = 0;
+        if (var0 == -90) {
+          if (!GlTexture2d.aBoolean3769
+              && SomethingVolume15.gameSocket != null) {
+            TextureSampler12.secureBuffer.writePacket(93);
 
-              try {
-                SomethingVolume15.gameSocket.write(TextureSampler12.secureBuffer.bytes, 0,
-                  TextureSampler12.secureBuffer.position);
-                TextureSampler12.secureBuffer.position = 0;
-              } catch (IOException var3) {
-                GlTexture2d.aBoolean3769 = true;
-              }
-
-              ++SomethingQuickChat.anInt3569;
+            try {
+              SomethingVolume15.gameSocket
+                  .write(TextureSampler12.secureBuffer.bytes, 0,
+                      TextureSampler12.secureBuffer.position);
+              TextureSampler12.secureBuffer.position = 0;
+            } catch (IOException var3) {
+              GlTexture2d.aBoolean3769 = true;
             }
 
-            DummyClass43.method1194(var0 ^ 16473);
+            ++SomethingQuickChat.anInt3569;
           }
+
+          DummyClass43.method1194(var0 ^ 16473);
         }
       }
-    } catch (RuntimeException var4) {
-      throw AbstractGameWorld.cascadeException(var4, "ah.B(" + var0 + ',' + var1 + ')');
     }
   }
 

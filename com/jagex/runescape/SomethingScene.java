@@ -46,14 +46,10 @@ public final class SomethingScene {
   public static void method1293(boolean var0) {
     try {
       if (!ProjectileNode.aBoolean3779 && ~AbstractGameWorld.usageLocation != -3) {
-        try {
           DummyInputStream.aClass94_38.method1577(-1857);
           if (!var0) {
             SomethingScene.toString(1);
           }
-        } catch (Throwable var2) {
-        }
-
       }
     } catch (RuntimeException var3) {
       throw AbstractGameWorld.cascadeException(var3, "jj.G(" + var0 + ')');

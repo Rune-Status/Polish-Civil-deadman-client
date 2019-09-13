@@ -1,17 +1,13 @@
 package com.jagex.runescape;
 
-import java.math.BigInteger;
-
 public final class TextureSampler10 extends AbstractTextureSampler {
 
   public static int anInt3439;
   public static SoftwareFont aClass3_Sub28_Sub17_Sub1_3440;
-  public static BigInteger MODULUS = new BigInteger(
-      "8103933979734482506060656796932900764899744419522781041883412376669633281050727354383061148356295236738745674596363872065761750284786060607297409261403499");
+
   public static int anInt3442;
   private int[][] anIntArrayArray3438;
   private int[] anIntArray3443 = new int[257];
-
 
   public TextureSampler10() {
     super(1, false);
@@ -216,11 +212,12 @@ public final class TextureSampler10 extends AbstractTextureSampler {
       }
 
     } catch (RuntimeException var4) {
-      throw AbstractGameWorld.cascadeException(var4, "um.B(" + var1 + ',' + var2 + ')');
+      throw AbstractGameWorld
+          .cascadeException(var4, "um.B(" + var1 + ',' + var2 + ')');
     }
   }
 
-  public void parseConfig(int var1, Buffer var2, boolean var3 ) {
+  public void parseConfig(int var1, Buffer var2, boolean var3) {
     try {
       if (var3) {
         if (var1 == 0) {
@@ -247,7 +244,7 @@ public final class TextureSampler10 extends AbstractTextureSampler {
     }
   }
 
-  public void method158(int var1 ) {
+  public void method158(int var1) {
     try {
       if (var1 != 16251) {
         this.anIntArray3443 = null;
@@ -263,7 +260,7 @@ public final class TextureSampler10 extends AbstractTextureSampler {
     }
   }
 
-  public int[][] method166(int var1, int var2 ) {
+  public int[][] method166(int var1, int var2) {
     try {
       int[][] var3 = this.triChromaticImageCache
           .method1594((byte) 90, var2);
@@ -296,7 +293,8 @@ public final class TextureSampler10 extends AbstractTextureSampler {
 
       return var3;
     } catch (RuntimeException var10) {
-      throw AbstractGameWorld.cascadeException(var10, "um.T(" + var1 + ',' + var2 + ')');
+      throw AbstractGameWorld
+          .cascadeException(var10, "um.T(" + var1 + ',' + var2 + ')');
     }
   }
 
@@ -312,7 +310,9 @@ public final class TextureSampler10 extends AbstractTextureSampler {
           int var7 = 0;
           int var8 = var6 << 4;
 
-          for (int var9 = 0; var5 > var9 && var8 >= this.anIntArrayArray3438[var9][0]; ++var9) {
+          for (int var9 = 0;
+              var5 > var9 && var8 >= this.anIntArrayArray3438[var9][0];
+              ++var9) {
             ++var7;
           }
 
@@ -365,7 +365,8 @@ public final class TextureSampler10 extends AbstractTextureSampler {
           }
 
           this.anIntArray3443[var6] =
-            TextureSampler3.method308(var4, TextureSampler3.method308(var3 << 8, var2 << 16));
+              TextureSampler3.method308(var4,
+                  TextureSampler3.method308(var3 << 8, var2 << 16));
         }
       }
 
@@ -381,8 +382,10 @@ public final class TextureSampler10 extends AbstractTextureSampler {
         TextureSampler10.method347(true);
       }
 
-      int var1 = WorldMapLabel.anInt1716 + (TextureCache.localPlayer.anInt2819 >> 7);
-      int var2 = (TextureCache.localPlayer.anInt2829 >> 7) - -ProceduralTexture.anInt1152;
+      int var1 =
+          WorldMapLabel.anInt1716 + (TextureCache.localPlayer.anInt2819 >> 7);
+      int var2 = (TextureCache.localPlayer.anInt2829 >> 7)
+          - -ProceduralTexture.anInt1152;
       if (-3054 >= ~var1 && -3157 <= ~var1 && -3057 >= ~var2 && var2 <= 3136) {
         GameWorld.anInt2622 = 1;
       }
@@ -391,8 +394,9 @@ public final class TextureSampler10 extends AbstractTextureSampler {
         GameWorld.anInt2622 = 1;
       }
 
-      if (~GameWorld.anInt2622 == -2 && -3140 >= ~var1 && -3200 <= ~var1 && var2 >= 3008
-        && 3062 >= var2) {
+      if (~GameWorld.anInt2622 == -2 && -3140 >= ~var1 && -3200 <= ~var1
+          && var2 >= 3008
+          && 3062 >= var2) {
         GameWorld.anInt2622 = 0;
       }
 
@@ -405,7 +409,7 @@ public final class TextureSampler10 extends AbstractTextureSampler {
     try {
       if (var0 >= 7) {
         TextureSampler10.aClass3_Sub28_Sub17_Sub1_3440 = null;
-        TextureSampler10.MODULUS = null;
+        RSAConfiguration.MODULUS = null;
       }
     } catch (RuntimeException var2) {
       throw AbstractGameWorld.cascadeException(var2, "um.Q(" + var0 + ')');
@@ -498,7 +502,8 @@ public final class TextureSampler10 extends AbstractTextureSampler {
         return var2;
       }
     } catch (RuntimeException var5) {
-      throw AbstractGameWorld.cascadeException(var5, "um.C(" + var0 + ',' + var1 + ')');
+      throw AbstractGameWorld
+          .cascadeException(var5, "um.C(" + var0 + ',' + var1 + ')');
     }
   }
 

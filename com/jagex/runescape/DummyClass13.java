@@ -25,18 +25,11 @@ public final class DummyClass13 {
   }
 
   public static boolean method2194(int var0) {
-    try {
       if (Structure.aBoolean3641) {
-        try {
           return !((Boolean) TextureSampler23.aClass94_3209.method1577(var0 + -2112)).booleanValue();
-        } catch (Throwable var2) {
-        }
       }
 
       return true;
-    } catch (RuntimeException var3) {
-      throw AbstractGameWorld.cascadeException(var3, "vl.B(" + var0 + ')');
-    }
   }
 
   public static void method2195(int var0, int var1) {

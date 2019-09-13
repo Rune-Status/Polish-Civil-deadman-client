@@ -77,7 +77,7 @@ public final class TextureSampler3 extends AbstractTextureSampler {
                 for (int var13 = 0; ~var10 < ~var13; ++var13) {
                   var14 = var1.readInt();
                   var21[var13] = new byte[var14];
-                  var1.method764(0, var14, var21[var13], (byte) 93);
+                  var1.copy(0, var14, var21[var13]);
                 }
               }
 

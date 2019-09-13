@@ -256,7 +256,7 @@ public final class WidgetUpdate extends SubNode {
       var8.writeShort(var7);
       var8.writeShort(var2);
       var8.writeInt((int) (9.9999999E7D * Math.random()));
-      var8.encipherRSA(TextureSampler31.PUBLIC_EXPONENT, TextureSampler10.MODULUS);
+      var8.encipherRSA(RSAConfiguration.PUBLIC_EXPONENT, RSAConfiguration.MODULUS);
       TextureSampler12.secureBuffer.position = 0;
       TextureSampler12.secureBuffer.writeByte(36);
       TextureSampler12.secureBuffer.writeByte(var8.position);
