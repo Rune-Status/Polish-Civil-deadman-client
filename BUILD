@@ -21,16 +21,6 @@ java_import(
     name = "client_lib",
     jars = [
         "lib/client.jar",
-        "lib/jogl-all.jar",
-        "lib/gluegen-rt.jar",
-        "lib/gluegen-rt-natives-linux-amd64.jar",
-        "lib/jogl-all-noawt-natives-linux-amd64.jar",
-        "lib/newt.jar",
-        "lib/newt-event.jar",
-        "lib/newt-ogl.jar",
-        "lib/newt-awt.jar",
-        "lib/newt-natives-linux-amd64.jar",
-        "lib/newt-natives-windows-amd64.jar",
-        "lib/newt-natives-macosx-universal.jar",
+        "lib/jogamp-fat.jar",
     ],
 )

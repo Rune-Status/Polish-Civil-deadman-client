@@ -1626,7 +1626,6 @@ public final class GameClient extends GameStub {
           DummyClass41.secondaryPort = GameObjectConfig.portOffset + 50000;
           ProjectileNode.primaryPort = GameObjectConfig.portOffset + 40000;
         } else if (AbstractGameWorld.usageLocation == 2) {
-          GameException.serverHost = "127.0.0.1";
           DummyClass41.secondaryPort = GameObjectConfig.portOffset + 50000;
           ProjectileNode.primaryPort = GameObjectConfig.portOffset + 40000;
         }

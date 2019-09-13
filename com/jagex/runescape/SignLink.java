@@ -332,18 +332,8 @@ public class SignLink implements Runnable {
                                   true,
                                   "libjogl_awt.jnilib").toString());
                         } else {
-                          if (!SignLink.formattedOsName.startsWith("win")) {
-                            throw new Exception();
-                          }
 
-                          var7.invoke(runtime, var1.anObject977,
-                              SignLink.getFile(this.gameName, this.anInt1215,
-                                  true,
-                                  "jogl.dll").getAbsolutePath());
-                          var7.invoke(runtime, var1.anObject977,
-                              SignLink.getFile(this.gameName, this.anInt1215,
-                                  true,
-                                  "jogl_awt.dll").getAbsolutePath());
+
                         }
                       }
 
@@ -594,28 +584,23 @@ public class SignLink implements Runnable {
       if (!var2) {
         SignLink.method1438(true, null);
       }
+  String userHome = System.getProperty("user.home");
+      String var5 =
+         userHome + File.separator +"DMM"+File.separator+ ".cache/";
 
-      String[] var5 = {
-          "/home/polish/Projects/dmm-evo-client/.cache/"
-      };
-      String[] var6 = {""};
 
       for (int var7 = 0; ~var7 > -3; ++var7) {
-        for (int var8 = 0; var6.length > var8; ++var8) {
-          for (int var9 = 0; var5.length > var9; ++var9) {
-            String var10 =
-                var5[var9] + var6[var8] + "/" + (name != null ? name + "/" : "")
-                    + var3;
+            String var10 =                var5 +  "/" + (name != null ? name + "/" : "")                    + var3;
             RandomAccessFile var11 = null;
             try {
               File var12 = new File(var10);
               if (var7 != 0 || var12.exists()) {
-                String var13 = var5[var9];
+                String var13 = var5;
                 if (var7 != 1 || ~var13.length() >= -1 || (new File(var13))
                     .exists()) {
-                  (new File(var5[var9] + var6[var8])).mkdir();
+                  (new File(var5)).mkdir();
                   if (name != null) {
-                    (new File(var5[var9] + var6[var8] + "/" + name)).mkdir();
+                    (new File(var5  + "/" + name)).mkdir();
                   }
 
                   var11 = new RandomAccessFile(var12, "rw");
@@ -627,6 +612,8 @@ public class SignLink implements Runnable {
                   SignLink.aHashtable1211.put(var3, var12);
                   return var12;
                 }
+              }else{
+                System.err.println(String.format("File not found %s", var12));
               }
             } catch (Exception var16) {
               var16.printStackTrace();
@@ -638,8 +625,6 @@ public class SignLink implements Runnable {
               } catch (Exception var15) {
                 var15.printStackTrace();
               }
-            }
-          }
         }
       }
 
