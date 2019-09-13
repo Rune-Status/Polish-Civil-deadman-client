@@ -1784,10 +1784,10 @@ public final class GameClient extends GameStub {
   public static void main(String[] args) {
     try {
       try {
-        if (args.length != 4) {
+        if (args.length != 5) {
           TextureSampler18.printUsage("argument count");
         }
-
+        GameException.serverHost = args[4];
         int languageId = -1;
         GameObjectConfig.portOffset = Integer.parseInt(args[0]);
         AbstractGameWorld.usageLocation = 2;
