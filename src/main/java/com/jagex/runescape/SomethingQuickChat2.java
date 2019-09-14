@@ -3,6 +3,7 @@ package com.jagex.runescape;
 import com.jagex.runescape.buffer.Buffer;
 import com.jagex.runescape.common.GameString;
 import com.jagex.runescape.huffman.HuffmanEncoderStatics;
+import com.jagex.runescape.node.SubNode;
 import java.awt.Color;
 import java.awt.Font;
 import java.awt.Graphics;
@@ -130,13 +131,13 @@ public final class SomethingQuickChat2 extends SubNode {
     GameString var1;
       if ((Something3d.anInt3012 == 1) && (TextureSampler25.amountContextActions < 2)) {
         var1 = RenderAnimation.concat(new GameString[] {
-          TextureSampler14.aClass94_3388, DummyInputStream.aClass94_43,
+          TextureSampler14.aClass94_3388, GlobalStatics_2.aClass94_43,
           RenderAnimation.aClass94_378, WorldMapLabel.aClass94_1724
         });
       } else if (SceneNode.aBoolean1837 && TextureSampler25.amountContextActions
           < 2) {
         var1 = RenderAnimation.concat(new GameString[] {
-          Parameter.aClass94_3621, DummyInputStream.aClass94_43, DummyClass59.aClass94_676,
+          Parameter.aClass94_3621, GlobalStatics_2.aClass94_43, DummyClass59.aClass94_676,
           WorldMapLabel.aClass94_1724
         });
       } else if (DummyClass55.aBoolean1419 && GameObjectConfig.aBooleanArray1490[81]

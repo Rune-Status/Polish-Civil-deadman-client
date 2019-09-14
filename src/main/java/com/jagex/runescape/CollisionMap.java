@@ -1098,8 +1098,8 @@ public final class CollisionMap {
   public void method1499(int var1, byte var2,int var3 ) {
     var3 -= this.anInt1309;
       var1 -= this.anInt1306;
-      this.anIntArrayArray1304[var3][var1] =
-        ClientScript.bitAnd(this.anIntArrayArray1304[var3][var1], -262145);
+    this.anIntArrayArray1304[var3][var1] =
+        this.anIntArrayArray1304[var3][var1] & -262145;
       if (var2 != -73) {
         this.method1502(-117, 28, -110, true, 123, -33, 13);
       }
@@ -1224,8 +1224,9 @@ public final class CollisionMap {
 
   private void method1501(byte var1, int var2, int var3, int var4) {
     if (var1 >= 18) {
-        this.anIntArrayArray1304[var3][var2] =
-          ClientScript.bitAnd(this.anIntArrayArray1304[var3][var2], ~var4);
+      int var11 = ~var4;
+      this.anIntArrayArray1304[var3][var2] =
+          this.anIntArrayArray1304[var3][var2] & var11;
       }
   }
 

@@ -27,7 +27,7 @@ public final class DummyClass10 {
             }
 
             NPC var3 = TextureSampler5.npcs[var1];
-            AudioWorker.anIntArray347[DummyClass6.anInt2046++] = var1;
+            GlobalStatics_2.anIntArray347[DummyClass6.anInt2046++] = var1;
             var3.anInt2838 = AbstractGameWorld.updateCycle;
             if (var3.config != null && var3.config.method1474(-1)) {
               ByteArrayNode.method574(var3, false);
@@ -46,7 +46,7 @@ public final class DummyClass10 {
 
             int var7 = SpotAnimationConfig.gameBuffer.readBits(5);
             var3.setConfiguration(-1,
-              SubNode.getNpcConfiguration(SpotAnimationConfig.gameBuffer.readBits(14)));
+              GlobalStatics_2.getNpcConfiguration(SpotAnimationConfig.gameBuffer.readBits(14)));
             if (var7 > 15) {
               var7 -= 32;
             }
@@ -111,7 +111,7 @@ public final class DummyClass10 {
   public static void method2264(boolean var0) {
     if (var0) {
       GLStatics.sceneGraphTiles = SomethingIndex150.aClass3_Sub2ArrayArrayArray2065;
-      AbstractGameWorld.heightMap = AbstractObjectNode.othrrHeightMap;
+      AbstractGameWorld.heightMap = GlobalStatics_2.othrrHeightMap;
       GLStatics.aClass3_Sub11ArrayArray2542 =
         TextureSampler32.aClass3_Sub11ArrayArray3346;
     } else {
@@ -132,7 +132,7 @@ public final class DummyClass10 {
 
   public static void method2266(int var0, int var1, byte var2) {
     if (BZipDecompressorState.anInt120 != 0 && var1 != -1) {
-        SceneSomething2.method1285(SubNode.fileUnpacker11, false, var1, 0, false,
+        SceneSomething2.method1285(GlobalStatics_2.fileUnpacker11, false, var1, 0, false,
           BZipDecompressorState.anInt120);
         MidiSomething.aBoolean1158 = true;
       }
@@ -192,7 +192,7 @@ public final class DummyClass10 {
             DummyClass17.tileFloors[var8][x][y] = var3.readByte();
             ObjectCache.tileOrientation[var8][x][y] = (byte) ((-2 + opcode) / 4);
             DummyClass18.aByteArrayArrayArray81[var8][x][y] =
-              (byte) ClientScript.bitAnd(-2 + opcode + var7, 3);
+              (byte) (-2 + opcode + var7 & 3);
           } else if (opcode > 81) {
             TextureSampler36.floorUnderlayIds[var8][x][y] = (byte) (-81 + opcode);
           } else if (!var2) {
@@ -269,7 +269,7 @@ public final class DummyClass10 {
       Something3d.method2241((byte) -77, true);
       GlobalStatics_0.dynamicScene = false;
       ProceduralTexture.anInt1152 = 0;
-      AbstractObjectNode.anInt3606 = 0;
+      GlobalStatics_2.anInt3606 = 0;
       VariableUpdate.anInt2294 = 0;
       WorldMapLabel.anInt1716 = 0;
 

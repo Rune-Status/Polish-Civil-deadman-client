@@ -3,6 +3,7 @@ package com.jagex.runescape;
 import com.jagex.runescape.buffer.BufferStatics;
 import com.jagex.runescape.common.GameString;
 import com.jagex.runescape.common.GameStringStatics;
+import com.jagex.runescape.opengl.GLStatics;
 import com.jagex.runescape.opengl.GlTexture2d;
 
 public final class BZipDecompressorState {
@@ -132,14 +133,14 @@ public final class BZipDecompressorState {
       IdentityKit.aClass94_461 = DummyClass41.aClass94_868;
       TextureSampler36.aClass94_3426 = Keyboard.aClass94_1907;
       DummyClass30.aClass94_459 = AnimationSomething.aClass94_3585;
-      SubNode.aClass94_2576 = BufferObject.aClass94_1882;
+      GlobalStatics_2.aClass94_2576 = BufferObject.aClass94_1882;
       GlobalStatics_2.aClass94_2216 = GlobalStatics_0.aClass94_1179;
       GlTexture2d.aClass94_3762 = TextureSampler31.aClass94_3172;
       TextureSampler30.aClass94_3117 = DummyClass4.aClass94_3002;
       FileCacheRequest.aClass94_4058 = TextureSampler20.aClass94_3146;
       GlobalStatics_1.aClass94_2196 = DummyClass58.aClass94_1459;
       Structure.aClass94_3643 = AbstractObjectNodeWrapper.aClass94_1621;
-      NPC.aClass94_3988 = Light.aClass94_699;
+      NPC.aClass94_3988 = GLStatics.aClass94_699;
       DummyClass27.aClass94_1583 = SomethingTilek.OK;
       DummyClass53.aClass94_1335 = SomethingInScenePacket202.aClass94_2274;
       TextureSampler31.aClass94_3167 = AbstractFileRequest.aClass94_3633;
@@ -152,9 +153,9 @@ public final class BZipDecompressorState {
       WorldMapLabel.aClass94_1731 = TextureSampler15.aClass94_3206;
       GlobalStatics_0.aClass94_2151 = TextureSampler11.aClass94_3251;
       GameObject.OPTION_DROP = AudioSomethingSomething.aClass94_2518;
-      DummyInputStream.aClass94_43 = TextureSampler1.aClass94_3131;
+      GlobalStatics_2.aClass94_43 = TextureSampler1.aClass94_3131;
       DummyClass42.DEFAULT_WALK_TOOLTIP = SpawnedGameObject.aClass94_2252;
-      Light.aClass94_691 = InventoryConfig.aClass94_3656;
+      GLStatics.aClass94_691 = InventoryConfig.aClass94_3656;
       SomethingQuickChat.aClass94_3575 = SomethingSceneJ.aClass94_325;
       OndemandFileRequest.aClass94_4071 = DummyClass20.aClass94_1783;
       TextureSampler38.aClass94_3445 = FileCacheRequester.aClass94_1089;
@@ -171,7 +172,7 @@ public final class BZipDecompressorState {
       MapScene.aClass94_62 = FileCacheRequester.aClass94_1085;
       SomethingTexture4.aClass94_2667 = GameObjectConfig.aClass94_1508;
       IdentityKit.aClass94_462 = ProjectileNode.aClass94_3771;
-      WidgetAccess.aClass94_2210 = AudioWorker.aClass94_343;
+      WidgetAccess.aClass94_2210 = GlobalStatics_2.aClass94_343;
       GlobalStatics_0.aClass94_1707 = LightIntensity.aClass94_905;
       FileRequester.aClass94_2961 = DummyClass32.aClass94_520;
       FileTable.aClass94_957 = DummyClass1.aClass94_412;
@@ -197,7 +198,7 @@ public final class BZipDecompressorState {
       Unsure.aClass94_1892 = GameObjectConfig.aClass94_1509;
       TextureSampler14.aClass94_3388 = DummyClass34.aClass94_593;
       DummyClass32.aClass94_523 = GlobalStatics_0.aClass94_2599;
-      DummyClass24.aClass94_1653 = Light.aClass94_701;
+      DummyClass24.aClass94_1653 = GLStatics.aClass94_701;
   }
 
 }

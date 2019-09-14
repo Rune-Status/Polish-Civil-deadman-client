@@ -214,9 +214,9 @@ public final class GZipDecompressor {
           GroundItemNode.aBooleanArray3674[var1] = false;
         }
 
-        AbstractDirectColorSprite.aClass11_3708 = null;
+        GlobalStatics_2.aClass11_3708 = null;
         DummyClass41.anInt865 = -1;
-        SubNode.anInt2567 = -1;
+        GlobalStatics_2.anInt2567 = -1;
         DummyClass54.aClass11_1402 = null;
         if (GlRenderer.useOpenGlRenderer) {
           DummyOutputStream.aBoolean47 = true;
@@ -241,13 +241,13 @@ public final class GZipDecompressor {
           } else {
             DummyClass51.method1419(-117);
           }
-        } else if (AbstractDirectColorSprite.aClass11_3708 == null) {
+        } else if (GlobalStatics_2.aClass11_3708 == null) {
           if ((DummyClass41.anInt865 != -1)) {
             IdentityKit
-                .method950(null, -86, SubNode.anInt2567, DummyClass41.anInt865);
+                .method950(null, -86, GlobalStatics_2.anInt2567, DummyClass41.anInt865);
           }
         } else {
-          IdentityKit.method950(AbstractDirectColorSprite.aClass11_3708, -120,
+          IdentityKit.method950(GlobalStatics_2.aClass11_3708, -120,
               GameException.anInt2115, TextureSampler18.anInt4041);
         }
 
@@ -295,7 +295,7 @@ public final class GZipDecompressor {
           }
         }
 
-        Deque.method1214(DisplayMode.loopCycle,
+        GlobalStatics_0.method1214(DisplayMode.loopCycle,
             TextureCache.localPlayer.anInt2819,
             TextureCache.localPlayer.anInt2829, GameWorldSomething.currentPlane,
             1);

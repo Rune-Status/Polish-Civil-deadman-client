@@ -3,6 +3,7 @@ package com.jagex.runescape;
 import com.jagex.runescape.buffer.Buffer;
 import com.jagex.runescape.common.GameString;
 import com.jagex.runescape.common.HashTable;
+import com.jagex.runescape.node.SubNode;
 import com.jagex.runescape.opengl.GLStatics;
 
 public final class ByteArrayNode extends SubNode {
@@ -60,7 +61,8 @@ public final class ByteArrayNode extends SubNode {
 
             for (var9 = 0; var9 < var8; ++var9) {
               var10 = var4.readUnsignedShort();
-              HashTable var11 = new HashTable(DummyClass53.nearestPo2((byte) 119, var10));
+              HashTable var11 = new HashTable(
+                  GLStatics.nearestPo2((byte) 119, var10));
               var2.aClass130Array3685[var9] = var11;
 
               while (((var10--) > 0)) {

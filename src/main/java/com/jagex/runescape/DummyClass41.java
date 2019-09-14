@@ -3,6 +3,7 @@ package com.jagex.runescape;
 import com.jagex.runescape.buffer.Buffer;
 import com.jagex.runescape.common.GameString;
 import com.jagex.runescape.common.GameStringStatics;
+import com.jagex.runescape.opengl.GLStatics;
 import com.jagex.runescape.opengl.GlDirectColorSprite;
 import com.jagex.runescape.opengl.GlRenderer;
 import java.io.BufferedReader;
@@ -48,7 +49,7 @@ public final class DummyClass41 {
           var8 -= 10;
           int var9 = 2047 & TextureSampler9.anInt3102 + SpotAnimationConfig.anInt531;
           int var11 = DummyClass40.COSINE_TABLE[var9];
-          int var10 = DummyClass40.SINE_TABLE[var9];
+          int var10 = GLStatics.SINE_TABLE[var9];
           var10 = var10 * 256 / (256 + Something3d2.anInt3020);
           var11 = var11 * 256 / (Something3d2.anInt3020 + 256);
           int var12 = var4 * var10 + (var11 * var3) >> 16;
@@ -151,7 +152,7 @@ public final class DummyClass41 {
         var5.aClass94_2625 = var0.method761(79);
       }
 
-      AbstractObjectNode.anInt3608 = var0.readInt();
+      GlobalStatics_2.anInt3608 = var0.readInt();
       BufferedFile.aBoolean579 = true;
   }
 

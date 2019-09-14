@@ -4,6 +4,8 @@ import com.jagex.runescape.buffer.Buffer;
 import com.jagex.runescape.common.GameString;
 import com.jagex.runescape.common.GameStringStatics;
 import com.jagex.runescape.common.HashTable;
+import com.jagex.runescape.node.Deque;
+import com.jagex.runescape.opengl.GLStatics;
 import com.jagex.runescape.opengl.GlModel;
 import com.jagex.runescape.opengl.GlRenderer;
 import com.jagex.runescape.opengl.SomethingGl0;
@@ -500,7 +502,7 @@ public final class AnimationSequence {
       AbstractFileRequest.anInt3630 = 0;
       TextureSampler17.anInt3187 = 0;
       SomethingOtherWorldMap.anInt2541 = 0;
-      Deque.anInt937 = 0;
+      GlobalStatics_0.anInt937 = 0;
       CollisionMap.anInt1307 = 0;
       Cursor.anInt880 = 0;
       TextureSampler37.anInt3259 = 0;
@@ -518,7 +520,7 @@ public final class AnimationSequence {
       BufferObject.anInt1886 = 0;
       TextureSampler10.anInt3442 = 0;
       SomethingIndex150.anInt2081 = 0;
-      Light.anInt715 = 0;
+      GLStatics.anInt715 = 0;
       GlobalStatics_0.anInt2145 = 0;
       ByteArrayNode.anInt3609 = 0;
       SomethingOtherWorldMap.anInt2540 = 0;
@@ -530,7 +532,7 @@ public final class AnimationSequence {
       TextureSampler24.anInt3144 = 0;
       DummyCanvas.anInt17 = 0;
       FaceNormal.anInt1633 = 0;
-      AudioWorker.anInt342 = 0;
+      GlobalStatics_2.anInt342 = 0;
       DummyClass15.anInt1873 = 0;
       SomethingTexture3.anInt2651 = 0;
       Keyboard.anInt1909 = 0;
@@ -540,11 +542,11 @@ public final class AnimationSequence {
       DummyClass4.anInt3001 = 0;
       AnimationSequence.anInt1858 = 0;
       OndemandFileRequest.anInt4065 = 0;
-      Deque.anInt938 = 0;
+      GlobalStatics_0.anInt938 = 0;
       SomethingSceneI.anInt421 = 0;
       ItemConfig.anInt763 = 0;
       Keyboard.anInt1906 = 0;
-      AudioWorker.anInt348 = 0;
+      GlobalStatics_2.anInt348 = 0;
       ScriptState.anInt876 = 0;
       DummyClass42.anInt889 = 0;
       StringNode0.anInt2337 = 0;
@@ -581,7 +583,7 @@ public final class AnimationSequence {
       Parameter.anInt3615 = 0;
       FileUnpacker.anInt1944 = 0;
       Something3dRoot.anInt2059 = 0;
-      SubNode.anInt2571 = 0;
+      GlobalStatics_2.anInt2571 = 0;
       GameWorldSomething.anInt503 = 0;
       TextureSampler0.anInt3267 = 0;
       StillGraphicNode.anInt3542 = 0;
@@ -601,7 +603,7 @@ public final class AnimationSequence {
       PlayerVariable.anInt555 = 0;
       DummyClass30.anInt452 = 0;
       AnimationFrame.anInt2459 = 0;
-      AudioWorker.anInt349 = 0;
+      GlobalStatics_2.anInt349 = 0;
       DummyClass20.anInt1781 = 0;
       ClientScript.anInt3681 = 0;
       AudioStreamEncoder4.anInt3517 = 0;
@@ -618,7 +620,7 @@ public final class AnimationSequence {
       DummyClass36.updateTime = 0;
       TextureSampler12.secureBuffer.position = 0;
       GlobalStatics_0.lastPacketId0 = -1;
-      AbstractDirectColorSprite.anInt3699 = 0;
+      GlobalStatics_2.anInt3699 = 0;
       SpotAnimationConfig.gameBuffer.position = 0;
 
       int var1;
@@ -641,7 +643,7 @@ public final class AnimationSequence {
       DummyClass43.anInt909 = -1;
       DummyClass13.anInt2022 = 0;
       DummyClass12.minimapMode = 0;
-      DummyInputStream.anInt42 = (int) (110.0D * Math.random()) - 55;
+      GlobalStatics_2.anInt42 = (int) (110.0D * Math.random()) - 55;
       SceneNode.aBoolean1837 = false;
       Something3d2.anInt3020 = -20 + (int) (30.0D * Math.random());
       SomethingLight0.anInt1552 = 0;
@@ -725,7 +727,7 @@ public final class AnimationSequence {
         GroundItemNode.aBooleanArray3674[var1] = true;
       }
 
-      SubNode.anInt2572 = 0;
+      GlobalStatics_2.anInt2572 = 0;
       ClientScript.aClass3_Sub19Array3694 = null;
       Widget.aClass94_251 = null;
 

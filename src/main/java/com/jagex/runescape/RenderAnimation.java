@@ -249,7 +249,8 @@ public final class RenderAnimation {
         return var2;
       } else {
         byte[] var3 =
-          TextureSampler19.spotAnimations.getBytes(DummyInputStream.method64(true, var1),
+          TextureSampler19.spotAnimations.getBytes(
+              GlobalStatics_2.method64(true, var1),
             AbstractSomethingTexture.method1338(var1, var0 ^ 7));
         var2 = new SpotAnimationConfig();
         var2.anInt539 = var1;

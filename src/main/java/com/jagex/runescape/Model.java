@@ -1,6 +1,7 @@
 package com.jagex.runescape;
 
 import com.jagex.runescape.buffer.Buffer;
+import com.jagex.runescape.opengl.GLStatics;
 import com.jagex.runescape.opengl.GlModel;
 import com.jagex.runescape.opengl.GlRenderer;
 
@@ -9,7 +10,7 @@ public final class Model extends SceneNode {
   private static int[] anIntArray2861 = new int[10000];
   private static int[] COSINE_TABLE = DummyClass40.COSINE_TABLE;
   private static int anInt2868;
-  private static int[] SINE_TABLE = DummyClass40.SINE_TABLE;
+  private static int[] SINE_TABLE = GLStatics.SINE_TABLE;
   private static int[] anIntArray2875 = new int[10000];
   public byte[] aByteArray2843;
   public byte[] aByteArray2845;

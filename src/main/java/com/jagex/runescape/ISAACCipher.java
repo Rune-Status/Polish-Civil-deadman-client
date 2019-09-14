@@ -196,10 +196,10 @@ public final class ISAACCipher {
         int var4;
         this.anIntArray971[var2] = var4 =
             this.anInt967 + this.anInt972 + this.anIntArray971[
-                ClientScript.bitAnd(var3, 1020) >> 2];
+                (var3 & 1020) >> 2];
         this.anIntArray970[var2] =
             this.anInt967 =
-                var3 + this.anIntArray971[ClientScript.bitAnd(261347, var4) >> 8
+                var3 + this.anIntArray971[(261347 & var4) >> 8
                     >> 2];
         ++var2;
       }
@@ -216,11 +216,11 @@ public final class ISAACCipher {
             && Projectile.sprites.isLoaded(
             DummyClass54.anInt1400)) {
           TextureSampler27.aClass3_Sub28_Sub16_3099 =
-              AbstractObjectNode
+              GlobalStatics_2
                   .method562(Projectile.sprites, 0, GameWorldSomething.anInt502,
                       (byte) 39);
           DummyClass58.aClass3_Sub28_Sub16_1457 =
-              AbstractObjectNode
+              GlobalStatics_2
                   .method562(Projectile.sprites, 0, DummyClass54.anInt1400,
                       (byte) 39);
           if (GlRenderer.useOpenGlRenderer) {
@@ -311,15 +311,15 @@ public final class ISAACCipher {
           BitVariable.anInt1126) && Projectile.sprites
           .isLoaded(GroundItem.anInt2937)) {
         DummyClass53.aClass3_Sub28_Sub16_1339 =
-            AbstractObjectNode
+            GlobalStatics_2
                 .method562(Projectile.sprites, 0, DummyClass39.anInt739,
                     (byte) 39);
         VertexNormal.aClass3_Sub28_Sub16_824 =
-            AbstractObjectNode
+            GlobalStatics_2
                 .method562(Projectile.sprites, 0, BitVariable.anInt1126,
                     (byte) 39);
         MonoChromaticImageBuffer.aClass3_Sub28_Sub16_2560 =
-            AbstractObjectNode
+            GlobalStatics_2
                 .method562(Projectile.sprites, 0, GroundItem.anInt2937,
                     (byte) 39);
         if (GlRenderer.useOpenGlRenderer) {

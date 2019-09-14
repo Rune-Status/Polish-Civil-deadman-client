@@ -5,6 +5,7 @@ import com.jagex.runescape.buffer.BufferStatics;
 import com.jagex.runescape.common.ArrayUtils;
 import com.jagex.runescape.common.GameString;
 import com.jagex.runescape.common.GameStringStatics;
+import com.jagex.runescape.node.Deque;
 import com.jagex.runescape.opengl.GlRenderer;
 import com.jagex.runescape.opengl.GlUtils;
 

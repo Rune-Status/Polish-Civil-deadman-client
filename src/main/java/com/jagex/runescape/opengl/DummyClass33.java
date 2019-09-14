@@ -1,6 +1,6 @@
 package com.jagex.runescape.opengl;
 
-import com.jagex.runescape.Deque;
+import com.jagex.runescape.node.Deque;
 import com.jagex.runescape.IntegerNode;
 import com.jagex.runescape.Time;
 

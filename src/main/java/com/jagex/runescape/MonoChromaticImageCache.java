@@ -2,6 +2,7 @@ package com.jagex.runescape;
 
 import com.jagex.runescape.common.GameString;
 import com.jagex.runescape.common.GameStringStatics;
+import com.jagex.runescape.node.Deque;
 import com.jagex.runescape.opengl.GLStatics;
 
 public final class MonoChromaticImageCache {
@@ -68,7 +69,7 @@ public final class MonoChromaticImageCache {
               ++this.anInt1570;
             } else {
               MonoChromaticImageBuffer var4 =
-                  (MonoChromaticImageBuffer) this.aClass61_1577.method1212(2);
+                  (MonoChromaticImageBuffer) this.aClass61_1577.method1212();
               assert var4 != null;
               var3 = new MonoChromaticImageBuffer(var2, var4.anInt2555);
               this.aClass3_Sub26Array1571[var4.anInt2553] = null;

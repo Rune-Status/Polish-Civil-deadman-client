@@ -1,9 +1,7 @@
 package com.jagex.runescape.opengl;
 
 import com.jagex.runescape.AbstractDirectColorSprite;
-import com.jagex.runescape.DummyClass53;
 import com.jagex.runescape.SoftwareDirectColorSprite;
-import com.jogamp.opengl.GL2;
 import java.nio.ByteBuffer;
 
 public class GlDirectColorSprite extends AbstractDirectColorSprite {
@@ -211,12 +209,11 @@ public class GlDirectColorSprite extends AbstractDirectColorSprite {
     GlRenderer.method1822();
     var1 += this.anInt3701;
     var2 += this.anInt3698;
-    GL2 var3 = GlRenderer.GL;
     GlRenderer.bindTexture(this.textureId);
     this.initializeParameters(1);
-    var3.glTranslatef(var1, (GlRenderer.viewHeight - var2), 0.0F);
-    var3.glCallList(this.anInt4076);
-    var3.glLoadIdentity();
+    GlRenderer.GL.glTranslatef(var1, (GlRenderer.viewHeight - var2), 0.0F);
+    GlRenderer.GL.glCallList(this.anInt4076);
+    GlRenderer.GL.glLoadIdentity();
   }
 
   public final void method636(int var1, int var2, int var3, int var4, int var5,
@@ -243,13 +240,12 @@ public class GlDirectColorSprite extends AbstractDirectColorSprite {
     GlRenderer.method1828();
     var1 += this.anInt3701;
     var2 += this.anInt3698;
-    GL2 var4 = GlRenderer.GL;
     GlRenderer.bindTexture(this.textureId);
     this.initializeParameters(1);
-    var4.glColor4f(1.0F, 1.0F, 1.0F, var3 / 256.0F);
-    var4.glTranslatef(var1, (GlRenderer.viewHeight - var2), 0.0F);
-    var4.glCallList(this.anInt4076);
-    var4.glLoadIdentity();
+    GlRenderer.GL.glColor4f(1.0F, 1.0F, 1.0F, var3 / 256.0F);
+    GlRenderer.GL.glTranslatef(var1, (GlRenderer.viewHeight - var2), 0.0F);
+    GlRenderer.GL.glCallList(this.anInt4076);
+    GlRenderer.GL.glLoadIdentity();
   }
 
   public final void draw(int var1, int var2, int var3, int var4) {
@@ -434,8 +430,8 @@ public class GlDirectColorSprite extends AbstractDirectColorSprite {
   }
 
   public void initialize(int[] var1) {
-    this.anInt4075 = DummyClass53.nearestPo2((byte) 125, this.anInt3707);
-    this.anInt4079 = DummyClass53.nearestPo2((byte) 59, this.anInt3696);
+    this.anInt4075 = GLStatics.nearestPo2((byte) 125, this.anInt3707);
+    this.anInt4079 = GLStatics.nearestPo2((byte) 59, this.anInt3696);
     byte[] var2 = new byte[this.anInt4075 * this.anInt4079 * 4];
     int var3 = 0;
     int var4 = 0;
@@ -468,7 +464,7 @@ public class GlDirectColorSprite extends AbstractDirectColorSprite {
     GlRenderer.bindTexture(this.textureId);
     GlRenderer.GL
         .glTexImage2D(3553, 0, 6408, this.anInt4075, this.anInt4079, 0, 6408,
-        5121, var9);
+            5121, var9);
     DummyClass33.texture2dMemory += var9.limit() - this.anInt4074;
     this.anInt4074 = var9.limit();
   }
@@ -476,23 +472,22 @@ public class GlDirectColorSprite extends AbstractDirectColorSprite {
   private void method651() {
     float var1 = (float) this.anInt3707 / this.anInt4075;
     float var2 = (float) this.anInt3696 / this.anInt4079;
-    GL2 var3 = GlRenderer.GL;
     if (this.anInt4076 == -1) {
-      this.anInt4076 = var3.glGenLists(1);
+      this.anInt4076 = GlRenderer.GL.glGenLists(1);
       this.anInt4080 = DummyClass33.anInt582;
     }
 
-    var3.glNewList(this.anInt4076, 4864);
-    var3.glBegin(6);
-    var3.glTexCoord2f(var1, 0.0F);
-    var3.glVertex2f(this.anInt3707, 0.0F);
-    var3.glTexCoord2f(0.0F, 0.0F);
-    var3.glVertex2f(0.0F, 0.0F);
-    var3.glTexCoord2f(0.0F, var2);
-    var3.glVertex2f(0.0F, (-this.anInt3696));
-    var3.glTexCoord2f(var1, var2);
-    var3.glVertex2f(this.anInt3707, (-this.anInt3696));
-    var3.glEnd();
-    var3.glEndList();
+    GlRenderer.GL.glNewList(this.anInt4076, 4864);
+    GlRenderer.GL.glBegin(6);
+    GlRenderer.GL.glTexCoord2f(var1, 0.0F);
+    GlRenderer.GL.glVertex2f(this.anInt3707, 0.0F);
+    GlRenderer.GL.glTexCoord2f(0.0F, 0.0F);
+    GlRenderer.GL.glVertex2f(0.0F, 0.0F);
+    GlRenderer.GL.glTexCoord2f(0.0F, var2);
+    GlRenderer.GL.glVertex2f(0.0F, (-this.anInt3696));
+    GlRenderer.GL.glTexCoord2f(var1, var2);
+    GlRenderer.GL.glVertex2f(this.anInt3707, (-this.anInt3696));
+    GlRenderer.GL.glEnd();
+    GlRenderer.GL.glEndList();
   }
 }

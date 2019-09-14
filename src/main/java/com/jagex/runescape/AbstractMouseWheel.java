@@ -58,10 +58,10 @@ public abstract class AbstractMouseWheel {
         var12 < GLStatics.anInt2456; ++var12) {
       SceneGraphTile[][] var13 = GLStatics.sceneGraphTiles[var12];
 
-      for (var14 = DummyClass9.viewportLowerX; var14 < MapScene.viewportUpperX;
+      for (var14 = GLStatics.viewportLowerX; var14 < GLStatics.viewportUpperX;
           ++var14) {
         for (
-            var15 = AbstractObjectNode.viewportLowerZ;
+            var15 = GLStatics.viewportLowerZ;
             var15 < SomethingTilek.viewportUpperZ; ++var15) {
           SceneGraphTile var16 = var13[var14][var15];
           if (var16 != null) {
@@ -130,7 +130,7 @@ public abstract class AbstractMouseWheel {
     }
 
     boolean var22 = Arrays.deepEquals(AbstractGameWorld.heightMap,
-        AbstractObjectNode.othrrHeightMap);
+        GlobalStatics_2.othrrHeightMap);
 
     if (GlRenderer.useOpenGlRenderer) {
       CommonGL.drawScene(var0, var1, var2, var22);
@@ -150,13 +150,13 @@ public abstract class AbstractMouseWheel {
       for (var15 = -GLStatics.viewportLength; var15 <= 0; ++var15) {
         var32 = GLStatics.cameraTileX + var15;
         var29 = GLStatics.cameraTileX - var15;
-        if (var32 >= DummyClass9.viewportLowerX
-            || var29 < MapScene.viewportUpperX) {
+        if (var32 >= GLStatics.viewportLowerX
+            || var29 < GLStatics.viewportUpperX) {
           for (var34 = -GLStatics.viewportLength; var34 <= 0; ++var34) {
             var19 = GLStatics.cameraTileZ + var34;
             var20 = GLStatics.cameraTileZ - var34;
-            if (var32 >= DummyClass9.viewportLowerX) {
-              if (var19 >= AbstractObjectNode.viewportLowerZ) {
+            if (var32 >= GLStatics.viewportLowerX) {
+              if (var19 >= GLStatics.viewportLowerZ) {
                 var21 = var27[var32][var19];
                 if (var21 != null && var21.aBoolean2222) {
                   Unsure.drawSceneTile(var21, true);
@@ -171,8 +171,8 @@ public abstract class AbstractMouseWheel {
               }
             }
 
-            if (var29 < MapScene.viewportUpperX) {
-              if (var19 >= AbstractObjectNode.viewportLowerZ) {
+            if (var29 < GLStatics.viewportUpperX) {
+              if (var19 >= GLStatics.viewportLowerZ) {
                 var21 = var27[var29][var19];
                 if (var21 != null && var21.aBoolean2222) {
                   Unsure.drawSceneTile(var21, true);
@@ -206,13 +206,13 @@ public abstract class AbstractMouseWheel {
       for (var15 = -GLStatics.viewportLength; var15 <= 0; ++var15) {
         var32 = GLStatics.cameraTileX + var15;
         var29 = GLStatics.cameraTileX - var15;
-        if (var32 >= DummyClass9.viewportLowerX
-            || var29 < MapScene.viewportUpperX) {
+        if (var32 >= GLStatics.viewportLowerX
+            || var29 < GLStatics.viewportUpperX) {
           for (var34 = -GLStatics.viewportLength; var34 <= 0; ++var34) {
             var19 = GLStatics.cameraTileZ + var34;
             var20 = GLStatics.cameraTileZ - var34;
-            if (var32 >= DummyClass9.viewportLowerX) {
-              if (var19 >= AbstractObjectNode.viewportLowerZ) {
+            if (var32 >= GLStatics.viewportLowerX) {
+              if (var19 >= GLStatics.viewportLowerZ) {
                 var21 = var27[var32][var19];
                 if (var21 != null && var21.aBoolean2222) {
                   Unsure.drawSceneTile(var21, false);
@@ -227,8 +227,8 @@ public abstract class AbstractMouseWheel {
               }
             }
 
-            if (var29 < MapScene.viewportUpperX) {
-              if (var19 >= AbstractObjectNode.viewportLowerZ) {
+            if (var29 < GLStatics.viewportUpperX) {
+              if (var19 >= GLStatics.viewportLowerZ) {
                 var21 = var27[var29][var19];
                 if (var21 != null && var21.aBoolean2222) {
                   Unsure.drawSceneTile(var21, false);

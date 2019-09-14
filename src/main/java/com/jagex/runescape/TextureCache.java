@@ -313,7 +313,7 @@ public final class TextureCache implements ITextureCache {
       int var9;
       int var10;
       for (var2 = 0; var2 < DummyClass6.anInt2046; ++var2) {
-        var3 = TextureSampler5.npcs[AudioWorker.anIntArray347[var2]];
+        var3 = TextureSampler5.npcs[GlobalStatics_2.anIntArray347[var2]];
         if (var3 != null
             && var3.hasConfiguration((byte) 17) && !var3.config.aBoolean1263 != var1
           && var3.config.method1472((byte) 74)) {
@@ -363,8 +363,8 @@ public final class TextureCache implements ITextureCache {
 
       label200:
       for (var2 = 0; (var2 < DummyClass6.anInt2046); ++var2) {
-        var3 = TextureSampler5.npcs[AudioWorker.anIntArray347[var2]];
-        long var15 = (long) AudioWorker.anIntArray347[var2] << 32 | 536870912L;
+        var3 = TextureSampler5.npcs[GlobalStatics_2.anIntArray347[var2]];
+        long var15 = (long) GlobalStatics_2.anIntArray347[var2] << 32 | 536870912L;
         if (var3 != null && var3.hasConfiguration((byte) 17) && !var3.config.aBoolean1263 == !var1
           && var3.config.method1472((byte) 74)) {
           var6 = var3.getSize();

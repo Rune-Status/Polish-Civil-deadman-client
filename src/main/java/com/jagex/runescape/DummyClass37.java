@@ -2,6 +2,7 @@ package com.jagex.runescape;
 
 import com.jagex.runescape.common.GameString;
 import com.jagex.runescape.common.GameStringStatics;
+import com.jagex.runescape.node.Deque;
 import com.jagex.runescape.opengl.GLStatics;
 import com.jagex.runescape.opengl.GlRenderer;
 import com.jagex.runescape.opengl.GlTexture2d;
@@ -558,7 +559,7 @@ public final class DummyClass37 {
                         var18 = var38.anIntArrayArray359[var15][0];
                         var28 -= var38.anIntArrayArray359[var15][1];
                         int var19 = var38.anIntArrayArray359[var15][2];
-                        int var20 = DummyClass40.SINE_TABLE[var16.rotationY];
+                        int var20 = GLStatics.SINE_TABLE[var16.rotationY];
                         int var21 = DummyClass40.COSINE_TABLE[var16.rotationY];
                         int var22 = var18 * var21 + var19 * var20 >> 16;
                         var19 = -(var18 * var20) + var21 * var19 >> 16;
@@ -678,7 +679,7 @@ public final class DummyClass37 {
       FloorOverlay.anInt2104 = var1.getFileId(FileRequester.aClass94_2959);
       TextureSampler18.anInt4042 = var1.getFileId(TextureSampler2.aClass94_3370);
       GlobalStatics_1.anInt2195 = var1.getFileId(Something3d.aClass94_3008);
-      SubNode.anInt2575 = var1.getFileId(SomethingScene.aClass94_1070);
+      GlobalStatics_2.anInt2575 = var1.getFileId(SomethingScene.aClass94_1070);
       if (var0 != 208) {
         DummyClass37.anInt670 = 0;
       }

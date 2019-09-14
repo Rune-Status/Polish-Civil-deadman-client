@@ -39,9 +39,9 @@ public final class TextureSampler25 extends AbstractTextureSampler {
           } else if (var1 != 3) {
             if (var1 == 4) {
               int var4 = var2.readUnsignedMedium((byte) 107);
-              this.anIntArray3403[2] = ClientScript.bitAnd(var4, 255) >> 12;
-              this.anIntArray3403[1] = ClientScript.bitAnd(var4 >> 4, 4080);
-              this.anIntArray3403[0] = ClientScript.bitAnd(16711680, var4) << 4;
+              this.anIntArray3403[2] = (var4 & 255) >> 12;
+              this.anIntArray3403[1] = var4 >> 4 & 4080;
+              this.anIntArray3403[0] = (16711680 & var4) << 4;
             }
           } else {
             this.anInt3410 = var2.readUnsignedShort();

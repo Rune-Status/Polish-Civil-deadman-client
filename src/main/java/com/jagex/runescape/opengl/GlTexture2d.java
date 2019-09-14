@@ -3,11 +3,10 @@ package com.jagex.runescape.opengl;
 import com.jagex.runescape.AbstractGameWorld;
 import com.jagex.runescape.AudioStreamEncoder3;
 import com.jagex.runescape.DummyClass32;
-import com.jagex.runescape.DummyClass40;
 import com.jagex.runescape.common.GameString;
 import com.jagex.runescape.SceneGraphTile;
 import com.jagex.runescape.SceneSomething;
-import com.jagex.runescape.SubNode;
+import com.jagex.runescape.node.SubNode;
 import com.jagex.runescape.common.GameStringStatics;
 import java.lang.reflect.Method;
 import java.nio.ByteBuffer;
@@ -37,7 +36,7 @@ public final class GlTexture2d extends SubNode {
       this.anInt3759 = var3[0];
       this.anInt3760 = DummyClass33.anInt582;
       GlRenderer.bindTexture(this.anInt3759);
-      int rgbColor = DummyClass40.hslTable[color];
+      int rgbColor = GLStatics.hslTable[color];
       byte[] var5 =
           {(byte) (rgbColor >> 16), (byte) (rgbColor >> 8), (byte) rgbColor,
               (byte) -1};

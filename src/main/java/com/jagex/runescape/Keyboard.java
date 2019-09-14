@@ -123,7 +123,7 @@ public final class Keyboard implements KeyListener, FocusListener {
   public static void method2086(byte var0) {
     if (var0 >= 62) {
         int var1 = TextureCache.localPlayer.anInt2819 + TextureSampler19.anInt3216;
-        int var2 = TextureCache.localPlayer.anInt2829 + DummyInputStream.anInt42;
+        int var2 = TextureCache.localPlayer.anInt2829 + GlobalStatics_2.anInt42;
         if (((-var1 + TextureSampler20.anInt3155) < 499)
           || ((-var1 + TextureSampler20.anInt3155) > 500) || ((FileTable.anInt942 - var2) < 499)
           || ((-var2 + FileTable.anInt942) > 500)) {
@@ -139,7 +139,7 @@ public final class Keyboard implements KeyListener, FocusListener {
           TextureSampler20.anInt3155 += (-TextureSampler20.anInt3155 + var1) / 16;
         }
 
-        if (AudioWorker.aBoolean346) {
+        if (GlobalStatics_2.aBoolean346) {
           for (int var3 = 0; SomethingOtherWorldMap.anInt2537 > var3; ++var3) {
             int var4 = SomethingPacket116.anIntArray1755[var3];
             if (var4 == 98) {

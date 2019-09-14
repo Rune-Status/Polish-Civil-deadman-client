@@ -1,8 +1,7 @@
 package com.jagex.runescape.opengl;
 
-import com.jagex.runescape.GlobalStatics_0;
-import com.jagex.runescape.sprite.SoftwareIndexedColorSprite;
 import com.jagex.runescape.buffer.Buffer;
+import com.jagex.runescape.sprite.SoftwareIndexedColorSprite;
 import java.nio.ByteBuffer;
 import java.nio.ByteOrder;
 
@@ -146,9 +145,9 @@ public final class BlockShadowMap {
               ++var11;
             }
 
-            GlobalStatics_0.aByteArray2111[var8++] = (byte) (17 * var11);
+            GLStatics.aByteArray2111[var8++] = (byte) (17 * var11);
           } else {
-            GlobalStatics_0.aByteArray2111[var8++] = 68;
+            GLStatics.aByteArray2111[var8++] = 68;
           }
 
           ++var6;
@@ -157,7 +156,7 @@ public final class BlockShadowMap {
         var6 += var5 - 128;
       }
 
-      ByteBuffer var13 = ByteBuffer.wrap(GlobalStatics_0.aByteArray2111);
+      ByteBuffer var13 = ByteBuffer.wrap(GLStatics.aByteArray2111);
       var13.limit(16384);
       GlRenderer.bindTexture(this.textureId);
       GlRenderer.GL.glTexImage2D(3553, 0, 6406, 128, 128, 0, 6406, 5121, var13);

@@ -3,6 +3,7 @@ package com.jagex.runescape;
 import com.jagex.runescape.common.GameString;
 import com.jagex.runescape.common.GameStringStatics;
 import com.jagex.runescape.common.HashTable;
+import com.jagex.runescape.node.AbstractObjectNode;
 
 public final class ObjectNode extends AbstractObjectNode {
 

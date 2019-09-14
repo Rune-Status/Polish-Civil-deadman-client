@@ -44,7 +44,7 @@ public final class ProceduralTexture {
       int var8;
       int var9;
       for (var6 = 0; var2 > var6; ++var6) {
-        var7 = DummyInputStream.method63((byte) -67, var1);
+        var7 = GlobalStatics_2.method63((byte) -67, var1);
         if (var7.method159(4) >= 0) {
           ++var3;
         }
@@ -355,7 +355,7 @@ public final class ProceduralTexture {
         } else if (DummyClass13.anInt2022 > var7) {
           var8 = TextureSampler0.players[DummyClass42.anIntArray887[var7]];
         } else {
-          var8 = TextureSampler5.npcs[AudioWorker.anIntArray347[-DummyClass13.anInt2022 + var7]];
+          var8 = TextureSampler5.npcs[GlobalStatics_2.anIntArray347[-DummyClass13.anInt2022 + var7]];
         }
 
         if (var8 != null && var8.hasConfiguration((byte) 17)) {
@@ -439,7 +439,7 @@ public final class ProceduralTexture {
             for (var21 = 0; (var21 < var20.length); ++var21) {
               HintMarker var24 = var20[var21];
               if (var24 != null && var24.anInt1360 == 1
-                && (var24.anInt1359 == AudioWorker.anIntArray347[-DummyClass13.anInt2022 + var7])
+                && (var24.anInt1359 == GlobalStatics_2.anIntArray347[-DummyClass13.anInt2022 + var7])
                 && ((AbstractGameWorld.updateCycle % 20) < 10)) {
                 if (var9.anInt1265 == -1) {
                   var29 = 15 + var8.method1975(var6 + '\u89b4');

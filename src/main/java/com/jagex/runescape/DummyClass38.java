@@ -3,6 +3,7 @@ package com.jagex.runescape;
 import com.jagex.runescape.buffer.Buffer;
 import com.jagex.runescape.common.GameString;
 import com.jagex.runescape.common.GameStringStatics;
+import com.jagex.runescape.node.SubNode;
 import java.util.Objects;
 
 public final class DummyClass38 {
@@ -333,12 +334,6 @@ public final class DummyClass38 {
 
         TextureSampler0.aBooleanArray3272[var4] = var10;
       }
-  }
-
-  public static void method1083(byte var0) {
-    TextureSampler16.anIntArray3107 =
-        DummyInputStream.method62(true, 14585, 8, 2048, 4, 0.4F, 8, 35);
-      int var1 = -5 / ((var0 - 45) / 59);
   }
 
   public static void method1084(SubNode var0, SubNode var1, byte var2) {

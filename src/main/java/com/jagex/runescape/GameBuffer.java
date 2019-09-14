@@ -441,7 +441,7 @@ public final class GameBuffer extends Buffer {
       if (var4 == 41 && TextureSampler27.aClass11_3087 == null) {
         MapScene.method78(var2, false, var3);
         TextureSampler27.aClass11_3087 =
-            AbstractDirectColorSprite.method638((byte) -19, var3, var2);
+            GlobalStatics_2.method638((byte) -19, var3, var2);
         DummyClass29.method909(var0 - 2470, TextureSampler27.aClass11_3087);
       }
 
@@ -578,7 +578,7 @@ public final class GameBuffer extends Buffer {
       }
 
       if (var4 == 32) {
-        var13 = AbstractDirectColorSprite.method638((byte) -19, var3, var2);
+        var13 = GlobalStatics_2.method638((byte) -19, var3, var2);
         if (var13 != null) {
           SceneSomething.method958((byte) -126);
           WidgetAccess var16 = GameClient.method44(var13);
@@ -780,7 +780,7 @@ public final class GameBuffer extends Buffer {
                   .method582(TextureCache.localPlayer.waypointsY[0], 0, 0,
                       false, 0, 2, var2,
                       0, 0, 2, var3, TextureCache.localPlayer.waypointsX[0]);
-          ++Deque.anInt938;
+          ++GlobalStatics_0.anInt938;
           if (!var14) {
             Parameter.method582(TextureCache.localPlayer.waypointsY[0], 0, 1,
                 false, 0,

@@ -1,5 +1,6 @@
 package com.jagex.runescape;
 
+import com.jagex.runescape.node.Deque;
 import com.jagex.runescape.node.Node;
 import com.jagex.runescape.opengl.MaterialShader;
 

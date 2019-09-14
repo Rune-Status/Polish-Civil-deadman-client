@@ -1,7 +1,6 @@
 package com.jagex.runescape.opengl;
 
 import com.jagex.runescape.sprite.AbstractIndexedColorSprite;
-import com.jagex.runescape.DummyClass53;
 import com.jogamp.opengl.GL2;
 import java.nio.ByteBuffer;
 
@@ -30,8 +29,8 @@ public final class GlIndexedColorSprite extends AbstractIndexedColorSprite {
   }
 
   private void initialize(byte[] index, int[] palette) {
-    this.textureWidth = DummyClass53.nearestPo2((byte) 62, this.width);
-    this.textureHeight = DummyClass53.nearestPo2((byte) 99, this.height);
+    this.textureWidth = GLStatics.nearestPo2((byte) 62, this.width);
+    this.textureHeight = GLStatics.nearestPo2((byte) 99, this.height);
     byte[] dest = new byte[this.textureWidth * this.textureHeight * 4];
     int destOff = 0;
     int indexOff = 0;

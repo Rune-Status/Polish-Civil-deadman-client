@@ -185,7 +185,7 @@ public final class FileSystem {
       TextureSampler12.method171(-101, InventoryConfig.anInt3655, 0, DummyClass30.viewWidth, 0, -1,
         GroundItem.viewHeight, 0, 0);
       if (SceneNode.aClass11Array1836 != null) {
-        Cache.method1095(0, FileCacheRequester.anInt1082, AbstractObjectNode.anInt3602,
+        Cache.method1095(0, FileCacheRequester.anInt1082, GlobalStatics_2.anInt3602,
           SceneNode.aClass11Array1836, DummyClass30.viewWidth, -1412584499, 0,
           GroundItem.viewHeight, (byte) 73, DummyClass18.aClass11_88.anInt292);
         SceneNode.aClass11Array1836 = null;

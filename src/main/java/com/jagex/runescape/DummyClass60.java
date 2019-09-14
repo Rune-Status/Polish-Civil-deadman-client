@@ -35,7 +35,7 @@ public final class DummyClass60 {
       DummyClass36.updateTime = 0;
       IdentityKit.lastPacketId2 = -1;
       SpotAnimationConfig.gameBuffer.position = 0;
-      AbstractDirectColorSprite.anInt3699 = 0;
+      GlobalStatics_2.anInt3699 = 0;
       GlobalStatics_0.packetId = -1;
 
       int var1;
@@ -143,7 +143,7 @@ public final class DummyClass60 {
   public static void method915(GameString var0, int var1) {
     int var2 = ByteArrayNode.method576(var0, false);
       if (var1 != var2) {
-        AbstractObjectNode.method565((byte) 86, DummyClass25.aClass131_1624.aShortArray1727[var2],
+        GlobalStatics_2.method565((byte) 86, DummyClass25.aClass131_1624.aShortArray1727[var2],
           DummyClass25.aClass131_1624.aShortArray1718[var2]);
       }
   }

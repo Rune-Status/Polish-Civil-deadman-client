@@ -1,5 +1,6 @@
 package com.jagex.runescape;
 
+import com.jagex.runescape.node.Deque;
 import com.jagex.runescape.node.Node;
 
 public final class AudioStreamEncoder2 extends AudioStreamEncoder {

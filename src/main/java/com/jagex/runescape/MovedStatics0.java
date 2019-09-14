@@ -3,6 +3,7 @@ package com.jagex.runescape;
 import com.jagex.runescape.buffer.Buffer;
 import com.jagex.runescape.opengl.DummyClass46;
 import com.jagex.runescape.opengl.GlRenderer;
+import com.jagex.runescape.opengl.Light;
 
 public final class MovedStatics0 {
 
@@ -88,10 +89,8 @@ public final class MovedStatics0 {
                 && ((var4
                 + var13) < 103)) {
               var3[var2].anIntArrayArray1304[var12 + var1][var13 + var4] =
-                  ClientScript.bitAnd(
-                      var3[var2].anIntArrayArray1304[var12 + var1][var13
-                          + var4],
-                      -16777217);
+                  var3[var2].anIntArrayArray1304[var12 + var1][var13
+                      + var4] & -16777217;
             }
           }
         }
@@ -122,7 +121,7 @@ public final class MovedStatics0 {
                   TextureSampler3
                       .method310(var0, (byte) -117, 7 & var14, 7 & var15)
                       + var4,
-                  SubNode.method519(var0, true, var15 & 7, var14 & 7) + var1,
+                  GlobalStatics_2.method519(var0, true, var15 & 7, var14 & 7) + var1,
                   (byte) 63, var0, var2);
             } else {
               DummyClass10
@@ -158,7 +157,7 @@ public final class MovedStatics0 {
                         if ((var20 >= var9) && (var20 < (8 + var9))
                             && (var21 >= var8)
                             && (var8 + 8) > var8) {
-                          var22 = var1 + SubNode
+                          var22 = var1 + GlobalStatics_2
                               .method519(var0, true, var21 & 7, var20 & 7);
 
                           int var23 =

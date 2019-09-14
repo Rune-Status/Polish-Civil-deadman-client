@@ -18,7 +18,7 @@ public final class Cursor {
       } else if (var1 != 95) {
         return null;
       } else {
-        var2 = AbstractObjectNode.method562(AnimationSequence.aClass153_1852, 0,
+        var2 = GlobalStatics_2.method562(AnimationSequence.aClass153_1852, 0,
             this.anInt883,
           (byte) 39);
         if (var2 != null) {

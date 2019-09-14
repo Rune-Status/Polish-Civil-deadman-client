@@ -2,7 +2,6 @@ package com.jagex.runescape.opengl;
 
 import com.jagex.runescape.AbstractGameWorld;
 import com.jagex.runescape.AudioStreamEncoder3;
-import com.jagex.runescape.DisplayMode;
 import com.jagex.runescape.DummyClass17;
 import com.jagex.runescape.DummyClass3;
 import com.jagex.runescape.DummyClass55;
@@ -500,7 +499,7 @@ public final class GlRenderer {
   }
 
   public static void method1846() {
-    if (DisplayMode.useBumpMaps) {
+    if (GLStatics.useBumpMaps) {
       GlRenderer.setLightingEnabled(true);
       GlRenderer.method1845(true);
     } else {

@@ -2,6 +2,8 @@ package com.jagex.runescape;
 
 import com.jagex.runescape.common.GameString;
 import com.jagex.runescape.common.GameStringStatics;
+import com.jagex.runescape.node.Deque;
+import com.jagex.runescape.node.SubNode;
 import com.jagex.runescape.opengl.GLStatics;
 import com.jagex.runescape.opengl.GlModel;
 import com.jagex.runescape.opengl.GlRenderer;
@@ -105,7 +107,7 @@ public final class DummyHashTable {
   public static AbstractModel method1763(boolean var0, int var1, int var2, int var3, int var4,
                                         AbstractModel var5, int var6) {
     long var7 = var3;
-      AbstractModel var9 = (AbstractModel) Deque.aClass93_939.get(var7);
+      AbstractModel var9 = (AbstractModel) GlobalStatics_0.aClass93_939.get(var7);
       if (var9 == null) {
         Model var10 = Model.getModel(DummyClass13.models, var3, 0);
         if (var10 == null) {
@@ -113,7 +115,7 @@ public final class DummyHashTable {
         }
 
         var9 = var10.method2008(64, 768, -50, -10, -50);
-        Deque.aClass93_939.get((byte) -95, var9, var7);
+        GlobalStatics_0.aClass93_939.get((byte) -95, var9, var7);
       }
 
       int var17 = var5.method1884();

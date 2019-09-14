@@ -87,7 +87,7 @@ public final class Player extends Mobile {
 
       for (var11 = 0; var11 < 5; ++var11) {
         var12 = buffer.readUnsignedByte();
-        if ((var12 < 0) || var12 >= AudioWorker.aShortArrayArray344[var11].length) {
+        if ((var12 < 0) || var12 >= GlobalStatics_2.aShortArrayArray344[var11].length) {
           var12 = 0;
         }
 
@@ -127,7 +127,7 @@ public final class Player extends Mobile {
         this.anInt3973 = buffer.readUnsignedShort();
         if (this.anInt3969 != var13 || (this.anInt3952 != var14) || (this.anInt3966 != var15)
           || var16 != this.anInt3963 || (this.anInt3973 != var17)) {
-          SubNode.method518(this, -110);
+          GlobalStatics_2.method518(this, -110);
         }
       }
 
@@ -189,7 +189,7 @@ public final class Player extends Mobile {
 
   public int getSize() {
     if (this.appearance != null && this.appearance.npcId != -1) {
-        return SubNode.getNpcConfiguration(this.appearance.npcId).size;
+        return GlobalStatics_2.getNpcConfiguration(this.appearance.npcId).size;
       } else {
         return super.getSize();
       }
@@ -258,7 +258,7 @@ public final class Player extends Mobile {
           this.anInt2820 = var15.getMinimumY();
           AbstractModel var23;
           if (Projectile.aBoolean2910 && (this.appearance.npcId == -1
-            || SubNode.getNpcConfiguration(this.appearance.npcId).aBoolean1249)) {
+            || GlobalStatics_2.getNpcConfiguration(this.appearance.npcId).aBoolean1249)) {
             var23 = GameObject.method1957(160,
                 this.aBoolean2810, var14 == null ? var13 : var14,
                 this.anInt2819, 0, this.anInt2829, 0, 1, var15, var1,

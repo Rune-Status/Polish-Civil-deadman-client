@@ -174,7 +174,8 @@ public final class SomethingVolume15 extends Node {
         }
 
         this.aShortArray2434[var23] =
-          (short) (this.aShortArray2434[var23] + ClientScript.bitAnd('\u8000', -1 + var22 << 14));
+          (short) (this.aShortArray2434[var23] + ((int) '\u8000'
+              & -1 + var22 << 14));
         this.anIntArray2423[var23] = var22;
         --var20;
       }

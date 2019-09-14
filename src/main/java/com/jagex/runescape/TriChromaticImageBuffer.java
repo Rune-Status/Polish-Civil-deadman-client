@@ -3,6 +3,7 @@ package com.jagex.runescape;
 import com.jagex.runescape.common.GameString;
 import com.jagex.runescape.common.GameStringStatics;
 import com.jagex.runescape.node.Node;
+import com.jagex.runescape.opengl.Light;
 import com.jagex.runescape.opengl.SomethingShadows;
 import com.jagex.runescape.opengl.DummyClass46;
 import com.jagex.runescape.opengl.GLStatics;

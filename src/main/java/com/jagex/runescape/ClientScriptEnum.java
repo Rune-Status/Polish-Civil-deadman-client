@@ -6,6 +6,8 @@ import com.jagex.runescape.common.GameStringStatics;
 import com.jagex.runescape.common.HashTable;
 import com.jagex.runescape.common.StringNode;
 import com.jagex.runescape.node.Node;
+import com.jagex.runescape.node.SubNode;
+import com.jagex.runescape.opengl.GLStatics;
 import com.jagex.runescape.sprite.SoftwareIndexedColorSprite;
 
 public final class ClientScriptEnum extends SubNode {
@@ -44,7 +46,7 @@ public final class ClientScriptEnum extends SubNode {
             if (opcode == 5 || (opcode == 6)) {
               int size = var2.readUnsignedShort();
               this.table = new HashTable(
-                  DummyClass53.nearestPo2((byte) 94, size));
+                  GLStatics.nearestPo2((byte) 94, size));
 
               for (int var5 = 0; var5 < size; ++var5) {
                 int key = var2.readInt();

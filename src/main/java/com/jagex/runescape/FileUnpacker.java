@@ -416,7 +416,7 @@ public final class FileUnpacker {
               if (this.aBoolean1946) {
                 var6[var17] = var24[var16];
               } else {
-                var6[var17] = AudioWorker.method890(false, -114, var24[var16]);
+                var6[var17] = GlobalStatics_2.method890(false, -114, var24[var16]);
               }
             }
           } else {
@@ -429,7 +429,7 @@ public final class FileUnpacker {
             if (this.aBoolean1946) {
               var6[var10] = var23;
             } else {
-              var6[var10] = AudioWorker.method890(false, -80, var23);
+              var6[var10] = GlobalStatics_2.method890(false, -80, var23);
             }
           }
 
@@ -447,7 +447,7 @@ public final class FileUnpacker {
         this.anObjectArray1954[var2] = this.aClass151_1947.method2098(var2, 0);
       } else {
         this.anObjectArray1954[var2] =
-            AudioWorker.method890(false, -101, this.aClass151_1947
+            GlobalStatics_2.method890(false, -101, this.aClass151_1947
                 .method2098(var2, 0));
       }
 

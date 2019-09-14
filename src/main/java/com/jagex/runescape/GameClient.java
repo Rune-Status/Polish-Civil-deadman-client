@@ -36,7 +36,7 @@ public final class GameClient extends GameStub {
     ++DummyClass43.ondemandRequester.anInt1011;
       DummyClass1.socketRequest = null;
       DummyClass43.ondemandRequester.anInt1010 = var2;
-      DummyInputStream.updateSocket = null;
+      GlobalStatics_2.updateSocket = null;
       DummyClass18.anInt80 = 0;
   }
 
@@ -157,9 +157,9 @@ public final class GameClient extends GameStub {
                     DummyClass18.method829(-1);
                   }
 
-                  if (AudioWorker.aClass64_351 != null
-                      && AudioWorker.aClass64_351.status == 1) {
-                    if (AudioWorker.aClass64_351.result != null) {
+                  if (GlobalStatics_2.aClass64_351 != null
+                      && GlobalStatics_2.aClass64_351.status == 1) {
+                    if (GlobalStatics_2.aClass64_351.result != null) {
                       DummyClass54
                           .method1596(TextureSampler5.aClass94_3295, (byte) 126,
                               GlobalStatics_0.aBoolean2154);
@@ -167,7 +167,7 @@ public final class GameClient extends GameStub {
 
                     GlobalStatics_0.aBoolean2154 = false;
                     TextureSampler5.aClass94_3295 = null;
-                    AudioWorker.aClass64_351 = null;
+                    GlobalStatics_2.aClass64_351 = null;
                   }
 
                   if (AbstractGameWorld.updateCycle % 1500 == 0) {
@@ -188,7 +188,7 @@ public final class GameClient extends GameStub {
                   }
                 }
 
-                Light.executeScript(var11);
+                GLStatics.executeScript(var11);
               }
             }
 
@@ -202,7 +202,7 @@ public final class GameClient extends GameStub {
               }
             }
 
-            Light.executeScript(var11);
+            GLStatics.executeScript(var11);
           }
         }
 
@@ -216,7 +216,7 @@ public final class GameClient extends GameStub {
           }
         }
 
-        Light.executeScript(var11);
+        GLStatics.executeScript(var11);
       }
   }
 
@@ -303,27 +303,27 @@ public final class GameClient extends GameStub {
           }
 
           if (DummyClass18.anInt80 == 2) {
-            DummyInputStream.updateSocket =
+            GlobalStatics_2.updateSocket =
                 new SocketStream((Socket) DummyClass1.socketRequest.result,
                     DummyClass35.signLink);
             Buffer buffer = new Buffer(5);
             buffer.writeByte(15);
             buffer.writeInt(530);
-            DummyInputStream.updateSocket.write(buffer.bytes, 0, 5);
+            GlobalStatics_2.updateSocket.write(buffer.bytes, 0, 5);
             ++DummyClass18.anInt80;
             TextureSampler13.lastWrittenTime = Time.getCurrentTimeMillis();
           }
 
           if (DummyClass18.anInt80 == 3) {
             if ((DummyClass15.state != 0) && (DummyClass15.state != 5)
-                && DummyInputStream.updateSocket.available() <= 0) {
+                && GlobalStatics_2.updateSocket.available() <= 0) {
               if (((Time.getCurrentTimeMillis()
                   - TextureSampler13.lastWrittenTime) > 30000L)) {
                 this.setUpdateError(1001);
                 return;
               }
             } else {
-              int status = DummyInputStream.updateSocket.read();
+              int status = GlobalStatics_2.updateSocket.read();
               if (status != 0) {
                 this.setUpdateError(status);
                 return;
@@ -338,8 +338,8 @@ public final class GameClient extends GameStub {
                 DummyClass15.state == 5 || DummyClass15.state == 10 ||
                     DummyClass15.state == 28;
             DummyClass43.ondemandRequester
-                .setSocket(!offline, DummyInputStream.updateSocket);
-            DummyInputStream.updateSocket = null;
+                .setSocket(!offline, GlobalStatics_2.updateSocket);
+            GlobalStatics_2.updateSocket = null;
             DummyClass1.socketRequest = null;
             DummyClass18.anInt80 = 0;
           }
@@ -425,7 +425,7 @@ public final class GameClient extends GameStub {
                 .createUnpacker(false, true, true, 9, true);
             TextureSampler28.fileUnpacker10 =
                 FileSystem.createUnpacker(false, true, true, 10, true);
-            SubNode.fileUnpacker11 = FileSystem
+            GlobalStatics_2.fileUnpacker11 = FileSystem
                 .createUnpacker(false, true, true, 11, true);
             WidgetAccess.scripts = FileSystem
                 .createUnpacker(false, true, true, 12, true);
@@ -721,18 +721,18 @@ public final class GameClient extends GameStub {
                             if (GlobalStatics_0.safemode) {
                               Parameter.anInt3622 = 0;
                               GroundItemNode.anInt3671 = 0;
-                              SubNode.anInt2577 = 0;
+                              GlobalStatics_2.anInt2577 = 0;
                               TriChromaticImageBuffer.anInt2488 = 0;
                             }
 
                             GlobalStatics_0.safemode = true;
                             DummyClass25.writeSettings(DummyClass35.signLink);
                             SceneNode
-                                .setWindowMode(false, SubNode.anInt2577, -8914,
+                                .setWindowMode(false, GlobalStatics_2.anInt2577, -8914,
                                     -1, -1);
                             ClientScript.loadingPercent = 100;
                             HintMarker.loadingState = 160;
-                            AnimationFrame.loadingText = SubNode.aClass94_2576;
+                            AnimationFrame.loadingText = GlobalStatics_2.aClass94_2576;
                           } else if ((HintMarker.loadingState == 160)) {
                             TextureSampler1.method219(true, 3000);
                           }
@@ -768,7 +768,7 @@ public final class GameClient extends GameStub {
                         AnimationFrame.loadingText = RenderAnimation
                             .concat(new GameString[]{
                                 GlobalStatics_0.aClass94_1183,
-                                DummyInputStream.aClass94_37
+                                GlobalStatics_2.aClass94_37
                             });
                         ClientScript.loadingPercent = 80;
                       }
@@ -1036,8 +1036,8 @@ public final class GameClient extends GameStub {
       Widget.method860(126);
       DisplayMode.method1644((byte) 121);
       Player.method1982((byte) 121);
-      Deque.method1217(0);
-      AbstractDirectColorSprite.method634((byte) 108);
+      GlobalStatics_0.method1217(0);
+      GlobalStatics_2.method634((byte) 108);
       GlobalStatics_0.method1774(103);
       AbstractMouseWheel.method2081(0);
       ClanChatUser.method387(103);
@@ -1086,7 +1086,7 @@ public final class GameClient extends GameStub {
       DummyClass30.method937(0);
       MidiSomething.method1414(90);
       DummyClass33.method987();
-      AudioWorker.method892(100);
+      GlobalStatics_2.method892(100);
       DummyCanvas.method53(0);
       DummyClass11.method2205(-17413);
       GlobalStatics_1.method1663(33);
@@ -1099,7 +1099,7 @@ public final class GameClient extends GameStub {
       DummyClass36.method1032(false);
       SomethingFont.method999();
       DummyClass46.method1274();
-      Light.method1059((byte) -2);
+      GLStatics.method1059((byte) -2);
       AbstractFileRequester.method2093(1);
       FileTable.method1223(0);
       AbstractFileRequest.method588((byte) 120);
@@ -1108,7 +1108,7 @@ public final class GameClient extends GameStub {
       DummyClass18.method828(-90);
       GZipDecompressor.method1130(99);
       Parameter.method584(0);
-      SubNode.method521(-3);
+      GlobalStatics_2.method521(-3);
       Cache.method1096((byte) 89);
       FloorOverlay.method2276(-2);
       DummyClass17.method1858(-17124);
@@ -1199,7 +1199,7 @@ public final class GameClient extends GameStub {
       BufferObject.method2070((byte) 67);
       BZipDecompressor.method1641();
       BZipDecompressorState.method849(2);
-      AbstractObjectNode.method563(3);
+      GlobalStatics_2.method563(3);
       ObjectNode.method570(-119);
       AbstractObjectNodeWrapper.method1726(0);
       SomethingMidiFile.method118(2);
@@ -1278,7 +1278,7 @@ public final class GameClient extends GameStub {
       ProjectileNode.method717(109);
       StillGraphicNode.method534(99);
       SomethingOtherWorldMap.method405(true);
-      DummyInputStream.method61(-93);
+      GlobalStatics_2.method61(-93);
       DummyOutputStream.method67(true);
       ByteArrayNode.method573(-11346);
       TriChromaticImageBuffer.method391(25);
@@ -1419,7 +1419,7 @@ public final class GameClient extends GameStub {
         if (TextureSampler30.fullScreenFrame != null
             && !TextureSampler26.focused && (
             DummyClass15.state == 30 || DummyClass15.state == 10)) {
-          SceneNode.setWindowMode(false, SubNode.anInt2577, -8914, -1, -1);
+          SceneNode.setWindowMode(false, GlobalStatics_2.anInt2577, -8914, -1, -1);
         }
 
         if (var1 != 40) {
@@ -1559,7 +1559,7 @@ public final class GameClient extends GameStub {
       }
 
       ClientScriptCall.anInt2451 = GameObjectConfig.portOffset;
-      AbstractObjectNode.loadSettings(DummyClass35.signLink, 0);
+      GlobalStatics_2.loadSettings(DummyClass35.signLink, 0);
       if (AbstractGameWorld.usageLocation == 0) {
         GameException.serverHost = this.getCodeBase().getHost();
         DummyClass41.secondaryPort = 443;
@@ -1579,12 +1579,12 @@ public final class GameClient extends GameStub {
         DummyClass55.aBoolean1419 = true;
         GlEnvironment.defaultSunColor = 0xffffff;
         GlEnvironment.defaultFogColor = 0;
-        AudioWorker.aShortArrayArray344 = AbstractObjectNodeWrapper.aShortArrayArray1619;
+        GlobalStatics_2.aShortArrayArray344 = AbstractObjectNodeWrapper.aShortArrayArray1619;
         DummyClass55.aShortArrayArray1429 = SomethingTexture.aShortArrayArray2634;
         Inventory.aShortArray2548 = MapScene.aShortArray63;
         CollisionMap.aShortArray1311 = GlobalStatics_2.aShortArray2219;
       } else {
-        AudioWorker.aShortArrayArray344 = InventoryConfig.aShortArrayArray3654;
+        GlobalStatics_2.aShortArrayArray344 = InventoryConfig.aShortArrayArray3654;
         CollisionMap.aShortArray1311 = TextureSampler32.aShortArray3349;
         DummyClass55.aShortArrayArray1429 = DummyClass29.aShortArrayArray435;
         Inventory.aShortArray2548 = Something3d.aShortArray3011;

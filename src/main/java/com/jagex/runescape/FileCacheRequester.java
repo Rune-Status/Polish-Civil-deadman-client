@@ -174,9 +174,9 @@ public final class FileCacheRequester implements Runnable {
 
   public static void rebuildScene(int plane, int var1, int var2, int y, boolean var4, int x,
                                  boolean var6) {
-    if (AbstractObjectNode.anInt3606 != var2 || (var1 != VariableUpdate.anInt2294)
+    if (GlobalStatics_2.anInt3606 != var2 || (var1 != VariableUpdate.anInt2294)
         || (GameObject.plane != plane) && !NPC.method1986(45)) {
-        AbstractObjectNode.anInt3606 = var2;
+        GlobalStatics_2.anInt3606 = var2;
         VariableUpdate.anInt2294 = var1;
         GameObject.plane = plane;
         if (NPC.method1986(105)) {
@@ -195,7 +195,7 @@ public final class FileCacheRequester implements Runnable {
         ProceduralTexture.anInt1152 = var1 * 8 - 48;
         WorldMapLabel.anInt1716 = 8 * (-6 + var2);
         TextureSampler37.aClass3_Sub28_Sub3_3264 =
-          Queue.method884(8 * AbstractObjectNode.anInt3606, (byte) 88,
+          Queue.method884(8 * GlobalStatics_2.anInt3606, (byte) 88,
             8 * VariableUpdate.anInt2294);
         int var10 = -var8 + ProceduralTexture.anInt1152;
         int var9 = WorldMapLabel.anInt1716 - var7;
@@ -221,7 +221,7 @@ public final class FileCacheRequester implements Runnable {
                   var12.waypointsY[var13] -= var10;
                 }
 
-                AudioWorker.anIntArray347[DummyClass6.anInt2046++] = var11;
+                GlobalStatics_2.anIntArray347[DummyClass6.anInt2046++] = var11;
               } else {
                 TextureSampler5.npcs[var11].setConfiguration(-1, null);
                 TextureSampler5.npcs[var11] = null;
@@ -520,7 +520,7 @@ public final class FileCacheRequester implements Runnable {
         }
 
         if (GlRenderer.useOpenGlRenderer && command.method1531(
-          AbstractDirectColorSprite.COMMAND_CARD_MEMORY)) {
+          GlobalStatics_2.COMMAND_CARD_MEMORY)) {
           System.out.println("oncard_geometry:" + DummyClass33.anInt585);
           System.out.println("oncard_2d:" + DummyClass33.texture2dMemory);
           System.out.println("oncard_texture:" + DummyClass33.textureMemory);

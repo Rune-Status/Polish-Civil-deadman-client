@@ -318,7 +318,7 @@ public final class TextureSampler7 extends AbstractTextureSampler {
               SceneSomething2.aClass94Array1046[var4] =
                 SceneSomething2.aClass94Array1046[var4 + 1];
               Cursor.anIntArray882[var4] = Cursor.anIntArray882[var4 + 1];
-              SubNode.aClass94Array2566[var4] = SubNode.aClass94Array2566[1 + var4];
+              GlobalStatics_2.aClass94Array2566[var4] = GlobalStatics_2.aClass94Array2566[1 + var4];
               VertexNormal.aLongArray826[var4] = VertexNormal.aLongArray826[1 + var4];
               LightIntensity.anIntArray904[var4] = LightIntensity.anIntArray904[var4 + 1];
               GlobalStatics_0.aBooleanArray73[var4] = GlobalStatics_0.aBooleanArray73[1 + var4];

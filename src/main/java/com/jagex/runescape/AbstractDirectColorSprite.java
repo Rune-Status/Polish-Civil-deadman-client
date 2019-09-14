@@ -1,17 +1,9 @@
 package com.jagex.runescape;
 
-import com.jagex.runescape.common.GameString;
-import com.jagex.runescape.common.GameStringStatics;
+import com.jagex.runescape.node.SubNode;
 
 public abstract class AbstractDirectColorSprite extends SubNode {
 
-  public static int anInt3699;
-  public static GameString COMMAND_CARD_MEMORY = GameStringStatics.create("::cardmem");
-  public static GameString aClass94_3702 = GameStringStatics.create(" )2> <col=ffff00>");
-  public static GameString aClass94_3703 = GameStringStatics.create(" )2> ");
-  public static int anInt3704;
-  public static GameString aClass94_3705 = GameStringStatics.create("W-=hlen Sie eine Option");
-  public static Widget aClass11_3708;
   public int anInt3696;
   public int anInt3697;
   public int anInt3698;
@@ -42,26 +34,5 @@ public abstract class AbstractDirectColorSprite extends SubNode {
   public abstract void method642(int var1,int var2,int var3,int var4,int var5 );
 
   public abstract void method643(int var1,int var2 );
-
-  public static void method634(byte var0) {
-    AbstractDirectColorSprite.aClass11_3708 = null;
-      AbstractDirectColorSprite.aClass94_3702 = null;
-      AbstractDirectColorSprite.aClass94_3705 = null;
-      if (var0 == 108) {
-        AbstractDirectColorSprite.aClass94_3703 = null;
-        AbstractDirectColorSprite.COMMAND_CARD_MEMORY = null;
-      }
-  }
-
-  public static Widget method638(byte var0, int var1, int var2) {
-    Widget var3 = EnumStringFetcher.getWidget((byte) 109, var1);
-      return (var2 == -1) ?
-        var3 :
-        (var0 != -19 ?
-          null :
-          (var3 != null && var3.aClass11Array262 != null && var3.aClass11Array262.length > var2 ?
-            var3.aClass11Array262[var2] :
-            null));
-  }
 
 }

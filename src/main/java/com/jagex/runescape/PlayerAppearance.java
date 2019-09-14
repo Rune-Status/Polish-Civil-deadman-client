@@ -3,6 +3,7 @@ package com.jagex.runescape;
 import com.jagex.runescape.common.GameString;
 import com.jagex.runescape.common.GameStringStatics;
 import com.jagex.runescape.huffman.HuffmanEncoderStatics;
+import com.jagex.runescape.opengl.GLStatics;
 import com.jagex.runescape.opengl.GlModel;
 import com.jagex.runescape.opengl.GlRenderer;
 
@@ -60,9 +61,9 @@ public final class PlayerAppearance {
         var14 = new Model(var12, var13);
 
         for (int var15 = 0; (var15 < 5); ++var15) {
-          if ((this.anIntArray862[var15] < AudioWorker.aShortArrayArray344[var15].length)) {
+          if ((this.anIntArray862[var15] < GlobalStatics_2.aShortArrayArray344[var15].length)) {
             var14.replaceColor(Inventory.aShortArray2548[var15],
-              AudioWorker.aShortArrayArray344[var15][this.anIntArray862[var15]]);
+              GlobalStatics_2.aShortArrayArray344[var15][this.anIntArray862[var15]]);
           }
 
           if (DummyClass55.aShortArrayArray1429[var15].length > this.anIntArray862[var15]) {
@@ -186,7 +187,7 @@ public final class PlayerAppearance {
       }
 
       return this.npcId != -1 ?
-        305419896 + SubNode.getNpcConfiguration(this.npcId).anInt1284 :
+        305419896 + GlobalStatics_2.getNpcConfiguration(this.npcId).anInt1284 :
         (this.anIntArray857[8] << 10) + ((this.anIntArray862[0] << 25) + (
             this.anIntArray862[4]
           << 20)) - (-(this.anIntArray857[0] << 15) - ((this.anIntArray857[11] << 5)
@@ -340,11 +341,11 @@ public final class PlayerAppearance {
                       var27[14] = -var23;
                     } else {
                       var28 = DummyClass40.COSINE_TABLE[var24] >> 1;
-                      var29 = DummyClass40.SINE_TABLE[var24] >> 1;
+                      var29 = GLStatics.SINE_TABLE[var24] >> 1;
                       int var30 = DummyClass40.COSINE_TABLE[var25] >> 1;
-                      int var31 = DummyClass40.SINE_TABLE[var25] >> 1;
+                      int var31 = GLStatics.SINE_TABLE[var25] >> 1;
                       var32 = DummyClass40.COSINE_TABLE[var26] >> 1;
-                      var33 = DummyClass40.SINE_TABLE[var26] >> 1;
+                      var33 = GLStatics.SINE_TABLE[var26] >> 1;
                       var27[4] = var28 * var32 + 16384 >> 15;
                       var27[5] = -var29;
                       var27[3] = 16384 + var33 * var28 >> 15;
@@ -388,10 +389,10 @@ public final class PlayerAppearance {
             Model var43 = new Model(var39, var39.length);
 
             for (var45 = 0; var45 < 5; ++var45) {
-              if (AudioWorker.aShortArrayArray344[var45].length
+              if (GlobalStatics_2.aShortArrayArray344[var45].length
                   > this.anIntArray862[var45]) {
                 var43.replaceColor(Inventory.aShortArray2548[var45],
-                    AudioWorker.aShortArrayArray344[var45][this.anIntArray862[var45]]);
+                    GlobalStatics_2.aShortArrayArray344[var45][this.anIntArray862[var45]]);
               }
 
               if (DummyClass55.aShortArrayArray1429[var45].length
@@ -592,7 +593,7 @@ public final class PlayerAppearance {
           return var51;
         }
       } else {
-        return SubNode.getNpcConfiguration(this.npcId)
+        return GlobalStatics_2.getNpcConfiguration(this.npcId)
             .method1476(var1, var6, (byte) -128, var11, var2, var8, var10, var3,
                 var5, var4);
       }
@@ -656,9 +657,9 @@ public final class PlayerAppearance {
           Model var15 = new Model(var14, var9);
 
           for (var11 = 0; (var11 < 5); ++var11) {
-            if (AudioWorker.aShortArrayArray344[var11].length > this.anIntArray862[var11]) {
+            if (GlobalStatics_2.aShortArrayArray344[var11].length > this.anIntArray862[var11]) {
               var15.replaceColor(Inventory.aShortArray2548[var11],
-                AudioWorker.aShortArrayArray344[var11][this.anIntArray862[var11]]);
+                GlobalStatics_2.aShortArrayArray344[var11][this.anIntArray862[var11]]);
             }
 
             if (DummyClass55.aShortArrayArray1429[var11].length > this.anIntArray862[var11]) {
@@ -677,7 +678,8 @@ public final class PlayerAppearance {
 
         return var6;
       } else {
-        return SubNode.getNpcConfiguration(this.npcId).method1482(var3, var1, var5, -109, var4);
+        return GlobalStatics_2
+            .getNpcConfiguration(this.npcId).method1482(var3, var1, var5, -109, var4);
       }
   }
 

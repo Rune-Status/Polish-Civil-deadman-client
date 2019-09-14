@@ -2,6 +2,7 @@ package com.jagex.runescape;
 
 import com.jagex.runescape.common.GameString;
 import com.jagex.runescape.common.GameStringStatics;
+import com.jagex.runescape.opengl.Light;
 import com.jagex.runescape.opengl.SomethingLight;
 import java.awt.Component;
 
@@ -33,9 +34,9 @@ public final class TextureSampler18 extends TextureSampler39 {
 
         for (int var8 = 0; SomethingLight0.anInt1559 > var8; ++var8) {
           int var9 = this.anIntArray3284[var7 + var8 % this.anInt3280];
-          var6[var8] = ClientScript.bitAnd(255, var9) << 4;
-          var5[var8] = ClientScript.bitAnd(var9 >> 4, 4080);
-          var4[var8] = ClientScript.bitAnd(16711680, var9) >> 12;
+          var6[var8] = (255 & var9) << 4;
+          var5[var8] = var9 >> 4 & 4080;
+          var4[var8] = (16711680 & var9) >> 12;
         }
       }
 
@@ -185,7 +186,7 @@ public final class TextureSampler18 extends TextureSampler39 {
 
       return !SomethingTexture4.loadSprites(var3, var1, var2, -30901) ?
         null :
-        AudioWorker.method891(var0 ^ 4);
+        GlobalStatics_2.method891(var0 ^ 4);
   }
 
   public static void method287(boolean var0) {

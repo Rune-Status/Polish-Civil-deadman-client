@@ -422,7 +422,7 @@ public final class GameObject extends SceneNode {
           for (int var26 = 0; var26 < var17; ++var26) {
             int var27 = (var26 << 11) / var17;
             int var29 = var5 + (DummyClass40.COSINE_TABLE[var27] * var25) >> 16;
-            var28 = var3 + DummyClass40.SINE_TABLE[var27] * var24 >> 16;
+            var28 = var3 + GLStatics.SINE_TABLE[var27] * var24 >> 16;
             var22[var23][var26] = var20.addVertex(var28, 0, var29);
           }
         }

@@ -1,5 +1,6 @@
 package com.jagex.runescape;
 
+import com.jagex.runescape.node.Deque;
 import com.jagex.runescape.opengl.SomethingGl;
 
 public final class DummyClass55 {

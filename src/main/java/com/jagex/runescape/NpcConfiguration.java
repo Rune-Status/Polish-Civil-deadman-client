@@ -6,6 +6,7 @@ import com.jagex.runescape.common.GameStringStatics;
 import com.jagex.runescape.common.HashTable;
 import com.jagex.runescape.common.StringNode;
 import com.jagex.runescape.node.Node;
+import com.jagex.runescape.opengl.GLStatics;
 import com.jagex.runescape.opengl.GlModel;
 import com.jagex.runescape.opengl.GlRenderer;
 
@@ -116,10 +117,10 @@ public final class NpcConfiguration {
       if (var2 >= 0 && (var2 < (-1 + this.anIntArray1292.length))
         && this.anIntArray1292[var2] != -1) {
         var3 = -24 % ((-46 - var1) / 41);
-        return SubNode.getNpcConfiguration(this.anIntArray1292[var2]);
+        return GlobalStatics_2.getNpcConfiguration(this.anIntArray1292[var2]);
       } else {
         var3 = this.anIntArray1292[-1 + this.anIntArray1292.length];
-        return (var3 == -1) ? null : SubNode.getNpcConfiguration(var3);
+        return (var3 == -1) ? null : GlobalStatics_2.getNpcConfiguration(var3);
       }
   }
 
@@ -156,7 +157,7 @@ public final class NpcConfiguration {
       if (this.anIntArray1292 != null) {
         for (int var2 = 0; this.anIntArray1292.length > var2; ++var2) {
           if ((this.anIntArray1292[var2] != -1)) {
-            NpcConfiguration var3 = SubNode.getNpcConfiguration(
+            NpcConfiguration var3 = GlobalStatics_2.getNpcConfiguration(
                 this.anIntArray1292[var2]);
             if ((var3.anInt1262 != -1) || (var3.anInt1293 != -1)
                 || var3.anInt1276 != -1) {
@@ -271,11 +272,11 @@ public final class NpcConfiguration {
                     var23[12] = -var17;
                   } else {
                     var24 = DummyClass40.COSINE_TABLE[var20] >> 1;
-                    int var25 = DummyClass40.SINE_TABLE[var20] >> 1;
+                    int var25 = GLStatics.SINE_TABLE[var20] >> 1;
                     int var26 = DummyClass40.COSINE_TABLE[var21] >> 1;
                     var28 = DummyClass40.COSINE_TABLE[var22] >> 1;
-                    var27 = DummyClass40.SINE_TABLE[var21] >> 1;
-                    var29 = DummyClass40.SINE_TABLE[var22] >> 1;
+                    var27 = GLStatics.SINE_TABLE[var21] >> 1;
+                    var29 = GLStatics.SINE_TABLE[var22] >> 1;
                     var23[3] = var24 * var29 + 16384 >> 15;
                     var23[8] = 16384 + var24 * var26 >> 15;
                     var23[5] = -var25;
@@ -381,7 +382,7 @@ public final class NpcConfiguration {
               if ((var39.tween || MonoChromaticImageBuffer.tweening) && (var20 != -1)
                 && var39.anIntArray1851.length > var20) {
                 DummyClass35.anIntArray664[var17] = var39.anIntArray1869[var19];
-                SubNode.anIntArray2574[var17] = var1[var17].anInt1897;
+                GlobalStatics_2.anIntArray2574[var17] = var1[var17].anInt1897;
                 var22 = var39.anIntArray1851[var20];
                 TextureSampler18.aClass3_Sub28_Sub5Array4031[var17] =
                   AreaSoundEffect.method133(var22 >>> 16, 0);
@@ -395,7 +396,7 @@ public final class NpcConfiguration {
                 }
               } else {
                 DummyClass35.anIntArray664[var17] = 0;
-                SubNode.anIntArray2574[var17] = 0;
+                GlobalStatics_2.anIntArray2574[var17] = 0;
                 TextureSampler18.aClass3_Sub28_Sub5Array4031[var17] = null;
                 BufferedFile.anIntArray574[var17] = -1;
               }
@@ -494,7 +495,7 @@ public final class NpcConfiguration {
               var45.method1887(TextureSampler12.aClass3_Sub28_Sub5Array3041[var28],
                 DummyClass43.anIntArray912[var28],
                 TextureSampler18.aClass3_Sub28_Sub5Array4031[var28],
-                BufferedFile.anIntArray574[var28], -1 + SubNode.anIntArray2574[var28],
+                BufferedFile.anIntArray574[var28], -1 + GlobalStatics_2.anIntArray2574[var28],
                 DummyClass35.anIntArray664[var28], var29,
                 DummyClass52.aClass142Array1168[var28].aBoolean1848,
                   this.anIntArrayArray1258[var28]);
@@ -761,7 +762,7 @@ public final class NpcConfiguration {
                                         if ((var2 == 249)) {
                                           var4 = var3.readUnsignedByte();
                                           if (this.aClass130_1272 == null) {
-                                            var5 = DummyClass53
+                                            var5 = GLStatics
                                                 .nearestPo2((byte) 109, var4);
                                             this.aClass130_1272 = new HashTable(
                                                 var5);

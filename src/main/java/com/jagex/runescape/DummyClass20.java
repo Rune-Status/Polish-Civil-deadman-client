@@ -17,7 +17,7 @@ public final class DummyClass20 {
       }
 
       return !FileCacheRequester.aBoolean1084 ?
-        (!NPC.method1986(var0 ^ 28) ? 1 : (AbstractObjectNode.aBoolean3604 ? 2 : 1)) :
+        (!NPC.method1986(var0 ^ 28) ? 1 : (GlobalStatics_2.aBoolean3604 ? 2 : 1)) :
         0;
   }
 

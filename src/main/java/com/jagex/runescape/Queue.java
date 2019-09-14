@@ -2,6 +2,7 @@ package com.jagex.runescape;
 
 import com.jagex.runescape.common.GameString;
 import com.jagex.runescape.common.GameStringStatics;
+import com.jagex.runescape.node.SubNode;
 import com.jagex.runescape.opengl.GlFont;
 import com.jagex.runescape.opengl.GlRenderer;
 

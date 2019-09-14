@@ -3,6 +3,7 @@ package com.jagex.runescape;
 import com.jagex.runescape.buffer.Buffer;
 import com.jagex.runescape.common.GameString;
 import com.jagex.runescape.common.GameStringStatics;
+import com.jagex.runescape.opengl.GLStatics;
 import com.jagex.runescape.opengl.GlTexture2d;
 import java.awt.Point;
 import java.io.IOException;
@@ -381,7 +382,7 @@ public final class TextureSampler20 extends AbstractTextureSampler {
             --WidgetAccess.anInt2212;
           }
 
-          if (AudioWorker.aBoolean346) {
+          if (GlobalStatics_2.aBoolean346) {
             for (var1 = 0; (var1 < SomethingOtherWorldMap.anInt2537); ++var1) {
               var2 = SomethingPacket116.anIntArray1755[var1];
               if (var2 == 98 || (var2 == 99) || (var2 == 96) || var2 == 97) {
@@ -430,8 +431,8 @@ public final class TextureSampler20 extends AbstractTextureSampler {
             Mouse.method2087((byte) -82);
             DummyClass27.method1713((byte) -91);
             ClassCheckRequest.method132((byte) -92);
-            ++AbstractDirectColorSprite.anInt3699;
-            if (AbstractDirectColorSprite.anInt3699 > 750) {
+            ++GlobalStatics_2.anInt3699;
+            if (GlobalStatics_2.anInt3699 > 750) {
               TextureSampler5.method289(false);
             } else {
               DummyClass35.method1028(-102);
@@ -445,9 +446,8 @@ public final class TextureSampler20 extends AbstractTextureSampler {
                 var1 = SomethingInScenePacket202.method115(true, -1);
                 (var1 != -1); var1 = SomethingInScenePacket202.method115(false, -1)) {
                 DummyClass39.method1087(40, var1);
-                AbstractGameWorld.anIntArray726[ClientScript.bitAnd(
-                    GlobalStatics_0.anInt641++,
-                  31)] = var1;
+                int var01 = GlobalStatics_0.anInt641++;
+                AbstractGameWorld.anIntArray726[var01 & 31] = var1;
               }
 
               int var22;
@@ -457,10 +457,12 @@ public final class TextureSampler20 extends AbstractTextureSampler {
                 var4 = var16.f((byte) 117);
                 if (var3 == 1) {
                   NpcConfiguration.anIntArray1277[var4] = var16.anInt3598;
-                  NPC.anIntArray3986[ClientScript.bitAnd(31, DummyClass18.anInt87++)] = var4;
+                  int var11 = DummyClass18.anInt87++;
+                  NPC.anIntArray3986[31 & var11] = var4;
                 } else if (var3 == 2) {
                   DummyClass22.aClass94Array1739[var4] = var16.text;
-                  DummyClass8.anIntArray4025[ClientScript.bitAnd(31, AreaSoundEffect.anInt2317++)] =
+                  int var11 = AreaSoundEffect.anInt2317++;
+                  DummyClass8.anIntArray4025[31 & var11] =
                     var4;
                 } else {
                   Widget var20;
@@ -629,8 +631,8 @@ public final class TextureSampler20 extends AbstractTextureSampler {
                 DummyClass29.method909(117, MouseRecorder.aClass11_1017);
                 if (((5 + MilliFrameRegulator.anInt2693) < SomethingTilek.anInt1676)
                   || SomethingTilek.anInt1676 < -5 + MilliFrameRegulator.anInt2693
-                  || ((DummyInputStream.anInt40 + 5) < GlobalStatics_0.anInt1709)
-                  || -5 + DummyInputStream.anInt40 > GlobalStatics_0.anInt1709) {
+                  || ((GlobalStatics_2.anInt40 + 5) < GlobalStatics_0.anInt1709)
+                  || -5 + GlobalStatics_2.anInt40 > GlobalStatics_0.anInt1709) {
                   SomethingScene.aBoolean1074 = true;
                 }
 
@@ -876,20 +878,20 @@ public final class TextureSampler20 extends AbstractTextureSampler {
                             TextureSampler12.secureBuffer.writePacket(245);
                           }
 
-                          if (AudioWorker.aClass64_351 != null
-                            && AudioWorker.aClass64_351.status == 1) {
-                            if (AudioWorker.aClass64_351.result != null) {
+                          if (GlobalStatics_2.aClass64_351 != null
+                            && GlobalStatics_2.aClass64_351.status == 1) {
+                            if (GlobalStatics_2.aClass64_351.result != null) {
                               DummyClass54.method1596(TextureSampler5.aClass94_3295, (byte) 126,
                                 GlobalStatics_0.aBoolean2154);
                             }
 
                             TextureSampler5.aClass94_3295 = null;
-                            AudioWorker.aClass64_351 = null;
+                            GlobalStatics_2.aClass64_351 = null;
                             GlobalStatics_0.aBoolean2154 = false;
                           }
 
                           ++TextureSampler18.anInt4032;
-                          ++Light.anInt716;
+                          ++GLStatics.anInt716;
                           ++GameException.anInt2120;
                           if (GameException.anInt2120 > 500) {
                             GameException.anInt2120 = 0;
@@ -899,7 +901,7 @@ public final class TextureSampler20 extends AbstractTextureSampler {
                             }
 
                             if (((var22 & 2) == 2)) {
-                              DummyInputStream.anInt42 += GlobalStatics_2.anInt2217;
+                              GlobalStatics_2.anInt42 += GlobalStatics_2.anInt2217;
                             }
 
                             if (((var22 & 1) == 1)) {
@@ -907,8 +909,8 @@ public final class TextureSampler20 extends AbstractTextureSampler {
                             }
                           }
 
-                          if ((Light.anInt716 > 500)) {
-                            Light.anInt716 = 0;
+                          if ((GLStatics.anInt716 > 500)) {
+                            GLStatics.anInt716 = 0;
                             var22 = (int) (8.0D * Math.random());
                             if (((1 & var22) == 1)) {
                               TextureSampler9.anInt3102 += DummyOutputStream.anInt48;
@@ -931,11 +933,11 @@ public final class TextureSampler20 extends AbstractTextureSampler {
                             DummyCanvas.anInt25 = 1;
                           }
 
-                          if (DummyInputStream.anInt42 < -55) {
+                          if (GlobalStatics_2.anInt42 < -55) {
                             GlobalStatics_2.anInt2217 = 2;
                           }
 
-                          if (DummyInputStream.anInt42 > 55) {
+                          if (GlobalStatics_2.anInt42 > 55) {
                             GlobalStatics_2.anInt2217 = -2;
                           }
 
@@ -995,7 +997,7 @@ public final class TextureSampler20 extends AbstractTextureSampler {
                           }
                         }
 
-                        Light.executeScript(var26);
+                        GLStatics.executeScript(var26);
                       }
                     }
 
@@ -1009,7 +1011,7 @@ public final class TextureSampler20 extends AbstractTextureSampler {
                       }
                     }
 
-                    Light.executeScript(var26);
+                    GLStatics.executeScript(var26);
                   }
                 }
 
@@ -1023,7 +1025,7 @@ public final class TextureSampler20 extends AbstractTextureSampler {
                   }
                 }
 
-                Light.executeScript(var26);
+                GLStatics.executeScript(var26);
               }
             }
           }

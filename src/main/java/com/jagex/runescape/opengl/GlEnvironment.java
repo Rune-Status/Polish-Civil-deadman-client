@@ -1,7 +1,5 @@
 package com.jagex.runescape.opengl;
 
-import com.jogamp.opengl.GL2;
-
 public final class GlEnvironment {
 
   private static int color = -1;
@@ -27,11 +25,13 @@ public final class GlEnvironment {
     return GlEnvironment.diffuseIntensity;
   }
 
-  public static void setSunColor(int color, float ambientIntensity, float diffuseIntensity,
-                                float secondaryIntensity) {
-    if (GlEnvironment.color != color || GlEnvironment.ambientIntensity != ambientIntensity
-      || GlEnvironment.diffuseIntensity != diffuseIntensity
-      || GlEnvironment.secondaryIntensity != secondaryIntensity) {
+  public static void setSunColor(int color, float ambientIntensity,
+      float diffuseIntensity,
+      float secondaryIntensity) {
+    if (GlEnvironment.color != color
+        || GlEnvironment.ambientIntensity != ambientIntensity
+        || GlEnvironment.diffuseIntensity != diffuseIntensity
+        || GlEnvironment.secondaryIntensity != secondaryIntensity) {
       GlEnvironment.color = color;
       GlEnvironment.ambientIntensity = ambientIntensity;
       GlEnvironment.diffuseIntensity = diffuseIntensity;
@@ -40,19 +40,22 @@ public final class GlEnvironment {
       float green = (color >> 8 & 255) / 255.0F;
       float blue = (color & 255) / 255.0F;
       float[] colors = {
-        ambientIntensity * red, ambientIntensity * green, ambientIntensity * blue, 1.0F
+          ambientIntensity * red, ambientIntensity * green,
+          ambientIntensity * blue, 1.0F
       };
       // GL_LIGHT_AMBIENT
       GlRenderer.GL.glLightModelfv(2899, colors, 0);
       // GL_LIGHT_0, DIFFUSE
       float[] var9 = {
-        diffuseIntensity * red, diffuseIntensity * green, diffuseIntensity * blue, 1.0F
+          diffuseIntensity * red, diffuseIntensity * green,
+          diffuseIntensity * blue, 1.0F
       };
       GlRenderer.GL.glLightfv(16384, 4609, var9, 0);
 
       // GL_LIGHT_1
       float[] var10 = {
-        -secondaryIntensity * red, -secondaryIntensity * green, -secondaryIntensity * blue, 1.0F
+          -secondaryIntensity * red, -secondaryIntensity * green,
+          -secondaryIntensity * blue, 1.0F
       };
       GlRenderer.GL.glLightfv(16385, 4609, var10, 0);
     }
@@ -90,7 +93,8 @@ public final class GlEnvironment {
   }
 
   public static void setSunPosition(float var0, float var1, float var2) {
-    if (GlEnvironment.diffuseLight0[0] != var0 || GlEnvironment.diffuseLight0[1] != var1 ||
+    if (GlEnvironment.diffuseLight0[0] != var0
+        || GlEnvironment.diffuseLight0[1] != var1 ||
         GlEnvironment.diffuseLight0[2] != var2) {
       GlEnvironment.diffuseLight0[0] = var0;
       GlEnvironment.diffuseLight0[1] = var1;
@@ -131,7 +135,8 @@ public final class GlEnvironment {
 
   private static void method1513() {
     GlEnvironment
-        .setSunColor(GlEnvironment.defaultSunColor, 1.1523438F, 0.69921875F, 1.2F);
+        .setSunColor(GlEnvironment.defaultSunColor, 1.1523438F, 0.69921875F,
+            1.2F);
     GlEnvironment.setSunPosition(-50.0f, -60.0f, -50.0f);
     GlEnvironment.setFogColor(GlEnvironment.defaultFogColor, 0);
   }

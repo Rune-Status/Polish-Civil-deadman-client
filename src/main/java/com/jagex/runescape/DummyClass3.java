@@ -85,7 +85,7 @@ public final class DummyClass3 {
             var18.anInt2342 += var20.length / 2;
             ++var18.anInt2344;
             if (var17.aBoolean2092 && var15 != 0) {
-              var18.anInt2342 += AbstractObjectNode.anIntArray3607[var19];
+              var18.anInt2342 += GlobalStatics_2.anIntArray3607[var19];
             }
           }
 
@@ -708,7 +708,8 @@ public final class DummyClass3 {
           || GlobalStatics_0.aClass3_Sub28_Sub16_637.anInt3696 != var1) {
           SoftwareDirectColorSprite var5 = new SoftwareDirectColorSprite(var2, var1);
           DummyClass47.method1319(var5.pixels, var2, var1);
-          SubNode.method523(var2, 0, 0, DummyClass30.anInt455, 0, 0, DummyClass58.anInt1460, var1,
+          GlobalStatics_2
+              .method523(var2, 0, 0, DummyClass30.anInt455, 0, 0, DummyClass58.anInt1460, var1,
             0);
           if (GlRenderer.useOpenGlRenderer) {
             GlobalStatics_0.aClass3_Sub28_Sub16_637 = new GlDirectColorSprite(var5);
@@ -746,7 +747,7 @@ public final class DummyClass3 {
           DummyClass47.method1311(var15, var6, var7, var8, var9);
         }
 
-        if ((AbstractDirectColorSprite.anInt3704 > 0)) {
+        if ((GlobalStatics_2.anInt3704 > 0)) {
           int var10;
           if ((ByteArrayNode.anInt3611 > 10)) {
             var10 = (-ByteArrayNode.anInt3611 + 20) * 25;

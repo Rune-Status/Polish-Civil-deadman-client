@@ -100,7 +100,7 @@ public final class DummyClass4 extends DummyClass6 {
             SceneSomething2.aClass94Array1046[FileSystem.anInt104] = var3;
             VertexNormal.aLongArray826[FileSystem.anInt104] = var0;
             Cursor.anIntArray882[FileSystem.anInt104] = 0;
-            SubNode.aClass94Array2566[FileSystem.anInt104] = GroundItemNode.EMPTY_STRING;
+            GlobalStatics_2.aClass94Array2566[FileSystem.anInt104] = GroundItemNode.EMPTY_STRING;
             LightIntensity.anIntArray904[FileSystem.anInt104] = 0;
             GlobalStatics_0.aBooleanArray73[FileSystem.anInt104] = false;
             ++FileSystem.anInt104;

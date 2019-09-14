@@ -3,6 +3,7 @@ package com.jagex.runescape;
 import com.jagex.runescape.common.ArrayUtils;
 import com.jagex.runescape.common.GameString;
 import com.jagex.runescape.common.GameStringStatics;
+import com.jagex.runescape.opengl.GLStatics;
 import java.io.IOException;
 import java.io.OutputStream;
 
@@ -33,7 +34,7 @@ public final class DummyOutputStream extends OutputStream {
   }
 
   public static void method66(GameString var0, int var1, int var2, byte var3, int var4) {
-    Widget var5 = AbstractDirectColorSprite.method638((byte) -19, var4, var1);
+    Widget var5 = GlobalStatics_2.method638((byte) -19, var4, var1);
       if (var5 != null) {
         if (var5.anObjectArray314 != null) {
           ClientScriptCall var6 = new ClientScriptCall();
@@ -41,7 +42,7 @@ public final class DummyOutputStream extends OutputStream {
           var6.aClass11_2449 = var5;
           var6.aClass94_2439 = var0;
           var6.anInt2445 = var2;
-          Light.executeScript(var6);
+          GLStatics.executeScript(var6);
         }
 
         boolean var8 = true;
@@ -54,7 +55,7 @@ public final class DummyOutputStream extends OutputStream {
             if (var2 == 1) {
               TextureSampler12.secureBuffer.writePacket(155);
               TextureSampler12.secureBuffer.writeInt(var4);
-              ++Deque.anInt937;
+              ++GlobalStatics_0.anInt937;
               TextureSampler12.secureBuffer.writeShort(var1);
             }
 

@@ -3,6 +3,7 @@ package com.jagex.runescape;
 import com.jagex.runescape.common.GameString;
 import com.jagex.runescape.common.GameStringStatics;
 import com.jagex.runescape.common.HashTable;
+import com.jagex.runescape.node.Deque;
 import com.jagex.runescape.node.Node;
 
 public final class FileRequester extends AbstractFileRequester {

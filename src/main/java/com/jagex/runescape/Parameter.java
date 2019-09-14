@@ -4,6 +4,7 @@ import com.jagex.runescape.buffer.Buffer;
 import com.jagex.runescape.common.GameString;
 import com.jagex.runescape.common.HashTable;
 import com.jagex.runescape.huffman.HuffmanEncoderStatics;
+import com.jagex.runescape.node.SubNode;
 import com.jagex.runescape.opengl.GlRenderer;
 import java.util.Calendar;
 
@@ -73,8 +74,8 @@ public final class Parameter extends SubNode {
 
         for (int var6 = 0; var6 < var1; ++var6) {
           var5[var6] = HuffmanEncoderStatics
-              .method308(ClientScript.bitAnd(var4[var6] << 24, -16777216),
-            TextureSampler38.anIntArray3446[ClientScript.bitAnd(255, var2[var6])]);
+              .method308(var4[var6] << 24 & -16777216,
+            TextureSampler38.anIntArray3446[255 & (int) var2[var6]]);
         }
 
         var3 = new SoftwareDirectFullColorSprite(SomethingVolume15.anInt2426,
@@ -84,7 +85,7 @@ public final class Parameter extends SubNode {
         int[] var8 = new int[var1];
 
         for (int var9 = 0; var9 < var1; ++var9) {
-          var8[var9] = TextureSampler38.anIntArray3446[ClientScript.bitAnd(var2[var9], 255)];
+          var8[var9] = TextureSampler38.anIntArray3446[(int) var2[var9] & 255];
         }
 
         var3 =

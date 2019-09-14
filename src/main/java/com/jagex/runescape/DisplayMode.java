@@ -8,7 +8,6 @@ public final class DisplayMode {
   private static GameString aClass94_1440 =
     GameStringStatics.create("Connected to update server");
   public static int anInt1439;
-  public static boolean useBumpMaps = true;
   public static int viewY;
   public static MouseRecorder aClass67_1443;
   public static short aShort1444 = 256;

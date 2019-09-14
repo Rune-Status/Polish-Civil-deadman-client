@@ -2,6 +2,7 @@ package com.jagex.runescape;
 
 import com.jagex.runescape.common.GameString;
 import com.jagex.runescape.common.GameStringStatics;
+import com.jagex.runescape.opengl.GLStatics;
 import com.jagex.runescape.opengl.GlRenderer;
 
 public abstract class Mobile extends SceneNode {
@@ -227,7 +228,7 @@ public abstract class Mobile extends SceneNode {
       int var5 = var4.anInt395;
       int var6 = var4.anInt381;
       if ((var5 != 0) && var6 != 0) {
-        int var7 = DummyClass40.SINE_TABLE[var3];
+        int var7 = GLStatics.SINE_TABLE[var3];
         int var8 = DummyClass40.COSINE_TABLE[var3];
         int var9 = -var5 / 2;
         int var10 = -var6 / 2;

@@ -1,7 +1,6 @@
 package com.jagex.runescape.opengl;
 
 import com.jagex.runescape.AbstractFont;
-import com.jagex.runescape.DummyClass53;
 import com.jogamp.opengl.GL2;
 import java.nio.ByteBuffer;
 
@@ -151,7 +150,7 @@ public final class GlFont extends AbstractFont {
       }
 
       this.anInt4087 *= 16;
-      this.anInt4087 = DummyClass53.nearestPo2((byte) 104, this.anInt4087);
+      this.anInt4087 = GLStatics.nearestPo2((byte) 104, this.anInt4087);
       var2 = this.anInt4087 / 16;
       byte[] var3 = new byte[this.anInt4087 * this.anInt4087 * 2];
 

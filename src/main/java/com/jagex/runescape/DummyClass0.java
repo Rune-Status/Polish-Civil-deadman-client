@@ -1,6 +1,7 @@
 package com.jagex.runescape;
 
 import com.jagex.runescape.buffer.Buffer;
+import com.jagex.runescape.node.Deque;
 import com.jagex.runescape.opengl.GlRenderer;
 import java.nio.FloatBuffer;
 

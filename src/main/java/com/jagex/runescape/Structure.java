@@ -6,6 +6,8 @@ import com.jagex.runescape.common.GameStringStatics;
 import com.jagex.runescape.common.HashTable;
 import com.jagex.runescape.common.StringNode;
 import com.jagex.runescape.node.Node;
+import com.jagex.runescape.node.SubNode;
+import com.jagex.runescape.opengl.GLStatics;
 import com.jagex.runescape.opengl.GlTexture2d;
 import com.jagex.runescape.opengl.MaterialShader5;
 import com.jagex.runescape.opengl.Texture;
@@ -43,7 +45,7 @@ public final class Structure extends SubNode {
           int var4 = var1.readUnsignedByte();
           int var5;
           if (this.aClass130_3636 == null) {
-            var5 = DummyClass53.nearestPo2((byte) 105, var4);
+            var5 = GLStatics.nearestPo2((byte) 105, var4);
             this.aClass130_3636 = new HashTable(var5);
           }
 
@@ -116,7 +118,7 @@ public final class Structure extends SubNode {
           Structure.method607(true);
         }
 
-        return Light.method1062(var2 + 103);
+        return GLStatics.method1062(var2 + 103);
       } else {
         return null;
       }
@@ -318,7 +320,7 @@ public final class Structure extends SubNode {
       AudioSomethingSomething.aClass94_2526 = HintMarker.aClass94_1348;
       AnimationSomething.aClass94_3586 = ClientScriptEnum.aClass94_3661;
       DummyClass24.aClass94_1653 = AbstractImageProducer.aClass94_2013;
-      DummyInputStream.aClass94_43 = SomethingLight0.aClass94_1558;
+      GlobalStatics_2.aClass94_43 = SomethingLight0.aClass94_1558;
       ItemConfig.aClass94_809 = DummyClass52.aClass94_1173;
       MapScene.aClass94_62 = TextureSampler35.aClass94_3326;
       FloorUnderlay.aClass94_1409 = WorldMapLabel.aClass94_1728;
@@ -341,7 +343,7 @@ public final class Structure extends SubNode {
       TextureSampler36.aClass94_3427 = TextureSampler32.aClass94_3355;
       GlobalStatics_0.aClass94_1707 = SpotAnimationConfig.aClass94_552;
       Unsure.aClass94_1892 = Queue.aClass94_334;
-      GlobalStatics_1.aClass94_2196 = Light.aClass94_700;
+      GlobalStatics_1.aClass94_2196 = GLStatics.aClass94_700;
       GlobalStatics_0.aClass94_1180 = TextureSampler25.aClass94_3408;
       SceneShadowMap.CONNECTION_LOST = DummyClass1.aClass94_414;
       DummyClass32.SKILL = MaterialShader5.aClass94_2170;
@@ -355,15 +357,15 @@ public final class Structure extends SubNode {
       WorldMapLabel.aClass94_1722 = SomethingQuickChatK.aClass94_150;
       DummyClass14.aClass94_1962 = DummyClass38.aClass94_728;
       TextureSampler29.aClass94_3397 = Widget.aClass94_297;
-      Light.aClass94_691 = DummyClass6.aClass94_2042;
+      GLStatics.aClass94_691 = DummyClass6.aClass94_2042;
       IdentityKit.aClass94_461 = GlobalStatics_1.aClass94_1466;
       SomethingAudio.CONNECTING_TO_UPDATE_SERVER = AbstractAudioOutputStream.aClass94_1974;
       DummyClass42.DEFAULT_WALK_TOOLTIP = SomethingTexture3.aClass94_2653;
       GlTexture2d.aClass94_3762 = GlobalStatics_0.aClass94_1702;
       TextureSampler38.aClass94_3445 = TextureSampler31.aClass94_3169;
       TextureSampler30.aClass94_3124 = StringNode0.aClass94_2336;
-      SomethingTexture4.aClass94_2667 = AbstractDirectColorSprite.aClass94_3705;
-      SubNode.aClass94_2576 = AnimationFrame.aClass94_2461;
+      SomethingTexture4.aClass94_2667 = GlobalStatics_2.aClass94_3705;
+      GlobalStatics_2.aClass94_2576 = AnimationFrame.aClass94_2461;
       TextureSampler14.aClass94_3388 = ScriptState.aClass94_875;
       TextureSampler18.aClass94_4040 = StillGraphicNode.aClass94_3547;
       DummyClass14.ATTEMPTING_TO_RECONNECT = GlobalStatics_0.aClass94_2149;

@@ -2,6 +2,7 @@ package com.jagex.runescape;
 
 import com.jagex.runescape.common.GameString;
 import com.jagex.runescape.common.GameStringStatics;
+import com.jagex.runescape.opengl.GLStatics;
 import com.jagex.runescape.opengl.GlDirectColorSprite;
 import com.jagex.runescape.opengl.GlRenderer;
 
@@ -30,7 +31,7 @@ public final class DummyClass36 extends DummyClass35 {
         int var7 = 2047 & TextureSampler9.anInt3102 + SpotAnimationConfig.anInt531;
         int var8 = Math.max(var0.anInt168 / 2, var0.anInt193 / 2) + 10;
         if (var8 * var8 >= var9) {
-          int var10 = DummyClass40.SINE_TABLE[var7];
+          int var10 = GLStatics.SINE_TABLE[var7];
           var10 = var10 * 256 / (Something3d2.anInt3020 + 256);
           int var11 = DummyClass40.COSINE_TABLE[var7];
           var11 = 256 * var11 / (256 + Something3d2.anInt3020);

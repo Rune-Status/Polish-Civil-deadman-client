@@ -103,7 +103,7 @@ public final class AudioStreamEncoder4 extends AudioStreamEncoder {
 
   private void method472(int var1, int var2, int var3) {
     this.anIntArray3501[var2] = var1;
-      this.anIntArray3506[var2] = ClientScript.bitAnd(var1, -128);
+    this.anIntArray3506[var2] = var1 & -128;
       this.method484(0, var1, var2);
   }
 
@@ -320,7 +320,7 @@ public final class AudioStreamEncoder4 extends AudioStreamEncoder {
     this.method493((byte) -123, var4, 64, var2);
       if (((2 & this.anIntArray3518[var2]) != 0)) {
         for (AudioSomethingSomething var5 =
-             (AudioSomethingSomething) this.aClass3_Sub24_Sub3_3527.aClass61_3489.method1212(2);
+             (AudioSomethingSomething) this.aClass3_Sub24_Sub3_3527.aClass61_3489.method1212();
              var5 != null; var5 =
                (AudioSomethingSomething) this.aClass3_Sub24_Sub3_3527.aClass61_3489.method1219(
                  98)) {
@@ -441,61 +441,58 @@ public final class AudioStreamEncoder4 extends AudioStreamEncoder {
           var6 = (8388489 & var2) >> 16;
           if ((var5 == 0)) {
             this.anIntArray3506[var4] =
-              (var6 << 14) + ClientScript.bitAnd(-2080769, this.anIntArray3506[var4]);
+              (var6 << 14) + (-2080769 & this.anIntArray3506[var4]);
           }
 
           if ((var5 == 32)) {
             this.anIntArray3506[var4] =
-              ClientScript.bitAnd(-16257, this.anIntArray3506[var4]) + (var6 << 7);
+              (-16257 & this.anIntArray3506[var4]) + (var6 << 7);
           }
 
           if ((var5 == 1)) {
             this.anIntArray3502[var4] =
-              (var6 << 7) + ClientScript.bitAnd(this.anIntArray3502[var4], -16257);
+              (var6 << 7) + (this.anIntArray3502[var4] & -16257);
           }
 
           if (var5 == 33) {
             this.anIntArray3502[var4] =
-              ClientScript.bitAnd(-128, this.anIntArray3502[var4]) + var6;
+              (-128 & this.anIntArray3502[var4]) + var6;
           }
 
           if ((var5 == 5)) {
             this.anIntArray3510[var4] =
-              ClientScript.bitAnd(this.anIntArray3510[var4], -16257) + (var6 << 7);
+              (this.anIntArray3510[var4] & -16257) + (var6 << 7);
           }
 
           if (var5 == 37) {
-            this.anIntArray3510[var4] = var6 + ClientScript.bitAnd(
-                this.anIntArray3510[var4], -128);
+            this.anIntArray3510[var4] = var6 + (this.anIntArray3510[var4] & -128);
           }
 
           if ((var5 == 7)) {
             this.anIntArray3497[var4] =
-              (var6 << 7) + ClientScript.bitAnd(this.anIntArray3497[var4], -16257);
+              (var6 << 7) + (this.anIntArray3497[var4] & -16257);
           }
 
           if ((var5 == 39)) {
-            this.anIntArray3497[var4] = ClientScript.bitAnd(this.anIntArray3497[var4], -128) + var6;
+            this.anIntArray3497[var4] = (this.anIntArray3497[var4] & -128) + var6;
           }
 
           if ((var5 == 10)) {
             this.anIntArray3498[var4] =
-              ClientScript.bitAnd(-16257, this.anIntArray3498[var4]) + (var6 << 7);
+              (-16257 & this.anIntArray3498[var4]) + (var6 << 7);
           }
 
           if ((var5 == 42)) {
-            this.anIntArray3498[var4] = var6 + ClientScript.bitAnd(-128,
-                this.anIntArray3498[var4]);
+            this.anIntArray3498[var4] = var6 + (-128 & this.anIntArray3498[var4]);
           }
 
           if (var5 == 11) {
             this.anIntArray3514[var4] =
-              ClientScript.bitAnd(this.anIntArray3514[var4], -16257) + (var6 << 7);
+              (this.anIntArray3514[var4] & -16257) + (var6 << 7);
           }
 
           if ((var5 == 43)) {
-            this.anIntArray3514[var4] = var6 + ClientScript.bitAnd(-128,
-                this.anIntArray3514[var4]);
+            this.anIntArray3514[var4] = var6 + (-128 & this.anIntArray3514[var4]);
           }
 
           if ((var5 == 64)) {
@@ -503,16 +500,14 @@ public final class AudioStreamEncoder4 extends AudioStreamEncoder {
               this.anIntArray3518[var4] = HuffmanEncoderStatics.method308(
                   this.anIntArray3518[var4], 1);
             } else {
-              this.anIntArray3518[var4] = ClientScript.bitAnd(
-                  this.anIntArray3518[var4], -2);
+              this.anIntArray3518[var4] = this.anIntArray3518[var4] & -2;
             }
           }
 
           if (var5 == 65) {
             if ((var6 < 64)) {
               this.method502(var4, var1 ^ -57);
-              this.anIntArray3518[var4] = ClientScript.bitAnd(
-                  this.anIntArray3518[var4], -3);
+              this.anIntArray3518[var4] = this.anIntArray3518[var4] & -3;
             } else {
               this.anIntArray3518[var4] = HuffmanEncoderStatics.method308(
                   this.anIntArray3518[var4], 2);
@@ -521,22 +516,22 @@ public final class AudioStreamEncoder4 extends AudioStreamEncoder {
 
           if (var5 == 99) {
             this.anIntArray3500[var4] =
-              (var6 << 7) + ClientScript.bitAnd(this.anIntArray3500[var4], 127);
+              (var6 << 7) + (this.anIntArray3500[var4] & 127);
           }
 
           if (var5 == 98) {
             this.anIntArray3500[var4] =
-              ClientScript.bitAnd(this.anIntArray3500[var4], 16256) + var6;
+              (this.anIntArray3500[var4] & 16256) + var6;
           }
 
           if ((var5 == 101)) {
             this.anIntArray3500[var4] =
-              (var6 << 7) + ClientScript.bitAnd(127, this.anIntArray3500[var4]) + 16384;
+              (var6 << 7) + (127 & this.anIntArray3500[var4]) + 16384;
           }
 
           if ((var5 == 100)) {
             this.anIntArray3500[var4] =
-              var6 + ClientScript.bitAnd(16256, this.anIntArray3500[var4]) + 16384;
+              var6 + (16256 & this.anIntArray3500[var4]) + 16384;
           }
 
           if ((var5 == 120)) {
@@ -556,7 +551,7 @@ public final class AudioStreamEncoder4 extends AudioStreamEncoder {
             var7 = this.anIntArray3500[var4];
             if ((var7 == 16384)) {
               this.anIntArray3504[var4] =
-                ClientScript.bitAnd(this.anIntArray3504[var4], -16257) + (var6 << 7);
+                (this.anIntArray3504[var4] & -16257) + (var6 << 7);
             }
           }
 
@@ -564,18 +559,18 @@ public final class AudioStreamEncoder4 extends AudioStreamEncoder {
             var7 = this.anIntArray3500[var4];
             if ((var7 == 16384)) {
               this.anIntArray3504[var4] =
-                ClientScript.bitAnd(this.anIntArray3504[var4], -128) + var6;
+                (this.anIntArray3504[var4] & -128) + var6;
             }
           }
 
           if ((var5 == 16)) {
             this.anIntArray3519[var4] =
-              ClientScript.bitAnd(this.anIntArray3519[var4], -16257) + (var6 << 7);
+              (this.anIntArray3519[var4] & -16257) + (var6 << 7);
           }
 
           if ((var5 == 48)) {
             this.anIntArray3519[var4] =
-              ClientScript.bitAnd(this.anIntArray3519[var4], -128) + var6;
+              (this.anIntArray3519[var4] & -128) + var6;
           }
 
           if (var5 == 81) {
@@ -584,8 +579,7 @@ public final class AudioStreamEncoder4 extends AudioStreamEncoder {
                   this.anIntArray3518[var4], 4);
             } else {
               this.method497(var4, -102);
-              this.anIntArray3518[var4] = ClientScript.bitAnd(
-                  this.anIntArray3518[var4], -5);
+              this.anIntArray3518[var4] = this.anIntArray3518[var4] & -5;
             }
           }
 
@@ -921,7 +915,7 @@ public final class AudioStreamEncoder4 extends AudioStreamEncoder {
         }
 
         for (var3 = 0; var3 < 16; ++var3) {
-          this.anIntArray3506[var3] = ClientScript.bitAnd(-128, this.anIntArray3501[var3]);
+          this.anIntArray3506[var3] = -128 & this.anIntArray3501[var3];
         }
 
       }
@@ -1097,7 +1091,7 @@ public final class AudioStreamEncoder4 extends AudioStreamEncoder {
       }
 
       if ((var3.anInt318 == 4)) {
-        ++AudioWorker.anInt349;
+        ++GlobalStatics_2.anInt349;
         ScriptState.method1177(-1, 0L, (byte) -71, GroundItemNode.EMPTY_STRING, 0, (short) 59,
           var3.aClass94_289, var3.anInt279);
       }
@@ -1138,7 +1132,7 @@ public final class AudioStreamEncoder4 extends AudioStreamEncoder {
                 if (Something3d.anInt3012 == 1 && var9.method99(31595)) {
                   if ((GlTexture2d.anInt3764 != var3.anInt279)
                     || (DummyClass31.anInt1473 != var15)) {
-                    ++AudioWorker.anInt342;
+                    ++GlobalStatics_2.anInt342;
                     ScriptState.method1177(-1, var10.anInt787, (byte) -91,
                       RenderAnimation.concat(new GameString[] {
                         RenderAnimation.aClass94_378, GlobalStatics_0.aClass94_1699, var10.aClass94_770
@@ -1146,7 +1140,7 @@ public final class AudioStreamEncoder4 extends AudioStreamEncoder {
                   }
                 } else if (SceneNode.aBoolean1837 && var9.method99(31595)) {
                   Parameter var18 = (LinearHashTable.anInt1038 != -1) ?
-                    Deque.method1210(64, LinearHashTable.anInt1038) :
+                    GlobalStatics_0.method1210(64, LinearHashTable.anInt1038) :
                     null;
                   if ((16 & Something3dRoot.anInt2051) != 0 && (var18 == null
                     || (var10.method1115(var18.anInt3614, 103, LinearHashTable.anInt1038) != var18.anInt3614))) {
@@ -1277,7 +1271,7 @@ public final class AudioStreamEncoder4 extends AudioStreamEncoder {
             ++PlayerVariable.anInt562;
             ScriptState.method1177(BufferObject.anInt1887, 0L, (byte) -113,
               RenderAnimation.concat(new GameString[] {
-                DummyClass59.aClass94_676, AbstractDirectColorSprite.aClass94_3703,
+                DummyClass59.aClass94_676, GlobalStatics_2.aClass94_3703,
                 var3.aClass94_277
               }), var3.anInt191, (short) 12, Parameter.aClass94_3621, var3.anInt279);
           }
@@ -1335,7 +1329,7 @@ public final class AudioStreamEncoder4 extends AudioStreamEncoder {
     FileSystem.anInt101 = var1;
       if (var0 == -53) {
         ByteArrayNode.anInt3611 = 20;
-        AbstractDirectColorSprite.anInt3704 = 3;
+        GlobalStatics_2.anInt3704 = 3;
       }
   }
 

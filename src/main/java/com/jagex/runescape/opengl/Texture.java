@@ -7,7 +7,6 @@ import com.jagex.runescape.BZipDecompressorState;
 import com.jagex.runescape.BitVariable;
 import com.jagex.runescape.buffer.Buffer;
 import com.jagex.runescape.BufferData;
-import com.jagex.runescape.ClientScript;
 import com.jagex.runescape.DummyClass13;
 import com.jagex.runescape.DummyClass17;
 import com.jagex.runescape.DummyClass20;
@@ -28,7 +27,7 @@ import com.jagex.runescape.Player;
 import com.jagex.runescape.ProceduralTexture;
 import com.jagex.runescape.SomethingOtherWorldMap;
 import com.jagex.runescape.SomethingPacket116;
-import com.jagex.runescape.SubNode;
+import com.jagex.runescape.node.SubNode;
 import com.jagex.runescape.TextureCache;
 import com.jagex.runescape.common.GameStringStatics;
 import com.jagex.runescape.huffman.HuffmanEncoderStatics;
@@ -122,9 +121,9 @@ public final class Texture extends SubNode {
               for (var11 = var17; var11 >= 0; --var11) {
                 --var14;
                 int var12 = this.anIntArray3793[var14];
-                var7[var11] += ClientScript.bitAnd(var12, 16726965) >> 16;
-                var8[var11] += ClientScript.bitAnd('\uff72', var12) >> 8;
-                var9[var11] += ClientScript.bitAnd(var12, 255);
+                var7[var11] += (var12 & 16726965) >> 16;
+                var8[var11] += ((int) '\uff72' & var12) >> 8;
+                var9[var11] += var12 & 255;
               }
 
               if (var14 == 0) {
@@ -178,15 +177,10 @@ public final class Texture extends SubNode {
                 --var14;
                 int var24 = this.anIntArray3793[var14];
                 var7[var11] +=
-                    (ClientScript.bitAnd(var24, 16729186) >> 16) - ClientScript
-                        .bitAnd(var23 >> 16,
-                            255);
+                    ((var24 & 16729186) >> 16) - (var23 >> 16 & 255);
                 var8[var11] +=
-                    (ClientScript.bitAnd('\uff8b', var24) >> 8) - ClientScript
-                        .bitAnd(255,
-                            var23 >> 8);
-                var9[var11] += -ClientScript.bitAnd(var23, 255) + ClientScript
-                    .bitAnd(255, var24);
+                    (((int) '\uff8b' & var24) >> 8) - (255 & var23 >> 8);
+                var9[var11] += -(var23 & 255) + (255 & var24);
               }
 
               if (var13 == 0) {

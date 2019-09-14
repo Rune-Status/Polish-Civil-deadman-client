@@ -1,8 +1,6 @@
 package com.jagex.runescape.opengl;
 
 import com.jagex.runescape.buffer.Buffer;
-import com.jagex.runescape.DisplayMode;
-import com.jagex.runescape.DummyClass53;
 import com.jagex.runescape.common.HashTable;
 import com.jagex.runescape.IntegerNode;
 import com.jagex.runescape.node.Node;
@@ -70,7 +68,7 @@ public final class SomethingGl0 extends Node {
     this.anIntArray2349 = new int[this.anInt2344];
     this.anIntArray2367 = new int[this.anInt2344];
     this.anIntArrayArray2357 = new int[this.anInt2344][];
-    this.aClass130_2353 = new HashTable(DummyClass53.nearestPo2((byte) 123,
+    this.aClass130_2353 = new HashTable(GLStatics.nearestPo2((byte) 123,
         this.anInt2342));
     if (this.aBoolean2364) {
       this.anIntArrayArray2360 = new int[this.anInt2344][];
@@ -268,7 +266,7 @@ public final class SomethingGl0 extends Node {
         this.aClass156_2363.bindVertexBuffer();
         GlRenderer.GL.glVertexPointer(3, 5126, var11, 0L);
         GlRenderer.GL.glColorPointer(4, 5121, var11, 12L);
-        if (DisplayMode.useBumpMaps) {
+        if (GLStatics.useBumpMaps) {
           GlRenderer.GL.glNormalPointer(5126, var11, 16L);
         }
 
@@ -288,7 +286,7 @@ public final class SomethingGl0 extends Node {
         GlRenderer.GL.glVertexPointer(3, 5126, var11, this.aByteBuffer2345);
         this.aByteBuffer2345.position(12);
         GlRenderer.GL.glColorPointer(4, 5121, var11, this.aByteBuffer2345);
-        if (DisplayMode.useBumpMaps) {
+        if (GLStatics.useBumpMaps) {
           this.aByteBuffer2345.position(16);
           GlRenderer.GL.glNormalPointer(5126, var11, this.aByteBuffer2345);
         }

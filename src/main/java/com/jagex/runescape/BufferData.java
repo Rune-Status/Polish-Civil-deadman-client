@@ -2,6 +2,7 @@ package com.jagex.runescape;
 
 import com.jagex.runescape.common.GameString;
 import com.jagex.runescape.common.GameStringStatics;
+import com.jagex.runescape.opengl.GLStatics;
 import com.jagex.runescape.opengl.GlBufferObject;
 import com.jagex.runescape.opengl.SomethingGl0;
 import java.io.IOException;
@@ -116,7 +117,7 @@ public final class BufferData {
 
   public static int method1735(int var0) {
     try {
-        if ((Light.anInt692 == 0)) {
+        if ((GLStatics.anInt692 == 0)) {
           if (((Time.getCurrentTimeMillis() - 5000L) < TextureSampler25.aLong3411)) {
             return 0;
           }
@@ -125,7 +126,7 @@ public final class BufferData {
             DummyClass35.signLink.method1441((byte) 8, GameException.serverHost,
               DummyClass24.anInt1658);
           Widget.aLong261 = Time.getCurrentTimeMillis();
-          Light.anInt692 = 1;
+          GLStatics.anInt692 = 1;
         }
 
         if (30000L + Widget.aLong261 < Time.getCurrentTimeMillis()) {
@@ -134,7 +135,7 @@ public final class BufferData {
 
         int var1;
         int var2;
-        if (Light.anInt692 == 1) {
+        if (GLStatics.anInt692 == 1) {
           if ((AreaSoundEffect.socketRequest.status == 2)) {
             return TextureSampler33.method179((byte) 92, 1001);
           }
@@ -149,7 +150,7 @@ public final class BufferData {
           AreaSoundEffect.socketRequest = null;
           var1 = 0;
           if (BufferedFile.aBoolean579) {
-            var1 = AbstractObjectNode.anInt3608;
+            var1 = GlobalStatics_2.anInt3608;
           }
 
           TextureSampler12.secureBuffer.writeByte(255);
@@ -177,10 +178,10 @@ public final class BufferData {
             return TextureSampler33.method179((byte) 92, var2);
           }
 
-          Light.anInt692 = 2;
+          GLStatics.anInt692 = 2;
         }
 
-        if ((Light.anInt692 == 2)) {
+        if ((GLStatics.anInt692 == 2)) {
           if (SomethingVolume15.gameSocket.available() < 2) {
             return -1;
           }
@@ -188,12 +189,12 @@ public final class BufferData {
           OndemandRequester.anInt1002 = SomethingVolume15.gameSocket.read();
           OndemandRequester.anInt1002 <<= 8;
           OndemandRequester.anInt1002 += SomethingVolume15.gameSocket.read();
-          Light.anInt692 = 3;
+          GLStatics.anInt692 = 3;
           TriChromaticImageBuffer.anInt2484 = 0;
           TextureSampler29.aByteArray3396 = new byte[OndemandRequester.anInt1002];
         }
 
-        if ((Light.anInt692 == 3)) {
+        if ((GLStatics.anInt692 == 3)) {
           var1 = SomethingVolume15.gameSocket.available();
           if (var1 < 1) {
             return -1;
@@ -221,7 +222,7 @@ public final class BufferData {
               SomethingVolume15.gameSocket.destroy();
               SomethingVolume15.gameSocket = null;
               FileCacheRequester.anInt1088 = 0;
-              Light.anInt692 = 0;
+              GLStatics.anInt692 = 0;
               TextureSampler29.aByteArray3396 = null;
               TextureSampler25.aLong3411 = Time.getCurrentTimeMillis();
               return 0;

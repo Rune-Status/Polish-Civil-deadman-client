@@ -4,6 +4,7 @@ import com.jagex.runescape.common.GameString;
 import com.jagex.runescape.common.GameStringStatics;
 import com.jagex.runescape.opengl.GlRenderer;
 import com.jagex.runescape.opengl.GlUtils;
+import com.jagex.runescape.opengl.Light;
 import com.jagex.runescape.opengl.SomethingLight;
 import com.jagex.runescape.sprite.SoftwareIndexedColorSpriteStatics;
 
@@ -80,11 +81,10 @@ public abstract class AbstractFrameRegulator {
 
             var10 = PlayerAppearance.anIntArray861[var10];
             TriChromaticImageCache.aClass3_Sub28_Sub16_Sub2_1381.pixels[var6++] =
-                ClientScript.bitAnd(var13 * ClientScript.bitAnd(var11, 16711935)
-                    + ClientScript.bitAnd(16711935, var10) * var12, -16711936)
-                    + ClientScript.bitAnd(
-                    ClientScript.bitAnd(var10, '\uff00') * var12 + (
-                        ClientScript.bitAnd('\uff00', var11) * var13), 16711680)
+                (var13 * (var11 & 16711935)
+                    + (16711935 & var10) * var12 & -16711936)
+                    + ((var10 & (int) '\uff00') * var12 + (
+                    ((int) '\uff00' & var11) * var13) & 16711680)
                     >> 8;
           }
         }

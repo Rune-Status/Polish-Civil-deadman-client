@@ -342,7 +342,7 @@ public final class TextureSampler34 extends AbstractTextureSampler {
       }
 
       for (var1 = 0; DummyClass6.anInt2046 > var1; ++var1) {
-        var2 = AudioWorker.anIntArray347[var1];
+        var2 = GlobalStatics_2.anIntArray347[var1];
         NPC var6 = TextureSampler5.npcs[var2];
         if (var6 != null && (var6.anInt2814 > 0)) {
           --var6.anInt2814;
@@ -354,7 +354,7 @@ public final class TextureSampler34 extends AbstractTextureSampler {
   }
 
   public static int method190(int var0, int hsl, byte var2, int lightness) {
-    int var5 = DummyClass40.hslTable[GlobalStatics_1.repackHSL(hsl, lightness)];
+    int var5 = GLStatics.hslTable[GlobalStatics_1.repackHSL(hsl, lightness)];
       if ((var0 > 0)) {
         int var6 = GLStatics.textureCache.method19(111, var0 & '\uffff');
         int var7;

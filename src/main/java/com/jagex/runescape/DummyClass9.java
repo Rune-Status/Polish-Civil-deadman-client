@@ -9,7 +9,6 @@ import java.net.Socket;
 
 public final class DummyClass9 extends DummyClass5 {
 
-  public static int viewportLowerX;
   public static GameString aClass94_4007 = GameStringStatics.create(":");
   public static boolean[] aBooleanArray4008 = new boolean[100];
   public static int[] anIntArray4009 = new int[5];
@@ -36,7 +35,7 @@ public final class DummyClass9 extends DummyClass5 {
 
       if (!NPC.method1986(90) && (GameObject.plane != GameWorldSomething.currentPlane)) {
         FileCacheRequester.rebuildScene(GameWorldSomething.currentPlane, VariableUpdate.anInt2294,
-          AbstractObjectNode.anInt3606, TextureCache.localPlayer.waypointsY[0], false,
+          GlobalStatics_2.anInt3606, TextureCache.localPlayer.waypointsY[0], false,
           TextureCache.localPlayer.waypointsX[0], true);
       } else {
         if ((GameWorldSomething.currentPlane != DummyClass43.anInt909) && ClanChatUser.method385(

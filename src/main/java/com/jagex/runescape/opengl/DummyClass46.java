@@ -1,10 +1,5 @@
 package com.jagex.runescape.opengl;
 
-import com.jagex.runescape.AbstractObjectNode;
-import com.jagex.runescape.DisplayMode;
-import com.jagex.runescape.DummyClass9;
-import com.jagex.runescape.Light;
-import com.jagex.runescape.MapScene;
 import com.jagex.runescape.SceneGraphTile;
 import com.jagex.runescape.SomethingTilek;
 
@@ -30,7 +25,7 @@ public final class DummyClass46 {
   public static void method1263(int var0, int var1, int var2, int var3,
       int var4, int var5,
       int var6) {
-    if (DisplayMode.useBumpMaps) {
+    if (GLStatics.useBumpMaps) {
       if (var0 == 1 && var5 > 0) {
         DummyClass46.method1268(var1, var2, var3, var4, var5 - 1, var6);
       } else if (var0 == 4 && var5 < DummyClass46.sceneWidth - 1) {
@@ -72,7 +67,7 @@ public final class DummyClass46 {
   public static void method1266(int var0, int var1, int var2, int var3,
       int var4, int var5, int var6,
       int var7) {
-    if (DisplayMode.useBumpMaps) {
+    if (GLStatics.useBumpMaps) {
       if (DummyClass46.anInt1029 != var3 || DummyClass46.anInt1031 != var4
           || DummyClass46.anInt1024 != var5 ||
           DummyClass46.anInt1034 != var6
@@ -175,7 +170,7 @@ public final class DummyClass46 {
 
   public static void method1268(int var0, int var1, int var2, int var3,
       int var4, int var5) {
-    if (DisplayMode.useBumpMaps) {
+    if (GLStatics.useBumpMaps) {
       if (DummyClass46.anInt1029 != var3 || DummyClass46.anInt1031 != var4
           || DummyClass46.anInt1024 != var5 ||
           DummyClass46.anInt1034 != var4
@@ -327,7 +322,7 @@ public final class DummyClass46 {
 
   public static void method1272(int var0, int var1, int var2, int var3,
       int var4) {
-    if (DisplayMode.useBumpMaps) {
+    if (GLStatics.useBumpMaps) {
       label44:
       for (int var5 = 0; var5 < 4; ++var5) {
         if (DummyClass46.anIntArray1028[var5] != -1) {
@@ -407,7 +402,7 @@ public final class DummyClass46 {
   }
 
   public static void method1277(SceneGraphTile[][][] var2) {
-    if (DisplayMode.useBumpMaps) {
+    if (GLStatics.useBumpMaps) {
       GLStatics.method551(0, 0, 0);
       GlRenderer.method1856(0);
       GlRenderer.loadIdentityTextureMatrix();
@@ -436,9 +431,9 @@ public final class DummyClass46 {
             var9 = SomethingTilek.viewportUpperZ - 1;
           }
 
-          if (var8 < AbstractObjectNode.viewportLowerZ) {
-            var7 += AbstractObjectNode.viewportLowerZ - var8;
-            var8 = AbstractObjectNode.viewportLowerZ;
+          if (var8 < GLStatics.viewportLowerZ) {
+            var7 += GLStatics.viewportLowerZ - var8;
+            var8 = GLStatics.viewportLowerZ;
           }
 
           int var10 = var8;
@@ -447,12 +442,12 @@ public final class DummyClass46 {
             short var11 = var5.aShortArray706[var7++];
             int var12 = (var5.anInt703 >> 7) - var5.anInt698 + (var11 >> 8);
             int var13 = var12 + (var11 & 255) - 1;
-            if (var12 < DummyClass9.viewportLowerX) {
-              var12 = DummyClass9.viewportLowerX;
+            if (var12 < GLStatics.viewportLowerX) {
+              var12 = GLStatics.viewportLowerX;
             }
 
-            if (var13 >= MapScene.viewportUpperX) {
-              var13 = MapScene.viewportUpperX - 1;
+            if (var13 >= GLStatics.viewportUpperX) {
+              var13 = GLStatics.viewportUpperX - 1;
             }
 
             int var14 = var12;

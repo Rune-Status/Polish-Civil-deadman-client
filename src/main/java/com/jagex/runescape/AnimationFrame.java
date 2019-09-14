@@ -88,7 +88,7 @@ public final class AnimationFrame extends Node {
         DummyOutputStream.aBoolean47 = true;
       }
 
-      SubNode.anInt2567 = -1;
+      GlobalStatics_2.anInt2567 = -1;
       if (!var0) {
         AnimationFrame.method380(-78);
       }

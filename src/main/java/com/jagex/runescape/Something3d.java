@@ -30,7 +30,7 @@ public class Something3d extends Something3dRoot {
   }
 
   public void method2242(int var1, byte var2 ) {
-    this.aByteArray3015[this.anInt3016++] = (byte) (127 + (ClientScript.bitAnd(var2, 255) >> 1));
+    this.aByteArray3015[this.anInt3016++] = (byte) (127 + (((int) var2 & 255) >> 1));
   }
 
   public final void method2231(byte var1) {

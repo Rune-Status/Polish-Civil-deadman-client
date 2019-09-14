@@ -21,7 +21,7 @@ public final class SomethingQuickChatK {
         int[] var5 = new int[var3];
 
         for (int var6 = 0; (var6 < var3); ++var6) {
-          var5[var6] = TextureSampler38.anIntArray3446[ClientScript.bitAnd(255, var4[var6])];
+          var5[var6] = TextureSampler38.anIntArray3446[255 & (int) var4[var6]];
         }
 
         var1[var2] =

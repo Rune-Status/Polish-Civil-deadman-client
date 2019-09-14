@@ -22,7 +22,7 @@ public final class SceneShadowMap {
                                int var7, int var8, int var9, int var10) {
     int var11 = var2 - var4;
       int var13 = -1;
-      if ((AbstractDirectColorSprite.anInt3704 > 0)) {
+      if ((GlobalStatics_2.anInt3704 > 0)) {
         if (ByteArrayNode.anInt3611 <= 10) {
           var13 = 5 * ByteArrayNode.anInt3611;
         } else {

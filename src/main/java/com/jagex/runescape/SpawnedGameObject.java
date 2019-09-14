@@ -44,7 +44,7 @@ public final class SpawnedGameObject extends Node {
         ++var2;
       }
 
-      if (var0.isLoaded(SubNode.anInt2575)) {
+      if (var0.isLoaded(GlobalStatics_2.anInt2575)) {
         ++var2;
       }
 
@@ -128,7 +128,7 @@ public final class SpawnedGameObject extends Node {
         new SceneGraphTile[1][SocketStream.sceneWidth][TextureSampler17.sceneHeight];
       TextureSampler16.anIntArrayArray3115 =
         new int[SocketStream.sceneWidth][TextureSampler17.sceneHeight];
-      AbstractObjectNode.othrrHeightMap =
+      GlobalStatics_2.othrrHeightMap =
         new int[1][SocketStream.sceneWidth + 1][TextureSampler17.sceneHeight + 1];
       if (GlRenderer.useOpenGlRenderer) {
         TextureSampler32.aClass3_Sub11ArrayArray3346 = new SomethingGl0[1][];
@@ -136,7 +136,7 @@ public final class SpawnedGameObject extends Node {
     } else {
       SomethingIndex150.aClass3_Sub2ArrayArrayArray2065 = null;
       TextureSampler16.anIntArrayArray3115 = null;
-      AbstractObjectNode.othrrHeightMap = null;
+      GlobalStatics_2.othrrHeightMap = null;
       TextureSampler32.aClass3_Sub11ArrayArray3346 = null;
     }
 

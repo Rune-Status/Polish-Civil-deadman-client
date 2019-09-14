@@ -11,10 +11,8 @@ public final class DummyClass40 {
   private static int anInt844;
   private static boolean aBoolean845;
   private static float brightness = 1.0F;
-  public static int[] hslTable = new int[65536];
   public static int anInt835;
   public static boolean aBoolean837;
-  public static int[] SINE_TABLE = new int[2048];
   public static int[] anIntArray841 = new int[2048];
   public static boolean aBoolean843 = true;
   public static int anInt846;
@@ -34,7 +32,7 @@ public final class DummyClass40 {
     }
 
     for (var0 = 0; var0 < 2048; var0++) {
-      DummyClass40.SINE_TABLE[var0] = (int) (65536.0D * Math.sin(var0 * 0.0030679615D));
+      GLStatics.SINE_TABLE[var0] = (int) (65536.0D * Math.sin(var0 * 0.0030679615D));
       DummyClass40.COSINE_TABLE[var0] = (int) (65536.0D * Math.cos(var0 * 0.0030679615D));
     }
 
@@ -2781,7 +2779,7 @@ public final class DummyClass40 {
         if (DummyClass40.anInt850 == 0) {
           if (var3 > 0) {
             do {
-              var2 = DummyClass40.hslTable[var6 >> 8];
+              var2 = GLStatics.hslTable[var6 >> 8];
               var6 += var7;
               var0[var1++] = var2;
               var0[var1++] = var2;
@@ -2793,7 +2791,7 @@ public final class DummyClass40 {
 
           var3 = var5 - var4 & 3;
           if (var3 > 0) {
-            var2 = DummyClass40.hslTable[var6 >> 8];
+            var2 = GLStatics.hslTable[var6 >> 8];
 
             do {
               var0[var1++] = var2;
@@ -2805,7 +2803,7 @@ public final class DummyClass40 {
           var9 = 256 - DummyClass40.anInt850;
           if (var3 > 0) {
             do {
-              var2 = DummyClass40.hslTable[var6 >> 8];
+              var2 = GLStatics.hslTable[var6 >> 8];
               var6 += var7;
               var2 = ((var2 & 16711935) * var9 >> 8 & 16711935) + ((var2 & '\uff00') * var9 >> 8
                 & '\uff00');
@@ -2831,7 +2829,7 @@ public final class DummyClass40 {
 
           var3 = var5 - var4 & 3;
           if (var3 > 0) {
-            var2 = DummyClass40.hslTable[var6 >> 8];
+            var2 = GLStatics.hslTable[var6 >> 8];
             var2 = ((var2 & 16711935) * var9 >> 8 & 16711935) + ((var2 & '\uff00') * var9 >> 8
               & '\uff00');
 
@@ -2849,7 +2847,7 @@ public final class DummyClass40 {
         var3 = var5 - var4;
         if (DummyClass40.anInt850 == 0) {
           do {
-            var0[var1++] = DummyClass40.hslTable[var6 >> 8];
+            var0[var1++] = GLStatics.hslTable[var6 >> 8];
             var6 += var7;
             --var3;
           } while (var3 > 0);
@@ -2858,7 +2856,7 @@ public final class DummyClass40 {
           var9 = 256 - DummyClass40.anInt850;
 
           do {
-            var2 = DummyClass40.hslTable[var6 >> 8];
+            var2 = GLStatics.hslTable[var6 >> 8];
             var6 += var7;
             var2 = ((var2 & 16711935) * var9 >> 8 & 16711935) + ((var2 & '\uff00') * var9 >> 8
               & '\uff00');
@@ -3482,7 +3480,7 @@ public final class DummyClass40 {
           var20 = 1;
         }
 
-        DummyClass40.hslTable[var2++] = var20;
+        GLStatics.hslTable[var2++] = var20;
       }
     }
 
@@ -3493,7 +3491,7 @@ public final class DummyClass40 {
     DummyClass40.anInt844 = var3 - var1;
     DummyClass40.method1141();
     if (DummyClass40.anIntArray836.length < DummyClass40.anInt844) {
-      DummyClass40.anIntArray836 = new int[DummyClass53.nearestPo2((byte) 95,
+      DummyClass40.anIntArray836 = new int[GLStatics.nearestPo2((byte) 95,
           DummyClass40.anInt844)];
     }
 
@@ -4071,11 +4069,11 @@ public final class DummyClass40 {
 
   public static void method1155() {
     DummyClass40.anIntArray836 = null;
-    DummyClass40.hslTable = null;
+    GLStatics.hslTable = null;
     GLStatics.textureCache = null;
     DummyClass40.anIntArray839 = null;
     DummyClass40.anIntArray841 = null;
-    DummyClass40.SINE_TABLE = null;
+    GLStatics.SINE_TABLE = null;
     DummyClass40.COSINE_TABLE = null;
   }
 

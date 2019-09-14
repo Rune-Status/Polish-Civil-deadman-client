@@ -2,6 +2,8 @@ package com.jagex.runescape;
 
 import com.jagex.runescape.common.GameString;
 import com.jagex.runescape.common.GameStringStatics;
+import com.jagex.runescape.node.AbstractObjectNode;
+import com.jagex.runescape.opengl.GLStatics;
 import com.jagex.runescape.opengl.GlRenderer;
 
 public abstract class AbstractObjectNodeWrapper {
@@ -285,9 +287,9 @@ public abstract class AbstractObjectNodeWrapper {
         var2 -= DummyClass49.anInt1111;
         var8 -= EnumStringFetcher.anInt2162;
         var5 -= NPC.anInt3995;
-        int var9 = DummyClass40.SINE_TABLE[DummyClass17.anInt1823];
+        int var9 = GLStatics.SINE_TABLE[DummyClass17.anInt1823];
         int var10 = DummyClass40.COSINE_TABLE[DummyClass17.anInt1823];
-        int var11 = DummyClass40.SINE_TABLE[TextureSampler28.anInt3315];
+        int var11 = GLStatics.SINE_TABLE[TextureSampler28.anInt3315];
         int var12 = DummyClass40.COSINE_TABLE[TextureSampler28.anInt3315];
         int var13 = var5 * var12 + var11 * var2 >> 16;
         var2 = var2 * var12 - (var11 * var5) >> 16;

@@ -68,7 +68,7 @@ public final class DummyClass11 {
           var1);
       if (var2 == null) {
         byte[] var3 = DummyClass52.aClass153_1171.getBytes(TextureSampler36.method340(var1, -51),
-          AudioWorker.method893(var1, (byte) 110));
+          GlobalStatics_2.method893(var1, (byte) 110));
         var2 = new GameObjectConfig();
         var2.anInt1527 = var1;
         if (var3 != null) {

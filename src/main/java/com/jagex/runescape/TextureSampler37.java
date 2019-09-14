@@ -268,7 +268,7 @@ public final class TextureSampler37 extends AbstractTextureSampler {
         TextureSampler37.anInt3263 = 109;
       }
 
-      Deque.aClass93_939.method1522(-128, var1);
+      GlobalStatics_0.aClass93_939.method1522(-128, var1);
   }
 
   public static void method272(byte var0) {
@@ -309,14 +309,14 @@ public final class TextureSampler37 extends AbstractTextureSampler {
             int var10 = var7 & 63;
             int var12 = var10 - ProceduralTexture.anInt1152 + 64 * (255
               & AudioStreamEncoder3.regionHashes[var2]);
-            NpcConfiguration var13 = SubNode.getNpcConfiguration(var16.readUnsignedShort());
+            NpcConfiguration var13 = GlobalStatics_2.getNpcConfiguration(var16.readUnsignedShort());
             if (TextureSampler5.npcs[var6] == null && (var13.aByte1267 & 1) > 0
               && (var8 == GameObject.plane) && (var11 >= 0) &&
                 var13.size + var11 < 104
               && (var12 >= 0) && var12 + var13.size < 104) {
               TextureSampler5.npcs[var6] = new NPC();
               NPC npc = TextureSampler5.npcs[var6];
-              AudioWorker.anIntArray347[DummyClass6.anInt2046++] = var6;
+              GlobalStatics_2.anIntArray347[DummyClass6.anInt2046++] = var6;
               npc.anInt2838 = AbstractGameWorld.updateCycle;
               npc.setConfiguration(-1, var13);
               npc.method1976(npc.config.size, 2);

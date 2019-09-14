@@ -1,10 +1,8 @@
 package com.jagex.runescape.opengl;
 
 import com.jagex.runescape.buffer.Buffer;
-import com.jagex.runescape.DummyClass53;
 import com.jagex.runescape.common.HashTable;
 import com.jagex.runescape.IntegerNode;
-import com.jagex.runescape.Light;
 import java.nio.ByteBuffer;
 
 public final class SomethingLight {
@@ -157,7 +155,7 @@ public final class SomethingLight {
     this.aByteArray654 = new byte[this.anInt657];
     this.aByteArray644 = new byte[this.anInt657];
     this.aByteArray650 = new byte[this.anInt657];
-    this.aClass130_656 = new HashTable(DummyClass53.nearestPo2((byte) 70,
+    this.aClass130_656 = new HashTable(GLStatics.nearestPo2((byte) 70,
         this.anInt657));
   }
 

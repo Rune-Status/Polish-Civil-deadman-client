@@ -44,7 +44,7 @@ public final class SomethingScene {
 
   public static void method1293(boolean var0) {
     if (!ProjectileNode.aBoolean3779 && (AbstractGameWorld.usageLocation != 2)) {
-          DummyInputStream.aClass94_38.method1577(-1857);
+          GlobalStatics_2.aClass94_38.method1577(-1857);
           if (!var0) {
             SomethingScene.toString(1);
           }
@@ -69,8 +69,8 @@ public final class SomethingScene {
               || var1.anInt1545 >= FileCacheRequester.anIntArray1083[var2]) && (
             var1.anInt1560 <= SomethingTexture4.anIntArray2663[var2]
               || var1.anInt1550 <= SomethingTexture4.anIntArray2663[var2]) && (
-            var1.anInt1560 >= DummyInputStream.anIntArray39[var2]
-              || var1.anInt1550 >= DummyInputStream.anIntArray39[var2])) {
+            var1.anInt1560 >= GlobalStatics_2.anIntArray39[var2]
+              || var1.anInt1550 >= GlobalStatics_2.anIntArray39[var2])) {
             continue label188;
           }
         }

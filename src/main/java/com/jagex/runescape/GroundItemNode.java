@@ -3,6 +3,7 @@ package com.jagex.runescape;
 import com.jagex.runescape.buffer.Buffer;
 import com.jagex.runescape.common.GameString;
 import com.jagex.runescape.common.GameStringStatics;
+import com.jagex.runescape.node.SubNode;
 
 public final class GroundItemNode extends SubNode {
 
@@ -211,7 +212,7 @@ public final class GroundItemNode extends SubNode {
             SomethingTexture4.resetFrameRegulator();
           }
         } else {
-          AudioWorker.method889((byte) 105, new Buffer(
+          GlobalStatics_2.method889((byte) 105, new Buffer(
             TextureSampler23.worldMaps.method2123(0, HintMarker.aClass94_1349,
               GlobalStatics_0.aClass3_Sub28_Sub3_2600.aClass94_3561)));
           GameObject.anInt2737 = 30;

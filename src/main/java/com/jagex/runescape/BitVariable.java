@@ -119,7 +119,7 @@ public final class BitVariable {
           }
 
           SceneSomething.method957(var1 + 97, var0.readUnsignedByte() == 1);
-          AbstractObjectNode.aBoolean3604 = var0.readUnsignedByte() == 1;
+          GlobalStatics_2.aBoolean3604 = var0.readUnsignedByte() == 1;
           Keyboard.aBoolean1905 = var0.readUnsignedByte() == 1;
           SceneSomething.aBoolean488 = var0.readUnsignedByte() == 1;
           Widget.aBoolean236 = var0.readUnsignedByte() == 1;
@@ -131,7 +131,7 @@ public final class BitVariable {
             GLStatics.anInt1137 = 2;
           }
 
-          DisplayMode.useBumpMaps = (var0.readUnsignedByte() == 1);
+          GLStatics.useBumpMaps = (var0.readUnsignedByte() == 1);
           if (var2 < 2) {
             var0.readUnsignedByte();
           }
@@ -183,7 +183,7 @@ public final class BitVariable {
           }
 
           if (var2 >= 6) {
-            SubNode.anInt2577 = var0.readUnsignedByte();
+            GlobalStatics_2.anInt2577 = var0.readUnsignedByte();
           }
 
           if ((var2 >= 7)) {
@@ -191,7 +191,7 @@ public final class BitVariable {
           }
 
           if (var2 >= 8) {
-            AudioWorker.aBoolean346 = (var0.readUnsignedByte() == 1);
+            GlobalStatics_2.aBoolean346 = (var0.readUnsignedByte() == 1);
           }
 
           if (var2 >= 9) {

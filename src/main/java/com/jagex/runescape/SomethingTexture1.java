@@ -69,7 +69,7 @@ public final class SomethingTexture1 extends AbstractSomethingTexture {
         GLStatics.sceneGraphTiles = null;
       }
 
-      return !GroundItem.loadSprites(var1, var2) ? null : Light.method1062(99);
+      return !GroundItem.loadSprites(var1, var2) ? null : GLStatics.method1062(99);
   }
 
   public static void method1345(int var0) {

@@ -1,6 +1,5 @@
 package com.jagex.runescape.opengl;
 
-import com.jagex.runescape.DisplayMode;
 import java.nio.ByteBuffer;
 
 public final class SkyboxMaterialShader implements MaterialShader {
@@ -116,7 +115,7 @@ public final class SkyboxMaterialShader implements MaterialShader {
   }
 
   public void disable() {
-    if (DisplayMode.useBumpMaps) {
+    if (GLStatics.useBumpMaps) {
       GlRenderer.GL.glCallList(this.listId + 1);
     } else {
       GlRenderer.GL.glTexEnvi(8960, '\u8588', 5890);
@@ -126,7 +125,7 @@ public final class SkyboxMaterialShader implements MaterialShader {
 
   public void enable() {
     GlRenderer.method1847(1);
-    if (DisplayMode.useBumpMaps) {
+    if (GLStatics.useBumpMaps) {
       GlRenderer.GL.glCallList(this.listId);
     } else {
       GlRenderer.GL.glTexEnvi(8960, '\u8588', '\u8577');
@@ -135,7 +134,7 @@ public final class SkyboxMaterialShader implements MaterialShader {
   }
 
   public void set(int tex) {
-    if (DisplayMode.useBumpMaps && this.textureIds != null) {
+    if (GLStatics.useBumpMaps && this.textureIds != null) {
       GlRenderer.GL.glActiveTexture('\u84c1');
       GlRenderer.GL.glBindTexture('\u8513', this.textureIds[tex - 1]);
       GlRenderer.GL.glActiveTexture('\u84c0');

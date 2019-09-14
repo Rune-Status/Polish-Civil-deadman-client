@@ -78,7 +78,7 @@ public abstract class BufferObject {
             if ((Something3d.anInt3012 == 1)) {
               ScriptState.method1177(DummyClass54.anInt1403, var3, (byte) -125,
                 RenderAnimation.concat(new GameString[] {
-                  RenderAnimation.aClass94_378, AbstractDirectColorSprite.aClass94_3702, var5
+                  RenderAnimation.aClass94_378, GlobalStatics_2.aClass94_3702, var5
                 }), var1, (short) 26, TextureSampler14.aClass94_3388, var4);
               ++GZipDecompressor.anInt816;
             } else if (!SceneNode.aBoolean1837) {
@@ -179,13 +179,13 @@ public abstract class BufferObject {
             } else {
               Parameter var12 = LinearHashTable.anInt1038 == -1 ?
                 null :
-                Deque.method1210(64, LinearHashTable.anInt1038);
+                GlobalStatics_0.method1210(64, LinearHashTable.anInt1038);
               if (((2 & Something3dRoot.anInt2051) != 0) && (var12 == null
                 || var0.method1475(LinearHashTable.anInt1038, -26460, var12.anInt3614)
                 != var12.anInt3614)) {
                 ScriptState.method1177(BufferObject.anInt1887, var3, (byte) -93,
                   RenderAnimation.concat(new GameString[] {
-                    DummyClass59.aClass94_676, AbstractDirectColorSprite.aClass94_3702, var5
+                    DummyClass59.aClass94_676, GlobalStatics_2.aClass94_3702, var5
                   }), var1, (short) 45, Parameter.aClass94_3621, var4);
                 ++DummyClass25.anInt1629;
               }

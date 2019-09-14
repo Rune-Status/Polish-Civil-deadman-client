@@ -263,7 +263,7 @@ public final class SomethingTexture4 extends AbstractSomethingTexture {
           }
 
           var3.setConfiguration(-1,
-              SubNode.getNpcConfiguration(
+              GlobalStatics_2.getNpcConfiguration(
                   SpotAnimationConfig.gameBuffer.readUnsignedShortLE()));
           var3.method1976(var3.config.size, 2);
           var3.renderAnimationId = var3.config.renderAnimationId;

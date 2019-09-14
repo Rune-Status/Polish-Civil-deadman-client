@@ -136,7 +136,7 @@ public final class DummyClass42 {
                                            int var5, int var6, int var7, SceneNode var8, int var9,
                                            boolean var10, long var11) {
     boolean var13 = Arrays.deepEquals(AbstractGameWorld.heightMap,
-        AbstractObjectNode.othrrHeightMap);
+        GlobalStatics_2.othrrHeightMap);
     int var14 = 0;
 
     int x;

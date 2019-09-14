@@ -4,7 +4,9 @@ import com.jagex.runescape.common.GameString;
 import com.jagex.runescape.common.GameStringStatics;
 import com.jagex.runescape.common.HashTable;
 import com.jagex.runescape.node.Node;
+import com.jagex.runescape.node.SubNode;
 import com.jagex.runescape.opengl.DummyClass33;
+import com.jagex.runescape.opengl.GLStatics;
 import com.jagex.runescape.opengl.GlDirectColorSprite;
 import com.jagex.runescape.opengl.GlRenderer;
 import com.jagex.runescape.opengl.GlTexture2d;
@@ -165,7 +167,7 @@ public final class Cache {
         if (bytes != null) {
           DummyClass43.method1194(-16385);
           GlobalStatics_0.method777(
-              GlobalStatics_0.collisionMaps, var0, -48 + 8 * AbstractObjectNode.anInt3606,
+              GlobalStatics_0.collisionMaps, var0, -48 + 8 * GlobalStatics_2.anInt3606,
             var7, 4, var6, (VariableUpdate.anInt2294 - 6) * 8, bytes);
         }
       }
@@ -245,7 +247,7 @@ public final class Cache {
             int var16;
             if (var11 == DummyClass42.aClass11_886) {
               if (var5 != -1412584499 && !var11.aBoolean200) {
-                AbstractObjectNode.anInt3602 = var2;
+                GlobalStatics_2.anInt3602 = var2;
                 FileCacheRequester.anInt1082 = var1;
                 SceneNode.aClass11Array1836 = var3;
                 continue;
@@ -321,7 +323,7 @@ public final class Cache {
                 if ((var11.anInt189 == 1337)
                   || var11.anInt189 == 1403 && GlRenderer.useOpenGlRenderer) {
                   FloorOverlay.aClass11_2091 = var11;
-                  SubNode.anInt2567 = var14;
+                  GlobalStatics_2.anInt2567 = var14;
                   DummyClass41.anInt865 = var13;
                   TextureSampler36.method338(-6403, var11.anInt193, (var11.anInt189 == 1403), var13,
                     var11.anInt168, var14);
@@ -363,7 +365,7 @@ public final class Cache {
                   var21 -= var11.anInt193 / 2;
                   var23 = 2047 & SpotAnimationConfig.anInt531 + TextureSampler9.anInt3102;
                   var20 -= var11.anInt168 / 2;
-                  var24 = DummyClass40.SINE_TABLE[var23];
+                  var24 = GLStatics.SINE_TABLE[var23];
                   var25 = DummyClass40.COSINE_TABLE[var23];
                   var24 = (Something3d2.anInt3020 + 256) * var24 >> 8;
                   var25 = (Something3d2.anInt3020 + 256) * var25 >> 8;
@@ -374,7 +376,7 @@ public final class Cache {
                   if (SceneNode.aBoolean1837 && (Something3dRoot.anInt2051 & 64)
                       != 0) {
                     Widget var53 =
-                      AbstractDirectColorSprite.method638((byte) -19, ScriptState.anInt872,
+                      GlobalStatics_2.method638((byte) -19, ScriptState.anInt872,
                         Widget.anInt278);
                     if (var53 != null) {
                       ScriptState.method1177(BufferObject.anInt1887, 1L, (byte) -49,
@@ -509,7 +511,7 @@ public final class Cache {
 
                 if ((var11.anInt189 == 1406)) {
                   GameException.anInt2115 = var14;
-                  AbstractDirectColorSprite.aClass11_3708 = var11;
+                  GlobalStatics_2.aClass11_3708 = var11;
                   TextureSampler18.anInt4041 = var13;
                   continue;
                 }
@@ -646,7 +648,7 @@ public final class Cache {
                             } else if (MouseRecorder.aClass11_1017 == var11
                               && var20 == DummyClass18.anInt86) {
                               var25 = SomethingTilek.anInt1676 - MilliFrameRegulator.anInt2693;
-                              var26 = -DummyInputStream.anInt40 + GlobalStatics_0.anInt1709;
+                              var26 = -GlobalStatics_2.anInt40 + GlobalStatics_0.anInt1709;
                               if ((var26 < 5) && (var26 > 4)) {
                                 var26 = 0;
                               }
@@ -685,7 +687,7 @@ public final class Cache {
                                   }
 
                                   var51.anInt208 -= var32;
-                                  DummyInputStream.anInt40 += var32;
+                                  GlobalStatics_2.anInt40 += var32;
                                   DummyClass29.method909(121, var51);
                                 }
 
@@ -702,7 +704,7 @@ public final class Cache {
                                   }
 
                                   var51.anInt208 += var32;
-                                  DummyInputStream.anInt40 -= var32;
+                                  GlobalStatics_2.anInt40 -= var32;
                                   DummyClass29.method909(-81, var51);
                                 }
                               }
@@ -923,7 +925,7 @@ public final class Cache {
                               GlRenderer.method1851();
                             }
 
-                            var28 = DummyClass40.SINE_TABLE[var11.rotationX0] * var11.anInt164
+                            var28 = GLStatics.SINE_TABLE[var11.rotationX0] * var11.anInt164
                               >> 16;
                             var29 = var11.anInt164 * DummyClass40.COSINE_TABLE[var11.rotationX0]
                               >> 16;
@@ -941,7 +943,7 @@ public final class Cache {
                             }
                           } else {
                             DummyClass40.method1145(var26, var47);
-                            var28 = DummyClass40.SINE_TABLE[var11.rotationX0] * var11.anInt164
+                            var28 = GLStatics.SINE_TABLE[var11.rotationX0] * var11.anInt164
                               >> 16;
                             var29 = var11.anInt164 * DummyClass40.COSINE_TABLE[var11.rotationX0]
                               >> 16;

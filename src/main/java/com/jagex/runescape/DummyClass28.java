@@ -47,7 +47,7 @@ public final class DummyClass28 {
       OndemandRequester.aClass3_Sub28_Sub16Array996 =
         Projectile.method2027(0, (byte) 11, GlobalStatics_1.anInt2195, var1);
       TextureSampler2.aClass3_Sub28_Sub16Array3373 =
-        Projectile.method2027(0, (byte) 11, SubNode.anInt2575, var1);
+        Projectile.method2027(0, (byte) 11, GlobalStatics_2.anInt2575, var1);
       NPC.aClass3_Sub28_Sub16Array3977 =
         Projectile.method2027(0, (byte) 11, RenderAnimation.headIconsPrayerFileId, var1);
       SomethingIndex150.aClass3_Sub28_Sub16Array2072 =

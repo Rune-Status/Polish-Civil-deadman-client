@@ -3,6 +3,7 @@ package com.jagex.runescape;
 import com.jagex.runescape.buffer.Buffer;
 import com.jagex.runescape.common.GameString;
 import com.jagex.runescape.common.GameStringStatics;
+import com.jagex.runescape.opengl.GLStatics;
 import com.jagex.runescape.opengl.GlTexture2d;
 import java.io.IOException;
 
@@ -109,11 +110,11 @@ public final class TextureSampler33 extends AbstractTextureSampler {
 
         ++FileCacheRequester.anInt1088;
         if ((FileCacheRequester.anInt1088 > 4)) {
-          Light.anInt692 = 0;
+          GLStatics.anInt692 = 0;
           FileCacheRequester.anInt1088 = 0;
           return var1;
         } else {
-          Light.anInt692 = 0;
+          GLStatics.anInt692 = 0;
           if (DummyClass24.anInt1658 == ProjectileNode.primaryPort) {
             DummyClass24.anInt1658 = DummyClass41.secondaryPort;
           } else {

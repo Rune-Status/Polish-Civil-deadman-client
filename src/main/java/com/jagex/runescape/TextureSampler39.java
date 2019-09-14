@@ -89,17 +89,17 @@ public class TextureSampler39 extends AbstractTextureSampler {
         if (SomethingLight0.anInt1559 == this.anInt3280) {
           for (var8 = 0; SomethingLight0.anInt1559 > var8; ++var8) {
             var9 = this.anIntArray3284[var7++];
-            var6[var8] = ClientScript.bitAnd(255, var9) << 4;
-            var5[var8] = ClientScript.bitAnd('\uff00', var9) >> 4;
-            var4[var8] = ClientScript.bitAnd(var9, 16711680) >> 12;
+            var6[var8] = (255 & var9) << 4;
+            var5[var8] = ((int) '\uff00' & var9) >> 4;
+            var4[var8] = (var9 & 16711680) >> 12;
           }
         } else {
           for (var8 = 0; SomethingLight0.anInt1559 > var8; ++var8) {
             var9 = this.anInt3280 * var8 / SomethingLight0.anInt1559;
             int var10 = this.anIntArray3284[var7 + var9];
-            var6[var8] = ClientScript.bitAnd(var10 << 4, 4080);
-            var5[var8] = ClientScript.bitAnd(var10, '\uff00') >> 4;
-            var4[var8] = ClientScript.bitAnd(var10 >> 12, 4080);
+            var6[var8] = var10 << 4 & 4080;
+            var5[var8] = (var10 & (int) '\uff00') >> 4;
+            var4[var8] = var10 >> 12 & 4080;
           }
         }
       }

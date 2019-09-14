@@ -5,13 +5,16 @@ import com.jagex.runescape.buffer.BufferStatics;
 import com.jagex.runescape.common.ArrayUtils;
 import com.jagex.runescape.common.GameString;
 import com.jagex.runescape.common.GameStringStatics;
+import com.jagex.runescape.node.Deque;
 import com.jagex.runescape.opengl.DummyClass46;
 import com.jagex.runescape.opengl.GLStatics;
 import com.jagex.runescape.opengl.GlDirectColorSprite;
 import com.jagex.runescape.opengl.GlRenderer;
 import com.jagex.runescape.opengl.GlTexture2d;
 import com.jagex.runescape.opengl.GlUtils;
+import com.jagex.runescape.opengl.Light;
 import com.jagex.runescape.opengl.MaterialShader5;
+import com.jagex.runescape.opengl.SomethingGl0;
 import com.jagex.runescape.sprite.SoftwareIndexedColorSprite;
 import com.jagex.runescape.sprite.SoftwareIndexedColorSpriteStatics;
 import java.nio.charset.StandardCharsets;
@@ -89,11 +92,13 @@ public final class GlobalStatics_0 {
   public static GameString aClass94_1179 = GameStringStatics.create("Veuillez patienter)3)3)3");
   public static GameString COMMAND_REBUILD = GameStringStatics.create("::rebuild");
   public static int screenLowerY;
+  public static int anInt937;
+  public static int anInt938;
+  public static ObjectCache aClass93_939 = new ObjectCache(4);
   static GameString aClass94_1176 = GameStringStatics.create("Loading wordpack )2 ");
   public static GameString aClass94_1183 = aClass94_1176;
   static GameString aClass94_1192 = GameStringStatics.create("Examine");
   public static GameString aClass94_1180 = aClass94_1192;
-  public static byte[] aByteArray2111 = new byte[16384];
 
   static {
     for (int var1 = 0; var1 < 256; ++var1) {
@@ -123,7 +128,7 @@ public final class GlobalStatics_0 {
     return (DummyClass8.aClass94Array4016[var0].getLength() > 0)
         ? RenderAnimation.concat(
         new GameString[]{GroundItem.aClass94Array2935[var0],
-            DummyInputStream.aClass94_43,
+            GlobalStatics_2.aClass94_43,
             DummyClass8.aClass94Array4016[var0]})
         : GroundItem.aClass94Array2935[var0];
   }
@@ -165,10 +170,9 @@ public final class GlobalStatics_0 {
                 ((var3 + var11) > 0) && ((var11 + var3) < 103)) {
               collisionMaps[var9]
                   .anIntArrayArray1304[var10 + var5][var3 + var11] =
-                  ClientScript.bitAnd(
-                      collisionMaps[var9]
-                          .anIntArrayArray1304[var10 + var5][var3 + var11],
-                      -16777217);
+                  collisionMaps[var9]
+                      .anIntArrayArray1304[var10 + var5][var3 + var11]
+                      & -16777217;
             }
           }
         }
@@ -479,7 +483,7 @@ public final class GlobalStatics_0 {
 
         DummyClass47.method1319(
             TextureSampler4.aClass3_Sub28_Sub16_Sub2_3221.pixels, var4, var3);
-        SubNode.method523(var4, 0, 0, var7, var6, 0, var8, var3, var15);
+        GlobalStatics_2.method523(var4, 0, 0, var7, var6, 0, var8, var3, var15);
         DummyClass30.method938(var4, 0, var7, var8, var3, 0, 1, var15, var6);
         SomethingInScenePacket202.method111((byte) -54, 0, 0, var15, var4,
             var8, var6, var7, var3);
@@ -488,7 +492,7 @@ public final class GlobalStatics_0 {
             var4, var3);
         SoftwareIndexedColorSpriteStatics.anIntArray1100 = null;
       } else {
-        SubNode.method523(var4 + var0, var2, 0, var7, var6, var0, var8,
+        GlobalStatics_2.method523(var4 + var0, var2, 0, var7, var6, var0, var8,
             var2 + var3, var15);
         DummyClass30.method938(var0 + var4, var0, var7, var8, var3 + var2,
             var2, 1, var15, var6);
@@ -497,11 +501,11 @@ public final class GlobalStatics_0 {
             var3 + var2);
       }
 
-      if (AbstractDirectColorSprite.anInt3704 > 0) {
+      if (GlobalStatics_2.anInt3704 > 0) {
         --ByteArrayNode.anInt3611;
         if ((ByteArrayNode.anInt3611 == 0)) {
           ByteArrayNode.anInt3611 = 20;
-          --AbstractDirectColorSprite.anInt3704;
+          --GlobalStatics_2.anInt3704;
         }
       }
 
@@ -618,7 +622,7 @@ public final class GlobalStatics_0 {
         int var10;
         if ((var5.anInt2098 < 0)) {
           if (var6 >= 0) {
-            var7 = DummyClass40.hslTable[method729((byte) -74,
+            var7 = GLStatics.hslTable[method729((byte) -74,
                 GLStatics.textureCache.method15(var6, '\uffff'), 96)];
           } else if (var5.anInt2103 == -1) {
             var7 = -1;
@@ -632,7 +636,7 @@ public final class GlobalStatics_0 {
             }
 
             var10 = var9 + (896 & var8) + ('\ufc00' & var8 + var2);
-            var7 = DummyClass40.hslTable[method729((byte) -127, var10, 96)];
+            var7 = GLStatics.hslTable[method729((byte) -127, var10, 96)];
           }
         } else {
           var8 = var5.anInt2098;
@@ -644,7 +648,7 @@ public final class GlobalStatics_0 {
           }
 
           var10 = (896 & var8) + ('\ufc00' & var2 + var8) + var9;
-          var7 = DummyClass40.hslTable[method729((byte) -63, var10, 96)];
+          var7 = GLStatics.hslTable[method729((byte) -63, var10, 96)];
         }
 
         DummyClass51.anIntArray1161[1 + var4] = var7;
@@ -680,7 +684,7 @@ public final class GlobalStatics_0 {
 
     int var2 = FloorUnderlay.method1602(0, var0);
     if ((var2 != -1)) {
-      AbstractObjectNode.method565((byte) 86,
+      GlobalStatics_2.method565((byte) 86,
           DummyClass25.aClass131_1624.aShortArray1727[var2],
           DummyClass25.aClass131_1624.aShortArray1718[var2]);
     }
@@ -863,7 +867,7 @@ public final class GlobalStatics_0 {
           }
         }
       } else {
-        if (!AudioWorker.method888(var1, var13, false, var0, var5, var3,
+        if (!GlobalStatics_2.method888(var1, var13, false, var0, var5, var3,
             var10)) {
           return false;
         }
@@ -877,7 +881,7 @@ public final class GlobalStatics_0 {
       var12 = (int) (var8 >>> 32) & Integer.MAX_VALUE;
       var13 = DummyClass11.method2207(4, var12);
       if ((var13.anInt1516 != -1)) {
-        if (!AudioWorker.method888(var1, var13, false, var0, var5, var3,
+        if (!GlobalStatics_2.method888(var1, var13, false, var0, var5, var3,
             var10)) {
           return false;
         }
@@ -909,7 +913,7 @@ public final class GlobalStatics_0 {
       var11 = (int) (var8 >>> 32) & Integer.MAX_VALUE;
       GameObjectConfig var18 = DummyClass11.method2207(4, var11);
       if ((var18.anInt1516 != -1) &&
-          !AudioWorker.method888(var1, var18, !var7, var0, var5, var3,
+          !GlobalStatics_2.method888(var1, var18, !var7, var0, var5, var3,
               var10)) {
         return false;
       }
@@ -1035,7 +1039,7 @@ public final class GlobalStatics_0 {
       }
 
       int var18 = DummyClass40.COSINE_TABLE[var8.rotationX] * var16 >> 16;
-      int var17 = DummyClass40.SINE_TABLE[var8.rotationX] * var16 >> 16;
+      int var17 = GLStatics.SINE_TABLE[var8.rotationX] * var16 >> 16;
       var21.draw(0, var8.rotationY, var8.rotationZ, var8.rotationX,
           var8.translateX,
           var17 - (var21.getMinimumY() / 2 - var8.translateOther),
@@ -1516,6 +1520,171 @@ public final class GlobalStatics_0 {
   }
 
   public static void clear() {
-    aByteArray2111 = null;
+    GLStatics.aByteArray2111 = null;
+  }
+
+  public static SceneSomething2 method1209(int var0, int var1, int var2) {
+    SceneGraphTile var3 = GLStatics.sceneGraphTiles[var0][var1][var2];
+    if (var3 == null) {
+      return null;
+    } else {
+      SceneSomething2 var4 = var3.aClass70_2234;
+      var3.aClass70_2234 = null;
+      return var4;
+    }
+  }
+
+  public static Parameter method1210(int var0, int var1) {
+    Parameter var2 = (Parameter) DummyClass6.aClass47_2041.get(var1, 1400);
+    if (var0 != 64) {
+      method1218(false, -77, -82);
+    }
+
+    if (var2 == null) {
+      byte[] var3 = TextureSampler27.aClass153_3098.getBytes(11, var1);
+      var2 = new Parameter();
+      if (var3 != null) {
+        var2.method583(207, new Buffer(var3));
+      }
+
+      DummyClass6.aClass47_2041.put(var1, var2);
+      return var2;
+    } else {
+      return var2;
+    }
+  }
+
+  public static void method1213(int var0, SomethingGl0[] var1) {
+    GLStatics.aClass3_Sub11ArrayArray2542[var0] = var1;
+  }
+
+  public static void method1214(int var0, int var1, int var2, int var3, int var4) {
+    AreaSoundEffect var5;
+    for (
+        var5 = (AreaSoundEffect) aClass61_78.getFirst();
+        var5 != null; var5 = (AreaSoundEffect) aClass61_78.getNext()) {
+      Structure.method606(var1, var5, var3, var0, var2, 126);
+    }
+
+    byte var6;
+    RenderAnimation var7;
+    int var8;
+    for (
+        var5 = (AreaSoundEffect) SocketStream.aClass61_1242.getFirst();
+        var5 != null;
+        var5 = (AreaSoundEffect) SocketStream.aClass61_1242.getNext()) {
+      var6 = 1;
+      var7 = var5.aClass140_Sub4_Sub2_2324.getRenderAnimationId(false);
+      assert var7 != null;
+      if ((var7.anInt368 == var5.aClass140_Sub4_Sub2_2324.anInt2764)) {
+        var6 = 0;
+      } else {
+        if ((var7.anInt393 != var5.aClass140_Sub4_Sub2_2324.anInt2764)
+            && (var7.anInt386 != var5.aClass140_Sub4_Sub2_2324.anInt2764)
+            && (var7.anInt375 != var5.aClass140_Sub4_Sub2_2324.anInt2764)
+            && (var7.anInt373 != var5.aClass140_Sub4_Sub2_2324.anInt2764)) {
+          if (var7.anInt398 == var5.aClass140_Sub4_Sub2_2324.anInt2764
+              || var7.anInt372 == var5.aClass140_Sub4_Sub2_2324.anInt2764
+              || var5.aClass140_Sub4_Sub2_2324.anInt2764 == var7.anInt379
+              || (var7.anInt406 == var5.aClass140_Sub4_Sub2_2324.anInt2764)) {
+            var6 = 3;
+          }
+        } else {
+          var6 = 2;
+        }
+      }
+
+      if (var5.anInt2322 != var6) {
+        var8 = ISAACCipher.method1232(var5.aClass140_Sub4_Sub2_2324, -1);
+        if (var8 != var5.anInt2332) {
+          if (var5.aClass3_Sub24_Sub1_2312 != null) {
+            MonoChromaticImageBuffer.aClass3_Sub24_Sub2_2563.method461(
+                var5.aClass3_Sub24_Sub1_2312);
+            var5.aClass3_Sub24_Sub1_2312 = null;
+          }
+
+          var5.anInt2332 = var8;
+        }
+
+        var5.anInt2322 = var6;
+      }
+
+      var5.anInt2326 = var5.aClass140_Sub4_Sub2_2324.anInt2819;
+      var5.anInt2321 =
+          var5.aClass140_Sub4_Sub2_2324.anInt2819
+              + var5.aClass140_Sub4_Sub2_2324.getSize() * 64;
+      var5.anInt2308 = var5.aClass140_Sub4_Sub2_2324.anInt2829;
+      var5.anInt2307 =
+          var5.aClass140_Sub4_Sub2_2324.anInt2829
+              + var5.aClass140_Sub4_Sub2_2324.getSize() * 64;
+      Structure.method606(var1, var5, var3, var0, var2, var4 ^ 113);
+    }
+
+    if (var4 == 1) {
+      for (
+          var5 = (AreaSoundEffect) ObjectNode.aClass130_4046.getFirst(88);
+          var5 != null;
+          var5 = (AreaSoundEffect) ObjectNode.aClass130_4046.getNext(
+              -91)) {
+        var6 = 1;
+        var7 = var5.aClass140_Sub4_Sub1_2327.getRenderAnimationId(false);
+        assert var7 != null;
+        if (var5.aClass140_Sub4_Sub1_2327.anInt2764 == var7.anInt368) {
+          var6 = 0;
+        } else {
+          if (var5.aClass140_Sub4_Sub1_2327.anInt2764 != var7.anInt393
+              && var5.aClass140_Sub4_Sub1_2327.anInt2764 != var7.anInt386
+              && (var5.aClass140_Sub4_Sub1_2327.anInt2764 != var7.anInt375)
+              && var7.anInt373 != var5.aClass140_Sub4_Sub1_2327.anInt2764) {
+            if (var7.anInt398 == var5.aClass140_Sub4_Sub1_2327.anInt2764
+                || var5.aClass140_Sub4_Sub1_2327.anInt2764 == var7.anInt372
+                || (var5.aClass140_Sub4_Sub1_2327.anInt2764 == var7.anInt379)
+                || (var5.aClass140_Sub4_Sub1_2327.anInt2764 == var7.anInt406)) {
+              var6 = 3;
+            }
+          } else {
+            var6 = 2;
+          }
+        }
+
+        if ((var5.anInt2322 != var6)) {
+          var8 = DummyClass50.method1398(0, var5.aClass140_Sub4_Sub1_2327);
+          if ((var5.anInt2332 != var8)) {
+            if (var5.aClass3_Sub24_Sub1_2312 != null) {
+              MonoChromaticImageBuffer.aClass3_Sub24_Sub2_2563.method461(
+                  var5.aClass3_Sub24_Sub1_2312);
+              var5.aClass3_Sub24_Sub1_2312 = null;
+            }
+
+            var5.anInt2332 = var8;
+          }
+
+          var5.anInt2322 = var6;
+        }
+
+        var5.anInt2326 = var5.aClass140_Sub4_Sub1_2327.anInt2819;
+        var5.anInt2321 =
+            var5.aClass140_Sub4_Sub1_2327.anInt2819
+                + 64 * var5.aClass140_Sub4_Sub1_2327.getSize();
+        var5.anInt2308 = var5.aClass140_Sub4_Sub1_2327.anInt2829;
+        var5.anInt2307 =
+            var5.aClass140_Sub4_Sub1_2327.anInt2829
+                + var5.aClass140_Sub4_Sub1_2327.getSize() * 64;
+        Structure.method606(var1, var5, var3, var0, var2, 110);
+      }
+
+    }
+  }
+
+  public static void method1217(int var0) {
+    aClass93_939 = null;
+    if (var0 != 0) {
+      method1213(56, null);
+    }
+  }
+
+  public static GameString method1218(boolean var0, int var1, int var2) {
+    return var1 <= 122 ? null
+        : AbstractObjectNodeWrapper.method1723((byte) -128, var0, 10, var2);
   }
 }

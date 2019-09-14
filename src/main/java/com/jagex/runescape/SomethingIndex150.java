@@ -2,6 +2,7 @@ package com.jagex.runescape;
 
 import com.jagex.runescape.common.GameString;
 import com.jagex.runescape.common.GameStringStatics;
+import com.jagex.runescape.opengl.GLStatics;
 import com.jagex.runescape.opengl.GlIndexedColorSprite;
 import com.jagex.runescape.opengl.GlRenderer;
 import com.jagex.runescape.sprite.AbstractIndexedColorSprite;
@@ -119,7 +120,7 @@ public final class SomethingIndex150 {
 
       if (!var4) {
         GameBuffer.printMessage(GroundItemNode.EMPTY_STRING, 0,
-          RenderAnimation.concat(new GameString[] {Light.aClass94_691, var3}), -1);
+          RenderAnimation.concat(new GameString[] {GLStatics.aClass94_691, var3}), -1);
       }
   }
 

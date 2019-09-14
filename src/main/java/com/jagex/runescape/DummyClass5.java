@@ -2,6 +2,7 @@ package com.jagex.runescape;
 
 import com.jagex.runescape.common.GameString;
 import com.jagex.runescape.common.GameStringStatics;
+import com.jagex.runescape.node.Deque;
 import com.jagex.runescape.opengl.GlTexture2d;
 import java.io.IOException;
 
@@ -142,7 +143,7 @@ public class DummyClass5 extends DummyClass6 {
                     MouseRecorder.aClass11_1017 = EnumStringFetcher
                         .getWidget((byte) 119, var4);
                     MilliFrameRegulator.anInt2693 = DummyClass5.anInt2993;
-                    DummyInputStream.anInt40 = DummyClass36.anInt2614;
+                    GlobalStatics_2.anInt40 = DummyClass36.anInt2614;
                     DummyClass18.anInt86 = var3;
                     DummyClass29
                         .method909(118, MouseRecorder.aClass11_1017);

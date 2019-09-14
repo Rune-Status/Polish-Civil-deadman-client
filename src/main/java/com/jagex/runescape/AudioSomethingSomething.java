@@ -73,31 +73,31 @@ public final class AudioSomethingSomething extends Node {
       cameraZ = TextureSampler17.sceneHeight * 128 - 1;
     }
 
-    DummyClass44.pitchSine = DummyClass40.SINE_TABLE[pitch];
+    DummyClass44.pitchSine = GLStatics.SINE_TABLE[pitch];
     LinearHashTable.pitchCosine = DummyClass40.COSINE_TABLE[pitch];
-    TextureSampler25.yawSine = DummyClass40.SINE_TABLE[yaw];
+    TextureSampler25.yawSine = GLStatics.SINE_TABLE[yaw];
     TextureSampler20.yawCosine = DummyClass40.COSINE_TABLE[yaw];
     MilliFrameRegulator.cameraPosX = cameraX;
     ClientScriptEnum.cameraY = cameraY;
     TextureSampler13.cameraZ = cameraZ;
     GLStatics.cameraTileX = cameraX / 128;
     GLStatics.cameraTileZ = cameraZ / 128;
-    DummyClass9.viewportLowerX =
+    GLStatics.viewportLowerX =
         GLStatics.cameraTileX - GLStatics.viewportLength;
-    if (DummyClass9.viewportLowerX < 0) {
-      DummyClass9.viewportLowerX = 0;
+    if (GLStatics.viewportLowerX < 0) {
+      GLStatics.viewportLowerX = 0;
     }
 
-    AbstractObjectNode.viewportLowerZ =
+    GLStatics.viewportLowerZ =
         GLStatics.cameraTileZ - GLStatics.viewportLength;
-    if (AbstractObjectNode.viewportLowerZ < 0) {
-      AbstractObjectNode.viewportLowerZ = 0;
+    if (GLStatics.viewportLowerZ < 0) {
+      GLStatics.viewportLowerZ = 0;
     }
 
-    MapScene.viewportUpperX =
+    GLStatics.viewportUpperX =
         GLStatics.cameraTileX + GLStatics.viewportLength;
-    if (MapScene.viewportUpperX > SocketStream.sceneWidth) {
-      MapScene.viewportUpperX = SocketStream.sceneWidth;
+    if (GLStatics.viewportUpperX > SocketStream.sceneWidth) {
+      GLStatics.viewportUpperX = SocketStream.sceneWidth;
     }
 
     SomethingTilek.viewportUpperZ =
@@ -140,9 +140,9 @@ public final class AudioSomethingSomething extends Node {
             && sceneTileX < SocketStream.sceneWidth
             && sceneTileZ < TextureSampler17.sceneHeight) {
           int lowerZ;
-          if (AbstractObjectNode.othrrHeightMap != null) {
+          if (GlobalStatics_2.othrrHeightMap != null) {
             lowerZ =
-                AbstractObjectNode.othrrHeightMap[0][sceneTileX][sceneTileZ]
+                GlobalStatics_2.othrrHeightMap[0][sceneTileX][sceneTileZ]
                     - ClientScriptEnum.cameraY + 128;
           } else {
             lowerZ =
@@ -186,7 +186,7 @@ public final class AudioSomethingSomething extends Node {
     FileCacheRequester.anIntArray1083 = var7;
     PlayerAppearance.anIntArray859 = var8;
     SomethingTexture4.anIntArray2663 = var9;
-    DummyInputStream.anIntArray39 = var10;
+    GlobalStatics_2.anIntArray39 = var10;
     SomethingScene.method1294();
     if (SomethingIndex150.aClass3_Sub2ArrayArrayArray2065 != null) {
       DummyClass10.method2264(true);

@@ -6,7 +6,6 @@ import com.jagex.runescape.GlobalStatics_1;
 import com.jagex.runescape.common.ArrayUtils;
 import com.jagex.runescape.buffer.Buffer;
 import com.jagex.runescape.BufferData;
-import com.jagex.runescape.DisplayMode;
 import com.jagex.runescape.DummyClass0;
 import com.jagex.runescape.DummyClass17;
 import com.jagex.runescape.DummyClass3;
@@ -181,7 +180,7 @@ public final class GlModel extends AbstractModel {
     this.aClass6_3835 = new GlModelDimensions();
     this.vertexPositionData = new BufferData();
     this.vertexColorData = new BufferData();
-    if (DisplayMode.useBumpMaps) {
+    if (GLStatics.useBumpMaps) {
       this.vertexNormalData = new BufferData();
     }
 
@@ -745,7 +744,7 @@ public final class GlModel extends AbstractModel {
   }
 
   public void method1876(int var1 ) {
-    int var2 = DummyClass40.SINE_TABLE[var1];
+    int var2 = GLStatics.SINE_TABLE[var1];
     int var3 = DummyClass40.COSINE_TABLE[var1];
 
     for (int var4 = 0; var4 < this.vertexCCC; ++var4) {
@@ -813,7 +812,7 @@ public final class GlModel extends AbstractModel {
   }
 
   public void method1886(int var1 ) {
-    int var2 = DummyClass40.SINE_TABLE[var1];
+    int var2 = GLStatics.SINE_TABLE[var1];
     int var3 = DummyClass40.COSINE_TABLE[var1];
 
     for (int var4 = 0; var4 < this.vertexCCC; ++var4) {
@@ -876,7 +875,7 @@ public final class GlModel extends AbstractModel {
           this.vy[var5] -= GlModel.anInt3865;
           this.vz[var5] -= GlModel.anInt3862;
           if (var4 != 0) {
-            var6 = DummyClass40.SINE_TABLE[var4];
+            var6 = GLStatics.SINE_TABLE[var4];
             var7 = DummyClass40.COSINE_TABLE[var4];
             var8 = this.vy[var5] * var6 + this.vx[var5] * var7 + 32767 >> 16;
             this.vy[var5] = this.vy[var5] * var7 - this.vx[var5] * var6 + 32767 >> 16;
@@ -884,7 +883,7 @@ public final class GlModel extends AbstractModel {
           }
 
           if (var2 != 0) {
-            var6 = DummyClass40.SINE_TABLE[var2];
+            var6 = GLStatics.SINE_TABLE[var2];
             var7 = DummyClass40.COSINE_TABLE[var2];
             var8 = this.vy[var5] * var7 - this.vz[var5] * var6 + 32767 >> 16;
             this.vz[var5] = this.vy[var5] * var6 + this.vz[var5] * var7 + 32767 >> 16;
@@ -892,7 +891,7 @@ public final class GlModel extends AbstractModel {
           }
 
           if (var3 != 0) {
-            var6 = DummyClass40.SINE_TABLE[var3];
+            var6 = GLStatics.SINE_TABLE[var3];
             var7 = DummyClass40.COSINE_TABLE[var3];
             var8 = this.vz[var5] * var6 + this.vx[var5] * var7 + 32767 >> 16;
             this.vz[var5] = this.vz[var5] * var7 - this.vx[var5] * var6 + 32767 >> 16;
@@ -1045,7 +1044,7 @@ public final class GlModel extends AbstractModel {
                 this.vy[var12] -= GlModel.anInt3865;
                 this.vz[var12] -= GlModel.anInt3862;
                 if (var5 != 0) {
-                  var13 = DummyClass40.SINE_TABLE[var5];
+                  var13 = GLStatics.SINE_TABLE[var5];
                   var14 = DummyClass40.COSINE_TABLE[var5];
                   var15 =
                       this.vy[var12] * var13 + this.vx[var12] * var14 + 32767 >> 16;
@@ -1055,7 +1054,7 @@ public final class GlModel extends AbstractModel {
                 }
 
                 if (var3 != 0) {
-                  var13 = DummyClass40.SINE_TABLE[var3];
+                  var13 = GLStatics.SINE_TABLE[var3];
                   var14 = DummyClass40.COSINE_TABLE[var3];
                   var15 =
                       this.vy[var12] * var14 - this.vz[var12] * var13 + 32767 >> 16;
@@ -1065,7 +1064,7 @@ public final class GlModel extends AbstractModel {
                 }
 
                 if (var4 != 0) {
-                  var13 = DummyClass40.SINE_TABLE[var4];
+                  var13 = GLStatics.SINE_TABLE[var4];
                   var14 = DummyClass40.COSINE_TABLE[var4];
                   var15 =
                       this.vz[var12] * var13 + this.vx[var12] * var14 + 32767 >> 16;
@@ -1102,7 +1101,7 @@ public final class GlModel extends AbstractModel {
                     int var19;
                     int var18;
                     if (var5 != 0) {
-                      var17 = DummyClass40.SINE_TABLE[var5];
+                      var17 = GLStatics.SINE_TABLE[var5];
                       var18 = DummyClass40.COSINE_TABLE[var5];
                       var19 =
                           this.aShortArray3826[var16] * var17 + this.aShortArray3810[var16] * var18
@@ -1114,7 +1113,7 @@ public final class GlModel extends AbstractModel {
                     }
 
                     if (var3 != 0) {
-                      var17 = DummyClass40.SINE_TABLE[var3];
+                      var17 = GLStatics.SINE_TABLE[var3];
                       var18 = DummyClass40.COSINE_TABLE[var3];
                       var19 =
                           this.aShortArray3826[var16] * var18 - this.aShortArray3837[var16] * var17
@@ -1126,7 +1125,7 @@ public final class GlModel extends AbstractModel {
                     }
 
                     if (var4 != 0) {
-                      var17 = DummyClass40.SINE_TABLE[var4];
+                      var17 = GLStatics.SINE_TABLE[var4];
                       var18 = DummyClass40.COSINE_TABLE[var4];
                       var19 =
                           this.aShortArray3837[var16] * var17 + this.aShortArray3810[var16] * var18
@@ -1271,7 +1270,7 @@ public final class GlModel extends AbstractModel {
   }
 
   public void method1896(int var1 ) {
-    int var2 = DummyClass40.SINE_TABLE[var1];
+    int var2 = GLStatics.SINE_TABLE[var1];
     int var3 = DummyClass40.COSINE_TABLE[var1];
 
     for (int var4 = 0; var4 < this.vertexCCC; ++var4) {
@@ -1337,7 +1336,7 @@ public final class GlModel extends AbstractModel {
                   int var26 = 0;
                   int var27 = 0;
                   if (rotationY != 0) {
-                    var26 = DummyClass40.SINE_TABLE[rotationY];
+                    var26 = GLStatics.SINE_TABLE[rotationY];
                     var27 = DummyClass40.COSINE_TABLE[rotationY];
                   }
 
@@ -1660,11 +1659,11 @@ public final class GlModel extends AbstractModel {
 
             int[] var49 = new int[9];
             var17 = DummyClass40.COSINE_TABLE[var3] >> 1;
-            var18 = DummyClass40.SINE_TABLE[var3] >> 1;
+            var18 = GLStatics.SINE_TABLE[var3] >> 1;
             var19 = DummyClass40.COSINE_TABLE[var4] >> 1;
-            var20 = DummyClass40.SINE_TABLE[var4] >> 1;
+            var20 = GLStatics.SINE_TABLE[var4] >> 1;
             var21 = DummyClass40.COSINE_TABLE[var5] >> 1;
-            var22 = DummyClass40.SINE_TABLE[var5] >> 1;
+            var22 = GLStatics.SINE_TABLE[var5] >> 1;
             var23 = var18 * var21 + 16384 >> 15;
             var24 = var18 * var22 + 16384 >> 15;
             var49[0] = var19 * var21 + var20 * var24 + 16384 >> 15;
@@ -1771,7 +1770,7 @@ public final class GlModel extends AbstractModel {
                     this.vy[var14] -= GlModel.anInt3865;
                     this.vz[var14] -= GlModel.anInt3862;
                     if (var5 != 0) {
-                      var15 = DummyClass40.SINE_TABLE[var5];
+                      var15 = GLStatics.SINE_TABLE[var5];
                       var16 = DummyClass40.COSINE_TABLE[var5];
                       var17 = this.vy[var14] * var15 + this.vx[var14] * var16 + 32767 >> 16;
                       this.vy[var14] =
@@ -1780,7 +1779,7 @@ public final class GlModel extends AbstractModel {
                     }
 
                     if (var3 != 0) {
-                      var15 = DummyClass40.SINE_TABLE[var3];
+                      var15 = GLStatics.SINE_TABLE[var3];
                       var16 = DummyClass40.COSINE_TABLE[var3];
                       var17 = this.vy[var14] * var16 - this.vz[var14] * var15 + 32767 >> 16;
                       this.vz[var14] =
@@ -1789,7 +1788,7 @@ public final class GlModel extends AbstractModel {
                     }
 
                     if (var4 != 0) {
-                      var15 = DummyClass40.SINE_TABLE[var4];
+                      var15 = GLStatics.SINE_TABLE[var4];
                       var16 = DummyClass40.COSINE_TABLE[var4];
                       var17 = this.vz[var14] * var15 + this.vx[var14] * var16 + 32767 >> 16;
                       this.vz[var14] =
@@ -1825,7 +1824,7 @@ public final class GlModel extends AbstractModel {
                         }
 
                         if (var5 != 0) {
-                          var19 = DummyClass40.SINE_TABLE[var5];
+                          var19 = GLStatics.SINE_TABLE[var5];
                           var20 = DummyClass40.COSINE_TABLE[var5];
                           var21 = this.aShortArray3826[var18] * var19
                             + this.aShortArray3810[var18] * var20 + 32767 >> 16;
@@ -1836,7 +1835,7 @@ public final class GlModel extends AbstractModel {
                         }
 
                         if (var3 != 0) {
-                          var19 = DummyClass40.SINE_TABLE[var3];
+                          var19 = GLStatics.SINE_TABLE[var3];
                           var20 = DummyClass40.COSINE_TABLE[var3];
                           var21 = this.aShortArray3826[var18] * var20
                             - this.aShortArray3837[var18] * var19 + 32767 >> 16;
@@ -1847,7 +1846,7 @@ public final class GlModel extends AbstractModel {
                         }
 
                         if (var4 != 0) {
-                          var19 = DummyClass40.SINE_TABLE[var4];
+                          var19 = GLStatics.SINE_TABLE[var4];
                           var20 = DummyClass40.COSINE_TABLE[var4];
                           var21 = this.aShortArray3837[var18] * var19
                             + this.aShortArray3810[var18] * var20 + 32767 >> 16;
@@ -2478,7 +2477,7 @@ public final class GlModel extends AbstractModel {
       throw new IllegalArgumentException();
     } else if (this.amountVertices != 0) {
       if (var7) {
-        boolean var8 = !this.vertexColorData.updated && (var2 || var3 && !DisplayMode.useBumpMaps);
+        boolean var8 = !this.vertexColorData.updated && (var2 || var3 && !GLStatics.useBumpMaps);
         this.method1922(false, !this.vertexPositionData.updated && var1, var8,
             this.vertexNormalData != null && !this.vertexNormalData.updated && var3,
           !this.vertexTextureData.updated && var4);
@@ -2512,7 +2511,7 @@ public final class GlModel extends AbstractModel {
         }
       }
 
-      if (var3 && DisplayMode.useBumpMaps) {
+      if (var3 && GLStatics.useBumpMaps) {
         if (this.vertexNormalData.updated) {
           this.aShortArray3810 = null;
           this.aShortArray3826 = null;
@@ -2635,7 +2634,7 @@ public final class GlModel extends AbstractModel {
       }
 
       if (var3) {
-        if (DisplayMode.useBumpMaps) {
+        if (GLStatics.useBumpMaps) {
           for (var7 = 0; var7 < this.anInt3852; ++var7) {
             var8 = GlModel.method1905(
                 this.aShortArray3808[var7], this.materials[var7],
@@ -3070,7 +3069,7 @@ public final class GlModel extends AbstractModel {
         var4.aShortArray3841[var6] = this.aShortArray3841[var6];
       }
 
-      if (DisplayMode.useBumpMaps) {
+      if (GLStatics.useBumpMaps) {
         if (var5.vertexNormalData == null) {
           var5.vertexNormalData = new BufferData();
         }
@@ -3379,7 +3378,7 @@ public final class GlModel extends AbstractModel {
           this.aByteArray3816);
     }
 
-    if (var3 && var4 && var5 && (var8 && var6 || DisplayMode.useBumpMaps)) {
+    if (var3 && var4 && var5 && (var8 && var6 || GLStatics.useBumpMaps)) {
       var12.vertexColorData = this.vertexColorData;
     } else {
       var12.vertexColorData = new BufferData();
@@ -3401,7 +3400,7 @@ public final class GlModel extends AbstractModel {
           this.aShortArray3841);
     }
 
-    if (DisplayMode.useBumpMaps) {
+    if (GLStatics.useBumpMaps) {
       if (var6 && var7 && var8) {
         var12.vertexNormalData = this.vertexNormalData;
       } else {
@@ -3532,7 +3531,7 @@ public final class GlModel extends AbstractModel {
             this.vertexColorData.pointer);
       }
 
-      if (DisplayMode.useBumpMaps && this.vertexNormalData.buffer != null) {
+      if (GLStatics.useBumpMaps && this.vertexNormalData.buffer != null) {
         if (buffer != this.vertexNormalData.buffer) {
           this.vertexNormalData.buffer.bindVertexBuffer();
           buffer = this.vertexNormalData.buffer;
@@ -3557,7 +3556,7 @@ public final class GlModel extends AbstractModel {
       }
 
       if (this.vertexPositionData.buffer == null || this.vertexColorData.buffer == null
-        || DisplayMode.useBumpMaps && this.vertexNormalData.buffer == null
+        || GLStatics.useBumpMaps && this.vertexNormalData.buffer == null
         || this.vertexTextureData.buffer == null) {
         if (GlRenderer.vertexBufferSupport) {
           //TODO ARB
@@ -3576,7 +3575,7 @@ public final class GlModel extends AbstractModel {
               this.vertexColorData.byteBuffer);
         }
 
-        if (DisplayMode.useBumpMaps && this.vertexNormalData.buffer == null) {
+        if (GLStatics.useBumpMaps && this.vertexNormalData.buffer == null) {
           this.vertexNormalData.byteBuffer.position(this.vertexNormalData.pointer);
           GlRenderer.GL.glNormalPointer(5126, this.vertexNormalData.stride,
               this.vertexNormalData.byteBuffer);
@@ -3649,7 +3648,7 @@ public final class GlModel extends AbstractModel {
     if (this.aShortArray3810 == null) {
       this.method1876(var1);
     } else {
-      int var2 = DummyClass40.SINE_TABLE[var1];
+      int var2 = GLStatics.SINE_TABLE[var1];
       int var3 = DummyClass40.COSINE_TABLE[var1];
 
       int var4;
@@ -3833,7 +3832,7 @@ public final class GlModel extends AbstractModel {
   }
 
   private static int method1905(int var0, short var1, int var2, byte var3) {
-    int var4 = DummyClass40.hslTable[GlobalStatics_1.repackHSL(var0, var2)];
+    int var4 = GLStatics.hslTable[GlobalStatics_1.repackHSL(var0, var2)];
     if (var1 != -1) {
       int var5 = GLStatics.textureCache.method19(93, var1 & '\uffff');
       int var6;

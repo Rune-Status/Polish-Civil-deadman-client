@@ -201,7 +201,7 @@ public final class DirectImageProducer extends AbstractImageProducer
         int var22;
         int var24;
         if (GlRenderer.useOpenGlRenderer) {
-          if (DisplayMode.useBumpMaps) {
+          if (GLStatics.useBumpMaps) {
             for (lightPosX = 1; lightPosX < 103; ++lightPosX) {
               for (lightPosY = 1; (lightPosY < 103); ++lightPosY) {
                 lightMagnitude =
@@ -396,7 +396,7 @@ public final class DirectImageProducer extends AbstractImageProducer
                   }
 
                   var21 = (896 & var18) + (var18 + var4 & '\ufc00') + var20;
-                  var19 = DummyClass40.hslTable[Cache.repackHSL(96, true, var21)];
+                  var19 = GLStatics.hslTable[Cache.repackHSL(96, true, var21)];
                 }
 
                 var20 = var35[lightPosX][lightPosY];
@@ -527,12 +527,12 @@ public final class DirectImageProducer extends AbstractImageProducer
 
                       var31 =
                           (var28 & 896) + (('\ufc00' & var28 + var4) + var55);
-                      var29 = DummyClass40.hslTable[GlobalStatics_0
+                      var29 = GLStatics.hslTable[GlobalStatics_0
                           .method729((byte) -85, var31, 96)];
                     }
                   } else {
                     var28 = -1;
-                    var29 = DummyClass40.hslTable[GlobalStatics_0
+                    var29 = GLStatics.hslTable[GlobalStatics_0
                         .method729((byte) -126,
                             GLStatics.textureCache.method15(var27, '\uffff'),
                             96)];
@@ -551,7 +551,7 @@ public final class DirectImageProducer extends AbstractImageProducer
 
                     int var32 =
                         (896 & var55) + (('\ufc00' & var55 + var4) + var31);
-                    var29 = DummyClass40.hslTable[GlobalStatics_0
+                    var29 = GLStatics.hslTable[GlobalStatics_0
                         .method729((byte) -101, var32, 96)];
                   }
 
@@ -618,7 +618,7 @@ public final class DirectImageProducer extends AbstractImageProducer
                 var34,
                 AbstractGameWorld.heightMap[var8],
                 DummyClass43.somethingHeightMap[0], 4096);
-            Deque.method1213(var8, var50);
+            GlobalStatics_0.method1213(var8, var50);
           } else {
             var50 = TextureSampler7.method298(BZipDecompressorState.tileFlags,
                 ObjectCache.tileOrientation[var8],
@@ -647,7 +647,7 @@ public final class DirectImageProducer extends AbstractImageProducer
               var49[var50.length + var44] = var46[var44];
             }
 
-            Deque.method1213(var8, var49);
+            GlobalStatics_0.method1213(var8, var49);
             AbstractFrameRegulator
                 .method1769(var43, TextureSampler36.floorUnderlayIds[var8],
                     DummyClass18.aByteArrayArrayArray81[var8],
@@ -740,8 +740,8 @@ public final class DirectImageProducer extends AbstractImageProducer
                   for (var19 = lightMagnitude; (var14 >= var19); ++var19) {
                     for (var20 = lightPosY; lightPosZ >= var20; ++var20) {
                       DummyClass36.anIntArrayArrayArray2609[var19][lightPosX][var20] =
-                        ClientScript.bitAnd(
-                          DummyClass36.anIntArrayArrayArray2609[var19][lightPosX][var20], -2);
+                          DummyClass36.anIntArrayArrayArray2609[var19][lightPosX][var20]
+                              & -2;
                     }
                   }
                 }
@@ -796,8 +796,8 @@ public final class DirectImageProducer extends AbstractImageProducer
                   for (var19 = lightMagnitude; var14 >= var19; ++var19) {
                     for (var20 = lightPosY; var20 <= lightPosZ; ++var20) {
                       DummyClass36.anIntArrayArrayArray2609[var19][var20][var36] =
-                        ClientScript.bitAnd(
-                          DummyClass36.anIntArrayArrayArray2609[var19][var20][var36], -3);
+                          DummyClass36.anIntArrayArrayArray2609[var19][var20][var36]
+                              & -3;
                     }
                   }
                 }
@@ -852,8 +852,8 @@ public final class DirectImageProducer extends AbstractImageProducer
                   for (var16 = lightPosY; lightPosZ >= var16; ++var16) {
                     for (var44 = lightMagnitude; var14 >= var44; ++var44) {
                       DummyClass36.anIntArrayArrayArray2609[var8][var16][var44] =
-                        ClientScript.bitAnd(
-                          DummyClass36.anIntArrayArrayArray2609[var8][var16][var44], -5);
+                          DummyClass36.anIntArrayArrayArray2609[var8][var16][var44]
+                              & -5;
                     }
                   }
                 }

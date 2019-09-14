@@ -2,6 +2,7 @@ package com.jagex.runescape;
 
 import com.jagex.runescape.common.GameString;
 import com.jagex.runescape.common.GameStringStatics;
+import com.jagex.runescape.opengl.GLStatics;
 import com.jagex.runescape.opengl.GlTexture2d;
 
 public final class DummyClass53 {
@@ -82,7 +83,7 @@ public final class DummyClass53 {
       }
 
       if ((var1 == var5)) {
-        Light.method1058(var5, var2, var0, var3, (byte) -47);
+        GLStatics.method1058(var5, var2, var0, var3, (byte) -47);
       } else {
         if (DummyClass55.anInt1425 <= var2 - var5 && var2 + var5 <= GlTexture2d.anInt3765
           && -var1 + var3 >= DummyClass13.anInt2020
@@ -93,16 +94,6 @@ public final class DummyClass53 {
         }
 
       }
-  }
-
-  public static int nearestPo2(byte var0, int var1) {
-    --var1;
-      var1 |= var1 >>> 1;
-      var1 |= var1 >>> 2;
-      var1 |= var1 >>> 4;
-      var1 |= var1 >>> 8;
-      var1 |= var1 >>> 16;
-      return 1 + var1;
   }
 
   public static GameString method1586(int var0, int var1) {

@@ -3,6 +3,7 @@ package com.jagex.runescape;
 import com.jagex.runescape.buffer.Buffer;
 import com.jagex.runescape.common.GameString;
 import com.jagex.runescape.common.GameStringStatics;
+import com.jagex.runescape.node.Deque;
 import com.jagex.runescape.opengl.GLStatics;
 import com.jagex.runescape.opengl.GlRenderer;
 import com.jagex.runescape.opengl.MaterialShader5;
@@ -212,7 +213,7 @@ public final class TextureSampler13 extends AbstractTextureSampler {
       DummyClass13.models.method2137((byte) 56);
       Projectile.sprites.method2137((byte) 56);
       TextureSampler28.fileUnpacker10.method2137((byte) 56);
-      SubNode.fileUnpacker11.method2137((byte) 56);
+      GlobalStatics_2.fileUnpacker11.method2137((byte) 56);
       WidgetAccess.scripts.method2137((byte) 56);
       TextureSampler1.aClass93_3130.method1524(3);
   }

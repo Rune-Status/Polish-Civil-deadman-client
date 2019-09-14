@@ -2,6 +2,7 @@ package com.jagex.runescape;
 
 import com.jagex.runescape.common.GameString;
 import com.jagex.runescape.common.GameStringStatics;
+import com.jagex.runescape.node.Deque;
 import com.jagex.runescape.opengl.GLStatics;
 
 public final class TriChromaticImageCache {
@@ -102,7 +103,7 @@ public final class TriChromaticImageCache {
               ++this.anInt1368;
             } else {
               TriChromaticImageBuffer var5 =
-                  (TriChromaticImageBuffer) this.aClass61_1366.method1212(2);
+                  (TriChromaticImageBuffer) this.aClass61_1366.method1212();
               assert var5 != null;
               var4 = new TriChromaticImageBuffer(var2, var5.anInt2483);
               this.aClass3_Sub20Array1371[var5.anInt2489] = null;

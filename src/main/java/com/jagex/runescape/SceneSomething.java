@@ -2,6 +2,7 @@ package com.jagex.runescape;
 
 import com.jagex.runescape.common.GameString;
 import com.jagex.runescape.common.GameStringStatics;
+import com.jagex.runescape.opengl.GLStatics;
 import com.jagex.runescape.opengl.SomethingGl0;
 
 public final class SceneSomething {
@@ -129,12 +130,12 @@ public final class SceneSomething {
     if (SceneNode.aBoolean1837) {
         int var2 = 88 / ((57 - var0) / 59);
         Widget var1 =
-          AbstractDirectColorSprite.method638((byte) -19, ScriptState.anInt872, Widget.anInt278);
+          GlobalStatics_2.method638((byte) -19, ScriptState.anInt872, Widget.anInt278);
         if (var1 != null && var1.anObjectArray303 != null) {
           ClientScriptCall var3 = new ClientScriptCall();
           var3.arguments = var1.anObjectArray303;
           var3.aClass11_2449 = var1;
-          Light.executeScript(var3);
+          GLStatics.executeScript(var3);
         }
 
         SceneNode.aBoolean1837 = false;

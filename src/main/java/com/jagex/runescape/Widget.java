@@ -781,7 +781,7 @@ public final class Widget {
                   return null;
                 }
               } else {
-                var10 = SubNode.getNpcConfiguration(var9)
+                var10 = GlobalStatics_2.getNpcConfiguration(var9)
                   .method1476(null, 0, (byte) -120, 0, var1, var5, var3, null, 0, var2);
                 if (var10 != null) {
                   return var10;
@@ -802,7 +802,8 @@ public final class Widget {
               }
             }
           } else {
-            var10 = SubNode.getNpcConfiguration(var9).method1482(var2, var5, var1, 27, var3);
+            var10 = GlobalStatics_2
+                .getNpcConfiguration(var9).method1482(var2, var5, var1, 27, var3);
             if (var10 != null) {
               return var10;
             } else {
@@ -839,7 +840,8 @@ public final class Widget {
         } else {
           SoftwareDirectColorSprite var7;
           if (this.aBoolean157) {
-            var7 = AbstractObjectNode.method562(SomethingSceneJ.aClass153_323, 0, var3, (byte) 39);
+            var7 = GlobalStatics_2
+                .method562(SomethingSceneJ.aClass153_323, 0, var3, (byte) 39);
           } else {
             var7 = DummyClass59.method1043(0, SomethingSceneJ.aClass153_323, -3178, var3);
           }
@@ -1137,7 +1139,7 @@ public final class Widget {
       }
 
       return RenderAnimation.concat(new GameString[] {
-        BufferedFile.aClass94_577, var1, AbstractObjectNode.aClass94_3601,
+        BufferedFile.aClass94_577, var1, GlobalStatics_2.aClass94_3601,
         SomethingScene.toString(TriChromaticImageBuffer.languageId),
         AbstractFileRequester.aClass94_1932,
         SomethingScene.toString(MonoChromaticImageBuffer.affiliateId), var2,

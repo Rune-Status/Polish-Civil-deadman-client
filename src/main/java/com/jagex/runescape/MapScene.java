@@ -3,6 +3,7 @@ package com.jagex.runescape;
 import com.jagex.runescape.buffer.Buffer;
 import com.jagex.runescape.common.GameString;
 import com.jagex.runescape.common.GameStringStatics;
+import com.jagex.runescape.opengl.GLStatics;
 import com.jagex.runescape.opengl.MaterialShader;
 import com.jagex.runescape.sprite.SoftwareIndexedColorSprite;
 
@@ -14,7 +15,6 @@ public final class MapScene {
       {(short) 960, (short) 957, (short) -21568, (short) -21571, (short) 22464};
   public static int anInt65;
   public static boolean aBoolean66;
-  public static int viewportUpperX;
   public static MaterialShader[] anInterface5Array70;
   public static GameString aClass94_60 = MapScene.aClass94_68;
   public static GameString aClass94_62 = MapScene.aClass94_68;
@@ -129,7 +129,7 @@ public final class MapScene {
               var7 = new ClientScriptCall();
               var7.arguments = var4.anObjectArray206;
               var7.aClass11_2449 = var4;
-              Light.executeScript(var7);
+              GLStatics.executeScript(var7);
             }
 
             if ((var2 == 1) && var4.anObjectArray176 != null) {
@@ -145,7 +145,7 @@ public final class MapScene {
               var7 = new ClientScriptCall();
               var7.arguments = var4.anObjectArray176;
               var7.aClass11_2449 = var4;
-              Light.executeScript(var7);
+              GLStatics.executeScript(var7);
             }
           }
         }

@@ -77,7 +77,7 @@ public final class Unsure {
         int var11;
         int var12;
         if (GlRenderer.useOpenGlRenderer) {
-          if (Arrays.deepEquals(AbstractObjectNode.othrrHeightMap,
+          if (Arrays.deepEquals(GlobalStatics_2.othrrHeightMap,
               AbstractGameWorld.heightMap)) {
             var9 = TextureSampler16.anIntArrayArray3115[var3][var4];
             var10 = var9 & 16777215;
@@ -125,7 +125,7 @@ public final class Unsure {
               }
             }
 
-            if (var3 <= GLStatics.cameraTileX && var3 > DummyClass9.viewportLowerX) {
+            if (var3 <= GLStatics.cameraTileX && var3 > GLStatics.viewportLowerX) {
               var21 = var7[var3 - 1][var4];
               if (var21 != null && var21.aBoolean2225 && (var21.aBoolean2222
                 || (var2.flags & 1) == 0)) {
@@ -133,7 +133,7 @@ public final class Unsure {
               }
             }
 
-            if (var3 >= GLStatics.cameraTileX && var3 < MapScene.viewportUpperX - 1) {
+            if (var3 >= GLStatics.cameraTileX && var3 < GLStatics.viewportUpperX - 1) {
               var21 = var7[var3 + 1][var4];
               if (var21 != null && var21.aBoolean2225 && (var21.aBoolean2222
                 || (var2.flags & 4) == 0)) {
@@ -141,7 +141,7 @@ public final class Unsure {
               }
             }
 
-            if (var4 <= GLStatics.cameraTileZ && var4 > AbstractObjectNode.viewportLowerZ) {
+            if (var4 <= GLStatics.cameraTileZ && var4 > GLStatics.viewportLowerZ) {
               var21 = var7[var3][var4 - 1];
               if (var21 != null && var21.aBoolean2225 && (var21.aBoolean2222
                 || (var2.flags & 8) == 0)) {
@@ -742,21 +742,21 @@ public final class Unsure {
         }
 
         if (var2.aBoolean2225 && var2.anInt2227 == 0) {
-          if (var3 <= GLStatics.cameraTileX && var3 > DummyClass9.viewportLowerX) {
+          if (var3 <= GLStatics.cameraTileX && var3 > GLStatics.viewportLowerX) {
             var21 = var7[var3 - 1][var4];
             if (var21 != null && var21.aBoolean2225) {
               continue;
             }
           }
 
-          if (var3 >= GLStatics.cameraTileX && var3 < MapScene.viewportUpperX - 1) {
+          if (var3 >= GLStatics.cameraTileX && var3 < GLStatics.viewportUpperX - 1) {
             var21 = var7[var3 + 1][var4];
             if (var21 != null && var21.aBoolean2225) {
               continue;
             }
           }
 
-          if (var4 <= GLStatics.cameraTileZ && var4 > AbstractObjectNode.viewportLowerZ) {
+          if (var4 <= GLStatics.cameraTileZ && var4 > GLStatics.viewportLowerZ) {
             var21 = var7[var3][var4 - 1];
             if (var21 != null && var21.aBoolean2225) {
               continue;
@@ -933,12 +933,12 @@ public final class Unsure {
 
   public static void method2074(int var0, int var1, int var2, int var3, int var4, int var5,
                                int var6) {
-    Widget var7 = AbstractDirectColorSprite.method638((byte) -19, var0, var1);
+    Widget var7 = GlobalStatics_2.method638((byte) -19, var0, var1);
       if (var7 != null && var7.anObjectArray203 != null) {
         ClientScriptCall var8 = new ClientScriptCall();
         var8.aClass11_2449 = var7;
         var8.arguments = var7.anObjectArray203;
-        Light.executeScript(var8);
+        GLStatics.executeScript(var8);
       }
 
       Widget.anInt278 = var1;

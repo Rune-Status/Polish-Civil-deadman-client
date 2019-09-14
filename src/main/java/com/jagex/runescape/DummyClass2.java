@@ -173,7 +173,7 @@ public class DummyClass2 {
             FileRequester.loginBuffer
                 .writeInt(TextureSampler28.fileUnpacker10.getTableChecksum());
             FileRequester.loginBuffer
-                .writeInt(SubNode.fileUnpacker11.getTableChecksum());
+                .writeInt(GlobalStatics_2.fileUnpacker11.getTableChecksum());
             FileRequester.loginBuffer
                 .writeInt(WidgetAccess.scripts.getTableChecksum());
             FileRequester.loginBuffer
@@ -364,7 +364,7 @@ public class DummyClass2 {
             AbstractImageProducer.loginResponse = 2;
             TextureSampler28.loginState = 0;
             AnimationSequence.method2061(true);
-            AbstractObjectNode.anInt3606 = -1;
+            GlobalStatics_2.anInt3606 = -1;
             DummyClass37.parseSceneRebuild(false);
             GlobalStatics_0.packetId = -1;
             return;

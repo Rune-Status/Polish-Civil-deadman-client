@@ -144,7 +144,7 @@ public final class DummyClass26 {
       int[] var3 = new int[var1];
 
       for (int var4 = 0; var1 > var4; ++var4) {
-        var3[var4] = TextureSampler38.anIntArray3446[ClientScript.bitAnd(var2[var4], 255)];
+        var3[var4] = TextureSampler38.anIntArray3446[(int) var2[var4] & 255];
       }
 
       SoftwareDirectColorSprite var6 =

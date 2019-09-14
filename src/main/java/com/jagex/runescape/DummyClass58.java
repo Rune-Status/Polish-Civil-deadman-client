@@ -109,7 +109,7 @@ public final class DummyClass58 {
   }
 
   public static void method1659(int var0) {
-    Deque.aClass93_939.method1524(3);
+    GlobalStatics_0.aClass93_939.method1524(3);
   }
 
   public static void method1660(int var0) {

@@ -173,13 +173,13 @@ public final class StillGraphic extends SceneNode {
       int var14;
       if ((var8 != 0)) {
         var14 = DummyClass40.COSINE_TABLE[var8];
-        var13 = DummyClass40.SINE_TABLE[var8];
+        var13 = GLStatics.SINE_TABLE[var8];
         var11 = var13 * -var4 >> 16;
         var12 = var14 * var4 >> 16;
       }
 
       if (var9 != 0) {
-        var13 = DummyClass40.SINE_TABLE[var9];
+        var13 = GLStatics.SINE_TABLE[var9];
         var14 = DummyClass40.COSINE_TABLE[var9];
         var10 = var13 * var12 >> 16;
         var12 = var12 * var14 >> 16;

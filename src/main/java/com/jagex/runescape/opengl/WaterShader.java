@@ -1,8 +1,8 @@
 package com.jagex.runescape.opengl;
 
-import com.jagex.runescape.AudioWorker;
 import com.jagex.runescape.BZipDecompressorState;
 import com.jagex.runescape.GlobalStatics_0;
+import com.jagex.runescape.GlobalStatics_2;
 import com.jagex.runescape.buffer.Buffer;
 import com.jagex.runescape.ClientScript;
 import com.jagex.runescape.GroundItem;
@@ -25,8 +25,8 @@ public final class WaterShader implements MaterialShader {
       int[] var1 = new int[1];
       GlRenderer.GL.glGenProgramsARB(1, var1, 0);
       this.anInt2184 = var1[0];
-      int[][] var3 = AudioWorker.method895(false, 3, 64, 256, 4, 8, 0.4F, (byte) -73);
-      int[][] var4 = AudioWorker.method895(false, 3, 64, 256, 4, 8, 0.4F, (byte) -109);
+      int[][] var3 = GlobalStatics_2.method895(false, 3, 64, 256, 4, 8, 0.4F, (byte) -73);
+      int[][] var4 = GlobalStatics_2.method895(false, 3, 64, 256, 4, 8, 0.4F, (byte) -109);
       Buffer var5 = new Buffer(262144);
 
       for (int var6 = 0; var6 < 256; ++var6) {

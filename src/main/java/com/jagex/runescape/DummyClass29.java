@@ -115,7 +115,7 @@ public final class DummyClass29 {
           SceneNode var13 = null;
           SceneNode var14 = null;
           if (var4 == 0) {
-            SceneSomething2 var15 = Deque.method1209(var3, var2, var1);
+            SceneSomething2 var15 = GlobalStatics_0.method1209(var3, var2, var1);
             if (var15 != null) {
               var13 = var15.sceneNode0;
               var14 = var15.sceneNode1;

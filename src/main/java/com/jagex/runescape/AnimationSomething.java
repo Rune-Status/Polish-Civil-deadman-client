@@ -2,6 +2,8 @@ package com.jagex.runescape;
 
 import com.jagex.runescape.common.GameString;
 import com.jagex.runescape.common.GameStringStatics;
+import com.jagex.runescape.node.Deque;
+import com.jagex.runescape.node.SubNode;
 import com.jagex.runescape.opengl.GLStatics;
 import com.jagex.runescape.opengl.GlTexture2d;
 import com.jagex.runescape.opengl.MaterialShader5;

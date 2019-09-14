@@ -1,6 +1,7 @@
 package com.jagex.runescape;
 
 import com.jagex.runescape.huffman.HuffmanEncoderStatics;
+import com.jagex.runescape.node.Deque;
 import com.jagex.runescape.opengl.GLStatics;
 import com.jagex.runescape.opengl.GlRenderer;
 import com.jagex.runescape.opengl.GlUtils;
@@ -124,11 +125,11 @@ public final class DummyClass51 {
   public static int getSettings() {
     return ((TextureSampler17.aBoolean3184 ? 1 : 0) << 19) + (
         ((DummyClass35.aBoolean661 ? 1 : 0) << 16) + ((!GLStatics.aBoolean1685 ? 0 : 1) << 15)
-          + ((!DisplayMode.useBumpMaps ? 0 : 1) << 13) + ((Projectile.aBoolean2910 ? 1 : 0) << 10)
+          + ((!GLStatics.useBumpMaps ? 0 : 1) << 13) + ((Projectile.aBoolean2910 ? 1 : 0) << 10)
           + ((TextureSampler0.aBoolean3275 ? 1 : 0) << 9) + ((Widget.aBoolean236 ? 1 : 0) << 7) + (
           (!SceneSomething.aBoolean488 ? 0 : 1) << 6) + ((Keyboard.aBoolean1905 ? 1 : 0) << 5) + (
           ((!ClientScriptEnum.aBoolean3665 ? 0 : 1) << 3) + (AbstractFileRequest.brightnessSetting
-            & 7) - (-((!AbstractObjectNode.aBoolean3604 ? 0 : 1) << 4) - (
+            & 7) - (-((!GlobalStatics_2.aBoolean3604 ? 0 : 1) << 4) - (
             (GameWorld.aBoolean2623 ? 1 : 0) << 8)) - (
             -(GLStatics.anInt1137 << 11 & 6144) - (
               ((ClientScriptCall.anInt2453 == 0) ? 0 : 1) << 20) - (

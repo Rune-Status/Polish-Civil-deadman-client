@@ -573,7 +573,7 @@ public final class GameObjectConfig {
                                                                       .readUnsignedByte();
                                                                   if (this.aClass130_1501
                                                                       == null) {
-                                                                    var5 = DummyClass53
+                                                                    var5 = GLStatics
                                                                         .nearestPo2(
                                                                             (byte) 83,
                                                                             var4);

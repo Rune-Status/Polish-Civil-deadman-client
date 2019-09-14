@@ -108,9 +108,8 @@ public final class SomethingTexture3 extends AbstractSomethingTexture {
 
             for (int var7 = 0; var3 > var7; ++var7) {
               var6[var7] = HuffmanEncoderStatics.method308(
-                  TextureSampler38.anIntArray3446[ClientScript
-                      .bitAnd(var4[var7], 255)],
-                  ClientScript.bitAnd(-16777216, var5[var7] << 24));
+                  TextureSampler38.anIntArray3446[(int) var4[var7] & 255],
+                  -16777216 & var5[var7] << 24);
             }
 
             if (GlRenderer.useOpenGlRenderer) {
@@ -132,8 +131,8 @@ public final class SomethingTexture3 extends AbstractSomethingTexture {
             int[] var9 = new int[var3];
 
             for (int var10 = 0; (var10 < var3); ++var10) {
-              var9[var10] = TextureSampler38.anIntArray3446[ClientScript
-                  .bitAnd(var4[var10], 255)];
+              var9[var10] = TextureSampler38.anIntArray3446[(int) var4[var10]
+                  & 255];
             }
 
             if (GlRenderer.useOpenGlRenderer) {

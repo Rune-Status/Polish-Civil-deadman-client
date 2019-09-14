@@ -116,7 +116,7 @@ public final class OndemandFileRequest extends AbstractFileRequest {
 
       if ((var1 == 3) && TextureSampler30.fullScreenFrame == null) {
         OndemandFileRequest
-            .setWindowMode(true, SubNode.anInt2577, true, var3, var4, -1, -1);
+            .setWindowMode(true, GlobalStatics_2.anInt2577, true, var3, var4, -1, -1);
       } else {
         Component var7 = null;
         if (TextureSampler30.fullScreenFrame == null) {
@@ -246,7 +246,7 @@ public final class OndemandFileRequest extends AbstractFileRequest {
             Something3d.viewImageProducer = null;
             GlobalStatics_1.method1935();
             ((TextureCache) GLStatics.textureCache).method1619(200, -1);
-            if (DisplayMode.useBumpMaps) {
+            if (GLStatics.useBumpMaps) {
               DummyClass40.updateLightness(0.7F);
             }
 
@@ -259,7 +259,7 @@ public final class OndemandFileRequest extends AbstractFileRequest {
             GlobalStatics_1.method1938();
             DummyClass0.method1756();
             ((TextureCache) GLStatics.textureCache).method1619(20, -1);
-            if (DisplayMode.useBumpMaps) {
+            if (GLStatics.useBumpMaps) {
               if (AbstractFileRequest.brightnessSetting == 1) {
                 DummyClass40.updateLightness(0.9F);
               }

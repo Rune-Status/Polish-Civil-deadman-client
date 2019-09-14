@@ -2,7 +2,9 @@ package com.jagex.runescape;
 
 import com.jagex.runescape.common.GameString;
 import com.jagex.runescape.common.GameStringStatics;
+import com.jagex.runescape.node.Deque;
 import com.jagex.runescape.node.Node;
+import com.jagex.runescape.opengl.GLStatics;
 import com.jagex.runescape.opengl.GlDirectColorSprite;
 import com.jagex.runescape.opengl.GlRenderer;
 import com.jagex.runescape.opengl.GlTexture2d;
@@ -73,7 +75,7 @@ public final class ClassCheckRequest extends Node {
             if (TextureSampler22.aClass131_3421.method1789(var8, var1 ^ 553)) {
               var9 = 2 + 4 * (TextureSampler22.aClass131_3421.aShortArray1727[var8]
                 - WorldMapLabel.anInt1716) - (TextureCache.localPlayer.anInt2819 / 32);
-              var11 = DummyClass40.SINE_TABLE[var19];
+              var11 = GLStatics.SINE_TABLE[var19];
               var12 = DummyClass40.COSINE_TABLE[var19];
               AbstractFont var15 = AbstractTextureSampler.aClass3_Sub28_Sub17_2379;
               var11 = var11 * 256 / (256 + Something3d2.anInt3020);
@@ -153,7 +155,7 @@ public final class ClassCheckRequest extends Node {
         }
 
         for (var9 = 0; DummyClass6.anInt2046 > var9; ++var9) {
-          NPC var21 = TextureSampler5.npcs[AudioWorker.anIntArray347[var9]];
+          NPC var21 = TextureSampler5.npcs[GlobalStatics_2.anIntArray347[var9]];
           if (var21 != null && var21.hasConfiguration((byte) 17)) {
             NpcConfiguration var22 = var21.config;
             if (var22 != null && var22.anIntArray1292 != null) {
@@ -194,7 +196,7 @@ public final class ClassCheckRequest extends Node {
 
             boolean var31 = false;
 
-            for (var17 = 0; SubNode.anInt2572 > var17; ++var17) {
+            for (var17 = 0; GlobalStatics_2.anInt2572 > var17; ++var17) {
               if (var29 == ClientScript.aClass3_Sub19Array3694[var17].key) {
                 var31 = true;
                 break;

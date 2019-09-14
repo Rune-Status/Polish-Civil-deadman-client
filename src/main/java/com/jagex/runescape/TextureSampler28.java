@@ -293,18 +293,14 @@ public final class TextureSampler28 extends AbstractTextureSampler {
               if ((this.anInt3309 == 0)) {
                 for (var20 = 0; var13 > var20; ++var20) {
                   var21 = var20 * var8 / var13;
-                  var18[ClientScript
-                      .bitAnd(RenderAnimation.anInt396, var20 + var3)] =
-                      var18[ClientScript.bitAnd(-1 + var4 + var3 - var20,
-                          RenderAnimation.anInt396)] = var21 * var19 >> 12;
+                  var18[RenderAnimation.anInt396 & var20 + var3] =
+                      var18[-1 + var4 + var3 - var20 & RenderAnimation.anInt396] = var21 * var19 >> 12;
                 }
               } else {
                 for (var20 = 0; var20 < var13; ++var20) {
                   var21 = var20 * var8 / var13;
-                  var18[ClientScript
-                      .bitAnd(RenderAnimation.anInt396, var3 + var20)] =
-                      var18[ClientScript.bitAnd(RenderAnimation.anInt396,
-                          var4 + var3 - var20 - 1)] =
+                  var18[RenderAnimation.anInt396 & var3 + var20] =
+                      var18[RenderAnimation.anInt396 & var4 + var3 - var20 - 1] =
                           (var19 <= var21) ? var19 : var21;
                 }
               }
@@ -320,9 +316,8 @@ public final class TextureSampler28 extends AbstractTextureSampler {
               var19 = var6 - var17 - 1;
               if ((var19 >= var14)) {
                 for (var20 = 0; var13 > var20; ++var20) {
-                  var18[ClientScript.bitAnd(RenderAnimation.anInt396, var3 + var20)] =
-                    var18[ClientScript.bitAnd(-1 - var20 + var3 + var4,
-                      RenderAnimation.anInt396)] = var8 * var20 / var13;
+                  var18[RenderAnimation.anInt396 & var3 + var20] =
+                    var18[-1 - var20 + var3 + var4 & RenderAnimation.anInt396] = var8 * var20 / var13;
                 }
 
                 if ((var15 + var16) > SomethingLight0.anInt1559) {
@@ -338,16 +333,15 @@ public final class TextureSampler28 extends AbstractTextureSampler {
                 if (this.anInt3309 == 0) {
                   for (var21 = 0; var13 > var21; ++var21) {
                     var22 = var8 * var21 / var13;
-                    var18[ClientScript.bitAnd(RenderAnimation.anInt396, var3 + var21)] =
-                      var18[ClientScript.bitAnd(RenderAnimation.anInt396,
-                        -1 + var3 - (-var4 + var21))] = var22 * var20 >> 12;
+                    int var110 = -1 + var3 - (-var4 + var21);
+                    var18[RenderAnimation.anInt396 & var3 + var21] =
+                      var18[RenderAnimation.anInt396 & var110] = var22 * var20 >> 12;
                   }
                 } else {
                   for (var21 = 0; var13 > var21; ++var21) {
                     var22 = var21 * var8 / var13;
-                    var18[ClientScript.bitAnd(var3 + var21, RenderAnimation.anInt396)] =
-                      var18[ClientScript.bitAnd(-1 - var21 + var4 + var3,
-                        RenderAnimation.anInt396)] = (var20 <= var22) ? var20 : var22;
+                    var18[var3 + var21 & RenderAnimation.anInt396] =
+                      var18[-1 - var21 + var4 + var3 & RenderAnimation.anInt396] = (var20 <= var22) ? var20 : var22;
                   }
                 }
 

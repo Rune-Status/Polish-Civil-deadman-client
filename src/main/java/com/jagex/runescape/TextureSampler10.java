@@ -272,9 +272,9 @@ public final class TextureSampler10 extends AbstractTextureSampler {
           }
 
           var4 = this.anIntArray3443[var4];
-          var6[var9] = ClientScript.bitAnd(var4, 16711680) >> 12;
-          var7[var9] = ClientScript.bitAnd(4080, var4 >> 4);
-          var8[var9] = ClientScript.bitAnd(255, var4) << 4;
+          var6[var9] = (var4 & 16711680) >> 12;
+          var7[var9] = 4080 & var4 >> 4;
+          var8[var9] = (255 & var4) << 4;
         }
       }
 

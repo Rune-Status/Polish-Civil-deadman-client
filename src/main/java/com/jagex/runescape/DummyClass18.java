@@ -2,6 +2,8 @@ package com.jagex.runescape;
 
 import com.jagex.runescape.common.GameString;
 import com.jagex.runescape.common.GameStringStatics;
+import com.jagex.runescape.node.Deque;
+import com.jagex.runescape.opengl.GLStatics;
 import com.jagex.runescape.opengl.MaterialShader5;
 import java.io.IOException;
 import java.nio.charset.StandardCharsets;
@@ -106,7 +108,7 @@ public final class DummyClass18 {
       IdentityKit.lastPacketId2 = EnumStringFetcher.lastPacketId1;
       EnumStringFetcher.lastPacketId1 = GlobalStatics_0.lastPacketId0;
       GlobalStatics_0.lastPacketId0 = GlobalStatics_0.packetId;
-      AbstractDirectColorSprite.anInt3699 = 0;
+      GlobalStatics_2.anInt3699 = 0;
 
       int var20;
       // Update variable small
@@ -138,7 +140,7 @@ public final class DummyClass18 {
         if (AbstractMouseWheel.updateInterfaceCounter(a, (byte) -25)) {
           ClientScriptCall call = new ClientScriptCall();
           call.arguments = arguments;
-          Light.executeScript(call);
+          GLStatics.executeScript(call);
         }
 
         GlobalStatics_0.packetId = -1;
@@ -450,7 +452,7 @@ public final class DummyClass18 {
           GlobalStatics_0.packetId = -1;
           Widget.aClass94_251 = null;
           ClientScript.aClass3_Sub19Array3694 = null;
-          SubNode.anInt2572 = 0;
+          GlobalStatics_2.anInt2572 = 0;
           return true;
         } else {
           var4 = SpotAnimationConfig.gameBuffer.readLong();
@@ -463,10 +465,10 @@ public final class DummyClass18 {
             GlobalStatics_0.packetId = -1;
             return true;
           } else {
-            SubNode.anInt2572 = var6;
+            GlobalStatics_2.anInt2572 = var6;
             ClanChatUser[] var7 = new ClanChatUser[100];
 
-            for (var8 = 0; SubNode.anInt2572 > var8; ++var8) {
+            for (var8 = 0; GlobalStatics_2.anInt2572 > var8; ++var8) {
               var7[var8] = new ClanChatUser();
               var7[var8].key = SpotAnimationConfig.gameBuffer.readLong();
               var7[var8].name = GameStringStatics
@@ -480,7 +482,7 @@ public final class DummyClass18 {
             }
 
             var32 = false;
-            var10 = SubNode.anInt2572;
+            var10 = GlobalStatics_2.anInt2572;
 
             while ((var10 > 0)) {
               var32 = true;
@@ -850,7 +852,8 @@ public final class DummyClass18 {
           }
         }
 
-        ProjectileNode.anIntArray3780[ClientScript.bitAnd(31, GZipDecompressor.anInt815++)] = var21;
+        int var1 = GZipDecompressor.anInt815++;
+        ProjectileNode.anIntArray3780[31 & var1] = var21;
         GlobalStatics_0.packetId = -1;
         return true;
       }
@@ -1033,7 +1036,7 @@ public final class DummyClass18 {
               }
             }
 
-            SubNode.aClass94Array2566[var33] = var41;
+            GlobalStatics_2.aClass94Array2566[var33] = var41;
             LightIntensity.anIntArray904[var33] = var5;
             var46 = null;
             GlobalStatics_0.aBooleanArray73[var33] = var31;
@@ -1046,7 +1049,7 @@ public final class DummyClass18 {
           VertexNormal.aLongArray826[FileSystem.anInt104] = var2;
           SceneSomething2.aClass94Array1046[FileSystem.anInt104] = var46;
           Cursor.anIntArray882[FileSystem.anInt104] = var21;
-          SubNode.aClass94Array2566[FileSystem.anInt104] = var41;
+          GlobalStatics_2.aClass94Array2566[FileSystem.anInt104] = var41;
           LightIntensity.anIntArray904[FileSystem.anInt104] = var5;
           GlobalStatics_0.aBooleanArray73[FileSystem.anInt104] = var31;
           ++FileSystem.anInt104;
@@ -1067,9 +1070,9 @@ public final class DummyClass18 {
               var12 = Cursor.anIntArray882[var11];
               Cursor.anIntArray882[var11] = Cursor.anIntArray882[var11 + 1];
               Cursor.anIntArray882[1 + var11] = var12;
-              var64 = SubNode.aClass94Array2566[var11];
-              SubNode.aClass94Array2566[var11] = SubNode.aClass94Array2566[var11 + 1];
-              SubNode.aClass94Array2566[var11 + 1] = var64;
+              var64 = GlobalStatics_2.aClass94Array2566[var11];
+              GlobalStatics_2.aClass94Array2566[var11] = GlobalStatics_2.aClass94Array2566[var11 + 1];
+              GlobalStatics_2.aClass94Array2566[var11 + 1] = var64;
               var57 = SceneSomething2.aClass94Array1046[var11];
               SceneSomething2.aClass94Array1046[var11] =
                 SceneSomething2.aClass94Array1046[var11 + 1];
@@ -1112,7 +1115,8 @@ public final class DummyClass18 {
           if ((LightIntensity.variables[var20] != DummyClass5.anIntArray2985[var20])) {
             DummyClass5.anIntArray2985[var20] = LightIntensity.variables[var20];
             DummyClass39.method1087(98, var20);
-            AbstractGameWorld.anIntArray726[ClientScript.bitAnd(GlobalStatics_0.anInt641++, 31)] =
+            int var01 = GlobalStatics_0.anInt641++;
+            AbstractGameWorld.anIntArray726[var01 & 31] =
               var20;
           }
         }
@@ -1308,8 +1312,9 @@ public final class DummyClass18 {
       if ((GlobalStatics_0.packetId == 191)) {
         var20 = SpotAnimationConfig.gameBuffer.readUnsignedShortLE();
         SomethingQuickChat2.method532(var20, var0 ^ 28185);
-        SomethingQuickChat.anIntArray3565[ClientScript.bitAnd(31, FileTable.anInt944++)] =
-          ClientScript.bitAnd(var20, 32767);
+        int var1 = FileTable.anInt944++;
+        SomethingQuickChat.anIntArray3565[31 & var1] =
+            var20 & 32767;
         GlobalStatics_0.packetId = -1;
         return true;
       }
@@ -1349,7 +1354,7 @@ public final class DummyClass18 {
 
       if ((GlobalStatics_0.packetId == 42)) {
         if (TextureSampler30.fullScreenFrame != null) {
-          SceneNode.setWindowMode(false, SubNode.anInt2577, -8914, -1, -1);
+          SceneNode.setWindowMode(false, GlobalStatics_2.anInt2577, -8914, -1, -1);
         }
 
         byte[] var22 = new byte[GlobalStatics_0.packetLength];
@@ -1361,7 +1366,7 @@ public final class DummyClass18 {
         } else {
           TextureSampler5.aClass94_3295 = var24;
           GlobalStatics_0.aBoolean2154 = true;
-          AudioWorker.aClass64_351 =
+          GlobalStatics_2.aClass64_351 =
             DummyClass35.signLink.method1452(new String(var24.method1568(0),
                 StandardCharsets.ISO_8859_1), true);
         }
@@ -1707,7 +1712,7 @@ public final class DummyClass18 {
         var24 = SpotAnimationConfig.gameBuffer.readString();
         var21 = SpotAnimationConfig.gameBuffer.readUnsignedShortAdd();
         if (AbstractMouseWheel.updateInterfaceCounter(var21, (byte) -25)) {
-          AbstractObjectNode.method566(var24, 0, var20);
+          GlobalStatics_2.method566(var24, 0, var20);
         }
 
         GlobalStatics_0.packetId = -1;
@@ -1759,8 +1764,9 @@ public final class DummyClass18 {
         }
 
         GameBuffer.method819(false);
-        SomethingQuickChat.anIntArray3565[ClientScript.bitAnd(FileTable.anInt944++, 31)] =
-          ClientScript.bitAnd(32767, var3);
+        int var01 = FileTable.anInt944++;
+        SomethingQuickChat.anIntArray3565[var01 & 31] =
+            32767 & var3;
         GlobalStatics_0.packetId = -1;
         return true;
       }
@@ -1867,7 +1873,7 @@ public final class DummyClass18 {
         var31 = ((Long.MIN_VALUE & var2) != 0L);
 
         if (var31) {
-          if ((SubNode.anInt2572 == 0)) {
+          if ((GlobalStatics_2.anInt2572 == 0)) {
             GlobalStatics_0.packetId = -1;
             return true;
           }
@@ -1877,21 +1883,21 @@ public final class DummyClass18 {
 
           for (
               var30 = 0;
-              SubNode.anInt2572 > var30 && (
+              GlobalStatics_2.anInt2572 > var30 && (
                   var2 != ClientScript.aClass3_Sub19Array3694[var30].key
                       || (var21 != ClientScript.aClass3_Sub19Array3694[var30].anInt2478));
               ++var30) {
           }
 
-          if (var30 < SubNode.anInt2572) {
-            while ((-1 + SubNode.anInt2572) > var30) {
+          if (var30 < GlobalStatics_2.anInt2572) {
+            while ((-1 + GlobalStatics_2.anInt2572) > var30) {
               ClientScript.aClass3_Sub19Array3694[var30] =
                   ClientScript.aClass3_Sub19Array3694[1 + var30];
               ++var30;
             }
 
-            --SubNode.anInt2572;
-            ClientScript.aClass3_Sub19Array3694[SubNode.anInt2572] = null;
+            --GlobalStatics_2.anInt2572;
+            ClientScript.aClass3_Sub19Array3694[GlobalStatics_2.anInt2572] = null;
           }
         } else {
           var41 = SpotAnimationConfig.gameBuffer.readString();
@@ -1902,7 +1908,7 @@ public final class DummyClass18 {
           var40.aClass94_2473 = var41;
           var40.anInt2478 = var21;
 
-          for (var33 = -1 + SubNode.anInt2572; (var33 >= 0); --var33) {
+          for (var33 = -1 + GlobalStatics_2.anInt2572; (var33 >= 0); --var33) {
             var10 =
                 ClientScript.aClass3_Sub19Array3694[var33].name
                     .method1559(var40.name, var0 ^ 82);
@@ -1924,17 +1930,17 @@ public final class DummyClass18 {
             }
           }
 
-          if (ClientScript.aClass3_Sub19Array3694.length <= SubNode.anInt2572) {
+          if (ClientScript.aClass3_Sub19Array3694.length <= GlobalStatics_2.anInt2572) {
             GlobalStatics_0.packetId = -1;
             return true;
           }
 
-          for (var10 = SubNode.anInt2572 - 1; (var33 < var10); --var10) {
+          for (var10 = GlobalStatics_2.anInt2572 - 1; (var33 < var10); --var10) {
             ClientScript.aClass3_Sub19Array3694[1 + var10] =
                 ClientScript.aClass3_Sub19Array3694[var10];
           }
 
-          if ((SubNode.anInt2572 == 0)) {
+          if ((GlobalStatics_2.anInt2572 == 0)) {
             ClientScript.aClass3_Sub19Array3694 = new ClanChatUser[100];
           }
 
@@ -1943,7 +1949,7 @@ public final class DummyClass18 {
             CollisionMap.aByte1308 = var28;
           }
 
-          ++SubNode.anInt2572;
+          ++GlobalStatics_2.anInt2572;
         }
 
         GlobalStatics_0.packetId = -1;
@@ -2034,8 +2040,9 @@ public final class DummyClass18 {
         }
 
         GameBuffer.method819(false);
-        SomethingQuickChat.anIntArray3565[ClientScript.bitAnd(FileTable.anInt944++, 31)] =
-          ClientScript.bitAnd(32767, var3);
+        int var01 = FileTable.anInt944++;
+        SomethingQuickChat.anIntArray3565[var01 & 31] =
+            32767 & var3;
         GlobalStatics_0.packetId = -1;
         return true;
       }
@@ -2147,7 +2154,7 @@ public final class DummyClass18 {
           var8.arguments = DummyClass42.aClass11_886.anObjectArray295;
           var8.anInt2447 = var6;
           var8.anInt2441 = var7;
-          Light.executeScript(var8);
+          GLStatics.executeScript(var8);
         }
 
         if (TextureSampler21.anInt3069 == 0) {
@@ -2159,7 +2166,7 @@ public final class DummyClass18 {
               var8.anInt2447 = var6;
               var8.arguments = DummyClass42.aClass11_886.anObjectArray229;
               var8.aClass11_2449 = DummyClass42.aClass11_886;
-              Light.executeScript(var8);
+              GLStatics.executeScript(var8);
             }
 
             if (DummyClass32.aClass11_526 != null

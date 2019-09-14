@@ -265,7 +265,7 @@ public final class IdentityKit {
       int var2;
       if (DummyClass6.anInt2046 > var1) {
         for (var2 = var1; var2 < DummyClass6.anInt2046; ++var2) {
-          VariableUpdate.anIntArray2292[DummyClass17.anInt1829++] = AudioWorker.anIntArray347[var2];
+          VariableUpdate.anIntArray2292[DummyClass17.anInt1829++] = GlobalStatics_2.anIntArray347[var2];
         }
       }
 
@@ -275,23 +275,23 @@ public final class IdentityKit {
         DummyClass6.anInt2046 = 0;
 
         for (var2 = 0; (var2 < var1); ++var2) {
-          int var3 = AudioWorker.anIntArray347[var2];
+          int var3 = GlobalStatics_2.anIntArray347[var2];
           NPC var4 = TextureSampler5.npcs[var3];
           int var5 = SpotAnimationConfig.gameBuffer.readBits(1);
           if (var5 == 0) {
-            AudioWorker.anIntArray347[DummyClass6.anInt2046++] = var3;
+            GlobalStatics_2.anIntArray347[DummyClass6.anInt2046++] = var3;
             var4.anInt2838 = AbstractGameWorld.updateCycle;
           } else {
             int var6 = SpotAnimationConfig.gameBuffer.readBits(2);
             if ((var6 == 0)) {
-              AudioWorker.anIntArray347[DummyClass6.anInt2046++] = var3;
+              GlobalStatics_2.anIntArray347[DummyClass6.anInt2046++] = var3;
               var4.anInt2838 = AbstractGameWorld.updateCycle;
               DummyClass60.anIntArray441[OndemandRequester.anInt997++] = var3;
             } else {
               int var7;
               int var8;
               if (var6 == 1) {
-                AudioWorker.anIntArray347[DummyClass6.anInt2046++] = var3;
+                GlobalStatics_2.anIntArray347[DummyClass6.anInt2046++] = var3;
                 var4.anInt2838 = AbstractGameWorld.updateCycle;
                 var7 = SpotAnimationConfig.gameBuffer.readBits(3);
                 var4.method1968(1, (byte) 32, var7);
@@ -301,7 +301,7 @@ public final class IdentityKit {
                 }
               } else {
                 if (var6 == 2) {
-                  AudioWorker.anIntArray347[DummyClass6.anInt2046++] = var3;
+                  GlobalStatics_2.anIntArray347[DummyClass6.anInt2046++] = var3;
                   var4.anInt2838 = AbstractGameWorld.updateCycle;
                   if ((SpotAnimationConfig.gameBuffer.readBits(1) == 1)) {
                     var7 = SpotAnimationConfig.gameBuffer.readBits(3);

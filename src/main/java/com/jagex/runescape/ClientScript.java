@@ -4,6 +4,7 @@ import com.jagex.runescape.buffer.Buffer;
 import com.jagex.runescape.common.GameString;
 import com.jagex.runescape.common.GameStringStatics;
 import com.jagex.runescape.common.HashTable;
+import com.jagex.runescape.node.SubNode;
 
 public final class ClientScript extends SubNode {
 
@@ -62,10 +63,6 @@ public final class ClientScript extends SubNode {
       ClientScript.aClass3_Sub19Array3694 = null;
       ClientScript.variableUpdates = null;
       ClientScript.anIntArray3693 = null;
-  }
-
-  public static int bitAnd(int var0, int var1) {
-    return var0 & var1;
   }
 
 }

@@ -1,18 +1,17 @@
 package com.jagex.runescape.opengl;
 
-import com.jagex.runescape.AbstractDirectColorSprite;
 import com.jagex.runescape.AbstractFileRequester;
 import com.jagex.runescape.AbstractGameWorld;
 import com.jagex.runescape.AbstractImageProducer;
 import com.jagex.runescape.AbstractObjectNodeWrapper;
-import com.jagex.runescape.AudioWorker;
 import com.jagex.runescape.BZipDecompressorState;
 import com.jagex.runescape.BufferObject;
 import com.jagex.runescape.ClassCheckRequest;
 import com.jagex.runescape.ClientScript;
 import com.jagex.runescape.ClientScriptCall;
 import com.jagex.runescape.GameCanvas;
-import com.jagex.runescape.Deque;
+import com.jagex.runescape.GlobalStatics_2;
+import com.jagex.runescape.node.Deque;
 import com.jagex.runescape.DisplayMode;
 import com.jagex.runescape.DummyClass11;
 import com.jagex.runescape.DummyClass13;
@@ -43,7 +42,6 @@ import com.jagex.runescape.GroundItemNode;
 import com.jagex.runescape.common.GameStringStatics;
 import com.jagex.runescape.HashTableIterator;
 import com.jagex.runescape.ItemConfig;
-import com.jagex.runescape.Light;
 import com.jagex.runescape.LinearHashTable;
 import com.jagex.runescape.MapScene;
 import com.jagex.runescape.MonoChromaticImageBuffer;
@@ -69,7 +67,6 @@ import com.jagex.runescape.SomethingSceneTile;
 import com.jagex.runescape.SomethingTilek;
 import com.jagex.runescape.StringNode0;
 import com.jagex.runescape.Structure;
-import com.jagex.runescape.SubNode;
 import com.jagex.runescape.TextureSampler0;
 import com.jagex.runescape.TextureSampler13;
 import com.jagex.runescape.TextureSampler14;
@@ -278,7 +275,7 @@ public final class MaterialShader5 implements MaterialShader {
         var12 = var9 + (var10 - var9) * (-var0 + var4) / var2;
         if (SceneNode.aBoolean1837 && ((64 & Something3dRoot.anInt2051) != 0)) {
           Widget var13 =
-            AbstractDirectColorSprite
+            GlobalStatics_2
                 .method638((byte) -19, ScriptState.anInt872, Widget.anInt278);
           if (var13 != null) {
             ScriptState.method1177(BufferObject.anInt1887, 0L, (byte) -53,
@@ -287,7 +284,7 @@ public final class MaterialShader5 implements MaterialShader {
             SceneSomething.method958((byte) -87);
           }
         } else {
-          ++SubNode.anInt2571;
+          ++GlobalStatics_2.anInt2571;
           if ((AbstractImageProducer.gameId == 1)) {
             ScriptState.method1177(-1, 0L, (byte) -62, GroundItemNode.EMPTY_STRING, var11,
               (short) 36, GlTexture2d.aClass94_3762, var12);
@@ -327,7 +324,7 @@ public final class MaterialShader5 implements MaterialShader {
                     RenderAnimation.aClass94_378, SomethingQuickChat.aClass94_3573,
                     var16.aClass94_1504
                   }), var12, (short) 14, TextureSampler14.aClass94_3388, var27);
-                ++Light.anInt715;
+                ++GLStatics.anInt715;
               } else if (!SceneNode.aBoolean1837) {
                 ++DummyClass28.anInt336;
                 GameString[] var29 = var16.aClass94Array1499;
@@ -383,7 +380,7 @@ public final class MaterialShader5 implements MaterialShader {
               } else {
                 Parameter var17 = LinearHashTable.anInt1038 == -1 ?
                   null :
-                  Deque.method1210(64, LinearHashTable.anInt1038);
+                  GlobalStatics_0.method1210(64, LinearHashTable.anInt1038);
                 if ((Something3dRoot.anInt2051 & 4) != 0 && (var17 == null
                   || (var16.method1691(var17.anInt3614, LinearHashTable.anInt1038, (byte) 98) != var17.anInt3614))) {
                   ScriptState.method1177(BufferObject.anInt1887, var26, (byte) -77,
@@ -413,7 +410,7 @@ public final class MaterialShader5 implements MaterialShader {
                 var18 = -((-1 + var31.config.size) * 64) + var31.anInt2829;
 
                 for (var37 = 0; var37 < DummyClass6.anInt2046; ++var37) {
-                  var36 = TextureSampler5.npcs[AudioWorker.anIntArray347[var37]];
+                  var36 = TextureSampler5.npcs[GlobalStatics_2.anIntArray347[var37]];
                   var21 = -(var36.config.size * 64) + 64 + var36.anInt2819;
                   var22 = var36.anInt2829 - (var36.config.size * 64) + 64;
                   if (var31 != var36 && (var21 >= var33)
@@ -422,7 +419,7 @@ public final class MaterialShader5 implements MaterialShader {
                       && var36.config.size
                       <= -(-var18 + var22 >> 7) + var31.config.size) {
                     BufferObject.method2068(var36.config, var12, -126,
-                      AudioWorker.anIntArray347[var37], var27);
+                      GlobalStatics_2.anIntArray347[var37], var27);
                   }
                 }
 
@@ -453,7 +450,7 @@ public final class MaterialShader5 implements MaterialShader {
                 var18 = var30.anInt2829 + 64 - (var30.getSize() * 64);
 
                 for (var37 = 0; var37 < DummyClass6.anInt2046; ++var37) {
-                  var36 = TextureSampler5.npcs[AudioWorker.anIntArray347[var37]];
+                  var36 = TextureSampler5.npcs[GlobalStatics_2.anIntArray347[var37]];
                   var21 = var36.anInt2819 - (var36.config.size * 64) + 64;
                   var22 = var36.anInt2829 - 64 * var36.config.size + 64;
                   if (var21 >= var33
@@ -461,7 +458,7 @@ public final class MaterialShader5 implements MaterialShader {
                       .getSize() && (var22 >= var18) && (var36.config.size <= (
                       -(-var18 + var22 >> 7) + var30.getSize()))) {
                     BufferObject.method2068(var36.config, var12, -121,
-                      AudioWorker.anIntArray347[var37], var27);
+                      GlobalStatics_2.anIntArray347[var37], var27);
                   }
                 }
 
@@ -486,7 +483,7 @@ public final class MaterialShader5 implements MaterialShader {
               Deque var28 =
                 TextureSampler0.groundItems[GameWorldSomething.currentPlane][var12][var27];
               if (var28 != null) {
-                for (GroundItemNode var32 = (GroundItemNode) var28.method1212(2);
+                for (GroundItemNode var32 = (GroundItemNode) var28.method1212();
                     var32 != null; var32 = (GroundItemNode) var28.method1219(41)) {
                   var18 = var32.aClass140_Sub7_3676.anInt2936;
                   ItemConfig var40 = DummyClass35.getItemConfig(var18, (byte) 71);
@@ -550,7 +547,7 @@ public final class MaterialShader5 implements MaterialShader {
                   } else {
                     Parameter var39 = LinearHashTable.anInt1038 == -1 ?
                       null :
-                      Deque.method1210(64, LinearHashTable.anInt1038);
+                      GlobalStatics_0.method1210(64, LinearHashTable.anInt1038);
                     if ((Something3dRoot.anInt2051 & 1) != 0 && (var39 == null
                       || (var40.method1115(var39.anInt3614, 100, LinearHashTable.anInt1038) != var39.anInt3614))) {
                       ++DisplayMode.anInt1439;
