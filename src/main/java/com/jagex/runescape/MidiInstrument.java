@@ -69,7 +69,7 @@ public final class MidiInstrument extends Node {
 
           for (int var5 = 0; var5 < var4; ++var5) {
             int var6 = (int) (128.0F + var2[var5] * 128.0F);
-            if ((var6 & -256) != 0) {
+            if ((var6 & 0xffffff00) != 0) {
               var6 = ~var6 >> 31;
             }
 
