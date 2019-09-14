@@ -666,7 +666,8 @@ public final class DummyClass37 {
             var8 = -1;
           }
 
-          VertexNormal.method1131(GameWorldSomething.currentPlane, 125, var6, var5, var3, var7,
+          GlobalStatics_4
+              .method1131(GameWorldSomething.currentPlane, 125, var6, var5, var3, var7,
             var2, var8);
         }
       }

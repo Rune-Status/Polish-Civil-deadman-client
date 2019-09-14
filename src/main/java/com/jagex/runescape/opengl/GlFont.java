@@ -1,7 +1,6 @@
 package com.jagex.runescape.opengl;
 
 import com.jagex.runescape.AbstractFont;
-import com.jogamp.opengl.GL2;
 import java.nio.ByteBuffer;
 
 public final class GlFont extends AbstractFont {
@@ -107,27 +106,26 @@ public final class GlFont extends AbstractFont {
   private void method707() {
     if (this.anIntArray4085 == null) {
       this.anIntArray4085 = new int[256];
-      GL2 var1 = GlRenderer.GL;
 
       for (int var2 = 0; var2 < 256; ++var2) {
         float var3 = (var2 % 16) / 16.0F;
         float var4 = (var2 / 16) / 16.0F;
         float var5 = var3 + (float) this.anIntArray3709[var2] / this.anInt4087;
         float var6 = var4 + (float) this.anIntArray3721[var2] / this.anInt4087;
-        this.anIntArray4085[var2] = var1.glGenLists(1);
-        var1.glNewList(this.anIntArray4085[var2], 4864);
-        var1.glBegin(6);
-        var1.glTexCoord2f(var5, var4);
-        var1.glVertex2f(this.anIntArray3709[var2], 0.0F);
-        var1.glTexCoord2f(var3, var4);
-        var1.glVertex2f(0.0F, 0.0F);
-        var1.glTexCoord2f(var3, var6);
-        var1.glVertex2f(0.0F, (-this.anIntArray3721[var2]));
-        var1.glTexCoord2f(var5, var6);
-        var1.glVertex2f(this.anIntArray3709[var2],
+        this.anIntArray4085[var2] = GlRenderer.GL.glGenLists(1);
+        GlRenderer.GL.glNewList(this.anIntArray4085[var2], 4864);
+        GlRenderer.GL.glBegin(6);
+        GlRenderer.GL.glTexCoord2f(var5, var4);
+        GlRenderer.GL.glVertex2f(this.anIntArray3709[var2], 0.0F);
+        GlRenderer.GL.glTexCoord2f(var3, var4);
+        GlRenderer.GL.glVertex2f(0.0F, 0.0F);
+        GlRenderer.GL.glTexCoord2f(var3, var6);
+        GlRenderer.GL.glVertex2f(0.0F, (-this.anIntArray3721[var2]));
+        GlRenderer.GL.glTexCoord2f(var5, var6);
+        GlRenderer.GL.glVertex2f(this.anIntArray3709[var2],
             (-this.anIntArray3721[var2]));
-        var1.glEnd();
-        var1.glEndList();
+        GlRenderer.GL.glEnd();
+        GlRenderer.GL.glEndList();
       }
 
       this.anInt4086 = DummyClass33.anInt582;

@@ -187,7 +187,7 @@ public final class ClassCheckRequest extends Node {
             boolean var28 = false;
 
             for (var16 = 0; FileSystem.anInt104 > var16; ++var16) {
-              if ((var29 == VertexNormal.aLongArray826[var16])
+              if ((var29 == GlobalStatics_4.aLongArray826[var16])
                 && Cursor.anIntArray882[var16] != 0) {
                 var28 = true;
                 break;

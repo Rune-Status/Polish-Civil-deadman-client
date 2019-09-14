@@ -91,7 +91,6 @@ public final class GlobalStatics_0 {
   public static AudioStreamEncoder4 aClass3_Sub24_Sub4_1193;
   public static GameString aClass94_1179 = GameStringStatics.create("Veuillez patienter)3)3)3");
   public static GameString COMMAND_REBUILD = GameStringStatics.create("::rebuild");
-  public static int screenLowerY;
   public static int anInt937;
   public static int anInt938;
   public static ObjectCache aClass93_939 = new ObjectCache(4);

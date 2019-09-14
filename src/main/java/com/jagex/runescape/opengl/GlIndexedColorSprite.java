@@ -1,7 +1,6 @@
 package com.jagex.runescape.opengl;
 
 import com.jagex.runescape.sprite.AbstractIndexedColorSprite;
-import com.jogamp.opengl.GL2;
 import java.nio.ByteBuffer;
 
 public final class GlIndexedColorSprite extends AbstractIndexedColorSprite {
@@ -53,17 +52,17 @@ public final class GlIndexedColorSprite extends AbstractIndexedColorSprite {
     }
 
     ByteBuffer buffer = ByteBuffer.wrap(dest);
-    GL2 var11 = GlRenderer.GL;
     if (this.textureId == -1) {
       int[] var12 = new int[1];
-      var11.glGenTextures(1, var12, 0);
+      GlRenderer.GL.glGenTextures(1, var12, 0);
       this.textureId = var12[0];
       this.anInt2679 = DummyClass33.anInt582;
     }
 
     GlRenderer.bindTexture(this.textureId);
-    var11.glTexImage2D(3553, 0, 6408, this.textureWidth, this.textureHeight, 0,
-        6408, 5121, buffer);
+    GlRenderer.GL
+        .glTexImage2D(3553, 0, 6408, this.textureWidth, this.textureHeight, 0,
+            6408, 5121, buffer);
     DummyClass33.texture2dMemory += buffer.limit() - this.anInt2678;
     this.anInt2678 = buffer.limit();
   }
@@ -72,37 +71,34 @@ public final class GlIndexedColorSprite extends AbstractIndexedColorSprite {
     GlRenderer.method1828();
     x += this.offsetX;
     y += this.offsetY;
-    GL2 var4 = GlRenderer.GL;
     GlRenderer.bindTexture(this.textureId);
     this.initializeParameters(1);
-    var4.glColor4f(1.0F, 1.0F, 1.0F, alpha / 256.0F);
-    var4.glTranslatef(x, (GlRenderer.viewHeight - y), 0.0F);
-    var4.glCallList(this.listId);
-    var4.glLoadIdentity();
+    GlRenderer.GL.glColor4f(1.0F, 1.0F, 1.0F, alpha / 256.0F);
+    GlRenderer.GL.glTranslatef(x, (GlRenderer.viewHeight - y), 0.0F);
+    GlRenderer.GL.glCallList(this.listId);
+    GlRenderer.GL.glLoadIdentity();
   }
 
   public void draw(int x, int y) {
     GlRenderer.method1822();
     x += this.offsetX;
     y += this.offsetY;
-    GL2 var3 = GlRenderer.GL;
     GlRenderer.bindTexture(this.textureId);
     this.initializeParameters(1);
-    var3.glTranslatef(x, (GlRenderer.viewHeight - y), 0.0F);
-    var3.glCallList(this.listId);
-    var3.glLoadIdentity();
+    GlRenderer.GL.glTranslatef(x, (GlRenderer.viewHeight - y), 0.0F);
+    GlRenderer.GL.glCallList(this.listId);
+    GlRenderer.GL.glLoadIdentity();
   }
 
   private void initializeParameters(int var1) {
     if (this.anInt2677 != var1) {
       this.anInt2677 = var1;
-      GL2 var2 = GlRenderer.GL;
       if (var1 == 2) {
-        var2.glTexParameteri(3553, 10241, 9729);
-        var2.glTexParameteri(3553, 10240, 9729);
+        GlRenderer.GL.glTexParameteri(3553, 10241, 9729);
+        GlRenderer.GL.glTexParameteri(3553, 10240, 9729);
       } else {
-        var2.glTexParameteri(3553, 10241, 9728);
-        var2.glTexParameteri(3553, 10240, 9728);
+        GlRenderer.GL.glTexParameteri(3553, 10241, 9728);
+        GlRenderer.GL.glTexParameteri(3553, 10240, 9728);
       }
 
     }
@@ -126,23 +122,22 @@ public final class GlIndexedColorSprite extends AbstractIndexedColorSprite {
   private void initializeList() {
     float u = (float) this.width / this.textureWidth;
     float v = (float) this.height / this.textureHeight;
-    GL2 var3 = GlRenderer.GL;
     if (this.listId == -1) {
-      this.listId = var3.glGenLists(1);
+      this.listId = GlRenderer.GL.glGenLists(1);
       this.anInt2679 = DummyClass33.anInt582;
     }
 
-    var3.glNewList(this.listId, 4864);
-    var3.glBegin(6);
-    var3.glTexCoord2f(u, 0.0F);
-    var3.glVertex2f(this.width, 0.0F);
-    var3.glTexCoord2f(0.0F, 0.0F);
-    var3.glVertex2f(0.0F, 0.0F);
-    var3.glTexCoord2f(0.0F, v);
-    var3.glVertex2f(0.0F, (-this.height));
-    var3.glTexCoord2f(u, v);
-    var3.glVertex2f(this.width, (-this.height));
-    var3.glEnd();
-    var3.glEndList();
+    GlRenderer.GL.glNewList(this.listId, 4864);
+    GlRenderer.GL.glBegin(6);
+    GlRenderer.GL.glTexCoord2f(u, 0.0F);
+    GlRenderer.GL.glVertex2f(this.width, 0.0F);
+    GlRenderer.GL.glTexCoord2f(0.0F, 0.0F);
+    GlRenderer.GL.glVertex2f(0.0F, 0.0F);
+    GlRenderer.GL.glTexCoord2f(0.0F, v);
+    GlRenderer.GL.glVertex2f(0.0F, (-this.height));
+    GlRenderer.GL.glTexCoord2f(u, v);
+    GlRenderer.GL.glVertex2f(this.width, (-this.height));
+    GlRenderer.GL.glEnd();
+    GlRenderer.GL.glEndList();
   }
 }

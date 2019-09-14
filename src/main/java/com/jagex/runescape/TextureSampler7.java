@@ -310,7 +310,7 @@ public final class TextureSampler7 extends AbstractTextureSampler {
   public static void method297(long var0, int var2) {
     if (var0 != 0L) {
         for (int var3 = 0; (var3 < FileSystem.anInt104); ++var3) {
-          if ((VertexNormal.aLongArray826[var3] == var0)) {
+          if ((GlobalStatics_4.aLongArray826[var3] == var0)) {
             ++DummyClass52.anInt1170;
             --FileSystem.anInt104;
 
@@ -319,7 +319,7 @@ public final class TextureSampler7 extends AbstractTextureSampler {
                 SceneSomething2.aClass94Array1046[var4 + 1];
               Cursor.anIntArray882[var4] = Cursor.anIntArray882[var4 + 1];
               GlobalStatics_2.aClass94Array2566[var4] = GlobalStatics_2.aClass94Array2566[1 + var4];
-              VertexNormal.aLongArray826[var4] = VertexNormal.aLongArray826[1 + var4];
+              GlobalStatics_4.aLongArray826[var4] = GlobalStatics_4.aLongArray826[1 + var4];
               LightIntensity.anIntArray904[var4] = LightIntensity.anIntArray904[var4 + 1];
               GlobalStatics_0.aBooleanArray73[var4] = GlobalStatics_0.aBooleanArray73[1 + var4];
             }

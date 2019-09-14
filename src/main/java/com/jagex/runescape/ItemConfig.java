@@ -2411,11 +2411,11 @@ public final class ItemConfig {
                                                   GlobalStatics_1.aClass94_2197
                                                       .getLength());
                                         } else if (class94_47.method1558(
-                                            VertexNormal.aClass94_833,
+                                            GlobalStatics_4.aClass94_833,
                                             0)) {
                                           string =
                                               string.substring(
-                                                  VertexNormal.aClass94_833
+                                                  GlobalStatics_4.aClass94_833
                                                       .getLength());
                                           byte3 = 4;
                                         } else if (class94_47.method1558(
@@ -2488,10 +2488,10 @@ public final class ItemConfig {
                                                           GlobalStatics_1.aClass94_2196,
                                                           0)) {
                                                     if (class94_47.method1558(
-                                                        VertexNormal.aClass94_825,
+                                                        GlobalStatics_4.aClass94_825,
                                                         0)) {
                                                       string = string.substring(
-                                                          VertexNormal.aClass94_825
+                                                          GlobalStatics_4.aClass94_825
                                                               .getLength());
                                                       byte3 = 4;
                                                     } else {

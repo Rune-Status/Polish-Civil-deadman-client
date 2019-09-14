@@ -395,7 +395,7 @@ public final class IdentityKit {
     GlTexture2d.aBoolean3769 = false;
       TextureSampler25.anInt3413 = 0;
       AbstractImageProducer.loginResponse = -3;
-      VertexNormal.anInt820 = 0;
+      GlobalStatics_4.anInt820 = 0;
       TextureSampler28.loginState = 1;
       SomethingIndex150.anInt2079 = var0;
       MonoChromaticImageBuffer.anInt2561 = -1;

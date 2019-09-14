@@ -13,7 +13,7 @@ public class DummyClass2 {
     if (TextureSampler28.loginState != 0
           && TextureSampler28.loginState != 5) {
         try {
-          if (((++VertexNormal.anInt820) > 2000)) {
+          if (((++GlobalStatics_4.anInt820) > 2000)) {
             if (SomethingVolume15.gameSocket != null) {
               SomethingVolume15.gameSocket.destroy();
               SomethingVolume15.gameSocket = null;
@@ -25,7 +25,7 @@ public class DummyClass2 {
               return;
             }
 
-            VertexNormal.anInt820 = 0;
+            GlobalStatics_4.anInt820 = 0;
             if (Projectile.anInt2894 == DummyClass11.anInt2036) {
               Projectile.anInt2894 = GameWorldSomething.anInt506;
             } else {
@@ -245,7 +245,7 @@ public class DummyClass2 {
                     if (response == 23 && (SomethingIndex150.anInt2079 < 1)) {
                       TextureSampler28.loginState = 1;
                       ++SomethingIndex150.anInt2079;
-                      VertexNormal.anInt820 = 0;
+                      GlobalStatics_4.anInt820 = 0;
                       SomethingVolume15.gameSocket.destroy();
                       SomethingVolume15.gameSocket = null;
                       return;
@@ -381,7 +381,7 @@ public class DummyClass2 {
             AbstractImageProducer.loginResponse = -4;
           } else {
             TextureSampler28.loginState = 1;
-            VertexNormal.anInt820 = 0;
+            GlobalStatics_4.anInt820 = 0;
             ++SomethingIndex150.anInt2079;
             if ((DummyClass11.anInt2036 == Projectile.anInt2894)) {
               Projectile.anInt2894 = GameWorldSomething.anInt506;

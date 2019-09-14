@@ -304,7 +304,7 @@ public final class ISAACCipher {
       }
 
       if ((DummyClass53.aClass3_Sub28_Sub16_1339 == null
-          || VertexNormal.aClass3_Sub28_Sub16_824 == null
+          || GlobalStatics_4.aClass3_Sub28_Sub16_824 == null
           || MonoChromaticImageBuffer.aClass3_Sub28_Sub16_2560 == null)
           && Projectile.sprites.isLoaded(DummyClass39.anInt739)
           && Projectile.sprites.isLoaded(
@@ -314,7 +314,7 @@ public final class ISAACCipher {
             GlobalStatics_2
                 .method562(Projectile.sprites, 0, DummyClass39.anInt739,
                     (byte) 39);
-        VertexNormal.aClass3_Sub28_Sub16_824 =
+        GlobalStatics_4.aClass3_Sub28_Sub16_824 =
             GlobalStatics_2
                 .method562(Projectile.sprites, 0, BitVariable.anInt1126,
                     (byte) 39);
@@ -331,12 +331,12 @@ public final class ISAACCipher {
                 (SoftwareDirectColorSprite) DummyClass53.aClass3_Sub28_Sub16_1339);
           }
 
-          if (VertexNormal.aClass3_Sub28_Sub16_824 instanceof SoftwareDirectFullColorSprite) {
-            VertexNormal.aClass3_Sub28_Sub16_824 = new GlDirectFullColorSprite(
-                (SoftwareDirectColorSprite) VertexNormal.aClass3_Sub28_Sub16_824);
+          if (GlobalStatics_4.aClass3_Sub28_Sub16_824 instanceof SoftwareDirectFullColorSprite) {
+            GlobalStatics_4.aClass3_Sub28_Sub16_824 = new GlDirectFullColorSprite(
+                (SoftwareDirectColorSprite) GlobalStatics_4.aClass3_Sub28_Sub16_824);
           } else {
-            VertexNormal.aClass3_Sub28_Sub16_824 = new GlDirectColorSprite(
-                (SoftwareDirectColorSprite) VertexNormal.aClass3_Sub28_Sub16_824);
+            GlobalStatics_4.aClass3_Sub28_Sub16_824 = new GlDirectColorSprite(
+                (SoftwareDirectColorSprite) GlobalStatics_4.aClass3_Sub28_Sub16_824);
           }
 
           if (MonoChromaticImageBuffer.aClass3_Sub28_Sub16_2560 instanceof SoftwareDirectFullColorSprite) {
@@ -351,7 +351,7 @@ public final class ISAACCipher {
 
       int var9;
       if (DummyClass53.aClass3_Sub28_Sub16_1339 != null
-          && VertexNormal.aClass3_Sub28_Sub16_824 != null
+          && GlobalStatics_4.aClass3_Sub28_Sub16_824 != null
           && MonoChromaticImageBuffer.aClass3_Sub28_Sub16_2560 != null) {
         var7 = var3 / DummyClass53.aClass3_Sub28_Sub16_1339.anInt3707;
 
@@ -361,16 +361,16 @@ public final class ISAACCipher {
               var4 + var2 - DummyClass53.aClass3_Sub28_Sub16_1339.anInt3696);
         }
 
-        var8 = (-20 + var4) / VertexNormal.aClass3_Sub28_Sub16_824.anInt3696;
+        var8 = (-20 + var4) / GlobalStatics_4.aClass3_Sub28_Sub16_824.anInt3696;
 
         for (var9 = 0; var9 < var8; ++var9) {
-          VertexNormal.aClass3_Sub28_Sub16_824.method643(var1,
+          GlobalStatics_4.aClass3_Sub28_Sub16_824.method643(var1,
               var2 + 20
-                  + var9 * VertexNormal.aClass3_Sub28_Sub16_824.anInt3696);
-          VertexNormal.aClass3_Sub28_Sub16_824.method641(
-              var1 - (-var3 + VertexNormal.aClass3_Sub28_Sub16_824.anInt3707),
+                  + var9 * GlobalStatics_4.aClass3_Sub28_Sub16_824.anInt3696);
+          GlobalStatics_4.aClass3_Sub28_Sub16_824.method641(
+              var1 - (-var3 + GlobalStatics_4.aClass3_Sub28_Sub16_824.anInt3707),
               var2 + 20
-                  + var9 * VertexNormal.aClass3_Sub28_Sub16_824.anInt3696);
+                  + var9 * GlobalStatics_4.aClass3_Sub28_Sub16_824.anInt3696);
         }
 
         MonoChromaticImageBuffer.aClass3_Sub28_Sub16_2560.method643(var1,

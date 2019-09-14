@@ -1,7 +1,6 @@
 package com.jagex.runescape.opengl;
 
 import com.jagex.runescape.AbstractModel;
-import com.jagex.runescape.GlobalStatics_0;
 import com.jagex.runescape.GlobalStatics_1;
 import com.jagex.runescape.common.ArrayUtils;
 import com.jagex.runescape.buffer.Buffer;
@@ -1332,7 +1331,7 @@ public final class GlModel extends AbstractModel {
               int var24 = var23 + (var13 * var2 + var15 * var3 >> 16) << 9;
               if (var24 / depth > DummyClass3.screenUpperY) {
                 int var25 = var23 + (-var13 * var2 + var14 * var3 >> 16) << 9;
-                if (var25 / depth < GlobalStatics_0.screenLowerY) {
+                if (var25 / depth < GLStatics.screenLowerY) {
                   int var26 = 0;
                   int var27 = 0;
                   if (rotationY != 0) {

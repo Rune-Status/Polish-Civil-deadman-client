@@ -331,7 +331,7 @@ public final class Structure extends SubNode {
         Structure.aBoolean3641 = false;
       }
 
-      VertexNormal.aClass94_825 = SomethingInScenePacket202.aClass94_2269;
+      GlobalStatics_4.aClass94_825 = SomethingInScenePacket202.aClass94_2269;
       AbstractFileRequest.aClass94_3629 = AudioStreamEncoder4.aClass94_3496;
       DummyClass35.aClass94_666 = IdentityKit.aClass94_463;
       Structure.aClass94_3643 = TextureSampler33.aClass94_3053;
@@ -351,7 +351,7 @@ public final class Structure extends SubNode {
       RenderAnimation.aClass94_374 = GlTexture2d.aClass94_3763;
       GameStub.aClass94_4 = ItemConfig.aClass94_808;
       GlobalStatics_2.aClass94_2216 = StringNode0.aClass94_2340;
-      VertexNormal.aClass94_822 = DummyClass56.aClass94_1455;
+      GlobalStatics_4.aClass94_822 = DummyClass56.aClass94_1455;
       SomethingInScenePacket202.aClass94_2267 = AudioSomethingSomething.aClass94_2524;
       AnimationSomething.aClass94_3584 = ClientScriptEnum.aClass94_3661;
       WorldMapLabel.aClass94_1722 = SomethingQuickChatK.aClass94_150;

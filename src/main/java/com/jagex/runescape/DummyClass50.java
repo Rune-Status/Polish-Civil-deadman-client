@@ -92,7 +92,7 @@ public final class DummyClass50 {
           }
 
           for (var5 = 0; FileSystem.anInt104 > var5; ++var5) {
-            if ((VertexNormal.aLongArray826[var5] == var1)) {
+            if ((GlobalStatics_4.aLongArray826[var5] == var1)) {
               GameBuffer.printMessage(GroundItemNode.EMPTY_STRING, 0,
                   RenderAnimation.concat(new GameString[]{
                       DummyClass35.aClass94_666, var4,

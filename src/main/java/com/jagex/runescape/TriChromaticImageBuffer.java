@@ -69,7 +69,7 @@ public final class TriChromaticImageBuffer extends Node {
       DummyClass28.method887(21, Projectile.sprites);
       MonoChromaticImageBuffer.aClass3_Sub28_Sub16_2560 = null;
       TextureSampler27.aClass3_Sub28_Sub16_3099 = null;
-      VertexNormal.aClass3_Sub28_Sub16_824 = null;
+      GlobalStatics_4.aClass3_Sub28_Sub16_824 = null;
       DummyClass53.aClass3_Sub28_Sub16_1339 = null;
       DummyClass58.aClass3_Sub28_Sub16_1457 = null;
       if (DummyClass15.state == 5) {

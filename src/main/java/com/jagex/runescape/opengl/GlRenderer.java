@@ -5,7 +5,6 @@ import com.jagex.runescape.AudioStreamEncoder3;
 import com.jagex.runescape.DummyClass17;
 import com.jagex.runescape.DummyClass3;
 import com.jagex.runescape.DummyClass55;
-import com.jagex.runescape.GlobalStatics_0;
 import com.jagex.runescape.common.GameString;
 import com.jagex.runescape.common.GameStringStatics;
 import com.jagex.runescape.Unsure;
@@ -483,7 +482,7 @@ public final class GlRenderer {
     DummyClass17.screenLowerX = left;
     Unsure.screenUpperX = right;
     DummyClass3.screenUpperY = top;
-    GlobalStatics_0.screenLowerY = bottom;
+    GLStatics.screenLowerY = bottom;
   }
 
   private static void method1845(boolean var0) {

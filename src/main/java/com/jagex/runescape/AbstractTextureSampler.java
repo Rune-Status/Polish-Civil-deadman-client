@@ -197,7 +197,7 @@ public abstract class AbstractTextureSampler extends Node {
   public static void method165(int var0) {
     DummyClass53.aClass3_Sub28_Sub16_1339 = null;
       TextureSampler27.aClass3_Sub28_Sub16_3099 = null;
-      VertexNormal.aClass3_Sub28_Sub16_824 = null;
+      GlobalStatics_4.aClass3_Sub28_Sub16_824 = null;
       if (var0 != -7878) {
         AbstractTextureSampler.drawLoadingBox(null, false);
       }

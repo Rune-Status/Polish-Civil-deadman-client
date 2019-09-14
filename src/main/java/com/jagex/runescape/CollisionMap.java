@@ -3,6 +3,7 @@ package com.jagex.runescape;
 import com.jagex.runescape.common.GameString;
 import com.jagex.runescape.common.GameStringStatics;
 import com.jagex.runescape.huffman.HuffmanEncoderStatics;
+import com.jagex.runescape.opengl.GLStatics;
 import com.jagex.runescape.opengl.GlDirectColorSprite;
 import com.jagex.runescape.opengl.GlRenderer;
 import com.jagex.runescape.opengl.GlUtils;
@@ -1337,7 +1338,7 @@ public final class CollisionMap {
       !(screenX < DummyClass17.screenLowerX && screenX0 < DummyClass17.screenLowerX) && (
         !(screenX > Unsure.screenUpperX && screenX0 > Unsure.screenUpperX) && (
           !(screenY < DummyClass3.screenUpperY && screenY0 < DummyClass3.screenUpperY) && (
-            screenY <= GlobalStatics_0.screenLowerY || screenY0 <= GlobalStatics_0.screenLowerY)))));
+            screenY <= GLStatics.screenLowerY || screenY0 <= GLStatics.screenLowerY)))));
   }
 
 }

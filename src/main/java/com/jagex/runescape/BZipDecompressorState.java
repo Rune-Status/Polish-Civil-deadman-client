@@ -107,7 +107,7 @@ public final class BZipDecompressorState {
   public static void method850(byte var0) {
     TextureSampler24.aClass94_3142 = InventoryConfig.aClass94_3649;
       StillGraphicNode.aClass94_3546 = SomethingAudio.aClass94_2002;
-      VertexNormal.aClass94_825 = NpcConfiguration.aClass94_1281;
+      GlobalStatics_4.aClass94_825 = NpcConfiguration.aClass94_1281;
       DummyClass44.aClass94_935 = DummyClass10.aClass94_2086;
       DummyClass32.SKILL = DummyClass1.aClass94_415;
       GlobalStatics_0.aClass94_1180 = TextureSampler26.aClass94_3079;
@@ -194,7 +194,7 @@ public final class BZipDecompressorState {
       TextureSampler33.aClass94_3051 = AbstractObjectNodeWrapper.aClass94_1620;
       TextureSampler39.LOADING_PLEASE_WAIT = GameObjectConfig.aClass94_1523;
       DisplayMode.CONNECTED_TO_UPDATE_SERVER = TextureSampler18.aClass94_4036;
-      VertexNormal.aClass94_822 = GameStub.aClass94_7;
+      GlobalStatics_4.aClass94_822 = GameStub.aClass94_7;
       Unsure.aClass94_1892 = GameObjectConfig.aClass94_1509;
       TextureSampler14.aClass94_3388 = DummyClass34.aClass94_593;
       DummyClass32.aClass94_523 = GlobalStatics_0.aClass94_2599;

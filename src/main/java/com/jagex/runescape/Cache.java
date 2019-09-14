@@ -793,7 +793,7 @@ public final class Cache {
                           ItemConfig var50 = DummyClass35.getItemConfig(var11.anInt192, (byte) 113);
                           var45 = var50.aClass94_770;
                           if (var45 == null) {
-                            var45 = VertexNormal.aClass94_829;
+                            var45 = GlobalStatics_4.aClass94_829;
                           }
 
                           if (((var50.anInt764 == 1) || (var11.anInt271 != 1))

@@ -1603,7 +1603,7 @@ public final class SoftwareModel extends AbstractModel {
             if (var21 / var13 > DummyClass3.screenUpperY) {
               int var22 = var20 + (-this.aShort3884
                   * var2 + this.aShort3894 * var3 >> 16) << 9;
-              if (var22 / var13 < GlobalStatics_0.screenLowerY) {
+              if (var22 / var13 < GLStatics.screenLowerY) {
                 boolean var23 = false;
                 boolean var24 = var14 <= 50;
                 boolean var25 = var24 || this.anInt3900 > 0;

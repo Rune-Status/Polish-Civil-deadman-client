@@ -553,7 +553,7 @@ public final class DummyClass18 {
         var21 = SpotAnimationConfig.gameBuffer.readUnsignedByte();
         var56 = SpotAnimationConfig.gameBuffer.readString();
         if (var21 >= 1 && (var21 <= 8)) {
-          if (var56.method1531(VertexNormal.aClass94_829)) {
+          if (var56.method1531(GlobalStatics_4.aClass94_829)) {
             var56 = null;
           }
 
@@ -1018,7 +1018,7 @@ public final class DummyClass18 {
         GameString var46 = GameStringStatics.stringFromBase37(-29664, var2).formatName((byte) -50);
 
         for (var33 = 0; var33 < FileSystem.anInt104; ++var33) {
-          if (var2 == VertexNormal.aLongArray826[var33]) {
+          if (var2 == GlobalStatics_4.aLongArray826[var33]) {
             if ((var21 != Cursor.anIntArray882[var33])) {
               Cursor.anIntArray882[var33] = var21;
               if (var21 > 0) {
@@ -1031,7 +1031,7 @@ public final class DummyClass18 {
               if (var21 == 0) {
                 GameBuffer.printMessage(GroundItemNode.EMPTY_STRING, 5,
                   RenderAnimation.concat(new GameString[] {
-                    var46, VertexNormal.aClass94_822
+                    var46, GlobalStatics_4.aClass94_822
                   }), -1);
               }
             }
@@ -1046,7 +1046,7 @@ public final class DummyClass18 {
 
         boolean var45 = false;
         if (var46 != null && FileSystem.anInt104 < 200) {
-          VertexNormal.aLongArray826[FileSystem.anInt104] = var2;
+          GlobalStatics_4.aLongArray826[FileSystem.anInt104] = var2;
           SceneSomething2.aClass94Array1046[FileSystem.anInt104] = var46;
           Cursor.anIntArray882[FileSystem.anInt104] = var21;
           GlobalStatics_2.aClass94Array2566[FileSystem.anInt104] = var41;
@@ -1077,9 +1077,9 @@ public final class DummyClass18 {
               SceneSomething2.aClass94Array1046[var11] =
                 SceneSomething2.aClass94Array1046[var11 + 1];
               SceneSomething2.aClass94Array1046[var11 + 1] = var57;
-              long var15 = VertexNormal.aLongArray826[var11];
-              VertexNormal.aLongArray826[var11] = VertexNormal.aLongArray826[var11 + 1];
-              VertexNormal.aLongArray826[var11 + 1] = var15;
+              long var15 = GlobalStatics_4.aLongArray826[var11];
+              GlobalStatics_4.aLongArray826[var11] = GlobalStatics_4.aLongArray826[var11 + 1];
+              GlobalStatics_4.aLongArray826[var11 + 1] = var15;
               int var17 = LightIntensity.anIntArray904[var11];
               LightIntensity.anIntArray904[var11] = LightIntensity.anIntArray904[var11 + 1];
               LightIntensity.anIntArray904[1 + var11] = var17;
@@ -1536,7 +1536,8 @@ public final class DummyClass18 {
         var33 -= WorldMapLabel.anInt1716;
         var10 -= ProceduralTexture.anInt1152;
         var8 = 3 & var30 >> 28;
-        VertexNormal.method1131(var8, 110, var21, var3, var10, var5, var33, var6);
+        GlobalStatics_4
+            .method1131(var8, 110, var21, var3, var10, var5, var33, var6);
         GlobalStatics_0.packetId = -1;
         return true;
       }

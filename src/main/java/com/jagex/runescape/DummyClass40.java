@@ -1419,7 +1419,7 @@ public final class DummyClass40 {
     DummyClass17.screenLowerX = -DummyClass40.anInt846;
     Unsure.screenUpperX = DummyClass40.anInt847 - DummyClass40.anInt846;
     DummyClass3.screenUpperY = -DummyClass40.anInt835;
-    GlobalStatics_0.screenLowerY = DummyClass40.anInt844 - DummyClass40.anInt835;
+    GLStatics.screenLowerY = DummyClass40.anInt844 - DummyClass40.anInt835;
   }
 
   private static void method1142(int[] var0, int[] var1, int var2, int var3, int var4,
@@ -2752,7 +2752,7 @@ public final class DummyClass40 {
     DummyClass17.screenLowerX = -DummyClass40.anInt846;
     Unsure.screenUpperX = DummyClass40.anInt847 - DummyClass40.anInt846;
     DummyClass3.screenUpperY = -DummyClass40.anInt835;
-    GlobalStatics_0.screenLowerY = DummyClass40.anInt844 - DummyClass40.anInt835;
+    GLStatics.screenLowerY = DummyClass40.anInt844 - DummyClass40.anInt835;
   }
 
   private static void method1146(int[] var0, int var1, int var2, int var3, int var4, int var5,

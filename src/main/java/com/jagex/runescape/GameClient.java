@@ -1194,7 +1194,7 @@ public final class GameClient extends GameStub {
       MilliFrameRegulator.method1771(14635);
       DirectImageProducer.method2187(27316);
       FaceNormal.method1731(12881);
-      VertexNormal.method1133((byte) 81);
+      GlobalStatics_4.method1133((byte) 81);
       LinearHashTable.method1283((byte) 122);
       BufferObject.method2070((byte) 67);
       BZipDecompressor.method1641();

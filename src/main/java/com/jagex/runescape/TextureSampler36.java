@@ -234,7 +234,7 @@ public final class TextureSampler36 extends AbstractTextureSampler {
           var11 = DummyClass17.screenLowerX;
           Structure.anInt3642 =
             var11 + (var12 - var11) * (-var3 + NpcConfiguration.anInt1297) / var4;
-          int var14 = GlobalStatics_0.screenLowerY;
+          int var14 = GLStatics.screenLowerY;
           RenderAnimation.anInt384 =
             (-var13 + var14) * (DummyClass36.anInt2612 - var5) / var1 + var13;
         } else {

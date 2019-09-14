@@ -62,6 +62,7 @@ public class GLStatics {
   public static int viewportLowerX;
   public static int viewportLowerZ;
   public static int viewportUpperX;
+  public static int screenLowerY;
   static GameString aClass94_695 = GameStringStatics.create("Unable to find ");
   public static GameString aClass94_691 = aClass94_695;
 

@@ -78,7 +78,7 @@ public final class DummyClass4 extends DummyClass6 {
 
           int var4;
           for (var4 = 0; FileSystem.anInt104 > var4; ++var4) {
-            if ((VertexNormal.aLongArray826[var4] == var0)) {
+            if ((GlobalStatics_4.aLongArray826[var4] == var0)) {
               GameBuffer.printMessage(GroundItemNode.EMPTY_STRING, 0,
                 RenderAnimation.concat(new GameString[] {var3, Structure.aClass94_3645}), -1);
               return;
@@ -98,7 +98,7 @@ public final class DummyClass4 extends DummyClass6 {
           } else {
             ++SpotAnimationConfig.anInt544;
             SceneSomething2.aClass94Array1046[FileSystem.anInt104] = var3;
-            VertexNormal.aLongArray826[FileSystem.anInt104] = var0;
+            GlobalStatics_4.aLongArray826[FileSystem.anInt104] = var0;
             Cursor.anIntArray882[FileSystem.anInt104] = 0;
             GlobalStatics_2.aClass94Array2566[FileSystem.anInt104] = GroundItemNode.EMPTY_STRING;
             LightIntensity.anIntArray904[FileSystem.anInt104] = 0;

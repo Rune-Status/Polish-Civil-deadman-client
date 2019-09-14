@@ -267,7 +267,7 @@ public final class MaterialShader5 implements MaterialShader {
     int var9;
       int var12;
       if ((Something3d.anInt3012 == 0)) {
-        int var10 = GlobalStatics_0.screenLowerY;
+        int var10 = GLStatics.screenLowerY;
         var9 = DummyClass3.screenUpperY;
         int var8 = Unsure.screenUpperX;
         int var7 = DummyClass17.screenLowerX;
