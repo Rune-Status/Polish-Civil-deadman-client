@@ -1,6 +1,5 @@
 package com.jagex.runescape;
 
-import java.applet.Applet;
 import java.awt.Component;
 import java.awt.EventQueue;
 import java.awt.Frame;
@@ -21,7 +20,7 @@ import java.util.Vector;
 public class SignLink implements Runnable {
 
   private static String aString1209;
-  private static final Hashtable aHashtable1211 = new Hashtable(16);
+  private static final Hashtable CACHED_FILES = new Hashtable(16);
   public static String aString1196;
   public static String formattedOsName;
   public static String aString1205;
@@ -47,7 +46,7 @@ public class SignLink implements Runnable {
   private final int anInt1215;
   private UnusedInterface0 anInterface1_1217;
 
-  public SignLink( int var2, String gameName, int var4)
+  public SignLink(int var2, String gameName, int var4)
       throws IOException {
     SignLink.aString1196 = "1.1";
     this.gameName = gameName;
@@ -70,25 +69,25 @@ public class SignLink implements Runnable {
     }
     this.eventQueue = Toolkit.getDefaultToolkit().getSystemEventQueue();
 
-
     this.aClass122_1207 =
         new FileOnDisk(
-            SignLink.getFile(null, this.anInt1215, true, "random.dat"), "rw",
+            SignLink.openFile(this.gameName, true, "random.dat"),
+            "rw",
             25L);
     this.cacheDataFile =
         new FileOnDisk(
-            SignLink.getFile(this.gameName, this.anInt1215, true,
+            SignLink.openFile(this.gameName, true,
                 "main_file_cache.dat2"), "rw",
             104857600L);
     this.tableIndexFile =
-        new FileOnDisk(SignLink.getFile(this.gameName, this.anInt1215, true,
+        new FileOnDisk(SignLink.openFile(this.gameName, true,
             "main_file_cache.idx255"),
             "rw", 1048576L);
     this.cacheIndexFiles = new FileOnDisk[var4];
 
     for (int var5 = 0; ~var4 < ~var5; ++var5) {
       this.cacheIndexFiles[var5] = new FileOnDisk(
-          SignLink.getFile(this.gameName, this.anInt1215, true,
+          SignLink.openFile(this.gameName, true,
               "main_file_cache.idx" + var5), "rw",
           1048576L);
     }
@@ -301,43 +300,6 @@ public class SignLink implements Runnable {
                         var1.anInt979 >>> 16);
                   } else if (-8 != ~var2) {
                     if (10 == var2) {
-                      Class[] var17 = {
-                          Class.forName("java.lang.Class"),
-                          Class.forName("java.lang.String")
-                      };
-                      Runtime runtime = Runtime.getRuntime();
-                      Method var7;
-                      if (!SignLink.formattedOsName.startsWith("mac")) {
-                        var7 = Class.forName("java.lang.Runtime")
-                            .getDeclaredMethod("loadLibrary0", var17);
-                        var7.setAccessible(true);
-                        var7.invoke(runtime, var1.anObject977, "jawt");
-                        var7.setAccessible(false);
-                      }
-
-                      var7 = Class.forName("java.lang.Runtime")
-                          .getDeclaredMethod("load0", var17);
-                      var7.setAccessible(true);
-                      if (!SignLink.formattedOsName.startsWith("linux")
-                          && !SignLink.formattedOsName
-                          .startsWith(
-                              "sunos")) {
-                        if (SignLink.formattedOsName.startsWith("mac")) {
-                          var7.invoke(runtime, var1.anObject977,
-                              SignLink.getFile(this.gameName, this.anInt1215,
-                                  true,
-                                  "libjogl.jnilib").toString());
-                          var7.invoke(runtime, var1.anObject977,
-                              SignLink.getFile(this.gameName, this.anInt1215,
-                                  true,
-                                  "libjogl_awt.jnilib").toString());
-                        } else {
-
-
-                        }
-                      }
-
-                      var7.setAccessible(false);
                     } else {
                       int var18;
                       if (-12 == ~var2) {
@@ -365,7 +327,8 @@ public class SignLink implements Runnable {
                         var20.setAccessible(false);
                       } else if (-13 == ~var2) {
                         var4 = (String) var1.anObject977;
-                        FileOnDisk var19 = SignLink.method1438(false, var4);
+                        FileOnDisk var19 = SignLink
+                            .openGamePreferences(false, var4);
                         var1.result = var19;
                       } else if (~var2 == -15) {
                         int var22 = var1.anInt980;
@@ -460,7 +423,7 @@ public class SignLink implements Runnable {
     }
 
     if (var1 != 0) {
-      SignLink.method1438(false, null);
+      SignLink.openGamePreferences(false, null);
     }
 
     if (this.cacheDataFile != null) {
@@ -548,9 +511,9 @@ public class SignLink implements Runnable {
     return this.method1435(5, 0, null, 0, -127);
   }
 
-  private static FileOnDisk method1438(boolean var0, String var1) {
+  private static FileOnDisk openGamePreferences(boolean var0, String var1) {
     if (var0) {
-      SignLink.method1438(true, null);
+      SignLink.openGamePreferences(true, null);
     }
 
     String[] var2 = {
@@ -567,7 +530,8 @@ public class SignLink implements Runnable {
                   new File(var4, "jagex_" + var1 + "_preferences.dat"), "rw",
                   10000L);
           return var5;
-        } catch (Exception var6) {
+        } catch (Exception e) {
+          e.printStackTrace();
         }
       }
     }
@@ -575,60 +539,79 @@ public class SignLink implements Runnable {
     return null;
   }
 
-  public static File getFile(String name, int var1, boolean var2,
-      String var3) {
-    File var4 = (File) SignLink.aHashtable1211.get(var3);
-    if (var4 != null) {
-      return var4;
+  public static File openFile(String parent, boolean dontOpenGamePreferences,
+      String name) {
+    File cached = (File) SignLink.CACHED_FILES.get(name);
+    if (cached != null) {
+      return cached;
     } else {
-      if (!var2) {
-        SignLink.method1438(true, null);
+      if (!dontOpenGamePreferences) {
+        SignLink.openGamePreferences(true, null);
       }
-  String userHome = System.getProperty("user.home");
-      String var5 =
-         userHome + File.separator +"DMM"+File.separator+ ".cache/";
 
+      File cacheHome = new File(
+          String.join(
+              File.separator,
+              System.getProperty("user.home"),
+              "DMM",
+              ".cache"
+          )
+      );
 
-      for (int var7 = 0; ~var7 > -3; ++var7) {
-            String var10 =                var5 +  "/" + (name != null ? name + "/" : "")                    + var3;
-            RandomAccessFile var11 = null;
-            try {
-              File var12 = new File(var10);
-              if (var7 != 0 || var12.exists()) {
-                String var13 = var5;
-                if (var7 != 1 || ~var13.length() >= -1 || (new File(var13))
-                    .exists()) {
-                  (new File(var5)).mkdir();
-                  if (name != null) {
-                    (new File(var5  + "/" + name)).mkdir();
-                  }
+      SignLink.ensureDirectoryCreated(cacheHome);
 
-                  var11 = new RandomAccessFile(var12, "rw");
-                  int var14 = var11.read();
-                  var11.seek(0L);
-                  var11.write(var14);
-                  var11.seek(0L);
-                  var11.close();
-                  SignLink.aHashtable1211.put(var3, var12);
-                  return var12;
-                }
-              }else{
-                System.err.println(String.format("File not found %s", var12));
-              }
-            } catch (Exception var16) {
-              var16.printStackTrace();
-              try {
-                if (var11 != null) {
-                  var11.close();
-                  var11 = null;
-                }
-              } catch (Exception var15) {
-                var15.printStackTrace();
-              }
+      File parentFile = new File(cacheHome + File.separator + parent);
+      SignLink.ensureDirectoryCreated(parentFile);
+
+      File file =
+          new File(parentFile.getAbsolutePath() + File.separator + name);
+      SignLink.ensureFileCreated(file);
+
+      try (RandomAccessFile rwFile = new RandomAccessFile(file, "rw")) {
+        int firstByte = rwFile.read();
+        rwFile.seek(0L);
+        rwFile.write(firstByte);
+        rwFile.seek(0L);
+        rwFile.close();
+        SignLink.CACHED_FILES.put(name, rwFile);
+      } catch (IOException e) {
+        throw new IllegalStateException(e);
+      }
+      return file;
+    }
+  }
+
+  private static void ensureFileCreated(File file) {
+    if (!file.exists()) {
+      try {
+        boolean fileNotCreated = !file.createNewFile();
+        if (fileNotCreated) {
+          throw new IllegalStateException(
+              String.format(
+                  "Couldn't create file at %s",
+                  file.getAbsolutePath()
+              )
+          );
         }
+      } catch (IOException exception) {
+        throw new IllegalStateException(
+            String.format("File = [%s]", file.getAbsolutePath()),
+            exception
+        );
       }
+    }
+  }
 
-      throw new RuntimeException();
+  private static void ensureDirectoryCreated(File cacheHome) {
+    if (!cacheHome.exists()) {
+      boolean homeNotCreated = !cacheHome.mkdirs();
+      if (homeNotCreated) {
+        throw new IllegalStateException(
+            String.format(
+                "Couldn't create home at %s",
+                cacheHome.getAbsolutePath())
+        );
+      }
     }
   }
 }

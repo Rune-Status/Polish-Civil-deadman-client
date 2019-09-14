@@ -1,9 +1,7 @@
 java_binary(
     name = "client",
     srcs = glob([
-        "com/jagex/runescape/*.java",
-        "com/jagex/runescape/opengl/*.java",
-        "com/jagex/runescape/opengl/shader/*.java",
+        "src/main/java/**/*.java",
     ]),
     args = [
         "3594",
