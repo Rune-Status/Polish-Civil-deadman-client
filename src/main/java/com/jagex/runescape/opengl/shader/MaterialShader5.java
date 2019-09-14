@@ -312,7 +312,7 @@ public final class MaterialShader5 implements MaterialShader {
           int var14 = ((int) var26 & 2009320690) >> 29;
           int var15 = (int) (var26 >>> 32) & Integer.MAX_VALUE;
           int var27 = 127 & (int) var26 >> 7;
-          if (~var26 != ~var25) {
+          if ((var26 != var25)) {
             var25 = var26;
             int var18;
             if ((var14 == 3 -1) && AbstractFileRequester.method2096(GameWorldSomething.currentPlane,
@@ -390,8 +390,7 @@ public final class MaterialShader5 implements MaterialShader {
                   null :
                   Deque.method1210(64, LinearHashTable.anInt1038);
                 if ((Something3dRoot.anInt2051 & 4) != 0 && (var17 == null
-                  || ~var16.method1691(var17.anInt3614, LinearHashTable.anInt1038, (byte) 98)
-                  != ~var17.anInt3614)) {
+                  || (var16.method1691(var17.anInt3614, LinearHashTable.anInt1038, (byte) 98) != var17.anInt3614))) {
                   ScriptState.method1177(BufferObject.anInt1887, var26, (byte) -77,
                     RenderAnimation.concat(new GameString[] {
                       DummyClass59.aClass94_676, SomethingQuickChat.aClass94_3573,
@@ -558,8 +557,7 @@ public final class MaterialShader5 implements MaterialShader {
                       null :
                       Deque.method1210(64, LinearHashTable.anInt1038);
                     if ((Something3dRoot.anInt2051 & 1) != 0 && (var39 == null
-                      || ~var40.method1115(var39.anInt3614, 100, LinearHashTable.anInt1038)
-                      != ~var39.anInt3614)) {
+                      || (var40.method1115(var39.anInt3614, 100, LinearHashTable.anInt1038) != var39.anInt3614))) {
                       ++DisplayMode.anInt1439;
                       ScriptState.method1177(BufferObject.anInt1887, var18, (byte) -70,
                         RenderAnimation.concat(new GameString[] {

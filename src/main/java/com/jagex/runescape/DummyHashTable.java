@@ -58,12 +58,12 @@ public final class DummyHashTable {
               var6 = (GroundItemNode) var3.getFirst();
               var6 != null; var6 = (GroundItemNode) var3.getNext()) {
               GroundItem var9 = var6.aClass140_Sub7_3676;
-              if (~var9.anInt2936 != ~var5.aClass140_Sub7_3676.anInt2936) {
+              if ((var9.anInt2936 != var5.aClass140_Sub7_3676.anInt2936)) {
                 if (var12 == null) {
                   var12 = var9;
                 }
 
-                if (~var9.anInt2936 != ~var12.anInt2936 && var14 == null) {
+                if ((var9.anInt2936 != var12.anInt2936) && var14 == null) {
                   var14 = var9;
                 }
               }

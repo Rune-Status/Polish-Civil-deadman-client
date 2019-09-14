@@ -717,7 +717,7 @@ public final class PlayerAppearance {
         int var19;
         int var20;
         label410:
-        while (~var16 != ~var28) {
+        while ((var16 != var28)) {
           var13 = TextureSampler38.anIntArray3456[var16];
           var14 = DummyClass38.anIntArray729[var16];
           var16 = 1 + var16 & 4095;
@@ -1025,9 +1025,9 @@ public final class PlayerAppearance {
 
         for (
             var19 = var20 = DummyClass51.anIntArrayArray1160[var13][var14];
-            ~var13 != ~var9 || ~var12 != ~var14;
+            (var13 != var9) || (var12 != var14);
             var19 = DummyClass51.anIntArrayArray1160[var13][var14]) {
-          if (~var20 != ~var19) {
+          if ((var20 != var19)) {
             TextureSampler38.anIntArray3456[var16] = var13;
             var20 = var19;
             DummyClass38.anIntArray729[var16++] = var14;

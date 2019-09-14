@@ -188,7 +188,7 @@ public final class Structure extends SubNode {
         FloorOverlay.aClass11_2091 = var3;
       }
 
-      if (var4 && var3.anObjectArray235 != null && (~var5 != ~var3.anInt168
+      if (var4 && var3.anObjectArray235 != null && ((var5 != var3.anInt168)
         || var3.anInt193 != var6)) {
         ClientScriptCall var7 = new ClientScriptCall();
         var7.arguments = var3.anObjectArray235;

@@ -284,7 +284,7 @@ public final class BufferedFile {
         }
 
         if (~this.aByteArray572.length > ~var4) {
-          if (~this.aLong569 != ~this.aLong570) {
+          if ((this.aLong569 != this.aLong570)) {
             this.aClass122_573.method1737((byte) -10, this.aLong569);
             this.aLong570 = this.aLong569;
           }

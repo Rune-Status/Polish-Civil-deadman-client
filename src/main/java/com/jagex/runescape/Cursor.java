@@ -147,7 +147,7 @@ public final class Cursor {
         }
 
         if (var10) {
-          if (~var1.rotationY != ~var1.anInt2806 && ~var1.anInt2772 == 0
+          if ((var1.rotationY != var1.anInt2806) && ~var1.anInt2772 == 0
               && (var1.anInt2779 != 1 -1)) {
             var9 = 2;
           }

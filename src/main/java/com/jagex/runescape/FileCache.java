@@ -195,7 +195,7 @@ public final class FileCache {
                   int var12 =
                     (DummyClass11.aByteArray2040[3] & 255) + (DummyClass11.aByteArray2040[2] << 8
                       & '\uff00');
-                  if (var11 != var3 || ~var9 != ~var12 || ~this.anInt682 != ~var13) {
+                  if (var11 != var3 || (var9 != var12) || (this.anInt682 != var13)) {
                     var10000 = false;
                     return false;
                   }

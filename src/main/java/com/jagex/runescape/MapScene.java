@@ -370,7 +370,7 @@ public final class MapScene {
       }
 
       for (;
-           ~var11 != ~var12 || ~var3 != ~var13;
+           (var11 != var12) || (var3 != var13);
            var18 = DummyClass51.anIntArrayArray1160[var12][var13]) {
         if (var19 != var18) {
           TextureSampler38.anIntArray3456[var15] = var12;

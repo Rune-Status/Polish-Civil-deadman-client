@@ -172,8 +172,8 @@ public final class FileCacheRequester implements Runnable {
 
   public static void rebuildScene(int plane, int var1, int var2, int y, boolean var4, int x,
                                  boolean var6) {
-    if (AbstractObjectNode.anInt3606 != var2 || ~var1 != ~VariableUpdate.anInt2294
-        || ~GameObject.plane != ~plane && !NPC.method1986(45)) {
+    if (AbstractObjectNode.anInt3606 != var2 || (var1 != VariableUpdate.anInt2294)
+        || (GameObject.plane != plane) && !NPC.method1986(45)) {
         AbstractObjectNode.anInt3606 = var2;
         VariableUpdate.anInt2294 = var1;
         GameObject.plane = plane;
@@ -274,8 +274,8 @@ public final class FileCacheRequester implements Runnable {
           var25 = -1;
         }
 
-        for (int var17 = var24; ~var17 != ~var25; var17 += var26) {
-          for (int var18 = var14; ~var15 != ~var18; var18 += var16) {
+        for (int var17 = var24; (var17 != var25); var17 += var26) {
+          for (int var18 = var14; (var15 != var18); var18 += var16) {
             int var19 = var9 + var17;
             int var20 = var18 + var10;
 

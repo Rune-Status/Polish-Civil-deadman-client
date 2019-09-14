@@ -1134,7 +1134,7 @@ public final class CollisionMap {
             var9 = '\u8000';
             var8 = 65536 * var6 / var7;
 
-            while (~var2 != ~var3) {
+            while ((var2 != var3)) {
               if (var3 > var2) {
                 if ((this.anIntArrayArray1304[var5][var2] & 19661058) != 0) {
                   return false;
@@ -1173,7 +1173,7 @@ public final class CollisionMap {
             var8 = 65536 * var7 / var6;
             var9 = '\u8000';
 
-            while (~var4 != ~var5) {
+            while ((var4 != var5)) {
               if (~var5 <= ~var4) {
                 if (var4 < var5) {
                   if (((this.anIntArrayArray1304[var5][var2] & 19661184) != 1 -1)) {

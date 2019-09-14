@@ -483,7 +483,7 @@ public final class Texture extends SubNode {
                 var11 = '\u8000';
                 var10 = 65536 * var8 / var9;
 
-                while (~var5 != ~var7) {
+                while ((var5 != var7)) {
                   if (var5 < var7) {
                     ++var5;
                   } else if (var5 > var7) {

@@ -177,10 +177,10 @@ public final class Deque {
         if (~var7.anInt368 == ~var5.aClass140_Sub4_Sub2_2324.anInt2764) {
           var6 = 0;
         } else {
-          if (~var7.anInt393 != ~var5.aClass140_Sub4_Sub2_2324.anInt2764
-              && ~var7.anInt386 != ~var5.aClass140_Sub4_Sub2_2324.anInt2764
-              && ~var7.anInt375 != ~var5.aClass140_Sub4_Sub2_2324.anInt2764
-              && ~var7.anInt373 != ~var5.aClass140_Sub4_Sub2_2324.anInt2764) {
+          if ((var7.anInt393 != var5.aClass140_Sub4_Sub2_2324.anInt2764)
+              && (var7.anInt386 != var5.aClass140_Sub4_Sub2_2324.anInt2764)
+              && (var7.anInt375 != var5.aClass140_Sub4_Sub2_2324.anInt2764)
+              && (var7.anInt373 != var5.aClass140_Sub4_Sub2_2324.anInt2764)) {
             if (var7.anInt398 == var5.aClass140_Sub4_Sub2_2324.anInt2764
                 || var7.anInt372 == var5.aClass140_Sub4_Sub2_2324.anInt2764
                 || var5.aClass140_Sub4_Sub2_2324.anInt2764 == var7.anInt379
@@ -229,7 +229,7 @@ public final class Deque {
           } else {
             if (var5.aClass140_Sub4_Sub1_2327.anInt2764 != var7.anInt393
                 && var5.aClass140_Sub4_Sub1_2327.anInt2764 != var7.anInt386
-                && ~var5.aClass140_Sub4_Sub1_2327.anInt2764 != ~var7.anInt375
+                && (var5.aClass140_Sub4_Sub1_2327.anInt2764 != var7.anInt375)
                 && var7.anInt373 != var5.aClass140_Sub4_Sub1_2327.anInt2764) {
               if (var7.anInt398 == var5.aClass140_Sub4_Sub1_2327.anInt2764
                   || var5.aClass140_Sub4_Sub1_2327.anInt2764 == var7.anInt372
@@ -243,9 +243,9 @@ public final class Deque {
             }
           }
 
-          if (~var5.anInt2322 != ~var6) {
+          if ((var5.anInt2322 != var6)) {
             var8 = DummyClass50.method1398(0, var5.aClass140_Sub4_Sub1_2327);
-            if (~var5.anInt2332 != ~var8) {
+            if ((var5.anInt2332 != var8)) {
               if (var5.aClass3_Sub24_Sub1_2312 != null) {
                 MonoChromaticImageBuffer.aClass3_Sub24_Sub2_2563.method461(
                   var5.aClass3_Sub24_Sub1_2312);

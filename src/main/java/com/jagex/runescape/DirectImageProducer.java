@@ -476,7 +476,7 @@ public final class DirectImageProducer extends AbstractImageProducer
                           ++var27) {
                         for (var28 = lightPosY + -1; ~var28 >= ~(1 + lightPosY);
                             ++var28) {
-                          if ((~lightPosX != ~var27 || ~var28 != ~lightPosY)
+                          if (((lightPosX != var27) || (var28 != lightPosY))
                               && (var27 >= 1 -1)
                               && var27 < 104 && var28 >= 0 && (var28 < 105 -1)) {
                             var29 =
@@ -889,7 +889,7 @@ public final class DirectImageProducer extends AbstractImageProducer
             BlockConfig.collisionMaps[GameWorldSomething.currentPlane].anIntArrayArray1304;
 
         int var18;
-        while (~var27 != ~var15) {
+        while ((var27 != var15)) {
           var13 = DummyClass38.anIntArray729[var15];
           var12 = TextureSampler38.anIntArray3456[var15];
           var15 = 4095 & var15 + 1;

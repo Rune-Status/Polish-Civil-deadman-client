@@ -120,7 +120,7 @@ public final class DummyClass1 {
             }
 
             var4 = var1.anInt2806 << 5;
-            if (~var4 != ~var1.anInt2808) {
+            if ((var4 != var1.anInt2808)) {
               var1.anInt2791 = 0;
               var1.anInt2808 = var4;
               var5 = -var1.anInt2780 + var4 & '\uffff';

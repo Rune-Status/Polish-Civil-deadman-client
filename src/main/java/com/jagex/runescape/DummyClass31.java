@@ -38,7 +38,7 @@ public final class DummyClass31 {
           return;
         }
 
-        if (~DummyClass18.method823(var9, var7, var8 ^ -127, var2) != ~GameObject.plane) {
+        if ((DummyClass18.method823(var9, var7, var8 ^ -127, var2) != GameObject.plane)) {
           return;
         }
       }

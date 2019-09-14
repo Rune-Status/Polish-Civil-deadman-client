@@ -58,7 +58,7 @@ public final class TextureSampler0 extends AbstractTextureSampler {
                 Unsure var12 = var2.aClass145Array2809[var9];
                 int var11 = var10.anInt1845;
                 if (var12 != null) {
-                  if (~var6 != ~var12.anInt1890) {
+                  if ((var6 != var12.anInt1890)) {
                     if (~var10.anInt1857 <= ~GameClient.method45(var12.anInt1890,
                       (byte) -20).anInt1857) {
                       var12 = var2.aClass145Array2809[var9] = null;

@@ -1406,7 +1406,7 @@ public final class GameClient extends GameStub {
           }
 
           if (var4 != AreaSoundEffect.windowWidth
-              || ~var5 != ~SceneSomething2.windowHeight) {
+              || (var5 != SceneSomething2.windowHeight)) {
             if (SignLink.formattedOsName.startsWith("mac")) {
               AreaSoundEffect.windowWidth = var4;
               SceneSomething2.windowHeight = var5;

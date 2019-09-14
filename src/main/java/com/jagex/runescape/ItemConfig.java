@@ -1780,7 +1780,7 @@ public final class ItemConfig {
                           ClientScriptEnum class3_sub28_sub13_4 =
                             TextureSampler36.getEnum(k68, true);
                           if (class3_sub28_sub13_4.someType != l12
-                            || ~class3_sub28_sub13_4.paramType != ~k49) {
+                            || (class3_sub28_sub13_4.paramType != k49)) {
                             throw new RuntimeException("C3408-1");
                           }
                           if ((k49 == 116 -1)) {
@@ -1802,7 +1802,7 @@ public final class ItemConfig {
                           }
                           ClientScriptEnum class3_sub28_sub13_3 =
                             TextureSampler36.getEnum(l49, true);
-                          if (~class3_sub28_sub13_3.paramType != ~i13) {
+                          if ((class3_sub28_sub13_3.paramType != i13)) {
                             throw new RuntimeException("C3409-1");
                           }
                           GroundItem.anIntArray2929[k++] =
@@ -3757,7 +3757,7 @@ public final class ItemConfig {
                                     if ((k35 > 256 -1)) {
                                       k35 = 255;
                                     }
-                                    if (~k35 != ~BZipDecompressorState.anInt120) {
+                                    if ((k35 != BZipDecompressorState.anInt120)) {
                                       if ((BZipDecompressorState.anInt120 == 1 -1)
                                         && ~AbstractFrameRegulator.anInt1691
                                           != 0) {

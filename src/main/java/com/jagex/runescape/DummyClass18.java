@@ -379,7 +379,7 @@ public final class DummyClass18 {
         label1521:
         while (true) {
           if (var54 < 100) {
-            if (~var55 != ~DummyClass8.aLongArray4017[var54]) {
+            if ((var55 != DummyClass8.aLongArray4017[var54])) {
               ++var54;
               continue;
             }
@@ -1010,7 +1010,7 @@ public final class DummyClass18 {
 
         for (var33 = 0; var33 < FileSystem.anInt104; ++var33) {
           if (var2 == VertexNormal.aLongArray826[var33]) {
-            if (~var21 != ~Cursor.anIntArray882[var33]) {
+            if ((var21 != Cursor.anIntArray882[var33])) {
               Cursor.anIntArray882[var33] = var21;
               if (var21 > 0) {
                 GameBuffer.printMessage(GroundItemNode.EMPTY_STRING, 5,
@@ -1054,7 +1054,7 @@ public final class DummyClass18 {
           var45 = true;
 
           for (var11 = 0; var11 < var10; ++var11) {
-            if (~Cursor.anIntArray882[var11] != ~ClientScriptCall.anInt2451
+            if ((Cursor.anIntArray882[var11] != ClientScriptCall.anInt2451)
               && ~ClientScriptCall.anInt2451 == ~Cursor.anIntArray882[var11 - -1]
               || Cursor.anIntArray882[var11] == 0 && Cursor.anIntArray882[var11 - -1] != 0) {
               var45 = false;
@@ -1103,7 +1103,7 @@ public final class DummyClass18 {
 
       if (GameString.packetId == 128) {
         for (var20 = 0; DummyClass5.anIntArray2985.length > var20; ++var20) {
-          if (~LightIntensity.variables[var20] != ~DummyClass5.anIntArray2985[var20]) {
+          if ((LightIntensity.variables[var20] != DummyClass5.anIntArray2985[var20])) {
             DummyClass5.anIntArray2985[var20] = LightIntensity.variables[var20];
             DummyClass39.method1087(98, var20);
             AbstractGameWorld.anIntArray726[ClientScript.bitAnd(HuffmanEncoder.anInt641++, 31)] =
@@ -1143,7 +1143,7 @@ public final class DummyClass18 {
         label1603:
         while (true) {
           if (var59 < 100) {
-            if (~var51 != ~DummyClass8.aLongArray4017[var59]) {
+            if ((var51 != DummyClass8.aLongArray4017[var59])) {
               ++var59;
               continue;
             }
@@ -1872,8 +1872,7 @@ public final class DummyClass18 {
               var30 = 0;
               SubNode.anInt2572 > var30 && (
                   var2 != ClientScript.aClass3_Sub19Array3694[var30].key
-                      || ~var21
-                      != ~ClientScript.aClass3_Sub19Array3694[var30].anInt2478);
+                      || (var21 != ClientScript.aClass3_Sub19Array3694[var30].anInt2478));
               ++var30) {
           }
 

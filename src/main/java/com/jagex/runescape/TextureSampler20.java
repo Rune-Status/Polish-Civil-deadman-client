@@ -476,7 +476,7 @@ public final class TextureSampler20 extends AbstractTextureSampler {
                       var8 = var16.anInt3596;
                       var22 = var16.anInt3597;
                       assert var20 != null;
-                      if (var20.anInt202 != var6 || ~var20.anInt201 != ~var22
+                      if (var20.anInt202 != var6 || (var20.anInt201 != var22)
                           || var8 != var20.anInt265) {
                         var20.anInt201 = var22;
                         var20.anInt265 = var8;
@@ -486,7 +486,7 @@ public final class TextureSampler20 extends AbstractTextureSampler {
                     } else if ((var3 == 6 -1)) {
                       var20 = EnumStringFetcher.getWidget((byte) 117, var4);
                       assert var20 != null;
-                      if (~var20.anInt305 != ~var16.anInt3598
+                      if ((var20.anInt305 != var16.anInt3598)
                           || ~var16.anInt3598 == 0) {
                         var20.anInt260 = 1;
                         var20.anInt267 = 0;
@@ -509,7 +509,7 @@ public final class TextureSampler20 extends AbstractTextureSampler {
                           assert var20 != null;
                           if (var16.anInt3598 != var20.rotationX0
                               || var20.rotationY != var16.anInt3597
-                              || ~var16.anInt3596 != ~var20.anInt164) {
+                              || (var16.anInt3596 != var20.anInt164)) {
                             var20.rotationX0 = var16.anInt3598;
                             var20.anInt164 = var16.anInt3596;
                             var20.rotationY = var16.anInt3597;
@@ -532,7 +532,7 @@ public final class TextureSampler20 extends AbstractTextureSampler {
                             var20 = EnumStringFetcher
                                 .getWidget((byte) 119, var4);
                             assert var20 != null;
-                            if (~var16.anInt3598 != ~var20.anInt192
+                            if ((var16.anInt3598 != var20.anInt192)
                                 || var20.anInt271 != var16.anInt3597) {
                               var20.anInt192 = var16.anInt3598;
                               var20.anInt271 = var16.anInt3597;
@@ -543,8 +543,8 @@ public final class TextureSampler20 extends AbstractTextureSampler {
                               var20 = EnumStringFetcher
                                   .getWidget((byte) 121, var4);
                               assert var20 != null;
-                              if (~var20.anInt258 != ~var16.anInt3598
-                                  || ~var16.anInt3597 != ~var20.anInt264
+                              if ((var20.anInt258 != var16.anInt3598)
+                                  || (var16.anInt3597 != var20.anInt264)
                                   || var20.rotationZ != var16.anInt3596) {
                                 var20.anInt264 = var16.anInt3597;
                                 var20.rotationZ = var16.anInt3596;
@@ -596,7 +596,7 @@ public final class TextureSampler20 extends AbstractTextureSampler {
                           .getWidget((byte) 120, var4);
                       var9 = (var8 << 3) + (var22 << 11) + (var6 << 19);
                       assert var10 != null;
-                      if (~var9 != ~var10.anInt218) {
+                      if ((var9 != var10.anInt218)) {
                         var10.anInt218 = var9;
                         DummyClass29.method909(123, var10);
                       }

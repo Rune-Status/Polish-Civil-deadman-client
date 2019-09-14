@@ -181,7 +181,7 @@ public final class OndemandRequester {
                     for (
                         var15 = (OndemandFileRequest) this.normalRequests
                             .getFirst();
-                        var15 != null && ~var15.subnodeKey != ~var13;
+                        var15 != null && (var15.subnodeKey != var13);
                         var15 = (OndemandFileRequest) this.normalRequests
                             .getNext()) {
                     }
@@ -189,7 +189,7 @@ public final class OndemandRequester {
                     for (
                         var15 = (OndemandFileRequest) this.priorityRequests
                             .getFirst();
-                        var15 != null && ~var13 != ~var15.subnodeKey;
+                        var15 != null && (var13 != var15.subnodeKey);
                         var15 = (OndemandFileRequest) this.priorityRequests
                             .getNext()) {
                     }

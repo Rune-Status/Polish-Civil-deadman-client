@@ -168,7 +168,7 @@ public final class GameString implements UnusedInterface1 {
           var6 = (byte) (var6 + 32);
         }
 
-        if (~var5 != ~var6) {
+        if ((var5 != var6)) {
           return false;
         }
       }
@@ -552,7 +552,7 @@ public final class GameString implements UnusedInterface1 {
   public boolean method1558(GameString var1, int var2) {
     if (~this.length <= ~var1.length) {
       for (int var3 = var2; var3 < var1.length; ++var3) {
-        if (~this.bytes[var3] != ~var1.bytes[var3]) {
+        if ((this.bytes[var3] != var1.bytes[var3])) {
           return false;
         }
       }
@@ -697,7 +697,7 @@ public final class GameString implements UnusedInterface1 {
       }
 
       int var8 = var7 + var1 * var5;
-      if (~var5 != ~(var8 / var1)) {
+      if ((var5 != (var8 / var1))) {
         return false;
       }
 
@@ -729,7 +729,7 @@ public final class GameString implements UnusedInterface1 {
           var4 = (byte) (var4 + 32);
         }
 
-        if (~var4 != ~var5) {
+        if ((var4 != var5)) {
           return false;
         }
       }
@@ -821,13 +821,13 @@ public final class GameString implements UnusedInterface1 {
         int var8 = start;
 
         while (~var8 >= ~var7) {
-          if (~var6 != ~this.bytes[var8]) {
+          if ((var6 != this.bytes[var8])) {
             do {
               ++var8;
               if (var8 > var7) {
                 return -1;
               }
-            } while (~var6 != ~this.bytes[var8]);
+            } while ((var6 != this.bytes[var8]));
           }
 
           boolean var9 = true;
@@ -879,7 +879,7 @@ public final class GameString implements UnusedInterface1 {
 
       for (; ~var7 > ~var3; ++var7) {
         int var9;
-        for (var9 = 0; ~ch != ~this.bytes[var9 + var6]; ++var9) {
+        for (var9 = 0; (ch != this.bytes[var9 + var6]); ++var9) {
         }
 
         var11[var5++] = this.substring(var6 - -var9, 0, var6);

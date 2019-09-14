@@ -108,7 +108,7 @@ public final class TextureSampler28 extends AbstractTextureSampler {
                       for (var32 = 0; var32 <= var29; ++var32) {
                         var33 = var21[(var10 - -var32) % var13];
                         int var34 = var33[2];
-                        if (~var34 != ~var23) {
+                        if ((var34 != var23)) {
                           int var37 = var33[0];
                           int var38 = var33[1];
                           int var35;

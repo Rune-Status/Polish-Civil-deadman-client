@@ -27,7 +27,7 @@ public final class DisplayMode {
         int var2 = 0;
         if (var3 != 0L) {
           while (ClientScript.aClass3_Sub19Array3694.length > var2
-            && ~ClientScript.aClass3_Sub19Array3694[var2].key != ~var3) {
+            && (ClientScript.aClass3_Sub19Array3694[var2].key != var3)) {
             ++var2;
           }
 

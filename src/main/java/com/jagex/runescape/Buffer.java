@@ -942,10 +942,8 @@ public class Buffer extends Node {
 
         if (GlRenderer.useOpenGlRenderer) {
           if (TextureSampler4.aClass3_Sub28_Sub16_Sub2_3221 == null ||
-              ~TextureSampler4.aClass3_Sub28_Sub16_Sub2_3221.anInt3707 !=
-                  ~var4 ||
-              ~TextureSampler4.aClass3_Sub28_Sub16_Sub2_3221.anInt3696 !=
-                  ~var3) {
+              (TextureSampler4.aClass3_Sub28_Sub16_Sub2_3221.anInt3707 != var4) ||
+              (TextureSampler4.aClass3_Sub28_Sub16_Sub2_3221.anInt3696 != var3)) {
             TextureSampler4.aClass3_Sub28_Sub16_Sub2_3221 = null;
             TextureSampler4.aClass3_Sub28_Sub16_Sub2_3221 =
                 new SoftwareDirectColorSprite(var4, var3);

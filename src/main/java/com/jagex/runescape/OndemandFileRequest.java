@@ -93,8 +93,8 @@ public final class OndemandFileRequest extends AbstractFileRequest {
       }
 
       if (TextureSampler30.fullScreenFrame != null && (var1 != 3
-          || ~var5 != ~AbstractTextureSampler.anInt2378
-          || ~var6 != ~TextureSampler21.anInt3071)) {
+          || (var5 != AbstractTextureSampler.anInt2378)
+          || (var6 != TextureSampler21.anInt3071))) {
         FileCacheRequest.method593(TextureSampler30.fullScreenFrame, true,
             DummyClass35.signLink);
         TextureSampler30.fullScreenFrame = null;

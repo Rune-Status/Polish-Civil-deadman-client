@@ -424,7 +424,7 @@ public final class ISAACCipher {
         assert var4 != null;
         if (~var4.anInt368 == ~var0.anInt2764) {
           var3 = var2.anInt1262;
-        } else if (~var0.anInt2764 != ~var4.anInt393
+        } else if ((var0.anInt2764 != var4.anInt393)
             && var4.anInt386 != var0.anInt2764
             && var0.anInt2764 != var4.anInt375
             && var0.anInt2764 != var4.anInt373) {

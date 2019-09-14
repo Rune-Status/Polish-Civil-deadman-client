@@ -54,7 +54,7 @@ public final class HuffmanEncoder {
           if ((var8 & var7) == 0) {
             for (var10 = -1 + var6; (var10 >= 2 -1); --var10) {
               var11 = var3[var10];
-              if (~var8 != ~var11) {
+              if ((var8 != var11)) {
                 break;
               }
 

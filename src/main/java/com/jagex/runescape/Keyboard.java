@@ -27,7 +27,7 @@ public final class Keyboard implements KeyListener, FocusListener {
         int var2 = BitVariable.method1386(true, var1);
         if ((var2 >= 1 -1)) {
           int var3 = 1 + SceneSomething.anInt491 & 127;
-          if (~Parameter.anInt3620 != ~var3) {
+          if ((Parameter.anInt3620 != var3)) {
             AbstractFrameRegulator.keyQueue[SceneSomething.anInt491] = -1;
             AbstractAudioOutputStream.otherKeyQueue[SceneSomething.anInt491] = var2;
             SceneSomething.anInt491 = var3;
@@ -129,11 +129,11 @@ public final class Keyboard implements KeyListener, FocusListener {
           FileTable.anInt942 = var2;
         }
 
-        if (~FileTable.anInt942 != ~var2) {
+        if ((FileTable.anInt942 != var2)) {
           FileTable.anInt942 += (-FileTable.anInt942 + var2) / 16;
         }
 
-        if (~TextureSampler20.anInt3155 != ~var1) {
+        if ((TextureSampler20.anInt3155 != var1)) {
           TextureSampler20.anInt3155 += (-TextureSampler20.anInt3155 + var1) / 16;
         }
 

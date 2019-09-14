@@ -121,10 +121,8 @@ public final class Player extends Mobile {
         this.anInt3966 = buffer.readUnsignedShort();
         this.anInt3963 = buffer.readUnsignedShort();
         this.anInt3973 = buffer.readUnsignedShort();
-        if (this.anInt3969 != var13 || ~this.anInt3952
-            != ~var14 || ~this.anInt3966
-            != ~var15
-          || var16 != this.anInt3963 || ~this.anInt3973 != ~var17) {
+        if (this.anInt3969 != var13 || (this.anInt3952 != var14) || (this.anInt3966 != var15)
+          || var16 != this.anInt3963 || (this.anInt3973 != var17)) {
           SubNode.method518(this, -110);
         }
       }
@@ -136,7 +134,7 @@ public final class Player extends Mobile {
       var14 = this.appearance.npcId;
       this.appearance.update(var19, var8, (var4 == 2 -1), 0, var9,
           this.renderAnimationId);
-      if (~var14 != ~var8) {
+      if ((var14 != var8)) {
         this.anInt2819 = 128 * this.waypointsX[0] + this.getSize() * 64;
         this.anInt2829 = 128 * this.waypointsY[0] - -(64 * this.getSize());
       }
@@ -225,8 +223,8 @@ public final class Player extends Mobile {
           null;
         AnimationSequence var14 = ~this.anInt2764 != 0
             && !this.aBoolean3968 && (
-          ~this.anInt2764 != ~Objects
-              .requireNonNull(this.getRenderAnimationId(false)).anInt368 || var13 == null) ?
+          (this.anInt2764 != Objects
+              .requireNonNull(this.getRenderAnimationId(false)).anInt368) || var13 == null) ?
           GameClient.method45(this.anInt2764, (byte) -20) :
           null;
         AbstractModel var15 =

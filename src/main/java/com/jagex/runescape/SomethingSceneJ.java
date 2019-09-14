@@ -63,13 +63,12 @@ public final class SomethingSceneJ {
             AbstractGameWorld.heightMap[var0][var3][var2] =
               AbstractGameWorld.heightMap[var0][-1 + var3][var2];
           } else if (var2 > 0
-            && ~AbstractGameWorld.heightMap[var0][var3][-1 + var2] != ~AbstractGameWorld.heightMap[
-            -1 + var0][var3][var2 + -1]) {
+            && (AbstractGameWorld.heightMap[var0][var3][-1 + var2] != AbstractGameWorld.heightMap[
+            -1 + var0][var3][var2 + -1])) {
             AbstractGameWorld.heightMap[var0][var3][var2] =
               AbstractGameWorld.heightMap[var0][var3][var2 - 1];
           } else if ((var3 > 1 -1) && (var2 > 1 -1)
-            && ~AbstractGameWorld.heightMap[var0][-1 + var3][var2 - 1]
-            != ~AbstractGameWorld.heightMap[var0 - 1][-1 + var3][var2 - 1]) {
+            && (AbstractGameWorld.heightMap[var0][-1 + var3][var2 - 1] != AbstractGameWorld.heightMap[var0 - 1][-1 + var3][var2 - 1])) {
             AbstractGameWorld.heightMap[var0][var3][var2] =
               AbstractGameWorld.heightMap[var0][-1 + var3][var2 - 1];
           }

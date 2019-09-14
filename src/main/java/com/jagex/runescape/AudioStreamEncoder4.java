@@ -1133,8 +1133,8 @@ public final class AudioStreamEncoder4 extends AudioStreamEncoder {
                 ItemConfig var10 =
                   DummyClass35.getItemConfig(var3.anIntArray254[var15] + -1, (byte) 69);
                 if (Something3d.anInt3012 == 1 && var9.method99(31595)) {
-                  if (~GlTexture2d.anInt3764 != ~var3.anInt279
-                    || ~DummyClass31.anInt1473 != ~var15) {
+                  if ((GlTexture2d.anInt3764 != var3.anInt279)
+                    || (DummyClass31.anInt1473 != var15)) {
                     ++AudioWorker.anInt342;
                     ScriptState.method1177(-1, var10.anInt787, (byte) -91,
                       RenderAnimation.concat(new GameString[] {
@@ -1146,8 +1146,7 @@ public final class AudioStreamEncoder4 extends AudioStreamEncoder {
                     Deque.method1210(64, LinearHashTable.anInt1038) :
                     null;
                   if ((16 & Something3dRoot.anInt2051) != 0 && (var18 == null
-                    || ~var10.method1115(var18.anInt3614, 103, LinearHashTable.anInt1038)
-                    != ~var18.anInt3614)) {
+                    || (var10.method1115(var18.anInt3614, 103, LinearHashTable.anInt1038) != var18.anInt3614))) {
                     ++ByteArrayNode.anInt3609;
                     ScriptState.method1177(BufferObject.anInt1887,
                         var10.anInt787,

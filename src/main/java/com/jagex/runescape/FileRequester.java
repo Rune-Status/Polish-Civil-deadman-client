@@ -88,7 +88,7 @@ public final class FileRequester extends AbstractFileRequester {
               }
 
               this.aClass62_2944 = new FileTable(var2, this.anInt2955);
-              if (~this.anInt2947 != ~this.aClass62_2944.version) {
+              if ((this.anInt2947 != this.aClass62_2944.version)) {
                 throw new RuntimeException();
               }
             } catch (RuntimeException var4) {
@@ -478,7 +478,7 @@ public final class FileRequester extends AbstractFileRequester {
             TextureSampler24.aCRC32_3143.reset();
             TextureSampler24.aCRC32_3143.update(var5, 0, var5.length - 2);
             var7 = (int) TextureSampler24.aCRC32_3143.getValue();
-            if (~this.aClass62_2944.anIntArray945[var2] != ~var7) {
+            if ((this.aClass62_2944.anIntArray945[var2] != var7)) {
               throw new RuntimeException();
             }
 

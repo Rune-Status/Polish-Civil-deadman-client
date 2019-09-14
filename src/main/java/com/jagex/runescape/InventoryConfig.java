@@ -77,7 +77,7 @@ public final class InventoryConfig extends SubNode {
                 if (~var3 == ~var4) {
                   return false;
                 }
-              } else if (~var4 != ~var3) {
+              } else if ((var4 != var3)) {
                 return false;
               }
             } else if (var3 <= var4) {

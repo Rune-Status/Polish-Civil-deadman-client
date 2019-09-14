@@ -67,8 +67,8 @@ public final class NPC extends Mobile {
           GameClient.method45(this.animationId, (byte) -20) :
           null;
         AnimationSequence var14 =
-            this.anInt2764 != -1 && (~this.anInt2764 != ~Objects
-              .requireNonNull(this.getRenderAnimationId(false)).anInt368
+            this.anInt2764 != -1 && ((this.anInt2764 != Objects
+              .requireNonNull(this.getRenderAnimationId(false)).anInt368)
             || var13 == null) ? GameClient.method45(this.anInt2764, (byte) -20) : null;
         AbstractModel var15 =
             this.config.method1476(this.aClass145Array2809, this.anInt2793, (byte) -116,

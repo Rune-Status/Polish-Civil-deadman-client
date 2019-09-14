@@ -39,12 +39,12 @@ public final class DummyClass9 extends DummyClass5 {
         DummyClass9.aByteArray4005 = null;
       }
 
-      if (!NPC.method1986(90) && ~GameObject.plane != ~GameWorldSomething.currentPlane) {
+      if (!NPC.method1986(90) && (GameObject.plane != GameWorldSomething.currentPlane)) {
         FileCacheRequester.rebuildScene(GameWorldSomething.currentPlane, VariableUpdate.anInt2294,
           AbstractObjectNode.anInt3606, TextureCache.localPlayer.waypointsY[0], false,
           TextureCache.localPlayer.waypointsX[0], true);
       } else {
-        if (~GameWorldSomething.currentPlane != ~DummyClass43.anInt909 && ClanChatUser.method385(
+        if ((GameWorldSomething.currentPlane != DummyClass43.anInt909) && ClanChatUser.method385(
           var0 + 0, GameWorldSomething.currentPlane)) {
           DummyClass43.anInt909 = GameWorldSomething.currentPlane;
           Buffer.method792(var0 + 9179409);

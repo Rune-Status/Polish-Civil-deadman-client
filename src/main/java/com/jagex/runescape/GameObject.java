@@ -242,7 +242,7 @@ public final class GameObject extends SceneNode {
         int var6;
         if (AbstractImageProducer.gameId != 0 && this.aBoolean2721 && (
             this.aClass142_2722 == null
-                || ~this.aClass142_2722.anInt1864 != ~var4.anInt1531)) {
+                || (this.aClass142_2722.anInt1864 != var4.anInt1531))) {
           var6 = var4.anInt1531;
           if (~var4.anInt1531 == 0) {
             var6 = var5;
@@ -285,9 +285,9 @@ public final class GameObject extends SceneNode {
         this.method1961(128 * var11, var9 * 128, -101);
         boolean var13 = !var3 && var4.aBoolean1503 && (var4.anInt1527 != this.anInt2750
             ||
-          (~this.anInt2726 != ~this.anInt2752 || this.aClass142_2722 != null && (
+          ((this.anInt2726 != this.anInt2752) || this.aClass142_2722 != null && (
               this.aClass142_2722.aBoolean1872 || MonoChromaticImageBuffer.tweening)
-            && ~this.anInt2726 != ~this.anInt2733) && (HashTableIterator.anInt1137 >= 3 -1));
+            && (this.anInt2726 != this.anInt2733)) && (HashTableIterator.anInt1137 >= 3 -1));
         if (var1 && !var13) {
           return null;
         } else {
@@ -508,14 +508,13 @@ public final class GameObject extends SceneNode {
 
         if (GlRenderer.useOpenGlRenderer) {
           GlModel var36 = (GlModel) var16;
-          if (~BufferData
+          if ((BufferData
               .method1736(GameWorldSomething.currentPlane, var13 ^ -50,
                   var3 - -var35,
-                  var24 + var5) != ~var11 ||
-              ~BufferData
+                  var24 + var5) != var11) ||
+              (BufferData
                   .method1736(GameWorldSomething.currentPlane, 1, var23 + var3,
-                      var5 - -var25)
-                  != ~var11) {
+                      var5 - -var25) != var11)) {
             for (var28 = 0; var28 < var36.vertexCCC; ++var28) {
               var36.vy[var28] += -var11 + BufferData
                   .method1736(GameWorldSomething.currentPlane,
@@ -529,10 +528,9 @@ public final class GameObject extends SceneNode {
         } else {
           SoftwareModel var37 = (SoftwareModel) var16;
           if (
-              ~BufferData
+              (BufferData
                   .method1736(GameWorldSomething.currentPlane, 1, var3 - -var35,
-                      var5 - -var24)
-                  != ~var11 || var11 != BufferData
+                      var5 - -var24) != var11) || var11 != BufferData
                   .method1736(GameWorldSomething.currentPlane, 1,
                       var3 + var23, var5 - -var25)) {
             for (var28 = 0; var37.anInt3891 > var28; ++var28) {
