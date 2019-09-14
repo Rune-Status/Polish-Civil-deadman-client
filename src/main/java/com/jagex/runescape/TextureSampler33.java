@@ -232,7 +232,7 @@ public final class TextureSampler33 extends AbstractTextureSampler {
         TextureSampler18.method282(DummyClass35.anIntArrayArray663[var15], var13, 127, var14, var5);
       }
 
-      for (var15 = var12; ~var8 > ~var15; --var15) {
+      for (var15 = var12; (var8 < var15); --var15) {
         TextureSampler18.method282(DummyClass35.anIntArrayArray663[var15], var13, -76, var14, var5);
       }
 

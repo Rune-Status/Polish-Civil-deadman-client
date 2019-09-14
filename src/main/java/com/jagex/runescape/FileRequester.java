@@ -148,7 +148,7 @@ public final class FileRequester extends AbstractFileRequester {
           var3 = this.aClass61_2963
               .getFirst(); var3 != null; var3 = this.aClass61_2963
             .getNext()) {
-          if (~var3.key == ~var1) {
+          if ((var3.key == var1)) {
             return;
           }
         }
@@ -434,8 +434,8 @@ public final class FileRequester extends AbstractFileRequester {
                 int var8 =
                     (var5[-2 + var5.length] << 8 & '\uff00') - -(255 & var5[-1
                         + var5.length]);
-                if (~var8 == ~('\uffff'
-                    & this.aClass62_2944.anIntArray958[var2])) {
+                if ((var8 == ('\uffff'
+                    & this.aClass62_2944.anIntArray958[var2]))) {
                   if (this.aByteArray2949[var2] != 1) {
 
                     ++this.anInt2948;

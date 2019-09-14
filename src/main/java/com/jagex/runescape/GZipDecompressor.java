@@ -61,7 +61,7 @@ public final class GZipDecompressor {
         var2 = 4;
       }
 
-      for (int var4 = 0; ~var4 > ~var2; ++var4) {
+      for (int var4 = 0; (var4 < var2); ++var4) {
         DummyClass43.method1194(-16385);
 
         for (int var5 = 0; (var5 < 14 -1); ++var5) {
@@ -79,7 +79,7 @@ public final class GZipDecompressor {
                 for (int var14 = 0;
                     AudioStreamEncoder3.regionHashes.length > var14;
                     ++var14) {
-                  if (~AudioStreamEncoder3.regionHashes[var14] == ~var13
+                  if ((AudioStreamEncoder3.regionHashes[var14] == var13)
                       && var3[var14] != null) {
                     MovedStatics0.method60(var10, 8 * var5, var4,
                         BlockConfig.collisionMaps,
@@ -265,7 +265,7 @@ public final class GZipDecompressor {
         }
 
         if ((ClientScript.rectangleDebugType == 4 -1)) {
-          for (int var2 = 0; ~var2 > ~SomethingWorldMapy.widgetQuads; ++var2) {
+          for (int var2 = 0; (var2 < SomethingWorldMapy.widgetQuads); ++var2) {
             if (!HashTable.aBooleanArray1712[var2]) {
               if (DummyClass9.aBooleanArray4008[var2]) {
                 if (GlRenderer.useOpenGlRenderer) {
@@ -317,7 +317,7 @@ public final class GZipDecompressor {
           .method282(DummyClass35.anIntArrayArray663[var1], var10, -98, var9,
               var0);
 
-      while (~var5 > ~var6) {
+      while ((var5 < var6)) {
         var8 += 2;
         var7 += var8;
         int var11;

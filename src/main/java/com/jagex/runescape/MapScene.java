@@ -104,7 +104,7 @@ public final class MapScene {
 
   public static void method75(Widget[] var0, boolean var1, int var2) {
     if (var1) {
-        for (int var3 = 0; ~var3 > ~var0.length; ++var3) {
+        for (int var3 = 0; (var3 < var0.length); ++var3) {
           Widget var4 = var0[var3];
           if (var4 != null) {
             if (var4.anInt187 == 0) {
@@ -178,7 +178,7 @@ public final class MapScene {
         var12 = TextureSampler38.anIntArray3456[var15];
         var13 = DummyClass38.anIntArray729[var15];
         var15 = 4095 & var15 - -1;
-        if (var8 == var12 && ~var4 == ~var13) {
+        if (var8 == var12 && (var4 == var13)) {
           var16 = true;
           break;
         }
@@ -338,7 +338,7 @@ public final class MapScene {
               }
 
               int var25 = var23 * var23 + var24 * var24;
-              if (var25 < var18 || ~var18 == ~var25
+              if (var25 < var18 || (var18 == var25)
                 && TriChromaticImageCache.anIntArrayArray1373[var21][var22] < var19) {
                 var13 = var22;
                 var19 = TriChromaticImageCache.anIntArrayArray1373[var21][var22];
@@ -353,7 +353,7 @@ public final class MapScene {
           return false;
         }
 
-        if (var11 == var12 && ~var13 == ~var3) {
+        if (var11 == var12 && (var13 == var3)) {
           return false;
         }
 

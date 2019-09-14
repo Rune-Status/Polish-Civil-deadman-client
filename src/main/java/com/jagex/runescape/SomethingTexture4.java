@@ -238,7 +238,7 @@ public final class SomethingTexture4 extends AbstractSomethingTexture {
             }
 
             if (var3.anInt2842 != -1
-                && ~var3.anInt2759 == ~AbstractGameWorld.updateCycle) {
+                && (var3.anInt2759 == AbstractGameWorld.updateCycle)) {
               int var8 = RenderAnimation
                   .method898((byte) 42, var3.anInt2842).anInt542;
               if (~var8 != 0) {
@@ -281,7 +281,7 @@ public final class SomethingTexture4 extends AbstractSomethingTexture {
           int[] var13 = new int[var5];
           int[] var14 = new int[var5];
 
-          for (int var15 = 0; ~var15 > ~var5; ++var15) {
+          for (int var15 = 0; (var15 < var5); ++var15) {
             int var10 = SpotAnimationConfig.gameBuffer.readUnsignedShortLE();
             if (var10 == '\uffff') {
               var10 = -1;

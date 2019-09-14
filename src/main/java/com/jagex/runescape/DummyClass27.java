@@ -29,7 +29,7 @@ public final class DummyClass27 {
         int var3;
         if (var1.anInt2273 < 0) {
           var3 = -var1.anInt2273 - 1;
-          if (~var3 == ~WidgetAccess.localPlayerId) {
+          if ((var3 == WidgetAccess.localPlayerId)) {
             var2 = TextureCache.localPlayer;
           } else {
             var2 = TextureSampler0.players[var3];

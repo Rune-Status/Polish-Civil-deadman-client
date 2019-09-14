@@ -147,7 +147,7 @@ public final class TextureSampler19 extends AbstractTextureSampler {
         var7 = FloorOverlay.aClass3_Sub28_Sub17_2096
             .method682(SomethingTexture4.aClass94_2667);
 
-        for (int var8 = 0; ~var8 > ~TextureSampler25.amountContextActions;
+        for (int var8 = 0; (var8 < TextureSampler25.amountContextActions);
             ++var8) {
           int var9 = FloorOverlay.aClass3_Sub28_Sub17_2096
               .method682(Buffer.method802(var8, true));

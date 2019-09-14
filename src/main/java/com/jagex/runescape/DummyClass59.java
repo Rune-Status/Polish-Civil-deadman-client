@@ -76,7 +76,7 @@ public final class DummyClass59 {
       boolean var1 = true;
 
       int var2;
-      for (var2 = 0; ~var2 > ~Something3d2.aByteArrayArray3027.length; ++var2) {
+      for (var2 = 0; (var2 < Something3d2.aByteArrayArray3027.length); ++var2) {
         if (~GameClient.mapFileIds[var2] != 0 &&
             Something3d2.aByteArrayArray3027[var2] == null) {
           Something3d2.aByteArrayArray3027[var2] =
@@ -306,7 +306,7 @@ public final class DummyClass59 {
             var12 = GameWorldSomething.currentPlane;
           }
 
-          if (~var12 > ~(GameWorldSomething.currentPlane + -1)) {
+          if ((var12 < (GameWorldSomething.currentPlane + -1))) {
             var12 = -1 + GameWorldSomething.currentPlane;
           }
 
@@ -378,7 +378,7 @@ public final class DummyClass59 {
 
             for (int var8 = var4 - 1; ~var8 >= ~(var5 - -1); ++var8) {
               for (int var9 = -1 + var6; ~var9 >= ~(var7 - -1); ++var9) {
-                if (~var8 > ~var4 || var8 > var5 || ~var9 > ~var6
+                if ((var8 < var4) || var8 > var5 || (var9 < var6)
                     || var9 > var7) {
                   TextureSampler26.maps
                       .method2124(-124, RenderAnimation.concat(new GameString[]{

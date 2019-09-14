@@ -128,7 +128,7 @@ public final class SomethingTexture3 extends AbstractSomethingTexture {
           } else {
             int[] var9 = new int[var3];
 
-            for (int var10 = 0; ~var10 > ~var3; ++var10) {
+            for (int var10 = 0; (var10 < var3); ++var10) {
               var9[var10] = TextureSampler38.anIntArray3446[ClientScript
                   .bitAnd(var4[var10], 255)];
             }

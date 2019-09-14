@@ -160,7 +160,7 @@ public final class WidgetAccess extends Node {
                     }
                   }
 
-                  for (int var10 = 0; ~var10 > ~var6.anInt2223; ++var10) {
+                  for (int var10 = 0; (var10 < var6.anInt2223); ++var10) {
                     if (var6.sceneGraphNodes[var10].sceneNode instanceof GlModel) {
                       GlModel var8 = (GlModel) var6.sceneGraphNodes[var10].sceneNode;
                       if (((Long.MIN_VALUE

@@ -179,7 +179,7 @@ public final class MidiSomething {
                   var32 = var41[var28][var31];
                 } else {
                   if (~Buffer.aClass3_Sub28_Sub3_2600.anInt3550 == 0) {
-                    if (~(4 & var24 + var3) == ~(var6 + var13 & 4)) {
+                    if (((4 & var24 + var3) == (var6 + var13 & 4))) {
                       var32 = DummyClass51.anIntArray1161[1
                           + TextureSampler26.anInt3081];
                     } else {
@@ -303,7 +303,7 @@ public final class MidiSomething {
                                 } else {
                                   int var39;
                                   if (var49 == 25) {
-                                    for (var39 = 0; ~var39 > ~var27; ++var39) {
+                                    for (var39 = 0; (var39 < var27); ++var39) {
                                       DummyClass47.method1317(var39 + var14,
                                           -var39 + var37, 1,
                                           var38);
@@ -374,7 +374,7 @@ public final class MidiSomething {
               && PlayerVariable.anIntArrayArrayArray558.length + -1 >= var17) {
             var41 = PlayerVariable.anIntArrayArrayArray558[var17];
 
-            for (var19 = -2; ~var19 > ~(var12 - -2); ++var19) {
+            for (var19 = -2; (var19 < (var12 - -2)); ++var19) {
               var20 = var9 - -(var19 * var7) >> 16;
               var21 = var9 - -((var19 + 1) * var7) >> 16;
               var22 = var21 + -var20;

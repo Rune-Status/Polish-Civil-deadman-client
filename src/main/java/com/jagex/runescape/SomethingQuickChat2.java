@@ -38,7 +38,7 @@ public final class SomethingQuickChat2 extends SubNode {
 
   public int method526(int var1, int var2 ) {
     if (this.anIntArray3540 != null) {
-        for (int var3 = var2; ~var3 > ~this.anIntArray3540.length; ++var3) {
+        for (int var3 = var2; (var3 < this.anIntArray3540.length); ++var3) {
           if (var1 == this.anIntArray3533[var3]) {
             return this.anIntArray3540[var3];
           }
@@ -92,7 +92,7 @@ public final class SomethingQuickChat2 extends SubNode {
         return -1;
       } else {
         for (int var4 = 0; this.anIntArray3534.length > var4; ++var4) {
-          if (~this.anIntArray3535[var4] == ~var2) {
+          if ((this.anIntArray3535[var4] == var2)) {
             return this.anIntArray3534[var4];
           }
         }

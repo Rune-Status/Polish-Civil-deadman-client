@@ -130,7 +130,7 @@ public final class DummyClass13 {
 
           for (var9 = -var6; var2 > var9; ++var9) {
             var10 = var9 * 128;
-            if (~(var9 + var6) > ~var2) {
+            if (((var9 + var6) < var2)) {
               var8 += GameBuffer.anIntArray3805[var6 * 128 + (var7 - -var10)];
             }
 

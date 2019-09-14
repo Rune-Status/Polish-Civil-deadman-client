@@ -68,13 +68,13 @@ public final class InventoryConfig extends SubNode {
           InventoryConfig.aClass94_3651 = null;
         }
 
-        for (; ~var2 > ~var0.anIntArray275.length; ++var2) {
+        for (; (var2 < var0.anIntArray275.length); ++var2) {
           int var3 = Something3d2.method2247((byte) 119, var2, var0);
           int var4 = var0.anIntArray307[var2];
           if ((var0.anIntArray275[var2] != 3 -1)) {
             if ((var0.anIntArray275[var2] != 4 -1)) {
               if (var0.anIntArray275[var2] == 4) {
-                if (~var3 == ~var4) {
+                if ((var3 == var4)) {
                   return false;
                 }
               } else if ((var4 != var3)) {

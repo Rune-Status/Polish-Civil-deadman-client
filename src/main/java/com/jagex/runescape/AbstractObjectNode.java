@@ -82,7 +82,7 @@ public abstract class AbstractObjectNode extends SubNode {
           byte[] var4 = new byte[(int) var2.length(-1)];
 
           int var6;
-          for (int var5 = 0; ~var5 > ~var4.length; var5 += var6) {
+          for (int var5 = 0; (var5 < var4.length); var5 += var6) {
             var6 = var2.method1739(var5, var1 + 0, var4.length - var5, var4);
             if (var6 == -1) {
               throw new IOException("EOF");
@@ -137,7 +137,7 @@ public abstract class AbstractObjectNode extends SubNode {
           (int) (SomethingWorldMapy.aClass11_3551.anInt193 / AbstractGameWorld.aFloat727);
       }
 
-      if (~DummyClass58.anInt1460 > ~var6) {
+      if ((DummyClass58.anInt1460 < var6)) {
         TextureSampler13.anInt3362 =
           -((int) (SomethingWorldMapy.aClass11_3551.anInt193 / AbstractGameWorld.aFloat727))
             + DummyClass58.anInt1460;

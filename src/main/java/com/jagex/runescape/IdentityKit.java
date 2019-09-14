@@ -40,7 +40,7 @@ public final class IdentityKit {
         Model var7 = new Model(var2, var3);
         int var5;
         if (this.aShortArray464 != null) {
-          for (var5 = 0; ~var5 > ~this.aShortArray464.length; ++var5) {
+          for (var5 = 0; (var5 < this.aShortArray464.length); ++var5) {
             var7.replaceColor(this.aShortArray464[var5],
                 this.aShortArray460[var5]);
           }
@@ -68,7 +68,7 @@ public final class IdentityKit {
           this.method948(44);
         }
 
-        for (int var3 = 0; ~var3 > ~this.anIntArray474.length; ++var3) {
+        for (int var3 = 0; (var3 < this.anIntArray474.length); ++var3) {
           if (!SomethingQuickChatK.aClass153_152.method2129((byte) -90, 0,
               this.anIntArray474[var3])) {
             var2 = false;
@@ -130,7 +130,7 @@ public final class IdentityKit {
       } else {
         Model[] var2 = new Model[this.anIntArray474.length];
 
-        for (int var3 = 0; ~var3 > ~this.anIntArray474.length; ++var3) {
+        for (int var3 = 0; (var3 < this.anIntArray474.length); ++var3) {
           var2[var3] =
             Model.getModel(SomethingQuickChatK.aClass153_152, this.anIntArray474[var3], 0);
         }
@@ -152,7 +152,7 @@ public final class IdentityKit {
         }
 
         if (this.aShortArray471 != null) {
-          for (var5 = 0; ~var5 > ~this.aShortArray471.length; ++var5) {
+          for (var5 = 0; (var5 < this.aShortArray471.length); ++var5) {
             assert var7 != null;
             var7.replaceMaterial(this.aShortArray471[var5], this.aShortArray470[var5]);
           }
@@ -271,7 +271,7 @@ public final class IdentityKit {
       } else {
         DummyClass6.anInt2046 = 0;
 
-        for (var2 = 0; ~var2 > ~var1; ++var2) {
+        for (var2 = 0; (var2 < var1); ++var2) {
           int var3 = AudioWorker.anIntArray347[var2];
           NPC var4 = TextureSampler5.npcs[var3];
           int var5 = SpotAnimationConfig.gameBuffer.readBits(1);
@@ -334,7 +334,7 @@ public final class IdentityKit {
       int var7 = var2;
       int var9 = -1;
 
-      while (~var6 > ~var7) {
+      while ((var6 < var7)) {
         ++var6;
         var9 += 2;
         var8 += var9;

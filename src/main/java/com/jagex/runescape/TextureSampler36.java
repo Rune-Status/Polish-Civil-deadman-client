@@ -92,7 +92,7 @@ public final class TextureSampler36 extends AbstractTextureSampler {
         int[] var7 = var3[2];
         int var8;
         int var9;
-        if (~SomethingLight0.anInt1559 == ~this.anInt3431) {
+        if ((SomethingLight0.anInt1559 == this.anInt3431)) {
           for (var8 = 0; var8 < SomethingLight0.anInt1559; ++var8) {
             var9 = this.anIntArray3425[var4++];
             var7[var8] = ClientScript.bitAnd(var9 << 4, 4080);
@@ -141,7 +141,7 @@ public final class TextureSampler36 extends AbstractTextureSampler {
       if (SomethingPacket116.anInt1753 == 1) {
         var7 = 2047 & StringNode.anInt2589 + SpotAnimationConfig.anInt531;
         var6 = AreaSoundEffect.anInt2309;
-        if (~var6 > ~(SomethingTexture4.anInt2670 / 256)) {
+        if ((var6 < (SomethingTexture4.anInt2670 / 256))) {
           var6 = SomethingTexture4.anInt2670 / 256;
         }
 
@@ -219,7 +219,7 @@ public final class TextureSampler36 extends AbstractTextureSampler {
         }
 
         if (!DummyClass36.aBoolean2615 && ~NpcConfiguration.anInt1297 <= ~var3
-          && ~NpcConfiguration.anInt1297 > ~(var4 + var3) && var5 <= DummyClass36.anInt2612
+          && (NpcConfiguration.anInt1297 < (var4 + var3)) && var5 <= DummyClass36.anInt2612
           && (var1 + var5) > DummyClass36.anInt2612) {
           TextureSampler27.aBoolean3094 = true;
           MapScene.anInt59 = 0;

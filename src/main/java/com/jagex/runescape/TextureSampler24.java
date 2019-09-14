@@ -28,7 +28,7 @@ public final class TextureSampler24 extends AbstractTextureSampler {
         int[] var7 = var4[2];
         int[] var6 = var4[1];
 
-        for (int var8 = 0; ~var8 > ~SomethingLight0.anInt1559; ++var8) {
+        for (int var8 = 0; (var8 < SomethingLight0.anInt1559); ++var8) {
           var10[var8] = (var7[var8] + var5[var8] + var6[var8]) / 3;
         }
       }
@@ -38,7 +38,7 @@ public final class TextureSampler24 extends AbstractTextureSampler {
 
   public static void method223(boolean var0, int var1, int var2, int var3, int var4, int var5,
                               int var6, int var7) {
-    if (~var4 == ~var7) {
+    if ((var4 == var7)) {
         SocketStream.method1460(var1, var3, (byte) -113, var6, var7, var2, var5);
       } else {
         if (!var0) {

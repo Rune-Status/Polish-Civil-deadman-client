@@ -32,7 +32,7 @@ public final class AnimationSomething extends SubNode {
       int var8 = 0;
 
       assert var7 != null;
-      while (~var8 > ~var7.length) {
+      while ((var8 < var7.length)) {
         byte[] var9 = bases.getBytes(var3, var7[var8]);
         int var11 = 255 & var9[1] | (var9[0] & 255) << 8;
         AnimationFrame var12 = (AnimationFrame) var5.getFirst();

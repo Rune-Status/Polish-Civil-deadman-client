@@ -159,7 +159,7 @@ public final class TextureSampler23 extends AbstractTextureSampler {
       } else if (DummyClass25.aClass131_1624 == null) {
         return -1;
       } else {
-        while (~SceneShadowMap.anInt1780 > ~DummyClass25.aClass131_1624.anInt1720) {
+        while ((SceneShadowMap.anInt1780 < DummyClass25.aClass131_1624.anInt1720)) {
           if (DummyClass25.aClass131_1624.method1794(SceneShadowMap.anInt1780, -20138)) {
             return SceneShadowMap.anInt1780++;
           }

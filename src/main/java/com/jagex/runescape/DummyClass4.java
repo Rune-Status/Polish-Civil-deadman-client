@@ -47,8 +47,7 @@ public final class DummyClass4 extends DummyClass6 {
           }
         }
 
-        if (~HashTable.packetLength
-            == ~SpotAnimationConfig.gameBuffer.position) {
+        if ((HashTable.packetLength == SpotAnimationConfig.gameBuffer.position)) {
           for (var1 = 0; var1 < DummyClass13.anInt2022; ++var1) {
             if (TextureSampler0.players[DummyClass42.anIntArray887[var1]]
                 == null) {
@@ -77,7 +76,7 @@ public final class DummyClass4 extends DummyClass6 {
 
           int var4;
           for (var4 = 0; FileSystem.anInt104 > var4; ++var4) {
-            if (~VertexNormal.aLongArray826[var4] == ~var0) {
+            if ((VertexNormal.aLongArray826[var4] == var0)) {
               GameBuffer.printMessage(GroundItemNode.EMPTY_STRING, 0,
                 RenderAnimation.concat(new GameString[] {var3, Structure.aClass94_3645}), -1);
               return;
@@ -85,7 +84,7 @@ public final class DummyClass4 extends DummyClass6 {
           }
 
           for (var4 = 0; AnimationSomething.anInt3591 > var4; ++var4) {
-            if (~var0 == ~MonoChromaticImageCache.aLongArray1574[var4]) {
+            if ((var0 == MonoChromaticImageCache.aLongArray1574[var4])) {
               GameBuffer.printMessage(GroundItemNode.EMPTY_STRING, 0, RenderAnimation.concat(
                 new GameString[] {DummyClass35.aClass94_662, var3, GameStub.aClass94_4}), -1);
               return;

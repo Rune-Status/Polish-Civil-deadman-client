@@ -57,7 +57,7 @@ public final class PlayerAppearance {
         var14 = new Model(var12, var13);
 
         for (int var15 = 0; (var15 < 6 -1); ++var15) {
-          if (~this.anIntArray862[var15] > ~AudioWorker.aShortArrayArray344[var15].length) {
+          if ((this.anIntArray862[var15] < AudioWorker.aShortArrayArray344[var15].length)) {
             var14.replaceColor(Inventory.aShortArray2548[var15],
               AudioWorker.aShortArrayArray344[var15][this.anIntArray862[var15]]);
           }
@@ -149,9 +149,9 @@ public final class PlayerAppearance {
         for (int var7 = 0; (var7 < 9 -1); ++var7) {
           for (int var8 = 0; SceneSomething.anInt497 > var8; ++var8) {
             IdentityKit var9 = TextureSampler20.getIdentityKit(var8, 0);
-            if (!var9.aBoolean476 && ~var9.anInt466 == ~(!var3 ?
+            if (!var9.aBoolean476 && (var9.anInt466 == (!var3 ?
                 MonoChromaticImageBuffer.anIntArray2559[var7] :
-                TextureSampler4.anIntArray3228[var7])) {
+                TextureSampler4.anIntArray3228[var7]))) {
               var5[DummyClass6.anIntArray2043[var7]] =
                 TextureSampler3.method308(Integer.MIN_VALUE, var8);
               break;
@@ -498,7 +498,7 @@ public final class PlayerAppearance {
               var28 = var23 >>> 16;
               var23 &= '\uffff';
               var24 = var4.anIntArray1869[var10];
-              if (~var47 == ~var28) {
+              if ((var47 == var28)) {
                 var48 = var46;
               } else {
                 var48 = AreaSoundEffect.method133(var23 >>> 16, 0);
@@ -533,7 +533,7 @@ public final class PlayerAppearance {
               var28 = var3.anIntArray1851[var6];
               var33 = var28 >>> 16;
               var28 &= '\uffff';
-              if (~var32 == ~var33) {
+              if ((var32 == var33)) {
                 var50 = var49;
               } else {
                 var50 = AreaSoundEffect.method133(var28 >>> 16, 0);
@@ -721,7 +721,7 @@ public final class PlayerAppearance {
           var13 = TextureSampler38.anIntArray3456[var16];
           var14 = DummyClass38.anIntArray729[var16];
           var16 = 1 + var16 & 4095;
-          if (~var6 == ~var13 && ~var14 == ~var0) {
+          if ((var6 == var13) && (var14 == var0)) {
             var17 = true;
             break;
           }
@@ -984,19 +984,19 @@ public final class PlayerAppearance {
                 int var24 = 0;
                 if (var6 > var22) {
                   var24 = -var22 + var6;
-                } else if (~(var6 - (-var2 - -1)) > ~var22) {
+                } else if (((var6 - (-var2 - -1)) < var22)) {
                   var24 = -var2 + -var6 - -1 + var22;
                 }
 
                 int var25 = 0;
-                if (~var23 > ~var0) {
+                if ((var23 < var0)) {
                   var25 = -var23 + var0;
-                } else if (~(var0 + var10 + -1) > ~var23) {
+                } else if (((var0 + var10 + -1) < var23)) {
                   var25 = var23 + 1 + -var0 + -var10;
                 }
 
                 int var26 = var24 * var24 + var25 * var25;
-                if (~var26 > ~var19 || var26 == var19
+                if ((var26 < var19) || var26 == var19
                     && var20 > TriChromaticImageCache.anIntArrayArray1373[var22][var23]) {
                   var20 = TriChromaticImageCache.anIntArrayArray1373[var22][var23];
                   var13 = var22;
@@ -1011,7 +1011,7 @@ public final class PlayerAppearance {
             return false;
           }
 
-          if (~var13 == ~var9 && var12 == var14) {
+          if ((var13 == var9) && var12 == var14) {
             return false;
           }
 

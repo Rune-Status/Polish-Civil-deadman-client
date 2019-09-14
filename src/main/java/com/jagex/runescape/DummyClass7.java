@@ -39,7 +39,7 @@ public class DummyClass7 extends DummyClass6 {
         DummyClass7.cacheIndexFiles = null;
       }
 
-      while (~var0.position > ~var0.bytes.length) {
+      while ((var0.position < var0.bytes.length)) {
         int var4 = 0;
         boolean var3 = false;
         int var5 = 0;
@@ -55,7 +55,7 @@ public class DummyClass7 extends DummyClass6 {
         int var8 = var6 * 64 + -TextureSampler37.anInt3256;
         byte var2;
         int var10;
-        if (var8 >= 0 && var9 + -63 >= 0 && ~(var8 - -63) > ~DummyClass30.anInt455
+        if (var8 >= 0 && var9 + -63 >= 0 && ((var8 - -63) < DummyClass30.anInt455)
           && var9 < DummyClass58.anInt1460) {
           var10 = var8 >> 6;
           int var11 = var9 >> 6;
@@ -63,8 +63,8 @@ public class DummyClass7 extends DummyClass6 {
           for (int var12 = 0; (var12 < 65 -1); ++var12) {
             for (int var13 = 0; var13 < 64; ++var13) {
               if (!var3
-                || ~var12 <= ~(8 * var4) && var12 < 8 + var4 * 8 && var13 >= var5 * 8 && ~var13 > ~(
-                8 + var5 * 8)) {
+                || ~var12 <= ~(8 * var4) && var12 < 8 + var4 * 8 && var13 >= var5 * 8 && (var13 < (
+                8 + var5 * 8))) {
                 var2 = var0.readByte();
                 if ((var2 != 1 -1)) {
                   if (RenderAnimation.aByteArrayArrayArray383[var10][var11] == null) {

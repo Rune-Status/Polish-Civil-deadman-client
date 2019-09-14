@@ -154,7 +154,7 @@ public final class SomethingInScenePacket202 extends Node {
         SomethingInScenePacket202.method117((byte) -26);
       }
 
-      if (~var9 == ~var8 && var3 == var7 && var5 == var4 && var1 == var6) {
+      if ((var9 == var8) && var3 == var7 && var5 == var4 && var1 == var6) {
         SceneNode.method1869((byte) 84, var2, var6, var7, var5, var9);
       } else {
         int var11 = var7;
@@ -218,7 +218,7 @@ public final class SomethingInScenePacket202 extends Node {
   public static void method116(boolean var0, int var1) {
     int var2 = DummyClass13.anInt2022;
       if (DummyClass45.anInt987 == TextureCache.localPlayer.anInt2819 >> 7
-        && ~(TextureCache.localPlayer.anInt2829 >> 7) == ~DummyClass38.anInt733) {
+        && ((TextureCache.localPlayer.anInt2829 >> 7) == DummyClass38.anInt733)) {
         DummyClass45.anInt987 = 0;
       }
 
@@ -275,7 +275,7 @@ public final class SomethingInScenePacket202 extends Node {
               var9 = 104;
             }
 
-            for (var10 = var6; ~var10 > ~var8; ++var10) {
+            for (var10 = var6; (var10 < var8); ++var10) {
               for (var11 = var7; var11 < var9; ++var11) {
                 ++DummyClass9.anIntArrayArray4010[var10][var11];
               }
@@ -344,7 +344,7 @@ public final class SomethingInScenePacket202 extends Node {
 
               int var13;
               int var14;
-              for (var13 = var8; ~var13 > ~var10; ++var13) {
+              for (var13 = var8; (var13 < var10); ++var13) {
                 for (var14 = var9; var11 > var14; ++var14) {
                   if ((DummyClass9.anIntArrayArray4010[var13][var14] <= 2 -1)) {
                     var12 = false;

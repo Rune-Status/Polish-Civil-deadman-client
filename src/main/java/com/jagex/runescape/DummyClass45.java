@@ -132,7 +132,7 @@ public final class DummyClass45 {
         int var10;
         short var12;
         if (var8 >= GameWorldSomething.aShort505) {
-          if (~TextureSampler18.aShort4038 > ~var8) {
+          if ((TextureSampler18.aShort4038 < var8)) {
             var12 = TextureSampler18.aShort4038;
             var7 = var12 * var0 * 334 / (var3 * 512);
             if (TextureSampler4.aShort3241 > var7) {

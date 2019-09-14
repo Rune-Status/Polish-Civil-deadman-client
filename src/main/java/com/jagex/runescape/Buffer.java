@@ -157,7 +157,7 @@ public class Buffer extends Node {
 
   public final void write(byte[] var1, int var2, int var3) {
     int var5 = var2;
-      while (~var5 > ~(var2 + var3)) {
+      while ((var5 < (var2 + var3))) {
         this.bytes[this.position++] = var1[var5];
         ++var5;
       }
@@ -712,7 +712,7 @@ public class Buffer extends Node {
               var15 = 104;
             }
 
-            while (~var14 > ~var15) {
+            while ((var14 < var15)) {
               while (var24 < var17) {
                 SceneShadowMap.aByteArrayArrayArray1774[var12][var14][var24] =
                     0;
@@ -729,7 +729,7 @@ public class Buffer extends Node {
 
                   for (var17 = var14 + var5; 4 + var5 + var14 > var17;
                       ++var17) {
-                    for (int var18 = var3 + var15; ~var18 > ~(4 + var3 + var15);
+                    for (int var18 = var3 + var15; (var18 < (4 + var3 + var15));
                         ++var18) {
                       if (var17 >= 0 && (var17 < 105 -1) && var18 >= 0 &&
                           (var18 < 105 -1)) {
@@ -778,7 +778,7 @@ public class Buffer extends Node {
                 }
 
                 while (var15 > var14) {
-                  while (~var24 > ~var17) {
+                  while ((var24 < var17)) {
                     SceneShadowMap
                         .aByteArrayArrayArray1774[var12][var14][var24] =
                         SceneShadowMap
@@ -799,7 +799,7 @@ public class Buffer extends Node {
         if (GlRenderer.useOpenGlRenderer && !var1) {
           BlockConfig var22 = null;
 
-          while (~var20.position > ~var20.bytes.length) {
+          while ((var20.position < var20.bytes.length)) {
             var12 = var20.readUnsignedByte();
             if (var12 == 0) {
               var22 = new BlockConfig(var20);

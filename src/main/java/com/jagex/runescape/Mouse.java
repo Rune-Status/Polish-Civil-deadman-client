@@ -133,11 +133,11 @@ public final class Mouse implements MouseListener, MouseMotionListener,
                 var1.anInt2256,
                 var1.anInt2248, -65, var1.anInt2262, var1.anInt2263);
             var1.anInt2261 = -1;
-            if (~var1.anInt2254 == ~var1.anInt2265 && var1.anInt2254 == -1) {
+            if ((var1.anInt2254 == var1.anInt2265) && var1.anInt2254 == -1) {
               var1.unlinkNode();
-            } else if (~var1.anInt2265 == ~var1.anInt2254
+            } else if ((var1.anInt2265 == var1.anInt2254)
                 && var1.anInt2256 == var1.anInt2257
-                && ~var1.anInt2253 == ~var1.anInt2262) {
+                && (var1.anInt2253 == var1.anInt2262)) {
               var1.unlinkNode();
             }
           }

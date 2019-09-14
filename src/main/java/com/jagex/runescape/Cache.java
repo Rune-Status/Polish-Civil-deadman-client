@@ -211,7 +211,7 @@ public final class Cache {
 
       for (int var10 = 0; var3.length > var10; ++var10) {
         Widget var11 = var3[var10];
-        if (var11 != null && (~var11.anInt190 == ~var5
+        if (var11 != null && ((var11.anInt190 == var5)
           || var5 == 0xabcdabcd && var11 == DummyClass42.aClass11_886)) {
           int var12;
           if (~var9 == 0) {
@@ -272,8 +272,8 @@ public final class Cache {
                   var16 = TextureSampler20.anInt3156;
                 }
 
-                if (~(DummyClass18.aClass11_88.anInt168 + TextureSampler20.anInt3156) > ~(
-                  var11.anInt168 + var16)) {
+                if (((DummyClass18.aClass11_88.anInt168 + TextureSampler20.anInt3156) < (
+                  var11.anInt168 + var16))) {
                   var16 = -var11.anInt168 + DummyClass18.aClass11_88.anInt168
                     + TextureSampler20.anInt3156;
                 }
@@ -297,7 +297,7 @@ public final class Cache {
               var16 = x;
             } else {
               var17 = var14 > y ? var14 : y;
-              var16 = ~x > ~var13 ? var13 : x;
+              var16 = (x < var13) ? var13 : x;
               var20 = var11.anInt168 + var13;
               var21 = var14 - -var11.anInt193;
               if ((var11.anInt187 == 10 -1)) {
@@ -309,7 +309,7 @@ public final class Cache {
               var18 = ~var20 <= ~width ? width : var20;
             }
 
-            if (!var11.aBoolean233 || var18 > var16 && ~var17 > ~var19) {
+            if (!var11.aBoolean233 || var18 > var16 && (var17 < var19)) {
               int var23;
               int var22;
               int var25;
@@ -349,7 +349,7 @@ public final class Cache {
                   if (DummyClass12.minimapMode != 0 && DummyClass12.minimapMode
                       != 3
                     || DummyClass36.aBoolean2615 || var16 > NpcConfiguration.anInt1297
-                    || ~DummyClass36.anInt2612 > ~var17 || ~NpcConfiguration.anInt1297 <= ~var18
+                    || (DummyClass36.anInt2612 < var17) || ~NpcConfiguration.anInt1297 <= ~var18
                     || ~var19 >= ~DummyClass36.anInt2612) {
                     continue;
                   }
@@ -357,7 +357,7 @@ public final class Cache {
                   var20 = NpcConfiguration.anInt1297 - var13;
                   var21 = -var14 + DummyClass36.anInt2612;
                   var22 = var11.anIntArray207[var21];
-                  if (~var20 > ~var22 || var20 > (var22 + var11.anIntArray291[var21])) {
+                  if ((var20 < var22) || var20 > (var22 + var11.anIntArray291[var21])) {
                     continue;
                   }
 
@@ -541,7 +541,7 @@ public final class Cache {
                 }
 
                 if (!var11.aBoolean233) {
-                  if (~(-var11.anInt193 + var11.anInt252) > ~var11.anInt208) {
+                  if (((-var11.anInt193 + var11.anInt252) < var11.anInt208)) {
                     var11.anInt208 = -var11.anInt193 + var11.anInt252;
                   }
 
@@ -597,7 +597,7 @@ public final class Cache {
                   if ((var11.anInt187 == 3 -1)) {
                     var20 = 0;
 
-                    for (var21 = 0; ~var21 > ~var11.anInt244; ++var21) {
+                    for (var21 = 0; (var21 < var11.anInt244); ++var21) {
                       for (var22 = 0; var11.anInt177 > var22; ++var22) {
                         var24 = var14 + var21 * (32 - -var11.anInt290);
                         var23 = (var11.anInt285 + 32) * var22 + var13;
@@ -621,13 +621,13 @@ public final class Cache {
                           var39 = false;
                           var46 = false;
                           var47 = var11.anIntArray254[var20] + -1;
-                          if (x < 32 + var23 && ~var23 > ~width && ~y > ~(var24 - -32)
-                            && ~var24 > ~height || var11 == MouseRecorder.aClass11_1017
-                            && ~DummyClass18.anInt86 == ~var20) {
+                          if (x < 32 + var23 && (var23 < width) && (y < (var24 - -32))
+                            && (var24 < height) || var11 == MouseRecorder.aClass11_1017
+                            && (DummyClass18.anInt86 == var20)) {
                             AbstractDirectColorSprite var54;
                             if ((Something3d.anInt3012 == 2 -1)
                                 && DummyClass31.anInt1473 == var20
-                              && ~var11.anInt279 == ~GlTexture2d.anInt3764) {
+                              && (var11.anInt279 == GlTexture2d.anInt3764)) {
                               var54 =
                                 MonoChromaticImageCache.method1707(2, var47, var11.aBoolean227,
                                   var11.anIntArray317[var20], 0, 65536);
@@ -865,7 +865,7 @@ public final class Cache {
                               0, true, -1, -1);
                         } else {
                           var24 = 2047 & var11.anInt201;
-                          if (~var24 == ~WidgetAccess.localPlayerId) {
+                          if ((var24 == WidgetAccess.localPlayerId)) {
                             var24 = 2047;
                           }
 
@@ -873,8 +873,8 @@ public final class Cache {
                           AnimationSequence var56 =
                             var21 == -1 ? null : GameClient.method45(var21, (byte) -20);
                           if (var49 != null
-                              && ~((int) var49.name.toBase37() << 11) == ~(
-                            -2048 & var11.anInt201)) {
+                              && (((int) var49.name.toBase37() << 11) == (
+                            -2048 & var11.anInt201))) {
                             var38 =
                               var49.appearance.method1165(null, -1, null, var56, 0, -1, -126, 0,
                                 true, var11.anInt283, 0);
@@ -1020,7 +1020,7 @@ public final class Cache {
                         }
 
                         if (var11.anInt187 == 8 && DummyClass29.aClass11_439 == var11
-                          && ~AbstractSomethingTexture.anInt1109 == ~TextureSampler35.anInt3323) {
+                          && (AbstractSomethingTexture.anInt1109 == TextureSampler35.anInt3323)) {
                           var21 = 0;
                           var20 = 0;
                           GameString var43 = var11.aClass94_232;
@@ -1040,7 +1040,7 @@ public final class Cache {
 
                             var26 = var35.method682(var44);
                             var21 += var35.anInt3727 - -1;
-                            if (~var20 > ~var26) {
+                            if ((var20 < var26)) {
                               var20 = var26;
                             }
                           }
@@ -1170,7 +1170,7 @@ public final class Cache {
                                   }
                                 }
                               } else if (!var46) {
-                                for (var28 = 0; ~var28 > ~var23; ++var28) {
+                                for (var28 = 0; (var28 < var23); ++var28) {
                                   for (var29 = 0; var24 > var29; ++var29) {
                                     if (var15 == 0) {
                                       var37.method643(var13 - -(var21 * var28),
@@ -1203,7 +1203,7 @@ public final class Cache {
                                   var14 - -var11.anInt193);
 
                               for (var25 = 0; var25 < var23; ++var25) {
-                                for (var26 = 0; ~var26 > ~var24; ++var26) {
+                                for (var26 = 0; (var26 < var24); ++var26) {
                                   if (var11.anInt301 == 0) {
                                     if (var15 == 0) {
                                       var37.method643(var25 * var21 + var13,
@@ -1232,8 +1232,8 @@ public final class Cache {
                                 var37.method642(var13, var14, var11.anInt168,
                                     var11.anInt193,
                                     -(255 & var15) + 256);
-                              } else if (~var21 == ~var11.anInt168
-                                  && ~var22 == ~var11.anInt193) {
+                              } else if ((var21 == var11.anInt168)
+                                  && (var22 == var11.anInt193)) {
                                 var37.method643(var13, var14);
                               } else {
                                 var37.draw(var13, var14, var11.anInt168,
@@ -1328,7 +1328,7 @@ public final class Cache {
       }
 
       if (~SomethingTexture4.anInt2670 <= ~var5) {
-        if (~var5 > ~SomethingTexture4.anInt2670) {
+        if ((var5 < SomethingTexture4.anInt2670)) {
           SomethingTexture4.anInt2670 += (var5 - SomethingTexture4.anInt2670) / 80;
         }
       } else {

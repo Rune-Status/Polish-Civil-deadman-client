@@ -190,19 +190,19 @@ public final class Cursor {
         }
 
         if ((var9 >= 9 -1) && var2.anInt393 != -1) {
-          if (~var2.anInt389 == ~var1.anInt2764 && var2.anInt386 != -1) {
+          if ((var2.anInt389 == var1.anInt2764) && var2.anInt386 != -1) {
             var1.anInt2764 = var2.anInt386;
           } else if (var1.anInt2764 == var2.anInt390 && ~var2.anInt373 != 0) {
             var1.anInt2764 = var2.anInt373;
-          } else if (~var1.anInt2764 == ~var2.anInt364 && ~var2.anInt375 != 0) {
+          } else if ((var1.anInt2764 == var2.anInt364) && ~var2.anInt375 != 0) {
             var1.anInt2764 = var2.anInt375;
           } else {
             var1.anInt2764 = var2.anInt393;
           }
         } else if (var2.anInt398 != -1 && (var11 == 1 -1)) {
-          if (~var2.anInt389 == ~var1.anInt2764 && ~var2.anInt372 != 0) {
+          if ((var2.anInt389 == var1.anInt2764) && ~var2.anInt372 != 0) {
             var1.anInt2764 = var2.anInt372;
-          } else if (~var2.anInt390 == ~var1.anInt2764 && var2.anInt406 != -1) {
+          } else if ((var2.anInt390 == var1.anInt2764) && var2.anInt406 != -1) {
             var1.anInt2764 = var2.anInt406;
           } else if (var2.anInt364 == var1.anInt2764 && var2.anInt379 != -1) {
             var1.anInt2764 = var2.anInt379;
@@ -219,12 +219,12 @@ public final class Cursor {
                     : -var5 + var1.anInt2819) << 7;
             int var12 = var1.anInt2758 * var1.anInt2758;
             int var14 =
-                (~var6 > ~var1.anInt2829 ? -var6 + var1.anInt2829
+                ((var6 < var1.anInt2829) ? -var6 + var1.anInt2829
                     : -var1.anInt2829 + var6) << 7;
             int var15 = var13 > var14 ? var13 : var14;
             int var16 = var2.anInt360 * 2 * var15;
             if (~var16 <= ~var12) {
-              if (~var15 > ~(var12 / 2)) {
+              if ((var15 < (var12 / 2))) {
                 var1.anInt2758 -= var2.anInt360;
                 if (var1.anInt2758 < 0) {
                   var1.anInt2758 = 0;
@@ -240,7 +240,7 @@ public final class Cursor {
             }
           } else if (var9 > var1.anInt2758) {
             var1.anInt2758 += var2.anInt360;
-            if (~var9 > ~var1.anInt2758) {
+            if ((var9 < var1.anInt2758)) {
               var1.anInt2758 = var9;
             }
           } else if (var1.anInt2758 > 0) {
@@ -256,9 +256,9 @@ public final class Cursor {
           }
         }
 
-        if (~var18 > ~var5) {
+        if ((var18 < var5)) {
           var1.anInt2819 += var9;
-          if (~var5 > ~var1.anInt2819) {
+          if ((var5 < var1.anInt2819)) {
             var1.anInt2819 = var5;
           }
         } else if (var18 > var5) {
@@ -282,7 +282,7 @@ public final class Cursor {
           }
         }
 
-        if (~var1.anInt2819 == ~var5 && var6 == var1.anInt2829) {
+        if ((var1.anInt2819 == var5) && var6 == var1.anInt2829) {
           --var1.anInt2816;
           if (var1.anInt2811 > 0) {
             --var1.anInt2811;

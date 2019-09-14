@@ -94,7 +94,7 @@ public final class DummyClass51 {
       for (int var8 = 0; TextureSampler25.amountContextActions > var8; ++var8) {
         int var9 = (-var8 + -1 + TextureSampler25.amountContextActions) * 15 + var2 - -31;
         int var10 = 16777215;
-        if (~var1 > ~var6 && ~var6 > ~(var1 - -var3) && -13 + var9 < var7 && ~var7 > ~(3 + var9)) {
+        if ((var1 < var6) && (var6 < (var1 - -var3)) && -13 + var9 < var7 && (var7 < (3 + var9))) {
           var10 = 16776960;
         }
 

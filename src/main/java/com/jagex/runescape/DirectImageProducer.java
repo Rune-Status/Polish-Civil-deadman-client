@@ -372,7 +372,7 @@ public final class DirectImageProducer extends AbstractImageProducer
                     var47 = false;
                   }
 
-                  if (var47 && var14 == var15 && ~var14 == ~var16 && ~var44 == ~var14) {
+                  if (var47 && var14 == var15 && (var14 == var16) && (var44 == var14)) {
                     DummyClass36.anIntArrayArrayArray2609[var8][lightPosX][lightPosY] =
                       TextureSampler3.method308(
                         DummyClass36.anIntArrayArrayArray2609[var8][lightPosX][lightPosY], 4);
@@ -1046,7 +1046,7 @@ public final class DirectImageProducer extends AbstractImageProducer
                   && TriChromaticImageCache.anIntArrayArray1373[var21][var22]
                   < 100) {
                 int var24 = 0;
-                if (~var22 > ~var4) {
+                if ((var22 < var4)) {
                   var24 = var4 + -var22;
                 } else if (var6 + var4 - 1 < var22) {
                   var24 = 1 + (-var4 - var6) + var22;
@@ -1062,7 +1062,7 @@ public final class DirectImageProducer extends AbstractImageProducer
                 }
 
                 int var25 = var24 * var24 + var23 * var23;
-                if (~var25 > ~var18 || ~var25 == ~var18
+                if ((var25 < var18) || (var25 == var18)
                     && TriChromaticImageCache.anIntArrayArray1373[var21][var22]
                     < var19) {
                   var13 = var22;
@@ -1078,7 +1078,7 @@ public final class DirectImageProducer extends AbstractImageProducer
             return false;
           }
 
-          if (var2 == var12 && ~var13 == ~var10) {
+          if (var2 == var12 && (var13 == var10)) {
             return false;
           }
 

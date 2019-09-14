@@ -312,7 +312,7 @@ public final class RenderAnimation {
 
             ++var0.anInt2761;
             if (var0.anInt2805 < var3.anIntArray1851.length
-                && ~var3.anIntArray1869[var0.anInt2805] > ~var0.anInt2761) {
+                && (var3.anIntArray1869[var0.anInt2805] < var0.anInt2761)) {
               ++var0.anInt2805;
               var0.anInt2761 = 1;
               SocketStream.method1470(var0.anInt2829, var3, var1 ^ -183911469,
@@ -349,7 +349,7 @@ public final class RenderAnimation {
           var2 = GameClient.method45(var0.animationId, (byte) -20);
           if (var2.anIntArray1851 != null) {
             ++var0.anInt2760;
-            if (~var0.anInt2832 > ~var2.anIntArray1851.length
+            if ((var0.anInt2832 < var2.anIntArray1851.length)
               && var0.anInt2760 > var2.anIntArray1869[var0.anInt2832]) {
               var0.anInt2760 = 1;
               ++var0.anInt2832;
@@ -360,7 +360,7 @@ public final class RenderAnimation {
             if (var2.anIntArray1851.length <= var0.anInt2832) {
               var0.anInt2832 -= var2.anInt1865;
               ++var0.anInt2773;
-              if (~var0.anInt2773 > ~var2.anInt1861) {
+              if ((var0.anInt2773 < var2.anInt1861)) {
                 if (var0.anInt2832 >= 0 && var2.anIntArray1851.length > var0.anInt2832) {
                   SocketStream.method1470(var0.anInt2829, var2, -11973 ^ -183911469, var0.anInt2819,
                     TextureCache.localPlayer == var0, var0.anInt2832);
@@ -413,7 +413,7 @@ public final class RenderAnimation {
                   ++var7.anInt1894;
                   var7.anInt1893 -= var4.anInt1865;
                   if (var4.anInt1861 > var7.anInt1894) {
-                    if ((var7.anInt1893 >= 1 -1) && ~var7.anInt1893 > ~var4.anIntArray1851.length) {
+                    if ((var7.anInt1893 >= 1 -1) && (var7.anInt1893 < var4.anIntArray1851.length)) {
                       SocketStream.method1470(var0.anInt2829, var4, 183921384, var0.anInt2819,
                         TextureCache.localPlayer == var0, var7.anInt1893);
                     } else {

@@ -50,7 +50,7 @@ public final class FileCache {
       synchronized (var3) {
         Object var10000;
         try {
-          if (~this.aClass30_683.method976(0) > ~(var1 * 6 + 6)) {
+          if ((this.aClass30_683.method976(0) < (var1 * 6 + 6))) {
             var10000 = null;
             return null;
           }
@@ -74,7 +74,7 @@ public final class FileCache {
             int var8 = 0;
 
             int var13;
-            for (int var9 = 0; ~var8 > ~var4; var5 = var13) {
+            for (int var9 = 0; (var8 < var4); var5 = var13) {
               if (var5 == 0) {
                 var10000 = null;
                 return null;
@@ -106,7 +106,7 @@ public final class FileCache {
                 return null;
               }
 
-              for (int var15 = 0; ~var15 > ~var10; ++var15) {
+              for (int var15 = 0; (var15 < var10); ++var15) {
                 var7[var8++] = DummyClass11.aByteArray2040[var15 + 8];
               }
 
@@ -142,7 +142,7 @@ public final class FileCache {
             this.aClass30_683.method978(0, DummyClass11.aByteArray2040, 6, 0);
             var7 = (16711680 & DummyClass11.aByteArray2040[3] << 16) + ('\uff00'
               & DummyClass11.aByteArray2040[4] << 8) + (DummyClass11.aByteArray2040[5] & 255);
-            if ((var7 <= 1 -1) || ~(this.aClass30_681.method976(0) / 520L) > ~var7) {
+            if ((var7 <= 1 -1) || ((this.aClass30_681.method976(0) / 520L) < var7)) {
               var10000 = false;
               return false;
             }
@@ -170,7 +170,7 @@ public final class FileCache {
               .write(DummyClass11.aByteArray2040, 0, var1 ^ -903171097, 6);
 
           while (true) {
-            if (~var8 > ~var2) {
+            if ((var8 < var2)) {
               label146:
               {
                 int var10 = 0;
@@ -214,7 +214,7 @@ public final class FileCache {
                     ++var10;
                   }
 
-                  if (~var10 == ~var7) {
+                  if ((var10 == var7)) {
                     ++var10;
                   }
                 }

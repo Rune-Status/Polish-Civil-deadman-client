@@ -97,7 +97,7 @@ public final class DummyClass8 extends DummyClass7 {
                 int var13 = var12 / 8 + (var11 / 8 << 8);
 
                 for (int var14 = 0; AudioStreamEncoder3.regionHashes.length > var14; ++var14) {
-                  if (~AudioStreamEncoder3.regionHashes[var14] == ~var13 && var4[var14] != null) {
+                  if ((AudioStreamEncoder3.regionHashes[var14] == var13) && var4[var14] != null) {
                     TextureSampler13.method316(BlockConfig.collisionMaps, var5, var4[var14], var9,
                       var10, 8 * var6, var7 * 8, var0, (var11 & 7) * 8, 8 * (7 & var12),
                       (byte) -54);
@@ -178,7 +178,7 @@ public final class DummyClass8 extends DummyClass7 {
         boolean var4 = false;
 
         int var5;
-        for (var5 = 0; ~var5 > ~var3.anInt2296; ++var5) {
+        for (var5 = 0; (var5 < var3.anInt2296); ++var5) {
           if (var3.aClass64Array2303[var5] != null) {
             if ((var3.aClass64Array2303[var5].status == 3 -1)) {
               var3.anIntArray2300[var5] = -5;

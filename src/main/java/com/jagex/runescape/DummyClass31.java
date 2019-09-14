@@ -43,7 +43,7 @@ public final class DummyClass31 {
         }
       }
 
-      if (~var2 > ~DummyClass52.anInt1174) {
+      if ((var2 < DummyClass52.anInt1174)) {
         DummyClass52.anInt1174 = var2;
       }
 
@@ -686,8 +686,7 @@ public final class DummyClass31 {
 
                   for (int var30 = 0; var30 <= var12; ++var30) {
                     for (int var31 = 0; var13 >= var31; ++var31) {
-                      if (~MouseRecorder.aByteArrayArrayArray1014[var2][var7 + var30][var31 + var9]
-                        > ~var29) {
+                      if ((MouseRecorder.aByteArrayArrayArray1014[var2][var7 + var30][var31 + var9] < var29)) {
                         MouseRecorder.aByteArrayArrayArray1014[var2][var7 - -var30][var9 - -var31] =
                           (byte) var29;
                       }

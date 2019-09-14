@@ -76,7 +76,7 @@ public final class TextureSampler29 extends AbstractTextureSampler {
             int[] var12 = var10[1];
             int[] var13 = var10[2];
 
-            for (int var14 = 0; ~var14 > ~SomethingLight0.anInt1559; ++var14) {
+            for (int var14 = 0; (var14 < SomethingLight0.anInt1559); ++var14) {
               int var15 = var9[var14];
               var13[var14] = ClientScript.bitAnd(255, var15) << 4;
               var12[var14] = ClientScript.bitAnd(4080, var15 >> 4);

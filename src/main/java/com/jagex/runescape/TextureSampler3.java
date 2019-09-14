@@ -45,7 +45,7 @@ public final class TextureSampler3 extends AbstractTextureSampler {
       var4.anIntArray2301 = new int[var4.anInt2296];
       var4.anIntArray2299 = new int[var4.anInt2296];
 
-      for (int var6 = 0; ~var6 > ~var4.anInt2296; ++var6) {
+      for (int var6 = 0; (var6 < var4.anInt2296); ++var6) {
         try {
           int var7 = var1.readUnsignedByte();
           String var8;

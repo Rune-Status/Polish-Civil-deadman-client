@@ -64,7 +64,7 @@ public final class SomethingAudio {
         int var7 = 0;
 
         int var8;
-        for (var8 = 0; ~var8 > ~var1.length; ++var8) {
+        for (var8 = 0; (var8 < var1.length); ++var8) {
           int[] var10 = this.anIntArrayArray1999[var7];
           byte var9 = var1[var8];
 

@@ -235,7 +235,7 @@ public final class GameClient extends GameStub {
   }
 
   private void method49() {
-    if (~DummyClass8.anInt4026 > ~DummyClass43.ondemandRequester.anInt1011) {
+    if ((DummyClass8.anInt4026 < DummyClass43.ondemandRequester.anInt1011)) {
         TextureSampler21.anInt3068 =
             5 * 50 * (DummyClass43.ondemandRequester.anInt1011 + -1);
         if (DummyClass11.anInt2036 == Projectile.anInt2894) {
@@ -1484,7 +1484,7 @@ public final class GameClient extends GameStub {
                   .drawLoadingBox(TextureSampler39.LOADING_PLEASE_WAIT, false);
             }
           } else {
-            if (~StringNode.anInt2579 > ~TextureSampler5.anInt3293) {
+            if ((StringNode.anInt2579 < TextureSampler5.anInt3293)) {
               StringNode.anInt2579 = TextureSampler5.anInt3293;
             }
 

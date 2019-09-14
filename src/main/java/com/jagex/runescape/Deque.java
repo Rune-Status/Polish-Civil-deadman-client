@@ -174,7 +174,7 @@ public final class Deque {
         var6 = 1;
         var7 = var5.aClass140_Sub4_Sub2_2324.getRenderAnimationId(false);
         assert var7 != null;
-        if (~var7.anInt368 == ~var5.aClass140_Sub4_Sub2_2324.anInt2764) {
+        if ((var7.anInt368 == var5.aClass140_Sub4_Sub2_2324.anInt2764)) {
           var6 = 0;
         } else {
           if ((var7.anInt393 != var5.aClass140_Sub4_Sub2_2324.anInt2764)
@@ -184,7 +184,7 @@ public final class Deque {
             if (var7.anInt398 == var5.aClass140_Sub4_Sub2_2324.anInt2764
                 || var7.anInt372 == var5.aClass140_Sub4_Sub2_2324.anInt2764
                 || var5.aClass140_Sub4_Sub2_2324.anInt2764 == var7.anInt379
-                || ~var7.anInt406 == ~var5.aClass140_Sub4_Sub2_2324.anInt2764) {
+                || (var7.anInt406 == var5.aClass140_Sub4_Sub2_2324.anInt2764)) {
               var6 = 3;
             }
           } else {
@@ -233,9 +233,8 @@ public final class Deque {
                 && var7.anInt373 != var5.aClass140_Sub4_Sub1_2327.anInt2764) {
               if (var7.anInt398 == var5.aClass140_Sub4_Sub1_2327.anInt2764
                   || var5.aClass140_Sub4_Sub1_2327.anInt2764 == var7.anInt372
-                  || ~var5.aClass140_Sub4_Sub1_2327.anInt2764 == ~var7.anInt379
-                  || ~var5.aClass140_Sub4_Sub1_2327.anInt2764
-                  == ~var7.anInt406) {
+                  || (var5.aClass140_Sub4_Sub1_2327.anInt2764 == var7.anInt379)
+                  || (var5.aClass140_Sub4_Sub1_2327.anInt2764 == var7.anInt406)) {
                 var6 = 3;
               }
             } else {

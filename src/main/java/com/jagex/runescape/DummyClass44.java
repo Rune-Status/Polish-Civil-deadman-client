@@ -19,7 +19,7 @@ public final class DummyClass44 {
   }
 
   public static void method1207(int var0) {
-    for (int var1 = 0; ~var1 > ~DummyClass6.anInt2046; ++var1) {
+    for (int var1 = 0; (var1 < DummyClass6.anInt2046); ++var1) {
         int var2 = AudioWorker.anIntArray347[var1];
         NPC var3 = TextureSampler5.npcs[var2];
         if (var3 != null) {

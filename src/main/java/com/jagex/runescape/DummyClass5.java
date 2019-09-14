@@ -60,7 +60,7 @@ public class DummyClass5 extends DummyClass6 {
               if ((var1 != 2 -1)) {
                 var3 = HashTable.anInt1709;
                 var11 = SomethingTilek.anInt1676;
-                if (~var11 > ~(AbstractIndexedColorSprite.anInt1462 - 10)
+                if ((var11 < (AbstractIndexedColorSprite.anInt1462 - 10))
                     || var11 > (
                     SomethingWorldMapy.anInt3552 + (
                         AbstractIndexedColorSprite.anInt1462 - -10))

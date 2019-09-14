@@ -107,7 +107,7 @@ public final class NpcConfiguration {
       }
 
       int var3;
-      if (var2 >= 0 && ~var2 > ~(-1 + this.anIntArray1292.length)
+      if (var2 >= 0 && (var2 < (-1 + this.anIntArray1292.length))
         && this.anIntArray1292[var2] != -1) {
         var3 = -24 % ((-46 - var1) / 41);
         return SubNode.getNpcConfiguration(this.anIntArray1292[var2]);
@@ -468,7 +468,7 @@ public final class NpcConfiguration {
               var42 = var8.anIntArray1851[var2];
               var28 = var42 >>> 16;
               var42 &= '\uffff';
-              if (~var28 == ~var27) {
+              if ((var28 == var27)) {
                 var46 = var44;
               } else {
                 var46 = AreaSoundEffect.method133(var42 >>> 16, 0);
@@ -510,7 +510,7 @@ public final class NpcConfiguration {
             var45.method1880(var40, var17, var43, var18, var6 + -1, var19, var10.aBoolean1848);
           }
 
-          for (var28 = 0; ~var28 > ~var16; ++var28) {
+          for (var28 = 0; (var28 < var16); ++var28) {
             TextureSampler12.aClass3_Sub28_Sub5Array3041[var28] = null;
             TextureSampler18.aClass3_Sub28_Sub5Array4031[var28] = null;
             DummyClass52.aClass142Array1168[var28] = null;
@@ -563,7 +563,7 @@ public final class NpcConfiguration {
           if (var12 == null) {
             boolean var7 = false;
 
-            for (int var8 = 0; ~var8 > ~this.anIntArray1250.length; ++var8) {
+            for (int var8 = 0; (var8 < this.anIntArray1250.length); ++var8) {
               if (!TextureSampler31.aClass153_3173.method2129((byte) -69, 0,
                   this.anIntArray1250[var8])) {
                 var7 = true;
@@ -576,7 +576,7 @@ public final class NpcConfiguration {
 
             Model[] var14 = new Model[this.anIntArray1250.length];
 
-            for (int var9 = 0; ~var9 > ~this.anIntArray1250.length; ++var9) {
+            for (int var9 = 0; (var9 < this.anIntArray1250.length); ++var9) {
               var14[var9] =
                 Model.getModel(TextureSampler31.aClass153_3173,
                     this.anIntArray1250[var9], 0);
@@ -593,7 +593,7 @@ public final class NpcConfiguration {
             if (this.aShortArray1248 != null) {
               for (var10 = 0; this.aShortArray1248.length > var10; ++var10) {
                 if (this.aByteArray1247
-                    != null && ~var10 > ~this.aByteArray1247.length) {
+                    != null && (var10 < this.aByteArray1247.length)) {
                   assert var15 != null;
                   var15.replaceColor(this.aShortArray1248[var10],
                     SceneShadowMap.aShortArray1779[255 & this.aByteArray1247[var10]]);
@@ -606,7 +606,7 @@ public final class NpcConfiguration {
             }
 
             if (this.aShortArray1271 != null) {
-              for (var10 = 0; ~var10 > ~this.aShortArray1271.length; ++var10) {
+              for (var10 = 0; (var10 < this.aShortArray1271.length); ++var10) {
                 assert var15 != null;
                 var15.replaceMaterial(this.aShortArray1271[var10],
                     this.aShortArray1246[var10]);
@@ -762,7 +762,7 @@ public final class NpcConfiguration {
                                                 var5);
                                           }
 
-                                          for (var5 = 0; ~var5 > ~var4;
+                                          for (var5 = 0; (var5 < var4);
                                               ++var5) {
                                             boolean var11 =
                                                 var3.readUnsignedByte() == 1;
@@ -918,7 +918,7 @@ public final class NpcConfiguration {
       var1 = var1.method1534();
       int var4 = 0;
 
-      for (int var5 = 0; ~var5 > ~TextureSampler39.anInt3287; ++var5) {
+      for (int var5 = 0; (var5 < TextureSampler39.anInt3287); ++var5) {
         ItemConfig var6 = DummyClass35.getItemConfig(var5, (byte) 93);
         if ((!var0 || var6.aBoolean807) && var6.anInt791 == -1 && var6.anInt762
             == -1

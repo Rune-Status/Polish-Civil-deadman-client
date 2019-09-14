@@ -81,7 +81,7 @@ public final class TextureSampler28 extends AbstractTextureSampler {
                   var30 += SomethingLight0.anInt1559;
                 }
 
-                if (~SomethingLight0.anInt1559 > ~var30) {
+                if ((SomethingLight0.anInt1559 < var30)) {
                   var30 -= SomethingLight0.anInt1559;
                 }
 
@@ -150,7 +150,7 @@ public final class TextureSampler28 extends AbstractTextureSampler {
               }
 
               int[] var40;
-              if (~var26 == ~SomethingLight0.anInt1559) {
+              if ((var26 == SomethingLight0.anInt1559)) {
                 this.method291(var23, var22, var7 + var9, var24, (byte) -69, var25, var5);
                 if (var11) {
                   return var3;
@@ -177,7 +177,7 @@ public final class TextureSampler28 extends AbstractTextureSampler {
                 }
 
                 var20 = var41;
-                if (~SomethingLight0.anInt1559 > ~var29) {
+                if ((SomethingLight0.anInt1559 < var29)) {
                   var29 -= SomethingLight0.anInt1559;
                 }
 
@@ -284,7 +284,7 @@ public final class TextureSampler28 extends AbstractTextureSampler {
             int var19;
             int var21;
             int var20;
-            if (~var17 > ~var14) {
+            if ((var17 < var14)) {
               var19 = var17 * var8 / var14;
               if ((this.anInt3309 == 1 -1)) {
                 for (var20 = 0; var13 > var20; ++var20) {

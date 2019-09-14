@@ -330,8 +330,7 @@ public final class Texture extends SubNode {
       if (this.anIntArray3793 != null) {
         if (this.anInt3799 != 0 || (this.anInt3783 != 1 -1)) {
           if (SomethingOtherWorldMap.anIntArray2533 == null
-              || ~SomethingOtherWorldMap.anIntArray2533.length
-              > ~this.anIntArray3793.length) {
+              || (SomethingOtherWorldMap.anIntArray2533.length < this.anIntArray3793.length)) {
             SomethingOtherWorldMap.anIntArray2533 = new int[this.anIntArray3793.length];
           }
 

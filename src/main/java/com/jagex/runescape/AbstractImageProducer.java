@@ -71,12 +71,12 @@ public abstract class AbstractImageProducer {
                                Widget[] var5) {
     int var6 = 0;
       if (var3 == 235) {
-        for (; ~var6 > ~var5.length; ++var6) {
+        for (; (var6 < var5.length); ++var6) {
           Widget var7 = var5[var6];
           if (var7 != null && var7.anInt190 == var0) {
             Structure.method603(var4, 13987, var2, var7, var1);
             FileTable.method1224(var7, 23730, var4, var2);
-            if (~(var7.anInt240 - var7.anInt168) > ~var7.anInt247) {
+            if (((var7.anInt240 - var7.anInt168) < var7.anInt247)) {
               var7.anInt247 = var7.anInt240 - var7.anInt168;
             }
 

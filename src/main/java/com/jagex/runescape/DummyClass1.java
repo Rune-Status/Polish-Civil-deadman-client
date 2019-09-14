@@ -37,7 +37,7 @@ public final class DummyClass1 {
         int var9;
         if (var1.anInt2772 >= '\u8000') {
           var9 = -32768 + var1.anInt2772;
-          if (~var9 == ~WidgetAccess.localPlayerId) {
+          if ((var9 == WidgetAccess.localPlayerId)) {
             var9 = 2047;
           }
 
@@ -78,12 +78,12 @@ public final class DummyClass1 {
             if ((var9 > 1025 -1)) {
               var1.rotationY -= var1.anInt2779;
               var11 = true;
-              if (~var9 > ~var1.anInt2779 || var9 > -var1.anInt2779 + 2048) {
+              if ((var9 < var1.anInt2779) || var9 > -var1.anInt2779 + 2048) {
                 var1.rotationY = var1.anInt2806;
                 var11 = false;
               }
 
-              if (~var2.anInt368 == ~var1.anInt2764 && (var1.anInt2789 > 25
+              if ((var2.anInt368 == var1.anInt2764) && (var1.anInt2789 > 25
                   || var11)) {
                 if (~var2.anInt367 == 0) {
                   var1.anInt2764 = var2.anInt382;
@@ -111,7 +111,7 @@ public final class DummyClass1 {
 
             var1.rotationY &= 2047;
           } else {
-            if (~var2.anInt368 == ~var1.anInt2764 && var1.anInt2789 > 25) {
+            if ((var2.anInt368 == var1.anInt2764) && var1.anInt2789 > 25) {
               if (~var2.anInt407 == 0) {
                 var1.anInt2764 = var2.anInt382;
               } else {
@@ -170,13 +170,13 @@ public final class DummyClass1 {
                 if ((var5 >= 32769 -1)) {
                   var1.anInt2821 = -var2.anInt369;
                   var1.anInt2803 = (65536 - var5) / 2;
-                  if (~var6 > ~var1.anInt2803) {
+                  if ((var6 < var1.anInt2803)) {
                     var1.anInt2803 = 65536 - (var5 + var6);
                   }
                 } else {
                   var1.anInt2821 = var2.anInt369;
                   var1.anInt2803 = var5 / 2;
-                  if (~var6 > ~var1.anInt2803) {
+                  if ((var6 < var1.anInt2803)) {
                     var1.anInt2803 = -var6 + var5;
                   }
                 }
@@ -191,7 +191,7 @@ public final class DummyClass1 {
                 if (var1.anInt2821 > 0) {
                   var1.anInt2821 = 0;
                 }
-              } else if (~(-var2.anInt357) > ~var1.anInt2821) {
+              } else if (((-var2.anInt357) < var1.anInt2821)) {
                 var1.anInt2821 -= var2.anInt369;
               }
             } else {

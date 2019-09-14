@@ -140,7 +140,7 @@ public abstract class SceneNode {
         }
 
         int var8 = -102 / ((-53 - var0) / 38);
-        boolean var9 = ~var7 > ~var6;
+        boolean var9 = (var7 < var6);
         int var10;
         int var11;
         if (var9) {

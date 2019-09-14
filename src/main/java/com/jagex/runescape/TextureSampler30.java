@@ -76,7 +76,7 @@ public final class TextureSampler30 extends AbstractTextureSampler {
         int[] var9 = var3[1];
         int[] var10 = var3[2];
 
-        for (int var11 = 0; ~var11 > ~SomethingLight0.anInt1559; ++var11) {
+        for (int var11 = 0; (var11 < SomethingLight0.anInt1559); ++var11) {
           var8[var11] = this.anInt3128 - -(this.anInt3126 * var5[var11] >> 12);
           var9[var11] = (this.anInt3126 * var6[var11] >> 12) + this.anInt3128;
           var10[var11] = this.anInt3128 + (this.anInt3126 * var7[var11] >> 12);
@@ -91,7 +91,7 @@ public final class TextureSampler30 extends AbstractTextureSampler {
   }
 
   public static int method210(int var0, int var1, int var2, int var3) {
-    if (~var2 == ~var3) {
+    if ((var2 == var3)) {
         return var2;
       } else {
         int var4 = -var1 + 128;
@@ -123,7 +123,7 @@ public final class TextureSampler30 extends AbstractTextureSampler {
 
   public static void method212(long var0, int var2) {
     if (var0 != 0L) {
-        for (int var3 = var2; ~var3 > ~AnimationSomething.anInt3591; ++var3) {
+        for (int var3 = var2; (var3 < AnimationSomething.anInt3591); ++var3) {
           if (MonoChromaticImageCache.aLongArray1574[var3] == var0) {
             ++DummyClass20.anInt1781;
             --AnimationSomething.anInt3591;

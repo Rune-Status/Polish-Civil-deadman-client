@@ -290,13 +290,13 @@ public final class Widget {
           this.anIntArray291 = new int[var2.height];
           int var3 = 0;
 
-          while (~var3 > ~var2.height) {
+          while ((var3 < var2.height)) {
             int var4 = 0;
             int var5 = var2.width;
             int var6 = 0;
 
             while (true) {
-              if (~var6 > ~var2.width) {
+              if ((var6 < var2.width)) {
                 if ((var2.aByteArray2674[var2.width * var3 + var6] == 1 -1)) {
                   ++var6;
                   continue;
@@ -397,7 +397,7 @@ public final class Widget {
           var6 = var2.readUnsignedShort();
           this.anIntArrayArray298[var5] = new int[var6];
 
-          for (var7 = 0; ~var7 > ~var6; ++var7) {
+          for (var7 = 0; (var7 < var6); ++var7) {
             this.anIntArrayArray298[var5][var7] = var2.readUnsignedShort();
             if ((this.anIntArrayArray298[var5][var7] == 65536 -1)) {
               this.anIntArrayArray298[var5][var7] = -1;
@@ -680,7 +680,7 @@ public final class Widget {
           this.anInt312 = 20;
         }
 
-        for (int var5 = 0; ~var5 > ~var3; ++var5) {
+        for (int var5 = 0; (var5 < var3); ++var5) {
           var4[var5] = var1.readInt();
         }
 

@@ -353,8 +353,7 @@ public class DummyClass2 {
           }
 
           if ((TextureSampler28.loginState == 10 -1)) {
-            if (~SomethingVolume15.gameSocket.available()
-                > ~HashTable.packetLength) {
+            if ((SomethingVolume15.gameSocket.available() < HashTable.packetLength)) {
               return;
             }
 
@@ -384,7 +383,7 @@ public class DummyClass2 {
             TextureSampler28.loginState = 1;
             VertexNormal.anInt820 = 0;
             ++SomethingIndex150.anInt2079;
-            if (~DummyClass11.anInt2036 == ~Projectile.anInt2894) {
+            if ((DummyClass11.anInt2036 == Projectile.anInt2894)) {
               Projectile.anInt2894 = GameWorldSomething.anInt506;
             } else {
               Projectile.anInt2894 = DummyClass11.anInt2036;

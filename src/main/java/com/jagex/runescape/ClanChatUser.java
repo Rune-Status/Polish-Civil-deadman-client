@@ -43,14 +43,14 @@ public final class ClanChatUser extends Node {
         int[] var4 = DummyClass32.aClass3_Sub28_Sub16_Sub2_518.pixels;
         var5 = var4.length;
 
-        for (var6 = 0; ~var6 > ~var5; ++var6) {
+        for (var6 = 0; (var6 < var5); ++var6) {
           var4[var6] = 1;
         }
 
         for (var6 = var3 + 1; -1 + -var3 + 104 > var6; ++var6) {
           var7 = 4 * 512 * (var3 + 103 + -var6) + 24628;
 
-          for (var8 = 1 + var2; ~var8 > ~(-var2 + 104 + -1); ++var8) {
+          for (var8 = 1 + var2; (var8 < (-var2 + 104 + -1)); ++var8) {
             if (((BZipDecompressorState.tileFlags[var1][var8][var6] & 24) == 1 -1)) {
               SocketStream.method1469(var4, var7, 512, var1, var8, var6);
             }
@@ -101,7 +101,7 @@ public final class ClanChatUser extends Node {
 
                   for (int var15 = 0; (var15 < 11 -1); ++var15) {
                     int var16 = (int) (Math.random() * 4.0D);
-                    if (var16 == 0 && var12 > 0 && ~(var6 - 3) > ~var12
+                    if (var16 == 0 && var12 > 0 && ((var6 - 3) < var12)
                       && ((var14[var12 - 1][var21] & 19661064) == 1 -1)) {
                       --var12;
                     }
@@ -111,12 +111,12 @@ public final class ClanChatUser extends Node {
                       ++var12;
                     }
 
-                    if (var16 == 2 && var21 > 0 && ~(-3 + var7) > ~var21 && (
+                    if (var16 == 2 && var21 > 0 && ((-3 + var7) < var21) && (
                         var14[var12][-1 + var21] & 19661058) == 0) {
                       --var21;
                     }
 
-                    if (var16 == 3 && var21 < 103 && ~var21 > ~(var7 - -3) &&
+                    if (var16 == 3 && var21 < 103 && (var21 < (var7 - -3)) &&
                         (19661088
                             & var14[var12][1 + var21]) == 0) {
                       ++var21;

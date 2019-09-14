@@ -89,7 +89,7 @@ public final class TextureSampler9 extends AbstractTextureSampler {
   public static void method203(int var0) {
     int var1 = 15 / ((-11 - var0) / 63);
       if (ClientScriptEnum.anInt3660 == 2) {
-        if (~NpcConfiguration.anInt1297 == ~TextureSampler8.anInt3460
+        if ((NpcConfiguration.anInt1297 == TextureSampler8.anInt3460)
           && DummyClass36.anInt2612 == FloorOverlay.anInt2099) {
           ClientScriptEnum.anInt3660 = 0;
           if (DummyClass55.aBoolean1419 && GameObjectConfig.aBooleanArray1490[81]
@@ -100,7 +100,7 @@ public final class TextureSampler9 extends AbstractTextureSampler {
           }
         }
       } else if (NpcConfiguration.anInt1297 == DummyClass5.anInt2993
-        && ~DummyClass36.anInt2612 == ~DummyClass36.anInt2614) {
+        && (DummyClass36.anInt2612 == DummyClass36.anInt2614)) {
         ClientScriptEnum.anInt3660 = 0;
         if (DummyClass55.aBoolean1419 && GameObjectConfig.aBooleanArray1490[81]
           && (TextureSampler25.amountContextActions > 3 -1)) {

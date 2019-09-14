@@ -37,7 +37,7 @@ public final class DummyClass23 {
           var0.readUnsignedByte());
       int var3 = var0.readUnsignedByte();
 
-      for (int var4 = 0; ~var4 > ~var3; ++var4) {
+      for (int var4 = 0; (var4 < var3); ++var4) {
         var2.aClass61_3560.addLast(
           new SomethingWorldMappy(var0.readUnsignedShort(), var0.readUnsignedShort(),
             var0.readUnsignedShort(), var0.readUnsignedShort()));

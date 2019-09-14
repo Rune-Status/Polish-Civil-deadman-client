@@ -69,7 +69,7 @@ public final class ProceduralTexture {
         var7 = this.aClass3_Sub13Array1147[var6];
         var8 = var7.samplers.length;
 
-        for (var9 = 0; ~var9 > ~var8; ++var9) {
+        for (var9 = 0; (var9 < var8); ++var9) {
           var7.samplers[var9] = this.aClass3_Sub13Array1147[var5[var6][var9]];
         }
 
@@ -126,7 +126,7 @@ public final class ProceduralTexture {
       int var14 = 0;
 
       int var15;
-      for (var15 = 0; ~var15 > ~var1; ++var15) {
+      for (var15 = 0; (var15 < var1); ++var15) {
         if (var2) {
           var14 = var15;
         }
@@ -294,7 +294,7 @@ public final class ProceduralTexture {
           }
         }
 
-        for (var11 = 0; ~var11 > ~this.aClass3_Sub13Array1147.length; ++var11) {
+        for (var11 = 0; (var11 < this.aClass3_Sub13Array1147.length); ++var11) {
           this.aClass3_Sub13Array1147[var11].method161((byte) -45);
         }
 
@@ -308,13 +308,13 @@ public final class ProceduralTexture {
       FileUnpacker var3 ) {
     int var4;
       if (SomethingTilek.anInt1668 > 0) {
-        for (var4 = 0; ~var4 > ~this.anIntArray1144.length; ++var4) {
+        for (var4 = 0; (var4 < this.anIntArray1144.length); ++var4) {
           if (!var3.method2129((byte) -78, this.anIntArray1144[var4], SomethingTilek.anInt1668)) {
             return false;
           }
         }
       } else {
-        for (var4 = 0; ~var4 > ~this.anIntArray1144.length; ++var4) {
+        for (var4 = 0; (var4 < this.anIntArray1144.length); ++var4) {
           if (!var3.isLoaded(this.anIntArray1144[var4])) {
             return false;
           }
@@ -433,10 +433,10 @@ public final class ProceduralTexture {
 
             HintMarker[] var20 = GameException.aClass96Array2114;
 
-            for (var21 = 0; ~var21 > ~var20.length; ++var21) {
+            for (var21 = 0; (var21 < var20.length); ++var21) {
               HintMarker var24 = var20[var21];
               if (var24 != null && var24.anInt1360 == 1
-                && ~var24.anInt1359 == ~AudioWorker.anIntArray347[-DummyClass13.anInt2022 + var7]
+                && (var24.anInt1359 == AudioWorker.anIntArray347[-DummyClass13.anInt2022 + var7])
                 && ((AbstractGameWorld.updateCycle % 20) < 11 -1)) {
                 if (var9.anInt1265 == -1) {
                   var29 = 15 + var8.method1975(var6 + '\u89b4');

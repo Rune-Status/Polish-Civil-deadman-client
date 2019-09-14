@@ -150,7 +150,7 @@ public final class AnimationSequence {
       } else {
         AnimationSomething var9 = null;
         if ((this.tween || MonoChromaticImageBuffer.tweening) && ~var3 != 0
-          && ~var3 > ~this.anIntArray1851.length) {
+          && (var3 < this.anIntArray1851.length)) {
           var3 = this.anIntArray1851[var3];
           var9 = AreaSoundEffect.method133(var3 >> 16, 0);
           var3 &= '\uffff';
@@ -221,7 +221,7 @@ public final class AnimationSequence {
         var4 &= var6;
         AnimationSomething var9 = null;
         if ((this.tween || MonoChromaticImageBuffer.tweening) && ~var1 != 0
-          && ~var1 > ~this.anIntArray1851.length) {
+          && (var1 < this.anIntArray1851.length)) {
           var1 = this.anIntArray1851[var1];
           var9 = AreaSoundEffect.method133(var1 >> 16, var6 + -3);
           var1 &= '\uffff';
@@ -350,7 +350,7 @@ public final class AnimationSequence {
 
         this.anIntArray1851 = new int[var4];
 
-        for (var5 = 0; ~var5 > ~var4; ++var5) {
+        for (var5 = 0; (var5 < var4); ++var5) {
           this.anIntArray1851[var5] = var3.readUnsignedShort();
         }
 
@@ -617,7 +617,7 @@ public final class AnimationSequence {
       SpotAnimationConfig.gameBuffer.position = 0;
 
       int var1;
-      for (var1 = 0; ~var1 > ~GameException.aClass96Array2114.length; ++var1) {
+      for (var1 = 0; (var1 < GameException.aClass96Array2114.length); ++var1) {
         GameException.aClass96Array2114[var1] = null;
       }
 

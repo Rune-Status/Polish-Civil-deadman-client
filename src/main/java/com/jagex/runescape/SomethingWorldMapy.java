@@ -74,11 +74,11 @@ public final class SomethingWorldMapy extends SubNode {
 
       for (SomethingWorldMappy var2 = (SomethingWorldMappy) this.aClass61_3560.getFirst();
           var2 != null; var2 = (SomethingWorldMappy) this.aClass61_3560.getNext()) {
-        if (~var2.anInt2494 > ~this.anInt3562) {
+        if ((var2.anInt2494 < this.anInt3562)) {
           this.anInt3562 = var2.anInt2494;
         }
 
-        if (~var2.anInt2492 > ~this.anInt3555) {
+        if ((var2.anInt2492 < this.anInt3555)) {
           this.anInt3555 = var2.anInt2492;
         }
 

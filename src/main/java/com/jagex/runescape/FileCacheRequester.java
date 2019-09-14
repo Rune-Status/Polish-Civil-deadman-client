@@ -105,7 +105,7 @@ public final class FileCacheRequester implements Runnable {
             break;
           }
 
-          if (~var6.subnodeKey == ~var3 && var6.aClass41_4056 == var1
+          if ((var6.subnodeKey == var3) && var6.aClass41_4056 == var1
             && var6.anInt4061 == 2) {
             var4.aByteArray4059 = var6.aByteArray4059;
             var4.aBoolean3632 = false;

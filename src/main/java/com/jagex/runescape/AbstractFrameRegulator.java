@@ -112,7 +112,7 @@ public abstract class AbstractFrameRegulator {
   public static void method1769(float[][] var0, byte[][] var1, byte[][] var2, Light[] var3, int var4,
                                int var5, float[][] var6, byte[][] var7, byte[][] var8, int[][] var9,
                                int var10, float[][] var11) {
-    for (int var12 = 0; ~var12 > ~var5; ++var12) {
+    for (int var12 = 0; (var12 < var5); ++var12) {
         Light var13 = var3[var12];
         if (var13.anInt704 == var4) {
           int var15 = 0;
@@ -214,7 +214,7 @@ public abstract class AbstractFrameRegulator {
                       var33 = var13.aShortArray706[var15 + -1];
                       var34 = var16 + (var33 >> 8);
                       var35 = var34 - -(var33 & 255);
-                      var32 = var23 > var34 && ~var23 > ~var35;
+                      var32 = var23 > var34 && (var23 < var35);
                     }
 
                     if (var31 && var32) {
@@ -231,14 +231,14 @@ public abstract class AbstractFrameRegulator {
                       var33 = var13.aShortArray706[-1 + var15];
                       var34 = (var33 >> 8) + var16;
                       var35 = var34 + (255 & var33);
-                      var31 = ~var34 > ~var23 && ~var23 > ~var35;
+                      var31 = (var34 < var23) && (var23 < var35);
                     }
 
                     if (!var32 && ~(1 + var19) >= ~var18) {
                       var33 = var13.aShortArray706[var15 + 1];
                       var34 = (var33 >> 8) + var16;
                       var35 = var34 - -(255 & var33);
-                      var32 = ~var34 > ~var23 && var35 > var23;
+                      var32 = (var34 < var23) && var35 > var23;
                     }
 
                     if (var31 && var32) {

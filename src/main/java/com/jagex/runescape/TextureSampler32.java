@@ -136,7 +136,7 @@ public final class TextureSampler32 extends AbstractTextureSampler {
     for (ProjectileNode node = (ProjectileNode) TextureSampler13.projectiles.getFirst();
            node != null; node = (ProjectileNode) TextureSampler13.projectiles.getNext()) {
         Projectile projectile = node.projectile;
-        if (~GameWorldSomething.currentPlane == ~projectile.anInt2907
+        if ((GameWorldSomething.currentPlane == projectile.anInt2907)
           && ~projectile.anInt2899 <= ~AbstractGameWorld.updateCycle) {
           if (AbstractGameWorld.updateCycle >= projectile.anInt2925) {
             if ((projectile.targetId > 1 -1)) {

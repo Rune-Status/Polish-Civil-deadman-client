@@ -49,7 +49,7 @@ public final class TextureSampler4 extends AbstractTextureSampler {
       this.anIntArray3230[0] = var1;
       int var3 = this.anInt3235 / 2;
 
-      for (int var5 = 0; ~var5 > ~this.anInt3233; ++var5) {
+      for (int var5 = 0; (var5 < this.anInt3233); ++var5) {
         int var6;
         int var7;
         if ((var5 > 1 -1)) {
@@ -62,7 +62,7 @@ public final class TextureSampler4 extends AbstractTextureSampler {
 
         this.anIntArrayArray3225[var5][0] = 0;
 
-        for (var6 = 0; ~var6 > ~this.anInt3242; ++var6) {
+        for (var6 = 0; (var6 < this.anInt3242); ++var6) {
           if (var6 > 0) {
             var7 = this.anInt3235;
             int var8 =
@@ -128,7 +128,7 @@ public final class TextureSampler4 extends AbstractTextureSampler {
             int var14 = this.anIntArrayArray3225[var11][var6];
             int var10 = var6 - 1;
             int var13 = this.anIntArrayArray3225[var11][var10];
-            if (~(var13 - -this.anInt3223) > ~var8 && (-this.anInt3223 + var14) > var8) {
+            if (((var13 - -this.anInt3223) < var8) && (-this.anInt3223 + var14) > var8) {
               var3[var4] = this.anIntArrayArray3240[var11][var10];
             } else {
               var3[var4] = 0;

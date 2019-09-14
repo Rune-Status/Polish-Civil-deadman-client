@@ -37,14 +37,14 @@ public final class GameBuffer extends Buffer {
     int value = 0;
     this.bitOffset += len;
 
-    while (~pass > ~len) {
+    while ((pass < len)) {
       value += (StillGraphic.BIT_MASKS[pass] & this.bytes[byteOffset++])
           << -pass + len;
       len -= pass;
       pass = 8;
     }
 
-    if (~pass == ~len) {
+    if ((pass == len)) {
       value += this.bytes[byteOffset] & StillGraphic.BIT_MASKS[pass];
     } else {
       value +=

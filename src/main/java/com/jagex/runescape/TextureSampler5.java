@@ -54,7 +54,7 @@ public final class TextureSampler5 extends AbstractTextureSampler {
         for (var10 = 0; SomethingLight0.anInt1559 > var10; ++var10) {
           int var16 = 0;
 
-          for (int var17 = 0; ~var17 > ~var5; ++var17) {
+          for (int var17 = 0; (var17 < var5); ++var17) {
             var16 += var9[var17][var10];
           }
 

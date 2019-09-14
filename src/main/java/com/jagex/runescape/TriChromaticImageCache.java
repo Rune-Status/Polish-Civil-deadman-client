@@ -48,7 +48,7 @@ public final class TriChromaticImageCache {
   }
 
   public int[][][] method1589(byte var1 ) {
-    if (~this.anInt1369 == ~this.anInt1367) {
+    if ((this.anInt1369 == this.anInt1367)) {
         if (var1 > -12) {
           this.anInt1365 = -104;
         }
@@ -94,7 +94,7 @@ public final class TriChromaticImageCache {
           TriChromaticImageBuffer var4 = this.aClass3_Sub20Array1371[var2];
           if (var4 == null) {
             this.aBoolean1379 = true;
-            if (~this.anInt1368 > ~this.anInt1367) {
+            if ((this.anInt1368 < this.anInt1367)) {
               var4 = new TriChromaticImageBuffer(var2, this.anInt1368);
               ++this.anInt1368;
             } else {

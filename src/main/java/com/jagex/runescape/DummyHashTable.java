@@ -18,7 +18,7 @@ public final class DummyHashTable {
   public DummyHashTable(int var1 ) {
     this.aClass3_Sub28Array1684 = new SubNode[var1];
 
-      for (int var2 = 0; ~var2 > ~var1; ++var2) {
+      for (int var2 = 0; (var2 < var1); ++var2) {
         SubNode var3 = this.aClass3_Sub28Array1684[var2] = new SubNode();
         var3.prevSubNode = var3;
         var3.nextSubNode = var3;
@@ -129,7 +129,7 @@ public final class DummyHashTable {
         if (var6 != BufferData.method1736(GameWorldSomething.currentPlane, 1, var4 + var17,
           var2 + var12) || var6 != BufferData.method1736(GameWorldSomething.currentPlane, 1,
           var4 - -var11, var13 + var2)) {
-          for (var15 = 0; ~var15 > ~var14.vertexCCC; ++var15) {
+          for (var15 = 0; (var15 < var14.vertexCCC); ++var15) {
             var14.vy[var15] +=
               BufferData.method1736(GameWorldSomething.currentPlane, 1, var14.vx[var15] + var4,
                 var14.vz[var15] + var2) - var6;

@@ -74,7 +74,7 @@ public final class DummyClass29 {
   }
 
   public static void method909(int var0, Widget var1) {
-    if (~SomethingOtherWorldMap.anInt2535 == ~var1.anInt204) {
+    if ((SomethingOtherWorldMap.anInt2535 == var1.anInt204)) {
         GroundItemNode.aBooleanArray3674[var1.anInt292] = true;
       }
 

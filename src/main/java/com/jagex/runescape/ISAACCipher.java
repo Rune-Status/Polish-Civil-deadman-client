@@ -22,7 +22,7 @@ public final class ISAACCipher {
     this.anIntArray970 = new int[256];
       this.anIntArray971 = new int[256];
 
-      for (int var2 = 0; ~var2 > ~var1.length; ++var2) {
+      for (int var2 = 0; (var2 < var1.length); ++var2) {
         this.anIntArray970[var2] = var1[var2];
       }
 
@@ -290,7 +290,7 @@ public final class ISAACCipher {
         var8 = (-var7 + TextureSampler25.amountContextActions - 1) * 15 + var2
             + 35;
         if (var1 < var5 && var5 < var1 - -var3 && var6 > (-13 + var8)
-            && ~var6 > ~(var8 + 3)) {
+            && (var6 < (var8 + 3))) {
           if (GlRenderer.useOpenGlRenderer) {
             GlUtils.fillQuad(var1, var8 + -13, var3, 16, Mouse.anInt1926,
                 -SceneShadowMap.anInt1771 + 256);
@@ -385,8 +385,8 @@ public final class ISAACCipher {
         var8 = 15 * (TextureSampler25.amountContextActions - 1 + -var7) + var2
             + 35;
         var9 = TextureSampler32.anInt3351;
-        if (var1 < var5 && var3 + var1 > var5 && ~(var8 - 13) > ~var6
-            && ~var6 > ~(var8 - -3)) {
+        if (var1 < var5 && var3 + var1 > var5 && ((var8 - 13) < var6)
+            && (var6 < (var8 - -3))) {
           var9 = DummyClass14.anInt1957;
         }
 
@@ -422,16 +422,16 @@ public final class ISAACCipher {
         int var3 = var2.anInt1293;
         RenderAnimation var4 = var0.getRenderAnimationId(false);
         assert var4 != null;
-        if (~var4.anInt368 == ~var0.anInt2764) {
+        if ((var4.anInt368 == var0.anInt2764)) {
           var3 = var2.anInt1262;
         } else if ((var0.anInt2764 != var4.anInt393)
             && var4.anInt386 != var0.anInt2764
             && var0.anInt2764 != var4.anInt375
             && var0.anInt2764 != var4.anInt373) {
-          if (~var4.anInt398 == ~var0.anInt2764
+          if ((var4.anInt398 == var0.anInt2764)
               || var0.anInt2764 == var4.anInt372
-              || ~var0.anInt2764 == ~var4.anInt379
-              || ~var0.anInt2764 == ~var4.anInt406) {
+              || (var0.anInt2764 == var4.anInt379)
+              || (var0.anInt2764 == var4.anInt406)) {
             var3 = var2.anInt1290;
           }
         } else {

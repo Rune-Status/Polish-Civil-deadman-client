@@ -29,7 +29,7 @@ public final class FileUnpacker {
 
         boolean var2 = true;
 
-        for (int var3 = 0; ~var3 > ~this.table.anIntArray953.length; ++var3) {
+        for (int var3 = 0; (var3 < this.table.anIntArray953.length); ++var3) {
           int var4 = this.table.anIntArray953[var3];
           if (this.anObjectArray1954[var4] == null) {
             this.method2134(false, var4);
@@ -370,7 +370,7 @@ public final class FileUnpacker {
 
             int var15;
             int var16;
-            for (int var14 = 0; ~var14 > ~var11; ++var14) {
+            for (int var14 = 0; (var14 < var11); ++var14) {
               var15 = 0;
 
               for (var16 = 0; var4 > var16; ++var16) {
@@ -382,7 +382,7 @@ public final class FileUnpacker {
 
             byte[][] var24 = new byte[var4][];
 
-            for (var15 = 0; ~var15 > ~var4; ++var15) {
+            for (var15 = 0; (var15 < var4); ++var15) {
               var24[var15] = new byte[var13[var15]];
               var13[var15] = 0;
             }
@@ -391,7 +391,7 @@ public final class FileUnpacker {
             var15 = 0;
 
             int var17;
-            for (var16 = 0; ~var16 > ~var11; ++var16) {
+            for (var16 = 0; (var16 < var11); ++var16) {
               var17 = 0;
 
               for (int var18 = 0; var4 > var18; ++var18) {

@@ -305,7 +305,7 @@ public final class ItemConfig {
         int var9;
         if (this.aShortArray774 != null) {
           for (var9 = 0; this.aShortArray774.length > var9; ++var9) {
-            if (this.aByteArray785 != null && ~var9 > ~this.aByteArray785.length) {
+            if (this.aByteArray785 != null && (var9 < this.aByteArray785.length)) {
               var12.replaceColor(this.aShortArray774[var9],
                 TextureSampler38.aShortArray3453[this.aByteArray785[var9] & 255]);
             } else {
@@ -434,7 +434,7 @@ public final class ItemConfig {
                           var5 = var2.readUnsignedByte();
                           this.aByteArray785 = new byte[var5];
 
-                          for (var6 = 0; ~var6 > ~var5; ++var6) {
+                          for (var6 = 0; (var6 < var5); ++var6) {
                             this.aByteArray785[var6] = var2.readByte();
                           }
                         } else if (var3 == 65) {
@@ -724,7 +724,7 @@ public final class ItemConfig {
         int var3;
         if (this.aShortArray774 != null) {
           for (var3 = 0; this.aShortArray774.length > var3; ++var3) {
-            if (this.aByteArray785 != null && ~var3 > ~this.aByteArray785.length) {
+            if (this.aByteArray785 != null && (var3 < this.aByteArray785.length)) {
               var2.replaceColor(this.aShortArray774[var3],
                 TextureSampler38.aShortArray3453[this.aByteArray785[var3] & 255]);
             } else {
@@ -780,7 +780,7 @@ public final class ItemConfig {
     int k1 = 0;
     DummyClass56.aClass94Array1454 = new GameString[class3_sub28_sub15.anInt3687];
     int l1 = 0;
-    for (int i2 = 1; ~i2 > ~aobj.length; i2++) {
+    for (int i2 = 1; (i2 < aobj.length); i2++) {
       if (aobj[i2] instanceof Integer) {
         int k2 = ((Integer) aobj[i2]).intValue();
         if (~k2 == 0x7ffffffe) {
@@ -863,14 +863,14 @@ public final class ItemConfig {
         }
         if ((j1 == 9 -1)) {
           k -= 2;
-          if (~GroundItem.anIntArray2929[k + 1] == ~GroundItem.anIntArray2929[k]) {
+          if ((GroundItem.anIntArray2929[k + 1] == GroundItem.anIntArray2929[k])) {
             i1 += ai1[i1];
           }
           continue;
         }
         if (j1 == 9) {
           k -= 2;
-          if (~GroundItem.anIntArray2929[k] > ~GroundItem.anIntArray2929[1 + k]) {
+          if ((GroundItem.anIntArray2929[k] < GroundItem.anIntArray2929[1 + k])) {
             i1 += ai1[i1];
           }
           continue;
@@ -1070,7 +1070,7 @@ public final class ItemConfig {
           }
           if (k66 >= class11_21.aClass11Array262.length) {
             Widget[] aclass11 = new Widget[k66 + 1];
-            for (int k81 = 0; ~k81 > ~class11_21.aClass11Array262.length; k81++) {
+            for (int k81 = 0; (k81 < class11_21.aClass11Array262.length); k81++) {
               aclass11[k81] = class11_21.aClass11Array262[k81];
             }
 
@@ -2273,7 +2273,7 @@ public final class ItemConfig {
                           k -= 2;
                           int l54 = GroundItem.anIntArray2929[1 + k];
                           int j23 = GroundItem.anIntArray2929[k];
-                          GroundItem.anIntArray2929[k++] = ~l54 > ~j23 ? j23 : l54;
+                          GroundItem.anIntArray2929[k++] = (l54 < j23) ? j23 : l54;
                           continue;
                         }
                         if (j1 != 4018) {
@@ -4179,8 +4179,7 @@ public final class ItemConfig {
                                   TextureSampler18.aShort4038 =
                                     (short) GroundItem.anIntArray2929[k - -3];
                                   if (TextureSampler18.aShort4038 > 0) {
-                                    if (~TextureSampler18.aShort4038
-                                      > ~GameWorldSomething.aShort505) {
+                                    if ((TextureSampler18.aShort4038 < GameWorldSomething.aShort505)) {
                                       TextureSampler18.aShort4038 = GameWorldSomething.aShort505;
                                     }
                                   } else {
@@ -4614,7 +4613,7 @@ public final class ItemConfig {
                         GameString class94_41 = Node.aClass94Array75[--l];
                         GameString class94_60 = Cache.createString(class94_41.getLength());
                         boolean flag9 = false;
-                        for (int l78 = 0; ~l78 > ~class94_41.getLength(); l78++) {
+                        for (int l78 = 0; (l78 < class94_41.getLength()); l78++) {
                           int l80 = class94_41.charAt(l78);
                           if (l80 == 60) {
                             flag9 = true;
@@ -5251,7 +5250,7 @@ public final class ItemConfig {
           if (~k75 <= ~TextureSampler4.anIntArray3228.length) {
             continue label0;
           }
-          if (~j43 == ~TextureSampler4.anIntArray3228[k75]) {
+          if ((j43 == TextureSampler4.anIntArray3228[k75])) {
             TextureCache.localPlayer.appearance.method1164(k75, i66, 0);
             continue label0;
           }

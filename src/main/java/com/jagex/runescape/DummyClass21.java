@@ -71,7 +71,7 @@ public final class DummyClass21 {
         DummyClass21.aClass61_1758 = null;
       }
 
-      if (~var3 > ~var0) {
+      if ((var3 < var0)) {
         int var6 = var3;
         int var5 = (var3 - -var0) / 2;
         long var7 = var1[var5];

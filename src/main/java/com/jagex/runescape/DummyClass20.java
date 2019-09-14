@@ -45,7 +45,7 @@ public final class DummyClass20 {
         if (~var5 >= ~var4 && (var5 + 16) > var4 && var0 >= var6 && var6 - -16 > var0) {
           var2.anInt208 -= 4;
           DummyClass29.method909(113, var2);
-        } else if (var4 >= var5 && ~var4 > ~(16 + var5) && ~var0 <= ~(var1 + (var6 - 16))
+        } else if (var4 >= var5 && (var4 < (16 + var5)) && ~var0 <= ~(var1 + (var6 - 16))
           && (var1 + var6) > var0) {
           var2.anInt208 += 4;
           DummyClass29.method909(112, var2);

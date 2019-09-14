@@ -74,7 +74,7 @@ public final class SocketStream implements Runnable {
             this.anInt1236 = (var1 + this.anInt1236) % 5000;
 
             try {
-              if (~this.anInt1230 == ~this.anInt1236) {
+              if ((this.anInt1230 == this.anInt1236)) {
                 this.anOutputStream1231.flush();
               }
             } catch (IOException var7) {
@@ -140,7 +140,7 @@ public final class SocketStream implements Runnable {
             for (int var6 = 0; var4 > var6; ++var6) {
               this.aByteArray1233[this.anInt1230] = var3[var2 + var6];
               this.anInt1230 = (this.anInt1230 + 1) % 5000;
-              if (~this.anInt1230 == ~((4900 + this.anInt1236) % 5000)) {
+              if ((this.anInt1230 == ((4900 + this.anInt1236) % 5000))) {
                 throw new IOException();
               }
             }
@@ -298,7 +298,7 @@ public final class SocketStream implements Runnable {
       int var5) {
     if ((SomethingLight0.anInt1552 < 51 -1)) {
         if (var1.anIntArrayArray1867 != null
-            && ~var5 > ~var1.anIntArrayArray1867.length
+            && (var5 < var1.anIntArrayArray1867.length)
             && var1.anIntArrayArray1867[var5] != null) {
           int var6 = var1.anIntArrayArray1867[var5][0];
           int var7 = var6 >> 8;

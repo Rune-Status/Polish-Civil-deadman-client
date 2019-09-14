@@ -71,7 +71,7 @@ public final class SomethingIndex150 {
     GameString var3 = Objects.requireNonNull(var2.method1579(-17)).formatName((byte) -50);
       boolean var4 = false;
 
-      for (int var5 = var1; ~var5 > ~DummyClass13.anInt2022; ++var5) {
+      for (int var5 = var1; (var5 < DummyClass13.anInt2022); ++var5) {
         Player var6 = TextureSampler0.players[DummyClass42.anIntArray887[var5]];
         if (var6 != null && var6.name != null && var6.name.method1531(var3)) {
           var4 = true;

@@ -42,7 +42,7 @@ public final class DummyClass60 {
         }
       }
 
-      for (var1 = 0; ~var1 > ~TextureSampler5.npcs.length; ++var1) {
+      for (var1 = 0; (var1 < TextureSampler5.npcs.length); ++var1) {
         if (TextureSampler5.npcs[var1] != null) {
           TextureSampler5.npcs[var1].anInt2772 = -1;
         }

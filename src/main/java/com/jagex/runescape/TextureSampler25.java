@@ -135,7 +135,7 @@ public final class TextureSampler25 extends AbstractTextureSampler {
         byte var2;
         int var10;
         if ((var8 >= 1 -1) && ((-63 + var9) >= 1 -1) && DummyClass30.anInt455 > var8 + 63
-          && ~var9 > ~DummyClass58.anInt1460) {
+          && (var9 < DummyClass58.anInt1460)) {
           var10 = var8 >> 6;
           int var11 = var9 >> 6;
 
@@ -165,7 +165,7 @@ public final class TextureSampler25 extends AbstractTextureSampler {
             }
           }
         } else {
-          for (var10 = 0; ~var10 > ~(!var3 ? 4096 : 64); ++var10) {
+          for (var10 = 0; (var10 < (!var3 ? 4096 : 64)); ++var10) {
             var2 = var1.readByte();
             if ((var2 != 1 -1)) {
               ++var1.position;
@@ -374,7 +374,7 @@ public final class TextureSampler25 extends AbstractTextureSampler {
           var11 = DummyClass13.anInt2020;
         }
 
-        if (~var10 > ~DummyClass13.anInt2020) {
+        if ((var10 < DummyClass13.anInt2020)) {
           var10 = DummyClass13.anInt2020;
           var8 = (DummyClass13.anInt2020 + -var13 << 12) / var12;
         } else if (LightIntensity.anInt902 < var10) {

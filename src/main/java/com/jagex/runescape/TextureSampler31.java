@@ -91,7 +91,7 @@ public final class TextureSampler31 extends AbstractTextureSampler {
       SomethingTexture4.method1349();
 
       int var1;
-      for (var1 = 0; ~var1 > ~DummyClass17.anInt1829; ++var1) {
+      for (var1 = 0; (var1 < DummyClass17.anInt1829); ++var1) {
         int var2 = VariableUpdate.anIntArray2292[var1];
         if ((TextureSampler5.npcs[var2].anInt2838 != AbstractGameWorld.updateCycle)) {
           if (TextureSampler5.npcs[var2].config.method1474(-1)) {

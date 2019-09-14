@@ -256,7 +256,7 @@ public final class DummyClass38 {
       int var3 = (var2.readUnsignedByte() & 255) - -1;
 
       int var4;
-      for (var4 = 0; ~var4 > ~DummyClass53.spriteCount; ++var4) {
+      for (var4 = 0; (var4 < DummyClass53.spriteCount); ++var4) {
         Something3dRoot.anIntArray2048[var4] = var2.readUnsignedShort();
       }
 
@@ -264,7 +264,7 @@ public final class DummyClass38 {
         DummyClass38.method1081((byte) -52);
       }
 
-      for (var4 = 0; ~var4 > ~DummyClass53.spriteCount; ++var4) {
+      for (var4 = 0; (var4 < DummyClass53.spriteCount); ++var4) {
         Buffer.anIntArray2591[var4] = var2.readUnsignedShort();
       }
 
@@ -272,14 +272,14 @@ public final class DummyClass38 {
         GroundItem.anIntArray2931[var4] = var2.readUnsignedShort();
       }
 
-      for (var4 = 0; ~var4 > ~DummyClass53.spriteCount; ++var4) {
+      for (var4 = 0; (var4 < DummyClass53.spriteCount); ++var4) {
         TextureSampler26.anIntArray3076[var4] = var2.readUnsignedShort();
       }
 
       var2.position = -(8 * DummyClass53.spriteCount) + var0.length + -7 + 3 + -(var3 * 3);
       TextureSampler38.anIntArray3446 = new int[var3];
 
-      for (var4 = 1; ~var4 > ~var3; ++var4) {
+      for (var4 = 1; (var4 < var3); ++var4) {
         TextureSampler38.anIntArray3446[var4] = var2.readUnsignedMedium((byte) 122);
         if (TextureSampler38.anIntArray3446[var4] == 0) {
           TextureSampler38.anIntArray3446[var4] = 1;
@@ -305,21 +305,21 @@ public final class DummyClass38 {
           }
 
           if ((2 & var11) != 0) {
-            for (var12 = 0; ~var12 > ~var7; ++var12) {
+            for (var12 = 0; (var12 < var7); ++var12) {
               byte var16 = var9[var12] = var2.readByte();
               var10 |= var16 != -1;
             }
           }
         } else {
           int var13;
-          for (var12 = 0; ~var12 > ~var5; ++var12) {
+          for (var12 = 0; (var12 < var5); ++var12) {
             for (var13 = 0; var13 < var6; ++var13) {
               var8[var12 + var13 * var5] = var2.readByte();
             }
           }
 
           if (((var11 & 2) != 1 -1)) {
-            for (var12 = 0; ~var12 > ~var5; ++var12) {
+            for (var12 = 0; (var12 < var5); ++var12) {
               for (var13 = 0; var13 < var6; ++var13) {
                 byte var14 = var9[var5 * var13 + var12] = var2.readByte();
                 var10 |= var14 != -1;

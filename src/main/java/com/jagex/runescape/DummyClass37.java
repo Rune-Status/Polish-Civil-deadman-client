@@ -50,7 +50,7 @@ public final class DummyClass37 {
                 / 16;
         AreaSoundEffect.landscapeEncryptionKeys = new int[var6][4];
 
-        for (var7 = 0; ~var7 > ~var6; ++var7) {
+        for (var7 = 0; (var7 < var6); ++var7) {
           for (var18 = 0; (var18 < 5 -1); ++var18) {
             AreaSoundEffect.landscapeEncryptionKeys[var7][var18] =
                 SpotAnimationConfig.gameBuffer.readInt((byte) -124);
@@ -81,8 +81,8 @@ public final class DummyClass37 {
                 int var14 = var13 / 8 + (var12 / 8 << 8);
 
                 int var15;
-                for (var15 = 0; ~var15 > ~var6; ++var15) {
-                  if (~var14 == ~AudioStreamEncoder3.regionHashes[var15]) {
+                for (var15 = 0; (var15 < var6); ++var15) {
+                  if ((var14 == AudioStreamEncoder3.regionHashes[var15])) {
                     var14 = -1;
                     break;
                   }
@@ -423,7 +423,7 @@ public final class DummyClass37 {
                 for (GroundItemNode var34 = (GroundItemNode) var29.getFirst();
                      var34 != null; var34 = (GroundItemNode) var29.getNext()) {
                   GroundItem var33 = var34.aClass140_Sub7_3676;
-                  if (~(var4 & 32767) == ~var33.anInt2936 && var5 == var33.anInt2930) {
+                  if (((var4 & 32767) == var33.anInt2936) && var5 == var33.anInt2930) {
                     var33.anInt2930 = var6;
                     break;
                   }

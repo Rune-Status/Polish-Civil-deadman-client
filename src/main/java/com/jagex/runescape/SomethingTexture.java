@@ -237,7 +237,7 @@ public final class SomethingTexture extends AbstractSomethingTexture {
         int var7 = var4[var5];
         int var8 = var0[var5];
 
-        for (int var9 = 0; (var7 != 1 -1) && ~var9 > ~var2.aClass145Array2809.length; var7 >>>= 1) {
+        for (int var9 = 0; (var7 != 1 -1) && (var9 < var2.aClass145Array2809.length); var7 >>>= 1) {
           if (((1 & var7) != 1 -1)) {
             if (~var6 == 0) {
               var2.aClass145Array2809[var9] = null;
@@ -246,7 +246,7 @@ public final class SomethingTexture extends AbstractSomethingTexture {
               int var11 = var10.anInt1845;
               Unsure var12 = var2.aClass145Array2809[var9];
               if (var12 != null) {
-                if (~var6 == ~var12.anInt1890) {
+                if ((var6 == var12.anInt1890)) {
                   if (var11 == 0) {
                     var12 = var2.aClass145Array2809[var9] = null;
                   } else {

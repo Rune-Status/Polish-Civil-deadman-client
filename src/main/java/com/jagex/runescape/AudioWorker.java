@@ -146,10 +146,10 @@ public final class AudioWorker implements Runnable {
       int[] var32 = new int[var6];
       int[] var31 = new int[var6];
 
-      for (var12 = -5; ~var12 > ~var27; ++var12) {
+      for (var12 = -5; (var12 < var27); ++var12) {
         int var15;
         int var35;
-        for (int var34 = 0; ~var34 > ~var6; ++var34) {
+        for (int var34 = 0; (var34 < var6); ++var34) {
           var14 = var12 + 5;
           if (var27 > var14) {
             var15 = 255 & var4[var14][var34];
@@ -186,7 +186,7 @@ public final class AudioWorker implements Runnable {
           int var18 = 0;
           var35 = 0;
 
-          for (int var19 = -5; ~var19 > ~var6; ++var19) {
+          for (int var19 = -5; (var19 < var6); ++var19) {
             int var20 = var19 - -5;
             if (var6 > var20) {
               var18 += var31[var20];

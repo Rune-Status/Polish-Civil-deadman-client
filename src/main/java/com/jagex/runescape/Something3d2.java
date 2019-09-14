@@ -102,7 +102,7 @@ public class Something3d2 extends Something3dRoot {
   }
 
   public static int method2247(byte var0, int var1, Widget var2) {
-    if (var2.anIntArrayArray298 != null && ~var1 > ~var2.anIntArrayArray298.length) {
+    if (var2.anIntArrayArray298 != null && (var1 < var2.anIntArrayArray298.length)) {
         int var3 = -92 % ((var0 - 71) / 34);
 
         try {
@@ -197,7 +197,7 @@ public class Something3d2 extends Something3dRoot {
                 || MapScene.aBoolean66)) {
                 assert var12 != null;
                 for (var14 = 0; var12.anIntArray254.length > var14; ++var14) {
-                  if (~var12.anIntArray254[var14] == ~(1 + var13)) {
+                  if ((var12.anIntArray254[var14] == (1 + var13))) {
                     var9 = 999999999;
                     break;
                   }
@@ -283,7 +283,7 @@ public class Something3d2 extends Something3dRoot {
       }
 
       for (; var2 != null; var2 = DummyClass23.aClass130_1659.getNext(-97)) {
-        if (~(65535L & var2.key >> 48) == ~var1) {
+        if (((65535L & var2.key >> 48) == var1)) {
           var2.unlinkNode();
         }
       }

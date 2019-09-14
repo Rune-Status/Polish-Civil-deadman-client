@@ -125,7 +125,7 @@ public final class GameObjectConfig {
     int var3 = -1 % ((31 - var1) / 41);
       if (this.anIntArray1487 != null) {
         for (int var7 = 0; this.anIntArray1487.length > var7; ++var7) {
-          if (~var2 == ~this.anIntArray1487[var7]) {
+          if ((var2 == this.anIntArray1487[var7])) {
             return LinearHashTable.aClass153_1043.method2129((byte) 72, 0,
                 this.anIntArray1519[var7] & '\uffff');
           }
@@ -189,7 +189,7 @@ public final class GameObjectConfig {
 
         var6 = this.anIntArray1519.length;
 
-        for (var7 = 0; ~var7 > ~var6; ++var7) {
+        for (var7 = 0; (var7 < var6); ++var7) {
           int var8 = this.anIntArray1519[var7];
           if (var5) {
             var8 += 65536;
@@ -342,7 +342,7 @@ public final class GameObjectConfig {
           this.method1696(34, 54, null, 55, 80, null, true, null, (byte) 127, true, -38);
         }
 
-        for (int var2 = 0; ~var2 > ~this.anIntArray1524.length; ++var2) {
+        for (int var2 = 0; (var2 < this.anIntArray1524.length); ++var2) {
           if (~this.anIntArray1524[var2] != 0) {
             GameObjectConfig var3 =
               DummyClass11.method2207(var1 + -28929, this.anIntArray1524[var2]);
@@ -465,7 +465,7 @@ public final class GameObjectConfig {
                               var4 = var1.readUnsignedByte();
                               this.aByteArray1513 = new byte[var4];
 
-                              for (var5 = 0; ~var5 > ~var4; ++var5) {
+                              for (var5 = 0; (var5 < var4); ++var5) {
                                 this.aByteArray1513[var5] = var1.readByte();
                               }
                             } else if (var2 != 60) {
@@ -679,7 +679,7 @@ public final class GameObjectConfig {
                             this.aShortArray1495 = new short[var4];
                             this.aShortArray1476 = new short[var4];
 
-                            for (var5 = 0; ~var5 > ~var4; ++var5) {
+                            for (var5 = 0; (var5 < var4); ++var5) {
                               this.aShortArray1476[var5] = (short) var1
                                   .readUnsignedShort();
                               this.aShortArray1495[var5] = (short) var1
@@ -743,8 +743,8 @@ public final class GameObjectConfig {
         var8 = -1;
 
         int var9;
-        for (var9 = 0; ~var9 > ~this.anIntArray1487.length; ++var9) {
-          if (~this.anIntArray1487[var9] == ~var4) {
+        for (var9 = 0; (var9 < this.anIntArray1487.length); ++var9) {
+          if ((this.anIntArray1487[var9] == var4)) {
             var8 = var9;
             break;
           }
@@ -833,7 +833,7 @@ public final class GameObjectConfig {
           && this.anInt1534 == 0 && !var14;
       GlModel var19 = var5.createCopy(var18, var15,
           this.aShortArray1477 == null, true,
-        ~var5.method1903() == ~var6, (var1 == 1 -1) && !var14, var3, ~var7 == ~var5.method1924(), true,
+        (var5.method1903() == var6), (var1 == 1 -1) && !var14, var3, (var7 == var5.method1924()), true,
         !var14, this.aShortArray1476 == null);
       if (var14) {
         var19.method1931();

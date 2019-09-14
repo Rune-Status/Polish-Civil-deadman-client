@@ -77,7 +77,7 @@ public class TextureSampler39 extends AbstractTextureSampler {
         int[] var4 = var3[0];
         int[] var5 = var3[1];
         int[] var6 = var3[2];
-        int var7 = (~this.anInt3283 == ~DummyClass55.anInt1427 ?
+        int var7 = ((this.anInt3283 == DummyClass55.anInt1427) ?
           var2 :
             this.anInt3283 * var2 / DummyClass55.anInt1427) * this.anInt3280;
         int var8;

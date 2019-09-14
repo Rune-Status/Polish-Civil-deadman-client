@@ -94,7 +94,7 @@ public final class SomethingOtherWorldMap extends Node {
       GameString var10 = Cache.createString(0);
 
       int var11;
-      for (var11 = 0; ~var11 > ~var2; ++var11) {
+      for (var11 = 0; (var11 < var2); ++var11) {
         var10.append(SomethingScene.toString((int) (var3 % 10L)));
         var3 /= 10L;
       }

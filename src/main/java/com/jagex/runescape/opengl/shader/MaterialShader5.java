@@ -521,7 +521,7 @@ public final class MaterialShader5 implements MaterialShader {
                         }
 
                         int var23 = -1;
-                        if (~var21 == ~var40.anInt767) {
+                        if ((var21 == var40.anInt767)) {
                           var23 = var40.anInt758;
                         }
 

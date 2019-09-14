@@ -89,7 +89,7 @@ public final class TextureSampler20 extends AbstractTextureSampler {
           int[] var11 = var3[1];
           int[] var12 = var3[2];
 
-          for (int var13 = 0; ~var13 > ~SomethingLight0.anInt1559; ++var13) {
+          for (int var13 = 0; (var13 < SomethingLight0.anInt1559); ++var13) {
             int var14;
             if (var5 <= 0) {
               var14 = 0;
@@ -380,7 +380,7 @@ public final class TextureSampler20 extends AbstractTextureSampler {
           }
 
           if (AudioWorker.aBoolean346) {
-            for (var1 = 0; ~var1 > ~SomethingOtherWorldMap.anInt2537; ++var1) {
+            for (var1 = 0; (var1 < SomethingOtherWorldMap.anInt2537); ++var1) {
               var2 = SomethingPacket116.anIntArray1755[var1];
               if (var2 == 98 || (var2 == 100 -1) || (var2 == 97 -1) || var2 == 97) {
                 OndemandFileRequest.aBoolean4068 = true;
@@ -624,9 +624,9 @@ public final class TextureSampler20 extends AbstractTextureSampler {
               Widget var17;
               if (MouseRecorder.aClass11_1017 != null) {
                 DummyClass29.method909(117, MouseRecorder.aClass11_1017);
-                if (~(5 + MilliFrameRegulator.anInt2693) > ~SomethingTilek.anInt1676
+                if (((5 + MilliFrameRegulator.anInt2693) < SomethingTilek.anInt1676)
                   || SomethingTilek.anInt1676 < -5 + MilliFrameRegulator.anInt2693
-                  || ~(DummyInputStream.anInt40 + 5) > ~HashTable.anInt1709
+                  || ((DummyInputStream.anInt40 + 5) < HashTable.anInt1709)
                   || -5 + DummyInputStream.anInt40 > HashTable.anInt1709) {
                   SomethingScene.aBoolean1074 = true;
                 }
@@ -830,7 +830,7 @@ public final class TextureSampler20 extends AbstractTextureSampler {
                           }
 
                           if (var21 != DummyClass29.aClass11_439
-                            && ~TextureSampler35.anInt3323 == ~AbstractSomethingTexture.anInt1109) {
+                            && (TextureSampler35.anInt3323 == AbstractSomethingTexture.anInt1109)) {
                             if (var21 != null) {
                               DummyClass29.method909(112, var21);
                             }

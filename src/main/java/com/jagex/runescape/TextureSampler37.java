@@ -99,7 +99,7 @@ public final class TextureSampler37 extends AbstractTextureSampler {
       var5 = (var5 << 12) / this.anInt3257;
       var5 = (var5 << 12) / this.anInt3266;
       var5 = var5 * this.anInt3254 >> 12;
-      return var5 > -var2 + var3 && ~(-var5) > ~(var3 + -var2);
+      return var5 > -var2 + var3 && ((-var5) < (var3 + -var2));
   }
 
   private boolean method271(int var1, int var2, byte var3) {
@@ -112,7 +112,7 @@ public final class TextureSampler37 extends AbstractTextureSampler {
       var5 = (var5 << 12) / this.anInt3257;
       var5 = (var5 << 12) / this.anInt3266;
       var5 = var5 * this.anInt3254 >> 12;
-      return ~(var2 + var1) > ~var5 && -var5 < var2 + var1;
+      return ((var2 + var1) < var5) && -var5 < var2 + var1;
   }
 
   public static void method267(byte var0) {
@@ -207,8 +207,8 @@ public final class TextureSampler37 extends AbstractTextureSampler {
           }
 
           if ((DummyCanvas.anInt23 == 5 -1)) {
-            if (~SomethingVolume15.gameSocket.available() > ~(8
-              * TextureSampler29.aClass94Array3391.length)) {
+            if ((SomethingVolume15.gameSocket.available() < (8
+              * TextureSampler29.aClass94Array3391.length))) {
               return;
             }
 
@@ -279,7 +279,7 @@ public final class TextureSampler37 extends AbstractTextureSampler {
         if (TextureSampler35.aByteArrayArray3335[var2] != null) {
           int var3 = -1;
 
-          for (int var4 = 0; ~var4 > ~TextureSampler11.anInt3244; ++var4) {
+          for (int var4 = 0; (var4 < TextureSampler11.anInt3244); ++var4) {
             if (TextureSampler13.anIntArray3367[var4] == AudioStreamEncoder3.regionHashes[var2]) {
               var3 = var4;
               break;
@@ -295,7 +295,7 @@ public final class TextureSampler37 extends AbstractTextureSampler {
           int var5 = 0;
           Buffer var16 = new Buffer(TextureSampler35.aByteArrayArray3335[var2]);
 
-          while (~var16.position > ~TextureSampler35.aByteArrayArray3335[var2].length
+          while ((var16.position < TextureSampler35.aByteArrayArray3335[var2].length)
             && var5 < 511) {
             int var6 = var5++ << 6 | var3;
             int var7 = var16.readUnsignedShort();
@@ -308,7 +308,7 @@ public final class TextureSampler37 extends AbstractTextureSampler {
               & AudioStreamEncoder3.regionHashes[var2]);
             NpcConfiguration var13 = SubNode.getNpcConfiguration(var16.readUnsignedShort());
             if (TextureSampler5.npcs[var6] == null && (var13.aByte1267 & 1) > 0
-              && ~var8 == ~GameObject.plane && (var11 >= 1 -1) &&
+              && (var8 == GameObject.plane) && (var11 >= 1 -1) &&
                 var13.size + var11 < 104
               && (var12 >= 1 -1) && var12 - -var13.size < 104) {
               TextureSampler5.npcs[var6] = new NPC();

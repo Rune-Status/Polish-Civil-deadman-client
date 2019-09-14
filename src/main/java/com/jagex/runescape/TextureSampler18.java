@@ -85,7 +85,7 @@ public final class TextureSampler18 extends TextureSampler39 {
     int[] var11 = new int[var5.length / 2];
 
       int var12;
-      for (var12 = 0; ~var12 > ~var11.length; ++var12) {
+      for (var12 = 0; (var12 < var11.length); ++var12) {
         int var13 = var5[var12 + var12];
         int var14 = var5[var12 + var12 + 1];
         int var15;

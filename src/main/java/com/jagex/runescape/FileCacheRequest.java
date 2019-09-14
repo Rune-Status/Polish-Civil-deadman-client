@@ -38,7 +38,7 @@ public final class FileCacheRequest extends AbstractFileRequest {
   public static boolean hasKeyInput() {
     Keyboard var1 = TextureSampler33.keyboard;
       synchronized (var1) {
-        if (~DummyClass21.anInt1762 == ~Parameter.anInt3620) {
+        if ((DummyClass21.anInt1762 == Parameter.anInt3620)) {
           return false;
         } else {
           Parameter.anInt3624 = AbstractFrameRegulator.keyQueue[Parameter.anInt3620];

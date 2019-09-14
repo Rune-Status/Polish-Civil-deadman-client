@@ -58,7 +58,7 @@ public final class LinearHashTable {
   public static SoftwareIndexedColorSprite[] createSprites(int var0) {
     SoftwareIndexedColorSprite[] var1 = new SoftwareIndexedColorSprite[DummyClass53.spriteCount];
 
-      for (int var2 = var0; ~var2 > ~DummyClass53.spriteCount; ++var2) {
+      for (int var2 = var0; (var2 < DummyClass53.spriteCount); ++var2) {
         var1[var2] =
           new SoftwareIndexedColorSprite(SomethingVolume15.anInt2426, SomethingPacket116.anInt1748,
             Something3dRoot.anIntArray2048[var2], Buffer.anIntArray2591[var2],
@@ -76,8 +76,8 @@ public final class LinearHashTable {
       for (int var6 = 58 / ((56 - var1) / 49); SomethingWorldMapy.widgetQuads > var5; ++var5) {
         if (var0 < AbstractAudioOutputStream.quadx0[var5] - -GlTexture2d.quadx1[var5]
           && var0 + var4 > AbstractAudioOutputStream.quadx0[var5]
-          && (Player.quady0[var5] - -Mobile.quady1[var5]) > var2 && ~Player.quady0[var5] > ~(var3
-          + var2)) {
+          && (Player.quady0[var5] - -Mobile.quady1[var5]) > var2 && (Player.quady0[var5] < (var3
+          + var2))) {
           DummyClass9.aBooleanArray4008[var5] = true;
         }
       }

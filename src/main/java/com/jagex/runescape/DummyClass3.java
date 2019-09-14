@@ -116,12 +116,12 @@ public final class DummyClass3 {
                   var70 = false;
                 } else {
                   for (var36 = 0; var36 < 8; ++var36) {
-                    if (~var36 == ~var58) {
+                    if ((var36 == var58)) {
                       var63[var58++] = var27;
                       break;
                     }
 
-                    if (~var27 == ~var63[var36]) {
+                    if ((var27 == var63[var36])) {
                       break;
                     }
                   }
@@ -146,12 +146,12 @@ public final class DummyClass3 {
                   var69 = false;
                 } else {
                   for (var36 = 0; (var36 < 9 -1); ++var36) {
-                    if (~var58 == ~var36) {
+                    if ((var58 == var36)) {
                       var63[var58++] = var28;
                       break;
                     }
 
-                    if (~var63[var36] == ~var28) {
+                    if ((var63[var36] == var28)) {
                       break;
                     }
                   }
@@ -176,12 +176,12 @@ public final class DummyClass3 {
                   var72 = false;
                 } else {
                   for (var36 = 0; (var36 < 9 -1); ++var36) {
-                    if (~var58 == ~var36) {
+                    if ((var58 == var36)) {
                       var63[var58++] = var29;
                       break;
                     }
 
-                    if (~var29 == ~var63[var36]) {
+                    if ((var29 == var63[var36])) {
                       break;
                     }
                   }
@@ -211,7 +211,7 @@ public final class DummyClass3 {
                       break;
                     }
 
-                    if (~var30 == ~var63[var36]) {
+                    if ((var30 == var63[var36])) {
                       break;
                     }
                   }
@@ -230,7 +230,7 @@ public final class DummyClass3 {
                   var5[var13][var14 - -1] - -2 & 3)];
 
                 for (var74 = 0; (var74 < 9 -1); ++var74) {
-                  if (~var58 == ~var74) {
+                  if ((var58 == var74)) {
                     var63[var58++] = var23;
                     break;
                   }
@@ -254,7 +254,7 @@ public final class DummyClass3 {
                     break;
                   }
 
-                  if (~var24 == ~var63[var74]) {
+                  if ((var24 == var63[var74])) {
                     break;
                   }
                 }
@@ -268,7 +268,7 @@ public final class DummyClass3 {
                   + var8[var13][var14 + -1] * 4];
 
                 for (var74 = 0; (var74 < 9 -1); ++var74) {
-                  if (~var74 == ~var58) {
+                  if ((var74 == var58)) {
                     var63[var58++] = var25;
                     break;
                   }
@@ -288,7 +288,7 @@ public final class DummyClass3 {
                     + var13][var14]];
 
                 for (var74 = 0; (var74 < 9 -1); ++var74) {
-                  if (~var58 == ~var74) {
+                  if ((var58 == var74)) {
                     var63[var58++] = var26;
                     break;
                   }
@@ -395,7 +395,7 @@ public final class DummyClass3 {
                       break;
                     }
 
-                    if (~var64[var83] == ~var28) {
+                    if ((var64[var83] == var28)) {
                       break;
                     }
                   }
@@ -448,7 +448,7 @@ public final class DummyClass3 {
                   var30 = 0;
                 } else {
                   for (var83 = 0; var83 < 8; ++var83) {
-                    if (~var83 == ~var61) {
+                    if ((var83 == var61)) {
                       var64[var61++] = var30;
                       break;
                     }
@@ -477,7 +477,7 @@ public final class DummyClass3 {
                   var73 = 0;
                 } else {
                   for (var83 = 0; (var83 < 9 -1); ++var83) {
-                    if (~var83 == ~var61) {
+                    if ((var83 == var61)) {
                       var64[var61++] = var73;
                       break;
                     }
@@ -502,12 +502,12 @@ public final class DummyClass3 {
                   2 + var5[var13][var14 - -1] & 3)];
 
                 for (var78 = 0; var78 < 8; ++var78) {
-                  if (~var78 == ~var61) {
+                  if ((var78 == var61)) {
                     var64[var61++] = var24;
                     break;
                   }
 
-                  if (~var64[var78] == ~var24) {
+                  if ((var64[var78] == var24)) {
                     break;
                   }
                 }
@@ -522,7 +522,7 @@ public final class DummyClass3 {
                     var13 + -1][var14]];
 
                 for (var78 = 0; var78 < 8; ++var78) {
-                  if (~var61 == ~var78) {
+                  if ((var61 == var78)) {
                     var64[var61++] = var25;
                     break;
                   }
@@ -542,12 +542,12 @@ public final class DummyClass3 {
                     -1 + var14]];
 
                 for (var78 = 0; (var78 < 9 -1); ++var78) {
-                  if (~var61 == ~var78) {
+                  if ((var61 == var78)) {
                     var64[var61++] = var26;
                     break;
                   }
 
-                  if (~var26 == ~var64[var78]) {
+                  if ((var26 == var64[var78])) {
                     break;
                   }
                 }
@@ -561,23 +561,23 @@ public final class DummyClass3 {
                   & var5[var13 + 1][var14] - -1)];
 
                 for (var78 = 0; (var78 < 9 -1); ++var78) {
-                  if (~var78 == ~var61) {
+                  if ((var78 == var61)) {
                     var64[var61++] = var27;
                     break;
                   }
 
-                  if (~var64[var78] == ~var27) {
+                  if ((var64[var78] == var27)) {
                     break;
                   }
                 }
               }
             }
 
-            for (var74 = 0; ~var74 > ~var61; ++var74) {
+            for (var74 = 0; (var74 < var61); ++var74) {
               var78 = var64[var74];
               var79 = TextureSampler8.aBooleanArrayArray3468[var78 == var24 ? var65 : 0];
               var75 = TextureSampler8.aBooleanArrayArray3468[var25 == var78 ? var21 : 0];
-              var81 = TextureSampler8.aBooleanArrayArray3468[~var78 == ~var26 ? var22 : 0];
+              var81 = TextureSampler8.aBooleanArrayArray3468[(var78 == var26) ? var22 : 0];
               boolean[] var84 = TextureSampler8.aBooleanArrayArray3468[var78 != var27 ? 0 : var23];
               FloorOverlay var82 = TextureSampler10.method350((byte) 121, -1 + var78);
               SomethingGl0 var39 = AnimationSequence.method2052(var12, false, var82);
@@ -753,7 +753,7 @@ public final class DummyClass3 {
                (SomethingOtherWorldMap) DummyClass51.aClass61_1162.getFirst();
                var11 != null;
                var11 = (SomethingOtherWorldMap) DummyClass51.aClass61_1162.getNext()) {
-            if (~var11.anInt2532 == ~FileSystem.anInt101) {
+            if ((var11.anInt2532 == FileSystem.anInt101)) {
               int var13 = var4 - -(var11.anInt2539 * var1 / DummyClass58.anInt1460);
               int var12 = var2 * var11.anInt2531 / DummyClass30.anInt455 + var0;
               if (GlRenderer.useOpenGlRenderer) {

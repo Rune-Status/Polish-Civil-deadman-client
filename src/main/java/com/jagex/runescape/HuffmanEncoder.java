@@ -75,7 +75,7 @@ public final class HuffmanEncoder {
           var3[var6] = var9;
 
           for (var10 = var6 + 1; var10 <= 32; ++var10) {
-            if (~var8 == ~var3[var10]) {
+            if ((var8 == var3[var10])) {
               var3[var10] = var9;
             }
           }
@@ -97,7 +97,7 @@ public final class HuffmanEncoder {
             if (this.anIntArray633.length <= var10) {
               int[] var13 = new int[this.anIntArray633.length * 2];
 
-              for (int var14 = 0; ~var14 > ~this.anIntArray633.length; ++var14) {
+              for (int var14 = 0; (var14 < this.anIntArray633.length); ++var14) {
                 var13[var14] = this.anIntArray633[var14];
               }
 
@@ -136,7 +136,7 @@ public final class HuffmanEncoder {
         var7 &= -var13 >> 31;
         var13 += 24;
         var3[var12] = (byte) (var7 = TextureSampler3.method308(var7, var10 >>> var13));
-        if (~var12 > ~var14) {
+        if ((var12 < var14)) {
           ++var12;
           var13 -= 8;
           var3[var12] = (byte) (var7 = var10 >>> var13);

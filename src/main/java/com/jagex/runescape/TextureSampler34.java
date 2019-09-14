@@ -114,7 +114,7 @@ public final class TextureSampler34 extends AbstractTextureSampler {
               }
 
               var18 = 255 & this.aByteArray3059[var16 & 255];
-              if (this.aBoolean3065 && ~var7 == ~(this.anInt3058 + -1)) {
+              if (this.aBoolean3065 && (var7 == (this.anInt3058 + -1))) {
                 for (var10 = 0; SomethingLight0.anInt1559 > var10; ++var10) {
                   var4 = TextureCache.anIntArray2125[var10] * this.anInt3060;
                   var6 = this
@@ -124,7 +124,7 @@ public final class TextureSampler34 extends AbstractTextureSampler {
                   var3[var10] = (var6 >> 1) + 2048;
                 }
               } else {
-                for (var10 = 0; ~var10 > ~SomethingLight0.anInt1559; ++var10) {
+                for (var10 = 0; (var10 < SomethingLight0.anInt1559); ++var10) {
                   var4 = TextureCache.anIntArray2125[var10] * this.anInt3060;
                   var6 = this
                       .method192(var4 * var8 >> 12, var18, var17, var12, 126,

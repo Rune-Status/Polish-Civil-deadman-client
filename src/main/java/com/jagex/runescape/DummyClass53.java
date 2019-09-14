@@ -38,7 +38,7 @@ public final class DummyClass53 {
         DummyClass53.method1582(45);
       }
 
-      if (~var0 == ~var1 && ~var9 == ~var2 && var8 == var7 && var5 == var6) {
+      if ((var0 == var1) && (var9 == var2) && var8 == var7 && var5 == var6) {
         TextureSampler25.method330(var4, var3 + -111, var5, var0, var9, var7);
       } else {
         int var10 = var0;
@@ -79,7 +79,7 @@ public final class DummyClass53 {
         DummyClass53.method1586(92, 25);
       }
 
-      if (~var1 == ~var5) {
+      if ((var1 == var5)) {
         Light.method1058(var5, var2, var0, var3, (byte) -47);
       } else {
         if (DummyClass55.anInt1425 <= var2 - var5 && var2 + var5 <= GlTexture2d.anInt3765

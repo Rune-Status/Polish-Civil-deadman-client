@@ -63,8 +63,7 @@ public final class GroundItem extends SceneNode {
   public static boolean method2031(byte var0, boolean var1, int var2, int var3,
                                   SceneGraphTile[][][] var4, int var5) {
     byte var6 = !var1 ? (byte) (255 & BitVariable.anInt1127) : 1;
-      if (~var6
-        == ~AbstractImageProducer.aByteArrayArrayArray2008[GameWorldSomething.currentPlane][var2][var3]) {
+      if ((var6 == AbstractImageProducer.aByteArrayArrayArray2008[GameWorldSomething.currentPlane][var2][var3])) {
         return false;
       } else if (((
           BZipDecompressorState.tileFlags[GameWorldSomething.currentPlane][var2][var3]
@@ -108,7 +107,7 @@ public final class GroundItem extends SceneNode {
               if (var14 && var4[var16][var9][var12] != null) {
                 if (var4[var16][var9][var12].aClass70_2234 != null) {
                   var17 = Cursor.method1184(var10, (byte) 82);
-                  if (~var4[var16][var9][var12].aClass70_2234.anInt1055 == ~var17
+                  if ((var4[var16][var9][var12].aClass70_2234.anInt1055 == var17)
                     || var4[var16][var9][var12].aClass70_2234.anInt1059 == var17) {
                     continue;
                   }
@@ -124,7 +123,7 @@ public final class GroundItem extends SceneNode {
                   if (var13 != 0) {
                     var18 = Cursor.method1184(var13, (byte) 99);
                     if (var18 == var4[var16][var9][var12].aClass70_2234.anInt1055
-                      || ~var18 == ~var4[var16][var9][var12].aClass70_2234.anInt1059) {
+                      || (var18 == var4[var16][var9][var12].aClass70_2234.anInt1059)) {
                       continue;
                     }
                   }
@@ -141,7 +140,7 @@ public final class GroundItem extends SceneNode {
                     int var19 =
                       (int) (var4[var16][var9][var12].sceneGraphNodes[var17].aLong498 >> 20 & 3L);
                     var20 = var18 | var19 << 6;
-                    if (~var20 == ~var10 || var11 != 0 && var20 == var11
+                    if ((var20 == var10) || var11 != 0 && var20 == var11
                       || (var13 != 1 -1) && var13 == var20) {
                       continue label257;
                     }
@@ -177,7 +176,7 @@ public final class GroundItem extends SceneNode {
 
             var16 = var9 << 7;
             if (var16 >= MilliFrameRegulator.anIntArray2696[var5]) {
-              if (~DummyClass13.anIntArray2021[var5] > ~var16) {
+              if ((DummyClass13.anIntArray2021[var5] < var16)) {
                 DummyClass13.anIntArray2021[var5] = var16;
               }
             } else {

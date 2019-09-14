@@ -109,7 +109,7 @@ public final class TextureSampler15 extends AbstractTextureSampler {
               }
 
               if (var12 >= AnimationSomething.anInt3589) {
-                if (~var12 > ~LinearHashTable.anInt1042) {
+                if ((var12 < LinearHashTable.anInt1042)) {
                   TextureSampler36.anInt3422 = Keyboard.anInt1914;
                   Keyboard.anInt1914 = LinearHashTable.anInt1042;
                   LinearHashTable.anInt1042 = var12;
@@ -185,7 +185,7 @@ public final class TextureSampler15 extends AbstractTextureSampler {
   }
 
   public static int getLanguageForTag(GameString var0) {
-    for (int i = 0; ~i > ~TextureSampler4.LANGUAGES.length; ++i) {
+    for (int i = 0; (i < TextureSampler4.LANGUAGES.length); ++i) {
         if (TextureSampler4.LANGUAGES[i].method1531(var0)) {
           return i;
         }
@@ -201,7 +201,7 @@ public final class TextureSampler15 extends AbstractTextureSampler {
           DummyClass35.anIntArrayArray663[var5][var2] = var4;
         }
       } else {
-        for (var5 = var3; ~var5 > ~var1; ++var5) {
+        for (var5 = var3; (var5 < var1); ++var5) {
           DummyClass35.anIntArrayArray663[var5][var2] = var4;
         }
       }

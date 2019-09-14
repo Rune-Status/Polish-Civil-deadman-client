@@ -67,7 +67,7 @@ public final class SpotAnimationConfig {
                 this.faceIds = new short[var4];
                 this.colorIds = new short[var4];
 
-                for (var5 = 0; ~var5 > ~var4; ++var5) {
+                for (var5 = 0; (var5 < var4); ++var5) {
                   this.faceIds[var5] = (short) var1.readUnsignedShort();
                   this.colorIds[var5] = (short) var1.readUnsignedShort();
                 }

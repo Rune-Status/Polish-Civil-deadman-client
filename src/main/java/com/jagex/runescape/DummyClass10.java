@@ -225,8 +225,8 @@ public final class DummyClass10 {
         } else {
           int var4 = 0;
 
-          for (int var5 = 0; ~var5 > ~var3.counts.length; ++var5) {
-            if (~var2 == ~var3.ids[var5]) {
+          for (int var5 = 0; (var5 < var3.counts.length); ++var5) {
+            if ((var2 == var3.ids[var5])) {
               var4 += var3.counts[var5];
             }
           }

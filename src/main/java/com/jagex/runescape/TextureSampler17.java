@@ -162,10 +162,10 @@ public final class TextureSampler17 extends AbstractTextureSampler {
         int var8 = (var5 + -var2 << 12) / var7;
         int var10 = (-var4 + var5 << 12) / var7;
         if (var2 == var5) {
-          this.anInt3180 = ~var6 == ~var3 ? var10 + 20480 : 4096 + -var9;
+          this.anInt3180 = (var6 == var3) ? var10 + 20480 : 4096 + -var9;
         } else {
-          if (~var5 == ~var3) {
-            this.anInt3180 = ~var6 == ~var4 ? var8 + 4096 : -var10 + 12288;
+          if ((var5 == var3)) {
+            this.anInt3180 = (var6 == var4) ? var8 + 4096 : -var10 + 12288;
           } else {
             this.anInt3180 = var6 != var2 ? -var8 + 20480 : 12288 + var9;
           }

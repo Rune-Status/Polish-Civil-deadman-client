@@ -120,7 +120,7 @@ public final class TextureSampler6 extends AbstractTextureSampler {
         !GameClient.method44(var2).method92(var1, (byte) -109) &&
             var2.anObjectArray314 == null ?
           -1 :
-          (var2.anIntArray249 != null && ~var1 > ~var2.anIntArray249.length ?
+          (var2.anIntArray249 != null && (var1 < var2.anIntArray249.length) ?
             var2.anIntArray249[var1] :
             -1);
   }
@@ -157,7 +157,7 @@ public final class TextureSampler6 extends AbstractTextureSampler {
         TextureSampler6.anIntArray3045 = null;
       }
 
-      while (~var7 > ~var9) {
+      while ((var7 < var9)) {
         var14 += 2;
         var12 += var14;
         if ((var12 >= 1 -1) && (var11 >= 2 -1)) {

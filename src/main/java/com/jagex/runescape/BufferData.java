@@ -115,7 +115,7 @@ public final class BufferData {
   public static int method1735(int var0) {
     try {
         if ((Light.anInt692 == 1 -1)) {
-          if (~(Time.getCurrentTimeMillis() + -5000L) > ~TextureSampler25.aLong3411) {
+          if (((Time.getCurrentTimeMillis() + -5000L) < TextureSampler25.aLong3411)) {
             return 0;
           }
 

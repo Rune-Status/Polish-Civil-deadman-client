@@ -169,8 +169,8 @@ public final class GameObject extends SceneNode {
           int var5;
           for (
             var5 = this.aClass142_2722.anIntArray1851.length - this.aClass142_2722.anInt1865;
-            ~this.anInt2726 > ~var5
-              && ~this.aClass142_2722.anIntArray1869[this.anInt2726] > ~var4; ++this.anInt2726) {
+            (this.anInt2726 < var5)
+              && (this.aClass142_2722.anIntArray1869[this.anInt2726] < var4); ++this.anInt2726) {
             var4 -= this.aClass142_2722.anIntArray1869[this.anInt2726];
           }
 
@@ -410,7 +410,7 @@ public final class GameObject extends SceneNode {
         var21 = var20.addVertex(0, 0, 0);
         int[][] var22 = new int[var18][var17];
 
-        for (var23 = 0; ~var23 > ~var18; ++var23) {
+        for (var23 = 0; (var23 < var18); ++var23) {
           var24 = var19[var23];
           var25 = var19[var23];
 
@@ -585,7 +585,7 @@ public final class GameObject extends SceneNode {
     int var1 = SpotAnimationConfig.gameBuffer.readBits(8);
       int var2;
       if (DummyClass13.anInt2022 > var1) {
-        for (var2 = var1; ~var2 > ~DummyClass13.anInt2022; ++var2) {
+        for (var2 = var1; (var2 < DummyClass13.anInt2022); ++var2) {
           VariableUpdate.anIntArray2292[DummyClass17.anInt1829++] =
             DummyClass42.anIntArray887[var2];
         }
@@ -598,7 +598,7 @@ public final class GameObject extends SceneNode {
           GameObject.method1959(-121, -69, 115, false);
         }
 
-        for (; ~var2 > ~var1; ++var2) {
+        for (; (var2 < var1); ++var2) {
           int var3 = DummyClass42.anIntArray887[var2];
           Player var4 = TextureSampler0.players[var3];
           int var5 = SpotAnimationConfig.gameBuffer.readBits(1);

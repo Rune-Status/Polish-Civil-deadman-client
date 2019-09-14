@@ -192,8 +192,8 @@ public final class Projectile extends SceneNode {
       }
 
       while (var5 != null) {
-        if (var4 == var5.anInt2314 && ~var5.anInt2326 == ~(128 * var0)
-          && var5.anInt2308 == 128 * var3 && ~var1.anInt1527 == ~var5.aClass111_2320.anInt1527) {
+        if (var4 == var5.anInt2314 && (var5.anInt2326 == (128 * var0))
+          && var5.anInt2308 == 128 * var3 && (var1.anInt1527 == var5.aClass111_2320.anInt1527)) {
           if (var5.aClass3_Sub24_Sub1_2312 != null) {
             MonoChromaticImageBuffer.aClass3_Sub24_Sub2_2563.method461(
               var5.aClass3_Sub24_Sub1_2312);

@@ -74,7 +74,7 @@ public final class TextureSampler8 extends AbstractTextureSampler {
             var4 = var2 << 4;
 
             for (
-                var3 = 1; ~var3 > ~(-1 + this.anIntArrayArray3469.length)
+                var3 = 1; (var3 < (-1 + this.anIntArrayArray3469.length))
                 && ~this.anIntArrayArray3469[var3][0] >= ~var4; ++var3) {
             }
 

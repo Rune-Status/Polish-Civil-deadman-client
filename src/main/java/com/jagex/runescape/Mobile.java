@@ -273,7 +273,7 @@ public abstract class Mobile extends SceneNode {
         }
 
         TextureSampler16.anInt3111 = var28 + var13;
-        if (~(var23 + var18) > ~TextureSampler16.anInt3111) {
+        if (((var23 + var18) < TextureSampler16.anInt3111)) {
           TextureSampler16.anInt3111 = var23 + var18;
         }
 
@@ -431,7 +431,7 @@ public abstract class Mobile extends SceneNode {
               this.aBoolean2783 = true;
               var8 = var3.anInt399 * var3.anInt399 / (2 * var3.anInt403);
               var9 = var5 + -var8;
-              if (~this.anInt2757 > ~var9) {
+              if ((this.anInt2757 < var9)) {
                 this.anInt2757 = var9;
               }
             }
@@ -471,7 +471,7 @@ public abstract class Mobile extends SceneNode {
             } else {
               this.anInt2830 = var3.anInt403;
               var8 = -var7 + this.anInt2766;
-              if (~this.anInt2757 > ~var8) {
+              if ((this.anInt2757 < var8)) {
                 this.anInt2757 = var8;
               }
             }
@@ -483,7 +483,7 @@ public abstract class Mobile extends SceneNode {
             }
 
             if (this.aBoolean2783) {
-              if (~this.anInt2830 > ~var3.anInt399) {
+              if ((this.anInt2830 < var3.anInt399)) {
                 this.anInt2830 += var3.anInt403;
               }
             } else {
@@ -498,7 +498,7 @@ public abstract class Mobile extends SceneNode {
             }
 
             if (this.aBoolean2783) {
-              if (~(-var3.anInt399) > ~this.anInt2830) {
+              if (((-var3.anInt399) < this.anInt2830)) {
                 this.anInt2830 -= var3.anInt403;
               }
             } else {

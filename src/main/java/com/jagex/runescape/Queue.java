@@ -117,8 +117,8 @@ public final class Queue {
         for (SpawnedGameObject var11 =
              (SpawnedGameObject) TextureSampler26.aClass61_3075.getFirst();
              var11 != null; var11 = (SpawnedGameObject) TextureSampler26.aClass61_3075.getNext()) {
-          if (var11.anInt2250 == var0 && ~var4 == ~var11.anInt2264 && var11.anInt2248 == var1
-            && ~var7 == ~var11.anInt2263) {
+          if (var11.anInt2250 == var0 && (var4 == var11.anInt2264) && var11.anInt2248 == var1
+            && (var7 == var11.anInt2263)) {
             var10 = var11;
             break;
           }

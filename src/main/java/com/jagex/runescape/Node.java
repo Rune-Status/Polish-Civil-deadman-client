@@ -86,7 +86,7 @@ public class Node {
           for (int var6 = 0; var3 > var6; ++var6) {
             DisplayMode var7 = var2[var6];
             if (var5.anInt1447 == var7.anInt1447
-                && ~var7.anInt1449 == ~var5.anInt1449) {
+                && (var7.anInt1449 == var5.anInt1449)) {
               if (var5.anInt1450 > var7.anInt1450) {
                 var2[var6] = var5;
               }

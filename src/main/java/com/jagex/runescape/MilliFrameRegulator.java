@@ -61,7 +61,7 @@ public final class MilliFrameRegulator extends AbstractFrameRegulator {
           (int) (-((this.aLong2683 - this.aLongArray2694[this.anInt2685]) / 10L) + var3);
       }
 
-      if (~var3 > ~this.anInt2691) {
+      if ((var3 < this.anInt2691)) {
         this.anInt2691 = var3;
       }
 

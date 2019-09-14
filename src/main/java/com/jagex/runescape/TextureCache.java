@@ -70,13 +70,13 @@ public final class TextureCache implements ITextureCache {
         }
       }
 
-      for (var8 = 0; ~var8 > ~amountMaterials; ++var8) {
+      for (var8 = 0; (var8 < amountMaterials); ++var8) {
         if (this.materialActive[var8]) {
           this.aBooleanArray2128[var8] = var6.readUnsignedByte() == 1;
         }
       }
 
-      for (var8 = 0; ~var8 > ~amountMaterials; ++var8) {
+      for (var8 = 0; (var8 < amountMaterials); ++var8) {
         if (this.materialActive[var8]) {
           this.aBooleanArray2122[var8] = (var6.readUnsignedByte() == 2 -1);
         }
@@ -106,7 +106,7 @@ public final class TextureCache implements ITextureCache {
         }
       }
 
-      for (var8 = 0; ~var8 > ~amountMaterials; ++var8) {
+      for (var8 = 0; (var8 < amountMaterials); ++var8) {
         if (this.materialActive[var8]) {
           this.aByteArray2143[var8] = var6.readByte();
         }
@@ -341,7 +341,7 @@ public final class TextureCache implements ITextureCache {
               }
 
               for (var9 = var5; var7 > var9; ++var9) {
-                for (var10 = var6; ~var10 > ~var8; ++var10) {
+                for (var10 = var6; (var10 < var8); ++var10) {
                   ++DummyClass9.anIntArrayArray4010[var9][var10];
                 }
               }
@@ -357,7 +357,7 @@ public final class TextureCache implements ITextureCache {
       }
 
       label200:
-      for (var2 = 0; ~var2 > ~DummyClass6.anInt2046; ++var2) {
+      for (var2 = 0; (var2 < DummyClass6.anInt2046); ++var2) {
         var3 = TextureSampler5.npcs[AudioWorker.anIntArray347[var2]];
         long var15 = (long) AudioWorker.anIntArray347[var2] << 32 | 536870912L;
         if (var3 != null && var3.hasConfiguration((byte) 17) && !var3.config.aBoolean1263 == !var1
@@ -392,7 +392,7 @@ public final class TextureCache implements ITextureCache {
               int var12;
               int var13;
               for (var12 = var7; var12 < var9; ++var12) {
-                for (var13 = var8; ~var13 > ~var10; ++var13) {
+                for (var13 = var8; (var13 < var10); ++var13) {
                   if ((DummyClass9.anIntArrayArray4010[var12][var13] <= 2 -1)) {
                     var11 = false;
                     break;

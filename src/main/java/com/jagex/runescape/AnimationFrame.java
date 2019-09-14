@@ -30,7 +30,7 @@ public final class AnimationFrame extends Node {
       this.anIntArray2455 = new int[this.anInt2462];
 
       int var4;
-      for (var4 = 0; ~var4 > ~this.anInt2462; ++var4) {
+      for (var4 = 0; (var4 < this.anInt2462); ++var4) {
         this.anIntArray2466[var4] = var3.readUnsignedByte();
       }
 
@@ -47,7 +47,7 @@ public final class AnimationFrame extends Node {
       }
 
       for (var4 = 0; this.anInt2462 > var4; ++var4) {
-        for (int var5 = 0; ~var5 > ~this.anIntArrayArray2460[var4].length; ++var5) {
+        for (int var5 = 0; (var5 < this.anIntArrayArray2460[var4].length); ++var5) {
           this.anIntArrayArray2460[var4][var5] = var3.readUnsignedByte();
         }
       }

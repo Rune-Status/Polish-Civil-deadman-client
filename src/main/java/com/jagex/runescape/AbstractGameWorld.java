@@ -71,7 +71,7 @@ public abstract class AbstractGameWorld {
         AbstractGameWorld.cascadeException(null, null);
       }
 
-      if (~var1 > ~var2) {
+      if ((var1 < var2)) {
         int var6 = var1;
         int var5 = (var2 + var1) / 2;
         long var7 = var0[var5];

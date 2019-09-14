@@ -93,7 +93,7 @@ public class DummyClass35 {
   }
 
   public static void method1028(int var0) {
-    for (int var1 = -1; ~var1 > ~DummyClass13.anInt2022; ++var1) {
+    for (int var1 = -1; (var1 < DummyClass13.anInt2022); ++var1) {
         int var2;
         if (~var1 == 0) {
           var2 = 2047;

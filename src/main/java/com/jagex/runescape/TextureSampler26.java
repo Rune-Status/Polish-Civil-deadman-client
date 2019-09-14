@@ -113,7 +113,7 @@ public final class TextureSampler26 extends AbstractTextureSampler {
           }
         }
 
-        for (var7 = var11; ~var7 > ~TextureSampler5.anIntArray3290.length; ++var7) {
+        for (var7 = var11; (var7 < TextureSampler5.anIntArray3290.length); ++var7) {
           TextureSampler5.anIntArray3290[var7] = -1;
           GameClient.mapFileIds[var7] = -1;
           DummyClass55.landscapeFileIds[var7] = -1;

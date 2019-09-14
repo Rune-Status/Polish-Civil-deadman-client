@@ -89,7 +89,7 @@ public final class Keyboard implements KeyListener, FocusListener {
         if (AbstractTextureSampler.anInt2384 >= 0 && (var2 >= 1 -1)) {
           FileRequester.anIntArray2952[AbstractTextureSampler.anInt2384] = ~var2;
           AbstractTextureSampler.anInt2384 = 127 & 1 + AbstractTextureSampler.anInt2384;
-          if (~SomethingPacket116.anInt1744 == ~AbstractTextureSampler.anInt2384) {
+          if ((SomethingPacket116.anInt1744 == AbstractTextureSampler.anInt2384)) {
             AbstractTextureSampler.anInt2384 = -1;
           }
         }

@@ -280,7 +280,7 @@ public class SignLink implements Runnable {
               } else {
                 String var4;
                 if ((var2 == 4 -1)) {
-                  if (~Time.getCurrentTimeMillis() > ~SignLink.aLong1221) {
+                  if ((Time.getCurrentTimeMillis() < SignLink.aLong1221)) {
                     throw new IOException();
                   }
 

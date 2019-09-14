@@ -72,7 +72,7 @@ public final class GroundItemNode extends SubNode {
             + MapScene.anInt65 + -1 + DummyClass58.anInt1460;
           var2 += -5 + (int) (Math.random() * 10.0D);
           if ((var1 >= 1 -1) && DummyClass30.anInt455 > var1 && var2 >= 0
-            && ~var2 > ~DummyClass58.anInt1460) {
+            && (var2 < DummyClass58.anInt1460)) {
             SomethingQuickChat2.anInt3536 = var1;
             SpawnedGameObject.anInt2251 = var2;
           } else {
@@ -232,7 +232,7 @@ public final class GroundItemNode extends SubNode {
         GroundItemNode.aBooleanArray3674 = null;
       }
 
-      if (~var2 == ~var3.animationId && ~var2 != 0) {
+      if ((var2 == var3.animationId) && ~var2 != 0) {
         AnimationSequence var4 = GameClient.method45(var2, (byte) -20);
         int var5 = var4.anInt1845;
         if (var5 == 1) {

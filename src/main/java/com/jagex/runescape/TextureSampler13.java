@@ -55,7 +55,7 @@ public final class TextureSampler13 extends AbstractTextureSampler {
               int var7 = var3.combatLevel < TextureCache.localPlayer.combatLevel ?
                 TextureCache.localPlayer.combatLevel :
                 var3.combatLevel;
-              int var8 = ~TextureCache.localPlayer.anInt3970 > ~var3.anInt3970 ?
+              int var8 = (TextureCache.localPlayer.anInt3970 < var3.anInt3970) ?
                 TextureCache.localPlayer.anInt3970 :
                 var3.anInt3970;
               int var9 = 5 - -(var7 * 10 / 100) + var8;
@@ -119,8 +119,7 @@ public final class TextureSampler13 extends AbstractTextureSampler {
 
                   if ((TextureCache.localPlayer.anInt3956 != 1 -1)
                       && (var3.anInt3956 != 1 -1)) {
-                    if (~TextureCache.localPlayer.anInt3956
-                        == ~var3.anInt3956) {
+                    if ((TextureCache.localPlayer.anInt3956 == var3.anInt3956)) {
                       var14 = 2000;
                     } else {
                       var14 = 0;
@@ -249,7 +248,7 @@ public final class TextureSampler13 extends AbstractTextureSampler {
             int var19 = var11.readUnsignedByte();
             int var20 = var19 >> 2;
             int var21 = 3 & var19;
-            if (~var3 == ~var18 && ~var17 <= ~var8 && var17 < 8 + var8 && var9 <= var16
+            if ((var3 == var18) && ~var17 <= ~var8 && var17 < 8 + var8 && var9 <= var16
               && 8 + var9 > var16) {
               GameObjectConfig var22 = DummyClass11.method2207(4, var12);
               int var23 =

@@ -90,7 +90,7 @@ public final class ClientScriptCall extends Node {
           }
         }
 
-        if (~EnumStringFetcher.anInt2162 > ~var3) {
+        if ((EnumStringFetcher.anInt2162 < var3)) {
           EnumStringFetcher.anInt2162 +=
             (-EnumStringFetcher.anInt2162 + var3) * AbstractFileRequest.anInt3631 / 1000
               + DummyClass8.anInt4021;
@@ -110,7 +110,7 @@ public final class ClientScriptCall extends Node {
         if (DummyClass49.anInt1111 < var2) {
           DummyClass49.anInt1111 += DummyClass8.anInt4021
             + AbstractFileRequest.anInt3631 * (var2 - DummyClass49.anInt1111) / 1000;
-          if (~var2 > ~DummyClass49.anInt1111) {
+          if ((var2 < DummyClass49.anInt1111)) {
             DummyClass49.anInt1111 = var2;
           }
         }
@@ -151,7 +151,7 @@ public final class ClientScriptCall extends Node {
       }
 
       int var9 = (int) (-325.949D * Math.atan2(var4, var6)) & 2047;
-      if (~DummyClass17.anInt1823 > ~var8) {
+      if ((DummyClass17.anInt1823 < var8)) {
         DummyClass17.anInt1823 += AbstractSomethingTexture.anInt1105
           + DummyClass8.anInt4014 * (-DummyClass17.anInt1823 + var8) / 1000;
         if (DummyClass17.anInt1823 > var8) {
@@ -162,7 +162,7 @@ public final class ClientScriptCall extends Node {
       if (DummyClass17.anInt1823 > var8) {
         DummyClass17.anInt1823 -= (DummyClass17.anInt1823 - var8) * DummyClass8.anInt4014 / 1000
           + AbstractSomethingTexture.anInt1105;
-        if (~DummyClass17.anInt1823 > ~var8) {
+        if ((DummyClass17.anInt1823 < var8)) {
           DummyClass17.anInt1823 = var8;
         }
       }

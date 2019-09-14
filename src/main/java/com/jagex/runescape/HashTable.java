@@ -106,7 +106,7 @@ public final class HashTable {
       for (
           this.iterator = var4.nextNode;
         var4 != this.iterator; this.iterator = this.iterator.nextNode) {
-        if (~var1 == ~this.iterator.key) {
+        if ((var1 == this.iterator.key)) {
           Node var5 = this.iterator;
           this.iterator = this.iterator.nextNode;
           return var5;

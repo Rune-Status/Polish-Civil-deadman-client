@@ -128,7 +128,7 @@ public final class OndemandRequester {
 
               this.currentRequest.anInt4067 += var7;
               this.currentRequest.buffer.position += var7;
-              if (~this.currentRequest.buffer.position == ~var6) {
+              if ((this.currentRequest.buffer.position == var6)) {
                 this.currentRequest.unlinkSubNode();
                 this.currentRequest.aBoolean3632 = false;
                 this.currentRequest = null;

@@ -25,7 +25,7 @@ public final class DummyClass54 {
 
           boolean var7 = false;
 
-          for (int var8 = 0; ~var8 > ~var6.length; ++var8) {
+          for (int var8 = 0; (var8 < var6.length); ++var8) {
             if (var4 == var6[var8].anInt1447 && var3 == var6[var8].anInt1449
                 && ((var1 == 1 -1)
                 || var1 == var6[var8].anInt1448) && (!var7

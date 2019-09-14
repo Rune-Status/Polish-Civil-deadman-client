@@ -182,7 +182,7 @@ public final class ClassCheckRequest extends Node {
             boolean var28 = false;
 
             for (var16 = 0; FileSystem.anInt104 > var16; ++var16) {
-              if (~var29 == ~VertexNormal.aLongArray826[var16]
+              if ((var29 == VertexNormal.aLongArray826[var16])
                 && Cursor.anIntArray882[var16] != 0) {
                 var28 = true;
                 break;
@@ -225,7 +225,7 @@ public final class ClassCheckRequest extends Node {
 
         HintMarker[] var24 = GameException.aClass96Array2114;
 
-        for (var10 = 0; ~var10 > ~var24.length; ++var10) {
+        for (var10 = 0; (var10 < var24.length); ++var10) {
           HintMarker var26 = var24[var10];
           if (var26 != null && (var26.anInt1360 != 1 -1)
               && AbstractGameWorld.updateCycle % 20 < 10) {
@@ -433,7 +433,7 @@ public final class ClassCheckRequest extends Node {
               }
 
               int var9 = -128 + var6 + var8;
-              if (~var4 > ~var9) {
+              if ((var4 < var9)) {
                 GameString.anIntArray2157[var1] = -100;
                 continue;
               }

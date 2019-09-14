@@ -113,7 +113,7 @@ public class MovedStatics0 {
       for (var13 = 0; var13 < var11; ++var13) {
         for (var14 = 0; var14 < 64; ++var14) {
           for (var15 = 0; (var15 < 65 -1); ++var15) {
-            if (~var7 == ~var13 && var9 <= var14 && 8 + var9 > var14
+            if ((var7 == var13) && var9 <= var14 && 8 + var9 > var14
                 && var8 <= var15
                 && var15 < 8 + var8) {
               DummyClass10.readTileData(0, 0, var10, var25,
@@ -151,9 +151,9 @@ public class MovedStatics0 {
                 for (var18 = 0; (var18 < 65 -1); var18 += 4) {
                   byte var19 = var25.readByte();
                   if (~var15 >= ~var7) {
-                    for (var20 = var17; ~var20 > ~(var17 + 4); ++var20) {
+                    for (var20 = var17; (var20 < (var17 + 4)); ++var20) {
                       for (var21 = var18; var21 < 4 + var18; ++var21) {
-                        if (~var20 <= ~var9 && ~var20 > ~(8 + var9)
+                        if (~var20 <= ~var9 && (var20 < (8 + var9))
                             && ~var21 <= ~var8
                             && (var8 + 8) > var8) {
                           var22 = var1 - -SubNode
@@ -233,7 +233,7 @@ public class MovedStatics0 {
 
             var28 = var25.readUnsignedByte();
             if ((var28 > 1 -1)) {
-              for (var17 = 0; ~var17 > ~var28; ++var17) {
+              for (var17 = 0; (var17 < var28); ++var17) {
                 Light var30 = new Light(var25);
                 if ((var30.anInt705 == 32 -1)) {
                   LightIntensity var31 = DummyClass50
@@ -245,7 +245,7 @@ public class MovedStatics0 {
 
                 var29 = var30.anInt703 >> 7;
                 var20 = var30.anInt708 >> 7;
-                if (~var7 == ~var30.anInt704 && ~var29 <= ~var9
+                if ((var7 == var30.anInt704) && ~var29 <= ~var9
                     && var9 - -8 > var29
                     && ~var8 >= ~var20 && (var8 - -8) > var20) {
                   var21 =
@@ -284,8 +284,8 @@ public class MovedStatics0 {
       var14 = 7 + var1;
       var15 = var4 - -7;
 
-      for (var28 = var1; ~var28 > ~var14; ++var28) {
-        for (var17 = var4; ~var17 > ~var15; ++var17) {
+      for (var28 = var1; (var28 < var14); ++var28) {
+        for (var17 = var4; (var17 < var15); ++var17) {
           SceneShadowMap.aByteArrayArrayArray1774[var2][var28][var17] = 0;
         }
       }

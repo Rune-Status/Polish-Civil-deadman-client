@@ -12,12 +12,12 @@ public final class SomethingQuickChatK {
 
   public static SoftwareDirectColorSprite[] createSprites() {
     SoftwareDirectColorSprite[] var1 = new SoftwareDirectColorSprite[DummyClass53.spriteCount];
-      for (int var2 = 0; ~var2 > ~DummyClass53.spriteCount; ++var2) {
+      for (int var2 = 0; (var2 < DummyClass53.spriteCount); ++var2) {
         int var3 = TextureSampler26.anIntArray3076[var2] * GroundItem.anIntArray2931[var2];
         byte[] var4 = DummyClass5.aByteArrayArray2987[var2];
         int[] var5 = new int[var3];
 
-        for (int var6 = 0; ~var6 > ~var3; ++var6) {
+        for (int var6 = 0; (var6 < var3); ++var6) {
           var5[var6] = TextureSampler38.anIntArray3446[ClientScript.bitAnd(255, var4[var6])];
         }
 
