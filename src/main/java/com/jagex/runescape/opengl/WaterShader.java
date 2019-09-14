@@ -2,7 +2,7 @@ package com.jagex.runescape.opengl;
 
 import com.jagex.runescape.AudioWorker;
 import com.jagex.runescape.BZipDecompressorState;
-import com.jagex.runescape.Buffer;
+import com.jagex.runescape.buffer.Buffer;
 import com.jagex.runescape.ClientScript;
 import com.jagex.runescape.GroundItem;
 import com.jagex.runescape.StringNode;

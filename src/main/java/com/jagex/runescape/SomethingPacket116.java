@@ -1,5 +1,7 @@
 package com.jagex.runescape;
 
+import com.jagex.runescape.buffer.Buffer;
+
 public final class SomethingPacket116 {
 
   public static int[] anIntArray1743 = new int[25];

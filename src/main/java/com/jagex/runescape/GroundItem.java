@@ -1,5 +1,8 @@
 package com.jagex.runescape;
 
+import com.jagex.runescape.buffer.Buffer;
+import com.jagex.runescape.huffman.HuffmanEncoderStatics;
+
 public final class GroundItem extends SceneNode {
 
   public static GameString aClass94_2928 = GameString.create("null");
@@ -196,8 +199,10 @@ public final class GroundItem extends SceneNode {
               AbstractImageProducer.aByteArrayArrayArray2008[GameWorldSomething.currentPlane][-1
                 + var9][var12] != var6) {
               TextureSampler38.anIntArray3456[var23] =
-                TextureSampler3.method308(TextureSampler3.method308(var9 - 1, 1179648), -754974720);
-              DummyClass38.anIntArray729[var23] = TextureSampler3.method308(var12, 1245184);
+                HuffmanEncoderStatics
+                    .method308(HuffmanEncoderStatics.method308(var9 - 1, 1179648), -754974720);
+              DummyClass38.anIntArray729[var23] = HuffmanEncoderStatics
+                  .method308(var12, 1245184);
               var23 = 1 + var23 & 4095;
               AbstractImageProducer.aByteArrayArrayArray2008[GameWorldSomething.currentPlane][var9
                 - 1][var12] = var6;
@@ -210,9 +215,10 @@ public final class GroundItem extends SceneNode {
                 ((BZipDecompressorState.tileFlags[GameWorldSomething.currentPlane][var9][var12] & 4) == 0) &&
                 ((BZipDecompressorState.tileFlags[GameWorldSomething.currentPlane][-1 + var9][var12
                   - 1] & 4) == 0)) {
-                TextureSampler38.anIntArray3456[var23] = TextureSampler3.method308(1375731712,
-                  TextureSampler3.method308(1179648, -1 + var9));
-                DummyClass38.anIntArray729[var23] = TextureSampler3.method308(var12, 1245184);
+                TextureSampler38.anIntArray3456[var23] = HuffmanEncoderStatics.method308(1375731712,
+                  HuffmanEncoderStatics.method308(1179648, -1 + var9));
+                DummyClass38.anIntArray729[var23] = HuffmanEncoderStatics
+                    .method308(var12, 1245184);
                 AbstractImageProducer.aByteArrayArrayArray2008[GameWorldSomething.currentPlane][-1
                   + var9][var12] = var6;
                 var23 = 1 + var23 & 4095;
@@ -221,8 +227,11 @@ public final class GroundItem extends SceneNode {
               if (var6
                 != AbstractImageProducer.aByteArrayArrayArray2008[GameWorldSomething.currentPlane][var9][var12]) {
                 TextureSampler38.anIntArray3456[var23] =
-                  TextureSampler3.method308(318767104, TextureSampler3.method308(var9, 5373952));
-                DummyClass38.anIntArray729[var23] = TextureSampler3.method308(5439488, var12);
+                  HuffmanEncoderStatics
+                      .method308(318767104, HuffmanEncoderStatics
+                          .method308(var9, 5373952));
+                DummyClass38.anIntArray729[var23] = HuffmanEncoderStatics
+                    .method308(5439488, var12);
                 var23 = 4095 & 1 + var23;
                 AbstractImageProducer.aByteArrayArrayArray2008[GameWorldSomething.currentPlane][var9][var12] =
                   var6;
@@ -236,9 +245,10 @@ public final class GroundItem extends SceneNode {
                 &&
                 ((BZipDecompressorState.tileFlags[GameWorldSomething.currentPlane][1 + var9][var12
                   - 1] & 4) == 0)) {
-                TextureSampler38.anIntArray3456[var23] = TextureSampler3.method308(-1845493760,
-                  TextureSampler3.method308(5373952, var9 + 1));
-                DummyClass38.anIntArray729[var23] = TextureSampler3.method308(5439488, var12);
+                TextureSampler38.anIntArray3456[var23] = HuffmanEncoderStatics.method308(-1845493760,
+                  HuffmanEncoderStatics.method308(5373952, var9 + 1));
+                DummyClass38.anIntArray729[var23] = HuffmanEncoderStatics
+                    .method308(5439488, var12);
                 AbstractImageProducer.aByteArrayArrayArray2008[GameWorldSomething.currentPlane][var9
                   + 1][var12] = var6;
                 var23 = 4095 & var23 + 1;
@@ -250,8 +260,10 @@ public final class GroundItem extends SceneNode {
               != AbstractImageProducer.aByteArrayArrayArray2008[GameWorldSomething.currentPlane][
               var9 + 1][var12]) {
               TextureSampler38.anIntArray3456[var23] =
-                TextureSampler3.method308(TextureSampler3.method308(1 + var9, 9568256), 1392508928);
-              DummyClass38.anIntArray729[var23] = TextureSampler3.method308(var12, 9633792);
+                HuffmanEncoderStatics
+                    .method308(HuffmanEncoderStatics.method308(1 + var9, 9568256), 1392508928);
+              DummyClass38.anIntArray729[var23] = HuffmanEncoderStatics
+                  .method308(var12, 9633792);
               AbstractImageProducer.aByteArrayArrayArray2008[GameWorldSomething.currentPlane][1
                 + var9][var12] = var6;
               var23 = var23 + 1 & 4095;
@@ -266,9 +278,11 @@ public final class GroundItem extends SceneNode {
                 ((BZipDecompressorState.tileFlags[GameWorldSomething.currentPlane][var9 - 1][1
                   + var12] & 4) == 0)) {
                 TextureSampler38.anIntArray3456[var23] =
-                  TextureSampler3.method308(TextureSampler3.method308(-1 + var9, 13762560),
+                  HuffmanEncoderStatics.method308(
+                      HuffmanEncoderStatics.method308(-1 + var9, 13762560),
                     301989888);
-                DummyClass38.anIntArray729[var23] = TextureSampler3.method308(var12, 13828096);
+                DummyClass38.anIntArray729[var23] = HuffmanEncoderStatics
+                    .method308(var12, 13828096);
                 AbstractImageProducer.aByteArrayArrayArray2008[GameWorldSomething.currentPlane][-1
                   + var9][var12] = var6;
                 var23 = 4095 & var23 + 1;
@@ -277,8 +291,10 @@ public final class GroundItem extends SceneNode {
               if (var6
                 != AbstractImageProducer.aByteArrayArrayArray2008[GameWorldSomething.currentPlane][var9][var12]) {
                 TextureSampler38.anIntArray3456[var23] =
-                  TextureSampler3.method308(TextureSampler3.method308(var9, 13762560), -1828716544);
-                DummyClass38.anIntArray729[var23] = TextureSampler3.method308(13828096, var12);
+                  HuffmanEncoderStatics
+                      .method308(HuffmanEncoderStatics.method308(var9, 13762560), -1828716544);
+                DummyClass38.anIntArray729[var23] = HuffmanEncoderStatics
+                    .method308(13828096, var12);
                 var23 = var23 + 1 & 4095;
                 AbstractImageProducer.aByteArrayArrayArray2008[GameWorldSomething.currentPlane][var9][var12] =
                   var6;
@@ -290,9 +306,10 @@ public final class GroundItem extends SceneNode {
                 ((4 & BZipDecompressorState.tileFlags[GameWorldSomething.currentPlane][var9][var12]) == 0) &&
                 ((BZipDecompressorState.tileFlags[GameWorldSomething.currentPlane][1 + var9][1
                   + var12] & 4) == 0)) {
-                TextureSampler38.anIntArray3456[var23] = TextureSampler3.method308(-771751936,
-                  TextureSampler3.method308(var9 + 1, 9568256));
-                DummyClass38.anIntArray729[var23] = TextureSampler3.method308(9633792, var12);
+                TextureSampler38.anIntArray3456[var23] = HuffmanEncoderStatics.method308(-771751936,
+                  HuffmanEncoderStatics.method308(var9 + 1, 9568256));
+                DummyClass38.anIntArray729[var23] = HuffmanEncoderStatics
+                    .method308(9633792, var12);
                 AbstractImageProducer.aByteArrayArrayArray2008[GameWorldSomething.currentPlane][var9
                   + 1][var12] = var6;
                 var23 = 4095 & 1 + var23;
@@ -330,7 +347,7 @@ public final class GroundItem extends SceneNode {
         byte[] dest = new byte[len];
         buffer.position +=
           TextureSampler16.huffmanEncoder.decompress(buffer.bytes, buffer.position, dest, 0, len);
-        GameString var5 = TextureSampler33.createString(dest, 0, len);
+        GameString var5 = GameStringStatics.createString(dest, 0, len);
         return var5;
       } catch (Exception var6) {
         return DummyClass13.aClass94_2018;

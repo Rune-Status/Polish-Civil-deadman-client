@@ -1,5 +1,7 @@
 package com.jagex.runescape;
 
+import com.jagex.runescape.buffer.Buffer;
+
 public final class TextureSampler3 extends AbstractTextureSampler {
 
   public static int hintHeadIconsFileId;
@@ -133,10 +135,6 @@ public final class TextureSampler3 extends AbstractTextureSampler {
   public static void method307(GameString[] var0, short[] var1, int var2) {
     ClassCheckRequest.method127(var1, -1 + var0.length, var0, -909, 0);
       int var3 = 91 % ((var2 + 1) / 63);
-  }
-
-  public static int method308(int var0, int var1) {
-    return var0 | var1;
   }
 
   public static void method309(boolean var0) {

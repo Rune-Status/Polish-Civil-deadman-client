@@ -1,5 +1,7 @@
 package com.jagex.runescape;
 
+import com.jagex.runescape.buffer.Buffer;
+
 public final class TextureSampler6 extends AbstractTextureSampler {
 
   public static GameString aClass94_3042 = GameString.create("<col=ff9040>");

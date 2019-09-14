@@ -1,5 +1,6 @@
 package com.jagex.runescape;
 
+import com.jagex.runescape.buffer.Buffer;
 import java.io.IOException;
 
 public abstract class AbstractObjectNode extends SubNode {

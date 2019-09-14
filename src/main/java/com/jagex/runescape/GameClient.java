@@ -1,5 +1,7 @@
 package com.jagex.runescape;
 
+import com.jagex.runescape.buffer.Buffer;
+import com.jagex.runescape.huffman.HuffmanEncoder;
 import com.jagex.runescape.opengl.BlockShadowMap;
 import com.jagex.runescape.opengl.DummyClass16;
 import com.jagex.runescape.opengl.DummyClass33;
@@ -126,7 +128,7 @@ public final class GameClient extends GameStub {
       }
 
       if (!GlRenderer.useOpenGlRenderer) {
-        Buffer.method744(true);
+        GlobalStatics_0.method744(true);
       } else if (TextureSampler28.loginState == 0 && DummyCanvas.anInt23 == 0) {
         if ((SomethingPacket116.anInt1753 == 2)) {
           ClientScriptCall.method379(var1 ^ 1025);
@@ -652,7 +654,7 @@ public final class GameClient extends GameStub {
                                       -11931,
                                       SomethingPacket116.worldMapData);
                                   ClientScript.loadingPercent = 95;
-                                  AnimationFrame.loadingText = Buffer.LOADED_INTERFACES;
+                                  AnimationFrame.loadingText = GlobalStatics_0.LOADED_INTERFACES;
                                   HintMarker.loadingState = 135;
                                 } else {
                                   AnimationFrame.loadingText =
@@ -847,7 +849,7 @@ public final class GameClient extends GameStub {
           var2 = 0;
 
           for (kkkk = 0; kkkk < 28; ++kkkk) {
-            var2 += Buffer.aClass151_Sub1Array2601[kkkk].method2111(-61)
+            var2 += GlobalStatics_0.aClass151_Sub1Array2601[kkkk].method2111(-61)
                 * TextureSampler39.anIntArray3288[kkkk] / 100;
           }
 
@@ -1023,7 +1025,7 @@ public final class GameClient extends GameStub {
       AbstractImageProducer.method2181(false);
       MouseRecorder.method1257(25951);
       HintMarker.method1588((byte) 106);
-      Buffer.method767(0);
+      GlobalStatics_0.method767(0);
       SocketStream.method1463(0);
       OndemandRequester.method1242((byte) -88);
       FileCacheRequester.method1306(-16222);
@@ -1136,7 +1138,7 @@ public final class GameClient extends GameStub {
       Texture.method721(20413);
       GlTexture2d.method711(1);
       DummyClass40.method1155();
-      HuffmanEncoder.method1016((byte) 127);
+      GlobalStatics_0.method1016((byte) 127);
       DummyClass3.method71((byte) -124);
       DummyClass55.method1608((byte) 110);
       DummyClass41.method1169(false);
@@ -1189,7 +1191,7 @@ public final class GameClient extends GameStub {
       DummyClass23.method1744(true);
       HashTableIterator.method1394((byte) -94);
       StringNode.method735(-22749);
-      DummyClass21.method1806(3846);
+      DummyClass21.method1806();
       IntegerNode.method382(1);
       SomethingWorldMappy.method396(0);
       MovedStatics0.method59((byte) -87);
@@ -1459,7 +1461,7 @@ public final class GameClient extends GameStub {
             } else if (DummyClass15.state == 40) {
               AbstractTextureSampler
                   .drawLoadingBox(RenderAnimation.concat(new GameString[]{
-                      SceneShadowMap.CONNECTION_LOST, Buffer.LINE_BREAK,
+                      SceneShadowMap.CONNECTION_LOST, GlobalStatics_0.LINE_BREAK,
                       DummyClass14.ATTEMPTING_TO_RECONNECT
                   }), false);
             }
@@ -1717,77 +1719,7 @@ public final class GameClient extends GameStub {
 
   }
 
-  public static void main(String[] args) {
-    try {
-        if (args.length != 5) {
-          TextureSampler18.printUsage("argument count");
-        }
-        GameException.serverHost = args[4];
-        int languageId = -1;
-        GameObjectConfig.portOffset = Integer.parseInt(args[0]);
-        AbstractGameWorld.usageLocation = 2;
-        if (args[1].equals("live")) {
-          TextureSampler20.usageMode = 0;
-        } else {
-          if (args[1].equals("rc")) {
-            TextureSampler20.usageMode = 1;
-          } else if (!args[1].equals("wip")) {
-            TextureSampler18.printUsage("modewhat");
-          } else {
-            TextureSampler20.usageMode = 2;
-          }
-        }
 
-        ProjectileNode.aBoolean3779 = false;
-
-        try {
-          byte[] language = args[2].getBytes(StandardCharsets.ISO_8859_1);
-          languageId = TextureSampler15.getLanguageForTag(
-              TextureSampler33.createString(language, 0, language.length));
-        } catch (Exception ex) {
-        }
-
-        if (languageId == -1) {
-          if (args[2].equals("english")) {
-            TriChromaticImageBuffer.languageId = 0;
-          } else {
-            if (args[2].equals("german")) {
-              TriChromaticImageBuffer.languageId = 1;
-            } else {
-              TextureSampler18.printUsage("language");
-            }
-          }
-        } else {
-          TriChromaticImageBuffer.languageId = languageId;
-        }
-
-        Node.setupLanguagePacket(TriChromaticImageBuffer.languageId);
-        DummyClass8.aBoolean4018 = false;
-        Structure.aBoolean3641 = false;
-        if (args[3].equals("game0")) {
-          AbstractImageProducer.gameId = 0;
-        } else {
-          if (args[3].equals("game1")) {
-            AbstractImageProducer.gameId = 1;
-          } else {
-            TextureSampler18.printUsage("game");
-          }
-        }
-
-        SomethingPacket151.anInt2607 = 0;
-        DisplayMode.aBoolean1451 = false;
-        MonoChromaticImageBuffer.affiliateId = 0;
-        DummyClass7.settings = GroundItemNode.EMPTY_STRING;
-        GameClient client = new GameClient();
-        SomethingTilek.client = client;
-        client
-            .start(530, 1024, 768, 32 + TextureSampler20.usageMode, "runescape",
-                28, false);
-        TextureSampler27.FRAME.setLocation(40, 40);
-      } catch (Exception var4) {
-        GZipDecompressor.reportError(null, var4, (byte) 119);
-      }
-  }
 
   public static void method50(Widget[] var0, int var1, int var2, int var3,
       int var4, int var5,
@@ -2202,11 +2134,11 @@ public final class GameClient extends GameStub {
               }
 
               if (var9.anObjectArray282 != null
-                  && HuffmanEncoder.anInt641 > var9.anInt213) {
+                  && GlobalStatics_0.anInt641 > var9.anInt213) {
                 if (var9.anIntArray286 != null
-                    && HuffmanEncoder.anInt641 - var9.anInt213 <= 32) {
+                    && GlobalStatics_0.anInt641 - var9.anInt213 <= 32) {
                   label493:
-                  for (var19 = var9.anInt213; var19 < HuffmanEncoder.anInt641;
+                  for (var19 = var9.anInt213; var19 < GlobalStatics_0.anInt641;
                       ++var19) {
                     var29 = AbstractGameWorld.anIntArray726[var19 & 31];
 
@@ -2228,7 +2160,7 @@ public final class GameClient extends GameStub {
                   DummyClass31.aClass61_1471.addLast(var30);
                 }
 
-                var9.anInt213 = HuffmanEncoder.anInt641;
+                var9.anInt213 = GlobalStatics_0.anInt641;
               }
 
               if (var9.anObjectArray174 != null

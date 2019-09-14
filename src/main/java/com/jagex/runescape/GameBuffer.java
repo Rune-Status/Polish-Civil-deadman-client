@@ -1,5 +1,6 @@
 package com.jagex.runescape;
 
+import com.jagex.runescape.buffer.Buffer;
 import com.jagex.runescape.opengl.GlEnvironment;
 import com.jagex.runescape.opengl.GlTexture2d;
 
@@ -108,7 +109,7 @@ public final class GameBuffer extends Buffer {
                   0, 2,
                   var8.waypointsX[0], 1, 0, 2, var8.waypointsY[0],
                   TextureCache.localPlayer.waypointsX[0]);
-          HuffmanEncoder.anInt638 = 2;
+          GlobalStatics_0.anInt638 = 2;
           FileRequester.anInt2958 = 0;
           SceneSomething2.anInt1053 = DummyClass5.anInt2993;
           FileCacheRequest.anInt4062 = DummyClass36.anInt2614;
@@ -157,7 +158,7 @@ public final class GameBuffer extends Buffer {
                   TextureCache.localPlayer.waypointsX[0]);
           ++DummyClass32.anInt513;
           SceneSomething2.anInt1053 = DummyClass5.anInt2993;
-          HuffmanEncoder.anInt638 = 2;
+          GlobalStatics_0.anInt638 = 2;
           FileRequester.anInt2958 = 0;
           FileCacheRequest.anInt4062 = DummyClass36.anInt2614;
           TextureSampler12.secureBuffer.writePacket(30);
@@ -176,7 +177,7 @@ public final class GameBuffer extends Buffer {
           SceneSomething2.anInt1053 = DummyClass5.anInt2993;
           FileRequester.anInt2958 = 0;
           ++AbstractFileRequest.anInt3627;
-          HuffmanEncoder.anInt638 = 2;
+          GlobalStatics_0.anInt638 = 2;
           FileCacheRequest.anInt4062 = DummyClass36.anInt2614;
           TextureSampler12.secureBuffer.writePacket(78);
           TextureSampler12.secureBuffer.writeShortLE(-1, var5);
@@ -193,7 +194,7 @@ public final class GameBuffer extends Buffer {
                   var8.waypointsX[0], 1, 0, 2, var8.waypointsY[0],
                   TextureCache.localPlayer.waypointsX[0]);
           SceneSomething2.anInt1053 = DummyClass5.anInt2993;
-          HuffmanEncoder.anInt638 = 2;
+          GlobalStatics_0.anInt638 = 2;
           FileCacheRequest.anInt4062 = DummyClass36.anInt2614;
           FileRequester.anInt2958 = 0;
           TextureSampler12.secureBuffer.writePacket(133);
@@ -239,7 +240,7 @@ public final class GameBuffer extends Buffer {
                   var11.waypointsX[0], 1, 0, 2, var11.waypointsY[0],
                   TextureCache.localPlayer.waypointsX[0]);
           SceneSomething2.anInt1053 = DummyClass5.anInt2993;
-          HuffmanEncoder.anInt638 = 2;
+          GlobalStatics_0.anInt638 = 2;
           ++TextureSampler15.anInt3205;
           FileRequester.anInt2958 = 0;
           FileCacheRequest.anInt4062 = DummyClass36.anInt2614;
@@ -275,7 +276,7 @@ public final class GameBuffer extends Buffer {
         ++Parameter.anInt3615;
         SceneSomething2.anInt1053 = DummyClass5.anInt2993;
         FileRequester.anInt2958 = 0;
-        HuffmanEncoder.anInt638 = 2;
+        GlobalStatics_0.anInt638 = 2;
         FileCacheRequest.anInt4062 = DummyClass36.anInt2614;
         TextureSampler12.secureBuffer.writePacket(66);
         TextureSampler12.secureBuffer
@@ -299,7 +300,7 @@ public final class GameBuffer extends Buffer {
       }
 
       if ((var4 == 1002)) {
-        HuffmanEncoder.anInt638 = 2;
+        GlobalStatics_0.anInt638 = 2;
         SceneSomething2.anInt1053 = DummyClass5.anInt2993;
         FileCacheRequest.anInt4062 = DummyClass36.anInt2614;
         ++HashTable.anInt1701;
@@ -372,7 +373,7 @@ public final class GameBuffer extends Buffer {
 
       if (var4 == 1007) {
         FileRequester.anInt2958 = 0;
-        HuffmanEncoder.anInt638 = 2;
+        GlobalStatics_0.anInt638 = 2;
         FileCacheRequest.anInt4062 = DummyClass36.anInt2614;
         SceneSomething2.anInt1053 = DummyClass5.anInt2993;
         var11 = TextureSampler5.npcs[var5];
@@ -426,7 +427,7 @@ public final class GameBuffer extends Buffer {
                   0, 2,
                   var8.waypointsX[0], 1, 0, 2, var8.waypointsY[0],
                   TextureCache.localPlayer.waypointsX[0]);
-          HuffmanEncoder.anInt638 = 2;
+          GlobalStatics_0.anInt638 = 2;
           FileCacheRequest.anInt4062 = DummyClass36.anInt2614;
           SceneSomething2.anInt1053 = DummyClass5.anInt2993;
           FileRequester.anInt2958 = 0;
@@ -495,7 +496,7 @@ public final class GameBuffer extends Buffer {
                   TextureCache.localPlayer.waypointsX[0]);
           FileRequester.anInt2958 = 0;
           ++DummyClass29.anInt437;
-          HuffmanEncoder.anInt638 = 2;
+          GlobalStatics_0.anInt638 = 2;
           FileCacheRequest.anInt4062 = DummyClass36.anInt2614;
           SceneSomething2.anInt1053 = DummyClass5.anInt2993;
           TextureSampler12.secureBuffer.writePacket(114);
@@ -543,7 +544,7 @@ public final class GameBuffer extends Buffer {
           }
         }
 
-        HuffmanEncoder.anInt638 = 2;
+        GlobalStatics_0.anInt638 = 2;
         SceneSomething2.anInt1053 = DummyClass5.anInt2993;
         FileRequester.anInt2958 = 0;
         FileCacheRequest.anInt4062 = DummyClass36.anInt2614;
@@ -564,7 +565,7 @@ public final class GameBuffer extends Buffer {
                   0, 2,
                   var11.waypointsX[0], 1, 0, 2, var11.waypointsY[0],
                   TextureCache.localPlayer.waypointsX[0]);
-          HuffmanEncoder.anInt638 = 2;
+          GlobalStatics_0.anInt638 = 2;
           FileRequester.anInt2958 = 0;
           FileCacheRequest.anInt4062 = DummyClass36.anInt2614;
           SceneSomething2.anInt1053 = DummyClass5.anInt2993;
@@ -614,7 +615,7 @@ public final class GameBuffer extends Buffer {
                 TextureCache.localPlayer.waypointsX[0]);
             FileCacheRequest.anInt4062 = DummyClass36.anInt2614;
             FileRequester.anInt2958 = 0;
-            HuffmanEncoder.anInt638 = 2;
+            GlobalStatics_0.anInt638 = 2;
             SceneSomething2.anInt1053 = DummyClass5.anInt2993;
             TextureSampler12.secureBuffer.writePacket(180);
             TextureSampler12.secureBuffer.method765(var5, (byte) 3);
@@ -641,7 +642,7 @@ public final class GameBuffer extends Buffer {
                 var8.waypointsX[0], 1, 0, 2, var8.waypointsY[0],
                 TextureCache.localPlayer.waypointsX[0]);
             FileRequester.anInt2958 = 0;
-            HuffmanEncoder.anInt638 = 2;
+            GlobalStatics_0.anInt638 = 2;
             SceneSomething2.anInt1053 = DummyClass5.anInt2993;
             FileCacheRequest.anInt4062 = DummyClass36.anInt2614;
             TextureSampler12.secureBuffer.writePacket(195);
@@ -674,7 +675,7 @@ public final class GameBuffer extends Buffer {
           }
 
           SceneSomething2.anInt1053 = DummyClass5.anInt2993;
-          HuffmanEncoder.anInt638 = 2;
+          GlobalStatics_0.anInt638 = 2;
           ++TextureSampler0.anInt3277;
           FileCacheRequest.anInt4062 = DummyClass36.anInt2614;
           FileRequester.anInt2958 = 0;
@@ -707,7 +708,7 @@ public final class GameBuffer extends Buffer {
                 var11.waypointsY[0],
                 TextureCache.localPlayer.waypointsX[0]);
             FileCacheRequest.anInt4062 = DummyClass36.anInt2614;
-            HuffmanEncoder.anInt638 = 2;
+            GlobalStatics_0.anInt638 = 2;
             SceneSomething2.anInt1053 = DummyClass5.anInt2993;
             ++WidgetAccess.anInt2204;
             FileRequester.anInt2958 = 0;
@@ -741,7 +742,7 @@ public final class GameBuffer extends Buffer {
                 false, 0, 2,
                 var11.waypointsX[0], 1, 0, 2, var11.waypointsY[0],
                 TextureCache.localPlayer.waypointsX[0]);
-            HuffmanEncoder.anInt638 = 2;
+            GlobalStatics_0.anInt638 = 2;
             FileRequester.anInt2958 = 0;
             FileCacheRequest.anInt4062 = DummyClass36.anInt2614;
             SceneSomething2.anInt1053 = DummyClass5.anInt2993;
@@ -788,7 +789,7 @@ public final class GameBuffer extends Buffer {
           SceneSomething2.anInt1053 = DummyClass5.anInt2993;
           FileRequester.anInt2958 = 0;
           FileCacheRequest.anInt4062 = DummyClass36.anInt2614;
-          HuffmanEncoder.anInt638 = 2;
+          GlobalStatics_0.anInt638 = 2;
           TextureSampler12.secureBuffer.writePacket(101);
           TextureSampler12.secureBuffer
               .method765(var2 + WorldMapLabel.anInt1716, (byte) 3);
@@ -806,7 +807,7 @@ public final class GameBuffer extends Buffer {
         if ((var4 == 1004)) {
           FileRequester.anInt2958 = 0;
           SceneSomething2.anInt1053 = DummyClass5.anInt2993;
-          HuffmanEncoder.anInt638 = 2;
+          GlobalStatics_0.anInt638 = 2;
           FileCacheRequest.anInt4062 = DummyClass36.anInt2614;
           TextureSampler12.secureBuffer.writePacket(94);
           ++Mobile.anInt2770;
@@ -861,7 +862,7 @@ public final class GameBuffer extends Buffer {
                 TextureCache.localPlayer.waypointsX[0]);
             FileRequester.anInt2958 = 0;
             FileCacheRequest.anInt4062 = DummyClass36.anInt2614;
-            HuffmanEncoder.anInt638 = 2;
+            GlobalStatics_0.anInt638 = 2;
             SceneSomething2.anInt1053 = DummyClass5.anInt2993;
             TextureSampler12.secureBuffer.writePacket(248);
             TextureSampler12.secureBuffer.method765(var5, (byte) 3);
@@ -906,7 +907,7 @@ public final class GameBuffer extends Buffer {
             }
           }
 
-          HuffmanEncoder.anInt638 = 2;
+          GlobalStatics_0.anInt638 = 2;
           ++SceneSomething2.anInt1060;
           FileCacheRequest.anInt4062 = DummyClass36.anInt2614;
           SceneSomething2.anInt1053 = DummyClass5.anInt2993;
@@ -954,7 +955,7 @@ public final class GameBuffer extends Buffer {
                 false, 0, 2,
                 var8.waypointsX[0], 1, 0, 2, var8.waypointsY[0],
                 TextureCache.localPlayer.waypointsX[0]);
-            HuffmanEncoder.anInt638 = 2;
+            GlobalStatics_0.anInt638 = 2;
             FileCacheRequest.anInt4062 = DummyClass36.anInt2614;
             ++FileCache.anInt685;
             SceneSomething2.anInt1053 = DummyClass5.anInt2993;
@@ -1016,7 +1017,7 @@ public final class GameBuffer extends Buffer {
               FileRequester.anInt2958 = 0;
               SceneSomething2.anInt1053 = DummyClass5.anInt2993;
               FileCacheRequest.anInt4062 = DummyClass36.anInt2614;
-              HuffmanEncoder.anInt638 = 2;
+              GlobalStatics_0.anInt638 = 2;
               TextureSampler12.secureBuffer.writePacket(68);
               TextureSampler12.secureBuffer.method765(var5, (byte) 3);
             }
@@ -1051,7 +1052,7 @@ public final class GameBuffer extends Buffer {
 
             FileCacheRequest.anInt4062 = DummyClass36.anInt2614;
             SceneSomething2.anInt1053 = DummyClass5.anInt2993;
-            HuffmanEncoder.anInt638 = 2;
+            GlobalStatics_0.anInt638 = 2;
             FileRequester.anInt2958 = 0;
             TextureSampler12.secureBuffer.writePacket(73);
             TextureSampler12.secureBuffer
@@ -1110,7 +1111,7 @@ public final class GameBuffer extends Buffer {
                 FileCacheRequest.anInt4062 = DummyClass36.anInt2614;
                 ++Structure.anInt3640;
                 FileRequester.anInt2958 = 0;
-                HuffmanEncoder.anInt638 = 2;
+                GlobalStatics_0.anInt638 = 2;
                 SceneSomething2.anInt1053 = DummyClass5.anInt2993;
                 TextureSampler12.secureBuffer.writePacket(106);
                 TextureSampler12.secureBuffer.writeShort(var5);
@@ -1144,7 +1145,7 @@ public final class GameBuffer extends Buffer {
               FileCacheRequest.anInt4062 = DummyClass36.anInt2614;
               FileRequester.anInt2958 = 0;
               SceneSomething2.anInt1053 = DummyClass5.anInt2993;
-              HuffmanEncoder.anInt638 = 2;
+              GlobalStatics_0.anInt638 = 2;
               TextureSampler12.secureBuffer.writePacket(33);
               TextureSampler12.secureBuffer.writeShort(var5);
               TextureSampler12.secureBuffer
@@ -1165,7 +1166,7 @@ public final class GameBuffer extends Buffer {
                 SceneSomething2.anInt1053 = DummyClass5.anInt2993;
                 FileRequester.anInt2958 = 0;
                 FileCacheRequest.anInt4062 = DummyClass36.anInt2614;
-                HuffmanEncoder.anInt638 = 2;
+                GlobalStatics_0.anInt638 = 2;
                 TextureSampler12.secureBuffer.writePacket(3);
                 TextureSampler12.secureBuffer.method765(var5, (byte) 3);
               }

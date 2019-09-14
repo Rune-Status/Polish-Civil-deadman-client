@@ -1,5 +1,6 @@
 package com.jagex.runescape;
 
+import com.jagex.runescape.buffer.Buffer;
 import com.jagex.runescape.opengl.GlRenderer;
 import com.jagex.runescape.opengl.GlUtils;
 import java.awt.Graphics;
@@ -141,7 +142,7 @@ public abstract class AbstractTextureSampler extends Node {
         }
 
         SoftwareFont var2 =
-          new SoftwareFont(var0, Something3dRoot.anIntArray2048, Buffer.anIntArray2591,
+          new SoftwareFont(var0, Something3dRoot.anIntArray2048, GlobalStatics_0.anIntArray2591,
             GroundItem.anIntArray2931, TextureSampler26.anIntArray3076,
             DummyClass5.aByteArrayArray2987);
         DummyClass37.method1035((byte) 126);

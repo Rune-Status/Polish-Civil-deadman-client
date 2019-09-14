@@ -1,5 +1,7 @@
 package com.jagex.runescape;
 
+import com.jagex.runescape.buffer.Buffer;
+
 public final class DummyClass12 {
 
   private static GameString aClass94_2032 = GameString

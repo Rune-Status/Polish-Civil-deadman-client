@@ -62,7 +62,7 @@ public abstract class AbstractSomethingTexture {
         for (SomethingWorldMapy var2 = (SomethingWorldMapy) DummyClass21.aClass61_1758.getFirst();
              var2 != null; var2 = (SomethingWorldMapy) DummyClass21.aClass61_1758.getNext()) {
           if (var2.aClass94_3561.method1528((byte) -42, var0)) {
-            Buffer.aClass3_Sub28_Sub3_2600 = var2;
+            GlobalStatics_0.aClass3_Sub28_Sub3_2600 = var2;
             return;
           }
         }

@@ -1,5 +1,7 @@
 package com.jagex.runescape;
 
+import com.jagex.runescape.buffer.Buffer;
+
 public class DummyClass7 extends DummyClass6 {
 
   public static GameString settings;

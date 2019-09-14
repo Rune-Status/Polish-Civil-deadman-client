@@ -1,5 +1,7 @@
 package com.jagex.runescape;
 
+import com.jagex.runescape.buffer.Buffer;
+
 public final class TextureSampler31 extends AbstractTextureSampler {
 
   private static GameString aClass94_3170 = GameString.create("Loaded textures");

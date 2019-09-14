@@ -145,7 +145,7 @@ public final class DummyClass8 extends DummyClass7 {
 
       FileCacheRequest.anInt4062 = DummyClass36.anInt2614;
       FileRequester.anInt2958 = 0;
-      HuffmanEncoder.anInt638 = 2;
+      GlobalStatics_0.anInt638 = 2;
       SceneSomething2.anInt1053 = DummyClass5.anInt2993;
       return true;
   }

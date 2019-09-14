@@ -89,12 +89,12 @@ public final class Queue {
           AbstractFont var2;
           if (GlRenderer.useOpenGlRenderer) {
             var2 = new GlFont(var1, Something3dRoot.anIntArray2048,
-                Buffer.anIntArray2591,
+                GlobalStatics_0.anIntArray2591,
                 GroundItem.anIntArray2931, TextureSampler26.anIntArray3076,
                 DummyClass5.aByteArrayArray2987);
           } else {
             var2 = new SoftwareFont(var1, Something3dRoot.anIntArray2048,
-                Buffer.anIntArray2591,
+                GlobalStatics_0.anIntArray2591,
                 GroundItem.anIntArray2931, TextureSampler26.anIntArray3076,
                 DummyClass5.aByteArrayArray2987);
           }

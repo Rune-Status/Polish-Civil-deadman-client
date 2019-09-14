@@ -1,5 +1,7 @@
 package com.jagex.runescape;
 
+import com.jagex.runescape.buffer.Buffer;
+import com.jagex.runescape.huffman.HuffmanEncoderStatics;
 import java.awt.Color;
 import java.awt.Font;
 import java.awt.Graphics;
@@ -22,14 +24,14 @@ public final class SomethingQuickChat2 extends SubNode {
       if (this.anIntArray3540 != null) {
         for (var2 = 0; this.anIntArray3540.length > var2; ++var2) {
           this.anIntArray3540[var2] =
-            TextureSampler3.method308(this.anIntArray3540[var2], '\u8000');
+            HuffmanEncoderStatics.method308(this.anIntArray3540[var2], '\u8000');
         }
       }
 
       if (this.anIntArray3534 != null) {
         for (var2 = 0; this.anIntArray3534.length > var2; ++var2) {
           this.anIntArray3534[var2] =
-            TextureSampler3.method308(this.anIntArray3534[var2], '\u8000');
+            HuffmanEncoderStatics.method308(this.anIntArray3534[var2], '\u8000');
         }
       }
 
@@ -138,9 +140,11 @@ public final class SomethingQuickChat2 extends SubNode {
         });
       } else if (DummyClass55.aBoolean1419 && GameObjectConfig.aBooleanArray1490[81]
         && TextureSampler25.amountContextActions > 2) {
-        var1 = Buffer.method802(TextureSampler25.amountContextActions - 2, true);
+        var1 = GlobalStatics_0
+            .method802(TextureSampler25.amountContextActions - 2, true);
       } else {
-        var1 = Buffer.method802(TextureSampler25.amountContextActions - 1, true);
+        var1 = GlobalStatics_0
+            .method802(TextureSampler25.amountContextActions - 1, true);
       }
 
       if (TextureSampler25.amountContextActions > 2) {

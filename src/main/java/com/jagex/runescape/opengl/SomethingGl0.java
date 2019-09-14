@@ -1,6 +1,6 @@
 package com.jagex.runescape.opengl;
 
-import com.jagex.runescape.Buffer;
+import com.jagex.runescape.buffer.Buffer;
 import com.jagex.runescape.DisplayMode;
 import com.jagex.runescape.DummyClass40;
 import com.jagex.runescape.DummyClass53;

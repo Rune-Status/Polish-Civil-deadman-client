@@ -1,5 +1,6 @@
 package com.jagex.runescape;
 
+import com.jagex.runescape.huffman.HuffmanEncoder;
 import com.jagex.runescape.opengl.GlDirectColorSprite;
 import com.jagex.runescape.opengl.GlRenderer;
 import com.jagex.runescape.opengl.GlUtils;
@@ -698,17 +699,17 @@ public final class DummyClass3 {
       }
 
       if ((GameObject.anInt2737 >= 100)) {
-        if (HuffmanEncoder.aClass3_Sub28_Sub16_637 == null
-          || var2 != HuffmanEncoder.aClass3_Sub28_Sub16_637.anInt3707
-          || HuffmanEncoder.aClass3_Sub28_Sub16_637.anInt3696 != var1) {
+        if (GlobalStatics_0.aClass3_Sub28_Sub16_637 == null
+          || var2 != GlobalStatics_0.aClass3_Sub28_Sub16_637.anInt3707
+          || GlobalStatics_0.aClass3_Sub28_Sub16_637.anInt3696 != var1) {
           SoftwareDirectColorSprite var5 = new SoftwareDirectColorSprite(var2, var1);
           DummyClass47.method1319(var5.pixels, var2, var1);
           SubNode.method523(var2, 0, 0, DummyClass30.anInt455, 0, 0, DummyClass58.anInt1460, var1,
             0);
           if (GlRenderer.useOpenGlRenderer) {
-            HuffmanEncoder.aClass3_Sub28_Sub16_637 = new GlDirectColorSprite(var5);
+            GlobalStatics_0.aClass3_Sub28_Sub16_637 = new GlDirectColorSprite(var5);
           } else {
-            HuffmanEncoder.aClass3_Sub28_Sub16_637 = var5;
+            GlobalStatics_0.aClass3_Sub28_Sub16_637 = var5;
           }
 
           if (GlRenderer.useOpenGlRenderer) {
@@ -718,7 +719,7 @@ public final class DummyClass3 {
           }
         }
 
-        HuffmanEncoder.aClass3_Sub28_Sub16_637.method635(var0, var4);
+        GlobalStatics_0.aClass3_Sub28_Sub16_637.method635(var0, var4);
         if (var3 != 19481) {
           DummyClass3
               .method70(null, null, null, 126, null, null, null, -1, null, null, null, null);

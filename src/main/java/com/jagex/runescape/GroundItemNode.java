@@ -1,5 +1,7 @@
 package com.jagex.runescape;
 
+import com.jagex.runescape.buffer.Buffer;
+
 public final class GroundItemNode extends SubNode {
 
   public static boolean aBoolean3668;
@@ -19,12 +21,12 @@ public final class GroundItemNode extends SubNode {
   }
 
   public static void method626(int var0) {
-    if (Buffer.aClass3_Sub28_Sub3_2600 != null) {
+    if (GlobalStatics_0.aClass3_Sub28_Sub3_2600 != null) {
         if (GameObject.anInt2737 < 10) {
           if (!TextureSampler23.worldMaps.method2127((byte) -83,
-            Buffer.aClass3_Sub28_Sub3_2600.aClass94_3561)) {
+            GlobalStatics_0.aClass3_Sub28_Sub3_2600.aClass94_3561)) {
             GameObject.anInt2737 = SomethingPacket116.worldMapData.method2116(22813,
-              Buffer.aClass3_Sub28_Sub3_2600.aClass94_3561) / 10;
+              GlobalStatics_0.aClass3_Sub28_Sub3_2600.aClass94_3561) / 10;
             return;
           }
 
@@ -33,25 +35,25 @@ public final class GroundItemNode extends SubNode {
         }
 
         if ((GameObject.anInt2737 == 10)) {
-          TextureSampler37.anInt3256 = Buffer.aClass3_Sub28_Sub3_2600.anInt3555 >> 6 << 6;
-          MapScene.anInt65 = Buffer.aClass3_Sub28_Sub3_2600.anInt3562 >> 6 << 6;
+          TextureSampler37.anInt3256 = GlobalStatics_0.aClass3_Sub28_Sub3_2600.anInt3555 >> 6 << 6;
+          MapScene.anInt65 = GlobalStatics_0.aClass3_Sub28_Sub3_2600.anInt3562 >> 6 << 6;
           DummyClass58.anInt1460 =
-            (Buffer.aClass3_Sub28_Sub3_2600.anInt3549 >> 6 << 6) - MapScene.anInt65 + 64;
+            (GlobalStatics_0.aClass3_Sub28_Sub3_2600.anInt3549 >> 6 << 6) - MapScene.anInt65 + 64;
           DummyClass30.anInt455 =
-            64 + (Buffer.aClass3_Sub28_Sub3_2600.anInt3559 >> 6 << 6) - TextureSampler37.anInt3256;
-          if (Buffer.aClass3_Sub28_Sub3_2600.anInt3563 == 37) {
+            64 + (GlobalStatics_0.aClass3_Sub28_Sub3_2600.anInt3559 >> 6 << 6) - TextureSampler37.anInt3256;
+          if (GlobalStatics_0.aClass3_Sub28_Sub3_2600.anInt3563 == 37) {
             AbstractGameWorld.aFloat727 = 3.0F;
             NPC.aFloat3979 = 3.0F;
           } else {
-            if ((Buffer.aClass3_Sub28_Sub3_2600.anInt3563 == 50)) {
+            if ((GlobalStatics_0.aClass3_Sub28_Sub3_2600.anInt3563 == 50)) {
               AbstractGameWorld.aFloat727 = 4.0F;
               NPC.aFloat3979 = 4.0F;
             } else {
-              if (Buffer.aClass3_Sub28_Sub3_2600.anInt3563 == 75) {
+              if (GlobalStatics_0.aClass3_Sub28_Sub3_2600.anInt3563 == 75) {
                 AbstractGameWorld.aFloat727 = 6.0F;
                 NPC.aFloat3979 = 6.0F;
-              } else if ((Buffer.aClass3_Sub28_Sub3_2600.anInt3563 != 100)) {
-                if (Buffer.aClass3_Sub28_Sub3_2600.anInt3563 == 200) {
+              } else if ((GlobalStatics_0.aClass3_Sub28_Sub3_2600.anInt3563 != 100)) {
+                if (GlobalStatics_0.aClass3_Sub28_Sub3_2600.anInt3563 == 200) {
                   AbstractGameWorld.aFloat727 = 16.0F;
                   NPC.aFloat3979 = 16.0F;
                 } else {
@@ -77,10 +79,10 @@ public final class GroundItemNode extends SubNode {
             SpawnedGameObject.anInt2251 = var2;
           } else {
             SpawnedGameObject.anInt2251 =
-              MapScene.anInt65 - Buffer.aClass3_Sub28_Sub3_2600.anInt3556 * 64
+              MapScene.anInt65 - GlobalStatics_0.aClass3_Sub28_Sub3_2600.anInt3556 * 64
                 + DummyClass58.anInt1460 - 1;
             SomethingQuickChat2.anInt3536 =
-              Buffer.aClass3_Sub28_Sub3_2600.anInt3558 * 64 - TextureSampler37.anInt3256;
+              GlobalStatics_0.aClass3_Sub28_Sub3_2600.anInt3558 * 64 - TextureSampler37.anInt3256;
           }
 
           SomethingInScenePacket202.method117((byte) 87);
@@ -89,7 +91,7 @@ public final class GroundItemNode extends SubNode {
           int var3 = DummyClass30.anInt455 >> 6;
           StringNode0.aByteArrayArrayArray2339 = new byte[var3][var4][];
           int var5 = TextureSampler31.anInt3158 >> 2 << 10;
-          HuffmanEncoder.aByteArrayArrayArray640 = new byte[var3][var4][];
+          GlobalStatics_0.aByteArrayArrayArray640 = new byte[var3][var4][];
           AbstractGameWorld.anIntArrayArrayArray720 = new int[var3][var4][];
           RenderAnimation.aByteArrayArrayArray383 = new byte[var3][var4][];
           AbstractMouseWheel.anIntArrayArrayArray1903 = new int[var3][var4][];
@@ -97,7 +99,7 @@ public final class GroundItemNode extends SubNode {
           int var6 = AbstractIndexedColorSprite.anInt1463 >> 1;
           ClientScriptCall.aByteArrayArrayArray2452 = new byte[var3][var4][];
           PlayerVariable.anIntArrayArrayArray558 = new int[var3][var4][];
-          HuffmanEncoder.method1014(-120, var6, var5);
+          GlobalStatics_0.method1014(-120, var6, var5);
           GameObject.anInt2737 = 20;
         } else if (GameObject.anInt2737 != 20) {
           if (var0 != 64) {
@@ -107,7 +109,7 @@ public final class GroundItemNode extends SubNode {
           if (GameObject.anInt2737 == 30) {
             DummyClass7.method2219(new Buffer(
               TextureSampler23.worldMaps.method2123(0, DummyClass18.aClass94_85,
-                Buffer.aClass3_Sub28_Sub3_2600.aClass94_3561)), false);
+                GlobalStatics_0.aClass3_Sub28_Sub3_2600.aClass94_3561)), false);
             GameObject.anInt2737 = 40;
             SomethingTexture4.resetFrameRegulator();
           } else if ((GameObject.anInt2737 != 40)) {
@@ -115,7 +117,7 @@ public final class GroundItemNode extends SubNode {
               HintMarker.method1587((byte) -83, new Buffer(
                   TextureSampler23.worldMaps
                       .method2123(var0 - 64, SomethingSceneI.aClass94_422,
-                          Buffer.aClass3_Sub28_Sub3_2600.aClass94_3561)));
+                          GlobalStatics_0.aClass3_Sub28_Sub3_2600.aClass94_3561)));
               GameObject.anInt2737 = 60;
               DummyClass5.method2210((byte) -90, true);
               SomethingTexture4.resetFrameRegulator();
@@ -123,12 +125,12 @@ public final class GroundItemNode extends SubNode {
               if ((GameObject.anInt2737 == 60)) {
                 if (TextureSampler23.worldMaps
                     .method2135(RenderAnimation.concat(new GameString[]{
-                        Buffer.aClass3_Sub28_Sub3_2600.aClass94_3561,
+                        GlobalStatics_0.aClass3_Sub28_Sub3_2600.aClass94_3561,
                         SomethingAudio.aClass94_2003
                     }), -106)) {
                   if (!TextureSampler23.worldMaps.method2127((byte) -83,
                       RenderAnimation.concat(new GameString[]{
-                          Buffer.aClass3_Sub28_Sub3_2600.aClass94_3561,
+                          GlobalStatics_0.aClass3_Sub28_Sub3_2600.aClass94_3561,
                           SomethingAudio.aClass94_2003
                       }))) {
                     return;
@@ -137,7 +139,7 @@ public final class GroundItemNode extends SubNode {
                   DummyClass25.aClass131_1624 =
                       DummyClass50.method1403(var0 - 120,
                           RenderAnimation.concat(new GameString[]{
-                              Buffer.aClass3_Sub28_Sub3_2600.aClass94_3561,
+                              GlobalStatics_0.aClass3_Sub28_Sub3_2600.aClass94_3561,
                               SomethingAudio.aClass94_2003
                           }), TextureSampler23.worldMaps);
                 } else {
@@ -202,14 +204,14 @@ public final class GroundItemNode extends SubNode {
           } else {
             TextureSampler25.method328(-21774, new Buffer(
               TextureSampler23.worldMaps.method2123(0, TextureSampler1.aClass94_3140,
-                Buffer.aClass3_Sub28_Sub3_2600.aClass94_3561)));
+                GlobalStatics_0.aClass3_Sub28_Sub3_2600.aClass94_3561)));
             GameObject.anInt2737 = 50;
             SomethingTexture4.resetFrameRegulator();
           }
         } else {
           AudioWorker.method889((byte) 105, new Buffer(
             TextureSampler23.worldMaps.method2123(0, HintMarker.aClass94_1349,
-              Buffer.aClass3_Sub28_Sub3_2600.aClass94_3561)));
+              GlobalStatics_0.aClass3_Sub28_Sub3_2600.aClass94_3561)));
           GameObject.anInt2737 = 30;
           DummyClass5.method2210((byte) -90, true);
           SomethingTexture4.resetFrameRegulator();

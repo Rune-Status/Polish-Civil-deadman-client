@@ -398,7 +398,7 @@ public final class FileCacheRequester implements Runnable {
                                       ((String) SceneShadowMap.aClass64_1778.result)
                                           .getBytes(
                                               StandardCharsets.ISO_8859_1);
-                                  var4 = TextureSampler33
+                                  var4 = GameStringStatics
                                       .createString(var5, 0, var5.length);
                                 }
                               }

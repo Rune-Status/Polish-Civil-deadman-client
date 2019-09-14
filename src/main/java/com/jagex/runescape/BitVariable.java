@@ -1,5 +1,6 @@
 package com.jagex.runescape;
 
+import com.jagex.runescape.buffer.Buffer;
 import java.awt.event.KeyEvent;
 
 public final class BitVariable {

@@ -1,5 +1,7 @@
 package com.jagex.runescape;
 
+import com.jagex.runescape.buffer.Buffer;
+import com.jagex.runescape.huffman.HuffmanEncoderStatics;
 import com.jagex.runescape.opengl.shader.MaterialShader;
 
 public final class SomethingQuickChat extends SubNode {
@@ -53,7 +55,7 @@ public final class SomethingQuickChat extends SubNode {
     if (this.anIntArray3567 != null) {
         for (int var2 = 0; this.anIntArray3567.length > var2; ++var2) {
           this.anIntArray3567[var2] =
-            TextureSampler3.method308(this.anIntArray3567[var2], '\u8000');
+            HuffmanEncoderStatics.method308(this.anIntArray3567[var2], '\u8000');
         }
       }
 

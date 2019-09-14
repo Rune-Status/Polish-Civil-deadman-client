@@ -1,5 +1,7 @@
 package com.jagex.runescape;
 
+import com.jagex.runescape.buffer.Buffer;
+
 public final class TextureSampler22 extends AbstractTextureSampler {
 
   public static GameString aClass94_3418 = GameString.create("(U5");

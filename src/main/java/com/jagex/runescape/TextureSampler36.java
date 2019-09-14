@@ -1,5 +1,6 @@
 package com.jagex.runescape;
 
+import com.jagex.runescape.buffer.Buffer;
 import com.jagex.runescape.opengl.DummyClass46;
 import com.jagex.runescape.opengl.GlIndexedColorSprite;
 import com.jagex.runescape.opengl.GlRenderer;
@@ -366,7 +367,7 @@ public final class TextureSampler36 extends AbstractTextureSampler {
           var1[i] =
               new GlIndexedColorSprite(SomethingVolume15.anInt2426,
                   SomethingPacket116.anInt1748,
-                  Something3dRoot.anIntArray2048[i], Buffer.anIntArray2591[i],
+                  Something3dRoot.anIntArray2048[i], GlobalStatics_0.anIntArray2591[i],
                   GroundItem.anIntArray2931[i],
                   TextureSampler26.anIntArray3076[i],
                   DummyClass5.aByteArrayArray2987[i],
@@ -374,7 +375,7 @@ public final class TextureSampler36 extends AbstractTextureSampler {
         } else {
           var1[i] = new SoftwareIndexedColorSprite(SomethingVolume15.anInt2426,
               SomethingPacket116.anInt1748, Something3dRoot.anIntArray2048[i],
-              Buffer.anIntArray2591[i], GroundItem.anIntArray2931[i],
+              GlobalStatics_0.anIntArray2591[i], GroundItem.anIntArray2931[i],
               TextureSampler26.anIntArray3076[i],
               DummyClass5.aByteArrayArray2987[i],
               TextureSampler38.anIntArray3446);

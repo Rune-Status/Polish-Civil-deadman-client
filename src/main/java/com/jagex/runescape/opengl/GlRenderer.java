@@ -8,10 +8,9 @@ import com.jagex.runescape.DummyClass17;
 import com.jagex.runescape.DummyClass3;
 import com.jagex.runescape.DummyClass55;
 import com.jagex.runescape.GameString;
+import com.jagex.runescape.GameStringStatics;
 import com.jagex.runescape.SomethingQuickChat;
-import com.jagex.runescape.TextureSampler33;
 import com.jagex.runescape.Unsure;
-import com.jogamp.nativewindow.NativeWindowFactory;
 import com.jogamp.nativewindow.awt.AWTGraphicsConfiguration;
 import com.jogamp.nativewindow.awt.JAWTWindow;
 import com.jogamp.opengl.GL2;
@@ -19,7 +18,6 @@ import com.jogamp.opengl.GLCapabilities;
 import com.jogamp.opengl.GLContext;
 import com.jogamp.opengl.GLDrawable;
 import com.jogamp.opengl.GLDrawableFactory;
-import com.jogamp.opengl.GLException;
 import com.jogamp.opengl.GLProfile;
 import java.awt.Canvas;
 import java.nio.ByteOrder;
@@ -73,7 +71,7 @@ public final class GlRenderer {
     byte[] var1;
     var1 = var0.getBytes(StandardCharsets.ISO_8859_1);
 
-    return TextureSampler33.createString(var1, 0, var1.length);
+    return GameStringStatics.createString(var1, 0, var1.length);
   }
 
   public static void method1821(int var0, int var1, int var2, int var3) {
@@ -612,7 +610,7 @@ public final class GlRenderer {
     GLDrawable glDrawable = drawableFactory.createGLDrawable(nativeWindow);
     glDrawable.setRealized(true);
     GlRenderer.GL_DRAWABLE = glDrawable;
-    GlRenderer.GL_CONTEXT = acquireGLContext(glDrawable)
+    GlRenderer.GL_CONTEXT = GlRenderer.acquireGLContext(glDrawable)
         .orElse(null);
 
     nativeWindow.unlockSurface();

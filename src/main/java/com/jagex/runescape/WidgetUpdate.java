@@ -1,5 +1,7 @@
 package com.jagex.runescape;
 
+import com.jagex.runescape.buffer.Buffer;
+
 public final class WidgetUpdate extends SubNode {
 
   public static boolean aBoolean3594;

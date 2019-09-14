@@ -1,5 +1,6 @@
 package com.jagex.runescape;
 
+import com.jagex.runescape.buffer.Buffer;
 import java.io.IOException;
 
 public final class OndemandRequester {
@@ -462,18 +463,18 @@ public final class OndemandRequester {
       RenderAnimation.aByteArrayArrayArray383 = null;
       DummyClass51.anIntArray1161 = null;
       ClientScriptCall.aByteArrayArrayArray2452 = null;
-      if (var1 && Buffer.aClass3_Sub28_Sub3_2600 != null) {
-        TextureSampler4.aClass94_3220 = Buffer.aClass3_Sub28_Sub3_2600.aClass94_3561;
+      if (var1 && GlobalStatics_0.aClass3_Sub28_Sub3_2600 != null) {
+        TextureSampler4.aClass94_3220 = GlobalStatics_0.aClass3_Sub28_Sub3_2600.aClass94_3561;
       } else {
         TextureSampler4.aClass94_3220 = null;
       }
 
-      HuffmanEncoder.aByteArrayArrayArray640 = null;
+      GlobalStatics_0.aByteArrayArrayArray640 = null;
       TextureSampler29.aByteArrayArrayArray3390 = null;
       PlayerVariable.anIntArrayArrayArray558 = null;
       AbstractMouseWheel.anIntArrayArrayArray1903 = null;
       GameObject.anInt2737 = 0;
-      Buffer.aClass3_Sub28_Sub3_2600 = null;
+      GlobalStatics_0.aClass3_Sub28_Sub3_2600 = null;
       DummyClass51.aClass61_1162.clear(-108);
       DummyClass25.aClass131_1624 = null;
       TextureSampler13.anInt3362 = -1;
@@ -485,7 +486,7 @@ public final class OndemandRequester {
       DummyClass54.aClass33_1399 = null;
       SomethingTexture1.aClass33_2637 = null;
       DummyClass25.aClass33_1626 = null;
-      HuffmanEncoder.aClass3_Sub28_Sub16_637 = null;
+      GlobalStatics_0.aClass3_Sub28_Sub16_637 = null;
       ProceduralTexture.anInt1150 = -1;
       TextureSampler4.aClass3_Sub28_Sub16_Sub2_3221 = null;
   }

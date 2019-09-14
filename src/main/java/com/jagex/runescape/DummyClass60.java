@@ -113,7 +113,8 @@ public final class DummyClass60 {
         var7 = FloorOverlay.aClass3_Sub28_Sub17_2096.method682(SomethingTexture4.aClass94_2667);
 
         for (int var8 = 0; TextureSampler25.amountContextActions > var8; ++var8) {
-          int var9 = FloorOverlay.aClass3_Sub28_Sub17_2096.method682(Buffer.method802(var8, true));
+          int var9 = FloorOverlay.aClass3_Sub28_Sub17_2096.method682(
+              GlobalStatics_0.method802(var8, true));
           if (var9 > var7) {
             var7 = var9;
           }

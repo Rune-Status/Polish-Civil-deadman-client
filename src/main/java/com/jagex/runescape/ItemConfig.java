@@ -1,5 +1,7 @@
 package com.jagex.runescape;
 
+import com.jagex.runescape.buffer.Buffer;
+import com.jagex.runescape.huffman.HuffmanEncoderStatics;
 import com.jagex.runescape.opengl.GlModel;
 import com.jagex.runescape.opengl.GlRenderer;
 import com.jagex.runescape.opengl.shader.MaterialShader5;
@@ -2194,7 +2196,8 @@ public final class ItemConfig {
                           k -= 2;
                           int i21 = GroundItem.anIntArray2929[k];
                           int k52 = GroundItem.anIntArray2929[1 + k];
-                          GroundItem.anIntArray2929[k++] = TextureSampler3.method308(i21, 1 << k52);
+                          GroundItem.anIntArray2929[k++] = HuffmanEncoderStatics
+                              .method308(i21, 1 << k52);
                           continue;
                         }
                         if (j1 == 4009) {
@@ -2259,7 +2262,8 @@ public final class ItemConfig {
                           k -= 2;
                           int l22 = GroundItem.anIntArray2929[k];
                           int j54 = GroundItem.anIntArray2929[k + 1];
-                          GroundItem.anIntArray2929[k++] = TextureSampler3.method308(l22, j54);
+                          GroundItem.anIntArray2929[k++] = HuffmanEncoderStatics
+                              .method308(l22, j54);
                           continue;
                         }
                         if ((j1 == 4016)) {
@@ -3307,7 +3311,7 @@ public final class ItemConfig {
                                     (short) DummyClass42.method1186(0,
                                       GroundItem.anIntArray2929[k + 1]);
                                   GameStub.method28(true);
-                                  Buffer.method746((byte) -29);
+                                  GlobalStatics_0.method746((byte) -29);
                                   DummyClass10.method2265(0);
                                   GameWorld.method1076(88);
                                   Cache.method1093(false);
@@ -3381,7 +3385,8 @@ public final class ItemConfig {
                                         ((String) SceneShadowMap.aClass64_1778.result).getBytes(
                                             StandardCharsets.ISO_8859_1);
                                       class94_24 =
-                                        TextureSampler33.createString(abyte0, 0, abyte0.length);
+                                        GameStringStatics
+                                            .createString(abyte0, 0, abyte0.length);
                                     }
                                   }
                                   Node.aClass94Array75[l++] = class94_24;
@@ -3593,7 +3598,7 @@ public final class ItemConfig {
                                         DummyClass51.method1417(104);
                                       }
                                     }
-                                    Buffer.method746((byte) -29);
+                                    GlobalStatics_0.method746((byte) -29);
                                     DummyClass25.writeSettings(DummyClass35.signLink);
                                     StillGraphic.aBoolean2705 = false;
                                     continue;
@@ -3603,7 +3608,7 @@ public final class ItemConfig {
                                         GroundItem.anIntArray2929[--k] == 1);
                                     StringNode0.method139(66);
                                     DummyClass51.method1417(101);
-                                    Buffer.method792(0x8c1111);
+                                    GlobalStatics_0.method792(0x8c1111);
                                     DummyClass25.writeSettings(DummyClass35.signLink);
                                     StillGraphic.aBoolean2705 = false;
                                     continue;
@@ -3611,7 +3616,7 @@ public final class ItemConfig {
                                   if ((j1 == 6003)) {
                                     AbstractObjectNode.aBoolean3604 =
                                       (GroundItem.anIntArray2929[--k] == 1);
-                                    Buffer.method792(0x8c1111);
+                                    GlobalStatics_0.method792(0x8c1111);
                                     DummyClass25.writeSettings(DummyClass35.signLink);
                                     StillGraphic.aBoolean2705 = false;
                                     continue;
@@ -3791,7 +3796,7 @@ public final class ItemConfig {
                                   if (j1 == 6021) {
                                     FileCacheRequester.aBoolean1084 =
                                       (GroundItem.anIntArray2929[--k] == 1);
-                                    Buffer.method792(0x8c1111);
+                                    GlobalStatics_0.method792(0x8c1111);
                                     continue;
                                   }
                                   if ((j1 == 6023)) {

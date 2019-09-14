@@ -10,7 +10,7 @@ public final class DummyClass49 {
   public static SoftwareIndexedColorSprite method1364(byte var0) {
     SoftwareIndexedColorSprite var1 =
         new SoftwareIndexedColorSprite(SomethingVolume15.anInt2426, SomethingPacket116.anInt1748,
-          Something3dRoot.anIntArray2048[0], Buffer.anIntArray2591[0], GroundItem.anIntArray2931[0],
+          Something3dRoot.anIntArray2048[0], GlobalStatics_0.anIntArray2591[0], GroundItem.anIntArray2931[0],
           TextureSampler26.anIntArray3076[0], DummyClass5.aByteArrayArray2987[0],
           TextureSampler38.anIntArray3446);
       if (var0 <= 55) {

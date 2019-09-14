@@ -96,7 +96,7 @@ public final class VertexNormal {
         }
 
         if ((var5 == 3)) {
-          SomethingSceneJ var13 = Buffer.method784(var0, var6, var4);
+          SomethingSceneJ var13 = GlobalStatics_0.method784(var0, var6, var4);
           if (var13 != null) {
             var13.aClass140_320 =
               new GameObject(Integer.MAX_VALUE & (int) (var13.aLong328 >>> 32), 22, var2, var0,

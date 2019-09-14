@@ -1,5 +1,7 @@
 package com.jagex.runescape;
 
+import com.jagex.runescape.buffer.Buffer;
+
 public class SubNode extends Node {
 
   private static GameString aClass94_2568 = GameString.create("Started 3d Library");
@@ -50,7 +52,7 @@ public class SubNode extends Node {
 
   public static SomethingWorldMapy method520(byte var0) {
     int var1 = -122 % ((var0 + 48) / 33);
-      return Buffer.aClass3_Sub28_Sub3_2600;
+      return GlobalStatics_0.aClass3_Sub28_Sub3_2600;
   }
 
   public static void method521(int var0) {

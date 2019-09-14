@@ -1,6 +1,8 @@
+package(default_visibility = ["//visibility:public"])
+
 java_binary(
-    name = "client_launcher",
-    srcs = ["src/main/java/com/jagex/runescape/GameClient.java"],
+    name = "launcher",
+    srcs = ["//src/main/java/com/jagex/runescape/launcher:Launcher.java"],
     args = [
         "3594",
         "live",
@@ -9,22 +11,6 @@ java_binary(
         "95.160.142.230",
     ],
     jvm_flags = ["-Djogamp.debug"],
-    main_class = "com.jagex.runescape.GameClient",
-    deps = [":client"],
-)
-
-java_library(
-    name = "client",
-    srcs = glob([
-        "src/main/java/**/*.java",
-    ]),
-    deps = ["client_lib"],
-)
-
-java_import(
-    name = "client_lib",
-    jars = [
-        "lib/client.jar",
-        "lib/jogamp-fat.jar",
-    ],
+    main_class = "com.jagex.runescape.launcher.Launcher",
+    deps = ["//src/main/java/com/jagex/runescape"],
 )

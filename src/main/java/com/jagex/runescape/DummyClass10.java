@@ -1,5 +1,7 @@
 package com.jagex.runescape;
 
+import com.jagex.runescape.buffer.Buffer;
+
 public final class DummyClass10 {
 
   public static GameString aClass94_2082 = GameString.create(" <col=ffff00>");

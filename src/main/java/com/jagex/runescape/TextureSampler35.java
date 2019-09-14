@@ -1,5 +1,7 @@
 package com.jagex.runescape;
 
+import com.jagex.runescape.buffer.Buffer;
+
 public final class TextureSampler35 extends AbstractTextureSampler {
 
   private static GameString aClass94_3334 = GameString.create("wave2:");

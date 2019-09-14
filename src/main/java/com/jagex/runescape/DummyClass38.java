@@ -1,5 +1,6 @@
 package com.jagex.runescape;
 
+import com.jagex.runescape.buffer.Buffer;
 import java.util.Objects;
 
 public final class DummyClass38 {
@@ -248,7 +249,7 @@ public final class DummyClass38 {
       Something3dRoot.anIntArray2048 = new int[DummyClass53.spriteCount];
       TextureSampler0.aBooleanArray3272 = new boolean[DummyClass53.spriteCount];
       DummyClass4.aByteArrayArray3005 = new byte[DummyClass53.spriteCount][];
-      Buffer.anIntArray2591 = new int[DummyClass53.spriteCount];
+      GlobalStatics_0.anIntArray2591 = new int[DummyClass53.spriteCount];
       DummyClass5.aByteArrayArray2987 = new byte[DummyClass53.spriteCount][];
       var2.position = -(8 * DummyClass53.spriteCount) + var0.length - 7;
       SomethingVolume15.anInt2426 = var2.readUnsignedShort();
@@ -265,7 +266,7 @@ public final class DummyClass38 {
       }
 
       for (var4 = 0; (var4 < DummyClass53.spriteCount); ++var4) {
-        Buffer.anIntArray2591[var4] = var2.readUnsignedShort();
+        GlobalStatics_0.anIntArray2591[var4] = var2.readUnsignedShort();
       }
 
       for (var4 = 0; DummyClass53.spriteCount > var4; ++var4) {

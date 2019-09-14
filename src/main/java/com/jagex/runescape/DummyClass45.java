@@ -1,5 +1,7 @@
 package com.jagex.runescape;
 
+import com.jagex.runescape.buffer.Buffer;
+import com.jagex.runescape.buffer.BufferStatics;
 import com.jagex.runescape.opengl.GlRenderer;
 import com.jagex.runescape.opengl.GlUtils;
 
@@ -8,7 +10,6 @@ public final class DummyClass45 {
   public static GameString aClass94_981 = GameString.create("S-Blectionner");
   public static GameString aClass94_982 = GameString.create("niveau ");
   public static Deque aClass61_983 = new Deque();
-  public static int anInt984;
   public static GameString aClass94_985 = GameString.create("Fps:");
   public static Buffer[] configs = new Buffer[2048];
   public static int anInt987;
@@ -24,7 +25,7 @@ public final class DummyClass45 {
   public static int[] method1233(int[] var0, int var1) {
     if (var0 != null) {
         if (var1 != 2) {
-          DummyClass45.anInt984 = 113;
+          BufferStatics.anInt984 = 113;
         }
 
         int[] var2 = new int[var0.length];
@@ -55,7 +56,7 @@ public final class DummyClass45 {
   }
 
   public static void method1235(int var0, int var1, int var2, int var3, byte var4) {
-    if (HuffmanEncoder.anInt638 == 1) {
+    if (GlobalStatics_0.anInt638 == 1) {
         DummyClass17.aClass3_Sub28_Sub16Array1825[FileRequester.anInt2958 / 100].method643(
           -8 + SceneSomething2.anInt1053, -8 + FileCacheRequest.anInt4062);
       }
@@ -64,7 +65,7 @@ public final class DummyClass45 {
         DummyClass45.spawnSceneX = -21;
       }
 
-      if ((HuffmanEncoder.anInt638 == 2)) {
+      if ((GlobalStatics_0.anInt638 == 2)) {
         DummyClass17.aClass3_Sub28_Sub16Array1825[4 + FileRequester.anInt2958 / 100].method643(
           SceneSomething2.anInt1053 - 8, -8 + FileCacheRequest.anInt4062);
       }

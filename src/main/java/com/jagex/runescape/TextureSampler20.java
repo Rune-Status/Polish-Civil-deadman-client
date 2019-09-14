@@ -1,5 +1,6 @@
 package com.jagex.runescape;
 
+import com.jagex.runescape.buffer.Buffer;
 import com.jagex.runescape.opengl.GlTexture2d;
 import java.awt.Point;
 import java.io.IOException;
@@ -442,7 +443,8 @@ public final class TextureSampler20 extends AbstractTextureSampler {
                 var1 = SomethingInScenePacket202.method115(true, -1);
                 (var1 != -1); var1 = SomethingInScenePacket202.method115(false, -1)) {
                 DummyClass39.method1087(40, var1);
-                AbstractGameWorld.anIntArray726[ClientScript.bitAnd(HuffmanEncoder.anInt641++,
+                AbstractGameWorld.anIntArray726[ClientScript.bitAnd(
+                    GlobalStatics_0.anInt641++,
                   31)] = var1;
               }
 
@@ -604,10 +606,10 @@ public final class TextureSampler20 extends AbstractTextureSampler {
                 }
               }
 
-              if (HuffmanEncoder.anInt638 != 0) {
+              if (GlobalStatics_0.anInt638 != 0) {
                 FileRequester.anInt2958 += 20;
                 if (FileRequester.anInt2958 >= 400) {
-                  HuffmanEncoder.anInt638 = 0;
+                  GlobalStatics_0.anInt638 = 0;
                 }
               }
 
@@ -779,7 +781,7 @@ public final class TextureSampler20 extends AbstractTextureSampler {
                               TextureSampler12.secureBuffer.method783(
                                 OndemandRequester.anInt999 + ProceduralTexture.anInt1152,
                                 -268435456);
-                              HuffmanEncoder.anInt638 = 1;
+                              GlobalStatics_0.anInt638 = 1;
                               FileRequester.anInt2958 = 0;
                               FileCacheRequest.anInt4062 = DummyClass36.anInt2614;
                               SceneSomething2.anInt1053 = DummyClass5.anInt2993;
@@ -795,7 +797,7 @@ public final class TextureSampler20 extends AbstractTextureSampler {
                               TextureSampler12.secureBuffer.writeShort(
                                 DummyClass32.anInt515 + WorldMapLabel.anInt1716);
                               FileRequester.anInt2958 = 0;
-                              HuffmanEncoder.anInt638 = 1;
+                              GlobalStatics_0.anInt638 = 1;
                               SceneSomething2.anInt1053 = DummyClass5.anInt2993;
                               FileCacheRequest.anInt4062 = DummyClass36.anInt2614;
                             }
@@ -812,7 +814,7 @@ public final class TextureSampler20 extends AbstractTextureSampler {
                               FileCacheRequest.anInt4062 = DummyClass36.anInt2614;
                               FileRequester.anInt2958 = 0;
                               SceneSomething2.anInt1053 = DummyClass5.anInt2993;
-                              HuffmanEncoder.anInt638 = 1;
+                              GlobalStatics_0.anInt638 = 1;
                             }
                           }
 

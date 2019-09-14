@@ -11,7 +11,7 @@ import java.nio.charset.StandardCharsets;
 public final class GameString implements UnusedInterface1 {
 
   private static GameString aClass94_2158 =
-      create("Allocated memory");
+      GameString.create("Allocated memory");
   public static int anInt2145;
   public static boolean safemode;
   public static int packetId;
@@ -19,9 +19,9 @@ public final class GameString implements UnusedInterface1 {
   public static boolean stereo;
   public static boolean aBoolean2154;
   public static int[] anIntArray2157 = new int[50];
-  public static GameString aClass94_2149 = create(
+  public static GameString aClass94_2149 = GameString.create(
       "Bitte warten Sie )2 es wird versucht)1 die Verbindung wiederherzustellen)3");
-  public static GameString aClass94_2155 = create(":allyreq:");
+  public static GameString aClass94_2155 = GameString.create(":allyreq:");
   public static GameString aClass94_2151 = GameString.aClass94_2158;
   public byte[] bytes;
   public int length;

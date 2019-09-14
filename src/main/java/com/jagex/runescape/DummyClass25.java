@@ -1,5 +1,6 @@
 package com.jagex.runescape;
 
+import com.jagex.runescape.buffer.Buffer;
 import com.jagex.runescape.opengl.GlRenderer;
 import java.awt.Component;
 import java.awt.Insets;

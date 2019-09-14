@@ -166,7 +166,7 @@ public final class Cache {
         bytes = fileData[var5];
         if (bytes != null) {
           DummyClass43.method1194(-16385);
-          Buffer.method777(BlockConfig.collisionMaps, var0, -48 + 8 * AbstractObjectNode.anInt3606,
+          GlobalStatics_0.method777(BlockConfig.collisionMaps, var0, -48 + 8 * AbstractObjectNode.anInt3606,
             var7, 4, var6, (VariableUpdate.anInt2294 - 6) * 8, bytes);
         }
       }
@@ -410,7 +410,8 @@ public final class Cache {
                 }
 
                 if (var11.anInt189 == 1400) {
-                  Buffer.method799(var13, 64, var14, var11.anInt193, var11.anInt168);
+                  GlobalStatics_0
+                      .method799(var13, 64, var14, var11.anInt193, var11.anInt168);
                   GroundItemNode.aBooleanArray3674[var12] = true;
                   DummyClass9.aBooleanArray4008[var12] = true;
                   if (GlRenderer.useOpenGlRenderer) {
@@ -486,9 +487,9 @@ public final class Cache {
                   var26 = 0;
 
                   for (var28 = 0; var28 < 28; ++var28) {
-                    var25 += Buffer.aClass151_Sub1Array2601[var28].method2108((byte) 1);
-                    var26 += Buffer.aClass151_Sub1Array2601[var28].method2102(0);
-                    var47 += Buffer.aClass151_Sub1Array2601[var28].method2106(1);
+                    var25 += GlobalStatics_0.aClass151_Sub1Array2601[var28].method2108((byte) 1);
+                    var26 += GlobalStatics_0.aClass151_Sub1Array2601[var28].method2102(0);
+                    var47 += GlobalStatics_0.aClass151_Sub1Array2601[var28].method2106(1);
                   }
 
                   var29 = 10000 * var26 / var25;
@@ -798,7 +799,7 @@ public final class Cache {
                             && var11.anInt271 != -1) {
                             var45 = RenderAnimation.concat(new GameString[] {
                               TextureSampler6.aClass94_3042, var45, ClassCheckRequest.aClass94_2306,
-                              HuffmanEncoder.method1013((byte) -125, var11.anInt271)
+                              GlobalStatics_0.method1013((byte) -125, var11.anInt271)
                             });
                           }
                         }
@@ -990,7 +991,7 @@ public final class Cache {
                                   var40 = RenderAnimation.concat(new GameString[] {
                                     TextureSampler6.aClass94_3042, var42.aClass94_770,
                                     ClassCheckRequest.aClass94_2306,
-                                    HuffmanEncoder.method1013((byte) -100,
+                                    GlobalStatics_0.method1013((byte) -100,
                                       var11.anIntArray317[var21])
                                   });
                                 }
@@ -1029,7 +1030,7 @@ public final class Cache {
 
                           GameString var44;
                           while ((var43.getLength() > 0)) {
-                            var25 = var43.indexOf(Buffer.LINE_BREAK);
+                            var25 = var43.indexOf(GlobalStatics_0.LINE_BREAK);
                             if (var25 == -1) {
                               var44 = var43;
                               var43 = GroundItemNode.EMPTY_STRING;
@@ -1075,7 +1076,7 @@ public final class Cache {
                           for (
                             var43 = FileCacheRequester.method1303(var11, var43, 0);
                             (var43.getLength() > 0); var47 += var35.anInt3727 + 1) {
-                            var28 = var43.indexOf(Buffer.LINE_BREAK);
+                            var28 = var43.indexOf(GlobalStatics_0.LINE_BREAK);
                             if ((var28 == -1)) {
                               var44 = var43;
                               var43 = GroundItemNode.EMPTY_STRING;

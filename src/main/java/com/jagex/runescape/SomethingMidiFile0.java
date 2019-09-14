@@ -1,5 +1,7 @@
 package com.jagex.runescape;
 
+import com.jagex.runescape.buffer.Buffer;
+
 public final class SomethingMidiFile0 {
 
   private static byte[] aByteArray1117 = {
@@ -84,7 +86,7 @@ public final class SomethingMidiFile0 {
   }
 
   public void method1377(int var1 ) {
-    int var2 = this.aClass3_Sub30_1113.method741((byte) 119);
+    int var2 = this.aClass3_Sub30_1113.method741();
     this.anIntArray1114[var1] += var2;
   }
 
@@ -92,7 +94,7 @@ public final class SomethingMidiFile0 {
     int var4;
     if (var2 == 255) {
       int var7 = this.aClass3_Sub30_1113.readUnsignedByte();
-      var4 = this.aClass3_Sub30_1113.method741((byte) 123);
+      var4 = this.aClass3_Sub30_1113.method741();
       if (var7 == 47) {
         this.aClass3_Sub30_1113.position += var4;
         return 1;
@@ -137,7 +139,7 @@ public final class SomethingMidiFile0 {
     if (var5 != 240 && var5 != 247) {
       return this.method1378(var1, var5);
     } else {
-      int var3 = this.aClass3_Sub30_1113.method741((byte) 126);
+      int var3 = this.aClass3_Sub30_1113.method741();
       if (var5 == 247 && var3 > 0) {
         int var4 =
             this.aClass3_Sub30_1113.bytes[this.aClass3_Sub30_1113.position] & 255;

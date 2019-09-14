@@ -1,5 +1,7 @@
 package com.jagex.runescape;
 
+import com.jagex.runescape.buffer.Buffer;
+
 public final class FilterPossibly {
 
   private static float[][] aFloatArrayArray1431 = new float[2][8];

@@ -1,5 +1,6 @@
 package com.jagex.runescape;
 
+import com.jagex.runescape.buffer.Buffer;
 import com.jagex.runescape.opengl.GlTexture2d;
 import com.jagex.runescape.opengl.shader.MaterialShader5;
 import com.jagex.runescape.opengl.Texture;
@@ -361,7 +362,7 @@ public final class Structure extends SubNode {
       TextureSampler14.aClass94_3388 = ScriptState.aClass94_875;
       TextureSampler18.aClass94_4040 = StillGraphicNode.aClass94_3547;
       DummyClass14.ATTEMPTING_TO_RECONNECT = GameString.aClass94_2149;
-      Buffer.LOADED_INTERFACES = Texture.aClass94_3785;
+      GlobalStatics_0.LOADED_INTERFACES = Texture.aClass94_3785;
       SpotAnimationConfig.aClass94_551 = BufferData.aClass94_1647;
       GameWorld.aClass94_2624 = Something3dRoot.aClass94_2053;
       StillGraphicNode.aClass94_3544 = BZipDecompressorState.aClass94_145;

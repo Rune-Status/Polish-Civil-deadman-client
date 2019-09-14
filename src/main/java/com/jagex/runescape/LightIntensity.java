@@ -1,5 +1,7 @@
 package com.jagex.runescape;
 
+import com.jagex.runescape.buffer.Buffer;
+
 public final class LightIntensity {
 
   public static AbstractDirectColorSprite aClass3_Sub28_Sub16_895;

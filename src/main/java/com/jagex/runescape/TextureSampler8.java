@@ -1,11 +1,13 @@
 package com.jagex.runescape;
 
+import com.jagex.runescape.buffer.Buffer;
+import com.jagex.runescape.buffer.BufferStatics;
+
 public final class TextureSampler8 extends AbstractTextureSampler {
 
   public static AbstractDirectColorSprite[] aClass3_Sub28_Sub16Array3458;
   public static int anInt3459;
   public static int anInt3460;
-  public static byte[][] aByteArrayArray3461 = new byte[1000][];
   public static int anInt3463;
   public static int anInt3464;
   public static int viewportLength;
@@ -239,7 +241,7 @@ public final class TextureSampler8 extends AbstractTextureSampler {
   }
 
   public static void method357(boolean var0) {
-    TextureSampler8.aByteArrayArray3461 = null;
+    BufferStatics.aByteArrayArray3461 = null;
       TextureSampler8.aClass3_Sub28_Sub16Array3458 = null;
       if (var0) {
         TextureSampler8.method353(-71, 100);

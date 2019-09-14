@@ -1,5 +1,7 @@
 package com.jagex.runescape;
 
+import com.jagex.runescape.buffer.Buffer;
+
 public final class TextureSampler12 extends AbstractTextureSampler {
 
   public static GameBuffer secureBuffer = new GameBuffer(5000);

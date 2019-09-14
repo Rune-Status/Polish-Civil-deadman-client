@@ -246,7 +246,7 @@ public abstract class GameStub implements Runnable,
               DummyClass30.viewWidth, true,
               GameCanvas.INSTANCE);
       this.initialize(2);
-      Inventory.frameRateRegulator = HuffmanEncoder.method1012((byte) -31);
+      Inventory.frameRateRegulator = GlobalStatics_0.method1012((byte) -31);
 
       while ((AreaSoundEffect.destroyTime == 0L)
           || AreaSoundEffect.destroyTime > Time.getCurrentTimeMillis()) {
@@ -328,8 +328,8 @@ public abstract class GameStub implements Runnable,
       int var5) {
     try {
         if (StringNode.applet != null) {
-          ++HuffmanEncoder.anInt639;
-          if ((HuffmanEncoder.anInt639 >= 3)) {
+          ++GlobalStatics_0.anInt639;
+          if ((GlobalStatics_0.anInt639 >= 3)) {
             this.reportError("alreadyloaded");
             return;
           }

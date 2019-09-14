@@ -1,5 +1,6 @@
 package com.jagex.runescape;
 
+import com.jagex.runescape.buffer.Buffer;
 import com.jagex.runescape.opengl.GlTexture2d;
 import java.io.IOException;
 
@@ -95,19 +96,6 @@ public final class TextureSampler33 extends AbstractTextureSampler {
       }
 
       TextureSampler33.keyboard = null;
-  }
-
-  public static GameString createString(byte[] bytes, int off, int len) {
-    GameString string = new GameString();
-      string.bytes = new byte[len];
-      string.length = 0;
-
-      for (int i = off; i < len + off; i++) {
-        if (bytes[i] != 0) {
-          string.bytes[string.length++] = bytes[i];
-        }
-      }
-      return string;
   }
 
   public static int method179(byte var0, int var1) {

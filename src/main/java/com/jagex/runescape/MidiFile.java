@@ -1,5 +1,7 @@
 package com.jagex.runescape;
 
+import com.jagex.runescape.buffer.Buffer;
+
 public final class MidiFile extends Node {
 
   public HashTable aClass130_2564;
@@ -70,7 +72,7 @@ public final class MidiFile extends Node {
     var14 = var2 + var5 + var6 + var7 + var8 + var9 + var10 + var11 + var12;
 
     for (var15 = 0; var15 < var14; ++var15) {
-      var1.method741((byte) 127);
+      var1.method741();
     }
 
     var4 += var1.position - var13;
@@ -192,7 +194,7 @@ public final class MidiFile extends Node {
       int var62 = -1;
 
       while (true) {
-        int var63 = var1.method741((byte) 113);
+        int var63 = var1.method741();
         var51.method771(17038, var63);
         int var64 = var1.bytes[var29++] & 255;
         boolean var65 = var64 != var62;

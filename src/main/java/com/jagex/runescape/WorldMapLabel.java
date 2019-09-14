@@ -1,5 +1,7 @@
 package com.jagex.runescape;
 
+import com.jagex.runescape.buffer.Buffer;
+
 public final class WorldMapLabel {
 
   private static GameString aClass94_1717 = GameString.create("Prepared sound engine");

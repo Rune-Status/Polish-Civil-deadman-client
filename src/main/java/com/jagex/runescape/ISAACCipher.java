@@ -391,7 +391,7 @@ public final class ISAACCipher {
         }
 
         FloorOverlay.aClass3_Sub28_Sub17_2096
-            .method681(Buffer.method802(var7, true), 3 + var1,
+            .method681(GlobalStatics_0.method802(var7, true), 3 + var1,
                 var8, var9, 0);
       }
 

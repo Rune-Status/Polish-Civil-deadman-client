@@ -1,5 +1,6 @@
 package com.jagex.runescape;
 
+import com.jagex.runescape.huffman.HuffmanEncoderStatics;
 import com.jagex.runescape.opengl.DummyClass16;
 import com.jagex.runescape.opengl.DummyClass46;
 import com.jagex.runescape.opengl.GlEnvironment;
@@ -374,7 +375,7 @@ public final class DirectImageProducer extends AbstractImageProducer
 
                   if (var47 && var14 == var15 && (var14 == var16) && (var44 == var14)) {
                     DummyClass36.anIntArrayArrayArray2609[var8][lightPosX][lightPosY] =
-                      TextureSampler3.method308(
+                      HuffmanEncoderStatics.method308(
                         DummyClass36.anIntArrayArrayArray2609[var8][lightPosX][lightPosY], 4);
                   }
                 }

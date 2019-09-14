@@ -1,5 +1,7 @@
 package com.jagex.runescape;
 
+import com.jagex.runescape.buffer.Buffer;
+
 public final class MidiInstrument extends Node {
 
   private static float[] aFloatArray2387;

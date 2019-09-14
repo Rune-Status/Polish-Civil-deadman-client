@@ -22,7 +22,7 @@ import com.jagex.runescape.TriChromaticImageCache;
 import com.jagex.runescape.opengl.shader.MaterialShader3;
 import com.jogamp.opengl.GL2;
 
-public class CommonGL {
+public final class CommonGL {
 
   public static void method403() {
     GL2 var0 = GlRenderer.GL;
@@ -58,7 +58,7 @@ public class CommonGL {
     GlRenderer.GL.glPushMatrix();
     GlRenderer.GL.glTranslatef((-var0), (-var1), (-var2));
     if (var22) {
-      method403();
+      CommonGL.method403();
       SomethingQuickChat.method551(0, -1, 3);
       TextureSampler23.aBoolean3207 = true;
       MaterialShader3.method2254();

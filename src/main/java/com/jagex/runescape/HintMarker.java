@@ -1,5 +1,7 @@
 package com.jagex.runescape;
 
+import com.jagex.runescape.buffer.Buffer;
+
 public final class HintMarker {
 
   public static int anInt1345;
@@ -58,11 +60,11 @@ public final class HintMarker {
                     int var2;
                     if ((1 & var15) == 1) {
                       var2 = var1.readUnsignedByte();
-                      if (HuffmanEncoder.aByteArrayArrayArray640[var11][var12] == null) {
-                        HuffmanEncoder.aByteArrayArrayArray640[var11][var12] = new byte[4096];
+                      if (GlobalStatics_0.aByteArrayArrayArray640[var11][var12] == null) {
+                        GlobalStatics_0.aByteArrayArrayArray640[var11][var12] = new byte[4096];
                       }
 
-                      HuffmanEncoder.aByteArrayArrayArray640[var11][var12][var13 + (-var14 + 63
+                      GlobalStatics_0.aByteArrayArrayArray640[var11][var12][var13 + (-var14 + 63
                         << 6)] = (byte) var2;
                     }
 

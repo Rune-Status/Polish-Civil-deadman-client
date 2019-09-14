@@ -1,5 +1,6 @@
 package com.jagex.runescape;
 
+import com.jagex.runescape.buffer.Buffer;
 import com.jagex.runescape.opengl.GlTexture2d;
 import com.jagex.runescape.opengl.shader.MaterialShader5;
 import java.nio.charset.StandardCharsets;

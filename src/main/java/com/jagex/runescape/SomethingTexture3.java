@@ -1,5 +1,6 @@
 package com.jagex.runescape;
 
+import com.jagex.runescape.huffman.HuffmanEncoderStatics;
 import com.jagex.runescape.opengl.GlDirectColorSprite;
 import com.jagex.runescape.opengl.GlDirectFullColorSprite;
 import com.jagex.runescape.opengl.GlRenderer;
@@ -77,7 +78,7 @@ public final class SomethingTexture3 extends AbstractSomethingTexture {
       MonoChromaticImageCache.method1711(5, var0 - 25956);
       AreaSoundEffect.method137(5, (byte) -118);
       ClanChatUser.method386(5, var0 ^ -26138);
-      Buffer.method795((byte) 14, 5);
+      GlobalStatics_0.method795((byte) 14, 5);
       SomethingWorldMapy.method539(0, 5);
       TextureSampler34.method188(5, 0);
       SomethingIndex150.method2260(var0 - 27256, 5);
@@ -104,7 +105,7 @@ public final class SomethingTexture3 extends AbstractSomethingTexture {
             byte[] var5 = DummyClass4.aByteArrayArray3005[var2];
 
             for (int var7 = 0; var3 > var7; ++var7) {
-              var6[var7] = TextureSampler3.method308(
+              var6[var7] = HuffmanEncoderStatics.method308(
                   TextureSampler38.anIntArray3446[ClientScript
                       .bitAnd(var4[var7], 255)],
                   ClientScript.bitAnd(-16777216, var5[var7] << 24));
@@ -115,14 +116,14 @@ public final class SomethingTexture3 extends AbstractSomethingTexture {
                   SomethingVolume15.anInt2426,
                   SomethingPacket116.anInt1748,
                   Something3dRoot.anIntArray2048[var2],
-                  Buffer.anIntArray2591[var2], GroundItem.anIntArray2931[var2],
+                  GlobalStatics_0.anIntArray2591[var2], GroundItem.anIntArray2931[var2],
                   TextureSampler26.anIntArray3076[var2], var6);
             } else {
               var1[var2] = new SoftwareDirectFullColorSprite(
                   SomethingVolume15.anInt2426,
                   SomethingPacket116.anInt1748,
                   Something3dRoot.anIntArray2048[var2],
-                  Buffer.anIntArray2591[var2], GroundItem.anIntArray2931[var2],
+                  GlobalStatics_0.anIntArray2591[var2], GroundItem.anIntArray2931[var2],
                   TextureSampler26.anIntArray3076[var2], var6);
             }
           } else {
@@ -138,7 +139,7 @@ public final class SomethingTexture3 extends AbstractSomethingTexture {
                   new GlDirectColorSprite(SomethingVolume15.anInt2426,
                       SomethingPacket116.anInt1748,
                       Something3dRoot.anIntArray2048[var2],
-                      Buffer.anIntArray2591[var2],
+                      GlobalStatics_0.anIntArray2591[var2],
                       GroundItem.anIntArray2931[var2],
                       TextureSampler26.anIntArray3076[var2], var9);
             } else {
@@ -146,7 +147,7 @@ public final class SomethingTexture3 extends AbstractSomethingTexture {
                   SomethingVolume15.anInt2426,
                   SomethingPacket116.anInt1748,
                   Something3dRoot.anIntArray2048[var2],
-                  Buffer.anIntArray2591[var2], GroundItem.anIntArray2931[var2],
+                  GlobalStatics_0.anIntArray2591[var2], GroundItem.anIntArray2931[var2],
                   TextureSampler26.anIntArray3076[var2], var9);
             }
           }

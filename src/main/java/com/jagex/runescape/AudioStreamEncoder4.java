@@ -1,5 +1,6 @@
 package com.jagex.runescape;
 
+import com.jagex.runescape.huffman.HuffmanEncoderStatics;
 import com.jagex.runescape.opengl.GlTexture2d;
 
 public final class AudioStreamEncoder4 extends AudioStreamEncoder {
@@ -496,7 +497,7 @@ public final class AudioStreamEncoder4 extends AudioStreamEncoder {
 
           if ((var5 == 64)) {
             if (var6 >= 64) {
-              this.anIntArray3518[var4] = TextureSampler3.method308(
+              this.anIntArray3518[var4] = HuffmanEncoderStatics.method308(
                   this.anIntArray3518[var4], 1);
             } else {
               this.anIntArray3518[var4] = ClientScript.bitAnd(
@@ -510,7 +511,7 @@ public final class AudioStreamEncoder4 extends AudioStreamEncoder {
               this.anIntArray3518[var4] = ClientScript.bitAnd(
                   this.anIntArray3518[var4], -3);
             } else {
-              this.anIntArray3518[var4] = TextureSampler3.method308(
+              this.anIntArray3518[var4] = HuffmanEncoderStatics.method308(
                   this.anIntArray3518[var4], 2);
             }
           }
@@ -576,7 +577,7 @@ public final class AudioStreamEncoder4 extends AudioStreamEncoder {
 
           if (var5 == 81) {
             if ((var6 >= 64)) {
-              this.anIntArray3518[var4] = TextureSampler3.method308(
+              this.anIntArray3518[var4] = HuffmanEncoderStatics.method308(
                   this.anIntArray3518[var4], 4);
             } else {
               this.method497(var4, -102);

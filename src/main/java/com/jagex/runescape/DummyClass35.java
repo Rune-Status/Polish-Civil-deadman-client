@@ -1,5 +1,8 @@
 package com.jagex.runescape;
 
+import com.jagex.runescape.buffer.Buffer;
+import com.jagex.runescape.buffer.BufferStatics;
+
 public class DummyClass35 {
 
   private static GameString aClass94_658 = GameString.create("Please remove ");
@@ -48,7 +51,7 @@ public class DummyClass35 {
           var2.anInt782 = 0;
           var2.inventoryOptions = GameException.DEFAULT_INVENTORY_OPTIONS;
           var2.aBoolean807 = false;
-          var2.aClass94Array801 = Buffer.aClass94Array2596;
+          var2.aClass94Array801 = GlobalStatics_0.aClass94Array2596;
         }
 
         SomethingQuickChat.aClass93_3572.get((byte) -107, var2, var0);
@@ -84,7 +87,7 @@ public class DummyClass35 {
   }
 
   public static int getChecksum(byte[] var0, int var1, boolean var2) {
-    return var2 ? -3 : DummyClass54.method1599(0, var1, var0, (byte) -35);
+    return var2 ? -3 : BufferStatics.method1599(0, var1, var0);
   }
 
   public static void method1027(int var0, byte var1) {

@@ -1,13 +1,10 @@
 package com.jagex.runescape.opengl;
 
-import com.jagex.runescape.Buffer;
+import com.jagex.runescape.buffer.Buffer;
 import com.jagex.runescape.DummyClass53;
 import com.jagex.runescape.HashTable;
 import com.jagex.runescape.IntegerNode;
 import com.jagex.runescape.Light;
-import com.jagex.runescape.opengl.GlBufferObject;
-import com.jagex.runescape.opengl.GlRenderer;
-import com.jogamp.opengl.GL2;
 import java.nio.ByteBuffer;
 
 public final class SomethingLight {

@@ -20,44 +20,6 @@ public final class DummyClass21 {
   public static boolean aBoolean1765;
   public static long[] updateMemory = new long[32];
 
-
-  public static void method1806(int var0) {
-    DummyClass21.HEAD_ICONS_PRAYER = null;
-      DummyClass21.aClass61_1758 = null;
-      if (var0 != 3846) {
-        DummyClass21.anInt1762 = 60;
-      }
-
-      DummyClass21.anIntArrayArray1763 = null;
-      DummyClass21.updateMemory = null;
-      DummyClass21.aClass94_1760 = null;
-  }
-
-  public static synchronized byte[] method1807(int var0, int var1) {
-    byte[] var2;
-      if ((var1 == 100) && (DummyClass45.anInt984 > 0)) {
-        var2 = TextureSampler8.aByteArrayArray3461[--DummyClass45.anInt984];
-        TextureSampler8.aByteArrayArray3461[DummyClass45.anInt984] = null;
-        return var2;
-      } else {
-        if (var0 < 55) {
-          DummyClass21.method1806(-79);
-        }
-
-        if ((var1 == 5000) && Mouse.anInt1927 > 0) {
-          var2 = BZipDecompressorState.aByteArrayArray125[--Mouse.anInt1927];
-          BZipDecompressorState.aByteArrayArray125[Mouse.anInt1927] = null;
-          return var2;
-        } else if ((var1 == 30000) && GlTexture2d.anInt3766 > 0) {
-          var2 = GameObject.aByteArrayArray2747[--GlTexture2d.anInt3766];
-          GameObject.aByteArrayArray2747[GlTexture2d.anInt3766] = null;
-          return var2;
-        } else {
-          return new byte[var1];
-        }
-      }
-  }
-
   public static void method1808(int var0, boolean var1, byte var2, int var3, boolean var4) {
     FileCache.method1047(var0, var3, TextureSampler15.aClass44_Sub1Array3201.length - 1, var4, 0,
         var1, false);
@@ -101,4 +63,11 @@ public final class DummyClass21 {
       }
   }
 
+  public static void method1806() {
+    DummyClass21.HEAD_ICONS_PRAYER = null;
+    DummyClass21.aClass61_1758 = null;
+    DummyClass21.anIntArrayArray1763 = null;
+    DummyClass21.updateMemory = null;
+    DummyClass21.aClass94_1760 = null;
+  }
 }

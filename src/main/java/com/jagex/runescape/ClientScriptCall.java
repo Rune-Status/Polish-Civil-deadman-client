@@ -1,5 +1,7 @@
 package com.jagex.runescape;
 
+import com.jagex.runescape.buffer.Buffer;
+
 public final class ClientScriptCall extends Node {
 
   public static int anInt2437;

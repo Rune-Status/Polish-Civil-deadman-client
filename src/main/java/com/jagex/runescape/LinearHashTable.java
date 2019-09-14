@@ -61,7 +61,7 @@ public final class LinearHashTable {
       for (int var2 = var0; (var2 < DummyClass53.spriteCount); ++var2) {
         var1[var2] =
           new SoftwareIndexedColorSprite(SomethingVolume15.anInt2426, SomethingPacket116.anInt1748,
-            Something3dRoot.anIntArray2048[var2], Buffer.anIntArray2591[var2],
+            Something3dRoot.anIntArray2048[var2], GlobalStatics_0.anIntArray2591[var2],
             GroundItem.anIntArray2931[var2], TextureSampler26.anIntArray3076[var2],
             DummyClass5.aByteArrayArray2987[var2], TextureSampler38.anIntArray3446);
       }

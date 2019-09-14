@@ -1,5 +1,6 @@
 package com.jagex.runescape;
 
+import com.jagex.runescape.buffer.Buffer;
 import java.awt.Frame;
 
 public final class TextureSampler30 extends AbstractTextureSampler {

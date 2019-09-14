@@ -1,5 +1,7 @@
 package com.jagex.runescape;
 
+import com.jagex.runescape.buffer.Buffer;
+import com.jagex.runescape.huffman.HuffmanEncoderStatics;
 import com.jagex.runescape.opengl.GlRenderer;
 import java.util.Calendar;
 
@@ -68,12 +70,13 @@ public final class Parameter extends SubNode {
         int[] var5 = new int[var1];
 
         for (int var6 = 0; var6 < var1; ++var6) {
-          var5[var6] = TextureSampler3.method308(ClientScript.bitAnd(var4[var6] << 24, -16777216),
+          var5[var6] = HuffmanEncoderStatics
+              .method308(ClientScript.bitAnd(var4[var6] << 24, -16777216),
             TextureSampler38.anIntArray3446[ClientScript.bitAnd(255, var2[var6])]);
         }
 
         var3 = new SoftwareDirectFullColorSprite(SomethingVolume15.anInt2426,
-          SomethingPacket116.anInt1748, Something3dRoot.anIntArray2048[0], Buffer.anIntArray2591[0],
+          SomethingPacket116.anInt1748, Something3dRoot.anIntArray2048[0], GlobalStatics_0.anIntArray2591[0],
           GroundItem.anIntArray2931[0], TextureSampler26.anIntArray3076[0], var5);
       } else {
         int[] var8 = new int[var1];
@@ -84,7 +87,7 @@ public final class Parameter extends SubNode {
 
         var3 =
           new SoftwareDirectColorSprite(SomethingVolume15.anInt2426, SomethingPacket116.anInt1748,
-            Something3dRoot.anIntArray2048[0], Buffer.anIntArray2591[0],
+            Something3dRoot.anIntArray2048[0], GlobalStatics_0.anIntArray2591[0],
             GroundItem.anIntArray2931[0], TextureSampler26.anIntArray3076[0], var8);
       }
 

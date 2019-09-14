@@ -1,5 +1,6 @@
 package com.jagex.runescape;
 
+import com.jagex.runescape.buffer.Buffer;
 import com.jagex.runescape.opengl.GlDirectColorSprite;
 import com.jagex.runescape.opengl.GlRenderer;
 import com.jagex.runescape.opengl.GlTexture2d;
@@ -263,14 +264,14 @@ public final class Light {
       if (GlRenderer.useOpenGlRenderer) {
         var6 = new GlDirectColorSprite(SomethingVolume15.anInt2426,
             SomethingPacket116.anInt1748,
-            Something3dRoot.anIntArray2048[0], Buffer.anIntArray2591[0],
+            Something3dRoot.anIntArray2048[0], GlobalStatics_0.anIntArray2591[0],
             GroundItem.anIntArray2931[0],
             TextureSampler26.anIntArray3076[0], var3);
       } else {
         var6 =
             new SoftwareDirectColorSprite(SomethingVolume15.anInt2426,
                 SomethingPacket116.anInt1748,
-                Something3dRoot.anIntArray2048[0], Buffer.anIntArray2591[0],
+                Something3dRoot.anIntArray2048[0], GlobalStatics_0.anIntArray2591[0],
                 GroundItem.anIntArray2931[0],
                 TextureSampler26.anIntArray3076[0], var3);
       }

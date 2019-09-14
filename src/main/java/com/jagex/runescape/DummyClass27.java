@@ -78,7 +78,7 @@ public final class DummyClass27 {
               }
             } else if (var13 == 3) {
               SomethingSceneJ var24 =
-                Buffer.method784(GameWorldSomething.currentPlane, var1.anInt2271, var1.anInt2282);
+                GlobalStatics_0.method784(GameWorldSomething.currentPlane, var1.anInt2271, var1.anInt2282);
               if (var24 != null) {
                 var12 = var24.aClass140_320;
               }

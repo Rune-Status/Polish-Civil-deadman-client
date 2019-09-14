@@ -47,7 +47,7 @@ public final class DummyClass9 extends DummyClass5 {
         if ((GameWorldSomething.currentPlane != DummyClass43.anInt909) && ClanChatUser.method385(
             var0, GameWorldSomething.currentPlane)) {
           DummyClass43.anInt909 = GameWorldSomething.currentPlane;
-          Buffer.method792(var0 + 9179409);
+          GlobalStatics_0.method792(var0 + 9179409);
         }
 
       }

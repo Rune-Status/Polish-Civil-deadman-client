@@ -1,5 +1,7 @@
 package com.jagex.runescape;
 
+import com.jagex.runescape.buffer.Buffer;
+
 public final class InventoryConfig extends SubNode {
 
   public static GameString aClass94_3646 = GameString.create("D-Bmarrage de la librairie 3D");

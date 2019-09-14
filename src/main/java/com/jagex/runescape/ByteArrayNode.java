@@ -1,5 +1,7 @@
 package com.jagex.runescape;
 
+import com.jagex.runescape.buffer.Buffer;
+
 public final class ByteArrayNode extends SubNode {
 
   public static int anInt3609;

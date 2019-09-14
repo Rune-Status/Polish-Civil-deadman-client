@@ -1,5 +1,7 @@
 package com.jagex.runescape;
 
+import com.jagex.runescape.buffer.Buffer;
+
 public final class StillGraphicNode extends SubNode {
 
   private static GameString aClass94_3541 = GameString.create("yellow:");

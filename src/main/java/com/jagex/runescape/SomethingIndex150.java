@@ -123,13 +123,13 @@ public final class SomethingIndex150 {
     AbstractIndexedColorSprite var1;
       if (GlRenderer.useOpenGlRenderer) {
         var1 = new GlIndexedColorSprite(SomethingVolume15.anInt2426, SomethingPacket116.anInt1748,
-          Something3dRoot.anIntArray2048[0], Buffer.anIntArray2591[0], GroundItem.anIntArray2931[0],
+          Something3dRoot.anIntArray2048[0], GlobalStatics_0.anIntArray2591[0], GroundItem.anIntArray2931[0],
           TextureSampler26.anIntArray3076[0], DummyClass5.aByteArrayArray2987[0],
           TextureSampler38.anIntArray3446);
       } else {
         var1 =
           new SoftwareIndexedColorSprite(SomethingVolume15.anInt2426, SomethingPacket116.anInt1748,
-            Something3dRoot.anIntArray2048[0], Buffer.anIntArray2591[0],
+            Something3dRoot.anIntArray2048[0], GlobalStatics_0.anIntArray2591[0],
             GroundItem.anIntArray2931[0], TextureSampler26.anIntArray3076[0],
             DummyClass5.aByteArrayArray2987[0], TextureSampler38.anIntArray3446);
       }

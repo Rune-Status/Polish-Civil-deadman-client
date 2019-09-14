@@ -1,5 +1,6 @@
 package com.jagex.runescape;
 
+import com.jagex.runescape.buffer.BufferStatics;
 import com.jagex.runescape.opengl.DummyClass16;
 import com.jagex.runescape.opengl.GlModel;
 import com.jagex.runescape.opengl.GlRenderer;
@@ -15,7 +16,6 @@ public final class GameObject extends SceneNode {
   public static int anInt2737;
   public static volatile int anInt2743;
   public static int plane;
-  public static byte[][] aByteArrayArray2747 = new byte[50][];
   public static GameString aClass94_2740 = GameObject.aClass94_2731;
   public static GameString aClass94_2751 = GameObject.aClass94_2731;
   public static GameString OPTION_DROP = GameObject.aClass94_2739;
@@ -562,7 +562,7 @@ public final class GameObject extends SceneNode {
       }
 
       GameObject.aClass94_2740 = null;
-      GameObject.aByteArrayArray2747 = null;
+      BufferStatics.aByteArrayArray2747 = null;
       GameObject.aClass94_2735 = null;
       GameObject.aClass94_2739 = null;
   }

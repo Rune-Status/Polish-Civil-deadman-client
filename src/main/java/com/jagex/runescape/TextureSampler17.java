@@ -1,5 +1,7 @@
 package com.jagex.runescape;
 
+import com.jagex.runescape.buffer.Buffer;
+
 public final class TextureSampler17 extends AbstractTextureSampler {
 
   public static Deque stillGraphics = new Deque();

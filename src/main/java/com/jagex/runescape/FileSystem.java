@@ -1,5 +1,6 @@
 package com.jagex.runescape;
 
+import com.jagex.runescape.buffer.Buffer;
 import com.jagex.runescape.opengl.DummyClass16;
 import com.jagex.runescape.opengl.shader.MaterialShader5;
 
@@ -203,15 +204,15 @@ public final class FileSystem {
               1000000);
         }
 
-        Buffer.aClass151_Sub1Array2601[var3] =
+        GlobalStatics_0.aClass151_Sub1Array2601[var3] =
             AbstractFileRequester.fileSystem
                 .method839(-1824885439, var3, BlockConfig.tableCache,
                     var5);
         if (var1) {
-          Buffer.aClass151_Sub1Array2601[var3].method2101(true);
+          GlobalStatics_0.aClass151_Sub1Array2601[var3].method2101(true);
         }
 
-        return new FileUnpacker(Buffer.aClass151_Sub1Array2601[var3], var0,
+        return new FileUnpacker(GlobalStatics_0.aClass151_Sub1Array2601[var3], var0,
             var2);
       } else {
         return null;

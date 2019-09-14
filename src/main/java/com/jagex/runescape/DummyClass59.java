@@ -357,7 +357,7 @@ public final class DummyClass59 {
             }
           }
 
-          Buffer.method792(9179409);
+          GlobalStatics_0.method792(9179409);
           DummyClass43.method1194(-16385);
           TextureSampler2.method318(7759444);
           TextureSampler13.method313((byte) 100);

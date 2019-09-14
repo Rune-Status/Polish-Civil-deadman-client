@@ -1,5 +1,7 @@
 package com.jagex.runescape;
 
+import com.jagex.runescape.buffer.Buffer;
+
 public final class SomethingVolume15 extends Node {
 
   public static int anInt2421 = -1;
@@ -165,7 +167,7 @@ public final class SomethingVolume15 extends Node {
             var20 = -1;
           }
 
-          var22 = var2.method741((byte) 122);
+          var22 = var2.method741();
         }
 
         this.aShortArray2434[var23] =

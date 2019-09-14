@@ -239,7 +239,7 @@ public final class DummyClass37 {
 
   public static void method1035(byte var0) {
     GroundItem.anIntArray2931 = null;
-      Buffer.anIntArray2591 = null;
+      GlobalStatics_0.anIntArray2591 = null;
       if (var0 <= 103) {
         DummyClass37.method1037(46, 44, 46);
       }

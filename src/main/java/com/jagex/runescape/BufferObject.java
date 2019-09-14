@@ -1,5 +1,7 @@
 package com.jagex.runescape;
 
+import com.jagex.runescape.buffer.Buffer;
+
 public abstract class BufferObject {
 
   private static GameString aClass94_1888 =
@@ -78,7 +80,7 @@ public abstract class BufferObject {
                 }), var1, (short) 26, TextureSampler14.aClass94_3388, var4);
               ++GZipDecompressor.anInt816;
             } else if (!SceneNode.aBoolean1837) {
-              ++Buffer.anInt2592;
+              ++GlobalStatics_0.anInt2592;
               GameString[] var11 = var0.aClass94Array1259;
               if (DummyClass24.aBoolean1656) {
                 var11 = SomethingPacket151.method822(19406, var11);

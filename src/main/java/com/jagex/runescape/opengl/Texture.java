@@ -1,12 +1,11 @@
 package com.jagex.runescape.opengl;
 
-import com.jagex.runescape.AbstractGameWorld;
 import com.jagex.runescape.AbstractImageProducer;
 import com.jagex.runescape.AbstractObjectNodeWrapper;
 import com.jagex.runescape.AnimationSequence;
 import com.jagex.runescape.BZipDecompressorState;
 import com.jagex.runescape.BitVariable;
-import com.jagex.runescape.Buffer;
+import com.jagex.runescape.buffer.Buffer;
 import com.jagex.runescape.BufferData;
 import com.jagex.runescape.ClientScript;
 import com.jagex.runescape.DummyClass13;
@@ -32,7 +31,7 @@ import com.jagex.runescape.SomethingPacket116;
 import com.jagex.runescape.SomethingTexture1;
 import com.jagex.runescape.SubNode;
 import com.jagex.runescape.TextureCache;
-import com.jagex.runescape.TextureSampler3;
+import com.jagex.runescape.huffman.HuffmanEncoderStatics;
 import com.jogamp.opengl.glu.GLU;
 import com.jogamp.opengl.glu.gl2.GLUgl2;
 import java.nio.ByteBuffer;
@@ -159,8 +158,8 @@ public final class Texture extends SubNode {
                 --var27;
                 var20 = var28 / 9;
                 --var25;
-                var10[var25] = TextureSampler3.method308(var22,
-                    TextureSampler3.method308(var20 << 16, var21 << 8));
+                var10[var25] = HuffmanEncoderStatics.method308(var22,
+                    HuffmanEncoderStatics.method308(var20 << 16, var21 << 8));
                 var28 += var7[var27] - var7[var26];
                 var29 += var9[var27] - var9[var26];
                 var30 += -var8[var26] + var8[var27];

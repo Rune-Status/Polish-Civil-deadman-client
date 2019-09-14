@@ -3,7 +3,7 @@ package com.jagex.runescape.opengl;
 import com.jagex.runescape.AbstractModel;
 import com.jagex.runescape.ArrayUtils;
 import com.jagex.runescape.BlockConfig;
-import com.jagex.runescape.Buffer;
+import com.jagex.runescape.buffer.Buffer;
 import com.jagex.runescape.BufferData;
 import com.jagex.runescape.DisplayMode;
 import com.jagex.runescape.DummyClass0;
@@ -28,7 +28,6 @@ import com.jagex.runescape.TextureSampler27;
 import com.jagex.runescape.TextureSampler38;
 import com.jagex.runescape.Unsure;
 import com.jagex.runescape.VertexNormal;
-import com.jogamp.opengl.GL2;
 import java.nio.ByteBuffer;
 
 public final class GlModel extends AbstractModel {

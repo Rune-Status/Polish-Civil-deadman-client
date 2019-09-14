@@ -1,5 +1,6 @@
 package com.jagex.runescape;
 
+import com.jagex.runescape.buffer.Buffer;
 import com.jagex.runescape.opengl.GlDirectColorSprite;
 import com.jagex.runescape.opengl.GlRenderer;
 import java.util.Date;
@@ -285,7 +286,7 @@ public final class AudioWorker implements Runnable {
               new GlDirectColorSprite(SomethingVolume15.anInt2426,
                   SomethingPacket116.anInt1748,
                   Something3dRoot.anIntArray2048[var2],
-                  Buffer.anIntArray2591[var2],
+                  GlobalStatics_0.anIntArray2591[var2],
                   GroundItem.anIntArray2931[var2],
                   TextureSampler26.anIntArray3076[var2], var5);
         } else {
@@ -293,7 +294,7 @@ public final class AudioWorker implements Runnable {
               new SoftwareDirectColorSprite(SomethingVolume15.anInt2426,
                   SomethingPacket116.anInt1748,
                   Something3dRoot.anIntArray2048[var2],
-                  Buffer.anIntArray2591[var2],
+                  GlobalStatics_0.anIntArray2591[var2],
                   GroundItem.anIntArray2931[var2],
                   TextureSampler26.anIntArray3076[var2], var5);
         }

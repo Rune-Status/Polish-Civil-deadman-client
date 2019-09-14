@@ -117,7 +117,7 @@ public abstract class SceneNode {
         TriChromaticImageCache.aClass153_1370.getAmountChildren(var5, (byte) 101) + var5 * 256;
       GameException.DEFAULT_INVENTORY_OPTIONS =
         new GameString[] {null, null, null, null, GameObject.OPTION_DROP};
-      Buffer.aClass94Array2596 =
+      GlobalStatics_0.aClass94Array2596 =
         new GameString[] {null, null, TextureSampler29.aClass94_3397, null, null};
       TextureSampler10.aClass3_Sub28_Sub17_Sub1_3440 = var3;
   }

@@ -1,5 +1,7 @@
 package com.jagex.runescape;
 
+import com.jagex.runescape.buffer.Buffer;
+import com.jagex.runescape.huffman.HuffmanEncoderStatics;
 import com.jagex.runescape.opengl.GlRenderer;
 import java.util.Objects;
 
@@ -67,13 +69,13 @@ public final class Player extends Mobile {
 
           if (var13 >= '\u8000') {
             var13 = SomethingTexture4.anIntArray2664[var13 - '\u8000'];
-            var9[var10] = TextureSampler3.method308(1073741824, var13);
+            var9[var10] = HuffmanEncoderStatics.method308(1073741824, var13);
             var14 = DummyClass35.getItemConfig(var13, (byte) 119).anInt782;
             if (var14 != 0) {
               this.anInt3956 = var14;
             }
           } else {
-            var9[var10] = TextureSampler3
+            var9[var10] = HuffmanEncoderStatics
                 .method308(-256 + var13, Integer.MIN_VALUE);
           }
         }

@@ -18,21 +18,20 @@ public final class Mouse implements MouseListener, MouseMotionListener,
   public static int anInt1924;
   public static int anInt1925;
   public static int anInt1926;
-  public static int anInt1927;
   public static Mouse INSTANCE = new Mouse();
 
   public static void bindMouseListener(Component component) {
     System.out.println("Mouse.bindMouseListener");
-    component.addMouseListener(INSTANCE);
-    component.addMouseMotionListener(INSTANCE);
-    component.addFocusListener(INSTANCE);
+    component.addMouseListener(Mouse.INSTANCE);
+    component.addMouseMotionListener(Mouse.INSTANCE);
+    component.addFocusListener(Mouse.INSTANCE);
   }
 
   public static void unbind(Component var1) {
     System.out.println("Mouse.unbind");
-    var1.removeMouseListener(INSTANCE);
-    var1.removeMouseMotionListener(INSTANCE);
-    var1.removeFocusListener(INSTANCE);
+    var1.removeMouseListener(Mouse.INSTANCE);
+    var1.removeMouseMotionListener(Mouse.INSTANCE);
+    var1.removeFocusListener(Mouse.INSTANCE);
     SpotAnimationConfig.anInt549 = 0;
   }
 
@@ -164,10 +163,10 @@ public final class Mouse implements MouseListener, MouseMotionListener,
   }
 
   public static void method2090(int var0) {
-    if (INSTANCE != null) {
-        Mouse var1 = INSTANCE;
+    if (Mouse.INSTANCE != null) {
+        Mouse var1 = Mouse.INSTANCE;
         synchronized (var1) {
-          INSTANCE = null;
+          Mouse.INSTANCE = null;
         }
       }
   }

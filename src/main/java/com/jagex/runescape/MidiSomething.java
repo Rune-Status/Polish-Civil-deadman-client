@@ -158,7 +158,7 @@ public final class MidiSomething {
             var41 = AbstractMouseWheel.anIntArrayArrayArray1903[var17];
             byte[][] var45 = RenderAnimation.aByteArrayArrayArray383[var17];
             byte[][] var42 = StringNode0.aByteArrayArrayArray2339[var17];
-            byte[][] var23 = HuffmanEncoder.aByteArrayArrayArray640[var17];
+            byte[][] var23 = GlobalStatics_0.aByteArrayArrayArray640[var17];
             byte[][] var43 = ClientScriptCall.aByteArrayArrayArray2452[var17];
             var15 += var5;
             byte[][] var46 = TextureSampler29.aByteArrayArrayArray3390[var17];
@@ -178,7 +178,7 @@ public final class MidiSomething {
                     != null) {
                   var32 = var41[var28][var31];
                 } else {
-                  if ((Buffer.aClass3_Sub28_Sub3_2600.anInt3550 == -1)) {
+                  if ((GlobalStatics_0.aClass3_Sub28_Sub3_2600.anInt3550 == -1)) {
                     if (((4 & var24 + var3) == (var6 + var13 & 4))) {
                       var32 = DummyClass51.anIntArray1161[1
                           + TextureSampler26.anInt3081];
@@ -186,7 +186,7 @@ public final class MidiSomething {
                       var32 = 4936552;
                     }
                   } else {
-                    var32 = Buffer.aClass3_Sub28_Sub3_2600.anInt3550;
+                    var32 = GlobalStatics_0.aClass3_Sub28_Sub3_2600.anInt3550;
                   }
 
                   if ((var28 < 0) || var28 > var41.length - 1) {
@@ -339,8 +339,8 @@ public final class MidiSomething {
             var14 += var5;
 
             for (int var18 = 0; var12 > var18; ++var18) {
-              if (Buffer.aClass3_Sub28_Sub3_2600.anInt3550 != -1) {
-                var19 = Buffer.aClass3_Sub28_Sub3_2600.anInt3550;
+              if (GlobalStatics_0.aClass3_Sub28_Sub3_2600.anInt3550 != -1) {
+                var19 = GlobalStatics_0.aClass3_Sub28_Sub3_2600.anInt3550;
               } else if ((var13 + var6 & 4) == (4 & var18 + var3)) {
                 var19 = DummyClass51.anIntArray1161[1 + TextureSampler26.anInt3081];
               } else {

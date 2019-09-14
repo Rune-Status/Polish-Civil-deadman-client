@@ -1,5 +1,6 @@
 package com.jagex.runescape;
 
+import com.jagex.runescape.huffman.HuffmanEncoderStatics;
 import com.jagex.runescape.opengl.GlDirectColorSprite;
 import com.jagex.runescape.opengl.GlRenderer;
 import com.jagex.runescape.opengl.GlUtils;
@@ -738,7 +739,8 @@ public final class CollisionMap {
       }
 
       this.anIntArrayArray1304[var3][var4] =
-        TextureSampler3.method308(this.anIntArrayArray1304[var3][var4], var1);
+        HuffmanEncoderStatics
+            .method308(this.anIntArrayArray1304[var3][var4], var1);
   }
 
   public boolean method1492(int var1, int var2,int var3,int var4, int var5,int var6,int var7,
@@ -1039,7 +1041,8 @@ public final class CollisionMap {
         var1 -= this.anInt1306;
         var3 -= this.anInt1309;
         this.anIntArrayArray1304[var3][var1] =
-          TextureSampler3.method308(this.anIntArrayArray1304[var3][var1], 2097152);
+          HuffmanEncoderStatics
+              .method308(this.anIntArrayArray1304[var3][var1], 2097152);
       }
   }
 
@@ -1260,7 +1263,8 @@ public final class CollisionMap {
       if (var3 < -3) {
         var1 -= this.anInt1309;
         this.anIntArrayArray1304[var1][var2] =
-          TextureSampler3.method308(this.anIntArrayArray1304[var1][var2], 262144);
+          HuffmanEncoderStatics
+              .method308(this.anIntArrayArray1304[var1][var2], 262144);
       }
   }
 

@@ -1,5 +1,6 @@
 package com.jagex.runescape;
 
+import com.jagex.runescape.buffer.Buffer;
 import java.awt.event.ActionEvent;
 import java.io.IOException;
 import java.util.Objects;

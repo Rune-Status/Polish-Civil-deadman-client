@@ -1,14 +1,16 @@
 package com.jagex.runescape;
 
+import com.jagex.runescape.buffer.Buffer;
 import com.jagex.runescape.opengl.DummyClass46;
 import com.jagex.runescape.opengl.GlRenderer;
 
-public class MovedStatics0 {
+public final class MovedStatics0 {
 
   public static void method58(int var0) {
     int var1 = 0;
       if (var0 >= -46) {
-        method60(95, -37, -27, null, -59, (byte) -121, null, -69, -50, -72,
+        MovedStatics0
+            .method60(95, -37, -27, null, -59, (byte) -121, null, -69, -50, -72,
                 false);
       }
 
@@ -64,7 +66,7 @@ public class MovedStatics0 {
 
             HashTable.aBooleanArray1703[var0] = true;
             if (var1 != 104) {
-              method58(100);
+              MovedStatics0.method58(100);
             }
 
             return true;

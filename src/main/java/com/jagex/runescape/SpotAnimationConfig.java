@@ -1,5 +1,7 @@
 package com.jagex.runescape;
 
+import com.jagex.runescape.buffer.Buffer;
+
 public final class SpotAnimationConfig {
 
   private static GameString aClass94_553 = GameString.create("slide:");

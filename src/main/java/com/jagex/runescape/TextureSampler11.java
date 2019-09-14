@@ -1,5 +1,7 @@
 package com.jagex.runescape;
 
+import com.jagex.runescape.buffer.Buffer;
+
 public final class TextureSampler11 extends AbstractTextureSampler {
 
   private static GameString aClass94_3247 = GameString.create("flash1:");

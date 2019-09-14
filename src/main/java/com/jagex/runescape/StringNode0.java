@@ -1,5 +1,7 @@
 package com.jagex.runescape;
 
+import com.jagex.runescape.buffer.Buffer;
+
 public final class StringNode0 extends Node {
 
   public static GameString aClass94_2336 = GameString.create("M");

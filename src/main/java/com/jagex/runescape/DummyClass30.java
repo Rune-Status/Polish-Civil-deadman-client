@@ -1,5 +1,7 @@
 package com.jagex.runescape;
 
+import com.jagex.runescape.buffer.Buffer;
+
 public final class DummyClass30 {
 
   private static GameString aClass94_458 = GameString.create("Opened title screen");

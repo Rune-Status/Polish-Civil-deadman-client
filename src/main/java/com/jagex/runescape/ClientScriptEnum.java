@@ -1,5 +1,7 @@
 package com.jagex.runescape;
 
+import com.jagex.runescape.buffer.Buffer;
+
 public final class ClientScriptEnum extends SubNode {
 
   public static int cameraY;

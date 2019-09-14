@@ -1,5 +1,6 @@
 package com.jagex.runescape;
 
+import com.jagex.runescape.buffer.Buffer;
 import com.jagex.runescape.opengl.GlRenderer;
 
 public final class TextureSampler19 extends AbstractTextureSampler {
@@ -150,7 +151,7 @@ public final class TextureSampler19 extends AbstractTextureSampler {
         for (int var8 = 0; (var8 < TextureSampler25.amountContextActions);
             ++var8) {
           int var9 = FloorOverlay.aClass3_Sub28_Sub17_2096
-              .method682(Buffer.method802(var8, true));
+              .method682(GlobalStatics_0.method802(var8, true));
           if (var7 < var9) {
             var7 = var9;
           }

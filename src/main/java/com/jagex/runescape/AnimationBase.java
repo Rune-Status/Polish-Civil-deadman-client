@@ -1,5 +1,7 @@
 package com.jagex.runescape;
 
+import com.jagex.runescape.buffer.Buffer;
+
 public final class AnimationBase {
 
   private static byte[] aByteArray1389 = new byte[500];

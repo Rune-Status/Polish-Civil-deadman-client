@@ -1,5 +1,6 @@
 package com.jagex.runescape;
 
+import com.jagex.runescape.buffer.Buffer;
 import com.jagex.runescape.opengl.GlModel;
 import com.jagex.runescape.opengl.GlRenderer;
 import com.jagex.runescape.opengl.SomethingGl0;
@@ -600,7 +601,7 @@ public final class AnimationSequence {
       DummyClass20.anInt1781 = 0;
       ClientScript.anInt3681 = 0;
       AudioStreamEncoder4.anInt3517 = 0;
-      Buffer.anInt2592 = 0;
+      GlobalStatics_0.anInt2592 = 0;
       FloorOverlay.anInt2088 = 0;
       TextureSampler26.anInt3084 = 0;
       DisplayMode.aClass67_1443.anInt1018 = 0;

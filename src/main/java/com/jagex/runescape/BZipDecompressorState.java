@@ -1,5 +1,6 @@
 package com.jagex.runescape;
 
+import com.jagex.runescape.buffer.BufferStatics;
 import com.jagex.runescape.opengl.GlTexture2d;
 
 public final class BZipDecompressorState {
@@ -7,7 +8,6 @@ public final class BZipDecompressorState {
   public static byte[][][] tileFlags = new byte[4][104][104];
   public static GameString FILE_RUNES = GameString.create("runes");
   public static int anInt120 = 255;
-  public static byte[][] aByteArrayArray125 = new byte[250][];
   public static GameString COMMAND_PREFIX = GameString.create("::");
   public static int anInt136;
   public static int anInt144;
@@ -94,7 +94,7 @@ public final class BZipDecompressorState {
   public static void method849(int var0) {
     BZipDecompressorState.aClass94_145 = null;
       if (var0 == 2) {
-        BZipDecompressorState.aByteArrayArray125 = null;
+        BufferStatics.aByteArrayArray125 = null;
         BZipDecompressorState.FILE_RUNES = null;
         BZipDecompressorState.COMMAND_PREFIX = null;
         BZipDecompressorState.tileFlags = null;
@@ -158,7 +158,7 @@ public final class BZipDecompressorState {
       TextureSampler38.aClass94_3445 = FileCacheRequester.aClass94_1089;
       ClientScript.aClass94_3691 = Node.aClass94_77;
       GameWorld.aClass94_2624 = LightIntensity.aClass94_897;
-      DummyClass15.aClass94_1879 = Buffer.aClass94_2594;
+      DummyClass15.aClass94_1879 = GlobalStatics_0.aClass94_2594;
       TextureSampler29.aClass94_3397 = DummyClass20.aClass94_1782;
       AudioSomethingSomething.aClass94_2526 = DummyClass26.aClass94_1612;
       RenderAnimation.aClass94_361 = SpotAnimationConfig.aClass94_550;
@@ -183,7 +183,7 @@ public final class BZipDecompressorState {
       WorldMapLabel.aClass94_1722 = DummyClass45.aClass94_981;
       SceneShadowMap.CONNECTION_LOST = TextureSampler28.aClass94_3302;
       BufferObject.aClass94_1884 = NpcConfiguration.aClass94_1294;
-      Buffer.LOADED_INTERFACES = FileTable.aClass94_951;
+      GlobalStatics_0.LOADED_INTERFACES = FileTable.aClass94_951;
       SceneSomething.aClass94_485 = DummyCanvas.aClass94_24;
       TextureSampler11.aClass94_3249 = ProjectileNode.aClass94_3774;
       DummyClass35.aClass94_666 = DummyClass5.aClass94_2995;
@@ -194,7 +194,7 @@ public final class BZipDecompressorState {
       VertexNormal.aClass94_822 = GameStub.aClass94_7;
       Unsure.aClass94_1892 = GameObjectConfig.aClass94_1509;
       TextureSampler14.aClass94_3388 = DummyClass34.aClass94_593;
-      DummyClass32.aClass94_523 = Buffer.aClass94_2599;
+      DummyClass32.aClass94_523 = GlobalStatics_0.aClass94_2599;
       DummyClass24.aClass94_1653 = Light.aClass94_701;
   }
 

@@ -1,5 +1,7 @@
 package com.jagex.runescape;
 
+import com.jagex.runescape.buffer.Buffer;
+
 public final class DummyClass23 {
 
   public static HashTable aClass130_1659 = new HashTable(512);

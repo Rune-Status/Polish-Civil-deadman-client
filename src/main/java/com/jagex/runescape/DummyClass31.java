@@ -1,5 +1,6 @@
 package com.jagex.runescape;
 
+import com.jagex.runescape.huffman.HuffmanEncoderStatics;
 import com.jagex.runescape.opengl.DummyClass16;
 import com.jagex.runescape.opengl.GlRenderer;
 
@@ -146,7 +147,7 @@ public final class DummyClass31 {
                   var24);
                 if (var1 && (var6 <= 17) && (var6 != 13) && var2 > 0) {
                   DummyClass36.anIntArrayArrayArray2609[var2][var7][var9] =
-                    TextureSampler3.method308(
+                    HuffmanEncoderStatics.method308(
                       DummyClass36.anIntArrayArrayArray2609[var2][var7][var9], 4);
                 }
 
@@ -182,7 +183,7 @@ public final class DummyClass31 {
 
                     if (var11.aBoolean1542) {
                       DummyClass36.anIntArrayArrayArray2609[var2][var7][var9] =
-                        TextureSampler3.method308(
+                        HuffmanEncoderStatics.method308(
                           DummyClass36.anIntArrayArrayArray2609[var2][var7][var9], 1);
                     }
                   } else if (var10 != 1) {
@@ -197,7 +198,7 @@ public final class DummyClass31 {
                       if (var11.aBoolean1542) {
                         DummyClass36.anIntArrayArrayArray2609[var2][var7
                             + 1][var9] =
-                            TextureSampler3.method308(
+                            HuffmanEncoderStatics.method308(
                                 DummyClass36.anIntArrayArrayArray2609[var2][var7
                                     + 1][var9], 1);
                       }
@@ -211,7 +212,7 @@ public final class DummyClass31 {
 
                         if (var11.aBoolean1542) {
                           DummyClass36.anIntArrayArrayArray2609[var2][var7][var9] =
-                              TextureSampler3.method308(
+                              HuffmanEncoderStatics.method308(
                                   DummyClass36.anIntArrayArrayArray2609[var2][var7][var9],
                                   2);
                         }
@@ -225,7 +226,7 @@ public final class DummyClass31 {
 
                     if (var11.aBoolean1542) {
                       DummyClass36.anIntArrayArrayArray2609[var2][var7][1 + var9] =
-                        TextureSampler3.method308(
+                        HuffmanEncoderStatics.method308(
                           DummyClass36.anIntArrayArrayArray2609[var2][var7][1 + var9], 2);
                     }
                   }
@@ -322,44 +323,44 @@ public final class DummyClass31 {
                   if (var11.aBoolean1542 && var1) {
                     if ((var10 == 0)) {
                       DummyClass36.anIntArrayArrayArray2609[var2][var7][var9] =
-                          TextureSampler3.method308(
+                          HuffmanEncoderStatics.method308(
                               DummyClass36.anIntArrayArrayArray2609[var2][var7][var9],
                               1);
                       DummyClass36.anIntArrayArrayArray2609[var2][var7][1
                           + var9] =
-                          TextureSampler3.method308(
+                          HuffmanEncoderStatics.method308(
                               DummyClass36.anIntArrayArrayArray2609[var2][var7][
                                   1 + var9], 2);
                     } else {
                       if ((var10 == 1)) {
                         DummyClass36.anIntArrayArrayArray2609[var2][var7][var9
                             + 1] =
-                            TextureSampler3.method308(
+                            HuffmanEncoderStatics.method308(
                                 DummyClass36.anIntArrayArrayArray2609[var2][var7][
                                     var9 + 1], 2);
                         DummyClass36.anIntArrayArrayArray2609[var2][var7
                             + 1][var9] =
-                            TextureSampler3.method308(
+                            HuffmanEncoderStatics.method308(
                                 DummyClass36.anIntArrayArrayArray2609[var2][var7
                                     + 1][var9], 1);
                       } else {
                         if ((var10 == 2)) {
                           DummyClass36.anIntArrayArrayArray2609[var2][1
                               + var7][var9] =
-                              TextureSampler3.method308(
+                              HuffmanEncoderStatics.method308(
                                   DummyClass36.anIntArrayArrayArray2609[var2][1
                                       + var7][var9], 1);
                           DummyClass36.anIntArrayArrayArray2609[var2][var7][var9] =
-                              TextureSampler3.method308(
+                              HuffmanEncoderStatics.method308(
                                   DummyClass36.anIntArrayArrayArray2609[var2][var7][var9],
                                   2);
                         } else if ((var10 == 3)) {
                           DummyClass36.anIntArrayArrayArray2609[var2][var7][var9] =
-                              TextureSampler3.method308(
+                              HuffmanEncoderStatics.method308(
                                   DummyClass36.anIntArrayArrayArray2609[var2][var7][var9],
                                   2);
                           DummyClass36.anIntArrayArrayArray2609[var2][var7][var9] =
-                              TextureSampler3.method308(
+                              HuffmanEncoderStatics.method308(
                                   DummyClass36.anIntArrayArrayArray2609[var2][var7][var9],
                                   1);
                         }
