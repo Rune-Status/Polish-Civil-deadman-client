@@ -315,7 +315,8 @@ public final class DummyClass18 {
       GameString var58;
 
       // Set widget text
-      if (~GameString.packetId == 123) {
+      //TODO
+      if (GameString.packetId == 123) {
         int a = SpotAnimationConfig.gameBuffer.readUnsignedShortLE();
         int b = SpotAnimationConfig.gameBuffer.readUnsignedShortAdd();
         GameString c = SpotAnimationConfig.gameBuffer.readString();
