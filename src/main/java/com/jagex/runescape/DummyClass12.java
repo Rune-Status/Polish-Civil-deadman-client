@@ -62,7 +62,7 @@ public final class DummyClass12 {
       TextureSampler18.method282(var39, var1 - -var11, -68, var4 + var1, var3);
 
       while (var9 > 0) {
-        if (~var23 > -1) {
+        if ((var23 < 1 -1)) {
           while (var23 < 0) {
             var24 += var35;
             var23 += var31;
@@ -82,8 +82,8 @@ public final class DummyClass12 {
 
         boolean var40 = var9 <= var12;
         if (var40) {
-          if (~var25 > -1) {
-            while (~var25 > -1) {
+          if ((var25 < 1 -1)) {
+            while ((var25 < 1 -1)) {
               var25 += var33;
               var33 += var30;
               ++var10;

@@ -74,7 +74,7 @@ public final class DummyClass13 {
 
         for (var8 = 0; var8 < 128; ++var8) {
           var9 = (int) (100.0D * Math.random());
-          if (~var9 > -51 && (var8 > 11 -1) && ~var8 > -119) {
+          if ((var9 < 51 -1) && (var8 > 11 -1) && (var8 < 119 -1)) {
             DummyClass2.anIntArray1681[var8 + var7] = 255;
           } else {
             DummyClass2.anIntArray1681[var8 + var7] = 0;
@@ -110,7 +110,7 @@ public final class DummyClass13 {
           var9 = var7 * 128;
           var8 = 0;
 
-          for (var10 = -var6; ~var10 > -129; ++var10) {
+          for (var10 = -var6; (var10 < 129 -1); ++var10) {
             if (var6 + var10 < 128) {
               var8 += DummyClass2.anIntArray1681[var9 + (var10 - -var6)];
             }

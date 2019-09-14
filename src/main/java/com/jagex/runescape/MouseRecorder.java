@@ -15,7 +15,7 @@ public final class MouseRecorder implements Runnable {
     for (; this.aBoolean1015; TextureSampler25.sleep(50L)) {
         Object var1 = this.anObject1016;
         synchronized (var1) {
-          if (~this.anInt1018 > -501) {
+          if ((this.anInt1018 < 501 -1)) {
             this.anIntArray1020[this.anInt1018] = SomethingTilek.anInt1676;
             this.anIntArray1019[this.anInt1018] = HashTable.anInt1709;
             ++this.anInt1018;
@@ -93,7 +93,7 @@ public final class MouseRecorder implements Runnable {
                   ++var4.anInt283;
                   if (var7.anIntArray1851.length <= var4.anInt283) {
                     var4.anInt283 -= var7.anInt1865;
-                    if (~var4.anInt283 > -1 || var7.anIntArray1851.length <= var4.anInt283) {
+                    if ((var4.anInt283 < 1 -1) || var7.anIntArray1851.length <= var4.anInt283) {
                       var4.anInt283 = 0;
                     }
                   }
@@ -101,7 +101,7 @@ public final class MouseRecorder implements Runnable {
                   var4.anInt260 = var4.anInt283 + 1;
                   if (var7.anIntArray1851.length <= var4.anInt260) {
                     var4.anInt260 -= var7.anInt1865;
-                    if (~var4.anInt260 > -1 || var7.anIntArray1851.length <= var4.anInt260) {
+                    if ((var4.anInt260 < 1 -1) || var7.anIntArray1851.length <= var4.anInt260) {
                       var4.anInt260 = -1;
                     }
                   }

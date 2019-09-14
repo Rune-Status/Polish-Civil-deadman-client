@@ -25,7 +25,7 @@ public final class AudioStreamEncoder3 extends AudioStreamEncoder {
 
   private void method464(AudioSomethingSomething var1, int var2, int var3) {
     if (((this.aClass3_Sub24_Sub4_3493.anIntArray3518[var1.anInt2514] & 4) != 1 -1)
-        && ~var1.anInt2506 > -1) {
+        && (var1.anInt2506 < 1 -1)) {
         int var4 =
             this.aClass3_Sub24_Sub4_3493.anIntArray3509[var1.anInt2514] / DummyClass60.sampleRate;
         int var5 = (var4 + 1048575 + -var1.anInt2516) / var4;
@@ -47,7 +47,7 @@ public final class AudioStreamEncoder3 extends AudioStreamEncoder {
                 (byte) -101);
           }
 
-          if (~var1.aClass3_Sub15_2527.aShortArray2434[var1.anInt2520] > -1) {
+          if ((var1.aClass3_Sub15_2527.aShortArray2434[var1.anInt2520] < 1 -1)) {
             assert var1.aClass3_Sub24_Sub1_2507 != null;
             var1.aClass3_Sub24_Sub1_2507.method429(-1);
           }
@@ -149,7 +149,7 @@ public final class AudioStreamEncoder3 extends AudioStreamEncoder {
   private void method469(int[] var1, AudioSomethingSomething var2, int var3, int var4,
                                int var5, byte var6) {
     if ((4 & this.aClass3_Sub24_Sub4_3493.anIntArray3518[var2.anInt2514]) != 0
-        && ~var2.anInt2506 > -1) {
+        && (var2.anInt2506 < 1 -1)) {
         int var7 =
             this.aClass3_Sub24_Sub4_3493.anIntArray3509[var2.anInt2514] / DummyClass60.sampleRate;
 

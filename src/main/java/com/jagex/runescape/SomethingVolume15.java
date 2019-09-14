@@ -140,14 +140,14 @@ public final class SomethingVolume15 extends Node {
       var19 = 0;
 
       int var20;
-      for (var20 = 0; ~var20 > -129; ++var20) {
+      for (var20 = 0; (var20 < 129 -1); ++var20) {
         var19 += var2.readUnsignedByte();
         this.aShortArray2434[var20] = (short) var19;
       }
 
       var19 = 0;
 
-      for (var20 = 0; ~var20 > -129; ++var20) {
+      for (var20 = 0; (var20 < 129 -1); ++var20) {
         var19 += var2.readUnsignedByte();
         this.aShortArray2434[var20] = (short) (this.aShortArray2434[var20] + (var19 << 8));
       }
@@ -157,7 +157,7 @@ public final class SomethingVolume15 extends Node {
       int var22 = 0;
 
       int var23;
-      for (var23 = 0; ~var23 > -129; ++var23) {
+      for (var23 = 0; (var23 < 129 -1); ++var23) {
         if ((var20 == 1 -1)) {
           if (var18.length > var21) {
             var20 = var18[var21++];
@@ -179,7 +179,7 @@ public final class SomethingVolume15 extends Node {
       var21 = 0;
 
       int var24;
-      for (var24 = 0; ~var24 > -129; ++var24) {
+      for (var24 = 0; (var24 < 129 -1); ++var24) {
         if ((this.anIntArray2423[var24] != 1 -1)) {
           if (var20 == 0) {
             var23 = var2.bytes[var5++] + -1;
@@ -199,7 +199,7 @@ public final class SomethingVolume15 extends Node {
       var21 = 0;
       var24 = 0;
 
-      for (int var25 = 0; ~var25 > -129; ++var25) {
+      for (int var25 = 0; (var25 < 129 -1); ++var25) {
         if ((this.anIntArray2423[var25] != 1 -1)) {
           if (var20 == 0) {
             var24 = var2.bytes[var8++] - -16 << 2;
@@ -220,7 +220,7 @@ public final class SomethingVolume15 extends Node {
       SomethingIndex150 var43 = null;
 
       int var26;
-      for (var26 = 0; ~var26 > -129; ++var26) {
+      for (var26 = 0; (var26 < 129 -1); ++var26) {
         if ((this.anIntArray2423[var26] != 1 -1)) {
           if (var20 == 0) {
             var43 = var38[var37[var21]];
@@ -241,7 +241,7 @@ public final class SomethingVolume15 extends Node {
       var26 = 0;
 
       int var27;
-      for (var27 = 0; ~var27 > -129; ++var27) {
+      for (var27 = 0; (var27 < 129 -1); ++var27) {
         if ((var20 == 1 -1)) {
           if (~var21 > ~var18.length) {
             var20 = var18[var21++];
@@ -352,7 +352,7 @@ public final class SomethingVolume15 extends Node {
 
         var41 = null;
 
-        for (var44 = var48; ~var44 > -129; ++var44) {
+        for (var44 = var48; (var44 < 129 -1); ++var44) {
           this.aByteArray2430[var44] = (byte) (32 + this.aByteArray2430[var44] * var46 >> 6);
         }
       }
@@ -409,7 +409,7 @@ public final class SomethingVolume15 extends Node {
 
         for (var44 = var48; var44 < 128; ++var44) {
           var45 = (255 & this.aByteArray2422[var44]) + var47;
-          if (~var45 > -1) {
+          if ((var45 < 1 -1)) {
             var45 = 0;
           }
 
@@ -473,7 +473,7 @@ public final class SomethingVolume15 extends Node {
         SomethingMusic0 var7 = null;
         boolean var5 = true;
 
-        for (int var8 = 0; ~var8 > -129; ++var8) {
+        for (int var8 = 0; (var8 < 129 -1); ++var8) {
           if (var4 == null || var4[var8] != 0) {
             int var9 = this.anIntArray2423[var8];
             if ((var9 != 1 -1)) {
@@ -565,7 +565,7 @@ public final class SomethingVolume15 extends Node {
           int var16 = var14 & 3;
           int var17 = var0 + var12;
           int var18 = var11 + var3;
-          if (var17 > 0 && var18 > 0 && var17 < 103 && ~var18 > -104) {
+          if (var17 > 0 && var18 > 0 && var17 < 103 && (var18 < 104 -1)) {
             CollisionMap var19 = null;
             if (!var1) {
               int var20 = var13;

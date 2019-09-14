@@ -80,11 +80,11 @@ public class MovedStatics0 {
       byte[] var6, int var7, int var8, int var9, boolean var10) {
     int var13;
       if (!var10) {
-        for (int var12 = 0; ~var12 > -9; ++var12) {
+        for (int var12 = 0; (var12 < 9 -1); ++var12) {
           for (var13 = 0; var13 < 8; ++var13) {
             if (var1 - -var12 > 0 && var12 + var1 < 103 && ((var13 + var4) > 1 -1)
-                && ~(var4
-                + var13) > -104) {
+                && ((var4
+                + var13) < 104 -1)) {
               var3[var2].anIntArrayArray1304[var12 + var1][var13 + var4] =
                   ClientScript.bitAnd(
                       var3[var2].anIntArrayArray1304[var12 + var1][var13
@@ -112,7 +112,7 @@ public class MovedStatics0 {
       int var15;
       for (var13 = 0; var13 < var11; ++var13) {
         for (var14 = 0; var14 < 64; ++var14) {
-          for (var15 = 0; ~var15 > -65; ++var15) {
+          for (var15 = 0; (var15 < 65 -1); ++var15) {
             if (~var7 == ~var13 && var9 <= var14 && 8 + var9 > var14
                 && var8 <= var15
                 && var15 < 8 + var8) {
@@ -148,7 +148,7 @@ public class MovedStatics0 {
           if (var16 != 0) {
             if ((var16 == 2 -1)) {
               for (var17 = 0; var17 < 64; var17 += 4) {
-                for (var18 = 0; ~var18 > -65; var18 += 4) {
+                for (var18 = 0; (var18 < 65 -1); var18 += 4) {
                   byte var19 = var25.readByte();
                   if (~var15 >= ~var7) {
                     for (var20 = var17; ~var20 > ~(var17 + 4); ++var20) {
@@ -164,7 +164,7 @@ public class MovedStatics0 {
                                       var21 & 7)
                                   + var4;
                           if (var22 >= 0 && var22 < 104 && (var23 >= 1 -1)
-                              && ~var23 > -105) {
+                              && (var23 < 105 -1)) {
                             SceneShadowMap.aByteArrayArrayArray1774[var2][var22][var23] = var19;
                           }
                         }
@@ -178,7 +178,7 @@ public class MovedStatics0 {
             var18 = 7 + var1;
             var17 = var1;
             var20 = var4 - -7;
-            if (~var20 > -1) {
+            if ((var20 < 1 -1)) {
               var20 = 0;
             } else if (var20 >= 104) {
               var20 = 104;

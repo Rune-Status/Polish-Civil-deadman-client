@@ -34,7 +34,7 @@ public final class TextureSampler36 extends AbstractTextureSampler {
     if (var1) {
         return true;
       } else if (this.anIntArray3425 == null) {
-        if (~this.anInt3434 > -1) {
+        if ((this.anInt3434 < 1 -1)) {
           return false;
         } else {
           int var2 = SomethingLight0.anInt1559;

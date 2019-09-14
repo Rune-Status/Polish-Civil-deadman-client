@@ -251,7 +251,7 @@ public abstract class AbstractObjectNodeWrapper {
 
         for (int var8 = 0; var4 > var8; ++var8) {
           int var9 = var3 % var2;
-          if (~var9 > -1) {
+          if ((var9 < 1 -1)) {
             var9 = -var9;
           }
 

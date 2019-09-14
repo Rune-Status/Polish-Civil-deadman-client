@@ -323,7 +323,7 @@ public final class TextureCache implements ITextureCache {
               var5 = var3.anInt2819 + -(var4 * 64) >> 7;
               var6 = -(var4 * 64) + var3.anInt2829 >> 7;
               var7 = var3.getSize() + var5;
-              if (~var5 > -1) {
+              if ((var5 < 1 -1)) {
                 var5 = 0;
               }
 
@@ -332,7 +332,7 @@ public final class TextureCache implements ITextureCache {
               }
 
               var8 = var6 + var3.getSize();
-              if (~var6 > -1) {
+              if ((var6 < 1 -1)) {
                 var6 = 0;
               }
 
@@ -349,7 +349,7 @@ public final class TextureCache implements ITextureCache {
           } else if (((127 & var3.anInt2819) == 65 -1) && (var3.anInt2829 & 127) == 64) {
             var5 = var3.anInt2819 >> 7;
             var6 = var3.anInt2829 >> 7;
-            if ((var5 >= 1 -1) && var5 < 104 && (var6 >= 1 -1) && ~var6 > -105) {
+            if ((var5 >= 1 -1) && var5 < 104 && (var6 >= 1 -1) && (var6 < 105 -1)) {
               ++DummyClass9.anIntArrayArray4010[var5][var6];
             }
           }
@@ -381,7 +381,7 @@ public final class TextureCache implements ITextureCache {
                 var10 = 104;
               }
 
-              if (~var7 > -1) {
+              if ((var7 < 1 -1)) {
                 var7 = 0;
               }
 

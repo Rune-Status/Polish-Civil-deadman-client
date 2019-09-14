@@ -166,7 +166,7 @@ public abstract class SceneNode {
         int var12 = var2 + -var3;
         int var13 = -(var11 >> 1);
         int var14 = var2 <= var3 ? -1 : 1;
-        if (~var12 > -1) {
+        if ((var12 < 1 -1)) {
           var12 = -var12;
         }
 

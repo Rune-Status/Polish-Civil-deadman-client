@@ -48,7 +48,7 @@ public final class TextureSampler38 extends AbstractTextureSampler {
               var15 = -var15;
             }
 
-            if (~var14 > -1) {
+            if ((var14 < 1 -1)) {
               var14 = -var14;
             }
 
@@ -76,7 +76,7 @@ public final class TextureSampler38 extends AbstractTextureSampler {
             var18 = -var10 + var12;
             int var19 = var13 + -var11;
             var17 = var11;
-            if (~var19 > -1) {
+            if ((var19 < 1 -1)) {
               var19 = -var19;
             }
 

@@ -25,7 +25,7 @@ public final class AudioWorker implements Runnable {
 
       try {
         while (!this.aBoolean345) {
-          for (int var1 = 0; ~var1 > -3; ++var1) {
+          for (int var1 = 0; (var1 < 3 -1); ++var1) {
             AbstractAudioOutputStream var2 = this.aClass155Array352[var1];
             if (var2 != null) {
               var2.process((byte) -34);

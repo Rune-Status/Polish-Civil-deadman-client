@@ -625,7 +625,7 @@ public final class AnimationSequence {
       DummyClass36.aBoolean2615 = false;
       DummyClass30.method940(119, 0);
 
-      for (var1 = 0; ~var1 > -101; ++var1) {
+      for (var1 = 0; (var1 < 101 -1); ++var1) {
         StringNode.aClass94Array2580[var1] = null;
       }
 
@@ -660,8 +660,8 @@ public final class AnimationSequence {
       TextureSampler17.stillGraphics.clear(-58);
       if (TextureSampler0.groundItems != null) {
         for (var1 = 0; var1 < 4; ++var1) {
-          for (int var2 = 0; ~var2 > -105; ++var2) {
-            for (int var3 = 0; ~var3 > -105; ++var3) {
+          for (int var2 = 0; (var2 < 105 -1); ++var2) {
+            for (int var3 = 0; (var3 < 105 -1); ++var3) {
               TextureSampler0.groundItems[var1][var2][var3] = null;
             }
           }
@@ -728,7 +728,7 @@ public final class AnimationSequence {
         TextureSampler29.aClass133Array3393[var1] = new SomethingPacket116();
       }
 
-      for (var1 = 0; ~var1 > -26; ++var1) {
+      for (var1 = 0; (var1 < 26 -1); ++var1) {
         TextureSampler17.anIntArray3185[var1] = 0;
         TriChromaticImageBuffer.anIntArray2480[var1] = 0;
         SomethingPacket116.anIntArray1743[var1] = 0;

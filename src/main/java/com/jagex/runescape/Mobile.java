@@ -164,7 +164,7 @@ public abstract class Mobile extends SceneNode {
         this.animationId = -1;
       }
 
-      if (~this.anInt2816 > -10) {
+      if ((this.anInt2816 < 10 -1)) {
         ++this.anInt2816;
       }
 
@@ -286,7 +286,7 @@ public abstract class Mobile extends SceneNode {
 
   public final void method1970(int var1, int var2, int var3, int var4) {
     if (var2 == -8) {
-        for (int var5 = 0; ~var5 > -5; ++var5) {
+        for (int var5 = 0; (var5 < 5 -1); ++var5) {
           if (var3 >= this.anIntArray2768[var5]) {
             this.anIntArray2836[var5] = var4;
             this.anIntArray2815[var5] = var1;
@@ -337,7 +337,7 @@ public abstract class Mobile extends SceneNode {
             } else {
               this.aBoolean2807 = false;
             }
-          } else if (~this.anInt2754 > -1 && this.anInt2787 > var4) {
+          } else if ((this.anInt2754 < 1 -1) && this.anInt2787 > var4) {
             var6 = this.anInt2754 * this.anInt2754 / (var3.anInt387 * 2);
             var7 = var4 - this.anInt2787;
             if (var7 >= var6) {
@@ -386,7 +386,7 @@ public abstract class Mobile extends SceneNode {
 
             if (!this.aBoolean2807) {
               this.anInt2754 -= var3.anInt387;
-              if (~this.anInt2754 > -1) {
+              if ((this.anInt2754 < 1 -1)) {
                 this.anInt2754 = 0;
               }
             } else if (var3.anInt370 > this.anInt2754) {
@@ -435,7 +435,7 @@ public abstract class Mobile extends SceneNode {
                 this.anInt2757 = var9;
               }
             }
-          } else if (~this.anInt2830 > -1 && this.anInt2834 > var5) {
+          } else if ((this.anInt2830 < 1 -1) && this.anInt2834 > var5) {
             var7 = -this.anInt2834 + var5;
             var6 = this.anInt2830 * this.anInt2830 / (2 * var3.anInt403);
             if (var7 >= var6) {
@@ -462,7 +462,7 @@ public abstract class Mobile extends SceneNode {
             this.anInt2757 = (this.anInt2766 + this.anInt2834) / 2;
             this.aBoolean2783 = true;
             var7 = var3.anInt399 * var3.anInt399 / (2 * var3.anInt403);
-            if (~var6 > -1) {
+            if ((var6 < 1 -1)) {
               this.anInt2830 = -var3.anInt403;
               var8 = var7 + this.anInt2766;
               if (this.anInt2757 > var8) {

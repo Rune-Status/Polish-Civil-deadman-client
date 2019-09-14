@@ -29,7 +29,7 @@ public final class TextureSampler16 extends AbstractTextureSampler {
           int var10 = this.anInt3108 * (var6 % (4096 / this.anInt3108));
           int var11 = var7 % (4096 / this.anInt3113) * this.anInt3113;
           if (this.anInt3109 > var11) {
-            for (var8 -= var9; ~var8 > -1; var8 += 4) {
+            for (var8 -= var9; (var8 < 1 -1); var8 += 4) {
             }
 
             while (var8 > 3) {

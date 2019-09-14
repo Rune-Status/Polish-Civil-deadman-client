@@ -79,7 +79,7 @@ public final class TextureSampler17 extends AbstractTextureSampler {
           }
 
           for (
-              this.anInt3180 += this.anInt3175; ~this.anInt3180 > -1; this.anInt3180 += 4096) {
+              this.anInt3180 += this.anInt3175; (this.anInt3180 < 1 -1); this.anInt3180 += 4096) {
           }
 
           while ((this.anInt3180 > 4097 -1)) {

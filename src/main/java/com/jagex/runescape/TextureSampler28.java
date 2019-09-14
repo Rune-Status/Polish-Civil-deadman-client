@@ -90,7 +90,7 @@ public final class TextureSampler28 extends AbstractTextureSampler {
                   if (~var30 <= ~var31[0] && ~var31[1] <= ~var30) {
                     if (var10 != var27) {
                       int var42 = var6 + var9;
-                      if (~var42 > -1) {
+                      if ((var42 < 1 -1)) {
                         var42 += SomethingLight0.anInt1559;
                       }
 

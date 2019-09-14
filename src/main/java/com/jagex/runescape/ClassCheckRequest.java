@@ -138,7 +138,7 @@ public final class ClassCheckRequest extends Node {
         }
 
         for (var9 = 0; var9 < 104; ++var9) {
-          for (var10 = 0; ~var10 > -105; ++var10) {
+          for (var10 = 0; (var10 < 105 -1); ++var10) {
             Deque var25 = TextureSampler0.groundItems[GameWorldSomething.currentPlane][var9][var10];
             if (var25 != null) {
               var12 = 2 + var9 * 4 + -(TextureCache.localPlayer.anInt2819 / 32);
@@ -438,7 +438,7 @@ public final class ClassCheckRequest extends Node {
                 continue;
               }
 
-              if (~var9 > -1) {
+              if ((var9 < 1 -1)) {
                 var9 = 0;
               }
 

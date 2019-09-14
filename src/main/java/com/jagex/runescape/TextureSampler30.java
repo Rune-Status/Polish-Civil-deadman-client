@@ -250,14 +250,14 @@ public final class TextureSampler30 extends AbstractTextureSampler {
       }
 
       int var4;
-      for (var3 = 0; ~var3 > -5001; ++var3) {
+      for (var3 = 0; (var3 < 5001 -1); ++var3) {
         var4 = (int) (var2 * Math.random() * 128.0D);
         DummyClass12.anIntArray2026[var4] = (int) (Math.random() * 284.0D);
       }
 
       int var5;
       int var6;
-      for (var3 = 0; ~var3 > -21; ++var3) {
+      for (var3 = 0; (var3 < 21 -1); ++var3) {
         for (var4 = 1; (-1 + var2) > var4; ++var4) {
           for (var5 = 1; var5 < 127; ++var5) {
             var6 = var5 - -(var4 << 7);

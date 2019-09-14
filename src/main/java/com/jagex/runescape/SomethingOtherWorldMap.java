@@ -69,7 +69,7 @@ public final class SomethingOtherWorldMap extends Node {
 
   public static GameString method407(int var0, boolean var1, int var2, long var3, int var5) {
     GameString var6 = Cache.createString(0);
-      if (~var3 > -1L) {
+      if ((var3 < 1L -1)) {
         var3 = -var3;
         var6.append(TextureSampler1.aClass94_3133);
       }

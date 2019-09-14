@@ -251,7 +251,7 @@ public final class Cursor {
           }
 
           var9 = var1.anInt2758 >> 7;
-          if (~var9 > -2) {
+          if ((var9 < 2 -1)) {
             var9 = 1;
           }
         }

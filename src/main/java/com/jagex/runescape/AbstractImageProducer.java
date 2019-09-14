@@ -84,7 +84,7 @@ public abstract class AbstractImageProducer {
               var7.anInt208 = var7.anInt252 - var7.anInt193;
             }
 
-            if (~var7.anInt208 > -1) {
+            if ((var7.anInt208 < 1 -1)) {
               var7.anInt208 = 0;
             }
 

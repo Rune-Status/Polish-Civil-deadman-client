@@ -182,7 +182,7 @@ public final class ClientScriptCall extends Node {
         TextureSampler28.anInt3315 &= 2047;
       }
 
-      if (~var10 > -1) {
+      if ((var10 < 1 -1)) {
         TextureSampler28.anInt3315 -=
           DummyClass8.anInt4014 * -var10 / 1000 + AbstractSomethingTexture.anInt1105;
         TextureSampler28.anInt3315 &= 2047;
@@ -197,7 +197,7 @@ public final class ClientScriptCall extends Node {
         var11 += 2048;
       }
 
-      if (var11 < 0 && (var10 > 1 -1) || var11 > 0 && ~var10 > -1) {
+      if (var11 < 0 && (var10 > 1 -1) || var11 > 0 && (var10 < 1 -1)) {
         TextureSampler28.anInt3315 = var9;
       }
   }

@@ -393,14 +393,14 @@ public final class Texture extends SubNode {
 
         int var4;
         int var5;
-        for (var4 = 0; ~var4 > -5; ++var4) {
+        for (var4 = 0; (var4 < 5 -1); ++var4) {
           for (var5 = 0; var5 < 104; ++var5) {
             AbstractImageProducer.aByteArrayArrayArray2008[var4][var3][var5] = var2;
           }
         }
 
         if (GameWorldSomething.currentPlane != 3) {
-          for (var4 = 0; ~var4 > -3; ++var4) {
+          for (var4 = 0; (var4 < 3 -1); ++var4) {
             FileCache.anIntArray686[var4] = -1000000;
             MilliFrameRegulator.anIntArray2696[var4] = 1000000;
             DummyClass13.anIntArray2021[var4] = 0;
@@ -420,7 +420,7 @@ public final class Texture extends SubNode {
                   SomethingTexture1.sceneGraphTiles, 0);
             }
 
-            if (~DummyClass17.anInt1823 > -311) {
+            if ((DummyClass17.anInt1823 < 311 -1)) {
               int var7 = TextureCache.localPlayer.anInt2829 >> 7;
               var5 = DummyClass49.anInt1111 >> 7;
               int var9;

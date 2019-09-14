@@ -217,7 +217,7 @@ public final class TextureSampler20 extends AbstractTextureSampler {
         TextureSampler5.method289(false);
       } else {
         int var1;
-        for (var1 = 0; ~var1 > -101 && TextureSampler33.parsePacket(-15450); var1++) {
+        for (var1 = 0; (var1 < 101 -1) && TextureSampler33.parsePacket(-15450); var1++) {
         }
 
         if (DummyClass15.state == 30) {
@@ -241,11 +241,11 @@ public final class TextureSampler20 extends AbstractTextureSampler {
 
                 for (
                   var4 = 0; DisplayMode.aClass67_1443.anInt1018 > var4
-                  && ~(TextureSampler12.secureBuffer.position - var2) > -241; ++var4) {
+                  && ((TextureSampler12.secureBuffer.position - var2) < 241 -1); ++var4) {
                   ++var3;
                   var5 = DisplayMode.aClass67_1443.anIntArray1019[var4];
                   var6 = DisplayMode.aClass67_1443.anIntArray1020[var4];
-                  if (~var5 > -1) {
+                  if ((var5 < 1 -1)) {
                     var5 = 0;
                   } else if ((var5 > 65535 -1)) {
                     var5 = '\ufffe';
@@ -276,7 +276,7 @@ public final class TextureSampler20 extends AbstractTextureSampler {
                     AbstractAudioOutputStream.anInt1977 = var6;
                     var9 = var5 + -DummyCanvas.anInt14;
                     DummyCanvas.anInt14 = var5;
-                    if (~MonoChromaticImageBuffer.anInt2556 > -9 && var8 >= -32 &&
+                    if ((MonoChromaticImageBuffer.anInt2556 < 9 -1) && var8 >= -32 &&
                         var8 <= 31
                       && var9 >= -32 && var9 <= 31) {
                       var9 += 32;
@@ -860,7 +860,7 @@ public final class TextureSampler20 extends AbstractTextureSampler {
                             WidgetUpdate.d('\uffff');
                           }
 
-                          for (var5 = 0; ~var5 > -6; ++var5) {
+                          for (var5 = 0; (var5 < 6 -1); ++var5) {
                             ++DummyClass9.anIntArray4009[var5];
                           }
 

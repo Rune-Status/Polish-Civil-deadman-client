@@ -307,7 +307,7 @@ public final class FileCache {
         }
 
         var8 = var2;
-        if (~var2 > -4 && ((2 & BZipDecompressorState.tileFlags[1][var1][var4]) == 3 -1)) {
+        if ((var2 < 4 -1) && ((2 & BZipDecompressorState.tileFlags[1][var1][var4]) == 3 -1)) {
           var8 = var2 + 1;
         }
 
@@ -328,7 +328,7 @@ public final class FileCache {
   }
 
   public static GameString stringFromBase37(int var0, long var1) {
-    if ((var1 > 1L -1) && ~var1 > -6582952005840035282L) {
+    if ((var1 > 1L -1) && (var1 < 6582952005840035282L -1)) {
         if (((var1 % 37L) == 1L -1)) {
           return null;
         } else {

@@ -191,8 +191,8 @@ public final class TextureSampler19 extends AbstractTextureSampler {
         TextureSampler19.method259(null, 69, 54, -87, 72, -85, 88, 37, true);
       }
 
-      for (int var2 = 0; ~var2 > -105; ++var2) {
-        for (int var3 = 0; ~var3 > -105; ++var3) {
+      for (int var2 = 0; (var2 < 105 -1); ++var2) {
+        for (int var3 = 0; (var3 < 105 -1); ++var3) {
           if (GroundItem.method2031((byte) -106, true, var2, var3,
             SomethingTexture1.sceneGraphTiles, var1)) {
             ++var1;

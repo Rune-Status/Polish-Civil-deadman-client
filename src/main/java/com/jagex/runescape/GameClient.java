@@ -46,7 +46,7 @@ public final class GameClient extends GameStub {
   private void updateGame(byte var1) {
     for (
           SomethingOtherWorldMap.anInt2537 = 0; FileCacheRequest.hasKeyInput()
-          && ~SomethingOtherWorldMap.anInt2537 > -129;
+          && (SomethingOtherWorldMap.anInt2537 < 129 -1);
           ++SomethingOtherWorldMap.anInt2537) {
         SomethingPacket116.anIntArray1755[SomethingOtherWorldMap.anInt2537] = Parameter.anInt3624;
         FaceNormal.anIntArray1638[SomethingOtherWorldMap.anInt2537] = TextureSampler7.anInt3342;
@@ -64,7 +64,7 @@ public final class GameClient extends GameStub {
         int var2 = 19137023;
 
         label191:
-        for (int var3 = 0; ~var3 > -32769; ++var3) {
+        for (int var3 = 0; (var3 < 32769 -1); ++var3) {
           NPC var4 = TextureSampler5.npcs[var3];
           if (var4 != null) {
             byte var5 = var4.config.aByte1267;
@@ -391,7 +391,7 @@ public final class GameClient extends GameStub {
         if ((HintMarker.loadingState == 11 -1)) {
           DummyClass46.setSceneDimensions(4, 104, 104);
 
-          for (var2 = 0; ~var2 > -5; ++var2) {
+          for (var2 = 0; (var2 < 5 -1); ++var2) {
             BlockConfig.collisionMaps[var2] = new CollisionMap(104, 104);
           }
 
@@ -1310,7 +1310,7 @@ public final class GameClient extends GameStub {
 
         TextureSampler20.usageMode = Integer
             .parseInt(this.getParameter("modewhat"));
-        if (~TextureSampler20.usageMode > -1
+        if ((TextureSampler20.usageMode < 1 -1)
             || TextureSampler20.usageMode > 2) {
           TextureSampler20.usageMode = 0;
         }
@@ -1439,7 +1439,7 @@ public final class GameClient extends GameStub {
         }
 
         if (GlRenderer.useOpenGlRenderer) {
-          for (var4 = 0; ~var4 > -101; ++var4) {
+          for (var4 = 0; (var4 < 101 -1); ++var4) {
             GroundItemNode.aBooleanArray3674[var4] = true;
           }
         }
@@ -1622,7 +1622,7 @@ public final class GameClient extends GameStub {
           DummyClass55.cacheDataFile =
               new BufferedFile(DummyClass35.signLink.cacheDataFile, 5200, 0);
 
-          for (int var2 = 0; ~var2 > -29; ++var2) {
+          for (int var2 = 0; (var2 < 29 -1); ++var2) {
             DummyClass7.cacheIndexFiles[var2] =
                 new BufferedFile(DummyClass35.signLink.cacheIndexFiles[var2],
                     6000, 0);

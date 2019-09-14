@@ -87,11 +87,11 @@ public final class DummyClass22 {
         var3 = -var1 + DummyClass30.viewWidth;
       }
 
-      if (~var3 > -1) {
+      if ((var3 < 1 -1)) {
         var3 = 0;
       }
 
-      if (~var4 > -1) {
+      if ((var4 < 1 -1)) {
         var4 = 0;
       }
 

@@ -147,7 +147,7 @@ public final class DummyOutputStream extends OutputStream {
         StillGraphic.method1950(var2, true);
       }
 
-      if (~var2.anInt2819 > -129 || var2.anInt2829 < 128 || var2.anInt2819 >= 13184
+      if ((var2.anInt2819 < 129 -1) || var2.anInt2829 < 128 || var2.anInt2819 >= 13184
         || var2.anInt2829 >= 13184) {
         var2.animationId = -1;
         var2.anInt2842 = -1;
@@ -160,7 +160,7 @@ public final class DummyOutputStream extends OutputStream {
 
       if (var1 == 2279) {
         if (var2 == TextureCache.localPlayer && (var2.anInt2819 < 1536 ||
-            ~var2.anInt2829 > -1537
+            (var2.anInt2829 < 1537 -1)
           || (var2.anInt2819 >= 11777 -1) || var2.anInt2829 >= 11776)) {
           var2.anInt2842 = -1;
           var2.anInt2800 = 0;

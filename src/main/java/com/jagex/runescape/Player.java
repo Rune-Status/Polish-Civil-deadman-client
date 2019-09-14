@@ -52,7 +52,7 @@ public final class Player extends Mobile {
       int var12;
       int var13;
       int var14;
-      for (int var10 = 0; ~var10 > -13; ++var10) {
+      for (int var10 = 0; (var10 < 13 -1); ++var10) {
         var11 = buffer.readUnsignedByte();
         if ((var11 == 1 -1)) {
           var9[var10] = 0;
@@ -83,7 +83,7 @@ public final class Player extends Mobile {
 
       for (var11 = 0; var11 < 5; ++var11) {
         var12 = buffer.readUnsignedByte();
-        if (~var12 > -1 || var12 >= AudioWorker.aShortArrayArray344[var11].length) {
+        if ((var12 < 1 -1) || var12 >= AudioWorker.aShortArrayArray344[var11].length) {
           var12 = 0;
         }
 

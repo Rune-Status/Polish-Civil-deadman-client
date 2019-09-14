@@ -206,7 +206,7 @@ public final class FileCacheRequester implements Runnable {
         if (var4) {
           DummyClass6.anInt2046 = 0;
 
-          for (var11 = 0; ~var11 > -32769; ++var11) {
+          for (var11 = 0; (var11 < 32769 -1); ++var11) {
             var12 = TextureSampler5.npcs[var11];
             if (var12 != null) {
               var12.anInt2819 -= 128 * var9;
@@ -262,13 +262,13 @@ public final class FileCacheRequester implements Runnable {
         byte var16 = 1;
         byte var15 = 104;
         byte var26 = 1;
-        if (~var10 > -1) {
+        if ((var10 < 1 -1)) {
           var16 = -1;
           var15 = -1;
           var14 = 103;
         }
 
-        if (~var9 > -1) {
+        if ((var9 < 1 -1)) {
           var26 = -1;
           var24 = 103;
           var25 = -1;
@@ -281,7 +281,7 @@ public final class FileCacheRequester implements Runnable {
 
             for (int var21 = 0; var21 < 4; ++var21) {
               if ((var19 >= 1 -1)
-                  && (var20 >= 1 -1) && ~var19 > -105 && ~var20 > -105) {
+                  && (var20 >= 1 -1) && (var19 < 105 -1) && (var20 < 105 -1)) {
                 TextureSampler0.groundItems[var21][var17][var18] =
                   TextureSampler0.groundItems[var21][var19][var20];
               } else {
@@ -296,7 +296,7 @@ public final class FileCacheRequester implements Runnable {
              var27 != null; var27 = (SpawnedGameObject) TextureSampler26.aClass61_3075.getNext()) {
           var27.anInt2248 -= var10;
           var27.anInt2264 -= var9;
-          if (var27.anInt2264 < 0 || ~var27.anInt2248 > -1 || var27.anInt2264 >= 104
+          if (var27.anInt2264 < 0 || (var27.anInt2248 < 1 -1) || var27.anInt2264 >= 104
             || var27.anInt2248 >= 104) {
             var27.unlinkNode();
           }
@@ -472,7 +472,7 @@ public final class FileCacheRequester implements Runnable {
         if (command.method1531(TextureSampler20.COMMAND_GC)) {
           TextureSampler23.method246(8);
 
-          for (var2 = 0; ~var2 > -11; ++var2) {
+          for (var2 = 0; (var2 < 11 -1); ++var2) {
             System.gc();
           }
 
@@ -575,8 +575,8 @@ public final class FileCacheRequester implements Runnable {
         }
 
         if (command.method1531(TextureSampler30.COMMAND_NOCLIP)) {
-          for (var2 = 0; ~var2 > -5; ++var2) {
-            for (var3 = 1; ~var3 > -104; ++var3) {
+          for (var2 = 0; (var2 < 5 -1); ++var2) {
+            for (var3 = 1; (var3 < 104 -1); ++var3) {
               for (var4 = 1; var4 < 103; ++var4) {
                 BlockConfig.collisionMaps[var2].anIntArrayArray1304[var3][var4] = 0;
               }

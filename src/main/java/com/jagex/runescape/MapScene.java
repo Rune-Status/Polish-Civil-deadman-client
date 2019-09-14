@@ -154,7 +154,7 @@ public final class MapScene {
     int var12;
       int var13;
       for (var12 = 0; var12 < 104; ++var12) {
-        for (var13 = 0; ~var13 > -105; ++var13) {
+        for (var13 = 0; (var13 < 105 -1); ++var13) {
           DummyClass51.anIntArrayArray1160[var12][var13] = 0;
           TriChromaticImageCache.anIntArrayArray1373[var12][var13] = 99999999;
         }
@@ -239,7 +239,7 @@ public final class MapScene {
           var27 = 4095 & 1 + var27;
         }
 
-        if (~var13 > -103 && (DummyClass51.anIntArrayArray1160[var12][var13 + 1] == 1 -1)
+        if ((var13 < 103 -1) && (DummyClass51.anIntArrayArray1160[var12][var13 + 1] == 1 -1)
           && ((var17[var12][2 + var13] & 19661112) == 1 -1) &&
             ((var17[1 + var12][var13 + 2]
                 & 19661280) == 1 -1)) {
@@ -263,7 +263,7 @@ public final class MapScene {
           var27 = 4095 & var27 + 1;
         }
 
-        if (~var12 > -103 && var13 > 0
+        if ((var12 < 103 -1) && var13 > 0
           && (DummyClass51.anIntArrayArray1160[1 + var12][var13 + -1] == 1 -1) &&
             ((
                 var17[var12 - -1][var13 - 1] & 19661070) == 1 -1) &&
@@ -276,7 +276,7 @@ public final class MapScene {
           TriChromaticImageCache.anIntArrayArray1373[1 + var12][var13 + -1] = var18;
         }
 
-        if ((var12 > 1 -1) && ~var13 > -103 &&
+        if ((var12 > 1 -1) && (var13 < 103 -1) &&
             DummyClass51.anIntArrayArray1160[var12 - 1][var13
                 + 1] == 0 && ((var17[-1 + var12][var13 - -1] & 19661070) == 1 -1) &&
             (19661112 & var17[-1
@@ -289,7 +289,7 @@ public final class MapScene {
           var27 = 1 + var27 & 4095;
         }
 
-        if (~var12 > -103 && ~var13 > -103 &&
+        if ((var12 < 103 -1) && (var13 < 103 -1) &&
             (DummyClass51.anIntArrayArray1160[1 + var12][1
                 + var13] == 1 -1)
             && ((19661112 & var17[var12 - -1][2 + var13]) == 1 -1) &&
@@ -317,7 +317,7 @@ public final class MapScene {
 
         for (int var21 = -var20 + var8; ~var21 >= ~(var20 + var8); ++var21) {
           for (int var22 = var4 + -var20; ~var22 >= ~(var20 + var4); ++var22) {
-            if ((var21 >= 1 -1) && (var22 >= 1 -1) && ~var21 > -105 && var22 < 104
+            if ((var21 >= 1 -1) && (var22 >= 1 -1) && (var21 < 105 -1) && var22 < 104
               && TriChromaticImageCache.anIntArrayArray1373[var21][var22] < 100) {
               int var23 = 0;
               int var24 = 0;

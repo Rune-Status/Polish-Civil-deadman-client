@@ -119,7 +119,7 @@ public abstract class AbstractFrameRegulator {
           SomethingLight var14 = new SomethingLight();
           int var16 = -var13.anInt698 + (var13.anInt703 >> 7);
           int var17 = -var13.anInt698 + (var13.anInt708 >> 7);
-          if (~var17 > -1) {
+          if ((var17 < 1 -1)) {
             var15 -= var17;
             var17 = 0;
           }
@@ -145,7 +145,7 @@ public abstract class AbstractFrameRegulator {
               var22 = 103;
             }
 
-            if (~var21 > -1) {
+            if ((var21 < 1 -1)) {
               var21 = 0;
             }
 
@@ -279,7 +279,7 @@ public abstract class AbstractFrameRegulator {
 
           var15 = 0;
           var14.method1020();
-          if (~(-var13.anInt698 + (var13.anInt708 >> 7)) > -1) {
+          if (((-var13.anInt698 + (var13.anInt708 >> 7)) < 1 -1)) {
             var15 -= -var13.anInt698 + (var13.anInt708 >> 7);
           }
 

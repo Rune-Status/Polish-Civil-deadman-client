@@ -145,7 +145,7 @@ public final class DummyClass3 {
                   && TextureSampler8.aBooleanArrayArray3468[var35][0]) {
                   var69 = false;
                 } else {
-                  for (var36 = 0; ~var36 > -9; ++var36) {
+                  for (var36 = 0; (var36 < 9 -1); ++var36) {
                     if (~var58 == ~var36) {
                       var63[var58++] = var28;
                       break;
@@ -175,7 +175,7 @@ public final class DummyClass3 {
                   && TextureSampler8.aBooleanArrayArray3468[var34][0]) {
                   var72 = false;
                 } else {
-                  for (var36 = 0; ~var36 > -9; ++var36) {
+                  for (var36 = 0; (var36 < 9 -1); ++var36) {
                     if (~var58 == ~var36) {
                       var63[var58++] = var29;
                       break;
@@ -205,7 +205,7 @@ public final class DummyClass3 {
                   && TextureSampler8.aBooleanArrayArray3468[var35][0]) {
                   var71 = false;
                 } else {
-                  for (var36 = 0; ~var36 > -9; ++var36) {
+                  for (var36 = 0; (var36 < 9 -1); ++var36) {
                     if (var58 == var36) {
                       var63[var58++] = var30;
                       break;
@@ -229,7 +229,7 @@ public final class DummyClass3 {
                 var60 = SomethingTexture1.anIntArray2642[4 * var8[var13][var14 - -1] + (
                   var5[var13][var14 - -1] - -2 & 3)];
 
-                for (var74 = 0; ~var74 > -9; ++var74) {
+                for (var74 = 0; (var74 < 9 -1); ++var74) {
                   if (~var58 == ~var74) {
                     var63[var58++] = var23;
                     break;
@@ -248,7 +248,7 @@ public final class DummyClass3 {
                 var65 = SomethingTexture1.anIntArray2642[(3 & 3 + var5[var13 + -1][var14])
                   + var8[var13 + -1][var14] * 4];
 
-                for (var74 = 0; ~var74 > -9; ++var74) {
+                for (var74 = 0; (var74 < 9 -1); ++var74) {
                   if (var58 == var74) {
                     var63[var58++] = var24;
                     break;
@@ -267,7 +267,7 @@ public final class DummyClass3 {
                 var21 = SomethingTexture1.anIntArray2642[(3 & var5[var13][var14 + -1])
                   + var8[var13][var14 + -1] * 4];
 
-                for (var74 = 0; ~var74 > -9; ++var74) {
+                for (var74 = 0; (var74 < 9 -1); ++var74) {
                   if (~var74 == ~var58) {
                     var63[var58++] = var25;
                     break;
@@ -287,7 +287,7 @@ public final class DummyClass3 {
                   SomethingTexture1.anIntArray2642[(3 & var5[var13 + 1][var14] + 1) + 4 * var8[1
                     + var13][var14]];
 
-                for (var74 = 0; ~var74 > -9; ++var74) {
+                for (var74 = 0; (var74 < 9 -1); ++var74) {
                   if (~var58 == ~var74) {
                     var63[var58++] = var26;
                     break;
@@ -389,7 +389,7 @@ public final class DummyClass3 {
                   && TextureSampler8.aBooleanArrayArray3468[var35][0]) {
                   var28 = 0;
                 } else {
-                  for (var83 = 0; ~var83 > -9; ++var83) {
+                  for (var83 = 0; (var83 < 9 -1); ++var83) {
                     if (var61 == var83) {
                       var64[var61++] = var28;
                       break;
@@ -476,7 +476,7 @@ public final class DummyClass3 {
                   && TextureSampler8.aBooleanArrayArray3468[var36][0]) {
                   var73 = 0;
                 } else {
-                  for (var83 = 0; ~var83 > -9; ++var83) {
+                  for (var83 = 0; (var83 < 9 -1); ++var83) {
                     if (~var83 == ~var61) {
                       var64[var61++] = var73;
                       break;
@@ -541,7 +541,7 @@ public final class DummyClass3 {
                   SomethingTexture1.anIntArray2642[(var5[var13][var14 + -1] & 3) + 4 * var8[var13][
                     -1 + var14]];
 
-                for (var78 = 0; ~var78 > -9; ++var78) {
+                for (var78 = 0; (var78 < 9 -1); ++var78) {
                   if (~var61 == ~var78) {
                     var64[var61++] = var26;
                     break;
@@ -560,7 +560,7 @@ public final class DummyClass3 {
                 var23 = SomethingTexture1.anIntArray2642[4 * var8[1 + var13][var14] - -(3
                   & var5[var13 + 1][var14] - -1)];
 
-                for (var78 = 0; ~var78 > -9; ++var78) {
+                for (var78 = 0; (var78 < 9 -1); ++var78) {
                   if (~var78 == ~var61) {
                     var64[var61++] = var27;
                     break;

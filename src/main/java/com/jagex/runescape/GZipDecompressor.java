@@ -64,8 +64,8 @@ public final class GZipDecompressor {
       for (int var4 = 0; ~var4 > ~var2; ++var4) {
         DummyClass43.method1194(-16385);
 
-        for (int var5 = 0; ~var5 > -14; ++var5) {
-          for (int var6 = 0; ~var6 > -14; ++var6) {
+        for (int var5 = 0; (var5 < 14 -1); ++var5) {
+          for (int var6 = 0; (var6 < 14 -1); ++var6) {
             int var8 = GameObjectConfig.anIntArrayArrayArray1497[var4][var5][var6];
             boolean var7 = false;
             if (~var8 != 0) {
@@ -128,11 +128,11 @@ public final class GZipDecompressor {
         byte[] var3 = new byte[512];
 
         int var5;
-        for (var5 = 0; ~var5 > -256; ++var5) {
+        for (var5 = 0; (var5 < 256 -1); ++var5) {
           var3[var5] = (byte) var5;
         }
 
-        for (var5 = 0; ~var5 > -256; ++var5) {
+        for (var5 = 0; (var5 < 256 -1); ++var5) {
           int var6 = 255 - var5;
           int var7 = FloorUnderlay.method1603((byte) 125, var6, var4);
           byte var8 = var3[var7];

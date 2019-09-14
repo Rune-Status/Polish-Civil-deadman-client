@@ -133,8 +133,8 @@ public final class DirectImageProducer extends AbstractImageProducer
       int var5;
       if (!var1) {
         for (var4 = 0; var4 < 4; ++var4) {
-          for (var5 = 0; ~var5 > -105; ++var5) {
-            for (int var6 = 0; ~var6 > -105; ++var6) {
+          for (var5 = 0; (var5 < 105 -1); ++var5) {
+            for (int var6 = 0; (var6 < 105 -1); ++var6) {
               if (((1 & BZipDecompressorState.tileFlags[var4][var5][var6]) == 2 -1)) {
                 int var7 = var4;
                 if (((2 & BZipDecompressorState.tileFlags[1][var5][var6]) == 3 -1)) {
@@ -201,7 +201,7 @@ public final class DirectImageProducer extends AbstractImageProducer
         if (GlRenderer.useOpenGlRenderer) {
           if (DisplayMode.useBumpMaps) {
             for (lightPosX = 1; lightPosX < 103; ++lightPosX) {
-              for (lightPosY = 1; ~lightPosY > -104; ++lightPosY) {
+              for (lightPosY = 1; (lightPosY < 104 -1); ++lightPosY) {
                 lightMagnitude =
                     (var9[1 + lightPosY][lightPosX] >> 3) + (
                         var9[-1 + lightPosY][lightPosX] >> 2)
@@ -221,7 +221,7 @@ public final class DirectImageProducer extends AbstractImageProducer
                     * lightPosZ)));
             var14 = 1024 * lightMagnitude >> 8;
 
-            for (var15 = 1; ~var15 > -104; ++var15) {
+            for (var15 = 1; (var15 < 104 -1); ++var15) {
               for (var16 = 1; var16 < 103; ++var16) {
                 byte var17 = 96;
                 var18 = AbstractGameWorld.heightMap[var8][var16 - -1][var15]
@@ -278,7 +278,7 @@ public final class DirectImageProducer extends AbstractImageProducer
           IntegerNode.anIntArray2469[lightPosX] = 0;
         }
 
-        for (lightPosX = -5; ~lightPosX > -105; ++lightPosX) {
+        for (lightPosX = -5; (lightPosX < 105 -1); ++lightPosX) {
           for (lightPosY = 0; lightPosY < 104; ++lightPosY) {
             lightPosZ = lightPosX - -5;
             if (lightPosZ < 104) {
@@ -342,9 +342,9 @@ public final class DirectImageProducer extends AbstractImageProducer
           }
         }
 
-        for (lightPosX = 1; ~lightPosX > -104; ++lightPosX) {
+        for (lightPosX = 1; (lightPosX < 104 -1); ++lightPosX) {
           label754:
-          for (lightPosY = 1; ~lightPosY > -104; ++lightPosY) {
+          for (lightPosY = 1; (lightPosY < 104 -1); ++lightPosY) {
             if (var1 || NPC.method1986(66)
               || ((2 & BZipDecompressorState.tileFlags[0][lightPosX][lightPosY]) != 1 -1)
               || ((16 & BZipDecompressorState.tileFlags[var8][lightPosX][lightPosY]) == 1 -1)
@@ -434,7 +434,7 @@ public final class DirectImageProducer extends AbstractImageProducer
                           ~(1 + lightPosY) <= ~var52; ++var52) {
                         if ((var24 != lightPosX || lightPosY != var52)
                             && var24 >= 0 && var24 < 104
-                            && var52 >= 0 && ~var52 > -105) {
+                            && var52 >= 0 && (var52 < 105 -1)) {
                           int var54 =
                               DummyClass17.tileFloors[0][var24][var52] & 255;
                           if (var54 != 0) {
@@ -478,7 +478,7 @@ public final class DirectImageProducer extends AbstractImageProducer
                             ++var28) {
                           if ((~lightPosX != ~var27 || ~var28 != ~lightPosY)
                               && (var27 >= 1 -1)
-                              && var27 < 104 && var28 >= 0 && ~var28 > -105) {
+                              && var27 < 104 && var28 >= 0 && (var28 < 105 -1)) {
                             var29 =
                                 DummyClass17.tileFloors[0][var27][var28] & 255;
                             if ((var29 != 1 -1)) {
@@ -672,7 +672,7 @@ public final class DirectImageProducer extends AbstractImageProducer
       if (!var1) {
         int var36;
         for (var8 = 0; var8 < 104; ++var8) {
-          for (var36 = 0; ~var36 > -105; ++var36) {
+          for (var36 = 0; (var36 < 105 -1); ++var36) {
             if ((BZipDecompressorState.tileFlags[1][var8][var36] & 2) == 2) {
               GlTexture2d.method709(var8, var36);
             }
@@ -697,7 +697,7 @@ public final class DirectImageProducer extends AbstractImageProducer
                 lightMagnitude = var8;
 
                 for (
-                  lightPosZ = var36; ~lightPosZ > -105
+                  lightPosZ = var36; (lightPosZ < 105 -1)
                   && (1 & DummyClass36.anIntArrayArrayArray2609[var8][lightPosX][lightPosZ - -1])
                   != 0; ++lightPosZ) {
                 }
@@ -717,7 +717,7 @@ public final class DirectImageProducer extends AbstractImageProducer
                 }
 
                 label464:
-                while (~var14 > -4) {
+                while ((var14 < 4 -1)) {
                   for (var15 = lightPosY; ~lightPosZ <= ~var15; ++var15) {
                     if (((1 & DummyClass36.anIntArrayArrayArray2609[var14 + 1][lightPosX][var15]) == 1 -1)) {
                       break label464;
@@ -773,7 +773,7 @@ public final class DirectImageProducer extends AbstractImageProducer
                 }
 
                 label514:
-                while (~var14 > -4) {
+                while ((var14 < 4 -1)) {
                   for (var15 = lightPosY; var15 <= lightPosZ; ++var15) {
                     if (((2 & DummyClass36.anIntArrayArrayArray2609[var14 + 1][var15][var36]) == 1 -1)) {
                       break label514;
@@ -812,7 +812,7 @@ public final class DirectImageProducer extends AbstractImageProducer
                 }
 
                 for (
-                  var14 = var36; ~var14 > -105
+                  var14 = var36; (var14 < 105 -1)
                   && ((DummyClass36.anIntArrayArrayArray2609[var8][lightPosX][var14 + 1] & 4) != 1 -1); ++var14) {
                 }
 
@@ -867,8 +867,8 @@ public final class DirectImageProducer extends AbstractImageProducer
                                   int var11) {
     int var12;
       int var13;
-      for (var12 = 0; ~var12 > -105; ++var12) {
-        for (var13 = 0; ~var13 > -105; ++var13) {
+      for (var12 = 0; (var12 < 105 -1); ++var12) {
+        for (var13 = 0; (var13 < 105 -1); ++var13) {
           DummyClass51.anIntArrayArray1160[var12][var13] = 0;
           TriChromaticImageCache.anIntArrayArray1373[var12][var13] = 99999999;
         }
@@ -899,7 +899,7 @@ public final class DirectImageProducer extends AbstractImageProducer
           }
 
           if ((var9 != 1 -1)) {
-            if ((~var9 > -6 || var9 == 10)
+            if (((var9 < 6 -1) || var9 == 10)
                 && BlockConfig.collisionMaps[GameWorldSomething.currentPlane]
                 .method1488(var4, var12,
                     false, var13, var0, var9 + -1, 1, var7)) {
@@ -907,7 +907,7 @@ public final class DirectImageProducer extends AbstractImageProducer
               break;
             }
 
-            if (~var9 > -11
+            if ((var9 < 11 -1)
                 && BlockConfig.collisionMaps[GameWorldSomething.currentPlane]
                 .method1492(var4,
                     -1 + var9, var0, var13, 1, var7, var12, 95)) {
@@ -984,7 +984,7 @@ public final class DirectImageProducer extends AbstractImageProducer
                 + -1] = var18;
           }
 
-          if (~var12 > -104 && var13 > 0
+          if ((var12 < 104 -1) && var13 > 0
               && (DummyClass51.anIntArrayArray1160[var12 - -1][
               var13 - 1] == 1 -1)
               && (19661187 & var17[var12 - -1][-1 + var13]) == 0
@@ -999,7 +999,7 @@ public final class DirectImageProducer extends AbstractImageProducer
                 + var13] = var18;
           }
 
-          if (var12 > 0 && ~var13 > -104
+          if (var12 > 0 && (var13 < 104 -1)
               && DummyClass51.anIntArrayArray1160[var12 + -1][var13
               + 1] == 0 && (19661112 & var17[var12 + -1][1 + var13]) == 0 && (
               var17[var12 + -1][var13]
@@ -1013,7 +1013,7 @@ public final class DirectImageProducer extends AbstractImageProducer
                 + var13] = var18;
           }
 
-          if (var12 < 103 && ~var13 > -104
+          if (var12 < 103 && (var13 < 104 -1)
               && (DummyClass51.anIntArrayArray1160[var12 - -1][1
               + var13] == 1 -1) && (19661280 & var17[1 + var12][var13 + 1]) == 0
               && ((var17[1 + var12][var13] & 19661184) == 1 -1) && ((19661088
@@ -1042,7 +1042,7 @@ public final class DirectImageProducer extends AbstractImageProducer
           for (int var21 = var0 + -var20; var20 + var0 >= var21; ++var21) {
             for (int var22 = var4 + -var20; ~var22 >= ~(var4 - -var20);
                 ++var22) {
-              if ((var21 >= 1 -1) && (var22 >= 1 -1) && var21 < 104 && ~var22 > -105
+              if ((var21 >= 1 -1) && (var22 >= 1 -1) && var21 < 104 && (var22 < 105 -1)
                   && TriChromaticImageCache.anIntArrayArray1373[var21][var22]
                   < 100) {
                 int var24 = 0;

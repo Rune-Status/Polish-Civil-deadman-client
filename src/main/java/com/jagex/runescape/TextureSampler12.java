@@ -39,7 +39,7 @@ public final class TextureSampler12 extends AbstractTextureSampler {
             var7 = TextureSampler23.anIntArray3212[(var7 & 4085) >> 4] + 4096 >> 1;
           } else if (this.anInt3036 == 2) {
             var7 -= 2048;
-            if (~var7 > -1) {
+            if ((var7 < 1 -1)) {
               var7 = -var7;
             }
 
@@ -147,7 +147,7 @@ public final class TextureSampler12 extends AbstractTextureSampler {
           var6, (byte) 119, var5);
       } else {
         if (~var5 == 0) {
-          for (int var9 = 0; ~var9 > -101; ++var9) {
+          for (int var9 = 0; (var9 < 101 -1); ++var9) {
             GroundItemNode.aBooleanArray3674[var9] = true;
           }
         } else {

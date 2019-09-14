@@ -120,7 +120,7 @@ public final class TextureSampler3 extends AbstractTextureSampler {
         int var5 = var3.low;
         int var4 = var3.id;
         int var7 = SomethingMidiFile.BIT_MASKS[var6 - var5];
-        if (~var2 > -1 || var2 > var7) {
+        if ((var2 < 1 -1) || var2 > var7) {
           var2 = 0;
         }
 

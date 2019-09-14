@@ -235,9 +235,9 @@ public final class DummyClass59 {
             BlockConfig.collisionMaps[var12].method1496(0);
           }
 
-          for (var12 = 0; ~var12 > -5; ++var12) {
+          for (var12 = 0; (var12 < 5 -1); ++var12) {
             for (var4 = 0; var4 < 104; ++var4) {
-              for (var5 = 0; ~var5 > -105; ++var5) {
+              for (var5 = 0; (var5 < 105 -1); ++var5) {
                 BZipDecompressorState.tileFlags[var12][var4][var5] = 0;
               }
             }
@@ -343,7 +343,7 @@ public final class DummyClass59 {
 
           if (GlRenderer.useOpenGlRenderer) {
             for (var4 = 0; var4 < 13; ++var4) {
-              for (var5 = 0; ~var5 > -14; ++var5) {
+              for (var5 = 0; (var5 < 14 -1); ++var5) {
                 DummyClass16.blockShadows[var4][var5]
                     .update(AbstractGameWorld.heightMap[0],
                         var4 * 8, var5 * 8);

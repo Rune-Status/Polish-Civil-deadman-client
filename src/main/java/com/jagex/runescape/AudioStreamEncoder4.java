@@ -154,7 +154,7 @@ public final class AudioStreamEncoder4 extends AudioStreamEncoder {
 
         while (true) {
           long var5 = this.aLong3526 - -((long) var3 * var4);
-          if (~(this.aLong3523 + -var5) > -1L) {
+          if (((this.aLong3523 + -var5) < 1L -1)) {
             int var7 = (int) ((-1L + this.aLong3523 - this.aLong3526 + var4) / var4);
             this.aLong3526 += (long) var4 * var7;
             this.aClass3_Sub24_Sub3_3527.method413(var1, var2, var7);
@@ -185,7 +185,7 @@ public final class AudioStreamEncoder4 extends AudioStreamEncoder {
 
         while (true) {
           long var3 = this.aLong3526 - -((long) var1 * var2);
-          if (~(this.aLong3523 + -var3) > -1L) {
+          if (((this.aLong3523 + -var3) < 1L -1)) {
             int var5 =
               (int) ((var2 + (-this.aLong3526 + this.aLong3523 - 1L)) / var2);
             var1 -= var5;
@@ -249,7 +249,7 @@ public final class AudioStreamEncoder4 extends AudioStreamEncoder {
            (AudioSomethingSomething) this.aClass3_Sub24_Sub3_3527.aClass61_3489.getFirst();
         var4 != null;
            var4 = (AudioSomethingSomething) this.aClass3_Sub24_Sub3_3527.aClass61_3489.getNext()) {
-        if (~var2 > -1 || var4.anInt2514 == var2) {
+        if ((var2 < 1 -1) || var4.anInt2514 == var2) {
           if (var4.aClass3_Sub24_Sub1_2507 != null) {
             var4.aClass3_Sub24_Sub1_2507.method417(DummyClass60.sampleRate / 100);
             if (var4.aClass3_Sub24_Sub1_2507.method445()) {
@@ -297,7 +297,7 @@ public final class AudioStreamEncoder4 extends AudioStreamEncoder {
         if (this.anIntArray3515[var3] != var2) {
           this.anIntArray3515[var3] = var2;
 
-          for (int var4 = 0; ~var4 > -129; ++var4) {
+          for (int var4 = 0; (var4 < 129 -1); ++var4) {
             this.aClass3_Sub22ArrayArray3513[var3][var4] = null;
           }
         }
@@ -320,7 +320,7 @@ public final class AudioStreamEncoder4 extends AudioStreamEncoder {
              var5 != null; var5 =
                (AudioSomethingSomething) this.aClass3_Sub24_Sub3_3527.aClass61_3489.method1219(
                  98)) {
-          if (~var2 == ~var5.anInt2514 && ~var5.anInt2506 > -1) {
+          if (~var2 == ~var5.anInt2514 && (var5.anInt2506 < 1 -1)) {
             this.aClass3_Sub22ArrayArray3512[var2][var5.anInt2520] = null;
             this.aClass3_Sub22ArrayArray3512[var2][var4] = var5;
             int var6 = var5.anInt2510 - -(var5.anInt2502 * var5.anInt2522 >> 12);
@@ -505,7 +505,7 @@ public final class AudioStreamEncoder4 extends AudioStreamEncoder {
           }
 
           if (var5 == 65) {
-            if (~var6 > -65) {
+            if ((var6 < 65 -1)) {
               this.method502(var4, var1 ^ -57);
               this.anIntArray3518[var4] = ClientScript.bitAnd(
                   this.anIntArray3518[var4], -3);
@@ -603,7 +603,7 @@ public final class AudioStreamEncoder4 extends AudioStreamEncoder {
            (AudioSomethingSomething) this.aClass3_Sub24_Sub3_3527.aClass61_3489.getFirst();
            var3 != null;
            var3 = (AudioSomethingSomething) this.aClass3_Sub24_Sub3_3527.aClass61_3489.getNext()) {
-        if ((~var2 > -1 || ~var2 == ~var3.anInt2514) && var3.anInt2506 < 0) {
+        if (((var2 < 1 -1) || ~var2 == ~var3.anInt2514) && var3.anInt2506 < 0) {
           this.aClass3_Sub22ArrayArray3512[var3.anInt2514][var3.anInt2520] = null;
           var3.anInt2506 = 0;
         }
@@ -646,7 +646,7 @@ public final class AudioStreamEncoder4 extends AudioStreamEncoder {
           var6 -= (int) (0.5D
             + Math.pow(2.0D, this.anIntArray3510[var3.anInt2514] * 4.921259842519685E-4D)
             * 16.0D);
-          if (~var6 > -1) {
+          if ((var6 < 1 -1)) {
             var6 = 0;
           }
 
@@ -764,7 +764,7 @@ public final class AudioStreamEncoder4 extends AudioStreamEncoder {
               var6 != null; var6 =
               (AudioSomethingSomething) this.aClass3_Sub24_Sub3_3527.aClass61_3489
                   .getNext()) {
-            if (~var6.anInt2514 == ~var5.anInt2514 && ~var6.anInt2506 > -1
+            if (~var6.anInt2514 == ~var5.anInt2514 && (var6.anInt2506 < 1 -1)
                 && var6 != var5) {
               var5.anInt2506 = 0;
               break;
@@ -849,7 +849,7 @@ public final class AudioStreamEncoder4 extends AudioStreamEncoder {
         this.anIntArray3498 = null;
       }
 
-      return ~var3 > -8193 ?
+      return (var3 < 8193 -1) ?
         32 + var2.anInt2503 * var3 >> 6 :
         16384 - ((128 + -var2.anInt2503) * (16384 + -var3) + 32 >> 6);
   }
@@ -1120,7 +1120,7 @@ public final class AudioStreamEncoder4 extends AudioStreamEncoder {
           for (int var6 = 0; var6 < var3.anInt177; ++var6) {
             int var7 = (32 - -var3.anInt285) * var6;
             int var8 = (32 + var3.anInt290) * var5;
-            if (~var15 > -21) {
+            if ((var15 < 21 -1)) {
               var8 += var3.anIntArray300[var15];
               var7 += var3.anIntArray272[var15];
             }

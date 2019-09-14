@@ -223,7 +223,7 @@ public class DummyClass2 {
           }
 
           if ((TextureSampler28.loginState == 5 -1)) {
-            if (~SomethingVolume15.gameSocket.available() > -2) {
+            if ((SomethingVolume15.gameSocket.available() < 2 -1)) {
               return;
             }
 
@@ -242,7 +242,7 @@ public class DummyClass2 {
 
                 if (response != 2) {
                   if ((response != 16 -1)) {
-                    if (response == 23 && ~SomethingIndex150.anInt2079 > -2) {
+                    if (response == 23 && (SomethingIndex150.anInt2079 < 2 -1)) {
                       TextureSampler28.loginState = 1;
                       ++SomethingIndex150.anInt2079;
                       VertexNormal.anInt820 = 0;
@@ -307,7 +307,7 @@ public class DummyClass2 {
           }
 
           if (TextureSampler28.loginState == 8) {
-            if (~SomethingVolume15.gameSocket.available() > -15) {
+            if ((SomethingVolume15.gameSocket.available() < 15 -1)) {
               return;
             }
 

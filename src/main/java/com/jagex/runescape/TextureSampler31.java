@@ -39,7 +39,7 @@ public final class TextureSampler31 extends AbstractTextureSampler {
           int var12 = var6 * var6 >> 12;
 
           for (int var13 = var7 * var7 >> 12;
-               ~(var12 - -var13) > -16385 && this.anInt3163 > var14;
+               ((var12 - -var13) < 16385 -1) && this.anInt3163 > var14;
                var12 = var10 * var10 >> 12) {
             var11 = (var10 * var11 >> 12) * 2 + var9;
             ++var14;

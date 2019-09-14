@@ -527,11 +527,11 @@ public final class TextureSampler7 extends AbstractTextureSampler {
 
               int var30 = var64 + -var63;
               int var66 = -var69 + var62;
-              if (~var66 > -1) {
+              if ((var66 < 1 -1)) {
                 var66 = -var66;
               }
 
-              if (~var30 > -1) {
+              if ((var30 < 1 -1)) {
                 var30 = -var30;
               }
 

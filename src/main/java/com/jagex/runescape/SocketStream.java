@@ -296,7 +296,7 @@ public final class SocketStream implements Runnable {
   public static void method1470(int var0, AnimationSequence var1, int var2,
       int var3, boolean var4,
       int var5) {
-    if (~SomethingLight0.anInt1552 > -51) {
+    if ((SomethingLight0.anInt1552 < 51 -1)) {
         if (var1.anIntArrayArray1867 != null
             && ~var5 > ~var1.anIntArrayArray1867.length
             && var1.anIntArrayArray1867[var5] != null) {

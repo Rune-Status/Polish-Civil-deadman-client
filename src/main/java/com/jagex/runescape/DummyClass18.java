@@ -593,7 +593,7 @@ public final class DummyClass18 {
           DummyClass23.method1746(false, (byte) -64);
           TextureSampler24.method226(InventoryConfig.anInt3655, 69);
 
-          for (var5 = 0; ~var5 > -101; ++var5) {
+          for (var5 = 0; (var5 < 101 -1); ++var5) {
             GroundItemNode.aBooleanArray3674[var5] = true;
           }
         }
@@ -802,7 +802,7 @@ public final class DummyClass18 {
           var6 = 3 & var21 >> 28;
           var30 = ((var21 & 268434277) >> 14) + -WorldMapLabel.anInt1716;
           var8 = (var21 & 16383) + -ProceduralTexture.anInt1152;
-          if ((var30 >= 1 -1) && var8 >= 0 && var30 < 104 && ~var8 > -105) {
+          if ((var30 >= 1 -1) && var8 >= 0 && var30 < 104 && (var8 < 105 -1)) {
             var8 = var8 * 128 - -64;
             var30 = 128 * var30 + 64;
             StillGraphic var50 = new StillGraphic(var5, var6, var30, var8,

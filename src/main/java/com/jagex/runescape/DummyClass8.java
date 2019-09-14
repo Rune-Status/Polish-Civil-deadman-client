@@ -49,7 +49,7 @@ public final class DummyClass8 extends DummyClass7 {
             var9.anInt1353 * 2, var2 >> 1,
             var9.anInt1346 + (var9.anInt1356 + -WorldMapLabel.anInt1716 << 7), (byte) -114, var4);
           if (DummyClass34.anInt590 > -1
-              && ~(AbstractGameWorld.updateCycle % 20) > -11) {
+              && ((AbstractGameWorld.updateCycle % 20) < 11 -1)) {
             SomethingIndex150.aClass3_Sub28_Sub16Array2072[var9.anInt1351].method643(
               -12 + var1 + DummyClass34.anInt590, -28 + var6 - -WidgetAccess.anInt2208);
           }
@@ -85,8 +85,8 @@ public final class DummyClass8 extends DummyClass7 {
       for (int var5 = 0; var5 < var3; ++var5) {
         DummyClass43.method1194(-16385);
 
-        for (int var6 = 0; ~var6 > -14; ++var6) {
-          for (int var7 = 0; ~var7 > -14; ++var7) {
+        for (int var6 = 0; (var6 < 14 -1); ++var6) {
+          for (int var7 = 0; (var7 < 14 -1); ++var7) {
             int var8 = GameObjectConfig.anIntArrayArrayArray1497[var5][var6][var7];
             if (~var8 != 0) {
               int var9 = var8 >> 24 & 3;

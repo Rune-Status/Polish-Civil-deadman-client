@@ -189,7 +189,7 @@ public final class MidiSomething {
                     var32 = Buffer.aClass3_Sub28_Sub3_2600.anInt3550;
                   }
 
-                  if (~var28 > -1 || var28 > var41.length + -1) {
+                  if ((var28 < 1 -1) || var28 > var41.length + -1) {
                     if (var32 == 0) {
                       var32 = 1;
                     }

@@ -69,7 +69,7 @@ public final class SomethingAudio {
           byte var9 = var1[var8];
 
           int var11;
-          for (var11 = 0; ~var11 > -15; ++var11) {
+          for (var11 = 0; (var11 < 15 -1); ++var11) {
             var5[var6 - -var11] += var10[var11] * var9;
           }
 

@@ -181,7 +181,7 @@ public class Something3d2 extends Something3dRoot {
             }
 
             if (var8 == 9) {
-              for (var11 = 0; ~var11 > -26; ++var11) {
+              for (var11 = 0; (var11 < 26 -1); ++var11) {
                 if (SomethingOtherWorldMap.aBooleanArray2538[var11]) {
                   var9 += TriChromaticImageBuffer.anIntArray2480[var11];
                 }

@@ -157,13 +157,13 @@ public final class BitVariable {
             TextureSampler21.anInt3071 = var0.readUnsignedShort();
           }
 
-          if ((var2 >= 4 -1) && ~var2 > -7) {
+          if ((var2 >= 4 -1) && (var2 < 7 -1)) {
             var0.readUnsignedByte();
           }
 
           if ((var2 >= 5 -1)) {
             int var4 = var0.readUnsignedByte();
-            if (~AudioStreamEncoder3.anInt3492 > -97) {
+            if ((AudioStreamEncoder3.anInt3492 < 97 -1)) {
               var4 = 0;
             }
 

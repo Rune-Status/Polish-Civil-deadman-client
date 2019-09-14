@@ -197,7 +197,7 @@ public final class TextureSampler37 extends AbstractTextureSampler {
           }
 
           if (DummyCanvas.anInt23 == 3) {
-            if (~SomethingVolume15.gameSocket.available() > -2) {
+            if ((SomethingVolume15.gameSocket.available() < 2 -1)) {
               return;
             }
 
@@ -233,7 +233,7 @@ public final class TextureSampler37 extends AbstractTextureSampler {
             SomethingVolume15.gameSocket = null;
           }
 
-          if (~SpotAnimationConfig.anInt548 > -2) {
+          if ((SpotAnimationConfig.anInt548 < 2 -1)) {
             ++SpotAnimationConfig.anInt548;
             if (DummyClass11.anInt2036 == Projectile.anInt2894) {
               Projectile.anInt2894 = GameWorldSomething.anInt506;

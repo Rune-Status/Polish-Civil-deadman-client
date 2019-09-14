@@ -129,9 +129,9 @@ public final class DummyClass29 {
               }
 
               if (var12.anInt1538 != 0 && var12.anInt1480 + var2 < 104 &&
-                  ~(var12.anInt1480
-                      + var1) > -105 && var2 + var12.anInt1485 < 104
-                  && ~(var1 + var12.anInt1485) > -105) {
+                  ((var12.anInt1480
+                      + var1) < 105 -1) && var2 + var12.anInt1485 < 104
+                  && ((var1 + var12.anInt1485) < 105 -1)) {
                 var6.method1502(20851, var2, var12.anInt1480, var12.aBoolean1486, var18,
                   var12.anInt1485, var1);
               }

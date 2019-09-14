@@ -260,7 +260,7 @@ public final class TextureSampler10 extends AbstractTextureSampler {
 
         for (int var9 = 0; SomethingLight0.anInt1559 > var9; ++var9) {
           int var4 = var5[var9] >> 4;
-          if (~var4 > -1) {
+          if ((var4 < 1 -1)) {
             var4 = 0;
           }
 

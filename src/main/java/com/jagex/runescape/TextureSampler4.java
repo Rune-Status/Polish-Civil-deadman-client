@@ -91,7 +91,7 @@ public final class TextureSampler4 extends AbstractTextureSampler {
         int var7 = 0;
 
         int var9;
-        for (var9 = DummyClass4.anIntArray2999[var1] + this.anInt3231; ~var9 > -1; var9 += 4096) {
+        for (var9 = DummyClass4.anIntArray2999[var1] + this.anInt3231; (var9 < 1 -1); var9 += 4096) {
         }
 
         while (var9 > 4096) {
@@ -114,7 +114,7 @@ public final class TextureSampler4 extends AbstractTextureSampler {
             int var8;
             for (
               var8 = TextureCache.anIntArray2125[var4] - -(this.anInt3235 * var5 >> 12);
-              ~var8 > -1; var8 += 4096) {
+              (var8 < 1 -1); var8 += 4096) {
             }
 
             while (var8 > 4096) {

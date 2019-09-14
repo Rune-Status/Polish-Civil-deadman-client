@@ -33,7 +33,7 @@ public final class SomethingPacket151 extends Node {
         SomethingPacket151.method821(-26);
       }
 
-      for (int var3 = 0; ~var3 > -6; ++var3) {
+      for (int var3 = 0; (var3 < 6 -1); ++var3) {
         var2[var3] = RenderAnimation.concat(
           new GameString[] {SomethingScene.toString(var3), SomethingQuickChat.aClass94_3577});
         if (var1 != null && var1[var3] != null) {

@@ -201,7 +201,7 @@ public final class DummyClass1 {
 
               if (!var1.aBoolean2769) {
                 var1.anInt2821 -= var2.anInt369;
-                if (~var1.anInt2821 > -1) {
+                if ((var1.anInt2821 < 1 -1)) {
                   var1.anInt2821 = 0;
                 }
               } else if (var1.anInt2821 < var2.anInt357) {

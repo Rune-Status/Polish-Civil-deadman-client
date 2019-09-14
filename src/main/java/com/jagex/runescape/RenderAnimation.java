@@ -428,7 +428,7 @@ public final class RenderAnimation {
                 if (var4.anIntArray1851.length <= var7.anInt1891) {
                   var7.anInt1891 -= var4.anInt1865;
                   if (1 + var7.anInt1894 < var4.anInt1861) {
-                    if (~var7.anInt1891 > -1 || var4.anIntArray1851.length <= var7.anInt1891) {
+                    if ((var7.anInt1891 < 1 -1) || var4.anIntArray1851.length <= var7.anInt1891) {
                       var7.anInt1891 = -1;
                     }
                   } else {

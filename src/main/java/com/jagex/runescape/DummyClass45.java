@@ -99,7 +99,7 @@ public final class DummyClass45 {
   }
 
   public static void method1239(int var0, int var1, int var2, int var3, int var4, boolean var5) {
-    if (~var0 > -2) {
+    if ((var0 < 2 -1)) {
         var0 = 1;
       }
 

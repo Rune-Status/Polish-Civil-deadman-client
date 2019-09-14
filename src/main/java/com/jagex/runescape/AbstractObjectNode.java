@@ -132,7 +132,7 @@ public abstract class AbstractObjectNode extends SubNode {
             / AbstractGameWorld.aFloat727));
       }
 
-      if (~var5 > -1) {
+      if ((var5 < 1 -1)) {
         TextureSampler13.anInt3362 =
           (int) (SomethingWorldMapy.aClass11_3551.anInt193 / AbstractGameWorld.aFloat727);
       }

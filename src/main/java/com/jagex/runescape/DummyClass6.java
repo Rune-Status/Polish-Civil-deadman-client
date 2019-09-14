@@ -31,7 +31,7 @@ public class DummyClass6 {
       int high = var3.high;
       int low = var3.low;
       int var7 = SomethingMidiFile.BIT_MASKS[high - low];
-      if (~var1 > -1 || var7 < var1) {
+      if ((var1 < 1 -1) || var7 < var1) {
         var1 = 0;
       }
 

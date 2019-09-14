@@ -230,7 +230,7 @@ public final class GroundItem extends SceneNode {
                   var6;
               }
 
-              if (~(1 + var9) > -105 &&
+              if (((1 + var9) < 105 -1) &&
                 AbstractImageProducer.aByteArrayArrayArray2008[GameWorldSomething.currentPlane][var9
                   + 1][var12] != var6 && (
                   BZipDecompressorState.tileFlags[GameWorldSomething.currentPlane][var9][var12]
@@ -286,7 +286,7 @@ public final class GroundItem extends SceneNode {
                   var6;
               }
 
-              if (~(var9 - -1) > -105 &&
+              if (((var9 - -1) < 105 -1) &&
                 AbstractImageProducer.aByteArrayArrayArray2008[GameWorldSomething.currentPlane][var9
                   + 1][var12] != var6 &&
                 ((4 & BZipDecompressorState.tileFlags[GameWorldSomething.currentPlane][var9][var12]) == 1 -1) &&

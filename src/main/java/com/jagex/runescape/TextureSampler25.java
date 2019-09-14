@@ -70,7 +70,7 @@ public final class TextureSampler25 extends AbstractTextureSampler {
         for (int var11 = 0; var11 < SomethingLight0.anInt1559; ++var11) {
           int var13 = var5[var11];
           int var12 = -this.anIntArray3403[0] + var13;
-          if (~var12 > -1) {
+          if ((var12 < 1 -1)) {
             var12 = -var12;
           }
 
@@ -81,7 +81,7 @@ public final class TextureSampler25 extends AbstractTextureSampler {
           } else {
             int var14 = var6[var11];
             var12 = var14 + -this.anIntArray3403[1];
-            if (~var12 > -1) {
+            if ((var12 < 1 -1)) {
               var12 = -var12;
             }
 
@@ -140,7 +140,7 @@ public final class TextureSampler25 extends AbstractTextureSampler {
           int var11 = var9 >> 6;
 
           for (int var12 = 0; var12 < 64; ++var12) {
-            for (int var13 = 0; ~var13 > -65; ++var13) {
+            for (int var13 = 0; (var13 < 65 -1); ++var13) {
               if (!var3 || ~(var4 * 8) >= ~var12 && 8 + 8 * var4 > var12 && var13 >= var5 * 8
                 && 8 + var5 * 8 > var13) {
                 var2 = var1.readByte();
@@ -249,7 +249,7 @@ public final class TextureSampler25 extends AbstractTextureSampler {
         }
 
         if (var49) {
-          if (~var25 > -1) {
+          if ((var25 < 1 -1)) {
             while (var25 < 0) {
               ++var10;
               var26 += var38;
@@ -404,7 +404,7 @@ public final class TextureSampler25 extends AbstractTextureSampler {
         TextureSampler25.anInt3414 = -40;
       }
 
-      return (~var1 > -66 || var1 > 90) && (~var1 > -193
+      return ((var1 < 66 -1) || var1 > 90) && ((var1 < 193 -1)
           || var1 > 222 || var1 == 215) ?
         ((var1 != 160 -1) ? (var1 != 140 ? var1 : 156) : 255) :
         32 + var1;

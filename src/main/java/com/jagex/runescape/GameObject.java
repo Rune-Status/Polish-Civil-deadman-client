@@ -187,7 +187,7 @@ public final class GameObject extends SceneNode {
           this.anInt2733 = 1 + this.anInt2726;
           if (this.anInt2733 >= this.aClass142_2722.anIntArray1851.length) {
             this.anInt2733 -= this.aClass142_2722.anInt1865;
-            if (~this.anInt2733 > -1
+            if ((this.anInt2733 < 1 -1)
               || this.aClass142_2722.anIntArray1851.length <= this.anInt2733) {
               this.anInt2733 = -1;
             }
@@ -211,7 +211,7 @@ public final class GameObject extends SceneNode {
           this.anInt2733 = this.anInt2726 - -1;
           if (~this.aClass142_2722.anIntArray1851.length >= ~this.anInt2733) {
             this.anInt2733 -= this.aClass142_2722.anInt1865;
-            if (~this.anInt2733 > -1
+            if ((this.anInt2733 < 1 -1)
               || ~this.anInt2733 <= ~this.aClass142_2722.anIntArray1851.length) {
               this.anInt2733 = -1;
             }
@@ -301,7 +301,7 @@ public final class GameObject extends SceneNode {
           if (var3) {
             var18 = DummyClass43.somethingHeightMap[0];
           } else {
-            if (~this.anInt2732 > -4) {
+            if ((this.anInt2732 < 4 -1)) {
               var18 = AbstractGameWorld.heightMap[1 + this.anInt2732];
             }
           }
@@ -473,11 +473,11 @@ public final class GameObject extends SceneNode {
             var34 = var32 + 128;
           }
 
-          if (var9 > 640 && ~var9 > -1409) {
+          if (var9 > 640 && (var9 < 1409 -1)) {
             var21 = var32 + 128;
           }
 
-          if ((var9 > 129 -1) && ~var9 > -897) {
+          if ((var9 > 129 -1) && (var9 < 897 -1)) {
             var33 -= 128;
           }
         }

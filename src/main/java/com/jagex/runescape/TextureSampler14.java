@@ -45,7 +45,7 @@ public final class TextureSampler14 extends AbstractTextureSampler {
               var3[var6] = 0;
             } else {
               var8 = -var5 + 2048;
-              var8 = ~var8 > -1 ? -var8 : var8;
+              var8 = (var8 < 1 -1) ? -var8 : var8;
               var8 <<= 12;
               var8 /= 2048 - this.anInt3385;
               var3[var6] = -var8 + 4096;

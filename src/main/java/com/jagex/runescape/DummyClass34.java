@@ -94,7 +94,7 @@ public final class DummyClass34 {
         ++TextureSampler29.anInt3398;
         int var2;
         if (AbstractTextureSampler.anInt2384 < 0) {
-          for (var2 = 0; ~var2 > -113; ++var2) {
+          for (var2 = 0; (var2 < 113 -1); ++var2) {
             GameObjectConfig.aBooleanArray1490[var2] = false;
           }
 

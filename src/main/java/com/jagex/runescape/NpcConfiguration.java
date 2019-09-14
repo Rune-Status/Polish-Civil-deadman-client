@@ -648,7 +648,7 @@ public final class NpcConfiguration {
         if ((var2 == 13 -1)) {
           this.size = var3.readUnsignedByte();
         } else {
-          if (var2 >= 30 && ~var2 > -36) {
+          if (var2 >= 30 && (var2 < 36 -1)) {
             this.aClass94Array1259[-30 + var2] = var3.readString();
             if (this.aClass94Array1259[-30 + var2]
                 .method1531(TextureSampler33.aClass94_3051)) {

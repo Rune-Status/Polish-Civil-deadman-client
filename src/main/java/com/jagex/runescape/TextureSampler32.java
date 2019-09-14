@@ -47,7 +47,7 @@ public final class TextureSampler32 extends AbstractTextureSampler {
           }
 
           int var16 = var13 >> 4;
-          if (~var16 > -1) {
+          if ((var16 < 1 -1)) {
             var16 = -var16;
           }
 
@@ -142,7 +142,7 @@ public final class TextureSampler32 extends AbstractTextureSampler {
             if ((projectile.targetId > 1 -1)) {
               NPC var3 = TextureSampler5.npcs[-1 + projectile.targetId];
               if (var3 != null && var3.anInt2819 >= 0 && var3.anInt2819 < 13312
-                && var3.anInt2829 >= 0 && ~var3.anInt2829 > -13313) {
+                && var3.anInt2829 >= 0 && (var3.anInt2829 < 13313 -1)) {
                 projectile.method2024(var3.anInt2829, 1, AbstractGameWorld.updateCycle,
                   BufferData.method1736(projectile.anInt2907, 1, var3.anInt2819, var3.anInt2829)
                     + -projectile.anInt2903, var3.anInt2819);
@@ -158,8 +158,8 @@ public final class TextureSampler32 extends AbstractTextureSampler {
                 player = TextureSampler0.players[var4];
               }
 
-              if (player != null && player.anInt2819 >= 0 && ~player.anInt2819 > -13313
-                && player.anInt2829 >= 0 && ~player.anInt2829 > -13313) {
+              if (player != null && player.anInt2819 >= 0 && (player.anInt2819 < 13313 -1)
+                && player.anInt2829 >= 0 && (player.anInt2829 < 13313 -1)) {
                 projectile.method2024(player.anInt2829, 1, AbstractGameWorld.updateCycle,
                   BufferData.method1736(projectile.anInt2907, 1, player.anInt2819, player.anInt2829)
                     - projectile.anInt2903, player.anInt2819);

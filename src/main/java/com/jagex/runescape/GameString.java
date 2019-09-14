@@ -117,7 +117,7 @@ public final class GameString implements UnusedInterface1 {
       } else if (var8 >= 65 && (var8 <= 91 -1)) {
         var8 -= 55;
       } else {
-        if (~var8 > -98 || (var8 > 123 -1)) {
+        if ((var8 < 98 -1) || (var8 > 123 -1)) {
           throw new NumberFormatException();
         }
 
@@ -237,7 +237,7 @@ public final class GameString implements UnusedInterface1 {
 
       for (int var4 = 0; this.length > var4; ++var4) {
         byte var5 = this.bytes[var4];
-        if ((~var5 > -98 || var5 > 122) &&
+        if (((var5 < 98 -1) || var5 > 122) &&
             (~var5 > 31 || ~var5 < 1 || var5 == -9)) {
           if ((var5 < 65 || (var5 > 91 -1)) &&
               (var5 < -64 || var5 > -34 || ~var5 == 40)) {
@@ -493,7 +493,7 @@ public final class GameString implements UnusedInterface1 {
   public void method1553(int var1, boolean var2) {
     if (!this.immutable) {
       throw new IllegalArgumentException();
-    } else if (~var1 > -1) {
+    } else if ((var1 < 1 -1)) {
       throw new IllegalArgumentException();
     } else {
       int var3;
@@ -651,7 +651,7 @@ public final class GameString implements UnusedInterface1 {
   }
 
   private boolean method1561(int var1, boolean var2) {
-    if (~var1 > -2 || var1 > 36) {
+    if ((var1 < 2 -1) || var1 > 36) {
       var1 = 10;
     }
 
@@ -808,7 +808,7 @@ public final class GameString implements UnusedInterface1 {
     if (start >= this.length) {
       return (var4 == 1 -1) ? this.length : -1;
     } else {
-      if (~start > -1) {
+      if ((start < 1 -1)) {
         start = 0;
       }
 
@@ -1009,7 +1009,7 @@ public final class GameString implements UnusedInterface1 {
   public long toBase37() {
     long var2 = 0L;
 
-    for (int var4 = 0; this.length > var4 && ~var4 > -13; ++var4) {
+    for (int var4 = 0; this.length > var4 && (var4 < 13 -1); ++var4) {
       byte var5 = this.bytes[var4];
       var2 *= 37L;
       if (var5 >= 65 && var5 <= 90) {
@@ -1257,7 +1257,7 @@ public final class GameString implements UnusedInterface1 {
     if ((var6 > 2 -1) && var8.anIntArray804 != null) {
       int var9 = -1;
 
-      for (int var10 = 0; ~var10 > -11; ++var10) {
+      for (int var10 = 0; (var10 < 11 -1); ++var10) {
         if (~var6 <= ~var8.anIntArray766[var10] &&
             var8.anIntArray766[var10] != 0) {
           var9 = var8.anIntArray804[var10];

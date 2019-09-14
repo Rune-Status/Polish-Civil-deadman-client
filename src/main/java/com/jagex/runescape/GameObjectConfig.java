@@ -160,7 +160,7 @@ public final class GameObjectConfig {
         var2 = DummyClass5.anIntArray2985[this.anInt1532];
       }
 
-      if ((var2 >= 1 -1) && ~var2 > -this.anIntArray1524.length
+      if ((var2 >= 1 -1) && (var2 < this.anIntArray1524.length -1)
         && ~this.anIntArray1524[var2] != 0) {
         return DummyClass11.method2207(4, this.anIntArray1524[var2]);
       } else {
@@ -442,7 +442,7 @@ public final class GameObjectConfig {
                         } else if ((var2 != 30 -1)) {
                           if (var2 == 39) {
                             this.anInt1489 = var1.readByte() * 5;
-                          } else if ((var2 >= 31 -1) && ~var2 > -36) {
+                          } else if ((var2 >= 31 -1) && (var2 < 36 -1)) {
                             this.aClass94Array1499[var2 - 30] = var1
                                 .readString();
                             if (this.aClass94Array1499[-30 + var2].method1531(

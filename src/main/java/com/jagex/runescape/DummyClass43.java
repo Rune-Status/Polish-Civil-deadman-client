@@ -45,7 +45,7 @@ public final class DummyClass43 {
     if (DummyClass60.sampleRate == 0) {
         throw new IllegalStateException();
       } else if (var3 >= 0 && var3 < 2) {
-        if (~var0 > -257) {
+        if ((var0 < 257 -1)) {
           var0 = 256;
         }
 

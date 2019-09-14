@@ -152,7 +152,7 @@ public final class ProceduralTexture {
             var20 = 255;
           }
 
-          if (~var20 > -1) {
+          if ((var20 < 1 -1)) {
             var20 = 0;
           }
 
@@ -172,7 +172,7 @@ public final class ProceduralTexture {
           }
 
           var21 = GameBuffer.anIntArray3804[var21];
-          if (~var22 > -1) {
+          if ((var22 < 1 -1)) {
             var22 = 0;
           }
 
@@ -260,11 +260,11 @@ public final class ProceduralTexture {
             }
 
             var17 = GameBuffer.anIntArray3804[var17];
-            if (~var19 > -1) {
+            if ((var19 < 1 -1)) {
               var19 = 0;
             }
 
-            if (~var18 > -1) {
+            if ((var18 < 1 -1)) {
               var18 = 0;
             }
 
@@ -279,7 +279,7 @@ public final class ProceduralTexture {
                 var20 = 255;
               }
 
-              if (~var20 > -1) {
+              if ((var20 < 1 -1)) {
                 var20 = 0;
               }
             }
@@ -437,7 +437,7 @@ public final class ProceduralTexture {
               HintMarker var24 = var20[var21];
               if (var24 != null && var24.anInt1360 == 1
                 && ~var24.anInt1359 == ~AudioWorker.anIntArray347[-DummyClass13.anInt2022 + var7]
-                && ~(AbstractGameWorld.updateCycle % 20) > -11) {
+                && ((AbstractGameWorld.updateCycle % 20) < 11 -1)) {
                 if (var9.anInt1265 == -1) {
                   var29 = 15 + var8.method1975(var6 + '\u89b4');
                 } else {
@@ -538,7 +538,7 @@ public final class ProceduralTexture {
             }
           }
 
-          for (var19 = 0; ~var19 > -5; ++var19) {
+          for (var19 = 0; (var19 < 5 -1); ++var19) {
             if (var8.anIntArray2768[var19] > AbstractGameWorld.updateCycle) {
               if (var8 instanceof NPC) {
                 NPC var30 = (NPC) var8;
@@ -618,7 +618,7 @@ public final class ProceduralTexture {
         GameString var33 = TextureSampler35.aClass94Array3317[var7];
         if ((FileCache.anInt688 == 1 -1)) {
           var32 = 16776960;
-          if (~TextureSampler35.anIntArray3331[var7] > -7) {
+          if ((TextureSampler35.anIntArray3331[var7] < 7 -1)) {
             var32 = WidgetAccess.anIntArray2213[TextureSampler35.anIntArray3331[var7]];
           }
 
@@ -627,7 +627,7 @@ public final class ProceduralTexture {
           }
 
           if ((TextureSampler35.anIntArray3331[var7] == 8 -1)) {
-            var32 = ~(BitVariable.anInt1127 % 20) > -11 ? 255 : '\uffff';
+            var32 = ((BitVariable.anInt1127 % 20) < 11 -1) ? 255 : '\uffff';
           }
 
           if (TextureSampler35.anIntArray3331[var7] == 8) {
@@ -652,7 +652,7 @@ public final class ProceduralTexture {
           if (TextureSampler35.anIntArray3331[var7] == 10) {
             var15 = -TextureSampler35.anIntArray3318[var7] + 150;
             if (var15 >= 50) {
-              if (~var15 > -101) {
+              if ((var15 < 101 -1)) {
                 var32 = -(327680 * (-50 + var15)) + 16711935;
               } else if (var15 < 150) {
                 var32 = 327680 * var15 - (32768000 - (255 + -(5 * var15) + 500));

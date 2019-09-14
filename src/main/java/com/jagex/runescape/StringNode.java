@@ -43,7 +43,7 @@ public final class StringNode extends Node {
         if ((var1 > 1 - 1) && DummyClass55.aClass3_Sub24_Sub4_1421
             .method473(-124)) {
           var1 -= SpotAnimationConfig.anInt546;
-          if (~var1 > -1) {
+          if ((var1 < 1 -1)) {
             var1 = 0;
           }
 
@@ -141,7 +141,7 @@ public final class StringNode extends Node {
         (SomethingQuickChat) ProjectileNode.aClass47_3776.get(var1, 1400);
     if (var2 == null) {
       byte[] var3;
-      if (~var1 > -32769) {
+      if ((var1 < 32769 -1)) {
         var3 = AudioStreamEncoder3.aClass153_3490.getBytes(1, var1);
       } else {
         var3 = DummyClass14.aClass153_1967.getBytes(1, 32767 & var1);

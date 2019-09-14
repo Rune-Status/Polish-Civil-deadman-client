@@ -180,7 +180,7 @@ public final class Cache {
         var6 = -WorldMapLabel.anInt1716 + 64 * (AudioStreamEncoder3.regionHashes[var5] >> 8);
         var7 = -ProceduralTexture.anInt1152 + 64 * (255 & AudioStreamEncoder3.regionHashes[var5]);
         bytes = fileData[var5];
-        if (bytes == null && ~VariableUpdate.anInt2294 > -801) {
+        if (bytes == null && (VariableUpdate.anInt2294 < 801 -1)) {
           DummyClass43.method1194(-16385);
 
           for (int var9 = 0; var9 < var2; ++var9) {
@@ -647,7 +647,7 @@ public final class Cache {
                               && var20 == DummyClass18.anInt86) {
                               var25 = SomethingTilek.anInt1676 - MilliFrameRegulator.anInt2693;
                               var26 = -DummyInputStream.anInt40 + HashTable.anInt1709;
-                              if (~var26 > -6 && ~var26 < 4) {
+                              if ((var26 < 6 -1) && ~var26 < 4) {
                                 var26 = 0;
                               }
 
@@ -1280,7 +1280,7 @@ public final class Cache {
   }
 
   public static void method1098(byte var0) {
-    if (~AreaSoundEffect.anInt2309 > -129) {
+    if ((AreaSoundEffect.anInt2309 < 129 -1)) {
         AreaSoundEffect.anInt2309 = 128;
       }
 
@@ -1323,7 +1323,7 @@ public final class Cache {
         var5 = 98048;
       }
 
-      if (~var5 > -32769) {
+      if ((var5 < 32769 -1)) {
         var5 = '\u8000';
       }
 

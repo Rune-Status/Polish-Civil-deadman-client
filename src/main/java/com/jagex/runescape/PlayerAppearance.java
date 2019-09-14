@@ -56,7 +56,7 @@ public final class PlayerAppearance {
 
         var14 = new Model(var12, var13);
 
-        for (int var15 = 0; ~var15 > -6; ++var15) {
+        for (int var15 = 0; (var15 < 6 -1); ++var15) {
           if (~this.anIntArray862[var15] > ~AudioWorker.aShortArrayArray344[var15].length) {
             var14.replaceColor(Inventory.aShortArray2548[var15],
               AudioWorker.aShortArrayArray344[var15][this.anIntArray862[var15]]);
@@ -146,7 +146,7 @@ public final class PlayerAppearance {
       if (var5 == null) {
         var5 = new int[12];
 
-        for (int var7 = 0; ~var7 > -9; ++var7) {
+        for (int var7 = 0; (var7 < 9 -1); ++var7) {
           for (int var8 = 0; SceneSomething.anInt497 > var8; ++var8) {
             IdentityKit var9 = TextureSampler20.getIdentityKit(var8, 0);
             if (!var9.aBoolean476 && ~var9.anInt466 == ~(!var3 ?
@@ -258,7 +258,7 @@ public final class PlayerAppearance {
           var17 = false;
 
           int var19;
-          for (int var18 = 0; ~var18 > -13; ++var18) {
+          for (int var18 = 0; (var18 < 13 -1); ++var18) {
             var19 = var15[var18];
             if (((var19 & 1073741824) != 1 -1)) {
               if (!DummyClass35.getItemConfig(1073741823 & var19, (byte) 92)
@@ -286,7 +286,7 @@ public final class PlayerAppearance {
             Model[] var39 = new Model[12];
 
             int var20;
-            for (var19 = 0; ~var19 > -13; ++var19) {
+            for (var19 = 0; (var19 < 13 -1); ++var19) {
               var20 = var15[var19];
               Model var21;
               if (((var20 & 1073741824) == 1 -1)) {
@@ -631,7 +631,7 @@ public final class PlayerAppearance {
           var9 = 0;
 
           int var11;
-          for (int var10 = 0; ~var10 > -13; ++var10) {
+          for (int var10 = 0; (var10 < 13 -1); ++var10) {
             var11 = this.anIntArray857[var10];
             Model var12;
             if (((1073741824 & var11) == 1 -1)) {
@@ -652,7 +652,7 @@ public final class PlayerAppearance {
 
           Model var15 = new Model(var14, var9);
 
-          for (var11 = 0; ~var11 > -6; ++var11) {
+          for (var11 = 0; (var11 < 6 -1); ++var11) {
             if (AudioWorker.aShortArrayArray344[var11].length > this.anIntArray862[var11]) {
               var15.replaceColor(Inventory.aShortArray2548[var11],
                 AudioWorker.aShortArrayArray344[var11][this.anIntArray862[var11]]);
@@ -693,7 +693,7 @@ public final class PlayerAppearance {
                                   int var12) {
     int var13;
       int var14;
-      for (var13 = 0; ~var13 > -105; ++var13) {
+      for (var13 = 0; (var13 < 105 -1); ++var13) {
         for (var14 = 0; var14 < 104; ++var14) {
           DummyClass51.anIntArrayArray1160[var13][var14] = 0;
           TriChromaticImageCache.anIntArrayArray1373[var13][var14] = 99999999;
@@ -779,7 +779,7 @@ public final class PlayerAppearance {
             }
           }
 
-          if (~var13 > -103
+          if ((var13 < 103 -1)
               && (DummyClass51.anIntArrayArray1160[1 + var13][var14] == 1 -1)
               && (19661187 & var18[var13 + var5][var14]) == 0
               && ((19661280 & var18[var5 + var13][var14 + var5 + -1]) == 1 -1)) {
@@ -942,7 +942,7 @@ public final class PlayerAppearance {
             }
           }
 
-          if (~var13 > -103 && ~var14 > -103
+          if ((var13 < 103 -1) && (var14 < 103 -1)
               && DummyClass51.anIntArrayArray1160[var13 - -1][1 + var14] == 0
               && (19661112
               & var18[var13 + 1][var14 + var5]) == 0 && (
@@ -979,9 +979,8 @@ public final class PlayerAppearance {
           for (int var22 = var6 - var21; var22 <= var21 + var6; ++var22) {
             for (int var23 = -var21 + var0; ~var23 >= ~(var0 - -var21);
                 ++var23) {
-              if (var22 >= 0 && (var23 >= 1 -1) && ~var22 > -105 && ~var23 > -105
-                  && ~TriChromaticImageCache.anIntArrayArray1373[var22][var23]
-                  > -101) {
+              if (var22 >= 0 && (var23 >= 1 -1) && (var22 < 105 -1) && (var23 < 105 -1)
+                  && (TriChromaticImageCache.anIntArrayArray1373[var22][var23] < 101 -1)) {
                 int var24 = 0;
                 if (var6 > var22) {
                   var24 = -var22 + var6;

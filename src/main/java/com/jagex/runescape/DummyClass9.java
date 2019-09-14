@@ -144,7 +144,7 @@ public final class DummyClass9 extends DummyClass5 {
 
           if ((TextureSampler2.anInt3375 == 4 -1)) {
             assert SomethingVolume15.gameSocket != null;
-            if (~SomethingVolume15.gameSocket.available() > -3) {
+            if ((SomethingVolume15.gameSocket.available() < 3 -1)) {
               return;
             }
 

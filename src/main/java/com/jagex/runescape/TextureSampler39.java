@@ -26,10 +26,10 @@ public class TextureSampler39 extends AbstractTextureSampler {
   public final boolean method279(int var1) {
     int var2 = 62 / ((var1 - 2) / 62);
       if (this.anIntArray3284 == null) {
-        if (~this.anInt3278 > -1) {
+        if ((this.anInt3278 < 1 -1)) {
           return false;
         } else {
-          SoftwareDirectColorSprite var3 = ~SomethingTilek.anInt1668 > -1 ?
+          SoftwareDirectColorSprite var3 = (SomethingTilek.anInt1668 < 1 -1) ?
             GameString.method1537(MaterialShader5.aClass153_2172,
                 this.anInt3278, false) :
             DummyClass59.method1043(this.anInt3278, MaterialShader5.aClass153_2172, -3178,

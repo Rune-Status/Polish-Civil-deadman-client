@@ -298,7 +298,7 @@ public class AbstractAudioOutputStream {
     if (DummyClass36.aClass15_2613 != null) {
         boolean var2 = true;
 
-        for (int var3 = 0; ~var3 > -3; ++var3) {
+        for (int var3 = 0; (var3 < 3 -1); ++var3) {
           if (this == DummyClass36.aClass15_2613.aClass155Array352[var3]) {
             DummyClass36.aClass15_2613.aClass155Array352[var3] = null;
           }

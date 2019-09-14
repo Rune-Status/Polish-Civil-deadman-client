@@ -99,7 +99,7 @@ public final class DummyClass31 {
           long var24 = 1073741824 | var7 | var9 << 7 | var6 << 14 | var10 << 20;
           if (var3) {
             var23 = DummyClass43.somethingHeightMap[0];
-          } else if (~var0 > -4) {
+          } else if ((var0 < 4 -1)) {
             var23 = AbstractGameWorld.heightMap[1 + var0];
           }
 

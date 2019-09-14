@@ -84,7 +84,7 @@ public final class WidgetUpdate extends SubNode {
           int var10;
           int var11;
           int var12;
-          for (int var5 = 0; ~var5 > -4; ++var5) {
+          for (int var5 = 0; (var5 < 4 -1); ++var5) {
             var8 =
               (DummyClass43.anIntArrayArrayArray911[NpcConfiguration.anInt1252][var4 - -2][var5]
                 + -DummyClass43.anIntArrayArrayArray911[NpcConfiguration.anInt1252][var4 - -3][var5]
@@ -108,7 +108,7 @@ public final class WidgetUpdate extends SubNode {
           float[] var16 = new float[3];
           var6 = DummyClass37.anInt670 * 2;
 
-          for (var7 = 0; ~var7 > -4; ++var7) {
+          for (var7 = 0; (var7 < 4 -1); ++var7) {
             var8 = DummyClass43.anIntArrayArrayArray911[VariableUpdate.anInt2293][var6][var7] * 3;
             var10 = (DummyClass43.anIntArrayArrayArray911[VariableUpdate.anInt2293][2 + var6][var7]
               - DummyClass43.anIntArrayArrayArray911[VariableUpdate.anInt2293][3 + var6][var7]

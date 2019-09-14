@@ -103,7 +103,7 @@ public final class AnimationSomething extends SubNode {
 
         for (int var20 = var15 * (-1 + var1); var7 > 0; var20 -= var15) {
           --var7;
-          if (~var13 > -1) {
+          if ((var13 < 1 -1)) {
             while (var13 < 0) {
               ++var6;
               var13 += var17;
@@ -179,7 +179,7 @@ public final class AnimationSomething extends SubNode {
   }
 
   public static void method560(int var0) {
-    for (int var1 = 0; ~var1 > -6; ++var1) {
+    for (int var1 = 0; (var1 < 6 -1); ++var1) {
         MaterialShader5.aBooleanArray2169[var1] = false;
       }
 
