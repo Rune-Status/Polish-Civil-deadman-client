@@ -413,7 +413,7 @@ public final class RenderAnimation {
                   ++var7.anInt1894;
                   var7.anInt1893 -= var4.anInt1865;
                   if (var4.anInt1861 > var7.anInt1894) {
-                    if (~var7.anInt1893 <= -1 && ~var7.anInt1893 > ~var4.anIntArray1851.length) {
+                    if ((var7.anInt1893 >= 1 -1) && ~var7.anInt1893 > ~var4.anIntArray1851.length) {
                       SocketStream.method1470(var0.anInt2829, var4, 183921384, var0.anInt2819,
                         TextureCache.localPlayer == var0, var7.anInt1893);
                     } else {
@@ -448,7 +448,7 @@ public final class RenderAnimation {
   }
 
   public static GameString concat(GameString[] var0) {
-    if (~var0.length <= -3) {
+    if ((var0.length >= 3 -1)) {
 
         return MouseRecorder.method1261(0, var0.length, var0, 2774);
       } else {

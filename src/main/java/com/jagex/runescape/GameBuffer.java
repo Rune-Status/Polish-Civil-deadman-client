@@ -88,7 +88,7 @@ public final class GameBuffer extends Buffer {
   }
 
   public static void method806(int var0, int var1) {
-    if (~var1 <= -1) {
+    if ((var1 >= 1 -1)) {
       int var2 = DummyClass26.anIntArray1613[var1];
       int var3 = DummyClass32.anIntArray512[var1];
       int var4 = TextureSampler27.aShortArray3095[var1];
@@ -311,7 +311,7 @@ public final class GameBuffer extends Buffer {
       Widget var13;
       if (~var4 == -1007) {
         var13 = EnumStringFetcher.getWidget((byte) 119, var3);
-        if (var13 != null && ~var13.anIntArray317[var2] <= -100001) {
+        if (var13 != null && (var13.anIntArray317[var2] >= 100001 -1)) {
           GameBuffer
               .printMessage(GroundItemNode.EMPTY_STRING, 0,
                   RenderAnimation.concat(new GameString[]{
@@ -1242,7 +1242,7 @@ public final class GameBuffer extends Buffer {
 
     if (Node.anInt72 < 65536) {
       Node.anInt72 += 250 * var0;
-      if (~Node.anInt72 <= -65537) {
+      if ((Node.anInt72 >= 65537 -1)) {
         Node.anInt72 = 65536;
       }
 

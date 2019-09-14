@@ -247,7 +247,7 @@ public final class ClassCheckRequest extends Node {
               DummyClass41.method1171(var26.anInt1351, var2, var3, var12, var13, var4, false);
             }
 
-            if (var26.anInt1360 == 10 && ~var26.anInt1359 <= -1
+            if (var26.anInt1360 == 10 && (var26.anInt1359 >= 1 -1)
               && TextureSampler0.players.length > var26.anInt1359) {
               Player var30 = TextureSampler0.players[var26.anInt1359];
               if (var30 != null) {

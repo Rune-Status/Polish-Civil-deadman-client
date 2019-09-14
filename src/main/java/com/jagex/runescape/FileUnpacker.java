@@ -458,7 +458,7 @@ public final class FileUnpacker {
       } else if (this.method2122()) {
         var1 = var1.method1534();
         int var3 = this.table.fileNameTable.get(var1.getDbj2Hash(false));
-        return ~var3 <= -1;
+        return (var3 >= 1 -1);
       } else {
         return false;
       }
@@ -522,7 +522,7 @@ public final class FileUnpacker {
 
   private boolean method2139(int var1, int var2, int var3) {
     if (this.method2122()) {
-        if (var2 <= var1 && ~var3 <= -1 && this.table.unpackedLengths.length > var1
+        if (var2 <= var1 && (var3 >= 1 -1) && this.table.unpackedLengths.length > var1
           && this.table.unpackedLengths[var1] > var3) {
           return true;
         } else if (!DummyClass21.aBoolean1765) {

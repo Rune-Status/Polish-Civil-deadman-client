@@ -140,7 +140,7 @@ public final class DummyClass10 {
   public static void readTileData(int var0, int var1, boolean var2, Buffer var3, int y, int x,
                                  byte var6, int var7, int var8) {
     int opcode;
-      if (~x <= -1 && ~x > -105 && y >= 0 && ~y > -105) {
+      if ((x >= 1 -1) && ~x > -105 && y >= 0 && ~y > -105) {
         if (!var2) {
           BZipDecompressorState.tileFlags[var8][x][y] = 0;
         }

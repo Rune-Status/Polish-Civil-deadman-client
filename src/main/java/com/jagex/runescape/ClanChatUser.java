@@ -89,7 +89,7 @@ public final class ClanChatUser extends Node {
                 }
               }
 
-              if (~var11 <= -1) {
+              if ((var11 >= 1 -1)) {
                 int var21 = var3 + var7;
                 var12 = var2 + var6;
                 if (var11 != 22 && var11 != 29 && var11 != 34 && ~var11 != -37

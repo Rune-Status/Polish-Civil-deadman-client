@@ -249,7 +249,7 @@ public final class BufferData {
       } else {
         int var4 = var2 >> 7;
         int var5 = var3 >> 7;
-        if (~var4 <= -1 && var5 >= 0 && var4 <= 103 && var5 <= 103) {
+        if ((var4 >= 1 -1) && var5 >= 0 && var4 <= 103 && var5 <= 103) {
           int var7 = 127 & var2;
           int var8 = var3 & 127;
           int var6 = var0;

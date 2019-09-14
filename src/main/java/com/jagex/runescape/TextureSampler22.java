@@ -95,7 +95,7 @@ public final class TextureSampler22 extends AbstractTextureSampler {
           TextureSampler22.method337(19);
         }
 
-        if (~var0 <= -32769) {
+        if ((var0 >= 32769 -1)) {
           var2.method525(-85);
         }
 

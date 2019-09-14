@@ -1119,7 +1119,7 @@ public final class CollisionMap {
 
         var4 -= this.anInt1309;
         if (var4 >= 0 && this.anInt1300
-            > var4 && ~var3 <= -1 && ~var3 > ~this.anInt1303) {
+            > var4 && (var3 >= 1 -1) && ~var3 > ~this.anInt1303) {
           var2 -= this.anInt1306;
           var5 -= this.anInt1309;
           int var6;
@@ -1199,7 +1199,7 @@ public final class CollisionMap {
               }
 
               var9 += var8;
-              if (~var9 <= -65537) {
+              if ((var9 >= 65537 -1)) {
                 var9 -= 65536;
                 if (~var2 > ~var3) {
                   if ((this.anIntArrayArray1304[var5][var2] & 19661058) != 0) {
@@ -1255,7 +1255,7 @@ public final class CollisionMap {
       for (var9 = var2; var9 < var2 - -var3; ++var9) {
         if (var9 >= 0 && var9 < this.anInt1300) {
           for (int var10 = var7; ~var10 > ~(var6 + var7); ++var10) {
-            if (~var10 <= -1 && this.anInt1303 > var10) {
+            if ((var10 >= 1 -1) && this.anInt1303 > var10) {
               this.method1501((byte) 32, var10, var9, var8);
             }
           }
@@ -1289,7 +1289,7 @@ public final class CollisionMap {
           GlUtils.clip(var0, var1, var2.anInt168 + var0, var2.anInt193 + var1);
         }
 
-        if (~DummyClass12.minimapMode <= -4) {
+        if ((DummyClass12.minimapMode >= 4 -1)) {
           if (GlRenderer.useOpenGlRenderer) {
             AbstractDirectColorSprite var5 = var2.method866((byte) -113, false);
             if (var5 != null) {

@@ -63,7 +63,7 @@ public final class WidgetUpdate extends SubNode {
             >> 16) + DummyClass21.anInt1759;
         float[] var3 = new float[3];
         DummyClass8.anInt4020 += var1;
-        if (~DummyClass8.anInt4020 <= -65536) {
+        if ((DummyClass8.anInt4020 >= 65536 -1)) {
           DummyClass8.anInt4020 = '\uffff';
           SomethingQuickChat2.aBoolean3531 = !GroundItemNode.aBoolean3668;
 

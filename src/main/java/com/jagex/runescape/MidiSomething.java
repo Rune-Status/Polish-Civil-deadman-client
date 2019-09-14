@@ -370,7 +370,7 @@ public final class MidiSomething {
           var14 += var5;
           var17 = var6 + var13 >> 6;
           var10000 = var15 + var5;
-          if (~var17 <= -1
+          if ((var17 >= 1 -1)
               && PlayerVariable.anIntArrayArrayArray558.length + -1 >= var17) {
             var41 = PlayerVariable.anIntArrayArrayArray558[var17];
 
@@ -382,7 +382,7 @@ public final class MidiSomething {
                 var20 += var0;
                 int var44 = var19 - -var3 >> 6;
                 var10000 = var21 + var0;
-                if (~var44 <= -1 && var44 <= -1 + var41.length) {
+                if ((var44 >= 1 -1) && var44 <= -1 + var41.length) {
                   var24 = ((63 & var3 + var19) << 6) - -(var13 - -var6 & 63);
                   if (var41[var44] != null) {
                     var25 = var41[var44][var24];

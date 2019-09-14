@@ -25,7 +25,7 @@ public final class Keyboard implements KeyListener, FocusListener {
   public void keyTyped(KeyEvent var1) {
     if (TextureSampler33.keyboard != null) {
         int var2 = BitVariable.method1386(true, var1);
-        if (~var2 <= -1) {
+        if ((var2 >= 1 -1)) {
           int var3 = 1 + SceneSomething.anInt491 & 127;
           if (~Parameter.anInt3620 != ~var3) {
             AbstractFrameRegulator.keyQueue[SceneSomething.anInt491] = -1;
@@ -51,7 +51,7 @@ public final class Keyboard implements KeyListener, FocusListener {
           var2 = -1;
         }
 
-        if (~AbstractTextureSampler.anInt2384 <= -1 && ~var2 <= -1) {
+        if ((AbstractTextureSampler.anInt2384 >= 1 -1) && (var2 >= 1 -1)) {
           FileRequester.anIntArray2952[AbstractTextureSampler.anInt2384] = var2;
           AbstractTextureSampler.anInt2384 = 127 & AbstractTextureSampler.anInt2384 - -1;
           if (AbstractTextureSampler.anInt2384 == SomethingPacket116.anInt1744) {
@@ -60,7 +60,7 @@ public final class Keyboard implements KeyListener, FocusListener {
         }
 
         int var3;
-        if (~var2 <= -1) {
+        if ((var2 >= 1 -1)) {
           var3 = 127 & 1 + SceneSomething.anInt491;
           if (var3 != Parameter.anInt3620) {
             AbstractFrameRegulator.keyQueue[SceneSomething.anInt491] = var2;
@@ -86,7 +86,7 @@ public final class Keyboard implements KeyListener, FocusListener {
           var2 = -1;
         }
 
-        if (AbstractTextureSampler.anInt2384 >= 0 && ~var2 <= -1) {
+        if (AbstractTextureSampler.anInt2384 >= 0 && (var2 >= 1 -1)) {
           FileRequester.anIntArray2952[AbstractTextureSampler.anInt2384] = ~var2;
           AbstractTextureSampler.anInt2384 = 127 & 1 + AbstractTextureSampler.anInt2384;
           if (~SomethingPacket116.anInt1744 == ~AbstractTextureSampler.anInt2384) {

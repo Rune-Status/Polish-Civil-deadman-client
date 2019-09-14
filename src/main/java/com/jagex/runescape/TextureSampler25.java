@@ -134,7 +134,7 @@ public final class TextureSampler25 extends AbstractTextureSampler {
         int var9 = DummyClass58.anInt1460 + -1 - -MapScene.anInt65 - 64 * var7;
         byte var2;
         int var10;
-        if (~var8 <= -1 && ~(-63 + var9) <= -1 && DummyClass30.anInt455 > var8 + 63
+        if ((var8 >= 1 -1) && ((-63 + var9) >= 1 -1) && DummyClass30.anInt455 > var8 + 63
           && ~var9 > ~DummyClass58.anInt1460) {
           var10 = var8 >> 6;
           int var11 = var9 >> 6;

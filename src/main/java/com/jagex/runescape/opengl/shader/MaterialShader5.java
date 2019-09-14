@@ -510,7 +510,7 @@ public final class MaterialShader5 implements MaterialShader {
                       var34 = SomethingPacket151.method822(19406, var34);
                     }
 
-                    for (var21 = 4; ~var21 <= -1; --var21) {
+                    for (var21 = 4; (var21 >= 1 -1); --var21) {
                       if (var34 != null && var34[var21] != null) {
                         ++GameCanvas.anInt27;
                         byte var35 = 0;

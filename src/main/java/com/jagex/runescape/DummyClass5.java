@@ -23,7 +23,7 @@ public class DummyClass5 extends DummyClass6 {
     DummyClass43.method1194(-16385);
     if (DummyClass15.state == 30 || ~DummyClass15.state == -26) {
       ++TextureSampler18.anInt4032;
-      if (~TextureSampler18.anInt4032 <= -51 || var1) {
+      if ((TextureSampler18.anInt4032 >= 51 -1) || var1) {
         TextureSampler18.anInt4032 = 0;
         if (var0 == -90) {
           if (!GlTexture2d.aBoolean3769

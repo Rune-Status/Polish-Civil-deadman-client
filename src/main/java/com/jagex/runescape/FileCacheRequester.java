@@ -211,8 +211,8 @@ public final class FileCacheRequester implements Runnable {
             if (var12 != null) {
               var12.anInt2819 -= 128 * var9;
               var12.anInt2829 -= 128 * var10;
-              if (~var12.anInt2819 <= -1 && ~var12.anInt2819 >= -13185
-                  && ~var12.anInt2829 <= -1
+              if ((var12.anInt2819 >= 1 -1) && ~var12.anInt2819 >= -13185
+                  && (var12.anInt2829 >= 1 -1)
                   && ~var12.anInt2829 >= -13185) {
                 for (var13 = 0; var13 < 10; ++var13) {
                   var12.waypointsX[var13] -= var9;
@@ -280,8 +280,8 @@ public final class FileCacheRequester implements Runnable {
             int var20 = var18 + var10;
 
             for (int var21 = 0; var21 < 4; ++var21) {
-              if (~var19 <= -1
-                  && ~var20 <= -1 && ~var19 > -105 && ~var20 > -105) {
+              if ((var19 >= 1 -1)
+                  && (var20 >= 1 -1) && ~var19 > -105 && ~var20 > -105) {
                 TextureSampler0.groundItems[var21][var17][var18] =
                   TextureSampler0.groundItems[var21][var19][var20];
               } else {

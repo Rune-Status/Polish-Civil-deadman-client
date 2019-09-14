@@ -43,7 +43,7 @@ public final class FileTable {
       if (var4 != 5 && ~var4 != -7) {
         throw new RuntimeException();
       } else {
-        if (~var4 <= -7) {
+        if ((var4 >= 7 -1)) {
           this.version = var3.readInt();
         } else {
           this.version = 0;

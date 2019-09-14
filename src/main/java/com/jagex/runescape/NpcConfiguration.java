@@ -924,7 +924,7 @@ public final class NpcConfiguration {
             == -1
           && ~var6.anInt800 == -1
             && var6.aClass94_770.method1534().indexOf(var1) != -1) {
-          if (~var4 <= -251) {
+          if ((var4 >= 251 -1)) {
             DummyClass54.aShortArray1398 = null;
             FileTable.anInt952 = -1;
             return;

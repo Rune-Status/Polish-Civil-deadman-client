@@ -329,7 +329,7 @@ public abstract class GameStub implements Runnable,
     try {
         if (StringNode.applet != null) {
           ++HuffmanEncoder.anInt639;
-          if (~HuffmanEncoder.anInt639 <= -4) {
+          if ((HuffmanEncoder.anInt639 >= 4 -1)) {
             this.reportError("alreadyloaded");
             return;
           }

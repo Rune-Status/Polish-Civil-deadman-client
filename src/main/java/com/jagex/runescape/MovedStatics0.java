@@ -163,7 +163,7 @@ public class MovedStatics0 {
                                   .method310(var0, (byte) -97, 7 & var20,
                                       var21 & 7)
                                   + var4;
-                          if (var22 >= 0 && var22 < 104 && ~var23 <= -1
+                          if (var22 >= 0 && var22 < 104 && (var23 >= 1 -1)
                               && ~var23 > -105) {
                             SceneShadowMap.aByteArrayArrayArray1774[var2][var22][var23] = var19;
                           }
@@ -185,7 +185,7 @@ public class MovedStatics0 {
             }
 
             if (var18 >= 0) {
-              if (~var18 <= -105) {
+              if ((var18 >= 105 -1)) {
                 var18 = 104;
               }
             } else {
@@ -259,7 +259,7 @@ public class MovedStatics0 {
                   var30.anInt708 = var22;
                   var29 = var30.anInt703 >> 7;
                   var20 = var30.anInt708 >> 7;
-                  if (var29 >= 0 && ~var20 <= -1 && var29 < 104
+                  if (var29 >= 0 && (var20 >= 1 -1) && var29 < 104
                       && var20 < 104) {
                     var30.aBoolean696 =
                         ~(2 & BZipDecompressorState.tileFlags[1][var29][var20])

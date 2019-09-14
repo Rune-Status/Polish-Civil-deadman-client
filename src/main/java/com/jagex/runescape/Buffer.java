@@ -48,7 +48,7 @@ public class Buffer extends Node {
 
   public final void method739(int var1, int var2, long var3) {
     --var2;
-      if (~var2 <= -1 && ~var2 >= -8) {
+      if ((var2 >= 1 -1) && ~var2 >= -8) {
         if (var1 == 0) {
           for (int var5 = var2 * 8; var5 >= 0; var5 -= 8) {
             this.bytes[this.position++] = (byte) ((int) (var3 >> var5));
@@ -347,7 +347,7 @@ public class Buffer extends Node {
       if (var2 <= bytes && ~bytes >= -8) {
         long var4 = 0L;
 
-        for (int var3 = bytes * 8; ~var3 <= -1; var3 -= 8) {
+        for (int var3 = bytes * 8; (var3 >= 1 -1); var3 -= 8) {
           var4 |= (this.bytes[this.position++] & 255L) << var3;
         }
 
@@ -682,7 +682,7 @@ public class Buffer extends Node {
           if (var13 == 0) {
             var14 = var5;
             if (var5 >= 0) {
-              if (~var5 <= -105) {
+              if ((var5 >= 105 -1)) {
                 var14 = 104;
               }
             } else {
@@ -692,13 +692,13 @@ public class Buffer extends Node {
             var24 = var3;
             if (~var3 > -1) {
               var24 = 0;
-            } else if (~var3 <= -105) {
+            } else if ((var3 >= 105 -1)) {
               var24 = 104;
             }
 
             var15 = 64 + var5;
             var17 = var3 + 64;
-            if (~var17 <= -1) {
+            if ((var17 >= 1 -1)) {
               if (var17 >= 104) {
                 var17 = 104;
               }
@@ -752,16 +752,16 @@ public class Buffer extends Node {
                   var15 = 104;
                 }
 
-                if (~var3 <= -1) {
-                  if (~var3 <= -105) {
+                if ((var3 >= 1 -1)) {
+                  if ((var3 >= 105 -1)) {
                     var24 = 104;
                   }
                 } else {
                   var24 = 0;
                 }
 
-                if (~var17 <= -1) {
-                  if (~var17 <= -105) {
+                if ((var17 >= 1 -1)) {
+                  if ((var17 >= 105 -1)) {
                     var17 = 104;
                   }
                 } else {
@@ -823,7 +823,7 @@ public class Buffer extends Node {
                   var25.anInt703 += var5 << 7;
                   var17 = var25.anInt708 >> 7;
                   var24 = var25.anInt703 >> 7;
-                  if (~var24 <= -1 && var17 >= 0 && ~var24 > -105 &&
+                  if ((var24 >= 1 -1) && var17 >= 0 && ~var24 > -105 &&
                       ~var17 > -105) {
                     var25.aBoolean696 =
                         (BZipDecompressorState.tileFlags[1][var24][var17]
@@ -847,7 +847,7 @@ public class Buffer extends Node {
             for (var23 = 0; ~var23 > -9; ++var23) {
               var14 = var12 + (var5 >> 3);
               var15 = (var3 >> 3) + var23;
-              if (var14 >= 0 && var14 < 13 && ~var15 <= -1 && ~var15 > -14) {
+              if (var14 >= 0 && var14 < 13 && (var15 >= 1 -1) && ~var15 > -14) {
                 DummyClass27.blockConfigs[var14][var15] = var22;
               }
             }
@@ -917,7 +917,7 @@ public class Buffer extends Node {
 
       int var6;
       int var7;
-      if (~GameObject.anInt2737 <= -101) {
+      if ((GameObject.anInt2737 >= 101 -1)) {
         DummyClass1.anInt410 =
             (int) ((var3 * 2) / AbstractGameWorld.aFloat727);
         DummyClass44.anInt930 =

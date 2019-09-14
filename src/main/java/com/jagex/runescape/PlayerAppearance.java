@@ -213,7 +213,7 @@ public final class PlayerAppearance {
       if (~this.npcId == 0) {
         int[] var15 = this.anIntArray857;
         long var13 = this.aLong860;
-        if (var4 != null && (~var4.anInt1854 <= -1 || ~var4.anInt1849 <= -1)) {
+        if (var4 != null && ((var4.anInt1854 >= 1 -1) || (var4.anInt1849 >= 1 -1))) {
           var15 = new int[12];
 
           for (int var16 = 0; var16 < 12; ++var16) {
@@ -230,7 +230,7 @@ public final class PlayerAppearance {
             }
           }
 
-          if (~var4.anInt1849 <= -1) {
+          if ((var4.anInt1849 >= 1 -1)) {
             if (~var4.anInt1849 == -65536) {
               var15[3] = 0;
               var13 ^= 4294967295L;
@@ -982,7 +982,7 @@ public final class PlayerAppearance {
           for (int var22 = var6 - var21; var22 <= var21 + var6; ++var22) {
             for (int var23 = -var21 + var0; ~var23 >= ~(var0 - -var21);
                 ++var23) {
-              if (var22 >= 0 && ~var23 <= -1 && ~var22 > -105 && ~var23 > -105
+              if (var22 >= 0 && (var23 >= 1 -1) && ~var22 > -105 && ~var23 > -105
                   && ~TriChromaticImageCache.anIntArrayArray1373[var22][var23]
                   > -101) {
                 int var24 = 0;

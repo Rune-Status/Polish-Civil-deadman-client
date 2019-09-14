@@ -394,7 +394,7 @@ public final class OndemandRequester {
       var8.aByte4064 = var3;
       int var9 = 120 / ((63 - var1) / 47);
       if (var5) {
-        if (~this.method1253(4) <= -21) {
+        if ((this.method1253(4) >= 21 -1)) {
           throw new RuntimeException();
         }
 

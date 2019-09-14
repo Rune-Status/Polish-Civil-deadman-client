@@ -68,7 +68,7 @@ public final class BitVariable {
   }
 
   public static void parseSettings(Buffer var0, int var1) {
-    if (~(-var0.position + var0.bytes.length) <= -2) {
+    if (((-var0.position + var0.bytes.length) >= 2 -1)) {
       int var2 = var0.readUnsignedByte();
       if (var2 >= 0 && ~var2 >= -12) {
         byte var3;
@@ -106,7 +106,7 @@ public final class BitVariable {
 
         if (~(var0.bytes.length - var0.position) <= ~var3) {
           AbstractFileRequest.brightnessSetting = var0.readUnsignedByte();
-          if (~AbstractFileRequest.brightnessSetting <= -2) {
+          if ((AbstractFileRequest.brightnessSetting >= 2 -1)) {
             if ((AbstractFileRequest.brightnessSetting > 5 -1)) {
               AbstractFileRequest.brightnessSetting = 4;
             }
@@ -152,16 +152,16 @@ public final class BitVariable {
             DummyClass28.anInt340 = 127;
           }
 
-          if (~var2 <= -2) {
+          if ((var2 >= 2 -1)) {
             AbstractTextureSampler.anInt2378 = var0.readUnsignedShort();
             TextureSampler21.anInt3071 = var0.readUnsignedShort();
           }
 
-          if (~var2 <= -4 && ~var2 > -7) {
+          if ((var2 >= 4 -1) && ~var2 > -7) {
             var0.readUnsignedByte();
           }
 
-          if (~var2 <= -5) {
+          if ((var2 >= 5 -1)) {
             int var4 = var0.readUnsignedByte();
             if (~AudioStreamEncoder3.anInt3492 > -97) {
               var4 = 0;
@@ -170,7 +170,7 @@ public final class BitVariable {
             DummyClass0.method1758(var4);
           }
 
-          if (~var2 <= -6) {
+          if ((var2 >= 6 -1)) {
             GameString.anInt2148 = var0.readInt();
           }
 
@@ -182,7 +182,7 @@ public final class BitVariable {
             SubNode.anInt2577 = var0.readUnsignedByte();
           }
 
-          if (~var2 <= -8) {
+          if ((var2 >= 8 -1)) {
             GameString.safemode = var0.readUnsignedByte() == 1;
           }
 
@@ -198,7 +198,7 @@ public final class BitVariable {
             FileCacheRequester.aBoolean1080 = var0.readUnsignedByte() != 0;
           }
 
-          if (~var2 <= -12) {
+          if ((var2 >= 12 -1)) {
             DummyClass4.aBoolean3004 = ~var0.readUnsignedByte() != -1;
           }
 

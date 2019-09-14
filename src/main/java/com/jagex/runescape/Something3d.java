@@ -68,7 +68,7 @@ public class Something3d extends Something3dRoot {
         Something3d.ZERO = null;
       }
 
-      if (~DummyClass8.anInt4014 <= -101) {
+      if ((DummyClass8.anInt4014 >= 101 -1)) {
         int var6 = 64 + 128 * Mouse.anInt1923;
         int var7 = 64 + SomethingAudio.anInt1996 * 128;
         int var8 = BufferData.method1736(GameWorldSomething.currentPlane, 1, var6, var7)

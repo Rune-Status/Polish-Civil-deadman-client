@@ -80,7 +80,7 @@ public final class FloorUnderlay {
 
       this.anInt1406 = (int) (var16 * 256.0D);
       this.anInt1417 = (int) (256.0D * var18);
-      if (~this.anInt1417 <= -1) {
+      if ((this.anInt1417 >= 1 -1)) {
         if (this.anInt1417 > 255) {
           this.anInt1417 = 255;
         }
@@ -90,7 +90,7 @@ public final class FloorUnderlay {
 
       var14 /= 6.0D;
       this.anInt1408 = (int) (this.anInt1418 * var14);
-      if (~this.anInt1406 <= -1) {
+      if ((this.anInt1406 >= 1 -1)) {
         if (this.anInt1406 > 255) {
           this.anInt1406 = 255;
         }

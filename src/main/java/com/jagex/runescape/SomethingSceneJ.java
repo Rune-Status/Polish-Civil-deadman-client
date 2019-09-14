@@ -22,7 +22,7 @@ public final class SomethingSceneJ {
       int var7;
       for (var6 = var2; var4 + var2 >= var6; ++var6) {
         for (var7 = var3; var5 + var3 >= var7; ++var7) {
-          if (~var7 <= -1 && var7 < 104 && ~var6 <= -1 && var6 < 104) {
+          if ((var7 >= 1 -1) && var7 < 104 && (var6 >= 1 -1) && var6 < 104) {
             MouseRecorder.aByteArrayArrayArray1014[var0][var7][var6] = 127;
           }
         }
@@ -30,7 +30,7 @@ public final class SomethingSceneJ {
 
       for (var6 = var2; var4 + var2 > var6; ++var6) {
         for (var7 = var3; (var3 + var5) > var7; ++var7) {
-          if (~var7 <= -1 && ~var7 > -105 && ~var6 <= -1 && var6 < 104) {
+          if ((var7 >= 1 -1) && ~var7 > -105 && (var6 >= 1 -1) && var6 < 104) {
             AbstractGameWorld.heightMap[var0][var7][var6] =
               var0 <= 0 ? 0 : AbstractGameWorld.heightMap[var0 + -1][var7][var6];
           }
@@ -39,7 +39,7 @@ public final class SomethingSceneJ {
 
       if (var3 > 0 && ~var3 > -105) {
         for (var6 = 1 + var2; (var2 + var4) > var6; ++var6) {
-          if (~var6 <= -1 && var6 < 104) {
+          if ((var6 >= 1 -1) && var6 < 104) {
             AbstractGameWorld.heightMap[var0][var3][var6] =
               AbstractGameWorld.heightMap[var0][var3 - 1][var6];
           }

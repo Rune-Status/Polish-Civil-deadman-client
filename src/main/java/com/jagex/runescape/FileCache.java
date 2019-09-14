@@ -292,7 +292,7 @@ public final class FileCache {
         FileCache.anInt688 = -64;
       }
 
-      if (~var1 <= -2 && var4 >= 1 && var1 <= 102 && var4 <= 102) {
+      if ((var1 >= 2 -1) && var4 >= 1 && var1 <= 102 && var4 <= 102) {
         int var8;
         if (!NPC.method1986(41) &&
             (2 & BZipDecompressorState.tileFlags[0][var1][var4]) == 0) {

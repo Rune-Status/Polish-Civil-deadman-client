@@ -247,7 +247,7 @@ public final class SomethingInScenePacket202 extends Node {
             if ((127 & var4.anInt2819) == 64 && (127 & var4.anInt2829) == 64) {
               var6 = var4.anInt2819 >> 7;
               var7 = var4.anInt2829 >> 7;
-              if (~var6 <= -1 && var6 < 104 && ~var7 <= -1 && ~var7 > -105) {
+              if ((var6 >= 1 -1) && var6 < 104 && (var7 >= 1 -1) && ~var7 > -105) {
                 ++DummyClass9.anIntArrayArray4010[var6][var7];
               }
             }

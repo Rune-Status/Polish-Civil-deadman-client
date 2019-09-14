@@ -108,7 +108,7 @@ public final class TextureSampler29 extends AbstractTextureSampler {
             } else {
               var6.method1335(var4, var3, 4898);
             }
-          } else if (~var8 <= -1) {
+          } else if ((var8 >= 1 -1)) {
             var6.method1337(var4, true, var3);
           }
         }

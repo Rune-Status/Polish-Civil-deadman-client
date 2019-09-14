@@ -124,7 +124,7 @@ public final class TextureSampler37 extends AbstractTextureSampler {
               SomethingVolume15.gameSocket = null;
             }
 
-            if (~SpotAnimationConfig.anInt548 <= -2) {
+            if ((SpotAnimationConfig.anInt548 >= 2 -1)) {
               HashTable.anInt1711 = -5;
               DummyCanvas.anInt23 = 0;
               return;
@@ -308,9 +308,9 @@ public final class TextureSampler37 extends AbstractTextureSampler {
               & AudioStreamEncoder3.regionHashes[var2]);
             NpcConfiguration var13 = SubNode.getNpcConfiguration(var16.readUnsignedShort());
             if (TextureSampler5.npcs[var6] == null && (var13.aByte1267 & 1) > 0
-              && ~var8 == ~GameObject.plane && ~var11 <= -1 &&
+              && ~var8 == ~GameObject.plane && (var11 >= 1 -1) &&
                 var13.size + var11 < 104
-              && ~var12 <= -1 && var12 - -var13.size < 104) {
+              && (var12 >= 1 -1) && var12 - -var13.size < 104) {
               TextureSampler5.npcs[var6] = new NPC();
               NPC npc = TextureSampler5.npcs[var6];
               AudioWorker.anIntArray347[DummyClass6.anInt2046++] = var6;

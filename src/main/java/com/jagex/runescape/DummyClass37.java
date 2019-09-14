@@ -301,7 +301,7 @@ public final class DummyClass37 {
         var4 = (7 & var2) + DummyClass56.spawnSceneY;
         var3 = ((120 & var2) >> 4) + DummyClass45.spawnSceneX;
         var5 = SpotAnimationConfig.gameBuffer.readUnsignedShortAdd();
-        if (~var3 <= -1 && ~var4 <= -1 && var3 < 104 && var4 < 104) {
+        if ((var3 >= 1 -1) && (var4 >= 1 -1) && var3 < 104 && var4 < 104) {
           GroundItem var31 = new GroundItem();
           var31.anInt2930 = var5;
           var31.anInt2936 = var1;
@@ -363,7 +363,7 @@ public final class DummyClass37 {
           var4 = SpotAnimationConfig.gameBuffer.readUnsignedShort();
           var5 = SpotAnimationConfig.gameBuffer.readUnsignedByte();
           var6 = SpotAnimationConfig.gameBuffer.readUnsignedShort();
-          if (~var2 <= -1 && ~var3 <= -1 && ~var2 > -105 && ~var3 > -105) {
+          if ((var2 >= 1 -1) && (var3 >= 1 -1) && ~var2 > -105 && ~var3 > -105) {
             var2 = var2 * 128 - -64;
             var3 = var3 * 128 - -64;
             StillGraphic var32 = new StillGraphic(var4, GameWorldSomething.currentPlane, var2, var3,
@@ -381,7 +381,7 @@ public final class DummyClass37 {
           var6 = DummyClass45.spawnSceneX - -((var5 & 125) >> 4);
           var7 = (7 & var5) + DummyClass56.spawnSceneY;
           var8 = SpotAnimationConfig.gameBuffer.readUnsignedShortAdd();
-          if (~var6 <= -1 && var7 >= 0 && var6 < 104 && ~var7 > -105) {
+          if ((var6 >= 1 -1) && var7 >= 0 && var6 < 104 && ~var7 > -105) {
             Queue.method881(GameWorldSomething.currentPlane, var7, -91, var3, var6, -1, var8, var4,
               var2, 0);
           }
@@ -416,7 +416,7 @@ public final class DummyClass37 {
             var4 = SpotAnimationConfig.gameBuffer.readUnsignedShort();
             var5 = SpotAnimationConfig.gameBuffer.readUnsignedShort();
             var6 = SpotAnimationConfig.gameBuffer.readUnsignedShort();
-            if (var2 >= 0 && ~var3 <= -1 && var2 < 104 && ~var3 > -105) {
+            if (var2 >= 0 && (var3 >= 1 -1) && var2 < 104 && ~var3 > -105) {
               Deque var29 =
                 TextureSampler0.groundItems[GameWorldSomething.currentPlane][var2][var3];
               if (var29 != null) {
@@ -440,7 +440,7 @@ public final class DummyClass37 {
             var3 = (7 & var2 >> 4) + DummyClass45.spawnSceneX;
             var5 = SpotAnimationConfig.gameBuffer.readUnsignedShortLE();
             var6 = SpotAnimationConfig.gameBuffer.readUnsignedShortLE();
-            if (var3 >= 0 && ~var4 <= -1 && var3 < 104 && ~var4 > -105
+            if (var3 >= 0 && (var4 >= 1 -1) && var3 < 104 && ~var4 > -105
               && WidgetAccess.localPlayerId != var1) {
               GroundItem var27 = new GroundItem();
               var27.anInt2930 = var5;
@@ -475,8 +475,8 @@ public final class DummyClass37 {
                 var35 = -1;
               }
 
-              if (~var2 <= -1 && var3 >= 0 && ~var2 > -105 && var3 < 104
-                  && ~var4 <= -1 && var5 >= 0
+              if ((var2 >= 1 -1) && var3 >= 0 && ~var2 > -105 && var3 < 104
+                  && (var4 >= 1 -1) && var5 >= 0
                   && ~var4 > -105 && var5 < 104 && ~var7 != -65536) {
                 var5 = var5 * 128 + 64;
                 var3 = 128 * var3 + 64;
@@ -518,8 +518,8 @@ public final class DummyClass37 {
                   var13 = -1;
                 }
 
-                if (var2 >= 0 && ~var3 <= -1 && var2 < 208 && var3 < 208
-                    && var4 >= 0 && ~var5 <= -1
+                if (var2 >= 0 && (var3 >= 1 -1) && var2 < 208 && var3 < 208
+                    && var4 >= 0 && (var5 >= 1 -1)
                     && var4 < 208 && var5 < 208 && var8 != '\uffff') {
                   var4 = 64 * var4;
                   var2 *= 64;
@@ -597,7 +597,7 @@ public final class DummyClass37 {
                 var6 = (242 & var5) >> 4;
                 var8 = SpotAnimationConfig.gameBuffer.readUnsignedByte();
                 var7 = 7 & var5;
-                if (~var2 <= -1 && ~var3 <= -1 && var2 < 104 && var3 < 104) {
+                if ((var2 >= 1 -1) && (var3 >= 1 -1) && var2 < 104 && var3 < 104) {
                   var28 = 1 + var6;
                   if (~TextureCache.localPlayer.waypointsX[0] <= ~(var2
                       + -var28)
@@ -623,7 +623,7 @@ public final class DummyClass37 {
                 var3 = DummyClass56.spawnSceneY + (var1 & 7);
                 var2 = ((113 & var1) >> 4) + DummyClass45.spawnSceneX;
                 var4 = SpotAnimationConfig.gameBuffer.readUnsignedShort();
-                if (~var2 <= -1 && var3 >= 0 && var2 < 104 && var3 < 104) {
+                if ((var2 >= 1 -1) && var3 >= 0 && var2 < 104 && var3 < 104) {
                   Deque var24 =
                       TextureSampler0.groundItems[GameWorldSomething.currentPlane][var2][var3];
                   if (var24 != null) {

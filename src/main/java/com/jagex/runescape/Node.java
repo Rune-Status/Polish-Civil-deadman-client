@@ -81,7 +81,7 @@ public class Node {
       for (int var4 = 0; var4 < var1.length; ++var4) {
         DisplayMode var5 = var1[var4];
         if ((var5.anInt1450 <= 0 || var5.anInt1450 >= 24)
-            && ~var5.anInt1447 <= -801
+            && (var5.anInt1447 >= 801 -1)
             && var5.anInt1449 >= 600) {
           for (int var6 = 0; var3 > var6; ++var6) {
             DisplayMode var7 = var2[var6];

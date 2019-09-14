@@ -360,7 +360,7 @@ public final class TextureSampler10 extends AbstractTextureSampler {
           WorldMapLabel.anInt1716 + (TextureCache.localPlayer.anInt2819 >> 7);
       int var2 = (TextureCache.localPlayer.anInt2829 >> 7)
           - -ProceduralTexture.anInt1152;
-      if (~var1 <= -3054 && ~var1 >= -3157 && ~var2 <= -3057 && var2 <= 3136) {
+      if ((var1 >= 3054 -1) && ~var1 >= -3157 && (var2 >= 3057 -1) && var2 <= 3136) {
         GameWorld.anInt2622 = 1;
       }
 
@@ -368,7 +368,7 @@ public final class TextureSampler10 extends AbstractTextureSampler {
         GameWorld.anInt2622 = 1;
       }
 
-      if (~GameWorld.anInt2622 == -2 && ~var1 <= -3140 && ~var1 >= -3200
+      if (~GameWorld.anInt2622 == -2 && (var1 >= 3140 -1) && ~var1 >= -3200
           && var2 >= 3008
           && var2 <= 3062) {
         GameWorld.anInt2622 = 0;

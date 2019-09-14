@@ -135,9 +135,9 @@ public final class GameClient extends GameStub {
         }
 
         if (NPC.anInt3995 >> 7 < 14 || NPC.anInt3995 >> 7 >= 90
-            || DummyClass49.anInt1111 >> 7 < 14 || ~(
+            || DummyClass49.anInt1111 >> 7 < 14 || ((
             DummyClass49.anInt1111
-                >> 7) <= -91) {
+                >> 7) >= 91 -1)) {
           TextureSampler26.method195(var1 ^ 20478);
         }
       }
@@ -196,7 +196,7 @@ public final class GameClient extends GameStub {
             }
 
             var12 = var11.aClass11_2449;
-            if (~var12.anInt191 <= -1) {
+            if ((var12.anInt191 >= 1 -1)) {
               var13 = EnumStringFetcher.getWidget((byte) 112, var12.anInt190);
               if (var13 == null || var13.aClass11Array262 == null
                   || ~var12.anInt191 <= ~var13.aClass11Array262.length
@@ -248,14 +248,14 @@ public final class GameClient extends GameStub {
           TextureSampler21.anInt3068 = 3000;
         }
 
-        if (~DummyClass43.ondemandRequester.anInt1011 <= -3
+        if ((DummyClass43.ondemandRequester.anInt1011 >= 3 -1)
             && DummyClass43.ondemandRequester.anInt1010 == 6) {
           this.reportError("js5connect_outofdate");
           DummyClass15.state = 1000;
           return;
         }
 
-        if (~DummyClass43.ondemandRequester.anInt1011 <= -5
+        if ((DummyClass43.ondemandRequester.anInt1011 >= 5 -1)
             && ~DummyClass43.ondemandRequester.anInt1010 == 0) {
           this.reportError("js5crc");
           DummyClass15.state = 1000;
@@ -553,7 +553,7 @@ public final class GameClient extends GameStub {
                       .method2136((byte) -128);
                   DummyClass22.particles.method2113((byte) 126);
                   var2 += DummyClass22.particles.method2136((byte) -124);
-                  if (~var2 <= -1101) {
+                  if ((var2 >= 1101 -1)) {
                     DummyClass22.method1799((byte) 96, Something3dRoot.configs);
                     ClientScript
                         .setFloorFileUnpacker(false, Something3dRoot.configs);

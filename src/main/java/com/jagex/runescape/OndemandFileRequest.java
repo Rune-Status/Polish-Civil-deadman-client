@@ -136,7 +136,7 @@ public final class OndemandFileRequest extends AbstractFileRequest {
           OndemandFileRequest.aClass94_4071 = null;
         }
 
-        if (~var1 <= -3) {
+        if ((var1 >= 3 -1)) {
           DummyClass30.viewWidth = AreaSoundEffect.windowWidth;
           GroundItem.viewHeight = SceneSomething2.windowHeight;
           DummyClass51.viewX = 0;
@@ -282,7 +282,7 @@ public final class OndemandFileRequest extends AbstractFileRequest {
             TriChromaticImageBuffer.method389(false);
           }
 
-          SomethingVolume15.aBoolean2427 = ~var1 <= -3;
+          SomethingVolume15.aBoolean2427 = (var1 >= 3 -1);
 
           if (InventoryConfig.anInt3655 != -1) {
             DummyClass23.method1746(true, (byte) -107);

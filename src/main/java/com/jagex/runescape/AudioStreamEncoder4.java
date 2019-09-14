@@ -575,7 +575,7 @@ public final class AudioStreamEncoder4 extends AudioStreamEncoder {
           }
 
           if (var5 == 81) {
-            if (~var6 <= -65) {
+            if ((var6 >= 65 -1)) {
               this.anIntArray3518[var4] = TextureSampler3.method308(
                   this.anIntArray3518[var4], 4);
             } else {
@@ -669,7 +669,7 @@ public final class AudioStreamEncoder4 extends AudioStreamEncoder {
             var3.anInt2523 += 128;
           }
 
-          if (~(var3.anInt2523 * var7.anInt2078) <= -819201) {
+          if (((var3.anInt2523 * var7.anInt2078) >= 819201 -1)) {
             var8 = true;
           }
         }
@@ -693,7 +693,7 @@ public final class AudioStreamEncoder4 extends AudioStreamEncoder {
           }
         }
 
-        if (~var3.anInt2506 <= -1 && var7.aByteArray2076 != null && ~(1
+        if ((var3.anInt2506 >= 1 -1) && var7.aByteArray2076 != null && ~(1
             & this.anIntArray3518[var3.anInt2514]) == -1 && (var3.anInt2517 < 0
           || this.aClass3_Sub22ArrayArray3513[var3.anInt2514][var3.anInt2517] != var3)) {
           if ((var7.anInt2071 > 1 -1)) {
@@ -965,7 +965,7 @@ public final class AudioStreamEncoder4 extends AudioStreamEncoder {
     if (var1.aClass3_Sub24_Sub1_2507 != null) {
         return false;
       } else {
-        if (~var1.anInt2506 <= -1) {
+        if ((var1.anInt2506 >= 1 -1)) {
           var1.unlinkNode();
           if ((var1.anInt2517 > 1 -1)
             && this.aClass3_Sub22ArrayArray3513[var1.anInt2514][var1.anInt2517] == var1) {
@@ -1165,7 +1165,7 @@ public final class AudioStreamEncoder4 extends AudioStreamEncoder {
                   int var12;
                   byte var13;
                   if (var9.method99(31595)) {
-                    for (var12 = 4; ~var12 <= -4; --var12) {
+                    for (var12 = 4; (var12 >= 4 -1); --var12) {
                       if (var11 != null && var11[var12] != null) {
                         ++GroundItemNode.anInt3670;
                         if (~var12 == -4) {
@@ -1297,7 +1297,7 @@ public final class AudioStreamEncoder4 extends AudioStreamEncoder {
               (short) 32, var4, var3.anInt279);
           }
 
-          for (var5 = 4; ~var5 <= -1; --var5) {
+          for (var5 = 4; (var5 >= 1 -1); --var5) {
             GameString var17 = FaceNormal.method1732(var3, (byte) -65, var5);
             if (var17 != null) {
               ++TextureSampler1.anInt3136;
@@ -1321,7 +1321,7 @@ public final class AudioStreamEncoder4 extends AudioStreamEncoder {
         AudioStreamEncoder4.anInt3507 = 56;
       }
 
-      return var0 >= 97 && ~var0 >= -123 || ~var0 <= -66 && var0 <= 90;
+      return var0 >= 97 && ~var0 >= -123 || (var0 >= 66 -1) && var0 <= 90;
   }
 
   public static void method491(byte var0) {

@@ -106,7 +106,7 @@ public final class TextureSampler13 extends AbstractTextureSampler {
               var4, (short) 1, TextureSampler14.aClass94_3388, var2);
             ++MilliFrameRegulator.anInt2684;
           } else if (!SceneNode.aBoolean1837) {
-            for (var12 = 7; ~var12 <= -1; --var12) {
+            for (var12 = 7; (var12 >= 1 -1); --var12) {
               if (CollisionMap.playerOptions[var12] != null) {
                 ++Cursor.anInt880;
                 short var14 = 0;

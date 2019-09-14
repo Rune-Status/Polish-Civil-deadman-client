@@ -846,7 +846,7 @@ public final class FloorOverlay {
         var14 += 2;
         var12 += var14;
         var10 += var13;
-        if (~var12 <= -1 && ~var11 <= -2) {
+        if ((var12 >= 1 -1) && (var11 >= 2 -1)) {
           --var11;
           SceneNode.anIntArray1838[var11] = var7;
           var12 -= var11 << 1;

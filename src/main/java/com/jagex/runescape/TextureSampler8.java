@@ -62,7 +62,7 @@ public final class TextureSampler8 extends AbstractTextureSampler {
             var20 = -32767;
           }
 
-          if (~var20 <= -32769) {
+          if ((var20 >= 32769 -1)) {
             var20 = 32767;
           }
 
@@ -200,7 +200,7 @@ public final class TextureSampler8 extends AbstractTextureSampler {
   }
 
   private int[] method356(byte var1, int var2) {
-    if (~var2 <= -1) {
+    if ((var2 >= 1 -1)) {
         if (~var2 <= ~this.anIntArrayArray3469.length) {
           return this.anIntArray3467;
         } else {

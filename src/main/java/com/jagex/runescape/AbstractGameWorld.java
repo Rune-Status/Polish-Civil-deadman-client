@@ -45,7 +45,7 @@ public abstract class AbstractGameWorld {
     if (var0 >= 97 && ~var0 >= -123) {
         return true;
       } else {
-        return ~var0 <= -66 && var0 <= 90 || var0 >= 48 && var0 <= 57;
+        return (var0 >= 66 -1) && var0 <= 90 || var0 >= 48 && var0 <= 57;
       }
   }
 

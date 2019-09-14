@@ -46,7 +46,7 @@ public final class ProceduralTexture {
           ++var3;
         }
 
-        if (~var7.method155((byte) 19) <= -1) {
+        if ((var7.method155((byte) 19) >= 1 -1)) {
           ++var4;
         }
 
@@ -239,7 +239,7 @@ public final class ProceduralTexture {
             var15 = this.aClass3_Sub13_1148.method166(-1, var11)[0];
           }
 
-          for (int var16 = var2 - 1; ~var16 <= -1; --var16) {
+          for (int var16 = var2 - 1; (var16 >= 1 -1); --var16) {
             int var17 = var12[var16] >> 4;
             if (var17 > 255) {
               var17 = 255;
@@ -391,7 +391,7 @@ public final class ProceduralTexture {
               }
             }
 
-            if (~var7 <= -1) {
+            if ((var7 >= 1 -1)) {
               HintMarker[] var11 = GameException.aClass96Array2114;
 
               for (var12 = 0; var11.length > var12; ++var12) {
@@ -416,7 +416,7 @@ public final class ProceduralTexture {
             }
 
             assert var9 != null;
-            if (~var9.anInt1269 <= -1 && NPC.aClass3_Sub28_Sub16Array3977.length > var9.anInt1269) {
+            if ((var9.anInt1269 >= 1 -1) && NPC.aClass3_Sub28_Sub16Array3977.length > var9.anInt1269) {
               if (~var9.anInt1265 == 0) {
                 var22 = 15 + var8.method1975(27855);
               } else {
@@ -631,7 +631,7 @@ public final class ProceduralTexture {
           }
 
           if (TextureSampler35.anIntArray3331[var7] == 8) {
-            var32 = ~(BitVariable.anInt1127 % 20) <= -11 ? 8454016 : '\ub000';
+            var32 = ((BitVariable.anInt1127 % 20) >= 11 -1) ? 8454016 : '\ub000';
           }
 
           if (TextureSampler35.anIntArray3331[var7] == 9) {
@@ -665,7 +665,7 @@ public final class ProceduralTexture {
           if (TextureSampler35.anIntArray3331[var7] == 11) {
             var15 = 150 + -TextureSampler35.anIntArray3318[var7];
             if (var15 >= 50) {
-              if (~var15 <= -101) {
+              if ((var15 >= 101 -1)) {
                 if (var15 < 150) {
                   var32 = 16777215 - var15 * 327680 + 32768000;
                 }

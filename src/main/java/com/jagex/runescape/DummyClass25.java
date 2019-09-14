@@ -46,7 +46,7 @@ public final class DummyClass25 {
         AreaSoundEffect.windowWidth -= var2.right + var2.left;
       }
 
-      if (~MidiSomething.getWindowMode() <= -3) {
+      if ((MidiSomething.getWindowMode() >= 3 -1)) {
         DummyClass30.viewWidth = AreaSoundEffect.windowWidth;
         DummyClass51.viewX = 0;
         DisplayMode.viewY = 0;

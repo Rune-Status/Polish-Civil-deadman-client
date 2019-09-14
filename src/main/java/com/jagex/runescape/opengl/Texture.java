@@ -135,14 +135,14 @@ public final class Texture extends SubNode {
 
             int var25 = var19;
 
-            for (int var31 = var18; ~var31 <= -1; --var31) {
+            for (int var31 = var18; (var31 >= 1 -1); --var31) {
               int var30 = 0;
               int var29 = 0;
               int var28 = 0;
               int var26 = 1;
               int var27 = 1;
 
-              for (var11 = 2; ~var11 <= -1; --var11) {
+              for (var11 = 2; (var11 >= 1 -1); --var11) {
                 --var27;
                 var30 += var8[var27];
                 var29 += var9[var27];
@@ -152,7 +152,7 @@ public final class Texture extends SubNode {
                 }
               }
 
-              for (var11 = var17; ~var11 <= -1; --var11) {
+              for (var11 = var17; (var11 >= 1 -1); --var11) {
                 --var26;
                 int var21 = var30 / 9;
                 int var22 = var29 / 9;
@@ -173,7 +173,7 @@ public final class Texture extends SubNode {
                 }
               }
 
-              for (var11 = var17; ~var11 <= -1; --var11) {
+              for (var11 = var17; (var11 >= 1 -1); --var11) {
                 --var13;
                 int var23 = this.anIntArray3793[var13];
                 --var14;
@@ -500,7 +500,7 @@ public final class Texture extends SubNode {
                   }
 
                   var11 += var10;
-                  if (~var11 <= -65537) {
+                  if ((var11 >= 65537 -1)) {
                     if (var6 > var4) {
                       ++var4;
                     } else if (var6 < var4) {

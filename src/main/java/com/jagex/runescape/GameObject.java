@@ -287,7 +287,7 @@ public final class GameObject extends SceneNode {
             ||
           (~this.anInt2726 != ~this.anInt2752 || this.aClass142_2722 != null && (
               this.aClass142_2722.aBoolean1872 || MonoChromaticImageBuffer.tweening)
-            && ~this.anInt2726 != ~this.anInt2733) && ~HashTableIterator.anInt1137 <= -3);
+            && ~this.anInt2726 != ~this.anInt2733) && (HashTableIterator.anInt1137 >= 3 -1));
         if (var1 && !var13) {
           return null;
         } else {
@@ -570,7 +570,7 @@ public final class GameObject extends SceneNode {
   }
 
   public static void method1959(int var0, int var1, int var2, boolean var3) {
-    if (~var2 <= -8001 && var2 <= '\ubb80') {
+    if ((var2 >= 8001 -1) && var2 <= '\ubb80') {
         AudioStreamEncoder4.anInt3507 = var1;
         if (var0 != 256) {
           GameObject.OPTION_DROP = null;

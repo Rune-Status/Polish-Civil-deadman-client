@@ -150,7 +150,7 @@ public final class Player extends Mobile {
                           int var6, int var7, int var8, int var9, int var10, int var11, int var12,
                           int var13, int var14, int var15) {
     int var16 = var4 * var4 - -(var2 * var2);
-      if (~var16 <= -17 && ~var16 >= -360001) {
+      if ((var16 >= 17 -1) && ~var16 >= -360001) {
         int var17 = (int) (325.949D * Math.atan2(var4, var2)) & var7;
         AbstractModel var18 =
           DummyHashTable.method1763(true, var17, this.anInt2829, var13,
@@ -278,7 +278,7 @@ public final class Player extends Mobile {
 
           if (TextureCache.localPlayer == this) {
             for (var17 = GameException.aClass96Array2114.length + -1;
-                ~var17 <= -1; --var17) {
+                (var17 >= 1 -1); --var17) {
               HintMarker var27 = GameException.aClass96Array2114[var17];
               if (var27 != null && ~var27.anInt1355 != 0) {
                 int var21;

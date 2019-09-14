@@ -108,7 +108,7 @@ public final class IdentityKit {
               this.aShortArray471[var5] = (short) var2.readUnsignedShort();
               this.aShortArray470[var5] = (short) var2.readUnsignedShort();
             }
-          } else if (~var3 <= -61 && var3 < 70) {
+          } else if ((var3 >= 61 -1) && var3 < 70) {
             this.anIntArray475[-60 + var3] = var2.readUnsignedShort();
           }
         } else {

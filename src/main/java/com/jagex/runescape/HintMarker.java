@@ -39,7 +39,7 @@ public final class HintMarker {
           int var10 = -(var8 * 64) - (-MapScene.anInt65 - -1) + DummyClass58.anInt1460;
           int var11;
           int var12;
-          if (~var9 <= -1 && -63 + var10 >= 0 && DummyClass30.anInt455 > var9 + 63
+          if ((var9 >= 1 -1) && -63 + var10 >= 0 && DummyClass30.anInt455 > var9 + 63
             && var10 < DummyClass58.anInt1460) {
             var11 = var9 >> 6;
             var12 = var10 >> 6;

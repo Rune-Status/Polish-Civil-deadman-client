@@ -38,7 +38,7 @@ public final class SceneShadowMap {
           int var21 = var4 + var17 >> 6;
           var18 += var0;
           int var10000 = var19 + var0;
-          if (~var21 <= -1 && var21 <= -1 + AbstractGameWorld.anIntArrayArrayArray720.length) {
+          if ((var21 >= 1 -1) && var21 <= -1 + AbstractGameWorld.anIntArrayArrayArray720.length) {
             int[][] var22 = AbstractGameWorld.anIntArrayArrayArray720[var21];
 
             for (int var23 = -var16; var23 < var12 - -var16; ++var23) {
@@ -49,7 +49,7 @@ public final class SceneShadowMap {
                 var24 += var10;
                 int var27 = var9 + var23 >> 6;
                 var10000 = var25 + var10;
-                if (~var27 <= -1 && ~var27 >= ~(-1 + var22.length) &&
+                if ((var27 >= 1 -1) && ~var27 >= ~(-1 + var22.length) &&
                     var22[var27] != null) {
                   int var28 = (63 & var17 + var4) + (4032 & var9 + var23 << 6);
                   int var29 = var22[var27][var28];

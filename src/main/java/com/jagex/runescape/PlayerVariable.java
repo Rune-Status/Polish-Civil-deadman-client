@@ -47,7 +47,7 @@ public final class PlayerVariable {
       int var3;
       for (var3 = 0; TextureSampler39.anInt3287 > var3; ++var3) {
         ItemConfig var4 = DummyClass35.getItemConfig(var3, (byte) 119);
-        if (~var4.anInt793 <= -1 || ~var4.anInt761 <= -1) {
+        if ((var4.anInt793 >= 1 -1) || (var4.anInt761 >= 1 -1)) {
           var1[var2++] = var3;
         }
       }

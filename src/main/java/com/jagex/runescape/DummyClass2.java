@@ -19,7 +19,7 @@ public class DummyClass2 {
               SomethingVolume15.gameSocket = null;
             }
 
-            if (~SomethingIndex150.anInt2079 <= -2) {
+            if ((SomethingIndex150.anInt2079 >= 2 -1)) {
               AbstractImageProducer.loginResponse = -5;
               TextureSampler28.loginState = 0;
               return;
@@ -279,7 +279,7 @@ public class DummyClass2 {
           }
 
           if (TextureSampler28.loginState == 7) {
-            if (~SomethingVolume15.gameSocket.available() <= -2) {
+            if ((SomethingVolume15.gameSocket.available() >= 2 -1)) {
               TextureSampler25.anInt3413 =
                   60 * (3 + SomethingVolume15.gameSocket.read());
               TextureSampler28.loginState = 0;

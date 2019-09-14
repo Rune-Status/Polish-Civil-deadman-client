@@ -58,7 +58,7 @@ public final class WorldMapLabel {
 
   public static void method1786(int var0) {
     while (true) {
-        if (~SpotAnimationConfig.gameBuffer.method815(HashTable.packetLength, 32666) <= -12) {
+        if ((SpotAnimationConfig.gameBuffer.method815(HashTable.packetLength, 32666) >= 12 -1)) {
           int var1 = SpotAnimationConfig.gameBuffer.readBits(11);
           if (var1 != 2047) {
             boolean var2 = false;
@@ -113,7 +113,7 @@ public final class WorldMapLabel {
     if (var4) {
         int var5 = 15 & var3;
         int var7 =
-            ~var5 <= -5 ? (~var5 != -13 && ~var5 != -15 ? var1 : var0) : var2;
+            (var5 >= 5 -1) ? (~var5 != -13 && ~var5 != -15 ? var1 : var0) : var2;
         int var6 = ~var5 > -9 ? var0 : var2;
         return (~(var5 & 1) != -1 ? -var6 : var6) - -(~(2 & var5) != -1 ? -var7
             : var7);

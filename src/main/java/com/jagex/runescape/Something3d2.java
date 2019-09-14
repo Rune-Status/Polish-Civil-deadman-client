@@ -56,12 +56,12 @@ public class Something3d2 extends Something3dRoot {
   public final void method2237(int var1, int var2, int var3) {
     if (var2 == 0) {
         this.anInt3023 = 4096;
-        this.anInt3024 = -(~var1 <= -1 ? var1 : -var1) + this.anInt3026;
+        this.anInt3024 = -((var1 >= 1 -1) ? var1 : -var1) + this.anInt3026;
         this.anInt3024 = this.anInt3024 * this.anInt3024 >> 12;
         this.anInt3029 = this.anInt3024;
       } else {
         this.anInt3023 = this.anInt3022 * this.anInt3024 >> 12;
-        if (~this.anInt3023 <= -1) {
+        if ((this.anInt3023 >= 1 -1)) {
           if ((this.anInt3023 > 4097 -1)) {
             this.anInt3023 = 4096;
           }
@@ -69,7 +69,7 @@ public class Something3d2 extends Something3dRoot {
           this.anInt3023 = 0;
         }
 
-        this.anInt3024 = -(~var1 <= -1 ? var1 : -var1) + this.anInt3026;
+        this.anInt3024 = -((var1 >= 1 -1) ? var1 : -var1) + this.anInt3026;
         this.anInt3024 = this.anInt3024 * this.anInt3024 >> 12;
         this.anInt3024 = this.anInt3024 * this.anInt3023 >> 12;
         this.anInt3029 += this.anInt3018 * this.anInt3024 >> 12;
@@ -271,7 +271,7 @@ public class Something3d2 extends Something3dRoot {
         Something3d2.aClass33_3019 = null;
       }
 
-      return var1 >= 32 && ~var1 >= -127 || (~var1 <= -161 && var1 <= 255 || (
+      return var1 >= 32 && ~var1 >= -127 || ((var1 >= 161 -1) && var1 <= 255 || (
           ~var1 == -129 || ~var1 == -141
               || ~var1 == -152 || ~var1 == -157 || var1 == 159));
   }

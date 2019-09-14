@@ -357,7 +357,7 @@ public final class TextureSampler20 extends AbstractTextureSampler {
             var4 = DummyClass5.anInt2993;
             AbstractIndexedColorSprite.aLong1465 = AbstractSomethingTexture.aLong1102;
             byte var19 = 0;
-            if (~var4 <= -1) {
+            if ((var4 >= 1 -1)) {
               if (var4 > '\uffff') {
                 var4 = '\uffff';
               }
@@ -983,7 +983,7 @@ public final class TextureSampler20 extends AbstractTextureSampler {
                         }
 
                         var25 = var26.aClass11_2449;
-                        if (~var25.anInt191 <= -1) {
+                        if ((var25.anInt191 >= 1 -1)) {
                           var23 = EnumStringFetcher.getWidget((byte) 118, var25.anInt190);
                           if (var23 == null || var23.aClass11Array262 == null
                             || ~var25.anInt191 <= ~var23.aClass11Array262.length
@@ -997,7 +997,7 @@ public final class TextureSampler20 extends AbstractTextureSampler {
                     }
 
                     var25 = var26.aClass11_2449;
-                    if (~var25.anInt191 <= -1) {
+                    if ((var25.anInt191 >= 1 -1)) {
                       var23 = EnumStringFetcher.getWidget((byte) 120, var25.anInt190);
                       if (var23 == null || var23.aClass11Array262 == null
                         || var23.aClass11Array262.length <= var25.anInt191

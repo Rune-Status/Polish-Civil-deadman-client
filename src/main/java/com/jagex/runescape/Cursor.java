@@ -130,7 +130,7 @@ public final class Cursor {
         byte var11 = 1;
         if (var7 >= -256 && var7 <= 256) {
           var8 = var2.anInt382;
-        } else if (~var7 <= -257 && var7 < 768) {
+        } else if ((var7 >= 257 -1) && var7 < 768) {
           var8 = var2.anInt364;
         } else if (~var7 <= 767 && var7 <= -256) {
           var8 = var2.anInt390;
@@ -189,7 +189,7 @@ public final class Cursor {
           }
         }
 
-        if (~var9 <= -9 && var2.anInt393 != -1) {
+        if ((var9 >= 9 -1) && var2.anInt393 != -1) {
           if (~var2.anInt389 == ~var1.anInt2764 && var2.anInt386 != -1) {
             var1.anInt2764 = var2.anInt386;
           } else if (var1.anInt2764 == var2.anInt390 && ~var2.anInt373 != 0) {

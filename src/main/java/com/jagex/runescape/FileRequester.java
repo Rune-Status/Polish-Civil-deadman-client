@@ -253,7 +253,7 @@ public final class FileRequester extends AbstractFileRequester {
               if (~this.aClass62_2944.unpackedSizes[this.anInt2964] == -1) {
                 ++this.anInt2964;
               } else {
-                if (~this.aClass73_2956.anInt1087 <= -251) {
+                if ((this.aClass73_2956.anInt1087 >= 251 -1)) {
                   var2 = false;
                   break;
                 }

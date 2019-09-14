@@ -697,7 +697,7 @@ public final class DummyClass3 {
         DummyClass47.method1323(var0, var4, var2, var1, 0);
       }
 
-      if (~GameObject.anInt2737 <= -101) {
+      if ((GameObject.anInt2737 >= 101 -1)) {
         if (HuffmanEncoder.aClass3_Sub28_Sub16_637 == null
           || var2 != HuffmanEncoder.aClass3_Sub28_Sub16_637.anInt3707
           || HuffmanEncoder.aClass3_Sub28_Sub16_637.anInt3696 != var1) {

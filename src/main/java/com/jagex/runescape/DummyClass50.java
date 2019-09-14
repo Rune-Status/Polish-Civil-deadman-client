@@ -29,7 +29,7 @@ public final class DummyClass50 {
           for (var3 = 0; ~var3 > -25 && ~var2[var3] == -1; ++var3) {
           }
 
-          if (~var3 <= -25) {
+          if ((var3 >= 25 -1)) {
             throw new IOException();
           }
         } catch (Exception var5) {

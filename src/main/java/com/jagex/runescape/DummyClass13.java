@@ -115,7 +115,7 @@ public final class DummyClass13 {
               var8 += DummyClass2.anIntArray1681[var9 + (var10 - -var6)];
             }
 
-            if (~(-1 + -var6 + var10) <= -1) {
+            if (((-1 + -var6 + var10) >= 1 -1)) {
               var8 -= DummyClass2.anIntArray1681[-var6 + -1 + var10 + var9];
             }
 

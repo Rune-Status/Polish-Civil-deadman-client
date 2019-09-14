@@ -161,7 +161,7 @@ public final class DummyOutputStream extends OutputStream {
       if (var1 == 2279) {
         if (var2 == TextureCache.localPlayer && (var2.anInt2819 < 1536 ||
             ~var2.anInt2829 > -1537
-          || ~var2.anInt2819 <= -11777 || var2.anInt2829 >= 11776)) {
+          || (var2.anInt2819 >= 11777 -1) || var2.anInt2829 >= 11776)) {
           var2.anInt2842 = -1;
           var2.anInt2800 = 0;
           var2.anInt2790 = 0;

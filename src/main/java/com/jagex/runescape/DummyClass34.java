@@ -17,7 +17,7 @@ public final class DummyClass34 {
         DummyClass45.method1234(2, var2 + 10294, '\u93bd' + var0, 512) + -128 >> 1) - -(
         DummyClass45.method1234(1, var2, var0, 512) + -128 >> 2));
       var3 = 35 + (int) (0.3D * var3);
-      if (~var3 <= -11) {
+      if ((var3 >= 11 -1)) {
         if (var3 > 60) {
           var3 = 60;
         }

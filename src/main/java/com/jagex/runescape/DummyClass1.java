@@ -167,7 +167,7 @@ public final class DummyClass1 {
                   var6 = 32767;
                 }
 
-                if (~var5 <= -32769) {
+                if ((var5 >= 32769 -1)) {
                   var1.anInt2821 = -var2.anInt369;
                   var1.anInt2803 = (65536 - var5) / 2;
                   if (~var6 > ~var1.anInt2803) {

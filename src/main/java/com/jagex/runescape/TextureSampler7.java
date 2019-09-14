@@ -99,7 +99,7 @@ public final class TextureSampler7 extends AbstractTextureSampler {
               } else {
                 for (var8 = 0; SomethingLight0.anInt1559 > var8; ++var8) {
                   var5 = var7[var8];
-                  var3[var8] = ~var5 <= -2049 ?
+                  var3[var8] = (var5 >= 2049 -1) ?
                       -((-var6[var8] + 4096) * (4096 + -var5) >> 11) + 4096 :
                       var5 * var6[var8] >> 11;
                 }
@@ -187,7 +187,7 @@ public final class TextureSampler7 extends AbstractTextureSampler {
               var9 = var20[var21];
               var7 = var18[var21];
               var8 = var19[var21];
-              var12[var21] = ~var7 <= -2049 ?
+              var12[var21] = (var7 >= 2049 -1) ?
                 -((-var7 + 4096) * (-var15[var21] + 4096) >> 11) + 4096 :
                 var7 * var15[var21] >> 11;
               var13[var21] = var8 < 2048 ?

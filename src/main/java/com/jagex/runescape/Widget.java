@@ -614,7 +614,7 @@ public final class Widget {
     GameStub.aBoolean6 = false;
       if (!var1) {
         return null;
-      } else if (~var2 <= -1 && var2 < this.anIntArray197.length) {
+      } else if ((var2 >= 1 -1) && var2 < this.anIntArray197.length) {
         int var3 = this.anIntArray197[var2];
         if (~var3 == 0) {
           return null;
@@ -857,7 +857,7 @@ public final class Widget {
               var7.method652(this.anInt288);
             }
 
-            if (~this.anInt288 <= -2) {
+            if ((this.anInt288 >= 2 -1)) {
               var7.method657(1);
             }
 

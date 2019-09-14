@@ -117,7 +117,7 @@ public final class AudioWorker implements Runnable {
         int var9 = var1.readUnsignedByte();
         int var10 = -TextureSampler37.anInt3256 + var8 * 64;
         int var11 = -1 + DummyClass58.anInt1460 - var9 * 64 + MapScene.anInt65;
-        if (~var10 <= -1 && -63 + var11 >= 0
+        if ((var10 >= 1 -1) && -63 + var11 >= 0
             && DummyClass30.anInt455 > var10 - -63
             && DummyClass58.anInt1460 > var11) {
           for (var12 = 0; var12 < 64; ++var12) {
@@ -164,7 +164,7 @@ public final class AudioWorker implements Runnable {
           }
 
           var15 = var12 + -5;
-          if (~var15 <= -1) {
+          if ((var15 >= 1 -1)) {
             var35 = var4[var15][var34] & 255;
             if (var35 > 0) {
               FloorUnderlay var17 = ClientScript.getFloorUnderlay(-1 + var35);
@@ -177,7 +177,7 @@ public final class AudioWorker implements Runnable {
           }
         }
 
-        if (~var12 <= -1) {
+        if ((var12 >= 1 -1)) {
           int[][] var33 = AbstractMouseWheel.anIntArrayArrayArray1903[var12
               >> 6];
           var14 = 0;
@@ -197,7 +197,7 @@ public final class AudioWorker implements Runnable {
             }
 
             int var21 = -5 + var19;
-            if (~var21 <= -1) {
+            if ((var21 >= 1 -1)) {
               var35 -= var30[var21];
               var36 -= var32[var21];
               var14 -= var28[var21];

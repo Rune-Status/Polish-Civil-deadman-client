@@ -356,7 +356,7 @@ public final class TextureSampler34 extends AbstractTextureSampler {
         int var7;
         int var9;
         if (~var6 != -1) {
-          if (~lightness <= -1) {
+          if ((lightness >= 1 -1)) {
             if ((lightness > 128 -1)) {
               var7 = 16777215;
             } else {

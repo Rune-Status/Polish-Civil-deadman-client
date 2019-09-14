@@ -180,7 +180,7 @@ public final class SomethingWorldMapy extends SubNode {
   }
 
   public static boolean method544(int var0, int var1) {
-    return var0 != -49 || ~var1 <= -49 && var1 <= 57;
+    return var0 != -49 || (var1 >= 49 -1) && var1 <= 57;
   }
 
 }

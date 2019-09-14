@@ -154,7 +154,7 @@ public final class TextureSampler9 extends AbstractTextureSampler {
   }
 
   public static GameString method207(int var0, boolean var1, int var2, long var3) {
-    if (~var0 <= -3 && var0 <= 36) {
+    if ((var0 >= 3 -1) && var0 <= 36) {
         if (var2 <= 71) {
           TextureSampler9.aFloat3105 = 1.3008908F;
         }

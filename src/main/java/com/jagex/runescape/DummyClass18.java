@@ -126,7 +126,7 @@ public final class DummyClass18 {
         GameString b = SpotAnimationConfig.gameBuffer.readString();
         Object[] arguments = new Object[b.getLength() - -1];
 
-        for (var5 = b.getLength() + -1; ~var5 <= -1; --var5) {
+        for (var5 = b.getLength() + -1; (var5 >= 1 -1); --var5) {
           if (b.charAt(var5) == 115) {
             arguments[1 + var5] = SpotAnimationConfig.gameBuffer.readString();
           } else {
@@ -803,7 +803,7 @@ public final class DummyClass18 {
           var6 = 3 & var21 >> 28;
           var30 = ((var21 & 268434277) >> 14) + -WorldMapLabel.anInt1716;
           var8 = (var21 & 16383) + -ProceduralTexture.anInt1152;
-          if (~var30 <= -1 && var8 >= 0 && var30 < 104 && ~var8 > -105) {
+          if ((var30 >= 1 -1) && var8 >= 0 && var30 < 104 && ~var8 > -105) {
             var8 = var8 * 128 - -64;
             var30 = 128 * var30 + 64;
             StillGraphic var50 = new StillGraphic(var5, var6, var30, var8,
@@ -1426,10 +1426,10 @@ public final class DummyClass18 {
         var3 = var20 >> 6;
         var48.anInt1360 = var20 & 63;
         var48.anInt1351 = SpotAnimationConfig.gameBuffer.readUnsignedByte();
-        if (~var48.anInt1351 <= -1
+        if ((var48.anInt1351 >= 1 -1)
           && ~var48.anInt1351 > ~SomethingIndex150.aClass3_Sub28_Sub16Array2072.length) {
           if (~var48.anInt1360 != -2 && var48.anInt1360 != 10) {
-            if (~var48.anInt1360 <= -3 && var48.anInt1360 <= 6) {
+            if ((var48.anInt1360 >= 3 -1) && var48.anInt1360 <= 6) {
               if (var48.anInt1360 == 2) {
                 var48.anInt1346 = 64;
                 var48.anInt1350 = 64;
@@ -1539,7 +1539,7 @@ public final class DummyClass18 {
 
         label1651:
         while (true) {
-          if (~var12 <= -101) {
+          if ((var12 >= 101 -1)) {
             if (var8 <= 1) {
               if ((!SomethingVolume15.aBoolean2433 || BufferData.aBoolean1641)
                 && !TextureSampler31.aBoolean3166) {
@@ -1741,7 +1741,7 @@ public final class DummyClass18 {
             }
           }
 
-          if (var25 != null && ~var5 <= -1 &&
+          if (var25 != null && (var5 >= 1 -1) &&
             var25.anIntArray254.length > var5) {
             var25.anIntArray254[var5] = var6;
             var25.anIntArray317[var5] = var30;
@@ -1897,7 +1897,7 @@ public final class DummyClass18 {
           var40.aClass94_2473 = var41;
           var40.anInt2478 = var21;
 
-          for (var33 = -1 + SubNode.anInt2572; ~var33 <= -1; --var33) {
+          for (var33 = -1 + SubNode.anInt2572; (var33 >= 1 -1); --var33) {
             var10 =
                 ClientScript.aClass3_Sub19Array3694[var33].name
                     .method1559(var40.name, var0 ^ 82);

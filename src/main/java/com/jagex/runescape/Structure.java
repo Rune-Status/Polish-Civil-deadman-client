@@ -238,7 +238,7 @@ public final class Structure extends SubNode {
 
             int var7 = (-var6 + var1.anInt2328) * DummyClass28.anInt340 / var1.anInt2328;
             if (var1.aClass3_Sub24_Sub1_2312 == null) {
-              if (~var1.anInt2332 <= -1) {
+              if ((var1.anInt2332 >= 1 -1)) {
                 SoundEffect var8 =
                   SoundEffect.method1811(AbstractMouseWheel.soundEffects, var1.anInt2332, 0);
                 if (var8 != null) {
