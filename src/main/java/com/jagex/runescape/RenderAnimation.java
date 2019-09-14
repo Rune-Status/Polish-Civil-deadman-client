@@ -296,7 +296,7 @@ public final class RenderAnimation {
       }
 
       int var6;
-      if (~var0.anInt2842 != 0 && (AbstractGameWorld.updateCycle >= var0.anInt2759)) {
+      if ((var0.anInt2842 != -1) && (AbstractGameWorld.updateCycle >= var0.anInt2759)) {
         var6 = RenderAnimation.method898((byte) 42, var0.anInt2842).anInt542;
         if (~var6 == 0) {
           var0.anInt2842 = -1;
@@ -334,7 +334,7 @@ public final class RenderAnimation {
         }
       }
 
-      if (~var0.animationId != 0 && (var0.anInt2828 <= 2 -1)) {
+      if ((var0.animationId != -1) && (var0.anInt2828 <= 2 -1)) {
         var2 = GameClient.method45(var0.animationId, (byte) -20);
         if ((var2.anInt1866 == 2 -1) && var0.anInt2811 > 0
           && (AbstractGameWorld.updateCycle >= var0.anInt2800)
@@ -345,7 +345,7 @@ public final class RenderAnimation {
       }
 
       if (var1 == -11973) {
-        if (~var0.animationId != 0 && (var0.anInt2828 == 1 -1)) {
+        if ((var0.animationId != -1) && (var0.anInt2828 == 1 -1)) {
           var2 = GameClient.method45(var0.animationId, (byte) -20);
           if (var2.anIntArray1851 != null) {
             ++var0.anInt2760;

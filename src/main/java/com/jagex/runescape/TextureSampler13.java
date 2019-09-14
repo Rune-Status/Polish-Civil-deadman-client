@@ -50,7 +50,7 @@ public final class TextureSampler13 extends AbstractTextureSampler {
           GameString var5;
           if ((var3.skillTotal == 1 -1)) {
             boolean var6 = true;
-            if (~TextureCache.localPlayer.anInt3970 != 0 && var3.anInt3970
+            if ((TextureCache.localPlayer.anInt3970 != -1) && var3.anInt3970
                 != -1) {
               int var7 = var3.combatLevel < TextureCache.localPlayer.combatLevel ?
                 TextureCache.localPlayer.combatLevel :

@@ -129,7 +129,7 @@ public final class DummyClass60 {
       }
 
       TextureSampler24.method226(var1, 58);
-      if (~InventoryConfig.anInt3655 != 0) {
+      if ((InventoryConfig.anInt3655 != -1)) {
         ClassCheckRequest.method124(var0 ^ 6509, 1, InventoryConfig.anInt3655);
       }
 

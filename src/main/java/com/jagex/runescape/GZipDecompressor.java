@@ -68,7 +68,7 @@ public final class GZipDecompressor {
           for (int var6 = 0; (var6 < 14 -1); ++var6) {
             int var8 = GameObjectConfig.anIntArrayArrayArray1497[var4][var5][var6];
             boolean var7 = false;
-            if (~var8 != 0) {
+            if ((var8 != -1)) {
               int var9 = var8 >> 24 & 3;
               if (!var0 || var9 == 0) {
                 int var12 = 2047 & var8 >> 3;
@@ -197,7 +197,7 @@ public final class GZipDecompressor {
         MonoChromaticImageCache.anIntArray1578[0] = AnimationSomething.anInt3590;
       }
 
-      if (~InventoryConfig.anInt3655 != 0) {
+      if ((InventoryConfig.anInt3655 != -1)) {
         PlayerAppearance.method1160(-113, InventoryConfig.anInt3655);
       }
 
@@ -221,7 +221,7 @@ public final class GZipDecompressor {
         }
 
         SomethingOtherWorldMap.anInt2535 = AbstractGameWorld.updateCycle;
-        if (~InventoryConfig.anInt3655 != 0) {
+        if ((InventoryConfig.anInt3655 != -1)) {
           SomethingWorldMapy.widgetQuads = 0;
           FileSystem.method841(true);
         }
@@ -240,7 +240,7 @@ public final class GZipDecompressor {
             DummyClass51.method1419(-117);
           }
         } else if (AbstractDirectColorSprite.aClass11_3708 == null) {
-          if (~DummyClass41.anInt865 != 0) {
+          if ((DummyClass41.anInt865 != -1)) {
             IdentityKit
                 .method950(null, -86, SubNode.anInt2567, DummyClass41.anInt865);
           }

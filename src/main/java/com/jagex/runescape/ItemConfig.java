@@ -148,7 +148,7 @@ public final class ItemConfig {
           var5 = false;
         }
 
-        if (~var4 != 0 && !StringNode.aClass153_2581.method2129((byte) 58, 0, var4)) {
+        if ((var4 != -1) && !StringNode.aClass153_2581.method2129((byte) 58, 0, var4)) {
           var5 = false;
         }
 
@@ -180,7 +180,7 @@ public final class ItemConfig {
           }
         }
 
-        if (~var4 != 0) {
+        if ((var4 != -1)) {
           return DummyClass35.getItemConfig(var4, (byte) 97);
         }
       }
@@ -207,7 +207,7 @@ public final class ItemConfig {
           var7 = false;
         }
 
-        if (~var4 != 0 && !StringNode.aClass153_2581
+        if ((var4 != -1) && !StringNode.aClass153_2581
             .method2129((byte) -114, 0, var4)) {
           var7 = false;
         }
@@ -287,7 +287,7 @@ public final class ItemConfig {
           }
         }
 
-        if (~var7 != 0) {
+        if ((var7 != -1)) {
           return DummyClass35.getItemConfig(var7, (byte) 109)
             .getModel(113, var2, var3, var4, 1, var6);
         }
@@ -650,7 +650,7 @@ public final class ItemConfig {
         return null;
       } else {
         Model var6 = Model.getModel(StringNode.aClass153_2581, var3, 0);
-        if (~var4 != 0) {
+        if ((var4 != -1)) {
           Model var7 = Model.getModel(StringNode.aClass153_2581, var4, 0);
           if (var5 == -1) {
             Model[] var8 = {var6, var7};
@@ -3759,8 +3759,7 @@ public final class ItemConfig {
                                     }
                                     if ((k35 != BZipDecompressorState.anInt120)) {
                                       if ((BZipDecompressorState.anInt120 == 1 -1)
-                                        && ~AbstractFrameRegulator.anInt1691
-                                          != 0) {
+                                        && (AbstractFrameRegulator.anInt1691 != -1)) {
                                         SceneSomething2.method1285(SomethingTexture1.fileUnpacker6,
                                           false, AbstractFrameRegulator.anInt1691, 0, false, k35);
                                         MidiSomething.aBoolean1158 = false;

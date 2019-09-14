@@ -1141,7 +1141,7 @@ public final class AudioStreamEncoder4 extends AudioStreamEncoder {
                       }), var15, (short) 40, TextureSampler14.aClass94_3388, var3.anInt279);
                   }
                 } else if (SceneNode.aBoolean1837 && var9.method99(31595)) {
-                  Parameter var18 = ~LinearHashTable.anInt1038 != 0 ?
+                  Parameter var18 = (LinearHashTable.anInt1038 != -1) ?
                     Deque.method1210(64, LinearHashTable.anInt1038) :
                     null;
                   if ((16 & Something3dRoot.anInt2051) != 0 && (var18 == null

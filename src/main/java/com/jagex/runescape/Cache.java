@@ -787,7 +787,7 @@ public final class Cache {
                           }
                         }
 
-                        if (var11.aBoolean233 && ~var11.anInt192 != 0) {
+                        if (var11.aBoolean233 && (var11.anInt192 != -1)) {
                           ItemConfig var50 = DummyClass35.getItemConfig(var11.anInt192, (byte) 113);
                           var45 = var50.aClass94_770;
                           if (var45 == null) {
@@ -830,7 +830,7 @@ public final class Cache {
                         }
 
                         var23 = 0;
-                        if (~var11.anInt192 != 0) {
+                        if ((var11.anInt192 != -1)) {
                           var42 = DummyClass35.getItemConfig(var11.anInt192, (byte) 76);
                           if (var42 != null) {
                             var42 = var42.method1106(var11.anInt271, 78);

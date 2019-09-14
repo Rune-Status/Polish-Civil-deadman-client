@@ -117,7 +117,7 @@ public final class TextureSampler20 extends AbstractTextureSampler {
 
       if (var1 == 20827) {
         if (var0 != DummyClass45.anInt991) {
-          if (~var0 != 0) {
+          if ((var0 != -1)) {
             Cursor var2 = TextureSampler3.method311(var0, 5);
             SoftwareDirectColorSprite var3 = var2.method1179((byte) 95);
             if (var3 != null) {
@@ -129,7 +129,7 @@ public final class TextureSampler20 extends AbstractTextureSampler {
             }
           }
 
-          if (~var0 == 0 && ~DummyClass45.anInt991 != 0) {
+          if (~var0 == 0 && (DummyClass45.anInt991 != -1)) {
             DummyClass35.signLink.method1434(null, 10000, -1, GameCanvas.INSTANCE, new Point(),
               -1);
             DummyClass45.anInt991 = -1;
@@ -441,7 +441,7 @@ public final class TextureSampler20 extends AbstractTextureSampler {
 
               for (
                 var1 = SomethingInScenePacket202.method115(true, -1);
-                ~var1 != 0; var1 = SomethingInScenePacket202.method115(false, -1)) {
+                (var1 != -1); var1 = SomethingInScenePacket202.method115(false, -1)) {
                 DummyClass39.method1087(40, var1);
                 AbstractGameWorld.anIntArray726[ClientScript.bitAnd(HuffmanEncoder.anInt641++,
                   31)] = var1;
@@ -713,7 +713,7 @@ public final class TextureSampler20 extends AbstractTextureSampler {
               }
 
               SomethingWorldMapy.aClass11_3551 = null;
-              if (~InventoryConfig.anInt3655 != 0) {
+              if ((InventoryConfig.anInt3655 != -1)) {
                 SpotAnimationConfig.method967(0, 0, 2, 0, DummyClass30.viewWidth,
                   InventoryConfig.anInt3655, 0, GroundItem.viewHeight);
               }
@@ -770,7 +770,7 @@ public final class TextureSampler20 extends AbstractTextureSampler {
                             GameObjectConfig.anInt1521 = 0;
                             ClientScriptCall.anInt2440 = 0;
                           } else if ((ClientScriptCall.anInt2440 == 3 -1)) {
-                            if (~DummyClass32.anInt515 != 0) {
+                            if ((DummyClass32.anInt515 != -1)) {
                               TextureSampler12.secureBuffer.writePacket(131);
                               ++SomethingTexture3.anInt2651;
                               TextureSampler12.secureBuffer.method759(-123, ScriptState.anInt872);

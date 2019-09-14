@@ -32,7 +32,7 @@ public class DummyClass35 {
         }
 
         var2.method1112(5401);
-        if (~var2.anInt791 != 0) {
+        if ((var2.anInt791 != -1)) {
           var2.method1118(DummyClass35.getItemConfig(var2.anInt789, (byte) 70),
               DummyClass35.getItemConfig(var2.anInt791, (byte) 73), false);
         }

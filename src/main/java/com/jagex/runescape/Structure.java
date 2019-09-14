@@ -212,7 +212,7 @@ public final class Structure extends SubNode {
   public static void method606(int var0, AreaSoundEffect var1, int var2, int var3, int var4,
                               int var5) {
     if (var5 > 44) {
-        if (~var1.anInt2332 != 0 || var1.anIntArray2333 != null) {
+        if ((var1.anInt2332 != -1) || var1.anIntArray2333 != null) {
           int var6 = 0;
           if (var1.anInt2321 < var0) {
             var6 += -var1.anInt2321 + var0;

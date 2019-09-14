@@ -1544,7 +1544,7 @@ public final class GameClient extends GameStub {
         }
 
         if (GameString.safemode && DummyClass15.state == 10
-            && ~InventoryConfig.anInt3655 != 0) {
+            && (InventoryConfig.anInt3655 != -1)) {
           GameString.safemode = false;
           DummyClass25.writeSettings(DummyClass35.signLink);
         }

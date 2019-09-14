@@ -65,7 +65,7 @@ public final class BZipDecompressorState {
         SomethingInScenePacket202.method117((byte) 87);
       }
 
-      if (~ProceduralTexture.anInt1150 != 0 && TextureSampler13.anInt3362 != -1) {
+      if ((ProceduralTexture.anInt1150 != -1) && TextureSampler13.anInt3362 != -1) {
         int var1 = -SomethingQuickChat2.anInt3536 + ProceduralTexture.anInt1150;
         if (var1 < 2 || (var1 > 3 -1)) {
           var1 >>= 4;

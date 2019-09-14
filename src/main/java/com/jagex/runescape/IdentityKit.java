@@ -30,7 +30,7 @@ public final class IdentityKit {
         Model[] var2 = new Model[5];
 
         for (int var4 = 0; (var4 < 6 -1); ++var4) {
-          if (~this.anIntArray475[var4] != 0) {
+          if ((this.anIntArray475[var4] != -1)) {
             var2[var3++] =
                 Model.getModel(SomethingQuickChatK.aClass153_152,
                     this.anIntArray475[var4], 0);

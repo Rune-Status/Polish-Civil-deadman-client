@@ -410,7 +410,7 @@ public final class DirectImageProducer extends AbstractImageProducer
                           Cache.repackHSL(var22, true, var18),
                           Cache.repackHSL(var23, true, var18), 0, 0, 0, 0,
                           var19, 0);
-                  if (GlRenderer.useOpenGlRenderer && var8 > 0 && ~var18 != 0
+                  if (GlRenderer.useOpenGlRenderer && var8 > 0 && (var18 != -1)
                       && ClientScript
                       .getFloorUnderlay(-1 + lightPosZ).aBoolean1411) {
                     DummyClass16
@@ -440,7 +440,7 @@ public final class DirectImageProducer extends AbstractImageProducer
                           if (var54 != 0) {
                             FloorOverlay var53 = TextureSampler10
                                 .method350((byte) -25, -1 + var54);
-                            if (~var53.anInt2095 != 0
+                            if ((var53.anInt2095 != -1)
                                 && DummyClass40.textureCache.method18(
                                 var53.anInt2095, 255) == 4) {
                               TextureSampler16.anIntArrayArray3115[lightPosX][lightPosY] =
@@ -485,7 +485,7 @@ public final class DirectImageProducer extends AbstractImageProducer
                               FloorOverlay var30 =
                                   TextureSampler10
                                       .method350((byte) -14, -1 + var29);
-                              if (~var30.anInt2095 != 0
+                              if ((var30.anInt2095 != -1)
                                   && (DummyClass40.textureCache
                                   .method18(var30.anInt2095,
                                       255) == 5 -1)) {

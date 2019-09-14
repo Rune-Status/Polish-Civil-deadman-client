@@ -125,7 +125,7 @@ public final class NpcConfiguration {
       } else {
         int var2 = -1;
         if (this.anInt1257 == -1) {
-          if (~this.anInt1295 != 0) {
+          if ((this.anInt1295 != -1)) {
             var2 = DummyClass5.anIntArray2985[this.anInt1295];
           }
         } else {
@@ -137,7 +137,7 @@ public final class NpcConfiguration {
           return true;
         } else {
           int var3 = this.anIntArray1292[-1 + this.anIntArray1292.length];
-          return ~var3 != 0;
+          return (var3 != -1);
         }
       }
   }
@@ -149,10 +149,10 @@ public final class NpcConfiguration {
 
       if (this.anIntArray1292 != null) {
         for (int var2 = 0; this.anIntArray1292.length > var2; ++var2) {
-          if (~this.anIntArray1292[var2] != 0) {
+          if ((this.anIntArray1292[var2] != -1)) {
             NpcConfiguration var3 = SubNode.getNpcConfiguration(
                 this.anIntArray1292[var2]);
-            if (~var3.anInt1262 != 0 || ~var3.anInt1293 != 0
+            if ((var3.anInt1262 != -1) || (var3.anInt1293 != -1)
                 || var3.anInt1276 != -1) {
               return true;
             }
@@ -223,7 +223,7 @@ public final class NpcConfiguration {
           Model[] var14 = new Model[this.anIntArray1288.length];
 
           for (int var15 = 0; this.anIntArray1288.length > var15; ++var15) {
-            if (~this.anIntArray1288[var15] != 0) {
+            if ((this.anIntArray1288[var15] != -1)) {
               var14[var15] =
                 Model.getModel(TextureSampler31.aClass153_3173,
                     this.anIntArray1288[var15], 0);
@@ -372,8 +372,7 @@ public final class NpcConfiguration {
                 var36 |= var39.aBoolean1848;
               }
 
-              if ((var39.tween || MonoChromaticImageBuffer.tweening) && ~var20
-                  != 0
+              if ((var39.tween || MonoChromaticImageBuffer.tweening) && (var20 != -1)
                 && var39.anIntArray1851.length > var20) {
                 DummyClass35.anIntArray664[var17] = var39.anIntArray1869[var19];
                 SubNode.anIntArray2574[var17] = var1[var17].anInt1897;
@@ -423,7 +422,7 @@ public final class NpcConfiguration {
               var36 |= var10.aBoolean1848;
             }
 
-            if ((var10.tween || MonoChromaticImageBuffer.tweening) && ~var5 != 0
+            if ((var10.tween || MonoChromaticImageBuffer.tweening) && (var5 != -1)
               && var10.anIntArray1851.length > var5) {
               var19 = var10.anIntArray1869[var7];
               var18 = var10.anIntArray1851[var5];
@@ -462,7 +461,7 @@ public final class NpcConfiguration {
               var36 |= var8.aBoolean1848;
             }
 
-            if ((var8.tween || MonoChromaticImageBuffer.tweening) && ~var2 != 0
+            if ((var8.tween || MonoChromaticImageBuffer.tweening) && (var2 != -1)
               && var2 < var8.anIntArray1851.length) {
               var24 = var8.anIntArray1869[var4];
               var42 = var8.anIntArray1851[var2];

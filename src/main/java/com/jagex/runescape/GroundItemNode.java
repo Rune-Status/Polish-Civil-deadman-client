@@ -232,7 +232,7 @@ public final class GroundItemNode extends SubNode {
         GroundItemNode.aBooleanArray3674 = null;
       }
 
-      if ((var2 == var3.animationId) && ~var2 != 0) {
+      if ((var2 == var3.animationId) && (var2 != -1)) {
         AnimationSequence var4 = GameClient.method45(var2, (byte) -20);
         int var5 = var4.anInt1845;
         if (var5 == 1) {

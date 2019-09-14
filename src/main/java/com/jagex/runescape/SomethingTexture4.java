@@ -217,7 +217,7 @@ public final class SomethingTexture4 extends AbstractSomethingTexture {
 
           var6 = SpotAnimationConfig.gameBuffer.method782(-46);
           boolean var7 = true;
-          if (~var5 != 0 && ~var3.anInt2842 != 0 &&
+          if ((var5 != -1) && (var3.anInt2842 != -1) &&
               GameClient
                   .method45(RenderAnimation.method898((byte) 42, var5).anInt542,
                       (byte) -20).anInt1857 < GameClient.method45(
@@ -241,7 +241,7 @@ public final class SomethingTexture4 extends AbstractSomethingTexture {
                 && (var3.anInt2759 == AbstractGameWorld.updateCycle)) {
               int var8 = RenderAnimation
                   .method898((byte) 42, var3.anInt2842).anInt542;
-              if (~var8 != 0) {
+              if ((var8 != -1)) {
                 AnimationSequence var9 = GameClient.method45(var8, (byte) -20);
                 if (var9.anIntArray1851 != null) {
                   SocketStream.method1470(var3.anInt2829, var9, 183921384,

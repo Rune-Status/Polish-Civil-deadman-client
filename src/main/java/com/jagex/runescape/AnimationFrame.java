@@ -65,7 +65,7 @@ public final class AnimationFrame extends Node {
   }
 
   public static void method381(boolean var0) {
-    if (~InventoryConfig.anInt3655 != 0) {
+    if ((InventoryConfig.anInt3655 != -1)) {
         PlayerAppearance.method1160(-120, InventoryConfig.anInt3655);
       }
 
@@ -90,7 +90,7 @@ public final class AnimationFrame extends Node {
         AnimationFrame.method380(-78);
       }
 
-      if (~InventoryConfig.anInt3655 != 0) {
+      if ((InventoryConfig.anInt3655 != -1)) {
         SomethingWorldMapy.widgetQuads = 0;
         FileSystem.method841(true);
       }

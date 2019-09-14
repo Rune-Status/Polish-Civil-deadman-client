@@ -377,7 +377,7 @@ public final class ProceduralTexture {
               DummyClass56.method1647((byte) 122, var4 >> 1, var3, var8, var5,
                 var8.method1975(var6 ^ -28716) - -15, var1 >> 1);
               if (DummyClass34.anInt590 > -1) {
-                if (~var10.anInt3972 != 0) {
+                if ((var10.anInt3972 != -1)) {
                   TextureSampler2.aClass3_Sub28_Sub16Array3373[var10.anInt3972].method643(
                     -12 + DummyClass34.anInt590 + var2, -var19 + var0 + WidgetAccess.anInt2208);
                   var19 += 25;

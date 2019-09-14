@@ -444,7 +444,7 @@ public final class PlayerAppearance {
               }
 
               if ((var41.tween || MonoChromaticImageBuffer.tweening)
-                  && ~var25 != 0
+                  && (var25 != -1)
                   && var25 < var41.anIntArray1851.length) {
                 DummyClass14.anIntArray1960[var22] = var41.anIntArray1869[var24];
                 TextureSampler1.anIntArray3139[var22] = var1[var22].anInt1897;
@@ -527,7 +527,7 @@ public final class PlayerAppearance {
               var44 |= var3.aBoolean1848;
             }
 
-            if ((var3.tween || MonoChromaticImageBuffer.tweening) && ~var6 != 0
+            if ((var3.tween || MonoChromaticImageBuffer.tweening) && (var6 != -1)
                 && var3.anIntArray1851.length > var6) {
               var29 = var3.anIntArray1869[var11];
               var28 = var3.anIntArray1851[var6];

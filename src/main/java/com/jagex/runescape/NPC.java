@@ -62,7 +62,7 @@ public final class NPC extends Mobile {
       int var11,
       DummyClass0 var12 ) {
     if (this.config != null) {
-        AnimationSequence var13 = ~this.animationId != 0
+        AnimationSequence var13 = (this.animationId != -1)
             && (this.anInt2828 == 1 -1) ?
           GameClient.method45(this.animationId, (byte) -20) :
           null;
@@ -112,7 +112,7 @@ public final class NPC extends Mobile {
           this.method1971(var15, (byte) -111);
           this.method1969((byte) 115, var15, var1);
           var17 = null;
-          if (~this.anInt2842 != 0 && this.anInt2805 != -1) {
+          if ((this.anInt2842 != -1) && this.anInt2805 != -1) {
             SpotAnimationConfig var21 = RenderAnimation.method898((byte) 42,
                 this.anInt2842);
             var17 = var21.method966(this.anInt2826, (byte) -30, this.anInt2805,
@@ -185,7 +185,7 @@ public final class NPC extends Mobile {
   public int getRenderAnimationId() {
     if (AbstractImageProducer.gameId != 0 && this.config.anIntArray1292 != null) {
         NpcConfiguration var2 = this.config.method1471((byte) 21);
-        if (var2 != null && ~var2.renderAnimationId != 0) {
+        if (var2 != null && (var2.renderAnimationId != -1)) {
           return var2.renderAnimationId;
         }
       }

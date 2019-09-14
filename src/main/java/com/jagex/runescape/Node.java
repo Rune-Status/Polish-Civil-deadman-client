@@ -41,7 +41,7 @@ public class Node {
     }
 
     int var2 = FloorUnderlay.method1602(0, var0);
-    if (~var2 != 0) {
+    if ((var2 != -1)) {
       AbstractObjectNode.method565((byte) 86,
           DummyClass25.aClass131_1624.aShortArray1727[var2],
           DummyClass25.aClass131_1624.aShortArray1718[var2]);

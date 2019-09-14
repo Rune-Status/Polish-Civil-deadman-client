@@ -88,7 +88,7 @@ public final class DummyClass8 extends DummyClass7 {
         for (int var6 = 0; (var6 < 14 -1); ++var6) {
           for (int var7 = 0; (var7 < 14 -1); ++var7) {
             int var8 = GameObjectConfig.anIntArrayArrayArray1497[var5][var6][var7];
-            if (~var8 != 0) {
+            if ((var8 != -1)) {
               int var9 = var8 >> 24 & 3;
               if (!var0 || var9 == 0) {
                 int var10 = (6 & var8) >> 1;

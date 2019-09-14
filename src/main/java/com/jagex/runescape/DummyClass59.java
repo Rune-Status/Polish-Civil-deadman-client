@@ -77,7 +77,7 @@ public final class DummyClass59 {
 
       int var2;
       for (var2 = 0; (var2 < Something3d2.aByteArrayArray3027.length); ++var2) {
-        if (~GameClient.mapFileIds[var2] != 0 &&
+        if ((GameClient.mapFileIds[var2] != -1) &&
             Something3d2.aByteArrayArray3027[var2] == null) {
           Something3d2.aByteArrayArray3027[var2] =
             TextureSampler26.maps.getBytes(GameClient.mapFileIds[var2], 0);
@@ -99,7 +99,7 @@ public final class DummyClass59 {
         }
 
         if (GlRenderer.useOpenGlRenderer) {
-          if (~TextureSampler17.updatedMapIds[var2] != 0
+          if ((TextureSampler17.updatedMapIds[var2] != -1)
             && GroundItemNode.updatedMapsData[var2] == null) {
             GroundItemNode.updatedMapsData[var2] =
               TextureSampler26.maps.getBytes(TextureSampler17.updatedMapIds[var2], 0);

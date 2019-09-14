@@ -114,7 +114,7 @@ public final class TextureSampler24 extends AbstractTextureSampler {
   }
 
   public static void method226(int var0, int var1) {
-    if (~var0 != 0) {
+    if ((var0 != -1)) {
         if (var1 <= 27) {
           TextureSampler24.method228(null, null, true);
         }

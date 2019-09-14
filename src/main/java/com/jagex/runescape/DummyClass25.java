@@ -72,7 +72,7 @@ public final class DummyClass25 {
             .setLocation(DummyClass51.viewX, DisplayMode.viewY);
       }
 
-      if (~InventoryConfig.anInt3655 != 0) {
+      if ((InventoryConfig.anInt3655 != -1)) {
         DummyClass23.method1746(true, (byte) -125);
       }
 

@@ -56,7 +56,7 @@ public final class SceneShadowMap {
                   if ((var29 != 1 -1)) {
                     GameObjectConfig var14 = DummyClass11.method2207(4, -1 + var29);
                     if (!AudioStreamEncoder4.aBooleanArray3503[var14.anInt1482]) {
-                      if (~var13 != 0 && (var14.anInt1482 == FileSystem.anInt101)) {
+                      if ((var13 != -1) && (var14.anInt1482 == FileSystem.anInt101)) {
                         SomethingOtherWorldMap var30 = new SomethingOtherWorldMap();
                         var30.anInt2531 = var18;
                         var30.anInt2539 = var24;

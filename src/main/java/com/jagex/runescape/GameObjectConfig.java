@@ -161,7 +161,7 @@ public final class GameObjectConfig {
       }
 
       if ((var2 >= 1 -1) && (var2 < this.anIntArray1524.length -1)
-        && ~this.anIntArray1524[var2] != 0) {
+        && (this.anIntArray1524[var2] != -1)) {
         return DummyClass11.method2207(4, this.anIntArray1524[var2]);
       } else {
         int var3 = this.anIntArray1524[-1 + this.anIntArray1524.length];
@@ -343,10 +343,10 @@ public final class GameObjectConfig {
         }
 
         for (int var2 = 0; (var2 < this.anIntArray1524.length); ++var2) {
-          if (~this.anIntArray1524[var2] != 0) {
+          if ((this.anIntArray1524[var2] != -1)) {
             GameObjectConfig var3 =
               DummyClass11.method2207(var1 + -28929, this.anIntArray1524[var2]);
-            if (~var3.anInt1512 != 0 || var3.anIntArray1539 != null) {
+            if ((var3.anInt1512 != -1) || var3.anIntArray1539 != null) {
               return true;
             }
           }

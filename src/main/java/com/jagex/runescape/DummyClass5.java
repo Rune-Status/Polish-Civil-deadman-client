@@ -102,7 +102,7 @@ public class DummyClass5 extends DummyClass6 {
                   }
                 }
 
-                if (~var7 != 0) {
+                if ((var7 != -1)) {
                   GameBuffer.method806(2597, var7);
                 }
 

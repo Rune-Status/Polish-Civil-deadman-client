@@ -188,7 +188,7 @@ public final class DummyClass38 {
 
         var5 = SpotAnimationConfig.gameBuffer.readInt((byte) -73);
         boolean var21 = true;
-        if (~var4 != 0 && ~var3.anInt2842 != 0 &&
+        if ((var4 != -1) && (var3.anInt2842 != -1) &&
           GameClient.method45(RenderAnimation.method898((byte) 42, var4).anInt542,
             (byte) -20).anInt1857 < GameClient.method45(
             RenderAnimation.method898((byte) 42, var3.anInt2842).anInt542, (byte) -20).anInt1857) {
@@ -206,9 +206,9 @@ public final class DummyClass38 {
 
           var3.anInt2799 = var5 >> 16;
           var3.anInt2826 = 1;
-          if (~var3.anInt2842 != 0 && AbstractGameWorld.updateCycle == var3.anInt2759) {
+          if ((var3.anInt2842 != -1) && AbstractGameWorld.updateCycle == var3.anInt2759) {
             var7 = RenderAnimation.method898((byte) 42, var3.anInt2842).anInt542;
-            if (~var7 != 0) {
+            if ((var7 != -1)) {
               AnimationSequence var24 = GameClient.method45(var7, (byte) -20);
               if (var24.anIntArray1851 != null) {
                 SocketStream.method1470(var3.anInt2829, var24, 183921384, var3.anInt2819,

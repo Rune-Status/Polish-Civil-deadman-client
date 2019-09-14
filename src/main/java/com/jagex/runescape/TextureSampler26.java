@@ -177,7 +177,7 @@ public final class TextureSampler26 extends AbstractTextureSampler {
 
       if ((ClientScriptCall.anInt2453 != 1 -1)
           && var0 != 0 && (SomethingLight0.anInt1552 < 51 -1)
-        && ~var1 != 0) {
+        && (var1 != -1)) {
         Inventory.anIntArray2550[SomethingLight0.anInt1552] = var1;
         SomethingIndex150.anIntArray2068[SomethingLight0.anInt1552] = var0;
         GameString.anIntArray2157[SomethingLight0.anInt1552] = var2;

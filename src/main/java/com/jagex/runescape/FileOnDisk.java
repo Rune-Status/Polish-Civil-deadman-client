@@ -27,7 +27,7 @@ public final class FileOnDisk {
     this.aLong1649 = var3;
     this.aLong1652 = 0L;
     int var5 = this.aRandomAccessFile1651.read();
-    if (~var5 != 0 && !var2.equals("r")) {
+    if ((var5 != -1) && !var2.equals("r")) {
       this.aRandomAccessFile1651.seek(0L);
       this.aRandomAccessFile1651.write(var5);
     }

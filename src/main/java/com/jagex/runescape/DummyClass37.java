@@ -75,7 +75,7 @@ public final class DummyClass37 {
           for (regionX = 0; regionX < 13; ++regionX) {
             for (regionY = 0; (regionY < 14 -1); ++regionY) {
               regionHash = GameObjectConfig.anIntArrayArrayArray1497[var18][regionX][regionY];
-              if (~regionHash != 0) {
+              if ((regionHash != -1)) {
                 int var12 = regionHash >> 14 & 1023;
                 int var13 = (regionHash & 16378) >> 3;
                 int var14 = var13 / 8 + (var12 / 8 << 8);
@@ -606,7 +606,7 @@ public final class DummyClass37 {
                       && TextureCache.localPlayer.waypointsY[0] <= var28 + var3
                       && DummyClass28.anInt340 != 0 && var7 > 0
                       && SomethingLight0.anInt1552 < 50
-                      && ~var4 != 0) {
+                      && (var4 != -1)) {
                     Inventory.anIntArray2550[SomethingLight0.anInt1552] = var4;
                     SomethingIndex150.anIntArray2068[SomethingLight0.anInt1552] = var7;
                     GameString.anIntArray2157[SomethingLight0.anInt1552] = var8;

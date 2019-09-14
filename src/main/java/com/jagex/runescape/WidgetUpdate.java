@@ -57,7 +57,7 @@ public final class WidgetUpdate extends SubNode {
   }
 
   public static void d(int var0) {
-    if (~NpcConfiguration.anInt1252 != 0 && ~VariableUpdate.anInt2293 != 0) {
+    if ((NpcConfiguration.anInt1252 != -1) && (VariableUpdate.anInt2293 != -1)) {
         int var1 =
           (DummyClass8.anInt4020 * (-DummyClass21.anInt1759 + AbstractTextureSampler.anInt2383)
             >> 16) + DummyClass21.anInt1759;
@@ -166,7 +166,7 @@ public final class WidgetUpdate extends SubNode {
 
   public static String createIndexedColorSprite(String var0, String var1, int var2, String var3) {
     for (int var4 = var3.indexOf(var0);
-        ~var4 != 0; var4 = var3.indexOf(var0, var4 + var1.length())) {
+        (var4 != -1); var4 = var3.indexOf(var0, var4 + var1.length())) {
       var3 = var3.substring(0, var4) + var1 + var3.substring(var0.length() + var4);
     }
 

@@ -93,7 +93,7 @@ public final class ClassCheckRequest extends Node {
               if ((var13 >= (-var4.anInt168)) && var13 <= var4.anInt168 && var14 >= -var4.anInt193
                 && var14 <= var4.anInt193) {
                 var17 = 16777215;
-                if (~TextureSampler22.aClass131_3421.anIntArray1725[var8] != 0) {
+                if ((TextureSampler22.aClass131_3421.anIntArray1725[var8] != -1)) {
                   var17 = TextureSampler22.aClass131_3421.anIntArray1725[var8];
                 }
 
@@ -471,7 +471,7 @@ public final class ClassCheckRequest extends Node {
 
         MidiSomething.aBoolean1158 = false;
       } else if ((BZipDecompressorState.anInt120 != 1 -1)
-          && ~AbstractFrameRegulator.anInt1691 != 0
+          && (AbstractFrameRegulator.anInt1691 != -1)
         && !BitVariable.method1391(var0 + 91)) {
         TextureSampler12.secureBuffer.writePacket(137);
         TextureSampler12.secureBuffer.writeInt(AbstractFrameRegulator.anInt1691);

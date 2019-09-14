@@ -113,7 +113,7 @@ public abstract class Mobile extends SceneNode {
   }
 
   public final void setPosition(int size, int x, int y, boolean var5) {
-    if (~this.animationId != 0 && (GameClient.method45(this.animationId,
+    if ((this.animationId != -1) && (GameClient.method45(this.animationId,
         (byte) -20).anInt1850 == 2 -1)) {
         this.animationId = -1;
       }
@@ -159,7 +159,7 @@ public abstract class Mobile extends SceneNode {
         ++var5;
       }
 
-      if (~this.animationId != 0 && GameClient.method45(this.animationId,
+      if ((this.animationId != -1) && GameClient.method45(this.animationId,
           (byte) -20).anInt1850 == 1) {
         this.animationId = -1;
       }

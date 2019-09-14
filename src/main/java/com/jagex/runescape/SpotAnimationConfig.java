@@ -130,7 +130,7 @@ public final class SpotAnimationConfig {
         }
 
         AbstractModel var9;
-        if (~this.anInt542 != 0 && var3 != -1) {
+        if ((this.anInt542 != -1) && var3 != -1) {
           var9 = GameClient.method45(this.anInt542, (byte) -20)
               .method2059(var1, var4, var3, (byte) -52, var5);
         } else {

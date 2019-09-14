@@ -193,7 +193,7 @@ public class Something3d2 extends Something3dRoot {
               var11 += var4[var6++];
               var12 = EnumStringFetcher.getWidget((byte) 115, var11);
               var13 = var4[var6++];
-              if (~var13 != 0 && (!DummyClass35.getItemConfig(var13, (byte) 88).aBoolean779
+              if ((var13 != -1) && (!DummyClass35.getItemConfig(var13, (byte) 88).aBoolean779
                 || MapScene.aBoolean66)) {
                 assert var12 != null;
                 for (var14 = 0; var12.anIntArray254.length > var14; ++var14) {

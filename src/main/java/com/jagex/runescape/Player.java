@@ -221,7 +221,7 @@ public final class Player extends Mobile {
             this.animationId != -1 && this.anInt2828 == 0 ?
           GameClient.method45(this.animationId, (byte) -20) :
           null;
-        AnimationSequence var14 = ~this.anInt2764 != 0
+        AnimationSequence var14 = (this.anInt2764 != -1)
             && !this.aBoolean3968 && (
           (this.anInt2764 != Objects
               .requireNonNull(this.getRenderAnimationId(false)).anInt368) || var13 == null) ?
@@ -278,7 +278,7 @@ public final class Player extends Mobile {
             for (var17 = GameException.aClass96Array2114.length + -1;
                 (var17 >= 1 -1); --var17) {
               HintMarker var27 = GameException.aClass96Array2114[var17];
-              if (var27 != null && ~var27.anInt1355 != 0) {
+              if (var27 != null && (var27.anInt1355 != -1)) {
                 int var21;
                 int var20;
                 if ((var27.anInt1360 == 2 -1) && var27.anInt1359 >= 0
@@ -318,7 +318,7 @@ public final class Player extends Mobile {
           this.method1971(var15, (byte) -103);
           this.method1969((byte) 110, var15, var1);
           var23 = null;
-          if (!this.aBoolean3968 && ~this.anInt2842 != 0 && this.anInt2805 != -1) {
+          if (!this.aBoolean3968 && (this.anInt2842 != -1) && this.anInt2805 != -1) {
             SpotAnimationConfig var26 = RenderAnimation.method898((byte) 42,
                 this.anInt2842);
             var23 = var26.method966(this.anInt2826, (byte) -30, this.anInt2805,

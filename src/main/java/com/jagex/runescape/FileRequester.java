@@ -375,7 +375,7 @@ public final class FileRequester extends AbstractFileRequester {
 
       if (var4 == null) {
         if (var1 == 0) {
-          if (this.aClass41_2954 != null && ~this.aByteArray2949[var2] != 0) {
+          if (this.aClass41_2954 != null && (this.aByteArray2949[var2] != -1)) {
             var4 = this.aClass73_2956
                 .method1309(this.aClass41_2954, (byte) 106, var2);
           } else {
@@ -395,7 +395,7 @@ public final class FileRequester extends AbstractFileRequester {
             throw new RuntimeException();
           }
 
-          if (~this.aByteArray2949[var2] != 0) {
+          if ((this.aByteArray2949[var2] != -1)) {
             throw new RuntimeException();
           }
 

@@ -75,7 +75,7 @@ public final class MouseRecorder implements Runnable {
 
           if (var4.anInt187 == 6) {
             int var6;
-            if (~var4.anInt305 != 0 || ~var4.anInt198 != 0) {
+            if ((var4.anInt305 != -1) || (var4.anInt198 != -1)) {
               boolean var9 = InventoryConfig.method609(var4, var0 + -23173);
               if (var9) {
                 var6 = var4.anInt198;

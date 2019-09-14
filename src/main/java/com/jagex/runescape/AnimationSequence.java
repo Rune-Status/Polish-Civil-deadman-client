@@ -67,7 +67,7 @@ public final class AnimationSequence {
           this.method2053(null, (byte) -126);
         }
 
-        if ((this.tween || MonoChromaticImageBuffer.tweening) && ~var3 != 0
+        if ((this.tween || MonoChromaticImageBuffer.tweening) && (var3 != -1)
           && this.anIntArray1851.length > var3) {
           var3 = this.anIntArray1851[var3];
           var9 = AreaSoundEffect.method133(var3 >> 16, 0);
@@ -149,7 +149,7 @@ public final class AnimationSequence {
         return var1.method1894(true, true, true);
       } else {
         AnimationSomething var9 = null;
-        if ((this.tween || MonoChromaticImageBuffer.tweening) && ~var3 != 0
+        if ((this.tween || MonoChromaticImageBuffer.tweening) && (var3 != -1)
           && (var3 < this.anIntArray1851.length)) {
           var3 = this.anIntArray1851[var3];
           var9 = AreaSoundEffect.method133(var3 >> 16, 0);
@@ -220,7 +220,7 @@ public final class AnimationSequence {
       } else {
         var4 &= var6;
         AnimationSomething var9 = null;
-        if ((this.tween || MonoChromaticImageBuffer.tweening) && ~var1 != 0
+        if ((this.tween || MonoChromaticImageBuffer.tweening) && (var1 != -1)
           && (var1 < this.anIntArray1851.length)) {
           var1 = this.anIntArray1851[var1];
           var9 = AreaSoundEffect.method133(var1 >> 16, var6 + -3);
@@ -312,7 +312,7 @@ public final class AnimationSequence {
         return var5.method1882(true, true, true);
       } else {
         AnimationSomething var9 = null;
-        if ((this.tween || MonoChromaticImageBuffer.tweening) && ~var1 != 0
+        if ((this.tween || MonoChromaticImageBuffer.tweening) && (var1 != -1)
           && this.anIntArray1851.length > var1) {
           var1 = this.anIntArray1851[var1];
           var9 = AreaSoundEffect.method133(var1 >> 16, 0);
@@ -688,7 +688,7 @@ public final class AnimationSequence {
         NpcConfiguration.anIntArray1277[var1] = -1;
       }
 
-      if (~InventoryConfig.anInt3655 != 0) {
+      if ((InventoryConfig.anInt3655 != -1)) {
         DummyClass44.method1208((byte) -128, InventoryConfig.anInt3655);
       }
 

@@ -68,7 +68,7 @@ public final class Cursor {
       if ((var1.anInt2816 == 1 -1)) {
         var1.anInt2824 = 0;
       } else {
-        if (~var1.animationId != 0 && var1.anInt2828 == 0) {
+        if ((var1.animationId != -1) && var1.anInt2828 == 0) {
           AnimationSequence var3 = GameClient
               .method45(var1.animationId, (byte) -20);
           if ((var1.anInt2811 > 1 -1) && var3.anInt1866 == 0) {
@@ -192,15 +192,15 @@ public final class Cursor {
         if ((var9 >= 9 -1) && var2.anInt393 != -1) {
           if ((var2.anInt389 == var1.anInt2764) && var2.anInt386 != -1) {
             var1.anInt2764 = var2.anInt386;
-          } else if (var1.anInt2764 == var2.anInt390 && ~var2.anInt373 != 0) {
+          } else if (var1.anInt2764 == var2.anInt390 && (var2.anInt373 != -1)) {
             var1.anInt2764 = var2.anInt373;
-          } else if ((var1.anInt2764 == var2.anInt364) && ~var2.anInt375 != 0) {
+          } else if ((var1.anInt2764 == var2.anInt364) && (var2.anInt375 != -1)) {
             var1.anInt2764 = var2.anInt375;
           } else {
             var1.anInt2764 = var2.anInt393;
           }
         } else if (var2.anInt398 != -1 && (var11 == 1 -1)) {
-          if ((var2.anInt389 == var1.anInt2764) && ~var2.anInt372 != 0) {
+          if ((var2.anInt389 == var1.anInt2764) && (var2.anInt372 != -1)) {
             var1.anInt2764 = var2.anInt372;
           } else if ((var2.anInt390 == var1.anInt2764) && var2.anInt406 != -1) {
             var1.anInt2764 = var2.anInt406;

@@ -690,7 +690,7 @@ public final class DummyClass18 {
             if (var47 != null) {
               var38 = new WidgetAccess(var47.anInt2205, var20);
               var47.unlinkNode();
-            } else if (~var30 != 0) {
+            } else if ((var30 != -1)) {
               var38 = new WidgetAccess(0, var20);
             } else {
               var38 = new WidgetAccess(
@@ -721,7 +721,7 @@ public final class DummyClass18 {
                 var5 = -1;
               }
 
-              var32 = !(~var5 != 0 && var62.anInt2842 != -1 &&
+              var32 = !((var5 != -1) && var62.anInt2842 != -1 &&
                 (GameClient.method45(RenderAnimation.method898((byte) 42, var5).anInt542,
                   (byte) -20).anInt1857 < GameClient.method45(
                   RenderAnimation.method898((byte) 42, var62.anInt2842).anInt542,
@@ -738,9 +738,9 @@ public final class DummyClass18 {
 
                 var62.anInt2799 = var3;
                 var62.anInt2826 = 1;
-                if (~var62.anInt2842 != 0 && AbstractGameWorld.updateCycle == var62.anInt2759) {
+                if ((var62.anInt2842 != -1) && AbstractGameWorld.updateCycle == var62.anInt2759) {
                   var33 = RenderAnimation.method898((byte) 42, var62.anInt2842).anInt542;
-                  if (~var33 != 0) {
+                  if ((var33 != -1)) {
                     var53 = GameClient.method45(var33, (byte) -20);
                     if (var53 != null && var53.anIntArray1851 != null) {
                       SocketStream.method1470(var62.anInt2829, var53, 183921384, var62.anInt2819,
@@ -764,7 +764,7 @@ public final class DummyClass18 {
                 var5 = -1;
               }
 
-              var32 = !(var5 != -1 && ~var60.anInt2842 != 0 &&
+              var32 = !(var5 != -1 && (var60.anInt2842 != -1) &&
                 (GameClient.method45(RenderAnimation.method898((byte) 42, var5).anInt542,
                   (byte) -20).anInt1857 < GameClient.method45(
                   RenderAnimation.method898((byte) 42, var60.anInt2842).anInt542,
@@ -785,9 +785,9 @@ public final class DummyClass18 {
                   var60.anInt2805 = -1;
                 }
 
-                if (~var60.anInt2842 != 0 && (var60.anInt2759 == AbstractGameWorld.updateCycle)) {
+                if ((var60.anInt2842 != -1) && (var60.anInt2759 == AbstractGameWorld.updateCycle)) {
                   var33 = RenderAnimation.method898((byte) 42, var60.anInt2842).anInt542;
-                  if (~var33 != 0) {
+                  if ((var33 != -1)) {
                     var53 = GameClient.method45(var33, (byte) -20);
                     if (var53 != null && var53.anIntArray1851 != null) {
                       SocketStream.method1470(var60.anInt2829, var53, 183921384, var60.anInt2819,
@@ -1221,7 +1221,7 @@ public final class DummyClass18 {
             FileRequester.method2104(var27, true, 48);
           }
 
-          if (~InventoryConfig.anInt3655 != 0) {
+          if ((InventoryConfig.anInt3655 != -1)) {
             ClassCheckRequest.method124(28, 1, InventoryConfig.anInt3655);
           }
         }
