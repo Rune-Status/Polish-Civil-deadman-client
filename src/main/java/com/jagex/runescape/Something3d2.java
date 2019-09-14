@@ -152,7 +152,7 @@ public class Something3d2 extends Something3dRoot {
             if ((var8 == 4)) {
               var11 = var4[var6++] << 16;
               var11 += var4[var6++];
-              var12 = EnumStringFetcher.getWidget((byte) 124, var11);
+              var12 = GlobalStatics_7.getWidget((byte) 124, var11);
               var13 = var4[var6++];
               if (var13 != -1 && (!DummyClass35.getItemConfig(var13, (byte) 109).aBoolean779
                 || MapScene.aBoolean66)) {
@@ -193,7 +193,7 @@ public class Something3d2 extends Something3dRoot {
             if (var8 == 10) {
               var11 = var4[var6++] << 16;
               var11 += var4[var6++];
-              var12 = EnumStringFetcher.getWidget((byte) 115, var11);
+              var12 = GlobalStatics_7.getWidget((byte) 115, var11);
               var13 = var4[var6++];
               if ((var13 != -1) && (!DummyClass35.getItemConfig(var13, (byte) 88).aBoolean779
                 || MapScene.aBoolean66)) {

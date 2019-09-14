@@ -16,7 +16,7 @@ public final class DummyClass20 {
         DummyClass20.method1818(true);
       }
 
-      return !FileCacheRequester.aBoolean1084 ?
+      return !GlobalStatics_7.aBoolean1084 ?
         (!NPC.method1986(var0 ^ 28) ? 1 : (GlobalStatics_2.aBoolean3604 ? 2 : 1)) :
         0;
   }
@@ -36,13 +36,13 @@ public final class DummyClass20 {
         DummyClass20.method1818(true);
       }
 
-      if (DirectImageProducer.aBoolean2981) {
+      if (GlobalStatics_7.aBoolean2981) {
         SomethingSceneI.anInt433 = 32;
       } else {
         SomethingSceneI.anInt433 = 0;
       }
 
-      DirectImageProducer.aBoolean2981 = false;
+      GlobalStatics_7.aBoolean2981 = false;
       int var8;
       if ((TextureSampler21.anInt3069 != 0)) {
         if ((var5 <= var4) && (var5 + 16) > var4 && var0 >= var6 && var6 + 16 > var0) {
@@ -64,7 +64,7 @@ public final class DummyClass20 {
           int var9 = -(var8 / 2) - 16 - var6 + var0;
           var2.anInt208 = (-var1 + var7) * var9 / var10;
           DummyClass29.method909(-48, var2);
-          DirectImageProducer.aBoolean2981 = true;
+          GlobalStatics_7.aBoolean2981 = true;
         }
       }
 

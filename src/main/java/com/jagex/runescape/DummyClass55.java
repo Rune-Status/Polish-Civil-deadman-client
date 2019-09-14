@@ -1,5 +1,7 @@
 package com.jagex.runescape;
 
+import com.jagex.runescape.done.AudioStreamEncoder4;
+import com.jagex.runescape.done.BufferedFile;
 import com.jagex.runescape.node.Deque;
 import com.jagex.runescape.opengl.SomethingGl;
 

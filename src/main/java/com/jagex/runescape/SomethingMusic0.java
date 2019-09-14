@@ -1,5 +1,7 @@
 package com.jagex.runescape;
 
+import com.jagex.runescape.done.AbstractSomethingMusic;
+
 public final class SomethingMusic0 extends AbstractSomethingMusic {
 
   public byte[] aByteArray3030;

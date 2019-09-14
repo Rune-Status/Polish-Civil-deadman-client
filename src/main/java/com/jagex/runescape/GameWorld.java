@@ -2,6 +2,9 @@ package com.jagex.runescape;
 
 import com.jagex.runescape.common.GameString;
 import com.jagex.runescape.common.GameStringStatics;
+import com.jagex.runescape.done.AbstractAudioOutputStream;
+import com.jagex.runescape.done.AbstractGameWorld;
+
 import java.util.Objects;
 
 public final class GameWorld extends AbstractGameWorld {
@@ -44,7 +47,7 @@ public final class GameWorld extends AbstractGameWorld {
       } else {
         Inventory var2 = (Inventory) GlobalStatics_2.aClass130_2220.get(var0);
         if (var2 == null) {
-          return Objects.requireNonNull(BufferObject.method2069(var0, -126)).size;
+          return Objects.requireNonNull(GlobalStatics_6.method2069(var0, -126)).size;
         } else if (var1 > -56) {
           return -13;
         } else {
@@ -56,7 +59,7 @@ public final class GameWorld extends AbstractGameWorld {
             }
           }
 
-          var3 += Objects.requireNonNull(BufferObject.method2069(var0, -100)).size - var2.ids.length;
+          var3 += Objects.requireNonNull(GlobalStatics_6.method2069(var0, -100)).size - var2.ids.length;
           return var3;
         }
       }

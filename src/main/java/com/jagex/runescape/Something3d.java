@@ -2,6 +2,8 @@ package com.jagex.runescape;
 
 import com.jagex.runescape.common.GameString;
 import com.jagex.runescape.common.GameStringStatics;
+import com.jagex.runescape.done.AbstractImageProducer;
+import com.jagex.runescape.done.AreaSoundEffect;
 
 public class Something3d extends Something3dRoot {
 
@@ -62,7 +64,7 @@ public class Something3d extends Something3dRoot {
   }
 
   public static void method2238(int var0, int var1, int var2, int var3, byte var4, int var5) {
-    AbstractSomethingTexture.anInt1105 = var2;
+    GlobalStatics_3.anInt1105 = var2;
       SomethingAudio.anInt1996 = var1;
       DummyClass8.anInt4014 = var5;
       Mouse.anInt1923 = var3;
@@ -74,9 +76,9 @@ public class Something3d extends Something3dRoot {
       if ((DummyClass8.anInt4014 >= 100)) {
         int var6 = 64 + 128 * Mouse.anInt1923;
         int var7 = 64 + SomethingAudio.anInt1996 * 128;
-        int var8 = BufferData.method1736(GameWorldSomething.currentPlane, 1, var6, var7)
+        int var8 = GlobalStatics_6.method1736(GameWorldSomething.currentPlane, 1, var6, var7)
           - SpotAnimationConfig.anInt529;
-        int var10 = var8 - EnumStringFetcher.anInt2162;
+        int var10 = var8 - GlobalStatics_7.anInt2162;
         int var9 = var6 - NPC.anInt3995;
         int var11 = -DummyClass49.anInt1111 + var7;
         int var12 = (int) Math.sqrt(var11 * var11 + var9 * var9);
@@ -100,7 +102,7 @@ public class Something3d extends Something3dRoot {
     if (FileSystem.method846(var0, var1, var2)) {
       int var4 = var1 << 7;
       int var5 = var2 << 7;
-      int var6 = AbstractGameWorld.heightMap[var0][var1][var2] - 1;
+      int var6 = GlobalStatics_4.heightMap[var0][var1][var2] - 1;
       int var7 = var6 - 120;
       int var8 = var6 - 230;
       int var9 = var6 - 238;

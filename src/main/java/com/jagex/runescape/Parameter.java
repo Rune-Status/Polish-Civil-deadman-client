@@ -107,29 +107,29 @@ public final class Parameter extends SubNode {
   }
 
   public static void method581(FileUnpacker var0, int var1, FileUnpacker var2) {
-    AbstractTextureSampler.aClass3_Sub28_Sub17_2379 =
-        FileCacheRequester.createFont(0, HintMarker.p11FontFileId, (byte) 124, var2, var0);
+    GlobalStatics_3.aClass3_Sub28_Sub17_2379 =
+        GlobalStatics_7.createFont(0, HintMarker.p11FontFileId, (byte) 124, var2, var0);
       if (GlRenderer.useOpenGlRenderer) {
         SomethingAudio.aClass3_Sub28_Sub17_Sub1_2000 =
             SceneSomething2
                 .method1287(HintMarker.p11FontFileId, 0, var0, var2, -1);
       } else {
         SomethingAudio.aClass3_Sub28_Sub17_Sub1_2000 =
-            (SoftwareFont) AbstractTextureSampler.aClass3_Sub28_Sub17_2379;
+            (SoftwareFont) GlobalStatics_3.aClass3_Sub28_Sub17_2379;
       }
 
       SomethingTilek.p12Font =
-        FileCacheRequester.createFont(var1, SomethingTexture1.p12FontFileId, (byte) 125, var2,
+        GlobalStatics_7.createFont(var1, SomethingTexture1.p12FontFileId, (byte) 125, var2,
           var0);
       FloorOverlay.aClass3_Sub28_Sub17_2096 =
-        FileCacheRequester.createFont(0, TextureSampler1.b12FontFileId, (byte) 124, var2, var0);
+        GlobalStatics_7.createFont(0, TextureSampler1.b12FontFileId, (byte) 124, var2, var0);
   }
 
   public static boolean method582(int var0, int var1, int var2, boolean var3, int var4, int var5,
                                  int var6, int var7, int var8, int var9, int var10, int var11) {
     return TextureCache.localPlayer.getSize() != var5 ?
         (TextureCache.localPlayer.getSize() <= 2 ?
-          DirectImageProducer.method2191(var6, var4, var11, -1001, var10, var9, var2, var1, var3,
+          GlobalStatics_7.method2191(var6, var4, var11, -1001, var10, var9, var2, var1, var3,
             var8, var0, var7) :
           PlayerAppearance.method1166(var10, (byte) 34, var7, var9, var1,
             TextureCache.localPlayer.getSize(), var6, var8, var4, var11, var2, var3, var0)) :

@@ -2,6 +2,7 @@ package com.jagex.runescape;
 
 import com.jagex.runescape.common.GameString;
 import com.jagex.runescape.common.GameStringStatics;
+import com.jagex.runescape.done.BlockConfig;
 
 public final class DummyClass27 {
 
@@ -59,11 +60,11 @@ public final class DummyClass27 {
           int var6 = (var4 >> 1) + var1.anInt2271;
           int var8 = (var5 >> 1) + var1.anInt2282;
           int var9 = (var5 + 1 >> 1) + var1.anInt2282;
-          int[][] var10 = AbstractGameWorld.heightMap[GameWorldSomething.currentPlane];
+          int[][] var10 = GlobalStatics_4.heightMap[GameWorldSomething.currentPlane];
           int var11 =
             var10[var7][var9] + var10[var6][var9] + (var10[var6][var8] + var10[var7][var8]) >> 2;
           SceneNode var12 = null;
-          int var13 = AbstractSomethingTexture.OBJECT_TYPES[var1.anInt2278];
+          int var13 = GlobalStatics_3.OBJECT_TYPES[var1.anInt2278];
           if ((var13 == 0)) {
             SceneSomething2 var14 =
               DummyClass14.method2147(GameWorldSomething.currentPlane, var1.anInt2271,
@@ -74,7 +75,7 @@ public final class DummyClass27 {
           } else if ((var13 != 1)) {
             if (var13 == 2) {
               SceneSomething var23 =
-                AbstractSomethingTexture.method1336(GameWorldSomething.currentPlane, var1.anInt2271,
+                GlobalStatics_3.method1336(GameWorldSomething.currentPlane, var1.anInt2271,
                   var1.anInt2282);
               if (var23 != null) {
                 var12 = var23.sceneNode;
@@ -88,7 +89,7 @@ public final class DummyClass27 {
             }
           } else {
             SomethingSceneI var21 =
-              AbstractGameWorld.method1068(GameWorldSomething.currentPlane, var1.anInt2271,
+              GlobalStatics_4.method1068(GameWorldSomething.currentPlane, var1.anInt2271,
                 var1.anInt2282);
             if (var21 != null) {
               var12 = var21.aClass140_429;
@@ -98,13 +99,13 @@ public final class DummyClass27 {
           if (var12 != null) {
             Queue.method881(GameWorldSomething.currentPlane, var1.anInt2282, -96, 0, var1.anInt2271,
               var1.anInt2283 + 1, -1, var13, 0, var1.anInt2266 + 1);
-            var2.anInt2778 = var1.anInt2283 + AbstractGameWorld.updateCycle;
+            var2.anInt2778 = var1.anInt2283 + GlobalStatics_4.updateCycle;
             var2.anInt2833 = 64 * var5 + var1.anInt2282 * 128;
             var2.anInt2782 = var4 * 64 + 128 * var1.anInt2271;
             var2.anObject2796 = var12;
             int var22 = var1.anInt2268;
             var2.anInt2812 = var11;
-            var2.anInt2797 = AbstractGameWorld.updateCycle + var1.anInt2266;
+            var2.anInt2797 = GlobalStatics_4.updateCycle + var1.anInt2266;
             int var15 = var1.anInt2272;
             int var16 = var1.anInt2277;
             int var17 = var1.anInt2279;

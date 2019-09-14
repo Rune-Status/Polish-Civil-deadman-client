@@ -34,11 +34,11 @@ public final class DummyClass9 extends DummyClass5 {
       }
 
       if (!NPC.method1986(90) && (GameObject.plane != GameWorldSomething.currentPlane)) {
-        FileCacheRequester.rebuildScene(GameWorldSomething.currentPlane, VariableUpdate.anInt2294,
+        GlobalStatics_7.rebuildScene(GameWorldSomething.currentPlane, VariableUpdate.anInt2294,
           GlobalStatics_2.anInt3606, TextureCache.localPlayer.waypointsY[0], false,
           TextureCache.localPlayer.waypointsX[0], true);
       } else {
-        if ((GameWorldSomething.currentPlane != DummyClass43.anInt909) && ClanChatUser.method385(
+        if ((GameWorldSomething.currentPlane != DummyClass43.anInt909) && GlobalStatics_6.method385(
             var0, GameWorldSomething.currentPlane)) {
           DummyClass43.anInt909 = GameWorldSomething.currentPlane;
           GlobalStatics_0.method792(var0 + 9179409);
@@ -51,7 +51,7 @@ public final class DummyClass9 extends DummyClass5 {
     if (var1 == -9320) {
         var0.removeKeyListener(TextureSampler33.keyboard);
         var0.removeFocusListener(TextureSampler33.keyboard);
-        AbstractTextureSampler.anInt2384 = -1;
+        GlobalStatics_3.anInt2384 = -1;
       }
   }
 
@@ -69,7 +69,7 @@ public final class DummyClass9 extends DummyClass5 {
             }
 
             if (DummyClass26.anInt1616 >= 1) {
-              AbstractImageProducer.loginResponse = -5;
+              GlobalStatics_5.loginResponse = -5;
               TextureSampler2.anInt3375 = 0;
               return;
             }
@@ -85,7 +85,7 @@ public final class DummyClass9 extends DummyClass5 {
           }
 
           if ((TextureSampler2.anInt3375 == 1)) {
-            AreaSoundEffect.socketRequest =
+            GlobalStatics_6.socketRequest =
               DummyClass35.signLink.method1441((byte) 8, GameException.serverHost,
                 DummyClass24.anInt1658);
             TextureSampler2.anInt3375 = 2;
@@ -93,19 +93,19 @@ public final class DummyClass9 extends DummyClass5 {
 
           int var1;
           if ((TextureSampler2.anInt3375 == 2)) {
-            assert AreaSoundEffect.socketRequest != null;
-            if ((AreaSoundEffect.socketRequest.status == 2)) {
+            assert GlobalStatics_6.socketRequest != null;
+            if ((GlobalStatics_6.socketRequest.status == 2)) {
               throw new IOException();
             }
 
-            if (AreaSoundEffect.socketRequest.status != 1) {
+            if (GlobalStatics_6.socketRequest.status != 1) {
               return;
             }
 
             SomethingVolume15.gameSocket =
-              new SocketStream((Socket) AreaSoundEffect.socketRequest.result,
+              new SocketStream((Socket) GlobalStatics_6.socketRequest.result,
                 DummyClass35.signLink);
-            AreaSoundEffect.socketRequest = null;
+            GlobalStatics_6.socketRequest = null;
             SomethingVolume15.gameSocket.write(TextureSampler12.secureBuffer.bytes, 0,
               TextureSampler12.secureBuffer.position);
             if (GameWorld.audioOutputStream0 != null) {
@@ -126,7 +126,7 @@ public final class DummyClass9 extends DummyClass5 {
             }
 
             if ((var1 != 101)) {
-              AbstractImageProducer.loginResponse = var1;
+              GlobalStatics_5.loginResponse = var1;
               TextureSampler2.anInt3375 = 0;
               SomethingVolume15.gameSocket.destroy();
               SomethingVolume15.gameSocket = null;
@@ -144,9 +144,9 @@ public final class DummyClass9 extends DummyClass5 {
 
             var1 = SomethingVolume15.gameSocket.read() << 8 | SomethingVolume15.gameSocket.read();
             MaterialShader5.method1627(var1, (byte) -16);
-            if (ClientScriptCall.anInt2451 == -1) {
+            if (GlobalStatics_7.anInt2451 == -1) {
               TextureSampler2.anInt3375 = 0;
-              AbstractImageProducer.loginResponse = 6;
+              GlobalStatics_5.loginResponse = 6;
               SomethingVolume15.gameSocket.destroy();
               SomethingVolume15.gameSocket = null;
               return;
@@ -175,7 +175,7 @@ public final class DummyClass9 extends DummyClass5 {
             GlobalStatics_2.anInt2246 = 0;
             ++DummyClass26.anInt1616;
           } else {
-            AbstractImageProducer.loginResponse = -4;
+            GlobalStatics_5.loginResponse = -4;
             TextureSampler2.anInt3375 = 0;
           }
         }

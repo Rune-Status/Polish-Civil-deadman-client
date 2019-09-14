@@ -438,7 +438,7 @@ public final class TextureCache implements ITextureCache {
             var15 |= Long.MIN_VALUE;
           }
 
-          var3.anInt2831 = BufferData.method1736(GameWorldSomething.currentPlane, 1, var3.anInt2819,
+          var3.anInt2831 = GlobalStatics_6.method1736(GameWorldSomething.currentPlane, 1, var3.anInt2819,
             var3.anInt2829);
           DummyClass29.addNodeToSceneGraph(GameWorldSomething.currentPlane, var3.anInt2819,
             var3.anInt2829, var3.anInt2831, -64 + 64 * var6 + 60, var3, var3.rotationY, var15,
@@ -462,7 +462,7 @@ public final class TextureCache implements ITextureCache {
   }
 
   public static void method1614(boolean var0, long[] var1, int[] var2) {
-    AbstractGameWorld.method1069(var1, 0, -1 + var1.length, var2, -24337);
+    GlobalStatics_4.method1069(var1, 0, -1 + var1.length, var2, -24337);
       if (!var0) {
         TextureCache.method1612(103);
       }

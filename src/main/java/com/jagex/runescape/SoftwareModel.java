@@ -1,5 +1,6 @@
 package com.jagex.runescape;
 
+import com.jagex.runescape.done.AbstractModel;
 import com.jagex.runescape.opengl.GLStatics;
 import java.util.Arrays;
 

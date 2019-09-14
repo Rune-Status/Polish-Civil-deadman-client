@@ -43,7 +43,7 @@ public final class SomethingScene {
   }
 
   public static void method1293(boolean var0) {
-    if (!ProjectileNode.aBoolean3779 && (AbstractGameWorld.usageLocation != 2)) {
+    if (!ProjectileNode.aBoolean3779 && (GlobalStatics_4.usageLocation != 2)) {
           GlobalStatics_2.aClass94_38.method1577(-1857);
           if (!var0) {
             SomethingScene.toString(1);
@@ -56,7 +56,7 @@ public final class SomethingScene {
 
     label188:
     for (int var0 = 0; var0 < SpawnedGameObject.anInt2249; ++var0) {
-      SomethingLight0 var1 = ByteArrayNode.aClass113Array3610[var0];
+      SomethingLight0 var1 = GlobalStatics_6.aClass113Array3610[var0];
       int var2;
       if (TextureSampler6.anIntArray3045 != null) {
         for (var2 = 0; var2 < TextureSampler6.anIntArray3045.length; ++var2) {
@@ -65,8 +65,8 @@ public final class SomethingScene {
               || var1.anInt1548 <= TextureSampler6.anIntArray3045[var2]) && (
             var1.anInt1562 <= PlayerAppearance.anIntArray859[var2]
               || var1.anInt1545 <= PlayerAppearance.anIntArray859[var2]) && (
-            var1.anInt1562 >= FileCacheRequester.anIntArray1083[var2]
-              || var1.anInt1545 >= FileCacheRequester.anIntArray1083[var2]) && (
+            var1.anInt1562 >= GlobalStatics_7.anIntArray1083[var2]
+              || var1.anInt1545 >= GlobalStatics_7.anIntArray1083[var2]) && (
             var1.anInt1560 <= SomethingTexture4.anIntArray2663[var2]
               || var1.anInt1550 <= SomethingTexture4.anIntArray2663[var2]) && (
             var1.anInt1560 >= GlobalStatics_2.anIntArray39[var2]
@@ -117,8 +117,8 @@ public final class SomethingScene {
 
             var1.anInt1555 = (var1.anInt1560 - TextureSampler13.cameraZ << 8) / var6;
             var1.anInt1551 = (var1.anInt1550 - TextureSampler13.cameraZ << 8) / var6;
-            var1.anInt1561 = (var1.anInt1544 - ClientScriptEnum.cameraY << 8) / var6;
-            var1.anInt1565 = (var1.anInt1548 - ClientScriptEnum.cameraY << 8) / var6;
+            var1.anInt1561 = (var1.anInt1544 - GlobalStatics_7.cameraY << 8) / var6;
+            var1.anInt1565 = (var1.anInt1548 - GlobalStatics_7.cameraY << 8) / var6;
             Unsure.aClass113Array1895[SomethingTilek.anInt1672++] = var1;
           }
         }
@@ -161,13 +161,13 @@ public final class SomethingScene {
 
             var1.anInt1549 = (var1.anInt1562 - MilliFrameRegulator.cameraPosX << 8) / var6;
             var1.anInt1557 = (var1.anInt1545 - MilliFrameRegulator.cameraPosX << 8) / var6;
-            var1.anInt1561 = (var1.anInt1544 - ClientScriptEnum.cameraY << 8) / var6;
-            var1.anInt1565 = (var1.anInt1548 - ClientScriptEnum.cameraY << 8) / var6;
+            var1.anInt1561 = (var1.anInt1544 - GlobalStatics_7.cameraY << 8) / var6;
+            var1.anInt1565 = (var1.anInt1548 - GlobalStatics_7.cameraY << 8) / var6;
             Unsure.aClass113Array1895[SomethingTilek.anInt1672++] = var1;
           }
         }
       } else if (var1.anInt1554 == 4) {
-        var2 = var1.anInt1544 - ClientScriptEnum.cameraY;
+        var2 = var1.anInt1544 - GlobalStatics_7.cameraY;
         if (var2 > 128) {
           var3 = var1.anInt1563 - GLStatics.cameraTileZ + GLStatics.viewportLength;
           if (var3 < 0) {
@@ -249,7 +249,7 @@ public final class SomethingScene {
   }
 
   public static GameString toString(int var1) {
-    return AbstractObjectNodeWrapper.method1723((byte) -117, false, 10, var1);
+    return GlobalStatics_5.method1723((byte) -117, false, 10, var1);
   }
 
 }

@@ -76,7 +76,7 @@ public final class WorldMapLabel {
 
             DummyClass42.anIntArray887[DummyClass13.anInt2022++] = var1;
             Player var3 = TextureSampler0.players[var1];
-            var3.anInt2838 = AbstractGameWorld.updateCycle;
+            var3.anInt2838 = GlobalStatics_4.updateCycle;
             int var4 = SpotAnimationConfig.gameBuffer.readBits(1);
             if ((var4 == 1)) {
               DummyClass60.anIntArray441[OndemandRequester.anInt997++] = var1;
@@ -131,7 +131,7 @@ public final class WorldMapLabel {
         WorldMapLabel.aClass94_1731 = null;
       }
 
-      WidgetUpdate var3 = AudioStreamEncoder3.method466(4, 5, var0);
+      WidgetUpdate var3 = GlobalStatics_6.method466(4, 5, var0);
       var3.g((byte) 33);
       var3.anInt3598 = var1;
   }
@@ -151,14 +151,14 @@ public final class WorldMapLabel {
 
   public static void method1793(GameString var0, GameString var1, int var2, byte var3) {
     GroundItemNode.password = var1;
-      EnumStringFetcher.anInt2161 = var2;
+      GlobalStatics_7.anInt2161 = var2;
       GroundItemNode.username = var0;
       if (!GroundItemNode.username.method1528((byte) -42, GroundItemNode.EMPTY_STRING)
         && !GroundItemNode.password.method1528((byte) -42, GroundItemNode.EMPTY_STRING)) {
-        if ((ClientScriptCall.anInt2451 == -1)) {
+        if ((GlobalStatics_7.anInt2451 == -1)) {
           GlobalStatics_2.anInt2246 = 0;
           DummyClass26.anInt1616 = 0;
-          AbstractImageProducer.loginResponse = -3;
+          GlobalStatics_5.loginResponse = -3;
           TextureSampler2.anInt3375 = 1;
           Buffer var4 = new Buffer(128);
           var4.writeByte(10);
@@ -178,7 +178,7 @@ public final class WorldMapLabel {
           IdentityKit.method951(0);
         }
       } else {
-        AbstractImageProducer.loginResponse = 3;
+        GlobalStatics_5.loginResponse = 3;
       }
   }
 

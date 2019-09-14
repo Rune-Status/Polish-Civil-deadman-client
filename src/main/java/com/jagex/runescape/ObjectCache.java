@@ -160,7 +160,7 @@ public final class ObjectCache {
   }
 
   public static void method1516(int var0, int var1) {
-    WidgetUpdate var2 = AudioStreamEncoder3.method466(4, 3, var0);
+    WidgetUpdate var2 = GlobalStatics_6.method466(4, 3, var0);
       var2.createIndexedColorSprite(true);
       if (var1 < 87) {
         ObjectCache.aClass94_1326 = null;

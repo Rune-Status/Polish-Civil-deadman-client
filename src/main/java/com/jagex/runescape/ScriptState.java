@@ -2,6 +2,7 @@ package com.jagex.runescape;
 
 import com.jagex.runescape.common.GameString;
 import com.jagex.runescape.common.GameStringStatics;
+import com.jagex.runescape.done.ClientScript;
 
 public final class ScriptState {
 
@@ -58,7 +59,7 @@ public final class ScriptState {
           GroundItem.aClass94Array2935[TextureSampler25.amountContextActions] = var7;
           DummyClass8.aClass94Array4016[TextureSampler25.amountContextActions] = var4;
           MonoChromaticImageCache.anIntArray1578[TextureSampler25.amountContextActions] =
-            (var0 == -1) ? AnimationSomething.anInt3590 : var0;
+            (var0 == -1) ? GlobalStatics_6.anInt3590 : var0;
           TextureSampler27.aShortArray3095[TextureSampler25.amountContextActions] = var6;
           TextureSampler0.aLongArray3271[TextureSampler25.amountContextActions] = var1;
           DummyClass26.anIntArray1613[TextureSampler25.amountContextActions] = var5;

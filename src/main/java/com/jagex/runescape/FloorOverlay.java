@@ -3,6 +3,7 @@ package com.jagex.runescape;
 import com.jagex.runescape.buffer.Buffer;
 import com.jagex.runescape.common.GameString;
 import com.jagex.runescape.common.GameStringStatics;
+import com.jagex.runescape.done.AbstractFont;
 import com.jagex.runescape.opengl.GlTexture2d;
 import com.jagex.runescape.sprite.SoftwareIndexedColorSpriteStatics;
 
@@ -101,11 +102,11 @@ public final class FloorOverlay {
   }
 
   public static void method2270(Mobile var0, byte var1) {
-    if (AbstractGameWorld.updateCycle == var0.anInt2790 || (var0.animationId == -1)
+    if (GlobalStatics_4.updateCycle == var0.anInt2790 || (var0.animationId == -1)
         || var0.anInt2828 != 0 || (1 + var0.anInt2760) > GameClient.method45(var0.animationId,
         (byte) -20).anIntArray1869[var0.anInt2832]) {
         int var2 = var0.anInt2790 - var0.anInt2800;
-        int var3 = AbstractGameWorld.updateCycle - var0.anInt2800;
+        int var3 = GlobalStatics_4.updateCycle - var0.anInt2800;
         int var4 = var0.anInt2784 * 128 + 64 * var0.getSize();
         int var5 = var0.anInt2835 * 128 + (var0.getSize() * 64);
         int var6 = 128 * var0.anInt2823 + var0.getSize() * 64;
@@ -141,7 +142,7 @@ public final class FloorOverlay {
         FloorOverlay.method2273(null, 43);
       }
 
-      WidgetUpdate var4 = AudioStreamEncoder3.method466(var2 ^ 5, 11, var1);
+      WidgetUpdate var4 = GlobalStatics_6.method466(var2 ^ 5, 11, var1);
       var4.g((byte) 33);
       var4.anInt3597 = var3;
       var4.anInt3598 = var0;
@@ -796,13 +797,13 @@ public final class FloorOverlay {
         for (SomethingPacket151 var2 = (SomethingPacket151) var4.getFirst();
             var2 != null; var2 = (SomethingPacket151) var4.getNext()) {
           if ((var3 == var2.anInt2602)) {
-            return EnumStringFetcher.getWidget((byte) 127, (int) var2.key);
+            return GlobalStatics_7.getWidget((byte) 127, (int) var2.key);
           }
         }
 
         return null;
       } else {
-        return EnumStringFetcher.getWidget((byte) 118, var0.anInt190);
+        return GlobalStatics_7.getWidget((byte) 118, var0.anInt190);
       }
   }
 
@@ -1040,7 +1041,7 @@ public final class FloorOverlay {
         FloorOverlay.method2277(-80, -123, -59, 60, (byte) 40);
       }
 
-      WidgetUpdate var2 = AudioStreamEncoder3.method466(4, 11, var1);
+      WidgetUpdate var2 = GlobalStatics_6.method466(4, 11, var1);
       var2.createIndexedColorSprite(true);
   }
 

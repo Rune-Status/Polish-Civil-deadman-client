@@ -1,0 +1,15 @@
+package com.jagex.runescape.done;
+
+import com.jagex.runescape.FileTable;
+
+public abstract class AbstractFileRequester {
+
+  public abstract FileTable method2094(int var1 );
+
+  public abstract void method2095(int var1,int var2 );
+
+  public abstract int method2097(int var1,int var2 );
+
+  public abstract byte[] method2098(int var1,int var2 );
+
+}

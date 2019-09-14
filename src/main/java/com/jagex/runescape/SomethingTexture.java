@@ -1,5 +1,7 @@
 package com.jagex.runescape;
 
+import com.jagex.runescape.done.AbstractSomethingTexture;
+import com.jagex.runescape.done.AnimationSequence;
 import com.jagex.runescape.sprite.SoftwareIndexedColorSprite;
 
 public final class SomethingTexture extends AbstractSomethingTexture {
@@ -205,7 +207,7 @@ public final class SomethingTexture extends AbstractSomethingTexture {
   public void method1335(int var1, int var2, int var3 ) {
     try {
     } catch (RuntimeException var5) {
-      throw AbstractGameWorld.cascadeException(var5,
+      throw GlobalStatics_4.cascadeException(var5,
         "ci.D(" + var1 + ',' + var2 + ',' + var3 + ')');
     }
   }

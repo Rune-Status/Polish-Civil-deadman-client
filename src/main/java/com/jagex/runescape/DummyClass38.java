@@ -3,6 +3,8 @@ package com.jagex.runescape;
 import com.jagex.runescape.buffer.Buffer;
 import com.jagex.runescape.common.GameString;
 import com.jagex.runescape.common.GameStringStatics;
+import com.jagex.runescape.done.AbstractDirectColorSprite;
+import com.jagex.runescape.done.AnimationSequence;
 import com.jagex.runescape.node.SubNode;
 import java.util.Objects;
 
@@ -33,11 +35,11 @@ public final class DummyClass38 {
           long var9 = var3.name.toBase37();
           boolean var11 = false;
           if (var5 <= 1) {
-            if (!var8 && (SomethingVolume15.aBoolean2433 && !BufferData.aBoolean1641
+            if (!var8 && (SomethingVolume15.aBoolean2433 && !GlobalStatics_6.aBoolean1641
               || TextureSampler31.aBoolean3166)) {
               var11 = true;
             } else {
-              for (int var12 = 0; var12 < AnimationSomething.anInt3591; ++var12) {
+              for (int var12 = 0; var12 < GlobalStatics_6.anInt3591; ++var12) {
                 if (MonoChromaticImageCache.aLongArray1574[var12] == var9) {
                   var11 = true;
                   break;
@@ -55,7 +57,7 @@ public final class DummyClass38 {
             GameString var25;
             if (var8) {
               SomethingQuickChatK var14 =
-                AbstractAudioOutputStream.method2156(1024, DummyClass12.aClass3_Sub30_2030);
+                GlobalStatics_5.method2156(1024, DummyClass12.aClass3_Sub30_2030);
               var4 &= 32767;
               var13 = var14.anInt149;
               var25 = var14.aClass3_Sub28_Sub4_151.method555(var2 + 28100,
@@ -99,8 +101,8 @@ public final class DummyClass38 {
       if (((var0 & 1) != 0)) {
         var4 = SpotAnimationConfig.gameBuffer.readUnsignedShortSmart();
         var5 = SpotAnimationConfig.gameBuffer.method751((byte) -99);
-        var3.method1970(var5, -8, AbstractGameWorld.updateCycle, var4);
-        var3.anInt2781 = 300 + AbstractGameWorld.updateCycle;
+        var3.method1970(var5, -8, GlobalStatics_4.updateCycle, var4);
+        var3.anInt2781 = 300 + GlobalStatics_4.updateCycle;
         var3.anInt2775 = SpotAnimationConfig.gameBuffer.method754(true);
       }
 
@@ -136,9 +138,9 @@ public final class DummyClass38 {
         var3.anInt2823 = SpotAnimationConfig.gameBuffer.method751((byte) -106);
         var3.anInt2798 = SpotAnimationConfig.gameBuffer.readUnsignedByte();
         var3.anInt2800 =
-          SpotAnimationConfig.gameBuffer.readUnsignedShortLE() + AbstractGameWorld.updateCycle;
+          SpotAnimationConfig.gameBuffer.readUnsignedShortLE() + GlobalStatics_4.updateCycle;
         var3.anInt2790 =
-          SpotAnimationConfig.gameBuffer.readUnsignedShortLE() + AbstractGameWorld.updateCycle;
+          SpotAnimationConfig.gameBuffer.readUnsignedShortLE() + GlobalStatics_4.updateCycle;
         var3.anInt2840 = SpotAnimationConfig.gameBuffer.method786(true);
         var3.anInt2816 = 1;
         var3.anInt2811 = 0;
@@ -161,7 +163,7 @@ public final class DummyClass38 {
       if (((var0 & 512) != 0)) {
         var4 = SpotAnimationConfig.gameBuffer.readUnsignedShortSmart();
         var5 = SpotAnimationConfig.gameBuffer.method754(true);
-        var3.method1970(var5, var2 + 71, AbstractGameWorld.updateCycle, var4);
+        var3.method1970(var5, var2 + 71, GlobalStatics_4.updateCycle, var4);
       }
 
       if (((2048 & var0) != 0)) {
@@ -200,17 +202,17 @@ public final class DummyClass38 {
         }
 
         if (var21) {
-          var3.anInt2759 = (var5 & '\uffff') + AbstractGameWorld.updateCycle;
+          var3.anInt2759 = (var5 & '\uffff') + GlobalStatics_4.updateCycle;
           var3.anInt2761 = 0;
           var3.anInt2805 = 0;
           var3.anInt2842 = var4;
-          if (var3.anInt2759 > AbstractGameWorld.updateCycle) {
+          if (var3.anInt2759 > GlobalStatics_4.updateCycle) {
             var3.anInt2805 = -1;
           }
 
           var3.anInt2799 = var5 >> 16;
           var3.anInt2826 = 1;
-          if ((var3.anInt2842 != -1) && AbstractGameWorld.updateCycle == var3.anInt2759) {
+          if ((var3.anInt2842 != -1) && GlobalStatics_4.updateCycle == var3.anInt2759) {
             var7 = RenderAnimation.method898((byte) 42, var3.anInt2842).anInt542;
             if ((var7 != -1)) {
               AnimationSequence var24 = GameClient.method45(var7, (byte) -20);

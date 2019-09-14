@@ -1,5 +1,6 @@
 package com.jagex.runescape;
 
+import com.jagex.runescape.done.AbstractDirectColorSprite;
 import com.jagex.runescape.sprite.SoftwareIndexedColorSpriteStatics;
 
 public class SoftwareDirectColorSprite extends AbstractDirectColorSprite {

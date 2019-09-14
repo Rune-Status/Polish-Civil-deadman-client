@@ -2,6 +2,7 @@ package com.jagex.runescape;
 
 import com.jagex.runescape.common.GameString;
 import com.jagex.runescape.common.GameStringStatics;
+import com.jagex.runescape.done.AbstractDirectColorSprite;
 import com.jagex.runescape.opengl.GLStatics;
 import com.jagex.runescape.opengl.GlTexture2d;
 
@@ -88,9 +89,9 @@ public final class DummyClass53 {
         if (DummyClass55.anInt1425 <= var2 - var5 && var2 + var5 <= GlTexture2d.anInt3765
           && -var1 + var3 >= DummyClass13.anInt2020
           && ((var3 + var1) <= LightIntensity.anInt902)) {
-          AreaSoundEffect.method135(var3, var2, var5, -111, var1, var0);
+          GlobalStatics_6.method135(var3, var2, var5, -111, var1, var0);
         } else {
-          AnimationSomething.method556(var0, var1, var5, (byte) -123, var2, var3);
+          GlobalStatics_6.method556(var0, var1, var5, (byte) -123, var2, var3);
         }
 
       }

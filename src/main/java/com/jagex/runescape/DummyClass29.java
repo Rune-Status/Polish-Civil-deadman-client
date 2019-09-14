@@ -2,6 +2,7 @@ package com.jagex.runescape;
 
 import com.jagex.runescape.common.GameString;
 import com.jagex.runescape.common.GameStringStatics;
+import com.jagex.runescape.done.CollisionMap;
 import com.jagex.runescape.opengl.GLStatics;
 import com.jagex.runescape.opengl.GlRenderer;
 
@@ -92,7 +93,7 @@ public final class DummyClass29 {
         var7 = SomethingAudio.method2174(var3, var2, var1);
       } else if (var4 != 1) {
         if ((var4 == 2)) {
-          var7 = AnimationSomething.method557(var3, var2, var1);
+          var7 = GlobalStatics_6.method557(var3, var2, var1);
         } else if (var4 == 3) {
           var7 = GLStatics.method104(var3, var2, var1);
         }
@@ -183,7 +184,7 @@ public final class DummyClass29 {
                     FileSystem.method840(var12, (byte) -28,
                         8 * DummyClass4.anIntArray3007[var18],
                         4 + var18,
-                        8 * AbstractTextureSampler.anIntArray2386[var18], 4,
+                        8 * GlobalStatics_3.anIntArray2386[var18], 4,
                         var2, var1,
                         var5);
                   }
@@ -203,7 +204,7 @@ public final class DummyClass29 {
                     FileSystem.method840(var12, (byte) -45,
                         DummyClass4.anIntArray3007[var18] * 8,
                         var18 + 4,
-                        8 * AbstractTextureSampler.anIntArray2386[var18], 4,
+                        8 * GlobalStatics_3.anIntArray2386[var18], 4,
                         var2, var1,
                         var5);
                   }
@@ -214,7 +215,7 @@ public final class DummyClass29 {
                     FileSystem.method840(var12, (byte) -24,
                         DummyClass4.anIntArray3007[var18] * 8,
                         4 + (3 & 2 + var18),
-                        AbstractTextureSampler.anIntArray2386[var18] * 8, 4,
+                        GlobalStatics_3.anIntArray2386[var18] * 8, 4,
                         var2, var1, var5);
                   }
                 } else if (var19 != 11) {
@@ -236,7 +237,7 @@ public final class DummyClass29 {
                 ((GameObject) var13).method1960(-1);
               } else {
                 FileSystem.method840(var12, (byte) -119,
-                    AudioStreamEncoder3.anIntArray3491[var18] * 8, var18,
+                    GlobalStatics_6.anIntArray3491[var18] * 8, var18,
                     RenderAnimation.anIntArray356[var18] * 8, 4, var2, var1,
                     var5);
               }

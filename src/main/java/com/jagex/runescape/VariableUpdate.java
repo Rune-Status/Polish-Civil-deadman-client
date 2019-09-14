@@ -58,8 +58,8 @@ public final class VariableUpdate extends Node {
           TextureSampler28.aClass94_3307, SomethingScene.toString(var1 / 1000000),
           TextureSampler30.aClass94_3117, SomethingScene.aClass94_1076
         }) : RenderAnimation.concat(new GameString[] {
-          ClanChatUser.aClass94_2477, SomethingScene.toString(var1 / 1000),
-          AnimationSomething.aClass94_3584, SomethingScene.aClass94_1076
+          GlobalStatics_6.aClass94_2477, SomethingScene.toString(var1 / 1000),
+          GlobalStatics_6.aClass94_3584, SomethingScene.aClass94_1076
         });
       }
   }

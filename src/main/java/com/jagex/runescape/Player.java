@@ -3,6 +3,8 @@ package com.jagex.runescape;
 import com.jagex.runescape.buffer.Buffer;
 import com.jagex.runescape.common.GameString;
 import com.jagex.runescape.common.GameStringStatics;
+import com.jagex.runescape.done.AbstractModel;
+import com.jagex.runescape.done.AnimationSequence;
 import com.jagex.runescape.huffman.HuffmanEncoderStatics;
 import com.jagex.runescape.opengl.GlRenderer;
 import java.util.Objects;
@@ -149,8 +151,8 @@ public final class Player extends Mobile {
   }
 
   private void draw(DummyClass0 var1, int var2, AbstractModel var3, int var4, int var5,
-                          int var6, int var7, int var8, int var9, int var10, int var11, int var12,
-                          int var13, int var14, int var15) {
+                    int var6, int var7, int var8, int var9, int var10, int var11, int var12,
+                    int var13, int var14, int var15) {
     int var16 = var4 * var4 + (var2 * var2);
       if ((var16 >= 16) && (var16 <= 360000)) {
         int var17 = (int) (325.949D * Math.atan2(var4, var2)) & var7;
@@ -237,8 +239,8 @@ public final class Player extends Mobile {
                     this.anInt2802, this.anInt2793, -120, this.anInt2760, true,
                     this.anInt2832,
                     this.anInt2813);
-        int var16 = AbstractObjectNodeWrapper.method1727((byte) 123);
-        if (GlRenderer.useOpenGlRenderer && AudioStreamEncoder3.anInt3492 < 96 && (var16 > 50)) {
+        int var16 = GlobalStatics_5.method1727((byte) 123);
+        if (GlRenderer.useOpenGlRenderer && GlobalStatics_6.anInt3492 < 96 && (var16 > 50)) {
           WidgetAccess.method90(1);
         }
 
@@ -347,12 +349,12 @@ public final class Player extends Mobile {
 
           AbstractModel var25 = null;
           if (!this.aBoolean3968 && this.anObject2796 != null) {
-            if (AbstractGameWorld.updateCycle >= this.anInt2778) {
+            if (GlobalStatics_4.updateCycle >= this.anInt2778) {
               this.anObject2796 = null;
             }
 
-            if ((this.anInt2797 <= AbstractGameWorld.updateCycle)
-              && this.anInt2778 > AbstractGameWorld.updateCycle) {
+            if ((this.anInt2797 <= GlobalStatics_4.updateCycle)
+              && this.anInt2778 > GlobalStatics_4.updateCycle) {
               if (this.anObject2796 instanceof GameObject) {
                 var25 = (AbstractModel) ((GameObject) this.anObject2796)
                     .method1963(3);

@@ -3,6 +3,8 @@ package com.jagex.runescape;
 import com.jagex.runescape.buffer.Buffer;
 import com.jagex.runescape.common.GameString;
 import com.jagex.runescape.common.GameStringStatics;
+import com.jagex.runescape.done.AbstractSomethingTexture;
+import com.jagex.runescape.done.AbstractTextureSampler;
 import com.jagex.runescape.opengl.GlEnvironment;
 
 public final class TextureSampler29 extends AbstractTextureSampler {
@@ -46,10 +48,10 @@ public final class TextureSampler29 extends AbstractTextureSampler {
             this.aClass75Array3392[var4] = StillGraphicNode.method536((byte) 54, var2);
           } else if (var5 != 2) {
             if (var5 == 3) {
-              this.aClass75Array3392[var4] = ClanChatUser.method384(var2, (byte) 80);
+              this.aClass75Array3392[var4] = GlobalStatics_6.method384(var2, (byte) 80);
             }
           } else {
-            this.aClass75Array3392[var4] = AudioSomethingSomething.method404((byte) -110, var2);
+            this.aClass75Array3392[var4] = GlobalStatics_6.method404((byte) -110, var2);
           }
         }
       } else if (var1 == 1) {
@@ -157,7 +159,7 @@ public final class TextureSampler29 extends AbstractTextureSampler {
         TextureSampler29.aClass94_3397 = null;
       }
 
-      WidgetUpdate var3 = AudioStreamEncoder3.method466(var2 - 64, 12, var1);
+      WidgetUpdate var3 = GlobalStatics_6.method466(var2 - 64, 12, var1);
       var3.g((byte) 33);
       var3.anInt3598 = var0;
   }

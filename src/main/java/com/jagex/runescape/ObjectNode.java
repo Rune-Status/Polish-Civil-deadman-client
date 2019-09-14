@@ -31,7 +31,7 @@ public final class ObjectNode extends AbstractObjectNode {
 
   public static void method569(int var0, int var1) {
     if (var0 < -78) {
-      WidgetUpdate var2 = AudioStreamEncoder3.method466(4, 7, var1);
+      WidgetUpdate var2 = GlobalStatics_6.method466(4, 7, var1);
       var2.createIndexedColorSprite(true);
     }
   }

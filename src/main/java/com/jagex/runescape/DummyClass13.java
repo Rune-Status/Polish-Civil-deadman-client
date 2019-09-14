@@ -87,11 +87,11 @@ public final class DummyClass13 {
       }
 
       for (var6 = 0; var2 - var0 > var6; ++var6) {
-        AnimationSomething.anIntArray3592[var6] = AnimationSomething.anIntArray3592[var6 + var0];
+        GlobalStatics_6.anIntArray3592[var6] = GlobalStatics_6.anIntArray3592[var6 + var0];
       }
 
       for (var6 = var2 - var0; var2 > var6; ++var6) {
-        AnimationSomething.anIntArray3592[var6] =
+        GlobalStatics_6.anIntArray3592[var6] =
           (int) (Math.sin(DummyClass3.anInt57 / 14.0D) * 16.0D + 14.0D * Math.sin(
             DummyClass3.anInt57 / 15.0D) + 12.0D * Math.sin(
             DummyClass3.anInt57 / 16.0D));
@@ -99,7 +99,7 @@ public final class DummyClass13 {
       }
 
       DummyClass22.anInt1740 += var0;
-      var6 = (var0 + (1 & AbstractGameWorld.updateCycle)) / 2;
+      var6 = (var0 + (1 & GlobalStatics_4.updateCycle)) / 2;
       if ((var6 > 0)) {
         for (var7 = 0; DummyClass22.anInt1740 > var7; ++var7) {
           var8 = 2 + (int) (124.0D * Math.random());

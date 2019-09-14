@@ -3,6 +3,7 @@ package com.jagex.runescape;
 import com.jagex.runescape.buffer.Buffer;
 import com.jagex.runescape.common.GameString;
 import com.jagex.runescape.common.GameStringStatics;
+import com.jagex.runescape.done.AbstractTextureSampler;
 import com.jagex.runescape.opengl.GlTexture2d;
 
 public final class TextureSampler25 extends AbstractTextureSampler {
@@ -156,12 +157,12 @@ public final class TextureSampler25 extends AbstractTextureSampler {
                   TextureSampler29.aByteArrayArrayArray3390[var10][var11][(63 - var13 << 6)
                     + var12] = var2;
                   byte var14 = var1.readByte();
-                  if (ClientScriptCall.aByteArrayArrayArray2452[var10][var11]
+                  if (GlobalStatics_7.aByteArrayArrayArray2452[var10][var11]
                       == null) {
-                    ClientScriptCall.aByteArrayArrayArray2452[var10][var11] = new byte[4096];
+                    GlobalStatics_7.aByteArrayArrayArray2452[var10][var11] = new byte[4096];
                   }
 
-                  ClientScriptCall.aByteArrayArrayArray2452[var10][var11][var12 + (-var13 + 63
+                  GlobalStatics_7.aByteArrayArrayArray2452[var10][var11][var12 + (-var13 + 63
                     << 6)] = var14;
                 }
               }
@@ -331,7 +332,7 @@ public final class TextureSampler25 extends AbstractTextureSampler {
       int var7 = var2 - var4;
       if (var6 == 0) {
         if (var7 != 0) {
-          ClassCheckRequest.method126(false, var2, var4, var0, var3);
+          GlobalStatics_6.method126(false, var2, var4, var0, var3);
         }
 
       } else if ((var7 == 0)) {

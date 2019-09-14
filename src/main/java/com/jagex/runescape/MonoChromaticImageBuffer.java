@@ -2,6 +2,8 @@ package com.jagex.runescape;
 
 import com.jagex.runescape.common.GameString;
 import com.jagex.runescape.common.GameStringStatics;
+import com.jagex.runescape.done.AbstractDirectColorSprite;
+import com.jagex.runescape.done.AudioStreamEncoder2;
 import com.jagex.runescape.node.Deque;
 import com.jagex.runescape.node.Node;
 
@@ -36,7 +38,7 @@ public final class MonoChromaticImageBuffer extends Node {
 
   public static void method512(byte var0) {
     ObjectNode.aClass93_4043.method1524(3);
-      ClientScriptCall.aClass93_2442.method1524(3);
+      GlobalStatics_7.aClass93_2442.method1524(3);
       DummyClass14.aClass93_1964.method1524(3);
       if (var0 != -108) {
         MonoChromaticImageBuffer.aClass3_Sub24_Sub2_2563 = null;

@@ -1,5 +1,6 @@
 package com.jagex.runescape;
 
+import com.jagex.runescape.done.AbstractObjectNodeWrapper;
 import com.jagex.runescape.node.AbstractObjectNode;
 
 public final class SoftReferenceObjectNodeWrapper extends AbstractObjectNodeWrapper {

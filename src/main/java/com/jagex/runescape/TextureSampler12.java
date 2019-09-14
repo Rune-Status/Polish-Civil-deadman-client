@@ -3,6 +3,8 @@ package com.jagex.runescape;
 import com.jagex.runescape.buffer.Buffer;
 import com.jagex.runescape.common.GameString;
 import com.jagex.runescape.common.GameStringStatics;
+import com.jagex.runescape.done.AbstractTextureSampler;
+import com.jagex.runescape.done.AnimationSomething;
 
 public final class TextureSampler12 extends AbstractTextureSampler {
 
@@ -147,7 +149,7 @@ public final class TextureSampler12 extends AbstractTextureSampler {
       }
 
       if (MovedStatics0.method57(var1, 104)) {
-        Cache.method1095(var2, var8, var4, SceneNode.aClass11ArrayArray1834[var1], var3, -1, var7,
+        GlobalStatics_6.method1095(var2, var8, var4, SceneNode.aClass11ArrayArray1834[var1], var3, -1, var7,
           var6, (byte) 119, var5);
       } else {
         if ((var5 == -1)) {

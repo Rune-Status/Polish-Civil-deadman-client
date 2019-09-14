@@ -24,7 +24,7 @@ public final class StringNode0 extends Node {
 
   public static void method138(GameString var0, int var1) {
     OndemandRequester.method1250(var1 ^ 93, false);
-      AbstractSomethingTexture.method1339(var0, var1 + var1);
+      GlobalStatics_3.method1339(var0, var1 + var1);
   }
 
   public static void method139(int var0) {
@@ -39,8 +39,8 @@ public final class StringNode0 extends Node {
   public static boolean method140(int var0, int var1) {
     int var2 = -11 / ((-29 - var1) / 49);
       return
-          ((var0 >= 0) && AudioStreamEncoder4.aBooleanArray3503.length > var0)
-              && AudioStreamEncoder4.aBooleanArray3503[var0];
+          ((var0 >= 0) && GlobalStatics_6.aBooleanArray3503.length > var0)
+              && GlobalStatics_6.aBooleanArray3503[var0];
   }
 
   public static RenderAnimation getRenderAnimation(boolean var0, int var1) {
@@ -70,7 +70,7 @@ public final class StringNode0 extends Node {
         StringNode0.aByteArrayArrayArray2339 = null;
       }
 
-      DirectImageProducer.aClass93_2982.method1524(3);
+      GlobalStatics_7.aClass93_2982.method1524(3);
   }
 
   public static void method143(int var0) {

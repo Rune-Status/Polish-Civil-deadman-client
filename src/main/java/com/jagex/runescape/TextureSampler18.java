@@ -2,6 +2,10 @@ package com.jagex.runescape;
 
 import com.jagex.runescape.common.GameString;
 import com.jagex.runescape.common.GameStringStatics;
+import com.jagex.runescape.done.AbstractDirectColorSprite;
+import com.jagex.runescape.done.AbstractImageProducer;
+import com.jagex.runescape.done.AnimationSomething;
+import com.jagex.runescape.done.DirectImageProducer;
 import com.jagex.runescape.opengl.Light;
 import com.jagex.runescape.opengl.SomethingLight;
 import java.awt.Component;
@@ -159,7 +163,7 @@ public final class TextureSampler18 extends TextureSampler39 {
   }
 
   public static AbstractImageProducer createImageProducer(int var0, int var1, boolean var2,
-                                                         Component var3) {
+                                                          Component var3) {
     if (var2) {
         try {
           Class var4 = Class.forName(
@@ -179,7 +183,7 @@ public final class TextureSampler18 extends TextureSampler39 {
   }
 
   public static AbstractDirectColorSprite[] method286(int var0, int var1, int var2,
-                                                     FileUnpacker var3) {
+                                                      FileUnpacker var3) {
     if (var0 != -1) {
         TextureSampler18.createImageProducer(-95, 48, true, null);
       }

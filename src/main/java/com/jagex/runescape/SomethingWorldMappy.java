@@ -2,6 +2,7 @@ package com.jagex.runescape;
 
 import com.jagex.runescape.common.GameString;
 import com.jagex.runescape.common.GameStringStatics;
+import com.jagex.runescape.done.AbstractAudioOutputStream;
 import com.jagex.runescape.node.Node;
 import com.jagex.runescape.opengl.GLStatics;
 import com.jagex.runescape.opengl.GlRenderer;
@@ -55,7 +56,7 @@ public final class SomethingWorldMappy extends Node {
     int var13;
     for (var9 = 0; var9 < var8; ++var9) {
       var10 = var0.anIntArray627[var9] - MilliFrameRegulator.cameraPosX;
-      var11 = var0.anIntArray615[var9] - ClientScriptEnum.cameraY;
+      var11 = var0.anIntArray615[var9] - GlobalStatics_7.cameraY;
       var12 = var0.anIntArray618[var9] - TextureSampler13.cameraZ;
       var13 = var12 * var3 + var10 * var4 >> 16;
       var12 = var12 * var4 - var10 * var3 >> 16;
@@ -156,7 +157,7 @@ public final class SomethingWorldMappy extends Node {
         SomethingWorldMappy.method394(14, 52);
       }
 
-      Cache.aClass93_743.method1524(3);
+      GlobalStatics_6.aClass93_743.method1524(3);
   }
 
 }

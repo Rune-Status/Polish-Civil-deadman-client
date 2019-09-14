@@ -2,6 +2,7 @@ package com.jagex.runescape;
 
 import com.jagex.runescape.common.GameString;
 import com.jagex.runescape.common.GameStringStatics;
+import com.jagex.runescape.done.AbstractFont;
 import com.jagex.runescape.node.Node;
 import com.jagex.runescape.opengl.GLStatics;
 import com.jagex.runescape.opengl.GlRenderer;
@@ -41,8 +42,8 @@ public final class SomethingOtherWorldMap extends Node {
         var3 = GroundItem.viewHeight;
         int var4 = var3 * 956 / 503;
         DummyClass59.titlebackground.draw((DummyClass30.viewWidth - var4) / 2, 0, var4, var3);
-        AnimationSequence.logoSprite.draw(
-          -(AnimationSequence.logoSprite.width / 2) + DummyClass30.viewWidth / 2, 18);
+        GlobalStatics_3.logoSprite.draw(
+          -(GlobalStatics_3.logoSprite.width / 2) + DummyClass30.viewWidth / 2, 18);
       }
 
       var2.draw(SceneSomething.aClass94_485, DummyClass30.viewWidth / 2,
@@ -53,19 +54,19 @@ public final class SomethingOtherWorldMap extends Node {
             .drawQuad(DummyClass30.viewWidth / 2 - 152, var3, 304, 34, 9179409);
         GlUtils.drawQuad(-151 + DummyClass30.viewWidth / 2, var3 + 1, 302, 32, 0);
         GlUtils.fillQuad(DummyClass30.viewWidth / 2 - 150, var3 + 2,
-          ClientScript.loadingPercent * 3, 30, 9179409);
-        GlUtils.fillQuad(DummyClass30.viewWidth / 2 - 150 + (3 * ClientScript.loadingPercent),
-          2 + var3, 300 - (3 * ClientScript.loadingPercent), 30, 0);
+          GlobalStatics_6.loadingPercent * 3, 30, 9179409);
+        GlUtils.fillQuad(DummyClass30.viewWidth / 2 - 150 + (3 * GlobalStatics_6.loadingPercent),
+          2 + var3, 300 - (3 * GlobalStatics_6.loadingPercent), 30, 0);
       } else {
         DummyClass47.method1311(DummyClass30.viewWidth / 2 - 152, var3, 304, 34, 9179409);
         DummyClass47.method1311(-151 + DummyClass30.viewWidth / 2, var3 + 1, 302, 32, 0);
         DummyClass47.method1323(DummyClass30.viewWidth / 2 - 150, var3 + 2,
-          ClientScript.loadingPercent * 3, 30, 9179409);
-        DummyClass47.method1323(3 * ClientScript.loadingPercent - 150 + DummyClass30.viewWidth / 2,
-          2 + var3, -(3 * ClientScript.loadingPercent) + 300, 30, 0);
+          GlobalStatics_6.loadingPercent * 3, 30, 9179409);
+        DummyClass47.method1323(3 * GlobalStatics_6.loadingPercent - 150 + DummyClass30.viewWidth / 2,
+          2 + var3, -(3 * GlobalStatics_6.loadingPercent) + 300, 30, 0);
       }
 
-      var2.draw(AnimationFrame.loadingText, DummyClass30.viewWidth / 2,
+      var2.draw(GlobalStatics_3.loadingText, DummyClass30.viewWidth / 2,
         4 + GroundItem.viewHeight / 2, 16777215, -1);
   }
 

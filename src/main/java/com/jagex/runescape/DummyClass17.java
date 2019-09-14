@@ -2,6 +2,8 @@ package com.jagex.runescape;
 
 import com.jagex.runescape.common.GameString;
 import com.jagex.runescape.common.GameStringStatics;
+import com.jagex.runescape.done.AbstractDirectColorSprite;
+
 import java.awt.FontMetrics;
 
 public final class DummyClass17 {

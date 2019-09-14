@@ -88,7 +88,7 @@ public final class WidgetAccess extends Node {
         WidgetAccess.anInt2208 = -42;
       }
 
-      return ClientScript.method630((byte) -34, this.anInt2205);
+      return GlobalStatics_6.method630((byte) -34, this.anInt2205);
   }
 
   public static void method90(int var0) {

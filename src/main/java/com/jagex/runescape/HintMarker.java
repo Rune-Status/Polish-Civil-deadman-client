@@ -83,9 +83,9 @@ public final class HintMarker {
 
                     if ((var15 & 4) == 4) {
                       var2 = var1.readUnsignedMedium((byte) 117);
-                      if (AbstractGameWorld.anIntArrayArrayArray720[var11][var12]
+                      if (GlobalStatics_4.anIntArrayArrayArray720[var11][var12]
                           == null) {
-                        AbstractGameWorld.anIntArrayArrayArray720[var11][var12] = new int[4096];
+                        GlobalStatics_4.anIntArrayArrayArray720[var11][var12] = new int[4096];
                       }
 
                       --var2;
@@ -97,7 +97,7 @@ public final class HintMarker {
                         }
                       }
 
-                      AbstractGameWorld.anIntArrayArrayArray720[var11][var12][(-var14 + 63 << 6)
+                      GlobalStatics_4.anIntArrayArrayArray720[var11][var12][(-var14 + 63 << 6)
                         + var13] = 1 + var3.anInt1527;
                       SomethingOtherWorldMap var16 = new SomethingOtherWorldMap();
                       var16.anInt2532 = var3.anInt1482;

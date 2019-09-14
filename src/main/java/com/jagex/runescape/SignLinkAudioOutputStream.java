@@ -1,5 +1,7 @@
 package com.jagex.runescape;
 
+import com.jagex.runescape.done.AbstractAudioOutputStream;
+
 import java.awt.Component;
 
 public final class SignLinkAudioOutputStream extends AbstractAudioOutputStream {

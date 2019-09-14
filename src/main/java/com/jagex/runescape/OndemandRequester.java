@@ -3,6 +3,8 @@ package com.jagex.runescape;
 import com.jagex.runescape.buffer.Buffer;
 import com.jagex.runescape.common.GameString;
 import com.jagex.runescape.common.GameStringStatics;
+import com.jagex.runescape.done.AbstractDirectColorSprite;
+
 import java.io.IOException;
 
 public final class OndemandRequester {
@@ -456,7 +458,7 @@ public final class OndemandRequester {
 
   public static void method1250(int var0, boolean var1) {
     StringNode0.aByteArrayArrayArray2339 = null;
-      AbstractGameWorld.anIntArrayArrayArray720 = null;
+      GlobalStatics_4.anIntArrayArrayArray720 = null;
       if (var0 < 14) {
         OndemandRequester.method1250(10, true);
       }
@@ -464,7 +466,7 @@ public final class OndemandRequester {
       SomethingWorldMapy.aClass11_3551 = null;
       RenderAnimation.aByteArrayArrayArray383 = null;
       DummyClass51.anIntArray1161 = null;
-      ClientScriptCall.aByteArrayArrayArray2452 = null;
+      GlobalStatics_7.aByteArrayArrayArray2452 = null;
       if (var1 && GlobalStatics_0.aClass3_Sub28_Sub3_2600 != null) {
         TextureSampler4.aClass94_3220 = GlobalStatics_0.aClass3_Sub28_Sub3_2600.aClass94_3561;
       } else {
@@ -474,14 +476,14 @@ public final class OndemandRequester {
       GlobalStatics_0.aByteArrayArrayArray640 = null;
       TextureSampler29.aByteArrayArrayArray3390 = null;
       PlayerVariable.anIntArrayArrayArray558 = null;
-      AbstractMouseWheel.anIntArrayArrayArray1903 = null;
+      GlobalStatics_5.anIntArrayArrayArray1903 = null;
       GameObject.anInt2737 = 0;
       GlobalStatics_0.aClass3_Sub28_Sub3_2600 = null;
       DummyClass51.aClass61_1162.clear(-108);
       DummyClass25.aClass131_1624 = null;
       TextureSampler13.anInt3362 = -1;
       SomethingTexture1.aClass33_2648 = null;
-      CollisionMap.aClass33_1305 = null;
+      GlobalStatics_7.aClass33_1305 = null;
       SocketStream.aClass33_1238 = null;
       DummyClass12.aClass33_2034 = null;
       Something3d2.aClass33_3019 = null;

@@ -2,6 +2,8 @@ package com.jagex.runescape;
 
 import com.jagex.runescape.common.GameString;
 import com.jagex.runescape.common.GameStringStatics;
+import com.jagex.runescape.done.AbstractDirectColorSprite;
+import com.jagex.runescape.done.AbstractSomethingTexture;
 import com.jagex.runescape.huffman.HuffmanEncoderStatics;
 import com.jagex.runescape.opengl.GlDirectColorSprite;
 import com.jagex.runescape.opengl.GlDirectFullColorSprite;
@@ -74,18 +76,18 @@ public final class SomethingTexture3 extends AbstractSomethingTexture {
   public static void method1346(int var0) {
     TextureSampler6.method174(4096, 5);
       DummyClass35.method1027(5, (byte) 69);
-      AudioStreamEncoder3.method465(5, true);
-      AudioStreamEncoder4.method474(2, 5);
+      GlobalStatics_6.method465(5, true);
+      GlobalStatics_6.method474(2, 5);
       Projectile.method2025((byte) -62, 5);
       MonoChromaticImageCache.method1711(5, var0 - 25956);
-      AreaSoundEffect.method137(5, (byte) -118);
-      ClanChatUser.method386(5, var0 ^ -26138);
+      GlobalStatics_6.method137(5, (byte) -118);
+      GlobalStatics_6.method386(5, var0 ^ -26138);
       GlobalStatics_0.method795((byte) 14, 5);
       SomethingWorldMapy.method539(0, 5);
       TextureSampler34.method188(5, 0);
       SomethingIndex150.method2260(var0 - 27256, 5);
-      FileCacheRequest.method594(var0 - 26090, 5);
-      FileCacheRequest.method595(5, 109);
+      GlobalStatics_7.method594(var0 - 26090, 5);
+      GlobalStatics_7.method595(5, 109);
       SomethingPacket151.method820(5, 64);
       SceneSomething.method953(-13508, 50);
       TextureSampler37.method269(-5, 5);

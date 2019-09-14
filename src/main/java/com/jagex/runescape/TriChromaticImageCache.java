@@ -2,6 +2,7 @@ package com.jagex.runescape;
 
 import com.jagex.runescape.common.GameString;
 import com.jagex.runescape.common.GameStringStatics;
+import com.jagex.runescape.done.AudioStreamEncoder;
 import com.jagex.runescape.node.Deque;
 import com.jagex.runescape.opengl.GLStatics;
 
@@ -155,6 +156,6 @@ public final class TriChromaticImageCache {
 
   public static void method1593(int var0, FileUnpacker var1) {
     DummyClass14.titleBackgroundFileId = var1.getFileId(SomethingQuickChat.TITLE_BACKGROUND);
-      BitVariable.logoFileId = var1.getFileId(DummyClass53.LOGO);
+      GlobalStatics_6.logoFileId = var1.getFileId(DummyClass53.LOGO);
   }
 }

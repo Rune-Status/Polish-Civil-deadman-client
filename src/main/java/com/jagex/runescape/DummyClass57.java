@@ -1,5 +1,6 @@
 package com.jagex.runescape;
 
+import com.jagex.runescape.done.AudioStreamEncoder2;
 import com.jagex.runescape.node.Node;
 
 public abstract class DummyClass57 extends Node {

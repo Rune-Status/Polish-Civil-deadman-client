@@ -3,6 +3,8 @@ package com.jagex.runescape;
 import com.jagex.runescape.buffer.Buffer;
 import com.jagex.runescape.common.GameString;
 import com.jagex.runescape.common.GameStringStatics;
+import com.jagex.runescape.done.AbstractTextureSampler;
+
 import java.util.Random;
 
 public final class TextureSampler15 extends AbstractTextureSampler {
@@ -56,7 +58,7 @@ public final class TextureSampler15 extends AbstractTextureSampler {
           TextureSampler36.anInt3422 = Integer.MAX_VALUE;
           Keyboard.anInt1914 = Integer.MAX_VALUE;
           LinearHashTable.anInt1042 = Integer.MAX_VALUE;
-          AnimationSomething.anInt3589 = Integer.MAX_VALUE;
+          GlobalStatics_6.anInt3589 = Integer.MAX_VALUE;
           int var16 =
               this.anInt3203 * TextureCache.anIntArray2125[var15] + 2048;
           int var17 = var16 >> 12;
@@ -110,7 +112,7 @@ public final class TextureSampler15 extends AbstractTextureSampler {
                 }
               }
 
-              if (var12 >= AnimationSomething.anInt3589) {
+              if (var12 >= GlobalStatics_6.anInt3589) {
                 if ((var12 < LinearHashTable.anInt1042)) {
                   TextureSampler36.anInt3422 = Keyboard.anInt1914;
                   Keyboard.anInt1914 = LinearHashTable.anInt1042;
@@ -126,22 +128,22 @@ public final class TextureSampler15 extends AbstractTextureSampler {
               } else {
                 TextureSampler36.anInt3422 = Keyboard.anInt1914;
                 Keyboard.anInt1914 = LinearHashTable.anInt1042;
-                LinearHashTable.anInt1042 = AnimationSomething.anInt3589;
-                AnimationSomething.anInt3589 = var12;
+                LinearHashTable.anInt1042 = GlobalStatics_6.anInt3589;
+                GlobalStatics_6.anInt3589 = var12;
               }
             }
           }
 
           var19 = this.anInt3191;
           if ((var19 == 0)) {
-            var3[var15] = AnimationSomething.anInt3589;
+            var3[var15] = GlobalStatics_6.anInt3589;
           } else if (var19 != 1) {
             if ((var19 == 3)) {
               var3[var15] = Keyboard.anInt1914;
             } else if (var19 == 4) {
               var3[var15] = TextureSampler36.anInt3422;
             } else if ((var19 == 2)) {
-              var3[var15] = LinearHashTable.anInt1042 - AnimationSomething.anInt3589;
+              var3[var15] = LinearHashTable.anInt1042 - GlobalStatics_6.anInt3589;
             }
           } else {
             var3[var15] = LinearHashTable.anInt1042;

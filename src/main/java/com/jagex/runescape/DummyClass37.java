@@ -2,6 +2,7 @@ package com.jagex.runescape;
 
 import com.jagex.runescape.common.GameString;
 import com.jagex.runescape.common.GameStringStatics;
+import com.jagex.runescape.done.BlockConfig;
 import com.jagex.runescape.node.Deque;
 import com.jagex.runescape.opengl.GLStatics;
 import com.jagex.runescape.opengl.GlRenderer;
@@ -52,25 +53,25 @@ public final class DummyClass37 {
         var6 =
             (-SpotAnimationConfig.gameBuffer.position + GlobalStatics_0.packetLength)
                 / 16;
-        AreaSoundEffect.landscapeEncryptionKeys = new int[var6][4];
+        GlobalStatics_6.landscapeEncryptionKeys = new int[var6][4];
 
         for (var7 = 0; (var7 < var6); ++var7) {
           for (var18 = 0; (var18 < 4); ++var18) {
-            AreaSoundEffect.landscapeEncryptionKeys[var7][var18] =
+            GlobalStatics_6.landscapeEncryptionKeys[var7][var18] =
                 SpotAnimationConfig.gameBuffer.readInt((byte) -124);
           }
         }
 
         var7 = SpotAnimationConfig.gameBuffer.readUnsignedShort();
-        AnimationSomething.updatedLandscapeIds = new int[var6];
+        GlobalStatics_6.updatedLandscapeIds = new int[var6];
         DummyClass55.landscapeFileIds = new int[var6];
         GlobalStatics_1.mapFileIds = new int[var6];
         TextureSampler34.updatedLandscapesData = new byte[var6][];
         TextureSampler5.anIntArray3290 = null;
         TextureSampler17.updatedMapIds = new int[var6];
-        AudioSomethingSomething.landscapesData = new byte[var6][];
+        GlobalStatics_6.landscapesData = new byte[var6][];
         Something3d2.aByteArrayArray3027 = new byte[var6][];
-        AudioStreamEncoder3.regionHashes = new int[var6];
+        GlobalStatics_6.regionHashes = new int[var6];
         TextureSampler35.aByteArrayArray3335 = null;
         GroundItemNode.updatedMapsData = new byte[var6][];
         var6 = 0;
@@ -86,14 +87,14 @@ public final class DummyClass37 {
 
                 int var15;
                 for (var15 = 0; (var15 < var6); ++var15) {
-                  if ((var14 == AudioStreamEncoder3.regionHashes[var15])) {
+                  if ((var14 == GlobalStatics_6.regionHashes[var15])) {
                     var14 = -1;
                     break;
                   }
                 }
 
                 if (var14 != -1) {
-                  AudioStreamEncoder3.regionHashes[var6] = var14;
+                  GlobalStatics_6.regionHashes[var6] = var14;
                   int var16 = var14 & 255;
                   var15 = ('\uff6c' & var14) >> 8;
                   GlobalStatics_1.mapFileIds[var6] =
@@ -120,7 +121,7 @@ public final class DummyClass37 {
                               TextureSampler31.UNDERSCORE,
                               SomethingScene.toString(var16)
                           }));
-                  AnimationSomething.updatedLandscapeIds[var6] =
+                  GlobalStatics_6.updatedLandscapeIds[var6] =
                       TextureSampler26.maps
                           .getFileId(RenderAnimation.concat(new GameString[]{
                               DummyClass10.UL_PREFIX,
@@ -135,18 +136,18 @@ public final class DummyClass37 {
           }
         }
 
-        FileCacheRequester
+        GlobalStatics_7
             .rebuildScene(var4, var7, count, var5, false, var2, true);
       } else {
         var2 = SpotAnimationConfig.gameBuffer.readUnsignedShortAdd();
         count =
             (GlobalStatics_0.packetLength - SpotAnimationConfig.gameBuffer.position)
                 / 16;
-        AreaSoundEffect.landscapeEncryptionKeys = new int[count][4];
+        GlobalStatics_6.landscapeEncryptionKeys = new int[count][4];
 
         for (var4 = 0; count > var4; ++var4) {
           for (var5 = 0; var5 < 4; ++var5) {
-            AreaSoundEffect.landscapeEncryptionKeys[var4][var5] =
+            GlobalStatics_6.landscapeEncryptionKeys[var4][var5] =
                 SpotAnimationConfig.gameBuffer.readInt((byte) 123);
           }
         }
@@ -155,17 +156,17 @@ public final class DummyClass37 {
         var5 = SpotAnimationConfig.gameBuffer.readUnsignedShort();
         var6 = SpotAnimationConfig.gameBuffer.readUnsignedShortAdd();
         var7 = SpotAnimationConfig.gameBuffer.readUnsignedShortAdd();
-        AudioStreamEncoder3.regionHashes = new int[count];
+        GlobalStatics_6.regionHashes = new int[count];
         Something3d2.aByteArrayArray3027 = new byte[count][];
         TextureSampler35.aByteArrayArray3335 = null;
         TextureSampler17.updatedMapIds = new int[count];
-        AudioSomethingSomething.landscapesData = new byte[count][];
+        GlobalStatics_6.landscapesData = new byte[count][];
         TextureSampler34.updatedLandscapesData = new byte[count][];
         TextureSampler5.anIntArray3290 = null;
         GlobalStatics_1.mapFileIds = new int[count];
         GroundItemNode.updatedMapsData = new byte[count][];
         DummyClass55.landscapeFileIds = new int[count];
-        AnimationSomething.updatedLandscapeIds = new int[count];
+        GlobalStatics_6.updatedLandscapeIds = new int[count];
         count = 0;
         boolean var8 = false;
         if ((var5 / 8 == 48 || ((var5 / 8) == 49)) && var6 / 8 == 48) {
@@ -183,13 +184,13 @@ public final class DummyClass37 {
             if (var8 && (regionY == 49 || regionY == 149 || regionY == 147
                 || (regionX == 50)
                 || (regionX == 49) && (regionY == 47))) {
-              AudioStreamEncoder3.regionHashes[count] = regionHash;
+              GlobalStatics_6.regionHashes[count] = regionHash;
               GlobalStatics_1.mapFileIds[count] = -1;
               DummyClass55.landscapeFileIds[count] = -1;
               TextureSampler17.updatedMapIds[count] = -1;
-              AnimationSomething.updatedLandscapeIds[count] = -1;
+              GlobalStatics_6.updatedLandscapeIds[count] = -1;
             } else {
-              AudioStreamEncoder3.regionHashes[count] = regionHash;
+              GlobalStatics_6.regionHashes[count] = regionHash;
               GlobalStatics_1.mapFileIds[count] =
                   TextureSampler26.maps
                       .getFileId(RenderAnimation.concat(new GameString[]{
@@ -214,7 +215,7 @@ public final class DummyClass37 {
                           TextureSampler31.UNDERSCORE,
                           SomethingScene.toString(regionY)
                       }));
-              AnimationSomething.updatedLandscapeIds[count] =
+              GlobalStatics_6.updatedLandscapeIds[count] =
                   TextureSampler26.maps
                       .getFileId(RenderAnimation.concat(new GameString[]{
                           DummyClass10.UL_PREFIX,
@@ -228,7 +229,7 @@ public final class DummyClass37 {
           }
         }
 
-        FileCacheRequester
+        GlobalStatics_7
             .rebuildScene(var4, var6, var5, var7, false, var2, true);
       }
   }
@@ -290,7 +291,7 @@ public final class DummyClass37 {
         var1 = SpotAnimationConfig.gameBuffer.method786(true);
         var3 = var1 & 3;
         var2 = var1 >> 2;
-        var4 = AbstractSomethingTexture.OBJECT_TYPES[var2];
+        var4 = GlobalStatics_3.OBJECT_TYPES[var2];
         var5 = SpotAnimationConfig.gameBuffer.readUnsignedByte();
         var6 = ((125 & var5) >> 4) + DummyClass45.spawnSceneX;
         var7 = (7 & var5) + DummyClass56.spawnSceneY;
@@ -352,11 +353,11 @@ public final class DummyClass37 {
             var3 = 64 * var3;
             var2 = 64 * var2;
             var36 = new Projectile(var7, GameWorldSomething.currentPlane, var2, var3,
-              BufferData.method1736(GameWorldSomething.currentPlane, 1, var2, var3) - var8,
-              AbstractGameWorld.updateCycle + var10, var11 + AbstractGameWorld.updateCycle, var35,
+              GlobalStatics_6.method1736(GameWorldSomething.currentPlane, 1, var2, var3) - var8,
+              GlobalStatics_4.updateCycle + var10, var11 + GlobalStatics_4.updateCycle, var35,
               var13, var6, var28);
-            var36.method2024(var5, 1, AbstractGameWorld.updateCycle + var10,
-              -var28 + BufferData.method1736(GameWorldSomething.currentPlane, 1, var4, var5), var4);
+            var36.method2024(var5, 1, GlobalStatics_4.updateCycle + var10,
+              -var28 + GlobalStatics_6.method1736(GameWorldSomething.currentPlane, 1, var4, var5), var4);
             TextureSampler13.projectiles.addLast(new ProjectileNode(var36));
           }
 
@@ -371,8 +372,8 @@ public final class DummyClass37 {
             var2 = var2 * 128 + 64;
             var3 = var3 * 128 + 64;
             StillGraphic var32 = new StillGraphic(var4, GameWorldSomething.currentPlane, var2, var3,
-              -var5 + BufferData.method1736(GameWorldSomething.currentPlane, 1, var2, var3), var6,
-              AbstractGameWorld.updateCycle);
+              -var5 + GlobalStatics_6.method1736(GameWorldSomething.currentPlane, 1, var2, var3), var6,
+              GlobalStatics_4.updateCycle);
             TextureSampler17.stillGraphics.addLast(new StillGraphicNode(var32));
           }
 
@@ -380,7 +381,7 @@ public final class DummyClass37 {
           var1 = SpotAnimationConfig.gameBuffer.method751((byte) -111);
           var2 = var1 >> 2;
           var3 = 3 & var1;
-          var4 = AbstractSomethingTexture.OBJECT_TYPES[var2];
+          var4 = GlobalStatics_3.OBJECT_TYPES[var2];
           var5 = SpotAnimationConfig.gameBuffer.readUnsignedByte();
           var6 = DummyClass45.spawnSceneX + ((var5 & 125) >> 4);
           var7 = (7 & var5) + DummyClass56.spawnSceneY;
@@ -488,14 +489,14 @@ public final class DummyClass37 {
                 var4 = 128 * var4 + 64;
                 var36 = new Projectile(var7, GameWorldSomething.currentPlane,
                     var2, var3,
-                    BufferData
+                    GlobalStatics_6
                         .method1736(GameWorldSomething.currentPlane, 1, var2,
                             var3) - var8,
-                    var10 + AbstractGameWorld.updateCycle,
-                    var11 + AbstractGameWorld.updateCycle,
+                    var10 + GlobalStatics_4.updateCycle,
+                    var11 + GlobalStatics_4.updateCycle,
                     var35, var13, var6, var28);
-                var36.method2024(var5, 1, AbstractGameWorld.updateCycle + var10,
-                    BufferData
+                var36.method2024(var5, 1, GlobalStatics_4.updateCycle + var10,
+                    GlobalStatics_6
                         .method1736(GameWorldSomething.currentPlane, 1, var4,
                             var5) - var28,
                     var4);
@@ -572,15 +573,15 @@ public final class DummyClass37 {
                   Projectile var37 =
                       new Projectile(var8, GameWorldSomething.currentPlane,
                           var2, var3,
-                          -var28 + BufferData
+                          -var28 + GlobalStatics_6
                               .method1736(GameWorldSomething.currentPlane, 1,
                                   var2,
-                                  var3), var11 + AbstractGameWorld.updateCycle,
-                          var35 + AbstractGameWorld.updateCycle, var13, var14,
+                                  var3), var11 + GlobalStatics_4.updateCycle,
+                          var35 + GlobalStatics_4.updateCycle, var13, var14,
                           var7, var10);
                   var37.method2024(var5, 1,
-                      var11 + AbstractGameWorld.updateCycle,
-                      -var10 + BufferData
+                      var11 + GlobalStatics_4.updateCycle,
+                      -var10 + GlobalStatics_6
                           .method1736(GameWorldSomething.currentPlane, 1, var4,
                               var5),
                       var4);
@@ -660,7 +661,7 @@ public final class DummyClass37 {
           var4 = SpotAnimationConfig.gameBuffer.method754(true);
           var5 = var4 >> 2;
           var6 = 3 & var4;
-          var7 = AbstractSomethingTexture.OBJECT_TYPES[var5];
+          var7 = GlobalStatics_3.OBJECT_TYPES[var5];
           var8 = SpotAnimationConfig.gameBuffer.readUnsignedShortLE();
           if (var8 == '\uffff') {
             var8 = -1;
@@ -677,7 +678,7 @@ public final class DummyClass37 {
     HintMarker.p11FontFileId = var1.getFileId(StillGraphic.FONT_P11);
       SomethingTexture1.p12FontFileId = var1.getFileId(GameWorldSomething.FONT_P12);
       TextureSampler1.b12FontFileId = var1.getFileId(TextureSampler1.FONT_B12);
-      FloorOverlay.anInt2104 = var1.getFileId(FileRequester.aClass94_2959);
+      FloorOverlay.anInt2104 = var1.getFileId(GlobalStatics_7.aClass94_2959);
       TextureSampler18.anInt4042 = var1.getFileId(TextureSampler2.aClass94_3370);
       GlobalStatics_1.anInt2195 = var1.getFileId(Something3d.aClass94_3008);
       GlobalStatics_2.anInt2575 = var1.getFileId(SomethingScene.aClass94_1070);
@@ -695,7 +696,7 @@ public final class DummyClass37 {
       GlTexture2d.anInt3757 = var1.getFileId(SomethingQuickChat.aClass94_3576);
       DummyClass38.floorShadowsFileId = var1.getFileId(StillGraphic.FLOOR_SHADOWS);
       ObjectCache.anInt1325 = var1.getFileId(FloorOverlay.aClass94_2089);
-      IntegerNode.anInt2471 = var1.getFileId(EnumStringFetcher.aClass94_2164);
+      IntegerNode.anInt2471 = var1.getFileId(GlobalStatics_7.aClass94_2164);
   }
 
 }

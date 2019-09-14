@@ -4,6 +4,8 @@ import com.jagex.runescape.buffer.Buffer;
 import com.jagex.runescape.common.ArrayUtils;
 import com.jagex.runescape.common.GameString;
 import com.jagex.runescape.common.GameStringStatics;
+import com.jagex.runescape.done.AbstractTextureSampler;
+
 import java.util.Random;
 
 public final class TextureSampler28 extends AbstractTextureSampler {

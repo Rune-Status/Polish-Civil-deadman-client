@@ -74,14 +74,14 @@ public final class DummyClass50 {
 
   public static void method1399(int var0, long var1) {
     if (var1 != 0L) {
-        if (AnimationSomething.anInt3591 < 100) {
+        if (GlobalStatics_6.anInt3591 < 100) {
           int var3 = -103 / ((var0 + 20) / 41);
           GameString var4 = Objects
               .requireNonNull(GameStringStatics.stringFromBase37(-29664, var1))
               .formatName((byte) -50);
 
           int var5;
-          for (var5 = 0; AnimationSomething.anInt3591 > var5; ++var5) {
+          for (var5 = 0; GlobalStatics_6.anInt3591 > var5; ++var5) {
             if (MonoChromaticImageCache.aLongArray1574[var5] == var1) {
               GameBuffer.printMessage(GroundItemNode.EMPTY_STRING, 0,
                   RenderAnimation.concat(
@@ -107,8 +107,8 @@ public final class DummyClass50 {
                 DummyClass53.aClass94_1335, -1);
           } else {
             ++TextureSampler0.anInt3267;
-            MonoChromaticImageCache.aLongArray1574[AnimationSomething.anInt3591] = var1;
-            TextureSampler7.aClass94Array3341[AnimationSomething.anInt3591++] =
+            MonoChromaticImageCache.aLongArray1574[GlobalStatics_6.anInt3591] = var1;
+            TextureSampler7.aClass94Array3341[GlobalStatics_6.anInt3591++] =
                 GameStringStatics.stringFromBase37(-29664, var1);
             DummyClass31.anInt1472 = TextureSampler23.anInt3213;
             TextureSampler12.secureBuffer.writePacket(34);
@@ -116,7 +116,7 @@ public final class DummyClass50 {
           }
         } else {
           GameBuffer.printMessage(GroundItemNode.EMPTY_STRING, 0,
-              BufferObject.aClass94_1884, -1);
+              GlobalStatics_6.aClass94_1884, -1);
         }
       }
   }

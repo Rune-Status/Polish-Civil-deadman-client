@@ -2,6 +2,7 @@ package com.jagex.runescape;
 
 import com.jagex.runescape.common.GameString;
 import com.jagex.runescape.common.GameStringStatics;
+import com.jagex.runescape.done.AreaSoundEffect;
 
 public final class SceneSomething2 {
 
@@ -40,7 +41,7 @@ public final class SceneSomething2 {
       TextureSampler36.anInt3423 = var5;
       DummyClass22.anInt1741 = var3;
       TextureSampler8.anInt3463 = var2;
-      AreaSoundEffect.aBoolean2311 = var4;
+      GlobalStatics_6.aBoolean2311 = var4;
       if (var1) {
         SceneSomething2.anInt1053 = 125;
       }
@@ -118,7 +119,7 @@ public final class SceneSomething2 {
           SceneSomething2.method1284((byte) -124);
         }
 
-        return AbstractTextureSampler.method163(var2.getBytes(var0, var1), 25208);
+        return GlobalStatics_3.method163(var2.getBytes(var0, var1), 25208);
       } else {
         return null;
       }

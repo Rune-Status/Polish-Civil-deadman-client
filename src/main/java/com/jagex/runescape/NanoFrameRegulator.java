@@ -1,5 +1,7 @@
 package com.jagex.runescape;
 
+import com.jagex.runescape.done.AbstractFrameRegulator;
+
 public final class NanoFrameRegulator extends AbstractFrameRegulator {
 
   private long aLong2698 = System.nanoTime();

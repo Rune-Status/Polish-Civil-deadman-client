@@ -2,6 +2,8 @@ package com.jagex.runescape;
 
 import com.jagex.runescape.common.GameString;
 import com.jagex.runescape.common.GameStringStatics;
+import com.jagex.runescape.done.AbstractDirectColorSprite;
+import com.jagex.runescape.done.AbstractSomethingTexture;
 import com.jagex.runescape.opengl.GLStatics;
 
 public final class SomethingTexture1 extends AbstractSomethingTexture {

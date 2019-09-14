@@ -2,6 +2,7 @@ package com.jagex.runescape;
 
 import com.jagex.runescape.common.GameString;
 import com.jagex.runescape.common.GameStringStatics;
+import com.jagex.runescape.done.DisplayMode;
 import com.jagex.runescape.opengl.GLStatics;
 import java.util.Arrays;
 
@@ -128,14 +129,14 @@ public final class DummyClass42 {
         DummyClass42.DEFAULT_WALK_TOOLTIP = null;
       }
 
-      AbstractFrameRegulator.anIntArray1695 = null;
+      GlobalStatics_4.anIntArray1695 = null;
       SomethingPacket151.anIntArray2606 = null;
   }
 
   public static boolean addNodeToSceneGraph(int plane, int var1, int var2, int var3, int var4,
                                            int var5, int var6, int var7, SceneNode var8, int var9,
                                            boolean var10, long var11) {
-    boolean var13 = Arrays.deepEquals(AbstractGameWorld.heightMap,
+    boolean var13 = Arrays.deepEquals(GlobalStatics_4.heightMap,
         GlobalStatics_2.othrrHeightMap);
     int var14 = 0;
 
@@ -215,7 +216,7 @@ public final class DummyClass42 {
     }
 
     if (var10) {
-      AnimationSequence.aClass25Array1868[TextureSampler21.anInt3070++] = var20;
+      GlobalStatics_3.aClass25Array1868[TextureSampler21.anInt3070++] = var20;
     }
 
     return true;

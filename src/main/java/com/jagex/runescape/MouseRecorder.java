@@ -2,6 +2,7 @@ package com.jagex.runescape;
 
 import com.jagex.runescape.common.ArrayUtils;
 import com.jagex.runescape.common.GameString;
+import com.jagex.runescape.done.AnimationSequence;
 
 public final class MouseRecorder implements Runnable {
 
@@ -46,7 +47,7 @@ public final class MouseRecorder implements Runnable {
 
   public static void method1259(int var0, byte var1) {
     if (var1 > 12) {
-        WidgetUpdate var2 = AudioStreamEncoder3.method466(4, 12, var0);
+        WidgetUpdate var2 = GlobalStatics_6.method466(4, 12, var0);
         var2.createIndexedColorSprite(true);
       }
   }
@@ -89,7 +90,7 @@ public final class MouseRecorder implements Runnable {
               if (var6 != -1) {
                 AnimationSequence var7 = GameClient.method45(var6, (byte) -20);
                 for (
-                  var4.anInt267 += DisplayMode.loopCycle;
+                  var4.anInt267 += GlobalStatics_7.loopCycle;
                   var4.anInt267 > var7.anIntArray1869[var4.anInt283]; DummyClass29.method909(
                   115, var4)) {
                   var4.anInt267 -= var7.anIntArray1869[var4.anInt283];
@@ -114,10 +115,10 @@ public final class MouseRecorder implements Runnable {
 
             if (var4.anInt237 != 0 && !var4.aBoolean233) {
               int var10 = var4.anInt237 >> 16;
-              var10 *= DisplayMode.loopCycle;
+              var10 *= GlobalStatics_7.loopCycle;
               var6 = var4.anInt237 << 16 >> 16;
               var4.rotationX0 = 2047 & var10 + var4.rotationX0;
-              var6 *= DisplayMode.loopCycle;
+              var6 *= GlobalStatics_7.loopCycle;
               var4.rotationY = var4.rotationY + var6 & 2047;
               DummyClass29.method909(117, var4);
             }

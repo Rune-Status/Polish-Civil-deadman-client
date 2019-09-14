@@ -2,6 +2,7 @@ package com.jagex.runescape;
 
 import com.jagex.runescape.common.GameString;
 import com.jagex.runescape.common.GameStringStatics;
+import com.jagex.runescape.done.AbstractFont;
 import com.jagex.runescape.node.SubNode;
 import com.jagex.runescape.opengl.GlFont;
 import com.jagex.runescape.opengl.GlRenderer;
@@ -150,7 +151,7 @@ public final class Queue {
       DummyClass22.anInt1741 = -1;
       SomethingQuickChatK.anInt154 = 1;
       SpotAnimationConfig.anInt546 = var1;
-      AreaSoundEffect.aBoolean2311 = false;
+      GlobalStatics_6.aBoolean2311 = false;
       DummyClass55.aClass153_1423 = null;
       TextureSampler8.anInt3463 = var0;
   }

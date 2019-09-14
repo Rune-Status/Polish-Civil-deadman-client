@@ -3,6 +3,7 @@ package com.jagex.runescape;
 import com.jagex.runescape.buffer.Buffer;
 import com.jagex.runescape.common.GameString;
 import com.jagex.runescape.common.GameStringStatics;
+import com.jagex.runescape.done.AnimationSequence;
 import com.jagex.runescape.opengl.GLStatics;
 import com.jagex.runescape.sprite.AbstractIndexedColorSprite;
 

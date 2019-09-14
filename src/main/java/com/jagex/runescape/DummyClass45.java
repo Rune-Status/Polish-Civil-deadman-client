@@ -61,8 +61,8 @@ public final class DummyClass45 {
 
   public static void method1235(int var0, int var1, int var2, int var3, byte var4) {
     if (GlobalStatics_0.anInt638 == 1) {
-        DummyClass17.aClass3_Sub28_Sub16Array1825[FileRequester.anInt2958 / 100].method643(
-          -8 + SceneSomething2.anInt1053, -8 + FileCacheRequest.anInt4062);
+        DummyClass17.aClass3_Sub28_Sub16Array1825[GlobalStatics_7.anInt2958 / 100].method643(
+          -8 + SceneSomething2.anInt1053, -8 + GlobalStatics_7.anInt4062);
       }
 
       if (var4 != -121) {
@@ -70,15 +70,15 @@ public final class DummyClass45 {
       }
 
       if ((GlobalStatics_0.anInt638 == 2)) {
-        DummyClass17.aClass3_Sub28_Sub16Array1825[4 + FileRequester.anInt2958 / 100].method643(
-          SceneSomething2.anInt1053 - 8, -8 + FileCacheRequest.anInt4062);
+        DummyClass17.aClass3_Sub28_Sub16Array1825[4 + GlobalStatics_7.anInt2958 / 100].method643(
+          SceneSomething2.anInt1053 - 8, -8 + GlobalStatics_7.anInt4062);
       }
 
       TextureSampler10.method347(true);
   }
 
   public static void setQuickchatFileUnpackers(FileUnpacker var0, FileUnpacker var1, int var2) {
-    Cache.quickchats = var1;
+    GlobalStatics_6.quickchats = var1;
       if (var2 >= -94) {
         DummyClass45.aClass94_992 = null;
       }
@@ -122,8 +122,8 @@ public final class DummyClass45 {
           var6 = 0;
         }
 
-        int var7 = var6 * (TextureSampler33.aShort3052 - DisplayMode.aShort1444) / 100
-          + DisplayMode.aShort1444;
+        int var7 = var6 * (TextureSampler33.aShort3052 - GlobalStatics_7.aShort1444) / 100
+          + GlobalStatics_7.aShort1444;
         if (TextureSampler4.aShort3241 <= var7) {
           if (DummyClass18.aShort83 < var7) {
             var7 = DummyClass18.aShort83;
@@ -198,7 +198,7 @@ public final class DummyClass45 {
       FloorOverlay.aClass3_Sub28_Sub17_2096 = null;
       LightIntensity.aClass3_Sub28_Sub16_895 = null;
       HashTableIterator.aClass3_Sub28_Sub16Array1136 = null;
-      AbstractTextureSampler.aClass3_Sub28_Sub17_2379 = null;
+      GlobalStatics_3.aClass3_Sub28_Sub17_2379 = null;
       DummyClass38.aClass3_Sub28_Sub16_736 = null;
       OndemandRequester.aClass3_Sub28_Sub16Array996 = null;
       TextureSampler8.aClass3_Sub28_Sub16Array3458 = null;

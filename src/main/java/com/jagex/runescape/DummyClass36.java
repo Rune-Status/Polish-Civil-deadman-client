@@ -2,6 +2,8 @@ package com.jagex.runescape;
 
 import com.jagex.runescape.common.GameString;
 import com.jagex.runescape.common.GameStringStatics;
+import com.jagex.runescape.done.AbstractDirectColorSprite;
+import com.jagex.runescape.done.AudioWorker;
 import com.jagex.runescape.opengl.GLStatics;
 import com.jagex.runescape.opengl.GlDirectColorSprite;
 import com.jagex.runescape.opengl.GlRenderer;
@@ -21,7 +23,7 @@ public final class DummyClass36 extends DummyClass35 {
 
 
   public static void method1030(Widget var0, AbstractDirectColorSprite var1, int var2, int var3,
-                               int var4, byte var5, int var6) {
+                                int var4, byte var5, int var6) {
     if (var1 != null) {
         if (var5 != 11) {
           DummyClass36.method1032(true);

@@ -2,6 +2,9 @@ package com.jagex.runescape;
 
 import com.jagex.runescape.common.GameString;
 import com.jagex.runescape.common.GameStringStatics;
+import com.jagex.runescape.done.AbstractDirectColorSprite;
+import com.jagex.runescape.done.AbstractFrameRegulator;
+
 import java.awt.Image;
 
 public final class MilliFrameRegulator extends AbstractFrameRegulator {

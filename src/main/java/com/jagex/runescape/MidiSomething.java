@@ -156,13 +156,13 @@ public final class MidiSomething {
         if (var16 > 0) {
           var17 = var13 + var6 >> 6;
           if (var17 >= 0
-              && ((AbstractMouseWheel.anIntArrayArrayArray1903.length - 1) >= var17)) {
+              && ((GlobalStatics_5.anIntArrayArrayArray1903.length - 1) >= var17)) {
             var14 += var5;
-            var41 = AbstractMouseWheel.anIntArrayArrayArray1903[var17];
+            var41 = GlobalStatics_5.anIntArrayArrayArray1903[var17];
             byte[][] var45 = RenderAnimation.aByteArrayArrayArray383[var17];
             byte[][] var42 = StringNode0.aByteArrayArrayArray2339[var17];
             byte[][] var23 = GlobalStatics_0.aByteArrayArrayArray640[var17];
-            byte[][] var43 = ClientScriptCall.aByteArrayArrayArray2452[var17];
+            byte[][] var43 = GlobalStatics_7.aByteArrayArrayArray2452[var17];
             var15 += var5;
             byte[][] var46 = TextureSampler29.aByteArrayArrayArray3390[var17];
 

@@ -3,6 +3,7 @@ package com.jagex.runescape;
 import com.jagex.runescape.buffer.Buffer;
 import com.jagex.runescape.common.GameString;
 import com.jagex.runescape.common.GameStringStatics;
+import com.jagex.runescape.done.AnimationSequence;
 import com.jagex.runescape.node.SubNode;
 
 public final class GroundItemNode extends SubNode {
@@ -45,26 +46,26 @@ public final class GroundItemNode extends SubNode {
           DummyClass30.anInt455 =
             64 + (GlobalStatics_0.aClass3_Sub28_Sub3_2600.anInt3559 >> 6 << 6) - TextureSampler37.anInt3256;
           if (GlobalStatics_0.aClass3_Sub28_Sub3_2600.anInt3563 == 37) {
-            AbstractGameWorld.aFloat727 = 3.0F;
+            GlobalStatics_4.aFloat727 = 3.0F;
             NPC.aFloat3979 = 3.0F;
           } else {
             if ((GlobalStatics_0.aClass3_Sub28_Sub3_2600.anInt3563 == 50)) {
-              AbstractGameWorld.aFloat727 = 4.0F;
+              GlobalStatics_4.aFloat727 = 4.0F;
               NPC.aFloat3979 = 4.0F;
             } else {
               if (GlobalStatics_0.aClass3_Sub28_Sub3_2600.anInt3563 == 75) {
-                AbstractGameWorld.aFloat727 = 6.0F;
+                GlobalStatics_4.aFloat727 = 6.0F;
                 NPC.aFloat3979 = 6.0F;
               } else if ((GlobalStatics_0.aClass3_Sub28_Sub3_2600.anInt3563 != 100)) {
                 if (GlobalStatics_0.aClass3_Sub28_Sub3_2600.anInt3563 == 200) {
-                  AbstractGameWorld.aFloat727 = 16.0F;
+                  GlobalStatics_4.aFloat727 = 16.0F;
                   NPC.aFloat3979 = 16.0F;
                 } else {
-                  AbstractGameWorld.aFloat727 = 8.0F;
+                  GlobalStatics_4.aFloat727 = 8.0F;
                   NPC.aFloat3979 = 8.0F;
                 }
               } else {
-                AbstractGameWorld.aFloat727 = 8.0F;
+                GlobalStatics_4.aFloat727 = 8.0F;
                 NPC.aFloat3979 = 8.0F;
               }
             }
@@ -95,12 +96,12 @@ public final class GroundItemNode extends SubNode {
           StringNode0.aByteArrayArrayArray2339 = new byte[var3][var4][];
           int var5 = TextureSampler31.anInt3158 >> 2 << 10;
           GlobalStatics_0.aByteArrayArrayArray640 = new byte[var3][var4][];
-          AbstractGameWorld.anIntArrayArrayArray720 = new int[var3][var4][];
+          GlobalStatics_4.anIntArrayArrayArray720 = new int[var3][var4][];
           RenderAnimation.aByteArrayArrayArray383 = new byte[var3][var4][];
-          AbstractMouseWheel.anIntArrayArrayArray1903 = new int[var3][var4][];
+          GlobalStatics_5.anIntArrayArrayArray1903 = new int[var3][var4][];
           TextureSampler29.aByteArrayArrayArray3390 = new byte[var3][var4][];
           int var6 = GlobalStatics_1.anInt1463 >> 1;
-          ClientScriptCall.aByteArrayArrayArray2452 = new byte[var3][var4][];
+          GlobalStatics_7.aByteArrayArrayArray2452 = new byte[var3][var4][];
           PlayerVariable.anIntArrayArrayArray558 = new int[var3][var4][];
           GlobalStatics_0.method1014(-120, var6, var5);
           GameObject.anInt2737 = 20;
@@ -183,7 +184,7 @@ public final class GroundItemNode extends SubNode {
                   DummyClass5.method2210((byte) -90, true);
                   SomethingTexture4.resetFrameRegulator();
                 } else if (GameObject.anInt2737 != 88) {
-                  CollisionMap.aClass33_1305 = new SomethingFont(30, true,
+                  GlobalStatics_7.aClass33_1305 = new SomethingFont(30, true,
                       GameCanvas.INSTANCE);
                   GameObject.anInt2737 = 100;
                   DummyClass5.method2210((byte) -90, true);

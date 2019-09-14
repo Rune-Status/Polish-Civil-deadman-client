@@ -4,6 +4,9 @@ import com.jagex.runescape.buffer.Buffer;
 import com.jagex.runescape.common.ArrayUtils;
 import com.jagex.runescape.common.GameString;
 import com.jagex.runescape.common.GameStringStatics;
+import com.jagex.runescape.done.AbstractDirectColorSprite;
+import com.jagex.runescape.done.AbstractTextureSampler;
+
 import java.awt.Frame;
 import java.util.Random;
 

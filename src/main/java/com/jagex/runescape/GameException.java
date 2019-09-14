@@ -27,7 +27,7 @@ public final class GameException extends RuntimeException {
         TextureSampler9.anInt3103 = var5;
         GroundItem.anInt2938 = var0;
         BZipDecompressorState.anInt144 = var3;
-        ClientScript.anInt3695 = var2;
+        GlobalStatics_6.anInt3695 = var2;
       }
   }
 

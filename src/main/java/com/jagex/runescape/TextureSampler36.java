@@ -3,6 +3,8 @@ package com.jagex.runescape;
 import com.jagex.runescape.buffer.Buffer;
 import com.jagex.runescape.common.GameString;
 import com.jagex.runescape.common.GameStringStatics;
+import com.jagex.runescape.done.AbstractTextureSampler;
+import com.jagex.runescape.done.ClientScriptEnum;
 import com.jagex.runescape.opengl.DummyClass46;
 import com.jagex.runescape.opengl.GLStatics;
 import com.jagex.runescape.opengl.GlIndexedColorSprite;
@@ -120,7 +122,7 @@ public final class TextureSampler36 extends AbstractTextureSampler {
   }
 
   public static void method338(int var0, int var1, boolean var2, int var3, int var4, int var5) {
-    ++BitVariable.anInt1127;
+    ++GlobalStatics_6.anInt1127;
       DummyClass23.method1745(0);
       if (!var2) {
         SomethingInScenePacket202.method116(true, 670232012);
@@ -133,7 +135,7 @@ public final class TextureSampler36 extends AbstractTextureSampler {
         TextureSampler32.updateProjectiles();
       }
 
-      BufferObject.method2067(false);
+      GlobalStatics_6.method2067(false);
       if (GlRenderer.useOpenGlRenderer) {
         DummyClass45.method1239(var4, 125, var5, var1, var3, true);
         var3 = DummyClass5.anInt2989;
@@ -146,7 +148,7 @@ public final class TextureSampler36 extends AbstractTextureSampler {
       int var7;
       if (SomethingPacket116.anInt1753 == 1) {
         var7 = 2047 & GlobalStatics_0.anInt2589 + SpotAnimationConfig.anInt531;
-        var6 = AreaSoundEffect.anInt2309;
+        var6 = GlobalStatics_6.anInt2309;
         if ((var6 < (SomethingTexture4.anInt2670 / 256))) {
           var6 = SomethingTexture4.anInt2670 / 256;
         }
@@ -157,13 +159,13 @@ public final class TextureSampler36 extends AbstractTextureSampler {
         }
 
         StillGraphic.method1952(TextureSampler20.anInt3155, -1907397104, var1,
-          BufferData.method1736(GameWorldSomething.currentPlane, 1,
+          GlobalStatics_6.method1736(GameWorldSomething.currentPlane, 1,
             TextureCache.localPlayer.anInt2819, TextureCache.localPlayer.anInt2829) - 50,
           600 + (var6 * 3), var7, FileTable.anInt942, var6);
       }
 
       if (var0 == -6403) {
-        var7 = EnumStringFetcher.anInt2162;
+        var7 = GlobalStatics_7.anInt2162;
         var6 = NPC.anInt3995;
         int var8 = DummyClass49.anInt1111;
         int var9 = DummyClass17.anInt1823;
@@ -198,7 +200,7 @@ public final class TextureSampler36 extends AbstractTextureSampler {
             }
 
             if (var11 == 1) {
-              EnumStringFetcher.anInt2162 += var12;
+              GlobalStatics_7.anInt2162 += var12;
             }
 
             if (var11 == 0) {
@@ -243,32 +245,32 @@ public final class TextureSampler36 extends AbstractTextureSampler {
         }
 
         DummyClass43.method1194(-16385);
-        byte var19 = (DummyClass20.method1817((byte) 70) != 2) ? 1 : (byte) BitVariable.anInt1127;
+        byte var19 = (DummyClass20.method1817((byte) 70) != 2) ? 1 : (byte) GlobalStatics_6.anInt1127;
         if (GlRenderer.useOpenGlRenderer) {
           GlRenderer.method1846();
           GlRenderer.setDepthTestEnabled(true);
           boolean var18 = false;
           GlRenderer.setFogEnabled(true);
           if ((DummyClass15.state == 10)) {
-            var12 = GameBuffer.method809(DisplayMode.loopCycle, DummyClass49.anInt1111 >> 10,
+            var12 = GameBuffer.method809(GlobalStatics_7.loopCycle, DummyClass49.anInt1111 >> 10,
               GlobalStatics_4.brightnessSetting, NPC.anInt3995 >> 10,
                 1);
           } else {
-            var12 = GameBuffer.method809(DisplayMode.loopCycle,
+            var12 = GameBuffer.method809(GlobalStatics_7.loopCycle,
               TextureCache.localPlayer.waypointsY[0] >> 3, GlobalStatics_4.brightnessSetting,
               TextureCache.localPlayer.waypointsX[0] >> 3, 1);
           }
 
-          DummyClass46.method1269(AbstractGameWorld.updateCycle, !GameWorld.aBoolean2623);
+          DummyClass46.method1269(GlobalStatics_4.updateCycle, !GameWorld.aBoolean2623);
           GlRenderer.clearBuffers(var12);
           GameException.method2285(DummyClass17.anInt1823, DummyClass49.anInt1111,
-            EnumStringFetcher.anInt2162, NPC.anInt3995, false, TextureSampler28.anInt3315);
-          GlRenderer.anInt1791 = AbstractGameWorld.updateCycle;
-          AudioSomethingSomething.drawScene(NPC.anInt3995, EnumStringFetcher.anInt2162,
+            GlobalStatics_7.anInt2162, NPC.anInt3995, false, TextureSampler28.anInt3315);
+          GlRenderer.anInt1791 = GlobalStatics_4.updateCycle;
+          GlobalStatics_6.drawScene(NPC.anInt3995, GlobalStatics_7.anInt2162,
             DummyClass49.anInt1111, DummyClass17.anInt1823, TextureSampler28.anInt3315,
-            AbstractImageProducer.aByteArrayArrayArray2008, FileCache.anIntArray686,
+            GlobalStatics_5.aByteArrayArrayArray2008, GlobalStatics_7.anIntArray686,
             MilliFrameRegulator.anIntArray2696, DummyClass13.anIntArray2021, Player.anIntArray3959,
-            AnimationSequence.anIntArray1871, GameWorldSomething.currentPlane + 1, var19,
+            GlobalStatics_3.anIntArray1871, GameWorldSomething.currentPlane + 1, var19,
             TextureCache.localPlayer.anInt2819 >> 7, TextureCache.localPlayer.anInt2829 >> 7);
           DummyOutputStream.aBoolean47 = true;
           DummyClass46.disableLights();
@@ -281,11 +283,11 @@ public final class TextureSampler36 extends AbstractTextureSampler {
             var5);
         } else {
           DummyClass47.method1323(var3, var5, var4, var1, 0);
-          AudioSomethingSomething.drawScene(NPC.anInt3995, EnumStringFetcher.anInt2162,
+          GlobalStatics_6.drawScene(NPC.anInt3995, GlobalStatics_7.anInt2162,
             DummyClass49.anInt1111, DummyClass17.anInt1823, TextureSampler28.anInt3315,
-            AbstractImageProducer.aByteArrayArrayArray2008, FileCache.anIntArray686,
+            GlobalStatics_5.aByteArrayArrayArray2008, GlobalStatics_7.anIntArray686,
             MilliFrameRegulator.anIntArray2696, DummyClass13.anIntArray2021, Player.anIntArray3959,
-            AnimationSequence.anIntArray1871, GameWorldSomething.currentPlane + 1, var19,
+            GlobalStatics_3.anIntArray1871, GameWorldSomething.currentPlane + 1, var19,
             TextureCache.localPlayer.anInt2819 >> 7, TextureCache.localPlayer.anInt2829 >> 7);
           DummyClass43.method1194(var0 - 9982);
           GlobalStatics_0.method1775();
@@ -293,11 +295,11 @@ public final class TextureSampler36 extends AbstractTextureSampler {
           DummyClass8.method2221(var4, var3, var1, true, 256, 256, var5);
         }
 
-        ((TextureCache) GLStatics.textureCache).update(true, DisplayMode.loopCycle);
+        ((TextureCache) GLStatics.textureCache).update(true, GlobalStatics_7.loopCycle);
         DummyClass45.method1235(var4, var5, var1, var3, (byte) -121);
         DummyClass17.anInt1823 = var9;
         DummyClass49.anInt1111 = var8;
-        EnumStringFetcher.anInt2162 = var7;
+        GlobalStatics_7.anInt2162 = var7;
         NPC.anInt3995 = var6;
         TextureSampler28.anInt3315 = var10;
         if (TextureSampler34.aBoolean3064 && DummyClass43.ondemandRequester.method1253(4) == 0) {
@@ -311,7 +313,7 @@ public final class TextureSampler36 extends AbstractTextureSampler {
             DummyClass47.method1323(var3, var5, var4, var1, 0);
           }
 
-          AbstractTextureSampler.drawLoadingBox(TextureSampler39.LOADING_PLEASE_WAIT, false);
+          GlobalStatics_3.drawLoadingBox(TextureSampler39.LOADING_PLEASE_WAIT, false);
         }
 
         if (!var2 && !TextureSampler34.aBoolean3064 && !DummyClass36.aBoolean2615
@@ -396,8 +398,8 @@ public final class TextureSampler36 extends AbstractTextureSampler {
   }
 
   public static void method344(int var0, int var1) {
-    if (var0 >= 0 && AudioStreamEncoder4.aBooleanArray3503.length > var0) {
-        AudioStreamEncoder4.aBooleanArray3503[var0] = !AudioStreamEncoder4.aBooleanArray3503[var0];
+    if (var0 >= 0 && GlobalStatics_6.aBooleanArray3503.length > var0) {
+        GlobalStatics_6.aBooleanArray3503[var0] = !GlobalStatics_6.aBooleanArray3503[var0];
         if (var1 != 4) {
           TextureSampler36.floorUnderlayIds = null;
         }

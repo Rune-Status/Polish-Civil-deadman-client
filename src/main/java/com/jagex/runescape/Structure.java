@@ -5,6 +5,10 @@ import com.jagex.runescape.common.GameString;
 import com.jagex.runescape.common.GameStringStatics;
 import com.jagex.runescape.common.HashTable;
 import com.jagex.runescape.common.StringNode;
+import com.jagex.runescape.done.AbstractDirectColorSprite;
+import com.jagex.runescape.done.AreaSoundEffect;
+import com.jagex.runescape.done.AudioStreamEncoder1;
+import com.jagex.runescape.done.ClientScriptCall;
 import com.jagex.runescape.node.Node;
 import com.jagex.runescape.node.SubNode;
 import com.jagex.runescape.opengl.GLStatics;
@@ -101,7 +105,7 @@ public final class Structure extends SubNode {
           ++var2;
         }
 
-        if (var1.isLoaded(BitVariable.logoFileId)) {
+        if (var1.isLoaded(GlobalStatics_6.logoFileId)) {
           ++var2;
         }
 
@@ -112,7 +116,7 @@ public final class Structure extends SubNode {
   }
 
   public static AbstractDirectColorSprite method602(int var0, int var1, byte var2,
-                                                   FileUnpacker var3) {
+                                                    FileUnpacker var3) {
     if (SomethingTexture4.loadSprites(var3, var0, var1, var2 ^ 30885)) {
         if (var2 != -18) {
           Structure.method607(true);
@@ -218,7 +222,7 @@ public final class Structure extends SubNode {
   }
 
   public static void method606(int var0, AreaSoundEffect var1, int var2, int var3, int var4,
-                              int var5) {
+                               int var5) {
     if (var5 > 44) {
         if ((var1.anInt2332 != -1) || var1.anIntArray2333 != null) {
           int var6 = 0;
@@ -248,7 +252,7 @@ public final class Structure extends SubNode {
             if (var1.aClass3_Sub24_Sub1_2312 == null) {
               if ((var1.anInt2332 >= 0)) {
                 SoundEffect var8 =
-                  SoundEffect.method1811(AbstractMouseWheel.soundEffects, var1.anInt2332, 0);
+                  SoundEffect.method1811(GlobalStatics_5.soundEffects, var1.anInt2332, 0);
                 if (var8 != null) {
                   SomethingMusic0 var9 = var8.method1812().method151(DummyClass32.aClass157_524);
                   AudioStreamEncoder1 var10 = AudioStreamEncoder1.method437(var9, 100, var7);
@@ -270,7 +274,7 @@ public final class Structure extends SubNode {
             } else if (var1.anIntArray2333 != null && ((var1.anInt2316 -= var3) <= 0)) {
               int var13 = (int) (var1.anIntArray2333.length * Math.random());
               SoundEffect var14 =
-                SoundEffect.method1811(AbstractMouseWheel.soundEffects, var1.anIntArray2333[var13],
+                SoundEffect.method1811(GlobalStatics_5.soundEffects, var1.anIntArray2333[var13],
                   0);
               if (var14 != null) {
                 SomethingMusic0 var15 = var14.method1812().method151(DummyClass32.aClass157_524);
@@ -316,28 +320,28 @@ public final class Structure extends SubNode {
       SomethingSceneJ.aClass94_327 = SpawnedGameObject.aClass94_2255;
       WidgetAccess.aClass94_2210 = Mouse.aClass94_1922;
       GameObject.OPTION_DROP = MilliFrameRegulator.aClass94_2687;
-      FileCacheRequest.aClass94_4058 = TextureSampler35.aClass94_3324;
-      AudioSomethingSomething.aClass94_2526 = HintMarker.aClass94_1348;
-      AnimationSomething.aClass94_3586 = ClientScriptEnum.aClass94_3661;
-      DummyClass24.aClass94_1653 = AbstractImageProducer.aClass94_2013;
+      GlobalStatics_7.aClass94_4058 = TextureSampler35.aClass94_3324;
+      GlobalStatics_6.aClass94_2526 = HintMarker.aClass94_1348;
+      GlobalStatics_6.aClass94_3586 = GlobalStatics_7.aClass94_3661;
+      DummyClass24.aClass94_1653 = GlobalStatics_5.aClass94_2013;
       GlobalStatics_2.aClass94_43 = SomethingLight0.aClass94_1558;
       ItemConfig.aClass94_809 = DummyClass52.aClass94_1173;
       MapScene.aClass94_62 = TextureSampler35.aClass94_3326;
       FloorUnderlay.aClass94_1409 = WorldMapLabel.aClass94_1728;
       TriChromaticImageBuffer.aClass94_2481 = SomethingInScenePacket202.aClass94_2276;
-      DummyClass27.aClass94_1583 = AudioSomethingSomething.aClass94_2499;
+      DummyClass27.aClass94_1583 = GlobalStatics_6.aClass94_2499;
       SceneSomething.aClass94_485 = Texture.aClass94_3798;
       if (var0) {
         Structure.aBoolean3641 = false;
       }
 
       GlobalStatics_4.aClass94_825 = SomethingInScenePacket202.aClass94_2269;
-      GlobalStatics_4.aClass94_3629 = AudioStreamEncoder4.aClass94_3496;
+      GlobalStatics_4.aClass94_3629 = GlobalStatics_6.aClass94_3496;
       DummyClass35.aClass94_666 = IdentityKit.aClass94_463;
       Structure.aClass94_3643 = TextureSampler33.aClass94_3053;
       DummyClass12.aClass94_2031 = TriChromaticImageCache.aClass94_1377;
       DummyHashTable.aClass94_1688 = TextureSampler39.aClass94_3281;
-      BufferObject.aClass94_1884 = LightIntensity.aClass94_901;
+      GlobalStatics_6.aClass94_1884 = LightIntensity.aClass94_901;
       DummyClass44.aClass94_935 = TextureSampler29.aClass94_3401;
       TextureSampler39.LOADING_PLEASE_WAIT = DummyClass44.aClass94_933;
       TextureSampler36.aClass94_3427 = TextureSampler32.aClass94_3355;
@@ -347,30 +351,30 @@ public final class Structure extends SubNode {
       GlobalStatics_0.aClass94_1180 = TextureSampler25.aClass94_3408;
       SceneShadowMap.CONNECTION_LOST = DummyClass1.aClass94_414;
       DummyClass32.SKILL = MaterialShader5.aClass94_2170;
-      ClientScript.aClass94_3691 = EnumStringFetcher.aClass94_2163;
+      GlobalStatics_6.aClass94_3691 = GlobalStatics_7.aClass94_2163;
       RenderAnimation.aClass94_374 = GlTexture2d.aClass94_3763;
       GameStub.aClass94_4 = ItemConfig.aClass94_808;
       GlobalStatics_2.aClass94_2216 = StringNode0.aClass94_2340;
       GlobalStatics_4.aClass94_822 = DummyClass56.aClass94_1455;
-      SomethingInScenePacket202.aClass94_2267 = AudioSomethingSomething.aClass94_2524;
-      AnimationSomething.aClass94_3584 = ClientScriptEnum.aClass94_3661;
+      SomethingInScenePacket202.aClass94_2267 = GlobalStatics_6.aClass94_2524;
+      GlobalStatics_6.aClass94_3584 = GlobalStatics_7.aClass94_3661;
       WorldMapLabel.aClass94_1722 = SomethingQuickChatK.aClass94_150;
       DummyClass14.aClass94_1962 = DummyClass38.aClass94_728;
       TextureSampler29.aClass94_3397 = Widget.aClass94_297;
       GLStatics.aClass94_691 = DummyClass6.aClass94_2042;
       IdentityKit.aClass94_461 = GlobalStatics_1.aClass94_1466;
-      SomethingAudio.CONNECTING_TO_UPDATE_SERVER = AbstractAudioOutputStream.aClass94_1974;
+      SomethingAudio.CONNECTING_TO_UPDATE_SERVER = GlobalStatics_5.aClass94_1974;
       DummyClass42.DEFAULT_WALK_TOOLTIP = SomethingTexture3.aClass94_2653;
       GlTexture2d.aClass94_3762 = GlobalStatics_0.aClass94_1702;
       TextureSampler38.aClass94_3445 = TextureSampler31.aClass94_3169;
       TextureSampler30.aClass94_3124 = StringNode0.aClass94_2336;
       SomethingTexture4.aClass94_2667 = GlobalStatics_2.aClass94_3705;
-      GlobalStatics_2.aClass94_2576 = AnimationFrame.aClass94_2461;
+      GlobalStatics_2.aClass94_2576 = GlobalStatics_3.aClass94_2461;
       TextureSampler14.aClass94_3388 = ScriptState.aClass94_875;
       TextureSampler18.aClass94_4040 = StillGraphicNode.aClass94_3547;
       DummyClass14.ATTEMPTING_TO_RECONNECT = GlobalStatics_0.aClass94_2149;
       GlobalStatics_0.LOADED_INTERFACES = Texture.aClass94_3785;
-      SpotAnimationConfig.aClass94_551 = BufferData.aClass94_1647;
+      SpotAnimationConfig.aClass94_551 = GlobalStatics_6.aClass94_1647;
       GameWorld.aClass94_2624 = Something3dRoot.aClass94_2053;
       StillGraphicNode.aClass94_3544 = BZipDecompressorState.aClass94_145;
       GameCanvas.aClass94_36 = Unsure.aClass94_1889;
@@ -381,19 +385,19 @@ public final class Structure extends SubNode {
       GlobalStatics_0.aClass94_2151 = SomethingTexture4.aClass94_2662;
       SomethingQuickChat.aClass94_3575 = LinearHashTable.aClass94_1044;
       DummyClass5.aClass94_2991 = DummyCanvas.aClass94_22;
-      FileTable.aClass94_957 = AbstractFrameRegulator.aClass94_1696;
-      DummyClass26.aClass94_1615 = ClassCheckRequest.aClass94_2297;
+      FileTable.aClass94_957 = GlobalStatics_4.aClass94_1696;
+      DummyClass26.aClass94_1615 = GlobalStatics_6.aClass94_2297;
       TextureSampler28.aClass94_3311 = DummyClass50.aClass94_1140;
-      DisplayMode.CONNECTED_TO_UPDATE_SERVER = AbstractObjectNodeWrapper.aClass94_1618;
+      GlobalStatics_7.CONNECTED_TO_UPDATE_SERVER = GlobalStatics_5.aClass94_1618;
       RenderAnimation.aClass94_361 = DummyClass28.aClass94_338;
       TextureSampler33.aClass94_3051 = DummyClass23.aClass94_1660;
       TextureSampler35.aClass94_3333 = GlobalStatics_2.aClass94_2242;
-      FileRequester.aClass94_2961 = DummyClass34.aClass94_591;
-      Structure.aClass94_3645 = AnimationSequence.aClass94_1863;
+      GlobalStatics_7.aClass94_2961 = DummyClass34.aClass94_591;
+      Structure.aClass94_3645 = GlobalStatics_3.aClass94_1863;
       DummyClass30.aClass94_459 = TextureCache.aClass94_2132;
       TextureSampler27.aClass94_3097 = TextureSampler5.aClass94_3291;
       DummyClass32.aClass94_523 = SomethingWorldMappy.aClass94_2496;
-      TextureSampler31.aClass94_3167 = FaceNormal.aClass94_1637;
+      TextureSampler31.aClass94_3167 = GlobalStatics_7.aClass94_1637;
       GlobalStatics_0.aClass94_1183 = SpawnedGameObject.aClass94_2260;
       WorldMapLabel.aClass94_1731 = TextureSampler25.aClass94_3409;
       DummyClass32.aClass94_525 = GameWorld.aClass94_2628;

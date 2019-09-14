@@ -40,23 +40,23 @@ public final class DummyClass25 {
         var1 = TextureSampler30.fullScreenFrame;
       }
 
-      AreaSoundEffect.windowWidth = var1.getSize().width;
+      GlobalStatics_6.windowWidth = var1.getSize().width;
       SceneSomething2.windowHeight = var1.getSize().height;
       Insets var2;
       if (var1 == TextureSampler27.FRAME) {
         var2 = TextureSampler27.FRAME.getInsets();
         SceneSomething2.windowHeight -= var2.bottom + var2.top;
-        AreaSoundEffect.windowWidth -= var2.right + var2.left;
+        GlobalStatics_6.windowWidth -= var2.right + var2.left;
       }
 
       if ((MidiSomething.getWindowMode() >= 2)) {
-        DummyClass30.viewWidth = AreaSoundEffect.windowWidth;
+        DummyClass30.viewWidth = GlobalStatics_6.windowWidth;
         DummyClass51.viewX = 0;
-        DisplayMode.viewY = 0;
+        GlobalStatics_7.viewY = 0;
         GroundItem.viewHeight = SceneSomething2.windowHeight;
       } else {
-        DisplayMode.viewY = 0;
-        DummyClass51.viewX = (-765 + AreaSoundEffect.windowWidth) / 2;
+        GlobalStatics_7.viewY = 0;
+        DummyClass51.viewX = (-765 + GlobalStatics_6.windowWidth) / 2;
         GroundItem.viewHeight = 503;
         DummyClass30.viewWidth = 765;
       }
@@ -69,10 +69,10 @@ public final class DummyClass25 {
       if (var1 == TextureSampler27.FRAME) {
         var2 = TextureSampler27.FRAME.getInsets();
         GameCanvas.INSTANCE.setLocation(var2.left + DummyClass51.viewX,
-            DisplayMode.viewY + var2.top);
+            GlobalStatics_7.viewY + var2.top);
       } else {
         GameCanvas.INSTANCE
-            .setLocation(DummyClass51.viewX, DisplayMode.viewY);
+            .setLocation(DummyClass51.viewX, GlobalStatics_7.viewY);
       }
 
       if ((InventoryConfig.anInt3655 != -1)) {

@@ -77,18 +77,18 @@ public abstract class GameStub implements Runnable,
     if (container == TextureSampler27.FRAME) {
       Insets insets = TextureSampler27.FRAME.getInsets();
       GameCanvas.INSTANCE.setLocation(DummyClass51.viewX + insets.left,
-          insets.top + DisplayMode.viewY);
+          insets.top + GlobalStatics_7.viewY);
     } else {
       GameCanvas.INSTANCE
-          .setLocation(DummyClass51.viewX, DisplayMode.viewY);
+          .setLocation(DummyClass51.viewX, GlobalStatics_7.viewY);
     }
     GameCanvas.INSTANCE.addFocusListener(this);
     GameCanvas.INSTANCE.requestFocus();
     DummyClass8.focused = true;
     TextureSampler30.aBoolean3116 = true;
     TextureSampler26.focused = true;
-    AnimationSomething.replaceCanvas = false;
-    AnimationSequence.canvasInitializedTime = Time.getCurrentTimeMillis();
+    GlobalStatics_6.replaceCanvas = false;
+    GlobalStatics_3.canvasInitializedTime = Time.getCurrentTimeMillis();
 
   }
 
@@ -123,19 +123,19 @@ public abstract class GameStub implements Runnable,
 
   public final void start() {
     if (GlobalStatics_0.applet == this && !PlayerVariable.aBoolean554) {
-        AreaSoundEffect.destroyTime = 0L;
+        GlobalStatics_6.destroyTime = 0L;
       }
   }
 
   public final void stop() {
     if (GlobalStatics_0.applet == this && !PlayerVariable.aBoolean554) {
-        AreaSoundEffect.destroyTime = 4000L + Time.getCurrentTimeMillis();
+        GlobalStatics_6.destroyTime = 4000L + Time.getCurrentTimeMillis();
       }
   }
 
   public final void destroy() {
     if (this == GlobalStatics_0.applet && !PlayerVariable.aBoolean554) {
-        AreaSoundEffect.destroyTime = Time.getCurrentTimeMillis();
+        GlobalStatics_6.destroyTime = Time.getCurrentTimeMillis();
         TextureSampler25.sleep(5000L);
         TextureSampler30.signLink = null;
         this.shutdown(46, false);
@@ -146,12 +146,12 @@ public abstract class GameStub implements Runnable,
     if (this == GlobalStatics_0.applet && !PlayerVariable.aBoolean554) {
         TextureSampler30.aBoolean3116 = true;
         if (DummyClass20.aBoolean1784 && !GlRenderer.useOpenGlRenderer
-            && ((-AnimationSequence.canvasInitializedTime + Time
+            && ((-GlobalStatics_3.canvasInitializedTime + Time
             .getCurrentTimeMillis()) > 1000L)) {
           Rectangle var2 = var1.getClipBounds();
-          if (var2 == null || (var2.width >= AreaSoundEffect.windowWidth)
+          if (var2 == null || (var2.width >= GlobalStatics_6.windowWidth)
               && (SceneSomething2.windowHeight <= var2.height)) {
-            AnimationSomething.replaceCanvas = true;
+            GlobalStatics_6.replaceCanvas = true;
           }
         }
 
@@ -214,7 +214,7 @@ public abstract class GameStub implements Runnable,
     FileTable.drawMemoryCounter = 31 & FileTable.drawMemoryCounter + 1;
     if ((var4 != 0L) && var2 > var4) {
       int var6 = (int) (var2 - var4);
-      AnimationSequence.fps = (32000 + (var6 >> 1)) / var6;
+      GlobalStatics_3.fps = (32000 + (var6 >> 1)) / var6;
     }
 
     if (TextureSampler28.anInt3313++ > 50) {
@@ -228,10 +228,10 @@ public abstract class GameStub implements Runnable,
         Insets var8 = TextureSampler27.FRAME.getInsets();
         GameCanvas.INSTANCE
             .setLocation(var8.left + DummyClass51.viewX,
-                DisplayMode.viewY + var8.top);
+                GlobalStatics_7.viewY + var8.top);
       } else {
         GameCanvas.INSTANCE
-            .setLocation(DummyClass51.viewX, DisplayMode.viewY);
+            .setLocation(DummyClass51.viewX, GlobalStatics_7.viewY);
       }
     }
 
@@ -250,8 +250,8 @@ public abstract class GameStub implements Runnable,
       this.initialize(2);
       Inventory.frameRateRegulator = GlobalStatics_0.method1012((byte) -31);
 
-      while ((AreaSoundEffect.destroyTime == 0L)
-          || AreaSoundEffect.destroyTime > Time.getCurrentTimeMillis()) {
+      while ((GlobalStatics_6.destroyTime == 0L)
+          || GlobalStatics_6.destroyTime > Time.getCurrentTimeMillis()) {
         SomethingPacket116.cycles =
             Inventory.frameRateRegulator
                 .sleep(-1, DummyClass22.minimumDelta, GameWorld.deltaTime);
@@ -273,11 +273,11 @@ public abstract class GameStub implements Runnable,
       boolean var3) {
     SceneSomething2.windowHeight = height;
     DummyClass51.viewX = 0;
-    DisplayMode.viewY = 0;
+    GlobalStatics_7.viewY = 0;
     TextureSampler18.build = build;
     DummyClass30.viewWidth = width;
     GroundItem.viewHeight = height;
-    AreaSoundEffect.windowWidth = width;
+    GlobalStatics_6.windowWidth = width;
     GlobalStatics_0.applet = this;
     TextureSampler27.FRAME = new Frame();
     TextureSampler27.FRAME.setTitle("Jagex");
@@ -287,7 +287,7 @@ public abstract class GameStub implements Runnable,
     TextureSampler27.FRAME.toFront();
     Insets insets = TextureSampler27.FRAME.getInsets();
     TextureSampler27.FRAME
-        .setSize(insets.left + AreaSoundEffect.windowWidth + insets.right,
+        .setSize(insets.left + GlobalStatics_6.windowWidth + insets.right,
             insets.top + SceneSomething2.windowHeight + insets.bottom);
     try {
       TextureSampler30.signLink =
@@ -342,14 +342,14 @@ public abstract class GameStub implements Runnable,
         }
 
         GlobalStatics_0.applet = this;
-        DisplayMode.viewY = 0;
+        GlobalStatics_7.viewY = 0;
         TextureSampler18.build = var4;
         if (var1 >= -23) {
           GameStub.aClass94_5 = null;
         }
 
         DummyClass30.viewWidth = var2;
-        AreaSoundEffect.windowWidth = var2;
+        GlobalStatics_6.windowWidth = var2;
         DummyClass51.viewX = 0;
         GroundItem.viewHeight = var5;
         SceneSomething2.windowHeight = var5;

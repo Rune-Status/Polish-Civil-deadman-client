@@ -3,6 +3,7 @@ package com.jagex.runescape;
 import com.jagex.runescape.common.ArrayUtils;
 import com.jagex.runescape.common.GameString;
 import com.jagex.runescape.common.GameStringStatics;
+import com.jagex.runescape.done.ClientScriptCall;
 import com.jagex.runescape.opengl.GLStatics;
 import java.io.IOException;
 import java.io.OutputStream;
@@ -117,7 +118,7 @@ public final class DummyOutputStream extends OutputStream {
               }
 
               if ((var2 == 10)) {
-                ++CollisionMap.anInt1307;
+                ++GlobalStatics_7.anInt1307;
                 TextureSampler12.secureBuffer.writePacket(9);
                 TextureSampler12.secureBuffer.writeInt(var4);
                 TextureSampler12.secureBuffer.writeShort(var1);
@@ -141,11 +142,11 @@ public final class DummyOutputStream extends OutputStream {
   }
 
   public static void method68(int var0, int var1, Mobile var2) {
-    if ((AbstractGameWorld.updateCycle >= var2.anInt2800)) {
-        if (var2.anInt2790 >= AbstractGameWorld.updateCycle) {
+    if ((GlobalStatics_4.updateCycle >= var2.anInt2800)) {
+        if (var2.anInt2790 >= GlobalStatics_4.updateCycle) {
           FloorOverlay.method2270(var2, (byte) -56);
         } else {
-          Cursor.method1180((byte) -22, var2);
+          GlobalStatics_7.method1180((byte) -22, var2);
         }
       } else {
         StillGraphic.method1950(var2, true);

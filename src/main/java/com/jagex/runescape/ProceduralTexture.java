@@ -3,6 +3,8 @@ package com.jagex.runescape;
 import com.jagex.runescape.buffer.Buffer;
 import com.jagex.runescape.common.GameString;
 import com.jagex.runescape.common.GameStringStatics;
+import com.jagex.runescape.done.AbstractDirectColorSprite;
+import com.jagex.runescape.done.AbstractTextureSampler;
 import com.jagex.runescape.opengl.GlRenderer;
 import com.jagex.runescape.opengl.GlUtils;
 import com.jagex.runescape.opengl.MaterialShader5;
@@ -440,7 +442,7 @@ public final class ProceduralTexture {
               HintMarker var24 = var20[var21];
               if (var24 != null && var24.anInt1360 == 1
                 && (var24.anInt1359 == GlobalStatics_2.anIntArray347[-DummyClass13.anInt2022 + var7])
-                && ((AbstractGameWorld.updateCycle % 20) < 10)) {
+                && ((GlobalStatics_4.updateCycle % 20) < 10)) {
                 if (var9.anInt1265 == -1) {
                   var29 = 15 + var8.method1975(var6 + '\u89b4');
                 } else {
@@ -485,7 +487,7 @@ public final class ProceduralTexture {
             }
           }
 
-          if (var8.anInt2781 > AbstractGameWorld.updateCycle) {
+          if (var8.anInt2781 > GlobalStatics_4.updateCycle) {
             AbstractDirectColorSprite var23 = OndemandRequester.aClass3_Sub28_Sub16Array996[0];
             AbstractDirectColorSprite var25 = OndemandRequester.aClass3_Sub28_Sub16Array996[1];
             if (var8 instanceof NPC) {
@@ -542,7 +544,7 @@ public final class ProceduralTexture {
           }
 
           for (var19 = 0; (var19 < 4); ++var19) {
-            if (var8.anIntArray2768[var19] > AbstractGameWorld.updateCycle) {
+            if (var8.anIntArray2768[var19] > GlobalStatics_4.updateCycle) {
               if (var8 instanceof NPC) {
                 NPC var30 = (NPC) var8;
                 NpcConfiguration var26 = var30.config;
@@ -575,7 +577,7 @@ public final class ProceduralTexture {
                 SomethingTexture3.aClass3_Sub28_Sub16Array2656[var8.anIntArray2815[var19]]
                   .method643(-12 + var2 + DummyClass34.anInt590,
                     var0 + WidgetAccess.anInt2208 - 12);
-                AbstractTextureSampler.aClass3_Sub28_Sub17_2379.draw(
+                GlobalStatics_3.aClass3_Sub28_Sub17_2379.draw(
                   SomethingScene.toString(var8.anIntArray2836[var19]),
                   -1 + DummyClass34.anInt590 + var2, 3 + WidgetAccess.anInt2208 + var0, 16777215,
                   0);
@@ -619,22 +621,22 @@ public final class ProceduralTexture {
         DummyClass34.anInt590 = TextureSampler35.anIntArray3319[var7];
         WidgetAccess.anInt2208 = TextureSampler35.anIntArray3337[var7] = var19;
         GameString var33 = TextureSampler35.aClass94Array3317[var7];
-        if ((FileCache.anInt688 == 0)) {
+        if ((GlobalStatics_7.anInt688 == 0)) {
           var32 = 16776960;
           if ((TextureSampler35.anIntArray3331[var7] < 6)) {
             var32 = WidgetAccess.anIntArray2213[TextureSampler35.anIntArray3331[var7]];
           }
 
           if (TextureSampler35.anIntArray3331[var7] == 6) {
-            var32 = BitVariable.anInt1127 % 20 >= 10 ? 16776960 : 16711680;
+            var32 = GlobalStatics_6.anInt1127 % 20 >= 10 ? 16776960 : 16711680;
           }
 
           if ((TextureSampler35.anIntArray3331[var7] == 7)) {
-            var32 = ((BitVariable.anInt1127 % 20) < 10) ? 255 : '\uffff';
+            var32 = ((GlobalStatics_6.anInt1127 % 20) < 10) ? 255 : '\uffff';
           }
 
           if (TextureSampler35.anIntArray3331[var7] == 8) {
-            var32 = ((BitVariable.anInt1127 % 20) >= 10) ? 8454016 : '\ub000';
+            var32 = ((GlobalStatics_6.anInt1127 % 20) >= 10) ? 8454016 : '\ub000';
           }
 
           if (TextureSampler35.anIntArray3331[var7] == 9) {
@@ -687,17 +689,17 @@ public final class ProceduralTexture {
 
           if (TextureSampler35.anIntArray3336[var7] == 1) {
             FloorOverlay.aClass3_Sub28_Sub17_2096.method696(var33, var2 + DummyClass34.anInt590,
-              WidgetAccess.anInt2208 + var0, var32, 0, BitVariable.anInt1127);
+              WidgetAccess.anInt2208 + var0, var32, 0, GlobalStatics_6.anInt1127);
           }
 
           if (TextureSampler35.anIntArray3336[var7] == 2) {
             FloorOverlay.aClass3_Sub28_Sub17_2096.method695(var33, var2 + DummyClass34.anInt590,
-              var0 + WidgetAccess.anInt2208, var32, 0, BitVariable.anInt1127);
+              var0 + WidgetAccess.anInt2208, var32, 0, GlobalStatics_6.anInt1127);
           }
 
           if ((TextureSampler35.anIntArray3336[var7] == 3)) {
             FloorOverlay.aClass3_Sub28_Sub17_2096.method692(var33, var2 + DummyClass34.anInt590,
-              WidgetAccess.anInt2208 + var0, var32, 0, BitVariable.anInt1127,
+              WidgetAccess.anInt2208 + var0, var32, 0, GlobalStatics_6.anInt1127,
               150 - TextureSampler35.anIntArray3318[var7]);
           }
 

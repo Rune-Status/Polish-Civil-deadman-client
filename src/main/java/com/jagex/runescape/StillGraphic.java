@@ -2,6 +2,8 @@ package com.jagex.runescape;
 
 import com.jagex.runescape.common.GameString;
 import com.jagex.runescape.common.GameStringStatics;
+import com.jagex.runescape.done.AbstractModel;
+import com.jagex.runescape.done.AnimationSequence;
 import com.jagex.runescape.opengl.GLStatics;
 import com.jagex.runescape.opengl.GlRenderer;
 
@@ -111,7 +113,7 @@ public final class StillGraphic extends SceneNode {
   }
 
   public static void method1950(Mobile var0, boolean var1) {
-    int var2 = var0.anInt2800 - AbstractGameWorld.updateCycle;
+    int var2 = var0.anInt2800 - GlobalStatics_4.updateCycle;
       int var3 = 128 * var0.anInt2784 + (64 * var0.getSize());
       if (var1) {
         int var4 = 128 * var0.anInt2835 + (var0.getSize() * 64);
@@ -193,7 +195,7 @@ public final class StillGraphic extends SceneNode {
       TextureSampler28.anInt3315 = var5;
       DummyClass49.anInt1111 = var6 - var12;
       NPC.anInt3995 = var0 - var10;
-      EnumStringFetcher.anInt2162 = -var11 + var3;
+      GlobalStatics_7.anInt2162 = -var11 + var3;
   }
 
   public static GameWorld method1953(byte var0) {

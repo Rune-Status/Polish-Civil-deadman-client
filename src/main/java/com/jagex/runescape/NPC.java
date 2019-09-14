@@ -2,6 +2,10 @@ package com.jagex.runescape;
 
 import com.jagex.runescape.common.GameString;
 import com.jagex.runescape.common.GameStringStatics;
+import com.jagex.runescape.done.AbstractDirectColorSprite;
+import com.jagex.runescape.done.AbstractModel;
+import com.jagex.runescape.done.AnimationSequence;
+import com.jagex.runescape.done.BufferObject;
 import com.jagex.runescape.opengl.GlRenderer;
 import com.jagex.runescape.opengl.Texture;
 import java.util.Objects;
@@ -52,7 +56,7 @@ public final class NPC extends Mobile {
   public void method1867(int var1, int var2, int var3, int var4, int var5 ) {
     try {
     } catch (RuntimeException var7) {
-      throw AbstractGameWorld.cascadeException(var7,
+      throw GlobalStatics_4.cascadeException(var7,
         "km.IB(" + var1 + ',' + var2 + ',' + var3 + ',' + var4 + ',' + var5 + ')');
     }
   }
@@ -185,7 +189,7 @@ public final class NPC extends Mobile {
   }
 
   public int getRenderAnimationId() {
-    if (AbstractImageProducer.gameId != 0 && this.config.anIntArray1292 != null) {
+    if (GlobalStatics_5.gameId != 0 && this.config.anIntArray1292 != null) {
         NpcConfiguration var2 = this.config.method1471((byte) 21);
         if (var2 != null && (var2.renderAnimationId != -1)) {
           return var2.renderAnimationId;
@@ -271,7 +275,7 @@ public final class NPC extends Mobile {
         NPC.method1984(-48, 88, 31);
       }
 
-      return GlRenderer.useOpenGlRenderer || ClientScriptEnum.aBoolean3665;
+      return GlRenderer.useOpenGlRenderer || GlobalStatics_7.aBoolean3665;
   }
 
   public static boolean method1988(boolean var0) {
@@ -299,7 +303,7 @@ public final class NPC extends Mobile {
             DummyClass23.aClass153_1661, SomethingQuickChat.aClass83_3579, 22050)) {
             DummyClass55.aClass3_Sub24_Sub4_1421.method471((byte) 53);
             DummyClass55.aClass3_Sub24_Sub4_1421.method506(128, TextureSampler36.anInt3423);
-            DummyClass55.aClass3_Sub24_Sub4_1421.method490(AreaSoundEffect.aBoolean2311,
+            DummyClass55.aClass3_Sub24_Sub4_1421.method490(GlobalStatics_6.aBoolean2311,
               MidiSomething.aClass3_Sub27_1154, 17774);
             SomethingQuickChatK.anInt154 = 0;
             MidiSomething.aClass3_Sub27_1154 = null;

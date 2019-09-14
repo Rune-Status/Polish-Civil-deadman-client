@@ -1,5 +1,6 @@
 package com.jagex.runescape;
 
+import com.jagex.runescape.done.AbstractFont;
 import com.jagex.runescape.sprite.SoftwareIndexedColorSpriteStatics;
 
 public final class SoftwareFont extends AbstractFont {

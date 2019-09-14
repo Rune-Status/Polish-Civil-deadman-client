@@ -3,6 +3,7 @@ package com.jagex.runescape;
 import com.jagex.runescape.buffer.Buffer;
 import com.jagex.runescape.common.ArrayUtils;
 import com.jagex.runescape.common.GameString;
+import com.jagex.runescape.done.AbstractFileRequester;
 
 public final class FileUnpacker {
 
@@ -345,10 +346,10 @@ public final class FileUnpacker {
 
           byte[] var23;
           try {
-            var23 = ClientScriptEnum.method623((byte) -125, var21);
+            var23 = GlobalStatics_7.method623((byte) -125, var21);
           } catch (RuntimeException var19) {
             assert var21 != null;
-            throw AbstractGameWorld.cascadeException(var19,
+            throw GlobalStatics_4.cascadeException(var19,
               "T3 - " + (var3 != null) + "," + var1 + "," + var21.length + ","
                 + DummyClass35.getChecksum(var21, var21.length, false) + ","
                 + DummyClass35.getChecksum(var21, var21.length - 2, false) + ","
@@ -616,7 +617,7 @@ public final class FileUnpacker {
   }
 
   public static void method2143(byte var0, int var1, int var2, int var3, int var4) {
-    WidgetUpdate var5 = AudioStreamEncoder3.method466(4, 8, var2);
+    WidgetUpdate var5 = GlobalStatics_6.method466(4, 8, var2);
       var5.g((byte) 33);
       var5.anInt3596 = var1;
       if (var0 >= -120) {

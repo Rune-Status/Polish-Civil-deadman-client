@@ -3,6 +3,8 @@ package com.jagex.runescape;
 import com.jagex.runescape.buffer.Buffer;
 import com.jagex.runescape.common.GameString;
 import com.jagex.runescape.common.GameStringStatics;
+import com.jagex.runescape.done.AnimationSequence;
+import com.jagex.runescape.done.AudioStreamEncoder4;
 import com.jagex.runescape.opengl.Texture;
 
 public final class RenderAnimation {
@@ -230,7 +232,7 @@ public final class RenderAnimation {
   }
 
   public static boolean method897(int var0, AudioStreamEncoder4 var1, FileUnpacker var2,
-                                 FileUnpacker midiInstruments, FileUnpacker soundEffects) {
+                                  FileUnpacker midiInstruments, FileUnpacker soundEffects) {
     DummyClass23.aClass153_1661 = var2;
       if (var0 != 17770) {
         RenderAnimation.aClass94_366 = null;
@@ -251,7 +253,7 @@ public final class RenderAnimation {
         byte[] var3 =
           TextureSampler19.spotAnimations.getBytes(
               GlobalStatics_2.method64(true, var1),
-            AbstractSomethingTexture.method1338(var1, var0 ^ 7));
+            GlobalStatics_3.method1338(var1, var0 ^ 7));
         var2 = new SpotAnimationConfig();
         var2.anInt539 = var1;
         if (var0 != 42) {
@@ -300,7 +302,7 @@ public final class RenderAnimation {
       }
 
       int var6;
-      if ((var0.anInt2842 != -1) && (AbstractGameWorld.updateCycle >= var0.anInt2759)) {
+      if ((var0.anInt2842 != -1) && (GlobalStatics_4.updateCycle >= var0.anInt2759)) {
         var6 = RenderAnimation.method898((byte) 42, var0.anInt2842).anInt542;
         if ((var6 == -1)) {
           var0.anInt2842 = -1;
@@ -341,8 +343,8 @@ public final class RenderAnimation {
       if ((var0.animationId != -1) && (var0.anInt2828 <= 1)) {
         var2 = GameClient.method45(var0.animationId, (byte) -20);
         if ((var2.anInt1866 == 1) && var0.anInt2811 > 0
-          && (AbstractGameWorld.updateCycle >= var0.anInt2800)
-          && AbstractGameWorld.updateCycle > var0.anInt2790) {
+          && (GlobalStatics_4.updateCycle >= var0.anInt2800)
+          && GlobalStatics_4.updateCycle > var0.anInt2790) {
           var0.anInt2828 = 1;
           return;
         }

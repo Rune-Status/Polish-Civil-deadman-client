@@ -3,6 +3,7 @@ package com.jagex.runescape;
 import com.jagex.runescape.buffer.Buffer;
 import com.jagex.runescape.common.GameString;
 import com.jagex.runescape.common.GameStringStatics;
+import com.jagex.runescape.done.ClientScriptCall;
 import com.jagex.runescape.opengl.GLStatics;
 import com.jagex.runescape.opengl.MaterialShader;
 import com.jagex.runescape.sprite.SoftwareIndexedColorSprite;
@@ -49,7 +50,7 @@ public final class MapScene {
         var3 = GlobalStatics_0.createSprite(0, true, this.spriteId, Keyboard.sprites);
         if (var3 != null) {
           var3.method1668(TextureCache.anInt2136, DummyClass39.anInt740,
-            AbstractImageProducer.anInt2015);
+            GlobalStatics_5.anInt2015);
           var3.anInt1469 = var3.width;
           var3.anInt1467 = var3.height;
 
@@ -120,7 +121,7 @@ public final class MapScene {
                 (SomethingPacket151) TextureSampler23.aClass130_3208.get(
                     var4.anInt279);
               if (var5 != null) {
-                ClassCheckRequest.method124(49, var2, var5.anInt2602);
+                GlobalStatics_6.method124(49, var2, var5.anInt2602);
               }
             }
 
@@ -134,7 +135,7 @@ public final class MapScene {
 
             if ((var2 == 1) && var4.anObjectArray176 != null) {
               if ((var4.anInt191 >= 0)) {
-                Widget var8 = EnumStringFetcher.getWidget((byte) 121, var4.anInt279);
+                Widget var8 = GlobalStatics_7.getWidget((byte) 121, var4.anInt279);
                 if (var8 == null || var8.aClass11Array262 == null
                   || (var4.anInt191 >= var8.aClass11Array262.length)
                   || var8.aClass11Array262[var4.anInt191] != var4) {
@@ -308,7 +309,7 @@ public final class MapScene {
         }
       }
 
-      AbstractFrameRegulator.anInt1692 = 0;
+      GlobalStatics_4.anInt1692 = 0;
       int var19;
       if (!var16) {
         if (!var5) {
@@ -361,7 +362,7 @@ public final class MapScene {
           return false;
         }
 
-        AbstractFrameRegulator.anInt1692 = 1;
+        GlobalStatics_4.anInt1692 = 1;
       }
 
       byte var28 = 0;
@@ -461,7 +462,7 @@ public final class MapScene {
           if (var2 == 327) {
             var1.rotationX0 = 150;
             var1.rotationY =
-                2047 & (int) (Math.sin(AbstractGameWorld.updateCycle / 40.0D)
+                2047 & (int) (Math.sin(GlobalStatics_4.updateCycle / 40.0D)
                     * 256.0D);
             var1.anInt202 = 5;
             var1.anInt201 = -1;
@@ -472,7 +473,7 @@ public final class MapScene {
               var1.rotationX0 = 150;
               var1.rotationY =
                   2047 & (int) (256.0D * Math
-                      .sin(AbstractGameWorld.updateCycle / 40.0D));
+                      .sin(GlobalStatics_4.updateCycle / 40.0D));
               var1.anInt202 = 5;
               var1.anInt201 =
                   2047 + ((int) TextureCache.localPlayer.name.toBase37() << 11);

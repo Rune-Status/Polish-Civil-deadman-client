@@ -1,5 +1,7 @@
 package com.jagex.runescape;
 
+import com.jagex.runescape.done.BufferObject;
+
 import java.nio.ByteBuffer;
 
 public final class NativeBufferObject extends BufferObject {

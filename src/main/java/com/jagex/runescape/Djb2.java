@@ -3,8 +3,7 @@ package com.jagex.runescape;
 /**
  * An implementation of the {@code djb2} hash function.
  *
- * @author Graham
- * @author `Discardedx2
+ * @author Robbert
  */
 public final class Djb2 {
 

@@ -2,6 +2,7 @@ package com.jagex.runescape;
 
 import com.jagex.runescape.common.GameString;
 import com.jagex.runescape.common.GameStringStatics;
+import com.jagex.runescape.done.BitVariable;
 
 public class DummyClass6 {
 
@@ -28,7 +29,7 @@ public class DummyClass6 {
         DummyClass6.method2209((byte) 57, -14, 120);
       }
 
-      BitVariable var3 = ClientScriptCall.method378(var2, (byte) 127);
+      BitVariable var3 = GlobalStatics_7.method378(var2, (byte) 127);
       assert var3 != null;
       int variableId = var3.id;
       int high = var3.high;

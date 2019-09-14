@@ -2,6 +2,8 @@ package com.jagex.runescape;
 
 import com.jagex.runescape.common.GameString;
 import com.jagex.runescape.common.GameStringStatics;
+import com.jagex.runescape.done.AbstractDirectColorSprite;
+import com.jagex.runescape.done.AnimationSomething;
 import com.jagex.runescape.opengl.GLStatics;
 import com.jagex.runescape.opengl.GlIndexedColorSprite;
 import com.jagex.runescape.opengl.GlRenderer;
@@ -49,15 +51,15 @@ public final class SomethingIndex150 {
       int var5 = var2 << 7;
       return
           TextureSampler10.method349(var4 + 1,
-              AbstractGameWorld.heightMap[var0][var1][var2] + var3,
+              GlobalStatics_4.heightMap[var0][var1][var2] + var3,
               var5 + 1) && TextureSampler10.method349(var4 + 128 - 1,
-              AbstractGameWorld.heightMap[var0][var1 + 1][var2] + var3,
+              GlobalStatics_4.heightMap[var0][var1 + 1][var2] + var3,
               var5 + 1)
               && TextureSampler10.method349(var4 + 128 - 1,
-              AbstractGameWorld.heightMap[var0][var1 + 1][var2 + 1] + var3,
+              GlobalStatics_4.heightMap[var0][var1 + 1][var2 + 1] + var3,
               var5 + 128 - 1)
               && TextureSampler10.method349(var4 + 1,
-              AbstractGameWorld.heightMap[var0][var1][var2 + 1] + var3,
+              GlobalStatics_4.heightMap[var0][var1][var2 + 1] + var3,
               var5 + 128 - 1);
     } else {
       return false;
@@ -98,7 +100,7 @@ public final class SomethingIndex150 {
                 TextureSampler12.secureBuffer.writePacket(133);
                 TextureSampler12.secureBuffer
                     .writeShortLE(-1, DummyClass42.anIntArray887[var5]);
-                ++AudioStreamEncoder4.anInt3517;
+                ++GlobalStatics_6.anInt3517;
               } else {
                 if ((var0 == 7)) {
                   ++DummyClass29.anInt437;

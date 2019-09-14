@@ -1,86 +1,9 @@
 package com.jagex.runescape.opengl;
 
-import com.jagex.runescape.AbstractFileRequester;
-import com.jagex.runescape.AbstractGameWorld;
-import com.jagex.runescape.AbstractImageProducer;
-import com.jagex.runescape.AbstractObjectNodeWrapper;
-import com.jagex.runescape.BZipDecompressorState;
-import com.jagex.runescape.BufferObject;
-import com.jagex.runescape.ClassCheckRequest;
-import com.jagex.runescape.ClientScript;
-import com.jagex.runescape.ClientScriptCall;
-import com.jagex.runescape.GameCanvas;
-import com.jagex.runescape.GlobalStatics_2;
+import com.jagex.runescape.*;
 import com.jagex.runescape.node.Deque;
-import com.jagex.runescape.DisplayMode;
-import com.jagex.runescape.DummyClass11;
-import com.jagex.runescape.DummyClass13;
-import com.jagex.runescape.DummyClass15;
-import com.jagex.runescape.DummyClass17;
-import com.jagex.runescape.DummyClass24;
-import com.jagex.runescape.DummyClass28;
-import com.jagex.runescape.DummyClass3;
-import com.jagex.runescape.DummyClass35;
-import com.jagex.runescape.DummyClass36;
-import com.jagex.runescape.DummyClass42;
-import com.jagex.runescape.DummyClass45;
-import com.jagex.runescape.DummyClass54;
-import com.jagex.runescape.DummyClass59;
-import com.jagex.runescape.DummyClass6;
-import com.jagex.runescape.DummyClass7;
-import com.jagex.runescape.DummyClass8;
-import com.jagex.runescape.DummyClass9;
-import com.jagex.runescape.FileUnpacker;
-import com.jagex.runescape.GameObjectConfig;
-import com.jagex.runescape.GlobalStatics_0;
 import com.jagex.runescape.common.GameString;
-import com.jagex.runescape.GameStub;
-import com.jagex.runescape.GameWorld;
-import com.jagex.runescape.GameWorldSomething;
-import com.jagex.runescape.GroundItem;
-import com.jagex.runescape.GroundItemNode;
 import com.jagex.runescape.common.GameStringStatics;
-import com.jagex.runescape.HashTableIterator;
-import com.jagex.runescape.ItemConfig;
-import com.jagex.runescape.LinearHashTable;
-import com.jagex.runescape.MapScene;
-import com.jagex.runescape.MonoChromaticImageBuffer;
-import com.jagex.runescape.MouseRecorder;
-import com.jagex.runescape.NPC;
-import com.jagex.runescape.Parameter;
-import com.jagex.runescape.Player;
-import com.jagex.runescape.Projectile;
-import com.jagex.runescape.ProjectileNode;
-import com.jagex.runescape.RenderAnimation;
-import com.jagex.runescape.SceneGraphTile;
-import com.jagex.runescape.SceneNode;
-import com.jagex.runescape.SceneSomething;
-import com.jagex.runescape.ScriptState;
-import com.jagex.runescape.SignLink;
-import com.jagex.runescape.Something3d;
-import com.jagex.runescape.Something3dRoot;
-import com.jagex.runescape.SomethingMidiFile;
-import com.jagex.runescape.SomethingPacket151;
-import com.jagex.runescape.SomethingQuickChat;
-import com.jagex.runescape.SomethingScene;
-import com.jagex.runescape.SomethingSceneTile;
-import com.jagex.runescape.SomethingTilek;
-import com.jagex.runescape.StringNode0;
-import com.jagex.runescape.Structure;
-import com.jagex.runescape.TextureSampler0;
-import com.jagex.runescape.TextureSampler13;
-import com.jagex.runescape.TextureSampler14;
-import com.jagex.runescape.TextureSampler18;
-import com.jagex.runescape.TextureSampler32;
-import com.jagex.runescape.TextureSampler38;
-import com.jagex.runescape.TextureSampler5;
-import com.jagex.runescape.TextureSampler6;
-import com.jagex.runescape.TextureSampler9;
-import com.jagex.runescape.TriChromaticImageBuffer;
-import com.jagex.runescape.TriChromaticImageCache;
-import com.jagex.runescape.Unsure;
-import com.jagex.runescape.Widget;
-import com.jagex.runescape.WorldMapLabel;
 
 public final class MaterialShader5 implements MaterialShader {
 
@@ -134,7 +57,7 @@ public final class MaterialShader5 implements MaterialShader {
       GlRenderer.GL
           .glRotatef(360.0F * TextureSampler9.anInt3103 / 2048.0F, 0.0F, 1.0F, 0.0F);
       GlRenderer.GL.glTranslatef((-BZipDecompressorState.anInt144),
-          (-ClientScript.anInt3695), (-GlobalStatics_0.anInt2587));
+          (-GlobalStatics_6.anInt3695), (-GlobalStatics_0.anInt2587));
       GlRenderer.GL.glTexGenfv(8192, 9474, this.aFloatArray2174, 0);
       this.aFloatArray2174[3] = var3 * GlRenderer.anInt1791;
       this.aFloatArray2174[0] = 0.0F;
@@ -203,12 +126,12 @@ public final class MaterialShader5 implements MaterialShader {
   }
 
   public static boolean method1627(int var0, byte var1) {
-    GameWorld var2 = ClassCheckRequest.method130(97, var0);
+    GameWorld var2 = GlobalStatics_6.method130(97, var0);
       if (var2 != null) {
         if (SignLink.anInt1214 != 1 && (SignLink.anInt1214 != 2)
-          && (AbstractGameWorld.usageLocation != 2)) {
+          && (GlobalStatics_4.usageLocation != 2)) {
           GameString var9 = GameStub.aClass94_8;
-          if (AbstractGameWorld.usageLocation != 0) {
+          if (GlobalStatics_4.usageLocation != 0) {
             var9 = RenderAnimation.concat(new GameString[] {
               DummyClass9.aClass94_4007, SomethingScene.toString(var2.anInt2621 + 7000)
             });
@@ -232,7 +155,7 @@ public final class MaterialShader5 implements MaterialShader {
               !Structure.aBoolean3641 ? Something3d.ZERO : DummyClass28.aClass94_339,
               DummyClass36.aClass94_2610,
               !DummyClass8.aBoolean4018 ? Something3d.ZERO : DummyClass28.aClass94_339,
-              AbstractObjectNodeWrapper.aClass94_1617,
+              GlobalStatics_5.aClass94_1617,
               ProjectileNode.aBoolean3779 ? DummyClass28.aClass94_339 : Something3d.ZERO
             });
 
@@ -248,11 +171,11 @@ public final class MaterialShader5 implements MaterialShader {
         } else {
           byte[] var3 = var2.aClass94_2625.method1568(0);
           DummyClass36.aString2611 = new String(var3, 0, var3.length);
-          ClientScriptCall.anInt2451 = var2.anInt2621;
-          if ((AbstractGameWorld.usageLocation != 0)) {
-            DummyClass11.anInt2036 = '\u9c40' + ClientScriptCall.anInt2451;
+          GlobalStatics_7.anInt2451 = var2.anInt2621;
+          if ((GlobalStatics_4.usageLocation != 0)) {
+            DummyClass11.anInt2036 = '\u9c40' + GlobalStatics_7.anInt2451;
             Projectile.anInt2894 = DummyClass11.anInt2036;
-            GameWorldSomething.anInt506 = ClientScriptCall.anInt2451 + '\uc350';
+            GameWorldSomething.anInt506 = GlobalStatics_7.anInt2451 + '\uc350';
           }
 
           return true;
@@ -278,14 +201,14 @@ public final class MaterialShader5 implements MaterialShader {
             GlobalStatics_2
                 .method638((byte) -19, ScriptState.anInt872, Widget.anInt278);
           if (var13 != null) {
-            ScriptState.method1177(BufferObject.anInt1887, 0L, (byte) -53,
+            ScriptState.method1177(GlobalStatics_6.anInt1887, 0L, (byte) -53,
               WorldMapLabel.aClass94_1724, var11, (short) 11, Parameter.aClass94_3621, var12);
           } else {
             SceneSomething.method958((byte) -87);
           }
         } else {
           ++GlobalStatics_2.anInt2571;
-          if ((AbstractImageProducer.gameId == 1)) {
+          if ((GlobalStatics_5.gameId == 1)) {
             ScriptState.method1177(-1, 0L, (byte) -62, GroundItemNode.EMPTY_STRING, var11,
               (short) 36, GlTexture2d.aClass94_3762, var12);
           }
@@ -307,7 +230,7 @@ public final class MaterialShader5 implements MaterialShader {
           if ((var26 != var25)) {
             var25 = var26;
             int var18;
-            if ((var14 == 2) && AbstractFileRequester.method2096(GameWorldSomething.currentPlane,
+            if ((var14 == 2) && GlobalStatics_5.method2096(GameWorldSomething.currentPlane,
               var12, var27, var26)) {
               GameObjectConfig var16 = DummyClass11.method2207(4, var15);
               if (var16.anIntArray1524 != null) {
@@ -383,7 +306,7 @@ public final class MaterialShader5 implements MaterialShader {
                   GlobalStatics_0.method1210(64, LinearHashTable.anInt1038);
                 if ((Something3dRoot.anInt2051 & 4) != 0 && (var17 == null
                   || (var16.method1691(var17.anInt3614, LinearHashTable.anInt1038, (byte) 98) != var17.anInt3614))) {
-                  ScriptState.method1177(BufferObject.anInt1887, var26, (byte) -77,
+                  ScriptState.method1177(GlobalStatics_6.anInt1887, var26, (byte) -77,
                     RenderAnimation.concat(new GameString[] {
                       DummyClass59.aClass94_676, SomethingQuickChat.aClass94_3573,
                       var16.aClass94_1504
@@ -418,7 +341,7 @@ public final class MaterialShader5 implements MaterialShader {
                       >= var36.config.size && var18 <= var22
                       && var36.config.size
                       <= -(-var18 + var22 >> 7) + var31.config.size) {
-                    BufferObject.method2068(var36.config, var12, -126,
+                    GlobalStatics_6.method2068(var36.config, var12, -126,
                       GlobalStatics_2.anIntArray347[var37], var27);
                   }
                 }
@@ -439,7 +362,7 @@ public final class MaterialShader5 implements MaterialShader {
                 }
               }
 
-              BufferObject.method2068(var31.config, var12, -108, var15, var27);
+              GlobalStatics_6.method2068(var31.config, var12, -108, var15, var27);
             }
 
             if (var14 == 0) {
@@ -457,7 +380,7 @@ public final class MaterialShader5 implements MaterialShader {
                       && var36.config.size <= -(var21 - var33 >> 7) + var30
                       .getSize() && (var22 >= var18) && (var36.config.size <= (
                       -(-var18 + var22 >> 7) + var30.getSize()))) {
-                    BufferObject.method2068(var36.config, var12, -121,
+                    GlobalStatics_6.method2068(var36.config, var12, -121,
                       GlobalStatics_2.anIntArray347[var37], var27);
                   }
                 }
@@ -550,8 +473,8 @@ public final class MaterialShader5 implements MaterialShader {
                       GlobalStatics_0.method1210(64, LinearHashTable.anInt1038);
                     if ((Something3dRoot.anInt2051 & 1) != 0 && (var39 == null
                       || (var40.method1115(var39.anInt3614, 100, LinearHashTable.anInt1038) != var39.anInt3614))) {
-                      ++DisplayMode.anInt1439;
-                      ScriptState.method1177(BufferObject.anInt1887, var18, (byte) -70,
+                      ++GlobalStatics_7.anInt1439;
+                      ScriptState.method1177(GlobalStatics_6.anInt1887, var18, (byte) -70,
                         RenderAnimation.concat(new GameString[] {
                           DummyClass59.aClass94_676, GlobalStatics_0.aClass94_1699, var40.aClass94_770
                         }), var12, (short) 39, Parameter.aClass94_3621, var27);

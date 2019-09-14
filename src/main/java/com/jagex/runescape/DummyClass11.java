@@ -1,6 +1,7 @@
 package com.jagex.runescape;
 
 import com.jagex.runescape.buffer.Buffer;
+import com.jagex.runescape.done.AreaSoundEffect;
 
 public final class DummyClass11 {
 
@@ -55,7 +56,7 @@ public final class DummyClass11 {
   }
 
   public static void method2206(boolean var0, int var1) {
-    WidgetUpdate var2 = AudioStreamEncoder3.method466(4, 4, var1);
+    WidgetUpdate var2 = GlobalStatics_6.method466(4, 4, var1);
       var2.createIndexedColorSprite(var0);
   }
 

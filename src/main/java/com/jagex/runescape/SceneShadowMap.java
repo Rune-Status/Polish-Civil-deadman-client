@@ -23,10 +23,10 @@ public final class SceneShadowMap {
     int var11 = var2 - var4;
       int var13 = -1;
       if ((GlobalStatics_2.anInt3704 > 0)) {
-        if (ByteArrayNode.anInt3611 <= 10) {
-          var13 = 5 * ByteArrayNode.anInt3611;
+        if (GlobalStatics_6.anInt3611 <= 10) {
+          var13 = 5 * GlobalStatics_6.anInt3611;
         } else {
-          var13 = -((-10 + ByteArrayNode.anInt3611) * 5) + 50;
+          var13 = -((-10 + GlobalStatics_6.anInt3611) * 5) + 50;
         }
       }
 
@@ -42,8 +42,8 @@ public final class SceneShadowMap {
           int var21 = var4 + var17 >> 6;
           var18 += var0;
           int var10000 = var19 + var0;
-          if ((var21 >= 0) && var21 <= -1 + AbstractGameWorld.anIntArrayArrayArray720.length) {
-            int[][] var22 = AbstractGameWorld.anIntArrayArrayArray720[var21];
+          if ((var21 >= 0) && var21 <= -1 + GlobalStatics_4.anIntArrayArrayArray720.length) {
+            int[][] var22 = GlobalStatics_4.anIntArrayArrayArray720[var21];
 
             for (int var23 = -var16; var23 < var12 + var16; ++var23) {
               int var25 = var6 + (var3 * (var23 + 1)) >> 16;
@@ -59,7 +59,7 @@ public final class SceneShadowMap {
                   int var29 = var22[var27][var28];
                   if ((var29 != 0)) {
                     GameObjectConfig var14 = DummyClass11.method2207(4, -1 + var29);
-                    if (!AudioStreamEncoder4.aBooleanArray3503[var14.anInt1482]) {
+                    if (!GlobalStatics_6.aBooleanArray3503[var14.anInt1482]) {
                       if ((var13 != -1) && (var14.anInt1482 == FileSystem.anInt101)) {
                         SomethingOtherWorldMap var30 = new SomethingOtherWorldMap();
                         var30.anInt2531 = var18;
@@ -112,9 +112,9 @@ public final class SceneShadowMap {
     if (var1 == -7) {
         MilliFrameRegulator.anIntArray2696 = new int[var0];
         DummyClass13.anIntArray2021 = new int[var0];
-        AnimationSequence.anIntArray1871 = new int[var0];
+        GlobalStatics_3.anIntArray1871 = new int[var0];
         Player.anIntArray3959 = new int[var0];
-        FileCache.anIntArray686 = new int[var0];
+        GlobalStatics_7.anIntArray686 = new int[var0];
       }
   }
 

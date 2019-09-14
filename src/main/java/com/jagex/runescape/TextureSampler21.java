@@ -1,6 +1,7 @@
 package com.jagex.runescape;
 
 import com.jagex.runescape.buffer.Buffer;
+import com.jagex.runescape.done.AbstractTextureSampler;
 import com.jagex.runescape.opengl.GlTexture2d;
 
 public final class TextureSampler21 extends AbstractTextureSampler {

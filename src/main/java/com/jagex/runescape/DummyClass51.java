@@ -32,7 +32,7 @@ public final class DummyClass51 {
 
   public static void method1418(int var0, FileUnpacker var1) {
     DummyClass8.aClass109_Sub1Array4027 =
-        ClientScriptEnum.createSprites((byte) 65, NPC.runesFileId, var1);
+        GlobalStatics_7.createSprites((byte) 65, NPC.runesFileId, var1);
       PlayerAppearance.anIntArray861 = new int[256];
 
       int var2;
@@ -112,7 +112,7 @@ public final class DummyClass51 {
   }
 
   public static void method1420(int var0, int var1, int var2, int var3, byte var4) {
-    WidgetUpdate var5 = AudioStreamEncoder3.method466(4, 10, var0);
+    WidgetUpdate var5 = GlobalStatics_6.method466(4, 10, var0);
       var5.g((byte) 33);
       var5.anInt3597 = var2;
       var5.anInt3598 = var3;
@@ -128,11 +128,11 @@ public final class DummyClass51 {
           + ((!GLStatics.useBumpMaps ? 0 : 1) << 13) + ((Projectile.aBoolean2910 ? 1 : 0) << 10)
           + ((TextureSampler0.aBoolean3275 ? 1 : 0) << 9) + ((Widget.aBoolean236 ? 1 : 0) << 7) + (
           (!SceneSomething.aBoolean488 ? 0 : 1) << 6) + ((Keyboard.aBoolean1905 ? 1 : 0) << 5) + (
-          ((!ClientScriptEnum.aBoolean3665 ? 0 : 1) << 3) + (GlobalStatics_4.brightnessSetting
+          ((!GlobalStatics_7.aBoolean3665 ? 0 : 1) << 3) + (GlobalStatics_4.brightnessSetting
             & 7) - (-((!GlobalStatics_2.aBoolean3604 ? 0 : 1) << 4) - (
             (GameWorld.aBoolean2623 ? 1 : 0) << 8)) - (
             -(GLStatics.anInt1137 << 11 & 6144) - (
-              ((ClientScriptCall.anInt2453 == 0) ? 0 : 1) << 20) - (
+              ((GlobalStatics_7.anInt2453 == 0) ? 0 : 1) << 20) - (
               (((BZipDecompressorState.anInt120 != 0) ? 1 : 0) << 21) + (
                 ((DummyClass28.anInt340 == 0) ? 0 : 1) << 22)))) + (DummyClass0.method1757()
           << 23));

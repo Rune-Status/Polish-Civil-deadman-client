@@ -1,34 +1,10 @@
 package com.jagex.runescape.opengl;
 
-import com.jagex.runescape.AbstractImageProducer;
-import com.jagex.runescape.AbstractObjectNodeWrapper;
-import com.jagex.runescape.AnimationSequence;
-import com.jagex.runescape.BZipDecompressorState;
-import com.jagex.runescape.BitVariable;
+import com.jagex.runescape.*;
 import com.jagex.runescape.buffer.Buffer;
-import com.jagex.runescape.BufferData;
-import com.jagex.runescape.DummyClass13;
-import com.jagex.runescape.DummyClass17;
-import com.jagex.runescape.DummyClass20;
-import com.jagex.runescape.DummyClass32;
-import com.jagex.runescape.DummyClass49;
-import com.jagex.runescape.DummyClass60;
-import com.jagex.runescape.DummyClass8;
-import com.jagex.runescape.EnumStringFetcher;
-import com.jagex.runescape.FileCache;
-import com.jagex.runescape.FileUnpacker;
 import com.jagex.runescape.common.GameString;
-import com.jagex.runescape.GameWorldSomething;
-import com.jagex.runescape.GroundItem;
-import com.jagex.runescape.ITextureCache;
-import com.jagex.runescape.MilliFrameRegulator;
-import com.jagex.runescape.NPC;
-import com.jagex.runescape.Player;
-import com.jagex.runescape.ProceduralTexture;
-import com.jagex.runescape.SomethingOtherWorldMap;
-import com.jagex.runescape.SomethingPacket116;
+import com.jagex.runescape.done.AbstractObjectNodeWrapper;
 import com.jagex.runescape.node.SubNode;
-import com.jagex.runescape.TextureCache;
 import com.jagex.runescape.common.GameStringStatics;
 import com.jagex.runescape.huffman.HuffmanEncoderStatics;
 import com.jogamp.opengl.glu.GLU;
@@ -380,23 +356,23 @@ public final class Texture extends SubNode {
   public static void method725(int var0) {
     int var1 = 67 / ((-60 - var0) / 41);
       if ((DummyClass20.method1817((byte) 70) == 2)) {
-        byte var2 = (byte) (255 & BitVariable.anInt1127 - 4);
-        int var3 = BitVariable.anInt1127 % 104;
+        byte var2 = (byte) (255 & GlobalStatics_6.anInt1127 - 4);
+        int var3 = GlobalStatics_6.anInt1127 % 104;
 
         int var4;
         int var5;
         for (var4 = 0; (var4 < 4); ++var4) {
           for (var5 = 0; var5 < 104; ++var5) {
-            AbstractImageProducer.aByteArrayArrayArray2008[var4][var3][var5] = var2;
+            GlobalStatics_5.aByteArrayArrayArray2008[var4][var3][var5] = var2;
           }
         }
 
         if (GameWorldSomething.currentPlane != 3) {
           for (var4 = 0; (var4 < 2); ++var4) {
-            FileCache.anIntArray686[var4] = -1000000;
+            GlobalStatics_7.anIntArray686[var4] = -1000000;
             MilliFrameRegulator.anIntArray2696[var4] = 1000000;
             DummyClass13.anIntArray2021[var4] = 0;
-            AnimationSequence.anIntArray1871[var4] = 1000000;
+            GlobalStatics_3.anIntArray1871[var4] = 1000000;
             Player.anIntArray3959[var4] = 0;
           }
 
@@ -510,10 +486,10 @@ public final class Texture extends SubNode {
               }
             }
           } else {
-            var4 = BufferData
+            var4 = GlobalStatics_6
                 .method1736(GameWorldSomething.currentPlane, 1, NPC.anInt3995,
                     DummyClass49.anInt1111);
-            if (var4 - EnumStringFetcher.anInt2162 < 800 &&
+            if (var4 - GlobalStatics_7.anInt2162 < 800 &&
                 (4
                     & BZipDecompressorState.tileFlags[GameWorldSomething.currentPlane][
                     NPC.anInt3995

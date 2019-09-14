@@ -2,6 +2,8 @@ package com.jagex.runescape;
 
 import com.jagex.runescape.common.GameString;
 import com.jagex.runescape.common.GameStringStatics;
+import com.jagex.runescape.done.AbstractAudioOutputStream;
+import com.jagex.runescape.done.AudioWorker;
 import com.jagex.runescape.opengl.GlTexture2d;
 import java.awt.Component;
 
@@ -42,8 +44,8 @@ public final class DummyClass43 {
   }
 
   public static AbstractAudioOutputStream createAudioOutputStream(int var0, SignLink var1,
-                                                                 Component var2, int var3,
-                                                                 int var4) {
+                                                                  Component var2, int var3,
+                                                                  int var4) {
     if (DummyClass60.sampleRate == 0) {
         throw new IllegalStateException();
       } else if (var3 >= 0 && var3 < 2) {
@@ -54,7 +56,7 @@ public final class DummyClass43 {
         try {
           AbstractAudioOutputStream var9 =
             (AbstractAudioOutputStream) Class.forName(
-                "com.jagex.runescape.BufferedAudioOutputStream").newInstance();
+                    "com.jagex.runescape.done.BufferedAudioOutputStream").newInstance();
           var9.sampleRate = var0;
           var9.samples = new int[(!GlobalStatics_0.stereo ? 1 : 2) * 256];
           var9.bind(var2);
@@ -64,11 +66,11 @@ public final class DummyClass43 {
           }
 
           var9.setBufferSize(var9.sampleBufferSize);
-          if (AudioStreamEncoder4.anInt3507 > 0 && DummyClass36.aClass15_2613
+          if (GlobalStatics_6.anInt3507 > 0 && DummyClass36.aClass15_2613
               == null) {
             DummyClass36.aClass15_2613 = new AudioWorker();
             DummyClass36.aClass15_2613.aClass87_350 = var1;
-            var1.createThread(0, AudioStreamEncoder4.anInt3507, DummyClass36.aClass15_2613);
+            var1.createThread(0, GlobalStatics_6.anInt3507, DummyClass36.aClass15_2613);
           }
 
           if (DummyClass36.aClass15_2613 != null) {
@@ -92,11 +94,11 @@ public final class DummyClass43 {
             var5.bind(var2);
             var5.sampleBufferSize = 16384;
             var5.setBufferSize(var5.sampleBufferSize);
-            if ((AudioStreamEncoder4.anInt3507 > 0) &&
+            if ((GlobalStatics_6.anInt3507 > 0) &&
                 DummyClass36.aClass15_2613 == null) {
               DummyClass36.aClass15_2613 = new AudioWorker();
               DummyClass36.aClass15_2613.aClass87_350 = var1;
-              var1.createThread(var4 ^ 14, AudioStreamEncoder4.anInt3507,
+              var1.createThread(var4 ^ 14, GlobalStatics_6.anInt3507,
                 DummyClass36.aClass15_2613);
             }
 

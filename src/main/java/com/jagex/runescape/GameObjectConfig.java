@@ -5,6 +5,7 @@ import com.jagex.runescape.common.GameString;
 import com.jagex.runescape.common.GameStringStatics;
 import com.jagex.runescape.common.HashTable;
 import com.jagex.runescape.common.StringNode;
+import com.jagex.runescape.done.AnimationSequence;
 import com.jagex.runescape.node.Node;
 import com.jagex.runescape.opengl.GLStatics;
 import com.jagex.runescape.opengl.GlModel;
@@ -402,7 +403,7 @@ public final class GameObjectConfig {
       if (var2 == 1) {
         var4 = var1.readUnsignedByte();
         if ((var4 > 0)) {
-          if (this.anIntArray1519 != null && !Cache.aBoolean742) {
+          if (this.anIntArray1519 != null && !GlobalStatics_6.aBoolean742) {
             var1.position += var4 * 3;
           } else {
             this.anIntArray1487 = new int[var4];
@@ -712,7 +713,7 @@ public final class GameObjectConfig {
       } else {
         var4 = var1.readUnsignedByte();
         if ((var4 > 0)) {
-          if (this.anIntArray1519 != null && !Cache.aBoolean742) {
+          if (this.anIntArray1519 != null && !GlobalStatics_6.aBoolean742) {
             var1.position += var4 * 2;
           } else {
             this.anIntArray1519 = new int[var4];

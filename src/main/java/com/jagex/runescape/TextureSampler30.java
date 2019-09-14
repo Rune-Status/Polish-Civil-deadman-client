@@ -3,6 +3,7 @@ package com.jagex.runescape;
 import com.jagex.runescape.buffer.Buffer;
 import com.jagex.runescape.common.GameString;
 import com.jagex.runescape.common.GameStringStatics;
+import com.jagex.runescape.done.AbstractTextureSampler;
 import com.jagex.runescape.opengl.GLStatics;
 import com.jagex.runescape.sprite.SoftwareIndexedColorSprite;
 import java.awt.Frame;
@@ -128,12 +129,12 @@ public final class TextureSampler30 extends AbstractTextureSampler {
 
   public static void method212(long var0, int var2) {
     if (var0 != 0L) {
-        for (int var3 = var2; (var3 < AnimationSomething.anInt3591); ++var3) {
+        for (int var3 = var2; (var3 < GlobalStatics_6.anInt3591); ++var3) {
           if (MonoChromaticImageCache.aLongArray1574[var3] == var0) {
             ++DummyClass20.anInt1781;
-            --AnimationSomething.anInt3591;
+            --GlobalStatics_6.anInt3591;
 
-            for (int var4 = var3; AnimationSomething.anInt3591 > var4; ++var4) {
+            for (int var4 = var3; GlobalStatics_6.anInt3591 > var4; ++var4) {
               MonoChromaticImageCache.aLongArray1574[var4] =
                 MonoChromaticImageCache.aLongArray1574[var4 + 1];
               TextureSampler7.aClass94Array3341[var4] = TextureSampler7.aClass94Array3341[1 + var4];
@@ -197,14 +198,14 @@ public final class TextureSampler30 extends AbstractTextureSampler {
                 || var13 >= var10 || var13 < var3 && var12 != var2)) {
                 SceneGraphTile var14 = GLStatics.sceneGraphTiles[var11][var12][var13];
                 if (var14 != null) {
-                  int var15 = (AbstractGameWorld.heightMap[var11][var12][var13]
-                    + AbstractGameWorld.heightMap[var11][var12 + 1][var13]
-                    + AbstractGameWorld.heightMap[var11][var12][var13 + 1]
-                    + AbstractGameWorld.heightMap[var11][var12 + 1][var13 + 1]) / 4 -
-                    (AbstractGameWorld.heightMap[var1][var2][var3]
-                      + AbstractGameWorld.heightMap[var1][var2 + 1][var3]
-                      + AbstractGameWorld.heightMap[var1][var2][var3 + 1]
-                      + AbstractGameWorld.heightMap[var1][var2 + 1][var3 + 1]) / 4;
+                  int var15 = (GlobalStatics_4.heightMap[var11][var12][var13]
+                    + GlobalStatics_4.heightMap[var11][var12 + 1][var13]
+                    + GlobalStatics_4.heightMap[var11][var12][var13 + 1]
+                    + GlobalStatics_4.heightMap[var11][var12 + 1][var13 + 1]) / 4 -
+                    (GlobalStatics_4.heightMap[var1][var2][var3]
+                      + GlobalStatics_4.heightMap[var1][var2 + 1][var3]
+                      + GlobalStatics_4.heightMap[var1][var2][var3 + 1]
+                      + GlobalStatics_4.heightMap[var1][var2 + 1][var3 + 1]) / 4;
                   SceneSomething2 var16 = var14.aClass70_2234;
                   if (var16 != null) {
                     if (var16.sceneNode0.method1865()) {

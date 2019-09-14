@@ -2,6 +2,8 @@ package com.jagex.runescape;
 
 import com.jagex.runescape.common.GameString;
 import com.jagex.runescape.common.GameStringStatics;
+import com.jagex.runescape.done.AbstractDirectColorSprite;
+import com.jagex.runescape.done.BufferedFile;
 import com.jagex.runescape.node.Deque;
 import com.jagex.runescape.opengl.GLStatics;
 
@@ -112,7 +114,7 @@ public final class MonoChromaticImageCache {
   }
 
   public static AbstractDirectColorSprite method1707(int var0, int var1, boolean var2, int var3,
-                                                    int var4, int var5) {
+                                                     int var4, int var5) {
     if (var5 == 65536) {
         int var7 = (!var2 ? 0 : 65536) + var1 + (var0 << 17) + (var4 << 19);
         long var8 = var7 * 3849834839L + 3147483667L * var3;
@@ -138,7 +140,7 @@ public final class MonoChromaticImageCache {
 
   public static void method1708(int var0, int var1, int var2) {
     if (var2 == -2553) {
-        WidgetUpdate var3 = AudioStreamEncoder3.method466(4, 13, var1);
+        WidgetUpdate var3 = GlobalStatics_6.method466(4, 13, var1);
         var3.g((byte) 33);
         var3.anInt3598 = var0;
       }

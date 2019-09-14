@@ -1,13 +1,8 @@
 package com.jagex.runescape.opengl;
 
-import com.jagex.runescape.AbstractGameWorld;
-import com.jagex.runescape.AudioStreamEncoder3;
-import com.jagex.runescape.DummyClass17;
-import com.jagex.runescape.DummyClass3;
-import com.jagex.runescape.DummyClass55;
+import com.jagex.runescape.*;
 import com.jagex.runescape.common.GameString;
 import com.jagex.runescape.common.GameStringStatics;
-import com.jagex.runescape.Unsure;
 import com.jogamp.nativewindow.awt.AWTGraphicsConfiguration;
 import com.jogamp.nativewindow.awt.JAWTWindow;
 import com.jogamp.opengl.GL2;
@@ -174,7 +169,7 @@ public final class GlRenderer {
     GlRenderer.lightingEnabled = true;
     GlRenderer.depthTestEnabled = true;
     GlRenderer.fogEnabled = true;
-    AbstractGameWorld.method1073(97);
+    GlobalStatics_4.method1073(97);
     GlRenderer.GL.glActiveTexture('\u84c1');
     GlRenderer.GL.glTexEnvi(8960, 8704, '\u8570');
     GlRenderer.GL.glTexEnvi(8960, '\u8571', 8448);
@@ -704,7 +699,7 @@ public final class GlRenderer {
     GlRenderer.GL.glTexImage2D(3553, 0, 4, 1, 1, 0, 6408, 5121,
         IntBuffer.wrap(new int[]{-1}));
     DummyClass46.setupSceneGl();
-    AudioStreamEncoder3.method468(6);
+    GlobalStatics_6.method468(6);
   }
 
 }

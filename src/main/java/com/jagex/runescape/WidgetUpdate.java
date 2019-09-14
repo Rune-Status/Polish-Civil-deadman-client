@@ -65,7 +65,7 @@ public final class WidgetUpdate extends SubNode {
   public static void d(int var0) {
     if ((NpcConfiguration.anInt1252 != -1) && (VariableUpdate.anInt2293 != -1)) {
         int var1 =
-          (DummyClass8.anInt4020 * (-DummyClass21.anInt1759 + AbstractTextureSampler.anInt2383)
+          (DummyClass8.anInt4020 * (-DummyClass21.anInt1759 + GlobalStatics_3.anInt2383)
             >> 16) + DummyClass21.anInt1759;
         float[] var3 = new float[3];
         DummyClass8.anInt4020 += var1;
@@ -81,7 +81,7 @@ public final class WidgetUpdate extends SubNode {
 
         if (var0 == '\uffff') {
           float var2 = DummyClass8.anInt4020 / 65535.0F;
-          int var4 = FileCacheRequester.anInt1081 * 2;
+          int var4 = GlobalStatics_7.anInt1081 * 2;
 
           int var6;
           int var7;
@@ -108,7 +108,7 @@ public final class WidgetUpdate extends SubNode {
               var9 + ((var12 * var2 + var11) * var2 + var10) * var2;
           }
 
-          EnumStringFetcher.anInt2162 = -1 * (int) var3[1];
+          GlobalStatics_7.anInt2162 = -1 * (int) var3[1];
           NPC.anInt3995 = (int) var3[0] - (128 * WorldMapLabel.anInt1716);
           DummyClass49.anInt1111 = (int) var3[2] - (ProceduralTexture.anInt1152 * 128);
           float[] var16 = new float[3];
@@ -188,7 +188,7 @@ public final class WidgetUpdate extends SubNode {
         if (var3 != null && GZipDecompressor.method1122(0, var3) != null) {
           DummyClass42.aClass11_886 = var3;
           DummyClass18.aClass11_88 = GZipDecompressor.method1122(0, var3);
-          BufferObject.anInt1881 = var1;
+          GlobalStatics_6.anInt1881 = var1;
           NPC.aBoolean3975 = false;
           SomethingTexture3.anInt2658 = 0;
           DummyClass53.anInt1336 = var0;
@@ -241,7 +241,7 @@ public final class WidgetUpdate extends SubNode {
       }
 
       SomethingVolume15.aClass93_2428.method1523((byte) -123);
-      Cache.aClass93_743.method1523((byte) -106);
+      GlobalStatics_6.aClass93_743.method1523((byte) -106);
   }
 
 }

@@ -38,7 +38,7 @@ public final class DummyClass39 {
       if (var2 != 0) {
         int var3 = DummyClass5.anIntArray2985[var1];
         if (var2 == 6) {
-          FileCache.anInt688 = var3;
+          GlobalStatics_7.anInt688 = var3;
         }
 
         if ((var2 == 5)) {

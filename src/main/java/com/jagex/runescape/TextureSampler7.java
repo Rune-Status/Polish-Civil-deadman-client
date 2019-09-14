@@ -4,6 +4,7 @@ import com.jagex.runescape.buffer.Buffer;
 import com.jagex.runescape.common.GameString;
 import com.jagex.runescape.common.GameStringStatics;
 import com.jagex.runescape.common.HashTable;
+import com.jagex.runescape.done.AbstractTextureSampler;
 import com.jagex.runescape.opengl.GLStatics;
 import com.jagex.runescape.opengl.SomethingGl0;
 
@@ -292,7 +293,7 @@ public final class TextureSampler7 extends AbstractTextureSampler {
   }
 
   public static void method295(GameString var0, byte var1, int var2) {
-    WidgetUpdate var3 = AudioStreamEncoder3.method466(var1 - 36, 2, var2);
+    WidgetUpdate var3 = GlobalStatics_6.method466(var1 - 36, 2, var2);
       var3.g((byte) 33);
       var3.text = var0;
   }
@@ -317,7 +318,7 @@ public final class TextureSampler7 extends AbstractTextureSampler {
             for (int var4 = var3; var4 < FileSystem.anInt104; ++var4) {
               SceneSomething2.aClass94Array1046[var4] =
                 SceneSomething2.aClass94Array1046[var4 + 1];
-              Cursor.anIntArray882[var4] = Cursor.anIntArray882[var4 + 1];
+              GlobalStatics_7.anIntArray882[var4] = GlobalStatics_7.anIntArray882[var4 + 1];
               GlobalStatics_2.aClass94Array2566[var4] = GlobalStatics_2.aClass94Array2566[1 + var4];
               GlobalStatics_4.aLongArray826[var4] = GlobalStatics_4.aLongArray826[1 + var4];
               LightIntensity.anIntArray904[var4] = LightIntensity.anIntArray904[var4 + 1];
@@ -361,7 +362,7 @@ public final class TextureSampler7 extends AbstractTextureSampler {
           }
 
           if (var18 != 0) {
-            FloorUnderlay var19 = ClientScript.getFloorUnderlay(-1 + (255 & var18));
+            FloorUnderlay var19 = GlobalStatics_6.getFloorUnderlay(-1 + (255 & var18));
             var15[var16][var17] = (1 + var19.anInt1412 << 16) + var19.anInt1414;
           }
         }

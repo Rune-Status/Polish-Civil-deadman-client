@@ -2,6 +2,7 @@ package com.jagex.runescape;
 
 import com.jagex.runescape.common.GameString;
 import com.jagex.runescape.common.GameStringStatics;
+import com.jagex.runescape.done.ClientScriptCall;
 import com.jagex.runescape.opengl.GLStatics;
 import com.jagex.runescape.opengl.SomethingGl0;
 
@@ -44,7 +45,7 @@ public final class SceneSomething {
       }
 
       SomethingVolume15.aClass93_2428.method1522(-126, var1);
-      Cache.aClass93_743.method1522(-126, var1);
+      GlobalStatics_6.aClass93_743.method1522(-126, var1);
   }
 
   public static void method954(int var0) {
@@ -75,7 +76,7 @@ public final class SceneSomething {
             var0 != null && var21 != null && var21[var27] ? var0 : var17;
         int var29 = var4[var27 + var27 + 1];
         var26[var27] =
-          BufferData.method1734(var25, var13, var22, var23, var0, var30, var7, var18, var24,
+          GlobalStatics_6.method1734(var25, var13, var22, var23, var0, var30, var7, var18, var24,
             (byte) -116, var19, false, var3, var9, var5, var28, var12, var29);
       }
 
@@ -121,8 +122,8 @@ public final class SceneSomething {
 
   public static void method957(int var0, boolean var1) {
     if (var0 == 96) {
-        ClientScriptEnum.aBoolean3665 = var1;
-        Cache.aBoolean742 = !NPC.method1986(42);
+        GlobalStatics_7.aBoolean3665 = var1;
+        GlobalStatics_6.aBoolean742 = !NPC.method1986(42);
       }
   }
 
@@ -139,13 +140,13 @@ public final class SceneSomething {
         }
 
         SceneNode.aBoolean1837 = false;
-        AnimationSomething.anInt3590 = -1;
+        GlobalStatics_6.anInt3590 = -1;
         DummyClass29.method909(-107, var1);
       }
   }
 
   public static void method959(int var0) {
-    ClientScriptCall.aClass93_2450.method1524(3);
+    GlobalStatics_7.aClass93_2450.method1524(3);
       if (var0 != 0) {
         SceneSomething.method957(121, true);
       }

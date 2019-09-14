@@ -2,6 +2,7 @@ package com.jagex.runescape;
 
 import com.jagex.runescape.common.GameString;
 import com.jagex.runescape.common.GameStringStatics;
+import com.jagex.runescape.done.AbstractDirectColorSprite;
 import com.jagex.runescape.opengl.SomethingShadows;
 import com.jagex.runescape.opengl.GlDirectColorSprite;
 import com.jagex.runescape.opengl.GlRenderer;
@@ -64,7 +65,7 @@ public final class DummyClass28 {
         DummyClass52.method1424(var1, (byte) -12, 0, SomethingVolume15.anInt2436);
       TextureSampler0.aClass109Array3270 =
         DummyClass52.method1424(var1, (byte) -12, 0, GlTexture2d.anInt3757);
-      AbstractTextureSampler.aClass3_Sub28_Sub17_2379.method697(TextureSampler0.aClass109Array3270,
+      GlobalStatics_3.aClass3_Sub28_Sub17_2379.method697(TextureSampler0.aClass109Array3270,
         null);
       SomethingTilek.p12Font.method697(TextureSampler0.aClass109Array3270, null);
       FloorOverlay.aClass3_Sub28_Sub17_2096.method697(TextureSampler0.aClass109Array3270, null);

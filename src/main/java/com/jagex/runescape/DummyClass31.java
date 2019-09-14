@@ -2,6 +2,8 @@ package com.jagex.runescape;
 
 import com.jagex.runescape.common.GameString;
 import com.jagex.runescape.common.GameStringStatics;
+import com.jagex.runescape.done.AbstractModel;
+import com.jagex.runescape.done.CollisionMap;
 import com.jagex.runescape.huffman.HuffmanEncoderStatics;
 import com.jagex.runescape.node.Deque;
 import com.jagex.runescape.opengl.SomethingShadows;
@@ -83,7 +85,7 @@ public final class DummyClass31 {
           var17 = var9 + (var13 + 1 >> 1);
         }
 
-        int[][] var18 = AbstractGameWorld.heightMap[var0];
+        int[][] var18 = GlobalStatics_4.heightMap[var0];
         if (var8 == 50) {
           int var20 = (var12 << 6) + (var7 << 7);
           int var21 = (var13 << 6) + (var9 << 7);
@@ -93,7 +95,7 @@ public final class DummyClass31 {
           int var22 = 0;
           int[][] var23;
           if (GlRenderer.useOpenGlRenderer && (var0 != 0)) {
-            var23 = AbstractGameWorld.heightMap[0];
+            var23 = GlobalStatics_4.heightMap[0];
             var22 = var19 - (
               var23[var15][var17] + var23[var15][var16] + var23[var14][var16] + var23[var14][var17]
                 >> 2);
@@ -104,7 +106,7 @@ public final class DummyClass31 {
           if (var3) {
             var23 = DummyClass43.somethingHeightMap[0];
           } else if ((var0 < 3)) {
-            var23 = AbstractGameWorld.heightMap[1 + var0];
+            var23 = GlobalStatics_4.heightMap[1 + var0];
           }
 
           if (var11.anInt1529 == 0 || var3) {
@@ -146,7 +148,7 @@ public final class DummyClass31 {
                     var11.aBoolean1492, null);
                 }
 
-                EnumStringFetcher.method835(var2, var7, var9, var19, 1, 1,
+                GlobalStatics_7.method835(var2, var7, var9, var19, 1, 1,
                     var27, 0,
                   var24);
                 if (var1 && (var6 <= 17) && (var6 != 13) && var2 > 0) {
@@ -450,7 +452,7 @@ public final class DummyClass31 {
                           var11.aBoolean1492, null);
                     }
 
-                    ByteArrayNode
+                    GlobalStatics_6
                         .method577(var2, var7, var9, var19, var27,
                             null,
                             DummyClass13.anIntArray2017[var10], 0, 0, 0, var24);
@@ -477,7 +479,7 @@ public final class DummyClass31 {
                           SomethingShadows.method2051(var47.shadow,
                               var20 - (RenderAnimation.anIntArray356[var10]
                                   * 8), var22,
-                              -(AudioStreamEncoder3.anIntArray3491[var10] * 8)
+                              -(GlobalStatics_6.anIntArray3491[var10] * 8)
                                   + var21);
                         }
 
@@ -489,12 +491,12 @@ public final class DummyClass31 {
                             var11.aBoolean1492, null);
                       }
 
-                      ByteArrayNode
+                      GlobalStatics_6
                           .method577(var2, var7, var9, var19, var39,
                               null,
                               DummyClass13.anIntArray2017[var10], 0,
                               var43 * RenderAnimation.anIntArray356[var10],
-                              AudioStreamEncoder3.anIntArray3491[var10] * var43,
+                              GlobalStatics_6.anIntArray3491[var10] * var43,
                               var24);
                     } else {
                       if ((var6 == 6)) {
@@ -518,7 +520,7 @@ public final class DummyClass31 {
                             assert var47 != null;
                             SomethingShadows.method2051(var47.shadow,
                                 -(8
-                                    * AbstractTextureSampler.anIntArray2386[var10])
+                                    * GlobalStatics_3.anIntArray2386[var10])
                                     + var20, var22,
                                 -(8 * DummyClass4.anIntArray3007[var10])
                                     + var21);
@@ -533,10 +535,10 @@ public final class DummyClass31 {
                                   var11.aBoolean1492, null);
                         }
 
-                        ByteArrayNode.method577(var2, var7, var9, var19,
+                        GlobalStatics_6.method577(var2, var7, var9, var19,
                             var39, null,
                             256, var10, var43
-                                * AbstractTextureSampler.anIntArray2386[var10],
+                                * GlobalStatics_3.anIntArray2386[var10],
                             var43 * DummyClass4.anIntArray3007[var10], var24);
                       } else {
                         if (var6 == 7) {
@@ -564,7 +566,7 @@ public final class DummyClass31 {
                                     var11.aBoolean1492, null);
                           }
 
-                          ByteArrayNode.method577(var2, var7, var9, var19,
+                          GlobalStatics_6.method577(var2, var7, var9, var19,
                               var27, null,
                               256, var40, 0, 0, var24);
                         } else {
@@ -584,7 +586,7 @@ public final class DummyClass31 {
                                 && !var11.aBoolean1510) {
                               int var34 = 8 * DummyClass4.anIntArray3007[var10];
                               int var33 =
-                                  AbstractTextureSampler.anIntArray2386[var10]
+                                  GlobalStatics_3.anIntArray2386[var10]
                                       * 8;
                               SceneShadowMap var35 =
                                   var11.method1696(4 + var10, var20, var18, 4,
@@ -623,11 +625,11 @@ public final class DummyClass31 {
                                   var11.anInt1531, var11.aBoolean1492, null);
                             }
 
-                            ByteArrayNode.method577(var2, var7, var9, var19,
+                            GlobalStatics_6.method577(var2, var7, var9, var19,
                                 var39,
                                 var46, 256, var10,
                                 var43
-                                    * AbstractTextureSampler.anIntArray2386[var10],
+                                    * GlobalStatics_3.anIntArray2386[var10],
                                 DummyClass4.anIntArray3007[var10] * var43,
                                 var24);
                           }
@@ -653,7 +655,7 @@ public final class DummyClass31 {
                       var11.aBoolean1492, null);
                   }
 
-                  EnumStringFetcher.method835(var2, var7, var9, var19, 1, 1,
+                  GlobalStatics_7.method835(var2, var7, var9, var19, 1, 1,
                       var27, 0,
                     var24);
                   if ((var11.anInt1538 != 0) && var4 != null) {
@@ -684,7 +686,7 @@ public final class DummyClass31 {
               }
 
               if (var27 != null) {
-                boolean var37 = EnumStringFetcher.method835(var2, var7, var9, var19, var12, var13,
+                boolean var37 = GlobalStatics_7.method835(var2, var7, var9, var19, var12, var13,
                     var27, 0, var24);
                 if (var11.aBoolean1525 && var37 && var1) {
                   int var29 = 15;

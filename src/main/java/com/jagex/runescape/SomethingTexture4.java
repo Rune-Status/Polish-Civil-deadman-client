@@ -3,6 +3,8 @@ package com.jagex.runescape;
 import com.jagex.runescape.buffer.Buffer;
 import com.jagex.runescape.common.GameString;
 import com.jagex.runescape.common.GameStringStatics;
+import com.jagex.runescape.done.AbstractSomethingTexture;
+import com.jagex.runescape.done.AnimationSequence;
 import com.jagex.runescape.opengl.GlTexture2d;
 
 public final class SomethingTexture4 extends AbstractSomethingTexture {
@@ -184,15 +186,15 @@ public final class SomethingTexture4 extends AbstractSomethingTexture {
         if (((64 & var4) != 0)) {
           var5 = SpotAnimationConfig.gameBuffer.readUnsignedByte();
           var6 = SpotAnimationConfig.gameBuffer.method786(true);
-          var3.method1970(var6, -8, AbstractGameWorld.updateCycle, var5);
-          var3.anInt2781 = 300 + AbstractGameWorld.updateCycle;
+          var3.method1970(var6, -8, GlobalStatics_4.updateCycle, var5);
+          var3.anInt2781 = 300 + GlobalStatics_4.updateCycle;
           var3.anInt2775 = SpotAnimationConfig.gameBuffer.method754(true);
         }
 
         if ((var4 & 2) != 0) {
           var5 = SpotAnimationConfig.gameBuffer.method786(true);
           var6 = SpotAnimationConfig.gameBuffer.method754(true);
-          var3.method1970(var6, -8, AbstractGameWorld.updateCycle, var5);
+          var3.method1970(var6, -8, GlobalStatics_4.updateCycle, var5);
         }
 
         if ((var4 & 16) != 0) {
@@ -232,17 +234,17 @@ public final class SomethingTexture4 extends AbstractSomethingTexture {
 
           if (var7) {
             var3.anInt2842 = var5;
-            var3.anInt2759 = ('\uffff' & var6) + AbstractGameWorld.updateCycle;
+            var3.anInt2759 = ('\uffff' & var6) + GlobalStatics_4.updateCycle;
             var3.anInt2761 = 0;
             var3.anInt2805 = 0;
             var3.anInt2799 = var6 >> 16;
             var3.anInt2826 = 1;
-            if (var3.anInt2759 > AbstractGameWorld.updateCycle) {
+            if (var3.anInt2759 > GlobalStatics_4.updateCycle) {
               var3.anInt2805 = -1;
             }
 
             if (var3.anInt2842 != -1
-                && (var3.anInt2759 == AbstractGameWorld.updateCycle)) {
+                && (var3.anInt2759 == GlobalStatics_4.updateCycle)) {
               int var8 = RenderAnimation
                   .method898((byte) 42, var3.anInt2842).anInt542;
               if ((var8 != -1)) {
@@ -259,7 +261,7 @@ public final class SomethingTexture4 extends AbstractSomethingTexture {
 
         if ((1 & var4) != 0) {
           if (var3.config.method1474(-1)) {
-            ByteArrayNode.method574(var3, false);
+            GlobalStatics_6.method574(var3, false);
           }
 
           var3.setConfiguration(-1,
@@ -338,7 +340,7 @@ public final class SomethingTexture4 extends AbstractSomethingTexture {
   public static void method1352(int var0, boolean var1, int var2, int var3,
       int var4) {
     if (MovedStatics0.method57(var3, 104)) {
-        AbstractImageProducer.method2183(var2, var1, var4, 235, var0,
+        GlobalStatics_5.method2183(var2, var1, var4, 235, var0,
             SceneNode.aClass11ArrayArray1834[var3]);
       }
   }
@@ -348,11 +350,11 @@ public final class SomethingTexture4 extends AbstractSomethingTexture {
     TextureSampler23.worldMaps = var2;
       SceneNode.aClass3_Sub28_Sub16_Sub2Array1839 = var0;
       if (var1 == -11931) {
-        AudioStreamEncoder4.aBooleanArray3503 =
+        GlobalStatics_6.aBooleanArray3503 =
             new boolean[SceneNode.aClass3_Sub28_Sub16_Sub2Array1839.length];
         DummyClass21.aClass61_1758.clear(-68);
         int var3 = TextureSampler23.worldMaps
-            .getFileId(ClassCheckRequest.DETAILS);
+            .getFileId(GlobalStatics_6.DETAILS);
         int[] var4 = TextureSampler23.worldMaps.getChildIds((byte) -128, var3);
 
         assert var4 != null;

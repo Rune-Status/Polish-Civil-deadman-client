@@ -2,6 +2,7 @@ package com.jagex.runescape;
 
 import com.jagex.runescape.common.GameString;
 import com.jagex.runescape.common.GameStringStatics;
+import com.jagex.runescape.done.BufferedFile;
 import com.jagex.runescape.opengl.GlTexture2d;
 import com.jagex.runescape.sprite.SoftwareIndexedColorSprite;
 
@@ -77,8 +78,8 @@ public final class LinearHashTable {
     int var5 = 0;
 
       for (int var6 = 58 / ((56 - var1) / 49); SomethingWorldMapy.widgetQuads > var5; ++var5) {
-        if (var0 < AbstractAudioOutputStream.quadx0[var5] + GlTexture2d.quadx1[var5]
-          && var0 + var4 > AbstractAudioOutputStream.quadx0[var5]
+        if (var0 < GlobalStatics_5.quadx0[var5] + GlTexture2d.quadx1[var5]
+          && var0 + var4 > GlobalStatics_5.quadx0[var5]
           && (Player.quady0[var5] + Mobile.quady1[var5]) > var2 && (Player.quady0[var5] < (var3
           + var2))) {
           DummyClass9.aBooleanArray4008[var5] = true;

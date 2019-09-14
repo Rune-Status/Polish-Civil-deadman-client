@@ -43,57 +43,57 @@ public final class SomethingInScenePacket202 extends Node {
             int var15 = 16777215;
             SomethingFont var16 = null;
             if (var14 == 0) {
-              if (AbstractGameWorld.aFloat727 == 3.0D) {
+              if (GlobalStatics_4.aFloat727 == 3.0D) {
                 var16 = Something3d2.aClass33_3019;
               }
 
-              if (AbstractGameWorld.aFloat727 == 4.0D) {
+              if (GlobalStatics_4.aFloat727 == 4.0D) {
                 var16 = SocketStream.aClass33_1238;
               }
 
-              if (AbstractGameWorld.aFloat727 == 6.0D) {
+              if (GlobalStatics_4.aFloat727 == 6.0D) {
                 var16 = DummyClass54.aClass33_1399;
               }
 
-              if (AbstractGameWorld.aFloat727 >= 8.0D) {
+              if (GlobalStatics_4.aFloat727 >= 8.0D) {
                 var16 = SomethingTexture1.aClass33_2637;
               }
             }
 
             if ((var14 == 1)) {
-              if (AbstractGameWorld.aFloat727 == 3.0D) {
+              if (GlobalStatics_4.aFloat727 == 3.0D) {
                 var16 = DummyClass54.aClass33_1399;
               }
 
-              if (AbstractGameWorld.aFloat727 == 4.0D) {
+              if (GlobalStatics_4.aFloat727 == 4.0D) {
                 var16 = SomethingTexture1.aClass33_2637;
               }
 
-              if (AbstractGameWorld.aFloat727 == 6.0D) {
+              if (GlobalStatics_4.aFloat727 == 6.0D) {
                 var16 = DummyClass25.aClass33_1626;
               }
 
-              if (AbstractGameWorld.aFloat727 >= 8.0D) {
+              if (GlobalStatics_4.aFloat727 >= 8.0D) {
                 var16 = SomethingTexture1.aClass33_2648;
               }
             }
 
             if (var14 == 2) {
-              if (AbstractGameWorld.aFloat727 == 3.0D) {
+              if (GlobalStatics_4.aFloat727 == 3.0D) {
                 var16 = DummyClass25.aClass33_1626;
               }
 
               var15 = 16755200;
-              if (AbstractGameWorld.aFloat727 == 4.0D) {
+              if (GlobalStatics_4.aFloat727 == 4.0D) {
                 var16 = SomethingTexture1.aClass33_2648;
               }
 
-              if (AbstractGameWorld.aFloat727 == 6.0D) {
+              if (GlobalStatics_4.aFloat727 == 6.0D) {
                 var16 = DummyClass12.aClass33_2034;
               }
 
-              if (AbstractGameWorld.aFloat727 >= 8.0D) {
-                var16 = CollisionMap.aClass33_1305;
+              if (GlobalStatics_4.aFloat727 >= 8.0D) {
+                var16 = GlobalStatics_7.aClass33_1305;
               }
             }
 
@@ -102,14 +102,14 @@ public final class SomethingInScenePacket202 extends Node {
             }
 
             if (var16 != null) {
-              int var17 = AbstractTextureSampler.aClass3_Sub28_Sub17_2379.method691(
+              int var17 = GlobalStatics_3.aClass3_Sub28_Sub17_2379.method691(
                 DummyClass25.aClass131_1624.aClass94Array1721[var9], null,
-                DirectImageProducer.aClass94Array2977);
+                GlobalStatics_7.aClass94Array2977);
               var13 -= var16.method998() * (var17 - 1) / 2;
               var13 += var16.method1006() / 2;
 
               for (int var18 = 0; var17 > var18; ++var18) {
-                GameString var19 = DirectImageProducer.aClass94Array2977[var18];
+                GameString var19 = GlobalStatics_7.aClass94Array2977[var18];
                 if (-1 + var17 > var18) {
                   var19.method1553(-4 + var19.getLength(), false);
                 }
@@ -125,8 +125,8 @@ public final class SomethingInScenePacket202 extends Node {
   }
 
   public static void method112(byte var0, byte var1) {
-    if (AbstractImageProducer.aByteArrayArrayArray2008 == null) {
-        AbstractImageProducer.aByteArrayArrayArray2008 = new byte[4][104][104];
+    if (GlobalStatics_5.aByteArrayArrayArray2008 == null) {
+        GlobalStatics_5.aByteArrayArrayArray2008 = new byte[4][104][104];
       }
 
       if (var1 != 55) {
@@ -136,7 +136,7 @@ public final class SomethingInScenePacket202 extends Node {
       for (int var2 = 0; var2 < 4; ++var2) {
         for (int var3 = 0; (var3 < 104); ++var3) {
           for (int var4 = 0; var4 < 104; ++var4) {
-            AbstractImageProducer.aByteArrayArrayArray2008[var2][var3][var4] = var0;
+            GlobalStatics_5.aByteArrayArrayArray2008[var2][var3][var4] = var0;
           }
         }
       }
@@ -200,9 +200,9 @@ public final class SomethingInScenePacket202 extends Node {
       }
 
       for (VariableUpdate var4 = !var0 ?
-        (VariableUpdate) ClientScript.variableUpdates.getNext(-123) :
-        (VariableUpdate) ClientScript.variableUpdates.getFirst(var1 + 56);
-           var4 != null; var4 = (VariableUpdate) ClientScript.variableUpdates.getNext(-64)) {
+        (VariableUpdate) GlobalStatics_6.variableUpdates.getNext(-123) :
+        (VariableUpdate) GlobalStatics_6.variableUpdates.getFirst(var1 + 56);
+           var4 != null; var4 = (VariableUpdate) GlobalStatics_6.variableUpdates.getNext(-64)) {
         if ((4611686018427387903L & var4.timestamp) < var2) {
           if (((4611686018427387904L & var4.timestamp) != 0L)) {
             int var5 = (int) var4.key;
@@ -373,18 +373,18 @@ public final class SomethingInScenePacket202 extends Node {
               }
             }
 
-            if (var4.anObject2796 != null && (AbstractGameWorld.updateCycle >= var4.anInt2797)
-              && var4.anInt2778 > AbstractGameWorld.updateCycle) {
+            if (var4.anObject2796 != null && (GlobalStatics_4.updateCycle >= var4.anInt2797)
+              && var4.anInt2778 > GlobalStatics_4.updateCycle) {
               var4.aBoolean3968 = false;
               var4.anInt2831 =
-                BufferData.method1736(GameWorldSomething.currentPlane, 1, var4.anInt2819,
+                GlobalStatics_6.method1736(GameWorldSomething.currentPlane, 1, var4.anInt2819,
                   var4.anInt2829);
               TextureSampler28.method292(GameWorldSomething.currentPlane, var4.anInt2819,
                 var4.anInt2829, var4.anInt2831, var4, var4.rotationY, var16, var4.anInt2788,
                 var4.anInt2777, var4.anInt2818, var4.anInt2817);
             } else {
               var4.anInt2831 =
-                BufferData.method1736(GameWorldSomething.currentPlane, 1, var4.anInt2819,
+                GlobalStatics_6.method1736(GameWorldSomething.currentPlane, 1, var4.anInt2819,
                   var4.anInt2829);
               DummyClass29.addNodeToSceneGraph(GameWorldSomething.currentPlane, var4.anInt2819,
                 var4.anInt2829, var4.anInt2831, 64 * (var7 - 1) + 60, var4, var4.rotationY, var16,

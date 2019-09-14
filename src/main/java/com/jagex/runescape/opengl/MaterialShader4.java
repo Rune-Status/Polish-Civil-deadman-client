@@ -1,6 +1,6 @@
 package com.jagex.runescape.opengl;
 
-import com.jagex.runescape.AbstractFileRequester;
+import com.jagex.runescape.GlobalStatics_5;
 import com.jagex.runescape.GroundItem;
 import java.nio.ByteBuffer;
 
@@ -124,7 +124,7 @@ public final class MaterialShader4 implements MaterialShader {
   public void set(int var1) {
     GlRenderer.GL.glActiveTexture('\u84c1');
     GlRenderer.GL
-        .glTexEnvfv(8960, 8705, AbstractFileRequester.aFloatArray1934, 0);
+        .glTexEnvfv(8960, 8705, GlobalStatics_5.aFloatArray1934, 0);
     GlRenderer.GL.glActiveTexture('\u84c0');
     if ((var1 & 1) == 1) {
       if (SomethingGl.aBoolean1227) {

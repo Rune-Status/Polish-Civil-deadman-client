@@ -2,6 +2,8 @@ package com.jagex.runescape;
 
 import com.jagex.runescape.common.GameString;
 import com.jagex.runescape.common.GameStringStatics;
+import com.jagex.runescape.done.AbstractDirectColorSprite;
+import com.jagex.runescape.done.AbstractModel;
 import com.jagex.runescape.opengl.GLStatics;
 import com.jagex.runescape.opengl.GlRenderer;
 
@@ -235,7 +237,7 @@ public abstract class Mobile extends SceneNode {
         int var12 = -(var9 * var7) + var10 * var8 >> 16;
         int var11 = var7 * var10 + (var8 * var9) >> 16;
         int var13 =
-          BufferData.method1736(GameWorldSomething.currentPlane, 1, var11 + this.anInt2819,
+          GlobalStatics_6.method1736(GameWorldSomething.currentPlane, 1, var11 + this.anInt2819,
               this.anInt2829 + var12);
         int var14 = var5 / 2;
         int var15 = -var6 / 2;
@@ -243,7 +245,7 @@ public abstract class Mobile extends SceneNode {
         int var20 = var6 / 2;
         int var17 = var15 * var8 - (var14 * var7) >> 16;
         int var18 =
-          BufferData.method1736(GameWorldSomething.currentPlane, 1, var16 + this.anInt2819,
+          GlobalStatics_6.method1736(GameWorldSomething.currentPlane, 1, var16 + this.anInt2819,
               this.anInt2829 + var17);
         int var19 = -var5 / 2;
         int var22 = -(var7 * var19) + var20 * var8 >> 16;
@@ -253,12 +255,12 @@ public abstract class Mobile extends SceneNode {
         int var27 = var25 * var8 - var7 * var24 >> 16;
         int var26 = var7 * var25 + var8 * var24 >> 16;
         int var23 =
-          BufferData.method1736(GameWorldSomething.currentPlane, 1,
+          GlobalStatics_6.method1736(GameWorldSomething.currentPlane, 1,
               this.anInt2819 + var21,
             var22 + this.anInt2829);
         int var29 = var18 > var13 ? var13 : var18;
         int var28 =
-          BufferData.method1736(GameWorldSomething.currentPlane, 1, var26 + this.anInt2819,
+          GlobalStatics_6.method1736(GameWorldSomething.currentPlane, 1, var26 + this.anInt2819,
             var27 + this.anInt2829);
         int var30 = var28 > var23 ? var23 : var28;
         int var31 = var28 > var18 ? var18 : var28;

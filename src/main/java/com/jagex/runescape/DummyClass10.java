@@ -28,9 +28,9 @@ public final class DummyClass10 {
 
             NPC var3 = TextureSampler5.npcs[var1];
             GlobalStatics_2.anIntArray347[DummyClass6.anInt2046++] = var1;
-            var3.anInt2838 = AbstractGameWorld.updateCycle;
+            var3.anInt2838 = GlobalStatics_4.updateCycle;
             if (var3.config != null && var3.config.method1474(-1)) {
-              ByteArrayNode.method574(var3, false);
+              GlobalStatics_6.method574(var3, false);
             }
 
             int var4 = SpotAnimationConfig.gameBuffer.readBits(1);
@@ -105,18 +105,18 @@ public final class DummyClass10 {
     var7.anInt1550 = var4;
     var7.anInt1544 = var5;
     var7.anInt1548 = var6;
-    ByteArrayNode.aClass113Array3610[SpawnedGameObject.anInt2249++] = var7;
+    GlobalStatics_6.aClass113Array3610[SpawnedGameObject.anInt2249++] = var7;
   }
 
   public static void method2264(boolean var0) {
     if (var0) {
       GLStatics.sceneGraphTiles = SomethingIndex150.aClass3_Sub2ArrayArrayArray2065;
-      AbstractGameWorld.heightMap = GlobalStatics_2.othrrHeightMap;
+      GlobalStatics_4.heightMap = GlobalStatics_2.othrrHeightMap;
       GLStatics.aClass3_Sub11ArrayArray2542 =
         TextureSampler32.aClass3_Sub11ArrayArray3346;
     } else {
       GLStatics.sceneGraphTiles = OndemandFileRequest.tiles;
-      AbstractGameWorld.heightMap = DummyClass43.somethingHeightMap;
+      GlobalStatics_4.heightMap = DummyClass43.somethingHeightMap;
       GLStatics.aClass3_Sub11ArrayArray2542 = GLStatics.aClass3_Sub11ArrayArray2199;
     }
 
@@ -124,7 +124,7 @@ public final class DummyClass10 {
   }
 
   public static void method2265(int var0) {
-    ClientScriptCall.aClass93_2442.method1524(3);
+    GlobalStatics_7.aClass93_2442.method1524(3);
       if (var0 != 0) {
         DummyClass10.UL_PREFIX = null;
       }
@@ -154,15 +154,15 @@ public final class DummyClass10 {
           opcode = var3.readUnsignedByte();
           if ((opcode == 0)) {
             if (var2) {
-              AbstractGameWorld.heightMap[0][x][y] = DummyClass43.somethingHeightMap[0][x][y];
+              GlobalStatics_4.heightMap[0][x][y] = DummyClass43.somethingHeightMap[0][x][y];
             } else {
               if ((var8 == 0)) {
-                AbstractGameWorld.heightMap[0][x][y] =
+                GlobalStatics_4.heightMap[0][x][y] =
                     8 * -DummyClass34
                         .perlinNoise(y + 556238 + var1, var0 + x + 932731);
               } else {
-                AbstractGameWorld.heightMap[var8][x][y] =
-                    -240 + AbstractGameWorld.heightMap[var8 - 1][x][y];
+                GlobalStatics_4.heightMap[var8][x][y] =
+                    -240 + GlobalStatics_4.heightMap[var8 - 1][x][y];
               }
             }
             break;
@@ -171,7 +171,7 @@ public final class DummyClass10 {
           if (opcode == 1) {
             int var10 = var3.readUnsignedByte();
             if (var2) {
-              AbstractGameWorld.heightMap[0][x][y] =
+              GlobalStatics_4.heightMap[0][x][y] =
                   DummyClass43.somethingHeightMap[0][x][y] + (var10 * 8);
             } else {
               if ((var10 == 1)) {
@@ -179,10 +179,10 @@ public final class DummyClass10 {
               }
 
               if ((var8 == 0)) {
-                AbstractGameWorld.heightMap[0][x][y] = 8 * -var10;
+                GlobalStatics_4.heightMap[0][x][y] = 8 * -var10;
               } else {
-                AbstractGameWorld.heightMap[var8][x][y] =
-                    -(var10 * 8) + AbstractGameWorld.heightMap[-1 + var8][x][y];
+                GlobalStatics_4.heightMap[var8][x][y] =
+                    -(var10 * 8) + GlobalStatics_4.heightMap[-1 + var8][x][y];
               }
             }
             break;
@@ -265,7 +265,7 @@ public final class DummyClass10 {
       System.gc();
       Queue.method882(-1, 2);
       MidiSomething.aBoolean1158 = false;
-      AbstractFrameRegulator.anInt1691 = -1;
+      GlobalStatics_4.anInt1691 = -1;
       Something3d.method2241((byte) -77, true);
       GlobalStatics_0.dynamicScene = false;
       ProceduralTexture.anInt1152 = 0;
@@ -300,7 +300,7 @@ public final class DummyClass10 {
         }
       }
 
-      AnimationSomething.method560(-21556);
+      GlobalStatics_6.method560(-21556);
       SomethingLight0.interfaceCounter = 0;
       TextureSampler6.resetVariables(var0 - 161);
       TextureSampler1.method219(true, 3000);

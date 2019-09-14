@@ -22,7 +22,7 @@ public final class DummyClass21 {
   public static long[] updateMemory = new long[32];
 
   public static void method1808(int var0, boolean var1, byte var2, int var3, boolean var4) {
-    FileCache.method1047(var0, var3, TextureSampler15.aClass44_Sub1Array3201.length - 1, var4, 0,
+    GlobalStatics_7.method1047(var0, var3, TextureSampler15.aClass44_Sub1Array3201.length - 1, var4, 0,
         var1, false);
       if (var2 != 30) {
         GameStringStatics.aClass94_1760 = null;

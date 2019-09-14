@@ -91,12 +91,12 @@ public final class TriChromaticImageBuffer extends Node {
       TextureSampler25.anInt3414 = var2;
       GameCanvas.anInt30 = var6;
       DummyClass8.anInt4021 = var1;
-      AbstractMouseWheel.anInt1904 = var5;
+      GlobalStatics_5.anInt1904 = var5;
       if (var0 && GlobalStatics_4.anInt3631 >= 100) {
         NPC.anInt3995 = 128 * GameCanvas.anInt30 + 64;
-        DummyClass49.anInt1111 = 128 * AbstractMouseWheel.anInt1904 + 64;
-        EnumStringFetcher.anInt2162 =
-          BufferData.method1736(GameWorldSomething.currentPlane, 1, NPC.anInt3995,
+        DummyClass49.anInt1111 = 128 * GlobalStatics_5.anInt1904 + 64;
+        GlobalStatics_7.anInt2162 =
+          GlobalStatics_6.method1736(GameWorldSomething.currentPlane, 1, NPC.anInt3995,
             DummyClass49.anInt1111) - TextureSampler25.anInt3414;
       }
 
@@ -118,9 +118,9 @@ public final class TriChromaticImageBuffer extends Node {
 
   public static void setAnimationFileUnpackers(FileUnpacker var0, FileUnpacker var1, int var2,
                                               FileUnpacker var3) {
-    AnimationSequence.animationSequences = var1;
+    GlobalStatics_3.animationSequences = var1;
       int var4 = -110 / ((-7 - var2) / 43);
-      EnumStringFetcher.animationFrames = var0;
+      GlobalStatics_7.animationFrames = var0;
       WorldMapLabel.animationBases = var3;
   }
 

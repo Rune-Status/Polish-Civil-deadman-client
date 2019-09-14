@@ -1,10 +1,10 @@
 package com.jagex.runescape.opengl;
 
-import com.jagex.runescape.AbstractModel;
+import com.jagex.runescape.done.AbstractModel;
 import com.jagex.runescape.GlobalStatics_1;
 import com.jagex.runescape.common.ArrayUtils;
 import com.jagex.runescape.buffer.Buffer;
-import com.jagex.runescape.BufferData;
+import com.jagex.runescape.done.BufferData;
 import com.jagex.runescape.DummyClass0;
 import com.jagex.runescape.DummyClass17;
 import com.jagex.runescape.DummyClass3;

@@ -1,34 +1,10 @@
 package com.jagex.runescape.opengl;
 
-import com.jagex.runescape.AbstractDirectColorSprite;
-import com.jagex.runescape.AbstractFileRequester;
-import com.jagex.runescape.ClientScriptCall;
-import com.jagex.runescape.DummyClass13;
-import com.jagex.runescape.DummyClass30;
-import com.jagex.runescape.DummyClass37;
-import com.jagex.runescape.DummyClass5;
-import com.jagex.runescape.DummyClass55;
-import com.jagex.runescape.GZipDecompressor;
-import com.jagex.runescape.GlobalStatics_0;
-import com.jagex.runescape.GlobalStatics_2;
-import com.jagex.runescape.GroundItem;
-import com.jagex.runescape.ITextureCache;
-import com.jagex.runescape.IdentityKit;
-import com.jagex.runescape.IntegerNode;
-import com.jagex.runescape.ItemConfig;
-import com.jagex.runescape.LightIntensity;
-import com.jagex.runescape.MapScene;
-import com.jagex.runescape.SceneGraphTile;
-import com.jagex.runescape.SoftwareDirectColorSprite;
-import com.jagex.runescape.Something3dRoot;
-import com.jagex.runescape.SomethingPacket116;
-import com.jagex.runescape.SomethingVolume15;
-import com.jagex.runescape.TextureSampler16;
-import com.jagex.runescape.TextureSampler26;
-import com.jagex.runescape.TextureSampler37;
-import com.jagex.runescape.TextureSampler38;
+import com.jagex.runescape.*;
+import com.jagex.runescape.done.AbstractDirectColorSprite;
 import com.jagex.runescape.common.GameString;
 import com.jagex.runescape.common.GameStringStatics;
+import com.jagex.runescape.done.ClientScriptCall;
 
 public class GLStatics {
 
@@ -127,11 +103,11 @@ public class GLStatics {
     float var6 = 0.58823526F;
     float var5 = (255 & var2) / 255.0F;
     FOG_COLOR[2] =
-        AbstractFileRequester.aFloatArray1934[2] * var5 * var6 * var1;
+        GlobalStatics_5.aFloatArray1934[2] * var5 * var6 * var1;
     FOG_COLOR[0] =
-        AbstractFileRequester.aFloatArray1934[0] * var3 * var6 * var1;
+        GlobalStatics_5.aFloatArray1934[0] * var3 * var6 * var1;
     FOG_COLOR[1] =
-        var1 * var6 * var4 * AbstractFileRequester.aFloatArray1934[1];
+        var1 * var6 * var4 * GlobalStatics_5.aFloatArray1934[1];
     return FOG_COLOR;
   }
 
@@ -141,11 +117,11 @@ public class GLStatics {
   }
 
   public static void method535(byte var0, int var1) {
-    AbstractFileRequester.aFloatArray1934[0] =
+    GlobalStatics_5.aFloatArray1934[0] =
         (255 & var1 >> 16) / 255.0F;
-    AbstractFileRequester.aFloatArray1934[1] =
+    GlobalStatics_5.aFloatArray1934[1] =
         (var1 >> 8 & 255) / 255.0F;
-    AbstractFileRequester.aFloatArray1934[2] = (255 & var1)
+    GlobalStatics_5.aFloatArray1934[2] = (255 & var1)
         / 255.0F;
     IntegerNode.method383(-32584, 3);
     IntegerNode.method383(-32584, 4);

@@ -2,6 +2,7 @@ package com.jagex.runescape;
 
 import com.jagex.runescape.common.GameString;
 import com.jagex.runescape.common.GameStringStatics;
+import com.jagex.runescape.done.AbstractModel;
 import com.jagex.runescape.node.Deque;
 import com.jagex.runescape.node.SubNode;
 import com.jagex.runescape.opengl.GLStatics;
@@ -75,7 +76,7 @@ public final class DummyHashTable {
 
             long var13 = 1610612736 + (var0 << 7) + var2;
             TextureSampler30.method213(GameWorldSomething.currentPlane, var2, var0,
-              BufferData.method1736(GameWorldSomething.currentPlane, 1, 64 + 128 * var2,
+              GlobalStatics_6.method1736(GameWorldSomething.currentPlane, 1, 64 + 128 * var2,
                 64 + var0 * 128), var5.aClass140_Sub7_3676, var13, var12, var14);
           } else {
             GameObjectConfig.method1688(GameWorldSomething.currentPlane, var2, var0);
@@ -105,7 +106,7 @@ public final class DummyHashTable {
   }
 
   public static AbstractModel method1763(boolean var0, int var1, int var2, int var3, int var4,
-                                        AbstractModel var5, int var6) {
+                                         AbstractModel var5, int var6) {
     long var7 = var3;
       AbstractModel var9 = (AbstractModel) GlobalStatics_0.aClass93_939.get(var7);
       if (var9 == null) {
@@ -130,12 +131,12 @@ public final class DummyHashTable {
       int var15;
       if (GlRenderer.useOpenGlRenderer) {
         GlModel var14 = (GlModel) var9;
-        if (var6 != BufferData.method1736(GameWorldSomething.currentPlane, 1, var4 + var17,
-          var2 + var12) || var6 != BufferData.method1736(GameWorldSomething.currentPlane, 1,
+        if (var6 != GlobalStatics_6.method1736(GameWorldSomething.currentPlane, 1, var4 + var17,
+          var2 + var12) || var6 != GlobalStatics_6.method1736(GameWorldSomething.currentPlane, 1,
           var4 + var11, var13 + var2)) {
           for (var15 = 0; (var15 < var14.vertexCCC); ++var15) {
             var14.vy[var15] +=
-              BufferData.method1736(GameWorldSomething.currentPlane, 1, var14.vx[var15] + var4,
+              GlobalStatics_6.method1736(GameWorldSomething.currentPlane, 1, var14.vx[var15] + var4,
                 var14.vz[var15] + var2) - var6;
           }
 
@@ -144,11 +145,11 @@ public final class DummyHashTable {
         }
       } else {
         SoftwareModel var18 = (SoftwareModel) var9;
-        if (var6 != BufferData.method1736(GameWorldSomething.currentPlane, 1, var17 + var4,
-          var12 + var2) || var6 != BufferData.method1736(GameWorldSomething.currentPlane, 1,
+        if (var6 != GlobalStatics_6.method1736(GameWorldSomething.currentPlane, 1, var17 + var4,
+          var12 + var2) || var6 != GlobalStatics_6.method1736(GameWorldSomething.currentPlane, 1,
           var4 + var11, var13 + var2)) {
           for (var15 = 0; var18.anInt3891 > var15; ++var15) {
-            var18.anIntArray3883[var15] += BufferData.method1736(GameWorldSomething.currentPlane, 1,
+            var18.anIntArray3883[var15] += GlobalStatics_6.method1736(GameWorldSomething.currentPlane, 1,
               var4 + var18.anIntArray3885[var15], var18.anIntArray3895[var15] + var2) - var6;
           }
 
@@ -188,7 +189,7 @@ public final class DummyHashTable {
 
             SomethingSceneJ var10 = var6.aClass12_2230;
             if (var10 != null && var10.aClass140_320.method1865()) {
-              AbstractAudioOutputStream.method2162(var10.aClass140_320, var3, var4, var5);
+              GlobalStatics_5.method2162(var10.aClass140_320, var3, var4, var5);
               var10.aClass140_320 = var10.aClass140_320.method1861(var0, var1, var2);
             }
           }

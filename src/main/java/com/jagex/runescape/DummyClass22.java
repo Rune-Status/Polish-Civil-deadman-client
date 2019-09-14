@@ -34,7 +34,7 @@ public final class DummyClass22 {
       }
 
       if (var1.anInt2263 == 2) {
-        var2 = AnimationSomething.method557(var1.anInt2250, var1.anInt2264, var1.anInt2248);
+        var2 = GlobalStatics_6.method557(var1.anInt2250, var1.anInt2264, var1.anInt2248);
       }
 
       if ((var1.anInt2263 == 3)) {
@@ -100,12 +100,12 @@ public final class DummyClass22 {
         var4 = 0;
       }
 
-      if ((ClientScriptEnum.anInt3660 == 1)) {
+      if ((GlobalStatics_7.anInt3660 == 1)) {
         if ((NpcConfiguration.anInt1297 == TextureSampler8.anInt3460)
           && (FloorOverlay.anInt2099 == DummyClass36.anInt2612)) {
           SomethingQuickChat2.anInt3537 =
             TextureSampler25.amountContextActions * 15 + (!FileUnpacker.aBoolean1951 ? 22 : 26);
-          ClientScriptEnum.anInt3660 = 0;
+          GlobalStatics_7.anInt3660 = 0;
           TextureSampler29.anInt3395 = var4;
           GlobalStatics_1.anInt1462 = var3;
           DummyClass36.aBoolean2615 = true;
@@ -114,7 +114,7 @@ public final class DummyClass22 {
       } else if ((NpcConfiguration.anInt1297 == DummyClass5.anInt2993)
         && (DummyClass36.anInt2612 == DummyClass36.anInt2614)) {
         GlobalStatics_1.anInt1462 = var3;
-        ClientScriptEnum.anInt3660 = 0;
+        GlobalStatics_7.anInt3660 = 0;
         SomethingWorldMapy.anInt3552 = var1;
         TextureSampler29.anInt3395 = var4;
         SomethingQuickChat2.anInt3537 =
@@ -123,7 +123,7 @@ public final class DummyClass22 {
       } else {
         FloorOverlay.anInt2099 = DummyClass36.anInt2614;
         TextureSampler8.anInt3460 = DummyClass5.anInt2993;
-        ClientScriptEnum.anInt3660 = 1;
+        GlobalStatics_7.anInt3660 = 1;
       }
   }
 

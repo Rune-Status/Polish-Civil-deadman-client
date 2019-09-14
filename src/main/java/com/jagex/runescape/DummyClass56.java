@@ -19,7 +19,7 @@ public final class DummyClass56 {
       ScriptState.configs.getAmountChildren(34, (byte) 103);
       int var3 = (int) (Math.random() * 21.0D) - 10;
       int var6 = -20 + (int) (41.0D * Math.random());
-      AbstractImageProducer.anInt2015 = var6 + var5;
+      GlobalStatics_5.anInt2015 = var6 + var5;
       if (var2 == -67) {
         DummyClass39.anInt740 = var4 + var6;
         TextureCache.anInt2136 = var6 + var3;
@@ -39,7 +39,7 @@ public final class DummyClass56 {
         DummyClass56.method1648(null, 7);
       }
 
-      AbstractObjectNodeWrapper.method1724(var6, var2, var3.anInt2829, var5, var1, var3.anInt2819,
+      GlobalStatics_5.method1724(var6, var2, var3.anInt2829, var5, var1, var3.anInt2819,
         (byte) -85, var4);
   }
 
@@ -52,7 +52,7 @@ public final class DummyClass56 {
 
   public static void method1649(int var0, int var1) {
     if (var1 <= -65) {
-        WidgetUpdate var2 = AudioStreamEncoder3.method466(4, 10, var0);
+        WidgetUpdate var2 = GlobalStatics_6.method466(4, 10, var0);
         var2.createIndexedColorSprite(true);
       }
   }

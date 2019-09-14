@@ -3,6 +3,7 @@ package com.jagex.runescape;
 import com.jagex.runescape.buffer.Buffer;
 import com.jagex.runescape.common.GameString;
 import com.jagex.runescape.common.GameStringStatics;
+import com.jagex.runescape.done.AbstractTextureSampler;
 import com.jagex.runescape.node.Deque;
 import com.jagex.runescape.opengl.GlRenderer;
 
@@ -62,13 +63,13 @@ public final class TextureSampler26 extends AbstractTextureSampler {
         byte var3 = 0;
         byte var4 = 8;
         byte var6 = 18;
-        AudioSomethingSomething.landscapesData = new byte[var6][];
-        AnimationSomething.updatedLandscapeIds = new int[var6];
+        GlobalStatics_6.landscapesData = new byte[var6][];
+        GlobalStatics_6.updatedLandscapeIds = new int[var6];
         TextureSampler35.aByteArrayArray3335 = new byte[var6][];
         GlobalStatics_1.mapFileIds = new int[var6];
-        AreaSoundEffect.landscapeEncryptionKeys = new int[var6][4];
+        GlobalStatics_6.landscapeEncryptionKeys = new int[var6][4];
         GroundItemNode.updatedMapsData = new byte[var6][];
-        AudioStreamEncoder3.regionHashes = new int[var6];
+        GlobalStatics_6.regionHashes = new int[var6];
         Something3d2.aByteArrayArray3027 = new byte[var6][];
         TextureSampler5.anIntArray3290 = new int[var6];
         TextureSampler17.updatedMapIds = new int[var6];
@@ -81,7 +82,7 @@ public final class TextureSampler26 extends AbstractTextureSampler {
         for (var7 = (-6 + var1) / 8; (var7 <= ((6 + var1) / 8)); ++var7) {
           for (int var8 = (-6 + var2) / 8; (((var2 + 6) / 8) >= var8); ++var8) {
             int var9 = (var7 << 8) + var8;
-            AudioStreamEncoder3.regionHashes[var11] = var9;
+            GlobalStatics_6.regionHashes[var11] = var9;
             GlobalStatics_1.mapFileIds[var11] = TextureSampler26.maps.getFileId(RenderAnimation.concat(new GameString[] {
               GameBuffer.MAP_PREFIX, SomethingScene.toString(var7), TextureSampler31.UNDERSCORE,
               SomethingScene.toString(var8)
@@ -101,7 +102,7 @@ public final class TextureSampler26 extends AbstractTextureSampler {
                 DummyClass53.UM_PREFIX, SomethingScene.toString(var7), TextureSampler31.UNDERSCORE,
                 SomethingScene.toString(var8)
               }));
-            AnimationSomething.updatedLandscapeIds[var11] =
+            GlobalStatics_6.updatedLandscapeIds[var11] =
                 TextureSampler26.maps.getFileId(RenderAnimation.concat(new GameString[] {
                 DummyClass10.UL_PREFIX, SomethingScene.toString(var7), TextureSampler31.UNDERSCORE,
                 SomethingScene.toString(var8)
@@ -110,7 +111,7 @@ public final class TextureSampler26 extends AbstractTextureSampler {
               GlobalStatics_1.mapFileIds[var11] = -1;
               DummyClass55.landscapeFileIds[var11] = -1;
               TextureSampler17.updatedMapIds[var11] = -1;
-              AnimationSomething.updatedLandscapeIds[var11] = -1;
+              GlobalStatics_6.updatedLandscapeIds[var11] = -1;
             }
 
             ++var11;
@@ -122,15 +123,15 @@ public final class TextureSampler26 extends AbstractTextureSampler {
           GlobalStatics_1.mapFileIds[var7] = -1;
           DummyClass55.landscapeFileIds[var7] = -1;
           TextureSampler17.updatedMapIds[var7] = -1;
-          AnimationSomething.updatedLandscapeIds[var7] = -1;
+          GlobalStatics_6.updatedLandscapeIds[var7] = -1;
         }
 
-        FileCacheRequester.rebuildScene(var3, var2, var1, var5, true, var4, true);
+        GlobalStatics_7.rebuildScene(var3, var2, var1, var5, true, var4, true);
       }
   }
 
   public static void method196(boolean var0) {
-    FileCache.aClass93_684.method1523((byte) -117);
+    GlobalStatics_7.aClass93_684.method1523((byte) -117);
       DummyClass5.aClass93_2984.method1523((byte) -111);
       if (var0) {
         TextureSampler26.anIntArray3083 = null;
@@ -159,15 +160,15 @@ public final class TextureSampler26 extends AbstractTextureSampler {
       if (GlRenderer.useOpenGlRenderer && var0) {
         var2 = TextureSampler34.updatedLandscapesData;
       } else {
-        var2 = AudioSomethingSomething.landscapesData;
+        var2 = GlobalStatics_6.landscapesData;
       }
 
       for (int var4 = 0; var4 < var3; ++var4) {
         byte[] var5 = var2[var4];
         if (var5 != null) {
-          int var6 = -WorldMapLabel.anInt1716 + 64 * (AudioStreamEncoder3.regionHashes[var4] >> 8);
+          int var6 = -WorldMapLabel.anInt1716 + 64 * (GlobalStatics_6.regionHashes[var4] >> 8);
           int var7 =
-            (AudioStreamEncoder3.regionHashes[var4] & 255) * 64 - ProceduralTexture.anInt1152;
+            (GlobalStatics_6.regionHashes[var4] & 255) * 64 - ProceduralTexture.anInt1152;
           DummyClass43.method1194(var1 + 16239);
           SomethingVolume15.method374(var6, var0, var5, var7, 0, GlobalStatics_0.collisionMaps);
         }
@@ -179,7 +180,7 @@ public final class TextureSampler26 extends AbstractTextureSampler {
         TextureSampler26.focused = true;
       }
 
-      if ((ClientScriptCall.anInt2453 != 0)
+      if ((GlobalStatics_7.anInt2453 != 0)
           && var0 != 0 && (SomethingLight0.anInt1552 < 50)
         && (var1 != -1)) {
         Inventory.anIntArray2550[SomethingLight0.anInt1552] = var1;

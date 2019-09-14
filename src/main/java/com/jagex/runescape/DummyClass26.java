@@ -78,11 +78,11 @@ public final class DummyClass26 {
               (DummyClass15.state == 28);
         if (var3 == !var2) {
           if (var2) {
-            AbstractFrameRegulator.anInt1691 = Keyboard.openingMusicFileId;
+            GlobalStatics_4.anInt1691 = Keyboard.openingMusicFileId;
             if (BZipDecompressorState.anInt120 == 0) {
               Queue.method882(-1, 2);
             } else {
-              AbstractFileRequester
+              GlobalStatics_5
                   .method2099(true, Keyboard.openingMusicFileId, 0,
                       SomethingTexture1.fileUnpacker6, false, 255, 2);
             }
@@ -103,7 +103,7 @@ public final class DummyClass26 {
   }
 
   public static void method1720(boolean var0, int var1) {
-    AbstractFrameRegulator.anIntArray1695 = new int[104];
+    GlobalStatics_4.anIntArray1695 = new int[104];
       HashTableIterator.anIntArray1138 = new int[104];
       DummyClass52.anInt1174 = 99;
       Mouse.anIntArray1920 = new int[104];

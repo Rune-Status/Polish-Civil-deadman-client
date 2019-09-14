@@ -3,6 +3,7 @@ package com.jagex.runescape;
 import com.jagex.runescape.buffer.Buffer;
 import com.jagex.runescape.common.GameString;
 import com.jagex.runescape.common.GameStringStatics;
+import com.jagex.runescape.done.AbstractFont;
 import com.jagex.runescape.opengl.GlTexture2d;
 
 public final class IdentityKit {
@@ -280,19 +281,19 @@ public final class IdentityKit {
           int var5 = SpotAnimationConfig.gameBuffer.readBits(1);
           if (var5 == 0) {
             GlobalStatics_2.anIntArray347[DummyClass6.anInt2046++] = var3;
-            var4.anInt2838 = AbstractGameWorld.updateCycle;
+            var4.anInt2838 = GlobalStatics_4.updateCycle;
           } else {
             int var6 = SpotAnimationConfig.gameBuffer.readBits(2);
             if ((var6 == 0)) {
               GlobalStatics_2.anIntArray347[DummyClass6.anInt2046++] = var3;
-              var4.anInt2838 = AbstractGameWorld.updateCycle;
+              var4.anInt2838 = GlobalStatics_4.updateCycle;
               DummyClass60.anIntArray441[OndemandRequester.anInt997++] = var3;
             } else {
               int var7;
               int var8;
               if (var6 == 1) {
                 GlobalStatics_2.anIntArray347[DummyClass6.anInt2046++] = var3;
-                var4.anInt2838 = AbstractGameWorld.updateCycle;
+                var4.anInt2838 = GlobalStatics_4.updateCycle;
                 var7 = SpotAnimationConfig.gameBuffer.readBits(3);
                 var4.method1968(1, (byte) 32, var7);
                 var8 = SpotAnimationConfig.gameBuffer.readBits(1);
@@ -302,7 +303,7 @@ public final class IdentityKit {
               } else {
                 if (var6 == 2) {
                   GlobalStatics_2.anIntArray347[DummyClass6.anInt2046++] = var3;
-                  var4.anInt2838 = AbstractGameWorld.updateCycle;
+                  var4.anInt2838 = GlobalStatics_4.updateCycle;
                   if ((SpotAnimationConfig.gameBuffer.readBits(1) == 1)) {
                     var7 = SpotAnimationConfig.gameBuffer.readBits(3);
                     var4.method1968(2, (byte) -122, var7);
@@ -373,7 +374,7 @@ public final class IdentityKit {
           int var5 =
             FloorOverlay.aClass3_Sub28_Sub17_2096.method683(var4, 4 + var3, var2 + 15, 16777215, 0,
               TextureSampler27.random, DummyClass36.anInt2618);
-          AbstractSomethingTexture.method1340(4 + var3,
+          GlobalStatics_3.method1340(4 + var3,
             FloorOverlay.aClass3_Sub28_Sub17_2096.method682(var4) + var5, (byte) -40, var2, 15);
         } else {
           AbstractFont var7 = var0.method868(TextureSampler0.aClass109Array3270, 0);
@@ -384,7 +385,7 @@ public final class IdentityKit {
           var7.method702(var4, var3, var2, var0.anInt168, var0.anInt193, var0.anInt218,
             var0.anInt287, var0.anInt194, var0.anInt225, TextureSampler27.random,
             DummyClass36.anInt2618, Player.anIntArray3951);
-          AbstractSomethingTexture.method1340(Player.anIntArray3951[0], Player.anIntArray3951[2],
+          GlobalStatics_3.method1340(Player.anIntArray3951[0], Player.anIntArray3951[2],
             (byte) -40, Player.anIntArray3951[1], Player.anIntArray3951[3]);
         }
 
@@ -394,7 +395,7 @@ public final class IdentityKit {
   public static void method951(int var0) {
     GlTexture2d.aBoolean3769 = false;
       TextureSampler25.anInt3413 = 0;
-      AbstractImageProducer.loginResponse = -3;
+      GlobalStatics_5.loginResponse = -3;
       GlobalStatics_4.anInt820 = 0;
       TextureSampler28.loginState = 1;
       SomethingIndex150.anInt2079 = var0;

@@ -1,6 +1,6 @@
 package com.jagex.runescape.opengl;
 
-import com.jagex.runescape.AbstractFont;
+import com.jagex.runescape.done.AbstractFont;
 import java.nio.ByteBuffer;
 
 public final class GlFont extends AbstractFont {

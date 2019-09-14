@@ -2,6 +2,7 @@ package com.jagex.runescape;
 
 import com.jagex.runescape.common.GameString;
 import com.jagex.runescape.common.GameStringStatics;
+import com.jagex.runescape.done.ClassCheckRequest;
 import com.jagex.runescape.opengl.GlRenderer;
 import com.jagex.runescape.sprite.SoftwareIndexedColorSprite;
 import java.io.ByteArrayInputStream;
@@ -47,12 +48,12 @@ public final class DummyClass8 extends DummyClass7 {
       for (HintMarker[] var7 = GameException.aClass96Array2114; var7.length > var8; ++var8) {
         HintMarker var9 = var7[var8];
         if (var9 != null && var9.anInt1360 == 2) {
-          AbstractObjectNodeWrapper.method1724(var0 >> 1, var5,
+          GlobalStatics_5.method1724(var0 >> 1, var5,
             (-ProceduralTexture.anInt1152 + var9.anInt1347 << 7) + var9.anInt1350,
             var9.anInt1353 * 2, var2 >> 1,
             var9.anInt1346 + (var9.anInt1356 - WorldMapLabel.anInt1716 << 7), (byte) -114, var4);
           if (DummyClass34.anInt590 > -1
-              && ((AbstractGameWorld.updateCycle % 20) < 10)) {
+              && ((GlobalStatics_4.updateCycle % 20) < 10)) {
             SomethingIndex150.aClass3_Sub28_Sub16Array2072[var9.anInt1351].method643(
               -12 + var1 + DummyClass34.anInt590, -28 + var6 + WidgetAccess.anInt2208);
           }
@@ -66,7 +67,7 @@ public final class DummyClass8 extends DummyClass7 {
 
   public static void method2222(byte var0) {
     ObjectNode.aClass93_4043.method1523((byte) -117);
-      ClientScriptCall.aClass93_2442.method1523((byte) -108);
+      GlobalStatics_7.aClass93_2442.method1523((byte) -108);
       DummyClass14.aClass93_1964.method1523((byte) -117);
       if (var0 <= 122) {
         DummyClass8.method2223(true, (byte) -67);
@@ -82,7 +83,7 @@ public final class DummyClass8 extends DummyClass7 {
         var3 = 1;
       } else {
         var3 = 4;
-        var4 = AudioSomethingSomething.landscapesData;
+        var4 = GlobalStatics_6.landscapesData;
       }
 
       for (int var5 = 0; var5 < var3; ++var5) {
@@ -99,8 +100,8 @@ public final class DummyClass8 extends DummyClass7 {
                 int var12 = 2047 & var8 >> 3;
                 int var13 = var12 / 8 + (var11 / 8 << 8);
 
-                for (int var14 = 0; AudioStreamEncoder3.regionHashes.length > var14; ++var14) {
-                  if ((AudioStreamEncoder3.regionHashes[var14] == var13) && var4[var14] != null) {
+                for (int var14 = 0; GlobalStatics_6.regionHashes.length > var14; ++var14) {
+                  if ((GlobalStatics_6.regionHashes[var14] == var13) && var4[var14] != null) {
                     TextureSampler13.method316(GlobalStatics_0.collisionMaps, var5, var4[var14], var9,
                       var10, 8 * var6, var7 * 8, var0, (var11 & 7) * 8, 8 * (7 & var12),
                       (byte) -54);
@@ -146,8 +147,8 @@ public final class DummyClass8 extends DummyClass7 {
           var9, 0, 2, var3, TextureCache.localPlayer.waypointsX[0]);
       }
 
-      FileCacheRequest.anInt4062 = DummyClass36.anInt2614;
-      FileRequester.anInt2958 = 0;
+      GlobalStatics_7.anInt4062 = DummyClass36.anInt2614;
+      GlobalStatics_7.anInt2958 = 0;
       GlobalStatics_0.anInt638 = 2;
       SceneSomething2.anInt1053 = DummyClass5.anInt2993;
       return true;

@@ -4,6 +4,8 @@ import com.jagex.runescape.buffer.Buffer;
 import com.jagex.runescape.common.GameString;
 import com.jagex.runescape.common.GameStringStatics;
 import com.jagex.runescape.common.HashTable;
+import com.jagex.runescape.done.AbstractTextureSampler;
+import com.jagex.runescape.done.AreaSoundEffect;
 import com.jagex.runescape.opengl.GlTexture2d;
 import com.jagex.runescape.opengl.Texture;
 
@@ -117,7 +119,7 @@ public final class TextureSampler23 extends AbstractTextureSampler {
       DummyClass35.method1025((byte) -93);
       DummyClass59.method1044(-3782);
       GlobalStatics_0.method85((byte) -114);
-      DirectImageProducer.method2192(-68);
+      GlobalStatics_7.method2192(-68);
       DummyClass13.method2196(128);
       GlobalStatics_4.method1132(103);
       TextureSampler26.method196(false);
@@ -136,7 +138,7 @@ public final class TextureSampler23 extends AbstractTextureSampler {
   public static void method247(byte var0) {
     int var1 = 105 % ((var0 + 39) / 41);
       if (StillGraphic.aBoolean2713) {
-        AnimationSequence.logoSprite = null;
+        GlobalStatics_3.logoSprite = null;
         StillGraphic.aBoolean2713 = false;
         DummyClass59.titlebackground = null;
       }

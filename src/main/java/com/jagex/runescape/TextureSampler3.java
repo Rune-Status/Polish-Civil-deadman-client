@@ -4,6 +4,10 @@ import com.jagex.runescape.buffer.Buffer;
 import com.jagex.runescape.common.ArrayUtils;
 import com.jagex.runescape.common.GameString;
 import com.jagex.runescape.common.GameStringStatics;
+import com.jagex.runescape.done.AbstractTextureSampler;
+import com.jagex.runescape.done.BitVariable;
+import com.jagex.runescape.done.ClassCheckRequest;
+import com.jagex.runescape.done.Cursor;
 
 public final class TextureSampler3 extends AbstractTextureSampler {
 
@@ -118,7 +122,7 @@ public final class TextureSampler3 extends AbstractTextureSampler {
   }
 
   public static void method306(int var0, boolean var1, int var2) {
-    BitVariable var3 = ClientScriptCall.method378(var0, (byte) 127);
+    BitVariable var3 = GlobalStatics_7.method378(var0, (byte) 127);
       assert var3 != null;
       int var6 = var3.high;
       if (!var1) {
@@ -136,7 +140,7 @@ public final class TextureSampler3 extends AbstractTextureSampler {
   }
 
   public static void method307(GameString[] var0, short[] var1, int var2) {
-    ClassCheckRequest.method127(var1, -1 + var0.length, var0, -909, 0);
+    GlobalStatics_6.method127(var1, -1 + var0.length, var0, -909, 0);
       int var3 = 91 % ((var2 + 1) / 63);
   }
 
@@ -163,7 +167,7 @@ public final class TextureSampler3 extends AbstractTextureSampler {
   }
 
   public static Cursor method311(int var0, int var1) {
-    Cursor var2 = (Cursor) FileCache.aClass93_684.get(var0);
+    Cursor var2 = (Cursor) GlobalStatics_7.aClass93_684.get(var0);
       if (var2 != null) {
         return var2;
       } else {
@@ -177,7 +181,7 @@ public final class TextureSampler3 extends AbstractTextureSampler {
           var2.method1182(new Buffer(var3), var0, (byte) 85);
         }
 
-        FileCache.aClass93_684.get((byte) -112, var2, var0);
+        GlobalStatics_7.aClass93_684.get((byte) -112, var2, var0);
         return var2;
       }
   }

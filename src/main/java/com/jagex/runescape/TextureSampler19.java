@@ -1,6 +1,7 @@
 package com.jagex.runescape;
 
 import com.jagex.runescape.buffer.Buffer;
+import com.jagex.runescape.done.AbstractTextureSampler;
 import com.jagex.runescape.opengl.GLStatics;
 import com.jagex.runescape.opengl.GlRenderer;
 
@@ -119,7 +120,7 @@ public final class TextureSampler19 extends AbstractTextureSampler {
       }
 
       Something3d2.method2249((byte) 83, var3);
-      Widget var5 = EnumStringFetcher.getWidget((byte) 109, var4);
+      Widget var5 = GlobalStatics_7.getWidget((byte) 109, var4);
       if (var5 != null) {
         DummyClass29.method909(107, var5);
       }
@@ -135,13 +136,13 @@ public final class TextureSampler19 extends AbstractTextureSampler {
 
       if ((TextureSampler25.amountContextActions == 1)) {
         DummyClass36.aBoolean2615 = false;
-        AbstractSomethingTexture
+        GlobalStatics_3
             .method1340(GlobalStatics_1.anInt1462,
                 SomethingWorldMapy.anInt3552, (byte) -40,
                 TextureSampler29.anInt3395,
                 SomethingQuickChat2.anInt3537);
       } else {
-        AbstractSomethingTexture
+        GlobalStatics_3
             .method1340(GlobalStatics_1.anInt1462,
                 SomethingWorldMapy.anInt3552, (byte) -40,
                 TextureSampler29.anInt3395,
@@ -165,18 +166,18 @@ public final class TextureSampler19 extends AbstractTextureSampler {
       }
 
       if (InventoryConfig.anInt3655 != -1) {
-        ClassCheckRequest.method124(115, 1, InventoryConfig.anInt3655);
+        GlobalStatics_6.method124(115, 1, InventoryConfig.anInt3655);
       }
   }
 
   public static void method255(int var0, int var1, int var2) {
-    WidgetUpdate var3 = AudioStreamEncoder3.method466(4, var2, var0);
+    WidgetUpdate var3 = GlobalStatics_6.method466(4, var2, var0);
       var3.g((byte) 33);
       var3.anInt3598 = var1;
   }
 
   public static void method256(int var0, int var1, int var2, byte var3, int var4) {
-    WidgetUpdate var5 = AudioStreamEncoder3.method466(4, 4, var2);
+    WidgetUpdate var5 = GlobalStatics_6.method466(4, 4, var2);
       var5.g((byte) 33);
       var5.anInt3597 = var4;
       var5.anInt3596 = var0;
@@ -224,10 +225,10 @@ public final class TextureSampler19 extends AbstractTextureSampler {
     int var14 = var13 = var10 + 128;
     int var15;
     int var16 = var15 = var12 + 128;
-    int var17 = AbstractGameWorld.heightMap[var1][var6][var7] - ClientScriptEnum.cameraY;
-    int var18 = AbstractGameWorld.heightMap[var1][var6 + 1][var7] - ClientScriptEnum.cameraY;
-    int var19 = AbstractGameWorld.heightMap[var1][var6 + 1][var7 + 1] - ClientScriptEnum.cameraY;
-    int var20 = AbstractGameWorld.heightMap[var1][var6][var7 + 1] - ClientScriptEnum.cameraY;
+    int var17 = GlobalStatics_4.heightMap[var1][var6][var7] - GlobalStatics_7.cameraY;
+    int var18 = GlobalStatics_4.heightMap[var1][var6 + 1][var7] - GlobalStatics_7.cameraY;
+    int var19 = GlobalStatics_4.heightMap[var1][var6 + 1][var7 + 1] - GlobalStatics_7.cameraY;
+    int var20 = GlobalStatics_4.heightMap[var1][var6][var7 + 1] - GlobalStatics_7.cameraY;
     int var21 = var12 * var4 + var10 * var5 >> 16;
     var12 = var12 * var5 - var10 * var4 >> 16;
     var10 = var21;

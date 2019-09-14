@@ -20,7 +20,7 @@ public class DummyClass2 {
             }
 
             if ((SomethingIndex150.anInt2079 >= 1)) {
-              AbstractImageProducer.loginResponse = -5;
+              GlobalStatics_5.loginResponse = -5;
               TextureSampler28.loginState = 0;
               return;
             }
@@ -37,7 +37,7 @@ public class DummyClass2 {
           }
 
           if (TextureSampler28.loginState == 1) {
-            AreaSoundEffect.socketRequest =
+            GlobalStatics_6.socketRequest =
                 DummyClass35.signLink
                     .method1441((byte) 8, DummyClass36.aString2611,
                         Projectile.anInt2894);
@@ -45,19 +45,19 @@ public class DummyClass2 {
           }
 
           if ((TextureSampler28.loginState == 2)) {
-            assert AreaSoundEffect.socketRequest != null;
-            if ((AreaSoundEffect.socketRequest.status == 2)) {
+            assert GlobalStatics_6.socketRequest != null;
+            if ((GlobalStatics_6.socketRequest.status == 2)) {
               throw new IOException();
             }
 
-            if (AreaSoundEffect.socketRequest.status != 1) {
+            if (GlobalStatics_6.socketRequest.status != 1) {
               return;
             }
 
             SomethingVolume15.gameSocket =
-                new SocketStream((Socket) AreaSoundEffect.socketRequest.result,
+                new SocketStream((Socket) GlobalStatics_6.socketRequest.result,
                     DummyClass35.signLink);
-            AreaSoundEffect.socketRequest = null;
+            GlobalStatics_6.socketRequest = null;
             long encodedUsername =
                 TextureSampler15.encodedUsername = GroundItemNode.username
                     .toBase37();
@@ -85,7 +85,7 @@ public class DummyClass2 {
             }
 
             if (response != 0) {
-              AbstractImageProducer.loginResponse = response;
+              GlobalStatics_5.loginResponse = response;
               TextureSampler28.loginState = 0;
               SomethingVolume15.gameSocket.destroy();
               SomethingVolume15.gameSocket = null;
@@ -122,96 +122,96 @@ public class DummyClass2 {
             TextureSampler12.secureBuffer
                 .encipherRSA(RSAConfiguration.PUBLIC_EXPONENT,
                     RSAConfiguration.MODULUS);
-            FileRequester.loginBuffer.position = 0;
+            GlobalStatics_7.loginBuffer.position = 0;
             if (DummyClass15.state == 40) {
-              FileRequester.loginBuffer.writeByte(18);
+              GlobalStatics_7.loginBuffer.writeByte(18);
             } else {
-              FileRequester.loginBuffer.writeByte(16);
+              GlobalStatics_7.loginBuffer.writeByte(16);
             }
 
-            FileRequester.loginBuffer.writeShort(
+            GlobalStatics_7.loginBuffer.writeShort(
                 TextureSampler12.secureBuffer.position + 159 + TextureSampler29
                     .getByteLength(
                         DummyClass7.settings));
-            FileRequester.loginBuffer.writeInt(530);
-            FileRequester.loginBuffer.writeByte(EnumStringFetcher.anInt2161);
-            FileRequester.loginBuffer
+            GlobalStatics_7.loginBuffer.writeInt(530);
+            GlobalStatics_7.loginBuffer.writeByte(GlobalStatics_7.anInt2161);
+            GlobalStatics_7.loginBuffer
                 .writeByte(!ProjectileNode.aBoolean3779 ? 0 : 1);
-            FileRequester.loginBuffer.writeByte(1);
-            FileRequester.loginBuffer.writeByte(MidiSomething.getWindowMode());
-            FileRequester.loginBuffer.writeShort(DummyClass30.viewWidth);
-            FileRequester.loginBuffer.writeShort(GroundItem.viewHeight);
-            FileRequester.loginBuffer.writeByte(GroundItemNode.anInt3671);
-            DummyClass50.writeUUID(FileRequester.loginBuffer, true);
-            FileRequester.loginBuffer.writeString(DummyClass7.settings);
-            FileRequester.loginBuffer
+            GlobalStatics_7.loginBuffer.writeByte(1);
+            GlobalStatics_7.loginBuffer.writeByte(MidiSomething.getWindowMode());
+            GlobalStatics_7.loginBuffer.writeShort(DummyClass30.viewWidth);
+            GlobalStatics_7.loginBuffer.writeShort(GroundItem.viewHeight);
+            GlobalStatics_7.loginBuffer.writeByte(GroundItemNode.anInt3671);
+            DummyClass50.writeUUID(GlobalStatics_7.loginBuffer, true);
+            GlobalStatics_7.loginBuffer.writeString(DummyClass7.settings);
+            GlobalStatics_7.loginBuffer
                 .writeInt(MonoChromaticImageBuffer.affiliateId);
-            FileRequester.loginBuffer.writeInt(DummyClass51.getSettings());
+            GlobalStatics_7.loginBuffer.writeInt(DummyClass51.getSettings());
             StillGraphic.aBoolean2705 = true;
-            FileRequester.loginBuffer
+            GlobalStatics_7.loginBuffer
                 .writeShort(SomethingLight0.interfaceCounter);
-            FileRequester.loginBuffer.writeInt(
+            GlobalStatics_7.loginBuffer.writeInt(
                 SomethingTexture3.animationFrames.getTableChecksum());
-            FileRequester.loginBuffer
+            GlobalStatics_7.loginBuffer
                 .writeInt(ProjectileNode.animationBases.getTableChecksum());
-            FileRequester.loginBuffer
+            GlobalStatics_7.loginBuffer
                 .writeInt(Something3dRoot.configs.getTableChecksum());
-            FileRequester.loginBuffer
+            GlobalStatics_7.loginBuffer
                 .writeInt(GameObject.widgets.getTableChecksum());
-            FileRequester.loginBuffer
-                .writeInt(AbstractMouseWheel.soundEffects.getTableChecksum());
-            FileRequester.loginBuffer
+            GlobalStatics_7.loginBuffer
+                .writeInt(GlobalStatics_5.soundEffects.getTableChecksum());
+            GlobalStatics_7.loginBuffer
                 .writeInt(TextureSampler26.maps.getTableChecksum());
-            FileRequester.loginBuffer
+            GlobalStatics_7.loginBuffer
                 .writeInt(SomethingTexture1.fileUnpacker6.getTableChecksum());
-            FileRequester.loginBuffer
+            GlobalStatics_7.loginBuffer
                 .writeInt(DummyClass13.models.getTableChecksum());
-            FileRequester.loginBuffer
+            GlobalStatics_7.loginBuffer
                 .writeInt(Projectile.sprites.getTableChecksum());
-            FileRequester.loginBuffer
+            GlobalStatics_7.loginBuffer
                 .writeInt(TextureSampler32.textures.getTableChecksum());
-            FileRequester.loginBuffer
+            GlobalStatics_7.loginBuffer
                 .writeInt(TextureSampler28.fileUnpacker10.getTableChecksum());
-            FileRequester.loginBuffer
+            GlobalStatics_7.loginBuffer
                 .writeInt(GlobalStatics_2.fileUnpacker11.getTableChecksum());
-            FileRequester.loginBuffer
+            GlobalStatics_7.loginBuffer
                 .writeInt(WidgetAccess.scripts.getTableChecksum());
-            FileRequester.loginBuffer
+            GlobalStatics_7.loginBuffer
                 .writeInt(FileUnpacker.fileUnpacker13.getTableChecksum());
-            FileRequester.loginBuffer
-                .writeInt(ClanChatUser.midiInstruments.getTableChecksum());
-            FileRequester.loginBuffer
+            GlobalStatics_7.loginBuffer
+                .writeInt(GlobalStatics_6.midiInstruments.getTableChecksum());
+            GlobalStatics_7.loginBuffer
                 .writeInt(NPC.fileUnpacker15.getTableChecksum());
-            FileRequester.loginBuffer
+            GlobalStatics_7.loginBuffer
                 .writeInt(FloorOverlay.fileUnpacker16.getTableChecksum());
-            FileRequester.loginBuffer
+            GlobalStatics_7.loginBuffer
                 .writeInt(NPC.fileUnpacker17.getTableChecksum());
-            FileRequester.loginBuffer
+            GlobalStatics_7.loginBuffer
                 .writeInt(DummyClass55.fileUnpacker18.getTableChecksum());
-            FileRequester.loginBuffer
+            GlobalStatics_7.loginBuffer
                 .writeInt(FloorUnderlay.fileUnpacker19.getTableChecksum());
-            FileRequester.loginBuffer.writeInt(
+            GlobalStatics_7.loginBuffer.writeInt(
                 TextureSampler36.animationSequences.getTableChecksum());
-            FileRequester.loginBuffer
+            GlobalStatics_7.loginBuffer
                 .writeInt(SceneSomething2.fileUnpacker21.getTableChecksum());
-            FileRequester.loginBuffer.writeInt(
-                AudioSomethingSomething.fileUnpacker22.getTableChecksum());
-            FileRequester.loginBuffer
+            GlobalStatics_7.loginBuffer.writeInt(
+                GlobalStatics_6.fileUnpacker22.getTableChecksum());
+            GlobalStatics_7.loginBuffer
                 .writeInt(SomethingPacket116.worldMapData.getTableChecksum());
-            FileRequester.loginBuffer
+            GlobalStatics_7.loginBuffer
                 .writeInt(GroundItem.fileUnpacker24.getTableChecksum());
-            FileRequester.loginBuffer
+            GlobalStatics_7.loginBuffer
                 .writeInt(SpawnedGameObject.fileUnpacker25.getTableChecksum());
-            FileRequester.loginBuffer
+            GlobalStatics_7.loginBuffer
                 .writeInt(TriChromaticImageCache.materials.getTableChecksum());
-            FileRequester.loginBuffer
+            GlobalStatics_7.loginBuffer
                 .writeInt(DummyClass22.particles.getTableChecksum());
-            FileRequester.loginBuffer
+            GlobalStatics_7.loginBuffer
                 .write(TextureSampler12.secureBuffer.bytes, 0,
                     TextureSampler12.secureBuffer.position);
             SomethingVolume15.gameSocket
-                .write(FileRequester.loginBuffer.bytes, 0,
-                    FileRequester.loginBuffer.position);
+                .write(GlobalStatics_7.loginBuffer.bytes, 0,
+                    GlobalStatics_7.loginBuffer.position);
 
             TextureSampler12.secureBuffer.initializeCipher(keys);
             for (int i = 0; i < 4; i++) {
@@ -236,7 +236,7 @@ public class DummyClass2 {
               } else {
                 if (response == 1) {
                   TextureSampler28.loginState = 5;
-                  AbstractImageProducer.loginResponse = 1;
+                  GlobalStatics_5.loginResponse = 1;
                   return;
                 }
 
@@ -251,7 +251,7 @@ public class DummyClass2 {
                       return;
                     }
 
-                    AbstractImageProducer.loginResponse = response;
+                    GlobalStatics_5.loginResponse = response;
                     TextureSampler28.loginState = 0;
                     SomethingVolume15.gameSocket.destroy();
                     SomethingVolume15.gameSocket = null;
@@ -259,7 +259,7 @@ public class DummyClass2 {
                   }
 
                   TextureSampler28.loginState = 0;
-                  AbstractImageProducer.loginResponse = response;
+                  GlobalStatics_5.loginResponse = response;
                   return;
                 }
 
@@ -283,7 +283,7 @@ public class DummyClass2 {
               TextureSampler25.anInt3413 =
                   60 * (3 + SomethingVolume15.gameSocket.read());
               TextureSampler28.loginState = 0;
-              AbstractImageProducer.loginResponse = 21;
+              GlobalStatics_5.loginResponse = 21;
               SomethingVolume15.gameSocket.destroy();
               SomethingVolume15.gameSocket = null;
               return;
@@ -297,7 +297,7 @@ public class DummyClass2 {
               MonoChromaticImageBuffer.anInt2561 = SomethingVolume15.gameSocket
                   .read();
               TextureSampler28.loginState = 0;
-              AbstractImageProducer.loginResponse = 29;
+              GlobalStatics_5.loginResponse = 29;
               SomethingVolume15.gameSocket.destroy();
               SomethingVolume15.gameSocket = null;
               return;
@@ -320,9 +320,9 @@ public class DummyClass2 {
                 .readUnsignedByte();
             SomethingVolume15.aBoolean2433 =
                 SpotAnimationConfig.gameBuffer.readUnsignedByte() == 1;
-            BufferData.aBoolean1641 =
+            GlobalStatics_6.aBoolean1641 =
                 SpotAnimationConfig.gameBuffer.readUnsignedByte() == 1;
-            FileCacheRequest.aBoolean4063 =
+            GlobalStatics_7.aBoolean4063 =
                 (SpotAnimationConfig.gameBuffer.readUnsignedByte() == 1);
             TextureSampler31.aBoolean3166 =
                 SpotAnimationConfig.gameBuffer.readUnsignedByte() == 1;
@@ -338,7 +338,7 @@ public class DummyClass2 {
             FileSystem.method845(MapScene.aBoolean66, 255);
             if (!ProjectileNode.aBoolean3779) {
               if ((!SomethingVolume15.aBoolean2433
-                  || FileCacheRequest.aBoolean4063)
+                  || GlobalStatics_7.aBoolean4063)
                   && !TextureSampler3.aBoolean3358) {
                 DummyClass32.aClass94_516.method1577(-1857);
               } else {
@@ -361,9 +361,9 @@ public class DummyClass2 {
             SomethingVolume15.gameSocket
                 .read(SpotAnimationConfig.gameBuffer.bytes, 0,
                     GlobalStatics_0.packetLength);
-            AbstractImageProducer.loginResponse = 2;
+            GlobalStatics_5.loginResponse = 2;
             TextureSampler28.loginState = 0;
-            AnimationSequence.method2061(true);
+            GlobalStatics_3.method2061(true);
             GlobalStatics_2.anInt3606 = -1;
             DummyClass37.parseSceneRebuild(false);
             GlobalStatics_0.packetId = -1;
@@ -378,7 +378,7 @@ public class DummyClass2 {
 
           if (SomethingIndex150.anInt2079 >= 1) {
             TextureSampler28.loginState = 0;
-            AbstractImageProducer.loginResponse = -4;
+            GlobalStatics_5.loginResponse = -4;
           } else {
             TextureSampler28.loginState = 1;
             GlobalStatics_4.anInt820 = 0;

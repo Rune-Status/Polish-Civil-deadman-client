@@ -1,5 +1,10 @@
 package com.jagex.runescape;
 
+import com.jagex.runescape.done.AbstractDirectColorSprite;
+import com.jagex.runescape.done.AbstractModel;
+import com.jagex.runescape.done.AnimationSequence;
+import com.jagex.runescape.done.AreaSoundEffect;
+
 public final class Projectile extends SceneNode {
 
   public static int anInt2894;
@@ -225,14 +230,14 @@ public final class Projectile extends SceneNode {
   public static void method2025(byte var0, int var1) {
     if (var0 <= -25) {
         ObjectNode.aClass93_4043.method1522(-128, var1);
-        ClientScriptCall.aClass93_2442.method1522(-126, var1);
+        GlobalStatics_7.aClass93_2442.method1522(-126, var1);
         DummyClass14.aClass93_1964.method1522(-127, var1);
       }
   }
 
   public static void method2026(byte var0, int var1, int var2, int var3) {
     if (var0 > 114) {
-        WidgetUpdate var4 = AudioStreamEncoder3.method466(4, 9, var1);
+        WidgetUpdate var4 = GlobalStatics_6.method466(4, 9, var1);
         var4.g((byte) 33);
         var4.anInt3598 = var3;
         var4.anInt3597 = var2;
@@ -240,7 +245,7 @@ public final class Projectile extends SceneNode {
   }
 
   public static AbstractDirectColorSprite[] method2027(int var0, byte var1, int var2,
-                                                      FileUnpacker var3) {
+                                                       FileUnpacker var3) {
     return !SomethingTexture4.loadSprites(var3, var0, var2, -30901) ?
         null :
         (var1 != 11 ? null : SomethingTexture3.method1347(-26802));

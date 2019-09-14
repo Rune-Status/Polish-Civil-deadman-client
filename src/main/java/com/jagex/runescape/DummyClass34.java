@@ -68,21 +68,21 @@ public final class DummyClass34 {
 
     TextureSampler32.aClass3_Sub11ArrayArray3346 = null;
     SpawnedGameObject.anInt2249 = 0;
-    if (ByteArrayNode.aClass113Array3610 != null) {
+    if (GlobalStatics_6.aClass113Array3610 != null) {
       var0 = 0;
     }
 
-    if (AnimationSequence.aClass25Array1868 != null) {
+    if (GlobalStatics_3.aClass25Array1868 != null) {
       for (var0 = 0; var0 < TextureSampler21.anInt3070; ++var0) {
-        AnimationSequence.aClass25Array1868[var0] = null;
+        GlobalStatics_3.aClass25Array1868[var0] = null;
       }
 
       TextureSampler21.anInt3070 = 0;
     }
 
-    if (FileCacheRequest.aClass25Array4060 != null) {
-      for (var0 = 0; var0 < FileCacheRequest.aClass25Array4060.length; ++var0) {
-        FileCacheRequest.aClass25Array4060[var0] = null;
+    if (GlobalStatics_7.aClass25Array4060 != null) {
+      for (var0 = 0; var0 < GlobalStatics_7.aClass25Array4060.length; ++var0) {
+        GlobalStatics_7.aClass25Array4060[var0] = null;
       }
     }
 
@@ -98,15 +98,15 @@ public final class DummyClass34 {
         Parameter.anInt3620 = DummyClass21.anInt1762;
         ++TextureSampler29.anInt3398;
         int var2;
-        if (AbstractTextureSampler.anInt2384 < 0) {
+        if (GlobalStatics_3.anInt2384 < 0) {
           for (var2 = 0; (var2 < 112); ++var2) {
             GameObjectConfig.aBooleanArray1490[var2] = false;
           }
 
-          AbstractTextureSampler.anInt2384 = SomethingPacket116.anInt1744;
+          GlobalStatics_3.anInt2384 = SomethingPacket116.anInt1744;
         } else {
-          while (AbstractTextureSampler.anInt2384 != SomethingPacket116.anInt1744) {
-            var2 = FileRequester.anIntArray2952[SomethingPacket116.anInt1744];
+          while (GlobalStatics_3.anInt2384 != SomethingPacket116.anInt1744) {
+            var2 = GlobalStatics_7.anIntArray2952[SomethingPacket116.anInt1744];
             SomethingPacket116.anInt1744 = 127 & 1 + SomethingPacket116.anInt1744;
             if (var2 >= 0) {
               GameObjectConfig.aBooleanArray1490[var2] = true;

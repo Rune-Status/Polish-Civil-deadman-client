@@ -4,6 +4,10 @@ import com.jagex.runescape.buffer.Buffer;
 import com.jagex.runescape.common.GameString;
 import com.jagex.runescape.common.GameStringStatics;
 import com.jagex.runescape.common.HashTable;
+import com.jagex.runescape.done.AbstractDirectColorSprite;
+import com.jagex.runescape.done.AbstractTextureSampler;
+import com.jagex.runescape.done.AreaSoundEffect;
+import com.jagex.runescape.done.BufferObject;
 import com.jagex.runescape.opengl.GLStatics;
 import com.jagex.runescape.opengl.GlDirectColorSprite;
 import com.jagex.runescape.opengl.GlRenderer;
@@ -235,7 +239,7 @@ public class GlobalStatics_2 {
       DummyClass28.anInt340 = 127;
       DummyClass35.aBoolean661 = true;
       Projectile.aBoolean2910 = true;
-      AbstractTextureSampler.anInt2378 = 0;
+      GlobalStatics_3.anInt2378 = 0;
       GLStatics.anInt1137 = 2;
       TextureSampler0.aBoolean3275 = true;
       GLStatics.useBumpMaps = true;
@@ -243,8 +247,8 @@ public class GlobalStatics_2 {
       SceneSomething.aBoolean488 = true;
       GroundItemNode.anInt3671 = 0;
       FileOnDisk var2 = null;
-      ClientScriptCall.anInt2453 = 127;
-      if (AudioStreamEncoder3.anInt3492 >= 96) {
+      GlobalStatics_7.anInt2453 = 127;
+      if (GlobalStatics_6.anInt3492 >= 96) {
         DummyClass0.method1758(2);
       } else {
         DummyClass0.method1758(0);
@@ -255,7 +259,7 @@ public class GlobalStatics_2 {
       aBoolean346 = false;
       DummyClass4.aBoolean3004 = true;
       GlobalStatics_0.safemode = false;
-      FileCacheRequester.aBoolean1080 = false;
+      GlobalStatics_7.aBoolean1080 = false;
       anInt2577 = 0;
 
       try {
@@ -277,7 +281,7 @@ public class GlobalStatics_2 {
             }
           }
 
-          BitVariable.parseSettings(new Buffer(var4), -1);
+          GlobalStatics_6.parseSettings(new Buffer(var4), -1);
         }
       } catch (Exception var8) {
       }
@@ -297,43 +301,43 @@ public class GlobalStatics_2 {
       }
 
       int var3 =
-        -((int) (SomethingWorldMapy.aClass11_3551.anInt168 / AbstractGameWorld.aFloat727))
+        -((int) (SomethingWorldMapy.aClass11_3551.anInt168 / GlobalStatics_4.aFloat727))
           + ProceduralTexture.anInt1150;
       int var4 =
         ProceduralTexture.anInt1150 + (int) (SomethingWorldMapy.aClass11_3551.anInt168
-          / AbstractGameWorld.aFloat727);
+          / GlobalStatics_4.aFloat727);
       if (var3 < 0) {
         ProceduralTexture.anInt1150 =
-          (int) (SomethingWorldMapy.aClass11_3551.anInt168 / AbstractGameWorld.aFloat727);
+          (int) (SomethingWorldMapy.aClass11_3551.anInt168 / GlobalStatics_4.aFloat727);
       }
 
       TextureSampler13.anInt3362 = DummyClass58.anInt1460 - 1 + MapScene.anInt65 - var2;
       int var6 =
-        (int) (SomethingWorldMapy.aClass11_3551.anInt193 / AbstractGameWorld.aFloat727)
+        (int) (SomethingWorldMapy.aClass11_3551.anInt193 / GlobalStatics_4.aFloat727)
           + TextureSampler13.anInt3362;
       int var5 =
         TextureSampler13.anInt3362 - (int) (SomethingWorldMapy.aClass11_3551.anInt193
-          / AbstractGameWorld.aFloat727);
+          / GlobalStatics_4.aFloat727);
       if (var4 > DummyClass30.anInt455) {
         ProceduralTexture.anInt1150 =
           DummyClass30.anInt455 - ((int) (SomethingWorldMapy.aClass11_3551.anInt168
-            / AbstractGameWorld.aFloat727));
+            / GlobalStatics_4.aFloat727));
       }
 
       if ((var5 < 0)) {
         TextureSampler13.anInt3362 =
-          (int) (SomethingWorldMapy.aClass11_3551.anInt193 / AbstractGameWorld.aFloat727);
+          (int) (SomethingWorldMapy.aClass11_3551.anInt193 / GlobalStatics_4.aFloat727);
       }
 
       if ((DummyClass58.anInt1460 < var6)) {
         TextureSampler13.anInt3362 =
-          -((int) (SomethingWorldMapy.aClass11_3551.anInt193 / AbstractGameWorld.aFloat727))
+          -((int) (SomethingWorldMapy.aClass11_3551.anInt193 / GlobalStatics_4.aFloat727))
             + DummyClass58.anInt1460;
       }
   }
 
   public static void method566(GameString var0, int var1, int var2) {
-    WidgetUpdate var3 = AudioStreamEncoder3.method466(var1 + 4, 3, var2);
+    WidgetUpdate var3 = GlobalStatics_6.method466(var1 + 4, 3, var2);
       var3.g((byte) 33);
       if (var1 != 0) {
         GLStatics.viewportLowerZ = 112;
@@ -531,7 +535,7 @@ public class GlobalStatics_2 {
         anIntArray347 = null;
       }
 
-      int var3 = AbstractImageProducer.anInt2010 >> 1;
+      int var3 = GlobalStatics_5.anInt2010 >> 1;
       int var2 = TextureSampler18.anInt4034 >> 2 << 10;
       byte[][] var4 = new byte[DummyClass30.anInt455][DummyClass58.anInt1460];
 
@@ -589,7 +593,7 @@ public class GlobalStatics_2 {
           if (var27 > var14) {
             var15 = 255 & var4[var14][var34];
             if ((var15 > 0)) {
-              FloorUnderlay var16 = ClientScript.getFloorUnderlay(var15 - 1);
+              FloorUnderlay var16 = GlobalStatics_6.getFloorUnderlay(var15 - 1);
               var28[var34] += var16.anInt1408;
               var29[var34] += var16.anInt1406;
               var30[var34] += var16.anInt1417;
@@ -602,7 +606,7 @@ public class GlobalStatics_2 {
           if ((var15 >= 0)) {
             var35 = var4[var15][var34] & 255;
             if (var35 > 0) {
-              FloorUnderlay var17 = ClientScript.getFloorUnderlay(-1 + var35);
+              FloorUnderlay var17 = GlobalStatics_6.getFloorUnderlay(-1 + var35);
               var28[var34] -= var17.anInt1408;
               var29[var34] -= var17.anInt1406;
               var30[var34] -= var17.anInt1417;
@@ -613,7 +617,7 @@ public class GlobalStatics_2 {
         }
 
         if ((var12 >= 0)) {
-          int[][] var33 = AbstractMouseWheel.anIntArrayArrayArray1903[var12
+          int[][] var33 = GlobalStatics_5.anIntArrayArrayArray1903[var12
               >> 6];
           var14 = 0;
           var15 = 0;
@@ -643,7 +647,7 @@ public class GlobalStatics_2 {
             if (var19 >= 0 && var18 > 0) {
               int[] var22 = var33[var19 >> 6];
               int var23 = var36 != 0 ?
-                  ClassCheckRequest.method129(var35 / var18, 2, var15 / var18,
+                  GlobalStatics_6.method129(var35 / var18, 2, var15 / var18,
                       var14 * 256 / var36) :
                   0;
               if (var4[var12][var19] == 0) {
@@ -665,7 +669,7 @@ public class GlobalStatics_2 {
 
                 int var25 = var24 + (896 & var23) + (var23 + var2 & '\ufc00');
                 var22[(4032 & var19 << 6) + (63 & var12)] =
-                    GLStatics.hslTable[Cache.repackHSL(96, true, var25)];
+                    GLStatics.hslTable[GlobalStatics_6.repackHSL(96, true, var25)];
               }
             }
           }
@@ -751,18 +755,18 @@ public class GlobalStatics_2 {
   }
 
   public static GameString method894(long var0, byte var2) {
-    AnimationSomething.aCalendar3581.setTime(new Date(var0));
-    int var3 = AnimationSomething.aCalendar3581.get(7);
-    int var4 = AnimationSomething.aCalendar3581.get(5);
-    int var5 = AnimationSomething.aCalendar3581.get(2);
+    GlobalStatics_6.aCalendar3581.setTime(new Date(var0));
+    int var3 = GlobalStatics_6.aCalendar3581.get(7);
+    int var4 = GlobalStatics_6.aCalendar3581.get(5);
+    int var5 = GlobalStatics_6.aCalendar3581.get(2);
     if (var2 < 9) {
       method889((byte) 7, null);
     }
 
-    int var6 = AnimationSomething.aCalendar3581.get(1);
-    int var7 = AnimationSomething.aCalendar3581.get(11);
-    int var8 = AnimationSomething.aCalendar3581.get(12);
-    int var9 = AnimationSomething.aCalendar3581.get(13);
+    int var6 = GlobalStatics_6.aCalendar3581.get(1);
+    int var7 = GlobalStatics_6.aCalendar3581.get(11);
+    int var8 = GlobalStatics_6.aCalendar3581.get(12);
+    int var9 = GlobalStatics_6.aCalendar3581.get(13);
     return RenderAnimation.concat(new GameString[]{
         TextureSampler2.aClass94Array3376[var3 - 1],
         TextureSampler24.aClass94_3145,
@@ -772,9 +776,9 @@ public class GlobalStatics_2 {
         SomethingScene.toString(var6), IdentityKit.aClass94_465,
         SomethingScene.toString(var7 / 10),
         SomethingScene.toString(var7 % 10),
-        AbstractAudioOutputStream.aClass94_1970,
+        GlobalStatics_5.aClass94_1970,
         SomethingScene.toString(var8 / 10), SomethingScene.toString(var8 % 10),
-        AbstractAudioOutputStream.aClass94_1970,
+        GlobalStatics_5.aClass94_1970,
         SomethingScene.toString(var9 / 10),
         SomethingScene.toString(var9 % 10), GameWorldSomething.aClass94_500
     });
@@ -815,7 +819,7 @@ public class GlobalStatics_2 {
   }
 
   public static Widget method638(byte var0, int var1, int var2) {
-    Widget var3 = EnumStringFetcher.getWidget((byte) 109, var1);
+    Widget var3 = GlobalStatics_7.getWidget((byte) 109, var1);
     return (var2 == -1) ?
         var3 :
         (var0 != -19 ?

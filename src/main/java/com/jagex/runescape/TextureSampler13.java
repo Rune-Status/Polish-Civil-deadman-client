@@ -3,6 +3,8 @@ package com.jagex.runescape;
 import com.jagex.runescape.buffer.Buffer;
 import com.jagex.runescape.common.GameString;
 import com.jagex.runescape.common.GameStringStatics;
+import com.jagex.runescape.done.AbstractTextureSampler;
+import com.jagex.runescape.done.CollisionMap;
 import com.jagex.runescape.node.Deque;
 import com.jagex.runescape.opengl.GLStatics;
 import com.jagex.runescape.opengl.GlRenderer;
@@ -74,9 +76,9 @@ public final class TextureSampler13 extends AbstractTextureSampler {
               }
             }
 
-            GameString var13 = AbstractImageProducer.gameId != 1 ?
+            GameString var13 = GlobalStatics_5.gameId != 1 ?
               DummyClass32.aClass94_525 :
-              AudioSomethingSomething.aClass94_2526;
+              GlobalStatics_6.aClass94_2526;
             if (var3.combatLevel < var3.anInt3965) {
               var5 = RenderAnimation.concat(new GameString[] {
                 var3.getFullName(), var6 ?
@@ -85,7 +87,7 @@ public final class TextureSampler13 extends AbstractTextureSampler {
                 MonoChromaticImageBuffer.aClass94_2562, SomethingScene.aClass94_1072, var13,
                 SomethingScene.toString(var3.combatLevel), DummyClass59.aClass94_673,
                 SomethingScene.toString(var3.anInt3965 - var3.combatLevel),
-                AreaSoundEffect.aClass94_2335
+                GlobalStatics_6.aClass94_2335
               });
             } else {
               var5 = RenderAnimation.concat(new GameString[] {
@@ -93,13 +95,13 @@ public final class TextureSampler13 extends AbstractTextureSampler {
                 SomethingScene.method1295(var3.combatLevel, (byte) -128,
                   TextureCache.localPlayer.combatLevel) :
                 MonoChromaticImageBuffer.aClass94_2562, SomethingScene.aClass94_1072, var13,
-                SomethingScene.toString(var3.combatLevel), AreaSoundEffect.aClass94_2335
+                SomethingScene.toString(var3.combatLevel), GlobalStatics_6.aClass94_2335
               });
             }
           } else {
             var5 = RenderAnimation.concat(new GameString[] {
               var3.getFullName(), SomethingScene.aClass94_1072, DummyClass32.SKILL,
-              SomethingScene.toString(var3.skillTotal), AreaSoundEffect.aClass94_2335
+              SomethingScene.toString(var3.skillTotal), GlobalStatics_6.aClass94_2335
             });
           }
 
@@ -112,12 +114,12 @@ public final class TextureSampler13 extends AbstractTextureSampler {
             ++MilliFrameRegulator.anInt2684;
           } else if (!SceneNode.aBoolean1837) {
             for (var12 = 7; (var12 >= 0); --var12) {
-              if (CollisionMap.playerOptions[var12] != null) {
-                ++Cursor.anInt880;
+              if (GlobalStatics_7.playerOptions[var12] != null) {
+                ++GlobalStatics_7.anInt880;
                 short var14 = 0;
                 boolean var16 = false;
-                if ((AbstractImageProducer.gameId == 0)
-                  && CollisionMap.playerOptions[var12].method1531(TextureSampler36.aClass94_3427)) {
+                if ((GlobalStatics_5.gameId == 0)
+                  && GlobalStatics_7.playerOptions[var12].method1531(TextureSampler36.aClass94_3427)) {
                   if (var3.combatLevel > TextureCache.localPlayer.combatLevel) {
                     var14 = 2000;
                   }
@@ -134,18 +136,18 @@ public final class TextureSampler13 extends AbstractTextureSampler {
                   var14 = 2000;
                 }
 
-                short var15 = EnumStringFetcher.aShortArray2167[var12];
+                short var15 = GlobalStatics_7.aShortArray2167[var12];
                 var15 += var14;
                 ScriptState.method1177(TextureSampler35.anIntArray3328[var12],
                     var0,
                   (byte) -73, RenderAnimation.concat(
                     new GameString[] {MonoChromaticImageBuffer.aClass94_2562, var5}), var4, var15,
-                  CollisionMap.playerOptions[var12], var2);
+                  GlobalStatics_7.playerOptions[var12], var2);
               }
             }
           } else if ((8 & Something3dRoot.anInt2051) != 0) {
             ++TextureSampler20.anInt3151;
-            ScriptState.method1177(BufferObject.anInt1887, var0, (byte) -58,
+            ScriptState.method1177(GlobalStatics_6.anInt1887, var0, (byte) -58,
               RenderAnimation.concat(
                 new GameString[] {DummyClass59.aClass94_676, DummyClass42.aClass94_892, var5}),
               var4, (short) 15, Parameter.aClass94_3621, var2);
@@ -173,7 +175,7 @@ public final class TextureSampler13 extends AbstractTextureSampler {
       }
 
       SomethingIndex150.method2257(96);
-      ClassCheckRequest.method128(2);
+      GlobalStatics_6.method128(2);
       DummyClass8.method2220(0);
       StringNode0.method139(69);
       MonoChromaticImageBuffer.method512((byte) -108);
@@ -207,7 +209,7 @@ public final class TextureSampler13 extends AbstractTextureSampler {
       SomethingTexture3.animationFrames.method2137((byte) 56);
       ProjectileNode.animationBases.method2137((byte) 56);
       GameObject.widgets.method2137((byte) 56);
-      AbstractMouseWheel.soundEffects.method2137((byte) 56);
+      GlobalStatics_5.soundEffects.method2137((byte) 56);
       TextureSampler26.maps.method2137((byte) 56);
       SomethingTexture1.fileUnpacker6.method2137((byte) 56);
       DummyClass13.models.method2137((byte) 56);
@@ -226,7 +228,7 @@ public final class TextureSampler13 extends AbstractTextureSampler {
   }
 
   public static void method316(CollisionMap[] var0, int var1, byte[] var2, int var3, int var4,
-                              int var5, int var6, boolean var7, int var8, int var9, byte var10) {
+                               int var5, int var6, boolean var7, int var8, int var9, byte var10) {
     if (var10 == -54) {
         int var12 = -1;
         Buffer var11 = new Buffer(var2);

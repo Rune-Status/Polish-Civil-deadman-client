@@ -2,6 +2,8 @@ package com.jagex.runescape;
 
 import com.jagex.runescape.buffer.Buffer;
 import com.jagex.runescape.common.GameString;
+import com.jagex.runescape.done.AbstractDirectColorSprite;
+import com.jagex.runescape.done.ByteArrayNode;
 import com.jagex.runescape.opengl.GlRenderer;
 import com.jagex.runescape.opengl.GlTexture2d;
 import com.jagex.runescape.opengl.GlUtils;
@@ -79,9 +81,9 @@ public final class GZipDecompressor {
                 int var13 = (var11 / 8 << 8) + var12 / 8;
 
                 for (int var14 = 0;
-                    AudioStreamEncoder3.regionHashes.length > var14;
-                    ++var14) {
-                  if ((AudioStreamEncoder3.regionHashes[var14] == var13)
+                     GlobalStatics_6.regionHashes.length > var14;
+                     ++var14) {
+                  if ((GlobalStatics_6.regionHashes[var14] == var13)
                       && var3[var14] != null) {
                     MovedStatics0.method60(var10, 8 * var5, var4,
                         GlobalStatics_0.collisionMaps,
@@ -174,14 +176,14 @@ public final class GZipDecompressor {
   }
 
   public static void method1126(int var0, int var1) {
-    WidgetUpdate var2 = AudioStreamEncoder3.method466(4, 2, var1);
+    WidgetUpdate var2 = GlobalStatics_6.method466(4, 2, var1);
       int var3 = -67 % ((var0 + 37) / 48);
       var2.createIndexedColorSprite(true);
   }
 
   public static void method1127(int var0) {
     if (!DummyClass36.aBoolean2615) {
-        if (ClientScriptEnum.anInt3660 != 0) {
+        if (GlobalStatics_7.anInt3660 != 0) {
           NpcConfiguration.anInt1297 = TextureSampler8.anInt3460;
           DummyClass36.anInt2612 = FloorOverlay.anInt2099;
         } else if (Structure.anInt3644 == 0) {
@@ -196,7 +198,7 @@ public final class GZipDecompressor {
         GroundItem.aClass94Array2935[0] = DummyClass12.aClass94_2031;
         DummyClass8.aClass94Array4016[0] = GroundItemNode.EMPTY_STRING;
         TextureSampler27.aShortArray3095[0] = 1005;
-        MonoChromaticImageCache.anIntArray1578[0] = AnimationSomething.anInt3590;
+        MonoChromaticImageCache.anIntArray1578[0] = GlobalStatics_6.anInt3590;
       }
 
       if ((InventoryConfig.anInt3655 != -1)) {
@@ -222,7 +224,7 @@ public final class GZipDecompressor {
           DummyOutputStream.aBoolean47 = true;
         }
 
-        SomethingOtherWorldMap.anInt2535 = AbstractGameWorld.updateCycle;
+        SomethingOtherWorldMap.anInt2535 = GlobalStatics_4.updateCycle;
         if ((InventoryConfig.anInt3655 != -1)) {
           SomethingWorldMapy.widgetQuads = 0;
           FileSystem.method841(true);
@@ -258,48 +260,48 @@ public final class GZipDecompressor {
         }
 
         TextureSampler20.method229(var1, 20827);
-        if ((ClientScriptCall.anInt2440 == 1)) {
-          ClientScriptCall.anInt2440 = 2;
+        if ((GlobalStatics_7.anInt2440 == 1)) {
+          GlobalStatics_7.anInt2440 = 2;
         }
 
         if (GameObjectConfig.anInt1521 == 1) {
           GameObjectConfig.anInt1521 = 2;
         }
 
-        if ((ClientScript.rectangleDebugType == 3)) {
+        if ((GlobalStatics_6.rectangleDebugType == 3)) {
           for (int var2 = 0; (var2 < SomethingWorldMapy.widgetQuads); ++var2) {
             if (!GlobalStatics_0.aBooleanArray1712[var2]) {
               if (DummyClass9.aBooleanArray4008[var2]) {
                 if (GlRenderer.useOpenGlRenderer) {
-                  GlUtils.fillQuad(AbstractAudioOutputStream.quadx0[var2],
+                  GlUtils.fillQuad(GlobalStatics_5.quadx0[var2],
                       Player.quady0[var2],
                       GlTexture2d.quadx1[var2], Mobile.quady1[var2], 0xff0000,
                       0x80);
                 } else {
                   DummyClass47
-                      .method1312(AbstractAudioOutputStream.quadx0[var2],
+                      .method1312(GlobalStatics_5.quadx0[var2],
                           Player.quady0[var2], GlTexture2d.quadx1[var2],
                           Mobile.quady1[var2], 0xff0000,
                           0x80);
                 }
               }
             } else if (!GlRenderer.useOpenGlRenderer) {
-              DummyClass47.method1312(AbstractAudioOutputStream.quadx0[var2],
+              DummyClass47.method1312(GlobalStatics_5.quadx0[var2],
                   Player.quady0[var2],
                   GlTexture2d.quadx1[var2], Mobile.quady1[var2], 16711935, 128);
             } else {
-              GlUtils.fillQuad(AbstractAudioOutputStream.quadx0[var2],
+              GlUtils.fillQuad(GlobalStatics_5.quadx0[var2],
                   Player.quady0[var2],
                   GlTexture2d.quadx1[var2], Mobile.quady1[var2], 16711935, 128);
             }
           }
         }
 
-        GlobalStatics_0.method1214(DisplayMode.loopCycle,
+        GlobalStatics_0.method1214(GlobalStatics_7.loopCycle,
             TextureCache.localPlayer.anInt2819,
             TextureCache.localPlayer.anInt2829, GameWorldSomething.currentPlane,
             1);
-        DisplayMode.loopCycle = 0;
+        GlobalStatics_7.loopCycle = 0;
       }
   }
 

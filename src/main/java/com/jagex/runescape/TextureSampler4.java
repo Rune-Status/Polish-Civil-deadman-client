@@ -4,6 +4,8 @@ import com.jagex.runescape.buffer.Buffer;
 import com.jagex.runescape.common.ArrayUtils;
 import com.jagex.runescape.common.GameString;
 import com.jagex.runescape.common.GameStringStatics;
+import com.jagex.runescape.done.AbstractTextureSampler;
+
 import java.util.Random;
 
 public final class TextureSampler4 extends AbstractTextureSampler {
@@ -196,7 +198,7 @@ public final class TextureSampler4 extends AbstractTextureSampler {
         TextureSampler4.LANG_PORTUGUESE = null;
       }
 
-      WidgetUpdate var3 = AudioStreamEncoder3.method466(4, 7, var1);
+      WidgetUpdate var3 = GlobalStatics_6.method466(4, 7, var1);
       var3.g((byte) 33);
       var3.anInt3598 = var2;
   }
@@ -266,7 +268,7 @@ public final class TextureSampler4 extends AbstractTextureSampler {
   }
 
   public static void method265(byte var0, int var1) {
-    WidgetUpdate var2 = AudioStreamEncoder3.method466(4, 8, var1);
+    WidgetUpdate var2 = GlobalStatics_6.method466(4, 8, var1);
       var2.createIndexedColorSprite(true);
       if (var0 != -42) {
         TextureSampler4.LANG_FRENCH = null;

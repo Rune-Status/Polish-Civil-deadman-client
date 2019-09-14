@@ -79,7 +79,7 @@ public final class DummyClass3 {
               continue;
             }
 
-            SomethingGl0 var18 = AnimationSequence.method2052(var12, false, var17);
+            SomethingGl0 var18 = GlobalStatics_3.method2052(var12, false, var17);
             byte var19 = var8[var13][var14];
             int[] var20 = DummyClass21.anIntArrayArray1763[var19];
             var18.anInt2342 += var20.length / 2;
@@ -312,7 +312,7 @@ public final class DummyClass3 {
               boolean[] var80 = TextureSampler8.aBooleanArrayArray3468[var23 == var74 ? var60 : 0];
               var81 = TextureSampler8.aBooleanArrayArray3468[var26 == var74 ? var22 : 0];
               FloorOverlay var37 = TextureSampler10.method350((byte) 113, -1 + var74);
-              SomethingGl0 var38 = AnimationSequence.method2052(var12, false, var37);
+              SomethingGl0 var38 = GlobalStatics_3.method2052(var12, false, var37);
               var38.anInt2342 += 5;
               var38.anInt2342 += -2 + var80.length;
               var38.anInt2342 += -2 + var79.length;
@@ -349,7 +349,7 @@ public final class DummyClass3 {
               continue;
             }
 
-            SomethingGl0 var66 = AnimationSequence.method2052(var12, false, var62);
+            SomethingGl0 var66 = GlobalStatics_3.method2052(var12, false, var62);
             byte var67 = var8[var13][var14];
             byte var68 = var5[var13][var14];
             var22 = TextureSampler34.method190(var62.anInt2095, var62.anInt2103, (byte) -111,
@@ -585,7 +585,7 @@ public final class DummyClass3 {
               var81 = TextureSampler8.aBooleanArrayArray3468[(var78 == var26) ? var22 : 0];
               boolean[] var84 = TextureSampler8.aBooleanArrayArray3468[var78 != var27 ? 0 : var23];
               FloorOverlay var82 = TextureSampler10.method350((byte) 121, -1 + var78);
-              SomethingGl0 var39 = AnimationSequence.method2052(var12, false, var82);
+              SomethingGl0 var39 = GlobalStatics_3.method2052(var12, false, var82);
               int var40 = TextureSampler34.method190(var82.anInt2095, var82.anInt2103, (byte) -76,
                 var6[var13][var14]) << 8 | 255;
               byte var44 = 6;
@@ -606,49 +606,49 @@ public final class DummyClass3 {
               var85 += var81.length - 2;
               var85 += -2 + var84.length;
               int var50 =
-                BufferData.method1734(var43, 0.0F, var40, var41, null, var2, var13, var4, var42,
+                GlobalStatics_6.method1734(var43, 0.0F, var40, var41, null, var2, var13, var4, var42,
                   (byte) -127, 0, true, var39, var1, var14, 64, var0, 64);
               int[] var45 = new int[var85];
               var44 = 0;
               int var51 =
-                BufferData.method1734(var43, 0.0F, var40, var41, null, var2, var13, var4, var42,
+                GlobalStatics_6.method1734(var43, 0.0F, var40, var41, null, var2, var13, var4, var42,
                   (byte) -112, 0, var46, var39, var1, var14, 0, var0, 128);
               int var52 =
-                BufferData.method1734(var43, 0.0F, var40, var41, null, var2, var13, var4, var42,
+                GlobalStatics_6.method1734(var43, 0.0F, var40, var41, null, var2, var13, var4, var42,
                   (byte) -119, 0, var47, var39, var1, var14, 128, var0, 128);
               int var53 =
-                BufferData.method1734(var43, 0.0F, var40, var41, null, var2, var13, var4, var42,
+                GlobalStatics_6.method1734(var43, 0.0F, var40, var41, null, var2, var13, var4, var42,
                   (byte) -127, 0, var48, var39, var1, var14, 0, var0, 0);
               int var54 =
-                BufferData.method1734(var43, 0.0F, var40, var41, null, var2, var13, var4, var42,
+                GlobalStatics_6.method1734(var43, 0.0F, var40, var41, null, var2, var13, var4, var42,
                   (byte) -114, 0, var49, var39, var1, var14, 128, var0, 0);
               var85 = var44 + 1;
               var45[var44] = var50;
               var45[var85++] = var52;
               if ((var79.length > 2)) {
                 var45[var85++] =
-                  BufferData.method1734(var43, 0.0F, var40, var41, null, var2, var13, var4, var42,
+                  GlobalStatics_6.method1734(var43, 0.0F, var40, var41, null, var2, var13, var4, var42,
                     (byte) -117, 0, var79[2], var39, var1, var14, 64, var0, 128);
               }
 
               var45[var85++] = var51;
               if (var75.length > 2) {
                 var45[var85++] =
-                  BufferData.method1734(var43, 0.0F, var40, var41, null, var2, var13, var4, var42,
+                  GlobalStatics_6.method1734(var43, 0.0F, var40, var41, null, var2, var13, var4, var42,
                     (byte) -128, 0, var75[2], var39, var1, var14, 0, var0, 64);
               }
 
               var45[var85++] = var53;
               if (var81.length > 2) {
                 var45[var85++] =
-                  BufferData.method1734(var43, 0.0F, var40, var41, null, var2, var13, var4, var42,
+                  GlobalStatics_6.method1734(var43, 0.0F, var40, var41, null, var2, var13, var4, var42,
                     (byte) -112, 0, var81[2], var39, var1, var14, 64, var0, 0);
               }
 
               var45[var85++] = var54;
               if ((var84.length > 2)) {
                 var45[var85++] =
-                  BufferData.method1734(var43, 0.0F, var40, var41, null, var2, var13, var4, var42,
+                  GlobalStatics_6.method1734(var43, 0.0F, var40, var41, null, var2, var13, var4, var42,
                     (byte) -127, 0, var84[2], var39, var1, var14, 128, var0, 64);
               }
 
@@ -735,7 +735,7 @@ public final class DummyClass3 {
         int var15 = var0 + var2 * DummyClass44.anInt930 / DummyClass30.anInt455;
         int var7 = var2 * GZipDecompressor.anInt817 / DummyClass30.anInt455;
         int var9 = 16711680;
-        if ((AbstractImageProducer.gameId == 1)) {
+        if ((GlobalStatics_5.gameId == 1)) {
           var9 = 16777215;
         }
 
@@ -749,10 +749,10 @@ public final class DummyClass3 {
 
         if ((GlobalStatics_2.anInt3704 > 0)) {
           int var10;
-          if ((ByteArrayNode.anInt3611 > 10)) {
-            var10 = (-ByteArrayNode.anInt3611 + 20) * 25;
+          if ((GlobalStatics_6.anInt3611 > 10)) {
+            var10 = (-GlobalStatics_6.anInt3611 + 20) * 25;
           } else {
-            var10 = 25 * ByteArrayNode.anInt3611;
+            var10 = 25 * GlobalStatics_6.anInt3611;
           }
 
           for (SomethingOtherWorldMap var11 =

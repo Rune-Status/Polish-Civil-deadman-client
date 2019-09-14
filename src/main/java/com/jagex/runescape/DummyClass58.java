@@ -3,6 +3,7 @@ package com.jagex.runescape;
 import com.jagex.runescape.common.ArrayUtils;
 import com.jagex.runescape.common.GameString;
 import com.jagex.runescape.common.GameStringStatics;
+import com.jagex.runescape.done.AbstractDirectColorSprite;
 import com.jagex.runescape.opengl.GlRenderer;
 import com.jagex.runescape.opengl.GlTexture2d;
 import com.jagex.runescape.opengl.GlUtils;
@@ -82,11 +83,11 @@ public final class DummyClass58 {
         int var3 = var2 * 956 / 503;
         assert DummyClass59.titlebackground != null;
         DummyClass59.titlebackground.draw((DummyClass30.viewWidth - var3) / 2, 0, var3, var2);
-        AnimationSequence.logoSprite =
-          WidgetUpdate.createIndexedColorSprite(var0, BitVariable.logoFileId);
-        assert AnimationSequence.logoSprite != null;
-        AnimationSequence.logoSprite.draw(
-          DummyClass30.viewWidth / 2 - (AnimationSequence.logoSprite.width / 2), 18);
+        GlobalStatics_3.logoSprite =
+          WidgetUpdate.createIndexedColorSprite(var0, GlobalStatics_6.logoFileId);
+        assert GlobalStatics_3.logoSprite != null;
+        GlobalStatics_3.logoSprite.draw(
+          DummyClass30.viewWidth / 2 - (GlobalStatics_3.logoSprite.width / 2), 18);
         StillGraphic.aBoolean2713 = true;
         if (var1 > -50) {
           DummyClass58.method1654(-27);
@@ -96,7 +97,7 @@ public final class DummyClass58 {
   }
 
   public static void method1657(int var0, int var1) {
-    WidgetUpdate var2 = AudioStreamEncoder3.method466(4, 5, var0);
+    WidgetUpdate var2 = GlobalStatics_6.method466(4, 5, var0);
       var2.createIndexedColorSprite(true);
       if (var1 != -903) {
         DummyClass58.COMMAND_WM1 = null;

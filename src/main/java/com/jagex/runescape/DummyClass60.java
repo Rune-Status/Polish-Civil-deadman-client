@@ -2,6 +2,8 @@ package com.jagex.runescape;
 
 import com.jagex.runescape.common.GameString;
 import com.jagex.runescape.common.GameStringStatics;
+import com.jagex.runescape.done.AbstractMouseWheel;
+import com.jagex.runescape.done.AbstractObjectNodeWrapper;
 
 public final class DummyClass60 {
 
@@ -25,7 +27,7 @@ public final class DummyClass60 {
 
   public static void method912(boolean var0) {
     TextureSampler12.secureBuffer.position = 0;
-      EnumStringFetcher.lastPacketId1 = -1;
+      GlobalStatics_7.lastPacketId1 = -1;
       DummyClass36.aBoolean2615 = var0;
       GlobalStatics_0.packetLength = 0;
       DummyClass45.anInt987 = 0;
@@ -82,7 +84,7 @@ public final class DummyClass60 {
       var4.anInt2602 = var1;
       TextureSampler23.aClass130_3208.put(var2, var4);
       TextureSampler20.method232(var1, 16182);
-      Widget var5 = EnumStringFetcher.getWidget((byte) 122, var2);
+      Widget var5 = GlobalStatics_7.getWidget((byte) 122, var2);
       if (var5 != null) {
         DummyClass29.method909(120, var5);
       }
@@ -106,11 +108,11 @@ public final class DummyClass60 {
 
       if (TextureSampler25.amountContextActions == 1) {
         DummyClass36.aBoolean2615 = false;
-        AbstractSomethingTexture.method1340(GlobalStatics_1.anInt1462,
+        GlobalStatics_3.method1340(GlobalStatics_1.anInt1462,
           SomethingWorldMapy.anInt3552, (byte) -40, TextureSampler29.anInt3395,
           SomethingQuickChat2.anInt3537);
       } else {
-        AbstractSomethingTexture.method1340(GlobalStatics_1.anInt1462,
+        GlobalStatics_3.method1340(GlobalStatics_1.anInt1462,
           SomethingWorldMapy.anInt3552, (byte) -40, TextureSampler29.anInt3395,
           SomethingQuickChat2.anInt3537);
         var7 = FloorOverlay.aClass3_Sub28_Sub17_2096.method682(SomethingTexture4.aClass94_2667);
@@ -129,19 +131,19 @@ public final class DummyClass60 {
       }
 
       if (var5 != null) {
-        FileRequester.method2104(var5, false, 55);
+        GlobalStatics_7.method2104(var5, false, 55);
       }
 
       TextureSampler24.method226(var1, 58);
       if ((InventoryConfig.anInt3655 != -1)) {
-        ClassCheckRequest.method124(var0 ^ 6509, 1, InventoryConfig.anInt3655);
+        GlobalStatics_6.method124(var0 ^ 6509, 1, InventoryConfig.anInt3655);
       }
 
       return var4;
   }
 
   public static void method915(GameString var0, int var1) {
-    int var2 = ByteArrayNode.method576(var0, false);
+    int var2 = GlobalStatics_6.method576(var0, false);
       if (var1 != var2) {
         GlobalStatics_2.method565((byte) 86, DummyClass25.aClass131_1624.aShortArray1727[var2],
           DummyClass25.aClass131_1624.aShortArray1718[var2]);

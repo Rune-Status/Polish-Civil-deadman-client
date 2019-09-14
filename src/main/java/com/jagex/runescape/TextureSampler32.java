@@ -3,6 +3,7 @@ package com.jagex.runescape;
 import com.jagex.runescape.buffer.Buffer;
 import com.jagex.runescape.common.GameString;
 import com.jagex.runescape.common.GameStringStatics;
+import com.jagex.runescape.done.AbstractTextureSampler;
 import com.jagex.runescape.opengl.SomethingGl0;
 
 public final class TextureSampler32 extends AbstractTextureSampler {
@@ -140,14 +141,14 @@ public final class TextureSampler32 extends AbstractTextureSampler {
            node != null; node = (ProjectileNode) TextureSampler13.projectiles.getNext()) {
         Projectile projectile = node.projectile;
         if ((GameWorldSomething.currentPlane == projectile.anInt2907)
-          && (projectile.anInt2899 >= AbstractGameWorld.updateCycle)) {
-          if (AbstractGameWorld.updateCycle >= projectile.anInt2925) {
+          && (projectile.anInt2899 >= GlobalStatics_4.updateCycle)) {
+          if (GlobalStatics_4.updateCycle >= projectile.anInt2925) {
             if ((projectile.targetId > 0)) {
               NPC var3 = TextureSampler5.npcs[-1 + projectile.targetId];
               if (var3 != null && var3.anInt2819 >= 0 && var3.anInt2819 < 13312
                 && var3.anInt2829 >= 0 && (var3.anInt2829 < 13312)) {
-                projectile.method2024(var3.anInt2829, 1, AbstractGameWorld.updateCycle,
-                  BufferData.method1736(projectile.anInt2907, 1, var3.anInt2819, var3.anInt2829)
+                projectile.method2024(var3.anInt2829, 1, GlobalStatics_4.updateCycle,
+                  GlobalStatics_6.method1736(projectile.anInt2907, 1, var3.anInt2819, var3.anInt2829)
                     - projectile.anInt2903, var3.anInt2819);
               }
             }
@@ -163,13 +164,13 @@ public final class TextureSampler32 extends AbstractTextureSampler {
 
               if (player != null && player.anInt2819 >= 0 && (player.anInt2819 < 13312)
                 && player.anInt2829 >= 0 && (player.anInt2829 < 13312)) {
-                projectile.method2024(player.anInt2829, 1, AbstractGameWorld.updateCycle,
-                  BufferData.method1736(projectile.anInt2907, 1, player.anInt2819, player.anInt2829)
+                projectile.method2024(player.anInt2829, 1, GlobalStatics_4.updateCycle,
+                  GlobalStatics_6.method1736(projectile.anInt2907, 1, player.anInt2819, player.anInt2829)
                     - projectile.anInt2903, player.anInt2819);
               }
             }
 
-            projectile.update(DisplayMode.loopCycle);
+            projectile.update(GlobalStatics_7.loopCycle);
             DummyClass29.addNodeToSceneGraph(GameWorldSomething.currentPlane,
               (int) projectile.aDouble2920, (int) projectile.aDouble2900,
               (int) projectile.aDouble2914, 60, projectile, projectile.anInt2924, -1L, false);

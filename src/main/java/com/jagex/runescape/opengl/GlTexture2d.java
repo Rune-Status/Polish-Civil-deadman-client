@@ -1,11 +1,7 @@
 package com.jagex.runescape.opengl;
 
-import com.jagex.runescape.AbstractGameWorld;
-import com.jagex.runescape.AudioStreamEncoder3;
-import com.jagex.runescape.DummyClass32;
+import com.jagex.runescape.*;
 import com.jagex.runescape.common.GameString;
-import com.jagex.runescape.SceneGraphTile;
-import com.jagex.runescape.SceneSomething;
 import com.jagex.runescape.node.SubNode;
 import com.jagex.runescape.common.GameStringStatics;
 import java.lang.reflect.Method;
@@ -107,7 +103,7 @@ public final class GlTexture2d extends SubNode {
 
   public static void method710(byte var0) {
     if (var0 >= 122) {
-        AbstractGameWorld.floorUnderlays.method1523((byte) -104);
+        GlobalStatics_4.floorUnderlays.method1523((byte) -104);
       }
   }
 
@@ -130,7 +126,7 @@ public final class GlTexture2d extends SubNode {
           try {
             Runtime var2 = Runtime.getRuntime();
             Long var3 = (Long) var1.invoke(var2, (Object[]) null);
-            AudioStreamEncoder3.anInt3492 =
+            GlobalStatics_6.anInt3492 =
                 (int) (var3.longValue() / 1048576L) + 1;
           } catch (Throwable var4) {
           }

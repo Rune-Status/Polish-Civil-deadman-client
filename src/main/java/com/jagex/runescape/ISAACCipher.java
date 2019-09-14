@@ -308,7 +308,7 @@ public final class ISAACCipher {
           || MonoChromaticImageBuffer.aClass3_Sub28_Sub16_2560 == null)
           && Projectile.sprites.isLoaded(DummyClass39.anInt739)
           && Projectile.sprites.isLoaded(
-          BitVariable.anInt1126) && Projectile.sprites
+          GlobalStatics_6.anInt1126) && Projectile.sprites
           .isLoaded(GroundItem.anInt2937)) {
         DummyClass53.aClass3_Sub28_Sub16_1339 =
             GlobalStatics_2
@@ -316,7 +316,7 @@ public final class ISAACCipher {
                     (byte) 39);
         GlobalStatics_4.aClass3_Sub28_Sub16_824 =
             GlobalStatics_2
-                .method562(Projectile.sprites, 0, BitVariable.anInt1126,
+                .method562(Projectile.sprites, 0, GlobalStatics_6.anInt1126,
                     (byte) 39);
         MonoChromaticImageBuffer.aClass3_Sub28_Sub16_2560 =
             GlobalStatics_2

@@ -3,6 +3,7 @@ package com.jagex.runescape;
 import com.jagex.runescape.buffer.Buffer;
 import com.jagex.runescape.common.GameString;
 import com.jagex.runescape.common.GameStringStatics;
+import com.jagex.runescape.done.AbstractTextureSampler;
 import com.jagex.runescape.opengl.GLStatics;
 
 public final class TextureSampler22 extends AbstractTextureSampler {
@@ -85,7 +86,7 @@ public final class TextureSampler22 extends AbstractTextureSampler {
       } else {
         byte[] var3;
         if (var0 < '\u8000') {
-          var3 = Cache.quickchats.getBytes(0, var0);
+          var3 = GlobalStatics_6.quickchats.getBytes(0, var0);
         } else {
           var3 = Queue.globalQuickchats.getBytes(0, var0 & 32767);
         }

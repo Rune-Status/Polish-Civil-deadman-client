@@ -124,11 +124,11 @@ public final class SomethingQuickChat extends SubNode {
               int var6 = var1.readUnsignedShort();
               this.anIntArray3566[var5] = var6;
               this.anIntArrayArray3570[var5] =
-                  new int[AbstractAudioOutputStream.anIntArray1976[var6]];
+                  new int[GlobalStatics_5.anIntArray1976[var6]];
 
               for (int var7 = 0;
-                  AbstractAudioOutputStream.anIntArray1976[var6] > var7;
-                  ++var7) {
+                   GlobalStatics_5.anIntArray1976[var6] > var7;
+                   ++var7) {
                 this.anIntArrayArray3570[var5][var7] = var1.readUnsignedShort();
               }
             }

@@ -5,6 +5,7 @@ import com.jagex.runescape.common.GameString;
 import com.jagex.runescape.common.GameStringStatics;
 import com.jagex.runescape.common.HashTable;
 import com.jagex.runescape.common.StringNode;
+import com.jagex.runescape.done.*;
 import com.jagex.runescape.huffman.HuffmanEncoderStatics;
 import com.jagex.runescape.node.Node;
 import com.jagex.runescape.opengl.GLStatics;
@@ -279,9 +280,9 @@ public final class ItemConfig {
   }
 
   public AbstractModel getModel(int var1, int var2, int var3,
-      AnimationSequence var4,
-      int var5,
-      int var6 ) {
+                                AnimationSequence var4,
+                                int var5,
+                                int var6 ) {
     if (var1 < 94) {
         this.anInt755 = -67;
       }
@@ -770,7 +771,7 @@ public final class ItemConfig {
   public static void callScript(byte byte0, int i, ClientScriptCall class3_sub16) {
     Object[] aobj = class3_sub16.arguments;
     int j = ((Integer) aobj[0]).intValue();
-    ClientScript class3_sub28_sub15 = ByteArrayNode.method572(j, (byte) -91);
+    ClientScript class3_sub28_sub15 = GlobalStatics_6.method572(j, (byte) -91);
     if (class3_sub28_sub15 == null) {
       return;
     }
@@ -960,7 +961,7 @@ public final class ItemConfig {
         }
         if (j1 == 40) {
           int i4 = ai1[i1];
-          ClientScript class3_sub28_sub15_1 = ByteArrayNode.method572(i4, (byte) -91);
+          ClientScript class3_sub28_sub15_1 = GlobalStatics_6.method572(i4, (byte) -91);
           int[] ai2 = new int[class3_sub28_sub15_1.anInt3680];
           GameString[] aclass94 = new GameString[class3_sub28_sub15_1.anInt3687];
           for (int l75 = 0; class3_sub28_sub15_1.anInt3678 > l75; l75++) {
@@ -1072,7 +1073,7 @@ public final class ItemConfig {
           if (i44 == 0) {
             throw new RuntimeException();
           }
-          Widget class11_21 = EnumStringFetcher.getWidget((byte) 121, j6);
+          Widget class11_21 = GlobalStatics_7.getWidget((byte) 121, j6);
           if (class11_21.aClass11Array262 == null) {
             class11_21.aClass11Array262 = new Widget[k66 + 1];
           }
@@ -1112,14 +1113,14 @@ public final class ItemConfig {
                   "Tried to cc_delete public static active-component!");
             }
           }
-          Widget class11_17 = EnumStringFetcher.getWidget((byte) 111, class11.anInt279);
+          Widget class11_17 = GlobalStatics_7.getWidget((byte) 111, class11.anInt279);
           class11_17.aClass11Array262[class11.anInt191] = null;
           DummyClass29.method909(-8, class11_17);
           continue;
         }
         if ((j1 == 102)) {
           Widget class11_1 =
-            EnumStringFetcher.getWidget((byte) 109, GroundItem.anIntArray2929[--k]);
+            GlobalStatics_7.getWidget((byte) 109, GroundItem.anIntArray2929[--k]);
           class11_1.aClass11Array262 = null;
           DummyClass29.method909(-50, class11_1);
           continue;
@@ -1145,7 +1146,7 @@ public final class ItemConfig {
           break;
         }
         int l6 = GroundItem.anIntArray2929[--k];
-        Widget class11_18 = EnumStringFetcher.getWidget((byte) 113, l6);
+        Widget class11_18 = GlobalStatics_7.getWidget((byte) 113, l6);
         if (class11_18 != null) {
           GroundItem.anIntArray2929[k++] = 1;
           if (flag) {
@@ -1164,7 +1165,7 @@ public final class ItemConfig {
           if (j1 < 2000) {
             class11_2 = flag ? Something3dRoot.aClass11_2055 : SomethingPacket116.aClass11_1749;
           } else {
-            class11_2 = EnumStringFetcher.getWidget((byte) 122, GroundItem.anIntArray2929[--k]);
+            class11_2 = GlobalStatics_7.getWidget((byte) 122, GroundItem.anIntArray2929[--k]);
             j1 -= 1000;
           }
           if ((j1 == 1000)) {
@@ -1219,7 +1220,7 @@ public final class ItemConfig {
             DummyClass29.method909(122, class11_2);
             TextureSampler24.method225(14, class11_2);
             if ((class11_2.anInt187 == 0)) {
-              FileRequester.method2104(class11_2, false, 32);
+              GlobalStatics_7.method2104(class11_2, false, 32);
             }
             continue;
           }
@@ -1241,7 +1242,7 @@ public final class ItemConfig {
             DummyClass29.method909(-99, class11_2);
             TextureSampler24.method225(14, class11_2);
             if (class11_2.anInt187 == 0) {
-              FileRequester.method2104(class11_2, false, -127);
+              GlobalStatics_7.method2104(class11_2, false, -127);
             }
             continue;
           }
@@ -1256,7 +1257,7 @@ public final class ItemConfig {
             if ((j1 >= 1300) && (j1 < 1400) || (j1 >= 2300) && (j1 < 2400)) {
               Widget class11_3;
               if (j1 >= 2000) {
-                class11_3 = EnumStringFetcher.getWidget((byte) 119, GroundItem.anIntArray2929[--k]);
+                class11_3 = GlobalStatics_7.getWidget((byte) 119, GroundItem.anIntArray2929[--k]);
                 j1 -= 1000;
               } else {
                 class11_3 = flag ? Something3dRoot.aClass11_2055 : SomethingPacket116.aClass11_1749;
@@ -1418,7 +1419,7 @@ public final class ItemConfig {
                     if (class11_6.aClass94Array171 == null
                       || (l45 >= class11_6.aClass94Array171.length)
                       || class11_6.aClass94Array171[l45] == null) {
-                      GlobalStatics_0.aClass94Array75[l++] = AreaSoundEffect.aClass94_2331;
+                      GlobalStatics_0.aClass94Array75[l++] = GlobalStatics_6.aClass94_2331;
                     } else {
                       GlobalStatics_0.aClass94Array75[l++] = class11_6.aClass94Array171[l45];
                     }
@@ -1430,13 +1431,13 @@ public final class ItemConfig {
                   if (class11_6.aClass94_277 != null) {
                     GlobalStatics_0.aClass94Array75[l++] = class11_6.aClass94_277;
                   } else {
-                    GlobalStatics_0.aClass94Array75[l++] = AreaSoundEffect.aClass94_2331;
+                    GlobalStatics_0.aClass94Array75[l++] = GlobalStatics_6.aClass94_2331;
                   }
                   continue;
                 }
                 if (j1 < 2600) {
                   Widget class11_7 =
-                    EnumStringFetcher.getWidget((byte) 114, GroundItem.anIntArray2929[--k]);
+                    GlobalStatics_7.getWidget((byte) 114, GroundItem.anIntArray2929[--k]);
                   if (j1 == 2500) {
                     GroundItem.anIntArray2929[k++] = class11_7.anInt306;
                     continue;
@@ -1469,7 +1470,7 @@ public final class ItemConfig {
                       if ((j1 < 3200)) {
                         if ((j1 == 3100)) {
                           GameString class94_3 = GlobalStatics_0.aClass94Array75[--l];
-                          GameBuffer.printMessage(AreaSoundEffect.aClass94_2331, 0, class94_3, -1);
+                          GameBuffer.printMessage(GlobalStatics_6.aClass94_2331, 0, class94_3, -1);
                           continue;
                         }
                         if ((j1 == 3101)) {
@@ -1494,14 +1495,14 @@ public final class ItemConfig {
                           continue;
                         }
                         if ((j1 == 3105)) {
-                          AudioSomethingSomething.anInt2500++;
+                          GlobalStatics_6.anInt2500++;
                           GameString class94_5 = GlobalStatics_0.aClass94Array75[--l];
                           TextureSampler12.secureBuffer.writePacket(244);
                           TextureSampler12.secureBuffer.writeLong(class94_5.toBase37());
                           continue;
                         }
                         if (j1 == 3106) {
-                          EnumStringFetcher.anInt2165++;
+                          GlobalStatics_7.anInt2165++;
                           GameString class94_6 = GlobalStatics_0.aClass94Array75[--l];
                           TextureSampler12.secureBuffer.writePacket(65);
                           TextureSampler12.secureBuffer.writeByte(1 + class94_6.getLength());
@@ -1519,7 +1520,7 @@ public final class ItemConfig {
                           int j46 = GroundItem.anIntArray2929[k + 1];
                           int j7 = GroundItem.anIntArray2929[k];
                           int l67 = GroundItem.anIntArray2929[2 + k];
-                          Widget class11_22 = EnumStringFetcher.getWidget((byte) 114, l67);
+                          Widget class11_22 = GlobalStatics_7.getWidget((byte) 114, l67);
                           WidgetUpdate.createIndexedColorSprite(j46, j7, 115, class11_22);
                           continue;
                         }
@@ -1562,7 +1563,7 @@ public final class ItemConfig {
                       }
                       if ((j1 < 3400)) {
                         if ((j1 == 3300)) {
-                          GroundItem.anIntArray2929[k++] = AbstractGameWorld.updateCycle;
+                          GroundItem.anIntArray2929[k++] = GlobalStatics_4.updateCycle;
                           continue;
                         }
                         if ((j1 == 3301)) {
@@ -1589,7 +1590,7 @@ public final class ItemConfig {
                         }
                         if (j1 == 3304) {
                           int l8 = GroundItem.anIntArray2929[--k];
-                          GroundItem.anIntArray2929[k++] = BufferObject.method2069(l8, -127).size;
+                          GroundItem.anIntArray2929[k++] = GlobalStatics_6.method2069(l8, -127).size;
                           continue;
                         }
                         if ((j1 == 3305)) {
@@ -1671,7 +1672,7 @@ public final class ItemConfig {
                           continue;
                         }
                         if (j1 == 3318) {
-                          GroundItem.anIntArray2929[k++] = ClientScriptCall.anInt2451;
+                          GroundItem.anIntArray2929[k++] = GlobalStatics_7.anInt2451;
                           continue;
                         }
                         if (j1 == 3321) {
@@ -1714,7 +1715,7 @@ public final class ItemConfig {
                         }
                         if (j1 == 3328) {
                           GroundItem.anIntArray2929[k++] =
-                            !SomethingVolume15.aBoolean2433 || BufferData.aBoolean1641 ? 0 : 1;
+                            !SomethingVolume15.aBoolean2433 || GlobalStatics_6.aBoolean1641 ? 0 : 1;
                           continue;
                         }
                         if (j1 == 3329) {
@@ -1732,7 +1733,7 @@ public final class ItemConfig {
                           int k48 = GroundItem.anIntArray2929[1 + k];
                           int l11 = GroundItem.anIntArray2929[k];
                           GroundItem.anIntArray2929[k++] =
-                            DisplayMode.method1643(10131, false, l11, k48);
+                            GlobalStatics_7.method1643(10131, false, l11, k48);
                           continue;
                         }
                         if (j1 == 3332) {
@@ -1740,11 +1741,11 @@ public final class ItemConfig {
                           int i12 = GroundItem.anIntArray2929[k];
                           int l48 = GroundItem.anIntArray2929[k + 1];
                           GroundItem.anIntArray2929[k++] =
-                            DisplayMode.method1643(10131, true, i12, l48);
+                            GlobalStatics_7.method1643(10131, true, i12, l48);
                           continue;
                         }
                         if (j1 == 3333) {
-                          GroundItem.anIntArray2929[k++] = EnumStringFetcher.anInt2161;
+                          GroundItem.anIntArray2929[k++] = GlobalStatics_7.anInt2161;
                           continue;
                         }
                         if (j1 == 3335) {
@@ -1855,7 +1856,7 @@ public final class ItemConfig {
                         if (j1 == 3601) {
                           int l13 = GroundItem.anIntArray2929[--k];
                           if ((HintMarker.anInt1357 != 2) || (l13 >= FileSystem.anInt104)) {
-                            GlobalStatics_0.aClass94Array75[l++] = AreaSoundEffect.aClass94_2331;
+                            GlobalStatics_0.aClass94Array75[l++] = GlobalStatics_6.aClass94_2331;
                           } else {
                             GlobalStatics_0.aClass94Array75[l++] = SceneSomething2.aClass94Array1046[l13];
                           }
@@ -1867,7 +1868,7 @@ public final class ItemConfig {
                               || (FileSystem.anInt104 <= i14)) {
                             GroundItem.anIntArray2929[k++] = 0;
                           } else {
-                            GroundItem.anIntArray2929[k++] = Cursor.anIntArray882[i14];
+                            GroundItem.anIntArray2929[k++] = GlobalStatics_7.anIntArray882[i14];
                           }
                           continue;
                         }
@@ -1908,7 +1909,7 @@ public final class ItemConfig {
                         }
                         if ((j1 == 3609)) {
                           GameString class94_12 = GlobalStatics_0.aClass94Array75[--l];
-                          if (class94_12.method1558(AreaSoundEffect.aClass94_2323, 0)
+                          if (class94_12.method1558(GlobalStatics_6.aClass94_2323, 0)
                             || class94_12.method1558(TextureSampler15.aClass94_3190, 0)) {
                             class94_12 = class94_12.substring(7);
                           }
@@ -1921,7 +1922,7 @@ public final class ItemConfig {
                           if ((HintMarker.anInt1357 == 2) && FileSystem.anInt104 > k14) {
                             GlobalStatics_0.aClass94Array75[l++] = GlobalStatics_2.aClass94Array2566[k14];
                           } else {
-                            GlobalStatics_0.aClass94Array75[l++] = AreaSoundEffect.aClass94_2331;
+                            GlobalStatics_0.aClass94Array75[l++] = GlobalStatics_6.aClass94_2331;
                           }
                           continue;
                         }
@@ -1929,7 +1930,7 @@ public final class ItemConfig {
                           if (Widget.aClass94_251 != null) {
                             GlobalStatics_0.aClass94Array75[l++] = Widget.aClass94_251.formatName((byte) -50);
                           } else {
-                            GlobalStatics_0.aClass94Array75[l++] = AreaSoundEffect.aClass94_2331;
+                            GlobalStatics_0.aClass94Array75[l++] = GlobalStatics_6.aClass94_2331;
                           }
                           continue;
                         }
@@ -1944,10 +1945,10 @@ public final class ItemConfig {
                         if ((j1 == 3613)) {
                           int l14 = GroundItem.anIntArray2929[--k];
                           if (Widget.aClass94_251 == null || (GlobalStatics_2.anInt2572 <= l14)) {
-                            GlobalStatics_0.aClass94Array75[l++] = AreaSoundEffect.aClass94_2331;
+                            GlobalStatics_0.aClass94Array75[l++] = GlobalStatics_6.aClass94_2331;
                           } else {
                             GlobalStatics_0.aClass94Array75[l++] =
-                              ClientScript.aClass3_Sub19Array3694[l14].name.formatName((byte) -50);
+                              GlobalStatics_6.aClass3_Sub19Array3694[l14].name.formatName((byte) -50);
                           }
                           continue;
                         }
@@ -1957,7 +1958,7 @@ public final class ItemConfig {
                             GroundItem.anIntArray2929[k++] = 0;
                           } else {
                             GroundItem.anIntArray2929[k++] =
-                              ClientScript.aClass3_Sub19Array3694[i15].anInt2478;
+                              GlobalStatics_6.aClass3_Sub19Array3694[i15].anInt2478;
                           }
                           continue;
                         }
@@ -1968,7 +1969,7 @@ public final class ItemConfig {
                             GroundItem.anIntArray2929[k++] = 0;
                           } else {
                             GroundItem.anIntArray2929[k++] =
-                              ClientScript.aClass3_Sub19Array3694[j15].aByte2472;
+                              GlobalStatics_6.aClass3_Sub19Array3694[j15].aByte2472;
                           }
                           continue;
                         }
@@ -1978,16 +1979,16 @@ public final class ItemConfig {
                         }
                         if ((j1 == 3617)) {
                           GameString class94_13 = GlobalStatics_0.aClass94Array75[--l];
-                          DisplayMode.method1642(3803, class94_13);
+                          GlobalStatics_7.method1642(3803, class94_13);
                           continue;
                         }
                         if ((j1 == 3618)) {
-                          GroundItem.anIntArray2929[k++] = CollisionMap.aByte1308;
+                          GroundItem.anIntArray2929[k++] = GlobalStatics_7.aByte1308;
                           continue;
                         }
                         if (j1 == 3619) {
                           GameString class94_14 = GlobalStatics_0.aClass94Array75[--l];
-                          AudioSomethingSomething.method400(class94_14.toBase37(), 0);
+                          GlobalStatics_6.method400(class94_14.toBase37(), 0);
                           continue;
                         }
                         if (j1 == 3620) {
@@ -1998,14 +1999,14 @@ public final class ItemConfig {
                           if (HintMarker.anInt1357 == 0) {
                             GroundItem.anIntArray2929[k++] = -1;
                           } else {
-                            GroundItem.anIntArray2929[k++] = AnimationSomething.anInt3591;
+                            GroundItem.anIntArray2929[k++] = GlobalStatics_6.anInt3591;
                           }
                           continue;
                         }
                         if (j1 == 3622) {
                           int k15 = GroundItem.anIntArray2929[--k];
-                          if (HintMarker.anInt1357 == 0 || AnimationSomething.anInt3591 <= k15) {
-                            GlobalStatics_0.aClass94Array75[l++] = AreaSoundEffect.aClass94_2331;
+                          if (HintMarker.anInt1357 == 0 || GlobalStatics_6.anInt3591 <= k15) {
+                            GlobalStatics_0.aClass94Array75[l++] = GlobalStatics_6.aClass94_2331;
                           } else {
                             GlobalStatics_0.aClass94Array75[l++] = GameStringStatics
                                 .stringFromBase37(-29664,
@@ -2015,19 +2016,19 @@ public final class ItemConfig {
                         }
                         if (j1 == 3623) {
                           GameString class94_15 = GlobalStatics_0.aClass94Array75[--l];
-                          if (class94_15.method1558(AreaSoundEffect.aClass94_2323, 0)
+                          if (class94_15.method1558(GlobalStatics_6.aClass94_2323, 0)
                             || class94_15.method1558(TextureSampler15.aClass94_3190, 0)) {
                             class94_15 = class94_15.substring(7);
                           }
                           GroundItem.anIntArray2929[k++] =
-                            AudioStreamEncoder3.method467(class94_15, 0) ? 1 : 0;
+                            GlobalStatics_6.method467(class94_15, 0) ? 1 : 0;
                           continue;
                         }
                         if ((j1 == 3624)) {
                           int l15 = GroundItem.anIntArray2929[--k];
-                          if (ClientScript.aClass3_Sub19Array3694 != null
+                          if (GlobalStatics_6.aClass3_Sub19Array3694 != null
                             && GlobalStatics_2.anInt2572 > l15
-                            && ClientScript.aClass3_Sub19Array3694[l15].name.method1531(
+                            && GlobalStatics_6.aClass3_Sub19Array3694[l15].name.method1531(
                             TextureCache.localPlayer.name)) {
                             GroundItem.anIntArray2929[k++] = 1;
                           } else {
@@ -2037,7 +2038,7 @@ public final class ItemConfig {
                         }
                         if ((j1 == 3625)) {
                           if (DummyClass12.aClass94_2035 == null) {
-                            GlobalStatics_0.aClass94Array75[l++] = AreaSoundEffect.aClass94_2331;
+                            GlobalStatics_0.aClass94Array75[l++] = GlobalStatics_6.aClass94_2331;
                           } else {
                             GlobalStatics_0.aClass94Array75[l++] =
                               DummyClass12.aClass94_2035.formatName((byte) -50);
@@ -2047,10 +2048,10 @@ public final class ItemConfig {
                         if (j1 == 3626) {
                           int i16 = GroundItem.anIntArray2929[--k];
                           if (Widget.aClass94_251 == null || (GlobalStatics_2.anInt2572 <= i16)) {
-                            GlobalStatics_0.aClass94Array75[l++] = AreaSoundEffect.aClass94_2331;
+                            GlobalStatics_0.aClass94Array75[l++] = GlobalStatics_6.aClass94_2331;
                           } else {
                             GlobalStatics_0.aClass94Array75[l++] =
-                              ClientScript.aClass3_Sub19Array3694[i16].aClass94_2473;
+                              GlobalStatics_6.aClass3_Sub19Array3694[i16].aClass94_2473;
                           }
                           continue;
                         }
@@ -2066,7 +2067,7 @@ public final class ItemConfig {
                         }
                         if (j1 == 3628) {
                           GameString class94_16 = GlobalStatics_0.aClass94Array75[--l];
-                          if (class94_16.method1558(AreaSoundEffect.aClass94_2323, 0)
+                          if (class94_16.method1558(GlobalStatics_6.aClass94_2323, 0)
                             || class94_16.method1558(TextureSampler15.aClass94_3190, 0)) {
                             class94_16 = class94_16.substring(7);
                           }
@@ -2361,7 +2362,7 @@ public final class ItemConfig {
                                     class94_46 = GlobalStatics_0.aClass94Array2580[i24];
                                   }
                                   if (class94_46 == null) {
-                                    class94_46 = AreaSoundEffect.aClass94_2331;
+                                    class94_46 = GlobalStatics_6.aClass94_2331;
                                   }
                                   GlobalStatics_0.aClass94Array75[l++] = class94_46;
                                   continue;
@@ -2383,9 +2384,9 @@ public final class ItemConfig {
                                 if (j1 == 5008) {
                                   GameString string = GlobalStatics_0.aClass94Array75[--l];
                                   if (string.method1558(BZipDecompressorState.COMMAND_PREFIX, 0)) {
-                                    FileCacheRequester.handleCommand(string);
+                                    GlobalStatics_7.handleCommand(string);
                                   } else if (TextureSampler35.rights != 0
-                                    || (!SomethingVolume15.aBoolean2433 || BufferData.aBoolean1641)
+                                    || (!SomethingVolume15.aBoolean2433 || GlobalStatics_6.aBoolean1641)
                                     && !TextureSampler31.aBoolean3166) {
                                     GameString class94_47 = string.method1534();
                                     DummyClass11.anInt2037++;
@@ -2694,7 +2695,7 @@ public final class ItemConfig {
                                   GameString class94_48 = GlobalStatics_0.aClass94Array75[l + 1];
                                   GameString class94_19 = GlobalStatics_0.aClass94Array75[l];
                                   if ((TextureSampler35.rights != 0)
-                                    || (!SomethingVolume15.aBoolean2433 || BufferData.aBoolean1641)
+                                    || (!SomethingVolume15.aBoolean2433 || GlobalStatics_6.aBoolean1641)
                                     && !TextureSampler31.aBoolean3166) {
                                     TextureSampler12.secureBuffer.writePacket(201);
                                     GlobalStatics_2.anInt348++;
@@ -2715,7 +2716,7 @@ public final class ItemConfig {
                                     class94_49 = TextureSampler4.aClass94Array3226[k24];
                                   }
                                   if (class94_49 == null) {
-                                    class94_49 = AreaSoundEffect.aClass94_2331;
+                                    class94_49 = GlobalStatics_6.aClass94_2331;
                                   }
                                   GlobalStatics_0.aClass94Array75[l++] = class94_49;
                                   continue;
@@ -2727,7 +2728,7 @@ public final class ItemConfig {
                                     class94_50 = DummyClass4.aClass94Array3003[l24];
                                   }
                                   if (class94_50 == null) {
-                                    class94_50 = AreaSoundEffect.aClass94_2331;
+                                    class94_50 = GlobalStatics_6.aClass94_2331;
                                   }
                                   GlobalStatics_0.aClass94Array75[l++] = class94_50;
                                   continue;
@@ -2847,7 +2848,7 @@ public final class ItemConfig {
                                   continue;
                                 }
                                 if (j1 == 5059) {
-                                  ByteArrayNode.anInt3613++;
+                                  GlobalStatics_6.anInt3613++;
                                   TextureSampler12.secureBuffer.writePacket(167);
                                   TextureSampler12.secureBuffer.writeByte(0);
                                   int j27 = TextureSampler12.secureBuffer.position;
@@ -2879,7 +2880,7 @@ public final class ItemConfig {
                                 }
                                 if ((j1 == 5061)) {
                                   TextureSampler12.secureBuffer.writePacket(167);
-                                  ByteArrayNode.anInt3613++;
+                                  GlobalStatics_6.anInt3613++;
                                   TextureSampler12.secureBuffer.writeByte(0);
                                   int k27 = TextureSampler12.secureBuffer.position;
                                   TextureSampler12.secureBuffer.writeByte(1);
@@ -3039,11 +3040,11 @@ public final class ItemConfig {
                                   continue;
                                 }
                                 if (j1 == 5201) {
-                                  GroundItem.anIntArray2929[k++] = ByteArrayNode.method571(-109);
+                                  GroundItem.anIntArray2929[k++] = GlobalStatics_6.method571(-109);
                                   continue;
                                 }
                                 if (j1 == 5202) {
-                                  AudioStreamEncoder4.method503((byte) -53,
+                                  GlobalStatics_6.method503((byte) -53,
                                     GroundItem.anIntArray2929[--k]);
                                   continue;
                                 }
@@ -3069,7 +3070,7 @@ public final class ItemConfig {
                                   if (class3_sub28_sub3_4 != null) {
                                     GlobalStatics_0.aClass94Array75[l++] = class3_sub28_sub3_4.aClass94_3561;
                                   } else {
-                                    GlobalStatics_0.aClass94Array75[l++] = AreaSoundEffect.aClass94_2331;
+                                    GlobalStatics_0.aClass94Array75[l++] = GlobalStatics_6.aClass94_2331;
                                   }
                                   continue;
                                 }
@@ -3080,7 +3081,7 @@ public final class ItemConfig {
                                     && class3_sub28_sub3.aClass94_3554 != null) {
                                     GlobalStatics_0.aClass94Array75[l++] = class3_sub28_sub3.aClass94_3554;
                                   } else {
-                                    GlobalStatics_0.aClass94Array75[l++] = AreaSoundEffect.aClass94_2331;
+                                    GlobalStatics_0.aClass94Array75[l++] = GlobalStatics_6.aClass94_2331;
                                   }
                                   continue;
                                 }
@@ -3130,14 +3131,14 @@ public final class ItemConfig {
                                   int k70 = 0;
                                   GameString class94_51;
                                   if ((j30 == -1)) {
-                                    class94_51 = AreaSoundEffect.aClass94_2331;
+                                    class94_51 = GlobalStatics_6.aClass94_2331;
                                   } else {
                                     class94_51 = DummyClass25.aClass131_1624.aClass94Array1721[j30];
                                     k70 = DummyClass25.aClass131_1624
                                         .method1791(j30, 8);
                                   }
                                   class94_51 = class94_51.method1560(Mobile.aClass94_2765, true,
-                                    EnumStringFetcher.aClass94_2168);
+                                    GlobalStatics_7.aClass94_2168);
                                   GlobalStatics_0.aClass94Array75[l++] = class94_51;
                                   GroundItem.anIntArray2929[k++] = k70;
                                   continue;
@@ -3147,14 +3148,14 @@ public final class ItemConfig {
                                   int k30 = TextureSampler23.method251(-1);
                                   GameString class94_52;
                                   if ((k30 == -1)) {
-                                    class94_52 = AreaSoundEffect.aClass94_2331;
+                                    class94_52 = GlobalStatics_6.aClass94_2331;
                                   } else {
                                     class94_52 = DummyClass25.aClass131_1624.aClass94Array1721[k30];
                                     i71 = DummyClass25.aClass131_1624
                                         .method1791(k30, 8);
                                   }
                                   class94_52 = class94_52.method1560(Mobile.aClass94_2765, true,
-                                    EnumStringFetcher.aClass94_2168);
+                                    GlobalStatics_7.aClass94_2168);
                                   GlobalStatics_0.aClass94Array75[l++] = class94_52;
                                   GroundItem.anIntArray2929[k++] = i71;
                                   continue;
@@ -3256,7 +3257,7 @@ public final class ItemConfig {
                                 }
                                 if ((j1 == 5305)) {
                                   int j59 = TextureSampler21.anInt3071;
-                                  int j32 = AbstractTextureSampler.anInt2378;
+                                  int j32 = GlobalStatics_3.anInt2378;
                                   int j71 = -1;
                                   DisplayMode[] aclass106_2 = GlobalStatics_0.method88((byte) 28);
                                   int i80 = 0;
@@ -3307,7 +3308,7 @@ public final class ItemConfig {
                                   GameString class94_23 = GlobalStatics_0.aClass94Array75[l];
                                   GameString class94_54 = GlobalStatics_0.aClass94Array75[l + 1];
                                   int k71 = GroundItem.anIntArray2929[--k];
-                                  AnimationSequence.anInt1853++;
+                                  GlobalStatics_3.anInt1853++;
                                   TextureSampler12.secureBuffer.writePacket(117);
                                   TextureSampler12.secureBuffer.writeByte(
                                     TextureSampler29.getByteLength(class94_23) - (
@@ -3326,7 +3327,7 @@ public final class ItemConfig {
                                   GlobalStatics_0.method746((byte) -29);
                                   DummyClass10.method2265(0);
                                   GameWorld.method1076(88);
-                                  Cache.method1093(false);
+                                  GlobalStatics_6.method1093(false);
                                   continue;
                                 }
                                 if ((j1 == 5405)) {
@@ -3386,7 +3387,7 @@ public final class ItemConfig {
                                   continue;
                                 }
                                 if (j1 == 5419) {
-                                  GameString class94_24 = AreaSoundEffect.aClass94_2331;
+                                  GameString class94_24 = GlobalStatics_6.aClass94_2331;
                                   if (SceneShadowMap.aClass64_1778 != null) {
                                     class94_24 =
                                       DummyClass58.method1653(SceneShadowMap.aClass64_1778.anInt979,
@@ -3422,7 +3423,7 @@ public final class ItemConfig {
                                   if (TextureSampler27.FRAME == null && (!flag5
                                     || (SignLink.anInt1214 == 3)
                                     || !SignLink.formattedOsName.startsWith("win")
-                                    || DisplayMode.aBoolean1451)) {
+                                    || GlobalStatics_7.aBoolean1451)) {
                                     DummyClass54.method1596(class94_64, (byte) 127, flag5);
                                   } else {
                                     GlobalStatics_0.aBoolean2154 = flag5;
@@ -3441,14 +3442,14 @@ public final class ItemConfig {
                                   if ((class94_26.getLength() > 0)) {
                                     if (GameBuffer.titlePrefixes == null) {
                                       GameBuffer.titlePrefixes =
-                                        new GameString[TextureSampler19.anIntArray3218[AbstractImageProducer.gameId]];
+                                        new GameString[TextureSampler19.anIntArray3218[GlobalStatics_5.gameId]];
                                     }
                                     GameBuffer.titlePrefixes[i72] = class94_26;
                                   }
                                   if ((class94_55.getLength() > 0)) {
                                     if (DummyOutputStream.titleSuffixes == null) {
                                       DummyOutputStream.titleSuffixes =
-                                        new GameString[TextureSampler19.anIntArray3218[AbstractImageProducer.gameId]];
+                                        new GameString[TextureSampler19.anIntArray3218[GlobalStatics_5.gameId]];
                                     }
                                     DummyOutputStream.titleSuffixes[i72] = class94_55;
                                   }
@@ -3467,20 +3468,20 @@ public final class ItemConfig {
                                   GameWorldSomething.anInt502 = GroundItem.anIntArray2929[4 + k];
                                   DummyClass54.anInt1400 = GroundItem.anIntArray2929[5 + k];
                                   DummyClass39.anInt739 = GroundItem.anIntArray2929[6 + k];
-                                  BitVariable.anInt1126 = GroundItem.anIntArray2929[7 + k];
+                                  GlobalStatics_6.anInt1126 = GroundItem.anIntArray2929[7 + k];
                                   GroundItem.anInt2937 = GroundItem.anIntArray2929[8 + k];
                                   TextureSampler32.anInt3351 = GroundItem.anIntArray2929[k + 9];
                                   DummyClass14.anInt1957 = GroundItem.anIntArray2929[10 + k];
                                   Projectile.sprites.isLoaded(GameWorldSomething.anInt502);
                                   Projectile.sprites.isLoaded(DummyClass54.anInt1400);
                                   Projectile.sprites.isLoaded(DummyClass39.anInt739);
-                                  Projectile.sprites.isLoaded(BitVariable.anInt1126);
+                                  Projectile.sprites.isLoaded(GlobalStatics_6.anInt1126);
                                   Projectile.sprites.isLoaded(GroundItem.anInt2937);
                                   FileUnpacker.aBoolean1951 = true;
                                   continue;
                                 }
                                 if ((j1 == 5425)) {
-                                  AbstractTextureSampler.method165(-7878);
+                                  GlobalStatics_3.method165(-7878);
                                   FileUnpacker.aBoolean1951 = false;
                                   continue;
                                 }
@@ -3533,10 +3534,10 @@ public final class ItemConfig {
                                       >> 1) <= (1 + k60))) {
                                     throw new RuntimeException();
                                   }
-                                  FileCacheRequester.anInt1081 = k60;
+                                  GlobalStatics_7.anInt1081 = k60;
                                   DummyClass8.anInt4020 = 0;
                                   DummyClass21.anInt1759 = GroundItem.anIntArray2929[k + 2];
-                                  AbstractTextureSampler.anInt2383 =
+                                  GlobalStatics_3.anInt2383 =
                                     GroundItem.anIntArray2929[k + 3];
                                   int l72 = GroundItem.anIntArray2929[k + 4];
                                   if (l72 >= 2) {
@@ -3554,22 +3555,22 @@ public final class ItemConfig {
                                   continue;
                                 }
                                 if ((j1 == 5503)) {
-                                  AnimationSomething.method560(-21556);
+                                  GlobalStatics_6.method560(-21556);
                                   continue;
                                 }
                                 if (j1 == 5504) {
                                   k -= 2;
-                                  AreaSoundEffect.anInt2309 = GroundItem.anIntArray2929[k];
+                                  GlobalStatics_6.anInt2309 = GroundItem.anIntArray2929[k];
                                   SpotAnimationConfig.anInt531 = GroundItem.anIntArray2929[k + 1];
                                   if (SomethingPacket116.anInt1753 == 2) {
                                     TextureSampler28.anInt3315 = SpotAnimationConfig.anInt531;
-                                    DummyClass17.anInt1823 = AreaSoundEffect.anInt2309;
+                                    DummyClass17.anInt1823 = GlobalStatics_6.anInt2309;
                                   }
-                                  Cache.method1098((byte) -74);
+                                  GlobalStatics_6.method1098((byte) -74);
                                   continue;
                                 }
                                 if (j1 == 5505) {
-                                  GroundItem.anIntArray2929[k++] = AreaSoundEffect.anInt2309;
+                                  GroundItem.anIntArray2929[k++] = GlobalStatics_6.anInt2309;
                                   continue;
                                 }
                                 if (j1 != 5506) {
@@ -3737,7 +3738,7 @@ public final class ItemConfig {
                                   if (j1 == 6016) {
                                     int i35 = GroundItem.anIntArray2929[--k];
                                     if (GlRenderer.useOpenGlRenderer) {
-                                      AnimationSomething.replaceCanvas = true;
+                                      GlobalStatics_6.replaceCanvas = true;
                                     }
                                     if (i35 < 0 || (i35 > 2)) {
                                       i35 = 0;
@@ -3761,7 +3762,7 @@ public final class ItemConfig {
                                     if ((j35 > 127)) {
                                       j35 = 127;
                                     }
-                                    ClientScriptCall.anInt2453 = j35;
+                                    GlobalStatics_7.anInt2453 = j35;
                                     DummyClass25.writeSettings(DummyClass35.signLink);
                                     StillGraphic.aBoolean2705 = false;
                                     continue;
@@ -3776,9 +3777,9 @@ public final class ItemConfig {
                                     }
                                     if ((k35 != BZipDecompressorState.anInt120)) {
                                       if ((BZipDecompressorState.anInt120 == 0)
-                                        && (AbstractFrameRegulator.anInt1691 != -1)) {
+                                        && (GlobalStatics_4.anInt1691 != -1)) {
                                         SceneSomething2.method1285(SomethingTexture1.fileUnpacker6,
-                                          false, AbstractFrameRegulator.anInt1691, 0, false, k35);
+                                          false, GlobalStatics_4.anInt1691, 0, false, k35);
                                         MidiSomething.aBoolean1158 = false;
                                       } else if ((k35 == 0)) {
                                         SceneNode.method1870(false);
@@ -3806,7 +3807,7 @@ public final class ItemConfig {
                                     continue;
                                   }
                                   if (j1 == 6021) {
-                                    FileCacheRequester.aBoolean1084 =
+                                    GlobalStatics_7.aBoolean1084 =
                                       (GroundItem.anIntArray2929[--k] == 1);
                                     GlobalStatics_0.method792(0x8c1111);
                                     continue;
@@ -3820,7 +3821,7 @@ public final class ItemConfig {
                                       i36 = 2;
                                     }
                                     boolean flag6 = false;
-                                    if (AudioStreamEncoder3.anInt3492 < 96) {
+                                    if (GlobalStatics_6.anInt3492 < 96) {
                                       flag6 = true;
                                       i36 = 0;
                                     }
@@ -3917,7 +3918,7 @@ public final class ItemConfig {
                                     continue;
                                   }
                                   if ((j1 == 6118)) {
-                                    GroundItem.anIntArray2929[k++] = ClientScriptCall.anInt2453;
+                                    GroundItem.anIntArray2929[k++] = GlobalStatics_7.anInt2453;
                                     continue;
                                   }
                                   if (j1 == 6119) {
@@ -4019,7 +4020,7 @@ public final class ItemConfig {
                                           GroundItem.anIntArray2929[k++] = 1;
                                         } else {
                                           GroundItem.anIntArray2929[k++] =
-                                            (BufferData.method1735(29984) == -1) ? 0 : 1;
+                                            (GlobalStatics_6.method1735(29984) == -1) ? 0 : 1;
                                         }
                                         continue;
                                       }
@@ -4029,9 +4030,9 @@ public final class ItemConfig {
                                         if (class44_sub1 == null) {
                                           GroundItem.anIntArray2929[k++] = -1;
                                           GroundItem.anIntArray2929[k++] = 0;
-                                          GlobalStatics_0.aClass94Array75[l++] = AreaSoundEffect.aClass94_2331;
+                                          GlobalStatics_0.aClass94Array75[l++] = GlobalStatics_6.aClass94_2331;
                                           GroundItem.anIntArray2929[k++] = 0;
-                                          GlobalStatics_0.aClass94Array75[l++] = AreaSoundEffect.aClass94_2331;
+                                          GlobalStatics_0.aClass94Array75[l++] = GlobalStatics_6.aClass94_2331;
                                           GroundItem.anIntArray2929[k++] = 0;
                                         } else {
                                           GroundItem.anIntArray2929[k++] = class44_sub1.anInt2621;
@@ -4050,9 +4051,9 @@ public final class ItemConfig {
                                         if (class44_sub1_1 == null) {
                                           GroundItem.anIntArray2929[k++] = -1;
                                           GroundItem.anIntArray2929[k++] = 0;
-                                          GlobalStatics_0.aClass94Array75[l++] = AreaSoundEffect.aClass94_2331;
+                                          GlobalStatics_0.aClass94Array75[l++] = GlobalStatics_6.aClass94_2331;
                                           GroundItem.anIntArray2929[k++] = 0;
-                                          GlobalStatics_0.aClass94Array75[l++] = AreaSoundEffect.aClass94_2331;
+                                          GlobalStatics_0.aClass94Array75[l++] = GlobalStatics_6.aClass94_2331;
                                           GroundItem.anIntArray2929[k++] = 0;
                                         } else {
                                           GroundItem.anIntArray2929[k++] = class44_sub1_1.anInt2621;
@@ -4091,7 +4092,7 @@ public final class ItemConfig {
                                       if ((j1 == 6506)) {
                                         int j37 = GroundItem.anIntArray2929[--k];
                                         GameWorld class44_sub1_2 =
-                                          ClassCheckRequest.method130(120, j37);
+                                          GlobalStatics_6.method130(120, j37);
                                         if (class44_sub1_2 != null) {
                                           GroundItem.anIntArray2929[k++] = class44_sub1_2.flags;
                                           GlobalStatics_0.aClass94Array75[l++] = class44_sub1_2.aClass94_2620;
@@ -4102,9 +4103,9 @@ public final class ItemConfig {
                                           GroundItem.anIntArray2929[k++] = class44_sub1_2.anInt722;
                                         } else {
                                           GroundItem.anIntArray2929[k++] = -1;
-                                          GlobalStatics_0.aClass94Array75[l++] = AreaSoundEffect.aClass94_2331;
+                                          GlobalStatics_0.aClass94Array75[l++] = GlobalStatics_6.aClass94_2331;
                                           GroundItem.anIntArray2929[k++] = 0;
-                                          GlobalStatics_0.aClass94Array75[l++] = AreaSoundEffect.aClass94_2331;
+                                          GlobalStatics_0.aClass94Array75[l++] = GlobalStatics_6.aClass94_2331;
                                           GroundItem.anIntArray2929[k++] = 0;
                                         }
                                         continue;
@@ -4137,7 +4138,7 @@ public final class ItemConfig {
                                   }
                                   if (j1 == 6405) {
                                     GroundItem.anIntArray2929[k++] =
-                                      Cache.method1088(false) ? 1 : 0;
+                                      GlobalStatics_6.method1088(false) ? 1 : 0;
                                     continue;
                                   }
                                   if ((j1 != 6406)) {
@@ -4149,9 +4150,9 @@ public final class ItemConfig {
                                 }
                                 if (j1 == 6200) {
                                   k -= 2;
-                                  DisplayMode.aShort1444 = (short) GroundItem.anIntArray2929[k];
-                                  if (DisplayMode.aShort1444 <= 0) {
-                                    DisplayMode.aShort1444 = 256;
+                                  GlobalStatics_7.aShort1444 = (short) GroundItem.anIntArray2929[k];
+                                  if (GlobalStatics_7.aShort1444 <= 0) {
+                                    GlobalStatics_7.aShort1444 = 256;
                                   }
                                   TextureSampler33.aShort3052 =
                                     (short) GroundItem.anIntArray2929[1 + k];
@@ -4218,7 +4219,7 @@ public final class ItemConfig {
                                 if (j1 != 6205) {
                                   break;
                                 }
-                                GroundItem.anIntArray2929[k++] = DisplayMode.aShort1444;
+                                GroundItem.anIntArray2929[k++] = GlobalStatics_7.aShort1444;
                                 GroundItem.anIntArray2929[k++] = TextureSampler33.aShort3052;
                                 continue;
                               }
@@ -4242,7 +4243,7 @@ public final class ItemConfig {
                               }
                               if ((j1 == 5602)) {
                                 if (TextureSampler28.loginState == 0) {
-                                  AbstractImageProducer.loginResponse = -2;
+                                  GlobalStatics_5.loginResponse = -2;
                                 }
                                 continue;
                               }
@@ -4253,7 +4254,7 @@ public final class ItemConfig {
                                   && (TextureSampler28.loginState == 0)
                                   && (DummyCanvas.anInt23 == 0)
                                     && (GLStatics.anInt692 == 0)) {
-                                  ClientScriptCall.method377(GroundItem.anIntArray2929[k + 2],
+                                  GlobalStatics_7.method377(GroundItem.anIntArray2929[k + 2],
                                     GroundItem.anIntArray2929[k + 3], GroundItem.anIntArray2929[k],
                                     GroundItem.anIntArray2929[k + 1], 1);
                                 }
@@ -4294,7 +4295,7 @@ public final class ItemConfig {
                               }
                               if ((j1 == 5607)) {
                                 GroundItem.anIntArray2929[k++] =
-                                  AbstractImageProducer.loginResponse;
+                                  GlobalStatics_5.loginResponse;
                                 continue;
                               }
                               if (j1 == 5608) {
@@ -4309,7 +4310,7 @@ public final class ItemConfig {
                                 for (int l37 = 0; l37 < 5; l37++) {
                                   GlobalStatics_0.aClass94Array75[l++] =
                                     TextureSampler29.aClass94Array3391.length <= l37 ?
-                                      AreaSoundEffect.aClass94_2331 :
+                                      GlobalStatics_6.aClass94_2331 :
                                       TextureSampler29.aClass94Array3391[l37].formatName(
                                         (byte) -50);
                                 }
@@ -4379,7 +4380,7 @@ public final class ItemConfig {
                           ItemConfig class48_2 = DummyClass35.getItemConfig(l38, (byte) 77);
                           if ((k61 < 1) || k61 > 5
                             || class48_2.aClass94Array801[-1 + k61] == null) {
-                            GlobalStatics_0.aClass94Array75[l++] = AreaSoundEffect.aClass94_2331;
+                            GlobalStatics_0.aClass94Array75[l++] = GlobalStatics_6.aClass94_2331;
                           } else {
                             GlobalStatics_0.aClass94Array75[l++] = class48_2.aClass94Array801[k61 - 1];
                           }
@@ -4395,7 +4396,7 @@ public final class ItemConfig {
                                   - 1] != null) {
                             GlobalStatics_0.aClass94Array75[l++] = class48_3.inventoryOptions[-1 + l61];
                           } else {
-                            GlobalStatics_0.aClass94Array75[l++] = AreaSoundEffect.aClass94_2331;
+                            GlobalStatics_0.aClass94Array75[l++] = GlobalStatics_6.aClass94_2331;
                           }
                           continue;
                         }
@@ -4598,13 +4599,13 @@ public final class ItemConfig {
                       if ((j1 == 4114)) {
                         int k41 = GroundItem.anIntArray2929[--k];
                         GroundItem.anIntArray2929[k++] =
-                          AbstractGameWorld.method1066(k41, -32) ? 1 : 0;
+                          GlobalStatics_4.method1066(k41, -32) ? 1 : 0;
                         continue;
                       }
                       if ((j1 == 4115)) {
                         int l41 = GroundItem.anIntArray2929[--k];
                         GroundItem.anIntArray2929[k++] =
-                          AudioStreamEncoder4.method487(l41, (byte) -85) ? 1 : 0;
+                          GlobalStatics_6.method487(l41, (byte) -85) ? 1 : 0;
                         continue;
                       }
                       if (j1 == 4116) {
@@ -4690,7 +4691,7 @@ public final class ItemConfig {
                       continue;
                     }
                     Widget class11_8 =
-                      EnumStringFetcher.getWidget((byte) 115, GroundItem.anIntArray2929[--k]);
+                      GlobalStatics_7.getWidget((byte) 115, GroundItem.anIntArray2929[--k]);
                     if ((j1 == 2800)) {
                       GroundItem.anIntArray2929[k++] =
                         GameClient.method44(class11_8).method101(-94);
@@ -4704,7 +4705,7 @@ public final class ItemConfig {
                         && class11_8.aClass94Array171[l64] != null) {
                         GlobalStatics_0.aClass94Array75[l++] = class11_8.aClass94Array171[l64];
                       } else {
-                        GlobalStatics_0.aClass94Array75[l++] = AreaSoundEffect.aClass94_2331;
+                        GlobalStatics_0.aClass94Array75[l++] = GlobalStatics_6.aClass94_2331;
                       }
                       continue;
                     }
@@ -4714,19 +4715,19 @@ public final class ItemConfig {
                     if (class11_8.aClass94_277 != null) {
                       GlobalStatics_0.aClass94Array75[l++] = class11_8.aClass94_277;
                     } else {
-                      GlobalStatics_0.aClass94Array75[l++] = AreaSoundEffect.aClass94_2331;
+                      GlobalStatics_0.aClass94Array75[l++] = GlobalStatics_6.aClass94_2331;
                     }
                     continue;
                   }
                   if ((j1 == 2700)) {
                     Widget class11_9 =
-                      EnumStringFetcher.getWidget((byte) 126, GroundItem.anIntArray2929[--k]);
+                      GlobalStatics_7.getWidget((byte) 126, GroundItem.anIntArray2929[--k]);
                     GroundItem.anIntArray2929[k++] = class11_9.anInt192;
                     continue;
                   }
                   if ((j1 == 2701)) {
                     Widget class11_10 =
-                      EnumStringFetcher.getWidget((byte) 117, GroundItem.anIntArray2929[--k]);
+                      GlobalStatics_7.getWidget((byte) 117, GroundItem.anIntArray2929[--k]);
                     if (class11_10.anInt192 == -1) {
                       GroundItem.anIntArray2929[k++] = 0;
                     } else {
@@ -4747,7 +4748,7 @@ public final class ItemConfig {
                   }
                   if (j1 == 2703) {
                     Widget class11_11 =
-                      EnumStringFetcher.getWidget((byte) 125, GroundItem.anIntArray2929[--k]);
+                      GlobalStatics_7.getWidget((byte) 125, GroundItem.anIntArray2929[--k]);
                     if (class11_11.aClass11Array262 == null) {
                       GroundItem.anIntArray2929[k++] = 0;
                     } else {
@@ -4783,7 +4784,7 @@ public final class ItemConfig {
                   continue;
                 }
                 Widget class11_12 =
-                  EnumStringFetcher.getWidget((byte) 124, GroundItem.anIntArray2929[--k]);
+                  GlobalStatics_7.getWidget((byte) 124, GroundItem.anIntArray2929[--k]);
                 if (j1 == 2600) {
                   GroundItem.anIntArray2929[k++] = class11_12.anInt247;
                   continue;
@@ -4864,7 +4865,7 @@ public final class ItemConfig {
               } else {
                 j1 -= 1000;
                 class11_14 =
-                  EnumStringFetcher.getWidget((byte) 115, GroundItem.anIntArray2929[--k]);
+                  GlobalStatics_7.getWidget((byte) 115, GroundItem.anIntArray2929[--k]);
               }
               int[] ai3 = null;
               GameString class94_62 = GlobalStatics_0.aClass94Array75[--l];
@@ -4990,7 +4991,7 @@ public final class ItemConfig {
           if (j1 < 2000) {
             class11_15 = flag ? Something3dRoot.aClass11_2055 : SomethingPacket116.aClass11_1749;
           } else {
-            class11_15 = EnumStringFetcher.getWidget((byte) 118, GroundItem.anIntArray2929[--k]);
+            class11_15 = GlobalStatics_7.getWidget((byte) 118, GroundItem.anIntArray2929[--k]);
             j1 -= 1000;
           }
           DummyClass29.method909(-21, class11_15);
@@ -5065,7 +5066,7 @@ public final class ItemConfig {
           class11_16 = flag ? Something3dRoot.aClass11_2055 : SomethingPacket116.aClass11_1749;
         } else {
           j1 -= 1000;
-          class11_16 = EnumStringFetcher.getWidget((byte) 120, GroundItem.anIntArray2929[--k]);
+          class11_16 = GlobalStatics_7.getWidget((byte) 120, GroundItem.anIntArray2929[--k]);
         }
         if (j1 == 1100) {
           k -= 2;
@@ -5225,7 +5226,7 @@ public final class ItemConfig {
           class11_16.anInt252 = GroundItem.anIntArray2929[1 + k];
           DummyClass29.method909(117, class11_16);
           if ((class11_16.anInt187 == 0)) {
-            FileRequester.method2104(class11_16, false, -116);
+            GlobalStatics_7.method2104(class11_16, false, -116);
           }
           continue;
         }

@@ -3,6 +3,7 @@ package com.jagex.runescape;
 import com.jagex.runescape.common.GameString;
 import com.jagex.runescape.common.GameStringStatics;
 import com.jagex.runescape.common.HashTable;
+import com.jagex.runescape.done.AbstractDirectColorSprite;
 import com.jagex.runescape.node.Node;
 import com.jagex.runescape.opengl.GLStatics;
 import java.awt.Color;
@@ -67,10 +68,10 @@ public final class HashTableIterator {
   }
 
   public static void method1396(int var0) {
-    int var2 = DisplayMode.viewY;
+    int var2 = GlobalStatics_7.viewY;
       int var1 = DummyClass51.viewX;
       int var4 = -GroundItem.viewHeight + (SceneSomething2.windowHeight - var2);
-      int var3 = -var1 + AreaSoundEffect.windowWidth - DummyClass30.viewWidth;
+      int var3 = -var1 + GlobalStatics_6.windowWidth - DummyClass30.viewWidth;
       if ((var1 > var0) || (var3 > 0) || var2 > 0 || (var4 > 0)) {
         try {
           Component var5 = null;
@@ -98,17 +99,17 @@ public final class HashTableIterator {
           }
 
           if (var2 > 0) {
-            var11.fillRect(var6, var7, AreaSoundEffect.windowWidth, var2);
+            var11.fillRect(var6, var7, GlobalStatics_6.windowWidth, var2);
           }
 
           if (var3 > 0) {
-            var11.fillRect(-var3 + var6 + AreaSoundEffect.windowWidth, var7, var3,
+            var11.fillRect(-var3 + var6 + GlobalStatics_6.windowWidth, var7, var3,
               SceneSomething2.windowHeight);
           }
 
           if ((var4 > 0)) {
             var11.fillRect(var6, -var4 + var7 + SceneSomething2.windowHeight,
-              AreaSoundEffect.windowWidth, var4);
+              GlobalStatics_6.windowWidth, var4);
           }
         } catch (Exception var9) {
         }

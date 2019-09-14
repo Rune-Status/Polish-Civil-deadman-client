@@ -26,12 +26,12 @@ public final class Keyboard implements KeyListener, FocusListener {
 
   public void keyTyped(KeyEvent var1) {
     if (TextureSampler33.keyboard != null) {
-        int var2 = BitVariable.method1386(true, var1);
+        int var2 = GlobalStatics_6.method1386(true, var1);
         if ((var2 >= 0)) {
           int var3 = 1 + SceneSomething.anInt491 & 127;
           if ((Parameter.anInt3620 != var3)) {
-            AbstractFrameRegulator.keyQueue[SceneSomething.anInt491] = -1;
-            AbstractAudioOutputStream.otherKeyQueue[SceneSomething.anInt491] = var2;
+            GlobalStatics_4.keyQueue[SceneSomething.anInt491] = -1;
+            GlobalStatics_5.otherKeyQueue[SceneSomething.anInt491] = var2;
             SceneSomething.anInt491 = var3;
           }
         }
@@ -53,11 +53,11 @@ public final class Keyboard implements KeyListener, FocusListener {
           var2 = -1;
         }
 
-        if ((AbstractTextureSampler.anInt2384 >= 0) && (var2 >= 0)) {
-          FileRequester.anIntArray2952[AbstractTextureSampler.anInt2384] = var2;
-          AbstractTextureSampler.anInt2384 = 127 & AbstractTextureSampler.anInt2384 + 1;
-          if (AbstractTextureSampler.anInt2384 == SomethingPacket116.anInt1744) {
-            AbstractTextureSampler.anInt2384 = -1;
+        if ((GlobalStatics_3.anInt2384 >= 0) && (var2 >= 0)) {
+          GlobalStatics_7.anIntArray2952[GlobalStatics_3.anInt2384] = var2;
+          GlobalStatics_3.anInt2384 = 127 & GlobalStatics_3.anInt2384 + 1;
+          if (GlobalStatics_3.anInt2384 == SomethingPacket116.anInt1744) {
+            GlobalStatics_3.anInt2384 = -1;
           }
         }
 
@@ -65,8 +65,8 @@ public final class Keyboard implements KeyListener, FocusListener {
         if ((var2 >= 0)) {
           var3 = 127 & 1 + SceneSomething.anInt491;
           if (var3 != Parameter.anInt3620) {
-            AbstractFrameRegulator.keyQueue[SceneSomething.anInt491] = var2;
-            AbstractAudioOutputStream.otherKeyQueue[SceneSomething.anInt491] = -1;
+            GlobalStatics_4.keyQueue[SceneSomething.anInt491] = var2;
+            GlobalStatics_5.otherKeyQueue[SceneSomething.anInt491] = -1;
             SceneSomething.anInt491 = var3;
           }
         }
@@ -88,11 +88,11 @@ public final class Keyboard implements KeyListener, FocusListener {
           var2 = -1;
         }
 
-        if (AbstractTextureSampler.anInt2384 >= 0 && (var2 >= 0)) {
-          FileRequester.anIntArray2952[AbstractTextureSampler.anInt2384] = ~var2;
-          AbstractTextureSampler.anInt2384 = 127 & 1 + AbstractTextureSampler.anInt2384;
-          if ((SomethingPacket116.anInt1744 == AbstractTextureSampler.anInt2384)) {
-            AbstractTextureSampler.anInt2384 = -1;
+        if (GlobalStatics_3.anInt2384 >= 0 && (var2 >= 0)) {
+          GlobalStatics_7.anIntArray2952[GlobalStatics_3.anInt2384] = ~var2;
+          GlobalStatics_3.anInt2384 = 127 & 1 + GlobalStatics_3.anInt2384;
+          if ((SomethingPacket116.anInt1744 == GlobalStatics_3.anInt2384)) {
+            GlobalStatics_3.anInt2384 = -1;
           }
         }
       }
@@ -105,7 +105,7 @@ public final class Keyboard implements KeyListener, FocusListener {
 
   public synchronized void focusLost(FocusEvent var1) {
     if (TextureSampler33.keyboard != null) {
-        AbstractTextureSampler.anInt2384 = -1;
+        GlobalStatics_3.anInt2384 = -1;
       }
   }
 
@@ -143,11 +143,11 @@ public final class Keyboard implements KeyListener, FocusListener {
           for (int var3 = 0; SomethingOtherWorldMap.anInt2537 > var3; ++var3) {
             int var4 = SomethingPacket116.anIntArray1755[var3];
             if (var4 == 98) {
-              AreaSoundEffect.anInt2309 = -16 & AreaSoundEffect.anInt2309 + 47;
+              GlobalStatics_6.anInt2309 = -16 & GlobalStatics_6.anInt2309 + 47;
             } else {
               if ((var4 == 99)) {
-                AreaSoundEffect.anInt2309 =
-                    -16 & AreaSoundEffect.anInt2309 - 17;
+                GlobalStatics_6.anInt2309 =
+                    -16 & GlobalStatics_6.anInt2309 - 17;
               } else {
                 if (var4 == 96) {
                   SpotAnimationConfig.anInt531 =
@@ -182,11 +182,11 @@ public final class Keyboard implements KeyListener, FocusListener {
             }
           }
 
-          AreaSoundEffect.anInt2309 += DummyClass32.anInt517 / 2;
+          GlobalStatics_6.anInt2309 += DummyClass32.anInt517 / 2;
           SpotAnimationConfig.anInt531 += SomethingInScenePacket202.anInt2281 / 2;
         }
 
-        Cache.method1098((byte) -94);
+        GlobalStatics_6.method1098((byte) -94);
       }
   }
 

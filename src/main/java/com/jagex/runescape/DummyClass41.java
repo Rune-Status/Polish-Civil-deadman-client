@@ -153,7 +153,7 @@ public final class DummyClass41 {
       }
 
       GlobalStatics_2.anInt3608 = var0.readInt();
-      BufferedFile.aBoolean579 = true;
+      GlobalStatics_6.aBoolean579 = true;
   }
 
   public static GameString method1174(Widget var0, byte var1) {

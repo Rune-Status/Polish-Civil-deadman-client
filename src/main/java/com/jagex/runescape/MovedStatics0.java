@@ -1,6 +1,8 @@
 package com.jagex.runescape;
 
 import com.jagex.runescape.buffer.Buffer;
+import com.jagex.runescape.done.BlockConfig;
+import com.jagex.runescape.done.CollisionMap;
 import com.jagex.runescape.opengl.DummyClass46;
 import com.jagex.runescape.opengl.GlRenderer;
 import com.jagex.runescape.opengl.Light;
@@ -30,7 +32,7 @@ public final class MovedStatics0 {
 
   public static void method56(int var0, int var1) {
     int var3 = 81 % ((39 - var1) / 41);
-      WidgetUpdate var2 = AudioStreamEncoder3.method466(4, 6, var0);
+      WidgetUpdate var2 = GlobalStatics_6.method466(4, 6, var0);
       var2.createIndexedColorSprite(true);
   }
 
@@ -266,7 +268,7 @@ public final class MovedStatics0 {
                     var30.aBoolean696 =
                         ((2 & BZipDecompressorState.tileFlags[1][var29][var20]) != 0);
                     var30.anInt697 =
-                        AbstractGameWorld.heightMap[var30.anInt704][var29][var20]
+                        GlobalStatics_4.heightMap[var30.anInt704][var29][var20]
                             - var30.anInt697;
                     DummyClass46.method1264(var30);
                   }

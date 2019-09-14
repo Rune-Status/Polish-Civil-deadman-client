@@ -2,6 +2,9 @@ package com.jagex.runescape;
 
 import com.jagex.runescape.common.GameString;
 import com.jagex.runescape.common.GameStringStatics;
+import com.jagex.runescape.done.AbstractModel;
+import com.jagex.runescape.done.AnimationSequence;
+import com.jagex.runescape.done.AnimationSomething;
 import com.jagex.runescape.huffman.HuffmanEncoderStatics;
 import com.jagex.runescape.opengl.GLStatics;
 import com.jagex.runescape.opengl.GlModel;
@@ -24,10 +27,10 @@ public final class PlayerAppearance {
   private int[][] anIntArrayArray863;
 
   public AbstractModel method1157(int var1, int var2, int var3, int var4,
-      AnimationSequence var5,
-      int var6,
-      int var7,
-      int var8 ) {
+                                  AnimationSequence var5,
+                                  int var6,
+                                  int var7,
+                                  int var8 ) {
     if (var8 != -2012759707) {
         this.npcId = -32;
       }
@@ -67,7 +70,7 @@ public final class PlayerAppearance {
           }
 
           if (DummyClass55.aShortArrayArray1429[var15].length > this.anIntArray862[var15]) {
-            var14.replaceColor(CollisionMap.aShortArray1311[var15],
+            var14.replaceColor(GlobalStatics_7.aShortArray1311[var15],
               DummyClass55.aShortArrayArray1429[var15][this.anIntArray862[var15]]);
           }
         }
@@ -86,7 +89,7 @@ public final class PlayerAppearance {
   private void method1158(int var1) {
     long var2 = this.aLong860;
       this.aLong860 = -1L;
-      long[] var4 = FaceNormal.aLongArray1631;
+      long[] var4 = GlobalStatics_7.aLongArray1631;
       this.aLong860 =
         var4[(int) (255L & ((this.anInt858 >> 8) ^ this.aLong860))] ^
             this.aLong860 >>> 8;
@@ -397,7 +400,7 @@ public final class PlayerAppearance {
 
               if (DummyClass55.aShortArrayArray1429[var45].length
                   > this.anIntArray862[var45]) {
-                var43.replaceColor(CollisionMap.aShortArray1311[var45],
+                var43.replaceColor(GlobalStatics_7.aShortArray1311[var45],
                     DummyClass55.aShortArrayArray1429[var45][this.anIntArray862[var45]]);
               }
             }
@@ -433,7 +436,7 @@ public final class PlayerAppearance {
               var25 = var1[var22].anInt1891;
               var26 = var41.anIntArray1851[var24];
               SomethingIndex150.aClass3_Sub28_Sub5Array2070[var22] =
-                  AreaSoundEffect.method133(var26 >>> 16, 0);
+                  GlobalStatics_6.method133(var26 >>> 16, 0);
               var26 &= '\uffff';
               SceneNode.anIntArray1833[var22] = var26;
               if (SomethingIndex150.aClass3_Sub28_Sub5Array2070[var22]
@@ -453,24 +456,24 @@ public final class PlayerAppearance {
                 DummyClass14.anIntArray1960[var22] = var41.anIntArray1869[var24];
                 TextureSampler1.anIntArray3139[var22] = var1[var22].anInt1897;
                 var47 = var41.anIntArray1851[var25];
-                AbstractSomethingTexture.aClass3_Sub28_Sub5Array1103[var22] =
-                    AreaSoundEffect.method133(var47 >>> 16, 0);
+                GlobalStatics_3.aClass3_Sub28_Sub5Array1103[var22] =
+                    GlobalStatics_6.method133(var47 >>> 16, 0);
                 var47 &= '\uffff';
                 DummyClass2.anIntArray1679[var22] = var47;
-                if (AbstractSomethingTexture.aClass3_Sub28_Sub5Array1103[var22]
+                if (GlobalStatics_3.aClass3_Sub28_Sub5Array1103[var22]
                     != null) {
                   var42 |=
-                      AbstractSomethingTexture.aClass3_Sub28_Sub5Array1103[var22]
+                      GlobalStatics_3.aClass3_Sub28_Sub5Array1103[var22]
                           .method561(var47,
                               (byte) 117);
-                  var38 |= AbstractSomethingTexture.aClass3_Sub28_Sub5Array1103[var22]
+                  var38 |= GlobalStatics_3.aClass3_Sub28_Sub5Array1103[var22]
                       .method559(
                           1317095745, var47);
                 }
               } else {
                 DummyClass14.anIntArray1960[var22] = 0;
                 TextureSampler1.anIntArray3139[var22] = 0;
-                AbstractSomethingTexture.aClass3_Sub28_Sub5Array1103[var22] = null;
+                GlobalStatics_3.aClass3_Sub28_Sub5Array1103[var22] = null;
                 DummyClass2.anIntArray1679[var22] = -1;
               }
             }
@@ -488,7 +491,7 @@ public final class PlayerAppearance {
           if (var4 != null) {
             var22 = var4.anIntArray1851[var10];
             var47 = var22 >>> 16;
-            var46 = AreaSoundEffect.method133(var47, 0);
+            var46 = GlobalStatics_6.method133(var47, 0);
             var22 &= '\uffff';
             if (var46 != null) {
               var42 |= var46.method561(var22, (byte) 124);
@@ -505,7 +508,7 @@ public final class PlayerAppearance {
               if ((var47 == var28)) {
                 var48 = var46;
               } else {
-                var48 = AreaSoundEffect.method133(var23 >>> 16, 0);
+                var48 = GlobalStatics_6.method133(var23 >>> 16, 0);
               }
 
               if (var48 != null) {
@@ -524,7 +527,7 @@ public final class PlayerAppearance {
             var47 = var3.anIntArray1851[var11];
             var32 = var47 >>> 16;
             var47 &= '\uffff';
-            var49 = AreaSoundEffect.method133(var32, 0);
+            var49 = GlobalStatics_6.method133(var32, 0);
             if (var49 != null) {
               var42 |= var49.method561(var47, (byte) 123);
               var38 |= var49.method559(1317095745, var47);
@@ -540,7 +543,7 @@ public final class PlayerAppearance {
               if ((var32 == var33)) {
                 var50 = var49;
               } else {
-                var50 = AreaSoundEffect.method133(var28 >>> 16, 0);
+                var50 = GlobalStatics_6.method133(var28 >>> 16, 0);
               }
 
               if (var50 != null) {
@@ -558,7 +561,7 @@ public final class PlayerAppearance {
               var51.method1887(
                   SomethingIndex150.aClass3_Sub28_Sub5Array2070[var33],
                   SceneNode.anIntArray1833[var33],
-                  AbstractSomethingTexture.aClass3_Sub28_Sub5Array1103[var33],
+                  GlobalStatics_3.aClass3_Sub28_Sub5Array1103[var33],
                   DummyClass2.anIntArray1679[var33],
                   TextureSampler1.anIntArray3139[var33] - 1,
                   DummyClass14.anIntArray1960[var33], var34,
@@ -586,7 +589,7 @@ public final class PlayerAppearance {
 
           for (var33 = 0; var33 < var45; ++var33) {
             SomethingIndex150.aClass3_Sub28_Sub5Array2070[var33] = null;
-            AbstractSomethingTexture.aClass3_Sub28_Sub5Array1103[var33] = null;
+            GlobalStatics_3.aClass3_Sub28_Sub5Array1103[var33] = null;
             DummyClass24.aClass142Array1654[var33] = null;
           }
 
@@ -663,7 +666,7 @@ public final class PlayerAppearance {
             }
 
             if (DummyClass55.aShortArrayArray1429[var11].length > this.anIntArray862[var11]) {
-              var15.replaceColor(CollisionMap.aShortArray1311[var11],
+              var15.replaceColor(GlobalStatics_7.aShortArray1311[var11],
                 DummyClass55.aShortArrayArray1429[var11][this.anIntArray862[var11]]);
             }
           }
@@ -971,7 +974,7 @@ public final class PlayerAppearance {
           }
         }
 
-        AbstractFrameRegulator.anInt1692 = 0;
+        GlobalStatics_4.anInt1692 = 0;
         if (!var17) {
           if (!var11) {
             return false;
@@ -1020,7 +1023,7 @@ public final class PlayerAppearance {
             return false;
           }
 
-          AbstractFrameRegulator.anInt1692 = 1;
+          GlobalStatics_4.anInt1692 = 1;
         }
 
         byte var29 = 0;

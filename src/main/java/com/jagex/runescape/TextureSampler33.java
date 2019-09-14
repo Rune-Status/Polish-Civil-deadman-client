@@ -3,6 +3,7 @@ package com.jagex.runescape;
 import com.jagex.runescape.buffer.Buffer;
 import com.jagex.runescape.common.GameString;
 import com.jagex.runescape.common.GameStringStatics;
+import com.jagex.runescape.done.AbstractTextureSampler;
 import com.jagex.runescape.opengl.GLStatics;
 import com.jagex.runescape.opengl.GlTexture2d;
 import java.io.IOException;
@@ -108,10 +109,10 @@ public final class TextureSampler33 extends AbstractTextureSampler {
           SomethingVolume15.gameSocket = null;
         }
 
-        ++FileCacheRequester.anInt1088;
-        if ((FileCacheRequester.anInt1088 > 4)) {
+        ++GlobalStatics_7.anInt1088;
+        if ((GlobalStatics_7.anInt1088 > 4)) {
           GLStatics.anInt692 = 0;
-          FileCacheRequester.anInt1088 = 0;
+          GlobalStatics_7.anInt1088 = 0;
           return var1;
         } else {
           GLStatics.anInt692 = 0;
@@ -166,7 +167,7 @@ public final class TextureSampler33 extends AbstractTextureSampler {
         TextureSampler5.method289(false);
         return true;
       } catch (Exception var5) {
-        String var2 = "T2 - " + GlobalStatics_0.packetId + "," + EnumStringFetcher.lastPacketId1 + ","
+        String var2 = "T2 - " + GlobalStatics_0.packetId + "," + GlobalStatics_7.lastPacketId1 + ","
           + IdentityKit.lastPacketId2 + " - " + GlobalStatics_0.packetLength + "," + (
           WorldMapLabel.anInt1716 + TextureCache.localPlayer.waypointsX[0]) + "," + (
           TextureCache.localPlayer.waypointsY[0] + ProceduralTexture.anInt1152) + " - ";
@@ -195,7 +196,7 @@ public final class TextureSampler33 extends AbstractTextureSampler {
         TextureSampler33.keyboard = null;
       }
 
-      FileCache.aClass93_684.method1524(3);
+      GlobalStatics_7.aClass93_684.method1524(3);
       DummyClass5.aClass93_2984.method1524(3);
   }
 

@@ -5,6 +5,10 @@ import com.jagex.runescape.common.GameString;
 import com.jagex.runescape.common.GameStringStatics;
 import com.jagex.runescape.common.HashTable;
 import com.jagex.runescape.common.StringNode;
+import com.jagex.runescape.done.AbstractModel;
+import com.jagex.runescape.done.AnimationSequence;
+import com.jagex.runescape.done.AnimationSomething;
+import com.jagex.runescape.done.BitVariable;
 import com.jagex.runescape.node.Node;
 import com.jagex.runescape.opengl.GLStatics;
 import com.jagex.runescape.opengl.GlModel;
@@ -70,7 +74,7 @@ public final class NpcConfiguration {
 
 
   public NpcConfiguration() {
-    this.aClass94_1273 = AbstractImageProducer.aClass94_2006;
+    this.aClass94_1273 = GlobalStatics_5.aClass94_2006;
     this.anInt1260 = -1;
     this.aBoolean1285 = true;
     this.anInt1253 = -1;
@@ -186,13 +190,13 @@ public final class NpcConfiguration {
   }
 
   public AbstractModel method1476(Unsure[] var1, int var2, byte var3,
-      int var4,
-      int var5,
-      int var6,
-      int var7,
-      AnimationSequence var8,
-      int var9,
-      AnimationSequence var10 ) {
+                                  int var4,
+                                  int var5,
+                                  int var6,
+                                  int var7,
+                                  AnimationSequence var8,
+                                  int var9,
+                                  AnimationSequence var10 ) {
     if (this.anIntArray1292 != null) {
         NpcConfiguration var33 = this.method1471((byte) 32);
         return var33 != null ?
@@ -200,7 +204,7 @@ public final class NpcConfiguration {
           null;
       } else {
         AbstractModel var11 =
-          (AbstractModel) ClientScriptCall.aClass93_2442.get(this.anInt1284);
+          (AbstractModel) GlobalStatics_7.aClass93_2442.get(this.anInt1284);
         boolean var12;
         int var17;
         int var16;
@@ -348,7 +352,7 @@ public final class NpcConfiguration {
             ((GlModel) var11).method1920(false, false, false, true, false, false, true);
           }
 
-          ClientScriptCall.aClass93_2442.get((byte) -90, var11, this.anInt1284);
+          GlobalStatics_7.aClass93_2442.get((byte) -90, var11, this.anInt1284);
         }
 
         var12 = false;
@@ -368,7 +372,7 @@ public final class NpcConfiguration {
               var19 = var1[var17].anInt1893;
               var21 = var39.anIntArray1851[var19];
               TextureSampler12.aClass3_Sub28_Sub5Array3041[var17] =
-                AreaSoundEffect.method133(var21 >>> 16, 0);
+                GlobalStatics_6.method133(var21 >>> 16, 0);
               var21 &= '\uffff';
               DummyClass43.anIntArray912[var17] = var21;
               if (TextureSampler12.aClass3_Sub28_Sub5Array3041[var17] != null) {
@@ -385,9 +389,9 @@ public final class NpcConfiguration {
                 GlobalStatics_2.anIntArray2574[var17] = var1[var17].anInt1897;
                 var22 = var39.anIntArray1851[var20];
                 TextureSampler18.aClass3_Sub28_Sub5Array4031[var17] =
-                  AreaSoundEffect.method133(var22 >>> 16, 0);
+                  GlobalStatics_6.method133(var22 >>> 16, 0);
                 var22 &= '\uffff';
-                BufferedFile.anIntArray574[var17] = var22;
+                GlobalStatics_6.anIntArray574[var17] = var22;
                 if (TextureSampler18.aClass3_Sub28_Sub5Array4031[var17] != null) {
                   var35 |= TextureSampler18.aClass3_Sub28_Sub5Array4031[var17].method561(var22,
                     (byte) 124);
@@ -398,7 +402,7 @@ public final class NpcConfiguration {
                 DummyClass35.anIntArray664[var17] = 0;
                 GlobalStatics_2.anIntArray2574[var17] = 0;
                 TextureSampler18.aClass3_Sub28_Sub5Array4031[var17] = null;
-                BufferedFile.anIntArray574[var17] = -1;
+                GlobalStatics_6.anIntArray574[var17] = -1;
               }
             }
           }
@@ -422,7 +426,7 @@ public final class NpcConfiguration {
             var17 = var10.anIntArray1851[var7];
             var22 = var17 >>> 16;
             var17 &= '\uffff';
-            var40 = AreaSoundEffect.method133(var22, 0);
+            var40 = GlobalStatics_6.method133(var22, 0);
             if (var40 != null) {
               var35 |= var40.method561(var17, (byte) 126);
               var37 |= var40.method559(1317095745, var17);
@@ -438,7 +442,7 @@ public final class NpcConfiguration {
               if (var22 == var42) {
                 var43 = var40;
               } else {
-                var43 = AreaSoundEffect.method133(var18 >>> 16, 0);
+                var43 = GlobalStatics_6.method133(var18 >>> 16, 0);
               }
 
               if (var43 != null) {
@@ -461,7 +465,7 @@ public final class NpcConfiguration {
             var22 = var8.anIntArray1851[var4];
             var27 = var22 >>> 16;
             var22 &= '\uffff';
-            var44 = AreaSoundEffect.method133(var27, 0);
+            var44 = GlobalStatics_6.method133(var27, 0);
             if (var44 != null) {
               var35 |= var44.method561(var22, (byte) 124);
               var37 |= var44.method559(1317095745, var22);
@@ -477,7 +481,7 @@ public final class NpcConfiguration {
               if ((var28 == var27)) {
                 var46 = var44;
               } else {
-                var46 = AreaSoundEffect.method133(var42 >>> 16, 0);
+                var46 = GlobalStatics_6.method133(var42 >>> 16, 0);
               }
 
               if (var46 != null) {
@@ -495,7 +499,7 @@ public final class NpcConfiguration {
               var45.method1887(TextureSampler12.aClass3_Sub28_Sub5Array3041[var28],
                 DummyClass43.anIntArray912[var28],
                 TextureSampler18.aClass3_Sub28_Sub5Array4031[var28],
-                BufferedFile.anIntArray574[var28], -1 + GlobalStatics_2.anIntArray2574[var28],
+                GlobalStatics_6.anIntArray574[var28], -1 + GlobalStatics_2.anIntArray2574[var28],
                 DummyClass35.anIntArray664[var28], var29,
                 DummyClass52.aClass142Array1168[var28].aBoolean1848,
                   this.anIntArrayArray1258[var28]);
@@ -968,7 +972,7 @@ public final class NpcConfiguration {
         NpcConfiguration.anIntArray1277 = null;
       }
 
-      BitVariable var2 = ClientScriptCall.method378(var1, (byte) 127);
+      BitVariable var2 = GlobalStatics_7.method378(var1, (byte) 127);
       assert var2 != null;
       int var3 = var2.id;
       int var5 = var2.high;

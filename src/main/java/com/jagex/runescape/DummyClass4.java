@@ -32,7 +32,7 @@ public final class DummyClass4 extends DummyClass6 {
   public static void parsePlayerUpdate(byte var0) {
     OndemandRequester.anInt997 = 0;
       DummyClass17.anInt1829 = 0;
-      FileRequester.method2100((byte) 81);
+      GlobalStatics_7.method2100((byte) 81);
       GameObject.method1964(false);
       WorldMapLabel.method1786(-59);
       MovedStatics0.method58(-102);
@@ -40,7 +40,7 @@ public final class DummyClass4 extends DummyClass6 {
         int var1;
         for (var1 = 0; DummyClass17.anInt1829 > var1; ++var1) {
           int var2 = VariableUpdate.anIntArray2292[var1];
-          if (AbstractGameWorld.updateCycle != TextureSampler0.players[var2].anInt2838) {
+          if (GlobalStatics_4.updateCycle != TextureSampler0.players[var2].anInt2838) {
             if (TextureSampler0.players[var2].anInt3969 > 0) {
               DummyClass11.method2203(TextureSampler0.players[var2], 8);
             }
@@ -85,7 +85,7 @@ public final class DummyClass4 extends DummyClass6 {
             }
           }
 
-          for (var4 = 0; AnimationSomething.anInt3591 > var4; ++var4) {
+          for (var4 = 0; GlobalStatics_6.anInt3591 > var4; ++var4) {
             if ((var0 == MonoChromaticImageCache.aLongArray1574[var4])) {
               GameBuffer.printMessage(GroundItemNode.EMPTY_STRING, 0, RenderAnimation.concat(
                 new GameString[] {DummyClass35.aClass94_662, var3, GameStub.aClass94_4}), -1);
@@ -99,7 +99,7 @@ public final class DummyClass4 extends DummyClass6 {
             ++SpotAnimationConfig.anInt544;
             SceneSomething2.aClass94Array1046[FileSystem.anInt104] = var3;
             GlobalStatics_4.aLongArray826[FileSystem.anInt104] = var0;
-            Cursor.anIntArray882[FileSystem.anInt104] = 0;
+            GlobalStatics_7.anIntArray882[FileSystem.anInt104] = 0;
             GlobalStatics_2.aClass94Array2566[FileSystem.anInt104] = GroundItemNode.EMPTY_STRING;
             LightIntensity.anIntArray904[FileSystem.anInt104] = 0;
             GlobalStatics_0.aBooleanArray73[FileSystem.anInt104] = false;

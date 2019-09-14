@@ -3,6 +3,7 @@ package com.jagex.runescape;
 import com.jagex.runescape.buffer.Buffer;
 import com.jagex.runescape.common.GameString;
 import com.jagex.runescape.common.GameStringStatics;
+import com.jagex.runescape.done.BufferedFile;
 import com.jagex.runescape.opengl.GLStatics;
 
 public class DummyClass7 extends DummyClass6 {
@@ -20,7 +21,7 @@ public class DummyClass7 extends DummyClass6 {
       for (int var4 = 0; var4 < var3.anInt2223; ++var4) {
         SceneSomething var5 = var3.sceneGraphNodes[var4];
         if ((var5.aLong498 >> 29 & 3L) == 2L && var5.anInt483 == var1 && var5.anInt478 == var2) {
-          AbstractImageProducer.method2186(var5);
+          GlobalStatics_5.method2186(var5);
           return var5;
         }
       }

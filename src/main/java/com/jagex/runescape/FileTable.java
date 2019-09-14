@@ -42,7 +42,7 @@ public final class FileTable {
   }
 
   private void parse(int var1, byte[] var2) {
-    Buffer var3 = new Buffer(ClientScriptEnum.method623((byte) -114, var2));
+    Buffer var3 = new Buffer(GlobalStatics_7.method623((byte) -114, var2));
       int var4 = var3.readUnsignedByte();
       if (var4 != 5 && (var4 != 6)) {
         throw new RuntimeException();
@@ -255,7 +255,7 @@ public final class FileTable {
         DummyClass5.anInt2993 = RenderAnimation.anInt362;
         ++ObjectNode.anInt4045;
         DummyClass36.anInt2614 = TextureSampler14.anInt3389;
-        AbstractSomethingTexture.aLong1102 = Projectile.lastMousePressedTime;
+        GlobalStatics_3.aLong1102 = Projectile.lastMousePressedTime;
         GameObject.anInt2743 = 0;
       }
   }

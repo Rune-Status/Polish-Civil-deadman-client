@@ -13,7 +13,7 @@ public class Launcher {
       GameException.serverHost = args[4];
       int languageId = -1;
       GameObjectConfig.portOffset = Integer.parseInt(args[0]);
-      AbstractGameWorld.usageLocation = 2;
+      GlobalStatics_4.usageLocation = 2;
       if (args[1].equals("live")) {
         TextureSampler20.usageMode = 0;
       } else {
@@ -53,17 +53,17 @@ public class Launcher {
       DummyClass8.aBoolean4018 = false;
       Structure.aBoolean3641 = false;
       if (args[3].equals("game0")) {
-        AbstractImageProducer.gameId = 0;
+        GlobalStatics_5.gameId = 0;
       } else {
         if (args[3].equals("game1")) {
-          AbstractImageProducer.gameId = 1;
+          GlobalStatics_5.gameId = 1;
         } else {
           TextureSampler18.printUsage("game");
         }
       }
 
       SomethingPacket151.anInt2607 = 0;
-      DisplayMode.aBoolean1451 = false;
+      GlobalStatics_7.aBoolean1451 = false;
       MonoChromaticImageBuffer.affiliateId = 0;
       DummyClass7.settings = GroundItemNode.EMPTY_STRING;
       GameClient client = new GameClient();

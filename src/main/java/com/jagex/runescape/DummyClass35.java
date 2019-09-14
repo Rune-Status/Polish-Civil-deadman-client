@@ -4,6 +4,7 @@ import com.jagex.runescape.buffer.Buffer;
 import com.jagex.runescape.buffer.BufferStatics;
 import com.jagex.runescape.common.GameString;
 import com.jagex.runescape.common.GameStringStatics;
+import com.jagex.runescape.done.AbstractMouseWheel;
 
 public class DummyClass35 {
 
@@ -49,7 +50,7 @@ public class DummyClass35 {
         }
 
         if (!DummyClass17.aBoolean1827 && var2.aBoolean779) {
-          var2.aClass94_770 = ClientScript.aClass94_3691;
+          var2.aClass94_770 = GlobalStatics_6.aClass94_3691;
           var2.anInt782 = 0;
           var2.inventoryOptions = GameException.DEFAULT_INVENTORY_OPTIONS;
           var2.aBoolean807 = false;
@@ -93,7 +94,7 @@ public class DummyClass35 {
   }
 
   public static void method1027(int var0, byte var1) {
-    AbstractGameWorld.floorUnderlays.method1522(-128, var0);
+    GlobalStatics_4.floorUnderlays.method1522(-128, var0);
       int var2 = -38 % ((var1 - 29) / 40);
   }
 

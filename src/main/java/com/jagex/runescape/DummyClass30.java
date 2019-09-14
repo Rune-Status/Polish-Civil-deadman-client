@@ -40,7 +40,7 @@ public final class DummyClass30 {
     Buffer var1 = new Buffer(34);
       var1.writeByte(11);
       var1.writeByte(GlobalStatics_4.brightnessSetting);
-      var1.writeByte(!ClientScriptEnum.aBoolean3665 ? 0 : 1);
+      var1.writeByte(!GlobalStatics_7.aBoolean3665 ? 0 : 1);
       var1.writeByte(GlobalStatics_2.aBoolean3604 ? 1 : 0);
       var1.writeByte(Keyboard.aBoolean1905 ? 1 : 0);
       var1.writeByte(SceneSomething.aBoolean488 ? 1 : 0);
@@ -54,10 +54,10 @@ public final class DummyClass30 {
       var1.writeByte(DummyClass35.aBoolean661 ? 1 : 0);
       var1.writeByte(Parameter.anInt3622);
       var1.writeByte(!TextureSampler17.aBoolean3184 ? 0 : 1);
-      var1.writeByte(ClientScriptCall.anInt2453);
+      var1.writeByte(GlobalStatics_7.anInt2453);
       var1.writeByte(BZipDecompressorState.anInt120);
       var1.writeByte(DummyClass28.anInt340);
-      var1.writeShort(AbstractTextureSampler.anInt2378);
+      var1.writeShort(GlobalStatics_3.anInt2378);
       var1.writeShort(TextureSampler21.anInt3071);
       var1.writeByte(DummyClass0.method1757());
       var1.writeInt(GlobalStatics_0.anInt2148);
@@ -65,7 +65,7 @@ public final class DummyClass30 {
       var1.writeByte(GlobalStatics_0.safemode ? 1 : 0);
       var1.writeByte(!GlobalStatics_2.aBoolean346 ? 0 : 1);
       var1.writeByte(TriChromaticImageBuffer.anInt2488);
-      var1.writeByte(FileCacheRequester.aBoolean1080 ? 1 : 0);
+      var1.writeByte(GlobalStatics_7.aBoolean1080 ? 1 : 0);
       var1.writeByte(DummyClass4.aBoolean3004 ? 1 : 0);
       return var1;
   }

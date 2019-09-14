@@ -156,13 +156,13 @@ public final class FileSystem {
         var13 = (var10 + 1 >> 1) + var6;
       }
 
-      int[][] var18 = AbstractGameWorld.heightMap[var8];
+      int[][] var18 = GlobalStatics_4.heightMap[var8];
       int var20 = 0;
       int var19 =
         var18[var12][var15] + var18[var12][var14] + var18[var13][var14] + var18[var13][var15] >> 2;
       int[][] var21;
       if ((var8 != 0)) {
-        var21 = AbstractGameWorld.heightMap[0];
+        var21 = GlobalStatics_4.heightMap[0];
         var20 =
           -(var21[var12][var15] + var21[var13][var14] + (var21[var12][var14] + var21[var13][var15])
             >> 2) + var19;
@@ -170,7 +170,7 @@ public final class FileSystem {
 
       var21 = null;
       if (var8 < 3) {
-        var21 = AbstractGameWorld.heightMap[1 + var8];
+        var21 = GlobalStatics_4.heightMap[1 + var8];
       }
 
       SceneShadowMap var22 =
@@ -185,7 +185,7 @@ public final class FileSystem {
       TextureSampler12.method171(-101, InventoryConfig.anInt3655, 0, DummyClass30.viewWidth, 0, -1,
         GroundItem.viewHeight, 0, 0);
       if (SceneNode.aClass11Array1836 != null) {
-        Cache.method1095(0, FileCacheRequester.anInt1082, GlobalStatics_2.anInt3602,
+        GlobalStatics_6.method1095(0, GlobalStatics_7.anInt1082, GlobalStatics_2.anInt3602,
           SceneNode.aClass11Array1836, DummyClass30.viewWidth, -1412584499, 0,
           GroundItem.viewHeight, (byte) 73, DummyClass18.aClass11_88.anInt292);
         SceneNode.aClass11Array1836 = null;
@@ -207,7 +207,7 @@ public final class FileSystem {
         }
 
         GlobalStatics_0.aClass151_Sub1Array2601[var3] =
-            AbstractFileRequester.fileSystem
+            GlobalStatics_5.fileSystem
                 .method839(-1824885439, var3, GlobalStatics_0.tableCache,
                     var5);
         if (var1) {
@@ -267,11 +267,11 @@ public final class FileSystem {
     } else {
       int var4 = var1 << 7;
       int var5 = var2 << 7;
-      if (TextureSampler10.method349(var4 + 1, AbstractGameWorld.heightMap[var0][var1][var2],
+      if (TextureSampler10.method349(var4 + 1, GlobalStatics_4.heightMap[var0][var1][var2],
         var5 + 1) && TextureSampler10.method349(var4 + 128 - 1,
-        AbstractGameWorld.heightMap[var0][var1 + 1][var2], var5 + 1) && TextureSampler10.method349(
-        var4 + 128 - 1, AbstractGameWorld.heightMap[var0][var1 + 1][var2 + 1], var5 + 128 - 1)
-        && TextureSampler10.method349(var4 + 1, AbstractGameWorld.heightMap[var0][var1][var2 + 1],
+        GlobalStatics_4.heightMap[var0][var1 + 1][var2], var5 + 1) && TextureSampler10.method349(
+        var4 + 128 - 1, GlobalStatics_4.heightMap[var0][var1 + 1][var2 + 1], var5 + 128 - 1)
+        && TextureSampler10.method349(var4 + 1, GlobalStatics_4.heightMap[var0][var1][var2 + 1],
         var5 + 128 - 1)) {
         DummyClass50.anIntArrayArrayArray1142[var0][var1][var2] = SomethingQuickChat2.anInt3539;
         return true;

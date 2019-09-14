@@ -5,6 +5,7 @@ import com.jagex.runescape.buffer.BufferStatics;
 import com.jagex.runescape.common.ArrayUtils;
 import com.jagex.runescape.common.GameString;
 import com.jagex.runescape.common.GameStringStatics;
+import com.jagex.runescape.done.*;
 import com.jagex.runescape.node.Deque;
 import com.jagex.runescape.opengl.DummyClass46;
 import com.jagex.runescape.opengl.GLStatics;
@@ -360,7 +361,7 @@ public final class GlobalStatics_0 {
                       (BZipDecompressorState.tileFlags[1][var24][var17]
                           & 2) != 0;
                   var25.anInt697 =
-                      AbstractGameWorld
+                      GlobalStatics_4
                           .heightMap[var25.anInt704][var24][var17] +
                           -var25.anInt697;
                   DummyClass46.method1264(var25);
@@ -412,7 +413,7 @@ public final class GlobalStatics_0 {
     if (var0 == 9179409) {
       int var1 = DummyClass20.method1817((byte) 70);
       if (var1 == 0) {
-        AbstractImageProducer.aByteArrayArrayArray2008 = null;
+        GlobalStatics_5.aByteArrayArrayArray2008 = null;
         SceneShadowMap.method1816(0, -7);
       } else if ((var1 == 1)) {
         SomethingInScenePacket202.method112((byte) 0, (byte) 55);
@@ -420,7 +421,7 @@ public final class GlobalStatics_0 {
         TextureSampler19.method257((byte) 125);
       } else {
         SomethingInScenePacket202.method112(
-            (byte) (-4 + BitVariable.anInt1127 & 255), (byte) 55);
+            (byte) (-4 + GlobalStatics_6.anInt1127 & 255), (byte) 55);
         SceneShadowMap.method1816(2, -7);
       }
     }
@@ -431,7 +432,7 @@ public final class GlobalStatics_0 {
       GlobalStatics_0.anIntArray2591 = null;
     }
 
-    ClientScriptCall.aClass93_2450.method1522(var0 ^ -114, var1);
+    GlobalStatics_7.aClass93_2450.method1522(var0 ^ -114, var1);
   }
 
   public static void method799(int var0, int var1, int var2, int var3,
@@ -450,23 +451,23 @@ public final class GlobalStatics_0 {
     int var7;
     if ((GameObject.anInt2737 >= 100)) {
       DummyClass1.anInt410 =
-          (int) ((var3 * 2) / AbstractGameWorld.aFloat727);
+          (int) ((var3 * 2) / GlobalStatics_4.aFloat727);
       DummyClass44.anInt930 =
           SomethingQuickChat2.anInt3536 +
-              -((int) (var4 / AbstractGameWorld.aFloat727));
-      int var15 = -((int) (var4 / AbstractGameWorld.aFloat727)) +
+              -((int) (var4 / GlobalStatics_4.aFloat727));
+      int var15 = -((int) (var4 / GlobalStatics_4.aFloat727)) +
           SomethingQuickChat2.anInt3536;
       var6 = SpawnedGameObject.anInt2251 -
-          (int) (var3 / AbstractGameWorld.aFloat727);
+          (int) (var3 / GlobalStatics_4.aFloat727);
       DummyClass44.anInt934 =
           SpawnedGameObject.anInt2251 +
-              -((int) (var3 / AbstractGameWorld.aFloat727));
+              -((int) (var3 / GlobalStatics_4.aFloat727));
       int var8 = SpawnedGameObject.anInt2251 +
-          (int) (var3 / AbstractGameWorld.aFloat727);
-      var7 = (int) (var4 / AbstractGameWorld.aFloat727) +
+          (int) (var3 / GlobalStatics_4.aFloat727);
+      var7 = (int) (var4 / GlobalStatics_4.aFloat727) +
           SomethingQuickChat2.anInt3536;
       GZipDecompressor.anInt817 =
-          (int) ((var4 * 2) / AbstractGameWorld.aFloat727);
+          (int) ((var4 * 2) / GlobalStatics_4.aFloat727);
       if (var1 != 64) {
         GlobalStatics_0.aClass94Array2596 = null;
       }
@@ -501,9 +502,9 @@ public final class GlobalStatics_0 {
       }
 
       if (GlobalStatics_2.anInt3704 > 0) {
-        --ByteArrayNode.anInt3611;
-        if ((ByteArrayNode.anInt3611 == 0)) {
-          ByteArrayNode.anInt3611 = 20;
+        --GlobalStatics_6.anInt3611;
+        if ((GlobalStatics_6.anInt3611 == 0)) {
+          GlobalStatics_6.anInt3611 = 20;
           --GlobalStatics_2.anInt3704;
         }
       }
@@ -514,7 +515,7 @@ public final class GlobalStatics_0 {
         SomethingTilek.p12Font.method688(
             RenderAnimation.concat(new GameString[]{
                 DummyClass45.aClass94_985,
-                SomethingScene.toString(AnimationSequence.fps)}),
+                SomethingScene.toString(GlobalStatics_3.fps)}),
             var9, var10, 16776960, -1);
         Runtime var11 = Runtime.getRuntime();
         int var12 = (int) ((var11.totalMemory() - var11.freeMemory())
@@ -594,7 +595,7 @@ public final class GlobalStatics_0 {
           RenderAnimation.concat(new GameString[]{
               TextureSampler23.aClass94_3211,
               var2.substring(-4 + var2.getLength(), 0, 0),
-              AnimationSomething.aClass94_3586, SomethingScene.aClass94_1072,
+              GlobalStatics_6.aClass94_3586, SomethingScene.aClass94_1072,
               var2,
               OndemandRequester.aClass94_995
           }) :
@@ -873,7 +874,7 @@ public final class GlobalStatics_0 {
       }
     }
 
-    var8 = AnimationSomething.method557(var6, var1 + var5, var0 + var3);
+    var8 = GlobalStatics_6.method557(var6, var1 + var5, var0 + var3);
     if (var8 != 0L) {
       var10 = (int) var8 >> 20 & 3;
       var11 = ((int) var8 & 520964) >> 14;
@@ -1198,7 +1199,7 @@ public final class GlobalStatics_0 {
     if (var2 == null) {
       byte[] var3;
       if ((var1 < 32768)) {
-        var3 = AudioStreamEncoder3.aClass153_3490.getBytes(1, var1);
+        var3 = GlobalStatics_6.aClass153_3490.getBytes(1, var1);
       } else {
         var3 = DummyClass14.aClass153_1967.getBytes(1, 32767 & var1);
       }
@@ -1308,16 +1309,16 @@ public final class GlobalStatics_0 {
 
   public static void method1775() {
     for (int var0 = 0; var0 < TextureSampler21.anInt3070; ++var0) {
-      SceneSomething var1 = AnimationSequence.aClass25Array1868[var0];
-      AbstractImageProducer.method2186(var1);
-      AnimationSequence.aClass25Array1868[var0] = null;
+      SceneSomething var1 = GlobalStatics_3.aClass25Array1868[var0];
+      GlobalStatics_5.method2186(var1);
+      GlobalStatics_3.aClass25Array1868[var0] = null;
     }
 
     TextureSampler21.anInt3070 = 0;
   }
 
   public static AbstractTextureSampler createTextureSampler(int type,
-      boolean var1) {
+                                                            boolean var1) {
     if ((type == 0)) {
       return new TextureSampler0();
     } else if ((type != 1)) {
@@ -1455,11 +1456,11 @@ public final class GlobalStatics_0 {
   public static void method1427(boolean var0, int var1) {
     if (var1 == -1 && !MidiSomething.aBoolean1158) {
       SceneNode.method1870(false);
-    } else if (var1 != -1 && (AbstractFrameRegulator.anInt1691 != var1
-        || !BitVariable.method1391(
+    } else if (var1 != -1 && (GlobalStatics_4.anInt1691 != var1
+        || !GlobalStatics_6.method1391(
         -1)) && BZipDecompressorState.anInt120 != 0
         && !MidiSomething.aBoolean1158) {
-      AbstractFileRequester
+      GlobalStatics_5
           .method2099(true, var1, 0, SomethingTexture1.fileUnpacker6, false,
               BZipDecompressorState.anInt120, 2);
     }
@@ -1468,7 +1469,7 @@ public final class GlobalStatics_0 {
       aClass94_1192 = null;
     }
 
-    AbstractFrameRegulator.anInt1691 = var1;
+    GlobalStatics_4.anInt1691 = var1;
   }
 
   public static void method1428(int var0, int var1, int var2) {
@@ -1477,11 +1478,11 @@ public final class GlobalStatics_0 {
     }
 
     DummyClass5.anIntArray2985[var0] = var2;
-    VariableUpdate var3 = (VariableUpdate) ClientScript.variableUpdates.get(
+    VariableUpdate var3 = (VariableUpdate) GlobalStatics_6.variableUpdates.get(
         var0);
     if (var3 == null) {
       var3 = new VariableUpdate(Time.getCurrentTimeMillis() + 500L);
-      ClientScript.variableUpdates.put(var0, var3);
+      GlobalStatics_6.variableUpdates.put(var0, var3);
     } else {
       var3.timestamp = 500L + Time.getCurrentTimeMillis();
     }
@@ -1684,6 +1685,6 @@ public final class GlobalStatics_0 {
 
   public static GameString method1218(boolean var0, int var1, int var2) {
     return var1 <= 122 ? null
-        : AbstractObjectNodeWrapper.method1723((byte) -128, var0, 10, var2);
+        : GlobalStatics_5.method1723((byte) -128, var0, 10, var2);
   }
 }

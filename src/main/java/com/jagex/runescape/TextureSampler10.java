@@ -1,6 +1,7 @@
 package com.jagex.runescape;
 
 import com.jagex.runescape.buffer.Buffer;
+import com.jagex.runescape.done.AbstractTextureSampler;
 import com.jagex.runescape.huffman.HuffmanEncoderStatics;
 
 public final class TextureSampler10 extends AbstractTextureSampler {
@@ -458,7 +459,7 @@ public final class TextureSampler10 extends AbstractTextureSampler {
     FloorOverlay var2 = (FloorOverlay) DummyClass8.aClass93_4015.get(var1);
       if (var2 == null) {
         int var3 = 70 % ((var0 - 43) / 57);
-        byte[] var4 = AnimationSomething.configs.getBytes(4, var1);
+        byte[] var4 = GlobalStatics_6.configs.getBytes(4, var1);
         var2 = new FloorOverlay();
         if (var4 != null) {
           var2.method2274(24559, new Buffer(var4), var1);

@@ -38,7 +38,7 @@ public final class DummyClass49 {
         DummyClass49.method1367(114, 95, -80, (byte) -90, -2, 56);
       }
 
-      DirectImageProducer.aClass93_2982.method1522(var0 ^ -22, var1);
+      GlobalStatics_7.aClass93_2982.method1522(var0 ^ -22, var1);
   }
 
   public static void method1367(int var0, int var1, int var2, byte var3, int var4, int var5) {

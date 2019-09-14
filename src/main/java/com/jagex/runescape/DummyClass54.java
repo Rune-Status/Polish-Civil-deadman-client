@@ -1,6 +1,8 @@
 package com.jagex.runescape;
 
 import com.jagex.runescape.common.GameString;
+import com.jagex.runescape.done.DisplayMode;
+
 import java.awt.Frame;
 
 public final class DummyClass54 {
@@ -48,7 +50,7 @@ public final class DummyClass54 {
         Frame var11 = (Frame) var10.result;
         if (var11 != null) {
           if (var0 == var10.status) {
-            FileCacheRequest.method593(var11, true, var5);
+            GlobalStatics_7.method593(var11, true, var5);
             return null;
           } else {
             return var11;

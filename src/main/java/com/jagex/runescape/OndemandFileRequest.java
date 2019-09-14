@@ -3,6 +3,8 @@ package com.jagex.runescape;
 import com.jagex.runescape.buffer.Buffer;
 import com.jagex.runescape.common.GameString;
 import com.jagex.runescape.common.GameStringStatics;
+import com.jagex.runescape.done.AbstractFileRequest;
+import com.jagex.runescape.done.DisplayMode;
 import com.jagex.runescape.opengl.GLStatics;
 import com.jagex.runescape.opengl.GlRenderer;
 import com.jagex.runescape.opengl.SomethingGl0;
@@ -97,9 +99,9 @@ public final class OndemandFileRequest extends AbstractFileRequest {
       }
 
       if (TextureSampler30.fullScreenFrame != null && (var1 != 3
-          || (var5 != AbstractTextureSampler.anInt2378)
+          || (var5 != GlobalStatics_3.anInt2378)
           || (var6 != TextureSampler21.anInt3071))) {
-        FileCacheRequest.method593(TextureSampler30.fullScreenFrame, true,
+        GlobalStatics_7.method593(TextureSampler30.fullScreenFrame, true,
             DummyClass35.signLink);
         TextureSampler30.fullScreenFrame = null;
       }
@@ -109,7 +111,7 @@ public final class OndemandFileRequest extends AbstractFileRequest {
             DummyClass54.method1597(2, 0, 0, var6, var5, DummyClass35.signLink);
         if (TextureSampler30.fullScreenFrame != null) {
           TextureSampler21.anInt3071 = var6;
-          AbstractTextureSampler.anInt2378 = var5;
+          GlobalStatics_3.anInt2378 = var5;
           DummyClass25.writeSettings(DummyClass35.signLink);
         }
       }
@@ -127,12 +129,12 @@ public final class OndemandFileRequest extends AbstractFileRequest {
           var7 = TextureSampler30.fullScreenFrame;
         }
 
-        AreaSoundEffect.windowWidth = var7.getSize().width;
+        GlobalStatics_6.windowWidth = var7.getSize().width;
         SceneSomething2.windowHeight = var7.getSize().height;
         Insets var8;
         if (TextureSampler27.FRAME == var7) {
           var8 = TextureSampler27.FRAME.getInsets();
-          AreaSoundEffect.windowWidth -= var8.right + var8.left;
+          GlobalStatics_6.windowWidth -= var8.right + var8.left;
           SceneSomething2.windowHeight -= var8.bottom + var8.top;
         }
 
@@ -141,13 +143,13 @@ public final class OndemandFileRequest extends AbstractFileRequest {
         }
 
         if ((var1 >= 2)) {
-          DummyClass30.viewWidth = AreaSoundEffect.windowWidth;
+          DummyClass30.viewWidth = GlobalStatics_6.windowWidth;
           GroundItem.viewHeight = SceneSomething2.windowHeight;
           DummyClass51.viewX = 0;
-          DisplayMode.viewY = 0;
+          GlobalStatics_7.viewY = 0;
         } else {
-          DisplayMode.viewY = 0;
-          DummyClass51.viewX = (AreaSoundEffect.windowWidth - 765) / 2;
+          GlobalStatics_7.viewY = 0;
+          DummyClass51.viewX = (GlobalStatics_6.windowWidth - 765) / 2;
           DummyClass30.viewWidth = 765;
           GroundItem.viewHeight = 503;
         }
@@ -177,10 +179,10 @@ public final class OndemandFileRequest extends AbstractFileRequest {
             var8 = TextureSampler27.FRAME.getInsets();
             GameCanvas.INSTANCE
                 .setLocation(var8.left + DummyClass51.viewX,
-                    var8.top + DisplayMode.viewY);
+                    var8.top + GlobalStatics_7.viewY);
           } else {
             GameCanvas.INSTANCE
-                .setLocation(DummyClass51.viewX, DisplayMode.viewY);
+                .setLocation(DummyClass51.viewX, GlobalStatics_7.viewY);
           }
         }
 
@@ -203,7 +205,7 @@ public final class OndemandFileRequest extends AbstractFileRequest {
                   .drawLoadingScreen(FloorOverlay.aClass3_Sub28_Sub17_2096,
                       true);
             } else {
-              AbstractTextureSampler
+              GlobalStatics_3
                   .drawLoadingBox(TextureSampler39.LOADING_PLEASE_WAIT, false);
             }
 
@@ -250,7 +252,7 @@ public final class OndemandFileRequest extends AbstractFileRequest {
               DummyClass40.updateLightness(0.7F);
             }
 
-            AbstractTextureSampler.method165(-7878);
+            GlobalStatics_3.method165(-7878);
           } else if (var1 == 0 && var3 > 0) {
             DummyClass1.gameThread.setPriority(1);
             Something3d.viewImageProducer =
@@ -278,10 +280,10 @@ public final class OndemandFileRequest extends AbstractFileRequest {
             }
 
             SomethingGl0.method144();
-            AbstractTextureSampler.method165(-7878);
+            GlobalStatics_3.method165(-7878);
           }
 
-          Cache.aBoolean742 = !NPC.method1986(89);
+          GlobalStatics_6.aBoolean742 = !NPC.method1986(89);
           if (var2) {
             TriChromaticImageBuffer.method389(false);
           }

@@ -3,6 +3,9 @@ package com.jagex.runescape;
 import com.jagex.runescape.buffer.BufferStatics;
 import com.jagex.runescape.common.GameString;
 import com.jagex.runescape.common.GameStringStatics;
+import com.jagex.runescape.done.AbstractModel;
+import com.jagex.runescape.done.AnimationSequence;
+import com.jagex.runescape.done.AnimationSomething;
 import com.jagex.runescape.opengl.SomethingShadows;
 import com.jagex.runescape.opengl.GLStatics;
 import com.jagex.runescape.opengl.GlModel;
@@ -84,7 +87,7 @@ public final class GameObject extends SceneNode {
         }
 
         this.anInt2746 = 1;
-        this.anInt2749 = -1 + AbstractGameWorld.updateCycle;
+        this.anInt2749 = -1 + GlobalStatics_4.updateCycle;
         if ((this.aClass142_2722.anInt1845 == 0) && var9 != null && var9 instanceof GameObject) {
           GameObject var12 = (GameObject) var9;
           if (this.aClass142_2722 == var12.aClass142_2722) {
@@ -110,7 +113,7 @@ public final class GameObject extends SceneNode {
 
           this.anInt2746 = 1 + ((int) (Math.random()
             * this.aClass142_2722.anIntArray1869[this.anInt2726]));
-          this.anInt2749 = -this.anInt2746 + AbstractGameWorld.updateCycle;
+          this.anInt2749 = -this.anInt2746 + GlobalStatics_4.updateCycle;
         }
       }
 
@@ -168,7 +171,7 @@ public final class GameObject extends SceneNode {
 
   private void method1961(int var1, int var2, int var3) {
     if (this.aClass142_2722 != null) {
-        int var4 = AbstractGameWorld.updateCycle - this.anInt2749;
+        int var4 = GlobalStatics_4.updateCycle - this.anInt2749;
         if ((var4 > 100) && this.aClass142_2722.anInt1865 > 0) {
           int var5;
           for (
@@ -223,13 +226,13 @@ public final class GameObject extends SceneNode {
         }
 
         this.anInt2746 = var4;
-        this.anInt2749 = -var4 + AbstractGameWorld.updateCycle;
+        this.anInt2749 = -var4 + GlobalStatics_4.updateCycle;
       }
   }
 
   private SceneNode method1962(boolean var1, int var2) {
     boolean var3 = !Arrays.deepEquals(DummyClass43.somethingHeightMap,
-          AbstractGameWorld.heightMap);
+          GlobalStatics_4.heightMap);
       GameObjectConfig var4 = DummyClass11.method2207(var2 + 6, this.anInt2729);
       int var5 = var4.anInt1531;
       if (var4.anIntArray1524 != null) {
@@ -244,7 +247,7 @@ public final class GameObject extends SceneNode {
         return null;
       } else {
         int var6;
-        if (AbstractImageProducer.gameId != 0 && this.aBoolean2721 && (
+        if (GlobalStatics_5.gameId != 0 && this.aBoolean2721 && (
             this.aClass142_2722 == null
                 || (this.aClass142_2722.anInt1864 != var4.anInt1531))) {
           var6 = var4.anInt1531;
@@ -266,7 +269,7 @@ public final class GameObject extends SceneNode {
                 (int) (Math.random() * this.aClass142_2722.anIntArray1869[this.anInt2726]);
             } else {
               this.anInt2726 = 0;
-              this.anInt2749 = AbstractGameWorld.updateCycle - 1;
+              this.anInt2749 = GlobalStatics_4.updateCycle - 1;
             }
           }
         }
@@ -295,7 +298,7 @@ public final class GameObject extends SceneNode {
         if (var1 && !var13) {
           return null;
         } else {
-          int[][] var14 = AbstractGameWorld.heightMap[this.anInt2732];
+          int[][] var14 = GlobalStatics_4.heightMap[this.anInt2732];
           int var15 =
             var14[var10][var12] + var14[var9][var12] + var14[var9][var11] + var14[var10][var11]
               >> 2;
@@ -306,7 +309,7 @@ public final class GameObject extends SceneNode {
             var18 = DummyClass43.somethingHeightMap[0];
           } else {
             if ((this.anInt2732 < 3)) {
-              var18 = AbstractGameWorld.heightMap[1 + this.anInt2732];
+              var18 = GlobalStatics_4.heightMap[1 + this.anInt2732];
             }
           }
 
@@ -341,7 +344,7 @@ public final class GameObject extends SceneNode {
 
               int var21 = 0;
               if ((this.anInt2732 != 0)) {
-                int[][] var22 = AbstractGameWorld.heightMap[0];
+                int[][] var22 = GlobalStatics_4.heightMap[0];
                 var21 = var15 - (var22[var10][var11] + var22[var9][var11] - (-var22[var9][var12]
                   - var22[var10][var12]) >> 2);
               }
@@ -383,11 +386,11 @@ public final class GameObject extends SceneNode {
   }
 
   public static AbstractModel method1957(int var0, boolean var1, AnimationSequence var2, int var3,
-                                        int var4, int var5, int var6, int var7, AbstractModel var8,
-                                        int var9, int var10, int var11, int var12, byte var13) {
+                                         int var4, int var5, int var6, int var7, AbstractModel var8,
+                                         int var9, int var10, int var11, int var12, byte var13) {
     long var14 =
         ((long) var4 << 48) + (var7 + (var0 << 16) + (var12 << 24)) + ((long) var6 << 32);
-      AbstractModel var16 = (AbstractModel) DirectImageProducer.aClass93_2982.get(var14);
+      AbstractModel var16 = (AbstractModel) GlobalStatics_7.aClass93_2982.get(var14);
       int var21;
       int var23;
       int var25;
@@ -449,7 +452,7 @@ public final class GameObject extends SceneNode {
         }
 
         var16 = var20.method2008(64, 768, -50, -10, -50);
-        DirectImageProducer.aClass93_2982.get((byte) -125, var16, var14);
+        GlobalStatics_7.aClass93_2982.get((byte) -125, var16, var14);
       }
 
       int var32 = var7 * 64 - 1;
@@ -464,7 +467,7 @@ public final class GameObject extends SceneNode {
         var25 = var8.method1872();
         if (var2 != null) {
           var10 = var2.anIntArray1851[var10];
-          var40 = AreaSoundEffect.method133(var10 >> 16, 0);
+          var40 = GlobalStatics_6.method133(var10 >> 16, 0);
           var10 &= '\uffff';
         }
 
@@ -513,15 +516,15 @@ public final class GameObject extends SceneNode {
 
         if (GlRenderer.useOpenGlRenderer) {
           GlModel var36 = (GlModel) var16;
-          if ((BufferData
+          if ((GlobalStatics_6
               .method1736(GameWorldSomething.currentPlane, var13 ^ -50,
                   var3 + var35,
                   var24 + var5) != var11) ||
-              (BufferData
+              (GlobalStatics_6
                   .method1736(GameWorldSomething.currentPlane, 1, var23 + var3,
                       var5 + var25) != var11)) {
             for (var28 = 0; var28 < var36.vertexCCC; ++var28) {
-              var36.vy[var28] += -var11 + BufferData
+              var36.vy[var28] += -var11 + GlobalStatics_6
                   .method1736(GameWorldSomething.currentPlane,
                       ObjectCache.bitXor(var13, -50), var36.vx[var28] + var3,
                       var5 + var36.vz[var28]);
@@ -533,14 +536,14 @@ public final class GameObject extends SceneNode {
         } else {
           SoftwareModel var37 = (SoftwareModel) var16;
           if (
-              (BufferData
+              (GlobalStatics_6
                   .method1736(GameWorldSomething.currentPlane, 1, var3 + var35,
-                      var5 + var24) != var11) || var11 != BufferData
+                      var5 + var24) != var11) || var11 != GlobalStatics_6
                   .method1736(GameWorldSomething.currentPlane, 1,
                       var3 + var23, var5 + var25)) {
             for (var28 = 0; var37.anInt3891 > var28; ++var28) {
               var37.anIntArray3883[var28] +=
-                  -var11 + BufferData
+                  -var11 + GlobalStatics_6
                       .method1736(GameWorldSomething.currentPlane, 1,
                           var3 + var37.anIntArray3885[var28],
                           var5 + var37.anIntArray3895[var28]);
@@ -574,7 +577,7 @@ public final class GameObject extends SceneNode {
 
   public static void method1959(int var0, int var1, int var2, boolean var3) {
     if ((var2 >= 8000) && var2 <= '\ubb80') {
-        AudioStreamEncoder4.anInt3507 = var1;
+        GlobalStatics_6.anInt3507 = var1;
         if (var0 != 256) {
           GameObject.OPTION_DROP = null;
         }
@@ -609,19 +612,19 @@ public final class GameObject extends SceneNode {
           int var5 = SpotAnimationConfig.gameBuffer.readBits(1);
           if ((var5 == 0)) {
             DummyClass42.anIntArray887[DummyClass13.anInt2022++] = var3;
-            var4.anInt2838 = AbstractGameWorld.updateCycle;
+            var4.anInt2838 = GlobalStatics_4.updateCycle;
           } else {
             int var6 = SpotAnimationConfig.gameBuffer.readBits(2);
             if (var6 == 0) {
               DummyClass42.anIntArray887[DummyClass13.anInt2022++] = var3;
-              var4.anInt2838 = AbstractGameWorld.updateCycle;
+              var4.anInt2838 = GlobalStatics_4.updateCycle;
               DummyClass60.anIntArray441[OndemandRequester.anInt997++] = var3;
             } else {
               int var7;
               int var8;
               if ((var6 == 1)) {
                 DummyClass42.anIntArray887[DummyClass13.anInt2022++] = var3;
-                var4.anInt2838 = AbstractGameWorld.updateCycle;
+                var4.anInt2838 = GlobalStatics_4.updateCycle;
                 var7 = SpotAnimationConfig.gameBuffer.readBits(3);
                 var4.method1968(1, (byte) 46, var7);
                 var8 = SpotAnimationConfig.gameBuffer.readBits(1);
@@ -631,7 +634,7 @@ public final class GameObject extends SceneNode {
               } else {
                 if ((var6 == 2)) {
                   DummyClass42.anIntArray887[DummyClass13.anInt2022++] = var3;
-                  var4.anInt2838 = AbstractGameWorld.updateCycle;
+                  var4.anInt2838 = GlobalStatics_4.updateCycle;
                   if (SpotAnimationConfig.gameBuffer.readBits(1) == 1) {
                     var7 = SpotAnimationConfig.gameBuffer.readBits(3);
                     var4.method1968(2, (byte) -92, var7);

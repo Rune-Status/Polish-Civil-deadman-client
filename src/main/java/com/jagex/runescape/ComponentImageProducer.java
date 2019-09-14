@@ -1,5 +1,7 @@
 package com.jagex.runescape;
 
+import com.jagex.runescape.done.AbstractImageProducer;
+
 import java.awt.Component;
 import java.awt.Graphics;
 import java.awt.Shape;

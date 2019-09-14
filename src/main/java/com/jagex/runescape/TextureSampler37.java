@@ -3,6 +3,8 @@ package com.jagex.runescape;
 import com.jagex.runescape.buffer.Buffer;
 import com.jagex.runescape.common.GameString;
 import com.jagex.runescape.common.GameStringStatics;
+import com.jagex.runescape.done.AbstractTextureSampler;
+
 import java.io.IOException;
 import java.net.Socket;
 
@@ -144,7 +146,7 @@ public final class TextureSampler37 extends AbstractTextureSampler {
           }
 
           if (DummyCanvas.anInt23 == 1) {
-            AreaSoundEffect.socketRequest =
+            GlobalStatics_6.socketRequest =
               DummyClass35.signLink.method1441((byte) 8, DummyClass36.aString2611,
                 Projectile.anInt2894);
             DummyCanvas.anInt23 = 2;
@@ -152,19 +154,19 @@ public final class TextureSampler37 extends AbstractTextureSampler {
 
           int var1;
           if ((DummyCanvas.anInt23 == 2)) {
-            assert AreaSoundEffect.socketRequest != null;
-            if ((AreaSoundEffect.socketRequest.status == 2)) {
+            assert GlobalStatics_6.socketRequest != null;
+            if ((GlobalStatics_6.socketRequest.status == 2)) {
               throw new IOException();
             }
 
-            if (AreaSoundEffect.socketRequest.status != 1) {
+            if (GlobalStatics_6.socketRequest.status != 1) {
               return;
             }
 
             SomethingVolume15.gameSocket =
-              new SocketStream((Socket) AreaSoundEffect.socketRequest.result,
+              new SocketStream((Socket) GlobalStatics_6.socketRequest.result,
                 DummyClass35.signLink);
-            AreaSoundEffect.socketRequest = null;
+            GlobalStatics_6.socketRequest = null;
             SomethingVolume15.gameSocket.write(TextureSampler12.secureBuffer.bytes, 0,
               TextureSampler12.secureBuffer.position);
             if (GameWorld.audioOutputStream0 != null) {
@@ -283,7 +285,7 @@ public final class TextureSampler37 extends AbstractTextureSampler {
           int var3 = -1;
 
           for (int var4 = 0; (var4 < TextureSampler11.anInt3244); ++var4) {
-            if (TextureSampler13.anIntArray3367[var4] == AudioStreamEncoder3.regionHashes[var2]) {
+            if (TextureSampler13.anIntArray3367[var4] == GlobalStatics_6.regionHashes[var2]) {
               var3 = var4;
               break;
             }
@@ -291,7 +293,7 @@ public final class TextureSampler37 extends AbstractTextureSampler {
 
           if ((var3 == -1)) {
             TextureSampler13.anIntArray3367[TextureSampler11.anInt3244] =
-              AudioStreamEncoder3.regionHashes[var2];
+              GlobalStatics_6.regionHashes[var2];
             var3 = TextureSampler11.anInt3244++;
           }
 
@@ -305,10 +307,10 @@ public final class TextureSampler37 extends AbstractTextureSampler {
             int var8 = var7 >> 14;
             int var9 = 63 & var7 >> 7;
             int var11 =
-              var9 + 64 * (AudioStreamEncoder3.regionHashes[var2] >> 8) - WorldMapLabel.anInt1716;
+              var9 + 64 * (GlobalStatics_6.regionHashes[var2] >> 8) - WorldMapLabel.anInt1716;
             int var10 = var7 & 63;
             int var12 = var10 - ProceduralTexture.anInt1152 + 64 * (255
-              & AudioStreamEncoder3.regionHashes[var2]);
+              & GlobalStatics_6.regionHashes[var2]);
             NpcConfiguration var13 = GlobalStatics_2.getNpcConfiguration(var16.readUnsignedShort());
             if (TextureSampler5.npcs[var6] == null && (var13.aByte1267 & 1) > 0
               && (var8 == GameObject.plane) && (var11 >= 0) &&
@@ -317,7 +319,7 @@ public final class TextureSampler37 extends AbstractTextureSampler {
               TextureSampler5.npcs[var6] = new NPC();
               NPC npc = TextureSampler5.npcs[var6];
               GlobalStatics_2.anIntArray347[DummyClass6.anInt2046++] = var6;
-              npc.anInt2838 = AbstractGameWorld.updateCycle;
+              npc.anInt2838 = GlobalStatics_4.updateCycle;
               npc.setConfiguration(-1, var13);
               npc.method1976(npc.config.size, 2);
               npc.anInt2806 =

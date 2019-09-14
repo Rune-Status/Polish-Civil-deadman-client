@@ -4,6 +4,7 @@ import com.jagex.runescape.buffer.Buffer;
 import com.jagex.runescape.common.GameString;
 import com.jagex.runescape.common.GameStringStatics;
 import com.jagex.runescape.common.HashTable;
+import com.jagex.runescape.done.AbstractTextureSampler;
 import com.jagex.runescape.opengl.GlEnvironment;
 import com.jagex.runescape.opengl.GlRenderer;
 
@@ -100,13 +101,13 @@ public final class TextureSampler1 extends AbstractTextureSampler {
         InventoryConfig.anInt3655 = -1;
         TextureSampler23.aClass130_3208 = new HashTable(8);
         VariableUpdate.method122(var1 - 2918);
-        InventoryConfig.anInt3655 = AudioSomethingSomething.anInt2529;
+        InventoryConfig.anInt3655 = GlobalStatics_6.anInt2529;
         DummyClass23.method1746(false, (byte) -36);
-        Cache.method1093(false);
+        GlobalStatics_6.method1093(false);
         TextureSampler24.method226(InventoryConfig.anInt3655, var1 ^ 2960);
       }
 
-      AnimationSomething.anInt3590 = -1;
+      GlobalStatics_6.anInt3590 = -1;
       TextureSampler20.method229(DummyClass12.anInt2027, 20827);
       TextureCache.localPlayer = new Player();
       TextureCache.localPlayer.anInt2829 = 3000;
@@ -114,7 +115,7 @@ public final class TextureSampler1 extends AbstractTextureSampler {
       if (GlRenderer.useOpenGlRenderer) {
         if ((SomethingPacket116.anInt1753 == 2)) {
           NPC.anInt3995 = GameCanvas.anInt30 << 7;
-          DummyClass49.anInt1111 = AbstractMouseWheel.anInt1904 << 7;
+          DummyClass49.anInt1111 = GlobalStatics_5.anInt1904 << 7;
         } else {
           WidgetUpdate.d(var1 ^ '\uf447');
         }
@@ -150,15 +151,15 @@ public final class TextureSampler1 extends AbstractTextureSampler {
         var7 = var3 << 7;
         return
             TextureSampler10.method349(var6 + 1,
-                AbstractGameWorld.heightMap[var0][var1][var3] + var5,
+                GlobalStatics_4.heightMap[var0][var1][var3] + var5,
                 var7 + 1) && TextureSampler10.method349(var6 + 128 - 1,
-                AbstractGameWorld.heightMap[var0][var1 + 1][var3] + var5,
+                GlobalStatics_4.heightMap[var0][var1 + 1][var3] + var5,
                 var7 + 1)
                 && TextureSampler10.method349(var6 + 128 - 1,
-                AbstractGameWorld.heightMap[var0][var1 + 1][var3 + 1] + var5,
+                GlobalStatics_4.heightMap[var0][var1 + 1][var3 + 1] + var5,
                 var7 + 128 - 1)
                 && TextureSampler10.method349(var6 + 1,
-                AbstractGameWorld.heightMap[var0][var1][var3 + 1] + var5,
+                GlobalStatics_4.heightMap[var0][var1][var3 + 1] + var5,
                 var7 + 128 - 1);
       } else {
         return false;
@@ -175,7 +176,7 @@ public final class TextureSampler1 extends AbstractTextureSampler {
 
       var6 = (var1 << 7) + 1;
       var7 = (var3 << 7) + 2;
-      int var8 = AbstractGameWorld.heightMap[var0][var1][var3] + var5;
+      int var8 = GlobalStatics_4.heightMap[var0][var1][var3] + var5;
       if (TextureSampler10.method349(var6, var8, var7)) {
         int var9 = (var2 << 7) - 1;
         if (TextureSampler10.method349(var9, var8, var7)) {

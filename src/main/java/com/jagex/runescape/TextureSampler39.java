@@ -3,6 +3,7 @@ package com.jagex.runescape;
 import com.jagex.runescape.buffer.Buffer;
 import com.jagex.runescape.common.GameString;
 import com.jagex.runescape.common.GameStringStatics;
+import com.jagex.runescape.done.AbstractTextureSampler;
 import com.jagex.runescape.opengl.GLStatics;
 import com.jagex.runescape.opengl.MaterialShader5;
 
@@ -189,7 +190,7 @@ public class TextureSampler39 extends AbstractTextureSampler {
 
   public static void updateVariable(int id, int var1) {
     LightIntensity.variables[id] = var1;
-      VariableUpdate var3 = (VariableUpdate) ClientScript.variableUpdates.get(
+      VariableUpdate var3 = (VariableUpdate) GlobalStatics_6.variableUpdates.get(
           id);
       if (var3 != null) {
         if (var3.timestamp != 0x4000000000000001L) {
@@ -197,7 +198,7 @@ public class TextureSampler39 extends AbstractTextureSampler {
         }
       } else {
         var3 = new VariableUpdate(0x4000000000000001L);
-        ClientScript.variableUpdates.put(id, var3);
+        GlobalStatics_6.variableUpdates.put(id, var3);
       }
   }
 

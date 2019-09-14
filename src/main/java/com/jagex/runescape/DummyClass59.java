@@ -2,6 +2,7 @@ package com.jagex.runescape;
 
 import com.jagex.runescape.common.GameString;
 import com.jagex.runescape.common.GameStringStatics;
+import com.jagex.runescape.done.AbstractDirectColorSprite;
 import com.jagex.runescape.opengl.SomethingShadows;
 import com.jagex.runescape.opengl.DummyClass46;
 import com.jagex.runescape.opengl.GLStatics;
@@ -62,7 +63,7 @@ public final class DummyClass59 {
         DummyClass59.aClass94_672 = null;
       }
 
-      ClientScriptCall.aClass93_2450.method1523((byte) -109);
+      GlobalStatics_7.aClass93_2450.method1523((byte) -109);
   }
 
   public static void method1045(int var0) {
@@ -91,11 +92,11 @@ public final class DummyClass59 {
         }
 
         if (DummyClass55.landscapeFileIds[var2] != -1
-          && AudioSomethingSomething.landscapesData[var2] == null) {
-          AudioSomethingSomething.landscapesData[var2] =
+          && GlobalStatics_6.landscapesData[var2] == null) {
+          GlobalStatics_6.landscapesData[var2] =
             TextureSampler26.maps.unpack(DummyClass55.landscapeFileIds[var2],
-              AreaSoundEffect.landscapeEncryptionKeys[var2], 37, 0);
-          if (AudioSomethingSomething.landscapesData[var2] == null) {
+              GlobalStatics_6.landscapeEncryptionKeys[var2], 37, 0);
+          if (GlobalStatics_6.landscapesData[var2] == null) {
             var1 = false;
             ++TextureSampler5.anInt3293;
           }
@@ -112,10 +113,10 @@ public final class DummyClass59 {
             }
           }
 
-          if (AnimationSomething.updatedLandscapeIds[var2] != -1
+          if (GlobalStatics_6.updatedLandscapeIds[var2] != -1
             && TextureSampler34.updatedLandscapesData[var2] == null) {
             TextureSampler34.updatedLandscapesData[var2] =
-              TextureSampler26.maps.getBytes(AnimationSomething.updatedLandscapeIds[var2], 0);
+              TextureSampler26.maps.getBytes(GlobalStatics_6.updatedLandscapeIds[var2], 0);
             if (TextureSampler34.updatedLandscapesData[var2] == null) {
               ++TextureSampler5.anInt3293;
               var1 = false;
@@ -128,7 +129,7 @@ public final class DummyClass59 {
           && TextureSampler5.anIntArray3290[var2] != -1) {
           TextureSampler35.aByteArrayArray3335[var2] =
             TextureSampler26.maps.unpack(TextureSampler5.anIntArray3290[var2],
-              AreaSoundEffect.landscapeEncryptionKeys[var2], 92, 0);
+              GlobalStatics_6.landscapeEncryptionKeys[var2], 92, 0);
           if (TextureSampler35.aByteArrayArray3335[var2] == null) {
             ++TextureSampler5.anInt3293;
             var1 = false;
@@ -169,13 +170,13 @@ public final class DummyClass59 {
         int var5;
         for (var2 = 0; Something3d2.aByteArrayArray3027.length > var2;
             ++var2) {
-          byte[] var3 = AudioSomethingSomething.landscapesData[var2];
+          byte[] var3 = GlobalStatics_6.landscapesData[var2];
           if (var3 != null) {
             var5 =
                 -ProceduralTexture.anInt1152
-                    + (AudioStreamEncoder3.regionHashes[var2] & 255) * 64;
+                    + (GlobalStatics_6.regionHashes[var2] & 255) * 64;
             var4 = -WorldMapLabel.anInt1716
-                + (AudioStreamEncoder3.regionHashes[var2] >> 8) * 64;
+                + (GlobalStatics_6.regionHashes[var2] >> 8) * 64;
             if (GlobalStatics_0.dynamicScene) {
               var5 = 10;
               var4 = 10;
@@ -188,10 +189,10 @@ public final class DummyClass59 {
             var3 = TextureSampler34.updatedLandscapesData[var2];
             if (var3 != null) {
               var4 = -WorldMapLabel.anInt1716 + 64 * (
-                  AudioStreamEncoder3.regionHashes[var2] >> 8);
+                  GlobalStatics_6.regionHashes[var2] >> 8);
               var5 =
                   -ProceduralTexture.anInt1152 + 64 * (
-                      AudioStreamEncoder3.regionHashes[var2] & 255);
+                      GlobalStatics_6.regionHashes[var2] & 255);
               if (GlobalStatics_0.dynamicScene) {
                 var5 = 10;
                 var4 = 10;
@@ -208,7 +209,7 @@ public final class DummyClass59 {
 
         if (var1) {
           if ((DummyClass8.anInt4019 != 0)) {
-            AbstractTextureSampler.drawLoadingBox(RenderAnimation.concat(
+            GlobalStatics_3.drawLoadingBox(RenderAnimation.concat(
                 new GameString[]{TextureSampler39.LOADING_PLEASE_WAIT,
                     StillGraphic.aClass94_2707}),
                 true);
@@ -270,7 +271,7 @@ public final class DummyClass59 {
           DummyClass5.method2210((byte) -90, true);
           DummyClass26.method1720(false, 105);
           if (!GlobalStatics_0.dynamicScene) {
-            Cache.method1091(false, -93);
+            GlobalStatics_6.method1091(false, -93);
             DummyClass5.method2210((byte) -90, true);
             if (GlRenderer.useOpenGlRenderer) {
               var12 = TextureCache.localPlayer.waypointsX[0] >> 3;
@@ -298,7 +299,7 @@ public final class DummyClass59 {
 
           TextureSampler13.method313((byte) 90);
           DummyClass5.method2210((byte) -90, true);
-          DirectImageProducer.method2189(GlobalStatics_0.collisionMaps, false, 66);
+          GlobalStatics_7.method2189(GlobalStatics_0.collisionMaps, false, 66);
           if (GlRenderer.useOpenGlRenderer) {
             DummyClass46.method1270();
           }
@@ -324,7 +325,7 @@ public final class DummyClass59 {
             DummyClass10.method2264(true);
             DummyClass26.method1720(true, 105);
             if (!GlobalStatics_0.dynamicScene) {
-              Cache.method1091(true, -121);
+              GlobalStatics_6.method1091(true, -121);
               DummyClass5.method2210((byte) -90, true);
               TextureSampler26.method198(true, -32624);
             }
@@ -337,7 +338,7 @@ public final class DummyClass59 {
 
             TextureSampler13.method313((byte) 102);
             DummyClass5.method2210((byte) -90, true);
-            DirectImageProducer
+            GlobalStatics_7
                 .method2189(GlobalStatics_0.collisionMaps, true, 112);
             DummyClass5.method2210((byte) -90, true);
             DummyClass42.method1188(-113);
@@ -348,7 +349,7 @@ public final class DummyClass59 {
             for (var4 = 0; var4 < 13; ++var4) {
               for (var5 = 0; (var5 < 13); ++var5) {
                 SomethingShadows.blockShadows[var4][var5]
-                    .update(AbstractGameWorld.heightMap[0],
+                    .update(GlobalStatics_4.heightMap[0],
                         var4 * 8, var5 * 8);
               }
             }

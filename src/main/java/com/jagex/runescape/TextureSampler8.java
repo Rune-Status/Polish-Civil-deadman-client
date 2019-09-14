@@ -2,6 +2,8 @@ package com.jagex.runescape;
 
 import com.jagex.runescape.buffer.Buffer;
 import com.jagex.runescape.buffer.BufferStatics;
+import com.jagex.runescape.done.AbstractDirectColorSprite;
+import com.jagex.runescape.done.AbstractTextureSampler;
 import com.jagex.runescape.opengl.GLStatics;
 
 public final class TextureSampler8 extends AbstractTextureSampler {

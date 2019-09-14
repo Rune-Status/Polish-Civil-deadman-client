@@ -71,7 +71,7 @@ public class DummyClass5 extends DummyClass6 {
                     SomethingQuickChat2.anInt3537 + (TextureSampler29.anInt3395
                         + 10))) {
                   DummyClass36.aBoolean2615 = false;
-                  AbstractSomethingTexture
+                  GlobalStatics_3
                       .method1340(GlobalStatics_1.anInt1462,
                           SomethingWorldMapy.anInt3552, (byte) -40,
                           TextureSampler29.anInt3395,
@@ -110,7 +110,7 @@ public class DummyClass5 extends DummyClass6 {
                 }
 
                 DummyClass36.aBoolean2615 = false;
-                AbstractSomethingTexture
+                GlobalStatics_3
                     .method1340(GlobalStatics_1.anInt1462,
                         SomethingWorldMapy.anInt3552, (byte) -40,
                         TextureSampler29.anInt3395,
@@ -130,7 +130,7 @@ public class DummyClass5 extends DummyClass6 {
                       + TextureSampler25.amountContextActions];
                   var4 = DummyClass32.anIntArray512[
                       TextureSampler25.amountContextActions - 1];
-                  Widget var5 = EnumStringFetcher.getWidget((byte) 113, var4);
+                  Widget var5 = GlobalStatics_7.getWidget((byte) 113, var4);
                   assert var5 != null;
                   WidgetAccess var6 = GameClient.method44(var5);
                   if (var6.method100((byte) -9) || var6.method93(572878952)) {
@@ -140,7 +140,7 @@ public class DummyClass5 extends DummyClass6 {
                       DummyClass29.method909(-67, MouseRecorder.aClass11_1017);
                     }
 
-                    MouseRecorder.aClass11_1017 = EnumStringFetcher
+                    MouseRecorder.aClass11_1017 = GlobalStatics_7
                         .getWidget((byte) 119, var4);
                     MilliFrameRegulator.anInt2693 = DummyClass5.anInt2993;
                     GlobalStatics_2.anInt40 = DummyClass36.anInt2614;
@@ -162,12 +162,12 @@ public class DummyClass5 extends DummyClass6 {
               }
 
               if ((var1 == 2) && (TextureSampler25.amountContextActions > 0)
-                  || (ClientScriptEnum.anInt3660 == 1)) {
+                  || (GlobalStatics_7.anInt3660 == 1)) {
                 DummyClass22.method1801((byte) -105);
               }
 
               if (var1 == 1 && TextureSampler25.amountContextActions > 0
-                  || (ClientScriptEnum.anInt3660 == 2)) {
+                  || (GlobalStatics_7.anInt3660 == 2)) {
                 TextureSampler9.method203(100);
               }
             }

@@ -1,6 +1,7 @@
 package com.jagex.runescape;
 
 import com.jagex.runescape.buffer.Buffer;
+import com.jagex.runescape.done.AbstractModel;
 import com.jagex.runescape.opengl.GLStatics;
 import com.jagex.runescape.opengl.GlModel;
 import com.jagex.runescape.opengl.GlRenderer;
@@ -1408,7 +1409,7 @@ public final class Model extends SceneNode {
   }
 
   public AbstractModel method2008(int var1, int var2, int var3, int var4,
-      int var5 ) {
+                                  int var5 ) {
     if (GlRenderer.useOpenGlRenderer) {
       GlModel var6 = new GlModel(this, var1, var2, true);
       var6.method1908();

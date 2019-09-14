@@ -141,15 +141,15 @@ public final class SpawnedGameObject extends Node {
     }
 
     DummyClass10.method2264(false);
-    ByteArrayNode.aClass113Array3610 = new SomethingLight0[500];
+    GlobalStatics_6.aClass113Array3610 = new SomethingLight0[500];
     SpawnedGameObject.anInt2249 = 0;
     Unsure.aClass113Array1895 = new SomethingLight0[500];
     SomethingTilek.anInt1672 = 0;
     DummyClass50.anIntArrayArrayArray1142 =
       new int[planes][SocketStream.sceneWidth + 1][TextureSampler17.sceneHeight + 1];
-    AnimationSequence.aClass25Array1868 = new SceneSomething[5000];
+    GlobalStatics_3.aClass25Array1868 = new SceneSomething[5000];
     TextureSampler21.anInt3070 = 0;
-    FileCacheRequest.aClass25Array4060 = new SceneSomething[100];
+    GlobalStatics_7.aClass25Array4060 = new SceneSomething[100];
     GLStatics.adjacentTileOnScreen =
       new boolean[GLStatics.viewportLength + GLStatics.viewportLength + 1][
         GLStatics.viewportLength + GLStatics.viewportLength + 1];

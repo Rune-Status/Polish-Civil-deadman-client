@@ -3,6 +3,7 @@ package com.jagex.runescape;
 import com.jagex.runescape.buffer.Buffer;
 import com.jagex.runescape.common.GameString;
 import com.jagex.runescape.common.GameStringStatics;
+import com.jagex.runescape.done.AbstractTextureSampler;
 
 public final class TextureSampler31 extends AbstractTextureSampler {
 
@@ -97,9 +98,9 @@ public final class TextureSampler31 extends AbstractTextureSampler {
       int var1;
       for (var1 = 0; (var1 < DummyClass17.anInt1829); ++var1) {
         int var2 = VariableUpdate.anIntArray2292[var1];
-        if ((TextureSampler5.npcs[var2].anInt2838 != AbstractGameWorld.updateCycle)) {
+        if ((TextureSampler5.npcs[var2].anInt2838 != GlobalStatics_4.updateCycle)) {
           if (TextureSampler5.npcs[var2].config.method1474(-1)) {
-            ByteArrayNode.method574(TextureSampler5.npcs[var2], false);
+            GlobalStatics_6.method574(TextureSampler5.npcs[var2], false);
           }
 
           TextureSampler5.npcs[var2].setConfiguration(-1, null);

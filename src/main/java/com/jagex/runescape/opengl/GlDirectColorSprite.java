@@ -1,6 +1,6 @@
 package com.jagex.runescape.opengl;
 
-import com.jagex.runescape.AbstractDirectColorSprite;
+import com.jagex.runescape.done.AbstractDirectColorSprite;
 import com.jagex.runescape.SoftwareDirectColorSprite;
 import java.nio.ByteBuffer;
 

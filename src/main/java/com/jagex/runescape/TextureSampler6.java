@@ -4,6 +4,7 @@ import com.jagex.runescape.buffer.Buffer;
 import com.jagex.runescape.common.GameString;
 import com.jagex.runescape.common.GameStringStatics;
 import com.jagex.runescape.common.HashTable;
+import com.jagex.runescape.done.AbstractTextureSampler;
 
 public final class TextureSampler6 extends AbstractTextureSampler {
 
@@ -243,7 +244,7 @@ public final class TextureSampler6 extends AbstractTextureSampler {
         }
       }
 
-      ClientScript.variableUpdates = new HashTable(16);
+      GlobalStatics_6.variableUpdates = new HashTable(16);
   }
 
 }

@@ -4,6 +4,7 @@ import com.jagex.runescape.buffer.Buffer;
 import com.jagex.runescape.common.ArrayUtils;
 import com.jagex.runescape.common.GameString;
 import com.jagex.runescape.common.GameStringStatics;
+import com.jagex.runescape.done.AbstractTextureSampler;
 
 public final class TextureSampler9 extends AbstractTextureSampler {
 
@@ -93,10 +94,10 @@ public final class TextureSampler9 extends AbstractTextureSampler {
 
   public static void method203(int var0) {
     int var1 = 15 / ((-11 - var0) / 63);
-      if (ClientScriptEnum.anInt3660 == 2) {
+      if (GlobalStatics_7.anInt3660 == 2) {
         if ((NpcConfiguration.anInt1297 == TextureSampler8.anInt3460)
           && DummyClass36.anInt2612 == FloorOverlay.anInt2099) {
-          ClientScriptEnum.anInt3660 = 0;
+          GlobalStatics_7.anInt3660 = 0;
           if (DummyClass55.aBoolean1419 && GameObjectConfig.aBooleanArray1490[81]
             && (TextureSampler25.amountContextActions > 2)) {
             GameBuffer.method806(2597, TextureSampler25.amountContextActions - 2);
@@ -106,7 +107,7 @@ public final class TextureSampler9 extends AbstractTextureSampler {
         }
       } else if (NpcConfiguration.anInt1297 == DummyClass5.anInt2993
         && (DummyClass36.anInt2612 == DummyClass36.anInt2614)) {
-        ClientScriptEnum.anInt3660 = 0;
+        GlobalStatics_7.anInt3660 = 0;
         if (DummyClass55.aBoolean1419 && GameObjectConfig.aBooleanArray1490[81]
           && (TextureSampler25.amountContextActions > 2)) {
           GameBuffer.method806(2597, TextureSampler25.amountContextActions - 2);
@@ -115,7 +116,7 @@ public final class TextureSampler9 extends AbstractTextureSampler {
         }
       } else {
         FloorOverlay.anInt2099 = DummyClass36.anInt2614;
-        ClientScriptEnum.anInt3660 = 2;
+        GlobalStatics_7.anInt3660 = 2;
         TextureSampler8.anInt3460 = DummyClass5.anInt2993;
       }
   }
@@ -136,10 +137,10 @@ public final class TextureSampler9 extends AbstractTextureSampler {
   public static void method205(FileUnpacker var0, int var1, FileUnpacker var2, Interface4 var3) {
     DummyClass14.aClass153_1967 = var0;
       DummyClass43.anInterface4_915 = var3;
-      AudioStreamEncoder3.aClass153_3490 = var2;
-      if (AudioStreamEncoder3.aClass153_3490 != null) {
+      GlobalStatics_6.aClass153_3490 = var2;
+      if (GlobalStatics_6.aClass153_3490 != null) {
         MidiSomething.anInt1156 =
-          AudioStreamEncoder3.aClass153_3490.getAmountChildren(1, (byte) 100);
+          GlobalStatics_6.aClass153_3490.getAmountChildren(1, (byte) 100);
       }
 
       if (DummyClass14.aClass153_1967 != null) {

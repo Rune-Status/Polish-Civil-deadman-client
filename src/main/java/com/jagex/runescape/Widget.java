@@ -3,6 +3,10 @@ package com.jagex.runescape;
 import com.jagex.runescape.buffer.Buffer;
 import com.jagex.runescape.common.GameString;
 import com.jagex.runescape.common.GameStringStatics;
+import com.jagex.runescape.done.AbstractDirectColorSprite;
+import com.jagex.runescape.done.AbstractFont;
+import com.jagex.runescape.done.AbstractModel;
+import com.jagex.runescape.done.AnimationSequence;
 import com.jagex.runescape.opengl.GlDirectColorSprite;
 import com.jagex.runescape.opengl.GlDirectFullColorSprite;
 import com.jagex.runescape.opengl.GlRenderer;
@@ -193,7 +197,7 @@ public final class Widget {
     this.anInt260 = 1;
     this.anInt228 = 0;
     this.aBoolean233 = false;
-    this.aClass3_Sub1_257 = DirectImageProducer.aClass3_Sub1_2980;
+    this.aClass3_Sub1_257 = GlobalStatics_7.aClass3_Sub1_2980;
     this.anInt253 = 0;
     this.aClass94_232 = MaterialShader5.aClass94_2171;
     this.anInt168 = 0;
@@ -707,11 +711,11 @@ public final class Widget {
   }
 
   public AbstractModel method865(int var1, AnimationSequence var2,
-      int var3,
-      int var4,
-      int var5,
-      boolean var6,
-      PlayerAppearance var7 ) {
+                                 int var3,
+                                 int var4,
+                                 int var5,
+                                 boolean var6,
+                                 PlayerAppearance var7 ) {
     GameStub.aBoolean6 = false;
       int var8;
       int var9;
@@ -1053,7 +1057,7 @@ public final class Widget {
       this.aBoolean200 = var2.readUnsignedByte() == 1;
       var8 = var1;
       this.aClass94_245 = var2.readString();
-      if (ClientScript.method630((byte) -34, var3) != 0) {
+      if (GlobalStatics_6.method630((byte) -34, var3) != 0) {
         var8 = var2.readUnsignedShort();
         this.anInt266 = var2.readUnsignedShort();
         if ((var8 == 65535)) {
@@ -1099,22 +1103,22 @@ public final class Widget {
   }
 
   public AbstractFont method868(AbstractIndexedColorSprite[] var1,
-      int var2 ) {
+                                int var2 ) {
     GameStub.aBoolean6 = false;
       if ((this.anInt270 == -1)) {
         return null;
       } else {
-        AbstractFont var3 = (AbstractFont) Cache.aClass93_743.get(this.anInt270);
+        AbstractFont var3 = (AbstractFont) GlobalStatics_6.aClass93_743.get(this.anInt270);
         if (var3 != null) {
           return var3;
         } else {
-          var3 = FileCacheRequester.createFont(var2, this.anInt270, (byte) 127,
+          var3 = GlobalStatics_7.createFont(var2, this.anInt270, (byte) 127,
             SomethingSceneJ.aClass153_323, TriChromaticImageCache.aClass153_1378);
           if (var3 == null) {
             GameStub.aBoolean6 = true;
           } else {
             var3.method697(var1, null);
-            Cache.aClass93_743.get((byte) -77, var3, this.anInt270);
+            GlobalStatics_6.aClass93_743.get((byte) -77, var3, this.anInt270);
           }
 
           return var3;
@@ -1129,7 +1133,7 @@ public final class Widget {
 
       GameString var1 = ObjectNode.aClass94_4052;
       GameString var2 = GroundItemNode.EMPTY_STRING;
-      if ((AbstractGameWorld.usageLocation != 0)) {
+      if ((GlobalStatics_4.usageLocation != 0)) {
         var1 = Player.aClass94_3971;
       }
 
@@ -1139,9 +1143,9 @@ public final class Widget {
       }
 
       return RenderAnimation.concat(new GameString[] {
-        BufferedFile.aClass94_577, var1, GlobalStatics_2.aClass94_3601,
+        GlobalStatics_6.aClass94_577, var1, GlobalStatics_2.aClass94_3601,
         SomethingScene.toString(TriChromaticImageBuffer.languageId),
-        AbstractFileRequester.aClass94_1932,
+        GlobalStatics_5.aClass94_1932,
         SomethingScene.toString(MonoChromaticImageBuffer.affiliateId), var2,
         GameObject.aClass94_2735
       });

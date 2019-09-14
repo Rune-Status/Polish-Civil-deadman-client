@@ -130,7 +130,7 @@ public final class Mouse implements MouseListener, MouseMotionListener,
               (var1.anInt2265 < 0)
                   || GlobalStatics_4
                   .method590((byte) -34, var1.anInt2265, var1.anInt2262))) {
-            FileCache.method1048(var1.anInt2265, var1.anInt2264, var1.anInt2250,
+            GlobalStatics_7.method1048(var1.anInt2265, var1.anInt2264, var1.anInt2250,
                 var1.anInt2256,
                 var1.anInt2248, -65, var1.anInt2262, var1.anInt2263);
             var1.anInt2261 = -1;
@@ -145,7 +145,7 @@ public final class Mouse implements MouseListener, MouseMotionListener,
         } else if ((var1.anInt2254 < 0) || GlobalStatics_4
             .method590((byte) -66, var1.anInt2254,
                 var1.anInt2253)) {
-          FileCache.method1048(var1.anInt2254, var1.anInt2264, var1.anInt2250,
+          GlobalStatics_7.method1048(var1.anInt2254, var1.anInt2264, var1.anInt2250,
               var1.anInt2257,
               var1.anInt2248, -71, var1.anInt2253, var1.anInt2263);
           var1.unlinkNode();
@@ -161,7 +161,7 @@ public final class Mouse implements MouseListener, MouseMotionListener,
   }
 
   public static void method2089(byte var0) {
-    DirectImageProducer.aClass93_2982.method1523((byte) -105);
+    GlobalStatics_7.aClass93_2982.method1523((byte) -105);
   }
 
   public static void method2090(int var0) {
@@ -189,7 +189,7 @@ public final class Mouse implements MouseListener, MouseMotionListener,
         Mouse.aClass94_1922 = null;
       }
 
-      WidgetUpdate var2 = AudioStreamEncoder3.method466(4, 9, var0);
+      WidgetUpdate var2 = GlobalStatics_6.method466(4, 9, var0);
       var2.createIndexedColorSprite(true);
   }
 
