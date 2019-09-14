@@ -5,6 +5,7 @@ import com.jagex.runescape.common.GameStringStatics;
 import com.jagex.runescape.opengl.GlRenderer;
 import com.jagex.runescape.opengl.GlUtils;
 import com.jagex.runescape.opengl.SomethingLight;
+import com.jagex.runescape.sprite.SoftwareIndexedColorSpriteStatics;
 
 public abstract class AbstractFrameRegulator {
 
@@ -49,7 +50,7 @@ public abstract class AbstractFrameRegulator {
 
       short var3 = 256;
       int var4 = 0;
-      int var5 = DummyClass47.anInt1092 * var2;
+      int var5 = SoftwareIndexedColorSpriteStatics.anInt1092 * var2;
       int var6 = 0;
 
       for (int var7 = 1; var7 < var3 - 1; ++var7) {
@@ -62,7 +63,7 @@ public abstract class AbstractFrameRegulator {
 
         int var9;
         for (var9 = var8; var9 < 128; ++var9) {
-          int var11 = DummyClass47.anIntArray1100[var5++ + var0];
+          int var11 = SoftwareIndexedColorSpriteStatics.anIntArray1100[var5++ + var0];
           int var10 = DummyClass2.anIntArray1681[var4++];
           if (var10 == 0) {
             TriChromaticImageCache.aClass3_Sub28_Sub16_Sub2_1381.pixels[var6++] = var11;
@@ -90,10 +91,10 @@ public abstract class AbstractFrameRegulator {
 
         for (var9 = 0; var9 < var8; ++var9) {
           TriChromaticImageCache.aClass3_Sub28_Sub16_Sub2_1381.pixels[var6++] =
-            DummyClass47.anIntArray1100[var0 + var5++];
+            SoftwareIndexedColorSpriteStatics.anIntArray1100[var0 + var5++];
         }
 
-        var5 += DummyClass47.anInt1092 - 128;
+        var5 += SoftwareIndexedColorSpriteStatics.anInt1092 - 128;
       }
 
       if (var1 > 70) {

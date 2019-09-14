@@ -4,12 +4,14 @@ import com.jagex.runescape.buffer.Buffer;
 import com.jagex.runescape.common.GameString;
 import com.jagex.runescape.common.GameStringStatics;
 import com.jagex.runescape.opengl.DummyClass46;
+import com.jagex.runescape.opengl.GLStatics;
 import com.jagex.runescape.opengl.GlIndexedColorSprite;
 import com.jagex.runescape.opengl.GlRenderer;
 import com.jagex.runescape.opengl.GlUtils;
 import com.jagex.runescape.opengl.MaterialShader5;
 import com.jagex.runescape.opengl.Texture;
 import com.jagex.runescape.sprite.AbstractIndexedColorSprite;
+import com.jagex.runescape.sprite.SoftwareIndexedColorSprite;
 
 public final class TextureSampler36 extends AbstractTextureSampler {
 
@@ -291,7 +293,7 @@ public final class TextureSampler36 extends AbstractTextureSampler {
           DummyClass8.method2221(var4, var3, var1, true, 256, 256, var5);
         }
 
-        ((TextureCache) DummyClass40.textureCache).update(true, DisplayMode.loopCycle);
+        ((TextureCache) GLStatics.textureCache).update(true, DisplayMode.loopCycle);
         DummyClass45.method1235(var4, var5, var1, var3, (byte) -121);
         DummyClass17.anInt1823 = var9;
         DummyClass49.anInt1111 = var8;

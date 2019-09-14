@@ -64,7 +64,7 @@ public final class TextureSampler26 extends AbstractTextureSampler {
         AudioSomethingSomething.landscapesData = new byte[var6][];
         AnimationSomething.updatedLandscapeIds = new int[var6];
         TextureSampler35.aByteArrayArray3335 = new byte[var6][];
-        GameClient.mapFileIds = new int[var6];
+        GlobalStatics_1.mapFileIds = new int[var6];
         AreaSoundEffect.landscapeEncryptionKeys = new int[var6][4];
         GroundItemNode.updatedMapsData = new byte[var6][];
         AudioStreamEncoder3.regionHashes = new int[var6];
@@ -81,7 +81,7 @@ public final class TextureSampler26 extends AbstractTextureSampler {
           for (int var8 = (-6 + var2) / 8; (((var2 + 6) / 8) >= var8); ++var8) {
             int var9 = (var7 << 8) + var8;
             AudioStreamEncoder3.regionHashes[var11] = var9;
-            GameClient.mapFileIds[var11] = TextureSampler26.maps.getFileId(RenderAnimation.concat(new GameString[] {
+            GlobalStatics_1.mapFileIds[var11] = TextureSampler26.maps.getFileId(RenderAnimation.concat(new GameString[] {
               GameBuffer.MAP_PREFIX, SomethingScene.toString(var7), TextureSampler31.UNDERSCORE,
               SomethingScene.toString(var8)
             }));
@@ -106,7 +106,7 @@ public final class TextureSampler26 extends AbstractTextureSampler {
                 SomethingScene.toString(var8)
               }));
             if ((TextureSampler5.anIntArray3290[var11] == -1)) {
-              GameClient.mapFileIds[var11] = -1;
+              GlobalStatics_1.mapFileIds[var11] = -1;
               DummyClass55.landscapeFileIds[var11] = -1;
               TextureSampler17.updatedMapIds[var11] = -1;
               AnimationSomething.updatedLandscapeIds[var11] = -1;
@@ -118,7 +118,7 @@ public final class TextureSampler26 extends AbstractTextureSampler {
 
         for (var7 = var11; (var7 < TextureSampler5.anIntArray3290.length); ++var7) {
           TextureSampler5.anIntArray3290[var7] = -1;
-          GameClient.mapFileIds[var7] = -1;
+          GlobalStatics_1.mapFileIds[var7] = -1;
           DummyClass55.landscapeFileIds[var7] = -1;
           TextureSampler17.updatedMapIds[var7] = -1;
           AnimationSomething.updatedLandscapeIds[var7] = -1;

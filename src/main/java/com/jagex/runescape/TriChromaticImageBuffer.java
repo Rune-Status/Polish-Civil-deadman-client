@@ -3,8 +3,9 @@ package com.jagex.runescape;
 import com.jagex.runescape.common.GameString;
 import com.jagex.runescape.common.GameStringStatics;
 import com.jagex.runescape.node.Node;
-import com.jagex.runescape.opengl.DummyClass16;
+import com.jagex.runescape.opengl.SomethingShadows;
 import com.jagex.runescape.opengl.DummyClass46;
+import com.jagex.runescape.opengl.GLStatics;
 import com.jagex.runescape.opengl.GlModel;
 import com.jagex.runescape.opengl.GlRenderer;
 
@@ -42,11 +43,11 @@ public final class TriChromaticImageBuffer extends Node {
       TextureSampler13.method313((byte) 55);
       DummyClass61.aClass47_3801.method1101(2);
       FloorUnderlay.aClass136_1413 = new SceneShadowMap();
-      ((TextureCache) DummyClass40.textureCache).method1618(0);
+      ((TextureCache) GLStatics.textureCache).method1618(0);
       DummyClass46.anInt1032 = 0;
       DummyClass46.lights = new Light[255];
       GlModel.method1929();
-      DummyClass16.method2043();
+      SomethingShadows.method2043();
       DummyClass45.method1240(false);
       OndemandRequester.method1250(17, var0);
       TextureSampler23.method247((byte) 51);
@@ -59,7 +60,7 @@ public final class TriChromaticImageBuffer extends Node {
       }
 
       if (GlRenderer.useOpenGlRenderer) {
-        DummyClass16.initializeShadows(104, 104);
+        SomethingShadows.initializeShadows(104, 104);
         DummyClass0.method1755();
       }
 

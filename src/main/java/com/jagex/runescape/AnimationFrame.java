@@ -10,7 +10,6 @@ import com.jagex.runescape.opengl.GlUtils;
 public final class AnimationFrame extends Node {
 
   private static GameString aClass94_2465 = GameStringStatics.create("");
-  public static int anInt2456;
   public static float aFloat2457;
   public static GameString aClass94_2458 = GameStringStatics.create("Module texte charg-B");
   public static int anInt2459;

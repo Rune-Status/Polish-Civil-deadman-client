@@ -19,9 +19,8 @@ import com.jagex.runescape.MapScene;
 import com.jagex.runescape.Model;
 import com.jagex.runescape.RenderAnimation;
 import com.jagex.runescape.SceneNode;
-import com.jagex.runescape.SoftwareIndexedColorSprite;
+import com.jagex.runescape.sprite.SoftwareIndexedColorSprite;
 import com.jagex.runescape.SomethingMidiFile;
-import com.jagex.runescape.SomethingQuickChat;
 import com.jagex.runescape.Structure;
 import com.jagex.runescape.TextureCache;
 import com.jagex.runescape.TextureSampler27;
@@ -104,7 +103,7 @@ public final class GlModel extends AbstractModel {
 
     for (int face = 0; face < model.amountFaces; ++face) {
       if ((model.normalTypes == null || model.normalTypes[face] != 2) && (model.materials == null
-        || model.materials[face] == -1 || !DummyClass40.textureCache.method12(
+        || model.materials[face] == -1 || !GLStatics.textureCache.method12(
         model.materials[face] & '\uffff', -65))) {
         var5[this.anInt3852++] = face;
         ++this.vertexCounts[model.v0[face]];
@@ -129,13 +128,13 @@ public final class GlModel extends AbstractModel {
       if (model.materials != null) {
         var13 = model.materials[var8];
         if (var13 != -1) {
-          var11 = DummyClass40.textureCache.method18(var13 & '\uffff', 255);
-          var12 = DummyClass40.textureCache.method9(var13 & '\uffff', false);
+          var11 = GLStatics.textureCache.method18(var13 & '\uffff', 255);
+          var12 = GLStatics.textureCache.method9(var13 & '\uffff', false);
         }
       }
 
       boolean var14 = model.aByteArray2843 != null && model.aByteArray2843[var8] != 0
-        || var13 != -1 && !DummyClass40.textureCache.method7((byte) 88, var13 & '\uffff');
+        || var13 != -1 && !GLStatics.textureCache.method7((byte) 88, var13 & '\uffff');
       if ((var4 || var14) && model.aByteArray2889 != null) {
         var9 += model.aByteArray2889[var8] << 17;
       }
@@ -2253,15 +2252,15 @@ public final class GlModel extends AbstractModel {
     var3 = 0;
     int var4 = 0;
     if (var1 != -1) {
-      var3 = DummyClass40.textureCache.method19(-125, var1 & '\uffff');
-      var4 = DummyClass40.textureCache.method10(-98, var1 & '\uffff');
+      var3 = GLStatics.textureCache.method19(-125, var1 & '\uffff');
+      var4 = GLStatics.textureCache.method10(-98, var1 & '\uffff');
     }
 
     int var5 = 0;
     int var6 = 0;
     if (var2 != -1) {
-      var5 = DummyClass40.textureCache.method19(57, var2 & '\uffff');
-      var6 = DummyClass40.textureCache.method10(-114, var2 & '\uffff');
+      var5 = GLStatics.textureCache.method19(57, var2 & '\uffff');
+      var6 = GLStatics.textureCache.method10(-114, var2 & '\uffff');
     }
 
     if (var3 != var5 || var4 != var6) {
@@ -3603,9 +3602,9 @@ public final class GlModel extends AbstractModel {
         short var7 = this.materials[start];
         if (var7 == -1) {
           GlRenderer.bindTexture(-1);
-          SomethingQuickChat.method551(0, 0, 0);
+          GLStatics.method551(0, 0, 0);
         } else {
-          DummyClass40.textureCache.initializeMaterial(var7 & '\uffff', true);
+          GLStatics.textureCache.initializeMaterial(var7 & '\uffff', true);
         }
 
         if (this.indices.buffer != null) {
@@ -3836,7 +3835,7 @@ public final class GlModel extends AbstractModel {
   private static int method1905(int var0, short var1, int var2, byte var3) {
     int var4 = DummyClass40.hslTable[GlobalStatics_1.repackHSL(var0, var2)];
     if (var1 != -1) {
-      int var5 = DummyClass40.textureCache.method19(93, var1 & '\uffff');
+      int var5 = GLStatics.textureCache.method19(93, var1 & '\uffff');
       int var6;
       int var8;
       if (var5 != 0) {
@@ -3857,7 +3856,7 @@ public final class GlModel extends AbstractModel {
         }
       }
 
-      var6 = DummyClass40.textureCache.method10(90, var1 & '\uffff');
+      var6 = GLStatics.textureCache.method10(90, var1 & '\uffff');
       if (var6 != 0) {
         var6 += 256;
         int var7 = ((var4 & 16711680) >> 16) * var6;

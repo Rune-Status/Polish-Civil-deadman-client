@@ -8,6 +8,7 @@ import com.jagex.runescape.opengl.GlDirectColorSprite;
 import com.jagex.runescape.opengl.GlRenderer;
 import com.jagex.runescape.opengl.GlUtils;
 import com.jagex.runescape.opengl.SomethingGl0;
+import com.jagex.runescape.sprite.SoftwareIndexedColorSpriteStatics;
 
 public final class DummyClass3 {
 
@@ -716,7 +717,7 @@ public final class DummyClass3 {
           }
 
           if (GlRenderer.useOpenGlRenderer) {
-            DummyClass47.anIntArray1100 = null;
+            SoftwareIndexedColorSpriteStatics.anIntArray1100 = null;
           } else {
             Something3d.viewImageProducer.method2182(0);
           }

@@ -9,8 +9,6 @@ public final class TextureSampler21 extends AbstractTextureSampler {
   public static int anInt3069;
   public static int anInt3070;
   public static int anInt3071;
-  public static int anInt3072 = -1;
-
 
   public TextureSampler21() {
     super(3, false);

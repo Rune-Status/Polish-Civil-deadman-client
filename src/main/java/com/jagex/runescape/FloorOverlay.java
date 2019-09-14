@@ -4,6 +4,7 @@ import com.jagex.runescape.buffer.Buffer;
 import com.jagex.runescape.common.GameString;
 import com.jagex.runescape.common.GameStringStatics;
 import com.jagex.runescape.opengl.GlTexture2d;
+import com.jagex.runescape.sprite.SoftwareIndexedColorSpriteStatics;
 
 public final class FloorOverlay {
 
@@ -149,37 +150,37 @@ public final class FloorOverlay {
   public static void method2272(int[] var0, int var1, int var2, int var3, int var4, int var5,
                                int var6, int var7, int var8, boolean var9, byte var10) {
     int var11 = var2;
-      if (DummyClass47.anInt1096 > var2) {
-        if ((var2 < DummyClass47.anInt1093)) {
-          var11 = DummyClass47.anInt1093;
+      if (SoftwareIndexedColorSpriteStatics.anInt1096 > var2) {
+        if ((var2 < SoftwareIndexedColorSpriteStatics.anInt1093)) {
+          var11 = SoftwareIndexedColorSpriteStatics.anInt1093;
         }
 
         int var12 = var7 + var2;
-        if (DummyClass47.anInt1093 < var12) {
-          if (DummyClass47.anInt1096 < var12) {
-            var12 = DummyClass47.anInt1096;
+        if (SoftwareIndexedColorSpriteStatics.anInt1093 < var12) {
+          if (SoftwareIndexedColorSpriteStatics.anInt1096 < var12) {
+            var12 = SoftwareIndexedColorSpriteStatics.anInt1096;
           }
 
           int var13 = var8;
-          if (DummyClass47.anInt1099 > var8) {
+          if (SoftwareIndexedColorSpriteStatics.anInt1099 > var8) {
             int var14 = var8 + var6;
-            if ((var8 < DummyClass47.anInt1095)) {
-              var13 = DummyClass47.anInt1095;
+            if ((var8 < SoftwareIndexedColorSpriteStatics.anInt1095)) {
+              var13 = SoftwareIndexedColorSpriteStatics.anInt1095;
             }
 
-            if (var14 > DummyClass47.anInt1095) {
+            if (var14 > SoftwareIndexedColorSpriteStatics.anInt1095) {
               if (var10 == 21) {
-                int var15 = var11 + DummyClass47.anInt1092 * var13;
+                int var15 = var11 + SoftwareIndexedColorSpriteStatics.anInt1092 * var13;
                 if ((var5 == 9)) {
                   var3 = 3 & var3 + 1;
                   var5 = 1;
                 }
 
-                int var16 = -var12 + var11 + DummyClass47.anInt1092;
+                int var16 = -var12 + var11 + SoftwareIndexedColorSpriteStatics.anInt1092;
                 var13 -= var8;
                 int var20 = var6 - var13;
-                if (DummyClass47.anInt1099 < var14) {
-                  var14 = DummyClass47.anInt1099;
+                if (SoftwareIndexedColorSpriteStatics.anInt1099 < var14) {
+                  var14 = SoftwareIndexedColorSpriteStatics.anInt1099;
                 }
 
                 if ((var5 == 10)) {
@@ -962,10 +963,10 @@ public final class FloorOverlay {
   }
 
   public static void method2277(int var0, int var1, int var2, int var3, byte var4) {
-    Inventory var5 = (Inventory) SceneGraphTile.aClass130_2220.get(var3);
+    Inventory var5 = (Inventory) GlobalStatics_2.aClass130_2220.get(var3);
       if (var5 == null) {
         var5 = new Inventory();
-        SceneGraphTile.aClass130_2220.put(var3, var5);
+        GlobalStatics_2.aClass130_2220.put(var3, var5);
       }
 
       if (var4 > 16) {

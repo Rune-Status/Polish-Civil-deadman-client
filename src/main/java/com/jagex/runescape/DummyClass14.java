@@ -2,6 +2,7 @@ package com.jagex.runescape;
 
 import com.jagex.runescape.common.GameString;
 import com.jagex.runescape.common.GameStringStatics;
+import com.jagex.runescape.opengl.GLStatics;
 
 public final class DummyClass14 {
 
@@ -51,18 +52,18 @@ public final class DummyClass14 {
       var10.anInt1059 = var7;
 
       for (int var11 = var0; var11 >= 0; --var11) {
-        if (SomethingTexture1.sceneGraphTiles[var11][var1][var2] == null) {
-          SomethingTexture1.sceneGraphTiles[var11][var1][var2] =
+        if (GLStatics.sceneGraphTiles[var11][var1][var2] == null) {
+          GLStatics.sceneGraphTiles[var11][var1][var2] =
             new SceneGraphTile(var11, var1, var2);
         }
       }
 
-      SomethingTexture1.sceneGraphTiles[var0][var1][var2].aClass70_2234 = var10;
+      GLStatics.sceneGraphTiles[var0][var1][var2].aClass70_2234 = var10;
     }
   }
 
   public static SceneSomething2 method2147(int var0, int var1, int var2) {
-    SceneGraphTile var3 = SomethingTexture1.sceneGraphTiles[var0][var1][var2];
+    SceneGraphTile var3 = GLStatics.sceneGraphTiles[var0][var1][var2];
     return var3 == null ? null : var3.aClass70_2234;
   }
 

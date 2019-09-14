@@ -2129,7 +2129,7 @@ public final class DummyClass18 {
           DummyClass18.aClass61_82 = null;
         }
 
-        int var4 = var2 - SceneGraphTile.anInt2218;
+        int var4 = var2 - GlobalStatics_2.anInt2218;
         int var3 = var1 - SomethingVolume15.anInt2421;
         int var6 = var1 - TextureSampler20.anInt3156 + DummyClass18.aClass11_88.anInt247;
         int var7 = DummyClass18.aClass11_88.anInt208 - DummyClass21.anInt1761 + var2;

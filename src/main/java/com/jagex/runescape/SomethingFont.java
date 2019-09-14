@@ -1,6 +1,7 @@
 package com.jagex.runescape;
 
 import com.jagex.runescape.common.GameString;
+import com.jagex.runescape.sprite.SoftwareIndexedColorSpriteStatics;
 import java.awt.Color;
 import java.awt.Component;
 import java.awt.Font;
@@ -131,34 +132,34 @@ public final class SomethingFont {
     int var8 = var5[var1 + 3];
     int var9 = var5[var1 + 4];
     int var10 = var5[var1] * 16384 + var5[var1 + 1] * 128 + var5[var1 + 2];
-    int var11 = var6 + var7 * DummyClass47.anInt1092;
-    int var12 = DummyClass47.anInt1092 - var8;
+    int var11 = var6 + var7 * SoftwareIndexedColorSpriteStatics.anInt1092;
+    int var12 = SoftwareIndexedColorSpriteStatics.anInt1092 - var8;
     int var13 = 0;
     int var14;
-    if (var7 < DummyClass47.anInt1095) {
-      var14 = DummyClass47.anInt1095 - var7;
+    if (var7 < SoftwareIndexedColorSpriteStatics.anInt1095) {
+      var14 = SoftwareIndexedColorSpriteStatics.anInt1095 - var7;
       var9 -= var14;
-      var7 = DummyClass47.anInt1095;
+      var7 = SoftwareIndexedColorSpriteStatics.anInt1095;
       var10 += var14 * var8;
-      var11 += var14 * DummyClass47.anInt1092;
+      var11 += var14 * SoftwareIndexedColorSpriteStatics.anInt1092;
     }
 
-    if (var7 + var9 >= DummyClass47.anInt1099) {
-      var9 -= var7 + var9 - DummyClass47.anInt1099 + 1;
+    if (var7 + var9 >= SoftwareIndexedColorSpriteStatics.anInt1099) {
+      var9 -= var7 + var9 - SoftwareIndexedColorSpriteStatics.anInt1099 + 1;
     }
 
-    if (var6 < DummyClass47.anInt1093) {
-      var14 = DummyClass47.anInt1093 - var6;
+    if (var6 < SoftwareIndexedColorSpriteStatics.anInt1093) {
+      var14 = SoftwareIndexedColorSpriteStatics.anInt1093 - var6;
       var8 -= var14;
-      var6 = DummyClass47.anInt1093;
+      var6 = SoftwareIndexedColorSpriteStatics.anInt1093;
       var10 += var14;
       var11 += var14;
       var13 += var14;
       var12 += var14;
     }
 
-    if (var6 + var8 >= DummyClass47.anInt1096) {
-      var14 = var6 + var8 - DummyClass47.anInt1096 + 1;
+    if (var6 + var8 >= SoftwareIndexedColorSpriteStatics.anInt1096) {
+      var14 = var6 + var8 - SoftwareIndexedColorSpriteStatics.anInt1096 + 1;
       var8 -= var14;
       var13 += var14;
       var12 += var14;
@@ -166,10 +167,10 @@ public final class SomethingFont {
 
     if (var8 > 0 && var9 > 0) {
       if (this.aBoolean595) {
-        this.method1000(DummyClass47.anIntArray1100, var5, var4, var10, var11, var8, var9, var12,
+        this.method1000(SoftwareIndexedColorSpriteStatics.anIntArray1100, var5, var4, var10, var11, var8, var9, var12,
           var13);
       } else {
-        this.method1002(DummyClass47.anIntArray1100, var5, var4, var10, var11, var8, var9, var12,
+        this.method1002(SoftwareIndexedColorSpriteStatics.anIntArray1100, var5, var4, var10, var11, var8, var9, var12,
           var13);
       }
     }
@@ -227,9 +228,9 @@ public final class SomethingFont {
       boolean var5 ) {
     int var6 = this.method1005(var1) / 2;
     int var7 = this.method1006();
-    if (var2 - var6 <= DummyClass47.anInt1096) {
-      if (var2 + var6 >= DummyClass47.anInt1093) {
-        if (var3 - var7 <= DummyClass47.anInt1099) {
+    if (var2 - var6 <= SoftwareIndexedColorSpriteStatics.anInt1096) {
+      if (var2 + var6 >= SoftwareIndexedColorSpriteStatics.anInt1093) {
+        if (var3 - var7 <= SoftwareIndexedColorSpriteStatics.anInt1099) {
           if (var3 >= 0) {
             this.method997(var1, var2 - var6, var3, var4, var5);
           }

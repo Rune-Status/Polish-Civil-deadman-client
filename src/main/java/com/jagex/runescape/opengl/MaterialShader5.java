@@ -66,7 +66,6 @@ import com.jagex.runescape.SomethingPacket151;
 import com.jagex.runescape.SomethingQuickChat;
 import com.jagex.runescape.SomethingScene;
 import com.jagex.runescape.SomethingSceneTile;
-import com.jagex.runescape.SomethingTexture1;
 import com.jagex.runescape.SomethingTilek;
 import com.jagex.runescape.StringNode0;
 import com.jagex.runescape.Structure;
@@ -580,38 +579,38 @@ public final class MaterialShader5 implements MaterialShader {
       var20 = new SomethingTilek(var10, var11, var12, var13, -1, var18, false);
 
       for (var21 = var0; var21 >= 0; --var21) {
-        if (SomethingTexture1.sceneGraphTiles[var21][var1][var2] == null) {
-          SomethingTexture1.sceneGraphTiles[var21][var1][var2] =
+        if (GLStatics.sceneGraphTiles[var21][var1][var2] == null) {
+          GLStatics.sceneGraphTiles[var21][var1][var2] =
             new SceneGraphTile(var21, var1, var2);
         }
       }
 
-      SomethingTexture1.sceneGraphTiles[var0][var1][var2].aClass126_2240 = var20;
+      GLStatics.sceneGraphTiles[var0][var1][var2].aClass126_2240 = var20;
     } else if (var3 != 1) {
       SomethingSceneTile var22 =
         new SomethingSceneTile(var3, var4, var5, var1, var2, var6, var7, var8, var9, var10, var11,
           var12, var13, var14, var15, var16, var17, var18, var19);
 
       for (var21 = var0; var21 >= 0; --var21) {
-        if (SomethingTexture1.sceneGraphTiles[var21][var1][var2] == null) {
-          SomethingTexture1.sceneGraphTiles[var21][var1][var2] =
+        if (GLStatics.sceneGraphTiles[var21][var1][var2] == null) {
+          GLStatics.sceneGraphTiles[var21][var1][var2] =
             new SceneGraphTile(var21, var1, var2);
         }
       }
 
-      SomethingTexture1.sceneGraphTiles[var0][var1][var2].aClass35_2226 = var22;
+      GLStatics.sceneGraphTiles[var0][var1][var2].aClass35_2226 = var22;
     } else {
       var20 = new SomethingTilek(var14, var15, var16, var17, var5, var19,
         var6 == var7 && var6 == var8 && var6 == var9);
 
       for (var21 = var0; var21 >= 0; --var21) {
-        if (SomethingTexture1.sceneGraphTiles[var21][var1][var2] == null) {
-          SomethingTexture1.sceneGraphTiles[var21][var1][var2] =
+        if (GLStatics.sceneGraphTiles[var21][var1][var2] == null) {
+          GLStatics.sceneGraphTiles[var21][var1][var2] =
             new SceneGraphTile(var21, var1, var2);
         }
       }
 
-      SomethingTexture1.sceneGraphTiles[var0][var1][var2].aClass126_2240 = var20;
+      GLStatics.sceneGraphTiles[var0][var1][var2].aClass126_2240 = var20;
     }
   }
 

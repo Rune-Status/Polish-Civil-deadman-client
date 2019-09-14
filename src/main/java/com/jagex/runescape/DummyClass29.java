@@ -2,6 +2,7 @@ package com.jagex.runescape;
 
 import com.jagex.runescape.common.GameString;
 import com.jagex.runescape.common.GameStringStatics;
+import com.jagex.runescape.opengl.GLStatics;
 import com.jagex.runescape.opengl.GlRenderer;
 
 public final class DummyClass29 {
@@ -93,7 +94,7 @@ public final class DummyClass29 {
         if ((var4 == 2)) {
           var7 = AnimationSomething.method557(var3, var2, var1);
         } else if (var4 == 3) {
-          var7 = SceneGraphTile.method104(var3, var2, var1);
+          var7 = GLStatics.method104(var3, var2, var1);
         }
       } else {
         var7 = HashTableIterator.method1395(var3, var2, var1);

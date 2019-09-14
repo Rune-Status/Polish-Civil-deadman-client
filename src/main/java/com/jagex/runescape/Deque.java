@@ -3,6 +3,7 @@ package com.jagex.runescape;
 import com.jagex.runescape.buffer.Buffer;
 import com.jagex.runescape.common.GameString;
 import com.jagex.runescape.node.Node;
+import com.jagex.runescape.opengl.GLStatics;
 import com.jagex.runescape.opengl.SomethingGl0;
 
 public final class Deque {
@@ -126,7 +127,7 @@ public final class Deque {
   }
 
   public static SceneSomething2 method1209(int var0, int var1, int var2) {
-    SceneGraphTile var3 = SomethingTexture1.sceneGraphTiles[var0][var1][var2];
+    SceneGraphTile var3 = GLStatics.sceneGraphTiles[var0][var1][var2];
     if (var3 == null) {
       return null;
     } else {
@@ -157,7 +158,7 @@ public final class Deque {
   }
 
   public static void method1213(int var0, SomethingGl0[] var1) {
-    SomethingOtherWorldMap.aClass3_Sub11ArrayArray2542[var0] = var1;
+    GLStatics.aClass3_Sub11ArrayArray2542[var0] = var1;
   }
 
   public static void method1214(int var0, int var1, int var2, int var3, int var4) {

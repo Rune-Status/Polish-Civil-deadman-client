@@ -4,7 +4,6 @@ import com.jagex.runescape.BZipDecompressorState;
 import com.jagex.runescape.ClientScript;
 import com.jagex.runescape.GlobalStatics_0;
 import com.jagex.runescape.GroundItem;
-import com.jagex.runescape.SomethingScene;
 import com.jagex.runescape.TextureSampler39;
 import com.jagex.runescape.TextureSampler9;
 import java.nio.ByteBuffer;
@@ -148,7 +147,7 @@ public final class MaterialShader3 implements MaterialShader {
       }
 
       GlRenderer.GL
-          .glTexEnvfv(8960, 8705, SomethingScene.method1297((byte) -50), 0);
+          .glTexEnvfv(8960, 8705, GLStatics.calculateFogColor(), 0);
       if (var1 >= 0) {
         this.aFloatArray2190[0] = 0.0F;
         this.aFloatArray2190[1] = 1.0F / TextureSampler39.anInt3285;

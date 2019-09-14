@@ -3,6 +3,7 @@ package com.jagex.runescape;
 import com.jagex.runescape.common.GameString;
 import com.jagex.runescape.common.GameStringStatics;
 import com.jagex.runescape.node.Node;
+import com.jagex.runescape.opengl.GLStatics;
 import com.jagex.runescape.opengl.GlRenderer;
 
 public final class SomethingWorldMappy extends Node {
@@ -122,7 +123,7 @@ public final class SomethingWorldMappy extends Node {
                   SomethingSceneTile.anIntArray628[var12], var0.anIntArray616[var9]);
               }
             } else {
-              int var19 = DummyClass40.textureCache.method15(var0.anIntArray616[var9], '\uffff');
+              int var19 = GLStatics.textureCache.method15(var0.anIntArray616[var9], '\uffff');
               DummyClass40.method1154(var16, var17, var18, var13, var14, var15,
                 DummyClass2.repackHSL(var19, var0.anIntArray625[var9]),
                 DummyClass2.repackHSL(var19, var0.anIntArray632[var9]),

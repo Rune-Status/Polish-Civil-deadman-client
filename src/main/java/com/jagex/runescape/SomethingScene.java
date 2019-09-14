@@ -3,7 +3,7 @@ package com.jagex.runescape;
 import com.jagex.runescape.buffer.Buffer;
 import com.jagex.runescape.common.GameString;
 import com.jagex.runescape.common.GameStringStatics;
-import com.jagex.runescape.opengl.GlEnvironment;
+import com.jagex.runescape.opengl.GLStatics;
 
 public final class SomethingScene {
 
@@ -81,22 +81,22 @@ public final class SomethingScene {
       boolean var5;
       int var6;
       if (var1.anInt1554 == 1) {
-        var2 = var1.anInt1553 - TriChromaticImageCache.cameraTileX + TextureSampler8.viewportLength;
-        if (var2 >= 0 && var2 <= TextureSampler8.viewportLength + TextureSampler8.viewportLength) {
-          var3 = var1.anInt1563 - TextureSampler7.cameraTileZ + TextureSampler8.viewportLength;
+        var2 = var1.anInt1553 - GLStatics.cameraTileX + GLStatics.viewportLength;
+        if (var2 >= 0 && var2 <= GLStatics.viewportLength + GLStatics.viewportLength) {
+          var3 = var1.anInt1563 - GLStatics.cameraTileZ + GLStatics.viewportLength;
           if (var3 < 0) {
             var3 = 0;
           }
 
-          var4 = var1.anInt1566 - TextureSampler7.cameraTileZ + TextureSampler8.viewportLength;
-          if (var4 > TextureSampler8.viewportLength + TextureSampler8.viewportLength) {
-            var4 = TextureSampler8.viewportLength + TextureSampler8.viewportLength;
+          var4 = var1.anInt1566 - GLStatics.cameraTileZ + GLStatics.viewportLength;
+          if (var4 > GLStatics.viewportLength + GLStatics.viewportLength) {
+            var4 = GLStatics.viewportLength + GLStatics.viewportLength;
           }
 
           var5 = false;
 
           while (var3 <= var4) {
-            if (DummyClass30.adjacentTileOnScreen[var2][var3++]) {
+            if (GLStatics.adjacentTileOnScreen[var2][var3++]) {
               var5 = true;
               break;
             }
@@ -123,24 +123,24 @@ public final class SomethingScene {
           }
         }
       } else if (var1.anInt1554 == 2) {
-        var2 = var1.anInt1563 - TextureSampler7.cameraTileZ + TextureSampler8.viewportLength;
-        if (var2 >= 0 && var2 <= TextureSampler8.viewportLength + TextureSampler8.viewportLength) {
+        var2 = var1.anInt1563 - GLStatics.cameraTileZ + GLStatics.viewportLength;
+        if (var2 >= 0 && var2 <= GLStatics.viewportLength + GLStatics.viewportLength) {
           var3 =
-            var1.anInt1553 - TriChromaticImageCache.cameraTileX + TextureSampler8.viewportLength;
+            var1.anInt1553 - GLStatics.cameraTileX + GLStatics.viewportLength;
           if (var3 < 0) {
             var3 = 0;
           }
 
           var4 =
-            var1.anInt1547 - TriChromaticImageCache.cameraTileX + TextureSampler8.viewportLength;
-          if (var4 > TextureSampler8.viewportLength + TextureSampler8.viewportLength) {
-            var4 = TextureSampler8.viewportLength + TextureSampler8.viewportLength;
+            var1.anInt1547 - GLStatics.cameraTileX + GLStatics.viewportLength;
+          if (var4 > GLStatics.viewportLength + GLStatics.viewportLength) {
+            var4 = GLStatics.viewportLength + GLStatics.viewportLength;
           }
 
           var5 = false;
 
           while (var3 <= var4) {
-            if (DummyClass30.adjacentTileOnScreen[var3++][var2]) {
+            if (GLStatics.adjacentTileOnScreen[var3++][var2]) {
               var5 = true;
               break;
             }
@@ -169,27 +169,27 @@ public final class SomethingScene {
       } else if (var1.anInt1554 == 4) {
         var2 = var1.anInt1544 - ClientScriptEnum.cameraY;
         if (var2 > 128) {
-          var3 = var1.anInt1563 - TextureSampler7.cameraTileZ + TextureSampler8.viewportLength;
+          var3 = var1.anInt1563 - GLStatics.cameraTileZ + GLStatics.viewportLength;
           if (var3 < 0) {
             var3 = 0;
           }
 
-          var4 = var1.anInt1566 - TextureSampler7.cameraTileZ + TextureSampler8.viewportLength;
-          if (var4 > TextureSampler8.viewportLength + TextureSampler8.viewportLength) {
-            var4 = TextureSampler8.viewportLength + TextureSampler8.viewportLength;
+          var4 = var1.anInt1566 - GLStatics.cameraTileZ + GLStatics.viewportLength;
+          if (var4 > GLStatics.viewportLength + GLStatics.viewportLength) {
+            var4 = GLStatics.viewportLength + GLStatics.viewportLength;
           }
 
           if (var3 <= var4) {
             int var10 =
-              var1.anInt1553 - TriChromaticImageCache.cameraTileX + TextureSampler8.viewportLength;
+              var1.anInt1553 - GLStatics.cameraTileX + GLStatics.viewportLength;
             if (var10 < 0) {
               var10 = 0;
             }
 
             var6 =
-              var1.anInt1547 - TriChromaticImageCache.cameraTileX + TextureSampler8.viewportLength;
-            if (var6 > TextureSampler8.viewportLength + TextureSampler8.viewportLength) {
-              var6 = TextureSampler8.viewportLength + TextureSampler8.viewportLength;
+              var1.anInt1547 - GLStatics.cameraTileX + GLStatics.viewportLength;
+            if (var6 > GLStatics.viewportLength + GLStatics.viewportLength) {
+              var6 = GLStatics.viewportLength + GLStatics.viewportLength;
             }
 
             boolean var7 = false;
@@ -197,7 +197,7 @@ public final class SomethingScene {
             label114:
             for (int var8 = var10; var8 <= var6; ++var8) {
               for (int var9 = var3; var9 <= var4; ++var9) {
-                if (DummyClass30.adjacentTileOnScreen[var8][var9]) {
+                if (GLStatics.adjacentTileOnScreen[var8][var9]) {
                   var7 = true;
                   break label114;
                 }
@@ -245,27 +245,6 @@ public final class SomethingScene {
       if (var0 == 1) {
         SomethingScene.aClass94_1072 = null;
         SomethingScene.aClass94_1070 = null;
-      }
-  }
-
-  public static float[] method1297(byte var0) {
-    float var1 = GlEnvironment.method1514() + GlEnvironment.method1505();
-      int var2 = GlEnvironment.method1510();
-      float var3 = (255 & var2 >> 16) / 255.0F;
-      Mouse.aFloatArray1919[3] = 1.0F;
-      if (var0 == -50) {
-        float var4 = (('\uff59' & var2) >> 8) / 255.0F;
-        float var6 = 0.58823526F;
-        float var5 = (255 & var2) / 255.0F;
-        Mouse.aFloatArray1919[2] =
-            AbstractFileRequester.aFloatArray1934[2] * var5 * var6 * var1;
-        Mouse.aFloatArray1919[0] =
-            AbstractFileRequester.aFloatArray1934[0] * var3 * var6 * var1;
-        Mouse.aFloatArray1919[1] =
-            var1 * var6 * var4 * AbstractFileRequester.aFloatArray1934[1];
-        return Mouse.aFloatArray1919;
-      } else {
-        return null;
       }
   }
 

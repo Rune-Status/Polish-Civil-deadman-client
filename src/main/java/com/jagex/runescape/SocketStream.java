@@ -1,5 +1,6 @@
 package com.jagex.runescape;
 
+import com.jagex.runescape.opengl.GLStatics;
 import com.jagex.runescape.opengl.GlTexture2d;
 import java.io.EOFException;
 import java.io.IOException;
@@ -13,7 +14,6 @@ public final class SocketStream implements Runnable {
   public static SomethingFont aClass33_1238;
   public static int anInt1240;
   public static Deque aClass61_1242 = new Deque();
-  public static int anInt1244 = -1;
   private int anInt1230;
   private OutputStream anOutputStream1231;
   private InputStream anInputStream1232;
@@ -216,7 +216,7 @@ public final class SocketStream implements Runnable {
       }
 
       if (var2 > -107) {
-        SocketStream.anInt1244 = 89;
+        GLStatics.anInt1244 = 89;
       }
   }
 
@@ -231,7 +231,7 @@ public final class SocketStream implements Runnable {
 
   public static void method1469(int[] var0, int var1, int var2, int var3,
       int var4, int var5) {
-    SceneGraphTile var6 = SomethingTexture1.sceneGraphTiles[var3][var4][var5];
+    SceneGraphTile var6 = GLStatics.sceneGraphTiles[var3][var4][var5];
     if (var6 != null) {
       SomethingTilek var7 = var6.aClass126_2240;
       int var9;

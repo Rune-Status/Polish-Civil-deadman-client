@@ -2,11 +2,11 @@ package com.jagex.runescape;
 
 import com.jagex.runescape.common.GameString;
 import com.jagex.runescape.common.GameStringStatics;
+import com.jagex.runescape.opengl.GLStatics;
 
 public final class SomethingTexture1 extends AbstractSomethingTexture {
 
   public static SomethingFont aClass33_2637;
-  public static SceneGraphTile[][][] sceneGraphTiles;
   public static int[] anIntArray2639;
   public static int anInt2640;
   public static GameString aClass94_2641 = GameStringStatics.create("K");
@@ -66,7 +66,7 @@ public final class SomethingTexture1 extends AbstractSomethingTexture {
 
   public static AbstractDirectColorSprite method1344(int var0, FileUnpacker var1, int var2) {
     if (var0 < 29) {
-        SomethingTexture1.sceneGraphTiles = null;
+        GLStatics.sceneGraphTiles = null;
       }
 
       return !GroundItem.loadSprites(var1, var2) ? null : Light.method1062(99);
@@ -79,7 +79,7 @@ public final class SomethingTexture1 extends AbstractSomethingTexture {
       }
 
       SomethingTexture1.anIntArray2642 = null;
-      SomethingTexture1.sceneGraphTiles = null;
+      GLStatics.sceneGraphTiles = null;
       SomethingTexture1.aClass33_2648 = null;
       SomethingTexture1.aClass33_2637 = null;
       SomethingTexture1.fileUnpacker6 = null;

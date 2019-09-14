@@ -2,8 +2,8 @@ package com.jagex.runescape;
 
 import com.jagex.runescape.common.GameString;
 import com.jagex.runescape.huffman.HuffmanEncoderStatics;
-import com.jagex.runescape.opengl.DummyClass16;
 import com.jagex.runescape.opengl.DummyClass46;
+import com.jagex.runescape.opengl.GLStatics;
 import com.jagex.runescape.opengl.GlEnvironment;
 import com.jagex.runescape.opengl.GlRenderer;
 import com.jagex.runescape.opengl.GlTexture2d;
@@ -415,7 +415,7 @@ public final class DirectImageProducer extends AbstractImageProducer
                   if (GlRenderer.useOpenGlRenderer && var8 > 0 && (var18 != -1)
                       && ClientScript
                       .getFloorUnderlay(-1 + lightPosZ).aBoolean1411) {
-                    DummyClass16
+                    GlobalStatics_2
                         .method2037(0, 0, true, false, lightPosX, lightPosY,
                             var14
                                 - AbstractGameWorld.heightMap[0][lightPosX][lightPosY],
@@ -443,7 +443,7 @@ public final class DirectImageProducer extends AbstractImageProducer
                             FloorOverlay var53 = TextureSampler10
                                 .method350((byte) -25, -1 + var54);
                             if ((var53.anInt2095 != -1)
-                                && DummyClass40.textureCache.method18(
+                                && GLStatics.textureCache.method18(
                                 var53.anInt2095, 255) == 4) {
                               TextureSampler16.anIntArrayArray3115[lightPosX][lightPosY] =
                                   var53.anInt2094 + (var53.anInt2101 << 24);
@@ -468,7 +468,7 @@ public final class DirectImageProducer extends AbstractImageProducer
                       && var8 == 0) {
                     if (var26.anInt2095 != -1
                         &&
-                        DummyClass40.textureCache.method18(var26.anInt2095, 255)
+                        GLStatics.textureCache.method18(var26.anInt2095, 255)
                             == 4) {
                       TextureSampler16.anIntArrayArray3115[lightPosX][lightPosY] =
                           (var26.anInt2101 << 24) + var26.anInt2094;
@@ -488,7 +488,7 @@ public final class DirectImageProducer extends AbstractImageProducer
                                   TextureSampler10
                                       .method350((byte) -14, -1 + var29);
                               if ((var30.anInt2095 != -1)
-                                  && (DummyClass40.textureCache
+                                  && (GLStatics.textureCache
                                   .method18(var30.anInt2095,
                                       255) == 4)) {
                                 TextureSampler16.anIntArrayArray3115[lightPosX][lightPosY] =
@@ -503,7 +503,7 @@ public final class DirectImageProducer extends AbstractImageProducer
                   }
 
                   var27 = var26.anInt2095;
-                  if (var27 >= 0 && !DummyClass40.textureCache
+                  if (var27 >= 0 && !GLStatics.textureCache
                       .method17(var27, 101)) {
                     var27 = -1;
                   }
@@ -534,7 +534,7 @@ public final class DirectImageProducer extends AbstractImageProducer
                     var28 = -1;
                     var29 = DummyClass40.hslTable[GlobalStatics_0
                         .method729((byte) -126,
-                            DummyClass40.textureCache.method15(var27, '\uffff'),
+                            GLStatics.textureCache.method15(var27, '\uffff'),
                             96)];
                   }
 
@@ -569,7 +569,7 @@ public final class DirectImageProducer extends AbstractImageProducer
                           GlobalStatics_0.method729((byte) -93, var28, var23), var19,
                           var29);
                   if (GlRenderer.useOpenGlRenderer && (var8 > 0)) {
-                    DummyClass16.method2037(var24, var25,
+                    GlobalStatics_2.method2037(var24, var25,
                         (var28 == -1) || !var26.aBoolean2093,
                         var18 == -1 || !ClientScript
                             .getFloorUnderlay(-1 + lightPosZ).aBoolean1411,

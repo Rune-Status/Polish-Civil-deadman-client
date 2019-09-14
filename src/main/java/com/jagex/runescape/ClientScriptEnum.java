@@ -6,6 +6,7 @@ import com.jagex.runescape.common.GameStringStatics;
 import com.jagex.runescape.common.HashTable;
 import com.jagex.runescape.common.StringNode;
 import com.jagex.runescape.node.Node;
+import com.jagex.runescape.sprite.SoftwareIndexedColorSprite;
 
 public final class ClientScriptEnum extends SubNode {
 

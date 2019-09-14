@@ -2,6 +2,7 @@ package com.jagex.runescape;
 
 import com.jagex.runescape.common.GameString;
 import com.jagex.runescape.common.GameStringStatics;
+import com.jagex.runescape.opengl.GLStatics;
 import com.jagex.runescape.opengl.GlTexture2d;
 import com.jagex.runescape.opengl.MaterialShader5;
 import java.util.Calendar;
@@ -149,7 +150,7 @@ public final class AnimationSomething extends SubNode {
   }
 
   public static long method557(int var0, int var1, int var2) {
-    SceneGraphTile var3 = SomethingTexture1.sceneGraphTiles[var0][var1][var2];
+    SceneGraphTile var3 = GLStatics.sceneGraphTiles[var0][var1][var2];
     if (var3 == null) {
       return 0L;
     } else {

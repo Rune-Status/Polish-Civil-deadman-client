@@ -3,6 +3,7 @@ package com.jagex.runescape;
 import com.jagex.runescape.buffer.Buffer;
 import com.jagex.runescape.common.GameString;
 import com.jagex.runescape.common.GameStringStatics;
+import com.jagex.runescape.opengl.GLStatics;
 
 public final class DummyClass30 {
 
@@ -12,12 +13,11 @@ public final class DummyClass30 {
   public static int viewWidth;
   public static int anInt455;
   public static int anInt456;
-  public static boolean[][] adjacentTileOnScreen;
   public static GameString aClass94_459 = DummyClass30.aClass94_458;
 
 
   public static void method937(int var0) {
-    DummyClass30.adjacentTileOnScreen = null;
+    GLStatics.adjacentTileOnScreen = null;
       DummyClass30.aClass94_458 = null;
 
       DummyClass30.aClass94_459 = null;
@@ -48,9 +48,9 @@ public final class DummyClass30 {
       var1.writeByte(!GameWorld.aBoolean2623 ? 0 : 1);
       var1.writeByte(TextureSampler0.aBoolean3275 ? 1 : 0);
       var1.writeByte(!Projectile.aBoolean2910 ? 0 : 1);
-      var1.writeByte(HashTableIterator.anInt1137);
+      var1.writeByte(GLStatics.anInt1137);
       var1.writeByte(!DisplayMode.useBumpMaps ? 0 : 1);
-      var1.writeByte(DummyHashTable.aBoolean1685 ? 1 : 0);
+      var1.writeByte(GLStatics.aBoolean1685 ? 1 : 0);
       var1.writeByte(DummyClass35.aBoolean661 ? 1 : 0);
       var1.writeByte(Parameter.anInt3622);
       var1.writeByte(!TextureSampler17.aBoolean3184 ? 0 : 1);

@@ -2,6 +2,8 @@ package com.jagex.runescape;
 
 import com.jagex.runescape.common.HashTable;
 import com.jagex.runescape.opengl.GlRenderer;
+import com.jagex.runescape.sprite.SoftwareIndexedColorSprite;
+import com.jagex.runescape.sprite.SoftwareIndexedColorSpriteStatics;
 
 public final class MidiSomething {
 
@@ -221,7 +223,7 @@ public final class MidiSomething {
                     var35 = var42[var28] != null ? var42[var28][var31] : 0;
                     var36 = var35 & 252;
                     if ((var36 != 0) && (var16 > 1) && var27 > 1) {
-                      FloorOverlay.method2272(DummyClass47.anIntArray1100, var33, var14, var35 & 3,
+                      FloorOverlay.method2272(SoftwareIndexedColorSpriteStatics.anIntArray1100, var33, var14, var35 & 3,
                         var32, var36 >> 2, var27, var16, var25, true, (byte) 21);
                     } else {
                       DummyClass47.method1323(var14, var25, var16, var27, var33);
@@ -239,7 +241,7 @@ public final class MidiSomething {
                       DummyClass47.method1323(var14, var25, var16, var27, var34);
                     }
 
-                    FloorOverlay.method2272(DummyClass47.anIntArray1100, var34, var14, var35 & 3, 0,
+                    FloorOverlay.method2272(SoftwareIndexedColorSpriteStatics.anIntArray1100, var34, var14, var35 & 3, 0,
                       var36 >> 2, var27, var16, var25, var33 == 0, (byte) 21);
                   }
                 }

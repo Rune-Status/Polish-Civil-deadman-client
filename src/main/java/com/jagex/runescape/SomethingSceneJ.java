@@ -103,7 +103,7 @@ public final class SomethingSceneJ {
   }
 
   public static int method872(int var0, int var1, int var2) {
-    Inventory var3 = (Inventory) SceneGraphTile.aClass130_2220.get(var1);
+    Inventory var3 = (Inventory) GlobalStatics_2.aClass130_2220.get(var1);
       return var3 == null ?
         0 :
         (var0 >= ~var2 && var2 < var3.counts.length ? var3.counts[var2] : 0);

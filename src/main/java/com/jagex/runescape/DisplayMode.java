@@ -49,7 +49,7 @@ public final class DisplayMode {
         DisplayMode.method1644((byte) 95);
       }
 
-      Inventory var4 = (Inventory) SceneGraphTile.aClass130_2220.get(var2);
+      Inventory var4 = (Inventory) GlobalStatics_2.aClass130_2220.get(var2);
       if (var4 != null) {
         int var5 = 0;
 

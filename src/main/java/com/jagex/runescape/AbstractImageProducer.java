@@ -2,6 +2,7 @@ package com.jagex.runescape;
 
 import com.jagex.runescape.common.GameString;
 import com.jagex.runescape.common.GameStringStatics;
+import com.jagex.runescape.opengl.GLStatics;
 import java.awt.Component;
 import java.awt.Graphics;
 import java.awt.Image;
@@ -91,7 +92,7 @@ public abstract class AbstractImageProducer {
   public static void method2186(SceneSomething var0) {
     for (int var1 = var0.anInt483; var1 <= var0.anInt495; ++var1) {
       for (int var2 = var0.anInt478; var2 <= var0.anInt481; ++var2) {
-        SceneGraphTile var3 = SomethingTexture1.sceneGraphTiles[var0.anInt493][var1][var2];
+        SceneGraphTile var3 = GLStatics.sceneGraphTiles[var0.anInt493][var1][var2];
         if (var3 != null) {
           int var4;
           for (var4 = 0; var4 < var3.anInt2223; ++var4) {

@@ -304,7 +304,7 @@ public final class Structure extends SubNode {
     GameObject.aClass94_2751 = SomethingLight0.aClass94_1546;
       TextureSampler36.aClass94_3426 = MonoChromaticImageCache.aClass94_1575;
       DummyClass35.aClass94_662 = IdentityKit.aClass94_463;
-      TextureSampler24.aClass94_3142 = SceneGraphTile.aClass94_2215;
+      TextureSampler24.aClass94_3142 = GlobalStatics_2.aClass94_2215;
       DummyClass15.aClass94_1879 = TextureSampler36.aClass94_3432;
       OndemandFileRequest.aClass94_4071 = PlayerVariable.aClass94_560;
       SomethingMidiFile.aClass94_2285 = PlayerVariable.aClass94_559;
@@ -341,14 +341,14 @@ public final class Structure extends SubNode {
       TextureSampler36.aClass94_3427 = TextureSampler32.aClass94_3355;
       GlobalStatics_0.aClass94_1707 = SpotAnimationConfig.aClass94_552;
       Unsure.aClass94_1892 = Queue.aClass94_334;
-      GameClient.aClass94_2196 = Light.aClass94_700;
+      GlobalStatics_1.aClass94_2196 = Light.aClass94_700;
       GlobalStatics_0.aClass94_1180 = TextureSampler25.aClass94_3408;
       SceneShadowMap.CONNECTION_LOST = DummyClass1.aClass94_414;
       DummyClass32.SKILL = MaterialShader5.aClass94_2170;
       ClientScript.aClass94_3691 = EnumStringFetcher.aClass94_2163;
       RenderAnimation.aClass94_374 = GlTexture2d.aClass94_3763;
       GameStub.aClass94_4 = ItemConfig.aClass94_808;
-      SceneGraphTile.aClass94_2216 = StringNode0.aClass94_2340;
+      GlobalStatics_2.aClass94_2216 = StringNode0.aClass94_2340;
       VertexNormal.aClass94_822 = DummyClass56.aClass94_1455;
       SomethingInScenePacket202.aClass94_2267 = AudioSomethingSomething.aClass94_2524;
       AnimationSomething.aClass94_3584 = ClientScriptEnum.aClass94_3661;
@@ -385,7 +385,7 @@ public final class Structure extends SubNode {
       DisplayMode.CONNECTED_TO_UPDATE_SERVER = AbstractObjectNodeWrapper.aClass94_1618;
       RenderAnimation.aClass94_361 = DummyClass28.aClass94_338;
       TextureSampler33.aClass94_3051 = DummyClass23.aClass94_1660;
-      TextureSampler35.aClass94_3333 = SceneGraphTile.aClass94_2242;
+      TextureSampler35.aClass94_3333 = GlobalStatics_2.aClass94_2242;
       FileRequester.aClass94_2961 = DummyClass34.aClass94_591;
       Structure.aClass94_3645 = AnimationSequence.aClass94_1863;
       DummyClass30.aClass94_459 = TextureCache.aClass94_2132;

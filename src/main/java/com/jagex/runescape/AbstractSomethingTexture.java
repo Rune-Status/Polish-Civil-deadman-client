@@ -1,6 +1,7 @@
 package com.jagex.runescape;
 
 import com.jagex.runescape.common.GameString;
+import com.jagex.runescape.opengl.GLStatics;
 import com.jagex.runescape.opengl.GlTexture2d;
 
 public abstract class AbstractSomethingTexture {
@@ -35,7 +36,7 @@ public abstract class AbstractSomethingTexture {
   }
 
   public static SceneSomething method1336(int var0, int var1, int var2) {
-    SceneGraphTile var3 = SomethingTexture1.sceneGraphTiles[var0][var1][var2];
+    SceneGraphTile var3 = GLStatics.sceneGraphTiles[var0][var1][var2];
     if (var3 == null) {
       return null;
     } else {

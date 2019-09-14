@@ -1,5 +1,7 @@
 package com.jagex.runescape;
 
+import com.jagex.runescape.sprite.SoftwareIndexedColorSpriteStatics;
+
 public final class SoftwareDirectFullColorSprite extends SoftwareDirectColorSprite {
 
   public SoftwareDirectFullColorSprite(int var1, int var2, int var3, int var4,
@@ -12,37 +14,37 @@ public final class SoftwareDirectFullColorSprite extends SoftwareDirectColorSpri
   public void method635(int var1,int var2 ) {
     var1 += this.anInt3701;
     var2 += this.anInt3698;
-    int var3 = var1 + var2 * DummyClass47.anInt1092;
+    int var3 = var1 + var2 * SoftwareIndexedColorSpriteStatics.anInt1092;
     int var4 = 0;
     int var5 = this.anInt3696;
     int var6 = this.anInt3707;
-    int var7 = DummyClass47.anInt1092 - var6;
+    int var7 = SoftwareIndexedColorSpriteStatics.anInt1092 - var6;
     int var8 = 0;
     int var9;
-    if (var2 < DummyClass47.anInt1095) {
-      var9 = DummyClass47.anInt1095 - var2;
+    if (var2 < SoftwareIndexedColorSpriteStatics.anInt1095) {
+      var9 = SoftwareIndexedColorSpriteStatics.anInt1095 - var2;
       var5 -= var9;
-      var2 = DummyClass47.anInt1095;
+      var2 = SoftwareIndexedColorSpriteStatics.anInt1095;
       var4 += var9 * var6;
-      var3 += var9 * DummyClass47.anInt1092;
+      var3 += var9 * SoftwareIndexedColorSpriteStatics.anInt1092;
     }
 
-    if (var2 + var5 > DummyClass47.anInt1099) {
-      var5 -= var2 + var5 - DummyClass47.anInt1099;
+    if (var2 + var5 > SoftwareIndexedColorSpriteStatics.anInt1099) {
+      var5 -= var2 + var5 - SoftwareIndexedColorSpriteStatics.anInt1099;
     }
 
-    if (var1 < DummyClass47.anInt1093) {
-      var9 = DummyClass47.anInt1093 - var1;
+    if (var1 < SoftwareIndexedColorSpriteStatics.anInt1093) {
+      var9 = SoftwareIndexedColorSpriteStatics.anInt1093 - var1;
       var6 -= var9;
-      var1 = DummyClass47.anInt1093;
+      var1 = SoftwareIndexedColorSpriteStatics.anInt1093;
       var4 += var9;
       var3 += var9;
       var8 += var9;
       var7 += var9;
     }
 
-    if (var1 + var6 > DummyClass47.anInt1096) {
-      var9 = var1 + var6 - DummyClass47.anInt1096;
+    if (var1 + var6 > SoftwareIndexedColorSpriteStatics.anInt1096) {
+      var9 = var1 + var6 - SoftwareIndexedColorSpriteStatics.anInt1096;
       var6 -= var9;
       var8 += var9;
       var7 += var9;
@@ -50,7 +52,7 @@ public final class SoftwareDirectFullColorSprite extends SoftwareDirectColorSpri
 
     if (var6 > 0 && var5 > 0) {
       SoftwareDirectFullColorSprite
-          .method673(DummyClass47.anIntArray1100, this.pixels, 0, var4, var3, var6, var5, var7, var8);
+          .method673(SoftwareIndexedColorSpriteStatics.anIntArray1100, this.pixels, 0, var4, var3, var6, var5, var7, var8);
     }
   }
 
@@ -136,27 +138,27 @@ public final class SoftwareDirectFullColorSprite extends SoftwareDirectColorSpri
       var20 = var20 + 15 >> 4;
       var21 >>= 4;
       var22 = var22 + 15 >> 4;
-      if (var19 < DummyClass47.anInt1093) {
-        var19 = DummyClass47.anInt1093;
+      if (var19 < SoftwareIndexedColorSpriteStatics.anInt1093) {
+        var19 = SoftwareIndexedColorSpriteStatics.anInt1093;
       }
 
-      if (var20 > DummyClass47.anInt1096) {
-        var20 = DummyClass47.anInt1096;
+      if (var20 > SoftwareIndexedColorSpriteStatics.anInt1096) {
+        var20 = SoftwareIndexedColorSpriteStatics.anInt1096;
       }
 
-      if (var21 < DummyClass47.anInt1095) {
-        var21 = DummyClass47.anInt1095;
+      if (var21 < SoftwareIndexedColorSpriteStatics.anInt1095) {
+        var21 = SoftwareIndexedColorSpriteStatics.anInt1095;
       }
 
-      if (var22 > DummyClass47.anInt1099) {
-        var22 = DummyClass47.anInt1099;
+      if (var22 > SoftwareIndexedColorSpriteStatics.anInt1099) {
+        var22 = SoftwareIndexedColorSpriteStatics.anInt1099;
       }
 
       var20 = var19 - var20;
       if (var20 < 0) {
         var22 = var21 - var22;
         if (var22 < 0) {
-          int var23 = var21 * DummyClass47.anInt1092 + var19;
+          int var23 = var21 * SoftwareIndexedColorSpriteStatics.anInt1092 + var19;
           double var24 = 1.6777216E7D / var6;
           int var26 = (int) Math.floor(Math.sin(var7) * var24 + 0.5D);
           int var27 = (int) Math.floor(Math.cos(var7) * var24 + 0.5D);
@@ -176,7 +178,7 @@ public final class SoftwareDirectFullColorSprite extends SoftwareDirectColorSpri
           int var41;
           if (var27 == 0) {
             if (var26 == 0) {
-              for (var33 = var22; var33 < 0; var23 += DummyClass47.anInt1092) {
+              for (var33 = var22; var33 < 0; var23 += SoftwareIndexedColorSpriteStatics.anInt1092) {
                 var34 = var23;
                 var35 = var30;
                 var36 = var31;
@@ -185,10 +187,10 @@ public final class SoftwareDirectFullColorSprite extends SoftwareDirectColorSpri
                   && var31 - (this.anInt3696 << 12) < 0) {
                   while (var37 < 0) {
                     var38 = this.pixels[(var36 >> 12) * this.anInt3707 + (var35 >> 12)];
-                    var39 = DummyClass47.anIntArray1100[var34];
+                    var39 = SoftwareIndexedColorSpriteStatics.anIntArray1100[var34];
                     var40 = var38 >>> 24;
                     var41 = 256 - var40;
-                    DummyClass47.anIntArray1100[var34++] =
+                    SoftwareIndexedColorSpriteStatics.anIntArray1100[var34++] =
                       ((var38 & 16711935) * var40 + (var39 & 16711935) * var41 & -16711936) + (
                         (var38 & '\uff00') * var40 + (var39 & '\uff00') * var41 & 16711680) >>> 8;
                     ++var37;
@@ -198,7 +200,7 @@ public final class SoftwareDirectFullColorSprite extends SoftwareDirectColorSpri
                 ++var33;
               }
             } else if (var26 < 0) {
-              for (var33 = var22; var33 < 0; var23 += DummyClass47.anInt1092) {
+              for (var33 = var22; var33 < 0; var23 += SoftwareIndexedColorSpriteStatics.anInt1092) {
                 var34 = var23;
                 var35 = var30;
                 var36 = var31 + (var28 * var26 >> 4);
@@ -217,10 +219,10 @@ public final class SoftwareDirectFullColorSprite extends SoftwareDirectColorSpri
 
                   while (var37 < 0) {
                     var38 = this.pixels[(var36 >> 12) * this.anInt3707 + (var35 >> 12)];
-                    var39 = DummyClass47.anIntArray1100[var34];
+                    var39 = SoftwareIndexedColorSpriteStatics.anIntArray1100[var34];
                     var40 = var38 >>> 24;
                     var41 = 256 - var40;
-                    DummyClass47.anIntArray1100[var34++] =
+                    SoftwareIndexedColorSpriteStatics.anIntArray1100[var34++] =
                       ((var38 & 16711935) * var40 + (var39 & 16711935) * var41 & -16711936) + (
                         (var38 & '\uff00') * var40 + (var39 & '\uff00') * var41 & 16711680) >>> 8;
                     var36 += var26;
@@ -232,7 +234,7 @@ public final class SoftwareDirectFullColorSprite extends SoftwareDirectColorSpri
                 var30 -= var26;
               }
             } else {
-              for (var33 = var22; var33 < 0; var23 += DummyClass47.anInt1092) {
+              for (var33 = var22; var33 < 0; var23 += SoftwareIndexedColorSpriteStatics.anInt1092) {
                 var34 = var23;
                 var35 = var30;
                 var36 = var31 + (var28 * var26 >> 4);
@@ -251,10 +253,10 @@ public final class SoftwareDirectFullColorSprite extends SoftwareDirectColorSpri
 
                   while (var37 < 0) {
                     var38 = this.pixels[(var36 >> 12) * this.anInt3707 + (var35 >> 12)];
-                    var39 = DummyClass47.anIntArray1100[var34];
+                    var39 = SoftwareIndexedColorSpriteStatics.anIntArray1100[var34];
                     var40 = var38 >>> 24;
                     var41 = 256 - var40;
-                    DummyClass47.anIntArray1100[var34++] =
+                    SoftwareIndexedColorSpriteStatics.anIntArray1100[var34++] =
                       ((var38 & 16711935) * var40 + (var39 & 16711935) * var41 & -16711936) + (
                         (var38 & '\uff00') * var40 + (var39 & '\uff00') * var41 & 16711680) >>> 8;
                     var36 += var26;
@@ -268,7 +270,7 @@ public final class SoftwareDirectFullColorSprite extends SoftwareDirectColorSpri
             }
           } else if (var27 < 0) {
             if (var26 == 0) {
-              for (var33 = var22; var33 < 0; var23 += DummyClass47.anInt1092) {
+              for (var33 = var22; var33 < 0; var23 += SoftwareIndexedColorSpriteStatics.anInt1092) {
                 var34 = var23;
                 var35 = var30 + (var28 * var27 >> 4);
                 var36 = var31;
@@ -287,10 +289,10 @@ public final class SoftwareDirectFullColorSprite extends SoftwareDirectColorSpri
 
                   while (var37 < 0) {
                     var38 = this.pixels[(var36 >> 12) * this.anInt3707 + (var35 >> 12)];
-                    var39 = DummyClass47.anIntArray1100[var34];
+                    var39 = SoftwareIndexedColorSpriteStatics.anIntArray1100[var34];
                     var40 = var38 >>> 24;
                     var41 = 256 - var40;
-                    DummyClass47.anIntArray1100[var34++] =
+                    SoftwareIndexedColorSpriteStatics.anIntArray1100[var34++] =
                       ((var38 & 16711935) * var40 + (var39 & 16711935) * var41 & -16711936) + (
                         (var38 & '\uff00') * var40 + (var39 & '\uff00') * var41 & 16711680) >>> 8;
                     var35 += var27;
@@ -302,7 +304,7 @@ public final class SoftwareDirectFullColorSprite extends SoftwareDirectColorSpri
                 var31 += var27;
               }
             } else if (var26 < 0) {
-              for (var33 = var22; var33 < 0; var23 += DummyClass47.anInt1092) {
+              for (var33 = var22; var33 < 0; var23 += SoftwareIndexedColorSpriteStatics.anInt1092) {
                 var34 = var23;
                 var35 = var30 + (var28 * var27 >> 4);
                 var36 = var31 + (var28 * var26 >> 4);
@@ -333,10 +335,10 @@ public final class SoftwareDirectFullColorSprite extends SoftwareDirectColorSpri
 
                 while (var37 < 0) {
                   var38 = this.pixels[(var36 >> 12) * this.anInt3707 + (var35 >> 12)];
-                  var39 = DummyClass47.anIntArray1100[var34];
+                  var39 = SoftwareIndexedColorSpriteStatics.anIntArray1100[var34];
                   var40 = var38 >>> 24;
                   var41 = 256 - var40;
-                  DummyClass47.anIntArray1100[var34++] =
+                  SoftwareIndexedColorSpriteStatics.anIntArray1100[var34++] =
                     ((var38 & 16711935) * var40 + (var39 & 16711935) * var41 & -16711936) + (
                       (var38 & '\uff00') * var40 + (var39 & '\uff00') * var41 & 16711680) >>> 8;
                   var35 += var27;
@@ -349,7 +351,7 @@ public final class SoftwareDirectFullColorSprite extends SoftwareDirectColorSpri
                 var31 += var27;
               }
             } else {
-              for (var33 = var22; var33 < 0; var23 += DummyClass47.anInt1092) {
+              for (var33 = var22; var33 < 0; var23 += SoftwareIndexedColorSpriteStatics.anInt1092) {
                 var34 = var23;
                 var35 = var30 + (var28 * var27 >> 4);
                 var36 = var31 + (var28 * var26 >> 4);
@@ -380,10 +382,10 @@ public final class SoftwareDirectFullColorSprite extends SoftwareDirectColorSpri
 
                 while (var37 < 0) {
                   var38 = this.pixels[(var36 >> 12) * this.anInt3707 + (var35 >> 12)];
-                  var39 = DummyClass47.anIntArray1100[var34];
+                  var39 = SoftwareIndexedColorSpriteStatics.anIntArray1100[var34];
                   var40 = var38 >>> 24;
                   var41 = 256 - var40;
-                  DummyClass47.anIntArray1100[var34++] =
+                  SoftwareIndexedColorSpriteStatics.anIntArray1100[var34++] =
                     ((var38 & 16711935) * var40 + (var39 & 16711935) * var41 & -16711936) + (
                       (var38 & '\uff00') * var40 + (var39 & '\uff00') * var41 & 16711680) >>> 8;
                   var35 += var27;
@@ -397,7 +399,7 @@ public final class SoftwareDirectFullColorSprite extends SoftwareDirectColorSpri
               }
             }
           } else if (var26 == 0) {
-            for (var33 = var22; var33 < 0; var23 += DummyClass47.anInt1092) {
+            for (var33 = var22; var33 < 0; var23 += SoftwareIndexedColorSpriteStatics.anInt1092) {
               var34 = var23;
               var35 = var30 + (var28 * var27 >> 4);
               var36 = var31;
@@ -416,10 +418,10 @@ public final class SoftwareDirectFullColorSprite extends SoftwareDirectColorSpri
 
                 while (var37 < 0) {
                   var38 = this.pixels[(var36 >> 12) * this.anInt3707 + (var35 >> 12)];
-                  var39 = DummyClass47.anIntArray1100[var34];
+                  var39 = SoftwareIndexedColorSpriteStatics.anIntArray1100[var34];
                   var40 = var38 >>> 24;
                   var41 = 256 - var40;
-                  DummyClass47.anIntArray1100[var34++] =
+                  SoftwareIndexedColorSpriteStatics.anIntArray1100[var34++] =
                     ((var38 & 16711935) * var40 + (var39 & 16711935) * var41 & -16711936) + (
                       (var38 & '\uff00') * var40 + (var39 & '\uff00') * var41 & 16711680) >>> 8;
                   var35 += var27;
@@ -431,7 +433,7 @@ public final class SoftwareDirectFullColorSprite extends SoftwareDirectColorSpri
               var31 += var27;
             }
           } else if (var26 < 0) {
-            for (var33 = var22; var33 < 0; var23 += DummyClass47.anInt1092) {
+            for (var33 = var22; var33 < 0; var23 += SoftwareIndexedColorSpriteStatics.anInt1092) {
               var34 = var23;
               var35 = var30 + (var28 * var27 >> 4);
               var36 = var31 + (var28 * var26 >> 4);
@@ -462,10 +464,10 @@ public final class SoftwareDirectFullColorSprite extends SoftwareDirectColorSpri
 
               while (var37 < 0) {
                 var38 = this.pixels[(var36 >> 12) * this.anInt3707 + (var35 >> 12)];
-                var39 = DummyClass47.anIntArray1100[var34];
+                var39 = SoftwareIndexedColorSpriteStatics.anIntArray1100[var34];
                 var40 = var38 >>> 24;
                 var41 = 256 - var40;
-                DummyClass47.anIntArray1100[var34++] =
+                SoftwareIndexedColorSpriteStatics.anIntArray1100[var34++] =
                   ((var38 & 16711935) * var40 + (var39 & 16711935) * var41 & -16711936) + (
                     (var38 & '\uff00') * var40 + (var39 & '\uff00') * var41 & 16711680) >>> 8;
                 var35 += var27;
@@ -478,7 +480,7 @@ public final class SoftwareDirectFullColorSprite extends SoftwareDirectColorSpri
               var31 += var27;
             }
           } else {
-            for (var33 = var22; var33 < 0; var23 += DummyClass47.anInt1092) {
+            for (var33 = var22; var33 < 0; var23 += SoftwareIndexedColorSpriteStatics.anInt1092) {
               var34 = var23;
               var35 = var30 + (var28 * var27 >> 4);
               var36 = var31 + (var28 * var26 >> 4);
@@ -509,10 +511,10 @@ public final class SoftwareDirectFullColorSprite extends SoftwareDirectColorSpri
 
               while (var37 < 0) {
                 var38 = this.pixels[(var36 >> 12) * this.anInt3707 + (var35 >> 12)];
-                var39 = DummyClass47.anIntArray1100[var34];
+                var39 = SoftwareIndexedColorSpriteStatics.anIntArray1100[var34];
                 var40 = var38 >>> 24;
                 var41 = 256 - var40;
-                DummyClass47.anIntArray1100[var34++] =
+                SoftwareIndexedColorSpriteStatics.anIntArray1100[var34++] =
                   ((var38 & 16711935) * var40 + (var39 & 16711935) * var41 & -16711936) + (
                     (var38 & '\uff00') * var40 + (var39 & '\uff00') * var41 & 16711680) >>> 8;
                 var35 += var27;
@@ -534,37 +536,37 @@ public final class SoftwareDirectFullColorSprite extends SoftwareDirectColorSpri
   public void method637(int var1,int var2, int var3 ) {
     var1 += this.anInt3701;
     var2 += this.anInt3698;
-    int var4 = var1 + var2 * DummyClass47.anInt1092;
+    int var4 = var1 + var2 * SoftwareIndexedColorSpriteStatics.anInt1092;
     int var5 = 0;
     int var6 = this.anInt3696;
     int var7 = this.anInt3707;
-    int var8 = DummyClass47.anInt1092 - var7;
+    int var8 = SoftwareIndexedColorSpriteStatics.anInt1092 - var7;
     int var9 = 0;
     int var10;
-    if (var2 < DummyClass47.anInt1095) {
-      var10 = DummyClass47.anInt1095 - var2;
+    if (var2 < SoftwareIndexedColorSpriteStatics.anInt1095) {
+      var10 = SoftwareIndexedColorSpriteStatics.anInt1095 - var2;
       var6 -= var10;
-      var2 = DummyClass47.anInt1095;
+      var2 = SoftwareIndexedColorSpriteStatics.anInt1095;
       var5 += var10 * var7;
-      var4 += var10 * DummyClass47.anInt1092;
+      var4 += var10 * SoftwareIndexedColorSpriteStatics.anInt1092;
     }
 
-    if (var2 + var6 > DummyClass47.anInt1099) {
-      var6 -= var2 + var6 - DummyClass47.anInt1099;
+    if (var2 + var6 > SoftwareIndexedColorSpriteStatics.anInt1099) {
+      var6 -= var2 + var6 - SoftwareIndexedColorSpriteStatics.anInt1099;
     }
 
-    if (var1 < DummyClass47.anInt1093) {
-      var10 = DummyClass47.anInt1093 - var1;
+    if (var1 < SoftwareIndexedColorSpriteStatics.anInt1093) {
+      var10 = SoftwareIndexedColorSpriteStatics.anInt1093 - var1;
       var7 -= var10;
-      var1 = DummyClass47.anInt1093;
+      var1 = SoftwareIndexedColorSpriteStatics.anInt1093;
       var5 += var10;
       var4 += var10;
       var9 += var10;
       var8 += var10;
     }
 
-    if (var1 + var7 > DummyClass47.anInt1096) {
-      var10 = var1 + var7 - DummyClass47.anInt1096;
+    if (var1 + var7 > SoftwareIndexedColorSpriteStatics.anInt1096) {
+      var10 = var1 + var7 - SoftwareIndexedColorSpriteStatics.anInt1096;
       var7 -= var10;
       var9 += var10;
       var8 += var10;
@@ -572,7 +574,7 @@ public final class SoftwareDirectFullColorSprite extends SoftwareDirectColorSpri
 
     if (var7 > 0 && var6 > 0) {
       SoftwareDirectFullColorSprite
-          .method674(DummyClass47.anIntArray1100, this.pixels, 0, var5, var4, var7, var6, var8, var9,
+          .method674(SoftwareIndexedColorSpriteStatics.anIntArray1100, this.pixels, 0, var5, var4, var7, var6, var8, var9,
         var3);
     }
   }
@@ -608,28 +610,28 @@ public final class SoftwareDirectFullColorSprite extends SoftwareDirectColorSpri
         var4 = ((var6 << 16) - var8 + var12 - 1) / var12;
       }
 
-      var13 = var1 + var2 * DummyClass47.anInt1092;
-      int var14 = DummyClass47.anInt1092 - var3;
-      if (var2 + var4 > DummyClass47.anInt1099) {
-        var4 -= var2 + var4 - DummyClass47.anInt1099;
+      var13 = var1 + var2 * SoftwareIndexedColorSpriteStatics.anInt1092;
+      int var14 = SoftwareIndexedColorSpriteStatics.anInt1092 - var3;
+      if (var2 + var4 > SoftwareIndexedColorSpriteStatics.anInt1099) {
+        var4 -= var2 + var4 - SoftwareIndexedColorSpriteStatics.anInt1099;
       }
 
       int var15;
-      if (var2 < DummyClass47.anInt1095) {
-        var15 = DummyClass47.anInt1095 - var2;
+      if (var2 < SoftwareIndexedColorSpriteStatics.anInt1095) {
+        var15 = SoftwareIndexedColorSpriteStatics.anInt1095 - var2;
         var4 -= var15;
-        var13 += var15 * DummyClass47.anInt1092;
+        var13 += var15 * SoftwareIndexedColorSpriteStatics.anInt1092;
         var8 += var12 * var15;
       }
 
-      if (var1 + var3 > DummyClass47.anInt1096) {
-        var15 = var1 + var3 - DummyClass47.anInt1096;
+      if (var1 + var3 > SoftwareIndexedColorSpriteStatics.anInt1096) {
+        var15 = var1 + var3 - SoftwareIndexedColorSpriteStatics.anInt1096;
         var3 -= var15;
         var14 += var15;
       }
 
-      if (var1 < DummyClass47.anInt1093) {
-        var15 = DummyClass47.anInt1093 - var1;
+      if (var1 < SoftwareIndexedColorSpriteStatics.anInt1093) {
+        var15 = SoftwareIndexedColorSpriteStatics.anInt1093 - var1;
         var3 -= var15;
         var13 += var15;
         var7 += var11 * var15;
@@ -637,7 +639,7 @@ public final class SoftwareDirectFullColorSprite extends SoftwareDirectColorSpri
       }
 
       SoftwareDirectFullColorSprite
-          .method675(DummyClass47.anIntArray1100, this.pixels, 0, var7, var8, var13, var14, var3, var4,
+          .method675(SoftwareIndexedColorSpriteStatics.anIntArray1100, this.pixels, 0, var7, var8, var13, var14, var3, var4,
         var11, var12, var5);
     }
   }
@@ -645,37 +647,37 @@ public final class SoftwareDirectFullColorSprite extends SoftwareDirectColorSpri
   public void method641(int var1,int var2 ) {
     var1 += this.anInt3697 - this.anInt3707 - this.anInt3701;
     var2 += this.anInt3698;
-    int var3 = var1 + var2 * DummyClass47.anInt1092;
+    int var3 = var1 + var2 * SoftwareIndexedColorSpriteStatics.anInt1092;
     int var4 = this.anInt3707 - 1;
     int var5 = this.anInt3696;
     int var6 = this.anInt3707;
-    int var7 = DummyClass47.anInt1092 - var6;
+    int var7 = SoftwareIndexedColorSpriteStatics.anInt1092 - var6;
     int var8 = var6 + var6;
     int var9;
-    if (var2 < DummyClass47.anInt1095) {
-      var9 = DummyClass47.anInt1095 - var2;
+    if (var2 < SoftwareIndexedColorSpriteStatics.anInt1095) {
+      var9 = SoftwareIndexedColorSpriteStatics.anInt1095 - var2;
       var5 -= var9;
-      var2 = DummyClass47.anInt1095;
+      var2 = SoftwareIndexedColorSpriteStatics.anInt1095;
       var4 += var9 * var6;
-      var3 += var9 * DummyClass47.anInt1092;
+      var3 += var9 * SoftwareIndexedColorSpriteStatics.anInt1092;
     }
 
-    if (var2 + var5 > DummyClass47.anInt1099) {
-      var5 -= var2 + var5 - DummyClass47.anInt1099;
+    if (var2 + var5 > SoftwareIndexedColorSpriteStatics.anInt1099) {
+      var5 -= var2 + var5 - SoftwareIndexedColorSpriteStatics.anInt1099;
     }
 
-    if (var1 < DummyClass47.anInt1093) {
-      var9 = DummyClass47.anInt1093 - var1;
+    if (var1 < SoftwareIndexedColorSpriteStatics.anInt1093) {
+      var9 = SoftwareIndexedColorSpriteStatics.anInt1093 - var1;
       var6 -= var9;
-      var1 = DummyClass47.anInt1093;
+      var1 = SoftwareIndexedColorSpriteStatics.anInt1093;
       var4 -= var9;
       var3 += var9;
       var8 -= var9;
       var7 += var9;
     }
 
-    if (var1 + var6 > DummyClass47.anInt1096) {
-      var9 = var1 + var6 - DummyClass47.anInt1096;
+    if (var1 + var6 > SoftwareIndexedColorSpriteStatics.anInt1096) {
+      var9 = var1 + var6 - SoftwareIndexedColorSpriteStatics.anInt1096;
       var6 -= var9;
       var8 -= var9;
       var7 += var9;
@@ -683,7 +685,7 @@ public final class SoftwareDirectFullColorSprite extends SoftwareDirectColorSpri
 
     if (var6 > 0 && var5 > 0) {
       SoftwareDirectFullColorSprite
-          .method672(DummyClass47.anIntArray1100, this.pixels, 0, var4, var3, var6, var5, var7, var8);
+          .method672(SoftwareIndexedColorSpriteStatics.anIntArray1100, this.pixels, 0, var4, var3, var6, var5, var7, var8);
     }
   }
 
@@ -718,28 +720,28 @@ public final class SoftwareDirectFullColorSprite extends SoftwareDirectColorSpri
         var4 = ((var7 << 16) - var9 + var13 - 1) / var13;
       }
 
-      var14 = var1 + var2 * DummyClass47.anInt1092;
-      int var15 = DummyClass47.anInt1092 - var3;
-      if (var2 + var4 > DummyClass47.anInt1099) {
-        var4 -= var2 + var4 - DummyClass47.anInt1099;
+      var14 = var1 + var2 * SoftwareIndexedColorSpriteStatics.anInt1092;
+      int var15 = SoftwareIndexedColorSpriteStatics.anInt1092 - var3;
+      if (var2 + var4 > SoftwareIndexedColorSpriteStatics.anInt1099) {
+        var4 -= var2 + var4 - SoftwareIndexedColorSpriteStatics.anInt1099;
       }
 
       int var16;
-      if (var2 < DummyClass47.anInt1095) {
-        var16 = DummyClass47.anInt1095 - var2;
+      if (var2 < SoftwareIndexedColorSpriteStatics.anInt1095) {
+        var16 = SoftwareIndexedColorSpriteStatics.anInt1095 - var2;
         var4 -= var16;
-        var14 += var16 * DummyClass47.anInt1092;
+        var14 += var16 * SoftwareIndexedColorSpriteStatics.anInt1092;
         var9 += var13 * var16;
       }
 
-      if (var1 + var3 > DummyClass47.anInt1096) {
-        var16 = var1 + var3 - DummyClass47.anInt1096;
+      if (var1 + var3 > SoftwareIndexedColorSpriteStatics.anInt1096) {
+        var16 = var1 + var3 - SoftwareIndexedColorSpriteStatics.anInt1096;
         var3 -= var16;
         var15 += var16;
       }
 
-      if (var1 < DummyClass47.anInt1093) {
-        var16 = DummyClass47.anInt1093 - var1;
+      if (var1 < SoftwareIndexedColorSpriteStatics.anInt1093) {
+        var16 = SoftwareIndexedColorSpriteStatics.anInt1093 - var1;
         var3 -= var16;
         var14 += var16;
         var8 += var12 * var16;
@@ -747,7 +749,7 @@ public final class SoftwareDirectFullColorSprite extends SoftwareDirectColorSpri
       }
 
       SoftwareDirectFullColorSprite
-          .method671(DummyClass47.anIntArray1100, this.pixels, 0, var8, var9, var14, var15, var3, var4,
+          .method671(SoftwareIndexedColorSpriteStatics.anIntArray1100, this.pixels, 0, var8, var9, var14, var15, var3, var4,
         var12, var13, var6, var5);
     }
   }
@@ -755,37 +757,37 @@ public final class SoftwareDirectFullColorSprite extends SoftwareDirectColorSpri
   public void method643(int var1,int var2 ) {
     var1 += this.anInt3701;
     var2 += this.anInt3698;
-    int var3 = var1 + var2 * DummyClass47.anInt1092;
+    int var3 = var1 + var2 * SoftwareIndexedColorSpriteStatics.anInt1092;
     int var4 = 0;
     int var5 = this.anInt3696;
     int var6 = this.anInt3707;
-    int var7 = DummyClass47.anInt1092 - var6;
+    int var7 = SoftwareIndexedColorSpriteStatics.anInt1092 - var6;
     int var8 = 0;
     int var9;
-    if (var2 < DummyClass47.anInt1095) {
-      var9 = DummyClass47.anInt1095 - var2;
+    if (var2 < SoftwareIndexedColorSpriteStatics.anInt1095) {
+      var9 = SoftwareIndexedColorSpriteStatics.anInt1095 - var2;
       var5 -= var9;
-      var2 = DummyClass47.anInt1095;
+      var2 = SoftwareIndexedColorSpriteStatics.anInt1095;
       var4 += var9 * var6;
-      var3 += var9 * DummyClass47.anInt1092;
+      var3 += var9 * SoftwareIndexedColorSpriteStatics.anInt1092;
     }
 
-    if (var2 + var5 > DummyClass47.anInt1099) {
-      var5 -= var2 + var5 - DummyClass47.anInt1099;
+    if (var2 + var5 > SoftwareIndexedColorSpriteStatics.anInt1099) {
+      var5 -= var2 + var5 - SoftwareIndexedColorSpriteStatics.anInt1099;
     }
 
-    if (var1 < DummyClass47.anInt1093) {
-      var9 = DummyClass47.anInt1093 - var1;
+    if (var1 < SoftwareIndexedColorSpriteStatics.anInt1093) {
+      var9 = SoftwareIndexedColorSpriteStatics.anInt1093 - var1;
       var6 -= var9;
-      var1 = DummyClass47.anInt1093;
+      var1 = SoftwareIndexedColorSpriteStatics.anInt1093;
       var4 += var9;
       var3 += var9;
       var8 += var9;
       var7 += var9;
     }
 
-    if (var1 + var6 > DummyClass47.anInt1096) {
-      var9 = var1 + var6 - DummyClass47.anInt1096;
+    if (var1 + var6 > SoftwareIndexedColorSpriteStatics.anInt1096) {
+      var9 = var1 + var6 - SoftwareIndexedColorSpriteStatics.anInt1096;
       var6 -= var9;
       var8 += var9;
       var7 += var9;
@@ -793,7 +795,7 @@ public final class SoftwareDirectFullColorSprite extends SoftwareDirectColorSpri
 
     if (var6 > 0 && var5 > 0) {
       SoftwareDirectFullColorSprite
-          .method673(DummyClass47.anIntArray1100, this.pixels, 0, var4, var3, var6, var5, var7, var8);
+          .method673(SoftwareIndexedColorSpriteStatics.anIntArray1100, this.pixels, 0, var4, var3, var6, var5, var7, var8);
     }
   }
 
@@ -809,7 +811,7 @@ public final class SoftwareDirectFullColorSprite extends SoftwareDirectColorSpri
       var13 = var13 * var9 >> 8;
       int var14 = (var5 << 16) + var11 * var12 + var10 * var13;
       int var15 = (var6 << 16) + (var11 * var13 - var10 * var12);
-      int var16 = var1 + var2 * DummyClass47.anInt1092;
+      int var16 = var1 + var2 * SoftwareIndexedColorSpriteStatics.anInt1092;
 
       for (var2 = 0; var2 < var4; ++var2) {
         int var17 = var16;
@@ -818,10 +820,10 @@ public final class SoftwareDirectFullColorSprite extends SoftwareDirectColorSpri
 
         for (var1 = -var3; var1 < 0; ++var1) {
           int var20 = this.pixels[(var18 >> 16) + (var19 >> 16) * this.anInt3707];
-          int var21 = DummyClass47.anIntArray1100[var17];
+          int var21 = SoftwareIndexedColorSpriteStatics.anIntArray1100[var17];
           int var22 = var20 >>> 24;
           int var23 = 256 - var22;
-          DummyClass47.anIntArray1100[var17++] =
+          SoftwareIndexedColorSpriteStatics.anIntArray1100[var17++] =
             ((var20 & 16711935) * var22 + (var21 & 16711935) * var23 & -16711936) + (
               (var20 & '\uff00') * var22 + (var21 & '\uff00') * var23 & 16711680) >>> 8;
           var18 += var13;
@@ -830,7 +832,7 @@ public final class SoftwareDirectFullColorSprite extends SoftwareDirectColorSpri
 
         var14 += var12;
         var15 += var13;
-        var16 += DummyClass47.anInt1092;
+        var16 += SoftwareIndexedColorSpriteStatics.anInt1092;
       }
 
   }
@@ -849,7 +851,7 @@ public final class SoftwareDirectFullColorSprite extends SoftwareDirectColorSpri
       var14 = var14 * var8 >> 8;
       int var15 = (var5 << 16) + var12 * var13 + var11 * var14;
       int var16 = (var6 << 16) + (var12 * var14 - var11 * var13);
-      int var17 = var1 + var2 * DummyClass47.anInt1092;
+      int var17 = var1 + var2 * SoftwareIndexedColorSpriteStatics.anInt1092;
 
       for (var2 = 0; var2 < var4; ++var2) {
         int var18 = var9[var2];
@@ -859,10 +861,10 @@ public final class SoftwareDirectFullColorSprite extends SoftwareDirectColorSpri
 
         for (var1 = -var10[var2]; var1 < 0; ++var1) {
           int var22 = this.pixels[(var20 >> 16) + (var21 >> 16) * this.anInt3707];
-          int var23 = DummyClass47.anIntArray1100[var19];
+          int var23 = SoftwareIndexedColorSpriteStatics.anIntArray1100[var19];
           int var24 = var22 >>> 24;
           int var25 = 256 - var24;
-          DummyClass47.anIntArray1100[var19++] =
+          SoftwareIndexedColorSpriteStatics.anIntArray1100[var19++] =
             ((var22 & 16711935) * var24 + (var23 & 16711935) * var25 & -16711936) + (
               (var22 & '\uff00') * var24 + (var23 & '\uff00') * var25 & 16711680) >>> 8;
           var20 += var14;
@@ -871,7 +873,7 @@ public final class SoftwareDirectFullColorSprite extends SoftwareDirectColorSpri
 
         var15 += var13;
         var16 += var14;
-        var17 += DummyClass47.anInt1092;
+        var17 += SoftwareIndexedColorSpriteStatics.anInt1092;
       }
 
   }
@@ -890,7 +892,7 @@ public final class SoftwareDirectFullColorSprite extends SoftwareDirectColorSpri
       var14 = var14 * var8 >> 8;
       int var15 = (var5 << 16) + var12 * var13 + var11 * var14;
       int var16 = (var6 << 16) + (var12 * var14 - var11 * var13);
-      int var17 = var1 + var2 * DummyClass47.anInt1092;
+      int var17 = var1 + var2 * SoftwareIndexedColorSpriteStatics.anInt1092;
 
       for (var2 = 0; var2 < var4; ++var2) {
         int var18 = var9[var2];
@@ -900,10 +902,10 @@ public final class SoftwareDirectFullColorSprite extends SoftwareDirectColorSpri
 
         for (var1 = -var10[var2]; var1 < 0; ++var1) {
           int var22 = this.pixels[(var20 >> 16) + (var21 >> 16) * this.anInt3707];
-          int var23 = DummyClass47.anIntArray1100[var19];
+          int var23 = SoftwareIndexedColorSpriteStatics.anIntArray1100[var19];
           int var24 = var22 >>> 24;
           int var25 = 256 - var24;
-          DummyClass47.anIntArray1100[var19++] =
+          SoftwareIndexedColorSpriteStatics.anIntArray1100[var19++] =
             ((var22 & 16711935) * var24 + (var23 & 16711935) * var25 & -16711936) + (
               (var22 & '\uff00') * var24 + (var23 & '\uff00') * var25 & 16711680) >>> 8;
           var20 += var14;
@@ -912,7 +914,7 @@ public final class SoftwareDirectFullColorSprite extends SoftwareDirectColorSpri
 
         var15 += var13;
         var16 += var14;
-        var17 += DummyClass47.anInt1092;
+        var17 += SoftwareIndexedColorSpriteStatics.anInt1092;
       }
 
   }

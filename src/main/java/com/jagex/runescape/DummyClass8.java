@@ -3,6 +3,7 @@ package com.jagex.runescape;
 import com.jagex.runescape.common.GameString;
 import com.jagex.runescape.common.GameStringStatics;
 import com.jagex.runescape.opengl.GlRenderer;
+import com.jagex.runescape.sprite.SoftwareIndexedColorSprite;
 import java.io.ByteArrayInputStream;
 import java.io.IOException;
 import java.io.InvalidClassException;

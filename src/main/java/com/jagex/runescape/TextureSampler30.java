@@ -3,6 +3,8 @@ package com.jagex.runescape;
 import com.jagex.runescape.buffer.Buffer;
 import com.jagex.runescape.common.GameString;
 import com.jagex.runescape.common.GameStringStatics;
+import com.jagex.runescape.opengl.GLStatics;
+import com.jagex.runescape.sprite.SoftwareIndexedColorSprite;
 import java.awt.Frame;
 
 public final class TextureSampler30 extends AbstractTextureSampler {
@@ -158,7 +160,7 @@ public final class TextureSampler30 extends AbstractTextureSampler {
     var9.aClass140_1067 = var7;
     var9.aClass140_1069 = var8;
     int var10 = 0;
-    SceneGraphTile var11 = SomethingTexture1.sceneGraphTiles[var0][var1][var2];
+    SceneGraphTile var11 = GLStatics.sceneGraphTiles[var0][var1][var2];
     if (var11 != null) {
       for (int var12 = 0; var12 < var11.anInt2223; ++var12) {
         SceneSomething var13 = var11.sceneGraphNodes[var12];
@@ -172,11 +174,11 @@ public final class TextureSampler30 extends AbstractTextureSampler {
     }
 
     var9.anInt1077 = -var10;
-    if (SomethingTexture1.sceneGraphTiles[var0][var1][var2] == null) {
-      SomethingTexture1.sceneGraphTiles[var0][var1][var2] = new SceneGraphTile(var0, var1, var2);
+    if (GLStatics.sceneGraphTiles[var0][var1][var2] == null) {
+      GLStatics.sceneGraphTiles[var0][var1][var2] = new SceneGraphTile(var0, var1, var2);
     }
 
-    SomethingTexture1.sceneGraphTiles[var0][var1][var2].aClass72_2245 = var9;
+    GLStatics.sceneGraphTiles[var0][var1][var2].aClass72_2245 = var9;
   }
 
   public static void method214(SceneNode var0, int var1, int var2, int var3, int var4, int var5) {
@@ -187,13 +189,13 @@ public final class TextureSampler30 extends AbstractTextureSampler {
     int var10 = var3 + var5;
 
     for (int var11 = var1; var11 <= var1 + 1; ++var11) {
-      if (var11 != AnimationFrame.anInt2456) {
+      if (var11 != GLStatics.anInt2456) {
         for (int var12 = var7; var12 <= var8; ++var12) {
           if (var12 >= 0 && var12 < SocketStream.sceneWidth) {
             for (int var13 = var9; var13 <= var10; ++var13) {
               if (var13 >= 0 && var13 < TextureSampler17.sceneHeight && (!var6 || var12 >= var8
                 || var13 >= var10 || var13 < var3 && var12 != var2)) {
-                SceneGraphTile var14 = SomethingTexture1.sceneGraphTiles[var11][var12][var13];
+                SceneGraphTile var14 = GLStatics.sceneGraphTiles[var11][var12][var13];
                 if (var14 != null) {
                   int var15 = (AbstractGameWorld.heightMap[var11][var12][var13]
                     + AbstractGameWorld.heightMap[var11][var12 + 1][var13]

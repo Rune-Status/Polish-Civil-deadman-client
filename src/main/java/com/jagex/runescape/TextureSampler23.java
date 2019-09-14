@@ -9,7 +9,6 @@ import com.jagex.runescape.opengl.Texture;
 
 public final class TextureSampler23 extends AbstractTextureSampler {
 
-  public static boolean aBoolean3207;
   public static HashTable aClass130_3208 = new HashTable(8);
   public static GameString aClass94_3209 = GameStringStatics.create("showingVideoAd");
   public static FileUnpacker worldMaps;

@@ -5,7 +5,6 @@ import com.jagex.runescape.AbstractObjectNodeWrapper;
 import com.jagex.runescape.AnimationSequence;
 import com.jagex.runescape.BZipDecompressorState;
 import com.jagex.runescape.BitVariable;
-import com.jagex.runescape.GlobalStatics_0;
 import com.jagex.runescape.buffer.Buffer;
 import com.jagex.runescape.BufferData;
 import com.jagex.runescape.ClientScript;
@@ -29,7 +28,6 @@ import com.jagex.runescape.Player;
 import com.jagex.runescape.ProceduralTexture;
 import com.jagex.runescape.SomethingOtherWorldMap;
 import com.jagex.runescape.SomethingPacket116;
-import com.jagex.runescape.SomethingTexture1;
 import com.jagex.runescape.SubNode;
 import com.jagex.runescape.TextureCache;
 import com.jagex.runescape.common.GameStringStatics;
@@ -417,7 +415,7 @@ public final class Texture extends SubNode {
               GroundItem.method2031((byte) -85, false,
                   TextureCache.localPlayer.anInt2819 >> 7,
                   TextureCache.localPlayer.anInt2829 >> 7,
-                  SomethingTexture1.sceneGraphTiles, 0);
+                  GLStatics.sceneGraphTiles, 0);
             }
 
             if ((DummyClass17.anInt1823 < 310)) {
@@ -456,7 +454,7 @@ public final class Texture extends SubNode {
                       BZipDecompressorState.tileFlags[GameWorldSomething.currentPlane][var4][var5]
                           & 4) != 0)) {
                     GroundItem.method2031((byte) -29, false, var4, var5,
-                        SomethingTexture1.sceneGraphTiles, 1);
+                        GLStatics.sceneGraphTiles, 1);
                     break;
                   }
 
@@ -474,7 +472,7 @@ public final class Texture extends SubNode {
                     if (((4
                         & BZipDecompressorState.tileFlags[GameWorldSomething.currentPlane][var4][var5]) != 0)) {
                       GroundItem.method2031((byte) -120, false, var4, var5,
-                          SomethingTexture1.sceneGraphTiles, 1);
+                          GLStatics.sceneGraphTiles, 1);
                       break;
                     }
                   }
@@ -493,7 +491,7 @@ public final class Texture extends SubNode {
                   if (((4
                       & BZipDecompressorState.tileFlags[GameWorldSomething.currentPlane][var4][var5]) != 0)) {
                     GroundItem.method2031((byte) -13, false, var4, var5,
-                        SomethingTexture1.sceneGraphTiles, 1);
+                        GLStatics.sceneGraphTiles, 1);
                     break;
                   }
 
@@ -510,7 +508,7 @@ public final class Texture extends SubNode {
                         & BZipDecompressorState.tileFlags[GameWorldSomething.currentPlane][var4][var5])
                         != 0) {
                       GroundItem.method2031((byte) -37, false, var4, var5,
-                          SomethingTexture1.sceneGraphTiles, 1);
+                          GLStatics.sceneGraphTiles, 1);
                       break;
                     }
                   }
@@ -528,7 +526,7 @@ public final class Texture extends SubNode {
                         >> 7][DummyClass49.anInt1111 >> 7]) != 0) {
               GroundItem.method2031((byte) -107, false, NPC.anInt3995 >> 7,
                   DummyClass49.anInt1111 >> 7,
-                  SomethingTexture1.sceneGraphTiles, 1);
+                  GLStatics.sceneGraphTiles, 1);
             }
           }
 

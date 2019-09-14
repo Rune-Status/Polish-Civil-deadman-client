@@ -3,6 +3,7 @@ package com.jagex.runescape;
 import com.jagex.runescape.buffer.Buffer;
 import com.jagex.runescape.common.GameString;
 import com.jagex.runescape.common.GameStringStatics;
+import com.jagex.runescape.opengl.GLStatics;
 import java.awt.Component;
 
 public final class TextureSampler34 extends AbstractTextureSampler {
@@ -355,7 +356,7 @@ public final class TextureSampler34 extends AbstractTextureSampler {
   public static int method190(int var0, int hsl, byte var2, int lightness) {
     int var5 = DummyClass40.hslTable[GlobalStatics_1.repackHSL(hsl, lightness)];
       if ((var0 > 0)) {
-        int var6 = DummyClass40.textureCache.method19(111, var0 & '\uffff');
+        int var6 = GLStatics.textureCache.method19(111, var0 & '\uffff');
         int var7;
         int var9;
         if ((var6 != 0)) {
@@ -381,7 +382,7 @@ public final class TextureSampler34 extends AbstractTextureSampler {
           }
         }
 
-        var7 = DummyClass40.textureCache.method10(106, '\uffff' & var0);
+        var7 = GLStatics.textureCache.method10(106, '\uffff' & var0);
         if ((var7 != 0)) {
           var7 += 256;
           int var8 = ((16711680 & var5) >> 16) * var7;

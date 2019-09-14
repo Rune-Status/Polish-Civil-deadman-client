@@ -3,9 +3,9 @@ package com.jagex.runescape;
 import com.jagex.runescape.common.GameString;
 import com.jagex.runescape.common.GameStringStatics;
 import com.jagex.runescape.node.Node;
+import com.jagex.runescape.opengl.GLStatics;
 import com.jagex.runescape.opengl.GlRenderer;
 import com.jagex.runescape.opengl.GlUtils;
-import com.jagex.runescape.opengl.SomethingGl0;
 
 public final class SomethingOtherWorldMap extends Node {
 
@@ -21,7 +21,6 @@ public final class SomethingOtherWorldMap extends Node {
   };
   public static int anInt2540;
   public static int anInt2541;
-  public static SomethingGl0[][] aClass3_Sub11ArrayArray2542;
   public int anInt2531;
   public int anInt2532;
   public int anInt2539;
@@ -29,7 +28,7 @@ public final class SomethingOtherWorldMap extends Node {
   public static void method405(boolean var0) {
     SomethingOtherWorldMap.aClass153_2536 = null;
       SomethingOtherWorldMap.anIntArray2533 = null;
-      SomethingOtherWorldMap.aClass3_Sub11ArrayArray2542 = null;
+      GLStatics.aClass3_Sub11ArrayArray2542 = null;
       SomethingOtherWorldMap.aBooleanArray2538 = null;
       if (!var0) {
         SomethingOtherWorldMap.method408(-65, (byte) -3, 110, null, -123, 122);

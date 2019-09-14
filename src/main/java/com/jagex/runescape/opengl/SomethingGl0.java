@@ -2,13 +2,11 @@ package com.jagex.runescape.opengl;
 
 import com.jagex.runescape.buffer.Buffer;
 import com.jagex.runescape.DisplayMode;
-import com.jagex.runescape.DummyClass40;
 import com.jagex.runescape.DummyClass53;
 import com.jagex.runescape.common.HashTable;
 import com.jagex.runescape.IntegerNode;
 import com.jagex.runescape.node.Node;
 import com.jagex.runescape.SceneGraphTile;
-import com.jagex.runescape.SomethingQuickChat;
 import java.nio.ByteBuffer;
 import java.nio.ByteOrder;
 
@@ -259,10 +257,10 @@ public final class SomethingGl0 extends Node {
     if (SomethingGl0.aClass3_Sub30_2372.position != 0
         || SomethingGl0.aClass3_Sub30_2362.position != 0) {
       if (this.materialId != -1 && !var3) {
-        DummyClass40.textureCache.initializeMaterial(this.materialId, true);
+        GLStatics.textureCache.initializeMaterial(this.materialId, true);
       } else {
         GlRenderer.bindTexture(-1);
-        SomethingQuickChat.method551(0, 0, 0);
+        GLStatics.method551(0, 0, 0);
       }
 
       int var11 = this.aBoolean2347 ? 40 : 36;

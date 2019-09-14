@@ -899,7 +899,7 @@ public final class TextureSampler20 extends AbstractTextureSampler {
                             }
 
                             if (((var22 & 2) == 2)) {
-                              DummyInputStream.anInt42 += SceneGraphTile.anInt2217;
+                              DummyInputStream.anInt42 += GlobalStatics_2.anInt2217;
                             }
 
                             if (((var22 & 1) == 1)) {
@@ -932,11 +932,11 @@ public final class TextureSampler20 extends AbstractTextureSampler {
                           }
 
                           if (DummyInputStream.anInt42 < -55) {
-                            SceneGraphTile.anInt2217 = 2;
+                            GlobalStatics_2.anInt2217 = 2;
                           }
 
                           if (DummyInputStream.anInt42 > 55) {
-                            SceneGraphTile.anInt2217 = -2;
+                            GlobalStatics_2.anInt2217 = -2;
                           }
 
                           if (GlobalStatics_0.anInt2589 < -40) {

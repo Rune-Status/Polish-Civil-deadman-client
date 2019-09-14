@@ -4,11 +4,9 @@ import com.jagex.runescape.AbstractGameWorld;
 import com.jagex.runescape.AudioStreamEncoder3;
 import com.jagex.runescape.DummyClass32;
 import com.jagex.runescape.DummyClass40;
-import com.jagex.runescape.GlobalStatics_0;
 import com.jagex.runescape.common.GameString;
 import com.jagex.runescape.SceneGraphTile;
 import com.jagex.runescape.SceneSomething;
-import com.jagex.runescape.SomethingTexture1;
 import com.jagex.runescape.SubNode;
 import com.jagex.runescape.common.GameStringStatics;
 import java.lang.reflect.Method;
@@ -26,7 +24,6 @@ public final class GlTexture2d extends SubNode {
       .create("Liste der Welten geladen");
   public static int anInt3764;
   public static int anInt3765 = 100;
-  public static int anInt3766;
   public static int[] quadx1 = new int[100];
   public static boolean aBoolean3769;
   public static GameString aClass94_3762 = GlTexture2d.aClass94_3761;
@@ -82,11 +79,11 @@ public final class GlTexture2d extends SubNode {
   }
 
   public static void method709(int var0, int var1) {
-    SceneGraphTile var2 = SomethingTexture1.sceneGraphTiles[0][var0][var1];
+    SceneGraphTile var2 = GLStatics.sceneGraphTiles[0][var0][var1];
 
     for (int var3 = 0; var3 < 3; ++var3) {
-      SceneGraphTile var4 = SomethingTexture1.sceneGraphTiles[var3][var0][var1] =
-          SomethingTexture1.sceneGraphTiles[var3 + 1][var0][var1];
+      SceneGraphTile var4 = GLStatics.sceneGraphTiles[var3][var0][var1] =
+          GLStatics.sceneGraphTiles[var3 + 1][var0][var1];
       if (var4 != null) {
         --var4.anInt2244;
 
@@ -100,13 +97,13 @@ public final class GlTexture2d extends SubNode {
       }
     }
 
-    if (SomethingTexture1.sceneGraphTiles[0][var0][var1] == null) {
-      SomethingTexture1.sceneGraphTiles[0][var0][var1] = new SceneGraphTile(0,
+    if (GLStatics.sceneGraphTiles[0][var0][var1] == null) {
+      GLStatics.sceneGraphTiles[0][var0][var1] = new SceneGraphTile(0,
           var0, var1);
     }
 
-    SomethingTexture1.sceneGraphTiles[0][var0][var1].aClass3_Sub2_2235 = var2;
-    SomethingTexture1.sceneGraphTiles[3][var0][var1] = null;
+    GLStatics.sceneGraphTiles[0][var0][var1].aClass3_Sub2_2235 = var2;
+    GLStatics.sceneGraphTiles[3][var0][var1] = null;
   }
 
   public static void method710(byte var0) {

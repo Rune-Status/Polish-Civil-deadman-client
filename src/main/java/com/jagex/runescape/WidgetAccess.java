@@ -3,6 +3,7 @@ package com.jagex.runescape;
 import com.jagex.runescape.common.GameString;
 import com.jagex.runescape.common.GameStringStatics;
 import com.jagex.runescape.node.Node;
+import com.jagex.runescape.opengl.GLStatics;
 import com.jagex.runescape.opengl.GlModel;
 import com.jagex.runescape.opengl.GlRenderer;
 
@@ -93,7 +94,7 @@ public final class WidgetAccess extends Node {
   public static void method90(int var0) {
     if (GlRenderer.useOpenGlRenderer) {
         if (!TextureSampler25.aBoolean3416) {
-          SceneGraphTile[][][] var1 = SomethingTexture1.sceneGraphTiles;
+          SceneGraphTile[][][] var1 = GLStatics.sceneGraphTiles;
           if (var0 != 1) {
             WidgetAccess.aClass94_2214 = null;
           }

@@ -3,9 +3,11 @@ package com.jagex.runescape;
 import com.jagex.runescape.buffer.BufferStatics;
 import com.jagex.runescape.common.GameString;
 import com.jagex.runescape.common.GameStringStatics;
-import com.jagex.runescape.opengl.DummyClass16;
+import com.jagex.runescape.opengl.SomethingShadows;
+import com.jagex.runescape.opengl.GLStatics;
 import com.jagex.runescape.opengl.GlModel;
 import com.jagex.runescape.opengl.GlRenderer;
+import com.jagex.runescape.sprite.SoftwareIndexedColorSprite;
 import java.util.Arrays;
 
 public final class GameObject extends SceneNode {
@@ -151,7 +153,7 @@ public final class GameObject extends SceneNode {
 
   public void method1960(int var1 ) {
     if (this.aClass109_Sub1_2738 != null) {
-        DummyClass16.method2047(this.aClass109_Sub1_2738, this.anInt2725,
+        SomethingShadows.method2047(this.aClass109_Sub1_2738, this.anInt2725,
             this.anInt2720,
             this.anInt2748);
       }
@@ -289,7 +291,7 @@ public final class GameObject extends SceneNode {
             ||
           ((this.anInt2726 != this.anInt2752) || this.aClass142_2722 != null && (
               this.aClass142_2722.aBoolean1872 || MonoChromaticImageBuffer.tweening)
-            && (this.anInt2726 != this.anInt2733)) && (HashTableIterator.anInt1137 >= 2));
+            && (this.anInt2726 != this.anInt2733)) && (GLStatics.anInt1137 >= 2));
         if (var1 && !var13) {
           return null;
         } else {
@@ -309,7 +311,7 @@ public final class GameObject extends SceneNode {
           }
 
           if (GlRenderer.useOpenGlRenderer && var13) {
-            DummyClass16.method2047(this.aClass109_Sub1_2738, this.anInt2725,
+            SomethingShadows.method2047(this.aClass109_Sub1_2738, this.anInt2725,
                 this.anInt2720,
                 this.anInt2748);
           }
@@ -345,12 +347,13 @@ public final class GameObject extends SceneNode {
               }
 
               SoftwareIndexedColorSprite var24 = var20.shadow;
-              if (this.aBoolean2728 && DummyClass16.method2049(var24, var16, var21, var17)) {
+              if (this.aBoolean2728 && SomethingShadows
+                  .method2049(var24, var16, var21, var17)) {
                 this.aBoolean2728 = false;
               }
 
               if (!this.aBoolean2728) {
-                DummyClass16.method2051(var24, var16, var21, var17);
+                SomethingShadows.method2051(var24, var16, var21, var17);
                 this.aClass109_Sub1_2738 = var24;
                 this.anInt2748 = var17;
                 if (var19) {

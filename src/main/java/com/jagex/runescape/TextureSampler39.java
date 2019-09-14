@@ -3,6 +3,7 @@ package com.jagex.runescape;
 import com.jagex.runescape.buffer.Buffer;
 import com.jagex.runescape.common.GameString;
 import com.jagex.runescape.common.GameStringStatics;
+import com.jagex.runescape.opengl.GLStatics;
 import com.jagex.runescape.opengl.MaterialShader5;
 
 public class TextureSampler39 extends AbstractTextureSampler {
@@ -125,11 +126,11 @@ public class TextureSampler39 extends AbstractTextureSampler {
       var8.anInt326 = var3;
       var8.aLong328 = var5;
       var8.aBoolean329 = var7;
-      if (SomethingTexture1.sceneGraphTiles[var0][var1][var2] == null) {
-        SomethingTexture1.sceneGraphTiles[var0][var1][var2] = new SceneGraphTile(var0, var1, var2);
+      if (GLStatics.sceneGraphTiles[var0][var1][var2] == null) {
+        GLStatics.sceneGraphTiles[var0][var1][var2] = new SceneGraphTile(var0, var1, var2);
       }
 
-      SomethingTexture1.sceneGraphTiles[var0][var1][var2].aClass12_2230 = var8;
+      GLStatics.sceneGraphTiles[var0][var1][var2].aClass12_2230 = var8;
     }
   }
 

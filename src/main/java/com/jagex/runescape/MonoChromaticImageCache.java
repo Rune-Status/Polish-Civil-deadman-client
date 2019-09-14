@@ -2,7 +2,7 @@ package com.jagex.runescape;
 
 import com.jagex.runescape.common.GameString;
 import com.jagex.runescape.common.GameStringStatics;
-import com.jagex.runescape.opengl.GlEnvironment;
+import com.jagex.runescape.opengl.GLStatics;
 
 public final class MonoChromaticImageCache {
 
@@ -101,30 +101,13 @@ public final class MonoChromaticImageCache {
   public static void method1704(int var0) {
     MonoChromaticImageCache.aClass93_1569 = null;
       if (var0 != 65536) {
-        MonoChromaticImageCache.method1705(-109, -68);
+        GLStatics.method1705(-109, -68);
       }
 
       MonoChromaticImageCache.anIntArray1578 = null;
       MonoChromaticImageCache.aLongArray1574 = null;
       MonoChromaticImageCache.aClass94_1575 = null;
       MonoChromaticImageCache.tableIndexFile = null;
-  }
-
-  public static float[] method1705(int var0, int var1) {
-    float var2 = GlEnvironment.method1514() + GlEnvironment.method1505();
-      int var3 = GlEnvironment.method1510();
-      float var7 = 0.58823526F;
-      Mouse.aFloatArray1919[3] = 1.0F;
-      float var4 = (var3 >> 16 & 255) / 255.0F;
-      float var5 = (('\uff1e' & var3) >> 8) / 255.0F;
-      Mouse.aFloatArray1919[1] =
-        var2 * ClientScript.bitAnd(var0 >> 8, 255) / 255.0F * var5 * var7;
-      Mouse.aFloatArray1919[var1] =
-        var2 * var7 * var4 * ((ClientScript.bitAnd(16754958, var0) >> 16) / 255.0F);
-      float var6 = (var3 & 255) / 255.0F;
-      Mouse.aFloatArray1919[2] =
-        ClientScript.bitAnd(255, var0) / 255.0F * var6 * var7 * var2;
-      return Mouse.aFloatArray1919;
   }
 
   public static AbstractDirectColorSprite method1707(int var0, int var1, boolean var2, int var3,

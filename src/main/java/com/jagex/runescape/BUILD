@@ -5,11 +5,11 @@ java_library(
     srcs = glob([
         "*.java",
         "opengl/**/*.java",
-        "buffer/*.java",
     ]),
     deps = [
         "//lib:client.jar",
         "//lib:jogamp-fat.jar",
+        "//src/main/java/com/jagex/runescape/buffer",
         "//src/main/java/com/jagex/runescape/common",
         "//src/main/java/com/jagex/runescape/huffman",
         "//src/main/java/com/jagex/runescape/node",

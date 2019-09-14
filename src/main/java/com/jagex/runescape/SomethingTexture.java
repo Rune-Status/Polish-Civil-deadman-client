@@ -1,5 +1,7 @@
 package com.jagex.runescape;
 
+import com.jagex.runescape.sprite.SoftwareIndexedColorSprite;
+
 public final class SomethingTexture extends AbstractSomethingTexture {
 
   public static SoftwareIndexedColorSprite aClass109_Sub1_2631;

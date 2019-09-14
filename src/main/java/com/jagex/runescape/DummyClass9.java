@@ -63,7 +63,7 @@ public final class DummyClass9 extends DummyClass5 {
 
       if ((TextureSampler2.anInt3375 != 0)) {
         try {
-          if (++SceneGraphTile.anInt2246 > 1500) {
+          if (++GlobalStatics_2.anInt2246 > 1500) {
             if (SomethingVolume15.gameSocket != null) {
               SomethingVolume15.gameSocket.destroy();
               SomethingVolume15.gameSocket = null;
@@ -75,7 +75,7 @@ public final class DummyClass9 extends DummyClass5 {
               return;
             }
 
-            SceneGraphTile.anInt2246 = 0;
+            GlobalStatics_2.anInt2246 = 0;
             ++DummyClass26.anInt1616;
             TextureSampler2.anInt3375 = 1;
             if (DummyClass24.anInt1658 == ProjectileNode.primaryPort) {
@@ -173,7 +173,7 @@ public final class DummyClass9 extends DummyClass5 {
             }
 
             TextureSampler2.anInt3375 = 1;
-            SceneGraphTile.anInt2246 = 0;
+            GlobalStatics_2.anInt2246 = 0;
             ++DummyClass26.anInt1616;
           } else {
             AbstractImageProducer.loginResponse = -4;

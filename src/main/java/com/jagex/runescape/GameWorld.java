@@ -42,7 +42,7 @@ public final class GameWorld extends AbstractGameWorld {
     if (var0 < 0) {
         return 0;
       } else {
-        Inventory var2 = (Inventory) SceneGraphTile.aClass130_2220.get(var0);
+        Inventory var2 = (Inventory) GlobalStatics_2.aClass130_2220.get(var0);
         if (var2 == null) {
           return Objects.requireNonNull(BufferObject.method2069(var0, -126)).size;
         } else if (var1 > -56) {

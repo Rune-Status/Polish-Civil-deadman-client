@@ -162,7 +162,7 @@ public final class SomethingQuickChat2 extends SubNode {
 
   public static void method532(int var0, int var1) {
     if (var1 == -28236) {
-        Inventory var2 = (Inventory) SceneGraphTile.aClass130_2220.get(var0);
+        Inventory var2 = (Inventory) GlobalStatics_2.aClass130_2220.get(var0);
         if (var2 != null) {
           var2.unlinkNode();
         }

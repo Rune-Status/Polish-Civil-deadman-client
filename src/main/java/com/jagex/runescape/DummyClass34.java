@@ -3,6 +3,7 @@ package com.jagex.runescape;
 import com.jagex.runescape.buffer.Buffer;
 import com.jagex.runescape.common.GameString;
 import com.jagex.runescape.common.GameStringStatics;
+import com.jagex.runescape.opengl.GLStatics;
 
 public final class DummyClass34 {
 
@@ -54,7 +55,7 @@ public final class DummyClass34 {
       }
     }
 
-    GameClient.aClass3_Sub11ArrayArray2199 = null;
+    GLStatics.aClass3_Sub11ArrayArray2199 = null;
     if (SomethingIndex150.aClass3_Sub2ArrayArrayArray2065 != null) {
       for (var0 = 0; var0 < SomethingIndex150.aClass3_Sub2ArrayArrayArray2065.length; ++var0) {
         for (var1 = 0; var1 < SocketStream.sceneWidth; ++var1) {

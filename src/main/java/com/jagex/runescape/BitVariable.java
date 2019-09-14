@@ -3,6 +3,7 @@ package com.jagex.runescape;
 import com.jagex.runescape.buffer.Buffer;
 import com.jagex.runescape.common.GameString;
 import com.jagex.runescape.common.GameStringStatics;
+import com.jagex.runescape.opengl.GLStatics;
 import java.awt.event.KeyEvent;
 
 public final class BitVariable {
@@ -125,9 +126,9 @@ public final class BitVariable {
           GameWorld.aBoolean2623 = (var0.readUnsignedByte() == 1);
           TextureSampler0.aBoolean3275 = (var0.readUnsignedByte() == 1);
           Projectile.aBoolean2910 = var0.readUnsignedByte() == 1;
-          HashTableIterator.anInt1137 = var0.readUnsignedByte();
-          if (HashTableIterator.anInt1137 > 2) {
-            HashTableIterator.anInt1137 = 2;
+          GLStatics.anInt1137 = var0.readUnsignedByte();
+          if (GLStatics.anInt1137 > 2) {
+            GLStatics.anInt1137 = 2;
           }
 
           DisplayMode.useBumpMaps = (var0.readUnsignedByte() == 1);
@@ -135,7 +136,7 @@ public final class BitVariable {
             var0.readUnsignedByte();
           }
 
-          DummyHashTable.aBoolean1685 = var0.readUnsignedByte() == 1;
+          GLStatics.aBoolean1685 = var0.readUnsignedByte() == 1;
           DummyClass35.aBoolean661 = (var0.readUnsignedByte() == 1);
           Parameter.anInt3622 = var0.readUnsignedByte();
           if ((Parameter.anInt3622 > 2)) {

@@ -2,6 +2,7 @@ package com.jagex.runescape;
 
 import com.jagex.runescape.common.GameString;
 import com.jagex.runescape.common.GameStringStatics;
+import com.jagex.runescape.opengl.GLStatics;
 
 public abstract class AbstractFileRequester {
 
@@ -31,7 +32,7 @@ public abstract class AbstractFileRequester {
   }
 
   public static boolean method2096(int var0, int var1, int var2, long var3) {
-    SceneGraphTile var5 = SomethingTexture1.sceneGraphTiles[var0][var1][var2];
+    SceneGraphTile var5 = GLStatics.sceneGraphTiles[var0][var1][var2];
     if (var5 == null) {
       return false;
     } else if (var5.aClass70_2234 != null && var5.aClass70_2234.key == var3) {

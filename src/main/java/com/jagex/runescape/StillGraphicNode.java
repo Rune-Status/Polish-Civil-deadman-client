@@ -30,20 +30,6 @@ public final class StillGraphicNode extends SubNode {
       StillGraphicNode.aClass94_3541 = null;
   }
 
-  public static void method535(byte var0, int var1) {
-    AbstractFileRequester.aFloatArray1934[0] =
-        ClientScript.bitAnd(255, var1 >> 16) / 255.0F;
-      AbstractFileRequester.aFloatArray1934[1] =
-        ClientScript.bitAnd(var1 >> 8, 255) / 255.0F;
-      AbstractFileRequester.aFloatArray1934[2] = ClientScript.bitAnd(255, var1)
-          / 255.0F;
-      IntegerNode.method383(-32584, 3);
-      IntegerNode.method383(-32584, 4);
-      if (var0 != 56) {
-        StillGraphicNode.method535((byte) 127, 99);
-      }
-  }
-
   public static SomethingTexture3 method536(byte var0, Buffer var1) {
     if (var0 != 54) {
         StillGraphicNode.method534(117);

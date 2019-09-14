@@ -2,6 +2,7 @@ package com.jagex.runescape;
 
 import com.jagex.runescape.common.GameString;
 import com.jagex.runescape.common.GameStringStatics;
+import com.jagex.runescape.opengl.GLStatics;
 import com.jagex.runescape.opengl.GlRenderer;
 
 public final class StillGraphic extends SceneNode {
@@ -214,7 +215,7 @@ public final class StillGraphic extends SceneNode {
   }
 
   public static void method1956(int var0, int var1, int var2, int var3) {
-    SceneGraphTile var4 = SomethingTexture1.sceneGraphTiles[var0][var1][var2];
+    SceneGraphTile var4 = GLStatics.sceneGraphTiles[var0][var1][var2];
     if (var4 != null) {
       SomethingSceneI var5 = var4.aClass19_2233;
       if (var5 != null) {

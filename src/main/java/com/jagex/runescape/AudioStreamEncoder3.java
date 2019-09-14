@@ -226,10 +226,10 @@ public final class AudioStreamEncoder3 extends AudioStreamEncoder {
 
   public static WidgetUpdate method466(int var0, int var1, int var2) {
     WidgetUpdate var3 =
-        (WidgetUpdate) GameClient.aClass130_2194.get(var2 | (long) var1 << 32);
+        (WidgetUpdate) GlobalStatics_1.aClass130_2194.get(var2 | (long) var1 << 32);
       if (var3 == null) {
         var3 = new WidgetUpdate(var1, var2);
-        GameClient.aClass130_2194.put(var3.key, var3);
+        GlobalStatics_1.aClass130_2194.put(var3.key, var3);
       }
 
       return var3;

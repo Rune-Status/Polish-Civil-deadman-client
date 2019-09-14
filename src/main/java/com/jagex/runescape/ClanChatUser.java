@@ -4,8 +4,10 @@ import com.jagex.runescape.buffer.Buffer;
 import com.jagex.runescape.common.GameString;
 import com.jagex.runescape.common.GameStringStatics;
 import com.jagex.runescape.node.Node;
+import com.jagex.runescape.opengl.GLStatics;
 import com.jagex.runescape.opengl.GlDirectColorSprite;
 import com.jagex.runescape.opengl.GlRenderer;
+import com.jagex.runescape.sprite.SoftwareIndexedColorSpriteStatics;
 
 public final class ClanChatUser extends Node {
 
@@ -74,7 +76,8 @@ public final class ClanChatUser extends Node {
         for (var6 = 0; var6 < 104; ++var6) {
           for (var7 = 0; var7 < 104; ++var7) {
             long var20 =
-              SceneGraphTile.method104(GameWorldSomething.currentPlane, var6 + var2, var7 + var3);
+              GLStatics
+                  .method104(GameWorldSomething.currentPlane, var6 + var2, var7 + var3);
             if ((var20 != 0L)) {
               GameObjectConfig var10 =
                 DummyClass11.method2207(4, (int) (var20 >>> 32) & Integer.MAX_VALUE);
@@ -151,7 +154,7 @@ public final class ClanChatUser extends Node {
             && !GlobalStatics_0
               .method1529(var3, var7, var18, var6, var5, var2, var1, true)) {
             if (GlRenderer.useOpenGlRenderer) {
-              DummyClass47.anIntArray1100 = null;
+              SoftwareIndexedColorSpriteStatics.anIntArray1100 = null;
             } else {
               Something3d.viewImageProducer.method2182(0);
             }
@@ -164,7 +167,7 @@ public final class ClanChatUser extends Node {
             && !GlobalStatics_0
               .method1529(var3, var7, var18, var6, var5, var2, 1 + var1, true)) {
             if (GlRenderer.useOpenGlRenderer) {
-              DummyClass47.anIntArray1100 = null;
+              SoftwareIndexedColorSpriteStatics.anIntArray1100 = null;
             } else {
               Something3d.viewImageProducer.method2182(0);
             }
@@ -191,7 +194,7 @@ public final class ClanChatUser extends Node {
       }
 
       if (GlRenderer.useOpenGlRenderer) {
-        DummyClass47.anIntArray1100 = null;
+        SoftwareIndexedColorSpriteStatics.anIntArray1100 = null;
       } else {
         Something3d.viewImageProducer.method2182(0);
       }

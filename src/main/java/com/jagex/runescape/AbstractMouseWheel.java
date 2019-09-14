@@ -1,6 +1,7 @@
 package com.jagex.runescape;
 
 import com.jagex.runescape.opengl.CommonGL;
+import com.jagex.runescape.opengl.GLStatics;
 import com.jagex.runescape.opengl.GlRenderer;
 import java.awt.Component;
 import java.util.Arrays;
@@ -53,9 +54,9 @@ public abstract class AbstractMouseWheel {
     int var14;
     int var15;
     int var29;
-    for (int var12 = TextureSampler22.anInt3419;
-        var12 < AnimationFrame.anInt2456; ++var12) {
-      SceneGraphTile[][] var13 = SomethingTexture1.sceneGraphTiles[var12];
+    for (int var12 = GLStatics.anInt3419;
+        var12 < GLStatics.anInt2456; ++var12) {
+      SceneGraphTile[][] var13 = GLStatics.sceneGraphTiles[var12];
 
       for (var14 = DummyClass9.viewportLowerX; var14 < MapScene.viewportUpperX;
           ++var14) {
@@ -64,11 +65,11 @@ public abstract class AbstractMouseWheel {
             var15 < SomethingTilek.viewportUpperZ; ++var15) {
           SceneGraphTile var16 = var13[var14][var15];
           if (var16 != null) {
-            if (DummyClass30.adjacentTileOnScreen[
-                var14 - TriChromaticImageCache.cameraTileX
-                    + TextureSampler8.viewportLength][
-                var15 - TextureSampler7.cameraTileZ
-                    + TextureSampler8.viewportLength] && (var3 == null
+            if (GLStatics.adjacentTileOnScreen[
+                var14 - GLStatics.cameraTileX
+                    + GLStatics.viewportLength][
+                var15 - GLStatics.cameraTileZ
+                    + GLStatics.viewportLength] && (var3 == null
                 || var12 < var4
                 || var3[var12][var14][var15] != var5)) {
               var16.aBoolean2222 = true;
@@ -142,18 +143,18 @@ public abstract class AbstractMouseWheel {
     SceneGraphTile[][] var27;
     int var34;
     int var32;
-    for (var23 = TextureSampler22.anInt3419; var23 < AnimationFrame.anInt2456;
+    for (var23 = GLStatics.anInt3419; var23 < GLStatics.anInt2456;
         ++var23) {
-      var27 = SomethingTexture1.sceneGraphTiles[var23];
+      var27 = GLStatics.sceneGraphTiles[var23];
 
-      for (var15 = -TextureSampler8.viewportLength; var15 <= 0; ++var15) {
-        var32 = TriChromaticImageCache.cameraTileX + var15;
-        var29 = TriChromaticImageCache.cameraTileX - var15;
+      for (var15 = -GLStatics.viewportLength; var15 <= 0; ++var15) {
+        var32 = GLStatics.cameraTileX + var15;
+        var29 = GLStatics.cameraTileX - var15;
         if (var32 >= DummyClass9.viewportLowerX
             || var29 < MapScene.viewportUpperX) {
-          for (var34 = -TextureSampler8.viewportLength; var34 <= 0; ++var34) {
-            var19 = TextureSampler7.cameraTileZ + var34;
-            var20 = TextureSampler7.cameraTileZ - var34;
+          for (var34 = -GLStatics.viewportLength; var34 <= 0; ++var34) {
+            var19 = GLStatics.cameraTileZ + var34;
+            var20 = GLStatics.cameraTileZ - var34;
             if (var32 >= DummyClass9.viewportLowerX) {
               if (var19 >= AbstractObjectNode.viewportLowerZ) {
                 var21 = var27[var32][var19];
@@ -198,18 +199,18 @@ public abstract class AbstractMouseWheel {
       }
     }
 
-    for (var23 = TextureSampler22.anInt3419; var23 < AnimationFrame.anInt2456;
+    for (var23 = GLStatics.anInt3419; var23 < GLStatics.anInt2456;
         ++var23) {
-      var27 = SomethingTexture1.sceneGraphTiles[var23];
+      var27 = GLStatics.sceneGraphTiles[var23];
 
-      for (var15 = -TextureSampler8.viewportLength; var15 <= 0; ++var15) {
-        var32 = TriChromaticImageCache.cameraTileX + var15;
-        var29 = TriChromaticImageCache.cameraTileX - var15;
+      for (var15 = -GLStatics.viewportLength; var15 <= 0; ++var15) {
+        var32 = GLStatics.cameraTileX + var15;
+        var29 = GLStatics.cameraTileX - var15;
         if (var32 >= DummyClass9.viewportLowerX
             || var29 < MapScene.viewportUpperX) {
-          for (var34 = -TextureSampler8.viewportLength; var34 <= 0; ++var34) {
-            var19 = TextureSampler7.cameraTileZ + var34;
-            var20 = TextureSampler7.cameraTileZ - var34;
+          for (var34 = -GLStatics.viewportLength; var34 <= 0; ++var34) {
+            var19 = GLStatics.cameraTileZ + var34;
+            var20 = GLStatics.cameraTileZ - var34;
             if (var32 >= DummyClass9.viewportLowerX) {
               if (var19 >= AbstractObjectNode.viewportLowerZ) {
                 var21 = var27[var32][var19];

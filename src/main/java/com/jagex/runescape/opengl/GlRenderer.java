@@ -9,7 +9,6 @@ import com.jagex.runescape.DummyClass55;
 import com.jagex.runescape.GlobalStatics_0;
 import com.jagex.runescape.common.GameString;
 import com.jagex.runescape.common.GameStringStatics;
-import com.jagex.runescape.SomethingQuickChat;
 import com.jagex.runescape.Unsure;
 import com.jogamp.nativewindow.awt.AWTGraphicsConfiguration;
 import com.jogamp.nativewindow.awt.JAWTWindow;
@@ -81,7 +80,7 @@ public final class GlRenderer {
   }
 
   public static void method1822() {
-    SomethingQuickChat.method551(0, 0, 0);
+    GLStatics.method551(0, 0, 0);
     GlRenderer.setupViewport();
     GlRenderer.method1856(1);
     GlRenderer.method1847(1);
@@ -102,7 +101,7 @@ public final class GlRenderer {
   }
 
   public static void method1824() {
-    SomethingQuickChat.method551(0, 0, 0);
+    GLStatics.method551(0, 0, 0);
     GlRenderer.setupViewport();
     GlRenderer.method1856(0);
     GlRenderer.method1847(0);
@@ -152,7 +151,7 @@ public final class GlRenderer {
   }
 
   public static void method1828() {
-    SomethingQuickChat.method551(0, 0, 0);
+    GLStatics.method551(0, 0, 0);
     GlRenderer.setupViewport();
     GlRenderer.method1856(0);
     GlRenderer.method1847(0);
@@ -270,7 +269,7 @@ public final class GlRenderer {
   }
 
   public static void resetState() {
-    SomethingQuickChat.method551(0, 0, 0);
+    GLStatics.method551(0, 0, 0);
     GlRenderer.setupViewport();
     GlRenderer.bindTexture(-1);
     GlRenderer.setLightingEnabled(false);

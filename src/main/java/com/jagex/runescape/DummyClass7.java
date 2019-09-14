@@ -3,6 +3,7 @@ package com.jagex.runescape;
 import com.jagex.runescape.buffer.Buffer;
 import com.jagex.runescape.common.GameString;
 import com.jagex.runescape.common.GameStringStatics;
+import com.jagex.runescape.opengl.GLStatics;
 
 public class DummyClass7 extends DummyClass6 {
 
@@ -12,7 +13,7 @@ public class DummyClass7 extends DummyClass6 {
 
 
   public static SceneSomething method2217(int var0, int var1, int var2) {
-    SceneGraphTile var3 = SomethingTexture1.sceneGraphTiles[var0][var1][var2];
+    SceneGraphTile var3 = GLStatics.sceneGraphTiles[var0][var1][var2];
     if (var3 == null) {
       return null;
     } else {

@@ -3,11 +3,11 @@ package com.jagex.runescape;
 import com.jagex.runescape.buffer.Buffer;
 import com.jagex.runescape.common.GameString;
 import com.jagex.runescape.common.GameStringStatics;
+import com.jagex.runescape.opengl.GLStatics;
 
 public final class TextureSampler22 extends AbstractTextureSampler {
 
   public static GameString aClass94_3418 = GameStringStatics.create("(U5");
-  public static int anInt3419;
   public static int anInt3420;
   public static WorldMapLabel aClass131_3421;
 
@@ -111,7 +111,7 @@ public final class TextureSampler22 extends AbstractTextureSampler {
   public static void method337(int var0) {
     TextureSampler22.aClass94_3418 = null;
       if (var0 != 2) {
-        TextureSampler22.anInt3419 = -53;
+        GLStatics.anInt3419 = -53;
       }
 
       TextureSampler22.aClass131_3421 = null;

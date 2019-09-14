@@ -1,5 +1,7 @@
 package com.jagex.runescape;
 
+import com.jagex.runescape.opengl.GLStatics;
+
 public abstract class AbstractGameWorld {
 
   public static int usageLocation;
@@ -62,7 +64,7 @@ public abstract class AbstractGameWorld {
   }
 
   public static SomethingSceneI method1068(int var0, int var1, int var2) {
-    SceneGraphTile var3 = SomethingTexture1.sceneGraphTiles[var0][var1][var2];
+    SceneGraphTile var3 = GLStatics.sceneGraphTiles[var0][var1][var2];
     return var3 == null ? null : var3.aClass19_2233;
   }
 
@@ -113,7 +115,7 @@ public abstract class AbstractGameWorld {
   }
 
   public static void method1073(int var0) {
-    SomethingQuickChat.method551(0, 0, 0);
+    GLStatics.method551(0, 0, 0);
       if (var0 != 97) {
         AbstractGameWorld.method1068(-108, 80, 18);
       }

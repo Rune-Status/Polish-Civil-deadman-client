@@ -7,6 +7,7 @@ import com.jagex.runescape.common.HashTable;
 import com.jagex.runescape.common.StringNode;
 import com.jagex.runescape.huffman.HuffmanEncoderStatics;
 import com.jagex.runescape.node.Node;
+import com.jagex.runescape.opengl.GLStatics;
 import com.jagex.runescape.opengl.GlModel;
 import com.jagex.runescape.opengl.GlRenderer;
 import com.jagex.runescape.opengl.MaterialShader5;
@@ -2401,11 +2402,11 @@ public final class ItemConfig {
                                         byte3 = 2;
                                       } else {
                                         if (class94_47.method1558(
-                                            GameClient.aClass94_2197, 0)) {
+                                            GlobalStatics_1.aClass94_2197, 0)) {
                                           byte3 = 3;
                                           string =
                                               string.substring(
-                                                  GameClient.aClass94_2197
+                                                  GlobalStatics_1.aClass94_2197
                                                       .getLength());
                                         } else if (class94_47.method1558(
                                             VertexNormal.aClass94_833,
@@ -2482,7 +2483,7 @@ public final class ItemConfig {
                                                     byte3 = 2;
                                                   } else if (!class94_47
                                                       .method1558(
-                                                          GameClient.aClass94_2196,
+                                                          GlobalStatics_1.aClass94_2196,
                                                           0)) {
                                                     if (class94_47.method1558(
                                                         VertexNormal.aClass94_825,
@@ -2558,7 +2559,7 @@ public final class ItemConfig {
                                                     }
                                                   } else {
                                                     string = string.substring(
-                                                        GameClient.aClass94_2196
+                                                        GlobalStatics_1.aClass94_2196
                                                             .getLength());
                                                     byte3 = 3;
                                                   }
@@ -3640,7 +3641,7 @@ public final class ItemConfig {
                                   if ((j1 == 6006)) {
                                     SceneSomething.aBoolean488 =
                                       GroundItem.anIntArray2929[--k] == 1;
-                                    ((TextureCache) DummyClass40.textureCache).method1616(
+                                    ((TextureCache) GLStatics.textureCache).method1616(
                                       !SceneSomething.aBoolean488, -17830);
                                     DummyClass25.writeSettings(DummyClass35.signLink);
                                     StillGraphic.aBoolean2705 = false;
@@ -3678,14 +3679,14 @@ public final class ItemConfig {
                                     if ((l34 < 0) || l34 > 2) {
                                       l34 = 0;
                                     }
-                                    HashTableIterator.anInt1137 = l34;
+                                    GLStatics.anInt1137 = l34;
                                     DummyClass25.writeSettings(DummyClass35.signLink);
                                     StillGraphic.aBoolean2705 = false;
                                     continue;
                                   }
                                   if (j1 == 6012) {
                                     if (GlRenderer.useOpenGlRenderer) {
-                                      SomethingQuickChat.method551(0, 0, 0);
+                                      GLStatics.method551(0, 0, 0);
                                     }
                                     DisplayMode.useBumpMaps =
                                         (GroundItem.anIntArray2929[--k] == 1);
@@ -3711,7 +3712,7 @@ public final class ItemConfig {
                                     continue;
                                   }
                                   if ((j1 == 6014)) {
-                                    DummyHashTable.aBoolean1685 =
+                                    GLStatics.aBoolean1685 =
                                       GroundItem.anIntArray2929[--k] == 1;
                                     if (GlRenderer.useOpenGlRenderer) {
                                       DummyClass51.method1417(109);
@@ -3885,7 +3886,7 @@ public final class ItemConfig {
                                     continue;
                                   }
                                   if ((j1 == 6111)) {
-                                    GroundItem.anIntArray2929[k++] = HashTableIterator.anInt1137;
+                                    GroundItem.anIntArray2929[k++] = GLStatics.anInt1137;
                                     continue;
                                   }
                                   if (j1 == 6112) {
@@ -3895,7 +3896,7 @@ public final class ItemConfig {
                                   }
                                   if (j1 == 6114) {
                                     GroundItem.anIntArray2929[k++] =
-                                      DummyHashTable.aBoolean1685 ? 1 : 0;
+                                      GLStatics.aBoolean1685 ? 1 : 0;
                                     continue;
                                   }
                                   if ((j1 == 6115)) {

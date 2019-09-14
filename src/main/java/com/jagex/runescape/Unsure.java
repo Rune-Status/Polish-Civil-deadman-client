@@ -4,6 +4,7 @@ import com.jagex.runescape.buffer.Buffer;
 import com.jagex.runescape.common.GameString;
 import com.jagex.runescape.common.GameStringStatics;
 import com.jagex.runescape.opengl.DummyClass46;
+import com.jagex.runescape.opengl.GLStatics;
 import com.jagex.runescape.opengl.GlEnvironment;
 import com.jagex.runescape.opengl.GlRenderer;
 import com.jagex.runescape.opengl.GlTexture2d;
@@ -69,7 +70,7 @@ public final class Unsure {
         int var4 = var2.anInt2231;
         int var5 = var2.anInt2244;
         int var6 = var2.anInt2238;
-        SceneGraphTile[][] var7 = SomethingTexture1.sceneGraphTiles[var5];
+        SceneGraphTile[][] var7 = GLStatics.sceneGraphTiles[var5];
         float var8 = 0.0F;
         int var9;
         int var10;
@@ -80,15 +81,15 @@ public final class Unsure {
               AbstractGameWorld.heightMap)) {
             var9 = TextureSampler16.anIntArrayArray3115[var3][var4];
             var10 = var9 & 16777215;
-            if (var10 != SocketStream.anInt1244) {
-              SocketStream.anInt1244 = var10;
-              StillGraphicNode.method535((byte) 56, var10);
-              GlEnvironment.setFogColor(SomethingScene.method1297((byte) -50));
+            if (var10 != GLStatics.anInt1244) {
+              GLStatics.anInt1244 = var10;
+              GLStatics.method535((byte) 56, var10);
+              GlEnvironment.setFogColor(GLStatics.calculateFogColor());
             }
 
             var11 = var9 >>> 24 << 3;
-            if (var11 != TextureSampler21.anInt3072) {
-              TextureSampler21.anInt3072 = var11;
+            if (var11 != GLStatics.anInt3072) {
+              GLStatics.anInt3072 = var11;
               SomethingWorldMappy.method394(var11, 121);
             }
 
@@ -96,7 +97,7 @@ public final class Unsure {
               DummyClass43.somethingHeightMap[0][var3][var4] + DummyClass43.somethingHeightMap[0][
                 var3 + 1][var4] + DummyClass43.somethingHeightMap[0][var3][var4 + 1]
                 + DummyClass43.somethingHeightMap[0][var3 + 1][var4 + 1] >> 2;
-            SomethingQuickChat.method551(0, -var12, 3);
+            GLStatics.method551(0, -var12, 3);
             var8 = 201.5F;
             GlRenderer.method1832(var8);
           } else {
@@ -118,13 +119,13 @@ public final class Unsure {
         if (var2.aBoolean2222) {
           if (var1) {
             if (var5 > 0) {
-              var21 = SomethingTexture1.sceneGraphTiles[var5 - 1][var3][var4];
+              var21 = GLStatics.sceneGraphTiles[var5 - 1][var3][var4];
               if (var21 != null && var21.aBoolean2225) {
                 continue;
               }
             }
 
-            if (var3 <= TriChromaticImageCache.cameraTileX && var3 > DummyClass9.viewportLowerX) {
+            if (var3 <= GLStatics.cameraTileX && var3 > DummyClass9.viewportLowerX) {
               var21 = var7[var3 - 1][var4];
               if (var21 != null && var21.aBoolean2225 && (var21.aBoolean2222
                 || (var2.flags & 1) == 0)) {
@@ -132,7 +133,7 @@ public final class Unsure {
               }
             }
 
-            if (var3 >= TriChromaticImageCache.cameraTileX && var3 < MapScene.viewportUpperX - 1) {
+            if (var3 >= GLStatics.cameraTileX && var3 < MapScene.viewportUpperX - 1) {
               var21 = var7[var3 + 1][var4];
               if (var21 != null && var21.aBoolean2225 && (var21.aBoolean2222
                 || (var2.flags & 4) == 0)) {
@@ -140,7 +141,7 @@ public final class Unsure {
               }
             }
 
-            if (var4 <= TextureSampler7.cameraTileZ && var4 > AbstractObjectNode.viewportLowerZ) {
+            if (var4 <= GLStatics.cameraTileZ && var4 > AbstractObjectNode.viewportLowerZ) {
               var21 = var7[var3][var4 - 1];
               if (var21 != null && var21.aBoolean2225 && (var21.aBoolean2222
                 || (var2.flags & 8) == 0)) {
@@ -148,7 +149,7 @@ public final class Unsure {
               }
             }
 
-            if (var4 >= TextureSampler7.cameraTileZ && var4 < SomethingTilek.viewportUpperZ - 1) {
+            if (var4 >= GLStatics.cameraTileZ && var4 < SomethingTilek.viewportUpperZ - 1) {
               var21 = var7[var3][var4 + 1];
               if (var21 != null && var21.aBoolean2225 && (var21.aBoolean2222
                 || (var2.flags & 2) == 0)) {
@@ -304,15 +305,15 @@ public final class Unsure {
           SceneSomething2 var26 = var2.aClass70_2234;
           SomethingSceneI var13 = var2.aClass19_2233;
           if (var26 != null || var13 != null) {
-            if (TriChromaticImageCache.cameraTileX == var3) {
+            if (GLStatics.cameraTileX == var3) {
               ++var10;
-            } else if (TriChromaticImageCache.cameraTileX < var3) {
+            } else if (GLStatics.cameraTileX < var3) {
               var10 += 2;
             }
 
-            if (TextureSampler7.cameraTileZ == var4) {
+            if (GLStatics.cameraTileZ == var4) {
               var10 += 3;
-            } else if (TextureSampler7.cameraTileZ > var4) {
+            } else if (GLStatics.cameraTileZ > var4) {
               var10 += 6;
             }
 
@@ -491,28 +492,28 @@ public final class Unsure {
 
           var14 = var2.flags;
           if (var14 != 0) {
-            if (var3 < TriChromaticImageCache.cameraTileX && (var14 & 4) != 0) {
+            if (var3 < GLStatics.cameraTileX && (var14 & 4) != 0) {
               var35 = var7[var3 + 1][var4];
               if (var35 != null && var35.aBoolean2225) {
                 DummyClass5.aClass61_2990.addLast(var35);
               }
             }
 
-            if (var4 < TextureSampler7.cameraTileZ && (var14 & 2) != 0) {
+            if (var4 < GLStatics.cameraTileZ && (var14 & 2) != 0) {
               var35 = var7[var3][var4 + 1];
               if (var35 != null && var35.aBoolean2225) {
                 DummyClass5.aClass61_2990.addLast(var35);
               }
             }
 
-            if (var3 > TriChromaticImageCache.cameraTileX && (var14 & 1) != 0) {
+            if (var3 > GLStatics.cameraTileX && (var14 & 1) != 0) {
               var35 = var7[var3 - 1][var4];
               if (var35 != null && var35.aBoolean2225) {
                 DummyClass5.aClass61_2990.addLast(var35);
               }
             }
 
-            if (var4 > TextureSampler7.cameraTileZ && (var14 & 8) != 0) {
+            if (var4 > GLStatics.cameraTileZ && (var14 & 8) != 0) {
               var35 = var7[var3][var4 - 1];
               if (var35 != null && var35.aBoolean2225) {
                 DummyClass5.aClass61_2990.addLast(var35);
@@ -643,14 +644,14 @@ public final class Unsure {
                 }
 
                 FileCacheRequest.aClass25Array4060[var10++] = var25;
-                var27 = TriChromaticImageCache.cameraTileX - var25.anInt483;
-                var14 = var25.anInt495 - TriChromaticImageCache.cameraTileX;
+                var27 = GLStatics.cameraTileX - var25.anInt483;
+                var14 = var25.anInt495 - GLStatics.cameraTileX;
                 if (var14 > var27) {
                   var27 = var14;
                 }
 
-                var15 = TextureSampler7.cameraTileZ - var25.anInt478;
-                var16 = var25.anInt481 - TextureSampler7.cameraTileZ;
+                var15 = GLStatics.cameraTileZ - var25.anInt478;
+                var16 = var25.anInt481 - GLStatics.cameraTileZ;
                 if (var16 > var15) {
                   var25.anInt487 = var27 + var16;
                 } else {
@@ -741,28 +742,28 @@ public final class Unsure {
         }
 
         if (var2.aBoolean2225 && var2.anInt2227 == 0) {
-          if (var3 <= TriChromaticImageCache.cameraTileX && var3 > DummyClass9.viewportLowerX) {
+          if (var3 <= GLStatics.cameraTileX && var3 > DummyClass9.viewportLowerX) {
             var21 = var7[var3 - 1][var4];
             if (var21 != null && var21.aBoolean2225) {
               continue;
             }
           }
 
-          if (var3 >= TriChromaticImageCache.cameraTileX && var3 < MapScene.viewportUpperX - 1) {
+          if (var3 >= GLStatics.cameraTileX && var3 < MapScene.viewportUpperX - 1) {
             var21 = var7[var3 + 1][var4];
             if (var21 != null && var21.aBoolean2225) {
               continue;
             }
           }
 
-          if (var4 <= TextureSampler7.cameraTileZ && var4 > AbstractObjectNode.viewportLowerZ) {
+          if (var4 <= GLStatics.cameraTileZ && var4 > AbstractObjectNode.viewportLowerZ) {
             var21 = var7[var3][var4 - 1];
             if (var21 != null && var21.aBoolean2225) {
               continue;
             }
           }
 
-          if (var4 >= TextureSampler7.cameraTileZ && var4 < SomethingTilek.viewportUpperZ - 1) {
+          if (var4 >= GLStatics.cameraTileZ && var4 < SomethingTilek.viewportUpperZ - 1) {
             var21 = var7[var3][var4 + 1];
             if (var21 != null && var21.aBoolean2225) {
               continue;
@@ -891,35 +892,35 @@ public final class Unsure {
           }
 
           SceneGraphTile var33;
-          if (var5 < AnimationFrame.anInt2456 - 1) {
-            var33 = SomethingTexture1.sceneGraphTiles[var5 + 1][var3][var4];
+          if (var5 < GLStatics.anInt2456 - 1) {
+            var33 = GLStatics.sceneGraphTiles[var5 + 1][var3][var4];
             if (var33 != null && var33.aBoolean2225) {
               DummyClass5.aClass61_2990.addLast(var33);
             }
           }
 
-          if (var3 < TriChromaticImageCache.cameraTileX) {
+          if (var3 < GLStatics.cameraTileX) {
             var33 = var7[var3 + 1][var4];
             if (var33 != null && var33.aBoolean2225) {
               DummyClass5.aClass61_2990.addLast(var33);
             }
           }
 
-          if (var4 < TextureSampler7.cameraTileZ) {
+          if (var4 < GLStatics.cameraTileZ) {
             var33 = var7[var3][var4 + 1];
             if (var33 != null && var33.aBoolean2225) {
               DummyClass5.aClass61_2990.addLast(var33);
             }
           }
 
-          if (var3 > TriChromaticImageCache.cameraTileX) {
+          if (var3 > GLStatics.cameraTileX) {
             var33 = var7[var3 - 1][var4];
             if (var33 != null && var33.aBoolean2225) {
               DummyClass5.aClass61_2990.addLast(var33);
             }
           }
 
-          if (var4 > TextureSampler7.cameraTileZ) {
+          if (var4 > GLStatics.cameraTileZ) {
             var33 = var7[var3][var4 - 1];
             if (var33 != null && var33.aBoolean2225) {
               DummyClass5.aClass61_2990.addLast(var33);

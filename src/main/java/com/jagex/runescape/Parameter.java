@@ -102,7 +102,7 @@ public final class Parameter extends SubNode {
         Parameter.method582(88, 85, -8, true, 72, 12, 29, 96, 6, 57, -13, 15);
       }
 
-      SceneGraphTile.aClass130_2220 = new HashTable(32);
+      GlobalStatics_2.aClass130_2220 = new HashTable(32);
   }
 
   public static void method581(FileUnpacker var0, int var1, FileUnpacker var2) {

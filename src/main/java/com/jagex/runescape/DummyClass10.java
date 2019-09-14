@@ -3,6 +3,7 @@ package com.jagex.runescape;
 import com.jagex.runescape.buffer.Buffer;
 import com.jagex.runescape.common.GameString;
 import com.jagex.runescape.common.GameStringStatics;
+import com.jagex.runescape.opengl.GLStatics;
 
 public final class DummyClass10 {
 
@@ -109,17 +110,17 @@ public final class DummyClass10 {
 
   public static void method2264(boolean var0) {
     if (var0) {
-      SomethingTexture1.sceneGraphTiles = SomethingIndex150.aClass3_Sub2ArrayArrayArray2065;
+      GLStatics.sceneGraphTiles = SomethingIndex150.aClass3_Sub2ArrayArrayArray2065;
       AbstractGameWorld.heightMap = AbstractObjectNode.othrrHeightMap;
-      SomethingOtherWorldMap.aClass3_Sub11ArrayArray2542 =
+      GLStatics.aClass3_Sub11ArrayArray2542 =
         TextureSampler32.aClass3_Sub11ArrayArray3346;
     } else {
-      SomethingTexture1.sceneGraphTiles = OndemandFileRequest.tiles;
+      GLStatics.sceneGraphTiles = OndemandFileRequest.tiles;
       AbstractGameWorld.heightMap = DummyClass43.somethingHeightMap;
-      SomethingOtherWorldMap.aClass3_Sub11ArrayArray2542 = GameClient.aClass3_Sub11ArrayArray2199;
+      GLStatics.aClass3_Sub11ArrayArray2542 = GLStatics.aClass3_Sub11ArrayArray2199;
     }
 
-    AnimationFrame.anInt2456 = SomethingTexture1.sceneGraphTiles.length;
+    GLStatics.anInt2456 = GLStatics.sceneGraphTiles.length;
   }
 
   public static void method2265(int var0) {
@@ -222,7 +223,7 @@ public final class DummyClass10 {
   }
 
   public static int method2268(byte var0, int var1, int var2) {
-    Inventory var3 = (Inventory) SceneGraphTile.aClass130_2220.get(var1);
+    Inventory var3 = (Inventory) GlobalStatics_2.aClass130_2220.get(var1);
       if (var3 != null) {
         if (var2 == -1) {
           return 0;

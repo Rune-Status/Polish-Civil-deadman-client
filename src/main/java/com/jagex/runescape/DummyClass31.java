@@ -3,7 +3,7 @@ package com.jagex.runescape;
 import com.jagex.runescape.common.GameString;
 import com.jagex.runescape.common.GameStringStatics;
 import com.jagex.runescape.huffman.HuffmanEncoderStatics;
-import com.jagex.runescape.opengl.DummyClass16;
+import com.jagex.runescape.opengl.SomethingShadows;
 import com.jagex.runescape.opengl.GlRenderer;
 
 public final class DummyClass31 {
@@ -134,7 +134,8 @@ public final class DummyClass31 {
                     (byte) -82, var26, var21);
                   if (GlRenderer.useOpenGlRenderer && var26) {
                     assert var28 != null;
-                    DummyClass16.method2051(var28.shadow, var20, var22, var21);
+                    SomethingShadows
+                        .method2051(var28.shadow, var20, var22, var21);
                   }
 
                   assert var28 != null;
@@ -164,7 +165,8 @@ public final class DummyClass31 {
                       var26, var21);
                   if (GlRenderer.useOpenGlRenderer && var26) {
                     assert var28 != null;
-                    DummyClass16.method2051(var28.shadow, var20, var22, var21);
+                    SomethingShadows
+                        .method2051(var28.shadow, var20, var22, var21);
                   }
 
                   assert var28 != null;
@@ -249,7 +251,8 @@ public final class DummyClass31 {
                       var26, var21);
                   if (GlRenderer.useOpenGlRenderer && var26) {
                     assert var28 != null;
-                    DummyClass16.method2051(var28.shadow, var20, var22, var21);
+                    SomethingShadows
+                        .method2051(var28.shadow, var20, var22, var21);
                   }
 
                   assert var28 != null;
@@ -297,7 +300,8 @@ public final class DummyClass31 {
                         (byte) -108, var26, var21);
                     if (GlRenderer.useOpenGlRenderer && var26) {
                       assert var45 != null;
-                      DummyClass16.method2051(var45.shadow, var20, var22, var21);
+                      SomethingShadows
+                          .method2051(var45.shadow, var20, var22, var21);
                     }
 
                     assert var45 != null;
@@ -307,7 +311,8 @@ public final class DummyClass31 {
                         var26, var21);
                     if (GlRenderer.useOpenGlRenderer && var26) {
                       assert var45 != null;
-                      DummyClass16.method2051(var45.shadow, var20, var22, var21);
+                      SomethingShadows
+                          .method2051(var45.shadow, var20, var22, var21);
                     }
 
                     assert var45 != null;
@@ -386,7 +391,8 @@ public final class DummyClass31 {
                         var26, var21);
                     if (GlRenderer.useOpenGlRenderer && var26) {
                       assert var28 != null;
-                      DummyClass16.method2051(var28.shadow, var20, var22, var21);
+                      SomethingShadows
+                          .method2051(var28.shadow, var20, var22, var21);
                     }
 
                     assert var28 != null;
@@ -431,7 +437,7 @@ public final class DummyClass31 {
                               (byte) -103, var26, var21);
                       if (GlRenderer.useOpenGlRenderer && var26) {
                         assert var28 != null;
-                        DummyClass16
+                        SomethingShadows
                             .method2051(var28.shadow, var20, var22, var21);
                       }
 
@@ -467,7 +473,7 @@ public final class DummyClass31 {
                                 (byte) -125, var26, var21);
                         if (GlRenderer.useOpenGlRenderer && var26) {
                           assert var47 != null;
-                          DummyClass16.method2051(var47.shadow,
+                          SomethingShadows.method2051(var47.shadow,
                               var20 - (RenderAnimation.anIntArray356[var10]
                                   * 8), var22,
                               -(AudioStreamEncoder3.anIntArray3491[var10] * 8)
@@ -509,7 +515,7 @@ public final class DummyClass31 {
                                       (byte) -65, var26, var21);
                           if (GlRenderer.useOpenGlRenderer && var26) {
                             assert var47 != null;
-                            DummyClass16.method2051(var47.shadow,
+                            SomethingShadows.method2051(var47.shadow,
                                 -(8
                                     * AbstractTextureSampler.anIntArray2386[var10])
                                     + var20, var22,
@@ -543,7 +549,7 @@ public final class DummyClass31 {
                                     null, (byte) -39, var26, var21);
                             if (GlRenderer.useOpenGlRenderer && var26) {
                               assert var41 != null;
-                              DummyClass16
+                              SomethingShadows
                                   .method2051(var41.shadow, var20, var22,
                                       var21);
                             }
@@ -585,7 +591,7 @@ public final class DummyClass31 {
                                       null, (byte) -25, var26, var21);
                               if (GlRenderer.useOpenGlRenderer && var26) {
                                 assert var35 != null;
-                                DummyClass16
+                                SomethingShadows
                                     .method2051(var35.shadow, var20 - var33,
                                         var22,
                                         -var34 + var21);
@@ -599,7 +605,7 @@ public final class DummyClass31 {
                                       null, (byte) -101, var26, var21);
                               if (GlRenderer.useOpenGlRenderer && var26) {
                                 assert var35 != null;
-                                DummyClass16
+                                SomethingShadows
                                     .method2051(var35.shadow, var20 - var33,
                                         var22,
                                         -var34 + var21);
@@ -635,7 +641,8 @@ public final class DummyClass31 {
                       (byte) -30, var26, var21);
                     if (GlRenderer.useOpenGlRenderer && var26) {
                       assert var28 != null;
-                      DummyClass16.method2051(var28.shadow, var20, var22, var21);
+                      SomethingShadows
+                          .method2051(var28.shadow, var20, var22, var21);
                     }
 
                     assert var28 != null;
@@ -665,7 +672,7 @@ public final class DummyClass31 {
                     var1, null, (byte) -26, var26, var21);
                 if (GlRenderer.useOpenGlRenderer && var26) {
                   assert var28 != null;
-                  DummyClass16.method2051(var28.shadow, var20, var22, var21);
+                  SomethingShadows.method2051(var28.shadow, var20, var22, var21);
                 }
 
                 assert var28 != null;
@@ -712,7 +719,7 @@ public final class DummyClass31 {
                   var26, var21);
               if (GlRenderer.useOpenGlRenderer && var26) {
                 assert var28 != null;
-                DummyClass16.method2051(var28.shadow, var20, var22, var21);
+                SomethingShadows.method2051(var28.shadow, var20, var22, var21);
               }
 
               assert var28 != null;

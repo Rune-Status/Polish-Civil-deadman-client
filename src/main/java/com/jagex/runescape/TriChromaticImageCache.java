@@ -2,6 +2,7 @@ package com.jagex.runescape;
 
 import com.jagex.runescape.common.GameString;
 import com.jagex.runescape.common.GameStringStatics;
+import com.jagex.runescape.opengl.GLStatics;
 
 public final class TriChromaticImageCache {
 
@@ -11,7 +12,6 @@ public final class TriChromaticImageCache {
   public static FileUnpacker aClass153_1372;
   public static int[][] anIntArrayArray1373;
   public static GameString aClass94_1374;
-  public static int cameraTileX;
   public static FileUnpacker materials;
   public static GameString aClass94_1377;
   public static FileUnpacker aClass153_1378;
@@ -132,7 +132,7 @@ public final class TriChromaticImageCache {
       }
 
       if (!var0) {
-        TriChromaticImageCache.cameraTileX = -103;
+        GLStatics.cameraTileX = -103;
       }
   }
 

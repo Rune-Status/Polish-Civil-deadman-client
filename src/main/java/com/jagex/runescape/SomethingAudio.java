@@ -2,6 +2,7 @@ package com.jagex.runescape;
 
 import com.jagex.runescape.common.GameString;
 import com.jagex.runescape.common.GameStringStatics;
+import com.jagex.runescape.opengl.GLStatics;
 
 public final class SomethingAudio {
 
@@ -124,7 +125,7 @@ public final class SomethingAudio {
   }
 
   public static long method2174(int var0, int var1, int var2) {
-    SceneGraphTile var3 = SomethingTexture1.sceneGraphTiles[var0][var1][var2];
+    SceneGraphTile var3 = GLStatics.sceneGraphTiles[var0][var1][var2];
     return var3 != null && var3.aClass70_2234 != null ? var3.aClass70_2234.key : 0L;
   }
 

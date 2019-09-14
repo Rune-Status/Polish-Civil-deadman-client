@@ -2,10 +2,11 @@ package com.jagex.runescape;
 
 import com.jagex.runescape.common.GameString;
 import com.jagex.runescape.common.GameStringStatics;
-import com.jagex.runescape.opengl.DummyClass16;
+import com.jagex.runescape.opengl.SomethingShadows;
 import com.jagex.runescape.opengl.GlDirectColorSprite;
 import com.jagex.runescape.opengl.GlRenderer;
 import com.jagex.runescape.opengl.GlTexture2d;
+import com.jagex.runescape.sprite.SoftwareIndexedColorSprite;
 
 public final class DummyClass28 {
 
@@ -44,7 +45,7 @@ public final class DummyClass28 {
       SomethingTexture3.aClass3_Sub28_Sub16Array2656 =
         Projectile.method2027(0, (byte) 11, TextureSampler18.anInt4042, var1);
       OndemandRequester.aClass3_Sub28_Sub16Array996 =
-        Projectile.method2027(0, (byte) 11, GameClient.anInt2195, var1);
+        Projectile.method2027(0, (byte) 11, GlobalStatics_1.anInt2195, var1);
       TextureSampler2.aClass3_Sub28_Sub16Array3373 =
         Projectile.method2027(0, (byte) 11, SubNode.anInt2575, var1);
       NPC.aClass3_Sub28_Sub16Array3977 =
@@ -68,12 +69,12 @@ public final class DummyClass28 {
       SomethingTilek.p12Font.method697(TextureSampler0.aClass109Array3270, null);
       FloorOverlay.aClass3_Sub28_Sub17_2096.method697(TextureSampler0.aClass109Array3270, null);
       if (GlRenderer.useOpenGlRenderer) {
-        DummyClass16.floorShadows = DummyClass28
+        SomethingShadows.floorShadows = DummyClass28
             .method885(true, DummyClass38.floorShadowsFileId, var1, 0);
 
-        assert DummyClass16.floorShadows != null;
-        for (int var2 = 0; DummyClass16.floorShadows.length > var2; ++var2) {
-          DummyClass16.floorShadows[var2].method1675();
+        assert SomethingShadows.floorShadows != null;
+        for (int var2 = 0; SomethingShadows.floorShadows.length > var2; ++var2) {
+          SomethingShadows.floorShadows[var2].method1675();
         }
       }
 

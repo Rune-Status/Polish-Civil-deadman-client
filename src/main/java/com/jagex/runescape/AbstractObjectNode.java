@@ -3,6 +3,7 @@ package com.jagex.runescape;
 import com.jagex.runescape.buffer.Buffer;
 import com.jagex.runescape.common.GameString;
 import com.jagex.runescape.common.GameStringStatics;
+import com.jagex.runescape.opengl.GLStatics;
 import java.io.IOException;
 
 public abstract class AbstractObjectNode extends SubNode {
@@ -41,7 +42,7 @@ public abstract class AbstractObjectNode extends SubNode {
       SceneSomething.method957(96, true);
       AbstractObjectNode.aBoolean3604 = true;
       TextureSampler17.aBoolean3184 = true;
-      DummyHashTable.aBoolean1685 = true;
+      GLStatics.aBoolean1685 = true;
       Parameter.anInt3622 = 0;
       TextureSampler21.anInt3071 = 0;
       Keyboard.aBoolean1905 = true;
@@ -51,7 +52,7 @@ public abstract class AbstractObjectNode extends SubNode {
       DummyClass35.aBoolean661 = true;
       Projectile.aBoolean2910 = true;
       AbstractTextureSampler.anInt2378 = 0;
-      HashTableIterator.anInt1137 = 2;
+      GLStatics.anInt1137 = 2;
       TextureSampler0.aBoolean3275 = true;
       DisplayMode.useBumpMaps = true;
       BZipDecompressorState.anInt120 = 255;

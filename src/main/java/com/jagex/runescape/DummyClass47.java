@@ -1,17 +1,12 @@
 package com.jagex.runescape;
 
+import com.jagex.runescape.sprite.SoftwareIndexedColorSpriteStatics;
+
 public final class DummyClass47 {
 
-  public static int anInt1092;
-  public static int anInt1093;
   public static int anInt1094;
-  public static int anInt1095;
-  public static int anInt1096;
   public static int[] anIntArray1097;
   public static int[] anIntArray1098;
-  public static int anInt1099;
-  public static int[] anIntArray1100;
-
 
   public static void method1310() {
     DummyClass47.anIntArray1097 = null;
@@ -26,35 +21,35 @@ public final class DummyClass47 {
   }
 
   public static void method1312(int var0, int var1, int var2, int var3, int var4, int var5) {
-    if (var0 < DummyClass47.anInt1093) {
-      var2 -= DummyClass47.anInt1093 - var0;
-      var0 = DummyClass47.anInt1093;
+    if (var0 < SoftwareIndexedColorSpriteStatics.anInt1093) {
+      var2 -= SoftwareIndexedColorSpriteStatics.anInt1093 - var0;
+      var0 = SoftwareIndexedColorSpriteStatics.anInt1093;
     }
 
-    if (var1 < DummyClass47.anInt1095) {
-      var3 -= DummyClass47.anInt1095 - var1;
-      var1 = DummyClass47.anInt1095;
+    if (var1 < SoftwareIndexedColorSpriteStatics.anInt1095) {
+      var3 -= SoftwareIndexedColorSpriteStatics.anInt1095 - var1;
+      var1 = SoftwareIndexedColorSpriteStatics.anInt1095;
     }
 
-    if (var0 + var2 > DummyClass47.anInt1096) {
-      var2 = DummyClass47.anInt1096 - var0;
+    if (var0 + var2 > SoftwareIndexedColorSpriteStatics.anInt1096) {
+      var2 = SoftwareIndexedColorSpriteStatics.anInt1096 - var0;
     }
 
-    if (var1 + var3 > DummyClass47.anInt1099) {
-      var3 = DummyClass47.anInt1099 - var1;
+    if (var1 + var3 > SoftwareIndexedColorSpriteStatics.anInt1099) {
+      var3 = SoftwareIndexedColorSpriteStatics.anInt1099 - var1;
     }
 
     var4 = ((var4 & 16711935) * var5 >> 8 & 16711935) + ((var4 & '\uff00') * var5 >> 8 & '\uff00');
     int var6 = 256 - var5;
-    int var7 = DummyClass47.anInt1092 - var2;
-    int var8 = var0 + var1 * DummyClass47.anInt1092;
+    int var7 = SoftwareIndexedColorSpriteStatics.anInt1092 - var2;
+    int var8 = var0 + var1 * SoftwareIndexedColorSpriteStatics.anInt1092;
 
     for (int var9 = 0; var9 < var3; ++var9) {
       for (int var10 = -var2; var10 < 0; ++var10) {
-        int var11 = DummyClass47.anIntArray1100[var8];
+        int var11 = SoftwareIndexedColorSpriteStatics.anIntArray1100[var8];
         var11 =
           ((var11 & 16711935) * var6 >> 8 & 16711935) + ((var11 & '\uff00') * var6 >> 8 & '\uff00');
-        DummyClass47.anIntArray1100[var8++] = var4 + var11;
+        SoftwareIndexedColorSpriteStatics.anIntArray1100[var8++] = var4 + var11;
       }
 
       var8 += var7;
@@ -63,16 +58,16 @@ public final class DummyClass47 {
   }
 
   private static void method1313(int var0, int var1, int var2) {
-    if (var0 >= DummyClass47.anInt1093
-        && var1 >= DummyClass47.anInt1095 && var0 < DummyClass47.anInt1096
-        && var1 < DummyClass47.anInt1099) {
-      DummyClass47.anIntArray1100[var0 + var1 * DummyClass47.anInt1092] = var2;
+    if (var0 >= SoftwareIndexedColorSpriteStatics.anInt1093
+        && var1 >= SoftwareIndexedColorSpriteStatics.anInt1095 && var0 < SoftwareIndexedColorSpriteStatics.anInt1096
+        && var1 < SoftwareIndexedColorSpriteStatics.anInt1099) {
+      SoftwareIndexedColorSpriteStatics.anIntArray1100[var0 + var1 * SoftwareIndexedColorSpriteStatics.anInt1092] = var2;
     }
   }
 
   public static void method1314(int[] var0, int[] var1) {
-    if (var0.length == DummyClass47.anInt1099 - DummyClass47.anInt1095 && var1.length ==
-        DummyClass47.anInt1099 - DummyClass47.anInt1095) {
+    if (var0.length == SoftwareIndexedColorSpriteStatics.anInt1099 - SoftwareIndexedColorSpriteStatics.anInt1095 && var1.length ==
+        SoftwareIndexedColorSpriteStatics.anInt1099 - SoftwareIndexedColorSpriteStatics.anInt1095) {
       DummyClass47.anIntArray1097 = var0;
       DummyClass47.anIntArray1098 = var1;
     } else {
@@ -91,56 +86,56 @@ public final class DummyClass47 {
   }
 
   public static void method1316(int[] var0) {
-    DummyClass47.anInt1093 = var0[0];
-    DummyClass47.anInt1095 = var0[1];
-    DummyClass47.anInt1096 = var0[2];
-    DummyClass47.anInt1099 = var0[3];
+    SoftwareIndexedColorSpriteStatics.anInt1093 = var0[0];
+    SoftwareIndexedColorSpriteStatics.anInt1095 = var0[1];
+    SoftwareIndexedColorSpriteStatics.anInt1096 = var0[2];
+    SoftwareIndexedColorSpriteStatics.anInt1099 = var0[3];
     DummyClass47.method1310();
   }
 
   public static void method1317(int var0, int var1, int var2, int var3) {
-    if (var1 >= DummyClass47.anInt1095 && var1 < DummyClass47.anInt1099) {
-      if (var0 < DummyClass47.anInt1093) {
-        var2 -= DummyClass47.anInt1093 - var0;
-        var0 = DummyClass47.anInt1093;
+    if (var1 >= SoftwareIndexedColorSpriteStatics.anInt1095 && var1 < SoftwareIndexedColorSpriteStatics.anInt1099) {
+      if (var0 < SoftwareIndexedColorSpriteStatics.anInt1093) {
+        var2 -= SoftwareIndexedColorSpriteStatics.anInt1093 - var0;
+        var0 = SoftwareIndexedColorSpriteStatics.anInt1093;
       }
 
-      if (var0 + var2 > DummyClass47.anInt1096) {
-        var2 = DummyClass47.anInt1096 - var0;
+      if (var0 + var2 > SoftwareIndexedColorSpriteStatics.anInt1096) {
+        var2 = SoftwareIndexedColorSpriteStatics.anInt1096 - var0;
       }
 
-      int var4 = var0 + var1 * DummyClass47.anInt1092;
+      int var4 = var0 + var1 * SoftwareIndexedColorSpriteStatics.anInt1092;
 
       for (int var5 = 0; var5 < var2; ++var5) {
-        DummyClass47.anIntArray1100[var4 + var5] = var3;
+        SoftwareIndexedColorSpriteStatics.anIntArray1100[var4 + var5] = var3;
       }
 
     }
   }
 
   public static void method1318(int var0, int var1, int var2, int var3) {
-    if (var0 >= DummyClass47.anInt1093 && var0 < DummyClass47.anInt1096) {
-      if (var1 < DummyClass47.anInt1095) {
-        var2 -= DummyClass47.anInt1095 - var1;
-        var1 = DummyClass47.anInt1095;
+    if (var0 >= SoftwareIndexedColorSpriteStatics.anInt1093 && var0 < SoftwareIndexedColorSpriteStatics.anInt1096) {
+      if (var1 < SoftwareIndexedColorSpriteStatics.anInt1095) {
+        var2 -= SoftwareIndexedColorSpriteStatics.anInt1095 - var1;
+        var1 = SoftwareIndexedColorSpriteStatics.anInt1095;
       }
 
-      if (var1 + var2 > DummyClass47.anInt1099) {
-        var2 = DummyClass47.anInt1099 - var1;
+      if (var1 + var2 > SoftwareIndexedColorSpriteStatics.anInt1099) {
+        var2 = SoftwareIndexedColorSpriteStatics.anInt1099 - var1;
       }
 
-      int var4 = var0 + var1 * DummyClass47.anInt1092;
+      int var4 = var0 + var1 * SoftwareIndexedColorSpriteStatics.anInt1092;
 
       for (int var5 = 0; var5 < var2; ++var5) {
-        DummyClass47.anIntArray1100[var4 + var5 * DummyClass47.anInt1092] = var3;
+        SoftwareIndexedColorSpriteStatics.anIntArray1100[var4 + var5 * SoftwareIndexedColorSpriteStatics.anInt1092] = var3;
       }
 
     }
   }
 
   public static void method1319(int[] var0, int var1, int var2) {
-    DummyClass47.anIntArray1100 = var0;
-    DummyClass47.anInt1092 = var1;
+    SoftwareIndexedColorSpriteStatics.anIntArray1100 = var0;
+    SoftwareIndexedColorSpriteStatics.anInt1092 = var1;
     DummyClass47.anInt1094 = var2;
     DummyClass47.method1324(0, 0, var1, var2);
   }
@@ -149,45 +144,45 @@ public final class DummyClass47 {
     int var0 = 0;
 
     int var1;
-    for (var1 = DummyClass47.anInt1092 * DummyClass47.anInt1094 - 7; var0 < var1;
-        DummyClass47.anIntArray1100[var0++] = 0) {
-      DummyClass47.anIntArray1100[var0++] = 0;
-      DummyClass47.anIntArray1100[var0++] = 0;
-      DummyClass47.anIntArray1100[var0++] = 0;
-      DummyClass47.anIntArray1100[var0++] = 0;
-      DummyClass47.anIntArray1100[var0++] = 0;
-      DummyClass47.anIntArray1100[var0++] = 0;
-      DummyClass47.anIntArray1100[var0++] = 0;
+    for (var1 = SoftwareIndexedColorSpriteStatics.anInt1092 * DummyClass47.anInt1094 - 7; var0 < var1;
+        SoftwareIndexedColorSpriteStatics.anIntArray1100[var0++] = 0) {
+      SoftwareIndexedColorSpriteStatics.anIntArray1100[var0++] = 0;
+      SoftwareIndexedColorSpriteStatics.anIntArray1100[var0++] = 0;
+      SoftwareIndexedColorSpriteStatics.anIntArray1100[var0++] = 0;
+      SoftwareIndexedColorSpriteStatics.anIntArray1100[var0++] = 0;
+      SoftwareIndexedColorSpriteStatics.anIntArray1100[var0++] = 0;
+      SoftwareIndexedColorSpriteStatics.anIntArray1100[var0++] = 0;
+      SoftwareIndexedColorSpriteStatics.anIntArray1100[var0++] = 0;
     }
 
-    for (var1 += 7; var0 < var1; DummyClass47.anIntArray1100[var0++] = 0) {
+    for (var1 += 7; var0 < var1; SoftwareIndexedColorSpriteStatics.anIntArray1100[var0++] = 0) {
     }
 
   }
 
   private static void method1321(int var0, int var1, int var2, int var3, int var4) {
-    if (var1 >= DummyClass47.anInt1095 && var1 < DummyClass47.anInt1099) {
-      if (var0 < DummyClass47.anInt1093) {
-        var2 -= DummyClass47.anInt1093 - var0;
-        var0 = DummyClass47.anInt1093;
+    if (var1 >= SoftwareIndexedColorSpriteStatics.anInt1095 && var1 < SoftwareIndexedColorSpriteStatics.anInt1099) {
+      if (var0 < SoftwareIndexedColorSpriteStatics.anInt1093) {
+        var2 -= SoftwareIndexedColorSpriteStatics.anInt1093 - var0;
+        var0 = SoftwareIndexedColorSpriteStatics.anInt1093;
       }
 
-      if (var0 + var2 > DummyClass47.anInt1096) {
-        var2 = DummyClass47.anInt1096 - var0;
+      if (var0 + var2 > SoftwareIndexedColorSpriteStatics.anInt1096) {
+        var2 = SoftwareIndexedColorSpriteStatics.anInt1096 - var0;
       }
 
       int var5 = 256 - var4;
       int var6 = (var3 >> 16 & 255) * var4;
       int var7 = (var3 >> 8 & 255) * var4;
       int var8 = (var3 & 255) * var4;
-      int var12 = var0 + var1 * DummyClass47.anInt1092;
+      int var12 = var0 + var1 * SoftwareIndexedColorSpriteStatics.anInt1092;
 
       for (int var13 = 0; var13 < var2; ++var13) {
-        int var9 = (DummyClass47.anIntArray1100[var12] >> 16 & 255) * var5;
-        int var10 = (DummyClass47.anIntArray1100[var12] >> 8 & 255) * var5;
-        int var11 = (DummyClass47.anIntArray1100[var12] & 255) * var5;
+        int var9 = (SoftwareIndexedColorSpriteStatics.anIntArray1100[var12] >> 16 & 255) * var5;
+        int var10 = (SoftwareIndexedColorSpriteStatics.anIntArray1100[var12] >> 8 & 255) * var5;
+        int var11 = (SoftwareIndexedColorSpriteStatics.anIntArray1100[var12] & 255) * var5;
         int var14 = (var6 + var9 >> 8 << 16) + (var7 + var10 >> 8 << 8) + (var8 + var11 >> 8);
-        DummyClass47.anIntArray1100[var12++] = var14;
+        SoftwareIndexedColorSpriteStatics.anIntArray1100[var12++] = var14;
       }
 
     }
@@ -234,30 +229,30 @@ public final class DummyClass47 {
   }
 
   public static void method1323(int var0, int var1, int var2, int var3, int var4) {
-    if (var0 < DummyClass47.anInt1093) {
-      var2 -= DummyClass47.anInt1093 - var0;
-      var0 = DummyClass47.anInt1093;
+    if (var0 < SoftwareIndexedColorSpriteStatics.anInt1093) {
+      var2 -= SoftwareIndexedColorSpriteStatics.anInt1093 - var0;
+      var0 = SoftwareIndexedColorSpriteStatics.anInt1093;
     }
 
-    if (var1 < DummyClass47.anInt1095) {
-      var3 -= DummyClass47.anInt1095 - var1;
-      var1 = DummyClass47.anInt1095;
+    if (var1 < SoftwareIndexedColorSpriteStatics.anInt1095) {
+      var3 -= SoftwareIndexedColorSpriteStatics.anInt1095 - var1;
+      var1 = SoftwareIndexedColorSpriteStatics.anInt1095;
     }
 
-    if (var0 + var2 > DummyClass47.anInt1096) {
-      var2 = DummyClass47.anInt1096 - var0;
+    if (var0 + var2 > SoftwareIndexedColorSpriteStatics.anInt1096) {
+      var2 = SoftwareIndexedColorSpriteStatics.anInt1096 - var0;
     }
 
-    if (var1 + var3 > DummyClass47.anInt1099) {
-      var3 = DummyClass47.anInt1099 - var1;
+    if (var1 + var3 > SoftwareIndexedColorSpriteStatics.anInt1099) {
+      var3 = SoftwareIndexedColorSpriteStatics.anInt1099 - var1;
     }
 
-    int var5 = DummyClass47.anInt1092 - var2;
-    int var6 = var0 + var1 * DummyClass47.anInt1092;
+    int var5 = SoftwareIndexedColorSpriteStatics.anInt1092 - var2;
+    int var6 = var0 + var1 * SoftwareIndexedColorSpriteStatics.anInt1092;
 
     for (int var7 = -var3; var7 < 0; ++var7) {
       for (int var8 = -var2; var8 < 0; ++var8) {
-        DummyClass47.anIntArray1100[var6++] = var4;
+        SoftwareIndexedColorSpriteStatics.anIntArray1100[var6++] = var4;
       }
 
       var6 += var5;
@@ -274,72 +269,72 @@ public final class DummyClass47 {
       var1 = 0;
     }
 
-    if (var2 > DummyClass47.anInt1092) {
-      var2 = DummyClass47.anInt1092;
+    if (var2 > SoftwareIndexedColorSpriteStatics.anInt1092) {
+      var2 = SoftwareIndexedColorSpriteStatics.anInt1092;
     }
 
     if (var3 > DummyClass47.anInt1094) {
       var3 = DummyClass47.anInt1094;
     }
 
-    DummyClass47.anInt1093 = var0;
-    DummyClass47.anInt1095 = var1;
-    DummyClass47.anInt1096 = var2;
-    DummyClass47.anInt1099 = var3;
+    SoftwareIndexedColorSpriteStatics.anInt1093 = var0;
+    SoftwareIndexedColorSpriteStatics.anInt1095 = var1;
+    SoftwareIndexedColorSpriteStatics.anInt1096 = var2;
+    SoftwareIndexedColorSpriteStatics.anInt1099 = var3;
     DummyClass47.method1310();
   }
 
   public static void method1325(int[] var0) {
-    var0[0] = DummyClass47.anInt1093;
-    var0[1] = DummyClass47.anInt1095;
-    var0[2] = DummyClass47.anInt1096;
-    var0[3] = DummyClass47.anInt1099;
+    var0[0] = SoftwareIndexedColorSpriteStatics.anInt1093;
+    var0[1] = SoftwareIndexedColorSpriteStatics.anInt1095;
+    var0[2] = SoftwareIndexedColorSpriteStatics.anInt1096;
+    var0[3] = SoftwareIndexedColorSpriteStatics.anInt1099;
   }
 
   public static void method1326(int var0, int var1, int var2, int var3) {
-    if (DummyClass47.anInt1093 < var0) {
-      DummyClass47.anInt1093 = var0;
+    if (SoftwareIndexedColorSpriteStatics.anInt1093 < var0) {
+      SoftwareIndexedColorSpriteStatics.anInt1093 = var0;
     }
 
-    if (DummyClass47.anInt1095 < var1) {
-      DummyClass47.anInt1095 = var1;
+    if (SoftwareIndexedColorSpriteStatics.anInt1095 < var1) {
+      SoftwareIndexedColorSpriteStatics.anInt1095 = var1;
     }
 
-    if (DummyClass47.anInt1096 > var2) {
-      DummyClass47.anInt1096 = var2;
+    if (SoftwareIndexedColorSpriteStatics.anInt1096 > var2) {
+      SoftwareIndexedColorSpriteStatics.anInt1096 = var2;
     }
 
-    if (DummyClass47.anInt1099 > var3) {
-      DummyClass47.anInt1099 = var3;
+    if (SoftwareIndexedColorSpriteStatics.anInt1099 > var3) {
+      SoftwareIndexedColorSpriteStatics.anInt1099 = var3;
     }
 
     DummyClass47.method1310();
   }
 
   private static void method1327(int var0, int var1, int var2, int var3, int var4) {
-    if (var0 >= DummyClass47.anInt1093 && var0 < DummyClass47.anInt1096) {
-      if (var1 < DummyClass47.anInt1095) {
-        var2 -= DummyClass47.anInt1095 - var1;
-        var1 = DummyClass47.anInt1095;
+    if (var0 >= SoftwareIndexedColorSpriteStatics.anInt1093 && var0 < SoftwareIndexedColorSpriteStatics.anInt1096) {
+      if (var1 < SoftwareIndexedColorSpriteStatics.anInt1095) {
+        var2 -= SoftwareIndexedColorSpriteStatics.anInt1095 - var1;
+        var1 = SoftwareIndexedColorSpriteStatics.anInt1095;
       }
 
-      if (var1 + var2 > DummyClass47.anInt1099) {
-        var2 = DummyClass47.anInt1099 - var1;
+      if (var1 + var2 > SoftwareIndexedColorSpriteStatics.anInt1099) {
+        var2 = SoftwareIndexedColorSpriteStatics.anInt1099 - var1;
       }
 
       int var5 = 256 - var4;
       int var6 = (var3 >> 16 & 255) * var4;
       int var7 = (var3 >> 8 & 255) * var4;
       int var8 = (var3 & 255) * var4;
-      int var12 = var0 + var1 * DummyClass47.anInt1092;
+      int var12 = var0 + var1 * SoftwareIndexedColorSpriteStatics.anInt1092;
 
       for (int var13 = 0; var13 < var2; ++var13) {
-        int var9 = (DummyClass47.anIntArray1100[var12] >> 16 & 255) * var5;
-        int var10 = (DummyClass47.anIntArray1100[var12] >> 8 & 255) * var5;
-        int var11 = (DummyClass47.anIntArray1100[var12] & 255) * var5;
+        int var9 = (SoftwareIndexedColorSpriteStatics.anIntArray1100[var12] >> 16 & 255) * var5;
+        int var10 = (SoftwareIndexedColorSpriteStatics.anIntArray1100[var12] >> 8 & 255) * var5;
+        int var11 = (SoftwareIndexedColorSpriteStatics.anIntArray1100[var12] & 255) * var5;
         int var14 = (var6 + var9 >> 8 << 16) + (var7 + var10 >> 8 << 8) + (var8 + var11 >> 8);
-        DummyClass47.anIntArray1100[var12] = var14;
-        var12 += DummyClass47.anInt1092;
+        SoftwareIndexedColorSpriteStatics.anIntArray1100[var12] = var14;
+        var12 += SoftwareIndexedColorSpriteStatics.anInt1092;
       }
 
     }
@@ -378,19 +373,19 @@ public final class DummyClass47 {
         var3 <<= 16;
         var5 = (int) Math.floor((double) var3 / var2 + 0.5D);
         var2 += var0;
-        if (var0 < DummyClass47.anInt1093) {
-          var1 += var5 * (DummyClass47.anInt1093 - var0);
-          var0 = DummyClass47.anInt1093;
+        if (var0 < SoftwareIndexedColorSpriteStatics.anInt1093) {
+          var1 += var5 * (SoftwareIndexedColorSpriteStatics.anInt1093 - var0);
+          var0 = SoftwareIndexedColorSpriteStatics.anInt1093;
         }
 
-        if (var2 >= DummyClass47.anInt1096) {
-          var2 = DummyClass47.anInt1096 - 1;
+        if (var2 >= SoftwareIndexedColorSpriteStatics.anInt1096) {
+          var2 = SoftwareIndexedColorSpriteStatics.anInt1096 - 1;
         }
 
         while (var0 <= var2) {
           var6 = var1 >> 16;
-          if (var6 >= DummyClass47.anInt1095 && var6 < DummyClass47.anInt1099) {
-            DummyClass47.anIntArray1100[var0 + var6 * DummyClass47.anInt1092] = var4;
+          if (var6 >= SoftwareIndexedColorSpriteStatics.anInt1095 && var6 < SoftwareIndexedColorSpriteStatics.anInt1099) {
+            SoftwareIndexedColorSpriteStatics.anIntArray1100[var0 + var6 * SoftwareIndexedColorSpriteStatics.anInt1092] = var4;
           }
 
           var1 += var5;
@@ -402,19 +397,19 @@ public final class DummyClass47 {
         var2 <<= 16;
         var5 = (int) Math.floor((double) var2 / var3 + 0.5D);
         var3 += var1;
-        if (var1 < DummyClass47.anInt1095) {
-          var0 += var5 * (DummyClass47.anInt1095 - var1);
-          var1 = DummyClass47.anInt1095;
+        if (var1 < SoftwareIndexedColorSpriteStatics.anInt1095) {
+          var0 += var5 * (SoftwareIndexedColorSpriteStatics.anInt1095 - var1);
+          var1 = SoftwareIndexedColorSpriteStatics.anInt1095;
         }
 
-        if (var3 >= DummyClass47.anInt1099) {
-          var3 = DummyClass47.anInt1099 - 1;
+        if (var3 >= SoftwareIndexedColorSpriteStatics.anInt1099) {
+          var3 = SoftwareIndexedColorSpriteStatics.anInt1099 - 1;
         }
 
         while (var1 <= var3) {
           var6 = var0 >> 16;
-          if (var6 >= DummyClass47.anInt1093 && var6 < DummyClass47.anInt1096) {
-            DummyClass47.anIntArray1100[var6 + var1 * DummyClass47.anInt1092] = var4;
+          if (var6 >= SoftwareIndexedColorSpriteStatics.anInt1093 && var6 < SoftwareIndexedColorSpriteStatics.anInt1096) {
+            SoftwareIndexedColorSpriteStatics.anIntArray1100[var6 + var1 * SoftwareIndexedColorSpriteStatics.anInt1092] = var4;
           }
 
           var0 += var5;
@@ -434,13 +429,13 @@ public final class DummyClass47 {
       }
 
       int var4 = var1 - var2;
-      if (var4 < DummyClass47.anInt1095) {
-        var4 = DummyClass47.anInt1095;
+      if (var4 < SoftwareIndexedColorSpriteStatics.anInt1095) {
+        var4 = SoftwareIndexedColorSpriteStatics.anInt1095;
       }
 
       int var5 = var1 + var2 + 1;
-      if (var5 > DummyClass47.anInt1099) {
-        var5 = DummyClass47.anInt1099;
+      if (var5 > SoftwareIndexedColorSpriteStatics.anInt1099) {
+        var5 = SoftwareIndexedColorSpriteStatics.anInt1099;
       }
 
       int var6 = var4;
@@ -464,19 +459,19 @@ public final class DummyClass47 {
         }
 
         var12 = var0 - var8 + 1;
-        if (var12 < DummyClass47.anInt1093) {
-          var12 = DummyClass47.anInt1093;
+        if (var12 < SoftwareIndexedColorSpriteStatics.anInt1093) {
+          var12 = SoftwareIndexedColorSpriteStatics.anInt1093;
         }
 
         var13 = var0 + var8;
-        if (var13 > DummyClass47.anInt1096) {
-          var13 = DummyClass47.anInt1096;
+        if (var13 > SoftwareIndexedColorSpriteStatics.anInt1096) {
+          var13 = SoftwareIndexedColorSpriteStatics.anInt1096;
         }
 
-        var14 = var12 + var6 * DummyClass47.anInt1092;
+        var14 = var12 + var6 * SoftwareIndexedColorSpriteStatics.anInt1092;
 
         for (var15 = var12; var15 < var13; ++var15) {
-          DummyClass47.anIntArray1100[var14++] = var3;
+          SoftwareIndexedColorSpriteStatics.anIntArray1100[var14++] = var3;
         }
 
         ++var6;
@@ -496,19 +491,19 @@ public final class DummyClass47 {
         }
 
         var12 = var0 - var8;
-        if (var12 < DummyClass47.anInt1093) {
-          var12 = DummyClass47.anInt1093;
+        if (var12 < SoftwareIndexedColorSpriteStatics.anInt1093) {
+          var12 = SoftwareIndexedColorSpriteStatics.anInt1093;
         }
 
         var13 = var0 + var8;
-        if (var13 > DummyClass47.anInt1096 - 1) {
-          var13 = DummyClass47.anInt1096 - 1;
+        if (var13 > SoftwareIndexedColorSpriteStatics.anInt1096 - 1) {
+          var13 = SoftwareIndexedColorSpriteStatics.anInt1096 - 1;
         }
 
-        var14 = var12 + var6 * DummyClass47.anInt1092;
+        var14 = var12 + var6 * SoftwareIndexedColorSpriteStatics.anInt1092;
 
         for (var15 = var12; var15 <= var13; ++var15) {
-          DummyClass47.anIntArray1100[var14++] = var3;
+          SoftwareIndexedColorSpriteStatics.anIntArray1100[var14++] = var3;
         }
 
         ++var6;
@@ -532,13 +527,13 @@ public final class DummyClass47 {
         int var7 = (var3 >> 8 & 255) * var4;
         int var8 = (var3 & 255) * var4;
         int var12 = var1 - var2;
-        if (var12 < DummyClass47.anInt1095) {
-          var12 = DummyClass47.anInt1095;
+        if (var12 < SoftwareIndexedColorSpriteStatics.anInt1095) {
+          var12 = SoftwareIndexedColorSpriteStatics.anInt1095;
         }
 
         int var13 = var1 + var2 + 1;
-        if (var13 > DummyClass47.anInt1099) {
-          var13 = DummyClass47.anInt1099;
+        if (var13 > SoftwareIndexedColorSpriteStatics.anInt1099) {
+          var13 = SoftwareIndexedColorSpriteStatics.anInt1099;
         }
 
         int var14 = var12;
@@ -566,23 +561,23 @@ public final class DummyClass47 {
           }
 
           var20 = var0 - var16 + 1;
-          if (var20 < DummyClass47.anInt1093) {
-            var20 = DummyClass47.anInt1093;
+          if (var20 < SoftwareIndexedColorSpriteStatics.anInt1093) {
+            var20 = SoftwareIndexedColorSpriteStatics.anInt1093;
           }
 
           var21 = var0 + var16;
-          if (var21 > DummyClass47.anInt1096) {
-            var21 = DummyClass47.anInt1096;
+          if (var21 > SoftwareIndexedColorSpriteStatics.anInt1096) {
+            var21 = SoftwareIndexedColorSpriteStatics.anInt1096;
           }
 
-          var22 = var20 + var14 * DummyClass47.anInt1092;
+          var22 = var20 + var14 * SoftwareIndexedColorSpriteStatics.anInt1092;
 
           for (var23 = var20; var23 < var21; ++var23) {
-            var9 = (DummyClass47.anIntArray1100[var22] >> 16 & 255) * var5;
-            var10 = (DummyClass47.anIntArray1100[var22] >> 8 & 255) * var5;
-            var11 = (DummyClass47.anIntArray1100[var22] & 255) * var5;
+            var9 = (SoftwareIndexedColorSpriteStatics.anIntArray1100[var22] >> 16 & 255) * var5;
+            var10 = (SoftwareIndexedColorSpriteStatics.anIntArray1100[var22] >> 8 & 255) * var5;
+            var11 = (SoftwareIndexedColorSpriteStatics.anIntArray1100[var22] & 255) * var5;
             var24 = (var6 + var9 >> 8 << 16) + (var7 + var10 >> 8 << 8) + (var8 + var11 >> 8);
-            DummyClass47.anIntArray1100[var22++] = var24;
+            SoftwareIndexedColorSpriteStatics.anIntArray1100[var22++] = var24;
           }
 
           ++var14;
@@ -602,23 +597,23 @@ public final class DummyClass47 {
           }
 
           var20 = var0 - var16;
-          if (var20 < DummyClass47.anInt1093) {
-            var20 = DummyClass47.anInt1093;
+          if (var20 < SoftwareIndexedColorSpriteStatics.anInt1093) {
+            var20 = SoftwareIndexedColorSpriteStatics.anInt1093;
           }
 
           var21 = var0 + var16;
-          if (var21 > DummyClass47.anInt1096 - 1) {
-            var21 = DummyClass47.anInt1096 - 1;
+          if (var21 > SoftwareIndexedColorSpriteStatics.anInt1096 - 1) {
+            var21 = SoftwareIndexedColorSpriteStatics.anInt1096 - 1;
           }
 
-          var22 = var20 + var14 * DummyClass47.anInt1092;
+          var22 = var20 + var14 * SoftwareIndexedColorSpriteStatics.anInt1092;
 
           for (var23 = var20; var23 <= var21; ++var23) {
-            var9 = (DummyClass47.anIntArray1100[var22] >> 16 & 255) * var5;
-            var10 = (DummyClass47.anIntArray1100[var22] >> 8 & 255) * var5;
-            var11 = (DummyClass47.anIntArray1100[var22] & 255) * var5;
+            var9 = (SoftwareIndexedColorSpriteStatics.anIntArray1100[var22] >> 16 & 255) * var5;
+            var10 = (SoftwareIndexedColorSpriteStatics.anIntArray1100[var22] >> 8 & 255) * var5;
+            var11 = (SoftwareIndexedColorSpriteStatics.anIntArray1100[var22] & 255) * var5;
             var24 = (var6 + var9 >> 8 << 16) + (var7 + var10 >> 8 << 8) + (var8 + var11 >> 8);
-            DummyClass47.anIntArray1100[var22++] = var24;
+            SoftwareIndexedColorSpriteStatics.anIntArray1100[var22++] = var24;
           }
 
           ++var14;
@@ -630,30 +625,30 @@ public final class DummyClass47 {
   }
 
   public static void method1331() {
-    DummyClass47.anInt1093 = 0;
-    DummyClass47.anInt1095 = 0;
-    DummyClass47.anInt1096 = DummyClass47.anInt1092;
-    DummyClass47.anInt1099 = DummyClass47.anInt1094;
+    SoftwareIndexedColorSpriteStatics.anInt1093 = 0;
+    SoftwareIndexedColorSpriteStatics.anInt1095 = 0;
+    SoftwareIndexedColorSpriteStatics.anInt1096 = SoftwareIndexedColorSpriteStatics.anInt1092;
+    SoftwareIndexedColorSpriteStatics.anInt1099 = DummyClass47.anInt1094;
     DummyClass47.method1310();
   }
 
   public static void method1332(int var0, int var1, int var2, int[] var3, int[] var4) {
-    int var5 = var0 + var1 * DummyClass47.anInt1092;
+    int var5 = var0 + var1 * SoftwareIndexedColorSpriteStatics.anInt1092;
 
     for (var1 = 0; var1 < var3.length; ++var1) {
       int var6 = var5 + var3[var1];
 
       for (var0 = -var4[var1]; var0 < 0; ++var0) {
-        DummyClass47.anIntArray1100[var6++] = var2;
+        SoftwareIndexedColorSpriteStatics.anIntArray1100[var6++] = var2;
       }
 
-      var5 += DummyClass47.anInt1092;
+      var5 += SoftwareIndexedColorSpriteStatics.anInt1092;
     }
 
   }
 
   public static void method1333() {
-    DummyClass47.anIntArray1100 = null;
+    SoftwareIndexedColorSpriteStatics.anIntArray1100 = null;
     DummyClass47.anIntArray1097 = null;
     DummyClass47.anIntArray1098 = null;
   }

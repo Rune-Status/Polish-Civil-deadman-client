@@ -2,6 +2,7 @@ package com.jagex.runescape;
 
 import com.jagex.runescape.buffer.Buffer;
 import com.jagex.runescape.buffer.BufferStatics;
+import com.jagex.runescape.opengl.GLStatics;
 
 public final class TextureSampler8 extends AbstractTextureSampler {
 
@@ -10,7 +11,6 @@ public final class TextureSampler8 extends AbstractTextureSampler {
   public static int anInt3460;
   public static int anInt3463;
   public static int anInt3464;
-  public static int viewportLength;
   public static boolean[][] aBooleanArrayArray3468 = {
     {true, true, true}, {false, false}, {false, true}, {true, false}, {false, true, true},
     {true, false, true}, {false, true, false}, {true, false, false}
@@ -233,7 +233,7 @@ public final class TextureSampler8 extends AbstractTextureSampler {
   public static void method354(int var0, int var1) {
     TextureSampler13.anInt3362 = -1;
       if (var0 >= -121) {
-        TextureSampler8.viewportLength = -58;
+        GLStatics.viewportLength = -58;
       }
 
       SpawnedGameObject.anInt2251 = var1;

@@ -5,6 +5,7 @@ import com.jagex.runescape.common.GameString;
 import com.jagex.runescape.common.GameStringStatics;
 import com.jagex.runescape.node.Node;
 import com.jagex.runescape.opengl.DummyClass46;
+import com.jagex.runescape.opengl.GLStatics;
 import com.jagex.runescape.opengl.GlEnvironment;
 import com.jagex.runescape.opengl.GlRenderer;
 
@@ -79,28 +80,28 @@ public final class AudioSomethingSomething extends Node {
     MilliFrameRegulator.cameraPosX = cameraX;
     ClientScriptEnum.cameraY = cameraY;
     TextureSampler13.cameraZ = cameraZ;
-    TriChromaticImageCache.cameraTileX = cameraX / 128;
-    TextureSampler7.cameraTileZ = cameraZ / 128;
+    GLStatics.cameraTileX = cameraX / 128;
+    GLStatics.cameraTileZ = cameraZ / 128;
     DummyClass9.viewportLowerX =
-        TriChromaticImageCache.cameraTileX - TextureSampler8.viewportLength;
+        GLStatics.cameraTileX - GLStatics.viewportLength;
     if (DummyClass9.viewportLowerX < 0) {
       DummyClass9.viewportLowerX = 0;
     }
 
     AbstractObjectNode.viewportLowerZ =
-        TextureSampler7.cameraTileZ - TextureSampler8.viewportLength;
+        GLStatics.cameraTileZ - GLStatics.viewportLength;
     if (AbstractObjectNode.viewportLowerZ < 0) {
       AbstractObjectNode.viewportLowerZ = 0;
     }
 
     MapScene.viewportUpperX =
-        TriChromaticImageCache.cameraTileX + TextureSampler8.viewportLength;
+        GLStatics.cameraTileX + GLStatics.viewportLength;
     if (MapScene.viewportUpperX > SocketStream.sceneWidth) {
       MapScene.viewportUpperX = SocketStream.sceneWidth;
     }
 
     SomethingTilek.viewportUpperZ =
-        TextureSampler7.cameraTileZ + TextureSampler8.viewportLength;
+        GLStatics.cameraTileZ + GLStatics.viewportLength;
     if (SomethingTilek.viewportUpperZ > TextureSampler17.sceneHeight) {
       SomethingTilek.viewportUpperZ = TextureSampler17.sceneHeight;
     }
@@ -117,24 +118,24 @@ public final class AudioSomethingSomething extends Node {
     for (
         offsetX = 0;
         offsetX
-            < TextureSampler8.viewportLength + TextureSampler8.viewportLength
+            < GLStatics.viewportLength + GLStatics.viewportLength
             + 2; offsetX++) {
       for (
           offsetZ = 0;
           offsetZ
-              < TextureSampler8.viewportLength + TextureSampler8.viewportLength
+              < GLStatics.viewportLength + GLStatics.viewportLength
               + 2; offsetZ++) {
         int sceneX =
-            (offsetX - TextureSampler8.viewportLength << 7) - (
+            (offsetX - GLStatics.viewportLength << 7) - (
                 MilliFrameRegulator.cameraPosX & 127);
         int sceneZ =
-            (offsetZ - TextureSampler8.viewportLength << 7) - (
+            (offsetZ - GLStatics.viewportLength << 7) - (
                 TextureSampler13.cameraZ & 127);
         int sceneTileX =
-            offsetX + TriChromaticImageCache.cameraTileX
-                - TextureSampler8.viewportLength;
-        int sceneTileZ = offsetZ + TextureSampler7.cameraTileZ
-            - TextureSampler8.viewportLength;
+            offsetX + GLStatics.cameraTileX
+                - GLStatics.viewportLength;
+        int sceneTileZ = offsetZ + GLStatics.cameraTileZ
+            - GLStatics.viewportLength;
         if (sceneTileX >= 0 && sceneTileZ >= 0
             && sceneTileX < SocketStream.sceneWidth
             && sceneTileZ < TextureSampler17.sceneHeight) {
@@ -165,14 +166,14 @@ public final class AudioSomethingSomething extends Node {
     for (
         offsetX = 0;
         offsetX
-            < TextureSampler8.viewportLength + TextureSampler8.viewportLength
+            < GLStatics.viewportLength + GLStatics.viewportLength
             + 1; offsetX++) {
       for (
           offsetZ = 0;
           offsetZ
-              < TextureSampler8.viewportLength + TextureSampler8.viewportLength
+              < GLStatics.viewportLength + GLStatics.viewportLength
               + 1; offsetZ++) {
-        DummyClass30.adjacentTileOnScreen[offsetX][offsetZ] =
+        GLStatics.adjacentTileOnScreen[offsetX][offsetZ] =
             GZipDecompressor.tileOnScreen[offsetX][offsetZ]
                 || GZipDecompressor.tileOnScreen[offsetX
                 + 1][offsetZ] || GZipDecompressor.tileOnScreen[offsetX][offsetZ
@@ -193,8 +194,8 @@ public final class AudioSomethingSomething extends Node {
           .drawScene(cameraX, cameraY, cameraZ, null, 0, (byte) 0, var13,
               var14);
       if (GlRenderer.useOpenGlRenderer) {
-        TextureSampler23.aBoolean3207 = false;
-        SomethingQuickChat.method551(0, 0, 0);
+        GLStatics.aBoolean3207 = false;
+        GLStatics.method551(0, 0, 0);
         GlEnvironment.setFogColor(null);
         DummyClass46.disableLights();
       }

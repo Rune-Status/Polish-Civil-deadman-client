@@ -4,13 +4,13 @@ import com.jagex.runescape.buffer.Buffer;
 import com.jagex.runescape.common.GameString;
 import com.jagex.runescape.common.GameStringStatics;
 import com.jagex.runescape.common.HashTable;
+import com.jagex.runescape.opengl.GLStatics;
 import com.jagex.runescape.opengl.SomethingGl0;
 
 public final class TextureSampler7 extends AbstractTextureSampler {
 
   public static long serverCipherKey;
   public static GameString aClass94_3339 = GameStringStatics.create("null");
-  public static int cameraTileZ;
   public static GameString[] aClass94Array3341 = new GameString[100];
   public static int anInt3342;
   public static GameString aClass94_3344 = GameStringStatics.create(
@@ -300,7 +300,7 @@ public final class TextureSampler7 extends AbstractTextureSampler {
   public static void method296(byte var0) {
     TextureSampler7.aClass94Array3341 = null;
       if (var0 >= -56) {
-        TextureSampler7.cameraTileZ = 30;
+        GLStatics.cameraTileZ = 30;
       }
 
       TextureSampler7.aClass94_3344 = null;

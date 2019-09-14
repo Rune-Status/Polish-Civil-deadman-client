@@ -3,6 +3,7 @@ package com.jagex.runescape;
 import com.jagex.runescape.buffer.Buffer;
 import com.jagex.runescape.common.GameString;
 import com.jagex.runescape.common.GameStringStatics;
+import com.jagex.runescape.opengl.GLStatics;
 import com.jagex.runescape.opengl.GlRenderer;
 import com.jagex.runescape.opengl.MaterialShader5;
 
@@ -198,7 +199,7 @@ public final class TextureSampler13 extends AbstractTextureSampler {
       StringNode0.method142(true);
       HashTableIterator.aClass93_1135.method1524(3);
       if (!GlRenderer.useOpenGlRenderer) {
-        ((TextureCache) DummyClass40.textureCache).method1618(0);
+        ((TextureCache) GLStatics.textureCache).method1618(0);
       }
 
       DummyClass42.aClass47_885.method1101(2);

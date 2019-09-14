@@ -2,6 +2,7 @@ package com.jagex.runescape;
 
 import com.jagex.runescape.common.GameString;
 import com.jagex.runescape.common.GameStringStatics;
+import com.jagex.runescape.opengl.GLStatics;
 import com.jagex.runescape.opengl.GlModel;
 import com.jagex.runescape.opengl.GlRenderer;
 
@@ -10,7 +11,6 @@ public final class DummyHashTable {
   private static GameString aClass94_1686 = GameStringStatics.create("shake:");
   public static int anInt1682 = 1;
   public static ObjectCache aClass93_1683 = new ObjectCache(64);
-  public static boolean aBoolean1685 = true;
   public static GameString aClass94_1687 = GameStringStatics.create("(Z");
   public static GameString aClass94_1688 = DummyHashTable.aClass94_1686;
   public static GameString aClass94_1689 = DummyHashTable.aClass94_1686;
@@ -158,10 +158,10 @@ public final class DummyHashTable {
   }
 
   public static void method1764(int var0, int var1, int var2) {
-    for (int var3 = 0; var3 < AnimationFrame.anInt2456; ++var3) {
+    for (int var3 = 0; var3 < GLStatics.anInt2456; ++var3) {
       for (int var4 = 0; var4 < SocketStream.sceneWidth; ++var4) {
         for (int var5 = 0; var5 < TextureSampler17.sceneHeight; ++var5) {
-          SceneGraphTile var6 = SomethingTexture1.sceneGraphTiles[var3][var4][var5];
+          SceneGraphTile var6 = GLStatics.sceneGraphTiles[var3][var4][var5];
           if (var6 != null) {
             SceneSomething2 var7 = var6.aClass70_2234;
             if (var7 != null && var7.sceneNode0.method1865()) {

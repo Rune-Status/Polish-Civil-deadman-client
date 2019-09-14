@@ -4,6 +4,7 @@ import com.jagex.runescape.common.GameString;
 import com.jagex.runescape.common.GameStringStatics;
 import com.jagex.runescape.common.HashTable;
 import com.jagex.runescape.node.Node;
+import com.jagex.runescape.opengl.GLStatics;
 import java.awt.Color;
 import java.awt.Component;
 import java.awt.Graphics;
@@ -15,7 +16,6 @@ public final class HashTableIterator {
   public static GameString aClass94_1133 = GameStringStatics.create(")4j");
   public static ObjectCache aClass93_1135 = new ObjectCache(4);
   public static AbstractDirectColorSprite[] aClass3_Sub28_Sub16Array1136;
-  public static int anInt1137 = 2;
   public static int[] anIntArray1138;
   private Node iterator;
   private int anInt1132;
@@ -62,7 +62,7 @@ public final class HashTableIterator {
   }
 
   public static long method1395(int var0, int var1, int var2) {
-    SceneGraphTile var3 = SomethingTexture1.sceneGraphTiles[var0][var1][var2];
+    SceneGraphTile var3 = GLStatics.sceneGraphTiles[var0][var1][var2];
     return var3 != null && var3.aClass19_2233 != null ? var3.aClass19_2233.aLong428 : 0L;
   }
 

@@ -2,6 +2,7 @@ package com.jagex.runescape;
 
 import com.jagex.runescape.common.GameString;
 import com.jagex.runescape.common.GameStringStatics;
+import com.jagex.runescape.opengl.GLStatics;
 
 public final class DummyClass22 {
 
@@ -37,7 +38,7 @@ public final class DummyClass22 {
       }
 
       if ((var1.anInt2263 == 3)) {
-        var2 = SceneGraphTile.method104(var1.anInt2250, var1.anInt2264, var1.anInt2248);
+        var2 = GLStatics.method104(var1.anInt2250, var1.anInt2264, var1.anInt2248);
       }
 
       if (var2 != 0L) {

@@ -3,6 +3,7 @@ package com.jagex.runescape;
 import com.jagex.runescape.common.GameString;
 import com.jagex.runescape.common.GameStringStatics;
 import com.jagex.runescape.node.Node;
+import com.jagex.runescape.opengl.GLStatics;
 import com.jagex.runescape.opengl.GlRenderer;
 import com.jagex.runescape.opengl.GlTexture2d;
 import com.jagex.runescape.opengl.SomethingGl0;
@@ -39,7 +40,7 @@ public final class SpawnedGameObject extends Node {
         ++var2;
       }
 
-      if (var0.isLoaded(GameClient.anInt2195)) {
+      if (var0.isLoaded(GlobalStatics_1.anInt2195)) {
         ++var2;
       }
 
@@ -113,13 +114,13 @@ public final class SpawnedGameObject extends Node {
                                     boolean var4) {
     SocketStream.sceneWidth = sceneWidth;
     TextureSampler17.sceneHeight = sceneHeight;
-    TextureSampler8.viewportLength = viewportLength;
+    GLStatics.viewportLength = viewportLength;
     OndemandFileRequest.tiles =
       new SceneGraphTile[planes][SocketStream.sceneWidth][TextureSampler17.sceneHeight];
     DummyClass43.somethingHeightMap =
       new int[planes][SocketStream.sceneWidth + 1][TextureSampler17.sceneHeight + 1];
     if (GlRenderer.useOpenGlRenderer) {
-      GameClient.aClass3_Sub11ArrayArray2199 = new SomethingGl0[4][];
+      GLStatics.aClass3_Sub11ArrayArray2199 = new SomethingGl0[4][];
     }
 
     if (var4) {
@@ -149,12 +150,12 @@ public final class SpawnedGameObject extends Node {
     AnimationSequence.aClass25Array1868 = new SceneSomething[5000];
     TextureSampler21.anInt3070 = 0;
     FileCacheRequest.aClass25Array4060 = new SceneSomething[100];
-    DummyClass30.adjacentTileOnScreen =
-      new boolean[TextureSampler8.viewportLength + TextureSampler8.viewportLength + 1][
-        TextureSampler8.viewportLength + TextureSampler8.viewportLength + 1];
+    GLStatics.adjacentTileOnScreen =
+      new boolean[GLStatics.viewportLength + GLStatics.viewportLength + 1][
+        GLStatics.viewportLength + GLStatics.viewportLength + 1];
     GZipDecompressor.tileOnScreen =
-      new boolean[TextureSampler8.viewportLength + TextureSampler8.viewportLength + 2][
-        TextureSampler8.viewportLength + TextureSampler8.viewportLength + 2];
+      new boolean[GLStatics.viewportLength + GLStatics.viewportLength + 2][
+        GLStatics.viewportLength + GLStatics.viewportLength + 2];
     SceneShadowMap.aByteArrayArrayArray1774 =
       new byte[planes][SocketStream.sceneWidth][TextureSampler17.sceneHeight];
   }

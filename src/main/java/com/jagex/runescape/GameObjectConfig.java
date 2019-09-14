@@ -6,8 +6,10 @@ import com.jagex.runescape.common.GameStringStatics;
 import com.jagex.runescape.common.HashTable;
 import com.jagex.runescape.common.StringNode;
 import com.jagex.runescape.node.Node;
+import com.jagex.runescape.opengl.GLStatics;
 import com.jagex.runescape.opengl.GlModel;
 import com.jagex.runescape.opengl.GlRenderer;
+import com.jagex.runescape.sprite.SoftwareIndexedColorSprite;
 
 public final class GameObjectConfig {
 
@@ -1175,7 +1177,7 @@ public final class GameObjectConfig {
   }
 
   public static SomethingScene method1688(int var0, int var1, int var2) {
-    SceneGraphTile var3 = SomethingTexture1.sceneGraphTiles[var0][var1][var2];
+    SceneGraphTile var3 = GLStatics.sceneGraphTiles[var0][var1][var2];
     if (var3 == null) {
       return null;
     } else {

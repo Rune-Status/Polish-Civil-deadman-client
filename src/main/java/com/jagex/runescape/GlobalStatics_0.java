@@ -1,15 +1,19 @@
 package com.jagex.runescape;
 
 import com.jagex.runescape.buffer.Buffer;
+import com.jagex.runescape.buffer.BufferStatics;
 import com.jagex.runescape.common.ArrayUtils;
 import com.jagex.runescape.common.GameString;
 import com.jagex.runescape.common.GameStringStatics;
 import com.jagex.runescape.opengl.DummyClass46;
+import com.jagex.runescape.opengl.GLStatics;
 import com.jagex.runescape.opengl.GlDirectColorSprite;
 import com.jagex.runescape.opengl.GlRenderer;
 import com.jagex.runescape.opengl.GlTexture2d;
 import com.jagex.runescape.opengl.GlUtils;
 import com.jagex.runescape.opengl.MaterialShader5;
+import com.jagex.runescape.sprite.SoftwareIndexedColorSprite;
+import com.jagex.runescape.sprite.SoftwareIndexedColorSpriteStatics;
 import java.nio.charset.StandardCharsets;
 
 public final class GlobalStatics_0 {
@@ -27,7 +31,6 @@ public final class GlobalStatics_0 {
   public static GameString aClass94_2594 =
       GameStringStatics.create("Polices charg-Bes");
   public static GameString[] aClass94Array2596;
-  public static int[] anIntArray634 = new int[256];
   public static AbstractDirectColorSprite aClass3_Sub28_Sub16_637;
   public static int anInt638;
   public static int anInt639;
@@ -104,7 +107,7 @@ public final class GlobalStatics_0 {
         }
       }
 
-      GlobalStatics_0.anIntArray634[var1] = var0;
+      BufferStatics.anIntArray634[var1] = var0;
     }
 
     GlobalStatics_0.anInt639 = 0;
@@ -397,7 +400,7 @@ public final class GlobalStatics_0 {
   }
 
   public static SomethingSceneJ method784(int var0, int var1, int var2) {
-    SceneGraphTile var3 = SomethingTexture1.sceneGraphTiles[var0][var1][var2];
+    SceneGraphTile var3 = GLStatics.sceneGraphTiles[var0][var1][var2];
     return var3 != null && var3.aClass12_2230 != null ? var3.aClass12_2230
         : null;
   }
@@ -483,7 +486,7 @@ public final class GlobalStatics_0 {
         GlUtils.drawImage(
             TextureSampler4.aClass3_Sub28_Sub16_Sub2_3221.pixels, var0, var2,
             var4, var3);
-        DummyClass47.anIntArray1100 = null;
+        SoftwareIndexedColorSpriteStatics.anIntArray1100 = null;
       } else {
         SubNode.method523(var4 + var0, var2, 0, var7, var6, var0, var8,
             var2 + var3, var15);
@@ -605,7 +608,7 @@ public final class GlobalStatics_0 {
       FloorOverlay var5 = TextureSampler10.method350((byte) 120, var4);
       if (var5 != null) {
         int var6 = var5.anInt2095;
-        if (var6 >= 0 && !DummyClass40.textureCache.method17(var6, 126)) {
+        if (var6 >= 0 && !GLStatics.textureCache.method17(var6, 126)) {
           var6 = -1;
         }
 
@@ -616,7 +619,7 @@ public final class GlobalStatics_0 {
         if ((var5.anInt2098 < 0)) {
           if (var6 >= 0) {
             var7 = DummyClass40.hslTable[method729((byte) -74,
-                DummyClass40.textureCache.method15(var6, '\uffff'), 96)];
+                GLStatics.textureCache.method15(var6, '\uffff'), 96)];
           } else if (var5.anInt2103 == -1) {
             var7 = -1;
           } else {
@@ -655,7 +658,7 @@ public final class GlobalStatics_0 {
       anInt638 = 33;
     }
 
-    anIntArray634 = null;
+    BufferStatics.anIntArray634 = null;
     aClass3_Sub28_Sub16_637 = null;
   }
 
@@ -788,7 +791,7 @@ public final class GlobalStatics_0 {
           var14 = var4;
         }
 
-        var15 = DummyClass47.anIntArray1100;
+        var15 = SoftwareIndexedColorSpriteStatics.anIntArray1100;
         var16 = 4 * (-(var3 * 512) + '\uce00') + var1 * 4 + 24624;
         if (var11 == 0 || var11 == 2) {
           if ((var10 == 0)) {
@@ -885,7 +888,7 @@ public final class GlobalStatics_0 {
         }
 
         var16 = var1 * 4 + (24624 + (2048 * (103 - var3)));
-        var15 = DummyClass47.anIntArray1100;
+        var15 = SoftwareIndexedColorSpriteStatics.anIntArray1100;
         if ((var10 != 0) && (var10 != 2)) {
           var15[var16] = var14;
           var15[var16 + 512 + 1] = var14;
@@ -900,7 +903,7 @@ public final class GlobalStatics_0 {
       }
     }
 
-    var8 = SceneGraphTile.method104(var6, var1 + var5, var3 + var0);
+    var8 = GLStatics.method104(var6, var1 + var5, var3 + var0);
     if (var8 != 0L) {
       var10 = (int) var8 >> 20 & 3;
       var11 = (int) (var8 >>> 32) & Integer.MAX_VALUE;
@@ -1014,8 +1017,8 @@ public final class GlobalStatics_0 {
         }
       }
 
-      int[] var11 = DummyClass47.anIntArray1100;
-      int var12 = DummyClass47.anInt1092;
+      int[] var11 = SoftwareIndexedColorSpriteStatics.anIntArray1100;
+      int var12 = SoftwareIndexedColorSpriteStatics.anInt1092;
       int var13 = DummyClass47.anInt1094;
       int[] var14 = new int[4];
       DummyClass47.method1325(var14);

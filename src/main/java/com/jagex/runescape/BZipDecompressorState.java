@@ -133,11 +133,11 @@ public final class BZipDecompressorState {
       TextureSampler36.aClass94_3426 = Keyboard.aClass94_1907;
       DummyClass30.aClass94_459 = AnimationSomething.aClass94_3585;
       SubNode.aClass94_2576 = BufferObject.aClass94_1882;
-      SceneGraphTile.aClass94_2216 = GlobalStatics_0.aClass94_1179;
+      GlobalStatics_2.aClass94_2216 = GlobalStatics_0.aClass94_1179;
       GlTexture2d.aClass94_3762 = TextureSampler31.aClass94_3172;
       TextureSampler30.aClass94_3117 = DummyClass4.aClass94_3002;
       FileCacheRequest.aClass94_4058 = TextureSampler20.aClass94_3146;
-      GameClient.aClass94_2196 = DummyClass58.aClass94_1459;
+      GlobalStatics_1.aClass94_2196 = DummyClass58.aClass94_1459;
       Structure.aClass94_3643 = AbstractObjectNodeWrapper.aClass94_1621;
       NPC.aClass94_3988 = Light.aClass94_699;
       DummyClass27.aClass94_1583 = SomethingTilek.OK;

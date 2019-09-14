@@ -3,6 +3,7 @@ package com.jagex.runescape;
 import com.jagex.runescape.buffer.Buffer;
 import com.jagex.runescape.common.GameString;
 import com.jagex.runescape.common.GameStringStatics;
+import com.jagex.runescape.opengl.GLStatics;
 import com.jagex.runescape.opengl.GlRenderer;
 import com.jagex.runescape.opengl.SomethingGl0;
 import java.awt.Component;
@@ -244,7 +245,7 @@ public final class OndemandFileRequest extends AbstractFileRequest {
             DummyClass1.gameThread.setPriority(5);
             Something3d.viewImageProducer = null;
             GlobalStatics_1.method1935();
-            ((TextureCache) DummyClass40.textureCache).method1619(200, -1);
+            ((TextureCache) GLStatics.textureCache).method1619(200, -1);
             if (DisplayMode.useBumpMaps) {
               DummyClass40.updateLightness(0.7F);
             }
@@ -257,7 +258,7 @@ public final class OndemandFileRequest extends AbstractFileRequest {
                     GameCanvas.INSTANCE);
             GlobalStatics_1.method1938();
             DummyClass0.method1756();
-            ((TextureCache) DummyClass40.textureCache).method1619(20, -1);
+            ((TextureCache) GLStatics.textureCache).method1619(20, -1);
             if (DisplayMode.useBumpMaps) {
               if (AbstractFileRequest.brightnessSetting == 1) {
                 DummyClass40.updateLightness(0.9F);

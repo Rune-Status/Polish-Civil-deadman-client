@@ -1,5 +1,8 @@
 package com.jagex.runescape;
 
+import com.jagex.runescape.opengl.GLStatics;
+import com.jagex.runescape.sprite.SoftwareIndexedColorSpriteStatics;
+
 public final class DummyClass40 {
 
   private static int[] anIntArray836 = new int[1024];
@@ -11,7 +14,6 @@ public final class DummyClass40 {
   public static int[] hslTable = new int[65536];
   public static int anInt835;
   public static boolean aBoolean837;
-  public static ITextureCache textureCache;
   public static int[] SINE_TABLE = new int[2048];
   public static int[] anIntArray841 = new int[2048];
   public static boolean aBoolean843 = true;
@@ -40,23 +42,23 @@ public final class DummyClass40 {
 
   public static void method1134() {
     DummyClass40
-        .method1151(DummyClass47.anInt1093, DummyClass47.anInt1095, DummyClass47.anInt1096,
-      DummyClass47.anInt1099);
+        .method1151(SoftwareIndexedColorSpriteStatics.anInt1093, SoftwareIndexedColorSpriteStatics.anInt1095, SoftwareIndexedColorSpriteStatics.anInt1096,
+      SoftwareIndexedColorSpriteStatics.anInt1099);
   }
 
   public static void method1135(int var0, int var1, int var2, int var3, int var4, int var5, int var6,
                                int var7, int var8, int var9, int var10, int var11, int var12,
                                int var13, int var14, int var15, int var16, int var17, int var18) {
-    int[] var19 = DummyClass40.textureCache.method13(var18, true, DummyClass40.brightness);
+    int[] var19 = GLStatics.textureCache.method13(var18, true, DummyClass40.brightness);
     int var20;
     if (var19 == null) {
-      var20 = DummyClass40.textureCache.method15(var18, '\uffff');
+      var20 = GLStatics.textureCache.method15(var18, '\uffff');
       DummyClass40.method1154(var0, var1, var2, var3, var4, var5,
           DummyClass40.method1136(var20, var6),
           DummyClass40.method1136(var20, var7), DummyClass40.method1136(var20, var8));
     } else {
-      DummyClass40.aBoolean845 = DummyClass40.textureCache.method14((byte) -106, var18);
-      DummyClass40.aBoolean842 = DummyClass40.textureCache.method7((byte) 88, var18);
+      DummyClass40.aBoolean845 = GLStatics.textureCache.method14((byte) -106, var18);
+      DummyClass40.aBoolean842 = GLStatics.textureCache.method7((byte) 88, var18);
       var20 = var4 - var3;
       int var21 = var1 - var0;
       int var22 = var5 - var3;
@@ -143,12 +145,12 @@ public final class DummyClass40 {
                       }
 
                       DummyClass40
-                          .method1143(DummyClass47.anIntArray1100, var19, 0, 0, var0, var4 >> 16,
+                          .method1143(SoftwareIndexedColorSpriteStatics.anIntArray1100, var19, 0, 0, var0, var4 >> 16,
                         var5 >> 16, var6, var30, var32, var35, var38, var33, var36, var39);
                       var5 += var28;
                       var4 += var27;
                       var6 += var31;
-                      var0 += DummyClass47.anInt1092;
+                      var0 += SoftwareIndexedColorSpriteStatics.anInt1092;
                       var32 += var34;
                       var35 += var37;
                       var38 += var40;
@@ -156,12 +158,12 @@ public final class DummyClass40 {
                   }
 
                   DummyClass40
-                      .method1143(DummyClass47.anIntArray1100, var19, 0, 0, var0, var3 >> 16, var5 >> 16,
+                      .method1143(SoftwareIndexedColorSpriteStatics.anIntArray1100, var19, 0, 0, var0, var3 >> 16, var5 >> 16,
                     var6, var30, var32, var35, var38, var33, var36, var39);
                   var5 += var28;
                   var3 += var26;
                   var6 += var31;
-                  var0 += DummyClass47.anInt1092;
+                  var0 += SoftwareIndexedColorSpriteStatics.anInt1092;
                   var32 += var34;
                   var35 += var37;
                   var38 += var40;
@@ -181,12 +183,12 @@ public final class DummyClass40 {
                       }
 
                       DummyClass40
-                          .method1143(DummyClass47.anIntArray1100, var19, 0, 0, var0, var5 >> 16,
+                          .method1143(SoftwareIndexedColorSpriteStatics.anIntArray1100, var19, 0, 0, var0, var5 >> 16,
                         var4 >> 16, var6, var30, var32, var35, var38, var33, var36, var39);
                       var5 += var28;
                       var4 += var27;
                       var6 += var31;
-                      var0 += DummyClass47.anInt1092;
+                      var0 += SoftwareIndexedColorSpriteStatics.anInt1092;
                       var32 += var34;
                       var35 += var37;
                       var38 += var40;
@@ -194,12 +196,12 @@ public final class DummyClass40 {
                   }
 
                   DummyClass40
-                      .method1143(DummyClass47.anIntArray1100, var19, 0, 0, var0, var5 >> 16, var3 >> 16,
+                      .method1143(SoftwareIndexedColorSpriteStatics.anIntArray1100, var19, 0, 0, var0, var5 >> 16, var3 >> 16,
                     var6, var30, var32, var35, var38, var33, var36, var39);
                   var5 += var28;
                   var3 += var26;
                   var6 += var31;
-                  var0 += DummyClass47.anInt1092;
+                  var0 += SoftwareIndexedColorSpriteStatics.anInt1092;
                   var32 += var34;
                   var35 += var37;
                   var38 += var40;
@@ -239,12 +241,12 @@ public final class DummyClass40 {
                       }
 
                       DummyClass40
-                          .method1143(DummyClass47.anIntArray1100, var19, 0, 0, var0, var3 >> 16,
+                          .method1143(SoftwareIndexedColorSpriteStatics.anIntArray1100, var19, 0, 0, var0, var3 >> 16,
                         var5 >> 16, var6, var30, var32, var35, var38, var33, var36, var39);
                       var5 += var27;
                       var3 += var26;
                       var6 += var31;
-                      var0 += DummyClass47.anInt1092;
+                      var0 += SoftwareIndexedColorSpriteStatics.anInt1092;
                       var32 += var34;
                       var35 += var37;
                       var38 += var40;
@@ -252,12 +254,12 @@ public final class DummyClass40 {
                   }
 
                   DummyClass40
-                      .method1143(DummyClass47.anIntArray1100, var19, 0, 0, var0, var3 >> 16, var4 >> 16,
+                      .method1143(SoftwareIndexedColorSpriteStatics.anIntArray1100, var19, 0, 0, var0, var3 >> 16, var4 >> 16,
                     var6, var30, var32, var35, var38, var33, var36, var39);
                   var4 += var28;
                   var3 += var26;
                   var6 += var31;
-                  var0 += DummyClass47.anInt1092;
+                  var0 += SoftwareIndexedColorSpriteStatics.anInt1092;
                   var32 += var34;
                   var35 += var37;
                   var38 += var40;
@@ -277,12 +279,12 @@ public final class DummyClass40 {
                       }
 
                       DummyClass40
-                          .method1143(DummyClass47.anIntArray1100, var19, 0, 0, var0, var5 >> 16,
+                          .method1143(SoftwareIndexedColorSpriteStatics.anIntArray1100, var19, 0, 0, var0, var5 >> 16,
                         var3 >> 16, var6, var30, var32, var35, var38, var33, var36, var39);
                       var5 += var27;
                       var3 += var26;
                       var6 += var31;
-                      var0 += DummyClass47.anInt1092;
+                      var0 += SoftwareIndexedColorSpriteStatics.anInt1092;
                       var32 += var34;
                       var35 += var37;
                       var38 += var40;
@@ -290,12 +292,12 @@ public final class DummyClass40 {
                   }
 
                   DummyClass40
-                      .method1143(DummyClass47.anIntArray1100, var19, 0, 0, var0, var4 >> 16, var3 >> 16,
+                      .method1143(SoftwareIndexedColorSpriteStatics.anIntArray1100, var19, 0, 0, var0, var4 >> 16, var3 >> 16,
                     var6, var30, var32, var35, var38, var33, var36, var39);
                   var4 += var28;
                   var3 += var26;
                   var6 += var31;
-                  var0 += DummyClass47.anInt1092;
+                  var0 += SoftwareIndexedColorSpriteStatics.anInt1092;
                   var32 += var34;
                   var35 += var37;
                   var38 += var40;
@@ -348,12 +350,12 @@ public final class DummyClass40 {
                       }
 
                       DummyClass40
-                          .method1143(DummyClass47.anIntArray1100, var19, 0, 0, var1, var5 >> 16,
+                          .method1143(SoftwareIndexedColorSpriteStatics.anIntArray1100, var19, 0, 0, var1, var5 >> 16,
                         var3 >> 16, var7, var30, var32, var35, var38, var33, var36, var39);
                       var3 += var26;
                       var5 += var28;
                       var7 += var31;
-                      var1 += DummyClass47.anInt1092;
+                      var1 += SoftwareIndexedColorSpriteStatics.anInt1092;
                       var32 += var34;
                       var35 += var37;
                       var38 += var40;
@@ -361,12 +363,12 @@ public final class DummyClass40 {
                   }
 
                   DummyClass40
-                      .method1143(DummyClass47.anIntArray1100, var19, 0, 0, var1, var4 >> 16, var3 >> 16,
+                      .method1143(SoftwareIndexedColorSpriteStatics.anIntArray1100, var19, 0, 0, var1, var4 >> 16, var3 >> 16,
                     var7, var30, var32, var35, var38, var33, var36, var39);
                   var3 += var26;
                   var4 += var27;
                   var7 += var31;
-                  var1 += DummyClass47.anInt1092;
+                  var1 += SoftwareIndexedColorSpriteStatics.anInt1092;
                   var32 += var34;
                   var35 += var37;
                   var38 += var40;
@@ -386,12 +388,12 @@ public final class DummyClass40 {
                       }
 
                       DummyClass40
-                          .method1143(DummyClass47.anIntArray1100, var19, 0, 0, var1, var3 >> 16,
+                          .method1143(SoftwareIndexedColorSpriteStatics.anIntArray1100, var19, 0, 0, var1, var3 >> 16,
                         var5 >> 16, var7, var30, var32, var35, var38, var33, var36, var39);
                       var3 += var26;
                       var5 += var28;
                       var7 += var31;
-                      var1 += DummyClass47.anInt1092;
+                      var1 += SoftwareIndexedColorSpriteStatics.anInt1092;
                       var32 += var34;
                       var35 += var37;
                       var38 += var40;
@@ -399,12 +401,12 @@ public final class DummyClass40 {
                   }
 
                   DummyClass40
-                      .method1143(DummyClass47.anIntArray1100, var19, 0, 0, var1, var3 >> 16, var4 >> 16,
+                      .method1143(SoftwareIndexedColorSpriteStatics.anIntArray1100, var19, 0, 0, var1, var3 >> 16, var4 >> 16,
                     var7, var30, var32, var35, var38, var33, var36, var39);
                   var3 += var26;
                   var4 += var27;
                   var7 += var31;
-                  var1 += DummyClass47.anInt1092;
+                  var1 += SoftwareIndexedColorSpriteStatics.anInt1092;
                   var32 += var34;
                   var35 += var37;
                   var38 += var40;
@@ -444,12 +446,12 @@ public final class DummyClass40 {
                       }
 
                       DummyClass40
-                          .method1143(DummyClass47.anIntArray1100, var19, 0, 0, var1, var3 >> 16,
+                          .method1143(SoftwareIndexedColorSpriteStatics.anIntArray1100, var19, 0, 0, var1, var3 >> 16,
                         var4 >> 16, var7, var30, var32, var35, var38, var33, var36, var39);
                       var3 += var28;
                       var4 += var27;
                       var7 += var31;
-                      var1 += DummyClass47.anInt1092;
+                      var1 += SoftwareIndexedColorSpriteStatics.anInt1092;
                       var32 += var34;
                       var35 += var37;
                       var38 += var40;
@@ -457,12 +459,12 @@ public final class DummyClass40 {
                   }
 
                   DummyClass40
-                      .method1143(DummyClass47.anIntArray1100, var19, 0, 0, var1, var5 >> 16, var4 >> 16,
+                      .method1143(SoftwareIndexedColorSpriteStatics.anIntArray1100, var19, 0, 0, var1, var5 >> 16, var4 >> 16,
                     var7, var30, var32, var35, var38, var33, var36, var39);
                   var5 += var26;
                   var4 += var27;
                   var7 += var31;
-                  var1 += DummyClass47.anInt1092;
+                  var1 += SoftwareIndexedColorSpriteStatics.anInt1092;
                   var32 += var34;
                   var35 += var37;
                   var38 += var40;
@@ -482,12 +484,12 @@ public final class DummyClass40 {
                       }
 
                       DummyClass40
-                          .method1143(DummyClass47.anIntArray1100, var19, 0, 0, var1, var4 >> 16,
+                          .method1143(SoftwareIndexedColorSpriteStatics.anIntArray1100, var19, 0, 0, var1, var4 >> 16,
                         var3 >> 16, var7, var30, var32, var35, var38, var33, var36, var39);
                       var3 += var28;
                       var4 += var27;
                       var7 += var31;
-                      var1 += DummyClass47.anInt1092;
+                      var1 += SoftwareIndexedColorSpriteStatics.anInt1092;
                       var32 += var34;
                       var35 += var37;
                       var38 += var40;
@@ -495,12 +497,12 @@ public final class DummyClass40 {
                   }
 
                   DummyClass40
-                      .method1143(DummyClass47.anIntArray1100, var19, 0, 0, var1, var4 >> 16, var5 >> 16,
+                      .method1143(SoftwareIndexedColorSpriteStatics.anIntArray1100, var19, 0, 0, var1, var4 >> 16, var5 >> 16,
                     var7, var30, var32, var35, var38, var33, var36, var39);
                   var5 += var26;
                   var4 += var27;
                   var7 += var31;
-                  var1 += DummyClass47.anInt1092;
+                  var1 += SoftwareIndexedColorSpriteStatics.anInt1092;
                   var32 += var34;
                   var35 += var37;
                   var38 += var40;
@@ -552,12 +554,12 @@ public final class DummyClass40 {
                     }
 
                     DummyClass40
-                        .method1143(DummyClass47.anIntArray1100, var19, 0, 0, var2, var4 >> 16,
+                        .method1143(SoftwareIndexedColorSpriteStatics.anIntArray1100, var19, 0, 0, var2, var4 >> 16,
                       var3 >> 16, var8, var30, var32, var35, var38, var33, var36, var39);
                     var4 += var27;
                     var3 += var26;
                     var8 += var31;
-                    var2 += DummyClass47.anInt1092;
+                    var2 += SoftwareIndexedColorSpriteStatics.anInt1092;
                     var32 += var34;
                     var35 += var37;
                     var38 += var40;
@@ -565,12 +567,12 @@ public final class DummyClass40 {
                 }
 
                 DummyClass40
-                    .method1143(DummyClass47.anIntArray1100, var19, 0, 0, var2, var4 >> 16, var5 >> 16,
+                    .method1143(SoftwareIndexedColorSpriteStatics.anIntArray1100, var19, 0, 0, var2, var4 >> 16, var5 >> 16,
                   var8, var30, var32, var35, var38, var33, var36, var39);
                 var4 += var27;
                 var5 += var28;
                 var8 += var31;
-                var2 += DummyClass47.anInt1092;
+                var2 += SoftwareIndexedColorSpriteStatics.anInt1092;
                 var32 += var34;
                 var35 += var37;
                 var38 += var40;
@@ -590,12 +592,12 @@ public final class DummyClass40 {
                     }
 
                     DummyClass40
-                        .method1143(DummyClass47.anIntArray1100, var19, 0, 0, var2, var3 >> 16,
+                        .method1143(SoftwareIndexedColorSpriteStatics.anIntArray1100, var19, 0, 0, var2, var3 >> 16,
                       var4 >> 16, var8, var30, var32, var35, var38, var33, var36, var39);
                     var4 += var27;
                     var3 += var26;
                     var8 += var31;
-                    var2 += DummyClass47.anInt1092;
+                    var2 += SoftwareIndexedColorSpriteStatics.anInt1092;
                     var32 += var34;
                     var35 += var37;
                     var38 += var40;
@@ -603,12 +605,12 @@ public final class DummyClass40 {
                 }
 
                 DummyClass40
-                    .method1143(DummyClass47.anIntArray1100, var19, 0, 0, var2, var5 >> 16, var4 >> 16,
+                    .method1143(SoftwareIndexedColorSpriteStatics.anIntArray1100, var19, 0, 0, var2, var5 >> 16, var4 >> 16,
                   var8, var30, var32, var35, var38, var33, var36, var39);
                 var4 += var27;
                 var5 += var28;
                 var8 += var31;
-                var2 += DummyClass47.anInt1092;
+                var2 += SoftwareIndexedColorSpriteStatics.anInt1092;
                 var32 += var34;
                 var35 += var37;
                 var38 += var40;
@@ -648,12 +650,12 @@ public final class DummyClass40 {
                     }
 
                     DummyClass40
-                        .method1143(DummyClass47.anIntArray1100, var19, 0, 0, var2, var4 >> 16,
+                        .method1143(SoftwareIndexedColorSpriteStatics.anIntArray1100, var19, 0, 0, var2, var4 >> 16,
                       var5 >> 16, var8, var30, var32, var35, var38, var33, var36, var39);
                     var4 += var26;
                     var5 += var28;
                     var8 += var31;
-                    var2 += DummyClass47.anInt1092;
+                    var2 += SoftwareIndexedColorSpriteStatics.anInt1092;
                     var32 += var34;
                     var35 += var37;
                     var38 += var40;
@@ -661,12 +663,12 @@ public final class DummyClass40 {
                 }
 
                 DummyClass40
-                    .method1143(DummyClass47.anIntArray1100, var19, 0, 0, var2, var3 >> 16, var5 >> 16,
+                    .method1143(SoftwareIndexedColorSpriteStatics.anIntArray1100, var19, 0, 0, var2, var3 >> 16, var5 >> 16,
                   var8, var30, var32, var35, var38, var33, var36, var39);
                 var3 += var27;
                 var5 += var28;
                 var8 += var31;
-                var2 += DummyClass47.anInt1092;
+                var2 += SoftwareIndexedColorSpriteStatics.anInt1092;
                 var32 += var34;
                 var35 += var37;
                 var38 += var40;
@@ -686,12 +688,12 @@ public final class DummyClass40 {
                     }
 
                     DummyClass40
-                        .method1143(DummyClass47.anIntArray1100, var19, 0, 0, var2, var5 >> 16,
+                        .method1143(SoftwareIndexedColorSpriteStatics.anIntArray1100, var19, 0, 0, var2, var5 >> 16,
                       var4 >> 16, var8, var30, var32, var35, var38, var33, var36, var39);
                     var4 += var26;
                     var5 += var28;
                     var8 += var31;
-                    var2 += DummyClass47.anInt1092;
+                    var2 += SoftwareIndexedColorSpriteStatics.anInt1092;
                     var32 += var34;
                     var35 += var37;
                     var38 += var40;
@@ -699,12 +701,12 @@ public final class DummyClass40 {
                 }
 
                 DummyClass40
-                    .method1143(DummyClass47.anIntArray1100, var19, 0, 0, var2, var5 >> 16, var3 >> 16,
+                    .method1143(SoftwareIndexedColorSpriteStatics.anIntArray1100, var19, 0, 0, var2, var5 >> 16, var3 >> 16,
                   var8, var30, var32, var35, var38, var33, var36, var39);
                 var3 += var27;
                 var5 += var28;
                 var8 += var31;
-                var2 += DummyClass47.anInt1092;
+                var2 += SoftwareIndexedColorSpriteStatics.anInt1092;
                 var32 += var34;
                 var35 += var37;
                 var38 += var40;
@@ -735,11 +737,11 @@ public final class DummyClass40 {
   public static void method1138(int var0, int var1, int var2, int var3, int var4, int var5, int var6,
                                int var7, int var8, int var9, int var10, int var11, int var12,
                                int var13, int var14, int var15, int var16, int var17, int var18) {
-    int[] var19 = DummyClass40.textureCache.method13(var18, true, DummyClass40.brightness);
+    int[] var19 = GLStatics.textureCache.method13(var18, true, DummyClass40.brightness);
     int var20;
     if (var19 != null && DummyClass40.anInt850 <= 10) {
-      DummyClass40.aBoolean845 = DummyClass40.textureCache.method14((byte) -115, var18);
-      DummyClass40.aBoolean842 = DummyClass40.textureCache.method7((byte) 88, var18);
+      DummyClass40.aBoolean845 = GLStatics.textureCache.method14((byte) -115, var18);
+      DummyClass40.aBoolean842 = GLStatics.textureCache.method7((byte) 88, var18);
       var20 = var4 - var3;
       int var21 = var1 - var0;
       int var22 = var5 - var3;
@@ -826,12 +828,12 @@ public final class DummyClass40 {
                       }
 
                       DummyClass40
-                          .method1142(DummyClass47.anIntArray1100, var19, 0, 0, var0, var4 >> 16,
+                          .method1142(SoftwareIndexedColorSpriteStatics.anIntArray1100, var19, 0, 0, var0, var4 >> 16,
                         var5 >> 16, var6, var30, var32, var35, var38, var33, var36, var39);
                       var5 += var28;
                       var4 += var27;
                       var6 += var31;
-                      var0 += DummyClass47.anInt1092;
+                      var0 += SoftwareIndexedColorSpriteStatics.anInt1092;
                       var32 += var34;
                       var35 += var37;
                       var38 += var40;
@@ -839,12 +841,12 @@ public final class DummyClass40 {
                   }
 
                   DummyClass40
-                      .method1142(DummyClass47.anIntArray1100, var19, 0, 0, var0, var3 >> 16, var5 >> 16,
+                      .method1142(SoftwareIndexedColorSpriteStatics.anIntArray1100, var19, 0, 0, var0, var3 >> 16, var5 >> 16,
                     var6, var30, var32, var35, var38, var33, var36, var39);
                   var5 += var28;
                   var3 += var26;
                   var6 += var31;
-                  var0 += DummyClass47.anInt1092;
+                  var0 += SoftwareIndexedColorSpriteStatics.anInt1092;
                   var32 += var34;
                   var35 += var37;
                   var38 += var40;
@@ -864,12 +866,12 @@ public final class DummyClass40 {
                       }
 
                       DummyClass40
-                          .method1142(DummyClass47.anIntArray1100, var19, 0, 0, var0, var5 >> 16,
+                          .method1142(SoftwareIndexedColorSpriteStatics.anIntArray1100, var19, 0, 0, var0, var5 >> 16,
                         var4 >> 16, var6, var30, var32, var35, var38, var33, var36, var39);
                       var5 += var28;
                       var4 += var27;
                       var6 += var31;
-                      var0 += DummyClass47.anInt1092;
+                      var0 += SoftwareIndexedColorSpriteStatics.anInt1092;
                       var32 += var34;
                       var35 += var37;
                       var38 += var40;
@@ -877,12 +879,12 @@ public final class DummyClass40 {
                   }
 
                   DummyClass40
-                      .method1142(DummyClass47.anIntArray1100, var19, 0, 0, var0, var5 >> 16, var3 >> 16,
+                      .method1142(SoftwareIndexedColorSpriteStatics.anIntArray1100, var19, 0, 0, var0, var5 >> 16, var3 >> 16,
                     var6, var30, var32, var35, var38, var33, var36, var39);
                   var5 += var28;
                   var3 += var26;
                   var6 += var31;
-                  var0 += DummyClass47.anInt1092;
+                  var0 += SoftwareIndexedColorSpriteStatics.anInt1092;
                   var32 += var34;
                   var35 += var37;
                   var38 += var40;
@@ -922,12 +924,12 @@ public final class DummyClass40 {
                       }
 
                       DummyClass40
-                          .method1142(DummyClass47.anIntArray1100, var19, 0, 0, var0, var3 >> 16,
+                          .method1142(SoftwareIndexedColorSpriteStatics.anIntArray1100, var19, 0, 0, var0, var3 >> 16,
                         var5 >> 16, var6, var30, var32, var35, var38, var33, var36, var39);
                       var5 += var27;
                       var3 += var26;
                       var6 += var31;
-                      var0 += DummyClass47.anInt1092;
+                      var0 += SoftwareIndexedColorSpriteStatics.anInt1092;
                       var32 += var34;
                       var35 += var37;
                       var38 += var40;
@@ -935,12 +937,12 @@ public final class DummyClass40 {
                   }
 
                   DummyClass40
-                      .method1142(DummyClass47.anIntArray1100, var19, 0, 0, var0, var3 >> 16, var4 >> 16,
+                      .method1142(SoftwareIndexedColorSpriteStatics.anIntArray1100, var19, 0, 0, var0, var3 >> 16, var4 >> 16,
                     var6, var30, var32, var35, var38, var33, var36, var39);
                   var4 += var28;
                   var3 += var26;
                   var6 += var31;
-                  var0 += DummyClass47.anInt1092;
+                  var0 += SoftwareIndexedColorSpriteStatics.anInt1092;
                   var32 += var34;
                   var35 += var37;
                   var38 += var40;
@@ -960,12 +962,12 @@ public final class DummyClass40 {
                       }
 
                       DummyClass40
-                          .method1142(DummyClass47.anIntArray1100, var19, 0, 0, var0, var5 >> 16,
+                          .method1142(SoftwareIndexedColorSpriteStatics.anIntArray1100, var19, 0, 0, var0, var5 >> 16,
                         var3 >> 16, var6, var30, var32, var35, var38, var33, var36, var39);
                       var5 += var27;
                       var3 += var26;
                       var6 += var31;
-                      var0 += DummyClass47.anInt1092;
+                      var0 += SoftwareIndexedColorSpriteStatics.anInt1092;
                       var32 += var34;
                       var35 += var37;
                       var38 += var40;
@@ -973,12 +975,12 @@ public final class DummyClass40 {
                   }
 
                   DummyClass40
-                      .method1142(DummyClass47.anIntArray1100, var19, 0, 0, var0, var4 >> 16, var3 >> 16,
+                      .method1142(SoftwareIndexedColorSpriteStatics.anIntArray1100, var19, 0, 0, var0, var4 >> 16, var3 >> 16,
                     var6, var30, var32, var35, var38, var33, var36, var39);
                   var4 += var28;
                   var3 += var26;
                   var6 += var31;
-                  var0 += DummyClass47.anInt1092;
+                  var0 += SoftwareIndexedColorSpriteStatics.anInt1092;
                   var32 += var34;
                   var35 += var37;
                   var38 += var40;
@@ -1031,12 +1033,12 @@ public final class DummyClass40 {
                       }
 
                       DummyClass40
-                          .method1142(DummyClass47.anIntArray1100, var19, 0, 0, var1, var5 >> 16,
+                          .method1142(SoftwareIndexedColorSpriteStatics.anIntArray1100, var19, 0, 0, var1, var5 >> 16,
                         var3 >> 16, var7, var30, var32, var35, var38, var33, var36, var39);
                       var3 += var26;
                       var5 += var28;
                       var7 += var31;
-                      var1 += DummyClass47.anInt1092;
+                      var1 += SoftwareIndexedColorSpriteStatics.anInt1092;
                       var32 += var34;
                       var35 += var37;
                       var38 += var40;
@@ -1044,12 +1046,12 @@ public final class DummyClass40 {
                   }
 
                   DummyClass40
-                      .method1142(DummyClass47.anIntArray1100, var19, 0, 0, var1, var4 >> 16, var3 >> 16,
+                      .method1142(SoftwareIndexedColorSpriteStatics.anIntArray1100, var19, 0, 0, var1, var4 >> 16, var3 >> 16,
                     var7, var30, var32, var35, var38, var33, var36, var39);
                   var3 += var26;
                   var4 += var27;
                   var7 += var31;
-                  var1 += DummyClass47.anInt1092;
+                  var1 += SoftwareIndexedColorSpriteStatics.anInt1092;
                   var32 += var34;
                   var35 += var37;
                   var38 += var40;
@@ -1069,12 +1071,12 @@ public final class DummyClass40 {
                       }
 
                       DummyClass40
-                          .method1142(DummyClass47.anIntArray1100, var19, 0, 0, var1, var3 >> 16,
+                          .method1142(SoftwareIndexedColorSpriteStatics.anIntArray1100, var19, 0, 0, var1, var3 >> 16,
                         var5 >> 16, var7, var30, var32, var35, var38, var33, var36, var39);
                       var3 += var26;
                       var5 += var28;
                       var7 += var31;
-                      var1 += DummyClass47.anInt1092;
+                      var1 += SoftwareIndexedColorSpriteStatics.anInt1092;
                       var32 += var34;
                       var35 += var37;
                       var38 += var40;
@@ -1082,12 +1084,12 @@ public final class DummyClass40 {
                   }
 
                   DummyClass40
-                      .method1142(DummyClass47.anIntArray1100, var19, 0, 0, var1, var3 >> 16, var4 >> 16,
+                      .method1142(SoftwareIndexedColorSpriteStatics.anIntArray1100, var19, 0, 0, var1, var3 >> 16, var4 >> 16,
                     var7, var30, var32, var35, var38, var33, var36, var39);
                   var3 += var26;
                   var4 += var27;
                   var7 += var31;
-                  var1 += DummyClass47.anInt1092;
+                  var1 += SoftwareIndexedColorSpriteStatics.anInt1092;
                   var32 += var34;
                   var35 += var37;
                   var38 += var40;
@@ -1127,12 +1129,12 @@ public final class DummyClass40 {
                       }
 
                       DummyClass40
-                          .method1142(DummyClass47.anIntArray1100, var19, 0, 0, var1, var3 >> 16,
+                          .method1142(SoftwareIndexedColorSpriteStatics.anIntArray1100, var19, 0, 0, var1, var3 >> 16,
                         var4 >> 16, var7, var30, var32, var35, var38, var33, var36, var39);
                       var3 += var28;
                       var4 += var27;
                       var7 += var31;
-                      var1 += DummyClass47.anInt1092;
+                      var1 += SoftwareIndexedColorSpriteStatics.anInt1092;
                       var32 += var34;
                       var35 += var37;
                       var38 += var40;
@@ -1140,12 +1142,12 @@ public final class DummyClass40 {
                   }
 
                   DummyClass40
-                      .method1142(DummyClass47.anIntArray1100, var19, 0, 0, var1, var5 >> 16, var4 >> 16,
+                      .method1142(SoftwareIndexedColorSpriteStatics.anIntArray1100, var19, 0, 0, var1, var5 >> 16, var4 >> 16,
                     var7, var30, var32, var35, var38, var33, var36, var39);
                   var5 += var26;
                   var4 += var27;
                   var7 += var31;
-                  var1 += DummyClass47.anInt1092;
+                  var1 += SoftwareIndexedColorSpriteStatics.anInt1092;
                   var32 += var34;
                   var35 += var37;
                   var38 += var40;
@@ -1165,12 +1167,12 @@ public final class DummyClass40 {
                       }
 
                       DummyClass40
-                          .method1142(DummyClass47.anIntArray1100, var19, 0, 0, var1, var4 >> 16,
+                          .method1142(SoftwareIndexedColorSpriteStatics.anIntArray1100, var19, 0, 0, var1, var4 >> 16,
                         var3 >> 16, var7, var30, var32, var35, var38, var33, var36, var39);
                       var3 += var28;
                       var4 += var27;
                       var7 += var31;
-                      var1 += DummyClass47.anInt1092;
+                      var1 += SoftwareIndexedColorSpriteStatics.anInt1092;
                       var32 += var34;
                       var35 += var37;
                       var38 += var40;
@@ -1178,12 +1180,12 @@ public final class DummyClass40 {
                   }
 
                   DummyClass40
-                      .method1142(DummyClass47.anIntArray1100, var19, 0, 0, var1, var4 >> 16, var5 >> 16,
+                      .method1142(SoftwareIndexedColorSpriteStatics.anIntArray1100, var19, 0, 0, var1, var4 >> 16, var5 >> 16,
                     var7, var30, var32, var35, var38, var33, var36, var39);
                   var5 += var26;
                   var4 += var27;
                   var7 += var31;
-                  var1 += DummyClass47.anInt1092;
+                  var1 += SoftwareIndexedColorSpriteStatics.anInt1092;
                   var32 += var34;
                   var35 += var37;
                   var38 += var40;
@@ -1235,12 +1237,12 @@ public final class DummyClass40 {
                     }
 
                     DummyClass40
-                        .method1142(DummyClass47.anIntArray1100, var19, 0, 0, var2, var4 >> 16,
+                        .method1142(SoftwareIndexedColorSpriteStatics.anIntArray1100, var19, 0, 0, var2, var4 >> 16,
                       var3 >> 16, var8, var30, var32, var35, var38, var33, var36, var39);
                     var4 += var27;
                     var3 += var26;
                     var8 += var31;
-                    var2 += DummyClass47.anInt1092;
+                    var2 += SoftwareIndexedColorSpriteStatics.anInt1092;
                     var32 += var34;
                     var35 += var37;
                     var38 += var40;
@@ -1248,12 +1250,12 @@ public final class DummyClass40 {
                 }
 
                 DummyClass40
-                    .method1142(DummyClass47.anIntArray1100, var19, 0, 0, var2, var4 >> 16, var5 >> 16,
+                    .method1142(SoftwareIndexedColorSpriteStatics.anIntArray1100, var19, 0, 0, var2, var4 >> 16, var5 >> 16,
                   var8, var30, var32, var35, var38, var33, var36, var39);
                 var4 += var27;
                 var5 += var28;
                 var8 += var31;
-                var2 += DummyClass47.anInt1092;
+                var2 += SoftwareIndexedColorSpriteStatics.anInt1092;
                 var32 += var34;
                 var35 += var37;
                 var38 += var40;
@@ -1273,12 +1275,12 @@ public final class DummyClass40 {
                     }
 
                     DummyClass40
-                        .method1142(DummyClass47.anIntArray1100, var19, 0, 0, var2, var3 >> 16,
+                        .method1142(SoftwareIndexedColorSpriteStatics.anIntArray1100, var19, 0, 0, var2, var3 >> 16,
                       var4 >> 16, var8, var30, var32, var35, var38, var33, var36, var39);
                     var4 += var27;
                     var3 += var26;
                     var8 += var31;
-                    var2 += DummyClass47.anInt1092;
+                    var2 += SoftwareIndexedColorSpriteStatics.anInt1092;
                     var32 += var34;
                     var35 += var37;
                     var38 += var40;
@@ -1286,12 +1288,12 @@ public final class DummyClass40 {
                 }
 
                 DummyClass40
-                    .method1142(DummyClass47.anIntArray1100, var19, 0, 0, var2, var5 >> 16, var4 >> 16,
+                    .method1142(SoftwareIndexedColorSpriteStatics.anIntArray1100, var19, 0, 0, var2, var5 >> 16, var4 >> 16,
                   var8, var30, var32, var35, var38, var33, var36, var39);
                 var4 += var27;
                 var5 += var28;
                 var8 += var31;
-                var2 += DummyClass47.anInt1092;
+                var2 += SoftwareIndexedColorSpriteStatics.anInt1092;
                 var32 += var34;
                 var35 += var37;
                 var38 += var40;
@@ -1331,12 +1333,12 @@ public final class DummyClass40 {
                     }
 
                     DummyClass40
-                        .method1142(DummyClass47.anIntArray1100, var19, 0, 0, var2, var4 >> 16,
+                        .method1142(SoftwareIndexedColorSpriteStatics.anIntArray1100, var19, 0, 0, var2, var4 >> 16,
                       var5 >> 16, var8, var30, var32, var35, var38, var33, var36, var39);
                     var4 += var26;
                     var5 += var28;
                     var8 += var31;
-                    var2 += DummyClass47.anInt1092;
+                    var2 += SoftwareIndexedColorSpriteStatics.anInt1092;
                     var32 += var34;
                     var35 += var37;
                     var38 += var40;
@@ -1344,12 +1346,12 @@ public final class DummyClass40 {
                 }
 
                 DummyClass40
-                    .method1142(DummyClass47.anIntArray1100, var19, 0, 0, var2, var3 >> 16, var5 >> 16,
+                    .method1142(SoftwareIndexedColorSpriteStatics.anIntArray1100, var19, 0, 0, var2, var3 >> 16, var5 >> 16,
                   var8, var30, var32, var35, var38, var33, var36, var39);
                 var3 += var27;
                 var5 += var28;
                 var8 += var31;
-                var2 += DummyClass47.anInt1092;
+                var2 += SoftwareIndexedColorSpriteStatics.anInt1092;
                 var32 += var34;
                 var35 += var37;
                 var38 += var40;
@@ -1369,12 +1371,12 @@ public final class DummyClass40 {
                     }
 
                     DummyClass40
-                        .method1142(DummyClass47.anIntArray1100, var19, 0, 0, var2, var5 >> 16,
+                        .method1142(SoftwareIndexedColorSpriteStatics.anIntArray1100, var19, 0, 0, var2, var5 >> 16,
                       var4 >> 16, var8, var30, var32, var35, var38, var33, var36, var39);
                     var4 += var26;
                     var5 += var28;
                     var8 += var31;
-                    var2 += DummyClass47.anInt1092;
+                    var2 += SoftwareIndexedColorSpriteStatics.anInt1092;
                     var32 += var34;
                     var35 += var37;
                     var38 += var40;
@@ -1382,12 +1384,12 @@ public final class DummyClass40 {
                 }
 
                 DummyClass40
-                    .method1142(DummyClass47.anIntArray1100, var19, 0, 0, var2, var5 >> 16, var3 >> 16,
+                    .method1142(SoftwareIndexedColorSpriteStatics.anIntArray1100, var19, 0, 0, var2, var5 >> 16, var3 >> 16,
                   var8, var30, var32, var35, var38, var33, var36, var39);
                 var3 += var27;
                 var5 += var28;
                 var8 += var31;
-                var2 += DummyClass47.anInt1092;
+                var2 += SoftwareIndexedColorSpriteStatics.anInt1092;
                 var32 += var34;
                 var35 += var37;
                 var38 += var40;
@@ -1397,7 +1399,7 @@ public final class DummyClass40 {
         }
       }
     } else {
-      var20 = DummyClass40.textureCache.method15(var18, '\uffff');
+      var20 = GLStatics.textureCache.method15(var18, '\uffff');
       DummyClass40.aBoolean837 = true;
       DummyClass40.method1154(var0, var1, var2, var3, var4, var5,
           DummyClass40.method1136(var20, var6),
@@ -1406,11 +1408,11 @@ public final class DummyClass40 {
   }
 
   public static int method1139() {
-    return DummyClass40.anIntArray836[0] % DummyClass47.anInt1092;
+    return DummyClass40.anIntArray836[0] % SoftwareIndexedColorSpriteStatics.anInt1092;
   }
 
   public static void setTextureCache(ITextureCache var0) {
-    DummyClass40.textureCache = var0;
+    GLStatics.textureCache = var0;
   }
 
   public static void method1141() {
@@ -2319,18 +2321,18 @@ public final class DummyClass40 {
                   }
 
                   DummyClass40
-                      .method1149(DummyClass47.anIntArray1100, var0, var6, 0, var4 >> 16, var5 >> 16);
+                      .method1149(SoftwareIndexedColorSpriteStatics.anIntArray1100, var0, var6, 0, var4 >> 16, var5 >> 16);
                   var5 += var9;
                   var4 += var8;
-                  var0 += DummyClass47.anInt1092;
+                  var0 += SoftwareIndexedColorSpriteStatics.anInt1092;
                 }
               }
 
               DummyClass40
-                  .method1149(DummyClass47.anIntArray1100, var0, var6, 0, var3 >> 16, var5 >> 16);
+                  .method1149(SoftwareIndexedColorSpriteStatics.anIntArray1100, var0, var6, 0, var3 >> 16, var5 >> 16);
               var5 += var9;
               var3 += var7;
-              var0 += DummyClass47.anInt1092;
+              var0 += SoftwareIndexedColorSpriteStatics.anInt1092;
             }
           } else {
             var2 -= var1;
@@ -2347,18 +2349,18 @@ public final class DummyClass40 {
                   }
 
                   DummyClass40
-                      .method1149(DummyClass47.anIntArray1100, var0, var6, 0, var5 >> 16, var4 >> 16);
+                      .method1149(SoftwareIndexedColorSpriteStatics.anIntArray1100, var0, var6, 0, var5 >> 16, var4 >> 16);
                   var5 += var9;
                   var4 += var8;
-                  var0 += DummyClass47.anInt1092;
+                  var0 += SoftwareIndexedColorSpriteStatics.anInt1092;
                 }
               }
 
               DummyClass40
-                  .method1149(DummyClass47.anIntArray1100, var0, var6, 0, var5 >> 16, var3 >> 16);
+                  .method1149(SoftwareIndexedColorSpriteStatics.anIntArray1100, var0, var6, 0, var5 >> 16, var3 >> 16);
               var5 += var9;
               var3 += var7;
-              var0 += DummyClass47.anInt1092;
+              var0 += SoftwareIndexedColorSpriteStatics.anInt1092;
             }
           }
         } else {
@@ -2390,18 +2392,18 @@ public final class DummyClass40 {
                   }
 
                   DummyClass40
-                      .method1149(DummyClass47.anIntArray1100, var0, var6, 0, var3 >> 16, var5 >> 16);
+                      .method1149(SoftwareIndexedColorSpriteStatics.anIntArray1100, var0, var6, 0, var3 >> 16, var5 >> 16);
                   var5 += var8;
                   var3 += var7;
-                  var0 += DummyClass47.anInt1092;
+                  var0 += SoftwareIndexedColorSpriteStatics.anInt1092;
                 }
               }
 
               DummyClass40
-                  .method1149(DummyClass47.anIntArray1100, var0, var6, 0, var3 >> 16, var4 >> 16);
+                  .method1149(SoftwareIndexedColorSpriteStatics.anIntArray1100, var0, var6, 0, var3 >> 16, var4 >> 16);
               var4 += var9;
               var3 += var7;
-              var0 += DummyClass47.anInt1092;
+              var0 += SoftwareIndexedColorSpriteStatics.anInt1092;
             }
           } else {
             var1 -= var2;
@@ -2418,18 +2420,18 @@ public final class DummyClass40 {
                   }
 
                   DummyClass40
-                      .method1149(DummyClass47.anIntArray1100, var0, var6, 0, var5 >> 16, var3 >> 16);
+                      .method1149(SoftwareIndexedColorSpriteStatics.anIntArray1100, var0, var6, 0, var5 >> 16, var3 >> 16);
                   var5 += var8;
                   var3 += var7;
-                  var0 += DummyClass47.anInt1092;
+                  var0 += SoftwareIndexedColorSpriteStatics.anInt1092;
                 }
               }
 
               DummyClass40
-                  .method1149(DummyClass47.anIntArray1100, var0, var6, 0, var4 >> 16, var3 >> 16);
+                  .method1149(SoftwareIndexedColorSpriteStatics.anIntArray1100, var0, var6, 0, var4 >> 16, var3 >> 16);
               var4 += var9;
               var3 += var7;
-              var0 += DummyClass47.anInt1092;
+              var0 += SoftwareIndexedColorSpriteStatics.anInt1092;
             }
           }
         }
@@ -2473,18 +2475,18 @@ public final class DummyClass40 {
                   }
 
                   DummyClass40
-                      .method1149(DummyClass47.anIntArray1100, var1, var6, 0, var5 >> 16, var3 >> 16);
+                      .method1149(SoftwareIndexedColorSpriteStatics.anIntArray1100, var1, var6, 0, var5 >> 16, var3 >> 16);
                   var3 += var7;
                   var5 += var9;
-                  var1 += DummyClass47.anInt1092;
+                  var1 += SoftwareIndexedColorSpriteStatics.anInt1092;
                 }
               }
 
               DummyClass40
-                  .method1149(DummyClass47.anIntArray1100, var1, var6, 0, var4 >> 16, var3 >> 16);
+                  .method1149(SoftwareIndexedColorSpriteStatics.anIntArray1100, var1, var6, 0, var4 >> 16, var3 >> 16);
               var3 += var7;
               var4 += var8;
-              var1 += DummyClass47.anInt1092;
+              var1 += SoftwareIndexedColorSpriteStatics.anInt1092;
             }
           } else {
             var0 -= var2;
@@ -2501,18 +2503,18 @@ public final class DummyClass40 {
                   }
 
                   DummyClass40
-                      .method1149(DummyClass47.anIntArray1100, var1, var6, 0, var3 >> 16, var5 >> 16);
+                      .method1149(SoftwareIndexedColorSpriteStatics.anIntArray1100, var1, var6, 0, var3 >> 16, var5 >> 16);
                   var3 += var7;
                   var5 += var9;
-                  var1 += DummyClass47.anInt1092;
+                  var1 += SoftwareIndexedColorSpriteStatics.anInt1092;
                 }
               }
 
               DummyClass40
-                  .method1149(DummyClass47.anIntArray1100, var1, var6, 0, var3 >> 16, var4 >> 16);
+                  .method1149(SoftwareIndexedColorSpriteStatics.anIntArray1100, var1, var6, 0, var3 >> 16, var4 >> 16);
               var3 += var7;
               var4 += var8;
-              var1 += DummyClass47.anInt1092;
+              var1 += SoftwareIndexedColorSpriteStatics.anInt1092;
             }
           }
         } else {
@@ -2544,18 +2546,18 @@ public final class DummyClass40 {
                   }
 
                   DummyClass40
-                      .method1149(DummyClass47.anIntArray1100, var1, var6, 0, var3 >> 16, var4 >> 16);
+                      .method1149(SoftwareIndexedColorSpriteStatics.anIntArray1100, var1, var6, 0, var3 >> 16, var4 >> 16);
                   var3 += var9;
                   var4 += var8;
-                  var1 += DummyClass47.anInt1092;
+                  var1 += SoftwareIndexedColorSpriteStatics.anInt1092;
                 }
               }
 
               DummyClass40
-                  .method1149(DummyClass47.anIntArray1100, var1, var6, 0, var5 >> 16, var4 >> 16);
+                  .method1149(SoftwareIndexedColorSpriteStatics.anIntArray1100, var1, var6, 0, var5 >> 16, var4 >> 16);
               var5 += var7;
               var4 += var8;
-              var1 += DummyClass47.anInt1092;
+              var1 += SoftwareIndexedColorSpriteStatics.anInt1092;
             }
           } else {
             var2 -= var0;
@@ -2572,18 +2574,18 @@ public final class DummyClass40 {
                   }
 
                   DummyClass40
-                      .method1149(DummyClass47.anIntArray1100, var1, var6, 0, var4 >> 16, var3 >> 16);
+                      .method1149(SoftwareIndexedColorSpriteStatics.anIntArray1100, var1, var6, 0, var4 >> 16, var3 >> 16);
                   var3 += var9;
                   var4 += var8;
-                  var1 += DummyClass47.anInt1092;
+                  var1 += SoftwareIndexedColorSpriteStatics.anInt1092;
                 }
               }
 
               DummyClass40
-                  .method1149(DummyClass47.anIntArray1100, var1, var6, 0, var4 >> 16, var5 >> 16);
+                  .method1149(SoftwareIndexedColorSpriteStatics.anIntArray1100, var1, var6, 0, var4 >> 16, var5 >> 16);
               var5 += var7;
               var4 += var8;
-              var1 += DummyClass47.anInt1092;
+              var1 += SoftwareIndexedColorSpriteStatics.anInt1092;
             }
           }
         }
@@ -2626,18 +2628,18 @@ public final class DummyClass40 {
                 }
 
                 DummyClass40
-                    .method1149(DummyClass47.anIntArray1100, var2, var6, 0, var4 >> 16, var3 >> 16);
+                    .method1149(SoftwareIndexedColorSpriteStatics.anIntArray1100, var2, var6, 0, var4 >> 16, var3 >> 16);
                 var4 += var8;
                 var3 += var7;
-                var2 += DummyClass47.anInt1092;
+                var2 += SoftwareIndexedColorSpriteStatics.anInt1092;
               }
             }
 
             DummyClass40
-                .method1149(DummyClass47.anIntArray1100, var2, var6, 0, var4 >> 16, var5 >> 16);
+                .method1149(SoftwareIndexedColorSpriteStatics.anIntArray1100, var2, var6, 0, var4 >> 16, var5 >> 16);
             var4 += var8;
             var5 += var9;
-            var2 += DummyClass47.anInt1092;
+            var2 += SoftwareIndexedColorSpriteStatics.anInt1092;
           }
         } else {
           var1 -= var0;
@@ -2654,18 +2656,18 @@ public final class DummyClass40 {
                 }
 
                 DummyClass40
-                    .method1149(DummyClass47.anIntArray1100, var2, var6, 0, var3 >> 16, var4 >> 16);
+                    .method1149(SoftwareIndexedColorSpriteStatics.anIntArray1100, var2, var6, 0, var3 >> 16, var4 >> 16);
                 var4 += var8;
                 var3 += var7;
-                var2 += DummyClass47.anInt1092;
+                var2 += SoftwareIndexedColorSpriteStatics.anInt1092;
               }
             }
 
             DummyClass40
-                .method1149(DummyClass47.anIntArray1100, var2, var6, 0, var5 >> 16, var4 >> 16);
+                .method1149(SoftwareIndexedColorSpriteStatics.anIntArray1100, var2, var6, 0, var5 >> 16, var4 >> 16);
             var4 += var8;
             var5 += var9;
-            var2 += DummyClass47.anInt1092;
+            var2 += SoftwareIndexedColorSpriteStatics.anInt1092;
           }
         }
       } else {
@@ -2697,18 +2699,18 @@ public final class DummyClass40 {
                 }
 
                 DummyClass40
-                    .method1149(DummyClass47.anIntArray1100, var2, var6, 0, var4 >> 16, var5 >> 16);
+                    .method1149(SoftwareIndexedColorSpriteStatics.anIntArray1100, var2, var6, 0, var4 >> 16, var5 >> 16);
                 var4 += var7;
                 var5 += var9;
-                var2 += DummyClass47.anInt1092;
+                var2 += SoftwareIndexedColorSpriteStatics.anInt1092;
               }
             }
 
             DummyClass40
-                .method1149(DummyClass47.anIntArray1100, var2, var6, 0, var3 >> 16, var5 >> 16);
+                .method1149(SoftwareIndexedColorSpriteStatics.anIntArray1100, var2, var6, 0, var3 >> 16, var5 >> 16);
             var3 += var8;
             var5 += var9;
-            var2 += DummyClass47.anInt1092;
+            var2 += SoftwareIndexedColorSpriteStatics.anInt1092;
           }
         } else {
           var0 -= var1;
@@ -2725,18 +2727,18 @@ public final class DummyClass40 {
                 }
 
                 DummyClass40
-                    .method1149(DummyClass47.anIntArray1100, var2, var6, 0, var5 >> 16, var4 >> 16);
+                    .method1149(SoftwareIndexedColorSpriteStatics.anIntArray1100, var2, var6, 0, var5 >> 16, var4 >> 16);
                 var4 += var7;
                 var5 += var9;
-                var2 += DummyClass47.anInt1092;
+                var2 += SoftwareIndexedColorSpriteStatics.anInt1092;
               }
             }
 
             DummyClass40
-                .method1149(DummyClass47.anIntArray1100, var2, var6, 0, var5 >> 16, var3 >> 16);
+                .method1149(SoftwareIndexedColorSpriteStatics.anIntArray1100, var2, var6, 0, var5 >> 16, var3 >> 16);
             var3 += var8;
             var5 += var9;
-            var2 += DummyClass47.anInt1092;
+            var2 += SoftwareIndexedColorSpriteStatics.anInt1092;
           }
         }
       }
@@ -2745,8 +2747,8 @@ public final class DummyClass40 {
 
   public static void method1145(int var0, int var1) {
     int var2 = DummyClass40.anIntArray836[0];
-    int var3 = var2 / DummyClass47.anInt1092;
-    int var4 = var2 - var3 * DummyClass47.anInt1092;
+    int var3 = var2 / SoftwareIndexedColorSpriteStatics.anInt1092;
+    int var4 = var2 - var3 * SoftwareIndexedColorSpriteStatics.anInt1092;
     DummyClass40.anInt846 = var0 - var4;
     DummyClass40.anInt835 = var1 - var3;
     DummyClass17.screenLowerX = -DummyClass40.anInt846;
@@ -3495,11 +3497,11 @@ public final class DummyClass40 {
           DummyClass40.anInt844)];
     }
 
-    int var4 = var1 * DummyClass47.anInt1092 + var0;
+    int var4 = var1 * SoftwareIndexedColorSpriteStatics.anInt1092 + var0;
 
     for (int var5 = 0; var5 < DummyClass40.anInt844; ++var5) {
       DummyClass40.anIntArray836[var5] = var4;
-      var4 += DummyClass47.anInt1092;
+      var4 += SoftwareIndexedColorSpriteStatics.anInt1092;
     }
 
   }
@@ -3510,7 +3512,7 @@ public final class DummyClass40 {
   }
 
   public static int method1153() {
-    return DummyClass40.anIntArray836[0] / DummyClass47.anInt1092;
+    return DummyClass40.anIntArray836[0] / SoftwareIndexedColorSpriteStatics.anInt1092;
   }
 
   public static void method1154(int var0, int var1, int var2, int var3, int var4, int var5, int var6,
@@ -3587,22 +3589,22 @@ public final class DummyClass40 {
                     }
 
                     DummyClass40
-                        .method1146(DummyClass47.anIntArray1100, var0, 0, 0, var4 >> 16, var5 >> 16,
+                        .method1146(SoftwareIndexedColorSpriteStatics.anIntArray1100, var0, 0, 0, var4 >> 16, var5 >> 16,
                       var6, var19);
                     var5 += var17;
                     var4 += var15;
                     var6 += var20;
-                    var0 += DummyClass47.anInt1092;
+                    var0 += SoftwareIndexedColorSpriteStatics.anInt1092;
                   }
                 }
 
                 DummyClass40
-                    .method1146(DummyClass47.anIntArray1100, var0, 0, 0, var3 >> 16, var5 >> 16, var6,
+                    .method1146(SoftwareIndexedColorSpriteStatics.anIntArray1100, var0, 0, 0, var3 >> 16, var5 >> 16, var6,
                   var19);
                 var5 += var17;
                 var3 += var16;
                 var6 += var20;
-                var0 += DummyClass47.anInt1092;
+                var0 += SoftwareIndexedColorSpriteStatics.anInt1092;
               }
             } else {
               var2 -= var1;
@@ -3619,22 +3621,22 @@ public final class DummyClass40 {
                     }
 
                     DummyClass40
-                        .method1146(DummyClass47.anIntArray1100, var0, 0, 0, var5 >> 16, var4 >> 16,
+                        .method1146(SoftwareIndexedColorSpriteStatics.anIntArray1100, var0, 0, 0, var5 >> 16, var4 >> 16,
                       var6, var19);
                     var5 += var17;
                     var4 += var15;
                     var6 += var20;
-                    var0 += DummyClass47.anInt1092;
+                    var0 += SoftwareIndexedColorSpriteStatics.anInt1092;
                   }
                 }
 
                 DummyClass40
-                    .method1146(DummyClass47.anIntArray1100, var0, 0, 0, var5 >> 16, var3 >> 16, var6,
+                    .method1146(SoftwareIndexedColorSpriteStatics.anIntArray1100, var0, 0, 0, var5 >> 16, var3 >> 16, var6,
                   var19);
                 var5 += var17;
                 var3 += var16;
                 var6 += var20;
-                var0 += DummyClass47.anInt1092;
+                var0 += SoftwareIndexedColorSpriteStatics.anInt1092;
               }
             }
           } else {
@@ -3667,22 +3669,22 @@ public final class DummyClass40 {
                     }
 
                     DummyClass40
-                        .method1146(DummyClass47.anIntArray1100, var0, 0, 0, var3 >> 16, var5 >> 16,
+                        .method1146(SoftwareIndexedColorSpriteStatics.anIntArray1100, var0, 0, 0, var3 >> 16, var5 >> 16,
                       var6, var19);
                     var5 += var15;
                     var3 += var16;
                     var6 += var20;
-                    var0 += DummyClass47.anInt1092;
+                    var0 += SoftwareIndexedColorSpriteStatics.anInt1092;
                   }
                 }
 
                 DummyClass40
-                    .method1146(DummyClass47.anIntArray1100, var0, 0, 0, var3 >> 16, var4 >> 16, var6,
+                    .method1146(SoftwareIndexedColorSpriteStatics.anIntArray1100, var0, 0, 0, var3 >> 16, var4 >> 16, var6,
                   var19);
                 var4 += var17;
                 var3 += var16;
                 var6 += var20;
-                var0 += DummyClass47.anInt1092;
+                var0 += SoftwareIndexedColorSpriteStatics.anInt1092;
               }
             } else {
               var1 -= var2;
@@ -3699,22 +3701,22 @@ public final class DummyClass40 {
                     }
 
                     DummyClass40
-                        .method1146(DummyClass47.anIntArray1100, var0, 0, 0, var5 >> 16, var3 >> 16,
+                        .method1146(SoftwareIndexedColorSpriteStatics.anIntArray1100, var0, 0, 0, var5 >> 16, var3 >> 16,
                       var6, var19);
                     var5 += var15;
                     var3 += var16;
                     var6 += var20;
-                    var0 += DummyClass47.anInt1092;
+                    var0 += SoftwareIndexedColorSpriteStatics.anInt1092;
                   }
                 }
 
                 DummyClass40
-                    .method1146(DummyClass47.anIntArray1100, var0, 0, 0, var4 >> 16, var3 >> 16, var6,
+                    .method1146(SoftwareIndexedColorSpriteStatics.anIntArray1100, var0, 0, 0, var4 >> 16, var3 >> 16, var6,
                   var19);
                 var4 += var17;
                 var3 += var16;
                 var6 += var20;
-                var0 += DummyClass47.anInt1092;
+                var0 += SoftwareIndexedColorSpriteStatics.anInt1092;
               }
             }
           }
@@ -3760,22 +3762,22 @@ public final class DummyClass40 {
                     }
 
                     DummyClass40
-                        .method1146(DummyClass47.anIntArray1100, var1, 0, 0, var5 >> 16, var3 >> 16,
+                        .method1146(SoftwareIndexedColorSpriteStatics.anIntArray1100, var1, 0, 0, var5 >> 16, var3 >> 16,
                       var7, var19);
                     var3 += var16;
                     var5 += var17;
                     var7 += var20;
-                    var1 += DummyClass47.anInt1092;
+                    var1 += SoftwareIndexedColorSpriteStatics.anInt1092;
                   }
                 }
 
                 DummyClass40
-                    .method1146(DummyClass47.anIntArray1100, var1, 0, 0, var4 >> 16, var3 >> 16, var7,
+                    .method1146(SoftwareIndexedColorSpriteStatics.anIntArray1100, var1, 0, 0, var4 >> 16, var3 >> 16, var7,
                   var19);
                 var3 += var16;
                 var4 += var15;
                 var7 += var20;
-                var1 += DummyClass47.anInt1092;
+                var1 += SoftwareIndexedColorSpriteStatics.anInt1092;
               }
             } else {
               var0 -= var2;
@@ -3792,22 +3794,22 @@ public final class DummyClass40 {
                     }
 
                     DummyClass40
-                        .method1146(DummyClass47.anIntArray1100, var1, 0, 0, var3 >> 16, var5 >> 16,
+                        .method1146(SoftwareIndexedColorSpriteStatics.anIntArray1100, var1, 0, 0, var3 >> 16, var5 >> 16,
                       var7, var19);
                     var3 += var16;
                     var5 += var17;
                     var7 += var20;
-                    var1 += DummyClass47.anInt1092;
+                    var1 += SoftwareIndexedColorSpriteStatics.anInt1092;
                   }
                 }
 
                 DummyClass40
-                    .method1146(DummyClass47.anIntArray1100, var1, 0, 0, var3 >> 16, var4 >> 16, var7,
+                    .method1146(SoftwareIndexedColorSpriteStatics.anIntArray1100, var1, 0, 0, var3 >> 16, var4 >> 16, var7,
                   var19);
                 var3 += var16;
                 var4 += var15;
                 var7 += var20;
-                var1 += DummyClass47.anInt1092;
+                var1 += SoftwareIndexedColorSpriteStatics.anInt1092;
               }
             }
           } else {
@@ -3840,22 +3842,22 @@ public final class DummyClass40 {
                     }
 
                     DummyClass40
-                        .method1146(DummyClass47.anIntArray1100, var1, 0, 0, var3 >> 16, var4 >> 16,
+                        .method1146(SoftwareIndexedColorSpriteStatics.anIntArray1100, var1, 0, 0, var3 >> 16, var4 >> 16,
                       var7, var19);
                     var3 += var17;
                     var4 += var15;
                     var7 += var20;
-                    var1 += DummyClass47.anInt1092;
+                    var1 += SoftwareIndexedColorSpriteStatics.anInt1092;
                   }
                 }
 
                 DummyClass40
-                    .method1146(DummyClass47.anIntArray1100, var1, 0, 0, var5 >> 16, var4 >> 16, var7,
+                    .method1146(SoftwareIndexedColorSpriteStatics.anIntArray1100, var1, 0, 0, var5 >> 16, var4 >> 16, var7,
                   var19);
                 var5 += var16;
                 var4 += var15;
                 var7 += var20;
-                var1 += DummyClass47.anInt1092;
+                var1 += SoftwareIndexedColorSpriteStatics.anInt1092;
               }
             } else {
               var2 -= var0;
@@ -3872,22 +3874,22 @@ public final class DummyClass40 {
                     }
 
                     DummyClass40
-                        .method1146(DummyClass47.anIntArray1100, var1, 0, 0, var4 >> 16, var3 >> 16,
+                        .method1146(SoftwareIndexedColorSpriteStatics.anIntArray1100, var1, 0, 0, var4 >> 16, var3 >> 16,
                       var7, var19);
                     var3 += var17;
                     var4 += var15;
                     var7 += var20;
-                    var1 += DummyClass47.anInt1092;
+                    var1 += SoftwareIndexedColorSpriteStatics.anInt1092;
                   }
                 }
 
                 DummyClass40
-                    .method1146(DummyClass47.anIntArray1100, var1, 0, 0, var4 >> 16, var5 >> 16, var7,
+                    .method1146(SoftwareIndexedColorSpriteStatics.anIntArray1100, var1, 0, 0, var4 >> 16, var5 >> 16, var7,
                   var19);
                 var5 += var16;
                 var4 += var15;
                 var7 += var20;
-                var1 += DummyClass47.anInt1092;
+                var1 += SoftwareIndexedColorSpriteStatics.anInt1092;
               }
             }
           }
@@ -3932,22 +3934,22 @@ public final class DummyClass40 {
                   }
 
                   DummyClass40
-                      .method1146(DummyClass47.anIntArray1100, var2, 0, 0, var4 >> 16, var3 >> 16, var8,
+                      .method1146(SoftwareIndexedColorSpriteStatics.anIntArray1100, var2, 0, 0, var4 >> 16, var3 >> 16, var8,
                     var19);
                   var4 += var15;
                   var3 += var16;
                   var8 += var20;
-                  var2 += DummyClass47.anInt1092;
+                  var2 += SoftwareIndexedColorSpriteStatics.anInt1092;
                 }
               }
 
               DummyClass40
-                  .method1146(DummyClass47.anIntArray1100, var2, 0, 0, var4 >> 16, var5 >> 16, var8,
+                  .method1146(SoftwareIndexedColorSpriteStatics.anIntArray1100, var2, 0, 0, var4 >> 16, var5 >> 16, var8,
                 var19);
               var4 += var15;
               var5 += var17;
               var8 += var20;
-              var2 += DummyClass47.anInt1092;
+              var2 += SoftwareIndexedColorSpriteStatics.anInt1092;
             }
           } else {
             var1 -= var0;
@@ -3964,22 +3966,22 @@ public final class DummyClass40 {
                   }
 
                   DummyClass40
-                      .method1146(DummyClass47.anIntArray1100, var2, 0, 0, var3 >> 16, var4 >> 16, var8,
+                      .method1146(SoftwareIndexedColorSpriteStatics.anIntArray1100, var2, 0, 0, var3 >> 16, var4 >> 16, var8,
                     var19);
                   var4 += var15;
                   var3 += var16;
                   var8 += var20;
-                  var2 += DummyClass47.anInt1092;
+                  var2 += SoftwareIndexedColorSpriteStatics.anInt1092;
                 }
               }
 
               DummyClass40
-                  .method1146(DummyClass47.anIntArray1100, var2, 0, 0, var5 >> 16, var4 >> 16, var8,
+                  .method1146(SoftwareIndexedColorSpriteStatics.anIntArray1100, var2, 0, 0, var5 >> 16, var4 >> 16, var8,
                 var19);
               var4 += var15;
               var5 += var17;
               var8 += var20;
-              var2 += DummyClass47.anInt1092;
+              var2 += SoftwareIndexedColorSpriteStatics.anInt1092;
             }
           }
         } else {
@@ -4012,22 +4014,22 @@ public final class DummyClass40 {
                   }
 
                   DummyClass40
-                      .method1146(DummyClass47.anIntArray1100, var2, 0, 0, var4 >> 16, var5 >> 16, var8,
+                      .method1146(SoftwareIndexedColorSpriteStatics.anIntArray1100, var2, 0, 0, var4 >> 16, var5 >> 16, var8,
                     var19);
                   var4 += var16;
                   var5 += var17;
                   var8 += var20;
-                  var2 += DummyClass47.anInt1092;
+                  var2 += SoftwareIndexedColorSpriteStatics.anInt1092;
                 }
               }
 
               DummyClass40
-                  .method1146(DummyClass47.anIntArray1100, var2, 0, 0, var3 >> 16, var5 >> 16, var8,
+                  .method1146(SoftwareIndexedColorSpriteStatics.anIntArray1100, var2, 0, 0, var3 >> 16, var5 >> 16, var8,
                 var19);
               var3 += var15;
               var5 += var17;
               var8 += var20;
-              var2 += DummyClass47.anInt1092;
+              var2 += SoftwareIndexedColorSpriteStatics.anInt1092;
             }
           } else {
             var0 -= var1;
@@ -4044,22 +4046,22 @@ public final class DummyClass40 {
                   }
 
                   DummyClass40
-                      .method1146(DummyClass47.anIntArray1100, var2, 0, 0, var5 >> 16, var4 >> 16, var8,
+                      .method1146(SoftwareIndexedColorSpriteStatics.anIntArray1100, var2, 0, 0, var5 >> 16, var4 >> 16, var8,
                     var19);
                   var4 += var16;
                   var5 += var17;
                   var8 += var20;
-                  var2 += DummyClass47.anInt1092;
+                  var2 += SoftwareIndexedColorSpriteStatics.anInt1092;
                 }
               }
 
               DummyClass40
-                  .method1146(DummyClass47.anIntArray1100, var2, 0, 0, var5 >> 16, var3 >> 16, var8,
+                  .method1146(SoftwareIndexedColorSpriteStatics.anIntArray1100, var2, 0, 0, var5 >> 16, var3 >> 16, var8,
                 var19);
               var3 += var15;
               var5 += var17;
               var8 += var20;
-              var2 += DummyClass47.anInt1092;
+              var2 += SoftwareIndexedColorSpriteStatics.anInt1092;
             }
           }
         }
@@ -4070,7 +4072,7 @@ public final class DummyClass40 {
   public static void method1155() {
     DummyClass40.anIntArray836 = null;
     DummyClass40.hslTable = null;
-    DummyClass40.textureCache = null;
+    GLStatics.textureCache = null;
     DummyClass40.anIntArray839 = null;
     DummyClass40.anIntArray841 = null;
     DummyClass40.SINE_TABLE = null;

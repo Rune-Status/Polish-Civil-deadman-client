@@ -3,11 +3,11 @@ package com.jagex.runescape;
 import com.jagex.runescape.buffer.Buffer;
 import com.jagex.runescape.common.GameString;
 import com.jagex.runescape.common.GameStringStatics;
-import com.jagex.runescape.common.HashTable;
 import com.jagex.runescape.huffman.HuffmanEncoder;
-import com.jagex.runescape.opengl.DummyClass16;
+import com.jagex.runescape.opengl.SomethingShadows;
 import com.jagex.runescape.opengl.DummyClass33;
 import com.jagex.runescape.opengl.DummyClass46;
+import com.jagex.runescape.opengl.GLStatics;
 import com.jagex.runescape.opengl.GlEnvironment;
 import com.jagex.runescape.opengl.GlModel;
 import com.jagex.runescape.opengl.GlRenderer;
@@ -29,14 +29,8 @@ import java.util.GregorianCalendar;
 
 public final class GameClient extends GameStub {
 
-  private static GameString aClass94_2198 = GameStringStatics.create("cyan:");
+  public static GameString aClass94_2198 = GameStringStatics.create("cyan:");
   public static boolean aBoolean2201;
-  public static HashTable aClass130_2194 = new HashTable(16);
-  public static int anInt2195;
-  public static SomethingGl0[][] aClass3_Sub11ArrayArray2199;
-  public static int[] mapFileIds;
-  public static GameString aClass94_2196 = GameClient.aClass94_2198;
-  public static GameString aClass94_2197 = GameClient.aClass94_2198;
 
   private void setUpdateError(int var2) {
     ++DummyClass43.ondemandRequester.anInt1011;
@@ -125,7 +119,7 @@ public final class GameClient extends GameStub {
       }
 
       if (var1 != 1) {
-        GameClient.aClass94_2196 = null;
+        GlobalStatics_1.aClass94_2196 = null;
       }
 
       if (!GlRenderer.useOpenGlRenderer) {
@@ -1054,7 +1048,7 @@ public final class GameClient extends GameStub {
       PlayerAppearance.method1168(8160);
       AnimationSequence.method2057((byte) -108);
       Mobile.method1974((byte) -116);
-      SceneGraphTile.method102(3353893);
+      GlobalStatics_2.method102(3353893);
       GameObjectConfig.method1687(-11);
       SpawnedGameObject.method109(2);
       NpcConfiguration.method1473((byte) 103);
@@ -1168,7 +1162,7 @@ public final class GameClient extends GameStub {
       DummyClass24.method1743(false);
       DummyClass61.method726();
       BufferData.method1733(-17148);
-      DummyClass16.method2045();
+      SomethingShadows.method2045();
       GlobalStatics_0.clear();
       DummyClass49.method1365(119);
       DummyClass31.method1682(-82);
@@ -1588,7 +1582,7 @@ public final class GameClient extends GameStub {
         AudioWorker.aShortArrayArray344 = AbstractObjectNodeWrapper.aShortArrayArray1619;
         DummyClass55.aShortArrayArray1429 = SomethingTexture.aShortArrayArray2634;
         Inventory.aShortArray2548 = MapScene.aShortArray63;
-        CollisionMap.aShortArray1311 = SceneGraphTile.aShortArray2219;
+        CollisionMap.aShortArray1311 = GlobalStatics_2.aShortArray2219;
       } else {
         AudioWorker.aShortArrayArray344 = InventoryConfig.aShortArrayArray3654;
         CollisionMap.aShortArray1311 = TextureSampler32.aShortArray3349;
@@ -1676,15 +1670,15 @@ public final class GameClient extends GameStub {
 
   public static void method43(boolean var0) {
     if (!var0) {
-        GameClient.aClass3_Sub11ArrayArray2199 = null;
+        GLStatics.aClass3_Sub11ArrayArray2199 = null;
       }
 
-      GameClient.mapFileIds = null;
-      GameClient.aClass94_2196 = null;
+      GlobalStatics_1.mapFileIds = null;
+      GlobalStatics_1.aClass94_2196 = null;
       GameClient.aClass94_2198 = null;
-      GameClient.aClass130_2194 = null;
-      GameClient.aClass94_2197 = null;
-      GameClient.aClass3_Sub11ArrayArray2199 = null;
+      GlobalStatics_1.aClass130_2194 = null;
+      GlobalStatics_1.aClass94_2197 = null;
+      GLStatics.aClass3_Sub11ArrayArray2199 = null;
   }
 
   public static WidgetAccess method44(Widget var0) {
@@ -1695,7 +1689,7 @@ public final class GameClient extends GameStub {
 
   public static AnimationSequence method45(int id, byte var1) {
     if (var1 != -20) {
-      GameClient.aClass3_Sub11ArrayArray2199 = null;
+      GLStatics.aClass3_Sub11ArrayArray2199 = null;
     }
 
     AnimationSequence var2 = (AnimationSequence) ProceduralTexture.aClass93_1146
@@ -1761,7 +1755,7 @@ public final class GameClient extends GameStub {
         if (var9 == DummyClass42.aClass11_886) {
           DummyClass60.aBoolean440 = true;
           SomethingVolume15.anInt2421 = var10;
-          SceneGraphTile.anInt2218 = var11;
+          GlobalStatics_2.anInt2218 = var11;
         }
 
         if (!var9.aBoolean233 || var12 < var14 && var13 < var15) {

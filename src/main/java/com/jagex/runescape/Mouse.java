@@ -2,6 +2,7 @@ package com.jagex.runescape;
 
 import com.jagex.runescape.common.GameString;
 import com.jagex.runescape.common.GameStringStatics;
+import com.jagex.runescape.opengl.GLStatics;
 import java.awt.Component;
 import java.awt.event.FocusEvent;
 import java.awt.event.FocusListener;
@@ -12,7 +13,6 @@ import java.awt.event.MouseMotionListener;
 public final class Mouse implements MouseListener, MouseMotionListener,
     FocusListener {
 
-  public static float[] aFloatArray1919 = new float[4];
   public static int[] anIntArray1920;
   public static int anInt1921;
   public static GameString aClass94_1922 = GameStringStatics.create("weiss:");
@@ -157,7 +157,7 @@ public final class Mouse implements MouseListener, MouseMotionListener,
     Mouse.aClass94_1922 = null;
       Mouse.anIntArray1920 = null;
 
-      Mouse.aFloatArray1919 = null;
+      GLStatics.FOG_COLOR = null;
   }
 
   public static void method2089(byte var0) {

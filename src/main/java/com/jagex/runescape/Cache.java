@@ -9,6 +9,7 @@ import com.jagex.runescape.opengl.GlDirectColorSprite;
 import com.jagex.runescape.opengl.GlRenderer;
 import com.jagex.runescape.opengl.GlTexture2d;
 import com.jagex.runescape.opengl.GlUtils;
+import com.jagex.runescape.sprite.SoftwareIndexedColorSpriteStatics;
 
 public final class Cache {
 
@@ -668,8 +669,8 @@ public final class Cache {
                                   var31 = GlUtils.anInt451;
                                   var30 = GlUtils.anInt448;
                                 } else {
-                                  var30 = DummyClass47.anInt1095;
-                                  var31 = DummyClass47.anInt1099;
+                                  var30 = SoftwareIndexedColorSpriteStatics.anInt1095;
+                                  var31 = SoftwareIndexedColorSpriteStatics.anInt1099;
                                 }
 
                                 int var32;
@@ -804,7 +805,7 @@ public final class Cache {
 
                         if (TextureSampler27.aClass11_3087 == var11) {
                           var21 = var11.anInt218;
-                          var45 = SceneGraphTile.aClass94_2216;
+                          var45 = GlobalStatics_2.aClass94_2216;
                         }
 
                         if (!var11.aBoolean233) {

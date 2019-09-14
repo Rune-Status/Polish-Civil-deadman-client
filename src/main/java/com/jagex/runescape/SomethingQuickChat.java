@@ -196,38 +196,4 @@ public final class SomethingQuickChat extends SubNode {
       SomethingQuickChat.anIntArray3565 = null;
   }
 
-  public static void method551(int var0, int var1, int var2) {
-    if (var0 == 0) {
-        if (var2 == 4 && !DummyHashTable.aBoolean1685) {
-          var2 = 2;
-          var1 = 2;
-        }
-
-        if ((DummyClass30.anInt453 == var2)) {
-          if (var2 != 0 && var1 != TextureSampler37.anInt3263) {
-            MapScene.anInterface5Array70[var2].set(var1);
-            TextureSampler37.anInt3263 = var1;
-          }
-        } else {
-          if (TextureSampler23.aBoolean3207) {
-            return;
-          }
-
-          if ((DummyClass30.anInt453 != 0)) {
-            MapScene.anInterface5Array70[DummyClass30.anInt453].disable();
-          }
-
-          if ((var2 != 0)) {
-            MaterialShader var3 = MapScene.anInterface5Array70[var2];
-            var3.enable();
-            var3.set(var1);
-          }
-
-          DummyClass30.anInt453 = var2;
-          TextureSampler37.anInt3263 = var1;
-        }
-
-      }
-  }
-
 }

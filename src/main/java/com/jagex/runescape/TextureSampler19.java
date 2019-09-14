@@ -1,6 +1,7 @@
 package com.jagex.runescape;
 
 import com.jagex.runescape.buffer.Buffer;
+import com.jagex.runescape.opengl.GLStatics;
 import com.jagex.runescape.opengl.GlRenderer;
 
 public final class TextureSampler19 extends AbstractTextureSampler {
@@ -195,7 +196,7 @@ public final class TextureSampler19 extends AbstractTextureSampler {
       for (int var2 = 0; (var2 < 104); ++var2) {
         for (int var3 = 0; (var3 < 104); ++var3) {
           if (GroundItem.method2031((byte) -106, true, var2, var3,
-            SomethingTexture1.sceneGraphTiles, var1)) {
+            GLStatics.sceneGraphTiles, var1)) {
             ++var1;
           }
 
@@ -294,7 +295,7 @@ public final class TextureSampler19 extends AbstractTextureSampler {
                       var21, var18, var16, var15, var11, var0.anInt1670);
                   }
                 } else {
-                  var30 = DummyClass40.textureCache.method15(var0.anInt1670, '\uffff');
+                  var30 = GLStatics.textureCache.method15(var0.anInt1670, '\uffff');
                   DummyClass40.method1154(var27, var29, var25, var26, var28, var24,
                     DummyClass2.repackHSL(var30, var0.anInt1664),
                     DummyClass2.repackHSL(var30, var0.anInt1663),
@@ -327,7 +328,7 @@ public final class TextureSampler19 extends AbstractTextureSampler {
                     var0.anInt1667, var0.anInt1663, var10, var14, var9, var17, var18, var21, var12,
                     var11, var15, var0.anInt1670);
                 } else {
-                  var30 = DummyClass40.textureCache.method15(var0.anInt1670, '\uffff');
+                  var30 = GLStatics.textureCache.method15(var0.anInt1670, '\uffff');
                   DummyClass40.method1154(var23, var25, var29, var22, var24, var28,
                     DummyClass2.repackHSL(var30, var0.anInt1675),
                     DummyClass2.repackHSL(var30, var0.anInt1667),

@@ -8,6 +8,7 @@ import com.jagex.runescape.opengl.GlDirectFullColorSprite;
 import com.jagex.runescape.opengl.GlRenderer;
 import com.jagex.runescape.opengl.MaterialShader5;
 import com.jagex.runescape.sprite.AbstractIndexedColorSprite;
+import com.jagex.runescape.sprite.SoftwareIndexedColorSprite;
 
 public final class Widget {
 
@@ -1155,7 +1156,7 @@ public final class Widget {
   }
 
   public static int method861(int var0, int var1, int var2) {
-    Inventory var3 = (Inventory) SceneGraphTile.aClass130_2220.get(var0);
+    Inventory var3 = (Inventory) GlobalStatics_2.aClass130_2220.get(var0);
       return var3 == null ?
         -1 :
         (var2 >= 0 && var2 < var3.ids.length ? (var1 < 39 ? -69 : var3.ids[var2]) : -1);

@@ -6,7 +6,6 @@ import com.jagex.runescape.DummyClass9;
 import com.jagex.runescape.Light;
 import com.jagex.runescape.MapScene;
 import com.jagex.runescape.SceneGraphTile;
-import com.jagex.runescape.SomethingQuickChat;
 import com.jagex.runescape.SomethingTilek;
 
 public final class DummyClass46 {
@@ -409,7 +408,7 @@ public final class DummyClass46 {
 
   public static void method1277(SceneGraphTile[][][] var2) {
     if (DisplayMode.useBumpMaps) {
-      SomethingQuickChat.method551(0, 0, 0);
+      GLStatics.method551(0, 0, 0);
       GlRenderer.method1856(0);
       GlRenderer.loadIdentityTextureMatrix();
       GlRenderer.bindTexture(GlRenderer.anInt1810);

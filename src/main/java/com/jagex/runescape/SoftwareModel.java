@@ -1,5 +1,6 @@
 package com.jagex.runescape;
 
+import com.jagex.runescape.opengl.GLStatics;
 import java.util.Arrays;
 
 public final class SoftwareModel extends AbstractModel {
@@ -89,7 +90,7 @@ public final class SoftwareModel extends AbstractModel {
 
       for (var9 = 0; var9 < this.anInt3889; ++var9) {
         short var10 = var1.materials[var9];
-        if (var10 != -1 && DummyClass40.textureCache.method17(var10, 77)) {
+        if (var10 != -1 && GLStatics.textureCache.method17(var10, 77)) {
           this.aShortArray3908[var9] = var10;
         } else {
           this.aShortArray3908[var9] = -1;

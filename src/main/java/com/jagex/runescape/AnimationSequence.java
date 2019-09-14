@@ -677,7 +677,7 @@ public final class AnimationSequence {
       HintMarker.anInt1357 = 0;
       FileSystem.anInt104 = 0;
       TextureSampler6.resetVariables(-114);
-      SceneGraphTile.method103((byte) 24);
+      GlobalStatics_2.method103((byte) 24);
       AbstractSomethingTexture.anInt1105 = 0;
       DummyClass8.anInt4014 = 0;
       SomethingAudio.anInt1996 = 0;

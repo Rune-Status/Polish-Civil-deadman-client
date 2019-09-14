@@ -3,6 +3,7 @@ package com.jagex.runescape;
 import com.jagex.runescape.buffer.Buffer;
 import com.jagex.runescape.common.GameString;
 import com.jagex.runescape.common.HashTable;
+import com.jagex.runescape.opengl.GLStatics;
 
 public final class ByteArrayNode extends SubNode {
 
@@ -170,13 +171,13 @@ public final class ByteArrayNode extends SubNode {
       var12.anInt426 = var9;
 
       for (int var13 = var0; var13 >= 0; --var13) {
-        if (SomethingTexture1.sceneGraphTiles[var13][var1][var2] == null) {
-          SomethingTexture1.sceneGraphTiles[var13][var1][var2] =
+        if (GLStatics.sceneGraphTiles[var13][var1][var2] == null) {
+          GLStatics.sceneGraphTiles[var13][var1][var2] =
             new SceneGraphTile(var13, var1, var2);
         }
       }
 
-      SomethingTexture1.sceneGraphTiles[var0][var1][var2].aClass19_2233 = var12;
+      GLStatics.sceneGraphTiles[var0][var1][var2].aClass19_2233 = var12;
     }
   }
 

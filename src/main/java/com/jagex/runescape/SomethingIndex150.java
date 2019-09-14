@@ -5,6 +5,7 @@ import com.jagex.runescape.common.GameStringStatics;
 import com.jagex.runescape.opengl.GlIndexedColorSprite;
 import com.jagex.runescape.opengl.GlRenderer;
 import com.jagex.runescape.sprite.AbstractIndexedColorSprite;
+import com.jagex.runescape.sprite.SoftwareIndexedColorSprite;
 import java.util.Objects;
 
 public final class SomethingIndex150 {

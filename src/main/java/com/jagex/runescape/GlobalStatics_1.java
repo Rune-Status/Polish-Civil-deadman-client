@@ -2,7 +2,9 @@ package com.jagex.runescape;
 
 import com.jagex.runescape.common.GameString;
 import com.jagex.runescape.common.GameStringStatics;
+import com.jagex.runescape.common.HashTable;
 import com.jagex.runescape.node.Node;
+import com.jagex.runescape.opengl.SomethingGl0;
 
 public class GlobalStatics_1 {
 
@@ -10,6 +12,11 @@ public class GlobalStatics_1 {
   public static int anInt1463 = -16 + (int) (Math.random() * 33.0D);
   public static long aLong1465;
   public static GameString aClass94_1466 = GameStringStatics.create("Lade Titelbild )2 ");
+  public static HashTable aClass130_2194 = new HashTable(16);
+  public static int anInt2195;
+  public static int[] mapFileIds;
+  public static GameString aClass94_2196 = GameClient.aClass94_2198;
+  public static GameString aClass94_2197 = GameClient.aClass94_2198;
   static SoftwareModel aClass140_Sub1_Sub2_3902 = new SoftwareModel();
   static int[] anIntArray3904 = new int[1];
   static int[] anIntArray3905 = new int[1];

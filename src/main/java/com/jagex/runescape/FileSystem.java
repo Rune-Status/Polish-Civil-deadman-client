@@ -3,7 +3,7 @@ package com.jagex.runescape;
 import com.jagex.runescape.buffer.Buffer;
 import com.jagex.runescape.common.GameString;
 import com.jagex.runescape.common.GameStringStatics;
-import com.jagex.runescape.opengl.DummyClass16;
+import com.jagex.runescape.opengl.SomethingShadows;
 import com.jagex.runescape.opengl.MaterialShader5;
 
 public final class FileSystem {
@@ -177,7 +177,7 @@ public final class FileSystem {
         var0.method1696(var3, var16, var18, var5, var19, var21, false, null, (byte) -69, true,
           var17);
       assert var22 != null;
-      DummyClass16.method2047(var22.shadow, -var4 + var16, var20, var17 - var2);
+      SomethingShadows.method2047(var22.shadow, -var4 + var16, var20, var17 - var2);
   }
 
   public static void method841(boolean var0) {

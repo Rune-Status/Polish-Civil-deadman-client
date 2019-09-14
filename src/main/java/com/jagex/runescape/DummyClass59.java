@@ -2,8 +2,9 @@ package com.jagex.runescape;
 
 import com.jagex.runescape.common.GameString;
 import com.jagex.runescape.common.GameStringStatics;
-import com.jagex.runescape.opengl.DummyClass16;
+import com.jagex.runescape.opengl.SomethingShadows;
 import com.jagex.runescape.opengl.DummyClass46;
+import com.jagex.runescape.opengl.GLStatics;
 import com.jagex.runescape.opengl.GlRenderer;
 
 public final class DummyClass59 {
@@ -79,10 +80,10 @@ public final class DummyClass59 {
 
       int var2;
       for (var2 = 0; (var2 < Something3d2.aByteArrayArray3027.length); ++var2) {
-        if ((GameClient.mapFileIds[var2] != -1) &&
+        if ((GlobalStatics_1.mapFileIds[var2] != -1) &&
             Something3d2.aByteArrayArray3027[var2] == null) {
           Something3d2.aByteArrayArray3027[var2] =
-            TextureSampler26.maps.getBytes(GameClient.mapFileIds[var2], 0);
+            TextureSampler26.maps.getBytes(GlobalStatics_1.mapFileIds[var2], 0);
           if (Something3d2.aByteArrayArray3027[var2] == null) {
             ++TextureSampler5.anInt3293;
             var1 = false;
@@ -217,7 +218,7 @@ public final class DummyClass59 {
           TextureSampler13.method313((byte) 58);
           boolean var11 = false;
           int var12;
-          if (GlRenderer.useOpenGlRenderer && DummyHashTable.aBoolean1685) {
+          if (GlRenderer.useOpenGlRenderer && GLStatics.aBoolean1685) {
             for (var12 = 0; Something3d2.aByteArrayArray3027.length > var12;
                 ++var12) {
               if (TextureSampler34.updatedLandscapesData[var12] != null
@@ -247,11 +248,11 @@ public final class DummyClass59 {
 
           Something3d.method2241((byte) -115, false);
           if (GlRenderer.useOpenGlRenderer) {
-            DummyClass16.shadowsSprite.clear();
+            SomethingShadows.shadowsSprite.clear();
 
             for (var12 = 0; var12 < 13; ++var12) {
               for (var4 = 0; var4 < 13; ++var4) {
-                DummyClass16.blockShadows[var12][var4].needsUpdate = true;
+                SomethingShadows.blockShadows[var12][var4].needsUpdate = true;
               }
             }
           }
@@ -346,7 +347,7 @@ public final class DummyClass59 {
           if (GlRenderer.useOpenGlRenderer) {
             for (var4 = 0; var4 < 13; ++var4) {
               for (var5 = 0; (var5 < 13); ++var5) {
-                DummyClass16.blockShadows[var4][var5]
+                SomethingShadows.blockShadows[var4][var5]
                     .update(AbstractGameWorld.heightMap[0],
                         var4 * 8, var5 * 8);
               }

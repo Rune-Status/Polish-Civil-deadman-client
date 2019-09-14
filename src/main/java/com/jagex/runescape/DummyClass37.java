@@ -2,6 +2,7 @@ package com.jagex.runescape;
 
 import com.jagex.runescape.common.GameString;
 import com.jagex.runescape.common.GameStringStatics;
+import com.jagex.runescape.opengl.GLStatics;
 import com.jagex.runescape.opengl.GlRenderer;
 import com.jagex.runescape.opengl.GlTexture2d;
 
@@ -62,7 +63,7 @@ public final class DummyClass37 {
         var7 = SpotAnimationConfig.gameBuffer.readUnsignedShort();
         AnimationSomething.updatedLandscapeIds = new int[var6];
         DummyClass55.landscapeFileIds = new int[var6];
-        GameClient.mapFileIds = new int[var6];
+        GlobalStatics_1.mapFileIds = new int[var6];
         TextureSampler34.updatedLandscapesData = new byte[var6][];
         TextureSampler5.anIntArray3290 = null;
         TextureSampler17.updatedMapIds = new int[var6];
@@ -94,7 +95,7 @@ public final class DummyClass37 {
                   AudioStreamEncoder3.regionHashes[var6] = var14;
                   int var16 = var14 & 255;
                   var15 = ('\uff6c' & var14) >> 8;
-                  GameClient.mapFileIds[var6] =
+                  GlobalStatics_1.mapFileIds[var6] =
                       TextureSampler26.maps
                           .getFileId(RenderAnimation.concat(new GameString[]{
                               GameBuffer.MAP_PREFIX,
@@ -160,7 +161,7 @@ public final class DummyClass37 {
         AudioSomethingSomething.landscapesData = new byte[count][];
         TextureSampler34.updatedLandscapesData = new byte[count][];
         TextureSampler5.anIntArray3290 = null;
-        GameClient.mapFileIds = new int[count];
+        GlobalStatics_1.mapFileIds = new int[count];
         GroundItemNode.updatedMapsData = new byte[count][];
         DummyClass55.landscapeFileIds = new int[count];
         AnimationSomething.updatedLandscapeIds = new int[count];
@@ -182,13 +183,13 @@ public final class DummyClass37 {
                 || (regionX == 50)
                 || (regionX == 49) && (regionY == 47))) {
               AudioStreamEncoder3.regionHashes[count] = regionHash;
-              GameClient.mapFileIds[count] = -1;
+              GlobalStatics_1.mapFileIds[count] = -1;
               DummyClass55.landscapeFileIds[count] = -1;
               TextureSampler17.updatedMapIds[count] = -1;
               AnimationSomething.updatedLandscapeIds[count] = -1;
             } else {
               AudioStreamEncoder3.regionHashes[count] = regionHash;
-              GameClient.mapFileIds[count] =
+              GlobalStatics_1.mapFileIds[count] =
                   TextureSampler26.maps
                       .getFileId(RenderAnimation.concat(new GameString[]{
                           GameBuffer.MAP_PREFIX,
@@ -266,7 +267,7 @@ public final class DummyClass37 {
   }
 
   public static SomethingSceneI method1037(int var0, int var1, int var2) {
-    SceneGraphTile var3 = SomethingTexture1.sceneGraphTiles[var0][var1][var2];
+    SceneGraphTile var3 = GLStatics.sceneGraphTiles[var0][var1][var2];
     if (var3 == null) {
       return null;
     } else {
@@ -676,7 +677,7 @@ public final class DummyClass37 {
       TextureSampler1.b12FontFileId = var1.getFileId(TextureSampler1.FONT_B12);
       FloorOverlay.anInt2104 = var1.getFileId(FileRequester.aClass94_2959);
       TextureSampler18.anInt4042 = var1.getFileId(TextureSampler2.aClass94_3370);
-      GameClient.anInt2195 = var1.getFileId(Something3d.aClass94_3008);
+      GlobalStatics_1.anInt2195 = var1.getFileId(Something3d.aClass94_3008);
       SubNode.anInt2575 = var1.getFileId(SomethingScene.aClass94_1070);
       if (var0 != 208) {
         DummyClass37.anInt670 = 0;

@@ -4,6 +4,7 @@ import com.jagex.runescape.buffer.Buffer;
 import com.jagex.runescape.common.GameString;
 import com.jagex.runescape.common.GameStringStatics;
 import com.jagex.runescape.opengl.MaterialShader;
+import com.jagex.runescape.sprite.SoftwareIndexedColorSprite;
 
 public final class MapScene {
 

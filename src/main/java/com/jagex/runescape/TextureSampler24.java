@@ -74,12 +74,12 @@ public final class TextureSampler24 extends AbstractTextureSampler {
         GlUtils.drawVerticalLine(var3 + 1, var7 + 16 + var4, var6, TextureSampler2.anInt3377);
         GlUtils.drawHorizontalLine(var3, var7 + 16 + var4, 16, TextureSampler2.anInt3377);
         GlUtils.drawHorizontalLine(var3, var7 + var4 + 17, 16, TextureSampler2.anInt3377);
-        GlUtils.drawVerticalLine(15 + var3, var4 + (16 + var7), var6, SceneGraphTile.anInt2243);
+        GlUtils.drawVerticalLine(15 + var3, var4 + (16 + var7), var6, GlobalStatics_2.anInt2243);
         GlUtils.drawVerticalLine(14 + var3, 17 + (var4 + var7), -1 + var6,
-          SceneGraphTile.anInt2243);
-        GlUtils.drawHorizontalLine(var3, var6 + 15 + var4 + var7, 16, SceneGraphTile.anInt2243);
+          GlobalStatics_2.anInt2243);
+        GlUtils.drawHorizontalLine(var3, var6 + 15 + var4 + var7, 16, GlobalStatics_2.anInt2243);
         GlUtils.drawHorizontalLine(var3 + 1, var4 + 14 + var7 + var6, 15,
-          SceneGraphTile.anInt2243);
+          GlobalStatics_2.anInt2243);
       } else {
         DummyClass47.method1323(var3, 16 + var4, 16, -32 + var5, SomethingOtherWorldMap.anInt2530);
         DummyClass47.method1323(var3, var7 + (var4 + 16), 16, var6, SceneSomething.anInt486);
@@ -87,11 +87,11 @@ public final class TextureSampler24 extends AbstractTextureSampler {
         DummyClass47.method1318(var3 + 1, var7 + 16 + var4, var6, TextureSampler2.anInt3377);
         DummyClass47.method1317(var3, var4 + (16 + var7), 16, TextureSampler2.anInt3377);
         DummyClass47.method1317(var3, 17 + var4 + var7, 16, TextureSampler2.anInt3377);
-        DummyClass47.method1318(var3 + 15, var7 + 16 + var4, var6, SceneGraphTile.anInt2243);
-        DummyClass47.method1318(14 + var3, var4 + 17 + var7, -1 + var6, SceneGraphTile.anInt2243);
-        DummyClass47.method1317(var3, var6 + 15 + var4 + var7, 16, SceneGraphTile.anInt2243);
+        DummyClass47.method1318(var3 + 15, var7 + 16 + var4, var6, GlobalStatics_2.anInt2243);
+        DummyClass47.method1318(14 + var3, var4 + 17 + var7, -1 + var6, GlobalStatics_2.anInt2243);
+        DummyClass47.method1317(var3, var6 + 15 + var4 + var7, 16, GlobalStatics_2.anInt2243);
         DummyClass47.method1317(1 + var3, var6 + var4 - (-14 - var7), 15,
-          SceneGraphTile.anInt2243);
+          GlobalStatics_2.anInt2243);
       }
   }
 
