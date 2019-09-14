@@ -1,9 +1,7 @@
-package com.jagex.runescape.opengl.shader;
+package com.jagex.runescape.opengl;
 
 import com.jagex.runescape.AbstractFileRequester;
 import com.jagex.runescape.GroundItem;
-import com.jagex.runescape.opengl.GlRenderer;
-import com.jagex.runescape.opengl.SomethingGl;
 import java.nio.ByteBuffer;
 
 public final class MaterialShader4 implements MaterialShader {

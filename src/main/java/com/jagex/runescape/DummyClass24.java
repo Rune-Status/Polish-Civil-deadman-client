@@ -1,10 +1,13 @@
 package com.jagex.runescape;
 
+import com.jagex.runescape.common.GameString;
+import com.jagex.runescape.common.GameStringStatics;
+
 public final class DummyClass24 {
 
 
   private static GameString aClass94_1655 =
-    GameString.create("Loading world list data");
+    GameStringStatics.create("Loading world list data");
   public static AnimationSequence[] aClass142Array1654 = new AnimationSequence[14];
   public static boolean aBoolean1656;
   public static int anInt1657;

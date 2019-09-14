@@ -1,13 +1,15 @@
 package com.jagex.runescape;
 
 import com.jagex.runescape.buffer.Buffer;
+import com.jagex.runescape.common.GameString;
+import com.jagex.runescape.common.GameStringStatics;
 
 public final class StillGraphicNode extends SubNode {
 
-  private static GameString aClass94_3541 = GameString.create("yellow:");
-  private static GameString aClass94_3543 = GameString.create("Loading config )2 ");
+  private static GameString aClass94_3541 = GameStringStatics.create("yellow:");
+  private static GameString aClass94_3543 = GameStringStatics.create("Loading config )2 ");
   public static int anInt3542;
-  public static GameString aClass94_3547 = GameString.create("Speicher wird zugewiesen)3");
+  public static GameString aClass94_3547 = GameStringStatics.create("Speicher wird zugewiesen)3");
   public static GameString aClass94_3544 = StillGraphicNode.aClass94_3541;
   public static GameString aClass94_3548 = StillGraphicNode.aClass94_3541;
   public static GameString aClass94_3546 = StillGraphicNode.aClass94_3543;

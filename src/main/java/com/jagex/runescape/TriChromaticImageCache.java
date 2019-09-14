@@ -1,8 +1,11 @@
 package com.jagex.runescape;
 
+import com.jagex.runescape.common.GameString;
+import com.jagex.runescape.common.GameStringStatics;
+
 public final class TriChromaticImageCache {
 
-  public static GameString aClass94_1363 = GameString.create("Clientscript error in: ");
+  public static GameString aClass94_1363 = GameStringStatics.create("Clientscript error in: ");
   public static byte[] aByteArray1364 = new byte['\u8080'];
   public static FileUnpacker aClass153_1370;
   public static FileUnpacker aClass153_1372;
@@ -25,10 +28,10 @@ public final class TriChromaticImageCache {
       }
     }
 
-    TriChromaticImageCache.aClass94_1374 = GameString.create("zap");
-    TriChromaticImageCache.aClass94_1377 = GameString.create("Abbrechen");
+    TriChromaticImageCache.aClass94_1374 = GameStringStatics.create("zap");
+    TriChromaticImageCache.aClass94_1377 = GameStringStatics.create("Abbrechen");
     TriChromaticImageCache.anIntArrayArray1373 = new int[104][104];
-    TriChromaticImageCache.aClass94_1380 = GameString.create(")4p=");
+    TriChromaticImageCache.aClass94_1380 = GameStringStatics.create(")4p=");
   }
 
   public boolean aBoolean1379;

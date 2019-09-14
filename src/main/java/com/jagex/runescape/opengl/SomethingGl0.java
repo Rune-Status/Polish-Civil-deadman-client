@@ -4,12 +4,11 @@ import com.jagex.runescape.buffer.Buffer;
 import com.jagex.runescape.DisplayMode;
 import com.jagex.runescape.DummyClass40;
 import com.jagex.runescape.DummyClass53;
-import com.jagex.runescape.HashTable;
+import com.jagex.runescape.common.HashTable;
 import com.jagex.runescape.IntegerNode;
-import com.jagex.runescape.Node;
+import com.jagex.runescape.node.Node;
 import com.jagex.runescape.SceneGraphTile;
 import com.jagex.runescape.SomethingQuickChat;
-import com.jagex.runescape.opengl.shader.MaterialShader3;
 import java.nio.ByteBuffer;
 import java.nio.ByteOrder;
 

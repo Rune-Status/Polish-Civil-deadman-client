@@ -1,5 +1,7 @@
 package com.jagex.runescape;
 
+import com.jagex.runescape.common.GameString;
+import com.jagex.runescape.common.GameStringStatics;
 import com.jagex.runescape.opengl.GlRenderer;
 import com.jagex.runescape.opengl.GlTexture2d;
 import java.applet.AppletContext;
@@ -20,17 +22,17 @@ public abstract class GameStub implements Runnable,
     FocusListener, WindowListener {
 
   private static GameString aClass94_5 =
-      GameString.create(" from your ignore list first)3");
+      GameStringStatics.create(" from your ignore list first)3");
   public static int anInt12;
   public static boolean aBoolean13;
   public static int anInt2;
   public static int anInt3;
   public static boolean aBoolean6;
-  public static GameString aClass94_7 = GameString
+  public static GameString aClass94_7 = GameStringStatics
       .create(" s(West d-Bconnect-B)3");
-  public static GameString aClass94_8 = GameString.create("");
-  public static GameString aClass94_9 = GameString.create(")3)3)3");
-  public static GameString COMMAND_RECTANGLE_DEBUG = GameString
+  public static GameString aClass94_8 = GameStringStatics.create("");
+  public static GameString aClass94_9 = GameStringStatics.create(")3)3)3");
+  public static GameString COMMAND_RECTANGLE_DEBUG = GameStringStatics
       .create("::rect_debug");
   public static boolean aBoolean11;
   public static GameString aClass94_4 = GameStub.aClass94_5;
@@ -120,19 +122,19 @@ public abstract class GameStub implements Runnable,
   public abstract void init();
 
   public final void start() {
-    if (StringNode.applet == this && !PlayerVariable.aBoolean554) {
+    if (GlobalStatics_0.applet == this && !PlayerVariable.aBoolean554) {
         AreaSoundEffect.destroyTime = 0L;
       }
   }
 
   public final void stop() {
-    if (StringNode.applet == this && !PlayerVariable.aBoolean554) {
+    if (GlobalStatics_0.applet == this && !PlayerVariable.aBoolean554) {
         AreaSoundEffect.destroyTime = 4000L + Time.getCurrentTimeMillis();
       }
   }
 
   public final void destroy() {
-    if (this == StringNode.applet && !PlayerVariable.aBoolean554) {
+    if (this == GlobalStatics_0.applet && !PlayerVariable.aBoolean554) {
         AreaSoundEffect.destroyTime = Time.getCurrentTimeMillis();
         TextureSampler25.sleep(5000L);
         TextureSampler30.signLink = null;
@@ -141,7 +143,7 @@ public abstract class GameStub implements Runnable,
   }
 
   public final void paint(Graphics var1) {
-    if (this == StringNode.applet && !PlayerVariable.aBoolean554) {
+    if (this == GlobalStatics_0.applet && !PlayerVariable.aBoolean554) {
         TextureSampler30.aBoolean3116 = true;
         if (DummyClass20.aBoolean1784 && !GlRenderer.useOpenGlRenderer
             && ((-AnimationSequence.canvasInitializedTime + Time
@@ -276,7 +278,7 @@ public abstract class GameStub implements Runnable,
     DummyClass30.viewWidth = width;
     GroundItem.viewHeight = height;
     AreaSoundEffect.windowWidth = width;
-    StringNode.applet = this;
+    GlobalStatics_0.applet = this;
     TextureSampler27.FRAME = new Frame();
     TextureSampler27.FRAME.setTitle("Jagex");
     TextureSampler27.FRAME.setResizable(true);
@@ -327,7 +329,7 @@ public abstract class GameStub implements Runnable,
   public final void method41(byte var1, int var2, int var3, int var4,
       int var5) {
     try {
-        if (StringNode.applet != null) {
+        if (GlobalStatics_0.applet != null) {
           ++GlobalStatics_0.anInt639;
           if ((GlobalStatics_0.anInt639 >= 3)) {
             this.reportError("alreadyloaded");
@@ -339,7 +341,7 @@ public abstract class GameStub implements Runnable,
           return;
         }
 
-        StringNode.applet = this;
+        GlobalStatics_0.applet = this;
         DisplayMode.viewY = 0;
         TextureSampler18.build = var4;
         if (var1 >= -23) {
@@ -425,7 +427,7 @@ public abstract class GameStub implements Runnable,
               GameCanvas.INSTANCE,
               0, 14);
       GameWorld.audioOutputStream0
-          .method2154(114, BlockConfig.aClass3_Sub24_Sub4_1193);
+          .method2154(114, GlobalStatics_0.aClass3_Sub24_Sub4_1193);
       SomethingWorldMappy.audioOutputStream1 =
           DummyClass43.createAudioOutputStream(2048, DummyClass35.signLink,
               GameCanvas.INSTANCE, 1,

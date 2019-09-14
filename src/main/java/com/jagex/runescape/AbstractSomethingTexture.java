@@ -1,5 +1,6 @@
 package com.jagex.runescape;
 
+import com.jagex.runescape.common.GameString;
 import com.jagex.runescape.opengl.GlTexture2d;
 
 public abstract class AbstractSomethingTexture {

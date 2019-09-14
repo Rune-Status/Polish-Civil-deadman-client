@@ -162,7 +162,7 @@ public final class AudioStreamEncoder1 extends AudioStreamEncoder {
 
         this.anInt3480 += var2;
         if (this.anInt3470 == 256 && (this.anInt3474 & 255) == 0) {
-          if (GameString.stereo) {
+          if (GlobalStatics_0.stereo) {
             var2 = AudioStreamEncoder1.method426(((SomethingMusic0) this.aClass3_Sub12_2544).aByteArray3030, var1,
                 this.anInt3474, var2, this.anInt3484, this.anInt3481,
                 this.anInt3475,
@@ -172,7 +172,7 @@ public final class AudioStreamEncoder1 extends AudioStreamEncoder {
             var2 = AudioStreamEncoder1.method428(((SomethingMusic0) this.aClass3_Sub12_2544).aByteArray3030, var1,
                 this.anInt3474, var2, this.anInt3476, this.anInt3472, 0, var6, var3, this);
           }
-        } else if (GameString.stereo) {
+        } else if (GlobalStatics_0.stereo) {
           var2 = AudioStreamEncoder1.method421(0, 0, ((SomethingMusic0) this.aClass3_Sub12_2544).aByteArray3030, var1,
               this.anInt3474, var2, this.anInt3484, this.anInt3481,
               this.anInt3475,
@@ -197,7 +197,7 @@ public final class AudioStreamEncoder1 extends AudioStreamEncoder {
       }
 
       if (this.anInt3470 == 256 && (this.anInt3474 & 255) == 0) {
-        if (GameString.stereo) {
+        if (GlobalStatics_0.stereo) {
           return AudioStreamEncoder1.method420(((SomethingMusic0) this.aClass3_Sub12_2544).aByteArray3030, var1,
               this.anInt3474, var2, this.anInt3484, this.anInt3481, 0, var4, var3, this);
         }
@@ -206,7 +206,7 @@ public final class AudioStreamEncoder1 extends AudioStreamEncoder {
             this.anInt3474, var2, this.anInt3476, 0, var4, var3, this);
       }
 
-      if (GameString.stereo) {
+      if (GlobalStatics_0.stereo) {
         return AudioStreamEncoder1.method433(0, 0, ((SomethingMusic0) this.aClass3_Sub12_2544).aByteArray3030, var1,
             this.anInt3474, var2, this.anInt3484, this.anInt3481, 0, var4, var3, this,
             this.anInt3470,
@@ -658,7 +658,7 @@ public final class AudioStreamEncoder1 extends AudioStreamEncoder {
 
         this.anInt3480 += var2;
         if (this.anInt3470 == -256 && (this.anInt3474 & 255) == 0) {
-          if (GameString.stereo) {
+          if (GlobalStatics_0.stereo) {
             var2 = AudioStreamEncoder1.method435(((SomethingMusic0) this.aClass3_Sub12_2544).aByteArray3030, samples,
                 this.anInt3474, var2, this.anInt3484, this.anInt3481,
                 this.anInt3475,
@@ -668,7 +668,7 @@ public final class AudioStreamEncoder1 extends AudioStreamEncoder {
             var2 = AudioStreamEncoder1.method427(((SomethingMusic0) this.aClass3_Sub12_2544).aByteArray3030, samples,
                 this.anInt3474, var2, this.anInt3476, this.anInt3472, 0, var6, var3, this);
           }
-        } else if (GameString.stereo) {
+        } else if (GlobalStatics_0.stereo) {
           var2 =
               AudioStreamEncoder1.method440(0, 0, ((SomethingMusic0) this.aClass3_Sub12_2544).aByteArray3030, samples,
                   this.anInt3474, var2, this.anInt3484, this.anInt3481,
@@ -695,7 +695,7 @@ public final class AudioStreamEncoder1 extends AudioStreamEncoder {
       }
 
       if (this.anInt3470 == -256 && (this.anInt3474 & 255) == 0) {
-        if (GameString.stereo) {
+        if (GlobalStatics_0.stereo) {
           return AudioStreamEncoder1.method447(((SomethingMusic0) this.aClass3_Sub12_2544).aByteArray3030, samples,
               this.anInt3474, var2, this.anInt3484, this.anInt3481, 0, var4, var3, this);
         }
@@ -704,7 +704,7 @@ public final class AudioStreamEncoder1 extends AudioStreamEncoder {
             this.anInt3474, var2, this.anInt3476, 0, var4, var3, this);
       }
 
-      if (GameString.stereo) {
+      if (GlobalStatics_0.stereo) {
         return AudioStreamEncoder1.method453(0, 0, ((SomethingMusic0) this.aClass3_Sub12_2544).aByteArray3030, samples,
             this.anInt3474, var2, this.anInt3484, this.anInt3481, 0, var4, var3, this,
             this.anInt3470,

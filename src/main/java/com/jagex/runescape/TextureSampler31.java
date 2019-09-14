@@ -1,18 +1,20 @@
 package com.jagex.runescape;
 
 import com.jagex.runescape.buffer.Buffer;
+import com.jagex.runescape.common.GameString;
+import com.jagex.runescape.common.GameStringStatics;
 
 public final class TextureSampler31 extends AbstractTextureSampler {
 
-  private static GameString aClass94_3170 = GameString.create("Loaded textures");
+  private static GameString aClass94_3170 = GameStringStatics.create("Loaded textures");
   public static int anInt3158 = -8 + (int) (17.0D * Math.random());
   public static FileCacheRequester fileCacheRequester;
-  public static GameString UNDERSCORE = GameString.create("_");
+  public static GameString UNDERSCORE = GameStringStatics.create("_");
   public static boolean aBoolean3166;
-  public static GameString aClass94_3168 = GameString.create("cross");
-  public static GameString aClass94_3169 = GameString.create("Lade Sprites )2 ");
+  public static GameString aClass94_3168 = GameStringStatics.create("cross");
+  public static GameString aClass94_3169 = GameStringStatics.create("Lade Sprites )2 ");
   public static int[] anIntArray3171 = {0, 4, 4, 8, 0, 0, 8, 0, 0};
-  public static GameString aClass94_3172 = GameString.create("Regarder dans cette direction");
+  public static GameString aClass94_3172 = GameStringStatics.create("Regarder dans cette direction");
   public static FileUnpacker aClass153_3173;
   public static GameString aClass94_3167 = TextureSampler31.aClass94_3170;
   private int anInt3160;
@@ -104,7 +106,7 @@ public final class TextureSampler31 extends AbstractTextureSampler {
           TextureSampler5.npcs[var2] = null;
         }
       }
-      if (HashTable.packetLength == SpotAnimationConfig.gameBuffer.position) {
+      if (GlobalStatics_0.packetLength == SpotAnimationConfig.gameBuffer.position) {
         for (var1 = 0; var1 < DummyClass6.anInt2046; ++var1) {
           if (TextureSampler5.npcs[AudioWorker.anIntArray347[var1]] == null) {
             throw new RuntimeException("gnp2 pos:" + var1 + " size:" + DummyClass6.anInt2046);
@@ -113,7 +115,7 @@ public final class TextureSampler31 extends AbstractTextureSampler {
 
       } else {
         throw new RuntimeException("gnp1 pos:" + SpotAnimationConfig.gameBuffer.position + " psize:"
-          + HashTable.packetLength);
+          + GlobalStatics_0.packetLength);
       }
   }
 

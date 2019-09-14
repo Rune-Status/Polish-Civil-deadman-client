@@ -1,14 +1,12 @@
-package com.jagex.runescape.opengl.shader;
+package com.jagex.runescape.opengl;
 
 import com.jagex.runescape.BZipDecompressorState;
 import com.jagex.runescape.ClientScript;
+import com.jagex.runescape.GlobalStatics_0;
 import com.jagex.runescape.GroundItem;
 import com.jagex.runescape.SomethingScene;
-import com.jagex.runescape.StringNode;
 import com.jagex.runescape.TextureSampler39;
 import com.jagex.runescape.TextureSampler9;
-import com.jagex.runescape.opengl.GlRenderer;
-import com.jagex.runescape.opengl.SomethingGl;
 import java.nio.ByteBuffer;
 
 public final class MaterialShader3 implements MaterialShader {
@@ -129,7 +127,7 @@ public final class MaterialShader3 implements MaterialShader {
           .glRotatef(TextureSampler9.anInt3103 * 360.0F / 2048.0F, 0.0F, 1.0F,
               0.0F);
       GlRenderer.GL.glTranslatef((-BZipDecompressorState.anInt144),
-          (-ClientScript.anInt3695), (-StringNode.anInt2587));
+          (-ClientScript.anInt3695), (-GlobalStatics_0.anInt2587));
       if (MaterialShader3.aBoolean2191) {
         this.aFloatArray2190[0] = 0.0010F;
         this.aFloatArray2190[1] = 9.0E-4F;

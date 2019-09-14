@@ -1,16 +1,21 @@
 package com.jagex.runescape;
 
+import com.jagex.runescape.common.GameString;
+import com.jagex.runescape.common.GameStringStatics;
+import com.jagex.runescape.common.HashTable;
+import com.jagex.runescape.node.Node;
+
 public final class FileRequester extends AbstractFileRequester {
 
   private static GameString aClass94_2960 =
-    GameString.create("Loading interfaces )2 ");
+    GameStringStatics.create("Loading interfaces )2 ");
   public static GameBuffer loginBuffer = new GameBuffer(5000);
-  public static GameString aClass94_2945 = GameString.create(
+  public static GameString aClass94_2945 = GameStringStatics.create(
     "Votre liste d(Wamis est pleine (X100 noms maximum pour la version gratuite et 200 pour les abonn-Bs(Y)3");
-  public static GameString aClass94_2951 = GameString.create("k");
+  public static GameString aClass94_2951 = GameStringStatics.create("k");
   public static int[] anIntArray2952 = new int[128];
   public static int anInt2958;
-  public static GameString aClass94_2959 = GameString.create("mapfunction");
+  public static GameString aClass94_2959 = GameStringStatics.create("mapfunction");
   public static GameString aClass94_2961 = FileRequester.aClass94_2960;
   private final FileCache aClass41_2943;
   private FileTable aClass62_2944;
@@ -607,11 +612,6 @@ public final class FileRequester extends AbstractFileRequester {
           }
         }
       }
-  }
-
-  public static boolean method2103(int var0, int var1) {
-    return var1 >= -78 || ((var0 == 198) || var0 == 230 || var0 == 156
-          || (var0 == 140) || var0 == 223);
   }
 
   public static void method2104(Widget var0, boolean var1, int var2) {

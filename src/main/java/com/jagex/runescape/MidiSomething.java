@@ -1,5 +1,6 @@
 package com.jagex.runescape;
 
+import com.jagex.runescape.common.HashTable;
 import com.jagex.runescape.opengl.GlRenderer;
 
 public final class MidiSomething {

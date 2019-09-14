@@ -1,18 +1,21 @@
 package com.jagex.runescape;
 
 import com.jagex.runescape.buffer.Buffer;
+import com.jagex.runescape.common.GameString;
+import com.jagex.runescape.common.GameStringStatics;
+import com.jagex.runescape.node.Node;
 import com.jagex.runescape.opengl.GlRenderer;
 import com.jagex.runescape.opengl.GlUtils;
 
 public final class AnimationFrame extends Node {
 
-  private static GameString aClass94_2465 = GameString.create("");
+  private static GameString aClass94_2465 = GameStringStatics.create("");
   public static int anInt2456;
   public static float aFloat2457;
-  public static GameString aClass94_2458 = GameString.create("Module texte charg-B");
+  public static GameString aClass94_2458 = GameStringStatics.create("Module texte charg-B");
   public static int anInt2459;
   public static GameString aClass94_2461 =
-    GameString.create("3D)2Softwarebibliothek gestartet)3");
+    GameStringStatics.create("3D)2Softwarebibliothek gestartet)3");
   public static GameString loadingText = AnimationFrame.aClass94_2465;
   public int anInt2454;
   public int[] anIntArray2455;
@@ -75,7 +78,7 @@ public final class AnimationFrame extends Node {
           DummyClass9.aBooleanArray4008[var1] = true;
         }
 
-        HashTable.aBooleanArray1712[var1] = GroundItemNode.aBooleanArray3674[var1];
+        GlobalStatics_0.aBooleanArray1712[var1] = GroundItemNode.aBooleanArray3674[var1];
         GroundItemNode.aBooleanArray3674[var1] = false;
       }
 

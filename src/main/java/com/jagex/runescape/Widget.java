@@ -1,20 +1,23 @@
 package com.jagex.runescape;
 
 import com.jagex.runescape.buffer.Buffer;
+import com.jagex.runescape.common.GameString;
+import com.jagex.runescape.common.GameStringStatics;
 import com.jagex.runescape.opengl.GlDirectColorSprite;
 import com.jagex.runescape.opengl.GlDirectFullColorSprite;
 import com.jagex.runescape.opengl.GlRenderer;
-import com.jagex.runescape.opengl.shader.MaterialShader5;
+import com.jagex.runescape.opengl.MaterialShader5;
+import com.jagex.runescape.sprite.AbstractIndexedColorSprite;
 
 public final class Widget {
 
-  public static GameString EVENT_OP_BASE = GameString.create("event_opbase");
+  public static GameString EVENT_OP_BASE = GameStringStatics.create("event_opbase");
   public static boolean aBoolean236 = true;
   public static float aFloat246;
   public static GameString aClass94_251;
   public static long aLong261;
   public static int anInt278 = -1;
-  public static GameString aClass94_297 = GameString.create("Nehmen");
+  public static GameString aClass94_297 = GameStringStatics.create("Nehmen");
   public boolean aBoolean155;
   public Object[] anObjectArray156;
   public boolean aBoolean157;
@@ -282,7 +285,7 @@ public final class Widget {
         return true;
       } else {
         SoftwareIndexedColorSprite var2 =
-          GameString.createSprite(0, true, this.anInt224, SomethingSceneJ.aClass153_323);
+          GlobalStatics_0.createSprite(0, true, this.anInt224, SomethingSceneJ.aClass153_323);
         if (var2 == null) {
           return false;
         } else {

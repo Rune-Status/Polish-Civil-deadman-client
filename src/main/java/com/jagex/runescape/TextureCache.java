@@ -1,6 +1,8 @@
 package com.jagex.runescape;
 
 import com.jagex.runescape.buffer.Buffer;
+import com.jagex.runescape.common.GameString;
+import com.jagex.runescape.common.GameStringStatics;
 import com.jagex.runescape.opengl.GlRenderer;
 import com.jagex.runescape.opengl.GlTexture2d;
 import com.jagex.runescape.opengl.Texture;
@@ -10,7 +12,7 @@ public final class TextureCache implements ITextureCache {
   public static int[] anIntArray2125;
   public static int anInt2130;
   public static SoundEffect[] aClass135Array2131 = new SoundEffect[50];
-  public static GameString aClass94_2132 = GameString.create("Titelbild ge-Offnet)3");
+  public static GameString aClass94_2132 = GameStringStatics.create("Titelbild ge-Offnet)3");
   public static int anInt2136;
   public static SoftwareDirectColorSprite[] aClass3_Sub28_Sub16_Sub2Array2140;
   public static Player localPlayer;

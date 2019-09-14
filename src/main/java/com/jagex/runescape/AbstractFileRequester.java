@@ -1,11 +1,14 @@
 package com.jagex.runescape;
 
+import com.jagex.runescape.common.GameString;
+import com.jagex.runescape.common.GameStringStatics;
+
 public abstract class AbstractFileRequester {
 
-  public static GameString aClass94_1932 = GameString.create(")4a=");
+  public static GameString aClass94_1932 = GameStringStatics.create(")4a=");
   public static Widget aClass11_1933;
   public static float[] aFloatArray1934 = {0.073F, 0.169F, 0.24F, 1.0F};
-  public static GameString COMMAND_DROP_CLIENT = GameString.create("::clientdrop");
+  public static GameString COMMAND_DROP_CLIENT = GameStringStatics.create("::clientdrop");
   public static FileSystem fileSystem;
 
   public abstract FileTable method2094(int var1 );

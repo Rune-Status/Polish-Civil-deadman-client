@@ -1,6 +1,9 @@
 package com.jagex.runescape;
 
-public final class SoftwareIndexedColorSprite extends AbstractIndexedColorSprite {
+import com.jagex.runescape.sprite.AbstractIndexedColorSprite;
+
+public final class SoftwareIndexedColorSprite extends
+    AbstractIndexedColorSprite {
 
   public byte[] aByteArray2674;
   private final int[] anIntArray2673;

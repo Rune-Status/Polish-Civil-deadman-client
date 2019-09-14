@@ -2,7 +2,7 @@ package com.jagex.runescape.opengl;
 
 import com.jagex.runescape.buffer.Buffer;
 import com.jagex.runescape.DummyClass53;
-import com.jagex.runescape.HashTable;
+import com.jagex.runescape.common.HashTable;
 import com.jagex.runescape.IntegerNode;
 import com.jagex.runescape.Light;
 import java.nio.ByteBuffer;

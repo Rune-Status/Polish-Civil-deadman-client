@@ -324,7 +324,7 @@ public final class SocketStream implements Runnable {
               SomethingIndex150.anIntArray2068[SomethingLight0.anInt1552] = var8;
               int var11 = (-64 + var0) / 128;
               var10 = (var3 - 64) / 128;
-              GameString.anIntArray2157[SomethingLight0.anInt1552] = 0;
+              GlobalStatics_0.anIntArray2157[SomethingLight0.anInt1552] = 0;
               TextureCache.aClass135Array2131[SomethingLight0.anInt1552] = null;
               TextureSampler26.anIntArray3083[SomethingLight0.anInt1552] =
                   var9 + (var10 << 16) + (var11 << 8);

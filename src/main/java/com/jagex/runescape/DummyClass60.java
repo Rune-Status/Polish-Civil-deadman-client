@@ -1,13 +1,16 @@
 package com.jagex.runescape;
 
+import com.jagex.runescape.common.GameString;
+import com.jagex.runescape.common.GameStringStatics;
+
 public final class DummyClass60 {
 
   public static boolean aBoolean440;
   public static int[] anIntArray441 = new int[2048];
   public static GameString aClass94_442 =
-    GameString.create("Number of player models in cache:");
+    GameStringStatics.create("Number of player models in cache:");
   public static int sampleRate;
-  public static GameString aClass94_444 = GameString.create("<img=1>");
+  public static GameString aClass94_444 = GameStringStatics.create("<img=1>");
 
 
   public static void method911(int var0) {
@@ -24,16 +27,16 @@ public final class DummyClass60 {
     TextureSampler12.secureBuffer.position = 0;
       EnumStringFetcher.lastPacketId1 = -1;
       DummyClass36.aBoolean2615 = var0;
-      HashTable.packetLength = 0;
+      GlobalStatics_0.packetLength = 0;
       DummyClass45.anInt987 = 0;
       TextureSampler25.amountContextActions = 0;
-      StringNode.lastPacketId0 = -1;
+      GlobalStatics_0.lastPacketId0 = -1;
       DummyClass12.minimapMode = 0;
       DummyClass36.updateTime = 0;
       IdentityKit.lastPacketId2 = -1;
       SpotAnimationConfig.gameBuffer.position = 0;
       AbstractDirectColorSprite.anInt3699 = 0;
-      GameString.packetId = -1;
+      GlobalStatics_0.packetId = -1;
 
       int var1;
       for (var1 = 0; TextureSampler0.players.length > var1; ++var1) {
@@ -103,11 +106,11 @@ public final class DummyClass60 {
 
       if (TextureSampler25.amountContextActions == 1) {
         DummyClass36.aBoolean2615 = false;
-        AbstractSomethingTexture.method1340(AbstractIndexedColorSprite.anInt1462,
+        AbstractSomethingTexture.method1340(GlobalStatics_1.anInt1462,
           SomethingWorldMapy.anInt3552, (byte) -40, TextureSampler29.anInt3395,
           SomethingQuickChat2.anInt3537);
       } else {
-        AbstractSomethingTexture.method1340(AbstractIndexedColorSprite.anInt1462,
+        AbstractSomethingTexture.method1340(GlobalStatics_1.anInt1462,
           SomethingWorldMapy.anInt3552, (byte) -40, TextureSampler29.anInt3395,
           SomethingQuickChat2.anInt3537);
         var7 = FloorOverlay.aClass3_Sub28_Sub17_2096.method682(SomethingTexture4.aClass94_2667);

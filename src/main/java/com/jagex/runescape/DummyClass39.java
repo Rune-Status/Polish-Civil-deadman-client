@@ -1,11 +1,13 @@
 package com.jagex.runescape;
 
+import com.jagex.runescape.common.GameString;
+import com.jagex.runescape.common.GameStringStatics;
 import java.util.Objects;
 
 public final class DummyClass39 {
 
   public static FileUnpacker aClass153_737;
-  public static GameString aClass94_738 = GameString.create("Monde de jeu cr-B-B");
+  public static GameString aClass94_738 = GameStringStatics.create("Monde de jeu cr-B-B");
   public static int anInt739;
   public static int anInt740;
   public static int sunPositionX;

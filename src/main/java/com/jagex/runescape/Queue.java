@@ -1,12 +1,14 @@
 package com.jagex.runescape;
 
+import com.jagex.runescape.common.GameString;
+import com.jagex.runescape.common.GameStringStatics;
 import com.jagex.runescape.opengl.GlFont;
 import com.jagex.runescape.opengl.GlRenderer;
 
 public final class Queue {
 
   public static FileUnpacker globalQuickchats;
-  public static GameString aClass94_334 = GameString.create("Lade Texturen )2 ");
+  public static GameString aClass94_334 = GameStringStatics.create("Lade Texturen )2 ");
   private final SubNode root = new SubNode();
   private SubNode iterator;
 

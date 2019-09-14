@@ -1,20 +1,22 @@
 package com.jagex.runescape;
 
 import com.jagex.runescape.buffer.Buffer;
+import com.jagex.runescape.common.GameString;
+import com.jagex.runescape.common.GameStringStatics;
 
 public final class DummyClass10 {
 
-  public static GameString aClass94_2082 = GameString.create(" <col=ffff00>");
+  public static GameString aClass94_2082 = GameStringStatics.create(" <col=ffff00>");
   public static GameString aClass94_2083;
-  public static GameString UL_PREFIX = GameString.create("ul");
+  public static GameString UL_PREFIX = GameStringStatics.create("ul");
   public static int anInt2085;
-  public static GameString aClass94_2086 = GameString.create("Continuer");
+  public static GameString aClass94_2086 = GameStringStatics.create("Continuer");
   public static int anInt2087;
 
 
   public static void method2261(int var0) {
     while (true) {
-        if (SpotAnimationConfig.gameBuffer.method815(HashTable.packetLength, 32666) >= 27) {
+        if (SpotAnimationConfig.gameBuffer.method815(GlobalStatics_0.packetLength, 32666) >= 27) {
           int var1 = SpotAnimationConfig.gameBuffer.readBits(15);
           if (var1 != 32767) {
             boolean var2 = false;
@@ -255,7 +257,7 @@ public final class DummyClass10 {
 
       int var1;
       for (var1 = 0; (var1 < 4); ++var1) {
-        BlockConfig.collisionMaps[var1].method1496(0);
+        GlobalStatics_0.collisionMaps[var1].method1496(0);
       }
 
       OndemandRequester.method1250(62, false);
@@ -264,7 +266,7 @@ public final class DummyClass10 {
       MidiSomething.aBoolean1158 = false;
       AbstractFrameRegulator.anInt1691 = -1;
       Something3d.method2241((byte) -77, true);
-      StringNode.dynamicScene = false;
+      GlobalStatics_0.dynamicScene = false;
       ProceduralTexture.anInt1152 = 0;
       AbstractObjectNode.anInt3606 = 0;
       VariableUpdate.anInt2294 = 0;

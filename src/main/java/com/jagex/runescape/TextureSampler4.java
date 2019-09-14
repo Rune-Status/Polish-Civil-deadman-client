@@ -1,14 +1,17 @@
 package com.jagex.runescape;
 
 import com.jagex.runescape.buffer.Buffer;
+import com.jagex.runescape.common.ArrayUtils;
+import com.jagex.runescape.common.GameString;
+import com.jagex.runescape.common.GameStringStatics;
 import java.util.Random;
 
 public final class TextureSampler4 extends AbstractTextureSampler {
 
-  private static GameString LANG_PORTUGUESE = GameString.create("pt");
-  private static GameString LANG_ENGLISH = GameString.create("en");
-  private static GameString LANG_FRENCH = GameString.create("fr");
-  private static GameString LANG_GERMAN = GameString.create("de");
+  private static GameString LANG_PORTUGUESE = GameStringStatics.create("pt");
+  private static GameString LANG_ENGLISH = GameStringStatics.create("en");
+  private static GameString LANG_FRENCH = GameStringStatics.create("fr");
+  private static GameString LANG_GERMAN = GameStringStatics.create("de");
   public static GameString aClass94_3220;
   public static SoftwareDirectColorSprite aClass3_Sub28_Sub16_Sub2_3221;
   public static GameString[] aClass94Array3226 = new GameString[100];

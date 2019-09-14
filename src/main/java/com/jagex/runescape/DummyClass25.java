@@ -1,6 +1,8 @@
 package com.jagex.runescape;
 
 import com.jagex.runescape.buffer.Buffer;
+import com.jagex.runescape.common.GameString;
+import com.jagex.runescape.common.GameStringStatics;
 import com.jagex.runescape.opengl.GlRenderer;
 import java.awt.Component;
 import java.awt.Insets;
@@ -8,12 +10,12 @@ import java.awt.Insets;
 public final class DummyClass25 {
 
   public static WorldMapLabel aClass131_1624;
-  public static GameString aClass94_1625 = GameString.create("Memory before cleanup=");
+  public static GameString aClass94_1625 = GameStringStatics.create("Memory before cleanup=");
   public static SomethingFont aClass33_1626;
   public static GameWorldSomething[] aClass26Array1627;
   public static FileUnpacker aClass153_1628;
   public static int anInt1629;
-  public static GameString MEMORY_PREFIX = GameString.create("Mem:");
+  public static GameString MEMORY_PREFIX = GameStringStatics.create("Mem:");
 
 
   public static void method1728(int var0) {

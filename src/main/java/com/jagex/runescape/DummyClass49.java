@@ -1,8 +1,11 @@
 package com.jagex.runescape;
 
+import com.jagex.runescape.common.GameString;
+import com.jagex.runescape.common.GameStringStatics;
+
 public final class DummyClass49 {
 
-  public static GameString aClass94_1110 = GameString.create("Attaquer");
+  public static GameString aClass94_1110 = GameStringStatics.create("Attaquer");
   public static int anInt1111;
   public static PlayerAppearance aClass52_1112 = new PlayerAppearance();
 

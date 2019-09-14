@@ -1,11 +1,15 @@
 package com.jagex.runescape;
 
 import com.jagex.runescape.buffer.Buffer;
+import com.jagex.runescape.common.ArrayUtils;
+import com.jagex.runescape.common.GameString;
+import com.jagex.runescape.common.GameStringStatics;
+import com.jagex.runescape.sprite.AbstractIndexedColorSprite;
 
 public final class TextureSampler0 extends AbstractTextureSampler {
 
   public static int anInt3267;
-  public static GameString aClass94_3268 = GameString.create(")1");
+  public static GameString aClass94_3268 = GameStringStatics.create(")1");
   public static Player[] players = new Player[2048];
   public static AbstractIndexedColorSprite[] aClass109Array3270;
   public static long[] aLongArray3271 = new long[500];

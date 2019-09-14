@@ -1,14 +1,18 @@
 package com.jagex.runescape;
 
+import com.jagex.runescape.common.ArrayUtils;
+import com.jagex.runescape.common.GameString;
+import com.jagex.runescape.common.GameStringStatics;
+
 public final class SomethingSceneJ {
 
   private static GameString aClass94_321 =
-    GameString.create("Checking for updates )2 ");
+    GameStringStatics.create("Checking for updates )2 ");
   public static float aFloat319;
   public static FileUnpacker aClass153_322;
   public static FileUnpacker aClass153_323;
-  public static GameString aClass94_325 = GameString.create(",Mcran)2titre charg-B");
-  public static GameString aClass94_331 = GameString.create("(U1");
+  public static GameString aClass94_325 = GameStringStatics.create(",Mcran)2titre charg-B");
+  public static GameString aClass94_331 = GameStringStatics.create("(U1");
   public static GameString aClass94_327 = SomethingSceneJ.aClass94_321;
   public SceneNode aClass140_320;
   public int anInt324;

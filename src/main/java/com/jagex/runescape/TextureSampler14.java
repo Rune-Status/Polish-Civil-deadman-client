@@ -1,11 +1,13 @@
 package com.jagex.runescape;
 
 import com.jagex.runescape.buffer.Buffer;
+import com.jagex.runescape.common.GameString;
+import com.jagex.runescape.common.GameStringStatics;
 import java.awt.Font;
 
 public final class TextureSampler14 extends AbstractTextureSampler {
 
-  private static GameString aClass94_3386 = GameString.create("Use");
+  private static GameString aClass94_3386 = GameStringStatics.create("Use");
   public static int[] anIntArray3383 = new int[5];
   public static Font aFont3384;
   public static boolean aBoolean3387 = true;

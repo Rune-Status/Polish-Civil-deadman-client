@@ -1,4 +1,4 @@
-package com.jagex.runescape;
+package com.jagex.runescape.common;
 
 import java.util.Arrays;
 

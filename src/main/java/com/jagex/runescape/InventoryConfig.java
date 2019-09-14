@@ -1,15 +1,17 @@
 package com.jagex.runescape;
 
 import com.jagex.runescape.buffer.Buffer;
+import com.jagex.runescape.common.GameString;
+import com.jagex.runescape.common.GameStringStatics;
 
 public final class InventoryConfig extends SubNode {
 
-  public static GameString aClass94_3646 = GameString.create("D-Bmarrage de la librairie 3D");
-  public static GameString aClass94_3649 = GameString.create("Fichiers config charg-Bs");
-  public static GameString aClass94_3650 = GameString.create("Fermer");
-  public static GameString aClass94_3651 = GameString.create("::mm");
+  public static GameString aClass94_3646 = GameStringStatics.create("D-Bmarrage de la librairie 3D");
+  public static GameString aClass94_3649 = GameStringStatics.create("Fichiers config charg-Bs");
+  public static GameString aClass94_3650 = GameStringStatics.create("Fermer");
+  public static GameString aClass94_3651 = GameStringStatics.create("::mm");
   public static int fogColor;
-  public static GameString aClass94_3653 = GameString.create("Shift)2click disabled)3");
+  public static GameString aClass94_3653 = GameStringStatics.create("Shift)2click disabled)3");
   public static short[][] aShortArrayArray3654 = {
     {
       (short) 6798, (short) 107, (short) 10283, (short) 16, (short) 4797, (short) 7744,
@@ -35,7 +37,7 @@ public final class InventoryConfig extends SubNode {
   }
   };
   public static int anInt3655 = -1;
-  public static GameString aClass94_3656 = GameString.create("Impossible de trouver ");
+  public static GameString aClass94_3656 = GameStringStatics.create("Impossible de trouver ");
   public int size;
 
   public void method610(Buffer var1, int var2 ) {
@@ -105,7 +107,7 @@ public final class InventoryConfig extends SubNode {
       for (int var6 = 99; var6 > 0; --var6) {
         TextureSampler26.anIntArray3082[var6] = TextureSampler26.anIntArray3082[var6 - 1];
         TextureSampler4.aClass94Array3226[var6] = TextureSampler4.aClass94Array3226[var6 - 1];
-        StringNode.aClass94Array2580[var6] = StringNode.aClass94Array2580[-1 + var6];
+        GlobalStatics_0.aClass94Array2580[var6] = GlobalStatics_0.aClass94Array2580[-1 + var6];
         DummyClass4.aClass94Array3003[var6] = DummyClass4.aClass94Array3003[var6 - 1];
         SceneNode.anIntArray1835[var6] = SceneNode.anIntArray1835[var6 - 1];
       }
@@ -115,7 +117,7 @@ public final class InventoryConfig extends SubNode {
       TextureSampler4.aClass94Array3226[0] = var5;
       IdentityKit.anInt472 = TextureSampler23.anInt3213;
       SceneNode.anIntArray1835[0] = var0;
-      StringNode.aClass94Array2580[0] = var2;
+      GlobalStatics_0.aClass94Array2580[0] = var2;
       DummyClass4.aClass94Array3003[0] = var3;
   }
 

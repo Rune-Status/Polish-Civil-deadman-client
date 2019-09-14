@@ -1,8 +1,10 @@
 package com.jagex.runescape;
 
 import com.jagex.runescape.buffer.Buffer;
+import com.jagex.runescape.common.GameString;
+import com.jagex.runescape.common.GameStringStatics;
 import com.jagex.runescape.opengl.GlRenderer;
-import com.jagex.runescape.opengl.shader.MaterialShader5;
+import com.jagex.runescape.opengl.MaterialShader5;
 
 public final class TextureSampler13 extends AbstractTextureSampler {
 
@@ -12,7 +14,7 @@ public final class TextureSampler13 extends AbstractTextureSampler {
   public static int anInt3365;
   public static long lastWrittenTime;
   public static int[] anIntArray3367 = new int[64];
-  public static GameString aClass94_3368 = GameString.create(":clanreq:");
+  public static GameString aClass94_3368 = GameStringStatics.create(":clanreq:");
 
 
   public TextureSampler13() {
@@ -182,7 +184,7 @@ public final class TextureSampler13 extends AbstractTextureSampler {
       TextureSampler3.method304(6799);
       DummyClass59.method1045(-19761);
       TextureSampler33.method183(-108);
-      StringNode.method727(91);
+      GlobalStatics_0.method727(91);
       SomethingWorldMappy.method397((byte) -41);
       if ((TextureSampler20.usageMode != 0)) {
         for (int var1 = 0; SomethingMidiFile.byteArrayPool.length > var1; ++var1) {

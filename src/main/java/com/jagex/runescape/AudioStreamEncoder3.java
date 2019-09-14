@@ -1,9 +1,10 @@
 package com.jagex.runescape;
 
-import com.jagex.runescape.opengl.shader.MaterialShader;
-import com.jagex.runescape.opengl.shader.MaterialShader3;
-import com.jagex.runescape.opengl.shader.MaterialShader4;
-import com.jagex.runescape.opengl.shader.MaterialShader5;
+import com.jagex.runescape.common.GameString;
+import com.jagex.runescape.opengl.MaterialShader;
+import com.jagex.runescape.opengl.MaterialShader3;
+import com.jagex.runescape.opengl.MaterialShader4;
+import com.jagex.runescape.opengl.MaterialShader5;
 import com.jagex.runescape.opengl.SkyboxMaterialShader;
 import com.jagex.runescape.opengl.SomethingGl;
 import com.jagex.runescape.opengl.WaterShader;

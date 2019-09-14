@@ -1,14 +1,16 @@
 package com.jagex.runescape;
 
 import com.jagex.runescape.buffer.Buffer;
+import com.jagex.runescape.common.GameString;
+import com.jagex.runescape.common.GameStringStatics;
 import java.util.Random;
 
 public final class TextureSampler38 extends AbstractTextureSampler {
 
-  private static GameString aClass94_3449 = GameString.create("Loading sprites )2 ");
+  private static GameString aClass94_3449 = GameStringStatics.create("Loading sprites )2 ");
   public static int[] anIntArray3446;
   public static long[] entityKeys = new long[1000];
-  public static GameString aClass94_3452 = GameString.create("mapflag");
+  public static GameString aClass94_3452 = GameStringStatics.create("mapflag");
   public static short[] aShortArray3453 = new short[256];
   public static short[] aShortArray3455;
   public static int[] anIntArray3456 = new int[4096];

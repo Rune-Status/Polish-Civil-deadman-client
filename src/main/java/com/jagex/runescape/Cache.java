@@ -1,5 +1,9 @@
 package com.jagex.runescape;
 
+import com.jagex.runescape.common.GameString;
+import com.jagex.runescape.common.GameStringStatics;
+import com.jagex.runescape.common.HashTable;
+import com.jagex.runescape.node.Node;
 import com.jagex.runescape.opengl.DummyClass33;
 import com.jagex.runescape.opengl.GlDirectColorSprite;
 import com.jagex.runescape.opengl.GlRenderer;
@@ -11,7 +15,7 @@ public final class Cache {
   public static boolean aBoolean742;
   public static ObjectCache aClass93_743 = new ObjectCache(20);
   public static FileUnpacker quickchats;
-  public static GameString aClass94_750 = GameString.create("null");
+  public static GameString aClass94_750 = GameStringStatics.create("null");
   private SubNode aClass3_Sub28_744 = new SubNode();
   private final HashTable table;
   private final int size;
@@ -136,13 +140,6 @@ public final class Cache {
       }
   }
 
-  public static GameString createString(int len) {
-    GameString str = new GameString();
-      str.length = 0;
-      str.bytes = new byte[len];
-      return str;
-  }
-
   public static void method1091(boolean var0, int var1) {
     byte var2;
       byte[][] fileData;
@@ -166,7 +163,8 @@ public final class Cache {
         bytes = fileData[var5];
         if (bytes != null) {
           DummyClass43.method1194(-16385);
-          GlobalStatics_0.method777(BlockConfig.collisionMaps, var0, -48 + 8 * AbstractObjectNode.anInt3606,
+          GlobalStatics_0.method777(
+              GlobalStatics_0.collisionMaps, var0, -48 + 8 * AbstractObjectNode.anInt3606,
             var7, 4, var6, (VariableUpdate.anInt2294 - 6) * 8, bytes);
         }
       }
@@ -253,7 +251,7 @@ public final class Cache {
               }
 
               if (NPC.aBoolean3975 && DummyClass52.aBoolean1167) {
-                var17 = HashTable.anInt1709;
+                var17 = GlobalStatics_0.anInt1709;
                 var16 = SomethingTilek.anInt1676;
                 var17 -= DummyClass53.anInt1336;
                 if (var17 < DummyClass21.anInt1761) {
@@ -585,7 +583,7 @@ public final class Cache {
                 }
               }
 
-              if (HashTable.aBooleanArray1712[var12] || (ClientScript.rectangleDebugType > 1)) {
+              if (GlobalStatics_0.aBooleanArray1712[var12] || (ClientScript.rectangleDebugType > 1)) {
                 if ((var11.anInt187 == 0) && !var11.aBoolean233
                   && var11.anInt252 > var11.anInt193) {
                   TextureSampler24.method224((byte) 120, var11.anInt208, var11.anInt252,
@@ -647,7 +645,7 @@ public final class Cache {
                             } else if (MouseRecorder.aClass11_1017 == var11
                               && var20 == DummyClass18.anInt86) {
                               var25 = SomethingTilek.anInt1676 - MilliFrameRegulator.anInt2693;
-                              var26 = -DummyInputStream.anInt40 + HashTable.anInt1709;
+                              var26 = -DummyInputStream.anInt40 + GlobalStatics_0.anInt1709;
                               if ((var26 < 5) && (var26 > 4)) {
                                 var26 = 0;
                               }
@@ -985,7 +983,7 @@ public final class Cache {
                                     var11.anIntArray317[var21] == 1) {
                                   var40 = RenderAnimation.concat(new GameString[] {
                                     TextureSampler6.aClass94_3042, var42.aClass94_770,
-                                    StringNode.aClass94_2584
+                                    GlobalStatics_0.aClass94_2584
                                   });
                                 } else {
                                   var40 = RenderAnimation.concat(new GameString[] {

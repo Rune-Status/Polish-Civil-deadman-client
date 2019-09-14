@@ -4,23 +4,25 @@ import com.jagex.runescape.AbstractGameWorld;
 import com.jagex.runescape.AudioStreamEncoder3;
 import com.jagex.runescape.DummyClass32;
 import com.jagex.runescape.DummyClass40;
-import com.jagex.runescape.GameString;
+import com.jagex.runescape.GlobalStatics_0;
+import com.jagex.runescape.common.GameString;
 import com.jagex.runescape.SceneGraphTile;
 import com.jagex.runescape.SceneSomething;
 import com.jagex.runescape.SomethingTexture1;
 import com.jagex.runescape.SubNode;
+import com.jagex.runescape.common.GameStringStatics;
 import java.lang.reflect.Method;
 import java.nio.ByteBuffer;
 
 public final class GlTexture2d extends SubNode {
 
-  private static GameString aClass94_3761 = GameString
+  private static GameString aClass94_3761 = GameStringStatics
       .create("Face here");
   public static int anInt3757;
   public static GameString aClass94_3758 =
-      GameString
+      GameStringStatics
           .create("Veuillez patienter )2 tentative de r-Btablissement)3");
-  public static GameString aClass94_3763 = GameString
+  public static GameString aClass94_3763 = GameStringStatics
       .create("Liste der Welten geladen");
   public static int anInt3764;
   public static int anInt3765 = 100;

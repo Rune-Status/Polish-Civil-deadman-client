@@ -1,19 +1,21 @@
 package com.jagex.runescape;
 
+import com.jagex.runescape.common.GameString;
+import com.jagex.runescape.common.GameStringStatics;
 import com.jagex.runescape.opengl.GlTexture2d;
 
 public final class DummyClass53 {
 
   private static GameString aClass94_1334 =
-    GameString.create("You can(Wt add yourself to your own ignore list)3");
-  public static GameString UM_PREFIX = GameString.create("um");
+    GameStringStatics.create("You can(Wt add yourself to your own ignore list)3");
+  public static GameString UM_PREFIX = GameStringStatics.create("um");
   public static int anInt1336;
-  public static GameString aClass94_1337 = GameString.create("::breakcon");
+  public static GameString aClass94_1337 = GameStringStatics.create("::breakcon");
   public static int spriteCount;
   public static AbstractDirectColorSprite aClass3_Sub28_Sub16_1339;
   public static volatile int lastMouseY = -1;
-  public static GameString LOGO = GameString.create("logo");
-  public static GameString aClass94_1342 = GameString.create("details");
+  public static GameString LOGO = GameStringStatics.create("logo");
+  public static GameString aClass94_1342 = GameStringStatics.create("details");
   public static int anInt1343;
   public static int anInt1344;
   public static GameString aClass94_1335 = DummyClass53.aClass94_1334;

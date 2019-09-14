@@ -1,14 +1,16 @@
 package com.jagex.runescape;
 
 import com.jagex.runescape.buffer.Buffer;
+import com.jagex.runescape.common.GameString;
+import com.jagex.runescape.common.GameStringStatics;
 import com.jagex.runescape.opengl.GlTexture2d;
 
 public final class TextureSampler25 extends AbstractTextureSampler {
 
   public static int anInt3402;
   public static Cache aClass47_3407 = new Cache(64);
-  public static GameString aClass94_3408 = GameString.create("Untersuchen");
-  public static GameString aClass94_3409 = GameString.create("Musik)2Engine vorbereitet)3");
+  public static GameString aClass94_3408 = GameStringStatics.create("Untersuchen");
+  public static GameString aClass94_3409 = GameStringStatics.create("Musik)2Engine vorbereitet)3");
   public static long aLong3411;
   public static ObjectCache aClass93_3412 = new ObjectCache(64);
   public static int anInt3413;

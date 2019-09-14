@@ -1,5 +1,8 @@
 package com.jagex.runescape;
 
+import com.jagex.runescape.common.GameString;
+import com.jagex.runescape.common.GameStringStatics;
+import com.jagex.runescape.node.Node;
 import com.jagex.runescape.opengl.DummyClass16;
 import com.jagex.runescape.opengl.DummyClass46;
 import com.jagex.runescape.opengl.GlModel;
@@ -7,9 +10,9 @@ import com.jagex.runescape.opengl.GlRenderer;
 
 public final class TriChromaticImageBuffer extends Node {
 
-  private static GameString aClass94_2486 = GameString.create("red:");
+  private static GameString aClass94_2486 = GameStringStatics.create("red:");
   public static int[] anIntArray2480 = new int[25];
-  public static GameString aClass94_2482 = GameString.create(":clan:");
+  public static GameString aClass94_2482 = GameStringStatics.create(":clan:");
   public static int anInt2484;
   public static int languageId;
   public static int anInt2487;

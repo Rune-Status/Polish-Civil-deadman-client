@@ -1,35 +1,37 @@
 package com.jagex.runescape;
 
+import com.jagex.runescape.common.GameString;
+import com.jagex.runescape.common.GameStringStatics;
 import com.jagex.runescape.opengl.GlRenderer;
 import com.jagex.runescape.opengl.Texture;
 import java.util.Objects;
 
 public final class NPC extends Mobile {
 
-  private static GameString aClass94_3978 = GameString.create("Dec");
-  private static GameString aClass94_3980 = GameString.create("Jul");
-  private static GameString aClass94_3982 = GameString.create("May");
-  private static GameString aClass94_3983 = GameString.create("Nov");
-  private static GameString aClass94_3984 = GameString.create("Mar");
-  private static GameString aClass94_3987 = GameString.create("flash3:");
-  private static GameString aClass94_3989 = GameString.create("Jan");
-  private static GameString aClass94_3990 = GameString.create("Feb");
-  private static GameString aClass94_3996 = GameString.create("Aug");
-  private static GameString aClass94_3999 = GameString.create("Apr");
-  private static GameString aClass94_4000 = GameString.create("Jun");
-  private static GameString aClass94_4003 = GameString.create("Sep");
-  private static GameString aClass94_4004 = GameString.create("Oct");
+  private static GameString aClass94_3978 = GameStringStatics.create("Dec");
+  private static GameString aClass94_3980 = GameStringStatics.create("Jul");
+  private static GameString aClass94_3982 = GameStringStatics.create("May");
+  private static GameString aClass94_3983 = GameStringStatics.create("Nov");
+  private static GameString aClass94_3984 = GameStringStatics.create("Mar");
+  private static GameString aClass94_3987 = GameStringStatics.create("flash3:");
+  private static GameString aClass94_3989 = GameStringStatics.create("Jan");
+  private static GameString aClass94_3990 = GameStringStatics.create("Feb");
+  private static GameString aClass94_3996 = GameStringStatics.create("Aug");
+  private static GameString aClass94_3999 = GameStringStatics.create("Apr");
+  private static GameString aClass94_4000 = GameStringStatics.create("Jun");
+  private static GameString aClass94_4003 = GameStringStatics.create("Sep");
+  private static GameString aClass94_4004 = GameStringStatics.create("Oct");
   public static boolean aBoolean3975;
   public static AbstractDirectColorSprite[] aClass3_Sub28_Sub16Array3977;
   public static float aFloat3979;
   public static int[] anIntArray3986 = new int[32];
-  public static GameString aClass94_3991 = GameString.create("ondulation:");
-  public static GameString aClass94_3992 = GameString.create("loginscreen");
+  public static GameString aClass94_3991 = GameStringStatics.create("ondulation:");
+  public static GameString aClass94_3992 = GameStringStatics.create("loginscreen");
   public static FileUnpacker fileUnpacker17;
   public static FileUnpacker fileUnpacker15;
   public static int anInt3995;
   public static int[] anIntArray3997 = {19, 55, 38, 155, 255, 110, 137, 205, 76};
-  public static GameString aClass94_3998 = GameString.create(":trade:");
+  public static GameString aClass94_3998 = GameStringStatics.create(":trade:");
   public static int runesFileId;
   public static int anInt4002;
   public static GameString aClass94_3988 = NPC.aClass94_3987;

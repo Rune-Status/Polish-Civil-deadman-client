@@ -1,5 +1,7 @@
 package com.jagex.runescape;
 
+import com.jagex.runescape.common.GameString;
+import com.jagex.runescape.common.GameStringStatics;
 import java.awt.event.FocusEvent;
 import java.awt.event.FocusListener;
 import java.awt.event.KeyEvent;
@@ -9,17 +11,17 @@ public final class Keyboard implements KeyListener, FocusListener {
 
   public static boolean aBoolean1905 = true;
   public static int anInt1906;
-  public static GameString aClass94_1907 = GameString.create(" autres options");
+  public static GameString aClass94_1907 = GameStringStatics.create(" autres options");
   public static int anInt1908;
   public static int anInt1909;
   public static int anInt1910;
   public static ObjectCache aClass93_1911 = new ObjectCache(260);
   public static int openingMusicFileId;
-  public static GameString aClass94_1913 = GameString.create("scrollbar");
+  public static GameString aClass94_1913 = GameStringStatics.create("scrollbar");
   public static int anInt1914;
-  public static GameString aClass94_1915 = GameString.create("Null");
+  public static GameString aClass94_1915 = GameStringStatics.create("Null");
   public static FileUnpacker sprites;
-  public static GameString aClass94_1917 = GameString.create(" <col=00ff80>");
+  public static GameString aClass94_1917 = GameStringStatics.create(" <col=00ff80>");
   public static int anInt1918;
 
   public void keyTyped(KeyEvent var1) {

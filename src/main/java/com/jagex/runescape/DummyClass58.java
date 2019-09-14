@@ -1,15 +1,18 @@
 package com.jagex.runescape;
 
+import com.jagex.runescape.common.ArrayUtils;
+import com.jagex.runescape.common.GameString;
+import com.jagex.runescape.common.GameStringStatics;
 import com.jagex.runescape.opengl.GlRenderer;
 import com.jagex.runescape.opengl.GlTexture2d;
 import com.jagex.runescape.opengl.GlUtils;
 
 public final class DummyClass58 {
 
-  public static GameString COMMAND_QA_OP_TEST = GameString.create("::qa_op_test");
+  public static GameString COMMAND_QA_OP_TEST = GameStringStatics.create("::qa_op_test");
   public static AbstractDirectColorSprite aClass3_Sub28_Sub16_1457;
-  public static GameString COMMAND_WM1 = GameString.create("::wm1");
-  public static GameString aClass94_1459 = GameString.create("cyan:");
+  public static GameString COMMAND_WM1 = GameStringStatics.create("::wm1");
+  public static GameString aClass94_1459 = GameStringStatics.create("cyan:");
   public static int anInt1460;
 
 

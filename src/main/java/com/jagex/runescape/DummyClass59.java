@@ -1,13 +1,15 @@
 package com.jagex.runescape;
 
+import com.jagex.runescape.common.GameString;
+import com.jagex.runescape.common.GameStringStatics;
 import com.jagex.runescape.opengl.DummyClass16;
 import com.jagex.runescape.opengl.DummyClass46;
 import com.jagex.runescape.opengl.GlRenderer;
 
 public final class DummyClass59 {
 
-  public static GameString aClass94_672 = GameString.create("null");
-  public static GameString aClass94_673 = GameString.create(")0");
+  public static GameString aClass94_672 = GameStringStatics.create("null");
+  public static GameString aClass94_673 = GameStringStatics.create(")0");
   public static int anInt674;
   public static int[] anIntArray675 = {16, 32, 64, 128};
   public static GameString aClass94_676;
@@ -29,7 +31,7 @@ public final class DummyClass59 {
       if (var2 == -28236) {
         DummyClass22.anInt1734 = 0;
         SpotAnimationConfig.anInt548 = 0;
-        HashTable.anInt1711 = -3;
+        GlobalStatics_0.anInt1711 = -3;
       }
   }
 
@@ -173,7 +175,7 @@ public final class DummyClass59 {
                     + (AudioStreamEncoder3.regionHashes[var2] & 255) * 64;
             var4 = -WorldMapLabel.anInt1716
                 + (AudioStreamEncoder3.regionHashes[var2] >> 8) * 64;
-            if (StringNode.dynamicScene) {
+            if (GlobalStatics_0.dynamicScene) {
               var5 = 10;
               var4 = 10;
             }
@@ -189,7 +191,7 @@ public final class DummyClass59 {
               var5 =
                   -ProceduralTexture.anInt1152 + 64 * (
                       AudioStreamEncoder3.regionHashes[var2] & 255);
-              if (StringNode.dynamicScene) {
+              if (GlobalStatics_0.dynamicScene) {
                 var5 = 10;
                 var4 = 10;
               }
@@ -232,7 +234,7 @@ public final class DummyClass59 {
               var11);
 
           for (var12 = 0; var12 < 4; ++var12) {
-            BlockConfig.collisionMaps[var12].method1496(0);
+            GlobalStatics_0.collisionMaps[var12].method1496(0);
           }
 
           for (var12 = 0; (var12 < 4); ++var12) {
@@ -266,7 +268,7 @@ public final class DummyClass59 {
           System.gc();
           DummyClass5.method2210((byte) -90, true);
           DummyClass26.method1720(false, 105);
-          if (!StringNode.dynamicScene) {
+          if (!GlobalStatics_0.dynamicScene) {
             Cache.method1091(false, -93);
             DummyClass5.method2210((byte) -90, true);
             if (GlRenderer.useOpenGlRenderer) {
@@ -281,7 +283,7 @@ public final class DummyClass59 {
             }
           }
 
-          if (StringNode.dynamicScene) {
+          if (GlobalStatics_0.dynamicScene) {
             GZipDecompressor.method1121(false, (byte) 98);
             DummyClass5.method2210((byte) -90, true);
             if (GlRenderer.useOpenGlRenderer) {
@@ -295,7 +297,7 @@ public final class DummyClass59 {
 
           TextureSampler13.method313((byte) 90);
           DummyClass5.method2210((byte) -90, true);
-          DirectImageProducer.method2189(BlockConfig.collisionMaps, false, 66);
+          DirectImageProducer.method2189(GlobalStatics_0.collisionMaps, false, 66);
           if (GlRenderer.useOpenGlRenderer) {
             DummyClass46.method1270();
           }
@@ -320,13 +322,13 @@ public final class DummyClass59 {
           if (GlRenderer.useOpenGlRenderer && var11) {
             DummyClass10.method2264(true);
             DummyClass26.method1720(true, 105);
-            if (!StringNode.dynamicScene) {
+            if (!GlobalStatics_0.dynamicScene) {
               Cache.method1091(true, -121);
               DummyClass5.method2210((byte) -90, true);
               TextureSampler26.method198(true, -32624);
             }
 
-            if (StringNode.dynamicScene) {
+            if (GlobalStatics_0.dynamicScene) {
               GZipDecompressor.method1121(true, (byte) 56);
               DummyClass5.method2210((byte) -90, true);
               DummyClass8.method2223(true, (byte) -105);
@@ -335,7 +337,7 @@ public final class DummyClass59 {
             TextureSampler13.method313((byte) 102);
             DummyClass5.method2210((byte) -90, true);
             DirectImageProducer
-                .method2189(BlockConfig.collisionMaps, true, 112);
+                .method2189(GlobalStatics_0.collisionMaps, true, 112);
             DummyClass5.method2210((byte) -90, true);
             DummyClass42.method1188(-113);
             DummyClass10.method2264(false);
@@ -370,7 +372,7 @@ public final class DummyClass59 {
             ++TextureSampler13.anInt3365;
           }
 
-          if (!StringNode.dynamicScene) {
+          if (!GlobalStatics_0.dynamicScene) {
             int var7 = (VariableUpdate.anInt2294 + 6) / 8;
             int var6 = (VariableUpdate.anInt2294 - 6) / 8;
             var4 = (AbstractObjectNode.anInt3606 - 6) / 8;

@@ -1,6 +1,8 @@
 package com.jagex.runescape;
 
-import com.jagex.runescape.opengl.shader.MaterialShader5;
+import com.jagex.runescape.common.GameString;
+import com.jagex.runescape.common.GameStringStatics;
+import com.jagex.runescape.opengl.MaterialShader5;
 import java.io.IOException;
 import java.nio.charset.StandardCharsets;
 
@@ -12,7 +14,7 @@ public final class DummyClass18 {
   public static Deque aClass61_82 = new Deque();
   public static short aShort83 = 32767;
   public static RenderAnimation DEFAULT_RENDER_ANIMATION = new RenderAnimation();
-  public static GameString aClass94_85 = GameString.create("overlay");
+  public static GameString aClass94_85 = GameStringStatics.create("overlay");
   public static int anInt86;
   public static int anInt87;
   public static Widget aClass11_88;
@@ -67,24 +69,24 @@ public final class DummyClass18 {
       if (available == 0) {
         return false;
       }
-      if ((GameString.packetId == -1)) {
+      if ((GlobalStatics_0.packetId == -1)) {
         SomethingVolume15.gameSocket.read(SpotAnimationConfig.gameBuffer.bytes, 0, 1);
         SpotAnimationConfig.gameBuffer.position = 0;
-        GameString.packetId = SpotAnimationConfig.gameBuffer.readPacketId();
-        HashTable.packetLength = SomethingTexture4.PACKET_LENGTHS[GameString.packetId];
+        GlobalStatics_0.packetId = SpotAnimationConfig.gameBuffer.readPacketId();
+        GlobalStatics_0.packetLength = SomethingTexture4.PACKET_LENGTHS[GlobalStatics_0.packetId];
         --available;
       }
 
-      if (HashTable.packetLength == -1) {
+      if (GlobalStatics_0.packetLength == -1) {
         if (available <= 0) {
           return false;
         }
         SomethingVolume15.gameSocket.read(SpotAnimationConfig.gameBuffer.bytes, 0, 1);
-        HashTable.packetLength = SpotAnimationConfig.gameBuffer.bytes[0] & 255;
+        GlobalStatics_0.packetLength = SpotAnimationConfig.gameBuffer.bytes[0] & 255;
         --available;
       }
 
-      if (HashTable.packetLength == -2) {
+      if (GlobalStatics_0.packetLength == -2) {
         if ((available <= 1)) {
           return false;
         }
@@ -92,27 +94,27 @@ public final class DummyClass18 {
         available -= 2;
         SomethingVolume15.gameSocket.read(SpotAnimationConfig.gameBuffer.bytes, 0, 2);
         SpotAnimationConfig.gameBuffer.position = 0;
-        HashTable.packetLength = SpotAnimationConfig.gameBuffer.readUnsignedShort();
+        GlobalStatics_0.packetLength = SpotAnimationConfig.gameBuffer.readUnsignedShort();
       }
 
-      if (HashTable.packetLength > available) {
+      if (GlobalStatics_0.packetLength > available) {
         return false;
       }
       SpotAnimationConfig.gameBuffer.position = 0;
       SomethingVolume15.gameSocket.read(SpotAnimationConfig.gameBuffer.bytes, 0,
-        HashTable.packetLength);
+        GlobalStatics_0.packetLength);
       IdentityKit.lastPacketId2 = EnumStringFetcher.lastPacketId1;
-      EnumStringFetcher.lastPacketId1 = StringNode.lastPacketId0;
-      StringNode.lastPacketId0 = GameString.packetId;
+      EnumStringFetcher.lastPacketId1 = GlobalStatics_0.lastPacketId0;
+      GlobalStatics_0.lastPacketId0 = GlobalStatics_0.packetId;
       AbstractDirectColorSprite.anInt3699 = 0;
 
       int var20;
       // Update variable small
-      if (GameString.packetId == 60) {
+      if (GlobalStatics_0.packetId == 60) {
         int id = SpotAnimationConfig.gameBuffer.readUnsignedShortAdd();
         byte value = SpotAnimationConfig.gameBuffer.readByteNegate();
         TextureSampler39.updateVariable(id, value);
-        GameString.packetId = -1;
+        GlobalStatics_0.packetId = -1;
         return true;
       }
 
@@ -120,7 +122,7 @@ public final class DummyClass18 {
       GameString var24;
 
       // Execute script
-      if (GameString.packetId == 115) {
+      if (GlobalStatics_0.packetId == 115) {
         int a = SpotAnimationConfig.gameBuffer.readUnsignedShort();
         GameString b = SpotAnimationConfig.gameBuffer.readString();
         Object[] arguments = new Object[b.getLength() + 1];
@@ -139,7 +141,7 @@ public final class DummyClass18 {
           Light.executeScript(call);
         }
 
-        GameString.packetId = -1;
+        GlobalStatics_0.packetId = -1;
         return true;
       }
 
@@ -147,7 +149,7 @@ public final class DummyClass18 {
       boolean var31;
       int var30;
       GameString var41;
-      if ((GameString.packetId == 70)) {
+      if ((GlobalStatics_0.packetId == 70)) {
         GameString var70 = SpotAnimationConfig.gameBuffer.readString();
         if (var70.endsWith(DummyClass26.TRADE_REQUEST)) {
           var24 = var70
@@ -260,7 +262,7 @@ public final class DummyClass18 {
                   GameBuffer
                       .printMessage(var24, 16, GroundItemNode.EMPTY_STRING, -1);
                 }
-              } else if (var70.endsWith(GameString.aClass94_2155)) {
+              } else if (var70.endsWith(GlobalStatics_0.aClass94_2155)) {
                 var24 =
                     var70.substring(
                         var70.indexOf(AbstractAudioOutputStream.aClass94_1970),
@@ -308,7 +310,7 @@ public final class DummyClass18 {
           }
         }
 
-        GameString.packetId = -1;
+        GlobalStatics_0.packetId = -1;
         return true;
       }
       int var3;
@@ -316,7 +318,7 @@ public final class DummyClass18 {
 
       // Set widget text
       //TODO
-      if (GameString.packetId == 123) {
+      if (GlobalStatics_0.packetId == 123) {
         int a = SpotAnimationConfig.gameBuffer.readUnsignedShortLE();
         int b = SpotAnimationConfig.gameBuffer.readUnsignedShortAdd();
         GameString c = SpotAnimationConfig.gameBuffer.readString();
@@ -324,32 +326,32 @@ public final class DummyClass18 {
           TextureSampler7.method295(c, (byte) 40, a);
         }
 
-        GameString.packetId = -1;
+        GlobalStatics_0.packetId = -1;
         return true;
       }
 
       // Bulk entity update
-      if (GameString.packetId == 230) {
+      if (GlobalStatics_0.packetId == 230) {
         DummyClass56.spawnSceneY = SpotAnimationConfig.gameBuffer.method751((byte) -88);
         DummyClass45.spawnSceneX = SpotAnimationConfig.gameBuffer.method754(true);
 
-        while (HashTable.packetLength > SpotAnimationConfig.gameBuffer.position) {
-          GameString.packetId = SpotAnimationConfig.gameBuffer.readUnsignedByte();
+        while (GlobalStatics_0.packetLength > SpotAnimationConfig.gameBuffer.position) {
+          GlobalStatics_0.packetId = SpotAnimationConfig.gameBuffer.readUnsignedByte();
           DummyClass37.parseEntityUpdate((byte) -82);
         }
 
-        GameString.packetId = -1;
+        GlobalStatics_0.packetId = -1;
         return true;
       }
 
 
-      if (GameString.packetId == 153) {
-        GameString.packetId = -1;
+      if (GlobalStatics_0.packetId == 153) {
+        GlobalStatics_0.packetId = -1;
         DummyClass45.anInt987 = 0;
         return true;
       }
       int var21;
-      if ((GameString.packetId == 220)) {
+      if ((GlobalStatics_0.packetId == 220)) {
         var20 = SpotAnimationConfig.gameBuffer.readInt((byte) -59);
         var3 = SpotAnimationConfig.gameBuffer.readUnsignedShortLE();
         var21 = SpotAnimationConfig.gameBuffer.readUnsignedShort();
@@ -357,7 +359,7 @@ public final class DummyClass18 {
           TextureSampler29.method327(var3, var20, (byte) 68);
         }
 
-        GameString.packetId = -1;
+        GlobalStatics_0.packetId = -1;
         return true;
       }
       long var2;
@@ -365,7 +367,7 @@ public final class DummyClass18 {
       int var11;
       long var29;
       long var36;
-      if (GameString.packetId == 81) {
+      if (GlobalStatics_0.packetId == 81) {
         var2 = SpotAnimationConfig.gameBuffer.readLong();
         SpotAnimationConfig.gameBuffer.readByte();
         var4 = SpotAnimationConfig.gameBuffer.readLong();
@@ -404,59 +406,61 @@ public final class DummyClass18 {
           DummyClass8.aLongArray4017[Mouse.anInt1921] = var55;
           Mouse.anInt1921 = (1 + Mouse.anInt1921) % 100;
           GameString var61 =
-            StringNode.method733(12345678, var11).method555(28021, SpotAnimationConfig.gameBuffer);
+            GlobalStatics_0
+                .method733(12345678, var11).method555(28021, SpotAnimationConfig.gameBuffer);
           if ((var10 != 2) && var10 != 3) {
             if ((var10 == 1)) {
               InventoryConfig.method611(var11, 20, var61,
-                  FileCache.stringFromBase37(-29664, var4)
+                  GameStringStatics.stringFromBase37(-29664, var4)
                       .formatName((byte) -50), (byte) 50,
                   RenderAnimation.concat(new GameString[]{
                       DummyClass34.aClass94_592,
-                      FileCache
+                      GameStringStatics
                           .stringFromBase37(var0 - 29581, var2).formatName(
                           (byte) -50)
                   }));
             } else {
               InventoryConfig.method611(var11, 20, var61,
-                  FileCache.stringFromBase37(var0 - 29581, var4)
+                  GameStringStatics.stringFromBase37(var0 - 29581, var4)
                       .formatName((byte) -50), (byte) 50,
-                  FileCache.stringFromBase37(-29664, var2)
+                  GameStringStatics.stringFromBase37(-29664, var2)
                       .formatName((byte) -50));
             }
           } else {
             InventoryConfig.method611(var11, 20, var61,
-              FileCache.stringFromBase37(var0 - 29581, var4).formatName((byte) -50), (byte) 50,
+              GameStringStatics.stringFromBase37(var0 - 29581, var4).formatName((byte) -50), (byte) 50,
               RenderAnimation.concat(new GameString[] {
                 DummyClass60.aClass94_444,
-                FileCache.stringFromBase37(-29664, var2).formatName((byte) -50)
+                GameStringStatics.stringFromBase37(-29664, var2).formatName((byte) -50)
               }));
           }
         }
 
-        GameString.packetId = -1;
+        GlobalStatics_0.packetId = -1;
         return true;
       }
       int var6;
       int var8;
       boolean var32;
-      if ((GameString.packetId == 55)) {
+      if ((GlobalStatics_0.packetId == 55)) {
         DummyClass10.anInt2087 = TextureSampler23.anInt3213;
         var2 = SpotAnimationConfig.gameBuffer.readLong();
         if ((var2 == 0L)) {
           DummyClass12.aClass94_2035 = null;
-          GameString.packetId = -1;
+          GlobalStatics_0.packetId = -1;
           Widget.aClass94_251 = null;
           ClientScript.aClass3_Sub19Array3694 = null;
           SubNode.anInt2572 = 0;
           return true;
         } else {
           var4 = SpotAnimationConfig.gameBuffer.readLong();
-          Widget.aClass94_251 = FileCache.stringFromBase37(-29664, var4);
-          DummyClass12.aClass94_2035 = FileCache.stringFromBase37(var0 - 29581, var2);
+          Widget.aClass94_251 = GameStringStatics.stringFromBase37(-29664, var4);
+          DummyClass12.aClass94_2035 = GameStringStatics
+              .stringFromBase37(var0 - 29581, var2);
           Player.aByte3953 = SpotAnimationConfig.gameBuffer.readByte();
           var6 = SpotAnimationConfig.gameBuffer.readUnsignedByte();
           if (var6 == 255) {
-            GameString.packetId = -1;
+            GlobalStatics_0.packetId = -1;
             return true;
           } else {
             SubNode.anInt2572 = var6;
@@ -465,7 +469,8 @@ public final class DummyClass18 {
             for (var8 = 0; SubNode.anInt2572 > var8; ++var8) {
               var7[var8] = new ClanChatUser();
               var7[var8].key = SpotAnimationConfig.gameBuffer.readLong();
-              var7[var8].name = FileCache.stringFromBase37(var0 - 29581, var7[var8].key);
+              var7[var8].name = GameStringStatics
+                  .stringFromBase37(var0 - 29581, var7[var8].key);
               var7[var8].anInt2478 = SpotAnimationConfig.gameBuffer.readUnsignedShort();
               var7[var8].aByte2472 = SpotAnimationConfig.gameBuffer.readByte();
               var7[var8].aClass94_2473 = SpotAnimationConfig.gameBuffer.readString();
@@ -497,46 +502,46 @@ public final class DummyClass18 {
             }
 
             ClientScript.aClass3_Sub19Array3694 = var7;
-            GameString.packetId = -1;
+            GlobalStatics_0.packetId = -1;
             return true;
           }
         }
       }
-      if (GameString.packetId == 164) {
+      if (GlobalStatics_0.packetId == 164) {
         var20 = SpotAnimationConfig.gameBuffer.method780(-1);
         SceneShadowMap.aClass64_1778 = DummyClass35.signLink.method1449(var0 ^ -82, var20);
-        GameString.packetId = -1;
+        GlobalStatics_0.packetId = -1;
         return true;
       }
 
-      if (GameString.packetId == 225) {
+      if (GlobalStatics_0.packetId == 225) {
         DummyClass4.parsePlayerUpdate((byte) -122);
-        GameString.packetId = -1;
+        GlobalStatics_0.packetId = -1;
         return true;
       }
 
-      if (GameString.packetId == 48) {
+      if (GlobalStatics_0.packetId == 48) {
         int a = SpotAnimationConfig.gameBuffer.readUnsignedShort();
         GameString b = SpotAnimationConfig.gameBuffer.readString();
         int c = SpotAnimationConfig.gameBuffer.readShortLEAdd();
         if (AbstractMouseWheel.updateInterfaceCounter(a, (byte) -25)) {
           TextureSampler7.method295(b, (byte) 40, c);
         }
-        GameString.packetId = -1;
+        GlobalStatics_0.packetId = -1;
         return true;
       }
 
-      if (GameString.packetId == 232) {
+      if (GlobalStatics_0.packetId == 232) {
         TextureSampler9.anInt3101 = SpotAnimationConfig.gameBuffer.readUnsignedByte();
         IdentityKit.anInt467 = SpotAnimationConfig.gameBuffer.readUnsignedByte();
         DummyClass38.anInt734 = SpotAnimationConfig.gameBuffer.readUnsignedByte();
-        GameString.packetId = -1;
+        GlobalStatics_0.packetId = -1;
         return true;
       }
 
       // com.jagex.runescape.Player option update
       GameString var56;
-      if (GameString.packetId == 44) {
+      if (GlobalStatics_0.packetId == 44) {
         var20 = SpotAnimationConfig.gameBuffer.readShortLEAdd();
         if (var20 == '\uffff') {
           var20 = -1;
@@ -555,20 +560,20 @@ public final class DummyClass18 {
           DummyClass3.aBooleanArray54[var21 - 1] = (var3 == 0);
         }
 
-        GameString.packetId = -1;
+        GlobalStatics_0.packetId = -1;
         return true;
       }
 
       // Update Variable large
-      if (GameString.packetId == 226) {
+      if (GlobalStatics_0.packetId == 226) {
         int value = SpotAnimationConfig.gameBuffer.readInt();
         int id = SpotAnimationConfig.gameBuffer.readUnsignedShortAdd();
         TextureSampler39.updateVariable(id, value);
-        GameString.packetId = -1;
+        GlobalStatics_0.packetId = -1;
         return true;
       }
 
-      if (GameString.packetId == 21) {
+      if (GlobalStatics_0.packetId == 21) {
         var20 = SpotAnimationConfig.gameBuffer.method786(true);
         var3 = SpotAnimationConfig.gameBuffer.readUnsignedShort();
         var21 = SpotAnimationConfig.gameBuffer.method782(var0 ^ 19);
@@ -576,11 +581,11 @@ public final class DummyClass18 {
           TextureSampler4.method260(-16207, var21, var20);
         }
 
-        GameString.packetId = -1;
+        GlobalStatics_0.packetId = -1;
         return true;
       }
 
-      if ((GameString.packetId == 145)) {
+      if ((GlobalStatics_0.packetId == 145)) {
         var20 = SpotAnimationConfig.gameBuffer.readShortLEAdd();
         var3 = SpotAnimationConfig.gameBuffer.method751((byte) -101);
         var21 = SpotAnimationConfig.gameBuffer.readShortLEAdd();
@@ -599,11 +604,11 @@ public final class DummyClass18 {
           }
         }
 
-        GameString.packetId = -1;
+        GlobalStatics_0.packetId = -1;
         return true;
       }
 
-      if ((GameString.packetId == 69)) {
+      if ((GlobalStatics_0.packetId == 69)) {
         var20 = SpotAnimationConfig.gameBuffer.readShortLEAdd();
         var3 = SpotAnimationConfig.gameBuffer.readInt();
         var21 = SpotAnimationConfig.gameBuffer.readUnsignedShortAdd();
@@ -611,37 +616,37 @@ public final class DummyClass18 {
           TextureSampler19.method255(var21, var3, 1);
         }
 
-        GameString.packetId = -1;
+        GlobalStatics_0.packetId = -1;
         return true;
       }
 
-      if (GameString.packetId == 141) {
+      if (GlobalStatics_0.packetId == 141) {
         var2 = SpotAnimationConfig.gameBuffer.readLong();
         var21 = SpotAnimationConfig.gameBuffer.readUnsignedShort();
-        var56 = StringNode.method733(var0 + 12345761, var21)
+        var56 = GlobalStatics_0.method733(var0 + 12345761, var21)
           .method555(28021, SpotAnimationConfig.gameBuffer);
         InventoryConfig.method611(var21, 19, var56, null, (byte) 50,
-          FileCache.stringFromBase37(-29664, var2).formatName((byte) -50));
-        GameString.packetId = -1;
+          GameStringStatics.stringFromBase37(-29664, var2).formatName((byte) -50));
+        GlobalStatics_0.packetId = -1;
         return true;
       }
 
       // Write UID
-      if ((GameString.packetId == 169)) {
+      if ((GlobalStatics_0.packetId == 169)) {
         DummyClass11.writeUID(SpotAnimationConfig.gameBuffer, var0 ^ -43);
-        GameString.packetId = -1;
+        GlobalStatics_0.packetId = -1;
         return true;
       }
 
-      if (GameString.packetId == 89) {
+      if (GlobalStatics_0.packetId == 89) {
         TextureSampler6.resetVariables(-117);
         GameBuffer.method819(false);
         GlobalStatics_0.anInt641 += 32;
-        GameString.packetId = -1;
+        GlobalStatics_0.packetId = -1;
         return true;
       }
 
-      if ((GameString.packetId == 125)) {
+      if ((GlobalStatics_0.packetId == 125)) {
         var20 = SpotAnimationConfig.gameBuffer.readUnsignedShort();
         var3 = SpotAnimationConfig.gameBuffer.readUnsignedByte();
         var21 = SpotAnimationConfig.gameBuffer.readUnsignedByte();
@@ -652,11 +657,11 @@ public final class DummyClass18 {
           Something3d.method2238(var5, var21, var6, var3, (byte) -21, var30);
         }
 
-        GameString.packetId = -1;
+        GlobalStatics_0.packetId = -1;
         return true;
       }
 
-      if ((GameString.packetId == 36)) {
+      if ((GlobalStatics_0.packetId == 36)) {
         var20 = SpotAnimationConfig.gameBuffer.readInt((byte) 122);
         var3 = SpotAnimationConfig.gameBuffer.method791((byte) 10);
         var21 = SpotAnimationConfig.gameBuffer.readUnsignedShortAdd();
@@ -664,13 +669,13 @@ public final class DummyClass18 {
           WorldMapLabel.method1790(var20, var3, var0 + 178);
         }
 
-        GameString.packetId = -1;
+        GlobalStatics_0.packetId = -1;
         return true;
       }
 
       WidgetAccess var38;
       WidgetAccess var47;
-      if ((GameString.packetId == 9)) {
+      if ((GlobalStatics_0.packetId == 9)) {
         var20 = SpotAnimationConfig.gameBuffer.readShortLEAdd();
         var3 = SpotAnimationConfig.gameBuffer.method782(-101);
         var21 = SpotAnimationConfig.gameBuffer.readUnsignedShortAdd();
@@ -702,12 +707,12 @@ public final class DummyClass18 {
           }
         }
 
-        GameString.packetId = -1;
+        GlobalStatics_0.packetId = -1;
         return true;
       }
 
       int var33;
-      if (GameString.packetId == 56) {
+      if (GlobalStatics_0.packetId == 56) {
         var20 = SpotAnimationConfig.gameBuffer.readUnsignedShort();
         var3 = SpotAnimationConfig.gameBuffer.readUnsignedShortLE();
         var21 = SpotAnimationConfig.gameBuffer.method780(-1);
@@ -813,11 +818,11 @@ public final class DummyClass18 {
           }
         }
 
-        GameString.packetId = -1;
+        GlobalStatics_0.packetId = -1;
         return true;
       }
 
-      if ((GameString.packetId == 207)) {
+      if ((GlobalStatics_0.packetId == 207)) {
         var20 = SpotAnimationConfig.gameBuffer.readInt((byte) -87);
         var3 = SpotAnimationConfig.gameBuffer.readUnsignedShortAdd();
         var21 = SpotAnimationConfig.gameBuffer.readUnsignedShort();
@@ -826,11 +831,11 @@ public final class DummyClass18 {
           MonoChromaticImageCache.method1708(var5 + (var21 << 16), var20, var0 ^ 2474);
         }
 
-        GameString.packetId = -1;
+        GlobalStatics_0.packetId = -1;
         return true;
       }
 
-      if ((GameString.packetId == 38)) {
+      if ((GlobalStatics_0.packetId == 38)) {
         GameBuffer.method819(false);
         var20 = SpotAnimationConfig.gameBuffer.method751((byte) -111);
         var3 = SpotAnimationConfig.gameBuffer.method780(-1);
@@ -846,21 +851,21 @@ public final class DummyClass18 {
         }
 
         ProjectileNode.anIntArray3780[ClientScript.bitAnd(31, GZipDecompressor.anInt815++)] = var21;
-        GameString.packetId = -1;
+        GlobalStatics_0.packetId = -1;
         return true;
       }
-      if (GameString.packetId == 104 || GameString.packetId == 121 ||
-          (GameString.packetId == 97)
-        || (GameString.packetId == 14) || (GameString.packetId == 202)
-        || (GameString.packetId == 135) || (GameString.packetId == 17) || GameString.packetId == 16
-        || GameString.packetId == 240 || GameString.packetId == 33 ||
-          (GameString.packetId == 20)
-        || GameString.packetId == 195 || GameString.packetId == 179) {
+      if (GlobalStatics_0.packetId == 104 || GlobalStatics_0.packetId == 121 ||
+          (GlobalStatics_0.packetId == 97)
+        || (GlobalStatics_0.packetId == 14) || (GlobalStatics_0.packetId == 202)
+        || (GlobalStatics_0.packetId == 135) || (GlobalStatics_0.packetId == 17) || GlobalStatics_0.packetId == 16
+        || GlobalStatics_0.packetId == 240 || GlobalStatics_0.packetId == 33 ||
+          (GlobalStatics_0.packetId == 20)
+        || GlobalStatics_0.packetId == 195 || GlobalStatics_0.packetId == 179) {
         DummyClass37.parseEntityUpdate((byte) -99);
-        GameString.packetId = -1;
+        GlobalStatics_0.packetId = -1;
         return true;
       }
-      if (GameString.packetId == 149) {
+      if (GlobalStatics_0.packetId == 149) {
         var20 = SpotAnimationConfig.gameBuffer.readUnsignedShort();
         var3 = SpotAnimationConfig.gameBuffer.readInt();
         if (AbstractMouseWheel.updateInterfaceCounter(var20, (byte) -25)) {
@@ -876,10 +881,10 @@ public final class DummyClass18 {
           }
         }
 
-        GameString.packetId = -1;
+        GlobalStatics_0.packetId = -1;
         return true;
       }
-      if (GameString.packetId == 187) {
+      if (GlobalStatics_0.packetId == 187) {
         var20 = SpotAnimationConfig.gameBuffer.readUnsignedShortLE();
         var3 = SpotAnimationConfig.gameBuffer.readUnsignedShort();
         var21 = SpotAnimationConfig.gameBuffer.readUnsignedShort();
@@ -894,10 +899,10 @@ public final class DummyClass18 {
           Cache.method1098((byte) -117);
         }
 
-        GameString.packetId = -1;
+        GlobalStatics_0.packetId = -1;
         return true;
       }
-      if (GameString.packetId == 132) {
+      if (GlobalStatics_0.packetId == 132) {
         var20 = SpotAnimationConfig.gameBuffer.readUnsignedShort();
         var3 = SpotAnimationConfig.gameBuffer.readUnsignedShortAdd();
         var21 = SpotAnimationConfig.gameBuffer.readShortLEAdd();
@@ -907,12 +912,12 @@ public final class DummyClass18 {
           FileUnpacker.method2143((byte) -124, var21, var6, var5, var20);
         }
 
-        GameString.packetId = -1;
+        GlobalStatics_0.packetId = -1;
         return true;
       }
 
       // Remove all game objects and ground items
-      if (GameString.packetId == 112) {
+      if (GlobalStatics_0.packetId == 112) {
         DummyClass45.spawnSceneX = SpotAnimationConfig.gameBuffer.readUnsignedByte();
         DummyClass56.spawnSceneY = SpotAnimationConfig.gameBuffer.method786(true);
 
@@ -937,11 +942,11 @@ public final class DummyClass18 {
           }
         }
 
-        GameString.packetId = -1;
+        GlobalStatics_0.packetId = -1;
         return true;
       }
 
-      if (GameString.packetId == 144) {
+      if (GlobalStatics_0.packetId == 144) {
         var20 = SpotAnimationConfig.gameBuffer.readInt((byte) 72);
         Widget var65 = EnumStringFetcher.getWidget((byte) 111, var20);
 
@@ -951,11 +956,11 @@ public final class DummyClass18 {
         }
 
         DummyClass29.method909(123, var65);
-        GameString.packetId = -1;
+        GlobalStatics_0.packetId = -1;
         return true;
       }
 
-      if ((GameString.packetId == 130)) {
+      if ((GlobalStatics_0.packetId == 130)) {
         var20 = SpotAnimationConfig.gameBuffer.method782(-104);
         var3 = SpotAnimationConfig.gameBuffer.readShortLEAdd();
         var21 = SpotAnimationConfig.gameBuffer.readUnsignedShortAdd();
@@ -967,32 +972,32 @@ public final class DummyClass18 {
           TextureSampler19.method256(-1, 1, var20, (byte) -109, var21);
         }
 
-        GameString.packetId = -1;
+        GlobalStatics_0.packetId = -1;
         return true;
       }
 
       // Set minimap mode
-      if ((GameString.packetId == 192)) {
+      if ((GlobalStatics_0.packetId == 192)) {
         DummyClass12.minimapMode = SpotAnimationConfig.gameBuffer.readUnsignedByte();
-        GameString.packetId = -1;
+        GlobalStatics_0.packetId = -1;
         return true;
       }
 
       // Set player position
-      if ((GameString.packetId == 13)) {
+      if ((GlobalStatics_0.packetId == 13)) {
         var20 = SpotAnimationConfig.gameBuffer.method754(true);
         var3 = SpotAnimationConfig.gameBuffer.method751((byte) 108);
         var21 = SpotAnimationConfig.gameBuffer.readUnsignedByte();
         GameWorldSomething.currentPlane = var3 >> 1;
         TextureCache.localPlayer.setPosition((byte) 126, var20, ((var3 & 1) == 1), var21);
-        GameString.packetId = -1;
+        GlobalStatics_0.packetId = -1;
         return true;
       }
 
       int var12;
       GameString var57;
       GameString var64;
-      if ((GameString.packetId == 62)) {
+      if ((GlobalStatics_0.packetId == 62)) {
         var2 = SpotAnimationConfig.gameBuffer.readLong();
         var21 = SpotAnimationConfig.gameBuffer.readUnsignedShort();
         var5 = SpotAnimationConfig.gameBuffer.readUnsignedByte();
@@ -1007,7 +1012,7 @@ public final class DummyClass18 {
           var41 = SpotAnimationConfig.gameBuffer.readString();
         }
 
-        GameString var46 = FileCache.stringFromBase37(-29664, var2).formatName((byte) -50);
+        GameString var46 = GameStringStatics.stringFromBase37(-29664, var2).formatName((byte) -50);
 
         for (var33 = 0; var33 < FileSystem.anInt104; ++var33) {
           if (var2 == VertexNormal.aLongArray826[var33]) {
@@ -1031,7 +1036,7 @@ public final class DummyClass18 {
             SubNode.aClass94Array2566[var33] = var41;
             LightIntensity.anIntArray904[var33] = var5;
             var46 = null;
-            Node.aBooleanArray73[var33] = var31;
+            GlobalStatics_0.aBooleanArray73[var33] = var31;
             break;
           }
         }
@@ -1043,7 +1048,7 @@ public final class DummyClass18 {
           Cursor.anIntArray882[FileSystem.anInt104] = var21;
           SubNode.aClass94Array2566[FileSystem.anInt104] = var41;
           LightIntensity.anIntArray904[FileSystem.anInt104] = var5;
-          Node.aBooleanArray73[FileSystem.anInt104] = var31;
+          GlobalStatics_0.aBooleanArray73[FileSystem.anInt104] = var31;
           ++FileSystem.anInt104;
         }
 
@@ -1075,9 +1080,9 @@ public final class DummyClass18 {
               int var17 = LightIntensity.anIntArray904[var11];
               LightIntensity.anIntArray904[var11] = LightIntensity.anIntArray904[var11 + 1];
               LightIntensity.anIntArray904[1 + var11] = var17;
-              boolean var18 = Node.aBooleanArray73[var11];
-              Node.aBooleanArray73[var11] = Node.aBooleanArray73[var11 + 1];
-              Node.aBooleanArray73[var11 + 1] = var18;
+              boolean var18 = GlobalStatics_0.aBooleanArray73[var11];
+              GlobalStatics_0.aBooleanArray73[var11] = GlobalStatics_0.aBooleanArray73[var11 + 1];
+              GlobalStatics_0.aBooleanArray73[var11 + 1] = var18;
             }
           }
 
@@ -1086,23 +1091,23 @@ public final class DummyClass18 {
           }
         }
 
-        GameString.packetId = -1;
+        GlobalStatics_0.packetId = -1;
         return true;
       }
 
-      if ((GameString.packetId == 160)) {
-        if (HashTable.packetLength == 0) {
+      if ((GlobalStatics_0.packetId == 160)) {
+        if (GlobalStatics_0.packetLength == 0) {
           TextureSampler32.walkTooltip = DummyClass42.DEFAULT_WALK_TOOLTIP;
         } else {
           TextureSampler32.walkTooltip = SpotAnimationConfig.gameBuffer
               .readString();
         }
 
-        GameString.packetId = -1;
+        GlobalStatics_0.packetId = -1;
         return true;
       }
 
-      if (GameString.packetId == 128) {
+      if (GlobalStatics_0.packetId == 128) {
         for (var20 = 0; DummyClass5.anIntArray2985.length > var20; ++var20) {
           if ((LightIntensity.variables[var20] != DummyClass5.anIntArray2985[var20])) {
             DummyClass5.anIntArray2985[var20] = LightIntensity.variables[var20];
@@ -1112,11 +1117,11 @@ public final class DummyClass18 {
           }
         }
 
-        GameString.packetId = -1;
+        GlobalStatics_0.packetId = -1;
         return true;
       }
 
-      if ((GameString.packetId == 154)) {
+      if ((GlobalStatics_0.packetId == 154)) {
         var20 = SpotAnimationConfig.gameBuffer.readUnsignedShort();
         var3 = SpotAnimationConfig.gameBuffer.readUnsignedByte();
         var21 = SpotAnimationConfig.gameBuffer.readUnsignedByte();
@@ -1127,11 +1132,11 @@ public final class DummyClass18 {
           TriChromaticImageBuffer.method390(true, var6, var5, var30, (byte) -124, var21, var3);
         }
 
-        GameString.packetId = -1;
+        GlobalStatics_0.packetId = -1;
         return true;
       }
 
-      if (GameString.packetId == 247) {
+      if (GlobalStatics_0.packetId == 247) {
         var2 = SpotAnimationConfig.gameBuffer.readLong();
         var4 = SpotAnimationConfig.gameBuffer.readUnsignedShort();
         var29 = SpotAnimationConfig.gameBuffer.readUnsignedMedium((byte) 77);
@@ -1168,31 +1173,32 @@ public final class DummyClass18 {
           DummyClass8.aLongArray4017[Mouse.anInt1921] = var51;
           Mouse.anInt1921 = (1 + Mouse.anInt1921) % 100;
           var64 =
-            StringNode.method733(12345678, var33).method555(28021, SpotAnimationConfig.gameBuffer);
+            GlobalStatics_0
+                .method733(12345678, var33).method555(28021, SpotAnimationConfig.gameBuffer);
           if ((var8 == 2)) {
             InventoryConfig.method611(var33, 18, var64, null, (byte) 50,
               RenderAnimation.concat(new GameString[] {
                 DummyClass60.aClass94_444,
-                FileCache.stringFromBase37(-29664, var2).formatName((byte) -50)
+                GameStringStatics.stringFromBase37(-29664, var2).formatName((byte) -50)
               }));
           } else if (var8 == 1) {
             InventoryConfig.method611(var33, 18, var64, null, (byte) 50,
               RenderAnimation.concat(new GameString[] {
                 DummyClass34.aClass94_592,
-                FileCache.stringFromBase37(-29664, var2).formatName((byte) -50)
+                GameStringStatics.stringFromBase37(-29664, var2).formatName((byte) -50)
               }));
           } else {
             InventoryConfig.method611(var33, 18, var64, null, (byte) 50,
-              FileCache.stringFromBase37(var0 - 29581, var2).formatName((byte) -50));
+              GameStringStatics.stringFromBase37(var0 - 29581, var2).formatName((byte) -50));
           }
         }
 
-        GameString.packetId = -1;
+        GlobalStatics_0.packetId = -1;
         return true;
       }
 
       SomethingPacket151 var26;
-      if ((GameString.packetId == 176)) {
+      if ((GlobalStatics_0.packetId == 176)) {
         var20 = SpotAnimationConfig.gameBuffer.method780(var0 ^ 82);
         var3 = SpotAnimationConfig.gameBuffer.readUnsignedShortAdd();
         var21 = SpotAnimationConfig.gameBuffer.method780(-1);
@@ -1227,10 +1233,10 @@ public final class DummyClass18 {
           }
         }
 
-        GameString.packetId = -1;
+        GlobalStatics_0.packetId = -1;
         return true;
       }
-      if (GameString.packetId == 27) {
+      if (GlobalStatics_0.packetId == 27) {
         var20 = SpotAnimationConfig.gameBuffer.readUnsignedShort();
         var3 = SpotAnimationConfig.gameBuffer.readUnsignedByte();
         var21 = SpotAnimationConfig.gameBuffer.readUnsignedByte();
@@ -1245,11 +1251,11 @@ public final class DummyClass18 {
           DummyClass9.anIntArray4009[var3] = var30;
         }
 
-        GameString.packetId = -1;
+        GlobalStatics_0.packetId = -1;
         return true;
       }
 
-      if (GameString.packetId == 2) {
+      if (GlobalStatics_0.packetId == 2) {
         var20 = SpotAnimationConfig.gameBuffer.method780(-1);
         var3 = SpotAnimationConfig.gameBuffer.readUnsignedShortAdd();
         var21 = SpotAnimationConfig.gameBuffer.readShortLEAdd();
@@ -1257,22 +1263,22 @@ public final class DummyClass18 {
           BitVariable.method1385(var21, var20, (byte) -127);
         }
 
-        GameString.packetId = -1;
+        GlobalStatics_0.packetId = -1;
         return true;
       }
-      if ((GameString.packetId == 85)) {
+      if ((GlobalStatics_0.packetId == 85)) {
         DummyClass36.updateTime = SpotAnimationConfig.gameBuffer.readUnsignedShort() * 30;
-        GameString.packetId = -1;
+        GlobalStatics_0.packetId = -1;
         Projectile.anInt2905 = TextureSampler23.anInt3213;
         return true;
       }
-      if ((GameString.packetId == 114)) {
+      if ((GlobalStatics_0.packetId == 114)) {
         TextureSampler3.method305(DummyClass35.signLink, SpotAnimationConfig.gameBuffer,
-          HashTable.packetLength, (byte) -126);
-        GameString.packetId = -1;
+          GlobalStatics_0.packetLength, (byte) -126);
+        GlobalStatics_0.packetId = -1;
         return true;
       }
-      if (GameString.packetId == 65) {
+      if (GlobalStatics_0.packetId == 65) {
         var20 = SpotAnimationConfig.gameBuffer.readUnsignedShortLE();
         var3 = SpotAnimationConfig.gameBuffer.method786(true);
         var21 = SpotAnimationConfig.gameBuffer.readShortLEAdd();
@@ -1280,90 +1286,91 @@ public final class DummyClass18 {
           TextureSampler19.method255(var21, var3, var0 ^ -84);
         }
 
-        GameString.packetId = -1;
+        GlobalStatics_0.packetId = -1;
         return true;
       }
-      if (GameString.packetId == 234) {
+      if (GlobalStatics_0.packetId == 234) {
         GameBuffer.method819(false);
         BZipDecompressorState.anInt136 = SpotAnimationConfig.gameBuffer.readUnsignedByte();
         Projectile.anInt2905 = TextureSampler23.anInt3213;
-        GameString.packetId = -1;
+        GlobalStatics_0.packetId = -1;
         return true;
       }
 
-      if ((GameString.packetId == 209)) {
+      if ((GlobalStatics_0.packetId == 209)) {
         if (InventoryConfig.anInt3655 != -1) {
           ClassCheckRequest.method124(48, 0, InventoryConfig.anInt3655);
         }
 
-        GameString.packetId = -1;
+        GlobalStatics_0.packetId = -1;
         return true;
       }
-      if ((GameString.packetId == 191)) {
+      if ((GlobalStatics_0.packetId == 191)) {
         var20 = SpotAnimationConfig.gameBuffer.readUnsignedShortLE();
         SomethingQuickChat2.method532(var20, var0 ^ 28185);
         SomethingQuickChat.anIntArray3565[ClientScript.bitAnd(31, FileTable.anInt944++)] =
           ClientScript.bitAnd(var20, 32767);
-        GameString.packetId = -1;
+        GlobalStatics_0.packetId = -1;
         return true;
       }
 
-      if ((GameString.packetId == 102)) {
+      if ((GlobalStatics_0.packetId == 102)) {
         var20 = SpotAnimationConfig.gameBuffer.readUnsignedShortLE();
         var3 = SpotAnimationConfig.gameBuffer.method754(true);
         var21 = SpotAnimationConfig.gameBuffer.readUnsignedShort();
         NPC var39 = TextureSampler5.npcs[var20];
         if (var39 != null) {
-          HashTable.method1772(var3, var21, 39, var39);
+          GlobalStatics_0.method1772(var3, var21, 39, var39);
         }
 
-        GameString.packetId = -1;
+        GlobalStatics_0.packetId = -1;
         return true;
       }
 
-      if (GameString.packetId == 159) {
+      if (GlobalStatics_0.packetId == 159) {
         GameBuffer.method819(false);
         Mouse.anInt1925 = SpotAnimationConfig.gameBuffer.method787((byte) 59);
         Projectile.anInt2905 = TextureSampler23.anInt3213;
-        GameString.packetId = -1;
+        GlobalStatics_0.packetId = -1;
         return true;
       }
 
       // Chat
-      if ((GameString.packetId == 71)) {
+      if ((GlobalStatics_0.packetId == 71)) {
         var2 = SpotAnimationConfig.gameBuffer.readLong();
         var58 = AbstractFont.otherFormat(
           DummyClass34.decompressString(SpotAnimationConfig.gameBuffer).format(121));
-        GameBuffer.printMessage(FileCache.stringFromBase37(-29664, var2).formatName((byte) -50), 6,
+        GameBuffer.printMessage(
+            GameStringStatics.stringFromBase37(-29664, var2).formatName((byte) -50), 6,
           var58, var0 ^ 82);
-        GameString.packetId = -1;
+        GlobalStatics_0.packetId = -1;
         return true;
       }
 
-      if ((GameString.packetId == 42)) {
+      if ((GlobalStatics_0.packetId == 42)) {
         if (TextureSampler30.fullScreenFrame != null) {
           SceneNode.setWindowMode(false, SubNode.anInt2577, -8914, -1, -1);
         }
 
-        byte[] var22 = new byte[HashTable.packetLength];
-        SpotAnimationConfig.gameBuffer.method811((byte) 30, 0, var22, HashTable.packetLength);
-        var24 = GameStringStatics.createString(var22, 0, HashTable.packetLength);
+        byte[] var22 = new byte[GlobalStatics_0.packetLength];
+        SpotAnimationConfig.gameBuffer.method811((byte) 30, 0, var22, GlobalStatics_0.packetLength);
+        var24 = GameStringStatics.createString(var22, 0, GlobalStatics_0.packetLength);
         if (TextureSampler27.FRAME == null && (SignLink.anInt1214 == 3
           || !SignLink.formattedOsName.startsWith("win") || DisplayMode.aBoolean1451)) {
           DummyClass54.method1596(var24, (byte) 127, true);
         } else {
           TextureSampler5.aClass94_3295 = var24;
-          GameString.aBoolean2154 = true;
+          GlobalStatics_0.aBoolean2154 = true;
           AudioWorker.aClass64_351 =
             DummyClass35.signLink.method1452(new String(var24.method1568(0),
                 StandardCharsets.ISO_8859_1), true);
         }
 
-        GameString.packetId = -1;
+        GlobalStatics_0.packetId = -1;
         return true;
       }
 
-      if ((GameString.packetId == 111)) {
+      if ((GlobalStatics_0.packetId == 111)) {
         var20 = SpotAnimationConfig.gameBuffer.readUnsignedShortAdd();
         var3 = SpotAnimationConfig.gameBuffer.readInt((byte) -45);
         var21 = SpotAnimationConfig.gameBuffer.readShortLEAdd();
@@ -1373,19 +1380,19 @@ public final class DummyClass18 {
           TextureSampler19.method256(var21, 7, var3, (byte) -126, var5 << 16 | var6);
         }
 
-        GameString.packetId = -1;
+        GlobalStatics_0.packetId = -1;
         return true;
       }
 
-      if (GameString.packetId == 37) {
+      if (GlobalStatics_0.packetId == 37) {
         var20 = SpotAnimationConfig.gameBuffer.method751((byte) 122);
         var3 = SpotAnimationConfig.gameBuffer.readUnsignedShortLE();
         DummyClass6.method2209((byte) -122, var20, var3);
-        GameString.packetId = -1;
+        GlobalStatics_0.packetId = -1;
         return true;
       }
 
-      if ((GameString.packetId == 155)) {
+      if ((GlobalStatics_0.packetId == 155)) {
         var20 = SpotAnimationConfig.gameBuffer.readUnsignedByte();
         var3 = SpotAnimationConfig.gameBuffer.readInt((byte) -51);
         var21 = SpotAnimationConfig.gameBuffer.readUnsignedShortAdd();
@@ -1399,11 +1406,11 @@ public final class DummyClass18 {
           DummyClass60.method914(6422, var5, var3, var20);
         }
 
-        GameString.packetId = -1;
+        GlobalStatics_0.packetId = -1;
         return true;
       }
 
-      if ((GameString.packetId == 131)) {
+      if ((GlobalStatics_0.packetId == 131)) {
         for (var20 = 0; var20 < TextureSampler0.players.length; ++var20) {
           if (TextureSampler0.players[var20] != null) {
             TextureSampler0.players[var20].animationId = -1;
@@ -1416,11 +1423,11 @@ public final class DummyClass18 {
           }
         }
 
-        GameString.packetId = -1;
+        GlobalStatics_0.packetId = -1;
         return true;
       }
 
-      if ((GameString.packetId == 217)) {
+      if ((GlobalStatics_0.packetId == 217)) {
         var20 = SpotAnimationConfig.gameBuffer.readUnsignedByte();
         HintMarker var48 = new HintMarker();
         var3 = var20 >> 6;
@@ -1473,30 +1480,30 @@ public final class DummyClass18 {
           GameException.aClass96Array2114[var3] = var48;
         }
 
-        GameString.packetId = -1;
+        GlobalStatics_0.packetId = -1;
         return true;
       }
 
-      if (GameString.packetId == 126) {
-        AnimationSomething.anInt3591 = HashTable.packetLength / 8;
+      if (GlobalStatics_0.packetId == 126) {
+        AnimationSomething.anInt3591 = GlobalStatics_0.packetLength / 8;
 
         for (var20 = 0; (var20 < AnimationSomething.anInt3591); ++var20) {
           MonoChromaticImageCache.aLongArray1574[var20] = SpotAnimationConfig.gameBuffer.readLong();
           TextureSampler7.aClass94Array3341[var20] =
-            FileCache.stringFromBase37(-29664, MonoChromaticImageCache.aLongArray1574[var20]);
+            GameStringStatics.stringFromBase37(-29664, MonoChromaticImageCache.aLongArray1574[var20]);
         }
 
         DummyClass31.anInt1472 = TextureSampler23.anInt3213;
-        GameString.packetId = -1;
+        GlobalStatics_0.packetId = -1;
         return true;
       }
-      if ((GameString.packetId == 32)) {
+      if ((GlobalStatics_0.packetId == 32)) {
         TextureSampler31.parseNpcUpdate();
-        GameString.packetId = -1;
+        GlobalStatics_0.packetId = -1;
         return true;
       }
 
-      if ((GameString.packetId == 119)) {
+      if ((GlobalStatics_0.packetId == 119)) {
         var20 = SpotAnimationConfig.gameBuffer.readUnsignedShortAdd();
         var3 = SpotAnimationConfig.gameBuffer.method782(-48);
         var21 = SpotAnimationConfig.gameBuffer.method787((byte) 74);
@@ -1505,10 +1512,10 @@ public final class DummyClass18 {
           FloorOverlay.method2271(var21, var3, 1, var5);
         }
 
-        GameString.packetId = -1;
+        GlobalStatics_0.packetId = -1;
         return true;
       }
-      if (GameString.packetId == 235) {
+      if (GlobalStatics_0.packetId == 235) {
         var20 = SpotAnimationConfig.gameBuffer.method754(true);
         var3 = var20 >> 2;
         var21 = 3 & var20;
@@ -1525,10 +1532,10 @@ public final class DummyClass18 {
         var10 -= ProceduralTexture.anInt1152;
         var8 = 3 & var30 >> 28;
         VertexNormal.method1131(var8, 110, var21, var3, var10, var5, var33, var6);
-        GameString.packetId = -1;
+        GlobalStatics_0.packetId = -1;
         return true;
       }
-      if (GameString.packetId == 0) {
+      if (GlobalStatics_0.packetId == 0) {
         var2 = SpotAnimationConfig.gameBuffer.readLong();
         var4 = SpotAnimationConfig.gameBuffer.readUnsignedShort();
         var29 = SpotAnimationConfig.gameBuffer.readUnsignedMedium((byte) 93);
@@ -1573,28 +1580,28 @@ public final class DummyClass18 {
             if (var8 == 1) {
               GameBuffer.printMessage(RenderAnimation.concat(new GameString[]{
                   DummyClass34.aClass94_592,
-                  FileCache.stringFromBase37(-29664, var2).formatName(
+                  GameStringStatics.stringFromBase37(-29664, var2).formatName(
                       (byte) -50)
               }), 7, var52, -1);
             } else {
               GameBuffer.printMessage(
-                  FileCache.stringFromBase37(var0 - 29581, var2)
+                  GameStringStatics.stringFromBase37(var0 - 29581, var2)
                       .formatName((byte) -50), 3, var52,
                   var0 + 82);
             }
           } else {
             GameBuffer.printMessage(RenderAnimation.concat(new GameString[] {
               DummyClass60.aClass94_444,
-              FileCache.stringFromBase37(-29664, var2).formatName((byte) -50)
+              GameStringStatics.stringFromBase37(-29664, var2).formatName((byte) -50)
             }), 7, var52, -1);
           }
         }
 
-        GameString.packetId = -1;
+        GlobalStatics_0.packetId = -1;
         return true;
       }
 
-      if ((GameString.packetId == 54)) {
+      if ((GlobalStatics_0.packetId == 54)) {
         var2 = SpotAnimationConfig.gameBuffer.readLong();
         SpotAnimationConfig.gameBuffer.readByte();
         var4 = SpotAnimationConfig.gameBuffer.readLong();
@@ -1641,32 +1648,32 @@ public final class DummyClass18 {
             if ((var10 == 1)) {
               TextureSampler1.method221(-1, var57, RenderAnimation.concat(new GameString[] {
                 DummyClass34.aClass94_592,
-                FileCache.stringFromBase37(var0 ^ 29581, var2).formatName((byte) -50)
-              }), FileCache.stringFromBase37(-29664, var4).formatName((byte) -50), 9);
+                GameStringStatics.stringFromBase37(var0 ^ 29581, var2).formatName((byte) -50)
+              }), GameStringStatics.stringFromBase37(-29664, var4).formatName((byte) -50), 9);
             } else {
               TextureSampler1.method221(-1, var57,
-                FileCache.stringFromBase37(-29664, var2).formatName((byte) -50),
-                FileCache.stringFromBase37(-29664, var4).formatName((byte) -50), 9);
+                GameStringStatics.stringFromBase37(-29664, var2).formatName((byte) -50),
+                GameStringStatics.stringFromBase37(-29664, var4).formatName((byte) -50), 9);
             }
           } else {
             TextureSampler1.method221(-1, var57, RenderAnimation.concat(new GameString[] {
               DummyClass60.aClass94_444,
-              FileCache.stringFromBase37(-29664, var2).formatName((byte) -50)
-            }), FileCache.stringFromBase37(var0 - 29581, var4).formatName((byte) -50), 9);
+              GameStringStatics.stringFromBase37(-29664, var2).formatName((byte) -50)
+            }), GameStringStatics.stringFromBase37(var0 - 29581, var4).formatName((byte) -50), 9);
           }
         }
 
-        GameString.packetId = -1;
+        GlobalStatics_0.packetId = -1;
         return true;
       }
 
-      if ((GameString.packetId == 214)) {
+      if ((GlobalStatics_0.packetId == 214)) {
         DummyClass37.parseSceneRebuild(true);
-        GameString.packetId = -1;
+        GlobalStatics_0.packetId = -1;
         return true;
       }
 
-      if ((GameString.packetId == 172)) {
+      if ((GlobalStatics_0.packetId == 172)) {
         var20 = SpotAnimationConfig.gameBuffer.readUnsignedShort();
         var3 = SpotAnimationConfig.gameBuffer.readUnsignedByte();
         if ((var20 == 65535)) {
@@ -1675,11 +1682,11 @@ public final class DummyClass18 {
 
         var21 = SpotAnimationConfig.gameBuffer.readUnsignedShort();
         TextureSampler26.method199(var3, var20, var21, -799);
-        GameString.packetId = -1;
+        GlobalStatics_0.packetId = -1;
         return true;
       }
 
-      if ((GameString.packetId == 66)) {
+      if ((GlobalStatics_0.packetId == 66)) {
         var20 = SpotAnimationConfig.gameBuffer.readShortLEAdd();
         var3 = SpotAnimationConfig.gameBuffer.method780(-1);
         if (AbstractMouseWheel.updateInterfaceCounter(var20, (byte) -25)) {
@@ -1691,11 +1698,11 @@ public final class DummyClass18 {
           TextureSampler19.method256(-1, 3, var3, (byte) -110, var21);
         }
 
-        GameString.packetId = -1;
+        GlobalStatics_0.packetId = -1;
         return true;
       }
 
-      if (GameString.packetId == 171) {
+      if (GlobalStatics_0.packetId == 171) {
         var20 = SpotAnimationConfig.gameBuffer.readInt((byte) -55);
         var24 = SpotAnimationConfig.gameBuffer.readString();
         var21 = SpotAnimationConfig.gameBuffer.readUnsignedShortAdd();
@@ -1703,19 +1710,19 @@ public final class DummyClass18 {
           AbstractObjectNode.method566(var24, 0, var20);
         }
 
-        GameString.packetId = -1;
+        GlobalStatics_0.packetId = -1;
         return true;
       }
-      if ((GameString.packetId == 84)) {
+      if ((GlobalStatics_0.packetId == 84)) {
         var20 = SpotAnimationConfig.gameBuffer.method782(-79);
         var3 = SpotAnimationConfig.gameBuffer.readShortLEAdd();
         DummyClass6.method2209((byte) -106, var20, var3);
-        GameString.packetId = -1;
+        GlobalStatics_0.packetId = -1;
         return true;
       }
 
       Widget var25;
-      if (GameString.packetId == 22) {
+      if (GlobalStatics_0.packetId == 22) {
         var20 = SpotAnimationConfig.gameBuffer.readInt();
         var3 = SpotAnimationConfig.gameBuffer.readUnsignedShort();
         if ((var20 < 69999)) {
@@ -1728,7 +1735,7 @@ public final class DummyClass18 {
           var25 = EnumStringFetcher.getWidget((byte) 127, var20);
         }
 
-        for (; (SpotAnimationConfig.gameBuffer.position < HashTable.packetLength); FloorOverlay.method2277(var6 - 1, var5, var30, var3,
+        for (; (SpotAnimationConfig.gameBuffer.position < GlobalStatics_0.packetLength); FloorOverlay.method2277(var6 - 1, var5, var30, var3,
           (byte) 46)) {
           var5 = SpotAnimationConfig.gameBuffer.readUnsignedShortSmart();
           var6 = SpotAnimationConfig.gameBuffer.readUnsignedShort();
@@ -1754,26 +1761,26 @@ public final class DummyClass18 {
         GameBuffer.method819(false);
         SomethingQuickChat.anIntArray3565[ClientScript.bitAnd(FileTable.anInt944++, 31)] =
           ClientScript.bitAnd(32767, var3);
-        GameString.packetId = -1;
+        GlobalStatics_0.packetId = -1;
         return true;
       }
 
-      if (GameString.packetId == 24) {
+      if (GlobalStatics_0.packetId == 24) {
         var20 = SpotAnimationConfig.gameBuffer.readUnsignedShort();
         if (AbstractMouseWheel.updateInterfaceCounter(var20, (byte) -25)) {
           AnimationSomething.method560(-21556);
         }
 
-        GameString.packetId = -1;
+        GlobalStatics_0.packetId = -1;
         return true;
       }
 
-      if ((GameString.packetId == 86)) {
+      if ((GlobalStatics_0.packetId == 86)) {
         DummyClass10.destroyGame((byte) 46);
-        GameString.packetId = -1;
+        GlobalStatics_0.packetId = -1;
         return false;
       }
-      if (GameString.packetId == 116) {
+      if (GlobalStatics_0.packetId == 116) {
         var20 = SpotAnimationConfig.gameBuffer.readUnsignedByte();
         if ((SpotAnimationConfig.gameBuffer.readUnsignedByte() == 0)) {
           TextureSampler29.aClass133Array3393[var20] = new SomethingPacket116();
@@ -1783,11 +1790,11 @@ public final class DummyClass18 {
               new SomethingPacket116(SpotAnimationConfig.gameBuffer);
         }
 
-        GameString.packetId = -1;
+        GlobalStatics_0.packetId = -1;
         BufferData.anInt1642 = TextureSampler23.anInt3213;
         return true;
       }
-      if ((GameString.packetId == 73)) {
+      if ((GlobalStatics_0.packetId == 73)) {
         var20 = SpotAnimationConfig.gameBuffer.readUnsignedShortAdd();
         var3 = SpotAnimationConfig.gameBuffer.method782(-105);
         if ((var20 == 65535)) {
@@ -1799,17 +1806,17 @@ public final class DummyClass18 {
           TextureSampler19.method256(-1, 2, var3, (byte) -113, var20);
         }
 
-        GameString.packetId = -1;
+        GlobalStatics_0.packetId = -1;
         return true;
       }
 
-      if ((GameString.packetId == 162)) {
+      if ((GlobalStatics_0.packetId == 162)) {
         DummyClass37.parseSceneRebuild(false);
-        GameString.packetId = -1;
+        GlobalStatics_0.packetId = -1;
         return true;
       }
 
-      if (GameString.packetId == 165) {
+      if (GlobalStatics_0.packetId == 165) {
         var20 = SpotAnimationConfig.gameBuffer.readUnsignedShortLE();
         var3 = SpotAnimationConfig.gameBuffer.readUnsignedShortLE();
         if (var3 == '\uffff') {
@@ -1843,17 +1850,17 @@ public final class DummyClass18 {
           }
         }
 
-        GameString.packetId = -1;
+        GlobalStatics_0.packetId = -1;
         return true;
       }
 
-      if (GameString.packetId == 197) {
+      if (GlobalStatics_0.packetId == 197) {
         HintMarker.anInt1357 = SpotAnimationConfig.gameBuffer.readUnsignedByte();
         DummyClass31.anInt1472 = TextureSampler23.anInt3213;
-        GameString.packetId = -1;
+        GlobalStatics_0.packetId = -1;
         return true;
       }
-      if (GameString.packetId == 196) {
+      if (GlobalStatics_0.packetId == 196) {
         var2 = SpotAnimationConfig.gameBuffer.readLong();
         var21 = SpotAnimationConfig.gameBuffer.readUnsignedShort();
         byte var28 = SpotAnimationConfig.gameBuffer.readByte();
@@ -1861,7 +1868,7 @@ public final class DummyClass18 {
 
         if (var31) {
           if ((SubNode.anInt2572 == 0)) {
-            GameString.packetId = -1;
+            GlobalStatics_0.packetId = -1;
             return true;
           }
 
@@ -1890,7 +1897,7 @@ public final class DummyClass18 {
           var41 = SpotAnimationConfig.gameBuffer.readString();
           ClanChatUser var40 = new ClanChatUser();
           var40.key = var2;
-          var40.name = FileCache.stringFromBase37(-29664, var40.key);
+          var40.name = GameStringStatics.stringFromBase37(-29664, var40.key);
           var40.aByte2472 = var28;
           var40.aClass94_2473 = var41;
           var40.anInt2478 = var21;
@@ -1908,7 +1915,7 @@ public final class DummyClass18 {
               }
 
               DummyClass10.anInt2087 = TextureSampler23.anInt3213;
-              GameString.packetId = -1;
+              GlobalStatics_0.packetId = -1;
               return true;
             }
 
@@ -1918,7 +1925,7 @@ public final class DummyClass18 {
           }
 
           if (ClientScript.aClass3_Sub19Array3694.length <= SubNode.anInt2572) {
-            GameString.packetId = -1;
+            GlobalStatics_0.packetId = -1;
             return true;
           }
 
@@ -1939,12 +1946,12 @@ public final class DummyClass18 {
           ++SubNode.anInt2572;
         }
 
-        GameString.packetId = -1;
+        GlobalStatics_0.packetId = -1;
         DummyClass10.anInt2087 = TextureSampler23.anInt3213;
         return true;
       }
 
-      if (GameString.packetId == 50) {
+      if (GlobalStatics_0.packetId == 50) {
         var20 = SpotAnimationConfig.gameBuffer.readInt();
         var3 = SpotAnimationConfig.gameBuffer.readInt((byte) -79);
         var21 = SpotAnimationConfig.gameBuffer.readShortLEAdd();
@@ -1966,7 +1973,7 @@ public final class DummyClass18 {
           } else {
             if (var21 == -1) {
               var34.anInt202 = 0;
-              GameString.packetId = -1;
+              GlobalStatics_0.packetId = -1;
               return true;
             }
 
@@ -1980,11 +1987,11 @@ public final class DummyClass18 {
           }
         }
 
-        GameString.packetId = -1;
+        GlobalStatics_0.packetId = -1;
         return true;
       }
 
-      if ((GameString.packetId == 105)) {
+      if ((GlobalStatics_0.packetId == 105)) {
         var20 = SpotAnimationConfig.gameBuffer.readInt();
         var3 = SpotAnimationConfig.gameBuffer.readUnsignedShort();
         if ((var20 < 69999)) {
@@ -2029,37 +2036,37 @@ public final class DummyClass18 {
         GameBuffer.method819(false);
         SomethingQuickChat.anIntArray3565[ClientScript.bitAnd(FileTable.anInt944++, 31)] =
           ClientScript.bitAnd(32767, var3);
-        GameString.packetId = -1;
+        GlobalStatics_0.packetId = -1;
         return true;
       }
 
       // Set settings
-      if ((GameString.packetId == 142)) {
-        StringNode.setSettings(0, SpotAnimationConfig.gameBuffer.readString());
-        GameString.packetId = -1;
+      if ((GlobalStatics_0.packetId == 142)) {
+        GlobalStatics_0.setSettings(0, SpotAnimationConfig.gameBuffer.readString());
+        GlobalStatics_0.packetId = -1;
         return true;
       }
 
       // Set block coordinates
-      if (GameString.packetId == 26) {
+      if (GlobalStatics_0.packetId == 26) {
         DummyClass45.spawnSceneX = SpotAnimationConfig.gameBuffer.method786(true);
         DummyClass56.spawnSceneY = SpotAnimationConfig.gameBuffer.readUnsignedByte();
-        GameString.packetId = -1;
+        GlobalStatics_0.packetId = -1;
         return true;
       }
 
-      if (GameString.packetId == 4) {
+      if (GlobalStatics_0.packetId == 4) {
         var20 = SpotAnimationConfig.gameBuffer.readShortLEAdd();
         if (var20 == '\uffff') {
           var20 = -1;
         }
 
-        BlockConfig.method1427(true, var20);
-        GameString.packetId = -1;
+        GlobalStatics_0.method1427(true, var20);
+        GlobalStatics_0.packetId = -1;
         return true;
       }
 
-      if (GameString.packetId == 208) {
+      if (GlobalStatics_0.packetId == 208) {
         var20 = SpotAnimationConfig.gameBuffer.method755();
         var3 = SpotAnimationConfig.gameBuffer.readUnsignedShortLE();
         if (var3 == '\uffff') {
@@ -2067,13 +2074,13 @@ public final class DummyClass18 {
         }
 
         DummyClass10.method2266(var20, var3, (byte) -1);
-        GameString.packetId = -1;
+        GlobalStatics_0.packetId = -1;
         return true;
       }
 
       GZipDecompressor.reportError(
-        "T1 - " + GameString.packetId + "," + EnumStringFetcher.lastPacketId1 + ","
-          + IdentityKit.lastPacketId2 + " - " + HashTable.packetLength, null, (byte) 117);
+        "T1 - " + GlobalStatics_0.packetId + "," + EnumStringFetcher.lastPacketId1 + ","
+          + IdentityKit.lastPacketId2 + " - " + GlobalStatics_0.packetLength, null, (byte) 117);
       DummyClass10.destroyGame((byte) 46);
       return true;
   }
@@ -2100,7 +2107,7 @@ public final class DummyClass18 {
           var1 = TextureSampler20.anInt3156;
         }
 
-        int var2 = HashTable.anInt1709;
+        int var2 = GlobalStatics_0.anInt1709;
         if (((TextureSampler20.anInt3156 + DummyClass18.aClass11_88.anInt168) < (var1
           + DummyClass42.aClass11_886.anInt168))) {
           var1 =

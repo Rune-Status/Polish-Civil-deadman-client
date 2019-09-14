@@ -1,5 +1,9 @@
 package com.jagex.runescape;
 
+import com.jagex.runescape.common.GameString;
+import com.jagex.runescape.common.GameStringStatics;
+import com.jagex.runescape.node.Node;
+
 public final class AreaSoundEffect extends Node {
 
   public static int anInt2309 = 128;
@@ -8,11 +12,11 @@ public final class AreaSoundEffect extends Node {
   public static int anInt2317;
   public static SignLinkRequest socketRequest;
   public static int[][] landscapeEncryptionKeys;
-  public static GameString aClass94_2323 = GameString.create("<img=0>");
+  public static GameString aClass94_2323 = GameStringStatics.create("<img=0>");
   public static int anInt2330;
-  public static GameString aClass94_2331 = GameString.create("");
+  public static GameString aClass94_2331 = GameStringStatics.create("");
   public static int windowWidth;
-  public static GameString aClass94_2335 = GameString.create("(Y");
+  public static GameString aClass94_2335 = GameStringStatics.create("(Y");
   public int anInt2307;
   public int anInt2308;
   public int anInt2310;

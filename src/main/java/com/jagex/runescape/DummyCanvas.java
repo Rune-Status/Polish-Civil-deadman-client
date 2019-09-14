@@ -1,5 +1,7 @@
 package com.jagex.runescape;
 
+import com.jagex.runescape.common.GameString;
+import com.jagex.runescape.common.GameStringStatics;
 import java.awt.Canvas;
 import java.awt.event.FocusEvent;
 import java.awt.event.FocusListener;
@@ -14,12 +16,12 @@ public final class DummyCanvas extends Canvas implements FocusListener {
   public static int anInt19;
   public static int[][] anIntArrayArray20 = new int[5][5000];
   public static ObjectCache aClass93_21 = new ObjectCache(64);
-  public static GameString aClass94_22 = GameString.create("leuchten3:");
+  public static GameString aClass94_22 = GameStringStatics.create("leuchten3:");
   public static int anInt23;
   public static GameString aClass94_24 =
-    GameString.create("Chargement de RuneScape en cours )2 veuillez patienter)3)3)3");
+    GameStringStatics.create("Chargement de RuneScape en cours )2 veuillez patienter)3)3)3");
   public static int anInt25 = 1;
-  public static GameString aClass94_26 = GameString.create("n");
+  public static GameString aClass94_26 = GameStringStatics.create("n");
 
   @Override
   public void focusGained(FocusEvent e) {

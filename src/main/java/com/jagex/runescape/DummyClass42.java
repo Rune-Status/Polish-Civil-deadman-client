@@ -1,18 +1,20 @@
 package com.jagex.runescape;
 
+import com.jagex.runescape.common.GameString;
+import com.jagex.runescape.common.GameStringStatics;
 import java.util.Arrays;
 
 public final class DummyClass42 {
 
-  private static GameString aClass94_894 = GameString.create("Walk here");
+  private static GameString aClass94_894 = GameStringStatics.create("Walk here");
   public static MonoChromaticImageBuffer aClass3_Sub26_884 = new MonoChromaticImageBuffer(0, 0);
   public static Cache aClass47_885 = new Cache(128);
   public static Widget aClass11_886;
   public static int[] anIntArray887 = new int[2048];
-  public static GameString aClass94_888 = GameString.create("<col=ffff00>");
+  public static GameString aClass94_888 = GameStringStatics.create("<col=ffff00>");
   public static int anInt889;
   public static DisplayMode[] aClass106Array890;
-  public static GameString aClass94_892 = GameString.create(" )2> <col=ffffff>");
+  public static GameString aClass94_892 = GameStringStatics.create(" )2> <col=ffffff>");
   public static int anInt893;
   public static GameString DEFAULT_WALK_TOOLTIP = DummyClass42.aClass94_894;
 

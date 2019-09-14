@@ -1,10 +1,13 @@
 package com.jagex.runescape;
 
 import com.jagex.runescape.buffer.Buffer;
+import com.jagex.runescape.common.GameString;
+import com.jagex.runescape.common.GameStringStatics;
+import com.jagex.runescape.common.HashTable;
 
 public final class TextureSampler6 extends AbstractTextureSampler {
 
-  public static GameString aClass94_3042 = GameString.create("<col=ff9040>");
+  public static GameString aClass94_3042 = GameStringStatics.create("<col=ff9040>");
   public static float aFloat3044;
   public static int[] anIntArray3045;
   private int anInt3043;

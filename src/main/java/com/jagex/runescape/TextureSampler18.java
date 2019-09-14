@@ -1,18 +1,20 @@
 package com.jagex.runescape;
 
+import com.jagex.runescape.common.GameString;
+import com.jagex.runescape.common.GameStringStatics;
 import com.jagex.runescape.opengl.SomethingLight;
 import java.awt.Component;
 
 public final class TextureSampler18 extends TextureSampler39 {
 
-  private static GameString aClass94_4030 = GameString.create("Allocating memory");
+  private static GameString aClass94_4030 = GameStringStatics.create("Allocating memory");
   public static AnimationSomething[] aClass3_Sub28_Sub5Array4031 = new AnimationSomething[14];
   public static int anInt4032;
   public static int build;
   public static int anInt4034 = -8 + (int) (17.0D * Math.random());
   public static int[] anIntArray4035 = {1, 1, 0, 0, 0, 8, 0, 0, 8};
   public static GameString aClass94_4036 =
-    GameString.create("Connect-B au serveur de mise -9 jour");
+    GameStringStatics.create("Connect-B au serveur de mise -9 jour");
   public static int anInt4037;
   public static short aShort4038 = 32767;
   public static int anInt4039;

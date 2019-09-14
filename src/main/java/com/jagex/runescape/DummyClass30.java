@@ -1,10 +1,12 @@
 package com.jagex.runescape;
 
 import com.jagex.runescape.buffer.Buffer;
+import com.jagex.runescape.common.GameString;
+import com.jagex.runescape.common.GameStringStatics;
 
 public final class DummyClass30 {
 
-  private static GameString aClass94_458 = GameString.create("Opened title screen");
+  private static GameString aClass94_458 = GameStringStatics.create("Opened title screen");
   public static int anInt452;
   public static int anInt453;
   public static int viewWidth;
@@ -58,9 +60,9 @@ public final class DummyClass30 {
       var1.writeShort(AbstractTextureSampler.anInt2378);
       var1.writeShort(TextureSampler21.anInt3071);
       var1.writeByte(DummyClass0.method1757());
-      var1.writeInt(GameString.anInt2148);
+      var1.writeInt(GlobalStatics_0.anInt2148);
       var1.writeByte(SubNode.anInt2577);
-      var1.writeByte(GameString.safemode ? 1 : 0);
+      var1.writeByte(GlobalStatics_0.safemode ? 1 : 0);
       var1.writeByte(!AudioWorker.aBoolean346 ? 0 : 1);
       var1.writeByte(TriChromaticImageBuffer.anInt2488);
       var1.writeByte(FileCacheRequester.aBoolean1080 ? 1 : 0);

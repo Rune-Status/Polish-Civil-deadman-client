@@ -1,18 +1,21 @@
 package com.jagex.runescape;
 
+import com.jagex.runescape.common.GameString;
+import com.jagex.runescape.common.GameStringStatics;
+
 public final class EnumStringFetcher implements Interface4 {
 
   public static FileUnpacker animationFrames;
   public static int anInt2161 = -1;
   public static int anInt2162;
-  public static GameString aClass94_2163 = GameString.create("Gegenstand f-Ur Mitglieder");
-  public static GameString aClass94_2164 = GameString.create("hint_mapedge");
+  public static GameString aClass94_2163 = GameStringStatics.create("Gegenstand f-Ur Mitglieder");
+  public static GameString aClass94_2164 = GameStringStatics.create("hint_mapedge");
   public static int anInt2165;
   public static int lastPacketId1;
   public static short[] aShortArray2167 = {
     (short) 30, (short) 6, (short) 31, (short) 29, (short) 10, (short) 44, (short) 37, (short) 57
   };
-  public static GameString aClass94_2168 = GameString.create("<br>");
+  public static GameString aClass94_2168 = GameStringStatics.create("<br>");
 
   public GameString method20(int var1, int[] enums, int var3, long key) {
     if (var1 == 0) {

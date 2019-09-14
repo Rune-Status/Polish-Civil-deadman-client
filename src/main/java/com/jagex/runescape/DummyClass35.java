@@ -2,18 +2,20 @@ package com.jagex.runescape;
 
 import com.jagex.runescape.buffer.Buffer;
 import com.jagex.runescape.buffer.BufferStatics;
+import com.jagex.runescape.common.GameString;
+import com.jagex.runescape.common.GameStringStatics;
 
 public class DummyClass35 {
 
-  private static GameString aClass94_658 = GameString.create("Please remove ");
+  private static GameString aClass94_658 = GameStringStatics.create("Please remove ");
   public static GameString aClass94_659 =
-    GameString.create("V-Brification des mises -9 jour )2 ");
+    GameStringStatics.create("V-Brification des mises -9 jour )2 ");
   public static int anInt660;
   public static boolean aBoolean661 = true;
   public static int[][] anIntArrayArray663;
   public static int[] anIntArray664 = new int[14];
   public static SignLink signLink;
-  public static GameString aClass94_667 = GameString.create("ondulation2:");
+  public static GameString aClass94_667 = GameStringStatics.create("ondulation2:");
   public static AbstractMouseWheel mouseWheel;
   public static GameString aClass94_662 = DummyClass35.aClass94_658;
   public static GameString aClass94_666 = DummyClass35.aClass94_658;

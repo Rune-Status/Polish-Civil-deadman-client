@@ -1,6 +1,8 @@
 package com.jagex.runescape;
 
 import com.jagex.runescape.buffer.Buffer;
+import com.jagex.runescape.common.GameString;
+import com.jagex.runescape.node.Node;
 import com.jagex.runescape.opengl.SomethingGl0;
 
 public final class Deque {
@@ -161,8 +163,8 @@ public final class Deque {
   public static void method1214(int var0, int var1, int var2, int var3, int var4) {
     AreaSoundEffect var5;
       for (
-        var5 = (AreaSoundEffect) Node.aClass61_78.getFirst();
-        var5 != null; var5 = (AreaSoundEffect) Node.aClass61_78.getNext()) {
+        var5 = (AreaSoundEffect) GlobalStatics_0.aClass61_78.getFirst();
+        var5 != null; var5 = (AreaSoundEffect) GlobalStatics_0.aClass61_78.getNext()) {
         Structure.method606(var1, var5, var3, var0, var2, 126);
       }
 

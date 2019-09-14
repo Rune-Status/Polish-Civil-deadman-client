@@ -1,6 +1,8 @@
 package com.jagex.runescape;
 
 import com.jagex.runescape.buffer.Buffer;
+import com.jagex.runescape.common.HashTable;
+import com.jagex.runescape.node.Node;
 
 public final class MidiFile extends Node {
 

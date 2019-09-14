@@ -1,6 +1,8 @@
 package com.jagex.runescape;
 
 import com.jagex.runescape.buffer.BufferStatics;
+import com.jagex.runescape.common.GameString;
+import com.jagex.runescape.common.GameStringStatics;
 import com.jagex.runescape.opengl.DummyClass16;
 import com.jagex.runescape.opengl.GlModel;
 import com.jagex.runescape.opengl.GlRenderer;
@@ -8,11 +10,11 @@ import java.util.Arrays;
 
 public final class GameObject extends SceneNode {
 
-  private static GameString aClass94_2731 = GameString.create("wave:");
-  private static GameString aClass94_2739 = GameString.create("Drop");
-  public static GameString aClass94_2723 = GameString.create("<col=c0ff00>");
+  private static GameString aClass94_2731 = GameStringStatics.create("wave:");
+  private static GameString aClass94_2739 = GameStringStatics.create("Drop");
+  public static GameString aClass94_2723 = GameStringStatics.create("<col=c0ff00>");
   public static FileUnpacker widgets;
-  public static GameString aClass94_2735 = GameString.create(")4");
+  public static GameString aClass94_2735 = GameStringStatics.create(")4");
   public static int anInt2737;
   public static volatile int anInt2743;
   public static int plane;
@@ -574,7 +576,7 @@ public final class GameObject extends SceneNode {
           GameObject.OPTION_DROP = null;
         }
 
-        GameString.stereo = var3;
+        GlobalStatics_0.stereo = var3;
         DummyClass60.sampleRate = var2;
       } else {
         throw new IllegalArgumentException();

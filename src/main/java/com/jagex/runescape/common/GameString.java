@@ -1,56 +1,16 @@
-package com.jagex.runescape;
+package com.jagex.runescape.common;
 
-import com.jagex.runescape.opengl.GlDirectColorSprite;
-import com.jagex.runescape.opengl.GlRenderer;
 import java.awt.FontMetrics;
 import java.awt.Graphics;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.nio.charset.StandardCharsets;
 
-public final class GameString implements UnusedInterface1 {
+public final class GameString {
 
-  private static GameString aClass94_2158 =
-      GameString.create("Allocated memory");
-  public static int anInt2145;
-  public static boolean safemode;
-  public static int packetId;
-  public static int anInt2148;
-  public static boolean stereo;
-  public static boolean aBoolean2154;
-  public static int[] anIntArray2157 = new int[50];
-  public static GameString aClass94_2149 = GameString.create(
-      "Bitte warten Sie )2 es wird versucht)1 die Verbindung wiederherzustellen)3");
-  public static GameString aClass94_2155 = GameString.create(":allyreq:");
-  public static GameString aClass94_2151 = GameString.aClass94_2158;
   public byte[] bytes;
   public int length;
   private boolean immutable = true;
-
-  public static GameString create(String string) {
-    byte[] bytes = string.getBytes();
-    int len = bytes.length;
-    GameString str = new GameString();
-    int i = 0;
-    str.bytes = new byte[len];
-
-    while (len > i) {
-      int ch = bytes[i++] & 255;
-      // Special case for symbols: ()*+,-
-      if (ch >= 40 && ch <= 45) {
-        if (i >= len) {
-          break;
-        }
-        // 0-9
-        int offset = bytes[i++] & 255;
-        str.bytes[str.length++] = (byte) (offset - 48 + 43 * (ch - 40));
-      } else if ((ch != 0)) {
-        str.bytes[str.length++] = (byte) ch;
-      }
-    }
-    str.pack();
-    return str.cache();
-  }
 
   public URL method1527(boolean var1) {
     if (var1) {
@@ -301,10 +261,6 @@ public final class GameString implements UnusedInterface1 {
 
       ArrayUtils.copy(var2.bytes, var3, this.bytes, this.length,
           -var3 + var4);
-      if (var1 != 1) {
-        GameString.aClass94_2155 = null;
-      }
-
       this.length += var4 - var3;
       return this;
     } else {
@@ -365,10 +321,6 @@ public final class GameString implements UnusedInterface1 {
   }
 
   public int method1546(byte var1, GameString var2) {
-    if (var1 >= -44) {
-      GameString.stereo = true;
-    }
-
     int var3 = 0;
     int var4 = 0;
     int var6 = var2.length;
@@ -394,7 +346,7 @@ public final class GameString implements UnusedInterface1 {
         var3 = 101;
       }
 
-      if (FileRequester.method2103(var3, -116)) {
+      if (GameStringStatics.method2103(var3, -116)) {
         ++var7;
       } else {
         --var5;
@@ -415,19 +367,19 @@ public final class GameString implements UnusedInterface1 {
         var4 = 101;
       }
 
-      if (FileRequester.method2103(var4, -86)) {
+      if (GameStringStatics.method2103(var4, -86)) {
         ++var8;
       } else {
         --var6;
       }
 
-      if ((AbstractImageProducer.anIntArray2004[var3]
-          < AbstractImageProducer.anIntArray2004[var4])) {
+      if ((GameStringStatics.anIntArray2004[var3]
+          < GameStringStatics.anIntArray2004[var4])) {
         return -1;
       }
 
-      if ((AbstractImageProducer.anIntArray2004[var4]
-          < AbstractImageProducer.anIntArray2004[var3])) {
+      if ((GameStringStatics.anIntArray2004[var4]
+          < GameStringStatics.anIntArray2004[var3])) {
         return 1;
       }
     }
@@ -440,10 +392,6 @@ public final class GameString implements UnusedInterface1 {
       GameString var3 = new GameString();
       var3.bytes = new byte[1 + this.length];
       var3.length = this.length + 1;
-      if (var1) {
-        GameString.aClass94_2155 = null;
-      }
-
       ArrayUtils.copy(this.bytes, 0, var3.bytes, 0, this.length);
       var3.bytes[this.length] = (byte) var2;
       return var3;
@@ -504,10 +452,6 @@ public final class GameString implements UnusedInterface1 {
 
       for (var3 = this.length; (var3 < var1); ++var3) {
         this.bytes[var3] = 32;
-      }
-
-      if (var2) {
-        GameString.anIntArray2157 = null;
       }
 
       this.length = var1;
@@ -600,7 +544,7 @@ public final class GameString implements UnusedInterface1 {
       int var7 = this.indexOf(var3, var6, -1);
       if (var7 < 0) {
         var6 = 0;
-        GameString var10 = Cache.createString(var4);
+        GameString var10 = GameStringStatics.createString(var4);
 
         while (true) {
           int var8 = this.indexOf(var3, var6, -1);
@@ -649,10 +593,6 @@ public final class GameString implements UnusedInterface1 {
   private boolean method1561(int var1, boolean var2) {
     if ((var1 < 1) || var1 > 36) {
       var1 = 10;
-    }
-
-    if (!var2) {
-      GameString.safemode = false;
     }
 
     boolean var4 = false;
@@ -743,10 +683,6 @@ public final class GameString implements UnusedInterface1 {
   }
 
   public GameString method1564(int var1) {
-    if (var1 != 1) {
-      GameString.method1535(null, null, 23, 68, 126, false, false);
-    }
-
     int var2;
     for (var2 = 0; var2 < this.length &&
         (this.bytes[var2] >= 0 && this.bytes[var2] <= 32 ||
@@ -784,9 +720,6 @@ public final class GameString implements UnusedInterface1 {
     byte var5 = (byte) var1;
     var6.length = this.length;
     var6.bytes = new byte[this.length];
-    if (var2 < 3) {
-      GameString.safemode = true;
-    }
 
     for (int var7 = 0; this.length > var7; ++var7) {
       byte var8 = this.bytes[var7];
@@ -903,34 +836,30 @@ public final class GameString implements UnusedInterface1 {
     Class stringClass = GameString.class;
     synchronized (stringClass) {
       StringNode var5;
-      if (BlockConfig.aClass130_1194 != null) {
-        for (var5 = (StringNode) BlockConfig.aClass130_1194.get(var2);
+      if (GameStringStatics.aClass130_1194 != null) {
+        for (var5 = (StringNode) GameStringStatics.aClass130_1194.get(var2);
             var5 != null;
             var5 = (StringNode)
-                BlockConfig.aClass130_1194.getLastFetchedNode()) {
+                GameStringStatics.aClass130_1194.getLastFetchedNode()) {
           if (this.method1528((byte) -42, var5.aClass94_2586)) {
             return var5.aClass94_2586;
           }
         }
       } else {
-        BlockConfig.aClass130_1194 = new HashTable(4096);
+        GameStringStatics.aClass130_1194 = new HashTable(4096);
       }
 
       var5 = new StringNode();
 
       var5.aClass94_2586 = this;
       this.immutable = false;
-      BlockConfig.aClass130_1194.put(var2, var5);
+      GameStringStatics.aClass130_1194.put(var2, var5);
     }
 
     return this;
   }
 
   public GameString method1572(int var1, byte var2) {
-    if (var2 <= 110) {
-      GameString.stereo = true;
-    }
-
     if (var1 > 0 && var1 <= 255) {
       if (this.immutable) {
         if (this.length == this.bytes.length) {
@@ -960,9 +889,6 @@ public final class GameString implements UnusedInterface1 {
 
   public int getDbj2Hash(boolean var1) {
     int var2 = 0;
-    if (var1) {
-      GameString.anIntArray2157 = null;
-    }
 
     for (int var3 = 0; var3 < this.length; ++var3) {
       var2 = (255 & this.bytes[var3]) - var2 + (var2 << 5);
@@ -1026,327 +952,16 @@ public final class GameString implements UnusedInterface1 {
   }
 
   public GameString method1579(int var1) {
-    GameString var2 = FileCache.stringFromBase37(-29664, this.toBase37());
+    GameString var2 = GameStringStatics
+        .stringFromBase37(-29664, this.toBase37());
     return var1 >= -4 ? null
-        : (var2 == null ? DummyClass21.aClass94_1760 : var2);
+        : (var2 == null ? GameStringStatics.aClass94_1760 : var2);
   }
 
   public int method1580(boolean var1, byte[] var2, int var3, int var4,
       int var5) {
     ArrayUtils.copy(this.bytes, var4, var2, var3, -var4 + var5);
-    if (!var1) {
-      GameString.method1570(42, (byte) -117, true, -47, false, 3, -26, true);
-    }
-
     return -var4 + var5;
   }
 
-  public static boolean method1529(int var0, int var1, int var2, int var3,
-      int var4, int var5, int var6, boolean var7) {
-    long var8 = SomethingAudio.method2174(var6, var1 + var5, var3 + var0);
-    int var10;
-    int var11;
-    int var12;
-    GameObjectConfig var13;
-    int var14;
-    int[] var15;
-    int var16;
-    if ((var8 != 0L)) {
-      var10 = 3 & (int) var8 >> 20;
-      var11 = (508650 & (int) var8) >> 14;
-      var12 = Integer.MAX_VALUE & (int) (var8 >>> 32);
-      var13 = DummyClass11.method2207(4, var12);
-      if ((var13.anInt1516 == -1)) {
-        var14 = var2;
-        if ((var8 > 0L)) {
-          var14 = var4;
-        }
-
-        var15 = DummyClass47.anIntArray1100;
-        var16 = 4 * (-(var3 * 512) + '\uce00') + var1 * 4 + 24624;
-        if (var11 == 0 || var11 == 2) {
-          if ((var10 == 0)) {
-            var15[var16] = var14;
-            var15[512 + var16] = var14;
-            var15[var16 + 1024] = var14;
-            var15[1536 + var16] = var14;
-          } else if ((var10 != 1)) {
-            if ((var10 == 2)) {
-              var15[var16 + 3] = var14;
-              var15[var16 + 3 + 512] = var14;
-              var15[var16 + 3 + 1024] = var14;
-              var15[var16 + 3 + 1536] = var14;
-            } else {
-              if (var10 == 3) {
-                var15[var16 + 1536] = var14;
-                var15[1536 + var16 + 1] = var14;
-                var15[var16 + 1538] = var14;
-                var15[3 + var16 + 1536] = var14;
-              }
-            }
-          } else {
-            var15[var16] = var14;
-            var15[1 + var16] = var14;
-            var15[var16 + 2] = var14;
-            var15[var16 + 3] = var14;
-          }
-        }
-
-        if (var11 == 3) {
-          if (var10 == 0) {
-            var15[var16] = var14;
-          } else if (var10 == 1) {
-            var15[var16 + 3] = var14;
-          } else if ((var10 == 2)) {
-            var15[var16 + 3 + 1536] = var14;
-          } else if ((var10 == 3)) {
-            var15[var16 + 1536] = var14;
-          }
-        }
-
-        if ((var11 == 2)) {
-          if ((var10 == 3)) {
-            var15[var16] = var14;
-            var15[var16 + 512] = var14;
-            var15[var16 + 1024] = var14;
-            var15[1536 + var16] = var14;
-          } else {
-            if ((var10 == 0)) {
-              var15[var16] = var14;
-              var15[1 + var16] = var14;
-              var15[2 + var16] = var14;
-              var15[3 + var16] = var14;
-            } else {
-              if ((var10 == 1)) {
-                var15[var16 + 3] = var14;
-                var15[512 + 3 + var16] = var14;
-                var15[3 + (var16 + 1024)] = var14;
-                var15[1536 + var16 + 3] = var14;
-              } else {
-                if (var10 == 2) {
-                  var15[1536 + var16] = var14;
-                  var15[var16 + 1536 + 1] = var14;
-                  var15[1536 + var16 + 2] = var14;
-                  var15[var16 + 1539] = var14;
-                }
-              }
-            }
-          }
-        }
-      } else {
-        if (!AudioWorker.method888(var1, var13, false, var0, var5, var3,
-            var10)) {
-          return false;
-        }
-      }
-    }
-
-    var8 = AnimationSomething.method557(var6, var1 + var5, var0 + var3);
-    if (var8 != 0L) {
-      var10 = (int) var8 >> 20 & 3;
-      var11 = ((int) var8 & 520964) >> 14;
-      var12 = (int) (var8 >>> 32) & Integer.MAX_VALUE;
-      var13 = DummyClass11.method2207(4, var12);
-      if ((var13.anInt1516 != -1)) {
-        if (!AudioWorker.method888(var1, var13, false, var0, var5, var3,
-            var10)) {
-          return false;
-        }
-      } else if (var11 == 9) {
-        var14 = 15658734;
-        if ((var8 > 0L)) {
-          var14 = 15597568;
-        }
-
-        var16 = var1 * 4 + (24624 + (2048 * (103 - var3)));
-        var15 = DummyClass47.anIntArray1100;
-        if ((var10 != 0) && (var10 != 2)) {
-          var15[var16] = var14;
-          var15[var16 + 512 + 1] = var14;
-          var15[var16 + 1024 + 2] = var14;
-          var15[1536 + var16 + 3] = var14;
-        } else {
-          var15[1536 + var16] = var14;
-          var15[var16 + 1025] = var14;
-          var15[var16 + 512 + 2] = var14;
-          var15[var16 + 3] = var14;
-        }
-      }
-    }
-
-    var8 = SceneGraphTile.method104(var6, var1 + var5, var3 + var0);
-    if (var8 != 0L) {
-      var10 = (int) var8 >> 20 & 3;
-      var11 = (int) (var8 >>> 32) & Integer.MAX_VALUE;
-      GameObjectConfig var18 = DummyClass11.method2207(4, var11);
-      if ((var18.anInt1516 != -1) &&
-          !AudioWorker.method888(var1, var18, !var7, var0, var5, var3,
-              var10)) {
-        return false;
-      }
-    }
-
-    if (!var7) {
-      GameString.stereo = true;
-    }
-
-    return true;
-  }
-
-  public static int method1535(GameWorld var0, GameWorld var1, int var2,
-      int var3, int var4, boolean var5, boolean var6) {
-    int var7 = DummyClass12.method2201(var1, var4, var2 - 5638, var0, var6);
-    if (var7 == 0) {
-      if (var2 != 5730) {
-        return -76;
-      } else if (var3 != -1) {
-        int var8 =
-            DummyClass12.method2201(var1, var3, var2 ^ 5651, var0, var5);
-        return !var5 ? var8 : -var8;
-      } else {
-        return 0;
-      }
-    } else {
-      return !var6 ? var7 : -var7;
-    }
-  }
-
-  public static SoftwareDirectColorSprite method1537(FileUnpacker var0,
-      int var1,
-      boolean var2) {
-    if (GroundItem.loadSprites(var0, var1)) {
-      if (var2) {
-        GameString.createSprite(-39, true, -93, null);
-      }
-
-      return DummyClass26.method1722(-93);
-    } else {
-      return null;
-    }
-  }
-
-  public static SoftwareIndexedColorSprite createSprite(int var0, boolean var1,
-      int var2,
-      FileUnpacker var3) {
-    if (!var1) {
-      GameString.method1535(null, null, -64, -40, 23, false, false);
-    }
-
-    return SomethingTexture4.loadSprites(var3, var0, var2, -30901)
-        ? DummyClass49.method1364((byte) 82)
-        : null;
-  }
-
-  public static void method1541(int var0) {
-    GameString.aClass94_2151 = null;
-
-    GameString.anIntArray2157 = null;
-    GameString.aClass94_2155 = null;
-    GameString.aClass94_2149 = null;
-    GameString.aClass94_2158 = null;
-  }
-
-  public static AbstractDirectColorSprite method1570(int var0, byte var1,
-      boolean var2, int var3,
-      boolean var4, int var5,
-      int var6, boolean var7) {
-    ItemConfig var8 = DummyClass35.getItemConfig(var3, (byte) 106);
-    if ((var6 > 1) && var8.anIntArray804 != null) {
-      int var9 = -1;
-
-      for (int var10 = 0; (var10 < 10); ++var10) {
-        if ((var6 >= var8.anIntArray766[var10]) &&
-            var8.anIntArray766[var10] != 0) {
-          var9 = var8.anIntArray804[var10];
-        }
-      }
-
-      if ((var9 != -1)) {
-        var8 = DummyClass35.getItemConfig(var9, (byte) 84);
-      }
-    }
-
-    SoftwareModel var21 = var8.method1120(18206);
-    if (var21 == null) {
-      return null;
-    } else {
-      SoftwareDirectColorSprite var22 = null;
-      if ((var8.anInt791 == -1)) {
-        if (var8.anInt762 != -1) {
-          var22 = (SoftwareDirectColorSprite) GameString.method1570(
-              var0, (byte) -107, true, var8.anInt795, false, var5, var6,
-              false);
-          if (var22 == null) {
-            return null;
-          }
-        }
-      } else {
-        var22 = (SoftwareDirectColorSprite) GameString.method1570(
-            0, (byte) 116, true, var8.anInt789, false, 1, 10, true);
-        if (var22 == null) {
-          return null;
-        }
-      }
-
-      int[] var11 = DummyClass47.anIntArray1100;
-      int var12 = DummyClass47.anInt1092;
-      int var13 = DummyClass47.anInt1094;
-      int[] var14 = new int[4];
-      DummyClass47.method1325(var14);
-      SoftwareDirectColorSprite var15 = new SoftwareDirectColorSprite(36, 32);
-      DummyClass47.method1319(var15.pixels, 36, 32);
-      DummyClass40.method1134();
-      DummyClass40.method1145(16, 16);
-      int var16 = var8.anInt810;
-      DummyClass40.aBoolean843 = false;
-      if (var7) {
-        var16 = (int) (var16 * 1.5D);
-      } else if (var5 == 2) {
-        var16 = (int) (1.04D * var16);
-      }
-
-      int var18 = DummyClass40.COSINE_TABLE[var8.rotationX] * var16 >> 16;
-      int var17 = DummyClass40.SINE_TABLE[var8.rotationX] * var16 >> 16;
-      var21.draw(0, var8.rotationY, var8.rotationZ, var8.rotationX,
-          var8.translateX,
-          var17 - (var21.getMinimumY() / 2 - var8.translateOther),
-          var8.translateOther + var18, -1L);
-      if (var5 >= 1) {
-        var15.method657(1);
-        if ((var5 >= 2)) {
-          var15.method657(16777215);
-        }
-
-        DummyClass47.method1319(var15.pixels, 36, 32);
-      }
-
-      if ((var0 != 0)) {
-        var15.method668(var0);
-      }
-
-      int var19 = 73 / ((-56 - var1) / 47);
-      if ((var8.anInt791 != -1)) {
-        assert var22 != null;
-        var22.method643(0, 0);
-      } else if (var8.anInt762 != -1) {
-        assert var22 != null;
-        DummyClass47.method1319(var22.pixels, 36, 32);
-        var15.method643(0, 0);
-        var15 = var22;
-      }
-
-      if (var4 && ((var8.anInt764 == 1) || var6 != 1) && var6 != -1) {
-        TextureSampler10.aClass3_Sub28_Sub17_Sub1_3440.method681(
-            VariableUpdate.method123(1000, var6), 0, 9, 16776960, 1);
-      }
-
-      DummyClass47.method1319(var11, var12, var13);
-      DummyClass47.method1316(var14);
-      DummyClass40.method1134();
-      DummyClass40.aBoolean843 = true;
-      return GlRenderer.useOpenGlRenderer && !var2
-          ? new GlDirectColorSprite(var15)
-          : var15;
-    }
-  }
 }

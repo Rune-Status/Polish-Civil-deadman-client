@@ -1,13 +1,15 @@
 package com.jagex.runescape;
 
 import com.jagex.runescape.buffer.Buffer;
+import com.jagex.runescape.common.GameString;
+import com.jagex.runescape.common.GameStringStatics;
 import java.io.InputStream;
 
 public final class DummyInputStream extends InputStream {
 
-  private static GameString aClass94_44 = GameString.create(" ");
-  public static GameString aClass94_37 = GameString.create("0(U");
-  public static GameString aClass94_38 = GameString.create("tbrefresh");
+  private static GameString aClass94_44 = GameStringStatics.create(" ");
+  public static GameString aClass94_37 = GameStringStatics.create("0(U");
+  public static GameString aClass94_38 = GameStringStatics.create("tbrefresh");
   public static int[] anIntArray39;
   public static int anInt40;
   public static SocketStream updateSocket;
@@ -52,7 +54,8 @@ public final class DummyInputStream extends InputStream {
   public static AbstractTextureSampler method63(byte var0, Buffer var1) {
     var1.readUnsignedByte();
       int var2 = var1.readUnsignedByte();
-      AbstractTextureSampler var3 = HashTable.createTextureSampler(var2, true);
+      AbstractTextureSampler var3 = GlobalStatics_0
+          .createTextureSampler(var2, true);
       assert var3 != null;
       var3.cacheSize = var1.readUnsignedByte();
       int var4 = var1.readUnsignedByte();

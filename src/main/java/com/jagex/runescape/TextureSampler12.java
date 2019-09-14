@@ -1,12 +1,14 @@
 package com.jagex.runescape;
 
 import com.jagex.runescape.buffer.Buffer;
+import com.jagex.runescape.common.GameString;
+import com.jagex.runescape.common.GameStringStatics;
 
 public final class TextureSampler12 extends AbstractTextureSampler {
 
   public static GameBuffer secureBuffer = new GameBuffer(5000);
-  public static GameString aClass94_3039 = GameString.create("0");
-  public static GameString aClass94_3040 = GameString.create("<col=40ff00>");
+  public static GameString aClass94_3039 = GameStringStatics.create("0");
+  public static GameString aClass94_3040 = GameStringStatics.create("<col=40ff00>");
   public static AnimationSomething[] aClass3_Sub28_Sub5Array3041 = new AnimationSomething[14];
   private int anInt3036;
   private int anInt3037 = 1;
@@ -110,7 +112,7 @@ public final class TextureSampler12 extends AbstractTextureSampler {
       }
 
       for (int var1 = 0; var1 < 4; ++var1) {
-        BlockConfig.collisionMaps[var1].method1496(var0 - 22230);
+        GlobalStatics_0.collisionMaps[var1].method1496(var0 - 22230);
       }
 
       System.gc();

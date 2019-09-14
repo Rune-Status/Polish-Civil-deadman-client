@@ -1,20 +1,23 @@
 package com.jagex.runescape;
 
+import com.jagex.runescape.common.GameString;
+import com.jagex.runescape.common.GameStringStatics;
+
 public final class TextureSampler2 extends AbstractTextureSampler {
 
-  private static GameString aClass94_3371 = GameString.create("Sat");
-  private static GameString aClass94_3372 = GameString.create("Mon");
-  private static GameString aClass94_3374 = GameString.create("Fri");
-  private static GameString aClass94_3378 = GameString.create("Wed");
-  private static GameString aClass94_3379 = GameString.create("Thu");
-  private static GameString aClass94_3380 = GameString.create("Tue");
-  private static GameString aClass94_3381 = GameString.create("Sun");
+  private static GameString aClass94_3371 = GameStringStatics.create("Sat");
+  private static GameString aClass94_3372 = GameStringStatics.create("Mon");
+  private static GameString aClass94_3374 = GameStringStatics.create("Fri");
+  private static GameString aClass94_3378 = GameStringStatics.create("Wed");
+  private static GameString aClass94_3379 = GameStringStatics.create("Thu");
+  private static GameString aClass94_3380 = GameStringStatics.create("Tue");
+  private static GameString aClass94_3381 = GameStringStatics.create("Sun");
   public static ObjectCache aClass93_3369 = new ObjectCache(64);
-  public static GameString aClass94_3370 = GameString.create("hitmarks");
+  public static GameString aClass94_3370 = GameStringStatics.create("hitmarks");
   public static AbstractDirectColorSprite[] aClass3_Sub28_Sub16Array3373;
   public static int anInt3375;
   public static int anInt3377 = 7759444;
-  public static GameString aClass94_3382 = GameString.create("(U0a )2 in: ");
+  public static GameString aClass94_3382 = GameStringStatics.create("(U0a )2 in: ");
   public static GameString[] aClass94Array3376 = {
       TextureSampler2.aClass94_3381, TextureSampler2.aClass94_3372, TextureSampler2.aClass94_3380, TextureSampler2.aClass94_3378,
       TextureSampler2.aClass94_3379,

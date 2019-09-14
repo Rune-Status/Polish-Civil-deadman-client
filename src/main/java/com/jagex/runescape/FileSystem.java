@@ -1,15 +1,17 @@
 package com.jagex.runescape;
 
 import com.jagex.runescape.buffer.Buffer;
+import com.jagex.runescape.common.GameString;
+import com.jagex.runescape.common.GameStringStatics;
 import com.jagex.runescape.opengl.DummyClass16;
-import com.jagex.runescape.opengl.shader.MaterialShader5;
+import com.jagex.runescape.opengl.MaterialShader5;
 
 public final class FileSystem {
 
   public static int anInt101;
   public static int anInt104;
   public static FileUnpacker aClass153_105;
-  public static GameString aClass94_106 = GameString.create("showVideoAd");
+  public static GameString aClass94_106 = GameStringStatics.create("showVideoAd");
   private Buffer updateTableBuffer;
   private OndemandFileRequest updateTableRequest;
   private final OndemandRequester ondemandRequester;
@@ -206,7 +208,7 @@ public final class FileSystem {
 
         GlobalStatics_0.aClass151_Sub1Array2601[var3] =
             AbstractFileRequester.fileSystem
-                .method839(-1824885439, var3, BlockConfig.tableCache,
+                .method839(-1824885439, var3, GlobalStatics_0.tableCache,
                     var5);
         if (var1) {
           GlobalStatics_0.aClass151_Sub1Array2601[var3].method2101(true);

@@ -19,7 +19,6 @@ import com.jagex.runescape.TextureSampler23;
 import com.jagex.runescape.TextureSampler7;
 import com.jagex.runescape.TextureSampler8;
 import com.jagex.runescape.TriChromaticImageCache;
-import com.jagex.runescape.opengl.shader.MaterialShader3;
 import com.jogamp.opengl.GL2;
 
 public final class CommonGL {

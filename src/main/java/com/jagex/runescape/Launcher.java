@@ -1,5 +1,6 @@
 package com.jagex.runescape;
 
+import com.jagex.runescape.common.GameStringStatics;
 import java.nio.charset.StandardCharsets;
 
 public class Launcher {
@@ -48,7 +49,7 @@ public class Launcher {
         TriChromaticImageBuffer.languageId = languageId;
       }
 
-      Node.setupLanguagePacket(TriChromaticImageBuffer.languageId);
+      GlobalStatics_0.setupLanguagePacket(TriChromaticImageBuffer.languageId);
       DummyClass8.aBoolean4018 = false;
       Structure.aBoolean3641 = false;
       if (args[3].equals("game0")) {

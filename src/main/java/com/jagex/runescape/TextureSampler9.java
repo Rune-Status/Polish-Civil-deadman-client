@@ -1,6 +1,9 @@
 package com.jagex.runescape;
 
 import com.jagex.runescape.buffer.Buffer;
+import com.jagex.runescape.common.ArrayUtils;
+import com.jagex.runescape.common.GameString;
+import com.jagex.runescape.common.GameStringStatics;
 
 public final class TextureSampler9 extends AbstractTextureSampler {
 
@@ -8,7 +11,7 @@ public final class TextureSampler9 extends AbstractTextureSampler {
   public static int anInt3102;
   public static int anInt3103;
   public static float aFloat3105;
-  public static GameString aClass94_3106 = GameString.create("clignotant2:");
+  public static GameString aClass94_3106 = GameStringStatics.create("clignotant2:");
   private boolean aBoolean3100 = true;
   private boolean aBoolean3104 = true;
 

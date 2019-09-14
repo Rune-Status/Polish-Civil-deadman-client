@@ -1,15 +1,18 @@
 package com.jagex.runescape;
 
+import com.jagex.runescape.common.ArrayUtils;
+import com.jagex.runescape.common.GameString;
+import com.jagex.runescape.common.GameStringStatics;
 import java.io.EOFException;
 import java.io.File;
 import java.io.IOException;
 
 public final class BufferedFile {
 
-  public static GameString COMMAND_FPS_OFF = GameString.create("::fpsoff");
-  public static GameString CHALLENGE_REQ = GameString.create(":chalreq:");
+  public static GameString COMMAND_FPS_OFF = GameStringStatics.create("::fpsoff");
+  public static GameString CHALLENGE_REQ = GameStringStatics.create(":chalreq:");
   public static int[] anIntArray574 = new int[14];
-  public static GameString aClass94_577 = GameString.create("http:)4)4");
+  public static GameString aClass94_577 = GameStringStatics.create("http:)4)4");
   public static float ambientIntensity;
   public static boolean aBoolean579;
   private long aLong563;

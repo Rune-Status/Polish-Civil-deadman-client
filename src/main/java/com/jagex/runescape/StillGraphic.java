@@ -1,14 +1,16 @@
 package com.jagex.runescape;
 
+import com.jagex.runescape.common.GameString;
+import com.jagex.runescape.common.GameStringStatics;
 import com.jagex.runescape.opengl.GlRenderer;
 
 public final class StillGraphic extends SceneNode {
 
-  public static GameString FONT_P11 = GameString.create("p11_full");
+  public static GameString FONT_P11 = GameStringStatics.create("p11_full");
   public static int anInt2701;
-  public static GameString FLOOR_SHADOWS = GameString.create("floorshadows");
+  public static GameString FLOOR_SHADOWS = GameStringStatics.create("floorshadows");
   public static boolean aBoolean2705 = true;
-  public static GameString aClass94_2707 = GameString.create("<br>(X100(U(Y");
+  public static GameString aClass94_2707 = GameStringStatics.create("<br>(X100(U(Y");
   public static int[] BIT_MASKS = {
     0, 1, 3, 7, 15, 31, 63, 127, 255, 511, 1023, 2047, 4095, 8191, 16383, 32767, '\uffff', 131071,
     262143, 524287, 1048575, 2097151, 4194303, 8388607, 16777215, 33554431, 67108863, 134217727,

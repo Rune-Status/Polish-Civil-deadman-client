@@ -1,11 +1,14 @@
 package com.jagex.runescape;
 
+import com.jagex.runescape.common.GameString;
+import com.jagex.runescape.common.GameStringStatics;
+
 public final class GameException extends RuntimeException {
 
   public static int[] anIntArray2113 = {2, 2, 4, 0, 1, 8, 0, 0, 0, 0, 2, 0, 0, 0, 0, 0};
   public static HintMarker[] aClass96Array2114 = new HintMarker[4];
   public static int anInt2115 = -1;
-  public static GameString aClass94_2116 = GameString.create("Hidden)2use");
+  public static GameString aClass94_2116 = GameStringStatics.create("Hidden)2use");
   public static GameString[] DEFAULT_INVENTORY_OPTIONS;
   public static int anInt2120;
   public static String serverHost;
@@ -19,7 +22,7 @@ public final class GameException extends RuntimeException {
   }
 
   public static void method2285(int var0, int var1, int var2, int var3, boolean var4, int var5) {
-    StringNode.anInt2587 = var1;
+    GlobalStatics_0.anInt2587 = var1;
       if (!var4) {
         TextureSampler9.anInt3103 = var5;
         GroundItem.anInt2938 = var0;

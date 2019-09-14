@@ -1,15 +1,17 @@
 package com.jagex.runescape;
 
 import com.jagex.runescape.buffer.Buffer;
+import com.jagex.runescape.common.GameString;
+import com.jagex.runescape.common.GameStringStatics;
 import com.jagex.runescape.opengl.GlEnvironment;
 
 public final class SomethingScene {
 
-  public static GameString aClass94_1070 = GameString.create("headicons_pk");
+  public static GameString aClass94_1070 = GameStringStatics.create("headicons_pk");
   public static int anInt1071;
-  public static GameString aClass94_1072 = GameString.create(" (X");
+  public static GameString aClass94_1072 = GameStringStatics.create(" (X");
   public static boolean aBoolean1074;
-  public static GameString aClass94_1076 = GameString.create("<)4col>");
+  public static GameString aClass94_1076 = GameStringStatics.create("<)4col>");
   public SceneNode aClass140_1067;
   public int anInt1068;
   public SceneNode aClass140_1069;
@@ -233,7 +235,7 @@ public final class SomethingScene {
                       (var3 > 0 ? GameObject.aClass94_2723 : DummyClass22.aClass94_1738) :
                       DummyOutputStream.aClass94_50)) :
                   SomethingSceneI.aClass94_431))) :
-            HashTable.aClass94_1714) :
+            GlobalStatics_0.aClass94_1714) :
           DummyClass4.aClass94_3006) :
         TextureSampler5.aClass94_3298;
   }

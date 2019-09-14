@@ -1,20 +1,23 @@
 package com.jagex.runescape;
 
 import com.jagex.runescape.buffer.Buffer;
+import com.jagex.runescape.common.GameString;
+import com.jagex.runescape.common.GameStringStatics;
+import com.jagex.runescape.common.HashTable;
 import com.jagex.runescape.opengl.GlEnvironment;
 import com.jagex.runescape.opengl.GlRenderer;
 
 public final class TextureSampler1 extends AbstractTextureSampler {
 
   public static ObjectCache aClass93_3130 = new ObjectCache(4);
-  public static GameString aClass94_3131 = GameString.create(" ");
+  public static GameString aClass94_3131 = GameStringStatics.create(" ");
   public static int b12FontFileId;
-  public static GameString aClass94_3133 = GameString.create(")2");
+  public static GameString aClass94_3133 = GameStringStatics.create(")2");
   public static int anInt3136;
   public static Cache aClass47_3137 = new Cache(64);
-  public static GameString FONT_B12 = GameString.create("b12_full");
+  public static GameString FONT_B12 = GameStringStatics.create("b12_full");
   public static int[] anIntArray3139 = new int[14];
-  public static GameString aClass94_3140 = GameString.create("overlay2");
+  public static GameString aClass94_3140 = GameStringStatics.create("overlay2");
   private int anInt3129;
   private int anInt3134;
   private int anInt3135;
@@ -128,9 +131,9 @@ public final class TextureSampler1 extends AbstractTextureSampler {
   public static void updateSunPosition(int x, int y) {
     DummyClass39.sunPositionX = DummyClass27.blockConfigs[x][y].sunPositionX;
       TextureSampler0.sunPositionY = DummyClass27.blockConfigs[x][y].sunPositionY;
-      BlockConfig.sunPositionZ = DummyClass27.blockConfigs[x][y].sunPosZ;
+      GlobalStatics_0.sunPositionZ = DummyClass27.blockConfigs[x][y].sunPosZ;
       GlEnvironment.setSunPosition(DummyClass39.sunPositionX,
-          TextureSampler0.sunPositionY, BlockConfig.sunPositionZ);
+          TextureSampler0.sunPositionY, GlobalStatics_0.sunPositionZ);
   }
 
   public static void method221(int var0, GameString var1, GameString var2, GameString var3,

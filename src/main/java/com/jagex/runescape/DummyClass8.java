@@ -1,5 +1,7 @@
 package com.jagex.runescape;
 
+import com.jagex.runescape.common.GameString;
+import com.jagex.runescape.common.GameStringStatics;
 import com.jagex.runescape.opengl.GlRenderer;
 import java.io.ByteArrayInputStream;
 import java.io.IOException;
@@ -13,7 +15,7 @@ import java.lang.reflect.Method;
 
 public final class DummyClass8 extends DummyClass7 {
 
-  private static GameString aClass94_4022 = GameString.create(
+  private static GameString aClass94_4022 = GameStringStatics.create(
     "Your friend list is full)3 Max of 100 for free users)1 and 200 for members)3");
   public static SocketStream aClass89_4012;
   public static volatile boolean focused = true;
@@ -25,7 +27,7 @@ public final class DummyClass8 extends DummyClass7 {
   public static int anInt4019;
   public static int anInt4020;
   public static int anInt4021;
-  public static GameString aClass94_4023 = GameString.create(")3");
+  public static GameString aClass94_4023 = GameStringStatics.create(")3");
   public static int[] anIntArray4025 = new int[32];
   public static int anInt4026;
   public static SoftwareIndexedColorSprite[] aClass109_Sub1Array4027;
@@ -98,7 +100,7 @@ public final class DummyClass8 extends DummyClass7 {
 
                 for (int var14 = 0; AudioStreamEncoder3.regionHashes.length > var14; ++var14) {
                   if ((AudioStreamEncoder3.regionHashes[var14] == var13) && var4[var14] != null) {
-                    TextureSampler13.method316(BlockConfig.collisionMaps, var5, var4[var14], var9,
+                    TextureSampler13.method316(GlobalStatics_0.collisionMaps, var5, var4[var14], var9,
                       var10, 8 * var6, var7 * 8, var0, (var11 & 7) * 8, 8 * (7 & var12),
                       (byte) -54);
                     break;

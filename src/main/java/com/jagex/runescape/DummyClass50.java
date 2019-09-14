@@ -1,6 +1,8 @@
 package com.jagex.runescape;
 
 import com.jagex.runescape.buffer.Buffer;
+import com.jagex.runescape.common.GameString;
+import com.jagex.runescape.common.GameStringStatics;
 import java.awt.event.ActionEvent;
 import java.io.IOException;
 import java.util.Objects;
@@ -9,11 +11,11 @@ public final class DummyClass50 {
 
   public static Queue aClass13_1139 = new Queue();
   public static GameString aClass94_1140 =
-      GameString.create(" steht bereits auf Ihrer Ignorieren)2Liste(Q");
+      GameStringStatics.create(" steht bereits auf Ihrer Ignorieren)2Liste(Q");
   public static int anInt1141;
   public static int[][][] anIntArrayArrayArray1142;
   public static GameString aClass94_1143 =
-      GameString.create("Chargement du module texte )2 ");
+      GameStringStatics.create("Chargement du module texte )2 ");
 
   public static void writeUUID(Buffer var0, boolean var1) {
     if (!var1) {
@@ -75,7 +77,7 @@ public final class DummyClass50 {
         if (AnimationSomething.anInt3591 < 100) {
           int var3 = -103 / ((var0 + 20) / 41);
           GameString var4 = Objects
-              .requireNonNull(FileCache.stringFromBase37(-29664, var1))
+              .requireNonNull(GameStringStatics.stringFromBase37(-29664, var1))
               .formatName((byte) -50);
 
           int var5;
@@ -107,7 +109,7 @@ public final class DummyClass50 {
             ++TextureSampler0.anInt3267;
             MonoChromaticImageCache.aLongArray1574[AnimationSomething.anInt3591] = var1;
             TextureSampler7.aClass94Array3341[AnimationSomething.anInt3591++] =
-                FileCache.stringFromBase37(-29664, var1);
+                GameStringStatics.stringFromBase37(-29664, var1);
             DummyClass31.anInt1472 = TextureSampler23.anInt3213;
             TextureSampler12.secureBuffer.writePacket(34);
             TextureSampler12.secureBuffer.writeLong(var1);

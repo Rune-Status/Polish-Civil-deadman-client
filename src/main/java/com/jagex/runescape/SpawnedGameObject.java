@@ -1,5 +1,8 @@
 package com.jagex.runescape;
 
+import com.jagex.runescape.common.GameString;
+import com.jagex.runescape.common.GameStringStatics;
+import com.jagex.runescape.node.Node;
 import com.jagex.runescape.opengl.GlRenderer;
 import com.jagex.runescape.opengl.GlTexture2d;
 import com.jagex.runescape.opengl.SomethingGl0;
@@ -8,10 +11,10 @@ public final class SpawnedGameObject extends Node {
 
   public static int anInt2249;
   public static int anInt2251;
-  public static GameString aClass94_2252 = GameString.create("Atteindre");
-  public static GameString aClass94_2255 = GameString.create("Suche nach Updates )2 ");
+  public static GameString aClass94_2252 = GameStringStatics.create("Atteindre");
+  public static GameString aClass94_2255 = GameStringStatics.create("Suche nach Updates )2 ");
   public static FileUnpacker fileUnpacker25;
-  public static GameString aClass94_2260 = GameString.create("Lade Wordpack )2 ");
+  public static GameString aClass94_2260 = GameStringStatics.create("Lade Wordpack )2 ");
   public int anInt2248;
   public int anInt2250;
   public int anInt2253;

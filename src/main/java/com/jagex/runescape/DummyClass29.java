@@ -1,10 +1,12 @@
 package com.jagex.runescape;
 
+import com.jagex.runescape.common.GameString;
+import com.jagex.runescape.common.GameStringStatics;
 import com.jagex.runescape.opengl.GlRenderer;
 
 public final class DummyClass29 {
 
-  public static GameString aClass94_434 = GameString.create("Shift)2click ENABLED(Q");
+  public static GameString aClass94_434 = GameStringStatics.create("Shift)2click ENABLED(Q");
   public static short[][] aShortArrayArray435 = {
     {
       (short) 6554, (short) 115, (short) 10304, (short) 28, (short) 5702, (short) 7756,
@@ -20,7 +22,7 @@ public final class DummyClass29 {
     (short) 412, (short) 21821, (short) 28835, (short) -15460, (short) -14019
   }, new short[0], new short[0], new short[0]
   };
-  public static GameString aClass94_436 = GameString.create("com.jagex.runescape.Cache:");
+  public static GameString aClass94_436 = GameStringStatics.create("com.jagex.runescape.Cache:");
   public static int anInt437;
   public static boolean aBoolean438;
   public static Widget aClass11_439;

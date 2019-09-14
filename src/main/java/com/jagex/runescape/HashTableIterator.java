@@ -1,5 +1,9 @@
 package com.jagex.runescape;
 
+import com.jagex.runescape.common.GameString;
+import com.jagex.runescape.common.GameStringStatics;
+import com.jagex.runescape.common.HashTable;
+import com.jagex.runescape.node.Node;
 import java.awt.Color;
 import java.awt.Component;
 import java.awt.Graphics;
@@ -8,7 +12,7 @@ import java.awt.Insets;
 public final class HashTableIterator {
 
   public static ObjectCache aClass93_1131 = new ObjectCache(5);
-  public static GameString aClass94_1133 = GameString.create(")4j");
+  public static GameString aClass94_1133 = GameStringStatics.create(")4j");
   public static ObjectCache aClass93_1135 = new ObjectCache(4);
   public static AbstractDirectColorSprite[] aClass3_Sub28_Sub16Array1136;
   public static int anInt1137 = 2;

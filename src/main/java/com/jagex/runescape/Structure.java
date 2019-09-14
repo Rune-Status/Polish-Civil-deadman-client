@@ -1,16 +1,21 @@
 package com.jagex.runescape;
 
 import com.jagex.runescape.buffer.Buffer;
+import com.jagex.runescape.common.GameString;
+import com.jagex.runescape.common.GameStringStatics;
+import com.jagex.runescape.common.HashTable;
+import com.jagex.runescape.common.StringNode;
+import com.jagex.runescape.node.Node;
 import com.jagex.runescape.opengl.GlTexture2d;
-import com.jagex.runescape.opengl.shader.MaterialShader5;
+import com.jagex.runescape.opengl.MaterialShader5;
 import com.jagex.runescape.opengl.Texture;
 
 public final class Structure extends SubNode {
 
-  private static GameString aClass94_3638 = GameString.create("Loading fonts )2 ");
+  private static GameString aClass94_3638 = GameStringStatics.create("Loading fonts )2 ");
   private static GameString aClass94_3639 =
-    GameString.create(" is already on your friend list)3");
-  public static GameString aClass94_3637 = GameString.create(")4p=");
+    GameStringStatics.create(" is already on your friend list)3");
+  public static GameString aClass94_3637 = GameStringStatics.create(")4p=");
   public static int anInt3640;
   public static boolean aBoolean3641;
   public static int anInt3642;
@@ -334,10 +339,10 @@ public final class Structure extends SubNode {
       DummyClass44.aClass94_935 = TextureSampler29.aClass94_3401;
       TextureSampler39.LOADING_PLEASE_WAIT = DummyClass44.aClass94_933;
       TextureSampler36.aClass94_3427 = TextureSampler32.aClass94_3355;
-      HashTable.aClass94_1707 = SpotAnimationConfig.aClass94_552;
+      GlobalStatics_0.aClass94_1707 = SpotAnimationConfig.aClass94_552;
       Unsure.aClass94_1892 = Queue.aClass94_334;
       GameClient.aClass94_2196 = Light.aClass94_700;
-      BlockConfig.aClass94_1180 = TextureSampler25.aClass94_3408;
+      GlobalStatics_0.aClass94_1180 = TextureSampler25.aClass94_3408;
       SceneShadowMap.CONNECTION_LOST = DummyClass1.aClass94_414;
       DummyClass32.SKILL = MaterialShader5.aClass94_2170;
       ClientScript.aClass94_3691 = EnumStringFetcher.aClass94_2163;
@@ -351,17 +356,17 @@ public final class Structure extends SubNode {
       DummyClass14.aClass94_1962 = DummyClass38.aClass94_728;
       TextureSampler29.aClass94_3397 = Widget.aClass94_297;
       Light.aClass94_691 = DummyClass6.aClass94_2042;
-      IdentityKit.aClass94_461 = AbstractIndexedColorSprite.aClass94_1466;
+      IdentityKit.aClass94_461 = GlobalStatics_1.aClass94_1466;
       SomethingAudio.CONNECTING_TO_UPDATE_SERVER = AbstractAudioOutputStream.aClass94_1974;
       DummyClass42.DEFAULT_WALK_TOOLTIP = SomethingTexture3.aClass94_2653;
-      GlTexture2d.aClass94_3762 = HashTable.aClass94_1702;
+      GlTexture2d.aClass94_3762 = GlobalStatics_0.aClass94_1702;
       TextureSampler38.aClass94_3445 = TextureSampler31.aClass94_3169;
       TextureSampler30.aClass94_3124 = StringNode0.aClass94_2336;
       SomethingTexture4.aClass94_2667 = AbstractDirectColorSprite.aClass94_3705;
       SubNode.aClass94_2576 = AnimationFrame.aClass94_2461;
       TextureSampler14.aClass94_3388 = ScriptState.aClass94_875;
       TextureSampler18.aClass94_4040 = StillGraphicNode.aClass94_3547;
-      DummyClass14.ATTEMPTING_TO_RECONNECT = GameString.aClass94_2149;
+      DummyClass14.ATTEMPTING_TO_RECONNECT = GlobalStatics_0.aClass94_2149;
       GlobalStatics_0.LOADED_INTERFACES = Texture.aClass94_3785;
       SpotAnimationConfig.aClass94_551 = BufferData.aClass94_1647;
       GameWorld.aClass94_2624 = Something3dRoot.aClass94_2053;
@@ -371,7 +376,7 @@ public final class Structure extends SubNode {
       IdentityKit.aClass94_462 = TextureSampler39.aClass94_3279;
       TextureSampler30.aClass94_3117 = StringNode0.aClass94_2336;
       StillGraphicNode.aClass94_3546 = RenderAnimation.aClass94_355;
-      GameString.aClass94_2151 = SomethingTexture4.aClass94_2662;
+      GlobalStatics_0.aClass94_2151 = SomethingTexture4.aClass94_2662;
       SomethingQuickChat.aClass94_3575 = LinearHashTable.aClass94_1044;
       DummyClass5.aClass94_2991 = DummyCanvas.aClass94_22;
       FileTable.aClass94_957 = AbstractFrameRegulator.aClass94_1696;
@@ -387,7 +392,7 @@ public final class Structure extends SubNode {
       TextureSampler27.aClass94_3097 = TextureSampler5.aClass94_3291;
       DummyClass32.aClass94_523 = SomethingWorldMappy.aClass94_2496;
       TextureSampler31.aClass94_3167 = FaceNormal.aClass94_1637;
-      BlockConfig.aClass94_1183 = SpawnedGameObject.aClass94_2260;
+      GlobalStatics_0.aClass94_1183 = SpawnedGameObject.aClass94_2260;
       WorldMapLabel.aClass94_1731 = TextureSampler25.aClass94_3409;
       DummyClass32.aClass94_525 = GameWorld.aClass94_2628;
   }

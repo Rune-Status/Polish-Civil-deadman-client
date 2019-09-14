@@ -1,6 +1,8 @@
 package com.jagex.runescape;
 
 import com.jagex.runescape.buffer.Buffer;
+import com.jagex.runescape.common.GameString;
+import com.jagex.runescape.common.GameStringStatics;
 import com.jagex.runescape.huffman.HuffmanEncoderStatics;
 import com.jagex.runescape.opengl.GlRenderer;
 import java.util.Objects;
@@ -11,12 +13,12 @@ public final class Player extends Mobile {
   public static byte aByte3953;
   public static int[] quady0 = new int[100];
   public static GameString aClass94_3957 =
-    GameString.create("Gestionnaire de saisie charg-B");
+    GameStringStatics.create("Gestionnaire de saisie charg-B");
   public static int[] anIntArray3959 = new int[2];
   public static GameString FORCED_TWEENING_ENABLED =
-    GameString.create("Forced tweening ENABLED(Q");
-  public static GameString LABELS = GameString.create("_labels");
-  public static GameString aClass94_3971 = GameString.create("www)2wtqa");
+    GameStringStatics.create("Forced tweening ENABLED(Q");
+  public static GameString LABELS = GameStringStatics.create("_labels");
+  public static GameString aClass94_3971 = GameStringStatics.create("www)2wtqa");
   public int anInt3952 = -1;
   public int anInt3955 = -1;
   public int anInt3956;
@@ -95,7 +97,7 @@ public final class Player extends Mobile {
       this.renderAnimationId = buffer.readUnsignedShort();
       long var20 = buffer.readLong();
       this.name = Objects
-          .requireNonNull(FileCache.stringFromBase37(-29664, var20)).formatName((byte) -50);
+          .requireNonNull(GameStringStatics.stringFromBase37(-29664, var20)).formatName((byte) -50);
       this.combatLevel = buffer.readUnsignedByte();
       if (var6) {
         this.skillTotal = buffer.readUnsignedShort();

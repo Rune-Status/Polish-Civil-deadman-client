@@ -1,17 +1,19 @@
 package com.jagex.runescape;
 
+import com.jagex.runescape.common.GameString;
+import com.jagex.runescape.common.GameStringStatics;
 import com.jagex.runescape.opengl.GlTexture2d;
-import com.jagex.runescape.opengl.shader.MaterialShader5;
+import com.jagex.runescape.opengl.MaterialShader5;
 import java.util.Calendar;
 import java.util.TimeZone;
 
 public final class AnimationSomething extends SubNode {
 
-  private static GameString aClass94_3582 = GameString.create("K");
+  private static GameString aClass94_3582 = GameStringStatics.create("K");
   public static FileUnpacker configs;
   public static Calendar aCalendar3581 = Calendar.getInstance(TimeZone.getTimeZone("GMT"));
-  public static GameString aClass94_3583 = GameString.create("brillant3:");
-  public static GameString aClass94_3585 = GameString.create(",Mcran)2titre ouvert");
+  public static GameString aClass94_3583 = GameStringStatics.create("brillant3:");
+  public static GameString aClass94_3585 = GameStringStatics.create(",Mcran)2titre ouvert");
   public static int[] updatedLandscapeIds;
   public static int anInt3589;
   public static int anInt3590 = -1;

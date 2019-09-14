@@ -1,6 +1,7 @@
 package com.jagex.runescape;
 
-import com.jagex.runescape.opengl.shader.MaterialShader;
+import com.jagex.runescape.node.Node;
+import com.jagex.runescape.opengl.MaterialShader;
 
 public final class IntegerNode extends Node {
 

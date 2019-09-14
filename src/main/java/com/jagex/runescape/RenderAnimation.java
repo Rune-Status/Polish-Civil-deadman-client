@@ -1,25 +1,27 @@
 package com.jagex.runescape;
 
 import com.jagex.runescape.buffer.Buffer;
+import com.jagex.runescape.common.GameString;
+import com.jagex.runescape.common.GameStringStatics;
 import com.jagex.runescape.opengl.Texture;
 
 public final class RenderAnimation {
 
-  private static GameString aClass94_354 = GameString.create("Discard");
-  private static GameString aClass94_363 = GameString.create("Aug");
-  private static GameString aClass94_365 = GameString.create("May");
-  private static GameString aClass94_366 = GameString.create("Loaded world list data");
-  private static GameString aClass94_376 = GameString.create("Jul");
-  private static GameString aClass94_385 = GameString.create("Jun");
-  private static GameString aClass94_388 = GameString.create("Dec");
-  private static GameString aClass94_391 = GameString.create("Oct");
-  private static GameString aClass94_392 = GameString.create("Jan");
-  private static GameString aClass94_394 = GameString.create("Sep");
-  private static GameString aClass94_397 = GameString.create("Nov");
-  private static GameString aClass94_401 = GameString.create("Apr");
-  private static GameString aClass94_404 = GameString.create("Mar");
-  private static GameString aClass94_405 = GameString.create("Feb");
-  public static GameString aClass94_355 = GameString.create("Lade Konfiguration )2 ");
+  private static GameString aClass94_354 = GameStringStatics.create("Discard");
+  private static GameString aClass94_363 = GameStringStatics.create("Aug");
+  private static GameString aClass94_365 = GameStringStatics.create("May");
+  private static GameString aClass94_366 = GameStringStatics.create("Loaded world list data");
+  private static GameString aClass94_376 = GameStringStatics.create("Jul");
+  private static GameString aClass94_385 = GameStringStatics.create("Jun");
+  private static GameString aClass94_388 = GameStringStatics.create("Dec");
+  private static GameString aClass94_391 = GameStringStatics.create("Oct");
+  private static GameString aClass94_392 = GameStringStatics.create("Jan");
+  private static GameString aClass94_394 = GameStringStatics.create("Sep");
+  private static GameString aClass94_397 = GameStringStatics.create("Nov");
+  private static GameString aClass94_401 = GameStringStatics.create("Apr");
+  private static GameString aClass94_404 = GameStringStatics.create("Mar");
+  private static GameString aClass94_405 = GameStringStatics.create("Feb");
+  public static GameString aClass94_355 = GameStringStatics.create("Lade Konfiguration )2 ");
   public static int[] anIntArray356 = {1, 0, -1, 0};
   public static volatile int anInt362;
   public static int anInt377;

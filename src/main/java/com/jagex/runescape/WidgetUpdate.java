@@ -1,11 +1,14 @@
 package com.jagex.runescape;
 
 import com.jagex.runescape.buffer.Buffer;
+import com.jagex.runescape.common.GameString;
+import com.jagex.runescape.common.GameStringStatics;
+import com.jagex.runescape.sprite.AbstractIndexedColorSprite;
 
 public final class WidgetUpdate extends SubNode {
 
   public static boolean aBoolean3594;
-  public static GameString aClass94_3595 = GameString.create("(U0a )2 via: ");
+  public static GameString aClass94_3595 = GameStringStatics.create("(U0a )2 via: ");
   public static int anInt3600;
   public int anInt3596;
   public int anInt3597;
@@ -218,7 +221,7 @@ public final class WidgetUpdate extends SubNode {
       TextureSampler12.secureBuffer.writeByte(36);
       TextureSampler12.secureBuffer.writeByte(var8.position);
       TextureSampler12.secureBuffer.write(var8.bytes, 0, var8.position);
-      HashTable.anInt1711 = -3;
+      GlobalStatics_0.anInt1711 = -3;
       DummyCanvas.anInt23 = 1;
       DummyClass22.anInt1734 = 0;
       SpotAnimationConfig.anInt548 = 0;

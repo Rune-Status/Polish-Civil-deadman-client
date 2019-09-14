@@ -1,6 +1,8 @@
 package com.jagex.runescape;
 
 import com.jagex.runescape.buffer.Buffer;
+import com.jagex.runescape.common.GameString;
+import com.jagex.runescape.common.GameStringStatics;
 import com.jagex.runescape.opengl.GlDirectColorSprite;
 import com.jagex.runescape.opengl.GlRenderer;
 import java.util.Date;
@@ -8,7 +10,7 @@ import java.util.Date;
 public final class AudioWorker implements Runnable {
 
   public static int anInt342;
-  public static GameString aClass94_343 = GameString
+  public static GameString aClass94_343 = GameStringStatics
       .create("blanc:");
   public static short[][] aShortArrayArray344;
   public static boolean aBoolean346;

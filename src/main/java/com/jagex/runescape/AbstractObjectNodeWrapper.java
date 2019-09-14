@@ -1,12 +1,14 @@
 package com.jagex.runescape;
 
+import com.jagex.runescape.common.GameString;
+import com.jagex.runescape.common.GameStringStatics;
 import com.jagex.runescape.opengl.GlRenderer;
 
 public abstract class AbstractObjectNodeWrapper {
 
-  public static GameString aClass94_1617 = GameString.create(")1a2)1m");
+  public static GameString aClass94_1617 = GameStringStatics.create(")1a2)1m");
   public static GameString aClass94_1618 =
-    GameString.create("Verbindung zum Update)2Server hergestellt)3");
+    GameStringStatics.create("Verbindung zum Update)2Server hergestellt)3");
   public static short[][] aShortArrayArray1619 = {
     {
       (short) 10, (short) 30, (short) 50, (short) 70, (short) 90, (short) 110, (short) 310,
@@ -220,9 +222,9 @@ public abstract class AbstractObjectNodeWrapper {
     (short) -12918, (short) -12898
   }
   };
-  public static GameString aClass94_1620 = GameString.create("Cach-B");
-  public static GameString aClass94_1621 = GameString.create("Chargement des polices )2 ");
-  public static GameString aClass94_1622 = GameString.create("Card:");
+  public static GameString aClass94_1620 = GameStringStatics.create("Cach-B");
+  public static GameString aClass94_1621 = GameStringStatics.create("Chargement des polices )2 ");
+  public static GameString aClass94_1622 = GameStringStatics.create("Card:");
   public static int anInt1623;
 
   public abstract AbstractObjectNode wrap(AbstractObjectNode var1);

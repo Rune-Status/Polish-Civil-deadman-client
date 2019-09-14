@@ -1,14 +1,17 @@
 package com.jagex.runescape;
 
+import com.jagex.runescape.common.GameString;
+import com.jagex.runescape.common.GameStringStatics;
+
 public abstract class AbstractFileRequest extends SubNode {
 
-  private static GameString aClass94_3626 = GameString.create("Created gameworld");
+  private static GameString aClass94_3626 = GameStringStatics.create("Created gameworld");
   public static int brightnessSetting = 3;
   public static int anInt3627;
   public static int anInt3630;
   public static int anInt3631;
-  public static GameString aClass94_3633 = GameString.create("Textures charg-Bes");
-  public static GameString aClass94_3634 = GameString.create("Liste des serveurs charg-Be");
+  public static GameString aClass94_3633 = GameStringStatics.create("Textures charg-Bes");
+  public static GameString aClass94_3634 = GameStringStatics.create("Liste des serveurs charg-Be");
   public static GameString aClass94_3629 = AbstractFileRequest.aClass94_3626;
   public boolean aBoolean3628;
   public volatile boolean aBoolean3632 = true;

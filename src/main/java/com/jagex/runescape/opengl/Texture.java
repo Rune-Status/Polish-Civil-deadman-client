@@ -5,6 +5,7 @@ import com.jagex.runescape.AbstractObjectNodeWrapper;
 import com.jagex.runescape.AnimationSequence;
 import com.jagex.runescape.BZipDecompressorState;
 import com.jagex.runescape.BitVariable;
+import com.jagex.runescape.GlobalStatics_0;
 import com.jagex.runescape.buffer.Buffer;
 import com.jagex.runescape.BufferData;
 import com.jagex.runescape.ClientScript;
@@ -18,7 +19,7 @@ import com.jagex.runescape.DummyClass8;
 import com.jagex.runescape.EnumStringFetcher;
 import com.jagex.runescape.FileCache;
 import com.jagex.runescape.FileUnpacker;
-import com.jagex.runescape.GameString;
+import com.jagex.runescape.common.GameString;
 import com.jagex.runescape.GameWorldSomething;
 import com.jagex.runescape.GroundItem;
 import com.jagex.runescape.ITextureCache;
@@ -31,6 +32,7 @@ import com.jagex.runescape.SomethingPacket116;
 import com.jagex.runescape.SomethingTexture1;
 import com.jagex.runescape.SubNode;
 import com.jagex.runescape.TextureCache;
+import com.jagex.runescape.common.GameStringStatics;
 import com.jagex.runescape.huffman.HuffmanEncoderStatics;
 import com.jogamp.opengl.glu.GLU;
 import com.jogamp.opengl.glu.gl2.GLUgl2;
@@ -39,15 +41,15 @@ import java.util.Objects;
 
 public final class Texture extends SubNode {
 
-  public static GameString aClass94_3785 = GameString
+  public static GameString aClass94_3785 = GameStringStatics
       .create("Benutzeroberfl-=che geladen)3");
   public static FileUnpacker midiInstruments;
-  public static GameString aClass94_3792 = GameString
+  public static GameString aClass94_3792 = GameStringStatics
       .create("huffman");
   public static AbstractObjectNodeWrapper aClass118_3794 = DummyClass60
       .method913(31431);
   public static GameString aClass94_3798 =
-      GameString
+      GameStringStatics
           .create("RuneScape wird geladen )2 bitte warten)3)3)3");
   public boolean needsUpdate;
   private final boolean aBoolean3781;

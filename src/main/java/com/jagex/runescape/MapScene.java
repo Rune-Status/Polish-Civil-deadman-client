@@ -1,11 +1,13 @@
 package com.jagex.runescape;
 
 import com.jagex.runescape.buffer.Buffer;
-import com.jagex.runescape.opengl.shader.MaterialShader;
+import com.jagex.runescape.common.GameString;
+import com.jagex.runescape.common.GameStringStatics;
+import com.jagex.runescape.opengl.MaterialShader;
 
 public final class MapScene {
 
-  private static GameString aClass94_68 = GameString.create("glow1:");
+  private static GameString aClass94_68 = GameStringStatics.create("glow1:");
   public static int anInt59;
   public static short[] aShortArray63 =
       {(short) 960, (short) 957, (short) -21568, (short) -21571, (short) 22464};
@@ -43,7 +45,7 @@ public final class MapScene {
       } else {
         Keyboard.sprites.isLoaded(this.spriteId);
         int var4 = 125 % ((var2 + 21) / 50);
-        var3 = GameString.createSprite(0, true, this.spriteId, Keyboard.sprites);
+        var3 = GlobalStatics_0.createSprite(0, true, this.spriteId, Keyboard.sprites);
         if (var3 != null) {
           var3.method1668(TextureCache.anInt2136, DummyClass39.anInt740,
             AbstractImageProducer.anInt2015);
@@ -172,7 +174,7 @@ public final class MapScene {
       int var27 = var14 + 1;
       DummyClass38.anIntArray729[var14] = var3;
       int[][] var17 =
-        BlockConfig.collisionMaps[GameWorldSomething.currentPlane].anIntArrayArray1304;
+        GlobalStatics_0.collisionMaps[GameWorldSomething.currentPlane].anIntArrayArray1304;
 
       int var18;
       while (var15 != var27) {
@@ -186,13 +188,13 @@ public final class MapScene {
 
         if ((var1 != 0)) {
           if ((var1 < 5 || (var1 == 10))
-            && BlockConfig.collisionMaps[GameWorldSomething.currentPlane].method1488(var4, var12,
+            && GlobalStatics_0.collisionMaps[GameWorldSomething.currentPlane].method1488(var4, var12,
             false, var13, var8, -1 + var1, 2, var7)) {
             var16 = true;
             break;
           }
 
-          if (var1 < 10 && BlockConfig.collisionMaps[GameWorldSomething.currentPlane].method1492(
+          if (var1 < 10 && GlobalStatics_0.collisionMaps[GameWorldSomething.currentPlane].method1492(
             var4, var1 - 1, var8, var13, 2, var7, var12, 88)) {
             var16 = true;
             break;
@@ -200,7 +202,7 @@ public final class MapScene {
         }
 
         if (var0 != 0 && (var6 != 0)
-          && BlockConfig.collisionMaps[GameWorldSomething.currentPlane].method1498(true, var8,
+          && GlobalStatics_0.collisionMaps[GameWorldSomething.currentPlane].method1498(true, var8,
           var13, var12, 2, var0, var2, var4, var6)) {
           var16 = true;
           break;

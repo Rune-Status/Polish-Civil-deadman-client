@@ -1,5 +1,7 @@
 package com.jagex.runescape;
 
+import com.jagex.runescape.common.GameString;
+import com.jagex.runescape.common.GameStringStatics;
 import com.jagex.runescape.opengl.GlBufferObject;
 import com.jagex.runescape.opengl.SomethingGl0;
 import java.io.IOException;
@@ -10,9 +12,9 @@ public final class BufferData {
 
   public static boolean aBoolean1641;
   public static int anInt1642;
-  public static GameString aClass94_1645 = GameString.create("Hidden)2");
-  public static GameString COMMAND_WM2 = GameString.create("::wm2");
-  public static GameString aClass94_1647 = GameString.create("gleiten:");
+  public static GameString aClass94_1645 = GameStringStatics.create("Hidden)2");
+  public static GameString COMMAND_WM2 = GameStringStatics.create("::wm2");
+  public static GameString aClass94_1647 = GameStringStatics.create("gleiten:");
   public int pointer;
   public boolean updated;
   public GlBufferObject buffer;

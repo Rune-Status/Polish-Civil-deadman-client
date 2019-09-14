@@ -1,6 +1,8 @@
 package com.jagex.runescape;
 
 import com.jagex.runescape.buffer.Buffer;
+import com.jagex.runescape.common.GameString;
+import com.jagex.runescape.common.GameStringStatics;
 import com.jagex.runescape.opengl.GlRenderer;
 import com.jagex.runescape.opengl.SomethingGl0;
 import java.awt.Component;
@@ -10,9 +12,9 @@ import java.awt.Insets;
 public final class OndemandFileRequest extends AbstractFileRequest {
 
   private static GameString aClass94_4072 =
-      GameString.create(" from your friend list first)3");
+      GameStringStatics.create(" from your friend list first)3");
   public static int anInt4065;
-  public static GameString aClass94_4066 = GameString
+  public static GameString aClass94_4066 = GameStringStatics
       .create("<br>");
   public static boolean aBoolean4068 = true;
   public static SceneGraphTile[][][] tiles;
@@ -241,7 +243,7 @@ public final class OndemandFileRequest extends AbstractFileRequest {
           if ((var1 > 0) && (var3 == 0)) {
             DummyClass1.gameThread.setPriority(5);
             Something3d.viewImageProducer = null;
-            SoftwareModel.method1935();
+            GlobalStatics_1.method1935();
             ((TextureCache) DummyClass40.textureCache).method1619(200, -1);
             if (DisplayMode.useBumpMaps) {
               DummyClass40.updateLightness(0.7F);
@@ -253,7 +255,7 @@ public final class OndemandFileRequest extends AbstractFileRequest {
             Something3d.viewImageProducer =
                 TextureSampler18.createImageProducer(503, 765, true,
                     GameCanvas.INSTANCE);
-            SoftwareModel.method1938();
+            GlobalStatics_1.method1938();
             DummyClass0.method1756();
             ((TextureCache) DummyClass40.textureCache).method1619(20, -1);
             if (DisplayMode.useBumpMaps) {

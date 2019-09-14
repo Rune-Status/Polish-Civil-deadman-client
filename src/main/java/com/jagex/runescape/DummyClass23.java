@@ -1,11 +1,14 @@
 package com.jagex.runescape;
 
 import com.jagex.runescape.buffer.Buffer;
+import com.jagex.runescape.common.GameString;
+import com.jagex.runescape.common.GameStringStatics;
+import com.jagex.runescape.common.HashTable;
 
 public final class DummyClass23 {
 
   public static HashTable aClass130_1659 = new HashTable(512);
-  public static GameString aClass94_1660 = GameString.create("Versteckt");
+  public static GameString aClass94_1660 = GameStringStatics.create("Versteckt");
   public static FileUnpacker aClass153_1661;
 
 

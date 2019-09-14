@@ -1,5 +1,7 @@
 package com.jagex.runescape;
 
+import com.jagex.runescape.common.GameString;
+import com.jagex.runescape.common.GameStringStatics;
 import com.jagex.runescape.opengl.GlRenderer;
 import com.jagex.runescape.opengl.GlUtils;
 import com.jagex.runescape.opengl.SomethingLight;
@@ -10,9 +12,9 @@ public abstract class AbstractFrameRegulator {
   public static int anInt1691 = -1;
   public static int anInt1692;
   public static int[] keyQueue = new int[128];
-  public static GameString aClass94_1694 = GameString.create("document)3cookie=(R");
+  public static GameString aClass94_1694 = GameStringStatics.create("document)3cookie=(R");
   public static int[] anIntArray1695;
-  public static GameString aClass94_1696 = GameString.create(
+  public static GameString aClass94_1696 = GameStringStatics.create(
     "Sie k-Onnen sich selbst nicht auf Ihre Freunde)2Liste setzen(Q");
 
   public abstract int sleep(int var1,int var2,int var3 );

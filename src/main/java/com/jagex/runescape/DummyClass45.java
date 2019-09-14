@@ -2,24 +2,27 @@ package com.jagex.runescape;
 
 import com.jagex.runescape.buffer.Buffer;
 import com.jagex.runescape.buffer.BufferStatics;
+import com.jagex.runescape.common.ArrayUtils;
+import com.jagex.runescape.common.GameString;
+import com.jagex.runescape.common.GameStringStatics;
 import com.jagex.runescape.opengl.GlRenderer;
 import com.jagex.runescape.opengl.GlUtils;
 
 public final class DummyClass45 {
 
-  public static GameString aClass94_981 = GameString.create("S-Blectionner");
-  public static GameString aClass94_982 = GameString.create("niveau ");
+  public static GameString aClass94_981 = GameStringStatics.create("S-Blectionner");
+  public static GameString aClass94_982 = GameStringStatics.create("niveau ");
   public static Deque aClass61_983 = new Deque();
-  public static GameString aClass94_985 = GameString.create("Fps:");
+  public static GameString aClass94_985 = GameStringStatics.create("Fps:");
   public static Buffer[] configs = new Buffer[2048];
   public static int anInt987;
   public static GameString aClass94_988 =
-    GameString.create("voudrait faire un -Bchange avec vous)3");
+    GameStringStatics.create("voudrait faire un -Bchange avec vous)3");
   public static GameString aClass94_989 =
-    GameString.create(" est d-Bj-9 dans votre liste d(Wamis)3");
+    GameStringStatics.create(" est d-Bj-9 dans votre liste d(Wamis)3");
   public static int spawnSceneX;
   public static int anInt991 = -1;
-  public static GameString aClass94_992 = GameString.create("http:)4)4");
+  public static GameString aClass94_992 = GameStringStatics.create("http:)4)4");
 
 
   public static int[] method1233(int[] var0, int var1) {
@@ -168,7 +171,7 @@ public final class DummyClass45 {
           }
         }
 
-        HashTable.anInt1705 = var7 * var3 / 334;
+        GlobalStatics_0.anInt1705 = var7 * var3 / 334;
       }
 
       HintMarker.anInt1358 = (short) var0;

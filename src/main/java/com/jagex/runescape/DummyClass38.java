@@ -1,11 +1,13 @@
 package com.jagex.runescape;
 
 import com.jagex.runescape.buffer.Buffer;
+import com.jagex.runescape.common.GameString;
+import com.jagex.runescape.common.GameStringStatics;
 import java.util.Objects;
 
 public final class DummyClass38 {
 
-  public static GameString aClass94_728 = GameString.create("leuchten2:");
+  public static GameString aClass94_728 = GameStringStatics.create("leuchten2:");
   public static int[] anIntArray729 = new int[4096];
   public static float aFloat730;
   public static FileUnpacker aClass153_731;

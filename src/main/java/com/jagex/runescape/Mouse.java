@@ -1,5 +1,7 @@
 package com.jagex.runescape;
 
+import com.jagex.runescape.common.GameString;
+import com.jagex.runescape.common.GameStringStatics;
 import java.awt.Component;
 import java.awt.event.FocusEvent;
 import java.awt.event.FocusListener;
@@ -13,7 +15,7 @@ public final class Mouse implements MouseListener, MouseMotionListener,
   public static float[] aFloatArray1919 = new float[4];
   public static int[] anIntArray1920;
   public static int anInt1921;
-  public static GameString aClass94_1922 = GameString.create("weiss:");
+  public static GameString aClass94_1922 = GameStringStatics.create("weiss:");
   public static int anInt1923;
   public static int anInt1924;
   public static int anInt1925;

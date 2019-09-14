@@ -1,12 +1,14 @@
 package com.jagex.runescape;
 
 import com.jagex.runescape.buffer.Buffer;
+import com.jagex.runescape.common.GameString;
+import com.jagex.runescape.common.GameStringStatics;
 
 public final class HintMarker {
 
   public static int anInt1345;
-  public static GameString aClass94_1348 = GameString.create("Kampfstufe: ");
-  public static GameString aClass94_1349 = GameString.create("underlay");
+  public static GameString aClass94_1348 = GameStringStatics.create("Kampfstufe: ");
+  public static GameString aClass94_1349 = GameStringStatics.create("underlay");
   public static int p11FontFileId;
   public static int loadingState;
   public static int anInt1357;

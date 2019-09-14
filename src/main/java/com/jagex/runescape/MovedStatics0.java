@@ -34,14 +34,14 @@ public final class MovedStatics0 {
   }
 
   public static boolean method57(int var0, int var1) {
-    if (HashTable.aBooleanArray1703[var0]) {
+    if (GlobalStatics_0.aBooleanArray1703[var0]) {
         return true;
       } else {
         if (TextureSampler3.aClass153_3361.method2117(-99, var0)) {
           int var2 = TextureSampler3.aClass153_3361
               .getAmountChildren(var0, (byte) 94);
           if (var2 == 0) {
-            HashTable.aBooleanArray1703[var0] = true;
+            GlobalStatics_0.aBooleanArray1703[var0] = true;
             return true;
           } else {
             if (SceneNode.aClass11ArrayArray1834[var0] == null) {
@@ -64,7 +64,7 @@ public final class MovedStatics0 {
               }
             }
 
-            HashTable.aBooleanArray1703[var0] = true;
+            GlobalStatics_0.aBooleanArray1703[var0] = true;
             if (var1 != 104) {
               MovedStatics0.method58(100);
             }

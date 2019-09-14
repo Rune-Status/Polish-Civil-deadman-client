@@ -1,10 +1,12 @@
 package com.jagex.runescape;
 
 import com.jagex.runescape.buffer.Buffer;
+import com.jagex.runescape.common.GameString;
+import com.jagex.runescape.common.GameStringStatics;
 
 public final class SpotAnimationConfig {
 
-  private static GameString aClass94_553 = GameString.create("slide:");
+  private static GameString aClass94_553 = GameStringStatics.create("slide:");
   public static int anInt529;
   public static int anInt531;
   public static GameBuffer gameBuffer = new GameBuffer(5000);
@@ -12,8 +14,8 @@ public final class SpotAnimationConfig {
   public static int anInt546;
   public static int anInt548;
   public static volatile int anInt549;
-  public static GameString aClass94_550 = GameString.create("Jeter");
-  public static GameString aClass94_552 = GameString.create("Sprites geladen)3");
+  public static GameString aClass94_550 = GameStringStatics.create("Jeter");
+  public static GameString aClass94_552 = GameStringStatics.create("Sprites geladen)3");
   public static GameString aClass94_547 = SpotAnimationConfig.aClass94_553;
   public static GameString aClass94_551 = SpotAnimationConfig.aClass94_553;
   public boolean aBoolean536;

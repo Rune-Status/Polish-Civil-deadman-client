@@ -1,10 +1,12 @@
 package com.jagex.runescape;
 
+import com.jagex.runescape.common.GameString;
+import com.jagex.runescape.common.GameStringStatics;
 import com.jagex.runescape.opengl.GlRenderer;
 
 public final class DummyClass26 {
 
-  private static GameString aClass94_1610 = GameString.create("Loaded wordpack");
+  private static GameString aClass94_1610 = GameStringStatics.create("Loaded wordpack");
   public static GameWorld[] aClass44_Sub1Array1609;
   public static int[] keyTable = {
     -1, -1, -1, -1, -1, -1, -1, -1, 85, 80, 84, -1, 91, -1, -1, -1, 81, 82, 86, -1, -1, -1, -1, -1,
@@ -30,9 +32,9 @@ public final class DummyClass26 {
     -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1,
     -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1
   };
-  public static GameString aClass94_1612 = GameString.create("classement ");
+  public static GameString aClass94_1612 = GameStringStatics.create("classement ");
   public static int[] anIntArray1613 = new int[500];
-  public static GameString TRADE_REQUEST = GameString.create(":tradereq:");
+  public static GameString TRADE_REQUEST = GameStringStatics.create(":tradereq:");
   public static int anInt1616;
   public static GameString aClass94_1615 = DummyClass26.aClass94_1610;
 
@@ -54,7 +56,7 @@ public final class DummyClass26 {
 
         if (var0 == 25 || var0 == 28) {
           DummyClass11.anInt2038 = 0;
-          StringNode.anInt2579 = 1;
+          GlobalStatics_0.anInt2579 = 1;
           DummyClass8.anInt4019 = 0;
           SomethingInScenePacket202.anInt2275 = 1;
           TextureSampler5.anInt3293 = 0;

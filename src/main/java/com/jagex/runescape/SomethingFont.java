@@ -1,5 +1,6 @@
 package com.jagex.runescape;
 
+import com.jagex.runescape.common.GameString;
 import java.awt.Color;
 import java.awt.Component;
 import java.awt.Font;

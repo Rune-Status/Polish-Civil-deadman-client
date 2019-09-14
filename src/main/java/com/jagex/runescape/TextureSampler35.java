@@ -1,10 +1,12 @@
 package com.jagex.runescape;
 
 import com.jagex.runescape.buffer.Buffer;
+import com.jagex.runescape.common.GameString;
+import com.jagex.runescape.common.GameStringStatics;
 
 public final class TextureSampler35 extends AbstractTextureSampler {
 
-  private static GameString aClass94_3334 = GameString.create("wave2:");
+  private static GameString aClass94_3334 = GameStringStatics.create("wave2:");
   public static int anInt3332 = 50;
   public static GameString[] aClass94Array3317 = new GameString[TextureSampler35.anInt3332];
   public static int[] anIntArray3318 = new int[TextureSampler35.anInt3332];
@@ -12,12 +14,12 @@ public final class TextureSampler35 extends AbstractTextureSampler {
   public static int rights;
   public static int[] anIntArray3321 = {76, 8, 137, 4, 0, 1, 38, 2, 19};
   public static int anInt3323 = 50;
-  public static GameString aClass94_3324 = GameString.create(" loggt sich ein)3");
-  public static GameString aClass94_3326 = GameString.create("leuchten1:");
+  public static GameString aClass94_3324 = GameStringStatics.create(" loggt sich ein)3");
+  public static GameString aClass94_3326 = GameStringStatics.create("leuchten1:");
   public static int[] anIntArray3327 = new int[TextureSampler35.anInt3332];
   public static int[] anIntArray3328 = new int[8];
   public static int[] anIntArray3329 = new int[TextureSampler35.anInt3332];
-  public static GameString ASSIST_REQ = GameString.create(":assistreq:");
+  public static GameString ASSIST_REQ = GameStringStatics.create(":assistreq:");
   public static int[] anIntArray3331 = new int[TextureSampler35.anInt3332];
   public static byte[][] aByteArrayArray3335;
   public static int[] anIntArray3336 = new int[TextureSampler35.anInt3332];

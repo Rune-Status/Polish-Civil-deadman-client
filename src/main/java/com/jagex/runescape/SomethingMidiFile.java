@@ -1,10 +1,15 @@
 package com.jagex.runescape;
 
+import com.jagex.runescape.common.ArrayUtils;
+import com.jagex.runescape.common.GameString;
+import com.jagex.runescape.common.GameStringStatics;
+import com.jagex.runescape.node.Node;
+
 public final class SomethingMidiFile extends Node {
 
 
   private static GameString aClass94_2286 =
-    GameString.create("wishes to trade with you)3");
+    GameStringStatics.create("wishes to trade with you)3");
   public static byte[][] byteArrayPool;
   public static int[] BIT_MASKS = new int[32];
   public static int anInt2290;

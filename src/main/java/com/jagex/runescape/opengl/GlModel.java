@@ -1,8 +1,9 @@
 package com.jagex.runescape.opengl;
 
 import com.jagex.runescape.AbstractModel;
-import com.jagex.runescape.ArrayUtils;
-import com.jagex.runescape.BlockConfig;
+import com.jagex.runescape.GlobalStatics_0;
+import com.jagex.runescape.GlobalStatics_1;
+import com.jagex.runescape.common.ArrayUtils;
 import com.jagex.runescape.buffer.Buffer;
 import com.jagex.runescape.BufferData;
 import com.jagex.runescape.DisplayMode;
@@ -19,7 +20,6 @@ import com.jagex.runescape.Model;
 import com.jagex.runescape.RenderAnimation;
 import com.jagex.runescape.SceneNode;
 import com.jagex.runescape.SoftwareIndexedColorSprite;
-import com.jagex.runescape.SoftwareModel;
 import com.jagex.runescape.SomethingMidiFile;
 import com.jagex.runescape.SomethingQuickChat;
 import com.jagex.runescape.Structure;
@@ -1334,7 +1334,7 @@ public final class GlModel extends AbstractModel {
               int var24 = var23 + (var13 * var2 + var15 * var3 >> 16) << 9;
               if (var24 / depth > DummyClass3.screenUpperY) {
                 int var25 = var23 + (-var13 * var2 + var14 * var3 >> 16) << 9;
-                if (var25 / depth < BlockConfig.screenLowerY) {
+                if (var25 / depth < GlobalStatics_0.screenLowerY) {
                   int var26 = 0;
                   int var27 = 0;
                   if (rotationY != 0) {
@@ -3834,7 +3834,7 @@ public final class GlModel extends AbstractModel {
   }
 
   private static int method1905(int var0, short var1, int var2, byte var3) {
-    int var4 = DummyClass40.hslTable[SoftwareModel.repackHSL(var0, var2)];
+    int var4 = DummyClass40.hslTable[GlobalStatics_1.repackHSL(var0, var2)];
     if (var1 != -1) {
       int var5 = DummyClass40.textureCache.method19(93, var1 & '\uffff');
       int var6;

@@ -1,21 +1,16 @@
 package com.jagex.runescape;
 
-import com.jagex.runescape.opengl.shader.MaterialShader5;
+import com.jagex.runescape.common.GameString;
+import com.jagex.runescape.common.GameStringStatics;
+import com.jagex.runescape.opengl.MaterialShader5;
 import java.awt.Component;
 import java.io.IOException;
 import java.net.Socket;
 
 public final class DummyClass9 extends DummyClass5 {
 
-  public static byte[] aByteArray4005 = {
-    (byte) 95, (byte) 97, (byte) 98, (byte) 99, (byte) 100, (byte) 101, (byte) 102, (byte) 103,
-    (byte) 104, (byte) 105, (byte) 106, (byte) 107, (byte) 108, (byte) 109, (byte) 110, (byte) 111,
-    (byte) 112, (byte) 113, (byte) 114, (byte) 115, (byte) 116, (byte) 117, (byte) 118, (byte) 119,
-    (byte) 120, (byte) 121, (byte) 122, (byte) 48, (byte) 49, (byte) 50, (byte) 51, (byte) 52,
-    (byte) 53, (byte) 54, (byte) 55, (byte) 56, (byte) 57
-  };
   public static int viewportLowerX;
-  public static GameString aClass94_4007 = GameString.create(":");
+  public static GameString aClass94_4007 = GameStringStatics.create(":");
   public static boolean[] aBooleanArray4008 = new boolean[100];
   public static int[] anIntArray4009 = new int[5];
   public static int[][] anIntArrayArray4010 = new int[104][104];
@@ -24,7 +19,7 @@ public final class DummyClass9 extends DummyClass5 {
 
   public static void method2213(byte var0) {
     DummyClass9.anIntArray4009 = null;
-      DummyClass9.aByteArray4005 = null;
+      GameStringStatics.aByteArray4005 = null;
       DummyClass9.aBooleanArray4008 = null;
       if (var0 != 104) {
         DummyClass9.aClass94_4007 = null;
@@ -36,7 +31,7 @@ public final class DummyClass9 extends DummyClass5 {
 
   public static void method2214(int var0) {
     if (var0 != 0) {
-        DummyClass9.aByteArray4005 = null;
+        GameStringStatics.aByteArray4005 = null;
       }
 
       if (!NPC.method1986(90) && (GameObject.plane != GameWorldSomething.currentPlane)) {

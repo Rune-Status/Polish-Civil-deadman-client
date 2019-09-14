@@ -1,12 +1,14 @@
 package com.jagex.runescape;
 
 import com.jagex.runescape.buffer.Buffer;
+import com.jagex.runescape.common.GameString;
+import com.jagex.runescape.common.GameStringStatics;
 import com.jagex.runescape.opengl.GlTexture2d;
 
 public final class SomethingTexture4 extends AbstractSomethingTexture {
 
-  private static GameString aClass94_2665 = GameString.create("Choose Option");
-  public static GameString aClass94_2662 = GameString
+  private static GameString aClass94_2665 = GameStringStatics.create("Choose Option");
+  public static GameString aClass94_2662 = GameStringStatics
       .create("Zugewiesener Speicher)3");
   public static int[] anIntArray2663;
   public static int[] anIntArray2664;
@@ -160,7 +162,8 @@ public final class SomethingTexture4 extends AbstractSomethingTexture {
       int var5 = var2 * this.anInt2666 >> 12;
       int var6 = var3 * this.anInt2672 >> 12;
       int var7 = var3 * this.anInt2669 >> 12;
-      StringNode.method730(var4, this.anInt1101, (byte) 121, var7, var5, var6);
+      GlobalStatics_0
+          .method730(var4, this.anInt1101, (byte) 121, var7, var5, var6);
       if (var1 != 2) {
         SomethingTexture4.aClass94_2665 = null;
       }
@@ -199,7 +202,7 @@ public final class SomethingTexture4 extends AbstractSomethingTexture {
             var5 = -1;
           }
 
-          HashTable.method1772(var6, var5, 39, var3);
+          GlobalStatics_0.method1772(var6, var5, 39, var3);
         }
 
         if (((var4 & 4) != 0)) {

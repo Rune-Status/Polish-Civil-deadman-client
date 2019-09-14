@@ -1,7 +1,6 @@
 package com.jagex.runescape.opengl;
 
 import com.jagex.runescape.DisplayMode;
-import com.jagex.runescape.opengl.shader.MaterialShader;
 import java.nio.ByteBuffer;
 
 public final class SkyboxMaterialShader implements MaterialShader {

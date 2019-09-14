@@ -1,4 +1,4 @@
-package com.jagex.runescape.opengl.shader;
+package com.jagex.runescape.opengl;
 
 import com.jagex.runescape.AbstractDirectColorSprite;
 import com.jagex.runescape.AbstractFileRequester;
@@ -7,7 +7,6 @@ import com.jagex.runescape.AbstractImageProducer;
 import com.jagex.runescape.AbstractObjectNodeWrapper;
 import com.jagex.runescape.AudioWorker;
 import com.jagex.runescape.BZipDecompressorState;
-import com.jagex.runescape.BlockConfig;
 import com.jagex.runescape.BufferObject;
 import com.jagex.runescape.ClassCheckRequest;
 import com.jagex.runescape.ClientScript;
@@ -34,13 +33,14 @@ import com.jagex.runescape.DummyClass8;
 import com.jagex.runescape.DummyClass9;
 import com.jagex.runescape.FileUnpacker;
 import com.jagex.runescape.GameObjectConfig;
-import com.jagex.runescape.GameString;
+import com.jagex.runescape.GlobalStatics_0;
+import com.jagex.runescape.common.GameString;
 import com.jagex.runescape.GameStub;
 import com.jagex.runescape.GameWorld;
 import com.jagex.runescape.GameWorldSomething;
 import com.jagex.runescape.GroundItem;
 import com.jagex.runescape.GroundItemNode;
-import com.jagex.runescape.HashTable;
+import com.jagex.runescape.common.GameStringStatics;
 import com.jagex.runescape.HashTableIterator;
 import com.jagex.runescape.ItemConfig;
 import com.jagex.runescape.Light;
@@ -68,7 +68,6 @@ import com.jagex.runescape.SomethingScene;
 import com.jagex.runescape.SomethingSceneTile;
 import com.jagex.runescape.SomethingTexture1;
 import com.jagex.runescape.SomethingTilek;
-import com.jagex.runescape.StringNode;
 import com.jagex.runescape.StringNode0;
 import com.jagex.runescape.Structure;
 import com.jagex.runescape.SubNode;
@@ -86,19 +85,16 @@ import com.jagex.runescape.TriChromaticImageCache;
 import com.jagex.runescape.Unsure;
 import com.jagex.runescape.Widget;
 import com.jagex.runescape.WorldMapLabel;
-import com.jagex.runescape.opengl.GlRenderer;
-import com.jagex.runescape.opengl.GlTexture2d;
-import com.jagex.runescape.opengl.SomethingGl;
 
 public final class MaterialShader5 implements MaterialShader {
 
-  private static GameString aClass94_2175 = GameString.create(")4a=");
+  private static GameString aClass94_2175 = GameStringStatics.create(")4a=");
   public static boolean[] aBooleanArray2169 = new boolean[5];
-  public static GameString aClass94_2170 = GameString.create("Fertigkeit: ");
-  public static GameString aClass94_2171 = GameString.create("");
+  public static GameString aClass94_2170 = GameStringStatics.create("Fertigkeit: ");
+  public static GameString aClass94_2171 = GameStringStatics.create("");
   public static FileUnpacker aClass153_2172;
   public static GameString aClass94_2176 =
-    GameString.create("(U0a )2 non)2existant gosub script)2num: ");
+    GameStringStatics.create("(U0a )2 non)2existant gosub script)2num: ");
   private int anInt2173;
   private final float[] aFloatArray2174 = new float[4];
 
@@ -142,7 +138,7 @@ public final class MaterialShader5 implements MaterialShader {
       GlRenderer.GL
           .glRotatef(360.0F * TextureSampler9.anInt3103 / 2048.0F, 0.0F, 1.0F, 0.0F);
       GlRenderer.GL.glTranslatef((-BZipDecompressorState.anInt144),
-          (-ClientScript.anInt3695), (-StringNode.anInt2587));
+          (-ClientScript.anInt3695), (-GlobalStatics_0.anInt2587));
       GlRenderer.GL.glTexGenfv(8192, 9474, this.aFloatArray2174, 0);
       this.aFloatArray2174[3] = var3 * GlRenderer.anInt1791;
       this.aFloatArray2174[0] = 0.0F;
@@ -275,7 +271,7 @@ public final class MaterialShader5 implements MaterialShader {
     int var9;
       int var12;
       if ((Something3d.anInt3012 == 0)) {
-        int var10 = BlockConfig.screenLowerY;
+        int var10 = GlobalStatics_0.screenLowerY;
         var9 = DummyClass3.screenUpperY;
         int var8 = Unsure.screenUpperX;
         int var7 = DummyClass17.screenLowerX;
@@ -384,7 +380,7 @@ public final class MaterialShader5 implements MaterialShader {
                 ScriptState.method1177(WorldMapLabel.anInt1719, var16.anInt1527, (byte) -26,
                   RenderAnimation.concat(
                     new GameString[] {DummyClass17.aClass94_1826, var16.aClass94_1504}), var12,
-                  (short) 1004, BlockConfig.aClass94_1180, var27);
+                  (short) 1004, GlobalStatics_0.aClass94_1180, var27);
               } else {
                 Parameter var17 = LinearHashTable.anInt1038 == -1 ?
                   null :
@@ -499,7 +495,7 @@ public final class MaterialShader5 implements MaterialShader {
                     ++SomethingMidiFile.anInt2290;
                     ScriptState.method1177(DummyClass54.anInt1403, var18, (byte) -75,
                       RenderAnimation.concat(new GameString[] {
-                        RenderAnimation.aClass94_378, HashTable.aClass94_1699, var40.aClass94_770
+                        RenderAnimation.aClass94_378, GlobalStatics_0.aClass94_1699, var40.aClass94_770
                       }), var12, (short) 33, TextureSampler14.aClass94_3388, var27);
                   } else if (!SceneNode.aBoolean1837) {
                     ++Projectile.anInt2901;
@@ -551,7 +547,7 @@ public final class MaterialShader5 implements MaterialShader {
                     ScriptState.method1177(WorldMapLabel.anInt1719, var18, (byte) -43,
                       RenderAnimation.concat(
                         new GameString[] {TextureSampler6.aClass94_3042, var40.aClass94_770}),
-                      var12, (short) 1002, BlockConfig.aClass94_1180, var27);
+                      var12, (short) 1002, GlobalStatics_0.aClass94_1180, var27);
                   } else {
                     Parameter var39 = LinearHashTable.anInt1038 == -1 ?
                       null :
@@ -561,7 +557,7 @@ public final class MaterialShader5 implements MaterialShader {
                       ++DisplayMode.anInt1439;
                       ScriptState.method1177(BufferObject.anInt1887, var18, (byte) -70,
                         RenderAnimation.concat(new GameString[] {
-                          DummyClass59.aClass94_676, HashTable.aClass94_1699, var40.aClass94_770
+                          DummyClass59.aClass94_676, GlobalStatics_0.aClass94_1699, var40.aClass94_770
                         }), var12, (short) 39, Parameter.aClass94_3621, var27);
                     }
                   }

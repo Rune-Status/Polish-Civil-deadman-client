@@ -1,10 +1,13 @@
 package com.jagex.runescape;
 
 import com.jagex.runescape.buffer.Buffer;
+import com.jagex.runescape.common.GameString;
+import com.jagex.runescape.common.GameStringStatics;
+import com.jagex.runescape.node.Node;
 
 public class SubNode extends Node {
 
-  private static GameString aClass94_2568 = GameString.create("Started 3d Library");
+  private static GameString aClass94_2568 = GameStringStatics.create("Started 3d Library");
   public static GameString[] aClass94Array2566 = new GameString[200];
   public static int anInt2567 = -1;
   public static int anInt2571;

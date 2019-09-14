@@ -1,5 +1,7 @@
 package com.jagex.runescape;
 
+import com.jagex.runescape.node.Node;
+
 public abstract class AudioStreamEncoder extends Node {
 
   public int anInt2543;

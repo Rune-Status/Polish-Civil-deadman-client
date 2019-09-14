@@ -1,20 +1,22 @@
 package com.jagex.runescape;
 
 import com.jagex.runescape.buffer.Buffer;
+import com.jagex.runescape.common.GameString;
+import com.jagex.runescape.common.GameStringStatics;
 import com.jagex.runescape.opengl.GlEnvironment;
 
 public final class TextureSampler29 extends AbstractTextureSampler {
 
-  private static GameString aClass94_3400 = GameString.create("Take");
+  private static GameString aClass94_3400 = GameStringStatics.create("Take");
   public static byte[][][] aByteArrayArrayArray3390;
   public static GameString[] aClass94Array3391;
   public static SomethingPacket116[] aClass133Array3393 = new SomethingPacket116[6];
-  public static GameString aClass94_3394 = GameString.create("<col=ffb000>");
+  public static GameString aClass94_3394 = GameStringStatics.create("<col=ffb000>");
   public static int anInt3395;
   public static byte[] aByteArray3396;
   public static volatile int anInt3398;
-  public static GameString aClass94_3399 = GameString.create("<br>(X");
-  public static GameString aClass94_3401 = GameString.create("Weiter");
+  public static GameString aClass94_3399 = GameStringStatics.create("<br>(X");
+  public static GameString aClass94_3401 = GameStringStatics.create("Weiter");
   public static GameString aClass94_3397 = TextureSampler29.aClass94_3400;
   private AbstractSomethingTexture[] aClass75Array3392;
 

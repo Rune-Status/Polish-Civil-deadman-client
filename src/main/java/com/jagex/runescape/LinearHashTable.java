@@ -1,5 +1,7 @@
 package com.jagex.runescape;
 
+import com.jagex.runescape.common.GameString;
+import com.jagex.runescape.common.GameStringStatics;
 import com.jagex.runescape.opengl.GlTexture2d;
 
 public final class LinearHashTable {
@@ -10,7 +12,7 @@ public final class LinearHashTable {
   public static boolean aBoolean1040;
   public static int anInt1042;
   public static FileUnpacker aClass153_1043;
-  public static GameString aClass94_1044 = GameString.create("Titelbild geladen)3");
+  public static GameString aClass94_1044 = GameStringStatics.create("Titelbild geladen)3");
   private final int[] anIntArray1041;
 
 

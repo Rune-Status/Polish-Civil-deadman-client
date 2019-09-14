@@ -1,6 +1,8 @@
 package com.jagex.runescape;
 
 import com.jagex.runescape.buffer.Buffer;
+import com.jagex.runescape.common.GameString;
+import com.jagex.runescape.common.GameStringStatics;
 import com.jagex.runescape.opengl.DummyClass46;
 import com.jagex.runescape.opengl.GlEnvironment;
 import com.jagex.runescape.opengl.GlRenderer;
@@ -9,8 +11,8 @@ import java.util.Arrays;
 
 public final class Unsure {
 
-  private static GameString aClass94_1899 = GameString.create("Loading textures )2 ");
-  public static GameString aClass94_1889 = GameString.create("blinken2:");
+  private static GameString aClass94_1899 = GameStringStatics.create("Loading textures )2 ");
+  public static GameString aClass94_1889 = GameStringStatics.create("blinken2:");
   public static SomethingLight0[] aClass113Array1895;
   public static int anInt1896;
   public static int screenUpperX;
@@ -39,7 +41,8 @@ public final class Unsure {
         if ((var5 == 1)) {
           DummyClass49.method1367(var0, var3, var2, (byte) 34, var4, var1);
         } else {
-          AbstractIndexedColorSprite.method1665(var6 - 19617, var3, var2, var0, var4, var5, var1);
+          GlobalStatics_1
+              .method1665(var6 - 19617, var3, var2, var0, var4, var5, var1);
         }
       } else if (var5 != 1) {
         TextureSampler33.method184(var4, var5, var3, var1, 1, var0, var2);

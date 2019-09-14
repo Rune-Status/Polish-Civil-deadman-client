@@ -1,6 +1,9 @@
 package com.jagex.runescape;
 
 import com.jagex.runescape.buffer.Buffer;
+import com.jagex.runescape.common.GameString;
+import com.jagex.runescape.common.GameStringStatics;
+import com.jagex.runescape.node.Node;
 
 public final class SomethingVolume15 extends Node {
 
@@ -9,7 +12,7 @@ public final class SomethingVolume15 extends Node {
   public static boolean aBoolean2427;
   public static ObjectCache aClass93_2428 = new ObjectCache(50);
   public static SocketStream gameSocket;
-  public static GameString COMMAND_TWEEN = GameString.create("::tween");
+  public static GameString COMMAND_TWEEN = GameStringStatics.create("::tween");
   public static boolean aBoolean2433;
   public static int anInt2436;
   public byte[] aByteArray2422;

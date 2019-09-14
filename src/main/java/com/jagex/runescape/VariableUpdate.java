@@ -1,5 +1,8 @@
 package com.jagex.runescape;
 
+import com.jagex.runescape.common.GameString;
+import com.jagex.runescape.node.Node;
+
 public final class VariableUpdate extends Node {
 
   public static int[] anIntArray2292 = new int[1000];
@@ -38,7 +41,7 @@ public final class VariableUpdate extends Node {
   public static void method122(int var0) {
     int var1 = -101 / ((var0 - 10) / 59);
       SceneNode.aClass11ArrayArray1834 = new Widget[TextureSampler3.aClass153_3361.method2121(0)][];
-      HashTable.aBooleanArray1703 = new boolean[TextureSampler3.aClass153_3361.method2121(0)];
+      GlobalStatics_0.aBooleanArray1703 = new boolean[TextureSampler3.aClass153_3361.method2121(0)];
   }
 
   public static GameString method123(int var0, int var1) {

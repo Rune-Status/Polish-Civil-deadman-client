@@ -1,16 +1,19 @@
 package com.jagex.runescape;
 
 import com.jagex.runescape.buffer.Buffer;
+import com.jagex.runescape.common.ArrayUtils;
+import com.jagex.runescape.common.GameString;
+import com.jagex.runescape.common.GameStringStatics;
 import java.awt.Component;
 import javax.sound.sampled.LineUnavailableException;
 
 public class AbstractAudioOutputStream {
 
   public static int[] quadx0 = new int[100];
-  public static GameString aClass94_1970 = GameString.create(":");
+  public static GameString aClass94_1970 = GameStringStatics.create(":");
   public static int anInt1971;
   public static GameString aClass94_1974 =
-    GameString.create("Verbindung mit Update)2Server)3)3)3");
+    GameStringStatics.create("Verbindung mit Update)2Server)3)3)3");
   public static int[] anIntArray1976 = {1, 0, 0, 0, 1, 0, 2, 1, 1, 1, 0, 2, 0, 0, 1, 0};
   public static int anInt1977;
   public static int[] otherKeyQueue = new int[128];
@@ -42,7 +45,7 @@ public class AbstractAudioOutputStream {
 
   private void fill(int[] samples, int len) {
     int length = len;
-    if (GameString.stereo) {
+    if (GlobalStatics_0.stereo) {
       length = len << 1;
     }
 
@@ -334,7 +337,7 @@ public class AbstractAudioOutputStream {
         AbstractAudioOutputStream.method2162(null, 34, 103, -93);
       }
 
-      var2.aClass3_Sub28_Sub4_151 = StringNode.method733(12345678, var2.anInt149);
+      var2.aClass3_Sub28_Sub4_151 = GlobalStatics_0.method733(12345678, var2.anInt149);
       return var2;
   }
 

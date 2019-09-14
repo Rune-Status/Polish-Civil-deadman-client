@@ -1,13 +1,18 @@
 package com.jagex.runescape;
 
 import com.jagex.runescape.buffer.Buffer;
+import com.jagex.runescape.common.GameString;
+import com.jagex.runescape.common.GameStringStatics;
+import com.jagex.runescape.common.HashTable;
+import com.jagex.runescape.common.StringNode;
+import com.jagex.runescape.node.Node;
 
 public final class ClientScriptEnum extends SubNode {
 
   public static int cameraY;
   public static int anInt3659;
   public static int anInt3660;
-  public static GameString aClass94_3661 = GameString.create("T");
+  public static GameString aClass94_3661 = GameStringStatics.create("T");
   public static boolean aBoolean3665 = true;
   public int paramType;
   public int someType;

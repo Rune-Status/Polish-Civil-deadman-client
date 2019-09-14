@@ -1,12 +1,13 @@
 package com.jagex.runescape;
 
+import com.jagex.runescape.common.GameString;
 import com.jagex.runescape.huffman.HuffmanEncoderStatics;
 import com.jagex.runescape.opengl.DummyClass16;
 import com.jagex.runescape.opengl.DummyClass46;
 import com.jagex.runescape.opengl.GlEnvironment;
 import com.jagex.runescape.opengl.GlRenderer;
 import com.jagex.runescape.opengl.GlTexture2d;
-import com.jagex.runescape.opengl.shader.MaterialShader5;
+import com.jagex.runescape.opengl.MaterialShader5;
 import com.jagex.runescape.opengl.SomethingGl0;
 import java.awt.Component;
 import java.awt.Graphics;
@@ -150,13 +151,13 @@ public final class DirectImageProducer extends AbstractImageProducer
           }
         }
 
-        AbstractIndexedColorSprite.anInt1463 += (int) (Math.random() * 5.0D) - 2;
-        if ((AbstractIndexedColorSprite.anInt1463 < 15)) {
-          AbstractIndexedColorSprite.anInt1463 = -16;
+        GlobalStatics_1.anInt1463 += (int) (Math.random() * 5.0D) - 2;
+        if ((GlobalStatics_1.anInt1463 < 15)) {
+          GlobalStatics_1.anInt1463 = -16;
         }
 
-        if ((AbstractIndexedColorSprite.anInt1463 > 16)) {
-          AbstractIndexedColorSprite.anInt1463 = 16;
+        if ((GlobalStatics_1.anInt1463 > 16)) {
+          GlobalStatics_1.anInt1463 = 16;
         }
 
         TextureSampler31.anInt3158 += (int) (Math.random() * 5.0D) - 2;
@@ -179,7 +180,7 @@ public final class DirectImageProducer extends AbstractImageProducer
       var4 = TextureSampler31.anInt3158 >> 2 << 10;
       int[][] var34 = new int[104][104];
       int[][] var35 = new int[104][104];
-      var5 = AbstractIndexedColorSprite.anInt1463 >> 1;
+      var5 = GlobalStatics_1.anInt1463 >> 1;
 
       int var8;
       int lightPosX;
@@ -526,12 +527,12 @@ public final class DirectImageProducer extends AbstractImageProducer
 
                       var31 =
                           (var28 & 896) + (('\ufc00' & var28 + var4) + var55);
-                      var29 = DummyClass40.hslTable[StringNode
+                      var29 = DummyClass40.hslTable[GlobalStatics_0
                           .method729((byte) -85, var31, 96)];
                     }
                   } else {
                     var28 = -1;
-                    var29 = DummyClass40.hslTable[StringNode
+                    var29 = DummyClass40.hslTable[GlobalStatics_0
                         .method729((byte) -126,
                             DummyClass40.textureCache.method15(var27, '\uffff'),
                             96)];
@@ -550,7 +551,7 @@ public final class DirectImageProducer extends AbstractImageProducer
 
                     int var32 =
                         (896 & var55) + (('\ufc00' & var55 + var4) + var31);
-                    var29 = DummyClass40.hslTable[StringNode
+                    var29 = DummyClass40.hslTable[GlobalStatics_0
                         .method729((byte) -101, var32, 96)];
                   }
 
@@ -562,10 +563,10 @@ public final class DirectImageProducer extends AbstractImageProducer
                           Cache.repackHSL(var21, true, var18),
                           Cache.repackHSL(var22, true, var18),
                           Cache.repackHSL(var23, true, var18),
-                          StringNode.method729((byte) -72, var28, var20),
-                          StringNode.method729((byte) -107, var28, var21),
-                          StringNode.method729((byte) -82, var28, var22),
-                          StringNode.method729((byte) -93, var28, var23), var19,
+                          GlobalStatics_0.method729((byte) -72, var28, var20),
+                          GlobalStatics_0.method729((byte) -107, var28, var21),
+                          GlobalStatics_0.method729((byte) -82, var28, var22),
+                          GlobalStatics_0.method729((byte) -93, var28, var23), var19,
                           var29);
                   if (GlRenderer.useOpenGlRenderer && (var8 > 0)) {
                     DummyClass16.method2037(var24, var25,
@@ -887,7 +888,7 @@ public final class DirectImageProducer extends AbstractImageProducer
         int var27 = var14 + 1;
         DummyClass38.anIntArray729[var14] = var10;
         int[][] var17 =
-            BlockConfig.collisionMaps[GameWorldSomething.currentPlane].anIntArrayArray1304;
+            GlobalStatics_0.collisionMaps[GameWorldSomething.currentPlane].anIntArrayArray1304;
 
         int var18;
         while ((var27 != var15)) {
@@ -901,7 +902,7 @@ public final class DirectImageProducer extends AbstractImageProducer
 
           if ((var9 != 0)) {
             if (((var9 < 5) || var9 == 10)
-                && BlockConfig.collisionMaps[GameWorldSomething.currentPlane]
+                && GlobalStatics_0.collisionMaps[GameWorldSomething.currentPlane]
                 .method1488(var4, var12,
                     false, var13, var0, var9 - 1, 1, var7)) {
               var16 = true;
@@ -909,7 +910,7 @@ public final class DirectImageProducer extends AbstractImageProducer
             }
 
             if ((var9 < 10)
-                && BlockConfig.collisionMaps[GameWorldSomething.currentPlane]
+                && GlobalStatics_0.collisionMaps[GameWorldSomething.currentPlane]
                 .method1492(var4,
                     -1 + var9, var0, var13, 1, var7, var12, 95)) {
               var16 = true;
@@ -918,7 +919,7 @@ public final class DirectImageProducer extends AbstractImageProducer
           }
 
           if (var11 != 0 && var6 != 0
-              && BlockConfig.collisionMaps[GameWorldSomething.currentPlane]
+              && GlobalStatics_0.collisionMaps[GameWorldSomething.currentPlane]
               .method1498(true, var0,
                   var13, var12, 1, var11, var1, var4, var6)) {
             var16 = true;

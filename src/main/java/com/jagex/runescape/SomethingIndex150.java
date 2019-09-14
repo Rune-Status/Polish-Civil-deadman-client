@@ -1,7 +1,10 @@
 package com.jagex.runescape;
 
+import com.jagex.runescape.common.GameString;
+import com.jagex.runescape.common.GameStringStatics;
 import com.jagex.runescape.opengl.GlIndexedColorSprite;
 import com.jagex.runescape.opengl.GlRenderer;
+import com.jagex.runescape.sprite.AbstractIndexedColorSprite;
 import java.util.Objects;
 
 public final class SomethingIndex150 {
@@ -11,10 +14,10 @@ public final class SomethingIndex150 {
   public static AnimationSomething[] aClass3_Sub28_Sub5Array2070 = new AnimationSomething[14];
   public static AbstractDirectColorSprite[] aClass3_Sub28_Sub16Array2072;
   public static int[] anIntArray2073 = new int[5];
-  public static GameString aClass94_2074 = GameString.create("; version=1; path=)4; domain=");
-  public static GameString RECTANGLE_DEBUG_EQ = GameString.create("rect_debug=");
+  public static GameString aClass94_2074 = GameStringStatics.create("; version=1; path=)4; domain=");
+  public static GameString RECTANGLE_DEBUG_EQ = GameStringStatics.create("rect_debug=");
   public static int anInt2079;
-  public static GameString aClass94_2080 = GameString.create("(U2");
+  public static GameString aClass94_2080 = GameStringStatics.create("(U2");
   public static int anInt2081;
   public int anInt2063;
   public byte[] aByteArray2064;

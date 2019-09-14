@@ -1,12 +1,14 @@
 package com.jagex.runescape;
 
 import com.jagex.runescape.buffer.Buffer;
+import com.jagex.runescape.common.GameString;
+import com.jagex.runescape.common.GameStringStatics;
 
 public final class SomethingPacket116 {
 
   public static int[] anIntArray1743 = new int[25];
   public static int anInt1744;
-  public static GameString aClass94_1745 = GameString.create("settings");
+  public static GameString aClass94_1745 = GameStringStatics.create("settings");
   public static int anInt1748;
   public static Widget aClass11_1749;
   public static FileUnpacker worldMapData;

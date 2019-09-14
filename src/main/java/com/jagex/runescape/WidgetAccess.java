@@ -1,14 +1,17 @@
 package com.jagex.runescape;
 
+import com.jagex.runescape.common.GameString;
+import com.jagex.runescape.common.GameStringStatics;
+import com.jagex.runescape.node.Node;
 import com.jagex.runescape.opengl.GlModel;
 import com.jagex.runescape.opengl.GlRenderer;
 
 public final class WidgetAccess extends Node {
 
-  private static GameString aClass94_2206 = GameString.create("white:");
+  private static GameString aClass94_2206 = GameStringStatics.create("white:");
   public static FileUnpacker scripts;
   public static int anInt2204;
-  public static GameString aClass94_2207 = GameString.create("brillant2:");
+  public static GameString aClass94_2207 = GameStringStatics.create("brillant2:");
   public static int anInt2208 = -1;
   public static int[] anIntArray2209 = {2, 2, 4, 2, 1, 8, 4, 1, 4, 4, 2, 1, 1, 1, 4, 1};
   public static int localPlayerId = -1;

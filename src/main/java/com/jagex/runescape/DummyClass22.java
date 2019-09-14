@@ -1,12 +1,15 @@
 package com.jagex.runescape;
 
+import com.jagex.runescape.common.GameString;
+import com.jagex.runescape.common.GameStringStatics;
+
 public final class DummyClass22 {
 
   public static int anInt1734;
   public static FileUnpacker particles;
   public static int anInt1736;
   public static int minimumDelta = 1;
-  public static GameString aClass94_1738 = GameString.create("<col=ffff00>");
+  public static GameString aClass94_1738 = GameStringStatics.create("<col=ffff00>");
   public static GameString[] aClass94Array1739 = new GameString[1000];
   public static int anInt1740;
   public static int anInt1741;
@@ -103,13 +106,13 @@ public final class DummyClass22 {
             TextureSampler25.amountContextActions * 15 + (!FileUnpacker.aBoolean1951 ? 22 : 26);
           ClientScriptEnum.anInt3660 = 0;
           TextureSampler29.anInt3395 = var4;
-          AbstractIndexedColorSprite.anInt1462 = var3;
+          GlobalStatics_1.anInt1462 = var3;
           DummyClass36.aBoolean2615 = true;
           SomethingWorldMapy.anInt3552 = var1;
         }
       } else if ((NpcConfiguration.anInt1297 == DummyClass5.anInt2993)
         && (DummyClass36.anInt2612 == DummyClass36.anInt2614)) {
-        AbstractIndexedColorSprite.anInt1462 = var3;
+        GlobalStatics_1.anInt1462 = var3;
         ClientScriptEnum.anInt3660 = 0;
         SomethingWorldMapy.anInt3552 = var1;
         TextureSampler29.anInt3395 = var4;

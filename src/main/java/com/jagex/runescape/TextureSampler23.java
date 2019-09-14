@@ -1,6 +1,9 @@
 package com.jagex.runescape;
 
 import com.jagex.runescape.buffer.Buffer;
+import com.jagex.runescape.common.GameString;
+import com.jagex.runescape.common.GameStringStatics;
+import com.jagex.runescape.common.HashTable;
 import com.jagex.runescape.opengl.GlTexture2d;
 import com.jagex.runescape.opengl.Texture;
 
@@ -8,9 +11,9 @@ public final class TextureSampler23 extends AbstractTextureSampler {
 
   public static boolean aBoolean3207;
   public static HashTable aClass130_3208 = new HashTable(8);
-  public static GameString aClass94_3209 = GameString.create("showingVideoAd");
+  public static GameString aClass94_3209 = GameStringStatics.create("showingVideoAd");
   public static FileUnpacker worldMaps;
-  public static GameString aClass94_3211 = GameString.create(" <col=ffffff>");
+  public static GameString aClass94_3211 = GameStringStatics.create(" <col=ffffff>");
   public static int[] anIntArray3212;
   public static int anInt3213 = 1;
 
@@ -114,7 +117,7 @@ public final class TextureSampler23 extends AbstractTextureSampler {
       SomethingPacket116.method1803((byte) 22);
       DummyClass35.method1025((byte) -93);
       DummyClass59.method1044(-3782);
-      Node.method85((byte) -114);
+      GlobalStatics_0.method85((byte) -114);
       DirectImageProducer.method2192(-68);
       DummyClass13.method2196(128);
       VertexNormal.method1132(103);
@@ -175,8 +178,8 @@ public final class TextureSampler23 extends AbstractTextureSampler {
   public static void method252(int var0) {
     AreaSoundEffect var1;
       for (
-        var1 = (AreaSoundEffect) Node.aClass61_78.getFirst();
-          var1 != null; var1 = (AreaSoundEffect) Node.aClass61_78.getNext()) {
+        var1 = (AreaSoundEffect) GlobalStatics_0.aClass61_78.getFirst();
+          var1 != null; var1 = (AreaSoundEffect) GlobalStatics_0.aClass61_78.getNext()) {
         if (var1.aBoolean2329) {
           var1.method134(1);
         }

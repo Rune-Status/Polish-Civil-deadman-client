@@ -1,14 +1,17 @@
 package com.jagex.runescape;
 
 import com.jagex.runescape.buffer.Buffer;
+import com.jagex.runescape.common.GameString;
+import com.jagex.runescape.common.GameStringStatics;
+import com.jagex.runescape.node.Node;
 
 public final class StringNode0 extends Node {
 
-  public static GameString aClass94_2336 = GameString.create("M");
+  public static GameString aClass94_2336 = GameStringStatics.create("M");
   public static int anInt2337;
   public static int[] anIntArray2338 = {160, 192, 80, 96, 0, 144, 80, 48, 160};
   public static byte[][][] aByteArrayArrayArray2339;
-  public static GameString aClass94_2340 = GameString.create("Bitte warten Sie)3)3)3");
+  public static GameString aClass94_2340 = GameStringStatics.create("Bitte warten Sie)3)3)3");
   public GameString aClass94_2341;
 
 

@@ -1,12 +1,16 @@
 package com.jagex.runescape;
 
+import com.jagex.runescape.common.GameString;
+import com.jagex.runescape.common.GameStringStatics;
+import com.jagex.runescape.node.Node;
+
 public final class SomethingPacket151 extends Node {
 
   public static ObjectCache aClass93_2604 = new ObjectCache(64);
-  public static GameString COMMAND_DROP_JS5 = GameString.create("::clientjs5drop");
+  public static GameString COMMAND_DROP_JS5 = GameStringStatics.create("::clientjs5drop");
   public static int[] anIntArray2606;
   public static int anInt2607;
-  public static GameString aClass94_2608 = GameString.create(")4l=");
+  public static GameString aClass94_2608 = GameStringStatics.create(")4l=");
   public int anInt2602;
   public int anInt2603;
 

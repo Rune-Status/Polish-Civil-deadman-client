@@ -1,23 +1,25 @@
 package com.jagex.runescape;
 
 import com.jagex.runescape.buffer.Buffer;
+import com.jagex.runescape.common.GameString;
+import com.jagex.runescape.common.GameStringStatics;
 import com.jagex.runescape.opengl.GlTexture2d;
 import java.awt.Point;
 import java.io.IOException;
 
 public final class TextureSampler20 extends AbstractTextureSampler {
 
-  public static GameString aClass94_3146 = GameString.create(" s(West connect-B)3");
+  public static GameString aClass94_3146 = GameStringStatics.create(" s(West connect-B)3");
   public static int usageMode;
-  public static GameString aClass94_3150 = GameString.create("null");
+  public static GameString aClass94_3150 = GameStringStatics.create("null");
   public static int anInt3151;
-  public static GameString COMMAND_GC = GameString.create("::gc");
+  public static GameString COMMAND_GC = GameStringStatics.create("::gc");
   public static int yawCosine;
   public static FileUnpacker aClass153_3154;
   public static int anInt3155;
   public static int anInt3156 = -1;
   public static GameString aClass94_3157 =
-    GameString.create(" est d-Bj-9 dans votre liste noire)3");
+    GameStringStatics.create(" est d-Bj-9 dans votre liste noire)3");
   private int anInt3147 = 4;
   private int anInt3149 = 4;
 
@@ -234,7 +236,7 @@ public final class TextureSampler20 extends AbstractTextureSampler {
           synchronized (var14) {
             if (GameCanvas.aBoolean29) {
               if (Structure.anInt3644 != 0 || DisplayMode.aClass67_1443.anInt1018 >= 40) {
-                ++GameString.anInt2145;
+                ++GlobalStatics_0.anInt2145;
                 TextureSampler12.secureBuffer.writePacket(123);
                 var3 = 0;
                 TextureSampler12.secureBuffer.writeByte(0);
@@ -340,7 +342,7 @@ public final class TextureSampler20 extends AbstractTextureSampler {
           if ((Structure.anInt3644 != 0)) {
             ++LightIntensity.anInt900;
             long var15 =
-              (-AbstractIndexedColorSprite.aLong1465 + AbstractSomethingTexture.aLong1102) / 50L;
+              (-GlobalStatics_1.aLong1465 + AbstractSomethingTexture.aLong1102) / 50L;
             var3 = DummyClass36.anInt2614;
             if (var3 >= 0) {
               if (var3 > '\uffff') {
@@ -355,7 +357,7 @@ public final class TextureSampler20 extends AbstractTextureSampler {
             }
 
             var4 = DummyClass5.anInt2993;
-            AbstractIndexedColorSprite.aLong1465 = AbstractSomethingTexture.aLong1102;
+            GlobalStatics_1.aLong1465 = AbstractSomethingTexture.aLong1102;
             byte var19 = 0;
             if ((var4 >= 0)) {
               if (var4 > '\uffff') {
@@ -627,8 +629,8 @@ public final class TextureSampler20 extends AbstractTextureSampler {
                 DummyClass29.method909(117, MouseRecorder.aClass11_1017);
                 if (((5 + MilliFrameRegulator.anInt2693) < SomethingTilek.anInt1676)
                   || SomethingTilek.anInt1676 < -5 + MilliFrameRegulator.anInt2693
-                  || ((DummyInputStream.anInt40 + 5) < HashTable.anInt1709)
-                  || -5 + DummyInputStream.anInt40 > HashTable.anInt1709) {
+                  || ((DummyInputStream.anInt40 + 5) < GlobalStatics_0.anInt1709)
+                  || -5 + DummyInputStream.anInt40 > GlobalStatics_0.anInt1709) {
                   SomethingScene.aBoolean1074 = true;
                 }
 
@@ -878,12 +880,12 @@ public final class TextureSampler20 extends AbstractTextureSampler {
                             && AudioWorker.aClass64_351.status == 1) {
                             if (AudioWorker.aClass64_351.result != null) {
                               DummyClass54.method1596(TextureSampler5.aClass94_3295, (byte) 126,
-                                GameString.aBoolean2154);
+                                GlobalStatics_0.aBoolean2154);
                             }
 
                             TextureSampler5.aClass94_3295 = null;
                             AudioWorker.aClass64_351 = null;
-                            GameString.aBoolean2154 = false;
+                            GlobalStatics_0.aBoolean2154 = false;
                           }
 
                           ++TextureSampler18.anInt4032;
@@ -893,7 +895,7 @@ public final class TextureSampler20 extends AbstractTextureSampler {
                             GameException.anInt2120 = 0;
                             var22 = (int) (8.0D * Math.random());
                             if (((var22 & 4) == 4)) {
-                              StringNode.anInt2589 += DummyHashTable.anInt1682;
+                              GlobalStatics_0.anInt2589 += DummyHashTable.anInt1682;
                             }
 
                             if (((var22 & 2) == 2)) {
@@ -937,7 +939,7 @@ public final class TextureSampler20 extends AbstractTextureSampler {
                             SceneGraphTile.anInt2217 = -2;
                           }
 
-                          if (StringNode.anInt2589 < -40) {
+                          if (GlobalStatics_0.anInt2589 < -40) {
                             DummyHashTable.anInt1682 = 1;
                           }
 
@@ -945,7 +947,7 @@ public final class TextureSampler20 extends AbstractTextureSampler {
                             AbstractMouseWheel.anInt1901 = -2;
                           }
 
-                          if ((StringNode.anInt2589 > 40)) {
+                          if ((GlobalStatics_0.anInt2589 > 40)) {
                             DummyHashTable.anInt1682 = -1;
                           }
 

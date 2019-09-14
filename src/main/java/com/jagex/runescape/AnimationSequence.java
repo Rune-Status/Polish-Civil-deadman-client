@@ -1,9 +1,13 @@
 package com.jagex.runescape;
 
 import com.jagex.runescape.buffer.Buffer;
+import com.jagex.runescape.common.GameString;
+import com.jagex.runescape.common.GameStringStatics;
+import com.jagex.runescape.common.HashTable;
 import com.jagex.runescape.opengl.GlModel;
 import com.jagex.runescape.opengl.GlRenderer;
 import com.jagex.runescape.opengl.SomethingGl0;
+import com.jagex.runescape.sprite.AbstractIndexedColorSprite;
 
 public final class AnimationSequence {
 
@@ -15,7 +19,7 @@ public final class AnimationSequence {
   public static FileUnpacker animationSequences;
   public static int fps;
   public static GameString aClass94_1863 =
-    GameString.create(" steht bereits auf Ihrer Freunde)2Liste(Q");
+    GameStringStatics.create(" steht bereits auf Ihrer Freunde)2Liste(Q");
   public static SceneSomething[] aClass25Array1868;
   public static int[] anIntArray1871 = new int[2];
   public int anInt1845 = 2;
@@ -469,7 +473,7 @@ public final class AnimationSequence {
   public static void method2061(boolean var0) {
     MonoChromaticImageBuffer.anInt2556 = 0;
       Mobile.aBoolean2774 = true;
-      AbstractIndexedColorSprite.aLong1465 = 0L;
+      GlobalStatics_1.aLong1465 = 0L;
       SceneSomething2.anInt1060 = 0;
       ByteArrayNode.anInt3613 = 0;
       DummyClass52.anInt1172 = 0;
@@ -509,13 +513,13 @@ public final class AnimationSequence {
       LightIntensity.anInt900 = 0;
       WidgetAccess.anInt2204 = 0;
       DummyClass18.anInt79 = 0;
-      HashTable.anInt1701 = 0;
+      GlobalStatics_0.anInt1701 = 0;
       TextureSampler13.anInt3365 = 0;
       BufferObject.anInt1886 = 0;
       TextureSampler10.anInt3442 = 0;
       SomethingIndex150.anInt2081 = 0;
       Light.anInt715 = 0;
-      GameString.anInt2145 = 0;
+      GlobalStatics_0.anInt2145 = 0;
       ByteArrayNode.anInt3609 = 0;
       SomethingOtherWorldMap.anInt2540 = 0;
       TextureSampler25.anInt3402 = 0;
@@ -609,11 +613,11 @@ public final class AnimationSequence {
       AbstractTextureSampler.method153(112);
       IdentityKit.lastPacketId2 = -1;
       EnumStringFetcher.lastPacketId1 = -1;
-      GameString.packetId = -1;
+      GlobalStatics_0.packetId = -1;
       DummyClass13.anInt2023 = 0;
       DummyClass36.updateTime = 0;
       TextureSampler12.secureBuffer.position = 0;
-      StringNode.lastPacketId0 = -1;
+      GlobalStatics_0.lastPacketId0 = -1;
       AbstractDirectColorSprite.anInt3699 = 0;
       SpotAnimationConfig.gameBuffer.position = 0;
 
@@ -627,7 +631,7 @@ public final class AnimationSequence {
       DummyClass30.method940(119, 0);
 
       for (var1 = 0; (var1 < 100); ++var1) {
-        StringNode.aClass94Array2580[var1] = null;
+        GlobalStatics_0.aClass94Array2580[var1] = null;
       }
 
       Something3d.anInt3012 = 0;
@@ -644,7 +648,7 @@ public final class AnimationSequence {
       DummyClass45.anInt987 = 0;
       TextureSampler9.anInt3102 = -60 + (int) (Math.random() * 120.0D);
       TextureSampler16.anInt3114 = 0;
-      StringNode.anInt2589 = (int) (80.0D * Math.random()) - 40;
+      GlobalStatics_0.anInt2589 = (int) (80.0D * Math.random()) - 40;
       DummyClass6.anInt2046 = 0;
 
       for (var1 = 0; var1 < 2048; ++var1) {

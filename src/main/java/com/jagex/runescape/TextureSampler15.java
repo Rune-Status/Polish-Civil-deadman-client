@@ -1,19 +1,21 @@
 package com.jagex.runescape;
 
 import com.jagex.runescape.buffer.Buffer;
+import com.jagex.runescape.common.GameString;
+import com.jagex.runescape.common.GameStringStatics;
 import java.util.Random;
 
 public final class TextureSampler15 extends AbstractTextureSampler {
 
-  public static GameString aClass94_3190 = GameString.create("<img=1>");
-  public static GameString aClass94_3192 = GameString.create(" ");
-  public static GameString aClass94_3196 = GameString.create("Fps:");
+  public static GameString aClass94_3190 = GameStringStatics.create("<img=1>");
+  public static GameString aClass94_3192 = GameStringStatics.create(" ");
+  public static GameString aClass94_3196 = GameStringStatics.create("Fps:");
   public static int anInt3198;
   public static int anInt3199;
   public static GameWorld[] aClass44_Sub1Array3201 = new GameWorld[0];
   public static long encodedUsername;
   public static int anInt3205;
-  public static GameString aClass94_3206 = GameString.create("Moteur son pr-Bpar-B");
+  public static GameString aClass94_3206 = GameStringStatics.create("Moteur son pr-Bpar-B");
   private int anInt3191 = 2;
   private int anInt3193 = 2048;
   private int anInt3194 = 1;

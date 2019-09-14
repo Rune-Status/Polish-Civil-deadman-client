@@ -1,6 +1,8 @@
 package com.jagex.runescape;
 
 import com.jagex.runescape.buffer.Buffer;
+import com.jagex.runescape.common.GameString;
+import com.jagex.runescape.common.GameStringStatics;
 import com.jagex.runescape.opengl.GlRenderer;
 
 public final class TextureSampler26 extends AbstractTextureSampler {
@@ -9,7 +11,7 @@ public final class TextureSampler26 extends AbstractTextureSampler {
   public static int[] anIntArray3076;
   public static FileUnpacker maps;
   public static boolean focused;
-  public static GameString aClass94_3079 = GameString.create("Examiner");
+  public static GameString aClass94_3079 = GameStringStatics.create("Examiner");
   public static GameString aClass94_3080 = DummyClass53.method1586(23161, 160);
   public static int anInt3081;
   public static int[] anIntArray3082 = new int[100];
@@ -166,7 +168,7 @@ public final class TextureSampler26 extends AbstractTextureSampler {
           int var7 =
             (AudioStreamEncoder3.regionHashes[var4] & 255) * 64 - ProceduralTexture.anInt1152;
           DummyClass43.method1194(var1 + 16239);
-          SomethingVolume15.method374(var6, var0, var5, var7, 0, BlockConfig.collisionMaps);
+          SomethingVolume15.method374(var6, var0, var5, var7, 0, GlobalStatics_0.collisionMaps);
         }
       }
   }
@@ -181,7 +183,7 @@ public final class TextureSampler26 extends AbstractTextureSampler {
         && (var1 != -1)) {
         Inventory.anIntArray2550[SomethingLight0.anInt1552] = var1;
         SomethingIndex150.anIntArray2068[SomethingLight0.anInt1552] = var0;
-        GameString.anIntArray2157[SomethingLight0.anInt1552] = var2;
+        GlobalStatics_0.anIntArray2157[SomethingLight0.anInt1552] = var2;
         TextureCache.aClass135Array2131[SomethingLight0.anInt1552] = null;
         TextureSampler26.anIntArray3083[SomethingLight0.anInt1552] = 0;
         ++SomethingLight0.anInt1552;

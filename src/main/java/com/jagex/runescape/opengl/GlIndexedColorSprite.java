@@ -1,6 +1,6 @@
 package com.jagex.runescape.opengl;
 
-import com.jagex.runescape.AbstractIndexedColorSprite;
+import com.jagex.runescape.sprite.AbstractIndexedColorSprite;
 import com.jagex.runescape.DummyClass53;
 import com.jogamp.opengl.GL2;
 import java.nio.ByteBuffer;

@@ -1,16 +1,19 @@
 package com.jagex.runescape;
 
 import com.jagex.runescape.buffer.Buffer;
+import com.jagex.runescape.common.ArrayUtils;
+import com.jagex.runescape.common.GameString;
+import com.jagex.runescape.common.GameStringStatics;
 import java.util.Random;
 
 public final class TextureSampler28 extends AbstractTextureSampler {
 
   private static GameString aClass94_3306 =
-    GameString.create(" is already on your ignore list)3");
-  public static GameString aClass94_3302 = GameString.create("Connexion perdue)3");
+    GameStringStatics.create(" is already on your ignore list)3");
+  public static GameString aClass94_3302 = GameStringStatics.create("Connexion perdue)3");
   public static FileUnpacker fileUnpacker10;
   public static int loginState;
-  public static GameString aClass94_3307 = GameString.create("<col=00ff80>");
+  public static GameString aClass94_3307 = GameStringStatics.create("<col=00ff80>");
   public static int anInt3313 = 500;
   public static int anInt3315;
   public static GameString aClass94_3311 = TextureSampler28.aClass94_3306;

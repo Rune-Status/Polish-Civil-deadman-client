@@ -1,18 +1,20 @@
 package com.jagex.runescape;
 
+import com.jagex.runescape.common.GameString;
+import com.jagex.runescape.common.GameStringStatics;
 import com.jagex.runescape.opengl.GlDirectColorSprite;
 import com.jagex.runescape.opengl.GlRenderer;
 
 public final class DummyClass36 extends DummyClass35 {
 
   public static int[][][] anIntArrayArrayArray2609;
-  public static GameString aClass94_2610 = GameString.create(")1o");
+  public static GameString aClass94_2610 = GameStringStatics.create(")1o");
   public static String aString2611;
   public static int anInt2612;
   public static AudioWorker aClass15_2613;
   public static int anInt2614;
   public static boolean aBoolean2615;
-  public static GameString aClass94_2616 = GameString.create("blinken3:");
+  public static GameString aClass94_2616 = GameStringStatics.create("blinken3:");
   public static int updateTime;
   public static int anInt2618;
 

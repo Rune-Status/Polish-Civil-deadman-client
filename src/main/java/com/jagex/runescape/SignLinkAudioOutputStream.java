@@ -42,7 +42,7 @@ public final class SignLinkAudioOutputStream extends AbstractAudioOutputStream {
 
   public void bind(Component var1 ) throws Exception {
     SignLinkAudioOutputStream.anInterface1_2970
-        .method5(DummyClass60.sampleRate, (byte) -39, var1, GameString.stereo);
+        .method5(DummyClass60.sampleRate, (byte) -39, var1, GlobalStatics_0.stereo);
   }
 
   public static void method2166() {

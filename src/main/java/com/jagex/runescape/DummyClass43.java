@@ -1,12 +1,14 @@
 package com.jagex.runescape;
 
+import com.jagex.runescape.common.GameString;
+import com.jagex.runescape.common.GameStringStatics;
 import com.jagex.runescape.opengl.GlTexture2d;
 import java.awt.Component;
 
 public final class DummyClass43 {
 
   public static int anInt909 = -1;
-  public static GameString COMMAND_FPS_ON = GameString.create("::fpson");
+  public static GameString COMMAND_FPS_ON = GameStringStatics.create("::fpson");
   public static int[][][] anIntArrayArrayArray911 = new int[2][][];
   public static int[] anIntArray912 = new int[14];
   public static boolean aBoolean913;
@@ -54,7 +56,7 @@ public final class DummyClass43 {
             (AbstractAudioOutputStream) Class.forName(
                 "com.jagex.runescape.BufferedAudioOutputStream").newInstance();
           var9.sampleRate = var0;
-          var9.samples = new int[(!GameString.stereo ? 1 : 2) * 256];
+          var9.samples = new int[(!GlobalStatics_0.stereo ? 1 : 2) * 256];
           var9.bind(var2);
           var9.sampleBufferSize = (var0 & 0xfffffc00) + 1024;
           if ((var9.sampleBufferSize > 16384)) {
@@ -85,7 +87,7 @@ public final class DummyClass43 {
 
           try {
             SignLinkAudioOutputStream var5 = new SignLinkAudioOutputStream(var1, var3);
-            var5.samples = new int[256 * (GameString.stereo ? 2 : 1)];
+            var5.samples = new int[256 * (GlobalStatics_0.stereo ? 2 : 1)];
             var5.sampleRate = var0;
             var5.bind(var2);
             var5.sampleBufferSize = 16384;

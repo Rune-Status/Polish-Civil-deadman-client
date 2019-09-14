@@ -1,15 +1,17 @@
 package com.jagex.runescape;
 
 import com.jagex.runescape.buffer.Buffer;
+import com.jagex.runescape.common.GameString;
+import com.jagex.runescape.common.GameStringStatics;
 import com.jagex.runescape.opengl.GlRenderer;
 import com.jagex.runescape.opengl.GlUtils;
-import com.jagex.runescape.opengl.shader.MaterialShader5;
+import com.jagex.runescape.opengl.MaterialShader5;
 
 public final class ProceduralTexture {
 
   public static ObjectCache aClass93_1146 = new ObjectCache(64);
   public static int anInt1150 = -1;
-  public static GameString SETTINGS_EQ = GameString.create("settings=");
+  public static GameString SETTINGS_EQ = GameStringStatics.create("settings=");
   public static int anInt1152;
   private int[] anIntArray1144;
   private final AbstractTextureSampler aClass3_Sub13_1145;

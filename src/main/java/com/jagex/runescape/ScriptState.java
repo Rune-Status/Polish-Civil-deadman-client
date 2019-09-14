@@ -1,11 +1,14 @@
 package com.jagex.runescape;
 
+import com.jagex.runescape.common.GameString;
+import com.jagex.runescape.common.GameStringStatics;
+
 public final class ScriptState {
 
   public static int amountFloors;
-  public static GameString HINT_HEAD_ICONS = GameString.create("hint_headicons");
+  public static GameString HINT_HEAD_ICONS = GameStringStatics.create("hint_headicons");
   public static int anInt872;
-  public static GameString aClass94_875 = GameString.create("Benutzen");
+  public static GameString aClass94_875 = GameStringStatics.create("Benutzen");
   public static int anInt876;
   public static FileUnpacker configs;
   public int[] anIntArray870;

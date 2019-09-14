@@ -1,11 +1,13 @@
 package com.jagex.runescape;
 
 import com.jagex.runescape.buffer.Buffer;
+import com.jagex.runescape.common.GameString;
+import com.jagex.runescape.common.GameStringStatics;
 import java.awt.Frame;
 
 public final class TextureSampler30 extends AbstractTextureSampler {
 
-  private static GameString aClass94_3120 = GameString.create("M");
+  private static GameString aClass94_3120 = GameStringStatics.create("M");
   public static volatile boolean aBoolean3116 = true;
   public static boolean[][] aBooleanArrayArray3118 = {
     new boolean[0], {true, false, true}, {true, false, false, true}, {false, false, true, true},
@@ -13,10 +15,10 @@ public final class TextureSampler30 extends AbstractTextureSampler {
     {false, false, false, true, true}, {false, true, true}, {true, false, true, true, true},
     {false, true, true, true, true}, {false, true, true, true, true, false}
   };
-  public static GameString aClass94_3119 = GameString.create("vert:");
+  public static GameString aClass94_3119 = GameStringStatics.create("vert:");
   public static Frame fullScreenFrame;
   public static int anInt3122;
-  public static GameString COMMAND_NOCLIP = GameString.create("::noclip");
+  public static GameString COMMAND_NOCLIP = GameStringStatics.create("::noclip");
   public static SignLink signLink;
   public static GameString aClass94_3124 = TextureSampler30.aClass94_3120;
   public static GameString aClass94_3117 = TextureSampler30.aClass94_3120;

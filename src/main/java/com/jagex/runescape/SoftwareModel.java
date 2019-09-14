@@ -4,68 +4,20 @@ import java.util.Arrays;
 
 public final class SoftwareModel extends AbstractModel {
 
-  private static SoftwareModel aClass140_Sub1_Sub2_3902 = new SoftwareModel();
-  private static int[] anIntArray3904 = new int[1];
-  private static int[] anIntArray3905 = new int[1];
-  private static SoftwareModel aClass140_Sub1_Sub2_3906 = new SoftwareModel();
-  private static byte[] aByteArray3907 = new byte[1];
-  private static int[] anIntArray3909 = new int[1];
-  private static short[] aShortArray3910 = new short[1];
-  private static int[] anIntArray3911 = new int[1];
-  private static short[] aShortArray3912 = new short[1];
-  private static int[] anIntArray3913 = new int[1];
-  private static byte[] aByteArray3914 = new byte[1];
-  private static SoftwareModel aClass140_Sub1_Sub2_3915 = new SoftwareModel();
-  private static int[] anIntArray3916 = new int[1];
-  private static boolean[] aBooleanArray3917 = new boolean[4096];
-  private static int[] anIntArray3918 = new int[12];
-  private static int[] anIntArray3919 = new int[10];
-  private static int[] anIntArray3920 = new int[4096];
-  private static int[] anIntArray3921;
-  private static int[] anIntArray3922 = new int[4096];
-  private static int[][] anIntArrayArray3923;
-  private static int[] anIntArray3924;
-  private static int[] anIntArray3925 = new int[10];
-  private static int[][] anIntArrayArray3926;
-  private static boolean aBoolean3927;
-  private static int[] anIntArray3928;
-  private static int[] anIntArray3929;
-  private static int anInt3930;
-  private static int[] anIntArray3931;
-  private static int[] anIntArray3932 = new int[4096];
-  private static byte[] aByteArray3933 = new byte[1];
-  private static int anInt3934;
-  private static int[] anIntArray3935;
-  private static int[] anIntArray3936 = new int[10];
-  private static boolean[] aBooleanArray3937 = new boolean[4096];
-  private static int[][] anIntArrayArray3938;
-  private static int[] anIntArray3939;
-  private static int anInt3940;
-  private static int[] anIntArray3941 = new int[4096];
-  private static boolean aBoolean3942;
-  private static int[] anIntArray3943;
-  private static int[] anIntArray3944 = new int[12];
-  private static int anInt3945;
-  private static int[] anIntArray3946;
-  private static int[] anIntArray3947 = new int[1];
-  private static int[] anIntArray3948 = new int[4096];
-  private static short[] aShortArray3949;
-  private static int[] anIntArray3950;
-
   static {
-    SoftwareModel.anIntArray3946 = new int[1600];
-    SoftwareModel.anIntArrayArray3926 = new int[1600][64];
-    SoftwareModel.anIntArray3935 = new int[32];
-    SoftwareModel.anIntArrayArray3923 = new int[32][512];
+    GlobalStatics_1.anIntArray3946 = new int[1600];
+    GlobalStatics_1.anIntArrayArray3926 = new int[1600][64];
+    GlobalStatics_1.anIntArray3935 = new int[32];
+    GlobalStatics_1.anIntArrayArray3923 = new int[32][512];
 
-    SoftwareModel.anIntArray3924 = new int[1];
-    SoftwareModel.anIntArray3939 = new int[1];
-    SoftwareModel.anIntArray3928 = new int[4096];
-    SoftwareModel.aShortArray3949 = new short[1];
-    SoftwareModel.anIntArray3943 = new int[4096];
-    SoftwareModel.anIntArrayArray3938 = new int[12][4096];
-    SoftwareModel.anIntArray3921 = new int[4096];
-    SoftwareModel.anIntArray3950 = new int[8192];
+    GlobalStatics_1.anIntArray3924 = new int[1];
+    GlobalStatics_1.anIntArray3939 = new int[1];
+    GlobalStatics_1.anIntArray3928 = new int[4096];
+    GlobalStatics_1.aShortArray3949 = new short[1];
+    GlobalStatics_1.anIntArray3943 = new int[4096];
+    GlobalStatics_1.anIntArrayArray3938 = new int[12][4096];
+    GlobalStatics_1.anIntArray3921 = new int[4096];
+    GlobalStatics_1.anIntArray3950 = new int[8192];
   }
 
   public int[] anIntArray3883;
@@ -243,7 +195,7 @@ public final class SoftwareModel extends AbstractModel {
 
           var14 =
             var2 + (var4 * var13.x + var5 * var13.y + var6 * var13.z) / (var8 * var13.c) << 17;
-          this.anIntArray3898[var9] = var14 | SoftwareModel
+          this.anIntArray3898[var9] = var14 | GlobalStatics_1
               .repackHSL(var15, var14 >> 17);
           if (var1.aClass50Array2883 != null
             && var1.aClass50Array2883[this.anIntArray3876[var9]] != null) {
@@ -254,7 +206,7 @@ public final class SoftwareModel extends AbstractModel {
 
           var14 =
             var2 + (var4 * var13.x + var5 * var13.y + var6 * var13.z) / (var8 * var13.c) << 17;
-          this.anIntArray3874[var9] = var14 | SoftwareModel
+          this.anIntArray3874[var9] = var14 | GlobalStatics_1
               .repackHSL(var15, var14 >> 17);
           if (var1.aClass50Array2883 != null
             && var1.aClass50Array2883[this.anIntArray3887[var9]] != null) {
@@ -265,14 +217,14 @@ public final class SoftwareModel extends AbstractModel {
 
           var14 =
             var2 + (var4 * var13.x + var5 * var13.y + var6 * var13.z) / (var8 * var13.c) << 17;
-          this.anIntArray3896[var9] = var14 | SoftwareModel
+          this.anIntArray3896[var9] = var14 | GlobalStatics_1
               .repackHSL(var15, var14 >> 17);
         } else if (var18 == 1) {
           var20 = var1.faceNormals[var9];
           var14 =
             var2 + (var4 * var20.x + var5 * var20.y + var6 * var20.z) / (var8 + var8 / 2) << 17;
           this.anIntArray3898[var9] =
-            var14 | SoftwareModel
+            var14 | GlobalStatics_1
                 .repackHSL(var1.triangleColors[var9] & '\uffff', var14 >> 17);
           this.anIntArray3896[var9] = -1;
         } else if (var18 == 3) {
@@ -290,7 +242,7 @@ public final class SoftwareModel extends AbstractModel {
         }
 
         var14 = var2 + (var4 * var13.x + var5 * var13.y + var6 * var13.z) / (var8 * var13.c);
-        this.anIntArray3898[var9] = SoftwareModel.method1937(var14);
+        this.anIntArray3898[var9] = GlobalStatics_1.method1937(var14);
         if (var1.aClass50Array2883 != null
           && var1.aClass50Array2883[this.anIntArray3876[var9]] != null) {
           var13 = var1.aClass50Array2883[this.anIntArray3876[var9]];
@@ -299,7 +251,7 @@ public final class SoftwareModel extends AbstractModel {
         }
 
         var14 = var2 + (var4 * var13.x + var5 * var13.y + var6 * var13.z) / (var8 * var13.c);
-        this.anIntArray3874[var9] = SoftwareModel.method1937(var14);
+        this.anIntArray3874[var9] = GlobalStatics_1.method1937(var14);
         if (var1.aClass50Array2883 != null
           && var1.aClass50Array2883[this.anIntArray3887[var9]] != null) {
           var13 = var1.aClass50Array2883[this.anIntArray3887[var9]];
@@ -308,11 +260,11 @@ public final class SoftwareModel extends AbstractModel {
         }
 
         var14 = var2 + (var4 * var13.x + var5 * var13.y + var6 * var13.z) / (var8 * var13.c);
-        this.anIntArray3896[var9] = SoftwareModel.method1937(var14);
+        this.anIntArray3896[var9] = GlobalStatics_1.method1937(var14);
       } else if (var18 == 1) {
         var20 = var1.faceNormals[var9];
         var14 = var2 + (var4 * var20.x + var5 * var20.y + var6 * var20.z) / (var8 + var8 / 2);
-        this.anIntArray3898[var9] = SoftwareModel.method1937(var14);
+        this.anIntArray3898[var9] = GlobalStatics_1.method1937(var14);
         this.anIntArray3896[var9] = -1;
       } else {
         this.anIntArray3896[var9] = -2;
@@ -460,13 +412,13 @@ public final class SoftwareModel extends AbstractModel {
   }
 
   private void method1934(int var1) {
-    if (SoftwareModel.aBooleanArray3917[var1]) {
+    if (GlobalStatics_1.aBooleanArray3917[var1]) {
       this.method1942(var1);
     } else {
       int var2 = this.anIntArray3901[var1];
       int var3 = this.anIntArray3876[var1];
       int var4 = this.anIntArray3887[var1];
-      DummyClass40.aBoolean849 = SoftwareModel.aBooleanArray3937[var1];
+      DummyClass40.aBoolean849 = GlobalStatics_1.aBooleanArray3937[var1];
       if (this.aByteArray3903 == null) {
         DummyClass40.anInt850 = 0;
       } else {
@@ -489,47 +441,47 @@ public final class SoftwareModel extends AbstractModel {
         }
 
         if (this.anIntArray3896[var1] == -1) {
-          DummyClass40.method1138(SoftwareModel.anIntArray3932[var2],
-              SoftwareModel.anIntArray3932[var3],
-              SoftwareModel.anIntArray3932[var4],
-              SoftwareModel.anIntArray3943[var2], SoftwareModel.anIntArray3943[var3],
-              SoftwareModel.anIntArray3943[var4],
+          DummyClass40.method1138(GlobalStatics_1.anIntArray3932[var2],
+              GlobalStatics_1.anIntArray3932[var3],
+              GlobalStatics_1.anIntArray3932[var4],
+              GlobalStatics_1.anIntArray3943[var2], GlobalStatics_1.anIntArray3943[var3],
+              GlobalStatics_1.anIntArray3943[var4],
               this.anIntArray3898[var1], this.anIntArray3898[var1], this.anIntArray3898[var1],
-              SoftwareModel.anIntArray3948[var5], SoftwareModel.anIntArray3948[var6],
-              SoftwareModel.anIntArray3948[var7],
-              SoftwareModel.anIntArray3928[var5],
-              SoftwareModel.anIntArray3928[var6], SoftwareModel.anIntArray3928[var7],
-              SoftwareModel.anIntArray3921[var5],
-              SoftwareModel.anIntArray3921[var6],
-              SoftwareModel.anIntArray3921[var7], this.aShortArray3908[var1]);
+              GlobalStatics_1.anIntArray3948[var5], GlobalStatics_1.anIntArray3948[var6],
+              GlobalStatics_1.anIntArray3948[var7],
+              GlobalStatics_1.anIntArray3928[var5],
+              GlobalStatics_1.anIntArray3928[var6], GlobalStatics_1.anIntArray3928[var7],
+              GlobalStatics_1.anIntArray3921[var5],
+              GlobalStatics_1.anIntArray3921[var6],
+              GlobalStatics_1.anIntArray3921[var7], this.aShortArray3908[var1]);
         } else {
-          DummyClass40.method1138(SoftwareModel.anIntArray3932[var2],
-              SoftwareModel.anIntArray3932[var3],
-              SoftwareModel.anIntArray3932[var4],
-              SoftwareModel.anIntArray3943[var2], SoftwareModel.anIntArray3943[var3],
-              SoftwareModel.anIntArray3943[var4],
+          DummyClass40.method1138(GlobalStatics_1.anIntArray3932[var2],
+              GlobalStatics_1.anIntArray3932[var3],
+              GlobalStatics_1.anIntArray3932[var4],
+              GlobalStatics_1.anIntArray3943[var2], GlobalStatics_1.anIntArray3943[var3],
+              GlobalStatics_1.anIntArray3943[var4],
               this.anIntArray3898[var1], this.anIntArray3874[var1], this.anIntArray3896[var1],
-              SoftwareModel.anIntArray3948[var5], SoftwareModel.anIntArray3948[var6],
-              SoftwareModel.anIntArray3948[var7],
-              SoftwareModel.anIntArray3928[var5],
-              SoftwareModel.anIntArray3928[var6], SoftwareModel.anIntArray3928[var7],
-              SoftwareModel.anIntArray3921[var5],
-              SoftwareModel.anIntArray3921[var6],
-              SoftwareModel.anIntArray3921[var7], this.aShortArray3908[var1]);
+              GlobalStatics_1.anIntArray3948[var5], GlobalStatics_1.anIntArray3948[var6],
+              GlobalStatics_1.anIntArray3948[var7],
+              GlobalStatics_1.anIntArray3928[var5],
+              GlobalStatics_1.anIntArray3928[var6], GlobalStatics_1.anIntArray3928[var7],
+              GlobalStatics_1.anIntArray3921[var5],
+              GlobalStatics_1.anIntArray3921[var6],
+              GlobalStatics_1.anIntArray3921[var7], this.aShortArray3908[var1]);
         }
       } else if (this.anIntArray3896[var1] == -1) {
-        DummyClass40.method1144(SoftwareModel.anIntArray3932[var2],
-            SoftwareModel.anIntArray3932[var3],
-            SoftwareModel.anIntArray3932[var4],
-            SoftwareModel.anIntArray3943[var2], SoftwareModel.anIntArray3943[var3],
-            SoftwareModel.anIntArray3943[var4],
+        DummyClass40.method1144(GlobalStatics_1.anIntArray3932[var2],
+            GlobalStatics_1.anIntArray3932[var3],
+            GlobalStatics_1.anIntArray3932[var4],
+            GlobalStatics_1.anIntArray3943[var2], GlobalStatics_1.anIntArray3943[var3],
+            GlobalStatics_1.anIntArray3943[var4],
           DummyClass40.hslTable[this.anIntArray3898[var1] & '\uffff']);
       } else {
-        DummyClass40.method1154(SoftwareModel.anIntArray3932[var2],
-            SoftwareModel.anIntArray3932[var3],
-            SoftwareModel.anIntArray3932[var4],
-            SoftwareModel.anIntArray3943[var2], SoftwareModel.anIntArray3943[var3],
-            SoftwareModel.anIntArray3943[var4],
+        DummyClass40.method1154(GlobalStatics_1.anIntArray3932[var2],
+            GlobalStatics_1.anIntArray3932[var3],
+            GlobalStatics_1.anIntArray3932[var4],
+            GlobalStatics_1.anIntArray3943[var2], GlobalStatics_1.anIntArray3943[var3],
+            GlobalStatics_1.anIntArray3943[var4],
             this.anIntArray3898[var1] & '\uffff', this.anIntArray3874[var1] & '\uffff',
             this.anIntArray3896[var1] & '\uffff');
       }
@@ -546,17 +498,17 @@ public final class SoftwareModel extends AbstractModel {
         int var2;
         if (this.anIntArray3896[var4] == -1) {
           var2 = this.anIntArray3898[var4] & -131072;
-          this.anIntArray3898[var4] = var2 | SoftwareModel
+          this.anIntArray3898[var4] = var2 | GlobalStatics_1
               .repackHSL(var1, var2 >> 17);
         } else if (this.anIntArray3896[var4] != -2) {
           var2 = this.anIntArray3898[var4] & -131072;
-          this.anIntArray3898[var4] = var2 | SoftwareModel
+          this.anIntArray3898[var4] = var2 | GlobalStatics_1
               .repackHSL(var1, var2 >> 17);
           var2 = this.anIntArray3874[var4] & -131072;
-          this.anIntArray3874[var4] = var2 | SoftwareModel
+          this.anIntArray3874[var4] = var2 | GlobalStatics_1
               .repackHSL(var1, var2 >> 17);
           var2 = this.anIntArray3896[var4] & -131072;
-          this.anIntArray3896[var4] = var2 | SoftwareModel
+          this.anIntArray3896[var4] = var2 | GlobalStatics_1
               .repackHSL(var1, var2 >> 17);
         }
       }
@@ -816,9 +768,9 @@ public final class SoftwareModel extends AbstractModel {
     int var5 = this.anIntArray3901[var1];
     int var6 = this.anIntArray3876[var1];
     int var7 = this.anIntArray3887[var1];
-    int var8 = SoftwareModel.anIntArray3921[var5];
-    int var9 = SoftwareModel.anIntArray3921[var6];
-    int var10 = SoftwareModel.anIntArray3921[var7];
+    int var8 = GlobalStatics_1.anIntArray3921[var5];
+    int var9 = GlobalStatics_1.anIntArray3921[var6];
+    int var10 = GlobalStatics_1.anIntArray3921[var7];
     if (this.aByteArray3903 == null) {
       DummyClass40.anInt850 = 0;
     } else {
@@ -830,98 +782,98 @@ public final class SoftwareModel extends AbstractModel {
     int var13;
     int var14;
     if (var8 >= 50) {
-      SoftwareModel.anIntArray3919[var4] = SoftwareModel.anIntArray3943[var5];
-      SoftwareModel.anIntArray3925[var4] = SoftwareModel.anIntArray3932[var5];
-      SoftwareModel.anIntArray3936[var4++] = this.anIntArray3898[var1] & '\uffff';
+      GlobalStatics_1.anIntArray3919[var4] = GlobalStatics_1.anIntArray3943[var5];
+      GlobalStatics_1.anIntArray3925[var4] = GlobalStatics_1.anIntArray3932[var5];
+      GlobalStatics_1.anIntArray3936[var4++] = this.anIntArray3898[var1] & '\uffff';
     } else {
-      var11 = SoftwareModel.anIntArray3948[var5];
-      var12 = SoftwareModel.anIntArray3928[var5];
+      var11 = GlobalStatics_1.anIntArray3948[var5];
+      var12 = GlobalStatics_1.anIntArray3928[var5];
       var13 = this.anIntArray3898[var1] & '\uffff';
       if (var10 >= 50) {
         var14 = (50 - var8) * DummyClass40.anIntArray841[var10 - var8];
-        SoftwareModel.anIntArray3919[var4] =
-          var2 + (var11 + ((SoftwareModel.anIntArray3948[var7] - var11) * var14 >> 16) << 9) / 50;
-        SoftwareModel.anIntArray3925[var4] =
-          var3 + (var12 + ((SoftwareModel.anIntArray3928[var7] - var12) * var14 >> 16) << 9) / 50;
-        SoftwareModel.anIntArray3936[var4++] =
+        GlobalStatics_1.anIntArray3919[var4] =
+          var2 + (var11 + ((GlobalStatics_1.anIntArray3948[var7] - var11) * var14 >> 16) << 9) / 50;
+        GlobalStatics_1.anIntArray3925[var4] =
+          var3 + (var12 + ((GlobalStatics_1.anIntArray3928[var7] - var12) * var14 >> 16) << 9) / 50;
+        GlobalStatics_1.anIntArray3936[var4++] =
           var13 + (((this.anIntArray3896[var1] & '\uffff') - var13) * var14 >> 16);
       }
 
       if (var9 >= 50) {
         var14 = (50 - var8) * DummyClass40.anIntArray841[var9 - var8];
-        SoftwareModel.anIntArray3919[var4] =
-          var2 + (var11 + ((SoftwareModel.anIntArray3948[var6] - var11) * var14 >> 16) << 9) / 50;
-        SoftwareModel.anIntArray3925[var4] =
-          var3 + (var12 + ((SoftwareModel.anIntArray3928[var6] - var12) * var14 >> 16) << 9) / 50;
-        SoftwareModel.anIntArray3936[var4++] =
+        GlobalStatics_1.anIntArray3919[var4] =
+          var2 + (var11 + ((GlobalStatics_1.anIntArray3948[var6] - var11) * var14 >> 16) << 9) / 50;
+        GlobalStatics_1.anIntArray3925[var4] =
+          var3 + (var12 + ((GlobalStatics_1.anIntArray3928[var6] - var12) * var14 >> 16) << 9) / 50;
+        GlobalStatics_1.anIntArray3936[var4++] =
           var13 + (((this.anIntArray3874[var1] & '\uffff') - var13) * var14 >> 16);
       }
     }
 
     if (var9 >= 50) {
-      SoftwareModel.anIntArray3919[var4] = SoftwareModel.anIntArray3943[var6];
-      SoftwareModel.anIntArray3925[var4] = SoftwareModel.anIntArray3932[var6];
-      SoftwareModel.anIntArray3936[var4++] = this.anIntArray3874[var1] & '\uffff';
+      GlobalStatics_1.anIntArray3919[var4] = GlobalStatics_1.anIntArray3943[var6];
+      GlobalStatics_1.anIntArray3925[var4] = GlobalStatics_1.anIntArray3932[var6];
+      GlobalStatics_1.anIntArray3936[var4++] = this.anIntArray3874[var1] & '\uffff';
     } else {
-      var11 = SoftwareModel.anIntArray3948[var6];
-      var12 = SoftwareModel.anIntArray3928[var6];
+      var11 = GlobalStatics_1.anIntArray3948[var6];
+      var12 = GlobalStatics_1.anIntArray3928[var6];
       var13 = this.anIntArray3874[var1] & '\uffff';
       if (var8 >= 50) {
         var14 = (50 - var9) * DummyClass40.anIntArray841[var8 - var9];
-        SoftwareModel.anIntArray3919[var4] =
-          var2 + (var11 + ((SoftwareModel.anIntArray3948[var5] - var11) * var14 >> 16) << 9) / 50;
-        SoftwareModel.anIntArray3925[var4] =
-          var3 + (var12 + ((SoftwareModel.anIntArray3928[var5] - var12) * var14 >> 16) << 9) / 50;
-        SoftwareModel.anIntArray3936[var4++] =
+        GlobalStatics_1.anIntArray3919[var4] =
+          var2 + (var11 + ((GlobalStatics_1.anIntArray3948[var5] - var11) * var14 >> 16) << 9) / 50;
+        GlobalStatics_1.anIntArray3925[var4] =
+          var3 + (var12 + ((GlobalStatics_1.anIntArray3928[var5] - var12) * var14 >> 16) << 9) / 50;
+        GlobalStatics_1.anIntArray3936[var4++] =
           var13 + (((this.anIntArray3898[var1] & '\uffff') - var13) * var14 >> 16);
       }
 
       if (var10 >= 50) {
         var14 = (50 - var9) * DummyClass40.anIntArray841[var10 - var9];
-        SoftwareModel.anIntArray3919[var4] =
-          var2 + (var11 + ((SoftwareModel.anIntArray3948[var7] - var11) * var14 >> 16) << 9) / 50;
-        SoftwareModel.anIntArray3925[var4] =
-          var3 + (var12 + ((SoftwareModel.anIntArray3928[var7] - var12) * var14 >> 16) << 9) / 50;
-        SoftwareModel.anIntArray3936[var4++] =
+        GlobalStatics_1.anIntArray3919[var4] =
+          var2 + (var11 + ((GlobalStatics_1.anIntArray3948[var7] - var11) * var14 >> 16) << 9) / 50;
+        GlobalStatics_1.anIntArray3925[var4] =
+          var3 + (var12 + ((GlobalStatics_1.anIntArray3928[var7] - var12) * var14 >> 16) << 9) / 50;
+        GlobalStatics_1.anIntArray3936[var4++] =
           var13 + (((this.anIntArray3896[var1] & '\uffff') - var13) * var14 >> 16);
       }
     }
 
     if (var10 >= 50) {
-      SoftwareModel.anIntArray3919[var4] = SoftwareModel.anIntArray3943[var7];
-      SoftwareModel.anIntArray3925[var4] = SoftwareModel.anIntArray3932[var7];
-      SoftwareModel.anIntArray3936[var4++] = this.anIntArray3896[var1] & '\uffff';
+      GlobalStatics_1.anIntArray3919[var4] = GlobalStatics_1.anIntArray3943[var7];
+      GlobalStatics_1.anIntArray3925[var4] = GlobalStatics_1.anIntArray3932[var7];
+      GlobalStatics_1.anIntArray3936[var4++] = this.anIntArray3896[var1] & '\uffff';
     } else {
-      var11 = SoftwareModel.anIntArray3948[var7];
-      var12 = SoftwareModel.anIntArray3928[var7];
+      var11 = GlobalStatics_1.anIntArray3948[var7];
+      var12 = GlobalStatics_1.anIntArray3928[var7];
       var13 = this.anIntArray3896[var1] & '\uffff';
       if (var9 >= 50) {
         var14 = (50 - var10) * DummyClass40.anIntArray841[var9 - var10];
-        SoftwareModel.anIntArray3919[var4] =
-          var2 + (var11 + ((SoftwareModel.anIntArray3948[var6] - var11) * var14 >> 16) << 9) / 50;
-        SoftwareModel.anIntArray3925[var4] =
-          var3 + (var12 + ((SoftwareModel.anIntArray3928[var6] - var12) * var14 >> 16) << 9) / 50;
-        SoftwareModel.anIntArray3936[var4++] =
+        GlobalStatics_1.anIntArray3919[var4] =
+          var2 + (var11 + ((GlobalStatics_1.anIntArray3948[var6] - var11) * var14 >> 16) << 9) / 50;
+        GlobalStatics_1.anIntArray3925[var4] =
+          var3 + (var12 + ((GlobalStatics_1.anIntArray3928[var6] - var12) * var14 >> 16) << 9) / 50;
+        GlobalStatics_1.anIntArray3936[var4++] =
           var13 + (((this.anIntArray3874[var1] & '\uffff') - var13) * var14 >> 16);
       }
 
       if (var8 >= 50) {
         var14 = (50 - var10) * DummyClass40.anIntArray841[var8 - var10];
-        SoftwareModel.anIntArray3919[var4] =
-          var2 + (var11 + ((SoftwareModel.anIntArray3948[var5] - var11) * var14 >> 16) << 9) / 50;
-        SoftwareModel.anIntArray3925[var4] =
-          var3 + (var12 + ((SoftwareModel.anIntArray3928[var5] - var12) * var14 >> 16) << 9) / 50;
-        SoftwareModel.anIntArray3936[var4++] =
+        GlobalStatics_1.anIntArray3919[var4] =
+          var2 + (var11 + ((GlobalStatics_1.anIntArray3948[var5] - var11) * var14 >> 16) << 9) / 50;
+        GlobalStatics_1.anIntArray3925[var4] =
+          var3 + (var12 + ((GlobalStatics_1.anIntArray3928[var5] - var12) * var14 >> 16) << 9) / 50;
+        GlobalStatics_1.anIntArray3936[var4++] =
           var13 + (((this.anIntArray3898[var1] & '\uffff') - var13) * var14 >> 16);
       }
     }
 
-    var11 = SoftwareModel.anIntArray3919[0];
-    var12 = SoftwareModel.anIntArray3919[1];
-    var13 = SoftwareModel.anIntArray3919[2];
-    var14 = SoftwareModel.anIntArray3925[0];
-    int var15 = SoftwareModel.anIntArray3925[1];
-    int var16 = SoftwareModel.anIntArray3925[2];
+    var11 = GlobalStatics_1.anIntArray3919[0];
+    var12 = GlobalStatics_1.anIntArray3919[1];
+    var13 = GlobalStatics_1.anIntArray3919[2];
+    var14 = GlobalStatics_1.anIntArray3925[0];
+    int var15 = GlobalStatics_1.anIntArray3925[1];
+    int var16 = GlobalStatics_1.anIntArray3925[2];
     DummyClass40.aBoolean849 = false;
     int var17;
     int var19;
@@ -948,39 +900,39 @@ public final class SoftwareModel extends AbstractModel {
         if (this.anIntArray3896[var1] == -1) {
           DummyClass40.method1138(var14, var15, var16, var11, var12, var13,
               this.anIntArray3898[var1], this.anIntArray3898[var1], this.anIntArray3898[var1],
-              SoftwareModel.anIntArray3948[var17], SoftwareModel.anIntArray3948[var18],
-              SoftwareModel.anIntArray3948[var19],
-              SoftwareModel.anIntArray3928[var17], SoftwareModel.anIntArray3928[var18],
-              SoftwareModel.anIntArray3928[var19],
-              SoftwareModel.anIntArray3921[var17], SoftwareModel.anIntArray3921[var18],
-              SoftwareModel.anIntArray3921[var19],
+              GlobalStatics_1.anIntArray3948[var17], GlobalStatics_1.anIntArray3948[var18],
+              GlobalStatics_1.anIntArray3948[var19],
+              GlobalStatics_1.anIntArray3928[var17], GlobalStatics_1.anIntArray3928[var18],
+              GlobalStatics_1.anIntArray3928[var19],
+              GlobalStatics_1.anIntArray3921[var17], GlobalStatics_1.anIntArray3921[var18],
+              GlobalStatics_1.anIntArray3921[var19],
               this.aShortArray3908[var1]);
         } else {
           DummyClass40.method1138(var14, var15, var16, var11, var12, var13,
-              SoftwareModel.anIntArray3936[0],
-              SoftwareModel.anIntArray3936[1], SoftwareModel.anIntArray3936[2], SoftwareModel.anIntArray3948[var17],
-              SoftwareModel.anIntArray3948[var18],
-              SoftwareModel.anIntArray3948[var19], SoftwareModel.anIntArray3928[var17],
-              SoftwareModel.anIntArray3928[var18],
-              SoftwareModel.anIntArray3928[var19], SoftwareModel.anIntArray3921[var17],
-              SoftwareModel.anIntArray3921[var18],
-              SoftwareModel.anIntArray3921[var19], this.aShortArray3908[var1]);
+              GlobalStatics_1.anIntArray3936[0],
+              GlobalStatics_1.anIntArray3936[1], GlobalStatics_1.anIntArray3936[2], GlobalStatics_1.anIntArray3948[var17],
+              GlobalStatics_1.anIntArray3948[var18],
+              GlobalStatics_1.anIntArray3948[var19], GlobalStatics_1.anIntArray3928[var17],
+              GlobalStatics_1.anIntArray3928[var18],
+              GlobalStatics_1.anIntArray3928[var19], GlobalStatics_1.anIntArray3921[var17],
+              GlobalStatics_1.anIntArray3921[var18],
+              GlobalStatics_1.anIntArray3921[var19], this.aShortArray3908[var1]);
         }
       } else if (this.anIntArray3896[var1] == -1) {
         DummyClass40.method1144(var14, var15, var16, var11, var12, var13,
           DummyClass40.hslTable[this.anIntArray3898[var1] & '\uffff']);
       } else {
         DummyClass40.method1154(var14, var15, var16, var11, var12, var13,
-            SoftwareModel.anIntArray3936[0],
-            SoftwareModel.anIntArray3936[1], SoftwareModel.anIntArray3936[2]);
+            GlobalStatics_1.anIntArray3936[0],
+            GlobalStatics_1.anIntArray3936[1], GlobalStatics_1.anIntArray3936[2]);
       }
     }
 
     if (var4 == 4) {
       if (var11 < 0 || var12 < 0 || var13 < 0 || var11 > DummyClass40.anInt847
         || var12 > DummyClass40.anInt847 || var13 > DummyClass40.anInt847 ||
-          SoftwareModel.anIntArray3919[3] < 0
-        || SoftwareModel.anIntArray3919[3] > DummyClass40.anInt847) {
+          GlobalStatics_1.anIntArray3919[3] < 0
+        || GlobalStatics_1.anIntArray3919[3] > DummyClass40.anInt847) {
         DummyClass40.aBoolean849 = true;
       }
 
@@ -1000,54 +952,54 @@ public final class SoftwareModel extends AbstractModel {
         if (this.anIntArray3896[var1] == -1) {
           DummyClass40.method1138(var14, var15, var16, var11, var12, var13,
               this.anIntArray3898[var1], this.anIntArray3898[var1], this.anIntArray3898[var1],
-              SoftwareModel.anIntArray3948[var17], SoftwareModel.anIntArray3948[var18],
-              SoftwareModel.anIntArray3948[var19],
-              SoftwareModel.anIntArray3928[var17], SoftwareModel.anIntArray3928[var18],
-              SoftwareModel.anIntArray3928[var19],
-              SoftwareModel.anIntArray3921[var17], SoftwareModel.anIntArray3921[var18],
-              SoftwareModel.anIntArray3921[var19], var21);
-          DummyClass40.method1138(var14, var16, SoftwareModel.anIntArray3925[3], var11, var13,
-              SoftwareModel.anIntArray3919[3],
+              GlobalStatics_1.anIntArray3948[var17], GlobalStatics_1.anIntArray3948[var18],
+              GlobalStatics_1.anIntArray3948[var19],
+              GlobalStatics_1.anIntArray3928[var17], GlobalStatics_1.anIntArray3928[var18],
+              GlobalStatics_1.anIntArray3928[var19],
+              GlobalStatics_1.anIntArray3921[var17], GlobalStatics_1.anIntArray3921[var18],
+              GlobalStatics_1.anIntArray3921[var19], var21);
+          DummyClass40.method1138(var14, var16, GlobalStatics_1.anIntArray3925[3], var11, var13,
+              GlobalStatics_1.anIntArray3919[3],
               this.anIntArray3898[var1], this.anIntArray3898[var1], this.anIntArray3898[var1],
-              SoftwareModel.anIntArray3948[var17], SoftwareModel.anIntArray3948[var18],
-              SoftwareModel.anIntArray3948[var19],
-              SoftwareModel.anIntArray3928[var17], SoftwareModel.anIntArray3928[var18],
-              SoftwareModel.anIntArray3928[var19],
-              SoftwareModel.anIntArray3921[var17], SoftwareModel.anIntArray3921[var18],
-              SoftwareModel.anIntArray3921[var19], var21);
+              GlobalStatics_1.anIntArray3948[var17], GlobalStatics_1.anIntArray3948[var18],
+              GlobalStatics_1.anIntArray3948[var19],
+              GlobalStatics_1.anIntArray3928[var17], GlobalStatics_1.anIntArray3928[var18],
+              GlobalStatics_1.anIntArray3928[var19],
+              GlobalStatics_1.anIntArray3921[var17], GlobalStatics_1.anIntArray3921[var18],
+              GlobalStatics_1.anIntArray3921[var19], var21);
         } else {
           DummyClass40.method1138(var14, var15, var16, var11, var12, var13,
-              SoftwareModel.anIntArray3936[0],
-              SoftwareModel.anIntArray3936[1], SoftwareModel.anIntArray3936[2], SoftwareModel.anIntArray3948[var17],
-              SoftwareModel.anIntArray3948[var18],
-              SoftwareModel.anIntArray3948[var19], SoftwareModel.anIntArray3928[var17],
-              SoftwareModel.anIntArray3928[var18],
-              SoftwareModel.anIntArray3928[var19], SoftwareModel.anIntArray3921[var17],
-              SoftwareModel.anIntArray3921[var18],
-              SoftwareModel.anIntArray3921[var19], var21);
-          DummyClass40.method1138(var14, var16, SoftwareModel.anIntArray3925[3], var11, var13,
-              SoftwareModel.anIntArray3919[3],
-              SoftwareModel.anIntArray3936[0], SoftwareModel.anIntArray3936[2], SoftwareModel.anIntArray3936[3],
-              SoftwareModel.anIntArray3948[var17],
-              SoftwareModel.anIntArray3948[var18], SoftwareModel.anIntArray3948[var19],
-              SoftwareModel.anIntArray3928[var17],
-              SoftwareModel.anIntArray3928[var18], SoftwareModel.anIntArray3928[var19],
-              SoftwareModel.anIntArray3921[var17],
-              SoftwareModel.anIntArray3921[var18], SoftwareModel.anIntArray3921[var19], var21);
+              GlobalStatics_1.anIntArray3936[0],
+              GlobalStatics_1.anIntArray3936[1], GlobalStatics_1.anIntArray3936[2], GlobalStatics_1.anIntArray3948[var17],
+              GlobalStatics_1.anIntArray3948[var18],
+              GlobalStatics_1.anIntArray3948[var19], GlobalStatics_1.anIntArray3928[var17],
+              GlobalStatics_1.anIntArray3928[var18],
+              GlobalStatics_1.anIntArray3928[var19], GlobalStatics_1.anIntArray3921[var17],
+              GlobalStatics_1.anIntArray3921[var18],
+              GlobalStatics_1.anIntArray3921[var19], var21);
+          DummyClass40.method1138(var14, var16, GlobalStatics_1.anIntArray3925[3], var11, var13,
+              GlobalStatics_1.anIntArray3919[3],
+              GlobalStatics_1.anIntArray3936[0], GlobalStatics_1.anIntArray3936[2], GlobalStatics_1.anIntArray3936[3],
+              GlobalStatics_1.anIntArray3948[var17],
+              GlobalStatics_1.anIntArray3948[var18], GlobalStatics_1.anIntArray3948[var19],
+              GlobalStatics_1.anIntArray3928[var17],
+              GlobalStatics_1.anIntArray3928[var18], GlobalStatics_1.anIntArray3928[var19],
+              GlobalStatics_1.anIntArray3921[var17],
+              GlobalStatics_1.anIntArray3921[var18], GlobalStatics_1.anIntArray3921[var19], var21);
         }
       } else if (this.anIntArray3896[var1] == -1) {
         var17 = DummyClass40.hslTable[this.anIntArray3898[var1] & '\uffff'];
         DummyClass40.method1144(var14, var15, var16, var11, var12, var13, var17);
-        DummyClass40.method1144(var14, var16, SoftwareModel.anIntArray3925[3], var11, var13,
-            SoftwareModel.anIntArray3919[3],
+        DummyClass40.method1144(var14, var16, GlobalStatics_1.anIntArray3925[3], var11, var13,
+            GlobalStatics_1.anIntArray3919[3],
           var17);
       } else {
         DummyClass40.method1154(var14, var15, var16, var11, var12, var13,
-            SoftwareModel.anIntArray3936[0],
-            SoftwareModel.anIntArray3936[1], SoftwareModel.anIntArray3936[2]);
-        DummyClass40.method1154(var14, var16, SoftwareModel.anIntArray3925[3], var11, var13,
-            SoftwareModel.anIntArray3919[3],
-            SoftwareModel.anIntArray3936[0], SoftwareModel.anIntArray3936[2], SoftwareModel.anIntArray3936[3]);
+            GlobalStatics_1.anIntArray3936[0],
+            GlobalStatics_1.anIntArray3936[1], GlobalStatics_1.anIntArray3936[2]);
+        DummyClass40.method1154(var14, var16, GlobalStatics_1.anIntArray3925[3], var11, var13,
+            GlobalStatics_1.anIntArray3919[3],
+            GlobalStatics_1.anIntArray3936[0], GlobalStatics_1.anIntArray3936[2], GlobalStatics_1.anIntArray3936[3]);
       }
     }
 
@@ -1065,9 +1017,9 @@ public final class SoftwareModel extends AbstractModel {
     if (this.anIntArrayArray3870 == null) {
       return false;
     } else {
-      SoftwareModel.anInt3945 = 0;
-      SoftwareModel.anInt3934 = 0;
-      SoftwareModel.anInt3940 = 0;
+      GlobalStatics_1.anInt3945 = 0;
+      GlobalStatics_1.anInt3934 = 0;
+      GlobalStatics_1.anInt3940 = 0;
       return true;
     }
   }
@@ -1116,21 +1068,21 @@ public final class SoftwareModel extends AbstractModel {
   }
 
   public AbstractModel method1882(boolean var1, boolean var2, boolean var3 ) {
-    if (!var1 && SoftwareModel.aByteArray3914.length < this.anInt3889) {
-      SoftwareModel.aByteArray3914 = new byte[this.anInt3889 + 100];
+    if (!var1 && GlobalStatics_1.aByteArray3914.length < this.anInt3889) {
+      GlobalStatics_1.aByteArray3914 = new byte[this.anInt3889 + 100];
     }
 
-    if (!var2 && SoftwareModel.aShortArray3912.length < this.anInt3889) {
-      SoftwareModel.anIntArray3913 = new int[this.anInt3889 + 100];
-      SoftwareModel.anIntArray3916 = new int[this.anInt3889 + 100];
-      SoftwareModel.anIntArray3911 = new int[this.anInt3889 + 100];
-      SoftwareModel.aShortArray3912 = new short[this.anInt3889 + 100];
+    if (!var2 && GlobalStatics_1.aShortArray3912.length < this.anInt3889) {
+      GlobalStatics_1.anIntArray3913 = new int[this.anInt3889 + 100];
+      GlobalStatics_1.anIntArray3916 = new int[this.anInt3889 + 100];
+      GlobalStatics_1.anIntArray3911 = new int[this.anInt3889 + 100];
+      GlobalStatics_1.aShortArray3912 = new short[this.anInt3889 + 100];
     }
 
-    return this.method1939(var1, var2, SoftwareModel.aClass140_Sub1_Sub2_3906,
-        SoftwareModel.aByteArray3914,
-        SoftwareModel.aShortArray3912,
-        SoftwareModel.anIntArray3913, SoftwareModel.anIntArray3916, SoftwareModel.anIntArray3911);
+    return this.method1939(var1, var2, GlobalStatics_1.aClass140_Sub1_Sub2_3906,
+        GlobalStatics_1.aByteArray3914,
+        GlobalStatics_1.aShortArray3912,
+        GlobalStatics_1.anIntArray3913, GlobalStatics_1.anIntArray3916, GlobalStatics_1.anIntArray3911);
   }
 
   public int method1883() {
@@ -1187,25 +1139,25 @@ public final class SoftwareModel extends AbstractModel {
     int var6;
     if (var1 == 0) {
       var5 = 0;
-      SoftwareModel.anInt3945 = 0;
-      SoftwareModel.anInt3934 = 0;
-      SoftwareModel.anInt3940 = 0;
+      GlobalStatics_1.anInt3945 = 0;
+      GlobalStatics_1.anInt3934 = 0;
+      GlobalStatics_1.anInt3940 = 0;
 
       for (var6 = 0; var6 < this.anInt3891; ++var6) {
-        SoftwareModel.anInt3945 += this.anIntArray3885[var6];
-        SoftwareModel.anInt3934 += this.anIntArray3883[var6];
-        SoftwareModel.anInt3940 += this.anIntArray3895[var6];
+        GlobalStatics_1.anInt3945 += this.anIntArray3885[var6];
+        GlobalStatics_1.anInt3934 += this.anIntArray3883[var6];
+        GlobalStatics_1.anInt3940 += this.anIntArray3895[var6];
         ++var5;
       }
 
       if (var5 > 0) {
-        SoftwareModel.anInt3945 = SoftwareModel.anInt3945 / var5 + var2;
-        SoftwareModel.anInt3934 = SoftwareModel.anInt3934 / var5 + var3;
-        SoftwareModel.anInt3940 = SoftwareModel.anInt3940 / var5 + var4;
+        GlobalStatics_1.anInt3945 = GlobalStatics_1.anInt3945 / var5 + var2;
+        GlobalStatics_1.anInt3934 = GlobalStatics_1.anInt3934 / var5 + var3;
+        GlobalStatics_1.anInt3940 = GlobalStatics_1.anInt3940 / var5 + var4;
       } else {
-        SoftwareModel.anInt3945 = var2;
-        SoftwareModel.anInt3934 = var3;
-        SoftwareModel.anInt3940 = var4;
+        GlobalStatics_1.anInt3945 = var2;
+        GlobalStatics_1.anInt3934 = var3;
+        GlobalStatics_1.anInt3940 = var4;
       }
 
     } else if (var1 == 1) {
@@ -1220,9 +1172,9 @@ public final class SoftwareModel extends AbstractModel {
       int var8;
       if (var1 == 2) {
         for (var5 = 0; var5 < this.anInt3891; ++var5) {
-          this.anIntArray3885[var5] -= SoftwareModel.anInt3945;
-          this.anIntArray3883[var5] -= SoftwareModel.anInt3934;
-          this.anIntArray3895[var5] -= SoftwareModel.anInt3940;
+          this.anIntArray3885[var5] -= GlobalStatics_1.anInt3945;
+          this.anIntArray3883[var5] -= GlobalStatics_1.anInt3934;
+          this.anIntArray3895[var5] -= GlobalStatics_1.anInt3940;
           if (var4 != 0) {
             var6 = DummyClass40.SINE_TABLE[var4];
             var7 = DummyClass40.COSINE_TABLE[var4];
@@ -1253,9 +1205,9 @@ public final class SoftwareModel extends AbstractModel {
             this.anIntArray3885[var5] = var8;
           }
 
-          this.anIntArray3885[var5] += SoftwareModel.anInt3945;
-          this.anIntArray3883[var5] += SoftwareModel.anInt3934;
-          this.anIntArray3895[var5] += SoftwareModel.anInt3940;
+          this.anIntArray3885[var5] += GlobalStatics_1.anInt3945;
+          this.anIntArray3883[var5] += GlobalStatics_1.anInt3934;
+          this.anIntArray3895[var5] += GlobalStatics_1.anInt3940;
         }
 
       } else if (var1 != 3) {
@@ -1299,15 +1251,15 @@ public final class SoftwareModel extends AbstractModel {
         }
       } else {
         for (var5 = 0; var5 < this.anInt3891; ++var5) {
-          this.anIntArray3885[var5] -= SoftwareModel.anInt3945;
-          this.anIntArray3883[var5] -= SoftwareModel.anInt3934;
-          this.anIntArray3895[var5] -= SoftwareModel.anInt3940;
+          this.anIntArray3885[var5] -= GlobalStatics_1.anInt3945;
+          this.anIntArray3883[var5] -= GlobalStatics_1.anInt3934;
+          this.anIntArray3895[var5] -= GlobalStatics_1.anInt3940;
           this.anIntArray3885[var5] = this.anIntArray3885[var5] * var2 / 128;
           this.anIntArray3883[var5] = this.anIntArray3883[var5] * var3 / 128;
           this.anIntArray3895[var5] = this.anIntArray3895[var5] * var4 / 128;
-          this.anIntArray3885[var5] += SoftwareModel.anInt3945;
-          this.anIntArray3883[var5] += SoftwareModel.anInt3934;
-          this.anIntArray3895[var5] += SoftwareModel.anInt3940;
+          this.anIntArray3885[var5] += GlobalStatics_1.anInt3945;
+          this.anIntArray3883[var5] += GlobalStatics_1.anInt3934;
+          this.anIntArray3895[var5] += GlobalStatics_1.anInt3940;
         }
 
       }
@@ -1315,21 +1267,21 @@ public final class SoftwareModel extends AbstractModel {
   }
 
   public AbstractModel method1890(boolean var1, boolean var2, boolean var3 ) {
-    if (!var1 && SoftwareModel.aByteArray3933.length < this.anInt3889) {
-      SoftwareModel.aByteArray3933 = new byte[this.anInt3889 + 100];
+    if (!var1 && GlobalStatics_1.aByteArray3933.length < this.anInt3889) {
+      GlobalStatics_1.aByteArray3933 = new byte[this.anInt3889 + 100];
     }
 
-    if (!var2 && SoftwareModel.aShortArray3949.length < this.anInt3889) {
-      SoftwareModel.anIntArray3939 = new int[this.anInt3889 + 100];
-      SoftwareModel.anIntArray3947 = new int[this.anInt3889 + 100];
-      SoftwareModel.anIntArray3924 = new int[this.anInt3889 + 100];
-      SoftwareModel.aShortArray3949 = new short[this.anInt3889 + 100];
+    if (!var2 && GlobalStatics_1.aShortArray3949.length < this.anInt3889) {
+      GlobalStatics_1.anIntArray3939 = new int[this.anInt3889 + 100];
+      GlobalStatics_1.anIntArray3947 = new int[this.anInt3889 + 100];
+      GlobalStatics_1.anIntArray3924 = new int[this.anInt3889 + 100];
+      GlobalStatics_1.aShortArray3949 = new short[this.anInt3889 + 100];
     }
 
-    return this.method1939(var1, var2, SoftwareModel.aClass140_Sub1_Sub2_3915,
-        SoftwareModel.aByteArray3933,
-        SoftwareModel.aShortArray3949,
-        SoftwareModel.anIntArray3939, SoftwareModel.anIntArray3947, SoftwareModel.anIntArray3924);
+    return this.method1939(var1, var2, GlobalStatics_1.aClass140_Sub1_Sub2_3915,
+        GlobalStatics_1.aByteArray3933,
+        GlobalStatics_1.aShortArray3949,
+        GlobalStatics_1.anIntArray3939, GlobalStatics_1.anIntArray3947, GlobalStatics_1.anIntArray3924);
   }
 
   public void method1891(int var1, int[] var2, int var3, int var4, int var5,
@@ -1341,9 +1293,9 @@ public final class SoftwareModel extends AbstractModel {
     int var13;
     if (var1 == 0) {
       var8 = 0;
-      SoftwareModel.anInt3945 = 0;
-      SoftwareModel.anInt3934 = 0;
-      SoftwareModel.anInt3940 = 0;
+      GlobalStatics_1.anInt3945 = 0;
+      GlobalStatics_1.anInt3934 = 0;
+      GlobalStatics_1.anInt3940 = 0;
 
       for (var9 = 0; var9 < var7; ++var9) {
         int var17 = var2[var9];
@@ -1352,22 +1304,22 @@ public final class SoftwareModel extends AbstractModel {
 
           for (var12 = 0; var12 < var18.length; ++var12) {
             var13 = var18[var12];
-            SoftwareModel.anInt3945 += this.anIntArray3885[var13];
-            SoftwareModel.anInt3934 += this.anIntArray3883[var13];
-            SoftwareModel.anInt3940 += this.anIntArray3895[var13];
+            GlobalStatics_1.anInt3945 += this.anIntArray3885[var13];
+            GlobalStatics_1.anInt3934 += this.anIntArray3883[var13];
+            GlobalStatics_1.anInt3940 += this.anIntArray3895[var13];
             ++var8;
           }
         }
       }
 
       if (var8 > 0) {
-        SoftwareModel.anInt3945 = SoftwareModel.anInt3945 / var8 + var3;
-        SoftwareModel.anInt3934 = SoftwareModel.anInt3934 / var8 + var4;
-        SoftwareModel.anInt3940 = SoftwareModel.anInt3940 / var8 + var5;
+        GlobalStatics_1.anInt3945 = GlobalStatics_1.anInt3945 / var8 + var3;
+        GlobalStatics_1.anInt3934 = GlobalStatics_1.anInt3934 / var8 + var4;
+        GlobalStatics_1.anInt3940 = GlobalStatics_1.anInt3940 / var8 + var5;
       } else {
-        SoftwareModel.anInt3945 = var3;
-        SoftwareModel.anInt3934 = var4;
-        SoftwareModel.anInt3940 = var5;
+        GlobalStatics_1.anInt3945 = var3;
+        GlobalStatics_1.anInt3934 = var4;
+        GlobalStatics_1.anInt3940 = var5;
       }
 
     } else {
@@ -1399,9 +1351,9 @@ public final class SoftwareModel extends AbstractModel {
 
               for (var11 = 0; var11 < var10.length; ++var11) {
                 var12 = var10[var11];
-                this.anIntArray3885[var12] -= SoftwareModel.anInt3945;
-                this.anIntArray3883[var12] -= SoftwareModel.anInt3934;
-                this.anIntArray3895[var12] -= SoftwareModel.anInt3940;
+                this.anIntArray3885[var12] -= GlobalStatics_1.anInt3945;
+                this.anIntArray3883[var12] -= GlobalStatics_1.anInt3934;
+                this.anIntArray3895[var12] -= GlobalStatics_1.anInt3940;
                 if (var5 != 0) {
                   var13 = DummyClass40.SINE_TABLE[var5];
                   var14 = DummyClass40.COSINE_TABLE[var5];
@@ -1438,9 +1390,9 @@ public final class SoftwareModel extends AbstractModel {
                   this.anIntArray3885[var12] = var15;
                 }
 
-                this.anIntArray3885[var12] += SoftwareModel.anInt3945;
-                this.anIntArray3883[var12] += SoftwareModel.anInt3934;
-                this.anIntArray3895[var12] += SoftwareModel.anInt3940;
+                this.anIntArray3885[var12] += GlobalStatics_1.anInt3945;
+                this.anIntArray3883[var12] += GlobalStatics_1.anInt3934;
+                this.anIntArray3895[var12] += GlobalStatics_1.anInt3940;
               }
             }
           }
@@ -1453,15 +1405,15 @@ public final class SoftwareModel extends AbstractModel {
 
               for (var11 = 0; var11 < var10.length; ++var11) {
                 var12 = var10[var11];
-                this.anIntArray3885[var12] -= SoftwareModel.anInt3945;
-                this.anIntArray3883[var12] -= SoftwareModel.anInt3934;
-                this.anIntArray3895[var12] -= SoftwareModel.anInt3940;
+                this.anIntArray3885[var12] -= GlobalStatics_1.anInt3945;
+                this.anIntArray3883[var12] -= GlobalStatics_1.anInt3934;
+                this.anIntArray3895[var12] -= GlobalStatics_1.anInt3940;
                 this.anIntArray3885[var12] = this.anIntArray3885[var12] * var3 / 128;
                 this.anIntArray3883[var12] = this.anIntArray3883[var12] * var4 / 128;
                 this.anIntArray3895[var12] = this.anIntArray3895[var12] * var5 / 128;
-                this.anIntArray3885[var12] += SoftwareModel.anInt3945;
-                this.anIntArray3883[var12] += SoftwareModel.anInt3934;
-                this.anIntArray3895[var12] += SoftwareModel.anInt3940;
+                this.anIntArray3885[var12] += GlobalStatics_1.anInt3945;
+                this.anIntArray3883[var12] += GlobalStatics_1.anInt3934;
+                this.anIntArray3895[var12] += GlobalStatics_1.anInt3940;
               }
             }
           }
@@ -1576,13 +1528,13 @@ public final class SoftwareModel extends AbstractModel {
         var24 += var7;
         var25 = var23 * var19 - var24 * var18 >> 16;
         var24 = var23 * var18 + var24 * var19 >> 16;
-        SoftwareModel.anIntArray3920[var21] = var24 - var20;
-        SoftwareModel.anIntArray3943[var21] = var10 + (var22 << 9) / var24;
-        SoftwareModel.anIntArray3932[var21] = var11 + (var25 << 9) / var24;
+        GlobalStatics_1.anIntArray3920[var21] = var24 - var20;
+        GlobalStatics_1.anIntArray3943[var21] = var10 + (var22 << 9) / var24;
+        GlobalStatics_1.anIntArray3932[var21] = var11 + (var25 << 9) / var24;
         if (this.anInt3900 > 0) {
-          SoftwareModel.anIntArray3948[var21] = var22;
-          SoftwareModel.anIntArray3928[var21] = var25;
-          SoftwareModel.anIntArray3921[var21] = var24;
+          GlobalStatics_1.anIntArray3948[var21] = var22;
+          GlobalStatics_1.anIntArray3928[var21] = var25;
+          GlobalStatics_1.anIntArray3921[var21] = var24;
         }
       }
 
@@ -1591,21 +1543,21 @@ public final class SoftwareModel extends AbstractModel {
   }
 
   public AbstractModel method1894(boolean var1, boolean var2, boolean var3 ) {
-    if (!var1 && SoftwareModel.aByteArray3907.length < this.anInt3889) {
-      SoftwareModel.aByteArray3907 = new byte[this.anInt3889 + 100];
+    if (!var1 && GlobalStatics_1.aByteArray3907.length < this.anInt3889) {
+      GlobalStatics_1.aByteArray3907 = new byte[this.anInt3889 + 100];
     }
 
-    if (!var2 && SoftwareModel.aShortArray3910.length < this.anInt3889) {
-      SoftwareModel.anIntArray3905 = new int[this.anInt3889 + 100];
-      SoftwareModel.anIntArray3909 = new int[this.anInt3889 + 100];
-      SoftwareModel.anIntArray3904 = new int[this.anInt3889 + 100];
-      SoftwareModel.aShortArray3910 = new short[this.anInt3889 + 100];
+    if (!var2 && GlobalStatics_1.aShortArray3910.length < this.anInt3889) {
+      GlobalStatics_1.anIntArray3905 = new int[this.anInt3889 + 100];
+      GlobalStatics_1.anIntArray3909 = new int[this.anInt3889 + 100];
+      GlobalStatics_1.anIntArray3904 = new int[this.anInt3889 + 100];
+      GlobalStatics_1.aShortArray3910 = new short[this.anInt3889 + 100];
     }
 
-    return this.method1939(var1, var2, SoftwareModel.aClass140_Sub1_Sub2_3902,
-        SoftwareModel.aByteArray3907,
-        SoftwareModel.aShortArray3910,
-        SoftwareModel.anIntArray3905, SoftwareModel.anIntArray3909, SoftwareModel.anIntArray3904);
+    return this.method1939(var1, var2, GlobalStatics_1.aClass140_Sub1_Sub2_3902,
+        GlobalStatics_1.aByteArray3907,
+        GlobalStatics_1.aShortArray3910,
+        GlobalStatics_1.anIntArray3905, GlobalStatics_1.anIntArray3909, GlobalStatics_1.anIntArray3904);
   }
 
   public void method1896(int var1 ) {
@@ -1650,7 +1602,7 @@ public final class SoftwareModel extends AbstractModel {
             if (var21 / var13 > DummyClass3.screenUpperY) {
               int var22 = var20 + (-this.aShort3884
                   * var2 + this.aShort3894 * var3 >> 16) << 9;
-              if (var22 / var13 < BlockConfig.screenLowerY) {
+              if (var22 / var13 < GlobalStatics_0.screenLowerY) {
                 boolean var23 = false;
                 boolean var24 = var14 <= 50;
                 boolean var25 = var24 || this.anInt3900 > 0;
@@ -1780,19 +1732,19 @@ public final class SoftwareModel extends AbstractModel {
                   var32 = var46;
                   var46 = var33 * var3 - var34 * var2 >> 16;
                   var34 = var33 * var2 + var34 * var3 >> 16;
-                  SoftwareModel.anIntArray3920[var31] = var34 - var16;
+                  GlobalStatics_1.anIntArray3920[var31] = var34 - var16;
                   if (var34 >= 50) {
-                    SoftwareModel.anIntArray3943[var31] = var26 + (var32 << 9) / var34;
-                    SoftwareModel.anIntArray3932[var31] = var27 + (var46 << 9) / var34;
+                    GlobalStatics_1.anIntArray3943[var31] = var26 + (var32 << 9) / var34;
+                    GlobalStatics_1.anIntArray3932[var31] = var27 + (var46 << 9) / var34;
                   } else {
-                    SoftwareModel.anIntArray3943[var31] = -5000;
+                    GlobalStatics_1.anIntArray3943[var31] = -5000;
                     var23 = true;
                   }
 
                   if (var25) {
-                    SoftwareModel.anIntArray3948[var31] = var32;
-                    SoftwareModel.anIntArray3928[var31] = var46;
-                    SoftwareModel.anIntArray3921[var31] = var34;
+                    GlobalStatics_1.anIntArray3948[var31] = var32;
+                    GlobalStatics_1.anIntArray3928[var31] = var46;
+                    GlobalStatics_1.anIntArray3921[var31] = var34;
                   }
                 }
 
@@ -1844,9 +1796,9 @@ public final class SoftwareModel extends AbstractModel {
     int var47;
     if (var1 == 0) {
       var10 = 0;
-      SoftwareModel.anInt3945 = 0;
-      SoftwareModel.anInt3934 = 0;
-      SoftwareModel.anInt3940 = 0;
+      GlobalStatics_1.anInt3945 = 0;
+      GlobalStatics_1.anInt3934 = 0;
+      GlobalStatics_1.anInt3940 = 0;
 
       for (var11 = 0; var11 < var9; ++var11) {
         var47 = var2[var11];
@@ -1856,9 +1808,9 @@ public final class SoftwareModel extends AbstractModel {
           for (var14 = 0; var14 < var48.length; ++var14) {
             var15 = var48[var14];
             if (this.aShortArray3893 == null || (var7 & this.aShortArray3893[var15]) != 0) {
-              SoftwareModel.anInt3945 += this.anIntArray3885[var15];
-              SoftwareModel.anInt3934 += this.anIntArray3883[var15];
-              SoftwareModel.anInt3940 += this.anIntArray3895[var15];
+              GlobalStatics_1.anInt3945 += this.anIntArray3885[var15];
+              GlobalStatics_1.anInt3934 += this.anIntArray3883[var15];
+              GlobalStatics_1.anInt3940 += this.anIntArray3895[var15];
               ++var10;
             }
           }
@@ -1866,14 +1818,14 @@ public final class SoftwareModel extends AbstractModel {
       }
 
       if (var10 > 0) {
-        SoftwareModel.anInt3945 = SoftwareModel.anInt3945 / var10 + var3;
-        SoftwareModel.anInt3934 = SoftwareModel.anInt3934 / var10 + var4;
-        SoftwareModel.anInt3940 = SoftwareModel.anInt3940 / var10 + var5;
-        SoftwareModel.aBoolean3927 = true;
+        GlobalStatics_1.anInt3945 = GlobalStatics_1.anInt3945 / var10 + var3;
+        GlobalStatics_1.anInt3934 = GlobalStatics_1.anInt3934 / var10 + var4;
+        GlobalStatics_1.anInt3940 = GlobalStatics_1.anInt3940 / var10 + var5;
+        GlobalStatics_1.aBoolean3927 = true;
       } else {
-        SoftwareModel.anInt3945 = var3;
-        SoftwareModel.anInt3934 = var4;
-        SoftwareModel.anInt3940 = var5;
+        GlobalStatics_1.anInt3945 = var3;
+        GlobalStatics_1.anInt3934 = var4;
+        GlobalStatics_1.anInt3940 = var5;
       }
 
     } else {
@@ -1936,23 +1888,23 @@ public final class SoftwareModel extends AbstractModel {
             var13 = var8[12];
             var14 = var8[13];
             var15 = var8[14];
-            if (SoftwareModel.aBoolean3927) {
-              var16 = var8[0] * SoftwareModel.anInt3945 + var8[3] * SoftwareModel.anInt3934
-                  + var8[6] * SoftwareModel.anInt3940
+            if (GlobalStatics_1.aBoolean3927) {
+              var16 = var8[0] * GlobalStatics_1.anInt3945 + var8[3] * GlobalStatics_1.anInt3934
+                  + var8[6] * GlobalStatics_1.anInt3940
                   + 16384 >> 15;
-              var17 = var8[1] * SoftwareModel.anInt3945 + var8[4] * SoftwareModel.anInt3934
-                  + var8[7] * SoftwareModel.anInt3940
+              var17 = var8[1] * GlobalStatics_1.anInt3945 + var8[4] * GlobalStatics_1.anInt3934
+                  + var8[7] * GlobalStatics_1.anInt3940
                   + 16384 >> 15;
-              var18 = var8[2] * SoftwareModel.anInt3945 + var8[5] * SoftwareModel.anInt3934
-                  + var8[8] * SoftwareModel.anInt3940
+              var18 = var8[2] * GlobalStatics_1.anInt3945 + var8[5] * GlobalStatics_1.anInt3934
+                  + var8[8] * GlobalStatics_1.anInt3940
                   + 16384 >> 15;
               var16 += var13;
               var17 += var14;
               var18 += var15;
-              SoftwareModel.anInt3945 = var16;
-              SoftwareModel.anInt3934 = var17;
-              SoftwareModel.anInt3940 = var18;
-              SoftwareModel.aBoolean3927 = false;
+              GlobalStatics_1.anInt3945 = var16;
+              GlobalStatics_1.anInt3934 = var17;
+              GlobalStatics_1.anInt3940 = var18;
+              GlobalStatics_1.aBoolean3927 = false;
             }
 
             int[] var49 = new int[9];
@@ -1974,20 +1926,20 @@ public final class SoftwareModel extends AbstractModel {
             var49[7] = var20 * var22 + var19 * var23 + 16384 >> 15;
             var49[8] = var19 * var17 + 16384 >> 15;
             int var50 =
-              var49[0] * -SoftwareModel.anInt3945 + var49[1] * -SoftwareModel.anInt3934
-                  + var49[2] * -SoftwareModel.anInt3940
+              var49[0] * -GlobalStatics_1.anInt3945 + var49[1] * -GlobalStatics_1.anInt3934
+                  + var49[2] * -GlobalStatics_1.anInt3940
                   + 16384 >> 15;
             var26 =
-              var49[3] * -SoftwareModel.anInt3945 + var49[4] * -SoftwareModel.anInt3934
-                  + var49[5] * -SoftwareModel.anInt3940
+              var49[3] * -GlobalStatics_1.anInt3945 + var49[4] * -GlobalStatics_1.anInt3934
+                  + var49[5] * -GlobalStatics_1.anInt3940
                   + 16384 >> 15;
             var27 =
-              var49[6] * -SoftwareModel.anInt3945 + var49[7] * -SoftwareModel.anInt3934
-                  + var49[8] * -SoftwareModel.anInt3940
+              var49[6] * -GlobalStatics_1.anInt3945 + var49[7] * -GlobalStatics_1.anInt3934
+                  + var49[8] * -GlobalStatics_1.anInt3940
                   + 16384 >> 15;
-            var28 = var50 + SoftwareModel.anInt3945;
-            int var51 = var26 + SoftwareModel.anInt3934;
-            var30 = var27 + SoftwareModel.anInt3940;
+            var28 = var50 + GlobalStatics_1.anInt3945;
+            int var51 = var26 + GlobalStatics_1.anInt3934;
+            var30 = var27 + GlobalStatics_1.anInt3940;
             int[] var52 = new int[9];
 
             for (var32 = 0; var32 < 3; ++var32) {
@@ -2067,9 +2019,9 @@ public final class SoftwareModel extends AbstractModel {
                   var14 = var12[var13];
                   if (this.aShortArray3893
                       == null || (var7 & this.aShortArray3893[var14]) != 0) {
-                    this.anIntArray3885[var14] -= SoftwareModel.anInt3945;
-                    this.anIntArray3883[var14] -= SoftwareModel.anInt3934;
-                    this.anIntArray3895[var14] -= SoftwareModel.anInt3940;
+                    this.anIntArray3885[var14] -= GlobalStatics_1.anInt3945;
+                    this.anIntArray3883[var14] -= GlobalStatics_1.anInt3934;
+                    this.anIntArray3895[var14] -= GlobalStatics_1.anInt3940;
                     if (var5 != 0) {
                       var15 = DummyClass40.SINE_TABLE[var5];
                       var16 = DummyClass40.COSINE_TABLE[var5];
@@ -2106,9 +2058,9 @@ public final class SoftwareModel extends AbstractModel {
                       this.anIntArray3885[var14] = var17;
                     }
 
-                    this.anIntArray3885[var14] += SoftwareModel.anInt3945;
-                    this.anIntArray3883[var14] += SoftwareModel.anInt3934;
-                    this.anIntArray3895[var14] += SoftwareModel.anInt3940;
+                    this.anIntArray3885[var14] += GlobalStatics_1.anInt3945;
+                    this.anIntArray3883[var14] += GlobalStatics_1.anInt3934;
+                    this.anIntArray3895[var14] += GlobalStatics_1.anInt3940;
                   }
                 }
               }
@@ -2123,34 +2075,34 @@ public final class SoftwareModel extends AbstractModel {
             var13 = var8[12];
             var14 = var8[13];
             var15 = var8[14];
-            if (SoftwareModel.aBoolean3927) {
-              var16 = var8[0] * SoftwareModel.anInt3945 + var8[3] * SoftwareModel.anInt3934
-                  + var8[6] * SoftwareModel.anInt3940
+            if (GlobalStatics_1.aBoolean3927) {
+              var16 = var8[0] * GlobalStatics_1.anInt3945 + var8[3] * GlobalStatics_1.anInt3934
+                  + var8[6] * GlobalStatics_1.anInt3940
                   + 16384 >> 15;
-              var17 = var8[1] * SoftwareModel.anInt3945 + var8[4] * SoftwareModel.anInt3934
-                  + var8[7] * SoftwareModel.anInt3940
+              var17 = var8[1] * GlobalStatics_1.anInt3945 + var8[4] * GlobalStatics_1.anInt3934
+                  + var8[7] * GlobalStatics_1.anInt3940
                   + 16384 >> 15;
-              var18 = var8[2] * SoftwareModel.anInt3945 + var8[5] * SoftwareModel.anInt3934
-                  + var8[8] * SoftwareModel.anInt3940
+              var18 = var8[2] * GlobalStatics_1.anInt3945 + var8[5] * GlobalStatics_1.anInt3934
+                  + var8[8] * GlobalStatics_1.anInt3940
                   + 16384 >> 15;
               var16 += var13;
               var17 += var14;
               var18 += var15;
-              SoftwareModel.anInt3945 = var16;
-              SoftwareModel.anInt3934 = var17;
-              SoftwareModel.anInt3940 = var18;
-              SoftwareModel.aBoolean3927 = false;
+              GlobalStatics_1.anInt3945 = var16;
+              GlobalStatics_1.anInt3934 = var17;
+              GlobalStatics_1.anInt3940 = var18;
+              GlobalStatics_1.aBoolean3927 = false;
             }
 
             var16 = var3 << 15 >> 7;
             var17 = var4 << 15 >> 7;
             var18 = var5 << 15 >> 7;
-            var19 = var16 * -SoftwareModel.anInt3945 + 16384 >> 15;
-            var20 = var17 * -SoftwareModel.anInt3934 + 16384 >> 15;
-            var21 = var18 * -SoftwareModel.anInt3940 + 16384 >> 15;
-            var22 = var19 + SoftwareModel.anInt3945;
-            var23 = var20 + SoftwareModel.anInt3934;
-            var24 = var21 + SoftwareModel.anInt3940;
+            var19 = var16 * -GlobalStatics_1.anInt3945 + 16384 >> 15;
+            var20 = var17 * -GlobalStatics_1.anInt3934 + 16384 >> 15;
+            var21 = var18 * -GlobalStatics_1.anInt3940 + 16384 >> 15;
+            var22 = var19 + GlobalStatics_1.anInt3945;
+            var23 = var20 + GlobalStatics_1.anInt3934;
+            var24 = var21 + GlobalStatics_1.anInt3940;
             int[] var25 = {
               var16 * var8[0] + 16384 >> 15, var16 * var8[3] + 16384 >> 15,
               var16 * var8[6] + 16384 >> 15, var17 * var8[1] + 16384 >> 15,
@@ -2224,15 +2176,15 @@ public final class SoftwareModel extends AbstractModel {
                   var14 = var12[var13];
                   if (this.aShortArray3893
                       == null || (var7 & this.aShortArray3893[var14]) != 0) {
-                    this.anIntArray3885[var14] -= SoftwareModel.anInt3945;
-                    this.anIntArray3883[var14] -= SoftwareModel.anInt3934;
-                    this.anIntArray3895[var14] -= SoftwareModel.anInt3940;
+                    this.anIntArray3885[var14] -= GlobalStatics_1.anInt3945;
+                    this.anIntArray3883[var14] -= GlobalStatics_1.anInt3934;
+                    this.anIntArray3895[var14] -= GlobalStatics_1.anInt3940;
                     this.anIntArray3885[var14] = this.anIntArray3885[var14] * var3 / 128;
                     this.anIntArray3883[var14] = this.anIntArray3883[var14] * var4 / 128;
                     this.anIntArray3895[var14] = this.anIntArray3895[var14] * var5 / 128;
-                    this.anIntArray3885[var14] += SoftwareModel.anInt3945;
-                    this.anIntArray3883[var14] += SoftwareModel.anInt3934;
-                    this.anIntArray3895[var14] += SoftwareModel.anInt3940;
+                    this.anIntArray3885[var14] += GlobalStatics_1.anInt3945;
+                    this.anIntArray3883[var14] += GlobalStatics_1.anInt3934;
+                    this.anIntArray3895[var14] += GlobalStatics_1.anInt3940;
                   }
                 }
               }
@@ -2336,16 +2288,16 @@ public final class SoftwareModel extends AbstractModel {
       int var8 = 0;
       int var9 = 0;
       int var10;
-      if (!SoftwareModel.aBoolean3942) {
+      if (!GlobalStatics_1.aBoolean3942) {
         for (var10 = 0; var10 < 1600; ++var10) {
-          SoftwareModel.anIntArray3946[var10] = 0;
+          GlobalStatics_1.anIntArray3946[var10] = 0;
         }
 
         for (var10 = 0; var10 < 32; ++var10) {
-          SoftwareModel.anIntArray3935[var10] = 0;
+          GlobalStatics_1.anIntArray3935[var10] = 0;
         }
 
-        SoftwareModel.anInt3930 = 0;
+        GlobalStatics_1.anInt3930 = 0;
       }
 
       int var11;
@@ -2362,19 +2314,19 @@ public final class SoftwareModel extends AbstractModel {
           var11 = this.anIntArray3901[var10];
           var12 = this.anIntArray3876[var10];
           var13 = this.anIntArray3887[var10];
-          var14 = SoftwareModel.anIntArray3943[var11];
-          var15 = SoftwareModel.anIntArray3943[var12];
-          int var16 = SoftwareModel.anIntArray3943[var13];
+          var14 = GlobalStatics_1.anIntArray3943[var11];
+          var15 = GlobalStatics_1.anIntArray3943[var12];
+          int var16 = GlobalStatics_1.anIntArray3943[var13];
           if (var1 && (var14 == -5000 || var15 == -5000 || var16 == -5000)) {
-            var17 = SoftwareModel.anIntArray3948[var11];
-            var18 = SoftwareModel.anIntArray3948[var12];
-            var19 = SoftwareModel.anIntArray3948[var13];
-            int var20 = SoftwareModel.anIntArray3928[var11];
-            var21 = SoftwareModel.anIntArray3928[var12];
-            int var22 = SoftwareModel.anIntArray3928[var13];
-            int var23 = SoftwareModel.anIntArray3921[var11];
-            int var24 = SoftwareModel.anIntArray3921[var12];
-            int var25 = SoftwareModel.anIntArray3921[var13];
+            var17 = GlobalStatics_1.anIntArray3948[var11];
+            var18 = GlobalStatics_1.anIntArray3948[var12];
+            var19 = GlobalStatics_1.anIntArray3948[var13];
+            int var20 = GlobalStatics_1.anIntArray3928[var11];
+            var21 = GlobalStatics_1.anIntArray3928[var12];
+            int var22 = GlobalStatics_1.anIntArray3928[var13];
+            int var23 = GlobalStatics_1.anIntArray3921[var11];
+            int var24 = GlobalStatics_1.anIntArray3921[var12];
+            int var25 = GlobalStatics_1.anIntArray3921[var13];
             var17 -= var18;
             var19 -= var18;
             var20 -= var21;
@@ -2385,69 +2337,71 @@ public final class SoftwareModel extends AbstractModel {
             int var27 = var23 * var19 - var17 * var25;
             int var28 = var17 * var22 - var20 * var19;
             if (var18 * var26 + var21 * var27 + var24 * var28 > 0) {
-              SoftwareModel.aBooleanArray3917[var10] = true;
-              if (SoftwareModel.aBoolean3942) {
-                SoftwareModel.anIntArray3931[var8] =
-                  (SoftwareModel.anIntArray3920[var11] + SoftwareModel.anIntArray3920[var12] + SoftwareModel.anIntArray3920[var13]) / 3;
-                SoftwareModel.anIntArray3929[var8++] = var10;
+              GlobalStatics_1.aBooleanArray3917[var10] = true;
+              if (GlobalStatics_1.aBoolean3942) {
+                GlobalStatics_1.anIntArray3931[var8] =
+                  (GlobalStatics_1.anIntArray3920[var11] + GlobalStatics_1.anIntArray3920[var12] + GlobalStatics_1.anIntArray3920[var13]) / 3;
+                GlobalStatics_1.anIntArray3929[var8++] = var10;
               } else {
                 int var29 =
-                  (SoftwareModel.anIntArray3920[var11] + SoftwareModel.anIntArray3920[var12] + SoftwareModel.anIntArray3920[var13]) / 3
+                  (GlobalStatics_1.anIntArray3920[var11] + GlobalStatics_1.anIntArray3920[var12] + GlobalStatics_1.anIntArray3920[var13]) / 3
                     + var5;
-                if (SoftwareModel.anIntArray3946[var29] < 64) {
-                  SoftwareModel.anIntArrayArray3926[var29][SoftwareModel.anIntArray3946[var29]++] = var10;
+                if (GlobalStatics_1.anIntArray3946[var29] < 64) {
+                  GlobalStatics_1.anIntArrayArray3926[var29][GlobalStatics_1.anIntArray3946[var29]++] = var10;
                 } else {
-                  int var30 = SoftwareModel.anIntArray3946[var29];
+                  int var30 = GlobalStatics_1.anIntArray3946[var29];
                   if (var30 == 64) {
-                    if (SoftwareModel.anInt3930 == 512) {
+                    if (GlobalStatics_1.anInt3930 == 512) {
                       continue;
                     }
 
-                    SoftwareModel.anIntArray3946[var29] = var30 = 65 + SoftwareModel.anInt3930++;
+                    GlobalStatics_1.anIntArray3946[var29] = var30 = 65 + GlobalStatics_1.anInt3930++;
                   }
 
                   var30 -= 65;
-                  SoftwareModel.anIntArrayArray3923[var30][SoftwareModel.anIntArray3935[var30]++] = var10;
+                  GlobalStatics_1.anIntArrayArray3923[var30][GlobalStatics_1.anIntArray3935[var30]++] = var10;
                 }
               }
             }
           } else {
             if (var2 && this.method1944(Structure.anInt3642 + DummyClass40.anInt846,
               RenderAnimation.anInt384 + DummyClass40.anInt835,
-                SoftwareModel.anIntArray3932[var11],
-                SoftwareModel.anIntArray3932[var12], SoftwareModel.anIntArray3932[var13], var14, var15, var16)) {
+                GlobalStatics_1.anIntArray3932[var11],
+                GlobalStatics_1.anIntArray3932[var12], GlobalStatics_1.anIntArray3932[var13], var14, var15, var16)) {
               TextureSampler38.entityKeys[MapScene.anInt59++] = var3;
               var2 = false;
             }
 
-            if ((var14 - var15) * (SoftwareModel.anIntArray3932[var13] - SoftwareModel.anIntArray3932[var12])
-              - (SoftwareModel.anIntArray3932[var11] - SoftwareModel.anIntArray3932[var12]) * (var16 - var15) > 0) {
-              SoftwareModel.aBooleanArray3917[var10] = false;
-              SoftwareModel.aBooleanArray3937[var10] =
+            if ((var14 - var15) * (
+                GlobalStatics_1.anIntArray3932[var13] - GlobalStatics_1.anIntArray3932[var12])
+              - (GlobalStatics_1.anIntArray3932[var11] - GlobalStatics_1.anIntArray3932[var12]) * (var16 - var15) > 0) {
+              GlobalStatics_1.aBooleanArray3917[var10] = false;
+              GlobalStatics_1.aBooleanArray3937[var10] =
                 !(var14 >= 0 && var15 >= 0 && var16 >= 0 && var14 <= DummyClass40.anInt847
                   && var15 <= DummyClass40.anInt847 && var16 <= DummyClass40.anInt847);
 
-              if (SoftwareModel.aBoolean3942) {
-                SoftwareModel.anIntArray3931[var8] =
-                  (SoftwareModel.anIntArray3920[var11] + SoftwareModel.anIntArray3920[var12] + SoftwareModel.anIntArray3920[var13]) / 3;
-                SoftwareModel.anIntArray3929[var8++] = var10;
+              if (GlobalStatics_1.aBoolean3942) {
+                GlobalStatics_1.anIntArray3931[var8] =
+                  (GlobalStatics_1.anIntArray3920[var11] + GlobalStatics_1.anIntArray3920[var12] + GlobalStatics_1.anIntArray3920[var13]) / 3;
+                GlobalStatics_1.anIntArray3929[var8++] = var10;
               } else {
-                var17 = (SoftwareModel.anIntArray3920[var11] + SoftwareModel.anIntArray3920[var12] + SoftwareModel.anIntArray3920[var13]) / 3
+                var17 = (
+                    GlobalStatics_1.anIntArray3920[var11] + GlobalStatics_1.anIntArray3920[var12] + GlobalStatics_1.anIntArray3920[var13]) / 3
                   + var5;
-                if (SoftwareModel.anIntArray3946[var17] < 64) {
-                  SoftwareModel.anIntArrayArray3926[var17][SoftwareModel.anIntArray3946[var17]++] = var10;
+                if (GlobalStatics_1.anIntArray3946[var17] < 64) {
+                  GlobalStatics_1.anIntArrayArray3926[var17][GlobalStatics_1.anIntArray3946[var17]++] = var10;
                 } else {
-                  var18 = SoftwareModel.anIntArray3946[var17];
+                  var18 = GlobalStatics_1.anIntArray3946[var17];
                   if (var18 == 64) {
-                    if (SoftwareModel.anInt3930 == 512) {
+                    if (GlobalStatics_1.anInt3930 == 512) {
                       continue;
                     }
 
-                    SoftwareModel.anIntArray3946[var17] = var18 = 65 + SoftwareModel.anInt3930++;
+                    GlobalStatics_1.anIntArray3946[var17] = var18 = 65 + GlobalStatics_1.anInt3930++;
                   }
 
                   var18 -= 65;
-                  SoftwareModel.anIntArrayArray3923[var18][SoftwareModel.anIntArray3935[var18]++] = var10;
+                  GlobalStatics_1.anIntArrayArray3923[var18][GlobalStatics_1.anIntArray3935[var18]++] = var10;
                 }
               }
             }
@@ -2455,45 +2409,45 @@ public final class SoftwareModel extends AbstractModel {
         }
       }
 
-      if (SoftwareModel.aBoolean3942) {
+      if (GlobalStatics_1.aBoolean3942) {
         DummyClass55.method1607(0, var8 - 1, false,
-            SoftwareModel.anIntArray3931,
-            SoftwareModel.anIntArray3929);
+            GlobalStatics_1.anIntArray3931,
+            GlobalStatics_1.anIntArray3929);
         if (this.aByteArray3880 == null) {
           for (var10 = 0; var10 < var8; ++var10) {
-            this.method1934(SoftwareModel.anIntArray3929[var10]);
+            this.method1934(GlobalStatics_1.anIntArray3929[var10]);
           }
 
           return;
         }
 
         for (var10 = 0; var10 < 12; ++var10) {
-          SoftwareModel.anIntArray3918[var10] = 0;
-          SoftwareModel.anIntArray3944[var10] = 0;
+          GlobalStatics_1.anIntArray3918[var10] = 0;
+          GlobalStatics_1.anIntArray3944[var10] = 0;
         }
 
         for (var10 = 0; var10 < var8; ++var10) {
-          var11 = SoftwareModel.anIntArray3929[var10];
-          var12 = SoftwareModel.anIntArray3931[var10];
+          var11 = GlobalStatics_1.anIntArray3929[var10];
+          var12 = GlobalStatics_1.anIntArray3931[var10];
           byte var32 = this.aByteArray3880[var11];
-          var14 = SoftwareModel.anIntArray3918[var32]++;
-          SoftwareModel.anIntArrayArray3938[var32][var14] = var11;
+          var14 = GlobalStatics_1.anIntArray3918[var32]++;
+          GlobalStatics_1.anIntArrayArray3938[var32][var14] = var11;
           if (var32 < 10) {
-            SoftwareModel.anIntArray3944[var32] += var12;
+            GlobalStatics_1.anIntArray3944[var32] += var12;
           } else if (var32 == 10) {
-            SoftwareModel.anIntArray3922[var14] = var12;
+            GlobalStatics_1.anIntArray3922[var14] = var12;
           } else {
-            SoftwareModel.anIntArray3941[var14] = var12;
+            GlobalStatics_1.anIntArray3941[var14] = var12;
           }
         }
       } else {
         int[] var31;
         if (this.aByteArray3880 == null) {
           for (var10 = var6 - 1; var10 >= 0; --var10) {
-            var11 = SoftwareModel.anIntArray3946[var10];
+            var11 = GlobalStatics_1.anIntArray3946[var10];
             if (var11 > 0) {
               var12 = var11 > 64 ? 64 : var11;
-              var31 = SoftwareModel.anIntArrayArray3926[var10];
+              var31 = GlobalStatics_1.anIntArrayArray3926[var10];
 
               for (var14 = 0; var14 < var12; ++var14) {
                 var15 = var31[var14];
@@ -2504,10 +2458,10 @@ public final class SoftwareModel extends AbstractModel {
             }
 
             if (var11 > 64) {
-              var12 = SoftwareModel.anIntArray3946[var10] - 64 - 1;
-              var31 = SoftwareModel.anIntArrayArray3923[var12];
+              var12 = GlobalStatics_1.anIntArray3946[var10] - 64 - 1;
+              var31 = GlobalStatics_1.anIntArrayArray3923[var12];
 
-              for (var14 = 0; var14 < SoftwareModel.anIntArray3935[var12]; ++var14) {
+              for (var14 = 0; var14 < GlobalStatics_1.anIntArray3935[var12]; ++var14) {
                 var15 = var31[var14];
                 if (var15 < 65536) {
                   this.method1934(var31[var14]);
@@ -2520,12 +2474,12 @@ public final class SoftwareModel extends AbstractModel {
         }
 
         for (var10 = 0; var10 < 12; ++var10) {
-          SoftwareModel.anIntArray3918[var10] = 0;
-          SoftwareModel.anIntArray3944[var10] = 0;
+          GlobalStatics_1.anIntArray3918[var10] = 0;
+          GlobalStatics_1.anIntArray3944[var10] = 0;
         }
 
         for (var10 = var6 - 1; var10 >= 0; --var10) {
-          var11 = SoftwareModel.anIntArray3946[var10];
+          var11 = GlobalStatics_1.anIntArray3946[var10];
           byte var33;
           if (var11 > 0) {
             if (var11 > 64) {
@@ -2534,46 +2488,46 @@ public final class SoftwareModel extends AbstractModel {
               var12 = var11;
             }
 
-            var31 = SoftwareModel.anIntArrayArray3926[var10];
+            var31 = GlobalStatics_1.anIntArrayArray3926[var10];
 
             for (var14 = 0; var14 < var12; ++var14) {
               var15 = var31[var14];
               if (var15 < 65536) {
                 var33 = this.aByteArray3880[var15];
-                var17 = SoftwareModel.anIntArray3918[var33]++;
-                SoftwareModel.anIntArrayArray3938[var33][var17] = var15;
+                var17 = GlobalStatics_1.anIntArray3918[var33]++;
+                GlobalStatics_1.anIntArrayArray3938[var33][var17] = var15;
                 if (var33 < 10) {
-                  SoftwareModel.anIntArray3944[var33] += var10;
+                  GlobalStatics_1.anIntArray3944[var33] += var10;
                 } else if (var33 == 10) {
-                  SoftwareModel.anIntArray3922[var17] = var10;
+                  GlobalStatics_1.anIntArray3922[var17] = var10;
                 } else {
-                  SoftwareModel.anIntArray3941[var17] = var10;
+                  GlobalStatics_1.anIntArray3941[var17] = var10;
                 }
               } else {
-                SoftwareModel.anIntArray3950[var9++] = (var15 >> 16) - 1;
+                GlobalStatics_1.anIntArray3950[var9++] = (var15 >> 16) - 1;
               }
             }
           }
 
           if (var11 > 64) {
-            var12 = SoftwareModel.anIntArray3946[var10] - 64 - 1;
-            var31 = SoftwareModel.anIntArrayArray3923[var12];
+            var12 = GlobalStatics_1.anIntArray3946[var10] - 64 - 1;
+            var31 = GlobalStatics_1.anIntArrayArray3923[var12];
 
-            for (var14 = 0; var14 < SoftwareModel.anIntArray3935[var12]; ++var14) {
+            for (var14 = 0; var14 < GlobalStatics_1.anIntArray3935[var12]; ++var14) {
               var15 = var31[var14];
               if (var15 < 65536) {
                 var33 = this.aByteArray3880[var15];
-                var17 = SoftwareModel.anIntArray3918[var33]++;
-                SoftwareModel.anIntArrayArray3938[var33][var17] = var15;
+                var17 = GlobalStatics_1.anIntArray3918[var33]++;
+                GlobalStatics_1.anIntArrayArray3938[var33][var17] = var15;
                 if (var33 < 10) {
-                  SoftwareModel.anIntArray3944[var33] += var10;
+                  GlobalStatics_1.anIntArray3944[var33] += var10;
                 } else if (var33 == 10) {
-                  SoftwareModel.anIntArray3922[var17] = var10;
+                  GlobalStatics_1.anIntArray3922[var17] = var10;
                 } else {
-                  SoftwareModel.anIntArray3941[var17] = var10;
+                  GlobalStatics_1.anIntArray3941[var17] = var10;
                 }
               } else {
-                SoftwareModel.anIntArray3950[var9++] = (var15 >> 16) - 1;
+                GlobalStatics_1.anIntArray3950[var9++] = (var15 >> 16) - 1;
               }
             }
           }
@@ -2581,32 +2535,32 @@ public final class SoftwareModel extends AbstractModel {
       }
 
       var10 = 0;
-      if (SoftwareModel.anIntArray3918[1] > 0 || SoftwareModel.anIntArray3918[2] > 0) {
-        var10 = (SoftwareModel.anIntArray3944[1] + SoftwareModel.anIntArray3944[2]) / (
-            SoftwareModel.anIntArray3918[1] + SoftwareModel.anIntArray3918[2]);
+      if (GlobalStatics_1.anIntArray3918[1] > 0 || GlobalStatics_1.anIntArray3918[2] > 0) {
+        var10 = (GlobalStatics_1.anIntArray3944[1] + GlobalStatics_1.anIntArray3944[2]) / (
+            GlobalStatics_1.anIntArray3918[1] + GlobalStatics_1.anIntArray3918[2]);
       }
 
       var11 = 0;
-      if (SoftwareModel.anIntArray3918[3] > 0 || SoftwareModel.anIntArray3918[4] > 0) {
-        var11 = (SoftwareModel.anIntArray3944[3] + SoftwareModel.anIntArray3944[4]) / (
-            SoftwareModel.anIntArray3918[3] + SoftwareModel.anIntArray3918[4]);
+      if (GlobalStatics_1.anIntArray3918[3] > 0 || GlobalStatics_1.anIntArray3918[4] > 0) {
+        var11 = (GlobalStatics_1.anIntArray3944[3] + GlobalStatics_1.anIntArray3944[4]) / (
+            GlobalStatics_1.anIntArray3918[3] + GlobalStatics_1.anIntArray3918[4]);
       }
 
       var12 = 0;
-      if (SoftwareModel.anIntArray3918[6] > 0 || SoftwareModel.anIntArray3918[8] > 0) {
-        var12 = (SoftwareModel.anIntArray3944[6] + SoftwareModel.anIntArray3944[8]) / (
-            SoftwareModel.anIntArray3918[6] + SoftwareModel.anIntArray3918[8]);
+      if (GlobalStatics_1.anIntArray3918[6] > 0 || GlobalStatics_1.anIntArray3918[8] > 0) {
+        var12 = (GlobalStatics_1.anIntArray3944[6] + GlobalStatics_1.anIntArray3944[8]) / (
+            GlobalStatics_1.anIntArray3918[6] + GlobalStatics_1.anIntArray3918[8]);
       }
 
       var14 = 0;
-      var15 = SoftwareModel.anIntArray3918[10];
-      int[] var34 = SoftwareModel.anIntArrayArray3938[10];
-      int[] var35 = SoftwareModel.anIntArray3922;
+      var15 = GlobalStatics_1.anIntArray3918[10];
+      int[] var34 = GlobalStatics_1.anIntArrayArray3938[10];
+      int[] var35 = GlobalStatics_1.anIntArray3922;
       if (var14 == var15) {
         var14 = 0;
-        var15 = SoftwareModel.anIntArray3918[11];
-        var34 = SoftwareModel.anIntArrayArray3938[11];
-        var35 = SoftwareModel.anIntArray3941;
+        var15 = GlobalStatics_1.anIntArray3918[11];
+        var34 = GlobalStatics_1.anIntArrayArray3938[11];
+        var35 = GlobalStatics_1.anIntArray3941;
       }
 
       if (var14 < var15) {
@@ -2619,11 +2573,11 @@ public final class SoftwareModel extends AbstractModel {
         while (var18 == 0 && var13 > var10) {
           this.method1934(var34[var14++]);
           if (var14 == var15 && !Arrays
-              .equals(var34, SoftwareModel.anIntArrayArray3938[11])) {
+              .equals(var34, GlobalStatics_1.anIntArrayArray3938[11])) {
             var14 = 0;
-            var15 = SoftwareModel.anIntArray3918[11];
-            var34 = SoftwareModel.anIntArrayArray3938[11];
-            var35 = SoftwareModel.anIntArray3941;
+            var15 = GlobalStatics_1.anIntArray3918[11];
+            var34 = GlobalStatics_1.anIntArrayArray3938[11];
+            var35 = GlobalStatics_1.anIntArray3941;
           }
 
           if (var14 < var15) {
@@ -2636,11 +2590,11 @@ public final class SoftwareModel extends AbstractModel {
         while (var18 == 3 && var13 > var11) {
           this.method1934(var34[var14++]);
           if (var14 == var15 && !Arrays
-              .equals(var34, SoftwareModel.anIntArrayArray3938[11])) {
+              .equals(var34, GlobalStatics_1.anIntArrayArray3938[11])) {
             var14 = 0;
-            var15 = SoftwareModel.anIntArray3918[11];
-            var34 = SoftwareModel.anIntArrayArray3938[11];
-            var35 = SoftwareModel.anIntArray3941;
+            var15 = GlobalStatics_1.anIntArray3918[11];
+            var34 = GlobalStatics_1.anIntArrayArray3938[11];
+            var35 = GlobalStatics_1.anIntArray3941;
           }
 
           if (var14 < var15) {
@@ -2653,11 +2607,11 @@ public final class SoftwareModel extends AbstractModel {
         while (var18 == 5 && var13 > var12) {
           this.method1934(var34[var14++]);
           if (var14 == var15 && !Arrays
-              .equals(var34, SoftwareModel.anIntArrayArray3938[11])) {
+              .equals(var34, GlobalStatics_1.anIntArrayArray3938[11])) {
             var14 = 0;
-            var15 = SoftwareModel.anIntArray3918[11];
-            var34 = SoftwareModel.anIntArrayArray3938[11];
-            var35 = SoftwareModel.anIntArray3941;
+            var15 = GlobalStatics_1.anIntArray3918[11];
+            var34 = GlobalStatics_1.anIntArrayArray3938[11];
+            var35 = GlobalStatics_1.anIntArray3941;
           }
 
           if (var14 < var15) {
@@ -2667,8 +2621,8 @@ public final class SoftwareModel extends AbstractModel {
           }
         }
 
-        var19 = SoftwareModel.anIntArray3918[var18];
-        int[] var36 = SoftwareModel.anIntArrayArray3938[var18];
+        var19 = GlobalStatics_1.anIntArray3918[var18];
+        int[] var36 = GlobalStatics_1.anIntArrayArray3938[var18];
 
         for (var21 = 0; var21 < var19; ++var21) {
           this.method1934(var36[var21]);
@@ -2678,11 +2632,11 @@ public final class SoftwareModel extends AbstractModel {
       while (var13 != -1000) {
         this.method1934(var34[var14++]);
         if (var14 == var15 && !Arrays
-            .equals(var34, SoftwareModel.anIntArrayArray3938[11])) {
+            .equals(var34, GlobalStatics_1.anIntArrayArray3938[11])) {
           var14 = 0;
-          var34 = SoftwareModel.anIntArrayArray3938[11];
-          var15 = SoftwareModel.anIntArray3918[11];
-          var35 = SoftwareModel.anIntArray3941;
+          var34 = GlobalStatics_1.anIntArrayArray3938[11];
+          var15 = GlobalStatics_1.anIntArray3918[11];
+          var35 = GlobalStatics_1.anIntArray3941;
         }
 
         if (var14 < var15) {
@@ -2743,13 +2697,13 @@ public final class SoftwareModel extends AbstractModel {
         var23 += var7;
         var24 = var22 * var18 - var23 * var17 >> 16;
         var23 = var22 * var17 + var23 * var18 >> 16;
-        SoftwareModel.anIntArray3920[var20] = var23 - var19;
-        SoftwareModel.anIntArray3943[var20] = var9 + (var21 << 9) / var8;
-        SoftwareModel.anIntArray3932[var20] = var10 + (var24 << 9) / var8;
+        GlobalStatics_1.anIntArray3920[var20] = var23 - var19;
+        GlobalStatics_1.anIntArray3943[var20] = var9 + (var21 << 9) / var8;
+        GlobalStatics_1.anIntArray3932[var20] = var10 + (var24 << 9) / var8;
         if (this.anInt3900 > 0) {
-          SoftwareModel.anIntArray3948[var20] = var21;
-          SoftwareModel.anIntArray3928[var20] = var24;
-          SoftwareModel.anIntArray3921[var20] = var23;
+          GlobalStatics_1.anIntArray3948[var20] = var21;
+          GlobalStatics_1.anIntArray3928[var20] = var24;
+          GlobalStatics_1.anIntArray3921[var20] = var23;
         }
       }
 
@@ -2817,88 +2771,4 @@ public final class SoftwareModel extends AbstractModel {
     this.aBoolean3897 = true;
   }
 
-  public static void method1935() {
-    SoftwareModel.aBoolean3942 = true;
-    SoftwareModel.anIntArray3931 = new int[4096];
-    SoftwareModel.anIntArray3929 = new int[4096];
-    SoftwareModel.anIntArray3946 = null;
-    SoftwareModel.anIntArrayArray3926 = null;
-    SoftwareModel.anIntArray3935 = null;
-    SoftwareModel.anIntArrayArray3923 = null;
-  }
-
-  private static int method1937(int var0) {
-    if (var0 < 2) {
-      var0 = 2;
-    } else if (var0 > 126) {
-      var0 = 126;
-    }
-
-    return var0;
-  }
-
-  public static void method1938() {
-    SoftwareModel.aBoolean3942 = false;
-    SoftwareModel.anIntArray3931 = null;
-    SoftwareModel.anIntArray3929 = null;
-    SoftwareModel.anIntArray3946 = new int[1600];
-    SoftwareModel.anIntArrayArray3926 = new int[1600][64];
-    SoftwareModel.anIntArray3935 = new int[32];
-    SoftwareModel.anIntArrayArray3923 = new int[32][512];
-  }
-
-  public static int repackHSL(int hsl, int lightness) {
-    lightness = lightness * (hsl & 127) >> 7;
-    if (lightness < 2) {
-      lightness = 2;
-    } else if (lightness > 126) {
-      lightness = 126;
-    }
-
-    return (hsl & '\uff80') + lightness;
-  }
-
-  public static void method1948() {
-    SoftwareModel.aClass140_Sub1_Sub2_3902 = null;
-    SoftwareModel.aByteArray3907 = null;
-    SoftwareModel.aShortArray3910 = null;
-    SoftwareModel.anIntArray3905 = null;
-    SoftwareModel.anIntArray3909 = null;
-    SoftwareModel.anIntArray3904 = null;
-    SoftwareModel.aClass140_Sub1_Sub2_3906 = null;
-    SoftwareModel.aByteArray3914 = null;
-    SoftwareModel.aShortArray3912 = null;
-    SoftwareModel.anIntArray3913 = null;
-    SoftwareModel.anIntArray3916 = null;
-    SoftwareModel.anIntArray3911 = null;
-    SoftwareModel.aClass140_Sub1_Sub2_3915 = null;
-    SoftwareModel.aByteArray3933 = null;
-    SoftwareModel.aShortArray3949 = null;
-    SoftwareModel.anIntArray3939 = null;
-    SoftwareModel.anIntArray3947 = null;
-    SoftwareModel.anIntArray3924 = null;
-    SoftwareModel.aBooleanArray3937 = null;
-    SoftwareModel.aBooleanArray3917 = null;
-    SoftwareModel.anIntArray3943 = null;
-    SoftwareModel.anIntArray3932 = null;
-    SoftwareModel.anIntArray3920 = null;
-    SoftwareModel.anIntArray3950 = null;
-    SoftwareModel.anIntArray3948 = null;
-    SoftwareModel.anIntArray3928 = null;
-    SoftwareModel.anIntArray3921 = null;
-    SoftwareModel.anIntArray3946 = null;
-    SoftwareModel.anIntArrayArray3926 = null;
-    SoftwareModel.anIntArray3935 = null;
-    SoftwareModel.anIntArrayArray3923 = null;
-    SoftwareModel.anIntArray3931 = null;
-    SoftwareModel.anIntArray3929 = null;
-    SoftwareModel.anIntArray3918 = null;
-    SoftwareModel.anIntArrayArray3938 = null;
-    SoftwareModel.anIntArray3922 = null;
-    SoftwareModel.anIntArray3941 = null;
-    SoftwareModel.anIntArray3944 = null;
-    SoftwareModel.anIntArray3919 = null;
-    SoftwareModel.anIntArray3925 = null;
-    SoftwareModel.anIntArray3936 = null;
-  }
 }

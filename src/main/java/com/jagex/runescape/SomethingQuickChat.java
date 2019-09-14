@@ -1,19 +1,21 @@
 package com.jagex.runescape;
 
 import com.jagex.runescape.buffer.Buffer;
+import com.jagex.runescape.common.GameString;
+import com.jagex.runescape.common.GameStringStatics;
 import com.jagex.runescape.huffman.HuffmanEncoderStatics;
-import com.jagex.runescape.opengl.shader.MaterialShader;
+import com.jagex.runescape.opengl.MaterialShader;
 
 public final class SomethingQuickChat extends SubNode {
 
-  private static GameString aClass94_3578 = GameString.create("Loaded title screen");
+  private static GameString aClass94_3578 = GameStringStatics.create("Loaded title screen");
   public static int[] anIntArray3565 = new int[32];
   public static int anInt3569;
   public static ObjectCache aClass93_3572 = new ObjectCache(64);
-  public static GameString aClass94_3573 = GameString.create(" )2> <col=00ffff>");
-  public static GameString TITLE_BACKGROUND = GameString.create("titlebg");
-  public static GameString aClass94_3576 = GameString.create("name_icons");
-  public static GameString aClass94_3577 = GameString.create(": ");
+  public static GameString aClass94_3573 = GameStringStatics.create(" )2> <col=00ffff>");
+  public static GameString TITLE_BACKGROUND = GameStringStatics.create("titlebg");
+  public static GameString aClass94_3576 = GameStringStatics.create("name_icons");
+  public static GameString aClass94_3577 = GameStringStatics.create(": ");
   public static MidiSomething aClass83_3579;
   public static GameString aClass94_3575 = SomethingQuickChat.aClass94_3578;
   public int[] anIntArray3567;
@@ -141,7 +143,7 @@ public final class SomethingQuickChat extends SubNode {
 
   public GameString method554(int var1 ) {
     if (var1 == -1) {
-        GameString var2 = Cache.createString(80);
+        GameString var2 = GameStringStatics.createString(80);
         if (this.strings == null) {
           return TextureSampler3.aClass94_3357;
         } else {
@@ -164,7 +166,7 @@ public final class SomethingQuickChat extends SubNode {
         this.anIntArrayArray3570 = null;
       }
 
-      GameString string = Cache.createString(80);
+      GameString string = GameStringStatics.createString(80);
       if (this.anIntArray3566 != null) {
         for (int var4 = 0; var4 < this.anIntArray3566.length; ++var4) {
           string.append(this.strings[var4]);

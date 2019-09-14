@@ -1,16 +1,18 @@
 package com.jagex.runescape;
 
 import com.jagex.runescape.buffer.Buffer;
+import com.jagex.runescape.common.GameString;
+import com.jagex.runescape.common.GameStringStatics;
 
 public final class WorldMapLabel {
 
-  private static GameString aClass94_1717 = GameString.create("Prepared sound engine");
-  private static GameString aClass94_1726 = GameString.create("Select");
+  private static GameString aClass94_1717 = GameStringStatics.create("Prepared sound engine");
+  private static GameString aClass94_1726 = GameStringStatics.create("Select");
   public static int anInt1716;
   public static int anInt1719 = -1;
   public static FileUnpacker animationBases;
-  public static GameString aClass94_1724 = GameString.create(" )2>");
-  public static GameString aClass94_1728 = GameString.create("Eingabeprozedur geladen)3");
+  public static GameString aClass94_1724 = GameStringStatics.create(" )2>");
+  public static GameString aClass94_1728 = GameStringStatics.create("Eingabeprozedur geladen)3");
   public static int[] anIntArray1729 = {12543016, 15504954, 15914854, 16773818};
   public static GameString aClass94_1731 = WorldMapLabel.aClass94_1717;
   public static GameString aClass94_1722 = WorldMapLabel.aClass94_1726;
@@ -60,7 +62,7 @@ public final class WorldMapLabel {
 
   public static void method1786(int var0) {
     while (true) {
-        if ((SpotAnimationConfig.gameBuffer.method815(HashTable.packetLength, 32666) >= 11)) {
+        if ((SpotAnimationConfig.gameBuffer.method815(GlobalStatics_0.packetLength, 32666) >= 11)) {
           int var1 = SpotAnimationConfig.gameBuffer.readBits(11);
           if (var1 != 2047) {
             boolean var2 = false;

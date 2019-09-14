@@ -1,13 +1,16 @@
 package com.jagex.runescape;
 
+import com.jagex.runescape.common.GameString;
+import com.jagex.runescape.common.GameStringStatics;
+
 public abstract class AbstractDirectColorSprite extends SubNode {
 
   public static int anInt3699;
-  public static GameString COMMAND_CARD_MEMORY = GameString.create("::cardmem");
-  public static GameString aClass94_3702 = GameString.create(" )2> <col=ffff00>");
-  public static GameString aClass94_3703 = GameString.create(" )2> ");
+  public static GameString COMMAND_CARD_MEMORY = GameStringStatics.create("::cardmem");
+  public static GameString aClass94_3702 = GameStringStatics.create(" )2> <col=ffff00>");
+  public static GameString aClass94_3703 = GameStringStatics.create(" )2> ");
   public static int anInt3704;
-  public static GameString aClass94_3705 = GameString.create("W-=hlen Sie eine Option");
+  public static GameString aClass94_3705 = GameStringStatics.create("W-=hlen Sie eine Option");
   public static Widget aClass11_3708;
   public int anInt3696;
   public int anInt3697;

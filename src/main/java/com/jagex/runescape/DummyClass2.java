@@ -346,27 +346,27 @@ public class DummyClass2 {
               }
             }
 
-            GameString.packetId = SpotAnimationConfig.gameBuffer.readPacketId();
-            HashTable.packetLength = SpotAnimationConfig.gameBuffer
+            GlobalStatics_0.packetId = SpotAnimationConfig.gameBuffer.readPacketId();
+            GlobalStatics_0.packetLength = SpotAnimationConfig.gameBuffer
                 .readUnsignedShort();
             TextureSampler28.loginState = 9;
           }
 
           if ((TextureSampler28.loginState == 9)) {
-            if ((SomethingVolume15.gameSocket.available() < HashTable.packetLength)) {
+            if ((SomethingVolume15.gameSocket.available() < GlobalStatics_0.packetLength)) {
               return;
             }
 
             SpotAnimationConfig.gameBuffer.position = 0;
             SomethingVolume15.gameSocket
                 .read(SpotAnimationConfig.gameBuffer.bytes, 0,
-                    HashTable.packetLength);
+                    GlobalStatics_0.packetLength);
             AbstractImageProducer.loginResponse = 2;
             TextureSampler28.loginState = 0;
             AnimationSequence.method2061(true);
             AbstractObjectNode.anInt3606 = -1;
             DummyClass37.parseSceneRebuild(false);
-            GameString.packetId = -1;
+            GlobalStatics_0.packetId = -1;
             return;
           }
 

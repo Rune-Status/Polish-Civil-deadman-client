@@ -1,5 +1,7 @@
 package com.jagex.runescape;
 
+import com.jagex.runescape.node.Node;
+
 public final class AudioStreamEncoder2 extends AudioStreamEncoder {
 
   private final Deque aClass61_3485 = new Deque();
@@ -143,7 +145,7 @@ public final class AudioStreamEncoder2 extends AudioStreamEncoder {
       var1 = var1.nextNode;
     }
 
-    AbstractIndexedColorSprite.addLast(var2, var1);
+    GlobalStatics_1.addLast(var2, var1);
     this.anInt3488 = ((DummyClass57) this.aClass61_3486.root.nextNode).anInt2247;
   }
 

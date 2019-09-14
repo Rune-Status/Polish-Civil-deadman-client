@@ -1,15 +1,18 @@
 package com.jagex.runescape;
 
+import com.jagex.runescape.common.GameString;
+import com.jagex.runescape.common.GameStringStatics;
+import com.jagex.runescape.node.Node;
 import java.util.Objects;
 
 public final class SomethingInScenePacket202 extends Node {
 
-  private static GameString aClass94_2280 = GameString.create("Starting 3d Library");
-  public static GameString aClass94_2269 = GameString.create("lila:");
+  private static GameString aClass94_2280 = GameStringStatics.create("Starting 3d Library");
+  public static GameString aClass94_2269 = GameStringStatics.create("lila:");
   public static GameString aClass94_2274 =
-    GameString.create("Vous ne pouvez pas ajouter votre nom -9 votre liste noire)3");
+    GameStringStatics.create("Vous ne pouvez pas ajouter votre nom -9 votre liste noire)3");
   public static int anInt2275 = 1;
-  public static GameString aClass94_2276 = GameString.create("rot:");
+  public static GameString aClass94_2276 = GameStringStatics.create("rot:");
   public static int anInt2281;
   public static GameString aClass94_2267 = SomethingInScenePacket202.aClass94_2280;
   public int anInt2266;

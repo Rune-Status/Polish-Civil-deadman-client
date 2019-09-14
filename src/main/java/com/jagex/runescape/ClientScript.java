@@ -1,10 +1,13 @@
 package com.jagex.runescape;
 
 import com.jagex.runescape.buffer.Buffer;
+import com.jagex.runescape.common.GameString;
+import com.jagex.runescape.common.GameStringStatics;
+import com.jagex.runescape.common.HashTable;
 
 public final class ClientScript extends SubNode {
 
-  private static GameString aClass94_3692 = GameString.create("Members object");
+  private static GameString aClass94_3692 = GameStringStatics.create("Members object");
   public static HashTable variableUpdates = new HashTable(16);
   public static int anInt3681;
   public static int loadingPercent = 10;

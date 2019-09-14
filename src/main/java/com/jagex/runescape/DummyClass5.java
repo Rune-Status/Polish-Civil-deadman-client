@@ -1,11 +1,13 @@
 package com.jagex.runescape;
 
+import com.jagex.runescape.common.GameString;
+import com.jagex.runescape.common.GameStringStatics;
 import com.jagex.runescape.opengl.GlTexture2d;
 import java.io.IOException;
 
 public class DummyClass5 extends DummyClass6 {
 
-  private static GameString aClass94_2988 = GameString.create("glow3:");
+  private static GameString aClass94_2988 = GameStringStatics.create("glow3:");
   public static ObjectCache aClass93_2984 = new ObjectCache(2);
   public static int[] anIntArray2985 = new int[2500];
   public static long[] drawMemory = new long[32];
@@ -15,7 +17,7 @@ public class DummyClass5 extends DummyClass6 {
   public static int anInt2993;
   public static int anInt2994;
   public static GameString aClass94_2995 =
-      GameString.create("Veuillez commencer par supprimer ");
+      GameStringStatics.create("Veuillez commencer par supprimer ");
   public static GameString aClass94_2991 = DummyClass5.aClass94_2988;
   public static GameString aClass94_2992 = DummyClass5.aClass94_2988;
 
@@ -58,18 +60,18 @@ public class DummyClass5 extends DummyClass6 {
             if (DummyClass36.aBoolean2615) {
               int var11;
               if ((var1 != 1)) {
-                var3 = HashTable.anInt1709;
+                var3 = GlobalStatics_0.anInt1709;
                 var11 = SomethingTilek.anInt1676;
-                if ((var11 < (AbstractIndexedColorSprite.anInt1462 - 10))
+                if ((var11 < (GlobalStatics_1.anInt1462 - 10))
                     || var11 > (
                     SomethingWorldMapy.anInt3552 + (
-                        AbstractIndexedColorSprite.anInt1462 + 10))
+                        GlobalStatics_1.anInt1462 + 10))
                     || (-10 + TextureSampler29.anInt3395) > var3 || var3 > (
                     SomethingQuickChat2.anInt3537 + (TextureSampler29.anInt3395
                         + 10))) {
                   DummyClass36.aBoolean2615 = false;
                   AbstractSomethingTexture
-                      .method1340(AbstractIndexedColorSprite.anInt1462,
+                      .method1340(GlobalStatics_1.anInt1462,
                           SomethingWorldMapy.anInt3552, (byte) -40,
                           TextureSampler29.anInt3395,
                           SomethingQuickChat2.anInt3537);
@@ -77,7 +79,7 @@ public class DummyClass5 extends DummyClass6 {
               }
 
               if ((var1 == 1)) {
-                var11 = AbstractIndexedColorSprite.anInt1462;
+                var11 = GlobalStatics_1.anInt1462;
                 var3 = TextureSampler29.anInt3395;
                 var4 = SomethingWorldMapy.anInt3552;
                 int var12 = DummyClass5.anInt2993;
@@ -108,7 +110,7 @@ public class DummyClass5 extends DummyClass6 {
 
                 DummyClass36.aBoolean2615 = false;
                 AbstractSomethingTexture
-                    .method1340(AbstractIndexedColorSprite.anInt1462,
+                    .method1340(GlobalStatics_1.anInt1462,
                         SomethingWorldMapy.anInt3552, (byte) -40,
                         TextureSampler29.anInt3395,
                         SomethingQuickChat2.anInt3537);

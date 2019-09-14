@@ -1,20 +1,22 @@
 package com.jagex.runescape;
 
 import com.jagex.runescape.buffer.Buffer;
+import com.jagex.runescape.common.GameString;
+import com.jagex.runescape.common.GameStringStatics;
 
 public final class LightIntensity {
 
   public static AbstractDirectColorSprite aClass3_Sub28_Sub16_895;
   public static GameString aClass94_897 =
-    GameString.create("Liste des mises -9 jour charg-Be");
+    GameStringStatics.create("Liste des mises -9 jour charg-Be");
   public static int[] variables = new int[2500];
   public static int anInt900;
-  public static GameString aClass94_901 = GameString.create(
+  public static GameString aClass94_901 = GameStringStatics.create(
     "Ihre Ignorieren)2Liste ist voll)1 Sie k-Onnen nur 100 Spieler darauf eintragen)3");
   public static int anInt902 = 100;
   public static int anInt903;
   public static int[] anIntArray904 = new int[200];
-  public static GameString aClass94_905 = GameString.create("Sprites charg-Bs");
+  public static GameString aClass94_905 = GameStringStatics.create("Sprites charg-Bs");
   public static int anInt906;
   public int anInt896;
   public int anInt899 = 2048;

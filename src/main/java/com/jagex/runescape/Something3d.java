@@ -1,13 +1,16 @@
 package com.jagex.runescape;
 
+import com.jagex.runescape.common.GameString;
+import com.jagex.runescape.common.GameStringStatics;
+
 public class Something3d extends Something3dRoot {
 
-  public static GameString aClass94_3008 = GameString.create("hitbar_default");
+  public static GameString aClass94_3008 = GameStringStatics.create("hitbar_default");
   public static AbstractImageProducer viewImageProducer;
   public static short[] aShortArray3011 =
       {(short) 6798, (short) 8741, (short) 25238, (short) 4626, (short) 4550};
   public static int anInt3012;
-  public static GameString ZERO = GameString.create("0");
+  public static GameString ZERO = GameStringStatics.create("0");
   public static int anInt3017;
   private int anInt3010;
   private final int[] anIntArray3014;
@@ -247,8 +250,8 @@ public class Something3d extends Something3dRoot {
 
       AreaSoundEffect var3;
       for (
-        var3 = (AreaSoundEffect) Node.aClass61_78.getFirst();
-        var3 != null; var3 = (AreaSoundEffect) Node.aClass61_78.getNext()) {
+        var3 = (AreaSoundEffect) GlobalStatics_0.aClass61_78.getFirst();
+        var3 != null; var3 = (AreaSoundEffect) GlobalStatics_0.aClass61_78.getNext()) {
         if (var3.aClass3_Sub24_Sub1_2312 != null) {
           MonoChromaticImageBuffer.aClass3_Sub24_Sub2_2563.method461(var3.aClass3_Sub24_Sub1_2312);
           var3.aClass3_Sub24_Sub1_2312 = null;

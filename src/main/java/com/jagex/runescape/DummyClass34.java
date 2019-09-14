@@ -1,13 +1,15 @@
 package com.jagex.runescape;
 
 import com.jagex.runescape.buffer.Buffer;
+import com.jagex.runescape.common.GameString;
+import com.jagex.runescape.common.GameStringStatics;
 
 public final class DummyClass34 {
 
   public static int anInt590 = -1;
-  public static GameString aClass94_591 = GameString.create("Lade Benutzeroberfl-=che )2 ");
-  public static GameString aClass94_592 = GameString.create("<img=0>");
-  public static GameString aClass94_593 = GameString.create("Utiliser");
+  public static GameString aClass94_591 = GameStringStatics.create("Lade Benutzeroberfl-=che )2 ");
+  public static GameString aClass94_592 = GameStringStatics.create("<img=0>");
+  public static GameString aClass94_593 = GameStringStatics.create("Utiliser");
 
 
   public static GameString decompressString(Buffer var0) {

@@ -1,9 +1,12 @@
 package com.jagex.runescape;
 
+import com.jagex.runescape.common.GameString;
+import com.jagex.runescape.common.GameStringStatics;
+
 public final class DisplayMode {
 
   private static GameString aClass94_1440 =
-    GameString.create("Connected to update server");
+    GameStringStatics.create("Connected to update server");
   public static int anInt1439;
   public static boolean useBumpMaps = true;
   public static int viewY;

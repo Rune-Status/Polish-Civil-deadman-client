@@ -1,12 +1,15 @@
 package com.jagex.runescape;
 
 import com.jagex.runescape.buffer.Buffer;
+import com.jagex.runescape.common.ArrayUtils;
+import com.jagex.runescape.common.GameString;
+import com.jagex.runescape.common.GameStringStatics;
 import java.awt.Frame;
 import java.util.Random;
 
 public final class TextureSampler27 extends AbstractTextureSampler {
 
-  private static GameString aClass94_3096 = GameString.create("Close");
+  private static GameString aClass94_3096 = GameStringStatics.create("Close");
   public static Widget aClass11_3087;
   public static Random random = new Random();
   public static int anInt3090;

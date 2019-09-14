@@ -1,5 +1,7 @@
 package com.jagex.runescape;
 
+import com.jagex.runescape.common.GameString;
+import com.jagex.runescape.common.GameStringStatics;
 import com.jagex.runescape.opengl.GlEnvironment;
 
 public final class MonoChromaticImageCache {
@@ -7,7 +9,7 @@ public final class MonoChromaticImageCache {
   public static ObjectCache aClass93_1569 = new ObjectCache(200);
   public static BufferedFile tableIndexFile;
   public static long[] aLongArray1574 = new long[100];
-  public static GameString aClass94_1575 = GameString.create(" weitere Optionen");
+  public static GameString aClass94_1575 = GameStringStatics.create(" weitere Optionen");
   public static int[] anIntArray1578 = new int[500];
   public boolean aBoolean1580;
   private final int anInt1568;
@@ -134,7 +136,7 @@ public final class MonoChromaticImageCache {
             (AbstractDirectColorSprite) MouseRecorder.aClass93_1013.get(var8);
         if (var10 == null) {
           DummyClass40.aBoolean837 = false;
-          var10 = GameString
+          var10 = GlobalStatics_0
               .method1570(var4, (byte) 13, false, var1, var2, var0, var3,
                   false);
           if (var10 != null && !DummyClass40.aBoolean837) {

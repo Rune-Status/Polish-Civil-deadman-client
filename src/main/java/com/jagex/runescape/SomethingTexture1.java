@@ -1,12 +1,15 @@
 package com.jagex.runescape;
 
+import com.jagex.runescape.common.GameString;
+import com.jagex.runescape.common.GameStringStatics;
+
 public final class SomethingTexture1 extends AbstractSomethingTexture {
 
   public static SomethingFont aClass33_2637;
   public static SceneGraphTile[][][] sceneGraphTiles;
   public static int[] anIntArray2639;
   public static int anInt2640;
-  public static GameString aClass94_2641 = GameString.create("K");
+  public static GameString aClass94_2641 = GameStringStatics.create("K");
   public static int[] anIntArray2642 = {
     1, 1, 1, 1, 4, 1, 1, 5, 6, 1, 5, 0, 7, 0, 4, 1, 7, 2, 1, 1, 6, 1, 1, 3, 6, 1, 7, 0, 0, 6, 7, 0,
     1, 7, 6, 1, 1, 1, 5, 4, 3, 2, 1, 1, 0, 4, 1, 5

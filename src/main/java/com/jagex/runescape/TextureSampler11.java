@@ -1,13 +1,15 @@
 package com.jagex.runescape;
 
 import com.jagex.runescape.buffer.Buffer;
+import com.jagex.runescape.common.GameString;
+import com.jagex.runescape.common.GameStringStatics;
 
 public final class TextureSampler11 extends AbstractTextureSampler {
 
-  private static GameString aClass94_3247 = GameString.create("flash1:");
+  private static GameString aClass94_3247 = GameStringStatics.create("flash1:");
   public static int anInt3244;
   public static int anInt3248;
-  public static GameString aClass94_3251 = GameString.create("M-Bmoire attribu-Be");
+  public static GameString aClass94_3251 = GameStringStatics.create("M-Bmoire attribu-Be");
   public static GameString aClass94_3249 = TextureSampler11.aClass94_3247;
   public static GameString aClass94_3246 = TextureSampler11.aClass94_3247;
   private int anInt3245 = 4096;

@@ -1,6 +1,8 @@
 package com.jagex.runescape;
 
 import com.jagex.runescape.buffer.Buffer;
+import com.jagex.runescape.common.GameString;
+import com.jagex.runescape.common.GameStringStatics;
 import com.jagex.runescape.opengl.GlDirectColorSprite;
 import com.jagex.runescape.opengl.GlRenderer;
 import com.jagex.runescape.opengl.GlTexture2d;
@@ -8,12 +10,12 @@ import com.jagex.runescape.opengl.SomethingLight;
 
 public final class Light {
 
-  private static GameString aClass94_695 = GameString.create("Unable to find ");
+  private static GameString aClass94_695 = GameStringStatics.create("Unable to find ");
   public static int anInt692;
-  public static GameString aClass94_699 = GameString.create("clignotant3:");
-  public static GameString aClass94_700 = GameString.create("blaugr-Un:");
+  public static GameString aClass94_699 = GameStringStatics.create("clignotant3:");
+  public static GameString aClass94_700 = GameStringStatics.create("blaugr-Un:");
   public static GameString aClass94_701 =
-    GameString.create("Chargement de la liste des serveurs");
+    GameStringStatics.create("Chargement de la liste des serveurs");
   public static int anInt715;
   public static int anInt716;
   public static GameString aClass94_691 = Light.aClass94_695;

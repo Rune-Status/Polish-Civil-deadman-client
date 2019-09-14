@@ -1,5 +1,8 @@
 package com.jagex.runescape;
 
+import com.jagex.runescape.common.ArrayUtils;
+import com.jagex.runescape.common.GameString;
+import com.jagex.runescape.common.GameStringStatics;
 import java.io.IOException;
 import java.io.OutputStream;
 
@@ -10,8 +13,8 @@ public final class DummyOutputStream extends OutputStream {
   public static boolean aBoolean47;
   public static int anInt48 = 2;
   public static int[] anIntArray49;
-  public static GameString aClass94_50 = GameString.create("<col=80ff00>");
-  public static GameString aClass94_51 = GameString.create("; Expires=");
+  public static GameString aClass94_50 = GameStringStatics.create("<col=80ff00>");
+  public static GameString aClass94_51 = GameStringStatics.create("; Expires=");
 
   public void write(int var1) throws IOException {
     throw new IOException();

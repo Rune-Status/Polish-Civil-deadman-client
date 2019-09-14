@@ -1,6 +1,8 @@
 package com.jagex.runescape;
 
 import com.jagex.runescape.buffer.Buffer;
+import com.jagex.runescape.common.GameString;
+import com.jagex.runescape.common.GameStringStatics;
 import com.jagex.runescape.opengl.GlEnvironment;
 import com.jagex.runescape.opengl.GlTexture2d;
 
@@ -9,7 +11,7 @@ public final class GameBuffer extends Buffer {
   public static GameString[] titlePrefixes;
   public static int[] anIntArray3804 = new int[256];
   public static int[] anIntArray3805;
-  public static GameString MAP_PREFIX = GameString.create("m");
+  public static GameString MAP_PREFIX = GameStringStatics.create("m");
   private ISAACCipher cipher;
   private int bitOffset;
 
@@ -303,7 +305,7 @@ public final class GameBuffer extends Buffer {
         GlobalStatics_0.anInt638 = 2;
         SceneSomething2.anInt1053 = DummyClass5.anInt2993;
         FileCacheRequest.anInt4062 = DummyClass36.anInt2614;
-        ++HashTable.anInt1701;
+        ++GlobalStatics_0.anInt1701;
         FileRequester.anInt2958 = 0;
         TextureSampler12.secureBuffer.writePacket(92);
         TextureSampler12.secureBuffer.method765(var5, (byte) 3);
@@ -323,7 +325,7 @@ public final class GameBuffer extends Buffer {
                   }), -1);
         } else {
           TextureSampler12.secureBuffer.writePacket(92);
-          ++HashTable.anInt1701;
+          ++GlobalStatics_0.anInt1701;
           TextureSampler12.secureBuffer.method765(var5, (byte) 3);
         }
 
@@ -1233,7 +1235,7 @@ public final class GameBuffer extends Buffer {
       AbstractAudioOutputStream.anInt1971 = InventoryConfig.fogColor;
       FloorUnderlay.anInt1407 = FileCache.fogOffset;
       Widget.aFloat246 = var9;
-      Node.anInt72 = 0;
+      GlobalStatics_0.anInt72 = 0;
       TextureSampler18.anInt4037 = FileUnpacker.sunColor;
       DummyClass22.anInt1736 = var11;
       TextureSampler6.aFloat3044 = var8;
@@ -1241,22 +1243,22 @@ public final class GameBuffer extends Buffer {
       DummyClass31.aFloat1475 = SomethingSceneJ.aFloat319;
     }
 
-    if (Node.anInt72 < 65536) {
-      Node.anInt72 += 250 * var0;
-      if ((Node.anInt72 >= 65536)) {
-        Node.anInt72 = 65536;
+    if (GlobalStatics_0.anInt72 < 65536) {
+      GlobalStatics_0.anInt72 += 250 * var0;
+      if ((GlobalStatics_0.anInt72 >= 65536)) {
+        GlobalStatics_0.anInt72 = 65536;
       }
 
-      float var15 = Node.anInt72 / 65536.0F;
-      int var13 = Node.anInt72 >> 8;
-      int var12 = -Node.anInt72 + 65536 >> 8;
+      float var15 = GlobalStatics_0.anInt72 / 65536.0F;
+      int var13 = GlobalStatics_0.anInt72 >> 8;
+      int var12 = -GlobalStatics_0.anInt72 + 65536 >> 8;
       InventoryConfig.fogColor =
           (-16711936 & var13 * (HintMarker.anInt1345 & 16711935)
               + (16711935 & AbstractAudioOutputStream.anInt1971) * var12) + (
               16711680
                   & var12 * (AbstractAudioOutputStream.anInt1971 & '\uff00')
                   + ('\uff00' & HintMarker.anInt1345) * var13) >> 8;
-      float var14 = (65536 - Node.anInt72) / 65536.0F;
+      float var14 = (65536 - GlobalStatics_0.anInt72) / 65536.0F;
       BufferedFile.ambientIntensity =
           var14 * TextureSampler9.aFloat3105
               + var15 * AnimationFrame.aFloat2457;
@@ -1281,7 +1283,7 @@ public final class GameBuffer extends Buffer {
             TextureSampler36.diffuseIntensity, SomethingSceneJ.aFloat319);
     GlEnvironment.setFogColor(InventoryConfig.fogColor, FileCache.fogOffset);
     GlEnvironment.setSunPosition(DummyClass39.sunPositionX,
-        TextureSampler0.sunPositionY, BlockConfig.sunPositionZ);
+        TextureSampler0.sunPositionY, GlobalStatics_0.sunPositionZ);
     GlEnvironment.updateSunPosition();
     return InventoryConfig.fogColor;
   }

@@ -1,20 +1,23 @@
 package com.jagex.runescape;
 
+import com.jagex.runescape.common.GameString;
+import com.jagex.runescape.common.GameStringStatics;
+
 public final class DummyClass32 {
 
-  private static GameString aClass94_519 = GameString.create("skill: ");
-  private static GameString aClass94_521 = GameString.create("scroll:");
-  private static GameString aClass94_527 = GameString.create("level: ");
+  private static GameString aClass94_519 = GameStringStatics.create("skill: ");
+  private static GameString aClass94_521 = GameStringStatics.create("scroll:");
+  private static GameString aClass94_527 = GameStringStatics.create("level: ");
   public static int[] anIntArray510 = {768, 1024, 1280, 512, 1536, 256, 0, 1792};
   public static ObjectCache aClass93_511 = new ObjectCache(30);
   public static int[] anIntArray512 = new int[500];
   public static int anInt513;
-  public static GameString aClass94_514 = GameString.create(":duelstake:");
+  public static GameString aClass94_514 = GameStringStatics.create(":duelstake:");
   public static int anInt515 = -1;
-  public static GameString aClass94_516 = GameString.create("unzap");
+  public static GameString aClass94_516 = GameStringStatics.create("unzap");
   public static int anInt517;
   public static SoftwareDirectColorSprite aClass3_Sub28_Sub16_Sub2_518;
-  public static GameString aClass94_520 = GameString.create("Chargement des interfaces )2 ");
+  public static GameString aClass94_520 = GameStringStatics.create("Chargement des interfaces )2 ");
   public static SomethingAudio aClass157_524;
   public static Widget aClass11_526;
   public static GameString SKILL = DummyClass32.aClass94_519;

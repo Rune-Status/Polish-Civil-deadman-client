@@ -1,5 +1,7 @@
 package com.jagex.runescape;
 
+import com.jagex.runescape.common.GameString;
+import com.jagex.runescape.common.GameStringStatics;
 import com.jagex.runescape.huffman.HuffmanEncoderStatics;
 import com.jagex.runescape.opengl.GlDirectColorSprite;
 import com.jagex.runescape.opengl.GlRenderer;
@@ -8,7 +10,7 @@ import com.jagex.runescape.opengl.GlUtils;
 public final class CollisionMap {
 
   public static GameString[] playerOptions = new GameString[8];
-  public static GameString aClass94_1301 = GameString.create("(U3");
+  public static GameString aClass94_1301 = GameStringStatics.create("(U3");
   public static int anInt1302;
   public static SomethingFont aClass33_1305;
   public static int anInt1307;
@@ -1334,7 +1336,7 @@ public final class CollisionMap {
       !(screenX < DummyClass17.screenLowerX && screenX0 < DummyClass17.screenLowerX) && (
         !(screenX > Unsure.screenUpperX && screenX0 > Unsure.screenUpperX) && (
           !(screenY < DummyClass3.screenUpperY && screenY0 < DummyClass3.screenUpperY) && (
-            screenY <= BlockConfig.screenLowerY || screenY0 <= BlockConfig.screenLowerY)))));
+            screenY <= GlobalStatics_0.screenLowerY || screenY0 <= GlobalStatics_0.screenLowerY)))));
   }
 
 }

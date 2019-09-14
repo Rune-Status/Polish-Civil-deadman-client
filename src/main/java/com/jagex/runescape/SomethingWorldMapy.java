@@ -1,5 +1,6 @@
 package com.jagex.runescape;
 
+import com.jagex.runescape.common.GameString;
 import java.util.Objects;
 
 public final class SomethingWorldMapy extends SubNode {
@@ -123,7 +124,7 @@ public final class SomethingWorldMapy extends SubNode {
       int var7 = (!var1 ? MidiSomething.anInt1156 : RenderAnimation.anInt377) + var6;
 
       for (int var8 = var6; var8 < var7; ++var8) {
-        SomethingQuickChat var9 = StringNode.method733(12345678, var8);
+        SomethingQuickChat var9 = GlobalStatics_0.method733(12345678, var8);
         if (var9.aBoolean3568 && Objects.requireNonNull(var9.method554(-1)).method1534().indexOf(var2) != -1) {
           if (var4 >= 50) {
             FileTable.anInt952 = -1;
@@ -151,7 +152,7 @@ public final class SomethingWorldMapy extends SubNode {
       GameString[] var13 = new GameString[FileTable.anInt952];
 
       for (int var14 = 0; FileTable.anInt952 > var14; ++var14) {
-        var13[var14] = StringNode.method733(12345678, var3[var14]).method554(-1);
+        var13[var14] = GlobalStatics_0.method733(12345678, var3[var14]).method554(-1);
       }
 
       TextureSampler3.method307(var13, DummyClass54.aShortArray1398, 100);

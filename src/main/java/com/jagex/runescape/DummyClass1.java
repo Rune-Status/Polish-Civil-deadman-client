@@ -1,5 +1,8 @@
 package com.jagex.runescape;
 
+import com.jagex.runescape.common.GameString;
+import com.jagex.runescape.common.GameStringStatics;
+
 public final class DummyClass1 {
 
   public static ITextureCache anInterface2_408;
@@ -7,10 +10,10 @@ public final class DummyClass1 {
   public static int anInt410;
   public static int anInt411;
   public static GameString aClass94_412 =
-    GameString.create("Vous ne pouvez pas ajouter votre nom -9 votre liste d(Wamis)3");
+    GameStringStatics.create("Vous ne pouvez pas ajouter votre nom -9 votre liste d(Wamis)3");
   public static SignLinkRequest socketRequest;
-  public static GameString aClass94_414 = GameString.create("Verbindung abgebrochen)3");
-  public static GameString aClass94_415 = GameString.create("comp-Btence ");
+  public static GameString aClass94_414 = GameStringStatics.create("Verbindung abgebrochen)3");
+  public static GameString aClass94_415 = GameStringStatics.create("comp-Btence ");
 
 
   public DummyClass1() {

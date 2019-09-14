@@ -1,14 +1,17 @@
 package com.jagex.runescape;
 
+import com.jagex.runescape.common.GameString;
+import com.jagex.runescape.common.GameStringStatics;
+
 public final class ProjectileNode extends SubNode {
 
-  public static GameString aClass94_3771 = GameString.create("Chargement en cours)3)3)3");
+  public static GameString aClass94_3771 = GameStringStatics.create("Chargement en cours)3)3)3");
   public static FileUnpacker animationBases;
   public static int primaryPort;
-  public static GameString aClass94_3774 = GameString.create("clignotant1:");
+  public static GameString aClass94_3774 = GameStringStatics.create("clignotant1:");
   public static int anInt3775;
   public static Cache aClass47_3776 = new Cache(64);
-  public static GameString aClass94_3777 = GameString.create(" x ");
+  public static GameString aClass94_3777 = GameStringStatics.create(" x ");
   public static boolean aBoolean3779;
   public static int[] anIntArray3780 = new int[32];
   public Projectile projectile;

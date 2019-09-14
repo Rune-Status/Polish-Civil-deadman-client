@@ -1,6 +1,8 @@
 package com.jagex.runescape;
 
 import com.jagex.runescape.buffer.Buffer;
+import com.jagex.runescape.common.GameString;
+import com.jagex.runescape.common.GameStringStatics;
 
 public final class GroundItemNode extends SubNode {
 
@@ -8,7 +10,7 @@ public final class GroundItemNode extends SubNode {
   public static byte[][] updatedMapsData;
   public static int anInt3670;
   public static int anInt3671;
-  public static GameString EMPTY_STRING = GameString.create("");
+  public static GameString EMPTY_STRING = GameStringStatics.create("");
   public static GameString password = GroundItemNode.EMPTY_STRING;
   public static boolean[] aBooleanArray3674 = new boolean[100];
   public static GameString username = GroundItemNode.EMPTY_STRING;
@@ -96,7 +98,7 @@ public final class GroundItemNode extends SubNode {
           RenderAnimation.aByteArrayArrayArray383 = new byte[var3][var4][];
           AbstractMouseWheel.anIntArrayArrayArray1903 = new int[var3][var4][];
           TextureSampler29.aByteArrayArrayArray3390 = new byte[var3][var4][];
-          int var6 = AbstractIndexedColorSprite.anInt1463 >> 1;
+          int var6 = GlobalStatics_1.anInt1463 >> 1;
           ClientScriptCall.aByteArrayArrayArray2452 = new byte[var3][var4][];
           PlayerVariable.anIntArrayArrayArray558 = new int[var3][var4][];
           GlobalStatics_0.method1014(-120, var6, var5);

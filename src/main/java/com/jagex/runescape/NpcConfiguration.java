@@ -1,6 +1,11 @@
 package com.jagex.runescape;
 
 import com.jagex.runescape.buffer.Buffer;
+import com.jagex.runescape.common.GameString;
+import com.jagex.runescape.common.GameStringStatics;
+import com.jagex.runescape.common.HashTable;
+import com.jagex.runescape.common.StringNode;
+import com.jagex.runescape.node.Node;
 import com.jagex.runescape.opengl.GlModel;
 import com.jagex.runescape.opengl.GlRenderer;
 
@@ -8,9 +13,9 @@ public final class NpcConfiguration {
 
   public static int anInt1252 = -1;
   public static int[] anIntArray1277 = new int[2000];
-  public static GameString aClass94_1281 = GameString.create("violet:");
+  public static GameString aClass94_1281 = GameStringStatics.create("violet:");
   public static GameString aClass94_1294 =
-    GameString.create("Votre liste noire est pleine (X100 noms maximum(Y)3");
+    GameStringStatics.create("Votre liste noire est pleine (X100 noms maximum(Y)3");
   public static int anInt1297;
   public int size = 1;
   public boolean aBoolean1249;

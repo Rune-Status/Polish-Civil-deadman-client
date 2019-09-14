@@ -1,6 +1,11 @@
 package com.jagex.runescape;
 
 import com.jagex.runescape.buffer.Buffer;
+import com.jagex.runescape.common.GameString;
+import com.jagex.runescape.common.GameStringStatics;
+import com.jagex.runescape.common.HashTable;
+import com.jagex.runescape.common.StringNode;
+import com.jagex.runescape.node.Node;
 import com.jagex.runescape.opengl.GlModel;
 import com.jagex.runescape.opengl.GlRenderer;
 
@@ -8,12 +13,12 @@ public final class GameObjectConfig {
 
   public static boolean[] aBooleanArray1490 = new boolean[112];
   public static int[][][] anIntArrayArrayArray1497 = new int[4][13][13];
-  public static GameString aClass94_1508 = GameString.create("Choisir une option");
-  public static GameString aClass94_1509 = GameString.create("Chargement des textures )2 ");
+  public static GameString aClass94_1508 = GameStringStatics.create("Choisir une option");
+  public static GameString aClass94_1509 = GameStringStatics.create("Chargement des textures )2 ");
   public static int portOffset = 1;
   public static int anInt1521;
   public static GameString aClass94_1523 =
-    GameString.create("Chargement en cours)3 Veuillez patienter)3");
+    GameStringStatics.create("Chargement en cours)3 Veuillez patienter)3");
   public static short aShort1535 = 320;
   public int anInt1478;
   public int anInt1480 = 1;

@@ -1,8 +1,7 @@
 package com.jagex.runescape;
 
-import com.jagex.runescape.opengl.GlRenderer;
+import com.jagex.runescape.common.GameString;
 import java.awt.Frame;
-import java.util.Objects;
 
 public final class DummyClass54 {
 

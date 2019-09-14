@@ -1,5 +1,8 @@
 package com.jagex.runescape;
 
+import com.jagex.runescape.common.GameString;
+import com.jagex.runescape.common.GameStringStatics;
+import com.jagex.runescape.node.Node;
 import com.jagex.runescape.opengl.GlDirectColorSprite;
 import com.jagex.runescape.opengl.GlRenderer;
 import com.jagex.runescape.opengl.GlTexture2d;
@@ -8,9 +11,9 @@ import java.util.Objects;
 
 public final class ClassCheckRequest extends Node {
 
-  public static GameString aClass94_2297 = GameString.create("Wordpack geladen)3");
-  public static GameString DETAILS = GameString.create("details");
-  public static GameString aClass94_2306 = GameString.create("<)4col> x");
+  public static GameString aClass94_2297 = GameStringStatics.create("Wordpack geladen)3");
+  public static GameString DETAILS = GameStringStatics.create("details");
+  public static GameString aClass94_2306 = GameStringStatics.create("<)4col> x");
   public int anInt2296;
   public SignLinkRequest[] aClass64Array2298;
   public int[] anIntArray2299;
@@ -388,15 +391,15 @@ public final class ClassCheckRequest extends Node {
 
   public static void method132(byte var0) {
     for (int var1 = 0; var1 < SomethingLight0.anInt1552; ++var1) {
-        --GameString.anIntArray2157[var1];
-        if ((GameString.anIntArray2157[var1] < 9)) {
+        --GlobalStatics_0.anIntArray2157[var1];
+        if ((GlobalStatics_0.anIntArray2157[var1] < 9)) {
           --SomethingLight0.anInt1552;
 
           for (int var2 = var1; var2 < SomethingLight0.anInt1552; ++var2) {
             Inventory.anIntArray2550[var2] = Inventory.anIntArray2550[var2 + 1];
             TextureCache.aClass135Array2131[var2] = TextureCache.aClass135Array2131[var2 + 1];
             SomethingIndex150.anIntArray2068[var2] = SomethingIndex150.anIntArray2068[1 + var2];
-            GameString.anIntArray2157[var2] = GameString.anIntArray2157[1 + var2];
+            GlobalStatics_0.anIntArray2157[var2] = GlobalStatics_0.anIntArray2157[1 + var2];
             TextureSampler26.anIntArray3083[var2] = TextureSampler26.anIntArray3083[var2 + 1];
           }
 
@@ -410,11 +413,11 @@ public final class ClassCheckRequest extends Node {
               continue;
             }
 
-            GameString.anIntArray2157[var1] += var11.method1813();
+            GlobalStatics_0.anIntArray2157[var1] += var11.method1813();
             TextureCache.aClass135Array2131[var1] = var11;
           }
 
-          if (GameString.anIntArray2157[var1] < 0) {
+          if (GlobalStatics_0.anIntArray2157[var1] < 0) {
             int var3;
             if ((TextureSampler26.anIntArray3083[var1] == 0)) {
               var3 = ClientScriptCall.anInt2453;
@@ -434,7 +437,7 @@ public final class ClassCheckRequest extends Node {
 
               int var9 = -128 + var6 + var8;
               if ((var4 < var9)) {
-                GameString.anIntArray2157[var1] = -100;
+                GlobalStatics_0.anIntArray2157[var1] = -100;
                 continue;
               }
 
@@ -453,7 +456,7 @@ public final class ClassCheckRequest extends Node {
               MonoChromaticImageBuffer.aClass3_Sub24_Sub2_2563.method457(var13);
             }
 
-            GameString.anIntArray2157[var1] = -100;
+            GlobalStatics_0.anIntArray2157[var1] = -100;
           }
         }
       }

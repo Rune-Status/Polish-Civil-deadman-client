@@ -1,15 +1,17 @@
 package com.jagex.runescape;
 
+import com.jagex.runescape.common.GameString;
+import com.jagex.runescape.common.GameStringStatics;
 import com.jagex.runescape.opengl.GlModel;
 import com.jagex.runescape.opengl.GlRenderer;
 
 public final class DummyHashTable {
 
-  private static GameString aClass94_1686 = GameString.create("shake:");
+  private static GameString aClass94_1686 = GameStringStatics.create("shake:");
   public static int anInt1682 = 1;
   public static ObjectCache aClass93_1683 = new ObjectCache(64);
   public static boolean aBoolean1685 = true;
-  public static GameString aClass94_1687 = GameString.create("(Z");
+  public static GameString aClass94_1687 = GameStringStatics.create("(Z");
   public static GameString aClass94_1688 = DummyHashTable.aClass94_1686;
   public static GameString aClass94_1689 = DummyHashTable.aClass94_1686;
   private final SubNode[] aClass3_Sub28Array1684;

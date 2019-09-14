@@ -1,37 +1,40 @@
 package com.jagex.runescape;
 
+import com.jagex.runescape.common.GameString;
+import com.jagex.runescape.common.GameStringStatics;
 import com.jagex.runescape.opengl.GlRenderer;
 import com.jagex.runescape.opengl.GlUtils;
+import com.jagex.runescape.sprite.AbstractIndexedColorSprite;
 import java.util.Random;
 
 public abstract class AbstractFont extends SubNode {
 
-  private static GameString aClass94_3711 = GameString.create("gt");
-  private static GameString aClass94_3712 = GameString.create("lt");
-  private static GameString aClass94_3713 = GameString.create("shad=");
-  private static GameString aClass94_3714 = GameString.create("shy");
-  private static GameString aClass94_3715 = GameString.create("trans=");
-  private static GameString aClass94_3716 = GameString.create("u=");
-  private static GameString aClass94_3717 = GameString.create("str=");
-  private static GameString aClass94_3718 = GameString.create("euro");
-  private static GameString aClass94_3720 = GameString.create(")4col");
-  private static GameString aClass94_3724 = GameString.create(")4shad");
-  private static GameString aClass94_3725 = GameString.create("col=");
-  private static GameString GT = GameString.create("<gt>");
-  private static GameString aClass94_3728 = GameString.create("u");
-  private static GameString aClass94_3729 = GameString.create("times");
-  private static GameString aClass94_3731 = GameString.create(")4trans");
-  private static GameString aClass94_3732 = GameString.create("nbsp");
-  private static GameString LT = GameString.create("<lt>");
-  private static GameString aClass94_3735 = GameString.create(")4u");
-  private static GameString aClass94_3737 = GameString.create("br");
-  private static GameString aClass94_3738 = GameString.create("shad");
-  private static GameString aClass94_3739 = GameString.create("img=");
-  private static GameString aClass94_3741 = GameString.create("copy");
-  private static GameString aClass94_3742 = GameString.create(")4str");
-  private static GameString aClass94_3743 = GameString.create("reg");
-  private static GameString aClass94_3744 = GameString.create("str");
-  private static GameString aClass94_3745 = Cache.createString(100);
+  private static GameString aClass94_3711 = GameStringStatics.create("gt");
+  private static GameString aClass94_3712 = GameStringStatics.create("lt");
+  private static GameString aClass94_3713 = GameStringStatics.create("shad=");
+  private static GameString aClass94_3714 = GameStringStatics.create("shy");
+  private static GameString aClass94_3715 = GameStringStatics.create("trans=");
+  private static GameString aClass94_3716 = GameStringStatics.create("u=");
+  private static GameString aClass94_3717 = GameStringStatics.create("str=");
+  private static GameString aClass94_3718 = GameStringStatics.create("euro");
+  private static GameString aClass94_3720 = GameStringStatics.create(")4col");
+  private static GameString aClass94_3724 = GameStringStatics.create(")4shad");
+  private static GameString aClass94_3725 = GameStringStatics.create("col=");
+  private static GameString GT = GameStringStatics.create("<gt>");
+  private static GameString aClass94_3728 = GameStringStatics.create("u");
+  private static GameString aClass94_3729 = GameStringStatics.create("times");
+  private static GameString aClass94_3731 = GameStringStatics.create(")4trans");
+  private static GameString aClass94_3732 = GameStringStatics.create("nbsp");
+  private static GameString LT = GameStringStatics.create("<lt>");
+  private static GameString aClass94_3735 = GameStringStatics.create(")4u");
+  private static GameString aClass94_3737 = GameStringStatics.create("br");
+  private static GameString aClass94_3738 = GameStringStatics.create("shad");
+  private static GameString aClass94_3739 = GameStringStatics.create("img=");
+  private static GameString aClass94_3741 = GameStringStatics.create("copy");
+  private static GameString aClass94_3742 = GameStringStatics.create(")4str");
+  private static GameString aClass94_3743 = GameStringStatics.create("reg");
+  private static GameString aClass94_3744 = GameStringStatics.create("str");
+  private static GameString aClass94_3745 = GameStringStatics.createString(100);
   private static int anInt3746 = -1;
   private static int anInt3747 = -1;
   private static int anInt3748;
@@ -1067,7 +1070,7 @@ public abstract class AbstractFont extends SubNode {
       }
     }
 
-    GameString var6 = Cache.createString(var1 + var2);
+    GameString var6 = GameStringStatics.createString(var1 + var2);
 
     for (var4 = 0; var4 < var1; ++var4) {
       int var5 = var0.charAt(var4);

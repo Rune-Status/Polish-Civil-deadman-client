@@ -1,12 +1,15 @@
 package com.jagex.runescape;
 
+import com.jagex.runescape.common.GameString;
+import com.jagex.runescape.common.GameStringStatics;
+
 public final class DummyClass44 {
 
-  private static GameString aClass94_931 = GameString.create("Continue");
+  private static GameString aClass94_931 = GameStringStatics.create("Continue");
   public static int anInt930;
   public static int anInt932;
   public static GameString aClass94_933 =
-    GameString.create("Ladevorgang )2 bitte warten Sie)3");
+    GameStringStatics.create("Ladevorgang )2 bitte warten Sie)3");
   public static int anInt934;
   public static int pitchSine;
   public static GameString aClass94_935 = DummyClass44.aClass94_931;
@@ -34,7 +37,7 @@ public final class DummyClass44 {
 
   public static void method1208(byte var0, int var1) {
     if (var1 != -1) {
-        if (HashTable.aBooleanArray1703[var1]) {
+        if (GlobalStatics_0.aBooleanArray1703[var1]) {
           TextureSampler3.aClass153_3361.method2128(7561, var1);
           if (SceneNode.aClass11ArrayArray1834[var1] != null) {
             boolean var2 = true;
@@ -54,7 +57,7 @@ public final class DummyClass44 {
               SceneNode.aClass11ArrayArray1834[var1] = null;
             }
 
-            HashTable.aBooleanArray1703[var1] = false;
+            GlobalStatics_0.aBooleanArray1703[var1] = false;
           }
         }
       }

@@ -1,13 +1,16 @@
 package com.jagex.runescape;
 
+import com.jagex.runescape.common.GameString;
+import com.jagex.runescape.common.GameStringStatics;
+
 public class DummyClass6 {
 
   public static Cache aClass47_2041 = new Cache(64);
   public static GameString aClass94_2042 =
-    GameString.create("Spieler kann nicht gefunden werden: ");
+    GameStringStatics.create("Spieler kann nicht gefunden werden: ");
   public static int[] anIntArray2043 = {8, 11, 4, 6, 9, 7, 10, 0};
-  public static GameString COOKIE_PREFIX = GameString.create("cookieprefix");
-  public static GameString COMMAND_ERROR_TEST = GameString.create("::errortest");
+  public static GameString COOKIE_PREFIX = GameStringStatics.create("cookieprefix");
+  public static GameString COMMAND_ERROR_TEST = GameStringStatics.create("::errortest");
   public static int anInt2046;
 
 

@@ -1,5 +1,7 @@
 package com.jagex.runescape;
 
+import com.jagex.runescape.common.GameString;
+import com.jagex.runescape.common.GameStringStatics;
 import com.jagex.runescape.opengl.DummyClass16;
 import com.jagex.runescape.opengl.GlDirectColorSprite;
 import com.jagex.runescape.opengl.GlRenderer;
@@ -9,10 +11,10 @@ public final class DummyClass28 {
 
   public static int anInt336;
   public static boolean aBoolean337;
-  public static GameString aClass94_338 = GameString.create("Ablegen");
-  public static GameString aClass94_339 = GameString.create("1");
+  public static GameString aClass94_338 = GameStringStatics.create("Ablegen");
+  public static GameString aClass94_339 = GameStringStatics.create("1");
   public static int anInt340 = 127;
-  public static GameString aClass94_341 = GameString.create(")3");
+  public static GameString aClass94_341 = GameStringStatics.create(")3");
 
 
   private static SoftwareIndexedColorSprite[] method885(boolean var0, int var1,

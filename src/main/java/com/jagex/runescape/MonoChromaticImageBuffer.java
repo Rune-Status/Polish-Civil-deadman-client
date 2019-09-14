@@ -1,5 +1,9 @@
 package com.jagex.runescape;
 
+import com.jagex.runescape.common.GameString;
+import com.jagex.runescape.common.GameStringStatics;
+import com.jagex.runescape.node.Node;
+
 public final class MonoChromaticImageBuffer extends Node {
 
   public static int affiliateId;
@@ -9,7 +13,7 @@ public final class MonoChromaticImageBuffer extends Node {
   public static int[] anIntArray2559 = {0, 1, 2, 3, 4, 5, 6, 14};
   public static AbstractDirectColorSprite aClass3_Sub28_Sub16_2560;
   public static int anInt2561 = -1;
-  public static GameString aClass94_2562 = GameString.create("<col=ffffff>");
+  public static GameString aClass94_2562 = GameStringStatics.create("<col=ffffff>");
   public static AudioStreamEncoder2 aClass3_Sub24_Sub2_2563;
   public int anInt2553;
   public int anInt2555;

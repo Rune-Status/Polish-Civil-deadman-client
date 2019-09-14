@@ -1,8 +1,8 @@
 package com.jagex.runescape.buffer;
 
-import com.jagex.runescape.GameString;
-import com.jagex.runescape.GameStringStatics;
-import com.jagex.runescape.Node;
+import com.jagex.runescape.common.GameString;
+import com.jagex.runescape.common.GameStringStatics;
+import com.jagex.runescape.node.Node;
 import java.math.BigInteger;
 
 public class Buffer extends Node {

@@ -1,6 +1,8 @@
 package com.jagex.runescape;
 
 import com.jagex.runescape.buffer.Buffer;
+import com.jagex.runescape.common.GameString;
+import com.jagex.runescape.common.GameStringStatics;
 import com.jagex.runescape.opengl.GlDirectColorSprite;
 import com.jagex.runescape.opengl.GlRenderer;
 import java.io.BufferedReader;
@@ -15,7 +17,7 @@ public final class DummyClass41 {
   public static long aLong866;
   public static int secondaryPort;
   public static GameString aClass94_868 =
-    GameString.create("Chargement de l(W-Bcran)2titre )2 ");
+    GameStringStatics.create("Chargement de l(W-Bcran)2titre )2 ");
 
 
   public static void method1169(boolean var0) {

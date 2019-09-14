@@ -1,16 +1,18 @@
 package com.jagex.runescape;
 
 import com.jagex.runescape.buffer.Buffer;
+import com.jagex.runescape.common.GameString;
+import com.jagex.runescape.common.GameStringStatics;
 
 public final class FileTable {
 
   private static GameString aClass94_948 =
-    GameString.create("You can(Wt add yourself to your own friend list)3");
+    GameStringStatics.create("You can(Wt add yourself to your own friend list)3");
   public static int anInt942;
   public static int anInt944;
-  public static GameString aClass94_946 = GameString.create(")2");
+  public static GameString aClass94_946 = GameStringStatics.create(")2");
   public static int drawMemoryCounter;
-  public static GameString aClass94_951 = GameString.create("Interfaces charg-Bes");
+  public static GameString aClass94_951 = GameStringStatics.create("Interfaces charg-Bes");
   public static int anInt952;
   public static int anInt963;
   public static GameString aClass94_957 = FileTable.aClass94_948;
@@ -248,7 +250,7 @@ public final class FileTable {
 
         TextureSampler21.anInt3069 = SpotAnimationConfig.anInt549;
         SomethingTilek.anInt1676 = SomethingWorldMappy.lastMouseX;
-        HashTable.anInt1709 = DummyClass53.lastMouseY;
+        GlobalStatics_0.anInt1709 = DummyClass53.lastMouseY;
         Structure.anInt3644 = GameObject.anInt2743;
         DummyClass5.anInt2993 = RenderAnimation.anInt362;
         ++ObjectNode.anInt4045;

@@ -1,11 +1,13 @@
 package com.jagex.runescape;
 
+import com.jagex.runescape.common.GameString;
+import com.jagex.runescape.common.GameStringStatics;
 import com.jagex.runescape.opengl.GlRenderer;
 
 public abstract class Mobile extends SceneNode {
 
   public static int anInt2756;
-  public static GameString aClass94_2765 = GameString.create(" ");
+  public static GameString aClass94_2765 = GameStringStatics.create(" ");
   public static int anInt2770;
   public static boolean aBoolean2774 = true;
   public static ObjectCache aClass93_2792 = new ObjectCache(64);

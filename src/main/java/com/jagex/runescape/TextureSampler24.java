@@ -1,5 +1,7 @@
 package com.jagex.runescape;
 
+import com.jagex.runescape.common.GameString;
+import com.jagex.runescape.common.GameStringStatics;
 import com.jagex.runescape.opengl.GlRenderer;
 import com.jagex.runescape.opengl.GlTexture2d;
 import com.jagex.runescape.opengl.GlUtils;
@@ -7,10 +9,10 @@ import java.util.zip.CRC32;
 
 public final class TextureSampler24 extends AbstractTextureSampler {
 
-  private static GameString aClass94_3141 = GameString.create("Loaded config");
+  private static GameString aClass94_3141 = GameStringStatics.create("Loaded config");
   public static CRC32 aCRC32_3143 = new CRC32();
   public static int anInt3144;
-  public static GameString aClass94_3145 = GameString.create(")1 ");
+  public static GameString aClass94_3145 = GameStringStatics.create(")1 ");
   public static GameString aClass94_3142 = TextureSampler24.aClass94_3141;
 
 

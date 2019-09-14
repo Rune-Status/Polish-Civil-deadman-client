@@ -1,16 +1,19 @@
 package com.jagex.runescape;
 
 import com.jagex.runescape.buffer.Buffer;
+import com.jagex.runescape.common.GameString;
+import com.jagex.runescape.common.GameStringStatics;
+import com.jagex.runescape.common.HashTable;
 import com.jagex.runescape.opengl.SomethingGl0;
 
 public final class TextureSampler7 extends AbstractTextureSampler {
 
   public static long serverCipherKey;
-  public static GameString aClass94_3339 = GameString.create("null");
+  public static GameString aClass94_3339 = GameStringStatics.create("null");
   public static int cameraTileZ;
   public static GameString[] aClass94Array3341 = new GameString[100];
   public static int anInt3342;
-  public static GameString aClass94_3344 = GameString.create(
+  public static GameString aClass94_3344 = GameStringStatics.create(
     "Sie k-Onnen sich selbst nicht selbst auf Ihre Ignorieren)2Liste setzen(Q");
   private int anInt3343 = 6;
 
@@ -318,7 +321,7 @@ public final class TextureSampler7 extends AbstractTextureSampler {
               SubNode.aClass94Array2566[var4] = SubNode.aClass94Array2566[1 + var4];
               VertexNormal.aLongArray826[var4] = VertexNormal.aLongArray826[1 + var4];
               LightIntensity.anIntArray904[var4] = LightIntensity.anIntArray904[var4 + 1];
-              Node.aBooleanArray73[var4] = Node.aBooleanArray73[1 + var4];
+              GlobalStatics_0.aBooleanArray73[var4] = GlobalStatics_0.aBooleanArray73[1 + var4];
             }
 
             DummyClass31.anInt1472 = TextureSampler23.anInt3213;

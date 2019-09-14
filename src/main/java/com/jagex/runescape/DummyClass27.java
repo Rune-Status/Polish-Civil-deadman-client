@@ -1,8 +1,11 @@
 package com.jagex.runescape;
 
+import com.jagex.runescape.common.GameString;
+import com.jagex.runescape.common.GameStringStatics;
+
 public final class DummyClass27 {
 
-  private static GameString aClass94_1582 = GameString.create("Ok");
+  private static GameString aClass94_1582 = GameStringStatics.create("Ok");
   public static BlockConfig[][] blockConfigs = new BlockConfig[13][13];
   public static GameString aClass94_1583 = DummyClass27.aClass94_1582;
 

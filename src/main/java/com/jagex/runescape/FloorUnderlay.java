@@ -1,11 +1,13 @@
 package com.jagex.runescape;
 
 import com.jagex.runescape.buffer.Buffer;
+import com.jagex.runescape.common.GameString;
+import com.jagex.runescape.common.GameStringStatics;
 import java.util.Random;
 
 public final class FloorUnderlay {
 
-  private static GameString aClass94_1415 = GameString.create("Loaded input handler");
+  private static GameString aClass94_1415 = GameStringStatics.create("Loaded input handler");
   public static int anInt1405;
   public static int anInt1407;
   public static FileUnpacker fileUnpacker19;

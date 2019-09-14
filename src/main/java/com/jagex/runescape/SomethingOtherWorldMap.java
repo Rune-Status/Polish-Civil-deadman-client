@@ -1,5 +1,8 @@
 package com.jagex.runescape;
 
+import com.jagex.runescape.common.GameString;
+import com.jagex.runescape.common.GameStringStatics;
+import com.jagex.runescape.node.Node;
 import com.jagex.runescape.opengl.GlRenderer;
 import com.jagex.runescape.opengl.GlUtils;
 import com.jagex.runescape.opengl.SomethingGl0;
@@ -68,7 +71,7 @@ public final class SomethingOtherWorldMap extends Node {
   }
 
   public static GameString method407(int var0, boolean var1, int var2, long var3, int var5) {
-    GameString var6 = Cache.createString(0);
+    GameString var6 = GameStringStatics.createString(0);
       if ((var3 < 0L)) {
         var3 = -var3;
         var6.append(TextureSampler1.aClass94_3133);
@@ -91,7 +94,7 @@ public final class SomethingOtherWorldMap extends Node {
         var7 = DummyClass15.aClass94_1880;
       }
 
-      GameString var10 = Cache.createString(0);
+      GameString var10 = GameStringStatics.createString(0);
 
       int var11;
       for (var11 = 0; (var11 < var2); ++var11) {
@@ -105,7 +108,7 @@ public final class SomethingOtherWorldMap extends Node {
         var9 = TextureSampler12.aClass94_3039;
       } else {
         GameString var12;
-        for (var12 = Cache.createString(0); var3 > 0L; var3 /= 10L) {
+        for (var12 = GameStringStatics.createString(0); var3 > 0L; var3 /= 10L) {
           if (var1 && (var11 != 0) && ((var11 % 3) == 0)) {
             var12.append(var8);
           }

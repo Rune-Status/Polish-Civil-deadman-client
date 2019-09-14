@@ -1,6 +1,8 @@
 package com.jagex.runescape;
 
 import com.jagex.runescape.buffer.Buffer;
+import com.jagex.runescape.common.GameString;
+import com.jagex.runescape.common.GameStringStatics;
 import com.jagex.runescape.opengl.SomethingGl0;
 
 public final class PlayerVariable {
@@ -9,9 +11,9 @@ public final class PlayerVariable {
   public static int anInt555;
   public static FileUnpacker aClass153_557;
   public static int[][][] anIntArrayArrayArray558;
-  public static GameString aClass94_559 = GameString.create("m-Ochte mit Ihnen handeln)3");
+  public static GameString aClass94_559 = GameStringStatics.create("m-Ochte mit Ihnen handeln)3");
   public static GameString aClass94_560 =
-    GameString.create(" zuerst von Ihrer Freunde)2Liste(Q");
+    GameStringStatics.create(" zuerst von Ihrer Freunde)2Liste(Q");
   public static int mouseWheelOffset;
   public static int anInt562;
   public int anInt556;

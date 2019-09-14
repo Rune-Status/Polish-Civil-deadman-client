@@ -1,6 +1,7 @@
 package com.jagex.runescape;
 
 import com.jagex.runescape.buffer.Buffer;
+import com.jagex.runescape.common.GameString;
 import com.jagex.runescape.opengl.GlRenderer;
 import com.jagex.runescape.opengl.GlTexture2d;
 import com.jagex.runescape.opengl.GlUtils;
@@ -83,7 +84,7 @@ public final class GZipDecompressor {
                   if ((AudioStreamEncoder3.regionHashes[var14] == var13)
                       && var3[var14] != null) {
                     MovedStatics0.method60(var10, 8 * var5, var4,
-                        BlockConfig.collisionMaps,
+                        GlobalStatics_0.collisionMaps,
                         var6 * 8, (byte) -100, var3[var14], var9,
                         (var12 & 7) * 8, 8 * (var11 & 7),
                         var0);
@@ -185,7 +186,7 @@ public final class GZipDecompressor {
           DummyClass36.anInt2612 = FloorOverlay.anInt2099;
         } else if (Structure.anInt3644 == 0) {
           NpcConfiguration.anInt1297 = SomethingTilek.anInt1676;
-          DummyClass36.anInt2612 = HashTable.anInt1709;
+          DummyClass36.anInt2612 = GlobalStatics_0.anInt1709;
         } else {
           NpcConfiguration.anInt1297 = DummyClass5.anInt2993;
           DummyClass36.anInt2612 = DummyClass36.anInt2614;
@@ -209,7 +210,7 @@ public final class GZipDecompressor {
             DummyClass9.aBooleanArray4008[var1] = true;
           }
 
-          HashTable.aBooleanArray1712[var1] = GroundItemNode.aBooleanArray3674[var1];
+          GlobalStatics_0.aBooleanArray1712[var1] = GroundItemNode.aBooleanArray3674[var1];
           GroundItemNode.aBooleanArray3674[var1] = false;
         }
 
@@ -267,7 +268,7 @@ public final class GZipDecompressor {
 
         if ((ClientScript.rectangleDebugType == 3)) {
           for (int var2 = 0; (var2 < SomethingWorldMapy.widgetQuads); ++var2) {
-            if (!HashTable.aBooleanArray1712[var2]) {
+            if (!GlobalStatics_0.aBooleanArray1712[var2]) {
               if (DummyClass9.aBooleanArray4008[var2]) {
                 if (GlRenderer.useOpenGlRenderer) {
                   GlUtils.fillQuad(AbstractAudioOutputStream.quadx0[var2],

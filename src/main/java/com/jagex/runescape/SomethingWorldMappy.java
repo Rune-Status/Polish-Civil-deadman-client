@@ -1,13 +1,16 @@
 package com.jagex.runescape;
 
+import com.jagex.runescape.common.GameString;
+import com.jagex.runescape.common.GameStringStatics;
+import com.jagex.runescape.node.Node;
 import com.jagex.runescape.opengl.GlRenderer;
 
 public final class SomethingWorldMappy extends Node {
 
   public static AbstractAudioOutputStream audioOutputStream1;
   public static volatile int lastMouseX = -1;
-  public static GameString aClass94_2496 = GameString.create("scrollen:");
-  public static GameString aClass94_2498 = GameString.create("(U (X");
+  public static GameString aClass94_2496 = GameStringStatics.create("scrollen:");
+  public static GameString aClass94_2498 = GameStringStatics.create("(U (X");
   public int anInt2492;
   public int anInt2494;
   public int anInt2495;

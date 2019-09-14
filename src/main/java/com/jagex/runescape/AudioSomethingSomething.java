@@ -1,23 +1,26 @@
 package com.jagex.runescape;
 
 import com.jagex.runescape.buffer.Buffer;
+import com.jagex.runescape.common.GameString;
+import com.jagex.runescape.common.GameStringStatics;
+import com.jagex.runescape.node.Node;
 import com.jagex.runescape.opengl.DummyClass46;
 import com.jagex.runescape.opengl.GlEnvironment;
 import com.jagex.runescape.opengl.GlRenderer;
 
 public final class AudioSomethingSomething extends Node {
 
-  private static GameString aClass94_2525 = GameString
+  private static GameString aClass94_2525 = GameStringStatics
       .create("rating: ");
-  public static GameString aClass94_2499 = GameString
+  public static GameString aClass94_2499 = GameStringStatics
       .create("Okay");
   public static int anInt2500;
   public static GZipDecompressor aClass49_2505 = new GZipDecompressor();
-  public static GameString aClass94_2518 = GameString
+  public static GameString aClass94_2518 = GameStringStatics
       .create("Poser");
   public static byte[][] landscapesData;
   public static GameString aClass94_2524 =
-      GameString.create("Starte 3D)2Softwarebibliothek)3");
+      GameStringStatics.create("Starte 3D)2Softwarebibliothek)3");
   public static FileUnpacker fileUnpacker22;
   public static int anInt2529;
   public static GameString aClass94_2526 = AudioSomethingSomething.aClass94_2525;

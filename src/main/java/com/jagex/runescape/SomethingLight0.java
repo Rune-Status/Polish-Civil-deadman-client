@@ -1,14 +1,17 @@
 package com.jagex.runescape;
 
+import com.jagex.runescape.common.GameString;
+import com.jagex.runescape.common.GameStringStatics;
+
 public final class SomethingLight0 {
 
   public static int interfaceCounter;
-  public static GameString aClass94_1546 = GameString.create("welle:");
+  public static GameString aClass94_1546 = GameStringStatics.create("welle:");
   public static int anInt1552;
-  public static GameString aClass94_1556 = GameString.create("hint_mapmarkers");
-  public static GameString aClass94_1558 = GameString.create(": ");
+  public static GameString aClass94_1556 = GameStringStatics.create("hint_mapmarkers");
+  public static GameString aClass94_1558 = GameStringStatics.create(": ");
   public static int anInt1559;
-  public static GameString aClass94_1567 = GameString.create("mapdots");
+  public static GameString aClass94_1567 = GameStringStatics.create("mapdots");
   public int anInt1544;
   public int anInt1545;
   public int anInt1547;

@@ -1,17 +1,19 @@
 package com.jagex.runescape;
 
 import com.jagex.runescape.buffer.Buffer;
+import com.jagex.runescape.common.GameString;
+import com.jagex.runescape.common.GameStringStatics;
 import java.awt.event.KeyEvent;
 
 public final class BitVariable {
 
   public static GameString aClass94_1122 =
-      GameString.create("M-Bmoire en cours d(Wattribution");
+      GameStringStatics.create("M-Bmoire en cours d(Wattribution");
   public static int logoFileId = -1;
   public static int anInt1126;
   public static int anInt1127;
   public static GameString CLIENT_SCRIPT_ERROR =
-      GameString
+      GameStringStatics
           .create("Clientscript error )2 check log for details");
   public int low;
   public int high;
@@ -172,7 +174,7 @@ public final class BitVariable {
           }
 
           if ((var2 >= 5)) {
-            GameString.anInt2148 = var0.readInt();
+            GlobalStatics_0.anInt2148 = var0.readInt();
           }
 
           if (var1 != -1) {
@@ -184,7 +186,7 @@ public final class BitVariable {
           }
 
           if ((var2 >= 7)) {
-            GameString.safemode = var0.readUnsignedByte() == 1;
+            GlobalStatics_0.safemode = var0.readUnsignedByte() == 1;
           }
 
           if (var2 >= 8) {

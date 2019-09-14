@@ -267,7 +267,7 @@ public final class FileCache {
           TextureSampler15.aClass44_Sub1Array3201[var2] = var9;
 
           for (int var10 = var4; var10 < var2; ++var10) {
-            if ((GameString.method1535(var9, TextureSampler15.aClass44_Sub1Array3201[var10], 5730,
+            if ((GlobalStatics_0.method1535(var9, TextureSampler15.aClass44_Sub1Array3201[var10], 5730,
               var0, var1, var3, var5) <= 0)) {
               GameWorld var11 = TextureSampler15.aClass44_Sub1Array3201[var10];
               TextureSampler15.aClass44_Sub1Array3201[var10] =
@@ -311,11 +311,11 @@ public final class FileCache {
           var8 = var2 + 1;
         }
 
-        DummyClass29.method910(-96, var4, var1, var2, var7, var8, BlockConfig.collisionMaps[var2]);
+        DummyClass29.method910(-96, var4, var1, var2, var7, var8, GlobalStatics_0.collisionMaps[var2]);
         if (var0 >= 0) {
           boolean var9 = Keyboard.aBoolean1905;
           Keyboard.aBoolean1905 = true;
-          DummyClass31.method1683(var8, false, var2, false, BlockConfig.collisionMaps[var2], var0,
+          DummyClass31.method1683(var8, false, var2, false, GlobalStatics_0.collisionMaps[var2], var0,
             var6, var1, (byte) 50, var4, var3);
           Keyboard.aBoolean1905 = var9;
         }
@@ -325,39 +325,6 @@ public final class FileCache {
   public static void method1049(boolean var0) {
     FileCache.anIntArray686 = null;
       FileCache.aClass93_684 = null;
-  }
-
-  public static GameString stringFromBase37(int var0, long var1) {
-    if ((var1 > 0L) && (var1 < 6582952005840035281L)) {
-        if (((var1 % 37L) == 0L)) {
-          return null;
-        } else {
-          int var3 = 0;
-
-          for (long var4 = var1; var4 != 0L; ++var3) {
-            var4 /= 37L;
-          }
-
-          byte[] var6 = new byte[var3];
-          if (var0 != -29664) {
-            FileCache.method1047(2, -55, -50, false, 52, false, false);
-          }
-
-          while (var1 != 0L) {
-            long var7 = var1;
-            var1 /= 37L;
-            --var3;
-            var6[var3] = DummyClass9.aByteArray4005[(int) (-(var1 * 37L) + var7)];
-          }
-
-          GameString var10 = new GameString();
-          var10.bytes = var6;
-          var10.length = var6.length;
-          return var10;
-        }
-      } else {
-        return null;
-      }
   }
 
   public static void method1053(byte var0, FileUnpacker var1) {

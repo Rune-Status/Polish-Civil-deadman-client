@@ -1,6 +1,9 @@
 package com.jagex.runescape;
 
 import com.jagex.runescape.buffer.Buffer;
+import com.jagex.runescape.common.GameString;
+import com.jagex.runescape.common.GameStringStatics;
+import com.jagex.runescape.sprite.AbstractIndexedColorSprite;
 
 public final class DummyClass52 {
 
@@ -11,7 +14,7 @@ public final class DummyClass52 {
   public static int anInt1170;
   public static FileUnpacker aClass153_1171;
   public static int anInt1172;
-  public static GameString aClass94_1173 = GameString.create("gr-Un:");
+  public static GameString aClass94_1173 = GameStringStatics.create("gr-Un:");
   public static int anInt1174 = 99;
 
 

@@ -1,6 +1,8 @@
 package com.jagex.runescape;
 
 import com.jagex.runescape.buffer.Buffer;
+import com.jagex.runescape.common.GameString;
+import com.jagex.runescape.node.Node;
 
 public final class ClientScriptCall extends Node {
 
@@ -48,7 +50,7 @@ public final class ClientScriptCall extends Node {
       DummyClass22.anInt1734 = 0;
       SpotAnimationConfig.anInt548 = 0;
       DummyCanvas.anInt23 = var4;
-      HashTable.anInt1711 = -3;
+      GlobalStatics_0.anInt1711 = -3;
   }
 
   public static BitVariable method378(int var0, byte var1) {

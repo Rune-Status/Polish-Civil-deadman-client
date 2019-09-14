@@ -1,14 +1,17 @@
 package com.jagex.runescape;
 
 import com.jagex.runescape.buffer.Buffer;
+import com.jagex.runescape.common.ArrayUtils;
+import com.jagex.runescape.common.GameString;
+import com.jagex.runescape.common.GameStringStatics;
 
 public final class TextureSampler3 extends AbstractTextureSampler {
 
   public static int hintHeadIconsFileId;
-  public static GameString aClass94_3357 = GameString.create("");
+  public static GameString aClass94_3357 = GameStringStatics.create("");
   public static boolean aBoolean3358;
   public static int[] anIntArray3359 = new int[5];
-  public static GameString aClass94_3360 = GameString.create("mem=");
+  public static GameString aClass94_3360 = GameStringStatics.create("mem=");
   public static FileUnpacker aClass153_3361;
 
 
@@ -127,7 +130,7 @@ public final class TextureSampler3 extends AbstractTextureSampler {
         }
 
         var7 <<= var5;
-        BlockConfig.method1428(var4, 72,
+        GlobalStatics_0.method1428(var4, 72,
           var7 & var2 << var5 | DummyClass5.anIntArray2985[var4] & ~var7);
       }
   }

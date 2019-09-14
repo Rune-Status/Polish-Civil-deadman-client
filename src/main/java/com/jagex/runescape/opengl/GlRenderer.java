@@ -2,13 +2,13 @@ package com.jagex.runescape.opengl;
 
 import com.jagex.runescape.AbstractGameWorld;
 import com.jagex.runescape.AudioStreamEncoder3;
-import com.jagex.runescape.BlockConfig;
 import com.jagex.runescape.DisplayMode;
 import com.jagex.runescape.DummyClass17;
 import com.jagex.runescape.DummyClass3;
 import com.jagex.runescape.DummyClass55;
-import com.jagex.runescape.GameString;
-import com.jagex.runescape.GameStringStatics;
+import com.jagex.runescape.GlobalStatics_0;
+import com.jagex.runescape.common.GameString;
+import com.jagex.runescape.common.GameStringStatics;
 import com.jagex.runescape.SomethingQuickChat;
 import com.jagex.runescape.Unsure;
 import com.jogamp.nativewindow.awt.AWTGraphicsConfiguration;
@@ -49,7 +49,7 @@ public final class GlRenderer {
   private static int anInt1814;
   private static GLDrawable GL_DRAWABLE;
   private static boolean fogEnabled = true;
-  private static GameString RADEON_STRING = GameString
+  private static GameString RADEON_STRING = GameStringStatics
       .create("radeon");
   public static int maxTextureUnits;
   public static boolean bigEndian;
@@ -485,7 +485,7 @@ public final class GlRenderer {
     DummyClass17.screenLowerX = left;
     Unsure.screenUpperX = right;
     DummyClass3.screenUpperY = top;
-    BlockConfig.screenLowerY = bottom;
+    GlobalStatics_0.screenLowerY = bottom;
   }
 
   private static void method1845(boolean var0) {

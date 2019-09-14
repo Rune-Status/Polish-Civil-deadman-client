@@ -1,12 +1,14 @@
 package com.jagex.runescape;
 
+import com.jagex.runescape.common.GameString;
+import com.jagex.runescape.common.GameStringStatics;
 import java.awt.Image;
 
 public final class MilliFrameRegulator extends AbstractFrameRegulator {
 
   public static int anInt2684;
   public static Cache aClass47_2686 = new Cache(128);
-  public static GameString aClass94_2687 = GameString.create("Fallen lassen");
+  public static GameString aClass94_2687 = GameStringStatics.create("Fallen lassen");
   public static int anInt2689;
   public static AbstractDirectColorSprite[] aClass3_Sub28_Sub16Array2690;
   public static int anInt2693;

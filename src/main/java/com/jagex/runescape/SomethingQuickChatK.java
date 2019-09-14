@@ -1,9 +1,12 @@
 package com.jagex.runescape;
 
+import com.jagex.runescape.common.GameString;
+import com.jagex.runescape.common.GameStringStatics;
+
 public final class SomethingQuickChatK {
 
-  public static GameString aClass94_148 = GameString.create("(U(Y");
-  public static GameString aClass94_150 = GameString.create("Ausw-=hlen");
+  public static GameString aClass94_148 = GameStringStatics.create("(U(Y");
+  public static GameString aClass94_150 = GameStringStatics.create("Ausw-=hlen");
   public static FileUnpacker aClass153_152;
   public static int anInt154;
   public int anInt149;

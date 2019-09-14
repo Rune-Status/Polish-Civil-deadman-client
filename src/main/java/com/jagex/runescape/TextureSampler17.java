@@ -1,13 +1,15 @@
 package com.jagex.runescape;
 
 import com.jagex.runescape.buffer.Buffer;
+import com.jagex.runescape.common.GameString;
+import com.jagex.runescape.common.GameStringStatics;
 
 public final class TextureSampler17 extends AbstractTextureSampler {
 
   public static Deque stillGraphics = new Deque();
   public static int sceneHeight;
   public static int[] updatedMapIds;
-  public static GameString COMMAND_WM3 = GameString.create("::wm3");
+  public static GameString COMMAND_WM3 = GameStringStatics.create("::wm3");
   public static boolean aBoolean3184 = true;
   public static int[] anIntArray3185 = new int[25];
   public static int anInt3187;

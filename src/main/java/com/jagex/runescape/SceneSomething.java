@@ -1,11 +1,13 @@
 package com.jagex.runescape;
 
+import com.jagex.runescape.common.GameString;
+import com.jagex.runescape.common.GameStringStatics;
 import com.jagex.runescape.opengl.SomethingGl0;
 
 public final class SceneSomething {
 
   private static GameString aClass94_492 =
-    GameString.create("RuneScape is loading )2 please wait)3)3)3");
+    GameStringStatics.create("RuneScape is loading )2 please wait)3)3)3");
   public static Cache aClass47_480 = new Cache(16);
   public static int anInt486 = 5063219;
   public static boolean aBoolean488 = true;

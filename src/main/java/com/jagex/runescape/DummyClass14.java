@@ -1,10 +1,13 @@
 package com.jagex.runescape;
 
+import com.jagex.runescape.common.GameString;
+import com.jagex.runescape.common.GameStringStatics;
+
 public final class DummyClass14 {
 
   private static GameString aClass94_1958 =
-    GameString.create("Please wait )2 attempting to reestablish)3");
-  private static GameString aClass94_1963 = GameString.create("glow2:");
+    GameStringStatics.create("Please wait )2 attempting to reestablish)3");
+  private static GameString aClass94_1963 = GameStringStatics.create("glow2:");
   public static ObjectCache aClass93_1955 = new ObjectCache(64);
   public static int anInt1956;
   public static int anInt1957;

@@ -1,5 +1,8 @@
 package com.jagex.runescape;
 
+import com.jagex.runescape.common.GameString;
+import com.jagex.runescape.common.GameStringStatics;
+
 public final class SomethingTilek {
 
   public static int[] anIntArray1662;
@@ -11,7 +14,7 @@ public final class SomethingTilek {
   public static int anInt1672;
   public static int anInt1676;
   public static int anInt1677;
-  public static GameString OK = GameString.create("OK");
+  public static GameString OK = GameStringStatics.create("OK");
   public int anInt1663;
   public int anInt1664;
   public int anInt1667;

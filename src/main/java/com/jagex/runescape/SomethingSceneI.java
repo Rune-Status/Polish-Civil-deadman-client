@@ -1,10 +1,13 @@
 package com.jagex.runescape;
 
+import com.jagex.runescape.common.GameString;
+import com.jagex.runescape.common.GameStringStatics;
+
 public final class SomethingSceneI {
 
   public static int anInt421;
-  public static GameString aClass94_422 = GameString.create("loc");
-  public static GameString aClass94_431 = GameString.create("<col=00ff00>");
+  public static GameString aClass94_422 = GameStringStatics.create("loc");
+  public static GameString aClass94_431 = GameStringStatics.create("<col=00ff00>");
   public static int anInt433;
   public int anInt420;
   public SceneNode aClass140_423;

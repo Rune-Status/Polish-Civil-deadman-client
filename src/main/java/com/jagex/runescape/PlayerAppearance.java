@@ -1,14 +1,16 @@
 package com.jagex.runescape;
 
+import com.jagex.runescape.common.GameString;
+import com.jagex.runescape.common.GameStringStatics;
 import com.jagex.runescape.huffman.HuffmanEncoderStatics;
 import com.jagex.runescape.opengl.GlModel;
 import com.jagex.runescape.opengl.GlRenderer;
 
 public final class PlayerAppearance {
 
-  public static GameString aClass94_852 = GameString.create("(U4");
-  public static GameString aClass94_853 = GameString.create("::tele ");
-  public static GameString COMMAND_WM0 = GameString.create("::wm0");
+  public static GameString aClass94_852 = GameStringStatics.create("(U4");
+  public static GameString aClass94_853 = GameStringStatics.create("::tele ");
+  public static GameString COMMAND_WM0 = GameStringStatics.create("::wm0");
   public static int[] anIntArray859;
   public static int[] anIntArray861;
   public int npcId;
@@ -713,7 +715,7 @@ public final class PlayerAppearance {
         int var16 = 0;
         boolean var17 = false;
         int[][] var18 =
-            BlockConfig.collisionMaps[GameWorldSomething.currentPlane].anIntArrayArray1304;
+            GlobalStatics_0.collisionMaps[GameWorldSomething.currentPlane].anIntArrayArray1304;
 
         int var19;
         int var20;
@@ -729,7 +731,7 @@ public final class PlayerAppearance {
 
           if (var7 != 0) {
             if ((var7 < 5 || var7 == 10)
-                && BlockConfig.collisionMaps[GameWorldSomething.currentPlane]
+                && GlobalStatics_0.collisionMaps[GameWorldSomething.currentPlane]
                 .method1488(var0, var13,
                     false, var14, var6, var7 - 1, var5, var4)) {
               var17 = true;
@@ -737,7 +739,7 @@ public final class PlayerAppearance {
             }
 
             if (var7 < 10
-                && BlockConfig.collisionMaps[GameWorldSomething.currentPlane]
+                && GlobalStatics_0.collisionMaps[GameWorldSomething.currentPlane]
                 .method1492(
                     var0, -1 + var7, var6, var14, var5, var4, var13, 95)) {
               var17 = true;
@@ -746,7 +748,7 @@ public final class PlayerAppearance {
           }
 
           if (var2 != 0 && (var10 != 0)
-              && BlockConfig.collisionMaps[GameWorldSomething.currentPlane]
+              && GlobalStatics_0.collisionMaps[GameWorldSomething.currentPlane]
               .method1498(true, var6,
                   var14, var13, var5, var2, var8, var0, var10)) {
             var17 = true;

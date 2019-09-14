@@ -1,5 +1,8 @@
 package com.jagex.runescape;
 
+import com.jagex.runescape.common.GameString;
+import com.jagex.runescape.common.GameStringStatics;
+import com.jagex.runescape.common.HashTable;
 import com.jagex.runescape.huffman.HuffmanEncoder;
 import com.jagex.runescape.opengl.GlDirectColorSprite;
 import com.jagex.runescape.opengl.GlRenderer;
@@ -22,9 +25,9 @@ public final class DummyClass3 {
     }
 
     DummyClass3.aBooleanArray54 = new boolean[8];
-    DummyClass3.openingMusic = GameString.create("scape main");
+    DummyClass3.openingMusic = GameStringStatics.create("scape main");
     DummyClass3.anInt57 = 0;
-    DummyClass3.aClass94_58 = GameString.create("<col=ffffff> )4 ");
+    DummyClass3.aClass94_58 = GameStringStatics.create("<col=ffffff> )4 ");
   }
 
   public static void method69(HuffmanEncoder var0, int var1) {

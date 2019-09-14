@@ -1,25 +1,28 @@
 package com.jagex.runescape;
 
 import com.jagex.runescape.buffer.Buffer;
+import com.jagex.runescape.common.GameString;
+import com.jagex.runescape.common.GameStringStatics;
 import com.jagex.runescape.opengl.DummyClass46;
 import com.jagex.runescape.opengl.GlIndexedColorSprite;
 import com.jagex.runescape.opengl.GlRenderer;
 import com.jagex.runescape.opengl.GlUtils;
-import com.jagex.runescape.opengl.shader.MaterialShader5;
+import com.jagex.runescape.opengl.MaterialShader5;
 import com.jagex.runescape.opengl.Texture;
+import com.jagex.runescape.sprite.AbstractIndexedColorSprite;
 
 public final class TextureSampler36 extends AbstractTextureSampler {
 
-  private static GameString aClass94_3428 = GameString.create(" more options");
-  private static GameString aClass94_3437 = GameString.create("Attack");
+  private static GameString aClass94_3428 = GameStringStatics.create(" more options");
+  private static GameString aClass94_3437 = GameStringStatics.create("Attack");
   public static int anInt3422;
   public static int anInt3423;
   public static float diffuseIntensity;
   public static FileUnpacker animationSequences;
   public static byte[][][] floorUnderlayIds;
-  public static GameString aClass94_3432 = GameString.create("Schrifts-=tze geladen)3");
+  public static GameString aClass94_3432 = GameStringStatics.create("Schrifts-=tze geladen)3");
   public static float aFloat3435;
-  public static GameString aClass94_3436 = GameString.create("jaune:");
+  public static GameString aClass94_3436 = GameStringStatics.create("jaune:");
   public static GameString aClass94_3426 = TextureSampler36.aClass94_3428;
   public static GameString aClass94_3427 = TextureSampler36.aClass94_3437;
   private int[] anIntArray3425;
@@ -140,7 +143,7 @@ public final class TextureSampler36 extends AbstractTextureSampler {
       int var6;
       int var7;
       if (SomethingPacket116.anInt1753 == 1) {
-        var7 = 2047 & StringNode.anInt2589 + SpotAnimationConfig.anInt531;
+        var7 = 2047 & GlobalStatics_0.anInt2589 + SpotAnimationConfig.anInt531;
         var6 = AreaSoundEffect.anInt2309;
         if ((var6 < (SomethingTexture4.anInt2670 / 256))) {
           var6 = SomethingTexture4.anInt2670 / 256;
@@ -213,7 +216,7 @@ public final class TextureSampler36 extends AbstractTextureSampler {
           }
 
           GlRenderer.method1844(var3, var5, var4, var1, var4 / 2 + var3, var5 + (var1 / 2), var17,
-            var16, HashTable.anInt1705, HashTable.anInt1705);
+            var16, GlobalStatics_0.anInt1705, GlobalStatics_0.anInt1705);
         } else {
           DummyClass47.method1324(var3, var5, var4 + var3, var1 + var5);
           DummyClass40.method1134();
@@ -229,7 +232,7 @@ public final class TextureSampler36 extends AbstractTextureSampler {
           var11 = DummyClass17.screenLowerX;
           Structure.anInt3642 =
             var11 + (var12 - var11) * (-var3 + NpcConfiguration.anInt1297) / var4;
-          int var14 = BlockConfig.screenLowerY;
+          int var14 = GlobalStatics_0.screenLowerY;
           RenderAnimation.anInt384 =
             (-var13 + var14) * (DummyClass36.anInt2612 - var5) / var1 + var13;
         } else {
@@ -269,10 +272,10 @@ public final class TextureSampler36 extends AbstractTextureSampler {
           DummyClass46.disableLights();
           GameException.method2285(0, 0, 0, 0, false, 0);
           DummyClass43.method1194(-16385);
-          HashTable.method1775();
-          ProceduralTexture.method1405(var5, var4, var3, HashTable.anInt1705, var1,
-            HashTable.anInt1705, -7397);
-          DummyClass8.method2221(var4, var3, var1, true, HashTable.anInt1705, HashTable.anInt1705,
+          GlobalStatics_0.method1775();
+          ProceduralTexture.method1405(var5, var4, var3, GlobalStatics_0.anInt1705, var1,
+            GlobalStatics_0.anInt1705, -7397);
+          DummyClass8.method2221(var4, var3, var1, true, GlobalStatics_0.anInt1705, GlobalStatics_0.anInt1705,
             var5);
         } else {
           DummyClass47.method1323(var3, var5, var4, var1, 0);
@@ -283,7 +286,7 @@ public final class TextureSampler36 extends AbstractTextureSampler {
             AnimationSequence.anIntArray1871, GameWorldSomething.currentPlane + 1, var19,
             TextureCache.localPlayer.anInt2819 >> 7, TextureCache.localPlayer.anInt2829 >> 7);
           DummyClass43.method1194(var0 - 9982);
-          HashTable.method1775();
+          GlobalStatics_0.method1775();
           ProceduralTexture.method1405(var5, var4, var3, 256, var1, 256, var0 - 994);
           DummyClass8.method2221(var4, var3, var1, true, 256, 256, var5);
         }

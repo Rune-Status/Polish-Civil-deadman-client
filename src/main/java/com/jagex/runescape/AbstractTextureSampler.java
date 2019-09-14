@@ -1,6 +1,9 @@
 package com.jagex.runescape;
 
 import com.jagex.runescape.buffer.Buffer;
+import com.jagex.runescape.common.GameString;
+import com.jagex.runescape.common.GameStringStatics;
+import com.jagex.runescape.node.Node;
 import com.jagex.runescape.opengl.GlRenderer;
 import com.jagex.runescape.opengl.GlUtils;
 import java.awt.Graphics;
@@ -9,10 +12,10 @@ public abstract class AbstractTextureSampler extends Node {
 
   public static int anInt2378;
   public static AbstractFont aClass3_Sub28_Sub17_2379;
-  public static GameString COMMAND_SHIFT_CLICK = GameString.create("::shiftclick");
+  public static GameString COMMAND_SHIFT_CLICK = GameStringStatics.create("::shiftclick");
   public static int anInt2383;
   public static int anInt2384;
-  public static GameString COMMAND_REPLACE_CANVAS = GameString.create("::replacecanvas");
+  public static GameString COMMAND_REPLACE_CANVAS = GameStringStatics.create("::replacecanvas");
   public static int[] anIntArray2386 = {1, -1, -1, 1};
   public boolean monoChromatic;
   public TriChromaticImageCache triChromaticImageCache;

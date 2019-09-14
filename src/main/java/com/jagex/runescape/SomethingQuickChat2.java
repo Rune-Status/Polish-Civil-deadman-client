@@ -1,6 +1,7 @@
 package com.jagex.runescape;
 
 import com.jagex.runescape.buffer.Buffer;
+import com.jagex.runescape.common.GameString;
 import com.jagex.runescape.huffman.HuffmanEncoderStatics;
 import java.awt.Color;
 import java.awt.Font;

@@ -1,18 +1,20 @@
 package com.jagex.runescape;
 
 import com.jagex.runescape.buffer.Buffer;
+import com.jagex.runescape.common.GameString;
+import com.jagex.runescape.common.GameStringStatics;
 import com.jagex.runescape.opengl.SomethingGl0;
 
 public final class TextureSampler32 extends AbstractTextureSampler {
 
-  public static GameString aClass94_3345 = GameString.create("glissement:");
+  public static GameString aClass94_3345 = GameStringStatics.create("glissement:");
   public static SomethingGl0[][] aClass3_Sub11ArrayArray3346;
   public static short[] aShortArray3349 =
       {(short) -10304, (short) 9104, (short) -1, (short) -1, (short) -1};
   public static int anInt3351;
   public static FileUnpacker textures;
   public static GameString walkTooltip;
-  public static GameString aClass94_3355 = GameString.create("Angreifen");
+  public static GameString aClass94_3355 = GameStringStatics.create("Angreifen");
   private int anInt3347 = 3216;
   private final int[] anIntArray3348 = new int[3];
   private int anInt3350 = 4096;

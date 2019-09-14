@@ -72,7 +72,7 @@ public final class DummyClass51 {
   public static void method1419(int var0) {
     int var2 = TextureSampler29.anInt3395;
       int var3 = SomethingWorldMapy.anInt3552;
-      int var1 = AbstractIndexedColorSprite.anInt1462;
+      int var1 = GlobalStatics_1.anInt1462;
       int var5 = 6116423;
       int var4 = SomethingQuickChat2.anInt3537;
       if (GlRenderer.useOpenGlRenderer) {
@@ -87,7 +87,7 @@ public final class DummyClass51 {
 
       FloorOverlay.aClass3_Sub28_Sub17_2096.method681(SomethingTexture4.aClass94_2667, var1 + 3,
         var2 + 14, var5, -1);
-      int var7 = HashTable.anInt1709;
+      int var7 = GlobalStatics_0.anInt1709;
       int var6 = SomethingTilek.anInt1676;
       if (var0 >= -113) {
         DummyClass51.anIntArrayArray1160 = null;
@@ -105,7 +105,7 @@ public final class DummyClass51 {
           var9, var10, 0);
       }
 
-      LinearHashTable.method1282(AbstractIndexedColorSprite.anInt1462, (byte) 107,
+      LinearHashTable.method1282(GlobalStatics_1.anInt1462, (byte) 107,
         TextureSampler29.anInt3395, SomethingQuickChat2.anInt3537, SomethingWorldMapy.anInt3552);
   }
 

@@ -1,15 +1,17 @@
 package com.jagex.runescape;
 
 import com.jagex.runescape.buffer.Buffer;
+import com.jagex.runescape.common.GameString;
+import com.jagex.runescape.common.GameStringStatics;
 
 public abstract class BufferObject {
 
   private static GameString aClass94_1888 =
-    GameString.create("Your ignore list is full)3 Max of 100 users)3");
+    GameStringStatics.create("Your ignore list is full)3 Max of 100 users)3");
   public static int anInt1881;
-  public static GameString aClass94_1882 = GameString.create("Librairie 3D d-Bmarr-Be");
+  public static GameString aClass94_1882 = GameStringStatics.create("Librairie 3D d-Bmarr-Be");
   public static int anInt1883;
-  public static GameString COOKIE_HOST = GameString.create("cookiehost");
+  public static GameString COOKIE_HOST = GameStringStatics.create("cookiehost");
   public static int anInt1886;
   public static int anInt1887;
   public static GameString aClass94_1884 = BufferObject.aClass94_1888;
@@ -173,7 +175,7 @@ public abstract class BufferObject {
 
               ScriptState.method1177(WorldMapLabel.anInt1719, var3, (byte) -73,
                 RenderAnimation.concat(new GameString[] {DummyClass22.aClass94_1738, var5}), var1,
-                (short) 1007, BlockConfig.aClass94_1180, var4);
+                (short) 1007, GlobalStatics_0.aClass94_1180, var4);
             } else {
               Parameter var12 = LinearHashTable.anInt1038 == -1 ?
                 null :

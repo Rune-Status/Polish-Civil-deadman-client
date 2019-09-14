@@ -1,12 +1,12 @@
 package com.jagex.runescape;
 
-import com.jagex.runescape.opengl.GlTexture2d;
+import com.jagex.runescape.common.GameString;
+import com.jagex.runescape.common.GameStringStatics;
 
 public final class DummyClass21 {
 
   public static Deque aClass61_1758 = new Deque();
   public static int anInt1759;
-  public static GameString aClass94_1760 = GameString.create("");
   public static int anInt1761 = -1;
   public static int anInt1762;
   public static int[][] anIntArrayArray1763 = {
@@ -16,7 +16,7 @@ public final class DummyClass21 {
     {0, 128, 0, 0, 32, 64, 64, 96, 128, 128}, {0, 0, 128, 0, 128, 128, 64, 96, 32, 64},
     {0, 0, 128, 0, 96, 32, 32, 32}
   };
-  public static GameString HEAD_ICONS_PRAYER = GameString.create("headicons_prayer");
+  public static GameString HEAD_ICONS_PRAYER = GameStringStatics.create("headicons_prayer");
   public static boolean aBoolean1765;
   public static long[] updateMemory = new long[32];
 
@@ -24,7 +24,7 @@ public final class DummyClass21 {
     FileCache.method1047(var0, var3, TextureSampler15.aClass44_Sub1Array3201.length - 1, var4, 0,
         var1, false);
       if (var2 != 30) {
-        DummyClass21.aClass94_1760 = null;
+        GameStringStatics.aClass94_1760 = null;
       }
   }
 
@@ -68,6 +68,6 @@ public final class DummyClass21 {
     DummyClass21.aClass61_1758 = null;
     DummyClass21.anIntArrayArray1763 = null;
     DummyClass21.updateMemory = null;
-    DummyClass21.aClass94_1760 = null;
+    GameStringStatics.aClass94_1760 = null;
   }
 }

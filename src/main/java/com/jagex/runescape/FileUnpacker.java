@@ -1,6 +1,8 @@
 package com.jagex.runescape;
 
 import com.jagex.runescape.buffer.Buffer;
+import com.jagex.runescape.common.ArrayUtils;
+import com.jagex.runescape.common.GameString;
 
 public final class FileUnpacker {
 
@@ -77,7 +79,7 @@ public final class FileUnpacker {
       }
   }
 
-  public int method2116(int var1,GameString var2 ) {
+  public int method2116(int var1, GameString var2 ) {
     if (this.method2122()) {
         var2 = var2.method1534();
         if (var1 == 22813) {

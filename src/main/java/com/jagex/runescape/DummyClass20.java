@@ -1,10 +1,13 @@
 package com.jagex.runescape;
 
+import com.jagex.runescape.common.GameString;
+import com.jagex.runescape.common.GameStringStatics;
+
 public final class DummyClass20 {
 
   public static int anInt1781;
-  public static GameString aClass94_1782 = GameString.create("Prendre");
-  public static GameString aClass94_1783 = GameString.create(" de votre liste d(Wamis)3");
+  public static GameString aClass94_1782 = GameStringStatics.create("Prendre");
+  public static GameString aClass94_1783 = GameStringStatics.create(" de votre liste d(Wamis)3");
   public static boolean aBoolean1784;
 
 

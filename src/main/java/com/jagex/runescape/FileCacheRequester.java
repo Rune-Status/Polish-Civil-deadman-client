@@ -1,5 +1,7 @@
 package com.jagex.runescape;
 
+import com.jagex.runescape.common.GameString;
+import com.jagex.runescape.common.GameStringStatics;
 import com.jagex.runescape.opengl.DummyClass33;
 import com.jagex.runescape.opengl.GlRenderer;
 import java.nio.charset.StandardCharsets;
@@ -11,9 +13,9 @@ public final class FileCacheRequester implements Runnable {
   public static int anInt1082;
   public static int[] anIntArray1083;
   public static boolean aBoolean1084;
-  public static GameString aClass94_1085 = GameString.create("brillant1:");
+  public static GameString aClass94_1085 = GameStringStatics.create("brillant1:");
   public static int anInt1088;
-  public static GameString aClass94_1089 = GameString.create("Chargement des sprites )2 ");
+  public static GameString aClass94_1089 = GameStringStatics.create("Chargement des sprites )2 ");
   public int anInt1087;
   private final Queue aClass13_1086 = new Queue();
   private Thread aThread1090;
@@ -546,7 +548,7 @@ public final class FileCacheRequester implements Runnable {
           AnimationSomething.replaceCanvas = true;
         }
 
-        if (command.method1531(BlockConfig.COMMAND_REBUILD)) {
+        if (command.method1531(GlobalStatics_0.COMMAND_REBUILD)) {
           DummyClass26.setState(25, 5);
         }
 
@@ -578,7 +580,7 @@ public final class FileCacheRequester implements Runnable {
           for (var2 = 0; (var2 < 4); ++var2) {
             for (var3 = 1; (var3 < 103); ++var3) {
               for (var4 = 1; var4 < 103; ++var4) {
-                BlockConfig.collisionMaps[var2].anIntArrayArray1304[var3][var4] = 0;
+                GlobalStatics_0.collisionMaps[var2].anIntArrayArray1304[var3][var4] = 0;
               }
             }
           }

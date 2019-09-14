@@ -1,6 +1,8 @@
 package com.jagex.runescape;
 
 import com.jagex.runescape.buffer.Buffer;
+import com.jagex.runescape.common.GameString;
+import com.jagex.runescape.common.GameStringStatics;
 import java.io.IOException;
 import java.net.Socket;
 
@@ -126,7 +128,7 @@ public final class TextureSampler37 extends AbstractTextureSampler {
             }
 
             if ((SpotAnimationConfig.anInt548 >= 1)) {
-              HashTable.anInt1711 = -5;
+              GlobalStatics_0.anInt1711 = -5;
               DummyCanvas.anInt23 = 0;
               return;
             }
@@ -183,7 +185,7 @@ public final class TextureSampler37 extends AbstractTextureSampler {
             }
 
             if (var1 != 21) {
-              HashTable.anInt1711 = var1;
+              GlobalStatics_0.anInt1711 = var1;
               DummyCanvas.anInt23 = 0;
               SomethingVolume15.gameSocket.destroy();
               SomethingVolume15.gameSocket = null;
@@ -219,10 +221,10 @@ public final class TextureSampler37 extends AbstractTextureSampler {
 
             for (var1 = 0; TextureSampler29.aClass94Array3391.length > var1; ++var1) {
               TextureSampler29.aClass94Array3391[var1] =
-                FileCache.stringFromBase37(-29664, SpotAnimationConfig.gameBuffer.readLong());
+                GameStringStatics.stringFromBase37(-29664, SpotAnimationConfig.gameBuffer.readLong());
             }
 
-            HashTable.anInt1711 = 21;
+            GlobalStatics_0.anInt1711 = 21;
             DummyCanvas.anInt23 = 0;
             SomethingVolume15.gameSocket.destroy();
             SomethingVolume15.gameSocket = null;
@@ -245,7 +247,7 @@ public final class TextureSampler37 extends AbstractTextureSampler {
             DummyClass22.anInt1734 = 0;
             DummyCanvas.anInt23 = 1;
           } else {
-            HashTable.anInt1711 = -4;
+            GlobalStatics_0.anInt1711 = -4;
             DummyCanvas.anInt23 = 0;
           }
         }

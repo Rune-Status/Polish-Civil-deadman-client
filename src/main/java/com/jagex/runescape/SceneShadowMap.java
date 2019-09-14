@@ -1,8 +1,11 @@
 package com.jagex.runescape;
 
+import com.jagex.runescape.common.GameString;
+import com.jagex.runescape.common.GameStringStatics;
+
 public final class SceneShadowMap {
 
-  private static GameString aClass94_1775 = GameString.create("Connection lost)3");
+  private static GameString aClass94_1775 = GameStringStatics.create("Connection lost)3");
   public static int anInt1771;
   public static ObjectCache aClass93_1772 = new ObjectCache(64);
   public static byte[][][] aByteArrayArrayArray1774;

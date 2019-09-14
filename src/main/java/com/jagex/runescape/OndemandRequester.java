@@ -1,12 +1,14 @@
 package com.jagex.runescape;
 
 import com.jagex.runescape.buffer.Buffer;
+import com.jagex.runescape.common.GameString;
+import com.jagex.runescape.common.GameStringStatics;
 import java.io.IOException;
 
 public final class OndemandRequester {
 
   public static int anInt994;
-  public static GameString aClass94_995 = GameString.create("(Y<)4col>");
+  public static GameString aClass94_995 = GameStringStatics.create("(Y<)4col>");
   public static AbstractDirectColorSprite[] aClass3_Sub28_Sub16Array996;
   public static int anInt997;
   public static int anInt998;

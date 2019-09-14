@@ -1,5 +1,8 @@
 package com.jagex.runescape;
 
+import com.jagex.runescape.common.ArrayUtils;
+import com.jagex.runescape.common.GameString;
+
 public final class MouseRecorder implements Runnable {
 
   public static ObjectCache aClass93_1013 = new ObjectCache(100);
@@ -17,7 +20,7 @@ public final class MouseRecorder implements Runnable {
         synchronized (var1) {
           if ((this.anInt1018 < 500)) {
             this.anIntArray1020[this.anInt1018] = SomethingTilek.anInt1676;
-            this.anIntArray1019[this.anInt1018] = HashTable.anInt1709;
+            this.anIntArray1019[this.anInt1018] = GlobalStatics_0.anInt1709;
             ++this.anInt1018;
           }
         }

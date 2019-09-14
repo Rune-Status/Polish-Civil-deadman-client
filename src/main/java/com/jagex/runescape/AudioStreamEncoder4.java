@@ -1,11 +1,14 @@
 package com.jagex.runescape;
 
+import com.jagex.runescape.common.GameString;
+import com.jagex.runescape.common.GameStringStatics;
+import com.jagex.runescape.common.HashTable;
 import com.jagex.runescape.huffman.HuffmanEncoderStatics;
 import com.jagex.runescape.opengl.GlTexture2d;
 
 public final class AudioStreamEncoder4 extends AudioStreamEncoder {
 
-  public static GameString aClass94_3496 = GameString.create("Spielwelt erstellt)3");
+  public static GameString aClass94_3496 = GameStringStatics.create("Spielwelt erstellt)3");
   public static boolean[] aBooleanArray3503;
   public static int anInt3507;
   public static int anInt3517;
@@ -1138,7 +1141,7 @@ public final class AudioStreamEncoder4 extends AudioStreamEncoder {
                     ++AudioWorker.anInt342;
                     ScriptState.method1177(-1, var10.anInt787, (byte) -91,
                       RenderAnimation.concat(new GameString[] {
-                        RenderAnimation.aClass94_378, HashTable.aClass94_1699, var10.aClass94_770
+                        RenderAnimation.aClass94_378, GlobalStatics_0.aClass94_1699, var10.aClass94_770
                       }), var15, (short) 40, TextureSampler14.aClass94_3388, var3.anInt279);
                   }
                 } else if (SceneNode.aBoolean1837 && var9.method99(31595)) {
@@ -1151,7 +1154,7 @@ public final class AudioStreamEncoder4 extends AudioStreamEncoder {
                     ScriptState.method1177(BufferObject.anInt1887,
                         var10.anInt787,
                       (byte) -89, RenderAnimation.concat(new GameString[] {
-                        DummyClass59.aClass94_676, HashTable.aClass94_1699, var10.aClass94_770
+                        DummyClass59.aClass94_676, GlobalStatics_0.aClass94_1699, var10.aClass94_770
                       }), var15, (short) 3, Parameter.aClass94_3621, var3.anInt279);
                   }
                 } else {
@@ -1257,7 +1260,7 @@ public final class AudioStreamEncoder4 extends AudioStreamEncoder {
                       var10.anInt787, (byte) -98,
                     RenderAnimation.concat(
                       new GameString[] {TextureSampler6.aClass94_3042, var10.aClass94_770}), var15,
-                    (short) 1006, BlockConfig.aClass94_1180, var3.anInt279);
+                    (short) 1006, GlobalStatics_0.aClass94_1180, var3.anInt279);
                 }
               }
             }

@@ -1,9 +1,13 @@
 package com.jagex.runescape;
 
+import com.jagex.runescape.common.GameString;
+import com.jagex.runescape.common.GameStringStatics;
+import com.jagex.runescape.sprite.AbstractIndexedColorSprite;
+
 public abstract class SceneNode {
 
   public static AbstractIndexedColorSprite[] aClass109Array1831;
-  public static GameString COMMAND_SET_PARTICLES = GameString.create("::setparticles");
+  public static GameString COMMAND_SET_PARTICLES = GameStringStatics.create("::setparticles");
   public static int[] anIntArray1833 = new int[14];
   public static Widget[][] aClass11ArrayArray1834;
   public static int[] anIntArray1835 = new int[100];
@@ -109,7 +113,7 @@ public abstract class SceneNode {
   public static void method1864(boolean var0, byte var1, FileUnpacker var2, SoftwareFont var3,
                                FileUnpacker var4) {
     DummyClass17.aBoolean1827 = var0;
-      StringNode.aClass153_2581 = var4;
+      GlobalStatics_0.aClass153_2581 = var4;
       int var6 = -127 / ((var1 + 87) / 32);
       TriChromaticImageCache.aClass153_1370 = var2;
       int var5 = TriChromaticImageCache.aClass153_1370.method2121(0) - 1;

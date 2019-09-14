@@ -1,4 +1,4 @@
-package com.jagex.runescape.opengl.shader;
+package com.jagex.runescape.opengl;
 
 public interface MaterialShader {
 

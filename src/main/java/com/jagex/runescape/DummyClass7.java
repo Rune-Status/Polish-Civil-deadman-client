@@ -1,11 +1,13 @@
 package com.jagex.runescape;
 
 import com.jagex.runescape.buffer.Buffer;
+import com.jagex.runescape.common.GameString;
+import com.jagex.runescape.common.GameStringStatics;
 
 public class DummyClass7 extends DummyClass6 {
 
   public static GameString settings;
-  public static GameString aClass94_2997 = GameString.create("blinken1:");
+  public static GameString aClass94_2997 = GameStringStatics.create("blinken1:");
   public static BufferedFile[] cacheIndexFiles = new BufferedFile[28];
 
 

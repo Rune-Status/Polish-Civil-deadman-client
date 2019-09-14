@@ -1,15 +1,17 @@
 package com.jagex.runescape;
 
+import com.jagex.runescape.common.GameString;
+import com.jagex.runescape.common.GameStringStatics;
 import java.util.Objects;
 
 public final class GameWorld extends AbstractGameWorld {
 
-  private static GameString aClass94_2619 = GameString.create("Loaded update list");
+  private static GameString aClass94_2619 = GameStringStatics.create("Loaded update list");
   public static int anInt2622;
   public static boolean aBoolean2623 = true;
   public static int deltaTime = 20;
   public static AbstractAudioOutputStream audioOutputStream0;
-  public static GameString aClass94_2628 = GameString.create("Stufe: ");
+  public static GameString aClass94_2628 = GameStringStatics.create("Stufe: ");
   public static GameString aClass94_2624 = GameWorld.aClass94_2619;
   public GameString aClass94_2620;
   public int anInt2621;

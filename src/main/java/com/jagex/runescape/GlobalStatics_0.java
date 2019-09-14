@@ -1,24 +1,31 @@
 package com.jagex.runescape;
 
 import com.jagex.runescape.buffer.Buffer;
+import com.jagex.runescape.common.ArrayUtils;
+import com.jagex.runescape.common.GameString;
+import com.jagex.runescape.common.GameStringStatics;
 import com.jagex.runescape.opengl.DummyClass46;
+import com.jagex.runescape.opengl.GlDirectColorSprite;
 import com.jagex.runescape.opengl.GlRenderer;
+import com.jagex.runescape.opengl.GlTexture2d;
 import com.jagex.runescape.opengl.GlUtils;
+import com.jagex.runescape.opengl.MaterialShader5;
+import java.nio.charset.StandardCharsets;
 
 public final class GlobalStatics_0 {
 
-  public static GameString LINE_BREAK = GameString.create("<br>");
+  public static GameString LINE_BREAK = GameStringStatics.create("<br>");
   public static GameString aClass94_2599 =
-      GameString.create("d-Broulement:");
+      GameStringStatics.create("d-Broulement:");
   public static SomethingWorldMapy aClass3_Sub28_Sub3_2600;
   public static FileRequester[] aClass151_Sub1Array2601 = new FileRequester[28];
   public static GameString aClass94_2593 =
-      GameString.create("Loaded interfaces");
+      GameStringStatics.create("Loaded interfaces");
   public static GameString LOADED_INTERFACES = GlobalStatics_0.aClass94_2593;
   public static int[] anIntArray2591;
   public static int anInt2592;
   public static GameString aClass94_2594 =
-      GameString.create("Polices charg-Bes");
+      GameStringStatics.create("Polices charg-Bes");
   public static GameString[] aClass94Array2596;
   public static int[] anIntArray634 = new int[256];
   public static AbstractDirectColorSprite aClass3_Sub28_Sub16_637;
@@ -26,6 +33,64 @@ public final class GlobalStatics_0 {
   public static int anInt639;
   public static byte[][][] aByteArrayArrayArray640;
   public static int anInt641;
+  public static int anInt72;
+  public static boolean[] aBooleanArray73 = new boolean[200];
+  public static GameString[] aClass94Array75 = new GameString[1000];
+  public static GameString aClass94_77 = GameStringStatics.create("Objet d(Wabonn-Bs");
+  public static Deque aClass61_78 = new Deque();
+  public static GameString aClass94_2158 =
+      GameStringStatics.create("Allocated memory");
+  public static GameString aClass94_2151 = aClass94_2158;
+  public static int anInt2145;
+  public static boolean safemode;
+  public static int packetId;
+  public static int anInt2148;
+  public static boolean stereo;
+  public static boolean aBoolean2154;
+  public static int[] anIntArray2157 = new int[50];
+  public static GameString aClass94_2149 = GameStringStatics.create(
+      "Bitte warten Sie )2 es wird versucht)1 die Verbindung wiederherzustellen)3");
+  public static GameString aClass94_2155 = GameStringStatics.create(":allyreq:");
+  public static FileUnpacker aClass153_2581;
+  public static GameString aClass94_2584 = GameStringStatics.create("<)4col>");
+  public static GameString aClass94_2585 =
+      GameStringStatics.create("Connexion au serveur de mise -9 jour en cours");
+  public static int anInt2587;
+  public static GameStub applet;
+  public static int anInt2589;
+  public static int anInt2579 = 1;
+  public static GameString[] aClass94Array2580 = new GameString[100];
+  public static int lastPacketId0;
+  public static boolean dynamicScene;
+  public static GameString aClass94_1710 = GameStringStatics
+      .create("Loaded sprites");
+  public static GameString aClass94_1707 = aClass94_1710;
+  public static GameString aClass94_1698 = GameStringStatics.create("(R");
+  public static GameString aClass94_1699 = GameStringStatics
+      .create(" )2> <col=ff9040>");
+  public static int anInt1701;
+  public static GameString aClass94_1702 = GameStringStatics
+      .create("Hierhin drehen");
+  public static boolean[] aBooleanArray1703;
+  public static int packetLength;
+  public static int anInt1705;
+  public static int anInt1709;
+  public static int anInt1711 = -2;
+  public static boolean[] aBooleanArray1712 = new boolean[100];
+  public static GameString aClass94_1714 = GameStringStatics
+      .create("<col=ff7000>");
+  public static CollisionMap[] collisionMaps = new CollisionMap[4];
+  public static FileCache tableCache;
+  public static int sunPositionZ;
+  public static AudioStreamEncoder4 aClass3_Sub24_Sub4_1193;
+  public static GameString aClass94_1179 = GameStringStatics.create("Veuillez patienter)3)3)3");
+  public static GameString COMMAND_REBUILD = GameStringStatics.create("::rebuild");
+  public static int screenLowerY;
+  static GameString aClass94_1176 = GameStringStatics.create("Loading wordpack )2 ");
+  public static GameString aClass94_1183 = aClass94_1176;
+  static GameString aClass94_1192 = GameStringStatics.create("Examine");
+  public static GameString aClass94_1180 = aClass94_1192;
+  public static byte[] aByteArray2111 = new byte[16384];
 
   static {
     for (int var1 = 0; var1 < 256; ++var1) {
@@ -529,7 +594,7 @@ public final class GlobalStatics_0 {
           }) :
           RenderAnimation.concat(
               new GameString[]{DummyClass10.aClass94_2082, var2,
-                  StringNode.aClass94_2584}));
+                  aClass94_2584}));
     }
   }
 
@@ -550,7 +615,7 @@ public final class GlobalStatics_0 {
         int var10;
         if ((var5.anInt2098 < 0)) {
           if (var6 >= 0) {
-            var7 = DummyClass40.hslTable[StringNode.method729((byte) -74,
+            var7 = DummyClass40.hslTable[method729((byte) -74,
                 DummyClass40.textureCache.method15(var6, '\uffff'), 96)];
           } else if (var5.anInt2103 == -1) {
             var7 = -1;
@@ -564,8 +629,7 @@ public final class GlobalStatics_0 {
             }
 
             var10 = var9 + (896 & var8) + ('\ufc00' & var8 + var2);
-            var7 = DummyClass40.hslTable[StringNode
-                .method729((byte) -127, var10, 96)];
+            var7 = DummyClass40.hslTable[method729((byte) -127, var10, 96)];
           }
         } else {
           var8 = var5.anInt2098;
@@ -577,8 +641,7 @@ public final class GlobalStatics_0 {
           }
 
           var10 = (896 & var8) + ('\ufc00' & var2 + var8) + var9;
-          var7 = DummyClass40.hslTable[StringNode
-              .method729((byte) -63, var10, 96)];
+          var7 = DummyClass40.hslTable[method729((byte) -63, var10, 96)];
         }
 
         DummyClass51.anIntArray1161[1 + var4] = var7;
@@ -594,5 +657,862 @@ public final class GlobalStatics_0 {
 
     anIntArray634 = null;
     aClass3_Sub28_Sub16_637 = null;
+  }
+
+  public static void method83(byte var0) {
+    aClass94_77 = null;
+    aClass94Array75 = null;
+    if (var0 != 30) {
+      method84(null, 89);
+    }
+
+    aClass61_78 = null;
+    aBooleanArray73 = null;
+  }
+
+  public static void method84(GameString var0, int var1) {
+    if (var1 != -801) {
+      aClass94_77 = null;
+    }
+
+    int var2 = FloorUnderlay.method1602(0, var0);
+    if ((var2 != -1)) {
+      AbstractObjectNode.method565((byte) 86,
+          DummyClass25.aClass131_1624.aShortArray1727[var2],
+          DummyClass25.aClass131_1624.aShortArray1718[var2]);
+    }
+  }
+
+  public static void method85(byte var0) {
+    SceneShadowMap.aClass93_1772.method1523((byte) -99);
+  }
+
+  public static void setupLanguagePacket(int var1) {
+    if (var1 != 0) {
+      if (var1 == 1) {
+        Structure.method607(false);
+      } else {
+        if (var1 != 2) {
+          throw new RuntimeException("Invalid language ID.");
+        }
+        BZipDecompressorState.method850((byte) 121);
+      }
+
+    }
+  }
+
+  public static DisplayMode[] method88(byte var0) {
+    if (var0 != 28) {
+      aBooleanArray73 = null;
+    }
+
+    if (DummyClass42.aClass106Array890 == null) {
+      DisplayMode[] var1 = OndemandFileRequest
+          .method596(var0 ^ 22, DummyClass35.signLink);
+      DisplayMode[] var2 = new DisplayMode[var1.length];
+      int var3 = 0;
+
+      label58:
+      for (int var4 = 0; var4 < var1.length; ++var4) {
+        DisplayMode var5 = var1[var4];
+        if ((var5.anInt1450 <= 0 || var5.anInt1450 >= 24)
+            && (var5.anInt1447 >= 800)
+            && var5.anInt1449 >= 600) {
+          for (int var6 = 0; var3 > var6; ++var6) {
+            DisplayMode var7 = var2[var6];
+            if (var5.anInt1447 == var7.anInt1447
+                && (var7.anInt1449 == var5.anInt1449)) {
+              if (var5.anInt1450 > var7.anInt1450) {
+                var2[var6] = var5;
+              }
+              continue label58;
+            }
+          }
+
+          var2[var3] = var5;
+          ++var3;
+        }
+      }
+
+      DummyClass42.aClass106Array890 = new DisplayMode[var3];
+      ArrayUtils.copy(var2, 0, DummyClass42.aClass106Array890, 0, var3);
+      int[] var9 = new int[DummyClass42.aClass106Array890.length];
+
+      for (int var10 = 0; DummyClass42.aClass106Array890.length > var10;
+          ++var10) {
+        DisplayMode var11 = DummyClass42.aClass106Array890[var10];
+        var9[var10] = var11.anInt1449 * var11.anInt1447;
+      }
+
+      DummyClass58.method1658(21, var9, DummyClass42.aClass106Array890);
+    }
+
+    return DummyClass42.aClass106Array890;
+  }
+
+  public static void method89(boolean var0, FileUnpacker var1,
+      FileUnpacker var2, FileUnpacker var3,
+      FileUnpacker var4) {
+    SomethingSceneJ.aClass153_323 = var2;
+    TriChromaticImageCache.aClass153_1378 = var1;
+    TextureSampler3.aClass153_3361 = var3;
+    DummyClass25.aClass153_1628 = var4;
+    if (!var0) {
+      setupLanguagePacket(11);
+    }
+
+    SceneNode.aClass11ArrayArray1834 = new Widget[TextureSampler3.aClass153_3361
+        .method2121(0)][];
+    aBooleanArray1703 = new boolean[TextureSampler3.aClass153_3361
+        .method2121(0)];
+  }
+
+  public static boolean method1529(int var0, int var1, int var2, int var3,
+      int var4, int var5, int var6, boolean var7) {
+    long var8 = SomethingAudio.method2174(var6, var1 + var5, var3 + var0);
+    int var10;
+    int var11;
+    int var12;
+    GameObjectConfig var13;
+    int var14;
+    int[] var15;
+    int var16;
+    if ((var8 != 0L)) {
+      var10 = 3 & (int) var8 >> 20;
+      var11 = (508650 & (int) var8) >> 14;
+      var12 = Integer.MAX_VALUE & (int) (var8 >>> 32);
+      var13 = DummyClass11.method2207(4, var12);
+      if ((var13.anInt1516 == -1)) {
+        var14 = var2;
+        if ((var8 > 0L)) {
+          var14 = var4;
+        }
+
+        var15 = DummyClass47.anIntArray1100;
+        var16 = 4 * (-(var3 * 512) + '\uce00') + var1 * 4 + 24624;
+        if (var11 == 0 || var11 == 2) {
+          if ((var10 == 0)) {
+            var15[var16] = var14;
+            var15[512 + var16] = var14;
+            var15[var16 + 1024] = var14;
+            var15[1536 + var16] = var14;
+          } else if ((var10 != 1)) {
+            if ((var10 == 2)) {
+              var15[var16 + 3] = var14;
+              var15[var16 + 3 + 512] = var14;
+              var15[var16 + 3 + 1024] = var14;
+              var15[var16 + 3 + 1536] = var14;
+            } else {
+              if (var10 == 3) {
+                var15[var16 + 1536] = var14;
+                var15[1536 + var16 + 1] = var14;
+                var15[var16 + 1538] = var14;
+                var15[3 + var16 + 1536] = var14;
+              }
+            }
+          } else {
+            var15[var16] = var14;
+            var15[1 + var16] = var14;
+            var15[var16 + 2] = var14;
+            var15[var16 + 3] = var14;
+          }
+        }
+
+        if (var11 == 3) {
+          if (var10 == 0) {
+            var15[var16] = var14;
+          } else if (var10 == 1) {
+            var15[var16 + 3] = var14;
+          } else if ((var10 == 2)) {
+            var15[var16 + 3 + 1536] = var14;
+          } else if ((var10 == 3)) {
+            var15[var16 + 1536] = var14;
+          }
+        }
+
+        if ((var11 == 2)) {
+          if ((var10 == 3)) {
+            var15[var16] = var14;
+            var15[var16 + 512] = var14;
+            var15[var16 + 1024] = var14;
+            var15[1536 + var16] = var14;
+          } else {
+            if ((var10 == 0)) {
+              var15[var16] = var14;
+              var15[1 + var16] = var14;
+              var15[2 + var16] = var14;
+              var15[3 + var16] = var14;
+            } else {
+              if ((var10 == 1)) {
+                var15[var16 + 3] = var14;
+                var15[512 + 3 + var16] = var14;
+                var15[3 + (var16 + 1024)] = var14;
+                var15[1536 + var16 + 3] = var14;
+              } else {
+                if (var10 == 2) {
+                  var15[1536 + var16] = var14;
+                  var15[var16 + 1536 + 1] = var14;
+                  var15[1536 + var16 + 2] = var14;
+                  var15[var16 + 1539] = var14;
+                }
+              }
+            }
+          }
+        }
+      } else {
+        if (!AudioWorker.method888(var1, var13, false, var0, var5, var3,
+            var10)) {
+          return false;
+        }
+      }
+    }
+
+    var8 = AnimationSomething.method557(var6, var1 + var5, var0 + var3);
+    if (var8 != 0L) {
+      var10 = (int) var8 >> 20 & 3;
+      var11 = ((int) var8 & 520964) >> 14;
+      var12 = (int) (var8 >>> 32) & Integer.MAX_VALUE;
+      var13 = DummyClass11.method2207(4, var12);
+      if ((var13.anInt1516 != -1)) {
+        if (!AudioWorker.method888(var1, var13, false, var0, var5, var3,
+            var10)) {
+          return false;
+        }
+      } else if (var11 == 9) {
+        var14 = 15658734;
+        if ((var8 > 0L)) {
+          var14 = 15597568;
+        }
+
+        var16 = var1 * 4 + (24624 + (2048 * (103 - var3)));
+        var15 = DummyClass47.anIntArray1100;
+        if ((var10 != 0) && (var10 != 2)) {
+          var15[var16] = var14;
+          var15[var16 + 512 + 1] = var14;
+          var15[var16 + 1024 + 2] = var14;
+          var15[1536 + var16 + 3] = var14;
+        } else {
+          var15[1536 + var16] = var14;
+          var15[var16 + 1025] = var14;
+          var15[var16 + 512 + 2] = var14;
+          var15[var16 + 3] = var14;
+        }
+      }
+    }
+
+    var8 = SceneGraphTile.method104(var6, var1 + var5, var3 + var0);
+    if (var8 != 0L) {
+      var10 = (int) var8 >> 20 & 3;
+      var11 = (int) (var8 >>> 32) & Integer.MAX_VALUE;
+      GameObjectConfig var18 = DummyClass11.method2207(4, var11);
+      if ((var18.anInt1516 != -1) &&
+          !AudioWorker.method888(var1, var18, !var7, var0, var5, var3,
+              var10)) {
+        return false;
+      }
+    }
+
+    if (!var7) {
+      stereo = true;
+    }
+
+    return true;
+  }
+
+  public static int method1535(GameWorld var0, GameWorld var1, int var2,
+      int var3, int var4, boolean var5, boolean var6) {
+    int var7 = DummyClass12.method2201(var1, var4, var2 - 5638, var0, var6);
+    if (var7 == 0) {
+      if (var2 != 5730) {
+        return -76;
+      } else if (var3 != -1) {
+        int var8 =
+            DummyClass12.method2201(var1, var3, var2 ^ 5651, var0, var5);
+        return !var5 ? var8 : -var8;
+      } else {
+        return 0;
+      }
+    } else {
+      return !var6 ? var7 : -var7;
+    }
+  }
+
+  public static SoftwareDirectColorSprite method1537(FileUnpacker var0,
+      int var1,
+      boolean var2) {
+    if (GroundItem.loadSprites(var0, var1)) {
+      if (var2) {
+        createSprite(-39, true, -93, null);
+      }
+
+      return DummyClass26.method1722(-93);
+    } else {
+      return null;
+    }
+  }
+
+  public static SoftwareIndexedColorSprite createSprite(int var0, boolean var1,
+      int var2,
+      FileUnpacker var3) {
+    if (!var1) {
+      method1535(null, null, -64, -40, 23, false, false);
+    }
+
+    return SomethingTexture4.loadSprites(var3, var0, var2, -30901)
+        ? DummyClass49.method1364((byte) 82)
+        : null;
+  }
+
+  public static void method1541(int var0) {
+    aClass94_2151 = null;
+
+    anIntArray2157 = null;
+    aClass94_2155 = null;
+    aClass94_2149 = null;
+    aClass94_2158 = null;
+  }
+
+  public static AbstractDirectColorSprite method1570(int var0, byte var1,
+      boolean var2, int var3,
+      boolean var4, int var5,
+      int var6, boolean var7) {
+    ItemConfig var8 = DummyClass35.getItemConfig(var3, (byte) 106);
+    if ((var6 > 1) && var8.anIntArray804 != null) {
+      int var9 = -1;
+
+      for (int var10 = 0; (var10 < 10); ++var10) {
+        if ((var6 >= var8.anIntArray766[var10]) &&
+            var8.anIntArray766[var10] != 0) {
+          var9 = var8.anIntArray804[var10];
+        }
+      }
+
+      if ((var9 != -1)) {
+        var8 = DummyClass35.getItemConfig(var9, (byte) 84);
+      }
+    }
+
+    SoftwareModel var21 = var8.method1120(18206);
+    if (var21 == null) {
+      return null;
+    } else {
+      SoftwareDirectColorSprite var22 = null;
+      if ((var8.anInt791 == -1)) {
+        if (var8.anInt762 != -1) {
+          var22 = (SoftwareDirectColorSprite) method1570(
+              var0, (byte) -107, true, var8.anInt795, false, var5, var6,
+              false);
+          if (var22 == null) {
+            return null;
+          }
+        }
+      } else {
+        var22 = (SoftwareDirectColorSprite) method1570(
+            0, (byte) 116, true, var8.anInt789, false, 1, 10, true);
+        if (var22 == null) {
+          return null;
+        }
+      }
+
+      int[] var11 = DummyClass47.anIntArray1100;
+      int var12 = DummyClass47.anInt1092;
+      int var13 = DummyClass47.anInt1094;
+      int[] var14 = new int[4];
+      DummyClass47.method1325(var14);
+      SoftwareDirectColorSprite var15 = new SoftwareDirectColorSprite(36, 32);
+      DummyClass47.method1319(var15.pixels, 36, 32);
+      DummyClass40.method1134();
+      DummyClass40.method1145(16, 16);
+      int var16 = var8.anInt810;
+      DummyClass40.aBoolean843 = false;
+      if (var7) {
+        var16 = (int) (var16 * 1.5D);
+      } else if (var5 == 2) {
+        var16 = (int) (1.04D * var16);
+      }
+
+      int var18 = DummyClass40.COSINE_TABLE[var8.rotationX] * var16 >> 16;
+      int var17 = DummyClass40.SINE_TABLE[var8.rotationX] * var16 >> 16;
+      var21.draw(0, var8.rotationY, var8.rotationZ, var8.rotationX,
+          var8.translateX,
+          var17 - (var21.getMinimumY() / 2 - var8.translateOther),
+          var8.translateOther + var18, -1L);
+      if (var5 >= 1) {
+        var15.method657(1);
+        if ((var5 >= 2)) {
+          var15.method657(16777215);
+        }
+
+        DummyClass47.method1319(var15.pixels, 36, 32);
+      }
+
+      if ((var0 != 0)) {
+        var15.method668(var0);
+      }
+
+      int var19 = 73 / ((-56 - var1) / 47);
+      if ((var8.anInt791 != -1)) {
+        assert var22 != null;
+        var22.method643(0, 0);
+      } else if (var8.anInt762 != -1) {
+        assert var22 != null;
+        DummyClass47.method1319(var22.pixels, 36, 32);
+        var15.method643(0, 0);
+        var15 = var22;
+      }
+
+      if (var4 && ((var8.anInt764 == 1) || var6 != 1) && var6 != -1) {
+        TextureSampler10.aClass3_Sub28_Sub17_Sub1_3440.method681(
+            VariableUpdate.method123(1000, var6), 0, 9, 16776960, 1);
+      }
+
+      DummyClass47.method1319(var11, var12, var13);
+      DummyClass47.method1316(var14);
+      DummyClass40.method1134();
+      DummyClass40.aBoolean843 = true;
+      return GlRenderer.useOpenGlRenderer && !var2
+          ? new GlDirectColorSprite(var15)
+          : var15;
+    }
+  }
+
+  public static void method727(int var0) {
+    Keyboard.aClass93_1911.method1524(3);
+    int var1 = 56 / ((var0 - 7) / 54);
+    HashTableIterator.aClass93_1131.method1524(3);
+  }
+
+  public static void method728(boolean var0) {
+    if (var0) {
+      method731(null, (byte) 118);
+    }
+
+    try {
+      if (SomethingQuickChatK.anInt154 == 1) {
+        int var1 = DummyClass55.aClass3_Sub24_Sub4_1421.method499(var0);
+        if ((var1 > 0) && DummyClass55.aClass3_Sub24_Sub4_1421
+            .method473(-124)) {
+          var1 -= SpotAnimationConfig.anInt546;
+          if ((var1 < 0)) {
+            var1 = 0;
+          }
+
+          DummyClass55.aClass3_Sub24_Sub4_1421.method506(128, var1);
+          return;
+        }
+
+        DummyClass55.aClass3_Sub24_Sub4_1421.method505((byte) -128);
+        DummyClass55.aClass3_Sub24_Sub4_1421.method485(-110);
+        MidiSomething.aClass3_Sub27_1154 = null;
+        SomethingQuickChat.aClass83_3579 = null;
+        if (DummyClass55.aClass153_1423 != null) {
+          SomethingQuickChatK.anInt154 = 2;
+        } else {
+          SomethingQuickChatK.anInt154 = 0;
+        }
+      }
+    } catch (Exception var2) {
+      var2.printStackTrace();
+      DummyClass55.aClass3_Sub24_Sub4_1421.method505((byte) -127);
+      DummyClass55.aClass153_1423 = null;
+      MidiSomething.aClass3_Sub27_1154 = null;
+      SomethingQuickChatK.anInt154 = 0;
+      SomethingQuickChat.aClass83_3579 = null;
+    }
+  }
+
+  public static int method729(byte var0, int var1, int var2) {
+    if (var0 > -32) {
+      return 88;
+    } else if (var1 == -2) {
+      return 12345678;
+    } else if ((var1 == -1)) {
+      if (var2 < 2) {
+        var2 = 2;
+      } else if ((var2 > 126)) {
+        var2 = 126;
+      }
+
+      return var2;
+    } else {
+      var2 = (127 & var1) * var2 >> 7;
+      if (var2 < 2) {
+        var2 = 2;
+      } else if (var2 > 126) {
+        var2 = 126;
+      }
+
+      return (var1 & '\uff80') + var2;
+    }
+  }
+
+  public static void method730(int var0, int var1, byte var2, int var3,
+      int var4, int var5) {
+    int var6 = 19 % ((var2 + 44) / 47);
+    if ((var0 >= DummyClass55.anInt1425) && var4 <= GlTexture2d.anInt3765
+        && DummyClass13.anInt2020 <= var5
+        && LightIntensity.anInt902 >= var3) {
+      MaterialShader5.method1632(95, var3, var4, var5, var0, var1);
+    } else {
+      ObjectCache.method1525(3074, var1, var4, var5, var0, var3);
+    }
+  }
+
+  public static void method731(FileUnpacker var0, byte var1) {
+    int var2 = 3 / ((var1 + 62) / 37);
+    TextureSampler20.aClass153_3154 = var0;
+    DummyClass53.anInt1344 = TextureSampler20.aClass153_3154
+        .getAmountChildren(16, (byte) 71);
+  }
+
+  public static GameString method732(String var0, int var1) {
+    if (var1 != 27307) {
+      anInt2589 = -93;
+    }
+
+    byte[] var2;
+    var2 = var0.getBytes(StandardCharsets.ISO_8859_1);
+
+    GameString var3 = new GameString();
+    var3.bytes = var2;
+    var3.length = 0;
+
+    for (int var4 = 0; var4 < var2.length; ++var4) {
+      if ((var2[var4] != 0)) {
+        var2[var3.length++] = var2[var4];
+      }
+    }
+
+    return var3;
+  }
+
+  public static SomethingQuickChat method733(int var0, int var1) {
+    SomethingQuickChat var2 =
+        (SomethingQuickChat) ProjectileNode.aClass47_3776.get(var1, 1400);
+    if (var2 == null) {
+      byte[] var3;
+      if ((var1 < 32768)) {
+        var3 = AudioStreamEncoder3.aClass153_3490.getBytes(1, var1);
+      } else {
+        var3 = DummyClass14.aClass153_1967.getBytes(1, 32767 & var1);
+      }
+
+      var2 = new SomethingQuickChat();
+      if (var0 != 12345678) {
+        lastPacketId0 = 56;
+      }
+
+      if (var3 != null) {
+        var2.method546(new Buffer(var3), -1);
+      }
+
+      if (var1 >= '\u8000') {
+        var2.method548(60);
+      }
+
+      ProjectileNode.aClass47_3776.put(var1, var2);
+      return var2;
+    } else {
+      return var2;
+    }
+  }
+
+  public static void setSettings(int var0, GameString var1) {
+    System.out.println("StringNode.setSettings");
+  }
+
+  public static void method735(int var0) {
+    aClass153_2581 = null;
+    aClass94Array2580 = null;
+    aClass94_2584 = null;
+    if (var0 != -22749) {
+      anInt2579 = 66;
+    }
+
+    aClass94_2585 = null;
+  }
+
+  public static void method736(int var0, int var1) {
+    if (var1 <= 61) {
+      method736(-60, -93);
+    }
+
+    if ((SomethingQuickChatK.anInt154 == 0)) {
+      DummyClass55.aClass3_Sub24_Sub4_1421.method506(128, var0);
+    } else {
+      TextureSampler36.anInt3423 = var0;
+    }
+  }
+
+  public static void method1772(int var0, int var1, int var2, NPC var3) {
+    if (var3.animationId == var1 && var1 != -1) {
+      AnimationSequence var4 = GameClient.method45(var1, (byte) -20);
+      int var5 = var4.anInt1845;
+      if (var5 == 1) {
+        var3.anInt2776 = 1;
+        var3.anInt2832 = 0;
+        var3.anInt2760 = 0;
+        var3.anInt2773 = 0;
+        var3.anInt2828 = var0;
+        SocketStream
+            .method1470(var3.anInt2829, var4, 183921384, var3.anInt2819, false,
+                var3.anInt2832);
+      }
+
+      if ((var5 == 2)) {
+        var3.anInt2773 = 0;
+      }
+    } else if ((var1 == -1) || var3.animationId == -1
+        || GameClient.method45(var1, (byte) -20).anInt1857 >= GameClient
+        .method45(var3.animationId,
+            (byte) -20).anInt1857) {
+      var3.anInt2760 = 0;
+      var3.animationId = var1;
+      var3.anInt2776 = 1;
+      var3.anInt2773 = 0;
+      var3.anInt2828 = var0;
+      var3.anInt2811 = var3.anInt2816;
+      var3.anInt2832 = 0;
+      if (var3.animationId != -1) {
+        SocketStream.method1470(var3.anInt2829,
+            GameClient.method45(var3.animationId, (byte) -20),
+            var2 + 183921345, var3.anInt2819, false, var3.anInt2832);
+      }
+    }
+
+    if (var2 != 39) {
+      anInt1711 = 41;
+    }
+  }
+
+  public static void method1774(int var0) {
+    aClass94_1698 = null;
+    aClass94_1707 = null;
+    aBooleanArray1712 = null;
+    aClass94_1702 = null;
+    aBooleanArray1703 = null;
+    aClass94_1699 = null;
+    aClass94_1714 = null;
+    if (var0 <= 96) {
+      Mouse.unbind(null);
+    }
+
+    aClass94_1710 = null;
+  }
+
+  public static void method1775() {
+    for (int var0 = 0; var0 < TextureSampler21.anInt3070; ++var0) {
+      SceneSomething var1 = AnimationSequence.aClass25Array1868[var0];
+      AbstractImageProducer.method2186(var1);
+      AnimationSequence.aClass25Array1868[var0] = null;
+    }
+
+    TextureSampler21.anInt3070 = 0;
+  }
+
+  public static AbstractTextureSampler createTextureSampler(int type,
+      boolean var1) {
+    if ((type == 0)) {
+      return new TextureSampler0();
+    } else if ((type != 1)) {
+      if (type == 2) {
+        return new TextureSampler2();
+      } else {
+        if ((type == 3)) {
+          return new TextureSampler3();
+        } else if (type != 4) {
+          if (type == 5) {
+            return new TextureSampler5();
+          } else if (type == 6) {
+            return new TextureSampler6();
+          } else if (type != 7) {
+            if (type == 8) {
+              return new TextureSampler8();
+            } else {
+              if (type == 9) {
+                return new TextureSampler9();
+              } else {
+                if (type == 10) {
+                  return new TextureSampler10();
+                } else if (type != 11) {
+                  if ((type == 12)) {
+                    return new TextureSampler12();
+                  } else if ((type != 13)) {
+                    if (type == 14) {
+                      return new TextureSampler14();
+                    } else if ((type != 15)) {
+                      if (type == 16) {
+                        return new TextureSampler16();
+                      } else if (type != 17) {
+                        if ((type == 18)) {
+                          return new TextureSampler18();
+                        } else if ((type == 19)) {
+                          return new TextureSampler19();
+                        } else if ((type == 20)) {
+                          return new TextureSampler20();
+                        } else if (type == 21) {
+                          return new TextureSampler21();
+                        } else if (type != 22) {
+                          if ((type == 23)) {
+                            return new TextureSampler23();
+                          } else {
+                            if (type == 24) {
+                              return new TextureSampler24();
+                            } else {
+                              if (type == 25) {
+                                return new TextureSampler25();
+                              } else {
+                                if ((type == 26)) {
+                                  return new TextureSampler26();
+                                } else {
+                                  if (type == 27) {
+                                    return new TextureSampler27();
+                                  } else {
+                                    if ((type == 28)) {
+                                      return new TextureSampler28();
+                                    } else if ((type != 29)) {
+                                      if (type == 30) {
+                                        return new TextureSampler30();
+                                      } else {
+                                        if (type == 31) {
+                                          return new TextureSampler31();
+                                        } else {
+                                          if (type == 32) {
+                                            return new TextureSampler32();
+                                          } else {
+                                            if (type == 33) {
+                                              return new TextureSampler33();
+                                            } else if ((type == 34)) {
+                                              return new TextureSampler34();
+                                            } else if (type == 35) {
+                                              return new TextureSampler35();
+                                            } else if ((type != 36)) {
+                                              if (type == 37) {
+                                                return new TextureSampler37();
+                                              } else if (type != 38) {
+                                                if (type == 39) {
+                                                  return new TextureSampler39();
+                                                } else {
+                                                  if (!var1) {
+                                                    method1772(8, 6, 81,
+                                                            null);
+                                                  }
+
+                                                  return null;
+                                                }
+                                              } else {
+                                                return new TextureSampler38();
+                                              }
+                                            } else {
+                                              return new TextureSampler36();
+                                            }
+                                          }
+                                        }
+                                      }
+                                    } else {
+                                      return new TextureSampler29();
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        } else {
+                          return new TextureSampler22();
+                        }
+                      } else {
+                        return new TextureSampler17();
+                      }
+                    } else {
+                      return new TextureSampler15();
+                    }
+                  } else {
+                    return new TextureSampler13();
+                  }
+                } else {
+                  return new TextureSampler11();
+                }
+              }
+            }
+          } else {
+            return new TextureSampler7();
+          }
+        } else {
+          return new TextureSampler4();
+        }
+      }
+    } else {
+      return new TextureSampler1();
+    }
+  }
+
+  public static void method1427(boolean var0, int var1) {
+    if (var1 == -1 && !MidiSomething.aBoolean1158) {
+      SceneNode.method1870(false);
+    } else if (var1 != -1 && (AbstractFrameRegulator.anInt1691 != var1
+        || !BitVariable.method1391(
+        -1)) && BZipDecompressorState.anInt120 != 0
+        && !MidiSomething.aBoolean1158) {
+      AbstractFileRequester
+          .method2099(true, var1, 0, SomethingTexture1.fileUnpacker6, false,
+              BZipDecompressorState.anInt120, 2);
+    }
+
+    if (!var0) {
+      aClass94_1192 = null;
+    }
+
+    AbstractFrameRegulator.anInt1691 = var1;
+  }
+
+  public static void method1428(int var0, int var1, int var2) {
+    if (var1 < 21) {
+      method1430(34, -13);
+    }
+
+    DummyClass5.anIntArray2985[var0] = var2;
+    VariableUpdate var3 = (VariableUpdate) ClientScript.variableUpdates.get(
+        var0);
+    if (var3 == null) {
+      var3 = new VariableUpdate(Time.getCurrentTimeMillis() + 500L);
+      ClientScript.variableUpdates.put(var0, var3);
+    } else {
+      var3.timestamp = 500L + Time.getCurrentTimeMillis();
+    }
+  }
+
+  public static void method1429(byte var0) {
+    aClass3_Sub24_Sub4_1193 = null;
+    COMMAND_REBUILD = null;
+    collisionMaps = null;
+    aClass94_1192 = null;
+    aClass94_1183 = null;
+    aClass94_1179 = null;
+    aClass94_1176 = null;
+    tableCache = null;
+    GameStringStatics.aClass130_1194 = null;
+    aClass94_1180 = null;
+  }
+
+  public static SoftwareFont method1430(int var0, int var1) {
+    if (var0 == -28922) {
+      SoftwareFont var2 = (SoftwareFont) HashTableIterator.aClass93_1135.get(
+          var1);
+      if (var2 != null) {
+        return var2;
+      } else {
+        byte[] var3 = FileUnpacker.fileUnpacker13.getBytes(var1, 0);
+        var2 = new SoftwareFont(var3);
+        var2.method697(TextureSampler0.aClass109Array3270, null);
+        HashTableIterator.aClass93_1135.get((byte) -96, var2, var1);
+        return var2;
+      }
+    } else {
+      return null;
+    }
+  }
+
+  public static void clear() {
+    aByteArray2111 = null;
   }
 }

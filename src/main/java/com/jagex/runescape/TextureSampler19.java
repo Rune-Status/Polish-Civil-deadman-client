@@ -135,13 +135,13 @@ public final class TextureSampler19 extends AbstractTextureSampler {
       if ((TextureSampler25.amountContextActions == 1)) {
         DummyClass36.aBoolean2615 = false;
         AbstractSomethingTexture
-            .method1340(AbstractIndexedColorSprite.anInt1462,
+            .method1340(GlobalStatics_1.anInt1462,
                 SomethingWorldMapy.anInt3552, (byte) -40,
                 TextureSampler29.anInt3395,
                 SomethingQuickChat2.anInt3537);
       } else {
         AbstractSomethingTexture
-            .method1340(AbstractIndexedColorSprite.anInt1462,
+            .method1340(GlobalStatics_1.anInt1462,
                 SomethingWorldMapy.anInt3552, (byte) -40,
                 TextureSampler29.anInt3395,
                 SomethingQuickChat2.anInt3537);

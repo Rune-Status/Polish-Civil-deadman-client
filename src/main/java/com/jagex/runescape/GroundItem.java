@@ -1,11 +1,13 @@
 package com.jagex.runescape;
 
 import com.jagex.runescape.buffer.Buffer;
+import com.jagex.runescape.common.GameString;
+import com.jagex.runescape.common.GameStringStatics;
 import com.jagex.runescape.huffman.HuffmanEncoderStatics;
 
 public final class GroundItem extends SceneNode {
 
-  public static GameString aClass94_2928 = GameString.create("null");
+  public static GameString aClass94_2928 = GameStringStatics.create("null");
   public static int[] anIntArray2929 = new int[1000];
   public static int[] anIntArray2931;
   public static int[] anIntArray2933 = {2, 0, 0, 2, 0, 0, 0, 4, 4};

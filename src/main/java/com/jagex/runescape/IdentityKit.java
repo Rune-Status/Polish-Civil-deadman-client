@@ -1,17 +1,19 @@
 package com.jagex.runescape;
 
 import com.jagex.runescape.buffer.Buffer;
+import com.jagex.runescape.common.GameString;
+import com.jagex.runescape.common.GameStringStatics;
 import com.jagex.runescape.opengl.GlTexture2d;
 
 public final class IdentityKit {
 
   private static GameString aClass94_473 =
-    GameString.create("Loading title screen )2 ");
-  private static GameString aClass94_477 = GameString.create("Loading)3)3)3");
-  public static GameString aClass94_463 = GameString.create("Bitte entfernen Sie ");
-  public static GameString aClass94_465 = GameString.create(" ");
+    GameStringStatics.create("Loading title screen )2 ");
+  private static GameString aClass94_477 = GameStringStatics.create("Loading)3)3)3");
+  public static GameString aClass94_463 = GameStringStatics.create("Bitte entfernen Sie ");
+  public static GameString aClass94_465 = GameStringStatics.create(" ");
   public static int anInt467;
-  public static GameString aClass94_468 = GameString.create("(U");
+  public static GameString aClass94_468 = GameStringStatics.create("(U");
   public static int lastPacketId2;
   public static int anInt472;
   public static GameString aClass94_461 = IdentityKit.aClass94_473;

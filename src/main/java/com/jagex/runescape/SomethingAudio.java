@@ -1,15 +1,18 @@
 package com.jagex.runescape;
 
+import com.jagex.runescape.common.GameString;
+import com.jagex.runescape.common.GameStringStatics;
+
 public final class SomethingAudio {
 
 
   private static GameString aClass94_1998 =
-    GameString.create("Connecting to update server");
+    GameStringStatics.create("Connecting to update server");
   public static int anInt1996;
   public static SoftwareFont aClass3_Sub28_Sub17_Sub1_2000;
   public static GameString aClass94_2002 =
-    GameString.create("Chargement des fichiers config )2 ");
-  public static GameString aClass94_2003 = GameString.create("_labels");
+    GameStringStatics.create("Chargement des fichiers config )2 ");
+  public static GameString aClass94_2003 = GameStringStatics.create("_labels");
   public static GameString CONNECTING_TO_UPDATE_SERVER = SomethingAudio.aClass94_1998;
   private int anInt1997;
   private int[][] anIntArrayArray1999;

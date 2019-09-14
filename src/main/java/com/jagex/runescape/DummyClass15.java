@@ -1,16 +1,18 @@
 package com.jagex.runescape;
 
+import com.jagex.runescape.common.GameString;
+import com.jagex.runescape.common.GameStringStatics;
 import com.jagex.runescape.opengl.GlTexture2d;
 
 public final class DummyClass15 {
 
-  private static GameString aClass94_1876 = GameString.create("Loaded fonts");
+  private static GameString aClass94_1876 = GameStringStatics.create("Loaded fonts");
   public static int anInt1873;
   public static ObjectCache aClass93_1874 = new ObjectCache(50);
   public static int state;
-  public static GameString aClass94_1877 = GameString.create(":assist:");
-  public static GameString aClass94_1878 = GameString.create("tremblement:");
-  public static GameString aClass94_1880 = GameString.create(")1");
+  public static GameString aClass94_1877 = GameStringStatics.create(":assist:");
+  public static GameString aClass94_1878 = GameStringStatics.create("tremblement:");
+  public static GameString aClass94_1880 = GameStringStatics.create(")1");
   public static GameString aClass94_1879 = DummyClass15.aClass94_1876;
 
   public static void method2062(int var0, int var1, int var2, int var3, int var4, int var5, int var6,

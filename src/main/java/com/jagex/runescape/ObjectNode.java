@@ -1,15 +1,19 @@
 package com.jagex.runescape;
 
+import com.jagex.runescape.common.GameString;
+import com.jagex.runescape.common.GameStringStatics;
+import com.jagex.runescape.common.HashTable;
+
 public final class ObjectNode extends AbstractObjectNode {
 
   public static ObjectCache aClass93_4043 = new ObjectCache(64);
   public static volatile int anInt4045;
   public static HashTable aClass130_4046 = new HashTable(16);
   public static FileUnpacker models;
-  public static GameString aClass94_4049 = GameString.create("");
+  public static GameString aClass94_4049 = GameStringStatics.create("");
   public static int[] anIntArray4050 = new int[1000];
   public static ObjectCache aClass93_4051 = new ObjectCache(30);
-  public static GameString aClass94_4052 = GameString.create("www");
+  public static GameString aClass94_4052 = GameStringStatics.create("www");
   private final Object anObject4044;
 
   public ObjectNode(Object var1) {

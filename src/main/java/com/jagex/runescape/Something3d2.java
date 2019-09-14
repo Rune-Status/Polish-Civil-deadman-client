@@ -1,5 +1,7 @@
 package com.jagex.runescape;
 
+import com.jagex.runescape.node.Node;
+
 public class Something3d2 extends Something3dRoot {
 
   public static SomethingFont aClass33_3019;

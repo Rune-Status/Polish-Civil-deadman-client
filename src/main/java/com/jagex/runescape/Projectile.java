@@ -186,7 +186,7 @@ public final class Projectile extends SceneNode {
   }
 
   public static void method2020(int var0, GameObjectConfig var1, byte var2, int var3, int var4) {
-    AreaSoundEffect var5 = (AreaSoundEffect) Node.aClass61_78.getFirst();
+    AreaSoundEffect var5 = (AreaSoundEffect) GlobalStatics_0.aClass61_78.getFirst();
       if (var2 != -73) {
         Projectile.method2019(true);
       }
@@ -210,7 +210,7 @@ public final class Projectile extends SceneNode {
           return;
         }
 
-        var5 = (AreaSoundEffect) Node.aClass61_78.getNext();
+        var5 = (AreaSoundEffect) GlobalStatics_0.aClass61_78.getNext();
       }
   }
 

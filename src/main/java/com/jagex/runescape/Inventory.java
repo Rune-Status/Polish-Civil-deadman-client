@@ -1,5 +1,8 @@
 package com.jagex.runescape;
 
+import com.jagex.runescape.common.ArrayUtils;
+import com.jagex.runescape.node.Node;
+
 public final class Inventory extends Node {
 
   public static short[] aShortArray2548;

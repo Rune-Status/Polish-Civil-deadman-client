@@ -1,16 +1,18 @@
 package com.jagex.runescape;
 
 import com.jagex.runescape.buffer.Buffer;
+import com.jagex.runescape.common.GameString;
+import com.jagex.runescape.common.GameStringStatics;
 
 public final class TextureSampler5 extends AbstractTextureSampler {
 
   public static int[] anIntArray3290;
-  public static GameString aClass94_3291 = GameString.create("Schlie-8en");
+  public static GameString aClass94_3291 = GameStringStatics.create("Schlie-8en");
   public static NPC[] npcs = new NPC['\u8000'];
   public static int anInt3293;
   public static GameString aClass94_3295;
   public static long aLong3296;
-  public static GameString aClass94_3298 = GameString.create("<col=ff0000>");
+  public static GameString aClass94_3298 = GameStringStatics.create("<col=ff0000>");
   private int anInt3294 = 1;
   private int anInt3297 = 1;
 

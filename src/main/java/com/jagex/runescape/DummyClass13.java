@@ -1,10 +1,13 @@
 package com.jagex.runescape;
 
+import com.jagex.runescape.common.GameString;
+import com.jagex.runescape.common.GameStringStatics;
+
 public final class DummyClass13 {
 
   public static ObjectCache aClass93_2016 = new ObjectCache(100);
   public static int[] anIntArray2017 = {1, 2, 4, 8};
-  public static GameString aClass94_2018 = GameString.create("Cabbage");
+  public static GameString aClass94_2018 = GameStringStatics.create("Cabbage");
   public static FileUnpacker models;
   public static int anInt2020;
   public static int[] anIntArray2021 = new int[2];

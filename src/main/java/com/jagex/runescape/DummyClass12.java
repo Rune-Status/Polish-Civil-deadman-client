@@ -1,19 +1,21 @@
 package com.jagex.runescape;
 
 import com.jagex.runescape.buffer.Buffer;
+import com.jagex.runescape.common.GameString;
+import com.jagex.runescape.common.GameStringStatics;
 
 public final class DummyClass12 {
 
-  private static GameString aClass94_2032 = GameString
+  private static GameString aClass94_2032 = GameStringStatics
       .create("Cancel");
-  public static GameString aClass94_2025 = GameString.create(")2");
+  public static GameString aClass94_2025 = GameStringStatics.create(")2");
   public static int[] anIntArray2026;
   public static int anInt2027 = -1;
   public static int minimapMode;
-  public static GameString LANDSCAPE_PREFIX = GameString
+  public static GameString LANDSCAPE_PREFIX = GameStringStatics
       .create("l");
   public static Buffer aClass3_Sub30_2030 = new Buffer(new byte[5000]);
-  public static GameString aClass94_2033 = GameString
+  public static GameString aClass94_2033 = GameStringStatics
       .create("Memory after cleanup=");
   public static SomethingFont aClass33_2034;
   public static GameString aClass94_2035;

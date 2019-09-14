@@ -1,5 +1,7 @@
 package com.jagex.runescape;
 
+import com.jagex.runescape.common.GameString;
+import com.jagex.runescape.common.GameStringStatics;
 import com.jagex.runescape.huffman.HuffmanEncoderStatics;
 import com.jagex.runescape.opengl.DummyClass16;
 import com.jagex.runescape.opengl.GlRenderer;
@@ -9,7 +11,7 @@ public final class DummyClass31 {
   public static Deque aClass61_1471 = new Deque();
   public static int anInt1472;
   public static int anInt1473;
-  public static GameString SERVER_JS5_DROP = GameString.create("::serverjs5drop");
+  public static GameString SERVER_JS5_DROP = GameStringStatics.create("::serverjs5drop");
   public static float aFloat1475;
 
 

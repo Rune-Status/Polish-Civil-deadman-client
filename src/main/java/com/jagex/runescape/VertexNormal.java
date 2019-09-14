@@ -1,14 +1,17 @@
 package com.jagex.runescape;
 
+import com.jagex.runescape.common.GameString;
+import com.jagex.runescape.common.GameStringStatics;
+
 public final class VertexNormal {
 
-  private static GameString aClass94_832 = GameString.create(" has logged out)3");
-  private static GameString aClass94_827 = GameString.create("purple:");
+  private static GameString aClass94_832 = GameStringStatics.create(" has logged out)3");
+  private static GameString aClass94_827 = GameStringStatics.create("purple:");
   public static int anInt820;
   public static AbstractDirectColorSprite aClass3_Sub28_Sub16_824;
   public static long[] aLongArray826 = new long[200];
   public static int anInt828;
-  public static GameString aClass94_829 = GameString.create("null");
+  public static GameString aClass94_829 = GameStringStatics.create("null");
   public static GameString aClass94_822 = VertexNormal.aClass94_832;
   public static GameString aClass94_825 = VertexNormal.aClass94_827;
   public static GameString aClass94_833 = VertexNormal.aClass94_827;

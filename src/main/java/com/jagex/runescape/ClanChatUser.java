@@ -1,6 +1,9 @@
 package com.jagex.runescape;
 
 import com.jagex.runescape.buffer.Buffer;
+import com.jagex.runescape.common.GameString;
+import com.jagex.runescape.common.GameStringStatics;
+import com.jagex.runescape.node.Node;
 import com.jagex.runescape.opengl.GlDirectColorSprite;
 import com.jagex.runescape.opengl.GlRenderer;
 
@@ -8,7 +11,7 @@ public final class ClanChatUser extends Node {
 
   public static FileUnpacker midiInstruments;
   public static int anInt2475;
-  public static GameString aClass94_2477 = GameString.create("<col=ffffff>");
+  public static GameString aClass94_2477 = GameStringStatics.create("<col=ffffff>");
   public static int anInt2479;
   public byte aByte2472;
   public GameString aClass94_2473;
@@ -98,7 +101,7 @@ public final class ClanChatUser extends Node {
                     var11 != 46
                   && var11 != 47 && var11 != 48) {
                   int[][] var14 =
-                    BlockConfig.collisionMaps[GameWorldSomething.currentPlane].anIntArrayArray1304;
+                    GlobalStatics_0.collisionMaps[GameWorldSomething.currentPlane].anIntArrayArray1304;
 
                   for (int var15 = 0; (var15 < 10); ++var15) {
                     int var16 = (int) (Math.random() * 4.0D);
@@ -145,7 +148,8 @@ public final class ClanChatUser extends Node {
         for (var7 = 1; var7 < 103; ++var7) {
           if ((BZipDecompressorState.tileFlags[var1][var7 + var2][var6 + var3]
               & 24) == 0
-            && !GameString.method1529(var3, var7, var18, var6, var5, var2, var1, true)) {
+            && !GlobalStatics_0
+              .method1529(var3, var7, var18, var6, var5, var2, var1, true)) {
             if (GlRenderer.useOpenGlRenderer) {
               DummyClass47.anIntArray1100 = null;
             } else {
@@ -157,7 +161,8 @@ public final class ClanChatUser extends Node {
 
           if ((var1 < 3)
             && ((BZipDecompressorState.tileFlags[1 + var1][var7 + var2][var6 + var3] & 8) != 0)
-            && !GameString.method1529(var3, var7, var18, var6, var5, var2, 1 + var1, true)) {
+            && !GlobalStatics_0
+              .method1529(var3, var7, var18, var6, var5, var2, 1 + var1, true)) {
             if (GlRenderer.useOpenGlRenderer) {
               DummyClass47.anIntArray1100 = null;
             } else {

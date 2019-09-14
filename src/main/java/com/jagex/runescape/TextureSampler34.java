@@ -1,12 +1,14 @@
 package com.jagex.runescape;
 
 import com.jagex.runescape.buffer.Buffer;
+import com.jagex.runescape.common.GameString;
+import com.jagex.runescape.common.GameStringStatics;
 import java.awt.Component;
 
 public final class TextureSampler34 extends AbstractTextureSampler {
 
   public static int anInt3054;
-  public static GameString aClass94_3055 = GameString.create("k");
+  public static GameString aClass94_3055 = GameStringStatics.create("k");
   public static byte[][] updatedLandscapesData;
   public static int anInt3061;
   public static boolean aBoolean3064 = true;
@@ -351,7 +353,7 @@ public final class TextureSampler34 extends AbstractTextureSampler {
   }
 
   public static int method190(int var0, int hsl, byte var2, int lightness) {
-    int var5 = DummyClass40.hslTable[SoftwareModel.repackHSL(hsl, lightness)];
+    int var5 = DummyClass40.hslTable[GlobalStatics_1.repackHSL(hsl, lightness)];
       if ((var0 > 0)) {
         int var6 = DummyClass40.textureCache.method19(111, var0 & '\uffff');
         int var7;

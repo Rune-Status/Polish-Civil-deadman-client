@@ -1,15 +1,17 @@
 package com.jagex.runescape;
 
 import com.jagex.runescape.buffer.Buffer;
+import com.jagex.runescape.common.GameString;
+import com.jagex.runescape.common.GameStringStatics;
 import com.jagex.runescape.opengl.GlTexture2d;
 import java.io.IOException;
 
 public final class TextureSampler33 extends AbstractTextureSampler {
 
-  private static GameString aClass94_3048 = GameString.create("Hidden");
+  private static GameString aClass94_3048 = GameStringStatics.create("Hidden");
   public static Keyboard keyboard = new Keyboard();
   public static short aShort3052 = 205;
-  public static GameString aClass94_3053 = GameString.create("Lade Schrifts-=tze )2 ");
+  public static GameString aClass94_3053 = GameStringStatics.create("Lade Schrifts-=tze )2 ");
   public static GameString aClass94_3051 = TextureSampler33.aClass94_3048;
   private int anInt3047 = 4096;
   private boolean aBoolean3050 = true;
@@ -163,12 +165,12 @@ public final class TextureSampler33 extends AbstractTextureSampler {
         TextureSampler5.method289(false);
         return true;
       } catch (Exception var5) {
-        String var2 = "T2 - " + GameString.packetId + "," + EnumStringFetcher.lastPacketId1 + ","
-          + IdentityKit.lastPacketId2 + " - " + HashTable.packetLength + "," + (
+        String var2 = "T2 - " + GlobalStatics_0.packetId + "," + EnumStringFetcher.lastPacketId1 + ","
+          + IdentityKit.lastPacketId2 + " - " + GlobalStatics_0.packetLength + "," + (
           WorldMapLabel.anInt1716 + TextureCache.localPlayer.waypointsX[0]) + "," + (
           TextureCache.localPlayer.waypointsY[0] + ProceduralTexture.anInt1152) + " - ";
 
-        for (int var3 = 0; var3 < HashTable.packetLength && var3 < 50; ++var3) {
+        for (int var3 = 0; var3 < GlobalStatics_0.packetLength && var3 < 50; ++var3) {
           var2 = var2 + SpotAnimationConfig.gameBuffer.bytes[var3] + ",";
         }
 

@@ -1,5 +1,7 @@
 package com.jagex.runescape;
 
+import com.jagex.runescape.common.GameString;
+import com.jagex.runescape.common.GameStringStatics;
 import java.util.Random;
 
 public abstract class Something3dRoot {
@@ -8,11 +10,11 @@ public abstract class Something3dRoot {
   public static int anInt2050;
   public static int anInt2051;
   public static FileUnpacker configs;
-  public static GameString aClass94_2053 = GameString.create("Update)2Liste geladen)3");
+  public static GameString aClass94_2053 = GameStringStatics.create("Update)2Liste geladen)3");
   public static Widget aClass11_2055;
   public static Model[] aClass140_Sub5Array2058 = new Model[4];
   public static int anInt2059;
-  public static GameString aClass94_2061 = GameString.create("Forced tweening disabled)3");
+  public static GameString aClass94_2061 = GameStringStatics.create("Forced tweening disabled)3");
   public int anInt2062 = 4;
   private final short[] aShortArray2047 = new short[512];
   private short[] aShortArray2049;

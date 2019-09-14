@@ -1,11 +1,14 @@
 package com.jagex.runescape;
 
+import com.jagex.runescape.common.GameString;
+import com.jagex.runescape.common.GameStringStatics;
+
 public final class DummyClass56 {
 
   public static int spawnSceneY;
   public static Widget aClass11_1453;
   public static GameString[] aClass94Array1454;
-  public static GameString aClass94_1455 = GameString.create(" loggt sich aus)3");
+  public static GameString aClass94_1455 = GameStringStatics.create(" loggt sich aus)3");
 
 
   public static void method1645(FileUnpacker var0, FileUnpacker var1, byte var2) {

@@ -1,5 +1,8 @@
 package com.jagex.runescape;
 
+import com.jagex.runescape.common.GameString;
+import com.jagex.runescape.common.GameStringStatics;
+
 public final class FaceNormal {
 
   public static long[] aLongArray1631 = new long[256];
@@ -23,8 +26,8 @@ public final class FaceNormal {
       FaceNormal.aLongArray1631[var2] = var0;
     }
 
-    FaceNormal.aClass94_1637 = GameString.create("Texturen geladen)3");
-    FaceNormal.aClass94_1636 = GameString.create("rouge:");
+    FaceNormal.aClass94_1637 = GameStringStatics.create("Texturen geladen)3");
+    FaceNormal.aClass94_1636 = GameStringStatics.create("rouge:");
     FaceNormal.anIntArray1638 = new int[128];
   }
 

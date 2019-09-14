@@ -1,10 +1,15 @@
 package com.jagex.runescape;
 
 import com.jagex.runescape.buffer.Buffer;
+import com.jagex.runescape.common.GameString;
+import com.jagex.runescape.common.GameStringStatics;
+import com.jagex.runescape.common.HashTable;
+import com.jagex.runescape.common.StringNode;
 import com.jagex.runescape.huffman.HuffmanEncoderStatics;
+import com.jagex.runescape.node.Node;
 import com.jagex.runescape.opengl.GlModel;
 import com.jagex.runescape.opengl.GlRenderer;
-import com.jagex.runescape.opengl.shader.MaterialShader5;
+import com.jagex.runescape.opengl.MaterialShader5;
 import java.nio.charset.StandardCharsets;
 import java.util.Date;
 
@@ -28,8 +33,8 @@ public final class ItemConfig {
       ItemConfig.anIntArray781[var1] = var0 / 4;
     }
 
-    ItemConfig.aClass94_808 = GameString.create(" zuerst von Ihrer Ignorieren)2Liste(Q");
-    ItemConfig.aClass94_811 = GameString.create("green:");
+    ItemConfig.aClass94_808 = GameStringStatics.create(" zuerst von Ihrer Ignorieren)2Liste(Q");
+    ItemConfig.aClass94_811 = GameStringStatics.create("green:");
     ItemConfig.aClass94_809 = ItemConfig.aClass94_811;
     ItemConfig.aClass94_806 = ItemConfig.aClass94_811;
   }
@@ -146,11 +151,11 @@ public final class ItemConfig {
         return true;
       } else {
         boolean var5 = true;
-        if (!StringNode.aClass153_2581.method2129((byte) -75, 0, var3)) {
+        if (!GlobalStatics_0.aClass153_2581.method2129((byte) -75, 0, var3)) {
           var5 = false;
         }
 
-        if ((var4 != -1) && !StringNode.aClass153_2581.method2129((byte) 58, 0, var4)) {
+        if ((var4 != -1) && !GlobalStatics_0.aClass153_2581.method2129((byte) 58, 0, var4)) {
           var5 = false;
         }
 
@@ -205,16 +210,16 @@ public final class ItemConfig {
         return true;
       } else {
         boolean var7 = true;
-        if (!StringNode.aClass153_2581.method2129((byte) -90, 0, var3)) {
+        if (!GlobalStatics_0.aClass153_2581.method2129((byte) -90, 0, var3)) {
           var7 = false;
         }
 
-        if ((var4 != -1) && !StringNode.aClass153_2581
+        if ((var4 != -1) && !GlobalStatics_0.aClass153_2581
             .method2129((byte) -114, 0, var4)) {
           var7 = false;
         }
 
-        if (var5 != -1 && !StringNode.aClass153_2581
+        if (var5 != -1 && !GlobalStatics_0.aClass153_2581
             .method2129((byte) 83, 0, var5)) {
           var7 = false;
         }
@@ -298,7 +303,7 @@ public final class ItemConfig {
       AbstractModel var11 = (AbstractModel) DummyClass15.aClass93_1874.get(
           this.anInt787);
       if (var11 == null) {
-        Model var12 = Model.getModel(StringNode.aClass153_2581,
+        Model var12 = Model.getModel(GlobalStatics_0.aClass153_2581,
             this.anInt755, 0);
         if (var12 == null) {
           return null;
@@ -603,9 +608,9 @@ public final class ItemConfig {
         if (var3 == -1) {
           return null;
         } else {
-          Model var5 = Model.getModel(StringNode.aClass153_2581, var3, 0);
+          Model var5 = Model.getModel(GlobalStatics_0.aClass153_2581, var3, 0);
           if (var4 != -1) {
-            Model var6 = Model.getModel(StringNode.aClass153_2581, var4, 0);
+            Model var6 = Model.getModel(GlobalStatics_0.aClass153_2581, var4, 0);
             Model[] var7 = {var5, var6};
             var5 = new Model(var7, 2);
           }
@@ -651,14 +656,14 @@ public final class ItemConfig {
       if ((var3 == -1)) {
         return null;
       } else {
-        Model var6 = Model.getModel(StringNode.aClass153_2581, var3, 0);
+        Model var6 = Model.getModel(GlobalStatics_0.aClass153_2581, var3, 0);
         if ((var4 != -1)) {
-          Model var7 = Model.getModel(StringNode.aClass153_2581, var4, 0);
+          Model var7 = Model.getModel(GlobalStatics_0.aClass153_2581, var4, 0);
           if (var5 == -1) {
             Model[] var8 = {var6, var7};
             var6 = new Model(var8, 2);
           } else {
-            Model var12 = Model.getModel(StringNode.aClass153_2581, var5, 0);
+            Model var12 = Model.getModel(GlobalStatics_0.aClass153_2581, var5, 0);
             Model[] var9 = {var6, var7, var12};
             var6 = new Model(var9, 3);
           }
@@ -718,7 +723,7 @@ public final class ItemConfig {
   }
 
   public SoftwareModel method1120(int var1 ) {
-    Model var2 = Model.getModel(StringNode.aClass153_2581,
+    Model var2 = Model.getModel(GlobalStatics_0.aClass153_2581,
           this.anInt755, 0);
       if (var2 == null) {
         return null;
@@ -845,11 +850,11 @@ public final class ItemConfig {
         }
         if ((j1 == 2)) {
           int i3 = ai1[i1];
-          BlockConfig.method1428(i3, 63, GroundItem.anIntArray2929[--k]);
+          GlobalStatics_0.method1428(i3, 63, GroundItem.anIntArray2929[--k]);
           continue;
         }
         if ((j1 == 3)) {
-          Node.aClass94Array75[l++] = class3_sub28_sub15.aClass94Array3688[i1];
+          GlobalStatics_0.aClass94Array75[l++] = class3_sub28_sub15.aClass94Array3688[i1];
           continue;
         }
         if (j1 == 6) {
@@ -930,18 +935,18 @@ public final class ItemConfig {
           continue;
         }
         if (j1 == 35) {
-          Node.aClass94Array75[l++] = DummyClass56.aClass94Array1454[ai1[i1]];
+          GlobalStatics_0.aClass94Array75[l++] = DummyClass56.aClass94Array1454[ai1[i1]];
           continue;
         }
         if ((j1 == 36)) {
-          DummyClass56.aClass94Array1454[ai1[i1]] = Node.aClass94Array75[--l];
+          DummyClass56.aClass94Array1454[ai1[i1]] = GlobalStatics_0.aClass94Array75[--l];
           continue;
         }
         if (j1 == 37) {
           int l3 = ai1[i1];
           l -= l3;
-          GameString class94_2 = MouseRecorder.method1261(l, l3, Node.aClass94Array75, 2774);
-          Node.aClass94Array75[l++] = class94_2;
+          GameString class94_2 = MouseRecorder.method1261(l, l3, GlobalStatics_0.aClass94Array75, 2774);
+          GlobalStatics_0.aClass94Array75[l++] = class94_2;
           continue;
         }
         if (j1 == 38) {
@@ -962,7 +967,7 @@ public final class ItemConfig {
           }
 
           for (int i76 = 0; class3_sub28_sub15_1.anInt3682 > i76; i76++) {
-            aclass94[i76] = Node.aClass94Array75[i76 - class3_sub28_sub15_1.anInt3682 + l];
+            aclass94[i76] = GlobalStatics_0.aClass94Array75[i76 - class3_sub28_sub15_1.anInt3682 + l];
           }
 
           k -= class3_sub28_sub15_1.anInt3678;
@@ -1037,12 +1042,12 @@ public final class ItemConfig {
           if (class94_1 == null) {
             class94_1 = GroundItem.aClass94_2928;
           }
-          Node.aClass94Array75[l++] = class94_1;
+          GlobalStatics_0.aClass94Array75[l++] = class94_1;
           continue;
         }
         if ((j1 == 48)) {
           int j5 = ai1[i1];
-          DummyClass22.aClass94Array1739[j5] = Node.aClass94Array75[--l];
+          DummyClass22.aClass94Array1739[j5] = GlobalStatics_0.aClass94Array75[--l];
           GZipDecompressor.method1126(-94, j5);
           continue;
         }
@@ -1260,7 +1265,7 @@ public final class ItemConfig {
                 if (i45 < 0 || (i45 > 9)) {
                   l--;
                 } else {
-                  class11_3.method857((byte) 112, Node.aClass94Array75[--l], i45);
+                  class11_3.method857((byte) 112, GlobalStatics_0.aClass94Array75[--l], i45);
                 }
                 continue;
               }
@@ -1284,11 +1289,11 @@ public final class ItemConfig {
                 continue;
               }
               if (j1 == 1305) {
-                class11_3.aClass94_277 = Node.aClass94Array75[--l];
+                class11_3.aClass94_277 = GlobalStatics_0.aClass94Array75[--l];
                 continue;
               }
               if ((j1 == 1306)) {
-                class11_3.aClass94_245 = Node.aClass94Array75[--l];
+                class11_3.aClass94_245 = GlobalStatics_0.aClass94Array75[--l];
                 continue;
               }
               if ((j1 == 1307)) {
@@ -1352,7 +1357,7 @@ public final class ItemConfig {
                   continue;
                 }
                 if ((j1 == 1602)) {
-                  Node.aClass94Array75[l++] = class11_5.aClass94_232;
+                  GlobalStatics_0.aClass94Array75[l++] = class11_5.aClass94_232;
                   continue;
                 }
                 if (j1 == 1603) {
@@ -1411,9 +1416,9 @@ public final class ItemConfig {
                     if (class11_6.aClass94Array171 == null
                       || (l45 >= class11_6.aClass94Array171.length)
                       || class11_6.aClass94Array171[l45] == null) {
-                      Node.aClass94Array75[l++] = AreaSoundEffect.aClass94_2331;
+                      GlobalStatics_0.aClass94Array75[l++] = AreaSoundEffect.aClass94_2331;
                     } else {
-                      Node.aClass94Array75[l++] = class11_6.aClass94Array171[l45];
+                      GlobalStatics_0.aClass94Array75[l++] = class11_6.aClass94Array171[l45];
                     }
                     continue;
                   }
@@ -1421,9 +1426,9 @@ public final class ItemConfig {
                     break;
                   }
                   if (class11_6.aClass94_277 != null) {
-                    Node.aClass94Array75[l++] = class11_6.aClass94_277;
+                    GlobalStatics_0.aClass94Array75[l++] = class11_6.aClass94_277;
                   } else {
-                    Node.aClass94Array75[l++] = AreaSoundEffect.aClass94_2331;
+                    GlobalStatics_0.aClass94Array75[l++] = AreaSoundEffect.aClass94_2331;
                   }
                   continue;
                 }
@@ -1461,7 +1466,7 @@ public final class ItemConfig {
                     if (j1 >= 2900) {
                       if ((j1 < 3200)) {
                         if ((j1 == 3100)) {
-                          GameString class94_3 = Node.aClass94Array75[--l];
+                          GameString class94_3 = GlobalStatics_0.aClass94Array75[--l];
                           GameBuffer.printMessage(AreaSoundEffect.aClass94_2331, 0, class94_3, -1);
                           continue;
                         }
@@ -1477,7 +1482,7 @@ public final class ItemConfig {
                         }
                         if (j1 == 3104) {
                           FloorUnderlay.anInt1405++;
-                          GameString class94_4 = Node.aClass94Array75[--l];
+                          GameString class94_4 = GlobalStatics_0.aClass94Array75[--l];
                           int i46 = 0;
                           if (class94_4.method1543(82)) {
                             i46 = class94_4.toInteger();
@@ -1488,14 +1493,14 @@ public final class ItemConfig {
                         }
                         if ((j1 == 3105)) {
                           AudioSomethingSomething.anInt2500++;
-                          GameString class94_5 = Node.aClass94Array75[--l];
+                          GameString class94_5 = GlobalStatics_0.aClass94Array75[--l];
                           TextureSampler12.secureBuffer.writePacket(244);
                           TextureSampler12.secureBuffer.writeLong(class94_5.toBase37());
                           continue;
                         }
                         if (j1 == 3106) {
                           EnumStringFetcher.anInt2165++;
-                          GameString class94_6 = Node.aClass94Array75[--l];
+                          GameString class94_6 = GlobalStatics_0.aClass94Array75[--l];
                           TextureSampler12.secureBuffer.writePacket(65);
                           TextureSampler12.secureBuffer.writeByte(1 + class94_6.getLength());
                           TextureSampler12.secureBuffer.writeString(class94_6);
@@ -1503,7 +1508,7 @@ public final class ItemConfig {
                         }
                         if (j1 == 3107) {
                           int i7 = GroundItem.anIntArray2929[--k];
-                          GameString class94_44 = Node.aClass94Array75[--l];
+                          GameString class94_44 = GlobalStatics_0.aClass94Array75[--l];
                           SomethingIndex150.method2258(i7, 0, class94_44);
                           continue;
                         }
@@ -1542,7 +1547,7 @@ public final class ItemConfig {
                           continue;
                         }
                         if ((j1 == 3201)) {
-                          BlockConfig.method1427(true, GroundItem.anIntArray2929[--k]);
+                          GlobalStatics_0.method1427(true, GroundItem.anIntArray2929[--k]);
                           continue;
                         }
                         if ((j1 != 3202)) {
@@ -1769,7 +1774,7 @@ public final class ItemConfig {
                           int j49 = GroundItem.anIntArray2929[1 + k];
                           ClientScriptEnum class3_sub28_sub13_1 =
                             TextureSampler36.getEnum(k12, true);
-                          Node.aClass94Array75[l++] =
+                          GlobalStatics_0.aClass94Array75[l++] =
                             class3_sub28_sub13_1.getString(j49, (byte) 121);
                           continue;
                         }
@@ -1786,7 +1791,7 @@ public final class ItemConfig {
                             throw new RuntimeException("C3408-1");
                           }
                           if ((k49 == 115)) {
-                            Node.aClass94Array75[l++] =
+                            GlobalStatics_0.aClass94Array75[l++] =
                                 class3_sub28_sub13_4.getString(l76, (byte) -25);
                           } else {
                             GroundItem.anIntArray2929[k++] =
@@ -1813,7 +1818,7 @@ public final class ItemConfig {
                         }
                         if ((j1 == 3410)) {
                           int j13 = GroundItem.anIntArray2929[--k];
-                          GameString class94_45 = Node.aClass94Array75[--l];
+                          GameString class94_45 = GlobalStatics_0.aClass94Array75[--l];
                           if (j13 == -1) {
                             throw new RuntimeException("C3410-2");
                           }
@@ -1848,9 +1853,9 @@ public final class ItemConfig {
                         if (j1 == 3601) {
                           int l13 = GroundItem.anIntArray2929[--k];
                           if ((HintMarker.anInt1357 != 2) || (l13 >= FileSystem.anInt104)) {
-                            Node.aClass94Array75[l++] = AreaSoundEffect.aClass94_2331;
+                            GlobalStatics_0.aClass94Array75[l++] = AreaSoundEffect.aClass94_2331;
                           } else {
-                            Node.aClass94Array75[l++] = SceneSomething2.aClass94Array1046[l13];
+                            GlobalStatics_0.aClass94Array75[l++] = SceneSomething2.aClass94Array1046[l13];
                           }
                           continue;
                         }
@@ -1875,32 +1880,32 @@ public final class ItemConfig {
                         }
                         if (j1 == 3604) {
                           int i50 = GroundItem.anIntArray2929[--k];
-                          GameString class94_7 = Node.aClass94Array75[--l];
+                          GameString class94_7 = GlobalStatics_0.aClass94Array75[--l];
                           FloorUnderlay.method1605(255, class94_7, i50);
                           continue;
                         }
                         if ((j1 == 3605)) {
-                          GameString class94_8 = Node.aClass94Array75[--l];
+                          GameString class94_8 = GlobalStatics_0.aClass94Array75[--l];
                           DummyClass4.method2229(class94_8.toBase37(), (byte) -91);
                           continue;
                         }
                         if (j1 == 3606) {
-                          GameString class94_9 = Node.aClass94Array75[--l];
+                          GameString class94_9 = GlobalStatics_0.aClass94Array75[--l];
                           TextureSampler7.method297(class94_9.toBase37(), 1);
                           continue;
                         }
                         if (j1 == 3607) {
-                          GameString class94_10 = Node.aClass94Array75[--l];
+                          GameString class94_10 = GlobalStatics_0.aClass94Array75[--l];
                           DummyClass50.method1399(32, class94_10.toBase37());
                           continue;
                         }
                         if ((j1 == 3608)) {
-                          GameString class94_11 = Node.aClass94Array75[--l];
+                          GameString class94_11 = GlobalStatics_0.aClass94Array75[--l];
                           TextureSampler30.method212(class94_11.toBase37(), 0);
                           continue;
                         }
                         if ((j1 == 3609)) {
-                          GameString class94_12 = Node.aClass94Array75[--l];
+                          GameString class94_12 = GlobalStatics_0.aClass94Array75[--l];
                           if (class94_12.method1558(AreaSoundEffect.aClass94_2323, 0)
                             || class94_12.method1558(TextureSampler15.aClass94_3190, 0)) {
                             class94_12 = class94_12.substring(7);
@@ -1912,17 +1917,17 @@ public final class ItemConfig {
                         if (j1 == 3610) {
                           int k14 = GroundItem.anIntArray2929[--k];
                           if ((HintMarker.anInt1357 == 2) && FileSystem.anInt104 > k14) {
-                            Node.aClass94Array75[l++] = SubNode.aClass94Array2566[k14];
+                            GlobalStatics_0.aClass94Array75[l++] = SubNode.aClass94Array2566[k14];
                           } else {
-                            Node.aClass94Array75[l++] = AreaSoundEffect.aClass94_2331;
+                            GlobalStatics_0.aClass94Array75[l++] = AreaSoundEffect.aClass94_2331;
                           }
                           continue;
                         }
                         if (j1 == 3611) {
                           if (Widget.aClass94_251 != null) {
-                            Node.aClass94Array75[l++] = Widget.aClass94_251.formatName((byte) -50);
+                            GlobalStatics_0.aClass94Array75[l++] = Widget.aClass94_251.formatName((byte) -50);
                           } else {
-                            Node.aClass94Array75[l++] = AreaSoundEffect.aClass94_2331;
+                            GlobalStatics_0.aClass94Array75[l++] = AreaSoundEffect.aClass94_2331;
                           }
                           continue;
                         }
@@ -1937,9 +1942,9 @@ public final class ItemConfig {
                         if ((j1 == 3613)) {
                           int l14 = GroundItem.anIntArray2929[--k];
                           if (Widget.aClass94_251 == null || (SubNode.anInt2572 <= l14)) {
-                            Node.aClass94Array75[l++] = AreaSoundEffect.aClass94_2331;
+                            GlobalStatics_0.aClass94Array75[l++] = AreaSoundEffect.aClass94_2331;
                           } else {
-                            Node.aClass94Array75[l++] =
+                            GlobalStatics_0.aClass94Array75[l++] =
                               ClientScript.aClass3_Sub19Array3694[l14].name.formatName((byte) -50);
                           }
                           continue;
@@ -1970,7 +1975,7 @@ public final class ItemConfig {
                           continue;
                         }
                         if ((j1 == 3617)) {
-                          GameString class94_13 = Node.aClass94Array75[--l];
+                          GameString class94_13 = GlobalStatics_0.aClass94Array75[--l];
                           DisplayMode.method1642(3803, class94_13);
                           continue;
                         }
@@ -1979,7 +1984,7 @@ public final class ItemConfig {
                           continue;
                         }
                         if (j1 == 3619) {
-                          GameString class94_14 = Node.aClass94Array75[--l];
+                          GameString class94_14 = GlobalStatics_0.aClass94Array75[--l];
                           AudioSomethingSomething.method400(class94_14.toBase37(), 0);
                           continue;
                         }
@@ -1998,15 +2003,16 @@ public final class ItemConfig {
                         if (j1 == 3622) {
                           int k15 = GroundItem.anIntArray2929[--k];
                           if (HintMarker.anInt1357 == 0 || AnimationSomething.anInt3591 <= k15) {
-                            Node.aClass94Array75[l++] = AreaSoundEffect.aClass94_2331;
+                            GlobalStatics_0.aClass94Array75[l++] = AreaSoundEffect.aClass94_2331;
                           } else {
-                            Node.aClass94Array75[l++] = FileCache.stringFromBase37(-29664,
+                            GlobalStatics_0.aClass94Array75[l++] = GameStringStatics
+                                .stringFromBase37(-29664,
                               MonoChromaticImageCache.aLongArray1574[k15]).formatName((byte) -50);
                           }
                           continue;
                         }
                         if (j1 == 3623) {
-                          GameString class94_15 = Node.aClass94Array75[--l];
+                          GameString class94_15 = GlobalStatics_0.aClass94Array75[--l];
                           if (class94_15.method1558(AreaSoundEffect.aClass94_2323, 0)
                             || class94_15.method1558(TextureSampler15.aClass94_3190, 0)) {
                             class94_15 = class94_15.substring(7);
@@ -2029,9 +2035,9 @@ public final class ItemConfig {
                         }
                         if ((j1 == 3625)) {
                           if (DummyClass12.aClass94_2035 == null) {
-                            Node.aClass94Array75[l++] = AreaSoundEffect.aClass94_2331;
+                            GlobalStatics_0.aClass94Array75[l++] = AreaSoundEffect.aClass94_2331;
                           } else {
-                            Node.aClass94Array75[l++] =
+                            GlobalStatics_0.aClass94Array75[l++] =
                               DummyClass12.aClass94_2035.formatName((byte) -50);
                           }
                           continue;
@@ -2039,9 +2045,9 @@ public final class ItemConfig {
                         if (j1 == 3626) {
                           int i16 = GroundItem.anIntArray2929[--k];
                           if (Widget.aClass94_251 == null || (SubNode.anInt2572 <= i16)) {
-                            Node.aClass94Array75[l++] = AreaSoundEffect.aClass94_2331;
+                            GlobalStatics_0.aClass94Array75[l++] = AreaSoundEffect.aClass94_2331;
                           } else {
-                            Node.aClass94Array75[l++] =
+                            GlobalStatics_0.aClass94Array75[l++] =
                               ClientScript.aClass3_Sub19Array3694[i16].aClass94_2473;
                           }
                           continue;
@@ -2052,12 +2058,12 @@ public final class ItemConfig {
                             || (j16 >= FileSystem.anInt104)) {
                             GroundItem.anIntArray2929[k++] = 0;
                           } else {
-                            GroundItem.anIntArray2929[k++] = Node.aBooleanArray73[j16] ? 1 : 0;
+                            GroundItem.anIntArray2929[k++] = GlobalStatics_0.aBooleanArray73[j16] ? 1 : 0;
                           }
                           continue;
                         }
                         if (j1 == 3628) {
-                          GameString class94_16 = Node.aClass94Array75[--l];
+                          GameString class94_16 = GlobalStatics_0.aClass94Array75[--l];
                           if (class94_16.method1558(AreaSoundEffect.aClass94_2323, 0)
                             || class94_16.method1558(TextureSampler15.aClass94_3190, 0)) {
                             class94_16 = class94_16.substring(7);
@@ -2301,7 +2307,7 @@ public final class ItemConfig {
                             int i55 = GroundItem.anIntArray2929[1 + k];
                             Parameter class3_sub28_sub9 = Deque.method1210(64, i55);
                             if (class3_sub28_sub9.method585(0)) {
-                              Node.aClass94Array75[l++] = SubNode
+                              GlobalStatics_0.aClass94Array75[l++] = SubNode
                                   .getNpcConfiguration(k23)
                                   .method1477(i55,
                                       class3_sub28_sub9.aClass94_3619, true);
@@ -2334,7 +2340,7 @@ public final class ItemConfig {
                                   continue;
                                 }
                                 if (j1 == 5002) {
-                                  GameString class94_17 = Node.aClass94Array75[--l];
+                                  GameString class94_17 = GlobalStatics_0.aClass94Array75[--l];
                                   k -= 2;
                                   int j55 = GroundItem.anIntArray2929[k];
                                   DummyClass14.anInt1956++;
@@ -2349,19 +2355,19 @@ public final class ItemConfig {
                                   GameString class94_46 = null;
                                   int i24 = GroundItem.anIntArray2929[--k];
                                   if (i24 < 100) {
-                                    class94_46 = StringNode.aClass94Array2580[i24];
+                                    class94_46 = GlobalStatics_0.aClass94Array2580[i24];
                                   }
                                   if (class94_46 == null) {
                                     class94_46 = AreaSoundEffect.aClass94_2331;
                                   }
-                                  Node.aClass94Array75[l++] = class94_46;
+                                  GlobalStatics_0.aClass94Array75[l++] = class94_46;
                                   continue;
                                 }
                                 if ((j1 == 5004)) {
                                   int j24 = GroundItem.anIntArray2929[--k];
                                   int k55 = -1;
                                   if (j24 < 100 &&
-                                      StringNode.aClass94Array2580[j24] != null) {
+                                      GlobalStatics_0.aClass94Array2580[j24] != null) {
                                     k55 = TextureSampler26.anIntArray3082[j24];
                                   }
                                   GroundItem.anIntArray2929[k++] = k55;
@@ -2372,7 +2378,7 @@ public final class ItemConfig {
                                   continue;
                                 }
                                 if (j1 == 5008) {
-                                  GameString string = Node.aClass94Array75[--l];
+                                  GameString string = GlobalStatics_0.aClass94Array75[--l];
                                   if (string.method1558(BZipDecompressorState.COMMAND_PREFIX, 0)) {
                                     FileCacheRequester.handleCommand(string);
                                   } else if (TextureSampler35.rights != 0
@@ -2682,8 +2688,8 @@ public final class ItemConfig {
                                 }
                                 if ((j1 == 5009)) {
                                   l -= 2;
-                                  GameString class94_48 = Node.aClass94Array75[l + 1];
-                                  GameString class94_19 = Node.aClass94Array75[l];
+                                  GameString class94_48 = GlobalStatics_0.aClass94Array75[l + 1];
+                                  GameString class94_19 = GlobalStatics_0.aClass94Array75[l];
                                   if ((TextureSampler35.rights != 0)
                                     || (!SomethingVolume15.aBoolean2433 || BufferData.aBoolean1641)
                                     && !TextureSampler31.aBoolean3166) {
@@ -2708,7 +2714,7 @@ public final class ItemConfig {
                                   if (class94_49 == null) {
                                     class94_49 = AreaSoundEffect.aClass94_2331;
                                   }
-                                  Node.aClass94Array75[l++] = class94_49;
+                                  GlobalStatics_0.aClass94Array75[l++] = class94_49;
                                   continue;
                                 }
                                 if ((j1 == 5011)) {
@@ -2720,7 +2726,7 @@ public final class ItemConfig {
                                   if (class94_50 == null) {
                                     class94_50 = AreaSoundEffect.aClass94_2331;
                                   }
-                                  Node.aClass94Array75[l++] = class94_50;
+                                  GlobalStatics_0.aClass94Array75[l++] = class94_50;
                                   continue;
                                 }
                                 if (j1 == 5012) {
@@ -2740,7 +2746,7 @@ public final class ItemConfig {
                                   } else {
                                     class94_20 = TextureCache.localPlayer.getFullName();
                                   }
-                                  Node.aClass94Array75[l++] = class94_20;
+                                  GlobalStatics_0.aClass94Array75[l++] = class94_20;
                                   continue;
                                 }
                                 if ((j1 == 5016)) {
@@ -2753,7 +2759,7 @@ public final class ItemConfig {
                                 }
                                 if (j1 == 5050) {
                                   int j25 = GroundItem.anIntArray2929[--k];
-                                  Node.aClass94Array75[l++] =
+                                  GlobalStatics_0.aClass94Array75[l++] =
                                     TextureSampler22.method336(j25, (byte) -54).aClass94_3538;
                                   continue;
                                 }
@@ -2801,14 +2807,14 @@ public final class ItemConfig {
                                 }
                                 if ((j1 == 5055)) {
                                   int k26 = GroundItem.anIntArray2929[--k];
-                                  Node.aClass94Array75[l++] =
-                                    StringNode.method733(0xbc614e, k26).method554(-1);
+                                  GlobalStatics_0.aClass94Array75[l++] =
+                                    GlobalStatics_0.method733(0xbc614e, k26).method554(-1);
                                   continue;
                                 }
                                 if ((j1 == 5056)) {
                                   int l26 = GroundItem.anIntArray2929[--k];
                                   SomethingQuickChat class3_sub28_sub4 =
-                                    StringNode.method733(0xbc614e, l26);
+                                    GlobalStatics_0.method733(0xbc614e, l26);
                                   if (class3_sub28_sub4.anIntArray3567 != null) {
                                     GroundItem.anIntArray2929[k++] =
                                       class3_sub28_sub4.anIntArray3567.length;
@@ -2822,7 +2828,7 @@ public final class ItemConfig {
                                   int k56 = GroundItem.anIntArray2929[1 + k];
                                   int i27 = GroundItem.anIntArray2929[k];
                                   GroundItem.anIntArray2929[k++] =
-                                    StringNode.method733(0xbc614e, i27).anIntArray3567[k56];
+                                    GlobalStatics_0.method733(0xbc614e, i27).anIntArray3567[k56];
                                   continue;
                                 }
                                 if (j1 == 5058) {
@@ -2830,7 +2836,7 @@ public final class ItemConfig {
                                   SceneSomething2.aClass10_1056.anInt149 =
                                     GroundItem.anIntArray2929[--k];
                                   SceneSomething2.aClass10_1056.aClass3_Sub28_Sub4_151 =
-                                    StringNode.method733(0xbc614e,
+                                    GlobalStatics_0.method733(0xbc614e,
                                       SceneSomething2.aClass10_1056.anInt149);
                                   SceneSomething2.aClass10_1056.anIntArray153 =
                                     new int[SceneSomething2.aClass10_1056.aClass3_Sub28_Sub4_151.method552(
@@ -2854,7 +2860,7 @@ public final class ItemConfig {
                                 }
                                 if (j1 == 5060) {
                                   Keyboard.anInt1906++;
-                                  GameString class94_21 = Node.aClass94Array75[--l];
+                                  GameString class94_21 = GlobalStatics_0.aClass94Array75[--l];
                                   TextureSampler12.secureBuffer.writePacket(178);
                                   TextureSampler12.secureBuffer.writeByte(0);
                                   int l56 = TextureSampler12.secureBuffer.position;
@@ -2930,14 +2936,15 @@ public final class ItemConfig {
                                 if ((j1 == 5066)) {
                                   int l28 = GroundItem.anIntArray2929[--k];
                                   GroundItem.anIntArray2929[k++] =
-                                    StringNode.method733(0xbc614e, l28).method552(true);
+                                    GlobalStatics_0.method733(0xbc614e, l28).method552(true);
                                   continue;
                                 }
                                 if ((j1 == 5067)) {
                                   k -= 2;
                                   int i58 = GroundItem.anIntArray2929[k + 1];
                                   int i29 = GroundItem.anIntArray2929[k];
-                                  int i70 = StringNode.method733(0xbc614e, i29).method550(49, i58);
+                                  int i70 = GlobalStatics_0
+                                      .method733(0xbc614e, i29).method550(49, i58);
                                   GroundItem.anIntArray2929[k++] = i70;
                                   continue;
                                 }
@@ -2961,7 +2968,7 @@ public final class ItemConfig {
                                   int j70 = GroundItem.anIntArray2929[k + 2];
                                   int l58 = GroundItem.anIntArray2929[k + 1];
                                   SomethingQuickChat class3_sub28_sub4_1 =
-                                    StringNode.method733(0xbc614e, l29);
+                                    GlobalStatics_0.method733(0xbc614e, l29);
                                   if (class3_sub28_sub4_1.method550(73, l58)
                                       != 0) {
                                     throw new RuntimeException("bad command");
@@ -2971,7 +2978,7 @@ public final class ItemConfig {
                                   continue;
                                 }
                                 if (j1 == 5071) {
-                                  GameString class94_22 = Node.aClass94Array75[--l];
+                                  GameString class94_22 = GlobalStatics_0.aClass94Array75[--l];
                                   boolean flag4 =
                                       GroundItem.anIntArray2929[--k] == 1;
                                   SomethingWorldMapy.method541((byte) 123, flag4, class94_22);
@@ -3037,16 +3044,17 @@ public final class ItemConfig {
                                   continue;
                                 }
                                 if (j1 == 5203) {
-                                  Node.method84(Node.aClass94Array75[--l], -801);
+                                  GlobalStatics_0.method84(GlobalStatics_0.aClass94Array75[--l], -801);
                                   continue;
                                 }
                                 if (j1 == 5204) {
-                                  Node.aClass94Array75[l - 1] =
-                                    GameStub.method27(Node.aClass94Array75[l - 1], true);
+                                  GlobalStatics_0.aClass94Array75[l - 1] =
+                                    GameStub.method27(
+                                        GlobalStatics_0.aClass94Array75[l - 1], true);
                                   continue;
                                 }
                                 if (j1 == 5205) {
-                                  StringNode0.method138(Node.aClass94Array75[--l], 0);
+                                  StringNode0.method138(GlobalStatics_0.aClass94Array75[--l], 0);
                                   continue;
                                 }
                                 if ((j1 == 5206)) {
@@ -3055,20 +3063,20 @@ public final class ItemConfig {
                                     Queue.method884(0x3fff & i30 >> 14, (byte) 111,
                                       0x3fff & i30);
                                   if (class3_sub28_sub3_4 != null) {
-                                    Node.aClass94Array75[l++] = class3_sub28_sub3_4.aClass94_3561;
+                                    GlobalStatics_0.aClass94Array75[l++] = class3_sub28_sub3_4.aClass94_3561;
                                   } else {
-                                    Node.aClass94Array75[l++] = AreaSoundEffect.aClass94_2331;
+                                    GlobalStatics_0.aClass94Array75[l++] = AreaSoundEffect.aClass94_2331;
                                   }
                                   continue;
                                 }
                                 if ((j1 == 5207)) {
                                   SomethingWorldMapy class3_sub28_sub3 =
-                                    SomethingVolume15.method371(2, Node.aClass94Array75[--l]);
+                                    SomethingVolume15.method371(2, GlobalStatics_0.aClass94Array75[--l]);
                                   if (class3_sub28_sub3 != null
                                     && class3_sub28_sub3.aClass94_3554 != null) {
-                                    Node.aClass94Array75[l++] = class3_sub28_sub3.aClass94_3554;
+                                    GlobalStatics_0.aClass94Array75[l++] = class3_sub28_sub3.aClass94_3554;
                                   } else {
-                                    Node.aClass94Array75[l++] = AreaSoundEffect.aClass94_2331;
+                                    GlobalStatics_0.aClass94Array75[l++] = AreaSoundEffect.aClass94_2331;
                                   }
                                   continue;
                                 }
@@ -3126,7 +3134,7 @@ public final class ItemConfig {
                                   }
                                   class94_51 = class94_51.method1560(Mobile.aClass94_2765, true,
                                     EnumStringFetcher.aClass94_2168);
-                                  Node.aClass94Array75[l++] = class94_51;
+                                  GlobalStatics_0.aClass94Array75[l++] = class94_51;
                                   GroundItem.anIntArray2929[k++] = k70;
                                   continue;
                                 }
@@ -3143,7 +3151,7 @@ public final class ItemConfig {
                                   }
                                   class94_52 = class94_52.method1560(Mobile.aClass94_2765, true,
                                     EnumStringFetcher.aClass94_2168);
-                                  Node.aClass94Array75[l++] = class94_52;
+                                  GlobalStatics_0.aClass94Array75[l++] = class94_52;
                                   GroundItem.anIntArray2929[k++] = i71;
                                   continue;
                                 }
@@ -3155,9 +3163,9 @@ public final class ItemConfig {
                                 }
                                 if ((j1 == 5215)) {
                                   int i31 = GroundItem.anIntArray2929[--k];
-                                  GameString class94_53 = Node.aClass94Array75[--l];
+                                  GameString class94_53 = GlobalStatics_0.aClass94Array75[--l];
                                   boolean flag10 = false;
-                                  Queue class13 = AbstractIndexedColorSprite.method1664(
+                                  Queue class13 = GlobalStatics_1.method1664(
                                     0x3fff & i31 >> 14, 0x3fff & i31, (byte) -118);
                                   SomethingWorldMapy class3_sub28_sub3_5 =
                                     (SomethingWorldMapy) class13.getFirst();
@@ -3203,7 +3211,7 @@ public final class ItemConfig {
                                   continue;
                                 }
                                 if ((j1 == 5219)) {
-                                  DummyClass60.method915(Node.aClass94Array75[--l], -1);
+                                  DummyClass60.method915(GlobalStatics_0.aClass94Array75[--l], -1);
                                   continue;
                                 }
                                 if ((j1 != 5220)) {
@@ -3231,13 +3239,13 @@ public final class ItemConfig {
                                   continue;
                                 }
                                 if (j1 == 5302) {
-                                  DisplayMode[] aclass106 = Node.method88((byte) 28);
+                                  DisplayMode[] aclass106 = GlobalStatics_0.method88((byte) 28);
                                   GroundItem.anIntArray2929[k++] = aclass106.length;
                                   continue;
                                 }
                                 if (j1 == 5303) {
                                   int i32 = GroundItem.anIntArray2929[--k];
-                                  DisplayMode[] aclass106_1 = Node.method88((byte) 28);
+                                  DisplayMode[] aclass106_1 = GlobalStatics_0.method88((byte) 28);
                                   GroundItem.anIntArray2929[k++] = aclass106_1[i32].anInt1447;
                                   GroundItem.anIntArray2929[k++] = aclass106_1[i32].anInt1449;
                                   continue;
@@ -3246,7 +3254,7 @@ public final class ItemConfig {
                                   int j59 = TextureSampler21.anInt3071;
                                   int j32 = AbstractTextureSampler.anInt2378;
                                   int j71 = -1;
-                                  DisplayMode[] aclass106_2 = Node.method88((byte) 28);
+                                  DisplayMode[] aclass106_2 = GlobalStatics_0.method88((byte) 28);
                                   int i80 = 0;
                                   do {
                                     if (aclass106_2.length <= i80) {
@@ -3292,8 +3300,8 @@ public final class ItemConfig {
                               if (j1 < 5500) {
                                 if ((j1 == 5400)) {
                                   l -= 2;
-                                  GameString class94_23 = Node.aClass94Array75[l];
-                                  GameString class94_54 = Node.aClass94Array75[l + 1];
+                                  GameString class94_23 = GlobalStatics_0.aClass94Array75[l];
+                                  GameString class94_54 = GlobalStatics_0.aClass94Array75[l + 1];
                                   int k71 = GroundItem.anIntArray2929[--k];
                                   AnimationSequence.anInt1853++;
                                   TextureSampler12.secureBuffer.writePacket(117);
@@ -3389,7 +3397,7 @@ public final class ItemConfig {
                                             .createString(abyte0, 0, abyte0.length);
                                     }
                                   }
-                                  Node.aClass94Array75[l++] = class94_24;
+                                  GlobalStatics_0.aClass94Array75[l++] = class94_24;
                                   continue;
                                 }
                                 if ((j1 == 5420)) {
@@ -3403,7 +3411,7 @@ public final class ItemConfig {
                                   }
                                   boolean flag5 =
                                       GroundItem.anIntArray2929[--k] == 1;
-                                  GameString class94_25 = Node.aClass94Array75[--l];
+                                  GameString class94_25 = GlobalStatics_0.aClass94Array75[--l];
                                   GameString class94_64 = RenderAnimation.concat(new GameString[] {
                                     Widget.method856(true), class94_25
                                   });
@@ -3413,7 +3421,7 @@ public final class ItemConfig {
                                     || DisplayMode.aBoolean1451)) {
                                     DummyClass54.method1596(class94_64, (byte) 127, flag5);
                                   } else {
-                                    GameString.aBoolean2154 = flag5;
+                                    GlobalStatics_0.aBoolean2154 = flag5;
                                     TextureSampler5.aClass94_3295 = class94_64;
                                     AudioWorker.aClass64_351 = DummyClass35.signLink.method1452(
                                       new String(class94_64.method1568(0),
@@ -3424,8 +3432,8 @@ public final class ItemConfig {
                                 if (j1 == 5422) {
                                   int i72 = GroundItem.anIntArray2929[--k];
                                   l -= 2;
-                                  GameString class94_55 = Node.aClass94Array75[1 + l];
-                                  GameString class94_26 = Node.aClass94Array75[l];
+                                  GameString class94_55 = GlobalStatics_0.aClass94Array75[1 + l];
+                                  GameString class94_26 = GlobalStatics_0.aClass94Array75[l];
                                   if ((class94_26.getLength() > 0)) {
                                     if (GameBuffer.titlePrefixes == null) {
                                       GameBuffer.titlePrefixes =
@@ -3443,7 +3451,7 @@ public final class ItemConfig {
                                   continue;
                                 }
                                 if ((j1 == 5423)) {
-                                  Node.aClass94Array75[--l].method1549(false);
+                                  GlobalStatics_0.aClass94Array75[--l].method1549(false);
                                   continue;
                                 }
                                 if (j1 == 5424) {
@@ -3772,7 +3780,7 @@ public final class ItemConfig {
                                         SceneNode.method1870(false);
                                         MidiSomething.aBoolean1158 = false;
                                       } else {
-                                        StringNode.method736(k35, 115);
+                                        GlobalStatics_0.method736(k35, 115);
                                       }
                                       BZipDecompressorState.anInt120 = k35;
                                     }
@@ -4017,17 +4025,17 @@ public final class ItemConfig {
                                         if (class44_sub1 == null) {
                                           GroundItem.anIntArray2929[k++] = -1;
                                           GroundItem.anIntArray2929[k++] = 0;
-                                          Node.aClass94Array75[l++] = AreaSoundEffect.aClass94_2331;
+                                          GlobalStatics_0.aClass94Array75[l++] = AreaSoundEffect.aClass94_2331;
                                           GroundItem.anIntArray2929[k++] = 0;
-                                          Node.aClass94Array75[l++] = AreaSoundEffect.aClass94_2331;
+                                          GlobalStatics_0.aClass94Array75[l++] = AreaSoundEffect.aClass94_2331;
                                           GroundItem.anIntArray2929[k++] = 0;
                                         } else {
                                           GroundItem.anIntArray2929[k++] = class44_sub1.anInt2621;
                                           GroundItem.anIntArray2929[k++] = class44_sub1.flags;
-                                          Node.aClass94Array75[l++] = class44_sub1.aClass94_2620;
+                                          GlobalStatics_0.aClass94Array75[l++] = class44_sub1.aClass94_2620;
                                           GameWorldSomething class26 = class44_sub1.method1078(60);
                                           GroundItem.anIntArray2929[k++] = class26.anInt507;
-                                          Node.aClass94Array75[l++] = class26.aClass94_508;
+                                          GlobalStatics_0.aClass94Array75[l++] = class26.aClass94_508;
                                           GroundItem.anIntArray2929[k++] = class44_sub1.anInt722;
                                         }
                                         continue;
@@ -4038,18 +4046,18 @@ public final class ItemConfig {
                                         if (class44_sub1_1 == null) {
                                           GroundItem.anIntArray2929[k++] = -1;
                                           GroundItem.anIntArray2929[k++] = 0;
-                                          Node.aClass94Array75[l++] = AreaSoundEffect.aClass94_2331;
+                                          GlobalStatics_0.aClass94Array75[l++] = AreaSoundEffect.aClass94_2331;
                                           GroundItem.anIntArray2929[k++] = 0;
-                                          Node.aClass94Array75[l++] = AreaSoundEffect.aClass94_2331;
+                                          GlobalStatics_0.aClass94Array75[l++] = AreaSoundEffect.aClass94_2331;
                                           GroundItem.anIntArray2929[k++] = 0;
                                         } else {
                                           GroundItem.anIntArray2929[k++] = class44_sub1_1.anInt2621;
                                           GroundItem.anIntArray2929[k++] = class44_sub1_1.flags;
-                                          Node.aClass94Array75[l++] = class44_sub1_1.aClass94_2620;
+                                          GlobalStatics_0.aClass94Array75[l++] = class44_sub1_1.aClass94_2620;
                                           GameWorldSomething class26_1 =
                                             class44_sub1_1.method1078(70);
                                           GroundItem.anIntArray2929[k++] = class26_1.anInt507;
-                                          Node.aClass94Array75[l++] = class26_1.aClass94_508;
+                                          GlobalStatics_0.aClass94Array75[l++] = class26_1.aClass94_508;
                                           GroundItem.anIntArray2929[k++] = class44_sub1_1.anInt722;
                                         }
                                         continue;
@@ -4068,12 +4076,12 @@ public final class ItemConfig {
                                         continue;
                                       }
                                       if (j1 == 6504) {
-                                        GameString.anInt2148 = GroundItem.anIntArray2929[--k];
+                                        GlobalStatics_0.anInt2148 = GroundItem.anIntArray2929[--k];
                                         DummyClass25.writeSettings(DummyClass35.signLink);
                                         continue;
                                       }
                                       if (j1 == 6505) {
-                                        GroundItem.anIntArray2929[k++] = GameString.anInt2148;
+                                        GroundItem.anIntArray2929[k++] = GlobalStatics_0.anInt2148;
                                         continue;
                                       }
                                       if ((j1 == 6506)) {
@@ -4082,17 +4090,17 @@ public final class ItemConfig {
                                           ClassCheckRequest.method130(120, j37);
                                         if (class44_sub1_2 != null) {
                                           GroundItem.anIntArray2929[k++] = class44_sub1_2.flags;
-                                          Node.aClass94Array75[l++] = class44_sub1_2.aClass94_2620;
+                                          GlobalStatics_0.aClass94Array75[l++] = class44_sub1_2.aClass94_2620;
                                           GameWorldSomething class26_2 =
                                             class44_sub1_2.method1078(-87);
                                           GroundItem.anIntArray2929[k++] = class26_2.anInt507;
-                                          Node.aClass94Array75[l++] = class26_2.aClass94_508;
+                                          GlobalStatics_0.aClass94Array75[l++] = class26_2.aClass94_508;
                                           GroundItem.anIntArray2929[k++] = class44_sub1_2.anInt722;
                                         } else {
                                           GroundItem.anIntArray2929[k++] = -1;
-                                          Node.aClass94Array75[l++] = AreaSoundEffect.aClass94_2331;
+                                          GlobalStatics_0.aClass94Array75[l++] = AreaSoundEffect.aClass94_2331;
                                           GroundItem.anIntArray2929[k++] = 0;
-                                          Node.aClass94Array75[l++] = AreaSoundEffect.aClass94_2331;
+                                          GlobalStatics_0.aClass94Array75[l++] = AreaSoundEffect.aClass94_2331;
                                           GroundItem.anIntArray2929[k++] = 0;
                                         }
                                         continue;
@@ -4212,8 +4220,8 @@ public final class ItemConfig {
                               }
                               if ((j1 == 5600)) {
                                 l -= 2;
-                                GameString class94_27 = Node.aClass94Array75[l];
-                                GameString class94_56 = Node.aClass94Array75[l + 1];
+                                GameString class94_27 = GlobalStatics_0.aClass94Array75[l];
+                                GameString class94_56 = GlobalStatics_0.aClass94Array75[l + 1];
                                 int k73 = GroundItem.anIntArray2929[--k];
                                 if ((DummyClass15.state == 10)
                                     && (TextureSampler2.anInt3375 == 0)
@@ -4253,7 +4261,7 @@ public final class ItemConfig {
                                   && (TextureSampler28.loginState == 0)
                                   && (DummyCanvas.anInt23 == 0)
                                     && (Light.anInt692 == 0)) {
-                                  DummyClass59.method1041(Node.aClass94Array75[l].toBase37(),
+                                  DummyClass59.method1041(GlobalStatics_0.aClass94Array75[l].toBase37(),
                                     -28236);
                                 }
                                 continue;
@@ -4268,15 +4276,15 @@ public final class ItemConfig {
                                   WidgetUpdate.createIndexedColorSprite(
                                     GroundItem.anIntArray2929[k], 10603,
                                     GroundItem.anIntArray2929[k + 3],
-                                    GroundItem.anIntArray2929[1 + k], Node.aClass94Array75[1 + l],
-                                    Node.aClass94Array75[l].toBase37(),
+                                    GroundItem.anIntArray2929[1 + k], GlobalStatics_0.aClass94Array75[1 + l],
+                                    GlobalStatics_0.aClass94Array75[l].toBase37(),
                                     GroundItem.anIntArray2929[2 + k]);
                                 }
                                 continue;
                               }
                               if (j1 == 5606) {
                                 if (DummyCanvas.anInt23 == 0) {
-                                  HashTable.anInt1711 = -2;
+                                  GlobalStatics_0.anInt1711 = -2;
                                 }
                                 continue;
                               }
@@ -4290,12 +4298,12 @@ public final class ItemConfig {
                                 continue;
                               }
                               if (j1 == 5609) {
-                                GroundItem.anIntArray2929[k++] = HashTable.anInt1711;
+                                GroundItem.anIntArray2929[k++] = GlobalStatics_0.anInt1711;
                                 continue;
                               }
                               if (j1 == 5610) {
                                 for (int l37 = 0; l37 < 5; l37++) {
-                                  Node.aClass94Array75[l++] =
+                                  GlobalStatics_0.aClass94Array75[l++] =
                                     TextureSampler29.aClass94Array3391.length <= l37 ?
                                       AreaSoundEffect.aClass94_2331 :
                                       TextureSampler29.aClass94Array3391[l37].formatName(
@@ -4319,7 +4327,7 @@ public final class ItemConfig {
                             int i61 = GroundItem.anIntArray2929[k + 1];
                             Parameter class3_sub28_sub9_1 = Deque.method1210(64, i61);
                             if (class3_sub28_sub9_1.method585(0)) {
-                              Node.aClass94Array75[l++] = SomethingScene
+                              GlobalStatics_0.aClass94Array75[l++] = SomethingScene
                                   .method1292((byte) 31, i38)
                                   .method604(class3_sub28_sub9_1.aClass94_3619,
                                       (byte) -44, i61);
@@ -4340,7 +4348,7 @@ public final class ItemConfig {
                           int j38 = GroundItem.anIntArray2929[k];
                           Parameter class3_sub28_sub9_2 = Deque.method1210(64, j61);
                           if (class3_sub28_sub9_2.method585(0)) {
-                            Node.aClass94Array75[l++] = DummyClass11
+                            GlobalStatics_0.aClass94Array75[l++] = DummyClass11
                                 .method2207(4, j38)
                                 .method1698(class3_sub28_sub9_2.aClass94_3619,
                                     -23085, j61);
@@ -4354,7 +4362,7 @@ public final class ItemConfig {
                         }
                         if (j1 == 4200) {
                           int k38 = GroundItem.anIntArray2929[--k];
-                          Node.aClass94Array75[l++] =
+                          GlobalStatics_0.aClass94Array75[l++] =
                             DummyClass35.getItemConfig(k38, (byte) 72).aClass94_770;
                           continue;
                         }
@@ -4365,9 +4373,9 @@ public final class ItemConfig {
                           ItemConfig class48_2 = DummyClass35.getItemConfig(l38, (byte) 77);
                           if ((k61 < 1) || k61 > 5
                             || class48_2.aClass94Array801[-1 + k61] == null) {
-                            Node.aClass94Array75[l++] = AreaSoundEffect.aClass94_2331;
+                            GlobalStatics_0.aClass94Array75[l++] = AreaSoundEffect.aClass94_2331;
                           } else {
-                            Node.aClass94Array75[l++] = class48_2.aClass94Array801[k61 - 1];
+                            GlobalStatics_0.aClass94Array75[l++] = class48_2.aClass94Array801[k61 - 1];
                           }
                           continue;
                         }
@@ -4379,9 +4387,9 @@ public final class ItemConfig {
                           if (l61 >= 1 && (l61 <= 5) &&
                               class48_3.inventoryOptions[l61
                                   - 1] != null) {
-                            Node.aClass94Array75[l++] = class48_3.inventoryOptions[-1 + l61];
+                            GlobalStatics_0.aClass94Array75[l++] = class48_3.inventoryOptions[-1 + l61];
                           } else {
-                            Node.aClass94Array75[l++] = AreaSoundEffect.aClass94_2331;
+                            GlobalStatics_0.aClass94Array75[l++] = AreaSoundEffect.aClass94_2331;
                           }
                           continue;
                         }
@@ -4429,7 +4437,7 @@ public final class ItemConfig {
                           int i62 = GroundItem.anIntArray2929[k + 1];
                           Parameter class3_sub28_sub9_3 = Deque.method1210(64, i62);
                           if (class3_sub28_sub9_3.method585(0)) {
-                            Node.aClass94Array75[l++] = DummyClass35.getItemConfig(k40, (byte) 126)
+                            GlobalStatics_0.aClass94Array75[l++] = DummyClass35.getItemConfig(k40, (byte) 126)
                               .method1105(107, class3_sub28_sub9_3.aClass94_3619, i62);
                           } else {
                             GroundItem.anIntArray2929[k++] =
@@ -4439,7 +4447,7 @@ public final class ItemConfig {
                           continue;
                         }
                         if (j1 == 4210) {
-                          GameString class94_28 = Node.aClass94Array75[--l];
+                          GameString class94_28 = GlobalStatics_0.aClass94Array75[--l];
                           int j62 = GroundItem.anIntArray2929[--k];
                           NpcConfiguration.method1480((j62 == 1), class94_28, 102);
                           GroundItem.anIntArray2929[k++] = FileTable.anInt952;
@@ -4463,33 +4471,33 @@ public final class ItemConfig {
                         continue;
                       }
                       if (j1 == 4100) {
-                        GameString class94_29 = Node.aClass94Array75[--l];
+                        GameString class94_29 = GlobalStatics_0.aClass94Array75[--l];
                         int k62 = GroundItem.anIntArray2929[--k];
-                        Node.aClass94Array75[l++] = RenderAnimation.concat(new GameString[] {
+                        GlobalStatics_0.aClass94Array75[l++] = RenderAnimation.concat(new GameString[] {
                           class94_29, SomethingScene.toString(k62)
                         });
                         continue;
                       }
                       if ((j1 == 4101)) {
                         l -= 2;
-                        GameString class94_57 = Node.aClass94Array75[l + 1];
-                        GameString class94_30 = Node.aClass94Array75[l];
-                        Node.aClass94Array75[l++] = RenderAnimation.concat(new GameString[] {
+                        GameString class94_57 = GlobalStatics_0.aClass94Array75[l + 1];
+                        GameString class94_30 = GlobalStatics_0.aClass94Array75[l];
+                        GlobalStatics_0.aClass94Array75[l++] = RenderAnimation.concat(new GameString[] {
                           class94_30, class94_57
                         });
                         continue;
                       }
                       if (j1 == 4102) {
-                        GameString class94_31 = Node.aClass94Array75[--l];
+                        GameString class94_31 = GlobalStatics_0.aClass94Array75[--l];
                         int l62 = GroundItem.anIntArray2929[--k];
-                        Node.aClass94Array75[l++] = RenderAnimation.concat(new GameString[] {
+                        GlobalStatics_0.aClass94Array75[l++] = RenderAnimation.concat(new GameString[] {
                           class94_31, Deque.method1218(true, 127, l62)
                         });
                         continue;
                       }
                       if ((j1 == 4103)) {
-                        GameString class94_32 = Node.aClass94Array75[--l];
-                        Node.aClass94Array75[l++] = class94_32.method1534();
+                        GameString class94_32 = GlobalStatics_0.aClass94Array75[--l];
+                        GlobalStatics_0.aClass94Array75[l++] = class94_32.method1534();
                         continue;
                       }
                       if (j1 == 4104) {
@@ -4499,7 +4507,7 @@ public final class ItemConfig {
                         int k78 = Parameter.aCalendar3616.get(5);
                         int k80 = Parameter.aCalendar3616.get(2);
                         int i82 = Parameter.aCalendar3616.get(1);
-                        Node.aClass94Array75[l++] = RenderAnimation.concat(new GameString[] {
+                        GlobalStatics_0.aClass94Array75[l++] = RenderAnimation.concat(new GameString[] {
                           SomethingScene.toString(k78), ObjectCache.aClass94_1326,
                           RenderAnimation.aClass94Array358[k80], ObjectCache.aClass94_1326,
                           SomethingScene.toString(i82)
@@ -4508,69 +4516,71 @@ public final class ItemConfig {
                       }
                       if (j1 == 4105) {
                         l -= 2;
-                        GameString class94_58 = Node.aClass94Array75[l + 1];
-                        GameString class94_33 = Node.aClass94Array75[l];
+                        GameString class94_58 = GlobalStatics_0.aClass94Array75[l + 1];
+                        GameString class94_33 = GlobalStatics_0.aClass94Array75[l];
                         if (TextureCache.localPlayer.appearance == null
                           || !TextureCache.localPlayer.appearance.aBoolean864) {
-                          Node.aClass94Array75[l++] = class94_33;
+                          GlobalStatics_0.aClass94Array75[l++] = class94_33;
                         } else {
-                          Node.aClass94Array75[l++] = class94_58;
+                          GlobalStatics_0.aClass94Array75[l++] = class94_58;
                         }
                         continue;
                       }
                       if ((j1 == 4106)) {
                         int i41 = GroundItem.anIntArray2929[--k];
-                        Node.aClass94Array75[l++] = SomethingScene.toString(i41);
+                        GlobalStatics_0.aClass94Array75[l++] = SomethingScene.toString(i41);
                         continue;
                       }
                       if ((j1 == 4107)) {
                         l -= 2;
                         GroundItem.anIntArray2929[k++] =
-                          Node.aClass94Array75[l].method1546((byte) -63,
-                            Node.aClass94Array75[l + 1]);
+                          GlobalStatics_0.aClass94Array75[l].method1546((byte) -63,
+                            GlobalStatics_0.aClass94Array75[l + 1]);
                         continue;
                       }
                       if (j1 == 4108) {
-                        GameString class94_34 = Node.aClass94Array75[--l];
+                        GameString class94_34 = GlobalStatics_0.aClass94Array75[--l];
                         k -= 2;
                         int l73 = GroundItem.anIntArray2929[k + 1];
                         int i63 = GroundItem.anIntArray2929[k];
                         GroundItem.anIntArray2929[k++] =
-                          BlockConfig.method1430(-28922, l73).method684(class94_34, i63);
+                          GlobalStatics_0
+                              .method1430(-28922, l73).method684(class94_34, i63);
                         continue;
                       }
                       if ((j1 == 4109)) {
                         k -= 2;
-                        GameString class94_35 = Node.aClass94Array75[--l];
+                        GameString class94_35 = GlobalStatics_0.aClass94Array75[--l];
                         int i74 = GroundItem.anIntArray2929[1 + k];
                         int j63 = GroundItem.anIntArray2929[k];
                         GroundItem.anIntArray2929[k++] =
-                          BlockConfig.method1430(-28922, i74).method680(class94_35, j63);
+                          GlobalStatics_0
+                              .method1430(-28922, i74).method680(class94_35, j63);
                         continue;
                       }
                       if ((j1 == 4110)) {
                         l -= 2;
-                        GameString class94_36 = Node.aClass94Array75[l];
-                        GameString class94_59 = Node.aClass94Array75[l + 1];
+                        GameString class94_36 = GlobalStatics_0.aClass94Array75[l];
+                        GameString class94_59 = GlobalStatics_0.aClass94Array75[l + 1];
                         if (GroundItem.anIntArray2929[--k] == 1) {
-                          Node.aClass94Array75[l++] = class94_36;
+                          GlobalStatics_0.aClass94Array75[l++] = class94_36;
                         } else {
-                          Node.aClass94Array75[l++] = class94_59;
+                          GlobalStatics_0.aClass94Array75[l++] = class94_59;
                         }
                         continue;
                       }
                       if (j1 == 4111) {
-                        GameString class94_37 = Node.aClass94Array75[--l];
-                        Node.aClass94Array75[l++] = AbstractFont.otherFormat(class94_37);
+                        GameString class94_37 = GlobalStatics_0.aClass94Array75[--l];
+                        GlobalStatics_0.aClass94Array75[l++] = AbstractFont.otherFormat(class94_37);
                         continue;
                       }
                       if (j1 == 4112) {
-                        GameString class94_38 = Node.aClass94Array75[--l];
+                        GameString class94_38 = GlobalStatics_0.aClass94Array75[--l];
                         int k63 = GroundItem.anIntArray2929[--k];
                         if ((k63 == -1)) {
                           throw new RuntimeException("null char");
                         }
-                        Node.aClass94Array75[l++] = class94_38.method1548(false, k63);
+                        GlobalStatics_0.aClass94Array75[l++] = class94_38.method1548(false, k63);
                         continue;
                       }
                       if ((j1 == 4113)) {
@@ -4597,7 +4607,7 @@ public final class ItemConfig {
                         continue;
                       }
                       if ((j1 == 4117)) {
-                        GameString class94_39 = Node.aClass94Array75[--l];
+                        GameString class94_39 = GlobalStatics_0.aClass94Array75[--l];
                         if (class94_39 != null) {
                           GroundItem.anIntArray2929[k++] = class94_39.getLength();
                         } else {
@@ -4607,15 +4617,15 @@ public final class ItemConfig {
                       }
                       if (j1 == 4118) {
                         k -= 2;
-                        GameString class94_40 = Node.aClass94Array75[--l];
+                        GameString class94_40 = GlobalStatics_0.aClass94Array75[--l];
                         int i64 = GroundItem.anIntArray2929[k];
                         int j74 = GroundItem.anIntArray2929[1 + k];
-                        Node.aClass94Array75[l++] = class94_40.substring(j74, 0, i64);
+                        GlobalStatics_0.aClass94Array75[l++] = class94_40.substring(j74, 0, i64);
                         continue;
                       }
                       if ((j1 == 4119)) {
-                        GameString class94_41 = Node.aClass94Array75[--l];
-                        GameString class94_60 = Cache.createString(class94_41.getLength());
+                        GameString class94_41 = GlobalStatics_0.aClass94Array75[--l];
+                        GameString class94_60 = GameStringStatics.createString(class94_41.getLength());
                         boolean flag9 = false;
                         for (int l78 = 0; (l78 < class94_41.getLength()); l78++) {
                           int l80 = class94_41.charAt(l78);
@@ -4633,12 +4643,12 @@ public final class ItemConfig {
                         }
 
                         class94_60.pack();
-                        Node.aClass94Array75[l++] = class94_60;
+                        GlobalStatics_0.aClass94Array75[l++] = class94_60;
                         continue;
                       }
                       if ((j1 == 4120)) {
                         k -= 2;
-                        GameString class94_42 = Node.aClass94Array75[--l];
+                        GameString class94_42 = GlobalStatics_0.aClass94Array75[--l];
                         int j64 = GroundItem.anIntArray2929[k];
                         int k74 = GroundItem.anIntArray2929[1 + k];
                         GroundItem.anIntArray2929[k++] = class94_42.method1555(j64, k74, 1536);
@@ -4646,8 +4656,8 @@ public final class ItemConfig {
                       }
                       if (j1 == 4121) {
                         l -= 2;
-                        GameString class94_43 = Node.aClass94Array75[l];
-                        GameString class94_61 = Node.aClass94Array75[1 + l];
+                        GameString class94_43 = GlobalStatics_0.aClass94Array75[l];
+                        GameString class94_61 = GlobalStatics_0.aClass94Array75[1 + l];
                         int l74 = GroundItem.anIntArray2929[--k];
                         GroundItem.anIntArray2929[k++] = class94_43.indexOf(class94_61, l74, -1);
                         continue;
@@ -4667,7 +4677,7 @@ public final class ItemConfig {
                       }
                       boolean flag1 = (GroundItem.anIntArray2929[--k] != 0);
                       int k64 = GroundItem.anIntArray2929[--k];
-                      Node.aClass94Array75[l++] =
+                      GlobalStatics_0.aClass94Array75[l++] =
                         SomethingOtherWorldMap.method407(TriChromaticImageBuffer.languageId, flag1,
                           0, k64, 2);
                       continue;
@@ -4685,9 +4695,9 @@ public final class ItemConfig {
                       if (class11_8.aClass94Array171 != null
                         && class11_8.aClass94Array171.length > l64
                         && class11_8.aClass94Array171[l64] != null) {
-                        Node.aClass94Array75[l++] = class11_8.aClass94Array171[l64];
+                        GlobalStatics_0.aClass94Array75[l++] = class11_8.aClass94Array171[l64];
                       } else {
-                        Node.aClass94Array75[l++] = AreaSoundEffect.aClass94_2331;
+                        GlobalStatics_0.aClass94Array75[l++] = AreaSoundEffect.aClass94_2331;
                       }
                       continue;
                     }
@@ -4695,9 +4705,9 @@ public final class ItemConfig {
                       break;
                     }
                     if (class11_8.aClass94_277 != null) {
-                      Node.aClass94Array75[l++] = class11_8.aClass94_277;
+                      GlobalStatics_0.aClass94Array75[l++] = class11_8.aClass94_277;
                     } else {
-                      Node.aClass94Array75[l++] = AreaSoundEffect.aClass94_2331;
+                      GlobalStatics_0.aClass94Array75[l++] = AreaSoundEffect.aClass94_2331;
                     }
                     continue;
                   }
@@ -4776,7 +4786,7 @@ public final class ItemConfig {
                   continue;
                 }
                 if ((j1 == 2602)) {
-                  Node.aClass94Array75[l++] = class11_12.aClass94_232;
+                  GlobalStatics_0.aClass94Array75[l++] = class11_12.aClass94_232;
                   continue;
                 }
                 if ((j1 == 2603)) {
@@ -4850,7 +4860,7 @@ public final class ItemConfig {
                   EnumStringFetcher.getWidget((byte) 115, GroundItem.anIntArray2929[--k]);
               }
               int[] ai3 = null;
-              GameString class94_62 = Node.aClass94Array75[--l];
+              GameString class94_62 = GlobalStatics_0.aClass94Array75[--l];
               if ((class94_62.getLength() > 0) && (class94_62.charAt(
                   class94_62.getLength() - 1) == 89)) {
                 int i79 = GroundItem.anIntArray2929[--k];
@@ -4865,7 +4875,7 @@ public final class ItemConfig {
               Object[] aobj1 = new Object[class94_62.getLength() + 1];
               for (int i81 = -1 + aobj1.length; i81 >= 1; i81--) {
                 if (class94_62.charAt(i81 - 1) == 115) {
-                  aobj1[i81] = Node.aClass94Array75[--l];
+                  aobj1[i81] = GlobalStatics_0.aClass94Array75[--l];
                 } else {
                   aobj1[i81] = new Integer(GroundItem.anIntArray2929[--k]);
                 }
@@ -5154,7 +5164,7 @@ public final class ItemConfig {
           continue;
         }
         if (j1 == 1112) {
-          GameString class94_63 = Node.aClass94Array75[--l];
+          GameString class94_63 = GlobalStatics_0.aClass94Array75[--l];
           if (!class94_63.method1528((byte) -42, class11_16.aClass94_232)) {
             class11_16.aClass94_232 = class94_63;
             DummyClass29.method909(117, class11_16);

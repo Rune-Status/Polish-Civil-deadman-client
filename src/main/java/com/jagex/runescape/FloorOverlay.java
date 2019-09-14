@@ -1,12 +1,14 @@
 package com.jagex.runescape;
 
 import com.jagex.runescape.buffer.Buffer;
+import com.jagex.runescape.common.GameString;
+import com.jagex.runescape.common.GameStringStatics;
 import com.jagex.runescape.opengl.GlTexture2d;
 
 public final class FloorOverlay {
 
   public static int anInt2088;
-  public static GameString aClass94_2089 = GameString.create("compass");
+  public static GameString aClass94_2089 = GameStringStatics.create("compass");
   public static Widget aClass11_2091;
   public static AbstractFont aClass3_Sub28_Sub17_2096;
   public static FileUnpacker fileUnpacker16;

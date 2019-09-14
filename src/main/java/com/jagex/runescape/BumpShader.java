@@ -1,7 +1,7 @@
 package com.jagex.runescape;
 
 import com.jagex.runescape.opengl.GlRenderer;
-import com.jagex.runescape.opengl.shader.MaterialShader;
+import com.jagex.runescape.opengl.MaterialShader;
 
 public final class BumpShader implements MaterialShader {
 

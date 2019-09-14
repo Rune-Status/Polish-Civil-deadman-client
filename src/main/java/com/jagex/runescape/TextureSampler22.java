@@ -1,10 +1,12 @@
 package com.jagex.runescape;
 
 import com.jagex.runescape.buffer.Buffer;
+import com.jagex.runescape.common.GameString;
+import com.jagex.runescape.common.GameStringStatics;
 
 public final class TextureSampler22 extends AbstractTextureSampler {
 
-  public static GameString aClass94_3418 = GameString.create("(U5");
+  public static GameString aClass94_3418 = GameStringStatics.create("(U5");
   public static int anInt3419;
   public static int anInt3420;
   public static WorldMapLabel aClass131_3421;

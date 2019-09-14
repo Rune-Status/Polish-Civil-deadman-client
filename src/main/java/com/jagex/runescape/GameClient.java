@@ -1,8 +1,10 @@
 package com.jagex.runescape;
 
 import com.jagex.runescape.buffer.Buffer;
+import com.jagex.runescape.common.GameString;
+import com.jagex.runescape.common.GameStringStatics;
+import com.jagex.runescape.common.HashTable;
 import com.jagex.runescape.huffman.HuffmanEncoder;
-import com.jagex.runescape.opengl.BlockShadowMap;
 import com.jagex.runescape.opengl.DummyClass16;
 import com.jagex.runescape.opengl.DummyClass33;
 import com.jagex.runescape.opengl.DummyClass46;
@@ -15,20 +17,19 @@ import com.jagex.runescape.opengl.SomethingGl;
 import com.jagex.runescape.opengl.SomethingGl0;
 import com.jagex.runescape.opengl.Texture;
 import com.jagex.runescape.opengl.WaterShader;
-import com.jagex.runescape.opengl.shader.MaterialShader4;
-import com.jagex.runescape.opengl.shader.MaterialShader5;
+import com.jagex.runescape.opengl.MaterialShader4;
+import com.jagex.runescape.opengl.MaterialShader5;
 import java.awt.Component;
 import java.awt.Graphics;
 import java.awt.Insets;
 import java.io.IOException;
 import java.net.Socket;
-import java.nio.charset.StandardCharsets;
 import java.util.Arrays;
 import java.util.GregorianCalendar;
 
 public final class GameClient extends GameStub {
 
-  private static GameString aClass94_2198 = GameString.create("cyan:");
+  private static GameString aClass94_2198 = GameStringStatics.create("cyan:");
   public static boolean aBoolean2201;
   public static HashTable aClass130_2194 = new HashTable(16);
   public static int anInt2195;
@@ -78,7 +79,7 @@ public final class GameClient extends GameStub {
                 var4.aByteArray2795[0] = 1;
                 var4.waypointsX[0] = var6 + (var4.anInt2819 >> 7);
                 var4.waypointsY[0] = var7 + (var4.anInt2829 >> 7);
-                BlockConfig.collisionMaps[GameWorldSomething.currentPlane]
+                GlobalStatics_0.collisionMaps[GameWorldSomething.currentPlane]
                     .method1502(var1 + 20850,
                         var4.anInt2819 >> 7, var4.getSize(), false, 0,
                         var4.getSize(),
@@ -87,7 +88,7 @@ public final class GameClient extends GameStub {
                     .getSize()
                     && var4.waypointsY[0] >= 0
                     && var4.waypointsY[0] <= 104 - var4.getSize()
-                    && BlockConfig.collisionMaps[GameWorldSomething.currentPlane]
+                    && GlobalStatics_0.collisionMaps[GameWorldSomething.currentPlane]
                     .method1500(-2,
                         var4.anInt2829 >> 7, var4.waypointsY[0],
                         var4.waypointsX[0],
@@ -99,7 +100,7 @@ public final class GameClient extends GameStub {
                       for (int var9 = var4.waypointsY[0];
                           var4.waypointsY[0] + var4.getSize() > var9; ++var9) {
                         if ((var2
-                            & BlockConfig.collisionMaps[GameWorldSomething.currentPlane].anIntArrayArray1304[var8][var9])
+                            & GlobalStatics_0.collisionMaps[GameWorldSomething.currentPlane].anIntArrayArray1304[var8][var9])
                             != 0) {
                           continue label191;
                         }
@@ -115,7 +116,7 @@ public final class GameClient extends GameStub {
             Cursor.method1180((byte) -122, var4);
             DummyClass1.method904(65536, var4);
             RenderAnimation.method900(var4, var1 ^ -11974);
-            BlockConfig.collisionMaps[GameWorldSomething.currentPlane]
+            GlobalStatics_0.collisionMaps[GameWorldSomething.currentPlane]
                 .method1489(
                     var4.anInt2819 >> 7, false, (byte) 85, var4.anInt2829 >> 7,
                     var4.getSize(), var4.getSize());
@@ -167,10 +168,10 @@ public final class GameClient extends GameStub {
                     if (AudioWorker.aClass64_351.result != null) {
                       DummyClass54
                           .method1596(TextureSampler5.aClass94_3295, (byte) 126,
-                              GameString.aBoolean2154);
+                              GlobalStatics_0.aBoolean2154);
                     }
 
-                    GameString.aBoolean2154 = false;
+                    GlobalStatics_0.aBoolean2154 = false;
                     TextureSampler5.aClass94_3295 = null;
                     AudioWorker.aClass64_351 = null;
                   }
@@ -356,11 +357,11 @@ public final class GameClient extends GameStub {
   }
 
   private void handleLoading() {
-    if (!GameString.safemode) {
+    if (!GlobalStatics_0.safemode) {
         while (FileCacheRequest.hasKeyInput()) {
           if ((TextureSampler7.anInt3342 == 115)
               || (TextureSampler7.anInt3342 == 83)) {
-            GameString.safemode = true;
+            GlobalStatics_0.safemode = true;
           }
         }
       }
@@ -384,7 +385,7 @@ public final class GameClient extends GameStub {
           ClientScript.loadingPercent = 5;
           AnimationFrame.loadingText = TextureSampler18.aClass94_4040;
         } else {
-          AnimationFrame.loadingText = GameString.aClass94_2151;
+          AnimationFrame.loadingText = GlobalStatics_0.aClass94_2151;
           HintMarker.loadingState = 10;
           ClientScript.loadingPercent = 5;
         }
@@ -394,7 +395,7 @@ public final class GameClient extends GameStub {
           DummyClass46.setSceneDimensions(4, 104, 104);
 
           for (var2 = 0; (var2 < 4); ++var2) {
-            BlockConfig.collisionMaps[var2] = new CollisionMap(104, 104);
+            GlobalStatics_0.collisionMaps[var2] = new CollisionMap(104, 104);
           }
 
           ClientScript.loadingPercent = 10;
@@ -474,16 +475,16 @@ public final class GameClient extends GameStub {
         } else if ((HintMarker.loadingState != 40)) {
           if ((HintMarker.loadingState == 45)) {
             GameObject.method1959(256, 2, 22050, TextureSampler17.aBoolean3184);
-            BlockConfig.aClass3_Sub24_Sub4_1193 = new AudioStreamEncoder4();
-            BlockConfig.aClass3_Sub24_Sub4_1193.method479((byte) 98, 9, 128);
+            GlobalStatics_0.aClass3_Sub24_Sub4_1193 = new AudioStreamEncoder4();
+            GlobalStatics_0.aClass3_Sub24_Sub4_1193.method479((byte) 98, 9, 128);
             GameWorld.audioOutputStream0 =
                 DummyClass43
                     .createAudioOutputStream(22050, DummyClass35.signLink,
                         GameCanvas.INSTANCE, 0, 14);
             GameWorld.audioOutputStream0
-                .method2154(-116, BlockConfig.aClass3_Sub24_Sub4_1193);
+                .method2154(-116, GlobalStatics_0.aClass3_Sub24_Sub4_1193);
             RenderAnimation
-                .method897(17770, BlockConfig.aClass3_Sub24_Sub4_1193,
+                .method897(17770, GlobalStatics_0.aClass3_Sub24_Sub4_1193,
                     NPC.fileUnpacker15, ClanChatUser.midiInstruments,
                     AbstractMouseWheel.soundEffects);
             SomethingWorldMappy.audioOutputStream1 =
@@ -582,8 +583,8 @@ public final class GameClient extends GameStub {
                     DummyClass56
                         .method1648(AudioSomethingSomething.fileUnpacker22,
                             255);
-                    StringNode.method731(Something3dRoot.configs, (byte) -113);
-                    Node.method89(true, FileUnpacker.fileUnpacker13,
+                    GlobalStatics_0.method731(Something3dRoot.configs, (byte) -113);
+                    GlobalStatics_0.method89(true, FileUnpacker.fileUnpacker13,
                         Projectile.sprites,
                         GameObject.widgets, DummyClass13.models);
                     TextureSampler23.method250(2048, Something3dRoot.configs);
@@ -631,7 +632,7 @@ public final class GameClient extends GameStub {
                       DummyClass28.method887(21, Projectile.sprites);
                       HintMarker.loadingState = 90;
                       ClientScript.loadingPercent = 60;
-                      AnimationFrame.loadingText = HashTable.aClass94_1707;
+                      AnimationFrame.loadingText = GlobalStatics_0.aClass94_1707;
                     }
                   } else if (HintMarker.loadingState != 90) {
                     if (HintMarker.loadingState == 100) {
@@ -723,14 +724,14 @@ public final class GameClient extends GameStub {
                         } else if ((HintMarker.loadingState != 140)) {
                           if ((HintMarker.loadingState == 150)) {
                             SomethingGl.method1454();
-                            if (GameString.safemode) {
+                            if (GlobalStatics_0.safemode) {
                               Parameter.anInt3622 = 0;
                               GroundItemNode.anInt3671 = 0;
                               SubNode.anInt2577 = 0;
                               TriChromaticImageBuffer.anInt2488 = 0;
                             }
 
-                            GameString.safemode = true;
+                            GlobalStatics_0.safemode = true;
                             DummyClass25.writeSettings(DummyClass35.signLink);
                             SceneNode
                                 .setWindowMode(false, SubNode.anInt2577, -8914,
@@ -772,7 +773,7 @@ public final class GameClient extends GameStub {
                       } else {
                         AnimationFrame.loadingText = RenderAnimation
                             .concat(new GameString[]{
-                                BlockConfig.aClass94_1183,
+                                GlobalStatics_0.aClass94_1183,
                                 DummyInputStream.aClass94_37
                             });
                         ClientScript.loadingPercent = 80;
@@ -893,7 +894,7 @@ public final class GameClient extends GameStub {
           AbstractFileRequester.fileSystem.method838((byte) -70);
         }
 
-        StringNode.method728(false);
+        GlobalStatics_0.method728(false);
         DummyClass43.method1194(-16385);
         DummyClass34.method996(-43);
         FileTable.method1225(18074);
@@ -1015,7 +1016,7 @@ public final class GameClient extends GameStub {
 
   public void method33(int var1) {
     GameClient.method43(true);
-      GameString.method1541(-8635);
+      GlobalStatics_0.method1541(-8635);
       DummyClass35.method1024(21474);
       SomethingWorldMapy.method542((byte) -46);
       WorldMapLabel.method1792(0);
@@ -1043,7 +1044,7 @@ public final class GameClient extends GameStub {
       Player.method1982((byte) 121);
       Deque.method1217(0);
       AbstractDirectColorSprite.method634((byte) 108);
-      HashTable.method1774(103);
+      GlobalStatics_0.method1774(103);
       AbstractMouseWheel.method2081(0);
       ClanChatUser.method387(103);
       SomethingPacket116.method1802();
@@ -1059,7 +1060,7 @@ public final class GameClient extends GameStub {
       NpcConfiguration.method1473((byte) 103);
       SomethingPacket151.method821(26971);
       WidgetAccess.method91((byte) 120);
-      Node.method83((byte) 30);
+      GlobalStatics_0.method83((byte) 30);
       Queue.method875((byte) 106);
       ISAACCipher.method1231(119);
       DummyClass53.method1582(3);
@@ -1085,7 +1086,7 @@ public final class GameClient extends GameStub {
       SceneShadowMap.method1815((byte) -45);
       GlModel.method1915();
       ItemConfig.method1111(3327);
-      SoftwareModel.method1948();
+      GlobalStatics_1.method1948();
       Keyboard.method2085(118);
       Mouse.method2088(true);
       DummyClass30.method937(0);
@@ -1094,7 +1095,7 @@ public final class GameClient extends GameStub {
       AudioWorker.method892(100);
       DummyCanvas.method53(0);
       DummyClass11.method2205(-17413);
-      AbstractIndexedColorSprite.method1663(33);
+      GlobalStatics_1.method1663(33);
       AbstractFont.method689();
       DummyClass52.method1426(-25247);
       AudioSomethingSomething.method399(186);
@@ -1150,7 +1151,7 @@ public final class GameClient extends GameStub {
       SomethingQuickChatK.method853(0);
       ClientScriptCall.method376(false);
       SceneNode.method1860(0);
-      BlockConfig.method1429((byte) 53);
+      GlobalStatics_0.method1429((byte) 53);
       SomethingGl0.method147();
       SceneSomething.method954(128);
       SomethingLight0.method1703(10967);
@@ -1168,7 +1169,7 @@ public final class GameClient extends GameStub {
       DummyClass61.method726();
       BufferData.method1733(-17148);
       DummyClass16.method2045();
-      BlockShadowMap.clear();
+      GlobalStatics_0.clear();
       DummyClass49.method1365(119);
       DummyClass31.method1682(-82);
       VariableUpdate.method120(1000);
@@ -1190,7 +1191,7 @@ public final class GameClient extends GameStub {
       GameObject.method1958(2);
       DummyClass23.method1744(true);
       HashTableIterator.method1394((byte) -94);
-      StringNode.method735(-22749);
+      GlobalStatics_0.method735(-22749);
       DummyClass21.method1806();
       IntegerNode.method382(1);
       SomethingWorldMappy.method396(0);
@@ -1328,7 +1329,7 @@ public final class GameClient extends GameStub {
           TriChromaticImageBuffer.languageId = 0;
         }
 
-        Node.setupLanguagePacket(TriChromaticImageBuffer.languageId);
+        GlobalStatics_0.setupLanguagePacket(TriChromaticImageBuffer.languageId);
         String var2 = this.getParameter("objecttag");
         DummyClass8.aBoolean4018 = "1".equals(var2);
 
@@ -1487,12 +1488,12 @@ public final class GameClient extends GameStub {
                   .drawLoadingBox(TextureSampler39.LOADING_PLEASE_WAIT, false);
             }
           } else {
-            if ((StringNode.anInt2579 < TextureSampler5.anInt3293)) {
-              StringNode.anInt2579 = TextureSampler5.anInt3293;
+            if ((GlobalStatics_0.anInt2579 < TextureSampler5.anInt3293)) {
+              GlobalStatics_0.anInt2579 = TextureSampler5.anInt3293;
             }
 
-            var4 = 50 * (StringNode.anInt2579 - TextureSampler5.anInt3293)
-                / StringNode.anInt2579;
+            var4 = 50 * (GlobalStatics_0.anInt2579 - TextureSampler5.anInt3293)
+                / GlobalStatics_0.anInt2579;
             AbstractTextureSampler
                 .drawLoadingBox(RenderAnimation.concat(new GameString[]{
                     TextureSampler39.LOADING_PLEASE_WAIT,
@@ -1546,9 +1547,9 @@ public final class GameClient extends GameStub {
           SomethingTexture3.method1346(26211);
         }
 
-        if (GameString.safemode && DummyClass15.state == 10
+        if (GlobalStatics_0.safemode && DummyClass15.state == 10
             && (InventoryConfig.anInt3655 != -1)) {
-          GameString.safemode = false;
+          GlobalStatics_0.safemode = false;
           DummyClass25.writeSettings(DummyClass35.signLink);
         }
 
@@ -1633,7 +1634,7 @@ public final class GameClient extends GameStub {
 
           MonoChromaticImageCache.tableIndexFile =
               new BufferedFile(DummyClass35.signLink.tableIndexFile, 6000, 0);
-          BlockConfig.tableCache =
+          GlobalStatics_0.tableCache =
               new FileCache(255, DummyClass55.cacheDataFile,
                   MonoChromaticImageCache.tableIndexFile,
                   500000);
@@ -1648,7 +1649,7 @@ public final class GameClient extends GameStub {
         LinearHashTable.uidFile = null;
         DummyClass55.cacheDataFile = null;
         MonoChromaticImageCache.tableIndexFile = null;
-        BlockConfig.tableCache = null;
+        GlobalStatics_0.tableCache = null;
       }
 
       DummyClass10.aClass94_2083 = SceneSomething.aClass94_485;
@@ -1771,9 +1772,9 @@ public final class GameClient extends GameStub {
             }
 
             if (var9.aBoolean219 && SomethingTilek.anInt1676 >= var12
-                && HashTable.anInt1709 >= var13
+                && GlobalStatics_0.anInt1709 >= var13
                 && SomethingTilek.anInt1676 < var14
-                && HashTable.anInt1709 < var15) {
+                && GlobalStatics_0.anInt1709 < var15) {
               for (ClientScriptCall var27 =
                   (ClientScriptCall) DummyClass31.aClass61_1471.getFirst();
                   var27 != null;
@@ -1797,9 +1798,9 @@ public final class GameClient extends GameStub {
           if (var9.aBoolean233) {
             boolean var26;
             var26 = SomethingTilek.anInt1676 >= var12
-                && HashTable.anInt1709 >= var13
+                && GlobalStatics_0.anInt1709 >= var13
                 && SomethingTilek.anInt1676 < var14
-                && HashTable.anInt1709 < var15;
+                && GlobalStatics_0.anInt1709 < var15;
 
             boolean var25 = false;
             if (TextureSampler21.anInt3069 == 1 && var26) {
@@ -1934,14 +1935,14 @@ public final class GameClient extends GameStub {
 
                     ClanChatUser.anInt2475 = 1;
                     BufferObject.anInt1881 = SomethingTilek.anInt1676;
-                    DummyClass53.anInt1336 = HashTable.anInt1709;
+                    DummyClass53.anInt1336 = GlobalStatics_0.anInt1709;
                     continue;
                   }
 
                   if (var25 && ClanChatUser.anInt2475 > 0) {
                     if (ClanChatUser.anInt2475 == 1 && (
                         BufferObject.anInt1881 != SomethingTilek.anInt1676
-                            || DummyClass53.anInt1336 != HashTable.anInt1709)) {
+                            || DummyClass53.anInt1336 != GlobalStatics_0.anInt1709)) {
                       OndemandFileRequest.anInt4073 = SomethingQuickChat2.anInt3536;
                       DummyClass35.anInt660 = SpawnedGameObject.anInt2251;
                       ClanChatUser.anInt2475 = 2;
@@ -1955,7 +1956,7 @@ public final class GameClient extends GameStub {
                                   / NPC.aFloat3979), 112);
                       TextureSampler8
                           .method354(-126, DummyClass35.anInt660 + (int) (
-                              (DummyClass53.anInt1336 - HashTable.anInt1709)
+                              (DummyClass53.anInt1336 - GlobalStatics_0.anInt1709)
                                   * 2.0D
                                   / NPC.aFloat3979));
                     }
@@ -1969,7 +1970,7 @@ public final class GameClient extends GameStub {
                 if (var9.anInt189 == 1401) {
                   if (var25) {
                     TextureSampler23.method253(-22611, var9.anInt168,
-                        HashTable.anInt1709 - var11,
+                        GlobalStatics_0.anInt1709 - var11,
                         SomethingTilek.anInt1676 - var10, var9.anInt193);
                   }
                   continue;
@@ -2001,7 +2002,7 @@ public final class GameClient extends GameStub {
                 var30.aBoolean2446 = true;
                 var30.aClass11_2449 = var9;
                 var30.anInt2447 = SomethingTilek.anInt1676 - var10;
-                var30.anInt2441 = HashTable.anInt1709 - var11;
+                var30.anInt2441 = GlobalStatics_0.anInt1709 - var11;
                 var30.arguments = var9.anObjectArray170;
                 DummyClass31.aClass61_1471.addLast(var30);
               }
@@ -2013,7 +2014,7 @@ public final class GameClient extends GameStub {
                   var30.aBoolean2446 = true;
                   var30.aClass11_2449 = var9;
                   var30.anInt2447 = SomethingTilek.anInt1676 - var10;
-                  var30.anInt2441 = HashTable.anInt1709 - var11;
+                  var30.anInt2441 = GlobalStatics_0.anInt1709 - var11;
                   var30.arguments = var9.anObjectArray239;
                   DummyClass45.aClass61_983.addLast(var30);
                 }
@@ -2024,7 +2025,7 @@ public final class GameClient extends GameStub {
                 var30.aBoolean2446 = true;
                 var30.aClass11_2449 = var9;
                 var30.anInt2447 = SomethingTilek.anInt1676 - var10;
-                var30.anInt2441 = HashTable.anInt1709 - var11;
+                var30.anInt2441 = GlobalStatics_0.anInt1709 - var11;
                 var30.arguments = var9.anObjectArray180;
                 DummyClass31.aClass61_1471.addLast(var30);
               }
@@ -2036,7 +2037,7 @@ public final class GameClient extends GameStub {
                   var30.aBoolean2446 = true;
                   var30.aClass11_2449 = var9;
                   var30.anInt2447 = SomethingTilek.anInt1676 - var10;
-                  var30.anInt2441 = HashTable.anInt1709 - var11;
+                  var30.anInt2441 = GlobalStatics_0.anInt1709 - var11;
                   var30.arguments = var9.anObjectArray248;
                   DummyClass31.aClass61_1471.addLast(var30);
                 }
@@ -2047,7 +2048,7 @@ public final class GameClient extends GameStub {
                 var30.aBoolean2446 = true;
                 var30.aClass11_2449 = var9;
                 var30.anInt2447 = SomethingTilek.anInt1676 - var10;
-                var30.anInt2441 = HashTable.anInt1709 - var11;
+                var30.anInt2441 = GlobalStatics_0.anInt1709 - var11;
                 var30.arguments = var9.anObjectArray276;
                 DummyClass31.aClass61_1471.addLast(var30);
               }
@@ -2059,7 +2060,7 @@ public final class GameClient extends GameStub {
                   var30.aBoolean2446 = true;
                   var30.aClass11_2449 = var9;
                   var30.anInt2447 = SomethingTilek.anInt1676 - var10;
-                  var30.anInt2441 = HashTable.anInt1709 - var11;
+                  var30.anInt2441 = GlobalStatics_0.anInt1709 - var11;
                   var30.arguments = var9.anObjectArray281;
                   DummyClass45.aClass61_983.addLast(var30);
                 }
@@ -2291,9 +2292,9 @@ public final class GameClient extends GameStub {
               && !DummyClass36.aBoolean2615) {
             if ((var9.anInt212 >= 0 || var9.anInt228 != 0)
                 && SomethingTilek.anInt1676 >= var12
-                && HashTable.anInt1709 >= var13
+                && GlobalStatics_0.anInt1709 >= var13
                 && SomethingTilek.anInt1676 < var14
-                && HashTable.anInt1709 < var15) {
+                && GlobalStatics_0.anInt1709 < var15) {
               if (var9.anInt212 >= 0) {
                 DummyClass56.aClass11_1453 = var0[var9.anInt212];
               } else {
@@ -2302,14 +2303,14 @@ public final class GameClient extends GameStub {
             }
 
             if (var9.anInt187 == 8 && SomethingTilek.anInt1676 >= var12
-                && HashTable.anInt1709 >= var13
+                && GlobalStatics_0.anInt1709 >= var13
                 && SomethingTilek.anInt1676 < var14
-                && HashTable.anInt1709 < var15) {
+                && GlobalStatics_0.anInt1709 < var15) {
               DummyClass29.aClass11_439 = var9;
             }
 
             if (var9.anInt252 > var9.anInt193) {
-              DummyClass20.method1819(HashTable.anInt1709, var9.anInt193, var9,
+              DummyClass20.method1819(GlobalStatics_0.anInt1709, var9.anInt193, var9,
                   (byte) -101,
                   SomethingTilek.anInt1676, var10 + var9.anInt168, var11,
                   var9.anInt252);

@@ -1,12 +1,14 @@
 package com.jagex.runescape;
 
+import com.jagex.runescape.common.GameString;
+import com.jagex.runescape.common.GameStringStatics;
 import java.awt.Frame;
 
 public final class FileCacheRequest extends AbstractFileRequest {
 
-  private static GameString aClass94_4055 = GameString.create(" has logged in)3");
+  private static GameString aClass94_4055 = GameStringStatics.create(" has logged in)3");
   public static int anInt4054;
-  public static GameString aClass94_4057 = GameString.create("Mem:");
+  public static GameString aClass94_4057 = GameStringStatics.create("Mem:");
   public static SceneSomething[] aClass25Array4060;
   public static int anInt4062;
   public static boolean aBoolean4063;

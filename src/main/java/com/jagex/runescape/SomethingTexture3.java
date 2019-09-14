@@ -1,5 +1,7 @@
 package com.jagex.runescape;
 
+import com.jagex.runescape.common.GameString;
+import com.jagex.runescape.common.GameStringStatics;
 import com.jagex.runescape.huffman.HuffmanEncoderStatics;
 import com.jagex.runescape.opengl.GlDirectColorSprite;
 import com.jagex.runescape.opengl.GlDirectFullColorSprite;
@@ -8,7 +10,7 @@ import com.jagex.runescape.opengl.GlRenderer;
 public final class SomethingTexture3 extends AbstractSomethingTexture {
 
   public static int anInt2651;
-  public static GameString aClass94_2653 = GameString.create("Hierhin gehen");
+  public static GameString aClass94_2653 = GameStringStatics.create("Hierhin gehen");
   public static AbstractDirectColorSprite[] aClass3_Sub28_Sub16Array2656;
   public static int anInt2658;
   public static FileUnpacker animationFrames;

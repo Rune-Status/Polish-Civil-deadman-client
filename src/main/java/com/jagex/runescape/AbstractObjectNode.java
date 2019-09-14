@@ -1,11 +1,13 @@
 package com.jagex.runescape;
 
 import com.jagex.runescape.buffer.Buffer;
+import com.jagex.runescape.common.GameString;
+import com.jagex.runescape.common.GameStringStatics;
 import java.io.IOException;
 
 public abstract class AbstractObjectNode extends SubNode {
 
-  public static GameString aClass94_3601 = GameString.create(")3runescape)3com)4l=");
+  public static GameString aClass94_3601 = GameStringStatics.create(")3runescape)3com)4l=");
   public static int anInt3602;
   public static int viewportLowerZ;
   public static boolean aBoolean3604 = true;
@@ -63,11 +65,11 @@ public abstract class AbstractObjectNode extends SubNode {
         DummyClass0.method1758(0);
       }
 
-      GameString.anInt2148 = var1;
+      GlobalStatics_0.anInt2148 = var1;
       TriChromaticImageBuffer.anInt2488 = 0;
       AudioWorker.aBoolean346 = false;
       DummyClass4.aBoolean3004 = true;
-      GameString.safemode = false;
+      GlobalStatics_0.safemode = false;
       FileCacheRequester.aBoolean1080 = false;
       SubNode.anInt2577 = 0;
 

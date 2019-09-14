@@ -1,17 +1,19 @@
 package com.jagex.runescape;
 
+import com.jagex.runescape.common.GameString;
+import com.jagex.runescape.common.GameStringStatics;
 import java.util.Objects;
 
 public final class DummyClass4 extends DummyClass6 {
 
   public static int[] anIntArray2999;
-  public static GameString aClass94_3000 = GameString.create("; Max)2Age=");
+  public static GameString aClass94_3000 = GameStringStatics.create("; Max)2Age=");
   public static int anInt3001;
-  public static GameString aClass94_3002 = GameString.create("M");
+  public static GameString aClass94_3002 = GameStringStatics.create("M");
   public static GameString[] aClass94Array3003 = new GameString[100];
   public static boolean aBoolean3004 = true;
   public static byte[][] aByteArrayArray3005;
-  public static GameString aClass94_3006 = GameString.create("<col=ff3000>");
+  public static GameString aClass94_3006 = GameStringStatics.create("<col=ff3000>");
   public static int[] anIntArray3007 = {-1, -1, 1, 1};
 
 
@@ -47,7 +49,7 @@ public final class DummyClass4 extends DummyClass6 {
           }
         }
 
-        if ((HashTable.packetLength == SpotAnimationConfig.gameBuffer.position)) {
+        if ((GlobalStatics_0.packetLength == SpotAnimationConfig.gameBuffer.position)) {
           for (var1 = 0; var1 < DummyClass13.anInt2022; ++var1) {
             if (TextureSampler0.players[DummyClass42.anIntArray887[var1]]
                 == null) {
@@ -59,7 +61,7 @@ public final class DummyClass4 extends DummyClass6 {
         } else {
           throw new RuntimeException(
               "gpp1 pos:" + SpotAnimationConfig.gameBuffer.position + " psize:"
-                  + HashTable.packetLength);
+                  + GlobalStatics_0.packetLength);
         }
       }
   }
@@ -69,7 +71,7 @@ public final class DummyClass4 extends DummyClass6 {
         if ((FileSystem.anInt104 < 100 || TextureSampler3.aBoolean3358)
           && (FileSystem.anInt104 < 200)) {
           GameString var3 = Objects
-              .requireNonNull(FileCache.stringFromBase37(-29664, var0)).formatName((byte) -50);
+              .requireNonNull(GameStringStatics.stringFromBase37(-29664, var0)).formatName((byte) -50);
           if (var2 != -91) {
             DummyClass4.method2227((byte) 22);
           }
@@ -100,7 +102,7 @@ public final class DummyClass4 extends DummyClass6 {
             Cursor.anIntArray882[FileSystem.anInt104] = 0;
             SubNode.aClass94Array2566[FileSystem.anInt104] = GroundItemNode.EMPTY_STRING;
             LightIntensity.anIntArray904[FileSystem.anInt104] = 0;
-            Node.aBooleanArray73[FileSystem.anInt104] = false;
+            GlobalStatics_0.aBooleanArray73[FileSystem.anInt104] = false;
             ++FileSystem.anInt104;
             DummyClass31.anInt1472 = TextureSampler23.anInt3213;
             TextureSampler12.secureBuffer.writePacket(120);

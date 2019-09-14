@@ -1,5 +1,7 @@
 package com.jagex.runescape;
 
+import com.jagex.runescape.common.GameString;
+import com.jagex.runescape.common.GameStringStatics;
 import com.jagex.runescape.opengl.GlDirectColorSprite;
 import com.jagex.runescape.opengl.GlDirectFullColorSprite;
 import com.jagex.runescape.opengl.GlRenderer;
@@ -7,9 +9,9 @@ import com.jagex.runescape.opengl.GlUtils;
 
 public final class ISAACCipher {
 
-  public static GameString aClass94_965 = GameString.create(":duelfriend:");
+  public static GameString aClass94_965 = GameStringStatics.create(":duelfriend:");
   public static int anInt969;
-  public static GameString aClass94_973 = GameString
+  public static GameString aClass94_973 = GameStringStatics
       .create(" de votre liste noire)3");
   private int anInt966;
   private int anInt967;
@@ -204,7 +206,7 @@ public final class ISAACCipher {
   }
 
   public static void method1230(byte var0) {
-    int var1 = AbstractIndexedColorSprite.anInt1462;
+    int var1 = GlobalStatics_1.anInt1462;
       int var2 = TextureSampler29.anInt3395;
       int var4 = SomethingQuickChat2.anInt3537;
       int var3 = SomethingWorldMapy.anInt3552;
@@ -278,7 +280,7 @@ public final class ISAACCipher {
             -FileTable.anInt963 + 256);
       }
 
-      var6 = HashTable.anInt1709;
+      var6 = GlobalStatics_0.anInt1709;
       var5 = SomethingTilek.anInt1676;
       if (var0 < 85) {
         ISAACCipher.aClass94_965 = null;
@@ -396,7 +398,7 @@ public final class ISAACCipher {
       }
 
       LinearHashTable
-          .method1282(AbstractIndexedColorSprite.anInt1462, (byte) 122,
+          .method1282(GlobalStatics_1.anInt1462, (byte) 122,
               TextureSampler29.anInt3395, SomethingQuickChat2.anInt3537,
               SomethingWorldMapy.anInt3552);
   }

@@ -1,15 +1,20 @@
 package com.jagex.runescape;
 
+import com.jagex.runescape.common.GameString;
+import com.jagex.runescape.common.GameStringStatics;
+import com.jagex.runescape.common.HashTable;
+import com.jagex.runescape.node.Node;
+
 public final class SceneGraphTile extends Node {
 
-  private static GameString aClass94_2224 = GameString.create("Please wait)3)3)3");
-  public static GameString aClass94_2215 = GameString.create("Konfig geladen)3");
+  private static GameString aClass94_2224 = GameStringStatics.create("Please wait)3)3)3");
+  public static GameString aClass94_2215 = GameStringStatics.create("Konfig geladen)3");
   public static int anInt2217 = 2;
   public static int anInt2218 = -1;
   public static short[] aShortArray2219 =
       {(short) -4160, (short) -4163, (short) -8256, (short) -8259, (short) 22461};
   public static HashTable aClass130_2220 = new HashTable(32);
-  public static GameString aClass94_2242 = GameString.create("welle2:");
+  public static GameString aClass94_2242 = GameStringStatics.create("welle2:");
   public static int anInt2243 = 3353893;
   public static int anInt2246;
   public static GameString aClass94_2216 = SceneGraphTile.aClass94_2224;

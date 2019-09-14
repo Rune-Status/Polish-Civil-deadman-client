@@ -1,19 +1,21 @@
 package com.jagex.runescape;
 
 import com.jagex.runescape.buffer.Buffer;
-import com.jagex.runescape.opengl.shader.MaterialShader5;
+import com.jagex.runescape.common.GameString;
+import com.jagex.runescape.common.GameStringStatics;
+import com.jagex.runescape.opengl.MaterialShader5;
 
 public class TextureSampler39 extends AbstractTextureSampler {
 
   private static GameString aClass94_3286 =
-    GameString.create("Loading )2 please wait)3");
-  public static GameString aClass94_3279 = GameString.create("Lade)3)3)3");
-  public static GameString aClass94_3281 = GameString.create("sch-Utteln:");
+    GameStringStatics.create("Loading )2 please wait)3");
+  public static GameString aClass94_3279 = GameStringStatics.create("Lade)3)3)3");
+  public static GameString aClass94_3281 = GameStringStatics.create("sch-Utteln:");
   public static int anInt3285 = 128;
   public static int anInt3287;
   public static int[] anIntArray3288 =
       {4, 4, 1, 2, 6, 4, 2, 49, 2, 2, 2, 2, 2, 2, 2, 2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1};
-  public static GameString aClass94_3289 = GameString.create("::fps ");
+  public static GameString aClass94_3289 = GameStringStatics.create("::fps ");
   public static GameString LOADING_PLEASE_WAIT = TextureSampler39.aClass94_3286;
   public int anInt3280;
   public int anInt3283;
@@ -31,7 +33,7 @@ public class TextureSampler39 extends AbstractTextureSampler {
           return false;
         } else {
           SoftwareDirectColorSprite var3 = (SomethingTilek.anInt1668 < 0) ?
-            GameString.method1537(MaterialShader5.aClass153_2172,
+            GlobalStatics_0.method1537(MaterialShader5.aClass153_2172,
                 this.anInt3278, false) :
             DummyClass59.method1043(this.anInt3278, MaterialShader5.aClass153_2172, -3178,
               SomethingTilek.anInt1668);

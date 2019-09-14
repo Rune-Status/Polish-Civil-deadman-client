@@ -1,11 +1,14 @@
 package com.jagex.runescape;
 
+import com.jagex.runescape.common.GameString;
+import com.jagex.runescape.common.GameStringStatics;
+
 public final class SceneSomething2 {
 
   public static GameString[] aClass94Array1046 = new GameString[200];
   public static int windowHeight;
   public static double aDouble1050 = -1.0;
-  public static GameString aClass94_1051 = GameString.create("(Udns");
+  public static GameString aClass94_1051 = GameStringStatics.create("(Udns");
   public static int anInt1053;
   public static SomethingQuickChatK aClass10_1056;
   public static FileUnpacker fileUnpacker21;
@@ -81,7 +84,7 @@ public final class SceneSomething2 {
             var8.anInt2310 + ((int) (Math.random() * (-var8.anInt2310 + var8.anInt2325)));
         }
 
-        Node.aClass61_78.addLast(var8);
+        GlobalStatics_0.aClass61_78.addLast(var8);
       } else if (var4 != null) {
         var8.aClass140_Sub4_Sub2_2324 = var4;
         NpcConfiguration var12 = var4.config;
