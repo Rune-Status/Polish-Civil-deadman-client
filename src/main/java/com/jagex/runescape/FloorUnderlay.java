@@ -147,7 +147,7 @@ public final class FloorUnderlay {
   }
 
   public static int method1603(byte var0, int var1, Random var2) {
-    if (~var1 >= -1) {
+    if ((var1 <= 1 -1)) {
         throw new IllegalArgumentException();
       } else if (Projectile.isPo2((byte) -115, var1)) {
         return (int) ((var2.nextInt() & 4294967295L) * var1 >> 32);

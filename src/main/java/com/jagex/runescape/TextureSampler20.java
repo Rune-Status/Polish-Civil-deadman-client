@@ -33,7 +33,7 @@ public final class TextureSampler20 extends AbstractTextureSampler {
         int var6 = DummyClass55.anInt1427 / this.anInt3147;
         int[] var4;
         int var7;
-        if (~var6 >= -1) {
+        if ((var6 <= 1 -1)) {
           var4 = this.method152(0, 0, 32755);
         } else {
           var7 = var1 % var6;
@@ -286,7 +286,7 @@ public final class TextureSampler20 extends AbstractTextureSampler {
                       MonoChromaticImageBuffer.anInt2556 = 0;
                     } else if (MonoChromaticImageBuffer.anInt2556 < 32 && ~var8
                         <= 127
-                      && ~var8 >= -128 && var9 >= -128 && var9 <= 127) {
+                      && (var8 <= 128 -1) && var9 >= -128 && var9 <= 127) {
                       TextureSampler12.secureBuffer.writeByte(
                         128 - -MonoChromaticImageBuffer.anInt2556);
                       var9 += 128;
@@ -514,7 +514,7 @@ public final class TextureSampler20 extends AbstractTextureSampler {
                             var20.anInt164 = var16.anInt3596;
                             var20.rotationY = var16.anInt3597;
                             if (var20.anInt192 != -1) {
-                              if (~var20.anInt184 >= -1) {
+                              if ((var20.anInt184 <= 1 -1)) {
                                 if ((var20.anInt177 > 1 -1)) {
                                   var20.anInt164 =
                                       32 * var20.anInt164 / var20.anInt177;

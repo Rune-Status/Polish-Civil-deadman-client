@@ -42,7 +42,7 @@ public abstract class AbstractGameWorld {
   }
 
   public static boolean method1066(int var0, int var1) {
-    if (var0 >= 97 && ~var0 >= -123) {
+    if (var0 >= 97 && (var0 <= 123 -1)) {
         return true;
       } else {
         return (var0 >= 66 -1) && var0 <= 90 || var0 >= 48 && var0 <= 57;

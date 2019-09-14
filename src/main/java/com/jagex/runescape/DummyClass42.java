@@ -77,8 +77,8 @@ public final class DummyClass42 {
         var19 = 0;
       }
 
-      if (~var20 >= -244) {
-        if (~var20 >= -218) {
+      if ((var20 <= 244 -1)) {
+        if ((var20 <= 218 -1)) {
           if ((var20 > 193 -1)) {
             var19 >>= 2;
           } else if ((var20 > 180 -1)) {

@@ -85,7 +85,7 @@ public final class DummyClass18 {
       }
 
       if (HashTable.packetLength == -2) {
-        if (~available >= -2) {
+        if ((available <= 2 -1)) {
           return false;
         }
 
@@ -544,7 +544,7 @@ public final class DummyClass18 {
         var3 = SpotAnimationConfig.gameBuffer.readUnsignedByte();
         var21 = SpotAnimationConfig.gameBuffer.readUnsignedByte();
         var56 = SpotAnimationConfig.gameBuffer.readString();
-        if (var21 >= 1 && ~var21 >= -9) {
+        if (var21 >= 1 && (var21 <= 9 -1)) {
           if (var56.method1531(VertexNormal.aClass94_829)) {
             var56 = null;
           }

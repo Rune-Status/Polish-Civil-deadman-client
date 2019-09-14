@@ -206,7 +206,7 @@ public final class DummyClass10 {
             break;
           }
 
-          if (~opcode >= -50) {
+          if ((opcode <= 50 -1)) {
             var3.readUnsignedByte();
           }
         }

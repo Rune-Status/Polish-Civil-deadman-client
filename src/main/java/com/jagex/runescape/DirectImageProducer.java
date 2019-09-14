@@ -379,7 +379,7 @@ public final class DirectImageProducer extends AbstractImageProducer
                   }
                 }
 
-                if (~lightPosZ >= -1) {
+                if ((lightPosZ <= 1 -1)) {
                   var18 = -1;
                   var19 = 0;
                 } else {
@@ -593,8 +593,8 @@ public final class DirectImageProducer extends AbstractImageProducer
           float[][] var40 = new float[105][105];
           float[][] var43 = new float[105][105];
 
-          for (var14 = 1; ~var14 >= -104; ++var14) {
-            for (var15 = 1; ~var15 >= -104; ++var15) {
+          for (var14 = 1; (var14 <= 104 -1); ++var14) {
+            for (var15 = 1; (var15 <= 104 -1); ++var15) {
               var44 = var45[var15][var14 - -1] + -var45[var15][-1 + var14];
               var16 = -var45[var15 - 1][var14] + var45[var15 + 1][var14];
               float var51 = (float) Math.sqrt(
@@ -680,8 +680,8 @@ public final class DirectImageProducer extends AbstractImageProducer
         }
 
         for (var8 = 0; var8 < 4; ++var8) {
-          for (var36 = 0; ~var36 >= -105; ++var36) {
-            for (lightPosX = 0; ~lightPosX >= -105; ++lightPosX) {
+          for (var36 = 0; (var36 <= 105 -1); ++var36) {
+            for (lightPosX = 0; (lightPosX <= 105 -1); ++lightPosX) {
               short var48;
               if (((
                   DummyClass36.anIntArrayArrayArray2609[var8][lightPosX][var36]

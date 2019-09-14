@@ -172,7 +172,7 @@ public final class SomethingInScenePacket202 extends Node {
         int var22 = -var12 + var14;
         int var23 = var15 + -var13;
 
-        for (int var24 = 128; ~var24 >= -4097; var24 += 128) {
+        for (int var24 = 128; (var24 <= 4097 -1); var24 += 128) {
           int var25 = var24 * var24 >> 12;
           int var26 = var24 * var25 >> 12;
           int var28 = var19 * var26;
@@ -346,7 +346,7 @@ public final class SomethingInScenePacket202 extends Node {
               int var14;
               for (var13 = var8; ~var13 > ~var10; ++var13) {
                 for (var14 = var9; var11 > var14; ++var14) {
-                  if (~DummyClass9.anIntArrayArray4010[var13][var14] >= -2) {
+                  if ((DummyClass9.anIntArrayArray4010[var13][var14] <= 2 -1)) {
                     var12 = false;
                     break;
                   }

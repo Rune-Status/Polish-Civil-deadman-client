@@ -334,7 +334,7 @@ public final class RenderAnimation {
         }
       }
 
-      if (~var0.animationId != 0 && ~var0.anInt2828 >= -2) {
+      if (~var0.animationId != 0 && (var0.anInt2828 <= 2 -1)) {
         var2 = GameClient.method45(var0.animationId, (byte) -20);
         if ((var2.anInt1866 == 2 -1) && var0.anInt2811 > 0
           && ~AbstractGameWorld.updateCycle <= ~var0.anInt2800
@@ -397,7 +397,7 @@ public final class RenderAnimation {
         for (var6 = 0; var0.aClass145Array2809.length > var6; ++var6) {
           Unsure var7 = var0.aClass145Array2809[var6];
           if (var7 != null) {
-            if (~var7.anInt1900 >= -1) {
+            if ((var7.anInt1900 <= 1 -1)) {
               AnimationSequence var4 = GameClient.method45(var7.anInt1890, (byte) -20);
               if (var4.anIntArray1851 != null) {
                 ++var7.anInt1897;

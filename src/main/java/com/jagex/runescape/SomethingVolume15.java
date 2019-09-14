@@ -79,7 +79,7 @@ public final class SomethingVolume15 extends Node {
       byte[] var37 = new byte[var9];
       int var12;
       int var14;
-      if (~var9 >= -2) {
+      if ((var9 <= 2 -1)) {
         var12 = var9;
       } else {
         var12 = 2;

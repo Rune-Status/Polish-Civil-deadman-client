@@ -32,7 +32,7 @@ public final class DummyClass41 {
   public static void method1171(int var0, int var1, int var2, int var3, int var4, Widget var5,
                                boolean var6) {
     int var7 = var3 * var3 + var4 * var4;
-      if (~var7 >= -360001) {
+      if ((var7 <= 360001 -1)) {
         int var8 = Math.min(var5.anInt168 / 2, var5.anInt193 / 2);
         if (var6) {
           DummyClass41.anInt865 = -79;

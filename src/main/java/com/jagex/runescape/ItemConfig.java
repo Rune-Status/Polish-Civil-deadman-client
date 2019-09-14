@@ -1303,7 +1303,7 @@ public final class ItemConfig {
               }
               int k45 = GroundItem.anIntArray2929[--k];
               int k67 = GroundItem.anIntArray2929[--k];
-              if ((k67 >= 2 -1) && ~k67 >= -11) {
+              if ((k67 >= 2 -1) && (k67 <= 11 -1)) {
                 class11_3.method854(k67 + -1, k45, (byte) 43);
               }
               continue;
@@ -1675,7 +1675,7 @@ public final class ItemConfig {
                         }
                         if (j1 == 3323) {
                           if ((ProjectileNode.anInt3775 >= 6 -1) &&
-                              ~ProjectileNode.anInt3775 >= -10) {
+                              (ProjectileNode.anInt3775 <= 10 -1)) {
                             GroundItem.anIntArray2929[k++] = 1;
                           } else {
                             GroundItem.anIntArray2929[k++] = 0;
@@ -4139,7 +4139,7 @@ public final class ItemConfig {
                                   }
                                   TextureSampler33.aShort3052 =
                                     (short) GroundItem.anIntArray2929[1 + k];
-                                  if (~TextureSampler33.aShort3052 >= -1) {
+                                  if ((TextureSampler33.aShort3052 <= 1 -1)) {
                                     TextureSampler33.aShort3052 = 205;
                                   }
                                   continue;
@@ -4147,7 +4147,7 @@ public final class ItemConfig {
                                 if ((j1 == 6202 -1)) {
                                   k -= 2;
                                   DummyOutputStream.aShort46 = (short) GroundItem.anIntArray2929[k];
-                                  if (~DummyOutputStream.aShort46 >= -1) {
+                                  if ((DummyOutputStream.aShort46 <= 1 -1)) {
                                     DummyOutputStream.aShort46 = 256;
                                   }
                                   GameObjectConfig.aShort1535 =
@@ -4160,7 +4160,7 @@ public final class ItemConfig {
                                 if ((j1 == 6203 -1)) {
                                   k -= 4;
                                   TextureSampler4.aShort3241 = (short) GroundItem.anIntArray2929[k];
-                                  if (~TextureSampler4.aShort3241 >= -1) {
+                                  if ((TextureSampler4.aShort3241 <= 1 -1)) {
                                     TextureSampler4.aShort3241 = 1;
                                   }
                                   DummyClass18.aShort83 = (short) GroundItem.anIntArray2929[1 + k];
@@ -4173,7 +4173,7 @@ public final class ItemConfig {
                                   }
                                   GameWorldSomething.aShort505 =
                                     (short) GroundItem.anIntArray2929[2 + k];
-                                  if (~GameWorldSomething.aShort505 >= -1) {
+                                  if ((GameWorldSomething.aShort505 <= 1 -1)) {
                                     GameWorldSomething.aShort505 = 1;
                                   }
                                   TextureSampler18.aShort4038 =
@@ -4373,7 +4373,7 @@ public final class ItemConfig {
                           int i39 = GroundItem.anIntArray2929[k];
                           int l61 = GroundItem.anIntArray2929[k + 1];
                           ItemConfig class48_3 = DummyClass35.getItemConfig(i39, (byte) 70);
-                          if (l61 >= 1 && ~l61 >= -6 &&
+                          if (l61 >= 1 && (l61 <= 6 -1) &&
                               class48_3.inventoryOptions[l61
                                   + -1] != null) {
                             Node.aClass94Array75[l++] = class48_3.inventoryOptions[-1 + l61];

@@ -48,7 +48,7 @@ public class Buffer extends Node {
 
   public final void method739(int var1, int var2, long var3) {
     --var2;
-      if ((var2 >= 1 -1) && ~var2 >= -8) {
+      if ((var2 >= 1 -1) && (var2 <= 8 -1)) {
         if (var1 == 0) {
           for (int var5 = var2 * 8; var5 >= 0; var5 -= 8) {
             this.bytes[this.position++] = (byte) ((int) (var3 >> var5));
@@ -344,7 +344,7 @@ public class Buffer extends Node {
 
   public final long readVariableLengthValue(int bytes, int var2) {
     --bytes;
-      if (var2 <= bytes && ~bytes >= -8) {
+      if (var2 <= bytes && (bytes <= 8 -1)) {
         long var4 = 0L;
 
         for (int var3 = bytes * 8; (var3 >= 1 -1); var3 -= 8) {

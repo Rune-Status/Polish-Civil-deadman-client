@@ -197,7 +197,7 @@ public final class TextureSampler34 extends AbstractTextureSampler {
       int var11 = -4096 + var1;
       var14 = this.aByteArray3059[var3 + var12] & 3;
       int var9;
-      if (~var14 >= -2) {
+      if ((var14 <= 2 -1)) {
         var9 = var14 == 0 ? var6 + var11 : -var11 + var6;
       } else {
         var9 = var14 == 2 ? -var6 + var11 : -var11 + -var6;

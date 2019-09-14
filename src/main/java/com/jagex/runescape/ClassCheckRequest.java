@@ -350,7 +350,7 @@ public final class ClassCheckRequest extends Node {
         ClassCheckRequest.method131(14);
       }
 
-      if (~var0 >= -244) {
+      if ((var0 <= 244 -1)) {
         if ((var0 > 218 -1)) {
           var2 >>= 3;
         } else if (var0 <= 192) {

@@ -181,7 +181,7 @@ public final class DummyClass1 {
                   }
                 }
               }
-            } else if (~var1.anInt2821 >= -1) {
+            } else if ((var1.anInt2821 <= 1 -1)) {
               if (~var1.anInt2791 <= ~var1.anInt2803) {
                 var1.aBoolean2769 = false;
               }

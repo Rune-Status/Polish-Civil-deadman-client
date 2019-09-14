@@ -228,7 +228,7 @@ public final class SomethingScene {
                 (var3 <= 9 ?
                   (var3 > 6 ?
                     TextureSampler12.aClass94_3040 :
-                    (~var3 >= -4 ?
+                    ((var3 <= 4 -1) ?
                       (var3 > 0 ? GameObject.aClass94_2723 : DummyClass22.aClass94_1738) :
                       DummyOutputStream.aClass94_50)) :
                   SomethingSceneI.aClass94_431))) :

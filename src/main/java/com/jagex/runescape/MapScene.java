@@ -393,7 +393,7 @@ public final class MapScene {
         }
       }
 
-      if (~var15 >= -1) {
+      if ((var15 <= 1 -1)) {
         return var9 != 1;
       } else {
         TextureSampler7.method299(113, var15, var9);

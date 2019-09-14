@@ -73,7 +73,7 @@ public final class TextureSampler4 extends AbstractTextureSampler {
                 this.anIntArrayArray3225[var5][var6 + -1] - -var7;
           }
 
-          this.anIntArrayArray3240[var5][var6] = ~this.anInt3229 >= -1 ?
+          this.anIntArrayArray3240[var5][var6] = (this.anInt3229 <= 1 -1) ?
             4096 :
             4096 + -FloorUnderlay.method1603((byte) 33, this.anInt3229, var2);
         }

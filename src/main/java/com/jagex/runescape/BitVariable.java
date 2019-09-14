@@ -51,7 +51,7 @@ public final class BitVariable {
     } else if (var2 == 8364) {
       return 128;
     } else {
-      if (~var2 >= -1 || var2 >= 256) {
+      if ((var2 <= 1 -1) || var2 >= 256) {
         var2 = -1;
       }
 
@@ -70,7 +70,7 @@ public final class BitVariable {
   public static void parseSettings(Buffer var0, int var1) {
     if (((-var0.position + var0.bytes.length) >= 2 -1)) {
       int var2 = var0.readUnsignedByte();
-      if (var2 >= 0 && ~var2 >= -12) {
+      if (var2 >= 0 && (var2 <= 12 -1)) {
         byte var3;
         if (var2 == 11) {
           var3 = 33;

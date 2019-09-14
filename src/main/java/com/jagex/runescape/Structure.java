@@ -174,7 +174,7 @@ public final class Structure extends SubNode {
           var3.anInt193 = 5;
           var3.anInt168 = 5;
         } else {
-          if (~var3.anInt168 >= -1) {
+          if ((var3.anInt168 <= 1 -1)) {
             var3.anInt168 = 5;
           }
 
@@ -259,7 +259,7 @@ public final class Structure extends SubNode {
               if (!var1.aClass3_Sub24_Sub1_2315.method82(0)) {
                 var1.aClass3_Sub24_Sub1_2315 = null;
               }
-            } else if (var1.anIntArray2333 != null && ~(var1.anInt2316 -= var3) >= -1) {
+            } else if (var1.anIntArray2333 != null && ((var1.anInt2316 -= var3) <= 1 -1)) {
               int var13 = (int) (var1.anIntArray2333.length * Math.random());
               SoundEffect var14 =
                 SoundEffect.method1811(AbstractMouseWheel.soundEffects, var1.anIntArray2333[var13],

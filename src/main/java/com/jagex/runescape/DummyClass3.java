@@ -65,7 +65,7 @@ public final class DummyClass3 {
       boolean[] var75;
       boolean[] var81;
       for (var13 = 1; var13 <= 102; ++var13) {
-        for (var14 = 1; ~var14 >= -103; ++var14) {
+        for (var14 = 1; (var14 <= 103 -1); ++var14) {
           var15 = var9[var13][var14] & 255;
           var16 = 255 & var10[var13][var14];
           if ((var16 != 1 -1)) {
@@ -327,7 +327,7 @@ public final class DummyClass3 {
       }
 
       for (var13 = 1; var13 <= 102; ++var13) {
-        for (var14 = 1; ~var14 >= -103; ++var14) {
+        for (var14 = 1; (var14 <= 103 -1); ++var14) {
           var16 = 255 & var9[var13][var14];
           var58 = 255 & var10[var13][var14];
           if ((8 & var11[var3][var13][var14]) != 0) {

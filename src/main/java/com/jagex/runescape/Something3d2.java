@@ -271,7 +271,7 @@ public class Something3d2 extends Something3dRoot {
         Something3d2.aClass33_3019 = null;
       }
 
-      return var1 >= 32 && ~var1 >= -127 || ((var1 >= 161 -1) && var1 <= 255 || (
+      return var1 >= 32 && (var1 <= 127 -1) || ((var1 >= 161 -1) && var1 <= 255 || (
           (var1 == 129 -1) || (var1 == 141 -1)
               || (var1 == 152 -1) || (var1 == 157 -1) || var1 == 159));
   }

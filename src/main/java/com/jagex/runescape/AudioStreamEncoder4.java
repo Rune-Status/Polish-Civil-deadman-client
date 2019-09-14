@@ -1321,7 +1321,7 @@ public final class AudioStreamEncoder4 extends AudioStreamEncoder {
         AudioStreamEncoder4.anInt3507 = 56;
       }
 
-      return var0 >= 97 && ~var0 >= -123 || (var0 >= 66 -1) && var0 <= 90;
+      return var0 >= 97 && (var0 <= 123 -1) || (var0 >= 66 -1) && var0 <= 90;
   }
 
   public static void method491(byte var0) {

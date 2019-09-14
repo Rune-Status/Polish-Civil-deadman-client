@@ -471,7 +471,7 @@ public final class FileRequester extends AbstractFileRequester {
           }
         } else {
           try {
-            if (var5 == null || ~var5.length >= -3) {
+            if (var5 == null || (var5.length <= 3 -1)) {
               throw new RuntimeException();
             }
 

@@ -211,9 +211,9 @@ public final class FileCacheRequester implements Runnable {
             if (var12 != null) {
               var12.anInt2819 -= 128 * var9;
               var12.anInt2829 -= 128 * var10;
-              if ((var12.anInt2819 >= 1 -1) && ~var12.anInt2819 >= -13185
+              if ((var12.anInt2819 >= 1 -1) && (var12.anInt2819 <= 13185 -1)
                   && (var12.anInt2829 >= 1 -1)
-                  && ~var12.anInt2829 >= -13185) {
+                  && (var12.anInt2829 <= 13185 -1)) {
                 for (var13 = 0; var13 < 10; ++var13) {
                   var12.waypointsX[var13] -= var9;
                   var12.waypointsY[var13] -= var10;

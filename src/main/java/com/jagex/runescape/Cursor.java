@@ -76,7 +76,7 @@ public final class Cursor {
             return;
           }
 
-          if (~var1.anInt2811 >= -1 && (var3.anInt1850 == 1 -1)) {
+          if ((var1.anInt2811 <= 1 -1) && (var3.anInt1850 == 1 -1)) {
             ++var1.anInt2824;
             return;
           }

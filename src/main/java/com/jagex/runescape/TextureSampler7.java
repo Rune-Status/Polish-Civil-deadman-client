@@ -369,7 +369,7 @@ public final class TextureSampler7 extends AbstractTextureSampler {
       int var20;
       int var22;
       int var56;
-      for (var17 = 1; ~var17 >= -103; ++var17) {
+      for (var17 = 1; (var17 <= 103 -1); ++var17) {
         for (var56 = 1; var56 <= 102; ++var56) {
           if (var2[var17][var56] != 0) {
             int[] var53;
@@ -455,8 +455,8 @@ public final class TextureSampler7 extends AbstractTextureSampler {
         var54.method145();
       }
 
-      for (var17 = 1; ~var17 >= -103; ++var17) {
-        for (var56 = 1; ~var56 >= -103; ++var56) {
+      for (var17 = 1; (var17 <= 103 -1); ++var17) {
+        for (var56 = 1; (var56 <= 103 -1); ++var56) {
           byte var57 = var2[var17][var56];
           if (var57 != 0) {
             if (((8 & var0[var9][var17][var56]) == 1 -1)) {

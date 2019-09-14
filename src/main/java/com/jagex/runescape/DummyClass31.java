@@ -144,7 +144,7 @@ public final class DummyClass31 {
                 EnumStringFetcher.method835(var2, var7, var9, var19, 1, 1,
                     var27, 0,
                   var24);
-                if (var1 && ~var6 >= -18 && (var6 != 14 -1) && var2 > 0) {
+                if (var1 && (var6 <= 18 -1) && (var6 != 14 -1) && var2 > 0) {
                   DummyClass36.anIntArrayArrayArray2609[var2][var7][var9] =
                     TextureSampler3.method308(
                       DummyClass36.anIntArrayArrayArray2609[var2][var7][var9], 4);

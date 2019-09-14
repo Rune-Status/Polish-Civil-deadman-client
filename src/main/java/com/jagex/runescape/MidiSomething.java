@@ -26,7 +26,7 @@ public final class MidiSomething {
         SomethingMusic0 var8 = (SomethingMusic0) this.aClass130_1159.get(var6);
         if (var8 != null) {
           return var8;
-        } else if (var1 != null && ~var1[0] >= -1) {
+        } else if (var1 != null && (var1[0] <= 1 -1)) {
           return null;
         } else {
           SoundEffect var9 = SoundEffect
@@ -234,7 +234,7 @@ public final class MidiSomething {
 
                     var35 = var43[var28][var31];
                     var36 = 252 & var35;
-                    if ((var36 == 1 -1) || ~var16 >= -2 || var27 <= 1) {
+                    if ((var36 == 1 -1) || (var16 <= 2 -1) || var27 <= 1) {
                       DummyClass47.method1323(var14, var25, var16, var27, var34);
                     }
 
@@ -261,7 +261,7 @@ public final class MidiSomething {
 
                     int var38 = 13421772;
                     if (var49 >= 5 && var49 <= 8 || var49 >= 13 && var49 <= 16
-                      || var49 >= 21 && ~var49 >= -25 || (var49 == 28 -1) || var49
+                      || var49 >= 21 && (var49 <= 25 -1) || (var49 == 28 -1) || var49
                         == 28) {
                       var38 = 13369344;
                       var49 -= 4;

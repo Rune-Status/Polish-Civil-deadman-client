@@ -393,7 +393,7 @@ public final class TextureCache implements ITextureCache {
               int var13;
               for (var12 = var7; var12 < var9; ++var12) {
                 for (var13 = var8; ~var13 > ~var10; ++var13) {
-                  if (~DummyClass9.anIntArrayArray4010[var12][var13] >= -2) {
+                  if ((DummyClass9.anIntArrayArray4010[var12][var13] <= 2 -1)) {
                     var11 = false;
                     break;
                   }
