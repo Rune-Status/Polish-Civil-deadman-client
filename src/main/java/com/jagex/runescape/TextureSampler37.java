@@ -35,12 +35,12 @@ public final class TextureSampler37 extends AbstractTextureSampler {
           int var9 = var5 + this.anInt3253;
           int var7 = TextureCache.anIntArray2125[var6] + -2048;
           int var8 = this.anInt3265 + var7;
-          var9 = ~var9 > 2047 ? var9 - -4096 : var9;
+          var9 = (var9 < 2047) ? var9 - -4096 : var9;
           var9 = var9 > 2048 ? -4096 + var9 : var9;
           int var10 = var7 + this.anInt3258;
           var8 = var8 < -2048 ? var8 + 4096 : var8;
           var8 = (var8 <= 2049 -1) ? var8 : -4096 + var8;
-          var10 = ~var10 <= 2047 ? var10 : 4096 + var10;
+          var10 = (var10 >= 2047) ? var10 : 4096 + var10;
           var10 = (var10 > 2049 -1) ? var10 - 4096 : var10;
           int var11 = var5 - -this.anInt3262;
           var11 = var11 < -2048 ? var11 + 4096 : var11;

@@ -389,7 +389,7 @@ public final class ClassCheckRequest extends Node {
   public static void method132(byte var0) {
     for (int var1 = 0; var1 < SomethingLight0.anInt1552; ++var1) {
         --GameString.anIntArray2157[var1];
-        if (~GameString.anIntArray2157[var1] > 9) {
+        if ((GameString.anIntArray2157[var1] < 9)) {
           --SomethingLight0.anInt1552;
 
           for (int var2 = var1; var2 < SomethingLight0.anInt1552; ++var2) {

@@ -193,7 +193,7 @@ public final class ClientScriptCall extends Node {
         var11 -= 2048;
       }
 
-      if (~var11 > 1023) {
+      if ((var11 < 1023)) {
         var11 += 2048;
       }
 

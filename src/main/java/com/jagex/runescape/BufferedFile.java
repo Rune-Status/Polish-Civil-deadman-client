@@ -315,7 +315,7 @@ public final class BufferedFile {
             var7 = this.anInt575 + this.aLong576;
           }
 
-          if (~var12 < 0L && var7 > var12) {
+          if ((var12 > 0L) && var7 > var12) {
             int var9 = (int) (-var12 + var7);
             ArrayUtils.copy(var1, (int) (-this.aLong569 + var12 + var2),
                 this.aByteArray564,

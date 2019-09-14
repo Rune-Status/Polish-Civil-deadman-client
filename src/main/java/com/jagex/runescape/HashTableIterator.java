@@ -67,7 +67,7 @@ public final class HashTableIterator {
       int var1 = DummyClass51.viewX;
       int var4 = -GroundItem.viewHeight + (SceneSomething2.windowHeight - var2);
       int var3 = -var1 + AreaSoundEffect.windowWidth - DummyClass30.viewWidth;
-      if (~var1 < var0 || (var3 > 1 -1) || var2 > 0 || (var4 > 1 -1)) {
+      if ((var1 > var0) || (var3 > 1 -1) || var2 > 0 || (var4 > 1 -1)) {
         try {
           Component var5 = null;
           if (TextureSampler30.fullScreenFrame != null) {

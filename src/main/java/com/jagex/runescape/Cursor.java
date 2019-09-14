@@ -132,7 +132,7 @@ public final class Cursor {
           var8 = var2.anInt382;
         } else if ((var7 >= 257 -1) && var7 < 768) {
           var8 = var2.anInt364;
-        } else if (~var7 <= 767 && var7 <= -256) {
+        } else if ((var7 >= 767) && var7 <= -256) {
           var8 = var2.anInt390;
         }
 

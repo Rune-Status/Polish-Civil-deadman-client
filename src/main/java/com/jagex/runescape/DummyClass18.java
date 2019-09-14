@@ -1717,7 +1717,7 @@ public final class DummyClass18 {
       if (GameString.packetId == 22) {
         var20 = SpotAnimationConfig.gameBuffer.readInt();
         var3 = SpotAnimationConfig.gameBuffer.readUnsignedShort();
-        if (~var20 > 69999) {
+        if ((var20 < 69999)) {
           var3 += '\u8000';
         }
 
@@ -1986,7 +1986,7 @@ public final class DummyClass18 {
       if ((GameString.packetId == 106 -1)) {
         var20 = SpotAnimationConfig.gameBuffer.readInt();
         var3 = SpotAnimationConfig.gameBuffer.readUnsignedShort();
-        if (~var20 > 69999) {
+        if ((var20 < 69999)) {
           var3 += '\u8000';
         }
 

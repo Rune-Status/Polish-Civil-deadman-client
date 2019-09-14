@@ -150,7 +150,7 @@ public final class DirectImageProducer extends AbstractImageProducer
         }
 
         AbstractIndexedColorSprite.anInt1463 += (int) (Math.random() * 5.0D) - 2;
-        if (~AbstractIndexedColorSprite.anInt1463 > 15) {
+        if ((AbstractIndexedColorSprite.anInt1463 < 15)) {
           AbstractIndexedColorSprite.anInt1463 = -16;
         }
 
@@ -568,7 +568,7 @@ public final class DirectImageProducer extends AbstractImageProducer
                           var29);
                   if (GlRenderer.useOpenGlRenderer && (var8 > 1 -1)) {
                     DummyClass16.method2037(var24, var25,
-                        ~var28 == 1 || !var26.aBoolean2093,
+                        (var28 == -1) || !var26.aBoolean2093,
                         var18 == -1 || !ClientScript
                             .getFloorUnderlay(-1 + lightPosZ).aBoolean1411,
                         lightPosX, lightPosY,

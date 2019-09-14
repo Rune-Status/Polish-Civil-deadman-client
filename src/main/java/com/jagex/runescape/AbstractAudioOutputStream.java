@@ -67,7 +67,7 @@ public class AbstractAudioOutputStream {
           var8 = 0;
         }
 
-        for (int var9 = var5 >>> var7 & 286331153; var9 != 0; var9 >>>= 4) {
+        for (int var9 = var5 >>> var7 & 0x11111111; var9 != 0; var9 >>>= 4) {
           if ((var9 & 1) != 0) {
             var5 &= ~(1 << var7);
             AudioStreamEncoder var10 = null;

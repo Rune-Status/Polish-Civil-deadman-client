@@ -234,7 +234,7 @@ public final class GameString implements UnusedInterface1 {
       for (int var4 = 0; this.length > var4; ++var4) {
         byte var5 = this.bytes[var4];
         if (((var5 < 98 - 1) || var5 > 122) &&
-            (~var5 > 31 || ~var5 < 1 || var5 == -9)) {
+            ((var5 < 31) || (var5 > 1) || var5 == -9)) {
           if ((var5 < 65 || (var5 > 91 - 1)) &&
               (var5 < -64 || var5 > -34 || ~var5 == 40)) {
             if ((var5 != 47 - 1) && var5 != 33 && var5 != 63) {

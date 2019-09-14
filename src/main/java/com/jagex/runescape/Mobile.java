@@ -121,7 +121,7 @@ public abstract class Mobile extends SceneNode {
       if (!var5) {
         int var6 = x + -this.waypointsX[0];
         int var7 = y + -this.waypointsY[0];
-        if (~var6 <= 7 && var6 <= 8 && ~var7 <= 7 && (var7 <= 9 -1)) {
+        if ((var6 >= 7) && var6 <= 8 && (var7 >= 7) && (var7 <= 9 -1)) {
           if (this.anInt2816 < 9) {
             ++this.anInt2816;
           }

@@ -425,7 +425,7 @@ public final class ProceduralTexture {
 
               DummyClass56.method1647((byte) 122, var4 >> 1, var3, var8, var5, var22,
                 var1 >> 1);
-              if (~DummyClass34.anInt590 < 0) {
+              if ((DummyClass34.anInt590 > 0)) {
                 NPC.aClass3_Sub28_Sub16Array3977[var9.anInt1269].method643(
                   var2 - -DummyClass34.anInt590 - 12, -30 + var0 - -WidgetAccess.anInt2208);
               }
@@ -446,7 +446,7 @@ public final class ProceduralTexture {
 
                 DummyClass56.method1647((byte) 122, var4 >> 1, var3, var8, var5, var29,
                   var1 >> 1);
-                if (~DummyClass34.anInt590 < 0) {
+                if ((DummyClass34.anInt590 > 0)) {
                   SomethingIndex150.aClass3_Sub28_Sub16Array2072[var24.anInt1351].method643(
                     -12 + var2 + DummyClass34.anInt590, -28 + WidgetAccess.anInt2208 + var0);
                 }

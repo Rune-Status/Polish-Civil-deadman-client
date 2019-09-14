@@ -83,7 +83,7 @@ public final class SomethingAudio {
 
         for (var8 = 0; var4 > var8; ++var8) {
           int var13 = var5[var8] - -32768 >> 16;
-          if (~var13 <= 127) {
+          if ((var13 >= 127)) {
             if (var13 <= 127) {
               var1[var8] = (byte) var13;
             } else {

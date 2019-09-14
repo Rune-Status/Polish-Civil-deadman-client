@@ -284,8 +284,7 @@ public final class TextureSampler20 extends AbstractTextureSampler {
                       TextureSampler12.secureBuffer.writeShort(
                         var9 + (MonoChromaticImageBuffer.anInt2556 << 12) + (var8 << 6));
                       MonoChromaticImageBuffer.anInt2556 = 0;
-                    } else if (MonoChromaticImageBuffer.anInt2556 < 32 && ~var8
-                        <= 127
+                    } else if (MonoChromaticImageBuffer.anInt2556 < 32 && (var8 >= 127)
                       && (var8 <= 128 -1) && var9 >= -128 && var9 <= 127) {
                       TextureSampler12.secureBuffer.writeByte(
                         128 - -MonoChromaticImageBuffer.anInt2556);
@@ -916,15 +915,15 @@ public final class TextureSampler20 extends AbstractTextureSampler {
                             }
                           }
 
-                          if (~TextureSampler19.anInt3216 > 49) {
+                          if ((TextureSampler19.anInt3216 < 49)) {
                             AbstractMouseWheel.anInt1901 = 2;
                           }
 
-                          if (~TextureSampler9.anInt3102 > 59) {
+                          if ((TextureSampler9.anInt3102 < 59)) {
                             DummyOutputStream.anInt48 = 2;
                           }
 
-                          if (~Something3d2.anInt3020 > 19) {
+                          if ((Something3d2.anInt3020 < 19)) {
                             DummyCanvas.anInt25 = 1;
                           }
 

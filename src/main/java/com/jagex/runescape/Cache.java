@@ -647,11 +647,11 @@ public final class Cache {
                               && var20 == DummyClass18.anInt86) {
                               var25 = SomethingTilek.anInt1676 - MilliFrameRegulator.anInt2693;
                               var26 = -DummyInputStream.anInt40 + HashTable.anInt1709;
-                              if ((var26 < 6 -1) && ~var26 < 4) {
+                              if ((var26 < 6 -1) && (var26 > 4)) {
                                 var26 = 0;
                               }
 
-                              if (var25 < 5 && ~var25 < 4) {
+                              if (var25 < 5 && (var25 > 4)) {
                                 var25 = 0;
                               }
 

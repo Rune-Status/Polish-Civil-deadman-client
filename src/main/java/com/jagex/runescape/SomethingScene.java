@@ -218,9 +218,9 @@ public final class SomethingScene {
 
   public static GameString method1295(int var0, byte var1, int var2) {
     int var3 = -var0 + var2;
-      return ~var3 <= 8 ?
-        (~var3 <= 5 ?
-          (~var3 <= 2 ?
+      return (var3 >= 8) ?
+        ((var3 >= 5) ?
+          ((var3 >= 2) ?
             (var3 < 0 ?
               TextureSampler29.aClass94_3394 :
               (var1 > -52 ?
