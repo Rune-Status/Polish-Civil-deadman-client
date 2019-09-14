@@ -82,7 +82,7 @@ public final class TextureSampler38 extends AbstractTextureSampler {
 
             int var20 = -var18 / 2;
             int var22 = -(FloorUnderlay.method1603((byte) -18, 4096, var7) >> 2) + 1024;
-            int var23 = ~var13 >= ~var11 ? -1 : 1;
+            int var23 = (var13 <= var11) ? -1 : 1;
             int var21 = 2048 / var18;
 
             for (int var24 = var10; var12 > var24; ++var24) {

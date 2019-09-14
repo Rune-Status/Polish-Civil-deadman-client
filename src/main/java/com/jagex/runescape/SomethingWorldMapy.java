@@ -41,7 +41,7 @@ public final class SomethingWorldMapy extends SubNode {
   }
 
   public boolean method537(int var1, byte var2, int var3 ) {
-    if (~this.anInt3555 >= ~var3 && var3 <= this.anInt3559
+    if ((this.anInt3555 <= var3) && var3 <= this.anInt3559
           && var1 >= this.anInt3562
         && var1 <= this.anInt3549) {
         for (SomethingWorldMappy var4 = (SomethingWorldMappy) this.aClass61_3560

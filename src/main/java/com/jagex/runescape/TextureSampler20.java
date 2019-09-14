@@ -986,7 +986,7 @@ public final class TextureSampler20 extends AbstractTextureSampler {
                         if ((var25.anInt191 >= 1 -1)) {
                           var23 = EnumStringFetcher.getWidget((byte) 118, var25.anInt190);
                           if (var23 == null || var23.aClass11Array262 == null
-                            || ~var25.anInt191 <= ~var23.aClass11Array262.length
+                            || (var25.anInt191 >= var23.aClass11Array262.length)
                             || var25 != var23.aClass11Array262[var25.anInt191]) {
                             continue;
                           }

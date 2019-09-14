@@ -228,7 +228,7 @@ public final class Structure extends SubNode {
             var6 += -var1.anInt2307 + var4;
           }
 
-          if (var1.anInt2328 != 0 && ~var1.anInt2328 <= ~(var6 - 64) &&
+          if (var1.anInt2328 != 0 && (var1.anInt2328 >= (var6 - 64)) &&
               DummyClass28.anInt340 != 0
             && var2 == var1.anInt2314) {
             var6 -= 64;

@@ -841,7 +841,7 @@ public final class NpcConfiguration {
                             var5 = var3.readUnsignedByte();
                             this.anIntArray1292 = new int[2 + var5];
 
-                            for (var6 = 0; ~var5 <= ~var6; ++var6) {
+                            for (var6 = 0; (var5 >= var6); ++var6) {
                               this.anIntArray1292[var6] = var3
                                   .readUnsignedShort();
                               if ((this.anIntArray1292[var6] == 65536 -1)) {
@@ -930,7 +930,7 @@ public final class NpcConfiguration {
             return;
           }
 
-          if (~var4 <= ~var3.length) {
+          if ((var4 >= var3.length)) {
             short[] var7 = new short[2 * var3.length];
 
             for (int var8 = 0; var8 < var4; ++var8) {

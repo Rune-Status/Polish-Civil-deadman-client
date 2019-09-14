@@ -128,7 +128,7 @@ public final class Projectile extends SceneNode {
             > this.aClass142_2923.anIntArray1869[this.anInt2922]) {
           this.anInt2896 -= this.aClass142_2923.anIntArray1869[this.anInt2922];
           ++this.anInt2922;
-          if (~this.anInt2922 <= ~this.aClass142_2923.anIntArray1851.length) {
+          if ((this.anInt2922 >= this.aClass142_2923.anIntArray1851.length)) {
             this.anInt2922 -= this.aClass142_2923.anInt1865;
             if (this.anInt2922 < 0 || this.aClass142_2923.anIntArray1851.length <= this.anInt2922) {
               this.anInt2922 = 0;
@@ -139,7 +139,7 @@ public final class Projectile extends SceneNode {
           if (this.aClass142_2923.anIntArray1851.length <= this.anInt2898) {
             this.anInt2898 -= this.aClass142_2923.anInt1865;
             if ((this.anInt2898 < 1 -1)
-              || ~this.anInt2898 <= ~this.aClass142_2923.anIntArray1851.length) {
+              || (this.anInt2898 >= this.aClass142_2923.anIntArray1851.length)) {
               this.anInt2898 = -1;
             }
           }

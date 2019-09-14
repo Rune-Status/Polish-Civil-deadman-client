@@ -90,7 +90,7 @@ public final class ClassCheckRequest extends Node {
               var13 = var11 * var10 - -(var12 * var9) >> 16;
               var16 = var15.method680(TextureSampler22.aClass131_3421.aClass94Array1721[var8], 100);
               var13 -= var16 / 2;
-              if (~var13 <= ~(-var4.anInt168) && var13 <= var4.anInt168 && var14 >= -var4.anInt193
+              if ((var13 >= (-var4.anInt168)) && var13 <= var4.anInt168 && var14 >= -var4.anInt193
                 && var14 <= var4.anInt193) {
                 var17 = 16777215;
                 if (~TextureSampler22.aClass131_3421.anIntArray1725[var8] != 0) {
@@ -291,7 +291,7 @@ public final class ClassCheckRequest extends Node {
 
   public static void method126(boolean var0, int var1, int var2, int var3, int var4) {
     if (!var0) {
-        if (~var4 <= ~DummyClass55.anInt1425 && var4 <= GlTexture2d.anInt3765) {
+        if ((var4 >= DummyClass55.anInt1425) && var4 <= GlTexture2d.anInt3765) {
           var2 = DummyClass59.method1040(LightIntensity.anInt902, var2, (byte) 0,
             DummyClass13.anInt2020);
           var1 = DummyClass59.method1040(LightIntensity.anInt902, var1, (byte) 0,
@@ -368,8 +368,8 @@ public final class ClassCheckRequest extends Node {
   }
 
   public static GameWorld method130(int var0, int var1) {
-    if (BufferedFile.aBoolean579 && ~var1 <= ~TextureSampler34.anInt3054
-        && ~var1 >= ~FloorUnderlay.anInt1416) {
+    if (BufferedFile.aBoolean579 && (var1 >= TextureSampler34.anInt3054)
+        && (var1 <= FloorUnderlay.anInt1416)) {
         int var2 = 120 / ((0 - var0) / 32);
         return DummyClass26.aClass44_Sub1Array1609[var1 - TextureSampler34.anInt3054];
       } else {

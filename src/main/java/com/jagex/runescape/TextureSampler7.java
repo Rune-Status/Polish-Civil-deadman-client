@@ -269,7 +269,7 @@ public final class TextureSampler7 extends AbstractTextureSampler {
                 var5 = var16[var21];
                 var7 = var18[var21];
                 var4 = var15[var21];
-                var12[var21] = ~var4 <= ~var7 ? var7 : var4;
+                var12[var21] = (var4 >= var7) ? var7 : var4;
                 var13[var21] = var5 >= var8 ? var8 : var5;
                 var14[var21] = var6 < var9 ? var6 : var9;
               }
@@ -535,7 +535,7 @@ public final class TextureSampler7 extends AbstractTextureSampler {
                 var30 = -var30;
               }
 
-              var61 = (byte) (~var66 >= ~var30 ? 0 : 1);
+              var61 = (byte) ((var66 <= var30) ? 0 : 1);
               var7[var17][var56] = var61;
             } else {
               var58 = SceneSomething.anIntArrayArray499[var1[var17][var56]];
@@ -570,7 +570,7 @@ public final class TextureSampler7 extends AbstractTextureSampler {
               TextureSampler34.method190(var46, var38, (byte) -92, var42), var50, var58, var56,
               var20, var17, var64 <= var63, var8, var69 >= var64, 2, var4, var22,
               TextureSampler34.method190(var46, var41, (byte) -80, var45),
-              TextureSampler34.method190(var46, var40, (byte) -103, var44), ~var64 >= ~var62, var12,
+              TextureSampler34.method190(var46, var40, (byte) -103, var44), (var64 <= var62), var12,
               var10, var61, TextureSampler34.method190(var46, var39, (byte) -118, var43), var60);
             int var49 = (var69 >> 16) - 1;
             if (var32 != var67) {
@@ -585,22 +585,22 @@ public final class TextureSampler7 extends AbstractTextureSampler {
 
             if (var70 != var67 && (var70 != var32)) {
               var50 = (SomethingGl0) var52.get(var70);
-              SceneSomething.method955(var13, ~var64 <= ~var63,
+              SceneSomething.method955(var13, (var64 >= var63),
                 TextureSampler34.method190(var48, var38, (byte) 59, var42), var50, var58, var56,
                 var20, var17, true, var8, var63 <= var69, var14 ^ 4098, var4, var22,
                 TextureSampler34.method190(var48, var41, (byte) 54, var45),
-                TextureSampler34.method190(var48, var40, (byte) -87, var44), ~var62 <= ~var63,
+                TextureSampler34.method190(var48, var40, (byte) -87, var44), (var62 >= var63),
                 var12, var10, var61, TextureSampler34.method190(var48, var39, (byte) -77, var43),
                 var60);
             }
 
             if ((var36 != var67) && (var36 != var32) && var36 != var70) {
               var50 = (SomethingGl0) var52.get(var36);
-              SceneSomething.method955(var13, ~var69 >= ~var64,
+              SceneSomething.method955(var13, (var69 <= var64),
                 TextureSampler34.method190(var49, var38, (byte) -118, var42), var50, var58, var56,
                 var20, var17, var69 <= var63, var8, true, var14 ^ 4098, var4, var22,
                 TextureSampler34.method190(var49, var41, (byte) -96, var45),
-                TextureSampler34.method190(var49, var40, (byte) 115, var44), ~var62 <= ~var69,
+                TextureSampler34.method190(var49, var40, (byte) 115, var44), (var62 >= var69),
                 var12, var10, var61, TextureSampler34.method190(var49, var39, (byte) 58, var43),
                 var60);
             }

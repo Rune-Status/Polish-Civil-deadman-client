@@ -380,7 +380,7 @@ public abstract class Mobile extends SceneNode {
           }
         } else {
           if (this.anInt2754 > 0) {
-            if (~this.anInt2787 <= ~this.anInt2804) {
+            if ((this.anInt2787 >= this.anInt2804)) {
               this.aBoolean2807 = false;
             }
 
@@ -393,7 +393,7 @@ public abstract class Mobile extends SceneNode {
               this.anInt2754 += var3.anInt387;
             }
           } else {
-            if (~this.anInt2804 <= ~this.anInt2787) {
+            if ((this.anInt2804 >= this.anInt2787)) {
               this.aBoolean2807 = false;
             }
 
@@ -478,7 +478,7 @@ public abstract class Mobile extends SceneNode {
           }
         } else {
           if ((this.anInt2830 > 1 -1)) {
-            if (~this.anInt2834 <= ~this.anInt2757) {
+            if ((this.anInt2834 >= this.anInt2757)) {
               this.aBoolean2783 = false;
             }
 

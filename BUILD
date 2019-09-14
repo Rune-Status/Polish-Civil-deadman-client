@@ -1,8 +1,6 @@
 java_binary(
-    name = "client",
-    srcs = glob([
-        "src/main/java/**/*.java",
-    ]),
+    name = "client_launcher",
+    srcs = ["src/main/java/com/jagex/runescape/GameClient.java"],
     args = [
         "3594",
         "live",
@@ -12,7 +10,15 @@ java_binary(
     ],
     jvm_flags = ["-Djogamp.debug"],
     main_class = "com.jagex.runescape.GameClient",
-    deps = [":client_lib"],
+    deps = [":client"],
+)
+
+java_library(
+    name = "client",
+    srcs = glob([
+        "src/main/java/**/*.java",
+    ]),
+    deps = ["client_lib"],
 )
 
 java_import(

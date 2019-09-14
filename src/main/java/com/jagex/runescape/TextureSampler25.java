@@ -96,7 +96,7 @@ public final class TextureSampler25 extends AbstractTextureSampler {
                 var12 = -var12;
               }
 
-              if (~var12 >= ~this.anInt3404) {
+              if ((var12 <= this.anInt3404)) {
                 var8[var11] = this.anInt3410 * var13 >> 12;
                 var9[var11] = this.anInt3406 * var14 >> 12;
                 var10[var11] = this.anInt3405 * var15 >> 12;
@@ -141,7 +141,7 @@ public final class TextureSampler25 extends AbstractTextureSampler {
 
           for (int var12 = 0; var12 < 64; ++var12) {
             for (int var13 = 0; (var13 < 65 -1); ++var13) {
-              if (!var3 || ~(var4 * 8) >= ~var12 && 8 + 8 * var4 > var12 && var13 >= var5 * 8
+              if (!var3 || ((var4 * 8) <= var12) && 8 + 8 * var4 > var12 && var13 >= var5 * 8
                 && 8 + var5 * 8 > var13) {
                 var2 = var1.readByte();
                 if (var2 != 0) {
@@ -239,7 +239,7 @@ public final class TextureSampler25 extends AbstractTextureSampler {
           }
         }
 
-        boolean var49 = ~var9 >= ~var12;
+        boolean var49 = (var9 <= var12);
         if (var24 < 0) {
           var24 += var36;
           var23 += var31;
@@ -298,14 +298,14 @@ public final class TextureSampler25 extends AbstractTextureSampler {
               TextureSampler18.method282(var47, var45, -102, var43, var2);
             }
 
-            if (~var42 >= ~LightIntensity.anInt902) {
+            if ((var42 <= LightIntensity.anInt902)) {
               var47 = DummyClass35.anIntArrayArray663[var42];
               TextureSampler18.method282(var47, var44, 87, var46, var2);
               TextureSampler18.method282(var47, var46, -92, var45, var1);
               TextureSampler18.method282(var47, var45, 124, var43, var2);
             }
           } else {
-            if (~DummyClass13.anInt2020 >= ~var41) {
+            if ((DummyClass13.anInt2020 <= var41)) {
               TextureSampler18.method282(DummyClass35.anIntArrayArray663[var41], var44, -122, var43,
                 var2);
             }
@@ -351,7 +351,7 @@ public final class TextureSampler25 extends AbstractTextureSampler {
 
         int var9;
         int var11;
-        if (~var5 <= ~DummyClass55.anInt1425) {
+        if ((var5 >= DummyClass55.anInt1425)) {
           if (GlTexture2d.anInt3765 < var5) {
             var9 = GlTexture2d.anInt3765;
             var11 = var13 - -(var12 * GlTexture2d.anInt3765 >> 12);
@@ -364,7 +364,7 @@ public final class TextureSampler25 extends AbstractTextureSampler {
           var11 = var13 + (var12 * DummyClass55.anInt1425 >> 12);
         }
 
-        if (~DummyClass13.anInt2020 >= ~var11) {
+        if ((DummyClass13.anInt2020 <= var11)) {
           if (var11 > LightIntensity.anInt902) {
             var11 = LightIntensity.anInt902;
             var9 = (LightIntensity.anInt902 - var13 << 12) / var12;

@@ -173,7 +173,7 @@ public final class DummyClass37 {
         }
 
         for (regionX = (var5 - 6) / 8; (6 + var5) / 8 >= regionX; ++regionX) {
-          for (regionY = (-6 + var6) / 8; ~((6 + var6) / 8) <= ~regionY;
+          for (regionY = (-6 + var6) / 8; (((6 + var6) / 8) >= regionY);
               ++regionY) {
             regionHash = (regionX << 8) + regionY;
             if (var8 && (regionY == 49 || regionY == 149 || regionY == 147
@@ -599,10 +599,9 @@ public final class DummyClass37 {
                 var7 = 7 & var5;
                 if ((var2 >= 1 -1) && (var3 >= 1 -1) && var2 < 104 && var3 < 104) {
                   var28 = 1 + var6;
-                  if (~TextureCache.localPlayer.waypointsX[0] <= ~(var2
-                      + -var28)
-                      && ~(var28 + var2)
-                      <= ~TextureCache.localPlayer.waypointsX[0]
+                  if ((TextureCache.localPlayer.waypointsX[0] >= (var2
+                      + -var28))
+                      && ((var28 + var2) >= TextureCache.localPlayer.waypointsX[0])
                       && TextureCache.localPlayer.waypointsY[0] >= -var28 + var3
                       && TextureCache.localPlayer.waypointsY[0] <= var28 + var3
                       && DummyClass28.anInt340 != 0 && var7 > 0

@@ -248,7 +248,7 @@ public final class TextureSampler13 extends AbstractTextureSampler {
             int var19 = var11.readUnsignedByte();
             int var20 = var19 >> 2;
             int var21 = 3 & var19;
-            if ((var3 == var18) && ~var17 <= ~var8 && var17 < 8 + var8 && var9 <= var16
+            if ((var3 == var18) && (var17 >= var8) && var17 < 8 + var8 && var9 <= var16
               && 8 + var9 > var16) {
               GameObjectConfig var22 = DummyClass11.method2207(4, var12);
               int var23 =

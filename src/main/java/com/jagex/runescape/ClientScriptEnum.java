@@ -162,7 +162,7 @@ public final class ClientScriptEnum extends SubNode {
       int var3 = var2.readUnsignedByte();
       int var4 = var2.readInt();
       if (var4 >= 0 && ((AbstractSomethingTexture.anInt1108 == 1 -1)
-        || ~AbstractSomethingTexture.anInt1108 <= ~var4)) {
+        || (AbstractSomethingTexture.anInt1108 >= var4))) {
         if ((var3 == 1 -1)) {
           byte[] var8 = new byte[var4];
           var2.copy(0, var4, var8);
@@ -170,7 +170,7 @@ public final class ClientScriptEnum extends SubNode {
         } else {
           int var5 = var2.readInt();
           if (var5 >= 0 && (AbstractSomethingTexture.anInt1108 == 0
-            || ~AbstractSomethingTexture.anInt1108 <= ~var5)) {
+            || (AbstractSomethingTexture.anInt1108 >= var5))) {
             byte[] var6 = new byte[var5];
             if (var3 == 1) {
               BZipDecompressor.method1640(var6, var5, var1, 9);

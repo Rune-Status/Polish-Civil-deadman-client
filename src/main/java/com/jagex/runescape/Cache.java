@@ -306,7 +306,7 @@ public final class Cache {
               }
 
               var19 = height <= var21 ? height : var21;
-              var18 = ~var20 <= ~width ? width : var20;
+              var18 = (var20 >= width) ? width : var20;
             }
 
             if (!var11.aBoolean233 || var18 > var16 && (var17 < var19)) {
@@ -349,8 +349,8 @@ public final class Cache {
                   if (DummyClass12.minimapMode != 0 && DummyClass12.minimapMode
                       != 3
                     || DummyClass36.aBoolean2615 || var16 > NpcConfiguration.anInt1297
-                    || (DummyClass36.anInt2612 < var17) || ~NpcConfiguration.anInt1297 <= ~var18
-                    || ~var19 >= ~DummyClass36.anInt2612) {
+                    || (DummyClass36.anInt2612 < var17) || (NpcConfiguration.anInt1297 >= var18)
+                    || (var19 <= DummyClass36.anInt2612)) {
                     continue;
                   }
 
@@ -517,7 +517,7 @@ public final class Cache {
 
               if (!DummyClass36.aBoolean2615) {
                 if ((var11.anInt187 == 1 -1) && var11.aBoolean219
-                  && NpcConfiguration.anInt1297 >= var16 && ~DummyClass36.anInt2612 <= ~var17
+                  && NpcConfiguration.anInt1297 >= var16 && (DummyClass36.anInt2612 >= var17)
                   && NpcConfiguration.anInt1297 < var18 && var19 > DummyClass36.anInt2612
                   && !LinearHashTable.aBoolean1040) {
                   TextureSampler25.amountContextActions = 1;
@@ -527,7 +527,7 @@ public final class Cache {
                   TextureSampler27.aShortArray3095[0] = 1005;
                 }
 
-                if (var16 <= NpcConfiguration.anInt1297 && ~var17 >= ~DummyClass36.anInt2612
+                if (var16 <= NpcConfiguration.anInt1297 && (var17 <= DummyClass36.anInt2612)
                   && var18 > NpcConfiguration.anInt1297 && var19 > DummyClass36.anInt2612) {
                   AudioStreamEncoder4.method477(DummyClass36.anInt2612 + -var14, true,
                     -var13 + NpcConfiguration.anInt1297, var11);
@@ -562,7 +562,7 @@ public final class Cache {
                       var11.anInt279);
                 if (var36 != null) {
                   if (var36.anInt2603 == 0 && !DummyClass36.aBoolean2615
-                    && NpcConfiguration.anInt1297 >= var16 && ~var17 >= ~DummyClass36.anInt2612
+                    && NpcConfiguration.anInt1297 >= var16 && (var17 <= DummyClass36.anInt2612)
                     && var18 > NpcConfiguration.anInt1297 && DummyClass36.anInt2612 < var19
                     && !LinearHashTable.aBoolean1040) {
                     GroundItem.aClass94Array2935[0] = DummyClass12.aClass94_2031;
@@ -1327,7 +1327,7 @@ public final class Cache {
         var5 = '\u8000';
       }
 
-      if (~SomethingTexture4.anInt2670 <= ~var5) {
+      if ((SomethingTexture4.anInt2670 >= var5)) {
         if ((var5 < SomethingTexture4.anInt2670)) {
           SomethingTexture4.anInt2670 += (var5 - SomethingTexture4.anInt2670) / 80;
         }

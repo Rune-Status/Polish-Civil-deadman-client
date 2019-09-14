@@ -137,7 +137,7 @@ public final class DummyOutputStream extends OutputStream {
   }
 
   public static void method68(int var0, int var1, Mobile var2) {
-    if (~AbstractGameWorld.updateCycle <= ~var2.anInt2800) {
+    if ((AbstractGameWorld.updateCycle >= var2.anInt2800)) {
         if (var2.anInt2790 >= AbstractGameWorld.updateCycle) {
           FloorOverlay.method2270(var2, (byte) -56);
         } else {

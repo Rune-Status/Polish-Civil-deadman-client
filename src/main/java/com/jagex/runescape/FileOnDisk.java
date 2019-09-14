@@ -18,7 +18,7 @@ public final class FileOnDisk {
       var3 = Long.MAX_VALUE;
     }
 
-    if (~var3 >= ~var1.length()) {
+    if ((var3 <= var1.length())) {
       var1.delete();
     }
 

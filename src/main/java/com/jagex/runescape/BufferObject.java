@@ -29,7 +29,7 @@ public abstract class BufferObject {
             var1 != null; var1 = (StillGraphicNode) TextureSampler17.stillGraphics.getNext()) {
           StillGraphic var2 = var1.aClass140_Sub2_3545;
           if ((var2.anInt2717 == GameWorldSomething.currentPlane) && !var2.aBoolean2718) {
-            if (~var2.anInt2703 >= ~AbstractGameWorld.updateCycle) {
+            if ((var2.anInt2703 <= AbstractGameWorld.updateCycle)) {
               var2.method1955(true, DisplayMode.loopCycle);
               if (var2.aBoolean2718) {
                 var1.unlinkNode();

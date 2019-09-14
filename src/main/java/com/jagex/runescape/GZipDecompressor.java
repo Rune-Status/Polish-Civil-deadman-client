@@ -357,7 +357,7 @@ public final class GZipDecompressor {
         var11 = -var5 + var1;
         var12 = var5 + var1;
         if (var12 >= DummyClass13.anInt2020
-            && ~LightIntensity.anInt902 <= ~var11) {
+            && (LightIntensity.anInt902 >= var11)) {
           var13 = DummyClass59
               .method1040(GlTexture2d.anInt3765, var4 - -var6, (byte) 0,
                   DummyClass55.anInt1425);

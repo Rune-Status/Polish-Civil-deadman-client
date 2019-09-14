@@ -155,7 +155,7 @@ public final class OndemandRequester {
               }
 
               this.aClass3_Sub30_1008.position += var6;
-              if (~this.aClass3_Sub30_1008.position <= ~read) {
+              if ((this.aClass3_Sub30_1008.position >= read)) {
                 if (this.currentRequest != null) {
                   if (this.currentRequest.anInt4067 != 0) {
                     throw new IOException();

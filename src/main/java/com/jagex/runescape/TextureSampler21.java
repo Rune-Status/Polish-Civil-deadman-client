@@ -96,7 +96,7 @@ public final class TextureSampler21 extends AbstractTextureSampler {
 
   public static void method194(int var0, int var1, int var2, int var3, int var4, int var5, int var6,
                               int var7) {
-    if (~DummyClass55.anInt1425 >= ~var7 && GlTexture2d.anInt3765 >= var6
+    if ((DummyClass55.anInt1425 <= var7) && GlTexture2d.anInt3765 >= var6
         && var4 >= DummyClass13.anInt2020 && var1 <= LightIntensity.anInt902) {
         TextureSampler4.method262(var3, 119, var4, var1, var2, var0, var6, var7);
       } else {

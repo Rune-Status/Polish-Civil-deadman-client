@@ -218,7 +218,7 @@ public final class TextureSampler36 extends AbstractTextureSampler {
           DummyClass40.method1134();
         }
 
-        if (!DummyClass36.aBoolean2615 && ~NpcConfiguration.anInt1297 <= ~var3
+        if (!DummyClass36.aBoolean2615 && (NpcConfiguration.anInt1297 >= var3)
           && (NpcConfiguration.anInt1297 < (var4 + var3)) && var5 <= DummyClass36.anInt2612
           && (var1 + var5) > DummyClass36.anInt2612) {
           TextureSampler27.aBoolean3094 = true;
@@ -310,7 +310,7 @@ public final class TextureSampler36 extends AbstractTextureSampler {
 
         if (!var2 && !TextureSampler34.aBoolean3064 && !DummyClass36.aBoolean2615
           && var3 <= NpcConfiguration.anInt1297 && var4 + var3 > NpcConfiguration.anInt1297
-          && ~var5 >= ~DummyClass36.anInt2612 && var1 + var5 > DummyClass36.anInt2612) {
+          && (var5 <= DummyClass36.anInt2612) && var1 + var5 > DummyClass36.anInt2612) {
           MaterialShader5.method1628(var5, var4, var1, var3, DummyClass36.anInt2612,
             NpcConfiguration.anInt1297, (byte) 97);
         }

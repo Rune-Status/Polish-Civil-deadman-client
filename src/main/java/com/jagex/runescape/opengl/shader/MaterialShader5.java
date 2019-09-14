@@ -421,7 +421,7 @@ public final class MaterialShader5 implements MaterialShader {
                   var36 = TextureSampler5.npcs[AudioWorker.anIntArray347[var37]];
                   var21 = -(var36.config.size * 64) - -64 + var36.anInt2819;
                   var22 = var36.anInt2829 + -(var36.config.size * 64) - -64;
-                  if (var31 != var36 && ~var21 <= ~var33
+                  if (var31 != var36 && (var21 >= var33)
                       && var31.config.size - (-var33 + var21 >> 7)
                       >= var36.config.size && var18 <= var22
                       && var36.config.size
@@ -435,9 +435,9 @@ public final class MaterialShader5 implements MaterialShader {
                   var38 = TextureSampler0.players[DummyClass42.anIntArray887[var37]];
                   var21 = var38.anInt2819 + 64 + -(64 * var38.getSize());
                   var22 = var38.anInt2829 - (var38.getSize() * 64 + -64);
-                  if (var21 >= var33 && ~var38.getSize() >= ~(var31.config.size
+                  if (var21 >= var33 && (var38.getSize() <= (var31.config.size
                       - (
-                      var21 - var33 >> 7)) && ~var22 <= ~var18
+                      var21 - var33 >> 7))) && (var22 >= var18)
                       && var38.getSize()
                       <= -(-var18 + var22 >> 7) + var31.config.size) {
                     TextureSampler13
@@ -463,8 +463,8 @@ public final class MaterialShader5 implements MaterialShader {
                   var22 = var36.anInt2829 - 64 * var36.config.size - -64;
                   if (var21 >= var33
                       && var36.config.size <= -(var21 - var33 >> 7) + var30
-                      .getSize() && ~var22 <= ~var18 && ~var36.config.size >= ~(
-                      -(-var18 + var22 >> 7) + var30.getSize())) {
+                      .getSize() && (var22 >= var18) && (var36.config.size <= (
+                      -(-var18 + var22 >> 7) + var30.getSize()))) {
                     BufferObject.method2068(var36.config, var12, -121,
                       AudioWorker.anIntArray347[var37], var27);
                   }
@@ -474,10 +474,10 @@ public final class MaterialShader5 implements MaterialShader {
                   var38 = TextureSampler0.players[DummyClass42.anIntArray887[var37]];
                   var21 = var38.anInt2819 - (var38.getSize() + -1) * 64;
                   var22 = var38.anInt2829 - (-64 + 64 * var38.getSize());
-                  if (var38 != var30 && ~var33 >= ~var21
+                  if (var38 != var30 && (var33 <= var21)
                       && var38.getSize() <= var30.getSize() - (var21 - var33
-                      >> 7) && ~var22 <= ~var18 && ~var38.getSize() >= ~(
-                      -(var22 + -var18 >> 7) + var30.getSize())) {
+                      >> 7) && (var22 >= var18) && (var38.getSize() <= (
+                      -(var22 + -var18 >> 7) + var30.getSize()))) {
                     TextureSampler13.method312(DummyClass42.anIntArray887[var37], 9, var27, var38,
                       var12);
                   }
@@ -637,7 +637,7 @@ public final class MaterialShader5 implements MaterialShader {
         MaterialShader5.method1630((byte) -33);
       }
 
-      for (int var6 = var3; ~var1 <= ~var6; ++var6) {
+      for (int var6 = var3; (var1 >= var6); ++var6) {
         TextureSampler18
             .method282(DummyClass35.anIntArrayArray663[var6], var4, 121, var2, var5);
       }

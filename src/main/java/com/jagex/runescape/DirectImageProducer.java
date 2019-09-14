@@ -428,10 +428,10 @@ public final class DirectImageProducer extends AbstractImageProducer
                   if (GlRenderer.useOpenGlRenderer && !var1
                       && TextureSampler16.anIntArrayArray3115 != null
                       && var8 == 0) {
-                    for (var24 = lightPosX + -1; ~var24 >= ~(lightPosX - -1);
+                    for (var24 = lightPosX + -1; (var24 <= (lightPosX - -1));
                         ++var24) {
                       for (int var52 = -1 + lightPosY;
-                          ~(1 + lightPosY) <= ~var52; ++var52) {
+                          ((1 + lightPosY) >= var52); ++var52) {
                         if ((var24 != lightPosX || lightPosY != var52)
                             && var24 >= 0 && var24 < 104
                             && var52 >= 0 && (var52 < 105 -1)) {
@@ -472,9 +472,9 @@ public final class DirectImageProducer extends AbstractImageProducer
                           (var26.anInt2101 << 24) + var26.anInt2094;
                     } else {
                       label722:
-                      for (var27 = lightPosX + -1; ~var27 >= ~(1 + lightPosX);
+                      for (var27 = lightPosX + -1; (var27 <= (1 + lightPosX));
                           ++var27) {
-                        for (var28 = lightPosY + -1; ~var28 >= ~(1 + lightPosY);
+                        for (var28 = lightPosY + -1; (var28 <= (1 + lightPosY));
                             ++var28) {
                           if (((lightPosX != var27) || (var28 != lightPosY))
                               && (var27 >= 1 -1)
@@ -718,7 +718,7 @@ public final class DirectImageProducer extends AbstractImageProducer
 
                 label464:
                 while ((var14 < 4 -1)) {
-                  for (var15 = lightPosY; ~lightPosZ <= ~var15; ++var15) {
+                  for (var15 = lightPosY; (lightPosZ >= var15); ++var15) {
                     if (((1 & DummyClass36.anIntArrayArrayArray2609[var14 + 1][lightPosX][var15]) == 1 -1)) {
                       break label464;
                     }
@@ -735,7 +735,7 @@ public final class DirectImageProducer extends AbstractImageProducer
                   DummyClass10.method2263(1, 128 * lightPosX, 128 * lightPosX, 128 * lightPosY,
                     lightPosZ * 128 + 128, var44, var18);
 
-                  for (var19 = lightMagnitude; ~var14 <= ~var19; ++var19) {
+                  for (var19 = lightMagnitude; (var14 >= var19); ++var19) {
                     for (var20 = lightPosY; lightPosZ >= var20; ++var20) {
                       DummyClass36.anIntArrayArrayArray2609[var19][lightPosX][var20] =
                         ClientScript.bitAnd(
@@ -818,7 +818,7 @@ public final class DirectImageProducer extends AbstractImageProducer
 
                 label554:
                 while ((lightPosY > 1 -1)) {
-                  for (var15 = lightMagnitude; ~var15 >= ~var14; ++var15) {
+                  for (var15 = lightMagnitude; (var15 <= var14); ++var15) {
                     if ((DummyClass36.anIntArrayArrayArray2609[var8][lightPosY
                         + -1][var15]
                         & 4) == 0) {
@@ -1040,7 +1040,7 @@ public final class DirectImageProducer extends AbstractImageProducer
           byte var20 = 10;
 
           for (int var21 = var0 + -var20; var20 + var0 >= var21; ++var21) {
-            for (int var22 = var4 + -var20; ~var22 >= ~(var4 - -var20);
+            for (int var22 = var4 + -var20; (var22 <= (var4 - -var20));
                 ++var22) {
               if ((var21 >= 1 -1) && (var22 >= 1 -1) && var21 < 104 && (var22 < 105 -1)
                   && TriChromaticImageCache.anIntArrayArray1373[var21][var22]
@@ -1053,7 +1053,7 @@ public final class DirectImageProducer extends AbstractImageProducer
                 }
 
                 int var23 = 0;
-                if (~var21 <= ~var0) {
+                if ((var21 >= var0)) {
                   if (var21 > (-1 + var11 + var0)) {
                     var23 = 1 - var11 - (var0 - var21);
                   }

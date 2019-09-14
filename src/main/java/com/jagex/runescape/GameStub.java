@@ -147,8 +147,8 @@ public abstract class GameStub implements Runnable,
             && ((-AnimationSequence.canvasInitializedTime + Time
             .getCurrentTimeMillis()) > 1001L -1)) {
           Rectangle var2 = var1.getClipBounds();
-          if (var2 == null || ~var2.width <= ~AreaSoundEffect.windowWidth
-              && ~SceneSomething2.windowHeight >= ~var2.height) {
+          if (var2 == null || (var2.width >= AreaSoundEffect.windowWidth)
+              && (SceneSomething2.windowHeight <= var2.height)) {
             AnimationSomething.replaceCanvas = true;
           }
         }

@@ -45,8 +45,8 @@ public final class TextureSampler24 extends AbstractTextureSampler {
           TextureSampler24.method226(87, 8);
         }
 
-        if (~(var2 - var7) <= ~DummyClass55.anInt1425 && var7 + var2 <= GlTexture2d.anInt3765
-          && ~DummyClass13.anInt2020 >= ~(var3 - var4) && LightIntensity.anInt902 >= var3 + var4) {
+        if (((var2 - var7) >= DummyClass55.anInt1425) && var7 + var2 <= GlTexture2d.anInt3765
+          && (DummyClass13.anInt2020 <= (var3 - var4)) && LightIntensity.anInt902 >= var3 + var4) {
           DummyClass12.method2200(var6, var2, var3, var5, var7, 95, var4, var1);
         } else {
           TextureSampler25.method329(var7, var6, var5, var1, (byte) -54, var3, var2, var4);

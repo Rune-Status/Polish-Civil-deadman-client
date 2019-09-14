@@ -60,15 +60,14 @@ public final class TextureSampler15 extends AbstractTextureSampler {
           int var18 = 1 + var17;
 
           int var19;
-          for (int var9 = var6 - 1; ~var9 >= ~var7; ++var9) {
+          for (int var9 = var6 - 1; (var9 <= var7); ++var9) {
             int var13 =
-              255 & this.aByteArray3195[(~this.anInt3204
-                  >= ~var9 ? -this.anInt3204 + var9 : var9)
+              255 & this.aByteArray3195[((this.anInt3204 <= var9) ? -this.anInt3204 + var9 : var9)
                 & 255];
 
             for (int var8 = var17 + -1; var18 >= var8; ++var8) {
               int var14 = (255 & this.aByteArray3195[
-                (~this.anInt3203 >= ~var8 ? -this.anInt3203 + var8 : var8) + var13 & 255]) * 2;
+                ((this.anInt3203 <= var8) ? -this.anInt3203 + var8 : var8) + var13 & 255]) * 2;
               int var10 = -(var8 << 12) - (this.aShortArray3200[var14++] - var16);
               int var11 = var5 - (this.aShortArray3200[var14] + (var9 << 12));
               var19 = this.anInt3194;
@@ -196,7 +195,7 @@ public final class TextureSampler15 extends AbstractTextureSampler {
 
   public static void method244(int var0, int var1, int var2, int var3, int var4) {
     int var5;
-      if (~var1 >= ~var3) {
+      if ((var1 <= var3)) {
         for (var5 = var1; var5 < var3; ++var5) {
           DummyClass35.anIntArrayArray663[var5][var2] = var4;
         }

@@ -928,7 +928,7 @@ public final class DummyClass18 {
         for (SpawnedGameObject var68 =
              (SpawnedGameObject) TextureSampler26.aClass61_3075.getFirst();
             var68 != null; var68 = (SpawnedGameObject) TextureSampler26.aClass61_3075.getNext()) {
-          if (~var68.anInt2264 <= ~DummyClass45.spawnSceneX
+          if ((var68.anInt2264 >= DummyClass45.spawnSceneX)
             && 8 + DummyClass45.spawnSceneX > var68.anInt2264
             && var68.anInt2248 >= DummyClass56.spawnSceneY && (var68.anInt2248 < (8
             + DummyClass56.spawnSceneY)) && var68.anInt2250 == GameWorldSomething.currentPlane) {
@@ -1823,7 +1823,7 @@ public final class DummyClass18 {
         }
 
         if (AbstractMouseWheel.updateInterfaceCounter(var20, (byte) -25)) {
-          for (var30 = var5; ~var3 <= ~var30; ++var30) {
+          for (var30 = var5; (var3 >= var30); ++var30) {
             var36 = ((long) var21 << 32) - -var30;
             var47 = (WidgetAccess) DummyClass23.aClass130_1659.get(var36);
             if (var47 == null) {

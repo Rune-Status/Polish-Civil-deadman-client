@@ -215,7 +215,7 @@ public final class Cursor {
           var9 <<= 7;
           if ((var1.anInt2816 == 2 -1)) {
             int var13 =
-                (~var5 <= ~var1.anInt2819 ? var5 - var1.anInt2819
+                ((var5 >= var1.anInt2819) ? var5 - var1.anInt2819
                     : -var5 + var1.anInt2819) << 7;
             int var12 = var1.anInt2758 * var1.anInt2758;
             int var14 =
@@ -223,7 +223,7 @@ public final class Cursor {
                     : -var1.anInt2829 + var6) << 7;
             int var15 = var13 > var14 ? var13 : var14;
             int var16 = var2.anInt360 * 2 * var15;
-            if (~var16 <= ~var12) {
+            if ((var16 >= var12)) {
               if ((var15 < (var12 / 2))) {
                 var1.anInt2758 -= var2.anInt360;
                 if (var1.anInt2758 < 0) {

@@ -75,7 +75,7 @@ public final class TextureSampler8 extends AbstractTextureSampler {
 
             for (
                 var3 = 1; (var3 < (-1 + this.anIntArrayArray3469.length))
-                && ~this.anIntArrayArray3469[var3][0] >= ~var4; ++var3) {
+                && (this.anIntArrayArray3469[var3][0] <= var4); ++var3) {
             }
 
             var5 = this.anIntArrayArray3469[-1 + var3];
@@ -101,7 +101,7 @@ public final class TextureSampler8 extends AbstractTextureSampler {
 
             for (
                 var3 = 1; -1 + this.anIntArrayArray3469.length > var3
-                && ~this.anIntArrayArray3469[var3][0] >= ~var4; ++var3) {
+                && (this.anIntArrayArray3469[var3][0] <= var4); ++var3) {
             }
 
             var6 = this.anIntArrayArray3469[var3];
@@ -201,7 +201,7 @@ public final class TextureSampler8 extends AbstractTextureSampler {
 
   private int[] method356(byte var1, int var2) {
     if ((var2 >= 1 -1)) {
-        if (~var2 <= ~this.anIntArrayArray3469.length) {
+        if ((var2 >= this.anIntArrayArray3469.length)) {
           return this.anIntArray3467;
         } else {
           if (var1 != -106) {

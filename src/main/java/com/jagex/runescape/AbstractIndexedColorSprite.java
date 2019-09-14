@@ -69,7 +69,7 @@ public abstract class AbstractIndexedColorSprite {
 
       int var10 = -var5 + var1;
 
-      for (var11 = var7; ~var8 <= ~var11; ++var11) {
+      for (var11 = var7; (var8 >= var11); ++var11) {
         int[] var12 = DummyClass35.anIntArrayArray663[var11];
         TextureSampler18.method282(var12, var6, -111, var9, var3);
         TextureSampler18.method282(var12, var10, -124, var1, var3);

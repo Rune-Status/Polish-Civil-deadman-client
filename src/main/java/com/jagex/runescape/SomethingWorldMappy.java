@@ -27,7 +27,7 @@ public final class SomethingWorldMappy extends Node {
       }
 
       return var3 >= this.anInt2492
-          && ~this.anInt2495 <= ~var3 && this.anInt2494 <= var2
+          && (this.anInt2495 >= var3) && this.anInt2494 <= var2
         && var2 <= this.anInt2497;
   }
 

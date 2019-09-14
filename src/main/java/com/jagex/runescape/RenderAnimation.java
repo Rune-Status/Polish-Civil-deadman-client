@@ -279,7 +279,7 @@ public final class RenderAnimation {
               var0 == TextureCache.localPlayer, var0.anInt2813);
           }
 
-          if (~var0.anInt2813 <= ~var2.anIntArray1851.length) {
+          if ((var0.anInt2813 >= var2.anIntArray1851.length)) {
             var0.anInt2813 = 0;
             var0.anInt2802 = 0;
             SocketStream.method1470(var0.anInt2829, var2, 183921384, var0.anInt2819,
@@ -287,7 +287,7 @@ public final class RenderAnimation {
           }
 
           var0.anInt2793 = var0.anInt2813 - -1;
-          if (~var0.anInt2793 <= ~var2.anIntArray1851.length) {
+          if ((var0.anInt2793 >= var2.anIntArray1851.length)) {
             var0.anInt2793 = 0;
           }
         } else {
@@ -296,7 +296,7 @@ public final class RenderAnimation {
       }
 
       int var6;
-      if (~var0.anInt2842 != 0 && ~AbstractGameWorld.updateCycle <= ~var0.anInt2759) {
+      if (~var0.anInt2842 != 0 && (AbstractGameWorld.updateCycle >= var0.anInt2759)) {
         var6 = RenderAnimation.method898((byte) 42, var0.anInt2842).anInt542;
         if (~var6 == 0) {
           var0.anInt2842 = -1;
@@ -325,7 +325,7 @@ public final class RenderAnimation {
             }
 
             var0.anInt2826 = var0.anInt2805 - -1;
-            if (~var3.anIntArray1851.length >= ~var0.anInt2826) {
+            if ((var3.anIntArray1851.length <= var0.anInt2826)) {
               var0.anInt2826 = -1;
             }
           } else {
@@ -337,7 +337,7 @@ public final class RenderAnimation {
       if (~var0.animationId != 0 && (var0.anInt2828 <= 2 -1)) {
         var2 = GameClient.method45(var0.animationId, (byte) -20);
         if ((var2.anInt1866 == 2 -1) && var0.anInt2811 > 0
-          && ~AbstractGameWorld.updateCycle <= ~var0.anInt2800
+          && (AbstractGameWorld.updateCycle >= var0.anInt2800)
           && AbstractGameWorld.updateCycle > var0.anInt2790) {
           var0.anInt2828 = 1;
           return;
@@ -409,7 +409,7 @@ public final class RenderAnimation {
                     var0 == TextureCache.localPlayer, var7.anInt1893);
                 }
 
-                if (~var4.anIntArray1851.length >= ~var7.anInt1893) {
+                if ((var4.anIntArray1851.length <= var7.anInt1893)) {
                   ++var7.anInt1894;
                   var7.anInt1893 -= var4.anInt1865;
                   if (var4.anInt1861 > var7.anInt1894) {

@@ -51,8 +51,8 @@ public final class HintMarker {
               }
 
               for (int var14 = 0; (var14 < 65 -1); ++var14) {
-                if (!var18 || ~(8 * var5) >= ~var13 && (var13 < (8 * var5 - -8)) && ~var14 <= ~(8
-                  * var6) && var14 < var6 * 8 - -8) {
+                if (!var18 || ((8 * var5) <= var13) && (var13 < (8 * var5 - -8)) && (var14 >= (8
+                  * var6)) && var14 < var6 * 8 - -8) {
                   int var15 = var1.readUnsignedByte();
                   if (var15 != 0) {
                     int var2;

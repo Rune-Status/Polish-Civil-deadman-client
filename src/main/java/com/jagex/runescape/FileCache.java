@@ -69,7 +69,7 @@ public final class FileCache {
             return null;
           }
 
-          if (var5 > 0 && ~var5 >= ~(this.aClass30_681.method976(0) / 520L)) {
+          if (var5 > 0 && (var5 <= (this.aClass30_681.method976(0) / 520L))) {
             byte[] var7 = new byte[var4];
             int var8 = 0;
 

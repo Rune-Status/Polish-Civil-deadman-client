@@ -132,7 +132,7 @@ public final class MapScene {
               if ((var4.anInt191 >= 1 -1)) {
                 Widget var8 = EnumStringFetcher.getWidget((byte) 121, var4.anInt279);
                 if (var8 == null || var8.aClass11Array262 == null
-                  || ~var4.anInt191 <= ~var8.aClass11Array262.length
+                  || (var4.anInt191 >= var8.aClass11Array262.length)
                   || var8.aClass11Array262[var4.anInt191] != var4) {
                   continue;
                 }
@@ -315,13 +315,13 @@ public final class MapScene {
         var19 = 100;
         byte var20 = 10;
 
-        for (int var21 = -var20 + var8; ~var21 >= ~(var20 + var8); ++var21) {
-          for (int var22 = var4 + -var20; ~var22 >= ~(var20 + var4); ++var22) {
+        for (int var21 = -var20 + var8; (var21 <= (var20 + var8)); ++var21) {
+          for (int var22 = var4 + -var20; (var22 <= (var20 + var4)); ++var22) {
             if ((var21 >= 1 -1) && (var22 >= 1 -1) && (var21 < 105 -1) && var22 < 104
               && TriChromaticImageCache.anIntArrayArray1373[var21][var22] < 100) {
               int var23 = 0;
               int var24 = 0;
-              if (~var21 <= ~var8) {
+              if ((var21 >= var8)) {
                 if (var21 > (-1 + var0 + var8)) {
                   var23 = var21 + 1 + -var0 + -var8;
                 }
@@ -329,7 +329,7 @@ public final class MapScene {
                 var23 = var8 - var21;
               }
 
-              if (~var4 >= ~var22) {
+              if ((var4 <= var22)) {
                 if (var22 > (-1 + var4 + var6)) {
                   var24 = -var4 + -var6 + 1 + var22;
                 }

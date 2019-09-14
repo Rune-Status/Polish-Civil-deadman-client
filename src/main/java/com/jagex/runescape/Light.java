@@ -229,7 +229,7 @@ public final class Light {
 
   public static void method1058(int var0, int var1, int var2, int var3, byte var4) {
     int var5 = 25 % ((25 - var4) / 52);
-      if (~(var1 + -var0) <= ~DummyClass55.anInt1425 && GlTexture2d.anInt3765 >= var0 + var1
+      if (((var1 + -var0) >= DummyClass55.anInt1425) && GlTexture2d.anInt3765 >= var0 + var1
         && var3 + -var0 >= DummyClass13.anInt2020 && LightIntensity.anInt902 >= var0 + var3) {
         IdentityKit.method949(var1, (byte) 118, var0, var2, var3);
       } else {

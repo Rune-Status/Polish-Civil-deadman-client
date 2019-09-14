@@ -99,7 +99,7 @@ public final class StringNode extends Node {
   public static void method730(int var0, int var1, byte var2, int var3,
       int var4, int var5) {
     int var6 = 19 % ((var2 - -44) / 47);
-    if (~var0 <= ~DummyClass55.anInt1425 && var4 <= GlTexture2d.anInt3765
+    if ((var0 >= DummyClass55.anInt1425) && var4 <= GlTexture2d.anInt3765
         && DummyClass13.anInt2020 <= var5
         && LightIntensity.anInt902 >= var3) {
       MaterialShader5.method1632(95, var3, var4, var5, var0, var1);

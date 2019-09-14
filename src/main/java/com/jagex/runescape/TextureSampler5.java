@@ -28,14 +28,14 @@ public final class TextureSampler5 extends AbstractTextureSampler {
         int[][] var9 = new int[var5][];
 
         int var10;
-        for (var10 = -this.anInt3297 + var1; ~var10 >= ~(var1 - -this.anInt3297); ++var10) {
+        for (var10 = -this.anInt3297 + var1; (var10 <= (var1 - -this.anInt3297)); ++var10) {
           int[] var11 = this
               .method152(0, var10 & TriChromaticImageBuffer.anInt2487, 32755);
           int[] var12 = new int[SomethingLight0.anInt1559];
           int var13 = 0;
 
           int var14;
-          for (var14 = -this.anInt3294; ~this.anInt3294 <= ~var14; ++var14) {
+          for (var14 = -this.anInt3294; (this.anInt3294 >= var14); ++var14) {
             var13 += var11[var14 & RenderAnimation.anInt396];
           }
 

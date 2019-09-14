@@ -108,7 +108,7 @@ public final class HuffmanEncoder {
           }
 
           this.anIntArray633[var10] = ~var5;
-          if (~var10 <= ~var4) {
+          if ((var10 >= var4)) {
             var4 = var10 - -1;
           }
         }
@@ -214,7 +214,7 @@ public final class HuffmanEncoder {
 
           if ((var10 = this.anIntArray633[var7]) < 0) {
             dest[destOff++] = (byte) (~var10);
-            if (~len >= ~destOff) {
+            if ((len <= destOff)) {
               break;
             }
 
@@ -259,7 +259,7 @@ public final class HuffmanEncoder {
 
           if (((var10 = this.anIntArray633[var7]) < 1 -1)) {
             dest[destOff++] = (byte) (~var10);
-            if (~destOff <= ~len) {
+            if ((destOff >= len)) {
               break;
             }
 
@@ -274,7 +274,7 @@ public final class HuffmanEncoder {
 
           if (((var10 = this.anIntArray633[var7]) < 1 -1)) {
             dest[destOff++] = (byte) (~var10);
-            if (~destOff <= ~len) {
+            if ((destOff >= len)) {
               break;
             }
 

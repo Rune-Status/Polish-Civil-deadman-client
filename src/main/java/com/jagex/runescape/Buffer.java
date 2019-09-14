@@ -375,7 +375,7 @@ public class Buffer extends Node {
 
   public final void method774(int var1, int var2, byte[] var3, int var4) {
     if (var1 == 2) {
-        for (int var5 = var4 - (-var2 - -1); ~var4 >= ~var5; --var5) {
+        for (int var5 = var4 - (-var2 - -1); (var4 <= var5); --var5) {
           var3[var5] = this.bytes[this.position++];
         }
       }

@@ -931,7 +931,7 @@ public final class AudioStreamEncoder4 extends AudioStreamEncoder {
         int var6 = var4 + (var4 - var1.aClass3_Sub12_Sub1_2509.anInt3033);
         var4 <<= 8;
         var5 = (int) ((long) var6 * this.anIntArray3519[var1.anInt2514] >> 6);
-        if (~var5 <= ~var4) {
+        if ((var5 >= var4)) {
           var1.aClass3_Sub24_Sub1_2507.method442(true);
           var5 = -1 + (var4 - -var4) + -var5;
         }
@@ -1124,7 +1124,7 @@ public final class AudioStreamEncoder4 extends AudioStreamEncoder {
               var7 += var3.anIntArray272[var15];
             }
 
-            if (~var2 <= ~var7 && ~var8 >= ~var0 && 32 + var7 > var2 && (var8 + 32) > var0) {
+            if ((var2 >= var7) && (var8 <= var0) && 32 + var7 > var2 && (var8 + 32) > var0) {
               DummyClass54.aClass11_1402 = var3;
               StillGraphic.anInt2701 = var15;
               if ((var3.anIntArray254[var15] > 1 -1)) {

@@ -126,7 +126,7 @@ public final class DummyClass1 {
               var5 = -var1.anInt2780 + var4 & '\uffff';
               var6 = var1.anInt2821 * var1.anInt2821 / (var2.anInt369 * 2);
               int var7;
-              if (var1.anInt2821 > 0 && ~var5 <= ~var6
+              if (var1.anInt2821 > 0 && (var5 >= var6)
                   && -var6 + var5 < '\u8000') {
                 var1.anInt2803 = var5 / 2;
                 var1.aBoolean2769 = true;
@@ -182,7 +182,7 @@ public final class DummyClass1 {
                 }
               }
             } else if ((var1.anInt2821 <= 1 -1)) {
-              if (~var1.anInt2791 <= ~var1.anInt2803) {
+              if ((var1.anInt2791 >= var1.anInt2803)) {
                 var1.aBoolean2769 = false;
               }
 
@@ -195,7 +195,7 @@ public final class DummyClass1 {
                 var1.anInt2821 -= var2.anInt369;
               }
             } else {
-              if (~var1.anInt2803 >= ~var1.anInt2791) {
+              if ((var1.anInt2803 <= var1.anInt2791)) {
                 var1.aBoolean2769 = false;
               }
 

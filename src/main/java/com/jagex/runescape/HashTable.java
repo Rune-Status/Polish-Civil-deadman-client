@@ -71,7 +71,7 @@ public final class HashTable {
         return var2;
       } else {
         do {
-          if (~this.iteratorBucketId <= ~this.capacity) {
+          if ((this.iteratorBucketId >= this.capacity)) {
             if (var1 > -61) {
               this.clear(119);
             }

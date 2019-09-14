@@ -254,7 +254,7 @@ public final class Widget {
   }
 
   public void method854(int var1, int var2, byte var3 ) {
-    if (this.anIntArray249 == null || ~this.anIntArray249.length >= ~var1) {
+    if (this.anIntArray249 == null || (this.anIntArray249.length <= var1)) {
         int[] var4 = new int[1 + var1];
         if (this.anIntArray249 != null) {
           int var5;
@@ -329,7 +329,7 @@ public final class Widget {
   }
 
   public void method857(byte var1, GameString var2, int var3 ) {
-    if (this.aClass94Array171 == null || ~this.aClass94Array171.length >= ~var3) {
+    if (this.aClass94Array171 == null || (this.aClass94Array171.length <= var3)) {
         GameString[] var4 = new GameString[1 + var3];
         if (this.aClass94Array171 != null) {
           for (int var5 = 0; this.aClass94Array171.length > var5; ++var5) {

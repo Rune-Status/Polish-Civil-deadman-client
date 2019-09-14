@@ -347,7 +347,7 @@ public final class Player extends Mobile {
               this.anObject2796 = null;
             }
 
-            if (~this.anInt2797 >= ~AbstractGameWorld.updateCycle
+            if ((this.anInt2797 <= AbstractGameWorld.updateCycle)
               && this.anInt2778 > AbstractGameWorld.updateCycle) {
               if (this.anObject2796 instanceof GameObject) {
                 var25 = (AbstractModel) ((GameObject) this.anObject2796)

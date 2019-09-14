@@ -838,7 +838,7 @@ public final class PlayerAppearance {
             var20 = 1;
 
             while (true) {
-              if (~var20 <= ~(var5 + -1)) {
+              if ((var20 >= (var5 + -1))) {
                 TextureSampler38.anIntArray3456[var28] = var13;
                 DummyClass38.anIntArray729[var28] = var14 + 1;
                 DummyClass51.anIntArrayArray1160[var13][1 + var14] = 4;
@@ -895,7 +895,7 @@ public final class PlayerAppearance {
             var20 = 1;
 
             while (true) {
-              if (~var20 <= ~(-1 + var5)) {
+              if ((var20 >= (-1 + var5))) {
                 TextureSampler38.anIntArray3456[var28] = 1 + var13;
                 DummyClass38.anIntArray729[var28] = -1 + var14;
                 var28 = 1 + var28 & 4095;
@@ -977,7 +977,7 @@ public final class PlayerAppearance {
           byte var21 = 10;
 
           for (int var22 = var6 - var21; var22 <= var21 + var6; ++var22) {
-            for (int var23 = -var21 + var0; ~var23 >= ~(var0 - -var21);
+            for (int var23 = -var21 + var0; (var23 <= (var0 - -var21));
                 ++var23) {
               if (var22 >= 0 && (var23 >= 1 -1) && (var22 < 105 -1) && (var23 < 105 -1)
                   && (TriChromaticImageCache.anIntArrayArray1373[var22][var23] < 101 -1)) {

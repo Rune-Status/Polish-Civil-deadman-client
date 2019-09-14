@@ -31,8 +31,8 @@ public final class OndemandFileRequest extends AbstractFileRequest {
   }
 
   public byte[] method587(boolean var1) {
-    if (!this.aBoolean3632 && ~this.buffer.position <= ~(-this.aByte4064
-          + this.buffer.bytes.length)) {
+    if (!this.aBoolean3632 && (this.buffer.position >= (-this.aByte4064
+          + this.buffer.bytes.length))) {
         if (var1) {
           this.method586(false);
         }

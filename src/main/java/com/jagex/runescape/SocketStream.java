@@ -206,7 +206,7 @@ public final class SocketStream implements Runnable {
   public static void method1460(int var0, int var1, byte var2, int var3,
       int var4, int var5,
       int var6) {
-    if (~(var5 - var4) <= ~DummyClass55.anInt1425
+    if (((var5 - var4) >= DummyClass55.anInt1425)
           && GlTexture2d.anInt3765 >= var5 - -var4
           && DummyClass13.anInt2020 <= -var4 + var1
           && LightIntensity.anInt902 >= var4 + var1) {

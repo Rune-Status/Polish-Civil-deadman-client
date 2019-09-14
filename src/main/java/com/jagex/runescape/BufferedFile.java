@@ -43,7 +43,7 @@ public final class BufferedFile {
 
         this.aClass122_573.method1738(127, this.aByteArray572, this.anInt566, 0);
         long var3 = -1L;
-        if (~this.aLong576 >= ~this.aLong571
+        if ((this.aLong576 <= this.aLong571)
           && (this.aLong576 + this.anInt575) > this.aLong571) {
           var3 = this.aLong571;
         } else if (this.aLong571 <= this.aLong576 && (this.aLong576 < (
@@ -177,14 +177,14 @@ public final class BufferedFile {
             && var8 + var5 >= this.anInt566 + this.aLong571) {
             var11 = this.anInt566 + this.aLong571;
           } else if ((this.aLong571 < (var8 + var5))
-            && ~(this.anInt566 + this.aLong571) <= ~(var8 + var5)) {
+            && ((this.anInt566 + this.aLong571) >= (var8 + var5))) {
             var11 = var8 + var5;
           }
 
-          if (~var5 >= ~this.aLong571
+          if ((var5 <= this.aLong571)
               && (var5 - -var8) > this.aLong571) {
             var16 = this.aLong571;
-          } else if (~var5 <= ~this.aLong571
+          } else if ((var5 >= this.aLong571)
               && var5 < this.anInt566 + this.aLong571) {
             var16 = var5;
           }
@@ -294,7 +294,7 @@ public final class BufferedFile {
           if (this.aLong576 <= this.aLong569
             && (this.anInt575 + this.aLong576) > this.aLong569) {
             var12 = this.aLong569;
-          } else if (~this.aLong569 >= ~this.aLong576
+          } else if ((this.aLong569 <= this.aLong576)
             && (var4 + this.aLong569) > this.aLong576) {
             var12 = this.aLong576;
           }
@@ -306,8 +306,8 @@ public final class BufferedFile {
           }
 
           if (this.aLong569 + var4 > this.aLong576
-              && ~(this.aLong569 - -var4) >= ~(
-              this.aLong576 - -this.anInt575)) {
+              && ((this.aLong569 - -var4) <= (
+              this.aLong576 - -this.anInt575))) {
             var7 = var4 + this.aLong569;
           } else if ((this.aLong576 + this.anInt575) > this.aLong569
             && this.aLong569 + var4 >= this.anInt575

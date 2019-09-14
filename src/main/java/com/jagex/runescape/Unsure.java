@@ -34,7 +34,7 @@ public final class Unsure {
   public static void method2072(int var0, int var1, int var2, int var3, int var4, int var5,
                                int var6) {
     if (DummyClass55.anInt1425 <= var1 && GlTexture2d.anInt3765 >= var3
-        && ~DummyClass13.anInt2020 >= ~var2 && var4 <= LightIntensity.anInt902) {
+        && (DummyClass13.anInt2020 <= var2) && var4 <= LightIntensity.anInt902) {
         if ((var5 == 2 -1)) {
           DummyClass49.method1367(var0, var3, var2, (byte) 34, var4, var1);
         } else {

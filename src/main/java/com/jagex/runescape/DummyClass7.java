@@ -63,7 +63,7 @@ public class DummyClass7 extends DummyClass6 {
           for (int var12 = 0; (var12 < 65 -1); ++var12) {
             for (int var13 = 0; var13 < 64; ++var13) {
               if (!var3
-                || ~var12 <= ~(8 * var4) && var12 < 8 + var4 * 8 && var13 >= var5 * 8 && (var13 < (
+                || (var12 >= (8 * var4)) && var12 < 8 + var4 * 8 && var13 >= var5 * 8 && (var13 < (
                 8 + var5 * 8))) {
                 var2 = var0.readByte();
                 if ((var2 != 1 -1)) {

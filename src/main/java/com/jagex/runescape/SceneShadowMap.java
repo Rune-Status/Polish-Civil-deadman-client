@@ -49,7 +49,7 @@ public final class SceneShadowMap {
                 var24 += var10;
                 int var27 = var9 + var23 >> 6;
                 var10000 = var25 + var10;
-                if ((var27 >= 1 -1) && ~var27 >= ~(-1 + var22.length) &&
+                if ((var27 >= 1 -1) && (var27 <= (-1 + var22.length)) &&
                     var22[var27] != null) {
                   int var28 = (63 & var17 + var4) + (4032 & var9 + var23 << 6);
                   int var29 = var22[var27][var28];

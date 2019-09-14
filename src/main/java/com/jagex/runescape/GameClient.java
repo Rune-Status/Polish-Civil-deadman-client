@@ -185,7 +185,7 @@ public final class GameClient extends GameStub {
                   var13 = EnumStringFetcher
                       .getWidget((byte) 118, var12.anInt190);
                   if (var13 == null || var13.aClass11Array262 == null
-                      || ~var13.aClass11Array262.length >= ~var12.anInt191
+                      || (var13.aClass11Array262.length <= var12.anInt191)
                       || var12 != var13.aClass11Array262[var12.anInt191]) {
                     continue;
                   }
@@ -199,7 +199,7 @@ public final class GameClient extends GameStub {
             if ((var12.anInt191 >= 1 -1)) {
               var13 = EnumStringFetcher.getWidget((byte) 112, var12.anInt190);
               if (var13 == null || var13.aClass11Array262 == null
-                  || ~var12.anInt191 <= ~var13.aClass11Array262.length
+                  || (var12.anInt191 >= var13.aClass11Array262.length)
                   || var12 != var13.aClass11Array262[var12.anInt191]) {
                 continue;
               }
@@ -213,7 +213,7 @@ public final class GameClient extends GameStub {
         if (var12.anInt191 >= 0) {
           var13 = EnumStringFetcher.getWidget((byte) 126, var12.anInt190);
           if (var13 == null || var13.aClass11Array262 == null
-              || ~var13.aClass11Array262.length >= ~var12.anInt191
+              || (var13.aClass11Array262.length <= var12.anInt191)
               || var12 != var13.aClass11Array262[var12.anInt191]) {
             continue;
           }
@@ -829,7 +829,7 @@ public final class GameClient extends GameStub {
                     .method228(Projectile.sprites, FileUnpacker.fileUnpacker13,
                         false);
             kkkk = GameException.method2286((byte) -5);
-            if (~var2 <= ~kkkk) {
+            if ((var2 >= kkkk)) {
               AnimationFrame.loadingText = DummyClass15.aClass94_1879;
               ClientScript.loadingPercent = 35;
               HintMarker.loadingState = 60;

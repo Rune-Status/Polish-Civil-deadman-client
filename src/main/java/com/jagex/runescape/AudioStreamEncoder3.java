@@ -30,7 +30,7 @@ public final class AudioStreamEncoder3 extends AudioStreamEncoder {
             this.aClass3_Sub24_Sub4_3493.anIntArray3509[var1.anInt2514] / DummyClass60.sampleRate;
         int var5 = (var4 + 1048575 + -var1.anInt2516) / var4;
         var1.anInt2516 = 1048575 & var4 * var3 + var1.anInt2516;
-        if (~var3 <= ~var5) {
+        if ((var3 >= var5)) {
           if (this.aClass3_Sub24_Sub4_3493.anIntArray3519[var1.anInt2514] == 0) {
             var1.aClass3_Sub24_Sub1_2507 =
                 AudioStreamEncoder1.method432(var1.aClass3_Sub12_Sub1_2509,

@@ -68,9 +68,9 @@ public final class SomethingQuickChat extends SubNode {
       }
 
       return this.anIntArray3566 != null
-          && var3 >= 0 && ~var3 >= ~this.anIntArray3566.length ?
+          && var3 >= 0 && (var3 <= this.anIntArray3566.length) ?
         (this.anIntArrayArray3570[var3] != null && (var2 >= 1 -1)
-          && ~var2 >= ~this.anIntArrayArray3570[var3].length ?
+          && (var2 <= this.anIntArrayArray3570[var3].length) ?
             this.anIntArrayArray3570[var3][var2] :
           -1) :
         -1;

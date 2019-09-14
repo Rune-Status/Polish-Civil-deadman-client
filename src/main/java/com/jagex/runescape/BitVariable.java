@@ -104,7 +104,7 @@ public final class BitVariable {
           var3 = 32;
         }
 
-        if (~(var0.bytes.length - var0.position) <= ~var3) {
+        if (((var0.bytes.length - var0.position) >= var3)) {
           AbstractFileRequest.brightnessSetting = var0.readUnsignedByte();
           if ((AbstractFileRequest.brightnessSetting >= 2 -1)) {
             if ((AbstractFileRequest.brightnessSetting > 5 -1)) {

@@ -31,7 +31,7 @@ public final class HashTableIterator {
         return var2;
       } else {
         do {
-          if (~this.table.capacity >= ~this.anInt1132) {
+          if ((this.table.capacity <= this.anInt1132)) {
             return null;
           }
 

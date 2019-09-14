@@ -19,14 +19,14 @@ public final class DummyClass58 {
         DummyClass58.COMMAND_WM1 = null;
       }
 
-      if (~var5 <= ~DummyClass55.anInt1425 && ~var5 >= ~GlTexture2d.anInt3765
-        && var0 >= DummyClass55.anInt1425 && ~var0 >= ~GlTexture2d.anInt3765
-        && ~var6 <= ~DummyClass55.anInt1425 && ~GlTexture2d.anInt3765 <= ~var6
-        && ~DummyClass55.anInt1425 >= ~var1 && ~var1 >= ~GlTexture2d.anInt3765
-        && ~DummyClass13.anInt2020 >= ~var4 && ~var4 >= ~LightIntensity.anInt902
-        && ~var7 <= ~DummyClass13.anInt2020 && LightIntensity.anInt902 >= var7
-        && var2 >= DummyClass13.anInt2020 && ~LightIntensity.anInt902 <= ~var2
-        && ~var3 <= ~DummyClass13.anInt2020 && ~var3 >= ~LightIntensity.anInt902) {
+      if ((var5 >= DummyClass55.anInt1425) && (var5 <= GlTexture2d.anInt3765)
+        && var0 >= DummyClass55.anInt1425 && (var0 <= GlTexture2d.anInt3765)
+        && (var6 >= DummyClass55.anInt1425) && (GlTexture2d.anInt3765 >= var6)
+        && (DummyClass55.anInt1425 <= var1) && (var1 <= GlTexture2d.anInt3765)
+        && (DummyClass13.anInt2020 <= var4) && (var4 <= LightIntensity.anInt902)
+        && (var7 >= DummyClass13.anInt2020) && LightIntensity.anInt902 >= var7
+        && var2 >= DummyClass13.anInt2020 && (LightIntensity.anInt902 >= var2)
+        && (var3 >= DummyClass13.anInt2020) && (var3 <= LightIntensity.anInt902)) {
         SomethingInScenePacket202.method114(3, var2, var8, var7, var6, var1, var3, var4, var0,
           var5);
       } else {

@@ -124,7 +124,7 @@ public final class GameString implements UnusedInterface1 {
         var8 -= 87;
       }
 
-      if (~var2 >= ~var8) {
+      if ((var2 <= var8)) {
         throw new NumberFormatException();
       }
 
@@ -292,7 +292,7 @@ public final class GameString implements UnusedInterface1 {
       int var4) {
     if (!this.immutable) {
       throw new IllegalArgumentException();
-    } else if (var3 >= 0 && var3 <= var4 && ~var4 >= ~var2.length) {
+    } else if (var3 >= 0 && var3 <= var4 && (var4 <= var2.length)) {
       if (this.length + (var4 - var3) > this.bytes.length) {
         int var5;
         for (var5 = 1; (this.length + var2.length) > var5; var5 += var5) {
@@ -548,7 +548,7 @@ public final class GameString implements UnusedInterface1 {
   }
 
   public boolean method1558(GameString var1, int var2) {
-    if (~this.length <= ~var1.length) {
+    if ((this.length >= var1.length)) {
       for (int var3 = var2; var3 < var1.length; ++var3) {
         if ((this.bytes[var3] != var1.bytes[var3])) {
           return false;
@@ -585,7 +585,7 @@ public final class GameString implements UnusedInterface1 {
 
     if (var1.length > this.length) {
       return -1;
-    } else if (~var1.length <= ~this.length) {
+    } else if ((var1.length >= this.length)) {
       return 0;
     } else {
       return 1;
@@ -686,7 +686,7 @@ public final class GameString implements UnusedInterface1 {
         var7 -= 87;
       }
 
-      if (~var7 <= ~var1) {
+      if ((var7 >= var1)) {
         return false;
       }
 
@@ -818,7 +818,7 @@ public final class GameString implements UnusedInterface1 {
         byte var6 = var5[0];
         int var8 = start;
 
-        while (~var8 >= ~var7) {
+        while ((var8 <= var7)) {
           if ((var6 != this.bytes[var8])) {
             do {
               ++var8;
@@ -936,7 +936,7 @@ public final class GameString implements UnusedInterface1 {
       if (this.immutable) {
         if (this.length == this.bytes.length) {
           int var3;
-          for (var3 = 1; ~var3 >= ~this.length; var3 += var3) {
+          for (var3 = 1; (var3 <= this.length); var3 += var3) {
           }
 
           byte[] var4 = new byte[var3];
@@ -1256,7 +1256,7 @@ public final class GameString implements UnusedInterface1 {
       int var9 = -1;
 
       for (int var10 = 0; (var10 < 11 -1); ++var10) {
-        if (~var6 <= ~var8.anIntArray766[var10] &&
+        if ((var6 >= var8.anIntArray766[var10]) &&
             var8.anIntArray766[var10] != 0) {
           var9 = var8.anIntArray804[var10];
         }

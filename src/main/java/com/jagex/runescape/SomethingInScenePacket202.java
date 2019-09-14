@@ -357,7 +357,7 @@ public final class SomethingInScenePacket202 extends Node {
                 var13 = var8;
 
                 while (true) {
-                  if (~var13 <= ~var10) {
+                  if ((var13 >= var10)) {
                     continue label226;
                   }
 
@@ -370,7 +370,7 @@ public final class SomethingInScenePacket202 extends Node {
               }
             }
 
-            if (var4.anObject2796 != null && ~AbstractGameWorld.updateCycle <= ~var4.anInt2797
+            if (var4.anObject2796 != null && (AbstractGameWorld.updateCycle >= var4.anInt2797)
               && var4.anInt2778 > AbstractGameWorld.updateCycle) {
               var4.aBoolean3968 = false;
               var4.anInt2831 =

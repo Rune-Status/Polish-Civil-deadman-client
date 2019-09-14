@@ -154,8 +154,8 @@ public final class GroundItem extends SceneNode {
                 for (var18 = 0; var24.anInt2223 > var18; ++var18) {
                   SceneSomething var25 = var24.sceneGraphNodes[var18];
                   if ((var25.anInt495 != var25.anInt483) || (var25.anInt481 != var25.anInt478)) {
-                    for (var20 = var25.anInt483; ~var25.anInt495 <= ~var20; ++var20) {
-                      for (int var21 = var25.anInt478; ~var21 >= ~var25.anInt481; ++var21) {
+                    for (var20 = var25.anInt483; (var25.anInt495 >= var20); ++var20) {
+                      for (int var21 = var25.anInt478; (var21 <= var25.anInt481); ++var21) {
                         AbstractImageProducer.aByteArrayArrayArray2008[var16][var20][var21] = var6;
                       }
                     }

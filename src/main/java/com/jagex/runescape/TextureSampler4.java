@@ -98,7 +98,7 @@ public final class TextureSampler4 extends AbstractTextureSampler {
           var9 -= 4096;
         }
 
-        while (this.anInt3233 > var7 && ~var9 <= ~this.anIntArray3230[var7]) {
+        while (this.anInt3233 > var7 && (var9 >= this.anIntArray3230[var7])) {
           ++var7;
         }
 
@@ -121,7 +121,7 @@ public final class TextureSampler4 extends AbstractTextureSampler {
               var8 -= 4096;
             }
 
-            while (this.anInt3242 > var6 && ~var8 <= ~this.anIntArrayArray3225[var11][var6]) {
+            while (this.anInt3242 > var6 && (var8 >= this.anIntArrayArray3225[var11][var6])) {
               ++var6;
             }
 
@@ -229,7 +229,7 @@ public final class TextureSampler4 extends AbstractTextureSampler {
       }
 
       if (var1 > 118) {
-        for (var12 = var8; ~var9 <= ~var12; ++var12) {
+        for (var12 = var8; (var9 >= var12); ++var12) {
           int[] var13 = DummyClass35.anIntArrayArray663[var12];
           TextureSampler18.method282(var13, var7, 117, var10, var0);
           TextureSampler18.method282(var13, var10, 111, var11, var4);

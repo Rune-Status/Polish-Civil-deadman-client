@@ -126,7 +126,7 @@ public final class AnimationSomething extends SubNode {
           var18 -= var15;
           var13 += -var20;
           var22 = var7 + var5;
-          if (~DummyClass13.anInt2020 >= ~var22 && ~LightIntensity.anInt902 <= ~var21) {
+          if ((DummyClass13.anInt2020 <= var22) && (LightIntensity.anInt902 >= var21)) {
             int var23 = DummyClass59.method1040(GlTexture2d.anInt3765, var6 + var4, (byte) 0,
               DummyClass55.anInt1425);
             int var24 = DummyClass59.method1040(GlTexture2d.anInt3765, -var6 + var4, (byte) 0,
@@ -136,7 +136,7 @@ public final class AnimationSomething extends SubNode {
                 var0);
             }
 
-            if (~LightIntensity.anInt902 <= ~var22) {
+            if ((LightIntensity.anInt902 >= var22)) {
               TextureSampler18.method282(DummyClass35.anIntArrayArray663[var22], var24, -110, var23,
                 var0);
             }

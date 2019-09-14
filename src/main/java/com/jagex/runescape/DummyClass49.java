@@ -41,7 +41,7 @@ public final class DummyClass49 {
     TextureSampler18.method282(DummyClass35.anIntArrayArray663[var2++], var5, 92, var1, var0);
       TextureSampler18.method282(DummyClass35.anIntArrayArray663[var4--], var5, 97, var1, var0);
       if (var3 >= 23) {
-        for (int var6 = var2; ~var6 >= ~var4; ++var6) {
+        for (int var6 = var2; (var6 <= var4); ++var6) {
           int[] var7 = DummyClass35.anIntArrayArray663[var6];
           var7[var5] = var7[var1] = var0;
         }

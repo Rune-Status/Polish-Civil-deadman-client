@@ -153,9 +153,9 @@ public final class TextureSampler17 extends AbstractTextureSampler {
         this.method166(38, -39);
       }
 
-      var5 = ~var4 >= ~var5 ? var5 : var4;
+      var5 = (var4 <= var5) ? var5 : var4;
       int var6 = var3 > var2 ? var2 : var3;
-      var6 = ~var4 <= ~var6 ? var6 : var4;
+      var6 = (var4 >= var6) ? var6 : var4;
       int var7 = -var6 + var5;
       if (var7 > 0) {
         int var9 = (var5 - var3 << 12) / var7;

@@ -96,10 +96,10 @@ public final class GameObject extends SceneNode {
           this.anInt2726 =
             (int) (Math.random() * this.aClass142_2722.anIntArray1851.length);
           this.anInt2733 = this.anInt2726 - -1;
-          if (~this.anInt2733 <= ~this.aClass142_2722.anIntArray1851.length) {
+          if ((this.anInt2733 >= this.aClass142_2722.anIntArray1851.length)) {
             this.anInt2733 -= this.aClass142_2722.anInt1865;
             if (this.anInt2733 < 0
-              || ~this.anInt2733 <= ~this.aClass142_2722.anIntArray1851.length) {
+              || (this.anInt2733 >= this.aClass142_2722.anIntArray1851.length)) {
               this.anInt2733 = -1;
             }
           }
@@ -174,7 +174,7 @@ public final class GameObject extends SceneNode {
             var4 -= this.aClass142_2722.anIntArray1869[this.anInt2726];
           }
 
-          if (~this.anInt2726 <= ~var5) {
+          if ((this.anInt2726 >= var5)) {
             int var6 = 0;
 
             for (int var7 = var5; this.aClass142_2722.anIntArray1851.length > var7; ++var7) {
@@ -199,20 +199,20 @@ public final class GameObject extends SceneNode {
               this.anInt2726);
           var4 -= this.aClass142_2722.anIntArray1869[this.anInt2726];
           ++this.anInt2726;
-          if (~this.aClass142_2722.anIntArray1851.length >= ~this.anInt2726) {
+          if ((this.aClass142_2722.anIntArray1851.length <= this.anInt2726)) {
             this.anInt2726 -= this.aClass142_2722.anInt1865;
             if (this.anInt2726 < 0
-              || ~this.aClass142_2722.anIntArray1851.length >= ~this.anInt2726) {
+              || (this.aClass142_2722.anIntArray1851.length <= this.anInt2726)) {
               this.aClass142_2722 = null;
               break;
             }
           }
 
           this.anInt2733 = this.anInt2726 - -1;
-          if (~this.aClass142_2722.anIntArray1851.length >= ~this.anInt2733) {
+          if ((this.aClass142_2722.anIntArray1851.length <= this.anInt2733)) {
             this.anInt2733 -= this.aClass142_2722.anInt1865;
             if ((this.anInt2733 < 1 -1)
-              || ~this.anInt2733 <= ~this.aClass142_2722.anIntArray1851.length) {
+              || (this.anInt2733 >= this.aClass142_2722.anIntArray1851.length)) {
               this.anInt2733 = -1;
             }
           }
@@ -591,7 +591,7 @@ public final class GameObject extends SceneNode {
         }
       }
 
-      if (~var1 >= ~DummyClass13.anInt2022) {
+      if ((var1 <= DummyClass13.anInt2022)) {
         DummyClass13.anInt2022 = 0;
         var2 = 0;
         if (var0) {

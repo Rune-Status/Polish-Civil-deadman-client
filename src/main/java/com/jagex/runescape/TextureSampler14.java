@@ -40,7 +40,7 @@ public final class TextureSampler14 extends AbstractTextureSampler {
             var8 -= this.anInt3385;
             var8 <<= 12;
             var3[var6] = var8 / (-this.anInt3385 + 2048);
-          } else if (~var5 <= ~this.anInt3385 && ~(4096 - this.anInt3385) <= ~var5) {
+          } else if ((var5 >= this.anInt3385) && ((4096 - this.anInt3385) >= var5)) {
             if (this.anInt3385 <= var7 && var7 <= 4096 - this.anInt3385) {
               var3[var6] = 0;
             } else {
@@ -83,7 +83,7 @@ public final class TextureSampler14 extends AbstractTextureSampler {
   }
 
   public static void method320(int var0, int var1, int var2, byte var3, int var4) {
-    if (~var4 >= ~var2) {
+    if ((var4 <= var2)) {
         TextureSampler18.method282(DummyClass35.anIntArrayArray663[var1], var4, -83, var2, var0);
       } else {
         TextureSampler18.method282(DummyClass35.anIntArrayArray663[var1], var2, -48, var4, var0);

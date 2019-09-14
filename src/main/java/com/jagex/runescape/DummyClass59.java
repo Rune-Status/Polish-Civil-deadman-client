@@ -376,8 +376,8 @@ public final class DummyClass59 {
             var4 = (AbstractObjectNode.anInt3606 - 6) / 8;
             var5 = (AbstractObjectNode.anInt3606 - -6) / 8;
 
-            for (int var8 = var4 - 1; ~var8 >= ~(var5 - -1); ++var8) {
-              for (int var9 = -1 + var6; ~var9 >= ~(var7 - -1); ++var9) {
+            for (int var8 = var4 - 1; (var8 <= (var5 - -1)); ++var8) {
+              for (int var9 = -1 + var6; (var9 <= (var7 - -1)); ++var9) {
                 if ((var8 < var4) || var8 > var5 || (var9 < var6)
                     || var9 > var7) {
                   TextureSampler26.maps

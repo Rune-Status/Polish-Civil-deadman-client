@@ -30,7 +30,7 @@ public final class TextureSampler26 extends AbstractTextureSampler {
 
         for (int var6 = 0; var6 < SomethingLight0.anInt1559; ++var6) {
           int var7 = var5[var6];
-          var4[var6] = ~this.anInt3073 >= ~var7 && ~var7 >= ~this.anInt3074 ? 4096 : 0;
+          var4[var6] = (this.anInt3073 <= var7) && (var7 <= this.anInt3074) ? 4096 : 0;
         }
       }
 
@@ -74,8 +74,8 @@ public final class TextureSampler26 extends AbstractTextureSampler {
         int var11 = 0;
 
         int var7;
-        for (var7 = (-6 + var1) / 8; ~var7 >= ~((6 + var1) / 8); ++var7) {
-          for (int var8 = (-6 + var2) / 8; ~((var2 + 6) / 8) <= ~var8; ++var8) {
+        for (var7 = (-6 + var1) / 8; (var7 <= ((6 + var1) / 8)); ++var7) {
+          for (int var8 = (-6 + var2) / 8; (((var2 + 6) / 8) >= var8); ++var8) {
             int var9 = (var7 << 8) - -var8;
             AudioStreamEncoder3.regionHashes[var11] = var9;
             GameClient.mapFileIds[var11] = TextureSampler26.maps.getFileId(RenderAnimation.concat(new GameString[] {

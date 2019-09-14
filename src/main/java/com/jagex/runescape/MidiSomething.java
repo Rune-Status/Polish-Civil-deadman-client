@@ -153,7 +153,7 @@ public final class MidiSomething {
         if (var16 > 0) {
           var17 = var13 - -var6 >> 6;
           if (var17 >= 0
-              && ~(AbstractMouseWheel.anIntArrayArrayArray1903.length + -1) <= ~var17) {
+              && ((AbstractMouseWheel.anIntArrayArrayArray1903.length + -1) >= var17)) {
             var14 += var5;
             var41 = AbstractMouseWheel.anIntArrayArrayArray1903[var17];
             byte[][] var45 = RenderAnimation.aByteArrayArrayArray383[var17];

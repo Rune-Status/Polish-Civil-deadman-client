@@ -241,7 +241,7 @@ public final class TextureSampler33 extends AbstractTextureSampler {
       int var10 = DummyClass59.method1040(GlTexture2d.anInt3765, -var1 + var2, (byte) 0,
         DummyClass55.anInt1425);
 
-      for (var15 = var7; ~var15 >= ~var8; ++var15) {
+      for (var15 = var7; (var15 <= var8); ++var15) {
         int[] var16 = DummyClass35.anIntArrayArray663[var15];
         TextureSampler18.method282(var16, var13, -59, var9, var5);
         TextureSampler18.method282(var16, var10, var4 + -97, var14, var5);

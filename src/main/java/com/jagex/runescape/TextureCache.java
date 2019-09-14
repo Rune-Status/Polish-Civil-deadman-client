@@ -464,7 +464,7 @@ public final class TextureCache implements ITextureCache {
   }
 
   public static void method1617(int var0, int var1, int var2, int var3, int var4, byte var5) {
-    if (~var4 >= ~LightIntensity.anInt902 && ~var2 <= ~DummyClass13.anInt2020) {
+    if ((var4 <= LightIntensity.anInt902) && (var2 >= DummyClass13.anInt2020)) {
         boolean var6;
         if (DummyClass55.anInt1425 <= var1) {
           if (GlTexture2d.anInt3765 >= var1) {
@@ -511,12 +511,12 @@ public final class TextureCache implements ITextureCache {
           }
         } else if (!var6) {
           if (var7) {
-            for (var8 = var4; ~var2 <= ~var8; ++var8) {
+            for (var8 = var4; (var2 >= var8); ++var8) {
               DummyClass35.anIntArrayArray663[var8][var3] = var0;
             }
           }
         } else {
-          for (var8 = var4; ~var8 >= ~var2; ++var8) {
+          for (var8 = var4; (var8 <= var2); ++var8) {
             DummyClass35.anIntArrayArray663[var8][var1] = var0;
           }
         }
