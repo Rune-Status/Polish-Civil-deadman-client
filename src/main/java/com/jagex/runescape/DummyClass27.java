@@ -113,7 +113,7 @@ public final class DummyClass27 {
             }
 
             var2.anInt2818 = var1.anInt2271 + var15;
-            if (~var16 < ~var17) {
+            if (var16 > var17) {
               var18 = var16;
               var16 = var17;
               var17 = var18;

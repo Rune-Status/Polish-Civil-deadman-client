@@ -41,7 +41,7 @@ public final class DummyClass8 extends DummyClass7 {
                                int var6) {
     int var8 = 0;
 
-      for (HintMarker[] var7 = GameException.aClass96Array2114; ~var7.length < ~var8; ++var8) {
+      for (HintMarker[] var7 = GameException.aClass96Array2114; var7.length > var8; ++var8) {
         HintMarker var9 = var7[var8];
         if (null != var9 && var9.anInt1360 == 2) {
           AbstractObjectNodeWrapper.method1724(var0 >> 1, var5,
@@ -208,7 +208,7 @@ public final class DummyClass8 extends DummyClass7 {
         var5 = var0.position;
         var0.writeInt(var3.anInt2305);
 
-        for (int var6 = 0; ~var3.anInt2296 < ~var6; ++var6) {
+        for (int var6 = 0; var3.anInt2296 > var6; ++var6) {
           if (~var3.anIntArray2300[var6] == -1) {
             try {
               int var7 = var3.anIntArray2301[var6];

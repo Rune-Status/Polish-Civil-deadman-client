@@ -74,7 +74,7 @@ public final class ByteArrayNode extends SubNode {
 
           for (
             var2.anIntArray3690 = new int[var7];
-            ~var6 < ~var4.position; var2.anIntArray3683[var9++] = var10) {
+            var6 > var4.position; var2.anIntArray3683[var9++] = var10) {
             var10 = var4.readUnsignedShort();
             if (var10 == 3) {
               var2.aClass94Array3688[var9] = var4.readString();

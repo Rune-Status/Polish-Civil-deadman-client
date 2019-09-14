@@ -98,7 +98,7 @@ public final class WidgetAccess extends Node {
           for (int var2 = 0; var2 < var1.length; ++var2) {
             SceneGraphTile[][] var3 = var1[var2];
 
-            for (int var4 = 0; ~var3.length < ~var4; ++var4) {
+            for (int var4 = 0; var3.length > var4; ++var4) {
               for (int var5 = 0; var3[var4].length > var5; ++var5) {
                 SceneGraphTile var6 = var3[var4][var5];
                 if (var6 != null) {

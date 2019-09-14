@@ -70,7 +70,7 @@ public final class DummyClass28 {
             .method885(true, DummyClass38.floorShadowsFileId, var1, 0);
 
         assert DummyClass16.floorShadows != null;
-        for (int var2 = 0; ~DummyClass16.floorShadows.length < ~var2; ++var2) {
+        for (int var2 = 0; DummyClass16.floorShadows.length > var2; ++var2) {
           DummyClass16.floorShadows[var2].method1675();
         }
       }
@@ -121,7 +121,7 @@ public final class DummyClass28 {
             new AbstractDirectColorSprite[TextureCache.aClass3_Sub28_Sub16_Sub2Array2140.length];
 
         for (var8 = 0;
-            ~TextureCache.aClass3_Sub28_Sub16_Sub2Array2140.length < ~var8;
+            TextureCache.aClass3_Sub28_Sub16_Sub2Array2140.length > var8;
             ++var8) {
           Mobile.aClass3_Sub28_Sub16Array2839[var8] =
               new GlDirectColorSprite(

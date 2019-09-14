@@ -87,7 +87,7 @@ public final class MouseRecorder implements Runnable {
                 AnimationSequence var7 = GameClient.method45(var6, (byte) -20);
                 for (
                   var4.anInt267 += DisplayMode.loopCycle;
-                  ~var4.anInt267 < ~var7.anIntArray1869[var4.anInt283]; DummyClass29.method909(
+                  var4.anInt267 > var7.anIntArray1869[var4.anInt283]; DummyClass29.method909(
                   115, var4)) {
                   var4.anInt267 -= var7.anIntArray1869[var4.anInt283];
                   ++var4.anInt283;

@@ -128,7 +128,7 @@ public final class TextureSampler30 extends AbstractTextureSampler {
             ++DummyClass20.anInt1781;
             --AnimationSomething.anInt3591;
 
-            for (int var4 = var3; ~AnimationSomething.anInt3591 < ~var4; ++var4) {
+            for (int var4 = var3; AnimationSomething.anInt3591 > var4; ++var4) {
               MonoChromaticImageCache.aLongArray1574[var4] =
                 MonoChromaticImageCache.aLongArray1574[var4 + 1];
               TextureSampler7.aClass94Array3341[var4] = TextureSampler7.aClass94Array3341[1 + var4];
@@ -258,7 +258,7 @@ public final class TextureSampler30 extends AbstractTextureSampler {
       int var5;
       int var6;
       for (var3 = 0; -21 < ~var3; ++var3) {
-        for (var4 = 1; ~(-1 + var2) < ~var4; ++var4) {
+        for (var4 = 1; (-1 + var2) > var4; ++var4) {
           for (var5 = 1; var5 < 127; ++var5) {
             var6 = var5 - -(var4 << 7);
             DummyOutputStream.anIntArray49[var6] =
@@ -290,7 +290,7 @@ public final class TextureSampler30 extends AbstractTextureSampler {
   }
 
   public static void method216(Buffer var0, int var1) {
-    for (int var2 = 0; ~LightIntensity.anInt906 < ~var2; ++var2) {
+    for (int var2 = 0; LightIntensity.anInt906 > var2; ++var2) {
         int var3 = var0.readUnsignedShortSmart();
         int var4 = var0.readUnsignedShort();
         if (~var4 == -65536) {

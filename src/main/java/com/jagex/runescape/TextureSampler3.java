@@ -65,7 +65,7 @@ public final class TextureSampler3 extends AbstractTextureSampler {
               byte[][] var21 = new byte[var10][];
               int var14;
               if (3 == var7) {
-                for (int var13 = 0; ~var10 < ~var13; ++var13) {
+                for (int var13 = 0; var10 > var13; ++var13) {
                   var14 = var1.readInt();
                   var21[var13] = new byte[var14];
                   var1.copy(0, var14, var21[var13]);
@@ -120,7 +120,7 @@ public final class TextureSampler3 extends AbstractTextureSampler {
         int var5 = var3.low;
         int var4 = var3.id;
         int var7 = SomethingMidiFile.BIT_MASKS[var6 - var5];
-        if (~var2 > -1 || ~var2 < ~var7) {
+        if (~var2 > -1 || var2 > var7) {
           var2 = 0;
         }
 

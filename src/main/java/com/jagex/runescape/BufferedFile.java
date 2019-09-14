@@ -44,7 +44,7 @@ public final class BufferedFile {
         this.aClass122_573.method1738(127, this.aByteArray572, this.anInt566, 0);
         long var3 = -1L;
         if (~this.aLong576 >= ~this.aLong571
-          && ~(this.aLong576 + this.anInt575) < ~this.aLong571) {
+          && (this.aLong576 + this.anInt575) > this.aLong571) {
           var3 = this.aLong571;
         } else if (this.aLong571 <= this.aLong576 && ~this.aLong576 > ~(
             this.aLong571
@@ -62,13 +62,13 @@ public final class BufferedFile {
           && this.anInt575 + this.aLong576
             >= this.anInt566 + this.aLong571) {
           var5 = this.aLong571 - -this.anInt566;
-        } else if (~(this.aLong576 - -this.anInt575) < ~this.aLong571
+        } else if ((this.aLong576 - -this.anInt575) > this.aLong571
           && this.anInt566 + this.aLong571
             >= this.anInt575 + this.aLong576) {
           var5 = this.anInt575 + this.aLong576;
         }
 
-        if (-1L < var3 && ~var5 < ~var3) {
+        if (-1L < var3 && var5 > var3) {
           int var7 = (int) (-var3 + var5);
           ArrayUtils.copy(this.aByteArray572, (int) (var3 - this.aLong571),
               this.aByteArray564,
@@ -119,7 +119,7 @@ public final class BufferedFile {
         if (this.aLong576 <= this.aLong569
           && this.aLong576 + this.anInt575 > this.aLong569) {
           var9 = (int) (this.anInt575 - this.aLong569 + this.aLong576);
-          if (~var9 < ~var3) {
+          if (var9 > var3) {
             var9 = var3;
           }
 
@@ -182,7 +182,7 @@ public final class BufferedFile {
           }
 
           if (~var5 >= ~this.aLong571
-              && ~(var5 - -var8) < ~this.aLong571) {
+              && (var5 - -var8) > this.aLong571) {
             var16 = this.aLong571;
           } else if (~var5 <= ~this.aLong571
               && var5 < this.anInt566 + this.aLong571) {
@@ -263,8 +263,7 @@ public final class BufferedFile {
         }
 
         if (0L != ~this.aLong571 && (this.aLong571 > this.aLong569
-            || ~this.aLong569
-            < ~(
+            || this.aLong569 > (
           this.anInt566 + this.aLong571))) {
           this.method975((byte) 124);
         }
@@ -293,10 +292,10 @@ public final class BufferedFile {
           this.aClass122_573.method1738(111, var1, var4, var2);
           long var12 = -1L;
           if (this.aLong576 <= this.aLong569
-            && ~(this.anInt575 + this.aLong576) < ~this.aLong569) {
+            && (this.anInt575 + this.aLong576) > this.aLong569) {
             var12 = this.aLong569;
           } else if (~this.aLong569 >= ~this.aLong576
-            && ~(var4 + this.aLong569) < ~this.aLong576) {
+            && (var4 + this.aLong569) > this.aLong576) {
             var12 = this.aLong576;
           }
 
@@ -310,7 +309,7 @@ public final class BufferedFile {
               && ~(this.aLong569 - -var4) >= ~(
               this.aLong576 - -this.anInt575)) {
             var7 = var4 + this.aLong569;
-          } else if (~(this.aLong576 + this.anInt575) < ~this.aLong569
+          } else if ((this.aLong576 + this.anInt575) > this.aLong569
             && this.aLong569 + var4 >= this.anInt575
               + this.aLong576) {
             var7 = this.anInt575 + this.aLong576;

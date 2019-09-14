@@ -53,7 +53,7 @@ public final class ProceduralTexture {
         var8 = var7.samplers.length;
         var5[var6] = new int[var8];
 
-        for (var9 = 0; ~var8 < ~var9; ++var9) {
+        for (var9 = 0; var8 > var9; ++var9) {
           var5[var6][var9] = var1.readUnsignedByte();
         }
 
@@ -102,7 +102,7 @@ public final class ProceduralTexture {
       TextureSampler33.method180(-1, var1, var3);
 
       int var11;
-      for (var11 = 0; ~this.aClass3_Sub13Array1147.length < ~var11; ++var11) {
+      for (var11 = 0; this.aClass3_Sub13Array1147.length > var11; ++var11) {
         this.aClass3_Sub13Array1147[var11].method160(var1, var3, 250);
       }
 
@@ -212,7 +212,7 @@ public final class ProceduralTexture {
         var10 = 0;
 
         int var11;
-        for (var11 = 0; ~var1 < ~var11; ++var11) {
+        for (var11 = 0; var1 > var11; ++var11) {
           if (var3) {
             var10 = var11 << 2;
           }
@@ -325,7 +325,7 @@ public final class ProceduralTexture {
         this.anIntArray1144 = null;
       }
 
-      for (var4 = 0; ~this.anIntArray1149.length < ~var4; ++var4) {
+      for (var4 = 0; this.anIntArray1149.length > var4; ++var4) {
         if (!var2.method11(21, this.anIntArray1149[var4])) {
           return false;
         }
@@ -349,7 +349,7 @@ public final class ProceduralTexture {
         Mobile var8;
         if (0 == ~var7) {
           var8 = TextureCache.localPlayer;
-        } else if (~DummyClass13.anInt2022 < ~var7) {
+        } else if (DummyClass13.anInt2022 > var7) {
           var8 = TextureSampler0.players[DummyClass42.anIntArray887[var7]];
         } else {
           var8 = TextureSampler5.npcs[AudioWorker.anIntArray347[-DummyClass13.anInt2022 + var7]];
@@ -394,7 +394,7 @@ public final class ProceduralTexture {
             if (~var7 <= -1) {
               HintMarker[] var11 = GameException.aClass96Array2114;
 
-              for (var12 = 0; ~var11.length < ~var12; ++var12) {
+              for (var12 = 0; var11.length > var12; ++var12) {
                 HintMarker var13 = var11[var12];
                 if (null != var13 && -11 == ~var13.anInt1360
                   && DummyClass42.anIntArray887[var7] == var13.anInt1359) {
@@ -481,7 +481,7 @@ public final class ProceduralTexture {
             }
           }
 
-          if (~var8.anInt2781 < ~AbstractGameWorld.updateCycle) {
+          if (var8.anInt2781 > AbstractGameWorld.updateCycle) {
             AbstractDirectColorSprite var23 = OndemandRequester.aClass3_Sub28_Sub16Array996[0];
             AbstractDirectColorSprite var25 = OndemandRequester.aClass3_Sub28_Sub16Array996[1];
             if (var8 instanceof NPC) {
@@ -538,7 +538,7 @@ public final class ProceduralTexture {
           }
 
           for (var19 = 0; ~var19 > -5; ++var19) {
-            if (~var8.anIntArray2768[var19] < ~AbstractGameWorld.updateCycle) {
+            if (var8.anIntArray2768[var19] > AbstractGameWorld.updateCycle) {
               if (var8 instanceof NPC) {
                 NPC var30 = (NPC) var8;
                 NpcConfiguration var26 = var30.config;

@@ -218,7 +218,7 @@ public final class TextureSampler10 extends AbstractTextureSampler {
           if (-1 == ~var4) {
             this.anIntArrayArray3438 = new int[var2.readUnsignedByte()][4];
 
-            for (int var5 = 0; ~this.anIntArrayArray3438.length < ~var5;
+            for (int var5 = 0; this.anIntArrayArray3438.length > var5;
                 ++var5) {
               this.anIntArrayArray3438[var5][0] = var2.readUnsignedShort();
               this.anIntArrayArray3438[var5][1] = var2.readUnsignedByte() << 4;

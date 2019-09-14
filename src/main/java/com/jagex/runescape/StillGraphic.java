@@ -73,8 +73,7 @@ public final class StillGraphic extends SceneNode {
 
         this.anInt2719 += var2;
 
-        while (~this.anInt2719
-            < ~this.aClass142_2711.anIntArray1869[this.anInt2706]) {
+        while (this.anInt2719 > this.aClass142_2711.anIntArray1869[this.anInt2706]) {
           this.anInt2719 -= this.aClass142_2711.anIntArray1869[this.anInt2706];
           ++this.anInt2706;
           if (~this.aClass142_2711.anIntArray1851.length >= ~this.anInt2706) {

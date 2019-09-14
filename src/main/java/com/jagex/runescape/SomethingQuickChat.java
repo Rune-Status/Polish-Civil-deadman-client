@@ -23,7 +23,7 @@ public final class SomethingQuickChat extends SubNode {
   public void method545(Buffer var1, int[] var2, boolean var3 ) {
     if (!var3) {
         if (this.anIntArray3566 != null) {
-          for (int var4 = 0; ~this.anIntArray3566.length < ~var4 && ~var4 > ~var2.length; ++var4) {
+          for (int var4 = 0; this.anIntArray3566.length > var4 && ~var4 > ~var2.length; ++var4) {
             int var5 = GameException.anIntArray2113[this.method550(89, var4)];
             if (~var5 < -1) {
               var1.method739(0, var5, var2[var4]);
@@ -51,7 +51,7 @@ public final class SomethingQuickChat extends SubNode {
 
   public void method548(int var1 ) {
     if (null != this.anIntArray3567) {
-        for (int var2 = 0; ~this.anIntArray3567.length < ~var2; ++var2) {
+        for (int var2 = 0; this.anIntArray3567.length > var2; ++var2) {
           this.anIntArray3567[var2] =
             TextureSampler3.method308(this.anIntArray3567[var2], '\u8000');
         }

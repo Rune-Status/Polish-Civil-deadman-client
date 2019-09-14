@@ -148,7 +148,7 @@ public final class NpcConfiguration {
       }
 
       if (this.anIntArray1292 != null) {
-        for (int var2 = 0; ~this.anIntArray1292.length < ~var2; ++var2) {
+        for (int var2 = 0; this.anIntArray1292.length > var2; ++var2) {
           if (0 != ~this.anIntArray1292[var2]) {
             NpcConfiguration var3 = SubNode.getNpcConfiguration(
                 this.anIntArray1292[var2]);
@@ -221,7 +221,7 @@ public final class NpcConfiguration {
 
           Model[] var14 = new Model[this.anIntArray1288.length];
 
-          for (int var15 = 0; ~this.anIntArray1288.length < ~var15; ++var15) {
+          for (int var15 = 0; this.anIntArray1288.length > var15; ++var15) {
             if (0 != ~this.anIntArray1288[var15]) {
               var14[var15] =
                 Model.getModel(TextureSampler31.aClass153_3173,
@@ -312,8 +312,8 @@ public final class NpcConfiguration {
           }
 
           if (this.aShortArray1248 != null) {
-            for (var16 = 0; ~this.aShortArray1248.length < ~var16; ++var16) {
-              if (null != this.aByteArray1247 && ~this.aByteArray1247.length < ~var16) {
+            for (var16 = 0; this.aShortArray1248.length > var16; ++var16) {
+              if (null != this.aByteArray1247 && this.aByteArray1247.length > var16) {
                 assert var34 != null;
                 var34.replaceColor(this.aShortArray1248[var16],
                   SceneShadowMap.aShortArray1779[this.aByteArray1247[var16] & 255]);
@@ -348,7 +348,7 @@ public final class NpcConfiguration {
         boolean var36 = false;
         var16 = null != var1 ? var1.length : 0;
 
-        for (var17 = 0; ~var16 < ~var17; ++var17) {
+        for (var17 = 0; var16 > var17; ++var17) {
           assert var1 != null;
           if (var1[var17] != null) {
             AnimationSequence var39 = GameClient.method45(var1[var17].anInt1890, (byte) -20);
@@ -371,7 +371,7 @@ public final class NpcConfiguration {
               }
 
               if ((var39.tween || MonoChromaticImageBuffer.tweening) && 0 != ~var20
-                && ~var39.anIntArray1851.length < ~var20) {
+                && var39.anIntArray1851.length > var20) {
                 DummyClass35.anIntArray664[var17] = var39.anIntArray1869[var19];
                 SubNode.anIntArray2574[var17] = var1[var17].anInt1897;
                 var22 = var39.anIntArray1851[var20];
@@ -421,7 +421,7 @@ public final class NpcConfiguration {
             }
 
             if ((var10.tween || MonoChromaticImageBuffer.tweening) && 0 != ~var5
-              && ~var10.anIntArray1851.length < ~var5) {
+              && var10.anIntArray1851.length > var5) {
               var19 = var10.anIntArray1869[var7];
               var18 = var10.anIntArray1851[var5];
               var42 = var18 >>> 16;
@@ -588,7 +588,7 @@ public final class NpcConfiguration {
 
             int var10;
             if (null != this.aShortArray1248) {
-              for (var10 = 0; ~this.aShortArray1248.length < ~var10; ++var10) {
+              for (var10 = 0; this.aShortArray1248.length > var10; ++var10) {
                 if (this.aByteArray1247
                     != null && ~var10 > ~this.aByteArray1247.length) {
                   assert var15 != null;
@@ -657,7 +657,7 @@ public final class NpcConfiguration {
               this.aShortArray1246 = new short[var4];
               this.aShortArray1271 = new short[var4];
 
-              for (var5 = 0; ~var4 < ~var5; ++var5) {
+              for (var5 = 0; var4 > var5; ++var5) {
                 this.aShortArray1271[var5] = (short) var3.readUnsignedShort();
                 this.aShortArray1246[var5] = (short) var3.readUnsignedShort();
               }
@@ -673,7 +673,7 @@ public final class NpcConfiguration {
                 var4 = var3.readUnsignedByte();
                 this.anIntArray1250 = new int[var4];
 
-                for (var5 = 0; ~var4 < ~var5; ++var5) {
+                for (var5 = 0; var4 > var5; ++var5) {
                   this.anIntArray1250[var5] = var3.readUnsignedShort();
                 }
               } else if (93 != var2) {

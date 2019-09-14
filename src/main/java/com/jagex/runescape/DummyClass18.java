@@ -95,7 +95,7 @@ public final class DummyClass18 {
         HashTable.packetLength = SpotAnimationConfig.gameBuffer.readUnsignedShort();
       }
 
-      if (~HashTable.packetLength < ~available) {
+      if (HashTable.packetLength > available) {
         return false;
       }
       SpotAnimationConfig.gameBuffer.position = 0;
@@ -174,7 +174,7 @@ public final class DummyClass18 {
             var4 = var24.toBase37();
             var31 = false;
 
-            for (var30 = 0; ~AnimationSomething.anInt3591 < ~var30; ++var30) {
+            for (var30 = 0; AnimationSomething.anInt3591 > var30; ++var30) {
               if (MonoChromaticImageCache.aLongArray1574[var30] == var4) {
                 var31 = true;
                 break;
@@ -192,7 +192,7 @@ public final class DummyClass18 {
                 var70.indexOf(AbstractAudioOutputStream.aClass94_1970), 0, 0);
             var4 = var24.toBase37();
 
-            for (var30 = 0; ~AnimationSomething.anInt3591 < ~var30; ++var30) {
+            for (var30 = 0; AnimationSomething.anInt3591 > var30; ++var30) {
               if (var4 == MonoChromaticImageCache.aLongArray1574[var30]) {
                 var31 = true;
                 break;
@@ -228,7 +228,7 @@ public final class DummyClass18 {
               var31 = false;
               var4 = var24.toBase37();
 
-              for (var30 = 0; ~AnimationSomething.anInt3591 < ~var30; ++var30) {
+              for (var30 = 0; AnimationSomething.anInt3591 > var30; ++var30) {
                 if (~MonoChromaticImageCache.aLongArray1574[var30] == ~var4) {
                   var31 = true;
                   break;
@@ -248,7 +248,7 @@ public final class DummyClass18 {
                 var4 = var24.toBase37();
                 var31 = false;
 
-                for (var30 = 0; ~AnimationSomething.anInt3591 < ~var30;
+                for (var30 = 0; AnimationSomething.anInt3591 > var30;
                     ++var30) {
                   if (~var4 == ~MonoChromaticImageCache.aLongArray1574[var30]) {
                     var31 = true;
@@ -269,7 +269,7 @@ public final class DummyClass18 {
                 var31 = false;
                 var4 = var24.toBase37();
 
-                for (var30 = 0; ~AnimationSomething.anInt3591 < ~var30;
+                for (var30 = 0; AnimationSomething.anInt3591 > var30;
                     ++var30) {
                   if (~MonoChromaticImageCache.aLongArray1574[var30] == ~var4) {
                     var31 = true;
@@ -332,7 +332,7 @@ public final class DummyClass18 {
         DummyClass56.spawnSceneY = SpotAnimationConfig.gameBuffer.method751((byte) -88);
         DummyClass45.spawnSceneX = SpotAnimationConfig.gameBuffer.method754(true);
 
-        while (~HashTable.packetLength < ~SpotAnimationConfig.gameBuffer.position) {
+        while (HashTable.packetLength > SpotAnimationConfig.gameBuffer.position) {
           GameString.packetId = SpotAnimationConfig.gameBuffer.readUnsignedByte();
           DummyClass37.parseEntityUpdate((byte) -82);
         }
@@ -389,7 +389,7 @@ public final class DummyClass18 {
           }
 
           if (1 >= var10) {
-            for (var54 = 0; ~AnimationSomething.anInt3591 < ~var54; ++var54) {
+            for (var54 = 0; AnimationSomething.anInt3591 > var54; ++var54) {
               if (~MonoChromaticImageCache.aLongArray1574[var54] == ~var2) {
                 var63 = true;
                 break label1521;
@@ -461,7 +461,7 @@ public final class DummyClass18 {
             SubNode.anInt2572 = var6;
             ClanChatUser[] var7 = new ClanChatUser[100];
 
-            for (var8 = 0; ~SubNode.anInt2572 < ~var8; ++var8) {
+            for (var8 = 0; SubNode.anInt2572 > var8; ++var8) {
               var7[var8] = new ClanChatUser();
               var7[var8].key = SpotAnimationConfig.gameBuffer.readLong();
               var7[var8].name = FileCache.stringFromBase37(var0 + -29581, var7[var8].key);
@@ -480,7 +480,7 @@ public final class DummyClass18 {
               var32 = true;
               --var10;
 
-              for (var11 = 0; ~var10 < ~var11; ++var11) {
+              for (var11 = 0; var10 > var11; ++var11) {
                 if (-1 > ~var7[var11].name.method1559(var7[var11 - -1].name, var0 ^ 82)) {
                   var32 = false;
                   ClanChatUser var9 = var7[var11];
@@ -1098,7 +1098,7 @@ public final class DummyClass18 {
       }
 
       if (128 == GameString.packetId) {
-        for (var20 = 0; ~DummyClass5.anIntArray2985.length < ~var20; ++var20) {
+        for (var20 = 0; DummyClass5.anIntArray2985.length > var20; ++var20) {
           if (~LightIntensity.variables[var20] != ~DummyClass5.anIntArray2985[var20]) {
             DummyClass5.anIntArray2985[var20] = LightIntensity.variables[var20];
             DummyClass39.method1087(98, var20);
@@ -1405,7 +1405,7 @@ public final class DummyClass18 {
           }
         }
 
-        for (var20 = 0; ~TextureSampler5.npcs.length < ~var20; ++var20) {
+        for (var20 = 0; TextureSampler5.npcs.length > var20; ++var20) {
           if (null != TextureSampler5.npcs[var20]) {
             TextureSampler5.npcs[var20].animationId = -1;
           }
@@ -1737,7 +1737,7 @@ public final class DummyClass18 {
           }
 
           if (var25 != null && ~var5 <= -1 &&
-            ~var25.anIntArray254.length < ~var5) {
+            var25.anIntArray254.length > var5) {
             var25.anIntArray254[var5] = var6;
             var25.anIntArray317[var5] = var30;
           }
@@ -1866,7 +1866,7 @@ public final class DummyClass18 {
 
           for (
               var30 = 0;
-              ~SubNode.anInt2572 < ~var30 && (
+              SubNode.anInt2572 > var30 && (
                   var2 != ClientScript.aClass3_Sub19Array3694[var30].key
                       || ~var21
                       != ~ClientScript.aClass3_Sub19Array3694[var30].anInt2478);
@@ -1874,7 +1874,7 @@ public final class DummyClass18 {
           }
 
           if (var30 < SubNode.anInt2572) {
-            while (~(-1 + SubNode.anInt2572) < ~var30) {
+            while ((-1 + SubNode.anInt2572) > var30) {
               ClientScript.aClass3_Sub19Array3694[var30] =
                   ClientScript.aClass3_Sub19Array3694[1 + var30];
               ++var30;
@@ -2124,8 +2124,8 @@ public final class DummyClass18 {
         int var6 = var1 + -TextureSampler20.anInt3156 + DummyClass18.aClass11_88.anInt247;
         int var7 = DummyClass18.aClass11_88.anInt208 + -DummyClass21.anInt1761 + var2;
         int var5 = DummyClass42.aClass11_886.anInt214;
-        if (~SomethingTexture3.anInt2658 < ~DummyClass42.aClass11_886.anInt179 && (~var5 > ~var3
-          || ~(-var5) < ~var3 || var4 > var5 || var4 < -var5)) {
+        if (SomethingTexture3.anInt2658 > DummyClass42.aClass11_886.anInt179 && (~var5 > ~var3
+          || (-var5) > var3 || var4 > var5 || var4 < -var5)) {
           NPC.aBoolean3975 = true;
         }
 

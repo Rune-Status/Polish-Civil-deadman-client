@@ -352,7 +352,7 @@ public final class SomethingTexture4 extends AbstractSomethingTexture {
         int[] var4 = TextureSampler23.worldMaps.getChildIds((byte) -128, var3);
 
         assert var4 != null;
-        for (int var5 = 0; ~var4.length < ~var5; ++var5) {
+        for (int var5 = 0; var4.length > var5; ++var5) {
           DummyClass21.aClass61_1758.addLast(DummyClass23.method1747(
               new Buffer(TextureSampler23.worldMaps.getBytes(var3, var4[var5])),
               true));

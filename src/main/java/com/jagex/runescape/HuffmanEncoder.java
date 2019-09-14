@@ -41,7 +41,7 @@ public final class HuffmanEncoder {
       this.codewords = var1;
       int var4 = 0;
 
-      for (int var5 = 0; ~var2 < ~var5; ++var5) {
+      for (int var5 = 0; var2 > var5; ++var5) {
         byte var6 = var1[var5];
         if (~var6 != -1) {
           int var7 = 1 << 32 + -var6;
@@ -144,7 +144,7 @@ public final class HuffmanEncoder {
             var13 -= 8;
             ++var12;
             var3[var12] = (byte) (var7 = var10 >>> var13);
-            if (~var14 < ~var12) {
+            if (var14 > var12) {
               var13 -= 8;
               ++var12;
               var3[var12] = (byte) (var7 = var10 >>> var13);

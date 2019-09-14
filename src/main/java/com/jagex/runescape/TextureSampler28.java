@@ -113,7 +113,7 @@ public final class TextureSampler28 extends AbstractTextureSampler {
                           int var38 = var33[1];
                           int var35;
                           int var36;
-                          if (~var30 < ~var42) {
+                          if (var30 > var42) {
                             var35 = Math.max(var42, var37);
                             var36 = Math.min(var30, var38);
                           } else if (var37 != 0) {
@@ -287,7 +287,7 @@ public final class TextureSampler28 extends AbstractTextureSampler {
             if (~var17 > ~var14) {
               var19 = var17 * var8 / var14;
               if (~this.anInt3309 == -1) {
-                for (var20 = 0; ~var13 < ~var20; ++var20) {
+                for (var20 = 0; var13 > var20; ++var20) {
                   var21 = var20 * var8 / var13;
                   var18[ClientScript
                       .bitAnd(RenderAnimation.anInt396, var20 + var3)] =
@@ -321,7 +321,7 @@ public final class TextureSampler28 extends AbstractTextureSampler {
                       RenderAnimation.anInt396)] = var8 * var20 / var13;
                 }
 
-                if (~(var15 - -var16) < ~SomethingLight0.anInt1559) {
+                if ((var15 - -var16) > SomethingLight0.anInt1559) {
                   var20 = -var15 + SomethingLight0.anInt1559;
                   ArrayUtils.fill(var18, var15, var20, var8);
                   ArrayUtils.fill(var18, 0, var16 - var20, var8);
@@ -339,7 +339,7 @@ public final class TextureSampler28 extends AbstractTextureSampler {
                         -1 + var3 - (-var4 + var21))] = var22 * var20 >> 12;
                   }
                 } else {
-                  for (var21 = 0; ~var13 < ~var21; ++var21) {
+                  for (var21 = 0; var13 > var21; ++var21) {
                     var22 = var21 * var8 / var13;
                     var18[ClientScript.bitAnd(var3 - -var21, RenderAnimation.anInt396)] =
                       var18[ClientScript.bitAnd(-1 + -var21 + var4 + var3,
@@ -358,7 +358,7 @@ public final class TextureSampler28 extends AbstractTextureSampler {
             }
           }
         } else if (~SomethingLight0.anInt1559 <= ~(var3 - -var4)) {
-          for (var11 = 0; ~var6 < ~var11; ++var11) {
+          for (var11 = 0; var6 > var11; ++var11) {
             ArrayUtils.fill(var7[var1 - -var11], var3, var4, var8);
           }
         } else {

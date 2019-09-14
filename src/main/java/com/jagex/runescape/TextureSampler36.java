@@ -220,7 +220,7 @@ public final class TextureSampler36 extends AbstractTextureSampler {
 
         if (!DummyClass36.aBoolean2615 && ~NpcConfiguration.anInt1297 <= ~var3
           && ~NpcConfiguration.anInt1297 > ~(var4 + var3) && var5 <= DummyClass36.anInt2612
-          && ~(var1 + var5) < ~DummyClass36.anInt2612) {
+          && (var1 + var5) > DummyClass36.anInt2612) {
           TextureSampler27.aBoolean3094 = true;
           MapScene.anInt59 = 0;
           var12 = Unsure.screenUpperX;

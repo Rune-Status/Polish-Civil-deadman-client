@@ -111,14 +111,14 @@ public final class OndemandRequester {
                 var7 = -this.currentRequest.buffer.position + var6;
               }
 
-              if (~var7 < ~avail) {
+              if (var7 > avail) {
                 var7 = avail;
               }
 
               this.socketStream.read(this.currentRequest.buffer.bytes,
                   this.currentRequest.buffer.position, var7);
               if (-1 != ~this.encryptionKey) {
-                for (var8 = 0; ~var7 < ~var8; ++var8) {
+                for (var8 = 0; var7 > var8; ++var8) {
                   this.currentRequest.buffer.bytes[this.currentRequest.buffer.position - -var8] =
                     (byte) ObjectCache.bitXor(
                         this.currentRequest.buffer.bytes[this.currentRequest.buffer.position + var8],

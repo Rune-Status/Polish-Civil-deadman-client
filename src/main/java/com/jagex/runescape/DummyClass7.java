@@ -85,7 +85,7 @@ public class DummyClass7 extends DummyClass6 {
             }
           }
         } else {
-          for (var10 = 0; ~(var3 ? 64 : 4096) < ~var10; ++var10) {
+          for (var10 = 0; (var3 ? 64 : 4096) > var10; ++var10) {
             var2 = var0.readByte();
             if (0 != var2) {
               ++var0.position;

@@ -177,7 +177,7 @@ public final class GameObject extends SceneNode {
           if (~this.anInt2726 <= ~var5) {
             int var6 = 0;
 
-            for (int var7 = var5; ~this.aClass142_2722.anIntArray1851.length < ~var7; ++var7) {
+            for (int var7 = var5; this.aClass142_2722.anIntArray1851.length > var7; ++var7) {
               var6 += this.aClass142_2722.anIntArray1869[var7];
             }
 
@@ -194,7 +194,7 @@ public final class GameObject extends SceneNode {
           }
         }
 
-        while (~var4 < ~this.aClass142_2722.anIntArray1869[this.anInt2726]) {
+        while (var4 > this.aClass142_2722.anIntArray1869[this.anInt2726]) {
           SocketStream.method1470(var1, this.aClass142_2722, 183921384, var2, false,
               this.anInt2726);
           var4 -= this.aClass142_2722.anIntArray1869[this.anInt2726];
@@ -535,7 +535,7 @@ public final class GameObject extends SceneNode {
                   != ~var11 || var11 != BufferData
                   .method1736(GameWorldSomething.currentPlane, 1,
                       var3 + var23, var5 - -var25)) {
-            for (var28 = 0; ~var37.anInt3891 < ~var28; ++var28) {
+            for (var28 = 0; var37.anInt3891 > var28; ++var28) {
               var37.anIntArray3883[var28] +=
                   -var11 + BufferData
                       .method1736(GameWorldSomething.currentPlane, 1,
@@ -586,7 +586,7 @@ public final class GameObject extends SceneNode {
   public static void method1964(boolean var0) {
     int var1 = SpotAnimationConfig.gameBuffer.readBits(8);
       int var2;
-      if (~DummyClass13.anInt2022 < ~var1) {
+      if (DummyClass13.anInt2022 > var1) {
         for (var2 = var1; ~var2 > ~DummyClass13.anInt2022; ++var2) {
           VariableUpdate.anIntArray2292[DummyClass17.anInt1829++] =
             DummyClass42.anIntArray887[var2];

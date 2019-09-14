@@ -238,7 +238,7 @@ public abstract class AbstractFrameRegulator {
                       var33 = var13.aShortArray706[var15 + 1];
                       var34 = (var33 >> 8) + var16;
                       var35 = var34 - -(255 & var33);
-                      var32 = ~var34 > ~var23 && ~var35 < ~var23;
+                      var32 = ~var34 > ~var23 && var35 > var23;
                     }
 
                     if (var31 && var32) {
@@ -352,14 +352,14 @@ public abstract class AbstractFrameRegulator {
                       var50 = var13.aShortArray706[1 + var15];
                       var35 = (var50 >> 8) + var16;
                       var36 = (var50 & 255) + var35;
-                      var32 = var23 > var35 && ~var36 < ~var23;
+                      var32 = var23 > var35 && var36 > var23;
                     }
 
                     if (!var51 && var19 - 1 >= var17) {
                       var50 = var13.aShortArray706[-1 + var15];
                       var35 = var16 + (var50 >> 8);
                       var36 = (255 & var50) + var35;
-                      var51 = var35 < var23 && ~var36 < ~var23;
+                      var51 = var35 < var23 && var36 > var23;
                     }
 
                     if (var32 && var51) {
@@ -385,7 +385,7 @@ public abstract class AbstractFrameRegulator {
                       var50 = var13.aShortArray706[var15 - -1];
                       var35 = var16 + (var50 >> 8);
                       var36 = (255 & var50) + var35;
-                      var51 = var23 > var35 && ~var36 < ~var23;
+                      var51 = var23 > var35 && var36 > var23;
                     }
 
                     if (var32 && var51) {

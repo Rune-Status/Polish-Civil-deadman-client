@@ -142,7 +142,7 @@ public final class TextureSampler33 extends AbstractTextureSampler {
       if (SomethingLight0.anInt1559 != var2) {
         TextureCache.anIntArray2125 = new int[var2];
 
-        for (var3 = 0; ~var2 < ~var3; ++var3) {
+        for (var3 = 0; var2 > var3; ++var3) {
           TextureCache.anIntArray2125[var3] = (var3 << 12) / var2;
         }
 

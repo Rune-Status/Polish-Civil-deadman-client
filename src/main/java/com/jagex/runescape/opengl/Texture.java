@@ -433,7 +433,7 @@ public final class Texture extends SubNode {
               var4 = NPC.anInt3995 >> 7;
               int var6 = TextureCache.localPlayer.anInt2819 >> 7;
               int var8;
-              if (~var6 < ~var4) {
+              if (var6 > var4) {
                 var8 = -var4 + var6;
               } else {
                 var8 = -var6 + var4;

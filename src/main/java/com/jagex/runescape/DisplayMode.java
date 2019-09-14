@@ -50,7 +50,7 @@ public final class DisplayMode {
       if (null != var4) {
         int var5 = 0;
 
-        for (int var6 = 0; ~var4.ids.length < ~var6; ++var6) {
+        for (int var6 = 0; var4.ids.length > var6; ++var6) {
           if (var4.ids[var6] >= 0 && TextureSampler39.anInt3287 > var4.ids[var6]) {
             ItemConfig var7 = DummyClass35.getItemConfig(var4.ids[var6], (byte) 79);
             if (null != var7.aClass130_798) {

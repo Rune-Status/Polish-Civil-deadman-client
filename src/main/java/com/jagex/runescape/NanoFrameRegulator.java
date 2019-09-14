@@ -8,7 +8,7 @@ public final class NanoFrameRegulator extends AbstractFrameRegulator {
     if (var1 == -1) {
       long var4 = 1000000L * var2;
       long var6 = this.aLong2698 - System.nanoTime();
-      if (~var4 < ~var6) {
+      if (var4 > var6) {
         var6 = var4;
       }
 

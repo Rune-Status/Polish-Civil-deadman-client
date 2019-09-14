@@ -349,7 +349,7 @@ public final class DirectImageProducer extends AbstractImageProducer
               || ~(2 & BZipDecompressorState.tileFlags[0][lightPosX][lightPosY]) != -1
               || ~(16 & BZipDecompressorState.tileFlags[var8][lightPosX][lightPosY]) == -1
               && DummyClass18.method823(lightPosY, lightPosX, -87, var8) == GameObject.plane) {
-              if (~DummyClass52.anInt1174 < ~var8) {
+              if (DummyClass52.anInt1174 > var8) {
                 DummyClass52.anInt1174 = var8;
               }
 
@@ -637,11 +637,11 @@ public final class DirectImageProducer extends AbstractImageProducer
             SomethingGl0[] var49 = new SomethingGl0[var50.length
                 - -var46.length];
 
-            for (var44 = 0; ~var50.length < ~var44; ++var44) {
+            for (var44 = 0; var50.length > var44; ++var44) {
               var49[var44] = var50[var44];
             }
 
-            for (var44 = 0; ~var46.length < ~var44; ++var44) {
+            for (var44 = 0; var46.length > var44; ++var44) {
               var49[var50.length + var44] = var46[var44];
             }
 
@@ -1051,7 +1051,7 @@ public final class DirectImageProducer extends AbstractImageProducer
 
                 int var23 = 0;
                 if (~var21 <= ~var0) {
-                  if (~var21 < ~(-1 + var11 + var0)) {
+                  if (var21 > (-1 + var11 + var0)) {
                     var23 = 1 - var11 - (var0 - var21);
                   }
                 } else {

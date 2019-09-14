@@ -28,7 +28,7 @@ public final class SomethingInScenePacket202 extends Node {
   public static void method111(byte var0, int var1, int var2, int var3, int var4, int var5, int var6,
                               int var7, int var8) {
     if (var0 < -47) {
-        for (int var9 = 0; ~DummyClass25.aClass131_1624.anInt1720 < ~var9; ++var9) {
+        for (int var9 = 0; DummyClass25.aClass131_1624.anInt1720 > var9; ++var9) {
           if (DummyClass25.aClass131_1624.method1787(var9, (byte) -124)) {
             int var10 =
               -TextureSampler37.anInt3256 + DummyClass25.aClass131_1624.aShortArray1727[var9];
@@ -105,7 +105,7 @@ public final class SomethingInScenePacket202 extends Node {
               var13 -= var16.method998() * (var17 + -1) / 2;
               var13 += var16.method1006() / 2;
 
-              for (int var18 = 0; ~var17 < ~var18; ++var18) {
+              for (int var18 = 0; var17 > var18; ++var18) {
                 GameString var19 = DirectImageProducer.aClass94Array2977[var18];
                 if (-1 + var17 > var18) {
                   var19.method1553(-4 + var19.getLength(), false);
@@ -286,7 +286,7 @@ public final class SomethingInScenePacket202 extends Node {
 
       if (var1 == 670232012) {
         label226:
-        for (var3 = 0; ~var2 < ~var3; ++var3) {
+        for (var3 = 0; var2 > var3; ++var3) {
           long var16;
           if (var0) {
             var4 = TextureCache.localPlayer;
@@ -344,7 +344,7 @@ public final class SomethingInScenePacket202 extends Node {
               int var13;
               int var14;
               for (var13 = var8; ~var13 > ~var10; ++var13) {
-                for (var14 = var9; ~var11 < ~var14; ++var14) {
+                for (var14 = var9; var11 > var14; ++var14) {
                   if (-2 <= ~DummyClass9.anIntArrayArray4010[var13][var14]) {
                     var12 = false;
                     break;
@@ -360,7 +360,7 @@ public final class SomethingInScenePacket202 extends Node {
                     continue label226;
                   }
 
-                  for (var14 = var9; ~var11 < ~var14; ++var14) {
+                  for (var14 = var9; var11 > var14; ++var14) {
                     --DummyClass9.anIntArrayArray4010[var13][var14];
                   }
 
@@ -370,7 +370,7 @@ public final class SomethingInScenePacket202 extends Node {
             }
 
             if (null != var4.anObject2796 && ~AbstractGameWorld.updateCycle <= ~var4.anInt2797
-              && ~var4.anInt2778 < ~AbstractGameWorld.updateCycle) {
+              && var4.anInt2778 > AbstractGameWorld.updateCycle) {
               var4.aBoolean3968 = false;
               var4.anInt2831 =
                 BufferData.method1736(GameWorldSomething.currentPlane, 1, var4.anInt2819,
@@ -399,7 +399,7 @@ public final class SomethingInScenePacket202 extends Node {
         ProceduralTexture.anInt1150 = -1;
       }
 
-      if (~SomethingQuickChat2.anInt3536 < ~DummyClass30.anInt455) {
+      if (SomethingQuickChat2.anInt3536 > DummyClass30.anInt455) {
         TextureSampler13.anInt3362 = -1;
         SomethingQuickChat2.anInt3536 = DummyClass30.anInt455;
         ProceduralTexture.anInt1150 = -1;

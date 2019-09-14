@@ -61,10 +61,10 @@ public class DummyClass5 extends DummyClass6 {
                 var3 = HashTable.anInt1709;
                 var11 = SomethingTilek.anInt1676;
                 if (~var11 > ~(AbstractIndexedColorSprite.anInt1462 - 10)
-                    || ~var11 < ~(
+                    || var11 > (
                     SomethingWorldMapy.anInt3552 + (
                         AbstractIndexedColorSprite.anInt1462 - -10))
-                    || ~(-10 + TextureSampler29.anInt3395) < ~var3 || ~var3 < ~(
+                    || (-10 + TextureSampler29.anInt3395) > var3 || var3 > (
                     SomethingQuickChat2.anInt3537 + (TextureSampler29.anInt3395
                         - -10))) {
                   DummyClass36.aBoolean2615 = false;
@@ -95,9 +95,9 @@ public class DummyClass5 extends DummyClass6 {
                         - 1)) + var3 + 31;
                   }
 
-                  if (~var12 < ~var11 && ~(var11 - -var4) < ~var12
+                  if (var12 > var11 && (var11 - -var4) > var12
                       && var9 + -13 < var13
-                      && ~(3 + var9) < ~var13) {
+                      && (3 + var9) > var13) {
                     var7 = var8;
                   }
                 }

@@ -47,7 +47,7 @@ public final class IdentityKit {
         }
 
         if (null != this.aShortArray471) {
-          for (var5 = 0; ~this.aShortArray471.length < ~var5; ++var5) {
+          for (var5 = 0; this.aShortArray471.length > var5; ++var5) {
             var7.replaceMaterial(this.aShortArray471[var5],
                 this.aShortArray470[var5]);
           }
@@ -104,7 +104,7 @@ public final class IdentityKit {
             this.aShortArray471 = new short[var4];
             this.aShortArray470 = new short[var4];
 
-            for (var5 = 0; ~var4 < ~var5; ++var5) {
+            for (var5 = 0; var4 > var5; ++var5) {
               this.aShortArray471[var5] = (short) var2.readUnsignedShort();
               this.aShortArray470[var5] = (short) var2.readUnsignedShort();
             }
@@ -260,7 +260,7 @@ public final class IdentityKit {
     SpotAnimationConfig.gameBuffer.method807((byte) -98);
       int var1 = SpotAnimationConfig.gameBuffer.readBits(8);
       int var2;
-      if (~DummyClass6.anInt2046 < ~var1) {
+      if (DummyClass6.anInt2046 > var1) {
         for (var2 = var1; var2 < DummyClass6.anInt2046; ++var2) {
           VariableUpdate.anIntArray2292[DummyClass17.anInt1829++] = AudioWorker.anIntArray347[var2];
         }

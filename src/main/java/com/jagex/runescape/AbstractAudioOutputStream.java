@@ -192,7 +192,7 @@ public class AbstractAudioOutputStream {
             this.write();
           }
 
-          if (~start < ~this.aLong1979) {
+          if (start > this.aLong1979) {
             if (this.paused) {
               this.paused = false;
             } else {

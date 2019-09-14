@@ -79,7 +79,7 @@ public final class DummyClass22 {
       int var4 = DummyClass36.anInt2612;
       var1 += 8;
       var3 = NpcConfiguration.anInt1297 + -(var1 / 2);
-      if (~(var4 + var2) < ~GroundItem.viewHeight) {
+      if ((var4 + var2) > GroundItem.viewHeight) {
         var4 = GroundItem.viewHeight + -var2;
       }
 

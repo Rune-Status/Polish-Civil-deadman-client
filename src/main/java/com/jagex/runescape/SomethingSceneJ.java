@@ -29,7 +29,7 @@ public final class SomethingSceneJ {
       }
 
       for (var6 = var2; var4 + var2 > var6; ++var6) {
-        for (var7 = var3; ~(var3 + var5) < ~var7; ++var7) {
+        for (var7 = var3; (var3 + var5) > var7; ++var7) {
           if (~var7 <= -1 && ~var7 > -105 && ~var6 <= -1 && var6 < 104) {
             AbstractGameWorld.heightMap[var0][var7][var6] =
               var0 <= 0 ? 0 : AbstractGameWorld.heightMap[var0 + -1][var7][var6];
@@ -38,7 +38,7 @@ public final class SomethingSceneJ {
       }
 
       if (0 < var3 && ~var3 > -105) {
-        for (var6 = 1 + var2; ~(var2 + var4) < ~var6; ++var6) {
+        for (var6 = 1 + var2; (var2 + var4) > var6; ++var6) {
           if (-1 >= ~var6 && var6 < 104) {
             AbstractGameWorld.heightMap[var0][var3][var6] =
               AbstractGameWorld.heightMap[var0][var3 - 1][var6];
@@ -47,7 +47,7 @@ public final class SomethingSceneJ {
       }
 
       if (~var2 < -1 && ~var2 > -105) {
-        for (var6 = var3 + 1; ~(var3 - -var5) < ~var6; ++var6) {
+        for (var6 = var3 + 1; (var3 - -var5) > var6; ++var6) {
           if (var6 >= 0 && 104 > var6) {
             AbstractGameWorld.heightMap[var0][var6][var2] =
               AbstractGameWorld.heightMap[var0][var6][var2 + -1];

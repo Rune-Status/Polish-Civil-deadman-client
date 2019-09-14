@@ -23,7 +23,7 @@ public final class HintMarker {
   public static void method1587(byte var0, Buffer var1) {
     label134:
       while (true) {
-        if (~var1.bytes.length < ~var1.position) {
+        if (var1.bytes.length > var1.position) {
           boolean var18 = false;
           int var5 = 0;
           int var6 = 0;

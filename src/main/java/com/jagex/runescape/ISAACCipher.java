@@ -253,7 +253,7 @@ public final class ISAACCipher {
           && DummyClass58.aClass3_Sub28_Sub16_1457 != null) {
         var5 = var3 / TextureSampler27.aClass3_Sub28_Sub16_3099.anInt3707;
 
-        for (var6 = 0; ~var5 < ~var6; ++var6) {
+        for (var6 = 0; var5 > var6; ++var6) {
           TextureSampler27.aClass3_Sub28_Sub16_3099.method643(
               var6 * TextureSampler27.aClass3_Sub28_Sub16_3099.anInt3707 + var1,
               var2);
@@ -289,7 +289,7 @@ public final class ISAACCipher {
       for (var7 = 0; TextureSampler25.amountContextActions > var7; ++var7) {
         var8 = (-var7 + TextureSampler25.amountContextActions - 1) * 15 + var2
             + 35;
-        if (var1 < var5 && var5 < var1 - -var3 && ~var6 < ~(-13 + var8)
+        if (var1 < var5 && var5 < var1 - -var3 && var6 > (-13 + var8)
             && ~var6 > ~(var8 + 3)) {
           if (GlRenderer.useOpenGlRenderer) {
             GlUtils.fillQuad(var1, var8 + -13, var3, 16, Mouse.anInt1926,

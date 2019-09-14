@@ -92,7 +92,7 @@ public final class GameClient extends GameStub {
                         var4.anInt2819 >> 7)) {
                   if (var4.getSize() > 1) {
                     for (int var8 = var4.waypointsX[0];
-                        ~(var4.waypointsX[0] - -var4.getSize()) < ~var8;
+                        (var4.waypointsX[0] - -var4.getSize()) > var8;
                         ++var8) {
                       for (int var9 = var4.waypointsY[0];
                           var4.waypointsY[0] + var4.getSize() > var9; ++var9) {
@@ -617,7 +617,7 @@ public final class GameClient extends GameStub {
                     var2 = SpawnedGameObject
                         .method107(Projectile.sprites, (byte) -125);
                     kkkk = TextureSampler16.method208(-119);
-                    if (~kkkk < ~var2) {
+                    if (kkkk > var2) {
                       AnimationFrame.loadingText = RenderAnimation
                           .concat(new GameString[]{
                               TextureSampler38.aClass94_3445,

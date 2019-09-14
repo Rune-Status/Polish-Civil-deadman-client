@@ -1310,7 +1310,7 @@ public final class GameBuffer extends Buffer {
           Widget[] var4 = SceneNode.aClass11ArrayArray1834[var2];
 
           int var5;
-          for (var5 = 0; ~var4.length < ~var5; ++var5) {
+          for (var5 = 0; var4.length > var5; ++var5) {
             if (var4[var5] != null) {
               var3 = var4[var5].aBoolean233;
               break;

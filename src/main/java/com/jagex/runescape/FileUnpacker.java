@@ -372,7 +372,7 @@ public final class FileUnpacker {
             for (int var14 = 0; ~var14 > ~var11; ++var14) {
               var15 = 0;
 
-              for (var16 = 0; ~var4 < ~var16; ++var16) {
+              for (var16 = 0; var4 > var16; ++var16) {
                 var15 += var12.readInt();
 
                 var13[var16] += var15;
@@ -393,7 +393,7 @@ public final class FileUnpacker {
             for (var16 = 0; ~var16 > ~var11; ++var16) {
               var17 = 0;
 
-              for (int var18 = 0; ~var4 < ~var18; ++var18) {
+              for (int var18 = 0; var4 > var18; ++var18) {
                 var17 += var12.readInt();
                 ArrayUtils.copy(var23, var15, var24[var18], var13[var18], var17);
                 var15 += var17;
@@ -401,7 +401,7 @@ public final class FileUnpacker {
               }
             }
 
-            for (var16 = 0; ~var4 < ~var16; ++var16) {
+            for (var16 = 0; var4 > var16; ++var16) {
               if (var5 != null) {
                 var17 = var5[var16];
               } else {
@@ -521,7 +521,7 @@ public final class FileUnpacker {
 
   private boolean method2139(int var1, int var2, int var3) {
     if (this.method2122()) {
-        if (var2 <= var1 && -1 >= ~var3 && ~this.table.unpackedLengths.length < ~var1
+        if (var2 <= var1 && -1 >= ~var3 && this.table.unpackedLengths.length > var1
           && this.table.unpackedLengths[var1] > var3) {
           return true;
         } else if (!DummyClass21.aBoolean1765) {

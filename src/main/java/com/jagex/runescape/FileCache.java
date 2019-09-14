@@ -200,7 +200,7 @@ public final class FileCache {
                     return false;
                   }
 
-                  if (var10 < 0 || ~var10 < ~(this.aClass30_681.method976(0) / 520L)) {
+                  if (var10 < 0 || var10 > (this.aClass30_681.method976(0) / 520L)) {
                     var10000 = false;
                     return false;
                   }

@@ -51,7 +51,7 @@ public final class FileSystem {
   public void method838(byte var1 ) {
     if (null != this.fileRequesters) {
         int var2;
-        for (var2 = 0; ~this.fileRequesters.length < ~var2; ++var2) {
+        for (var2 = 0; this.fileRequesters.length > var2; ++var2) {
           if (this.fileRequesters[var2] != null) {
             this.fileRequesters[var2].method2110(0);
           }

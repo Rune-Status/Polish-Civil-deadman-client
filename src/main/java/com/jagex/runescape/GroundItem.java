@@ -129,7 +129,7 @@ public final class GroundItem extends SceneNode {
                 }
 
                 if (var4[var16][var9][var12].sceneGraphNodes != null) {
-                  for (var17 = 0; ~var4[var16][var9][var12].anInt2223 < ~var17; ++var17) {
+                  for (var17 = 0; var4[var16][var9][var12].anInt2223 > var17; ++var17) {
                     var18 =
                       (int) (63L & var4[var16][var9][var12].sceneGraphNodes[var17].aLong498 >> 14);
                     if (-22 == ~var18) {
@@ -150,7 +150,7 @@ public final class GroundItem extends SceneNode {
               var15 = true;
               SceneGraphTile var24 = var4[var16][var9][var12];
               if (var24 != null && ~var24.anInt2223 < -1) {
-                for (var18 = 0; ~var24.anInt2223 < ~var18; ++var18) {
+                for (var18 = 0; var24.anInt2223 > var18; ++var18) {
                   SceneSomething var25 = var24.sceneGraphNodes[var18];
                   if (~var25.anInt495 != ~var25.anInt483 || ~var25.anInt481 != ~var25.anInt478) {
                     for (var20 = var25.anInt483; ~var25.anInt495 <= ~var20; ++var20) {
@@ -183,7 +183,7 @@ public final class GroundItem extends SceneNode {
             }
 
             var17 = var12 << 7;
-            if (~AnimationSequence.anIntArray1871[var5] < ~var17) {
+            if (AnimationSequence.anIntArray1871[var5] > var17) {
               AnimationSequence.anIntArray1871[var5] = var17;
             } else if (Player.anIntArray3959[var5] < var17) {
               Player.anIntArray3959[var5] = var17;

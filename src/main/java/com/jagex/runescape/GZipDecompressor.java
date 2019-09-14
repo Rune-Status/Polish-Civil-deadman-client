@@ -77,7 +77,7 @@ public final class GZipDecompressor {
                 int var13 = (var11 / 8 << 8) + var12 / 8;
 
                 for (int var14 = 0;
-                    ~AudioStreamEncoder3.regionHashes.length < ~var14;
+                    AudioStreamEncoder3.regionHashes.length > var14;
                     ++var14) {
                   if (~AudioStreamEncoder3.regionHashes[var14] == ~var13
                       && null != var3[var14]) {

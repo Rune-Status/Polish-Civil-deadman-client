@@ -74,7 +74,7 @@ public final class ClanChatUser extends Node {
               int var11 = var10.anInt1482;
               int var12;
               if (null != var10.anIntArray1524) {
-                for (var12 = 0; ~var10.anIntArray1524.length < ~var12; ++var12) {
+                for (var12 = 0; var10.anIntArray1524.length > var12; ++var12) {
                   if (-1 != var10.anIntArray1524[var12]) {
                     GameObjectConfig var13 =
                       DummyClass11.method2207(4, var10.anIntArray1524[var12]);
@@ -101,7 +101,7 @@ public final class ClanChatUser extends Node {
                       --var12;
                     }
 
-                    if (var16 == 1 && -104 < ~var12 && ~(3 + var6) < ~var12
+                    if (var16 == 1 && -104 < ~var12 && (3 + var6) > var12
                       && (var14[var12 - -1][var21] & 19661184) == 0) {
                       ++var12;
                     }

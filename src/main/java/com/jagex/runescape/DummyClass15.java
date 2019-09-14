@@ -33,7 +33,7 @@ public final class DummyClass15 {
         TextureSampler18.method282(DummyClass35.anIntArrayArray663[var16], var14, 97, var15, var5);
       }
 
-      for (var16 = var13; ~var16 < ~var9; --var16) {
+      for (var16 = var13; var16 > var9; --var16) {
         TextureSampler18.method282(DummyClass35.anIntArrayArray663[var16], var14, 94, var15, var5);
       }
 

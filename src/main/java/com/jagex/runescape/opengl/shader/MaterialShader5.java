@@ -431,7 +431,7 @@ public final class MaterialShader5 implements MaterialShader {
                   }
                 }
 
-                for (var37 = 0; ~DummyClass13.anInt2022 < ~var37; ++var37) {
+                for (var37 = 0; DummyClass13.anInt2022 > var37; ++var37) {
                   var38 = TextureSampler0.players[DummyClass42.anIntArray887[var37]];
                   var21 = var38.anInt2819 + 64 + -(64 * var38.getSize());
                   var22 = var38.anInt2829 - (var38.getSize() * 64 + -64);

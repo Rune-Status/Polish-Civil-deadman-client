@@ -161,7 +161,7 @@ public final class AnimationSequence {
         int var13 = 0;
         int var14 = 0;
         if (null != this.anIntArray1870) {
-          if (~this.anIntArray1870.length < ~var5) {
+          if (this.anIntArray1870.length > var5) {
             var13 = this.anIntArray1870[var5];
             if (~var13 != -65536) {
               var10 = AreaSoundEffect.method133(var13 >> 16, 0);
@@ -313,7 +313,7 @@ public final class AnimationSequence {
       } else {
         AnimationSomething var9 = null;
         if ((this.tween || MonoChromaticImageBuffer.tweening) && ~var1 != 0
-          && ~this.anIntArray1851.length < ~var1) {
+          && this.anIntArray1851.length > var1) {
           var1 = this.anIntArray1851[var1];
           var9 = AreaSoundEffect.method133(var1 >> 16, 0);
           var1 &= '\uffff';
@@ -380,11 +380,11 @@ public final class AnimationSequence {
                   var4 = var3.readUnsignedByte();
                   this.anIntArray1870 = new int[var4];
 
-                  for (var5 = 0; ~var4 < ~var5; ++var5) {
+                  for (var5 = 0; var4 > var5; ++var5) {
                     this.anIntArray1870[var5] = var3.readUnsignedShort();
                   }
 
-                  for (var5 = 0; ~var4 < ~var5; ++var5) {
+                  for (var5 = 0; var4 > var5; ++var5) {
                     this.anIntArray1870[var5] += var3.readUnsignedShort() << 16;
                   }
                 } else {
@@ -392,14 +392,14 @@ public final class AnimationSequence {
                     var4 = var3.readUnsignedShort();
                     this.anIntArrayArray1867 = new int[var4][];
 
-                    for (var5 = 0; ~var4 < ~var5; ++var5) {
+                    for (var5 = 0; var4 > var5; ++var5) {
                       int var6 = var3.readUnsignedByte();
                       if (var6 > 0) {
                         this.anIntArrayArray1867[var5] = new int[var6];
                         this.anIntArrayArray1867[var5][0] = var3
                             .readUnsignedMedium((byte) 102);
 
-                        for (int var7 = 1; ~var6 < ~var7; ++var7) {
+                        for (int var7 = 1; var6 > var7; ++var7) {
                           this.anIntArrayArray1867[var5][var7] = var3
                               .readUnsignedShort();
                         }
@@ -684,7 +684,7 @@ public final class AnimationSequence {
       AbstractFileRequest.anInt3631 = 0;
       DummyClass8.anInt4021 = 0;
 
-      for (var1 = 0; ~NpcConfiguration.anIntArray1277.length < ~var1; ++var1) {
+      for (var1 = 0; NpcConfiguration.anIntArray1277.length > var1; ++var1) {
         NpcConfiguration.anIntArray1277[var1] = -1;
       }
 

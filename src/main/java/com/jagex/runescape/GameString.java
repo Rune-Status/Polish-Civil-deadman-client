@@ -79,7 +79,7 @@ public final class GameString implements UnusedInterface1 {
       byte[] var4 = var2.bytes;
       byte[] var3 = this.bytes;
 
-      for (int var5 = 0; ~this.length < ~var5; ++var5) {
+      for (int var5 = 0; this.length > var5; ++var5) {
         if (var3[var5] != var4[var5]) {
           return false;
         }
@@ -155,7 +155,7 @@ public final class GameString implements UnusedInterface1 {
       return false;
     } else {
 
-      for (int var3 = 0; ~this.length < ~var3; ++var3) {
+      for (int var3 = 0; this.length > var3; ++var3) {
         byte var5 = this.bytes[var3];
         if (-66 >= ~var5 && ~var5 >= -91 ||
             ~var5 <= 63 && var5 <= -34 && ~var5 != 40) {
@@ -191,7 +191,7 @@ public final class GameString implements UnusedInterface1 {
     if (this.immutable) {
       if (var1.length + this.length > this.bytes.length) {
         int var3;
-        for (var3 = 1; ~(var1.length + this.length) < ~var3; var3 += var3) {
+        for (var3 = 1; (var1.length + this.length) > var3; var3 += var3) {
         }
 
         byte[] temp = new byte[var3];
@@ -213,7 +213,7 @@ public final class GameString implements UnusedInterface1 {
     var2.length = this.length;
     var2.bytes = new byte[this.length];
 
-    for (int var3 = 0; ~this.length < ~var3; ++var3) {
+    for (int var3 = 0; this.length > var3; ++var3) {
       byte var4 = this.bytes[var3];
       if (65 <= var4 && var4 <= 90 ||
           var4 >= -64 && ~var4 >= 33 && var4 != -41) {
@@ -235,7 +235,7 @@ public final class GameString implements UnusedInterface1 {
     } else {
       var2.bytes = new byte[this.length];
 
-      for (int var4 = 0; ~this.length < ~var4; ++var4) {
+      for (int var4 = 0; this.length > var4; ++var4) {
         byte var5 = this.bytes[var4];
         if ((-98 < ~var5 || 122 < var5) &&
             (31 < ~var5 || ~var5 < 1 || var5 == -9)) {
@@ -295,7 +295,7 @@ public final class GameString implements UnusedInterface1 {
     } else if (0 <= var3 && var3 <= var4 && ~var4 >= ~var2.length) {
       if (this.length + (var4 - var3) > this.bytes.length) {
         int var5;
-        for (var5 = 1; ~(this.length + var2.length) < ~var5; var5 += var5) {
+        for (var5 = 1; (this.length + var2.length) > var5; var5 += var5) {
         }
 
         byte[] var6 = new byte[var5];
@@ -349,7 +349,7 @@ public final class GameString implements UnusedInterface1 {
       this.toString();
     }
 
-    for (; ~this.length < ~var4; ++var4) {
+    for (; this.length > var4; ++var4) {
       byte var5 = this.bytes[var4];
       if (~var5 == -96) {
         var3 = true;
@@ -497,7 +497,7 @@ public final class GameString implements UnusedInterface1 {
       throw new IllegalArgumentException();
     } else {
       int var3;
-      if (~var1 < ~this.bytes.length) {
+      if (var1 > this.bytes.length) {
         for (var3 = 1; ~var3 > ~var1; var3 += var3) {
         }
 
@@ -791,7 +791,7 @@ public final class GameString implements UnusedInterface1 {
       GameString.safemode = true;
     }
 
-    for (int var7 = 0; ~this.length < ~var7; ++var7) {
+    for (int var7 = 0; this.length > var7; ++var7) {
       byte var8 = this.bytes[var7];
       if (~var8 == ~var4) {
         var6.bytes[var7] = var5;
@@ -862,7 +862,7 @@ public final class GameString implements UnusedInterface1 {
   public GameString[] split(int ch) {
     int var3 = 0;
 
-    for (int var4 = 0; ~this.length < ~var4; ++var4) {
+    for (int var4 = 0; this.length > var4; ++var4) {
       if (~ch == ~this.bytes[var4]) {
         ++var3;
       }
@@ -1009,7 +1009,7 @@ public final class GameString implements UnusedInterface1 {
   public long toBase37() {
     long var2 = 0L;
 
-    for (int var4 = 0; ~this.length < ~var4 && -13 < ~var4; ++var4) {
+    for (int var4 = 0; this.length > var4 && -13 < ~var4; ++var4) {
       byte var5 = this.bytes[var4];
       var2 *= 37L;
       if (65 <= var5 && 90 >= var5) {

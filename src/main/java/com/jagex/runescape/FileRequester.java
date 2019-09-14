@@ -296,8 +296,7 @@ public final class FileRequester extends AbstractFileRequester {
                 }
               }
 
-              while (~this.aClass62_2944.unpackedSizes.length
-                  < ~this.anInt2964) {
+              while (this.aClass62_2944.unpackedSizes.length > this.anInt2964) {
                 if (-1 == ~this.aClass62_2944.unpackedSizes[this.anInt2964]) {
                   ++this.anInt2964;
                 } else {

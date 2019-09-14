@@ -41,7 +41,7 @@ public final class TextureSampler5 extends AbstractTextureSampler {
 
           for (
             var14 = 0;
-            ~SomethingLight0.anInt1559 < ~var14;
+            SomethingLight0.anInt1559 > var14;
             var13 += var11[RenderAnimation.anInt396 & this.anInt3294 + var14]) {
             var12[var14] = var8 * var13 >> 16;
             var13 -= var11[RenderAnimation.anInt396 & var14 - this.anInt3294];
@@ -51,7 +51,7 @@ public final class TextureSampler5 extends AbstractTextureSampler {
           var9[this.anInt3297 + var10 + -var1] = var12;
         }
 
-        for (var10 = 0; ~SomethingLight0.anInt1559 < ~var10; ++var10) {
+        for (var10 = 0; SomethingLight0.anInt1559 > var10; ++var10) {
           int var16 = 0;
 
           for (int var17 = 0; ~var17 > ~var5; ++var17) {
@@ -143,12 +143,12 @@ public final class TextureSampler5 extends AbstractTextureSampler {
         int[] var26 = var3[1];
         int[] var25 = var3[2];
 
-        for (var12 = 0; ~SomethingLight0.anInt1559 < ~var12; ++var12) {
+        for (var12 = 0; SomethingLight0.anInt1559 > var12; ++var12) {
           var14 = 0;
           var13 = 0;
           int var27 = 0;
 
-          for (int var28 = 0; ~var4 < ~var28; ++var28) {
+          for (int var28 = 0; var4 > var28; ++var28) {
             int[][] var29 = var8[var28];
             var27 += var29[2][var12];
             var14 += var29[1][var12];

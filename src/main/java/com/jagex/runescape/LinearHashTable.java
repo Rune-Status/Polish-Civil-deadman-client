@@ -73,10 +73,10 @@ public final class LinearHashTable {
   public static void method1282(int var0, byte var1, int var2, int var3, int var4) {
     int var5 = 0;
 
-      for (int var6 = 58 / ((56 - var1) / 49); ~SomethingWorldMapy.widgetQuads < ~var5; ++var5) {
+      for (int var6 = 58 / ((56 - var1) / 49); SomethingWorldMapy.widgetQuads > var5; ++var5) {
         if (var0 < AbstractAudioOutputStream.quadx0[var5] - -GlTexture2d.quadx1[var5]
           && var0 + var4 > AbstractAudioOutputStream.quadx0[var5]
-          && ~(Player.quady0[var5] - -Mobile.quady1[var5]) < ~var2 && ~Player.quady0[var5] > ~(var3
+          && (Player.quady0[var5] - -Mobile.quady1[var5]) > var2 && ~Player.quady0[var5] > ~(var3
           + var2)) {
           DummyClass9.aBooleanArray4008[var5] = true;
         }

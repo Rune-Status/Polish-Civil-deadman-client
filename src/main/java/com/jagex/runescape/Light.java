@@ -255,7 +255,7 @@ public final class Light {
         Light.method1062(67);
       }
 
-      for (int var4 = 0; ~var1 < ~var4; ++var4) {
+      for (int var4 = 0; var1 > var4; ++var4) {
         var3[var4] = TextureSampler38.anIntArray3446[ClientScript.bitAnd(var2[var4], 255)];
       }
 

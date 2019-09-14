@@ -34,7 +34,7 @@ public final class AnimationFrame extends Node {
         this.anIntArray2466[var4] = var3.readUnsignedByte();
       }
 
-      for (var4 = 0; ~this.anInt2462 < ~var4; ++var4) {
+      for (var4 = 0; this.anInt2462 > var4; ++var4) {
         this.aBooleanArray2463[var4] = ~var3.readUnsignedByte() == -2;
       }
 

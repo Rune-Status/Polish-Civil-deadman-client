@@ -56,7 +56,7 @@ public abstract class AbstractDirectColorSprite extends SubNode {
         var3 :
         (var0 != -19 ?
           null :
-          (var3 != null && var3.aClass11Array262 != null && ~var3.aClass11Array262.length < ~var2 ?
+          (var3 != null && var3.aClass11Array262 != null && var3.aClass11Array262.length > var2 ?
             var3.aClass11Array262[var2] :
             null));
   }

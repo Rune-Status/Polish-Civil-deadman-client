@@ -32,8 +32,8 @@ public final class DummyClass55 {
         var4[var5] = var4[var1];
         var4[var1] = var8;
 
-        for (int var9 = var0; ~var1 < ~var9; ++var9) {
-          if (~var3[var9] < ~((var9 & 1) + var7)) {
+        for (int var9 = var0; var1 > var9; ++var9) {
+          if (var3[var9] > ((var9 & 1) + var7)) {
             int var10 = var3[var9];
             var3[var9] = var3[var6];
             var3[var6] = var10;

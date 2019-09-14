@@ -23,7 +23,7 @@ public final class TextureSampler14 extends AbstractTextureSampler {
       if (this.monoChromaticImageCache.aBoolean1580) {
         int var5 = DummyClass4.anIntArray2999[var1];
 
-        for (int var6 = 0; ~SomethingLight0.anInt1559 < ~var6; ++var6) {
+        for (int var6 = 0; SomethingLight0.anInt1559 > var6; ++var6) {
           int var7 = TextureCache.anIntArray2125[var6];
           int var8;
           if (var7 > this.anInt3385 && 4096 - this.anInt3385 > var7
@@ -33,7 +33,7 @@ public final class TextureSampler14 extends AbstractTextureSampler {
             var8 <<= 12;
             var8 /= -this.anInt3385 + 2048;
             var3[var6] = -var8 + 4096;
-          } else if (~var7 < ~(-this.anInt3385 + 2048) && var7 < this.anInt3385
+          } else if (var7 > (-this.anInt3385 + 2048) && var7 < this.anInt3385
               + 2048) {
             var8 = var5 + -2048;
             var8 = ~var8 <= -1 ? var8 : -var8;

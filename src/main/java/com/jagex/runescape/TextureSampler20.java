@@ -170,7 +170,7 @@ public final class TextureSampler20 extends AbstractTextureSampler {
     if (MovedStatics0.method57(var0, 104)) {
         Widget[] var2 = SceneNode.aClass11ArrayArray1834[var0];
 
-        for (int var3 = 0; ~var2.length < ~var3; ++var3) {
+        for (int var3 = 0; var2.length > var3; ++var3) {
           Widget var4 = var2[var3];
           if (null != var4) {
             var4.anInt260 = 1;
@@ -317,7 +317,7 @@ public final class TextureSampler20 extends AbstractTextureSampler {
 
                 TextureSampler12.secureBuffer.method769((byte) -126,
                   -var2 + TextureSampler12.secureBuffer.position);
-                if (~DisplayMode.aClass67_1443.anInt1018 < ~var3) {
+                if (DisplayMode.aClass67_1443.anInt1018 > var3) {
                   DisplayMode.aClass67_1443.anInt1018 -= var3;
 
                   for (var4 = 0; DisplayMode.aClass67_1443.anInt1018 > var4; ++var4) {
@@ -661,7 +661,7 @@ public final class TextureSampler20 extends AbstractTextureSampler {
                             if (var5 > var6) {
                               var17.method864(-1 + var5, var5, -71);
                               --var5;
-                            } else if (~var6 < ~var5) {
+                            } else if (var6 > var5) {
                               var17.method864(1 + var5, var5, -95);
                               ++var5;
                             }

@@ -18,7 +18,7 @@ public final class DummyClass59 {
 
 
   public static int method1040(int var0, int var1, byte var2, int var3) {
-    return var2 != 0 ? -127 : (~var3 < ~var1 ? var3 : (var1 > var0 ? var0 : var1));
+    return var2 != 0 ? -127 : (var3 > var1 ? var3 : (var1 > var0 ? var0 : var1));
   }
 
   public static void method1041(long var0, int var2) {
@@ -163,7 +163,7 @@ public final class DummyClass59 {
 
         int var4;
         int var5;
-        for (var2 = 0; ~Something3d2.aByteArrayArray3027.length < ~var2;
+        for (var2 = 0; Something3d2.aByteArrayArray3027.length > var2;
             ++var2) {
           byte[] var3 = AudioSomethingSomething.landscapesData[var2];
           if (null != var3) {
@@ -215,7 +215,7 @@ public final class DummyClass59 {
           boolean var11 = false;
           int var12;
           if (GlRenderer.useOpenGlRenderer && DummyHashTable.aBoolean1685) {
-            for (var12 = 0; ~Something3d2.aByteArrayArray3027.length < ~var12;
+            for (var12 = 0; Something3d2.aByteArrayArray3027.length > var12;
                 ++var12) {
               if (TextureSampler34.updatedLandscapesData[var12] != null
                   || GroundItemNode.updatedMapsData[var12] != null) {

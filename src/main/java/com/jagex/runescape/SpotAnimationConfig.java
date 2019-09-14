@@ -77,7 +77,7 @@ public final class SpotAnimationConfig {
                   this.aShortArray534 = new short[var4];
                   this.aShortArray535 = new short[var4];
 
-                  for (var5 = 0; ~var4 < ~var5; ++var5) {
+                  for (var5 = 0; var4 > var5; ++var5) {
                     this.aShortArray534[var5] = (short) var1
                         .readUnsignedShort();
                     this.aShortArray535[var5] = (short) var1

@@ -28,7 +28,7 @@ public final class TextureSampler16 extends AbstractTextureSampler {
           int var9 = var7 * this.anInt3113 >> 12;
           int var10 = this.anInt3108 * (var6 % (4096 / this.anInt3108));
           int var11 = var7 % (4096 / this.anInt3113) * this.anInt3113;
-          if (~this.anInt3109 < ~var11) {
+          if (this.anInt3109 > var11) {
             for (var8 -= var9; ~var8 > -1; var8 += 4) {
             }
 
@@ -41,7 +41,7 @@ public final class TextureSampler16 extends AbstractTextureSampler {
               continue;
             }
 
-            if (~this.anInt3109 < ~var10) {
+            if (this.anInt3109 > var10) {
               var4[var5] = 0;
               continue;
             }

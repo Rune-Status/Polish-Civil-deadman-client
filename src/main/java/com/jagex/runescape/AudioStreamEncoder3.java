@@ -240,7 +240,7 @@ public final class AudioStreamEncoder3 extends AudioStreamEncoder {
     if (var0 == null) {
         return false;
       } else {
-        for (int var2 = var1; ~AnimationSomething.anInt3591 < ~var2; ++var2) {
+        for (int var2 = var1; AnimationSomething.anInt3591 > var2; ++var2) {
           if (var0.method1531(TextureSampler7.aClass94Array3341[var2])) {
             return true;
           }

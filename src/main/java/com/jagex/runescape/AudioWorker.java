@@ -119,7 +119,7 @@ public final class AudioWorker implements Runnable {
         int var11 = -1 + DummyClass58.anInt1460 - var9 * 64 + MapScene.anInt65;
         if (~var10 <= -1 && 0 <= -63 + var11
             && DummyClass30.anInt455 > var10 - -63
-            && ~DummyClass58.anInt1460 < ~var11) {
+            && DummyClass58.anInt1460 > var11) {
           for (var12 = 0; var12 < 64; ++var12) {
             byte[] var13 = var4[var10 - -var12];
 
@@ -269,7 +269,7 @@ public final class AudioWorker implements Runnable {
         AudioWorker.method894(113L, (byte) 48);
       }
 
-      for (int var2 = 0; ~DummyClass53.spriteCount < ~var2; ++var2) {
+      for (int var2 = 0; DummyClass53.spriteCount > var2; ++var2) {
         int var3 = GroundItem.anIntArray2931[var2]
             * TextureSampler26.anIntArray3076[var2];
         byte[] var4 = DummyClass5.aByteArrayArray2987[var2];
@@ -365,7 +365,7 @@ public final class AudioWorker implements Runnable {
     var10.method158(16251);
     TextureSampler33.method180(122, var3, var2);
 
-    for (int var11 = 0; ~var3 < ~var11; ++var11) {
+    for (int var11 = 0; var3 > var11; ++var11) {
       var10.method186(true, var11, var9[var11]);
     }
 

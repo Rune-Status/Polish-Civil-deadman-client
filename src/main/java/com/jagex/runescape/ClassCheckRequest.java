@@ -149,7 +149,7 @@ public final class ClassCheckRequest extends Node {
           }
         }
 
-        for (var9 = 0; ~DummyClass6.anInt2046 < ~var9; ++var9) {
+        for (var9 = 0; DummyClass6.anInt2046 > var9; ++var9) {
           NPC var21 = TextureSampler5.npcs[AudioWorker.anIntArray347[var9]];
           if (var21 != null && var21.hasConfiguration((byte) 17)) {
             NpcConfiguration var22 = var21.config;
@@ -181,7 +181,7 @@ public final class ClassCheckRequest extends Node {
             long var29 = var23.name.toBase37();
             boolean var28 = false;
 
-            for (var16 = 0; ~FileSystem.anInt104 < ~var16; ++var16) {
+            for (var16 = 0; FileSystem.anInt104 > var16; ++var16) {
               if (~var29 == ~VertexNormal.aLongArray826[var16]
                 && 0 != Cursor.anIntArray882[var16]) {
                 var28 = true;
@@ -301,7 +301,7 @@ public final class ClassCheckRequest extends Node {
   }
 
   public static void method127(short[] var0, int var1, GameString[] var2, int var3, int var4) {
-    if (~var1 < ~var4) {
+    if (var1 > var4) {
         int var6 = var4;
         int var5 = (var4 - -var1) / 2;
         GameString var7 = var2[var5];
@@ -311,7 +311,7 @@ public final class ClassCheckRequest extends Node {
         var0[var5] = var0[var1];
         var0[var1] = var8;
 
-        for (int var9 = var4; ~var1 < ~var9; ++var9) {
+        for (int var9 = var4; var1 > var9; ++var9) {
           if (var7 == null || null != var2[var9] && var2[var9].method1559(var7, -1) < (var9 & 1)) {
             GameString var10 = var2[var9];
             var2[var9] = var2[var6];

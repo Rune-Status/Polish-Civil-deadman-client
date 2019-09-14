@@ -78,7 +78,7 @@ public final class DummyClass50 {
               .formatName((byte) -50);
 
           int var5;
-          for (var5 = 0; ~AnimationSomething.anInt3591 < ~var5; ++var5) {
+          for (var5 = 0; AnimationSomething.anInt3591 > var5; ++var5) {
             if (MonoChromaticImageCache.aLongArray1574[var5] == var1) {
               GameBuffer.printMessage(GroundItemNode.EMPTY_STRING, 0,
                   RenderAnimation.concat(

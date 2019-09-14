@@ -270,7 +270,7 @@ public final class RenderAnimation {
         var2 = GameClient.method45(var0.anInt2764, (byte) -20);
         if (null != var2.anIntArray1851) {
           ++var0.anInt2802;
-          if (~var2.anIntArray1851.length < ~var0.anInt2813
+          if (var2.anIntArray1851.length > var0.anInt2813
             && var0.anInt2802 > var2.anIntArray1869[var0.anInt2813]) {
             var0.anInt2802 = 1;
             ++var0.anInt2813;
@@ -361,7 +361,7 @@ public final class RenderAnimation {
               var0.anInt2832 -= var2.anInt1865;
               ++var0.anInt2773;
               if (~var0.anInt2773 > ~var2.anInt1861) {
-                if (var0.anInt2832 >= 0 && ~var2.anIntArray1851.length < ~var0.anInt2832) {
+                if (var0.anInt2832 >= 0 && var2.anIntArray1851.length > var0.anInt2832) {
                   SocketStream.method1470(var0.anInt2829, var2, -11973 ^ -183911469, var0.anInt2819,
                     TextureCache.localPlayer == var0, var0.anInt2832);
                 } else {

@@ -262,7 +262,7 @@ public final class Widget {
             var4[var5] = this.anIntArray249[var5];
           }
 
-          for (var5 = this.anIntArray249.length; ~var1 < ~var5; ++var5) {
+          for (var5 = this.anIntArray249.length; var1 > var5; ++var5) {
             var4[var5] = -1;
           }
         }
@@ -332,7 +332,7 @@ public final class Widget {
     if (null == this.aClass94Array171 || ~this.aClass94Array171.length >= ~var3) {
         GameString[] var4 = new GameString[1 + var3];
         if (null != this.aClass94Array171) {
-          for (int var5 = 0; ~this.aClass94Array171.length < ~var5; ++var5) {
+          for (int var5 = 0; this.aClass94Array171.length > var5; ++var5) {
             var4[var5] = this.aClass94Array171[var5];
           }
         }
@@ -380,7 +380,7 @@ public final class Widget {
         this.anIntArray307 = new int[var3];
         this.anIntArray275 = new int[var3];
 
-        for (var4 = 0; ~var3 < ~var4; ++var4) {
+        for (var4 = 0; var3 > var4; ++var4) {
           this.anIntArray275[var4] = var2.readUnsignedByte();
           this.anIntArray307[var4] = var2.readUnsignedShort();
         }
@@ -393,7 +393,7 @@ public final class Widget {
       if (-1 > ~var4) {
         this.anIntArrayArray298 = new int[var4][];
 
-        for (var5 = 0; ~var4 < ~var5; ++var5) {
+        for (var5 = 0; var4 > var5; ++var5) {
           var6 = var2.readUnsignedShort();
           this.anIntArrayArray298[var5] = new int[var6];
 

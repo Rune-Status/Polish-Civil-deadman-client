@@ -149,7 +149,7 @@ public final class TextureSampler13 extends AbstractTextureSampler {
             TextureSampler13.lastWrittenTime = -79L;
           }
 
-          for (var12 = 0; ~TextureSampler25.amountContextActions < ~var12; ++var12) {
+          for (var12 = 0; TextureSampler25.amountContextActions > var12; ++var12) {
             if (~TextureSampler27.aShortArray3095[var12] == -61) {
               DummyClass8.aClass94Array4016[var12] = RenderAnimation.concat(
                 new GameString[] {MonoChromaticImageBuffer.aClass94_2562, var5});
@@ -183,7 +183,7 @@ public final class TextureSampler13 extends AbstractTextureSampler {
       StringNode.method727(91);
       SomethingWorldMappy.method397((byte) -41);
       if (~TextureSampler20.usageMode != -1) {
-        for (int var1 = 0; ~SomethingMidiFile.byteArrayPool.length < ~var1; ++var1) {
+        for (int var1 = 0; SomethingMidiFile.byteArrayPool.length > var1; ++var1) {
           SomethingMidiFile.byteArrayPool[var1] = null;
         }
 

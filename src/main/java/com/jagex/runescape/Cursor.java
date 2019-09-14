@@ -99,7 +99,7 @@ public final class Cursor {
         if (var5 <= var18) {
           if (var18 <= var5) {
             if (var6 <= var4) {
-              if (~var4 < ~var6) {
+              if (var4 > var6) {
                 var1.anInt2806 = 0;
               }
             } else {
@@ -238,7 +238,7 @@ public final class Cursor {
             } else {
               var1.anInt2758 /= 2;
             }
-          } else if (~var9 < ~var1.anInt2758) {
+          } else if (var9 > var1.anInt2758) {
             var1.anInt2758 += var2.anInt360;
             if (~var9 > ~var1.anInt2758) {
               var1.anInt2758 = var9;
@@ -263,7 +263,7 @@ public final class Cursor {
           }
         } else if (var18 > var5) {
           var1.anInt2819 -= var9;
-          if (~var5 < ~var1.anInt2819) {
+          if (var5 > var1.anInt2819) {
             var1.anInt2819 = var5;
           }
         }
@@ -277,7 +277,7 @@ public final class Cursor {
           }
         } else {
           var1.anInt2829 += var9;
-          if (~var1.anInt2829 < ~var6) {
+          if (var1.anInt2829 > var6) {
             var1.anInt2829 = var6;
           }
         }

@@ -131,7 +131,7 @@ public final class TextureSampler8 extends AbstractTextureSampler {
       if (this.monoChromaticImageCache.aBoolean1580) {
         int[] var5 = this.method152(0, var1, 32755);
 
-        for (int var6 = 0; ~SomethingLight0.anInt1559 < ~var6; ++var6) {
+        for (int var6 = 0; SomethingLight0.anInt1559 > var6; ++var6) {
           int var4 = var5[var6] >> 4;
           if (0 > var4) {
             var4 = 0;
@@ -153,7 +153,7 @@ public final class TextureSampler8 extends AbstractTextureSampler {
         this.anInt3462 = var2.readUnsignedByte();
         this.anIntArrayArray3469 = new int[var2.readUnsignedByte()][2];
 
-        for (int var4 = 0; ~this.anIntArrayArray3469.length < ~var4; ++var4) {
+        for (int var4 = 0; this.anIntArrayArray3469.length > var4; ++var4) {
           this.anIntArrayArray3469[var4][0] = var2.readUnsignedShort();
           this.anIntArrayArray3469[var4][1] = var2.readUnsignedShort();
         }

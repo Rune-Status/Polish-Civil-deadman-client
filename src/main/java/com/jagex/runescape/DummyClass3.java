@@ -667,7 +667,7 @@ public final class DummyClass3 {
       long[] var59 = new long[var13];
       var12.getNodes(var57);
 
-      for (var16 = var7; ~var13 < ~var16; ++var16) {
+      for (var16 = var7; var13 > var16; ++var16) {
         var59[var16] = var57[var16].key;
       }
 

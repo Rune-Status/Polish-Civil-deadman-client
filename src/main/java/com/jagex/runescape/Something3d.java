@@ -20,7 +20,7 @@ public class Something3d extends Something3dRoot {
 
     this.anIntArray3014 = new int[this.anInt2062];
 
-      for (int var7 = 0; ~this.anInt2062 < ~var7; ++var7) {
+      for (int var7 = 0; this.anInt2062 > var7; ++var7) {
         this.anIntArray3014[var7] =
           (short) ((int) (Math.pow(var6, var7) * 4096.0D));
       }

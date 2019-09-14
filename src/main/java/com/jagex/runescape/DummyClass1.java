@@ -94,7 +94,7 @@ public final class DummyClass1 {
             } else {
               var11 = true;
               var1.rotationY += var1.anInt2779;
-              if (var1.anInt2779 > var9 || ~var9 < ~(2048 - var1.anInt2779)) {
+              if (var1.anInt2779 > var9 || var9 > (2048 - var1.anInt2779)) {
                 var11 = false;
                 var1.rotationY = var1.anInt2806;
               }

@@ -75,7 +75,7 @@ public final class TextureSampler9 extends AbstractTextureSampler {
             var10[var11] = var7[RenderAnimation.anInt396 - var11];
           }
         } else {
-          for (var11 = 0; ~SomethingLight0.anInt1559 < ~var11; ++var11) {
+          for (var11 = 0; SomethingLight0.anInt1559 > var11; ++var11) {
             var8[var11] = var5[var11];
             var9[var11] = var6[var11];
             var10[var11] = var7[var11];
@@ -180,7 +180,7 @@ public final class TextureSampler9 extends AbstractTextureSampler {
           var9[0] = 45;
         }
 
-        for (int var10 = 0; ~var5 < ~var10; ++var10) {
+        for (int var10 = 0; var5 > var10; ++var10) {
           int var11 = (int) (var3 % var0);
           var3 /= var0;
           if (var11 < 0) {

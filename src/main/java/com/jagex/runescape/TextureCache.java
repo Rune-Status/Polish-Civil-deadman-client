@@ -60,11 +60,11 @@ public final class TextureCache implements ITextureCache {
       this.aBooleanArray2135 = new boolean[amountMaterials];
 
       int var8;
-      for (var8 = 0; ~amountMaterials < ~var8; ++var8) {
+      for (var8 = 0; amountMaterials > var8; ++var8) {
         this.materialActive[var8] = 1 == var6.readUnsignedByte();
       }
 
-      for (var8 = 0; ~amountMaterials < ~var8; ++var8) {
+      for (var8 = 0; amountMaterials > var8; ++var8) {
         if (this.materialActive[var8]) {
           this.aBooleanArray2124[var8] = ~var6.readUnsignedByte() == -2;
         }
@@ -338,7 +338,7 @@ public final class TextureCache implements ITextureCache {
                 var8 = 104;
               }
 
-              for (var9 = var5; ~var7 < ~var9; ++var9) {
+              for (var9 = var5; var7 > var9; ++var9) {
                 for (var10 = var6; ~var10 > ~var8; ++var10) {
                   ++DummyClass9.anIntArrayArray4010[var9][var10];
                 }
@@ -479,7 +479,7 @@ public final class TextureCache implements ITextureCache {
         if (var3 < DummyClass55.anInt1425) {
           var3 = DummyClass55.anInt1425;
           var7 = false;
-        } else if (~var3 < ~GlTexture2d.anInt3765) {
+        } else if (var3 > GlTexture2d.anInt3765) {
           var3 = GlTexture2d.anInt3765;
           var7 = false;
         } else {

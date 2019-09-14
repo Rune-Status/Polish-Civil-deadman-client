@@ -53,7 +53,7 @@ public final class TriChromaticImageCache {
           this.anInt1365 = -104;
         }
 
-        for (int var2 = 0; ~this.anInt1367 < ~var2; ++var2) {
+        for (int var2 = 0; this.anInt1367 > var2; ++var2) {
           this.aClass3_Sub20Array1371[var2] = SomethingQuickChat2.aClass3_Sub20_3532;
         }
 
@@ -65,7 +65,7 @@ public final class TriChromaticImageCache {
 
   public void method1590(byte var1 ) {
     if (var1 < -1) {
-        for (int var2 = 0; ~this.anInt1367 < ~var2; ++var2) {
+        for (int var2 = 0; this.anInt1367 > var2; ++var2) {
           this.anIntArrayArrayArray1362[var2][0] = null;
           this.anIntArrayArrayArray1362[var2][1] = null;
           this.anIntArrayArrayArray1362[var2][2] = null;

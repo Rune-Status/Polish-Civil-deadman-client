@@ -283,7 +283,7 @@ public final class Player extends Mobile {
                 int var21;
                 int var20;
                 if (-2 == ~var27.anInt1360 && 0 <= var27.anInt1359
-                  && ~TextureSampler5.npcs.length < ~var27.anInt1359) {
+                  && TextureSampler5.npcs.length > var27.anInt1359) {
                   NPC var24 = TextureSampler5.npcs[var27.anInt1359];
                   if (null != var24) {
                     var20 = var24.anInt2819 / 32 - TextureCache.localPlayer.anInt2819 / 32;
@@ -303,7 +303,7 @@ public final class Player extends Mobile {
                 }
 
                 if (-11 == ~var27.anInt1360 && var27.anInt1359 >= 0
-                  && ~TextureSampler0.players.length < ~var27.anInt1359) {
+                  && TextureSampler0.players.length > var27.anInt1359) {
                   Player var28 = TextureSampler0.players[var27.anInt1359];
                   if (null != var28) {
                     var20 = -(TextureCache.localPlayer.anInt2819 / 32) + var28.anInt2819 / 32;

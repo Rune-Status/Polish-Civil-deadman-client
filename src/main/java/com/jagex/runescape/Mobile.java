@@ -253,7 +253,7 @@ public abstract class Mobile extends SceneNode {
           BufferData.method1736(GameWorldSomething.currentPlane, 1,
               this.anInt2819 + var21,
             var22 + this.anInt2829);
-        int var29 = ~var18 < ~var13 ? var13 : var18;
+        int var29 = var18 > var13 ? var13 : var18;
         int var28 =
           BufferData.method1736(GameWorldSomething.currentPlane, 1, var26 + this.anInt2819,
             var27 + this.anInt2829);
@@ -337,7 +337,7 @@ public abstract class Mobile extends SceneNode {
             } else {
               this.aBoolean2807 = false;
             }
-          } else if (-1 < ~this.anInt2754 && ~this.anInt2787 < ~var4) {
+          } else if (-1 < ~this.anInt2754 && this.anInt2787 > var4) {
             var6 = this.anInt2754 * this.anInt2754 / (var3.anInt387 * 2);
             var7 = var4 - this.anInt2787;
             if (var7 >= var6) {
@@ -358,7 +358,7 @@ public abstract class Mobile extends SceneNode {
 
         if (~this.anInt2754 == -1) {
           var6 = -this.anInt2787 + this.anInt2827;
-          if (-var3.anInt387 < var6 && ~var3.anInt387 < ~var6) {
+          if (-var3.anInt387 < var6 && var3.anInt387 > var6) {
             this.anInt2787 = this.anInt2827;
           } else {
             this.aBoolean2807 = true;
@@ -367,13 +367,13 @@ public abstract class Mobile extends SceneNode {
             if (var6 >= 0) {
               var8 = -var7 + this.anInt2827;
               this.anInt2754 = var3.anInt387;
-              if (~var8 < ~this.anInt2804) {
+              if (var8 > this.anInt2804) {
                 this.anInt2804 = var8;
               }
             } else {
               this.anInt2754 = -var3.anInt387;
               var8 = var7 + this.anInt2827;
-              if (~this.anInt2804 < ~var8) {
+              if (this.anInt2804 > var8) {
                 this.anInt2804 = var8;
               }
             }
@@ -398,7 +398,7 @@ public abstract class Mobile extends SceneNode {
             }
 
             if (this.aBoolean2807) {
-              if (~this.anInt2754 < ~(-var3.anInt370)) {
+              if (this.anInt2754 > (-var3.anInt370)) {
                 this.anInt2754 -= var3.anInt387;
               }
             } else {
@@ -456,7 +456,7 @@ public abstract class Mobile extends SceneNode {
 
         if (~this.anInt2830 == -1) {
           var6 = -this.anInt2834 + this.anInt2766;
-          if (~var6 < ~(-var3.anInt403) && var3.anInt403 > var6) {
+          if (var6 > (-var3.anInt403) && var3.anInt403 > var6) {
             this.anInt2834 = this.anInt2766;
           } else {
             this.anInt2757 = (this.anInt2766 + this.anInt2834) / 2;

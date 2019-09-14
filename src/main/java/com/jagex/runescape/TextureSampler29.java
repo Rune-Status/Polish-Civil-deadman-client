@@ -35,7 +35,7 @@ public final class TextureSampler29 extends AbstractTextureSampler {
     if (var1 == 0) {
         this.aClass75Array3392 = new AbstractSomethingTexture[var2.readUnsignedByte()];
 
-        for (int var4 = 0; ~this.aClass75Array3392.length < ~var4; ++var4) {
+        for (int var4 = 0; this.aClass75Array3392.length > var4; ++var4) {
           int var5 = var2.readUnsignedByte();
           if (var5 == 0) {
             this.aClass75Array3392[var4] = FileSystem.method843(-5232, var2);

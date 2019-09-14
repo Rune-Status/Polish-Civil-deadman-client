@@ -54,7 +54,7 @@ public final class SocketStream implements Runnable {
               }
 
               var2 = this.anInt1236;
-              if (~this.anInt1236 < ~this.anInt1230) {
+              if (this.anInt1236 > this.anInt1230) {
                 var1 = -this.anInt1236 + 5000;
               } else {
                 var1 = this.anInt1230 - this.anInt1236;
@@ -137,7 +137,7 @@ public final class SocketStream implements Runnable {
           }
 
           synchronized (this) {
-            for (int var6 = 0; ~var4 < ~var6; ++var6) {
+            for (int var6 = 0; var4 > var6; ++var6) {
               this.aByteArray1233[this.anInt1230] = var3[var2 + var6];
               this.anInt1230 = (this.anInt1230 + 1) % 5000;
               if (~this.anInt1230 == ~((4900 + this.anInt1236) % 5000)) {

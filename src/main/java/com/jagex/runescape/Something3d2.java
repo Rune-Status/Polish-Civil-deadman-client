@@ -155,7 +155,7 @@ public class Something3d2 extends Something3dRoot {
               if (-1 != var13 && (!DummyClass35.getItemConfig(var13, (byte) 109).aBoolean779
                 || MapScene.aBoolean66)) {
                 assert var12 != null;
-                for (var14 = 0; ~var12.anIntArray254.length < ~var14; ++var14) {
+                for (var14 = 0; var12.anIntArray254.length > var14; ++var14) {
                   if (1 + var13 == var12.anIntArray254[var14]) {
                     var9 += var12.anIntArray317[var14];
                   }
@@ -196,7 +196,7 @@ public class Something3d2 extends Something3dRoot {
               if (~var13 != 0 && (!DummyClass35.getItemConfig(var13, (byte) 88).aBoolean779
                 || MapScene.aBoolean66)) {
                 assert var12 != null;
-                for (var14 = 0; ~var12.anIntArray254.length < ~var14; ++var14) {
+                for (var14 = 0; var12.anIntArray254.length > var14; ++var14) {
                   if (~var12.anIntArray254[var14] == ~(1 + var13)) {
                     var9 = 999999999;
                     break;

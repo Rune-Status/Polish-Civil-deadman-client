@@ -75,9 +75,9 @@ public abstract class AbstractSomethingTexture {
         AbstractSomethingTexture.anInt1105 = 43;
       }
 
-      for (int var5 = 0; ~SomethingWorldMapy.widgetQuads < ~var5; ++var5) {
-        if (~(GlTexture2d.quadx1[var5] + AbstractAudioOutputStream.quadx0[var5]) < ~var0
-          && ~(var1 + var0) < ~AbstractAudioOutputStream.quadx0[var5] && ~var3 > ~(
+      for (int var5 = 0; SomethingWorldMapy.widgetQuads > var5; ++var5) {
+        if ((GlTexture2d.quadx1[var5] + AbstractAudioOutputStream.quadx0[var5]) > var0
+          && (var1 + var0) > AbstractAudioOutputStream.quadx0[var5] && ~var3 > ~(
           Mobile.quady1[var5] + Player.quady0[var5]) && Player.quady0[var5] < var3 - -var4) {
           GroundItemNode.aBooleanArray3674[var5] = true;
         }

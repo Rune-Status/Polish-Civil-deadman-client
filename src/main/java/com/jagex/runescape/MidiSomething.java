@@ -146,7 +146,7 @@ public final class MidiSomething {
       int var33;
       int[][] var41;
       int var10000;
-      for (var13 = 0; ~var11 < ~var13; ++var13) {
+      for (var13 = 0; var11 > var13; ++var13) {
         var14 = var13 * var8 + var1 >> 16;
         var15 = (var13 + 1) * var8 + var1 >> 16;
         var16 = -var14 + var15;
@@ -335,7 +335,7 @@ public final class MidiSomething {
           } else {
             var14 += var5;
 
-            for (int var18 = 0; ~var12 < ~var18; ++var18) {
+            for (int var18 = 0; var12 > var18; ++var18) {
               if (-1 != Buffer.aClass3_Sub28_Sub3_2600.anInt3550) {
                 var19 = Buffer.aClass3_Sub28_Sub3_2600.anInt3550;
               } else if ((var13 - -var6 & 4) == (4 & var18 + var3)) {

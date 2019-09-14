@@ -90,7 +90,7 @@ public final class SceneSomething {
         var0[var1] = var8;
 
         for (int var9 = var4; ~var9 > ~var1; ++var9) {
-          if (~((var9 & 1) + var7) < ~var2[var9]) {
+          if (((var9 & 1) + var7) > var2[var9]) {
             int var10 = var2[var9];
             var2[var9] = var2[var6];
             var2[var6] = var10;

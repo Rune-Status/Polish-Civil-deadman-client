@@ -124,7 +124,7 @@ public final class GameObjectConfig {
   public boolean method1684(int var1, int var2 ) {
     int var3 = -1 % ((31 - var1) / 41);
       if (this.anIntArray1487 != null) {
-        for (int var7 = 0; ~this.anIntArray1487.length < ~var7; ++var7) {
+        for (int var7 = 0; this.anIntArray1487.length > var7; ++var7) {
           if (~var2 == ~this.anIntArray1487[var7]) {
             return LinearHashTable.aClass153_1043.method2129((byte) 72, 0,
                 this.anIntArray1519[var7] & '\uffff');
@@ -509,7 +509,7 @@ public final class GameObjectConfig {
                                             var4 = var1.readUnsignedByte();
                                             this.anIntArray1539 = new int[var4];
 
-                                            for (var5 = 0; ~var4 < ~var5;
+                                            for (var5 = 0; var4 > var5;
                                                 ++var5) {
                                               this.anIntArray1539[var5] = var1
                                                   .readUnsignedShort();
@@ -729,7 +729,7 @@ public final class GameObjectConfig {
       } else {
         boolean var2 = true;
 
-        for (int var3 = 0; ~this.anIntArray1519.length < ~var3; ++var3) {
+        for (int var3 = 0; this.anIntArray1519.length > var3; ++var3) {
           var2 &= LinearHashTable.aClass153_1043.method2129((byte) 64, 0,
             '\uffff' & this.anIntArray1519[var3]);
         }
@@ -790,7 +790,7 @@ public final class GameObjectConfig {
 
         long var16 = 0L;
 
-        for (int var11 = 0; ~var8 < ~var11; ++var11) {
+        for (int var11 = 0; var8 > var11; ++var11) {
           var16 = this.anIntArray1519[var11] + var16 * 67783L;
         }
 
@@ -802,7 +802,7 @@ public final class GameObjectConfig {
         if (null == var5) {
           Model var17 = null;
 
-          for (var12 = 0; ~var8 < ~var12; ++var12) {
+          for (var12 = 0; var8 > var12; ++var12) {
             var17 =
               Model.getModel(LinearHashTable.aClass153_1043,
                   this.anIntArray1519[var12] & '\uffff',
@@ -862,13 +862,13 @@ public final class GameObjectConfig {
       }
 
       if (null != this.aShortArray1477) {
-        for (var12 = 0; ~this.aShortArray1477.length < ~var12; ++var12) {
+        for (var12 = 0; this.aShortArray1477.length > var12; ++var12) {
           var19.method1918(this.aShortArray1477[var12], this.aShortArray1506[var12]);
         }
       }
 
       if (null != this.aShortArray1476) {
-        for (var12 = 0; ~this.aShortArray1476.length < ~var12; ++var12) {
+        for (var12 = 0; this.aShortArray1476.length > var12; ++var12) {
           var19.method1916(this.aShortArray1476[var12], this.aShortArray1495[var12]);
         }
       }

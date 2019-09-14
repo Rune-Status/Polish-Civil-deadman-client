@@ -126,7 +126,7 @@ public abstract class AbstractObjectNode extends SubNode {
       int var5 =
         TextureSampler13.anInt3362 - (int) (SomethingWorldMapy.aClass11_3551.anInt193
           / AbstractGameWorld.aFloat727);
-      if (~var4 < ~DummyClass30.anInt455) {
+      if (var4 > DummyClass30.anInt455) {
         ProceduralTexture.anInt1150 =
           DummyClass30.anInt455 + -((int) (SomethingWorldMapy.aClass11_3551.anInt168
             / AbstractGameWorld.aFloat727));

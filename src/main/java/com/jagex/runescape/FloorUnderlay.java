@@ -132,7 +132,7 @@ public final class FloorUnderlay {
 
   public static int method1602(int var0, GameString var1) {
     if (DummyClass25.aClass131_1624 != null && ~var1.getLength() != -1) {
-        for (int var2 = var0; ~DummyClass25.aClass131_1624.anInt1720 < ~var2; ++var2) {
+        for (int var2 = var0; DummyClass25.aClass131_1624.anInt1720 > var2; ++var2) {
           if (DummyClass25.aClass131_1624.aClass94Array1721[var2].method1560(
             TextureSampler15.aClass94_3192, true, OndemandFileRequest.aClass94_4066)
             .method1562((byte) -32, var1)) {

@@ -56,7 +56,7 @@ public final class DummyClass13 {
 
       int var6;
       int var7;
-      for (var6 = 0; ~var5 < ~var6; ++var6) {
+      for (var6 = 0; var5 > var6; ++var6) {
         var7 = DummyClass2.anIntArray1681[var3 - -var4] -
           var0 * DummyClass12.anIntArray2026[-1 + DummyClass12.anIntArray2026.length
             & SomethingScene.anInt1071 + var3] / 6;
@@ -106,7 +106,7 @@ public final class DummyClass13 {
         DummyClass22.anInt1740 = 0;
 
         int var10;
-        for (var7 = 0; ~var2 < ~var7; ++var7) {
+        for (var7 = 0; var2 > var7; ++var7) {
           var9 = var7 * 128;
           var8 = 0;
 

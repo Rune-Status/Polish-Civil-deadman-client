@@ -38,7 +38,7 @@ public abstract class Something3dRoot {
       int[] var41 = new int[var3];
 
       int var42;
-      for (var42 = 0; ~var2 < ~var42; ++var42) {
+      for (var42 = 0; var2 > var42; ++var42) {
         var39[var42] = (var42 << 12) / var2;
       }
 
@@ -57,9 +57,9 @@ public abstract class Something3dRoot {
       this.method2233(-949697716);
 
       for (int var37 = 0; var37 < var3; ++var37) {
-        for (int var36 = 0; ~var4 < ~var36; ++var36) {
+        for (int var36 = 0; var4 > var36; ++var36) {
           for (int var35 = 0; var35 < var2; ++var35) {
-            for (int var38 = 0; ~this.anInt2062 < ~var38; ++var38) {
+            for (int var38 = 0; this.anInt2062 > var38; ++var38) {
               var42 = this.aShortArray2049[var38] << 12;
               int var8 = this.anInt2057 * var42 >> 12;
               int var7 = var42 * var41[var37] >> 12;
@@ -164,7 +164,7 @@ public abstract class Something3dRoot {
         Something3dRoot.method2234(-92, 105);
       }
 
-      while (~this.anInt2062 < ~var2) {
+      while (this.anInt2062 > var2) {
         this.aShortArray2049[var2] = (short) ((int) Math.pow(2.0D, var2));
         ++var2;
       }

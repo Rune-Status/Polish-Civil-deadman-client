@@ -64,7 +64,7 @@ public final class TextureSampler38 extends AbstractTextureSampler {
               var11 = var17;
             }
 
-            if (~var10 < ~var12) {
+            if (var10 > var12) {
               var17 = var10;
               var18 = var11;
               var10 = var12;

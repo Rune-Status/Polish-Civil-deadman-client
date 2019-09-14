@@ -49,7 +49,7 @@ public final class TextureSampler22 extends AbstractTextureSampler {
           int[] var9 = var3[1];
           int[] var10 = var3[2];
 
-          for (int var11 = 0; ~SomethingLight0.anInt1559 < ~var11; ++var11) {
+          for (int var11 = 0; SomethingLight0.anInt1559 > var11; ++var11) {
             var8[var11] = -var5[var11] + 4096;
             var9[var11] = 4096 - var6[var11];
             var10[var11] = 4096 - var7[var11];

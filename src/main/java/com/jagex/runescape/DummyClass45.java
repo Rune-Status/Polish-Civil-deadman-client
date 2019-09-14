@@ -135,7 +135,7 @@ public final class DummyClass45 {
           if (~TextureSampler18.aShort4038 > ~var8) {
             var12 = TextureSampler18.aShort4038;
             var7 = var12 * var0 * 334 / (var3 * 512);
-            if (~TextureSampler4.aShort3241 < ~var7) {
+            if (TextureSampler4.aShort3241 > var7) {
               var7 = TextureSampler4.aShort3241;
               var9 = var12 * var0 * 334 / (512 * var7);
               var10 = (-var9 + var3) / 2;

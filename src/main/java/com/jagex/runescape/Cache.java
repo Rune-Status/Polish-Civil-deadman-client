@@ -160,7 +160,7 @@ public final class Cache {
       int var6;
       int var7;
       byte[] bytes;
-      for (var5 = 0; ~var4 < ~var5; ++var5) {
+      for (var5 = 0; var4 > var5; ++var5) {
         var6 = -WorldMapLabel.anInt1716 + 64 * (AudioStreamEncoder3.regionHashes[var5] >> 8);
         var7 = -ProceduralTexture.anInt1152 + 64 * (255 & AudioStreamEncoder3.regionHashes[var5]);
         bytes = fileData[var5];
@@ -176,7 +176,7 @@ public final class Cache {
         Cache.method1088(true);
       }
 
-      for (; ~var4 < ~var5; ++var5) {
+      for (; var4 > var5; ++var5) {
         var6 = -WorldMapLabel.anInt1716 + 64 * (AudioStreamEncoder3.regionHashes[var5] >> 8);
         var7 = -ProceduralTexture.anInt1152 + 64 * (255 & AudioStreamEncoder3.regionHashes[var5]);
         bytes = fileData[var5];
@@ -209,7 +209,7 @@ public final class Cache {
         DummyClass40.method1134();
       }
 
-      for (int var10 = 0; ~var3.length < ~var10; ++var10) {
+      for (int var10 = 0; var3.length > var10; ++var10) {
         Widget var11 = var3[var10];
         if (var11 != null && (~var11.anInt190 == ~var5
           || var5 == 0xabcdabcd && var11 == DummyClass42.aClass11_886)) {
@@ -259,7 +259,7 @@ public final class Cache {
                   var17 = DummyClass21.anInt1761;
                 }
 
-                if (~(var17 + var11.anInt193) < ~(DummyClass18.aClass11_88.anInt193
+                if ((var17 + var11.anInt193) > (DummyClass18.aClass11_88.anInt193
                   + DummyClass21.anInt1761)) {
                   var17 =
                     -var11.anInt193 + DummyClass18.aClass11_88.anInt193 + DummyClass21.anInt1761;
@@ -295,7 +295,7 @@ public final class Cache {
               var17 = y;
               var16 = x;
             } else {
-              var17 = ~var14 < ~y ? var14 : y;
+              var17 = var14 > y ? var14 : y;
               var16 = ~x > ~var13 ? var13 : x;
               var20 = var11.anInt168 + var13;
               var21 = var14 - -var11.anInt193;
@@ -308,7 +308,7 @@ public final class Cache {
               var18 = ~var20 <= ~width ? width : var20;
             }
 
-            if (!var11.aBoolean233 || ~var18 < ~var16 && ~var17 > ~var19) {
+            if (!var11.aBoolean233 || var18 > var16 && ~var17 > ~var19) {
               int var23;
               int var22;
               int var25;
@@ -355,7 +355,7 @@ public final class Cache {
                   var20 = NpcConfiguration.anInt1297 - var13;
                   var21 = -var14 + DummyClass36.anInt2612;
                   var22 = var11.anIntArray207[var21];
-                  if (~var20 > ~var22 || ~var20 < ~(var22 + var11.anIntArray291[var21])) {
+                  if (~var20 > ~var22 || var20 > (var22 + var11.anIntArray291[var21])) {
                     continue;
                   }
 
@@ -515,7 +515,7 @@ public final class Cache {
               if (!DummyClass36.aBoolean2615) {
                 if (~var11.anInt187 == -1 && var11.aBoolean219
                   && NpcConfiguration.anInt1297 >= var16 && ~DummyClass36.anInt2612 <= ~var17
-                  && NpcConfiguration.anInt1297 < var18 && ~var19 < ~DummyClass36.anInt2612
+                  && NpcConfiguration.anInt1297 < var18 && var19 > DummyClass36.anInt2612
                   && !LinearHashTable.aBoolean1040) {
                   TextureSampler25.amountContextActions = 1;
                   MonoChromaticImageCache.anIntArray1578[0] = AnimationSomething.anInt3590;
@@ -525,7 +525,7 @@ public final class Cache {
                 }
 
                 if (var16 <= NpcConfiguration.anInt1297 && ~var17 >= ~DummyClass36.anInt2612
-                  && var18 > NpcConfiguration.anInt1297 && ~var19 < ~DummyClass36.anInt2612) {
+                  && var18 > NpcConfiguration.anInt1297 && var19 > DummyClass36.anInt2612) {
                   AudioStreamEncoder4.method477(DummyClass36.anInt2612 + -var14, true,
                     -var13 + NpcConfiguration.anInt1297, var11);
                 }
@@ -560,7 +560,7 @@ public final class Cache {
                 if (var36 != null) {
                   if (var36.anInt2603 == 0 && !DummyClass36.aBoolean2615
                     && NpcConfiguration.anInt1297 >= var16 && ~var17 >= ~DummyClass36.anInt2612
-                    && ~var18 < ~NpcConfiguration.anInt1297 && DummyClass36.anInt2612 < var19
+                    && var18 > NpcConfiguration.anInt1297 && DummyClass36.anInt2612 < var19
                     && !LinearHashTable.aBoolean1040) {
                     GroundItem.aClass94Array2935[0] = DummyClass12.aClass94_2031;
                     TextureSampler25.amountContextActions = 1;
@@ -670,9 +670,9 @@ public final class Cache {
                                 }
 
                                 int var32;
-                                if (~var30 < ~(var26 + var24) && -1 > ~var51.anInt208) {
+                                if (var30 > (var26 + var24) && -1 > ~var51.anInt208) {
                                   var32 = DisplayMode.loopCycle * (-var26 + var30 + -var24) / 3;
-                                  if (~var32 < ~(DisplayMode.loopCycle * 10)) {
+                                  if (var32 > (DisplayMode.loopCycle * 10)) {
                                     var32 = 10 * DisplayMode.loopCycle;
                                   }
 
@@ -969,7 +969,7 @@ public final class Cache {
 
                           var21 = 0;
 
-                          for (var22 = 0; ~var11.anInt244 < ~var22; ++var22) {
+                          for (var22 = 0; var11.anInt244 > var22; ++var22) {
                             for (var23 = 0; var23 < var11.anInt177; ++var23) {
                               if (0 < var11.anIntArray254[var21]) {
                                 var42 = DummyClass35.getItemConfig(var11.anIntArray254[var21] + -1,
@@ -1042,7 +1042,7 @@ public final class Cache {
                           var26 = var14 - -var11.anInt193 - -5;
                           var20 += 6;
                           var21 += 7;
-                          if (~(var26 - -var21) < ~height) {
+                          if ((var26 - -var21) > height) {
                             var26 = -var21 + height;
                           }
 
@@ -1051,7 +1051,7 @@ public final class Cache {
                             var25 = 5 + var13;
                           }
 
-                          if (~(var20 + var25) < ~width) {
+                          if ((var20 + var25) > width) {
                             var25 = -var20 + width;
                           }
 
@@ -1152,7 +1152,7 @@ public final class Cache {
                                       -(255 & var15) + 256, var23, var24);
                                 }
                               } else if (var39) {
-                                for (var28 = 0; ~var24 < ~var28; ++var28) {
+                                for (var28 = 0; var24 > var28; ++var28) {
                                   if (~var15 == -1) {
                                     var27
                                         .method649(var13, var28 * var22 + var14,
@@ -1165,7 +1165,7 @@ public final class Cache {
                                 }
                               } else if (!var46) {
                                 for (var28 = 0; ~var28 > ~var23; ++var28) {
-                                  for (var29 = 0; ~var24 < ~var29; ++var29) {
+                                  for (var29 = 0; var24 > var29; ++var29) {
                                     if (var15 == 0) {
                                       var37.method643(var13 - -(var21 * var28),
                                           var22 * var29 + var14);
@@ -1177,7 +1177,7 @@ public final class Cache {
                                   }
                                 }
                               } else {
-                                for (var28 = 0; ~var23 < ~var28; ++var28) {
+                                for (var28 = 0; var23 > var28; ++var28) {
                                   if (~var15 == -1) {
                                     var27
                                         .method649(var21 * var28 + var13, var14,

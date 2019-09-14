@@ -67,7 +67,7 @@ public final class TextureSampler6 extends AbstractTextureSampler {
         int[] var9 = var3[1];
         int[] var10 = var3[2];
 
-        for (int var11 = 0; ~SomethingLight0.anInt1559 < ~var11; ++var11) {
+        for (int var11 = 0; SomethingLight0.anInt1559 > var11; ++var11) {
           int var13 = var6[var11];
           int var12 = var5[var11];
           int var14 = var7[var11];
@@ -178,7 +178,7 @@ public final class TextureSampler6 extends AbstractTextureSampler {
         if (~var10 <= -1) {
           --var9;
           var10 -= var9 << 1;
-          if (~var8 < ~var9) {
+          if (var8 > var9) {
             var18 = DummyClass35.anIntArrayArray663[var9 + var2];
             var19 = DummyClass35.anIntArrayArray663[-var9 + var2];
             var22 = -var7 + var6;
@@ -229,7 +229,7 @@ public final class TextureSampler6 extends AbstractTextureSampler {
         TextureSampler6.resetVariables(40);
       }
 
-      for (; ~DummyClass53.anInt1344 < ~var1; ++var1) {
+      for (; DummyClass53.anInt1344 > var1; ++var1) {
         PlayerVariable var2 = Unsure.getPlayerVariable(-109, var1);
         if (null != var2 && ~var2.anInt556 == -1) {
           LightIntensity.variables[var1] = 0;

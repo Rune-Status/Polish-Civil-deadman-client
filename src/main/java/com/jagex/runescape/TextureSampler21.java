@@ -23,7 +23,7 @@ public final class TextureSampler21 extends AbstractTextureSampler {
         int[] var6 = this.method152(1, var1, 32755);
         int[] var7 = this.method152(2, var1, 32755);
 
-        for (int var8 = 0; ~SomethingLight0.anInt1559 < ~var8; ++var8) {
+        for (int var8 = 0; SomethingLight0.anInt1559 > var8; ++var8) {
           int var9 = var7[var8];
           if (4096 == var9) {
             var3[var8] = var5[var8];
@@ -70,7 +70,7 @@ public final class TextureSampler21 extends AbstractTextureSampler {
         int[] var15 = var6[2];
         int[] var14 = var6[1];
 
-        for (int var16 = 0; ~SomethingLight0.anInt1559 < ~var16; ++var16) {
+        for (int var16 = 0; SomethingLight0.anInt1559 > var16; ++var16) {
           int var17 = var4[var16];
           if (var17 == 4096) {
             var7[var16] = var10[var16];

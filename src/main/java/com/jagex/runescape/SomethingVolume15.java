@@ -86,7 +86,7 @@ public final class SomethingVolume15 extends Node {
         var37[1] = 1;
         int var13 = 1;
 
-        for (var14 = 2; ~var9 < ~var14; ++var14) {
+        for (var14 = 2; var9 > var14; ++var14) {
           int var15 = var2.readUnsignedByte();
           if (0 == var15) {
             var13 = var12++;
@@ -131,7 +131,7 @@ public final class SomethingVolume15 extends Node {
       byte[] var18 = new byte[var17];
 
       int var19;
-      for (var19 = 0; ~var17 < ~var19; ++var19) {
+      for (var19 = 0; var17 > var19; ++var19) {
         var18[var19] = var2.readByte();
       }
 
@@ -159,7 +159,7 @@ public final class SomethingVolume15 extends Node {
       int var23;
       for (var23 = 0; ~var23 > -129; ++var23) {
         if (-1 == ~var20) {
-          if (~var18.length < ~var21) {
+          if (var18.length > var21) {
             var20 = var18[var21++];
           } else {
             var20 = -1;
@@ -284,12 +284,12 @@ public final class SomethingVolume15 extends Node {
       }
 
       if (null != var39) {
-        for (var27 = 1; ~var39.length < ~var27; var27 += 2) {
+        for (var27 = 1; var39.length > var27; var27 += 2) {
           var39[var27] = var2.readByte();
         }
       }
 
-      for (var27 = 0; ~var12 < ~var27; ++var27) {
+      for (var27 = 0; var12 > var27; ++var27) {
         var28 = var38[var27];
         if (null != var28.aByteArray2076) {
           var19 = 0;
@@ -331,7 +331,7 @@ public final class SomethingVolume15 extends Node {
         var48 = var40[0];
         byte var46 = var40[1];
 
-        for (var29 = 0; ~var48 < ~var29; ++var29) {
+        for (var29 = 0; var48 > var29; ++var29) {
           this.aByteArray2430[var29] = (byte) (32 + var46 * this.aByteArray2430[var29] >> 6);
         }
 
@@ -369,7 +369,7 @@ public final class SomethingVolume15 extends Node {
         var48 = var39[0];
         int var47 = var39[1] << 1;
 
-        for (var29 = 0; ~var48 < ~var29; ++var29) {
+        for (var29 = 0; var48 > var29; ++var29) {
           var44 = var47 + (255 & this.aByteArray2422[var29]);
           if (var44 < 0) {
             var44 = 0;

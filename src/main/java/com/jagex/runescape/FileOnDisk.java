@@ -54,7 +54,7 @@ public final class FileOnDisk {
   }
 
   public void method1738(int var1, byte[] var2, int var3, int var4) throws IOException {
-    if (~(this.aLong1652 + var3) < ~this.aLong1649) {
+    if ((this.aLong1652 + var3) > this.aLong1649) {
       this.aRandomAccessFile1651.seek(1L + this.aLong1649);
       this.aRandomAccessFile1651.write(1);
       throw new EOFException();

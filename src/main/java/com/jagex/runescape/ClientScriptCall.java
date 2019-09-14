@@ -85,7 +85,7 @@ public final class ClientScriptCall extends Node {
         if (NPC.anInt3995 < var1) {
           NPC.anInt3995 +=
             DummyClass8.anInt4021 + AbstractFileRequest.anInt3631 * (-NPC.anInt3995 + var1) / 1000;
-          if (~NPC.anInt3995 < ~var1) {
+          if (NPC.anInt3995 > var1) {
             NPC.anInt3995 = var1;
           }
         }
@@ -99,7 +99,7 @@ public final class ClientScriptCall extends Node {
           }
         }
 
-        if (~NPC.anInt3995 < ~var1) {
+        if (NPC.anInt3995 > var1) {
           NPC.anInt3995 -=
             DummyClass8.anInt4021 + (NPC.anInt3995 + -var1) * AbstractFileRequest.anInt3631 / 1000;
           if (NPC.anInt3995 < var1) {
@@ -119,15 +119,15 @@ public final class ClientScriptCall extends Node {
           EnumStringFetcher.anInt2162 -=
             (EnumStringFetcher.anInt2162 - var3) * AbstractFileRequest.anInt3631 / 1000
               + DummyClass8.anInt4021;
-          if (~var3 < ~EnumStringFetcher.anInt2162) {
+          if (var3 > EnumStringFetcher.anInt2162) {
             EnumStringFetcher.anInt2162 = var3;
           }
         }
 
-        if (~DummyClass49.anInt1111 < ~var2) {
+        if (DummyClass49.anInt1111 > var2) {
           DummyClass49.anInt1111 -= DummyClass8.anInt4021 - -(
             (-var2 + DummyClass49.anInt1111) * AbstractFileRequest.anInt3631 / 1000);
-          if (~var2 < ~DummyClass49.anInt1111) {
+          if (var2 > DummyClass49.anInt1111) {
             DummyClass49.anInt1111 = var2;
           }
         }

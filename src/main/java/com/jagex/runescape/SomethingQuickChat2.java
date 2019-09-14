@@ -20,7 +20,7 @@ public final class SomethingQuickChat2 extends SubNode {
   public void method525(int var1 ) {
     int var2;
       if (null != this.anIntArray3540) {
-        for (var2 = 0; ~this.anIntArray3540.length < ~var2; ++var2) {
+        for (var2 = 0; this.anIntArray3540.length > var2; ++var2) {
           this.anIntArray3540[var2] =
             TextureSampler3.method308(this.anIntArray3540[var2], '\u8000');
         }

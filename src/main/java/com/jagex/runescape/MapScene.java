@@ -49,7 +49,7 @@ public final class MapScene {
           var3.anInt1469 = var3.width;
           var3.anInt1467 = var3.height;
 
-          for (int var5 = 0; ~var1 < ~var5; ++var5) {
+          for (int var5 = 0; var1 > var5; ++var5) {
             var3.method1674();
           }
 
@@ -304,7 +304,7 @@ public final class MapScene {
               int var23 = 0;
               int var24 = 0;
               if (~var21 <= ~var8) {
-                if (~var21 < ~(-1 + var0 + var8)) {
+                if (var21 > (-1 + var0 + var8)) {
                   var23 = var21 + 1 + -var0 + -var8;
                 }
               } else {
@@ -312,7 +312,7 @@ public final class MapScene {
               }
 
               if (~var4 >= ~var22) {
-                if (~var22 < ~(-1 + var4 + var6)) {
+                if (var22 > (-1 + var4 + var6)) {
                   var24 = -var4 + -var6 + 1 + var22;
                 }
               } else {

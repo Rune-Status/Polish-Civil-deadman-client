@@ -62,7 +62,7 @@ public final class PlayerAppearance {
               AudioWorker.aShortArrayArray344[var15][this.anIntArray862[var15]]);
           }
 
-          if (~DummyClass55.aShortArrayArray1429[var15].length < ~this.anIntArray862[var15]) {
+          if (DummyClass55.aShortArrayArray1429[var15].length > this.anIntArray862[var15]) {
             var14.replaceColor(CollisionMap.aShortArray1311[var15],
               DummyClass55.aShortArrayArray1429[var15][this.anIntArray862[var15]]);
           }
@@ -418,7 +418,7 @@ public final class PlayerAppearance {
         boolean var44 = false;
 
         int var47;
-        for (var22 = 0; ~var45 < ~var22; ++var22) {
+        for (var22 = 0; var45 > var22; ++var22) {
           if (var1[var22] != null) {
             AnimationSequence var41 = GameClient
                 .method45(var1[var22].anInt1890, (byte) -20);
@@ -653,7 +653,7 @@ public final class PlayerAppearance {
           Model var15 = new Model(var14, var9);
 
           for (var11 = 0; ~var11 > -6; ++var11) {
-            if (~AudioWorker.aShortArrayArray344[var11].length < ~this.anIntArray862[var11]) {
+            if (AudioWorker.aShortArrayArray344[var11].length > this.anIntArray862[var11]) {
               var15.replaceColor(Inventory.aShortArray2548[var11],
                 AudioWorker.aShortArrayArray344[var11][this.anIntArray862[var11]]);
             }
@@ -986,7 +986,7 @@ public final class PlayerAppearance {
                   && -101
                   < ~TriChromaticImageCache.anIntArrayArray1373[var22][var23]) {
                 int var24 = 0;
-                if (~var6 < ~var22) {
+                if (var6 > var22) {
                   var24 = -var22 + var6;
                 } else if (~(var6 - (-var2 - -1)) > ~var22) {
                   var24 = -var2 + -var6 - -1 + var22;
@@ -1001,8 +1001,7 @@ public final class PlayerAppearance {
 
                 int var26 = var24 * var24 + var25 * var25;
                 if (~var26 > ~var19 || var26 == var19
-                    && ~var20
-                    < ~TriChromaticImageCache.anIntArrayArray1373[var22][var23]) {
+                    && var20 > TriChromaticImageCache.anIntArrayArray1373[var22][var23]) {
                   var20 = TriChromaticImageCache.anIntArrayArray1373[var22][var23];
                   var13 = var22;
                   var19 = var26;

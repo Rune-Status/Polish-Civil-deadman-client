@@ -135,7 +135,7 @@ public class MovedStatics0 {
       int var20;
       int var22;
       int var29;
-      while (~var25.bytes.length < ~var25.position) {
+      while (var25.bytes.length > var25.position) {
         var14 = var25.readUnsignedByte();
         if (-130 != ~var14) {
           --var25.position;
@@ -155,7 +155,7 @@ public class MovedStatics0 {
                       for (var21 = var18; var21 < 4 + var18; ++var21) {
                         if (~var20 <= ~var9 && ~var20 > ~(8 + var9)
                             && ~var21 <= ~var8
-                            && ~(var8 + 8) < ~var8) {
+                            && (var8 + 8) > var8) {
                           var22 = var1 - -SubNode
                               .method519(var0, true, var21 & 7, var20 & 7);
                           int var23 =
@@ -247,7 +247,7 @@ public class MovedStatics0 {
                 var20 = var30.anInt708 >> 7;
                 if (~var7 == ~var30.anInt704 && ~var29 <= ~var9
                     && var9 - -8 > var29
-                    && ~var8 >= ~var20 && ~(var8 - -8) < ~var20) {
+                    && ~var8 >= ~var20 && (var8 - -8) > var20) {
                   var21 =
                       MonoChromaticImageBuffer
                           .method514(var0, var30.anInt703 & 1023, (byte) -83,

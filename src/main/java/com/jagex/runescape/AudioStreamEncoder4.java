@@ -703,7 +703,7 @@ public final class AudioStreamEncoder4 extends AudioStreamEncoder {
             var3.anInt2506 += 128;
           }
 
-          while (~(-2 + var7.aByteArray2076.length) < ~var3.anInt2519
+          while ((-2 + var7.aByteArray2076.length) > var3.anInt2519
             && ~((255 & var7.aByteArray2076[2 + var3.anInt2519]) << 8)
             > ~var3.anInt2506) {
             var3.anInt2519 += 2;
@@ -877,7 +877,7 @@ public final class AudioStreamEncoder4 extends AudioStreamEncoder {
         || -1 > ~this.anIntArray3502[var2.anInt2514])) {
         var5 = var4.anInt2066 << 2;
         int var6 = var4.anInt2069 << 1;
-        if (~var6 < ~var2.anInt2515) {
+        if (var6 > var2.anInt2515) {
           var5 = var2.anInt2515 * var5 / var6;
         }
 
@@ -1125,7 +1125,7 @@ public final class AudioStreamEncoder4 extends AudioStreamEncoder {
               var7 += var3.anIntArray272[var15];
             }
 
-            if (~var2 <= ~var7 && ~var8 >= ~var0 && 32 + var7 > var2 && ~(var8 + 32) < ~var0) {
+            if (~var2 <= ~var7 && ~var8 >= ~var0 && 32 + var7 > var2 && (var8 + 32) > var0) {
               DummyClass54.aClass11_1402 = var3;
               StillGraphic.anInt2701 = var15;
               if (-1 > ~var3.anIntArray254[var15]) {

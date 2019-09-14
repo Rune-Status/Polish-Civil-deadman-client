@@ -424,7 +424,7 @@ public final class ItemConfig {
                           this.aShortArray751 = new short[var5];
                           this.aShortArray765 = new short[var5];
 
-                          for (var6 = 0; ~var5 < ~var6; ++var6) {
+                          for (var6 = 0; var5 > var6; ++var6) {
                             this.aShortArray765[var6] = (short) var2
                                 .readUnsignedShort();
                             this.aShortArray751[var6] = (short) var2
@@ -618,7 +618,7 @@ public final class ItemConfig {
           }
 
           if (this.aShortArray765 != null) {
-            for (var9 = 0; ~this.aShortArray765.length < ~var9; ++var9) {
+            for (var9 = 0; this.aShortArray765.length > var9; ++var9) {
               assert var5 != null;
               var5.replaceMaterial(
                   this.aShortArray765[var9], this.aShortArray751[var9]);
@@ -1008,7 +1008,7 @@ public final class ItemConfig {
             byte2 = 0;
           }
           int j76 = 0;
-          while (~l43 < ~j76) {
+          while (l43 > j76) {
             DummyCanvas.anIntArrayArray20[k4][j76] = byte2;
             j76++;
           }
@@ -2016,7 +2016,7 @@ public final class ItemConfig {
                         if (-3625 == ~j1) {
                           int l15 = GroundItem.anIntArray2929[--k];
                           if (null != ClientScript.aClass3_Sub19Array3694
-                            && ~SubNode.anInt2572 < ~l15
+                            && SubNode.anInt2572 > l15
                             && ClientScript.aClass3_Sub19Array3694[l15].name.method1531(
                             TextureCache.localPlayer.name)) {
                             GroundItem.anIntArray2929[k++] = 1;
@@ -5031,7 +5031,7 @@ public final class ItemConfig {
         if (j1 == 1100) {
           k -= 2;
           class11_16.anInt247 = GroundItem.anIntArray2929[k];
-          if (~class11_16.anInt247 < ~(class11_16.anInt240 + -class11_16.anInt168)) {
+          if (class11_16.anInt247 > (class11_16.anInt240 + -class11_16.anInt168)) {
             class11_16.anInt247 = class11_16.anInt240 + -class11_16.anInt168;
           }
           if (~class11_16.anInt247 > -1) {

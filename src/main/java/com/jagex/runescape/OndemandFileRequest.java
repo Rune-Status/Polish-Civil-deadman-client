@@ -57,7 +57,7 @@ public final class OndemandFileRequest extends AbstractFileRequest {
           int[] var3 = (int[]) var2.result;
           DisplayMode[] var4 = new DisplayMode[var3.length >> 2];
 
-          for (int var5 = 0; ~var4.length < ~var5; ++var5) {
+          for (int var5 = 0; var4.length > var5; ++var5) {
             DisplayMode var6 = new DisplayMode();
             var4[var5] = var6;
             var6.anInt1447 = var3[var5 << 2];

@@ -80,7 +80,7 @@ public final class Keyboard implements KeyListener, FocusListener {
     if (null != TextureSampler33.keyboard) {
         TextureSampler29.anInt3398 = 0;
         int var2 = var1.getKeyCode();
-        if (var2 >= 0 && ~DummyClass26.keyTable.length < ~var2) {
+        if (var2 >= 0 && DummyClass26.keyTable.length > var2) {
           var2 = DummyClass26.keyTable[var2] & -129;
         } else {
           var2 = -1;
@@ -138,7 +138,7 @@ public final class Keyboard implements KeyListener, FocusListener {
         }
 
         if (AudioWorker.aBoolean346) {
-          for (int var3 = 0; ~SomethingOtherWorldMap.anInt2537 < ~var3; ++var3) {
+          for (int var3 = 0; SomethingOtherWorldMap.anInt2537 > var3; ++var3) {
             int var4 = SomethingPacket116.anIntArray1755[var3];
             if (98 == var4) {
               AreaSoundEffect.anInt2309 = -16 & AreaSoundEffect.anInt2309 + 47;

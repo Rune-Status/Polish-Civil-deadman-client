@@ -216,7 +216,7 @@ public final class TextureSampler37 extends AbstractTextureSampler {
             SomethingVolume15.gameSocket.read(SpotAnimationConfig.gameBuffer.bytes, 0,
               8 * TextureSampler29.aClass94Array3391.length);
 
-            for (var1 = 0; ~TextureSampler29.aClass94Array3391.length < ~var1; ++var1) {
+            for (var1 = 0; TextureSampler29.aClass94Array3391.length > var1; ++var1) {
               TextureSampler29.aClass94Array3391[var1] =
                 FileCache.stringFromBase37(-29664, SpotAnimationConfig.gameBuffer.readLong());
             }

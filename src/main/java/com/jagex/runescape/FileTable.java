@@ -92,7 +92,7 @@ public final class FileTable {
           }
         }
 
-        for (var8 = 0; ~this.anInt947 < ~var8; ++var8) {
+        for (var8 = 0; this.anInt947 > var8; ++var8) {
           this.anIntArray945[this.anIntArray953[var8]] = var3.readInt();
         }
 

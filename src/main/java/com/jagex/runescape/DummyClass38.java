@@ -166,7 +166,7 @@ public final class DummyClass38 {
         int[] var17 = new int[var4];
         int[] var20 = new int[var4];
 
-        for (int var22 = 0; ~var4 < ~var22; ++var22) {
+        for (int var22 = 0; var4 > var22; ++var22) {
           int var23 = SpotAnimationConfig.gameBuffer.readUnsignedShortLE();
           if ('\uffff' == var23) {
             var23 = -1;
@@ -200,7 +200,7 @@ public final class DummyClass38 {
           var3.anInt2761 = 0;
           var3.anInt2805 = 0;
           var3.anInt2842 = var4;
-          if (~var3.anInt2759 < ~AbstractGameWorld.updateCycle) {
+          if (var3.anInt2759 > AbstractGameWorld.updateCycle) {
             var3.anInt2805 = -1;
           }
 
@@ -300,7 +300,7 @@ public final class DummyClass38 {
         int var11 = var2.readUnsignedByte();
         int var12;
         if (-1 == ~(1 & var11)) {
-          for (var12 = 0; ~var7 < ~var12; ++var12) {
+          for (var12 = 0; var7 > var12; ++var12) {
             var8[var12] = var2.readByte();
           }
 

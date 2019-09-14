@@ -85,7 +85,7 @@ public class SignLink implements Runnable {
             "rw", 1048576L);
     this.cacheIndexFiles = new FileOnDisk[var4];
 
-    for (int var5 = 0; ~var4 < ~var5; ++var5) {
+    for (int var5 = 0; var4 > var5; ++var5) {
       this.cacheIndexFiles[var5] = new FileOnDisk(
           SignLink.openFile(this.gameName, true,
               "main_file_cache.idx" + var5), "rw",
@@ -239,7 +239,7 @@ public class SignLink implements Runnable {
       try {
         int var2 = var1.anInt975;
         if (var2 == 1) {
-          if (~SignLink.aLong1221 < ~Time.getCurrentTimeMillis()) {
+          if (SignLink.aLong1221 > Time.getCurrentTimeMillis()) {
             throw new IOException();
           }
 
@@ -250,7 +250,7 @@ public class SignLink implements Runnable {
           var1.result = new Socket(InetAddress.getByName(host), port);
         } else if (2 != var2) {
           if (-5 == ~var2) {
-            if (~SignLink.aLong1221 < ~Time.getCurrentTimeMillis()) {
+            if (SignLink.aLong1221 > Time.getCurrentTimeMillis()) {
               throw new IOException();
             }
 
@@ -310,7 +310,7 @@ public class SignLink implements Runnable {
                             (Vector) var20.get(
                                 ((Class) var1.anObject977).getClassLoader());
 
-                        for (var18 = 0; ~var24.size() < ~var18; ++var18) {
+                        for (var18 = 0; var24.size() > var18; ++var18) {
                           Object var26 = var24.elementAt(var18);
                           Method var9 = var26.getClass()
                               .getDeclaredMethod("finalize");
@@ -441,7 +441,7 @@ public class SignLink implements Runnable {
     }
 
     if (this.cacheIndexFiles != null) {
-      for (int var2 = 0; ~this.cacheIndexFiles.length < ~var2; ++var2) {
+      for (int var2 = 0; this.cacheIndexFiles.length > var2; ++var2) {
         if (this.cacheIndexFiles[var2] != null) {
           try {
             this.cacheIndexFiles[var2].close(var1 ^ 1);

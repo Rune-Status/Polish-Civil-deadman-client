@@ -337,7 +337,7 @@ public final class CollisionMap {
           this.method1488(92, -42, true, -119, -67, -14, -88, 5);
         }
 
-        return ~(var4 + var6) < ~var5 && var7 + var5 > var6;
+        return (var4 + var6) > var5 && var7 + var5 > var6;
       } else {
         return false;
       }
@@ -726,7 +726,7 @@ public final class CollisionMap {
         for (; ~var8 > ~(var1 + var5); ++var8) {
           if (var8 >= 0 && var8 < this.anInt1300) {
             for (int var9 = var4; var9 < var6 + var4; ++var9) {
-              if (0 <= var9 && ~this.anInt1303 < ~var9) {
+              if (0 <= var9 && this.anInt1303 > var9) {
                 this.method1490(var7, (byte) -80, var8, var9);
               }
             }
@@ -945,7 +945,7 @@ public final class CollisionMap {
           } else if (~var14 == ~var8 && ~(1 & var4) == -1) {
             var15 = var7;
 
-            for (var16 = ~var11 < ~var13 ? var13 : var11; ~var16 < ~var15;
+            for (var16 = var11 > var13 ? var13 : var11; var16 > var15;
                 ++var15) {
               if ((32 & this.anIntArrayArray1304[var15 - this.anInt1309][var8
                   + -this.anInt1306])
@@ -956,7 +956,7 @@ public final class CollisionMap {
           }
         } else if (var11 > var1 && ~var11 >= ~var13) {
           if (~var2 == ~var12 && 0 == (4 & var4)) {
-            for (var15 = var1; ~var11 < ~var15; ++var15) {
+            for (var15 = var1; var11 > var15; ++var15) {
               if ((2 & this.anIntArrayArray1304[-this.anInt1309 + var15][var12
                   - (
                   this.anInt1306
@@ -1027,8 +1027,8 @@ public final class CollisionMap {
   }
 
   public void method1496(int var1 ) {
-    for (int var2 = var1; ~this.anInt1300 < ~var2; ++var2) {
-        for (int var3 = 0; ~this.anInt1303 < ~var3; ++var3) {
+    for (int var2 = var1; this.anInt1300 > var2; ++var2) {
+        for (int var3 = 0; this.anInt1303 > var3; ++var3) {
           if (var2 != 0 && 0 != var3 && var2 < this.anInt1300
               - 5 && this.anInt1303 - 5 > var3) {
             this.anIntArrayArray1304[var2][var3] = 0x1000000;
@@ -1120,7 +1120,7 @@ public final class CollisionMap {
           var2 -= this.anInt1306;
           var5 -= this.anInt1309;
           int var6;
-          if (~var4 < ~var5) {
+          if (var4 > var5) {
             var6 = var4 - var5;
           } else {
             var6 = -var4 + var5;
@@ -1140,7 +1140,7 @@ public final class CollisionMap {
             var8 = 65536 * var6 / var7;
 
             while (~var2 != ~var3) {
-              if (~var3 < ~var2) {
+              if (var3 > var2) {
                 if (0 != (this.anIntArrayArray1304[var5][var2] & 19661058)) {
                   return false;
                 }
@@ -1252,7 +1252,7 @@ public final class CollisionMap {
       for (var9 = var2; var9 < var2 - -var3; ++var9) {
         if (0 <= var9 && var9 < this.anInt1300) {
           for (int var10 = var7; ~var10 > ~(var6 + var7); ++var10) {
-            if (-1 >= ~var10 && ~this.anInt1303 < ~var10) {
+            if (-1 >= ~var10 && this.anInt1303 > var10) {
               this.method1501((byte) 32, var10, var9, var8);
             }
           }
