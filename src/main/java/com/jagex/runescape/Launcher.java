@@ -1,27 +1,5 @@
-package com.jagex.runescape.launcher;
+package com.jagex.runescape;
 
-import com.jagex.runescape.AbstractGameWorld;
-import com.jagex.runescape.AbstractImageProducer;
-import com.jagex.runescape.DisplayMode;
-import com.jagex.runescape.DummyClass7;
-import com.jagex.runescape.DummyClass8;
-import com.jagex.runescape.GZipDecompressor;
-import com.jagex.runescape.GameClient;
-import com.jagex.runescape.GameException;
-import com.jagex.runescape.GameObjectConfig;
-import com.jagex.runescape.GameStringStatics;
-import com.jagex.runescape.GroundItemNode;
-import com.jagex.runescape.MonoChromaticImageBuffer;
-import com.jagex.runescape.Node;
-import com.jagex.runescape.ProjectileNode;
-import com.jagex.runescape.SomethingPacket151;
-import com.jagex.runescape.SomethingTilek;
-import com.jagex.runescape.Structure;
-import com.jagex.runescape.TextureSampler15;
-import com.jagex.runescape.TextureSampler18;
-import com.jagex.runescape.TextureSampler20;
-import com.jagex.runescape.TextureSampler27;
-import com.jagex.runescape.TriChromaticImageBuffer;
 import java.nio.charset.StandardCharsets;
 
 public class Launcher {
