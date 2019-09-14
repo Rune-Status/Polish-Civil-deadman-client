@@ -68,8 +68,8 @@ public final class MilliFrameRegulator extends AbstractFrameRegulator {
       this.aLongArray2694[this.anInt2685] = this.aLong2683;
       this.anInt2685 = (1 + this.anInt2685) % 10;
       int var6;
-      if ((this.anInt2691 > 2 -1)) {
-        for (var6 = 0; (var6 < 11 -1); ++var6) {
+      if ((this.anInt2691 > 1)) {
+        for (var6 = 0; (var6 < 10); ++var6) {
           if (this.aLongArray2694[var6] != 0L) {
             this.aLongArray2694[var6] += this.anInt2691;
           }
@@ -92,7 +92,7 @@ public final class MilliFrameRegulator extends AbstractFrameRegulator {
 
   public void reset(int var1 ) {
     int var2;
-      for (var2 = 0; (var2 < 11 -1); ++var2) {
+      for (var2 = 0; (var2 < 10); ++var2) {
         this.aLongArray2694[var2] = 0L;
       }
 

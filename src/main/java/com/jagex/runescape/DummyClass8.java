@@ -49,7 +49,7 @@ public final class DummyClass8 extends DummyClass7 {
             var9.anInt1353 * 2, var2 >> 1,
             var9.anInt1346 + (var9.anInt1356 + -WorldMapLabel.anInt1716 << 7), (byte) -114, var4);
           if (DummyClass34.anInt590 > -1
-              && ((AbstractGameWorld.updateCycle % 20) < 11 -1)) {
+              && ((AbstractGameWorld.updateCycle % 20) < 10)) {
             SomethingIndex150.aClass3_Sub28_Sub16Array2072[var9.anInt1351].method643(
               -12 + var1 + DummyClass34.anInt590, -28 + var6 - -WidgetAccess.anInt2208);
           }
@@ -85,8 +85,8 @@ public final class DummyClass8 extends DummyClass7 {
       for (int var5 = 0; var5 < var3; ++var5) {
         DummyClass43.method1194(-16385);
 
-        for (int var6 = 0; (var6 < 14 -1); ++var6) {
-          for (int var7 = 0; (var7 < 14 -1); ++var7) {
+        for (int var6 = 0; (var6 < 13); ++var6) {
+          for (int var7 = 0; (var7 < 13); ++var7) {
             int var8 = GameObjectConfig.anIntArrayArrayArray1497[var5][var6][var7];
             if ((var8 != -1)) {
               int var9 = var8 >> 24 & 3;
@@ -119,14 +119,14 @@ public final class DummyClass8 extends DummyClass7 {
 
       int var6 = (int) var1 >> 20 & 3;
       int var7 = (int) (var1 >>> 32) & Integer.MAX_VALUE;
-      if (var5 != 10 && (var5 != 12 -1) && var5 != 22) {
+      if (var5 != 10 && (var5 != 11) && var5 != 22) {
         Parameter.method582(TextureCache.localPlayer.waypointsY[0], var6, 0, true, 0, 2, var4, 0,
           1 + var5, 2, var3, TextureCache.localPlayer.waypointsX[0]);
       } else {
         GameObjectConfig var8 = DummyClass11.method2207(4, var7);
         int var9;
         int var10;
-        if ((var6 != 0) && (var6 != 3 -1)) {
+        if ((var6 != 0) && (var6 != 2)) {
           var10 = var8.anInt1480;
           var9 = var8.anInt1485;
         } else {
@@ -180,7 +180,7 @@ public final class DummyClass8 extends DummyClass7 {
         int var5;
         for (var5 = 0; (var5 < var3.anInt2296); ++var5) {
           if (var3.aClass64Array2303[var5] != null) {
-            if ((var3.aClass64Array2303[var5].status == 3 -1)) {
+            if ((var3.aClass64Array2303[var5].status == 2)) {
               var3.anIntArray2300[var5] = -5;
             }
 
@@ -190,7 +190,7 @@ public final class DummyClass8 extends DummyClass7 {
           }
 
           if (var3.aClass64Array2298[var5] != null) {
-            if ((var3.aClass64Array2298[var5].status == 3 -1)) {
+            if ((var3.aClass64Array2298[var5].status == 2)) {
               var3.anIntArray2300[var5] = -6;
             }
 
@@ -221,7 +221,7 @@ public final class DummyClass8 extends DummyClass7 {
                 var0.writeByte(0);
                 var0.writeInt(var9);
               } else {
-                if ((var7 == 2 -1)) {
+                if ((var7 == 1)) {
                   var8 = (Field) var3.aClass64Array2303[var6].result;
                   var8.setInt(null, var3.anIntArray2299[var6]);
                   var0.writeByte(0);

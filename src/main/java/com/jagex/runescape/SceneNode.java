@@ -34,7 +34,7 @@ public abstract class SceneNode {
     if (SceneSomething2.aDouble1050 != var0) {
         for (int var3 = 0; var3 < 256; ++var3) {
           int var4 = (int) (255.0D * Math.pow(var3 / 255.0D, var0));
-          GameBuffer.anIntArray3804[var3] = (var4 > 256 -1) ? 255 : var4;
+          GameBuffer.anIntArray3804[var3] = (var4 > 255) ? 255 : var4;
         }
 
         SceneSomething2.aDouble1050 = var0;
@@ -92,7 +92,7 @@ public abstract class SceneNode {
   public static int method1863(int var0, int var1, byte var2, int var3, int var4, int var5,
                               int var6) {
     int var7;
-      if (((1 & var5) == 2 -1)) {
+      if (((1 & var5) == 1)) {
         var7 = var0;
         var0 = var3;
         var3 = var7;
@@ -103,7 +103,7 @@ public abstract class SceneNode {
       return (var1 == 0) ?
         var6 :
         (var1 != 1
-            ? ((var1 != 3 -1) ? var4 : -var3 + 1 + -var6 + 7) : -var4 + 7 + -var0 - -1);
+            ? ((var1 != 2) ? var4 : -var3 + 1 + -var6 + 7) : -var4 + 7 + -var0 - -1);
   }
 
   public static void method1864(boolean var0, byte var1, FileUnpacker var2, SoftwareFont var3,

@@ -70,7 +70,7 @@ public final class Keyboard implements KeyListener, FocusListener {
         }
 
         var3 = var1.getModifiers();
-        if (((var3 & 10) != 0) || var2 == 85 || (var2 == 11 -1)) {
+        if (((var3 & 10) != 0) || var2 == 85 || (var2 == 10)) {
           var1.consume();
         }
       }
@@ -123,8 +123,8 @@ public final class Keyboard implements KeyListener, FocusListener {
         int var1 = TextureCache.localPlayer.anInt2819 + TextureSampler19.anInt3216;
         int var2 = TextureCache.localPlayer.anInt2829 - -DummyInputStream.anInt42;
         if (((-var1 + TextureSampler20.anInt3155) < 499)
-          || ((-var1 + TextureSampler20.anInt3155) > 501 -1) || ((FileTable.anInt942 + -var2) < 499)
-          || ((-var2 + FileTable.anInt942) > 501 -1)) {
+          || ((-var1 + TextureSampler20.anInt3155) > 500) || ((FileTable.anInt942 + -var2) < 499)
+          || ((-var2 + FileTable.anInt942) > 500)) {
           TextureSampler20.anInt3155 = var1;
           FileTable.anInt942 = var2;
         }
@@ -143,7 +143,7 @@ public final class Keyboard implements KeyListener, FocusListener {
             if (var4 == 98) {
               AreaSoundEffect.anInt2309 = -16 & AreaSoundEffect.anInt2309 + 47;
             } else {
-              if ((var4 == 100 -1)) {
+              if ((var4 == 99)) {
                 AreaSoundEffect.anInt2309 =
                     -16 & AreaSoundEffect.anInt2309 - 17;
               } else {

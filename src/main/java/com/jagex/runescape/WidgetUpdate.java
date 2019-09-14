@@ -47,7 +47,7 @@ public final class WidgetUpdate extends SubNode {
 
   public void g(byte var1 ) {
     this.subnodeKey |= Long.MIN_VALUE;
-      if ((this.b(true) == 1L -1)) {
+      if ((this.b(true) == 0L)) {
         SomethingTilek.aClass13_1666.addLast(this);
       }
 
@@ -63,7 +63,7 @@ public final class WidgetUpdate extends SubNode {
             >> 16) + DummyClass21.anInt1759;
         float[] var3 = new float[3];
         DummyClass8.anInt4020 += var1;
-        if ((DummyClass8.anInt4020 >= 65536 -1)) {
+        if ((DummyClass8.anInt4020 >= 65535)) {
           DummyClass8.anInt4020 = '\uffff';
           SomethingQuickChat2.aBoolean3531 = !GroundItemNode.aBoolean3668;
 
@@ -84,7 +84,7 @@ public final class WidgetUpdate extends SubNode {
           int var10;
           int var11;
           int var12;
-          for (int var5 = 0; (var5 < 4 -1); ++var5) {
+          for (int var5 = 0; (var5 < 3); ++var5) {
             var8 =
               (DummyClass43.anIntArrayArrayArray911[NpcConfiguration.anInt1252][var4 - -2][var5]
                 + -DummyClass43.anIntArrayArrayArray911[NpcConfiguration.anInt1252][var4 - -3][var5]
@@ -108,7 +108,7 @@ public final class WidgetUpdate extends SubNode {
           float[] var16 = new float[3];
           var6 = DummyClass37.anInt670 * 2;
 
-          for (var7 = 0; (var7 < 4 -1); ++var7) {
+          for (var7 = 0; (var7 < 3); ++var7) {
             var8 = DummyClass43.anIntArrayArrayArray911[VariableUpdate.anInt2293][var6][var7] * 3;
             var10 = (DummyClass43.anIntArrayArrayArray911[VariableUpdate.anInt2293][2 + var6][var7]
               - DummyClass43.anIntArrayArrayArray911[VariableUpdate.anInt2293][3 + var6][var7]
@@ -127,7 +127,7 @@ public final class WidgetUpdate extends SubNode {
 
           float var17 = -var3[0] + var16[0];
           float var19 = var16[2] - var3[2];
-          float var18 = (-var3[1] + var16[1]) * -1.0F;
+          float var18 = (-var3[1] + var16[1]) * -1.0f;
           double var20 = Math.sqrt(var19 * var19 + var17 * var17);
           DummyClass52.aFloat1169 = (float) Math.atan2(var18, var20);
           DummyClass38.aFloat730 = -((float) Math.atan2(var17, var19));

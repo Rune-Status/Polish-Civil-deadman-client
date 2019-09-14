@@ -123,11 +123,11 @@ public final class StillGraphic extends SceneNode {
         }
 
         var0.anInt2824 = 0;
-        if ((var0.anInt2840 == 3 -1)) {
+        if ((var0.anInt2840 == 2)) {
           var0.anInt2806 = 0;
         }
 
-        if ((var0.anInt2840 == 4 -1)) {
+        if ((var0.anInt2840 == 3)) {
           var0.anInt2806 = 512;
         }
 
@@ -149,7 +149,7 @@ public final class StillGraphic extends SceneNode {
       if (GlRenderer.useOpenGlRenderer) {
         var8 = -334 + var2;
         if (var8 >= 0) {
-          if ((var8 > 101 -1)) {
+          if ((var8 > 100)) {
             var8 = 100;
           }
         } else {

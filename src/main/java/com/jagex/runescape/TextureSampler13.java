@@ -99,7 +99,7 @@ public final class TextureSampler13 extends AbstractTextureSampler {
           }
 
           int var12;
-          if ((Something3d.anInt3012 == 2 -1)) {
+          if ((Something3d.anInt3012 == 1)) {
             ScriptState.method1177(DummyClass54.anInt1403, var0, (byte) -80,
               RenderAnimation.concat(
                 new GameString[] {RenderAnimation.aClass94_378, DummyClass42.aClass94_892, var5}),
@@ -151,7 +151,7 @@ public final class TextureSampler13 extends AbstractTextureSampler {
           }
 
           for (var12 = 0; TextureSampler25.amountContextActions > var12; ++var12) {
-            if ((TextureSampler27.aShortArray3095[var12] == 61 -1)) {
+            if ((TextureSampler27.aShortArray3095[var12] == 60)) {
               DummyClass8.aClass94Array4016[var12] = RenderAnimation.concat(
                 new GameString[] {MonoChromaticImageBuffer.aClass94_2562, var5});
               break;
@@ -257,7 +257,7 @@ public final class TextureSampler13 extends AbstractTextureSampler {
               int var24 =
                 SceneNode.method1863(var22.anInt1480, var4, (byte) 126, var22.anInt1485, 7 & var17,
                   var21, 7 & var16) + var6;
-              if ((var23 > 0) && var24 > 0 && (var23 < 104 -1) && var24 < 103) {
+              if ((var23 > 0) && var24 > 0 && (var23 < 103) && var24 < 103) {
                 CollisionMap var25 = null;
                 if (!var7) {
                   int var26 = var1;

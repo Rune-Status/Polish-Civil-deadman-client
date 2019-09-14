@@ -75,7 +75,7 @@ public final class DummyClass1 {
           if ((var2.anInt369 == 0)) {
             ++var1.anInt2789;
             boolean var11;
-            if ((var9 > 1025 -1)) {
+            if ((var9 > 1024)) {
               var1.rotationY -= var1.anInt2779;
               var11 = true;
               if ((var9 < var1.anInt2779) || var9 > -var1.anInt2779 + 2048) {
@@ -167,7 +167,7 @@ public final class DummyClass1 {
                   var6 = 32767;
                 }
 
-                if ((var5 >= 32769 -1)) {
+                if ((var5 >= 32768)) {
                   var1.anInt2821 = -var2.anInt369;
                   var1.anInt2803 = (65536 - var5) / 2;
                   if ((var6 < var1.anInt2803)) {

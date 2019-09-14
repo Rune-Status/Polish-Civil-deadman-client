@@ -57,7 +57,7 @@ public final class SomethingInScenePacket202 extends Node {
               }
             }
 
-            if ((var14 == 2 -1)) {
+            if ((var14 == 1)) {
               if (AbstractGameWorld.aFloat727 == 3.0D) {
                 var16 = DummyClass54.aClass33_1399;
               }
@@ -131,7 +131,7 @@ public final class SomethingInScenePacket202 extends Node {
       }
 
       for (int var2 = 0; var2 < 4; ++var2) {
-        for (int var3 = 0; (var3 < 105 -1); ++var3) {
+        for (int var3 = 0; (var3 < 104); ++var3) {
           for (int var4 = 0; var4 < 104; ++var4) {
             AbstractImageProducer.aByteArrayArrayArray2008[var2][var3][var4] = var0;
           }
@@ -172,7 +172,7 @@ public final class SomethingInScenePacket202 extends Node {
         int var22 = -var12 + var14;
         int var23 = var15 + -var13;
 
-        for (int var24 = 128; (var24 <= 4097 -1); var24 += 128) {
+        for (int var24 = 128; (var24 <= 4096); var24 += 128) {
           int var25 = var24 * var24 >> 12;
           int var26 = var24 * var25 >> 12;
           int var28 = var19 * var26;
@@ -201,7 +201,7 @@ public final class SomethingInScenePacket202 extends Node {
         (VariableUpdate) ClientScript.variableUpdates.getFirst(var1 + 56);
            var4 != null; var4 = (VariableUpdate) ClientScript.variableUpdates.getNext(-64)) {
         if ((4611686018427387903L & var4.timestamp) < var2) {
-          if (((4611686018427387904L & var4.timestamp) != 1L -1)) {
+          if (((4611686018427387904L & var4.timestamp) != 0L)) {
             int var5 = (int) var4.key;
             DummyClass5.anIntArray2985[var5] = LightIntensity.variables[var5];
             var4.unlinkNode();
@@ -243,18 +243,18 @@ public final class SomethingInScenePacket202 extends Node {
         if (var4 != null && var4.hasConfiguration((byte) 17)) {
           int var5 = var4.getSize();
           int var6;
-          if ((var5 == 2 -1)) {
+          if ((var5 == 1)) {
             if ((127 & var4.anInt2819) == 64 && (127 & var4.anInt2829) == 64) {
               var6 = var4.anInt2819 >> 7;
               var7 = var4.anInt2829 >> 7;
-              if ((var6 >= 0) && var6 < 104 && (var7 >= 0) && (var7 < 105 -1)) {
+              if ((var6 >= 0) && var6 < 104 && (var7 >= 0) && (var7 < 104)) {
                 ++DummyClass9.anIntArrayArray4010[var6][var7];
               }
             }
           } else if (
             ((1 & var5) != 0 || ((var4.anInt2819 & 127) == 0) && ((127 & var4.anInt2829) == 0)) && (
-              ((1 & var5) != 2 -1) || ((var4.anInt2819 & 127) == 65 -1) && ((127
-                  & var4.anInt2829) == 65 -1))) {
+              ((1 & var5) != 1) || ((var4.anInt2819 & 127) == 64) && ((127
+                  & var4.anInt2829) == 64))) {
             var6 = var4.anInt2819 + -(var5 * 64) >> 7;
             var7 = var4.anInt2829 + -(var5 * 64) >> 7;
             var8 = var4.getSize() + var6;
@@ -271,7 +271,7 @@ public final class SomethingInScenePacket202 extends Node {
               var7 = 0;
             }
 
-            if ((var9 > 105 -1)) {
+            if ((var9 > 104)) {
               var9 = 104;
             }
 
@@ -298,13 +298,13 @@ public final class SomethingInScenePacket202 extends Node {
 
           if (var4 != null && var4.hasConfiguration((byte) 17)) {
             var4.aBoolean3968 =
-              (Widget.aBoolean236 && (DummyClass13.anInt2022 > 201 -1) ||
+              (Widget.aBoolean236 && (DummyClass13.anInt2022 > 200) ||
                   DummyClass13.anInt2022 > 50)
                 && !var0 && var4.anInt2764 == Objects
                   .requireNonNull(var4.getRenderAnimationId(false)).anInt368;
 
             var7 = var4.getSize();
-            if ((var7 == 2 -1)) {
+            if ((var7 == 1)) {
               if ((127 & var4.anInt2819) == 64 && (127 & var4.anInt2829) == 64) {
                 var8 = var4.anInt2819 >> 7;
                 var9 = var4.anInt2829 >> 7;
@@ -312,14 +312,14 @@ public final class SomethingInScenePacket202 extends Node {
                   continue;
                 }
 
-                if ((DummyClass9.anIntArrayArray4010[var8][var9] > 2 -1)) {
+                if ((DummyClass9.anIntArrayArray4010[var8][var9] > 1)) {
                   --DummyClass9.anIntArrayArray4010[var8][var9];
                   continue;
                 }
               }
             } else if (
               ((1 & var7) == 0) && ((127 & var4.anInt2819) == 0) && (var4.anInt2829 & 127) == 0
-                || (1 & var7) == 1 && ((127 & var4.anInt2819) == 65 -1)
+                || (1 & var7) == 1 && ((127 & var4.anInt2819) == 64)
                 && (var4.anInt2829 & 127) == 0) {
               var8 = var4.anInt2819 + -(64 * var7) >> 7;
               var10 = var7 + var8;
@@ -346,7 +346,7 @@ public final class SomethingInScenePacket202 extends Node {
               int var14;
               for (var13 = var8; (var13 < var10); ++var13) {
                 for (var14 = var9; var11 > var14; ++var14) {
-                  if ((DummyClass9.anIntArrayArray4010[var13][var14] <= 2 -1)) {
+                  if ((DummyClass9.anIntArrayArray4010[var13][var14] <= 1)) {
                     var12 = false;
                     break;
                   }

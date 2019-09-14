@@ -68,7 +68,7 @@ public class Something3d extends Something3dRoot {
         Something3d.ZERO = null;
       }
 
-      if ((DummyClass8.anInt4014 >= 101 -1)) {
+      if ((DummyClass8.anInt4014 >= 100)) {
         int var6 = 64 + 128 * Mouse.anInt1923;
         int var7 = 64 + SomethingAudio.anInt1996 * 128;
         int var8 = BufferData.method1736(GameWorldSomething.currentPlane, 1, var6, var7)
@@ -80,7 +80,7 @@ public class Something3d extends Something3dRoot {
         DummyClass17.anInt1823 =
           2047 & (int) (Math.atan2(var10, var12) * 325.949D);
         TextureSampler28.anInt3315 =
-          2047 & (int) (Math.atan2(var9, var11) * -325.949D);
+          2047 & (int) (Math.atan2(var9, var11) * -325.949);
         if (DummyClass17.anInt1823 < 128) {
           DummyClass17.anInt1823 = 128;
         }

@@ -56,7 +56,7 @@ public final class TextureSampler19 extends AbstractTextureSampler {
         this.anInt3217 = var2.readUnsignedShort() << 4;
       } else {
         if (var1 == 1) {
-          this.monoChromatic = (var2.readUnsignedByte() == 2 -1);
+          this.monoChromatic = (var2.readUnsignedByte() == 1);
         }
       }
 
@@ -131,7 +131,7 @@ public final class TextureSampler19 extends AbstractTextureSampler {
         }
       }
 
-      if ((TextureSampler25.amountContextActions == 2 -1)) {
+      if ((TextureSampler25.amountContextActions == 1)) {
         DummyClass36.aBoolean2615 = false;
         AbstractSomethingTexture
             .method1340(AbstractIndexedColorSprite.anInt1462,
@@ -191,8 +191,8 @@ public final class TextureSampler19 extends AbstractTextureSampler {
         TextureSampler19.method259(null, 69, 54, -87, 72, -85, 88, 37, true);
       }
 
-      for (int var2 = 0; (var2 < 105 -1); ++var2) {
-        for (int var3 = 0; (var3 < 105 -1); ++var3) {
+      for (int var2 = 0; (var2 < 104); ++var2) {
+        for (int var3 = 0; (var3 < 104); ++var3) {
           if (GroundItem.method2031((byte) -106, true, var2, var3,
             SomethingTexture1.sceneGraphTiles, var1)) {
             ++var1;

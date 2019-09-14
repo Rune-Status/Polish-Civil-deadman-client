@@ -152,7 +152,7 @@ public final class MonoChromaticImageCache {
 
   public static void method1708(int var0, int var1, int var2) {
     if (var2 == -2553) {
-        WidgetUpdate var3 = AudioStreamEncoder3.method466(-2553 ^ -2557, 13, var1);
+        WidgetUpdate var3 = AudioStreamEncoder3.method466(4, 13, var1);
         var3.g((byte) 33);
         var3.anInt3598 = var0;
       }

@@ -79,7 +79,7 @@ public final class StringNode extends Node {
     } else if ((var1 == -1)) {
       if (var2 < 2) {
         var2 = 2;
-      } else if ((var2 > 127 - 1)) {
+      } else if ((var2 > 126)) {
         var2 = 126;
       }
 
@@ -141,7 +141,7 @@ public final class StringNode extends Node {
         (SomethingQuickChat) ProjectileNode.aClass47_3776.get(var1, 1400);
     if (var2 == null) {
       byte[] var3;
-      if ((var1 < 32769 -1)) {
+      if ((var1 < 32768)) {
         var3 = AudioStreamEncoder3.aClass153_3490.getBytes(1, var1);
       } else {
         var3 = DummyClass14.aClass153_1967.getBytes(1, 32767 & var1);

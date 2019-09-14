@@ -145,7 +145,7 @@ public abstract class GameStub implements Runnable,
         TextureSampler30.aBoolean3116 = true;
         if (DummyClass20.aBoolean1784 && !GlRenderer.useOpenGlRenderer
             && ((-AnimationSequence.canvasInitializedTime + Time
-            .getCurrentTimeMillis()) > 1001L -1)) {
+            .getCurrentTimeMillis()) > 1000L)) {
           Rectangle var2 = var1.getClipBounds();
           if (var2 == null || (var2.width >= AreaSoundEffect.windowWidth)
               && (SceneSomething2.windowHeight <= var2.height)) {
@@ -210,7 +210,7 @@ public abstract class GameStub implements Runnable,
 
     DummyClass5.drawMemory[FileTable.drawMemoryCounter] = var2;
     FileTable.drawMemoryCounter = 31 & FileTable.drawMemoryCounter + 1;
-    if ((var4 != 1L -1) && var2 > var4) {
+    if ((var4 != 0L) && var2 > var4) {
       int var6 = (int) (var2 + -var4);
       AnimationSequence.fps = (32000 + (var6 >> 1)) / var6;
     }
@@ -248,7 +248,7 @@ public abstract class GameStub implements Runnable,
       this.initialize(2);
       Inventory.frameRateRegulator = HuffmanEncoder.method1012((byte) -31);
 
-      while ((AreaSoundEffect.destroyTime == 1L -1)
+      while ((AreaSoundEffect.destroyTime == 0L)
           || AreaSoundEffect.destroyTime > Time.getCurrentTimeMillis()) {
         SomethingPacket116.cycles =
             Inventory.frameRateRegulator
@@ -329,7 +329,7 @@ public abstract class GameStub implements Runnable,
     try {
         if (StringNode.applet != null) {
           ++HuffmanEncoder.anInt639;
-          if ((HuffmanEncoder.anInt639 >= 4 -1)) {
+          if ((HuffmanEncoder.anInt639 >= 3)) {
             this.reportError("alreadyloaded");
             return;
           }

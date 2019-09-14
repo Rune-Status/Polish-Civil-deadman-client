@@ -233,7 +233,7 @@ public final class BufferedFile {
           this.aLong576 = this.aLong569;
           this.aByteArray564.length > this.anInt575; this.anInt575 += var3) {
         int var2 = this.aByteArray564.length + -this.anInt575;
-        if ((var2 > 200000001 -1)) {
+        if ((var2 > 200000000)) {
           var2 = 200000000;
         }
 

@@ -56,14 +56,14 @@ public final class DummyOutputStream extends OutputStream {
             }
 
             if (var3 < -7) {
-              if ((var2 == 3 -1)) {
+              if ((var2 == 2)) {
                 ++TextureSampler30.anInt3122;
                 TextureSampler12.secureBuffer.writePacket(196);
                 TextureSampler12.secureBuffer.writeInt(var4);
                 TextureSampler12.secureBuffer.writeShort(var1);
               }
 
-              if ((var2 == 4 -1)) {
+              if ((var2 == 3)) {
                 ++DummyClass42.anInt889;
                 TextureSampler12.secureBuffer.writePacket(124);
                 TextureSampler12.secureBuffer.writeInt(var4);
@@ -77,7 +77,7 @@ public final class DummyOutputStream extends OutputStream {
                 ++Keyboard.anInt1909;
               }
 
-              if ((var2 == 6 -1)) {
+              if ((var2 == 5)) {
                 TextureSampler12.secureBuffer.writePacket(234);
                 TextureSampler12.secureBuffer.writeInt(var4);
                 TextureSampler12.secureBuffer.writeShort(var1);
@@ -91,28 +91,28 @@ public final class DummyOutputStream extends OutputStream {
                 TextureSampler12.secureBuffer.writeShort(var1);
               }
 
-              if ((var2 == 8 -1)) {
+              if ((var2 == 7)) {
                 ++DummyClass59.anInt674;
                 TextureSampler12.secureBuffer.writePacket(166);
                 TextureSampler12.secureBuffer.writeInt(var4);
                 TextureSampler12.secureBuffer.writeShort(var1);
               }
 
-              if ((var2 == 9 -1)) {
+              if ((var2 == 8)) {
                 TextureSampler12.secureBuffer.writePacket(64);
                 ++LightIntensity.anInt903;
                 TextureSampler12.secureBuffer.writeInt(var4);
                 TextureSampler12.secureBuffer.writeShort(var1);
               }
 
-              if ((var2 == 10 -1)) {
+              if ((var2 == 9)) {
                 ++DummyClass52.anInt1166;
                 TextureSampler12.secureBuffer.writePacket(53);
                 TextureSampler12.secureBuffer.writeInt(var4);
                 TextureSampler12.secureBuffer.writeShort(var1);
               }
 
-              if ((var2 == 11 -1)) {
+              if ((var2 == 10)) {
                 ++CollisionMap.anInt1307;
                 TextureSampler12.secureBuffer.writePacket(9);
                 TextureSampler12.secureBuffer.writeInt(var4);
@@ -147,7 +147,7 @@ public final class DummyOutputStream extends OutputStream {
         StillGraphic.method1950(var2, true);
       }
 
-      if ((var2.anInt2819 < 129 -1) || var2.anInt2829 < 128 || var2.anInt2819 >= 13184
+      if ((var2.anInt2819 < 128) || var2.anInt2829 < 128 || var2.anInt2819 >= 13184
         || var2.anInt2829 >= 13184) {
         var2.animationId = -1;
         var2.anInt2842 = -1;
@@ -160,8 +160,8 @@ public final class DummyOutputStream extends OutputStream {
 
       if (var1 == 2279) {
         if (var2 == TextureCache.localPlayer && (var2.anInt2819 < 1536 ||
-            (var2.anInt2829 < 1537 -1)
-          || (var2.anInt2819 >= 11777 -1) || var2.anInt2829 >= 11776)) {
+            (var2.anInt2829 < 1536)
+          || (var2.anInt2819 >= 11776) || var2.anInt2829 >= 11776)) {
           var2.anInt2842 = -1;
           var2.anInt2800 = 0;
           var2.anInt2790 = 0;

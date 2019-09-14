@@ -220,7 +220,7 @@ public final class Deque {
         for (
           var5 = (AreaSoundEffect) ObjectNode.aClass130_4046.getFirst(88);
           var5 != null; var5 = (AreaSoundEffect) ObjectNode.aClass130_4046.getNext(
-            1 ^ -92)) {
+            -91)) {
           var6 = 1;
           var7 = var5.aClass140_Sub4_Sub1_2327.getRenderAnimationId(false);
           assert var7 != null;

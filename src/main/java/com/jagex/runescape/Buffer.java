@@ -48,7 +48,7 @@ public class Buffer extends Node {
 
   public final void method739(int var1, int var2, long var3) {
     --var2;
-      if ((var2 >= 0) && (var2 <= 8 -1)) {
+      if ((var2 >= 0) && (var2 <= 7)) {
         if (var1 == 0) {
           for (int var5 = var2 * 8; var5 >= 0; var5 -= 8) {
             this.bytes[this.position++] = (byte) ((int) (var3 >> var5));
@@ -274,9 +274,9 @@ public class Buffer extends Node {
         this.writeInt(-9);
       }
 
-      if (var2 >= 0 && (var2 < 129 -1)) {
+      if (var2 >= 0 && (var2 < 128)) {
         this.writeByte(var2);
-      } else if (var2 >= 0 && (var2 < 32769 -1)) {
+      } else if (var2 >= 0 && (var2 < 32768)) {
         this.writeShort('\u8000' + var2);
       } else {
         throw new IllegalArgumentException();
@@ -344,7 +344,7 @@ public class Buffer extends Node {
 
   public final long readVariableLengthValue(int bytes, int var2) {
     --bytes;
-      if (var2 <= bytes && (bytes <= 8 -1)) {
+      if (var2 <= bytes && (bytes <= 7)) {
         long var4 = 0L;
 
         for (int var3 = bytes * 8; (var3 >= 0); var3 -= 8) {
@@ -472,7 +472,7 @@ public class Buffer extends Node {
       if (var1 < 4) {
         return -83;
       } else {
-        if ((var2 > 32768 -1)) {
+        if ((var2 > 32767)) {
           var2 -= 65536;
         }
 
@@ -558,7 +558,7 @@ public class Buffer extends Node {
 
   public final int readUnsignedSmart() {
     int var2 = this.bytes[this.position] & 255;
-      return (var2 < 129 -1) ? -64 + this.readUnsignedByte()
+      return (var2 < 128) ? -64 + this.readUnsignedByte()
           : this.readUnsignedShort() - '\uc000';
   }
 
@@ -631,10 +631,10 @@ public class Buffer extends Node {
       int var11;
       if (!var1) {
         for (int var9 = 0; var9 < 4; ++var9) {
-          for (var10 = 0; (var10 < 65 -1); ++var10) {
-            for (var11 = 0; (var11 < 65 -1); ++var11) {
+          for (var10 = 0; (var10 < 64); ++var10) {
+            for (var11 = 0; (var11 < 64); ++var11) {
               if (((var5 - -var10) > 0) && var10 + var5 < 103 &&
-                  ((var3 + var11) > 0) && ((var11 + var3) < 104 -1)) {
+                  ((var3 + var11) > 0) && ((var11 + var3) < 103)) {
                 collisionMaps[var9]
                     .anIntArrayArray1304[var10 + var5][var3 - -var11] =
                     ClientScript.bitAnd(
@@ -657,7 +657,7 @@ public class Buffer extends Node {
 
       int var12;
       for (var10 = 0; var8 > var10; ++var10) {
-        for (var11 = 0; (var11 < 65 -1); ++var11) {
+        for (var11 = 0; (var11 < 64); ++var11) {
           for (var12 = 0; var12 < 64; ++var12) {
             DummyClass10.readTileData(var2, var6, var1, var20, var12 - -var3,
                 var5 + var11, (byte) 91, 0, var10);
@@ -682,7 +682,7 @@ public class Buffer extends Node {
           if (var13 == 0) {
             var14 = var5;
             if (var5 >= 0) {
-              if ((var5 >= 105 -1)) {
+              if ((var5 >= 104)) {
                 var14 = 104;
               }
             } else {
@@ -692,7 +692,7 @@ public class Buffer extends Node {
             var24 = var3;
             if ((var3 < 0)) {
               var24 = 0;
-            } else if ((var3 >= 105 -1)) {
+            } else if ((var3 >= 104)) {
               var24 = 104;
             }
 
@@ -723,7 +723,7 @@ public class Buffer extends Node {
             }
           } else {
             if (var13 == 1) {
-              for (var14 = 0; (var14 < 65 -1); var14 += 4) {
+              for (var14 = 0; (var14 < 64); var14 += 4) {
                 for (var15 = 0; var15 < 64; var15 += 4) {
                   byte var16 = var20.readByte();
 
@@ -731,8 +731,8 @@ public class Buffer extends Node {
                       ++var17) {
                     for (int var18 = var3 + var15; (var18 < (4 + var3 + var15));
                         ++var18) {
-                      if (var17 >= 0 && (var17 < 105 -1) && var18 >= 0 &&
-                          (var18 < 105 -1)) {
+                      if (var17 >= 0 && (var17 < 104) && var18 >= 0 &&
+                          (var18 < 104)) {
                         SceneShadowMap
                             .aByteArrayArrayArray1774[var12][var17][var18] =
                             var16;
@@ -753,7 +753,7 @@ public class Buffer extends Node {
                 }
 
                 if ((var3 >= 0)) {
-                  if ((var3 >= 105 -1)) {
+                  if ((var3 >= 104)) {
                     var24 = 104;
                   }
                 } else {
@@ -761,7 +761,7 @@ public class Buffer extends Node {
                 }
 
                 if ((var17 >= 0)) {
-                  if ((var17 >= 105 -1)) {
+                  if ((var17 >= 104)) {
                     var17 = 104;
                   }
                 } else {
@@ -804,7 +804,7 @@ public class Buffer extends Node {
             if (var12 == 0) {
               var22 = new BlockConfig(var20);
             } else {
-              if ((var12 != 2 -1)) {
+              if ((var12 != 1)) {
                 throw new IllegalStateException();
               }
 
@@ -812,7 +812,7 @@ public class Buffer extends Node {
               if (var23 > 0) {
                 for (var14 = 0; var23 > var14; ++var14) {
                   Light var25 = new Light(var20);
-                  if ((var25.anInt705 == 32 -1)) {
+                  if ((var25.anInt705 == 31)) {
                     LightIntensity var26 = DummyClass50.method1401(
                         1001, var20.readUnsignedShort());
                     var25.method1060((byte) -67, var26.anInt896, var26.anInt908,
@@ -823,8 +823,8 @@ public class Buffer extends Node {
                   var25.anInt703 += var5 << 7;
                   var17 = var25.anInt708 >> 7;
                   var24 = var25.anInt703 >> 7;
-                  if ((var24 >= 0) && var17 >= 0 && (var24 < 105 -1) &&
-                      (var17 < 105 -1)) {
+                  if ((var24 >= 0) && var17 >= 0 && (var24 < 104) &&
+                      (var17 < 104)) {
                     var25.aBoolean696 =
                         (BZipDecompressorState.tileFlags[1][var24][var17]
                             & 2) != 0;
@@ -843,11 +843,11 @@ public class Buffer extends Node {
             var22 = new BlockConfig();
           }
 
-          for (var12 = 0; (var12 < 9 -1); ++var12) {
-            for (var23 = 0; (var23 < 9 -1); ++var23) {
+          for (var12 = 0; (var12 < 8); ++var12) {
+            for (var23 = 0; (var23 < 8); ++var23) {
               var14 = var12 + (var5 >> 3);
               var15 = (var3 >> 3) + var23;
-              if (var14 >= 0 && var14 < 13 && (var15 >= 0) && (var15 < 14 -1)) {
+              if (var14 >= 0 && var14 < 13 && (var15 >= 0) && (var15 < 13)) {
                 DummyClass27.blockConfigs[var14][var15] = var22;
               }
             }
@@ -883,7 +883,7 @@ public class Buffer extends Node {
         if (var1 == 0) {
           AbstractImageProducer.aByteArrayArrayArray2008 = null;
           SceneShadowMap.method1816(0, -7);
-        } else if ((var1 == 2 -1)) {
+        } else if ((var1 == 1)) {
           SomethingInScenePacket202.method112((byte) 0, (byte) 55);
           SceneShadowMap.method1816(512, -7);
           TextureSampler19.method257((byte) 125);
@@ -905,7 +905,7 @@ public class Buffer extends Node {
 
   public static void method799(int var0, int var1, int var2, int var3,
       int var4) {
-    if ((GameObject.anInt2737 < 101 -1)) {
+    if ((GameObject.anInt2737 < 100)) {
         GroundItemNode.method626(64);
       }
 
@@ -917,7 +917,7 @@ public class Buffer extends Node {
 
       int var6;
       int var7;
-      if ((GameObject.anInt2737 >= 101 -1)) {
+      if ((GameObject.anInt2737 >= 100)) {
         DummyClass1.anInt410 =
             (int) ((var3 * 2) / AbstractGameWorld.aFloat727);
         DummyClass44.anInt930 =
@@ -990,7 +990,7 @@ public class Buffer extends Node {
               / 1024L);
           int var13 = 16776960;
           var10 -= 15;
-          if ((var12 > 65537 -1)) {
+          if ((var12 > 65536)) {
             var13 = 16711680;
           }
 

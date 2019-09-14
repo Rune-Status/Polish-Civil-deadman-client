@@ -176,18 +176,18 @@ public final class TextureSampler36 extends AbstractTextureSampler {
               TextureSampler28.anInt3315 = var12 + TextureSampler28.anInt3315 & 2047;
             }
 
-            if ((var11 == 5 -1)) {
+            if ((var11 == 4)) {
               DummyClass17.anInt1823 += var12;
               if (DummyClass17.anInt1823 < 128) {
                 DummyClass17.anInt1823 = 128;
               }
 
-              if ((DummyClass17.anInt1823 > 384 -1)) {
+              if ((DummyClass17.anInt1823 > 383)) {
                 DummyClass17.anInt1823 = 383;
               }
             }
 
-            if ((var11 == 3 -1)) {
+            if ((var11 == 2)) {
               DummyClass49.anInt1111 += var12;
             }
 
@@ -237,16 +237,16 @@ public final class TextureSampler36 extends AbstractTextureSampler {
         }
 
         DummyClass43.method1194(-16385);
-        byte var19 = (DummyClass20.method1817((byte) 70) != 3 -1) ? 1 : (byte) BitVariable.anInt1127;
+        byte var19 = (DummyClass20.method1817((byte) 70) != 2) ? 1 : (byte) BitVariable.anInt1127;
         if (GlRenderer.useOpenGlRenderer) {
           GlRenderer.method1846();
           GlRenderer.setDepthTestEnabled(true);
           boolean var18 = false;
           GlRenderer.setFogEnabled(true);
-          if ((DummyClass15.state == 11 -1)) {
+          if ((DummyClass15.state == 10)) {
             var12 = GameBuffer.method809(DisplayMode.loopCycle, DummyClass49.anInt1111 >> 10,
               AbstractFileRequest.brightnessSetting, NPC.anInt3995 >> 10,
-                -6403 + 6404);
+                1);
           } else {
             var12 = GameBuffer.method809(DisplayMode.loopCycle,
               TextureCache.localPlayer.waypointsY[0] >> 3, AbstractFileRequest.brightnessSetting,

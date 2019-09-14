@@ -93,7 +93,7 @@ public abstract class AbstractImageProducer {
             }
 
             if ((var7.anInt187 == 0)) {
-              FileRequester.method2104(var7, var1, 235 + -343);
+              FileRequester.method2104(var7, var1, -108);
             }
           }
         }

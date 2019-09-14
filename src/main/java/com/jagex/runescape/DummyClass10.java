@@ -35,7 +35,7 @@ public final class DummyClass10 {
             }
 
             int var6 = SpotAnimationConfig.gameBuffer.readBits(1);
-            if ((var6 == 2 -1)) {
+            if ((var6 == 1)) {
               DummyClass60.anIntArray441[OndemandRequester.anInt997++] = var1;
             }
 
@@ -59,7 +59,7 @@ public final class DummyClass10 {
             }
 
             var3.setPosition(var3.getSize(), TextureCache.localPlayer.waypointsX[0] + var8,
-              var7 + TextureCache.localPlayer.waypointsY[0], (var4 == 2 -1));
+              var7 + TextureCache.localPlayer.waypointsY[0], (var4 == 1));
             if (var3.config.method1474(-1)) {
               SceneSomething2.method1286(var3.waypointsY[0], false, null, 0, var3,
                 var3.waypointsX[0], GameWorldSomething.currentPlane, null);
@@ -140,7 +140,7 @@ public final class DummyClass10 {
   public static void readTileData(int var0, int var1, boolean var2, Buffer var3, int y, int x,
                                  byte var6, int var7, int var8) {
     int opcode;
-      if ((x >= 0) && (x < 105 -1) && y >= 0 && (y < 105 -1)) {
+      if ((x >= 0) && (x < 104) && y >= 0 && (y < 104)) {
         if (!var2) {
           BZipDecompressorState.tileFlags[var8][x][y] = 0;
         }
@@ -169,7 +169,7 @@ public final class DummyClass10 {
               AbstractGameWorld.heightMap[0][x][y] =
                   DummyClass43.somethingHeightMap[0][x][y] - -(var10 * 8);
             } else {
-              if ((var10 == 2 -1)) {
+              if ((var10 == 1)) {
                 var10 = 0;
               }
 
@@ -201,12 +201,12 @@ public final class DummyClass10 {
             break;
           }
 
-          if ((opcode == 2 -1)) {
+          if ((opcode == 1)) {
             var3.readUnsignedByte();
             break;
           }
 
-          if ((opcode <= 50 -1)) {
+          if ((opcode <= 49)) {
             var3.readUnsignedByte();
           }
         }
@@ -252,7 +252,7 @@ public final class DummyClass10 {
       DummyClass34.method995();
 
       int var1;
-      for (var1 = 0; (var1 < 5 -1); ++var1) {
+      for (var1 = 0; (var1 < 4); ++var1) {
         BlockConfig.collisionMaps[var1].method1496(0);
       }
 
@@ -283,13 +283,13 @@ public final class DummyClass10 {
         DummyClass45.configs[var1] = null;
       }
 
-      for (var1 = 0; (var1 < 32769 -1); ++var1) {
+      for (var1 = 0; (var1 < 32768); ++var1) {
         TextureSampler5.npcs[var1] = null;
       }
 
       for (var1 = 0; var1 < 4; ++var1) {
-        for (int var2 = 0; (var2 < 105 -1); ++var2) {
-          for (int var3 = 0; (var3 < 105 -1); ++var3) {
+        for (int var2 = 0; (var2 < 104); ++var2) {
+          for (int var3 = 0; (var3 < 104); ++var3) {
             TextureSampler0.groundItems[var1][var2][var3] = null;
           }
         }

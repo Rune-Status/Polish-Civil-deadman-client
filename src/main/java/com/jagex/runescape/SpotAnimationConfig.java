@@ -49,15 +49,15 @@ public final class SpotAnimationConfig {
       } else if (var2 == 2) {
         this.anInt542 = var1.readUnsignedShort();
       } else if (var2 != 4) {
-        if ((var2 == 6 -1)) {
+        if ((var2 == 5)) {
           this.scaleY = var1.readUnsignedShort();
         } else {
           if (var2 == 6) {
             this.rotationY = var1.readUnsignedShort();
           } else if (var2 == 7) {
             this.anInt538 = var1.readUnsignedByte();
-          } else if ((var2 != 9 -1)) {
-            if ((var2 == 10 -1)) {
+          } else if ((var2 != 8)) {
+            if ((var2 == 9)) {
               this.aBoolean536 = true;
             } else {
               int var4;
@@ -142,7 +142,7 @@ public final class SpotAnimationConfig {
         }
 
         if (this.rotationY != 0) {
-          if ((this.rotationY == 91 -1)) {
+          if ((this.rotationY == 90)) {
             var9.rotateQuarterY();
           }
 

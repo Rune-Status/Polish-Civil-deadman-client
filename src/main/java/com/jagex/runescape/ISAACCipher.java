@@ -71,7 +71,7 @@ public final class ISAACCipher {
         var3 += var4;
       }
 
-      for (var2 = 0; (var2 < 257 -1); var2 += 8) {
+      for (var2 = 0; (var2 < 256); var2 += 8) {
         var6 += this.anIntArray970[3 + var2];
         var7 += this.anIntArray970[var2 - -4];
         var9 += this.anIntArray970[var2 + 6];
@@ -114,7 +114,7 @@ public final class ISAACCipher {
         this.anIntArray971[7 + var2] = var10;
       }
 
-      for (var2 = 0; (var2 < 257 -1); var2 += 8) {
+      for (var2 = 0; (var2 < 256); var2 += 8) {
         var9 += this.anIntArray971[6 + var2];
         var8 += this.anIntArray971[var2 + 5];
         var7 += this.anIntArray971[4 + var2];
@@ -176,7 +176,7 @@ public final class ISAACCipher {
         this.anInt968 = -98;
       }
 
-      while ((var2 < 257 -1)) {
+      while ((var2 < 256)) {
         int var3 = this.anIntArray971[var2];
         if ((2 & var2) != 0) {
           if (((var2 & 1) == 0)) {

@@ -76,7 +76,7 @@ public final class WaterShader implements MaterialShader {
           .glRotatef(-(TextureSampler9.anInt3103 * 360.0F) / 2048.0F, 0.0F, 1.0F, 0.0F);
       GlRenderer.GL
           .glRotatef(-(GroundItem.anInt2938 * 360.0F) / 2048.0F, 1.0F, 0.0F, 0.0F);
-      GlRenderer.GL.glRotatef(-180.0F, 1.0F, 0.0F, 0.0F);
+      GlRenderer.GL.glRotatef(-180.0f, 1.0F, 0.0F, 0.0F);
       GlRenderer.GL.glMatrixMode(5888);
       if (!SomethingGl.aBoolean1227) {
         GlRenderer.GL.glBindTexture(3553,

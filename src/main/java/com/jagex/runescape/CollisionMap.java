@@ -49,7 +49,7 @@ public final class CollisionMap {
           this.method1501((byte) 105, 1 + var4, var6, 32);
         }
 
-        if ((var1 == 3 -1)) {
+        if ((var1 == 2)) {
           this.method1501((byte) 75, var4, var6, 8);
           this.method1501((byte) 38, var4, var6 - -1, 128);
         }
@@ -66,30 +66,30 @@ public final class CollisionMap {
           this.method1501((byte) 23, 1 + var4, -1 + var6, 16);
         }
 
-        if ((var1 == 2 -1)) {
+        if ((var1 == 1)) {
           this.method1501((byte) 52, var4, var6, 4);
           this.method1501((byte) 60, 1 + var4, 1 + var6, 64);
         }
 
-        if ((var1 == 3 -1)) {
+        if ((var1 == 2)) {
           this.method1501((byte) 126, var4, var6, 16);
           this.method1501((byte) 103, var4 - 1, var6 - -1, 1);
         }
 
-        if ((var1 == 4 -1)) {
+        if ((var1 == 3)) {
           this.method1501((byte) 125, var4, var6, 64);
           this.method1501((byte) 64, var4 - 1, -1 + var6, 4);
         }
       }
 
-      if ((var5 == 3 -1)) {
+      if ((var5 == 2)) {
         if ((var1 == 0)) {
           this.method1501((byte) 110, var4, var6, 130);
           this.method1501((byte) 78, var4, -1 + var6, 8);
           this.method1501((byte) 45, var4 + 1, var6, 32);
         }
 
-        if ((var1 == 2 -1)) {
+        if ((var1 == 1)) {
           this.method1501((byte) 93, var4, var6, 10);
           this.method1501((byte) 72, var4 - -1, var6, 32);
           this.method1501((byte) 23, var4, var6 + 1, 128);
@@ -115,7 +115,7 @@ public final class CollisionMap {
             this.method1501((byte) 115, var4, var6 - 1, 4096);
           }
 
-          if ((var1 == 2 -1)) {
+          if ((var1 == 1)) {
             this.method1501((byte) 120, var4, var6, 1024);
             this.method1501((byte) 110, var4 - -1, var6, 16384);
           }
@@ -125,7 +125,7 @@ public final class CollisionMap {
             this.method1501((byte) 38, var4, 1 + var6, 65536);
           }
 
-          if ((var1 == 4 -1)) {
+          if ((var1 == 3)) {
             this.method1501((byte) 31, var4, var6, 16384);
             this.method1501((byte) 65, var4 + -1, var6, 1024);
           }
@@ -137,17 +137,17 @@ public final class CollisionMap {
             this.method1501((byte) 66, 1 + var4, var6 + -1, 8192);
           }
 
-          if ((var1 == 2 -1)) {
+          if ((var1 == 1)) {
             this.method1501((byte) 40, var4, var6, 2048);
             this.method1501((byte) 88, 1 + var4, var6 - -1, '\u8000');
           }
 
-          if ((var1 == 3 -1)) {
+          if ((var1 == 2)) {
             this.method1501((byte) 96, var4, var6, 8192);
             this.method1501((byte) 41, var4 - 1, 1 + var6, 512);
           }
 
-          if ((var1 == 4 -1)) {
+          if ((var1 == 3)) {
             this.method1501((byte) 90, var4, var6, '\u8000');
             this.method1501((byte) 47, var4 + -1, var6 + -1, 2048);
           }
@@ -172,7 +172,7 @@ public final class CollisionMap {
             this.method1501((byte) 46, -1 + var4, var6, 1024);
           }
 
-          if ((var1 == 4 -1)) {
+          if ((var1 == 3)) {
             this.method1501((byte) 39, var4, var6, 81920);
             this.method1501((byte) 113, var4 - 1, var6, 1024);
             this.method1501((byte) 86, var4, var6 + -1, 4096);
@@ -190,7 +190,7 @@ public final class CollisionMap {
           this.method1490(8, (byte) -80, -1 + var6, var5);
         }
 
-        if ((var1 == 2 -1)) {
+        if ((var1 == 1)) {
           this.method1490(2, (byte) -80, var6, var5);
           this.method1490(32, (byte) -80, var6, 1 + var5);
         }
@@ -200,25 +200,25 @@ public final class CollisionMap {
           this.method1490(128, (byte) -80, 1 + var6, var5);
         }
 
-        if ((var1 == 4 -1)) {
+        if ((var1 == 3)) {
           this.method1490(32, (byte) -80, var6, var5);
           this.method1490(2, (byte) -80, var6, -1 + var5);
         }
       }
 
       if (var2 == 2) {
-        if ((var3 == 2 -1) || (var3 == 4 -1)) {
+        if ((var3 == 1) || (var3 == 3)) {
           if (var1 == 0) {
             this.method1490(1, (byte) -80, var6, var5);
             this.method1490(16, (byte) -80, var6 + -1, 1 + var5);
           }
 
-          if ((var1 == 2 -1)) {
+          if ((var1 == 1)) {
             this.method1490(4, (byte) -80, var6, var5);
             this.method1490(64, (byte) -80, var6 - -1, var5 + 1);
           }
 
-          if ((var1 == 3 -1)) {
+          if ((var1 == 2)) {
             this.method1490(16, (byte) -80, var6, var5);
             this.method1490(1, (byte) -80, 1 + var6, -1 + var5);
           }
@@ -229,26 +229,26 @@ public final class CollisionMap {
           }
         }
 
-        if ((var3 == 3 -1)) {
+        if ((var3 == 2)) {
           if (var1 == 0) {
             this.method1490(130, (byte) -80, var6, var5);
             this.method1490(8, (byte) -80, -1 + var6, var5);
             this.method1490(32, (byte) -80, var6, var5 - -1);
           }
 
-          if ((var1 == 2 -1)) {
+          if ((var1 == 1)) {
             this.method1490(10, (byte) -80, var6, var5);
             this.method1490(32, (byte) -80, var6, 1 + var5);
             this.method1490(128, (byte) -80, var6 - -1, var5);
           }
 
-          if ((var1 == 3 -1)) {
+          if ((var1 == 2)) {
             this.method1490(40, (byte) -80, var6, var5);
             this.method1490(128, (byte) -80, 1 + var6, var5);
             this.method1490(2, (byte) -80, var6, var5 + -1);
           }
 
-          if ((var1 == 4 -1)) {
+          if ((var1 == 3)) {
             this.method1490(160, (byte) -80, var6, var5);
             this.method1490(2, (byte) -80, var6, -1 + var5);
             this.method1490(8, (byte) -80, -1 + var6, var5);
@@ -262,7 +262,7 @@ public final class CollisionMap {
               this.method1490(4096, (byte) -80, var6 - 1, var5);
             }
 
-            if ((var1 == 2 -1)) {
+            if ((var1 == 1)) {
               this.method1490(1024, (byte) -80, var6, var5);
               this.method1490(16384, (byte) -80, var6, var5 + 1);
             }
@@ -278,7 +278,7 @@ public final class CollisionMap {
             }
           }
 
-          if ((var3 == 2 -1) || (var3 == 4 -1)) {
+          if ((var3 == 1) || (var3 == 3)) {
             if (var1 == 0) {
               this.method1490(512, (byte) -80, var6, var5);
               this.method1490(8192, (byte) -80, -1 + var6, 1 + var5);
@@ -289,7 +289,7 @@ public final class CollisionMap {
               this.method1490('\u8000', (byte) -80, 1 + var6, var5 + 1);
             }
 
-            if ((var1 == 3 -1)) {
+            if ((var1 == 2)) {
               this.method1490(8192, (byte) -80, var6, var5);
               this.method1490(512, (byte) -80, var6 - -1, var5 + -1);
             }
@@ -307,19 +307,19 @@ public final class CollisionMap {
               this.method1490(16384, (byte) -80, var6, 1 + var5);
             }
 
-            if ((var1 == 2 -1)) {
+            if ((var1 == 1)) {
               this.method1490(5120, (byte) -80, var6, var5);
               this.method1490(16384, (byte) -80, var6, var5 - -1);
               this.method1490(65536, (byte) -80, 1 + var6, var5);
             }
 
-            if ((var1 == 3 -1)) {
+            if ((var1 == 2)) {
               this.method1490(20480, (byte) -80, var6, var5);
               this.method1490(65536, (byte) -80, var6 + 1, var5);
               this.method1490(1024, (byte) -80, var6, -1 + var5);
             }
 
-            if ((var1 == 4 -1)) {
+            if ((var1 == 3)) {
               this.method1490(81920, (byte) -80, var6, var5);
               this.method1490(1024, (byte) -80, var6, var5 - 1);
               this.method1490(4096, (byte) -80, -1 + var6, var5);
@@ -448,7 +448,7 @@ public final class CollisionMap {
                 return true;
               }
             } else {
-              if ((var8 == 2 -1)) {
+              if ((var8 == 1)) {
                 if (var2 == var5 + -1 && var1 == var4 && (
                     this.anIntArrayArray1304[var2][var4]
                         & 19661064) == 0) {
@@ -467,8 +467,8 @@ public final class CollisionMap {
                     & this.anIntArrayArray1304[var2][var4]) == 0)) {
                   return true;
                 }
-              } else if ((var8 != 3 -1)) {
-                if ((var8 == 4 -1)) {
+              } else if ((var8 != 2)) {
+                if ((var8 == 3)) {
                   if ((var2 == var5 -1) && var1 == var4) {
                     return true;
                   }
@@ -617,7 +617,7 @@ public final class CollisionMap {
                 return true;
               }
             } else {
-              if ((var8 == 2 -1)) {
+              if ((var8 == 1)) {
                 if (var2 == var5 - var7 && var1 >= var4 && (var1 <= var10)
                     && (19661064 & this.anIntArrayArray1304[var9][var1]) == 0) {
                   return true;
@@ -636,7 +636,7 @@ public final class CollisionMap {
                   return true;
                 }
               } else {
-                if ((var8 == 3 -1)) {
+                if ((var8 == 2)) {
                   if (-var7 + var5 == var2 && var4 <= var1 && var10 >= var1
                       && (this.anIntArrayArray1304[var9][var1] & 19661064)
                       == 0) {
@@ -680,7 +680,7 @@ public final class CollisionMap {
             }
           }
 
-          if ((var6 == 10 -1)) {
+          if ((var6 == 9)) {
             if ((var2 <= var5) && (var5 <= var9) && (var4 == (var1 - -1))
               && (this.anIntArrayArray1304[var5][var4] & 19661088) == 0) {
               return true;
@@ -743,7 +743,7 @@ public final class CollisionMap {
 
   public boolean method1492(int var1, int var2,int var3,int var4, int var5,int var6,int var7,
       int var8 ) {
-    if ((var5 == 2 -1)) {
+    if ((var5 == 1)) {
         if (var3 == var7 && (var1 == var4)) {
           return true;
         }
@@ -760,9 +760,9 @@ public final class CollisionMap {
       var1 -= this.anInt1306;
       var3 -= this.anInt1309;
       var4 -= this.anInt1306;
-      if ((var5 == 2 -1)) {
+      if ((var5 == 1)) {
         if (var2 == 6 || var2 == 7) {
-          if ((var2 == 8 -1)) {
+          if ((var2 == 7)) {
             var6 = var6 - -2 & 3;
           }
 
@@ -812,7 +812,7 @@ public final class CollisionMap {
           }
         }
 
-        if ((var2 == 9 -1)) {
+        if ((var2 == 8)) {
           if (var7 == var3 && 1 + var1 == var4 && (32
               & this.anIntArrayArray1304[var7][var4]) == 0) {
             return true;
@@ -835,7 +835,7 @@ public final class CollisionMap {
         int var9 = var7 + var5 + -1;
         int var10 = -1 + var4 + var5;
         if (var2 == 6 || var2 == 7) {
-          if ((var2 == 8 -1)) {
+          if ((var2 == 7)) {
             var6 = 2 + var6 & 3;
           }
 
@@ -863,7 +863,7 @@ public final class CollisionMap {
                   this.anIntArrayArray1304[var3][var10] & 2) == 0) {
                 return true;
               }
-            } else if ((var6 != 3 -1)) {
+            } else if ((var6 != 2)) {
               if (var6 == 3) {
                 if (((1 + var3) == var7) && var4 <= var1 && (var1 <= var10)
                     && ((128 & this.anIntArrayArray1304[var7][var1]) == 0)) {
@@ -1049,7 +1049,7 @@ public final class CollisionMap {
       int var7,
       int var8,
       int var9 ) {
-    if ((var5 > 2 -1)) {
+    if ((var5 > 1)) {
         return this.method1487(var5, var6, var2, var9, var3, var8, var5, var4,
             (byte) -125) || this
             .method1494(var2, var8, var6, var7, true, var9, var4,
@@ -1191,7 +1191,7 @@ public final class CollisionMap {
               }
 
               var9 += var8;
-              if ((var9 >= 65537 -1)) {
+              if ((var9 >= 65536)) {
                 var9 -= 65536;
                 if ((var2 < var3)) {
                   if ((this.anIntArrayArray1304[var5][var2] & 19661058) != 0) {
@@ -1238,7 +1238,7 @@ public final class CollisionMap {
       }
 
       int var9;
-      if (var5 == 1 || (var5 == 4 -1)) {
+      if (var5 == 1 || (var5 == 3)) {
         var9 = var3;
         var3 = var6;
         var6 = var9;
@@ -1281,7 +1281,7 @@ public final class CollisionMap {
           GlUtils.clip(var0, var1, var2.anInt168 + var0, var2.anInt193 + var1);
         }
 
-        if ((DummyClass12.minimapMode >= 4 -1)) {
+        if ((DummyClass12.minimapMode >= 3)) {
           if (GlRenderer.useOpenGlRenderer) {
             AbstractDirectColorSprite var5 = var2.method866((byte) -113, false);
             if (var5 != null) {

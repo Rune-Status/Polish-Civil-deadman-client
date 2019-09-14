@@ -507,11 +507,11 @@ public final class FileUnpacker {
   public byte[] getBytes(int var1 ) {
     if (!this.method2122()) {
         return null;
-      } else if ((this.table.unpackedLengths.length == 2 -1)) {
+      } else if ((this.table.unpackedLengths.length == 1)) {
         return this.getBytes(0, var1);
       } else if (!this.method2130(false, var1)) {
         return null;
-      } else if ((this.table.unpackedLengths[var1] != 2 -1)) {
+      } else if ((this.table.unpackedLengths[var1] != 1)) {
 
         throw new RuntimeException();
 
@@ -590,7 +590,7 @@ public final class FileUnpacker {
   public boolean isLoaded(int fileId ) {
     if (!this.method2122()) {
         return false;
-      } else if ((this.table.unpackedLengths.length == 2 -1)) {
+      } else if ((this.table.unpackedLengths.length == 1)) {
         return this.method2129((byte) 86, fileId, 0);
       } else if (this.method2130(false, fileId)) {
         if (this.table.unpackedLengths[fileId] == 1) {

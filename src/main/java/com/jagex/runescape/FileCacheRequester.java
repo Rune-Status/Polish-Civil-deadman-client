@@ -145,7 +145,7 @@ public final class FileCacheRequester implements Runnable {
                 .method1050((int) var1.subnodeKey, var1.aByteArray4059.length,
                     var1.aByteArray4059, (byte) -41);
           } else {
-            if ((var1.anInt4061 == 4 -1)) {
+            if ((var1.anInt4061 == 3)) {
               var1.aByteArray4059 =
                   var1.aClass41_4056
                       .method1051((int) var1.subnodeKey, (byte) -77);
@@ -206,14 +206,14 @@ public final class FileCacheRequester implements Runnable {
         if (var4) {
           DummyClass6.anInt2046 = 0;
 
-          for (var11 = 0; (var11 < 32769 -1); ++var11) {
+          for (var11 = 0; (var11 < 32768); ++var11) {
             var12 = TextureSampler5.npcs[var11];
             if (var12 != null) {
               var12.anInt2819 -= 128 * var9;
               var12.anInt2829 -= 128 * var10;
-              if ((var12.anInt2819 >= 0) && (var12.anInt2819 <= 13185 -1)
+              if ((var12.anInt2819 >= 0) && (var12.anInt2819 <= 13184)
                   && (var12.anInt2829 >= 0)
-                  && (var12.anInt2829 <= 13185 -1)) {
+                  && (var12.anInt2829 <= 13184)) {
                 for (var13 = 0; var13 < 10; ++var13) {
                   var12.waypointsX[var13] -= var9;
                   var12.waypointsY[var13] -= var10;
@@ -281,7 +281,7 @@ public final class FileCacheRequester implements Runnable {
 
             for (int var21 = 0; var21 < 4; ++var21) {
               if ((var19 >= 0)
-                  && (var20 >= 0) && (var19 < 105 -1) && (var20 < 105 -1)) {
+                  && (var20 >= 0) && (var19 < 104) && (var20 < 104)) {
                 TextureSampler0.groundItems[var21][var17][var18] =
                   TextureSampler0.groundItems[var21][var19][var20];
               } else {
@@ -472,7 +472,7 @@ public final class FileCacheRequester implements Runnable {
         if (command.method1531(TextureSampler20.COMMAND_GC)) {
           TextureSampler23.method246(8);
 
-          for (var2 = 0; (var2 < 11 -1); ++var2) {
+          for (var2 = 0; (var2 < 10); ++var2) {
             System.gc();
           }
 
@@ -575,8 +575,8 @@ public final class FileCacheRequester implements Runnable {
         }
 
         if (command.method1531(TextureSampler30.COMMAND_NOCLIP)) {
-          for (var2 = 0; (var2 < 5 -1); ++var2) {
-            for (var3 = 1; (var3 < 104 -1); ++var3) {
+          for (var2 = 0; (var2 < 4); ++var2) {
+            for (var3 = 1; (var3 < 103); ++var3) {
               for (var4 = 1; var4 < 103; ++var4) {
                 BlockConfig.collisionMaps[var2].anIntArrayArray1304[var3][var4] = 0;
               }

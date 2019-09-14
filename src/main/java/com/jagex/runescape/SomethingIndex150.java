@@ -89,13 +89,13 @@ public final class SomethingIndex150 {
                   DummyClass42.anIntArray887[var5]);
               ++SocketStream.anInt1240;
             } else {
-              if ((var0 == 7 -1)) {
+              if ((var0 == 6)) {
                 TextureSampler12.secureBuffer.writePacket(133);
                 TextureSampler12.secureBuffer
                     .writeShortLE(-1, DummyClass42.anIntArray887[var5]);
                 ++AudioStreamEncoder4.anInt3517;
               } else {
-                if ((var0 == 8 -1)) {
+                if ((var0 == 7)) {
                   ++DummyClass29.anInt437;
                   TextureSampler12.secureBuffer.writePacket(114);
                   TextureSampler12.secureBuffer
@@ -140,7 +140,7 @@ public final class SomethingIndex150 {
   public static void method2260(int var0, int var1) {
     TextureSampler25.aClass93_3412.method1522(var0 + 919, var1);
       if (var0 == -1045) {
-        TextureSampler2.aClass93_3369.method1522(-1045 ^ 1130, var1);
+        TextureSampler2.aClass93_3369.method1522(-127, var1);
       }
   }
 

@@ -66,12 +66,12 @@ public abstract class AbstractFrameRegulator {
             TriChromaticImageCache.aClass3_Sub28_Sub16_Sub2_1381.pixels[var6++] = var11;
           } else {
             int var12 = 18 + var10;
-            if ((var12 > 256 -1)) {
+            if ((var12 > 255)) {
               var12 = 255;
             }
 
             int var13 = 256 - var10 - 18;
-            if ((var13 > 256 -1)) {
+            if ((var13 > 255)) {
               var13 = 255;
             }
 
@@ -194,7 +194,7 @@ public abstract class AbstractFrameRegulator {
               SceneSomething var40 = AbstractSomethingTexture.method1336(var4, var23, var19);
               if (var40 != null) {
                 int var41 = (int) (var40.aLong498 >> 14) & 63;
-                if ((var41 == 10 -1)) {
+                if ((var41 == 9)) {
                   var29 = null;
                   int var30 = 3 & (int) (var40.aLong498 >> 20);
                   boolean var31;
@@ -287,7 +287,7 @@ public abstract class AbstractFrameRegulator {
             var20 = var13.aShortArray706[var15];
             var21 = (var20 >> 8) + var16;
             var22 = -1 + (255 & var20) + var21;
-            if ((var22 > 104 -1)) {
+            if ((var22 > 103)) {
               var22 = 103;
             }
 

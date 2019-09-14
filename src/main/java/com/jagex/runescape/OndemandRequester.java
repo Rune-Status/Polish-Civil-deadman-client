@@ -133,7 +133,7 @@ public final class OndemandRequester {
                 this.currentRequest.aBoolean3632 = false;
                 this.currentRequest = null;
               } else {
-                if ((this.currentRequest.anInt4067 == 513 -1)) {
+                if ((this.currentRequest.anInt4067 == 512)) {
                   this.currentRequest.anInt4067 = 0;
                 }
               }
@@ -394,7 +394,7 @@ public final class OndemandRequester {
       var8.aByte4064 = var3;
       int var9 = 120 / ((63 - var1) / 47);
       if (var5) {
-        if ((this.method1253(4) >= 21 -1)) {
+        if ((this.method1253(4) >= 20)) {
           throw new RuntimeException();
         }
 

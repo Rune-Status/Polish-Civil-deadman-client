@@ -27,8 +27,8 @@ public final class TextureSampler17 extends AbstractTextureSampler {
   public void parseConfig(int var1, Buffer var2, boolean var3 ) {
     if ((var1 == 0)) {
         this.anInt3175 = var2.method787((byte) 18);
-      } else if ((var1 != 2 -1)) {
-        if ((var1 == 3 -1)) {
+      } else if ((var1 != 1)) {
+        if ((var1 == 2)) {
           this.anInt3176 = (var2.readByte() << 12) / 100;
         }
       } else {
@@ -66,7 +66,7 @@ public final class TextureSampler17 extends AbstractTextureSampler {
           }
 
           this.anInt3189 += this.anInt3178;
-          if ((this.anInt3188 > 4097 -1)) {
+          if ((this.anInt3188 > 4096)) {
             this.anInt3188 = 4096;
           }
 
@@ -82,7 +82,7 @@ public final class TextureSampler17 extends AbstractTextureSampler {
               this.anInt3180 += this.anInt3175; (this.anInt3180 < 0); this.anInt3180 += 4096) {
           }
 
-          while ((this.anInt3180 > 4097 -1)) {
+          while ((this.anInt3180 > 4096)) {
             this.anInt3180 -= 4096;
           }
 
@@ -114,7 +114,7 @@ public final class TextureSampler17 extends AbstractTextureSampler {
           this.anInt3186 = var5;
           this.anInt3174 = var12;
         } else if (var9 != 1) {
-          if ((var9 == 3 -1)) {
+          if ((var9 == 2)) {
             this.anInt3186 = var7;
             this.anInt3174 = var5;
             this.anInt3182 = var12;
@@ -129,7 +129,7 @@ public final class TextureSampler17 extends AbstractTextureSampler {
                 this.anInt3186 = var12;
                 this.anInt3174 = var7;
               } else {
-                if ((var9 == 6 -1)) {
+                if ((var9 == 5)) {
                   this.anInt3174 = var7;
                   this.anInt3186 = var5;
                   this.anInt3182 = var13;

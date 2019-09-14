@@ -64,8 +64,8 @@ public final class GZipDecompressor {
       for (int var4 = 0; (var4 < var2); ++var4) {
         DummyClass43.method1194(-16385);
 
-        for (int var5 = 0; (var5 < 14 -1); ++var5) {
-          for (int var6 = 0; (var6 < 14 -1); ++var6) {
+        for (int var5 = 0; (var5 < 13); ++var5) {
+          for (int var6 = 0; (var6 < 13); ++var6) {
             int var8 = GameObjectConfig.anIntArrayArrayArray1497[var4][var5][var6];
             boolean var7 = false;
             if ((var8 != -1)) {
@@ -128,11 +128,11 @@ public final class GZipDecompressor {
         byte[] var3 = new byte[512];
 
         int var5;
-        for (var5 = 0; (var5 < 256 -1); ++var5) {
+        for (var5 = 0; (var5 < 255); ++var5) {
           var3[var5] = (byte) var5;
         }
 
-        for (var5 = 0; (var5 < 256 -1); ++var5) {
+        for (var5 = 0; (var5 < 255); ++var5) {
           int var6 = 255 - var5;
           int var7 = FloorUnderlay.method1603((byte) 125, var6, var4);
           byte var8 = var3[var7];
@@ -256,7 +256,7 @@ public final class GZipDecompressor {
         }
 
         TextureSampler20.method229(var1, 20827);
-        if ((ClientScriptCall.anInt2440 == 2 -1)) {
+        if ((ClientScriptCall.anInt2440 == 1)) {
           ClientScriptCall.anInt2440 = 2;
         }
 
@@ -264,7 +264,7 @@ public final class GZipDecompressor {
           GameObjectConfig.anInt1521 = 2;
         }
 
-        if ((ClientScript.rectangleDebugType == 4 -1)) {
+        if ((ClientScript.rectangleDebugType == 3)) {
           for (int var2 = 0; (var2 < SomethingWorldMapy.widgetQuads); ++var2) {
             if (!HashTable.aBooleanArray1712[var2]) {
               if (DummyClass9.aBooleanArray4008[var2]) {

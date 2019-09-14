@@ -204,7 +204,7 @@ public final class SomethingTexture4 extends AbstractSomethingTexture {
         if (((var4 & 4) != 0)) {
           var3.anInt2772 = SpotAnimationConfig.gameBuffer
               .readUnsignedShortAdd();
-          if ((var3.anInt2772 == 65536 -1)) {
+          if ((var3.anInt2772 == 65535)) {
             var3.anInt2772 = -1;
           }
         }

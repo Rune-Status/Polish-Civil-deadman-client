@@ -146,11 +146,11 @@ public final class ClientScriptCall extends Node {
         var8 = 128;
       }
 
-      if ((var8 > 384 -1)) {
+      if ((var8 > 383)) {
         var8 = 383;
       }
 
-      int var9 = (int) (-325.949D * Math.atan2(var4, var6)) & 2047;
+      int var9 = (int) (-325.949 * Math.atan2(var4, var6)) & 2047;
       if ((DummyClass17.anInt1823 < var8)) {
         DummyClass17.anInt1823 += AbstractSomethingTexture.anInt1105
           + DummyClass8.anInt4014 * (-DummyClass17.anInt1823 + var8) / 1000;

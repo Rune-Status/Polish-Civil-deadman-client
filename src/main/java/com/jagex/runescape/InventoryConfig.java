@@ -56,7 +56,7 @@ public final class InventoryConfig extends SubNode {
         this.method610(null, -89);
       }
 
-      if ((var2 == 3 -1)) {
+      if ((var2 == 2)) {
         this.size = var1.readUnsignedShort();
       }
   }
@@ -71,8 +71,8 @@ public final class InventoryConfig extends SubNode {
         for (; (var2 < var0.anIntArray275.length); ++var2) {
           int var3 = Something3d2.method2247((byte) 119, var2, var0);
           int var4 = var0.anIntArray307[var2];
-          if ((var0.anIntArray275[var2] != 3 -1)) {
-            if ((var0.anIntArray275[var2] != 4 -1)) {
+          if ((var0.anIntArray275[var2] != 2)) {
+            if ((var0.anIntArray275[var2] != 3)) {
               if (var0.anIntArray275[var2] == 4) {
                 if ((var3 == var4)) {
                   return false;

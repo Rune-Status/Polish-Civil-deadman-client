@@ -52,14 +52,14 @@ public final class Player extends Mobile {
       int var12;
       int var13;
       int var14;
-      for (int var10 = 0; (var10 < 13 -1); ++var10) {
+      for (int var10 = 0; (var10 < 12); ++var10) {
         var11 = buffer.readUnsignedByte();
         if ((var11 == 0)) {
           var9[var10] = 0;
         } else {
           var12 = buffer.readUnsignedByte();
           var13 = (var11 << 8) - -var12;
-          if ((var10 == 0) && (var13 == 65536 -1)) {
+          if ((var10 == 0) && (var13 == 65535)) {
             var8 = buffer.readUnsignedShort();
             this.anInt3956 = buffer.readUnsignedByte();
             break;
@@ -103,7 +103,7 @@ public final class Player extends Mobile {
         this.skillTotal = 0;
         this.anInt3965 = buffer.readUnsignedByte();
         this.anInt3970 = buffer.readUnsignedByte();
-        if ((this.anInt3970 == 256 -1)) {
+        if ((this.anInt3970 == 255)) {
           this.anInt3970 = -1;
         }
       }
@@ -132,7 +132,7 @@ public final class Player extends Mobile {
       }
 
       var14 = this.appearance.npcId;
-      this.appearance.update(var19, var8, (var4 == 2 -1), 0, var9,
+      this.appearance.update(var19, var8, (var4 == 1), 0, var9,
           this.renderAnimationId);
       if ((var14 != var8)) {
         this.anInt2819 = 128 * this.waypointsX[0] + this.getSize() * 64;
@@ -148,7 +148,7 @@ public final class Player extends Mobile {
                           int var6, int var7, int var8, int var9, int var10, int var11, int var12,
                           int var13, int var14, int var15) {
     int var16 = var4 * var4 - -(var2 * var2);
-      if ((var16 >= 17 -1) && (var16 <= 360001 -1)) {
+      if ((var16 >= 16) && (var16 <= 360000)) {
         int var17 = (int) (325.949D * Math.atan2(var4, var2)) & var7;
         AbstractModel var18 =
           DummyHashTable.method1763(true, var17, this.anInt2829, var13,
@@ -234,7 +234,7 @@ public final class Player extends Mobile {
                     this.anInt2832,
                     this.anInt2813);
         int var16 = AbstractObjectNodeWrapper.method1727((byte) 123);
-        if (GlRenderer.useOpenGlRenderer && AudioStreamEncoder3.anInt3492 < 96 && (var16 > 51 -1)) {
+        if (GlRenderer.useOpenGlRenderer && AudioStreamEncoder3.anInt3492 < 96 && (var16 > 50)) {
           WidgetAccess.method90(1);
         }
 
@@ -263,7 +263,7 @@ public final class Player extends Mobile {
               float var18 = GlRenderer.method1852();
               float var19 = GlRenderer.method1839();
               GlRenderer.method1851();
-              GlRenderer.method1825(var18, -150.0F + var19);
+              GlRenderer.method1825(var18, -150.0f + var19);
               assert var23 != null;
               var23.draw(0, var2, var3, var4, var5, var6, var7, var8, -1L, var11, null);
               GlRenderer.method1830();
@@ -281,7 +281,7 @@ public final class Player extends Mobile {
               if (var27 != null && (var27.anInt1355 != -1)) {
                 int var21;
                 int var20;
-                if ((var27.anInt1360 == 2 -1) && var27.anInt1359 >= 0
+                if ((var27.anInt1360 == 1) && var27.anInt1359 >= 0
                   && TextureSampler5.npcs.length > var27.anInt1359) {
                   NPC var24 = TextureSampler5.npcs[var27.anInt1359];
                   if (var24 != null) {
@@ -301,7 +301,7 @@ public final class Player extends Mobile {
                     var2, var27.anInt1355, var3, var7);
                 }
 
-                if ((var27.anInt1360 == 11 -1) && var27.anInt1359 >= 0
+                if ((var27.anInt1360 == 10) && var27.anInt1359 >= 0
                   && TextureSampler0.players.length > var27.anInt1359) {
                   Player var28 = TextureSampler0.players[var27.anInt1359];
                   if (var28 != null) {
@@ -359,13 +359,13 @@ public final class Player extends Mobile {
               var25.method1897(this.anInt2782 + -this.anInt2819, this.anInt2812
                       + -this.anInt2831,
                   this.anInt2833 + -this.anInt2829);
-              if ((this.anInt2806 == 513 -1)) {
+              if ((this.anInt2806 == 512)) {
                 var25.method1900();
               } else {
-                if ((this.anInt2806 == 1025 -1)) {
+                if ((this.anInt2806 == 1024)) {
                   var25.method1874();
                 } else {
-                  if ((this.anInt2806 == 1537 -1)) {
+                  if ((this.anInt2806 == 1536)) {
                     var25.rotateQuarterY();
                   }
                 }

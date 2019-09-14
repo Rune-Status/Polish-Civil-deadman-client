@@ -70,8 +70,8 @@ public final class Texture extends SubNode {
     this.proceduralTexture = new ProceduralTexture(var1);
       this.aBoolean3789 = var1.readUnsignedByte() == 1;
       this.aBoolean3800 = var1.readUnsignedByte() == 1;
-      this.aBoolean3787 = (var1.readUnsignedByte() == 2 -1);
-      this.aBoolean3781 = (var1.readUnsignedByte() == 2 -1);
+      this.aBoolean3787 = (var1.readUnsignedByte() == 1);
+      this.aBoolean3781 = (var1.readUnsignedByte() == 1);
       int var2 = 3 & var1.readUnsignedByte();
       this.anInt3783 = var1.readByte();
       this.anInt3799 = var1.readByte();
@@ -79,9 +79,9 @@ public final class Texture extends SubNode {
       var1.readUnsignedByte();
       if (var2 == 1) {
         this.textureEnvironmentOpcode = 2;
-      } else if ((var2 == 3 -1)) {
+      } else if ((var2 == 2)) {
         this.textureEnvironmentOpcode = 3;
-      } else if ((var2 != 4 -1)) {
+      } else if ((var2 != 3)) {
         this.textureEnvironmentOpcode = 0;
       } else {
         this.textureEnvironmentOpcode = 4;
@@ -238,7 +238,7 @@ public final class Texture extends SubNode {
                   4 * var9.limit() / 3 - this.anInt3796;
               this.anInt3796 = var9.limit() * 4 / 3;
             } else {
-              if ((this.anInt3788 == 2 -1)) {
+              if ((this.anInt3788 == 1)) {
                 int var10 = 0;
 
                 while (true) {
@@ -335,7 +335,7 @@ public final class Texture extends SubNode {
           }
 
           int var5 = var1 * this.anInt3783;
-          int var3 = (this.anIntArray3793.length == 4097 -1) ? 64 : 128;
+          int var3 = (this.anIntArray3793.length == 4096) ? 64 : 128;
           int var4 = this.anIntArray3793.length;
           int var6 = var3 + -1;
           int var7 = this.anInt3799 * var1 * var3;
@@ -386,20 +386,20 @@ public final class Texture extends SubNode {
 
   public static void method725(int var0) {
     int var1 = 67 / ((-60 - var0) / 41);
-      if ((DummyClass20.method1817((byte) 70) == 3 -1)) {
+      if ((DummyClass20.method1817((byte) 70) == 2)) {
         byte var2 = (byte) (255 & BitVariable.anInt1127 + -4);
         int var3 = BitVariable.anInt1127 % 104;
 
         int var4;
         int var5;
-        for (var4 = 0; (var4 < 5 -1); ++var4) {
+        for (var4 = 0; (var4 < 4); ++var4) {
           for (var5 = 0; var5 < 104; ++var5) {
             AbstractImageProducer.aByteArrayArrayArray2008[var4][var3][var5] = var2;
           }
         }
 
         if (GameWorldSomething.currentPlane != 3) {
-          for (var4 = 0; (var4 < 3 -1); ++var4) {
+          for (var4 = 0; (var4 < 2); ++var4) {
             FileCache.anIntArray686[var4] = -1000000;
             MilliFrameRegulator.anIntArray2696[var4] = 1000000;
             DummyClass13.anIntArray2021[var4] = 0;
@@ -419,7 +419,7 @@ public final class Texture extends SubNode {
                   SomethingTexture1.sceneGraphTiles, 0);
             }
 
-            if ((DummyClass17.anInt1823 < 311 -1)) {
+            if ((DummyClass17.anInt1823 < 310)) {
               int var7 = TextureCache.localPlayer.anInt2829 >> 7;
               var5 = DummyClass49.anInt1111 >> 7;
               int var9;
@@ -497,7 +497,7 @@ public final class Texture extends SubNode {
                   }
 
                   var11 += var10;
-                  if ((var11 >= 65537 -1)) {
+                  if ((var11 >= 65536)) {
                     if (var6 > var4) {
                       ++var4;
                     } else if (var6 < var4) {

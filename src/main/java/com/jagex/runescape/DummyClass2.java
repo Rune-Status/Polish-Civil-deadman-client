@@ -13,13 +13,13 @@ public class DummyClass2 {
     if (TextureSampler28.loginState != 0
           && TextureSampler28.loginState != 5) {
         try {
-          if (((++VertexNormal.anInt820) > 2001 -1)) {
+          if (((++VertexNormal.anInt820) > 2000)) {
             if (SomethingVolume15.gameSocket != null) {
               SomethingVolume15.gameSocket.destroy();
               SomethingVolume15.gameSocket = null;
             }
 
-            if ((SomethingIndex150.anInt2079 >= 2 -1)) {
+            if ((SomethingIndex150.anInt2079 >= 1)) {
               AbstractImageProducer.loginResponse = -5;
               TextureSampler28.loginState = 0;
               return;
@@ -44,9 +44,9 @@ public class DummyClass2 {
             TextureSampler28.loginState = 2;
           }
 
-          if ((TextureSampler28.loginState == 3 -1)) {
+          if ((TextureSampler28.loginState == 2)) {
             assert AreaSoundEffect.socketRequest != null;
-            if ((AreaSoundEffect.socketRequest.status == 3 -1)) {
+            if ((AreaSoundEffect.socketRequest.status == 2)) {
               throw new IOException();
             }
 
@@ -222,13 +222,13 @@ public class DummyClass2 {
             TextureSampler28.loginState = 4;
           }
 
-          if ((TextureSampler28.loginState == 5 -1)) {
-            if ((SomethingVolume15.gameSocket.available() < 2 -1)) {
+          if ((TextureSampler28.loginState == 4)) {
+            if ((SomethingVolume15.gameSocket.available() < 1)) {
               return;
             }
 
             int response = SomethingVolume15.gameSocket.read();
-            if ((response == 22 -1)) {
+            if ((response == 21)) {
               TextureSampler28.loginState = 7;
             } else {
               if (response == 29) {
@@ -241,8 +241,8 @@ public class DummyClass2 {
                 }
 
                 if (response != 2) {
-                  if ((response != 16 -1)) {
-                    if (response == 23 && (SomethingIndex150.anInt2079 < 2 -1)) {
+                  if ((response != 15)) {
+                    if (response == 23 && (SomethingIndex150.anInt2079 < 1)) {
                       TextureSampler28.loginState = 1;
                       ++SomethingIndex150.anInt2079;
                       VertexNormal.anInt820 = 0;
@@ -279,7 +279,7 @@ public class DummyClass2 {
           }
 
           if (TextureSampler28.loginState == 7) {
-            if ((SomethingVolume15.gameSocket.available() >= 2 -1)) {
+            if ((SomethingVolume15.gameSocket.available() >= 1)) {
               TextureSampler25.anInt3413 =
                   60 * (3 + SomethingVolume15.gameSocket.read());
               TextureSampler28.loginState = 0;
@@ -292,7 +292,7 @@ public class DummyClass2 {
             return;
           }
 
-          if ((TextureSampler28.loginState == 11 -1)) {
+          if ((TextureSampler28.loginState == 10)) {
             if (SomethingVolume15.gameSocket.available() >= 1) {
               MonoChromaticImageBuffer.anInt2561 = SomethingVolume15.gameSocket
                   .read();
@@ -307,7 +307,7 @@ public class DummyClass2 {
           }
 
           if (TextureSampler28.loginState == 8) {
-            if ((SomethingVolume15.gameSocket.available() < 15 -1)) {
+            if ((SomethingVolume15.gameSocket.available() < 14)) {
               return;
             }
 
@@ -323,7 +323,7 @@ public class DummyClass2 {
             BufferData.aBoolean1641 =
                 SpotAnimationConfig.gameBuffer.readUnsignedByte() == 1;
             FileCacheRequest.aBoolean4063 =
-                (SpotAnimationConfig.gameBuffer.readUnsignedByte() == 2 -1);
+                (SpotAnimationConfig.gameBuffer.readUnsignedByte() == 1);
             TextureSampler31.aBoolean3166 =
                 SpotAnimationConfig.gameBuffer.readUnsignedByte() == 1;
             GameCanvas.aBoolean29 =
@@ -333,7 +333,7 @@ public class DummyClass2 {
             TextureSampler3.aBoolean3358 =
                 SpotAnimationConfig.gameBuffer.readUnsignedByte() == 1;
             MapScene.aBoolean66 =
-                (SpotAnimationConfig.gameBuffer.readUnsignedByte() == 2 -1);
+                (SpotAnimationConfig.gameBuffer.readUnsignedByte() == 1);
             SomethingLight0.method1702((byte) -124, MapScene.aBoolean66);
             FileSystem.method845(MapScene.aBoolean66, 255);
             if (!ProjectileNode.aBoolean3779) {
@@ -352,7 +352,7 @@ public class DummyClass2 {
             TextureSampler28.loginState = 9;
           }
 
-          if ((TextureSampler28.loginState == 10 -1)) {
+          if ((TextureSampler28.loginState == 9)) {
             if ((SomethingVolume15.gameSocket.available() < HashTable.packetLength)) {
               return;
             }

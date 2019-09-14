@@ -39,12 +39,12 @@ public final class TextureSampler37 extends AbstractTextureSampler {
           var9 = var9 > 2048 ? -4096 + var9 : var9;
           int var10 = var7 + this.anInt3258;
           var8 = var8 < -2048 ? var8 + 4096 : var8;
-          var8 = (var8 <= 2049 -1) ? var8 : -4096 + var8;
+          var8 = (var8 <= 2048) ? var8 : -4096 + var8;
           var10 = (var10 >= 2047) ? var10 : 4096 + var10;
-          var10 = (var10 > 2049 -1) ? var10 - 4096 : var10;
+          var10 = (var10 > 2048) ? var10 - 4096 : var10;
           int var11 = var5 - -this.anInt3262;
           var11 = var11 < -2048 ? var11 + 4096 : var11;
-          var11 = (var11 > 2049 -1) ? var11 - 4096 : var11;
+          var11 = (var11 > 2048) ? var11 - 4096 : var11;
           var3[var6] =
             !this.method271(var8, var9, (byte) 113) && !this
                 .method270((byte) -44, var10, var11) ?
@@ -61,13 +61,13 @@ public final class TextureSampler37 extends AbstractTextureSampler {
         this.anInt3265 = var2.readUnsignedShort();
       } else if (var1 == 1) {
         this.anInt3253 = var2.readUnsignedShort();
-      } else if ((var1 == 3 -1)) {
+      } else if ((var1 == 2)) {
         this.anInt3258 = var2.readUnsignedShort();
       } else if (var1 != 3) {
         if (var1 == 4) {
           this.anInt3257 = var2.readUnsignedShort();
         } else {
-          if ((var1 == 6 -1)) {
+          if ((var1 == 5)) {
             this.anInt3254 = var2.readUnsignedShort();
           } else if (var1 == 6) {
             this.anInt3266 = var2.readUnsignedShort();
@@ -124,7 +124,7 @@ public final class TextureSampler37 extends AbstractTextureSampler {
               SomethingVolume15.gameSocket = null;
             }
 
-            if ((SpotAnimationConfig.anInt548 >= 2 -1)) {
+            if ((SpotAnimationConfig.anInt548 >= 1)) {
               HashTable.anInt1711 = -5;
               DummyCanvas.anInt23 = 0;
               return;
@@ -148,9 +148,9 @@ public final class TextureSampler37 extends AbstractTextureSampler {
           }
 
           int var1;
-          if ((DummyCanvas.anInt23 == 3 -1)) {
+          if ((DummyCanvas.anInt23 == 2)) {
             assert AreaSoundEffect.socketRequest != null;
-            if ((AreaSoundEffect.socketRequest.status == 3 -1)) {
+            if ((AreaSoundEffect.socketRequest.status == 2)) {
               throw new IOException();
             }
 
@@ -197,7 +197,7 @@ public final class TextureSampler37 extends AbstractTextureSampler {
           }
 
           if (DummyCanvas.anInt23 == 3) {
-            if ((SomethingVolume15.gameSocket.available() < 2 -1)) {
+            if ((SomethingVolume15.gameSocket.available() < 1)) {
               return;
             }
 
@@ -206,7 +206,7 @@ public final class TextureSampler37 extends AbstractTextureSampler {
             DummyCanvas.anInt23 = 4;
           }
 
-          if ((DummyCanvas.anInt23 == 5 -1)) {
+          if ((DummyCanvas.anInt23 == 4)) {
             if ((SomethingVolume15.gameSocket.available() < (8
               * TextureSampler29.aClass94Array3391.length))) {
               return;
@@ -233,7 +233,7 @@ public final class TextureSampler37 extends AbstractTextureSampler {
             SomethingVolume15.gameSocket = null;
           }
 
-          if ((SpotAnimationConfig.anInt548 < 2 -1)) {
+          if ((SpotAnimationConfig.anInt548 < 1)) {
             ++SpotAnimationConfig.anInt548;
             if (DummyClass11.anInt2036 == Projectile.anInt2894) {
               Projectile.anInt2894 = GameWorldSomething.anInt506;

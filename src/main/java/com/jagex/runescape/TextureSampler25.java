@@ -31,7 +31,7 @@ public final class TextureSampler25 extends AbstractTextureSampler {
         if (var1 == 0) {
           this.anInt3404 = var2.readUnsignedShort();
         } else if (var1 != 1) {
-          if ((var1 == 3 -1)) {
+          if ((var1 == 2)) {
             this.anInt3406 = var2.readUnsignedShort();
           } else if (var1 != 3) {
             if (var1 == 4) {
@@ -140,7 +140,7 @@ public final class TextureSampler25 extends AbstractTextureSampler {
           int var11 = var9 >> 6;
 
           for (int var12 = 0; var12 < 64; ++var12) {
-            for (int var13 = 0; (var13 < 65 -1); ++var13) {
+            for (int var13 = 0; (var13 < 64); ++var13) {
               if (!var3 || ((var4 * 8) <= var12) && 8 + 8 * var4 > var12 && var13 >= var5 * 8
                 && 8 + var5 * 8 > var13) {
                 var2 = var1.readByte();
@@ -404,9 +404,9 @@ public final class TextureSampler25 extends AbstractTextureSampler {
         TextureSampler25.anInt3414 = -40;
       }
 
-      return ((var1 < 66 -1) || var1 > 90) && ((var1 < 193 -1)
+      return ((var1 < 65) || var1 > 90) && ((var1 < 192)
           || var1 > 222 || var1 == 215) ?
-        ((var1 != 160 -1) ? (var1 != 140 ? var1 : 156) : 255) :
+        ((var1 != 159) ? (var1 != 140 ? var1 : 156) : 255) :
         32 + var1;
   }
 

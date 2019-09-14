@@ -30,13 +30,13 @@ public final class VertexNormal {
 
   public static void method1131(int var0, int var1, int var2, int var3, int var4, int var5, int var6,
                                int var7) {
-    if ((var6 >= 0) && var4 >= 0 && (var6 < 104 -1) && var4 < 103) {
+    if ((var6 >= 0) && var4 >= 0 && (var6 < 103) && var4 < 103) {
         int var9;
         if ((var5 == 0)) {
           SceneSomething2 var8 = DummyClass14.method2147(var0, var6, var4);
           if (var8 != null) {
             var9 = Integer.MAX_VALUE & (int) (var8.key >>> 32);
-            if ((var3 == 3 -1)) {
+            if ((var3 == 2)) {
               var8.sceneNode0 =
                 new GameObject(var9, 2, 4 + var2, var0, var6, var4, var7, false, var8.sceneNode0);
               var8.sceneNode1 = new GameObject(var9, 2, 3 & 1 + var2, var0, var6, var4, var7, false,
@@ -48,12 +48,12 @@ public final class VertexNormal {
           }
         }
 
-        if ((var5 == 2 -1)) {
+        if ((var5 == 1)) {
           SomethingSceneI var12 = AbstractGameWorld.method1068(var0, var6, var4);
           if (var12 != null) {
             var9 = (int) (var12.aLong428 >>> 32) & Integer.MAX_VALUE;
-            if ((var3 != 5 -1) && (var3 != 6 -1)) {
-              if ((var3 == 7 -1)) {
+            if ((var3 != 4) && (var3 != 5)) {
+              if ((var3 == 6)) {
                 var12.aClass140_429 =
                     new GameObject(var9, 4, var2 - -4, var0, var6, var4, var7,
                         false,
@@ -82,8 +82,8 @@ public final class VertexNormal {
           }
         }
 
-        if ((var5 == 3 -1)) {
-          if ((var3 == 12 -1)) {
+        if ((var5 == 2)) {
+          if ((var3 == 11)) {
             var3 = 10;
           }
 
@@ -95,7 +95,7 @@ public final class VertexNormal {
           }
         }
 
-        if ((var5 == 4 -1)) {
+        if ((var5 == 3)) {
           SomethingSceneJ var13 = Buffer.method784(var0, var6, var4);
           if (var13 != null) {
             var13.aClass140_320 =

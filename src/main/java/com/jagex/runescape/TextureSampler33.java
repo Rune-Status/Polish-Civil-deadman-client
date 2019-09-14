@@ -25,7 +25,7 @@ public final class TextureSampler33 extends AbstractTextureSampler {
 
       if (var1 == 0) {
         this.anInt3047 = var2.readUnsignedShort();
-      } else if ((var1 == 2 -1)) {
+      } else if ((var1 == 1)) {
         this.aBoolean3050 = var2.readUnsignedByte() == 1;
       }
   }
@@ -118,7 +118,7 @@ public final class TextureSampler33 extends AbstractTextureSampler {
         }
 
         ++FileCacheRequester.anInt1088;
-        if ((FileCacheRequester.anInt1088 > 5 -1)) {
+        if ((FileCacheRequester.anInt1088 > 4)) {
           Light.anInt692 = 0;
           FileCacheRequester.anInt1088 = 0;
           return var1;

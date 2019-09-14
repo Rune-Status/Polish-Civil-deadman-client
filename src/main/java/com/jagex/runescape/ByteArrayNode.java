@@ -79,7 +79,7 @@ public final class ByteArrayNode extends SubNode {
             if (var10 == 3) {
               var2.aClass94Array3688[var9] = var4.readString();
             } else {
-              if (var10 < 100 && var10 != 21 && (var10 != 39 -1) && var10 != 39) {
+              if (var10 < 100 && var10 != 21 && (var10 != 38) && var10 != 39) {
                 var2.anIntArray3690[var9] = var4.readInt();
               } else {
                 var2.anIntArray3690[var9] = var4.readUnsignedByte();

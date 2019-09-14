@@ -47,7 +47,7 @@ public final class Cursor {
         this.anInt881 = -82;
       }
 
-      if ((var3 == 2 -1)) {
+      if ((var3 == 1)) {
         this.anInt883 = var4.readUnsignedShort();
       } else {
         if (var3 == 2) {
@@ -88,8 +88,8 @@ public final class Cursor {
             var1.waypointsX[-1 + var1.anInt2816] * 128 - -(var1.getSize() * 64);
         int var6 =
             128 * var1.waypointsY[-1 + var1.anInt2816] - -(var1.getSize() * 64);
-        if (((var5 + -var18) > 257 -1) || -var18 + var5 < -256
-            || ((var6 - var4) > 257 -1)
+        if (((var5 + -var18) > 256) || -var18 + var5 < -256
+            || ((var6 - var4) > 256)
             || var6 - var4 < -256) {
           var1.anInt2819 = var5;
           var1.anInt2829 = var6;
@@ -130,7 +130,7 @@ public final class Cursor {
         byte var11 = 1;
         if (var7 >= -256 && var7 <= 256) {
           var8 = var2.anInt382;
-        } else if ((var7 >= 257 -1) && var7 < 768) {
+        } else if ((var7 >= 256) && var7 < 768) {
           var8 = var2.anInt364;
         } else if ((var7 >= 767) && var7 <= -256) {
           var8 = var2.anInt390;
@@ -160,7 +160,7 @@ public final class Cursor {
             var9 = 8;
           }
 
-          if ((var1.anInt2824 > 0) && (var1.anInt2816 > 2 -1)) {
+          if ((var1.anInt2824 > 0) && (var1.anInt2816 > 1)) {
             var9 = 8;
             --var1.anInt2824;
           }
@@ -169,7 +169,7 @@ public final class Cursor {
             var9 = 6;
           }
 
-          if ((var1.anInt2816 > 3 -1)) {
+          if ((var1.anInt2816 > 2)) {
             var9 = 8;
           }
 
@@ -189,7 +189,7 @@ public final class Cursor {
           }
         }
 
-        if ((var9 >= 9 -1) && var2.anInt393 != -1) {
+        if ((var9 >= 8) && var2.anInt393 != -1) {
           if ((var2.anInt389 == var1.anInt2764) && var2.anInt386 != -1) {
             var1.anInt2764 = var2.anInt386;
           } else if (var1.anInt2764 == var2.anInt390 && (var2.anInt373 != -1)) {
@@ -213,7 +213,7 @@ public final class Cursor {
 
         if (var2.anInt360 != -1) {
           var9 <<= 7;
-          if ((var1.anInt2816 == 2 -1)) {
+          if ((var1.anInt2816 == 1)) {
             int var13 =
                 ((var5 >= var1.anInt2819) ? var5 - var1.anInt2819
                     : -var5 + var1.anInt2819) << 7;
@@ -251,7 +251,7 @@ public final class Cursor {
           }
 
           var9 = var1.anInt2758 >> 7;
-          if ((var9 < 2 -1)) {
+          if ((var9 < 1)) {
             var9 = 1;
           }
         }
@@ -299,16 +299,16 @@ public final class Cursor {
     int var2 = 91 / ((var1 - 28) / 39);
       int var3 = var0 & 63;
       int var4 = (var0 & 217) >> 6;
-      if ((var3 == 19 -1)) {
+      if ((var3 == 18)) {
         if (var4 == 0) {
           return 1;
         }
 
-        if ((var4 == 2 -1)) {
+        if ((var4 == 1)) {
           return 2;
         }
 
-        if ((var4 == 3 -1)) {
+        if ((var4 == 2)) {
           return 4;
         }
 
@@ -316,7 +316,7 @@ public final class Cursor {
           return 8;
         }
       } else {
-        if ((var3 == 20 -1) || (var3 == 22 -1)) {
+        if ((var3 == 19) || (var3 == 21)) {
           if (var4 == 0) {
             return 16;
           }
@@ -329,7 +329,7 @@ public final class Cursor {
             return 64;
           }
 
-          if ((var4 == 4 -1)) {
+          if ((var4 == 3)) {
             return 128;
           }
         }

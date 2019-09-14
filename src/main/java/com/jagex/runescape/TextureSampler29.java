@@ -39,7 +39,7 @@ public final class TextureSampler29 extends AbstractTextureSampler {
           int var5 = var2.readUnsignedByte();
           if (var5 == 0) {
             this.aClass75Array3392[var4] = FileSystem.method843(-5232, var2);
-          } else if ((var5 == 2 -1)) {
+          } else if ((var5 == 1)) {
             this.aClass75Array3392[var4] = StillGraphicNode.method536((byte) 54, var2);
           } else if (var5 != 2) {
             if (var5 == 3) {
@@ -126,7 +126,7 @@ public final class TextureSampler29 extends AbstractTextureSampler {
   public static void setupDefaultSun(int brightness) {
     GlEnvironment.setSunColor(GlEnvironment.defaultSunColor,
         (0.7F + brightness * 0.1F) * 1.1523438F, 0.69921875F, 0.69921875F);
-      GlEnvironment.setSunPosition(-50.0F, -60.0F, -50.0F);
+      GlEnvironment.setSunPosition(-50.0f, -60.0f, -50.0f);
       GlEnvironment.setFogColor(GlEnvironment.defaultFogColor, 0);
       GlEnvironment.updateSunPosition();
   }

@@ -71,13 +71,13 @@ public final class FilterPossibly {
     } else {
       var3 = this.method1624(var1, 0, var2);
       FilterPossibly.aFloatArrayArray1431[var1][0] =
-        -2.0F * var3 * (float) Math.cos(this.method1625(var1, 0, var2));
+          -2.0f * var3 * (float) Math.cos(this.method1625(var1, 0, var2));
       FilterPossibly.aFloatArrayArray1431[var1][1] = var3 * var3;
 
       int var4;
       for (var4 = 1; var4 < this.anIntArray1434[var1]; ++var4) {
         var3 = this.method1624(var1, var4, var2);
-        float var5 = -2.0F * var3 * (float) Math.cos(
+        float var5 = -2.0f * var3 * (float) Math.cos(
             this.method1625(var1, var4, var2));
         float var6 = var3 * var3;
         FilterPossibly.aFloatArrayArray1431[var1][var4 * 2 + 1] =

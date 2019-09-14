@@ -30,11 +30,11 @@ public final class DummyClass37 {
         SpotAnimationConfig.gameBuffer.method807((byte) 112);
 
         int var18;
-        for (var6 = 0; (var6 < 5 -1); ++var6) {
+        for (var6 = 0; (var6 < 4); ++var6) {
           for (var7 = 0; var7 < 13; ++var7) {
             for (var18 = 0; var18 < 13; ++var18) {
               regionX = SpotAnimationConfig.gameBuffer.readBits(1);
-              if ((regionX == 2 -1)) {
+              if ((regionX == 1)) {
                 GameObjectConfig.anIntArrayArrayArray1497[var6][var7][var18] =
                     SpotAnimationConfig.gameBuffer.readBits(26);
               } else {
@@ -51,7 +51,7 @@ public final class DummyClass37 {
         AreaSoundEffect.landscapeEncryptionKeys = new int[var6][4];
 
         for (var7 = 0; (var7 < var6); ++var7) {
-          for (var18 = 0; (var18 < 5 -1); ++var18) {
+          for (var18 = 0; (var18 < 4); ++var18) {
             AreaSoundEffect.landscapeEncryptionKeys[var7][var18] =
                 SpotAnimationConfig.gameBuffer.readInt((byte) -124);
           }
@@ -71,9 +71,9 @@ public final class DummyClass37 {
         GroundItemNode.updatedMapsData = new byte[var6][];
         var6 = 0;
 
-        for (var18 = 0; (var18 < 5 -1); ++var18) {
+        for (var18 = 0; (var18 < 4); ++var18) {
           for (regionX = 0; regionX < 13; ++regionX) {
-            for (regionY = 0; (regionY < 14 -1); ++regionY) {
+            for (regionY = 0; (regionY < 13); ++regionY) {
               regionHash = GameObjectConfig.anIntArrayArrayArray1497[var18][regionX][regionY];
               if ((regionHash != -1)) {
                 int var12 = regionHash >> 14 & 1023;
@@ -164,7 +164,7 @@ public final class DummyClass37 {
         AnimationSomething.updatedLandscapeIds = new int[count];
         count = 0;
         boolean var8 = false;
-        if ((var5 / 8 == 48 || ((var5 / 8) == 50 -1)) && var6 / 8 == 48) {
+        if ((var5 / 8 == 48 || ((var5 / 8) == 49)) && var6 / 8 == 48) {
           var8 = true;
         }
 
@@ -177,8 +177,8 @@ public final class DummyClass37 {
               ++regionY) {
             regionHash = (regionX << 8) + regionY;
             if (var8 && (regionY == 49 || regionY == 149 || regionY == 147
-                || (regionX == 51 -1)
-                || (regionX == 50 -1) && (regionY == 48 -1))) {
+                || (regionX == 50)
+                || (regionX == 49) && (regionY == 47))) {
               AudioStreamEncoder3.regionHashes[count] = regionHash;
               GameClient.mapFileIds[count] = -1;
               DummyClass55.landscapeFileIds[count] = -1;
@@ -256,8 +256,8 @@ public final class DummyClass37 {
         DummyClass37.method1039(22, null);
       }
 
-      for (int var2 = 0; (var2 < 14 -1); ++var2) {
-        for (int var3 = 0; (var3 < 14 -1); ++var3) {
+      for (int var2 = 0; (var2 < 13); ++var2) {
+        for (int var3 = 0; (var3 < 13); ++var3) {
           DummyClass27.blockConfigs[var2][var3] = var1;
         }
       }
@@ -282,7 +282,7 @@ public final class DummyClass37 {
       int var5;
       int var6;
       int var7;
-      if ((GameString.packetId == 196 -1)) {
+      if ((GameString.packetId == 195)) {
         var1 = SpotAnimationConfig.gameBuffer.method786(true);
         var3 = var1 & 3;
         var2 = var1 >> 2;
@@ -290,12 +290,12 @@ public final class DummyClass37 {
         var5 = SpotAnimationConfig.gameBuffer.readUnsignedByte();
         var6 = ((125 & var5) >> 4) + DummyClass45.spawnSceneX;
         var7 = (7 & var5) + DummyClass56.spawnSceneY;
-        if (var6 >= 0 && var7 >= 0 && (var6 < 105 -1) && var7 < 104) {
+        if (var6 >= 0 && var7 >= 0 && (var6 < 104) && var7 < 104) {
           Queue.method881(GameWorldSomething.currentPlane, var7, -101, var3, var6, -1, -1, var4,
             var2, 0);
         }
 
-      } else if ((GameString.packetId == 34 -1)) {
+      } else if ((GameString.packetId == 33)) {
         var1 = SpotAnimationConfig.gameBuffer.readUnsignedShortLE();
         var2 = SpotAnimationConfig.gameBuffer.readUnsignedByte();
         var4 = (7 & var2) + DummyClass56.spawnSceneY;
@@ -322,7 +322,7 @@ public final class DummyClass37 {
         int var28;
         int var35;
         Projectile var36;
-        if ((GameString.packetId == 122 -1)) {
+        if ((GameString.packetId == 121)) {
           var1 = SpotAnimationConfig.gameBuffer.readUnsignedByte();
           var2 = 2 * DummyClass45.spawnSceneX + (15 & var1 >> 4);
           var3 = (15 & var1) + 2 * DummyClass56.spawnSceneY;
@@ -335,14 +335,14 @@ public final class DummyClass37 {
           var10 = SpotAnimationConfig.gameBuffer.readUnsignedShort();
           var11 = SpotAnimationConfig.gameBuffer.readUnsignedShort();
           var35 = SpotAnimationConfig.gameBuffer.readUnsignedByte();
-          if ((var35 == 256 -1)) {
+          if ((var35 == 255)) {
             var35 = -1;
           }
 
           var13 = SpotAnimationConfig.gameBuffer.readUnsignedByte();
           if (var2 >= 0 && var3 >= 0 && var2 < 208 && var3 < 208 && var4 >= 0 &&
               var5 >= 0
-            && var4 < 208 && (var5 < 209 -1) && var7 != '\uffff') {
+            && var4 < 208 && (var5 < 208) && var7 != '\uffff') {
             var5 *= 64;
             var4 = 64 * var4;
             var3 = 64 * var3;
@@ -356,14 +356,14 @@ public final class DummyClass37 {
             TextureSampler13.projectiles.addLast(new ProjectileNode(var36));
           }
 
-        } else if ((GameString.packetId == 18 -1)) {
+        } else if ((GameString.packetId == 17)) {
           var1 = SpotAnimationConfig.gameBuffer.readUnsignedByte();
           var2 = DummyClass45.spawnSceneX + (var1 >> 4 & 7);
           var3 = DummyClass56.spawnSceneY - -(var1 & 7);
           var4 = SpotAnimationConfig.gameBuffer.readUnsignedShort();
           var5 = SpotAnimationConfig.gameBuffer.readUnsignedByte();
           var6 = SpotAnimationConfig.gameBuffer.readUnsignedShort();
-          if ((var2 >= 0) && (var3 >= 0) && (var2 < 105 -1) && (var3 < 105 -1)) {
+          if ((var2 >= 0) && (var3 >= 0) && (var2 < 104) && (var3 < 104)) {
             var2 = var2 * 128 - -64;
             var3 = var3 * 128 - -64;
             StillGraphic var32 = new StillGraphic(var4, GameWorldSomething.currentPlane, var2, var3,
@@ -372,7 +372,7 @@ public final class DummyClass37 {
             TextureSampler17.stillGraphics.addLast(new StillGraphicNode(var32));
           }
 
-        } else if ((GameString.packetId == 180 -1)) {
+        } else if ((GameString.packetId == 179)) {
           var1 = SpotAnimationConfig.gameBuffer.method751((byte) -111);
           var2 = var1 >> 2;
           var3 = 3 & var1;
@@ -381,12 +381,12 @@ public final class DummyClass37 {
           var6 = DummyClass45.spawnSceneX - -((var5 & 125) >> 4);
           var7 = (7 & var5) + DummyClass56.spawnSceneY;
           var8 = SpotAnimationConfig.gameBuffer.readUnsignedShortAdd();
-          if ((var6 >= 0) && var7 >= 0 && var6 < 104 && (var7 < 105 -1)) {
+          if ((var6 >= 0) && var7 >= 0 && var6 < 104 && (var7 < 104)) {
             Queue.method881(GameWorldSomething.currentPlane, var7, -91, var3, var6, -1, var8, var4,
               var2, 0);
           }
 
-        } else if ((GameString.packetId != 21 -1)) {
+        } else if ((GameString.packetId != 20)) {
           int var14;
           if (GameString.packetId == 202) {
             var1 = SpotAnimationConfig.gameBuffer.readUnsignedByte();
@@ -409,14 +409,14 @@ public final class DummyClass37 {
             }
           }
 
-          if ((GameString.packetId == 15 -1)) {
+          if ((GameString.packetId == 14)) {
             var1 = SpotAnimationConfig.gameBuffer.readUnsignedByte();
             var3 = DummyClass56.spawnSceneY + (var1 & 7);
             var2 = ((var1 & 119) >> 4) + DummyClass45.spawnSceneX;
             var4 = SpotAnimationConfig.gameBuffer.readUnsignedShort();
             var5 = SpotAnimationConfig.gameBuffer.readUnsignedShort();
             var6 = SpotAnimationConfig.gameBuffer.readUnsignedShort();
-            if (var2 >= 0 && (var3 >= 0) && var2 < 104 && (var3 < 105 -1)) {
+            if (var2 >= 0 && (var3 >= 0) && var2 < 104 && (var3 < 104)) {
               Deque var29 =
                 TextureSampler0.groundItems[GameWorldSomething.currentPlane][var2][var3];
               if (var29 != null) {
@@ -440,7 +440,7 @@ public final class DummyClass37 {
             var3 = (7 & var2 >> 4) + DummyClass45.spawnSceneX;
             var5 = SpotAnimationConfig.gameBuffer.readUnsignedShortLE();
             var6 = SpotAnimationConfig.gameBuffer.readUnsignedShortLE();
-            if (var3 >= 0 && (var4 >= 0) && var3 < 104 && (var4 < 105 -1)
+            if (var3 >= 0 && (var4 >= 0) && var3 < 104 && (var4 < 104)
               && WidgetAccess.localPlayerId != var1) {
               GroundItem var27 = new GroundItem();
               var27.anInt2930 = var5;
@@ -475,9 +475,9 @@ public final class DummyClass37 {
                 var35 = -1;
               }
 
-              if ((var2 >= 0) && var3 >= 0 && (var2 < 105 -1) && var3 < 104
+              if ((var2 >= 0) && var3 >= 0 && (var2 < 104) && var3 < 104
                   && (var4 >= 0) && var5 >= 0
-                  && (var4 < 105 -1) && var5 < 104 && (var7 != 65536 -1)) {
+                  && (var4 < 104) && var5 < 104 && (var7 != 65535)) {
                 var5 = var5 * 128 + 64;
                 var3 = 128 * var3 + 64;
                 var2 = 128 * var2 + 64;
@@ -589,7 +589,7 @@ public final class DummyClass37 {
                 var2 = DummyClass45.spawnSceneX + (7 & var1 >> 4);
                 var3 = DummyClass56.spawnSceneY + (var1 & 7);
                 var4 = SpotAnimationConfig.gameBuffer.readUnsignedShort();
-                if ((var4 == 65536 -1)) {
+                if ((var4 == 65535)) {
                   var4 = -1;
                 }
 
@@ -617,7 +617,7 @@ public final class DummyClass37 {
                   }
                 }
 
-              } else if ((GameString.packetId == 241 -1)) {
+              } else if ((GameString.packetId == 240)) {
                 var1 = SpotAnimationConfig.gameBuffer.method754(true);
                 var3 = DummyClass56.spawnSceneY + (var1 & 7);
                 var2 = ((113 & var1) >> 4) + DummyClass45.spawnSceneX;

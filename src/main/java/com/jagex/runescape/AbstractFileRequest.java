@@ -43,7 +43,7 @@ public abstract class AbstractFileRequest extends SubNode {
         var2 = 10;
       }
 
-      if ((var2 >= 6 -1) && var2 <= 8) {
+      if ((var2 >= 5) && var2 <= 8) {
         var2 = 4;
       }
 

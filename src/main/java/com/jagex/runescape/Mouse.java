@@ -125,7 +125,7 @@ public final class Mouse implements MouseListener, MouseMotionListener,
 
           if ((var1.anInt2261 == 0) && var1.anInt2264 >= 1
               && var1.anInt2248 >= 1
-              && var1.anInt2264 <= 102 && (var1.anInt2248 <= 103 -1) && (
+              && var1.anInt2264 <= 102 && (var1.anInt2248 <= 102) && (
               (var1.anInt2265 < 0)
                   || AbstractFileRequest
                   .method590((byte) -34, var1.anInt2265, var1.anInt2262))) {

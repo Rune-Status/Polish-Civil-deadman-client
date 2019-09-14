@@ -58,7 +58,7 @@ public final class WorldMapLabel {
 
   public static void method1786(int var0) {
     while (true) {
-        if ((SpotAnimationConfig.gameBuffer.method815(HashTable.packetLength, 32666) >= 12 -1)) {
+        if ((SpotAnimationConfig.gameBuffer.method815(HashTable.packetLength, 32666) >= 11)) {
           int var1 = SpotAnimationConfig.gameBuffer.readBits(11);
           if (var1 != 2047) {
             boolean var2 = false;
@@ -74,7 +74,7 @@ public final class WorldMapLabel {
             Player var3 = TextureSampler0.players[var1];
             var3.anInt2838 = AbstractGameWorld.updateCycle;
             int var4 = SpotAnimationConfig.gameBuffer.readBits(1);
-            if ((var4 == 2 -1)) {
+            if ((var4 == 1)) {
               DummyClass60.anIntArray441[OndemandRequester.anInt997++] = var1;
             }
 
@@ -94,7 +94,7 @@ public final class WorldMapLabel {
               var8 -= 32;
             }
 
-            var3.setPosition((byte) 126, var5 + TextureCache.localPlayer.waypointsX[0], (var7 == 2 -1),
+            var3.setPosition((byte) 126, var5 + TextureCache.localPlayer.waypointsX[0], (var7 == 1),
               TextureCache.localPlayer.waypointsY[0] + var8);
             continue;
           }
@@ -113,8 +113,8 @@ public final class WorldMapLabel {
     if (var4) {
         int var5 = 15 & var3;
         int var7 =
-            (var5 >= 5 -1) ? ((var5 != 13 -1) && (var5 != 15 -1) ? var1 : var0) : var2;
-        int var6 = (var5 < 9 -1) ? var0 : var2;
+            (var5 >= 4) ? ((var5 != 12) && (var5 != 14) ? var1 : var0) : var2;
+        int var6 = (var5 < 8) ? var0 : var2;
         return (((var5 & 1) != 0) ? -var6 : var6) - -(((2 & var5) != 0) ? -var7
             : var7);
       } else {

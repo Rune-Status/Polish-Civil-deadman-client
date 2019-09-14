@@ -253,7 +253,7 @@ public final class FileRequester extends AbstractFileRequester {
               if ((this.aClass62_2944.unpackedSizes[this.anInt2964] == 0)) {
                 ++this.anInt2964;
               } else {
-                if ((this.aClass73_2956.anInt1087 >= 251 -1)) {
+                if ((this.aClass73_2956.anInt1087 >= 250)) {
                   var2 = false;
                   break;
                 }
@@ -309,7 +309,7 @@ public final class FileRequester extends AbstractFileRequester {
                     this.method2109(2, this.anInt2964, 47);
                   }
 
-                  if ((this.aByteArray2949[this.anInt2964] != 2 -1)) {
+                  if ((this.aByteArray2949[this.anInt2964] != 1)) {
                     var3 = new Node();
                     var3.key = this.anInt2964;
                     this.aClass61_2966.addLast(var3);
@@ -387,7 +387,7 @@ public final class FileRequester extends AbstractFileRequester {
                 .request(-51, this.anInt2957, (byte) 2, var2, true);
           }
         } else if (var1 != 1) {
-          if ((var1 != 3 -1)) {
+          if ((var1 != 2)) {
             throw new RuntimeException();
           }
 
@@ -426,7 +426,7 @@ public final class FileRequester extends AbstractFileRequester {
         OndemandFileRequest var12;
         if (var4 instanceof FileCacheRequest) {
           try {
-            if (var5 != null && (var5.length > 3 -1)) {
+            if (var5 != null && (var5.length > 2)) {
               TextureSampler24.aCRC32_3143.reset();
               TextureSampler24.aCRC32_3143.update(var5, 0, -2 + var5.length);
               var7 = (int) TextureSampler24.aCRC32_3143.getValue();
@@ -471,7 +471,7 @@ public final class FileRequester extends AbstractFileRequester {
           }
         } else {
           try {
-            if (var5 == null || (var5.length <= 3 -1)) {
+            if (var5 == null || (var5.length <= 2)) {
               throw new RuntimeException();
             }
 
@@ -533,7 +533,7 @@ public final class FileRequester extends AbstractFileRequester {
                 this.method2109(2, var3, var1 + 78);
               }
 
-              if ((this.aByteArray2949[var3] == 2 -1)) {
+              if ((this.aByteArray2949[var3] == 1)) {
                 var2.unlinkNode();
               }
             } else {
@@ -565,22 +565,22 @@ public final class FileRequester extends AbstractFileRequester {
           int var3 = -112 / ((var0 - 26) / 40);
           int var4;
           int var5;
-          if ((var2 == 2 -1)) {
+          if ((var2 == 1)) {
             var4 = SpotAnimationConfig.gameBuffer.readBits(3);
             TextureCache.localPlayer.method1968(1, (byte) -128, var4);
             var5 = SpotAnimationConfig.gameBuffer.readBits(1);
-            if ((var5 == 2 -1)) {
+            if ((var5 == 1)) {
               DummyClass60.anIntArray441[OndemandRequester.anInt997++] = 2047;
             }
 
           } else if (var2 != 2) {
-            if ((var2 == 4 -1)) {
+            if ((var2 == 3)) {
               var4 = SpotAnimationConfig.gameBuffer.readBits(7);
               var5 = SpotAnimationConfig.gameBuffer.readBits(1);
               GameWorldSomething.currentPlane = SpotAnimationConfig.gameBuffer
                   .readBits(2);
               int var6 = SpotAnimationConfig.gameBuffer.readBits(1);
-              if ((var6 == 2 -1)) {
+              if ((var6 == 1)) {
                 DummyClass60.anIntArray441[OndemandRequester.anInt997++] = 2047;
               }
 
@@ -610,8 +610,8 @@ public final class FileRequester extends AbstractFileRequester {
   }
 
   public static boolean method2103(int var0, int var1) {
-    return var1 >= -78 || ((var0 == 199 -1) || var0 == 230 || var0 == 156
-          || (var0 == 141 -1) || var0 == 223);
+    return var1 >= -78 || ((var0 == 198) || var0 == 230 || var0 == 156
+          || (var0 == 140) || var0 == 223);
   }
 
   public static void method2104(Widget var0, boolean var1, int var2) {

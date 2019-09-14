@@ -4,7 +4,7 @@ public final class SceneSomething2 {
 
   public static GameString[] aClass94Array1046 = new GameString[200];
   public static int windowHeight;
-  public static double aDouble1050 = -1.0D;
+  public static double aDouble1050 = -1.0;
   public static GameString aClass94_1051 = GameString.create("(Udns");
   public static int anInt1053;
   public static SomethingQuickChatK aClass10_1056;
@@ -64,7 +64,7 @@ public final class SceneSomething2 {
         var8.anInt2310 = var2.anInt1518;
         int var9 = var2.anInt1480;
         int var10 = var2.anInt1485;
-        if ((var3 == 2 -1) || var3 == 3) {
+        if ((var3 == 1) || var3 == 3) {
           var9 = var2.anInt1485;
           var10 = var2.anInt1480;
         }

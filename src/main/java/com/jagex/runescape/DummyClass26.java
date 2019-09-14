@@ -61,19 +61,19 @@ public final class DummyClass26 {
           OndemandRequester.method1250(102, true);
         }
 
-        if ((var0 == 26 -1) || var0 == 10) {
+        if ((var0 == 25) || var0 == 10) {
           SomethingScene.method1293(true);
         }
 
-        if ((var0 == 6 -1)) {
+        if ((var0 == 5)) {
           DummyClass58.loadTitleScreenSprites(Projectile.sprites, (byte) -111);
         } else {
           TextureSampler23.method247((byte) -121);
         }
 
         boolean var3 =
-          var1 == DummyClass15.state || (DummyClass15.state == 11 -1) ||
-              (DummyClass15.state == 29 -1);
+          var1 == DummyClass15.state || (DummyClass15.state == 10) ||
+              (DummyClass15.state == 28);
         if (var3 == !var2) {
           if (var2) {
             AbstractFrameRegulator.anInt1691 = Keyboard.openingMusicFileId;
@@ -92,7 +92,7 @@ public final class DummyClass26 {
           }
         }
 
-        if (GlRenderer.useOpenGlRenderer && (var0 == 25 || var0 == 28 || (var0 == 41 -1))) {
+        if (GlRenderer.useOpenGlRenderer && (var0 == 25 || var0 == 28 || (var0 == 40))) {
           GlRenderer.method1833();
         }
 

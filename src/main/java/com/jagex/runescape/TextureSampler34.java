@@ -39,7 +39,7 @@ public final class TextureSampler34 extends AbstractTextureSampler {
         int var17;
         int var16;
         int var18;
-        if ((this.anInt3058 == 2 -1)) {
+        if ((this.anInt3058 == 1)) {
           var9 = this.aShortArray3066[0];
           var8 = this.aShortArray3063[0] << 12;
           var11 = var5 * var8 >> 12;
@@ -197,7 +197,7 @@ public final class TextureSampler34 extends AbstractTextureSampler {
       int var11 = -4096 + var1;
       var14 = this.aByteArray3059[var3 + var12] & 3;
       int var9;
-      if ((var14 <= 2 -1)) {
+      if ((var14 <= 1)) {
         var9 = var14 == 0 ? var6 + var11 : -var11 + var6;
       } else {
         var9 = var14 == 2 ? -var6 + var11 : -var11 + -var6;
@@ -213,7 +213,7 @@ public final class TextureSampler34 extends AbstractTextureSampler {
 
       var14 = 3 & this.aByteArray3059[var2 + var12];
       if (var14 > 1) {
-        var9 = (var14 != 3 -1) ? -var10 + -var11 : var11 - var10;
+        var9 = (var14 != 2) ? -var10 + -var11 : var11 - var10;
       } else {
         var9 = var14 == 0 ? var11 + var10 : var10 + -var11;
       }
@@ -239,7 +239,7 @@ public final class TextureSampler34 extends AbstractTextureSampler {
 
       if (var1 == 0) {
         this.aBoolean3065 = var2.readUnsignedByte() == 1;
-      } else if ((var1 == 2 -1)) {
+      } else if ((var1 == 1)) {
         this.anInt3058 = var2.readUnsignedByte();
       } else if (var1 == 2) {
         this.anInt3062 = var2.method787((byte) 30);
@@ -254,7 +254,7 @@ public final class TextureSampler34 extends AbstractTextureSampler {
         this.anInt3060 = this.anInt3056 = var2.readUnsignedByte();
       } else if (var1 == 4) {
         this.anInt3067 = var2.readUnsignedByte();
-      } else if ((var1 == 6 -1)) {
+      } else if ((var1 == 5)) {
         this.anInt3060 = var2.readUnsignedByte();
       } else if (var1 == 6) {
         this.anInt3056 = var2.readUnsignedByte();
@@ -357,7 +357,7 @@ public final class TextureSampler34 extends AbstractTextureSampler {
         int var9;
         if ((var6 != 0)) {
           if ((lightness >= 0)) {
-            if ((lightness > 128 -1)) {
+            if ((lightness > 127)) {
               var7 = 16777215;
             } else {
               var7 = 131586 * lightness;

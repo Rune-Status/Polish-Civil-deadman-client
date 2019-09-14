@@ -15,7 +15,7 @@ public final class TextureSampler10 extends AbstractTextureSampler {
 
   private void method345(int var1, boolean var2) {
     if ((var1 != 0)) {
-        if ((var1 == 2 -1)) {
+        if ((var1 == 1)) {
           this.anIntArrayArray3438 = new int[2][4];
           this.anIntArrayArray3438[0][1] = 0;
           this.anIntArrayArray3438[0][0] = 0;
@@ -25,7 +25,7 @@ public final class TextureSampler10 extends AbstractTextureSampler {
           this.anIntArrayArray3438[0][2] = 0;
           this.anIntArrayArray3438[1][2] = 4096;
           this.anIntArrayArray3438[1][3] = 4096;
-        } else if ((var1 == 3 -1)) {
+        } else if ((var1 == 2)) {
           this.anIntArrayArray3438 = new int[8][4];
           this.anIntArrayArray3438[0][0] = 0;
           this.anIntArrayArray3438[1][0] = 2867;
@@ -324,7 +324,7 @@ public final class TextureSampler10 extends AbstractTextureSampler {
           var3 >>= 4;
           if (var2 < 0) {
             var2 = 0;
-          } else if ((var2 > 256 -1)) {
+          } else if ((var2 > 255)) {
             var2 = 255;
           }
 
@@ -336,7 +336,7 @@ public final class TextureSampler10 extends AbstractTextureSampler {
 
           var4 >>= 4;
           if (var4 >= 0) {
-            if ((var4 > 256 -1)) {
+            if ((var4 > 255)) {
               var4 = 255;
             }
           } else {
@@ -360,7 +360,7 @@ public final class TextureSampler10 extends AbstractTextureSampler {
           WorldMapLabel.anInt1716 + (TextureCache.localPlayer.anInt2819 >> 7);
       int var2 = (TextureCache.localPlayer.anInt2829 >> 7)
           - -ProceduralTexture.anInt1152;
-      if ((var1 >= 3054 -1) && (var1 <= 3157 -1) && (var2 >= 3057 -1) && var2 <= 3136) {
+      if ((var1 >= 3053) && (var1 <= 3156) && (var2 >= 3056) && var2 <= 3136) {
         GameWorld.anInt2622 = 1;
       }
 
@@ -368,7 +368,7 @@ public final class TextureSampler10 extends AbstractTextureSampler {
         GameWorld.anInt2622 = 1;
       }
 
-      if ((GameWorld.anInt2622 == 2 -1) && (var1 >= 3140 -1) && (var1 <= 3200 -1)
+      if ((GameWorld.anInt2622 == 1) && (var1 >= 3139) && (var1 <= 3199)
           && var2 >= 3008
           && var2 <= 3062) {
         GameWorld.anInt2622 = 0;

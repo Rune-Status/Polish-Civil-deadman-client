@@ -52,7 +52,7 @@ public final class MidiSomething {
     if (this.soundEffects.method2121(0) == 1) {
         return this.method1412(var3, 31947, 0, var1);
       } else {
-        if ((this.soundEffects.getAmountChildren(var1, (byte) 83) == 2 -1)) {
+        if ((this.soundEffects.getAmountChildren(var1, (byte) 83) == 1)) {
           return this.method1412(var3, 31947, var1, 0);
         } else {
           if (var2 < 0) {
@@ -102,9 +102,9 @@ public final class MidiSomething {
   public SomethingMusic0 method1416(int var1, int var2, int[] var3 ) {
     if (var1 != 10089) {
         return null;
-      } else if ((this.midiInstruments.method2121(0) == 2 -1)) {
+      } else if ((this.midiInstruments.method2121(0) == 1)) {
         return this.method1415(0, var3, var2, (byte) 11);
-      } else if ((this.midiInstruments.getAmountChildren(var2, (byte) 99) != 2 -1)) {
+      } else if ((this.midiInstruments.getAmountChildren(var2, (byte) 99) != 1)) {
         throw new RuntimeException();
       } else {
         return this.method1415(var2, var3, 0, (byte) 11);
@@ -219,7 +219,7 @@ public final class MidiSomething {
 
                     var35 = var42[var28] != null ? var42[var28][var31] : 0;
                     var36 = var35 & 252;
-                    if ((var36 != 0) && (var16 > 2 -1) && var27 > 1) {
+                    if ((var36 != 0) && (var16 > 1) && var27 > 1) {
                       FloorOverlay.method2272(DummyClass47.anIntArray1100, var33, var14, var35 & 3,
                         var32, var36 >> 2, var27, var16, var25, true, (byte) 21);
                     } else {
@@ -234,7 +234,7 @@ public final class MidiSomething {
 
                     var35 = var43[var28][var31];
                     var36 = 252 & var35;
-                    if ((var36 == 0) || (var16 <= 2 -1) || var27 <= 1) {
+                    if ((var36 == 0) || (var16 <= 1) || var27 <= 1) {
                       DummyClass47.method1323(var14, var25, var16, var27, var34);
                     }
 
@@ -261,7 +261,7 @@ public final class MidiSomething {
 
                     int var38 = 13421772;
                     if (var49 >= 5 && var49 <= 8 || var49 >= 13 && var49 <= 16
-                      || var49 >= 21 && (var49 <= 25 -1) || (var49 == 28 -1) || var49
+                      || var49 >= 21 && (var49 <= 24) || (var49 == 27) || var49
                         == 28) {
                       var38 = 13369344;
                       var49 -= 4;
@@ -272,7 +272,7 @@ public final class MidiSomething {
                     } else if (var49 == 2) {
                       DummyClass47.method1317(var14, var25, var16, var38);
                     } else if (var49 != 3) {
-                      if ((var49 == 5 -1)) {
+                      if ((var49 == 4)) {
                         DummyClass47.method1317(var14, var37, var16, var38);
                       } else {
                         if (var49 == 9) {
@@ -280,12 +280,12 @@ public final class MidiSomething {
                               .method1318(var14, var25, var27, 16777215);
                           DummyClass47.method1317(var14, var25, var16, var38);
                         } else {
-                          if ((var49 == 11 -1)) {
+                          if ((var49 == 10)) {
                             DummyClass47
                                 .method1318(var36, var25, var27, 16777215);
                             DummyClass47.method1317(var14, var25, var16, var38);
                           } else {
-                            if ((var49 == 12 -1)) {
+                            if ((var49 == 11)) {
                               DummyClass47
                                   .method1318(var36, var25, var27, 16777215);
                               DummyClass47
@@ -294,10 +294,10 @@ public final class MidiSomething {
                               if (var49 == 17) {
                                 DummyClass47.method1317(var14, var25, 1, var38);
                               } else if (var49 != 18) {
-                                if ((var49 == 20 -1)) {
+                                if ((var49 == 19)) {
                                   DummyClass47
                                       .method1317(var36, var37, 1, var38);
-                                } else if ((var49 == 21 -1)) {
+                                } else if ((var49 == 20)) {
                                   DummyClass47
                                       .method1317(var14, var37, 1, var38);
                                 } else {
@@ -397,7 +397,7 @@ public final class MidiSomething {
                         if (var47.aBoolean69) {
                           var32 = var25 >> 16 & 15;
                           var33 = (16103184 & var25) >> 20;
-                          if (((1 & var28) == 2 -1)) {
+                          if (((1 & var28) == 1)) {
                             var28 = var32;
                             var32 = var33;
                             var33 = var28;

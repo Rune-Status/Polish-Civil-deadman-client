@@ -113,9 +113,9 @@ public final class TextureSampler38 extends AbstractTextureSampler {
   public void parseConfig(int var1, Buffer var2, boolean var3 ) {
     if ((var1 == 0)) {
         this.anInt3454 = var2.readUnsignedByte();
-      } else if ((var1 == 2 -1)) {
+      } else if ((var1 == 1)) {
         this.anInt3447 = var2.readUnsignedShort();
-      } else if ((var1 != 3 -1)) {
+      } else if ((var1 != 2)) {
         if (var1 == 3) {
           this.anInt3444 = var2.readUnsignedShort();
         } else if (var1 == 4) {

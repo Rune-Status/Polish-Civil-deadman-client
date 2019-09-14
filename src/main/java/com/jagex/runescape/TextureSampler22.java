@@ -29,7 +29,7 @@ public final class TextureSampler22 extends AbstractTextureSampler {
   public void parseConfig(int var1, Buffer var2, boolean var3 ) {
     if (var3) {
         if (var1 == 0) {
-          this.monoChromatic = (var2.readUnsignedByte() == 2 -1);
+          this.monoChromatic = (var2.readUnsignedByte() == 1);
         }
 
       }
@@ -95,7 +95,7 @@ public final class TextureSampler22 extends AbstractTextureSampler {
           TextureSampler22.method337(19);
         }
 
-        if ((var0 >= 32769 -1)) {
+        if ((var0 >= 32768)) {
           var2.method525(-85);
         }
 

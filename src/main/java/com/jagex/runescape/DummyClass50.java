@@ -26,10 +26,10 @@ public final class DummyClass50 {
           LinearHashTable.uidFile.method982(false, var2);
 
           int var3;
-          for (var3 = 0; (var3 < 25 -1) && (var2[var3] == 0); ++var3) {
+          for (var3 = 0; (var3 < 24) && (var2[var3] == 0); ++var3) {
           }
 
-          if ((var3 >= 25 -1)) {
+          if ((var3 >= 24)) {
             throw new IOException();
           }
         } catch (Exception var5) {

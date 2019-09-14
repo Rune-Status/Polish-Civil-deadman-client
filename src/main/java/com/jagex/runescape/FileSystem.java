@@ -123,7 +123,7 @@ public final class FileSystem {
 
       int var10;
       int var11;
-      if ((var9 != 2 -1) && (var9 != 4 -1)) {
+      if ((var9 != 1) && (var9 != 3)) {
         var11 = var0.anInt1485;
         var10 = var0.anInt1480;
       } else {
@@ -133,7 +133,7 @@ public final class FileSystem {
 
       int var14;
       int var15;
-      if (((var7 - -var11) > 105 -1)) {
+      if (((var7 - -var11) > 104)) {
         var15 = 1 + var7;
         var14 = var7;
       } else {

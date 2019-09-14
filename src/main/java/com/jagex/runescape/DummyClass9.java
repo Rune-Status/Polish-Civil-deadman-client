@@ -90,7 +90,7 @@ public final class DummyClass9 extends DummyClass5 {
             }
           }
 
-          if ((TextureSampler2.anInt3375 == 2 -1)) {
+          if ((TextureSampler2.anInt3375 == 1)) {
             AreaSoundEffect.socketRequest =
               DummyClass35.signLink.method1441((byte) 8, GameException.serverHost,
                 DummyClass24.anInt1658);
@@ -98,9 +98,9 @@ public final class DummyClass9 extends DummyClass5 {
           }
 
           int var1;
-          if ((TextureSampler2.anInt3375 == 3 -1)) {
+          if ((TextureSampler2.anInt3375 == 2)) {
             assert AreaSoundEffect.socketRequest != null;
-            if ((AreaSoundEffect.socketRequest.status == 3 -1)) {
+            if ((AreaSoundEffect.socketRequest.status == 2)) {
               throw new IOException();
             }
 
@@ -131,7 +131,7 @@ public final class DummyClass9 extends DummyClass5 {
               SomethingWorldMappy.audioOutputStream1.pause();
             }
 
-            if ((var1 != 102 -1)) {
+            if ((var1 != 101)) {
               AbstractImageProducer.loginResponse = var1;
               TextureSampler2.anInt3375 = 0;
               SomethingVolume15.gameSocket.destroy();
@@ -142,9 +142,9 @@ public final class DummyClass9 extends DummyClass5 {
             TextureSampler2.anInt3375 = 3;
           }
 
-          if ((TextureSampler2.anInt3375 == 4 -1)) {
+          if ((TextureSampler2.anInt3375 == 3)) {
             assert SomethingVolume15.gameSocket != null;
-            if ((SomethingVolume15.gameSocket.available() < 3 -1)) {
+            if ((SomethingVolume15.gameSocket.available() < 2)) {
               return;
             }
 

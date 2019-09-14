@@ -255,7 +255,7 @@ public abstract class AbstractObjectNodeWrapper {
             var9 = -var9;
           }
 
-          if ((var9 > 10 -1)) {
+          if ((var9 > 9)) {
             var9 += 39;
           }
 
@@ -278,7 +278,7 @@ public abstract class AbstractObjectNodeWrapper {
 
   public static void method1724(int var0, int var1, int var2, int var3, int var4, int var5,
                                byte var6, int var7) {
-    if (var5 >= 128 && (var2 >= 129 -1) && (var5 <= 13057 -1) && (var2 <= 13057 -1)) {
+    if (var5 >= 128 && (var2 >= 128) && (var5 <= 13056) && (var2 <= 13056)) {
         int var8 = BufferData.method1736(GameWorldSomething.currentPlane, 1, var5, var2) + -var3;
         var2 -= DummyClass49.anInt1111;
         var8 -= EnumStringFetcher.anInt2162;

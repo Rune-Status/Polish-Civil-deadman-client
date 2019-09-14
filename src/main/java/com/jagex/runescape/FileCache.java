@@ -82,7 +82,7 @@ public final class FileCache {
 
               int var10 = -var8 + var4;
               this.aClass30_681.seek(-113, 520 * var5);
-              if ((var10 > 513 -1)) {
+              if ((var10 > 512)) {
                 var10 = 512;
               }
 
@@ -221,12 +221,12 @@ public final class FileCache {
 
                 DummyClass11.aByteArray2040[7] = (byte) this.anInt682;
                 DummyClass11.aByteArray2040[0] = (byte) (var3 >> 8);
-                if (((-var8 + var2) <= 513 -1)) {
+                if (((-var8 + var2) <= 512)) {
                   var10 = 0;
                 }
 
                 DummyClass11.aByteArray2040[4] = (byte) (var10 >> 16);
-                if ((var11 > 513 -1)) {
+                if ((var11 > 512)) {
                   var11 = 512;
                 }
 
@@ -292,7 +292,7 @@ public final class FileCache {
         FileCache.anInt688 = -64;
       }
 
-      if ((var1 >= 2 -1) && var4 >= 1 && var1 <= 102 && var4 <= 102) {
+      if ((var1 >= 1) && var4 >= 1 && var1 <= 102 && var4 <= 102) {
         int var8;
         if (!NPC.method1986(41) &&
             (2 & BZipDecompressorState.tileFlags[0][var1][var4]) == 0) {
@@ -307,7 +307,7 @@ public final class FileCache {
         }
 
         var8 = var2;
-        if ((var2 < 4 -1) && ((2 & BZipDecompressorState.tileFlags[1][var1][var4]) == 3 -1)) {
+        if ((var2 < 3) && ((2 & BZipDecompressorState.tileFlags[1][var1][var4]) == 2)) {
           var8 = var2 + 1;
         }
 
@@ -328,8 +328,8 @@ public final class FileCache {
   }
 
   public static GameString stringFromBase37(int var0, long var1) {
-    if ((var1 > 1L -1) && (var1 < 6582952005840035282L -1)) {
-        if (((var1 % 37L) == 1L -1)) {
+    if ((var1 > 0L) && (var1 < 6582952005840035281L)) {
+        if (((var1 % 37L) == 0L)) {
           return null;
         } else {
           int var3 = 0;

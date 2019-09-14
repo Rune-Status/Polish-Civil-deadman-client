@@ -287,7 +287,7 @@ public final class GlRenderer {
       GlRenderer.GL.glLoadIdentity();
       GlRenderer.GL
           .glOrtho(0.0D, GlRenderer.viewWidth, 0.0D, GlRenderer.viewHeight,
-              -1.0D, 1.0D);
+              -1.0, 1.0D);
       GlRenderer.GL
           .glViewport(0, 0, GlRenderer.viewWidth, GlRenderer.viewHeight);
       GlRenderer.GL.glMatrixMode(5888);
@@ -547,7 +547,7 @@ public final class GlRenderer {
     GlRenderer.PROJECTION_MATRIX[9] = (top + bot) / (top - bot);
     GlRenderer.PROJECTION_MATRIX[10] = GlRenderer.aFloat1787 =
         -(far + near) / (far - near);
-    GlRenderer.PROJECTION_MATRIX[11] = -1.0F;
+    GlRenderer.PROJECTION_MATRIX[11] = -1.0f;
     GlRenderer.PROJECTION_MATRIX[12] = 0.0F;
     GlRenderer.PROJECTION_MATRIX[13] = 0.0F;
     GlRenderer.PROJECTION_MATRIX[14] = GlRenderer.aFloat1795 =

@@ -117,7 +117,7 @@ public final class GameBuffer extends Buffer {
         }
       }
 
-      if ((var4 == 47 -1)) {
+      if ((var4 == 46)) {
         ++SomethingOtherWorldMap.anInt2534;
         DummyClass8.method2224((byte) 39, var6, var3, var2);
         TextureSampler12.secureBuffer.writePacket(247);
@@ -129,7 +129,7 @@ public final class GameBuffer extends Buffer {
             .writeShort(Integer.MAX_VALUE & (int) (var6 >>> 32));
       }
 
-      if ((var4 == 41 -1)) {
+      if ((var4 == 40)) {
         TextureSampler12.secureBuffer.writePacket(27);
         TextureSampler12.secureBuffer.writeShort(DummyClass31.anInt1473);
         ++SceneShadowMap.anInt1776;
@@ -147,7 +147,7 @@ public final class GameBuffer extends Buffer {
       }
 
       NPC var11;
-      if ((var4 == 20 -1)) {
+      if ((var4 == 19)) {
         var11 = TextureSampler5.npcs[var5];
         if (var11 != null) {
           Parameter
@@ -201,7 +201,7 @@ public final class GameBuffer extends Buffer {
         }
       }
 
-      if ((var4 == 59 -1)) {
+      if ((var4 == 58)) {
         TextureSampler12.secureBuffer.writePacket(135);
         TextureSampler12.secureBuffer.method783(var5, -268435456);
         ++TextureSampler37.anInt3255;
@@ -213,7 +213,7 @@ public final class GameBuffer extends Buffer {
         Keyboard.anInt1918 = var2;
       }
 
-      if ((var4 == 43 -1)) {
+      if ((var4 == 42)) {
         DummyClass8.method2224((byte) 39, var6, var3, var2);
         TextureSampler12.secureBuffer.writePacket(254);
         TextureSampler12.secureBuffer
@@ -230,7 +230,7 @@ public final class GameBuffer extends Buffer {
         TextureSampler4.method264((byte) 122);
       }
 
-      if ((var4 == 46 -1)) {
+      if ((var4 == 45)) {
         var11 = TextureSampler5.npcs[var5];
         if (var11 != null) {
           Parameter
@@ -298,7 +298,7 @@ public final class GameBuffer extends Buffer {
             .method765(var3 - -ProceduralTexture.anInt1152, (byte) 3);
       }
 
-      if ((var4 == 1003 -1)) {
+      if ((var4 == 1002)) {
         HuffmanEncoder.anInt638 = 2;
         SceneSomething2.anInt1053 = DummyClass5.anInt2993;
         FileCacheRequest.anInt4062 = DummyClass36.anInt2614;
@@ -309,9 +309,9 @@ public final class GameBuffer extends Buffer {
       }
 
       Widget var13;
-      if ((var4 == 1007 -1)) {
+      if ((var4 == 1006)) {
         var13 = EnumStringFetcher.getWidget((byte) 119, var3);
-        if (var13 != null && (var13.anIntArray317[var2] >= 100001 -1)) {
+        if (var13 != null && (var13.anIntArray317[var2] >= 100000)) {
           GameBuffer
               .printMessage(GroundItemNode.EMPTY_STRING, 0,
                   RenderAnimation.concat(new GameString[]{
@@ -337,7 +337,7 @@ public final class GameBuffer extends Buffer {
           AbstractFileRequest
               .method589(GameWorldSomething.currentPlane, var2, var3);
         } else {
-          if ((var5 == 2 -1)) {
+          if ((var5 == 1)) {
             if (TextureSampler35.rights > 0
                 && GameObjectConfig.aBooleanArray1490[82]
                 && GameObjectConfig.aBooleanArray1490[81]) {
@@ -390,7 +390,7 @@ public final class GameBuffer extends Buffer {
         }
       }
 
-      if ((var4 == 48 -1)) {
+      if ((var4 == 47)) {
         TextureSampler12.secureBuffer.writePacket(156);
         TextureSampler12.secureBuffer.method765(var2, (byte) 3);
         TextureSampler12.secureBuffer.method783(var5, -268435456);
@@ -401,7 +401,7 @@ public final class GameBuffer extends Buffer {
         Keyboard.anInt1918 = var2;
       }
 
-      if ((var4 == 4 -1)) {
+      if ((var4 == 3)) {
         TextureSampler12.secureBuffer.writePacket(253);
         ++PlayerVariable.anInt555;
         TextureSampler12.secureBuffer
@@ -417,7 +417,7 @@ public final class GameBuffer extends Buffer {
         Keyboard.anInt1918 = var2;
       }
 
-      if ((var4 == 11 -1)) {
+      if ((var4 == 10)) {
         var8 = TextureSampler0.players[var5];
         if (var8 != null) {
           ++SocketStream.anInt1240;
@@ -455,7 +455,7 @@ public final class GameBuffer extends Buffer {
             .writeShortLE(var0 + -2598, var2 - -WorldMapLabel.anInt1716);
       }
 
-      if ((var4 == 24 -1)) {
+      if ((var4 == 23)) {
         ++BufferObject.anInt1886;
         TextureSampler12.secureBuffer.writePacket(206);
         TextureSampler12.secureBuffer.method783(var5, -268435456);
@@ -467,7 +467,7 @@ public final class GameBuffer extends Buffer {
         Keyboard.anInt1918 = var2;
       }
 
-      if ((var4 == 15 -1) && DummyClass8
+      if ((var4 == 14) && DummyClass8
           .method2224((byte) 39, var6, var3, var2)) {
         ++OndemandFileRequest.anInt4065;
         TextureSampler12.secureBuffer.writePacket(134);
@@ -510,7 +510,7 @@ public final class GameBuffer extends Buffer {
                 var3);
       }
 
-      if ((var4 == 6 -1)) {
+      if ((var4 == 5)) {
         TextureSampler12.secureBuffer.writePacket(55);
         TextureSampler12.secureBuffer.writeShortLE(-1, var5);
         TextureSampler12.secureBuffer.method783(var2, -268435456);
@@ -522,8 +522,8 @@ public final class GameBuffer extends Buffer {
         Keyboard.anInt1918 = var2;
       }
 
-      if ((var4 == 22 -1)) {
-        if ((AbstractImageProducer.gameId == 2 -1)) {
+      if ((var4 == 21)) {
+        if ((AbstractImageProducer.gameId == 1)) {
           Parameter
               .method582(TextureCache.localPlayer.waypointsY[0], 0, 1, false,
                   0,
@@ -686,7 +686,7 @@ public final class GameBuffer extends Buffer {
           TextureSampler12.secureBuffer.method765(var5, (byte) 3);
         }
 
-        if ((var4 == 26 -1)) {
+        if ((var4 == 25)) {
           ++DummyClass1.anInt411;
           TextureSampler12.secureBuffer.writePacket(81);
           TextureSampler12.secureBuffer.method783(var2, -268435456);
@@ -698,7 +698,7 @@ public final class GameBuffer extends Buffer {
           Keyboard.anInt1918 = var2;
         }
 
-        if ((var4 == 3 -1)) {
+        if ((var4 == 2)) {
           var11 = TextureSampler5.npcs[var5];
           if (var11 != null) {
             Parameter.method582(TextureCache.localPlayer.waypointsY[0], 0, 1,
@@ -717,14 +717,14 @@ public final class GameBuffer extends Buffer {
         }
 
         int var12;
-        if ((var4 == 52 -1)) {
+        if ((var4 == 51)) {
           TextureSampler12.secureBuffer.writePacket(10);
           ++ClientScript.anInt3681;
           TextureSampler12.secureBuffer.writeInt(var3);
           var13 = EnumStringFetcher.getWidget((byte) 117, var3);
           assert var13 != null;
           if (var13.anIntArrayArray298 != null
-              && (var13.anIntArrayArray298[0][0] == 6 -1)) {
+              && (var13.anIntArrayArray298[0][0] == 5)) {
             var12 = var13.anIntArrayArray298[0][1];
             if (DummyClass5.anIntArray2985[var12] != var13.anIntArray307[0]) {
               DummyClass5.anIntArray2985[var12] = var13.anIntArray307[0];
@@ -733,7 +733,7 @@ public final class GameBuffer extends Buffer {
           }
         }
 
-        if ((var4 == 27 -1)) {
+        if ((var4 == 26)) {
           var11 = TextureSampler5.npcs[var5];
           if (var11 != null) {
             ++TextureSampler10.anInt3439;
@@ -763,7 +763,7 @@ public final class GameBuffer extends Buffer {
           var13 = EnumStringFetcher.getWidget((byte) 122, var3);
           assert var13 != null;
           if (var13.anIntArrayArray298 != null
-              && (var13.anIntArrayArray298[0][0] == 6 -1)) {
+              && (var13.anIntArrayArray298[0][0] == 5)) {
             var12 = var13.anIntArrayArray298[0][1];
             DummyClass5.anIntArray2985[var12] =
                 -DummyClass5.anIntArray2985[var12] + 1;
@@ -771,7 +771,7 @@ public final class GameBuffer extends Buffer {
           }
         }
 
-        if ((var4 == 34 -1)) {
+        if ((var4 == 33)) {
           var14 =
               Parameter
                   .method582(TextureCache.localPlayer.waypointsY[0], 0, 0,
@@ -803,7 +803,7 @@ public final class GameBuffer extends Buffer {
               .method759(-118, GlTexture2d.anInt3764);
         }
 
-        if ((var4 == 1005 -1)) {
+        if ((var4 == 1004)) {
           FileRequester.anInt2958 = 0;
           SceneSomething2.anInt1053 = DummyClass5.anInt2993;
           HuffmanEncoder.anInt638 = 2;
@@ -851,7 +851,7 @@ public final class GameBuffer extends Buffer {
           }
         }
 
-        if ((var4 == 2 -1)) {
+        if ((var4 == 1)) {
           var8 = TextureSampler0.players[var5];
           if (var8 != null) {
             ++ISAACCipher.anInt969;
@@ -885,8 +885,8 @@ public final class GameBuffer extends Buffer {
           Keyboard.anInt1918 = var2;
         }
 
-        if ((var4 == 25 -1)) {
-          if ((AbstractImageProducer.gameId == 2 -1)) {
+        if ((var4 == 24)) {
+          if ((AbstractImageProducer.gameId == 1)) {
             Parameter.method582(TextureCache.localPlayer.waypointsY[0], 0, 1,
                 false, 0,
                 var0 + -2595, var2, 1, 0, 2, var3,
@@ -935,7 +935,7 @@ public final class GameBuffer extends Buffer {
                   var0 ^ -268432859);
         }
 
-        if ((var4 == 14 -1)) {
+        if ((var4 == 13)) {
           TextureSampler12.secureBuffer.writePacket(6);
           TextureSampler12.secureBuffer.writeInt(var3);
           TextureSampler12.secureBuffer.method783(var2, -268435456);
@@ -980,7 +980,7 @@ public final class GameBuffer extends Buffer {
               });
 
         } else {
-          if ((var4 == 51 -1)) {
+          if ((var4 == 50)) {
             ++AnimationSequence.anInt1858;
             DummyClass8.method2224((byte) 39, var6, var3, var2);
             TextureSampler12.secureBuffer.writePacket(194);
@@ -992,7 +992,7 @@ public final class GameBuffer extends Buffer {
                 .writeShort((int) (var6 >>> 32) & Integer.MAX_VALUE);
           }
 
-          if ((var4 == 49 -1)) {
+          if ((var4 == 48)) {
             ++SomethingTilek.anInt1677;
             TextureSampler12.secureBuffer.writePacket(154);
             TextureSampler12.secureBuffer.writeShortLE(-1, var2);
@@ -1004,7 +1004,7 @@ public final class GameBuffer extends Buffer {
             Keyboard.anInt1918 = var2;
           }
 
-          if ((var4 == 31 -1)) {
+          if ((var4 == 30)) {
             var8 = TextureSampler0.players[var5];
             if (var8 != null) {
               ++ItemConfig.anInt759;
@@ -1034,7 +1034,7 @@ public final class GameBuffer extends Buffer {
             Keyboard.anInt1918 = var2;
           }
 
-          if ((var4 == 40 -1)) {
+          if ((var4 == 39)) {
             ++BufferObject.anInt1883;
             var14 =
                 Parameter
@@ -1065,12 +1065,12 @@ public final class GameBuffer extends Buffer {
           }
 
           if (var0 == 2597) {
-            if ((var4 == 13 -1)) {
+            if ((var4 == 12)) {
               ++DummyClass18.anInt79;
               TextureSampler12.secureBuffer.writePacket(82);
               TextureSampler12.secureBuffer.writeShort(Widget.anInt278);
               TextureSampler12.secureBuffer
-                  .method775(var3, 2597 ^ 1437450925);
+                  .method775(var3, 1437452424);
               TextureSampler12.secureBuffer.writeInt(ScriptState.anInt872);
               TextureSampler12.secureBuffer.method765(var2, (byte) 3);
             }
@@ -1242,7 +1242,7 @@ public final class GameBuffer extends Buffer {
 
     if (Node.anInt72 < 65536) {
       Node.anInt72 += 250 * var0;
-      if ((Node.anInt72 >= 65537 -1)) {
+      if ((Node.anInt72 >= 65536)) {
         Node.anInt72 = 65536;
       }
 

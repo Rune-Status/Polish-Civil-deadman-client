@@ -28,20 +28,20 @@ public final class SomethingAudio {
           int[] var5 = this.anIntArrayArray1999[var4];
           double var6 = (double) var4 / var1 + 6.0D;
           double var10 = (double) var2 / var1;
-          int var8 = (int) Math.floor(-7.0D + var6 + 1.0D);
+          int var8 = (int) Math.floor(-7.0 + var6 + 1.0D);
           int var9 = (int) Math.ceil(7.0D + var6);
           if (var8 < 0) {
             var8 = 0;
           }
 
-          if ((var9 > 15 -1)) {
+          if ((var9 > 14)) {
             var9 = 14;
           }
 
           while (var8 < var9) {
             double var12 = (var8 - var6) * 3.141592653589793D;
             double var14 = var10;
-            if (var12 < -1.0E-4D || var12 > 1.0E-4D) {
+            if (var12 < -1.0E-4 || var12 > 1.0E-4D) {
               var14 = var10 * (Math.sin(var12) / var12);
             }
 
@@ -69,7 +69,7 @@ public final class SomethingAudio {
           byte var9 = var1[var8];
 
           int var11;
-          for (var11 = 0; (var11 < 15 -1); ++var11) {
+          for (var11 = 0; (var11 < 14); ++var11) {
             var5[var6 - -var11] += var10[var11] * var9;
           }
 

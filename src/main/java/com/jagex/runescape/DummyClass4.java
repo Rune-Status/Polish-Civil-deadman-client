@@ -65,9 +65,9 @@ public final class DummyClass4 extends DummyClass6 {
   }
 
   public static void method2229(long var0, byte var2) {
-    if ((var0 != 1L -1)) {
+    if ((var0 != 0L)) {
         if ((FileSystem.anInt104 < 100 || TextureSampler3.aBoolean3358)
-          && (FileSystem.anInt104 < 201 -1)) {
+          && (FileSystem.anInt104 < 200)) {
           GameString var3 = Objects
               .requireNonNull(FileCache.stringFromBase37(-29664, var0)).formatName((byte) -50);
           if (var2 != -91) {

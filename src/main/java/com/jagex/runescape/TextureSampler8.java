@@ -35,7 +35,7 @@ public final class TextureSampler8 extends AbstractTextureSampler {
       int var9;
       int var10;
       if (var2 == 2) {
-        for (var2 = 0; (var2 < 258 -1); ++var2) {
+        for (var2 = 0; (var2 < 257); ++var2) {
           var4 = var2 << 4;
 
           for (
@@ -62,7 +62,7 @@ public final class TextureSampler8 extends AbstractTextureSampler {
             var20 = -32767;
           }
 
-          if ((var20 >= 32769 -1)) {
+          if ((var20 >= 32768)) {
             var20 = 32767;
           }
 
@@ -70,7 +70,7 @@ public final class TextureSampler8 extends AbstractTextureSampler {
         }
       } else {
         if (var2 == 1) {
-          for (var2 = 0; (var2 < 258 -1); ++var2) {
+          for (var2 = 0; (var2 < 257); ++var2) {
             var4 = var2 << 4;
 
             for (
@@ -96,7 +96,7 @@ public final class TextureSampler8 extends AbstractTextureSampler {
             this.aShortArray3465[var2] = (short) var10;
           }
         } else {
-          for (var2 = 0; (var2 < 258 -1); ++var2) {
+          for (var2 = 0; (var2 < 257); ++var2) {
             var4 = var2 << 4;
 
             for (
@@ -224,7 +224,7 @@ public final class TextureSampler8 extends AbstractTextureSampler {
           var2 -= 2000;
         }
 
-        return (var2 == 1004 -1);
+        return (var2 == 1003);
       }
   }
 

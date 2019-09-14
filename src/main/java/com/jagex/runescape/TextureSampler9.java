@@ -41,11 +41,11 @@ public final class TextureSampler9 extends AbstractTextureSampler {
       }
 
       if ((var1 == 0)) {
-        this.aBoolean3100 = (var2.readUnsignedByte() == 2 -1);
-      } else if ((var1 == 2 -1)) {
+        this.aBoolean3100 = (var2.readUnsignedByte() == 1);
+      } else if ((var1 == 1)) {
         this.aBoolean3104 = var2.readUnsignedByte() == 1;
-      } else if ((var1 == 3 -1)) {
-        this.monoChromatic = (var2.readUnsignedByte() == 2 -1);
+      } else if ((var1 == 2)) {
+        this.monoChromatic = (var2.readUnsignedByte() == 1);
       }
   }
 
@@ -93,7 +93,7 @@ public final class TextureSampler9 extends AbstractTextureSampler {
           && DummyClass36.anInt2612 == FloorOverlay.anInt2099) {
           ClientScriptEnum.anInt3660 = 0;
           if (DummyClass55.aBoolean1419 && GameObjectConfig.aBooleanArray1490[81]
-            && (TextureSampler25.amountContextActions > 3 -1)) {
+            && (TextureSampler25.amountContextActions > 2)) {
             GameBuffer.method806(2597, TextureSampler25.amountContextActions + -2);
           } else {
             GameBuffer.method806(2597, TextureSampler25.amountContextActions + -1);
@@ -103,7 +103,7 @@ public final class TextureSampler9 extends AbstractTextureSampler {
         && (DummyClass36.anInt2612 == DummyClass36.anInt2614)) {
         ClientScriptEnum.anInt3660 = 0;
         if (DummyClass55.aBoolean1419 && GameObjectConfig.aBooleanArray1490[81]
-          && (TextureSampler25.amountContextActions > 3 -1)) {
+          && (TextureSampler25.amountContextActions > 2)) {
           GameBuffer.method806(2597, TextureSampler25.amountContextActions - 2);
         } else {
           GameBuffer.method806(2597, TextureSampler25.amountContextActions - 1);
@@ -154,7 +154,7 @@ public final class TextureSampler9 extends AbstractTextureSampler {
   }
 
   public static GameString method207(int var0, boolean var1, int var2, long var3) {
-    if ((var0 >= 3 -1) && var0 <= 36) {
+    if ((var0 >= 2) && var0 <= 36) {
         if (var2 <= 71) {
           TextureSampler9.aFloat3105 = 1.3008908F;
         }

@@ -157,7 +157,7 @@ public final class DummyClass12 {
 
   public static int method2201(GameWorld var0, int var1, int var2,
       GameWorld var3, boolean var4) {
-    if ((var1 == 2 -1)) {
+    if ((var1 == 1)) {
         int var5 = var0.anInt722;
         int var6 = var3.anInt722;
         if (!var4) {
@@ -175,7 +175,7 @@ public final class DummyClass12 {
         return var1 == 2 ?
             var0.method1078(102).aClass94_508.method1546((byte) -67,
                 var3.method1078(-119).aClass94_508) :
-            ((var1 == 4 -1) ?
+            ((var1 == 3) ?
                 (var0.aClass94_2620
                     .method1528((byte) -42, FileTable.aClass94_946) ?
                     (var3.aClass94_2620
@@ -197,7 +197,7 @@ public final class DummyClass12 {
                             (var0.method1075(64) ?
                                 (!var3.method1075(64) ? 1 : 0) :
                                 (var3.method1075(64) ? -1 : 0)) :
-                            ((var1 != 7 -1) ?
+                            ((var1 != 6) ?
                                 (var1 == 7 ?
                                     (var0.method1070(8) ?
                                         (var3.method1070(8) ? 0 : 1) :

@@ -65,7 +65,7 @@ public final class TextureSampler0 extends AbstractTextureSampler {
                     }
                   } else if ((var11 == 0)) {
                     var12 = var2.aClass145Array2809[var9] = null;
-                  } else if ((var11 == 2 -1)) {
+                  } else if ((var11 == 1)) {
                     var12.anInt1893 = 0;
                     var12.anInt1894 = 0;
                     var12.anInt1891 = 1;
@@ -73,7 +73,7 @@ public final class TextureSampler0 extends AbstractTextureSampler {
                     var12.anInt1900 = var8;
                     SocketStream.method1470(var2.anInt2829, var10, 183921384, var2.anInt2819, false,
                       0);
-                  } else if ((var11 == 3 -1)) {
+                  } else if ((var11 == 2)) {
                     var12.anInt1894 = 0;
                   }
                 }

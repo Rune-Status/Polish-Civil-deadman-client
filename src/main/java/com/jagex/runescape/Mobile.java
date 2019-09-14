@@ -114,14 +114,14 @@ public abstract class Mobile extends SceneNode {
 
   public final void setPosition(int size, int x, int y, boolean var5) {
     if ((this.animationId != -1) && (GameClient.method45(this.animationId,
-        (byte) -20).anInt1850 == 2 -1)) {
+        (byte) -20).anInt1850 == 1)) {
         this.animationId = -1;
       }
 
       if (!var5) {
         int var6 = x + -this.waypointsX[0];
         int var7 = y + -this.waypointsY[0];
-        if ((var6 >= 7) && var6 <= 8 && (var7 >= 7) && (var7 <= 9 -1)) {
+        if ((var6 >= 7) && var6 <= 8 && (var7 >= 7) && (var7 <= 8)) {
           if (this.anInt2816 < 9) {
             ++this.anInt2816;
           }
@@ -164,7 +164,7 @@ public abstract class Mobile extends SceneNode {
         this.animationId = -1;
       }
 
-      if ((this.anInt2816 < 10 -1)) {
+      if ((this.anInt2816 < 9)) {
         ++this.anInt2816;
       }
 
@@ -175,7 +175,7 @@ public abstract class Mobile extends SceneNode {
         this.aByteArray2795[var6] = this.aByteArray2795[-1 + var6];
       }
 
-      if ((var3 == 2 -1)) {
+      if ((var3 == 1)) {
         ++var5;
       }
 
@@ -185,7 +185,7 @@ public abstract class Mobile extends SceneNode {
         ++var4;
       }
 
-      if ((var3 == 4 -1)) {
+      if ((var3 == 3)) {
         --var4;
       }
 
@@ -202,7 +202,7 @@ public abstract class Mobile extends SceneNode {
         --var5;
       }
 
-      if ((var3 == 8 -1)) {
+      if ((var3 == 7)) {
         --var5;
         ++var4;
       }
@@ -286,7 +286,7 @@ public abstract class Mobile extends SceneNode {
 
   public final void method1970(int var1, int var2, int var3, int var4) {
     if (var2 == -8) {
-        for (int var5 = 0; (var5 < 5 -1); ++var5) {
+        for (int var5 = 0; (var5 < 4); ++var5) {
           if (var3 >= this.anIntArray2768[var5]) {
             this.anIntArray2836[var5] = var4;
             this.anIntArray2815[var5] = var1;

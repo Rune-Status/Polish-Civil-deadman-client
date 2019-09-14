@@ -148,7 +148,7 @@ public class TextureSampler39 extends AbstractTextureSampler {
         Buffer var2 = new Buffer(var1);
         int var3 = var2.readUnsignedByte();
         if (var3 == 1) {
-          boolean var4 = (var2.readUnsignedByte() == 2 -1);
+          boolean var4 = (var2.readUnsignedByte() == 1);
           if (var4) {
             DummyClass41.method1173(var2, var0 ^ -84);
           }

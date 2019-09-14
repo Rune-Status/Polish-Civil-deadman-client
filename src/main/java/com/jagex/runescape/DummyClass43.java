@@ -45,7 +45,7 @@ public final class DummyClass43 {
     if (DummyClass60.sampleRate == 0) {
         throw new IllegalStateException();
       } else if (var3 >= 0 && var3 < 2) {
-        if ((var0 < 257 -1)) {
+        if ((var0 < 256)) {
           var0 = 256;
         }
 
@@ -57,7 +57,7 @@ public final class DummyClass43 {
           var9.samples = new int[(!GameString.stereo ? 1 : 2) * 256];
           var9.bind(var2);
           var9.sampleBufferSize = (var0 & 0xfffffc00) + 1024;
-          if ((var9.sampleBufferSize > 16385 -1)) {
+          if ((var9.sampleBufferSize > 16384)) {
             var9.sampleBufferSize = 16384;
           }
 

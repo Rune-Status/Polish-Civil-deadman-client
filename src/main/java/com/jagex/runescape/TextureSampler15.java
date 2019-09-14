@@ -72,7 +72,7 @@ public final class TextureSampler15 extends AbstractTextureSampler {
               int var11 = var5 - (this.aShortArray3200[var14] + (var9 << 12));
               var19 = this.anInt3194;
               int var12;
-              if ((var19 == 2 -1)) {
+              if ((var19 == 1)) {
                 var12 = var11 * var11 + var10 * var10 >> 12;
               } else {
                 if (var19 == 3) {
@@ -90,7 +90,7 @@ public final class TextureSampler15 extends AbstractTextureSampler {
                           * 4096.0D);
                   var12 = var11 + var10;
                   var12 = var12 * var12 >> 12;
-                } else if ((var19 == 6 -1)) {
+                } else if ((var19 == 5)) {
                   var10 *= var10;
                   var11 *= var11;
                   var12 =
@@ -133,11 +133,11 @@ public final class TextureSampler15 extends AbstractTextureSampler {
           if ((var19 == 0)) {
             var3[var15] = AnimationSomething.anInt3589;
           } else if (var19 != 1) {
-            if ((var19 == 4 -1)) {
+            if ((var19 == 3)) {
               var3[var15] = Keyboard.anInt1914;
             } else if (var19 == 4) {
               var3[var15] = TextureSampler36.anInt3422;
-            } else if ((var19 == 3 -1)) {
+            } else if ((var19 == 2)) {
               var3[var15] = LinearHashTable.anInt1042 + -AnimationSomething.anInt3589;
             }
           } else {
@@ -156,10 +156,10 @@ public final class TextureSampler15 extends AbstractTextureSampler {
 
       if ((var1 == 0)) {
         this.anInt3203 = this.anInt3204 = var2.readUnsignedByte();
-      } else if ((var1 == 2 -1)) {
+      } else if ((var1 == 1)) {
         this.anInt3197 = var2.readUnsignedByte();
       } else if (var1 != 2) {
-        if ((var1 == 4 -1)) {
+        if ((var1 == 3)) {
           this.anInt3191 = var2.readUnsignedByte();
         } else if (var1 == 4) {
           this.anInt3194 = var2.readUnsignedByte();

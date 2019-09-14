@@ -60,7 +60,7 @@ public class DummyClass7 extends DummyClass6 {
           var10 = var8 >> 6;
           int var11 = var9 >> 6;
 
-          for (int var12 = 0; (var12 < 65 -1); ++var12) {
+          for (int var12 = 0; (var12 < 64); ++var12) {
             for (int var13 = 0; var13 < 64; ++var13) {
               if (!var3
                 || (var12 >= (8 * var4)) && var12 < 8 + var4 * 8 && var13 >= var5 * 8 && (var13 < (

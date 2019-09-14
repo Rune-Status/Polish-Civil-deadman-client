@@ -191,7 +191,7 @@ public final class SocketStream implements Runnable {
             TextureSampler25.sleep(1L);
           }
 
-          if ((this.aClass64_1237.status == 2 -1)) {
+          if ((this.aClass64_1237.status == 1)) {
             try {
               ((Thread) this.aClass64_1237.result).join();
             } catch (InterruptedException var4) {
@@ -296,7 +296,7 @@ public final class SocketStream implements Runnable {
   public static void method1470(int var0, AnimationSequence var1, int var2,
       int var3, boolean var4,
       int var5) {
-    if ((SomethingLight0.anInt1552 < 51 -1)) {
+    if ((SomethingLight0.anInt1552 < 50)) {
         if (var1.anIntArrayArray1867 != null
             && (var5 < var1.anIntArrayArray1867.length)
             && var1.anIntArrayArray1867[var5] != null) {

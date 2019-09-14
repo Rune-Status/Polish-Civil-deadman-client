@@ -56,7 +56,7 @@ public final class GlUtils {
   public static void drawImage(int[] var0, int var1, int var2, int var3, int var4) {
     GlRenderer.resetState();
     GlRenderer.GL.glRasterPos2i(var1, GlRenderer.viewHeight - var2);
-    GlRenderer.GL.glPixelZoom(1.0F, -1.0F);
+    GlRenderer.GL.glPixelZoom(1.0F, -1.0f);
     GlRenderer.GL.glDisable(3042);
     GlRenderer.GL.glDisable(3008);
     GlRenderer.GL

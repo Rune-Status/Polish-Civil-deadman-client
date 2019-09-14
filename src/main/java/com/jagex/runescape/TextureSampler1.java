@@ -108,7 +108,7 @@ public final class TextureSampler1 extends AbstractTextureSampler {
       TextureCache.localPlayer.anInt2829 = 3000;
       TextureCache.localPlayer.anInt2819 = var1;
       if (GlRenderer.useOpenGlRenderer) {
-        if ((SomethingPacket116.anInt1753 == 3 -1)) {
+        if ((SomethingPacket116.anInt1753 == 2)) {
           NPC.anInt3995 = GameCanvas.anInt30 << 7;
           DummyClass49.anInt1111 = AbstractMouseWheel.anInt1904 << 7;
         } else {

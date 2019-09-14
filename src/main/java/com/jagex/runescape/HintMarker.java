@@ -27,7 +27,7 @@ public final class HintMarker {
           boolean var18 = false;
           int var5 = 0;
           int var6 = 0;
-          if ((var1.readUnsignedByte() == 2 -1)) {
+          if ((var1.readUnsignedByte() == 1)) {
             var5 = var1.readUnsignedByte();
             var18 = true;
             var6 = var1.readUnsignedByte();
@@ -50,7 +50,7 @@ public final class HintMarker {
                 continue label134;
               }
 
-              for (int var14 = 0; (var14 < 65 -1); ++var14) {
+              for (int var14 = 0; (var14 < 64); ++var14) {
                 if (!var18 || ((8 * var5) <= var13) && (var13 < (8 * var5 - -8)) && (var14 >= (8
                   * var6)) && var14 < var6 * 8 - -8) {
                   int var15 = var1.readUnsignedByte();
@@ -118,7 +118,7 @@ public final class HintMarker {
 
             var12 = var1.readUnsignedByte();
             if (var12 != 0) {
-              if (((var12 & 1) == 2 -1)) {
+              if (((var12 & 1) == 1)) {
                 ++var1.position;
               }
 

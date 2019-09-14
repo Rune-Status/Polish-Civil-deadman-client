@@ -62,7 +62,7 @@ public class Something3d2 extends Something3dRoot {
       } else {
         this.anInt3023 = this.anInt3022 * this.anInt3024 >> 12;
         if ((this.anInt3023 >= 0)) {
-          if ((this.anInt3023 > 4097 -1)) {
+          if ((this.anInt3023 > 4096)) {
             this.anInt3023 = 4096;
           }
         } else {
@@ -127,19 +127,19 @@ public class Something3d2 extends Something3dRoot {
               var10 = 2;
             }
 
-            if ((var8 == 2 -1)) {
+            if ((var8 == 1)) {
               var9 = TextureSampler17.anIntArray3185[var4[var6++]];
             }
 
-            if ((var8 == 18 -1)) {
+            if ((var8 == 17)) {
               var10 = 3;
             }
 
-            if ((var8 == 3 -1)) {
+            if ((var8 == 2)) {
               var9 = TriChromaticImageBuffer.anIntArray2480[var4[var6++]];
             }
 
-            if ((var8 == 4 -1)) {
+            if ((var8 == 3)) {
               var9 = SomethingPacket116.anIntArray1743[var4[var6++]];
             }
 
@@ -147,7 +147,7 @@ public class Something3d2 extends Something3dRoot {
             Widget var12;
             int var13;
             int var14;
-            if ((var8 == 5 -1)) {
+            if ((var8 == 4)) {
               var11 = var4[var6++] << 16;
               var11 += var4[var6++];
               var12 = EnumStringFetcher.getWidget((byte) 124, var11);
@@ -172,16 +172,16 @@ public class Something3d2 extends Something3dRoot {
                 ItemConfig.anIntArray781[-1 + TriChromaticImageBuffer.anIntArray2480[var4[var6++]]];
             }
 
-            if ((var8 == 8 -1)) {
+            if ((var8 == 7)) {
               var9 = 100 * DummyClass5.anIntArray2985[var4[var6++]] / '\ub71b';
             }
 
-            if ((var8 == 9 -1)) {
+            if ((var8 == 8)) {
               var9 = TextureCache.localPlayer.combatLevel;
             }
 
             if (var8 == 9) {
-              for (var11 = 0; (var11 < 26 -1); ++var11) {
+              for (var11 = 0; (var11 < 25); ++var11) {
                 if (SomethingOtherWorldMap.aBooleanArray2538[var11]) {
                   var9 += TriChromaticImageBuffer.anIntArray2480[var11];
                 }
@@ -205,7 +205,7 @@ public class Something3d2 extends Something3dRoot {
               }
             }
 
-            if ((var8 == 12 -1)) {
+            if ((var8 == 11)) {
               var9 = BZipDecompressorState.anInt136;
             }
 
@@ -213,22 +213,22 @@ public class Something3d2 extends Something3dRoot {
               var9 = Mouse.anInt1925;
             }
 
-            if ((var8 == 14 -1)) {
+            if ((var8 == 13)) {
               var11 = DummyClass5.anIntArray2985[var4[var6++]];
               int var17 = var4[var6++];
               var9 = ((1 << var17 & var11) == 0) ? 0 : 1;
             }
 
-            if ((var8 == 15 -1)) {
+            if ((var8 == 14)) {
               var11 = var4[var6++];
               var9 = NpcConfiguration.method1484(64835055, var11);
             }
 
-            if ((var8 == 19 -1)) {
+            if ((var8 == 18)) {
               var9 = (TextureCache.localPlayer.anInt2819 >> 7) - -WorldMapLabel.anInt1716;
             }
 
-            if ((var8 == 20 -1)) {
+            if ((var8 == 19)) {
               var9 = (TextureCache.localPlayer.anInt2829 >> 7) - -ProceduralTexture.anInt1152;
             }
 
@@ -241,7 +241,7 @@ public class Something3d2 extends Something3dRoot {
                 var5 += var9;
               }
 
-              if ((var7 == 2 -1)) {
+              if ((var7 == 1)) {
                 var5 -= var9;
               }
 
@@ -271,9 +271,9 @@ public class Something3d2 extends Something3dRoot {
         Something3d2.aClass33_3019 = null;
       }
 
-      return var1 >= 32 && (var1 <= 127 -1) || ((var1 >= 161 -1) && var1 <= 255 || (
-          (var1 == 129 -1) || (var1 == 141 -1)
-              || (var1 == 152 -1) || (var1 == 157 -1) || var1 == 159));
+      return var1 >= 32 && (var1 <= 126) || ((var1 >= 160) && var1 <= 255 || (
+          (var1 == 128) || (var1 == 140)
+              || (var1 == 151) || (var1 == 156) || var1 == 159));
   }
 
   public static void method2249(byte var0, int var1) {

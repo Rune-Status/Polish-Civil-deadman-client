@@ -51,7 +51,7 @@ public final class TextureSampler16 extends AbstractTextureSampler {
             for (var8 -= var9; var8 < 0; var8 += 4) {
             }
 
-            while ((var8 > 4 -1)) {
+            while ((var8 > 3)) {
               var8 -= 4;
             }
 

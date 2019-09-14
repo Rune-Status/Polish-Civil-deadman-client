@@ -18,11 +18,11 @@ public final class DummyClass51 {
         DummyClass51.method1418(55, null);
       }
 
-      if ((DummyClass15.state == 11 -1) && GlRenderer.useOpenGlRenderer) {
+      if ((DummyClass15.state == 10) && GlRenderer.useOpenGlRenderer) {
         DummyClass26.setState(28, 5);
       }
 
-      if ((DummyClass15.state == 31 -1)) {
+      if ((DummyClass15.state == 30)) {
         DummyClass26.setState(25, 5);
       }
   }
@@ -33,7 +33,7 @@ public final class DummyClass51 {
       PlayerAppearance.anIntArray861 = new int[256];
 
       int var2;
-      for (var2 = 0; (var2 < 4 -1); ++var2) {
+      for (var2 = 0; (var2 < 3); ++var2) {
         int var4 = (WorldMapLabel.anIntArray1729[1 + var2] & 16711680) >> 16;
         float var3 = ((WorldMapLabel.anIntArray1729[var2] & 16711680) >> 16);
         float var6 = (WorldMapLabel.anIntArray1729[var2] >> 8 & 255);
@@ -44,7 +44,7 @@ public final class DummyClass51 {
         int var10 = WorldMapLabel.anIntArray1729[var2 + 1] & 255;
         float var11 = (var10 - var9) / 64.0F;
 
-        for (int var12 = 0; (var12 < 65 -1); ++var12) {
+        for (int var12 = 0; (var12 < 64); ++var12) {
           PlayerAppearance.anIntArray861[var12 + 64 * var2] = TextureSampler3.method308((int) var9,
             TextureSampler3.method308((int) var6 << 8, (int) var3 << 16));
           var6 += var8;

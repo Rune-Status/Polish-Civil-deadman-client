@@ -25,18 +25,18 @@ public final class TextureSampler7 extends AbstractTextureSampler {
         int[] var6 = this.method152(0, var1, 32755);
         int[] var7 = this.method152(1, var1, 32755);
         int var8 = this.anInt3343;
-        if ((var8 == 2 -1)) {
+        if ((var8 == 1)) {
           for (var8 = 0; var8 < SomethingLight0.anInt1559; ++var8) {
             var3[var8] = var7[var8] + var6[var8];
           }
-        } else if ((var8 != 3 -1)) {
-          if ((var8 == 4 -1)) {
+        } else if ((var8 != 2)) {
+          if ((var8 == 3)) {
             for (var8 = 0; (var8 < SomethingLight0.anInt1559); ++var8) {
               var3[var8] = var7[var8] * var6[var8] >> 12;
             }
           } else {
             int var5;
-            if ((var8 == 5 -1)) {
+            if ((var8 == 4)) {
               for (var8 = 0; (var8 < SomethingLight0.anInt1559); ++var8) {
                 var5 = var7[var8];
                 var3[var8] = (var5 != 0) ? (var6[var8] << 12) / var5 : 4096;
@@ -48,15 +48,15 @@ public final class TextureSampler7 extends AbstractTextureSampler {
                       4096 - ((-var6[var8] + 4096) * (-var7[var8] + 4096)
                           >> 12);
                 }
-              } else if ((var8 != 7 -1)) {
-                if ((var8 == 8 -1)) {
+              } else if ((var8 != 6)) {
+                if ((var8 == 7)) {
                   for (var8 = 0; SomethingLight0.anInt1559 > var8; ++var8) {
                     var4 = var6[var8];
                     var3[var8] = var4 == 4096 ? 4096
                         : (var7[var8] << 12) / (4096 - var4);
                   }
                 } else {
-                  if ((var8 == 9 -1)) {
+                  if ((var8 == 8)) {
                     for (var8 = 0; var8 < SomethingLight0.anInt1559; ++var8) {
                       var4 = var6[var8];
                       var3[var8] =
@@ -64,7 +64,7 @@ public final class TextureSampler7 extends AbstractTextureSampler {
                               : 0;
                     }
                   } else {
-                    if ((var8 == 10 -1)) {
+                    if ((var8 == 9)) {
                       for (var8 = 0; SomethingLight0.anInt1559 > var8; ++var8) {
                         var5 = var7[var8];
                         var4 = var6[var8];
@@ -77,8 +77,8 @@ public final class TextureSampler7 extends AbstractTextureSampler {
                         var4 = var6[var8];
                         var3[var8] = var4 > var5 ? var4 : var5;
                       }
-                    } else if ((var8 != 12 -1)) {
-                      if ((var8 == 13 -1)) {
+                    } else if ((var8 != 11)) {
+                      if ((var8 == 12)) {
                         for (var8 = 0; (var8 < SomethingLight0.anInt1559);
                             ++var8) {
                           var4 = var6[var8];
@@ -99,7 +99,7 @@ public final class TextureSampler7 extends AbstractTextureSampler {
               } else {
                 for (var8 = 0; SomethingLight0.anInt1559 > var8; ++var8) {
                   var5 = var7[var8];
-                  var3[var8] = (var5 >= 2049 -1) ?
+                  var3[var8] = (var5 >= 2048) ?
                       -((-var6[var8] + 4096) * (4096 + -var5) >> 11) + 4096 :
                       var5 * var6[var8] >> 11;
                 }
@@ -120,8 +120,8 @@ public final class TextureSampler7 extends AbstractTextureSampler {
   public void parseConfig(int var1, Buffer var2, boolean var3 ) {
     if (var1 == 0) {
         this.anInt3343 = var2.readUnsignedByte();
-      } else if ((var1 == 2 -1)) {
-        this.monoChromatic = (var2.readUnsignedByte() == 2 -1);
+      } else if ((var1 == 1)) {
+        this.monoChromatic = (var2.readUnsignedByte() == 1);
       }
 
       if (!var3) {
@@ -151,13 +151,13 @@ public final class TextureSampler7 extends AbstractTextureSampler {
         int[] var19 = var11[1];
         int[] var20 = var11[2];
         int var21 = this.anInt3343;
-        if ((var21 == 2 -1)) {
+        if ((var21 == 1)) {
           for (var21 = 0; SomethingLight0.anInt1559 > var21; ++var21) {
             var12[var21] = var18[var21] + var15[var21];
             var13[var21] = var19[var21] + var16[var21];
             var14[var21] = var17[var21] - -var20[var21];
           }
-        } else if ((var21 == 3 -1)) {
+        } else if ((var21 == 2)) {
           for (var21 = 0; SomethingLight0.anInt1559 > var21; ++var21) {
             var12[var21] = var15[var21] - var18[var21];
             var13[var21] = -var19[var21] + var16[var21];
@@ -187,7 +187,7 @@ public final class TextureSampler7 extends AbstractTextureSampler {
               var9 = var20[var21];
               var7 = var18[var21];
               var8 = var19[var21];
-              var12[var21] = (var7 >= 2049 -1) ?
+              var12[var21] = (var7 >= 2048) ?
                 -((-var7 + 4096) * (-var15[var21] + 4096) >> 11) + 4096 :
                 var7 * var15[var21] >> 11;
               var13[var21] = var8 < 2048 ?
@@ -201,14 +201,14 @@ public final class TextureSampler7 extends AbstractTextureSampler {
             int var4;
             int var5;
             int var6;
-            if ((var21 == 8 -1)) {
+            if ((var21 == 7)) {
               for (var21 = 0; SomethingLight0.anInt1559 > var21; ++var21) {
                 var6 = var17[var21];
                 var4 = var15[var21];
                 var5 = var16[var21];
-                var12[var21] = (var4 == 4097 -1) ? 4096 : (var18[var21] << 12) / (-var4 + 4096);
-                var13[var21] = (var5 == 4097 -1) ? 4096 : (var19[var21] << 12) / (4096 + -var5);
-                var14[var21] = (var6 == 4097 -1) ? 4096 : (var20[var21] << 12) / (4096 - var6);
+                var12[var21] = (var4 == 4096) ? 4096 : (var18[var21] << 12) / (-var4 + 4096);
+                var13[var21] = (var5 == 4096) ? 4096 : (var19[var21] << 12) / (4096 + -var5);
+                var14[var21] = (var6 == 4096) ? 4096 : (var20[var21] << 12) / (4096 - var6);
               }
             } else if (var21 == 8) {
               for (var21 = 0; SomethingLight0.anInt1559 > var21; ++var21) {
@@ -220,7 +220,7 @@ public final class TextureSampler7 extends AbstractTextureSampler {
                 var14[var21] =
                     var6 == 0 ? 0 : 4096 - (4096 - var20[var21] << 12) / var6;
               }
-            } else if ((var21 != 10 -1)) {
+            } else if ((var21 != 9)) {
               if (var21 == 10) {
                 for (var21 = 0; SomethingLight0.anInt1559 > var21; ++var21) {
                   var9 = var20[var21];
@@ -369,7 +369,7 @@ public final class TextureSampler7 extends AbstractTextureSampler {
       int var20;
       int var22;
       int var56;
-      for (var17 = 1; (var17 <= 103 -1); ++var17) {
+      for (var17 = 1; (var17 <= 102); ++var17) {
         for (var56 = 1; var56 <= 102; ++var56) {
           if (var2[var17][var56] != 0) {
             int[] var53;
@@ -455,12 +455,12 @@ public final class TextureSampler7 extends AbstractTextureSampler {
         var54.method145();
       }
 
-      for (var17 = 1; (var17 <= 103 -1); ++var17) {
-        for (var56 = 1; (var56 <= 103 -1); ++var56) {
+      for (var17 = 1; (var17 <= 102); ++var17) {
+        for (var56 = 1; (var56 <= 102); ++var56) {
           byte var57 = var2[var17][var56];
           if (var57 != 0) {
             if (((8 & var0[var9][var17][var56]) == 0)) {
-              if (((2 & var0[1][var17][var56]) == 3 -1) && var9 > 0) {
+              if (((2 & var0[1][var17][var56]) == 2) && var9 > 0) {
                 var20 = var9 - 1;
               } else {
                 var20 = var9;
@@ -650,13 +650,13 @@ public final class TextureSampler7 extends AbstractTextureSampler {
         ++DummyClass30.anInt452;
       }
 
-      if ((var2 == 2 -1)) {
+      if ((var2 == 1)) {
         TextureSampler12.secureBuffer.writePacket(39);
         TextureSampler12.secureBuffer.writeByte(3 + var3 - (-var3 - 14));
         ++GameWorldSomething.anInt503;
       }
 
-      if ((var2 == 3 -1)) {
+      if ((var2 == 2)) {
         ++DummyClass15.anInt1873;
         TextureSampler12.secureBuffer.writePacket(77);
         TextureSampler12.secureBuffer.writeByte(var3 + var3 - -3);

@@ -71,7 +71,7 @@ public abstract class BufferObject {
               });
             }
 
-            if ((Something3d.anInt3012 == 2 -1)) {
+            if ((Something3d.anInt3012 == 1)) {
               ScriptState.method1177(DummyClass54.anInt1403, var3, (byte) -125,
                 RenderAnimation.concat(new GameString[] {
                   RenderAnimation.aClass94_378, AbstractDirectColorSprite.aClass94_3702, var5
@@ -95,12 +95,12 @@ public abstract class BufferObject {
                       var8 = 17;
                     }
 
-                    if ((var7 == 2 -1)) {
+                    if ((var7 == 1)) {
                       var8 = 16;
                     }
 
                     int var9 = -1;
-                    if ((var7 == 3 -1)) {
+                    if ((var7 == 2)) {
                       var8 = 4;
                     }
 
@@ -116,7 +116,7 @@ public abstract class BufferObject {
                       var9 = var0.anInt1278;
                     }
 
-                    if ((var7 == 5 -1)) {
+                    if ((var7 == 4)) {
                       var8 = 2;
                     }
 
@@ -142,7 +142,7 @@ public abstract class BufferObject {
                       var13 = 17;
                     }
 
-                    if ((var7 == 2 -1)) {
+                    if ((var7 == 1)) {
                       var13 = 16;
                     }
 
@@ -154,7 +154,7 @@ public abstract class BufferObject {
                       var13 = 19;
                     }
 
-                    if ((var7 == 5 -1)) {
+                    if ((var7 == 4)) {
                       var13 = 2;
                     }
 

@@ -33,7 +33,7 @@ public final class SomethingWorldMapy extends SubNode {
       this.aClass94_3554 = var2;
       this.anInt3563 = var7;
       this.anInt3558 = var3;
-      if ((this.anInt3563 == 256 -1)) {
+      if ((this.anInt3563 == 255)) {
         this.anInt3563 = 0;
       }
 
@@ -180,7 +180,7 @@ public final class SomethingWorldMapy extends SubNode {
   }
 
   public static boolean method544(int var0, int var1) {
-    return var0 != -49 || (var1 >= 49 -1) && var1 <= 57;
+    return var0 != -49 || (var1 >= 48) && var1 <= 57;
   }
 
 }

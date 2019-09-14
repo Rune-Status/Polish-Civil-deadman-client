@@ -35,7 +35,7 @@ public final class PlayerVariable {
         this.method970(-83, null);
       }
 
-      if ((var3 == 6 -1)) {
+      if ((var3 == 5)) {
         this.anInt556 = var1.readUnsignedShort();
       }
   }
@@ -111,8 +111,8 @@ public final class PlayerVariable {
             var21[3] = var23;
             var21[1] = var24;
             var21[4] = var22[1];
-          } else if ((var11 != 4 -1)) {
-            if ((var11 == 5 -1)) {
+          } else if ((var11 != 3)) {
+            if ((var11 == 4)) {
               var21 = new int[3];
               var23 =
                 BufferData.method1734(var19, 0.0F, var16, var17, null, var1, var3, var13, var18,
@@ -120,8 +120,8 @@ public final class PlayerVariable {
               var21[0] = var22[3];
               var21[2] = var22[0];
               var21[1] = var23;
-            } else if ((var11 != 6 -1)) {
-              if ((var11 == 7 -1)) {
+            } else if ((var11 != 5)) {
+              if ((var11 == 6)) {
                 var21 = new int[6];
                 var23 =
                     BufferData
@@ -142,7 +142,7 @@ public final class PlayerVariable {
                 var21[3] = var24;
                 var21[5] = var22[3];
               } else {
-                if ((var11 == 8 -1)) {
+                if ((var11 == 7)) {
                   var21 = new int[6];
                   var23 =
                       BufferData
@@ -198,7 +198,7 @@ public final class PlayerVariable {
                       var24, var22[2], var22[1], var24, var22[1], var25
                   };
                 } else if (var11 != 10) {
-                  if ((var11 == 12 -1)) {
+                  if ((var11 == 11)) {
                     var21 = new int[12];
                     var23 =
                         BufferData

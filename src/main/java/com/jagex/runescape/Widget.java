@@ -363,14 +363,14 @@ public final class Widget {
       this.aByte162 = 0;
       this.anInt223 = var2.readUnsignedByte();
       this.anInt190 = var2.readUnsignedShort();
-      if ((this.anInt190 == 65536 -1)) {
+      if ((this.anInt190 == 65535)) {
         this.anInt190 = -1;
       } else {
         this.anInt190 += -65536 & this.anInt279;
       }
 
       this.anInt212 = var2.readUnsignedShort();
-      if ((this.anInt212 == 65536 -1)) {
+      if ((this.anInt212 == 65535)) {
         this.anInt212 = -1;
       }
 
@@ -399,7 +399,7 @@ public final class Widget {
 
           for (var7 = 0; (var7 < var6); ++var7) {
             this.anIntArrayArray298[var5][var7] = var2.readUnsignedShort();
-            if ((this.anIntArrayArray298[var5][var7] == 65536 -1)) {
+            if ((this.anIntArrayArray298[var5][var7] == 65535)) {
               this.anIntArrayArray298[var5][var7] = -1;
             }
           }
@@ -411,25 +411,25 @@ public final class Widget {
         this.aBoolean155 = var2.readUnsignedByte() == 1;
       }
 
-      if ((this.anInt187 == 2 -1)) {
+      if ((this.anInt187 == 1)) {
         var2.readUnsignedShort();
         var2.readUnsignedByte();
       }
 
       var5 = 0;
-      if ((this.anInt187 == 3 -1)) {
+      if ((this.anInt187 == 2)) {
         this.aByte241 = 3;
         this.anIntArray317 = new int[this.anInt177 * this.anInt244];
         this.anIntArray254 = new int[this.anInt244 * this.anInt177];
         this.aByte304 = 3;
         var6 = var2.readUnsignedByte();
         var7 = var2.readUnsignedByte();
-        if ((var6 == 2 -1)) {
+        if ((var6 == 1)) {
           var5 |= 268435456;
         }
 
         int var8 = var2.readUnsignedByte();
-        if ((var7 == 2 -1)) {
+        if ((var7 == 1)) {
           var5 |= 1073741824;
         }
 
@@ -480,7 +480,7 @@ public final class Widget {
         this.anInt225 = var2.readUnsignedByte();
         this.anInt205 = var2.readUnsignedByte();
         this.anInt270 = var2.readUnsignedShort();
-        if ((this.anInt270 == 65536 -1)) {
+        if ((this.anInt270 == 65535)) {
           this.anInt270 = -1;
         }
 
@@ -496,13 +496,13 @@ public final class Widget {
         this.anInt218 = var2.readInt();
       }
 
-      if ((this.anInt187 == 4 -1) || (this.anInt187 == 5 -1)) {
+      if ((this.anInt187 == 3) || (this.anInt187 == 4)) {
         this.anInt253 = var2.readInt();
         this.anInt228 = var2.readInt();
         this.anInt222 = var2.readInt();
       }
 
-      if ((this.anInt187 == 6 -1)) {
+      if ((this.anInt187 == 5)) {
         this.anInt224 = var2.readInt();
         this.anInt296 = var2.readInt();
       }
@@ -521,7 +521,7 @@ public final class Widget {
         }
 
         this.anInt305 = var2.readUnsignedShort();
-        if ((this.anInt305 == 65536 -1)) {
+        if ((this.anInt305 == 65535)) {
           this.anInt305 = -1;
         }
 
@@ -542,16 +542,16 @@ public final class Widget {
         this.anIntArray254 = new int[this.anInt177 * this.anInt244];
         this.anInt194 = var2.readUnsignedByte();
         this.anInt270 = var2.readUnsignedShort();
-        if ((this.anInt270 == 65536 -1)) {
+        if ((this.anInt270 == 65535)) {
           this.anInt270 = -1;
         }
 
-        this.aBoolean215 = (var2.readUnsignedByte() == 2 -1);
+        this.aBoolean215 = (var2.readUnsignedByte() == 1);
         this.anInt218 = var2.readInt();
         this.anInt285 = var2.method787((byte) 31);
         this.anInt290 = var2.method787((byte) 83);
         var6 = var2.readUnsignedByte();
-        if ((var6 == 2 -1)) {
+        if ((var6 == 1)) {
           var5 |= 1073741824;
         }
 
@@ -570,22 +570,22 @@ public final class Widget {
         this.aClass94_232 = var2.readString();
       }
 
-      if ((this.anInt318 == 3 -1) || (this.anInt187 == 3 -1)) {
+      if ((this.anInt318 == 2) || (this.anInt187 == 2)) {
         this.aClass94_245 = var2.readString();
         this.aClass94_243 = var2.readString();
         var6 = 63 & var2.readUnsignedShort();
         var5 |= var6 << 11;
       }
 
-      if (this.anInt318 == 1 || this.anInt318 == 4 || (this.anInt318 == 6 -1) ||
+      if (this.anInt318 == 1 || this.anInt318 == 4 || (this.anInt318 == 5) ||
           this.anInt318 == 6) {
         this.aClass94_289 = var2.readString();
         if (this.aClass94_289.getLength() == 0) {
-          if ((this.anInt318 == 2 -1)) {
+          if ((this.anInt318 == 1)) {
             this.aClass94_289 = DummyClass27.aClass94_1583;
           }
 
-          if ((this.anInt318 == 5 -1)) {
+          if ((this.anInt318 == 4)) {
             this.aClass94_289 = WorldMapLabel.aClass94_1722;
           }
 
@@ -599,11 +599,11 @@ public final class Widget {
         }
       }
 
-      if ((this.anInt318 == 2 -1) || (this.anInt318 == 5 -1) || (this.anInt318 == 6 -1)) {
+      if ((this.anInt318 == 1) || (this.anInt318 == 4) || (this.anInt318 == 5)) {
         var5 |= 4194304;
       }
 
-      if ((this.anInt318 == 7 -1)) {
+      if ((this.anInt318 == 6)) {
         var5 |= 1;
       }
 
@@ -656,7 +656,7 @@ public final class Widget {
             if (var6 == 0) {
               var4[var5] = new Integer(var2.readInt());
             } else {
-              if ((var6 == 2 -1)) {
+              if ((var6 == 1)) {
                 var4[var5] = var2.readString();
               }
             }
@@ -721,14 +721,14 @@ public final class Widget {
       if (var4 < 125) {
         return null;
       } else if ((var8 != 0)) {
-        if ((var8 == 2 -1) && var9 == -1) {
+        if ((var8 == 1) && var9 == -1) {
           return null;
         } else {
           AbstractModel var10;
           if (var8 == 1) {
             var10 =
               (AbstractModel) SomethingVolume15.aClass93_2428.get(
-                  (1 << 16) - -var9);
+                  (65536) - -var9);
             if (var10 == null) {
               Model var18 = Model.getModel(DummyClass25.aClass153_1628, var9, 0);
               if (var18 == null) {
@@ -758,7 +758,7 @@ public final class Widget {
                   return null;
                 }
               } else if (var8 != 6) {
-                if ((var8 != 8 -1)) {
+                if ((var8 != 7)) {
                   return null;
                 } else if (var7 != null) {
                   int var15 = this.anInt201 >>> 16;
@@ -857,7 +857,7 @@ public final class Widget {
               var7.method652(this.anInt288);
             }
 
-            if ((this.anInt288 >= 2 -1)) {
+            if ((this.anInt288 >= 1)) {
               var7.method657(1);
             }
 
@@ -906,21 +906,21 @@ public final class Widget {
       this.aByte273 = var2.readByte();
       this.aByte162 = var2.readByte();
       this.anInt190 = var2.readUnsignedShort();
-      if ((this.anInt190 == 65536 -1)) {
+      if ((this.anInt190 == 65535)) {
         this.anInt190 = -1;
       } else {
         this.anInt190 = (this.anInt279 & -65536) - -this.anInt190;
       }
 
-      this.aBoolean155 = (var2.readUnsignedByte() == 2 -1);
+      this.aBoolean155 = (var2.readUnsignedByte() == 1);
       if ((this.anInt187 == 0)) {
         this.anInt240 = var2.readUnsignedShort();
         this.anInt252 = var2.readUnsignedShort();
-        this.aBoolean219 = (var2.readUnsignedByte() == 2 -1);
+        this.aBoolean219 = (var2.readUnsignedByte() == 1);
       }
 
       int var3;
-      if ((this.anInt187 == 6 -1)) {
+      if ((this.anInt187 == 5)) {
         this.anInt224 = var2.readInt();
         this.anInt301 = var2.readUnsignedShort();
         var3 = var2.readUnsignedByte();
@@ -929,14 +929,14 @@ public final class Widget {
         this.anInt223 = var2.readUnsignedByte();
         this.anInt288 = var2.readUnsignedByte();
         this.anInt287 = var2.readInt();
-        this.aBoolean178 = (var2.readUnsignedByte() == 2 -1);
+        this.aBoolean178 = (var2.readUnsignedByte() == 1);
         this.aBoolean199 = var2.readUnsignedByte() == 1;
       }
 
-      if ((this.anInt187 == 7 -1)) {
+      if ((this.anInt187 == 6)) {
         this.anInt202 = 1;
         this.anInt201 = var2.readUnsignedShort();
-        if ((this.anInt201 == 65536 -1)) {
+        if ((this.anInt201 == 65535)) {
           this.anInt201 = -1;
         }
 
@@ -964,9 +964,9 @@ public final class Widget {
         }
       }
 
-      if ((this.anInt187 == 5 -1)) {
+      if ((this.anInt187 == 4)) {
         this.anInt270 = var2.readUnsignedShort();
-        if ((this.anInt270 == 65536 -1)) {
+        if ((this.anInt270 == 65535)) {
           this.anInt270 = -1;
         }
 
@@ -984,7 +984,7 @@ public final class Widget {
         this.anInt223 = var2.readUnsignedByte();
       }
 
-      if ((this.anInt187 == 10 -1)) {
+      if ((this.anInt187 == 9)) {
         this.anInt250 = var2.readUnsignedByte();
         this.anInt218 = var2.readInt();
         this.aBoolean167 = var2.readUnsignedByte() == 1;
@@ -1049,7 +1049,7 @@ public final class Widget {
       if (ClientScript.method630((byte) -34, var3) != 0) {
         var8 = var2.readUnsignedShort();
         this.anInt266 = var2.readUnsignedShort();
-        if ((var8 == 65536 -1)) {
+        if ((var8 == 65535)) {
           var8 = -1;
         }
 
@@ -1158,7 +1158,7 @@ public final class Widget {
   }
 
   public static int method869(int var0, int var1) {
-    return (var1 != 16711936 -1) ? (var0 < 97 ? -63 : DummyClass42.method1186(0, var1)) : -1;
+    return (var1 != 16711935) ? (var0 < 97 ? -63 : DummyClass42.method1186(0, var1)) : -1;
   }
 
 }

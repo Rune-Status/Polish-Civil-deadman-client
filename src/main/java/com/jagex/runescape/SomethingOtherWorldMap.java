@@ -69,24 +69,24 @@ public final class SomethingOtherWorldMap extends Node {
 
   public static GameString method407(int var0, boolean var1, int var2, long var3, int var5) {
     GameString var6 = Cache.createString(0);
-      if ((var3 < 1L -1)) {
+      if ((var3 < 0L)) {
         var3 = -var3;
         var6.append(TextureSampler1.aClass94_3133);
       }
 
       GameString var8 = DummyClass15.aClass94_1880;
       GameString var7 = DummyClass28.aClass94_341;
-      if ((var0 == 2 -1)) {
+      if ((var0 == 1)) {
         var8 = DummyClass28.aClass94_341;
         var7 = DummyClass15.aClass94_1880;
       }
 
-      if ((var0 == 3 -1)) {
+      if ((var0 == 2)) {
         var7 = DummyClass15.aClass94_1880;
         var8 = TextureSampler26.aClass94_3080;
       }
 
-      if ((var0 == 4 -1)) {
+      if ((var0 == 3)) {
         var8 = DummyClass28.aClass94_341;
         var7 = DummyClass15.aClass94_1880;
       }

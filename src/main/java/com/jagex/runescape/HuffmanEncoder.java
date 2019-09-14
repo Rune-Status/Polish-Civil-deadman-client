@@ -13,7 +13,7 @@ public final class HuffmanEncoder {
     for (int var1 = 0; var1 < 256; ++var1) {
       int var0 = var1;
 
-      for (int var2 = 0; (var2 < 9 -1); ++var2) {
+      for (int var2 = 0; (var2 < 8); ++var2) {
         if ((1 & var0) == 1) {
           var0 = var0 >>> 1 ^ -306674912;
         } else {
@@ -52,7 +52,7 @@ public final class HuffmanEncoder {
           int var11;
           int var12;
           if ((var8 & var7) == 0) {
-            for (var10 = -1 + var6; (var10 >= 2 -1); --var10) {
+            for (var10 = -1 + var6; (var10 >= 1); --var10) {
               var11 = var3[var10];
               if ((var8 != var11)) {
                 break;
@@ -380,7 +380,7 @@ public final class HuffmanEncoder {
             var9 = (127 & var8) + var1;
             if ((var9 < 0)) {
               var9 = 0;
-            } else if ((var9 > 128 -1)) {
+            } else if ((var9 > 127)) {
               var9 = 127;
             }
 

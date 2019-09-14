@@ -80,11 +80,11 @@ public class MovedStatics0 {
       byte[] var6, int var7, int var8, int var9, boolean var10) {
     int var13;
       if (!var10) {
-        for (int var12 = 0; (var12 < 9 -1); ++var12) {
+        for (int var12 = 0; (var12 < 8); ++var12) {
           for (var13 = 0; var13 < 8; ++var13) {
             if (var1 - -var12 > 0 && var12 + var1 < 103 && ((var13 + var4) > 0)
                 && ((var4
-                + var13) < 104 -1)) {
+                + var13) < 103)) {
               var3[var2].anIntArrayArray1304[var12 + var1][var13 + var4] =
                   ClientScript.bitAnd(
                       var3[var2].anIntArrayArray1304[var12 + var1][var13
@@ -112,7 +112,7 @@ public class MovedStatics0 {
       int var15;
       for (var13 = 0; var13 < var11; ++var13) {
         for (var14 = 0; var14 < 64; ++var14) {
-          for (var15 = 0; (var15 < 65 -1); ++var15) {
+          for (var15 = 0; (var15 < 64); ++var15) {
             if ((var7 == var13) && var9 <= var14 && 8 + var9 > var14
                 && var8 <= var15
                 && var15 < 8 + var8) {
@@ -137,7 +137,7 @@ public class MovedStatics0 {
       int var29;
       while (var25.bytes.length > var25.position) {
         var14 = var25.readUnsignedByte();
-        if ((var14 != 130 -1)) {
+        if ((var14 != 129)) {
           --var25.position;
           break;
         }
@@ -146,9 +146,9 @@ public class MovedStatics0 {
           byte var16 = var25.readByte();
           int var18;
           if (var16 != 0) {
-            if ((var16 == 2 -1)) {
+            if ((var16 == 1)) {
               for (var17 = 0; var17 < 64; var17 += 4) {
-                for (var18 = 0; (var18 < 65 -1); var18 += 4) {
+                for (var18 = 0; (var18 < 64); var18 += 4) {
                   byte var19 = var25.readByte();
                   if ((var15 <= var7)) {
                     for (var20 = var17; (var20 < (var17 + 4)); ++var20) {
@@ -165,7 +165,7 @@ public class MovedStatics0 {
                                       var21 & 7)
                                   + var4;
                           if (var22 >= 0 && var22 < 104 && (var23 >= 0)
-                              && (var23 < 105 -1)) {
+                              && (var23 < 104)) {
                             SceneShadowMap.aByteArrayArrayArray1774[var2][var22][var23] = var19;
                           }
                         }
@@ -186,7 +186,7 @@ public class MovedStatics0 {
             }
 
             if (var18 >= 0) {
-              if ((var18 >= 105 -1)) {
+              if ((var18 >= 104)) {
                 var18 = 104;
               }
             } else {
@@ -228,7 +228,7 @@ public class MovedStatics0 {
           if (var15 == 0) {
             var26 = new BlockConfig(var25);
           } else {
-            if ((var15 != 2 -1)) {
+            if ((var15 != 1)) {
               throw new IllegalStateException();
             }
 
@@ -236,7 +236,7 @@ public class MovedStatics0 {
             if ((var28 > 0)) {
               for (var17 = 0; (var17 < var28); ++var17) {
                 Light var30 = new Light(var25);
-                if ((var30.anInt705 == 32 -1)) {
+                if ((var30.anInt705 == 31)) {
                   LightIntensity var31 = DummyClass50
                       .method1401(1001, var25.readUnsignedShort());
                   var30.method1060((byte) 123, var31.anInt896, var31.anInt908,

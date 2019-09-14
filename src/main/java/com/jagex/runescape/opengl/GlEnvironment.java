@@ -5,8 +5,8 @@ import com.jogamp.opengl.GL2;
 public final class GlEnvironment {
 
   private static int color = -1;
-  private static float diffuseIntensity = -1.0F;
-  private static float secondaryIntensity = -1.0F;
+  private static float diffuseIntensity = -1.0f;
+  private static float secondaryIntensity = -1.0f;
   private static float ambientIntensity;
   private static float[] diffuseLight1 = new float[4];
   private static int fogOffset = -1;
@@ -132,7 +132,7 @@ public final class GlEnvironment {
   private static void method1513() {
     GlEnvironment
         .setSunColor(GlEnvironment.defaultSunColor, 1.1523438F, 0.69921875F, 1.2F);
-    GlEnvironment.setSunPosition(-50.0F, -60.0F, -50.0F);
+    GlEnvironment.setSunPosition(-50.0f, -60.0f, -50.0f);
     GlEnvironment.setFogColor(GlEnvironment.defaultFogColor, 0);
   }
 

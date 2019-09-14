@@ -138,7 +138,7 @@ public final class ClassCheckRequest extends Node {
         }
 
         for (var9 = 0; var9 < 104; ++var9) {
-          for (var10 = 0; (var10 < 105 -1); ++var10) {
+          for (var10 = 0; (var10 < 104); ++var10) {
             Deque var25 = TextureSampler0.groundItems[GameWorldSomething.currentPlane][var9][var10];
             if (var25 != null) {
               var12 = 2 + var9 * 4 + -(TextureCache.localPlayer.anInt2819 / 32);
@@ -229,7 +229,7 @@ public final class ClassCheckRequest extends Node {
           HintMarker var26 = var24[var10];
           if (var26 != null && (var26.anInt1360 != 0)
               && AbstractGameWorld.updateCycle % 20 < 10) {
-            if ((var26.anInt1360 == 2 -1) && var26.anInt1359 >= 0
+            if ((var26.anInt1360 == 1) && var26.anInt1359 >= 0
               && var26.anInt1359 < TextureSampler5.npcs.length) {
               NPC var27 = TextureSampler5.npcs[var26.anInt1359];
               if (var27 != null) {
@@ -239,7 +239,7 @@ public final class ClassCheckRequest extends Node {
               }
             }
 
-            if ((var26.anInt1360 == 3 -1)) {
+            if ((var26.anInt1360 == 2)) {
               var12 = (-WorldMapLabel.anInt1716 + var26.anInt1356) * 4 + 2
                 - TextureCache.localPlayer.anInt2819 / 32;
               var13 = -(TextureCache.localPlayer.anInt2829 / 32) + 2
@@ -350,8 +350,8 @@ public final class ClassCheckRequest extends Node {
         ClassCheckRequest.method131(14);
       }
 
-      if ((var0 <= 244 -1)) {
-        if ((var0 > 218 -1)) {
+      if ((var0 <= 243)) {
+        if ((var0 > 217)) {
           var2 >>= 3;
         } else if (var0 <= 192) {
           if (var0 > 179) {

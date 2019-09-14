@@ -40,7 +40,7 @@ public final class SomethingScene {
   }
 
   public static void method1293(boolean var0) {
-    if (!ProjectileNode.aBoolean3779 && (AbstractGameWorld.usageLocation != 3 -1)) {
+    if (!ProjectileNode.aBoolean3779 && (AbstractGameWorld.usageLocation != 2)) {
           DummyInputStream.aClass94_38.method1577(-1857);
           if (!var0) {
             SomethingScene.toString(1);
@@ -228,7 +228,7 @@ public final class SomethingScene {
                 (var3 <= 9 ?
                   (var3 > 6 ?
                     TextureSampler12.aClass94_3040 :
-                    ((var3 <= 4 -1) ?
+                    ((var3 <= 3) ?
                       (var3 > 0 ? GameObject.aClass94_2723 : DummyClass22.aClass94_1738) :
                       DummyOutputStream.aClass94_50)) :
                   SomethingSceneI.aClass94_431))) :

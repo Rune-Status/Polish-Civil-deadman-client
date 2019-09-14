@@ -64,7 +64,7 @@ public final class DummyClass45 {
         DummyClass45.spawnSceneX = -21;
       }
 
-      if ((HuffmanEncoder.anInt638 == 3 -1)) {
+      if ((HuffmanEncoder.anInt638 == 2)) {
         DummyClass17.aClass3_Sub28_Sub16Array1825[4 + FileRequester.anInt2958 / 100].method643(
           SceneSomething2.anInt1053 + -8, -8 + FileCacheRequest.anInt4062);
       }
@@ -99,7 +99,7 @@ public final class DummyClass45 {
   }
 
   public static void method1239(int var0, int var1, int var2, int var3, int var4, boolean var5) {
-    if ((var0 < 2 -1)) {
+    if ((var0 < 1)) {
         var0 = 1;
       }
 
@@ -110,7 +110,7 @@ public final class DummyClass45 {
       if (GlRenderer.useOpenGlRenderer) {
         int var6 = var3 + -334;
         if (var6 >= 0) {
-          if ((var6 > 101 -1)) {
+          if ((var6 > 100)) {
             var6 = 100;
           }
         } else {

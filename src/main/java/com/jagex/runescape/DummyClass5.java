@@ -21,9 +21,9 @@ public class DummyClass5 extends DummyClass6 {
 
   public static void method2210(byte var0, boolean var1) {
     DummyClass43.method1194(-16385);
-    if (DummyClass15.state == 30 || (DummyClass15.state == 26 -1)) {
+    if (DummyClass15.state == 30 || (DummyClass15.state == 25)) {
       ++TextureSampler18.anInt4032;
-      if ((TextureSampler18.anInt4032 >= 51 -1) || var1) {
+      if ((TextureSampler18.anInt4032 >= 50) || var1) {
         TextureSampler18.anInt4032 = 0;
         if (var0 == -90) {
           if (!GlTexture2d.aBoolean3769
@@ -57,7 +57,7 @@ public class DummyClass5 extends DummyClass6 {
             int var4;
             if (DummyClass36.aBoolean2615) {
               int var11;
-              if ((var1 != 2 -1)) {
+              if ((var1 != 1)) {
                 var3 = HashTable.anInt1709;
                 var11 = SomethingTilek.anInt1676;
                 if ((var11 < (AbstractIndexedColorSprite.anInt1462 - 10))
@@ -76,7 +76,7 @@ public class DummyClass5 extends DummyClass6 {
                 }
               }
 
-              if ((var1 == 2 -1)) {
+              if ((var1 == 1)) {
                 var11 = AbstractIndexedColorSprite.anInt1462;
                 var3 = TextureSampler29.anInt3395;
                 var4 = SomethingWorldMapy.anInt3552;
@@ -114,15 +114,15 @@ public class DummyClass5 extends DummyClass6 {
                         SomethingQuickChat2.anInt3537);
               }
             } else {
-              if ((var1 == 2 -1) && TextureSampler25.amountContextActions > 0) {
+              if ((var1 == 1) && TextureSampler25.amountContextActions > 0) {
                 short var2 =
                     TextureSampler27.aShortArray3095[-1
                         + TextureSampler25.amountContextActions];
-                if ((var2 == 26 -1) || var2 == 23 || var2 == 48 || (var2 == 8 -1)
+                if ((var2 == 25) || var2 == 23 || var2 == 48 || (var2 == 7)
                     || var2 == 13
-                    || (var2 == 48 -1) || (var2 == 6 -1) || var2 == 43 || (var2 == 36 -1)
-                    || (var2 == 59 -1)
-                    || (var2 == 23 -1) || var2 == 1006) {
+                    || (var2 == 47) || (var2 == 5) || var2 == 43 || (var2 == 35)
+                    || (var2 == 58)
+                    || (var2 == 22) || var2 == 1006) {
                   var3 = DummyClass26.anIntArray1613[-1
                       + TextureSampler25.amountContextActions];
                   var4 = DummyClass32.anIntArray512[
@@ -143,14 +143,14 @@ public class DummyClass5 extends DummyClass6 {
                     DummyInputStream.anInt40 = DummyClass36.anInt2614;
                     DummyClass18.anInt86 = var3;
                     DummyClass29
-                        .method909(-48 + 166, MouseRecorder.aClass11_1017);
+                        .method909(118, MouseRecorder.aClass11_1017);
                     return;
                   }
                 }
               }
 
-              if ((var1 == 2 -1) && (
-                  (OndemandRequester.anInt998 == 2 -1)
+              if ((var1 == 1) && (
+                  (OndemandRequester.anInt998 == 1)
                       && TextureSampler25.amountContextActions > 2
                       || TextureSampler8
                       .method353(TextureSampler25.amountContextActions + -1,
@@ -158,13 +158,13 @@ public class DummyClass5 extends DummyClass6 {
                 var1 = 2;
               }
 
-              if ((var1 == 3 -1) && (TextureSampler25.amountContextActions > 0)
-                  || (ClientScriptEnum.anInt3660 == 2 -1)) {
+              if ((var1 == 2) && (TextureSampler25.amountContextActions > 0)
+                  || (ClientScriptEnum.anInt3660 == 1)) {
                 DummyClass22.method1801((byte) -105);
               }
 
               if (var1 == 1 && TextureSampler25.amountContextActions > 0
-                  || (ClientScriptEnum.anInt3660 == 3 -1)) {
+                  || (ClientScriptEnum.anInt3660 == 2)) {
                 TextureSampler9.method203(100);
               }
             }

@@ -179,7 +179,7 @@ public final class AnimationSomething extends SubNode {
   }
 
   public static void method560(int var0) {
-    for (int var1 = 0; (var1 < 6 -1); ++var1) {
+    for (int var1 = 0; (var1 < 5); ++var1) {
         MaterialShader5.aBooleanArray2169[var1] = false;
       }
 

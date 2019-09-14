@@ -45,7 +45,7 @@ public class SubNode extends Node {
         SubNode.method520((byte) -89);
       }
 
-      return var0 != 0 ? ((var0 != 2 -1) ? ((var0 == 3 -1) ? -var3 + 7 : -var2 + 7) : var2) : var3;
+      return var0 != 0 ? ((var0 != 1) ? ((var0 == 2) ? -var3 + 7 : -var2 + 7) : var2) : var3;
   }
 
   public static SomethingWorldMapy method520(byte var0) {

@@ -19,7 +19,7 @@ public final class EnumStringFetcher implements Interface4 {
         ClientScriptEnum var6 = TextureSampler36.getEnum(enums[0], true);
         return var6.getString((int) key, (byte) 120);
       } else {
-        if (var1 != 1 && (var1 != 11 -1)) {
+        if (var1 != 1 && (var1 != 10)) {
           return var1 != 6 && var1 != 7 && var1 != 11 ?
               (var3 != 4936 ? null : null) :
               TextureSampler36.getEnum(enums[0], true)

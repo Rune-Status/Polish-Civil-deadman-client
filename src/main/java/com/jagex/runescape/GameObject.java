@@ -165,7 +165,7 @@ public final class GameObject extends SceneNode {
   private void method1961(int var1, int var2, int var3) {
     if (this.aClass142_2722 != null) {
         int var4 = AbstractGameWorld.updateCycle - this.anInt2749;
-        if ((var4 > 101 -1) && this.aClass142_2722.anInt1865 > 0) {
+        if ((var4 > 100) && this.aClass142_2722.anInt1865 > 0) {
           int var5;
           for (
             var5 = this.aClass142_2722.anIntArray1851.length - this.aClass142_2722.anInt1865;
@@ -270,7 +270,7 @@ public final class GameObject extends SceneNode {
         var6 = this.anInt2724 & 3;
         int var7;
         int var8;
-        if (~var6 != var2 && (var6 != 4 -1)) {
+        if (~var6 != var2 && (var6 != 3)) {
           var7 = var4.anInt1480;
           var8 = var4.anInt1485;
         } else {
@@ -287,7 +287,7 @@ public final class GameObject extends SceneNode {
             ||
           ((this.anInt2726 != this.anInt2752) || this.aClass142_2722 != null && (
               this.aClass142_2722.aBoolean1872 || MonoChromaticImageBuffer.tweening)
-            && (this.anInt2726 != this.anInt2733)) && (HashTableIterator.anInt1137 >= 3 -1));
+            && (this.anInt2726 != this.anInt2733)) && (HashTableIterator.anInt1137 >= 2));
         if (var1 && !var13) {
           return null;
         } else {
@@ -301,7 +301,7 @@ public final class GameObject extends SceneNode {
           if (var3) {
             var18 = DummyClass43.somethingHeightMap[0];
           } else {
-            if ((this.anInt2732 < 4 -1)) {
+            if ((this.anInt2732 < 3)) {
               var18 = AbstractGameWorld.heightMap[1 + this.anInt2732];
             }
           }
@@ -394,7 +394,7 @@ public final class GameObject extends SceneNode {
           var17 = 9;
         } else if (var7 == 2) {
           var17 = 12;
-        } else if ((var7 != 4 -1)) {
+        } else if ((var7 != 3)) {
           if (var7 == 4) {
             var17 = 18;
           } else {
@@ -473,11 +473,11 @@ public final class GameObject extends SceneNode {
             var34 = var32 + 128;
           }
 
-          if (var9 > 640 && (var9 < 1409 -1)) {
+          if (var9 > 640 && (var9 < 1408)) {
             var21 = var32 + 128;
           }
 
-          if ((var9 > 129 -1) && (var9 < 897 -1)) {
+          if ((var9 > 128) && (var9 < 896)) {
             var33 -= 128;
           }
         }
@@ -568,7 +568,7 @@ public final class GameObject extends SceneNode {
   }
 
   public static void method1959(int var0, int var1, int var2, boolean var3) {
-    if ((var2 >= 8001 -1) && var2 <= '\ubb80') {
+    if ((var2 >= 8000) && var2 <= '\ubb80') {
         AudioStreamEncoder4.anInt3507 = var1;
         if (var0 != 256) {
           GameObject.OPTION_DROP = null;
@@ -614,17 +614,17 @@ public final class GameObject extends SceneNode {
             } else {
               int var7;
               int var8;
-              if ((var6 == 2 -1)) {
+              if ((var6 == 1)) {
                 DummyClass42.anIntArray887[DummyClass13.anInt2022++] = var3;
                 var4.anInt2838 = AbstractGameWorld.updateCycle;
                 var7 = SpotAnimationConfig.gameBuffer.readBits(3);
                 var4.method1968(1, (byte) 46, var7);
                 var8 = SpotAnimationConfig.gameBuffer.readBits(1);
-                if ((var8 == 2 -1)) {
+                if ((var8 == 1)) {
                   DummyClass60.anIntArray441[OndemandRequester.anInt997++] = var3;
                 }
               } else {
-                if ((var6 == 3 -1)) {
+                if ((var6 == 2)) {
                   DummyClass42.anIntArray887[DummyClass13.anInt2022++] = var3;
                   var4.anInt2838 = AbstractGameWorld.updateCycle;
                   if (SpotAnimationConfig.gameBuffer.readBits(1) == 1) {
@@ -642,7 +642,7 @@ public final class GameObject extends SceneNode {
                     DummyClass60.anIntArray441[OndemandRequester.anInt997++] = var3;
                   }
                 } else {
-                  if ((var6 == 4 -1)) {
+                  if ((var6 == 3)) {
                     VariableUpdate.anIntArray2292[DummyClass17.anInt1829++] = var3;
                   }
                 }

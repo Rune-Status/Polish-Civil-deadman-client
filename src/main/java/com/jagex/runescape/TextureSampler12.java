@@ -64,7 +64,7 @@ public final class TextureSampler12 extends AbstractTextureSampler {
       } else {
         if (var1 == 1) {
           this.anInt3036 = var2.readUnsignedByte();
-        } else if ((var1 == 4 -1)) {
+        } else if ((var1 == 3)) {
           this.anInt3037 = var2.readUnsignedByte();
         }
       }
@@ -147,7 +147,7 @@ public final class TextureSampler12 extends AbstractTextureSampler {
           var6, (byte) 119, var5);
       } else {
         if ((var5 == -1)) {
-          for (int var9 = 0; (var9 < 101 -1); ++var9) {
+          for (int var9 = 0; (var9 < 100); ++var9) {
             GroundItemNode.aBooleanArray3674[var9] = true;
           }
         } else {

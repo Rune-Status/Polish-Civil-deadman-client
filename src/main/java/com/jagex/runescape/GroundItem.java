@@ -133,7 +133,7 @@ public final class GroundItem extends SceneNode {
                   for (var17 = 0; var4[var16][var9][var12].anInt2223 > var17; ++var17) {
                     var18 =
                       (int) (63L & var4[var16][var9][var12].sceneGraphNodes[var17].aLong498 >> 14);
-                    if ((var18 == 22 -1)) {
+                    if ((var18 == 21)) {
                       var18 = 19;
                     }
 
@@ -192,7 +192,7 @@ public final class GroundItem extends SceneNode {
           }
 
           if (!var14) {
-            if ((var9 >= 2 -1) &&
+            if ((var9 >= 1) &&
               AbstractImageProducer.aByteArrayArrayArray2008[GameWorldSomething.currentPlane][-1
                 + var9][var12] != var6) {
               TextureSampler38.anIntArray3456[var23] =
@@ -228,7 +228,7 @@ public final class GroundItem extends SceneNode {
                   var6;
               }
 
-              if (((1 + var9) < 105 -1) &&
+              if (((1 + var9) < 104) &&
                 AbstractImageProducer.aByteArrayArrayArray2008[GameWorldSomething.currentPlane][var9
                   + 1][var12] != var6 && (
                   BZipDecompressorState.tileFlags[GameWorldSomething.currentPlane][var9][var12]
@@ -284,7 +284,7 @@ public final class GroundItem extends SceneNode {
                   var6;
               }
 
-              if (((var9 - -1) < 105 -1) &&
+              if (((var9 - -1) < 104) &&
                 AbstractImageProducer.aByteArrayArrayArray2008[GameWorldSomething.currentPlane][var9
                   + 1][var12] != var6 &&
                 ((4 & BZipDecompressorState.tileFlags[GameWorldSomething.currentPlane][var9][var12]) == 0) &&

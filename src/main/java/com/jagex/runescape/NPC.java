@@ -96,7 +96,7 @@ public final class NPC extends Mobile {
               float var18 = GlRenderer.method1852();
               float var19 = GlRenderer.method1839();
               GlRenderer.method1851();
-              GlRenderer.method1825(var18, -150.0F + var19);
+              GlRenderer.method1825(var18, -150.0f + var19);
               assert var17 != null;
               var17.draw(0, var2, var3, var4, var5, var6, var7, var8, -1L, var11,
                   this.aClass127_Sub1_2801);
@@ -136,7 +136,7 @@ public final class NPC extends Mobile {
           }
 
           if (GlRenderer.useOpenGlRenderer) {
-            if ((this.config.size == 2 -1)) {
+            if ((this.config.size == 1)) {
               var15.aBoolean2699 = true;
             }
 
@@ -144,7 +144,7 @@ public final class NPC extends Mobile {
                 var11,
                 this.aClass127_Sub1_2801);
             if (var17 != null) {
-              if ((this.config.size == 2 -1)) {
+              if ((this.config.size == 1)) {
                 var17.aBoolean2699 = true;
               }
 
@@ -278,7 +278,7 @@ public final class NPC extends Mobile {
       }
 
       try {
-        if ((SomethingQuickChatK.anInt154 == 3 -1)) {
+        if ((SomethingQuickChatK.anInt154 == 2)) {
           if (MidiSomething.aClass3_Sub27_1154 == null) {
             MidiSomething.aClass3_Sub27_1154 =
               MidiFile.method517(DummyClass55.aClass153_1423, TextureSampler8.anInt3463,

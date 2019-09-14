@@ -117,7 +117,7 @@ public final class MaterialShader5 implements MaterialShader {
 
   public void set(int var1) {
     float var4 = (1 + (var1 >> 3 & 3)) * 0.01F;
-      float var3 = -0.01F * (1 + (var1 & 3));
+      float var3 = -0.01f * (1 + (var1 & 3));
       float var5 = (var1 & 64) == 0 ? 4.8828125E-4F : 9.765625E-4F;
       boolean var6 = ((128 & var1) != 0);
       if (var6) {
@@ -213,8 +213,8 @@ public final class MaterialShader5 implements MaterialShader {
   public static boolean method1627(int var0, byte var1) {
     GameWorld var2 = ClassCheckRequest.method130(97, var0);
       if (var2 != null) {
-        if (SignLink.anInt1214 != 1 && (SignLink.anInt1214 != 3 -1)
-          && (AbstractGameWorld.usageLocation != 3 -1)) {
+        if (SignLink.anInt1214 != 1 && (SignLink.anInt1214 != 2)
+          && (AbstractGameWorld.usageLocation != 2)) {
           GameString var9 = GameStub.aClass94_8;
           if (AbstractGameWorld.usageLocation != 0) {
             var9 = RenderAnimation.concat(new GameString[] {
@@ -293,7 +293,7 @@ public final class MaterialShader5 implements MaterialShader {
           }
         } else {
           ++SubNode.anInt2571;
-          if ((AbstractImageProducer.gameId == 2 -1)) {
+          if ((AbstractImageProducer.gameId == 1)) {
             ScriptState.method1177(-1, 0L, (byte) -62, GroundItemNode.EMPTY_STRING, var11,
               (short) 36, GlTexture2d.aClass94_3762, var12);
           }
@@ -315,7 +315,7 @@ public final class MaterialShader5 implements MaterialShader {
           if ((var26 != var25)) {
             var25 = var26;
             int var18;
-            if ((var14 == 3 -1) && AbstractFileRequester.method2096(GameWorldSomething.currentPlane,
+            if ((var14 == 2) && AbstractFileRequester.method2096(GameWorldSomething.currentPlane,
               var12, var27, var26)) {
               GameObjectConfig var16 = DummyClass11.method2207(4, var15);
               if (var16.anIntArray1524 != null) {
@@ -326,7 +326,7 @@ public final class MaterialShader5 implements MaterialShader {
                 continue;
               }
 
-              if ((Something3d.anInt3012 == 2 -1)) {
+              if ((Something3d.anInt3012 == 1)) {
                 ScriptState.method1177(DummyClass54.anInt1403, var26, (byte) -58,
                   RenderAnimation.concat(new GameString[] {
                     RenderAnimation.aClass94_378, SomethingQuickChat.aClass94_3573,
@@ -349,7 +349,7 @@ public final class MaterialShader5 implements MaterialShader {
                         var19 = 42;
                       }
 
-                      if ((var18 == 2 -1)) {
+                      if ((var18 == 1)) {
                         var19 = 50;
                       }
 
@@ -362,7 +362,7 @@ public final class MaterialShader5 implements MaterialShader {
                         var20 = var16.anInt1517;
                       }
 
-                      if ((var18 == 4 -1)) {
+                      if ((var18 == 3)) {
                         var19 = 46;
                       }
 
@@ -370,7 +370,7 @@ public final class MaterialShader5 implements MaterialShader {
                         var20 = var16.anInt1522;
                       }
 
-                      if ((var18 == 5 -1)) {
+                      if ((var18 == 4)) {
                         var19 = 1001;
                       }
 
@@ -407,13 +407,13 @@ public final class MaterialShader5 implements MaterialShader {
             Player var38;
             NPC var36;
             int var37;
-            if ((var14 == 2 -1)) {
+            if ((var14 == 1)) {
               NPC var31 = TextureSampler5.npcs[var15];
               if (((var31.config.size & 1) == 0) && ((127 & var31.anInt2819) == 0)
                 && ((var31.anInt2829 & 127) == 0)
                 || (var31.config.size & 1) == 1 && (127 & var31.anInt2819) == 64 &&
                   ((
-                      var31.anInt2829 & 127) == 65 -1)) {
+                      var31.anInt2829 & 127) == 64)) {
                 var33 = var31.anInt2819 - -64 - 64 * var31.config.size;
                 var18 = -((-1 + var31.config.size) * 64) + var31.anInt2829;
 
@@ -487,7 +487,7 @@ public final class MaterialShader5 implements MaterialShader {
               TextureSampler13.method312(var15, 31, var27, var30, var12);
             }
 
-            if ((var14 == 4 -1)) {
+            if ((var14 == 3)) {
               Deque var28 =
                 TextureSampler0.groundItems[GameWorldSomething.currentPlane][var12][var27];
               if (var28 != null) {
@@ -495,7 +495,7 @@ public final class MaterialShader5 implements MaterialShader {
                     var32 != null; var32 = (GroundItemNode) var28.method1219(41)) {
                   var18 = var32.aClass140_Sub7_3676.anInt2936;
                   ItemConfig var40 = DummyClass35.getItemConfig(var18, (byte) 71);
-                  if ((Something3d.anInt3012 == 2 -1)) {
+                  if ((Something3d.anInt3012 == 1)) {
                     ++SomethingMidiFile.anInt2290;
                     ScriptState.method1177(DummyClass54.anInt1403, var18, (byte) -75,
                       RenderAnimation.concat(new GameString[] {
@@ -533,11 +533,11 @@ public final class MaterialShader5 implements MaterialShader {
                           var23 = var40.anInt756;
                         }
 
-                        if ((var21 == 4 -1)) {
+                        if ((var21 == 3)) {
                           var35 = 20;
                         }
 
-                        if ((var21 == 5 -1)) {
+                        if ((var21 == 4)) {
                           var35 = 24;
                         }
 

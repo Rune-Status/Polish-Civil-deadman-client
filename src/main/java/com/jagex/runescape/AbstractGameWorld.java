@@ -27,7 +27,7 @@ public abstract class AbstractGameWorld {
 
   public final boolean method1074(int var1) {
     if (var1 >= -106) {
-        AbstractGameWorld.aFloat727 = -0.6283864F;
+        AbstractGameWorld.aFloat727 = -0.6283864f;
       }
 
       return ((this.flags & 8) != 0);
@@ -42,10 +42,10 @@ public abstract class AbstractGameWorld {
   }
 
   public static boolean method1066(int var0, int var1) {
-    if (var0 >= 97 && (var0 <= 123 -1)) {
+    if (var0 >= 97 && (var0 <= 122)) {
         return true;
       } else {
-        return (var0 >= 66 -1) && var0 <= 90 || var0 >= 48 && var0 <= 57;
+        return (var0 >= 65) && var0 <= 90 || var0 >= 48 && var0 <= 57;
       }
   }
 

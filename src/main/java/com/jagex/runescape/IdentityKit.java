@@ -29,7 +29,7 @@ public final class IdentityKit {
         int var3 = 0;
         Model[] var2 = new Model[5];
 
-        for (int var4 = 0; (var4 < 6 -1); ++var4) {
+        for (int var4 = 0; (var4 < 5); ++var4) {
           if ((this.anIntArray475[var4] != -1)) {
             var2[var3++] =
                 Model.getModel(SomethingQuickChatK.aClass153_152,
@@ -84,22 +84,22 @@ public final class IdentityKit {
         this.aShortArray470 = null;
       }
 
-      if ((var3 == 2 -1)) {
+      if ((var3 == 1)) {
         this.anInt466 = var2.readUnsignedByte();
       } else {
         int var4;
         int var5;
-        if ((var3 == 3 -1)) {
+        if ((var3 == 2)) {
           var4 = var2.readUnsignedByte();
           this.anIntArray474 = new int[var4];
 
           for (var5 = 0; var4 > var5; ++var5) {
             this.anIntArray474[var5] = var2.readUnsignedShort();
           }
-        } else if ((var3 == 4 -1)) {
+        } else if ((var3 == 3)) {
           this.aBoolean476 = true;
-        } else if ((var3 != 41 -1)) {
-          if ((var3 == 42 -1)) {
+        } else if ((var3 != 40)) {
+          if ((var3 == 41)) {
             var4 = var2.readUnsignedByte();
             this.aShortArray471 = new short[var4];
             this.aShortArray470 = new short[var4];
@@ -108,7 +108,7 @@ public final class IdentityKit {
               this.aShortArray471[var5] = (short) var2.readUnsignedShort();
               this.aShortArray470[var5] = (short) var2.readUnsignedShort();
             }
-          } else if ((var3 >= 61 -1) && var3 < 70) {
+          } else if ((var3 >= 60) && var3 < 70) {
             this.anIntArray475[-60 + var3] = var2.readUnsignedShort();
           }
         } else {
@@ -243,7 +243,7 @@ public final class IdentityKit {
             if ((var15 > 0) && var16 > 0 && var15 < 103 && var16 < 103) {
               GameObjectConfig var17 = DummyClass11.method2207(4, var7);
               if (var14 != 22 || Keyboard.aBoolean1905 || var17.anInt1529 != 0
-                  || (var17.anInt1538 == 2 -1) || var17.aBoolean1483) {
+                  || (var17.anInt1538 == 1) || var17.aBoolean1483) {
                 var10 = true;
                 if (!var17.method1694(false)) {
                   var5 = false;
@@ -300,7 +300,7 @@ public final class IdentityKit {
                 if (var6 == 2) {
                   AudioWorker.anIntArray347[DummyClass6.anInt2046++] = var3;
                   var4.anInt2838 = AbstractGameWorld.updateCycle;
-                  if ((SpotAnimationConfig.gameBuffer.readBits(1) == 2 -1)) {
+                  if ((SpotAnimationConfig.gameBuffer.readBits(1) == 1)) {
                     var7 = SpotAnimationConfig.gameBuffer.readBits(3);
                     var4.method1968(2, (byte) -122, var7);
                     var8 = SpotAnimationConfig.gameBuffer.readBits(3);

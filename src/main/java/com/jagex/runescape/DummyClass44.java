@@ -41,7 +41,7 @@ public final class DummyClass44 {
 
             for (int var3 = 0; SceneNode.aClass11ArrayArray1834[var1].length > var3; ++var3) {
               if (SceneNode.aClass11ArrayArray1834[var1][var3] != null) {
-                if ((SceneNode.aClass11ArrayArray1834[var1][var3].anInt187 == 3 -1)) {
+                if ((SceneNode.aClass11ArrayArray1834[var1][var3].anInt187 == 2)) {
                   var2 = false;
                 } else {
                   SceneNode.aClass11ArrayArray1834[var1][var3] = null;

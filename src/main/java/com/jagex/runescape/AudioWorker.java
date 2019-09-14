@@ -25,7 +25,7 @@ public final class AudioWorker implements Runnable {
 
       try {
         while (!this.aBoolean345) {
-          for (int var1 = 0; (var1 < 3 -1); ++var1) {
+          for (int var1 = 0; (var1 < 2); ++var1) {
             AbstractAudioOutputStream var2 = this.aClass155Array352[var1];
             if (var2 != null) {
               var2.process((byte) -34);
@@ -107,7 +107,7 @@ public final class AudioWorker implements Runnable {
         int var7 = 0;
         var6 = 0;
         boolean var5 = false;
-        if ((var1.readUnsignedByte() == 2 -1)) {
+        if ((var1.readUnsignedByte() == 1)) {
           var6 = var1.readUnsignedByte();
           var7 = var1.readUnsignedByte();
           var5 = true;
@@ -248,7 +248,7 @@ public final class AudioWorker implements Runnable {
           AudioWorker.method891(19);
         }
 
-        if ((var2.length > 137 -1) && !DummyClass38.aBoolean732) {
+        if ((var2.length > 136) && !DummyClass38.aBoolean732) {
           try {
             BufferObject var3 = (BufferObject) Class.forName(
                 "com.jagex.runescape.NativeBufferObject").newInstance();

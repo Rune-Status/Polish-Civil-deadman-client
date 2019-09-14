@@ -68,26 +68,26 @@ public final class BitVariable {
   }
 
   public static void parseSettings(Buffer var0, int var1) {
-    if (((-var0.position + var0.bytes.length) >= 2 -1)) {
+    if (((-var0.position + var0.bytes.length) >= 1)) {
       int var2 = var0.readUnsignedByte();
-      if (var2 >= 0 && (var2 <= 12 -1)) {
+      if (var2 >= 0 && (var2 <= 11)) {
         byte var3;
         if (var2 == 11) {
           var3 = 33;
         } else if (var2 != 10) {
           if (var2 == 9) {
             var3 = 31;
-          } else if ((var2 == 9 -1)) {
+          } else if ((var2 == 8)) {
             var3 = 30;
-          } else if ((var2 == 8 -1)) {
+          } else if ((var2 == 7)) {
             var3 = 29;
-          } else if ((var2 != 7 -1)) {
-            if ((var2 == 6 -1)) {
+          } else if ((var2 != 6)) {
+            if ((var2 == 5)) {
               var3 = 28;
-            } else if ((var2 != 5 -1)) {
-              if ((var2 == 4 -1)) {
+            } else if ((var2 != 4)) {
+              if ((var2 == 3)) {
                 var3 = 23;
-              } else if ((var2 == 3 -1)) {
+              } else if ((var2 == 2)) {
                 var3 = 22;
               } else if (var2 == 1) {
                 var3 = 23;
@@ -106,8 +106,8 @@ public final class BitVariable {
 
         if (((var0.bytes.length - var0.position) >= var3)) {
           AbstractFileRequest.brightnessSetting = var0.readUnsignedByte();
-          if ((AbstractFileRequest.brightnessSetting >= 2 -1)) {
-            if ((AbstractFileRequest.brightnessSetting > 5 -1)) {
+          if ((AbstractFileRequest.brightnessSetting >= 1)) {
+            if ((AbstractFileRequest.brightnessSetting > 4)) {
               AbstractFileRequest.brightnessSetting = 4;
             }
           } else {
@@ -119,58 +119,58 @@ public final class BitVariable {
           Keyboard.aBoolean1905 = var0.readUnsignedByte() == 1;
           SceneSomething.aBoolean488 = var0.readUnsignedByte() == 1;
           Widget.aBoolean236 = var0.readUnsignedByte() == 1;
-          GameWorld.aBoolean2623 = (var0.readUnsignedByte() == 2 -1);
-          TextureSampler0.aBoolean3275 = (var0.readUnsignedByte() == 2 -1);
+          GameWorld.aBoolean2623 = (var0.readUnsignedByte() == 1);
+          TextureSampler0.aBoolean3275 = (var0.readUnsignedByte() == 1);
           Projectile.aBoolean2910 = var0.readUnsignedByte() == 1;
           HashTableIterator.anInt1137 = var0.readUnsignedByte();
           if (HashTableIterator.anInt1137 > 2) {
             HashTableIterator.anInt1137 = 2;
           }
 
-          DisplayMode.useBumpMaps = (var0.readUnsignedByte() == 2 -1);
+          DisplayMode.useBumpMaps = (var0.readUnsignedByte() == 1);
           if (var2 < 2) {
             var0.readUnsignedByte();
           }
 
           DummyHashTable.aBoolean1685 = var0.readUnsignedByte() == 1;
-          DummyClass35.aBoolean661 = (var0.readUnsignedByte() == 2 -1);
+          DummyClass35.aBoolean661 = (var0.readUnsignedByte() == 1);
           Parameter.anInt3622 = var0.readUnsignedByte();
-          if ((Parameter.anInt3622 > 3 -1)) {
+          if ((Parameter.anInt3622 > 2)) {
             Parameter.anInt3622 = 2;
           }
 
           GroundItemNode.anInt3671 = Parameter.anInt3622;
-          TextureSampler17.aBoolean3184 = (var0.readUnsignedByte() == 2 -1);
+          TextureSampler17.aBoolean3184 = (var0.readUnsignedByte() == 1);
           ClientScriptCall.anInt2453 = var0.readUnsignedByte();
-          if ((ClientScriptCall.anInt2453 > 128 -1)) {
+          if ((ClientScriptCall.anInt2453 > 127)) {
             ClientScriptCall.anInt2453 = 127;
           }
 
           BZipDecompressorState.anInt120 = var0.readUnsignedByte();
           DummyClass28.anInt340 = var0.readUnsignedByte();
-          if ((DummyClass28.anInt340 > 128 -1)) {
+          if ((DummyClass28.anInt340 > 127)) {
             DummyClass28.anInt340 = 127;
           }
 
-          if ((var2 >= 2 -1)) {
+          if ((var2 >= 1)) {
             AbstractTextureSampler.anInt2378 = var0.readUnsignedShort();
             TextureSampler21.anInt3071 = var0.readUnsignedShort();
           }
 
-          if ((var2 >= 4 -1) && (var2 < 7 -1)) {
+          if ((var2 >= 3) && (var2 < 6)) {
             var0.readUnsignedByte();
           }
 
-          if ((var2 >= 5 -1)) {
+          if ((var2 >= 4)) {
             int var4 = var0.readUnsignedByte();
-            if ((AudioStreamEncoder3.anInt3492 < 97 -1)) {
+            if ((AudioStreamEncoder3.anInt3492 < 96)) {
               var4 = 0;
             }
 
             DummyClass0.method1758(var4);
           }
 
-          if ((var2 >= 6 -1)) {
+          if ((var2 >= 5)) {
             GameString.anInt2148 = var0.readInt();
           }
 
@@ -182,12 +182,12 @@ public final class BitVariable {
             SubNode.anInt2577 = var0.readUnsignedByte();
           }
 
-          if ((var2 >= 8 -1)) {
+          if ((var2 >= 7)) {
             GameString.safemode = var0.readUnsignedByte() == 1;
           }
 
           if (var2 >= 8) {
-            AudioWorker.aBoolean346 = (var0.readUnsignedByte() == 2 -1);
+            AudioWorker.aBoolean346 = (var0.readUnsignedByte() == 1);
           }
 
           if (var2 >= 9) {
@@ -198,7 +198,7 @@ public final class BitVariable {
             FileCacheRequester.aBoolean1080 = var0.readUnsignedByte() != 0;
           }
 
-          if ((var2 >= 12 -1)) {
+          if ((var2 >= 11)) {
             DummyClass4.aBoolean3004 = (var0.readUnsignedByte() != 0);
           }
 

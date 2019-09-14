@@ -40,10 +40,10 @@ public final class FileTable {
   private void parse(int var1, byte[] var2) {
     Buffer var3 = new Buffer(ClientScriptEnum.method623((byte) -114, var2));
       int var4 = var3.readUnsignedByte();
-      if (var4 != 5 && (var4 != 7 -1)) {
+      if (var4 != 5 && (var4 != 6)) {
         throw new RuntimeException();
       } else {
-        if ((var4 >= 7 -1)) {
+        if ((var4 >= 6)) {
           this.version = var3.readInt();
         } else {
           this.version = 0;
@@ -199,7 +199,7 @@ public final class FileTable {
 
       if (var0.aByte273 == 0) {
         var0.anInt306 = var0.anInt316;
-      } else if ((var0.aByte273 != 2 -1)) {
+      } else if ((var0.aByte273 != 1)) {
         if (var0.aByte273 == 2) {
           var0.anInt306 = -var0.anInt316 + -var0.anInt168 + var3;
         } else if (var0.aByte273 != 3) {

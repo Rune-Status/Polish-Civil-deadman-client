@@ -125,7 +125,7 @@ public final class SomethingQuickChat2 extends SubNode {
 
   public static GameString method531(byte var0) {
     GameString var1;
-      if ((Something3d.anInt3012 == 2 -1) && (TextureSampler25.amountContextActions < 3 -1)) {
+      if ((Something3d.anInt3012 == 1) && (TextureSampler25.amountContextActions < 2)) {
         var1 = RenderAnimation.concat(new GameString[] {
           TextureSampler14.aClass94_3388, DummyInputStream.aClass94_43,
           RenderAnimation.aClass94_378, WorldMapLabel.aClass94_1724

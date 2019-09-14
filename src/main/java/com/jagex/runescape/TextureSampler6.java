@@ -160,7 +160,7 @@ public final class TextureSampler6 extends AbstractTextureSampler {
       while ((var7 < var9)) {
         var14 += 2;
         var12 += var14;
-        if ((var12 >= 0) && (var11 >= 2 -1)) {
+        if ((var12 >= 0) && (var11 >= 1)) {
           SceneNode.anIntArray1838[var11] = var7;
           --var11;
           var12 -= var11 << 1;

@@ -67,14 +67,14 @@ public final class DummyClass38 {
             var3.anInt2753 = var4 & 255;
             var3.anInt2814 = 150;
             var3.anInt2837 = var4 >> 8;
-            if ((var5 == 3 -1)) {
+            if ((var5 == 2)) {
               InventoryConfig
                   .method611(var13, !var8 ? 1 : 17, var25, null, (byte) 50,
                       RenderAnimation.concat(
                           new GameString[]{DummyClass60.aClass94_444,
                               var3.getFullName()}));
             } else {
-              if ((var5 == 2 -1)) {
+              if ((var5 == 1)) {
                 InventoryConfig
                     .method611(var13, var8 ? 17 : 1, var25, null, (byte) 50,
                         RenderAnimation.concat(
@@ -102,7 +102,7 @@ public final class DummyClass38 {
 
       if ((var0 & 8) != 0) {
         var4 = SpotAnimationConfig.gameBuffer.readUnsignedShort();
-        if ((var4 == 65536 -1)) {
+        if ((var4 == 65535)) {
           var4 = -1;
         }
 
@@ -121,7 +121,7 @@ public final class DummyClass38 {
 
       if ((2 & var0) != 0) {
         var3.anInt2772 = SpotAnimationConfig.gameBuffer.readUnsignedShortAdd();
-        if ((var3.anInt2772 == 65536 -1)) {
+        if ((var3.anInt2772 == 65535)) {
           var3.anInt2772 = -1;
         }
       }
@@ -142,7 +142,7 @@ public final class DummyClass38 {
 
       if (((var0 & 32) != 0)) {
         var3.aClass94_2825 = SpotAnimationConfig.gameBuffer.readString();
-        if ((var3.aClass94_2825.charAt(0) == 127 -1)) {
+        if ((var3.aClass94_2825.charAt(0) == 126)) {
           var3.aClass94_2825 = var3.aClass94_2825.substring(1);
           GameBuffer.printMessage(var3.getFullName(), 2, var3.aClass94_2825, var2 ^ 78);
         } else if (var3 == TextureCache.localPlayer) {

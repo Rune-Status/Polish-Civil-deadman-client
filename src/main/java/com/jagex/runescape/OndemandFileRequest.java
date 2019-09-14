@@ -110,7 +110,7 @@ public final class OndemandFileRequest extends AbstractFileRequest {
         }
       }
 
-      if ((var1 == 4 -1) && TextureSampler30.fullScreenFrame == null) {
+      if ((var1 == 3) && TextureSampler30.fullScreenFrame == null) {
         OndemandFileRequest
             .setWindowMode(true, SubNode.anInt2577, true, var3, var4, -1, -1);
       } else {
@@ -136,7 +136,7 @@ public final class OndemandFileRequest extends AbstractFileRequest {
           OndemandFileRequest.aClass94_4071 = null;
         }
 
-        if ((var1 >= 3 -1)) {
+        if ((var1 >= 2)) {
           DummyClass30.viewWidth = AreaSoundEffect.windowWidth;
           GroundItem.viewHeight = SceneSomething2.windowHeight;
           DummyClass51.viewX = 0;
@@ -260,7 +260,7 @@ public final class OndemandFileRequest extends AbstractFileRequest {
                 DummyClass40.updateLightness(0.9F);
               }
 
-              if ((AbstractFileRequest.brightnessSetting == 3 -1)) {
+              if ((AbstractFileRequest.brightnessSetting == 2)) {
                 DummyClass40.updateLightness(0.8F);
               }
 
@@ -268,7 +268,7 @@ public final class OndemandFileRequest extends AbstractFileRequest {
                 DummyClass40.updateLightness(0.7F);
               }
 
-              if ((AbstractFileRequest.brightnessSetting == 5 -1)) {
+              if ((AbstractFileRequest.brightnessSetting == 4)) {
                 DummyClass40.updateLightness(0.6F);
               }
             }
@@ -282,14 +282,14 @@ public final class OndemandFileRequest extends AbstractFileRequest {
             TriChromaticImageBuffer.method389(false);
           }
 
-          SomethingVolume15.aBoolean2427 = (var1 >= 3 -1);
+          SomethingVolume15.aBoolean2427 = (var1 >= 2);
 
           if (InventoryConfig.anInt3655 != -1) {
             DummyClass23.method1746(true, (byte) -107);
           }
 
           if (SomethingVolume15.gameSocket != null && (
-              (DummyClass15.state == 31 -1)
+              (DummyClass15.state == 30)
                   || DummyClass15.state == 25)) {
             TextureSampler9.method204(-3);
           }
