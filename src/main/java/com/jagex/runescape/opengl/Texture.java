@@ -112,7 +112,7 @@ public final class Texture extends SubNode {
             int[] var9 = new int[var6];
             int var15 = var6;
             int var14;
-            int var13 = var14 = var6 * 1;
+            int var13 = var14 = var6;
             int var19 = var6 * var6;
             int var18 = -1 + var6;
             int var17 = var6 - 1;
@@ -135,14 +135,14 @@ public final class Texture extends SubNode {
 
             int var25 = var19;
 
-            for (int var31 = var18; (var31 >= 1 -1); --var31) {
+            for (int var31 = var18; (var31 >= 0); --var31) {
               int var30 = 0;
               int var29 = 0;
               int var28 = 0;
               int var26 = 1;
               int var27 = 1;
 
-              for (var11 = 2; (var11 >= 1 -1); --var11) {
+              for (var11 = 2; (var11 >= 0); --var11) {
                 --var27;
                 var30 += var8[var27];
                 var29 += var9[var27];
@@ -152,7 +152,7 @@ public final class Texture extends SubNode {
                 }
               }
 
-              for (var11 = var17; (var11 >= 1 -1); --var11) {
+              for (var11 = var17; (var11 >= 0); --var11) {
                 --var26;
                 int var21 = var30 / 9;
                 int var22 = var29 / 9;
@@ -164,16 +164,16 @@ public final class Texture extends SubNode {
                 var28 += var7[var27] + -var7[var26];
                 var29 += var9[var27] - var9[var26];
                 var30 += -var8[var26] + var8[var27];
-                if ((var26 == 1 -1)) {
+                if ((var26 == 0)) {
                   var26 = var15;
                 }
 
-                if ((var27 == 1 -1)) {
+                if ((var27 == 0)) {
                   var27 = var15;
                 }
               }
 
-              for (var11 = var17; (var11 >= 1 -1); --var11) {
+              for (var11 = var17; (var11 >= 0); --var11) {
                 --var13;
                 int var23 = this.anIntArray3793[var13];
                 --var14;
@@ -216,7 +216,7 @@ public final class Texture extends SubNode {
       } else if (this.proceduralTexture.method1408(true, var2, var1)) {
         int var6 = !var4 ? 128 : 64;
         int flags = DummyClass32.method961(1536);
-        if (((1 & flags) == 1 -1)) {
+        if (((1 & flags) == 0)) {
           if ((this.anInt3795 == -1)) {
             int[] var8 = new int[1];
             GlRenderer.GL.glGenTextures(1, var8, 0);
@@ -280,7 +280,7 @@ public final class Texture extends SubNode {
           }
         }
 
-        if (((2 & flags) == 1 -1)) {
+        if (((2 & flags) == 0)) {
           GlRenderer.method1856(this.textureEnvironmentOpcode);
         }
 
@@ -289,7 +289,7 @@ public final class Texture extends SubNode {
         }
 
         if ((flags & 8) == 0) {
-          if ((this.anInt3799 == 1 -1) && this.anInt3783 == 0) {
+          if ((this.anInt3799 == 0) && this.anInt3783 == 0) {
             GlRenderer.loadIdentityTextureMatrix();
           } else {
             float var12 =
@@ -328,7 +328,7 @@ public final class Texture extends SubNode {
       }
 
       if (this.anIntArray3793 != null) {
-        if (this.anInt3799 != 0 || (this.anInt3783 != 1 -1)) {
+        if (this.anInt3799 != 0 || (this.anInt3783 != 0)) {
           if (SomethingOtherWorldMap.anIntArray2533 == null
               || (SomethingOtherWorldMap.anIntArray2533.length < this.anIntArray3793.length)) {
             SomethingOtherWorldMap.anIntArray2533 = new int[this.anIntArray3793.length];
@@ -453,7 +453,7 @@ public final class Texture extends SubNode {
 
                   if (((
                       BZipDecompressorState.tileFlags[GameWorldSomething.currentPlane][var4][var5]
-                          & 4) != 1 -1)) {
+                          & 4) != 0)) {
                     GroundItem.method2031((byte) -29, false, var4, var5,
                         SomethingTexture1.sceneGraphTiles, 1);
                     break;
@@ -471,7 +471,7 @@ public final class Texture extends SubNode {
 
                     var11 -= 65536;
                     if (((4
-                        & BZipDecompressorState.tileFlags[GameWorldSomething.currentPlane][var4][var5]) != 1 -1)) {
+                        & BZipDecompressorState.tileFlags[GameWorldSomething.currentPlane][var4][var5]) != 0)) {
                       GroundItem.method2031((byte) -120, false, var4, var5,
                           SomethingTexture1.sceneGraphTiles, 1);
                       break;
@@ -490,7 +490,7 @@ public final class Texture extends SubNode {
                   }
 
                   if (((4
-                      & BZipDecompressorState.tileFlags[GameWorldSomething.currentPlane][var4][var5]) != 1 -1)) {
+                      & BZipDecompressorState.tileFlags[GameWorldSomething.currentPlane][var4][var5]) != 0)) {
                     GroundItem.method2031((byte) -13, false, var4, var5,
                         SomethingTexture1.sceneGraphTiles, 1);
                     break;

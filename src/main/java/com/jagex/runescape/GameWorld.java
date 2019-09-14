@@ -16,7 +16,7 @@ public final class GameWorld extends AbstractGameWorld {
   public GameString aClass94_2625;
 
   public GameWorldSomething method1078(int var1 ) {
-    int var2 = -35 / ((var1 - 0) / 56);
+    int var2 = -35 / ((var1) / 56);
       return DummyClass25.aClass26Array1627[this.anInt721];
   }
 

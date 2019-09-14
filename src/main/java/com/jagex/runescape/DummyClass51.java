@@ -127,9 +127,9 @@ public final class DummyClass51 {
             & 7) - (-((!AbstractObjectNode.aBoolean3604 ? 0 : 1) << 4) + -(
             (GameWorld.aBoolean2623 ? 1 : 0) << 8)) - (
             -(HashTableIterator.anInt1137 << 11 & 6144) + -(
-              ((ClientScriptCall.anInt2453 == 1 -1) ? 0 : 1) << 20) - (
-              (((BZipDecompressorState.anInt120 != 1 -1) ? 1 : 0) << 21) + (
-                ((DummyClass28.anInt340 == 1 -1) ? 0 : 1) << 22)))) - -(DummyClass0.method1757()
+              ((ClientScriptCall.anInt2453 == 0) ? 0 : 1) << 20) - (
+              (((BZipDecompressorState.anInt120 != 0) ? 1 : 0) << 21) + (
+                ((DummyClass28.anInt340 == 0) ? 0 : 1) << 22)))) - -(DummyClass0.method1757()
           << 23));
   }
 

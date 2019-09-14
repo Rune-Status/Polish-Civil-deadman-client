@@ -26,7 +26,7 @@ public final class MidiSomething {
         SomethingMusic0 var8 = (SomethingMusic0) this.aClass130_1159.get(var6);
         if (var8 != null) {
           return var8;
-        } else if (var1 != null && (var1[0] <= 1 -1)) {
+        } else if (var1 != null && (var1[0] <= 0)) {
           return null;
         } else {
           SoundEffect var9 = SoundEffect
@@ -167,7 +167,7 @@ public final class MidiSomething {
               var25 = var7 * var24 + var9 >> 16;
               var26 = var9 - -((1 + var24) * var7) >> 16;
               int var27 = -var25 + var26;
-              if ((var27 > 1 -1)) {
+              if ((var27 > 0)) {
                 var26 += var0;
                 var28 = var3 + var24 >> 6;
                 int var29 = 63 & var3 + var24;
@@ -189,7 +189,7 @@ public final class MidiSomething {
                     var32 = Buffer.aClass3_Sub28_Sub3_2600.anInt3550;
                   }
 
-                  if ((var28 < 1 -1) || var28 > var41.length + -1) {
+                  if ((var28 < 0) || var28 > var41.length + -1) {
                     if (var32 == 0) {
                       var32 = 1;
                     }
@@ -201,14 +201,14 @@ public final class MidiSomething {
 
                 var33 =
                   var45[var28] == null ? 0 : DummyClass51.anIntArray1161[var45[var28][var31] & 255];
-                if ((var32 == 1 -1)) {
+                if ((var32 == 0)) {
                   var32 = 1;
                 }
 
                 int var34 =
                   var46[var28] != null ? DummyClass51.anIntArray1161[255 & var46[var28][var31]] : 0;
                 int var36;
-                if (var33 == 0 && (var34 == 1 -1)) {
+                if (var33 == 0 && (var34 == 0)) {
                   DummyClass47.method1323(var14, var25, var16, var27, var32);
                 } else {
                   byte var35;
@@ -219,7 +219,7 @@ public final class MidiSomething {
 
                     var35 = var42[var28] != null ? var42[var28][var31] : 0;
                     var36 = var35 & 252;
-                    if ((var36 != 1 -1) && (var16 > 2 -1) && var27 > 1) {
+                    if ((var36 != 0) && (var16 > 2 -1) && var27 > 1) {
                       FloorOverlay.method2272(DummyClass47.anIntArray1100, var33, var14, var35 & 3,
                         var32, var36 >> 2, var27, var16, var25, true, (byte) 21);
                     } else {
@@ -227,14 +227,14 @@ public final class MidiSomething {
                     }
                   }
 
-                  if ((var34 != 1 -1)) {
+                  if ((var34 != 0)) {
                     if (var34 == -1) {
                       var34 = var32;
                     }
 
                     var35 = var43[var28][var31];
                     var36 = 252 & var35;
-                    if ((var36 == 1 -1) || (var16 <= 2 -1) || var27 <= 1) {
+                    if ((var36 == 0) || (var16 <= 2 -1) || var27 <= 1) {
                       DummyClass47.method1323(var14, var25, var16, var27, var34);
                     }
 
@@ -245,7 +245,7 @@ public final class MidiSomething {
 
                 if (var23[var28] != null) {
                   int var49 = var23[var28][var31] & 255;
-                  if ((var49 != 1 -1)) {
+                  if ((var49 != 0)) {
                     if (var16 == 1) {
                       var36 = var14;
                     } else {
@@ -347,7 +347,7 @@ public final class MidiSomething {
                 var19 = 4936552;
               }
 
-              if ((var19 == 1 -1)) {
+              if ((var19 == 0)) {
                 var19 = 1;
               }
 
@@ -366,11 +366,11 @@ public final class MidiSomething {
         var14 = var1 - -(var13 * var8) >> 16;
         var15 = var8 * (var13 + 1) + var1 >> 16;
         var16 = -var14 + var15;
-        if ((var16 > 1 -1)) {
+        if ((var16 > 0)) {
           var14 += var5;
           var17 = var6 + var13 >> 6;
           var10000 = var15 + var5;
-          if ((var17 >= 1 -1)
+          if ((var17 >= 0)
               && PlayerVariable.anIntArrayArrayArray558.length + -1 >= var17) {
             var41 = PlayerVariable.anIntArrayArrayArray558[var17];
 
@@ -378,16 +378,16 @@ public final class MidiSomething {
               var20 = var9 - -(var19 * var7) >> 16;
               var21 = var9 - -((var19 + 1) * var7) >> 16;
               var22 = var21 + -var20;
-              if ((var22 > 1 -1)) {
+              if ((var22 > 0)) {
                 var20 += var0;
                 int var44 = var19 - -var3 >> 6;
                 var10000 = var21 + var0;
-                if ((var44 >= 1 -1) && var44 <= -1 + var41.length) {
+                if ((var44 >= 0) && var44 <= -1 + var41.length) {
                   var24 = ((63 & var3 + var19) << 6) - -(var13 - -var6 & 63);
                   if (var41[var44] != null) {
                     var25 = var41[var44][var24];
                     var26 = 16383 & var25;
-                    if ((var26 != 1 -1)) {
+                    if ((var26 != 0)) {
                       var28 = ('\ud228' & var25) >> 14;
                       MapScene var47 = WidgetUpdate.c(-1 + var26, 0);
                       SoftwareIndexedColorSprite var48 = var47.getSprite(var28, (byte) -71);
@@ -407,8 +407,8 @@ public final class MidiSomething {
                           var31 = var22 * var33;
                         }
 
-                        if ((var30 != 1 -1) && (var31 != 1 -1)) {
-                          if ((var47.anInt61 == 1 -1)) {
+                        if ((var30 != 0) && (var31 != 0)) {
+                          if ((var47.anInt61 == 0)) {
                             var48.method1677(var14, -var31 + var20 - -var22, var30, var31);
                           } else {
                             var48.method1669(var14, var20 - (var31 - var22), var30, var31,

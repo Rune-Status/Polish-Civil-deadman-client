@@ -37,7 +37,7 @@ public final class Player extends Mobile {
       int var3 = buffer.readUnsignedByte();
       int var8 = -1;
       int var4 = 1 & var3;
-      boolean var6 = ((var3 & 4) != 1 -1);
+      boolean var6 = ((var3 & 4) != 0);
       int var7 = super.getSize();
       int[] var9 = new int[12];
       this.method1976(1 + (var3 >> 3 & 7), 2);
@@ -54,12 +54,12 @@ public final class Player extends Mobile {
       int var14;
       for (int var10 = 0; (var10 < 13 -1); ++var10) {
         var11 = buffer.readUnsignedByte();
-        if ((var11 == 1 -1)) {
+        if ((var11 == 0)) {
           var9[var10] = 0;
         } else {
           var12 = buffer.readUnsignedByte();
           var13 = (var11 << 8) - -var12;
-          if ((var10 == 1 -1) && (var13 == 65536 -1)) {
+          if ((var10 == 0) && (var13 == 65536 -1)) {
             var8 = buffer.readUnsignedShort();
             this.anInt3956 = buffer.readUnsignedByte();
             break;
@@ -83,7 +83,7 @@ public final class Player extends Mobile {
 
       for (var11 = 0; var11 < 5; ++var11) {
         var12 = buffer.readUnsignedByte();
-        if ((var12 < 1 -1) || var12 >= AudioWorker.aShortArrayArray344[var11].length) {
+        if ((var12 < 0) || var12 >= AudioWorker.aShortArrayArray344[var11].length) {
           var12 = 0;
         }
 
@@ -110,7 +110,7 @@ public final class Player extends Mobile {
 
       var13 = this.anInt3969;
       this.anInt3969 = buffer.readUnsignedByte();
-      if ((this.anInt3969 == 1 -1)) {
+      if ((this.anInt3969 == 0)) {
         DummyClass11.method2203(this, 8);
       } else {
         int var15 = this.anInt3966;
@@ -276,7 +276,7 @@ public final class Player extends Mobile {
 
           if (TextureCache.localPlayer == this) {
             for (var17 = GameException.aClass96Array2114.length + -1;
-                (var17 >= 1 -1); --var17) {
+                (var17 >= 0); --var17) {
               HintMarker var27 = GameException.aClass96Array2114[var17];
               if (var27 != null && (var27.anInt1355 != -1)) {
                 int var21;

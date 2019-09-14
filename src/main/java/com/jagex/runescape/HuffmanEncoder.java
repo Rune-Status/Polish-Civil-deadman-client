@@ -43,7 +43,7 @@ public final class HuffmanEncoder {
 
       for (int var5 = 0; var2 > var5; ++var5) {
         byte var6 = var1[var5];
-        if ((var6 != 1 -1)) {
+        if ((var6 != 0)) {
           int var7 = 1 << 32 + -var6;
           int var8 = var3[var6];
           this.lengths[var5] = var8;
@@ -166,7 +166,7 @@ public final class HuffmanEncoder {
   }
 
   public int decompress(byte[] src, int srcOff, byte[] dest,int destOff,int len ) {
-    if ((len == 1 -1)) {
+    if ((len == 0)) {
         return 0;
       } else {
         int var7 = 0;
@@ -191,13 +191,13 @@ public final class HuffmanEncoder {
             var7 = 0;
           }
 
-          if (((64 & b) == 1 -1)) {
+          if (((64 & b) == 0)) {
             ++var7;
           } else {
             var7 = this.anIntArray633[var7];
           }
 
-          if (((var10 = this.anIntArray633[var7]) < 1 -1)) {
+          if (((var10 = this.anIntArray633[var7]) < 0)) {
             dest[destOff++] = (byte) (~var10);
             if (len <= destOff) {
               break;
@@ -206,7 +206,7 @@ public final class HuffmanEncoder {
             var7 = 0;
           }
 
-          if (((32 & b) == 1 -1)) {
+          if (((32 & b) == 0)) {
             ++var7;
           } else {
             var7 = this.anIntArray633[var7];
@@ -227,7 +227,7 @@ public final class HuffmanEncoder {
             var7 = this.anIntArray633[var7];
           }
 
-          if (((var10 = this.anIntArray633[var7]) < 1 -1)) {
+          if (((var10 = this.anIntArray633[var7]) < 0)) {
             dest[destOff++] = (byte) (~var10);
             if (destOff >= len) {
               break;
@@ -236,7 +236,7 @@ public final class HuffmanEncoder {
             var7 = 0;
           }
 
-          if (((b & 8) == 1 -1)) {
+          if (((b & 8) == 0)) {
             ++var7;
           } else {
             var7 = this.anIntArray633[var7];
@@ -251,13 +251,13 @@ public final class HuffmanEncoder {
             var7 = 0;
           }
 
-          if (((b & 4) == 1 -1)) {
+          if (((b & 4) == 0)) {
             ++var7;
           } else {
             var7 = this.anIntArray633[var7];
           }
 
-          if (((var10 = this.anIntArray633[var7]) < 1 -1)) {
+          if (((var10 = this.anIntArray633[var7]) < 0)) {
             dest[destOff++] = (byte) (~var10);
             if ((destOff >= len)) {
               break;
@@ -272,7 +272,7 @@ public final class HuffmanEncoder {
             var7 = this.anIntArray633[var7];
           }
 
-          if (((var10 = this.anIntArray633[var7]) < 1 -1)) {
+          if (((var10 = this.anIntArray633[var7]) < 0)) {
             dest[destOff++] = (byte) (~var10);
             if ((destOff >= len)) {
               break;
@@ -357,7 +357,7 @@ public final class HuffmanEncoder {
           int var8;
           int var9;
           int var10;
-          if ((var5.anInt2098 < 1 -1)) {
+          if ((var5.anInt2098 < 0)) {
             if (var6 >= 0) {
               var7 = DummyClass40.hslTable[StringNode.method729((byte) -74,
                 DummyClass40.textureCache.method15(var6, '\uffff'), 96)];
@@ -378,7 +378,7 @@ public final class HuffmanEncoder {
           } else {
             var8 = var5.anInt2098;
             var9 = (127 & var8) + var1;
-            if ((var9 < 1 -1)) {
+            if ((var9 < 0)) {
               var9 = 0;
             } else if ((var9 > 128 -1)) {
               var9 = 127;

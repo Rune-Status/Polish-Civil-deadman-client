@@ -200,7 +200,7 @@ public final class TextureSampler8 extends AbstractTextureSampler {
   }
 
   private int[] method356(byte var1, int var2) {
-    if ((var2 >= 1 -1)) {
+    if ((var2 >= 0)) {
         if ((var2 >= this.anIntArrayArray3469.length)) {
           return this.anIntArray3467;
         } else {

@@ -81,7 +81,7 @@ public final class GameObject extends SceneNode {
 
         this.anInt2746 = 1;
         this.anInt2749 = -1 + AbstractGameWorld.updateCycle;
-        if ((this.aClass142_2722.anInt1845 == 1 -1) && var9 != null && var9 instanceof GameObject) {
+        if ((this.aClass142_2722.anInt1845 == 0) && var9 != null && var9 instanceof GameObject) {
           GameObject var12 = (GameObject) var9;
           if (this.aClass142_2722 == var12.aClass142_2722) {
             this.anInt2726 = var12.anInt2726;
@@ -187,7 +187,7 @@ public final class GameObject extends SceneNode {
           this.anInt2733 = 1 + this.anInt2726;
           if (this.anInt2733 >= this.aClass142_2722.anIntArray1851.length) {
             this.anInt2733 -= this.aClass142_2722.anInt1865;
-            if ((this.anInt2733 < 1 -1)
+            if ((this.anInt2733 < 0)
               || this.aClass142_2722.anIntArray1851.length <= this.anInt2733) {
               this.anInt2733 = -1;
             }
@@ -211,7 +211,7 @@ public final class GameObject extends SceneNode {
           this.anInt2733 = this.anInt2726 - -1;
           if ((this.aClass142_2722.anIntArray1851.length <= this.anInt2733)) {
             this.anInt2733 -= this.aClass142_2722.anInt1865;
-            if ((this.anInt2733 < 1 -1)
+            if ((this.anInt2733 < 0)
               || (this.anInt2733 >= this.aClass142_2722.anIntArray1851.length)) {
               this.anInt2733 = -1;
             }
@@ -336,7 +336,7 @@ public final class GameObject extends SceneNode {
               }
 
               int var21 = 0;
-              if ((this.anInt2732 != 1 -1)) {
+              if ((this.anInt2732 != 0)) {
                 int[][] var22 = AbstractGameWorld.heightMap[0];
                 var21 = var15 - (var22[var10][var11] + var22[var9][var11] - (-var22[var9][var12]
                   - var22[var10][var12]) >> 2);
@@ -602,7 +602,7 @@ public final class GameObject extends SceneNode {
           int var3 = DummyClass42.anIntArray887[var2];
           Player var4 = TextureSampler0.players[var3];
           int var5 = SpotAnimationConfig.gameBuffer.readBits(1);
-          if ((var5 == 1 -1)) {
+          if ((var5 == 0)) {
             DummyClass42.anIntArray887[DummyClass13.anInt2022++] = var3;
             var4.anInt2838 = AbstractGameWorld.updateCycle;
           } else {

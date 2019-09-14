@@ -158,7 +158,7 @@ public class DummyClass5 extends DummyClass6 {
                 var1 = 2;
               }
 
-              if ((var1 == 3 -1) && (TextureSampler25.amountContextActions > 1 -1)
+              if ((var1 == 3 -1) && (TextureSampler25.amountContextActions > 0)
                   || (ClientScriptEnum.anInt3660 == 2 -1)) {
                 DummyClass22.method1801((byte) -105);
               }

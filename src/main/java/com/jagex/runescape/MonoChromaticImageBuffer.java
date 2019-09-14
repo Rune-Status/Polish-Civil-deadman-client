@@ -40,7 +40,7 @@ public final class MonoChromaticImageBuffer extends Node {
 
   public static int method513(int var0, int var1) {
     int var2 = 0;
-      if ((var0 < 1 -1) || (var0 >= 65537 -1)) {
+      if ((var0 < 0) || (var0 >= 65537 -1)) {
         var2 += 16;
         var0 >>>= 16;
       }
@@ -74,7 +74,7 @@ public final class MonoChromaticImageBuffer extends Node {
         MonoChromaticImageBuffer.method513(-92, 76);
       }
 
-      return (var0 == 1 -1) ? var1 : (var0 == 1
+      return (var0 == 0) ? var1 : (var0 == 1
           ? var3 : (var0 != 2 ? -var3 + 1023 : 1023 + -var1));
   }
 

@@ -126,7 +126,7 @@ public abstract class Mobile extends SceneNode {
             ++this.anInt2816;
           }
 
-          for (int var8 = this.anInt2816; (var8 > 1 -1); --var8) {
+          for (int var8 = this.anInt2816; (var8 > 0); --var8) {
             this.waypointsX[var8] = this.waypointsX[-1 + var8];
             this.waypointsY[var8] = this.waypointsY[var8 + -1];
             this.aByteArray2795[var8] = this.aByteArray2795[var8 - 1];
@@ -169,7 +169,7 @@ public abstract class Mobile extends SceneNode {
       }
 
       int var6;
-      for (var6 = this.anInt2816; (var6 > 1 -1); --var6) {
+      for (var6 = this.anInt2816; (var6 > 0); --var6) {
         this.waypointsX[var6] = this.waypointsX[-1 + var6];
         this.waypointsY[var6] = this.waypointsY[-1 + var6];
         this.aByteArray2795[var6] = this.aByteArray2795[-1 + var6];
@@ -224,7 +224,7 @@ public abstract class Mobile extends SceneNode {
       assert var4 != null;
       int var5 = var4.anInt395;
       int var6 = var4.anInt381;
-      if ((var5 != 1 -1) && var6 != 0) {
+      if ((var5 != 0) && var6 != 0) {
         int var7 = DummyClass40.SINE_TABLE[var3];
         int var8 = DummyClass40.COSINE_TABLE[var3];
         int var9 = -var5 / 2;
@@ -308,7 +308,7 @@ public abstract class Mobile extends SceneNode {
       if (var3.anInt400 != 0 || var3.anInt371 != 0) {
         int var4 = 0;
         int var5 = 0;
-        if (this.aBoolean2769 && (this.anInt2821 != 1 -1)) {
+        if (this.aBoolean2769 && (this.anInt2821 != 0)) {
           var5 = var3.anInt371;
           if (this.anInt2821 >= 0) {
             var4 = var3.anInt400;
@@ -323,7 +323,7 @@ public abstract class Mobile extends SceneNode {
         int var9;
         if (this.anInt2827 != var4) {
           this.anInt2827 = var4;
-          if ((this.anInt2754 > 1 -1) && this.anInt2787 < var4) {
+          if ((this.anInt2754 > 0) && this.anInt2787 < var4) {
             var6 = this.anInt2754 * this.anInt2754 / (2 * var3.anInt387);
             var7 = -this.anInt2787 + var4;
             if (var6 <= var7) {
@@ -337,7 +337,7 @@ public abstract class Mobile extends SceneNode {
             } else {
               this.aBoolean2807 = false;
             }
-          } else if ((this.anInt2754 < 1 -1) && this.anInt2787 > var4) {
+          } else if ((this.anInt2754 < 0) && this.anInt2787 > var4) {
             var6 = this.anInt2754 * this.anInt2754 / (var3.anInt387 * 2);
             var7 = var4 - this.anInt2787;
             if (var7 >= var6) {
@@ -356,7 +356,7 @@ public abstract class Mobile extends SceneNode {
           }
         }
 
-        if ((this.anInt2754 == 1 -1)) {
+        if ((this.anInt2754 == 0)) {
           var6 = -this.anInt2787 + this.anInt2827;
           if (-var3.anInt387 < var6 && var3.anInt387 > var6) {
             this.anInt2787 = this.anInt2827;
@@ -386,7 +386,7 @@ public abstract class Mobile extends SceneNode {
 
             if (!this.aBoolean2807) {
               this.anInt2754 -= var3.anInt387;
-              if ((this.anInt2754 < 1 -1)) {
+              if ((this.anInt2754 < 0)) {
                 this.anInt2754 = 0;
               }
             } else if (var3.anInt370 > this.anInt2754) {
@@ -411,7 +411,7 @@ public abstract class Mobile extends SceneNode {
         }
 
         this.anInt2787 += this.anInt2754;
-        if ((this.anInt2787 != 1 -1)) {
+        if ((this.anInt2787 != 0)) {
           var6 = (this.anInt2787 & '\ufff1') >> 5;
           var7 = var1.getMinimumY() / 2;
           var1.method1897(0, -var7, 0);
@@ -421,7 +421,7 @@ public abstract class Mobile extends SceneNode {
 
         if (var5 != this.anInt2766) {
           this.anInt2766 = var5;
-          if ((this.anInt2830 > 1 -1) && this.anInt2834 < var5) {
+          if ((this.anInt2830 > 0) && this.anInt2834 < var5) {
             var6 = this.anInt2830 * this.anInt2830 / (2 * var3.anInt403);
             var7 = -this.anInt2834 + var5;
             if (var6 > var7) {
@@ -435,7 +435,7 @@ public abstract class Mobile extends SceneNode {
                 this.anInt2757 = var9;
               }
             }
-          } else if ((this.anInt2830 < 1 -1) && this.anInt2834 > var5) {
+          } else if ((this.anInt2830 < 0) && this.anInt2834 > var5) {
             var7 = -this.anInt2834 + var5;
             var6 = this.anInt2830 * this.anInt2830 / (2 * var3.anInt403);
             if (var7 >= var6) {
@@ -454,7 +454,7 @@ public abstract class Mobile extends SceneNode {
           }
         }
 
-        if ((this.anInt2830 == 1 -1)) {
+        if ((this.anInt2830 == 0)) {
           var6 = -this.anInt2834 + this.anInt2766;
           if (var6 > (-var3.anInt403) && var3.anInt403 > var6) {
             this.anInt2834 = this.anInt2766;
@@ -462,7 +462,7 @@ public abstract class Mobile extends SceneNode {
             this.anInt2757 = (this.anInt2766 + this.anInt2834) / 2;
             this.aBoolean2783 = true;
             var7 = var3.anInt399 * var3.anInt399 / (2 * var3.anInt403);
-            if ((var6 < 1 -1)) {
+            if ((var6 < 0)) {
               this.anInt2830 = -var3.anInt403;
               var8 = var7 + this.anInt2766;
               if (this.anInt2757 > var8) {
@@ -477,7 +477,7 @@ public abstract class Mobile extends SceneNode {
             }
           }
         } else {
-          if ((this.anInt2830 > 1 -1)) {
+          if ((this.anInt2830 > 0)) {
             if ((this.anInt2834 >= this.anInt2757)) {
               this.aBoolean2783 = false;
             }
@@ -511,7 +511,7 @@ public abstract class Mobile extends SceneNode {
         }
 
         this.anInt2834 += this.anInt2830;
-        if ((this.anInt2834 != 1 -1)) {
+        if ((this.anInt2834 != 0)) {
           var6 = (this.anInt2834 & '\uffe6') >> 5;
           var7 = var1.getMinimumY() / 2;
           var1.method1897(0, -var7, 0);

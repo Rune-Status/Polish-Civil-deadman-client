@@ -68,7 +68,7 @@ public final class GameClient extends GameStub {
           NPC var4 = TextureSampler5.npcs[var3];
           if (var4 != null) {
             byte var5 = var4.config.aByte1267;
-            if ((var5 & 2) > 0 && (var4.anInt2816 == 1 -1)
+            if ((var5 & 2) > 0 && (var4.anInt2816 == 0)
                 && Math.random() * 1000.0D < 10.0D) {
               int var6 = (int) Math.round(-1.0D + 2.0D * Math.random());
               int var7 = (int) Math.round(Math.random() * 2.0D - 1.0D);
@@ -196,7 +196,7 @@ public final class GameClient extends GameStub {
             }
 
             var12 = var11.aClass11_2449;
-            if ((var12.anInt191 >= 1 -1)) {
+            if ((var12.anInt191 >= 0)) {
               var13 = EnumStringFetcher.getWidget((byte) 112, var12.anInt190);
               if (var13 == null || var13.aClass11Array262 == null
                   || (var12.anInt191 >= var13.aClass11Array262.length)
@@ -282,11 +282,11 @@ public final class GameClient extends GameStub {
       }
 
       DummyClass8.anInt4026 = DummyClass43.ondemandRequester.anInt1011;
-      if ((TextureSampler21.anInt3068 > 1 -1)) {
+      if ((TextureSampler21.anInt3068 > 0)) {
         --TextureSampler21.anInt3068;
       } else {
         try {
-          if ((DummyClass18.anInt80 == 1 -1)) {
+          if ((DummyClass18.anInt80 == 0)) {
             DummyClass1.socketRequest =
                 DummyClass35.signLink
                     .method1441((byte) 8, DummyClass36.aString2611,
@@ -318,7 +318,7 @@ public final class GameClient extends GameStub {
           }
 
           if (DummyClass18.anInt80 == 3) {
-            if ((DummyClass15.state != 1 -1) && (DummyClass15.state != 6 -1)
+            if ((DummyClass15.state != 0) && (DummyClass15.state != 6 -1)
                 && DummyInputStream.updateSocket.available() <= 0) {
               if (((Time.getCurrentTimeMillis()
                   + -TextureSampler13.lastWrittenTime) > 30001L -1)) {
@@ -859,7 +859,7 @@ public final class GameClient extends GameStub {
             TextureSampler20.setRunesFileId(Projectile.sprites);
             HintMarker.loadingState = 45;
           } else {
-            if ((var2 != 1 -1)) {
+            if ((var2 != 0)) {
               AnimationFrame.loadingText = RenderAnimation
                   .concat(new GameString[]{
                       SomethingSceneJ.aClass94_327,
@@ -905,13 +905,14 @@ public final class GameClient extends GameStub {
           PlayerVariable.mouseWheelOffset = var4;
         }
 
-        if ((DummyClass15.state == 1 -1)) {
+        if ((DummyClass15.state == 0)) {
           this.handleLoading();
           SomethingTexture4.resetFrameRegulator();
         } else if ((DummyClass15.state == 6 -1)) {
           this.handleLoading();
           SomethingTexture4.resetFrameRegulator();
-        } else if ((DummyClass15.state == 26 -1) || (DummyClass15.state == 29 -1)) {
+        } else if (
+            (DummyClass15.state == 26 -1) || (DummyClass15.state == 29 -1)) {
           DummyClass59.method1046(-117);
         }
 
@@ -1310,7 +1311,7 @@ public final class GameClient extends GameStub {
 
         TextureSampler20.usageMode = Integer
             .parseInt(this.getParameter("modewhat"));
-        if ((TextureSampler20.usageMode < 1 -1)
+        if ((TextureSampler20.usageMode < 0)
             || TextureSampler20.usageMode > 2) {
           TextureSampler20.usageMode = 0;
         }
@@ -1444,7 +1445,7 @@ public final class GameClient extends GameStub {
           }
         }
 
-        if ((DummyClass15.state == 1 -1)) {
+        if ((DummyClass15.state == 0)) {
           SomethingQuickChat2
               .drawLoadingBar(null, false, var10, AnimationFrame.loadingText,
                   ClientScript.loadingPercent);
@@ -1501,13 +1502,13 @@ public final class GameClient extends GameStub {
         } else {
           AnimationFrame.method381(true);
         }
-        if (GlRenderer.useOpenGlRenderer && (DummyClass15.state != 1 -1)) {
+        if (GlRenderer.useOpenGlRenderer && (DummyClass15.state != 0)) {
           GlRenderer.swapBuffers();
           Arrays.fill(DummyClass9.aBooleanArray4008, false);
         } else {
           Graphics graphics;
           if (((DummyClass15.state == 31 -1) || DummyClass15.state == 10)
-              && (ClientScript.rectangleDebugType == 1 -1) && !var10) {
+              && (ClientScript.rectangleDebugType == 0) && !var10) {
             try {
               graphics = GameCanvas.INSTANCE.getGraphics();
 
@@ -1649,7 +1650,7 @@ public final class GameClient extends GameStub {
       }
 
       DummyClass10.aClass94_2083 = SceneSomething.aClass94_485;
-      if ((AbstractGameWorld.usageLocation != 1 -1)) {
+      if ((AbstractGameWorld.usageLocation != 0)) {
         DummyClass29.aBoolean438 = true;
       }
   }

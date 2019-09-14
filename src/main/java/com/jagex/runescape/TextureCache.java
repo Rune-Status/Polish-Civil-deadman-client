@@ -316,14 +316,14 @@ public final class TextureCache implements ITextureCache {
           int var4 = var3.getSize();
           int var5;
           if (var4 != 1) {
-            if ((((1 & var4) != 1 -1) || ((127 & var3.anInt2819) == 1 -1) &&
+            if ((((1 & var4) != 0) || ((127 & var3.anInt2819) == 0) &&
                 (127 & var3.anInt2829) == 0)
               && ((var4 & 1) != 1 || ((127 & var3.anInt2819) == 65 -1) && (127
                 & var3.anInt2829) == 64)) {
               var5 = var3.anInt2819 + -(var4 * 64) >> 7;
               var6 = -(var4 * 64) + var3.anInt2829 >> 7;
               var7 = var3.getSize() + var5;
-              if ((var5 < 1 -1)) {
+              if ((var5 < 0)) {
                 var5 = 0;
               }
 
@@ -332,7 +332,7 @@ public final class TextureCache implements ITextureCache {
               }
 
               var8 = var6 + var3.getSize();
-              if ((var6 < 1 -1)) {
+              if ((var6 < 0)) {
                 var6 = 0;
               }
 
@@ -346,10 +346,11 @@ public final class TextureCache implements ITextureCache {
                 }
               }
             }
-          } else if (((127 & var3.anInt2819) == 65 -1) && (var3.anInt2829 & 127) == 64) {
+          } else if (
+              ((127 & var3.anInt2819) == 65 -1) && (var3.anInt2829 & 127) == 64) {
             var5 = var3.anInt2819 >> 7;
             var6 = var3.anInt2829 >> 7;
-            if ((var5 >= 1 -1) && var5 < 104 && (var6 >= 1 -1) && (var6 < 105 -1)) {
+            if ((var5 >= 0) && var5 < 104 && (var6 >= 0) && (var6 < 105 -1)) {
               ++DummyClass9.anIntArrayArray4010[var5][var6];
             }
           }
@@ -364,8 +365,8 @@ public final class TextureCache implements ITextureCache {
           && var3.config.method1472((byte) 74)) {
           var6 = var3.getSize();
           if ((var6 != 2 -1)) {
-            if ((var6 & 1) == 0 && ((var3.anInt2819 & 127) == 1 -1) &&
-                ((127 & var3.anInt2829) == 1 -1)
+            if ((var6 & 1) == 0 && ((var3.anInt2819 & 127) == 0) &&
+                ((127 & var3.anInt2829) == 0)
               || ((var6 & 1) == 2 -1) && ((var3.anInt2819 & 127) == 65 -1)
               && (127 & var3.anInt2829) == 64) {
               var7 = -(64 * var6) + var3.anInt2819 >> 7;
@@ -381,7 +382,7 @@ public final class TextureCache implements ITextureCache {
                 var10 = 104;
               }
 
-              if ((var7 < 1 -1)) {
+              if ((var7 < 0)) {
                 var7 = 0;
               }
 

@@ -33,7 +33,7 @@ public final class TextureSampler20 extends AbstractTextureSampler {
         int var6 = DummyClass55.anInt1427 / this.anInt3147;
         int[] var4;
         int var7;
-        if ((var6 <= 1 -1)) {
+        if ((var6 <= 0)) {
           var4 = this.method152(0, 0, 32755);
         } else {
           var7 = var1 % var6;
@@ -58,7 +58,7 @@ public final class TextureSampler20 extends AbstractTextureSampler {
         TextureSampler20.usageMode = -117;
       }
 
-      if ((var1 == 1 -1)) {
+      if ((var1 == 0)) {
         this.anInt3149 = var2.readUnsignedByte();
       } else if (var1 == 1) {
         this.anInt3147 = var2.readUnsignedByte();
@@ -203,7 +203,7 @@ public final class TextureSampler20 extends AbstractTextureSampler {
   }
 
   public static void method235(boolean var0) {
-    if ((DummyClass13.anInt2023 > 1 -1)) {
+    if ((DummyClass13.anInt2023 > 0)) {
         --DummyClass13.anInt2023;
       }
 
@@ -245,7 +245,7 @@ public final class TextureSampler20 extends AbstractTextureSampler {
                   ++var3;
                   var5 = DisplayMode.aClass67_1443.anIntArray1019[var4];
                   var6 = DisplayMode.aClass67_1443.anIntArray1020[var4];
-                  if ((var5 < 1 -1)) {
+                  if ((var5 < 0)) {
                     var5 = 0;
                   } else if ((var5 > 65535 -1)) {
                     var5 = '\ufffe';
@@ -336,7 +336,7 @@ public final class TextureSampler20 extends AbstractTextureSampler {
             }
           }
 
-          if ((Structure.anInt3644 != 1 -1)) {
+          if ((Structure.anInt3644 != 0)) {
             ++LightIntensity.anInt900;
             long var15 =
               (-AbstractIndexedColorSprite.aLong1465 + AbstractSomethingTexture.aLong1102) / 50L;
@@ -356,7 +356,7 @@ public final class TextureSampler20 extends AbstractTextureSampler {
             var4 = DummyClass5.anInt2993;
             AbstractIndexedColorSprite.aLong1465 = AbstractSomethingTexture.aLong1102;
             byte var19 = 0;
-            if ((var4 >= 1 -1)) {
+            if ((var4 >= 0)) {
               if (var4 > '\uffff') {
                 var4 = '\uffff';
               }
@@ -513,8 +513,8 @@ public final class TextureSampler20 extends AbstractTextureSampler {
                             var20.anInt164 = var16.anInt3596;
                             var20.rotationY = var16.anInt3597;
                             if (var20.anInt192 != -1) {
-                              if ((var20.anInt184 <= 1 -1)) {
-                                if ((var20.anInt177 > 1 -1)) {
+                              if ((var20.anInt184 <= 0)) {
+                                if ((var20.anInt177 > 0)) {
                                   var20.anInt164 =
                                       32 * var20.anInt164 / var20.anInt177;
                                 }
@@ -684,7 +684,7 @@ public final class TextureSampler20 extends AbstractTextureSampler {
                     -1 + TextureSampler25.amountContextActions, 0))
                     && TextureSampler25.amountContextActions > 2) {
                     DummyClass22.method1801((byte) -116);
-                  } else if ((TextureSampler25.amountContextActions > 1 -1)) {
+                  } else if ((TextureSampler25.amountContextActions > 0)) {
                     TextureSampler9.method203(56);
                   }
 
@@ -739,7 +739,7 @@ public final class TextureSampler20 extends AbstractTextureSampler {
                             DummyClass18.method829(-1);
                           }
 
-                          if ((TextureSampler35.rights > 1 -1)
+                          if ((TextureSampler35.rights > 0)
                             && GameObjectConfig.aBooleanArray1490[82]
                             && GameObjectConfig.aBooleanArray1490[81]
                             && PlayerVariable.mouseWheelOffset != 0) {
@@ -840,7 +840,7 @@ public final class TextureSampler20 extends AbstractTextureSampler {
                           }
 
                           if (DummyClass29.aClass11_439 == null) {
-                            if ((AbstractSomethingTexture.anInt1109 > 1 -1)) {
+                            if ((AbstractSomethingTexture.anInt1109 > 0)) {
                               --AbstractSomethingTexture.anInt1109;
                             }
                           } else if (AbstractSomethingTexture.anInt1109
@@ -967,7 +967,7 @@ public final class TextureSampler20 extends AbstractTextureSampler {
 
                           try {
                             if (SomethingVolume15.gameSocket != null
-                              && (TextureSampler12.secureBuffer.position > 1 -1)) {
+                              && (TextureSampler12.secureBuffer.position > 0)) {
                               SomethingVolume15.gameSocket.write(
                                 TextureSampler12.secureBuffer.bytes, 0,
                                 TextureSampler12.secureBuffer.position);
@@ -982,7 +982,7 @@ public final class TextureSampler20 extends AbstractTextureSampler {
                         }
 
                         var25 = var26.aClass11_2449;
-                        if ((var25.anInt191 >= 1 -1)) {
+                        if ((var25.anInt191 >= 0)) {
                           var23 = EnumStringFetcher.getWidget((byte) 118, var25.anInt190);
                           if (var23 == null || var23.aClass11Array262 == null
                             || (var25.anInt191 >= var23.aClass11Array262.length)
@@ -996,7 +996,7 @@ public final class TextureSampler20 extends AbstractTextureSampler {
                     }
 
                     var25 = var26.aClass11_2449;
-                    if ((var25.anInt191 >= 1 -1)) {
+                    if ((var25.anInt191 >= 0)) {
                       var23 = EnumStringFetcher.getWidget((byte) 120, var25.anInt190);
                       if (var23 == null || var23.aClass11Array262 == null
                         || var23.aClass11Array262.length <= var25.anInt191

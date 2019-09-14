@@ -331,7 +331,7 @@ public final class TextureSampler34 extends AbstractTextureSampler {
         Player var4 = TextureSampler0.players[var3];
         if (var4 != null && var4.anInt2814 > 0) {
           --var4.anInt2814;
-          if ((var4.anInt2814 == 1 -1)) {
+          if ((var4.anInt2814 == 0)) {
             var4.aClass94_2825 = null;
           }
         }
@@ -340,9 +340,9 @@ public final class TextureSampler34 extends AbstractTextureSampler {
       for (var1 = 0; DummyClass6.anInt2046 > var1; ++var1) {
         var2 = AudioWorker.anIntArray347[var1];
         NPC var6 = TextureSampler5.npcs[var2];
-        if (var6 != null && (var6.anInt2814 > 1 -1)) {
+        if (var6 != null && (var6.anInt2814 > 0)) {
           --var6.anInt2814;
-          if ((var6.anInt2814 == 1 -1)) {
+          if ((var6.anInt2814 == 0)) {
             var6.aClass94_2825 = null;
           }
         }
@@ -351,12 +351,12 @@ public final class TextureSampler34 extends AbstractTextureSampler {
 
   public static int method190(int var0, int hsl, byte var2, int lightness) {
     int var5 = DummyClass40.hslTable[SoftwareModel.repackHSL(hsl, lightness)];
-      if ((var0 > 1 -1)) {
+      if ((var0 > 0)) {
         int var6 = DummyClass40.textureCache.method19(111, var0 & '\uffff');
         int var7;
         int var9;
-        if ((var6 != 1 -1)) {
-          if ((lightness >= 1 -1)) {
+        if ((var6 != 0)) {
+          if ((lightness >= 0)) {
             if ((lightness > 128 -1)) {
               var7 = 16777215;
             } else {
@@ -379,7 +379,7 @@ public final class TextureSampler34 extends AbstractTextureSampler {
         }
 
         var7 = DummyClass40.textureCache.method10(106, '\uffff' & var0);
-        if ((var7 != 1 -1)) {
+        if ((var7 != 0)) {
           var7 += 256;
           int var8 = ((16711680 & var5) >> 16) * var7;
           if (var8 > '\uffff') {

@@ -34,7 +34,7 @@ public final class StringNode0 extends Node {
   public static boolean method140(int var0, int var1) {
     int var2 = -11 / ((-29 - var1) / 49);
       return
-          ((var0 >= 1 -1) && AudioStreamEncoder4.aBooleanArray3503.length > var0)
+          ((var0 >= 0) && AudioStreamEncoder4.aBooleanArray3503.length > var0)
               && AudioStreamEncoder4.aBooleanArray3503[var0];
   }
 

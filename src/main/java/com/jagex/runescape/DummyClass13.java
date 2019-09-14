@@ -96,7 +96,7 @@ public final class DummyClass13 {
 
       DummyClass22.anInt1740 += var0;
       var6 = (var0 - -(1 & AbstractGameWorld.updateCycle)) / 2;
-      if ((var6 > 1 -1)) {
+      if ((var6 > 0)) {
         for (var7 = 0; DummyClass22.anInt1740 > var7; ++var7) {
           var8 = 2 + (int) (124.0D * Math.random());
           var9 = (int) (128.0D * Math.random()) + 128;
@@ -115,7 +115,7 @@ public final class DummyClass13 {
               var8 += DummyClass2.anIntArray1681[var9 + (var10 - -var6)];
             }
 
-            if (((-1 + -var6 + var10) >= 1 -1)) {
+            if (((-1 + -var6 + var10) >= 0)) {
               var8 -= DummyClass2.anIntArray1681[-var6 + -1 + var10 + var9];
             }
 

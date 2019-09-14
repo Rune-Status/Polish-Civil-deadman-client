@@ -109,11 +109,11 @@ public final class TextureSampler18 extends TextureSampler39 {
         float var17;
         float var16;
         float var24;
-        if ((var13 == 1 -1) && var14 == 0) {
+        if ((var13 == 0) && var14 == 0) {
           var16 = var3[var2][var4];
           var24 = var9[var2][var4];
           var17 = var0[var2][var4];
-        } else if ((var13 == 129 -1) && (var14 == 1 -1)) {
+        } else if ((var13 == 129 -1) && (var14 == 0)) {
           var17 = var0[var2 - -1][var4];
           var24 = var9[1 + var2][var4];
           var16 = var3[var2 - -1][var4];

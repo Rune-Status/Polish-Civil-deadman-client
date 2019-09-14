@@ -79,7 +79,7 @@ public final class RenderAnimation {
 
       while (true) {
         int var3 = var2.readUnsignedByte();
-        if ((var3 == 1 -1)) {
+        if ((var3 == 0)) {
           return;
         }
 
@@ -345,7 +345,7 @@ public final class RenderAnimation {
       }
 
       if (var1 == -11973) {
-        if ((var0.animationId != -1) && (var0.anInt2828 == 1 -1)) {
+        if ((var0.animationId != -1) && (var0.anInt2828 == 0)) {
           var2 = GameClient.method45(var0.animationId, (byte) -20);
           if (var2.anIntArray1851 != null) {
             ++var0.anInt2760;
@@ -397,7 +397,7 @@ public final class RenderAnimation {
         for (var6 = 0; var0.aClass145Array2809.length > var6; ++var6) {
           Unsure var7 = var0.aClass145Array2809[var6];
           if (var7 != null) {
-            if ((var7.anInt1900 <= 1 -1)) {
+            if ((var7.anInt1900 <= 0)) {
               AnimationSequence var4 = GameClient.method45(var7.anInt1890, (byte) -20);
               if (var4.anIntArray1851 != null) {
                 ++var7.anInt1897;
@@ -413,7 +413,7 @@ public final class RenderAnimation {
                   ++var7.anInt1894;
                   var7.anInt1893 -= var4.anInt1865;
                   if (var4.anInt1861 > var7.anInt1894) {
-                    if ((var7.anInt1893 >= 1 -1) && (var7.anInt1893 < var4.anIntArray1851.length)) {
+                    if ((var7.anInt1893 >= 0) && (var7.anInt1893 < var4.anIntArray1851.length)) {
                       SocketStream.method1470(var0.anInt2829, var4, 183921384, var0.anInt2819,
                         TextureCache.localPlayer == var0, var7.anInt1893);
                     } else {
@@ -428,7 +428,7 @@ public final class RenderAnimation {
                 if (var4.anIntArray1851.length <= var7.anInt1891) {
                   var7.anInt1891 -= var4.anInt1865;
                   if (1 + var7.anInt1894 < var4.anInt1861) {
-                    if ((var7.anInt1891 < 1 -1) || var4.anIntArray1851.length <= var7.anInt1891) {
+                    if ((var7.anInt1891 < 0) || var4.anIntArray1851.length <= var7.anInt1891) {
                       var7.anInt1891 = -1;
                     }
                   } else {

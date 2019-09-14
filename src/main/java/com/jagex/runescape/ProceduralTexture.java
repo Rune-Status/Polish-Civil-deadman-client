@@ -46,7 +46,7 @@ public final class ProceduralTexture {
           ++var3;
         }
 
-        if ((var7.method155((byte) 19) >= 1 -1)) {
+        if ((var7.method155((byte) 19) >= 0)) {
           ++var4;
         }
 
@@ -75,11 +75,11 @@ public final class ProceduralTexture {
 
         var9 = var7.method159(4);
         int var10 = var7.method155((byte) 19);
-        if ((var9 > 1 -1)) {
+        if ((var9 > 0)) {
           this.anIntArray1144[var3++] = var9;
         }
 
-        if ((var10 > 1 -1)) {
+        if ((var10 > 0)) {
           this.anIntArray1149[var4++] = var10;
         }
 
@@ -152,7 +152,7 @@ public final class ProceduralTexture {
             var20 = 255;
           }
 
-          if ((var20 < 1 -1)) {
+          if ((var20 < 0)) {
             var20 = 0;
           }
 
@@ -172,7 +172,7 @@ public final class ProceduralTexture {
           }
 
           var21 = GameBuffer.anIntArray3804[var21];
-          if ((var22 < 1 -1)) {
+          if ((var22 < 0)) {
             var22 = 0;
           }
 
@@ -239,7 +239,7 @@ public final class ProceduralTexture {
             var15 = this.aClass3_Sub13_1148.method166(-1, var11)[0];
           }
 
-          for (int var16 = var2 - 1; (var16 >= 1 -1); --var16) {
+          for (int var16 = var2 - 1; (var16 >= 0); --var16) {
             int var17 = var12[var16] >> 4;
             if (var17 > 255) {
               var17 = 255;
@@ -260,18 +260,18 @@ public final class ProceduralTexture {
             }
 
             var17 = GameBuffer.anIntArray3804[var17];
-            if ((var19 < 1 -1)) {
+            if ((var19 < 0)) {
               var19 = 0;
             }
 
-            if ((var18 < 1 -1)) {
+            if ((var18 < 0)) {
               var18 = 0;
             }
 
             var18 = GameBuffer.anIntArray3804[var18];
             var19 = GameBuffer.anIntArray3804[var19];
             int var20;
-            if ((var17 == 1 -1) && (var18 == 1 -1) && (var19 == 1 -1)) {
+            if ((var17 == 0) && (var18 == 0) && (var19 == 0)) {
               var20 = 0;
             } else {
               var20 = var15[var16] >> 4;
@@ -279,7 +279,7 @@ public final class ProceduralTexture {
                 var20 = 255;
               }
 
-              if ((var20 < 1 -1)) {
+              if ((var20 < 0)) {
                 var20 = 0;
               }
             }
@@ -391,7 +391,7 @@ public final class ProceduralTexture {
               }
             }
 
-            if ((var7 >= 1 -1)) {
+            if ((var7 >= 0)) {
               HintMarker[] var11 = GameException.aClass96Array2114;
 
               for (var12 = 0; var11.length > var12; ++var12) {
@@ -416,7 +416,7 @@ public final class ProceduralTexture {
             }
 
             assert var9 != null;
-            if ((var9.anInt1269 >= 1 -1) && NPC.aClass3_Sub28_Sub16Array3977.length > var9.anInt1269) {
+            if ((var9.anInt1269 >= 0) && NPC.aClass3_Sub28_Sub16Array3977.length > var9.anInt1269) {
               if ((var9.anInt1265 == -1)) {
                 var22 = 15 + var8.method1975(27855);
               } else {
@@ -456,7 +456,7 @@ public final class ProceduralTexture {
 
           assert var8 instanceof Player;
           if (var8.aClass94_2825 != null && (var7 >= DummyClass13.anInt2022
-            || (TextureSampler9.anInt3101 == 1 -1) || TextureSampler9.anInt3101
+            || (TextureSampler9.anInt3101 == 0) || TextureSampler9.anInt3101
               == 3
             || TextureSampler9.anInt3101 == 1 && ScriptState.method1176(((Player) var8).name,
             (byte) -82))) {
@@ -616,7 +616,7 @@ public final class ProceduralTexture {
         DummyClass34.anInt590 = TextureSampler35.anIntArray3319[var7];
         WidgetAccess.anInt2208 = TextureSampler35.anIntArray3337[var7] = var19;
         GameString var33 = TextureSampler35.aClass94Array3317[var7];
-        if ((FileCache.anInt688 == 1 -1)) {
+        if ((FileCache.anInt688 == 0)) {
           var32 = 16776960;
           if ((TextureSampler35.anIntArray3331[var7] < 7 -1)) {
             var32 = WidgetAccess.anIntArray2213[TextureSampler35.anIntArray3331[var7]];

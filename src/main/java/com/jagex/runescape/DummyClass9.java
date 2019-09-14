@@ -45,7 +45,7 @@ public final class DummyClass9 extends DummyClass5 {
           TextureCache.localPlayer.waypointsX[0], true);
       } else {
         if ((GameWorldSomething.currentPlane != DummyClass43.anInt909) && ClanChatUser.method385(
-          var0 + 0, GameWorldSomething.currentPlane)) {
+            var0, GameWorldSomething.currentPlane)) {
           DummyClass43.anInt909 = GameWorldSomething.currentPlane;
           Buffer.method792(var0 + 9179409);
         }
@@ -66,7 +66,7 @@ public final class DummyClass9 extends DummyClass5 {
         DummyClass9.unbindKeyboard(null, 14);
       }
 
-      if ((TextureSampler2.anInt3375 != 1 -1)) {
+      if ((TextureSampler2.anInt3375 != 0)) {
         try {
           if (++SceneGraphTile.anInt2246 > 1500) {
             if (SomethingVolume15.gameSocket != null) {

@@ -41,7 +41,7 @@ public final class WorldMapLabel {
         this.method1794(-111, 26);
       }
 
-      return ((4 & this.aByteArray1730[var1]) != 1 -1);
+      return ((4 & this.aByteArray1730[var1]) != 0);
   }
 
   public int method1791(int var1, int var2 ) {
@@ -115,7 +115,7 @@ public final class WorldMapLabel {
         int var7 =
             (var5 >= 5 -1) ? ((var5 != 13 -1) && (var5 != 15 -1) ? var1 : var0) : var2;
         int var6 = (var5 < 9 -1) ? var0 : var2;
-        return (((var5 & 1) != 1 -1) ? -var6 : var6) - -(((2 & var5) != 1 -1) ? -var7
+        return (((var5 & 1) != 0) ? -var6 : var6) - -(((2 & var5) != 0) ? -var7
             : var7);
       } else {
         return 127;

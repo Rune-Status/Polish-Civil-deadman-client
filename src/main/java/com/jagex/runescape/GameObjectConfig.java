@@ -160,7 +160,7 @@ public final class GameObjectConfig {
         var2 = DummyClass5.anIntArray2985[this.anInt1532];
       }
 
-      if ((var2 >= 1 -1) && (var2 < this.anIntArray1524.length -1)
+      if ((var2 >= 0) && (var2 < this.anIntArray1524.length -1)
         && (this.anIntArray1524[var2] != -1)) {
         return DummyClass11.method2207(4, this.anIntArray1524[var2]);
       } else {
@@ -256,7 +256,7 @@ public final class GameObjectConfig {
           && (this.anInt1488 == 129 -1) && this.anInt1481 == 128);
 
       boolean var12;
-      var12 = !(this.anInt1496 == 0 && (this.anInt1511 == 1 -1)
+      var12 = !(this.anInt1496 == 0 && (this.anInt1511 == 0)
           && this.anInt1534 == 0);
 
       assert var4 != null;
@@ -332,7 +332,7 @@ public final class GameObjectConfig {
       }
 
       if (this.anInt1540 == -1) {
-        this.anInt1540 = (this.anInt1538 != 1 -1) ? 1 : 0;
+        this.anInt1540 = (this.anInt1538 != 0) ? 1 : 0;
       }
   }
 
@@ -372,7 +372,7 @@ public final class GameObjectConfig {
   public void method1692(int var1, Buffer var2 ) {
     while (true) {
         int var3 = var2.readUnsignedByte();
-        if ((var3 == 1 -1)) {
+        if ((var3 == 0)) {
           if (var1 != 6219) {
             this.method1696(105, -55, null, -39, 71, null, true, null, (byte) -117, false, -25);
           }
@@ -393,7 +393,7 @@ public final class GameObjectConfig {
       int var5;
       if (var2 == 1) {
         var4 = var1.readUnsignedByte();
-        if ((var4 > 1 -1)) {
+        if ((var4 > 0)) {
           if (this.anIntArray1519 != null && !Cache.aBoolean742) {
             var1.position += var4 * 3;
           } else {
@@ -703,7 +703,7 @@ public final class GameObjectConfig {
         }
       } else {
         var4 = var1.readUnsignedByte();
-        if ((var4 > 1 -1)) {
+        if ((var4 > 0)) {
           if (this.anIntArray1519 != null && !Cache.aBoolean742) {
             var1.position += var4 * 2;
           } else {
@@ -779,7 +779,7 @@ public final class GameObjectConfig {
         }
 
         var8 = this.anIntArray1519.length;
-        if ((var8 == 1 -1)) {
+        if ((var8 == 0)) {
           return null;
         }
 
@@ -826,14 +826,14 @@ public final class GameObjectConfig {
         var14 = !var14;
       }
 
-      boolean var15 = this.anInt1488 == 128 && (this.anInt1511 == 1 -1);
+      boolean var15 = this.anInt1488 == 128 && (this.anInt1511 == 0);
       boolean var18 =
-          (var1 == 1 -1) && this.anInt1479 == 128
-            && (this.anInt1481 == 129 -1) && (this.anInt1496 == 1 -1)
+          (var1 == 0) && this.anInt1479 == 128
+            && (this.anInt1481 == 129 -1) && (this.anInt1496 == 0)
           && this.anInt1534 == 0 && !var14;
       GlModel var19 = var5.createCopy(var18, var15,
           this.aShortArray1477 == null, true,
-        (var5.method1903() == var6), (var1 == 1 -1) && !var14, var3, (var7 == var5.method1924()), true,
+        (var5.method1903() == var6), (var1 == 0) && !var14, var3, (var7 == var5.method1924()), true,
         !var14, this.aShortArray1476 == null);
       if (var14) {
         var19.method1931();
@@ -871,7 +871,7 @@ public final class GameObjectConfig {
         var19.scale(this.anInt1479, this.anInt1488, this.anInt1481);
       }
 
-      if ((this.anInt1496 != 1 -1) || this.anInt1511 != 0 || this.anInt1534 != 0) {
+      if ((this.anInt1496 != 0) || this.anInt1511 != 0 || this.anInt1534 != 0) {
         var19.method1897(this.anInt1496, this.anInt1511, this.anInt1534);
       }
 
@@ -939,17 +939,17 @@ public final class GameObjectConfig {
 
           boolean var17 = this.aBoolean1541 & var7;
           GlModel var18 =
-              var14.createCopy(this.aByte1505 != 3, (this.aByte1505 == 1 -1), true,
+              var14.createCopy(this.aByte1505 != 3, (this.aByte1505 == 0), true,
                   true, true, true,
                   !var17, true, true, true, true);
-          if ((this.aByte1505 != 1 -1)) {
+          if ((this.aByte1505 != 0)) {
             var18.method1919(this.aByte1505, this.aShort1500, var14, var3, var6,
                 var2, var5, var11);
           }
 
-          var18.method1920((this.anInt1529 == 1 -1) && !this.aBoolean1510, true,
+          var18.method1920((this.anInt1529 == 0) && !this.aBoolean1510, true,
               true, true,
-              (this.anInt1529 == 1 -1), true, false);
+              (this.anInt1529 == 0), true, false);
           FloorUnderlay.aClass136_1413.node = var18;
           var18.aBoolean3809 = var17;
           FloorUnderlay.aClass136_1413.shadow = var15;

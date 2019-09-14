@@ -90,7 +90,7 @@ public final class TextureSampler28 extends AbstractTextureSampler {
                   if ((var30 >= var31[0]) && (var31[1] >= var30)) {
                     if (var10 != var27) {
                       int var42 = var6 + var9;
-                      if ((var42 < 1 -1)) {
+                      if ((var42 < 0)) {
                         var42 += SomethingLight0.anInt1559;
                       }
 
@@ -213,7 +213,7 @@ public final class TextureSampler28 extends AbstractTextureSampler {
         this.anInt3301 = 4;
       }
 
-      if ((var1 == 1 -1)) {
+      if ((var1 == 0)) {
         this.anInt3312 = var2.readUnsignedByte();
       } else {
         if (var1 == 1) {
@@ -255,7 +255,7 @@ public final class TextureSampler28 extends AbstractTextureSampler {
   private void method291(int var1, Random var2, int var3, int var4, byte var5, int var6,
                                int[][] var7) {
     if (var5 == -69) {
-        int var8 = (this.anInt3316 > 1 -1) ?
+        int var8 = (this.anInt3316 > 0) ?
           4096 + -FloorUnderlay.method1603((byte) -128, this.anInt3316, var2) :
           4096;
         int var9 = this.anInt3299 * this.anInt3314 >> 12;
@@ -286,7 +286,7 @@ public final class TextureSampler28 extends AbstractTextureSampler {
             int var20;
             if ((var17 < var14)) {
               var19 = var17 * var8 / var14;
-              if ((this.anInt3309 == 1 -1)) {
+              if ((this.anInt3309 == 0)) {
                 for (var20 = 0; var13 > var20; ++var20) {
                   var21 = var20 * var8 / var13;
                   var18[ClientScript

@@ -70,7 +70,7 @@ public final class TextureSampler25 extends AbstractTextureSampler {
         for (int var11 = 0; var11 < SomethingLight0.anInt1559; ++var11) {
           int var13 = var5[var11];
           int var12 = -this.anIntArray3403[0] + var13;
-          if ((var12 < 1 -1)) {
+          if ((var12 < 0)) {
             var12 = -var12;
           }
 
@@ -81,7 +81,7 @@ public final class TextureSampler25 extends AbstractTextureSampler {
           } else {
             int var14 = var6[var11];
             var12 = var14 + -this.anIntArray3403[1];
-            if ((var12 < 1 -1)) {
+            if ((var12 < 0)) {
               var12 = -var12;
             }
 
@@ -134,7 +134,7 @@ public final class TextureSampler25 extends AbstractTextureSampler {
         int var9 = DummyClass58.anInt1460 + -1 - -MapScene.anInt65 - 64 * var7;
         byte var2;
         int var10;
-        if ((var8 >= 1 -1) && ((-63 + var9) >= 1 -1) && DummyClass30.anInt455 > var8 + 63
+        if ((var8 >= 0) && ((-63 + var9) >= 0) && DummyClass30.anInt455 > var8 + 63
           && (var9 < DummyClass58.anInt1460)) {
           var10 = var8 >> 6;
           int var11 = var9 >> 6;
@@ -167,7 +167,7 @@ public final class TextureSampler25 extends AbstractTextureSampler {
         } else {
           for (var10 = 0; (var10 < (!var3 ? 4096 : 64)); ++var10) {
             var2 = var1.readByte();
-            if ((var2 != 1 -1)) {
+            if ((var2 != 0)) {
               ++var1.position;
             }
           }
@@ -249,7 +249,7 @@ public final class TextureSampler25 extends AbstractTextureSampler {
         }
 
         if (var49) {
-          if ((var25 < 1 -1)) {
+          if ((var25 < 0)) {
             while (var25 < 0) {
               ++var10;
               var26 += var38;
@@ -331,7 +331,7 @@ public final class TextureSampler25 extends AbstractTextureSampler {
           ClassCheckRequest.method126(false, var2, var4, var0, var3);
         }
 
-      } else if ((var7 == 1 -1)) {
+      } else if ((var7 == 0)) {
         SomethingTexture4.method1354(var3, var0, true, var5, var4);
       } else {
         int var12 = (var7 << 12) / var6;

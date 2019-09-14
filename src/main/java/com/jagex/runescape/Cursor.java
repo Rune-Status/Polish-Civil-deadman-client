@@ -34,7 +34,7 @@ public final class Cursor {
 
       while (true) {
         int var4 = var1.readUnsignedByte();
-        if ((var4 == 1 -1)) {
+        if ((var4 == 0)) {
           return;
         }
 
@@ -65,18 +65,18 @@ public final class Cursor {
         Cursor.anIntArray882 = null;
       }
 
-      if ((var1.anInt2816 == 1 -1)) {
+      if ((var1.anInt2816 == 0)) {
         var1.anInt2824 = 0;
       } else {
         if ((var1.animationId != -1) && var1.anInt2828 == 0) {
           AnimationSequence var3 = GameClient
               .method45(var1.animationId, (byte) -20);
-          if ((var1.anInt2811 > 1 -1) && var3.anInt1866 == 0) {
+          if ((var1.anInt2811 > 0) && var3.anInt1866 == 0) {
             ++var1.anInt2824;
             return;
           }
 
-          if ((var1.anInt2811 <= 1 -1) && (var3.anInt1850 == 1 -1)) {
+          if ((var1.anInt2811 <= 0) && (var3.anInt1850 == 0)) {
             ++var1.anInt2824;
             return;
           }
@@ -148,7 +148,7 @@ public final class Cursor {
 
         if (var10) {
           if ((var1.rotationY != var1.anInt2806) && (var1.anInt2772 == -1)
-              && (var1.anInt2779 != 1 -1)) {
+              && (var1.anInt2779 != 0)) {
             var9 = 2;
           }
 
@@ -160,7 +160,7 @@ public final class Cursor {
             var9 = 8;
           }
 
-          if ((var1.anInt2824 > 1 -1) && (var1.anInt2816 > 2 -1)) {
+          if ((var1.anInt2824 > 0) && (var1.anInt2816 > 2 -1)) {
             var9 = 8;
             --var1.anInt2824;
           }
@@ -173,7 +173,7 @@ public final class Cursor {
             var9 = 8;
           }
 
-          if ((var1.anInt2824 > 1 -1) && var1.anInt2816 > 1) {
+          if ((var1.anInt2824 > 0) && var1.anInt2816 > 1) {
             --var1.anInt2824;
             var9 = 8;
           }
@@ -183,7 +183,7 @@ public final class Cursor {
           var9 <<= 1;
           var11 = 2;
         } else {
-          if ((var1.aByteArray2795[-1 + var1.anInt2816] == 1 -1)) {
+          if ((var1.aByteArray2795[-1 + var1.anInt2816] == 0)) {
             var11 = 0;
             var9 >>= 1;
           }
@@ -199,7 +199,7 @@ public final class Cursor {
           } else {
             var1.anInt2764 = var2.anInt393;
           }
-        } else if (var2.anInt398 != -1 && (var11 == 1 -1)) {
+        } else if (var2.anInt398 != -1 && (var11 == 0)) {
           if ((var2.anInt389 == var1.anInt2764) && (var2.anInt372 != -1)) {
             var1.anInt2764 = var2.anInt372;
           } else if ((var2.anInt390 == var1.anInt2764) && var2.anInt406 != -1) {

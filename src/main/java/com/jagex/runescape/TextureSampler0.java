@@ -48,7 +48,7 @@ public final class TextureSampler0 extends AbstractTextureSampler {
           int var7 = var0[var5];
           int var8 = var3[var5];
 
-          for (int var9 = 0; (var7 != 1 -1)
+          for (int var9 = 0; (var7 != 0)
               && var2.aClass145Array2809.length > var9; ++var9) {
             if ((1 & var7) != 0) {
               if ((var6 == -1)) {
@@ -63,7 +63,7 @@ public final class TextureSampler0 extends AbstractTextureSampler {
                       (byte) -20).anInt1857)) {
                       var12 = var2.aClass145Array2809[var9] = null;
                     }
-                  } else if ((var11 == 1 -1)) {
+                  } else if ((var11 == 0)) {
                     var12 = var2.aClass145Array2809[var9] = null;
                   } else if ((var11 == 2 -1)) {
                     var12.anInt1893 = 0;

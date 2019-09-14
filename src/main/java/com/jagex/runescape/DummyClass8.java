@@ -126,7 +126,7 @@ public final class DummyClass8 extends DummyClass7 {
         GameObjectConfig var8 = DummyClass11.method2207(4, var7);
         int var9;
         int var10;
-        if ((var6 != 1 -1) && (var6 != 3 -1)) {
+        if ((var6 != 0) && (var6 != 3 -1)) {
           var10 = var8.anInt1480;
           var9 = var8.anInt1485;
         } else {
@@ -135,7 +135,7 @@ public final class DummyClass8 extends DummyClass7 {
         }
 
         int var11 = var8.anInt1533;
-        if ((var6 != 1 -1)) {
+        if ((var6 != 0)) {
           var11 = (var11 << var6 & 15) - -(var11 >> -var6 + 4);
         }
 
@@ -184,7 +184,7 @@ public final class DummyClass8 extends DummyClass7 {
               var3.anIntArray2300[var5] = -5;
             }
 
-            if ((var3.aClass64Array2303[var5].status == 1 -1)) {
+            if ((var3.aClass64Array2303[var5].status == 0)) {
               var4 = true;
             }
           }
@@ -194,7 +194,7 @@ public final class DummyClass8 extends DummyClass7 {
               var3.anIntArray2300[var5] = -6;
             }
 
-            if ((var3.aClass64Array2298[var5].status == 1 -1)) {
+            if ((var3.aClass64Array2298[var5].status == 0)) {
               var4 = true;
             }
           }
@@ -210,12 +210,12 @@ public final class DummyClass8 extends DummyClass7 {
         var0.writeInt(var3.anInt2305);
 
         for (int var6 = 0; var3.anInt2296 > var6; ++var6) {
-          if ((var3.anIntArray2300[var6] == 1 -1)) {
+          if ((var3.anIntArray2300[var6] == 0)) {
             try {
               int var7 = var3.anIntArray2301[var6];
               Field var8;
               int var9;
-              if ((var7 == 1 -1)) {
+              if ((var7 == 0)) {
                 var8 = (Field) var3.aClass64Array2303[var6].result;
                 var9 = var8.getInt(null);
                 var0.writeByte(0);

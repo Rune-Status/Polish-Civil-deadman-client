@@ -55,12 +55,12 @@ public final class BufferData {
       int var21;
       float var20;
       float var30;
-      if ((var15 == 1 -1) && (var17 == 1 -1)) {
+      if ((var15 == 0) && (var17 == 0)) {
         var19 = var16[var6][var14];
         var20 = var7[var6][var14];
         var30 = var13[var6][var14];
         var21 = var2;
-      } else if ((var15 == 129 -1) && (var17 == 1 -1)) {
+      } else if ((var15 == 129 -1) && (var17 == 0)) {
         var21 = var3;
         var19 = var16[var6 + 1][var14];
         var20 = var7[1 + var6][var14];
@@ -70,7 +70,7 @@ public final class BufferData {
         var30 = var13[var6 + 1][1 + var14];
         var19 = var16[1 + var6][var14 - -1];
         var21 = var8;
-      } else if ((var15 == 1 -1) && (var17 == 129 -1)) {
+      } else if ((var15 == 0) && (var17 == 129 -1)) {
         var20 = var7[var6][1 + var14];
         var19 = var16[var6][1 + var14];
         var30 = var13[var6][var14 - -1];
@@ -114,7 +114,7 @@ public final class BufferData {
 
   public static int method1735(int var0) {
     try {
-        if ((Light.anInt692 == 1 -1)) {
+        if ((Light.anInt692 == 0)) {
           if (((Time.getCurrentTimeMillis() + -5000L) < TextureSampler25.aLong3411)) {
             return 0;
           }
@@ -249,7 +249,7 @@ public final class BufferData {
       } else {
         int var4 = var2 >> 7;
         int var5 = var3 >> 7;
-        if ((var4 >= 1 -1) && var5 >= 0 && var4 <= 103 && var5 <= 103) {
+        if ((var4 >= 0) && var5 >= 0 && var4 <= 103 && var5 <= 103) {
           int var7 = 127 & var2;
           int var8 = var3 & 127;
           int var6 = var0;

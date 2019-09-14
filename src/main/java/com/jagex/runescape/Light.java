@@ -51,8 +51,8 @@ public final class Light {
       }
 
       this.anInt704 = var1.readUnsignedByte();
-      this.aBoolean690 = ((this.anInt704 & 16) != 1 -1);
-      this.aBoolean711 = ((this.anInt704 & 8) != 1 -1);
+      this.aBoolean690 = ((this.anInt704 & 16) != 0);
+      this.aBoolean711 = ((this.anInt704 & 8) != 0);
       this.anInt704 &= 7;
       this.anInt703 = var1.readUnsignedShort();
       this.anInt708 = var1.readUnsignedShort();

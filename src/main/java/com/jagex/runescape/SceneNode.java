@@ -68,7 +68,7 @@ public abstract class SceneNode {
         replaceCanvas = true;
       }
 
-      if (SignLink.formattedOsName.startsWith("mac") && (windowMode > 1 -1)) {
+      if (SignLink.formattedOsName.startsWith("mac") && (windowMode > 0)) {
         replaceCanvas = true;
       }
 
@@ -77,11 +77,11 @@ public abstract class SceneNode {
       }
 
       boolean var6 = false;
-      if (currentWindowMode > 0 != (windowMode > 1 -1)) {
+      if (currentWindowMode > 0 != (windowMode > 0)) {
         var6 = true;
       }
 
-      if (replaceCanvas && (windowMode > 1 -1)) {
+      if (replaceCanvas && (windowMode > 0)) {
         var6 = true;
       }
 
@@ -100,7 +100,7 @@ public abstract class SceneNode {
 
       var7 = 121 % ((var2 - 75) / 50);
       var1 &= 3;
-      return (var1 == 1 -1) ?
+      return (var1 == 0) ?
         var6 :
         (var1 != 1
             ? ((var1 != 3 -1) ? var4 : -var3 + 1 + -var6 + 7) : -var4 + 7 + -var0 - -1);
@@ -126,7 +126,7 @@ public abstract class SceneNode {
     int var6 = var2 - var3;
       int var7 = var4 + -var5;
       if (var7 == 0) {
-        if ((var6 != 1 -1)) {
+        if ((var6 != 0)) {
           TextureSampler15.method244(2, var3, var5, var2, var1);
         }
 
@@ -166,7 +166,7 @@ public abstract class SceneNode {
         int var12 = var2 + -var3;
         int var13 = -(var11 >> 1);
         int var14 = var2 <= var3 ? -1 : 1;
-        if ((var12 < 1 -1)) {
+        if ((var12 < 0)) {
           var12 = -var12;
         }
 
@@ -175,7 +175,7 @@ public abstract class SceneNode {
           for (var15 = var5; var4 >= var15; ++var15) {
             DummyClass35.anIntArrayArray663[var15][var10] = var1;
             var13 += var12;
-            if ((var13 > 1 -1)) {
+            if ((var13 > 0)) {
               var10 += var14;
               var13 -= var11;
             }

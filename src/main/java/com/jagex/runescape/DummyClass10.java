@@ -54,7 +54,7 @@ public final class DummyClass10 {
             var3.method1976(var3.config.size, 2);
             var3.renderAnimationId = var3.config.renderAnimationId;
             var3.anInt2779 = var3.config.anInt1274;
-            if ((var3.anInt2779 == 1 -1)) {
+            if ((var3.anInt2779 == 0)) {
               var3.rotationY = 0;
             }
 
@@ -140,18 +140,18 @@ public final class DummyClass10 {
   public static void readTileData(int var0, int var1, boolean var2, Buffer var3, int y, int x,
                                  byte var6, int var7, int var8) {
     int opcode;
-      if ((x >= 1 -1) && (x < 105 -1) && y >= 0 && (y < 105 -1)) {
+      if ((x >= 0) && (x < 105 -1) && y >= 0 && (y < 105 -1)) {
         if (!var2) {
           BZipDecompressorState.tileFlags[var8][x][y] = 0;
         }
 
         while (true) {
           opcode = var3.readUnsignedByte();
-          if ((opcode == 1 -1)) {
+          if ((opcode == 0)) {
             if (var2) {
               AbstractGameWorld.heightMap[0][x][y] = DummyClass43.somethingHeightMap[0][x][y];
             } else {
-              if ((var8 == 1 -1)) {
+              if ((var8 == 0)) {
                 AbstractGameWorld.heightMap[0][x][y] =
                     8 * -DummyClass34
                         .perlinNoise(y + 556238 + var1, var0 + x + 932731);
@@ -173,7 +173,7 @@ public final class DummyClass10 {
                 var10 = 0;
               }
 
-              if ((var8 == 1 -1)) {
+              if ((var8 == 0)) {
                 AbstractGameWorld.heightMap[0][x][y] = 8 * -var10;
               } else {
                 AbstractGameWorld.heightMap[var8][x][y] =
@@ -197,7 +197,7 @@ public final class DummyClass10 {
       } else {
         while (true) {
           opcode = var3.readUnsignedByte();
-          if ((opcode == 1 -1)) {
+          if ((opcode == 0)) {
             break;
           }
 

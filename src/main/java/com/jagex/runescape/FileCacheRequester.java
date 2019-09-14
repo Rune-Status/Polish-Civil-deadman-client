@@ -24,7 +24,7 @@ public final class FileCacheRequester implements Runnable {
     SignLinkRequest var1 = DummyClass35.signLink.createThread(0, 5, this);
 
       assert var1 != null;
-      while ((var1.status == 1 -1)) {
+      while ((var1.status == 0)) {
         TextureSampler25.sleep(10L);
       }
 
@@ -211,8 +211,8 @@ public final class FileCacheRequester implements Runnable {
             if (var12 != null) {
               var12.anInt2819 -= 128 * var9;
               var12.anInt2829 -= 128 * var10;
-              if ((var12.anInt2819 >= 1 -1) && (var12.anInt2819 <= 13185 -1)
-                  && (var12.anInt2829 >= 1 -1)
+              if ((var12.anInt2819 >= 0) && (var12.anInt2819 <= 13185 -1)
+                  && (var12.anInt2829 >= 0)
                   && (var12.anInt2829 <= 13185 -1)) {
                 for (var13 = 0; var13 < 10; ++var13) {
                   var12.waypointsX[var13] -= var9;
@@ -262,13 +262,13 @@ public final class FileCacheRequester implements Runnable {
         byte var16 = 1;
         byte var15 = 104;
         byte var26 = 1;
-        if ((var10 < 1 -1)) {
+        if ((var10 < 0)) {
           var16 = -1;
           var15 = -1;
           var14 = 103;
         }
 
-        if ((var9 < 1 -1)) {
+        if ((var9 < 0)) {
           var26 = -1;
           var24 = 103;
           var25 = -1;
@@ -280,8 +280,8 @@ public final class FileCacheRequester implements Runnable {
             int var20 = var18 + var10;
 
             for (int var21 = 0; var21 < 4; ++var21) {
-              if ((var19 >= 1 -1)
-                  && (var20 >= 1 -1) && (var19 < 105 -1) && (var20 < 105 -1)) {
+              if ((var19 >= 0)
+                  && (var20 >= 0) && (var19 < 105 -1) && (var20 < 105 -1)) {
                 TextureSampler0.groundItems[var21][var17][var18] =
                   TextureSampler0.groundItems[var21][var19][var20];
               } else {
@@ -296,7 +296,7 @@ public final class FileCacheRequester implements Runnable {
              var27 != null; var27 = (SpawnedGameObject) TextureSampler26.aClass61_3075.getNext()) {
           var27.anInt2248 -= var10;
           var27.anInt2264 -= var9;
-          if (var27.anInt2264 < 0 || (var27.anInt2248 < 1 -1) || var27.anInt2264 >= 104
+          if (var27.anInt2264 < 0 || (var27.anInt2248 < 0) || var27.anInt2264 >= 104
             || var27.anInt2248 >= 104) {
             var27.unlinkNode();
           }
@@ -447,7 +447,7 @@ public final class FileCacheRequester implements Runnable {
           }
 
           var1 = RenderAnimation.concat(new GameString[]{
-              var1.substring(var3, var2 + 0, 0),
+              var1.substring(var3, var2, 0),
               DummyClass14.method2148(
                   Something3d2.method2247((byte) 107, 0, var0), (byte) -78),
               var1.substring(2 + var3)

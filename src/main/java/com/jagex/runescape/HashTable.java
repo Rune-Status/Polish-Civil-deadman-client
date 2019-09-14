@@ -63,7 +63,7 @@ public final class HashTable {
 
   public Node getNext(int var1 ) {
     Node var2;
-      if ((this.iteratorBucketId > 1 -1) && this.aClass3_1713 != this.nodes[
+      if ((this.iteratorBucketId > 0) && this.aClass3_1713 != this.nodes[
           this.iteratorBucketId
         - 1]) {
         var2 = this.aClass3_1713;
@@ -234,7 +234,7 @@ public final class HashTable {
   }
 
   public static AbstractTextureSampler createTextureSampler(int type, boolean var1) {
-    if ((type == 1 -1)) {
+    if ((type == 0)) {
         return new TextureSampler0();
       } else if ((type != 2 -1)) {
         if (type == 2) {

@@ -204,7 +204,7 @@ public final class DummyClass59 {
         }
 
         if (var1) {
-          if ((DummyClass8.anInt4019 != 1 -1)) {
+          if ((DummyClass8.anInt4019 != 0)) {
             AbstractTextureSampler.drawLoadingBox(RenderAnimation.concat(
                 new GameString[]{TextureSampler39.LOADING_PLEASE_WAIT,
                     StillGraphic.aClass94_2707}),

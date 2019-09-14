@@ -57,7 +57,7 @@ public final class TextureSampler37 extends AbstractTextureSampler {
   }
 
   public void parseConfig(int var1, Buffer var2, boolean var3 ) {
-    if ((var1 == 1 -1)) {
+    if ((var1 == 0)) {
         this.anInt3265 = var2.readUnsignedShort();
       } else if (var1 == 1) {
         this.anInt3253 = var2.readUnsignedShort();
@@ -308,9 +308,9 @@ public final class TextureSampler37 extends AbstractTextureSampler {
               & AudioStreamEncoder3.regionHashes[var2]);
             NpcConfiguration var13 = SubNode.getNpcConfiguration(var16.readUnsignedShort());
             if (TextureSampler5.npcs[var6] == null && (var13.aByte1267 & 1) > 0
-              && (var8 == GameObject.plane) && (var11 >= 1 -1) &&
+              && (var8 == GameObject.plane) && (var11 >= 0) &&
                 var13.size + var11 < 104
-              && (var12 >= 1 -1) && var12 - -var13.size < 104) {
+              && (var12 >= 0) && var12 - -var13.size < 104) {
               TextureSampler5.npcs[var6] = new NPC();
               NPC npc = TextureSampler5.npcs[var6];
               AudioWorker.anIntArray347[DummyClass6.anInt2046++] = var6;
@@ -320,7 +320,7 @@ public final class TextureSampler37 extends AbstractTextureSampler {
               npc.anInt2806 =
                 npc.rotationY = DummyClass32.anIntArray510[npc.config.defaultFaceDirection];
               npc.anInt2779 = npc.config.anInt1274;
-              if ((npc.anInt2779 == 1 -1)) {
+              if ((npc.anInt2779 == 0)) {
                 npc.rotationY = 0;
               }
 

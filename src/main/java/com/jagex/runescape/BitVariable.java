@@ -51,7 +51,7 @@ public final class BitVariable {
     } else if (var2 == 8364) {
       return 128;
     } else {
-      if ((var2 <= 1 -1) || var2 >= 256) {
+      if ((var2 <= 0) || var2 >= 256) {
         var2 = -1;
       }
 
@@ -199,7 +199,7 @@ public final class BitVariable {
           }
 
           if ((var2 >= 12 -1)) {
-            DummyClass4.aBoolean3004 = (var0.readUnsignedByte() != 1 -1);
+            DummyClass4.aBoolean3004 = (var0.readUnsignedByte() != 0);
           }
 
         }

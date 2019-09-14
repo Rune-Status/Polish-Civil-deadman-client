@@ -24,7 +24,7 @@ public final class DummyClass18 {
       }
 
       return (8 & BZipDecompressorState.tileFlags[var3][var1][var0]) == 0 ?
-        ((var3 > 1 -1) && ((BZipDecompressorState.tileFlags[1][var1][var0] & 2) != 1 -1) ?
+        ((var3 > 0) && ((BZipDecompressorState.tileFlags[1][var1][var0] & 2) != 0) ?
           -1 + var3 :
           var3) :
         0;
@@ -125,7 +125,7 @@ public final class DummyClass18 {
         GameString b = SpotAnimationConfig.gameBuffer.readString();
         Object[] arguments = new Object[b.getLength() - -1];
 
-        for (var5 = b.getLength() + -1; (var5 >= 1 -1); --var5) {
+        for (var5 = b.getLength() + -1; (var5 >= 0); --var5) {
           if (b.charAt(var5) == 115) {
             arguments[1 + var5] = SpotAnimationConfig.gameBuffer.readString();
           } else {
@@ -163,7 +163,7 @@ public final class DummyClass18 {
             }
           }
 
-          if (!var31 && (GameWorld.anInt2622 == 1 -1)) {
+          if (!var31 && (GameWorld.anInt2622 == 0)) {
             GameBuffer.printMessage(var24, 4, SomethingMidiFile.aClass94_2285,
                 var0 + 82);
           }
@@ -199,7 +199,7 @@ public final class DummyClass18 {
               }
             }
 
-            if (!var31 && (GameWorld.anInt2622 == 1 -1)) {
+            if (!var31 && (GameWorld.anInt2622 == 0)) {
               GameBuffer
                   .printMessage(var24, 10, GroundItemNode.EMPTY_STRING, -1);
             }
@@ -301,7 +301,7 @@ public final class DummyClass18 {
               }
             }
 
-            if (!var31 && (GameWorld.anInt2622 == 1 -1)) {
+            if (!var31 && (GameWorld.anInt2622 == 0)) {
               GameBuffer
                   .printMessage(var24, 14, GroundItemNode.EMPTY_STRING, -1);
             }
@@ -477,13 +477,13 @@ public final class DummyClass18 {
             var32 = false;
             var10 = SubNode.anInt2572;
 
-            while ((var10 > 1 -1)) {
+            while ((var10 > 0)) {
               var32 = true;
               --var10;
 
               for (var11 = 0; var10 > var11; ++var11) {
                 if ((var7[var11].name
-                    .method1559(var7[var11 - -1].name, var0 ^ 82) > 1 -1)) {
+                    .method1559(var7[var11 - -1].name, var0 ^ 82) > 0)) {
                   var32 = false;
                   ClanChatUser var9 = var7[var11];
                   var7[var11] = var7[1 + var11];
@@ -552,7 +552,7 @@ public final class DummyClass18 {
 
           CollisionMap.playerOptions[-1 + var21] = var56;
           TextureSampler35.anIntArray3328[var21 + -1] = var20;
-          DummyClass3.aBooleanArray54[var21 + -1] = (var3 == 1 -1);
+          DummyClass3.aBooleanArray54[var21 + -1] = (var3 == 0);
         }
 
         GameString.packetId = -1;
@@ -712,7 +712,7 @@ public final class DummyClass18 {
         var3 = SpotAnimationConfig.gameBuffer.readUnsignedShortLE();
         var21 = SpotAnimationConfig.gameBuffer.method780(-1);
         var5 = SpotAnimationConfig.gameBuffer.readShortLEAdd();
-        if (((var21 >> 30) == 1 -1)) {
+        if (((var21 >> 30) == 0)) {
           AnimationSequence var53;
           if (var21 >> 29 != 0) {
             var6 = '\uffff' & var21;
@@ -751,7 +751,7 @@ public final class DummyClass18 {
                 }
               }
             }
-          } else if (((var21 >> 28) != 1 -1)) {
+          } else if (((var21 >> 28) != 0)) {
             var6 = var21 & '\uffff';
             Player var60;
             if ((WidgetAccess.localPlayerId == var6)) {
@@ -803,7 +803,7 @@ public final class DummyClass18 {
           var6 = 3 & var21 >> 28;
           var30 = ((var21 & 268434277) >> 14) + -WorldMapLabel.anInt1716;
           var8 = (var21 & 16383) + -ProceduralTexture.anInt1152;
-          if ((var30 >= 1 -1) && var8 >= 0 && var30 < 104 && (var8 < 105 -1)) {
+          if ((var30 >= 0) && var8 >= 0 && var30 < 104 && (var8 < 105 -1)) {
             var8 = var8 * 128 - -64;
             var30 = 128 * var30 + 64;
             StillGraphic var50 = new StillGraphic(var5, var6, var30, var8,
@@ -1003,7 +1003,7 @@ public final class DummyClass18 {
         }
 
         var41 = GroundItemNode.EMPTY_STRING;
-        if ((var21 > 1 -1)) {
+        if ((var21 > 0)) {
           var41 = SpotAnimationConfig.gameBuffer.readString();
         }
 
@@ -1050,7 +1050,7 @@ public final class DummyClass18 {
         DummyClass31.anInt1472 = TextureSampler23.anInt3213;
         var10 = FileSystem.anInt104;
 
-        while ((var10 > 1 -1)) {
+        while ((var10 > 0)) {
           --var10;
           var45 = true;
 
@@ -1164,7 +1164,7 @@ public final class DummyClass18 {
           break;
         }
 
-        if (!var49 && (GameWorld.anInt2622 == 1 -1)) {
+        if (!var49 && (GameWorld.anInt2622 == 0)) {
           DummyClass8.aLongArray4017[Mouse.anInt1921] = var51;
           Mouse.anInt1921 = (1 + Mouse.anInt1921) % 100;
           var64 =
@@ -1426,7 +1426,7 @@ public final class DummyClass18 {
         var3 = var20 >> 6;
         var48.anInt1360 = var20 & 63;
         var48.anInt1351 = SpotAnimationConfig.gameBuffer.readUnsignedByte();
-        if ((var48.anInt1351 >= 1 -1)
+        if ((var48.anInt1351 >= 0)
           && (var48.anInt1351 < SomethingIndex150.aClass3_Sub28_Sub16Array2072.length)) {
           if ((var48.anInt1360 != 2 -1) && var48.anInt1360 != 10) {
             if ((var48.anInt1360 >= 3 -1) && var48.anInt1360 <= 6) {
@@ -1564,7 +1564,7 @@ public final class DummyClass18 {
           ++var12;
         }
 
-        if (!var42 && (GameWorld.anInt2622 == 1 -1)) {
+        if (!var42 && (GameWorld.anInt2622 == 0)) {
           DummyClass8.aLongArray4017[Mouse.anInt1921] = var35;
           Mouse.anInt1921 = (Mouse.anInt1921 - -1) % 100;
           GameString var52 = AbstractFont.otherFormat(
@@ -1740,7 +1740,7 @@ public final class DummyClass18 {
             }
           }
 
-          if (var25 != null && (var5 >= 1 -1) &&
+          if (var25 != null && (var5 >= 0) &&
             var25.anIntArray254.length > var5) {
             var25.anIntArray254[var5] = var6;
             var25.anIntArray317[var5] = var30;
@@ -1775,7 +1775,7 @@ public final class DummyClass18 {
       }
       if (GameString.packetId == 116) {
         var20 = SpotAnimationConfig.gameBuffer.readUnsignedByte();
-        if ((SpotAnimationConfig.gameBuffer.readUnsignedByte() == 1 -1)) {
+        if ((SpotAnimationConfig.gameBuffer.readUnsignedByte() == 0)) {
           TextureSampler29.aClass133Array3393[var20] = new SomethingPacket116();
         } else {
           --SpotAnimationConfig.gameBuffer.position;
@@ -1860,7 +1860,7 @@ public final class DummyClass18 {
         var31 = ((Long.MIN_VALUE & var2) != 1L -1);
 
         if (var31) {
-          if ((SubNode.anInt2572 == 1 -1)) {
+          if ((SubNode.anInt2572 == 0)) {
             GameString.packetId = -1;
             return true;
           }
@@ -1895,11 +1895,11 @@ public final class DummyClass18 {
           var40.aClass94_2473 = var41;
           var40.anInt2478 = var21;
 
-          for (var33 = -1 + SubNode.anInt2572; (var33 >= 1 -1); --var33) {
+          for (var33 = -1 + SubNode.anInt2572; (var33 >= 0); --var33) {
             var10 =
                 ClientScript.aClass3_Sub19Array3694[var33].name
                     .method1559(var40.name, var0 ^ 82);
-            if ((var10 == 1 -1)) {
+            if ((var10 == 0)) {
               ClientScript.aClass3_Sub19Array3694[var33].anInt2478 = var21;
               ClientScript.aClass3_Sub19Array3694[var33].aByte2472 = var28;
               ClientScript.aClass3_Sub19Array3694[var33].aClass94_2473 = var41;
@@ -1927,7 +1927,7 @@ public final class DummyClass18 {
                 ClientScript.aClass3_Sub19Array3694[var10];
           }
 
-          if ((SubNode.anInt2572 == 1 -1)) {
+          if ((SubNode.anInt2572 == 0)) {
             ClientScript.aClass3_Sub19Array3694 = new ClanChatUser[100];
           }
 
@@ -2127,7 +2127,8 @@ public final class DummyClass18 {
         int var6 = var1 + -TextureSampler20.anInt3156 + DummyClass18.aClass11_88.anInt247;
         int var7 = DummyClass18.aClass11_88.anInt208 + -DummyClass21.anInt1761 + var2;
         int var5 = DummyClass42.aClass11_886.anInt214;
-        if (SomethingTexture3.anInt2658 > DummyClass42.aClass11_886.anInt179 && ((var5 < var3)
+        if (SomethingTexture3.anInt2658 > DummyClass42.aClass11_886.anInt179 && (
+            (var5 < var3)
           || (-var5) > var3 || var4 > var5 || var4 < -var5)) {
           NPC.aBoolean3975 = true;
         }
@@ -2168,7 +2169,7 @@ public final class DummyClass18 {
             -1 + TextureSampler25.amountContextActions, ~var0))
             && TextureSampler25.amountContextActions > 2) {
             DummyClass22.method1801((byte) -97);
-          } else if ((TextureSampler25.amountContextActions > 1 -1)) {
+          } else if ((TextureSampler25.amountContextActions > 0)) {
             TextureSampler9.method203(96);
           }
 

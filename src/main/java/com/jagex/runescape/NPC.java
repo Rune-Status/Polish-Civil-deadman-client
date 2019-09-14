@@ -63,7 +63,7 @@ public final class NPC extends Mobile {
       DummyClass0 var12 ) {
     if (this.config != null) {
         AnimationSequence var13 = (this.animationId != -1)
-            && (this.anInt2828 == 1 -1) ?
+            && (this.anInt2828 == 0) ?
           GameClient.method45(this.animationId, (byte) -20) :
           null;
         AnimationSequence var14 =
@@ -120,11 +120,11 @@ public final class NPC extends Mobile {
             if (var17 != null) {
               var17.method1897(0, -this.anInt2799, 0);
               if (var21.aBoolean536) {
-                if ((TextureSampler15.anInt3198 != 1 -1)) {
+                if ((TextureSampler15.anInt3198 != 0)) {
                   var17.method1896(TextureSampler15.anInt3198);
                 }
 
-                if ((Parameter.anInt3623 != 1 -1)) {
+                if ((Parameter.anInt3623 != 0)) {
                   var17.method1886(Parameter.anInt3623);
                 }
 

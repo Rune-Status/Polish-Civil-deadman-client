@@ -48,7 +48,7 @@ public final class WidgetAccess extends Node {
         WidgetAccess.anInt2212 = 71;
       }
 
-      return ((1 & this.anInt2205) != 1 -1);
+      return ((1 & this.anInt2205) != 0);
   }
 
   public boolean method96(int var1 ) {
@@ -64,7 +64,7 @@ public final class WidgetAccess extends Node {
         WidgetAccess.anIntArray2209 = null;
       }
 
-      return ((this.anInt2205 >> 21 & 1) != 1 -1);
+      return ((this.anInt2205 >> 21 & 1) != 0);
   }
 
   public boolean method99(int var1 ) {
@@ -72,7 +72,7 @@ public final class WidgetAccess extends Node {
         WidgetAccess.scripts = null;
       }
 
-      return (((1738913629 & this.anInt2205) >> 30) != 1 -1);
+      return (((1738913629 & this.anInt2205) >> 30) != 0);
   }
 
   public boolean method100(byte var1 ) {

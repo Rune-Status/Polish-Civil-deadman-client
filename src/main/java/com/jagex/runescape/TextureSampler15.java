@@ -77,7 +77,7 @@ public final class TextureSampler15 extends AbstractTextureSampler {
               } else {
                 if (var19 == 3) {
                   var10 = var10 < 0 ? -var10 : var10;
-                  var11 = (var11 >= 1 -1) ? var11 : -var11;
+                  var11 = (var11 >= 0) ? var11 : -var11;
                   var12 = var11 >= var10 ? var11 : var10;
                 } else if (var19 == 4) {
                   var10 =
@@ -86,7 +86,7 @@ public final class TextureSampler15 extends AbstractTextureSampler {
                           * 4096.0D);
                   var11 =
                       (int) (Math.sqrt(
-                          ((var11 >= 1 -1) ? var11 : -var11) / 4096.0F)
+                          ((var11 >= 0) ? var11 : -var11) / 4096.0F)
                           * 4096.0D);
                   var12 = var11 + var10;
                   var12 = var12 * var12 >> 12;
@@ -102,7 +102,7 @@ public final class TextureSampler15 extends AbstractTextureSampler {
                       (var11 * var11 + var10 * var10) / 1.6777216E7F));
                 } else {
                   var12 =
-                      ((var10 >= 1 -1) ? var10 : -var10) - -((var11 < 1 -1) ? -var11
+                      ((var10 >= 0) ? var10 : -var10) - -((var11 < 0) ? -var11
                           : var11);
                 }
               }
@@ -130,7 +130,7 @@ public final class TextureSampler15 extends AbstractTextureSampler {
           }
 
           var19 = this.anInt3191;
-          if ((var19 == 1 -1)) {
+          if ((var19 == 0)) {
             var3[var15] = AnimationSomething.anInt3589;
           } else if (var19 != 1) {
             if ((var19 == 4 -1)) {
@@ -154,7 +154,7 @@ public final class TextureSampler15 extends AbstractTextureSampler {
         this.parseConfig(-122, null, false);
       }
 
-      if ((var1 == 1 -1)) {
+      if ((var1 == 0)) {
         this.anInt3203 = this.anInt3204 = var2.readUnsignedByte();
       } else if ((var1 == 2 -1)) {
         this.anInt3197 = var2.readUnsignedByte();

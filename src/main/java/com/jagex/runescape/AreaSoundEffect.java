@@ -131,7 +131,7 @@ public final class AreaSoundEffect extends Node {
         int var22 = var7 + var0;
         int var21 = var0 - var7;
         if (var13 < 0) {
-          while ((var13 < 1 -1)) {
+          while ((var13 < 0)) {
             ++var6;
             var13 += var17;
             var14 += var19;
@@ -140,7 +140,7 @@ public final class AreaSoundEffect extends Node {
           }
         }
 
-        if ((var14 < 1 -1)) {
+        if ((var14 < 0)) {
           var13 += var17;
           var17 += var16;
           var14 += var19;

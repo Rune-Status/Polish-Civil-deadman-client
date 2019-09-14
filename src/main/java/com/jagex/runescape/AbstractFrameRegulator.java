@@ -40,7 +40,7 @@ public abstract class AbstractFrameRegulator {
   }
 
   public static void method1768(int var0, int var1, int var2) {
-    if ((Keyboard.anInt1908 > 1 -1)) {
+    if ((Keyboard.anInt1908 > 0)) {
         DummyClass13.method2195(Keyboard.anInt1908, 0);
         Keyboard.anInt1908 = 0;
       }
@@ -119,7 +119,7 @@ public abstract class AbstractFrameRegulator {
           SomethingLight var14 = new SomethingLight();
           int var16 = -var13.anInt698 + (var13.anInt703 >> 7);
           int var17 = -var13.anInt698 + (var13.anInt708 >> 7);
-          if ((var17 < 1 -1)) {
+          if ((var17 < 0)) {
             var15 -= var17;
             var17 = 0;
           }
@@ -145,7 +145,7 @@ public abstract class AbstractFrameRegulator {
               var22 = 103;
             }
 
-            if ((var21 < 1 -1)) {
+            if ((var21 < 0)) {
               var21 = 0;
             }
 
@@ -157,7 +157,7 @@ public abstract class AbstractFrameRegulator {
               int[] var29;
               int[] var28;
               if (var24 == 0) {
-                if ((var25 == 1 -1)) {
+                if ((var25 == 0)) {
                   continue;
                 }
 
@@ -166,18 +166,18 @@ public abstract class AbstractFrameRegulator {
                   continue;
                 }
 
-                if ((var7[var23][var19] != 1 -1)) {
+                if ((var7[var23][var19] != 0)) {
                   var28 = DummyClass21.anIntArrayArray1763[var7[var23][var19]];
                   var14.anInt651 += 3 * (-2 + (var28.length >> 1));
                   var14.anInt657 += var28.length >> 1;
                   continue;
                 }
-              } else if ((var25 != 1 -1)) {
+              } else if ((var25 != 0)) {
                 var27 = TextureSampler10.method350((byte) 123, var25 - 1);
                 byte var42;
                 if (var27.anInt2103 == -1) {
                   var42 = var7[var23][var19];
-                  if ((var42 != 1 -1)) {
+                  if ((var42 != 0)) {
                     var29 = SceneSomething.anIntArrayArray499[var42];
                     var14.anInt651 += 3 * (-2 + (var29.length >> 1));
                     var14.anInt657 += var29.length >> 1;
@@ -279,7 +279,7 @@ public abstract class AbstractFrameRegulator {
 
           var15 = 0;
           var14.method1020();
-          if (((-var13.anInt698 + (var13.anInt708 >> 7)) < 1 -1)) {
+          if (((-var13.anInt698 + (var13.anInt708 >> 7)) < 0)) {
             var15 -= -var13.anInt698 + (var13.anInt708 >> 7);
           }
 
@@ -319,7 +319,7 @@ public abstract class AbstractFrameRegulator {
                   continue;
                 }
               } else {
-                if ((var43 != 1 -1)) {
+                if ((var43 != 0)) {
                   var46 = TextureSampler10.method350((byte) 113, -1 + var43);
                   if (var46.anInt2103 == -1) {
                     TextureSampler18.method284(var0, var9, var23, var6, var19,
@@ -425,7 +425,7 @@ public abstract class AbstractFrameRegulator {
             ++var15;
           }
 
-          if ((var14.anInt653 > 1 -1) && var14.anInt655 > 0) {
+          if ((var14.anInt653 > 0) && var14.anInt655 > 0) {
             var14.method1019();
             var13.aClass37_712 = var14;
           }

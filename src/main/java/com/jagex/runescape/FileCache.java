@@ -142,13 +142,13 @@ public final class FileCache {
             this.aClass30_683.method978(0, DummyClass11.aByteArray2040, 6, 0);
             var7 = (16711680 & DummyClass11.aByteArray2040[3] << 16) + ('\uff00'
               & DummyClass11.aByteArray2040[4] << 8) + (DummyClass11.aByteArray2040[5] & 255);
-            if ((var7 <= 1 -1) || ((this.aClass30_681.method976(0) / 520L) < var7)) {
+            if ((var7 <= 0) || ((this.aClass30_681.method976(0) / 520L) < var7)) {
               var10000 = false;
               return false;
             }
           } else {
             var7 = (int) ((this.aClass30_681.method976(var1 + -87) - -519L) / 520L);
-            if ((var7 == 1 -1)) {
+            if ((var7 == 0)) {
               var7 = 1;
             }
           }
@@ -207,10 +207,10 @@ public final class FileCache {
                 }
 
                 var11 = -var8 + var2;
-                if ((var10 == 1 -1)) {
+                if ((var10 == 0)) {
                   var5 = false;
                   var10 = (int) ((this.aClass30_681.method976(0) - -519L) / 520L);
-                  if ((var10 == 1 -1)) {
+                  if ((var10 == 0)) {
                     ++var10;
                   }
 
@@ -268,7 +268,7 @@ public final class FileCache {
 
           for (int var10 = var4; var10 < var2; ++var10) {
             if ((GameString.method1535(var9, TextureSampler15.aClass44_Sub1Array3201[var10], 5730,
-              var0, var1, var3, var5) <= 1 -1)) {
+              var0, var1, var3, var5) <= 0)) {
               GameWorld var11 = TextureSampler15.aClass44_Sub1Array3201[var10];
               TextureSampler15.aClass44_Sub1Array3201[var10] =
                 TextureSampler15.aClass44_Sub1Array3201[var8];

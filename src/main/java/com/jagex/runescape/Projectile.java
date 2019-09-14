@@ -138,7 +138,7 @@ public final class Projectile extends SceneNode {
           this.anInt2898 = this.anInt2922 + 1;
           if (this.aClass142_2923.anIntArray1851.length <= this.anInt2898) {
             this.anInt2898 -= this.aClass142_2923.anInt1865;
-            if ((this.anInt2898 < 1 -1)
+            if ((this.anInt2898 < 0)
               || (this.anInt2898 >= this.aClass142_2923.anIntArray1851.length)) {
               this.anInt2898 = -1;
             }

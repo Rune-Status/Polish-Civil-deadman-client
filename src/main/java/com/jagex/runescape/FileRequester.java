@@ -238,11 +238,11 @@ public final class FileRequester extends AbstractFileRequester {
                 var3 = this.aClass61_2966.getFirst();
                 var3 != null; var3 = this.aClass61_2966.getNext()) {
               var4 = (int) var3.key;
-              if ((this.aByteArray2949[var4] == 1 -1)) {
+              if ((this.aByteArray2949[var4] == 0)) {
                 this.method2109(1, var4, 51);
               }
 
-              if ((this.aByteArray2949[var4] == 1 -1)) {
+              if ((this.aByteArray2949[var4] == 0)) {
                 var2 = false;
               } else {
                 var3.unlinkNode();
@@ -250,7 +250,7 @@ public final class FileRequester extends AbstractFileRequester {
             }
 
             while (this.aClass62_2944.unpackedSizes.length > this.anInt2964) {
-              if ((this.aClass62_2944.unpackedSizes[this.anInt2964] == 1 -1)) {
+              if ((this.aClass62_2944.unpackedSizes[this.anInt2964] == 0)) {
                 ++this.anInt2964;
               } else {
                 if ((this.aClass73_2956.anInt1087 >= 251 -1)) {
@@ -262,7 +262,7 @@ public final class FileRequester extends AbstractFileRequester {
                   this.method2109(1, this.anInt2964, 99);
                 }
 
-                if ((this.aByteArray2949[this.anInt2964] == 1 -1)) {
+                if ((this.aByteArray2949[this.anInt2964] == 0)) {
                   var2 = false;
                   var3 = new Node();
                   var3.key = this.anInt2964;
@@ -297,7 +297,7 @@ public final class FileRequester extends AbstractFileRequester {
               }
 
               while (this.aClass62_2944.unpackedSizes.length > this.anInt2964) {
-                if ((this.aClass62_2944.unpackedSizes[this.anInt2964] == 1 -1)) {
+                if ((this.aClass62_2944.unpackedSizes[this.anInt2964] == 0)) {
                   ++this.anInt2964;
                 } else {
                   if (this.aClass66_2953.method1241(-30064)) {
@@ -367,7 +367,7 @@ public final class FileRequester extends AbstractFileRequester {
 
   private AbstractFileRequest method2109(int var1, int var2, int var3) {
     Node var4 = this.aClass130_2946.get(var2);
-      if (var4 != null && (var1 == 1 -1) && !((AbstractFileRequest) var4).aBoolean3628
+      if (var4 != null && (var1 == 0) && !((AbstractFileRequest) var4).aBoolean3628
         && ((AbstractFileRequest) var4).aBoolean3632) {
         var4.unlinkNode();
         var4 = null;
@@ -524,7 +524,7 @@ public final class FileRequester extends AbstractFileRequester {
               var2 != null; var2 = this.aClass61_2963.getNext()) {
             int var3 = (int) var2.key;
             if (var3 >= 0 && this.aClass62_2944.anInt960 > var3
-              && (this.aClass62_2944.unpackedSizes[var3] != 1 -1)) {
+              && (this.aClass62_2944.unpackedSizes[var3] != 0)) {
               if (this.aByteArray2949[var3] == 0) {
                 this.method2109(1, var3, var1 + 80);
               }
@@ -557,7 +557,7 @@ public final class FileRequester extends AbstractFileRequester {
   public static void method2100(byte var0) {
     SpotAnimationConfig.gameBuffer.method807((byte) 118);
       int var1 = SpotAnimationConfig.gameBuffer.readBits(1);
-      if ((var1 != 1 -1)) {
+      if ((var1 != 0)) {
         int var2 = SpotAnimationConfig.gameBuffer.readBits(2);
         if (var2 == 0) {
           DummyClass60.anIntArray441[OndemandRequester.anInt997++] = 2047;
@@ -617,7 +617,7 @@ public final class FileRequester extends AbstractFileRequester {
   public static void method2104(Widget var0, boolean var1, int var2) {
     int var3 = 57 % ((var2 - -58) / 47);
       int var4 = var0.anInt240 != 0 ? var0.anInt240 : var0.anInt168;
-      int var5 = (var0.anInt252 != 1 -1) ? var0.anInt252 : var0.anInt193;
+      int var5 = (var0.anInt252 != 0) ? var0.anInt252 : var0.anInt193;
       AbstractImageProducer.method2183(var0.anInt279, var1, var4, 235, var5,
         SceneNode.aClass11ArrayArray1834[var0.anInt279 >> 16]);
       if (var0.aClass11Array262 != null) {

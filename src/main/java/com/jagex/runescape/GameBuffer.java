@@ -88,7 +88,7 @@ public final class GameBuffer extends Buffer {
   }
 
   public static void method806(int var0, int var1) {
-    if ((var1 >= 1 -1)) {
+    if ((var1 >= 0)) {
       int var2 = DummyClass26.anIntArray1613[var1];
       int var3 = DummyClass32.anIntArray512[var1];
       int var4 = TextureSampler27.aShortArray3095[var1];
@@ -333,7 +333,7 @@ public final class GameBuffer extends Buffer {
       }
 
       if (var4 == 60) {
-        if ((var5 == 1 -1)) {
+        if ((var5 == 0)) {
           AbstractFileRequest
               .method589(GameWorldSomething.currentPlane, var2, var3);
         } else {
@@ -814,7 +814,7 @@ public final class GameBuffer extends Buffer {
         }
 
         if (var4 == 11) {
-          if ((var5 == 1 -1)) {
+          if ((var5 == 0)) {
             ClientScriptCall.anInt2440 = 1;
             AbstractFileRequest
                 .method589(GameWorldSomething.currentPlane, var2, var3);
@@ -1076,12 +1076,12 @@ public final class GameBuffer extends Buffer {
             }
 
             if (var4 == 36) {
-              if ((var5 == 1 -1)) {
+              if ((var5 == 0)) {
                 GameObjectConfig.anInt1521 = 1;
                 AbstractFileRequest
                     .method589(GameWorldSomething.currentPlane, var2, var3);
               } else {
-                if ((TextureSampler35.rights > 1 -1)
+                if ((TextureSampler35.rights > 0)
                     && GameObjectConfig.aBooleanArray1490[82]
                     && GameObjectConfig.aBooleanArray1490[81]) {
                   BufferedFile.method979(var2 + WorldMapLabel.anInt1716,
@@ -1171,7 +1171,7 @@ public final class GameBuffer extends Buffer {
               }
             }
 
-            if ((Something3d.anInt3012 != 1 -1)) {
+            if ((Something3d.anInt3012 != 0)) {
               Something3d.anInt3012 = 0;
               DummyClass29.method909(120,
                   EnumStringFetcher
@@ -1183,7 +1183,7 @@ public final class GameBuffer extends Buffer {
             }
 
             if (AbstractFileRequester.aClass11_1933 != null
-                && (AreaSoundEffect.anInt2330 == 1 -1)) {
+                && (AreaSoundEffect.anInt2330 == 0)) {
               DummyClass29
                   .method909(-106, AbstractFileRequester.aClass11_1933);
             }

@@ -14,7 +14,7 @@ public final class TextureSampler10 extends AbstractTextureSampler {
   }
 
   private void method345(int var1, boolean var2) {
-    if ((var1 != 1 -1)) {
+    if ((var1 != 0)) {
         if ((var1 == 2 -1)) {
           this.anIntArrayArray3438 = new int[2][4];
           this.anIntArrayArray3438[0][1] = 0;
@@ -215,7 +215,7 @@ public final class TextureSampler10 extends AbstractTextureSampler {
     if (var3) {
         if (var1 == 0) {
           int var4 = var2.readUnsignedByte();
-          if ((var4 == 1 -1)) {
+          if ((var4 == 0)) {
             this.anIntArrayArray3438 = new int[var2.readUnsignedByte()][4];
 
             for (int var5 = 0; this.anIntArrayArray3438.length > var5;
@@ -260,7 +260,7 @@ public final class TextureSampler10 extends AbstractTextureSampler {
 
         for (int var9 = 0; SomethingLight0.anInt1559 > var9; ++var9) {
           int var4 = var5[var9] >> 4;
-          if ((var4 < 1 -1)) {
+          if ((var4 < 0)) {
             var4 = 0;
           }
 
@@ -284,7 +284,7 @@ public final class TextureSampler10 extends AbstractTextureSampler {
       }
 
       int var5 = this.anIntArrayArray3438.length;
-      if ((var5 > 1 -1)) {
+      if ((var5 > 0)) {
         for (int var6 = 0; var6 < 257; ++var6) {
           int var7 = 0;
           int var8 = var6 << 4;

@@ -177,7 +177,7 @@ public final class SomethingTexture4 extends AbstractSomethingTexture {
 
         int var5;
         int var6;
-        if (((64 & var4) != 1 -1)) {
+        if (((64 & var4) != 0)) {
           var5 = SpotAnimationConfig.gameBuffer.readUnsignedByte();
           var6 = SpotAnimationConfig.gameBuffer.method786(true);
           var3.method1970(var6, -8, AbstractGameWorld.updateCycle, var5);
@@ -201,7 +201,7 @@ public final class SomethingTexture4 extends AbstractSomethingTexture {
           HashTable.method1772(var6, var5, 39, var3);
         }
 
-        if (((var4 & 4) != 1 -1)) {
+        if (((var4 & 4) != 0)) {
           var3.anInt2772 = SpotAnimationConfig.gameBuffer
               .readUnsignedShortAdd();
           if ((var3.anInt2772 == 65536 -1)) {
@@ -270,7 +270,7 @@ public final class SomethingTexture4 extends AbstractSomethingTexture {
           }
         }
 
-        if (((var4 & 32) != 1 -1)) {
+        if (((var4 & 32) != 0)) {
           var3.aClass94_2825 = SpotAnimationConfig.gameBuffer.readString();
           var3.anInt2814 = 100;
         }

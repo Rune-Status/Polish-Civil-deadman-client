@@ -118,7 +118,7 @@ public final class DummyClass29 {
               var14 = var15.sceneNode1;
             }
 
-            if ((var12.anInt1538 != 1 -1)) {
+            if ((var12.anInt1538 != 0)) {
               var6.method1485(var18, var12.aBoolean1486, -104, var1, var19, var2);
             }
           } else if (var4 != 1) {

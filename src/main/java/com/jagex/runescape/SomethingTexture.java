@@ -237,8 +237,8 @@ public final class SomethingTexture extends AbstractSomethingTexture {
         int var7 = var4[var5];
         int var8 = var0[var5];
 
-        for (int var9 = 0; (var7 != 1 -1) && (var9 < var2.aClass145Array2809.length); var7 >>>= 1) {
-          if (((1 & var7) != 1 -1)) {
+        for (int var9 = 0; (var7 != 0) && (var9 < var2.aClass145Array2809.length); var7 >>>= 1) {
+          if (((1 & var7) != 0)) {
             if ((var6 == -1)) {
               var2.aClass145Array2809[var9] = null;
             } else {

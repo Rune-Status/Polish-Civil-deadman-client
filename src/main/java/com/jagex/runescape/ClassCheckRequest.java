@@ -41,8 +41,8 @@ public final class ClassCheckRequest extends Node {
       if (DummyClass12.minimapMode != 2 && DummyClass12.minimapMode != 5
         && GZipDecompressor.aClass3_Sub28_Sub16_812 != null) {
         int var19 = TextureSampler9.anInt3102 + SpotAnimationConfig.anInt531 & 2047;
-        int var6 = 0 + TextureCache.localPlayer.anInt2819 / 32 + 48;
-        int var7 = 0 + -(TextureCache.localPlayer.anInt2829 / 32) + 464;
+        int var6 = TextureCache.localPlayer.anInt2819 / 32 + 48;
+        int var7 = -(TextureCache.localPlayer.anInt2829 / 32) + 464;
         if (GlRenderer.useOpenGlRenderer) {
           ((GlDirectColorSprite) GZipDecompressor.aClass3_Sub28_Sub16_812)
               .draw(var3, var2,
@@ -120,11 +120,11 @@ public final class ClassCheckRequest extends Node {
 
         for (var9 = 0; Mouse.anInt1924 > var9; ++var9) {
           var10 =
-            -(TextureCache.localPlayer.anInt2819 / 32) + 2 + 4 * DummyClass51.anIntArray1163[var9]
-              + 0;
+              -(TextureCache.localPlayer.anInt2819 / 32) + 2
+                  + 4 * DummyClass51.anIntArray1163[var9];
           var11 =
-            -(TextureCache.localPlayer.anInt2829 / 32) + 2 + (ObjectNode.anIntArray4050[var9] * 4
-              - 0);
+            -(TextureCache.localPlayer.anInt2829 / 32) + 2 + (
+                ObjectNode.anIntArray4050[var9] * 4);
           GameObjectConfig var20 = DummyClass11.method2207(4, ClientScript.anIntArray3693[var9]);
           if (var20.anIntArray1524 != null) {
             var20 = var20.method1685(var1 + -59);
@@ -199,7 +199,7 @@ public final class ClassCheckRequest extends Node {
             }
 
             boolean var32 = false;
-            if ((TextureCache.localPlayer.anInt3956 != 1 -1) && var23.anInt3956
+            if ((TextureCache.localPlayer.anInt3956 != 0) && var23.anInt3956
                 != 0
               && var23.anInt3956 == TextureCache.localPlayer.anInt3956) {
               var32 = true;
@@ -227,7 +227,7 @@ public final class ClassCheckRequest extends Node {
 
         for (var10 = 0; (var10 < var24.length); ++var10) {
           HintMarker var26 = var24[var10];
-          if (var26 != null && (var26.anInt1360 != 1 -1)
+          if (var26 != null && (var26.anInt1360 != 0)
               && AbstractGameWorld.updateCycle % 20 < 10) {
             if ((var26.anInt1360 == 2 -1) && var26.anInt1359 >= 0
               && var26.anInt1359 < TextureSampler5.npcs.length) {
@@ -247,7 +247,7 @@ public final class ClassCheckRequest extends Node {
               DummyClass41.method1171(var26.anInt1351, var2, var3, var12, var13, var4, false);
             }
 
-            if (var26.anInt1360 == 10 && (var26.anInt1359 >= 1 -1)
+            if (var26.anInt1360 == 10 && (var26.anInt1359 >= 0)
               && TextureSampler0.players.length > var26.anInt1359) {
               Player var30 = TextureSampler0.players[var26.anInt1359];
               if (var30 != null) {
@@ -416,7 +416,7 @@ public final class ClassCheckRequest extends Node {
 
           if (GameString.anIntArray2157[var1] < 0) {
             int var3;
-            if ((TextureSampler26.anIntArray3083[var1] == 1 -1)) {
+            if ((TextureSampler26.anIntArray3083[var1] == 0)) {
               var3 = ClientScriptCall.anInt2453;
             } else {
               int var4 = 128 * (255 & TextureSampler26.anIntArray3083[var1]);
@@ -438,14 +438,14 @@ public final class ClassCheckRequest extends Node {
                 continue;
               }
 
-              if ((var9 < 1 -1)) {
+              if ((var9 < 0)) {
                 var9 = 0;
               }
 
               var3 = DummyClass28.anInt340 * (var4 + -var9) / var4;
             }
 
-            if ((var3 > 1 -1)) {
+            if ((var3 > 0)) {
               SomethingMusic0 var12 = var11.method1812().method151(DummyClass32.aClass157_524);
               AudioStreamEncoder1 var13 = AudioStreamEncoder1.method437(var12, 100, var3);
               assert var13 != null;
@@ -470,7 +470,7 @@ public final class ClassCheckRequest extends Node {
         }
 
         MidiSomething.aBoolean1158 = false;
-      } else if ((BZipDecompressorState.anInt120 != 1 -1)
+      } else if ((BZipDecompressorState.anInt120 != 0)
           && (AbstractFrameRegulator.anInt1691 != -1)
         && !BitVariable.method1391(var0 + 91)) {
         TextureSampler12.secureBuffer.writePacket(137);

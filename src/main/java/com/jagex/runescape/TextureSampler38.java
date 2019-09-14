@@ -43,12 +43,12 @@ public final class TextureSampler38 extends AbstractTextureSampler {
               >> 12);
           int var15 = var12 - var10;
           int var14 = -var11 + var13;
-          if ((var15 != 1 -1) || (var14 != 1 -1)) {
+          if ((var15 != 0) || (var14 != 0)) {
             if (var15 < 0) {
               var15 = -var15;
             }
 
-            if ((var14 < 1 -1)) {
+            if ((var14 < 0)) {
               var14 = -var14;
             }
 
@@ -76,7 +76,7 @@ public final class TextureSampler38 extends AbstractTextureSampler {
             var18 = -var10 + var12;
             int var19 = var13 + -var11;
             var17 = var11;
-            if ((var19 < 1 -1)) {
+            if ((var19 < 0)) {
               var19 = -var19;
             }
 
@@ -111,7 +111,7 @@ public final class TextureSampler38 extends AbstractTextureSampler {
   }
 
   public void parseConfig(int var1, Buffer var2, boolean var3 ) {
-    if ((var1 == 1 -1)) {
+    if ((var1 == 0)) {
         this.anInt3454 = var2.readUnsignedByte();
       } else if ((var1 == 2 -1)) {
         this.anInt3447 = var2.readUnsignedShort();

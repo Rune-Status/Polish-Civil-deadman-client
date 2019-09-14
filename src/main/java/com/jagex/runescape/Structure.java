@@ -123,7 +123,7 @@ public final class Structure extends SubNode {
         Structure.method602(-115, 65, (byte) -119, null);
       }
 
-      if ((var3.aByte304 == 1 -1)) {
+      if ((var3.aByte304 == 0)) {
         var3.anInt168 = var3.anInt177;
       } else {
         if ((var3.aByte304 == 2 -1)) {
@@ -145,7 +145,7 @@ public final class Structure extends SubNode {
         }
       }
 
-      if ((var3.aByte241 == 1 -1)) {
+      if ((var3.aByte241 == 0)) {
         var3.anInt193 = var3.anInt244;
       } else if (var3.aByte241 == 1) {
         var3.anInt193 = -var3.anInt244 + var0;
@@ -168,13 +168,13 @@ public final class Structure extends SubNode {
       }
 
       if (LinearHashTable.aBoolean1040 && (
-          (GameClient.method44(var3).anInt2205 != 1 -1)
-        || (var3.anInt187 == 1 -1))) {
+          (GameClient.method44(var3).anInt2205 != 0)
+        || (var3.anInt187 == 0))) {
         if (var3.anInt193 < 5 && var3.anInt168 < 5) {
           var3.anInt193 = 5;
           var3.anInt168 = 5;
         } else {
-          if ((var3.anInt168 <= 1 -1)) {
+          if ((var3.anInt168 <= 0)) {
             var3.anInt168 = 5;
           }
 
@@ -238,7 +238,7 @@ public final class Structure extends SubNode {
 
             int var7 = (-var6 + var1.anInt2328) * DummyClass28.anInt340 / var1.anInt2328;
             if (var1.aClass3_Sub24_Sub1_2312 == null) {
-              if ((var1.anInt2332 >= 1 -1)) {
+              if ((var1.anInt2332 >= 0)) {
                 SoundEffect var8 =
                   SoundEffect.method1811(AbstractMouseWheel.soundEffects, var1.anInt2332, 0);
                 if (var8 != null) {
@@ -259,7 +259,7 @@ public final class Structure extends SubNode {
               if (!var1.aClass3_Sub24_Sub1_2315.method82(0)) {
                 var1.aClass3_Sub24_Sub1_2315 = null;
               }
-            } else if (var1.anIntArray2333 != null && ((var1.anInt2316 -= var3) <= 1 -1)) {
+            } else if (var1.anIntArray2333 != null && ((var1.anInt2316 -= var3) <= 0)) {
               int var13 = (int) (var1.anIntArray2333.length * Math.random());
               SoundEffect var14 =
                 SoundEffect.method1811(AbstractMouseWheel.soundEffects, var1.anIntArray2333[var13],

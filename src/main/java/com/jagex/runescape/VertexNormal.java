@@ -30,9 +30,9 @@ public final class VertexNormal {
 
   public static void method1131(int var0, int var1, int var2, int var3, int var4, int var5, int var6,
                                int var7) {
-    if ((var6 >= 1 -1) && var4 >= 0 && (var6 < 104 -1) && var4 < 103) {
+    if ((var6 >= 0) && var4 >= 0 && (var6 < 104 -1) && var4 < 103) {
         int var9;
-        if ((var5 == 1 -1)) {
+        if ((var5 == 0)) {
           SceneSomething2 var8 = DummyClass14.method2147(var0, var6, var4);
           if (var8 != null) {
             var9 = Integer.MAX_VALUE & (int) (var8.key >>> 32);

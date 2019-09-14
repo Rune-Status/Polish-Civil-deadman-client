@@ -119,7 +119,7 @@ public final class MaterialShader5 implements MaterialShader {
     float var4 = (1 + (var1 >> 3 & 3)) * 0.01F;
       float var3 = -0.01F * (1 + (var1 & 3));
       float var5 = (var1 & 64) == 0 ? 4.8828125E-4F : 9.765625E-4F;
-      boolean var6 = ((128 & var1) != 1 -1);
+      boolean var6 = ((128 & var1) != 0);
       if (var6) {
         this.aFloatArray2174[0] = var5;
         this.aFloatArray2174[1] = 0.0F;
@@ -257,7 +257,7 @@ public final class MaterialShader5 implements MaterialShader {
           byte[] var3 = var2.aClass94_2625.method1568(0);
           DummyClass36.aString2611 = new String(var3, 0, var3.length);
           ClientScriptCall.anInt2451 = var2.anInt2621;
-          if ((AbstractGameWorld.usageLocation != 1 -1)) {
+          if ((AbstractGameWorld.usageLocation != 0)) {
             DummyClass11.anInt2036 = '\u9c40' + ClientScriptCall.anInt2451;
             Projectile.anInt2894 = DummyClass11.anInt2036;
             GameWorldSomething.anInt506 = ClientScriptCall.anInt2451 + '\uc350';
@@ -274,14 +274,14 @@ public final class MaterialShader5 implements MaterialShader {
                                byte var6) {
     int var9;
       int var12;
-      if ((Something3d.anInt3012 == 1 -1)) {
+      if ((Something3d.anInt3012 == 0)) {
         int var10 = BlockConfig.screenLowerY;
         var9 = DummyClass3.screenUpperY;
         int var8 = Unsure.screenUpperX;
         int var7 = DummyClass17.screenLowerX;
         int var11 = (var5 - var3) * (-var7 + var8) / var1 - -var7;
         var12 = var9 + (var10 + -var9) * (-var0 + var4) / var2;
-        if (SceneNode.aBoolean1837 && ((64 & Something3dRoot.anInt2051) != 1 -1)) {
+        if (SceneNode.aBoolean1837 && ((64 & Something3dRoot.anInt2051) != 0)) {
           Widget var13 =
             AbstractDirectColorSprite
                 .method638((byte) -19, ScriptState.anInt872, Widget.anInt278);
@@ -409,8 +409,8 @@ public final class MaterialShader5 implements MaterialShader {
             int var37;
             if ((var14 == 2 -1)) {
               NPC var31 = TextureSampler5.npcs[var15];
-              if (((var31.config.size & 1) == 1 -1) && ((127 & var31.anInt2819) == 1 -1)
-                && ((var31.anInt2829 & 127) == 1 -1)
+              if (((var31.config.size & 1) == 0) && ((127 & var31.anInt2819) == 0)
+                && ((var31.anInt2829 & 127) == 0)
                 || (var31.config.size & 1) == 1 && (127 & var31.anInt2819) == 64 &&
                   ((
                       var31.anInt2829 & 127) == 65 -1)) {
@@ -508,11 +508,11 @@ public final class MaterialShader5 implements MaterialShader {
                       var34 = SomethingPacket151.method822(19406, var34);
                     }
 
-                    for (var21 = 4; (var21 >= 1 -1); --var21) {
+                    for (var21 = 4; (var21 >= 0); --var21) {
                       if (var34 != null && var34[var21] != null) {
                         ++GameCanvas.anInt27;
                         byte var35 = 0;
-                        if ((var21 == 1 -1)) {
+                        if ((var21 == 0)) {
                           var35 = 21;
                         }
 

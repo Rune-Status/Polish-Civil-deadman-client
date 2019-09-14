@@ -69,7 +69,7 @@ public final class DummyClass42 {
       }
 
       int var18 = (int) (var12 * 256.0D);
-      if ((var19 >= 1 -1)) {
+      if ((var19 >= 0)) {
         if (var19 > 255) {
           var19 = 255;
         }

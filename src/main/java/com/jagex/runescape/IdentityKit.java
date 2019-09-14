@@ -223,7 +223,7 @@ public final class IdentityKit {
           int var11;
           if (var10) {
             var11 = var6.readUnsignedShortSmart();
-            if ((var11 == 1 -1)) {
+            if ((var11 == 0)) {
               break;
             }
 
@@ -240,7 +240,7 @@ public final class IdentityKit {
             int var16 = var2 + var12;
             int var15 = var1 + var13;
             int var14 = var6.readUnsignedByte() >> 2;
-            if ((var15 > 1 -1) && var16 > 0 && var15 < 103 && var16 < 103) {
+            if ((var15 > 0) && var16 > 0 && var15 < 103 && var16 < 103) {
               GameObjectConfig var17 = DummyClass11.method2207(4, var7);
               if (var14 != 22 || Keyboard.aBoolean1905 || var17.anInt1529 != 0
                   || (var17.anInt1538 == 2 -1) || var17.aBoolean1483) {
@@ -280,7 +280,7 @@ public final class IdentityKit {
             var4.anInt2838 = AbstractGameWorld.updateCycle;
           } else {
             int var6 = SpotAnimationConfig.gameBuffer.readBits(2);
-            if ((var6 == 1 -1)) {
+            if ((var6 == 0)) {
               AudioWorker.anIntArray347[DummyClass6.anInt2046++] = var3;
               var4.anInt2838 = AbstractGameWorld.updateCycle;
               DummyClass60.anIntArray441[OndemandRequester.anInt997++] = var3;
@@ -359,7 +359,7 @@ public final class IdentityKit {
   }
 
   public static void method950(Widget var0, int var1, int var2, int var3) {
-    if (TextureSampler25.amountContextActions >= 2 || (Something3d.anInt3012 != 1 -1)
+    if (TextureSampler25.amountContextActions >= 2 || (Something3d.anInt3012 != 0)
         || SceneNode.aBoolean1837) {
         if (var1 > -55) {
           IdentityKit.aClass94_473 = null;

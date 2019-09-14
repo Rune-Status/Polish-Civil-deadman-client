@@ -62,7 +62,7 @@ public final class GlTexture2d extends SubNode {
 
   public void initialize(byte var1) {
     int var2 = DummyClass32.method961(var1 + 1530);
-      if (((1 & var2) == 1 -1)) {
+      if (((1 & var2) == 0)) {
         GlRenderer.bindTexture(this.anInt3759);
       }
 
@@ -70,7 +70,7 @@ public final class GlTexture2d extends SubNode {
         GlRenderer.method1856(0);
       }
 
-      if (((var2 & 4) == 1 -1)) {
+      if (((var2 & 4) == 0)) {
         GlRenderer.method1847(0);
       }
 

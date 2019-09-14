@@ -48,7 +48,7 @@ public final class TextureSampler13 extends AbstractTextureSampler {
     if (TextureCache.localPlayer != var3) {
         if (TextureSampler25.amountContextActions < 400) {
           GameString var5;
-          if ((var3.skillTotal == 1 -1)) {
+          if ((var3.skillTotal == 0)) {
             boolean var6 = true;
             if ((TextureCache.localPlayer.anInt3970 != -1) && var3.anInt3970
                 != -1) {
@@ -106,19 +106,19 @@ public final class TextureSampler13 extends AbstractTextureSampler {
               var4, (short) 1, TextureSampler14.aClass94_3388, var2);
             ++MilliFrameRegulator.anInt2684;
           } else if (!SceneNode.aBoolean1837) {
-            for (var12 = 7; (var12 >= 1 -1); --var12) {
+            for (var12 = 7; (var12 >= 0); --var12) {
               if (CollisionMap.playerOptions[var12] != null) {
                 ++Cursor.anInt880;
                 short var14 = 0;
                 boolean var16 = false;
-                if ((AbstractImageProducer.gameId == 1 -1)
+                if ((AbstractImageProducer.gameId == 0)
                   && CollisionMap.playerOptions[var12].method1531(TextureSampler36.aClass94_3427)) {
                   if (var3.combatLevel > TextureCache.localPlayer.combatLevel) {
                     var14 = 2000;
                   }
 
-                  if ((TextureCache.localPlayer.anInt3956 != 1 -1)
-                      && (var3.anInt3956 != 1 -1)) {
+                  if ((TextureCache.localPlayer.anInt3956 != 0)
+                      && (var3.anInt3956 != 0)) {
                     if ((TextureCache.localPlayer.anInt3956 == var3.anInt3956)) {
                       var14 = 2000;
                     } else {
@@ -183,7 +183,7 @@ public final class TextureSampler13 extends AbstractTextureSampler {
       TextureSampler33.method183(-108);
       StringNode.method727(91);
       SomethingWorldMappy.method397((byte) -41);
-      if ((TextureSampler20.usageMode != 1 -1)) {
+      if ((TextureSampler20.usageMode != 0)) {
         for (int var1 = 0; SomethingMidiFile.byteArrayPool.length > var1; ++var1) {
           SomethingMidiFile.byteArrayPool[var1] = null;
         }
@@ -228,7 +228,7 @@ public final class TextureSampler13 extends AbstractTextureSampler {
 
         while (true) {
           int var13 = var11.method773((byte) -127);
-          if ((var13 == 1 -1)) {
+          if ((var13 == 0)) {
             return;
           }
 
@@ -237,7 +237,7 @@ public final class TextureSampler13 extends AbstractTextureSampler {
 
           while (true) {
             int var15 = var11.readUnsignedShortSmart();
-            if ((var15 == 1 -1)) {
+            if ((var15 == 0)) {
               break;
             }
 
@@ -257,7 +257,7 @@ public final class TextureSampler13 extends AbstractTextureSampler {
               int var24 =
                 SceneNode.method1863(var22.anInt1480, var4, (byte) 126, var22.anInt1485, 7 & var17,
                   var21, 7 & var16) + var6;
-              if ((var23 > 1 -1) && var24 > 0 && (var23 < 104 -1) && var24 < 103) {
+              if ((var23 > 0) && var24 > 0 && (var23 < 104 -1) && var24 < 103) {
                 CollisionMap var25 = null;
                 if (!var7) {
                   int var26 = var1;

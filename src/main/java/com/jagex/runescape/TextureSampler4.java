@@ -52,7 +52,7 @@ public final class TextureSampler4 extends AbstractTextureSampler {
       for (int var5 = 0; (var5 < this.anInt3233); ++var5) {
         int var6;
         int var7;
-        if ((var5 > 1 -1)) {
+        if ((var5 > 0)) {
           var6 = this.anInt3222;
           var7 = (FloorUnderlay.method1603((byte) 59, 4096, var2) + -2048) * this.anInt3219
               >> 12;
@@ -73,7 +73,7 @@ public final class TextureSampler4 extends AbstractTextureSampler {
                 this.anIntArrayArray3225[var5][var6 + -1] - -var7;
           }
 
-          this.anIntArrayArray3240[var5][var6] = (this.anInt3229 <= 1 -1) ?
+          this.anIntArrayArray3240[var5][var6] = (this.anInt3229 <= 0) ?
             4096 :
             4096 + -FloorUnderlay.method1603((byte) 33, this.anInt3229, var2);
         }
@@ -91,7 +91,7 @@ public final class TextureSampler4 extends AbstractTextureSampler {
         int var7 = 0;
 
         int var9;
-        for (var9 = DummyClass4.anIntArray2999[var1] + this.anInt3231; (var9 < 1 -1); var9 += 4096) {
+        for (var9 = DummyClass4.anIntArray2999[var1] + this.anInt3231; (var9 < 0); var9 += 4096) {
         }
 
         while (var9 > 4096) {
@@ -114,7 +114,7 @@ public final class TextureSampler4 extends AbstractTextureSampler {
             int var8;
             for (
               var8 = TextureCache.anIntArray2125[var4] - -(this.anInt3235 * var5 >> 12);
-              (var8 < 1 -1); var8 += 4096) {
+              (var8 < 0); var8 += 4096) {
             }
 
             while (var8 > 4096) {

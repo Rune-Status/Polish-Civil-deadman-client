@@ -77,7 +77,7 @@ public final class AudioWorker implements Runnable {
             var11 = 4 * var9;
           }
 
-          if ((var7.anInt61 == 1 -1)) {
+          if ((var7.anInt61 == 0)) {
             var8.method1677(var0 * 4 + 48, 48 + 4 * (-var10 + -var5 + 104),
                 var11, var12);
           } else {
@@ -117,7 +117,7 @@ public final class AudioWorker implements Runnable {
         int var9 = var1.readUnsignedByte();
         int var10 = -TextureSampler37.anInt3256 + var8 * 64;
         int var11 = -1 + DummyClass58.anInt1460 - var9 * 64 + MapScene.anInt65;
-        if ((var10 >= 1 -1) && -63 + var11 >= 0
+        if ((var10 >= 0) && -63 + var11 >= 0
             && DummyClass30.anInt455 > var10 - -63
             && DummyClass58.anInt1460 > var11) {
           for (var12 = 0; var12 < 64; ++var12) {
@@ -153,7 +153,7 @@ public final class AudioWorker implements Runnable {
           var14 = var12 + 5;
           if (var27 > var14) {
             var15 = 255 & var4[var14][var34];
-            if ((var15 > 1 -1)) {
+            if ((var15 > 0)) {
               FloorUnderlay var16 = ClientScript.getFloorUnderlay(var15 - 1);
               var28[var34] += var16.anInt1408;
               var29[var34] += var16.anInt1406;
@@ -164,7 +164,7 @@ public final class AudioWorker implements Runnable {
           }
 
           var15 = var12 + -5;
-          if ((var15 >= 1 -1)) {
+          if ((var15 >= 0)) {
             var35 = var4[var15][var34] & 255;
             if (var35 > 0) {
               FloorUnderlay var17 = ClientScript.getFloorUnderlay(-1 + var35);
@@ -177,7 +177,7 @@ public final class AudioWorker implements Runnable {
           }
         }
 
-        if ((var12 >= 1 -1)) {
+        if ((var12 >= 0)) {
           int[][] var33 = AbstractMouseWheel.anIntArrayArrayArray1903[var12
               >> 6];
           var14 = 0;
@@ -197,7 +197,7 @@ public final class AudioWorker implements Runnable {
             }
 
             int var21 = -5 + var19;
-            if ((var21 >= 1 -1)) {
+            if ((var21 >= 0)) {
               var35 -= var30[var21];
               var36 -= var32[var21];
               var14 -= var28[var21];

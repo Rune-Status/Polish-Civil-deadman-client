@@ -41,7 +41,7 @@ public final class DummyClass20 {
 
       DirectImageProducer.aBoolean2981 = false;
       int var8;
-      if ((TextureSampler21.anInt3069 != 1 -1)) {
+      if ((TextureSampler21.anInt3069 != 0)) {
         if ((var5 <= var4) && (var5 + 16) > var4 && var0 >= var6 && var6 - -16 > var0) {
           var2.anInt208 -= 4;
           DummyClass29.method909(113, var2);
@@ -65,7 +65,7 @@ public final class DummyClass20 {
         }
       }
 
-      if ((PlayerVariable.mouseWheelOffset != 1 -1)) {
+      if ((PlayerVariable.mouseWheelOffset != 0)) {
         var8 = var2.anInt168;
         if (((-var8 + var5) <= var4) && (var6 <= var0) && var4 < 16 + var5 && var1 + var6 >= var0) {
           var2.anInt208 += 45 * PlayerVariable.mouseWheelOffset;

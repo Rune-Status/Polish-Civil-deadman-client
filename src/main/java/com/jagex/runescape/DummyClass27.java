@@ -61,7 +61,7 @@ public final class DummyClass27 {
             var10[var7][var9] + var10[var6][var9] + (var10[var6][var8] - -var10[var7][var8]) >> 2;
           SceneNode var12 = null;
           int var13 = AbstractSomethingTexture.OBJECT_TYPES[var1.anInt2278];
-          if ((var13 == 1 -1)) {
+          if ((var13 == 0)) {
             SceneSomething2 var14 =
               DummyClass14.method2147(GameWorldSomething.currentPlane, var1.anInt2271,
                 var1.anInt2282);

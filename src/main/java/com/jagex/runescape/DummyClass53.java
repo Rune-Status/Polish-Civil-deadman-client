@@ -104,7 +104,7 @@ public final class DummyClass53 {
   }
 
   public static GameString method1586(int var0, int var1) {
-    if ((var1 > 1 -1) && (var1 <= 256 -1)) {
+    if ((var1 > 0) && (var1 <= 256 -1)) {
         GameString var2 = new GameString();
         if (var0 != 23161) {
           DummyClass53.aClass3_Sub28_Sub16_1339 = null;

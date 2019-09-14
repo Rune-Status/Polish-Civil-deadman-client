@@ -38,7 +38,7 @@ public final class DummyClass26 {
 
   public static void setState(int var0, int var1) {
     if (DummyClass15.state != var0) {
-        if ((DummyClass15.state == 1 -1)) {
+        if ((DummyClass15.state == 0)) {
           ObjectCache.method1517((byte) -118);
         }
 

@@ -158,7 +158,7 @@ public final class FileSystem {
       int var19 =
         var18[var12][var15] + var18[var12][var14] + var18[var13][var14] + var18[var13][var15] >> 2;
       int[][] var21;
-      if ((var8 != 1 -1)) {
+      if ((var8 != 0)) {
         var21 = AbstractGameWorld.heightMap[0];
         var20 =
           -(var21[var12][var15] + var21[var13][var14] + (var21[var12][var14] - -var21[var13][var15])

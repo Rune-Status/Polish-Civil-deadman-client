@@ -20,7 +20,7 @@ public final class DummyClass22 {
       }
 
       int var5 = 0;
-      if ((var1.anInt2263 == 1 -1)) {
+      if ((var1.anInt2263 == 0)) {
         var2 = SomethingAudio.method2174(var1.anInt2250, var1.anInt2264, var1.anInt2248);
       }
 
@@ -87,11 +87,11 @@ public final class DummyClass22 {
         var3 = -var1 + DummyClass30.viewWidth;
       }
 
-      if ((var3 < 1 -1)) {
+      if ((var3 < 0)) {
         var3 = 0;
       }
 
-      if ((var4 < 1 -1)) {
+      if ((var4 < 0)) {
         var4 = 0;
       }
 

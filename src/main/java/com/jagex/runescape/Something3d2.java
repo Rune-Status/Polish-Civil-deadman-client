@@ -56,12 +56,12 @@ public class Something3d2 extends Something3dRoot {
   public final void method2237(int var1, int var2, int var3) {
     if (var2 == 0) {
         this.anInt3023 = 4096;
-        this.anInt3024 = -((var1 >= 1 -1) ? var1 : -var1) + this.anInt3026;
+        this.anInt3024 = -((var1 >= 0) ? var1 : -var1) + this.anInt3026;
         this.anInt3024 = this.anInt3024 * this.anInt3024 >> 12;
         this.anInt3029 = this.anInt3024;
       } else {
         this.anInt3023 = this.anInt3022 * this.anInt3024 >> 12;
-        if ((this.anInt3023 >= 1 -1)) {
+        if ((this.anInt3023 >= 0)) {
           if ((this.anInt3023 > 4097 -1)) {
             this.anInt3023 = 4096;
           }
@@ -69,7 +69,7 @@ public class Something3d2 extends Something3dRoot {
           this.anInt3023 = 0;
         }
 
-        this.anInt3024 = -((var1 >= 1 -1) ? var1 : -var1) + this.anInt3026;
+        this.anInt3024 = -((var1 >= 0) ? var1 : -var1) + this.anInt3026;
         this.anInt3024 = this.anInt3024 * this.anInt3024 >> 12;
         this.anInt3024 = this.anInt3024 * this.anInt3023 >> 12;
         this.anInt3029 += this.anInt3018 * this.anInt3024 >> 12;
@@ -115,7 +115,7 @@ public class Something3d2 extends Something3dRoot {
             int var9 = 0;
             int var8 = var4[var6++];
             byte var10 = 0;
-            if ((var8 == 1 -1)) {
+            if ((var8 == 0)) {
               return var5;
             }
 
@@ -216,7 +216,7 @@ public class Something3d2 extends Something3dRoot {
             if ((var8 == 14 -1)) {
               var11 = DummyClass5.anIntArray2985[var4[var6++]];
               int var17 = var4[var6++];
-              var9 = ((1 << var17 & var11) == 1 -1) ? 0 : 1;
+              var9 = ((1 << var17 & var11) == 0) ? 0 : 1;
             }
 
             if ((var8 == 15 -1)) {
@@ -245,7 +245,7 @@ public class Something3d2 extends Something3dRoot {
                 var5 -= var9;
               }
 
-              if (var7 == 2 && (var9 != 1 -1)) {
+              if (var7 == 2 && (var9 != 0)) {
                 var5 /= var9;
               }
 

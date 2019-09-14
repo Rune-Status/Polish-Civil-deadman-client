@@ -47,7 +47,7 @@ public final class TextureSampler32 extends AbstractTextureSampler {
           }
 
           int var16 = var13 >> 4;
-          if ((var16 < 1 -1)) {
+          if ((var16 < 0)) {
             var16 = -var16;
           }
 
@@ -105,7 +105,7 @@ public final class TextureSampler32 extends AbstractTextureSampler {
         int var5 = this.anIntArray3348[1] * this.anIntArray3348[1] >> 12;
         int var4 = this.anIntArray3348[0] * this.anIntArray3348[0] >> 12;
         int var7 = (int) (4096.0D * Math.sqrt(var4 - (-var5 - var6) >> 12));
-        if ((var7 != 1 -1)) {
+        if ((var7 != 0)) {
           this.anIntArray3348[2] = (this.anIntArray3348[2] << 12) / var7;
           this.anIntArray3348[0] = (this.anIntArray3348[0] << 12) / var7;
           this.anIntArray3348[1] = (this.anIntArray3348[1] << 12) / var7;
@@ -139,7 +139,7 @@ public final class TextureSampler32 extends AbstractTextureSampler {
         if ((GameWorldSomething.currentPlane == projectile.anInt2907)
           && (projectile.anInt2899 >= AbstractGameWorld.updateCycle)) {
           if (AbstractGameWorld.updateCycle >= projectile.anInt2925) {
-            if ((projectile.targetId > 1 -1)) {
+            if ((projectile.targetId > 0)) {
               NPC var3 = TextureSampler5.npcs[-1 + projectile.targetId];
               if (var3 != null && var3.anInt2819 >= 0 && var3.anInt2819 < 13312
                 && var3.anInt2829 >= 0 && (var3.anInt2829 < 13313 -1)) {

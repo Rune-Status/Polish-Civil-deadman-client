@@ -42,7 +42,7 @@ public final class TextureSampler1 extends AbstractTextureSampler {
         TextureSampler1.method221(-64, null, null, null, 34);
       }
 
-      if ((var1 == 1 -1)) {
+      if ((var1 == 0)) {
         this.method218((byte) 75, var2.readUnsignedMedium((byte) 82));
       }
   }

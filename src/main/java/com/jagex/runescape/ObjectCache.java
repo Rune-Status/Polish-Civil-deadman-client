@@ -32,7 +32,7 @@ public final class ObjectCache {
         this.table = null;
       }
 
-      if ((this.anInt1327 == 1 -1)) {
+      if ((this.anInt1327 == 0)) {
         AbstractObjectNode var5 = (AbstractObjectNode) this.aClass13_1329.poll();
         assert var5 != null;
         var5.unlinkNode();

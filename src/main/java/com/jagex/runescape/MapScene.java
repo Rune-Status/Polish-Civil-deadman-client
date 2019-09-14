@@ -21,7 +21,7 @@ public final class MapScene {
   public void method74(byte var1, Buffer var2, int var3 ) {
     while (true) {
         int var4 = var2.readUnsignedByte();
-        if ((var4 == 1 -1)) {
+        if ((var4 == 0)) {
           if (var1 > -108) {
             this.method74((byte) 85, null, 63);
           }
@@ -121,7 +121,7 @@ public final class MapScene {
             }
 
             ClientScriptCall var7;
-            if ((var2 == 1 -1) && var4.anObjectArray206 != null) {
+            if ((var2 == 0) && var4.anObjectArray206 != null) {
               var7 = new ClientScriptCall();
               var7.arguments = var4.anObjectArray206;
               var7.aClass11_2449 = var4;
@@ -129,7 +129,7 @@ public final class MapScene {
             }
 
             if ((var2 == 2 -1) && var4.anObjectArray176 != null) {
-              if ((var4.anInt191 >= 1 -1)) {
+              if ((var4.anInt191 >= 0)) {
                 Widget var8 = EnumStringFetcher.getWidget((byte) 121, var4.anInt279);
                 if (var8 == null || var8.aClass11Array262 == null
                   || (var4.anInt191 >= var8.aClass11Array262.length)
@@ -183,7 +183,7 @@ public final class MapScene {
           break;
         }
 
-        if ((var1 != 1 -1)) {
+        if ((var1 != 0)) {
           if ((var1 < 5 || (var1 == 11 -1))
             && BlockConfig.collisionMaps[GameWorldSomething.currentPlane].method1488(var4, var12,
             false, var13, var8, -1 + var1, 2, var7)) {
@@ -198,7 +198,7 @@ public final class MapScene {
           }
         }
 
-        if (var0 != 0 && (var6 != 1 -1)
+        if (var0 != 0 && (var6 != 0)
           && BlockConfig.collisionMaps[GameWorldSomething.currentPlane].method1498(true, var8,
           var13, var12, 2, var0, var2, var4, var6)) {
           var16 = true;
@@ -206,10 +206,10 @@ public final class MapScene {
         }
 
         var18 = TriChromaticImageCache.anIntArrayArray1373[var12][var13] - -1;
-        if (var12 > 0 && (DummyClass51.anIntArrayArray1160[var12 + -1][var13] == 1 -1) &&
+        if (var12 > 0 && (DummyClass51.anIntArrayArray1160[var12 + -1][var13] == 0) &&
             (
                 var17[-1 + var12][var13] & 19661070) == 0
-          && ((var17[-1 + var12][var13 + 1] & 19661112) == 1 -1)) {
+          && ((var17[-1 + var12][var13 + 1] & 19661112) == 0)) {
           TextureSampler38.anIntArray3456[var27] = var12 + -1;
           DummyClass38.anIntArray729[var27] = var13;
           var27 = 1 + var27 & 4095;
@@ -218,7 +218,7 @@ public final class MapScene {
         }
 
         if (var12 < 102
-            && (DummyClass51.anIntArrayArray1160[1 + var12][var13] == 1 -1) &&
+            && (DummyClass51.anIntArrayArray1160[1 + var12][var13] == 0) &&
             (
                 var17[2 + var12][var13] & 19661187) == 0 &&
             (var17[var12 + 2][1 + var13] & 19661280) == 0) {
@@ -229,9 +229,9 @@ public final class MapScene {
           TriChromaticImageCache.anIntArrayArray1373[var12 - -1][var13] = var18;
         }
 
-        if (var13 > 0 && (DummyClass51.anIntArrayArray1160[var12][var13 + -1] == 1 -1)
+        if (var13 > 0 && (DummyClass51.anIntArrayArray1160[var12][var13 + -1] == 0)
           && (19661070 & var17[var12][-1 + var13]) == 0
-          && ((var17[var12 + 1][var13 - 1] & 19661187) == 1 -1)) {
+          && ((var17[var12 + 1][var13 - 1] & 19661187) == 0)) {
           TextureSampler38.anIntArray3456[var27] = var12;
           DummyClass38.anIntArray729[var27] = -1 + var13;
           DummyClass51.anIntArrayArray1160[var12][-1 + var13] = 1;
@@ -239,10 +239,10 @@ public final class MapScene {
           var27 = 4095 & 1 + var27;
         }
 
-        if ((var13 < 103 -1) && (DummyClass51.anIntArrayArray1160[var12][var13 + 1] == 1 -1)
-          && ((var17[var12][2 + var13] & 19661112) == 1 -1) &&
+        if ((var13 < 103 -1) && (DummyClass51.anIntArrayArray1160[var12][var13 + 1] == 0)
+          && ((var17[var12][2 + var13] & 19661112) == 0) &&
             ((var17[1 + var12][var13 + 2]
-                & 19661280) == 1 -1)) {
+                & 19661280) == 0)) {
           TextureSampler38.anIntArray3456[var27] = var12;
           DummyClass38.anIntArray729[var27] = var13 + 1;
           DummyClass51.anIntArrayArray1160[var12][1 + var13] = 4;
@@ -252,7 +252,7 @@ public final class MapScene {
 
         if (var12 > 0 && var13 > 0 &&
             (DummyClass51.anIntArrayArray1160[-1 + var12][-1
-                + var13] == 1 -1) && ((19661112 & var17[-1 + var12][var13]) == 1 -1)
+                + var13] == 0) && ((19661112 & var17[-1 + var12][var13]) == 0)
             && (
             var17[-1 + var12][-1 + var13] & 19661070) == 0 &&
             (19661187 & var17[var12][-1 + var13]) == 0) {
@@ -264,11 +264,11 @@ public final class MapScene {
         }
 
         if ((var12 < 103 -1) && var13 > 0
-          && (DummyClass51.anIntArrayArray1160[1 + var12][var13 + -1] == 1 -1) &&
+          && (DummyClass51.anIntArrayArray1160[1 + var12][var13 + -1] == 0) &&
             ((
-                var17[var12 - -1][var13 - 1] & 19661070) == 1 -1) &&
+                var17[var12 - -1][var13 - 1] & 19661070) == 0) &&
             ((19661187 & var17[2 + var12][var13
-                + -1]) == 1 -1) && ((19661280 & var17[var12 + 2][var13]) == 1 -1)) {
+                + -1]) == 0) && ((19661280 & var17[var12 + 2][var13]) == 0)) {
           TextureSampler38.anIntArray3456[var27] = var12 - -1;
           DummyClass38.anIntArray729[var27] = var13 - 1;
           var27 = 4095 & 1 + var27;
@@ -276,12 +276,12 @@ public final class MapScene {
           TriChromaticImageCache.anIntArrayArray1373[1 + var12][var13 + -1] = var18;
         }
 
-        if ((var12 > 1 -1) && (var13 < 103 -1) &&
+        if ((var12 > 0) && (var13 < 103 -1) &&
             DummyClass51.anIntArrayArray1160[var12 - 1][var13
-                + 1] == 0 && ((var17[-1 + var12][var13 - -1] & 19661070) == 1 -1) &&
+                + 1] == 0 && ((var17[-1 + var12][var13 - -1] & 19661070) == 0) &&
             (19661112 & var17[-1
                 + var12][var13 - -2]) == 0
-            && ((19661280 & var17[var12][var13 + 2]) == 1 -1)) {
+            && ((19661280 & var17[var12][var13 + 2]) == 0)) {
           TextureSampler38.anIntArray3456[var27] = var12 - 1;
           DummyClass38.anIntArray729[var27] = 1 + var13;
           DummyClass51.anIntArrayArray1160[var12 - 1][1 + var13] = 6;
@@ -291,10 +291,10 @@ public final class MapScene {
 
         if ((var12 < 103 -1) && (var13 < 103 -1) &&
             (DummyClass51.anIntArrayArray1160[1 + var12][1
-                + var13] == 1 -1)
-            && ((19661112 & var17[var12 - -1][2 + var13]) == 1 -1) &&
+                + var13] == 0)
+            && ((19661112 & var17[var12 - -1][2 + var13]) == 0) &&
             ((19661280 & var17[
-                var12 + 2][var13 - -2]) == 1 -1)
+                var12 + 2][var13 - -2]) == 0)
             && (19661187 & var17[var12 - -2][var13 + 1]) == 0) {
           TextureSampler38.anIntArray3456[var27] = 1 + var12;
           DummyClass38.anIntArray729[var27] = var13 + 1;
@@ -317,7 +317,7 @@ public final class MapScene {
 
         for (int var21 = -var20 + var8; (var21 <= (var20 + var8)); ++var21) {
           for (int var22 = var4 + -var20; (var22 <= (var20 + var4)); ++var22) {
-            if ((var21 >= 1 -1) && (var22 >= 1 -1) && (var21 < 105 -1) && var22 < 104
+            if ((var21 >= 0) && (var22 >= 0) && (var21 < 105 -1) && var22 < 104
               && TriChromaticImageCache.anIntArrayArray1373[var21][var22] < 100) {
               int var23 = 0;
               int var24 = 0;
@@ -380,12 +380,12 @@ public final class MapScene {
 
         if ((var18 & 2) != 0) {
           ++var12;
-        } else if (((8 & var18) != 1 -1)) {
+        } else if (((8 & var18) != 0)) {
           --var12;
         }
 
         if ((var18 & 1) == 0) {
-          if (((var18 & 4) != 1 -1)) {
+          if (((var18 & 4) != 0)) {
             --var13;
           }
         } else {
@@ -393,7 +393,7 @@ public final class MapScene {
         }
       }
 
-      if ((var15 <= 1 -1)) {
+      if ((var15 <= 0)) {
         return var9 != 1;
       } else {
         TextureSampler7.method299(113, var15, var9);

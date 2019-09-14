@@ -66,7 +66,7 @@ public class DummyClass7 extends DummyClass6 {
                 || (var12 >= (8 * var4)) && var12 < 8 + var4 * 8 && var13 >= var5 * 8 && (var13 < (
                 8 + var5 * 8))) {
                 var2 = var0.readByte();
-                if ((var2 != 1 -1)) {
+                if ((var2 != 0)) {
                   if (RenderAnimation.aByteArrayArrayArray383[var10][var11] == null) {
                     RenderAnimation.aByteArrayArrayArray383[var10][var11] = new byte[4096];
                   }

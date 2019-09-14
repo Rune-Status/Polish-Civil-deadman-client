@@ -27,7 +27,7 @@ public final class TextureSampler21 extends AbstractTextureSampler {
           int var9 = var7[var8];
           if (var9 == 4096) {
             var3[var8] = var5[var8];
-          } else if ((var9 != 1 -1)) {
+          } else if ((var9 != 0)) {
             var3[var8] = var9 * var5[var8] - -((-var9 + 4096) * var6[var8]) >> 12;
           } else {
             var3[var8] = var6[var8];

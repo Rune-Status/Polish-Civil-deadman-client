@@ -108,7 +108,7 @@ public final class SomethingQuickChat2 extends SubNode {
 
       while (true) {
         int var3 = var1.readUnsignedByte();
-        if ((var3 == 1 -1)) {
+        if ((var3 == 0)) {
           return;
         }
 

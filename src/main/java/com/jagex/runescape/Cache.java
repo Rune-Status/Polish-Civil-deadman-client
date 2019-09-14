@@ -45,7 +45,7 @@ public final class Cache {
   }
 
   public void put(long var2, SubNode var1 ) {
-    if ((this.capacity == 1 -1)) {
+    if ((this.capacity == 0)) {
         SubNode var5 = this.queue.poll();
         var5.unlinkNode();
         var5.unlinkSubNode();
@@ -318,7 +318,7 @@ public final class Cache {
               int var29;
               int var28;
               int var47;
-              if ((var11.anInt189 != 1 -1)) {
+              if ((var11.anInt189 != 0)) {
                 if ((var11.anInt189 == 1338 -1)
                   || var11.anInt189 == 1403 && GlRenderer.useOpenGlRenderer) {
                   FloorOverlay.aClass11_2091 = var11;
@@ -516,7 +516,7 @@ public final class Cache {
               }
 
               if (!DummyClass36.aBoolean2615) {
-                if ((var11.anInt187 == 1 -1) && var11.aBoolean219
+                if ((var11.anInt187 == 0) && var11.aBoolean219
                   && NpcConfiguration.anInt1297 >= var16 && (DummyClass36.anInt2612 >= var17)
                   && NpcConfiguration.anInt1297 < var18 && var19 > DummyClass36.anInt2612
                   && !LinearHashTable.aBoolean1040) {
@@ -534,7 +534,7 @@ public final class Cache {
                 }
               }
 
-              if ((var11.anInt187 == 1 -1)) {
+              if ((var11.anInt187 == 0)) {
                 if (!var11.aBoolean233 && GameClient.method51(var11)
                   && DummyClass56.aClass11_1453 != var11) {
                   continue;
@@ -585,7 +585,7 @@ public final class Cache {
               }
 
               if (HashTable.aBooleanArray1712[var12] || (ClientScript.rectangleDebugType > 2 -1)) {
-                if ((var11.anInt187 == 1 -1) && !var11.aBoolean233
+                if ((var11.anInt187 == 0) && !var11.aBoolean233
                   && var11.anInt252 > var11.anInt193) {
                   TextureSampler24.method224((byte) 120, var11.anInt208, var11.anInt252,
                     var11.anInt168 + var13, var14, var11.anInt193);
@@ -674,7 +674,7 @@ public final class Cache {
                                 }
 
                                 int var32;
-                                if (var30 > (var26 + var24) && (var51.anInt208 > 1 -1)) {
+                                if (var30 > (var26 + var24) && (var51.anInt208 > 0)) {
                                   var32 = DisplayMode.loopCycle * (-var26 + var30 + -var24) / 3;
                                   if (var32 > (DisplayMode.loopCycle * 10)) {
                                     var32 = 10 * DisplayMode.loopCycle;
@@ -733,7 +733,7 @@ public final class Cache {
                       }
                     }
 
-                    if ((var15 != 1 -1)) {
+                    if ((var15 != 0)) {
                       if (var11.aBoolean226) {
                         if (GlRenderer.useOpenGlRenderer) {
                           GlUtils.fillQuad(var13, var14, var11.anInt168,
@@ -776,7 +776,7 @@ public final class Cache {
                             var21 = var11.anInt222;
                           }
 
-                          if ((var11.aClass94_172.getLength() > 1 -1)) {
+                          if ((var11.aClass94_172.getLength() > 0)) {
                             var45 = var11.aClass94_172;
                           }
                         } else {
@@ -882,7 +882,7 @@ public final class Cache {
                         }
 
                         if (var38 != null) {
-                          if ((var11.anInt184 > 1 -1)) {
+                          if ((var11.anInt184 > 0)) {
                             var24 = (var11.anInt168 << 8) / var11.anInt184;
                           } else {
                             var24 = 256;
@@ -997,7 +997,7 @@ public final class Cache {
 
                                 var26 = var13 + var23 * (var11.anInt285 + 115);
                                 var47 = (var11.anInt290 + 12) * var22 + var14;
-                                if ((var11.anInt194 == 1 -1)) {
+                                if ((var11.anInt194 == 0)) {
                                   var34.method681(var40, var26, var47,
                                       var11.anInt218,
                                       var11.aBoolean215 ? 0 : -1);
@@ -1028,7 +1028,7 @@ public final class Cache {
                           var43 = FileCacheRequester.method1303(var11, var43, 0);
 
                           GameString var44;
-                          while ((var43.getLength() > 1 -1)) {
+                          while ((var43.getLength() > 0)) {
                             var25 = var43.indexOf(Buffer.LINE_BREAK);
                             if (var25 == -1) {
                               var44 = var43;
@@ -1074,7 +1074,7 @@ public final class Cache {
 
                           for (
                             var43 = FileCacheRequester.method1303(var11, var43, 0);
-                            (var43.getLength() > 1 -1); var47 += var35.anInt3727 + 1) {
+                            (var43.getLength() > 0); var47 += var35.anInt3727 + 1) {
                             var28 = var43.indexOf(Buffer.LINE_BREAK);
                             if ((var28 == -1)) {
                               var44 = var43;
@@ -1159,7 +1159,7 @@ public final class Cache {
                                 }
                               } else if (var39) {
                                 for (var28 = 0; var24 > var28; ++var28) {
-                                  if ((var15 == 1 -1)) {
+                                  if ((var15 == 0)) {
                                     var27
                                         .method649(var13, var28 * var22 + var14,
                                             var23, 1);
@@ -1184,7 +1184,7 @@ public final class Cache {
                                 }
                               } else {
                                 for (var28 = 0; var23 > var28; ++var28) {
-                                  if ((var15 == 1 -1)) {
+                                  if ((var15 == 0)) {
                                     var27
                                         .method649(var21 * var28 + var13, var14,
                                             1, var24);
@@ -1227,7 +1227,7 @@ public final class Cache {
                             }
                           } else {
                             var23 = var11.anInt168 * 4096 / var21;
-                            if ((var11.anInt301 == 1 -1)) {
+                            if ((var11.anInt301 == 0)) {
                               if (var15 != 0) {
                                 var37.method642(var13, var14, var11.anInt168,
                                     var11.anInt193,

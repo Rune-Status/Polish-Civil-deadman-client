@@ -52,7 +52,7 @@ public final class FaceNormal {
           null :
           (var0.aClass94Array171 != null && var0.aClass94Array171.length > var2
             && var0.aClass94Array171[var2] != null
-            && (var0.aClass94Array171[var2].method1564(1).getLength() != 1 -1) ?
+            && (var0.aClass94Array171[var2].method1564(1).getLength() != 0) ?
             var0.aClass94Array171[var2] :
             (!LinearHashTable.aBoolean1040 ?
               null :

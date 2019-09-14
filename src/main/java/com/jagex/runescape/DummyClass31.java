@@ -88,7 +88,7 @@ public final class DummyClass31 {
               >> 2;
           int var22 = 0;
           int[][] var23;
-          if (GlRenderer.useOpenGlRenderer && (var0 != 1 -1)) {
+          if (GlRenderer.useOpenGlRenderer && (var0 != 0)) {
             var23 = AbstractGameWorld.heightMap[0];
             var22 = var19 - (
               var23[var15][var17] + var23[var15][var16] + var23[var14][var16] + var23[var14][var17]
@@ -150,7 +150,7 @@ public final class DummyClass31 {
                       DummyClass36.anIntArrayArrayArray2609[var2][var7][var9], 4);
                 }
 
-                if ((var11.anInt1538 != 1 -1) && var4 != null) {
+                if ((var11.anInt1538 != 0) && var4 != null) {
                   var4.method1489(var7, var11.aBoolean1486, (byte) 73, var9, var12, var13);
                 }
 
@@ -174,7 +174,7 @@ public final class DummyClass31 {
                 DummyClass14.method2146(var2, var7, var9, var19, var27, null,
                   DummyClass13.anIntArray2017[var10], 0, var24);
                 if (var1) {
-                  if ((var10 == 1 -1)) {
+                  if ((var10 == 0)) {
                     if (var11.aBoolean1525) {
                       MouseRecorder.aByteArrayArrayArray1014[var2][var7][var9] = 50;
                       MouseRecorder.aByteArrayArrayArray1014[var2][var7][1 + var9] = 50;
@@ -277,7 +277,7 @@ public final class DummyClass31 {
                   }
                 }
 
-                if ((var11.anInt1538 != 1 -1) && var4 != null) {
+                if ((var11.anInt1538 != 0) && var4 != null) {
                   var4.method1486(var10, 2, var6, var11.aBoolean1486, var9, var7);
                 }
 
@@ -320,7 +320,7 @@ public final class DummyClass31 {
                       var38, DummyClass13.anIntArray2017[var10],
                     DummyClass13.anIntArray2017[var43], var24);
                   if (var11.aBoolean1542 && var1) {
-                    if ((var10 == 1 -1)) {
+                    if ((var10 == 0)) {
                       DummyClass36.anIntArrayArrayArray2609[var2][var7][var9] =
                           TextureSampler3.method308(
                               DummyClass36.anIntArrayArrayArray2609[var2][var7][var9],
@@ -645,7 +645,7 @@ public final class DummyClass31 {
                   EnumStringFetcher.method835(var2, var7, var9, var19, 1, 1,
                       var27, 0,
                     var24);
-                  if ((var11.anInt1538 != 1 -1) && var4 != null) {
+                  if ((var11.anInt1538 != 0) && var4 != null) {
                     var4.method1489(var7, var11.aBoolean1486, (byte) 127, var9, var12, var13);
                   }
 
@@ -700,7 +700,7 @@ public final class DummyClass31 {
               }
 
             }
-          } else if (Keyboard.aBoolean1905 || (var11.anInt1529 != 1 -1) ||
+          } else if (Keyboard.aBoolean1905 || (var11.anInt1529 != 0) ||
               (var11.anInt1538 == 2 -1)
             || var11.aBoolean1483) {
             if ((var11.anInt1531 == -1) && var11.anIntArray1524 == null && !var11.aBoolean1510) {

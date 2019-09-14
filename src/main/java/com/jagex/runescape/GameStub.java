@@ -362,7 +362,7 @@ public abstract class GameStub implements Runnable,
         SignLinkRequest var7 = DummyClass35.signLink.createThread(0, 1, this);
 
         assert var7 != null;
-        while ((var7.status == 1 -1)) {
+        while ((var7.status == 0)) {
           TextureSampler25.sleep(10L);
         }
 

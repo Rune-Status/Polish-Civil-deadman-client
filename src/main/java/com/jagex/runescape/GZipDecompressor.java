@@ -232,7 +232,7 @@ public final class GZipDecompressor {
           DummyClass47.method1331();
         }
 
-        FloorOverlay.method2278(0 + 122);
+        FloorOverlay.method2278(122);
         if (DummyClass36.aBoolean2615) {
           if (FileUnpacker.aBoolean1951) {
             ISAACCipher.method1230((byte) 116);

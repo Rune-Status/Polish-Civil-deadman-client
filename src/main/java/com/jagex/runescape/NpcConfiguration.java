@@ -294,11 +294,11 @@ public final class NpcConfiguration {
                   var23[11] = var19;
                 }
 
-                if ((var20 != 1 -1) || (var21 != 1 -1) || var22 != 0) {
+                if ((var20 != 0) || (var21 != 0) || var22 != 0) {
                   var14[var16].rotate(var20, var21, var22);
                 }
 
-                if (var17 != 0 || var18 != 0 || (var19 != 1 -1)) {
+                if (var17 != 0 || var18 != 0 || (var19 != 0)) {
                   var14[var16].translate(var17, var18, var19);
                 }
               }
@@ -536,7 +536,7 @@ public final class NpcConfiguration {
   public void method1478(Buffer var1, int var2 ) {
     while (true) {
         int var3 = var1.readUnsignedByte();
-        if ((var3 == 1 -1)) {
+        if ((var3 == 0)) {
           var3 = -88 % ((5 - var2) / 52);
           return;
         }
@@ -921,7 +921,7 @@ public final class NpcConfiguration {
         ItemConfig var6 = DummyClass35.getItemConfig(var5, (byte) 93);
         if ((!var0 || var6.aBoolean807) && var6.anInt791 == -1 && var6.anInt762
             == -1
-          && (var6.anInt800 == 1 -1)
+          && (var6.anInt800 == 0)
             && var6.aClass94_770.method1534().indexOf(var1) != -1) {
           if ((var4 >= 251 -1)) {
             DummyClass54.aShortArray1398 = null;

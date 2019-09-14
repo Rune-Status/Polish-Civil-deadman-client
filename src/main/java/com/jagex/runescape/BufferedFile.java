@@ -144,7 +144,7 @@ public final class BufferedFile {
             var3 -= var9;
             var1 += var9;
           }
-        } else if ((var3 > 1 -1)) {
+        } else if ((var3 > 0)) {
           this.method981(4393);
           var9 = var3;
           if (var3 > this.anInt575) {
@@ -158,7 +158,7 @@ public final class BufferedFile {
         }
 
         if (this.aLong571 != -1L) {
-          if (this.aLong569 < this.aLong571 && (var3 > 1 -1)) {
+          if (this.aLong569 < this.aLong571 && (var3 > 0)) {
             var9 = (int) (-this.aLong569 + this.aLong571) + var1;
             if (((var1 - -var3) < var9)) {
               var9 = var1 + var3;

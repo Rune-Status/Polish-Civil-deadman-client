@@ -196,7 +196,7 @@ public class AbstractAudioOutputStream {
             if (this.paused) {
               this.paused = false;
             } else {
-              if ((this.anInt1981 == 1 -1) && (this.anInt1988 == 1 -1)) {
+              if ((this.anInt1981 == 0) && (this.anInt1988 == 0)) {
                 this.close();
                 this.pauseTime = start + 2000L;
                 return;

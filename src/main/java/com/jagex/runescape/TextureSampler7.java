@@ -39,7 +39,7 @@ public final class TextureSampler7 extends AbstractTextureSampler {
             if ((var8 == 5 -1)) {
               for (var8 = 0; (var8 < SomethingLight0.anInt1559); ++var8) {
                 var5 = var7[var8];
-                var3[var8] = (var5 != 1 -1) ? (var6[var8] << 12) / var5 : 4096;
+                var3[var8] = (var5 != 0) ? (var6[var8] << 12) / var5 : 4096;
               }
             } else {
               if (var8 == 5) {
@@ -60,7 +60,7 @@ public final class TextureSampler7 extends AbstractTextureSampler {
                     for (var8 = 0; var8 < SomethingLight0.anInt1559; ++var8) {
                       var4 = var6[var8];
                       var3[var8] =
-                          (var4 != 1 -1) ? 4096 - (-var7[var8] + 4096 << 12) / var4
+                          (var4 != 0) ? 4096 - (-var7[var8] + 4096 << 12) / var4
                               : 0;
                     }
                   } else {
@@ -172,8 +172,8 @@ public final class TextureSampler7 extends AbstractTextureSampler {
               var9 = var20[var21];
               var8 = var19[var21];
               var7 = var18[var21];
-              var12[var21] = (var7 == 1 -1) ? 4096 : (var15[var21] << 12) / var7;
-              var13[var21] = (var8 != 1 -1) ? (var16[var21] << 12) / var8 : 4096;
+              var12[var21] = (var7 == 0) ? 4096 : (var15[var21] << 12) / var7;
+              var13[var21] = (var8 != 0) ? (var16[var21] << 12) / var8 : 4096;
               var14[var21] = var9 != 0 ? (var17[var21] << 12) / var9 : 4096;
             }
           } else if (var21 == 5) {
@@ -216,7 +216,7 @@ public final class TextureSampler7 extends AbstractTextureSampler {
                 var5 = var16[var21];
                 var6 = var17[var21];
                 var12[var21] = var4 == 0 ? 0 : -((-var18[var21] + 4096 << 12) / var4) + 4096;
-                var13[var21] = (var5 == 1 -1) ? 0 : -((-var19[var21] + 4096 << 12) / var5) + 4096;
+                var13[var21] = (var5 == 0) ? 0 : -((-var19[var21] + 4096 << 12) / var5) + 4096;
                 var14[var21] =
                     var6 == 0 ? 0 : 4096 - (4096 - var20[var21] << 12) / var6;
               }
@@ -348,11 +348,11 @@ public final class TextureSampler7 extends AbstractTextureSampler {
             var18 = var2[var16 + -1][var17];
           }
 
-          if ((var18 == 1 -1)) {
+          if ((var18 == 0)) {
             var18 = var2[var16][-1 + var17];
           }
 
-          if ((var18 == 1 -1)) {
+          if ((var18 == 0)) {
             var18 = var2[-1 + var16][var17 - 1];
           }
 
@@ -377,7 +377,7 @@ public final class TextureSampler7 extends AbstractTextureSampler {
               var53 = DummyClass21.anIntArrayArray1763[0];
             } else {
               var53 = SceneSomething.anIntArrayArray499[var1[var17][var56]];
-              if ((var53.length == 1 -1)) {
+              if ((var53.length == 0)) {
                 continue;
               }
             }
@@ -459,7 +459,7 @@ public final class TextureSampler7 extends AbstractTextureSampler {
         for (var56 = 1; (var56 <= 103 -1); ++var56) {
           byte var57 = var2[var17][var56];
           if (var57 != 0) {
-            if (((8 & var0[var9][var17][var56]) == 1 -1)) {
+            if (((8 & var0[var9][var17][var56]) == 0)) {
               if (((2 & var0[1][var17][var56]) == 3 -1) && var9 > 0) {
                 var20 = var9 - 1;
               } else {
@@ -483,7 +483,7 @@ public final class TextureSampler7 extends AbstractTextureSampler {
             byte var61;
             int var69;
             int var64;
-            if ((var6[var17][var56] == 1 -1)) {
+            if ((var6[var17][var56] == 0)) {
               byte var26 = 0;
               var64 = var26 + ((var57 != var2[var17 - 1][-1 + var56]) ? -1 : 1);
               byte var65 = 0;
@@ -527,11 +527,11 @@ public final class TextureSampler7 extends AbstractTextureSampler {
 
               int var30 = var64 + -var63;
               int var66 = -var69 + var62;
-              if ((var66 < 1 -1)) {
+              if ((var66 < 0)) {
                 var66 = -var66;
               }
 
-              if ((var30 < 1 -1)) {
+              if ((var30 < 0)) {
                 var30 = -var30;
               }
 
@@ -611,7 +611,7 @@ public final class TextureSampler7 extends AbstractTextureSampler {
       for (
         var54 = (SomethingGl0) var52.getFirst(54);
         var54 != null; var54 = (SomethingGl0) var52.getNext(-62)) {
-        if ((var54.anInt2343 == 1 -1)) {
+        if ((var54.anInt2343 == 0)) {
           var54.unlinkNode();
         } else {
           var54.method148();

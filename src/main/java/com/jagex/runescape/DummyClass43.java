@@ -90,7 +90,7 @@ public final class DummyClass43 {
             var5.bind(var2);
             var5.sampleBufferSize = 16384;
             var5.setBufferSize(var5.sampleBufferSize);
-            if ((AudioStreamEncoder4.anInt3507 > 1 -1) &&
+            if ((AudioStreamEncoder4.anInt3507 > 0) &&
                 DummyClass36.aClass15_2613 == null) {
               DummyClass36.aClass15_2613 = new AudioWorker();
               DummyClass36.aClass15_2613.aClass87_350 = var1;

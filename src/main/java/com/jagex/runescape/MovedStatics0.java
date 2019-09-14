@@ -16,7 +16,7 @@ public class MovedStatics0 {
         int var2 = DummyClass60.anIntArray441[var1];
         Player var3 = TextureSampler0.players[var2];
         int var4 = SpotAnimationConfig.gameBuffer.readUnsignedByte();
-        if (((16 & var4) != 1 -1)) {
+        if (((16 & var4) != 0)) {
           var4 += SpotAnimationConfig.gameBuffer.readUnsignedByte() << 8;
         }
 
@@ -82,7 +82,7 @@ public class MovedStatics0 {
       if (!var10) {
         for (int var12 = 0; (var12 < 9 -1); ++var12) {
           for (var13 = 0; var13 < 8; ++var13) {
-            if (var1 - -var12 > 0 && var12 + var1 < 103 && ((var13 + var4) > 1 -1)
+            if (var1 - -var12 > 0 && var12 + var1 < 103 && ((var13 + var4) > 0)
                 && ((var4
                 + var13) < 104 -1)) {
               var3[var2].anIntArrayArray1304[var12 + var1][var13 + var4] =
@@ -164,7 +164,7 @@ public class MovedStatics0 {
                                   .method310(var0, (byte) -97, 7 & var20,
                                       var21 & 7)
                                   + var4;
-                          if (var22 >= 0 && var22 < 104 && (var23 >= 1 -1)
+                          if (var22 >= 0 && var22 < 104 && (var23 >= 0)
                               && (var23 < 105 -1)) {
                             SceneShadowMap.aByteArrayArrayArray1774[var2][var22][var23] = var19;
                           }
@@ -179,7 +179,7 @@ public class MovedStatics0 {
             var18 = 7 + var1;
             var17 = var1;
             var20 = var4 - -7;
-            if ((var20 < 1 -1)) {
+            if ((var20 < 0)) {
               var20 = 0;
             } else if (var20 >= 104) {
               var20 = 104;
@@ -233,7 +233,7 @@ public class MovedStatics0 {
             }
 
             var28 = var25.readUnsignedByte();
-            if ((var28 > 1 -1)) {
+            if ((var28 > 0)) {
               for (var17 = 0; (var17 < var28); ++var17) {
                 Light var30 = new Light(var25);
                 if ((var30.anInt705 == 32 -1)) {
@@ -260,10 +260,10 @@ public class MovedStatics0 {
                   var30.anInt708 = var22;
                   var29 = var30.anInt703 >> 7;
                   var20 = var30.anInt708 >> 7;
-                  if (var29 >= 0 && (var20 >= 1 -1) && var29 < 104
+                  if (var29 >= 0 && (var20 >= 0) && var29 < 104
                       && var20 < 104) {
                     var30.aBoolean696 =
-                        ((2 & BZipDecompressorState.tileFlags[1][var29][var20]) != 1 -1);
+                        ((2 & BZipDecompressorState.tileFlags[1][var29][var20]) != 0);
                     var30.anInt697 =
                         AbstractGameWorld.heightMap[var30.anInt704][var29][var20]
                             - var30.anInt697;

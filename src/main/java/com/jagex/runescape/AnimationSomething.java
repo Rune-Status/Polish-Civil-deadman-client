@@ -103,7 +103,7 @@ public final class AnimationSomething extends SubNode {
 
         for (int var20 = var15 * (-1 + var1); var7 > 0; var20 -= var15) {
           --var7;
-          if ((var13 < 1 -1)) {
+          if ((var13 < 0)) {
             while (var13 < 0) {
               ++var6;
               var13 += var17;

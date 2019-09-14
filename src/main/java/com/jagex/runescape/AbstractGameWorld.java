@@ -30,7 +30,7 @@ public abstract class AbstractGameWorld {
         AbstractGameWorld.aFloat727 = -0.6283864F;
       }
 
-      return ((this.flags & 8) != 1 -1);
+      return ((this.flags & 8) != 0);
   }
 
   public final boolean method1075(int var1) {
@@ -38,7 +38,7 @@ public abstract class AbstractGameWorld {
         this.flags = 51;
       }
 
-      return ((2 & this.flags) != 1 -1);
+      return ((2 & this.flags) != 0);
   }
 
   public static boolean method1066(int var0, int var1) {

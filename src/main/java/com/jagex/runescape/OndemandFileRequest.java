@@ -180,7 +180,7 @@ public final class OndemandFileRequest extends AbstractFileRequest {
           }
         }
 
-        if (var1 == 0 && (var3 > 1 -1)) {
+        if (var1 == 0 && (var3 > 0)) {
           GlRenderer.method1834(GameCanvas.INSTANCE);
         }
 
@@ -207,7 +207,7 @@ public final class OndemandFileRequest extends AbstractFileRequest {
             Something3d.viewImageProducer.draw(0, 0, var11, 0);
 
             HashTableIterator.method1396(-1);
-            if ((var3 == 1 -1)) {
+            if ((var3 == 0)) {
               Something3d.viewImageProducer =
                   TextureSampler18.createImageProducer(503, 765, true,
                       GameCanvas.INSTANCE);
@@ -219,7 +219,7 @@ public final class OndemandFileRequest extends AbstractFileRequest {
                 DummyClass35.signLink
                     .method1444(-43, SomethingTilek.client.getClass());
 
-            while ((var13.status == 1 -1)) {
+            while ((var13.status == 0)) {
               TextureSampler25.sleep(100L);
             }
 
@@ -237,7 +237,7 @@ public final class OndemandFileRequest extends AbstractFileRequest {
         if (!GlRenderer.useOpenGlRenderer && var1 > 0) {
           OndemandFileRequest.setWindowMode(true, 0, true, var3, false, -1, -1);
         } else {
-          if ((var1 > 1 -1) && (var3 == 1 -1)) {
+          if ((var1 > 0) && (var3 == 0)) {
             DummyClass1.gameThread.setPriority(5);
             Something3d.viewImageProducer = null;
             SoftwareModel.method1935();

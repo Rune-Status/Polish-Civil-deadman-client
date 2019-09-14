@@ -53,7 +53,7 @@ public final class MouseRecorder implements Runnable {
         Widget var4 = var2[var3];
         if (var4 != null && (var4.anInt190 == var1) && (!var4.aBoolean233 || !GameClient.method51(
           var4))) {
-          if ((var4.anInt187 == 1 -1)) {
+          if ((var4.anInt187 == 0)) {
             if (!var4.aBoolean233 && GameClient.method51(var4)
               && var4 != DummyClass56.aClass11_1453) {
               continue;
@@ -93,7 +93,7 @@ public final class MouseRecorder implements Runnable {
                   ++var4.anInt283;
                   if (var7.anIntArray1851.length <= var4.anInt283) {
                     var4.anInt283 -= var7.anInt1865;
-                    if ((var4.anInt283 < 1 -1) || var7.anIntArray1851.length <= var4.anInt283) {
+                    if ((var4.anInt283 < 0) || var7.anIntArray1851.length <= var4.anInt283) {
                       var4.anInt283 = 0;
                     }
                   }
@@ -101,7 +101,7 @@ public final class MouseRecorder implements Runnable {
                   var4.anInt260 = var4.anInt283 + 1;
                   if (var7.anIntArray1851.length <= var4.anInt260) {
                     var4.anInt260 -= var7.anInt1865;
-                    if ((var4.anInt260 < 1 -1) || var7.anIntArray1851.length <= var4.anInt260) {
+                    if ((var4.anInt260 < 0) || var7.anIntArray1851.length <= var4.anInt260) {
                       var4.anInt260 = -1;
                     }
                   }

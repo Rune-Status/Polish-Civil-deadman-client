@@ -40,10 +40,10 @@ public final class StringNode extends Node {
     try {
       if (SomethingQuickChatK.anInt154 == 1) {
         int var1 = DummyClass55.aClass3_Sub24_Sub4_1421.method499(var0);
-        if ((var1 > 1 - 1) && DummyClass55.aClass3_Sub24_Sub4_1421
+        if ((var1 > 0) && DummyClass55.aClass3_Sub24_Sub4_1421
             .method473(-124)) {
           var1 -= SpotAnimationConfig.anInt546;
-          if ((var1 < 1 -1)) {
+          if ((var1 < 0)) {
             var1 = 0;
           }
 
@@ -128,7 +128,7 @@ public final class StringNode extends Node {
     var3.length = 0;
 
     for (int var4 = 0; var4 < var2.length; ++var4) {
-      if ((var2[var4] != 1 -1)) {
+      if ((var2[var4] != 0)) {
         var2[var3.length++] = var2[var4];
       }
     }
@@ -187,7 +187,7 @@ public final class StringNode extends Node {
       StringNode.method736(-60, -93);
     }
 
-    if ((SomethingQuickChatK.anInt154 == 1 -1)) {
+    if ((SomethingQuickChatK.anInt154 == 0)) {
       DummyClass55.aClass3_Sub24_Sub4_1421.method506(128, var0);
     } else {
       TextureSampler36.anInt3423 = var0;

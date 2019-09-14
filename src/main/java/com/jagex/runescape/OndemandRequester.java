@@ -55,7 +55,7 @@ public final class OndemandRequester {
       }
 
       if (this.socketStream == null) {
-        return this.method1253(4) == 0 && (this.method1246(11706) == 1 -1);
+        return this.method1253(4) == 0 && (this.method1246(11706) == 0);
       } else {
         try {
           this.socketStream.method1466(127);
@@ -87,14 +87,14 @@ public final class OndemandRequester {
               throw new IOException();
             }
 
-            if ((avail == 1 -1)) {
+            if ((avail == 0)) {
               break;
             }
 
             this.timeDiff = 0;
             byte read = 0;
             if (this.currentRequest != null) {
-              if ((this.currentRequest.anInt4067 == 1 -1)) {
+              if ((this.currentRequest.anInt4067 == 0)) {
                 read = 1;
               }
             } else {
@@ -117,7 +117,7 @@ public final class OndemandRequester {
 
               this.socketStream.read(this.currentRequest.buffer.bytes,
                   this.currentRequest.buffer.position, var7);
-              if ((this.encryptionKey != 1 -1)) {
+              if ((this.encryptionKey != 0)) {
                 for (var8 = 0; var7 > var8; ++var8) {
                   this.currentRequest.buffer.bytes[this.currentRequest.buffer.position - -var8] =
                     (byte) ObjectCache.bitXor(
@@ -174,7 +174,7 @@ public final class OndemandRequester {
                   int var9 = this.aClass3_Sub30_1008.readUnsignedByte();
                   int length = this.aClass3_Sub30_1008.readInt();
                   int compression = 127 & var9;
-                  boolean priority = ((var9 & 128) != 1 -1);
+                  boolean priority = ((var9 & 128) != 0);
                   OndemandFileRequest var15 = null;
                   long var13 = (var7 << 16) - -var8;
                   if (priority) {
@@ -222,7 +222,7 @@ public final class OndemandRequester {
           this.anInt1010 = -2;
           ++this.anInt1011;
           this.socketStream = null;
-          return this.method1253(4) == 0 && (this.method1246(11706) == 1 -1);
+          return this.method1253(4) == 0 && (this.method1246(11706) == 0);
         }
       }
   }

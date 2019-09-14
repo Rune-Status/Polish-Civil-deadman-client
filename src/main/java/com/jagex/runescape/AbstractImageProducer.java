@@ -84,7 +84,7 @@ public abstract class AbstractImageProducer {
               var7.anInt208 = var7.anInt252 - var7.anInt193;
             }
 
-            if ((var7.anInt208 < 1 -1)) {
+            if ((var7.anInt208 < 0)) {
               var7.anInt208 = 0;
             }
 
@@ -92,7 +92,7 @@ public abstract class AbstractImageProducer {
               var7.anInt247 = 0;
             }
 
-            if ((var7.anInt187 == 1 -1)) {
+            if ((var7.anInt187 == 0)) {
               FileRequester.method2104(var7, var1, 235 + -343);
             }
           }

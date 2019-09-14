@@ -483,7 +483,7 @@ public final class BZipDecompressor {
 
           do {
             if (var44 == 0) {
-              var46 += 1 * var48;
+              var46 += var48;
             } else {
               var46 += 2 * var48;
             }

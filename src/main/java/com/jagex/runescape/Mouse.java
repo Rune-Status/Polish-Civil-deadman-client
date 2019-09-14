@@ -119,14 +119,14 @@ public final class Mouse implements MouseListener, MouseMotionListener,
         }
 
         if (var1.aliveTime != 0) {
-          if ((var1.anInt2261 > 1 -1)) {
+          if ((var1.anInt2261 > 0)) {
             --var1.anInt2261;
           }
 
-          if ((var1.anInt2261 == 1 -1) && var1.anInt2264 >= 1
+          if ((var1.anInt2261 == 0) && var1.anInt2264 >= 1
               && var1.anInt2248 >= 1
               && var1.anInt2264 <= 102 && (var1.anInt2248 <= 103 -1) && (
-              (var1.anInt2265 < 1 -1)
+              (var1.anInt2265 < 0)
                   || AbstractFileRequest
                   .method590((byte) -34, var1.anInt2265, var1.anInt2262))) {
             FileCache.method1048(var1.anInt2265, var1.anInt2264, var1.anInt2250,
@@ -141,7 +141,7 @@ public final class Mouse implements MouseListener, MouseMotionListener,
               var1.unlinkNode();
             }
           }
-        } else if ((var1.anInt2254 < 1 -1) || AbstractFileRequest
+        } else if ((var1.anInt2254 < 0) || AbstractFileRequest
             .method590((byte) -66, var1.anInt2254,
                 var1.anInt2253)) {
           FileCache.method1048(var1.anInt2254, var1.anInt2264, var1.anInt2250,

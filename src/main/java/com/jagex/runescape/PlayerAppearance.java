@@ -165,7 +165,7 @@ public final class PlayerAppearance {
       if (var4 == 0) {
         this.anIntArray862 = var1;
         this.anIntArray857 = var5;
-        this.method1158(0 + 459557008);
+        this.method1158(459557008);
       }
   }
 
@@ -192,7 +192,7 @@ public final class PlayerAppearance {
 
   public void method1164(int var1, int var2, int var3 ) {
     int var4 = DummyClass6.anIntArray2043[var1];
-      if ((this.anIntArray857[var4] != 1 -1)) {
+      if ((this.anIntArray857[var4] != 0)) {
         TextureSampler20.getIdentityKit(var2, var3);
         this.anIntArray857[var4] = TextureSampler3.method308(var2, Integer.MIN_VALUE);
         this.method1158(459557008);
@@ -213,7 +213,7 @@ public final class PlayerAppearance {
       if ((this.npcId == -1)) {
         int[] var15 = this.anIntArray857;
         long var13 = this.aLong860;
-        if (var4 != null && ((var4.anInt1854 >= 1 -1) || (var4.anInt1849 >= 1 -1))) {
+        if (var4 != null && ((var4.anInt1854 >= 0) || (var4.anInt1849 >= 0))) {
           var15 = new int[12];
 
           for (int var16 = 0; var16 < 12; ++var16) {
@@ -230,7 +230,7 @@ public final class PlayerAppearance {
             }
           }
 
-          if ((var4.anInt1849 >= 1 -1)) {
+          if ((var4.anInt1849 >= 0)) {
             if ((var4.anInt1849 == 65536 -1)) {
               var15[3] = 0;
               var13 ^= 4294967295L;
@@ -260,12 +260,12 @@ public final class PlayerAppearance {
           int var19;
           for (int var18 = 0; (var18 < 13 -1); ++var18) {
             var19 = var15[var18];
-            if (((var19 & 1073741824) != 1 -1)) {
+            if (((var19 & 1073741824) != 0)) {
               if (!DummyClass35.getItemConfig(1073741823 & var19, (byte) 92)
                   .method1108((byte) 95, this.aBoolean864)) {
                 var17 = true;
               }
-            } else if (((var19 & Integer.MIN_VALUE) != 1 -1) && !TextureSampler20
+            } else if (((var19 & Integer.MIN_VALUE) != 0) && !TextureSampler20
                 .getIdentityKit(
                     1073741823 & var19, 0).method942(101)) {
               var17 = true;
@@ -289,8 +289,8 @@ public final class PlayerAppearance {
             for (var19 = 0; (var19 < 13 -1); ++var19) {
               var20 = var15[var19];
               Model var21;
-              if (((var20 & 1073741824) == 1 -1)) {
-                if (((Integer.MIN_VALUE & var20) != 1 -1)) {
+              if (((var20 & 1073741824) == 0)) {
+                if (((Integer.MIN_VALUE & var20) != 0)) {
                   var21 =
                       TextureSampler20.getIdentityKit(var20 & 1073741823, 0)
                           .method947((byte) -26);
@@ -330,7 +330,7 @@ public final class PlayerAppearance {
 
                   if (this.anIntArrayArray863[var20] == null) {
                     int[] var27 = this.anIntArrayArray863[var20] = new int[15];
-                    if ((var24 == 1 -1) && (var25 == 1 -1) && var26 == 0) {
+                    if ((var24 == 0) && (var25 == 0) && var26 == 0) {
                       var27[12] = -var45;
                       var27[13] = -var22;
                       var27[0] = var27[4] = var27[8] = '\u8000';
@@ -371,7 +371,7 @@ public final class PlayerAppearance {
                     var27[10] = var22;
                   }
 
-                  if (var24 != 0 || (var25 != 1 -1) || (var26 != 1 -1)) {
+                  if (var24 != 0 || (var25 != 0) || (var26 != 0)) {
                     var39[var20].rotate(var24, var25, var26);
                   }
 
@@ -613,7 +613,7 @@ public final class PlayerAppearance {
           for (int var8 = 0; var8 < 12; ++var8) {
             var9 = this.anIntArray857[var8];
             if ((1073741824 & var9) == 0) {
-              if (((var9 & Integer.MIN_VALUE) != 1 -1) && !TextureSampler20.getIdentityKit(
+              if (((var9 & Integer.MIN_VALUE) != 0) && !TextureSampler20.getIdentityKit(
                 var9 & 1073741823, 0).method948(18991)) {
                 var7 = true;
               }
@@ -634,7 +634,7 @@ public final class PlayerAppearance {
           for (int var10 = 0; (var10 < 13 -1); ++var10) {
             var11 = this.anIntArray857[var10];
             Model var12;
-            if (((1073741824 & var11) == 1 -1)) {
+            if (((1073741824 & var11) == 0)) {
               if ((Integer.MIN_VALUE & var11) != 0) {
                 var12 = TextureSampler20.getIdentityKit(1073741823 & var11, 0).method941(true);
                 if (var12 != null) {
@@ -744,7 +744,7 @@ public final class PlayerAppearance {
             }
           }
 
-          if (var2 != 0 && (var10 != 1 -1)
+          if (var2 != 0 && (var10 != 0)
               && BlockConfig.collisionMaps[GameWorldSomething.currentPlane]
               .method1498(true, var6,
                   var14, var13, var5, var2, var8, var0, var10)) {
@@ -771,7 +771,7 @@ public final class PlayerAppearance {
                 break;
               }
 
-              if (((19661118 & var18[-1 + var13][var14 + var20]) != 1 -1)) {
+              if (((19661118 & var18[-1 + var13][var14 + var20]) != 0)) {
                 break;
               }
 
@@ -780,9 +780,9 @@ public final class PlayerAppearance {
           }
 
           if ((var13 < 103 -1)
-              && (DummyClass51.anIntArrayArray1160[1 + var13][var14] == 1 -1)
+              && (DummyClass51.anIntArrayArray1160[1 + var13][var14] == 0)
               && (19661187 & var18[var13 + var5][var14]) == 0
-              && ((19661280 & var18[var5 + var13][var14 + var5 + -1]) == 1 -1)) {
+              && ((19661280 & var18[var5 + var13][var14 + var5 + -1]) == 0)) {
             var20 = 1;
 
             while (true) {
@@ -796,7 +796,7 @@ public final class PlayerAppearance {
                 break;
               }
 
-              if (((var18[var5 + var13][var14 + var20] & 19661283) != 1 -1)) {
+              if (((var18[var5 + var13][var14 + var20] & 19661283) != 0)) {
                 break;
               }
 
@@ -804,7 +804,7 @@ public final class PlayerAppearance {
             }
           }
 
-          if ((var14 > 1 -1) && DummyClass51.anIntArrayArray1160[var13][-1
+          if ((var14 > 0) && DummyClass51.anIntArrayArray1160[var13][-1
               + var14] == 0
               && (19661070 & var18[var13][-1 + var14]) == 0 && (19661187
               & var18[-1 + var5
@@ -831,10 +831,10 @@ public final class PlayerAppearance {
           }
 
           if (var14 < 102
-              && (DummyClass51.anIntArrayArray1160[var13][1 + var14] == 1 -1)
-              && ((var18[var13][var14 + var5] & 19661112) == 1 -1) && ((
+              && (DummyClass51.anIntArrayArray1160[var13][1 + var14] == 0)
+              && ((var18[var13][var14 + var5] & 19661112) == 0) && ((
               19661280 & var18[-1 + var13
-                  + var5][var5 + var14]) == 1 -1)) {
+                  + var5][var5 + var14]) == 0)) {
             var20 = 1;
 
             while (true) {
@@ -848,7 +848,7 @@ public final class PlayerAppearance {
                 break;
               }
 
-              if (((19661304 & var18[var13 - -var20][var5 + var14]) != 1 -1)) {
+              if (((19661304 & var18[var13 - -var20][var5 + var14]) != 0)) {
                 break;
               }
 
@@ -856,13 +856,13 @@ public final class PlayerAppearance {
             }
           }
 
-          if (var13 > 0 && (var14 > 1 -1)
+          if (var13 > 0 && (var14 > 0)
               && (DummyClass51.anIntArrayArray1160[var13 + -1][var14
-              + -1] == 1 -1)
-              && ((var18[var13 + -1][-1 + var5 + -1 + var14] & 19661112) == 1 -1)
+              + -1] == 0)
+              && ((var18[var13 + -1][-1 + var5 + -1 + var14] & 19661112) == 0)
               && (19661070
               & var18[-1 + var13][var14 - 1]) == 0
-              && ((var18[var5 + -1 + (var13 - 1)][-1 + var14] & 19661187) == 1 -1)) {
+              && ((var18[var5 + -1 + (var13 - 1)][-1 + var14] & 19661187) == 0)) {
             var20 = 1;
 
             while (true) {
@@ -886,9 +886,9 @@ public final class PlayerAppearance {
             }
           }
 
-          if (var13 < 102 && (var14 > 1 -1)
+          if (var13 < 102 && (var14 > 0)
               && (DummyClass51.anIntArrayArray1160[1 + var13][-1
-              + var14] == 1 -1) && ((19661070 & var18[1 + var13][-1 + var14]) == 1 -1)
+              + var14] == 0) && ((19661070 & var18[1 + var13][-1 + var14]) == 0)
               && (var18[var5 + var13][-1 + var14] & 19661187) == 0
               && (var18[var13 - -var5][-1 + var14 + var5 + -1] & 19661280)
               == 0) {
@@ -905,8 +905,8 @@ public final class PlayerAppearance {
                 break;
               }
 
-              if (((19661283 & var18[var13 + var5][var14 - (1 + -var20)]) != 1 -1)
-                  || ((19661199 & var18[var20 + (var13 - -1)][-1 + var14]) != 1 -1)) {
+              if (((19661283 & var18[var13 + var5][var14 - (1 + -var20)]) != 0)
+                  || ((19661199 & var18[var20 + (var13 - -1)][-1 + var14]) != 0)) {
                 break;
               }
 
@@ -914,9 +914,9 @@ public final class PlayerAppearance {
             }
           }
 
-          if ((var13 > 1 -1) && var14 < 102
+          if ((var13 > 0) && var14 < 102
               && (DummyClass51.anIntArrayArray1160[-1 + var13][
-              var14 - -1] == 1 -1) && (19661070 & var18[var13 - 1][1 + var14]) == 0
+              var14 - -1] == 0) && (19661070 & var18[var13 - 1][1 + var14]) == 0
               && (19661112 & var18[-1 + var13][var14 + var5]) == 0 && (
               19661280 & var18[var13][
                   var14 + var5]) == 0) {
@@ -934,7 +934,7 @@ public final class PlayerAppearance {
               }
 
               if ((var18[var13 - 1][var14 - -1 - -var20] & 19661118) != 0
-                  || ((var18[var20 + -1 + var13][var5 + var14] & 19661304) != 1 -1)) {
+                  || ((var18[var20 + -1 + var13][var5 + var14] & 19661304) != 0)) {
                 break;
               }
 
@@ -948,9 +948,9 @@ public final class PlayerAppearance {
               & var18[var13 + 1][var14 + var5]) == 0 && (
               var18[var13 - -var5][var14 + var5]
                   & 19661280) == 0
-              && ((19661187 & var18[var5 + var13][1 + var14]) == 1 -1)) {
+              && ((19661187 & var18[var5 + var13][1 + var14]) == 0)) {
             for (var20 = 1; var20 < -1 + var5; ++var20) {
-              if (((var18[var20 + var13 - -1][var14 - -var5] & 19661304) != 1 -1)
+              if (((var18[var20 + var13 - -1][var14 - -var5] & 19661304) != 0)
                   || (
                   var18[var5 + var13][var20 + (var14 - -1)] & 19661283) != 0) {
                 continue label410;
@@ -979,7 +979,7 @@ public final class PlayerAppearance {
           for (int var22 = var6 - var21; var22 <= var21 + var6; ++var22) {
             for (int var23 = -var21 + var0; (var23 <= (var0 - -var21));
                 ++var23) {
-              if (var22 >= 0 && (var23 >= 1 -1) && (var22 < 105 -1) && (var23 < 105 -1)
+              if (var22 >= 0 && (var23 >= 0) && (var22 < 105 -1) && (var23 < 105 -1)
                   && (TriChromaticImageCache.anIntArrayArray1373[var22][var23] < 101 -1)) {
                 int var24 = 0;
                 if (var6 > var22) {
@@ -1033,7 +1033,7 @@ public final class PlayerAppearance {
             DummyClass38.anIntArray729[var16++] = var14;
           }
 
-          if (((2 & var19) == 1 -1)) {
+          if (((2 & var19) == 0)) {
             if ((8 & var19) != 0) {
               --var13;
             }
@@ -1041,9 +1041,9 @@ public final class PlayerAppearance {
             ++var13;
           }
 
-          if (((var19 & 1) != 1 -1)) {
+          if (((var19 & 1) != 0)) {
             ++var14;
-          } else if (((var19 & 4) != 1 -1)) {
+          } else if (((var19 & 4) != 0)) {
             --var14;
           }
         }

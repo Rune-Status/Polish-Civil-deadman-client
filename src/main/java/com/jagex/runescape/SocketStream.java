@@ -313,7 +313,7 @@ public final class SocketStream implements Runnable {
 
           int var8 = var6 >> 5 & 7;
           int var9 = var6 & 31;
-          if ((var9 == 1 -1)) {
+          if ((var9 == 0)) {
             if (var4) {
               TextureSampler26.method199(var8, var7, 0, -799);
             }

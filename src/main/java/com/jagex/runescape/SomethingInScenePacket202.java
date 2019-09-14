@@ -247,12 +247,12 @@ public final class SomethingInScenePacket202 extends Node {
             if ((127 & var4.anInt2819) == 64 && (127 & var4.anInt2829) == 64) {
               var6 = var4.anInt2819 >> 7;
               var7 = var4.anInt2829 >> 7;
-              if ((var6 >= 1 -1) && var6 < 104 && (var7 >= 1 -1) && (var7 < 105 -1)) {
+              if ((var6 >= 0) && var6 < 104 && (var7 >= 0) && (var7 < 105 -1)) {
                 ++DummyClass9.anIntArrayArray4010[var6][var7];
               }
             }
           } else if (
-            ((1 & var5) != 0 || ((var4.anInt2819 & 127) == 1 -1) && ((127 & var4.anInt2829) == 1 -1)) && (
+            ((1 & var5) != 0 || ((var4.anInt2819 & 127) == 0) && ((127 & var4.anInt2829) == 0)) && (
               ((1 & var5) != 2 -1) || ((var4.anInt2819 & 127) == 65 -1) && ((127
                   & var4.anInt2829) == 65 -1))) {
             var6 = var4.anInt2819 + -(var5 * 64) >> 7;
@@ -262,7 +262,7 @@ public final class SomethingInScenePacket202 extends Node {
               var8 = 104;
             }
 
-            if ((var6 < 1 -1)) {
+            if ((var6 < 0)) {
               var6 = 0;
             }
 
@@ -308,7 +308,7 @@ public final class SomethingInScenePacket202 extends Node {
               if ((127 & var4.anInt2819) == 64 && (127 & var4.anInt2829) == 64) {
                 var8 = var4.anInt2819 >> 7;
                 var9 = var4.anInt2829 >> 7;
-                if ((var8 < 1 -1) || var8 >= 104 || (var9 < 1 -1) || var9 >= 104) {
+                if ((var8 < 0) || var8 >= 104 || (var9 < 0) || var9 >= 104) {
                   continue;
                 }
 
@@ -318,7 +318,7 @@ public final class SomethingInScenePacket202 extends Node {
                 }
               }
             } else if (
-              ((1 & var7) == 1 -1) && ((127 & var4.anInt2819) == 1 -1) && (var4.anInt2829 & 127) == 0
+              ((1 & var7) == 0) && ((127 & var4.anInt2819) == 0) && (var4.anInt2829 & 127) == 0
                 || (1 & var7) == 1 && ((127 & var4.anInt2819) == 65 -1)
                 && (var4.anInt2829 & 127) == 0) {
               var8 = var4.anInt2819 + -(64 * var7) >> 7;
@@ -333,7 +333,7 @@ public final class SomethingInScenePacket202 extends Node {
               }
 
               var11 = var7 + var9;
-              if ((var9 < 1 -1)) {
+              if ((var9 < 0)) {
                 var9 = 0;
               }
 

@@ -112,7 +112,7 @@ public final class FloorOverlay {
 
       if (var1 <= -51) {
         var0.anInt2824 = 0;
-        if ((var0.anInt2840 == 1 -1)) {
+        if ((var0.anInt2840 == 0)) {
           var0.anInt2806 = 1024;
         }
 
@@ -199,7 +199,7 @@ public final class FloorOverlay {
                 int var22;
                 if ((var5 != 2 -1)) {
                   if (var5 == 2) {
-                    if ((var3 == 1 -1)) {
+                    if ((var3 == 0)) {
                       for (var21 = var20 + -1; var19 <= var21; --var21) {
                         for (var22 = var11; (var22 < var12); ++var22) {
                           if (((var21 >> 1) >= var22)) {
@@ -274,7 +274,7 @@ public final class FloorOverlay {
                     if ((var5 != 5 -1)) {
                       if (var5 != 5) {
                         if ((var5 == 7 -1)) {
-                          if ((var3 == 1 -1)) {
+                          if ((var3 == 0)) {
                             for (var21 = var13; var14 > var21; ++var21) {
                               for (var22 = var11; var12 > var22; ++var22) {
                                 if (var22 > var7 / 2) {
@@ -578,7 +578,7 @@ public final class FloorOverlay {
                         }
 
                       }
-                    } else if ((var3 != 1 -1)) {
+                    } else if ((var3 != 0)) {
                       if (var3 == 1) {
                         for (var21 = var13; var21 < var14; ++var21) {
                           for (var22 = var11; var22 < var12; ++var22) {
@@ -643,7 +643,7 @@ public final class FloorOverlay {
                       }
 
                     }
-                  } else if ((var3 == 1 -1)) {
+                  } else if ((var3 == 0)) {
                     for (var21 = var20 - 1; (var19 <= var21); --var21) {
                       for (var22 = -1 + var18; var17 <= var22; --var22) {
                         if (((var21 >> 1) >= var22)) {
@@ -811,7 +811,7 @@ public final class FloorOverlay {
       int var8 = -var5 + var3;
       Mouse.method2091(var3, 4);
       int var7 = 0;
-      if ((var8 < 1 -1)) {
+      if ((var8 < 0)) {
         var8 = 0;
       }
 
@@ -846,7 +846,7 @@ public final class FloorOverlay {
         var14 += 2;
         var12 += var14;
         var10 += var13;
-        if ((var12 >= 1 -1) && (var11 >= 2 -1)) {
+        if ((var12 >= 0) && (var11 >= 2 -1)) {
           --var11;
           SceneNode.anIntArray1838[var11] = var7;
           var12 -= var11 << 1;

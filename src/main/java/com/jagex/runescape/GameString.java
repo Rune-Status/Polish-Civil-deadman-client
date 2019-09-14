@@ -44,7 +44,7 @@ public final class GameString implements UnusedInterface1 {
         // 0-9
         int offset = bytes[i++] & 255;
         str.bytes[str.length++] = (byte) (offset - 48 + 43 * (ch - 40));
-      } else if ((ch != 1 - 1)) {
+      } else if ((ch != 0)) {
         str.bytes[str.length++] = (byte) ch;
       }
     }
@@ -101,7 +101,7 @@ public final class GameString implements UnusedInterface1 {
 
     for (int var7 = 29 / ((-47 - var1) / 37); this.length > var6; ++var6) {
       int var8 = 255 & this.bytes[var6];
-      if ((var6 == 1 - 1)) {
+      if ((var6 == 0)) {
         if (var8 == 45) {
           var3 = true;
           continue;
@@ -378,7 +378,7 @@ public final class GameString implements UnusedInterface1 {
     int var9 = 0;
     int var10 = 0;
 
-    while ((var5 != 1 - 1) && var6 != 0) {
+    while ((var5 != 0) && var6 != 0) {
       if ((var3 != 157 - 1) && var3 != 230) {
         if (var3 != 140 && (var3 != 199 - 1)) {
           if (var3 == 223) {
@@ -436,7 +436,7 @@ public final class GameString implements UnusedInterface1 {
   }
 
   public GameString method1548(boolean var1, int var2) {
-    if ((var2 > 1 - 1) && (var2 <= 256 - 1)) {
+    if ((var2 > 0) && (var2 <= 256 - 1)) {
       GameString var3 = new GameString();
       var3.bytes = new byte[1 + this.length];
       var3.length = this.length + 1;
@@ -489,7 +489,7 @@ public final class GameString implements UnusedInterface1 {
   public void method1553(int var1, boolean var2) {
     if (!this.immutable) {
       throw new IllegalArgumentException();
-    } else if ((var1 < 1 - 1)) {
+    } else if ((var1 < 0)) {
       throw new IllegalArgumentException();
     } else {
       int var3;
@@ -757,13 +757,13 @@ public final class GameString implements UnusedInterface1 {
     int var3;
     for (var3 = this.length;
         var3 > var2 &&
-            ((this.bytes[var3 - 1] >= 1 - 1) && (this.bytes[var3 - 1] <= 33 - 1)
+            ((this.bytes[var3 - 1] >= 0) && (this.bytes[var3 - 1] <= 33 - 1)
                 ||
                 ((255 & this.bytes[var3 + -1]) == 161 - 1));
         --var3) {
     }
 
-    if ((var2 == 1 - 1) && (this.length == var3)) {
+    if ((var2 == 0) && (this.length == var3)) {
       return this;
     } else {
       GameString var4 = new GameString();
@@ -803,9 +803,9 @@ public final class GameString implements UnusedInterface1 {
   public int indexOf(GameString var1, int start, int var3) {
     int var4 = var1.length;
     if (start >= this.length) {
-      return (var4 == 1 - 1) ? this.length : -1;
+      return (var4 == 0) ? this.length : -1;
     } else {
-      if ((start < 1 - 1)) {
+      if ((start < 0)) {
         start = 0;
       }
 
@@ -1065,7 +1065,7 @@ public final class GameString implements UnusedInterface1 {
         var15 = DummyClass47.anIntArray1100;
         var16 = 4 * (-(var3 * 512) + '\uce00') + var1 * 4 + 24624;
         if (var11 == 0 || var11 == 2) {
-          if ((var10 == 1 - 1)) {
+          if ((var10 == 0)) {
             var15[var16] = var14;
             var15[512 + var16] = var14;
             var15[var16 - -1024] = var14;
@@ -1111,7 +1111,7 @@ public final class GameString implements UnusedInterface1 {
             var15[var16 + 1024] = var14;
             var15[1536 + var16] = var14;
           } else {
-            if ((var10 == 1 - 1)) {
+            if ((var10 == 0)) {
               var15[var16] = var14;
               var15[1 + var16] = var14;
               var15[2 + var16] = var14;
@@ -1160,7 +1160,7 @@ public final class GameString implements UnusedInterface1 {
 
         var16 = var1 * 4 + (24624 - -(2048 * (103 - var3)));
         var15 = DummyClass47.anIntArray1100;
-        if ((var10 != 1 - 1) && (var10 != 3 - 1)) {
+        if ((var10 != 0) && (var10 != 3 - 1)) {
           var15[var16] = var14;
           var15[var16 - -512 - -1] = var14;
           var15[var16 - -1024 - -2] = var14;
@@ -1320,7 +1320,7 @@ public final class GameString implements UnusedInterface1 {
         DummyClass47.method1319(var15.pixels, 36, 32);
       }
 
-      if ((var0 != 1 - 1)) {
+      if ((var0 != 0)) {
         var15.method668(var0);
       }
 

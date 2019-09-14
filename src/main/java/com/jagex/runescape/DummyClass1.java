@@ -52,13 +52,13 @@ public final class DummyClass1 {
         }
 
         if ((var1.anInt2786 != 0 || var1.anInt2762 != 0) && (var1.anInt2816 == 0
-          || (var1.anInt2824 > 1 -1))) {
+          || (var1.anInt2824 > 0))) {
           var9 = var1.anInt2819 + -(
             (-WorldMapLabel.anInt1716 + (var1.anInt2786 - WorldMapLabel.anInt1716)) * 64);
           var4 =
             -((-ProceduralTexture.anInt1152 + (var1.anInt2762 - ProceduralTexture.anInt1152)) * 64)
               + var1.anInt2829;
-          if ((var9 != 1 -1) || var4 != 0) {
+          if ((var9 != 0) || var4 != 0) {
             var1.anInt2806 = (int) (Math.atan2(var9, var4) * 325.949D) & 2047;
           }
 
@@ -67,12 +67,12 @@ public final class DummyClass1 {
         }
 
         var9 = var1.anInt2806 - var1.rotationY & 2047;
-        if ((var9 == 1 -1)) {
+        if ((var9 == 0)) {
           var1.anInt2789 = 0;
           var1.anInt2821 = 0;
         } else {
           assert var2 != null;
-          if ((var2.anInt369 == 1 -1)) {
+          if ((var2.anInt369 == 0)) {
             ++var1.anInt2789;
             boolean var11;
             if ((var9 > 1025 -1)) {
@@ -181,7 +181,7 @@ public final class DummyClass1 {
                   }
                 }
               }
-            } else if ((var1.anInt2821 <= 1 -1)) {
+            } else if ((var1.anInt2821 <= 0)) {
               if ((var1.anInt2791 >= var1.anInt2803)) {
                 var1.aBoolean2769 = false;
               }
@@ -201,7 +201,7 @@ public final class DummyClass1 {
 
               if (!var1.aBoolean2769) {
                 var1.anInt2821 -= var2.anInt369;
-                if ((var1.anInt2821 < 1 -1)) {
+                if ((var1.anInt2821 < 0)) {
                   var1.anInt2821 = 0;
                 }
               } else if (var1.anInt2821 < var2.anInt357) {

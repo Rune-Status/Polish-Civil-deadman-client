@@ -71,7 +71,7 @@ public final class GroundItemNode extends SubNode {
           int var2 = -ProceduralTexture.anInt1152 + -(TextureCache.localPlayer.anInt2829 >> 7)
             + MapScene.anInt65 + -1 + DummyClass58.anInt1460;
           var2 += -5 + (int) (Math.random() * 10.0D);
-          if ((var1 >= 1 -1) && DummyClass30.anInt455 > var1 && var2 >= 0
+          if ((var1 >= 0) && DummyClass30.anInt455 > var1 && var2 >= 0
             && (var2 < DummyClass58.anInt1460)) {
             SomethingQuickChat2.anInt3536 = var1;
             SpawnedGameObject.anInt2251 = var2;

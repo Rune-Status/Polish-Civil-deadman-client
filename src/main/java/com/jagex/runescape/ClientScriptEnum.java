@@ -139,7 +139,7 @@ public final class ClientScriptEnum extends SubNode {
   public void parseConfig(Buffer buffer ) {
     while (true) {
         int opcode = buffer.readUnsignedByte();
-        if ((opcode == 1 -1)) {
+        if ((opcode == 0)) {
           return;
         }
 
@@ -161,9 +161,9 @@ public final class ClientScriptEnum extends SubNode {
       Buffer var2 = new Buffer(var1);
       int var3 = var2.readUnsignedByte();
       int var4 = var2.readInt();
-      if (var4 >= 0 && ((AbstractSomethingTexture.anInt1108 == 1 -1)
+      if (var4 >= 0 && ((AbstractSomethingTexture.anInt1108 == 0)
         || (AbstractSomethingTexture.anInt1108 >= var4))) {
-        if ((var3 == 1 -1)) {
+        if ((var3 == 0)) {
           byte[] var8 = new byte[var4];
           var2.copy(0, var4, var8);
           return var8;

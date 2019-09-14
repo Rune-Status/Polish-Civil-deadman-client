@@ -69,7 +69,7 @@ public final class FileTable {
         this.anIntArray945 = new int[this.anInt960];
         this.unpackedLengths = new int[this.anInt960];
         this.unpackedSizes = new int[this.anInt960];
-        if ((var5 != 1 -1)) {
+        if ((var5 != 0)) {
           this.anIntArray955 = new int[this.anInt960];
 
           for (var8 = 0; (var8 < this.anInt960); ++var8) {
@@ -134,7 +134,7 @@ public final class FileTable {
           }
         }
 
-        if ((var5 != 1 -1)) {
+        if ((var5 != 0)) {
           this.childNameTables = new LinearHashTable[var7 - -1];
           this.unpackedNames = new int[1 + var7][];
 
@@ -218,8 +218,8 @@ public final class FileTable {
       }
 
       if (LinearHashTable.aBoolean1040 && (GameClient.method44(var0).anInt2205 != 0
-        || (var0.anInt187 == 1 -1))) {
-        if ((var0.anInt210 < 1 -1)) {
+        || (var0.anInt187 == 0))) {
+        if ((var0.anInt210 < 0)) {
           var0.anInt210 = 0;
         } else if (var0.anInt193 + var0.anInt210 > var2) {
           var0.anInt210 = var2 + -var0.anInt193;
