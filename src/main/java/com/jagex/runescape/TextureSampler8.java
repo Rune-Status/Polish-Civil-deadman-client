@@ -224,7 +224,7 @@ public final class TextureSampler8 extends AbstractTextureSampler {
           var2 -= 2000;
         }
 
-        return ~var2 == -1004;
+        return (var2 == 1004 -1);
       }
   }
 

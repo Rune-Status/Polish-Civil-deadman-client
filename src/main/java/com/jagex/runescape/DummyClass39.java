@@ -39,11 +39,11 @@ public final class DummyClass39 {
           FileCache.anInt688 = var3;
         }
 
-        if (~var2 == -6) {
+        if ((var2 == 6 -1)) {
           OndemandRequester.anInt998 = var3;
         }
 
-        if (~var2 == -10) {
+        if ((var2 == 10 -1)) {
           DummyCanvas.anInt15 = var3;
         }
 

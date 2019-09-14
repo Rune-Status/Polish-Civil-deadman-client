@@ -39,7 +39,7 @@ public final class TextureSampler34 extends AbstractTextureSampler {
         int var17;
         int var16;
         int var18;
-        if (~this.anInt3058 == -2) {
+        if ((this.anInt3058 == 2 -1)) {
           var9 = this.aShortArray3066[0];
           var8 = this.aShortArray3063[0] << 12;
           var11 = var5 * var8 >> 12;
@@ -239,7 +239,7 @@ public final class TextureSampler34 extends AbstractTextureSampler {
 
       if (var1 == 0) {
         this.aBoolean3065 = var2.readUnsignedByte() == 1;
-      } else if (~var1 == -2) {
+      } else if ((var1 == 2 -1)) {
         this.anInt3058 = var2.readUnsignedByte();
       } else if (var1 == 2) {
         this.anInt3062 = var2.method787((byte) 30);
@@ -254,7 +254,7 @@ public final class TextureSampler34 extends AbstractTextureSampler {
         this.anInt3060 = this.anInt3056 = var2.readUnsignedByte();
       } else if (var1 == 4) {
         this.anInt3067 = var2.readUnsignedByte();
-      } else if (~var1 == -6) {
+      } else if ((var1 == 6 -1)) {
         this.anInt3060 = var2.readUnsignedByte();
       } else if (var1 == 6) {
         this.anInt3056 = var2.readUnsignedByte();
@@ -331,7 +331,7 @@ public final class TextureSampler34 extends AbstractTextureSampler {
         Player var4 = TextureSampler0.players[var3];
         if (var4 != null && var4.anInt2814 > 0) {
           --var4.anInt2814;
-          if (~var4.anInt2814 == -1) {
+          if ((var4.anInt2814 == 1 -1)) {
             var4.aClass94_2825 = null;
           }
         }
@@ -342,7 +342,7 @@ public final class TextureSampler34 extends AbstractTextureSampler {
         NPC var6 = TextureSampler5.npcs[var2];
         if (var6 != null && (var6.anInt2814 > 1 -1)) {
           --var6.anInt2814;
-          if (~var6.anInt2814 == -1) {
+          if ((var6.anInt2814 == 1 -1)) {
             var6.aClass94_2825 = null;
           }
         }

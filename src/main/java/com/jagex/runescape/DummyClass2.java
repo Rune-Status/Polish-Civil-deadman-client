@@ -44,9 +44,9 @@ public class DummyClass2 {
             TextureSampler28.loginState = 2;
           }
 
-          if (~TextureSampler28.loginState == -3) {
+          if ((TextureSampler28.loginState == 3 -1)) {
             assert AreaSoundEffect.socketRequest != null;
-            if (~AreaSoundEffect.socketRequest.status == -3) {
+            if ((AreaSoundEffect.socketRequest.status == 3 -1)) {
               throw new IOException();
             }
 
@@ -222,13 +222,13 @@ public class DummyClass2 {
             TextureSampler28.loginState = 4;
           }
 
-          if (~TextureSampler28.loginState == -5) {
+          if ((TextureSampler28.loginState == 5 -1)) {
             if (~SomethingVolume15.gameSocket.available() > -2) {
               return;
             }
 
             int response = SomethingVolume15.gameSocket.read();
-            if (~response == -22) {
+            if ((response == 22 -1)) {
               TextureSampler28.loginState = 7;
             } else {
               if (response == 29) {
@@ -292,7 +292,7 @@ public class DummyClass2 {
             return;
           }
 
-          if (~TextureSampler28.loginState == -11) {
+          if ((TextureSampler28.loginState == 11 -1)) {
             if (SomethingVolume15.gameSocket.available() >= 1) {
               MonoChromaticImageBuffer.anInt2561 = SomethingVolume15.gameSocket
                   .read();
@@ -323,7 +323,7 @@ public class DummyClass2 {
             BufferData.aBoolean1641 =
                 SpotAnimationConfig.gameBuffer.readUnsignedByte() == 1;
             FileCacheRequest.aBoolean4063 =
-                ~SpotAnimationConfig.gameBuffer.readUnsignedByte() == -2;
+                (SpotAnimationConfig.gameBuffer.readUnsignedByte() == 2 -1);
             TextureSampler31.aBoolean3166 =
                 SpotAnimationConfig.gameBuffer.readUnsignedByte() == 1;
             GameCanvas.aBoolean29 =
@@ -333,7 +333,7 @@ public class DummyClass2 {
             TextureSampler3.aBoolean3358 =
                 SpotAnimationConfig.gameBuffer.readUnsignedByte() == 1;
             MapScene.aBoolean66 =
-                ~SpotAnimationConfig.gameBuffer.readUnsignedByte() == -2;
+                (SpotAnimationConfig.gameBuffer.readUnsignedByte() == 2 -1);
             SomethingLight0.method1702((byte) -124, MapScene.aBoolean66);
             FileSystem.method845(MapScene.aBoolean66, 255);
             if (!ProjectileNode.aBoolean3779) {
@@ -352,7 +352,7 @@ public class DummyClass2 {
             TextureSampler28.loginState = 9;
           }
 
-          if (~TextureSampler28.loginState == -10) {
+          if ((TextureSampler28.loginState == 10 -1)) {
             if (~SomethingVolume15.gameSocket.available()
                 > ~HashTable.packetLength) {
               return;

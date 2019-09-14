@@ -123,11 +123,11 @@ public final class StillGraphic extends SceneNode {
         }
 
         var0.anInt2824 = 0;
-        if (~var0.anInt2840 == -3) {
+        if ((var0.anInt2840 == 3 -1)) {
           var0.anInt2806 = 0;
         }
 
-        if (~var0.anInt2840 == -4) {
+        if ((var0.anInt2840 == 4 -1)) {
           var0.anInt2806 = 512;
         }
 

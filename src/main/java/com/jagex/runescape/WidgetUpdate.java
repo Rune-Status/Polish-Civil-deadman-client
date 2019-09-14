@@ -47,7 +47,7 @@ public final class WidgetUpdate extends SubNode {
 
   public void g(byte var1 ) {
     this.subnodeKey |= Long.MIN_VALUE;
-      if (~this.b(true) == -1L) {
+      if ((this.b(true) == 1L -1)) {
         SomethingTilek.aClass13_1666.addLast(this);
       }
 

@@ -77,7 +77,7 @@ public final class AudioWorker implements Runnable {
             var11 = 4 * var9;
           }
 
-          if (~var7.anInt61 == -1) {
+          if ((var7.anInt61 == 1 -1)) {
             var8.method1677(var0 * 4 + 48, 48 + 4 * (-var10 + -var5 + 104),
                 var11, var12);
           } else {
@@ -107,7 +107,7 @@ public final class AudioWorker implements Runnable {
         int var7 = 0;
         var6 = 0;
         boolean var5 = false;
-        if (~var1.readUnsignedByte() == -2) {
+        if ((var1.readUnsignedByte() == 2 -1)) {
           var6 = var1.readUnsignedByte();
           var7 = var1.readUnsignedByte();
           var5 = true;

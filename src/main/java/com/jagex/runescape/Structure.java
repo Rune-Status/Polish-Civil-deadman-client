@@ -123,16 +123,16 @@ public final class Structure extends SubNode {
         Structure.method602(-115, 65, (byte) -119, null);
       }
 
-      if (~var3.aByte304 == -1) {
+      if ((var3.aByte304 == 1 -1)) {
         var3.anInt168 = var3.anInt177;
       } else {
-        if (~var3.aByte304 == -2) {
+        if ((var3.aByte304 == 2 -1)) {
           var3.anInt168 = var2 + -var3.anInt177;
         } else {
-          if (~var3.aByte304 == -3) {
+          if ((var3.aByte304 == 3 -1)) {
             var3.anInt168 = var3.anInt177 * var2 >> 14;
           } else if (var3.aByte304 == 3) {
-            if (~var3.anInt187 == -3) {
+            if ((var3.anInt187 == 3 -1)) {
               var3.anInt168 =
                   var3.anInt177 * 32 - -((var3.anInt177 - 1) * var3.anInt285);
             } else {
@@ -145,21 +145,21 @@ public final class Structure extends SubNode {
         }
       }
 
-      if (~var3.aByte241 == -1) {
+      if ((var3.aByte241 == 1 -1)) {
         var3.anInt193 = var3.anInt244;
       } else if (var3.aByte241 == 1) {
         var3.anInt193 = -var3.anInt244 + var0;
-      } else if (~var3.aByte241 == -3) {
+      } else if ((var3.aByte241 == 3 -1)) {
         var3.anInt193 = var0 * var3.anInt244 >> 14;
       } else if (var3.aByte241 == 3) {
-        if (~var3.anInt187 == -3) {
+        if ((var3.anInt187 == 3 -1)) {
           var3.anInt193 = (var3.anInt244 + -1) * var3.anInt290 + var3.anInt244 * 32;
-        } else if (~var3.anInt187 == -8) {
+        } else if ((var3.anInt187 == 8 -1)) {
           var3.anInt193 = var3.anInt244 * 12 + (-1 + var3.anInt244) * var3.anInt290;
         }
       }
 
-      if (~var3.aByte304 == -5) {
+      if ((var3.aByte304 == 5 -1)) {
         var3.anInt168 = var3.anInt216 * var3.anInt193 / var3.anInt160;
       }
 
@@ -169,7 +169,7 @@ public final class Structure extends SubNode {
 
       if (LinearHashTable.aBoolean1040 && (
           (GameClient.method44(var3).anInt2205 != 1 -1)
-        || ~var3.anInt187 == -1)) {
+        || (var3.anInt187 == 1 -1))) {
         if (var3.anInt193 < 5 && var3.anInt168 < 5) {
           var3.anInt193 = 5;
           var3.anInt168 = 5;

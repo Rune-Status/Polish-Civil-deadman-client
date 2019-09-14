@@ -52,7 +52,7 @@ public final class TextureSampler3 extends AbstractTextureSampler {
           String var9;
           int var10;
           if ((var7 != 1 -1) && var7 != 1 && (var7 != 3 -1)) {
-            if (~var7 == -4 || ~var7 == -5) {
+            if ((var7 == 4 -1) || (var7 == 5 -1)) {
               var8 = new String(var1.readString().method1568(0));
               var9 = new String(var1.readString().method1568(0));
               var10 = var1.readUnsignedByte();
@@ -150,14 +150,14 @@ public final class TextureSampler3 extends AbstractTextureSampler {
 
   public static int method310(int var0, byte var1, int var2, int var3) {
     var0 &= 3;
-      if (~var0 == -1) {
+      if ((var0 == 1 -1)) {
         return var3;
       } else {
         if (var1 >= -17) {
           TextureSampler3.aClass94_3357 = null;
         }
 
-        return var0 == 1 ? 7 + -var2 : (~var0 == -3 ? -var3 + 7 : var2);
+        return var0 == 1 ? 7 + -var2 : ((var0 == 3 -1) ? -var3 + 7 : var2);
       }
   }
 

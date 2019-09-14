@@ -191,7 +191,7 @@ public final class SocketStream implements Runnable {
             TextureSampler25.sleep(1L);
           }
 
-          if (~this.aClass64_1237.status == -2) {
+          if ((this.aClass64_1237.status == 2 -1)) {
             try {
               ((Thread) this.aClass64_1237.result).join();
             } catch (InterruptedException var4) {
@@ -313,7 +313,7 @@ public final class SocketStream implements Runnable {
 
           int var8 = var6 >> 5 & 7;
           int var9 = var6 & 31;
-          if (~var9 == -1) {
+          if ((var9 == 1 -1)) {
             if (var4) {
               TextureSampler26.method199(var8, var7, 0, -799);
             }

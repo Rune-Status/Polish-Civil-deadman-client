@@ -146,7 +146,7 @@ public class MovedStatics0 {
           byte var16 = var25.readByte();
           int var18;
           if (var16 != 0) {
-            if (~var16 == -2) {
+            if ((var16 == 2 -1)) {
               for (var17 = 0; var17 < 64; var17 += 4) {
                 for (var18 = 0; ~var18 > -65; var18 += 4) {
                   byte var19 = var25.readByte();
@@ -235,7 +235,7 @@ public class MovedStatics0 {
             if ((var28 > 1 -1)) {
               for (var17 = 0; ~var17 > ~var28; ++var17) {
                 Light var30 = new Light(var25);
-                if (~var30.anInt705 == -32) {
+                if ((var30.anInt705 == 32 -1)) {
                   LightIntensity var31 = DummyClass50
                       .method1401(1001, var25.readUnsignedShort());
                   var30.method1060((byte) 123, var31.anInt896, var31.anInt908,

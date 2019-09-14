@@ -67,12 +67,12 @@ public final class DummyClass1 {
         }
 
         var9 = var1.anInt2806 - var1.rotationY & 2047;
-        if (~var9 == -1) {
+        if ((var9 == 1 -1)) {
           var1.anInt2789 = 0;
           var1.anInt2821 = 0;
         } else {
           assert var2 != null;
-          if (~var2.anInt369 == -1) {
+          if ((var2.anInt369 == 1 -1)) {
             ++var1.anInt2789;
             boolean var11;
             if ((var9 > 1025 -1)) {

@@ -53,7 +53,7 @@ public final class MouseRecorder implements Runnable {
         Widget var4 = var2[var3];
         if (var4 != null && ~var4.anInt190 == ~var1 && (!var4.aBoolean233 || !GameClient.method51(
           var4))) {
-          if (~var4.anInt187 == -1) {
+          if ((var4.anInt187 == 1 -1)) {
             if (!var4.aBoolean233 && GameClient.method51(var4)
               && var4 != DummyClass56.aClass11_1453) {
               continue;

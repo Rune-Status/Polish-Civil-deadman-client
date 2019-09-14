@@ -179,7 +179,7 @@ public final class ISAACCipher {
       while (~var2 > -257) {
         int var3 = this.anIntArray971[var2];
         if ((2 & var2) != 0) {
-          if (~(var2 & 1) == -1) {
+          if (((var2 & 1) == 1 -1)) {
             this.anInt972 ^= this.anInt972 << 2;
           } else {
             this.anInt972 ^= this.anInt972 >>> 16;

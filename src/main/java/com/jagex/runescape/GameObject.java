@@ -81,7 +81,7 @@ public final class GameObject extends SceneNode {
 
         this.anInt2746 = 1;
         this.anInt2749 = -1 + AbstractGameWorld.updateCycle;
-        if (~this.aClass142_2722.anInt1845 == -1 && var9 != null && var9 instanceof GameObject) {
+        if ((this.aClass142_2722.anInt1845 == 1 -1) && var9 != null && var9 instanceof GameObject) {
           GameObject var12 = (GameObject) var9;
           if (this.aClass142_2722 == var12.aClass142_2722) {
             this.anInt2726 = var12.anInt2726;
@@ -604,7 +604,7 @@ public final class GameObject extends SceneNode {
           int var3 = DummyClass42.anIntArray887[var2];
           Player var4 = TextureSampler0.players[var3];
           int var5 = SpotAnimationConfig.gameBuffer.readBits(1);
-          if (~var5 == -1) {
+          if ((var5 == 1 -1)) {
             DummyClass42.anIntArray887[DummyClass13.anInt2022++] = var3;
             var4.anInt2838 = AbstractGameWorld.updateCycle;
           } else {
@@ -616,17 +616,17 @@ public final class GameObject extends SceneNode {
             } else {
               int var7;
               int var8;
-              if (~var6 == -2) {
+              if ((var6 == 2 -1)) {
                 DummyClass42.anIntArray887[DummyClass13.anInt2022++] = var3;
                 var4.anInt2838 = AbstractGameWorld.updateCycle;
                 var7 = SpotAnimationConfig.gameBuffer.readBits(3);
                 var4.method1968(1, (byte) 46, var7);
                 var8 = SpotAnimationConfig.gameBuffer.readBits(1);
-                if (~var8 == -2) {
+                if ((var8 == 2 -1)) {
                   DummyClass60.anIntArray441[OndemandRequester.anInt997++] = var3;
                 }
               } else {
-                if (~var6 == -3) {
+                if ((var6 == 3 -1)) {
                   DummyClass42.anIntArray887[DummyClass13.anInt2022++] = var3;
                   var4.anInt2838 = AbstractGameWorld.updateCycle;
                   if (SpotAnimationConfig.gameBuffer.readBits(1) == 1) {
@@ -644,7 +644,7 @@ public final class GameObject extends SceneNode {
                     DummyClass60.anIntArray441[OndemandRequester.anInt997++] = var3;
                   }
                 } else {
-                  if (~var6 == -4) {
+                  if ((var6 == 4 -1)) {
                     VariableUpdate.anIntArray2292[DummyClass17.anInt1829++] = var3;
                   }
                 }

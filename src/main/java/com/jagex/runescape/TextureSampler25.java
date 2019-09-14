@@ -31,7 +31,7 @@ public final class TextureSampler25 extends AbstractTextureSampler {
         if (var1 == 0) {
           this.anInt3404 = var2.readUnsignedShort();
         } else if (var1 != 1) {
-          if (~var1 == -3) {
+          if ((var1 == 3 -1)) {
             this.anInt3406 = var2.readUnsignedShort();
           } else if (var1 != 3) {
             if (var1 == 4) {
@@ -331,7 +331,7 @@ public final class TextureSampler25 extends AbstractTextureSampler {
           ClassCheckRequest.method126(false, var2, var4, var0, var3);
         }
 
-      } else if (~var7 == -1) {
+      } else if ((var7 == 1 -1)) {
         SomethingTexture4.method1354(var3, var0, true, var5, var4);
       } else {
         int var12 = (var7 << 12) / var6;

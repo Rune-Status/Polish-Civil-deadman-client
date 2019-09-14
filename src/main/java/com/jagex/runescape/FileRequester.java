@@ -238,11 +238,11 @@ public final class FileRequester extends AbstractFileRequester {
                 var3 = this.aClass61_2966.getFirst();
                 var3 != null; var3 = this.aClass61_2966.getNext()) {
               var4 = (int) var3.key;
-              if (~this.aByteArray2949[var4] == -1) {
+              if ((this.aByteArray2949[var4] == 1 -1)) {
                 this.method2109(1, var4, 51);
               }
 
-              if (~this.aByteArray2949[var4] == -1) {
+              if ((this.aByteArray2949[var4] == 1 -1)) {
                 var2 = false;
               } else {
                 var3.unlinkNode();
@@ -250,7 +250,7 @@ public final class FileRequester extends AbstractFileRequester {
             }
 
             while (this.aClass62_2944.unpackedSizes.length > this.anInt2964) {
-              if (~this.aClass62_2944.unpackedSizes[this.anInt2964] == -1) {
+              if ((this.aClass62_2944.unpackedSizes[this.anInt2964] == 1 -1)) {
                 ++this.anInt2964;
               } else {
                 if ((this.aClass73_2956.anInt1087 >= 251 -1)) {
@@ -262,7 +262,7 @@ public final class FileRequester extends AbstractFileRequester {
                   this.method2109(1, this.anInt2964, 99);
                 }
 
-                if (~this.aByteArray2949[this.anInt2964] == -1) {
+                if ((this.aByteArray2949[this.anInt2964] == 1 -1)) {
                   var2 = false;
                   var3 = new Node();
                   var3.key = this.anInt2964;
@@ -297,7 +297,7 @@ public final class FileRequester extends AbstractFileRequester {
               }
 
               while (this.aClass62_2944.unpackedSizes.length > this.anInt2964) {
-                if (~this.aClass62_2944.unpackedSizes[this.anInt2964] == -1) {
+                if ((this.aClass62_2944.unpackedSizes[this.anInt2964] == 1 -1)) {
                   ++this.anInt2964;
                 } else {
                   if (this.aClass66_2953.method1241(-30064)) {
@@ -367,7 +367,7 @@ public final class FileRequester extends AbstractFileRequester {
 
   private AbstractFileRequest method2109(int var1, int var2, int var3) {
     Node var4 = this.aClass130_2946.get(var2);
-      if (var4 != null && ~var1 == -1 && !((AbstractFileRequest) var4).aBoolean3628
+      if (var4 != null && (var1 == 1 -1) && !((AbstractFileRequest) var4).aBoolean3628
         && ((AbstractFileRequest) var4).aBoolean3632) {
         var4.unlinkNode();
         var4 = null;
@@ -533,7 +533,7 @@ public final class FileRequester extends AbstractFileRequester {
                 this.method2109(2, var3, var1 + 78);
               }
 
-              if (~this.aByteArray2949[var3] == -2) {
+              if ((this.aByteArray2949[var3] == 2 -1)) {
                 var2.unlinkNode();
               }
             } else {
@@ -565,22 +565,22 @@ public final class FileRequester extends AbstractFileRequester {
           int var3 = -112 / ((var0 - 26) / 40);
           int var4;
           int var5;
-          if (~var2 == -2) {
+          if ((var2 == 2 -1)) {
             var4 = SpotAnimationConfig.gameBuffer.readBits(3);
             TextureCache.localPlayer.method1968(1, (byte) -128, var4);
             var5 = SpotAnimationConfig.gameBuffer.readBits(1);
-            if (~var5 == -2) {
+            if ((var5 == 2 -1)) {
               DummyClass60.anIntArray441[OndemandRequester.anInt997++] = 2047;
             }
 
           } else if (var2 != 2) {
-            if (~var2 == -4) {
+            if ((var2 == 4 -1)) {
               var4 = SpotAnimationConfig.gameBuffer.readBits(7);
               var5 = SpotAnimationConfig.gameBuffer.readBits(1);
               GameWorldSomething.currentPlane = SpotAnimationConfig.gameBuffer
                   .readBits(2);
               int var6 = SpotAnimationConfig.gameBuffer.readBits(1);
-              if (~var6 == -2) {
+              if ((var6 == 2 -1)) {
                 DummyClass60.anIntArray441[OndemandRequester.anInt997++] = 2047;
               }
 
@@ -610,8 +610,8 @@ public final class FileRequester extends AbstractFileRequester {
   }
 
   public static boolean method2103(int var0, int var1) {
-    return var1 >= -78 || (~var0 == -199 || var0 == 230 || var0 == 156
-          || ~var0 == -141 || var0 == 223);
+    return var1 >= -78 || ((var0 == 199 -1) || var0 == 230 || var0 == 156
+          || (var0 == 141 -1) || var0 == 223);
   }
 
   public static void method2104(Widget var0, boolean var1, int var2) {

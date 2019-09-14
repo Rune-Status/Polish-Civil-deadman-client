@@ -64,7 +64,7 @@ public final class DummyClass45 {
         DummyClass45.spawnSceneX = -21;
       }
 
-      if (~HuffmanEncoder.anInt638 == -3) {
+      if ((HuffmanEncoder.anInt638 == 3 -1)) {
         DummyClass17.aClass3_Sub28_Sub16Array1825[4 + FileRequester.anInt2958 / 100].method643(
           SceneSomething2.anInt1053 + -8, -8 + FileCacheRequest.anInt4062);
       }

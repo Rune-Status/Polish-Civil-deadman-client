@@ -63,7 +63,7 @@ public final class NPC extends Mobile {
       DummyClass0 var12 ) {
     if (this.config != null) {
         AnimationSequence var13 = ~this.animationId != 0
-            && ~this.anInt2828 == -1 ?
+            && (this.anInt2828 == 1 -1) ?
           GameClient.method45(this.animationId, (byte) -20) :
           null;
         AnimationSequence var14 =
@@ -136,7 +136,7 @@ public final class NPC extends Mobile {
           }
 
           if (GlRenderer.useOpenGlRenderer) {
-            if (~this.config.size == -2) {
+            if ((this.config.size == 2 -1)) {
               var15.aBoolean2699 = true;
             }
 
@@ -144,7 +144,7 @@ public final class NPC extends Mobile {
                 var11,
                 this.aClass127_Sub1_2801);
             if (var17 != null) {
-              if (~this.config.size == -2) {
+              if ((this.config.size == 2 -1)) {
                 var17.aBoolean2699 = true;
               }
 
@@ -278,7 +278,7 @@ public final class NPC extends Mobile {
       }
 
       try {
-        if (~SomethingQuickChatK.anInt154 == -3) {
+        if ((SomethingQuickChatK.anInt154 == 3 -1)) {
           if (MidiSomething.aClass3_Sub27_1154 == null) {
             MidiSomething.aClass3_Sub27_1154 =
               MidiFile.method517(DummyClass55.aClass153_1423, TextureSampler8.anInt3463,

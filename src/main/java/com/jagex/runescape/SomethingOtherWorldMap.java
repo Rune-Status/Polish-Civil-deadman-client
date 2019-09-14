@@ -76,17 +76,17 @@ public final class SomethingOtherWorldMap extends Node {
 
       GameString var8 = DummyClass15.aClass94_1880;
       GameString var7 = DummyClass28.aClass94_341;
-      if (~var0 == -2) {
+      if ((var0 == 2 -1)) {
         var8 = DummyClass28.aClass94_341;
         var7 = DummyClass15.aClass94_1880;
       }
 
-      if (~var0 == -3) {
+      if ((var0 == 3 -1)) {
         var7 = DummyClass15.aClass94_1880;
         var8 = TextureSampler26.aClass94_3080;
       }
 
-      if (~var0 == -4) {
+      if ((var0 == 4 -1)) {
         var8 = DummyClass28.aClass94_341;
         var7 = DummyClass15.aClass94_1880;
       }
@@ -106,7 +106,7 @@ public final class SomethingOtherWorldMap extends Node {
       } else {
         GameString var12;
         for (var12 = Cache.createString(0); var3 > 0L; var3 /= 10L) {
-          if (var1 && (var11 != 1 -1) && ~(var11 % 3) == -1) {
+          if (var1 && (var11 != 1 -1) && ((var11 % 3) == 1 -1)) {
             var12.append(var8);
           }
 

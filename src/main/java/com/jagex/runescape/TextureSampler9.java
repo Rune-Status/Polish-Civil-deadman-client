@@ -40,12 +40,12 @@ public final class TextureSampler9 extends AbstractTextureSampler {
         TextureSampler9.method207(18, false, -19, 102L);
       }
 
-      if (~var1 == -1) {
-        this.aBoolean3100 = ~var2.readUnsignedByte() == -2;
-      } else if (~var1 == -2) {
+      if ((var1 == 1 -1)) {
+        this.aBoolean3100 = (var2.readUnsignedByte() == 2 -1);
+      } else if ((var1 == 2 -1)) {
         this.aBoolean3104 = var2.readUnsignedByte() == 1;
-      } else if (~var1 == -3) {
-        this.monoChromatic = ~var2.readUnsignedByte() == -2;
+      } else if ((var1 == 3 -1)) {
+        this.monoChromatic = (var2.readUnsignedByte() == 2 -1);
       }
   }
 

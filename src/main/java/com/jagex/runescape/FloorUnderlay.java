@@ -111,19 +111,19 @@ public final class FloorUnderlay {
   }
 
   private void method1604(int var2, Buffer var3, int var4) {
-    if (~var2 == -2) {
+    if ((var2 == 2 -1)) {
         this.anInt1404 = var3.readUnsignedMedium((byte) 93);
         this.setHSL(this.anInt1404, (byte) 81);
       } else {
         if (var2 == 2) {
           this.anInt1412 = var3.readUnsignedShort();
-          if (~this.anInt1412 == -65536) {
+          if ((this.anInt1412 == 65536 -1)) {
             this.anInt1412 = -1;
           }
         } else {
           if (var2 == 3) {
             this.anInt1414 = var3.readUnsignedShort();
-          } else if (~var2 == -5) {
+          } else if ((var2 == 5 -1)) {
             this.aBoolean1411 = false;
           }
         }

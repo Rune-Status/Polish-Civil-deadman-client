@@ -812,7 +812,7 @@ public class Buffer extends Node {
               if (var23 > 0) {
                 for (var14 = 0; var23 > var14; ++var14) {
                   Light var25 = new Light(var20);
-                  if (~var25.anInt705 == -32) {
+                  if ((var25.anInt705 == 32 -1)) {
                     LightIntensity var26 = DummyClass50.method1401(
                         1001, var20.readUnsignedShort());
                     var25.method1060((byte) -67, var26.anInt896, var26.anInt908,
@@ -883,7 +883,7 @@ public class Buffer extends Node {
         if (var1 == 0) {
           AbstractImageProducer.aByteArrayArrayArray2008 = null;
           SceneShadowMap.method1816(0, -7);
-        } else if (~var1 == -2) {
+        } else if ((var1 == 2 -1)) {
           SomethingInScenePacket202.method112((byte) 0, (byte) 55);
           SceneShadowMap.method1816(512, -7);
           TextureSampler19.method257((byte) 125);
@@ -973,7 +973,7 @@ public class Buffer extends Node {
 
         if (AbstractDirectColorSprite.anInt3704 > 0) {
           --ByteArrayNode.anInt3611;
-          if (~ByteArrayNode.anInt3611 == -1) {
+          if ((ByteArrayNode.anInt3611 == 1 -1)) {
             ByteArrayNode.anInt3611 = 20;
             --AbstractDirectColorSprite.anInt3704;
           }

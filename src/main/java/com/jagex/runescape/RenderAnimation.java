@@ -79,7 +79,7 @@ public final class RenderAnimation {
 
       while (true) {
         int var3 = var2.readUnsignedByte();
-        if (~var3 == -1) {
+        if ((var3 == 1 -1)) {
           return;
         }
 
@@ -91,14 +91,14 @@ public final class RenderAnimation {
     if (var1 == 1) {
         this.anInt368 = var3.readUnsignedShort();
         this.anInt382 = var3.readUnsignedShort();
-        if (~this.anInt382 == -65536) {
+        if ((this.anInt382 == 65536 -1)) {
           this.anInt382 = -1;
         }
 
         if (this.anInt368 == '\uffff') {
           this.anInt368 = -1;
         }
-      } else if (~var1 == -3) {
+      } else if ((var1 == 3 -1)) {
         this.anInt398 = var3.readUnsignedShort();
       } else if ((var1 != 4 -1)) {
         if (var1 == 4) {
@@ -110,20 +110,20 @@ public final class RenderAnimation {
             if (var1 == 7) {
               this.anInt386 = var3.readUnsignedShort();
             } else if (var1 != 8) {
-              if (~var1 == -10) {
+              if ((var1 == 10 -1)) {
                 this.anInt375 = var3.readUnsignedShort();
               } else {
                 if (var1 == 26) {
                   this.anInt395 = (short) (4 * var3.readUnsignedByte());
                   this.anInt381 = (short) (4 * var3.readUnsignedByte());
                 } else if ((var1 != 28 -1)) {
-                  if (~var1 == -30) {
+                  if ((var1 == 30 -1)) {
                     this.anInt369 = var3.readUnsignedByte();
                   } else {
                     if (var1 == 30) {
                       this.anInt357 = var3.readUnsignedShort();
                     } else {
-                      if (~var1 == -32) {
+                      if ((var1 == 32 -1)) {
                         this.anInt387 = var3.readUnsignedByte();
                       } else if (var1 != 32) {
                         if (var1 == 33) {
@@ -134,7 +134,7 @@ public final class RenderAnimation {
                           if (var1 == 36) {
                             this.anInt371 = var3.method787((byte) 122);
                           } else {
-                            if (~var1 == -38) {
+                            if ((var1 == 38 -1)) {
                               this.anInt360 = var3.readUnsignedByte();
                             } else {
                               if (var1 == 38) {
@@ -148,10 +148,10 @@ public final class RenderAnimation {
                               } else if (var1 == 42) {
                                 this.anInt364 = var3.readUnsignedShort();
                               } else if ((var1 != 44 -1)) {
-                                if (~var1 == -45) {
+                                if ((var1 == 45 -1)) {
                                   var3.readUnsignedShort();
                                 } else {
-                                  if (~var1 == -46) {
+                                  if ((var1 == 46 -1)) {
                                     var3.readUnsignedShort();
                                   }
                                 }
@@ -336,7 +336,7 @@ public final class RenderAnimation {
 
       if (~var0.animationId != 0 && ~var0.anInt2828 >= -2) {
         var2 = GameClient.method45(var0.animationId, (byte) -20);
-        if (~var2.anInt1866 == -2 && var0.anInt2811 > 0
+        if ((var2.anInt1866 == 2 -1) && var0.anInt2811 > 0
           && ~AbstractGameWorld.updateCycle <= ~var0.anInt2800
           && AbstractGameWorld.updateCycle > var0.anInt2790) {
           var0.anInt2828 = 1;
@@ -345,7 +345,7 @@ public final class RenderAnimation {
       }
 
       if (var1 == -11973) {
-        if (~var0.animationId != 0 && ~var0.anInt2828 == -1) {
+        if (~var0.animationId != 0 && (var0.anInt2828 == 1 -1)) {
           var2 = GameClient.method45(var0.animationId, (byte) -20);
           if (var2.anIntArray1851 != null) {
             ++var0.anInt2760;

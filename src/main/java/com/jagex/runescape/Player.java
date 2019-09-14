@@ -54,12 +54,12 @@ public final class Player extends Mobile {
       int var14;
       for (int var10 = 0; ~var10 > -13; ++var10) {
         var11 = buffer.readUnsignedByte();
-        if (~var11 == -1) {
+        if ((var11 == 1 -1)) {
           var9[var10] = 0;
         } else {
           var12 = buffer.readUnsignedByte();
           var13 = (var11 << 8) - -var12;
-          if (~var10 == -1 && ~var13 == -65536) {
+          if ((var10 == 1 -1) && (var13 == 65536 -1)) {
             var8 = buffer.readUnsignedShort();
             this.anInt3956 = buffer.readUnsignedByte();
             break;
@@ -103,14 +103,14 @@ public final class Player extends Mobile {
         this.skillTotal = 0;
         this.anInt3965 = buffer.readUnsignedByte();
         this.anInt3970 = buffer.readUnsignedByte();
-        if (~this.anInt3970 == -256) {
+        if ((this.anInt3970 == 256 -1)) {
           this.anInt3970 = -1;
         }
       }
 
       var13 = this.anInt3969;
       this.anInt3969 = buffer.readUnsignedByte();
-      if (~this.anInt3969 == -1) {
+      if ((this.anInt3969 == 1 -1)) {
         DummyClass11.method2203(this, 8);
       } else {
         int var15 = this.anInt3966;
@@ -134,7 +134,7 @@ public final class Player extends Mobile {
       }
 
       var14 = this.appearance.npcId;
-      this.appearance.update(var19, var8, ~var4 == -2, 0, var9,
+      this.appearance.update(var19, var8, (var4 == 2 -1), 0, var9,
           this.renderAnimationId);
       if (~var14 != ~var8) {
         this.anInt2819 = 128 * this.waypointsX[0] + this.getSize() * 64;
@@ -283,7 +283,7 @@ public final class Player extends Mobile {
               if (var27 != null && ~var27.anInt1355 != 0) {
                 int var21;
                 int var20;
-                if (~var27.anInt1360 == -2 && var27.anInt1359 >= 0
+                if ((var27.anInt1360 == 2 -1) && var27.anInt1359 >= 0
                   && TextureSampler5.npcs.length > var27.anInt1359) {
                   NPC var24 = TextureSampler5.npcs[var27.anInt1359];
                   if (var24 != null) {
@@ -303,7 +303,7 @@ public final class Player extends Mobile {
                     var2, var27.anInt1355, var3, var7);
                 }
 
-                if (~var27.anInt1360 == -11 && var27.anInt1359 >= 0
+                if ((var27.anInt1360 == 11 -1) && var27.anInt1359 >= 0
                   && TextureSampler0.players.length > var27.anInt1359) {
                   Player var28 = TextureSampler0.players[var27.anInt1359];
                   if (var28 != null) {
@@ -361,13 +361,13 @@ public final class Player extends Mobile {
               var25.method1897(this.anInt2782 + -this.anInt2819, this.anInt2812
                       + -this.anInt2831,
                   this.anInt2833 + -this.anInt2829);
-              if (~this.anInt2806 == -513) {
+              if ((this.anInt2806 == 513 -1)) {
                 var25.method1900();
               } else {
-                if (~this.anInt2806 == -1025) {
+                if ((this.anInt2806 == 1025 -1)) {
                   var25.method1874();
                 } else {
-                  if (~this.anInt2806 == -1537) {
+                  if ((this.anInt2806 == 1537 -1)) {
                     var25.rotateQuarterY();
                   }
                 }

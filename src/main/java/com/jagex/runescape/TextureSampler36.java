@@ -176,7 +176,7 @@ public final class TextureSampler36 extends AbstractTextureSampler {
               TextureSampler28.anInt3315 = var12 + TextureSampler28.anInt3315 & 2047;
             }
 
-            if (~var11 == -5) {
+            if ((var11 == 5 -1)) {
               DummyClass17.anInt1823 += var12;
               if (DummyClass17.anInt1823 < 128) {
                 DummyClass17.anInt1823 = 128;
@@ -187,7 +187,7 @@ public final class TextureSampler36 extends AbstractTextureSampler {
               }
             }
 
-            if (~var11 == -3) {
+            if ((var11 == 3 -1)) {
               DummyClass49.anInt1111 += var12;
             }
 
@@ -243,7 +243,7 @@ public final class TextureSampler36 extends AbstractTextureSampler {
           GlRenderer.setDepthTestEnabled(true);
           boolean var18 = false;
           GlRenderer.setFogEnabled(true);
-          if (~DummyClass15.state == -11) {
+          if ((DummyClass15.state == 11 -1)) {
             var12 = GameBuffer.method809(DisplayMode.loopCycle, DummyClass49.anInt1111 >> 10,
               AbstractFileRequest.brightnessSetting, NPC.anInt3995 >> 10,
                 -6403 + 6404);

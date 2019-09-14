@@ -271,7 +271,7 @@ public final class ProceduralTexture {
             var18 = GameBuffer.anIntArray3804[var18];
             var19 = GameBuffer.anIntArray3804[var19];
             int var20;
-            if (~var17 == -1 && ~var18 == -1 && ~var19 == -1) {
+            if ((var17 == 1 -1) && (var18 == 1 -1) && (var19 == 1 -1)) {
               var20 = 0;
             } else {
               var20 = var15[var16] >> 4;
@@ -396,7 +396,7 @@ public final class ProceduralTexture {
 
               for (var12 = 0; var11.length > var12; ++var12) {
                 HintMarker var13 = var11[var12];
-                if (var13 != null && ~var13.anInt1360 == -11
+                if (var13 != null && (var13.anInt1360 == 11 -1)
                   && DummyClass42.anIntArray887[var7] == var13.anInt1359) {
                   DummyClass56.method1647((byte) 122, var4 >> 1, var3, var8, var5,
                     var8.method1975(var6 ^ -28716) - -15, var1 >> 1);
@@ -456,7 +456,7 @@ public final class ProceduralTexture {
 
           assert var8 instanceof Player;
           if (var8.aClass94_2825 != null && (var7 >= DummyClass13.anInt2022
-            || ~TextureSampler9.anInt3101 == -1 || TextureSampler9.anInt3101
+            || (TextureSampler9.anInt3101 == 1 -1) || TextureSampler9.anInt3101
               == 3
             || TextureSampler9.anInt3101 == 1 && ScriptState.method1176(((Player) var8).name,
             (byte) -82))) {
@@ -499,7 +499,7 @@ public final class ProceduralTexture {
                 }
               }
 
-              if (var31 != null && ~var31.length == -3) {
+              if (var31 != null && (var31.length == 3 -1)) {
                 var25 = var31[1];
                 var23 = var31[0];
               }
@@ -559,7 +559,7 @@ public final class ProceduralTexture {
                   WidgetAccess.anInt2208 -= 20;
                 }
 
-                if (~var19 == -3) {
+                if ((var19 == 3 -1)) {
                   WidgetAccess.anInt2208 -= 10;
                   DummyClass34.anInt590 -= 15;
                 }
@@ -616,7 +616,7 @@ public final class ProceduralTexture {
         DummyClass34.anInt590 = TextureSampler35.anIntArray3319[var7];
         WidgetAccess.anInt2208 = TextureSampler35.anIntArray3337[var7] = var19;
         GameString var33 = TextureSampler35.aClass94Array3317[var7];
-        if (~FileCache.anInt688 == -1) {
+        if ((FileCache.anInt688 == 1 -1)) {
           var32 = 16776960;
           if (~TextureSampler35.anIntArray3331[var7] > -7) {
             var32 = WidgetAccess.anIntArray2213[TextureSampler35.anIntArray3331[var7]];
@@ -626,7 +626,7 @@ public final class ProceduralTexture {
             var32 = BitVariable.anInt1127 % 20 >= 10 ? 16776960 : 16711680;
           }
 
-          if (~TextureSampler35.anIntArray3331[var7] == -8) {
+          if ((TextureSampler35.anIntArray3331[var7] == 8 -1)) {
             var32 = ~(BitVariable.anInt1127 % 20) > -11 ? 255 : '\uffff';
           }
 
@@ -692,7 +692,7 @@ public final class ProceduralTexture {
               var0 - -WidgetAccess.anInt2208, var32, 0, BitVariable.anInt1127);
           }
 
-          if (~TextureSampler35.anIntArray3336[var7] == -4) {
+          if ((TextureSampler35.anIntArray3336[var7] == 4 -1)) {
             FloorOverlay.aClass3_Sub28_Sub17_2096.method692(var33, var2 + DummyClass34.anInt590,
               WidgetAccess.anInt2208 + var0, var32, 0, BitVariable.anInt1127,
               150 - TextureSampler35.anIntArray3318[var7]);

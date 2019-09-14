@@ -113,8 +113,8 @@ public abstract class Mobile extends SceneNode {
   }
 
   public final void setPosition(int size, int x, int y, boolean var5) {
-    if (~this.animationId != 0 && ~GameClient.method45(this.animationId,
-        (byte) -20).anInt1850 == -2) {
+    if (~this.animationId != 0 && (GameClient.method45(this.animationId,
+        (byte) -20).anInt1850 == 2 -1)) {
         this.animationId = -1;
       }
 
@@ -175,7 +175,7 @@ public abstract class Mobile extends SceneNode {
         this.aByteArray2795[var6] = this.aByteArray2795[-1 + var6];
       }
 
-      if (~var3 == -2) {
+      if ((var3 == 2 -1)) {
         ++var5;
       }
 
@@ -185,7 +185,7 @@ public abstract class Mobile extends SceneNode {
         ++var4;
       }
 
-      if (~var3 == -4) {
+      if ((var3 == 4 -1)) {
         --var4;
       }
 
@@ -202,7 +202,7 @@ public abstract class Mobile extends SceneNode {
         --var5;
       }
 
-      if (~var3 == -8) {
+      if ((var3 == 8 -1)) {
         --var5;
         ++var4;
       }
@@ -356,7 +356,7 @@ public abstract class Mobile extends SceneNode {
           }
         }
 
-        if (~this.anInt2754 == -1) {
+        if ((this.anInt2754 == 1 -1)) {
           var6 = -this.anInt2787 + this.anInt2827;
           if (-var3.anInt387 < var6 && var3.anInt387 > var6) {
             this.anInt2787 = this.anInt2827;
@@ -454,7 +454,7 @@ public abstract class Mobile extends SceneNode {
           }
         }
 
-        if (~this.anInt2830 == -1) {
+        if ((this.anInt2830 == 1 -1)) {
           var6 = -this.anInt2834 + this.anInt2766;
           if (var6 > (-var3.anInt403) && var3.anInt403 > var6) {
             this.anInt2834 = this.anInt2766;

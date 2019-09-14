@@ -57,7 +57,7 @@ public final class SomethingInScenePacket202 extends Node {
               }
             }
 
-            if (~var14 == -2) {
+            if ((var14 == 2 -1)) {
               if (AbstractGameWorld.aFloat727 == 3.0D) {
                 var16 = DummyClass54.aClass33_1399;
               }
@@ -243,7 +243,7 @@ public final class SomethingInScenePacket202 extends Node {
         if (var4 != null && var4.hasConfiguration((byte) 17)) {
           int var5 = var4.getSize();
           int var6;
-          if (~var5 == -2) {
+          if ((var5 == 2 -1)) {
             if ((127 & var4.anInt2819) == 64 && (127 & var4.anInt2829) == 64) {
               var6 = var4.anInt2819 >> 7;
               var7 = var4.anInt2829 >> 7;
@@ -252,9 +252,9 @@ public final class SomethingInScenePacket202 extends Node {
               }
             }
           } else if (
-            ((1 & var5) != 0 || ~(var4.anInt2819 & 127) == -1 && ~(127 & var4.anInt2829) == -1) && (
-              ((1 & var5) != 2 -1) || ~(var4.anInt2819 & 127) == -65 && ~(127
-                  & var4.anInt2829) == -65)) {
+            ((1 & var5) != 0 || ((var4.anInt2819 & 127) == 1 -1) && ((127 & var4.anInt2829) == 1 -1)) && (
+              ((1 & var5) != 2 -1) || ((var4.anInt2819 & 127) == 65 -1) && ((127
+                  & var4.anInt2829) == 65 -1))) {
             var6 = var4.anInt2819 + -(var5 * 64) >> 7;
             var7 = var4.anInt2829 + -(var5 * 64) >> 7;
             var8 = var4.getSize() + var6;
@@ -304,7 +304,7 @@ public final class SomethingInScenePacket202 extends Node {
                   .requireNonNull(var4.getRenderAnimationId(false)).anInt368;
 
             var7 = var4.getSize();
-            if (~var7 == -2) {
+            if ((var7 == 2 -1)) {
               if ((127 & var4.anInt2819) == 64 && (127 & var4.anInt2829) == 64) {
                 var8 = var4.anInt2819 >> 7;
                 var9 = var4.anInt2829 >> 7;
@@ -318,8 +318,8 @@ public final class SomethingInScenePacket202 extends Node {
                 }
               }
             } else if (
-              ~(1 & var7) == -1 && ~(127 & var4.anInt2819) == -1 && (var4.anInt2829 & 127) == 0
-                || (1 & var7) == 1 && ~(127 & var4.anInt2819) == -65
+              ((1 & var7) == 1 -1) && ((127 & var4.anInt2819) == 1 -1) && (var4.anInt2829 & 127) == 0
+                || (1 & var7) == 1 && ((127 & var4.anInt2819) == 65 -1)
                 && (var4.anInt2829 & 127) == 0) {
               var8 = var4.anInt2819 + -(64 * var7) >> 7;
               var10 = var7 + var8;

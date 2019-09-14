@@ -123,7 +123,7 @@ public final class Mouse implements MouseListener, MouseMotionListener,
             --var1.anInt2261;
           }
 
-          if (~var1.anInt2261 == -1 && var1.anInt2264 >= 1
+          if ((var1.anInt2261 == 1 -1) && var1.anInt2264 >= 1
               && var1.anInt2248 >= 1
               && var1.anInt2264 <= 102 && ~var1.anInt2248 >= -103 && (
               ~var1.anInt2265 > -1

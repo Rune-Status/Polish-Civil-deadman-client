@@ -232,7 +232,7 @@ public final class TextureSampler6 extends AbstractTextureSampler {
 
       for (; DummyClass53.anInt1344 > var1; ++var1) {
         PlayerVariable var2 = Unsure.getPlayerVariable(-109, var1);
-        if (var2 != null && ~var2.anInt556 == -1) {
+        if (var2 != null && (var2.anInt556 == 1 -1)) {
           LightIntensity.variables[var1] = 0;
           DummyClass5.anIntArray2985[var1] = 0;
         }

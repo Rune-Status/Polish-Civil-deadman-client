@@ -57,17 +57,17 @@ public final class TextureSampler37 extends AbstractTextureSampler {
   }
 
   public void parseConfig(int var1, Buffer var2, boolean var3 ) {
-    if (~var1 == -1) {
+    if ((var1 == 1 -1)) {
         this.anInt3265 = var2.readUnsignedShort();
       } else if (var1 == 1) {
         this.anInt3253 = var2.readUnsignedShort();
-      } else if (~var1 == -3) {
+      } else if ((var1 == 3 -1)) {
         this.anInt3258 = var2.readUnsignedShort();
       } else if (var1 != 3) {
         if (var1 == 4) {
           this.anInt3257 = var2.readUnsignedShort();
         } else {
-          if (~var1 == -6) {
+          if ((var1 == 6 -1)) {
             this.anInt3254 = var2.readUnsignedShort();
           } else if (var1 == 6) {
             this.anInt3266 = var2.readUnsignedShort();
@@ -148,9 +148,9 @@ public final class TextureSampler37 extends AbstractTextureSampler {
           }
 
           int var1;
-          if (~DummyCanvas.anInt23 == -3) {
+          if ((DummyCanvas.anInt23 == 3 -1)) {
             assert AreaSoundEffect.socketRequest != null;
-            if (~AreaSoundEffect.socketRequest.status == -3) {
+            if ((AreaSoundEffect.socketRequest.status == 3 -1)) {
               throw new IOException();
             }
 
@@ -206,7 +206,7 @@ public final class TextureSampler37 extends AbstractTextureSampler {
             DummyCanvas.anInt23 = 4;
           }
 
-          if (~DummyCanvas.anInt23 == -5) {
+          if ((DummyCanvas.anInt23 == 5 -1)) {
             if (~SomethingVolume15.gameSocket.available() > ~(8
               * TextureSampler29.aClass94Array3391.length)) {
               return;
@@ -320,7 +320,7 @@ public final class TextureSampler37 extends AbstractTextureSampler {
               npc.anInt2806 =
                 npc.rotationY = DummyClass32.anIntArray510[npc.config.defaultFaceDirection];
               npc.anInt2779 = npc.config.anInt1274;
-              if (~npc.anInt2779 == -1) {
+              if ((npc.anInt2779 == 1 -1)) {
                 npc.rotationY = 0;
               }
 

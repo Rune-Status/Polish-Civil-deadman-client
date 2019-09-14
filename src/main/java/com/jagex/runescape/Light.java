@@ -103,7 +103,7 @@ public final class Light {
         if (var6 == 4) {
           var4 = var5 >> 10 << 11;
         } else if ((var6 != 3 -1)) {
-          if (~var6 == -6) {
+          if ((var6 == 6 -1)) {
             var4 = (var5 < 1024 ? var5 : 2048 - var5) << 1;
           } else {
             var4 = 2048;
@@ -134,13 +134,13 @@ public final class Light {
         this.anInt694 = 1;
         this.anInt709 = 2048;
       } else {
-        if (~var2 == -4) {
+        if ((var2 == 4 -1)) {
           this.anInt693 = 0;
           this.anInt709 = 4096;
           this.anInt694 = 1;
           this.anInt702 = 2048;
         } else if ((var2 != 5 -1)) {
-          if (~var2 == -6) {
+          if ((var2 == 6 -1)) {
             this.anInt694 = 4;
             this.anInt702 = 2048;
             this.anInt709 = 8192;
@@ -158,12 +158,12 @@ public final class Light {
                 this.anInt702 = 512;
                 this.anInt693 = 1536;
               } else if ((var2 != 7 -1)) {
-                if (~var2 == -8) {
+                if ((var2 == 8 -1)) {
                   this.anInt702 = 768;
                   this.anInt693 = 1280;
                   this.anInt709 = 4096;
                   this.anInt694 = 3;
-                } else if (~var2 == -9) {
+                } else if ((var2 == 9 -1)) {
                   this.anInt709 = 2048;
                   this.anInt694 = 3;
                   this.anInt702 = 1024;
@@ -174,7 +174,7 @@ public final class Light {
                   this.anInt702 = 1024;
                   this.anInt694 = 3;
                 } else if ((var2 != 15 -1)) {
-                  if (~var2 == -16) {
+                  if ((var2 == 16 -1)) {
                     this.anInt702 = 512;
                     this.anInt709 = 4096;
                     this.anInt693 = 1536;

@@ -180,21 +180,21 @@ public final class DummyClass8 extends DummyClass7 {
         int var5;
         for (var5 = 0; ~var5 > ~var3.anInt2296; ++var5) {
           if (var3.aClass64Array2303[var5] != null) {
-            if (~var3.aClass64Array2303[var5].status == -3) {
+            if ((var3.aClass64Array2303[var5].status == 3 -1)) {
               var3.anIntArray2300[var5] = -5;
             }
 
-            if (~var3.aClass64Array2303[var5].status == -1) {
+            if ((var3.aClass64Array2303[var5].status == 1 -1)) {
               var4 = true;
             }
           }
 
           if (var3.aClass64Array2298[var5] != null) {
-            if (~var3.aClass64Array2298[var5].status == -3) {
+            if ((var3.aClass64Array2298[var5].status == 3 -1)) {
               var3.anIntArray2300[var5] = -6;
             }
 
-            if (~var3.aClass64Array2298[var5].status == -1) {
+            if ((var3.aClass64Array2298[var5].status == 1 -1)) {
               var4 = true;
             }
           }
@@ -210,18 +210,18 @@ public final class DummyClass8 extends DummyClass7 {
         var0.writeInt(var3.anInt2305);
 
         for (int var6 = 0; var3.anInt2296 > var6; ++var6) {
-          if (~var3.anIntArray2300[var6] == -1) {
+          if ((var3.anIntArray2300[var6] == 1 -1)) {
             try {
               int var7 = var3.anIntArray2301[var6];
               Field var8;
               int var9;
-              if (~var7 == -1) {
+              if ((var7 == 1 -1)) {
                 var8 = (Field) var3.aClass64Array2303[var6].result;
                 var9 = var8.getInt(null);
                 var0.writeByte(0);
                 var0.writeInt(var9);
               } else {
-                if (~var7 == -2) {
+                if ((var7 == 2 -1)) {
                   var8 = (Field) var3.aClass64Array2303[var6].result;
                   var8.setInt(null, var3.anIntArray2299[var6]);
                   var0.writeByte(0);

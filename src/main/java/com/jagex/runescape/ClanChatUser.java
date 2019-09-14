@@ -51,7 +51,7 @@ public final class ClanChatUser extends Node {
           var7 = 4 * 512 * (var3 + 103 + -var6) + 24628;
 
           for (var8 = 1 + var2; ~var8 > ~(-var2 + 104 + -1); ++var8) {
-            if (~(BZipDecompressorState.tileFlags[var1][var8][var6] & 24) == -1) {
+            if (((BZipDecompressorState.tileFlags[var1][var8][var6] & 24) == 1 -1)) {
               SocketStream.method1469(var4, var7, 512, var1, var8, var6);
             }
 
@@ -102,7 +102,7 @@ public final class ClanChatUser extends Node {
                   for (int var15 = 0; ~var15 > -11; ++var15) {
                     int var16 = (int) (Math.random() * 4.0D);
                     if (var16 == 0 && var12 > 0 && ~(var6 - 3) > ~var12
-                      && ~(var14[var12 - 1][var21] & 19661064) == -1) {
+                      && ((var14[var12 - 1][var21] & 19661064) == 1 -1)) {
                       --var12;
                     }
 

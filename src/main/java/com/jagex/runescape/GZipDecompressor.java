@@ -256,7 +256,7 @@ public final class GZipDecompressor {
         }
 
         TextureSampler20.method229(var1, 20827);
-        if (~ClientScriptCall.anInt2440 == -2) {
+        if ((ClientScriptCall.anInt2440 == 2 -1)) {
           ClientScriptCall.anInt2440 = 2;
         }
 
@@ -264,7 +264,7 @@ public final class GZipDecompressor {
           GameObjectConfig.anInt1521 = 2;
         }
 
-        if (~ClientScript.rectangleDebugType == -4) {
+        if ((ClientScript.rectangleDebugType == 4 -1)) {
           for (int var2 = 0; ~var2 > ~SomethingWorldMapy.widgetQuads; ++var2) {
             if (!HashTable.aBooleanArray1712[var2]) {
               if (DummyClass9.aBooleanArray4008[var2]) {

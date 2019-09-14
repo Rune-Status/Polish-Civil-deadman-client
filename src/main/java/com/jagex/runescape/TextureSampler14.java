@@ -68,7 +68,7 @@ public final class TextureSampler14 extends AbstractTextureSampler {
         TextureSampler14.anInt3389 = 99;
       }
 
-      if (~var1 == -1) {
+      if ((var1 == 1 -1)) {
         this.anInt3385 = var2.readUnsignedShort();
       }
   }

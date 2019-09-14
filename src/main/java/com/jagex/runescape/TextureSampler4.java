@@ -147,7 +147,7 @@ public final class TextureSampler4 extends AbstractTextureSampler {
     if (var1 == 0) {
         this.anInt3242 = var2.readUnsignedByte();
       } else {
-        if (~var1 == -2) {
+        if ((var1 == 2 -1)) {
           this.anInt3233 = var2.readUnsignedByte();
         } else if ((var1 != 3 -1)) {
           if (var1 == 3) {
@@ -156,10 +156,10 @@ public final class TextureSampler4 extends AbstractTextureSampler {
             if (var1 == 4) {
               this.anInt3234 = var2.readUnsignedShort();
             } else {
-              if (~var1 == -6) {
+              if ((var1 == 6 -1)) {
                 this.anInt3231 = var2.readUnsignedShort();
               } else {
-                if (~var1 == -7) {
+                if ((var1 == 7 -1)) {
                   this.anInt3224 = var2.readUnsignedShort();
                 } else {
                   if (var1 == 7) {

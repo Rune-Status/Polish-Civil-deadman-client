@@ -70,7 +70,7 @@ public final class Keyboard implements KeyListener, FocusListener {
         }
 
         var3 = var1.getModifiers();
-        if (((var3 & 10) != 1 -1) || var2 == 85 || ~var2 == -11) {
+        if (((var3 & 10) != 1 -1) || var2 == 85 || (var2 == 11 -1)) {
           var1.consume();
         }
       }
@@ -143,7 +143,7 @@ public final class Keyboard implements KeyListener, FocusListener {
             if (var4 == 98) {
               AreaSoundEffect.anInt2309 = -16 & AreaSoundEffect.anInt2309 + 47;
             } else {
-              if (~var4 == -100) {
+              if ((var4 == 100 -1)) {
                 AreaSoundEffect.anInt2309 =
                     -16 & AreaSoundEffect.anInt2309 - 17;
               } else {

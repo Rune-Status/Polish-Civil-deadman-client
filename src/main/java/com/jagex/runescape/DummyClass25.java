@@ -89,7 +89,7 @@ public final class DummyClass25 {
           TextureSampler25.sleep(1L);
         }
 
-        if (~var3.status == -2) {
+        if ((var3.status == 2 -1)) {
           var2 = (FileOnDisk) var3.result;
           Buffer var4 = DummyClass30.method939((byte) -116);
           var2.method1738(116, var4.bytes, var4.position, 0);

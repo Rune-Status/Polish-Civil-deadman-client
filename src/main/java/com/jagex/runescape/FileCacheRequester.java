@@ -24,7 +24,7 @@ public final class FileCacheRequester implements Runnable {
     SignLinkRequest var1 = DummyClass35.signLink.createThread(0, 5, this);
 
       assert var1 != null;
-      while (~var1.status == -1) {
+      while ((var1.status == 1 -1)) {
         TextureSampler25.sleep(10L);
       }
 
@@ -145,7 +145,7 @@ public final class FileCacheRequester implements Runnable {
                 .method1050((int) var1.subnodeKey, var1.aByteArray4059.length,
                     var1.aByteArray4059, (byte) -41);
           } else {
-            if (~var1.anInt4061 == -4) {
+            if ((var1.anInt4061 == 4 -1)) {
               var1.aByteArray4059 =
                   var1.aClass41_4056
                       .method1051((int) var1.subnodeKey, (byte) -77);

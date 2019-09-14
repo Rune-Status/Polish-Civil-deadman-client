@@ -47,7 +47,7 @@ public final class TextureSampler30 extends AbstractTextureSampler {
       } else {
         if (var1 == 1) {
           this.anInt3127 = var2.readUnsignedShort();
-        } else if (~var1 == -3) {
+        } else if ((var1 == 3 -1)) {
           this.monoChromatic = var2.readUnsignedByte() == 1;
         }
       }
@@ -293,7 +293,7 @@ public final class TextureSampler30 extends AbstractTextureSampler {
     for (int var2 = 0; LightIntensity.anInt906 > var2; ++var2) {
         int var3 = var0.readUnsignedShortSmart();
         int var4 = var0.readUnsignedShort();
-        if (~var4 == -65536) {
+        if ((var4 == 65536 -1)) {
           var4 = -1;
         }
 

@@ -74,7 +74,7 @@ public final class MonoChromaticImageBuffer extends Node {
         MonoChromaticImageBuffer.method513(-92, 76);
       }
 
-      return ~var0 == -1 ? var1 : (var0 == 1
+      return (var0 == 1 -1) ? var1 : (var0 == 1
           ? var3 : (var0 != 2 ? -var3 + 1023 : 1023 + -var1));
   }
 

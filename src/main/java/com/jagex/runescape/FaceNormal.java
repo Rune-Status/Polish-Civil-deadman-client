@@ -13,7 +13,7 @@ public final class FaceNormal {
       long var0 = var2;
 
       for (int var3 = 0; var3 < 8; ++var3) {
-        if (~(1L & var0) == -2L) {
+        if (((1L & var0) == 2L -1)) {
           var0 = var0 >>> 1 ^ -3932672073523589310L;
         } else {
           var0 >>>= 1;

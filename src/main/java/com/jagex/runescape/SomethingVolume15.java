@@ -158,7 +158,7 @@ public final class SomethingVolume15 extends Node {
 
       int var23;
       for (var23 = 0; ~var23 > -129; ++var23) {
-        if (~var20 == -1) {
+        if ((var20 == 1 -1)) {
           if (var18.length > var21) {
             var20 = var18[var21++];
           } else {
@@ -242,7 +242,7 @@ public final class SomethingVolume15 extends Node {
 
       int var27;
       for (var27 = 0; ~var27 > -129; ++var27) {
-        if (~var20 == -1) {
+        if ((var20 == 1 -1)) {
           if (~var21 > ~var18.length) {
             var20 = var18[var21++];
           } else {
@@ -552,7 +552,7 @@ public final class SomethingVolume15 extends Node {
 
         while (true) {
           int var10 = var6.readUnsignedShortSmart();
-          if (~var10 == -1) {
+          if ((var10 == 1 -1)) {
             break;
           }
 
@@ -569,7 +569,7 @@ public final class SomethingVolume15 extends Node {
             CollisionMap var19 = null;
             if (!var1) {
               int var20 = var13;
-              if (~(2 & BZipDecompressorState.tileFlags[1][var17][var18]) == -3) {
+              if (((2 & BZipDecompressorState.tileFlags[1][var17][var18]) == 3 -1)) {
                 var20 = var13 - 1;
               }
 

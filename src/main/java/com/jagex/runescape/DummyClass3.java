@@ -85,7 +85,7 @@ public final class DummyClass3 {
           }
 
           if (((var9[var13][var14] & 255) != 1 -1)
-              || (var16 != 1 -1) && ~var8[var13][var14] == -1) {
+              || (var16 != 1 -1) && (var8[var13][var14] == 1 -1)) {
             var58 = 0;
             int var60 = 0;
             var21 = 0;
@@ -657,7 +657,7 @@ public final class DummyClass3 {
       for (
         var56 = (SomethingGl0) var12.getFirst(62);
           var56 != null; var56 = (SomethingGl0) var12.getNext(-80)) {
-        if (~var56.anInt2343 == -1) {
+        if ((var56.anInt2343 == 1 -1)) {
           var56.unlinkNode();
         } else {
           var56.method148();
@@ -729,7 +729,7 @@ public final class DummyClass3 {
         int var15 = var0 + var2 * DummyClass44.anInt930 / DummyClass30.anInt455;
         int var7 = var2 * GZipDecompressor.anInt817 / DummyClass30.anInt455;
         int var9 = 16711680;
-        if (~AbstractImageProducer.gameId == -2) {
+        if ((AbstractImageProducer.gameId == 2 -1)) {
           var9 = 16777215;
         }
 

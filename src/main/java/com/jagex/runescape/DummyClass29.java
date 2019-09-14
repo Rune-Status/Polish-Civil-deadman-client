@@ -88,7 +88,7 @@ public final class DummyClass29 {
       if (var4 == 0) {
         var7 = SomethingAudio.method2174(var3, var2, var1);
       } else if (var4 != 1) {
-        if (~var4 == -3) {
+        if ((var4 == 3 -1)) {
           var7 = AnimationSomething.method557(var3, var2, var1);
         } else if (var4 == 3) {
           var7 = SceneGraphTile.method104(var3, var2, var1);
@@ -135,7 +135,7 @@ public final class DummyClass29 {
                 var6.method1502(20851, var2, var12.anInt1480, var12.aBoolean1486, var18,
                   var12.anInt1485, var1);
               }
-            } else if (~var4 == -4) {
+            } else if ((var4 == 4 -1)) {
               SomethingSceneJ var22 = DummyClass13.method2193(var3, var2, var1);
               if (var22 != null) {
                 var13 = var22.aClass140_320;
@@ -173,7 +173,7 @@ public final class DummyClass29 {
               }
             } else {
               if (var19 != 5) {
-                if (~var19 == -7) {
+                if ((var19 == 7 -1)) {
                   if (var13 instanceof GameObject) {
                     ((GameObject) var13).method1960(-1);
                   } else {
@@ -184,7 +184,7 @@ public final class DummyClass29 {
                         var2, var1,
                         var5);
                   }
-                } else if (~var19 == -8) {
+                } else if ((var19 == 8 -1)) {
                   if (var13 instanceof GameObject) {
                     ((GameObject) var13).method1960(-1);
                   } else {

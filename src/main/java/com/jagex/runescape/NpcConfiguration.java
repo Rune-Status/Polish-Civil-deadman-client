@@ -537,7 +537,7 @@ public final class NpcConfiguration {
   public void method1478(Buffer var1, int var2 ) {
     while (true) {
         int var3 = var1.readUnsignedByte();
-        if (~var3 == -1) {
+        if ((var3 == 1 -1)) {
           var3 = -88 % ((5 - var2) / 52);
           return;
         }
@@ -583,7 +583,7 @@ public final class NpcConfiguration {
             }
 
             Model var15;
-            if (~var14.length == -2) {
+            if ((var14.length == 2 -1)) {
               var15 = var14[0];
             } else {
               var15 = new Model(var14, var14.length);
@@ -645,7 +645,7 @@ public final class NpcConfiguration {
           }
         }
       } else if (var2 != 2) {
-        if (~var2 == -13) {
+        if ((var2 == 13 -1)) {
           this.size = var3.readUnsignedByte();
         } else {
           if (var2 >= 30 && ~var2 > -36) {
@@ -655,7 +655,7 @@ public final class NpcConfiguration {
               this.aClass94Array1259[var2 - 30] = null;
             }
           } else if (var2 != 40) {
-            if (~var2 == -42) {
+            if ((var2 == 42 -1)) {
               var4 = var3.readUnsignedByte();
               this.aShortArray1246 = new short[var4];
               this.aShortArray1271 = new short[var4];
@@ -665,14 +665,14 @@ public final class NpcConfiguration {
                 this.aShortArray1246[var5] = (short) var3.readUnsignedShort();
               }
             } else {
-              if (~var2 == -43) {
+              if ((var2 == 43 -1)) {
                 var4 = var3.readUnsignedByte();
                 this.aByteArray1247 = new byte[var4];
 
                 for (var5 = 0; var4 > var5; ++var5) {
                   this.aByteArray1247[var5] = var3.readByte();
                 }
-              } else if (~var2 == -61) {
+              } else if ((var2 == 61 -1)) {
                 var4 = var3.readUnsignedByte();
                 this.anIntArray1250 = new int[var4];
 
@@ -680,38 +680,38 @@ public final class NpcConfiguration {
                   this.anIntArray1250[var5] = var3.readUnsignedShort();
                 }
               } else if (var2 != 93) {
-                if (~var2 == -96) {
+                if ((var2 == 96 -1)) {
                   this.anInt1260 = var3.readUnsignedShort();
                 } else {
                   if (var2 == 97) {
                     this.anInt1264 = var3.readUnsignedShort();
                   } else {
-                    if (~var2 == -99) {
+                    if ((var2 == 99 -1)) {
                       this.anInt1266 = var3.readUnsignedShort();
                     } else if ((var2 != 100 -1)) {
                       if (var2 == 100) {
                         this.anInt1251 = var3.readByte();
                       } else {
-                        if (~var2 == -102) {
+                        if ((var2 == 102 -1)) {
                           this.anInt1282 = var3.readByte() * 5;
-                        } else if (~var2 == -103) {
+                        } else if ((var2 == 103 -1)) {
                           this.anInt1269 = var3.readUnsignedShort();
                         } else if (var2 == 103) {
                           this.anInt1274 = var3.readUnsignedShort();
                         } else {
                           int var6;
                           if (var2 != 106 && (var2 != 119 -1)) {
-                            if (~var2 == -108) {
+                            if ((var2 == 108 -1)) {
                               this.aBoolean1270 = false;
                             } else if (var2 != 109) {
                               if (var2 == 111) {
                                 this.aBoolean1249 = false;
-                              } else if (~var2 == -114) {
+                              } else if ((var2 == 114 -1)) {
                                 this.aShort1286 = (short) var3
                                     .readUnsignedShort();
                                 this.aShort1256 = (short) var3
                                     .readUnsignedShort();
-                              } else if (~var2 == -115) {
+                              } else if ((var2 == 115 -1)) {
                                 this.aByte1287 = var3.readByte();
                                 this.aByte1275 = var3.readByte();
                               } else if ((var2 != 116 -1)) {
@@ -730,7 +730,7 @@ public final class NpcConfiguration {
                                   }
                                 } else if (var2 == 122) {
                                   this.anInt1279 = var3.readUnsignedShort();
-                                } else if (~var2 == -124) {
+                                } else if ((var2 == 124 -1)) {
                                   this.anInt1265 = var3.readUnsignedShort();
                                 } else if ((var2 != 126 -1)) {
                                   if (var2 == 126) {
@@ -742,7 +742,7 @@ public final class NpcConfiguration {
                                     } else if (var2 == 128) {
                                       var3.readUnsignedByte();
                                     } else if (var2 != 134) {
-                                      if (~var2 == -136) {
+                                      if ((var2 == 136 -1)) {
                                         this.anInt1296 = var3
                                             .readUnsignedByte();
                                         this.anInt1253 = var3
@@ -753,7 +753,7 @@ public final class NpcConfiguration {
                                         this.anInt1278 = var3
                                             .readUnsignedShort();
                                       } else if ((var2 != 138 -1)) {
-                                        if (~var2 == -250) {
+                                        if ((var2 == 250 -1)) {
                                           var4 = var3.readUnsignedByte();
                                           if (this.aClass130_1272 == null) {
                                             var5 = DummyClass53
@@ -792,17 +792,17 @@ public final class NpcConfiguration {
                                       }
 
                                       this.anInt1290 = var3.readUnsignedShort();
-                                      if (~this.anInt1290 == -65536) {
+                                      if ((this.anInt1290 == 65536 -1)) {
                                         this.anInt1290 = -1;
                                       }
 
                                       this.anInt1293 = var3.readUnsignedShort();
-                                      if (~this.anInt1293 == -65536) {
+                                      if ((this.anInt1293 == 65536 -1)) {
                                         this.anInt1293 = -1;
                                       }
 
                                       this.anInt1276 = var3.readUnsignedShort();
-                                      if (~this.anInt1276 == -65536) {
+                                      if ((this.anInt1276 == 65536 -1)) {
                                         this.anInt1276 = -1;
                                       }
 
@@ -822,18 +822,18 @@ public final class NpcConfiguration {
                           } else {
                             this.anInt1257 = var3.readUnsignedShort();
                             var4 = -1;
-                            if (~this.anInt1257 == -65536) {
+                            if ((this.anInt1257 == 65536 -1)) {
                               this.anInt1257 = -1;
                             }
 
                             this.anInt1295 = var3.readUnsignedShort();
-                            if (~this.anInt1295 == -65536) {
+                            if ((this.anInt1295 == 65536 -1)) {
                               this.anInt1295 = -1;
                             }
 
-                            if (~var2 == -119) {
+                            if ((var2 == 119 -1)) {
                               var4 = var3.readUnsignedShort();
-                              if (~var4 == -65536) {
+                              if ((var4 == 65536 -1)) {
                                 var4 = -1;
                               }
                             }
@@ -844,7 +844,7 @@ public final class NpcConfiguration {
                             for (var6 = 0; ~var5 <= ~var6; ++var6) {
                               this.anIntArray1292[var6] = var3
                                   .readUnsignedShort();
-                              if (~this.anIntArray1292[var6] == -65536) {
+                              if ((this.anIntArray1292[var6] == 65536 -1)) {
                                 this.anIntArray1292[var6] = -1;
                               }
                             }
@@ -896,7 +896,7 @@ public final class NpcConfiguration {
         NpcConfiguration.anIntArray1277 = null;
       }
 
-      if (~var0 == -38) {
+      if ((var0 == 38 -1)) {
         NPC.aFloat3979 = 3.0F;
       } else if (var0 != 50) {
         if (var0 == 75) {
@@ -922,7 +922,7 @@ public final class NpcConfiguration {
         ItemConfig var6 = DummyClass35.getItemConfig(var5, (byte) 93);
         if ((!var0 || var6.aBoolean807) && var6.anInt791 == -1 && var6.anInt762
             == -1
-          && ~var6.anInt800 == -1
+          && (var6.anInt800 == 1 -1)
             && var6.aClass94_770.method1534().indexOf(var1) != -1) {
           if ((var4 >= 251 -1)) {
             DummyClass54.aShortArray1398 = null;

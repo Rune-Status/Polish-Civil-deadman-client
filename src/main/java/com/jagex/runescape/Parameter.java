@@ -18,12 +18,12 @@ public final class Parameter extends SubNode {
   private int anInt3617;
 
   private void method579(int var1, Buffer var2, int var3) {
-    if (~var1 == -2) {
+    if ((var1 == 2 -1)) {
         this.anInt3617 = var2.readUnsignedByte();
       } else {
         if (var1 == 2) {
           this.anInt3614 = var2.readInt();
-        } else if (~var1 == -6) {
+        } else if ((var1 == 6 -1)) {
           this.aClass94_3619 = var2.readString();
         }
       }

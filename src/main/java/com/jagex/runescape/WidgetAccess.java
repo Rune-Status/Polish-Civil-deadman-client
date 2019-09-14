@@ -106,7 +106,7 @@ public final class WidgetAccess extends Node {
                   if (var6.aClass12_2230 != null
                     && var6.aClass12_2230.aClass140_320 instanceof GlModel) {
                     var7 = (GlModel) var6.aClass12_2230.aClass140_320;
-                    if (~(var6.aClass12_2230.aLong328 & Long.MIN_VALUE) == -1L) {
+                    if (((var6.aClass12_2230.aLong328 & Long.MIN_VALUE) == 1L -1)) {
                       var7.method1920(false, true, true, true, false, true, true);
                     } else {
                       var7.method1920(true, true, true, true, true, true, true);
@@ -125,8 +125,8 @@ public final class WidgetAccess extends Node {
 
                     if (var6.aClass19_2233.aClass140_423 instanceof GlModel) {
                       var7 = (GlModel) var6.aClass19_2233.aClass140_423;
-                      if (~(Long.MIN_VALUE
-                          & var6.aClass19_2233.aLong428) == -1L) {
+                      if (((Long.MIN_VALUE
+                          & var6.aClass19_2233.aLong428) == 1L -1)) {
                         var7.method1920(false, true, true, true, false, true,
                             true);
                       } else {
@@ -139,7 +139,7 @@ public final class WidgetAccess extends Node {
                   if (var6.aClass70_2234 != null) {
                     if (var6.aClass70_2234.sceneNode0 instanceof GlModel) {
                       var7 = (GlModel) var6.aClass70_2234.sceneNode0;
-                      if (~(var6.aClass70_2234.key & Long.MIN_VALUE) == -1L) {
+                      if (((var6.aClass70_2234.key & Long.MIN_VALUE) == 1L -1)) {
                         var7.method1920(false, true, true, true, false, true,
                             true);
                       } else {
@@ -150,7 +150,7 @@ public final class WidgetAccess extends Node {
 
                     if (var6.aClass70_2234.sceneNode1 instanceof GlModel) {
                       var7 = (GlModel) var6.aClass70_2234.sceneNode1;
-                      if (~(Long.MIN_VALUE & var6.aClass70_2234.key) == -1L) {
+                      if (((Long.MIN_VALUE & var6.aClass70_2234.key) == 1L -1)) {
                         var7.method1920(false, true, true, true, false, true,
                             true);
                       } else {
@@ -163,8 +163,8 @@ public final class WidgetAccess extends Node {
                   for (int var10 = 0; ~var10 > ~var6.anInt2223; ++var10) {
                     if (var6.sceneGraphNodes[var10].sceneNode instanceof GlModel) {
                       GlModel var8 = (GlModel) var6.sceneGraphNodes[var10].sceneNode;
-                      if (~(Long.MIN_VALUE
-                          & var6.sceneGraphNodes[var10].aLong498) == -1L) {
+                      if (((Long.MIN_VALUE
+                          & var6.sceneGraphNodes[var10].aLong498) == 1L -1)) {
                         var8.method1920(false, true, true, true, false, true, true);
                       } else {
                         var8.method1920(true, true, true, true, true, true, true);

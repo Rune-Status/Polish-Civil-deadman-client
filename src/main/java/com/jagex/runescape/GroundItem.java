@@ -66,9 +66,9 @@ public final class GroundItem extends SceneNode {
       if (~var6
         == ~AbstractImageProducer.aByteArrayArrayArray2008[GameWorldSomething.currentPlane][var2][var3]) {
         return false;
-      } else if (~(
+      } else if (((
           BZipDecompressorState.tileFlags[GameWorldSomething.currentPlane][var2][var3]
-              & 4) == -1) {
+              & 4) == 1 -1)) {
         return false;
       } else {
         int var8 = 0;
@@ -102,8 +102,7 @@ public final class GroundItem extends SceneNode {
           int var16;
           label257:
           for (var16 = 1 + GameWorldSomething.currentPlane; var16 <= 3; ++var16) {
-            if (~(BZipDecompressorState.tileFlags[var16][var9][var12] & 8)
-                == -1) {
+            if (((BZipDecompressorState.tileFlags[var16][var9][var12] & 8) == 1 -1)) {
               int var18;
               int var20;
               if (var14 && var4[var16][var9][var12] != null) {
@@ -135,7 +134,7 @@ public final class GroundItem extends SceneNode {
                   for (var17 = 0; var4[var16][var9][var12].anInt2223 > var17; ++var17) {
                     var18 =
                       (int) (63L & var4[var16][var9][var12].sceneGraphNodes[var17].aLong498 >> 14);
-                    if (~var18 == -22) {
+                    if ((var18 == 22 -1)) {
                       var18 = 19;
                     }
 
@@ -210,10 +209,9 @@ public final class GroundItem extends SceneNode {
               if (((var9 + -1) >= 1 -1) && ~var6
                 != ~AbstractImageProducer.aByteArrayArrayArray2008[GameWorldSomething.currentPlane][
                 -1 + var9][var12] &&
-                ~(BZipDecompressorState.tileFlags[GameWorldSomething.currentPlane][var9][var12] & 4)
-                  == -1 &&
-                ~(BZipDecompressorState.tileFlags[GameWorldSomething.currentPlane][-1 + var9][var12
-                  + -1] & 4) == -1) {
+                ((BZipDecompressorState.tileFlags[GameWorldSomething.currentPlane][var9][var12] & 4) == 1 -1) &&
+                ((BZipDecompressorState.tileFlags[GameWorldSomething.currentPlane][-1 + var9][var12
+                  + -1] & 4) == 1 -1)) {
                 TextureSampler38.anIntArray3456[var23] = TextureSampler3.method308(1375731712,
                   TextureSampler3.method308(1179648, -1 + var9));
                 DummyClass38.anIntArray729[var23] = TextureSampler3.method308(var12, 1245184);
@@ -238,8 +236,8 @@ public final class GroundItem extends SceneNode {
                   BZipDecompressorState.tileFlags[GameWorldSomething.currentPlane][var9][var12]
                       & 4) == 0
                 &&
-                ~(BZipDecompressorState.tileFlags[GameWorldSomething.currentPlane][1 + var9][var12
-                  - 1] & 4) == -1) {
+                ((BZipDecompressorState.tileFlags[GameWorldSomething.currentPlane][1 + var9][var12
+                  - 1] & 4) == 1 -1)) {
                 TextureSampler38.anIntArray3456[var23] = TextureSampler3.method308(-1845493760,
                   TextureSampler3.method308(5373952, var9 + 1));
                 DummyClass38.anIntArray729[var23] = TextureSampler3.method308(5439488, var12);
@@ -266,10 +264,9 @@ public final class GroundItem extends SceneNode {
               if (var9 + -1 >= 0 &&
                 AbstractImageProducer.aByteArrayArrayArray2008[GameWorldSomething.currentPlane][-1
                   + var9][var12] != var6 &&
-                ~(BZipDecompressorState.tileFlags[GameWorldSomething.currentPlane][var9][var12] & 4)
-                  == -1 &&
-                ~(BZipDecompressorState.tileFlags[GameWorldSomething.currentPlane][var9 + -1][1
-                  + var12] & 4) == -1) {
+                ((BZipDecompressorState.tileFlags[GameWorldSomething.currentPlane][var9][var12] & 4) == 1 -1) &&
+                ((BZipDecompressorState.tileFlags[GameWorldSomething.currentPlane][var9 + -1][1
+                  + var12] & 4) == 1 -1)) {
                 TextureSampler38.anIntArray3456[var23] =
                   TextureSampler3.method308(TextureSampler3.method308(-1 + var9, 13762560),
                     301989888);
@@ -292,10 +289,9 @@ public final class GroundItem extends SceneNode {
               if (~(var9 - -1) > -105 &&
                 AbstractImageProducer.aByteArrayArrayArray2008[GameWorldSomething.currentPlane][var9
                   + 1][var12] != var6 &&
-                ~(4 & BZipDecompressorState.tileFlags[GameWorldSomething.currentPlane][var9][var12])
-                  == -1 &&
-                ~(BZipDecompressorState.tileFlags[GameWorldSomething.currentPlane][1 + var9][1
-                  + var12] & 4) == -1) {
+                ((4 & BZipDecompressorState.tileFlags[GameWorldSomething.currentPlane][var9][var12]) == 1 -1) &&
+                ((BZipDecompressorState.tileFlags[GameWorldSomething.currentPlane][1 + var9][1
+                  + var12] & 4) == 1 -1)) {
                 TextureSampler38.anIntArray3456[var23] = TextureSampler3.method308(-771751936,
                   TextureSampler3.method308(var9 - -1, 9568256));
                 DummyClass38.anIntArray729[var23] = TextureSampler3.method308(9633792, var12);

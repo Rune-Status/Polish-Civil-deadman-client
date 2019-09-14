@@ -218,7 +218,7 @@ public final class FileTable {
       }
 
       if (LinearHashTable.aBoolean1040 && (GameClient.method44(var0).anInt2205 != 0
-        || ~var0.anInt187 == -1)) {
+        || (var0.anInt187 == 1 -1))) {
         if (~var0.anInt210 > -1) {
           var0.anInt210 = 0;
         } else if (var0.anInt193 + var0.anInt210 > var2) {

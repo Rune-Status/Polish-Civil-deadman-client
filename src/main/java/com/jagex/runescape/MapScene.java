@@ -21,7 +21,7 @@ public final class MapScene {
   public void method74(byte var1, Buffer var2, int var3 ) {
     while (true) {
         int var4 = var2.readUnsignedByte();
-        if (~var4 == -1) {
+        if ((var4 == 1 -1)) {
           if (var1 > -108) {
             this.method74((byte) 85, null, 63);
           }
@@ -65,7 +65,7 @@ public final class MapScene {
     if (var1 == 1) {
         this.spriteId = var2.readUnsignedShort();
       } else if (var1 != 2) {
-        if (~var1 == -4) {
+        if ((var1 == 4 -1)) {
           this.aBoolean69 = true;
         } else {
           if (var1 == 4) {
@@ -90,10 +90,10 @@ public final class MapScene {
             MapScene.anInt59 = 1;
           }
 
-          return var0 == 25 || ~var0 == -24 || var0 == 48 || var0 == 7
-              || ~var0 == -14 || (var0 == 8 || var0 == 32 || ~var0 == -29
-              || ~var0 == -60 || ~var0 == -52
-              || ~var0 == -42);
+          return var0 == 25 || (var0 == 24 -1) || var0 == 48 || var0 == 7
+              || (var0 == 14 -1) || (var0 == 8 || var0 == 32 || (var0 == 29 -1)
+              || (var0 == 60 -1) || (var0 == 52 -1)
+              || (var0 == 42 -1));
         } else {
           return true;
         }
@@ -121,14 +121,14 @@ public final class MapScene {
             }
 
             ClientScriptCall var7;
-            if (~var2 == -1 && var4.anObjectArray206 != null) {
+            if ((var2 == 1 -1) && var4.anObjectArray206 != null) {
               var7 = new ClientScriptCall();
               var7.arguments = var4.anObjectArray206;
               var7.aClass11_2449 = var4;
               Light.executeScript(var7);
             }
 
-            if (~var2 == -2 && var4.anObjectArray176 != null) {
+            if ((var2 == 2 -1) && var4.anObjectArray176 != null) {
               if ((var4.anInt191 >= 1 -1)) {
                 Widget var8 = EnumStringFetcher.getWidget((byte) 121, var4.anInt279);
                 if (var8 == null || var8.aClass11Array262 == null
@@ -184,7 +184,7 @@ public final class MapScene {
         }
 
         if ((var1 != 1 -1)) {
-          if ((var1 < 5 || ~var1 == -11)
+          if ((var1 < 5 || (var1 == 11 -1))
             && BlockConfig.collisionMaps[GameWorldSomething.currentPlane].method1488(var4, var12,
             false, var13, var8, -1 + var1, 2, var7)) {
             var16 = true;
@@ -206,10 +206,10 @@ public final class MapScene {
         }
 
         var18 = TriChromaticImageCache.anIntArrayArray1373[var12][var13] - -1;
-        if (var12 > 0 && ~DummyClass51.anIntArrayArray1160[var12 + -1][var13] == -1 &&
+        if (var12 > 0 && (DummyClass51.anIntArrayArray1160[var12 + -1][var13] == 1 -1) &&
             (
                 var17[-1 + var12][var13] & 19661070) == 0
-          && ~(var17[-1 + var12][var13 + 1] & 19661112) == -1) {
+          && ((var17[-1 + var12][var13 + 1] & 19661112) == 1 -1)) {
           TextureSampler38.anIntArray3456[var27] = var12 + -1;
           DummyClass38.anIntArray729[var27] = var13;
           var27 = 1 + var27 & 4095;
@@ -218,7 +218,7 @@ public final class MapScene {
         }
 
         if (var12 < 102
-            && ~DummyClass51.anIntArrayArray1160[1 + var12][var13] == -1 &&
+            && (DummyClass51.anIntArrayArray1160[1 + var12][var13] == 1 -1) &&
             (
                 var17[2 + var12][var13] & 19661187) == 0 &&
             (var17[var12 + 2][1 + var13] & 19661280) == 0) {
@@ -229,9 +229,9 @@ public final class MapScene {
           TriChromaticImageCache.anIntArrayArray1373[var12 - -1][var13] = var18;
         }
 
-        if (var13 > 0 && ~DummyClass51.anIntArrayArray1160[var12][var13 + -1] == -1
+        if (var13 > 0 && (DummyClass51.anIntArrayArray1160[var12][var13 + -1] == 1 -1)
           && (19661070 & var17[var12][-1 + var13]) == 0
-          && ~(var17[var12 + 1][var13 - 1] & 19661187) == -1) {
+          && ((var17[var12 + 1][var13 - 1] & 19661187) == 1 -1)) {
           TextureSampler38.anIntArray3456[var27] = var12;
           DummyClass38.anIntArray729[var27] = -1 + var13;
           DummyClass51.anIntArrayArray1160[var12][-1 + var13] = 1;
@@ -239,10 +239,10 @@ public final class MapScene {
           var27 = 4095 & 1 + var27;
         }
 
-        if (~var13 > -103 && ~DummyClass51.anIntArrayArray1160[var12][var13 + 1] == -1
-          && ~(var17[var12][2 + var13] & 19661112) == -1 &&
-            ~(var17[1 + var12][var13 + 2]
-                & 19661280) == -1) {
+        if (~var13 > -103 && (DummyClass51.anIntArrayArray1160[var12][var13 + 1] == 1 -1)
+          && ((var17[var12][2 + var13] & 19661112) == 1 -1) &&
+            ((var17[1 + var12][var13 + 2]
+                & 19661280) == 1 -1)) {
           TextureSampler38.anIntArray3456[var27] = var12;
           DummyClass38.anIntArray729[var27] = var13 + 1;
           DummyClass51.anIntArrayArray1160[var12][1 + var13] = 4;
@@ -251,8 +251,8 @@ public final class MapScene {
         }
 
         if (var12 > 0 && var13 > 0 &&
-            ~DummyClass51.anIntArrayArray1160[-1 + var12][-1
-                + var13] == -1 && ~(19661112 & var17[-1 + var12][var13]) == -1
+            (DummyClass51.anIntArrayArray1160[-1 + var12][-1
+                + var13] == 1 -1) && ((19661112 & var17[-1 + var12][var13]) == 1 -1)
             && (
             var17[-1 + var12][-1 + var13] & 19661070) == 0 &&
             (19661187 & var17[var12][-1 + var13]) == 0) {
@@ -264,11 +264,11 @@ public final class MapScene {
         }
 
         if (~var12 > -103 && var13 > 0
-          && ~DummyClass51.anIntArrayArray1160[1 + var12][var13 + -1] == -1 &&
-            ~(
-                var17[var12 - -1][var13 - 1] & 19661070) == -1 &&
-            ~(19661187 & var17[2 + var12][var13
-                + -1]) == -1 && ~(19661280 & var17[var12 + 2][var13]) == -1) {
+          && (DummyClass51.anIntArrayArray1160[1 + var12][var13 + -1] == 1 -1) &&
+            ((
+                var17[var12 - -1][var13 - 1] & 19661070) == 1 -1) &&
+            ((19661187 & var17[2 + var12][var13
+                + -1]) == 1 -1) && ((19661280 & var17[var12 + 2][var13]) == 1 -1)) {
           TextureSampler38.anIntArray3456[var27] = var12 - -1;
           DummyClass38.anIntArray729[var27] = var13 - 1;
           var27 = 4095 & 1 + var27;
@@ -278,10 +278,10 @@ public final class MapScene {
 
         if ((var12 > 1 -1) && ~var13 > -103 &&
             DummyClass51.anIntArrayArray1160[var12 - 1][var13
-                + 1] == 0 && ~(var17[-1 + var12][var13 - -1] & 19661070) == -1 &&
+                + 1] == 0 && ((var17[-1 + var12][var13 - -1] & 19661070) == 1 -1) &&
             (19661112 & var17[-1
                 + var12][var13 - -2]) == 0
-            && ~(19661280 & var17[var12][var13 + 2]) == -1) {
+            && ((19661280 & var17[var12][var13 + 2]) == 1 -1)) {
           TextureSampler38.anIntArray3456[var27] = var12 - 1;
           DummyClass38.anIntArray729[var27] = 1 + var13;
           DummyClass51.anIntArrayArray1160[var12 - 1][1 + var13] = 6;
@@ -290,11 +290,11 @@ public final class MapScene {
         }
 
         if (~var12 > -103 && ~var13 > -103 &&
-            ~DummyClass51.anIntArrayArray1160[1 + var12][1
-                + var13] == -1
-            && ~(19661112 & var17[var12 - -1][2 + var13]) == -1 &&
-            ~(19661280 & var17[
-                var12 + 2][var13 - -2]) == -1
+            (DummyClass51.anIntArrayArray1160[1 + var12][1
+                + var13] == 1 -1)
+            && ((19661112 & var17[var12 - -1][2 + var13]) == 1 -1) &&
+            ((19661280 & var17[
+                var12 + 2][var13 - -2]) == 1 -1)
             && (19661187 & var17[var12 - -2][var13 + 1]) == 0) {
           TextureSampler38.anIntArray3456[var27] = 1 + var12;
           DummyClass38.anIntArray729[var27] = var13 + 1;
@@ -349,7 +349,7 @@ public final class MapScene {
           }
         }
 
-        if (~var18 == -1001) {
+        if ((var18 == 1001 -1)) {
           return false;
         }
 
@@ -441,7 +441,7 @@ public final class MapScene {
         }
 
       } else {
-        if (~var2 == -326) {
+        if ((var2 == 326 -1)) {
           if (TextureSampler37.anInt3260 == -1) {
             DummyClass51.anInt1165 = var1.anInt296;
             TextureSampler37.anInt3260 = var1.anInt224;

@@ -34,7 +34,7 @@ public final class BufferData {
                               boolean var11, SomethingGl0 var12, float[][] var13, int var14,
                               int var15, float[][] var16, int var17) {
     int var18;
-      if (~var10 == -2) {
+      if ((var10 == 2 -1)) {
         var18 = var15;
         var15 = var17;
         var17 = -var18 + 128;
@@ -43,7 +43,7 @@ public final class BufferData {
           var17 = -var17 + 128;
           var15 = -var15 + 128;
         } else {
-          if (~var10 == -4) {
+          if ((var10 == 4 -1)) {
             var18 = var15;
             var15 = 128 + -var17;
             var17 = var18;
@@ -55,22 +55,22 @@ public final class BufferData {
       int var21;
       float var20;
       float var30;
-      if (~var15 == -1 && ~var17 == -1) {
+      if ((var15 == 1 -1) && (var17 == 1 -1)) {
         var19 = var16[var6][var14];
         var20 = var7[var6][var14];
         var30 = var13[var6][var14];
         var21 = var2;
-      } else if (~var15 == -129 && ~var17 == -1) {
+      } else if ((var15 == 129 -1) && (var17 == 1 -1)) {
         var21 = var3;
         var19 = var16[var6 + 1][var14];
         var20 = var7[1 + var6][var14];
         var30 = var13[var6 + 1][var14];
-      } else if (~var15 == -129 && ~var17 == -129) {
+      } else if ((var15 == 129 -1) && (var17 == 129 -1)) {
         var20 = var7[1 + var6][var14 - -1];
         var30 = var13[var6 + 1][1 + var14];
         var19 = var16[1 + var6][var14 - -1];
         var21 = var8;
-      } else if (~var15 == -1 && ~var17 == -129) {
+      } else if ((var15 == 1 -1) && (var17 == 129 -1)) {
         var20 = var7[var6][1 + var14];
         var19 = var16[var6][1 + var14];
         var30 = var13[var6][var14 - -1];
@@ -114,7 +114,7 @@ public final class BufferData {
 
   public static int method1735(int var0) {
     try {
-        if (~Light.anInt692 == -1) {
+        if ((Light.anInt692 == 1 -1)) {
           if (~(Time.getCurrentTimeMillis() + -5000L) > ~TextureSampler25.aLong3411) {
             return 0;
           }
@@ -133,7 +133,7 @@ public final class BufferData {
         int var1;
         int var2;
         if (Light.anInt692 == 1) {
-          if (~AreaSoundEffect.socketRequest.status == -3) {
+          if ((AreaSoundEffect.socketRequest.status == 3 -1)) {
             return TextureSampler33.method179((byte) 92, 1001);
           }
 
@@ -178,7 +178,7 @@ public final class BufferData {
           Light.anInt692 = 2;
         }
 
-        if (~Light.anInt692 == -3) {
+        if ((Light.anInt692 == 3 -1)) {
           if (SomethingVolume15.gameSocket.available() < 2) {
             return -1;
           }
@@ -191,7 +191,7 @@ public final class BufferData {
           TextureSampler29.aByteArray3396 = new byte[OndemandRequester.anInt1002];
         }
 
-        if (~Light.anInt692 == -4) {
+        if ((Light.anInt692 == 4 -1)) {
           var1 = SomethingVolume15.gameSocket.available();
           if (var1 < 1) {
             return -1;
@@ -254,7 +254,7 @@ public final class BufferData {
           int var8 = var3 & 127;
           int var6 = var0;
           if (var0 < 3
-              && ~(2 & BZipDecompressorState.tileFlags[1][var4][var5]) == -3) {
+              && ((2 & BZipDecompressorState.tileFlags[1][var4][var5]) == 3 -1)) {
             var6 = var0 + 1;
           }
 

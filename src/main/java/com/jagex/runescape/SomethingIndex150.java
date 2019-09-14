@@ -89,13 +89,13 @@ public final class SomethingIndex150 {
                   DummyClass42.anIntArray887[var5]);
               ++SocketStream.anInt1240;
             } else {
-              if (~var0 == -7) {
+              if ((var0 == 7 -1)) {
                 TextureSampler12.secureBuffer.writePacket(133);
                 TextureSampler12.secureBuffer
                     .writeShortLE(-1, DummyClass42.anIntArray887[var5]);
                 ++AudioStreamEncoder4.anInt3517;
               } else {
-                if (~var0 == -8) {
+                if ((var0 == 8 -1)) {
                   ++DummyClass29.anInt437;
                   TextureSampler12.secureBuffer.writePacket(114);
                   TextureSampler12.secureBuffer

@@ -166,7 +166,7 @@ public final class HuffmanEncoder {
   }
 
   public int decompress(byte[] src, int srcOff, byte[] dest,int destOff,int len ) {
-    if (~len == -1) {
+    if ((len == 1 -1)) {
         return 0;
       } else {
         int var7 = 0;
@@ -191,7 +191,7 @@ public final class HuffmanEncoder {
             var7 = 0;
           }
 
-          if (~(64 & b) == -1) {
+          if (((64 & b) == 1 -1)) {
             ++var7;
           } else {
             var7 = this.anIntArray633[var7];
@@ -206,7 +206,7 @@ public final class HuffmanEncoder {
             var7 = 0;
           }
 
-          if (~(32 & b) == -1) {
+          if (((32 & b) == 1 -1)) {
             ++var7;
           } else {
             var7 = this.anIntArray633[var7];
@@ -236,7 +236,7 @@ public final class HuffmanEncoder {
             var7 = 0;
           }
 
-          if (~(b & 8) == -1) {
+          if (((b & 8) == 1 -1)) {
             ++var7;
           } else {
             var7 = this.anIntArray633[var7];
@@ -251,7 +251,7 @@ public final class HuffmanEncoder {
             var7 = 0;
           }
 
-          if (~(b & 4) == -1) {
+          if (((b & 4) == 1 -1)) {
             ++var7;
           } else {
             var7 = this.anIntArray633[var7];

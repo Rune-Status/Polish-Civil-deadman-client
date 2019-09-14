@@ -101,7 +101,7 @@ public final class GameString implements UnusedInterface1 {
 
     for (int var7 = 29 / ((-47 - var1) / 37); this.length > var6; ++var6) {
       int var8 = 255 & this.bytes[var6];
-      if (~var6 == -1) {
+      if ((var6 == 1 -1)) {
         if (var8 == 45) {
           var3 = true;
           continue;
@@ -351,7 +351,7 @@ public final class GameString implements UnusedInterface1 {
 
     for (; this.length > var4; ++var4) {
       byte var5 = this.bytes[var4];
-      if (~var5 == -96) {
+      if ((var5 == 96 -1)) {
         var3 = true;
         var2.bytes[var4] = 32;
       } else {
@@ -754,7 +754,7 @@ public final class GameString implements UnusedInterface1 {
     int var2;
     for (var2 = 0; var2 < this.length &&
         (this.bytes[var2] >= 0 && this.bytes[var2] <= 32 ||
-            ~(255 & this.bytes[var2]) == -161);
+            ((255 & this.bytes[var2]) == 161 -1));
         ++var2) {
     }
 
@@ -762,11 +762,11 @@ public final class GameString implements UnusedInterface1 {
     for (var3 = this.length;
         var3 > var2 &&
             ((this.bytes[var3 - 1] >= 1 -1) && ~this.bytes[var3 - 1] >= -33 ||
-                ~(255 & this.bytes[var3 + -1]) == -161);
+                ((255 & this.bytes[var3 + -1]) == 161 -1));
         --var3) {
     }
 
-    if (~var2 == -1 && ~this.length == ~var3) {
+    if ((var2 == 1 -1) && ~this.length == ~var3) {
       return this;
     } else {
       GameString var4 = new GameString();
@@ -806,7 +806,7 @@ public final class GameString implements UnusedInterface1 {
   public int indexOf(GameString var1, int start, int var3) {
     int var4 = var1.length;
     if (start >= this.length) {
-      return ~var4 == -1 ? this.length : -1;
+      return (var4 == 1 -1) ? this.length : -1;
     } else {
       if (~start > -1) {
         start = 0;
@@ -1021,7 +1021,7 @@ public final class GameString implements UnusedInterface1 {
       }
     }
 
-    while (~(var2 % 37L) == -1L && var2 != 0L) {
+    while (((var2 % 37L) == 1L -1) && var2 != 0L) {
       var2 /= 37L;
     }
 
@@ -1068,13 +1068,13 @@ public final class GameString implements UnusedInterface1 {
         var15 = DummyClass47.anIntArray1100;
         var16 = 4 * (-(var3 * 512) + '\uce00') + var1 * 4 + 24624;
         if (var11 == 0 || var11 == 2) {
-          if (~var10 == -1) {
+          if ((var10 == 1 -1)) {
             var15[var16] = var14;
             var15[512 + var16] = var14;
             var15[var16 - -1024] = var14;
             var15[1536 + var16] = var14;
           } else if ((var10 != 2 -1)) {
-            if (~var10 == -3) {
+            if ((var10 == 3 -1)) {
               var15[var16 - -3] = var14;
               var15[var16 - -3 - -512] = var14;
               var15[var16 - -3 + 1024] = var14;
@@ -1100,27 +1100,27 @@ public final class GameString implements UnusedInterface1 {
             var15[var16] = var14;
           } else if (var10 == 1) {
             var15[var16 - -3] = var14;
-          } else if (~var10 == -3) {
+          } else if ((var10 == 3 -1)) {
             var15[var16 - -3 + 1536] = var14;
-          } else if (~var10 == -4) {
+          } else if ((var10 == 4 -1)) {
             var15[var16 - -1536] = var14;
           }
         }
 
-        if (~var11 == -3) {
-          if (~var10 == -4) {
+        if ((var11 == 3 -1)) {
+          if ((var10 == 4 -1)) {
             var15[var16] = var14;
             var15[var16 - -512] = var14;
             var15[var16 + 1024] = var14;
             var15[1536 + var16] = var14;
           } else {
-            if (~var10 == -1) {
+            if ((var10 == 1 -1)) {
               var15[var16] = var14;
               var15[1 + var16] = var14;
               var15[2 + var16] = var14;
               var15[3 + var16] = var14;
             } else {
-              if (~var10 == -2) {
+              if ((var10 == 2 -1)) {
                 var15[var16 - -3] = var14;
                 var15[512 + 3 + var16] = var14;
                 var15[3 + (var16 - -1024)] = var14;
@@ -1338,7 +1338,7 @@ public final class GameString implements UnusedInterface1 {
         var15 = var22;
       }
 
-      if (var4 && (~var8.anInt764 == -2 || var6 != 1) && var6 != -1) {
+      if (var4 && ((var8.anInt764 == 2 -1) || var6 != 1) && var6 != -1) {
         TextureSampler10.aClass3_Sub28_Sub17_Sub1_3440.method681(
             VariableUpdate.method123(1000, var6), 0, 9, 16776960, 1);
       }

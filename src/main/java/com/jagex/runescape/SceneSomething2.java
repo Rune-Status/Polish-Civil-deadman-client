@@ -64,7 +64,7 @@ public final class SceneSomething2 {
         var8.anInt2310 = var2.anInt1518;
         int var9 = var2.anInt1480;
         int var10 = var2.anInt1485;
-        if (~var3 == -2 || var3 == 3) {
+        if ((var3 == 2 -1) || var3 == 3) {
           var9 = var2.anInt1485;
           var10 = var2.anInt1480;
         }

@@ -87,13 +87,13 @@ public final class AnimationSequence {
         }
 
         if (GlRenderer.useOpenGlRenderer && this.aBoolean1848) {
-          if (~var5 == -2) {
+          if ((var5 == 2 -1)) {
             ((GlModel) var10).method1902();
           } else {
             if (var5 == 2) {
               ((GlModel) var10).method1911();
             } else {
-              if (~var5 == -4) {
+              if ((var5 == 4 -1)) {
                 ((GlModel) var10).method1925();
               }
             }
@@ -123,7 +123,7 @@ public final class AnimationSequence {
             }
           }
         } else if ((var5 != 2 -1)) {
-          if (~var5 == -3) {
+          if ((var5 == 3 -1)) {
             var10.method1874();
           } else {
             if (var5 == 3) {
@@ -243,9 +243,9 @@ public final class AnimationSequence {
           if (var4 == 1) {
             ((GlModel) var10).method1902();
           } else {
-            if (~var4 == -3) {
+            if ((var4 == 3 -1)) {
               ((GlModel) var10).method1911();
-            } else if (~var4 == -4) {
+            } else if ((var4 == 4 -1)) {
               ((GlModel) var10).method1925();
             }
           }
@@ -260,11 +260,11 @@ public final class AnimationSequence {
         var10.method1880(var8, var2, var9, var1, var3 + -1, var7,
             this.aBoolean1848);
         if (this.aBoolean1848 && GlRenderer.useOpenGlRenderer) {
-          if (~var4 == -2) {
+          if ((var4 == 2 -1)) {
             ((GlModel) var10).method1925();
-          } else if (~var4 == -3) {
+          } else if ((var4 == 3 -1)) {
             ((GlModel) var10).method1911();
-          } else if (~var4 == -4) {
+          } else if ((var4 == 4 -1)) {
             ((GlModel) var10).method1902();
           }
         } else if (var4 != 1) {
@@ -340,7 +340,7 @@ public final class AnimationSequence {
   private void method2060(int var1, byte var2, Buffer var3) {
     int var4;
       int var5;
-      if (~var1 == -2) {
+      if ((var1 == 2 -1)) {
         var4 = var3.readUnsignedShort();
         this.anIntArray1869 = new int[var4];
 
@@ -366,14 +366,14 @@ public final class AnimationSequence {
           if (var1 == 6) {
             this.anInt1854 = var3.readUnsignedShort();
           } else {
-            if (~var1 == -8) {
+            if ((var1 == 8 -1)) {
               this.anInt1849 = var3.readUnsignedShort();
             } else if (var1 == 8) {
               this.anInt1861 = var3.readUnsignedByte();
             } else if (var1 == 9) {
               this.anInt1866 = var3.readUnsignedByte();
             } else if (var1 != 10) {
-              if (~var1 == -12) {
+              if ((var1 == 12 -1)) {
                 this.anInt1845 = var3.readUnsignedByte();
               } else {
                 if (var1 == 12) {

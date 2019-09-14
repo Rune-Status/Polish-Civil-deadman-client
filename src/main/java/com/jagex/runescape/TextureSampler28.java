@@ -213,7 +213,7 @@ public final class TextureSampler28 extends AbstractTextureSampler {
         this.anInt3301 = 4;
       }
 
-      if (~var1 == -1) {
+      if ((var1 == 1 -1)) {
         this.anInt3312 = var2.readUnsignedByte();
       } else {
         if (var1 == 1) {
@@ -222,16 +222,16 @@ public final class TextureSampler28 extends AbstractTextureSampler {
           if (var1 == 3) {
             this.anInt3310 = var2.readUnsignedShort();
           } else {
-            if (~var1 == -5) {
+            if ((var1 == 5 -1)) {
               this.anInt3301 = var2.readUnsignedShort();
             } else if (var1 != 5) {
-              if (~var1 == -7) {
+              if ((var1 == 7 -1)) {
                 this.anInt3309 = var2.readUnsignedByte();
               } else {
-                if (~var1 == -8) {
+                if ((var1 == 8 -1)) {
                   this.anInt3299 = var2.readUnsignedShort();
                 } else {
-                  if (~var1 == -9) {
+                  if ((var1 == 9 -1)) {
                     this.anInt3316 = var2.readUnsignedShort();
                   }
                 }
@@ -286,7 +286,7 @@ public final class TextureSampler28 extends AbstractTextureSampler {
             int var20;
             if (~var17 > ~var14) {
               var19 = var17 * var8 / var14;
-              if (~this.anInt3309 == -1) {
+              if ((this.anInt3309 == 1 -1)) {
                 for (var20 = 0; var13 > var20; ++var20) {
                   var21 = var20 * var8 / var13;
                   var18[ClientScript

@@ -35,7 +35,7 @@ public final class DummyClass10 {
             }
 
             int var6 = SpotAnimationConfig.gameBuffer.readBits(1);
-            if (~var6 == -2) {
+            if ((var6 == 2 -1)) {
               DummyClass60.anIntArray441[OndemandRequester.anInt997++] = var1;
             }
 
@@ -54,12 +54,12 @@ public final class DummyClass10 {
             var3.method1976(var3.config.size, 2);
             var3.renderAnimationId = var3.config.renderAnimationId;
             var3.anInt2779 = var3.config.anInt1274;
-            if (~var3.anInt2779 == -1) {
+            if ((var3.anInt2779 == 1 -1)) {
               var3.rotationY = 0;
             }
 
             var3.setPosition(var3.getSize(), TextureCache.localPlayer.waypointsX[0] + var8,
-              var7 + TextureCache.localPlayer.waypointsY[0], ~var4 == -2);
+              var7 + TextureCache.localPlayer.waypointsY[0], (var4 == 2 -1));
             if (var3.config.method1474(-1)) {
               SceneSomething2.method1286(var3.waypointsY[0], false, null, 0, var3,
                 var3.waypointsX[0], GameWorldSomething.currentPlane, null);
@@ -147,11 +147,11 @@ public final class DummyClass10 {
 
         while (true) {
           opcode = var3.readUnsignedByte();
-          if (~opcode == -1) {
+          if ((opcode == 1 -1)) {
             if (var2) {
               AbstractGameWorld.heightMap[0][x][y] = DummyClass43.somethingHeightMap[0][x][y];
             } else {
-              if (~var8 == -1) {
+              if ((var8 == 1 -1)) {
                 AbstractGameWorld.heightMap[0][x][y] =
                     8 * -DummyClass34
                         .perlinNoise(y + 556238 + var1, var0 + x + 932731);
@@ -169,11 +169,11 @@ public final class DummyClass10 {
               AbstractGameWorld.heightMap[0][x][y] =
                   DummyClass43.somethingHeightMap[0][x][y] - -(var10 * 8);
             } else {
-              if (~var10 == -2) {
+              if ((var10 == 2 -1)) {
                 var10 = 0;
               }
 
-              if (~var8 == -1) {
+              if ((var8 == 1 -1)) {
                 AbstractGameWorld.heightMap[0][x][y] = 8 * -var10;
               } else {
                 AbstractGameWorld.heightMap[var8][x][y] =
@@ -197,11 +197,11 @@ public final class DummyClass10 {
       } else {
         while (true) {
           opcode = var3.readUnsignedByte();
-          if (~opcode == -1) {
+          if ((opcode == 1 -1)) {
             break;
           }
 
-          if (~opcode == -2) {
+          if ((opcode == 2 -1)) {
             var3.readUnsignedByte();
             break;
           }

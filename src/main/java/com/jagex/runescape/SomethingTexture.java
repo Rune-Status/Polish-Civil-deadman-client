@@ -259,7 +259,7 @@ public final class SomethingTexture extends AbstractSomethingTexture {
                       SocketStream.method1470(var2.anInt2829, var10, 183921384,
                           var2.anInt2819,
                           var2 == TextureCache.localPlayer, 0);
-                    } else if (~var11 == -3) {
+                    } else if ((var11 == 3 -1)) {
                       var12.anInt1894 = 0;
                     }
                   }

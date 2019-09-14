@@ -74,7 +74,7 @@ public final class WorldMapLabel {
             Player var3 = TextureSampler0.players[var1];
             var3.anInt2838 = AbstractGameWorld.updateCycle;
             int var4 = SpotAnimationConfig.gameBuffer.readBits(1);
-            if (~var4 == -2) {
+            if ((var4 == 2 -1)) {
               DummyClass60.anIntArray441[OndemandRequester.anInt997++] = var1;
             }
 
@@ -94,7 +94,7 @@ public final class WorldMapLabel {
               var8 -= 32;
             }
 
-            var3.setPosition((byte) 126, var5 + TextureCache.localPlayer.waypointsX[0], ~var7 == -2,
+            var3.setPosition((byte) 126, var5 + TextureCache.localPlayer.waypointsX[0], (var7 == 2 -1),
               TextureCache.localPlayer.waypointsY[0] + var8);
             continue;
           }

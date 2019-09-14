@@ -70,7 +70,7 @@ public final class TextureSampler16 extends AbstractTextureSampler {
 
   public void parseConfig(int var1, Buffer var2, boolean var3 ) {
     if (var3) {
-        if (~var1 == -1) {
+        if ((var1 == 1 -1)) {
           this.anInt3108 = var2.readUnsignedByte();
         } else {
           if (var1 == 1) {

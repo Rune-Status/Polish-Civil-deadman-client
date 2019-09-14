@@ -48,7 +48,7 @@ public final class TextureSampler13 extends AbstractTextureSampler {
     if (TextureCache.localPlayer != var3) {
         if (TextureSampler25.amountContextActions < 400) {
           GameString var5;
-          if (~var3.skillTotal == -1) {
+          if ((var3.skillTotal == 1 -1)) {
             boolean var6 = true;
             if (~TextureCache.localPlayer.anInt3970 != 0 && var3.anInt3970
                 != -1) {
@@ -99,7 +99,7 @@ public final class TextureSampler13 extends AbstractTextureSampler {
           }
 
           int var12;
-          if (~Something3d.anInt3012 == -2) {
+          if ((Something3d.anInt3012 == 2 -1)) {
             ScriptState.method1177(DummyClass54.anInt1403, var0, (byte) -80,
               RenderAnimation.concat(
                 new GameString[] {RenderAnimation.aClass94_378, DummyClass42.aClass94_892, var5}),
@@ -111,7 +111,7 @@ public final class TextureSampler13 extends AbstractTextureSampler {
                 ++Cursor.anInt880;
                 short var14 = 0;
                 boolean var16 = false;
-                if (~AbstractImageProducer.gameId == -1
+                if ((AbstractImageProducer.gameId == 1 -1)
                   && CollisionMap.playerOptions[var12].method1531(TextureSampler36.aClass94_3427)) {
                   if (var3.combatLevel > TextureCache.localPlayer.combatLevel) {
                     var14 = 2000;
@@ -152,7 +152,7 @@ public final class TextureSampler13 extends AbstractTextureSampler {
           }
 
           for (var12 = 0; TextureSampler25.amountContextActions > var12; ++var12) {
-            if (~TextureSampler27.aShortArray3095[var12] == -61) {
+            if ((TextureSampler27.aShortArray3095[var12] == 61 -1)) {
               DummyClass8.aClass94Array4016[var12] = RenderAnimation.concat(
                 new GameString[] {MonoChromaticImageBuffer.aClass94_2562, var5});
               break;
@@ -229,7 +229,7 @@ public final class TextureSampler13 extends AbstractTextureSampler {
 
         while (true) {
           int var13 = var11.method773((byte) -127);
-          if (~var13 == -1) {
+          if ((var13 == 1 -1)) {
             return;
           }
 
@@ -238,7 +238,7 @@ public final class TextureSampler13 extends AbstractTextureSampler {
 
           while (true) {
             int var15 = var11.readUnsignedShortSmart();
-            if (~var15 == -1) {
+            if ((var15 == 1 -1)) {
               break;
             }
 

@@ -92,7 +92,7 @@ public abstract class SceneNode {
   public static int method1863(int var0, int var1, byte var2, int var3, int var4, int var5,
                               int var6) {
     int var7;
-      if (~(1 & var5) == -2) {
+      if (((1 & var5) == 2 -1)) {
         var7 = var0;
         var0 = var3;
         var3 = var7;
@@ -100,7 +100,7 @@ public abstract class SceneNode {
 
       var7 = 121 % ((var2 - 75) / 50);
       var1 &= 3;
-      return ~var1 == -1 ?
+      return (var1 == 1 -1) ?
         var6 :
         (var1 != 1
             ? ((var1 != 3 -1) ? var4 : -var3 + 1 + -var6 + 7) : -var4 + 7 + -var0 - -1);

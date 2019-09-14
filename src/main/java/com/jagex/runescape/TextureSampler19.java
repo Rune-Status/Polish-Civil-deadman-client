@@ -52,11 +52,11 @@ public final class TextureSampler19 extends AbstractTextureSampler {
   }
 
   public void parseConfig(int var1, Buffer var2, boolean var3 ) {
-    if (~var1 == -1) {
+    if ((var1 == 1 -1)) {
         this.anInt3217 = var2.readUnsignedShort() << 4;
       } else {
         if (var1 == 1) {
-          this.monoChromatic = ~var2.readUnsignedByte() == -2;
+          this.monoChromatic = (var2.readUnsignedByte() == 2 -1);
         }
       }
 
@@ -131,7 +131,7 @@ public final class TextureSampler19 extends AbstractTextureSampler {
         }
       }
 
-      if (~TextureSampler25.amountContextActions == -2) {
+      if ((TextureSampler25.amountContextActions == 2 -1)) {
         DummyClass36.aBoolean2615 = false;
         AbstractSomethingTexture
             .method1340(AbstractIndexedColorSprite.anInt1462,

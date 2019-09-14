@@ -72,7 +72,7 @@ public final class TextureSampler27 extends AbstractTextureSampler {
             if (var10 == 1) {
               var7 = var9;
             } else if (var10 != 2) {
-              if (~var10 == -4) {
+              if ((var10 == 4 -1)) {
                 var7 = (-var5 + var9 >> 1) + 2048;
               }
             } else {
@@ -100,10 +100,10 @@ public final class TextureSampler27 extends AbstractTextureSampler {
   }
 
   public void parseConfig(int var1, Buffer var2, boolean var3 ) {
-    if (~var1 == -1) {
+    if ((var1 == 1 -1)) {
         this.anInt3085 = var2.readUnsignedByte();
       } else if ((var1 != 2 -1)) {
-        if (~var1 == -3) {
+        if ((var1 == 3 -1)) {
           this.anInt3086 = var2.readUnsignedByte();
         }
       } else {

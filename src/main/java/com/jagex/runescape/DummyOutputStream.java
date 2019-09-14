@@ -56,14 +56,14 @@ public final class DummyOutputStream extends OutputStream {
             }
 
             if (var3 < -7) {
-              if (~var2 == -3) {
+              if ((var2 == 3 -1)) {
                 ++TextureSampler30.anInt3122;
                 TextureSampler12.secureBuffer.writePacket(196);
                 TextureSampler12.secureBuffer.writeInt(var4);
                 TextureSampler12.secureBuffer.writeShort(var1);
               }
 
-              if (~var2 == -4) {
+              if ((var2 == 4 -1)) {
                 ++DummyClass42.anInt889;
                 TextureSampler12.secureBuffer.writePacket(124);
                 TextureSampler12.secureBuffer.writeInt(var4);
@@ -77,7 +77,7 @@ public final class DummyOutputStream extends OutputStream {
                 ++Keyboard.anInt1909;
               }
 
-              if (~var2 == -6) {
+              if ((var2 == 6 -1)) {
                 TextureSampler12.secureBuffer.writePacket(234);
                 TextureSampler12.secureBuffer.writeInt(var4);
                 TextureSampler12.secureBuffer.writeShort(var1);
@@ -91,28 +91,28 @@ public final class DummyOutputStream extends OutputStream {
                 TextureSampler12.secureBuffer.writeShort(var1);
               }
 
-              if (~var2 == -8) {
+              if ((var2 == 8 -1)) {
                 ++DummyClass59.anInt674;
                 TextureSampler12.secureBuffer.writePacket(166);
                 TextureSampler12.secureBuffer.writeInt(var4);
                 TextureSampler12.secureBuffer.writeShort(var1);
               }
 
-              if (~var2 == -9) {
+              if ((var2 == 9 -1)) {
                 TextureSampler12.secureBuffer.writePacket(64);
                 ++LightIntensity.anInt903;
                 TextureSampler12.secureBuffer.writeInt(var4);
                 TextureSampler12.secureBuffer.writeShort(var1);
               }
 
-              if (~var2 == -10) {
+              if ((var2 == 10 -1)) {
                 ++DummyClass52.anInt1166;
                 TextureSampler12.secureBuffer.writePacket(53);
                 TextureSampler12.secureBuffer.writeInt(var4);
                 TextureSampler12.secureBuffer.writeShort(var1);
               }
 
-              if (~var2 == -11) {
+              if ((var2 == 11 -1)) {
                 ++CollisionMap.anInt1307;
                 TextureSampler12.secureBuffer.writePacket(9);
                 TextureSampler12.secureBuffer.writeInt(var4);

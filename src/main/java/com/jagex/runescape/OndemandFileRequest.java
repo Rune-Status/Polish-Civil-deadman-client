@@ -110,7 +110,7 @@ public final class OndemandFileRequest extends AbstractFileRequest {
         }
       }
 
-      if (~var1 == -4 && TextureSampler30.fullScreenFrame == null) {
+      if ((var1 == 4 -1) && TextureSampler30.fullScreenFrame == null) {
         OndemandFileRequest
             .setWindowMode(true, SubNode.anInt2577, true, var3, var4, -1, -1);
       } else {
@@ -207,7 +207,7 @@ public final class OndemandFileRequest extends AbstractFileRequest {
             Something3d.viewImageProducer.draw(0, 0, var11, 0);
 
             HashTableIterator.method1396(-1);
-            if (~var3 == -1) {
+            if ((var3 == 1 -1)) {
               Something3d.viewImageProducer =
                   TextureSampler18.createImageProducer(503, 765, true,
                       GameCanvas.INSTANCE);
@@ -219,7 +219,7 @@ public final class OndemandFileRequest extends AbstractFileRequest {
                 DummyClass35.signLink
                     .method1444(-43, SomethingTilek.client.getClass());
 
-            while (~var13.status == -1) {
+            while ((var13.status == 1 -1)) {
               TextureSampler25.sleep(100L);
             }
 
@@ -237,7 +237,7 @@ public final class OndemandFileRequest extends AbstractFileRequest {
         if (!GlRenderer.useOpenGlRenderer && var1 > 0) {
           OndemandFileRequest.setWindowMode(true, 0, true, var3, false, -1, -1);
         } else {
-          if ((var1 > 1 -1) && ~var3 == -1) {
+          if ((var1 > 1 -1) && (var3 == 1 -1)) {
             DummyClass1.gameThread.setPriority(5);
             Something3d.viewImageProducer = null;
             SoftwareModel.method1935();
@@ -260,7 +260,7 @@ public final class OndemandFileRequest extends AbstractFileRequest {
                 DummyClass40.updateLightness(0.9F);
               }
 
-              if (~AbstractFileRequest.brightnessSetting == -3) {
+              if ((AbstractFileRequest.brightnessSetting == 3 -1)) {
                 DummyClass40.updateLightness(0.8F);
               }
 
@@ -268,7 +268,7 @@ public final class OndemandFileRequest extends AbstractFileRequest {
                 DummyClass40.updateLightness(0.7F);
               }
 
-              if (~AbstractFileRequest.brightnessSetting == -5) {
+              if ((AbstractFileRequest.brightnessSetting == 5 -1)) {
                 DummyClass40.updateLightness(0.6F);
               }
             }
@@ -289,7 +289,7 @@ public final class OndemandFileRequest extends AbstractFileRequest {
           }
 
           if (SomethingVolume15.gameSocket != null && (
-              ~DummyClass15.state == -31
+              (DummyClass15.state == 31 -1)
                   || DummyClass15.state == 25)) {
             TextureSampler9.method204(-3);
           }

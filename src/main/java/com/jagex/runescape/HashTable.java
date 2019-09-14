@@ -184,7 +184,7 @@ public final class HashTable {
             var3.anInt2832);
         }
 
-        if (~var5 == -3) {
+        if ((var5 == 3 -1)) {
           var3.anInt2773 = 0;
         }
       } else if (~var1 == 0 || var3.animationId == -1
@@ -234,13 +234,13 @@ public final class HashTable {
   }
 
   public static AbstractTextureSampler createTextureSampler(int type, boolean var1) {
-    if (~type == -1) {
+    if ((type == 1 -1)) {
         return new TextureSampler0();
       } else if ((type != 2 -1)) {
         if (type == 2) {
           return new TextureSampler2();
         } else {
-          if (~type == -4) {
+          if ((type == 4 -1)) {
             return new TextureSampler3();
           } else if (type != 4) {
             if (type == 5) {
@@ -257,7 +257,7 @@ public final class HashTable {
                   if (type == 10) {
                     return new TextureSampler10();
                   } else if (type != 11) {
-                    if (~type == -13) {
+                    if ((type == 13 -1)) {
                       return new TextureSampler12();
                     } else if ((type != 14 -1)) {
                       if (type == 14) {
@@ -266,16 +266,16 @@ public final class HashTable {
                         if (type == 16) {
                           return new TextureSampler16();
                         } else if (type != 17) {
-                          if (~type == -19) {
+                          if ((type == 19 -1)) {
                             return new TextureSampler18();
-                          } else if (~type == -20) {
+                          } else if ((type == 20 -1)) {
                             return new TextureSampler19();
-                          } else if (~type == -21) {
+                          } else if ((type == 21 -1)) {
                             return new TextureSampler20();
                           } else if (type == 21) {
                             return new TextureSampler21();
                           } else if (type != 22) {
-                            if (~type == -24) {
+                            if ((type == 24 -1)) {
                               return new TextureSampler23();
                             } else {
                               if (type == 24) {
@@ -284,13 +284,13 @@ public final class HashTable {
                                 if (type == 25) {
                                   return new TextureSampler25();
                                 } else {
-                                  if (~type == -27) {
+                                  if ((type == 27 -1)) {
                                     return new TextureSampler26();
                                   } else {
                                     if (type == 27) {
                                       return new TextureSampler27();
                                     } else {
-                                      if (~type == -29) {
+                                      if ((type == 29 -1)) {
                                         return new TextureSampler28();
                                       } else if ((type != 30 -1)) {
                                         if (type == 30) {
@@ -304,7 +304,7 @@ public final class HashTable {
                                             } else {
                                               if (type == 33) {
                                                 return new TextureSampler33();
-                                              } else if (~type == -35) {
+                                              } else if ((type == 35 -1)) {
                                                 return new TextureSampler34();
                                               } else if (type == 35) {
                                                 return new TextureSampler35();

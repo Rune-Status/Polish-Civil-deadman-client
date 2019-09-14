@@ -77,7 +77,7 @@ public abstract class AbstractObjectNode extends SubNode {
           TextureSampler25.sleep(1L);
         }
 
-        if (~var3.status == -2) {
+        if ((var3.status == 2 -1)) {
           var2 = (FileOnDisk) var3.result;
           byte[] var4 = new byte[(int) var2.length(-1)];
 

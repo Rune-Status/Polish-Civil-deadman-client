@@ -35,7 +35,7 @@ public final class Unsure {
                                int var6) {
     if (DummyClass55.anInt1425 <= var1 && GlTexture2d.anInt3765 >= var3
         && ~DummyClass13.anInt2020 >= ~var2 && var4 <= LightIntensity.anInt902) {
-        if (~var5 == -2) {
+        if ((var5 == 2 -1)) {
           DummyClass49.method1367(var0, var3, var2, (byte) 34, var4, var1);
         } else {
           AbstractIndexedColorSprite.method1665(var6 + -19617, var3, var2, var0, var4, var5, var1);

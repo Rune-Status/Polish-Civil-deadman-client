@@ -42,7 +42,7 @@ public final class TextureSampler1 extends AbstractTextureSampler {
         TextureSampler1.method221(-64, null, null, null, 34);
       }
 
-      if (~var1 == -1) {
+      if ((var1 == 1 -1)) {
         this.method218((byte) 75, var2.readUnsignedMedium((byte) 82));
       }
   }
@@ -108,7 +108,7 @@ public final class TextureSampler1 extends AbstractTextureSampler {
       TextureCache.localPlayer.anInt2829 = 3000;
       TextureCache.localPlayer.anInt2819 = var1;
       if (GlRenderer.useOpenGlRenderer) {
-        if (~SomethingPacket116.anInt1753 == -3) {
+        if ((SomethingPacket116.anInt1753 == 3 -1)) {
           NPC.anInt3995 = GameCanvas.anInt30 << 7;
           DummyClass49.anInt1111 = AbstractMouseWheel.anInt1904 << 7;
         } else {

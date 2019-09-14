@@ -68,7 +68,7 @@ public final class GameClient extends GameStub {
           NPC var4 = TextureSampler5.npcs[var3];
           if (var4 != null) {
             byte var5 = var4.config.aByte1267;
-            if ((var5 & 2) > 0 && ~var4.anInt2816 == -1
+            if ((var5 & 2) > 0 && (var4.anInt2816 == 1 -1)
                 && Math.random() * 1000.0D < 10.0D) {
               int var6 = (int) Math.round(-1.0D + 2.0D * Math.random());
               int var7 = (int) Math.round(Math.random() * 2.0D - 1.0D);
@@ -128,7 +128,7 @@ public final class GameClient extends GameStub {
       if (!GlRenderer.useOpenGlRenderer) {
         Buffer.method744(true);
       } else if (TextureSampler28.loginState == 0 && DummyCanvas.anInt23 == 0) {
-        if (~SomethingPacket116.anInt1753 == -3) {
+        if ((SomethingPacket116.anInt1753 == 3 -1)) {
           ClientScriptCall.method379(var1 ^ 1025);
         } else {
           WidgetUpdate.d('\uffff');
@@ -264,7 +264,7 @@ public final class GameClient extends GameStub {
 
         if (DummyClass43.ondemandRequester.anInt1011 >= 4 && (
             DummyClass15.state == 0
-                || ~DummyClass15.state == -6)) {
+                || (DummyClass15.state == 6 -1))) {
           if ((DummyClass43.ondemandRequester.anInt1010 != 8 -1)
               && (DummyClass43.ondemandRequester.anInt1010 != 10 -1)) {
             if (DummyClass43.ondemandRequester.anInt1010 > 0) {
@@ -286,7 +286,7 @@ public final class GameClient extends GameStub {
         --TextureSampler21.anInt3068;
       } else {
         try {
-          if (~DummyClass18.anInt80 == -1) {
+          if ((DummyClass18.anInt80 == 1 -1)) {
             DummyClass1.socketRequest =
                 DummyClass35.signLink
                     .method1441((byte) 8, DummyClass36.aString2611,
@@ -300,7 +300,7 @@ public final class GameClient extends GameStub {
               return;
             }
 
-            if (~DummyClass1.socketRequest.status == -2) {
+            if ((DummyClass1.socketRequest.status == 2 -1)) {
               ++DummyClass18.anInt80;
             }
           }
@@ -336,7 +336,7 @@ public final class GameClient extends GameStub {
             }
           }
 
-          if (~DummyClass18.anInt80 == -5) {
+          if ((DummyClass18.anInt80 == 5 -1)) {
             boolean offline =
                 DummyClass15.state == 5 || DummyClass15.state == 10 ||
                     DummyClass15.state == 28;
@@ -356,8 +356,8 @@ public final class GameClient extends GameStub {
   private void handleLoading() {
     if (!GameString.safemode) {
         while (FileCacheRequest.hasKeyInput()) {
-          if (~TextureSampler7.anInt3342 == -116
-              || ~TextureSampler7.anInt3342 == -84) {
+          if ((TextureSampler7.anInt3342 == 116 -1)
+              || (TextureSampler7.anInt3342 == 84 -1)) {
             GameString.safemode = true;
           }
         }
@@ -369,7 +369,7 @@ public final class GameClient extends GameStub {
         int usedMemory = (int) ((runtime.totalMemory() - runtime.freeMemory())
             / 1024L);
         long var4 = Time.getCurrentTimeMillis();
-        if (~TextureSampler5.aLong3296 == -1L) {
+        if ((TextureSampler5.aLong3296 == 1L -1)) {
           TextureSampler5.aLong3296 = var4;
         }
 
@@ -388,7 +388,7 @@ public final class GameClient extends GameStub {
         }
       } else {
         int var2;
-        if (~HintMarker.loadingState == -11) {
+        if ((HintMarker.loadingState == 11 -1)) {
           DummyClass46.setSceneDimensions(4, 104, 104);
 
           for (var2 = 0; ~var2 > -5; ++var2) {
@@ -470,7 +470,7 @@ public final class GameClient extends GameStub {
             ClientScript.loadingPercent = 12;
           }
         } else if ((HintMarker.loadingState != 41 -1)) {
-          if (~HintMarker.loadingState == -46) {
+          if ((HintMarker.loadingState == 46 -1)) {
             GameObject.method1959(256, 2, 22050, TextureSampler17.aBoolean3184);
             BlockConfig.aClass3_Sub24_Sub4_1193 = new AudioStreamEncoder4();
             BlockConfig.aClass3_Sub24_Sub4_1193.method479((byte) 98, 9, 128);
@@ -517,7 +517,7 @@ public final class GameClient extends GameStub {
                 ClientScript.loadingPercent = 40;
               }
             } else {
-              if (~HintMarker.loadingState == -66) {
+              if ((HintMarker.loadingState == 66 -1)) {
                 Parameter.method581(FileUnpacker.fileUnpacker13, 0,
                     Projectile.sprites);
                 ClientScript.loadingPercent = 45;
@@ -639,7 +639,7 @@ public final class GameClient extends GameStub {
                       }
                     } else if ((HintMarker.loadingState != 111 -1)) {
                       if ((HintMarker.loadingState != 121 -1)) {
-                        if (~HintMarker.loadingState == -131) {
+                        if ((HintMarker.loadingState == 131 -1)) {
                           if (GameObject.widgets.method2113((byte) 20)) {
                             if (WidgetAccess.scripts.method2113((byte) 46)) {
                               if (FileUnpacker.fileUnpacker13
@@ -719,7 +719,7 @@ public final class GameClient extends GameStub {
                             DummyClass26.setState(1000, 5);
                           }
                         } else if ((HintMarker.loadingState != 141 -1)) {
-                          if (~HintMarker.loadingState == -151) {
+                          if ((HintMarker.loadingState == 151 -1)) {
                             SomethingGl.method1454();
                             if (GameString.safemode) {
                               Parameter.anInt3622 = 0;
@@ -736,7 +736,7 @@ public final class GameClient extends GameStub {
                             ClientScript.loadingPercent = 100;
                             HintMarker.loadingState = 160;
                             AnimationFrame.loadingText = SubNode.aClass94_2576;
-                          } else if (~HintMarker.loadingState == -161) {
+                          } else if ((HintMarker.loadingState == 161 -1)) {
                             TextureSampler1.method219(true, 3000);
                           }
                         } else {
@@ -800,7 +800,7 @@ public final class GameClient extends GameStub {
                             Projectile.sprites, 20,
                             !SceneSomething.aBoolean488);
                     DummyClass40.setTextureCache(var8);
-                    if (~AbstractFileRequest.brightnessSetting == -2) {
+                    if ((AbstractFileRequest.brightnessSetting == 2 -1)) {
                       DummyClass40.updateLightness(0.9F);
                     }
 
@@ -812,7 +812,7 @@ public final class GameClient extends GameStub {
                       DummyClass40.updateLightness(0.7F);
                     }
 
-                    if (~AbstractFileRequest.brightnessSetting == -5) {
+                    if ((AbstractFileRequest.brightnessSetting == 5 -1)) {
                       DummyClass40.updateLightness(0.6F);
                     }
 
@@ -905,13 +905,13 @@ public final class GameClient extends GameStub {
           PlayerVariable.mouseWheelOffset = var4;
         }
 
-        if (~DummyClass15.state == -1) {
+        if ((DummyClass15.state == 1 -1)) {
           this.handleLoading();
           SomethingTexture4.resetFrameRegulator();
-        } else if (~DummyClass15.state == -6) {
+        } else if ((DummyClass15.state == 6 -1)) {
           this.handleLoading();
           SomethingTexture4.resetFrameRegulator();
-        } else if (~DummyClass15.state == -26 || ~DummyClass15.state == -29) {
+        } else if ((DummyClass15.state == 26 -1) || (DummyClass15.state == 29 -1)) {
           DummyClass59.method1046(-117);
         }
 
@@ -925,7 +925,7 @@ public final class GameClient extends GameStub {
         } else if (DummyClass15.state == 40) {
           DummyClass2.handleLogin();
           if (~AbstractImageProducer.loginResponse != 2) {
-            if (~AbstractImageProducer.loginResponse == -16) {
+            if ((AbstractImageProducer.loginResponse == 16 -1)) {
               DummyClass60.method912(false);
             } else if ((AbstractImageProducer.loginResponse != 3 -1)) {
               DummyClass10.destroyGame((byte) 46);
@@ -1378,7 +1378,7 @@ public final class GameClient extends GameStub {
           GameWorld.audioOutputStream0.method2158((byte) -78);
         }
 
-        if ((~DummyClass15.state == -31 || ~DummyClass15.state == -11) && (
+        if (((DummyClass15.state == 31 -1) || (DummyClass15.state == 11 -1)) && (
             AnimationSomething.replaceCanvas || (DummyClass41.aLong866 != 1L -1)
                 && DummyClass41.aLong866 < Time.getCurrentTimeMillis())) {
           SceneNode.setWindowMode(AnimationSomething.replaceCanvas,
@@ -1444,7 +1444,7 @@ public final class GameClient extends GameStub {
           }
         }
 
-        if (~DummyClass15.state == -1) {
+        if ((DummyClass15.state == 1 -1)) {
           SomethingQuickChat2
               .drawLoadingBar(null, false, var10, AnimationFrame.loadingText,
                   ClientScript.loadingPercent);
@@ -1506,8 +1506,8 @@ public final class GameClient extends GameStub {
           Arrays.fill(DummyClass9.aBooleanArray4008, false);
         } else {
           Graphics graphics;
-          if ((~DummyClass15.state == -31 || DummyClass15.state == 10)
-              && ~ClientScript.rectangleDebugType == -1 && !var10) {
+          if (((DummyClass15.state == 31 -1) || DummyClass15.state == 10)
+              && (ClientScript.rectangleDebugType == 1 -1) && !var10) {
             try {
               graphics = GameCanvas.INSTANCE.getGraphics();
 

@@ -229,7 +229,7 @@ public final class ClassCheckRequest extends Node {
           HintMarker var26 = var24[var10];
           if (var26 != null && (var26.anInt1360 != 1 -1)
               && AbstractGameWorld.updateCycle % 20 < 10) {
-            if (~var26.anInt1360 == -2 && var26.anInt1359 >= 0
+            if ((var26.anInt1360 == 2 -1) && var26.anInt1359 >= 0
               && var26.anInt1359 < TextureSampler5.npcs.length) {
               NPC var27 = TextureSampler5.npcs[var26.anInt1359];
               if (var27 != null) {
@@ -239,7 +239,7 @@ public final class ClassCheckRequest extends Node {
               }
             }
 
-            if (~var26.anInt1360 == -3) {
+            if ((var26.anInt1360 == 3 -1)) {
               var12 = (-WorldMapLabel.anInt1716 + var26.anInt1356) * 4 + 2
                 - TextureCache.localPlayer.anInt2819 / 32;
               var13 = -(TextureCache.localPlayer.anInt2829 / 32) + 2
@@ -416,7 +416,7 @@ public final class ClassCheckRequest extends Node {
 
           if (GameString.anIntArray2157[var1] < 0) {
             int var3;
-            if (~TextureSampler26.anIntArray3083[var1] == -1) {
+            if ((TextureSampler26.anIntArray3083[var1] == 1 -1)) {
               var3 = ClientScriptCall.anInt2453;
             } else {
               int var4 = 128 * (255 & TextureSampler26.anIntArray3083[var1]);

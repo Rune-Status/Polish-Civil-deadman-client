@@ -108,7 +108,7 @@ public final class SomethingQuickChat2 extends SubNode {
 
       while (true) {
         int var3 = var1.readUnsignedByte();
-        if (~var3 == -1) {
+        if ((var3 == 1 -1)) {
           return;
         }
 
@@ -125,7 +125,7 @@ public final class SomethingQuickChat2 extends SubNode {
 
   public static GameString method531(byte var0) {
     GameString var1;
-      if (~Something3d.anInt3012 == -2 && ~TextureSampler25.amountContextActions
+      if ((Something3d.anInt3012 == 2 -1) && ~TextureSampler25.amountContextActions
           > -3) {
         var1 = RenderAnimation.concat(new GameString[] {
           TextureSampler14.aClass94_3388, DummyInputStream.aClass94_43,

@@ -174,7 +174,7 @@ public final class DummyClass31 {
                 DummyClass14.method2146(var2, var7, var9, var19, var27, null,
                   DummyClass13.anIntArray2017[var10], 0, var24);
                 if (var1) {
-                  if (~var10 == -1) {
+                  if ((var10 == 1 -1)) {
                     if (var11.aBoolean1525) {
                       MouseRecorder.aByteArrayArrayArray1014[var2][var7][var9] = 50;
                       MouseRecorder.aByteArrayArrayArray1014[var2][var7][1 + var9] = 50;
@@ -186,7 +186,7 @@ public final class DummyClass31 {
                           DummyClass36.anIntArrayArrayArray2609[var2][var7][var9], 1);
                     }
                   } else if (var10 != 1) {
-                    if (~var10 == -3) {
+                    if ((var10 == 3 -1)) {
                       if (var11.aBoolean1525) {
                         MouseRecorder.aByteArrayArrayArray1014[var2][var7
                             + 1][var9] = 50;
@@ -202,7 +202,7 @@ public final class DummyClass31 {
                                     - -1][var9], 1);
                       }
                     } else {
-                      if (~var10 == -4) {
+                      if ((var10 == 4 -1)) {
                         if (var11.aBoolean1525) {
                           MouseRecorder.aByteArrayArrayArray1014[var2][var7][var9] = 50;
                           MouseRecorder.aByteArrayArrayArray1014[var2][1
@@ -239,7 +239,7 @@ public final class DummyClass31 {
                   StillGraphic.method1956(var2, var7, var9, var11.anInt1528);
                 }
 
-              } else if (~var6 == -2) {
+              } else if ((var6 == 2 -1)) {
                 if (var11.anInt1531 == -1 && var11.anIntArray1524 == null && !var11.aBoolean1510) {
                   var28 =
                     var11.method1696(var10, var20, var18, 1, var19, var23, var1, null, (byte) -83,
@@ -263,11 +263,11 @@ public final class DummyClass31 {
                     MouseRecorder.aByteArrayArrayArray1014[var2][var7][var9
                         + 1] = 50;
                   } else {
-                    if (~var10 == -2) {
+                    if ((var10 == 2 -1)) {
                       MouseRecorder.aByteArrayArrayArray1014[var2][var7 - -1][1
                           + var9] = 50;
                     } else {
-                      if (~var10 == -3) {
+                      if ((var10 == 3 -1)) {
                         MouseRecorder.aByteArrayArrayArray1014[var2][1
                             + var7][var9] = 50;
                       } else if (var10 == 3) {
@@ -283,7 +283,7 @@ public final class DummyClass31 {
 
               } else {
                 int var43;
-                if (~var6 == -3) {
+                if ((var6 == 3 -1)) {
                   var43 = 1 + var10 & 3;
                   SceneNode var38;
                   SceneNode var42;
@@ -320,7 +320,7 @@ public final class DummyClass31 {
                       var38, DummyClass13.anIntArray2017[var10],
                     DummyClass13.anIntArray2017[var43], var24);
                   if (var11.aBoolean1542 && var1) {
-                    if (~var10 == -1) {
+                    if ((var10 == 1 -1)) {
                       DummyClass36.anIntArrayArrayArray2609[var2][var7][var9] =
                           TextureSampler3.method308(
                               DummyClass36.anIntArrayArrayArray2609[var2][var7][var9],
@@ -331,7 +331,7 @@ public final class DummyClass31 {
                               DummyClass36.anIntArrayArrayArray2609[var2][var7][
                                   1 + var9], 2);
                     } else {
-                      if (~var10 == -2) {
+                      if ((var10 == 2 -1)) {
                         DummyClass36.anIntArrayArrayArray2609[var2][var7][var9
                             - -1] =
                             TextureSampler3.method308(
@@ -343,7 +343,7 @@ public final class DummyClass31 {
                                 DummyClass36.anIntArrayArrayArray2609[var2][var7
                                     - -1][var9], 1);
                       } else {
-                        if (~var10 == -3) {
+                        if ((var10 == 3 -1)) {
                           DummyClass36.anIntArrayArrayArray2609[var2][1
                               + var7][var9] =
                               TextureSampler3.method308(
@@ -353,7 +353,7 @@ public final class DummyClass31 {
                               TextureSampler3.method308(
                                   DummyClass36.anIntArrayArrayArray2609[var2][var7][var9],
                                   2);
-                        } else if (~var10 == -4) {
+                        } else if ((var10 == 4 -1)) {
                           DummyClass36.anIntArrayArrayArray2609[var2][var7][var9] =
                               TextureSampler3.method308(
                                   DummyClass36.anIntArrayArrayArray2609[var2][var7][var9],
@@ -404,7 +404,7 @@ public final class DummyClass31 {
                         MouseRecorder.aByteArrayArrayArray1014[var2][1 + var7][
                             var9 + 1] = 50;
                       } else if (var10 != 2) {
-                        if (~var10 == -4) {
+                        if ((var10 == 4 -1)) {
                           MouseRecorder.aByteArrayArrayArray1014[var2][var7][var9] = 50;
                         }
                       } else {
@@ -448,7 +448,7 @@ public final class DummyClass31 {
                     SceneNode var39;
                     SceneShadowMap var47;
                     long var44;
-                    if (~var6 == -6) {
+                    if ((var6 == 6 -1)) {
                       var43 = 16;
                       var44 = SomethingAudio.method2174(var2, var7, var9);
                       if ((var44 != 1L -1)) {
@@ -487,7 +487,7 @@ public final class DummyClass31 {
                               AudioStreamEncoder3.anIntArray3491[var10] * var43,
                               var24);
                     } else {
-                      if (~var6 == -7) {
+                      if ((var6 == 7 -1)) {
                         var43 = 8;
                         var44 = SomethingAudio.method2174(var2, var7, var9);
                         if ((var44 != 1L -1)) {
@@ -702,7 +702,7 @@ public final class DummyClass31 {
 
             }
           } else if (Keyboard.aBoolean1905 || (var11.anInt1529 != 1 -1) ||
-              ~var11.anInt1538 == -2
+              (var11.anInt1538 == 2 -1)
             || var11.aBoolean1483) {
             if (~var11.anInt1531 == 0 && var11.anIntArray1524 == null && !var11.aBoolean1510) {
               var28 =

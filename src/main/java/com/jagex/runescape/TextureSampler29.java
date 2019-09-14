@@ -39,7 +39,7 @@ public final class TextureSampler29 extends AbstractTextureSampler {
           int var5 = var2.readUnsignedByte();
           if (var5 == 0) {
             this.aClass75Array3392[var4] = FileSystem.method843(-5232, var2);
-          } else if (~var5 == -2) {
+          } else if ((var5 == 2 -1)) {
             this.aClass75Array3392[var4] = StillGraphicNode.method536((byte) 54, var2);
           } else if (var5 != 2) {
             if (var5 == 3) {

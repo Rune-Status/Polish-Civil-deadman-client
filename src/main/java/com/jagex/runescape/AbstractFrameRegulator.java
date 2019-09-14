@@ -157,7 +157,7 @@ public abstract class AbstractFrameRegulator {
               int[] var29;
               int[] var28;
               if (var24 == 0) {
-                if (~var25 == -1) {
+                if ((var25 == 1 -1)) {
                   continue;
                 }
 
@@ -194,7 +194,7 @@ public abstract class AbstractFrameRegulator {
               SceneSomething var40 = AbstractSomethingTexture.method1336(var4, var23, var19);
               if (var40 != null) {
                 int var41 = (int) (var40.aLong498 >> 14) & 63;
-                if (~var41 == -10) {
+                if ((var41 == 10 -1)) {
                   var29 = null;
                   int var30 = 3 & (int) (var40.aLong498 >> 20);
                   boolean var31;

@@ -55,7 +55,7 @@ public final class OndemandRequester {
       }
 
       if (this.socketStream == null) {
-        return this.method1253(4) == 0 && ~this.method1246(11706) == -1;
+        return this.method1253(4) == 0 && (this.method1246(11706) == 1 -1);
       } else {
         try {
           this.socketStream.method1466(127);
@@ -87,14 +87,14 @@ public final class OndemandRequester {
               throw new IOException();
             }
 
-            if (~avail == -1) {
+            if ((avail == 1 -1)) {
               break;
             }
 
             this.timeDiff = 0;
             byte read = 0;
             if (this.currentRequest != null) {
-              if (~this.currentRequest.anInt4067 == -1) {
+              if ((this.currentRequest.anInt4067 == 1 -1)) {
                 read = 1;
               }
             } else {
@@ -133,7 +133,7 @@ public final class OndemandRequester {
                 this.currentRequest.aBoolean3632 = false;
                 this.currentRequest = null;
               } else {
-                if (~this.currentRequest.anInt4067 == -513) {
+                if ((this.currentRequest.anInt4067 == 513 -1)) {
                   this.currentRequest.anInt4067 = 0;
                 }
               }
@@ -222,7 +222,7 @@ public final class OndemandRequester {
           this.anInt1010 = -2;
           ++this.anInt1011;
           this.socketStream = null;
-          return this.method1253(4) == 0 && ~this.method1246(11706) == -1;
+          return this.method1253(4) == 0 && (this.method1246(11706) == 1 -1);
         }
       }
   }

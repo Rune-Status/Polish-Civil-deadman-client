@@ -187,7 +187,7 @@ public final class StringNode extends Node {
       StringNode.method736(-60, -93);
     }
 
-    if (~SomethingQuickChatK.anInt154 == -1) {
+    if ((SomethingQuickChatK.anInt154 == 1 -1)) {
       DummyClass55.aClass3_Sub24_Sub4_1421.method506(128, var0);
     } else {
       TextureSampler36.anInt3423 = var0;

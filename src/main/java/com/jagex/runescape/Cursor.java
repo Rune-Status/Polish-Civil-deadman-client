@@ -34,7 +34,7 @@ public final class Cursor {
 
       while (true) {
         int var4 = var1.readUnsignedByte();
-        if (~var4 == -1) {
+        if ((var4 == 1 -1)) {
           return;
         }
 
@@ -47,7 +47,7 @@ public final class Cursor {
         this.anInt881 = -82;
       }
 
-      if (~var3 == -2) {
+      if ((var3 == 2 -1)) {
         this.anInt883 = var4.readUnsignedShort();
       } else {
         if (var3 == 2) {
@@ -65,7 +65,7 @@ public final class Cursor {
         Cursor.anIntArray882 = null;
       }
 
-      if (~var1.anInt2816 == -1) {
+      if ((var1.anInt2816 == 1 -1)) {
         var1.anInt2824 = 0;
       } else {
         if (~var1.animationId != 0 && var1.anInt2828 == 0) {
@@ -76,7 +76,7 @@ public final class Cursor {
             return;
           }
 
-          if (~var1.anInt2811 >= -1 && ~var3.anInt1850 == -1) {
+          if (~var1.anInt2811 >= -1 && (var3.anInt1850 == 1 -1)) {
             ++var1.anInt2824;
             return;
           }
@@ -183,7 +183,7 @@ public final class Cursor {
           var9 <<= 1;
           var11 = 2;
         } else {
-          if (~var1.aByteArray2795[-1 + var1.anInt2816] == -1) {
+          if ((var1.aByteArray2795[-1 + var1.anInt2816] == 1 -1)) {
             var11 = 0;
             var9 >>= 1;
           }
@@ -199,7 +199,7 @@ public final class Cursor {
           } else {
             var1.anInt2764 = var2.anInt393;
           }
-        } else if (var2.anInt398 != -1 && ~var11 == -1) {
+        } else if (var2.anInt398 != -1 && (var11 == 1 -1)) {
           if (~var2.anInt389 == ~var1.anInt2764 && ~var2.anInt372 != 0) {
             var1.anInt2764 = var2.anInt372;
           } else if (~var2.anInt390 == ~var1.anInt2764 && var2.anInt406 != -1) {
@@ -213,7 +213,7 @@ public final class Cursor {
 
         if (var2.anInt360 != -1) {
           var9 <<= 7;
-          if (~var1.anInt2816 == -2) {
+          if ((var1.anInt2816 == 2 -1)) {
             int var13 =
                 (~var5 <= ~var1.anInt2819 ? var5 - var1.anInt2819
                     : -var5 + var1.anInt2819) << 7;
@@ -299,16 +299,16 @@ public final class Cursor {
     int var2 = 91 / ((var1 - 28) / 39);
       int var3 = var0 & 63;
       int var4 = (var0 & 217) >> 6;
-      if (~var3 == -19) {
+      if ((var3 == 19 -1)) {
         if (var4 == 0) {
           return 1;
         }
 
-        if (~var4 == -2) {
+        if ((var4 == 2 -1)) {
           return 2;
         }
 
-        if (~var4 == -3) {
+        if ((var4 == 3 -1)) {
           return 4;
         }
 
@@ -316,7 +316,7 @@ public final class Cursor {
           return 8;
         }
       } else {
-        if (~var3 == -20 || ~var3 == -22) {
+        if ((var3 == 20 -1) || (var3 == 22 -1)) {
           if (var4 == 0) {
             return 16;
           }
@@ -329,7 +329,7 @@ public final class Cursor {
             return 64;
           }
 
-          if (~var4 == -4) {
+          if ((var4 == 4 -1)) {
             return 128;
           }
         }

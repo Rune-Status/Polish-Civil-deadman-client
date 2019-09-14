@@ -170,8 +170,7 @@ public final class AudioStreamEncoder3 extends AudioStreamEncoder {
           }
 
           var2.anInt2516 += var7 * var8 + -1048576;
-          if (~this.aClass3_Sub24_Sub4_3493.anIntArray3519[var2.anInt2514]
-              == -1) {
+          if ((this.aClass3_Sub24_Sub4_3493.anIntArray3519[var2.anInt2514] == 1 -1)) {
             var2.aClass3_Sub24_Sub1_2507 =
                 AudioStreamEncoder1
                     .method432(var2.aClass3_Sub12_Sub1_2509, var11.method438(),

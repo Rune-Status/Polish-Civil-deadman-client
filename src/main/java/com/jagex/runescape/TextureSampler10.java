@@ -15,7 +15,7 @@ public final class TextureSampler10 extends AbstractTextureSampler {
 
   private void method345(int var1, boolean var2) {
     if ((var1 != 1 -1)) {
-        if (~var1 == -2) {
+        if ((var1 == 2 -1)) {
           this.anIntArrayArray3438 = new int[2][4];
           this.anIntArrayArray3438[0][1] = 0;
           this.anIntArrayArray3438[0][0] = 0;
@@ -25,7 +25,7 @@ public final class TextureSampler10 extends AbstractTextureSampler {
           this.anIntArrayArray3438[0][2] = 0;
           this.anIntArrayArray3438[1][2] = 4096;
           this.anIntArrayArray3438[1][3] = 4096;
-        } else if (~var1 == -3) {
+        } else if ((var1 == 3 -1)) {
           this.anIntArrayArray3438 = new int[8][4];
           this.anIntArrayArray3438[0][0] = 0;
           this.anIntArrayArray3438[1][0] = 2867;
@@ -215,7 +215,7 @@ public final class TextureSampler10 extends AbstractTextureSampler {
     if (var3) {
         if (var1 == 0) {
           int var4 = var2.readUnsignedByte();
-          if (~var4 == -1) {
+          if ((var4 == 1 -1)) {
             this.anIntArrayArray3438 = new int[var2.readUnsignedByte()][4];
 
             for (int var5 = 0; this.anIntArrayArray3438.length > var5;
@@ -368,7 +368,7 @@ public final class TextureSampler10 extends AbstractTextureSampler {
         GameWorld.anInt2622 = 1;
       }
 
-      if (~GameWorld.anInt2622 == -2 && (var1 >= 3140 -1) && ~var1 >= -3200
+      if ((GameWorld.anInt2622 == 2 -1) && (var1 >= 3140 -1) && ~var1 >= -3200
           && var2 >= 3008
           && var2 <= 3062) {
         GameWorld.anInt2622 = 0;

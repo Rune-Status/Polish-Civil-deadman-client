@@ -32,7 +32,7 @@ public final class GroundItemNode extends SubNode {
           GameObject.anInt2737 = 10;
         }
 
-        if (~GameObject.anInt2737 == -11) {
+        if ((GameObject.anInt2737 == 11 -1)) {
           TextureSampler37.anInt3256 = Buffer.aClass3_Sub28_Sub3_2600.anInt3555 >> 6 << 6;
           MapScene.anInt65 = Buffer.aClass3_Sub28_Sub3_2600.anInt3562 >> 6 << 6;
           DummyClass58.anInt1460 =
@@ -43,7 +43,7 @@ public final class GroundItemNode extends SubNode {
             AbstractGameWorld.aFloat727 = 3.0F;
             NPC.aFloat3979 = 3.0F;
           } else {
-            if (~Buffer.aClass3_Sub28_Sub3_2600.anInt3563 == -51) {
+            if ((Buffer.aClass3_Sub28_Sub3_2600.anInt3563 == 51 -1)) {
               AbstractGameWorld.aFloat727 = 4.0F;
               NPC.aFloat3979 = 4.0F;
             } else {
@@ -120,7 +120,7 @@ public final class GroundItemNode extends SubNode {
               DummyClass5.method2210((byte) -90, true);
               SomethingTexture4.resetFrameRegulator();
             } else {
-              if (~GameObject.anInt2737 == -61) {
+              if ((GameObject.anInt2737 == 61 -1)) {
                 if (TextureSampler23.worldMaps
                     .method2135(RenderAnimation.concat(new GameString[]{
                         Buffer.aClass3_Sub28_Sub3_2600.aClass94_3561,
@@ -153,19 +153,19 @@ public final class GroundItemNode extends SubNode {
                 DummyClass5.method2210((byte) -90, true);
                 SomethingTexture4.resetFrameRegulator();
               } else if (GameObject.anInt2737 != 73) {
-                if (~GameObject.anInt2737 == -77) {
+                if ((GameObject.anInt2737 == 77 -1)) {
                   DummyClass54.aClass33_1399 = new SomethingFont(14, true,
                       GameCanvas.INSTANCE);
                   GameObject.anInt2737 = 79;
                   DummyClass5.method2210((byte) -90, true);
                   SomethingTexture4.resetFrameRegulator();
-                } else if (~GameObject.anInt2737 == -80) {
+                } else if ((GameObject.anInt2737 == 80 -1)) {
                   SomethingTexture1.aClass33_2637 =
                       new SomethingFont(17, true, GameCanvas.INSTANCE);
                   GameObject.anInt2737 = 82;
                   DummyClass5.method2210((byte) -90, true);
                   SomethingTexture4.resetFrameRegulator();
-                } else if (~GameObject.anInt2737 == -83) {
+                } else if ((GameObject.anInt2737 == 83 -1)) {
                   DummyClass25.aClass33_1626 = new SomethingFont(19, true,
                       GameCanvas.INSTANCE);
                   GameObject.anInt2737 = 85;
