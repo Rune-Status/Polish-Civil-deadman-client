@@ -39,7 +39,7 @@ public final class DummyClass30 {
   public static Buffer method939(byte var0) {
     Buffer var1 = new Buffer(34);
       var1.writeByte(11);
-      var1.writeByte(AbstractFileRequest.brightnessSetting);
+      var1.writeByte(GlobalStatics_4.brightnessSetting);
       var1.writeByte(!ClientScriptEnum.aBoolean3665 ? 0 : 1);
       var1.writeByte(GlobalStatics_2.aBoolean3604 ? 1 : 0);
       var1.writeByte(Keyboard.aBoolean1905 ? 1 : 0);

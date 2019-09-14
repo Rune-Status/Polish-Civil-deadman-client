@@ -87,12 +87,12 @@ public final class TriChromaticImageBuffer extends Node {
 
   public static void method390(boolean var0, int var1, int var2, int var3, byte var4, int var5,
                               int var6) {
-    AbstractFileRequest.anInt3631 = var3;
+    GlobalStatics_4.anInt3631 = var3;
       TextureSampler25.anInt3414 = var2;
       GameCanvas.anInt30 = var6;
       DummyClass8.anInt4021 = var1;
       AbstractMouseWheel.anInt1904 = var5;
-      if (var0 && AbstractFileRequest.anInt3631 >= 100) {
+      if (var0 && GlobalStatics_4.anInt3631 >= 100) {
         NPC.anInt3995 = 128 * GameCanvas.anInt30 + 64;
         DummyClass49.anInt1111 = 128 * AbstractMouseWheel.anInt1904 + 64;
         EnumStringFetcher.anInt2162 =

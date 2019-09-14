@@ -119,7 +119,7 @@ public final class BZipDecompressorState {
       TextureSampler36.aClass94_3427 = DummyClass49.aClass94_1110;
       DummyClass8.aClass94_4024 = FileRequester.aClass94_2945;
       TextureSampler28.aClass94_3311 = TextureSampler20.aClass94_3157;
-      RenderAnimation.aClass94_374 = AbstractFileRequest.aClass94_3634;
+      RenderAnimation.aClass94_374 = GlobalStatics_4.aClass94_3634;
       FloorUnderlay.aClass94_1409 = Player.aClass94_3957;
       TriChromaticImageBuffer.aClass94_2481 = FaceNormal.aClass94_1636;
       GameObject.aClass94_2751 = NPC.aClass94_3991;
@@ -143,7 +143,7 @@ public final class BZipDecompressorState {
       NPC.aClass94_3988 = GLStatics.aClass94_699;
       DummyClass27.aClass94_1583 = SomethingTilek.OK;
       DummyClass53.aClass94_1335 = SomethingInScenePacket202.aClass94_2274;
-      TextureSampler31.aClass94_3167 = AbstractFileRequest.aClass94_3633;
+      TextureSampler31.aClass94_3167 = GlobalStatics_4.aClass94_3633;
       DummyClass5.aClass94_2991 = AnimationSomething.aClass94_3583;
       SomethingInScenePacket202.aClass94_2267 = InventoryConfig.aClass94_3646;
       SomethingSceneJ.aClass94_327 = DummyClass35.aClass94_659;
@@ -179,7 +179,7 @@ public final class BZipDecompressorState {
       DummyClass35.aClass94_662 = DummyClass5.aClass94_2995;
       DummyClass12.aClass94_2031 = GameCanvas.aClass94_35;
       DummyClass26.aClass94_1615 = AnimationFrame.aClass94_2458;
-      AbstractFileRequest.aClass94_3629 = DummyClass39.aClass94_738;
+      GlobalStatics_4.aClass94_3629 = DummyClass39.aClass94_738;
       AnimationSomething.aClass94_3584 = SomethingTexture1.aClass94_2641;
       DummyClass32.aClass94_525 = DummyClass45.aClass94_982;
       AnimationSomething.aClass94_3586 = SomethingTexture1.aClass94_2641;

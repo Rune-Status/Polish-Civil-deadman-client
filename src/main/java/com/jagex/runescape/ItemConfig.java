@@ -3588,19 +3588,19 @@ public final class ItemConfig {
                                     if ((k34 > 4)) {
                                       k34 = 4;
                                     }
-                                    AbstractFileRequest.brightnessSetting = k34;
+                                    GlobalStatics_4.brightnessSetting = k34;
                                     if (!GlRenderer.useOpenGlRenderer || !GLStatics.useBumpMaps) {
-                                      if ((AbstractFileRequest.brightnessSetting == 1)) {
+                                      if ((GlobalStatics_4.brightnessSetting == 1)) {
                                         DummyClass40.updateLightness(0.9F);
                                       }
-                                      if (AbstractFileRequest.brightnessSetting == 2) {
+                                      if (GlobalStatics_4.brightnessSetting == 2) {
                                         DummyClass40.updateLightness(0.8F);
                                       }
-                                      if (AbstractFileRequest.brightnessSetting
+                                      if (GlobalStatics_4.brightnessSetting
                                           == 3) {
                                         DummyClass40.updateLightness(0.7F);
                                       }
-                                      if ((AbstractFileRequest.brightnessSetting == 4)) {
+                                      if ((GlobalStatics_4.brightnessSetting == 4)) {
                                         DummyClass40.updateLightness(0.6F);
                                       }
                                     }
@@ -3696,16 +3696,16 @@ public final class ItemConfig {
                                     if (GlRenderer.useOpenGlRenderer && GLStatics.useBumpMaps) {
                                       DummyClass40.updateLightness(0.7F);
                                     } else {
-                                      if (AbstractFileRequest.brightnessSetting == 1) {
+                                      if (GlobalStatics_4.brightnessSetting == 1) {
                                         DummyClass40.updateLightness(0.9F);
                                       }
-                                      if ((AbstractFileRequest.brightnessSetting == 2)) {
+                                      if ((GlobalStatics_4.brightnessSetting == 2)) {
                                         DummyClass40.updateLightness(0.8F);
                                       }
-                                      if (AbstractFileRequest.brightnessSetting == 3) {
+                                      if (GlobalStatics_4.brightnessSetting == 3) {
                                         DummyClass40.updateLightness(0.7F);
                                       }
-                                      if (AbstractFileRequest.brightnessSetting == 4) {
+                                      if (GlobalStatics_4.brightnessSetting == 4) {
                                         DummyClass40.updateLightness(0.6F);
                                       }
                                     }
@@ -3849,7 +3849,7 @@ public final class ItemConfig {
                                 if ((j1 < 6200)) {
                                   if (j1 == 6101) {
                                     GroundItem.anIntArray2929[k++] =
-                                      AbstractFileRequest.brightnessSetting;
+                                      GlobalStatics_4.brightnessSetting;
                                     continue;
                                   }
                                   if (j1 == 6102) {

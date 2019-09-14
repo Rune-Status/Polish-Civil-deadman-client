@@ -499,7 +499,7 @@ public final class AnimationSequence {
       SomethingTilek.anInt1677 = 0;
       SocketStream.anInt1240 = 0;
       DummyCanvas.anInt19 = 0;
-      AbstractFileRequest.anInt3630 = 0;
+      GlobalStatics_4.anInt3630 = 0;
       TextureSampler17.anInt3187 = 0;
       SomethingOtherWorldMap.anInt2541 = 0;
       GlobalStatics_0.anInt937 = 0;
@@ -593,7 +593,7 @@ public final class AnimationSequence {
       DummyCanvas.anInt18 = 0;
       PlayerVariable.anInt562 = 0;
       Structure.anInt3640 = 0;
-      AbstractFileRequest.anInt3627 = 0;
+      GlobalStatics_4.anInt3627 = 0;
       Inventory.anInt2549 = 0;
       ItemConfig.anInt759 = 0;
       TextureCache.anInt2130 = 0;
@@ -688,7 +688,7 @@ public final class AnimationSequence {
       GameCanvas.anInt30 = 0;
       SpotAnimationConfig.anInt529 = 0;
       Mouse.anInt1923 = 0;
-      AbstractFileRequest.anInt3631 = 0;
+      GlobalStatics_4.anInt3631 = 0;
       DummyClass8.anInt4021 = 0;
 
       for (var1 = 0; NpcConfiguration.anIntArray1277.length > var1; ++var1) {

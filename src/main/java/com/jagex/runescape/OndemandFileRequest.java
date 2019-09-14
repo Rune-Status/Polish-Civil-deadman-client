@@ -260,19 +260,19 @@ public final class OndemandFileRequest extends AbstractFileRequest {
             DummyClass0.method1756();
             ((TextureCache) GLStatics.textureCache).method1619(20, -1);
             if (GLStatics.useBumpMaps) {
-              if (AbstractFileRequest.brightnessSetting == 1) {
+              if (GlobalStatics_4.brightnessSetting == 1) {
                 DummyClass40.updateLightness(0.9F);
               }
 
-              if ((AbstractFileRequest.brightnessSetting == 2)) {
+              if ((GlobalStatics_4.brightnessSetting == 2)) {
                 DummyClass40.updateLightness(0.8F);
               }
 
-              if (AbstractFileRequest.brightnessSetting == 3) {
+              if (GlobalStatics_4.brightnessSetting == 3) {
                 DummyClass40.updateLightness(0.7F);
               }
 
-              if ((AbstractFileRequest.brightnessSetting == 4)) {
+              if ((GlobalStatics_4.brightnessSetting == 4)) {
                 DummyClass40.updateLightness(0.6F);
               }
             }

@@ -913,7 +913,7 @@ public final class Cache {
                             GlRenderer.method1846();
                             GlRenderer.setDepthTestEnabled(true);
                             GlRenderer.setFogEnabled(false);
-                            TextureSampler29.setupDefaultSun(AbstractFileRequest.brightnessSetting);
+                            TextureSampler29.setupDefaultSun(GlobalStatics_4.brightnessSetting);
                             if (DummyOutputStream.aBoolean47) {
                               GlUtils.resetClip();
                               GlRenderer.method1841();

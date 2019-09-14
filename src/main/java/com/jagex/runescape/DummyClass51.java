@@ -128,7 +128,7 @@ public final class DummyClass51 {
           + ((!GLStatics.useBumpMaps ? 0 : 1) << 13) + ((Projectile.aBoolean2910 ? 1 : 0) << 10)
           + ((TextureSampler0.aBoolean3275 ? 1 : 0) << 9) + ((Widget.aBoolean236 ? 1 : 0) << 7) + (
           (!SceneSomething.aBoolean488 ? 0 : 1) << 6) + ((Keyboard.aBoolean1905 ? 1 : 0) << 5) + (
-          ((!ClientScriptEnum.aBoolean3665 ? 0 : 1) << 3) + (AbstractFileRequest.brightnessSetting
+          ((!ClientScriptEnum.aBoolean3665 ? 0 : 1) << 3) + (GlobalStatics_4.brightnessSetting
             & 7) - (-((!GlobalStatics_2.aBoolean3604 ? 0 : 1) << 4) - (
             (GameWorld.aBoolean2623 ? 1 : 0) << 8)) - (
             -(GLStatics.anInt1137 << 11 & 6144) - (

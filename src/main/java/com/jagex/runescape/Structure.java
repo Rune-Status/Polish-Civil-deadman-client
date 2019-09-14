@@ -332,7 +332,7 @@ public final class Structure extends SubNode {
       }
 
       GlobalStatics_4.aClass94_825 = SomethingInScenePacket202.aClass94_2269;
-      AbstractFileRequest.aClass94_3629 = AudioStreamEncoder4.aClass94_3496;
+      GlobalStatics_4.aClass94_3629 = AudioStreamEncoder4.aClass94_3496;
       DummyClass35.aClass94_666 = IdentityKit.aClass94_463;
       Structure.aClass94_3643 = TextureSampler33.aClass94_3053;
       DummyClass12.aClass94_2031 = TriChromaticImageCache.aClass94_1377;

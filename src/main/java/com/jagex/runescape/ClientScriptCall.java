@@ -79,7 +79,7 @@ public final class ClientScriptCall extends Node {
       int var1 = 128 * GameCanvas.anInt30 + 64;
       int var3 = BufferData.method1736(GameWorldSomething.currentPlane, 1, var1, var2)
         - TextureSampler25.anInt3414;
-      if (AbstractFileRequest.anInt3631 >= 100) {
+      if (GlobalStatics_4.anInt3631 >= 100) {
         NPC.anInt3995 = 64 + GameCanvas.anInt30 * 128;
         DummyClass49.anInt1111 = 64 + AbstractMouseWheel.anInt1904 * 128;
         EnumStringFetcher.anInt2162 =
@@ -88,7 +88,7 @@ public final class ClientScriptCall extends Node {
       } else {
         if (NPC.anInt3995 < var1) {
           NPC.anInt3995 +=
-            DummyClass8.anInt4021 + AbstractFileRequest.anInt3631 * (-NPC.anInt3995 + var1) / 1000;
+            DummyClass8.anInt4021 + GlobalStatics_4.anInt3631 * (-NPC.anInt3995 + var1) / 1000;
           if (NPC.anInt3995 > var1) {
             NPC.anInt3995 = var1;
           }
@@ -96,7 +96,7 @@ public final class ClientScriptCall extends Node {
 
         if ((EnumStringFetcher.anInt2162 < var3)) {
           EnumStringFetcher.anInt2162 +=
-            (-EnumStringFetcher.anInt2162 + var3) * AbstractFileRequest.anInt3631 / 1000
+            (-EnumStringFetcher.anInt2162 + var3) * GlobalStatics_4.anInt3631 / 1000
               + DummyClass8.anInt4021;
           if (EnumStringFetcher.anInt2162 > var3) {
             EnumStringFetcher.anInt2162 = var3;
@@ -105,7 +105,7 @@ public final class ClientScriptCall extends Node {
 
         if (NPC.anInt3995 > var1) {
           NPC.anInt3995 -=
-            DummyClass8.anInt4021 + (NPC.anInt3995 - var1) * AbstractFileRequest.anInt3631 / 1000;
+            DummyClass8.anInt4021 + (NPC.anInt3995 - var1) * GlobalStatics_4.anInt3631 / 1000;
           if (NPC.anInt3995 < var1) {
             NPC.anInt3995 = var1;
           }
@@ -113,7 +113,7 @@ public final class ClientScriptCall extends Node {
 
         if (DummyClass49.anInt1111 < var2) {
           DummyClass49.anInt1111 += DummyClass8.anInt4021
-            + AbstractFileRequest.anInt3631 * (var2 - DummyClass49.anInt1111) / 1000;
+            + GlobalStatics_4.anInt3631 * (var2 - DummyClass49.anInt1111) / 1000;
           if ((var2 < DummyClass49.anInt1111)) {
             DummyClass49.anInt1111 = var2;
           }
@@ -121,7 +121,7 @@ public final class ClientScriptCall extends Node {
 
         if (var3 < EnumStringFetcher.anInt2162) {
           EnumStringFetcher.anInt2162 -=
-            (EnumStringFetcher.anInt2162 - var3) * AbstractFileRequest.anInt3631 / 1000
+            (EnumStringFetcher.anInt2162 - var3) * GlobalStatics_4.anInt3631 / 1000
               + DummyClass8.anInt4021;
           if (var3 > EnumStringFetcher.anInt2162) {
             EnumStringFetcher.anInt2162 = var3;
@@ -130,7 +130,7 @@ public final class ClientScriptCall extends Node {
 
         if (DummyClass49.anInt1111 > var2) {
           DummyClass49.anInt1111 -= DummyClass8.anInt4021 + (
-            (-var2 + DummyClass49.anInt1111) * AbstractFileRequest.anInt3631 / 1000);
+            (-var2 + DummyClass49.anInt1111) * GlobalStatics_4.anInt3631 / 1000);
           if (var2 > DummyClass49.anInt1111) {
             DummyClass49.anInt1111 = var2;
           }

@@ -394,7 +394,7 @@ public final class GameClient extends GameStub {
 
           ClientScript.loadingPercent = 10;
           HintMarker.loadingState = 30;
-          AnimationFrame.loadingText = AbstractFileRequest.aClass94_3629;
+          AnimationFrame.loadingText = GlobalStatics_4.aClass94_3629;
         } else if (HintMarker.loadingState == 30) {
           if (AbstractFileRequester.fileSystem == null) {
             AbstractFileRequester.fileSystem =
@@ -797,19 +797,19 @@ public final class GameClient extends GameStub {
                             Projectile.sprites, 20,
                             !SceneSomething.aBoolean488);
                     DummyClass40.setTextureCache(var8);
-                    if ((AbstractFileRequest.brightnessSetting == 1)) {
+                    if ((GlobalStatics_4.brightnessSetting == 1)) {
                       DummyClass40.updateLightness(0.9F);
                     }
 
-                    if (AbstractFileRequest.brightnessSetting == 2) {
+                    if (GlobalStatics_4.brightnessSetting == 2) {
                       DummyClass40.updateLightness(0.8F);
                     }
 
-                    if (AbstractFileRequest.brightnessSetting == 3) {
+                    if (GlobalStatics_4.brightnessSetting == 3) {
                       DummyClass40.updateLightness(0.7F);
                     }
 
-                    if ((AbstractFileRequest.brightnessSetting == 4)) {
+                    if ((GlobalStatics_4.brightnessSetting == 4)) {
                       DummyClass40.updateLightness(0.6F);
                     }
 
@@ -1102,7 +1102,7 @@ public final class GameClient extends GameStub {
       GLStatics.method1059((byte) -2);
       AbstractFileRequester.method2093(1);
       FileTable.method1223(0);
-      AbstractFileRequest.method588((byte) 120);
+      GlobalStatics_4.method588((byte) 120);
       DummyClass15.method2063(0);
       DummyClass47.method1333();
       DummyClass18.method828(-90);

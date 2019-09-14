@@ -178,7 +178,7 @@ public final class GameBuffer extends Buffer {
                   TextureCache.localPlayer.waypointsX[0]);
           SceneSomething2.anInt1053 = DummyClass5.anInt2993;
           FileRequester.anInt2958 = 0;
-          ++AbstractFileRequest.anInt3627;
+          ++GlobalStatics_4.anInt3627;
           GlobalStatics_0.anInt638 = 2;
           FileCacheRequest.anInt4062 = DummyClass36.anInt2614;
           TextureSampler12.secureBuffer.writePacket(78);
@@ -337,7 +337,7 @@ public final class GameBuffer extends Buffer {
 
       if (var4 == 60) {
         if ((var5 == 0)) {
-          AbstractFileRequest
+          GlobalStatics_4
               .method589(GameWorldSomething.currentPlane, var2, var3);
         } else {
           if ((var5 == 1)) {
@@ -446,7 +446,7 @@ public final class GameBuffer extends Buffer {
       }
 
       if (var4 == 49) {
-        ++AbstractFileRequest.anInt3630;
+        ++GlobalStatics_4.anInt3630;
         DummyClass8.method2224((byte) 39, var6, var3, var2);
         TextureSampler12.secureBuffer.writePacket(84);
         TextureSampler12.secureBuffer
@@ -819,7 +819,7 @@ public final class GameBuffer extends Buffer {
         if (var4 == 11) {
           if ((var5 == 0)) {
             ClientScriptCall.anInt2440 = 1;
-            AbstractFileRequest
+            GlobalStatics_4
                 .method589(GameWorldSomething.currentPlane, var2, var3);
           } else {
             if (var5 == 1) {
@@ -1081,7 +1081,7 @@ public final class GameBuffer extends Buffer {
             if (var4 == 36) {
               if ((var5 == 0)) {
                 GameObjectConfig.anInt1521 = 1;
-                AbstractFileRequest
+                GlobalStatics_4
                     .method589(GameWorldSomething.currentPlane, var2, var3);
               } else {
                 if ((TextureSampler35.rights > 0)

@@ -251,11 +251,11 @@ public final class TextureSampler36 extends AbstractTextureSampler {
           GlRenderer.setFogEnabled(true);
           if ((DummyClass15.state == 10)) {
             var12 = GameBuffer.method809(DisplayMode.loopCycle, DummyClass49.anInt1111 >> 10,
-              AbstractFileRequest.brightnessSetting, NPC.anInt3995 >> 10,
+              GlobalStatics_4.brightnessSetting, NPC.anInt3995 >> 10,
                 1);
           } else {
             var12 = GameBuffer.method809(DisplayMode.loopCycle,
-              TextureCache.localPlayer.waypointsY[0] >> 3, AbstractFileRequest.brightnessSetting,
+              TextureCache.localPlayer.waypointsY[0] >> 3, GlobalStatics_4.brightnessSetting,
               TextureCache.localPlayer.waypointsX[0] >> 3, 1);
           }
 

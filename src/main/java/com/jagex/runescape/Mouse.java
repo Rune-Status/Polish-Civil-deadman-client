@@ -128,7 +128,7 @@ public final class Mouse implements MouseListener, MouseMotionListener,
               && var1.anInt2248 >= 1
               && var1.anInt2264 <= 102 && (var1.anInt2248 <= 102) && (
               (var1.anInt2265 < 0)
-                  || AbstractFileRequest
+                  || GlobalStatics_4
                   .method590((byte) -34, var1.anInt2265, var1.anInt2262))) {
             FileCache.method1048(var1.anInt2265, var1.anInt2264, var1.anInt2250,
                 var1.anInt2256,
@@ -142,7 +142,7 @@ public final class Mouse implements MouseListener, MouseMotionListener,
               var1.unlinkNode();
             }
           }
-        } else if ((var1.anInt2254 < 0) || AbstractFileRequest
+        } else if ((var1.anInt2254 < 0) || GlobalStatics_4
             .method590((byte) -66, var1.anInt2254,
                 var1.anInt2253)) {
           FileCache.method1048(var1.anInt2254, var1.anInt2264, var1.anInt2250,

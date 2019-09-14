@@ -109,13 +109,13 @@ public final class BitVariable {
         }
 
         if (((var0.bytes.length - var0.position) >= var3)) {
-          AbstractFileRequest.brightnessSetting = var0.readUnsignedByte();
-          if ((AbstractFileRequest.brightnessSetting >= 1)) {
-            if ((AbstractFileRequest.brightnessSetting > 4)) {
-              AbstractFileRequest.brightnessSetting = 4;
+          GlobalStatics_4.brightnessSetting = var0.readUnsignedByte();
+          if ((GlobalStatics_4.brightnessSetting >= 1)) {
+            if ((GlobalStatics_4.brightnessSetting > 4)) {
+              GlobalStatics_4.brightnessSetting = 4;
             }
           } else {
-            AbstractFileRequest.brightnessSetting = 1;
+            GlobalStatics_4.brightnessSetting = 1;
           }
 
           SceneSomething.method957(var1 + 97, var0.readUnsignedByte() == 1);

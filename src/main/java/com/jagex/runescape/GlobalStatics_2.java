@@ -222,7 +222,7 @@ public class GlobalStatics_2 {
   }
 
   public static void loadSettings(SignLink var0, int var1) {
-    AbstractFileRequest.brightnessSetting = 3;
+    GlobalStatics_4.brightnessSetting = 3;
       SceneSomething.method957(96, true);
       aBoolean3604 = true;
       TextureSampler17.aBoolean3184 = true;
