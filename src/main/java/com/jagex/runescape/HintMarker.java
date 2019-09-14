@@ -27,7 +27,7 @@ public final class HintMarker {
           boolean var18 = false;
           int var5 = 0;
           int var6 = 0;
-          if (-2 == ~var1.readUnsignedByte()) {
+          if (~var1.readUnsignedByte() == -2) {
             var5 = var1.readUnsignedByte();
             var18 = true;
             var6 = var1.readUnsignedByte();
@@ -39,7 +39,7 @@ public final class HintMarker {
           int var10 = -(var8 * 64) - (-MapScene.anInt65 - -1) + DummyClass58.anInt1460;
           int var11;
           int var12;
-          if (-1 >= ~var9 && -63 + var10 >= 0 && DummyClass30.anInt455 > var9 + 63
+          if (~var9 <= -1 && -63 + var10 >= 0 && DummyClass30.anInt455 > var9 + 63
             && var10 < DummyClass58.anInt1460) {
             var11 = var9 >> 6;
             var12 = var10 >> 6;
@@ -54,9 +54,9 @@ public final class HintMarker {
                 if (!var18 || ~(8 * var5) >= ~var13 && ~var13 > ~(8 * var5 - -8) && ~var14 <= ~(8
                   * var6) && var14 < var6 * 8 - -8) {
                   int var15 = var1.readUnsignedByte();
-                  if (0 != var15) {
+                  if (var15 != 0) {
                     int var2;
-                    if (1 == (1 & var15)) {
+                    if ((1 & var15) == 1) {
                       var2 = var1.readUnsignedByte();
                       if (HuffmanEncoder.aByteArrayArrayArray640[var11][var12] == null) {
                         HuffmanEncoder.aByteArrayArrayArray640[var11][var12] = new byte[4096];
@@ -66,9 +66,10 @@ public final class HintMarker {
                         << 6)] = (byte) var2;
                     }
 
-                    if (2 == (var15 & 2)) {
+                    if ((var15 & 2) == 2) {
                       var2 = var1.readUnsignedMedium((byte) 85);
-                      if (null == PlayerVariable.anIntArrayArrayArray558[var11][var12]) {
+                      if (PlayerVariable.anIntArrayArrayArray558[var11][var12]
+                          == null) {
                         PlayerVariable.anIntArrayArrayArray558[var11][var12] = new int[4096];
                       }
 
@@ -76,17 +77,18 @@ public final class HintMarker {
                         + var13] = var2;
                     }
 
-                    if (4 == (var15 & 4)) {
+                    if ((var15 & 4) == 4) {
                       var2 = var1.readUnsignedMedium((byte) 117);
-                      if (null == AbstractGameWorld.anIntArrayArrayArray720[var11][var12]) {
+                      if (AbstractGameWorld.anIntArrayArrayArray720[var11][var12]
+                          == null) {
                         AbstractGameWorld.anIntArrayArrayArray720[var11][var12] = new int[4096];
                       }
 
                       --var2;
                       GameObjectConfig var3 = DummyClass11.method2207(4, var2);
-                      if (null != var3.anIntArray1524) {
+                      if (var3.anIntArray1524 != null) {
                         var3 = var3.method1685(0);
-                        if (var3 == null || 0 == ~var3.anInt1482) {
+                        if (var3 == null || ~var3.anInt1482 == 0) {
                           continue;
                         }
                       }
@@ -120,11 +122,11 @@ public final class HintMarker {
                 ++var1.position;
               }
 
-              if (2 == (var12 & 2)) {
+              if ((var12 & 2) == 2) {
                 var1.position += 2;
               }
 
-              if (4 == (var12 & 4)) {
+              if ((var12 & 4) == 4) {
                 var1.position += 3;
               }
             }

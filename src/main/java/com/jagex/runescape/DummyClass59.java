@@ -77,7 +77,8 @@ public final class DummyClass59 {
 
       int var2;
       for (var2 = 0; ~var2 > ~Something3d2.aByteArrayArray3027.length; ++var2) {
-        if (0 != ~GameClient.mapFileIds[var2] && null == Something3d2.aByteArrayArray3027[var2]) {
+        if (~GameClient.mapFileIds[var2] != 0 &&
+            Something3d2.aByteArrayArray3027[var2] == null) {
           Something3d2.aByteArrayArray3027[var2] =
             TextureSampler26.maps.getBytes(GameClient.mapFileIds[var2], 0);
           if (Something3d2.aByteArrayArray3027[var2] == null) {
@@ -86,12 +87,12 @@ public final class DummyClass59 {
           }
         }
 
-        if (-1 != DummyClass55.landscapeFileIds[var2]
-          && null == AudioSomethingSomething.landscapesData[var2]) {
+        if (DummyClass55.landscapeFileIds[var2] != -1
+          && AudioSomethingSomething.landscapesData[var2] == null) {
           AudioSomethingSomething.landscapesData[var2] =
             TextureSampler26.maps.unpack(DummyClass55.landscapeFileIds[var2],
               AreaSoundEffect.landscapeEncryptionKeys[var2], 37, 0);
-          if (null == AudioSomethingSomething.landscapesData[var2]) {
+          if (AudioSomethingSomething.landscapesData[var2] == null) {
             var1 = false;
             ++TextureSampler5.anInt3293;
           }
@@ -102,25 +103,25 @@ public final class DummyClass59 {
             && GroundItemNode.updatedMapsData[var2] == null) {
             GroundItemNode.updatedMapsData[var2] =
               TextureSampler26.maps.getBytes(TextureSampler17.updatedMapIds[var2], 0);
-            if (null == GroundItemNode.updatedMapsData[var2]) {
+            if (GroundItemNode.updatedMapsData[var2] == null) {
               var1 = false;
               ++TextureSampler5.anInt3293;
             }
           }
 
           if (AnimationSomething.updatedLandscapeIds[var2] != -1
-            && null == TextureSampler34.updatedLandscapesData[var2]) {
+            && TextureSampler34.updatedLandscapesData[var2] == null) {
             TextureSampler34.updatedLandscapesData[var2] =
               TextureSampler26.maps.getBytes(AnimationSomething.updatedLandscapeIds[var2], 0);
-            if (null == TextureSampler34.updatedLandscapesData[var2]) {
+            if (TextureSampler34.updatedLandscapesData[var2] == null) {
               ++TextureSampler5.anInt3293;
               var1 = false;
             }
           }
         }
 
-        if (null != TextureSampler5.anIntArray3290
-          && null == TextureSampler35.aByteArrayArray3335[var2]
+        if (TextureSampler5.anIntArray3290 != null
+          && TextureSampler35.aByteArrayArray3335[var2] == null
           && TextureSampler5.anIntArray3290[var2] != -1) {
           TextureSampler35.aByteArrayArray3335[var2] =
             TextureSampler26.maps.unpack(TextureSampler5.anIntArray3290[var2],
@@ -133,7 +134,7 @@ public final class DummyClass59 {
       }
 
       if (TextureSampler22.aClass131_3421 == null) {
-        if (null != TextureSampler37.aClass3_Sub28_Sub3_3264
+        if (TextureSampler37.aClass3_Sub28_Sub3_3264 != null
           && SomethingPacket116.worldMapData.method2135(RenderAnimation.concat(new GameString[] {
           TextureSampler37.aClass3_Sub28_Sub3_3264.aClass94_3561, Player.LABELS
         }), -104)) {
@@ -166,7 +167,7 @@ public final class DummyClass59 {
         for (var2 = 0; Something3d2.aByteArrayArray3027.length > var2;
             ++var2) {
           byte[] var3 = AudioSomethingSomething.landscapesData[var2];
-          if (null != var3) {
+          if (var3 != null) {
             var5 =
                 -ProceduralTexture.anInt1152
                     + (AudioStreamEncoder3.regionHashes[var2] & 255) * 64;
@@ -182,7 +183,7 @@ public final class DummyClass59 {
 
           if (GlRenderer.useOpenGlRenderer) {
             var3 = TextureSampler34.updatedLandscapesData[var2];
-            if (null != var3) {
+            if (var3 != null) {
               var4 = -WorldMapLabel.anInt1716 + 64 * (
                   AudioStreamEncoder3.regionHashes[var2] >> 8);
               var5 =
@@ -230,13 +231,13 @@ public final class DummyClass59 {
               GlRenderer.useOpenGlRenderer ? 28 : 25,
               var11);
 
-          for (var12 = 0; 4 > var12; ++var12) {
+          for (var12 = 0; var12 < 4; ++var12) {
             BlockConfig.collisionMaps[var12].method1496(0);
           }
 
           for (var12 = 0; ~var12 > -5; ++var12) {
             for (var4 = 0; var4 < 104; ++var4) {
-              for (var5 = 0; -105 < ~var5; ++var5) {
+              for (var5 = 0; ~var5 > -105; ++var5) {
                 BZipDecompressorState.tileFlags[var12][var4][var5] = 0;
               }
             }
@@ -275,7 +276,7 @@ public final class DummyClass59 {
             }
 
             TextureSampler26.method198(false, -32624);
-            if (null != TextureSampler35.aByteArrayArray3335) {
+            if (TextureSampler35.aByteArrayArray3335 != null) {
               TextureSampler37.method272((byte) -124);
             }
           }
@@ -351,7 +352,7 @@ public final class DummyClass59 {
           }
 
           for (var4 = 0; var4 < 104; ++var4) {
-            for (var5 = 0; 104 > var5; ++var5) {
+            for (var5 = 0; var5 < 104; ++var5) {
               DummyHashTable.method1760(var5, (byte) 65, var4);
             }
           }
@@ -362,8 +363,8 @@ public final class DummyClass59 {
           TextureSampler13.method313((byte) 100);
           TextureSampler25.aBoolean3416 = false;
           if (TextureSampler27.FRAME != null
-              && null != SomethingVolume15.gameSocket
-              && 25 == DummyClass15.state) {
+              && SomethingVolume15.gameSocket != null
+              && DummyClass15.state == 25) {
             TextureSampler12.secureBuffer.writePacket(20);
             TextureSampler12.secureBuffer.writeInt(1057001181);
             ++TextureSampler13.anInt3365;

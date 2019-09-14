@@ -28,11 +28,11 @@ public final class DummyClass43 {
 
   public static void method1194(int var0) {
     if (var0 == -16385) {
-        if (null != SomethingWorldMappy.audioOutputStream1) {
+        if (SomethingWorldMappy.audioOutputStream1 != null) {
           SomethingWorldMappy.audioOutputStream1.process((byte) -34);
         }
 
-        if (null != GameWorld.audioOutputStream0) {
+        if (GameWorld.audioOutputStream0 != null) {
           GameWorld.audioOutputStream0.process((byte) -34);
         }
 
@@ -44,8 +44,8 @@ public final class DummyClass43 {
                                                                  int var4) {
     if (DummyClass60.sampleRate == 0) {
         throw new IllegalStateException();
-      } else if (0 <= var3 && 2 > var3) {
-        if (-257 < ~var0) {
+      } else if (var3 >= 0 && var3 < 2) {
+        if (~var0 > -257) {
           var0 = 256;
         }
 
@@ -57,19 +57,20 @@ public final class DummyClass43 {
           var9.samples = new int[(!GameString.stereo ? 1 : 2) * 256];
           var9.bind(var2);
           var9.sampleBufferSize = (var0 & 0xfffffc00) + 1024;
-          if (-16385 > ~var9.sampleBufferSize) {
+          if (~var9.sampleBufferSize < -16385) {
             var9.sampleBufferSize = 16384;
           }
 
           var9.setBufferSize(var9.sampleBufferSize);
-          if (AudioStreamEncoder4.anInt3507 > 0 && null == DummyClass36.aClass15_2613) {
+          if (AudioStreamEncoder4.anInt3507 > 0 && DummyClass36.aClass15_2613
+              == null) {
             DummyClass36.aClass15_2613 = new AudioWorker();
             DummyClass36.aClass15_2613.aClass87_350 = var1;
             var1.createThread(0, AudioStreamEncoder4.anInt3507, DummyClass36.aClass15_2613);
           }
 
           if (DummyClass36.aClass15_2613 != null) {
-            if (null != DummyClass36.aClass15_2613.aClass155Array352[var3]) {
+            if (DummyClass36.aClass15_2613.aClass155Array352[var3] != null) {
               throw new IllegalArgumentException();
             }
 
@@ -89,7 +90,8 @@ public final class DummyClass43 {
             var5.bind(var2);
             var5.sampleBufferSize = 16384;
             var5.setBufferSize(var5.sampleBufferSize);
-            if (~AudioStreamEncoder4.anInt3507 < -1 && null == DummyClass36.aClass15_2613) {
+            if (~AudioStreamEncoder4.anInt3507 < -1 &&
+                DummyClass36.aClass15_2613 == null) {
               DummyClass36.aClass15_2613 = new AudioWorker();
               DummyClass36.aClass15_2613.aClass87_350 = var1;
               var1.createThread(var4 ^ 14, AudioStreamEncoder4.anInt3507,

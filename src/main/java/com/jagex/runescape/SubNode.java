@@ -45,7 +45,7 @@ public class SubNode extends Node {
         SubNode.method520((byte) -89);
       }
 
-      return 0 != var0 ? (~var0 != -2 ? (~var0 == -3 ? -var3 + 7 : -var2 + 7) : var2) : var3;
+      return var0 != 0 ? (~var0 != -2 ? (~var0 == -3 ? -var3 + 7 : -var2 + 7) : var2) : var3;
   }
 
   public static SomethingWorldMapy method520(byte var0) {
@@ -66,13 +66,13 @@ public class SubNode extends Node {
   public static NpcConfiguration getNpcConfiguration(int var0) {
     NpcConfiguration var2 = (NpcConfiguration) ObjectNode.aClass93_4043.get(
           var0);
-      if (null == var2) {
+      if (var2 == null) {
         byte[] var3 = PlayerVariable.aClass153_557.getBytes(DummyClass36.method1031(var0, 2),
           DummyCanvas.method54(var0, false));
         var2 = new NpcConfiguration();
 
         var2.anInt1284 = var0;
-        if (null != var3) {
+        if (var3 != null) {
           var2.method1478(new Buffer(var3), 74);
         }
 

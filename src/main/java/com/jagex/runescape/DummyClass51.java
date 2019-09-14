@@ -33,7 +33,7 @@ public final class DummyClass51 {
       PlayerAppearance.anIntArray861 = new int[256];
 
       int var2;
-      for (var2 = 0; -4 < ~var2; ++var2) {
+      for (var2 = 0; ~var2 > -4; ++var2) {
         int var4 = (WorldMapLabel.anIntArray1729[1 + var2] & 16711680) >> 16;
         float var3 = ((WorldMapLabel.anIntArray1729[var2] & 16711680) >> 16);
         float var6 = (WorldMapLabel.anIntArray1729[var2] >> 8 & 255);
@@ -44,7 +44,7 @@ public final class DummyClass51 {
         int var10 = WorldMapLabel.anIntArray1729[var2 + 1] & 255;
         float var11 = (var10 - var9) / 64.0F;
 
-        for (int var12 = 0; -65 < ~var12; ++var12) {
+        for (int var12 = 0; ~var12 > -65; ++var12) {
           PlayerAppearance.anIntArray861[var12 + 64 * var2] = TextureSampler3.method308((int) var9,
             TextureSampler3.method308((int) var6 << 8, (int) var3 << 16));
           var6 += var8;
@@ -127,7 +127,7 @@ public final class DummyClass51 {
             & 7) - (-((!AbstractObjectNode.aBoolean3604 ? 0 : 1) << 4) + -(
             (GameWorld.aBoolean2623 ? 1 : 0) << 8)) - (
             -(HashTableIterator.anInt1137 << 11 & 6144) + -(
-              (-1 == ~ClientScriptCall.anInt2453 ? 0 : 1) << 20) - (
+              (~ClientScriptCall.anInt2453 == -1 ? 0 : 1) << 20) - (
               ((~BZipDecompressorState.anInt120 != -1 ? 1 : 0) << 21) + (
                 (~DummyClass28.anInt340 == -1 ? 0 : 1) << 22)))) - -(DummyClass0.method1757()
           << 23));

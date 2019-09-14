@@ -39,17 +39,17 @@ public final class TextureSampler29 extends AbstractTextureSampler {
           int var5 = var2.readUnsignedByte();
           if (var5 == 0) {
             this.aClass75Array3392[var4] = FileSystem.method843(-5232, var2);
-          } else if (-2 == ~var5) {
+          } else if (~var5 == -2) {
             this.aClass75Array3392[var4] = StillGraphicNode.method536((byte) 54, var2);
           } else if (var5 != 2) {
-            if (3 == var5) {
+            if (var5 == 3) {
               this.aClass75Array3392[var4] = ClanChatUser.method384(var2, (byte) 80);
             }
           } else {
             this.aClass75Array3392[var4] = AudioSomethingSomething.method404((byte) -110, var2);
           }
         }
-      } else if (1 == var1) {
+      } else if (var1 == 1) {
         this.monoChromatic = var2.readUnsignedByte() == 1;
       }
 

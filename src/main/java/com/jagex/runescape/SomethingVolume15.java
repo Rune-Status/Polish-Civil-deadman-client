@@ -34,7 +34,7 @@ public final class SomethingVolume15 extends Node {
       this.aByteArray2425 = new byte[128];
 
       Buffer var2;
-      for (var2 = new Buffer(var1); -1 != ~var2.bytes[var3 + var2.position]; ++var3) {
+      for (var2 = new Buffer(var1); ~var2.bytes[var3 + var2.position] != -1; ++var3) {
       }
 
       byte[] var4 = new byte[var3];
@@ -50,7 +50,7 @@ public final class SomethingVolume15 extends Node {
       var2.position += var3;
 
       int var6;
-      for (var6 = 0; 0 != var2.bytes[var2.position + var6]; ++var6) {
+      for (var6 = 0; var2.bytes[var2.position + var6] != 0; ++var6) {
       }
 
       byte[] var7 = new byte[var6];
@@ -65,7 +65,7 @@ public final class SomethingVolume15 extends Node {
       int var9 = 0;
       var8 = var2.position;
 
-      for (var2.position += var6; -1 != ~var2.bytes[var9 + var2.position]; ++var9) {
+      for (var2.position += var6; ~var2.bytes[var9 + var2.position] != -1; ++var9) {
       }
 
       byte[] var10 = new byte[var9];
@@ -88,7 +88,7 @@ public final class SomethingVolume15 extends Node {
 
         for (var14 = 2; var9 > var14; ++var14) {
           int var15 = var2.readUnsignedByte();
-          if (0 == var15) {
+          if (var15 == 0) {
             var13 = var12++;
           } else {
             if (var15 <= var13) {
@@ -108,7 +108,7 @@ public final class SomethingVolume15 extends Node {
       for (var14 = 0; var14 < var38.length; ++var14) {
         var41 = var38[var14] = new SomethingIndex150();
         int var16 = var2.readUnsignedByte();
-        if (0 < var16) {
+        if (var16 > 0) {
           var41.aByteArray2064 = new byte[2 * var16];
         }
 
@@ -122,7 +122,7 @@ public final class SomethingVolume15 extends Node {
       var14 = var2.readUnsignedByte();
       byte[] var40 = ~var14 < -1 ? new byte[var14 * 2] : null;
       var14 = var2.readUnsignedByte();
-      byte[] var39 = -1 > ~var14 ? new byte[var14 * 2] : null;
+      byte[] var39 = ~var14 < -1 ? new byte[var14 * 2] : null;
 
       int var17;
       for (var17 = 0; ~var2.bytes[var17 + var2.position] != -1; ++var17) {
@@ -140,7 +140,7 @@ public final class SomethingVolume15 extends Node {
       var19 = 0;
 
       int var20;
-      for (var20 = 0; -129 < ~var20; ++var20) {
+      for (var20 = 0; ~var20 > -129; ++var20) {
         var19 += var2.readUnsignedByte();
         this.aShortArray2434[var20] = (short) var19;
       }
@@ -158,7 +158,7 @@ public final class SomethingVolume15 extends Node {
 
       int var23;
       for (var23 = 0; ~var23 > -129; ++var23) {
-        if (-1 == ~var20) {
+        if (~var20 == -1) {
           if (var18.length > var21) {
             var20 = var18[var21++];
           } else {
@@ -180,7 +180,7 @@ public final class SomethingVolume15 extends Node {
 
       int var24;
       for (var24 = 0; ~var24 > -129; ++var24) {
-        if (-1 != ~this.anIntArray2423[var24]) {
+        if (~this.anIntArray2423[var24] != -1) {
           if (var20 == 0) {
             var23 = var2.bytes[var5++] + -1;
             if (var4.length > var21) {
@@ -199,9 +199,9 @@ public final class SomethingVolume15 extends Node {
       var21 = 0;
       var24 = 0;
 
-      for (int var25 = 0; -129 < ~var25; ++var25) {
-        if (-1 != ~this.anIntArray2423[var25]) {
-          if (0 == var20) {
+      for (int var25 = 0; ~var25 > -129; ++var25) {
+        if (~this.anIntArray2423[var25] != -1) {
+          if (var20 == 0) {
             var24 = var2.bytes[var8++] - -16 << 2;
             if (~var21 > ~var7.length) {
               var20 = var7[var21++];
@@ -242,7 +242,7 @@ public final class SomethingVolume15 extends Node {
 
       int var27;
       for (var27 = 0; ~var27 > -129; ++var27) {
-        if (-1 == ~var20) {
+        if (~var20 == -1) {
           if (~var21 > ~var18.length) {
             var20 = var18[var21++];
           } else {
@@ -277,13 +277,13 @@ public final class SomethingVolume15 extends Node {
         }
       }
 
-      if (null != var40) {
+      if (var40 != null) {
         for (var27 = 1; var40.length > var27; var27 += 2) {
           var40[var27] = var2.readByte();
         }
       }
 
-      if (null != var39) {
+      if (var39 != null) {
         for (var27 = 1; var39.length > var27; var27 += 2) {
           var39[var27] = var2.readByte();
         }
@@ -291,7 +291,7 @@ public final class SomethingVolume15 extends Node {
 
       for (var27 = 0; var12 > var27; ++var27) {
         var28 = var38[var27];
-        if (null != var28.aByteArray2076) {
+        if (var28.aByteArray2076 != null) {
           var19 = 0;
 
           for (var29 = 2; ~var29 > ~var28.aByteArray2076.length; var29 += 2) {
@@ -303,7 +303,7 @@ public final class SomethingVolume15 extends Node {
 
       for (var27 = 0; var12 > var27; ++var27) {
         var28 = var38[var27];
-        if (null != var28.aByteArray2064) {
+        if (var28.aByteArray2064 != null) {
           var19 = 0;
 
           for (var29 = 2; ~var29 > ~var28.aByteArray2064.length; var29 += 2) {
@@ -319,7 +319,7 @@ public final class SomethingVolume15 extends Node {
       int var33;
       int var44;
       byte var48;
-      if (null != var40) {
+      if (var40 != null) {
         var19 = var2.readUnsignedByte();
         var40[0] = (byte) var19;
 
@@ -357,7 +357,7 @@ public final class SomethingVolume15 extends Node {
         }
       }
 
-      if (null != var39) {
+      if (var39 != null) {
         var19 = var2.readUnsignedByte();
         var39[0] = (byte) var19;
 
@@ -375,7 +375,7 @@ public final class SomethingVolume15 extends Node {
             var44 = 0;
           }
 
-          if (128 < var44) {
+          if (var44 > 128) {
             var44 = 128;
           }
 
@@ -409,11 +409,11 @@ public final class SomethingVolume15 extends Node {
 
         for (var44 = var48; var44 < 128; ++var44) {
           var45 = (255 & this.aByteArray2422[var44]) + var47;
-          if (-1 < ~var45) {
+          if (~var45 > -1) {
             var45 = 0;
           }
 
-          if (128 < var45) {
+          if (var45 > 128) {
             var45 = 128;
           }
 
@@ -429,15 +429,15 @@ public final class SomethingVolume15 extends Node {
 
       for (var27 = 0; var27 < var12; ++var27) {
         var28 = var38[var27];
-        if (null != var28.aByteArray2064) {
+        if (var28.aByteArray2064 != null) {
           var28.anInt2067 = var2.readUnsignedByte();
         }
 
-        if (null != var28.aByteArray2076) {
+        if (var28.aByteArray2076 != null) {
           var28.anInt2071 = var2.readUnsignedByte();
         }
 
-        if (-1 > ~var28.anInt2078) {
+        if (~var28.anInt2078 < -1) {
           var28.anInt2063 = var2.readUnsignedByte();
         }
       }
@@ -474,9 +474,9 @@ public final class SomethingVolume15 extends Node {
         boolean var5 = true;
 
         for (int var8 = 0; ~var8 > -129; ++var8) {
-          if (null == var4 || var4[var8] != 0) {
+          if (var4 == null || var4[var8] != 0) {
             int var9 = this.anIntArray2423[var8];
-            if (-1 != ~var9) {
+            if (~var9 != -1) {
               if (var6 != var9) {
                 var6 = var9--;
                 if ((var9 & 1) == 0) {
@@ -490,7 +490,7 @@ public final class SomethingVolume15 extends Node {
                 }
               }
 
-              if (null != var7) {
+              if (var7 != null) {
                 this.aClass3_Sub12_Sub1Array2431[var8] = var7;
                 this.anIntArray2423[var8] = 0;
               }
@@ -539,7 +539,7 @@ public final class SomethingVolume15 extends Node {
 
       while (true) {
         int var8 = var6.method773((byte) -126);
-        if (0 == var8) {
+        if (var8 == 0) {
           if (var4 != 0) {
             SomethingVolume15.method372(true);
           }
@@ -552,7 +552,7 @@ public final class SomethingVolume15 extends Node {
 
         while (true) {
           int var10 = var6.readUnsignedShortSmart();
-          if (-1 == ~var10) {
+          if (~var10 == -1) {
             break;
           }
 
@@ -573,7 +573,7 @@ public final class SomethingVolume15 extends Node {
                 var20 = var13 - 1;
               }
 
-              if (0 <= var20) {
+              if (var20 >= 0) {
                 var19 = var5[var20];
               }
             }

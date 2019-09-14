@@ -44,7 +44,7 @@ public final class SomethingInScenePacket202 extends Node {
                 var16 = Something3d2.aClass33_3019;
               }
 
-              if (4.0D == AbstractGameWorld.aFloat727) {
+              if (AbstractGameWorld.aFloat727 == 4.0D) {
                 var16 = SocketStream.aClass33_1238;
               }
 
@@ -58,7 +58,7 @@ public final class SomethingInScenePacket202 extends Node {
             }
 
             if (~var14 == -2) {
-              if (3.0D == AbstractGameWorld.aFloat727) {
+              if (AbstractGameWorld.aFloat727 == 3.0D) {
                 var16 = DummyClass54.aClass33_1399;
               }
 
@@ -70,7 +70,7 @@ public final class SomethingInScenePacket202 extends Node {
                 var16 = DummyClass25.aClass33_1626;
               }
 
-              if (8.0D <= AbstractGameWorld.aFloat727) {
+              if (AbstractGameWorld.aFloat727 >= 8.0D) {
                 var16 = SomethingTexture1.aClass33_2648;
               }
             }
@@ -85,7 +85,7 @@ public final class SomethingInScenePacket202 extends Node {
                 var16 = SomethingTexture1.aClass33_2648;
               }
 
-              if (6.0D == AbstractGameWorld.aFloat727) {
+              if (AbstractGameWorld.aFloat727 == 6.0D) {
                 var16 = DummyClass12.aClass33_2034;
               }
 
@@ -98,7 +98,7 @@ public final class SomethingInScenePacket202 extends Node {
               var15 = DummyClass25.aClass131_1624.anIntArray1725[var9];
             }
 
-            if (null != var16) {
+            if (var16 != null) {
               int var17 = AbstractTextureSampler.aClass3_Sub28_Sub17_2379.method691(
                 DummyClass25.aClass131_1624.aClass94Array1721[var9], null,
                 DirectImageProducer.aClass94Array2977);
@@ -122,7 +122,7 @@ public final class SomethingInScenePacket202 extends Node {
   }
 
   public static void method112(byte var0, byte var1) {
-    if (null == AbstractImageProducer.aByteArrayArrayArray2008) {
+    if (AbstractImageProducer.aByteArrayArrayArray2008 == null) {
         AbstractImageProducer.aByteArrayArrayArray2008 = new byte[4][104][104];
       }
 
@@ -132,7 +132,7 @@ public final class SomethingInScenePacket202 extends Node {
 
       for (int var2 = 0; var2 < 4; ++var2) {
         for (int var3 = 0; ~var3 > -105; ++var3) {
-          for (int var4 = 0; 104 > var4; ++var4) {
+          for (int var4 = 0; var4 < 104; ++var4) {
             AbstractImageProducer.aByteArrayArrayArray2008[var2][var3][var4] = var0;
           }
         }
@@ -240,29 +240,29 @@ public final class SomethingInScenePacket202 extends Node {
           var4 = TextureSampler0.players[DummyClass42.anIntArray887[var3]];
         }
 
-        if (null != var4 && var4.hasConfiguration((byte) 17)) {
+        if (var4 != null && var4.hasConfiguration((byte) 17)) {
           int var5 = var4.getSize();
           int var6;
-          if (-2 == ~var5) {
-            if ((127 & var4.anInt2819) == 64 && 64 == (127 & var4.anInt2829)) {
+          if (~var5 == -2) {
+            if ((127 & var4.anInt2819) == 64 && (127 & var4.anInt2829) == 64) {
               var6 = var4.anInt2819 >> 7;
               var7 = var4.anInt2829 >> 7;
-              if (~var6 <= -1 && var6 < 104 && ~var7 <= -1 && -105 < ~var7) {
+              if (~var6 <= -1 && var6 < 104 && ~var7 <= -1 && ~var7 > -105) {
                 ++DummyClass9.anIntArrayArray4010[var6][var7];
               }
             }
           } else if (
             ((1 & var5) != 0 || ~(var4.anInt2819 & 127) == -1 && ~(127 & var4.anInt2829) == -1) && (
-              ~(1 & var5) != -2 || -65 == ~(var4.anInt2819 & 127) && -65 == ~(127
-                & var4.anInt2829))) {
+              ~(1 & var5) != -2 || ~(var4.anInt2819 & 127) == -65 && ~(127
+                  & var4.anInt2829) == -65)) {
             var6 = var4.anInt2819 + -(var5 * 64) >> 7;
             var7 = var4.anInt2829 + -(var5 * 64) >> 7;
             var8 = var4.getSize() + var6;
-            if (104 < var8) {
+            if (var8 > 104) {
               var8 = 104;
             }
 
-            if (-1 < ~var6) {
+            if (~var6 > -1) {
               var6 = 0;
             }
 
@@ -298,16 +298,17 @@ public final class SomethingInScenePacket202 extends Node {
 
           if (var4 != null && var4.hasConfiguration((byte) 17)) {
             var4.aBoolean3968 =
-              (Widget.aBoolean236 && -201 > ~DummyClass13.anInt2022 || 50 < DummyClass13.anInt2022)
+              (Widget.aBoolean236 && ~DummyClass13.anInt2022 < -201 ||
+                  DummyClass13.anInt2022 > 50)
                 && !var0 && var4.anInt2764 == Objects
                   .requireNonNull(var4.getRenderAnimationId(false)).anInt368;
 
             var7 = var4.getSize();
-            if (-2 == ~var7) {
-              if (64 == (127 & var4.anInt2819) && (127 & var4.anInt2829) == 64) {
+            if (~var7 == -2) {
+              if ((127 & var4.anInt2819) == 64 && (127 & var4.anInt2829) == 64) {
                 var8 = var4.anInt2819 >> 7;
                 var9 = var4.anInt2829 >> 7;
-                if (~var8 > -1 || var8 >= 104 || ~var9 > -1 || 104 <= var9) {
+                if (~var8 > -1 || var8 >= 104 || ~var9 > -1 || var9 >= 104) {
                   continue;
                 }
 
@@ -318,7 +319,7 @@ public final class SomethingInScenePacket202 extends Node {
               }
             } else if (
               ~(1 & var7) == -1 && ~(127 & var4.anInt2819) == -1 && (var4.anInt2829 & 127) == 0
-                || 1 == (1 & var7) && -65 == ~(127 & var4.anInt2819)
+                || (1 & var7) == 1 && ~(127 & var4.anInt2819) == -65
                 && (var4.anInt2829 & 127) == 0) {
               var8 = var4.anInt2819 + -(64 * var7) >> 7;
               var10 = var7 + var8;
@@ -327,7 +328,7 @@ public final class SomethingInScenePacket202 extends Node {
                 var10 = 104;
               }
 
-              if (0 > var8) {
+              if (var8 < 0) {
                 var8 = 0;
               }
 
@@ -345,7 +346,7 @@ public final class SomethingInScenePacket202 extends Node {
               int var14;
               for (var13 = var8; ~var13 > ~var10; ++var13) {
                 for (var14 = var9; var11 > var14; ++var14) {
-                  if (-2 <= ~DummyClass9.anIntArrayArray4010[var13][var14]) {
+                  if (~DummyClass9.anIntArrayArray4010[var13][var14] >= -2) {
                     var12 = false;
                     break;
                   }
@@ -369,7 +370,7 @@ public final class SomethingInScenePacket202 extends Node {
               }
             }
 
-            if (null != var4.anObject2796 && ~AbstractGameWorld.updateCycle <= ~var4.anInt2797
+            if (var4.anObject2796 != null && ~AbstractGameWorld.updateCycle <= ~var4.anInt2797
               && var4.anInt2778 > AbstractGameWorld.updateCycle) {
               var4.aBoolean3968 = false;
               var4.anInt2831 =
@@ -393,7 +394,7 @@ public final class SomethingInScenePacket202 extends Node {
   }
 
   public static void method117(byte var0) {
-    if (0 > SomethingQuickChat2.anInt3536) {
+    if (SomethingQuickChat2.anInt3536 < 0) {
         TextureSampler13.anInt3362 = -1;
         SomethingQuickChat2.anInt3536 = 0;
         ProceduralTexture.anInt1150 = -1;

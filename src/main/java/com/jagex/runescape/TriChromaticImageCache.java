@@ -82,17 +82,17 @@ public final class TriChromaticImageCache {
   public int[][] method1594(byte var1, int var2 ) {
     int var3 = -50 % ((var1 - -57) / 57);
       if (this.anInt1367 == this.anInt1369) {
-        this.aBoolean1379 = null == this.aClass3_Sub20Array1371[var2];
+        this.aBoolean1379 = this.aClass3_Sub20Array1371[var2] == null;
         this.aClass3_Sub20Array1371[var2] = SomethingQuickChat2.aClass3_Sub20_3532;
         return this.anIntArrayArrayArray1362[var2];
       } else {
-        if (1 == this.anInt1367) {
+        if (this.anInt1367 == 1) {
           this.aBoolean1379 = this.anInt1365 != var2;
           this.anInt1365 = var2;
           return this.anIntArrayArrayArray1362[0];
         } else {
           TriChromaticImageBuffer var4 = this.aClass3_Sub20Array1371[var2];
-          if (null == var4) {
+          if (var4 == null) {
             this.aBoolean1379 = true;
             if (~this.anInt1368 > ~this.anInt1367) {
               var4 = new TriChromaticImageBuffer(var2, this.anInt1368);

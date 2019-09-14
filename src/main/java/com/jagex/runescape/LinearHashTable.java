@@ -30,7 +30,7 @@ public final class LinearHashTable {
       for (var3 = 0; var1.length > var3; this.anIntArray1041[var4 - -var4 - -1] = var3++) {
         for (
           var4 = -1 + var2 & var1[var3];
-          0 != ~this.anIntArray1041[1 + var4 - -var4]; var4 = -1 + var2 & 1 + var4) {
+            ~this.anIntArray1041[1 + var4 - -var4] != 0; var4 = -1 + var2 & 1 + var4) {
         }
 
         this.anIntArray1041[var4 + var4] = var1[var3];

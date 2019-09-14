@@ -30,13 +30,13 @@ public final class VertexNormal {
 
   public static void method1131(int var0, int var1, int var2, int var3, int var4, int var5, int var6,
                                int var7) {
-    if (~var6 <= -1 && 0 <= var4 && -104 < ~var6 && 103 > var4) {
+    if (~var6 <= -1 && var4 >= 0 && ~var6 > -104 && var4 < 103) {
         int var9;
-        if (-1 == ~var5) {
+        if (~var5 == -1) {
           SceneSomething2 var8 = DummyClass14.method2147(var0, var6, var4);
           if (var8 != null) {
             var9 = Integer.MAX_VALUE & (int) (var8.key >>> 32);
-            if (-3 == ~var3) {
+            if (~var3 == -3) {
               var8.sceneNode0 =
                 new GameObject(var9, 2, 4 + var2, var0, var6, var4, var7, false, var8.sceneNode0);
               var8.sceneNode1 = new GameObject(var9, 2, 3 & 1 + var2, var0, var6, var4, var7, false,
@@ -48,18 +48,18 @@ public final class VertexNormal {
           }
         }
 
-        if (-2 == ~var5) {
+        if (~var5 == -2) {
           SomethingSceneI var12 = AbstractGameWorld.method1068(var0, var6, var4);
-          if (null != var12) {
+          if (var12 != null) {
             var9 = (int) (var12.aLong428 >>> 32) & Integer.MAX_VALUE;
-            if (-5 != ~var3 && -6 != ~var3) {
+            if (~var3 != -5 && ~var3 != -6) {
               if (~var3 == -7) {
                 var12.aClass140_429 =
                     new GameObject(var9, 4, var2 - -4, var0, var6, var4, var7,
                         false,
                         var12.aClass140_429);
               } else {
-                if (7 == var3) {
+                if (var3 == 7) {
                   var12.aClass140_429 =
                       new GameObject(var9, 4, (var2 - -2 & 3) - -4, var0, var6,
                           var4, var7, false,
@@ -82,7 +82,7 @@ public final class VertexNormal {
           }
         }
 
-        if (-3 == ~var5) {
+        if (~var5 == -3) {
           if (~var3 == -12) {
             var3 = 10;
           }
@@ -97,7 +97,7 @@ public final class VertexNormal {
 
         if (~var5 == -4) {
           SomethingSceneJ var13 = Buffer.method784(var0, var6, var4);
-          if (null != var13) {
+          if (var13 != null) {
             var13.aClass140_320 =
               new GameObject(Integer.MAX_VALUE & (int) (var13.aLong328 >>> 32), 22, var2, var0,
                 var6, var4, var7, false, var13.aClass140_320);

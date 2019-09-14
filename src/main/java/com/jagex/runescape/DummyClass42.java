@@ -42,7 +42,7 @@ public final class DummyClass42 {
 
       double var16 = (var8 + var10) / 2.0D;
       if (var8 != var10) {
-        if (0.5D > var16) {
+        if (var16 < 0.5D) {
           var14 = (-var8 + var10) / (var8 + var10);
         }
 
@@ -62,7 +62,7 @@ public final class DummyClass42 {
       int var19 = (int) (var14 * 256.0D);
       int var20 = (int) (256.0D * var16);
       var12 /= 6.0D;
-      if (0 > var20) {
+      if (var20 < 0) {
         var20 = 0;
       } else if (~var20 < -256) {
         var20 = 255;
@@ -77,9 +77,9 @@ public final class DummyClass42 {
         var19 = 0;
       }
 
-      if (-244 <= ~var20) {
+      if (~var20 >= -244) {
         if (~var20 >= -218) {
-          if (-193 > ~var20) {
+          if (~var20 < -193) {
             var19 >>= 2;
           } else if (~var20 < -180) {
             var19 >>= 1;

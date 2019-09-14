@@ -40,10 +40,10 @@ public final class StringNode extends Node {
       try {
         if (SomethingQuickChatK.anInt154 == 1) {
           int var1 = DummyClass55.aClass3_Sub24_Sub4_1421.method499(var0);
-          if (-1 > ~var1 && DummyClass55.aClass3_Sub24_Sub4_1421
+          if (~var1 < -1 && DummyClass55.aClass3_Sub24_Sub4_1421
               .method473(-124)) {
             var1 -= SpotAnimationConfig.anInt546;
-            if (-1 < ~var1) {
+            if (~var1 > -1) {
               var1 = 0;
             }
 
@@ -77,7 +77,7 @@ public final class StringNode extends Node {
       } else if (var1 == -2) {
         return 12345678;
       } else if (~var1 == 0) {
-        if (2 > var2) {
+        if (var2 < 2) {
           var2 = 2;
         } else if (~var2 < -127) {
           var2 = 126;
@@ -128,7 +128,7 @@ public final class StringNode extends Node {
       var3.length = 0;
 
       for (int var4 = 0; var4 < var2.length; ++var4) {
-        if (-1 != ~var2[var4]) {
+        if (~var2[var4] != -1) {
           var2[var3.length++] = var2[var4];
         }
       }
@@ -139,9 +139,9 @@ public final class StringNode extends Node {
   public static SomethingQuickChat method733(int var0, int var1) {
     SomethingQuickChat var2 =
           (SomethingQuickChat) ProjectileNode.aClass47_3776.get(var1, 1400);
-      if (null == var2) {
+      if (var2 == null) {
         byte[] var3;
-        if (-32769 < ~var1) {
+        if (~var1 > -32769) {
           var3 = AudioStreamEncoder3.aClass153_3490.getBytes(1, var1);
         } else {
           var3 = DummyClass14.aClass153_1967.getBytes(1, 32767 & var1);
@@ -187,7 +187,7 @@ public final class StringNode extends Node {
         StringNode.method736(-60, -93);
       }
 
-      if (-1 == ~SomethingQuickChatK.anInt154) {
+      if (~SomethingQuickChatK.anInt154 == -1) {
         DummyClass55.aClass3_Sub24_Sub4_1421.method506(128, var0);
       } else {
         TextureSampler36.anInt3423 = var0;

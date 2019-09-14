@@ -248,8 +248,8 @@ public class SignLink implements Runnable {
           System.out.println("host = " + host);
           System.out.println("port = " + port);
           var1.result = new Socket(InetAddress.getByName(host), port);
-        } else if (2 != var2) {
-          if (-5 == ~var2) {
+        } else if (var2 != 2) {
+          if (~var2 == -5) {
             if (SignLink.aLong1221 > Time.getCurrentTimeMillis()) {
               throw new IOException();
             }
@@ -258,7 +258,7 @@ public class SignLink implements Runnable {
                 ((URL) var1.anObject977).openStream());
           } else {
             Object[] var3;
-            if (-9 == ~var2) {
+            if (~var2 == -9) {
               var3 = (Object[]) var1.anObject977;
               if (((Class) var3[0]).getClassLoader() == null) {
                 throw new SecurityException();
@@ -269,7 +269,7 @@ public class SignLink implements Runnable {
                       .getDeclaredMethod((String) var3[1],
                           (Class<?>[]) var3[2]);
             } else {
-              if (-10 == ~var2) {
+              if (~var2 == -10) {
                 var3 = (Object[]) var1.anObject977;
                 if (((Class) var3[0]).getClassLoader() == null) {
                   throw new SecurityException();
@@ -298,11 +298,11 @@ public class SignLink implements Runnable {
                     this.aDisplay1208.method918(-56, var1.anInt980 & '\uffff',
                         var1.anInt980 >> 16, '\uffff' & var1.anInt979, var5,
                         var1.anInt979 >>> 16);
-                  } else if (-8 != ~var2) {
-                    if (10 == var2) {
+                  } else if (~var2 != -8) {
+                    if (var2 == 10) {
                     } else {
                       int var18;
-                      if (-12 == ~var2) {
+                      if (~var2 == -12) {
                         Field var20 = Class.forName("java.lang.ClassLoader")
                             .getDeclaredField("nativeLibraries");
                         var20.setAccessible(true);
@@ -325,7 +325,7 @@ public class SignLink implements Runnable {
                         }
 
                         var20.setAccessible(false);
-                      } else if (-13 == ~var2) {
+                      } else if (~var2 == -13) {
                         var4 = (String) var1.anObject977;
                         FileOnDisk var19 = SignLink
                             .openGamePreferences(false, var4);
@@ -334,12 +334,12 @@ public class SignLink implements Runnable {
                         int var22 = var1.anInt980;
                         int var23 = var1.anInt979;
                         this.aSensor1206.method1796(var23, -112, var22);
-                      } else if (15 == var2) {
+                      } else if (var2 == 15) {
                         boolean var21 = var1.anInt979 != 0;
                         Component var27 = (Component) var1.anObject977;
                         this.aSensor1206.method1797(var27, 1, var21);
-                      } else if (17 != var2) {
-                        if (16 != var2) {
+                      } else if (var2 != 17) {
+                        if (var2 != 16) {
                           throw new Exception();
                         }
 

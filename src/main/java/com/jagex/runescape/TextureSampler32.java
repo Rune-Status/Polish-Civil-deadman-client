@@ -38,7 +38,7 @@ public final class TextureSampler32 extends AbstractTextureSampler {
             & RenderAnimation.anInt396]) * var8 >> 12;
           int var13 = var8 * (-var9[var12] + var11[var12]) >> 12;
           int var15 = var14 >> 4;
-          if (0 > var15) {
+          if (var15 < 0) {
             var15 = -var15;
           }
 
@@ -47,11 +47,11 @@ public final class TextureSampler32 extends AbstractTextureSampler {
           }
 
           int var16 = var13 >> 4;
-          if (-1 < ~var16) {
+          if (~var16 > -1) {
             var16 = -var16;
           }
 
-          if (255 < var16) {
+          if (var16 > 255) {
             var16 = 255;
           }
 
@@ -71,9 +71,9 @@ public final class TextureSampler32 extends AbstractTextureSampler {
   }
 
   public void parseConfig(int var1, Buffer var2, boolean var3 ) {
-    if (0 == var1) {
+    if (var1 == 0) {
         this.anInt3350 = var2.readUnsignedShort();
-      } else if (1 != var1) {
+      } else if (var1 != 1) {
         if (~var1 == -3) {
           this.anInt3354 = var2.readUnsignedShort();
         }
@@ -139,10 +139,10 @@ public final class TextureSampler32 extends AbstractTextureSampler {
         if (~GameWorldSomething.currentPlane == ~projectile.anInt2907
           && ~projectile.anInt2899 <= ~AbstractGameWorld.updateCycle) {
           if (AbstractGameWorld.updateCycle >= projectile.anInt2925) {
-            if (-1 > ~projectile.targetId) {
+            if (~projectile.targetId < -1) {
               NPC var3 = TextureSampler5.npcs[-1 + projectile.targetId];
-              if (null != var3 && var3.anInt2819 >= 0 && 13312 > var3.anInt2819
-                && var3.anInt2829 >= 0 && -13313 < ~var3.anInt2829) {
+              if (var3 != null && var3.anInt2819 >= 0 && var3.anInt2819 < 13312
+                && var3.anInt2829 >= 0 && ~var3.anInt2829 > -13313) {
                 projectile.method2024(var3.anInt2829, 1, AbstractGameWorld.updateCycle,
                   BufferData.method1736(projectile.anInt2907, 1, var3.anInt2819, var3.anInt2829)
                     + -projectile.anInt2903, var3.anInt2819);
@@ -158,7 +158,7 @@ public final class TextureSampler32 extends AbstractTextureSampler {
                 player = TextureSampler0.players[var4];
               }
 
-              if (null != player && player.anInt2819 >= 0 && ~player.anInt2819 > -13313
+              if (player != null && player.anInt2819 >= 0 && ~player.anInt2819 > -13313
                 && player.anInt2829 >= 0 && ~player.anInt2829 > -13313) {
                 projectile.method2024(player.anInt2829, 1, AbstractGameWorld.updateCycle,
                   BufferData.method1736(projectile.anInt2907, 1, player.anInt2819, player.anInt2829)

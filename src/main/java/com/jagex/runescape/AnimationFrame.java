@@ -65,7 +65,7 @@ public final class AnimationFrame extends Node {
   }
 
   public static void method381(boolean var0) {
-    if (0 != ~InventoryConfig.anInt3655) {
+    if (~InventoryConfig.anInt3655 != 0) {
         PlayerAppearance.method1160(-120, InventoryConfig.anInt3655);
       }
 

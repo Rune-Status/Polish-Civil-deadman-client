@@ -22,12 +22,12 @@ public final class DummyClass1 {
         RenderAnimation var2 = var1.getRenderAnimationId(false);
         int var4;
         int var5;
-        if (var1.anInt2772 != -1 && '\u8000' > var1.anInt2772) {
+        if (var1.anInt2772 != -1 && var1.anInt2772 < '\u8000') {
           NPC var3 = TextureSampler5.npcs[var1.anInt2772];
           if (var3 != null) {
             var5 = -var3.anInt2829 + var1.anInt2829;
             var4 = -var3.anInt2819 + var1.anInt2819;
-            if (0 != var4 || 0 != var5) {
+            if (var4 != 0 || var5 != 0) {
               var1.anInt2806 = (int) (Math.atan2(var4, var5) * 325.949D) & 2047;
             }
           }
@@ -42,7 +42,7 @@ public final class DummyClass1 {
           }
 
           Player var10 = TextureSampler0.players[var9];
-          if (null != var10) {
+          if (var10 != null) {
             var6 = -var10.anInt2829 + var1.anInt2829;
             var5 = -var10.anInt2819 + var1.anInt2819;
             if (var5 != 0 || var6 != 0) {
@@ -51,7 +51,7 @@ public final class DummyClass1 {
           }
         }
 
-        if ((0 != var1.anInt2786 || 0 != var1.anInt2762) && (var1.anInt2816 == 0
+        if ((var1.anInt2786 != 0 || var1.anInt2762 != 0) && (var1.anInt2816 == 0
           || ~var1.anInt2824 < -1)) {
           var9 = var1.anInt2819 + -(
             (-WorldMapLabel.anInt1716 + (var1.anInt2786 - WorldMapLabel.anInt1716)) * 64);
@@ -67,7 +67,7 @@ public final class DummyClass1 {
         }
 
         var9 = var1.anInt2806 - var1.rotationY & 2047;
-        if (-1 == ~var9) {
+        if (~var9 == -1) {
           var1.anInt2789 = 0;
           var1.anInt2821 = 0;
         } else {
@@ -83,7 +83,7 @@ public final class DummyClass1 {
                 var11 = false;
               }
 
-              if (~var2.anInt368 == ~var1.anInt2764 && (25 < var1.anInt2789
+              if (~var2.anInt368 == ~var1.anInt2764 && (var1.anInt2789 > 25
                   || var11)) {
                 if (~var2.anInt367 == 0) {
                   var1.anInt2764 = var2.anInt382;
@@ -99,9 +99,9 @@ public final class DummyClass1 {
                 var1.rotationY = var1.anInt2806;
               }
 
-              if (var2.anInt368 == var1.anInt2764 && (25 < var1.anInt2789
+              if (var2.anInt368 == var1.anInt2764 && (var1.anInt2789 > 25
                   || var11)) {
-                if (-1 == var2.anInt407) {
+                if (var2.anInt407 == -1) {
                   var1.anInt2764 = var2.anInt382;
                 } else {
                   var1.anInt2764 = var2.anInt407;
@@ -111,8 +111,8 @@ public final class DummyClass1 {
 
             var1.rotationY &= 2047;
           } else {
-            if (~var2.anInt368 == ~var1.anInt2764 && 25 < var1.anInt2789) {
-              if (0 == ~var2.anInt407) {
+            if (~var2.anInt368 == ~var1.anInt2764 && var1.anInt2789 > 25) {
+              if (~var2.anInt407 == 0) {
                 var1.anInt2764 = var2.anInt382;
               } else {
                 var1.anInt2764 = var2.anInt407;
@@ -131,14 +131,14 @@ public final class DummyClass1 {
                 var1.anInt2803 = var5 / 2;
                 var1.aBoolean2769 = true;
                 var7 = var2.anInt357 * var2.anInt357 / (var2.anInt369 * 2);
-                if (32767 < var7) {
+                if (var7 > 32767) {
                   var7 = 32767;
                 }
 
                 if (var7 < var1.anInt2803) {
                   var1.anInt2803 = -var7 + var5;
                 }
-              } else if (0 > var1.anInt2821 && var6 <= -var5 + 65536
+              } else if (var1.anInt2821 < 0 && var6 <= -var5 + 65536
                   && 65536 + -var5 + -var6 < '\u8000') {
                 var1.anInt2803 = (-var5 + 65536) / 2;
                 var1.aBoolean2769 = true;
@@ -163,7 +163,7 @@ public final class DummyClass1 {
                 var1.anInt2791 = 0;
                 var6 = var2.anInt357 * var2.anInt357 / (2 * var2.anInt369);
                 var1.aBoolean2769 = true;
-                if (32767 < var6) {
+                if (var6 > 32767) {
                   var6 = 32767;
                 }
 
@@ -181,14 +181,14 @@ public final class DummyClass1 {
                   }
                 }
               }
-            } else if (-1 <= ~var1.anInt2821) {
+            } else if (~var1.anInt2821 >= -1) {
               if (~var1.anInt2791 <= ~var1.anInt2803) {
                 var1.aBoolean2769 = false;
               }
 
               if (!var1.aBoolean2769) {
                 var1.anInt2821 += var2.anInt369;
-                if (0 < var1.anInt2821) {
+                if (var1.anInt2821 > 0) {
                   var1.anInt2821 = 0;
                 }
               } else if (~(-var2.anInt357) > ~var1.anInt2821) {
@@ -211,7 +211,7 @@ public final class DummyClass1 {
 
             var1.anInt2780 += var1.anInt2821;
             var1.anInt2780 &= '\uffff';
-            if (0 >= var1.anInt2821) {
+            if (var1.anInt2821 <= 0) {
               var1.anInt2791 -= var1.anInt2821;
             } else {
               var1.anInt2791 += var1.anInt2821;

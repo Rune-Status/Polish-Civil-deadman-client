@@ -69,7 +69,7 @@ public final class TextureSampler5 extends AbstractTextureSampler {
     if (~var1 == -1) {
         this.anInt3294 = var2.readUnsignedByte();
       } else if (var1 != 1) {
-        if (2 == var1) {
+        if (var1 == 2) {
           this.monoChromatic = var2.readUnsignedByte() == 1;
         }
       } else {

@@ -55,7 +55,7 @@ public final class MilliFrameRegulator extends AbstractFrameRegulator {
         this.anInt2688 = 25;
       }
 
-      if (256 < this.anInt2688) {
+      if (this.anInt2688 > 256) {
         this.anInt2688 = 256;
         this.anInt2691 =
           (int) (-((this.aLong2683 - this.aLongArray2694[this.anInt2685]) / 10L) + var3);
@@ -69,7 +69,7 @@ public final class MilliFrameRegulator extends AbstractFrameRegulator {
       this.anInt2685 = (1 + this.anInt2685) % 10;
       int var6;
       if (~this.anInt2691 < -2) {
-        for (var6 = 0; -11 < ~var6; ++var6) {
+        for (var6 = 0; ~var6 > -11; ++var6) {
           if (this.aLongArray2694[var6] != 0L) {
             this.aLongArray2694[var6] += this.anInt2691;
           }
@@ -82,7 +82,7 @@ public final class MilliFrameRegulator extends AbstractFrameRegulator {
 
       TextureSampler25.sleep(this.anInt2691);
 
-      for (var6 = 0; 256 > this.anInt2692; ++var6) {
+      for (var6 = 0; this.anInt2692 < 256; ++var6) {
         this.anInt2692 += this.anInt2688;
       }
 

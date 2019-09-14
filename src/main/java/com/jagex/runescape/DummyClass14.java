@@ -64,7 +64,7 @@ public final class DummyClass14 {
   }
 
   public static GameString method2148(int var0, byte var1) {
-    if (999999999 <= var0) {
+    if (var0 >= 999999999) {
         if (var1 != -78) {
           DummyClass14.method2145((byte) -8);
         }

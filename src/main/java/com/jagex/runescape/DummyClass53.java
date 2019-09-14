@@ -56,7 +56,7 @@ public final class DummyClass53 {
         int var22 = var14 + -var12;
         int var23 = -var13 + var15;
 
-        for (int var24 = 128; -4097 <= ~var24; var24 += 128) {
+        for (int var24 = 128; ~var24 >= -4097; var24 += 128) {
           int var25 = var24 * var24 >> 12;
           int var26 = var24 * var25 >> 12;
           int var30 = var21 * var25;
@@ -104,7 +104,7 @@ public final class DummyClass53 {
   }
 
   public static GameString method1586(int var0, int var1) {
-    if (-1 > ~var1 && -256 <= ~var1) {
+    if (~var1 < -1 && ~var1 >= -256) {
         GameString var2 = new GameString();
         if (var0 != 23161) {
           DummyClass53.aClass3_Sub28_Sub16_1339 = null;

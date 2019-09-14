@@ -62,11 +62,11 @@ public final class GlTexture2d extends SubNode {
 
   public void initialize(byte var1) {
     int var2 = DummyClass32.method961(var1 + 1530);
-      if (-1 == ~(1 & var2)) {
+      if (~(1 & var2) == -1) {
         GlRenderer.bindTexture(this.anInt3759);
       }
 
-      if (0 == (var2 & 2)) {
+      if ((var2 & 2) == 0) {
         GlRenderer.method1856(0);
       }
 
@@ -128,7 +128,7 @@ public final class GlTexture2d extends SubNode {
   public static void method713(int var0) {
     try {
         Method var1 = Runtime.class.getMethod("maxMemory", new Class[var0]);
-        if (null != var1) {
+        if (var1 != null) {
           try {
             Runtime var2 = Runtime.getRuntime();
             Long var3 = (Long) var1.invoke(var2, (Object[]) null);

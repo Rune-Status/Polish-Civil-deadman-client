@@ -24,11 +24,11 @@ public final class FileCacheRequester implements Runnable {
     SignLinkRequest var1 = DummyClass35.signLink.createThread(0, 5, this);
 
       assert var1 != null;
-      while (-1 == ~var1.status) {
+      while (~var1.status == -1) {
         TextureSampler25.sleep(10L);
       }
 
-      if (2 == var1.status) {
+      if (var1.status == 2) {
         throw new RuntimeException();
       } else {
         this.aThread1090 = (Thread) var1.result;
@@ -128,7 +128,7 @@ public final class FileCacheRequester implements Runnable {
         FileCacheRequest var1;
         synchronized (var2) {
           var1 = (FileCacheRequest) this.aClass13_1086.poll();
-          if (null == var1) {
+          if (var1 == null) {
             try {
               this.aClass13_1086.wait();
             } catch (InterruptedException var6) {
@@ -145,7 +145,7 @@ public final class FileCacheRequester implements Runnable {
                 .method1050((int) var1.subnodeKey, var1.aByteArray4059.length,
                     var1.aByteArray4059, (byte) -41);
           } else {
-            if (-4 == ~var1.anInt4061) {
+            if (~var1.anInt4061 == -4) {
               var1.aByteArray4059 =
                   var1.aClass41_4056
                       .method1051((int) var1.subnodeKey, (byte) -77);
@@ -206,15 +206,15 @@ public final class FileCacheRequester implements Runnable {
         if (var4) {
           DummyClass6.anInt2046 = 0;
 
-          for (var11 = 0; -32769 < ~var11; ++var11) {
+          for (var11 = 0; ~var11 > -32769; ++var11) {
             var12 = TextureSampler5.npcs[var11];
-            if (null != var12) {
+            if (var12 != null) {
               var12.anInt2819 -= 128 * var9;
               var12.anInt2829 -= 128 * var10;
-              if (-1 >= ~var12.anInt2819 && -13185 <= ~var12.anInt2819
-                  && -1 >= ~var12.anInt2829
-                  && -13185 <= ~var12.anInt2829) {
-                for (var13 = 0; 10 > var13; ++var13) {
+              if (~var12.anInt2819 <= -1 && ~var12.anInt2819 >= -13185
+                  && ~var12.anInt2829 <= -1
+                  && ~var12.anInt2829 >= -13185) {
+                for (var13 = 0; var13 < 10; ++var13) {
                   var12.waypointsX[var13] -= var9;
                   var12.waypointsY[var13] -= var10;
                 }
@@ -229,7 +229,7 @@ public final class FileCacheRequester implements Runnable {
         } else {
           for (var11 = 0; var11 < '\u8000'; ++var11) {
             var12 = TextureSampler5.npcs[var11];
-            if (null != var12) {
+            if (var12 != null) {
               for (var13 = 0; var13 < 10; ++var13) {
                 var12.waypointsX[var13] -= var9;
                 var12.waypointsY[var13] -= var10;
@@ -243,8 +243,8 @@ public final class FileCacheRequester implements Runnable {
 
         for (var11 = 0; var11 < 2048; ++var11) {
           Player var23 = TextureSampler0.players[var11];
-          if (null != var23) {
-            for (var13 = 0; 10 > var13; ++var13) {
+          if (var23 != null) {
+            for (var13 = 0; var13 < 10; ++var13) {
               var23.waypointsX[var13] -= var9;
               var23.waypointsY[var13] -= var10;
             }
@@ -279,8 +279,9 @@ public final class FileCacheRequester implements Runnable {
             int var19 = var9 + var17;
             int var20 = var18 + var10;
 
-            for (int var21 = 0; 4 > var21; ++var21) {
-              if (-1 >= ~var19 && ~var20 <= -1 && ~var19 > -105 && -105 < ~var20) {
+            for (int var21 = 0; var21 < 4; ++var21) {
+              if (~var19 <= -1
+                  && ~var20 <= -1 && ~var19 > -105 && ~var20 > -105) {
                 TextureSampler0.groundItems[var21][var17][var18] =
                   TextureSampler0.groundItems[var21][var19][var20];
               } else {
@@ -295,7 +296,7 @@ public final class FileCacheRequester implements Runnable {
              var27 != null; var27 = (SpawnedGameObject) TextureSampler26.aClass61_3075.getNext()) {
           var27.anInt2248 -= var10;
           var27.anInt2264 -= var9;
-          if (0 > var27.anInt2264 || -1 < ~var27.anInt2248 || var27.anInt2264 >= 104
+          if (var27.anInt2264 < 0 || ~var27.anInt2248 > -1 || var27.anInt2264 >= 104
             || var27.anInt2248 >= 104) {
             var27.unlinkNode();
           }
@@ -319,8 +320,9 @@ public final class FileCacheRequester implements Runnable {
         }
 
         if (var6) {
-          if (GlRenderer.useOpenGlRenderer && var4 && (Math.abs(var9) > 104 || 104 < Math.abs(
-            var10))) {
+          if (GlRenderer.useOpenGlRenderer && var4 && (Math.abs(var9) > 104 ||
+              Math.abs(
+                  var10) > 104)) {
             TextureSampler31.method236((byte) 64);
           }
 
@@ -364,19 +366,19 @@ public final class FileCacheRequester implements Runnable {
       } else {
         while (true) {
           int var3 = var1.indexOf(SomethingSceneJ.aClass94_331);
-          if (0 == ~var3) {
+          if (~var3 == 0) {
             while (true) {
               var3 = var1.indexOf(SomethingIndex150.aClass94_2080);
               if (var3 == -1) {
                 while (true) {
                   var3 = var1.indexOf(CollisionMap.aClass94_1301);
-                  if (0 == ~var3) {
+                  if (~var3 == 0) {
                     while (true) {
                       var3 = var1.indexOf(PlayerAppearance.aClass94_852);
                       if (~var3 == 0) {
                         while (true) {
                           var3 = var1.indexOf(TextureSampler22.aClass94_3418);
-                          if (0 == ~var3) {
+                          if (~var3 == 0) {
                             while (true) {
                               var3 = var1
                                   .indexOf(SceneSomething2.aClass94_1051);
@@ -385,14 +387,13 @@ public final class FileCacheRequester implements Runnable {
                               }
 
                               GameString var4 = GroundItemNode.EMPTY_STRING;
-                              if (null != SceneShadowMap.aClass64_1778) {
+                              if (SceneShadowMap.aClass64_1778 != null) {
                                 var4 =
                                     DummyClass58.method1653(
                                         SceneShadowMap.aClass64_1778.anInt979,
                                         0);
 
-                                if (null
-                                    != SceneShadowMap.aClass64_1778.result) {
+                                if (SceneShadowMap.aClass64_1778.result != null) {
                                   byte[] var5 =
                                       ((String) SceneShadowMap.aClass64_1778.result)
                                           .getBytes(
@@ -574,7 +575,7 @@ public final class FileCacheRequester implements Runnable {
         }
 
         if (command.method1531(TextureSampler30.COMMAND_NOCLIP)) {
-          for (var2 = 0; -5 < ~var2; ++var2) {
+          for (var2 = 0; ~var2 > -5; ++var2) {
             for (var3 = 1; ~var3 > -104; ++var3) {
               for (var4 = 1; var4 < 103; ++var4) {
                 BlockConfig.collisionMaps[var2].anIntArrayArray1304[var3][var4] = 0;

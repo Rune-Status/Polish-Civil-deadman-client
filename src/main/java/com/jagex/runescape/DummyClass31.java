@@ -32,9 +32,9 @@ public final class DummyClass31 {
 
   public static void method1683(int var0, boolean var1, int var2, boolean var3, CollisionMap var4,
                                int var5, int var6, int var7, byte var8, int var9, int var10) {
-    if (var1 && !NPC.method1986(103) && 0 == (2
-        & BZipDecompressorState.tileFlags[0][var7][var9])) {
-        if (0 != (16 & BZipDecompressorState.tileFlags[var2][var7][var9])) {
+    if (var1 && !NPC.method1986(103) && (2
+        & BZipDecompressorState.tileFlags[0][var7][var9]) == 0) {
+        if ((16 & BZipDecompressorState.tileFlags[var2][var7][var9]) != 0) {
           return;
         }
 
@@ -51,7 +51,7 @@ public final class DummyClass31 {
       if (!GlRenderer.useOpenGlRenderer || !var11.aBoolean1530) {
         int var12;
         int var13;
-        if (-2 != ~var10 && ~var10 != -4) {
+        if (~var10 != -2 && ~var10 != -4) {
           var12 = var11.anInt1480;
           var13 = var11.anInt1485;
         } else {
@@ -71,7 +71,7 @@ public final class DummyClass31 {
 
         int var17;
         int var16;
-        if (-105 > ~(var13 + var9)) {
+        if (~(var13 + var9) < -105) {
           var16 = var9;
           var17 = var9 - -1;
         } else {
@@ -88,7 +88,7 @@ public final class DummyClass31 {
               >> 2;
           int var22 = 0;
           int[][] var23;
-          if (GlRenderer.useOpenGlRenderer && -1 != ~var0) {
+          if (GlRenderer.useOpenGlRenderer && ~var0 != -1) {
             var23 = AbstractGameWorld.heightMap[0];
             var22 = var19 - (
               var23[var15][var17] + var23[var15][var16] + var23[var14][var16] + var23[var14][var17]
@@ -99,15 +99,15 @@ public final class DummyClass31 {
           long var24 = 1073741824 | var7 | var9 << 7 | var6 << 14 | var10 << 20;
           if (var3) {
             var23 = DummyClass43.somethingHeightMap[0];
-          } else if (-4 < ~var0) {
+          } else if (~var0 > -4) {
             var23 = AbstractGameWorld.heightMap[1 + var0];
           }
 
-          if (0 == var11.anInt1529 || var3) {
+          if (var11.anInt1529 == 0 || var3) {
             var24 |= Long.MIN_VALUE;
           }
 
-          if (1 == var11.anInt1540) {
+          if (var11.anInt1540 == 1) {
             var24 |= 4194304L;
           }
 
@@ -123,10 +123,10 @@ public final class DummyClass31 {
           var24 |= (long) var5 << 32;
           SceneNode var27;
           SceneShadowMap var28;
-          if (22 != var6) {
-            if (10 != var6 && 11 != var6) {
-              if (12 <= var6) {
-                if (-1 == var11.anInt1531 && null == var11.anIntArray1524 && !var11.aBoolean1510) {
+          if (var6 != 22) {
+            if (var6 != 10 && var6 != 11) {
+              if (var6 >= 12) {
+                if (var11.anInt1531 == -1 && var11.anIntArray1524 == null && !var11.aBoolean1510) {
                   var28 = var11.method1696(var10, var20, var18, var6, var19, var23, var1, null,
                     (byte) -82, var26, var21);
                   if (GlRenderer.useOpenGlRenderer && var26) {
@@ -144,18 +144,18 @@ public final class DummyClass31 {
                 EnumStringFetcher.method835(var2, var7, var9, var19, 1, 1,
                     var27, 0,
                   var24);
-                if (var1 && -18 <= ~var6 && -14 != ~var6 && var2 > 0) {
+                if (var1 && ~var6 >= -18 && ~var6 != -14 && var2 > 0) {
                   DummyClass36.anIntArrayArrayArray2609[var2][var7][var9] =
                     TextureSampler3.method308(
                       DummyClass36.anIntArrayArrayArray2609[var2][var7][var9], 4);
                 }
 
-                if (-1 != ~var11.anInt1538 && null != var4) {
+                if (~var11.anInt1538 != -1 && var4 != null) {
                   var4.method1489(var7, var11.aBoolean1486, (byte) 73, var9, var12, var13);
                 }
 
-              } else if (0 == var6) {
-                if (0 == ~var11.anInt1531 && null == var11.anIntArray1524 && !var11.aBoolean1510) {
+              } else if (var6 == 0) {
+                if (~var11.anInt1531 == 0 && var11.anIntArray1524 == null && !var11.aBoolean1510) {
                   var28 =
                     var11.method1696(var10, var20, var18, 0, var19, var23, var1, null, (byte) -74,
                       var26, var21);
@@ -185,7 +185,7 @@ public final class DummyClass31 {
                         TextureSampler3.method308(
                           DummyClass36.anIntArrayArrayArray2609[var2][var7][var9], 1);
                     }
-                  } else if (1 != var10) {
+                  } else if (var10 != 1) {
                     if (~var10 == -3) {
                       if (var11.aBoolean1525) {
                         MouseRecorder.aByteArrayArrayArray1014[var2][var7
@@ -202,7 +202,7 @@ public final class DummyClass31 {
                                     - -1][var9], 1);
                       }
                     } else {
-                      if (-4 == ~var10) {
+                      if (~var10 == -4) {
                         if (var11.aBoolean1525) {
                           MouseRecorder.aByteArrayArrayArray1014[var2][var7][var9] = 50;
                           MouseRecorder.aByteArrayArrayArray1014[var2][1
@@ -231,7 +231,7 @@ public final class DummyClass31 {
                   }
                 }
 
-                if (0 != var11.anInt1538 && var4 != null) {
+                if (var11.anInt1538 != 0 && var4 != null) {
                   var4.method1486(var10, 2, 0, var11.aBoolean1486, var9, var7);
                 }
 
@@ -240,7 +240,7 @@ public final class DummyClass31 {
                 }
 
               } else if (~var6 == -2) {
-                if (-1 == var11.anInt1531 && var11.anIntArray1524 == null && !var11.aBoolean1510) {
+                if (var11.anInt1531 == -1 && var11.anIntArray1524 == null && !var11.aBoolean1510) {
                   var28 =
                     var11.method1696(var10, var20, var18, 1, var19, var23, var1, null, (byte) -83,
                       var26, var21);
@@ -259,25 +259,25 @@ public final class DummyClass31 {
                 DummyClass14.method2146(var2, var7, var9, var19, var27, null,
                   DummyClass59.anIntArray675[var10], 0, var24);
                 if (var11.aBoolean1525 && var1) {
-                  if (0 == var10) {
+                  if (var10 == 0) {
                     MouseRecorder.aByteArrayArrayArray1014[var2][var7][var9
                         + 1] = 50;
                   } else {
-                    if (-2 == ~var10) {
+                    if (~var10 == -2) {
                       MouseRecorder.aByteArrayArrayArray1014[var2][var7 - -1][1
                           + var9] = 50;
                     } else {
-                      if (-3 == ~var10) {
+                      if (~var10 == -3) {
                         MouseRecorder.aByteArrayArrayArray1014[var2][1
                             + var7][var9] = 50;
-                      } else if (3 == var10) {
+                      } else if (var10 == 3) {
                         MouseRecorder.aByteArrayArrayArray1014[var2][var7][var9] = 50;
                       }
                     }
                   }
                 }
 
-                if (-1 != ~var11.anInt1538 && null != var4) {
+                if (~var11.anInt1538 != -1 && var4 != null) {
                   var4.method1486(var10, 2, var6, var11.aBoolean1486, var9, var7);
                 }
 
@@ -320,7 +320,7 @@ public final class DummyClass31 {
                       var38, DummyClass13.anIntArray2017[var10],
                     DummyClass13.anIntArray2017[var43], var24);
                   if (var11.aBoolean1542 && var1) {
-                    if (-1 == ~var10) {
+                    if (~var10 == -1) {
                       DummyClass36.anIntArrayArrayArray2609[var2][var7][var9] =
                           TextureSampler3.method308(
                               DummyClass36.anIntArrayArrayArray2609[var2][var7][var9],
@@ -331,7 +331,7 @@ public final class DummyClass31 {
                               DummyClass36.anIntArrayArrayArray2609[var2][var7][
                                   1 + var9], 2);
                     } else {
-                      if (-2 == ~var10) {
+                      if (~var10 == -2) {
                         DummyClass36.anIntArrayArrayArray2609[var2][var7][var9
                             - -1] =
                             TextureSampler3.method308(
@@ -343,7 +343,7 @@ public final class DummyClass31 {
                                 DummyClass36.anIntArrayArrayArray2609[var2][var7
                                     - -1][var9], 1);
                       } else {
-                        if (-3 == ~var10) {
+                        if (~var10 == -3) {
                           DummyClass36.anIntArrayArrayArray2609[var2][1
                               + var7][var9] =
                               TextureSampler3.method308(
@@ -376,7 +376,7 @@ public final class DummyClass31 {
                   }
 
                 } else if (var6 == 3) {
-                  if (~var11.anInt1531 == 0 && null == var11.anIntArray1524
+                  if (~var11.anInt1531 == 0 && var11.anIntArray1524 == null
                     && !var11.aBoolean1510) {
                     var28 =
                       var11.method1696(var10, var20, var18, 3, var19, var23, var1, null, (byte) -54,
@@ -396,7 +396,7 @@ public final class DummyClass31 {
                   DummyClass14.method2146(var2, var7, var9, var19, var27, null,
                     DummyClass59.anIntArray675[var10], 0, var24);
                   if (var11.aBoolean1525 && var1) {
-                    if (0 == var10) {
+                    if (var10 == 0) {
                       MouseRecorder.aByteArrayArrayArray1014[var2][var7][var9
                           + 1] = 50;
                     } else {
@@ -414,13 +414,13 @@ public final class DummyClass31 {
                     }
                   }
 
-                  if (0 != var11.anInt1538 && var4 != null) {
+                  if (var11.anInt1538 != 0 && var4 != null) {
                     var4.method1486(var10, 2, 3, var11.aBoolean1486, var9, var7);
                   }
 
                 } else if (~var6 != -10) {
-                  if (4 == var6) {
-                    if (var11.anInt1531 == -1 && null == var11.anIntArray1524
+                  if (var6 == 4) {
+                    if (var11.anInt1531 == -1 && var11.anIntArray1524 == null
                         && !var11.aBoolean1510) {
                       var28 = var11
                           .method1696(var10, var20, var18, 4, var19, var23,
@@ -456,7 +456,7 @@ public final class DummyClass31 {
                             Integer.MAX_VALUE & (int) (var44 >>> 32)).anInt1528;
                       }
 
-                      if (0 == ~var11.anInt1531 && null == var11.anIntArray1524
+                      if (~var11.anInt1531 == 0 && var11.anIntArray1524 == null
                           && !var11.aBoolean1510) {
                         var47 = var11
                             .method1696(var10, var20, var18, 4, var19, var23,
@@ -487,10 +487,10 @@ public final class DummyClass31 {
                               AudioStreamEncoder3.anIntArray3491[var10] * var43,
                               var24);
                     } else {
-                      if (-7 == ~var6) {
+                      if (~var6 == -7) {
                         var43 = 8;
                         var44 = SomethingAudio.method2174(var2, var7, var9);
-                        if (-1L != ~var44) {
+                        if (~var44 != -1L) {
                           var43 = DummyClass11.method2207(4,
                               Integer.MAX_VALUE & (int) (var44
                                   >>> 32)).anInt1528 / 2;
@@ -529,7 +529,7 @@ public final class DummyClass31 {
                                 * AbstractTextureSampler.anIntArray2386[var10],
                             var43 * DummyClass4.anIntArray3007[var10], var24);
                       } else {
-                        if (7 == var6) {
+                        if (var6 == 7) {
                           int var40 = 3 & var10 - -2;
                           if (~var11.anInt1531 == 0
                               && var11.anIntArray1524 == null
@@ -561,7 +561,7 @@ public final class DummyClass31 {
                           if (var6 == 8) {
                             var43 = 8;
                             var44 = SomethingAudio.method2174(var2, var7, var9);
-                            if (-1L != ~var44) {
+                            if (~var44 != -1L) {
                               var43 = DummyClass11.method2207(4,
                                   Integer.MAX_VALUE & (int) (var44
                                       >>> 32)).anInt1528 / 2;
@@ -569,8 +569,8 @@ public final class DummyClass31 {
 
                             int var32 = var10 + 2 & 3;
                             SceneNode var46;
-                            if (-1 == var11.anInt1531
-                                && null == var11.anIntArray1524
+                            if (var11.anInt1531 == -1
+                                && var11.anIntArray1524 == null
                                 && !var11.aBoolean1510) {
                               int var34 = 8 * DummyClass4.anIntArray3007[var10];
                               int var33 =
@@ -645,7 +645,7 @@ public final class DummyClass31 {
                   EnumStringFetcher.method835(var2, var7, var9, var19, 1, 1,
                       var27, 0,
                     var24);
-                  if (-1 != ~var11.anInt1538 && var4 != null) {
+                  if (~var11.anInt1538 != -1 && var4 != null) {
                     var4.method1489(var7, var11.aBoolean1486, (byte) 127, var9, var12, var13);
                   }
 
@@ -668,7 +668,7 @@ public final class DummyClass31 {
                 assert var28 != null;
                 var27 = var28.node;
               } else {
-                var27 = new GameObject(var5, 10, 11 == var6 ? 4 - -var10 : var10, var0, var7, var9,
+                var27 = new GameObject(var5, 10, var6 == 11 ? 4 - -var10 : var10, var0, var7, var9,
                   var11.anInt1531, var11.aBoolean1492, null);
               }
 
@@ -696,14 +696,15 @@ public final class DummyClass31 {
                 }
               }
 
-              if (0 != var11.anInt1538 && null != var4) {
+              if (var11.anInt1538 != 0 && var4 != null) {
                 var4.method1489(var7, var11.aBoolean1486, (byte) 96, var9, var12, var13);
               }
 
             }
-          } else if (Keyboard.aBoolean1905 || ~var11.anInt1529 != -1 || -2 == ~var11.anInt1538
+          } else if (Keyboard.aBoolean1905 || ~var11.anInt1529 != -1 ||
+              ~var11.anInt1538 == -2
             || var11.aBoolean1483) {
-            if (0 == ~var11.anInt1531 && var11.anIntArray1524 == null && !var11.aBoolean1510) {
+            if (~var11.anInt1531 == 0 && var11.anIntArray1524 == null && !var11.aBoolean1510) {
               var28 =
                 var11.method1696(var10, var20, var18, 22, var19, var23, var1, null, (byte) -126,
                   var26, var21);
@@ -721,7 +722,7 @@ public final class DummyClass31 {
 
             TextureSampler39.method276(var2, var7, var9, var19, var27, var24,
               var11.aBoolean1502);
-            if (var11.anInt1538 == 1 && null != var4) {
+            if (var11.anInt1538 == 1 && var4 != null) {
               var4.method1503(var7, var9, var8 + -55);
             }
 

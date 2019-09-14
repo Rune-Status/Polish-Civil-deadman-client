@@ -177,7 +177,7 @@ public final class SomethingTexture4 extends AbstractSomethingTexture {
 
         int var5;
         int var6;
-        if (-1 != ~(64 & var4)) {
+        if (~(64 & var4) != -1) {
           var5 = SpotAnimationConfig.gameBuffer.readUnsignedByte();
           var6 = SpotAnimationConfig.gameBuffer.method786(true);
           var3.method1970(var6, -8, AbstractGameWorld.updateCycle, var5);
@@ -194,22 +194,22 @@ public final class SomethingTexture4 extends AbstractSomethingTexture {
         if ((var4 & 16) != 0) {
           var5 = SpotAnimationConfig.gameBuffer.readUnsignedShort();
           var6 = SpotAnimationConfig.gameBuffer.readUnsignedByte();
-          if ('\uffff' == var5) {
+          if (var5 == '\uffff') {
             var5 = -1;
           }
 
           HashTable.method1772(var6, var5, 39, var3);
         }
 
-        if (-1 != ~(var4 & 4)) {
+        if (~(var4 & 4) != -1) {
           var3.anInt2772 = SpotAnimationConfig.gameBuffer
               .readUnsignedShortAdd();
-          if (-65536 == ~var3.anInt2772) {
+          if (~var3.anInt2772 == -65536) {
             var3.anInt2772 = -1;
           }
         }
 
-        if (0 != (var4 & 128)) {
+        if ((var4 & 128) != 0) {
           var5 = SpotAnimationConfig.gameBuffer.readUnsignedShortAdd();
           if (var5 == '\uffff') {
             var5 = -1;
@@ -217,7 +217,7 @@ public final class SomethingTexture4 extends AbstractSomethingTexture {
 
           var6 = SpotAnimationConfig.gameBuffer.method782(-46);
           boolean var7 = true;
-          if (0 != ~var5 && 0 != ~var3.anInt2842 &&
+          if (~var5 != 0 && ~var3.anInt2842 != 0 &&
               GameClient
                   .method45(RenderAnimation.method898((byte) 42, var5).anInt542,
                       (byte) -20).anInt1857 < GameClient.method45(
@@ -241,7 +241,7 @@ public final class SomethingTexture4 extends AbstractSomethingTexture {
                 && ~var3.anInt2759 == ~AbstractGameWorld.updateCycle) {
               int var8 = RenderAnimation
                   .method898((byte) 42, var3.anInt2842).anInt542;
-              if (0 != ~var8) {
+              if (~var8 != 0) {
                 AnimationSequence var9 = GameClient.method45(var8, (byte) -20);
                 if (var9.anIntArray1851 != null) {
                   SocketStream.method1470(var3.anInt2829, var9, 183921384,
@@ -270,7 +270,7 @@ public final class SomethingTexture4 extends AbstractSomethingTexture {
           }
         }
 
-        if (-1 != ~(var4 & 32)) {
+        if (~(var4 & 32) != -1) {
           var3.aClass94_2825 = SpotAnimationConfig.gameBuffer.readString();
           var3.anInt2814 = 100;
         }

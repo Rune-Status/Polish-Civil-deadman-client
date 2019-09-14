@@ -23,9 +23,9 @@ public final class TextureSampler33 extends AbstractTextureSampler {
         TextureSampler33.aShort3052 = -37;
       }
 
-      if (0 == var1) {
+      if (var1 == 0) {
         this.anInt3047 = var2.readUnsignedShort();
-      } else if (-2 == ~var1) {
+      } else if (~var1 == -2) {
         this.aBoolean3050 = var2.readUnsignedByte() == 1;
       }
   }
@@ -57,7 +57,7 @@ public final class TextureSampler33 extends AbstractTextureSampler {
           int var11;
           int var12;
           int var13;
-          if (0 == var20) {
+          if (var20 == 0) {
             var13 = 0;
             var11 = 0;
             var12 = 0;
@@ -112,7 +112,7 @@ public final class TextureSampler33 extends AbstractTextureSampler {
 
   public static int method179(byte var0, int var1) {
     if (var0 == 92) {
-        if (null != SomethingVolume15.gameSocket) {
+        if (SomethingVolume15.gameSocket != null) {
           SomethingVolume15.gameSocket.destroy();
           SomethingVolume15.gameSocket = null;
         }
@@ -146,7 +146,7 @@ public final class TextureSampler33 extends AbstractTextureSampler {
           TextureCache.anIntArray2125[var3] = (var3 << 12) / var2;
         }
 
-        DummyClass53.anInt1343 = 64 != var2 ? 4096 : 2048;
+        DummyClass53.anInt1343 = var2 != 64 ? 4096 : 2048;
         RenderAnimation.anInt396 = -1 + var2;
         SomethingLight0.anInt1559 = var2;
       }
@@ -180,7 +180,7 @@ public final class TextureSampler33 extends AbstractTextureSampler {
           WorldMapLabel.anInt1716 - -TextureCache.localPlayer.waypointsX[0]) + "," + (
           TextureCache.localPlayer.waypointsY[0] + ProceduralTexture.anInt1152) + " - ";
 
-        for (int var3 = 0; var3 < HashTable.packetLength && 50 > var3; ++var3) {
+        for (int var3 = 0; var3 < HashTable.packetLength && var3 < 50; ++var3) {
           var2 = var2 + SpotAnimationConfig.gameBuffer.bytes[var3] + ",";
         }
 

@@ -35,10 +35,10 @@ public final class TextureSampler6 extends AbstractTextureSampler {
   }
 
   public void parseConfig(int var1, Buffer var2, boolean var3 ) {
-    if (0 == var1) {
+    if (var1 == 0) {
         this.anInt3043 = var2.readUnsignedShort();
-      } else if (1 != var1) {
-        if (2 == var1) {
+      } else if (var1 != 1) {
+        if (var1 == 2) {
           this.monoChromatic = var2.readUnsignedByte() == 1;
         }
       } else {
@@ -117,9 +117,10 @@ public final class TextureSampler6 extends AbstractTextureSampler {
       }
 
       return
-        !GameClient.method44(var2).method92(var1, (byte) -109) && null == var2.anObjectArray314 ?
+        !GameClient.method44(var2).method92(var1, (byte) -109) &&
+            var2.anObjectArray314 == null ?
           -1 :
-          (null != var2.anIntArray249 && ~var1 > ~var2.anIntArray249.length ?
+          (var2.anIntArray249 != null && ~var1 > ~var2.anIntArray249.length ?
             var2.anIntArray249[var1] :
             -1);
   }
@@ -231,7 +232,7 @@ public final class TextureSampler6 extends AbstractTextureSampler {
 
       for (; DummyClass53.anInt1344 > var1; ++var1) {
         PlayerVariable var2 = Unsure.getPlayerVariable(-109, var1);
-        if (null != var2 && ~var2.anInt556 == -1) {
+        if (var2 != null && ~var2.anInt556 == -1) {
           LightIntensity.variables[var1] = 0;
           DummyClass5.anIntArray2985[var1] = 0;
         }

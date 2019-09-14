@@ -52,7 +52,7 @@ public abstract class AbstractDirectColorSprite extends SubNode {
 
   public static Widget method638(byte var0, int var1, int var2) {
     Widget var3 = EnumStringFetcher.getWidget((byte) 109, var1);
-      return 0 == ~var2 ?
+      return ~var2 == 0 ?
         var3 :
         (var0 != -19 ?
           null :

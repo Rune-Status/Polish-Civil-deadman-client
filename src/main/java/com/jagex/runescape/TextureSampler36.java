@@ -66,7 +66,7 @@ public final class TextureSampler36 extends AbstractTextureSampler {
         TextureSampler36.animationSequences = null;
       }
 
-      if (0 == var1) {
+      if (var1 == 0) {
         this.anInt3434 = var2.readUnsignedShort();
       }
   }
@@ -138,7 +138,7 @@ public final class TextureSampler36 extends AbstractTextureSampler {
 
       int var6;
       int var7;
-      if (1 == SomethingPacket116.anInt1753) {
+      if (SomethingPacket116.anInt1753 == 1) {
         var7 = 2047 & StringNode.anInt2589 + SpotAnimationConfig.anInt531;
         var6 = AreaSoundEffect.anInt2309;
         if (~var6 > ~(SomethingTexture4.anInt2670 / 256)) {
@@ -165,7 +165,7 @@ public final class TextureSampler36 extends AbstractTextureSampler {
 
         int var11;
         int var12;
-        for (var11 = 0; 5 > var11; ++var11) {
+        for (var11 = 0; var11 < 5; ++var11) {
           if (MaterialShader5.aBooleanArray2169[var11]) {
             var12 = (int) ((-TextureSampler14.anIntArray3383[var11])
               + (TextureSampler14.anIntArray3383[var11] * 2 + 1) * Math.random() +
@@ -178,7 +178,7 @@ public final class TextureSampler36 extends AbstractTextureSampler {
 
             if (~var11 == -5) {
               DummyClass17.anInt1823 += var12;
-              if (128 > DummyClass17.anInt1823) {
+              if (DummyClass17.anInt1823 < 128) {
                 DummyClass17.anInt1823 = 128;
               }
 
@@ -187,7 +187,7 @@ public final class TextureSampler36 extends AbstractTextureSampler {
               }
             }
 
-            if (-3 == ~var11) {
+            if (~var11 == -3) {
               DummyClass49.anInt1111 += var12;
             }
 
@@ -237,7 +237,7 @@ public final class TextureSampler36 extends AbstractTextureSampler {
         }
 
         DummyClass43.method1194(-16385);
-        byte var19 = -3 != ~DummyClass20.method1817((byte) 70) ? 1 : (byte) BitVariable.anInt1127;
+        byte var19 = ~DummyClass20.method1817((byte) 70) != -3 ? 1 : (byte) BitVariable.anInt1127;
         if (GlRenderer.useOpenGlRenderer) {
           GlRenderer.method1846();
           GlRenderer.setDepthTestEnabled(true);
@@ -349,7 +349,7 @@ public final class TextureSampler36 extends AbstractTextureSampler {
           TextureSampler36.method344(-42, 33);
         }
 
-        if (null != var3) {
+        if (var3 != null) {
           var2.parseConfig(new Buffer(var3));
         }
 
@@ -390,7 +390,7 @@ public final class TextureSampler36 extends AbstractTextureSampler {
   }
 
   public static void method344(int var0, int var1) {
-    if (0 <= var0 && AudioStreamEncoder4.aBooleanArray3503.length > var0) {
+    if (var0 >= 0 && AudioStreamEncoder4.aBooleanArray3503.length > var0) {
         AudioStreamEncoder4.aBooleanArray3503[var0] = !AudioStreamEncoder4.aBooleanArray3503[var0];
         if (var1 != 4) {
           TextureSampler36.floorUnderlayIds = null;

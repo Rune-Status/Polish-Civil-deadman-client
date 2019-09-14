@@ -15,7 +15,7 @@ public final class MouseRecorder implements Runnable {
     for (; this.aBoolean1015; TextureSampler25.sleep(50L)) {
         Object var1 = this.anObject1016;
         synchronized (var1) {
-          if (-501 < ~this.anInt1018) {
+          if (~this.anInt1018 > -501) {
             this.anIntArray1020[this.anInt1018] = SomethingTilek.anInt1676;
             this.anIntArray1019[this.anInt1018] = HashTable.anInt1709;
             ++this.anInt1018;
@@ -51,9 +51,9 @@ public final class MouseRecorder implements Runnable {
   public static void method1260(int var0, int var1, Widget[] var2) {
     for (int var3 = 0; var3 < var2.length; ++var3) {
         Widget var4 = var2[var3];
-        if (null != var4 && ~var4.anInt190 == ~var1 && (!var4.aBoolean233 || !GameClient.method51(
+        if (var4 != null && ~var4.anInt190 == ~var1 && (!var4.aBoolean233 || !GameClient.method51(
           var4))) {
-          if (-1 == ~var4.anInt187) {
+          if (~var4.anInt187 == -1) {
             if (!var4.aBoolean233 && GameClient.method51(var4)
               && var4 != DummyClass56.aClass11_1453) {
               continue;
@@ -75,7 +75,7 @@ public final class MouseRecorder implements Runnable {
 
           if (var4.anInt187 == 6) {
             int var6;
-            if (0 != ~var4.anInt305 || ~var4.anInt198 != 0) {
+            if (~var4.anInt305 != 0 || ~var4.anInt198 != 0) {
               boolean var9 = InventoryConfig.method609(var4, var0 + -23173);
               if (var9) {
                 var6 = var4.anInt198;
@@ -109,7 +109,7 @@ public final class MouseRecorder implements Runnable {
               }
             }
 
-            if (0 != var4.anInt237 && !var4.aBoolean233) {
+            if (var4.anInt237 != 0 && !var4.aBoolean233) {
               int var10 = var4.anInt237 >> 16;
               var10 *= DisplayMode.loopCycle;
               var6 = var4.anInt237 << 16 >> 16;
@@ -131,7 +131,7 @@ public final class MouseRecorder implements Runnable {
     int var4 = 0;
 
       for (int var5 = 0; var1 > var5; ++var5) {
-        if (null == var2[var0 - -var5]) {
+        if (var2[var0 - -var5] == null) {
           var2[var5 + var0] = TextureSampler7.aClass94_3339;
         }
 

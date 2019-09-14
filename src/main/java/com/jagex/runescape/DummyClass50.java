@@ -20,20 +20,20 @@ public final class DummyClass50 {
       }
 
       byte[] var2 = new byte[24];
-      if (null != LinearHashTable.uidFile) {
+      if (LinearHashTable.uidFile != null) {
         try {
           LinearHashTable.uidFile.seek(-41, 0L);
           LinearHashTable.uidFile.method982(false, var2);
 
           int var3;
-          for (var3 = 0; -25 < ~var3 && ~var2[var3] == -1; ++var3) {
+          for (var3 = 0; ~var3 > -25 && ~var2[var3] == -1; ++var3) {
           }
 
-          if (-25 >= ~var3) {
+          if (~var3 <= -25) {
             throw new IOException();
           }
         } catch (Exception var5) {
-          for (int var4 = 0; 24 > var4; ++var4) {
+          for (int var4 = 0; var4 < 24; ++var4) {
             var2[var4] = -1;
           }
         }
@@ -120,8 +120,8 @@ public final class DummyClass50 {
 
   public static void method1400(SignLink var0, Object var1) {
 
-    if (null != var0.eventQueue) {
-      for (int var3 = 0; var3 < 50 && null != var0.eventQueue.peekEvent();
+    if (var0.eventQueue != null) {
+      for (int var3 = 0; var3 < 50 && var0.eventQueue.peekEvent() != null;
           ++var3) {
         TextureSampler25.sleep(1L);
       }

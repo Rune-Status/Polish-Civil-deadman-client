@@ -35,7 +35,7 @@ public final class DummyClass21 {
 
   public static synchronized byte[] method1807(int var0, int var1) {
     byte[] var2;
-      if (~var1 == -101 && -1 > ~DummyClass45.anInt984) {
+      if (~var1 == -101 && ~DummyClass45.anInt984 < -1) {
         var2 = TextureSampler8.aByteArrayArray3461[--DummyClass45.anInt984];
         TextureSampler8.aByteArrayArray3461[DummyClass45.anInt984] = null;
         return var2;
@@ -48,7 +48,7 @@ public final class DummyClass21 {
           var2 = BZipDecompressorState.aByteArrayArray125[--Mouse.anInt1927];
           BZipDecompressorState.aByteArrayArray125[Mouse.anInt1927] = null;
           return var2;
-        } else if (-30001 == ~var1 && 0 < GlTexture2d.anInt3766) {
+        } else if (~var1 == -30001 && GlTexture2d.anInt3766 > 0) {
           var2 = GameObject.aByteArrayArray2747[--GlTexture2d.anInt3766];
           GameObject.aByteArrayArray2747[GlTexture2d.anInt3766] = null;
           return var2;

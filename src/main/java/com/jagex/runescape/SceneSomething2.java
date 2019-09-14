@@ -55,7 +55,7 @@ public final class SceneSomething2 {
       var8.anInt2308 = var0 * 128;
       var8.anInt2326 = 128 * var5;
       var8.anInt2314 = var6;
-      if (null != var2) {
+      if (var2 != null) {
         var8.anIntArray2333 = var2.anIntArray1539;
         var8.anInt2328 = var2.anInt1484 * 128;
         var8.anInt2325 = var2.anInt1515;
@@ -64,7 +64,7 @@ public final class SceneSomething2 {
         var8.anInt2310 = var2.anInt1518;
         int var9 = var2.anInt1480;
         int var10 = var2.anInt1485;
-        if (-2 == ~var3 || 3 == var3) {
+        if (~var3 == -2 || var3 == 3) {
           var9 = var2.anInt1485;
           var10 = var2.anInt1480;
         }
@@ -76,16 +76,16 @@ public final class SceneSomething2 {
           var8.method134(1);
         }
 
-        if (null != var8.anIntArray2333) {
+        if (var8.anIntArray2333 != null) {
           var8.anInt2316 =
             var8.anInt2310 - -((int) (Math.random() * (-var8.anInt2310 + var8.anInt2325)));
         }
 
         Node.aClass61_78.addLast(var8);
-      } else if (null != var4) {
+      } else if (var4 != null) {
         var8.aClass140_Sub4_Sub2_2324 = var4;
         NpcConfiguration var12 = var4.config;
-        if (null != var12.anIntArray1292) {
+        if (var12.anIntArray1292 != null) {
           var8.aBoolean2329 = true;
           var12 = var12.method1471((byte) -112);
         }
@@ -98,7 +98,7 @@ public final class SceneSomething2 {
         }
 
         SocketStream.aClass61_1242.addLast(var8);
-      } else if (null != var7) {
+      } else if (var7 != null) {
         var8.aClass140_Sub4_Sub1_2327 = var7;
         var8.anInt2321 = (var7.getSize() + var5) * 128;
         var8.anInt2307 = 128 * (var7.getSize() + var0);

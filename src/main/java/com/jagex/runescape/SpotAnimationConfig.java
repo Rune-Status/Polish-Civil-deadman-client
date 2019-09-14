@@ -46,13 +46,13 @@ public final class SpotAnimationConfig {
   private void method965(Buffer var1, int var2, int var3) {
     if (var2 == 1) {
         this.anInt541 = var1.readUnsignedShort();
-      } else if (2 == var2) {
+      } else if (var2 == 2) {
         this.anInt542 = var1.readUnsignedShort();
       } else if (var2 != 4) {
         if (~var2 == -6) {
           this.scaleY = var1.readUnsignedShort();
         } else {
-          if (6 == var2) {
+          if (var2 == 6) {
             this.rotationY = var1.readUnsignedShort();
           } else if (var2 == 7) {
             this.anInt538 = var1.readUnsignedByte();
@@ -62,7 +62,7 @@ public final class SpotAnimationConfig {
             } else {
               int var4;
               int var5;
-              if (40 == var2) {
+              if (var2 == 40) {
                 var4 = var1.readUnsignedByte();
                 this.faceIds = new short[var4];
                 this.colorIds = new short[var4];
@@ -72,7 +72,7 @@ public final class SpotAnimationConfig {
                   this.colorIds[var5] = (short) var1.readUnsignedShort();
                 }
               } else {
-                if (41 == var2) {
+                if (var2 == 41) {
                   var4 = var1.readUnsignedByte();
                   this.aShortArray534 = new short[var4];
                   this.aShortArray535 = new short[var4];
@@ -105,12 +105,12 @@ public final class SpotAnimationConfig {
       if (var2 == -30) {
         if (var5 == null) {
           Model var6 = Model.getModel(ObjectNode.models, this.anInt541, 0);
-          if (null == var6) {
+          if (var6 == null) {
             return null;
           }
 
           int var7;
-          if (null != this.faceIds) {
+          if (this.faceIds != null) {
             for (var7 = 0; this.faceIds.length > var7; ++var7) {
               var6.replaceColor(this.faceIds[var7], this.colorIds[var7]);
             }
@@ -130,27 +130,27 @@ public final class SpotAnimationConfig {
         }
 
         AbstractModel var9;
-        if (0 != ~this.anInt542 && var3 != -1) {
+        if (~this.anInt542 != 0 && var3 != -1) {
           var9 = GameClient.method45(this.anInt542, (byte) -20)
               .method2059(var1, var4, var3, (byte) -52, var5);
         } else {
           var9 = var5.method1882(true, true, true);
         }
 
-        if (128 != this.scaleXZ || 128 != this.scaleY) {
+        if (this.scaleXZ != 128 || this.scaleY != 128) {
           var9.scale(this.scaleXZ, this.scaleY, this.scaleXZ);
         }
 
         if (this.rotationY != 0) {
-          if (-91 == ~this.rotationY) {
+          if (~this.rotationY == -91) {
             var9.rotateQuarterY();
           }
 
-          if (180 == this.rotationY) {
+          if (this.rotationY == 180) {
             var9.method1874();
           }
 
-          if (270 == this.rotationY) {
+          if (this.rotationY == 270) {
             var9.method1900();
           }
         }

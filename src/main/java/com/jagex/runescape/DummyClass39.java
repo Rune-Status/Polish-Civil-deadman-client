@@ -35,15 +35,15 @@ public final class DummyClass39 {
       int var2 = Objects.requireNonNull(Unsure.getPlayerVariable(-37, var1)).anInt556;
       if (var2 != 0) {
         int var3 = DummyClass5.anIntArray2985[var1];
-        if (6 == var2) {
+        if (var2 == 6) {
           FileCache.anInt688 = var3;
         }
 
-        if (-6 == ~var2) {
+        if (~var2 == -6) {
           OndemandRequester.anInt998 = var3;
         }
 
-        if (-10 == ~var2) {
+        if (~var2 == -10) {
           DummyCanvas.anInt15 = var3;
         }
 

@@ -66,7 +66,7 @@ public class DummyClass7 extends DummyClass6 {
                 || ~var12 <= ~(8 * var4) && var12 < 8 + var4 * 8 && var13 >= var5 * 8 && ~var13 > ~(
                 8 + var5 * 8)) {
                 var2 = var0.readByte();
-                if (-1 != ~var2) {
+                if (~var2 != -1) {
                   if (RenderAnimation.aByteArrayArrayArray383[var10][var11] == null) {
                     RenderAnimation.aByteArrayArrayArray383[var10][var11] = new byte[4096];
                   }
@@ -87,7 +87,7 @@ public class DummyClass7 extends DummyClass6 {
         } else {
           for (var10 = 0; (var3 ? 64 : 4096) > var10; ++var10) {
             var2 = var0.readByte();
-            if (0 != var2) {
+            if (var2 != 0) {
               ++var0.position;
             }
           }

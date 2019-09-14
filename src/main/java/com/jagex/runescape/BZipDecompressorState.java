@@ -65,9 +65,9 @@ public final class BZipDecompressorState {
         SomethingInScenePacket202.method117((byte) 87);
       }
 
-      if (~ProceduralTexture.anInt1150 != 0 && -1 != TextureSampler13.anInt3362) {
+      if (~ProceduralTexture.anInt1150 != 0 && TextureSampler13.anInt3362 != -1) {
         int var1 = -SomethingQuickChat2.anInt3536 + ProceduralTexture.anInt1150;
-        if (2 > var1 || -3 > ~var1) {
+        if (var1 < 2 || ~var1 < -3) {
           var1 >>= 4;
         }
 
@@ -78,7 +78,7 @@ public final class BZipDecompressorState {
 
         SpawnedGameObject.anInt2251 -= -var2;
         SomethingQuickChat2.anInt3536 += var1;
-        if (0 == var1 && 0 == var2) {
+        if (var1 == 0 && var2 == 0) {
           ProceduralTexture.anInt1150 = -1;
           TextureSampler13.anInt3362 = -1;
         }

@@ -57,7 +57,7 @@ public final class MonoChromaticImageCache {
           return this.anIntArrayArray1573[0];
         } else {
           MonoChromaticImageBuffer var3 = this.aClass3_Sub26Array1571[var2];
-          if (null != var3) {
+          if (var3 != null) {
             this.aBoolean1580 = false;
           } else {
             this.aBoolean1580 = true;

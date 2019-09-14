@@ -30,7 +30,7 @@ public final class VariableUpdate extends Node {
       }
 
       var1 &= 3;
-      return 0 != var1 ?
+      return var1 != 0 ?
         (~var1 != -2 ? (var1 != 2 ? -var0 + 7 + 1 + -var3 : -var6 + (7 - (var4 + -1))) : var0) :
         var6;
   }
@@ -42,7 +42,7 @@ public final class VariableUpdate extends Node {
   }
 
   public static GameString method123(int var0, int var1) {
-    if (100000 > var1) {
+    if (var1 < 100000) {
         return RenderAnimation.concat(new GameString[] {
           DummyClass42.aClass94_888, SomethingScene.toString(var1), SomethingScene.aClass94_1076
         });

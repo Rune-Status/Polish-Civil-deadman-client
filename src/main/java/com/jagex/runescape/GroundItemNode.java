@@ -19,7 +19,7 @@ public final class GroundItemNode extends SubNode {
   }
 
   public static void method626(int var0) {
-    if (null != Buffer.aClass3_Sub28_Sub3_2600) {
+    if (Buffer.aClass3_Sub28_Sub3_2600 != null) {
         if (GameObject.anInt2737 < 10) {
           if (!TextureSampler23.worldMaps.method2127((byte) -83,
             Buffer.aClass3_Sub28_Sub3_2600.aClass94_3561)) {
@@ -47,11 +47,11 @@ public final class GroundItemNode extends SubNode {
               AbstractGameWorld.aFloat727 = 4.0F;
               NPC.aFloat3979 = 4.0F;
             } else {
-              if (75 == Buffer.aClass3_Sub28_Sub3_2600.anInt3563) {
+              if (Buffer.aClass3_Sub28_Sub3_2600.anInt3563 == 75) {
                 AbstractGameWorld.aFloat727 = 6.0F;
                 NPC.aFloat3979 = 6.0F;
-              } else if (-101 != ~Buffer.aClass3_Sub28_Sub3_2600.anInt3563) {
-                if (200 == Buffer.aClass3_Sub28_Sub3_2600.anInt3563) {
+              } else if (~Buffer.aClass3_Sub28_Sub3_2600.anInt3563 != -101) {
+                if (Buffer.aClass3_Sub28_Sub3_2600.anInt3563 == 200) {
                   AbstractGameWorld.aFloat727 = 16.0F;
                   NPC.aFloat3979 = 16.0F;
                 } else {
@@ -71,7 +71,7 @@ public final class GroundItemNode extends SubNode {
           int var2 = -ProceduralTexture.anInt1152 + -(TextureCache.localPlayer.anInt2829 >> 7)
             + MapScene.anInt65 + -1 + DummyClass58.anInt1460;
           var2 += -5 + (int) (Math.random() * 10.0D);
-          if (-1 >= ~var1 && DummyClass30.anInt455 > var1 && 0 <= var2
+          if (~var1 <= -1 && DummyClass30.anInt455 > var1 && var2 >= 0
             && ~var2 > ~DummyClass58.anInt1460) {
             SomethingQuickChat2.anInt3536 = var1;
             SpawnedGameObject.anInt2251 = var2;
@@ -110,7 +110,7 @@ public final class GroundItemNode extends SubNode {
                 Buffer.aClass3_Sub28_Sub3_2600.aClass94_3561)), false);
             GameObject.anInt2737 = 40;
             SomethingTexture4.resetFrameRegulator();
-          } else if (-41 != ~GameObject.anInt2737) {
+          } else if (~GameObject.anInt2737 != -41) {
             if (GameObject.anInt2737 == 50) {
               HintMarker.method1587((byte) -83, new Buffer(
                   TextureSampler23.worldMaps
@@ -120,7 +120,7 @@ public final class GroundItemNode extends SubNode {
               DummyClass5.method2210((byte) -90, true);
               SomethingTexture4.resetFrameRegulator();
             } else {
-              if (-61 == ~GameObject.anInt2737) {
+              if (~GameObject.anInt2737 == -61) {
                 if (TextureSampler23.worldMaps
                     .method2135(RenderAnimation.concat(new GameString[]{
                         Buffer.aClass3_Sub28_Sub3_2600.aClass94_3561,
@@ -159,7 +159,7 @@ public final class GroundItemNode extends SubNode {
                   GameObject.anInt2737 = 79;
                   DummyClass5.method2210((byte) -90, true);
                   SomethingTexture4.resetFrameRegulator();
-                } else if (-80 == ~GameObject.anInt2737) {
+                } else if (~GameObject.anInt2737 == -80) {
                   SomethingTexture1.aClass33_2637 =
                       new SomethingFont(17, true, GameCanvas.INSTANCE);
                   GameObject.anInt2737 = 82;
@@ -171,13 +171,13 @@ public final class GroundItemNode extends SubNode {
                   GameObject.anInt2737 = 85;
                   DummyClass5.method2210((byte) -90, true);
                   SomethingTexture4.resetFrameRegulator();
-                } else if (85 == GameObject.anInt2737) {
+                } else if (GameObject.anInt2737 == 85) {
                   SomethingTexture1.aClass33_2648 =
                       new SomethingFont(22, true, GameCanvas.INSTANCE);
                   GameObject.anInt2737 = 88;
                   DummyClass5.method2210((byte) -90, true);
                   SomethingTexture4.resetFrameRegulator();
-                } else if (88 != GameObject.anInt2737) {
+                } else if (GameObject.anInt2737 != 88) {
                   CollisionMap.aClass33_1305 = new SomethingFont(30, true,
                       GameCanvas.INSTANCE);
                   GameObject.anInt2737 = 100;
@@ -232,10 +232,10 @@ public final class GroundItemNode extends SubNode {
         GroundItemNode.aBooleanArray3674 = null;
       }
 
-      if (~var2 == ~var3.animationId && 0 != ~var2) {
+      if (~var2 == ~var3.animationId && ~var2 != 0) {
         AnimationSequence var4 = GameClient.method45(var2, (byte) -20);
         int var5 = var4.anInt1845;
-        if (1 == var5) {
+        if (var5 == 1) {
           var3.anInt2828 = var1;
           var3.anInt2760 = 0;
           var3.anInt2776 = 1;
@@ -248,7 +248,7 @@ public final class GroundItemNode extends SubNode {
         if (var5 == 2) {
           var3.anInt2773 = 0;
         }
-      } else if (-1 == var2 || var3.animationId == -1
+      } else if (var2 == -1 || var3.animationId == -1
         || GameClient.method45(var2, (byte) -20).anInt1857 >= GameClient.method45(var3.animationId,
         (byte) -20).anInt1857) {
         var3.anInt2776 = 1;

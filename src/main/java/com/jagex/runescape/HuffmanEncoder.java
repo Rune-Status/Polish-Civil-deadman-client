@@ -14,7 +14,7 @@ public final class HuffmanEncoder {
       int var0 = var1;
 
       for (int var2 = 0; ~var2 > -9; ++var2) {
-        if (1 == (1 & var0)) {
+        if ((1 & var0) == 1) {
           var0 = var0 >>> 1 ^ -306674912;
         } else {
           var0 >>>= 1;
@@ -51,7 +51,7 @@ public final class HuffmanEncoder {
           int var10;
           int var11;
           int var12;
-          if (0 == (var8 & var7)) {
+          if ((var8 & var7) == 0) {
             for (var10 = -1 + var6; ~var10 <= -2; --var10) {
               var11 = var3[var10];
               if (~var8 != ~var11) {
@@ -84,10 +84,10 @@ public final class HuffmanEncoder {
 
           for (var11 = 0; var11 < var6; ++var11) {
             var12 = Integer.MIN_VALUE >>> var11;
-            if (0 == (var8 & var12)) {
+            if ((var8 & var12) == 0) {
               ++var10;
             } else {
-              if (0 == this.anIntArray633[var10]) {
+              if (this.anIntArray633[var10] == 0) {
                 this.anIntArray633[var10] = var4;
               }
 
@@ -125,7 +125,7 @@ public final class HuffmanEncoder {
         int var9 = var4[var5] & 255;
         int var10 = this.lengths[var9];
         byte var11 = this.codewords[var9];
-        if (0 == var11) {
+        if (var11 == 0) {
           throw new RuntimeException("No codeword for data value " + var9);
         }
 
@@ -197,7 +197,7 @@ public final class HuffmanEncoder {
             var7 = this.anIntArray633[var7];
           }
 
-          if (-1 < ~(var10 = this.anIntArray633[var7])) {
+          if (~(var10 = this.anIntArray633[var7]) > -1) {
             dest[destOff++] = (byte) (~var10);
             if (len <= destOff) {
               break;
@@ -227,7 +227,7 @@ public final class HuffmanEncoder {
             var7 = this.anIntArray633[var7];
           }
 
-          if (-1 < ~(var10 = this.anIntArray633[var7])) {
+          if (~(var10 = this.anIntArray633[var7]) > -1) {
             dest[destOff++] = (byte) (~var10);
             if (destOff >= len) {
               break;
@@ -272,7 +272,7 @@ public final class HuffmanEncoder {
             var7 = this.anIntArray633[var7];
           }
 
-          if (-1 < ~(var10 = this.anIntArray633[var7])) {
+          if (~(var10 = this.anIntArray633[var7]) > -1) {
             dest[destOff++] = (byte) (~var10);
             if (~destOff <= ~len) {
               break;
@@ -287,7 +287,7 @@ public final class HuffmanEncoder {
             var7 = this.anIntArray633[var7];
           }
 
-          if (0 > (var10 = this.anIntArray633[var7])) {
+          if ((var10 = this.anIntArray633[var7]) < 0) {
             dest[destOff++] = (byte) (~var10);
             if (destOff >= len) {
               break;
@@ -331,7 +331,7 @@ public final class HuffmanEncoder {
           Keyboard.aClass94_1917, var2.substring(-8 + var2.getLength(), 0, 0),
           TextureSampler30.aClass94_3124, SomethingScene.aClass94_1072, var2,
           OndemandRequester.aClass94_995
-        }) : (6 < var2.getLength() ?
+        }) : (var2.getLength() > 6 ?
           RenderAnimation.concat(new GameString[] {
             TextureSampler23.aClass94_3211, var2.substring(-4 + var2.getLength(), 0, 0),
             AnimationSomething.aClass94_3586, SomethingScene.aClass94_1072, var2,
@@ -347,9 +347,9 @@ public final class HuffmanEncoder {
 
       for (int var4 = 0; var4 < ScriptState.amountFloors; ++var4) {
         FloorOverlay var5 = TextureSampler10.method350((byte) 120, var4);
-        if (null != var5) {
+        if (var5 != null) {
           int var6 = var5.anInt2095;
-          if (0 <= var6 && !DummyClass40.textureCache.method17(var6, 126)) {
+          if (var6 >= 0 && !DummyClass40.textureCache.method17(var6, 126)) {
             var6 = -1;
           }
 
@@ -357,11 +357,11 @@ public final class HuffmanEncoder {
           int var8;
           int var9;
           int var10;
-          if (-1 < ~var5.anInt2098) {
+          if (~var5.anInt2098 > -1) {
             if (var6 >= 0) {
               var7 = DummyClass40.hslTable[StringNode.method729((byte) -74,
                 DummyClass40.textureCache.method15(var6, '\uffff'), 96)];
-            } else if (-1 == var5.anInt2103) {
+            } else if (var5.anInt2103 == -1) {
               var7 = -1;
             } else {
               var8 = var5.anInt2103;
@@ -380,7 +380,7 @@ public final class HuffmanEncoder {
             var9 = (127 & var8) + var1;
             if (~var9 > -1) {
               var9 = 0;
-            } else if (-128 > ~var9) {
+            } else if (~var9 < -128) {
               var9 = 127;
             }
 

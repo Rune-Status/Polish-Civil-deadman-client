@@ -75,7 +75,7 @@ public final class ClientScriptCall extends Node {
       int var1 = 128 * GameCanvas.anInt30 + 64;
       int var3 = BufferData.method1736(GameWorldSomething.currentPlane, 1, var1, var2)
         - TextureSampler25.anInt3414;
-      if (100 <= AbstractFileRequest.anInt3631) {
+      if (AbstractFileRequest.anInt3631 >= 100) {
         NPC.anInt3995 = 64 + GameCanvas.anInt30 * 128;
         DummyClass49.anInt1111 = 64 + AbstractMouseWheel.anInt1904 * 128;
         EnumStringFetcher.anInt2162 =
@@ -142,7 +142,7 @@ public final class ClientScriptCall extends Node {
       int var4 = -NPC.anInt3995 + var1;
       int var7 = (int) Math.sqrt(var4 * var4 + var6 * var6);
       int var8 = (int) (325.949D * Math.atan2(var5, var7)) & 2047;
-      if (128 > var8) {
+      if (var8 < 128) {
         var8 = 128;
       }
 
@@ -172,7 +172,7 @@ public final class ClientScriptCall extends Node {
         var10 -= 2048;
       }
 
-      if (-1024 > var10) {
+      if (var10 < -1024) {
         var10 += 2048;
       }
 
@@ -182,14 +182,14 @@ public final class ClientScriptCall extends Node {
         TextureSampler28.anInt3315 &= 2047;
       }
 
-      if (-1 < ~var10) {
+      if (~var10 > -1) {
         TextureSampler28.anInt3315 -=
           DummyClass8.anInt4014 * -var10 / 1000 + AbstractSomethingTexture.anInt1105;
         TextureSampler28.anInt3315 &= 2047;
       }
 
       int var11 = -TextureSampler28.anInt3315 + var9;
-      if (1024 < var11) {
+      if (var11 > 1024) {
         var11 -= 2048;
       }
 
@@ -197,7 +197,7 @@ public final class ClientScriptCall extends Node {
         var11 += 2048;
       }
 
-      if (var11 < 0 && -1 > ~var10 || var11 > 0 && ~var10 > -1) {
+      if (var11 < 0 && ~var10 < -1 || var11 > 0 && ~var10 > -1) {
         TextureSampler28.anInt3315 = var9;
       }
   }

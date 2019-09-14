@@ -29,11 +29,11 @@ public final class ClientScriptEnum extends SubNode {
       } else {
         if (~opcode == -3) {
           this.paramType = var2.readUnsignedByte();
-        } else if (3 != opcode) {
+        } else if (opcode != 3) {
           if (opcode == 4) {
             this.defaultIntegerValue = var2.readInt();
           } else {
-            if (5 == opcode || -7 == ~opcode) {
+            if (opcode == 5 || ~opcode == -7) {
               int size = var2.readUnsignedShort();
               this.table = new HashTable(
                   DummyClass53.nearestPo2((byte) 94, size));
@@ -59,23 +59,23 @@ public final class ClientScriptEnum extends SubNode {
 
   public GameString getString(int var1, byte var2 ) {
     int var3 = 10 / ((var2 - 68) / 50);
-      if (null == this.table) {
+      if (this.table == null) {
         return this.defaultValue;
       } else {
         StringNode var4 = (StringNode) this.table.get(var1);
-        return null == var4 ? this.defaultValue : var4.aClass94_2586;
+        return var4 == null ? this.defaultValue : var4.aClass94_2586;
       }
   }
 
   public boolean hasValue(GameString name, int var2 ) {
-    if (null == this.table) {
+    if (this.table == null) {
         return false;
       } else {
         if (var2 != 8729) {
           this.parseOpcode(-97, null, (byte) -91);
         }
 
-        if (null == this.aClass130_3666) {
+        if (this.aClass130_3666 == null) {
           this.method618(0);
         }
 
@@ -113,7 +113,7 @@ public final class ClientScriptEnum extends SubNode {
   }
 
   public boolean method621(int var1, int var2 ) {
-    if (null != this.table) {
+    if (this.table != null) {
         if (this.aClass130_3666 == null) {
           this.method622(109);
         }
@@ -130,7 +130,7 @@ public final class ClientScriptEnum extends SubNode {
       int var3 = -48 % ((26 - var1) / 58);
 
       for (IntegerNode var2 = (IntegerNode) this.table.getFirst(123);
-           null != var2; var2 = (IntegerNode) this.table.getNext(-88)) {
+          var2 != null; var2 = (IntegerNode) this.table.getNext(-88)) {
         IntegerNode var4 = new IntegerNode((int) var2.key);
         this.aClass130_3666.put(var2.anInt2467, var4);
       }
@@ -139,7 +139,7 @@ public final class ClientScriptEnum extends SubNode {
   public void parseConfig(Buffer buffer ) {
     while (true) {
         int opcode = buffer.readUnsignedByte();
-        if (-1 == ~opcode) {
+        if (~opcode == -1) {
           return;
         }
 
@@ -161,18 +161,18 @@ public final class ClientScriptEnum extends SubNode {
       Buffer var2 = new Buffer(var1);
       int var3 = var2.readUnsignedByte();
       int var4 = var2.readInt();
-      if (0 <= var4 && (-1 == ~AbstractSomethingTexture.anInt1108
+      if (var4 >= 0 && (~AbstractSomethingTexture.anInt1108 == -1
         || ~AbstractSomethingTexture.anInt1108 <= ~var4)) {
-        if (-1 == ~var3) {
+        if (~var3 == -1) {
           byte[] var8 = new byte[var4];
           var2.copy(0, var4, var8);
           return var8;
         } else {
           int var5 = var2.readInt();
-          if (0 <= var5 && (AbstractSomethingTexture.anInt1108 == 0
+          if (var5 >= 0 && (AbstractSomethingTexture.anInt1108 == 0
             || ~AbstractSomethingTexture.anInt1108 <= ~var5)) {
             byte[] var6 = new byte[var5];
-            if (1 == var3) {
+            if (var3 == 1) {
               BZipDecompressor.method1640(var6, var5, var1, 9);
             } else {
               AudioSomethingSomething.aClass49_2505

@@ -112,20 +112,20 @@ public final class Mouse implements MouseListener, MouseMotionListener,
           .getFirst();
 
       for (int var2 = -37 / ((-21 - var0) / 48);
-          null != var1;
+          var1 != null;
           var1 = (SpawnedGameObject) TextureSampler26.aClass61_3075.getNext()) {
         if (var1.aliveTime > 0) {
           --var1.aliveTime;
         }
 
-        if (0 != var1.aliveTime) {
+        if (var1.aliveTime != 0) {
           if (~var1.anInt2261 < -1) {
             --var1.anInt2261;
           }
 
-          if (~var1.anInt2261 == -1 && 1 <= var1.anInt2264
-              && 1 <= var1.anInt2248
-              && 102 >= var1.anInt2264 && ~var1.anInt2248 >= -103 && (
+          if (~var1.anInt2261 == -1 && var1.anInt2264 >= 1
+              && var1.anInt2248 >= 1
+              && var1.anInt2264 <= 102 && ~var1.anInt2248 >= -103 && (
               ~var1.anInt2265 > -1
                   || AbstractFileRequest
                   .method590((byte) -34, var1.anInt2265, var1.anInt2262))) {
@@ -141,7 +141,7 @@ public final class Mouse implements MouseListener, MouseMotionListener,
               var1.unlinkNode();
             }
           }
-        } else if (-1 < ~var1.anInt2254 || AbstractFileRequest
+        } else if (~var1.anInt2254 > -1 || AbstractFileRequest
             .method590((byte) -66, var1.anInt2254,
                 var1.anInt2253)) {
           FileCache.method1048(var1.anInt2254, var1.anInt2264, var1.anInt2250,

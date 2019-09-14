@@ -35,7 +35,7 @@ public final class BufferedFile {
 
   private void method975(byte var1) throws IOException {
     int var2 = 56 % ((45 - var1) / 44);
-      if (-1L != this.aLong571) {
+      if (this.aLong571 != -1L) {
         if (this.aLong571 != this.aLong570) {
           this.aClass122_573.method1737((byte) -10, this.aLong571);
           this.aLong570 = this.aLong571;
@@ -68,7 +68,7 @@ public final class BufferedFile {
           var5 = this.anInt575 + this.aLong576;
         }
 
-        if (-1L < var3 && var5 > var3) {
+        if (var3 > -1L && var5 > var3) {
           int var7 = (int) (-var3 + var5);
           ArrayUtils.copy(this.aByteArray572, (int) (var3 - this.aLong571),
               this.aByteArray564,
@@ -103,7 +103,7 @@ public final class BufferedFile {
           throw new ArrayIndexOutOfBoundsException(var3 + var1 - var2.length);
         }
 
-        if (-1L != this.aLong571 && this.aLong569 >= this.aLong571
+        if (this.aLong571 != -1L && this.aLong569 >= this.aLong571
           && this.anInt566 + this.aLong571
             >= var3 + this.aLong569) {
           ArrayUtils.copy(
@@ -134,9 +134,9 @@ public final class BufferedFile {
         if (~this.aByteArray564.length > ~var3) {
           this.aClass122_573.method1737((byte) -10, this.aLong569);
 
-          for (this.aLong570 = this.aLong569; 0 < var3; this.aLong569 += var9) {
+          for (this.aLong570 = this.aLong569; var3 > 0; this.aLong569 += var9) {
             var9 = this.aClass122_573.method1739(var1, 0, var3, var2);
-            if (0 == ~var9) {
+            if (~var9 == 0) {
               break;
             }
 
@@ -157,7 +157,7 @@ public final class BufferedFile {
           this.aLong569 += var9;
         }
 
-        if (-1L != this.aLong571) {
+        if (this.aLong571 != -1L) {
           if (this.aLong569 < this.aLong571 && ~var3 < -1) {
             var9 = (int) (-this.aLong569 + this.aLong571) + var1;
             if (~(var1 - -var3) > ~var9) {
@@ -189,7 +189,7 @@ public final class BufferedFile {
             var16 = var5;
           }
 
-          if (-1L < var16 && var11 > var16) {
+          if (var16 > -1L && var11 > var16) {
             int var13 = (int) (var11 + -var16);
             ArrayUtils.copy(this.aByteArray572, (int) (var16 + -this.aLong571), var2,
               (int) (var16 + -var5) + var1, var13);
@@ -233,13 +233,13 @@ public final class BufferedFile {
           this.aLong576 = this.aLong569;
           this.aByteArray564.length > this.anInt575; this.anInt575 += var3) {
         int var2 = this.aByteArray564.length + -this.anInt575;
-        if (-200000001 > ~var2) {
+        if (~var2 < -200000001) {
           var2 = 200000000;
         }
 
         var3 = this.aClass122_573.method1739(this.anInt575, 0, var2,
             this.aByteArray564);
-        if (0 == ~var3) {
+        if (~var3 == 0) {
           break;
         }
 
@@ -262,7 +262,7 @@ public final class BufferedFile {
           this.aLong568 = var4 + this.aLong569;
         }
 
-        if (0L != ~this.aLong571 && (this.aLong571 > this.aLong569
+        if (~this.aLong571 != 0L && (this.aLong571 > this.aLong569
             || this.aLong569 > (
           this.anInt566 + this.aLong571))) {
           this.method975((byte) 124);
@@ -326,7 +326,7 @@ public final class BufferedFile {
           return;
         }
 
-        if (0 < var4) {
+        if (var4 > 0) {
           if (this.aLong571 == -1L) {
             this.aLong571 = this.aLong569;
           }

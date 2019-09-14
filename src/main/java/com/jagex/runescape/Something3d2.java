@@ -33,9 +33,9 @@ public class Something3d2 extends Something3dRoot {
   public final void method2231(byte var1) {
     this.anInt3018 = this.anInt3021;
       this.anInt3029 >>= 4;
-      if (0 > this.anInt3029) {
+      if (this.anInt3029 < 0) {
         this.anInt3029 = 0;
-      } else if (255 < this.anInt3029) {
+      } else if (this.anInt3029 > 255) {
         this.anInt3029 = 255;
       }
 
@@ -54,14 +54,14 @@ public class Something3d2 extends Something3dRoot {
   }
 
   public final void method2237(int var1, int var2, int var3) {
-    if (0 == var2) {
+    if (var2 == 0) {
         this.anInt3023 = 4096;
-        this.anInt3024 = -(-1 >= ~var1 ? var1 : -var1) + this.anInt3026;
+        this.anInt3024 = -(~var1 <= -1 ? var1 : -var1) + this.anInt3026;
         this.anInt3024 = this.anInt3024 * this.anInt3024 >> 12;
         this.anInt3029 = this.anInt3024;
       } else {
         this.anInt3023 = this.anInt3022 * this.anInt3024 >> 12;
-        if (-1 >= ~this.anInt3023) {
+        if (~this.anInt3023 <= -1) {
           if (~this.anInt3023 < -4097) {
             this.anInt3023 = 4096;
           }
@@ -69,7 +69,7 @@ public class Something3d2 extends Something3dRoot {
           this.anInt3023 = 0;
         }
 
-        this.anInt3024 = -(-1 >= ~var1 ? var1 : -var1) + this.anInt3026;
+        this.anInt3024 = -(~var1 <= -1 ? var1 : -var1) + this.anInt3026;
         this.anInt3024 = this.anInt3024 * this.anInt3024 >> 12;
         this.anInt3024 = this.anInt3024 * this.anInt3023 >> 12;
         this.anInt3029 += this.anInt3018 * this.anInt3024 >> 12;
@@ -119,11 +119,11 @@ public class Something3d2 extends Something3dRoot {
               return var5;
             }
 
-            if (15 == var8) {
+            if (var8 == 15) {
               var10 = 1;
             }
 
-            if (16 == var8) {
+            if (var8 == 16) {
               var10 = 2;
             }
 
@@ -131,11 +131,11 @@ public class Something3d2 extends Something3dRoot {
               var9 = TextureSampler17.anIntArray3185[var4[var6++]];
             }
 
-            if (-18 == ~var8) {
+            if (~var8 == -18) {
               var10 = 3;
             }
 
-            if (-3 == ~var8) {
+            if (~var8 == -3) {
               var9 = TriChromaticImageBuffer.anIntArray2480[var4[var6++]];
             }
 
@@ -147,12 +147,12 @@ public class Something3d2 extends Something3dRoot {
             Widget var12;
             int var13;
             int var14;
-            if (-5 == ~var8) {
+            if (~var8 == -5) {
               var11 = var4[var6++] << 16;
               var11 += var4[var6++];
               var12 = EnumStringFetcher.getWidget((byte) 124, var11);
               var13 = var4[var6++];
-              if (-1 != var13 && (!DummyClass35.getItemConfig(var13, (byte) 109).aBoolean779
+              if (var13 != -1 && (!DummyClass35.getItemConfig(var13, (byte) 109).aBoolean779
                 || MapScene.aBoolean66)) {
                 assert var12 != null;
                 for (var14 = 0; var12.anIntArray254.length > var14; ++var14) {
@@ -167,7 +167,7 @@ public class Something3d2 extends Something3dRoot {
               var9 = DummyClass5.anIntArray2985[var4[var6++]];
             }
 
-            if (6 == var8) {
+            if (var8 == 6) {
               var9 =
                 ItemConfig.anIntArray781[-1 + TriChromaticImageBuffer.anIntArray2480[var4[var6++]]];
             }
@@ -176,12 +176,12 @@ public class Something3d2 extends Something3dRoot {
               var9 = 100 * DummyClass5.anIntArray2985[var4[var6++]] / '\ub71b';
             }
 
-            if (-9 == ~var8) {
+            if (~var8 == -9) {
               var9 = TextureCache.localPlayer.combatLevel;
             }
 
-            if (9 == var8) {
-              for (var11 = 0; -26 < ~var11; ++var11) {
+            if (var8 == 9) {
+              for (var11 = 0; ~var11 > -26; ++var11) {
                 if (SomethingOtherWorldMap.aBooleanArray2538[var11]) {
                   var9 += TriChromaticImageBuffer.anIntArray2480[var11];
                 }
@@ -205,21 +205,21 @@ public class Something3d2 extends Something3dRoot {
               }
             }
 
-            if (-12 == ~var8) {
+            if (~var8 == -12) {
               var9 = BZipDecompressorState.anInt136;
             }
 
-            if (12 == var8) {
+            if (var8 == 12) {
               var9 = Mouse.anInt1925;
             }
 
-            if (-14 == ~var8) {
+            if (~var8 == -14) {
               var11 = DummyClass5.anIntArray2985[var4[var6++]];
               int var17 = var4[var6++];
               var9 = ~(1 << var17 & var11) == -1 ? 0 : 1;
             }
 
-            if (-15 == ~var8) {
+            if (~var8 == -15) {
               var11 = var4[var6++];
               var9 = NpcConfiguration.method1484(64835055, var11);
             }
@@ -228,7 +228,7 @@ public class Something3d2 extends Something3dRoot {
               var9 = (TextureCache.localPlayer.anInt2819 >> 7) - -WorldMapLabel.anInt1716;
             }
 
-            if (-20 == ~var8) {
+            if (~var8 == -20) {
               var9 = (TextureCache.localPlayer.anInt2829 >> 7) - -ProceduralTexture.anInt1152;
             }
 
@@ -236,16 +236,16 @@ public class Something3d2 extends Something3dRoot {
               var9 = var4[var6++];
             }
 
-            if (0 == var10) {
-              if (0 == var7) {
+            if (var10 == 0) {
+              if (var7 == 0) {
                 var5 += var9;
               }
 
-              if (-2 == ~var7) {
+              if (~var7 == -2) {
                 var5 -= var9;
               }
 
-              if (2 == var7 && ~var9 != -1) {
+              if (var7 == 2 && ~var9 != -1) {
                 var5 /= var9;
               }
 
@@ -271,8 +271,8 @@ public class Something3d2 extends Something3dRoot {
         Something3d2.aClass33_3019 = null;
       }
 
-      return 32 <= var1 && -127 <= ~var1 || (~var1 <= -161 && 255 >= var1 || (
-          ~var1 == -129 || -141 == ~var1
+      return var1 >= 32 && ~var1 >= -127 || (~var1 <= -161 && var1 <= 255 || (
+          ~var1 == -129 || ~var1 == -141
               || ~var1 == -152 || ~var1 == -157 || var1 == 159));
   }
 

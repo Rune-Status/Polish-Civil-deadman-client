@@ -22,7 +22,7 @@ public final class DummyClass44 {
     for (int var1 = 0; ~var1 > ~DummyClass6.anInt2046; ++var1) {
         int var2 = AudioWorker.anIntArray347[var1];
         NPC var3 = TextureSampler5.npcs[var2];
-        if (null != var3) {
+        if (var3 != null) {
           DummyOutputStream.method68(var3.config.size, 2279, var3);
         }
       }
@@ -33,10 +33,10 @@ public final class DummyClass44 {
   }
 
   public static void method1208(byte var0, int var1) {
-    if (-1 != var1) {
+    if (var1 != -1) {
         if (HashTable.aBooleanArray1703[var1]) {
           TextureSampler3.aClass153_3361.method2128(7561, var1);
-          if (null != SceneNode.aClass11ArrayArray1834[var1]) {
+          if (SceneNode.aClass11ArrayArray1834[var1] != null) {
             boolean var2 = true;
 
             for (int var3 = 0; SceneNode.aClass11ArrayArray1834[var1].length > var3; ++var3) {

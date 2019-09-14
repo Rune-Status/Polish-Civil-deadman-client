@@ -11,7 +11,7 @@ public final class Cursor {
   public SoftwareDirectColorSprite method1179(byte var1 ) {
     SoftwareDirectColorSprite var2 =
         (SoftwareDirectColorSprite) DummyClass5.aClass93_2984.get(this.anInt883);
-      if (null != var2) {
+      if (var2 != null) {
         return var2;
       } else if (var1 != 95) {
         return null;
@@ -34,7 +34,7 @@ public final class Cursor {
 
       while (true) {
         int var4 = var1.readUnsignedByte();
-        if (-1 == ~var4) {
+        if (~var4 == -1) {
           return;
         }
 
@@ -47,10 +47,10 @@ public final class Cursor {
         this.anInt881 = -82;
       }
 
-      if (-2 == ~var3) {
+      if (~var3 == -2) {
         this.anInt883 = var4.readUnsignedShort();
       } else {
-        if (2 == var3) {
+        if (var3 == 2) {
           this.anInt881 = var4.readUnsignedByte();
           this.anInt879 = var4.readUnsignedByte();
         }
@@ -68,7 +68,7 @@ public final class Cursor {
       if (~var1.anInt2816 == -1) {
         var1.anInt2824 = 0;
       } else {
-        if (~var1.animationId != 0 && 0 == var1.anInt2828) {
+        if (~var1.animationId != 0 && var1.anInt2828 == 0) {
           AnimationSequence var3 = GameClient
               .method45(var1.animationId, (byte) -20);
           if (~var1.anInt2811 < -1 && var3.anInt1866 == 0) {
@@ -76,7 +76,7 @@ public final class Cursor {
             return;
           }
 
-          if (~var1.anInt2811 >= -1 && -1 == ~var3.anInt1850) {
+          if (~var1.anInt2811 >= -1 && ~var3.anInt1850 == -1) {
             ++var1.anInt2824;
             return;
           }
@@ -88,9 +88,9 @@ public final class Cursor {
             var1.waypointsX[-1 + var1.anInt2816] * 128 - -(var1.getSize() * 64);
         int var6 =
             128 * var1.waypointsY[-1 + var1.anInt2816] - -(var1.getSize() * 64);
-        if (-257 > ~(var5 + -var18) || -var18 + var5 < -256
+        if (~(var5 + -var18) < -257 || -var18 + var5 < -256
             || ~(var6 - var4) < -257
-            || -256 > var6 - var4) {
+            || var6 - var4 < -256) {
           var1.anInt2819 = var5;
           var1.anInt2829 = var6;
           return;
@@ -122,7 +122,7 @@ public final class Cursor {
 
         int var7 = 2047 & -var1.rotationY + var1.anInt2806;
         int var8 = var2.anInt389;
-        if (1024 < var7) {
+        if (var7 > 1024) {
           var7 -= 2048;
         }
 
@@ -130,9 +130,9 @@ public final class Cursor {
         byte var11 = 1;
         if (var7 >= -256 && var7 <= 256) {
           var8 = var2.anInt382;
-        } else if (-257 >= ~var7 && 768 > var7) {
+        } else if (~var7 <= -257 && var7 < 768) {
           var8 = var2.anInt364;
-        } else if (767 >= ~var7 && -256 >= var7) {
+        } else if (~var7 <= 767 && var7 <= -256) {
           var8 = var2.anInt390;
         }
 
@@ -147,25 +147,25 @@ public final class Cursor {
         }
 
         if (var10) {
-          if (~var1.rotationY != ~var1.anInt2806 && 0 == ~var1.anInt2772
+          if (~var1.rotationY != ~var1.anInt2806 && ~var1.anInt2772 == 0
               && ~var1.anInt2779 != -1) {
             var9 = 2;
           }
 
-          if (2 < var1.anInt2816) {
+          if (var1.anInt2816 > 2) {
             var9 = 6;
           }
 
-          if (3 < var1.anInt2816) {
+          if (var1.anInt2816 > 3) {
             var9 = 8;
           }
 
-          if (-1 > ~var1.anInt2824 && ~var1.anInt2816 < -2) {
+          if (~var1.anInt2824 < -1 && ~var1.anInt2816 < -2) {
             var9 = 8;
             --var1.anInt2824;
           }
         } else {
-          if (1 < var1.anInt2816) {
+          if (var1.anInt2816 > 1) {
             var9 = 6;
           }
 
@@ -173,24 +173,24 @@ public final class Cursor {
             var9 = 8;
           }
 
-          if (-1 > ~var1.anInt2824 && var1.anInt2816 > 1) {
+          if (~var1.anInt2824 < -1 && var1.anInt2816 > 1) {
             --var1.anInt2824;
             var9 = 8;
           }
         }
 
-        if (2 == var1.aByteArray2795[var1.anInt2816 - 1]) {
+        if (var1.aByteArray2795[var1.anInt2816 - 1] == 2) {
           var9 <<= 1;
           var11 = 2;
         } else {
-          if (-1 == ~var1.aByteArray2795[-1 + var1.anInt2816]) {
+          if (~var1.aByteArray2795[-1 + var1.anInt2816] == -1) {
             var11 = 0;
             var9 >>= 1;
           }
         }
 
-        if (-9 >= ~var9 && -1 != var2.anInt393) {
-          if (~var2.anInt389 == ~var1.anInt2764 && -1 != var2.anInt386) {
+        if (~var9 <= -9 && var2.anInt393 != -1) {
+          if (~var2.anInt389 == ~var1.anInt2764 && var2.anInt386 != -1) {
             var1.anInt2764 = var2.anInt386;
           } else if (var1.anInt2764 == var2.anInt390 && ~var2.anInt373 != 0) {
             var1.anInt2764 = var2.anInt373;
@@ -202,9 +202,9 @@ public final class Cursor {
         } else if (var2.anInt398 != -1 && ~var11 == -1) {
           if (~var2.anInt389 == ~var1.anInt2764 && ~var2.anInt372 != 0) {
             var1.anInt2764 = var2.anInt372;
-          } else if (~var2.anInt390 == ~var1.anInt2764 && -1 != var2.anInt406) {
+          } else if (~var2.anInt390 == ~var1.anInt2764 && var2.anInt406 != -1) {
             var1.anInt2764 = var2.anInt406;
-          } else if (var2.anInt364 == var1.anInt2764 && -1 != var2.anInt379) {
+          } else if (var2.anInt364 == var1.anInt2764 && var2.anInt379 != -1) {
             var1.anInt2764 = var2.anInt379;
           } else {
             var1.anInt2764 = var2.anInt398;
@@ -213,7 +213,7 @@ public final class Cursor {
 
         if (var2.anInt360 != -1) {
           var9 <<= 7;
-          if (-2 == ~var1.anInt2816) {
+          if (~var1.anInt2816 == -2) {
             int var13 =
                 (~var5 <= ~var1.anInt2819 ? var5 - var1.anInt2819
                     : -var5 + var1.anInt2819) << 7;
@@ -243,9 +243,9 @@ public final class Cursor {
             if (~var9 > ~var1.anInt2758) {
               var1.anInt2758 = var9;
             }
-          } else if (0 < var1.anInt2758) {
+          } else if (var1.anInt2758 > 0) {
             var1.anInt2758 -= var2.anInt360;
-            if (0 > var1.anInt2758) {
+            if (var1.anInt2758 < 0) {
               var1.anInt2758 = 0;
             }
           }
@@ -284,7 +284,7 @@ public final class Cursor {
 
         if (~var1.anInt2819 == ~var5 && var6 == var1.anInt2829) {
           --var1.anInt2816;
-          if (0 < var1.anInt2811) {
+          if (var1.anInt2811 > 0) {
             --var1.anInt2811;
           }
         }
@@ -300,28 +300,28 @@ public final class Cursor {
       int var3 = var0 & 63;
       int var4 = (var0 & 217) >> 6;
       if (~var3 == -19) {
-        if (0 == var4) {
+        if (var4 == 0) {
           return 1;
         }
 
-        if (-2 == ~var4) {
+        if (~var4 == -2) {
           return 2;
         }
 
-        if (-3 == ~var4) {
+        if (~var4 == -3) {
           return 4;
         }
 
-        if (3 == var4) {
+        if (var4 == 3) {
           return 8;
         }
       } else {
-        if (-20 == ~var3 || ~var3 == -22) {
+        if (~var3 == -20 || ~var3 == -22) {
           if (var4 == 0) {
             return 16;
           }
 
-          if (1 == var4) {
+          if (var4 == 1) {
             return 32;
           }
 
@@ -329,7 +329,7 @@ public final class Cursor {
             return 64;
           }
 
-          if (-4 == ~var4) {
+          if (~var4 == -4) {
             return 128;
           }
         }

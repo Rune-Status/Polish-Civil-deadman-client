@@ -227,7 +227,7 @@ public final class AudioSomethingSomething extends Node {
 
   public static void initializeKeyTable() {
     if (~SignLink.aString1216.toLowerCase().indexOf("microsoft") == 0) {
-        if (null == SignLink.setFocusTraversalKeyEnabledMethod) {
+        if (SignLink.setFocusTraversalKeyEnabledMethod == null) {
           DummyClass26.keyTable[192] = 58;
           DummyClass26.keyTable[222] = 59;
         } else {

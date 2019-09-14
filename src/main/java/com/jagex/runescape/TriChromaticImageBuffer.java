@@ -48,9 +48,9 @@ public final class TriChromaticImageBuffer extends Node {
       OndemandRequester.method1250(17, var0);
       TextureSampler23.method247((byte) 51);
 
-      for (int var1 = 0; 2048 > var1; ++var1) {
+      for (int var1 = 0; var1 < 2048; ++var1) {
         Player var2 = TextureSampler0.players[var1];
-        if (null != var2) {
+        if (var2 != null) {
           var2.anObject2796 = null;
         }
       }
@@ -71,7 +71,7 @@ public final class TriChromaticImageBuffer extends Node {
         DummyClass58.loadTitleScreenSprites(Projectile.sprites, (byte) -60);
       }
 
-      if (10 == DummyClass15.state) {
+      if (DummyClass15.state == 10) {
         TextureSampler1.method219(false, 3000);
       }
 

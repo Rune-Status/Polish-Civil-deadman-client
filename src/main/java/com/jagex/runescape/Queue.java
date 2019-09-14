@@ -84,7 +84,7 @@ public final class Queue {
   }
 
   public static AbstractFont createFont(int var0, byte[] var1) {
-    if (null != var1) {
+    if (var1 != null) {
         if (var0 == -22376) {
           AbstractFont var2;
           if (GlRenderer.useOpenGlRenderer) {
@@ -124,7 +124,7 @@ public final class Queue {
           }
         }
 
-        if (null == var10) {
+        if (var10 == null) {
           var10 = new SpawnedGameObject();
           var10.anInt2264 = var4;
           var10.anInt2248 = var1;

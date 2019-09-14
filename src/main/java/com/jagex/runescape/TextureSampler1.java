@@ -42,7 +42,7 @@ public final class TextureSampler1 extends AbstractTextureSampler {
         TextureSampler1.method221(-64, null, null, null, 34);
       }
 
-      if (-1 == ~var1) {
+      if (~var1 == -1) {
         this.method218((byte) 75, var2.readUnsignedMedium((byte) 82));
       }
   }
@@ -82,13 +82,13 @@ public final class TextureSampler1 extends AbstractTextureSampler {
 
   public static void method219(boolean var0, int var1) {
     if (var0) {
-        if (-1 != InventoryConfig.anInt3655) {
+        if (InventoryConfig.anInt3655 != -1) {
           DummyClass44.method1208((byte) -128, InventoryConfig.anInt3655);
         }
 
         for (SomethingPacket151 var2 =
              (SomethingPacket151) TextureSampler23.aClass130_3208.getFirst(var1 + -2908);
-             null != var2;
+            var2 != null;
              var2 = (SomethingPacket151) TextureSampler23.aClass130_3208.getNext(-122)) {
           TextureSampler19.method254(true, var2, false);
         }
@@ -108,7 +108,7 @@ public final class TextureSampler1 extends AbstractTextureSampler {
       TextureCache.localPlayer.anInt2829 = 3000;
       TextureCache.localPlayer.anInt2819 = var1;
       if (GlRenderer.useOpenGlRenderer) {
-        if (-3 == ~SomethingPacket116.anInt1753) {
+        if (~SomethingPacket116.anInt1753 == -3) {
           NPC.anInt3995 = GameCanvas.anInt30 << 7;
           DummyClass49.anInt1111 = AbstractMouseWheel.anInt1904 << 7;
         } else {

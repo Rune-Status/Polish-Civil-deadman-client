@@ -32,7 +32,7 @@ public abstract class SceneNode {
 
   public static void method1859(double var0, int var2) {
     if (SceneSomething2.aDouble1050 != var0) {
-        for (int var3 = 0; 256 > var3; ++var3) {
+        for (int var3 = 0; var3 < 256; ++var3) {
           int var4 = (int) (255.0D * Math.pow(var3 / 255.0D, var0));
           GameBuffer.anIntArray3804[var3] = ~var4 < -256 ? 255 : var4;
         }
@@ -64,11 +64,11 @@ public abstract class SceneNode {
                                   int var4) {
     DummyClass41.aLong866 = 0L;
       int currentWindowMode = MidiSomething.getWindowMode();
-      if (windowMode == 3 || 3 == currentWindowMode) {
+      if (windowMode == 3 || currentWindowMode == 3) {
         replaceCanvas = true;
       }
 
-      if (SignLink.formattedOsName.startsWith("mac") && -1 > ~windowMode) {
+      if (SignLink.formattedOsName.startsWith("mac") && ~windowMode < -1) {
         replaceCanvas = true;
       }
 
@@ -81,7 +81,7 @@ public abstract class SceneNode {
         var6 = true;
       }
 
-      if (replaceCanvas && -1 > ~windowMode) {
+      if (replaceCanvas && ~windowMode < -1) {
         var6 = true;
       }
 
@@ -102,7 +102,8 @@ public abstract class SceneNode {
       var1 &= 3;
       return ~var1 == -1 ?
         var6 :
-        (1 != var1 ? (~var1 != -3 ? var4 : -var3 + 1 + -var6 + 7) : -var4 + 7 + -var0 - -1);
+        (var1 != 1
+            ? (~var1 != -3 ? var4 : -var3 + 1 + -var6 + 7) : -var4 + 7 + -var0 - -1);
   }
 
   public static void method1864(boolean var0, byte var1, FileUnpacker var2, SoftwareFont var3,
@@ -125,12 +126,12 @@ public abstract class SceneNode {
     int var6 = var2 - var3;
       int var7 = var4 + -var5;
       if (var7 == 0) {
-        if (-1 != ~var6) {
+        if (~var6 != -1) {
           TextureSampler15.method244(2, var3, var5, var2, var1);
         }
 
-      } else if (0 != var6) {
-        if (0 > var6) {
+      } else if (var6 != 0) {
+        if (var6 < 0) {
           var6 = -var6;
         }
 
@@ -174,7 +175,7 @@ public abstract class SceneNode {
           for (var15 = var5; var4 >= var15; ++var15) {
             DummyClass35.anIntArrayArray663[var15][var10] = var1;
             var13 += var12;
-            if (-1 > ~var13) {
+            if (~var13 < -1) {
               var10 += var14;
               var13 -= var11;
             }

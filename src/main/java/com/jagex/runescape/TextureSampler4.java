@@ -63,7 +63,7 @@ public final class TextureSampler4 extends AbstractTextureSampler {
         this.anIntArrayArray3225[var5][0] = 0;
 
         for (var6 = 0; ~var6 > ~this.anInt3242; ++var6) {
-          if (0 < var6) {
+          if (var6 > 0) {
             var7 = this.anInt3235;
             int var8 =
               (-2048 + FloorUnderlay.method1603((byte) -1, 4096, var2)) * this.anInt3236
@@ -94,7 +94,7 @@ public final class TextureSampler4 extends AbstractTextureSampler {
         for (var9 = DummyClass4.anIntArray2999[var1] + this.anInt3231; ~var9 > -1; var9 += 4096) {
         }
 
-        while (4096 < var9) {
+        while (var9 > 4096) {
           var9 -= 4096;
         }
 
@@ -104,7 +104,7 @@ public final class TextureSampler4 extends AbstractTextureSampler {
 
         int var11 = var7 + -1;
         int var15 = this.anIntArray3230[var7];
-        boolean var12 = 0 == (var7 & 1);
+        boolean var12 = (var7 & 1) == 0;
         int var16 = this.anIntArray3230[var7 - 1];
         if (var16 - -this.anInt3223 < var9 && (var15 - this.anInt3223) > var9) {
           for (var4 = 0; var4 < SomethingLight0.anInt1559; ++var4) {
@@ -144,22 +144,22 @@ public final class TextureSampler4 extends AbstractTextureSampler {
   }
 
   public void parseConfig(int var1, Buffer var2, boolean var3 ) {
-    if (0 == var1) {
+    if (var1 == 0) {
         this.anInt3242 = var2.readUnsignedByte();
       } else {
         if (~var1 == -2) {
           this.anInt3233 = var2.readUnsignedByte();
-        } else if (-3 != ~var1) {
+        } else if (~var1 != -3) {
           if (var1 == 3) {
             this.anInt3219 = var2.readUnsignedShort();
           } else {
-            if (4 == var1) {
+            if (var1 == 4) {
               this.anInt3234 = var2.readUnsignedShort();
             } else {
-              if (-6 == ~var1) {
+              if (~var1 == -6) {
                 this.anInt3231 = var2.readUnsignedShort();
               } else {
-                if (-7 == ~var1) {
+                if (~var1 == -7) {
                   this.anInt3224 = var2.readUnsignedShort();
                 } else {
                   if (var1 == 7) {
@@ -245,7 +245,7 @@ public final class TextureSampler4 extends AbstractTextureSampler {
 
       for (SomethingPacket151 var1 =
            (SomethingPacket151) TextureSampler23.aClass130_3208.getFirst(124);
-           null != var1; var1 = (SomethingPacket151) TextureSampler23.aClass130_3208.getNext(-79)) {
+          var1 != null; var1 = (SomethingPacket151) TextureSampler23.aClass130_3208.getNext(-79)) {
         if (var1.anInt2603 == 0) {
           TextureSampler19.method254(true, var1, false);
         }
@@ -255,7 +255,7 @@ public final class TextureSampler4 extends AbstractTextureSampler {
         TextureSampler4.LANG_PORTUGUESE = null;
       }
 
-      if (null != TextureSampler27.aClass11_3087) {
+      if (TextureSampler27.aClass11_3087 != null) {
         DummyClass29.method909(125, TextureSampler27.aClass11_3087);
         TextureSampler27.aClass11_3087 = null;
       }

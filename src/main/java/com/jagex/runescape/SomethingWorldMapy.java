@@ -33,7 +33,7 @@ public final class SomethingWorldMapy extends SubNode {
       this.aClass94_3554 = var2;
       this.anInt3563 = var7;
       this.anInt3558 = var3;
-      if (-256 == ~this.anInt3563) {
+      if (~this.anInt3563 == -256) {
         this.anInt3563 = 0;
       }
 
@@ -73,7 +73,7 @@ public final class SomethingWorldMapy extends SubNode {
       this.anInt3555 = 12800;
 
       for (SomethingWorldMappy var2 = (SomethingWorldMappy) this.aClass61_3560.getFirst();
-           null != var2; var2 = (SomethingWorldMappy) this.aClass61_3560.getNext()) {
+          var2 != null; var2 = (SomethingWorldMappy) this.aClass61_3560.getNext()) {
         if (~var2.anInt2494 > ~this.anInt3562) {
           this.anInt3562 = var2.anInt2494;
         }
@@ -103,7 +103,7 @@ public final class SomethingWorldMapy extends SubNode {
   public static int method540(int var0, int var1, int var2) {
     if (var1 == -14314) {
         int var3;
-        for (var3 = 0; -1 > ~var0; --var0) {
+        for (var3 = 0; ~var0 < -1; --var0) {
           var3 = var3 << 1 | 1 & var2;
           var2 >>>= 1;
         }
@@ -180,7 +180,7 @@ public final class SomethingWorldMapy extends SubNode {
   }
 
   public static boolean method544(int var0, int var1) {
-    return var0 != -49 || -49 >= ~var1 && 57 >= var1;
+    return var0 != -49 || ~var1 <= -49 && var1 <= 57;
   }
 
 }

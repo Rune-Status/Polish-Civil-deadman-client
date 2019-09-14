@@ -25,7 +25,7 @@ public final class TextureSampler10 extends AbstractTextureSampler {
           this.anIntArrayArray3438[0][2] = 0;
           this.anIntArrayArray3438[1][2] = 4096;
           this.anIntArrayArray3438[1][3] = 4096;
-        } else if (-3 == ~var1) {
+        } else if (~var1 == -3) {
           this.anIntArrayArray3438 = new int[8][4];
           this.anIntArrayArray3438[0][0] = 0;
           this.anIntArrayArray3438[1][0] = 2867;
@@ -59,7 +59,7 @@ public final class TextureSampler10 extends AbstractTextureSampler {
           this.anIntArrayArray3438[5][1] = 2730;
           this.anIntArrayArray3438[6][1] = 2232;
           this.anIntArrayArray3438[7][1] = 1686;
-        } else if (3 == var1) {
+        } else if (var1 == 3) {
           this.anIntArrayArray3438 = new int[7][4];
           this.anIntArrayArray3438[0][0] = 0;
           this.anIntArrayArray3438[0][3] = 4096;
@@ -89,7 +89,7 @@ public final class TextureSampler10 extends AbstractTextureSampler {
           this.anIntArrayArray3438[4][2] = 0;
           this.anIntArrayArray3438[5][2] = 0;
           this.anIntArrayArray3438[6][2] = 0;
-        } else if (4 == var1) {
+        } else if (var1 == 4) {
           this.anIntArrayArray3438 = new int[6][4];
           this.anIntArrayArray3438[0][3] = 0;
           this.anIntArrayArray3438[0][0] = 0;
@@ -215,7 +215,7 @@ public final class TextureSampler10 extends AbstractTextureSampler {
     if (var3) {
         if (var1 == 0) {
           int var4 = var2.readUnsignedByte();
-          if (-1 == ~var4) {
+          if (~var4 == -1) {
             this.anIntArrayArray3438 = new int[var2.readUnsignedByte()][4];
 
             for (int var5 = 0; this.anIntArrayArray3438.length > var5;
@@ -260,7 +260,7 @@ public final class TextureSampler10 extends AbstractTextureSampler {
 
         for (int var9 = 0; SomethingLight0.anInt1559 > var9; ++var9) {
           int var4 = var5[var9] >> 4;
-          if (-1 < ~var4) {
+          if (~var4 > -1) {
             var4 = 0;
           }
 
@@ -328,7 +328,7 @@ public final class TextureSampler10 extends AbstractTextureSampler {
             var2 = 255;
           }
 
-          if (0 > var3) {
+          if (var3 < 0) {
             var3 = 0;
           } else if (var3 > 255) {
             var3 = 255;
@@ -336,7 +336,7 @@ public final class TextureSampler10 extends AbstractTextureSampler {
 
           var4 >>= 4;
           if (var4 >= 0) {
-            if (-256 > ~var4) {
+            if (~var4 < -256) {
               var4 = 255;
             }
           } else {
@@ -360,7 +360,7 @@ public final class TextureSampler10 extends AbstractTextureSampler {
           WorldMapLabel.anInt1716 + (TextureCache.localPlayer.anInt2819 >> 7);
       int var2 = (TextureCache.localPlayer.anInt2829 >> 7)
           - -ProceduralTexture.anInt1152;
-      if (-3054 >= ~var1 && -3157 <= ~var1 && -3057 >= ~var2 && var2 <= 3136) {
+      if (~var1 <= -3054 && ~var1 >= -3157 && ~var2 <= -3057 && var2 <= 3136) {
         GameWorld.anInt2622 = 1;
       }
 
@@ -368,9 +368,9 @@ public final class TextureSampler10 extends AbstractTextureSampler {
         GameWorld.anInt2622 = 1;
       }
 
-      if (~GameWorld.anInt2622 == -2 && -3140 >= ~var1 && -3200 <= ~var1
+      if (~GameWorld.anInt2622 == -2 && ~var1 <= -3140 && ~var1 >= -3200
           && var2 >= 3008
-          && 3062 >= var2) {
+          && var2 <= 3062) {
         GameWorld.anInt2622 = 0;
       }
   }
@@ -453,7 +453,7 @@ public final class TextureSampler10 extends AbstractTextureSampler {
 
   public static FloorOverlay method350(byte var0, int var1) {
     FloorOverlay var2 = (FloorOverlay) DummyClass8.aClass93_4015.get(var1);
-      if (null == var2) {
+      if (var2 == null) {
         int var3 = 70 % ((var0 - 43) / 57);
         byte[] var4 = AnimationSomething.configs.getBytes(4, var1);
         var2 = new FloorOverlay();

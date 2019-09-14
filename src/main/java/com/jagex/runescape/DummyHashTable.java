@@ -35,7 +35,7 @@ public final class DummyHashTable {
           GroundItemNode var6;
           for (
             var6 = (GroundItemNode) var3.getFirst();
-            null != var6; var6 = (GroundItemNode) var3.getNext()) {
+              var6 != null; var6 = (GroundItemNode) var3.getNext()) {
             ItemConfig var7 =
               DummyClass35.getItemConfig(var6.aClass140_Sub7_3676.anInt2936, (byte) 104);
             int var8 = var7.anInt757;
@@ -49,7 +49,7 @@ public final class DummyHashTable {
             }
           }
 
-          if (null != var5) {
+          if (var5 != null) {
             var3.method1216(64, var5);
             GroundItem var12 = null;
             GroundItem var14 = null;
@@ -59,11 +59,11 @@ public final class DummyHashTable {
               var6 != null; var6 = (GroundItemNode) var3.getNext()) {
               GroundItem var9 = var6.aClass140_Sub7_3676;
               if (~var9.anInt2936 != ~var5.aClass140_Sub7_3676.anInt2936) {
-                if (null == var12) {
+                if (var12 == null) {
                   var12 = var9;
                 }
 
-                if (~var9.anInt2936 != ~var12.anInt2936 && null == var14) {
+                if (~var9.anInt2936 != ~var12.anInt2936 && var14 == null) {
                   var14 = var9;
                 }
               }

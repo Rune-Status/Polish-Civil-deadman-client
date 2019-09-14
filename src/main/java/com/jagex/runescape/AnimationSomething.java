@@ -48,7 +48,7 @@ public final class AnimationSomething extends SubNode {
             var10 = var12;
           }
 
-          if (null == var10) {
+          if (var10 == null) {
             byte[] var13;
             if (var4) {
               var13 = frames.getBytes(var11, 0, 0);
@@ -101,10 +101,10 @@ public final class AnimationSomething extends SubNode {
           TextureSampler18.method282(DummyClass35.anIntArrayArray663[var5], var22, 91, var21, var0);
         }
 
-        for (int var20 = var15 * (-1 + var1); 0 < var7; var20 -= var15) {
+        for (int var20 = var15 * (-1 + var1); var7 > 0; var20 -= var15) {
           --var7;
-          if (-1 < ~var13) {
-            while (0 > var13) {
+          if (~var13 > -1) {
+            while (var13 < 0) {
               ++var6;
               var13 += var17;
               var14 += var19;

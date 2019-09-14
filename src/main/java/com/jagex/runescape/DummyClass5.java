@@ -21,7 +21,7 @@ public class DummyClass5 extends DummyClass6 {
 
   public static void method2210(byte var0, boolean var1) {
     DummyClass43.method1194(-16385);
-    if (30 == DummyClass15.state || ~DummyClass15.state == -26) {
+    if (DummyClass15.state == 30 || ~DummyClass15.state == -26) {
       ++TextureSampler18.anInt4032;
       if (~TextureSampler18.anInt4032 <= -51 || var1) {
         TextureSampler18.anInt4032 = 0;
@@ -50,14 +50,14 @@ public class DummyClass5 extends DummyClass6 {
 
   public static void method2211(int var0) {
     if (var0 == -48) {
-        if (null == MouseRecorder.aClass11_1017) {
-          if (null == DummyClass42.aClass11_886) {
+        if (MouseRecorder.aClass11_1017 == null) {
+          if (DummyClass42.aClass11_886 == null) {
             int var1 = Structure.anInt3644;
             int var3;
             int var4;
             if (DummyClass36.aBoolean2615) {
               int var11;
-              if (-2 != ~var1) {
+              if (~var1 != -2) {
                 var3 = HashTable.anInt1709;
                 var11 = SomethingTilek.anInt1676;
                 if (~var11 > ~(AbstractIndexedColorSprite.anInt1462 - 10)
@@ -76,7 +76,7 @@ public class DummyClass5 extends DummyClass6 {
                 }
               }
 
-              if (-2 == ~var1) {
+              if (~var1 == -2) {
                 var11 = AbstractIndexedColorSprite.anInt1462;
                 var3 = TextureSampler29.anInt3395;
                 var4 = SomethingWorldMapy.anInt3552;
@@ -114,13 +114,13 @@ public class DummyClass5 extends DummyClass6 {
                         SomethingQuickChat2.anInt3537);
               }
             } else {
-              if (~var1 == -2 && 0 < TextureSampler25.amountContextActions) {
+              if (~var1 == -2 && TextureSampler25.amountContextActions > 0) {
                 short var2 =
                     TextureSampler27.aShortArray3095[-1
                         + TextureSampler25.amountContextActions];
-                if (-26 == ~var2 || var2 == 23 || 48 == var2 || ~var2 == -8
-                    || 13 == var2
-                    || ~var2 == -48 || -6 == ~var2 || var2 == 43 || -36 == ~var2
+                if (~var2 == -26 || var2 == 23 || var2 == 48 || ~var2 == -8
+                    || var2 == 13
+                    || ~var2 == -48 || ~var2 == -6 || var2 == 43 || ~var2 == -36
                     || ~var2 == -59
                     || ~var2 == -23 || var2 == 1006) {
                   var3 = DummyClass26.anIntArray1613[-1
@@ -149,22 +149,22 @@ public class DummyClass5 extends DummyClass6 {
                 }
               }
 
-              if (-2 == ~var1 && (
-                  -2 == ~OndemandRequester.anInt998
-                      && 2 < TextureSampler25.amountContextActions
+              if (~var1 == -2 && (
+                  ~OndemandRequester.anInt998 == -2
+                      && TextureSampler25.amountContextActions > 2
                       || TextureSampler8
                       .method353(TextureSampler25.amountContextActions + -1,
                           0))) {
                 var1 = 2;
               }
 
-              if (~var1 == -3 && -1 > ~TextureSampler25.amountContextActions
-                  || -2 == ~ClientScriptEnum.anInt3660) {
+              if (~var1 == -3 && ~TextureSampler25.amountContextActions < -1
+                  || ~ClientScriptEnum.anInt3660 == -2) {
                 DummyClass22.method1801((byte) -105);
               }
 
-              if (1 == var1 && TextureSampler25.amountContextActions > 0
-                  || -3 == ~ClientScriptEnum.anInt3660) {
+              if (var1 == 1 && TextureSampler25.amountContextActions > 0
+                  || ~ClientScriptEnum.anInt3660 == -3) {
                 TextureSampler9.method203(100);
               }
             }

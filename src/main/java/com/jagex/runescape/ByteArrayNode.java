@@ -20,7 +20,7 @@ public final class ByteArrayNode extends SubNode {
           37 :
           (NPC.aFloat3979 == 4.0D ?
             50 :
-            (6.0D != NPC.aFloat3979 ?
+            (NPC.aFloat3979 != 6.0D ?
               (NPC.aFloat3979 == 8.0D ? 100 : 200) :
               75)));
   }
@@ -58,7 +58,7 @@ public final class ByteArrayNode extends SubNode {
               HashTable var11 = new HashTable(DummyClass53.nearestPo2((byte) 119, var10));
               var2.aClass130Array3685[var9] = var11;
 
-              while (-1 > ~(var10--)) {
+              while (~(var10--) < -1) {
                 int var12 = var4.readInt();
                 int var13 = var4.readInt();
                 var11.put(var12, new IntegerNode(var13));
@@ -79,7 +79,7 @@ public final class ByteArrayNode extends SubNode {
             if (var10 == 3) {
               var2.aClass94Array3688[var9] = var4.readString();
             } else {
-              if (var10 < 100 && 21 != var10 && -39 != ~var10 && 39 != var10) {
+              if (var10 < 100 && var10 != 21 && ~var10 != -39 && var10 != 39) {
                 var2.anIntArray3690[var9] = var4.readInt();
               } else {
                 var2.anIntArray3690[var9] = var4.readUnsignedByte();

@@ -65,7 +65,7 @@ public final class AudioWorker implements Runnable {
         } else {
           int var9 = var1.anInt1480;
           int var10 = var1.anInt1485;
-          if (1 == (1 & var6)) {
+          if ((1 & var6) == 1) {
             var9 = var1.anInt1485;
             var10 = var1.anInt1480;
           }
@@ -117,13 +117,13 @@ public final class AudioWorker implements Runnable {
         int var9 = var1.readUnsignedByte();
         int var10 = -TextureSampler37.anInt3256 + var8 * 64;
         int var11 = -1 + DummyClass58.anInt1460 - var9 * 64 + MapScene.anInt65;
-        if (~var10 <= -1 && 0 <= -63 + var11
+        if (~var10 <= -1 && -63 + var11 >= 0
             && DummyClass30.anInt455 > var10 - -63
             && DummyClass58.anInt1460 > var11) {
           for (var12 = 0; var12 < 64; ++var12) {
             byte[] var13 = var4[var10 - -var12];
 
-            for (var14 = 0; 64 > var14; ++var14) {
+            for (var14 = 0; var14 < 64; ++var14) {
               if (!var5 || var12 >= 8 * var6 && 8 + 8 * var6 > var12
                   && var14 >= var7 * 8
                   && var14 < 8 + 8 * var7) {
@@ -164,9 +164,9 @@ public final class AudioWorker implements Runnable {
           }
 
           var15 = var12 + -5;
-          if (-1 >= ~var15) {
+          if (~var15 <= -1) {
             var35 = var4[var15][var34] & 255;
-            if (0 < var35) {
+            if (var35 > 0) {
               FloorUnderlay var17 = ClientScript.getFloorUnderlay(-1 + var35);
               var28[var34] -= var17.anInt1408;
               var29[var34] -= var17.anInt1406;
@@ -205,7 +205,7 @@ public final class AudioWorker implements Runnable {
               var15 -= var29[var21];
             }
 
-            if (var19 >= 0 && 0 < var18) {
+            if (var19 >= 0 && var18 > 0) {
               int[] var22 = var33[var19 >> 6];
               int var23 = var36 != 0 ?
                   ClassCheckRequest.method129(var35 / var18, 2, var15 / var18,

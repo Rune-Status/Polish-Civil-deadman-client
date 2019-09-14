@@ -48,7 +48,7 @@ public final class Deque {
   }
 
   public void addLast(Node var2 ) {
-    if (null != var2.prevNode) {
+    if (var2.prevNode != null) {
         var2.unlinkNode();
       }
 
@@ -60,7 +60,7 @@ public final class Deque {
   }
 
   public void method1216(int var1, Node var2 ) {
-    if (null != var2.prevNode) {
+    if (var2.prevNode != null) {
         var2.unlinkNode();
       }
 
@@ -139,7 +139,7 @@ public final class Deque {
         Deque.method1218(false, -77, -82);
       }
 
-      if (null == var2) {
+      if (var2 == null) {
         byte[] var3 = TextureSampler27.aClass153_3098.getBytes(11, var1);
         var2 = new Parameter();
         if (var3 != null) {

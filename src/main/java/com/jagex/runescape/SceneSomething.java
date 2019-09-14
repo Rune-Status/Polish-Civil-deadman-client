@@ -68,7 +68,8 @@ public final class SceneSomething {
 
       for (int var27 = 0; ~var27 > ~var26.length; ++var27) {
         int var28 = var4[var27 + var27];
-        int[][] var30 = null != var0 && var21 != null && var21[var27] ? var0 : var17;
+        int[][] var30 =
+            var0 != null && var21 != null && var21[var27] ? var0 : var17;
         int var29 = var4[var27 + var27 - -1];
         var26[var27] =
           BufferData.method1734(var25, var13, var22, var23, var0, var30, var7, var18, var24,
@@ -127,7 +128,7 @@ public final class SceneSomething {
         int var2 = 88 / ((57 - var0) / 59);
         Widget var1 =
           AbstractDirectColorSprite.method638((byte) -19, ScriptState.anInt872, Widget.anInt278);
-        if (null != var1 && var1.anObjectArray303 != null) {
+        if (var1 != null && var1.anObjectArray303 != null) {
           ClientScriptCall var3 = new ClientScriptCall();
           var3.arguments = var1.anObjectArray303;
           var3.aClass11_2449 = var1;

@@ -62,12 +62,12 @@ public final class NPC extends Mobile {
       int var11,
       DummyClass0 var12 ) {
     if (this.config != null) {
-        AnimationSequence var13 = 0 != ~this.animationId
-            && -1 == ~this.anInt2828 ?
+        AnimationSequence var13 = ~this.animationId != 0
+            && ~this.anInt2828 == -1 ?
           GameClient.method45(this.animationId, (byte) -20) :
           null;
         AnimationSequence var14 =
-          -1 != this.anInt2764 && (~this.anInt2764 != ~Objects
+            this.anInt2764 != -1 && (~this.anInt2764 != ~Objects
               .requireNonNull(this.getRenderAnimationId(false)).anInt368
             || var13 == null) ? GameClient.method45(this.anInt2764, (byte) -20) : null;
         AbstractModel var15 =
@@ -78,7 +78,7 @@ public final class NPC extends Mobile {
         if (var15 != null) {
           this.anInt2820 = var15.getMinimumY();
           NpcConfiguration var16 = this.config;
-          if (null != var16.anIntArray1292) {
+          if (var16.anIntArray1292 != null) {
             var16 = var16.method1471((byte) -110);
           }
 
@@ -87,10 +87,10 @@ public final class NPC extends Mobile {
           if (Projectile.aBoolean2910 && var16.aBoolean1249) {
             var17 = GameObject.method1957(this.config.aByte1287,
                 this.aBoolean2810,
-              null == var14 ? var13 : var14, this.anInt2819, this.config.aShort1256,
+                var14 == null ? var13 : var14, this.anInt2819, this.config.aShort1256,
                 this.anInt2829,
                 this.config.aShort1286, this.config.size, var15, var1,
-              null != var14 ? this.anInt2813 : this.anInt2832, this.anInt2831,
+                var14 != null ? this.anInt2813 : this.anInt2832, this.anInt2831,
                 this.config.aByte1275, (byte) -49);
             if (GlRenderer.useOpenGlRenderer) {
               float var18 = GlRenderer.method1852();
@@ -112,7 +112,7 @@ public final class NPC extends Mobile {
           this.method1971(var15, (byte) -111);
           this.method1969((byte) 115, var15, var1);
           var17 = null;
-          if (~this.anInt2842 != 0 && -1 != this.anInt2805) {
+          if (~this.anInt2842 != 0 && this.anInt2805 != -1) {
             SpotAnimationConfig var21 = RenderAnimation.method898((byte) 42,
                 this.anInt2842);
             var17 = var21.method966(this.anInt2826, (byte) -30, this.anInt2805,
@@ -120,7 +120,7 @@ public final class NPC extends Mobile {
             if (var17 != null) {
               var17.method1897(0, -this.anInt2799, 0);
               if (var21.aBoolean536) {
-                if (-1 != ~TextureSampler15.anInt3198) {
+                if (~TextureSampler15.anInt3198 != -1) {
                   var17.method1896(TextureSampler15.anInt3198);
                 }
 
@@ -128,7 +128,7 @@ public final class NPC extends Mobile {
                   var17.method1886(Parameter.anInt3623);
                 }
 
-                if (0 != TextureSampler16.anInt3111) {
+                if (TextureSampler16.anInt3111 != 0) {
                   var17.method1897(0, TextureSampler16.anInt3111, 0);
                 }
               }
@@ -136,7 +136,7 @@ public final class NPC extends Mobile {
           }
 
           if (GlRenderer.useOpenGlRenderer) {
-            if (-2 == ~this.config.size) {
+            if (~this.config.size == -2) {
               var15.aBoolean2699 = true;
             }
 
@@ -144,7 +144,7 @@ public final class NPC extends Mobile {
                 var11,
                 this.aClass127_Sub1_2801);
             if (var17 != null) {
-              if (-2 == ~this.config.size) {
+              if (~this.config.size == -2) {
                 var17.aBoolean2699 = true;
               }
 
@@ -153,7 +153,7 @@ public final class NPC extends Mobile {
                   this.aClass127_Sub1_2801);
             }
           } else {
-            if (null != var17) {
+            if (var17 != null) {
               var15 = ((SoftwareModel) var15).method1943(var17);
             }
 
@@ -179,13 +179,13 @@ public final class NPC extends Mobile {
         NPC.method1984(-101, -40, 63);
       }
 
-      return null != this.config;
+      return this.config != null;
   }
 
   public int getRenderAnimationId() {
     if (AbstractImageProducer.gameId != 0 && this.config.anIntArray1292 != null) {
         NpcConfiguration var2 = this.config.method1471((byte) 21);
-        if (var2 != null && 0 != ~var2.renderAnimationId) {
+        if (var2 != null && ~var2.renderAnimationId != 0) {
           return var2.renderAnimationId;
         }
       }
@@ -283,7 +283,7 @@ public final class NPC extends Mobile {
             MidiSomething.aClass3_Sub27_1154 =
               MidiFile.method517(DummyClass55.aClass153_1423, TextureSampler8.anInt3463,
                 DummyClass22.anInt1741);
-            if (null == MidiSomething.aClass3_Sub27_1154) {
+            if (MidiSomething.aClass3_Sub27_1154 == null) {
               return false;
             }
           }

@@ -39,11 +39,11 @@ public abstract class AbstractFileRequest extends SubNode {
   }
 
   public static boolean method590(byte var0, int var1, int var2) {
-    if (11 == var2) {
+    if (var2 == 11) {
         var2 = 10;
       }
 
-      if (-6 >= ~var2 && var2 <= 8) {
+      if (~var2 <= -6 && var2 <= 8) {
         var2 = 4;
       }
 

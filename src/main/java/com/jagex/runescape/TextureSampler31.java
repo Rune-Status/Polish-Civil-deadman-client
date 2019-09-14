@@ -60,10 +60,10 @@ public final class TextureSampler31 extends AbstractTextureSampler {
         TextureSampler31.aClass94_3168 = null;
       }
 
-      if (-1 == ~var1) {
+      if (~var1 == -1) {
         this.anInt3164 = var2.readUnsignedShort();
       } else {
-        if (-2 == ~var1) {
+        if (~var1 == -2) {
           this.anInt3163 = var2.readUnsignedShort();
         } else {
           if (~var1 == -3) {
@@ -104,7 +104,7 @@ public final class TextureSampler31 extends AbstractTextureSampler {
       }
       if (HashTable.packetLength == SpotAnimationConfig.gameBuffer.position) {
         for (var1 = 0; var1 < DummyClass6.anInt2046; ++var1) {
-          if (null == TextureSampler5.npcs[AudioWorker.anIntArray347[var1]]) {
+          if (TextureSampler5.npcs[AudioWorker.anIntArray347[var1]] == null) {
             throw new RuntimeException("gnp2 pos:" + var1 + " size:" + DummyClass6.anInt2046);
           }
         }

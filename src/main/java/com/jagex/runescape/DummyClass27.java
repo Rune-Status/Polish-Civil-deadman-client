@@ -27,7 +27,7 @@ public final class DummyClass27 {
 
         Mobile var2;
         int var3;
-        if (0 > var1.anInt2273) {
+        if (var1.anInt2273 < 0) {
           var3 = -var1.anInt2273 - 1;
           if (~var3 == ~WidgetAccess.localPlayerId) {
             var2 = TextureCache.localPlayer;
@@ -61,7 +61,7 @@ public final class DummyClass27 {
             var10[var7][var9] + var10[var6][var9] + (var10[var6][var8] - -var10[var7][var8]) >> 2;
           SceneNode var12 = null;
           int var13 = AbstractSomethingTexture.OBJECT_TYPES[var1.anInt2278];
-          if (-1 == ~var13) {
+          if (~var13 == -1) {
             SceneSomething2 var14 =
               DummyClass14.method2147(GameWorldSomething.currentPlane, var1.anInt2271,
                 var1.anInt2282);
@@ -69,17 +69,17 @@ public final class DummyClass27 {
               var12 = var14.sceneNode0;
             }
           } else if (~var13 != -2) {
-            if (2 == var13) {
+            if (var13 == 2) {
               SceneSomething var23 =
                 AbstractSomethingTexture.method1336(GameWorldSomething.currentPlane, var1.anInt2271,
                   var1.anInt2282);
-              if (null != var23) {
+              if (var23 != null) {
                 var12 = var23.sceneNode;
               }
             } else if (var13 == 3) {
               SomethingSceneJ var24 =
                 Buffer.method784(GameWorldSomething.currentPlane, var1.anInt2271, var1.anInt2282);
-              if (null != var24) {
+              if (var24 != null) {
                 var12 = var24.aClass140_320;
               }
             }
@@ -87,12 +87,12 @@ public final class DummyClass27 {
             SomethingSceneI var21 =
               AbstractGameWorld.method1068(GameWorldSomething.currentPlane, var1.anInt2271,
                 var1.anInt2282);
-            if (null != var21) {
+            if (var21 != null) {
               var12 = var21.aClass140_429;
             }
           }
 
-          if (null != var12) {
+          if (var12 != null) {
             Queue.method881(GameWorldSomething.currentPlane, var1.anInt2282, -96, 0, var1.anInt2271,
               var1.anInt2283 - -1, -1, var13, 0, var1.anInt2266 - -1);
             var2.anInt2778 = var1.anInt2283 + AbstractGameWorld.updateCycle;

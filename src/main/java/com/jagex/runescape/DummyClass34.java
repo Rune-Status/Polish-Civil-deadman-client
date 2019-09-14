@@ -17,7 +17,7 @@ public final class DummyClass34 {
         DummyClass45.method1234(2, var2 + 10294, '\u93bd' + var0, 512) + -128 >> 1) - -(
         DummyClass45.method1234(1, var2, var0, 512) + -128 >> 2));
       var3 = 35 + (int) (0.3D * var3);
-      if (-11 >= ~var3) {
+      if (~var3 <= -11) {
         if (var3 > 60) {
           var3 = 60;
         }
@@ -103,7 +103,7 @@ public final class DummyClass34 {
           while (AbstractTextureSampler.anInt2384 != SomethingPacket116.anInt1744) {
             var2 = FileRequester.anIntArray2952[SomethingPacket116.anInt1744];
             SomethingPacket116.anInt1744 = 127 & 1 + SomethingPacket116.anInt1744;
-            if (0 <= var2) {
+            if (var2 >= 0) {
               GameObjectConfig.aBooleanArray1490[var2] = true;
             } else {
               GameObjectConfig.aBooleanArray1490[~var2] = false;

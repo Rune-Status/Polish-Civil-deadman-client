@@ -73,11 +73,11 @@ public abstract class AbstractObjectNode extends SubNode {
       try {
         SignLinkRequest var3 = var0.getSettings("runescape", 12);
 
-        while (0 == var3.status) {
+        while (var3.status == 0) {
           TextureSampler25.sleep(1L);
         }
 
-        if (-2 == ~var3.status) {
+        if (~var3.status == -2) {
           var2 = (FileOnDisk) var3.result;
           byte[] var4 = new byte[(int) var2.length(-1)];
 
@@ -132,7 +132,7 @@ public abstract class AbstractObjectNode extends SubNode {
             / AbstractGameWorld.aFloat727));
       }
 
-      if (-1 < ~var5) {
+      if (~var5 > -1) {
         TextureSampler13.anInt3362 =
           (int) (SomethingWorldMapy.aClass11_3551.anInt193 / AbstractGameWorld.aFloat727);
       }

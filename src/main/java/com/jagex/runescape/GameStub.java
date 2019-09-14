@@ -63,7 +63,7 @@ public abstract class GameStub implements Runnable,
     Container container = null;
     if (TextureSampler30.fullScreenFrame != null) {
       container = TextureSampler30.fullScreenFrame;
-    } else if (null != TextureSampler27.FRAME) {
+    } else if (TextureSampler27.FRAME != null) {
       container = TextureSampler27.FRAME;
     }
     container.setLayout(null);
@@ -174,7 +174,7 @@ public abstract class GameStub implements Runnable,
 
     }
 
-    if (null != DummyClass35.signLink) {
+    if (DummyClass35.signLink != null) {
       DummyClass35.signLink.method1445(0);
 
     }
@@ -215,14 +215,14 @@ public abstract class GameStub implements Runnable,
       AnimationSequence.fps = (32000 + (var6 >> 1)) / var6;
     }
 
-    if (50 < TextureSampler28.anInt3313++) {
+    if (TextureSampler28.anInt3313++ > 50) {
       TextureSampler30.aBoolean3116 = true;
       TextureSampler28.anInt3313 -= 50;
       GameCanvas.INSTANCE
           .setSize(DummyClass30.viewWidth, GroundItem.viewHeight);
       GameCanvas.INSTANCE.setVisible(true);
       if (TextureSampler27.FRAME != null
-          && null == TextureSampler30.fullScreenFrame) {
+          && TextureSampler30.fullScreenFrame == null) {
         Insets var8 = TextureSampler27.FRAME.getInsets();
         GameCanvas.INSTANCE
             .setLocation(var8.left + DummyClass51.viewX,
@@ -248,7 +248,7 @@ public abstract class GameStub implements Runnable,
       this.initialize(2);
       Inventory.frameRateRegulator = HuffmanEncoder.method1012((byte) -31);
 
-      while (-1L == ~AreaSoundEffect.destroyTime
+      while (~AreaSoundEffect.destroyTime == -1L
           || AreaSoundEffect.destroyTime > Time.getCurrentTimeMillis()) {
         SomethingPacket116.cycles =
             Inventory.frameRateRegulator
@@ -354,7 +354,7 @@ public abstract class GameStub implements Runnable,
         String var6 = this.getParameter("openwinjs");
         WidgetUpdate.aBoolean3594 = "1".equals(var6);
 
-        if (null == DummyClass35.signLink) {
+        if (DummyClass35.signLink == null) {
           TextureSampler30.signLink = DummyClass35.signLink = new SignLink(var3,
               null, 0);
         }
@@ -407,7 +407,7 @@ public abstract class GameStub implements Runnable,
   }
 
   public static void method34(int var0) {
-    if (null != GameWorld.audioOutputStream0) {
+    if (GameWorld.audioOutputStream0 != null) {
         GameWorld.audioOutputStream0.method2163(false);
       }
 

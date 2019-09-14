@@ -48,7 +48,8 @@ public final class TextureSampler0 extends AbstractTextureSampler {
           int var7 = var0[var5];
           int var8 = var3[var5];
 
-          for (int var9 = 0; -1 != ~var7 && var2.aClass145Array2809.length > var9; ++var9) {
+          for (int var9 = 0; ~var7 != -1
+              && var2.aClass145Array2809.length > var9; ++var9) {
             if ((1 & var7) != 0) {
               if (~var6 == 0) {
                 var2.aClass145Array2809[var9] = null;
@@ -56,7 +57,7 @@ public final class TextureSampler0 extends AbstractTextureSampler {
                 AnimationSequence var10 = GameClient.method45(var6, (byte) -20);
                 Unsure var12 = var2.aClass145Array2809[var9];
                 int var11 = var10.anInt1845;
-                if (null != var12) {
+                if (var12 != null) {
                   if (~var6 != ~var12.anInt1890) {
                     if (~var10.anInt1857 <= ~GameClient.method45(var12.anInt1890,
                       (byte) -20).anInt1857) {
@@ -64,7 +65,7 @@ public final class TextureSampler0 extends AbstractTextureSampler {
                     }
                   } else if (~var11 == -1) {
                     var12 = var2.aClass145Array2809[var9] = null;
-                  } else if (-2 == ~var11) {
+                  } else if (~var11 == -2) {
                     var12.anInt1893 = 0;
                     var12.anInt1894 = 0;
                     var12.anInt1891 = 1;
@@ -77,7 +78,7 @@ public final class TextureSampler0 extends AbstractTextureSampler {
                   }
                 }
 
-                if (null == var12) {
+                if (var12 == null) {
                   var12 = var2.aClass145Array2809[var9] = new Unsure();
                   var12.anInt1891 = 1;
                   var12.anInt1897 = 0;

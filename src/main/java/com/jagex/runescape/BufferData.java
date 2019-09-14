@@ -55,22 +55,22 @@ public final class BufferData {
       int var21;
       float var20;
       float var30;
-      if (~var15 == -1 && -1 == ~var17) {
+      if (~var15 == -1 && ~var17 == -1) {
         var19 = var16[var6][var14];
         var20 = var7[var6][var14];
         var30 = var13[var6][var14];
         var21 = var2;
-      } else if (-129 == ~var15 && ~var17 == -1) {
+      } else if (~var15 == -129 && ~var17 == -1) {
         var21 = var3;
         var19 = var16[var6 + 1][var14];
         var20 = var7[1 + var6][var14];
         var30 = var13[var6 + 1][var14];
-      } else if (-129 == ~var15 && ~var17 == -129) {
+      } else if (~var15 == -129 && ~var17 == -129) {
         var20 = var7[1 + var6][var14 - -1];
         var30 = var13[var6 + 1][1 + var14];
         var19 = var16[1 + var6][var14 - -1];
         var21 = var8;
-      } else if (~var15 == -1 && -129 == ~var17) {
+      } else if (~var15 == -1 && ~var17 == -129) {
         var20 = var7[var6][1 + var14];
         var19 = var16[var6][1 + var14];
         var30 = var13[var6][var14 - -1];
@@ -132,12 +132,12 @@ public final class BufferData {
 
         int var1;
         int var2;
-        if (1 == Light.anInt692) {
-          if (-3 == ~AreaSoundEffect.socketRequest.status) {
+        if (Light.anInt692 == 1) {
+          if (~AreaSoundEffect.socketRequest.status == -3) {
             return TextureSampler33.method179((byte) 92, 1001);
           }
 
-          if (1 != AreaSoundEffect.socketRequest.status) {
+          if (AreaSoundEffect.socketRequest.status != 1) {
             return -1;
           }
 
@@ -154,11 +154,11 @@ public final class BufferData {
           TextureSampler12.secureBuffer.writeInt(var1);
           SomethingVolume15.gameSocket.write(TextureSampler12.secureBuffer.bytes, 0,
             TextureSampler12.secureBuffer.position);
-          if (null != GameWorld.audioOutputStream0) {
+          if (GameWorld.audioOutputStream0 != null) {
             GameWorld.audioOutputStream0.pause();
           }
 
-          if (null != SomethingWorldMappy.audioOutputStream1) {
+          if (SomethingWorldMappy.audioOutputStream1 != null) {
             SomethingWorldMappy.audioOutputStream1.pause();
           }
 
@@ -167,7 +167,7 @@ public final class BufferData {
             GameWorld.audioOutputStream0.pause();
           }
 
-          if (null != SomethingWorldMappy.audioOutputStream1) {
+          if (SomethingWorldMappy.audioOutputStream1 != null) {
             SomethingWorldMappy.audioOutputStream1.pause();
           }
 
@@ -178,8 +178,8 @@ public final class BufferData {
           Light.anInt692 = 2;
         }
 
-        if (-3 == ~Light.anInt692) {
-          if (2 > SomethingVolume15.gameSocket.available()) {
+        if (~Light.anInt692 == -3) {
+          if (SomethingVolume15.gameSocket.available() < 2) {
             return -1;
           }
 
@@ -191,9 +191,9 @@ public final class BufferData {
           TextureSampler29.aByteArray3396 = new byte[OndemandRequester.anInt1002];
         }
 
-        if (-4 == ~Light.anInt692) {
+        if (~Light.anInt692 == -4) {
           var1 = SomethingVolume15.gameSocket.available();
-          if (1 > var1) {
+          if (var1 < 1) {
             return -1;
           }
 
@@ -211,7 +211,7 @@ public final class BufferData {
 
               for (int var3 = TextureSampler34.anInt3054; var3 <= FloorUnderlay.anInt1416; ++var3) {
                 GameWorld var4 = ClassCheckRequest.method130(91, var3);
-                if (null != var4) {
+                if (var4 != null) {
                   TextureSampler15.aClass44_Sub1Array3201[var2++] = var4;
                 }
               }
@@ -244,16 +244,17 @@ public final class BufferData {
   }
 
   public static int method1736(int var0, int var1, int var2, int var3) {
-    if (null == AbstractGameWorld.heightMap) {
+    if (AbstractGameWorld.heightMap == null) {
         return 0;
       } else {
         int var4 = var2 >> 7;
         int var5 = var3 >> 7;
-        if (-1 >= ~var4 && 0 <= var5 && var4 <= 103 && 103 >= var5) {
+        if (~var4 <= -1 && var5 >= 0 && var4 <= 103 && var5 <= 103) {
           int var7 = 127 & var2;
           int var8 = var3 & 127;
           int var6 = var0;
-          if (3 > var0 && ~(2 & BZipDecompressorState.tileFlags[1][var4][var5]) == -3) {
+          if (var0 < 3
+              && ~(2 & BZipDecompressorState.tileFlags[1][var4][var5]) == -3) {
             var6 = var0 + 1;
           }
 

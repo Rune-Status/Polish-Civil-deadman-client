@@ -52,20 +52,20 @@ public final class Player extends Mobile {
       int var12;
       int var13;
       int var14;
-      for (int var10 = 0; -13 < ~var10; ++var10) {
+      for (int var10 = 0; ~var10 > -13; ++var10) {
         var11 = buffer.readUnsignedByte();
         if (~var11 == -1) {
           var9[var10] = 0;
         } else {
           var12 = buffer.readUnsignedByte();
           var13 = (var11 << 8) - -var12;
-          if (~var10 == -1 && -65536 == ~var13) {
+          if (~var10 == -1 && ~var13 == -65536) {
             var8 = buffer.readUnsignedShort();
             this.anInt3956 = buffer.readUnsignedByte();
             break;
           }
 
-          if ('\u8000' <= var13) {
+          if (var13 >= '\u8000') {
             var13 = SomethingTexture4.anIntArray2664[var13 - '\u8000'];
             var9[var10] = TextureSampler3.method308(1073741824, var13);
             var14 = DummyClass35.getItemConfig(var13, (byte) 119).anInt782;
@@ -83,7 +83,7 @@ public final class Player extends Mobile {
 
       for (var11 = 0; var11 < 5; ++var11) {
         var12 = buffer.readUnsignedByte();
-        if (-1 < ~var12 || var12 >= AudioWorker.aShortArrayArray344[var11].length) {
+        if (~var12 > -1 || var12 >= AudioWorker.aShortArrayArray344[var11].length) {
           var12 = 0;
         }
 
@@ -103,14 +103,14 @@ public final class Player extends Mobile {
         this.skillTotal = 0;
         this.anInt3965 = buffer.readUnsignedByte();
         this.anInt3970 = buffer.readUnsignedByte();
-        if (-256 == ~this.anInt3970) {
+        if (~this.anInt3970 == -256) {
           this.anInt3970 = -1;
         }
       }
 
       var13 = this.anInt3969;
       this.anInt3969 = buffer.readUnsignedByte();
-      if (-1 == ~this.anInt3969) {
+      if (~this.anInt3969 == -1) {
         DummyClass11.method2203(this, 8);
       } else {
         int var15 = this.anInt3966;
@@ -129,7 +129,7 @@ public final class Player extends Mobile {
         }
       }
 
-      if (null == this.appearance) {
+      if (this.appearance == null) {
         this.appearance = new PlayerAppearance();
       }
 
@@ -150,7 +150,7 @@ public final class Player extends Mobile {
                           int var6, int var7, int var8, int var9, int var10, int var11, int var12,
                           int var13, int var14, int var15) {
     int var16 = var4 * var4 - -(var2 * var2);
-      if (-17 >= ~var16 && -360001 <= ~var16) {
+      if (~var16 <= -17 && ~var16 >= -360001) {
         int var17 = (int) (325.949D * Math.atan2(var4, var2)) & var7;
         AbstractModel var18 =
           DummyHashTable.method1763(true, var17, this.anInt2829, var13,
@@ -201,7 +201,7 @@ public final class Player extends Mobile {
           RenderAnimation.concat(new GameString[] {GameBuffer.titlePrefixes[this.titleId], name});
       }
 
-      if (null != DummyOutputStream.titleSuffixes) {
+      if (DummyOutputStream.titleSuffixes != null) {
         name = RenderAnimation.concat(
           new GameString[] {name, DummyOutputStream.titleSuffixes[this.titleId]});
       }
@@ -220,10 +220,10 @@ public final class Player extends Mobile {
       DummyClass0 var12 ) {
     if (this.appearance != null) {
         AnimationSequence var13 =
-            this.animationId != -1 && 0 == this.anInt2828 ?
+            this.animationId != -1 && this.anInt2828 == 0 ?
           GameClient.method45(this.animationId, (byte) -20) :
           null;
-        AnimationSequence var14 = 0 != ~this.anInt2764
+        AnimationSequence var14 = ~this.anInt2764 != 0
             && !this.aBoolean3968 && (
           ~this.anInt2764 != ~Objects
               .requireNonNull(this.getRenderAnimationId(false)).anInt368 || var13 == null) ?
@@ -241,7 +241,7 @@ public final class Player extends Mobile {
         }
 
         int var17;
-        if (0 != TextureSampler20.usageMode && var16 < 50) {
+        if (TextureSampler20.usageMode != 0 && var16 < 50) {
           for (var17 = 50 - var16; DummyClass42.anInt893 < var17; ++DummyClass42.anInt893) {
             SomethingMidiFile.byteArrayPool[DummyClass42.anInt893] = new byte[102400];
           }
@@ -255,12 +255,12 @@ public final class Player extends Mobile {
         if (var15 != null) {
           this.anInt2820 = var15.getMinimumY();
           AbstractModel var23;
-          if (Projectile.aBoolean2910 && (-1 == this.appearance.npcId
+          if (Projectile.aBoolean2910 && (this.appearance.npcId == -1
             || SubNode.getNpcConfiguration(this.appearance.npcId).aBoolean1249)) {
             var23 = GameObject.method1957(160,
                 this.aBoolean2810, var14 == null ? var13 : var14,
                 this.anInt2819, 0, this.anInt2829, 0, 1, var15, var1,
-              null != var14 ? this.anInt2813 : this.anInt2832, this.anInt2831, 240, (byte) -49);
+                var14 != null ? this.anInt2813 : this.anInt2832, this.anInt2831, 240, (byte) -49);
             if (GlRenderer.useOpenGlRenderer) {
               float var18 = GlRenderer.method1852();
               float var19 = GlRenderer.method1839();
@@ -277,15 +277,16 @@ public final class Player extends Mobile {
           }
 
           if (TextureCache.localPlayer == this) {
-            for (var17 = GameException.aClass96Array2114.length + -1; -1 >= ~var17; --var17) {
+            for (var17 = GameException.aClass96Array2114.length + -1;
+                ~var17 <= -1; --var17) {
               HintMarker var27 = GameException.aClass96Array2114[var17];
               if (var27 != null && ~var27.anInt1355 != 0) {
                 int var21;
                 int var20;
-                if (-2 == ~var27.anInt1360 && 0 <= var27.anInt1359
+                if (~var27.anInt1360 == -2 && var27.anInt1359 >= 0
                   && TextureSampler5.npcs.length > var27.anInt1359) {
                   NPC var24 = TextureSampler5.npcs[var27.anInt1359];
-                  if (null != var24) {
+                  if (var24 != null) {
                     var20 = var24.anInt2819 / 32 - TextureCache.localPlayer.anInt2819 / 32;
                     var21 = -(TextureCache.localPlayer.anInt2829 / 32) + var24.anInt2829 / 32;
                     this.draw(null, var21, var15, var20, var6, var11, 2047, var1, var8, var5, var4,
@@ -302,10 +303,10 @@ public final class Player extends Mobile {
                     var2, var27.anInt1355, var3, var7);
                 }
 
-                if (-11 == ~var27.anInt1360 && var27.anInt1359 >= 0
+                if (~var27.anInt1360 == -11 && var27.anInt1359 >= 0
                   && TextureSampler0.players.length > var27.anInt1359) {
                   Player var28 = TextureSampler0.players[var27.anInt1359];
-                  if (null != var28) {
+                  if (var28 != null) {
                     var20 = -(TextureCache.localPlayer.anInt2819 / 32) + var28.anInt2819 / 32;
                     var21 = var28.anInt2829 / 32 + -(TextureCache.localPlayer.anInt2829 / 32);
                     this.draw(null, var21, var15, var20, var6, var11, 2047, var1, var8, var5, var4,
@@ -319,7 +320,7 @@ public final class Player extends Mobile {
           this.method1971(var15, (byte) -103);
           this.method1969((byte) 110, var15, var1);
           var23 = null;
-          if (!this.aBoolean3968 && 0 != ~this.anInt2842 && this.anInt2805 != -1) {
+          if (!this.aBoolean3968 && ~this.anInt2842 != 0 && this.anInt2805 != -1) {
             SpotAnimationConfig var26 = RenderAnimation.method898((byte) 42,
                 this.anInt2842);
             var23 = var26.method966(this.anInt2826, (byte) -30, this.anInt2805,
@@ -331,7 +332,7 @@ public final class Player extends Mobile {
                   var23.method1896(TextureSampler15.anInt3198);
                 }
 
-                if (0 != Parameter.anInt3623) {
+                if (Parameter.anInt3623 != 0) {
                   var23.method1886(Parameter.anInt3623);
                 }
 
@@ -360,13 +361,13 @@ public final class Player extends Mobile {
               var25.method1897(this.anInt2782 + -this.anInt2819, this.anInt2812
                       + -this.anInt2831,
                   this.anInt2833 + -this.anInt2829);
-              if (-513 == ~this.anInt2806) {
+              if (~this.anInt2806 == -513) {
                 var25.method1900();
               } else {
                 if (~this.anInt2806 == -1025) {
                   var25.method1874();
                 } else {
-                  if (-1537 == ~this.anInt2806) {
+                  if (~this.anInt2806 == -1537) {
                     var25.rotateQuarterY();
                   }
                 }
@@ -384,7 +385,7 @@ public final class Player extends Mobile {
                   this.aClass127_Sub1_2801);
             }
           } else {
-            if (null != var23) {
+            if (var23 != null) {
               var15 = ((SoftwareModel) var15).method1943(var23);
             }
 
@@ -397,12 +398,12 @@ public final class Player extends Mobile {
                 this.aClass127_Sub1_2801);
           }
 
-          if (null != var25) {
+          if (var25 != null) {
             if (this.anInt2806 == 512) {
               var25.rotateQuarterY();
-            } else if (1024 == this.anInt2806) {
+            } else if (this.anInt2806 == 1024) {
               var25.method1874();
-            } else if (1536 == this.anInt2806) {
+            } else if (this.anInt2806 == 1536) {
               var25.method1900();
             }
 

@@ -14,9 +14,9 @@ public final class DummyClass10 {
     while (true) {
         if (SpotAnimationConfig.gameBuffer.method815(HashTable.packetLength, 32666) >= 27) {
           int var1 = SpotAnimationConfig.gameBuffer.readBits(15);
-          if (32767 != var1) {
+          if (var1 != 32767) {
             boolean var2 = false;
-            if (null == TextureSampler5.npcs[var1]) {
+            if (TextureSampler5.npcs[var1] == null) {
               var2 = true;
               TextureSampler5.npcs[var1] = new NPC();
             }
@@ -24,7 +24,7 @@ public final class DummyClass10 {
             NPC var3 = TextureSampler5.npcs[var1];
             AudioWorker.anIntArray347[DummyClass6.anInt2046++] = var1;
             var3.anInt2838 = AbstractGameWorld.updateCycle;
-            if (null != var3.config && var3.config.method1474(-1)) {
+            if (var3.config != null && var3.config.method1474(-1)) {
               ByteArrayNode.method574(var3, false);
             }
 
@@ -42,12 +42,12 @@ public final class DummyClass10 {
             int var7 = SpotAnimationConfig.gameBuffer.readBits(5);
             var3.setConfiguration(-1,
               SubNode.getNpcConfiguration(SpotAnimationConfig.gameBuffer.readBits(14)));
-            if (15 < var7) {
+            if (var7 > 15) {
               var7 -= 32;
             }
 
             int var8 = SpotAnimationConfig.gameBuffer.readBits(5);
-            if (15 < var8) {
+            if (var8 > 15) {
               var8 -= 32;
             }
 
@@ -140,14 +140,14 @@ public final class DummyClass10 {
   public static void readTileData(int var0, int var1, boolean var2, Buffer var3, int y, int x,
                                  byte var6, int var7, int var8) {
     int opcode;
-      if (-1 >= ~x && ~x > -105 && y >= 0 && -105 < ~y) {
+      if (~x <= -1 && ~x > -105 && y >= 0 && ~y > -105) {
         if (!var2) {
           BZipDecompressorState.tileFlags[var8][x][y] = 0;
         }
 
         while (true) {
           opcode = var3.readUnsignedByte();
-          if (-1 == ~opcode) {
+          if (~opcode == -1) {
             if (var2) {
               AbstractGameWorld.heightMap[0][x][y] = DummyClass43.somethingHeightMap[0][x][y];
             } else {
@@ -173,7 +173,7 @@ public final class DummyClass10 {
                 var10 = 0;
               }
 
-              if (-1 == ~var8) {
+              if (~var8 == -1) {
                 AbstractGameWorld.heightMap[0][x][y] = 8 * -var10;
               } else {
                 AbstractGameWorld.heightMap[var8][x][y] =
@@ -183,7 +183,7 @@ public final class DummyClass10 {
             break;
           }
 
-          if (49 >= opcode) {
+          if (opcode <= 49) {
             DummyClass17.tileFloors[var8][x][y] = var3.readByte();
             ObjectCache.tileOrientation[var8][x][y] = (byte) ((-2 + opcode) / 4);
             DummyClass18.aByteArrayArrayArray81[var8][x][y] =
@@ -206,7 +206,7 @@ public final class DummyClass10 {
             break;
           }
 
-          if (-50 <= ~opcode) {
+          if (~opcode >= -50) {
             var3.readUnsignedByte();
           }
         }
@@ -243,7 +243,7 @@ public final class DummyClass10 {
   }
 
   public static void destroyGame(byte var0) {
-    if (null != SomethingVolume15.gameSocket) {
+    if (SomethingVolume15.gameSocket != null) {
         SomethingVolume15.gameSocket.destroy();
         SomethingVolume15.gameSocket = null;
       }
@@ -283,12 +283,12 @@ public final class DummyClass10 {
         DummyClass45.configs[var1] = null;
       }
 
-      for (var1 = 0; -32769 < ~var1; ++var1) {
+      for (var1 = 0; ~var1 > -32769; ++var1) {
         TextureSampler5.npcs[var1] = null;
       }
 
-      for (var1 = 0; 4 > var1; ++var1) {
-        for (int var2 = 0; -105 < ~var2; ++var2) {
+      for (var1 = 0; var1 < 4; ++var1) {
+        for (int var2 = 0; ~var2 > -105; ++var2) {
           for (int var3 = 0; ~var3 > -105; ++var3) {
             TextureSampler0.groundItems[var1][var2][var3] = null;
           }

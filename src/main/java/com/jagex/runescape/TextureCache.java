@@ -61,7 +61,7 @@ public final class TextureCache implements ITextureCache {
 
       int var8;
       for (var8 = 0; amountMaterials > var8; ++var8) {
-        this.materialActive[var8] = 1 == var6.readUnsignedByte();
+        this.materialActive[var8] = var6.readUnsignedByte() == 1;
       }
 
       for (var8 = 0; amountMaterials > var8; ++var8) {
@@ -72,19 +72,19 @@ public final class TextureCache implements ITextureCache {
 
       for (var8 = 0; ~var8 > ~amountMaterials; ++var8) {
         if (this.materialActive[var8]) {
-          this.aBooleanArray2128[var8] = 1 == var6.readUnsignedByte();
+          this.aBooleanArray2128[var8] = var6.readUnsignedByte() == 1;
         }
       }
 
       for (var8 = 0; ~var8 > ~amountMaterials; ++var8) {
         if (this.materialActive[var8]) {
-          this.aBooleanArray2122[var8] = -2 == ~var6.readUnsignedByte();
+          this.aBooleanArray2122[var8] = ~var6.readUnsignedByte() == -2;
         }
       }
 
       for (var8 = 0; var8 < amountMaterials; ++var8) {
         if (this.materialActive[var8]) {
-          this.aBooleanArray2135[var8] = -2 == ~var6.readUnsignedByte();
+          this.aBooleanArray2135[var8] = ~var6.readUnsignedByte() == -2;
         }
       }
 
@@ -125,7 +125,7 @@ public final class TextureCache implements ITextureCache {
       }
 
       for (Texture var3 = (Texture) this.aClass47_2142.method1094(0);
-           null != var3; var3 = (Texture) this.aClass47_2142.method1099(-1)) {
+          var3 != null; var3 = (Texture) this.aClass47_2142.method1099(-1)) {
         if (var3.needsUpdate) {
           var3.update(cycle, (byte) -120);
           var3.needsUpdate = false;
@@ -139,11 +139,11 @@ public final class TextureCache implements ITextureCache {
       }
 
       Texture var3 = (Texture) this.aClass47_2142.get(var1, 1400);
-      if (null != var3) {
+      if (var3 != null) {
         return var3;
       } else {
         byte[] var4 = this.textures.getBytes(var1, 0);
-        if (null != var4) {
+        if (var4 != null) {
           Buffer var5 = new Buffer(var4);
           var3 = new Texture(var5);
           this.aClass47_2142.put(var1, var3);
@@ -196,7 +196,7 @@ public final class TextureCache implements ITextureCache {
       }
 
       Texture var3 = this.getConfig(var2, 1);
-      return null != var3 && var3.method722(-5, this, this.sprites);
+      return var3 != null && var3.method722(-5, this, this.sprites);
   }
 
   public boolean method12(int var1, int var2) {
@@ -209,7 +209,7 @@ public final class TextureCache implements ITextureCache {
 
   public int[] method13(int var1, boolean var2, float var3) {
     Texture var4 = this.getConfig(var1, 1);
-      if (null == var4) {
+      if (var4 == null) {
         return null;
       } else {
         var4.needsUpdate = var2;
@@ -236,7 +236,7 @@ public final class TextureCache implements ITextureCache {
       }
 
       Texture var3 = this.getConfig(var2, 1);
-      return null == var3 ?
+      return var3 == null ?
         null :
         var3.method720(false, this.aBoolean2134 || this.aBooleanArray2122[var2], this,
             this.sprites);
@@ -262,7 +262,7 @@ public final class TextureCache implements ITextureCache {
 
   private GlTexture2d getTexture(int textureId) {
     GlTexture2d var4 = (GlTexture2d) this.glTextures.get(textureId, 1400);
-      if (null == var4) {
+      if (var4 == null) {
         var4 = new GlTexture2d(this.textureColors[textureId] & '\uffff');
         this.glTextures.put(textureId, var4);
         return var4;
@@ -279,7 +279,7 @@ public final class TextureCache implements ITextureCache {
   public void method1618(int var1 ) {
     this.aClass47_2142.method1101(2);
       if (var1 == 0) {
-        if (null != this.glTextures) {
+        if (this.glTextures != null) {
           this.glTextures.method1101(2);
         }
 
@@ -310,14 +310,16 @@ public final class TextureCache implements ITextureCache {
       int var10;
       for (var2 = 0; var2 < DummyClass6.anInt2046; ++var2) {
         var3 = TextureSampler5.npcs[AudioWorker.anIntArray347[var2]];
-        if (null != var3 && var3.hasConfiguration((byte) 17) && !var3.config.aBoolean1263 != var1
+        if (var3 != null
+            && var3.hasConfiguration((byte) 17) && !var3.config.aBoolean1263 != var1
           && var3.config.method1472((byte) 74)) {
           int var4 = var3.getSize();
           int var5;
-          if (1 != var4) {
-            if ((~(1 & var4) != -1 || ~(127 & var3.anInt2819) == -1 && 0 == (127 & var3.anInt2829))
-              && ((var4 & 1) != 1 || -65 == ~(127 & var3.anInt2819) && 64 == (127
-              & var3.anInt2829))) {
+          if (var4 != 1) {
+            if ((~(1 & var4) != -1 || ~(127 & var3.anInt2819) == -1 &&
+                (127 & var3.anInt2829) == 0)
+              && ((var4 & 1) != 1 || ~(127 & var3.anInt2819) == -65 && (127
+                & var3.anInt2829) == 64)) {
               var5 = var3.anInt2819 + -(var4 * 64) >> 7;
               var6 = -(var4 * 64) + var3.anInt2829 >> 7;
               var7 = var3.getSize() + var5;
@@ -330,11 +332,11 @@ public final class TextureCache implements ITextureCache {
               }
 
               var8 = var6 + var3.getSize();
-              if (-1 < ~var6) {
+              if (~var6 > -1) {
                 var6 = 0;
               }
 
-              if (104 < var8) {
+              if (var8 > 104) {
                 var8 = 104;
               }
 
@@ -344,10 +346,10 @@ public final class TextureCache implements ITextureCache {
                 }
               }
             }
-          } else if (-65 == ~(127 & var3.anInt2819) && (var3.anInt2829 & 127) == 64) {
+          } else if (~(127 & var3.anInt2819) == -65 && (var3.anInt2829 & 127) == 64) {
             var5 = var3.anInt2819 >> 7;
             var6 = var3.anInt2829 >> 7;
-            if (-1 >= ~var5 && var5 < 104 && ~var6 <= -1 && -105 < ~var6) {
+            if (~var5 <= -1 && var5 < 104 && ~var6 <= -1 && ~var6 > -105) {
               ++DummyClass9.anIntArrayArray4010[var5][var6];
             }
           }
@@ -361,9 +363,10 @@ public final class TextureCache implements ITextureCache {
         if (var3 != null && var3.hasConfiguration((byte) 17) && !var3.config.aBoolean1263 == !var1
           && var3.config.method1472((byte) 74)) {
           var6 = var3.getSize();
-          if (-2 != ~var6) {
-            if ((var6 & 1) == 0 && -1 == ~(var3.anInt2819 & 127) && -1 == ~(127 & var3.anInt2829)
-              || ~(var6 & 1) == -2 && -65 == ~(var3.anInt2819 & 127)
+          if (~var6 != -2) {
+            if ((var6 & 1) == 0 && ~(var3.anInt2819 & 127) == -1 &&
+                ~(127 & var3.anInt2829) == -1
+              || ~(var6 & 1) == -2 && ~(var3.anInt2819 & 127) == -65
               && (127 & var3.anInt2829) == 64) {
               var7 = -(64 * var6) + var3.anInt2819 >> 7;
               var8 = -(var6 * 64) + var3.anInt2829 >> 7;
@@ -374,11 +377,11 @@ public final class TextureCache implements ITextureCache {
 
               boolean var11 = true;
               var9 = var7 + var6;
-              if (-105 > ~var10) {
+              if (~var10 < -105) {
                 var10 = 104;
               }
 
-              if (-1 < ~var7) {
+              if (~var7 > -1) {
                 var7 = 0;
               }
 
@@ -416,11 +419,11 @@ public final class TextureCache implements ITextureCache {
           } else if ((127 & var3.anInt2819) == 64 && ~(127 & var3.anInt2829) == -65) {
             var7 = var3.anInt2819 >> 7;
             var8 = var3.anInt2829 >> 7;
-            if (0 > var7 || ~var7 <= -105 || var8 < 0 || ~var8 <= -105) {
+            if (var7 < 0 || ~var7 <= -105 || var8 < 0 || ~var8 <= -105) {
               continue;
             }
 
-            if (1 < DummyClass9.anIntArrayArray4010[var7][var8]) {
+            if (DummyClass9.anIntArrayArray4010[var7][var8] > 1) {
               --DummyClass9.anIntArrayArray4010[var7][var8];
               continue;
             }

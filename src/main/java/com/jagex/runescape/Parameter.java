@@ -23,7 +23,7 @@ public final class Parameter extends SubNode {
       } else {
         if (var1 == 2) {
           this.anInt3614 = var2.readInt();
-        } else if (-6 == ~var1) {
+        } else if (~var1 == -6) {
           this.aClass94_3619 = var2.readString();
         }
       }

@@ -22,7 +22,7 @@ public final class DummyClass45 {
 
 
   public static int[] method1233(int[] var0, int var1) {
-    if (null != var0) {
+    if (var0 != null) {
         if (var1 != 2) {
           DummyClass45.anInt984 = 113;
         }
@@ -99,17 +99,17 @@ public final class DummyClass45 {
   }
 
   public static void method1239(int var0, int var1, int var2, int var3, int var4, boolean var5) {
-    if (-2 < ~var0) {
+    if (~var0 > -2) {
         var0 = 1;
       }
 
-      if (1 > var3) {
+      if (var3 < 1) {
         var3 = 1;
       }
 
       if (GlRenderer.useOpenGlRenderer) {
         int var6 = var3 + -334;
-        if (0 <= var6) {
+        if (var6 >= 0) {
           if (~var6 < -101) {
             var6 = 100;
           }

@@ -19,13 +19,13 @@ public final class DummyClass38 {
     int var4;
       int var5;
       int var7;
-      if (0 != (var0 & 128)) {
+      if ((var0 & 128) != 0) {
         var4 = SpotAnimationConfig.gameBuffer.readUnsignedShortLE();
         var5 = SpotAnimationConfig.gameBuffer.readUnsignedByte();
         int var6 = SpotAnimationConfig.gameBuffer.readUnsignedByte();
         var7 = SpotAnimationConfig.gameBuffer.position;
-        boolean var8 = -1 != ~('\u8000' & var4);
-        if (null != var3.name && var3.appearance != null) {
+        boolean var8 = ~('\u8000' & var4) != -1;
+        if (var3.name != null && var3.appearance != null) {
           long var9 = var3.name.toBase37();
           boolean var11 = false;
           if (var5 <= 1) {
@@ -42,7 +42,7 @@ public final class DummyClass38 {
             }
           }
 
-          if (!var11 && 0 == GameWorld.anInt2622) {
+          if (!var11 && GameWorld.anInt2622 == 0) {
             DummyClass12.aClass3_Sub30_2030.position = 0;
             SpotAnimationConfig.gameBuffer.method774(2, var6, DummyClass12.aClass3_Sub30_2030.bytes,
               0);
@@ -67,7 +67,7 @@ public final class DummyClass38 {
             var3.anInt2753 = var4 & 255;
             var3.anInt2814 = 150;
             var3.anInt2837 = var4 >> 8;
-            if (-3 == ~var5) {
+            if (~var5 == -3) {
               InventoryConfig
                   .method611(var13, !var8 ? 1 : 17, var25, null, (byte) 50,
                       RenderAnimation.concat(
@@ -102,7 +102,7 @@ public final class DummyClass38 {
 
       if ((var0 & 8) != 0) {
         var4 = SpotAnimationConfig.gameBuffer.readUnsignedShort();
-        if (-65536 == ~var4) {
+        if (~var4 == -65536) {
           var4 = -1;
         }
 
@@ -110,7 +110,7 @@ public final class DummyClass38 {
         GroundItemNode.method628(0, var5, var4, var3);
       }
 
-      if (0 != (4 & var0)) {
+      if ((4 & var0) != 0) {
         var4 = SpotAnimationConfig.gameBuffer.method751((byte) -118);
         byte[] var16 = new byte[var4];
         Buffer var19 = new Buffer(var16);
@@ -121,7 +121,7 @@ public final class DummyClass38 {
 
       if ((2 & var0) != 0) {
         var3.anInt2772 = SpotAnimationConfig.gameBuffer.readUnsignedShortAdd();
-        if (-65536 == ~var3.anInt2772) {
+        if (~var3.anInt2772 == -65536) {
           var3.anInt2772 = -1;
         }
       }
@@ -168,7 +168,7 @@ public final class DummyClass38 {
 
         for (int var22 = 0; var4 > var22; ++var22) {
           int var23 = SpotAnimationConfig.gameBuffer.readUnsignedShortLE();
-          if ('\uffff' == var23) {
+          if (var23 == '\uffff') {
             var23 = -1;
           }
 
@@ -188,7 +188,7 @@ public final class DummyClass38 {
 
         var5 = SpotAnimationConfig.gameBuffer.readInt((byte) -73);
         boolean var21 = true;
-        if (~var4 != 0 && 0 != ~var3.anInt2842 &&
+        if (~var4 != 0 && ~var3.anInt2842 != 0 &&
           GameClient.method45(RenderAnimation.method898((byte) 42, var4).anInt542,
             (byte) -20).anInt1857 < GameClient.method45(
             RenderAnimation.method898((byte) 42, var3.anInt2842).anInt542, (byte) -20).anInt1857) {
@@ -208,7 +208,7 @@ public final class DummyClass38 {
           var3.anInt2826 = 1;
           if (~var3.anInt2842 != 0 && AbstractGameWorld.updateCycle == var3.anInt2759) {
             var7 = RenderAnimation.method898((byte) 42, var3.anInt2842).anInt542;
-            if (0 != ~var7) {
+            if (~var7 != 0) {
               AnimationSequence var24 = GameClient.method45(var7, (byte) -20);
               if (var24.anIntArray1851 != null) {
                 SocketStream.method1470(var3.anInt2829, var24, 183921384, var3.anInt2819,
@@ -281,7 +281,7 @@ public final class DummyClass38 {
 
       for (var4 = 1; ~var4 > ~var3; ++var4) {
         TextureSampler38.anIntArray3446[var4] = var2.readUnsignedMedium((byte) 122);
-        if (0 == TextureSampler38.anIntArray3446[var4]) {
+        if (TextureSampler38.anIntArray3446[var4] == 0) {
           TextureSampler38.anIntArray3446[var4] = 1;
         }
       }
@@ -299,7 +299,7 @@ public final class DummyClass38 {
         DummyClass4.aByteArrayArray3005[var4] = var9;
         int var11 = var2.readUnsignedByte();
         int var12;
-        if (-1 == ~(1 & var11)) {
+        if (~(1 & var11) == -1) {
           for (var12 = 0; var7 > var12; ++var12) {
             var8[var12] = var2.readByte();
           }
@@ -318,11 +318,11 @@ public final class DummyClass38 {
             }
           }
 
-          if (-1 != ~(var11 & 2)) {
+          if (~(var11 & 2) != -1) {
             for (var12 = 0; ~var12 > ~var5; ++var12) {
               for (var13 = 0; var13 < var6; ++var13) {
                 byte var14 = var9[var5 * var13 + var12] = var2.readByte();
-                var10 |= -1 != var14;
+                var10 |= var14 != -1;
               }
             }
           }

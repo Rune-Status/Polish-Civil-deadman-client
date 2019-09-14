@@ -282,7 +282,7 @@ public final class Widget {
       } else {
         SoftwareIndexedColorSprite var2 =
           GameString.createSprite(0, true, this.anInt224, SomethingSceneJ.aClass153_323);
-        if (null == var2) {
+        if (var2 == null) {
           return false;
         } else {
           var2.method1675();
@@ -297,7 +297,7 @@ public final class Widget {
 
             while (true) {
               if (~var6 > ~var2.width) {
-                if (-1 == ~var2.aByteArray2674[var2.width * var3 + var6]) {
+                if (~var2.aByteArray2674[var2.width * var3 + var6] == -1) {
                   ++var6;
                   continue;
                 }
@@ -306,7 +306,7 @@ public final class Widget {
               }
 
               for (var6 = var4; var2.width > var6; ++var6) {
-                if (0 == var2.aByteArray2674[var3 * var2.width + var6]) {
+                if (var2.aByteArray2674[var3 * var2.width + var6] == 0) {
                   var5 = var6;
                   break;
                 }
@@ -329,9 +329,9 @@ public final class Widget {
   }
 
   public void method857(byte var1, GameString var2, int var3 ) {
-    if (null == this.aClass94Array171 || ~this.aClass94Array171.length >= ~var3) {
+    if (this.aClass94Array171 == null || ~this.aClass94Array171.length >= ~var3) {
         GameString[] var4 = new GameString[1 + var3];
-        if (null != this.aClass94Array171) {
+        if (this.aClass94Array171 != null) {
           for (int var5 = 0; this.aClass94Array171.length > var5; ++var5) {
             var4[var5] = this.aClass94Array171[var5];
           }
@@ -370,13 +370,13 @@ public final class Widget {
       }
 
       this.anInt212 = var2.readUnsignedShort();
-      if (-65536 == ~this.anInt212) {
+      if (~this.anInt212 == -65536) {
         this.anInt212 = -1;
       }
 
       int var3 = var2.readUnsignedByte();
       int var4;
-      if (-1 > ~var3) {
+      if (~var3 < -1) {
         this.anIntArray307 = new int[var3];
         this.anIntArray275 = new int[var3];
 
@@ -390,7 +390,7 @@ public final class Widget {
       int var5;
       int var6;
       int var7;
-      if (-1 > ~var4) {
+      if (~var4 < -1) {
         this.anIntArrayArray298 = new int[var4][];
 
         for (var5 = 0; var4 > var5; ++var5) {
@@ -406,9 +406,9 @@ public final class Widget {
         }
       }
 
-      if (-1 == ~this.anInt187) {
+      if (~this.anInt187 == -1) {
         this.anInt252 = var2.readUnsignedShort();
-        this.aBoolean155 = 1 == var2.readUnsignedByte();
+        this.aBoolean155 = var2.readUnsignedByte() == 1;
       }
 
       if (~this.anInt187 == -2) {
@@ -433,7 +433,7 @@ public final class Widget {
           var5 |= 1073741824;
         }
 
-        if (1 == var8) {
+        if (var8 == 1) {
           var5 |= Integer.MIN_VALUE;
         }
 
@@ -449,7 +449,7 @@ public final class Widget {
         this.anIntArray197 = new int[20];
 
         int var10;
-        for (var10 = 0; 20 > var10; ++var10) {
+        for (var10 = 0; var10 < 20; ++var10) {
           int var11 = var2.readUnsignedByte();
           if (var11 == 1) {
             this.anIntArray272[var10] = var2.method787((byte) 110);
@@ -471,11 +471,11 @@ public final class Widget {
         }
       }
 
-      if (3 == this.anInt187) {
-        this.aBoolean226 = 1 == var2.readUnsignedByte();
+      if (this.anInt187 == 3) {
+        this.aBoolean226 = var2.readUnsignedByte() == 1;
       }
 
-      if (this.anInt187 == 4 || 1 == this.anInt187) {
+      if (this.anInt187 == 4 || this.anInt187 == 1) {
         this.anInt194 = var2.readUnsignedByte();
         this.anInt225 = var2.readUnsignedByte();
         this.anInt205 = var2.readUnsignedByte();
@@ -484,7 +484,7 @@ public final class Widget {
           this.anInt270 = -1;
         }
 
-        this.aBoolean215 = 1 == var2.readUnsignedByte();
+        this.aBoolean215 = var2.readUnsignedByte() == 1;
       }
 
       if (this.anInt187 == 4) {
@@ -492,7 +492,7 @@ public final class Widget {
         this.aClass94_172 = var2.readString();
       }
 
-      if (this.anInt187 == 1 || this.anInt187 == 3 || 4 == this.anInt187) {
+      if (this.anInt187 == 1 || this.anInt187 == 3 || this.anInt187 == 4) {
         this.anInt218 = var2.readInt();
       }
 
@@ -502,12 +502,12 @@ public final class Widget {
         this.anInt222 = var2.readInt();
       }
 
-      if (-6 == ~this.anInt187) {
+      if (~this.anInt187 == -6) {
         this.anInt224 = var2.readInt();
         this.anInt296 = var2.readInt();
       }
 
-      if (6 == this.anInt187) {
+      if (this.anInt187 == 6) {
         this.anInt202 = 1;
         this.anInt201 = var2.readUnsignedShort();
         this.anInt294 = 1;
@@ -526,7 +526,7 @@ public final class Widget {
         }
 
         this.anInt198 = var2.readUnsignedShort();
-        if ('\uffff' == this.anInt198) {
+        if (this.anInt198 == '\uffff') {
           this.anInt198 = -1;
         }
 
@@ -535,7 +535,7 @@ public final class Widget {
         this.rotationY = var2.readUnsignedShort();
       }
 
-      if (7 == this.anInt187) {
+      if (this.anInt187 == 7) {
         this.aByte241 = 3;
         this.aByte304 = 3;
         this.anIntArray317 = new int[this.anInt244 * this.anInt177];
@@ -551,7 +551,7 @@ public final class Widget {
         this.anInt285 = var2.method787((byte) 31);
         this.anInt290 = var2.method787((byte) 83);
         var6 = var2.readUnsignedByte();
-        if (-2 == ~var6) {
+        if (~var6 == -2) {
           var5 |= 1073741824;
         }
 
@@ -566,18 +566,18 @@ public final class Widget {
         }
       }
 
-      if (8 == this.anInt187) {
+      if (this.anInt187 == 8) {
         this.aClass94_232 = var2.readString();
       }
 
-      if (-3 == ~this.anInt318 || ~this.anInt187 == -3) {
+      if (~this.anInt318 == -3 || ~this.anInt187 == -3) {
         this.aClass94_245 = var2.readString();
         this.aClass94_243 = var2.readString();
         var6 = 63 & var2.readUnsignedShort();
         var5 |= var6 << 11;
       }
 
-      if (this.anInt318 == 1 || this.anInt318 == 4 || -6 == ~this.anInt318 ||
+      if (this.anInt318 == 1 || this.anInt318 == 4 || ~this.anInt318 == -6 ||
           this.anInt318 == 6) {
         this.aClass94_289 = var2.readString();
         if (this.aClass94_289.getLength() == 0) {
@@ -585,11 +585,11 @@ public final class Widget {
             this.aClass94_289 = DummyClass27.aClass94_1583;
           }
 
-          if (-5 == ~this.anInt318) {
+          if (~this.anInt318 == -5) {
             this.aClass94_289 = WorldMapLabel.aClass94_1722;
           }
 
-          if (5 == this.anInt318) {
+          if (this.anInt318 == 5) {
             this.aClass94_289 = WorldMapLabel.aClass94_1722;
           }
 
@@ -599,7 +599,7 @@ public final class Widget {
         }
       }
 
-      if (-2 == ~this.anInt318 || -5 == ~this.anInt318 || -6 == ~this.anInt318) {
+      if (~this.anInt318 == -2 || ~this.anInt318 == -5 || ~this.anInt318 == -6) {
         var5 |= 4194304;
       }
 
@@ -626,7 +626,7 @@ public final class Widget {
           if (var4 == null) {
             var4 = Structure
                 .method602(0, var3, (byte) -18, SomethingSceneJ.aClass153_323);
-            if (null != var4) {
+            if (var4 != null) {
               MonoChromaticImageCache.aClass93_1569
                   .get((byte) -126, var4, var3);
             } else {
@@ -646,17 +646,17 @@ public final class Widget {
   private Object[] method862(int var1, Buffer var2) {
     if (var1 == -65536) {
         int var3 = var2.readUnsignedByte();
-        if (-1 == ~var3) {
+        if (~var3 == -1) {
           return null;
         } else {
           Object[] var4 = new Object[var3];
 
           for (int var5 = 0; var3 > var5; ++var5) {
             int var6 = var2.readUnsignedByte();
-            if (0 == var6) {
+            if (var6 == 0) {
               var4[var5] = new Integer(var2.readInt());
             } else {
-              if (-2 == ~var6) {
+              if (~var6 == -2) {
                 var4[var5] = var2.readString();
               }
             }
@@ -672,7 +672,7 @@ public final class Widget {
 
   private int[] method863(Buffer var1, boolean var2) {
     int var3 = var1.readUnsignedByte();
-      if (-1 == ~var3) {
+      if (~var3 == -1) {
         return null;
       } else {
         int[] var4 = new int[var3];
@@ -720,12 +720,12 @@ public final class Widget {
 
       if (var4 < 125) {
         return null;
-      } else if (-1 != ~var8) {
-        if (-2 == ~var8 && var9 == -1) {
+      } else if (~var8 != -1) {
+        if (~var8 == -2 && var9 == -1) {
           return null;
         } else {
           AbstractModel var10;
-          if (1 == var8) {
+          if (var8 == 1) {
             var10 =
               (AbstractModel) SomethingVolume15.aClass93_2428.get(
                   (1 << 16) - -var9);
@@ -747,8 +747,8 @@ public final class Widget {
 
             return var10;
           } else if (var8 != 2) {
-            if (3 != var8) {
-              if (4 == var8) {
+            if (var8 != 3) {
+              if (var8 == 4) {
                 ItemConfig var16 = DummyClass35.getItemConfig(var9, (byte) 94);
                 AbstractModel var17 = var16.getModel(110, var1, var5, var2, 10, var3);
                 if (var17 != null) {
@@ -778,18 +778,18 @@ public final class Widget {
               } else {
                 var10 = SubNode.getNpcConfiguration(var9)
                   .method1476(null, 0, (byte) -120, 0, var1, var5, var3, null, 0, var2);
-                if (null != var10) {
+                if (var10 != null) {
                   return var10;
                 } else {
                   GameStub.aBoolean6 = true;
                   return null;
                 }
               }
-            } else if (null == var7) {
+            } else if (var7 == null) {
               return null;
             } else {
               var10 = var7.method1167(var5, (byte) 127, var2, var3, var1);
-              if (null == var10) {
+              if (var10 == null) {
                 GameStub.aBoolean6 = true;
                 return null;
               } else {
@@ -798,7 +798,7 @@ public final class Widget {
             }
           } else {
             var10 = SubNode.getNpcConfiguration(var9).method1482(var2, var5, var1, 27, var3);
-            if (null != var10) {
+            if (var10 != null) {
               return var10;
             } else {
               GameStub.aBoolean6 = true;
@@ -820,7 +820,7 @@ public final class Widget {
         var3 = this.anInt224;
       }
 
-      if (0 == ~var3) {
+      if (~var3 == 0) {
         return null;
       } else {
         long var4 =
@@ -839,7 +839,7 @@ public final class Widget {
             var7 = DummyClass59.method1043(0, SomethingSceneJ.aClass153_323, -3178, var3);
           }
 
-          if (null == var7) {
+          if (var7 == null) {
             GameStub.aBoolean6 = true;
             return null;
           } else if (var1 != -113) {
@@ -861,7 +861,7 @@ public final class Widget {
               var7.method657(1);
             }
 
-            if (2 <= this.anInt288) {
+            if (this.anInt288 >= 2) {
               var7.method657(16777215);
             }
 
@@ -891,7 +891,7 @@ public final class Widget {
     this.aBoolean233 = true;
       ++var2.position;
       this.anInt187 = var2.readUnsignedByte();
-      if (-1 != ~(128 & this.anInt187)) {
+      if (~(128 & this.anInt187) != -1) {
         this.anInt187 &= 127;
         var2.readString();
       }
@@ -906,17 +906,17 @@ public final class Widget {
       this.aByte273 = var2.readByte();
       this.aByte162 = var2.readByte();
       this.anInt190 = var2.readUnsignedShort();
-      if (-65536 == ~this.anInt190) {
+      if (~this.anInt190 == -65536) {
         this.anInt190 = -1;
       } else {
         this.anInt190 = (this.anInt279 & -65536) - -this.anInt190;
       }
 
-      this.aBoolean155 = -2 == ~var2.readUnsignedByte();
+      this.aBoolean155 = ~var2.readUnsignedByte() == -2;
       if (~this.anInt187 == -1) {
         this.anInt240 = var2.readUnsignedShort();
         this.anInt252 = var2.readUnsignedShort();
-        this.aBoolean219 = -2 == ~var2.readUnsignedByte();
+        this.aBoolean219 = ~var2.readUnsignedByte() == -2;
       }
 
       int var3;
@@ -924,13 +924,13 @@ public final class Widget {
         this.anInt224 = var2.readInt();
         this.anInt301 = var2.readUnsignedShort();
         var3 = var2.readUnsignedByte();
-        this.aBoolean157 = -1 != ~(2 & var3);
+        this.aBoolean157 = ~(2 & var3) != -1;
         this.aBoolean186 = ~(1 & var3) != -1;
         this.anInt223 = var2.readUnsignedByte();
         this.anInt288 = var2.readUnsignedByte();
         this.anInt287 = var2.readInt();
         this.aBoolean178 = ~var2.readUnsignedByte() == -2;
-        this.aBoolean199 = 1 == var2.readUnsignedByte();
+        this.aBoolean199 = var2.readUnsignedByte() == 1;
       }
 
       if (~this.anInt187 == -7) {
@@ -947,14 +947,14 @@ public final class Widget {
         this.rotationZ = var2.readUnsignedShort();
         this.anInt164 = var2.readUnsignedShort();
         this.anInt305 = var2.readUnsignedShort();
-        if ('\uffff' == this.anInt305) {
+        if (this.anInt305 == '\uffff') {
           this.anInt305 = -1;
         }
 
         this.aBoolean181 = var2.readUnsignedByte() == 1;
         this.aShort293 = (short) var2.readUnsignedShort();
         this.aShort169 = (short) var2.readUnsignedShort();
-        this.aBoolean309 = 1 == var2.readUnsignedByte();
+        this.aBoolean309 = var2.readUnsignedByte() == 1;
         if (this.aByte304 != 0) {
           this.anInt184 = var2.readUnsignedShort();
         }
@@ -980,14 +980,14 @@ public final class Widget {
 
       if (this.anInt187 == 3) {
         this.anInt218 = var2.readInt();
-        this.aBoolean226 = 1 == var2.readUnsignedByte();
+        this.aBoolean226 = var2.readUnsignedByte() == 1;
         this.anInt223 = var2.readUnsignedByte();
       }
 
-      if (-10 == ~this.anInt187) {
+      if (~this.anInt187 == -10) {
         this.anInt250 = var2.readUnsignedByte();
         this.anInt218 = var2.readInt();
-        this.aBoolean167 = 1 == var2.readUnsignedByte();
+        this.aBoolean167 = var2.readUnsignedByte() == 1;
       }
 
       var3 = var2.readUnsignedMedium((byte) 87);
@@ -1001,7 +1001,7 @@ public final class Widget {
           var5 = (var4 >> 4) - 1;
           var4 = var2.readUnsignedByte() | var4 << 8;
           var4 &= 4095;
-          if (4095 == var4) {
+          if (var4 == 4095) {
             this.anIntArray299[var5] = -1;
           } else {
             this.anIntArray299[var5] = var4;
@@ -1016,7 +1016,7 @@ public final class Widget {
       var5 = var2.readUnsignedByte();
       int var6 = var5 & 15;
       int var8;
-      if (0 < var6) {
+      if (var6 > 0) {
         this.aClass94Array171 = new GameString[var6];
 
         for (var8 = 0; var6 > var8; ++var8) {
@@ -1036,7 +1036,7 @@ public final class Widget {
         this.anIntArray249[var8] = var2.readUnsignedShort();
       }
 
-      if (1 < var7) {
+      if (var7 > 1) {
         var8 = var2.readUnsignedByte();
         this.anIntArray249[var8] = var2.readUnsignedShort();
       }
@@ -1046,14 +1046,14 @@ public final class Widget {
       this.aBoolean200 = var2.readUnsignedByte() == 1;
       var8 = var1;
       this.aClass94_245 = var2.readString();
-      if (0 != ClientScript.method630((byte) -34, var3)) {
+      if (ClientScript.method630((byte) -34, var3) != 0) {
         var8 = var2.readUnsignedShort();
         this.anInt266 = var2.readUnsignedShort();
-        if (-65536 == ~var8) {
+        if (~var8 == -65536) {
           var8 = -1;
         }
 
-        if ('\uffff' == this.anInt266) {
+        if (this.anInt266 == '\uffff') {
           this.anInt266 = -1;
         }
 
@@ -1094,16 +1094,16 @@ public final class Widget {
   public AbstractFont method868(AbstractIndexedColorSprite[] var1,
       int var2 ) {
     GameStub.aBoolean6 = false;
-      if (0 == ~this.anInt270) {
+      if (~this.anInt270 == 0) {
         return null;
       } else {
         AbstractFont var3 = (AbstractFont) Cache.aClass93_743.get(this.anInt270);
-        if (null != var3) {
+        if (var3 != null) {
           return var3;
         } else {
           var3 = FileCacheRequester.createFont(var2, this.anInt270, (byte) 127,
             SomethingSceneJ.aClass153_323, TriChromaticImageCache.aClass153_1378);
-          if (null == var3) {
+          if (var3 == null) {
             GameStub.aBoolean6 = true;
           } else {
             var3.method697(var1, null);
@@ -1122,11 +1122,11 @@ public final class Widget {
 
       GameString var1 = ObjectNode.aClass94_4052;
       GameString var2 = GroundItemNode.EMPTY_STRING;
-      if (-1 != ~AbstractGameWorld.usageLocation) {
+      if (~AbstractGameWorld.usageLocation != -1) {
         var1 = Player.aClass94_3971;
       }
 
-      if (null != DummyClass7.settings) {
+      if (DummyClass7.settings != null) {
         var2 =
           RenderAnimation.concat(new GameString[] {Structure.aClass94_3637, DummyClass7.settings});
       }
@@ -1152,9 +1152,9 @@ public final class Widget {
 
   public static int method861(int var0, int var1, int var2) {
     Inventory var3 = (Inventory) SceneGraphTile.aClass130_2220.get(var0);
-      return null == var3 ?
+      return var3 == null ?
         -1 :
-        (0 <= var2 && var2 < var3.ids.length ? (var1 < 39 ? -69 : var3.ids[var2]) : -1);
+        (var2 >= 0 && var2 < var3.ids.length ? (var1 < 39 ? -69 : var3.ids[var2]) : -1);
   }
 
   public static int method869(int var0, int var1) {

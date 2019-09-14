@@ -134,7 +134,7 @@ public final class FileTable {
           }
         }
 
-        if (-1 != ~var5) {
+        if (~var5 != -1) {
           this.childNameTables = new LinearHashTable[var7 - -1];
           this.unpackedNames = new int[1 + var7][];
 
@@ -148,7 +148,7 @@ public final class FileTable {
             }
 
             for (maximumId = 0; ~maximumId > ~var10; ++maximumId) {
-              if (null != this.unpackedIds[entryId]) {
+              if (this.unpackedIds[entryId] != null) {
                 var12 = this.unpackedIds[entryId][maximumId];
               } else {
                 var12 = maximumId;
@@ -175,16 +175,16 @@ public final class FileTable {
   }
 
   public static void method1224(Widget var0, int var1, int var2, int var3) {
-    if (0 == var0.aByte162) {
+    if (var0.aByte162 == 0) {
         var0.anInt210 = var0.anInt166;
       } else {
         if (var0.aByte162 == 1) {
           var0.anInt210 = (var2 - var0.anInt193) / 2 + var0.anInt166;
         } else {
-          if (2 == var0.aByte162) {
+          if (var0.aByte162 == 2) {
             var0.anInt210 = var2 - var0.anInt193 - var0.anInt166;
           } else if (var0.aByte162 != 3) {
-            if (4 == var0.aByte162) {
+            if (var0.aByte162 == 4) {
               var0.anInt210 =
                   (var2 * var0.anInt166 >> 14) + (-var0.anInt193 + var2) / 2;
             } else {
@@ -197,13 +197,13 @@ public final class FileTable {
         }
       }
 
-      if (0 == var0.aByte273) {
+      if (var0.aByte273 == 0) {
         var0.anInt306 = var0.anInt316;
       } else if (~var0.aByte273 != -2) {
         if (var0.aByte273 == 2) {
           var0.anInt306 = -var0.anInt316 + -var0.anInt168 + var3;
-        } else if (3 != var0.aByte273) {
-          if (4 == var0.aByte273) {
+        } else if (var0.aByte273 != 3) {
+          if (var0.aByte273 == 4) {
             var0.anInt306 =
                 (var0.anInt316 * var3 >> 14) + (var3 - var0.anInt168) / 2;
           } else {
@@ -225,7 +225,7 @@ public final class FileTable {
           var0.anInt210 = var2 + -var0.anInt193;
         }
 
-        if (0 > var0.anInt306) {
+        if (var0.anInt306 < 0) {
           var0.anInt306 = 0;
         } else if (var3 < var0.anInt306 - -var0.anInt168) {
           var0.anInt306 = var3 + -var0.anInt168;

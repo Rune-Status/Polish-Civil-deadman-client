@@ -89,12 +89,12 @@ public final class TextureSampler18 extends TextureSampler39 {
         int var13 = var5[var12 + var12];
         int var14 = var5[var12 + var12 + 1];
         int var15;
-        if (-2 == ~var10) {
+        if (~var10 == -2) {
           var15 = var13;
           var13 = var14;
           var14 = -var15 + 128;
         } else {
-          if (-3 == ~var10) {
+          if (~var10 == -3) {
             var14 = -var14 + 128;
             var13 = -var13 + 128;
           } else {
@@ -109,19 +109,19 @@ public final class TextureSampler18 extends TextureSampler39 {
         float var17;
         float var16;
         float var24;
-        if (-1 == ~var13 && var14 == 0) {
+        if (~var13 == -1 && var14 == 0) {
           var16 = var3[var2][var4];
           var24 = var9[var2][var4];
           var17 = var0[var2][var4];
-        } else if (~var13 == -129 && -1 == ~var14) {
+        } else if (~var13 == -129 && ~var14 == -1) {
           var17 = var0[var2 - -1][var4];
           var24 = var9[1 + var2][var4];
           var16 = var3[var2 - -1][var4];
-        } else if (128 == var13 && ~var14 == -129) {
+        } else if (var13 == 128 && ~var14 == -129) {
           var16 = var3[var2 + 1][var4 + 1];
           var24 = var9[var2 + 1][var4 + 1];
           var17 = var0[var2 - -1][var4 + 1];
-        } else if (var13 == 0 && 128 == var14) {
+        } else if (var13 == 0 && var14 == 128) {
           var17 = var0[var2][1 + var4];
           var16 = var3[var2][var4 + 1];
           var24 = var9[var2][1 + var4];

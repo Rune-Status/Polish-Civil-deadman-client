@@ -63,7 +63,7 @@ public final class HashTable {
 
   public Node getNext(int var1 ) {
     Node var2;
-      if (-1 > ~this.iteratorBucketId && this.aClass3_1713 != this.nodes[
+      if (~this.iteratorBucketId < -1 && this.aClass3_1713 != this.nodes[
           this.iteratorBucketId
         - 1]) {
         var2 = this.aClass3_1713;
@@ -88,7 +88,7 @@ public final class HashTable {
   }
 
   public void put(long var3, Node var2 ) {
-    if (null != var2.prevNode) {
+    if (var2.prevNode != null) {
         var2.unlinkNode();
       }
 
@@ -146,7 +146,7 @@ public final class HashTable {
   }
 
   public Node getLastFetchedNode() {
-    if (null != this.iterator) {
+    if (this.iterator != null) {
         Node var2 = this.nodes[(int) (this.lastFetchedKey
             & (-1 + this.capacity))];
         while (var2 != this.iterator) {
@@ -171,7 +171,7 @@ public final class HashTable {
   }
 
   public static void method1772(int var0, int var1, int var2, NPC var3) {
-    if (var3.animationId == var1 && -1 != var1) {
+    if (var3.animationId == var1 && var1 != -1) {
         AnimationSequence var4 = GameClient.method45(var1, (byte) -20);
         int var5 = var4.anInt1845;
         if (var5 == 1) {
@@ -184,10 +184,10 @@ public final class HashTable {
             var3.anInt2832);
         }
 
-        if (-3 == ~var5) {
+        if (~var5 == -3) {
           var3.anInt2773 = 0;
         }
-      } else if (~var1 == 0 || -1 == var3.animationId
+      } else if (~var1 == 0 || var3.animationId == -1
         || GameClient.method45(var1, (byte) -20).anInt1857 >= GameClient.method45(var3.animationId,
         (byte) -20).anInt1857) {
         var3.anInt2760 = 0;
@@ -234,10 +234,10 @@ public final class HashTable {
   }
 
   public static AbstractTextureSampler createTextureSampler(int type, boolean var1) {
-    if (-1 == ~type) {
+    if (~type == -1) {
         return new TextureSampler0();
-      } else if (-2 != ~type) {
-        if (2 == type) {
+      } else if (~type != -2) {
+        if (type == 2) {
           return new TextureSampler2();
         } else {
           if (~type == -4) {
@@ -251,34 +251,34 @@ public final class HashTable {
               if (type == 8) {
                 return new TextureSampler8();
               } else {
-                if (9 == type) {
+                if (type == 9) {
                   return new TextureSampler9();
                 } else {
-                  if (10 == type) {
+                  if (type == 10) {
                     return new TextureSampler10();
                   } else if (type != 11) {
-                    if (-13 == ~type) {
+                    if (~type == -13) {
                       return new TextureSampler12();
-                    } else if (-14 != ~type) {
-                      if (14 == type) {
+                    } else if (~type != -14) {
+                      if (type == 14) {
                         return new TextureSampler14();
                       } else if (~type != -16) {
                         if (type == 16) {
                           return new TextureSampler16();
-                        } else if (17 != type) {
+                        } else if (type != 17) {
                           if (~type == -19) {
                             return new TextureSampler18();
-                          } else if (-20 == ~type) {
+                          } else if (~type == -20) {
                             return new TextureSampler19();
                           } else if (~type == -21) {
                             return new TextureSampler20();
-                          } else if (21 == type) {
+                          } else if (type == 21) {
                             return new TextureSampler21();
-                          } else if (22 != type) {
+                          } else if (type != 22) {
                             if (~type == -24) {
                               return new TextureSampler23();
                             } else {
-                              if (24 == type) {
+                              if (type == 24) {
                                 return new TextureSampler24();
                               } else {
                                 if (type == 25) {
@@ -287,32 +287,32 @@ public final class HashTable {
                                   if (~type == -27) {
                                     return new TextureSampler26();
                                   } else {
-                                    if (27 == type) {
+                                    if (type == 27) {
                                       return new TextureSampler27();
                                     } else {
-                                      if (-29 == ~type) {
+                                      if (~type == -29) {
                                         return new TextureSampler28();
-                                      } else if (-30 != ~type) {
+                                      } else if (~type != -30) {
                                         if (type == 30) {
                                           return new TextureSampler30();
                                         } else {
-                                          if (31 == type) {
+                                          if (type == 31) {
                                             return new TextureSampler31();
                                           } else {
-                                            if (32 == type) {
+                                            if (type == 32) {
                                               return new TextureSampler32();
                                             } else {
-                                              if (33 == type) {
+                                              if (type == 33) {
                                                 return new TextureSampler33();
-                                              } else if (-35 == ~type) {
+                                              } else if (~type == -35) {
                                                 return new TextureSampler34();
                                               } else if (type == 35) {
                                                 return new TextureSampler35();
                                               } else if (~type != -37) {
                                                 if (type == 37) {
                                                   return new TextureSampler37();
-                                                } else if (38 != type) {
-                                                  if (39 == type) {
+                                                } else if (type != 38) {
+                                                  if (type == 39) {
                                                     return new TextureSampler39();
                                                   } else {
                                                     if (!var1) {

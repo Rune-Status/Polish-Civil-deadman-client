@@ -73,17 +73,17 @@ public final class SomethingIndex150 {
 
       for (int var5 = var1; ~var5 > ~DummyClass13.anInt2022; ++var5) {
         Player var6 = TextureSampler0.players[DummyClass42.anIntArray887[var5]];
-        if (null != var6 && null != var6.name && var6.name.method1531(var3)) {
+        if (var6 != null && var6.name != null && var6.name.method1531(var3)) {
           var4 = true;
           Parameter.method582(TextureCache.localPlayer.waypointsY[0], 0, 1, false, 0, 2,
             var6.waypointsX[0], 1, 0, 2, var6.waypointsY[0],
             TextureCache.localPlayer.waypointsX[0]);
-          if (1 == var0) {
+          if (var0 == 1) {
             ++ItemConfig.anInt759;
             TextureSampler12.secureBuffer.writePacket(68);
             TextureSampler12.secureBuffer.method765(DummyClass42.anIntArray887[var5], (byte) 3);
-          } else if (4 != var0) {
-            if (5 == var0) {
+          } else if (var0 != 4) {
+            if (var0 == 5) {
               TextureSampler12.secureBuffer.writePacket(4);
               TextureSampler12.secureBuffer.writeShortLE(var1 + -1,
                   DummyClass42.anIntArray887[var5]);

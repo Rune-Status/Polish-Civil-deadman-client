@@ -47,11 +47,11 @@ public final class OndemandFileRequest extends AbstractFileRequest {
     if (var1.method1432(false)) {
         SignLinkRequest var2 = var1.method1453((byte) 8);
 
-        while (0 == var2.status) {
+        while (var2.status == 0) {
           TextureSampler25.sleep(10L);
         }
 
-        if (2 == var2.status) {
+        if (var2.status == 2) {
           return new DisplayMode[0];
         } else {
           int[] var3 = (int[]) var2.result;
@@ -92,7 +92,7 @@ public final class OndemandFileRequest extends AbstractFileRequest {
         GlRenderer.releaseGlResources();
       }
 
-      if (null != TextureSampler30.fullScreenFrame && (3 != var1
+      if (TextureSampler30.fullScreenFrame != null && (var1 != 3
           || ~var5 != ~AbstractTextureSampler.anInt2378
           || ~var6 != ~TextureSampler21.anInt3071)) {
         FileCacheRequest.method593(TextureSampler30.fullScreenFrame, true,
@@ -100,10 +100,10 @@ public final class OndemandFileRequest extends AbstractFileRequest {
         TextureSampler30.fullScreenFrame = null;
       }
 
-      if (3 == var1 && null == TextureSampler30.fullScreenFrame) {
+      if (var1 == 3 && TextureSampler30.fullScreenFrame == null) {
         TextureSampler30.fullScreenFrame =
             DummyClass54.method1597(2, 0, 0, var6, var5, DummyClass35.signLink);
-        if (null != TextureSampler30.fullScreenFrame) {
+        if (TextureSampler30.fullScreenFrame != null) {
           TextureSampler21.anInt3071 = var6;
           AbstractTextureSampler.anInt2378 = var5;
           DummyClass25.writeSettings(DummyClass35.signLink);
@@ -115,8 +115,8 @@ public final class OndemandFileRequest extends AbstractFileRequest {
             .setWindowMode(true, SubNode.anInt2577, true, var3, var4, -1, -1);
       } else {
         Component var7 = null;
-        if (null == TextureSampler30.fullScreenFrame) {
-          if (null != TextureSampler27.FRAME) {
+        if (TextureSampler30.fullScreenFrame == null) {
+          if (TextureSampler27.FRAME != null) {
             var7 = TextureSampler27.FRAME;
           }
         } else {
@@ -136,7 +136,7 @@ public final class OndemandFileRequest extends AbstractFileRequest {
           OndemandFileRequest.aClass94_4071 = null;
         }
 
-        if (-3 >= ~var1) {
+        if (~var1 <= -3) {
           DummyClass30.viewWidth = AreaSoundEffect.windowWidth;
           GroundItem.viewHeight = SceneSomething2.windowHeight;
           DummyClass51.viewX = 0;
@@ -151,7 +151,7 @@ public final class OndemandFileRequest extends AbstractFileRequest {
         if (replaceCanvas) {
           DummyClass9.unbindKeyboard(GameCanvas.INSTANCE, -9320);
           Mouse.unbind(GameCanvas.INSTANCE);
-          if (null != DummyClass35.mouseWheel) {
+          if (DummyClass35.mouseWheel != null) {
             DummyClass35.mouseWheel.unbind(false, GameCanvas.INSTANCE);
           }
 
@@ -180,7 +180,7 @@ public final class OndemandFileRequest extends AbstractFileRequest {
           }
         }
 
-        if (0 == var1 && -1 > ~var3) {
+        if (var1 == 0 && ~var3 < -1) {
           GlRenderer.method1834(GameCanvas.INSTANCE);
         }
 
@@ -194,7 +194,7 @@ public final class OndemandFileRequest extends AbstractFileRequest {
                     DummyClass30.viewWidth,
                     true, GameCanvas.INSTANCE);
             DummyClass47.method1320();
-            if (5 == DummyClass15.state) {
+            if (DummyClass15.state == 5) {
               SomethingOtherWorldMap
                   .drawLoadingScreen(FloorOverlay.aClass3_Sub28_Sub17_2096,
                       true);
@@ -207,7 +207,7 @@ public final class OndemandFileRequest extends AbstractFileRequest {
             Something3d.viewImageProducer.draw(0, 0, var11, 0);
 
             HashTableIterator.method1396(-1);
-            if (-1 == ~var3) {
+            if (~var3 == -1) {
               Something3d.viewImageProducer =
                   TextureSampler18.createImageProducer(503, 765, true,
                       GameCanvas.INSTANCE);
@@ -223,7 +223,7 @@ public final class OndemandFileRequest extends AbstractFileRequest {
               TextureSampler25.sleep(100L);
             }
 
-            if (1 == var13.status) {
+            if (var13.status == 1) {
               GameStub.aBoolean11 = true;
             }
           }
@@ -234,10 +234,10 @@ public final class OndemandFileRequest extends AbstractFileRequest {
           }
         }
 
-        if (!GlRenderer.useOpenGlRenderer && 0 < var1) {
+        if (!GlRenderer.useOpenGlRenderer && var1 > 0) {
           OndemandFileRequest.setWindowMode(true, 0, true, var3, false, -1, -1);
         } else {
-          if (~var1 < -1 && -1 == ~var3) {
+          if (~var1 < -1 && ~var3 == -1) {
             DummyClass1.gameThread.setPriority(5);
             Something3d.viewImageProducer = null;
             SoftwareModel.method1935();
@@ -247,7 +247,7 @@ public final class OndemandFileRequest extends AbstractFileRequest {
             }
 
             AbstractTextureSampler.method165(-7878);
-          } else if (0 == var1 && var3 > 0) {
+          } else if (var1 == 0 && var3 > 0) {
             DummyClass1.gameThread.setPriority(1);
             Something3d.viewImageProducer =
                 TextureSampler18.createImageProducer(503, 765, true,
@@ -256,19 +256,19 @@ public final class OndemandFileRequest extends AbstractFileRequest {
             DummyClass0.method1756();
             ((TextureCache) DummyClass40.textureCache).method1619(20, -1);
             if (DisplayMode.useBumpMaps) {
-              if (1 == AbstractFileRequest.brightnessSetting) {
+              if (AbstractFileRequest.brightnessSetting == 1) {
                 DummyClass40.updateLightness(0.9F);
               }
 
-              if (-3 == ~AbstractFileRequest.brightnessSetting) {
+              if (~AbstractFileRequest.brightnessSetting == -3) {
                 DummyClass40.updateLightness(0.8F);
               }
 
-              if (3 == AbstractFileRequest.brightnessSetting) {
+              if (AbstractFileRequest.brightnessSetting == 3) {
                 DummyClass40.updateLightness(0.7F);
               }
 
-              if (-5 == ~AbstractFileRequest.brightnessSetting) {
+              if (~AbstractFileRequest.brightnessSetting == -5) {
                 DummyClass40.updateLightness(0.6F);
               }
             }
@@ -284,11 +284,11 @@ public final class OndemandFileRequest extends AbstractFileRequest {
 
           SomethingVolume15.aBoolean2427 = ~var1 <= -3;
 
-          if (-1 != InventoryConfig.anInt3655) {
+          if (InventoryConfig.anInt3655 != -1) {
             DummyClass23.method1746(true, (byte) -107);
           }
 
-          if (null != SomethingVolume15.gameSocket && (
+          if (SomethingVolume15.gameSocket != null && (
               ~DummyClass15.state == -31
                   || DummyClass15.state == 25)) {
             TextureSampler9.method204(-3);

@@ -41,10 +41,10 @@ public final class TextureSampler9 extends AbstractTextureSampler {
       }
 
       if (~var1 == -1) {
-        this.aBoolean3100 = -2 == ~var2.readUnsignedByte();
-      } else if (-2 == ~var1) {
+        this.aBoolean3100 = ~var2.readUnsignedByte() == -2;
+      } else if (~var1 == -2) {
         this.aBoolean3104 = var2.readUnsignedByte() == 1;
-      } else if (-3 == ~var1) {
+      } else if (~var1 == -3) {
         this.monoChromatic = ~var2.readUnsignedByte() == -2;
       }
   }
@@ -103,7 +103,7 @@ public final class TextureSampler9 extends AbstractTextureSampler {
         && ~DummyClass36.anInt2612 == ~DummyClass36.anInt2614) {
         ClientScriptEnum.anInt3660 = 0;
         if (DummyClass55.aBoolean1419 && GameObjectConfig.aBooleanArray1490[81]
-          && -3 > ~TextureSampler25.amountContextActions) {
+          && ~TextureSampler25.amountContextActions < -3) {
           GameBuffer.method806(2597, TextureSampler25.amountContextActions - 2);
         } else {
           GameBuffer.method806(2597, TextureSampler25.amountContextActions - 1);
@@ -167,7 +167,7 @@ public final class TextureSampler9 extends AbstractTextureSampler {
         }
 
         int var8 = var5;
-        if (0L > var3 || var1) {
+        if (var3 < 0L || var1) {
           var8 = var5 + 1;
         }
 

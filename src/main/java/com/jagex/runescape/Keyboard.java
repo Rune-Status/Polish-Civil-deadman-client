@@ -25,7 +25,7 @@ public final class Keyboard implements KeyListener, FocusListener {
   public void keyTyped(KeyEvent var1) {
     if (TextureSampler33.keyboard != null) {
         int var2 = BitVariable.method1386(true, var1);
-        if (-1 >= ~var2) {
+        if (~var2 <= -1) {
           int var3 = 1 + SceneSomething.anInt491 & 127;
           if (~Parameter.anInt3620 != ~var3) {
             AbstractFrameRegulator.keyQueue[SceneSomething.anInt491] = -1;
@@ -39,19 +39,19 @@ public final class Keyboard implements KeyListener, FocusListener {
   }
 
   public synchronized void keyPressed(KeyEvent var1) {
-    if (null != TextureSampler33.keyboard) {
+    if (TextureSampler33.keyboard != null) {
         TextureSampler29.anInt3398 = 0;
         int var2 = var1.getKeyCode();
-        if (0 <= var2 && DummyClass26.keyTable.length > var2) {
+        if (var2 >= 0 && DummyClass26.keyTable.length > var2) {
           var2 = DummyClass26.keyTable[var2];
-          if (0 != (var2 & 128)) {
+          if ((var2 & 128) != 0) {
             var2 = -1;
           }
         } else {
           var2 = -1;
         }
 
-        if (-1 >= ~AbstractTextureSampler.anInt2384 && -1 >= ~var2) {
+        if (~AbstractTextureSampler.anInt2384 <= -1 && ~var2 <= -1) {
           FileRequester.anIntArray2952[AbstractTextureSampler.anInt2384] = var2;
           AbstractTextureSampler.anInt2384 = 127 & AbstractTextureSampler.anInt2384 - -1;
           if (AbstractTextureSampler.anInt2384 == SomethingPacket116.anInt1744) {
@@ -70,14 +70,14 @@ public final class Keyboard implements KeyListener, FocusListener {
         }
 
         var3 = var1.getModifiers();
-        if (-1 != ~(var3 & 10) || 85 == var2 || -11 == ~var2) {
+        if (~(var3 & 10) != -1 || var2 == 85 || ~var2 == -11) {
           var1.consume();
         }
       }
   }
 
   public synchronized void keyReleased(KeyEvent var1) {
-    if (null != TextureSampler33.keyboard) {
+    if (TextureSampler33.keyboard != null) {
         TextureSampler29.anInt3398 = 0;
         int var2 = var1.getKeyCode();
         if (var2 >= 0 && DummyClass26.keyTable.length > var2) {
@@ -102,7 +102,7 @@ public final class Keyboard implements KeyListener, FocusListener {
   }
 
   public synchronized void focusLost(FocusEvent var1) {
-    if (null != TextureSampler33.keyboard) {
+    if (TextureSampler33.keyboard != null) {
         AbstractTextureSampler.anInt2384 = -1;
       }
   }
@@ -122,9 +122,9 @@ public final class Keyboard implements KeyListener, FocusListener {
     if (var0 >= 62) {
         int var1 = TextureCache.localPlayer.anInt2819 + TextureSampler19.anInt3216;
         int var2 = TextureCache.localPlayer.anInt2829 - -DummyInputStream.anInt42;
-        if (499 < ~(-var1 + TextureSampler20.anInt3155)
+        if (~(-var1 + TextureSampler20.anInt3155) > 499
           || ~(-var1 + TextureSampler20.anInt3155) < -501 || ~(FileTable.anInt942 + -var2) > 499
-          || -501 > ~(-var2 + FileTable.anInt942)) {
+          || ~(-var2 + FileTable.anInt942) < -501) {
           TextureSampler20.anInt3155 = var1;
           FileTable.anInt942 = var2;
         }
@@ -140,10 +140,10 @@ public final class Keyboard implements KeyListener, FocusListener {
         if (AudioWorker.aBoolean346) {
           for (int var3 = 0; SomethingOtherWorldMap.anInt2537 > var3; ++var3) {
             int var4 = SomethingPacket116.anIntArray1755[var3];
-            if (98 == var4) {
+            if (var4 == 98) {
               AreaSoundEffect.anInt2309 = -16 & AreaSoundEffect.anInt2309 + 47;
             } else {
-              if (-100 == ~var4) {
+              if (~var4 == -100) {
                 AreaSoundEffect.anInt2309 =
                     -16 & AreaSoundEffect.anInt2309 - 17;
               } else {

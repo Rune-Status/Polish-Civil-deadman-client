@@ -17,13 +17,13 @@ public final class TextureSampler11 extends AbstractTextureSampler {
   }
 
   public void parseConfig(int var1, Buffer var2, boolean var3 ) {
-    if (-1 == ~var1) {
+    if (~var1 == -1) {
         this.anInt3252 = var2.readUnsignedShort();
       } else {
         if (var1 == 1) {
           this.anInt3245 = var2.readUnsignedShort();
         } else {
-          if (2 == var1) {
+          if (var1 == 2) {
             this.anInt3250 = var2.readUnsignedShort();
           }
         }

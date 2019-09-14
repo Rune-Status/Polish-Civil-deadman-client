@@ -57,7 +57,7 @@ public final class WidgetUpdate extends SubNode {
   }
 
   public static void d(int var0) {
-    if (0 != ~NpcConfiguration.anInt1252 && 0 != ~VariableUpdate.anInt2293) {
+    if (~NpcConfiguration.anInt1252 != 0 && ~VariableUpdate.anInt2293 != 0) {
         int var1 =
           (DummyClass8.anInt4020 * (-DummyClass21.anInt1759 + AbstractTextureSampler.anInt2383)
             >> 16) + DummyClass21.anInt1759;
@@ -84,7 +84,7 @@ public final class WidgetUpdate extends SubNode {
           int var10;
           int var11;
           int var12;
-          for (int var5 = 0; -4 < ~var5; ++var5) {
+          for (int var5 = 0; ~var5 > -4; ++var5) {
             var8 =
               (DummyClass43.anIntArrayArrayArray911[NpcConfiguration.anInt1252][var4 - -2][var5]
                 + -DummyClass43.anIntArrayArrayArray911[NpcConfiguration.anInt1252][var4 - -3][var5]
@@ -166,7 +166,7 @@ public final class WidgetUpdate extends SubNode {
 
   public static String createIndexedColorSprite(String var0, String var1, int var2, String var3) {
     for (int var4 = var3.indexOf(var0);
-         0 != ~var4; var4 = var3.indexOf(var0, var4 + var1.length())) {
+        ~var4 != 0; var4 = var3.indexOf(var0, var4 + var1.length())) {
       var3 = var3.substring(0, var4) + var1 + var3.substring(var0.length() + var4);
     }
 
@@ -174,12 +174,12 @@ public final class WidgetUpdate extends SubNode {
   }
 
   public static void createIndexedColorSprite(int var0, int var1, int var2, Widget var3) {
-    if (null == DummyClass42.aClass11_886 && !DummyClass36.aBoolean2615) {
+    if (DummyClass42.aClass11_886 == null && !DummyClass36.aBoolean2615) {
         if (var2 < 61) {
           WidgetUpdate.createIndexedColorSprite(19, 20, -32, null);
         }
 
-        if (null != var3 && GZipDecompressor.method1122(0, var3) != null) {
+        if (var3 != null && GZipDecompressor.method1122(0, var3) != null) {
           DummyClass42.aClass11_886 = var3;
           DummyClass18.aClass11_88 = GZipDecompressor.method1122(0, var3);
           BufferObject.anInt1881 = var1;

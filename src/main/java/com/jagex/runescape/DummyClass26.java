@@ -38,7 +38,7 @@ public final class DummyClass26 {
 
   public static void setState(int var0, int var1) {
     if (DummyClass15.state != var0) {
-        if (-1 == ~DummyClass15.state) {
+        if (~DummyClass15.state == -1) {
           ObjectCache.method1517((byte) -118);
         }
 
@@ -47,7 +47,7 @@ public final class DummyClass26 {
         }
 
         boolean var2 = var0 == 5 || var0 == 10 || var0 == 28;
-        if (40 != var0 && null != DummyClass8.aClass89_4012) {
+        if (var0 != 40 && DummyClass8.aClass89_4012 != null) {
           DummyClass8.aClass89_4012.destroy();
           DummyClass8.aClass89_4012 = null;
         }
@@ -61,7 +61,7 @@ public final class DummyClass26 {
           OndemandRequester.method1250(102, true);
         }
 
-        if (-26 == ~var0 || var0 == 10) {
+        if (~var0 == -26 || var0 == 10) {
           SomethingScene.method1293(true);
         }
 
@@ -72,7 +72,8 @@ public final class DummyClass26 {
         }
 
         boolean var3 =
-          var1 == DummyClass15.state || ~DummyClass15.state == -11 || -29 == ~DummyClass15.state;
+          var1 == DummyClass15.state || ~DummyClass15.state == -11 ||
+              ~DummyClass15.state == -29;
         if (var3 == !var2) {
           if (var2) {
             AbstractFrameRegulator.anInt1691 = Keyboard.openingMusicFileId;
@@ -91,7 +92,8 @@ public final class DummyClass26 {
           }
         }
 
-        if (GlRenderer.useOpenGlRenderer && (25 == var0 || var0 == 28 || -41 == ~var0)) {
+        if (GlRenderer.useOpenGlRenderer && (var0 == 25 || var0 == 28 || ~var0
+            == -41)) {
           GlRenderer.method1833();
         }
 

@@ -26,7 +26,7 @@ public abstract class BufferObject {
   public static void method2067(boolean var0) {
     if (!var0) {
         for (StillGraphicNode var1 = (StillGraphicNode) TextureSampler17.stillGraphics.getFirst();
-             null != var1; var1 = (StillGraphicNode) TextureSampler17.stillGraphics.getNext()) {
+            var1 != null; var1 = (StillGraphicNode) TextureSampler17.stillGraphics.getNext()) {
           StillGraphic var2 = var1.aClass140_Sub2_3545;
           if (~var2.anInt2717 == ~GameWorldSomething.currentPlane && !var2.aBoolean2718) {
             if (~var2.anInt2703 >= ~AbstractGameWorld.updateCycle) {
@@ -53,14 +53,14 @@ public abstract class BufferObject {
           var0 = var0.method1471((byte) 66);
         }
 
-        if (null != var0) {
+        if (var0 != null) {
           if (var0.aBoolean1270) {
             if (var2 > -83) {
               BufferObject.aClass94_1884 = null;
             }
 
             GameString var5 = var0.aClass94_1273;
-            if (0 != var0.anInt1260) {
+            if (var0.anInt1260 != 0) {
               GameString var6 = AbstractImageProducer.gameId != 1 ?
                 DummyClass32.aClass94_525 :
                 AudioSomethingSomething.aClass94_2526;
@@ -71,7 +71,7 @@ public abstract class BufferObject {
               });
             }
 
-            if (-2 == ~Something3d.anInt3012) {
+            if (~Something3d.anInt3012 == -2) {
               ScriptState.method1177(DummyClass54.anInt1403, var3, (byte) -125,
                 RenderAnimation.concat(new GameString[] {
                   RenderAnimation.aClass94_378, AbstractDirectColorSprite.aClass94_3702, var5
@@ -95,7 +95,7 @@ public abstract class BufferObject {
                       var8 = 17;
                     }
 
-                    if (-2 == ~var7) {
+                    if (~var7 == -2) {
                       var8 = 16;
                     }
 
@@ -127,9 +127,9 @@ public abstract class BufferObject {
                 }
               }
 
-              if (0 == AbstractImageProducer.gameId && var11 != null) {
+              if (AbstractImageProducer.gameId == 0 && var11 != null) {
                 for (var7 = 4; var7 >= 0; --var7) {
-                  if (null != var11[var7] && var11[var7].method1531(
+                  if (var11[var7] != null && var11[var7].method1531(
                     TextureSampler36.aClass94_3427)) {
                     ++FileCacheRequest.anInt4054;
                     short var14 = 0;
@@ -142,15 +142,15 @@ public abstract class BufferObject {
                       var13 = 17;
                     }
 
-                    if (-2 == ~var7) {
+                    if (~var7 == -2) {
                       var13 = 16;
                     }
 
-                    if (2 == var7) {
+                    if (var7 == 2) {
                       var13 = 4;
                     }
 
-                    if (3 == var7) {
+                    if (var7 == 3) {
                       var13 = 19;
                     }
 
@@ -158,7 +158,7 @@ public abstract class BufferObject {
                       var13 = 2;
                     }
 
-                    if (0 != var13) {
+                    if (var13 != 0) {
                       var13 += var14;
                     }
 
@@ -173,7 +173,7 @@ public abstract class BufferObject {
                 RenderAnimation.concat(new GameString[] {DummyClass22.aClass94_1738, var5}), var1,
                 (short) 1007, BlockConfig.aClass94_1180, var4);
             } else {
-              Parameter var12 = -1 == LinearHashTable.anInt1038 ?
+              Parameter var12 = LinearHashTable.anInt1038 == -1 ?
                 null :
                 Deque.method1210(64, LinearHashTable.anInt1038);
               if (~(2 & Something3dRoot.anInt2051) != -1 && (var12 == null
@@ -198,7 +198,7 @@ public abstract class BufferObject {
       } else {
         InventoryConfig var2 =
           (InventoryConfig) GZipDecompressor.aClass47_818.get(var0, 1400);
-        if (null != var2) {
+        if (var2 != null) {
           return var2;
         } else {
           byte[] var3 = FileSystem.aClass153_105.getBytes(5, var0);

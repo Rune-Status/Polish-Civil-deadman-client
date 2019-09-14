@@ -34,7 +34,7 @@ public final class AreaSoundEffect extends Node {
 
   public void method134(int var1 ) {
     int var2 = this.anInt2332;
-      if (null != this.aClass111_2320) {
+      if (this.aClass111_2320 != null) {
         GameObjectConfig var3 = this.aClass111_2320.method1685(0);
         if (var3 == null) {
           this.anInt2332 = -1;
@@ -50,7 +50,7 @@ public final class AreaSoundEffect extends Node {
           this.anIntArray2333 = var3.anIntArray1539;
         }
       } else if (this.aClass140_Sub4_Sub2_2324 == null) {
-        if (null != this.aClass140_Sub4_Sub1_2327) {
+        if (this.aClass140_Sub4_Sub1_2327 != null) {
           this.anInt2332 = DummyClass50.method1398(var1 + -1,
               this.aClass140_Sub4_Sub1_2327);
           this.anInt2328 = 128 * this.aClass140_Sub4_Sub1_2327.anInt3969;
@@ -93,7 +93,7 @@ public final class AreaSoundEffect extends Node {
         var2 =
           Cache.method1089(WorldMapLabel.animationBases, false, EnumStringFetcher.animationFrames,
             (byte) 118, var0);
-        if (null != var2) {
+        if (var2 != null) {
           DummyClass13.aClass93_2016.get((byte) -75, var2, var0);
         }
 
@@ -131,7 +131,7 @@ public final class AreaSoundEffect extends Node {
         int var22 = var7 + var0;
         int var21 = var0 - var7;
         if (var13 < 0) {
-          while (-1 < ~var13) {
+          while (~var13 > -1) {
             ++var6;
             var13 += var17;
             var14 += var19;

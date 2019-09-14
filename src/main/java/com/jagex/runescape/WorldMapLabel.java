@@ -53,7 +53,7 @@ public final class WorldMapLabel {
         WorldMapLabel.method1788(122, 38, -120, -29, false);
       }
 
-      return 0 == (this.aByteArray1730[var1] & 16);
+      return (this.aByteArray1730[var1] & 16) == 0;
   }
 
   public static void method1786(int var0) {
@@ -62,10 +62,10 @@ public final class WorldMapLabel {
           int var1 = SpotAnimationConfig.gameBuffer.readBits(11);
           if (var1 != 2047) {
             boolean var2 = false;
-            if (null == TextureSampler0.players[var1]) {
+            if (TextureSampler0.players[var1] == null) {
               TextureSampler0.players[var1] = new Player();
               var2 = true;
-              if (null != DummyClass45.configs[var1]) {
+              if (DummyClass45.configs[var1] != null) {
                 TextureSampler0.players[var1].parseConfig(DummyClass45.configs[var1]);
               }
             }
@@ -113,9 +113,9 @@ public final class WorldMapLabel {
     if (var4) {
         int var5 = 15 & var3;
         int var7 =
-            -5 >= ~var5 ? (~var5 != -13 && -15 != ~var5 ? var1 : var0) : var2;
+            ~var5 <= -5 ? (~var5 != -13 && ~var5 != -15 ? var1 : var0) : var2;
         int var6 = ~var5 > -9 ? var0 : var2;
-        return (-1 != ~(var5 & 1) ? -var6 : var6) - -(~(2 & var5) != -1 ? -var7
+        return (~(var5 & 1) != -1 ? -var6 : var6) - -(~(2 & var5) != -1 ? -var7
             : var7);
       } else {
         return 127;
@@ -151,7 +151,7 @@ public final class WorldMapLabel {
       GroundItemNode.username = var0;
       if (!GroundItemNode.username.method1528((byte) -42, GroundItemNode.EMPTY_STRING)
         && !GroundItemNode.password.method1528((byte) -42, GroundItemNode.EMPTY_STRING)) {
-        if (0 == ~ClientScriptCall.anInt2451) {
+        if (~ClientScriptCall.anInt2451 == 0) {
           SceneGraphTile.anInt2246 = 0;
           DummyClass26.anInt1616 = 0;
           AbstractImageProducer.loginResponse = -3;

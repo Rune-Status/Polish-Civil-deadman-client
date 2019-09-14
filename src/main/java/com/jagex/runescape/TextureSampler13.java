@@ -48,9 +48,10 @@ public final class TextureSampler13 extends AbstractTextureSampler {
     if (TextureCache.localPlayer != var3) {
         if (TextureSampler25.amountContextActions < 400) {
           GameString var5;
-          if (-1 == ~var3.skillTotal) {
+          if (~var3.skillTotal == -1) {
             boolean var6 = true;
-            if (~TextureCache.localPlayer.anInt3970 != 0 && -1 != var3.anInt3970) {
+            if (~TextureCache.localPlayer.anInt3970 != 0 && var3.anInt3970
+                != -1) {
               int var7 = var3.combatLevel < TextureCache.localPlayer.combatLevel ?
                 TextureCache.localPlayer.combatLevel :
                 var3.combatLevel;
@@ -59,7 +60,7 @@ public final class TextureSampler13 extends AbstractTextureSampler {
                 var3.anInt3970;
               int var9 = 5 - -(var7 * 10 / 100) + var8;
               int var10 = -var3.combatLevel + TextureCache.localPlayer.combatLevel;
-              if (0 > var10) {
+              if (var10 < 0) {
                 var10 = -var10;
               }
 
@@ -105,8 +106,8 @@ public final class TextureSampler13 extends AbstractTextureSampler {
               var4, (short) 1, TextureSampler14.aClass94_3388, var2);
             ++MilliFrameRegulator.anInt2684;
           } else if (!SceneNode.aBoolean1837) {
-            for (var12 = 7; -1 >= ~var12; --var12) {
-              if (null != CollisionMap.playerOptions[var12]) {
+            for (var12 = 7; ~var12 <= -1; --var12) {
+              if (CollisionMap.playerOptions[var12] != null) {
                 ++Cursor.anInt880;
                 short var14 = 0;
                 boolean var16 = false;
@@ -116,7 +117,8 @@ public final class TextureSampler13 extends AbstractTextureSampler {
                     var14 = 2000;
                   }
 
-                  if (-1 != ~TextureCache.localPlayer.anInt3956 && ~var3.anInt3956 != -1) {
+                  if (~TextureCache.localPlayer.anInt3956 != -1
+                      && ~var3.anInt3956 != -1) {
                     if (~TextureCache.localPlayer.anInt3956
                         == ~var3.anInt3956) {
                       var14 = 2000;
@@ -256,11 +258,12 @@ public final class TextureSampler13 extends AbstractTextureSampler {
               int var24 =
                 SceneNode.method1863(var22.anInt1480, var4, (byte) 126, var22.anInt1485, 7 & var17,
                   var21, 7 & var16) + var6;
-              if (~var23 < -1 && var24 > 0 && -104 < ~var23 && var24 < 103) {
+              if (~var23 < -1 && var24 > 0 && ~var23 > -104 && var24 < 103) {
                 CollisionMap var25 = null;
                 if (!var7) {
                   int var26 = var1;
-                  if (2 == (BZipDecompressorState.tileFlags[1][var23][var24] & 2)) {
+                  if ((BZipDecompressorState.tileFlags[1][var23][var24] & 2)
+                      == 2) {
                     var26 = var1 - 1;
                   }
 

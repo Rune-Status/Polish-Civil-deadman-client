@@ -218,10 +218,10 @@ public final class SomethingScene {
 
   public static GameString method1295(int var0, byte var1, int var2) {
     int var3 = -var0 + var2;
-      return 8 >= ~var3 ?
-        (5 >= ~var3 ?
+      return ~var3 <= 8 ?
+        (~var3 <= 5 ?
           (~var3 <= 2 ?
-            (0 > var3 ?
+            (var3 < 0 ?
               TextureSampler29.aClass94_3394 :
               (var1 > -52 ?
                 null :
@@ -229,7 +229,7 @@ public final class SomethingScene {
                   (var3 > 6 ?
                     TextureSampler12.aClass94_3040 :
                     (~var3 >= -4 ?
-                      (0 < var3 ? GameObject.aClass94_2723 : DummyClass22.aClass94_1738) :
+                      (var3 > 0 ? GameObject.aClass94_2723 : DummyClass22.aClass94_1738) :
                       DummyOutputStream.aClass94_50)) :
                   SomethingSceneI.aClass94_431))) :
             HashTable.aClass94_1714) :

@@ -89,7 +89,7 @@ public final class TextureSampler38 extends AbstractTextureSampler {
               var20 += var19;
               int var25 = var21 * (-var10 + var24) + var22 + 1024;
               int var27 = var17 & TriChromaticImageBuffer.anInt2487;
-              if (0 < var20) {
+              if (var20 > 0) {
                 var20 += -var18;
                 var17 += var23;
               }
@@ -111,12 +111,12 @@ public final class TextureSampler38 extends AbstractTextureSampler {
   }
 
   public void parseConfig(int var1, Buffer var2, boolean var3 ) {
-    if (-1 == ~var1) {
+    if (~var1 == -1) {
         this.anInt3454 = var2.readUnsignedByte();
       } else if (~var1 == -2) {
         this.anInt3447 = var2.readUnsignedShort();
       } else if (~var1 != -3) {
-        if (3 == var1) {
+        if (var1 == 3) {
           this.anInt3444 = var2.readUnsignedShort();
         } else if (var1 == 4) {
           this.anInt3450 = var2.readUnsignedShort();

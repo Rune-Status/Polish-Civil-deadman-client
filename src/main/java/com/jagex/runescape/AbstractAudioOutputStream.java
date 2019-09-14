@@ -145,11 +145,11 @@ public class AbstractAudioOutputStream {
   }
 
   public final synchronized void process(byte var1) {
-    if (null != this.samples) {
+    if (this.samples != null) {
         long start = Time.getCurrentTimeMillis();
 
         try {
-          if (0L != this.pauseTime) {
+          if (this.pauseTime != 0L) {
             if (start < this.pauseTime) {
               return;
             }
@@ -196,7 +196,7 @@ public class AbstractAudioOutputStream {
             if (this.paused) {
               this.paused = false;
             } else {
-              if (-1 == ~this.anInt1981 && ~this.anInt1988 == -1) {
+              if (~this.anInt1981 == -1 && ~this.anInt1988 == -1) {
                 this.close();
                 this.pauseTime = start + 2000L;
                 return;
@@ -247,7 +247,7 @@ public class AbstractAudioOutputStream {
 
       int var4 = var2 >> 5;
       AudioStreamEncoder var5 = this.aClass3_Sub24Array1983[var4];
-      if (null == var5) {
+      if (var5 == null) {
         this.aClass3_Sub24Array1980[var4] = var1;
       } else {
         var5.aClass3_Sub24_2546 = var1;
@@ -281,7 +281,7 @@ public class AbstractAudioOutputStream {
 
   private void method2161(int var1, int var2) {
     this.anInt1987 -= var1;
-      if (0 > this.anInt1987) {
+      if (this.anInt1987 < 0) {
         this.anInt1987 = 0;
       }
 
@@ -289,13 +289,13 @@ public class AbstractAudioOutputStream {
         this.aLong1972 = -60L;
       }
 
-      if (null != this.aClass3_Sub24_1973) {
+      if (this.aClass3_Sub24_1973 != null) {
         this.aClass3_Sub24_1973.method415(var1);
       }
   }
 
   public final synchronized void method2163(boolean var1) {
-    if (null != DummyClass36.aClass15_2613) {
+    if (DummyClass36.aClass15_2613 != null) {
         boolean var2 = true;
 
         for (int var3 = 0; ~var3 > -3; ++var3) {
@@ -303,7 +303,7 @@ public class AbstractAudioOutputStream {
             DummyClass36.aClass15_2613.aClass155Array352[var3] = null;
           }
 
-          if (null != DummyClass36.aClass15_2613.aClass155Array352[var3]) {
+          if (DummyClass36.aClass15_2613.aClass155Array352[var3] != null) {
             var2 = false;
           }
         }

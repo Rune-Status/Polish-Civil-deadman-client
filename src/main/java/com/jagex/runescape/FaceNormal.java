@@ -9,10 +9,10 @@ public final class FaceNormal {
   public static int[] anIntArray1638;
 
   static {
-    for (int var2 = 0; 256 > var2; ++var2) {
+    for (int var2 = 0; var2 < 256; ++var2) {
       long var0 = var2;
 
-      for (int var3 = 0; 8 > var3; ++var3) {
+      for (int var3 = 0; var3 < 8; ++var3) {
         if (~(1L & var0) == -2L) {
           var0 = var0 >>> 1 ^ -3932672073523589310L;
         } else {
@@ -50,7 +50,7 @@ public final class FaceNormal {
       return
         !GameClient.method44(var0).method92(var2, (byte) -110) && var0.anObjectArray314 == null ?
           null :
-          (null != var0.aClass94Array171 && var0.aClass94Array171.length > var2
+          (var0.aClass94Array171 != null && var0.aClass94Array171.length > var2
             && var0.aClass94Array171[var2] != null
             && ~var0.aClass94Array171[var2].method1564(1).getLength() != -1 ?
             var0.aClass94Array171[var2] :

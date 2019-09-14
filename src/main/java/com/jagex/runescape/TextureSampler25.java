@@ -30,11 +30,11 @@ public final class TextureSampler25 extends AbstractTextureSampler {
     if (var3) {
         if (var1 == 0) {
           this.anInt3404 = var2.readUnsignedShort();
-        } else if (1 != var1) {
+        } else if (var1 != 1) {
           if (~var1 == -3) {
             this.anInt3406 = var2.readUnsignedShort();
           } else if (var1 != 3) {
-            if (4 == var1) {
+            if (var1 == 4) {
               int var4 = var2.readUnsignedMedium((byte) 107);
               this.anIntArray3403[2] = ClientScript.bitAnd(var4, 255) >> 12;
               this.anIntArray3403[1] = ClientScript.bitAnd(var4 >> 4, 4080);
@@ -81,7 +81,7 @@ public final class TextureSampler25 extends AbstractTextureSampler {
           } else {
             int var14 = var6[var11];
             var12 = var14 + -this.anIntArray3403[1];
-            if (-1 < ~var12) {
+            if (~var12 > -1) {
               var12 = -var12;
             }
 
@@ -134,25 +134,27 @@ public final class TextureSampler25 extends AbstractTextureSampler {
         int var9 = DummyClass58.anInt1460 + -1 - -MapScene.anInt65 - 64 * var7;
         byte var2;
         int var10;
-        if (-1 >= ~var8 && ~(-63 + var9) <= -1 && DummyClass30.anInt455 > var8 + 63
+        if (~var8 <= -1 && ~(-63 + var9) <= -1 && DummyClass30.anInt455 > var8 + 63
           && ~var9 > ~DummyClass58.anInt1460) {
           var10 = var8 >> 6;
           int var11 = var9 >> 6;
 
-          for (int var12 = 0; 64 > var12; ++var12) {
+          for (int var12 = 0; var12 < 64; ++var12) {
             for (int var13 = 0; ~var13 > -65; ++var13) {
               if (!var3 || ~(var4 * 8) >= ~var12 && 8 + 8 * var4 > var12 && var13 >= var5 * 8
                 && 8 + var5 * 8 > var13) {
                 var2 = var1.readByte();
                 if (var2 != 0) {
-                  if (null == TextureSampler29.aByteArrayArrayArray3390[var10][var11]) {
+                  if (TextureSampler29.aByteArrayArrayArray3390[var10][var11]
+                      == null) {
                     TextureSampler29.aByteArrayArrayArray3390[var10][var11] = new byte[4096];
                   }
 
                   TextureSampler29.aByteArrayArrayArray3390[var10][var11][(63 + -var13 << 6)
                     + var12] = var2;
                   byte var14 = var1.readByte();
-                  if (null == ClientScriptCall.aByteArrayArrayArray2452[var10][var11]) {
+                  if (ClientScriptCall.aByteArrayArrayArray2452[var10][var11]
+                      == null) {
                     ClientScriptCall.aByteArrayArrayArray2452[var10][var11] = new byte[4096];
                   }
 
@@ -165,7 +167,7 @@ public final class TextureSampler25 extends AbstractTextureSampler {
         } else {
           for (var10 = 0; ~var10 > ~(!var3 ? 4096 : 64); ++var10) {
             var2 = var1.readByte();
-            if (-1 != ~var2) {
+            if (~var2 != -1) {
               ++var1.position;
             }
           }
@@ -238,7 +240,7 @@ public final class TextureSampler25 extends AbstractTextureSampler {
         }
 
         boolean var49 = ~var9 >= ~var12;
-        if (0 > var24) {
+        if (var24 < 0) {
           var24 += var36;
           var23 += var31;
           ++var8;
@@ -247,7 +249,7 @@ public final class TextureSampler25 extends AbstractTextureSampler {
         }
 
         if (var49) {
-          if (-1 < ~var25) {
+          if (~var25 > -1) {
             while (var25 < 0) {
               ++var10;
               var26 += var38;
@@ -325,11 +327,11 @@ public final class TextureSampler25 extends AbstractTextureSampler {
       int var6 = -var3 + var5;
       int var7 = var2 - var4;
       if (var6 == 0) {
-        if (0 != var7) {
+        if (var7 != 0) {
           ClassCheckRequest.method126(false, var2, var4, var0, var3);
         }
 
-      } else if (-1 == ~var7) {
+      } else if (~var7 == -1) {
         SomethingTexture4.method1354(var3, var0, true, var5, var4);
       } else {
         int var12 = (var7 << 12) / var6;
@@ -385,8 +387,8 @@ public final class TextureSampler25 extends AbstractTextureSampler {
   }
 
   public static void sleep(long var0) {
-    if (0L < var0) {
-        if (0L == var0 % 10L) {
+    if (var0 > 0L) {
+        if (var0 % 10L == 0L) {
           DummyHashTable.sleep(var0 + -1L);
           DummyHashTable.sleep(1L);
         } else {
@@ -402,7 +404,8 @@ public final class TextureSampler25 extends AbstractTextureSampler {
         TextureSampler25.anInt3414 = -40;
       }
 
-      return (~var1 > -66 || var1 > 90) && (-193 < ~var1 || var1 > 222 || var1 == 215) ?
+      return (~var1 > -66 || var1 > 90) && (~var1 > -193
+          || var1 > 222 || var1 == 215) ?
         (~var1 != -160 ? (var1 != 140 ? var1 : 156) : 255) :
         32 + var1;
   }

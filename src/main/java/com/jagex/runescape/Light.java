@@ -46,13 +46,13 @@ public final class Light {
   }
 
   public Light(Buffer var1 ) {
-    if (null == TextureSampler16.anIntArray3107) {
+    if (TextureSampler16.anIntArray3107 == null) {
         DummyClass38.method1083((byte) -94);
       }
 
       this.anInt704 = var1.readUnsignedByte();
-      this.aBoolean690 = -1 != ~(this.anInt704 & 16);
-      this.aBoolean711 = -1 != ~(this.anInt704 & 8);
+      this.aBoolean690 = ~(this.anInt704 & 16) != -1;
+      this.aBoolean711 = ~(this.anInt704 & 8) != -1;
       this.anInt704 &= 7;
       this.anInt703 = var1.readUnsignedShort();
       this.anInt708 = var1.readUnsignedShort();
@@ -70,7 +70,7 @@ public final class Light {
       var2 = var1.readUnsignedByte();
       this.anInt714 = 1792 & var2 << 3;
       this.anInt705 = var2 & 31;
-      if (31 != this.anInt705) {
+      if (this.anInt705 != 31) {
         this.method1064(3);
       }
   }
@@ -134,36 +134,36 @@ public final class Light {
         this.anInt694 = 1;
         this.anInt709 = 2048;
       } else {
-        if (-4 == ~var2) {
+        if (~var2 == -4) {
           this.anInt693 = 0;
           this.anInt709 = 4096;
           this.anInt694 = 1;
           this.anInt702 = 2048;
         } else if (~var2 != -5) {
-          if (-6 == ~var2) {
+          if (~var2 == -6) {
             this.anInt694 = 4;
             this.anInt702 = 2048;
             this.anInt709 = 8192;
             this.anInt693 = 0;
-          } else if (-13 != ~var2) {
+          } else if (~var2 != -13) {
             if (var2 == 13) {
               this.anInt709 = 8192;
               this.anInt702 = 2048;
               this.anInt694 = 2;
               this.anInt693 = 0;
-            } else if (-11 != ~var2) {
+            } else if (~var2 != -11) {
               if (var2 == 11) {
                 this.anInt694 = 3;
                 this.anInt709 = 4096;
                 this.anInt702 = 512;
                 this.anInt693 = 1536;
-              } else if (-7 != ~var2) {
+              } else if (~var2 != -7) {
                 if (~var2 == -8) {
                   this.anInt702 = 768;
                   this.anInt693 = 1280;
                   this.anInt709 = 4096;
                   this.anInt694 = 3;
-                } else if (-9 == ~var2) {
+                } else if (~var2 == -9) {
                   this.anInt709 = 2048;
                   this.anInt694 = 3;
                   this.anInt702 = 1024;
@@ -173,7 +173,7 @@ public final class Light {
                   this.anInt693 = 1024;
                   this.anInt702 = 1024;
                   this.anInt694 = 3;
-                } else if (-15 != ~var2) {
+                } else if (~var2 != -15) {
                   if (~var2 == -16) {
                     this.anInt702 = 512;
                     this.anInt709 = 4096;

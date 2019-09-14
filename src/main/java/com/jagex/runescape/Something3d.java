@@ -68,7 +68,7 @@ public class Something3d extends Something3dRoot {
         Something3d.ZERO = null;
       }
 
-      if (-101 >= ~DummyClass8.anInt4014) {
+      if (~DummyClass8.anInt4014 <= -101) {
         int var6 = 64 + 128 * Mouse.anInt1923;
         int var7 = 64 + SomethingAudio.anInt1996 * 128;
         int var8 = BufferData.method1736(GameWorldSomething.currentPlane, 1, var6, var7)
@@ -81,11 +81,11 @@ public class Something3d extends Something3dRoot {
           2047 & (int) (Math.atan2(var10, var12) * 325.949D);
         TextureSampler28.anInt3315 =
           2047 & (int) (Math.atan2(var9, var11) * -325.949D);
-        if (128 > DummyClass17.anInt1823) {
+        if (DummyClass17.anInt1823 < 128) {
           DummyClass17.anInt1823 = 128;
         }
 
-        if (383 < DummyClass17.anInt1823) {
+        if (DummyClass17.anInt1823 > 383) {
           DummyClass17.anInt1823 = 383;
         }
       }
@@ -249,7 +249,7 @@ public class Something3d extends Something3dRoot {
       for (
         var3 = (AreaSoundEffect) Node.aClass61_78.getFirst();
         var3 != null; var3 = (AreaSoundEffect) Node.aClass61_78.getNext()) {
-        if (null != var3.aClass3_Sub24_Sub1_2312) {
+        if (var3.aClass3_Sub24_Sub1_2312 != null) {
           MonoChromaticImageBuffer.aClass3_Sub24_Sub2_2563.method461(var3.aClass3_Sub24_Sub1_2312);
           var3.aClass3_Sub24_Sub1_2312 = null;
         }
@@ -265,8 +265,8 @@ public class Something3d extends Something3dRoot {
       if (var1) {
         for (
           var3 = (AreaSoundEffect) SocketStream.aClass61_1242.getFirst();
-          null != var3; var3 = (AreaSoundEffect) SocketStream.aClass61_1242.getNext()) {
-          if (null != var3.aClass3_Sub24_Sub1_2312) {
+            var3 != null; var3 = (AreaSoundEffect) SocketStream.aClass61_1242.getNext()) {
+          if (var3.aClass3_Sub24_Sub1_2312 != null) {
             MonoChromaticImageBuffer.aClass3_Sub24_Sub2_2563.method461(
               var3.aClass3_Sub24_Sub1_2312);
             var3.aClass3_Sub24_Sub1_2312 = null;
@@ -277,8 +277,8 @@ public class Something3d extends Something3dRoot {
 
         for (
           var3 = (AreaSoundEffect) ObjectNode.aClass130_4046.getFirst(68);
-          null != var3; var3 = (AreaSoundEffect) ObjectNode.aClass130_4046.getNext(-66)) {
-          if (null != var3.aClass3_Sub24_Sub1_2312) {
+            var3 != null; var3 = (AreaSoundEffect) ObjectNode.aClass130_4046.getNext(-66)) {
+          if (var3.aClass3_Sub24_Sub1_2312 != null) {
             MonoChromaticImageBuffer.aClass3_Sub24_Sub2_2563.method461(
               var3.aClass3_Sub24_Sub1_2312);
             var3.aClass3_Sub24_Sub1_2312 = null;

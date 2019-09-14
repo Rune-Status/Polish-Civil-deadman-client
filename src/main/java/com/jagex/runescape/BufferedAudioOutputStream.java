@@ -77,7 +77,7 @@ public final class BufferedAudioOutputStream extends AbstractAudioOutputStream {
   }
 
   public void close() {
-    if (null != this.sourceDataLine) {
+    if (this.sourceDataLine != null) {
       this.sourceDataLine.close();
       this.sourceDataLine = null;
     }
@@ -85,14 +85,14 @@ public final class BufferedAudioOutputStream extends AbstractAudioOutputStream {
 
   public void bind(Component var1) {
     Mixer.Info[] var2 = AudioSystem.getMixerInfo();
-    if (null != var2) {
+    if (var2 != null) {
       Mixer.Info[] var3 = var2;
 
       for (int var4 = 0; ~var4 > ~var3.length; ++var4) {
         Mixer.Info var5 = var3[var4];
-        if (null != var5) {
+        if (var5 != null) {
           String var6 = var5.getName();
-          if (null != var6 && var6.toLowerCase().indexOf("soundmax") >= 0) {
+          if (var6 != null && var6.toLowerCase().indexOf("soundmax") >= 0) {
             this.soundMax = true;
           }
         }

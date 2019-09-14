@@ -16,7 +16,7 @@ public class MovedStatics0 {
         int var2 = DummyClass60.anIntArray441[var1];
         Player var3 = TextureSampler0.players[var2];
         int var4 = SpotAnimationConfig.gameBuffer.readUnsignedByte();
-        if (-1 != ~(16 & var4)) {
+        if (~(16 & var4) != -1) {
           var4 += SpotAnimationConfig.gameBuffer.readUnsignedByte() << 8;
         }
 
@@ -38,22 +38,22 @@ public class MovedStatics0 {
         if (TextureSampler3.aClass153_3361.method2117(-99, var0)) {
           int var2 = TextureSampler3.aClass153_3361
               .getAmountChildren(var0, (byte) 94);
-          if (0 == var2) {
+          if (var2 == 0) {
             HashTable.aBooleanArray1703[var0] = true;
             return true;
           } else {
-            if (null == SceneNode.aClass11ArrayArray1834[var0]) {
+            if (SceneNode.aClass11ArrayArray1834[var0] == null) {
               SceneNode.aClass11ArrayArray1834[var0] = new Widget[var2];
             }
 
             for (int var3 = 0; var3 < var2; ++var3) {
-              if (null == SceneNode.aClass11ArrayArray1834[var0][var3]) {
+              if (SceneNode.aClass11ArrayArray1834[var0][var3] == null) {
                 byte[] var4 = TextureSampler3.aClass153_3361
                     .getBytes(var0, var3);
                 if (var4 != null) {
                   Widget var5 = SceneNode.aClass11ArrayArray1834[var0][var3] = new Widget();
                   var5.anInt279 = var3 + (var0 << 16);
-                  if (-1 == var4[0]) {
+                  if (var4[0] == -1) {
                     var5.method867(var1 ^ -105, new Buffer(var4));
                   } else {
                     var5.method858(-115, new Buffer(var4));
@@ -80,11 +80,11 @@ public class MovedStatics0 {
       byte[] var6, int var7, int var8, int var9, boolean var10) {
     int var13;
       if (!var10) {
-        for (int var12 = 0; -9 < ~var12; ++var12) {
-          for (var13 = 0; 8 > var13; ++var13) {
-            if (0 < var1 - -var12 && var12 + var1 < 103 && -1 > ~(var13 + var4)
-                && -104 < ~(var4
-                + var13)) {
+        for (int var12 = 0; ~var12 > -9; ++var12) {
+          for (var13 = 0; var13 < 8; ++var13) {
+            if (var1 - -var12 > 0 && var12 + var1 < 103 && ~(var13 + var4) < -1
+                && ~(var4
+                + var13) > -104) {
               var3[var2].anIntArrayArray1304[var12 + var1][var13 + var4] =
                   ClientScript.bitAnd(
                       var3[var2].anIntArrayArray1304[var12 + var1][var13
@@ -112,7 +112,7 @@ public class MovedStatics0 {
       int var15;
       for (var13 = 0; var13 < var11; ++var13) {
         for (var14 = 0; var14 < 64; ++var14) {
-          for (var15 = 0; -65 < ~var15; ++var15) {
+          for (var15 = 0; ~var15 > -65; ++var15) {
             if (~var7 == ~var13 && var9 <= var14 && 8 + var9 > var14
                 && var8 <= var15
                 && var15 < 8 + var8) {
@@ -137,7 +137,7 @@ public class MovedStatics0 {
       int var29;
       while (var25.bytes.length > var25.position) {
         var14 = var25.readUnsignedByte();
-        if (-130 != ~var14) {
+        if (~var14 != -130) {
           --var25.position;
           break;
         }
@@ -147,8 +147,8 @@ public class MovedStatics0 {
           int var18;
           if (var16 != 0) {
             if (~var16 == -2) {
-              for (var17 = 0; 64 > var17; var17 += 4) {
-                for (var18 = 0; -65 < ~var18; var18 += 4) {
+              for (var17 = 0; var17 < 64; var17 += 4) {
+                for (var18 = 0; ~var18 > -65; var18 += 4) {
                   byte var19 = var25.readByte();
                   if (~var15 >= ~var7) {
                     for (var20 = var17; ~var20 > ~(var17 + 4); ++var20) {
@@ -163,7 +163,7 @@ public class MovedStatics0 {
                                   .method310(var0, (byte) -97, 7 & var20,
                                       var21 & 7)
                                   + var4;
-                          if (0 <= var22 && 104 > var22 && -1 >= ~var23
+                          if (var22 >= 0 && var22 < 104 && ~var23 <= -1
                               && ~var23 > -105) {
                             SceneShadowMap.aByteArrayArrayArray1774[var2][var22][var23] = var19;
                           }
@@ -178,13 +178,13 @@ public class MovedStatics0 {
             var18 = 7 + var1;
             var17 = var1;
             var20 = var4 - -7;
-            if (-1 < ~var20) {
+            if (~var20 > -1) {
               var20 = 0;
-            } else if (104 <= var20) {
+            } else if (var20 >= 104) {
               var20 = 104;
             }
 
-            if (0 <= var18) {
+            if (var18 >= 0) {
               if (~var18 <= -105) {
                 var18 = 104;
               }
@@ -195,13 +195,13 @@ public class MovedStatics0 {
             var29 = var4;
             if (var4 < 0) {
               var29 = 0;
-            } else if (104 <= var4) {
+            } else if (var4 >= 104) {
               var29 = 104;
             }
 
             if (var1 < 0) {
               var17 = 0;
-            } else if (104 <= var1) {
+            } else if (var1 >= 104) {
               var17 = 104;
             }
 
@@ -227,12 +227,12 @@ public class MovedStatics0 {
           if (var15 == 0) {
             var26 = new BlockConfig(var25);
           } else {
-            if (-2 != ~var15) {
+            if (~var15 != -2) {
               throw new IllegalStateException();
             }
 
             var28 = var25.readUnsignedByte();
-            if (-1 > ~var28) {
+            if (~var28 < -1) {
               for (var17 = 0; ~var17 > ~var28; ++var17) {
                 Light var30 = new Light(var25);
                 if (~var30.anInt705 == -32) {
@@ -259,7 +259,7 @@ public class MovedStatics0 {
                   var30.anInt708 = var22;
                   var29 = var30.anInt703 >> 7;
                   var20 = var30.anInt708 >> 7;
-                  if (var29 >= 0 && -1 >= ~var20 && 104 > var29
+                  if (var29 >= 0 && ~var20 <= -1 && var29 < 104
                       && var20 < 104) {
                     var30.aBoolean696 =
                         ~(2 & BZipDecompressorState.tileFlags[1][var29][var20])
@@ -275,7 +275,7 @@ public class MovedStatics0 {
           }
         }
 
-        if (null == var26) {
+        if (var26 == null) {
           var26 = new BlockConfig();
         }
 

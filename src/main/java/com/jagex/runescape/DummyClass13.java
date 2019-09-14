@@ -60,7 +60,7 @@ public final class DummyClass13 {
         var7 = DummyClass2.anIntArray1681[var3 - -var4] -
           var0 * DummyClass12.anIntArray2026[-1 + DummyClass12.anIntArray2026.length
             & SomethingScene.anInt1071 + var3] / 6;
-        if (0 > var7) {
+        if (var7 < 0) {
           var7 = 0;
         }
 
@@ -72,9 +72,9 @@ public final class DummyClass13 {
       for (var6 = var2 + -var0; var2 > var6; ++var6) {
         var7 = var6 * 128;
 
-        for (var8 = 0; 128 > var8; ++var8) {
+        for (var8 = 0; var8 < 128; ++var8) {
           var9 = (int) (100.0D * Math.random());
-          if (-51 < ~var9 && ~var8 < -11 && ~var8 > -119) {
+          if (~var9 > -51 && ~var8 < -11 && ~var8 > -119) {
             DummyClass2.anIntArray1681[var8 + var7] = 255;
           } else {
             DummyClass2.anIntArray1681[var8 + var7] = 0;
@@ -111,21 +111,21 @@ public final class DummyClass13 {
           var8 = 0;
 
           for (var10 = -var6; ~var10 > -129; ++var10) {
-            if (128 > var6 + var10) {
+            if (var6 + var10 < 128) {
               var8 += DummyClass2.anIntArray1681[var9 + (var10 - -var6)];
             }
 
-            if (-1 >= ~(-1 + -var6 + var10)) {
+            if (~(-1 + -var6 + var10) <= -1) {
               var8 -= DummyClass2.anIntArray1681[-var6 + -1 + var10 + var9];
             }
 
-            if (0 <= var10) {
+            if (var10 >= 0) {
               GameBuffer.anIntArray3805[var10 + var9] = var8 / (1 + var6 * 2);
             }
           }
         }
 
-        for (var7 = 0; 128 > var7; ++var7) {
+        for (var7 = 0; var7 < 128; ++var7) {
           var8 = 0;
 
           for (var9 = -var6; var2 > var9; ++var9) {
@@ -134,7 +134,7 @@ public final class DummyClass13 {
               var8 += GameBuffer.anIntArray3805[var6 * 128 + (var7 - -var10)];
             }
 
-            if (0 <= var9 - var6 - 1) {
+            if (var9 - var6 - 1 >= 0) {
               var8 -= GameBuffer.anIntArray3805[-((1 + var6) * 128) + (var7 - -var10)];
             }
 

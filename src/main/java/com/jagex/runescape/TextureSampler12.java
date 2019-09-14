@@ -39,7 +39,7 @@ public final class TextureSampler12 extends AbstractTextureSampler {
             var7 = TextureSampler23.anIntArray3212[(var7 & 4085) >> 4] + 4096 >> 1;
           } else if (this.anInt3036 == 2) {
             var7 -= 2048;
-            if (-1 < ~var7) {
+            if (~var7 > -1) {
               var7 = -var7;
             }
 
@@ -59,10 +59,10 @@ public final class TextureSampler12 extends AbstractTextureSampler {
         this.method158(10);
       }
 
-      if (-1 == ~var1) {
+      if (~var1 == -1) {
         this.anInt3038 = var2.readUnsignedByte();
       } else {
-        if (1 == var1) {
+        if (var1 == 1) {
           this.anInt3036 = var2.readUnsignedByte();
         } else if (~var1 == -4) {
           this.anInt3037 = var2.readUnsignedByte();
@@ -107,7 +107,7 @@ public final class TextureSampler12 extends AbstractTextureSampler {
         TextureSampler12.method167(124);
       }
 
-      for (int var1 = 0; 4 > var1; ++var1) {
+      for (int var1 = 0; var1 < 4; ++var1) {
         BlockConfig.collisionMaps[var1].method1496(var0 + -22230);
       }
 
@@ -147,7 +147,7 @@ public final class TextureSampler12 extends AbstractTextureSampler {
           var6, (byte) 119, var5);
       } else {
         if (~var5 == 0) {
-          for (int var9 = 0; -101 < ~var9; ++var9) {
+          for (int var9 = 0; ~var9 > -101; ++var9) {
             GroundItemNode.aBooleanArray3674[var9] = true;
           }
         } else {

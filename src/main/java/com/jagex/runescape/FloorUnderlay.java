@@ -47,7 +47,7 @@ public final class FloorUnderlay {
       double var16 = 0.0D;
       double var18 = (max + min) / 2.0D;
       if (min != max) {
-        if (0.5D > var18) {
+        if (var18 < 0.5D) {
           var16 = (max - min) / (max + min);
         }
 
@@ -63,7 +63,7 @@ public final class FloorUnderlay {
           }
         }
 
-        if (0.5D <= var18) {
+        if (var18 >= 0.5D) {
           var16 = (max - min) / (-min + (2.0D - max));
         }
       }
@@ -74,14 +74,14 @@ public final class FloorUnderlay {
         this.anInt1418 = (int) (var16 * var18 * 512.0D);
       }
 
-      if (1 > this.anInt1418) {
+      if (this.anInt1418 < 1) {
         this.anInt1418 = 1;
       }
 
       this.anInt1406 = (int) (var16 * 256.0D);
       this.anInt1417 = (int) (256.0D * var18);
       if (~this.anInt1417 <= -1) {
-        if (255 < this.anInt1417) {
+        if (this.anInt1417 > 255) {
           this.anInt1417 = 255;
         }
       } else {
@@ -90,7 +90,7 @@ public final class FloorUnderlay {
 
       var14 /= 6.0D;
       this.anInt1408 = (int) (this.anInt1418 * var14);
-      if (-1 >= ~this.anInt1406) {
+      if (~this.anInt1406 <= -1) {
         if (this.anInt1406 > 255) {
           this.anInt1406 = 255;
         }
@@ -111,17 +111,17 @@ public final class FloorUnderlay {
   }
 
   private void method1604(int var2, Buffer var3, int var4) {
-    if (-2 == ~var2) {
+    if (~var2 == -2) {
         this.anInt1404 = var3.readUnsignedMedium((byte) 93);
         this.setHSL(this.anInt1404, (byte) 81);
       } else {
         if (var2 == 2) {
           this.anInt1412 = var3.readUnsignedShort();
-          if (-65536 == ~this.anInt1412) {
+          if (~this.anInt1412 == -65536) {
             this.anInt1412 = -1;
           }
         } else {
-          if (3 == var2) {
+          if (var2 == 3) {
             this.anInt1414 = var3.readUnsignedShort();
           } else if (~var2 == -5) {
             this.aBoolean1411 = false;

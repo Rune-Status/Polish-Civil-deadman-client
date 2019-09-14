@@ -250,7 +250,7 @@ public final class SomethingTexture extends AbstractSomethingTexture {
                   if (var11 == 0) {
                     var12 = var2.aClass145Array2809[var9] = null;
                   } else {
-                    if (1 == var11) {
+                    if (var11 == 1) {
                       var12.anInt1894 = 0;
                       var12.anInt1891 = 1;
                       var12.anInt1893 = 0;
@@ -259,7 +259,7 @@ public final class SomethingTexture extends AbstractSomethingTexture {
                       SocketStream.method1470(var2.anInt2829, var10, 183921384,
                           var2.anInt2819,
                           var2 == TextureCache.localPlayer, 0);
-                    } else if (-3 == ~var11) {
+                    } else if (~var11 == -3) {
                       var12.anInt1894 = 0;
                     }
                   }
@@ -269,7 +269,7 @@ public final class SomethingTexture extends AbstractSomethingTexture {
                 }
               }
 
-              if (null == var12) {
+              if (var12 == null) {
                 var12 = var2.aClass145Array2809[var9] = new Unsure();
                 var12.anInt1890 = var6;
                 var12.anInt1891 = 1;

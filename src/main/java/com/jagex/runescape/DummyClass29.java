@@ -90,7 +90,7 @@ public final class DummyClass29 {
       } else if (var4 != 1) {
         if (~var4 == -3) {
           var7 = AnimationSomething.method557(var3, var2, var1);
-        } else if (3 == var4) {
+        } else if (var4 == 3) {
           var7 = SceneGraphTile.method104(var3, var2, var1);
         }
       } else {
@@ -111,25 +111,27 @@ public final class DummyClass29 {
         if (~var7 != -1L) {
           SceneNode var13 = null;
           SceneNode var14 = null;
-          if (0 == var4) {
+          if (var4 == 0) {
             SceneSomething2 var15 = Deque.method1209(var3, var2, var1);
-            if (null != var15) {
+            if (var15 != null) {
               var13 = var15.sceneNode0;
               var14 = var15.sceneNode1;
             }
 
-            if (-1 != ~var12.anInt1538) {
+            if (~var12.anInt1538 != -1) {
               var6.method1485(var18, var12.aBoolean1486, -104, var1, var19, var2);
             }
           } else if (var4 != 1) {
-            if (2 == var4) {
+            if (var4 == 2) {
               SceneSomething var20 = DummyClass7.method2217(var3, var2, var1);
-              if (null != var20) {
+              if (var20 != null) {
                 var13 = var20.sceneNode;
               }
 
-              if (var12.anInt1538 != 0 && var12.anInt1480 + var2 < 104 && -105 < ~(var12.anInt1480
-                + var1) && 104 > var2 + var12.anInt1485 && ~(var1 + var12.anInt1485) > -105) {
+              if (var12.anInt1538 != 0 && var12.anInt1480 + var2 < 104 &&
+                  ~(var12.anInt1480
+                      + var1) > -105 && var2 + var12.anInt1485 < 104
+                  && ~(var1 + var12.anInt1485) > -105) {
                 var6.method1502(20851, var2, var12.anInt1480, var12.aBoolean1486, var18,
                   var12.anInt1485, var1);
               }
@@ -152,7 +154,7 @@ public final class DummyClass29 {
           }
 
           if (GlRenderer.useOpenGlRenderer && var12.aBoolean1503) {
-            if (2 == var19) {
+            if (var19 == 2) {
               if (var13 instanceof GameObject) {
                 ((GameObject) var13).method1960(-1);
               } else {
@@ -170,8 +172,8 @@ public final class DummyClass29 {
                         var5);
               }
             } else {
-              if (5 != var19) {
-                if (-7 == ~var19) {
+              if (var19 != 5) {
+                if (~var19 == -7) {
                   if (var13 instanceof GameObject) {
                     ((GameObject) var13).method1960(-1);
                   } else {
@@ -182,7 +184,7 @@ public final class DummyClass29 {
                         var2, var1,
                         var5);
                   }
-                } else if (-8 == ~var19) {
+                } else if (~var19 == -8) {
                   if (var13 instanceof GameObject) {
                     ((GameObject) var13).method1960(-1);
                   } else {
@@ -212,7 +214,7 @@ public final class DummyClass29 {
                         AbstractTextureSampler.anIntArray2386[var18] * 8, 4,
                         var2, var1, var5);
                   }
-                } else if (11 != var19) {
+                } else if (var19 != 11) {
                   if (var13 instanceof GameObject) {
                     ((GameObject) var13).method1960(-1);
                   } else {

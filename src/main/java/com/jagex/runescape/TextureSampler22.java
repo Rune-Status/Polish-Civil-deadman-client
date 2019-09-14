@@ -29,7 +29,7 @@ public final class TextureSampler22 extends AbstractTextureSampler {
   public void parseConfig(int var1, Buffer var2, boolean var3 ) {
     if (var3) {
         if (var1 == 0) {
-          this.monoChromatic = -2 == ~var2.readUnsignedByte();
+          this.monoChromatic = ~var2.readUnsignedByte() == -2;
         }
 
       }
@@ -68,7 +68,7 @@ public final class TextureSampler22 extends AbstractTextureSampler {
       }
 
       return DummyClass55.aBoolean1419 && GameObjectConfig.aBooleanArray1490[81]
-        && 2 < TextureSampler25.amountContextActions ?
+        && TextureSampler25.amountContextActions > 2 ?
         MonoChromaticImageCache.anIntArray1578[-2 + TextureSampler25.amountContextActions] :
         MonoChromaticImageCache.anIntArray1578[TextureSampler25.amountContextActions - 1];
   }
@@ -76,7 +76,7 @@ public final class TextureSampler22 extends AbstractTextureSampler {
   public static SomethingQuickChat2 method336(int var0, byte var1) {
     SomethingQuickChat2 var2 =
         (SomethingQuickChat2) TextureSampler1.aClass47_3137.get(var0, 1400);
-      if (null != var2) {
+      if (var2 != null) {
         return var2;
       } else {
         byte[] var3;
@@ -87,7 +87,7 @@ public final class TextureSampler22 extends AbstractTextureSampler {
         }
 
         var2 = new SomethingQuickChat2();
-        if (null != var3) {
+        if (var3 != null) {
           var2.method530(new Buffer(var3), (byte) 116);
         }
 
@@ -95,7 +95,7 @@ public final class TextureSampler22 extends AbstractTextureSampler {
           TextureSampler22.method337(19);
         }
 
-        if (-32769 >= ~var0) {
+        if (~var0 <= -32769) {
           var2.method525(-85);
         }
 

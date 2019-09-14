@@ -51,7 +51,7 @@ public final class TextureSampler27 extends AbstractTextureSampler {
       if (this.monoChromaticImageCache.aBoolean1580) {
         int var5 = DummyClass4.anIntArray2999[var1];
         int var7;
-        if (0 == this.anInt3086) {
+        if (this.anInt3086 == 0) {
           short var6 = 0;
 
           for (var7 = 0; this.anInt3085 > var7; ++var7) {
@@ -102,8 +102,8 @@ public final class TextureSampler27 extends AbstractTextureSampler {
   public void parseConfig(int var1, Buffer var2, boolean var3 ) {
     if (~var1 == -1) {
         this.anInt3085 = var2.readUnsignedByte();
-      } else if (-2 != ~var1) {
-        if (-3 == ~var1) {
+      } else if (~var1 != -2) {
+        if (~var1 == -3) {
           this.anInt3086 = var2.readUnsignedByte();
         }
       } else {

@@ -34,8 +34,8 @@ public final class TextureSampler8 extends AbstractTextureSampler {
       int var8;
       int var9;
       int var10;
-      if (2 == var2) {
-        for (var2 = 0; -258 < ~var2; ++var2) {
+      if (var2 == 2) {
+        for (var2 = 0; ~var2 > -258; ++var2) {
           var4 = var2 << 4;
 
           for (
@@ -70,7 +70,7 @@ public final class TextureSampler8 extends AbstractTextureSampler {
         }
       } else {
         if (var2 == 1) {
-          for (var2 = 0; -258 < ~var2; ++var2) {
+          for (var2 = 0; ~var2 > -258; ++var2) {
             var4 = var2 << 4;
 
             for (
@@ -85,11 +85,11 @@ public final class TextureSampler8 extends AbstractTextureSampler {
                 >> 1;
             var9 = -var8 + 4096;
             var10 = var8 * var6[1] + var5[1] * var9 >> 12;
-            if (32767 <= ~var10) {
+            if (~var10 >= 32767) {
               var10 = -32767;
             }
 
-            if ('\u8000' <= var10) {
+            if (var10 >= '\u8000') {
               var10 = 32767;
             }
 
@@ -109,11 +109,11 @@ public final class TextureSampler8 extends AbstractTextureSampler {
             var7 = (-var5[0] + var4 << 12) / (-var5[0] + var6[0]);
             var8 = -var7 + 4096;
             var9 = var6[1] * var7 + var8 * var5[1] >> 12;
-            if (-32768 >= var9) {
+            if (var9 <= -32768) {
               var9 = -32767;
             }
 
-            if ('\u8000' <= var9) {
+            if (var9 >= '\u8000') {
               var9 = 32767;
             }
 
@@ -133,11 +133,11 @@ public final class TextureSampler8 extends AbstractTextureSampler {
 
         for (int var6 = 0; SomethingLight0.anInt1559 > var6; ++var6) {
           int var4 = var5[var6] >> 4;
-          if (0 > var4) {
+          if (var4 < 0) {
             var4 = 0;
           }
 
-          if (256 < var4) {
+          if (var4 > 256) {
             var4 = 256;
           }
 
@@ -149,7 +149,7 @@ public final class TextureSampler8 extends AbstractTextureSampler {
   }
 
   public void parseConfig(int var1, Buffer var2, boolean var3 ) {
-    if (0 == var1) {
+    if (var1 == 0) {
         this.anInt3462 = var2.readUnsignedByte();
         this.anIntArrayArray3469 = new int[var2.readUnsignedByte()][2];
 
@@ -165,14 +165,14 @@ public final class TextureSampler8 extends AbstractTextureSampler {
   }
 
   public void method158(int var1 ) {
-    if (null == this.anIntArrayArray3469) {
+    if (this.anIntArrayArray3469 == null) {
         this.anIntArrayArray3469 = new int[][] {{0, 0}, {4096, 4096}};
       }
 
       if (this.anIntArrayArray3469.length < 2) {
         throw new RuntimeException("Curve operation requires at least two markers");
       } else {
-        if (2 == this.anInt3462) {
+        if (this.anInt3462 == 2) {
           this.method355(true);
         }
 

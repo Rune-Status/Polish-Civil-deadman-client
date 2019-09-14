@@ -84,7 +84,8 @@ public final class DummyClass3 {
             }
           }
 
-          if (-1 != ~(var9[var13][var14] & 255) || ~var16 != -1 && ~var8[var13][var14] == -1) {
+          if (~(var9[var13][var14] & 255) != -1
+              || ~var16 != -1 && ~var8[var13][var14] == -1) {
             var58 = 0;
             int var60 = 0;
             var21 = 0;
@@ -103,7 +104,7 @@ public final class DummyClass3 {
             int var34;
             byte var32;
             boolean var70;
-            if (0 != var27 && ~var16 != ~var27) {
+            if (var27 != 0 && ~var16 != ~var27) {
               var31 = TextureSampler10.method350((byte) 106, -1 + var27);
               if (var31.aBoolean2092 && ~var31.anInt2103 != 0) {
                 var32 = var5[var13 + -1][var14 - -1];
@@ -114,7 +115,7 @@ public final class DummyClass3 {
                   && TextureSampler8.aBooleanArrayArray3468[var34][0]) {
                   var70 = false;
                 } else {
-                  for (var36 = 0; 8 > var36; ++var36) {
+                  for (var36 = 0; var36 < 8; ++var36) {
                     if (~var36 == ~var58) {
                       var63[var58++] = var27;
                       break;
@@ -133,9 +134,9 @@ public final class DummyClass3 {
             }
 
             boolean var69;
-            if (-1 != ~var28 && var28 != var16) {
+            if (~var28 != -1 && var28 != var16) {
               var31 = TextureSampler10.method350((byte) 114, -1 + var28);
-              if (var31.aBoolean2092 && 0 != ~var31.anInt2103) {
+              if (var31.aBoolean2092 && ~var31.anInt2103 != 0) {
                 var32 = var5[-1 + var13][var14 + -1];
                 var33 = var8[-1 + var13][-1 + var14];
                 var34 = SomethingTexture1.anIntArray2642[var33 * 4 - -(var32 & 3)];
@@ -163,7 +164,7 @@ public final class DummyClass3 {
             }
 
             boolean var72;
-            if (-1 != ~var29 && ~var16 != ~var29) {
+            if (~var29 != -1 && ~var16 != ~var29) {
               var31 = TextureSampler10.method350((byte) 107, var29 - 1);
               if (var31.aBoolean2092 && ~var31.anInt2103 != 0) {
                 var32 = var5[1 + var13][var14 - 1];
@@ -195,7 +196,7 @@ public final class DummyClass3 {
             boolean var71;
             if (var30 != 0 && ~var30 != ~var16) {
               var31 = TextureSampler10.method350((byte) 105, var30 + -1);
-              if (var31.aBoolean2092 && 0 != ~var31.anInt2103) {
+              if (var31.aBoolean2092 && ~var31.anInt2103 != 0) {
                 var32 = var5[var13 - -1][1 + var14];
                 var33 = var8[var13 + 1][1 + var14];
                 var35 = SomethingTexture1.anIntArray2642[4 * var33 + (var32 - -1 & 3)];
@@ -222,7 +223,7 @@ public final class DummyClass3 {
               var71 = false;
             }
 
-            if (-1 != ~var23 && ~var16 != ~var23) {
+            if (~var23 != -1 && ~var16 != ~var23) {
               var31 = TextureSampler10.method350((byte) -29, -1 + var23);
               if (var31.aBoolean2092 && var31.anInt2103 != -1) {
                 var60 = SomethingTexture1.anIntArray2642[4 * var8[var13][var14 - -1] + (
@@ -241,13 +242,13 @@ public final class DummyClass3 {
               }
             }
 
-            if (0 != var24 && ~var16 != ~var24) {
+            if (var24 != 0 && ~var16 != ~var24) {
               var31 = TextureSampler10.method350((byte) -32, var24 + -1);
               if (var31.aBoolean2092 && var31.anInt2103 != -1) {
                 var65 = SomethingTexture1.anIntArray2642[(3 & 3 + var5[var13 + -1][var14])
                   + var8[var13 + -1][var14] * 4];
 
-                for (var74 = 0; -9 < ~var74; ++var74) {
+                for (var74 = 0; ~var74 > -9; ++var74) {
                   if (var58 == var74) {
                     var63[var58++] = var24;
                     break;
@@ -260,7 +261,7 @@ public final class DummyClass3 {
               }
             }
 
-            if (-1 != ~var25 && var16 != var25) {
+            if (~var25 != -1 && var16 != var25) {
               var31 = TextureSampler10.method350((byte) 112, -1 + var25);
               if (var31.aBoolean2092 && ~var31.anInt2103 != 0) {
                 var21 = SomethingTexture1.anIntArray2642[(3 & var5[var13][var14 + -1])
@@ -279,7 +280,7 @@ public final class DummyClass3 {
               }
             }
 
-            if (0 != var26 && var16 != var26) {
+            if (var26 != 0 && var16 != var26) {
               var31 = TextureSampler10.method350((byte) -41, var26 - 1);
               if (var31.aBoolean2092 && ~var31.anInt2103 != 0) {
                 var22 =
@@ -321,23 +322,23 @@ public final class DummyClass3 {
       SomethingGl0 var56;
       for (
         var56 = (SomethingGl0) var12.getFirst(var7 + 36);
-        null != var56; var56 = (SomethingGl0) var12.getNext(var7 ^ -117)) {
+          var56 != null; var56 = (SomethingGl0) var12.getNext(var7 ^ -117)) {
         var56.method145();
       }
 
-      for (var13 = 1; 102 >= var13; ++var13) {
+      for (var13 = 1; var13 <= 102; ++var13) {
         for (var14 = 1; ~var14 >= -103; ++var14) {
           var16 = 255 & var9[var13][var14];
           var58 = 255 & var10[var13][var14];
           if ((8 & var11[var3][var13][var14]) != 0) {
             var15 = 0;
-          } else if (2 == (var11[1][var13][var14] & 2) && ~var3 < -1) {
+          } else if ((var11[1][var13][var14] & 2) == 2 && ~var3 < -1) {
             var15 = var3 + -1;
           } else {
             var15 = var3;
           }
 
-          if (0 != var58) {
+          if (var58 != 0) {
             FloorOverlay var62 = TextureSampler10.method350((byte) -25, -1 + var58);
             if (var62.anInt2103 == -1) {
               continue;
@@ -358,7 +359,8 @@ public final class DummyClass3 {
               (byte) 88, ~var16 != -1 && var62.aBoolean2092, var67, var14, var4, var25, var66);
           }
 
-          if (~(var9[var13][var14] & 255) != -1 || ~var58 != -1 && 0 == var8[var13][var14]) {
+          if (~(var9[var13][var14] & 255) != -1 || ~var58 != -1 &&
+              var8[var13][var14] == 0) {
             int[] var64 = new int[8];
             var65 = 0;
             int var61 = 0;
@@ -376,7 +378,7 @@ public final class DummyClass3 {
             FloorOverlay var76;
             byte var77;
             int var83;
-            if (0 != var28 && var28 != var58) {
+            if (var28 != 0 && var28 != var58) {
               var76 = TextureSampler10.method350((byte) -88, -1 + var28);
               if (var76.aBoolean2092 && var76.anInt2103 != -1) {
                 var33 = var5[var13 + -1][1 + var14];
@@ -387,7 +389,7 @@ public final class DummyClass3 {
                   && TextureSampler8.aBooleanArrayArray3468[var35][0]) {
                   var28 = 0;
                 } else {
-                  for (var83 = 0; -9 < ~var83; ++var83) {
+                  for (var83 = 0; ~var83 > -9; ++var83) {
                     if (var61 == var83) {
                       var64[var61++] = var28;
                       break;
@@ -405,9 +407,9 @@ public final class DummyClass3 {
               var28 = 0;
             }
 
-            if (0 != var29 && ~var58 != ~var29) {
+            if (var29 != 0 && ~var58 != ~var29) {
               var76 = TextureSampler10.method350((byte) -87, -1 + var29);
-              if (var76.aBoolean2092 && -1 != var76.anInt2103) {
+              if (var76.aBoolean2092 && var76.anInt2103 != -1) {
                 var33 = var5[var13 + -1][-1 + var14];
                 var77 = var8[-1 + var13][var14 + -1];
                 var35 = SomethingTexture1.anIntArray2642[(3 & var33) + var77 * 4];
@@ -416,7 +418,7 @@ public final class DummyClass3 {
                   && TextureSampler8.aBooleanArrayArray3468[var36][0]) {
                   var29 = 0;
                 } else {
-                  for (var83 = 0; 8 > var83; ++var83) {
+                  for (var83 = 0; var83 < 8; ++var83) {
                     if (var83 == var61) {
                       var64[var61++] = var29;
                       break;
@@ -436,7 +438,7 @@ public final class DummyClass3 {
 
             if (var30 != 0 && ~var30 != ~var58) {
               var76 = TextureSampler10.method350((byte) -123, -1 + var30);
-              if (var76.aBoolean2092 && -1 != var76.anInt2103) {
+              if (var76.aBoolean2092 && var76.anInt2103 != -1) {
                 var33 = var5[1 + var13][var14 - 1];
                 var77 = var8[1 + var13][var14 + -1];
                 var36 = SomethingTexture1.anIntArray2642[(1 + var33 & 3) + 4 * var77];
@@ -445,7 +447,7 @@ public final class DummyClass3 {
                   && TextureSampler8.aBooleanArrayArray3468[var35][0]) {
                   var30 = 0;
                 } else {
-                  for (var83 = 0; 8 > var83; ++var83) {
+                  for (var83 = 0; var83 < 8; ++var83) {
                     if (~var83 == ~var61) {
                       var64[var61++] = var30;
                       break;
@@ -493,13 +495,13 @@ public final class DummyClass3 {
             }
 
             int var78;
-            if (-1 != ~var24 && ~var24 != ~var58) {
+            if (~var24 != -1 && ~var24 != ~var58) {
               var76 = TextureSampler10.method350((byte) 113, var24 - 1);
-              if (var76.aBoolean2092 && -1 != var76.anInt2103) {
+              if (var76.aBoolean2092 && var76.anInt2103 != -1) {
                 var65 = SomethingTexture1.anIntArray2642[var8[var13][var14 - -1] * 4 + (
                   2 + var5[var13][var14 - -1] & 3)];
 
-                for (var78 = 0; 8 > var78; ++var78) {
+                for (var78 = 0; var78 < 8; ++var78) {
                   if (~var78 == ~var61) {
                     var64[var61++] = var24;
                     break;
@@ -514,7 +516,7 @@ public final class DummyClass3 {
 
             if (var25 != 0 && var58 != var25) {
               var76 = TextureSampler10.method350((byte) -103, var25 + -1);
-              if (var76.aBoolean2092 && 0 != ~var76.anInt2103) {
+              if (var76.aBoolean2092 && ~var76.anInt2103 != 0) {
                 var21 =
                   SomethingTexture1.anIntArray2642[(3 & var5[var13 - 1][var14] - -3) + 4 * var8[
                     var13 + -1][var14]];
@@ -534,7 +536,7 @@ public final class DummyClass3 {
 
             if (var26 != 0 && ~var26 != ~var58) {
               var76 = TextureSampler10.method350((byte) 126, var26 - 1);
-              if (var76.aBoolean2092 && -1 != var76.anInt2103) {
+              if (var76.aBoolean2092 && var76.anInt2103 != -1) {
                 var22 =
                   SomethingTexture1.anIntArray2642[(var5[var13][var14 + -1] & 3) + 4 * var8[var13][
                     -1 + var14]];
@@ -618,7 +620,7 @@ public final class DummyClass3 {
               var85 = var44 + 1;
               var45[var44] = var50;
               var45[var85++] = var52;
-              if (-3 > ~var79.length) {
+              if (~var79.length < -3) {
                 var45[var85++] =
                   BufferData.method1734(var43, 0.0F, var40, var41, null, var2, var13, var4, var42,
                     (byte) -117, 0, var79[2], var39, var1, var14, 64, var0, 128);
@@ -639,7 +641,7 @@ public final class DummyClass3 {
               }
 
               var45[var85++] = var54;
-              if (-3 > ~var84.length) {
+              if (~var84.length < -3) {
                 var45[var85++] =
                   BufferData.method1734(var43, 0.0F, var40, var41, null, var2, var13, var4, var42,
                     (byte) -127, 0, var84[2], var39, var1, var14, 128, var0, 64);
@@ -654,8 +656,8 @@ public final class DummyClass3 {
 
       for (
         var56 = (SomethingGl0) var12.getFirst(62);
-        null != var56; var56 = (SomethingGl0) var12.getNext(-80)) {
-        if (-1 == ~var56.anInt2343) {
+          var56 != null; var56 = (SomethingGl0) var12.getNext(-80)) {
+        if (~var56.anInt2343 == -1) {
           var56.unlinkNode();
         } else {
           var56.method148();
@@ -696,7 +698,7 @@ public final class DummyClass3 {
       }
 
       if (~GameObject.anInt2737 <= -101) {
-        if (null == HuffmanEncoder.aClass3_Sub28_Sub16_637
+        if (HuffmanEncoder.aClass3_Sub28_Sub16_637 == null
           || var2 != HuffmanEncoder.aClass3_Sub28_Sub16_637.anInt3707
           || HuffmanEncoder.aClass3_Sub28_Sub16_637.anInt3696 != var1) {
           SoftwareDirectColorSprite var5 = new SoftwareDirectColorSprite(var2, var1);
@@ -727,7 +729,7 @@ public final class DummyClass3 {
         int var15 = var0 + var2 * DummyClass44.anInt930 / DummyClass30.anInt455;
         int var7 = var2 * GZipDecompressor.anInt817 / DummyClass30.anInt455;
         int var9 = 16711680;
-        if (-2 == ~AbstractImageProducer.gameId) {
+        if (~AbstractImageProducer.gameId == -2) {
           var9 = 16777215;
         }
 
@@ -741,7 +743,7 @@ public final class DummyClass3 {
 
         if (~AbstractDirectColorSprite.anInt3704 < -1) {
           int var10;
-          if (-11 > ~ByteArrayNode.anInt3611) {
+          if (~ByteArrayNode.anInt3611 < -11) {
             var10 = (-ByteArrayNode.anInt3611 + 20) * 25;
           } else {
             var10 = 25 * ByteArrayNode.anInt3611;

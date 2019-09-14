@@ -18,7 +18,7 @@ public abstract class AbstractIndexedColorSprite {
   public abstract void draw(int var1,int var2 );
 
   public static void addLast(Node first, Node second) {
-    if (null != first.prevNode) {
+    if (first.prevNode != null) {
         first.unlinkNode();
       }
 

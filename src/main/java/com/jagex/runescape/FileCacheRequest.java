@@ -66,11 +66,11 @@ public final class FileCacheRequest extends AbstractFileRequest {
       while (true) {
         SignLinkRequest var3 = var2.method1436(var0, 86);
 
-        while (-1 == ~var3.status) {
+        while (~var3.status == -1) {
           TextureSampler25.sleep(10L);
         }
 
-        if (1 == var3.status) {
+        if (var3.status == 1) {
           var0.setVisible(false);
           var0.dispose();
           return;

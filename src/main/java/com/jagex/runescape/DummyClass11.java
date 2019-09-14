@@ -20,7 +20,7 @@ public final class DummyClass11 {
         DummyClass11.writeUID(null, -44);
       }
 
-      if (null != var2) {
+      if (var2 != null) {
         if (var2.aClass3_Sub24_Sub1_2312 != null) {
           MonoChromaticImageBuffer.aClass3_Sub24_Sub2_2563.method461(var2.aClass3_Sub24_Sub1_2312);
           var2.aClass3_Sub24_Sub1_2312 = null;
@@ -31,7 +31,7 @@ public final class DummyClass11 {
   }
 
   public static void writeUID(Buffer var0, int var1) {
-    if (null != LinearHashTable.uidFile) {
+    if (LinearHashTable.uidFile != null) {
         try {
           LinearHashTable.uidFile.seek(-117, 0L);
           LinearHashTable.uidFile.write(var0.bytes, var0.position, -903171152, 24);
@@ -69,7 +69,7 @@ public final class DummyClass11 {
           AudioWorker.method893(var1, (byte) 110));
         var2 = new GameObjectConfig();
         var2.anInt1527 = var1;
-        if (null != var3) {
+        if (var3 != null) {
           var2.method1692(6219, new Buffer(var3));
         }
 

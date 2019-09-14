@@ -43,12 +43,13 @@ public final class DummyClass8 extends DummyClass7 {
 
       for (HintMarker[] var7 = GameException.aClass96Array2114; var7.length > var8; ++var8) {
         HintMarker var9 = var7[var8];
-        if (null != var9 && var9.anInt1360 == 2) {
+        if (var9 != null && var9.anInt1360 == 2) {
           AbstractObjectNodeWrapper.method1724(var0 >> 1, var5,
             (-ProceduralTexture.anInt1152 + var9.anInt1347 << 7) - -var9.anInt1350,
             var9.anInt1353 * 2, var2 >> 1,
             var9.anInt1346 + (var9.anInt1356 + -WorldMapLabel.anInt1716 << 7), (byte) -114, var4);
-          if (-1 < DummyClass34.anInt590 && ~(AbstractGameWorld.updateCycle % 20) > -11) {
+          if (DummyClass34.anInt590 > -1
+              && ~(AbstractGameWorld.updateCycle % 20) > -11) {
             SomethingIndex150.aClass3_Sub28_Sub16Array2072[var9.anInt1351].method643(
               -12 + var1 + DummyClass34.anInt590, -28 + var6 - -WidgetAccess.anInt2208);
           }
@@ -87,7 +88,7 @@ public final class DummyClass8 extends DummyClass7 {
         for (int var6 = 0; ~var6 > -14; ++var6) {
           for (int var7 = 0; ~var7 > -14; ++var7) {
             int var8 = GameObjectConfig.anIntArrayArrayArray1497[var5][var6][var7];
-            if (0 != ~var8) {
+            if (~var8 != 0) {
               int var9 = var8 >> 24 & 3;
               if (!var0 || var9 == 0) {
                 int var10 = (6 & var8) >> 1;
@@ -118,7 +119,7 @@ public final class DummyClass8 extends DummyClass7 {
 
       int var6 = (int) var1 >> 20 & 3;
       int var7 = (int) (var1 >>> 32) & Integer.MAX_VALUE;
-      if (var5 != 10 && -12 != ~var5 && var5 != 22) {
+      if (var5 != 10 && ~var5 != -12 && var5 != 22) {
         Parameter.method582(TextureCache.localPlayer.waypointsY[0], var6, 0, true, 0, 2, var4, 0,
           1 + var5, 2, var3, TextureCache.localPlayer.waypointsX[0]);
       } else {
@@ -134,7 +135,7 @@ public final class DummyClass8 extends DummyClass7 {
         }
 
         int var11 = var8.anInt1533;
-        if (-1 != ~var6) {
+        if (~var6 != -1) {
           var11 = (var11 << var6 & 15) - -(var11 >> -var6 + 4);
         }
 
@@ -179,21 +180,21 @@ public final class DummyClass8 extends DummyClass7 {
         int var5;
         for (var5 = 0; ~var5 > ~var3.anInt2296; ++var5) {
           if (var3.aClass64Array2303[var5] != null) {
-            if (-3 == ~var3.aClass64Array2303[var5].status) {
+            if (~var3.aClass64Array2303[var5].status == -3) {
               var3.anIntArray2300[var5] = -5;
             }
 
-            if (-1 == ~var3.aClass64Array2303[var5].status) {
+            if (~var3.aClass64Array2303[var5].status == -1) {
               var4 = true;
             }
           }
 
-          if (null != var3.aClass64Array2298[var5]) {
-            if (-3 == ~var3.aClass64Array2298[var5].status) {
+          if (var3.aClass64Array2298[var5] != null) {
+            if (~var3.aClass64Array2298[var5].status == -3) {
               var3.anIntArray2300[var5] = -6;
             }
 
-            if (-1 == ~var3.aClass64Array2298[var5].status) {
+            if (~var3.aClass64Array2298[var5].status == -1) {
               var4 = true;
             }
           }
@@ -214,7 +215,7 @@ public final class DummyClass8 extends DummyClass7 {
               int var7 = var3.anIntArray2301[var6];
               Field var8;
               int var9;
-              if (-1 == ~var7) {
+              if (~var7 == -1) {
                 var8 = (Field) var3.aClass64Array2303[var6].result;
                 var9 = var8.getInt(null);
                 var0.writeByte(0);
@@ -224,7 +225,7 @@ public final class DummyClass8 extends DummyClass7 {
                   var8 = (Field) var3.aClass64Array2303[var6].result;
                   var8.setInt(null, var3.anIntArray2299[var6]);
                   var0.writeByte(0);
-                } else if (2 == var7) {
+                } else if (var7 == 2) {
                   var8 = (Field) var3.aClass64Array2303[var6].result;
                   var9 = var8.getModifiers();
                   var0.writeByte(0);
@@ -233,7 +234,7 @@ public final class DummyClass8 extends DummyClass7 {
               }
 
               Method var26;
-              if (3 == var7) {
+              if (var7 == 3) {
                 var26 = (Method) var3.aClass64Array2298[var6].result;
                 byte[][] var27 = var3.aByteArrayArrayArray2302[var6];
                 Object[] var10 = new Object[var27.length];

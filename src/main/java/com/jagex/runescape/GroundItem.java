@@ -26,7 +26,7 @@ public final class GroundItem extends SceneNode {
       DummyClass0 var12 ) {
     AbstractModel var13 = DummyClass35.getItemConfig(this.anInt2936, (byte) 84)
         .getModel(124, -1, 0, null, this.anInt2930, 0);
-      if (null != var13) {
+      if (var13 != null) {
         var13.draw(var1, var2, var3, var4, var5, translateX, translateY, translateZ, var9, var11,
           var12);
         this.anInt2932 = var13.getMinimumY();
@@ -39,7 +39,7 @@ public final class GroundItem extends SceneNode {
 
   public static boolean loadSprites(FileUnpacker sprites, int fileId) {
     byte[] bytes = sprites.getBytes(fileId);
-      if (null != bytes) {
+      if (bytes != null) {
         DummyClass38.loadSprites(bytes, 19);
         return true;
       } else {
@@ -66,8 +66,9 @@ public final class GroundItem extends SceneNode {
       if (~var6
         == ~AbstractImageProducer.aByteArrayArrayArray2008[GameWorldSomething.currentPlane][var2][var3]) {
         return false;
-      } else if (-1 == ~(
-        BZipDecompressorState.tileFlags[GameWorldSomething.currentPlane][var2][var3] & 4)) {
+      } else if (~(
+          BZipDecompressorState.tileFlags[GameWorldSomething.currentPlane][var2][var3]
+              & 4) == -1) {
         return false;
       } else {
         int var8 = 0;
@@ -91,27 +92,29 @@ public final class GroundItem extends SceneNode {
           var8 = 4095 & 1 + var8;
           boolean var14 = false;
           boolean var15 = false;
-          if (0 == (BZipDecompressorState.tileFlags[GameWorldSomething.currentPlane][var9][var12]
-            & 4)) {
+          if ((
+              BZipDecompressorState.tileFlags[GameWorldSomething.currentPlane][var9][var12]
+                  & 4) == 0) {
             var14 = true;
           }
 
           int var17;
           int var16;
           label257:
-          for (var16 = 1 + GameWorldSomething.currentPlane; 3 >= var16; ++var16) {
-            if (-1 == ~(BZipDecompressorState.tileFlags[var16][var9][var12] & 8)) {
+          for (var16 = 1 + GameWorldSomething.currentPlane; var16 <= 3; ++var16) {
+            if (~(BZipDecompressorState.tileFlags[var16][var9][var12] & 8)
+                == -1) {
               int var18;
               int var20;
               if (var14 && var4[var16][var9][var12] != null) {
-                if (null != var4[var16][var9][var12].aClass70_2234) {
+                if (var4[var16][var9][var12].aClass70_2234 != null) {
                   var17 = Cursor.method1184(var10, (byte) 82);
                   if (~var4[var16][var9][var12].aClass70_2234.anInt1055 == ~var17
                     || var4[var16][var9][var12].aClass70_2234.anInt1059 == var17) {
                     continue;
                   }
 
-                  if (0 != var11) {
+                  if (var11 != 0) {
                     var18 = Cursor.method1184(var11, (byte) -93);
                     if (var18 == var4[var16][var9][var12].aClass70_2234.anInt1055
                       || var4[var16][var9][var12].aClass70_2234.anInt1059 == var18) {
@@ -132,7 +135,7 @@ public final class GroundItem extends SceneNode {
                   for (var17 = 0; var4[var16][var9][var12].anInt2223 > var17; ++var17) {
                     var18 =
                       (int) (63L & var4[var16][var9][var12].sceneGraphNodes[var17].aLong498 >> 14);
-                    if (-22 == ~var18) {
+                    if (~var18 == -22) {
                       var18 = 19;
                     }
 
@@ -140,7 +143,7 @@ public final class GroundItem extends SceneNode {
                       (int) (var4[var16][var9][var12].sceneGraphNodes[var17].aLong498 >> 20 & 3L);
                     var20 = var18 | var19 << 6;
                     if (~var20 == ~var10 || var11 != 0 && var20 == var11
-                      || -1 != ~var13 && var13 == var20) {
+                      || ~var13 != -1 && var13 == var20) {
                       continue label257;
                     }
                   }
@@ -191,7 +194,7 @@ public final class GroundItem extends SceneNode {
           }
 
           if (!var14) {
-            if (-2 >= ~var9 &&
+            if (~var9 <= -2 &&
               AbstractImageProducer.aByteArrayArrayArray2008[GameWorldSomething.currentPlane][-1
                 + var9][var12] != var6) {
               TextureSampler38.anIntArray3456[var23] =
@@ -203,8 +206,8 @@ public final class GroundItem extends SceneNode {
             }
 
             ++var12;
-            if (104 > var12) {
-              if (-1 >= ~(var9 + -1) && ~var6
+            if (var12 < 104) {
+              if (~(var9 + -1) <= -1 && ~var6
                 != ~AbstractImageProducer.aByteArrayArrayArray2008[GameWorldSomething.currentPlane][
                 -1 + var9][var12] &&
                 ~(BZipDecompressorState.tileFlags[GameWorldSomething.currentPlane][var9][var12] & 4)
@@ -229,10 +232,11 @@ public final class GroundItem extends SceneNode {
                   var6;
               }
 
-              if (-105 < ~(1 + var9) &&
+              if (~(1 + var9) > -105 &&
                 AbstractImageProducer.aByteArrayArrayArray2008[GameWorldSomething.currentPlane][var9
-                  + 1][var12] != var6 && 0 == (
-                BZipDecompressorState.tileFlags[GameWorldSomething.currentPlane][var9][var12] & 4)
+                  + 1][var12] != var6 && (
+                  BZipDecompressorState.tileFlags[GameWorldSomething.currentPlane][var9][var12]
+                      & 4) == 0
                 &&
                 ~(BZipDecompressorState.tileFlags[GameWorldSomething.currentPlane][1 + var9][var12
                   - 1] & 4) == -1) {
@@ -246,7 +250,7 @@ public final class GroundItem extends SceneNode {
             }
 
             --var12;
-            if (104 > 1 + var9 && var6
+            if (1 + var9 < 104 && var6
               != AbstractImageProducer.aByteArrayArrayArray2008[GameWorldSomething.currentPlane][
               var9 - -1][var12]) {
               TextureSampler38.anIntArray3456[var23] =
@@ -258,8 +262,8 @@ public final class GroundItem extends SceneNode {
             }
 
             --var12;
-            if (-1 >= ~var12) {
-              if (0 <= var9 + -1 &&
+            if (~var12 <= -1) {
+              if (var9 + -1 >= 0 &&
                 AbstractImageProducer.aByteArrayArrayArray2008[GameWorldSomething.currentPlane][-1
                   + var9][var12] != var6 &&
                 ~(BZipDecompressorState.tileFlags[GameWorldSomething.currentPlane][var9][var12] & 4)
@@ -285,7 +289,7 @@ public final class GroundItem extends SceneNode {
                   var6;
               }
 
-              if (-105 < ~(var9 - -1) &&
+              if (~(var9 - -1) > -105 &&
                 AbstractImageProducer.aByteArrayArrayArray2008[GameWorldSomething.currentPlane][var9
                   + 1][var12] != var6 &&
                 ~(4 & BZipDecompressorState.tileFlags[GameWorldSomething.currentPlane][var9][var12])
@@ -303,7 +307,7 @@ public final class GroundItem extends SceneNode {
           }
         }
 
-        if (-1000000 != FileCache.anIntArray686[var5]) {
+        if (FileCache.anIntArray686[var5] != -1000000) {
           FileCache.anIntArray686[var5] += 10;
           MilliFrameRegulator.anIntArray2696[var5] -= 50;
           DummyClass13.anIntArray2021[var5] += 50;

@@ -22,7 +22,7 @@ public final class SomethingSceneJ {
       int var7;
       for (var6 = var2; var4 + var2 >= var6; ++var6) {
         for (var7 = var3; var5 + var3 >= var7; ++var7) {
-          if (-1 >= ~var7 && 104 > var7 && -1 >= ~var6 && 104 > var6) {
+          if (~var7 <= -1 && var7 < 104 && ~var6 <= -1 && var6 < 104) {
             MouseRecorder.aByteArrayArrayArray1014[var0][var7][var6] = 127;
           }
         }
@@ -37,9 +37,9 @@ public final class SomethingSceneJ {
         }
       }
 
-      if (0 < var3 && ~var3 > -105) {
+      if (var3 > 0 && ~var3 > -105) {
         for (var6 = 1 + var2; (var2 + var4) > var6; ++var6) {
-          if (-1 >= ~var6 && var6 < 104) {
+          if (~var6 <= -1 && var6 < 104) {
             AbstractGameWorld.heightMap[var0][var3][var6] =
               AbstractGameWorld.heightMap[var0][var3 - 1][var6];
           }
@@ -48,7 +48,7 @@ public final class SomethingSceneJ {
 
       if (~var2 < -1 && ~var2 > -105) {
         for (var6 = var3 + 1; (var3 - -var5) > var6; ++var6) {
-          if (var6 >= 0 && 104 > var6) {
+          if (var6 >= 0 && var6 < 104) {
             AbstractGameWorld.heightMap[var0][var6][var2] =
               AbstractGameWorld.heightMap[var0][var6][var2 + -1];
           }
@@ -62,24 +62,26 @@ public final class SomethingSceneJ {
             != AbstractGameWorld.heightMap[var0][-1 + var3][var2]) {
             AbstractGameWorld.heightMap[var0][var3][var2] =
               AbstractGameWorld.heightMap[var0][-1 + var3][var2];
-          } else if (0 < var2
+          } else if (var2 > 0
             && ~AbstractGameWorld.heightMap[var0][var3][-1 + var2] != ~AbstractGameWorld.heightMap[
             -1 + var0][var3][var2 + -1]) {
             AbstractGameWorld.heightMap[var0][var3][var2] =
               AbstractGameWorld.heightMap[var0][var3][var2 - 1];
-          } else if (-1 > ~var3 && -1 > ~var2
+          } else if (~var3 < -1 && ~var2 < -1
             && ~AbstractGameWorld.heightMap[var0][-1 + var3][var2 - 1]
             != ~AbstractGameWorld.heightMap[var0 - 1][-1 + var3][var2 - 1]) {
             AbstractGameWorld.heightMap[var0][var3][var2] =
               AbstractGameWorld.heightMap[var0][-1 + var3][var2 - 1];
           }
-        } else if (0 < var3 && 0 != AbstractGameWorld.heightMap[var0][var3 + -1][var2]) {
+        } else if (var3 > 0 &&
+            AbstractGameWorld.heightMap[var0][var3 + -1][var2] != 0) {
           AbstractGameWorld.heightMap[var0][var3][var2] =
             AbstractGameWorld.heightMap[var0][var3 + -1][var2];
-        } else if (-1 > ~var2 && ~AbstractGameWorld.heightMap[var0][var3][var2 - 1] != -1) {
+        } else if (~var2 < -1
+            && ~AbstractGameWorld.heightMap[var0][var3][var2 - 1] != -1) {
           AbstractGameWorld.heightMap[var0][var3][var2] =
             AbstractGameWorld.heightMap[var0][var3][var2 + -1];
-        } else if (var3 > 0 && 0 < var2
+        } else if (var3 > 0 && var2 > 0
           && AbstractGameWorld.heightMap[var0][var3 - 1][var2 + -1] != 0) {
           AbstractGameWorld.heightMap[var0][var3][var2] =
             AbstractGameWorld.heightMap[var0][var3 - 1][var2 + -1];
@@ -99,7 +101,7 @@ public final class SomethingSceneJ {
 
   public static int method872(int var0, int var1, int var2) {
     Inventory var3 = (Inventory) SceneGraphTile.aClass130_2220.get(var1);
-      return null == var3 ?
+      return var3 == null ?
         0 :
         (var0 >= ~var2 && var2 < var3.counts.length ? var3.counts[var2] : 0);
   }

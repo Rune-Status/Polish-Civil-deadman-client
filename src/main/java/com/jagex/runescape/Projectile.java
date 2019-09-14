@@ -57,7 +57,7 @@ public final class Projectile extends SceneNode {
       this.anInt2925 = var6;
       this.anInt2911 = var5;
       int var12 = RenderAnimation.method898((byte) 42, this.anInt2915).anInt542;
-      if (0 == ~var12) {
+      if (~var12 == 0) {
         this.aClass142_2923 = null;
       } else {
         this.aClass142_2923 = GameClient.method45(var12, (byte) -20);
@@ -74,7 +74,7 @@ public final class Projectile extends SceneNode {
       int var11,
       DummyClass0 var12 ) {
     AbstractModel var13 = this.method2022(-126);
-      if (null != var13) {
+      if (var13 != null) {
         var13.draw(var1, var2, var3, var4, var5, var6, var7, var8, var9, var11,
             this.aClass127_Sub1_2909);
         this.anInt2912 = var13.getMinimumY();
@@ -94,7 +94,7 @@ public final class Projectile extends SceneNode {
         AbstractModel var3 =
           var2.method966(this.anInt2898, (byte) -30, this.anInt2922,
               this.anInt2896);
-        if (null == var3) {
+        if (var3 == null) {
           return null;
         } else {
           var3.method1896(this.anInt2917);
@@ -138,7 +138,7 @@ public final class Projectile extends SceneNode {
           this.anInt2898 = this.anInt2922 + 1;
           if (this.aClass142_2923.anIntArray1851.length <= this.anInt2898) {
             this.anInt2898 -= this.aClass142_2923.anInt1865;
-            if (-1 < ~this.anInt2898
+            if (~this.anInt2898 > -1
               || ~this.anInt2898 <= ~this.aClass142_2923.anIntArray1851.length) {
               this.anInt2898 = -1;
             }
@@ -166,7 +166,7 @@ public final class Projectile extends SceneNode {
       this.aDouble2921 =
         Math.sqrt(this.aDouble2918 * this.aDouble2918
             + this.aDouble2895 * this.aDouble2895);
-      if (0 == ~this.anInt2927) {
+      if (~this.anInt2927 == 0) {
         this.aDouble2913 = (-this.aDouble2914 + var4) / var6;
       } else {
         if (!this.aBoolean2904) {
@@ -191,10 +191,10 @@ public final class Projectile extends SceneNode {
         Projectile.method2019(true);
       }
 
-      while (null != var5) {
+      while (var5 != null) {
         if (var4 == var5.anInt2314 && ~var5.anInt2326 == ~(128 * var0)
           && var5.anInt2308 == 128 * var3 && ~var1.anInt1527 == ~var5.aClass111_2320.anInt1527) {
-          if (null != var5.aClass3_Sub24_Sub1_2312) {
+          if (var5.aClass3_Sub24_Sub1_2312 != null) {
             MonoChromaticImageBuffer.aClass3_Sub24_Sub2_2563.method461(
               var5.aClass3_Sub24_Sub1_2312);
             var5.aClass3_Sub24_Sub1_2312 = null;
@@ -250,8 +250,8 @@ public final class Projectile extends SceneNode {
     int var3 = 96 / ((var2 - -75) / 33);
 
       int var4;
-      for (var4 = 1; 1 < var0; var0 >>= 1) {
-        if (0 != (1 & var0)) {
+      for (var4 = 1; var0 > 1; var0 >>= 1) {
+        if ((1 & var0) != 0) {
           var4 *= var1;
         }
 

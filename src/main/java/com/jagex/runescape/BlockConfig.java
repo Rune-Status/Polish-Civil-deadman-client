@@ -64,7 +64,7 @@ public final class BlockConfig {
         this.aFloat1189 = var1.readUnsignedShort() / 256.0F;
       }
 
-      if (-1 == ~(16 & var2)) {
+      if (~(16 & var2) == -1) {
         this.sunPosZ = -50;
         this.sunPositionX = -50;
         this.sunPositionY = -60;
@@ -80,7 +80,7 @@ public final class BlockConfig {
         this.anInt1175 = var1.readInt();
       }
 
-      if (-1 == ~(64 & var2)) {
+      if (~(64 & var2) == -1) {
         this.anInt1184 = 0;
       } else {
         this.anInt1184 = var1.readUnsignedShort();
@@ -88,7 +88,7 @@ public final class BlockConfig {
   }
 
   public static void method1427(boolean var0, int var1) {
-    if (-1 == var1 && !MidiSomething.aBoolean1158) {
+    if (var1 == -1 && !MidiSomething.aBoolean1158) {
         SceneNode.method1870(false);
       } else if (var1 != -1 && (AbstractFrameRegulator.anInt1691 != var1 || !BitVariable.method1391(
         -1)) && BZipDecompressorState.anInt120 != 0 && !MidiSomething.aBoolean1158) {

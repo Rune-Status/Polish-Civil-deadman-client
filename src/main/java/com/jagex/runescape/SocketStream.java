@@ -61,7 +61,7 @@ public final class SocketStream implements Runnable {
               }
             }
 
-            if (0 >= var1) {
+            if (var1 <= 0) {
               continue;
             }
 
@@ -84,11 +84,11 @@ public final class SocketStream implements Runnable {
           }
 
           try {
-            if (null != this.anInputStream1232) {
+            if (this.anInputStream1232 != null) {
               this.anInputStream1232.close();
             }
 
-            if (null != this.anOutputStream1231) {
+            if (this.anOutputStream1231 != null) {
               this.anOutputStream1231.close();
             }
 
@@ -111,7 +111,7 @@ public final class SocketStream implements Runnable {
     if (!this.aBoolean1241) {
         while (var2 > 0) {
           int var5 = this.anInputStream1232.read(var4, var1, var2);
-          if (0 >= var5) {
+          if (var5 <= 0) {
             throw new EOFException();
           }
 
@@ -145,7 +145,7 @@ public final class SocketStream implements Runnable {
               }
             }
 
-            if (null == this.aClass64_1237) {
+            if (this.aClass64_1237 == null) {
               this.aClass64_1237 = this.aClass87_1239.createThread(0, 3, this);
             }
             this.notifyAll();
@@ -191,7 +191,7 @@ public final class SocketStream implements Runnable {
             TextureSampler25.sleep(1L);
           }
 
-          if (-2 == ~this.aClass64_1237.status) {
+          if (~this.aClass64_1237.status == -2) {
             try {
               ((Thread) this.aClass64_1237.result).join();
             } catch (InterruptedException var4) {
@@ -296,17 +296,17 @@ public final class SocketStream implements Runnable {
   public static void method1470(int var0, AnimationSequence var1, int var2,
       int var3, boolean var4,
       int var5) {
-    if (-51 < ~SomethingLight0.anInt1552) {
+    if (~SomethingLight0.anInt1552 > -51) {
         if (var1.anIntArrayArray1867 != null
             && ~var5 > ~var1.anIntArrayArray1867.length
-            && null != var1.anIntArrayArray1867[var5]) {
+            && var1.anIntArrayArray1867[var5] != null) {
           int var6 = var1.anIntArrayArray1867[var5][0];
           int var7 = var6 >> 8;
           int var10;
-          if (1 < var1.anIntArrayArray1867[var5].length) {
+          if (var1.anIntArrayArray1867[var5].length > 1) {
             var10 = (int) (var1.anIntArrayArray1867[var5].length * Math
                 .random());
-            if (0 < var10) {
+            if (var10 > 0) {
               var7 = var1.anIntArrayArray1867[var5][var10];
             }
           }
@@ -319,7 +319,7 @@ public final class SocketStream implements Runnable {
             }
 
           } else {
-            if (0 != DummyClass28.anInt340) {
+            if (DummyClass28.anInt340 != 0) {
               Inventory.anIntArray2550[SomethingLight0.anInt1552] = var7;
               SomethingIndex150.anIntArray2068[SomethingLight0.anInt1552] = var8;
               int var11 = (-64 + var0) / 128;

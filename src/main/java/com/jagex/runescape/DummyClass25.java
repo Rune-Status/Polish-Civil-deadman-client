@@ -29,7 +29,7 @@ public final class DummyClass25 {
 
   public static void resizeCanvas() {
     Component var1 = null;
-      if (null == TextureSampler30.fullScreenFrame) {
+      if (TextureSampler30.fullScreenFrame == null) {
         if (TextureSampler27.FRAME != null) {
           var1 = TextureSampler27.FRAME;
         }
@@ -85,7 +85,7 @@ public final class DummyClass25 {
       try {
         SignLinkRequest var3 = var0.getSettings("runescape", 12);
 
-        while (0 == var3.status) {
+        while (var3.status == 0) {
           TextureSampler25.sleep(1L);
         }
 

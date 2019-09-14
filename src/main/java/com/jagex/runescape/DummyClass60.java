@@ -37,7 +37,7 @@ public final class DummyClass60 {
 
       int var1;
       for (var1 = 0; TextureSampler0.players.length > var1; ++var1) {
-        if (null != TextureSampler0.players[var1]) {
+        if (TextureSampler0.players[var1] != null) {
           TextureSampler0.players[var1].anInt2772 = -1;
         }
       }
@@ -84,7 +84,7 @@ public final class DummyClass60 {
         DummyClass29.method909(120, var5);
       }
 
-      if (null != TextureSampler27.aClass11_3087) {
+      if (TextureSampler27.aClass11_3087 != null) {
         DummyClass29.method909(117, TextureSampler27.aClass11_3087);
         TextureSampler27.aClass11_3087 = null;
       }
@@ -101,7 +101,7 @@ public final class DummyClass60 {
         }
       }
 
-      if (1 == TextureSampler25.amountContextActions) {
+      if (TextureSampler25.amountContextActions == 1) {
         DummyClass36.aBoolean2615 = false;
         AbstractSomethingTexture.method1340(AbstractIndexedColorSprite.anInt1462,
           SomethingWorldMapy.anInt3552, (byte) -40, TextureSampler29.anInt3395,
@@ -129,7 +129,7 @@ public final class DummyClass60 {
       }
 
       TextureSampler24.method226(var1, 58);
-      if (0 != ~InventoryConfig.anInt3655) {
+      if (~InventoryConfig.anInt3655 != 0) {
         ClassCheckRequest.method124(var0 ^ 6509, 1, InventoryConfig.anInt3655);
       }
 

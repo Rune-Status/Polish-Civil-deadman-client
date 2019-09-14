@@ -56,7 +56,7 @@ public final class TextureSampler2 extends AbstractTextureSampler {
         TextureSampler2.aClass94_3379 = null;
       }
 
-      for (; null != var1; var1 = (SpawnedGameObject) TextureSampler26.aClass61_3075.getNext()) {
+      for (; var1 != null; var1 = (SpawnedGameObject) TextureSampler26.aClass61_3075.getNext()) {
         if (var1.aliveTime == -1) {
           var1.anInt2261 = 0;
           DummyClass22.method1798(56, var1);

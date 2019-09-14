@@ -28,11 +28,11 @@ public final class WidgetAccess extends Node {
 
   public boolean method92(int var1, byte var2 ) {
     int var3 = 13 / ((-60 - var2) / 46);
-      return 0 != (this.anInt2205 >> 1 + var1 & 1);
+      return (this.anInt2205 >> 1 + var1 & 1) != 0;
   }
 
   public boolean method93(int var1 ) {
-    return var1 != 572878952 || 0 != (572878952 & this.anInt2205) >> 29;
+    return var1 != 572878952 || (572878952 & this.anInt2205) >> 29 != 0;
   }
 
   public int method94(byte var1 ) {
@@ -56,7 +56,7 @@ public final class WidgetAccess extends Node {
   }
 
   public boolean method97(int var1 ) {
-    return var1 != -20710 || 0 != (1 & this.anInt2205 >> 22);
+    return var1 != -20710 || (1 & this.anInt2205 >> 22) != 0;
   }
 
   public boolean method98(boolean var1 ) {
@@ -64,7 +64,7 @@ public final class WidgetAccess extends Node {
         WidgetAccess.anIntArray2209 = null;
       }
 
-      return -1 != ~(this.anInt2205 >> 21 & 1);
+      return ~(this.anInt2205 >> 21 & 1) != -1;
   }
 
   public boolean method99(int var1 ) {
@@ -72,7 +72,7 @@ public final class WidgetAccess extends Node {
         WidgetAccess.scripts = null;
       }
 
-      return -1 != ~((1738913629 & this.anInt2205) >> 30);
+      return ~((1738913629 & this.anInt2205) >> 30) != -1;
   }
 
   public boolean method100(byte var1 ) {
@@ -113,10 +113,10 @@ public final class WidgetAccess extends Node {
                     }
                   }
 
-                  if (null != var6.aClass19_2233) {
+                  if (var6.aClass19_2233 != null) {
                     if (var6.aClass19_2233.aClass140_429 instanceof GlModel) {
                       var7 = (GlModel) var6.aClass19_2233.aClass140_429;
-                      if (0L == (var6.aClass19_2233.aLong428 & Long.MIN_VALUE)) {
+                      if ((var6.aClass19_2233.aLong428 & Long.MIN_VALUE) == 0L) {
                         var7.method1920(false, true, true, true, false, true, true);
                       } else {
                         var7.method1920(true, true, true, true, true, true, true);
@@ -125,8 +125,8 @@ public final class WidgetAccess extends Node {
 
                     if (var6.aClass19_2233.aClass140_423 instanceof GlModel) {
                       var7 = (GlModel) var6.aClass19_2233.aClass140_423;
-                      if (-1L == ~(Long.MIN_VALUE
-                          & var6.aClass19_2233.aLong428)) {
+                      if (~(Long.MIN_VALUE
+                          & var6.aClass19_2233.aLong428) == -1L) {
                         var7.method1920(false, true, true, true, false, true,
                             true);
                       } else {
@@ -139,7 +139,7 @@ public final class WidgetAccess extends Node {
                   if (var6.aClass70_2234 != null) {
                     if (var6.aClass70_2234.sceneNode0 instanceof GlModel) {
                       var7 = (GlModel) var6.aClass70_2234.sceneNode0;
-                      if (-1L == ~(var6.aClass70_2234.key & Long.MIN_VALUE)) {
+                      if (~(var6.aClass70_2234.key & Long.MIN_VALUE) == -1L) {
                         var7.method1920(false, true, true, true, false, true,
                             true);
                       } else {
@@ -163,7 +163,8 @@ public final class WidgetAccess extends Node {
                   for (int var10 = 0; ~var10 > ~var6.anInt2223; ++var10) {
                     if (var6.sceneGraphNodes[var10].sceneNode instanceof GlModel) {
                       GlModel var8 = (GlModel) var6.sceneGraphNodes[var10].sceneNode;
-                      if (-1L == ~(Long.MIN_VALUE & var6.sceneGraphNodes[var10].aLong498)) {
+                      if (~(Long.MIN_VALUE
+                          & var6.sceneGraphNodes[var10].aLong498) == -1L) {
                         var8.method1920(false, true, true, true, false, true, true);
                       } else {
                         var8.method1920(true, true, true, true, true, true, true);

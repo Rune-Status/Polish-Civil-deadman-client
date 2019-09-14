@@ -73,7 +73,7 @@ public abstract class AbstractImageProducer {
       if (var3 == 235) {
         for (; ~var6 > ~var5.length; ++var6) {
           Widget var7 = var5[var6];
-          if (null != var7 && var7.anInt190 == var0) {
+          if (var7 != null && var7.anInt190 == var0) {
             Structure.method603(var4, 13987, var2, var7, var1);
             FileTable.method1224(var7, 23730, var4, var2);
             if (~(var7.anInt240 - var7.anInt168) > ~var7.anInt247) {
@@ -84,7 +84,7 @@ public abstract class AbstractImageProducer {
               var7.anInt208 = var7.anInt252 - var7.anInt193;
             }
 
-            if (-1 < ~var7.anInt208) {
+            if (~var7.anInt208 > -1) {
               var7.anInt208 = 0;
             }
 
@@ -92,7 +92,7 @@ public abstract class AbstractImageProducer {
               var7.anInt247 = 0;
             }
 
-            if (-1 == ~var7.anInt187) {
+            if (~var7.anInt187 == -1) {
               FileRequester.method2104(var7, var1, 235 + -343);
             }
           }

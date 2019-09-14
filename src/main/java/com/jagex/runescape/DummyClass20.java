@@ -53,7 +53,7 @@ public final class DummyClass20 {
           && var4 < var5 + 16 + SomethingSceneI.anInt433 && var0 >= 16 + var6
           && var1 + var6 - 16 > var0) {
           var8 = var1 * (-32 + var1) / var7;
-          if (8 > var8) {
+          if (var8 < 8) {
             var8 = 8;
           }
 

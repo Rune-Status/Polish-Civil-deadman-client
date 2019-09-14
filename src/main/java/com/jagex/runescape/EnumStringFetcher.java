@@ -20,7 +20,7 @@ public final class EnumStringFetcher implements Interface4 {
         return var6.getString((int) key, (byte) 120);
       } else {
         if (var1 != 1 && ~var1 != -11) {
-          return var1 != 6 && var1 != 7 && 11 != var1 ?
+          return var1 != 6 && var1 != 7 && var1 != 11 ?
               (var3 != 4936 ? null : null) :
               TextureSampler36.getEnum(enums[0], true)
                   .getString((int) key, (byte) -69);
@@ -47,7 +47,7 @@ public final class EnumStringFetcher implements Interface4 {
 
       int var3 = '\uffff' & var1;
       if (SceneNode.aClass11ArrayArray1834[var2] == null
-        || null == SceneNode.aClass11ArrayArray1834[var2][var3]) {
+        || SceneNode.aClass11ArrayArray1834[var2][var3] == null) {
         boolean var4 = MovedStatics0.method57(var2, 104);
         if (!var4) {
           return null;

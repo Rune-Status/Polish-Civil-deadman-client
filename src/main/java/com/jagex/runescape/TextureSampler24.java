@@ -101,7 +101,7 @@ public final class TextureSampler24 extends AbstractTextureSampler {
 
       int var3;
       int var4;
-      if (null == var2) {
+      if (var2 == null) {
         var4 = GroundItem.viewHeight;
         var3 = DummyClass30.viewWidth;
       } else {
@@ -114,7 +114,7 @@ public final class TextureSampler24 extends AbstractTextureSampler {
   }
 
   public static void method226(int var0, int var1) {
-    if (0 != ~var0) {
+    if (~var0 != 0) {
         if (var1 <= 27) {
           TextureSampler24.method228(null, null, true);
         }
@@ -124,7 +124,7 @@ public final class TextureSampler24 extends AbstractTextureSampler {
 
           for (int var3 = 0; var3 < var2.length; ++var3) {
             Widget var4 = var2[var3];
-            if (null != var4.anObjectArray159) {
+            if (var4.anObjectArray159 != null) {
               ClientScriptCall var5 = new ClientScriptCall();
               var5.arguments = var4.anObjectArray159;
               var5.aClass11_2449 = var4;

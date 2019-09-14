@@ -19,14 +19,14 @@ public final class SomethingQuickChat2 extends SubNode {
 
   public void method525(int var1 ) {
     int var2;
-      if (null != this.anIntArray3540) {
+      if (this.anIntArray3540 != null) {
         for (var2 = 0; this.anIntArray3540.length > var2; ++var2) {
           this.anIntArray3540[var2] =
             TextureSampler3.method308(this.anIntArray3540[var2], '\u8000');
         }
       }
 
-      if (null != this.anIntArray3534) {
+      if (this.anIntArray3534 != null) {
         for (var2 = 0; this.anIntArray3534.length > var2; ++var2) {
           this.anIntArray3534[var2] =
             TextureSampler3.method308(this.anIntArray3534[var2], '\u8000');
@@ -88,7 +88,7 @@ public final class SomethingQuickChat2 extends SubNode {
 
   public int method529(byte var1, int var2 ) {
     int var3 = 45 / ((var1 - -30) / 49);
-      if (null == this.anIntArray3534) {
+      if (this.anIntArray3534 == null) {
         return -1;
       } else {
         for (int var4 = 0; this.anIntArray3534.length > var4; ++var4) {
@@ -125,12 +125,14 @@ public final class SomethingQuickChat2 extends SubNode {
 
   public static GameString method531(byte var0) {
     GameString var1;
-      if (-2 == ~Something3d.anInt3012 && -3 < ~TextureSampler25.amountContextActions) {
+      if (~Something3d.anInt3012 == -2 && ~TextureSampler25.amountContextActions
+          > -3) {
         var1 = RenderAnimation.concat(new GameString[] {
           TextureSampler14.aClass94_3388, DummyInputStream.aClass94_43,
           RenderAnimation.aClass94_378, WorldMapLabel.aClass94_1724
         });
-      } else if (SceneNode.aBoolean1837 && 2 > TextureSampler25.amountContextActions) {
+      } else if (SceneNode.aBoolean1837 && TextureSampler25.amountContextActions
+          < 2) {
         var1 = RenderAnimation.concat(new GameString[] {
           Parameter.aClass94_3621, DummyInputStream.aClass94_43, DummyClass59.aClass94_676,
           WorldMapLabel.aClass94_1724
@@ -157,7 +159,7 @@ public final class SomethingQuickChat2 extends SubNode {
   public static void method532(int var0, int var1) {
     if (var1 == -28236) {
         Inventory var2 = (Inventory) SceneGraphTile.aClass130_2220.get(var0);
-        if (null != var2) {
+        if (var2 != null) {
           var2.unlinkNode();
         }
       }
@@ -178,7 +180,7 @@ public final class SomethingQuickChat2 extends SubNode {
           var5.fillRect(0, 0, DummyClass30.viewWidth, GroundItem.viewHeight);
         }
 
-        if (null == var0) {
+        if (var0 == null) {
           var0 = new Color(140, 17, 17);
         }
 
@@ -187,7 +189,7 @@ public final class SomethingQuickChat2 extends SubNode {
         }
 
         try {
-          if (null == MilliFrameRegulator.anImage2695) {
+          if (MilliFrameRegulator.anImage2695 == null) {
             MilliFrameRegulator.anImage2695 = GameCanvas.INSTANCE
                 .createImage(304, 34);
           }

@@ -24,15 +24,14 @@ public final class AudioStreamEncoder3 extends AudioStreamEncoder {
   }
 
   private void method464(AudioSomethingSomething var1, int var2, int var3) {
-    if (-1 != ~(this.aClass3_Sub24_Sub4_3493.anIntArray3518[var1.anInt2514] & 4)
-        && -1 < ~var1.anInt2506) {
+    if (~(this.aClass3_Sub24_Sub4_3493.anIntArray3518[var1.anInt2514] & 4) != -1
+        && ~var1.anInt2506 > -1) {
         int var4 =
             this.aClass3_Sub24_Sub4_3493.anIntArray3509[var1.anInt2514] / DummyClass60.sampleRate;
         int var5 = (var4 + 1048575 + -var1.anInt2516) / var4;
         var1.anInt2516 = 1048575 & var4 * var3 + var1.anInt2516;
         if (~var3 <= ~var5) {
-          if (0
-              == this.aClass3_Sub24_Sub4_3493.anIntArray3519[var1.anInt2514]) {
+          if (this.aClass3_Sub24_Sub4_3493.anIntArray3519[var1.anInt2514] == 0) {
             var1.aClass3_Sub24_Sub1_2507 =
                 AudioStreamEncoder1.method432(var1.aClass3_Sub12_Sub1_2509,
                     var1.aClass3_Sub24_Sub1_2507.method438(),
@@ -71,8 +70,8 @@ public final class AudioStreamEncoder3 extends AudioStreamEncoder {
   public AudioStreamEncoder method411() {
     AudioSomethingSomething var1 = (AudioSomethingSomething) this.aClass61_3489
           .getFirst();
-      return null != var1 ?
-        (null != var1.aClass3_Sub24_Sub1_2507 ? var1.aClass3_Sub24_Sub1_2507 : this
+      return var1 != null ?
+        (var1.aClass3_Sub24_Sub1_2507 != null ? var1.aClass3_Sub24_Sub1_2507 : this
             .method414()) :
         null;
   }
@@ -111,7 +110,7 @@ public final class AudioStreamEncoder3 extends AudioStreamEncoder {
     AudioSomethingSomething var1;
       do {
         var1 = (AudioSomethingSomething) this.aClass61_3489.getNext();
-        if (null == var1) {
+        if (var1 == null) {
           return null;
         }
       } while (var1.aClass3_Sub24_Sub1_2507 == null);
@@ -150,7 +149,7 @@ public final class AudioStreamEncoder3 extends AudioStreamEncoder {
   private void method469(int[] var1, AudioSomethingSomething var2, int var3, int var4,
                                int var5, byte var6) {
     if ((4 & this.aClass3_Sub24_Sub4_3493.anIntArray3518[var2.anInt2514]) != 0
-        && -1 < ~var2.anInt2506) {
+        && ~var2.anInt2506 > -1) {
         int var7 =
             this.aClass3_Sub24_Sub4_3493.anIntArray3509[var2.anInt2514] / DummyClass60.sampleRate;
 
@@ -171,8 +170,8 @@ public final class AudioStreamEncoder3 extends AudioStreamEncoder {
           }
 
           var2.anInt2516 += var7 * var8 + -1048576;
-          if (-1
-              == ~this.aClass3_Sub24_Sub4_3493.anIntArray3519[var2.anInt2514]) {
+          if (~this.aClass3_Sub24_Sub4_3493.anIntArray3519[var2.anInt2514]
+              == -1) {
             var2.aClass3_Sub24_Sub1_2507 =
                 AudioStreamEncoder1
                     .method432(var2.aClass3_Sub12_Sub1_2509, var11.method438(),
@@ -228,7 +227,7 @@ public final class AudioStreamEncoder3 extends AudioStreamEncoder {
   public static WidgetUpdate method466(int var0, int var1, int var2) {
     WidgetUpdate var3 =
         (WidgetUpdate) GameClient.aClass130_2194.get(var2 | (long) var1 << 32);
-      if (null == var3) {
+      if (var3 == null) {
         var3 = new WidgetUpdate(var1, var2);
         GameClient.aClass130_2194.put(var3.key, var3);
       }

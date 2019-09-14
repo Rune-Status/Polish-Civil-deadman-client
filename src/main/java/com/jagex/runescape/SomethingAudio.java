@@ -34,14 +34,14 @@ public final class SomethingAudio {
             var8 = 0;
           }
 
-          if (-15 > ~var9) {
+          if (~var9 < -15) {
             var9 = 14;
           }
 
           while (var8 < var9) {
             double var12 = (var8 - var6) * 3.141592653589793D;
             double var14 = var10;
-            if (-1.0E-4D > var12 || var12 > 1.0E-4D) {
+            if (var12 < -1.0E-4D || var12 > 1.0E-4D) {
               var14 = var10 * (Math.sin(var12) / var12);
             }
 
@@ -56,7 +56,7 @@ public final class SomethingAudio {
 
   public byte[] method2173(byte[] var1, byte var2 ) {
     int var3 = 53 % ((var2 - -39) / 50);
-      if (null != this.anIntArrayArray1999) {
+      if (this.anIntArrayArray1999 != null) {
         int var4 = 14 + (int) ((long) var1.length * this.anInt2001
             / this.anInt1997);
         int[] var5 = new int[var4];
@@ -83,8 +83,8 @@ public final class SomethingAudio {
 
         for (var8 = 0; var4 > var8; ++var8) {
           int var13 = var5[var8] - -32768 >> 16;
-          if (127 >= ~var13) {
-            if (127 >= var13) {
+          if (~var13 <= 127) {
+            if (var13 <= 127) {
               var1[var8] = (byte) var13;
             } else {
               var1[var8] = 127;
@@ -99,7 +99,7 @@ public final class SomethingAudio {
   }
 
   public int method2177(int var1, byte var2 ) {
-    if (null != this.anIntArrayArray1999) {
+    if (this.anIntArrayArray1999 != null) {
         var1 = (int) ((long) this.anInt2001
             * var1 / this.anInt1997);
       }
@@ -111,7 +111,7 @@ public final class SomethingAudio {
     if (var1) {
         return -69;
       } else {
-        if (null != this.anIntArrayArray1999) {
+        if (this.anIntArrayArray1999 != null) {
           var2 = (int) ((long) this.anInt2001
               * var2 / this.anInt1997) + 6;
         }

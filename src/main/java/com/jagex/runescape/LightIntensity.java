@@ -35,14 +35,14 @@ public final class LightIntensity {
   }
 
   private void method1191(int var1, Buffer var2, int var3, boolean var4) {
-    if (1 == var1) {
+    if (var1 == 1) {
         this.anInt896 = var2.readUnsignedByte();
       } else {
         if (var1 == 2) {
           this.anInt908 = var2.readUnsignedShort();
-        } else if (-4 == ~var1) {
+        } else if (~var1 == -4) {
           this.anInt899 = var2.readUnsignedShort();
-        } else if (4 == var1) {
+        } else if (var1 == 4) {
           this.anInt907 = var2.method787((byte) 46);
         }
       }

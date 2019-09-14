@@ -20,7 +20,7 @@ public final class DummyOutputStream extends OutputStream {
   public static short[] copy(int var0, short[] var1) {
     if (var0 != 23032) {
         return null;
-      } else if (null != var1) {
+      } else if (var1 != null) {
         short[] var2 = new short[var1.length];
         ArrayUtils.method1361(var1, 0, var2, 0, var1.length);
         return var2;
@@ -31,7 +31,7 @@ public final class DummyOutputStream extends OutputStream {
 
   public static void method66(GameString var0, int var1, int var2, byte var3, int var4) {
     Widget var5 = AbstractDirectColorSprite.method638((byte) -19, var4, var1);
-      if (null != var5) {
+      if (var5 != null) {
         if (var5.anObjectArray314 != null) {
           ClientScriptCall var6 = new ClientScriptCall();
           var6.arguments = var5.anObjectArray314;
@@ -42,13 +42,13 @@ public final class DummyOutputStream extends OutputStream {
         }
 
         boolean var8 = true;
-        if (0 < var5.anInt189) {
+        if (var5.anInt189 > 0) {
           var8 = ProjectileNode.method715(205, var5);
         }
 
         if (var8) {
           if (GameClient.method44(var5).method92(var2 - 1, (byte) -108)) {
-            if (1 == var2) {
+            if (var2 == 1) {
               TextureSampler12.secureBuffer.writePacket(155);
               TextureSampler12.secureBuffer.writeInt(var4);
               ++Deque.anInt937;
@@ -56,7 +56,7 @@ public final class DummyOutputStream extends OutputStream {
             }
 
             if (var3 < -7) {
-              if (-3 == ~var2) {
+              if (~var2 == -3) {
                 ++TextureSampler30.anInt3122;
                 TextureSampler12.secureBuffer.writePacket(196);
                 TextureSampler12.secureBuffer.writeInt(var4);
@@ -84,28 +84,28 @@ public final class DummyOutputStream extends OutputStream {
                 ++SomethingIndex150.anInt2081;
               }
 
-              if (6 == var2) {
+              if (var2 == 6) {
                 TextureSampler12.secureBuffer.writePacket(168);
                 ++DummyClass52.anInt1172;
                 TextureSampler12.secureBuffer.writeInt(var4);
                 TextureSampler12.secureBuffer.writeShort(var1);
               }
 
-              if (-8 == ~var2) {
+              if (~var2 == -8) {
                 ++DummyClass59.anInt674;
                 TextureSampler12.secureBuffer.writePacket(166);
                 TextureSampler12.secureBuffer.writeInt(var4);
                 TextureSampler12.secureBuffer.writeShort(var1);
               }
 
-              if (-9 == ~var2) {
+              if (~var2 == -9) {
                 TextureSampler12.secureBuffer.writePacket(64);
                 ++LightIntensity.anInt903;
                 TextureSampler12.secureBuffer.writeInt(var4);
                 TextureSampler12.secureBuffer.writeShort(var1);
               }
 
-              if (-10 == ~var2) {
+              if (~var2 == -10) {
                 ++DummyClass52.anInt1166;
                 TextureSampler12.secureBuffer.writePacket(53);
                 TextureSampler12.secureBuffer.writeInt(var4);
@@ -147,7 +147,7 @@ public final class DummyOutputStream extends OutputStream {
         StillGraphic.method1950(var2, true);
       }
 
-      if (-129 < ~var2.anInt2819 || var2.anInt2829 < 128 || var2.anInt2819 >= 13184
+      if (~var2.anInt2819 > -129 || var2.anInt2829 < 128 || var2.anInt2819 >= 13184
         || var2.anInt2829 >= 13184) {
         var2.animationId = -1;
         var2.anInt2842 = -1;
@@ -159,8 +159,9 @@ public final class DummyOutputStream extends OutputStream {
       }
 
       if (var1 == 2279) {
-        if (var2 == TextureCache.localPlayer && (var2.anInt2819 < 1536 || -1537 < ~var2.anInt2829
-          || -11777 >= ~var2.anInt2819 || var2.anInt2829 >= 11776)) {
+        if (var2 == TextureCache.localPlayer && (var2.anInt2819 < 1536 ||
+            ~var2.anInt2829 > -1537
+          || ~var2.anInt2819 <= -11777 || var2.anInt2829 >= 11776)) {
           var2.anInt2842 = -1;
           var2.anInt2800 = 0;
           var2.anInt2790 = 0;

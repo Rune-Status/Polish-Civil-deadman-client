@@ -18,7 +18,7 @@ public final class PlayerVariable {
   public void method970(int var1, Buffer var2 ) {
     while (true) {
         int var3 = var2.readUnsignedByte();
-        if (0 == var3) {
+        if (var3 == 0) {
           if (var1 != -20638) {
             PlayerVariable.method969(null, 55);
           }
@@ -47,7 +47,7 @@ public final class PlayerVariable {
       int var3;
       for (var3 = 0; TextureSampler39.anInt3287 > var3; ++var3) {
         ItemConfig var4 = DummyClass35.getItemConfig(var3, (byte) 119);
-        if (-1 >= ~var4.anInt793 || ~var4.anInt761 <= -1) {
+        if (~var4.anInt793 <= -1 || ~var4.anInt761 <= -1) {
           var1[var2++] = var3;
         }
       }
@@ -93,13 +93,13 @@ public final class PlayerVariable {
         int[] var21 = null;
         if (var10) {
           int var24;
-          if (1 == var11) {
+          if (var11 == 1) {
             var23 = BufferData.method1734(var19, 0.0F, var16, var17, null, var1, var3, var13, var18,
               (byte) -122, var6, true, var15, var2, var12, 64, var4, 128);
             var24 = BufferData.method1734(var19, 0.0F, var16, var17, null, var1, var3, var13, var18,
               (byte) -114, var6, true, var15, var2, var12, 128, var4, 64);
             var21 = new int[] {var24, var23, var22[2], var23, var22[0], var22[2]};
-          } else if (2 == var11) {
+          } else if (var11 == 2) {
             var21 = new int[6];
             var23 = BufferData.method1734(var19, 0.0F, var16, var17, null, var1, var3, var13, var18,
               (byte) -121, var6, true, var15, var2, var12, 128, var4, 128);
@@ -197,8 +197,8 @@ public final class PlayerVariable {
                       var22[3], var22[2],
                       var24, var22[2], var22[1], var24, var22[1], var25
                   };
-                } else if (10 != var11) {
-                  if (-12 == ~var11) {
+                } else if (var11 != 10) {
+                  if (~var11 == -12) {
                     var21 = new int[12];
                     var23 =
                         BufferData

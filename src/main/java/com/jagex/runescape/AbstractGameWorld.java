@@ -18,7 +18,7 @@ public abstract class AbstractGameWorld {
         this.method1070(15);
       }
 
-      return 0 != (1 & this.flags);
+      return (1 & this.flags) != 0;
   }
 
   public final boolean method1072(boolean var1) {
@@ -34,7 +34,7 @@ public abstract class AbstractGameWorld {
   }
 
   public final boolean method1075(int var1) {
-    if (64 != var1) {
+    if (var1 != 64) {
         this.flags = 51;
       }
 
@@ -42,10 +42,10 @@ public abstract class AbstractGameWorld {
   }
 
   public static boolean method1066(int var0, int var1) {
-    if (97 <= var0 && ~var0 >= -123) {
+    if (var0 >= 97 && ~var0 >= -123) {
         return true;
       } else {
-        return -66 >= ~var0 && 90 >= var0 || 48 <= var0 && 57 >= var0;
+        return ~var0 <= -66 && var0 <= 90 || var0 >= 48 && var0 <= 57;
       }
   }
 

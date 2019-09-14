@@ -39,7 +39,7 @@ public final class DummyClass4 extends DummyClass6 {
         for (var1 = 0; DummyClass17.anInt1829 > var1; ++var1) {
           int var2 = VariableUpdate.anIntArray2292[var1];
           if (AbstractGameWorld.updateCycle != TextureSampler0.players[var2].anInt2838) {
-            if (0 < TextureSampler0.players[var2].anInt3969) {
+            if (TextureSampler0.players[var2].anInt3969 > 0) {
               DummyClass11.method2203(TextureSampler0.players[var2], 8);
             }
 
@@ -50,8 +50,8 @@ public final class DummyClass4 extends DummyClass6 {
         if (~HashTable.packetLength
             == ~SpotAnimationConfig.gameBuffer.position) {
           for (var1 = 0; var1 < DummyClass13.anInt2022; ++var1) {
-            if (null
-                == TextureSampler0.players[DummyClass42.anIntArray887[var1]]) {
+            if (TextureSampler0.players[DummyClass42.anIntArray887[var1]]
+                == null) {
               throw new RuntimeException(
                   "gpp2 pos:" + var1 + " size:" + DummyClass13.anInt2022);
             }
@@ -66,8 +66,8 @@ public final class DummyClass4 extends DummyClass6 {
   }
 
   public static void method2229(long var0, byte var2) {
-    if (-1L != ~var0) {
-        if ((100 > FileSystem.anInt104 || TextureSampler3.aBoolean3358)
+    if (~var0 != -1L) {
+        if ((FileSystem.anInt104 < 100 || TextureSampler3.aBoolean3358)
           && ~FileSystem.anInt104 > -201) {
           GameString var3 = Objects
               .requireNonNull(FileCache.stringFromBase37(-29664, var0)).formatName((byte) -50);

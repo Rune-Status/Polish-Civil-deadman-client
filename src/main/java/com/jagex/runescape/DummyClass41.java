@@ -32,7 +32,7 @@ public final class DummyClass41 {
   public static void method1171(int var0, int var1, int var2, int var3, int var4, Widget var5,
                                boolean var6) {
     int var7 = var3 * var3 + var4 * var4;
-      if (-360001 <= ~var7) {
+      if (~var7 >= -360001) {
         int var8 = Math.min(var5.anInt168 / 2, var5.anInt193 / 2);
         if (var6) {
           DummyClass41.anInt865 = -79;
@@ -96,7 +96,7 @@ public final class DummyClass41 {
       int var9 = var8.indexOf(40);
       int var10 = var8.indexOf(41, 1 + var9);
       String var11;
-      if (0 == ~var9) {
+      if (~var9 == 0) {
         var11 = var8;
       } else {
         var11 = var8.substring(0, var9);
@@ -106,7 +106,7 @@ public final class DummyClass41 {
       var11 = var11.substring(1 + var11.lastIndexOf(32));
       var11 = var11.substring(var11.lastIndexOf(9) + 1);
       var2 = var2 + var11;
-      if (-1 != var9 && var10 != -1) {
+      if (var9 != -1 && var10 != -1) {
         int var12 = var8.indexOf(".java:", var9);
         if (var12 >= 0) {
           var2 = var2 + var8.substring(5 + var12, var10);
@@ -155,7 +155,8 @@ public final class DummyClass41 {
   public static GameString method1174(Widget var0, byte var1) {
     int var2 = 49 % ((var1 - 22) / 46);
       return ~GameClient.method44(var0).method101(-69) != -1 ?
-        (null != var0.aClass94_245 && var0.aClass94_245.method1564(1).getLength() != 0 ?
+        (var0.aClass94_245 != null
+            && var0.aClass94_245.method1564(1).getLength() != 0 ?
           var0.aClass94_245 :
           (LinearHashTable.aBoolean1040 ? GameException.aClass94_2116 : null)) :
         null;

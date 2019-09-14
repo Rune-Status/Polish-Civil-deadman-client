@@ -32,7 +32,7 @@ public final class FileCache {
       synchronized (var5) {
         if (var4 != -41) {
           return true;
-        } else if (0 <= var2 && var2 <= this.anInt687) {
+        } else if (var2 >= 0 && var2 <= this.anInt687) {
           boolean var6 = this.method1054((byte) 87, var2, var1, var3, true);
           if (!var6) {
             var6 = this.method1054((byte) 87, var2, var1, var3, false);
@@ -69,20 +69,20 @@ public final class FileCache {
             return null;
           }
 
-          if (0 < var5 && ~var5 >= ~(this.aClass30_681.method976(0) / 520L)) {
+          if (var5 > 0 && ~var5 >= ~(this.aClass30_681.method976(0) / 520L)) {
             byte[] var7 = new byte[var4];
             int var8 = 0;
 
             int var13;
             for (int var9 = 0; ~var8 > ~var4; var5 = var13) {
-              if (0 == var5) {
+              if (var5 == 0) {
                 var10000 = null;
                 return null;
               }
 
               int var10 = -var8 + var4;
               this.aClass30_681.seek(-113, 520 * var5);
-              if (-513 > ~var10) {
+              if (~var10 < -513) {
                 var10 = 512;
               }
 
@@ -148,7 +148,7 @@ public final class FileCache {
             }
           } else {
             var7 = (int) ((this.aClass30_681.method976(var1 + -87) - -519L) / 520L);
-            if (-1 == ~var7) {
+            if (~var7 == -1) {
               var7 = 1;
             }
           }
@@ -292,9 +292,10 @@ public final class FileCache {
         FileCache.anInt688 = -64;
       }
 
-      if (-2 >= ~var1 && var4 >= 1 && 102 >= var1 && var4 <= 102) {
+      if (~var1 <= -2 && var4 >= 1 && var1 <= 102 && var4 <= 102) {
         int var8;
-        if (!NPC.method1986(41) && 0 == (2 & BZipDecompressorState.tileFlags[0][var1][var4])) {
+        if (!NPC.method1986(41) &&
+            (2 & BZipDecompressorState.tileFlags[0][var1][var4]) == 0) {
           var8 = var2;
           if ((8 & BZipDecompressorState.tileFlags[var2][var1][var4]) != 0) {
             var8 = 0;
@@ -306,12 +307,13 @@ public final class FileCache {
         }
 
         var8 = var2;
-        if (-4 < ~var2 && -3 == ~(2 & BZipDecompressorState.tileFlags[1][var1][var4])) {
+        if (~var2 > -4 && ~(2 & BZipDecompressorState.tileFlags[1][var1][var4])
+            == -3) {
           var8 = var2 + 1;
         }
 
         DummyClass29.method910(-96, var4, var1, var2, var7, var8, BlockConfig.collisionMaps[var2]);
-        if (0 <= var0) {
+        if (var0 >= 0) {
           boolean var9 = Keyboard.aBoolean1905;
           Keyboard.aBoolean1905 = true;
           DummyClass31.method1683(var8, false, var2, false, BlockConfig.collisionMaps[var2], var0,
@@ -327,8 +329,8 @@ public final class FileCache {
   }
 
   public static GameString stringFromBase37(int var0, long var1) {
-    if (-1L > ~var1 && -6582952005840035282L < ~var1) {
-        if (-1L == ~(var1 % 37L)) {
+    if (~var1 < -1L && ~var1 > -6582952005840035282L) {
+        if (~(var1 % 37L) == -1L) {
           return null;
         } else {
           int var3 = 0;
@@ -342,7 +344,7 @@ public final class FileCache {
             FileCache.method1047(2, -55, -50, false, 52, false, false);
           }
 
-          while (0L != var1) {
+          while (var1 != 0L) {
             long var7 = var1;
             var1 /= 37L;
             --var3;

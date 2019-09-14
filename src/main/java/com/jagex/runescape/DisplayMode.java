@@ -18,7 +18,7 @@ public final class DisplayMode {
   public int anInt1450;
 
   public static void method1642(int var0, GameString var1) {
-    if (null != ClientScript.aClass3_Sub19Array3694) {
+    if (ClientScript.aClass3_Sub19Array3694 != null) {
         if (var0 != 3803) {
           DisplayMode.aClass67_1443 = null;
         }
@@ -32,7 +32,7 @@ public final class DisplayMode {
           }
 
           if (var2 < ClientScript.aClass3_Sub19Array3694.length
-            && null != ClientScript.aClass3_Sub19Array3694[var2]) {
+            && ClientScript.aClass3_Sub19Array3694[var2] != null) {
             ++DummyClass37.anInt671;
             TextureSampler12.secureBuffer.writePacket(162);
             TextureSampler12.secureBuffer.writeLong(ClientScript.aClass3_Sub19Array3694[var2].key);
@@ -47,15 +47,15 @@ public final class DisplayMode {
       }
 
       Inventory var4 = (Inventory) SceneGraphTile.aClass130_2220.get(var2);
-      if (null != var4) {
+      if (var4 != null) {
         int var5 = 0;
 
         for (int var6 = 0; var4.ids.length > var6; ++var6) {
           if (var4.ids[var6] >= 0 && TextureSampler39.anInt3287 > var4.ids[var6]) {
             ItemConfig var7 = DummyClass35.getItemConfig(var4.ids[var6], (byte) 79);
-            if (null != var7.aClass130_798) {
+            if (var7.aClass130_798 != null) {
               IntegerNode var8 = (IntegerNode) var7.aClass130_798.get(var3);
-              if (null != var8) {
+              if (var8 != null) {
                 if (var1) {
                   var5 += var4.counts[var6] * var8.anInt2467;
                 } else {

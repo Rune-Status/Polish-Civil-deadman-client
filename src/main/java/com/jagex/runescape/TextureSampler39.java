@@ -25,8 +25,8 @@ public class TextureSampler39 extends AbstractTextureSampler {
 
   public final boolean method279(int var1) {
     int var2 = 62 / ((var1 - 2) / 62);
-      if (null == this.anIntArray3284) {
-        if (-1 < ~this.anInt3278) {
+      if (this.anIntArray3284 == null) {
+        if (~this.anInt3278 > -1) {
           return false;
         } else {
           SoftwareDirectColorSprite var3 = ~SomethingTilek.anInt1668 > -1 ?
@@ -147,7 +147,7 @@ public class TextureSampler39 extends AbstractTextureSampler {
     if (var0 == 4) {
         Buffer var2 = new Buffer(var1);
         int var3 = var2.readUnsignedByte();
-        if (1 == var3) {
+        if (var3 == 1) {
           boolean var4 = ~var2.readUnsignedByte() == -2;
           if (var4) {
             DummyClass41.method1173(var2, var0 ^ -84);
@@ -187,7 +187,7 @@ public class TextureSampler39 extends AbstractTextureSampler {
     LightIntensity.variables[id] = var1;
       VariableUpdate var3 = (VariableUpdate) ClientScript.variableUpdates.get(
           id);
-      if (null != var3) {
+      if (var3 != null) {
         if (var3.timestamp != 0x4000000000000001L) {
           var3.timestamp = Time.getCurrentTimeMillis() + 500L | 0x4000000000000000L;
         }

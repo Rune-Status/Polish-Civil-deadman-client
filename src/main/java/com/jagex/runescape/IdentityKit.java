@@ -29,8 +29,8 @@ public final class IdentityKit {
         int var3 = 0;
         Model[] var2 = new Model[5];
 
-        for (int var4 = 0; -6 < ~var4; ++var4) {
-          if (0 != ~this.anIntArray475[var4]) {
+        for (int var4 = 0; ~var4 > -6; ++var4) {
+          if (~this.anIntArray475[var4] != 0) {
             var2[var3++] =
                 Model.getModel(SomethingQuickChatK.aClass153_152,
                     this.anIntArray475[var4], 0);
@@ -46,7 +46,7 @@ public final class IdentityKit {
           }
         }
 
-        if (null != this.aShortArray471) {
+        if (this.aShortArray471 != null) {
           for (var5 = 0; this.aShortArray471.length > var5; ++var5) {
             var7.replaceMaterial(this.aShortArray471[var5],
                 this.aShortArray470[var5]);
@@ -60,7 +60,7 @@ public final class IdentityKit {
   }
 
   public boolean method942(int var1 ) {
-    if (null == this.anIntArray474) {
+    if (this.anIntArray474 == null) {
         return true;
       } else {
         boolean var2 = true;
@@ -89,17 +89,17 @@ public final class IdentityKit {
       } else {
         int var4;
         int var5;
-        if (-3 == ~var3) {
+        if (~var3 == -3) {
           var4 = var2.readUnsignedByte();
           this.anIntArray474 = new int[var4];
 
           for (var5 = 0; var4 > var5; ++var5) {
             this.anIntArray474[var5] = var2.readUnsignedShort();
           }
-        } else if (-4 == ~var3) {
+        } else if (~var3 == -4) {
           this.aBoolean476 = true;
-        } else if (-41 != ~var3) {
-          if (-42 == ~var3) {
+        } else if (~var3 != -41) {
+          if (~var3 == -42) {
             var4 = var2.readUnsignedByte();
             this.aShortArray471 = new short[var4];
             this.aShortArray470 = new short[var4];
@@ -144,7 +144,7 @@ public final class IdentityKit {
         }
 
         int var5;
-        if (null != this.aShortArray464) {
+        if (this.aShortArray464 != null) {
           for (var5 = 0; var5 < this.aShortArray464.length; ++var5) {
             assert var7 != null;
             var7.replaceColor(this.aShortArray464[var5], this.aShortArray460[var5]);
@@ -169,7 +169,7 @@ public final class IdentityKit {
       }
 
       for (int var3 = 0; var3 < 5; ++var3) {
-        if (-1 != this.anIntArray475[var3] && !SomethingQuickChatK.aClass153_152.method2129(
+        if (this.anIntArray475[var3] != -1 && !SomethingQuickChatK.aClass153_152.method2129(
           (byte) 95, 0, this.anIntArray475[var3])) {
           var2 = false;
         }
@@ -182,7 +182,7 @@ public final class IdentityKit {
     if (var1 == -31957) {
         while (true) {
           int var3 = var2.readUnsignedByte();
-          if (0 == var3) {
+          if (var3 == 0) {
             return;
           }
 
@@ -211,7 +211,7 @@ public final class IdentityKit {
 
       while (true) {
         int var8 = var6.method773((byte) -121);
-        if (0 == var8) {
+        if (var8 == 0) {
           return var5;
         }
 
@@ -230,7 +230,7 @@ public final class IdentityKit {
             var6.readUnsignedByte();
           } else {
             var11 = var6.readUnsignedShortSmart();
-            if (0 == var11) {
+            if (var11 == 0) {
               break;
             }
 
@@ -240,9 +240,9 @@ public final class IdentityKit {
             int var16 = var2 + var12;
             int var15 = var1 + var13;
             int var14 = var6.readUnsignedByte() >> 2;
-            if (~var15 < -1 && var16 > 0 && 103 > var15 && 103 > var16) {
+            if (~var15 < -1 && var16 > 0 && var15 < 103 && var16 < 103) {
               GameObjectConfig var17 = DummyClass11.method2207(4, var7);
-              if (var14 != 22 || Keyboard.aBoolean1905 || 0 != var17.anInt1529
+              if (var14 != 22 || Keyboard.aBoolean1905 || var17.anInt1529 != 0
                   || ~var17.anInt1538 == -2 || var17.aBoolean1483) {
                 var10 = true;
                 if (!var17.method1694(false)) {
@@ -275,32 +275,32 @@ public final class IdentityKit {
           int var3 = AudioWorker.anIntArray347[var2];
           NPC var4 = TextureSampler5.npcs[var3];
           int var5 = SpotAnimationConfig.gameBuffer.readBits(1);
-          if (0 == var5) {
+          if (var5 == 0) {
             AudioWorker.anIntArray347[DummyClass6.anInt2046++] = var3;
             var4.anInt2838 = AbstractGameWorld.updateCycle;
           } else {
             int var6 = SpotAnimationConfig.gameBuffer.readBits(2);
-            if (-1 == ~var6) {
+            if (~var6 == -1) {
               AudioWorker.anIntArray347[DummyClass6.anInt2046++] = var3;
               var4.anInt2838 = AbstractGameWorld.updateCycle;
               DummyClass60.anIntArray441[OndemandRequester.anInt997++] = var3;
             } else {
               int var7;
               int var8;
-              if (1 == var6) {
+              if (var6 == 1) {
                 AudioWorker.anIntArray347[DummyClass6.anInt2046++] = var3;
                 var4.anInt2838 = AbstractGameWorld.updateCycle;
                 var7 = SpotAnimationConfig.gameBuffer.readBits(3);
                 var4.method1968(1, (byte) 32, var7);
                 var8 = SpotAnimationConfig.gameBuffer.readBits(1);
-                if (1 == var8) {
+                if (var8 == 1) {
                   DummyClass60.anIntArray441[OndemandRequester.anInt997++] = var3;
                 }
               } else {
                 if (var6 == 2) {
                   AudioWorker.anIntArray347[DummyClass6.anInt2046++] = var3;
                   var4.anInt2838 = AbstractGameWorld.updateCycle;
-                  if (-2 == ~SpotAnimationConfig.gameBuffer.readBits(1)) {
+                  if (~SpotAnimationConfig.gameBuffer.readBits(1) == -2) {
                     var7 = SpotAnimationConfig.gameBuffer.readBits(3);
                     var4.method1968(2, (byte) -122, var7);
                     var8 = SpotAnimationConfig.gameBuffer.readBits(3);
@@ -359,7 +359,7 @@ public final class IdentityKit {
   }
 
   public static void method950(Widget var0, int var1, int var2, int var3) {
-    if (2 <= TextureSampler25.amountContextActions || ~Something3d.anInt3012 != -1
+    if (TextureSampler25.amountContextActions >= 2 || ~Something3d.anInt3012 != -1
         || SceneNode.aBoolean1837) {
         if (var1 > -55) {
           IdentityKit.aClass94_473 = null;
@@ -374,7 +374,7 @@ public final class IdentityKit {
             FloorOverlay.aClass3_Sub28_Sub17_2096.method682(var4) + var5, (byte) -40, var2, 15);
         } else {
           AbstractFont var7 = var0.method868(TextureSampler0.aClass109Array3270, 0);
-          if (null == var7) {
+          if (var7 == null) {
             var7 = FloorOverlay.aClass3_Sub28_Sub17_2096;
           }
 

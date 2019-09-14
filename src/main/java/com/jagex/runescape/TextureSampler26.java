@@ -45,7 +45,7 @@ public final class TextureSampler26 extends AbstractTextureSampler {
       if (~var1 == -1) {
         this.anInt3073 = var2.readUnsignedShort();
       } else {
-        if (1 == var1) {
+        if (var1 == 1) {
           this.anInt3074 = var2.readUnsignedShort();
         }
       }
@@ -175,8 +175,9 @@ public final class TextureSampler26 extends AbstractTextureSampler {
         TextureSampler26.focused = true;
       }
 
-      if (-1 != ~ClientScriptCall.anInt2453 && var0 != 0 && ~SomethingLight0.anInt1552 > -51
-        && 0 != ~var1) {
+      if (~ClientScriptCall.anInt2453 != -1
+          && var0 != 0 && ~SomethingLight0.anInt1552 > -51
+        && ~var1 != 0) {
         Inventory.anIntArray2550[SomethingLight0.anInt1552] = var1;
         SomethingIndex150.anIntArray2068[SomethingLight0.anInt1552] = var0;
         GameString.anIntArray2157[SomethingLight0.anInt1552] = var2;

@@ -30,12 +30,12 @@ public final class OndemandRequester {
         this.priorityRequests = null;
       }
 
-      return 20 <= this.method1246(11706);
+      return this.method1246(11706) >= 20;
   }
 
   public boolean method1243(byte var1 ) {
     int avail;
-      if (null != this.socketStream) {
+      if (this.socketStream != null) {
         long currentTime = Time.getCurrentTimeMillis();
         int diff = (int) (currentTime - this.lastUpdatedTime);
         this.lastUpdatedTime = currentTime;
@@ -44,7 +44,7 @@ public final class OndemandRequester {
         }
 
         this.timeDiff += diff;
-        if (30000 < this.timeDiff) {
+        if (this.timeDiff > 30000) {
           try {
             this.socketStream.destroy();
           } catch (Exception var18) {
@@ -55,7 +55,7 @@ public final class OndemandRequester {
       }
 
       if (this.socketStream == null) {
-        return 0 == this.method1253(4) && -1 == ~this.method1246(11706);
+        return this.method1253(4) == 0 && ~this.method1246(11706) == -1;
       } else {
         try {
           this.socketStream.method1466(127);
@@ -63,7 +63,7 @@ public final class OndemandRequester {
           OndemandFileRequest var21;
           for (
             var21 = (OndemandFileRequest) this.aClass13_993.getFirst();
-            null != var21; var21 = (OndemandFileRequest) this.aClass13_993.getNext()) {
+              var21 != null; var21 = (OndemandFileRequest) this.aClass13_993.getNext()) {
             this.buffer.position = 0;
             this.buffer.writeByte(1);
             this.buffer.writeMedium((int) var21.subnodeKey);
@@ -81,19 +81,19 @@ public final class OndemandRequester {
             this.normalRequests.addLast(var21);
           }
 
-          for (int var3 = 0; 100 > var3; ++var3) {
+          for (int var3 = 0; var3 < 100; ++var3) {
             avail = this.socketStream.available();
             if (avail < 0) {
               throw new IOException();
             }
 
-            if (-1 == ~avail) {
+            if (~avail == -1) {
               break;
             }
 
             this.timeDiff = 0;
             byte read = 0;
-            if (null != this.currentRequest) {
+            if (this.currentRequest != null) {
               if (~this.currentRequest.anInt4067 == -1) {
                 read = 1;
               }
@@ -104,7 +104,7 @@ public final class OndemandRequester {
             int var6;
             int var7;
             int var8;
-            if (0 >= read) {
+            if (read <= 0) {
               var6 = -this.currentRequest.aByte4064 + this.currentRequest.buffer.bytes.length;
               var7 = -this.currentRequest.anInt4067 + 512;
               if (var7 > -this.currentRequest.buffer.position + var6) {
@@ -117,7 +117,7 @@ public final class OndemandRequester {
 
               this.socketStream.read(this.currentRequest.buffer.bytes,
                   this.currentRequest.buffer.position, var7);
-              if (-1 != ~this.encryptionKey) {
+              if (~this.encryptionKey != -1) {
                 for (var8 = 0; var7 > var8; ++var8) {
                   this.currentRequest.buffer.bytes[this.currentRequest.buffer.position - -var8] =
                     (byte) ObjectCache.bitXor(
@@ -145,7 +145,7 @@ public final class OndemandRequester {
 
               this.socketStream.read(this.aClass3_Sub30_1008.bytes,
                   this.aClass3_Sub30_1008.position, var6);
-              if (0 != this.encryptionKey) {
+              if (this.encryptionKey != 0) {
                 for (var7 = 0; var7 < var6; ++var7) {
                   this.aClass3_Sub30_1008.bytes[var7 + this.aClass3_Sub30_1008.position] =
                     (byte) ObjectCache.bitXor(
@@ -174,14 +174,14 @@ public final class OndemandRequester {
                   int var9 = this.aClass3_Sub30_1008.readUnsignedByte();
                   int length = this.aClass3_Sub30_1008.readInt();
                   int compression = 127 & var9;
-                  boolean priority = -1 != ~(var9 & 128);
+                  boolean priority = ~(var9 & 128) != -1;
                   OndemandFileRequest var15 = null;
                   long var13 = (var7 << 16) - -var8;
                   if (priority) {
                     for (
                         var15 = (OndemandFileRequest) this.normalRequests
                             .getFirst();
-                        null != var15 && ~var15.subnodeKey != ~var13;
+                        var15 != null && ~var15.subnodeKey != ~var13;
                         var15 = (OndemandFileRequest) this.normalRequests
                             .getNext()) {
                     }
@@ -195,7 +195,7 @@ public final class OndemandRequester {
                     }
                   }
 
-                  if (null == var15) {
+                  if (var15 == null) {
                     throw new IOException();
                   }
 
@@ -222,7 +222,7 @@ public final class OndemandRequester {
           this.anInt1010 = -2;
           ++this.anInt1011;
           this.socketStream = null;
-          return 0 == this.method1253(4) && ~this.method1246(11706) == -1;
+          return this.method1253(4) == 0 && ~this.method1246(11706) == -1;
         }
       }
   }
@@ -262,7 +262,7 @@ public final class OndemandRequester {
 
   public void writeStatus(boolean var1, boolean var2 ) {
     if (var2) {
-        if (null != this.socketStream) {
+        if (this.socketStream != null) {
           try {
             this.buffer.position = 0;
             this.buffer.writeByte(var1 ? 2 : 3);
@@ -294,7 +294,7 @@ public final class OndemandRequester {
   }
 
   public void setSocket(boolean var1, SocketStream var2 ) {
-    if (null != this.socketStream) {
+    if (this.socketStream != null) {
         try {
           this.socketStream.destroy();
         } catch (Exception var8) {
@@ -311,7 +311,7 @@ public final class OndemandRequester {
 
       while (true) {
         OndemandFileRequest var4 = (OndemandFileRequest) this.priorityRequests.poll();
-        if (null == var4) {
+        if (var4 == null) {
           while (true) {
             var4 = (OndemandFileRequest) this.normalRequests.poll();
             if (var4 == null) {
@@ -349,7 +349,7 @@ public final class OndemandRequester {
 
   public boolean method1251(byte var1 ) {
     int var2 = 33 % ((2 - var1) / 58);
-      return 20 <= this.method1253(4);
+      return this.method1253(4) >= 20;
   }
 
   public void method1252(byte var1 ) {
@@ -462,7 +462,7 @@ public final class OndemandRequester {
       RenderAnimation.aByteArrayArrayArray383 = null;
       DummyClass51.anIntArray1161 = null;
       ClientScriptCall.aByteArrayArrayArray2452 = null;
-      if (var1 && null != Buffer.aClass3_Sub28_Sub3_2600) {
+      if (var1 && Buffer.aClass3_Sub28_Sub3_2600 != null) {
         TextureSampler4.aClass94_3220 = Buffer.aClass3_Sub28_Sub3_2600.aClass94_3561;
       } else {
         TextureSampler4.aClass94_3220 = null;

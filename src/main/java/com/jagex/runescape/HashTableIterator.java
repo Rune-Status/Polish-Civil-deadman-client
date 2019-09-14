@@ -24,7 +24,7 @@ public final class HashTableIterator {
 
   public Node getNext() {
     Node var2;
-      if (-1 > ~this.anInt1132
+      if (~this.anInt1132 < -1
           && this.table.nodes[this.anInt1132 + -1] != this.iterator) {
         var2 = this.iterator;
         this.iterator = var2.nextNode;
@@ -70,7 +70,7 @@ public final class HashTableIterator {
       if (~var1 < var0 || ~var3 < -1 || var2 > 0 || ~var4 < -1) {
         try {
           Component var5 = null;
-          if (null != TextureSampler30.fullScreenFrame) {
+          if (TextureSampler30.fullScreenFrame != null) {
             var5 = TextureSampler30.fullScreenFrame;
           } else {
             if (TextureSampler27.FRAME != null) {
@@ -93,7 +93,7 @@ public final class HashTableIterator {
             var11.fillRect(var6, var7, var1, SceneSomething2.windowHeight);
           }
 
-          if (0 < var2) {
+          if (var2 > 0) {
             var11.fillRect(var6, var7, AreaSoundEffect.windowWidth, var2);
           }
 

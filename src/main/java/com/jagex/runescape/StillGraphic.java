@@ -39,7 +39,7 @@ public final class StillGraphic extends SceneNode {
       this.anInt2708 = var1;
       this.anInt2712 = var5;
       int var8 = RenderAnimation.method898((byte) 42, this.anInt2708).anInt542;
-      if (-1 == var8) {
+      if (var8 == -1) {
         this.aBoolean2718 = true;
       } else {
         this.aBoolean2718 = false;
@@ -73,7 +73,8 @@ public final class StillGraphic extends SceneNode {
 
         this.anInt2719 += var2;
 
-        while (this.anInt2719 > this.aClass142_2711.anIntArray1869[this.anInt2706]) {
+        while (
+            this.anInt2719 > this.aClass142_2711.anIntArray1869[this.anInt2706]) {
           this.anInt2719 -= this.aClass142_2711.anIntArray1869[this.anInt2706];
           ++this.anInt2706;
           if (~this.aClass142_2711.anIntArray1851.length >= ~this.anInt2706) {
@@ -111,7 +112,7 @@ public final class StillGraphic extends SceneNode {
       int var3 = 128 * var0.anInt2784 - -(64 * var0.getSize());
       if (var1) {
         int var4 = 128 * var0.anInt2835 - -(var0.getSize() * 64);
-        if (0 == var0.anInt2840) {
+        if (var0.anInt2840 == 0) {
           var0.anInt2806 = 1024;
         }
 
@@ -148,7 +149,7 @@ public final class StillGraphic extends SceneNode {
       if (GlRenderer.useOpenGlRenderer) {
         var8 = -334 + var2;
         if (var8 >= 0) {
-          if (-101 > ~var8) {
+          if (~var8 < -101) {
             var8 = 100;
           }
         } else {
@@ -174,7 +175,7 @@ public final class StillGraphic extends SceneNode {
         var12 = var14 * var4 >> 16;
       }
 
-      if (0 != var9) {
+      if (var9 != 0) {
         var13 = DummyClass40.SINE_TABLE[var9];
         var14 = DummyClass40.COSINE_TABLE[var9];
         var10 = var13 * var12 >> 16;

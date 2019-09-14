@@ -44,7 +44,7 @@ public final class ISAACCipher {
       int var3 = -1640531527;
 
       int var2;
-      for (var2 = 0; 4 > var2; ++var2) {
+      for (var2 = 0; var2 < 4; ++var2) {
         var3 ^= var4 << 11;
         var6 += var3;
         var4 += var5;
@@ -114,7 +114,7 @@ public final class ISAACCipher {
         this.anIntArray971[7 + var2] = var10;
       }
 
-      for (var2 = 0; -257 < ~var2; var2 += 8) {
+      for (var2 = 0; ~var2 > -257; var2 += 8) {
         var9 += this.anIntArray971[6 + var2];
         var8 += this.anIntArray971[var2 + 5];
         var7 += this.anIntArray971[4 + var2];
@@ -176,7 +176,7 @@ public final class ISAACCipher {
         this.anInt968 = -98;
       }
 
-      while (-257 < ~var2) {
+      while (~var2 > -257) {
         int var3 = this.anIntArray971[var2];
         if ((2 & var2) != 0) {
           if (~(var2 & 1) == -1) {
@@ -209,7 +209,7 @@ public final class ISAACCipher {
       int var4 = SomethingQuickChat2.anInt3537;
       int var3 = SomethingWorldMapy.anInt3552;
       if (TextureSampler27.aClass3_Sub28_Sub16_3099 == null
-          || null == DummyClass58.aClass3_Sub28_Sub16_1457) {
+          || DummyClass58.aClass3_Sub28_Sub16_1457 == null) {
         if (Projectile.sprites.isLoaded(GameWorldSomething.anInt502)
             && Projectile.sprites.isLoaded(
             DummyClass54.anInt1400)) {
@@ -303,7 +303,7 @@ public final class ISAACCipher {
 
       if ((DummyClass53.aClass3_Sub28_Sub16_1339 == null
           || VertexNormal.aClass3_Sub28_Sub16_824 == null
-          || null == MonoChromaticImageBuffer.aClass3_Sub28_Sub16_2560)
+          || MonoChromaticImageBuffer.aClass3_Sub28_Sub16_2560 == null)
           && Projectile.sprites.isLoaded(DummyClass39.anInt739)
           && Projectile.sprites.isLoaded(
           BitVariable.anInt1126) && Projectile.sprites
@@ -349,8 +349,8 @@ public final class ISAACCipher {
 
       int var9;
       if (DummyClass53.aClass3_Sub28_Sub16_1339 != null
-          && null != VertexNormal.aClass3_Sub28_Sub16_824
-          && null != MonoChromaticImageBuffer.aClass3_Sub28_Sub16_2560) {
+          && VertexNormal.aClass3_Sub28_Sub16_824 != null
+          && MonoChromaticImageBuffer.aClass3_Sub28_Sub16_2560 != null) {
         var7 = var3 / DummyClass53.aClass3_Sub28_Sub16_1339.anInt3707;
 
         for (var8 = 0; var7 > var8; ++var8) {
@@ -412,7 +412,7 @@ public final class ISAACCipher {
   public static int method1232(NPC var0, int var1) {
     if (var1 == -1) {
         NpcConfiguration var2 = var0.config;
-        if (null != var2.anIntArray1292) {
+        if (var2.anIntArray1292 != null) {
           var2 = var2.method1471((byte) -108);
           if (var2 == null) {
             return -1;

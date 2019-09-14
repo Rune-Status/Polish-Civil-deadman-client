@@ -49,7 +49,7 @@ public final class TextureSampler35 extends AbstractTextureSampler {
           int var14 = var12 * var12 >> 12;
           int var15 =
             (int) (Math.sqrt((4096 + var14 + var13) / 4096.0F) * 4096.0D);
-          int var16 = 0 != var15 ? 16777216 / var15 : 0;
+          int var16 = var15 != 0 ? 16777216 / var15 : 0;
           var4[var8] = 4096 + -var16;
         }
       }

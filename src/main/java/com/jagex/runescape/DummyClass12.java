@@ -63,7 +63,7 @@ public final class DummyClass12 {
 
       while (var9 > 0) {
         if (~var23 > -1) {
-          while (0 > var23) {
+          while (var23 < 0) {
             var24 += var35;
             var23 += var31;
             ++var8;
@@ -92,7 +92,7 @@ public final class DummyClass12 {
             }
           }
 
-          if (0 > var26) {
+          if (var26 < 0) {
             var25 += var33;
             ++var10;
             var33 += var30;
@@ -157,11 +157,11 @@ public final class DummyClass12 {
 
   public static int method2201(GameWorld var0, int var1, int var2,
       GameWorld var3, boolean var4) {
-    if (-2 == ~var1) {
+    if (~var1 == -2) {
         int var5 = var0.anInt722;
         int var6 = var3.anInt722;
         if (!var4) {
-          if (-1 == var6) {
+          if (var6 == -1) {
             var6 = 2001;
           }
 
@@ -172,7 +172,7 @@ public final class DummyClass12 {
 
         return -var6 + var5;
       } else {
-        return 2 == var1 ?
+        return var1 == 2 ?
             var0.method1078(102).aClass94_508.method1546((byte) -67,
                 var3.method1078(-119).aClass94_508) :
             (~var1 == -4 ?
@@ -198,7 +198,7 @@ public final class DummyClass12 {
                                 (!var3.method1075(64) ? 1 : 0) :
                                 (var3.method1075(64) ? -1 : 0)) :
                             (~var1 != -7 ?
-                                (7 == var1 ?
+                                (var1 == 7 ?
                                     (var0.method1070(8) ?
                                         (var3.method1070(8) ? 0 : 1) :
                                         (var3.method1070(8) ? -1 : 0)) :

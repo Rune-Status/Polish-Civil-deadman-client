@@ -25,7 +25,7 @@ public final class Structure extends SubNode {
         }
 
         IntegerNode var4 = (IntegerNode) this.aClass130_3636.get(var1);
-        return null == var4 ? var2 : var4.anInt2467;
+        return var4 == null ? var2 : var4.anInt2467;
       } else {
         return var2;
       }
@@ -33,7 +33,7 @@ public final class Structure extends SubNode {
 
   private void method601(Buffer var1, int var2, byte var3) {
     if (var3 < -2) {
-        if (249 == var2) {
+        if (var2 == 249) {
           int var4 = var1.readUnsignedByte();
           int var5;
           if (this.aClass130_3636 == null) {
@@ -42,7 +42,7 @@ public final class Structure extends SubNode {
           }
 
           for (var5 = 0; var4 > var5; ++var5) {
-            boolean var6 = 1 == var1.readUnsignedByte();
+            boolean var6 = var1.readUnsignedByte() == 1;
             int var7 = var1.readUnsignedMedium((byte) 95);
             Node var8;
             if (var6) {
@@ -67,14 +67,14 @@ public final class Structure extends SubNode {
           Structure.method607(false);
         }
 
-        return null != var4 ? var4.aClass94_2586 : var1;
+        return var4 != null ? var4.aClass94_2586 : var1;
       }
   }
 
   public void method608(int var1, Buffer var2 ) {
     while (true) {
         int var3 = var2.readUnsignedByte();
-        if (0 == var3) {
+        if (var3 == 0) {
           if (var1 != 5) {
             Structure.method607(false);
           }
@@ -123,7 +123,7 @@ public final class Structure extends SubNode {
         Structure.method602(-115, 65, (byte) -119, null);
       }
 
-      if (-1 == ~var3.aByte304) {
+      if (~var3.aByte304 == -1) {
         var3.anInt168 = var3.anInt177;
       } else {
         if (~var3.aByte304 == -2) {
@@ -145,7 +145,7 @@ public final class Structure extends SubNode {
         }
       }
 
-      if (-1 == ~var3.aByte241) {
+      if (~var3.aByte241 == -1) {
         var3.anInt193 = var3.anInt244;
       } else if (var3.aByte241 == 1) {
         var3.anInt193 = -var3.anInt244 + var0;
@@ -159,7 +159,7 @@ public final class Structure extends SubNode {
         }
       }
 
-      if (-5 == ~var3.aByte304) {
+      if (~var3.aByte304 == -5) {
         var3.anInt168 = var3.anInt216 * var3.anInt193 / var3.anInt160;
       }
 
@@ -167,9 +167,10 @@ public final class Structure extends SubNode {
         var3.anInt193 = var3.anInt160 * var3.anInt168 / var3.anInt216;
       }
 
-      if (LinearHashTable.aBoolean1040 && (-1 != ~GameClient.method44(var3).anInt2205
+      if (LinearHashTable.aBoolean1040 && (
+          ~GameClient.method44(var3).anInt2205 != -1
         || ~var3.anInt187 == -1)) {
-        if (var3.anInt193 < 5 && 5 > var3.anInt168) {
+        if (var3.anInt193 < 5 && var3.anInt168 < 5) {
           var3.anInt193 = 5;
           var3.anInt168 = 5;
         } else {
@@ -177,17 +178,17 @@ public final class Structure extends SubNode {
             var3.anInt168 = 5;
           }
 
-          if (0 >= var3.anInt193) {
+          if (var3.anInt193 <= 0) {
             var3.anInt193 = 5;
           }
         }
       }
 
-      if (1337 == var3.anInt189) {
+      if (var3.anInt189 == 1337) {
         FloorOverlay.aClass11_2091 = var3;
       }
 
-      if (var4 && null != var3.anObjectArray235 && (~var5 != ~var3.anInt168
+      if (var4 && var3.anObjectArray235 != null && (~var5 != ~var3.anInt168
         || var3.anInt193 != var6)) {
         ClientScriptCall var7 = new ClientScriptCall();
         var7.arguments = var3.anObjectArray235;
@@ -227,7 +228,8 @@ public final class Structure extends SubNode {
             var6 += -var1.anInt2307 + var4;
           }
 
-          if (0 != var1.anInt2328 && ~var1.anInt2328 <= ~(var6 - 64) && 0 != DummyClass28.anInt340
+          if (var1.anInt2328 != 0 && ~var1.anInt2328 <= ~(var6 - 64) &&
+              DummyClass28.anInt340 != 0
             && var2 == var1.anInt2314) {
             var6 -= 64;
             if (var6 < 0) {
@@ -236,10 +238,10 @@ public final class Structure extends SubNode {
 
             int var7 = (-var6 + var1.anInt2328) * DummyClass28.anInt340 / var1.anInt2328;
             if (var1.aClass3_Sub24_Sub1_2312 == null) {
-              if (-1 >= ~var1.anInt2332) {
+              if (~var1.anInt2332 <= -1) {
                 SoundEffect var8 =
                   SoundEffect.method1811(AbstractMouseWheel.soundEffects, var1.anInt2332, 0);
-                if (null != var8) {
+                if (var8 != null) {
                   SomethingMusic0 var9 = var8.method1812().method151(DummyClass32.aClass157_524);
                   AudioStreamEncoder1 var10 = AudioStreamEncoder1.method437(var9, 100, var7);
                   assert var10 != null;
@@ -252,7 +254,7 @@ public final class Structure extends SubNode {
               var1.aClass3_Sub24_Sub1_2312.method419(var7);
             }
 
-            if (null != var1.aClass3_Sub24_Sub1_2315) {
+            if (var1.aClass3_Sub24_Sub1_2315 != null) {
               var1.aClass3_Sub24_Sub1_2315.method419(var7);
               if (!var1.aClass3_Sub24_Sub1_2315.method82(0)) {
                 var1.aClass3_Sub24_Sub1_2315 = null;
@@ -262,7 +264,7 @@ public final class Structure extends SubNode {
               SoundEffect var14 =
                 SoundEffect.method1811(AbstractMouseWheel.soundEffects, var1.anIntArray2333[var13],
                   0);
-              if (null != var14) {
+              if (var14 != null) {
                 SomethingMusic0 var15 = var14.method1812().method151(DummyClass32.aClass157_524);
                 AudioStreamEncoder1 var11 = AudioStreamEncoder1.method437(var15, 100, var7);
                 assert var11 != null;
@@ -275,7 +277,7 @@ public final class Structure extends SubNode {
             }
 
           } else {
-            if (null != var1.aClass3_Sub24_Sub1_2312) {
+            if (var1.aClass3_Sub24_Sub1_2312 != null) {
               MonoChromaticImageBuffer.aClass3_Sub24_Sub2_2563.method461(
                 var1.aClass3_Sub24_Sub1_2312);
               var1.aClass3_Sub24_Sub1_2312 = null;

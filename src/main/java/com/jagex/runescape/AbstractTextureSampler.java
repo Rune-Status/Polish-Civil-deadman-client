@@ -72,7 +72,7 @@ public abstract class AbstractTextureSampler extends Node {
         this.monoChromaticImageCache = null;
       }
 
-      int var4 = 255 == this.cacheSize ? var1 : this.cacheSize;
+      int var4 = this.cacheSize == 255 ? var1 : this.cacheSize;
       if (this.monoChromatic) {
         this.monoChromaticImageCache = new MonoChromaticImageCache(var4, var1, var2);
       } else {

@@ -37,7 +37,7 @@ public final class SomethingQuickChat extends SubNode {
   public void method546(Buffer var1, int var2 ) {
     while (true) {
         int var3 = var1.readUnsignedByte();
-        if (0 == var3) {
+        if (var3 == 0) {
           if (var2 != -1) {
             this.anIntArray3567 = null;
           }
@@ -50,7 +50,7 @@ public final class SomethingQuickChat extends SubNode {
   }
 
   public void method548(int var1 ) {
-    if (null != this.anIntArray3567) {
+    if (this.anIntArray3567 != null) {
         for (int var2 = 0; this.anIntArray3567.length > var2; ++var2) {
           this.anIntArray3567[var2] =
             TextureSampler3.method308(this.anIntArray3567[var2], '\u8000');
@@ -67,9 +67,9 @@ public final class SomethingQuickChat extends SubNode {
         SomethingQuickChat.aClass94_3577 = null;
       }
 
-      return null != this.anIntArray3566
+      return this.anIntArray3566 != null
           && var3 >= 0 && ~var3 >= ~this.anIntArray3566.length ?
-        (this.anIntArrayArray3570[var3] != null && -1 >= ~var2
+        (this.anIntArrayArray3570[var3] != null && ~var2 <= -1
           && ~var2 >= ~this.anIntArrayArray3570[var3].length ?
             this.anIntArrayArray3570[var3][var2] :
           -1) :
@@ -77,8 +77,8 @@ public final class SomethingQuickChat extends SubNode {
   }
 
   public int method550(int var1, int var2 ) {
-    if (null != this.anIntArray3566
-          && -1 >= ~var2 && var2 <= this.anIntArray3566.length) {
+    if (this.anIntArray3566 != null
+          && ~var2 <= -1 && var2 <= this.anIntArray3566.length) {
         if (var1 <= 33) {
           SomethingQuickChat.aClass94_3578 = null;
         }
@@ -140,7 +140,7 @@ public final class SomethingQuickChat extends SubNode {
   public GameString method554(int var1 ) {
     if (var1 == -1) {
         GameString var2 = Cache.createString(80);
-        if (null == this.strings) {
+        if (this.strings == null) {
           return TextureSampler3.aClass94_3357;
         } else {
           var2.append(this.strings[0]);
@@ -194,13 +194,13 @@ public final class SomethingQuickChat extends SubNode {
 
   public static void method551(int var0, int var1, int var2) {
     if (var0 == 0) {
-        if (4 == var2 && !DummyHashTable.aBoolean1685) {
+        if (var2 == 4 && !DummyHashTable.aBoolean1685) {
           var2 = 2;
           var1 = 2;
         }
 
         if (~DummyClass30.anInt453 == ~var2) {
-          if (0 != var2 && var1 != TextureSampler37.anInt3263) {
+          if (var2 != 0 && var1 != TextureSampler37.anInt3263) {
             MapScene.anInterface5Array70[var2].set(var1);
             TextureSampler37.anInt3263 = var1;
           }
@@ -213,7 +213,7 @@ public final class SomethingQuickChat extends SubNode {
             MapScene.anInterface5Array70[DummyClass30.anInt453].disable();
           }
 
-          if (-1 != ~var2) {
+          if (~var2 != -1) {
             MaterialShader var3 = MapScene.anInterface5Array70[var2];
             var3.enable();
             var3.set(var1);

@@ -32,7 +32,7 @@ public final class ObjectCache {
         this.table = null;
       }
 
-      if (-1 == ~this.anInt1327) {
+      if (~this.anInt1327 == -1) {
         AbstractObjectNode var5 = (AbstractObjectNode) this.aClass13_1329.poll();
         assert var5 != null;
         var5.unlinkNode();
@@ -50,7 +50,7 @@ public final class ObjectCache {
   public void method1518(long var1, byte var3 ) {
     AbstractObjectNode var4 = (AbstractObjectNode) this.table.get(var1);
       if (var3 == -124) {
-        if (null != var4) {
+        if (var4 != null) {
           var4.unlinkNode();
           var4.unlinkSubNode();
           ++this.anInt1327;
@@ -79,9 +79,9 @@ public final class ObjectCache {
   }
 
   public void method1522(int var1, int var2 ) {
-    if (null != Texture.aClass118_3794) {
+    if (Texture.aClass118_3794 != null) {
         for (AbstractObjectNode var3 = (AbstractObjectNode) this.aClass13_1329.getFirst();
-             null != var3; var3 = (AbstractObjectNode) this.aClass13_1329.getNext()) {
+            var3 != null; var3 = (AbstractObjectNode) this.aClass13_1329.getNext()) {
           if (!var3.method568(-22358)) {
             if (++var3.subnodeKey > var2) {
               AbstractObjectNode var4 = Texture.aClass118_3794.wrap(var3);
@@ -90,7 +90,7 @@ public final class ObjectCache {
               var3.unlinkNode();
               var3.unlinkSubNode();
             }
-          } else if (null == var3.getObject(true)) {
+          } else if (var3.getObject(true) == null) {
             var3.unlinkNode();
             var3.unlinkSubNode();
             ++this.anInt1327;
@@ -128,7 +128,7 @@ public final class ObjectCache {
 
   public Object get(long var1 ) {
     AbstractObjectNode var4 = (AbstractObjectNode) this.table.get(var1);
-      if (null == var4) {
+      if (var4 == null) {
         return null;
       } else {
         Object var5 = var4.getObject(true);

@@ -79,7 +79,7 @@ public final class Texture extends SubNode {
       var1.readUnsignedByte();
       if (var2 == 1) {
         this.textureEnvironmentOpcode = 2;
-      } else if (-3 == ~var2) {
+      } else if (~var2 == -3) {
         this.textureEnvironmentOpcode = 3;
       } else if (~var2 != -4) {
         this.textureEnvironmentOpcode = 0;
@@ -94,7 +94,7 @@ public final class Texture extends SubNode {
       FileUnpacker var4,
       boolean var5) {
     if (var2 == 0) {
-        if (null == this.anIntArray3793 || this.aFloat3782 != var3) {
+        if (this.anIntArray3793 == null || this.aFloat3782 != var3) {
           if (!this.proceduralTexture.method1408(true, var1, var4)) {
             return null;
           }
@@ -152,7 +152,7 @@ public final class Texture extends SubNode {
                 }
               }
 
-              for (var11 = var17; -1 >= ~var11; --var11) {
+              for (var11 = var17; ~var11 <= -1; --var11) {
                 --var26;
                 int var21 = var30 / 9;
                 int var22 = var29 / 9;
@@ -164,7 +164,7 @@ public final class Texture extends SubNode {
                 var28 += var7[var27] + -var7[var26];
                 var29 += var9[var27] - var9[var26];
                 var30 += -var8[var26] + var8[var27];
-                if (-1 == ~var26) {
+                if (~var26 == -1) {
                   var26 = var15;
                 }
 
@@ -190,11 +190,11 @@ public final class Texture extends SubNode {
                     .bitAnd(255, var24);
               }
 
-              if (0 == var13) {
+              if (var13 == 0) {
                 var13 = var19;
               }
 
-              if (0 == var14) {
+              if (var14 == 0) {
                 var14 = var19;
               }
             }
@@ -217,7 +217,7 @@ public final class Texture extends SubNode {
         int var6 = !var4 ? 128 : 64;
         int flags = DummyClass32.method961(1536);
         if (~(1 & flags) == -1) {
-          if (0 == ~this.anInt3795) {
+          if (~this.anInt3795 == 0) {
             int[] var8 = new int[1];
             GlRenderer.GL.glGenTextures(1, var8, 0);
             this.anInt3791 = DummyClass33.anInt582;
@@ -228,7 +228,7 @@ public final class Texture extends SubNode {
                     .method1407(var6, var6, this.aBoolean3800, var2, 0.7D, 8839,
                         var1)));
 
-            if (2 == this.anInt3788) {
+            if (this.anInt3788 == 2) {
               //TODO
               GLU var14 = new GLUgl2();
               var14.gluBuild2DMipmaps(3553, 6408, var6, var6, 6408, 5121, var9);
@@ -246,7 +246,7 @@ public final class Texture extends SubNode {
                       .glTexImage2D(3553, var10++, 6408, var6, var6, 0, 6408,
                       5121, var9);
                   var6 >>= 1;
-                  if (0 == var6) {
+                  if (var6 == 0) {
                     GlRenderer.GL.glTexParameteri(3553, 10241, 9987);
                     GlRenderer.GL.glTexParameteri(3553, 10240, 9729);
                     DummyClass33.textureMemory +=
@@ -289,7 +289,7 @@ public final class Texture extends SubNode {
         }
 
         if ((flags & 8) == 0) {
-          if (-1 == ~this.anInt3799 && 0 == this.anInt3783) {
+          if (~this.anInt3799 == -1 && this.anInt3783 == 0) {
             GlRenderer.loadIdentityTextureMatrix();
           } else {
             float var12 =
@@ -328,8 +328,8 @@ public final class Texture extends SubNode {
       }
 
       if (this.anIntArray3793 != null) {
-        if (0 != this.anInt3799 || ~this.anInt3783 != -1) {
-          if (null == SomethingOtherWorldMap.anIntArray2533
+        if (this.anInt3799 != 0 || ~this.anInt3783 != -1) {
+          if (SomethingOtherWorldMap.anIntArray2533 == null
               || ~SomethingOtherWorldMap.anIntArray2533.length
               > ~this.anIntArray3793.length) {
             SomethingOtherWorldMap.anIntArray2533 = new int[this.anIntArray3793.length];
@@ -393,14 +393,14 @@ public final class Texture extends SubNode {
 
         int var4;
         int var5;
-        for (var4 = 0; -5 < ~var4; ++var4) {
-          for (var5 = 0; 104 > var5; ++var5) {
+        for (var4 = 0; ~var4 > -5; ++var4) {
+          for (var5 = 0; var5 < 104; ++var5) {
             AbstractImageProducer.aByteArrayArrayArray2008[var4][var3][var5] = var2;
           }
         }
 
         if (GameWorldSomething.currentPlane != 3) {
-          for (var4 = 0; -3 < ~var4; ++var4) {
+          for (var4 = 0; ~var4 > -3; ++var4) {
             FileCache.anIntArray686[var4] = -1000000;
             MilliFrameRegulator.anIntArray2696[var4] = 1000000;
             DummyClass13.anIntArray2021[var4] = 0;
@@ -408,7 +408,7 @@ public final class Texture extends SubNode {
             Player.anIntArray3959[var4] = 0;
           }
 
-          if (1 == SomethingPacket116.anInt1753) {
+          if (SomethingPacket116.anInt1753 == 1) {
             if ((4
                 & BZipDecompressorState.tileFlags[GameWorldSomething.currentPlane][
                 TextureCache.localPlayer.anInt2819 >> 7][
@@ -420,7 +420,7 @@ public final class Texture extends SubNode {
                   SomethingTexture1.sceneGraphTiles, 0);
             }
 
-            if (-311 < ~DummyClass17.anInt1823) {
+            if (~DummyClass17.anInt1823 > -311) {
               int var7 = TextureCache.localPlayer.anInt2829 >> 7;
               var5 = DummyClass49.anInt1111 >> 7;
               int var9;
@@ -523,7 +523,7 @@ public final class Texture extends SubNode {
             var4 = BufferData
                 .method1736(GameWorldSomething.currentPlane, 1, NPC.anInt3995,
                     DummyClass49.anInt1111);
-            if (800 > var4 + -EnumStringFetcher.anInt2162 &&
+            if (var4 + -EnumStringFetcher.anInt2162 < 800 &&
                 (4
                     & BZipDecompressorState.tileFlags[GameWorldSomething.currentPlane][
                     NPC.anInt3995

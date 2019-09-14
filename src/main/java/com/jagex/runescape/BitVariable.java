@@ -48,10 +48,10 @@ public final class BitVariable {
     int var2 = var1.getKeyChar();
     if (!var0) {
       return -90;
-    } else if (8364 == var2) {
+    } else if (var2 == 8364) {
       return 128;
     } else {
-      if (~var2 >= -1 || 256 <= var2) {
+      if (~var2 >= -1 || var2 >= 256) {
         var2 = -1;
       }
 
@@ -68,7 +68,7 @@ public final class BitVariable {
   }
 
   public static void parseSettings(Buffer var0, int var1) {
-    if (-2 >= ~(-var0.position + var0.bytes.length)) {
+    if (~(-var0.position + var0.bytes.length) <= -2) {
       int var2 = var0.readUnsignedByte();
       if (var2 >= 0 && ~var2 >= -12) {
         byte var3;
@@ -81,15 +81,15 @@ public final class BitVariable {
             var3 = 30;
           } else if (~var2 == -8) {
             var3 = 29;
-          } else if (-7 != ~var2) {
+          } else if (~var2 != -7) {
             if (~var2 == -6) {
               var3 = 28;
-            } else if (-5 != ~var2) {
-              if (-4 == ~var2) {
+            } else if (~var2 != -5) {
+              if (~var2 == -4) {
                 var3 = 23;
-              } else if (-3 == ~var2) {
+              } else if (~var2 == -3) {
                 var3 = 22;
-              } else if (1 == var2) {
+              } else if (var2 == 1) {
                 var3 = 23;
               } else {
                 var3 = 19;
@@ -106,24 +106,24 @@ public final class BitVariable {
 
         if (~(var0.bytes.length - var0.position) <= ~var3) {
           AbstractFileRequest.brightnessSetting = var0.readUnsignedByte();
-          if (-2 >= ~AbstractFileRequest.brightnessSetting) {
-            if (-5 > ~AbstractFileRequest.brightnessSetting) {
+          if (~AbstractFileRequest.brightnessSetting <= -2) {
+            if (~AbstractFileRequest.brightnessSetting < -5) {
               AbstractFileRequest.brightnessSetting = 4;
             }
           } else {
             AbstractFileRequest.brightnessSetting = 1;
           }
 
-          SceneSomething.method957(var1 + 97, 1 == var0.readUnsignedByte());
+          SceneSomething.method957(var1 + 97, var0.readUnsignedByte() == 1);
           AbstractObjectNode.aBoolean3604 = var0.readUnsignedByte() == 1;
-          Keyboard.aBoolean1905 = 1 == var0.readUnsignedByte();
-          SceneSomething.aBoolean488 = 1 == var0.readUnsignedByte();
+          Keyboard.aBoolean1905 = var0.readUnsignedByte() == 1;
+          SceneSomething.aBoolean488 = var0.readUnsignedByte() == 1;
           Widget.aBoolean236 = var0.readUnsignedByte() == 1;
           GameWorld.aBoolean2623 = ~var0.readUnsignedByte() == -2;
-          TextureSampler0.aBoolean3275 = -2 == ~var0.readUnsignedByte();
-          Projectile.aBoolean2910 = 1 == var0.readUnsignedByte();
+          TextureSampler0.aBoolean3275 = ~var0.readUnsignedByte() == -2;
+          Projectile.aBoolean2910 = var0.readUnsignedByte() == 1;
           HashTableIterator.anInt1137 = var0.readUnsignedByte();
-          if (2 < HashTableIterator.anInt1137) {
+          if (HashTableIterator.anInt1137 > 2) {
             HashTableIterator.anInt1137 = 2;
           }
 
@@ -132,7 +132,7 @@ public final class BitVariable {
             var0.readUnsignedByte();
           }
 
-          DummyHashTable.aBoolean1685 = 1 == var0.readUnsignedByte();
+          DummyHashTable.aBoolean1685 = var0.readUnsignedByte() == 1;
           DummyClass35.aBoolean661 = ~var0.readUnsignedByte() == -2;
           Parameter.anInt3622 = var0.readUnsignedByte();
           if (~Parameter.anInt3622 < -3) {
@@ -148,7 +148,7 @@ public final class BitVariable {
 
           BZipDecompressorState.anInt120 = var0.readUnsignedByte();
           DummyClass28.anInt340 = var0.readUnsignedByte();
-          if (-128 > ~DummyClass28.anInt340) {
+          if (~DummyClass28.anInt340 < -128) {
             DummyClass28.anInt340 = 127;
           }
 
@@ -157,13 +157,13 @@ public final class BitVariable {
             TextureSampler21.anInt3071 = var0.readUnsignedShort();
           }
 
-          if (-4 >= ~var2 && ~var2 > -7) {
+          if (~var2 <= -4 && ~var2 > -7) {
             var0.readUnsignedByte();
           }
 
           if (~var2 <= -5) {
             int var4 = var0.readUnsignedByte();
-            if (-97 < ~AudioStreamEncoder3.anInt3492) {
+            if (~AudioStreamEncoder3.anInt3492 > -97) {
               var4 = 0;
             }
 
@@ -178,27 +178,27 @@ public final class BitVariable {
             BitVariable.CLIENT_SCRIPT_ERROR = null;
           }
 
-          if (6 <= var2) {
+          if (var2 >= 6) {
             SubNode.anInt2577 = var0.readUnsignedByte();
           }
 
           if (~var2 <= -8) {
-            GameString.safemode = 1 == var0.readUnsignedByte();
+            GameString.safemode = var0.readUnsignedByte() == 1;
           }
 
-          if (8 <= var2) {
+          if (var2 >= 8) {
             AudioWorker.aBoolean346 = ~var0.readUnsignedByte() == -2;
           }
 
-          if (9 <= var2) {
+          if (var2 >= 9) {
             TriChromaticImageBuffer.anInt2488 = var0.readUnsignedByte();
           }
 
-          if (10 <= var2) {
-            FileCacheRequester.aBoolean1080 = 0 != var0.readUnsignedByte();
+          if (var2 >= 10) {
+            FileCacheRequester.aBoolean1080 = var0.readUnsignedByte() != 0;
           }
 
-          if (-12 >= ~var2) {
+          if (~var2 <= -12) {
             DummyClass4.aBoolean3004 = ~var0.readUnsignedByte() != -1;
           }
 

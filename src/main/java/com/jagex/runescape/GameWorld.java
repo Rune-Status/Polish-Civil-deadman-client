@@ -37,7 +37,7 @@ public final class GameWorld extends AbstractGameWorld {
   }
 
   public static int getInventoryFreeSpace(int var0, byte var1) {
-    if (0 > var0) {
+    if (var0 < 0) {
         return 0;
       } else {
         Inventory var2 = (Inventory) SceneGraphTile.aClass130_2220.get(var0);
@@ -49,7 +49,7 @@ public final class GameWorld extends AbstractGameWorld {
           int var3 = 0;
 
           for (int var4 = 0; var4 < var2.ids.length; ++var4) {
-            if (0 == ~var2.ids[var4]) {
+            if (~var2.ids[var4] == 0) {
               ++var3;
             }
           }

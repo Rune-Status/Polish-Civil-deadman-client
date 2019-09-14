@@ -32,11 +32,11 @@ public final class TextureSampler16 extends AbstractTextureSampler {
             for (var8 -= var9; ~var8 > -1; var8 += 4) {
             }
 
-            while (3 < var8) {
+            while (var8 > 3) {
               var8 -= 4;
             }
 
-            if (1 != var8) {
+            if (var8 != 1) {
               var4[var5] = 0;
               continue;
             }
@@ -48,7 +48,7 @@ public final class TextureSampler16 extends AbstractTextureSampler {
           }
 
           if (var10 < this.anInt3109) {
-            for (var8 -= var9; 0 > var8; var8 += 4) {
+            for (var8 -= var9; var8 < 0; var8 += 4) {
             }
 
             while (~var8 < -4) {

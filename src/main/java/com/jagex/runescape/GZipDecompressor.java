@@ -29,7 +29,7 @@ public final class GZipDecompressor {
         GZipDecompressor.anInt815 = -81;
       }
 
-      if (31 == var2.bytes[var2.position]
+      if (var2.bytes[var2.position] == 31
           && var2.bytes[var2.position + 1] == -117) {
         if (this.anInflater813 == null) {
           this.anInflater813 = new Inflater(true);
@@ -64,13 +64,13 @@ public final class GZipDecompressor {
       for (int var4 = 0; ~var4 > ~var2; ++var4) {
         DummyClass43.method1194(-16385);
 
-        for (int var5 = 0; -14 < ~var5; ++var5) {
-          for (int var6 = 0; -14 < ~var6; ++var6) {
+        for (int var5 = 0; ~var5 > -14; ++var5) {
+          for (int var6 = 0; ~var6 > -14; ++var6) {
             int var8 = GameObjectConfig.anIntArrayArrayArray1497[var4][var5][var6];
             boolean var7 = false;
             if (~var8 != 0) {
               int var9 = var8 >> 24 & 3;
-              if (!var0 || 0 == var9) {
+              if (!var0 || var9 == 0) {
                 int var12 = 2047 & var8 >> 3;
                 int var10 = var8 >> 1 & 3;
                 int var11 = 1023 & var8 >> 14;
@@ -80,7 +80,7 @@ public final class GZipDecompressor {
                     AudioStreamEncoder3.regionHashes.length > var14;
                     ++var14) {
                   if (~AudioStreamEncoder3.regionHashes[var14] == ~var13
-                      && null != var3[var14]) {
+                      && var3[var14] != null) {
                     MovedStatics0.method60(var10, 8 * var5, var4,
                         BlockConfig.collisionMaps,
                         var6 * 8, (byte) -100, var3[var14], var9,
@@ -112,7 +112,7 @@ public final class GZipDecompressor {
       }
 
       Widget var2 = GameClient.method42(var1);
-      if (null == var2) {
+      if (var2 == null) {
         var2 = var1.aClass11_302;
       }
 
@@ -123,12 +123,12 @@ public final class GZipDecompressor {
     ByteArrayNode var2 =
           (ByteArrayNode) SceneSomething.aClass47_480
               .get(var1, var0 + -16710535);
-      if (null == var2) {
+      if (var2 == null) {
         Random var4 = new Random(var1);
         byte[] var3 = new byte[512];
 
         int var5;
-        for (var5 = 0; -256 < ~var5; ++var5) {
+        for (var5 = 0; ~var5 > -256; ++var5) {
           var3[var5] = (byte) var5;
         }
 
@@ -197,7 +197,7 @@ public final class GZipDecompressor {
         MonoChromaticImageCache.anIntArray1578[0] = AnimationSomething.anInt3590;
       }
 
-      if (0 != ~InventoryConfig.anInt3655) {
+      if (~InventoryConfig.anInt3655 != 0) {
         PlayerAppearance.method1160(-113, InventoryConfig.anInt3655);
       }
 
@@ -239,8 +239,8 @@ public final class GZipDecompressor {
           } else {
             DummyClass51.method1419(-117);
           }
-        } else if (null == AbstractDirectColorSprite.aClass11_3708) {
-          if (0 != ~DummyClass41.anInt865) {
+        } else if (AbstractDirectColorSprite.aClass11_3708 == null) {
+          if (~DummyClass41.anInt865 != 0) {
             IdentityKit
                 .method950(null, -86, SubNode.anInt2567, DummyClass41.anInt865);
           }
@@ -256,11 +256,11 @@ public final class GZipDecompressor {
         }
 
         TextureSampler20.method229(var1, 20827);
-        if (-2 == ~ClientScriptCall.anInt2440) {
+        if (~ClientScriptCall.anInt2440 == -2) {
           ClientScriptCall.anInt2440 = 2;
         }
 
-        if (1 == GameObjectConfig.anInt1521) {
+        if (GameObjectConfig.anInt1521 == 1) {
           GameObjectConfig.anInt1521 = 2;
         }
 

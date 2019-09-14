@@ -43,7 +43,7 @@ public final class InventoryConfig extends SubNode {
 
       while (true) {
         int var3 = var1.readUnsignedByte();
-        if (0 == var3) {
+        if (var3 == 0) {
           return;
         }
 
@@ -62,7 +62,7 @@ public final class InventoryConfig extends SubNode {
   }
 
   public static boolean method609(Widget var0, int var1) {
-    if (null != var0.anIntArray275) {
+    if (var0.anIntArray275 != null) {
         int var2 = 0;
         if (var1 <= 20) {
           InventoryConfig.aClass94_3651 = null;
@@ -73,7 +73,7 @@ public final class InventoryConfig extends SubNode {
           int var4 = var0.anIntArray307[var2];
           if (~var0.anIntArray275[var2] != -3) {
             if (~var0.anIntArray275[var2] != -4) {
-              if (4 == var0.anIntArray275[var2]) {
+              if (var0.anIntArray275[var2] == 4) {
                 if (~var3 == ~var4) {
                   return false;
                 }

@@ -68,13 +68,13 @@ public final class DummyClass9 extends DummyClass5 {
 
       if (~TextureSampler2.anInt3375 != -1) {
         try {
-          if (1500 < ++SceneGraphTile.anInt2246) {
-            if (null != SomethingVolume15.gameSocket) {
+          if (++SceneGraphTile.anInt2246 > 1500) {
+            if (SomethingVolume15.gameSocket != null) {
               SomethingVolume15.gameSocket.destroy();
               SomethingVolume15.gameSocket = null;
             }
 
-            if (1 <= DummyClass26.anInt1616) {
+            if (DummyClass26.anInt1616 >= 1) {
               AbstractImageProducer.loginResponse = -5;
               TextureSampler2.anInt3375 = 0;
               return;
@@ -98,13 +98,13 @@ public final class DummyClass9 extends DummyClass5 {
           }
 
           int var1;
-          if (-3 == ~TextureSampler2.anInt3375) {
+          if (~TextureSampler2.anInt3375 == -3) {
             assert AreaSoundEffect.socketRequest != null;
             if (~AreaSoundEffect.socketRequest.status == -3) {
               throw new IOException();
             }
 
-            if (1 != AreaSoundEffect.socketRequest.status) {
+            if (AreaSoundEffect.socketRequest.status != 1) {
               return;
             }
 
@@ -118,7 +118,7 @@ public final class DummyClass9 extends DummyClass5 {
               GameWorld.audioOutputStream0.pause();
             }
 
-            if (null != SomethingWorldMappy.audioOutputStream1) {
+            if (SomethingWorldMappy.audioOutputStream1 != null) {
               SomethingWorldMappy.audioOutputStream1.pause();
             }
 
@@ -131,7 +131,7 @@ public final class DummyClass9 extends DummyClass5 {
               SomethingWorldMappy.audioOutputStream1.pause();
             }
 
-            if (-102 != ~var1) {
+            if (~var1 != -102) {
               AbstractImageProducer.loginResponse = var1;
               TextureSampler2.anInt3375 = 0;
               SomethingVolume15.gameSocket.destroy();
@@ -165,7 +165,7 @@ public final class DummyClass9 extends DummyClass5 {
             return;
           }
         } catch (IOException var2) {
-          if (null != SomethingVolume15.gameSocket) {
+          if (SomethingVolume15.gameSocket != null) {
             SomethingVolume15.gameSocket.destroy();
             SomethingVolume15.gameSocket = null;
           }

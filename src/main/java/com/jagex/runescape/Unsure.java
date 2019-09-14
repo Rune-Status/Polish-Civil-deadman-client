@@ -35,12 +35,12 @@ public final class Unsure {
                                int var6) {
     if (DummyClass55.anInt1425 <= var1 && GlTexture2d.anInt3765 >= var3
         && ~DummyClass13.anInt2020 >= ~var2 && var4 <= LightIntensity.anInt902) {
-        if (-2 == ~var5) {
+        if (~var5 == -2) {
           DummyClass49.method1367(var0, var3, var2, (byte) 34, var4, var1);
         } else {
           AbstractIndexedColorSprite.method1665(var6 + -19617, var3, var2, var0, var4, var5, var1);
         }
-      } else if (1 != var5) {
+      } else if (var5 != 1) {
         TextureSampler33.method184(var4, var5, var3, var1, 1, var0, var2);
       } else {
         TextureCache.method1617(var0, var1, var4, var3, var2, (byte) 29);
@@ -929,7 +929,7 @@ public final class Unsure {
   public static void method2074(int var0, int var1, int var2, int var3, int var4, int var5,
                                int var6) {
     Widget var7 = AbstractDirectColorSprite.method638((byte) -19, var0, var1);
-      if (null != var7 && null != var7.anObjectArray203) {
+      if (var7 != null && var7.anObjectArray203 != null) {
         ClientScriptCall var8 = new ClientScriptCall();
         var8.aClass11_2449 = var7;
         var8.arguments = var7.anObjectArray203;
@@ -964,7 +964,7 @@ public final class Unsure {
           return null;
         } else {
           var2 = new PlayerVariable();
-          if (null != var3) {
+          if (var3 != null) {
             var2.method970(-20638, new Buffer(var3));
           }
 

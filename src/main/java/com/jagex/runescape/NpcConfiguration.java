@@ -107,7 +107,7 @@ public final class NpcConfiguration {
       }
 
       int var3;
-      if (0 <= var2 && ~var2 > ~(-1 + this.anIntArray1292.length)
+      if (var2 >= 0 && ~var2 > ~(-1 + this.anIntArray1292.length)
         && this.anIntArray1292[var2] != -1) {
         var3 = -24 % ((-46 - var1) / 41);
         return SubNode.getNpcConfiguration(this.anIntArray1292[var2]);
@@ -120,11 +120,11 @@ public final class NpcConfiguration {
   public boolean method1472(byte var1 ) {
     if (var1 != 74) {
         return true;
-      } else if (null == this.anIntArray1292) {
+      } else if (this.anIntArray1292 == null) {
         return true;
       } else {
         int var2 = -1;
-        if (-1 == this.anInt1257) {
+        if (this.anInt1257 == -1) {
           if (~this.anInt1295 != 0) {
             var2 = DummyClass5.anIntArray2985[this.anInt1295];
           }
@@ -133,11 +133,11 @@ public final class NpcConfiguration {
         }
 
         if (var2 >= 0 && var2 < -1 + this.anIntArray1292.length
-          && -1 != this.anIntArray1292[var2]) {
+          && this.anIntArray1292[var2] != -1) {
           return true;
         } else {
           int var3 = this.anIntArray1292[-1 + this.anIntArray1292.length];
-          return 0 != ~var3;
+          return ~var3 != 0;
         }
       }
   }
@@ -149,10 +149,11 @@ public final class NpcConfiguration {
 
       if (this.anIntArray1292 != null) {
         for (int var2 = 0; this.anIntArray1292.length > var2; ++var2) {
-          if (0 != ~this.anIntArray1292[var2]) {
+          if (~this.anIntArray1292[var2] != 0) {
             NpcConfiguration var3 = SubNode.getNpcConfiguration(
                 this.anIntArray1292[var2]);
-            if (0 != ~var3.anInt1262 || 0 != ~var3.anInt1293 || var3.anInt1276 != -1) {
+            if (~var3.anInt1262 != 0 || ~var3.anInt1293 != 0
+                || var3.anInt1276 != -1) {
               return true;
             }
           }
@@ -160,12 +161,12 @@ public final class NpcConfiguration {
 
         return false;
       } else {
-        return -1 != this.anInt1262 || this.anInt1293 != -1 || this.anInt1276 != -1;
+        return this.anInt1262 != -1 || this.anInt1293 != -1 || this.anInt1276 != -1;
       }
   }
 
   public int method1475(int var1, int var2, int var3 ) {
-    if (null != this.aClass130_1272) {
+    if (this.aClass130_1272 != null) {
         IntegerNode var4 = (IntegerNode) this.aClass130_1272.get(var1);
         if (var2 != -26460) {
           NpcConfiguration.aClass94_1294 = null;
@@ -187,7 +188,7 @@ public final class NpcConfiguration {
       AnimationSequence var10 ) {
     if (this.anIntArray1292 != null) {
         NpcConfiguration var33 = this.method1471((byte) 32);
-        return null != var33 ?
+        return var33 != null ?
           var33.method1476(var1, var2, (byte) -102, var4, var5, var6, var7, var8, var9, var10) :
           null;
       } else {
@@ -205,7 +206,7 @@ public final class NpcConfiguration {
         int var27;
         int var29;
         int var28;
-        if (null == var11) {
+        if (var11 == null) {
           var12 = false;
 
           for (int var13 = 0; var13 < this.anIntArray1288.length; ++var13) {
@@ -222,11 +223,11 @@ public final class NpcConfiguration {
           Model[] var14 = new Model[this.anIntArray1288.length];
 
           for (int var15 = 0; this.anIntArray1288.length > var15; ++var15) {
-            if (0 != ~this.anIntArray1288[var15]) {
+            if (~this.anIntArray1288[var15] != 0) {
               var14[var15] =
                 Model.getModel(TextureSampler31.aClass153_3173,
                     this.anIntArray1288[var15], 0);
-              if (null != this.anIntArrayArray1261
+              if (this.anIntArrayArray1261 != null
                   && this.anIntArrayArray1261[var15] != null
                 && var14[var15] != null) {
                 var14[var15].translate(this.anIntArrayArray1261[var15][0],
@@ -236,12 +237,12 @@ public final class NpcConfiguration {
           }
 
           RenderAnimation var38 = null;
-          if (-1 != this.renderAnimationId) {
+          if (this.renderAnimationId != -1) {
             var38 = StringNode0.getRenderAnimation(false,
                 this.renderAnimationId);
           }
 
-          if (var38 != null && null != var38.anIntArrayArray359) {
+          if (var38 != null && var38.anIntArrayArray359 != null) {
             for (var16 = 0; var16 < var38.anIntArrayArray359.length; ++var16) {
               if (var38.anIntArrayArray359[var16] != null && var14.length > var16
                 && var14[var16] != null) {
@@ -255,7 +256,7 @@ public final class NpcConfiguration {
                   this.anIntArrayArray1258 = new int[var38.anIntArrayArray359.length][];
                 }
 
-                if (null == this.anIntArrayArray1258[var16]) {
+                if (this.anIntArrayArray1258[var16] == null) {
                   int[] var23 = this.anIntArrayArray1258[var16] = new int[15];
                   if (var20 == 0 && var21 == 0 && var22 == 0) {
                     var23[13] = -var18;
@@ -293,11 +294,11 @@ public final class NpcConfiguration {
                   var23[11] = var19;
                 }
 
-                if (-1 != ~var20 || ~var21 != -1 || var22 != 0) {
+                if (~var20 != -1 || ~var21 != -1 || var22 != 0) {
                   var14[var16].rotate(var20, var21, var22);
                 }
 
-                if (var17 != 0 || 0 != var18 || -1 != ~var19) {
+                if (var17 != 0 || var18 != 0 || ~var19 != -1) {
                   var14[var16].translate(var17, var18, var19);
                 }
               }
@@ -313,7 +314,8 @@ public final class NpcConfiguration {
 
           if (this.aShortArray1248 != null) {
             for (var16 = 0; this.aShortArray1248.length > var16; ++var16) {
-              if (null != this.aByteArray1247 && this.aByteArray1247.length > var16) {
+              if (this.aByteArray1247 != null
+                  && this.aByteArray1247.length > var16) {
                 assert var34 != null;
                 var34.replaceColor(this.aShortArray1248[var16],
                   SceneShadowMap.aShortArray1779[this.aByteArray1247[var16] & 255]);
@@ -325,7 +327,7 @@ public final class NpcConfiguration {
             }
           }
 
-          if (null != this.aShortArray1271) {
+          if (this.aShortArray1271 != null) {
             for (var16 = 0; this.aShortArray1271.length > var16; ++var16) {
               assert var34 != null;
               var34.replaceMaterial(
@@ -346,13 +348,13 @@ public final class NpcConfiguration {
         boolean var37 = false;
         boolean var35 = false;
         boolean var36 = false;
-        var16 = null != var1 ? var1.length : 0;
+        var16 = var1 != null ? var1.length : 0;
 
         for (var17 = 0; var16 > var17; ++var17) {
           assert var1 != null;
           if (var1[var17] != null) {
             AnimationSequence var39 = GameClient.method45(var1[var17].anInt1890, (byte) -20);
-            if (null != var39.anIntArray1851) {
+            if (var39.anIntArray1851 != null) {
               DummyClass52.aClass142Array1168[var17] = var39;
               var20 = var1[var17].anInt1891;
               var12 = true;
@@ -370,7 +372,8 @@ public final class NpcConfiguration {
                 var36 |= var39.aBoolean1848;
               }
 
-              if ((var39.tween || MonoChromaticImageBuffer.tweening) && 0 != ~var20
+              if ((var39.tween || MonoChromaticImageBuffer.tweening) && ~var20
+                  != 0
                 && var39.anIntArray1851.length > var20) {
                 DummyClass35.anIntArray664[var17] = var39.anIntArray1869[var19];
                 SubNode.anIntArray2574[var17] = var1[var17].anInt1897;
@@ -379,7 +382,7 @@ public final class NpcConfiguration {
                   AreaSoundEffect.method133(var22 >>> 16, 0);
                 var22 &= '\uffff';
                 BufferedFile.anIntArray574[var17] = var22;
-                if (null != TextureSampler18.aClass3_Sub28_Sub5Array4031[var17]) {
+                if (TextureSampler18.aClass3_Sub28_Sub5Array4031[var17] != null) {
                   var35 |= TextureSampler18.aClass3_Sub28_Sub5Array4031[var17].method561(var22,
                     (byte) 124);
                   var37 |= TextureSampler18.aClass3_Sub28_Sub5Array4031[var17].method559(1317095745,
@@ -395,9 +398,9 @@ public final class NpcConfiguration {
           }
         }
 
-        if (!var12 && null == var10 && var8 == null) {
+        if (!var12 && var10 == null && var8 == null) {
           AbstractModel var41 = var11.method1894(true, true, true);
-          if (this.anInt1264 != 128 || -129 != ~this.anInt1266) {
+          if (this.anInt1264 != 128 || ~this.anInt1266 != -129) {
             var41.scale(this.anInt1264, this.anInt1266, this.anInt1264);
           }
 
@@ -414,13 +417,13 @@ public final class NpcConfiguration {
             var22 = var17 >>> 16;
             var17 &= '\uffff';
             var40 = AreaSoundEffect.method133(var22, 0);
-            if (null != var40) {
+            if (var40 != null) {
               var35 |= var40.method561(var17, (byte) 126);
               var37 |= var40.method559(1317095745, var17);
               var36 |= var10.aBoolean1848;
             }
 
-            if ((var10.tween || MonoChromaticImageBuffer.tweening) && 0 != ~var5
+            if ((var10.tween || MonoChromaticImageBuffer.tweening) && ~var5 != 0
               && var10.anIntArray1851.length > var5) {
               var19 = var10.anIntArray1869[var7];
               var18 = var10.anIntArray1851[var5];
@@ -459,7 +462,7 @@ public final class NpcConfiguration {
               var36 |= var8.aBoolean1848;
             }
 
-            if ((var8.tween || MonoChromaticImageBuffer.tweening) && 0 != ~var2
+            if ((var8.tween || MonoChromaticImageBuffer.tweening) && ~var2 != 0
               && var2 < var8.anIntArray1851.length) {
               var24 = var8.anIntArray1869[var4];
               var42 = var8.anIntArray1851[var2];
@@ -471,7 +474,7 @@ public final class NpcConfiguration {
                 var46 = AreaSoundEffect.method133(var42 >>> 16, 0);
               }
 
-              if (null != var46) {
+              if (var46 != null) {
                 var35 |= var46.method561(var42, (byte) 124);
                 var37 |= var46.method559(1317095745, var42);
               }
@@ -500,7 +503,7 @@ public final class NpcConfiguration {
               var42, var9 + -1, var24, var10.aBooleanArray1855,
               var10.aBoolean1848 | var8.aBoolean1848);
           } else if (var40 == null) {
-            if (null != var44) {
+            if (var44 != null) {
               var45.method1880(var44, var22, var46, var42, -1 + var9, var24, var8.aBoolean1848);
             }
           } else {
@@ -513,7 +516,7 @@ public final class NpcConfiguration {
             DummyClass52.aClass142Array1168[var28] = null;
           }
 
-          if (~this.anInt1264 != -129 || -129 != ~this.anInt1266) {
+          if (~this.anInt1264 != -129 || ~this.anInt1266 != -129) {
             var45.scale(this.anInt1264, this.anInt1266, this.anInt1264);
           }
 
@@ -523,9 +526,9 @@ public final class NpcConfiguration {
   }
 
   public GameString method1477(int var1, GameString var2, boolean var3 ) {
-    if (null != this.aClass130_1272) {
+    if (this.aClass130_1272 != null) {
         StringNode var4 = (StringNode) this.aClass130_1272.get(var1);
-        return !var3 ? null : (null == var4 ? var2 : var4.aClass94_2586);
+        return !var3 ? null : (var4 == null ? var2 : var4.aClass94_2586);
       } else {
         return var2;
       }
@@ -534,7 +537,7 @@ public final class NpcConfiguration {
   public void method1478(Buffer var1, int var2 ) {
     while (true) {
         int var3 = var1.readUnsignedByte();
-        if (-1 == ~var3) {
+        if (~var3 == -1) {
           var3 = -88 % ((5 - var2) / 52);
           return;
         }
@@ -552,7 +555,7 @@ public final class NpcConfiguration {
       int var4,
       int var5 ) {
     if (this.anIntArray1292 == null) {
-        if (null == this.anIntArray1250) {
+        if (this.anIntArray1250 == null) {
           return null;
         } else {
           AbstractModel var12 =
@@ -580,14 +583,14 @@ public final class NpcConfiguration {
             }
 
             Model var15;
-            if (-2 == ~var14.length) {
+            if (~var14.length == -2) {
               var15 = var14[0];
             } else {
               var15 = new Model(var14, var14.length);
             }
 
             int var10;
-            if (null != this.aShortArray1248) {
+            if (this.aShortArray1248 != null) {
               for (var10 = 0; this.aShortArray1248.length > var10; ++var10) {
                 if (this.aByteArray1247
                     != null && ~var10 > ~this.aByteArray1247.length) {
@@ -615,7 +618,7 @@ public final class NpcConfiguration {
             DummyClass14.aClass93_1964.get((byte) -119, var12, this.anInt1284);
           }
 
-          if (null != var1) {
+          if (var1 != null) {
             var12 = var1.method2055(var12, (byte) -75, var3, var2, var5);
           }
 
@@ -624,14 +627,14 @@ public final class NpcConfiguration {
         }
       } else {
         NpcConfiguration var6 = this.method1471((byte) -100);
-        return null == var6 ? null : var6.method1482(var1, var2, var3, 54, var5);
+        return var6 == null ? null : var6.method1482(var1, var2, var3, 54, var5);
       }
   }
 
   private void method1483(int var1, int var2, Buffer var3) {
     int var4;
       int var5;
-      if (1 == var2) {
+      if (var2 == 1) {
         var4 = var3.readUnsignedByte();
         this.anIntArray1288 = new int[var4];
 
@@ -652,7 +655,7 @@ public final class NpcConfiguration {
               this.aClass94Array1259[var2 - 30] = null;
             }
           } else if (var2 != 40) {
-            if (-42 == ~var2) {
+            if (~var2 == -42) {
               var4 = var3.readUnsignedByte();
               this.aShortArray1246 = new short[var4];
               this.aShortArray1271 = new short[var4];
@@ -662,7 +665,7 @@ public final class NpcConfiguration {
                 this.aShortArray1246[var5] = (short) var3.readUnsignedShort();
               }
             } else {
-              if (-43 == ~var2) {
+              if (~var2 == -43) {
                 var4 = var3.readUnsignedByte();
                 this.aByteArray1247 = new byte[var4];
 
@@ -676,45 +679,45 @@ public final class NpcConfiguration {
                 for (var5 = 0; var4 > var5; ++var5) {
                   this.anIntArray1250[var5] = var3.readUnsignedShort();
                 }
-              } else if (93 != var2) {
+              } else if (var2 != 93) {
                 if (~var2 == -96) {
                   this.anInt1260 = var3.readUnsignedShort();
                 } else {
                   if (var2 == 97) {
                     this.anInt1264 = var3.readUnsignedShort();
                   } else {
-                    if (-99 == ~var2) {
+                    if (~var2 == -99) {
                       this.anInt1266 = var3.readUnsignedShort();
                     } else if (~var2 != -100) {
                       if (var2 == 100) {
                         this.anInt1251 = var3.readByte();
                       } else {
-                        if (-102 == ~var2) {
+                        if (~var2 == -102) {
                           this.anInt1282 = var3.readByte() * 5;
                         } else if (~var2 == -103) {
                           this.anInt1269 = var3.readUnsignedShort();
-                        } else if (103 == var2) {
+                        } else if (var2 == 103) {
                           this.anInt1274 = var3.readUnsignedShort();
                         } else {
                           int var6;
-                          if (106 != var2 && ~var2 != -119) {
-                            if (-108 == ~var2) {
+                          if (var2 != 106 && ~var2 != -119) {
+                            if (~var2 == -108) {
                               this.aBoolean1270 = false;
                             } else if (var2 != 109) {
                               if (var2 == 111) {
                                 this.aBoolean1249 = false;
-                              } else if (-114 == ~var2) {
+                              } else if (~var2 == -114) {
                                 this.aShort1286 = (short) var3
                                     .readUnsignedShort();
                                 this.aShort1256 = (short) var3
                                     .readUnsignedShort();
-                              } else if (-115 == ~var2) {
+                              } else if (~var2 == -115) {
                                 this.aByte1287 = var3.readByte();
                                 this.aByte1275 = var3.readByte();
                               } else if (~var2 != -116) {
-                                if (119 == var2) {
+                                if (var2 == 119) {
                                   this.aByte1267 = var3.readByte();
-                                } else if (121 == var2) {
+                                } else if (var2 == 121) {
                                   this.anIntArrayArray1261 = new int[this.anIntArray1288.length][];
                                   var4 = var3.readUnsignedByte();
 
@@ -725,18 +728,18 @@ public final class NpcConfiguration {
                                     var7[1] = var3.readByte();
                                     var7[2] = var3.readByte();
                                   }
-                                } else if (122 == var2) {
+                                } else if (var2 == 122) {
                                   this.anInt1279 = var3.readUnsignedShort();
-                                } else if (-124 == ~var2) {
+                                } else if (~var2 == -124) {
                                   this.anInt1265 = var3.readUnsignedShort();
-                                } else if (-126 != ~var2) {
-                                  if (126 == var2) {
+                                } else if (~var2 != -126) {
+                                  if (var2 == 126) {
                                     this.anInt1283 = var3.readUnsignedShort();
                                   } else {
-                                    if (127 == var2) {
+                                    if (var2 == 127) {
                                       this.renderAnimationId = var3
                                           .readUnsignedShort();
-                                    } else if (128 == var2) {
+                                    } else if (var2 == 128) {
                                       var3.readUnsignedByte();
                                     } else if (var2 != 134) {
                                       if (~var2 == -136) {
@@ -749,10 +752,10 @@ public final class NpcConfiguration {
                                             .readUnsignedByte();
                                         this.anInt1278 = var3
                                             .readUnsignedShort();
-                                      } else if (-138 != ~var2) {
+                                      } else if (~var2 != -138) {
                                         if (~var2 == -250) {
                                           var4 = var3.readUnsignedByte();
-                                          if (null == this.aClass130_1272) {
+                                          if (this.aClass130_1272 == null) {
                                             var5 = DummyClass53
                                                 .nearestPo2((byte) 109, var4);
                                             this.aClass130_1272 = new HashTable(
@@ -762,7 +765,7 @@ public final class NpcConfiguration {
                                           for (var5 = 0; ~var5 > ~var4;
                                               ++var5) {
                                             boolean var11 =
-                                                1 == var3.readUnsignedByte();
+                                                var3.readUnsignedByte() == 1;
                                             int var10 = var3
                                                 .readUnsignedMedium((byte) 83);
                                             Node var8;
@@ -794,12 +797,12 @@ public final class NpcConfiguration {
                                       }
 
                                       this.anInt1293 = var3.readUnsignedShort();
-                                      if (-65536 == ~this.anInt1293) {
+                                      if (~this.anInt1293 == -65536) {
                                         this.anInt1293 = -1;
                                       }
 
                                       this.anInt1276 = var3.readUnsignedShort();
-                                      if (-65536 == ~this.anInt1276) {
+                                      if (~this.anInt1276 == -65536) {
                                         this.anInt1276 = -1;
                                       }
 
@@ -819,7 +822,7 @@ public final class NpcConfiguration {
                           } else {
                             this.anInt1257 = var3.readUnsignedShort();
                             var4 = -1;
-                            if (-65536 == ~this.anInt1257) {
+                            if (~this.anInt1257 == -65536) {
                               this.anInt1257 = -1;
                             }
 
@@ -828,9 +831,9 @@ public final class NpcConfiguration {
                               this.anInt1295 = -1;
                             }
 
-                            if (-119 == ~var2) {
+                            if (~var2 == -119) {
                               var4 = var3.readUnsignedShort();
-                              if (-65536 == ~var4) {
+                              if (~var4 == -65536) {
                                 var4 = -1;
                               }
                             }
@@ -893,9 +896,9 @@ public final class NpcConfiguration {
         NpcConfiguration.anIntArray1277 = null;
       }
 
-      if (-38 == ~var0) {
+      if (~var0 == -38) {
         NPC.aFloat3979 = 3.0F;
-      } else if (50 != var0) {
+      } else if (var0 != 50) {
         if (var0 == 75) {
           NPC.aFloat3979 = 6.0F;
         } else if (var0 != 100) {
@@ -917,8 +920,10 @@ public final class NpcConfiguration {
 
       for (int var5 = 0; ~var5 > ~TextureSampler39.anInt3287; ++var5) {
         ItemConfig var6 = DummyClass35.getItemConfig(var5, (byte) 93);
-        if ((!var0 || var6.aBoolean807) && var6.anInt791 == -1 && -1 == var6.anInt762
-          && -1 == ~var6.anInt800 && var6.aClass94_770.method1534().indexOf(var1) != -1) {
+        if ((!var0 || var6.aBoolean807) && var6.anInt791 == -1 && var6.anInt762
+            == -1
+          && ~var6.anInt800 == -1
+            && var6.aClass94_770.method1534().indexOf(var1) != -1) {
           if (~var4 <= -251) {
             DummyClass54.aShortArray1398 = null;
             FileTable.anInt952 = -1;

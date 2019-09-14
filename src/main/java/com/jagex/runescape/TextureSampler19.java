@@ -118,7 +118,7 @@ public final class TextureSampler19 extends AbstractTextureSampler {
 
       Something3d2.method2249((byte) 83, var3);
       Widget var5 = EnumStringFetcher.getWidget((byte) 109, var4);
-      if (null != var5) {
+      if (var5 != null) {
         DummyClass29.method909(107, var5);
       }
 
@@ -131,7 +131,7 @@ public final class TextureSampler19 extends AbstractTextureSampler {
         }
       }
 
-      if (-2 == ~TextureSampler25.amountContextActions) {
+      if (~TextureSampler25.amountContextActions == -2) {
         DummyClass36.aBoolean2615 = false;
         AbstractSomethingTexture
             .method1340(AbstractIndexedColorSprite.anInt1462,
@@ -162,7 +162,7 @@ public final class TextureSampler19 extends AbstractTextureSampler {
         SomethingWorldMapy.anInt3552 = var7 + 8;
       }
 
-      if (-1 != InventoryConfig.anInt3655) {
+      if (InventoryConfig.anInt3655 != -1) {
         ClassCheckRequest.method124(115, 1, InventoryConfig.anInt3655);
       }
   }
@@ -191,7 +191,7 @@ public final class TextureSampler19 extends AbstractTextureSampler {
         TextureSampler19.method259(null, 69, 54, -87, 72, -85, 88, 37, true);
       }
 
-      for (int var2 = 0; -105 < ~var2; ++var2) {
+      for (int var2 = 0; ~var2 > -105; ++var2) {
         for (int var3 = 0; ~var3 > -105; ++var3) {
           if (GroundItem.method2031((byte) -106, true, var2, var3,
             SomethingTexture1.sceneGraphTiles, var1)) {

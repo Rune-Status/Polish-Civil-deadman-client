@@ -34,7 +34,7 @@ public final class SceneShadowMap {
         int var18 = var5 - -(var17 * var8) >> 16;
         int var19 = var8 * (var17 + 1) + var5 >> 16;
         int var20 = -var18 + var19;
-        if (-1 > ~var20) {
+        if (~var20 < -1) {
           int var21 = var4 + var17 >> 6;
           var18 += var0;
           int var10000 = var19 + var0;
@@ -45,14 +45,15 @@ public final class SceneShadowMap {
               int var25 = var6 - -(var3 * (var23 - -1)) >> 16;
               int var24 = var23 * var3 + var6 >> 16;
               int var26 = var25 + -var24;
-              if (0 < var26) {
+              if (var26 > 0) {
                 var24 += var10;
                 int var27 = var9 + var23 >> 6;
                 var10000 = var25 + var10;
-                if (~var27 <= -1 && ~var27 >= ~(-1 + var22.length) && null != var22[var27]) {
+                if (~var27 <= -1 && ~var27 >= ~(-1 + var22.length) &&
+                    var22[var27] != null) {
                   int var28 = (63 & var17 + var4) + (4032 & var9 + var23 << 6);
                   int var29 = var22[var27][var28];
-                  if (-1 != ~var29) {
+                  if (~var29 != -1) {
                     GameObjectConfig var14 = DummyClass11.method2207(4, -1 + var29);
                     if (!AudioStreamEncoder4.aBooleanArray3503[var14.anInt1482]) {
                       if (~var13 != 0 && ~var14.anInt1482 == ~FileSystem.anInt101) {
@@ -77,7 +78,7 @@ public final class SceneShadowMap {
       if (var7 >= 124) {
         for (SomethingOtherWorldMap var32 =
              (SomethingOtherWorldMap) DummyClass55.aClass61_1424.getFirst();
-             null != var32; var32 = (SomethingOtherWorldMap) DummyClass55.aClass61_1424.getNext()) {
+            var32 != null; var32 = (SomethingOtherWorldMap) DummyClass55.aClass61_1424.getNext()) {
           DummyClass47.method1330(var32.anInt2531, var32.anInt2539, 15, 16776960, var13);
           DummyClass47.method1330(var32.anInt2531, var32.anInt2539, 13, 16776960, var13);
           DummyClass47.method1330(var32.anInt2531, var32.anInt2539, 11, 16776960, var13);

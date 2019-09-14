@@ -47,7 +47,7 @@ public final class TextureSampler30 extends AbstractTextureSampler {
       } else {
         if (var1 == 1) {
           this.anInt3127 = var2.readUnsignedShort();
-        } else if (-3 == ~var1) {
+        } else if (~var1 == -3) {
           this.monoChromatic = var2.readUnsignedByte() == 1;
         }
       }
@@ -122,7 +122,7 @@ public final class TextureSampler30 extends AbstractTextureSampler {
   }
 
   public static void method212(long var0, int var2) {
-    if (0L != var0) {
+    if (var0 != 0L) {
         for (int var3 = var2; ~var3 > ~AnimationSomething.anInt3591; ++var3) {
           if (MonoChromaticImageCache.aLongArray1574[var3] == var0) {
             ++DummyClass20.anInt1781;
@@ -250,14 +250,14 @@ public final class TextureSampler30 extends AbstractTextureSampler {
       }
 
       int var4;
-      for (var3 = 0; -5001 < ~var3; ++var3) {
+      for (var3 = 0; ~var3 > -5001; ++var3) {
         var4 = (int) (var2 * Math.random() * 128.0D);
         DummyClass12.anIntArray2026[var4] = (int) (Math.random() * 284.0D);
       }
 
       int var5;
       int var6;
-      for (var3 = 0; -21 < ~var3; ++var3) {
+      for (var3 = 0; ~var3 > -21; ++var3) {
         for (var4 = 1; (-1 + var2) > var4; ++var4) {
           for (var5 = 1; var5 < 127; ++var5) {
             var6 = var5 - -(var4 << 7);
@@ -297,7 +297,7 @@ public final class TextureSampler30 extends AbstractTextureSampler {
           var4 = -1;
         }
 
-        if (null != DummyClass26.aClass44_Sub1Array1609[var3]) {
+        if (DummyClass26.aClass44_Sub1Array1609[var3] != null) {
           DummyClass26.aClass44_Sub1Array1609[var3].anInt722 = var4;
         }
       }

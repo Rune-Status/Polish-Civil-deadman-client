@@ -25,7 +25,7 @@ public final class FileSystem {
   }
 
   public boolean isUpdateTableReceived() {
-    if (null == this.updateTableBuffer) {
+    if (this.updateTableBuffer == null) {
 
         if (this.updateTableRequest == null) {
           if (this.ondemandRequester.method1251((byte) 89)) {
@@ -49,7 +49,7 @@ public final class FileSystem {
   }
 
   public void method838(byte var1 ) {
-    if (null != this.fileRequesters) {
+    if (this.fileRequesters != null) {
         int var2;
         for (var2 = 0; this.fileRequesters.length > var2; ++var2) {
           if (this.fileRequesters[var2] != null) {
@@ -80,12 +80,12 @@ public final class FileSystem {
 
   private FileRequester method847(FileCache var1, int var2, int var3, boolean var4,
                                         FileCache var5) {
-    if (null != this.updateTableBuffer) {
+    if (this.updateTableBuffer != null) {
         this.updateTableBuffer.position = 5 + var3 * 8;
         if (var2 >= -1) {
           return null;
         } else if (this.updateTableBuffer.bytes.length > this.updateTableBuffer.position) {
-          if (null == this.fileRequesters[var3]) {
+          if (this.fileRequesters[var3] == null) {
             int var6 = this.updateTableBuffer.readInt();
             int var7 = this.updateTableBuffer.readInt();
             FileRequester var8 =
@@ -123,7 +123,7 @@ public final class FileSystem {
 
       int var10;
       int var11;
-      if (-2 != ~var9 && -4 != ~var9) {
+      if (~var9 != -2 && ~var9 != -4) {
         var11 = var0.anInt1485;
         var10 = var0.anInt1480;
       } else {
@@ -133,7 +133,7 @@ public final class FileSystem {
 
       int var14;
       int var15;
-      if (-105 > ~(var7 - -var11)) {
+      if (~(var7 - -var11) < -105) {
         var15 = 1 + var7;
         var14 = var7;
       } else {
@@ -145,7 +145,7 @@ public final class FileSystem {
       int var17 = (var7 << 7) + (var11 << 6);
       int var12;
       int var13;
-      if (104 < var6 - -var10) {
+      if (var6 - -var10 > 104) {
         var12 = var6;
         var13 = var6 + 1;
       } else {
@@ -166,7 +166,7 @@ public final class FileSystem {
       }
 
       var21 = null;
-      if (3 > var8) {
+      if (var8 < 3) {
         var21 = AbstractGameWorld.heightMap[1 + var8];
       }
 
@@ -197,7 +197,7 @@ public final class FileSystem {
                                            boolean var4) {
     if (var4) {
         FileCache var5 = null;
-        if (null != DummyClass55.cacheDataFile) {
+        if (DummyClass55.cacheDataFile != null) {
           var5 = new FileCache(var3, DummyClass55.cacheDataFile,
               DummyClass7.cacheIndexFiles[var3],
               1000000);
@@ -231,11 +231,12 @@ public final class FileSystem {
         FileSystem.aClass94_106 = null;
       }
 
-      if (null == TextureSampler23.anIntArray3212 || null == SomethingTexture1.anIntArray2639) {
+      if (TextureSampler23.anIntArray3212 == null ||
+          SomethingTexture1.anIntArray2639 == null) {
         TextureSampler23.anIntArray3212 = new int[256];
         SomethingTexture1.anIntArray2639 = new int[256];
 
-        for (int var1 = 0; 256 > var1; ++var1) {
+        for (int var1 = 0; var1 < 256; ++var1) {
           double var2 = var1 / 255.0D * 6.283185307179586D;
           TextureSampler23.anIntArray3212[var1] = (int) (Math.sin(var2) * 4096.0D);
           SomethingTexture1.anIntArray2639[var1] = (int) (4096.0D * Math.cos(var2));

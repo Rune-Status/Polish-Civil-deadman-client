@@ -31,9 +31,9 @@ public final class FileUnpacker {
 
         for (int var3 = 0; ~var3 > ~this.table.anIntArray953.length; ++var3) {
           int var4 = this.table.anIntArray953[var3];
-          if (null == this.anObjectArray1954[var4]) {
+          if (this.anObjectArray1954[var4] == null) {
             this.method2134(false, var4);
-            if (null == this.anObjectArray1954[var4]) {
+            if (this.anObjectArray1954[var4] == null) {
               var2 = false;
             }
           }
@@ -95,9 +95,9 @@ public final class FileUnpacker {
       }
 
       if (this.method2130(false, var2)) {
-        if (null == this.anObjectArray1954[var2]) {
+        if (this.anObjectArray1954[var2] == null) {
           this.method2134(false, var2);
-          return null != this.anObjectArray1954[var2];
+          return this.anObjectArray1954[var2] != null;
         } else {
           return true;
         }
@@ -139,7 +139,7 @@ public final class FileUnpacker {
   private boolean method2122() {
     if (this.table == null) {
         this.table = this.aClass151_1947.method2094(0);
-        if (null == this.table) {
+        if (this.table == null) {
           return false;
         }
 
@@ -247,7 +247,7 @@ public final class FileUnpacker {
   public void method2128(int var1, int var2 ) {
     if (var1 == 7561) {
         if (this.method2130(false, var2)) {
-          if (null != this.buffers) {
+          if (this.buffers != null) {
             this.buffers[var2] = null;
           }
 
@@ -258,7 +258,7 @@ public final class FileUnpacker {
   public boolean method2129(byte var1, int var2, int var3 ) {
     int var4 = 78 / ((-10 - var1) / 59);
       if (this.method2139(var3, 0, var2)) {
-        if (this.buffers[var3] != null && null != this.buffers[var3][var2]) {
+        if (this.buffers[var3] != null && this.buffers[var3][var2] != null) {
           return true;
         } else if (this.anObjectArray1954[var3] == null) {
           this.method2134(false, var3);
@@ -330,7 +330,8 @@ public final class FileUnpacker {
           return true;
         } else {
           byte[] var21;
-          if (null != var3 && (~var3[0] != -1 || -1 != ~var3[1] || 0 != var3[2] || var3[3] != 0)) {
+          if (var3 != null && (~var3[0] != -1 || ~var3[1] != -1 || var3[2] != 0
+              || var3[3] != 0)) {
             var21 = NPC.method1985(-124, this.anObjectArray1954[var1], true);
             Buffer var22 = new Buffer(var21);
             var22.method770(var3, 120, 5, var22.bytes.length);
@@ -415,7 +416,7 @@ public final class FileUnpacker {
               }
             }
           } else {
-            if (null != var5) {
+            if (var5 != null) {
               var10 = var5[0];
             } else {
               var10 = 0;
@@ -474,7 +475,7 @@ public final class FileUnpacker {
 
         int var4;
         for (var4 = 0; var4 < this.anObjectArray1954.length; ++var4) {
-          if (0 < this.table.unpackedSizes[var4]) {
+          if (this.table.unpackedSizes[var4] > 0) {
             var2 += 100;
             var3 += this.method2114(var4, 0);
           }
@@ -521,7 +522,7 @@ public final class FileUnpacker {
 
   private boolean method2139(int var1, int var2, int var3) {
     if (this.method2122()) {
-        if (var2 <= var1 && -1 >= ~var3 && this.table.unpackedLengths.length > var1
+        if (var2 <= var1 && ~var3 <= -1 && this.table.unpackedLengths.length > var1
           && this.table.unpackedLengths[var1] > var3) {
           return true;
         } else if (!DummyClass21.aBoolean1765) {
@@ -536,7 +537,7 @@ public final class FileUnpacker {
 
   public byte[] getBytes(int var1, int var2, int var3 ) {
     if (this.method2139(var2, var3 + var3, var1)) {
-        if (this.buffers[var2] == null || null == this.buffers[var2][var1]) {
+        if (this.buffers[var2] == null || this.buffers[var2][var1] == null) {
           boolean var4 = this.method2132(var2, false, null);
           if (!var4) {
             this.method2134(false, var2);
@@ -561,7 +562,7 @@ public final class FileUnpacker {
 
       if (this.method2130(false, var2)) {
         int[] var3 = this.table.unpackedIds[var2];
-        if (null == var3) {
+        if (var3 == null) {
           var3 = new int[this.table.unpackedSizes[var2]];
 
           for (int var4 = 0; var3.length > var4; var3[var4] = var4++) {
@@ -592,7 +593,7 @@ public final class FileUnpacker {
       } else if (~this.table.unpackedLengths.length == -2) {
         return this.method2129((byte) 86, fileId, 0);
       } else if (this.method2130(false, fileId)) {
-        if (1 == this.table.unpackedLengths[fileId]) {
+        if (this.table.unpackedLengths[fileId] == 1) {
           return this.method2129((byte) 109, 0, fileId);
         } else {
           throw new RuntimeException();

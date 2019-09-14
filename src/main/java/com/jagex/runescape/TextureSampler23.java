@@ -23,16 +23,16 @@ public final class TextureSampler23 extends AbstractTextureSampler {
         int var4 = TextureCache.anIntArray2125[var3];
         int var5 = DummyClass4.anIntArray2999[var1];
         float var6 = (float) Math.atan2(var4 - 2048, var5 - 2048);
-        if (var6 >= -3.141592653589793D && -2.356194490192345D >= var6) {
+        if (var6 >= -3.141592653589793D && var6 <= -2.356194490192345D) {
           VertexNormal.anInt828 = var1;
           DummyClass13.anInt2024 = var3;
-        } else if (var6 <= -1.5707963267948966D && -2.356194490192345D <= var6) {
+        } else if (var6 <= -1.5707963267948966D && var6 >= -2.356194490192345D) {
           DummyClass13.anInt2024 = var1;
           VertexNormal.anInt828 = var3;
         } else if (var6 <= -0.7853981633974483D && var6 >= -1.5707963267948966D) {
           DummyClass13.anInt2024 = -var1 + SomethingLight0.anInt1559;
           VertexNormal.anInt828 = var3;
-        } else if (0.0F >= var6 && var6 >= -0.7853981633974483D) {
+        } else if (var6 <= 0.0F && var6 >= -0.7853981633974483D) {
           DummyClass13.anInt2024 = var3;
           VertexNormal.anInt828 = DummyClass55.anInt1427 - var1;
         } else if (var6 >= 0.0F && var6 <= 0.7853981633974483D) {
@@ -41,10 +41,10 @@ public final class TextureSampler23 extends AbstractTextureSampler {
         } else if (var6 >= 0.7853981633974483D && var6 <= 1.5707963267948966D) {
           DummyClass13.anInt2024 = -var1 + SomethingLight0.anInt1559;
           VertexNormal.anInt828 = -var3 + DummyClass55.anInt1427;
-        } else if (var6 >= 1.5707963267948966D && 2.356194490192345D >= var6) {
+        } else if (var6 >= 1.5707963267948966D && var6 <= 2.356194490192345D) {
           VertexNormal.anInt828 = -var3 + DummyClass55.anInt1427;
           DummyClass13.anInt2024 = var1;
-        } else if (2.356194490192345D <= var6 && var6 <= 3.141592653589793D) {
+        } else if (var6 >= 2.356194490192345D && var6 <= 3.141592653589793D) {
           DummyClass13.anInt2024 = -var3 + SomethingLight0.anInt1559;
           VertexNormal.anInt828 = var1;
         }
@@ -175,7 +175,7 @@ public final class TextureSampler23 extends AbstractTextureSampler {
     AreaSoundEffect var1;
       for (
         var1 = (AreaSoundEffect) Node.aClass61_78.getFirst();
-        null != var1; var1 = (AreaSoundEffect) Node.aClass61_78.getNext()) {
+          var1 != null; var1 = (AreaSoundEffect) Node.aClass61_78.getNext()) {
         if (var1.aBoolean2329) {
           var1.method134(1);
         }
@@ -183,7 +183,7 @@ public final class TextureSampler23 extends AbstractTextureSampler {
 
       for (
         var1 = (AreaSoundEffect) SocketStream.aClass61_1242.getFirst();
-        null != var1; var1 = (AreaSoundEffect) SocketStream.aClass61_1242.getNext()) {
+          var1 != null; var1 = (AreaSoundEffect) SocketStream.aClass61_1242.getNext()) {
         if (var1.aBoolean2329) {
           var1.method134(1);
         }

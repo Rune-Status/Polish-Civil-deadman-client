@@ -14,7 +14,7 @@ public final class FileOnDisk {
 
 
   public FileOnDisk(File var1, String var2, long var3) throws IOException {
-    if (0L == ~var3) {
+    if (~var3 == 0L) {
       var3 = Long.MAX_VALUE;
     }
 

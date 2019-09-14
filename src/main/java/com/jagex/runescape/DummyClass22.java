@@ -20,12 +20,12 @@ public final class DummyClass22 {
       }
 
       int var5 = 0;
-      if (-1 == ~var1.anInt2263) {
+      if (~var1.anInt2263 == -1) {
         var2 = SomethingAudio.method2174(var1.anInt2250, var1.anInt2264, var1.anInt2248);
       }
 
       int var6 = 0;
-      if (-2 == ~var1.anInt2263) {
+      if (~var1.anInt2263 == -2) {
         var2 = HashTableIterator.method1395(var1.anInt2250, var1.anInt2264, var1.anInt2248);
       }
 
@@ -87,7 +87,7 @@ public final class DummyClass22 {
         var3 = -var1 + DummyClass30.viewWidth;
       }
 
-      if (-1 < ~var3) {
+      if (~var3 > -1) {
         var3 = 0;
       }
 
@@ -95,7 +95,7 @@ public final class DummyClass22 {
         var4 = 0;
       }
 
-      if (-2 == ~ClientScriptEnum.anInt3660) {
+      if (~ClientScriptEnum.anInt3660 == -2) {
         if (~NpcConfiguration.anInt1297 == ~TextureSampler8.anInt3460
           && ~FloorOverlay.anInt2099 == ~DummyClass36.anInt2612) {
           SomethingQuickChat2.anInt3537 =

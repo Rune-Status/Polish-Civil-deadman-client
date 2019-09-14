@@ -19,7 +19,7 @@ public final class DummyClass36 extends DummyClass35 {
 
   public static void method1030(Widget var0, AbstractDirectColorSprite var1, int var2, int var3,
                                int var4, byte var5, int var6) {
-    if (null != var1) {
+    if (var1 != null) {
         if (var5 != 11) {
           DummyClass36.method1032(true);
         }
