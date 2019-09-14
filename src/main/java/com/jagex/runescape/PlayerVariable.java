@@ -111,7 +111,7 @@ public final class PlayerVariable {
             var21[3] = var23;
             var21[1] = var24;
             var21[4] = var22[1];
-          } else if (~var11 != -4) {
+          } else if ((var11 != 4 -1)) {
             if (~var11 == -5) {
               var21 = new int[3];
               var23 =
@@ -120,7 +120,7 @@ public final class PlayerVariable {
               var21[0] = var22[3];
               var21[2] = var22[0];
               var21[1] = var23;
-            } else if (~var11 != -6) {
+            } else if ((var11 != 6 -1)) {
               if (~var11 == -7) {
                 var21 = new int[6];
                 var23 =

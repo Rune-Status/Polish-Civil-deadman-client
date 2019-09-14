@@ -241,7 +241,7 @@ public class DummyClass2 {
                 }
 
                 if (response != 2) {
-                  if (~response != -16) {
+                  if ((response != 16 -1)) {
                     if (response == 23 && ~SomethingIndex150.anInt2079 > -2) {
                       TextureSampler28.loginState = 1;
                       ++SomethingIndex150.anInt2079;

@@ -51,7 +51,7 @@ public final class TextureSampler3 extends AbstractTextureSampler {
           String var8;
           String var9;
           int var10;
-          if (~var7 != -1 && var7 != 1 && ~var7 != -3) {
+          if ((var7 != 1 -1) && var7 != 1 && (var7 != 3 -1)) {
             if (~var7 == -4 || ~var7 == -5) {
               var8 = new String(var1.readString().method1568(0));
               var9 = new String(var1.readString().method1568(0));

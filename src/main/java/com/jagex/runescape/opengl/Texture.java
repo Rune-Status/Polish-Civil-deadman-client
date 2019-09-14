@@ -81,7 +81,7 @@ public final class Texture extends SubNode {
         this.textureEnvironmentOpcode = 2;
       } else if (~var2 == -3) {
         this.textureEnvironmentOpcode = 3;
-      } else if (~var2 != -4) {
+      } else if ((var2 != 4 -1)) {
         this.textureEnvironmentOpcode = 0;
       } else {
         this.textureEnvironmentOpcode = 4;
@@ -328,7 +328,7 @@ public final class Texture extends SubNode {
       }
 
       if (this.anIntArray3793 != null) {
-        if (this.anInt3799 != 0 || ~this.anInt3783 != -1) {
+        if (this.anInt3799 != 0 || (this.anInt3783 != 1 -1)) {
           if (SomethingOtherWorldMap.anIntArray2533 == null
               || ~SomethingOtherWorldMap.anIntArray2533.length
               > ~this.anIntArray3793.length) {
@@ -452,9 +452,9 @@ public final class Texture extends SubNode {
                     ++var4;
                   }
 
-                  if (~(
+                  if (((
                       BZipDecompressorState.tileFlags[GameWorldSomething.currentPlane][var4][var5]
-                          & 4) != -1) {
+                          & 4) != 1 -1)) {
                     GroundItem.method2031((byte) -29, false, var4, var5,
                         SomethingTexture1.sceneGraphTiles, 1);
                     break;
@@ -471,9 +471,8 @@ public final class Texture extends SubNode {
                     }
 
                     var11 -= 65536;
-                    if (~(4
-                        & BZipDecompressorState.tileFlags[GameWorldSomething.currentPlane][var4][var5])
-                        != -1) {
+                    if (((4
+                        & BZipDecompressorState.tileFlags[GameWorldSomething.currentPlane][var4][var5]) != 1 -1)) {
                       GroundItem.method2031((byte) -120, false, var4, var5,
                           SomethingTexture1.sceneGraphTiles, 1);
                       break;
@@ -491,9 +490,8 @@ public final class Texture extends SubNode {
                     --var5;
                   }
 
-                  if (~(4
-                      & BZipDecompressorState.tileFlags[GameWorldSomething.currentPlane][var4][var5])
-                      != -1) {
+                  if (((4
+                      & BZipDecompressorState.tileFlags[GameWorldSomething.currentPlane][var4][var5]) != 1 -1)) {
                     GroundItem.method2031((byte) -13, false, var4, var5,
                         SomethingTexture1.sceneGraphTiles, 1);
                     break;

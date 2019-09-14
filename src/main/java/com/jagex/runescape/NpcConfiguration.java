@@ -294,11 +294,11 @@ public final class NpcConfiguration {
                   var23[11] = var19;
                 }
 
-                if (~var20 != -1 || ~var21 != -1 || var22 != 0) {
+                if ((var20 != 1 -1) || (var21 != 1 -1) || var22 != 0) {
                   var14[var16].rotate(var20, var21, var22);
                 }
 
-                if (var17 != 0 || var18 != 0 || ~var19 != -1) {
+                if (var17 != 0 || var18 != 0 || (var19 != 1 -1)) {
                   var14[var16].translate(var17, var18, var19);
                 }
               }
@@ -400,7 +400,7 @@ public final class NpcConfiguration {
 
         if (!var12 && var10 == null && var8 == null) {
           AbstractModel var41 = var11.method1894(true, true, true);
-          if (this.anInt1264 != 128 || ~this.anInt1266 != -129) {
+          if (this.anInt1264 != 128 || (this.anInt1266 != 129 -1)) {
             var41.scale(this.anInt1264, this.anInt1266, this.anInt1264);
           }
 
@@ -516,7 +516,7 @@ public final class NpcConfiguration {
             DummyClass52.aClass142Array1168[var28] = null;
           }
 
-          if (~this.anInt1264 != -129 || ~this.anInt1266 != -129) {
+          if ((this.anInt1264 != 129 -1) || (this.anInt1266 != 129 -1)) {
             var45.scale(this.anInt1264, this.anInt1266, this.anInt1264);
           }
 
@@ -688,7 +688,7 @@ public final class NpcConfiguration {
                   } else {
                     if (~var2 == -99) {
                       this.anInt1266 = var3.readUnsignedShort();
-                    } else if (~var2 != -100) {
+                    } else if ((var2 != 100 -1)) {
                       if (var2 == 100) {
                         this.anInt1251 = var3.readByte();
                       } else {
@@ -700,7 +700,7 @@ public final class NpcConfiguration {
                           this.anInt1274 = var3.readUnsignedShort();
                         } else {
                           int var6;
-                          if (var2 != 106 && ~var2 != -119) {
+                          if (var2 != 106 && (var2 != 119 -1)) {
                             if (~var2 == -108) {
                               this.aBoolean1270 = false;
                             } else if (var2 != 109) {
@@ -714,7 +714,7 @@ public final class NpcConfiguration {
                               } else if (~var2 == -115) {
                                 this.aByte1287 = var3.readByte();
                                 this.aByte1275 = var3.readByte();
-                              } else if (~var2 != -116) {
+                              } else if ((var2 != 116 -1)) {
                                 if (var2 == 119) {
                                   this.aByte1267 = var3.readByte();
                                 } else if (var2 == 121) {
@@ -732,7 +732,7 @@ public final class NpcConfiguration {
                                   this.anInt1279 = var3.readUnsignedShort();
                                 } else if (~var2 == -124) {
                                   this.anInt1265 = var3.readUnsignedShort();
-                                } else if (~var2 != -126) {
+                                } else if ((var2 != 126 -1)) {
                                   if (var2 == 126) {
                                     this.anInt1283 = var3.readUnsignedShort();
                                   } else {
@@ -752,7 +752,7 @@ public final class NpcConfiguration {
                                             .readUnsignedByte();
                                         this.anInt1278 = var3
                                             .readUnsignedShort();
-                                      } else if (~var2 != -138) {
+                                      } else if ((var2 != 138 -1)) {
                                         if (~var2 == -250) {
                                           var4 = var3.readUnsignedByte();
                                           if (this.aClass130_1272 == null) {

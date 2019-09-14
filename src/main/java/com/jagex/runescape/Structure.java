@@ -168,7 +168,7 @@ public final class Structure extends SubNode {
       }
 
       if (LinearHashTable.aBoolean1040 && (
-          ~GameClient.method44(var3).anInt2205 != -1
+          (GameClient.method44(var3).anInt2205 != 1 -1)
         || ~var3.anInt187 == -1)) {
         if (var3.anInt193 < 5 && var3.anInt168 < 5) {
           var3.anInt193 = 5;

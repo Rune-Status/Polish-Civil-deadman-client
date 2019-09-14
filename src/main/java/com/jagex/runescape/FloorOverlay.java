@@ -197,7 +197,7 @@ public final class FloorOverlay {
                 int var19 = var6 - var14;
                 int var21;
                 int var22;
-                if (~var5 != -2) {
+                if ((var5 != 2 -1)) {
                   if (var5 == 2) {
                     if (~var3 == -1) {
                       for (var21 = var20 + -1; var19 <= var21; --var21) {
@@ -270,8 +270,8 @@ public final class FloorOverlay {
 
                       }
                     }
-                  } else if (~var5 != -4) {
-                    if (~var5 != -5) {
+                  } else if ((var5 != 4 -1)) {
+                    if ((var5 != 5 -1)) {
                       if (var5 != 5) {
                         if (~var5 == -7) {
                           if (~var3 == -1) {
@@ -543,7 +543,7 @@ public final class FloorOverlay {
                           var15 += var16;
                         }
 
-                      } else if (~var3 != -3) {
+                      } else if ((var3 != 3 -1)) {
                         if (~var3 == -4) {
                           for (var21 = var13; var14 > var21; ++var21) {
                             for (var22 = var18 + -1; var17 <= var22; --var22) {
@@ -578,7 +578,7 @@ public final class FloorOverlay {
                         }
 
                       }
-                    } else if (~var3 != -1) {
+                    } else if ((var3 != 1 -1)) {
                       if (var3 == 1) {
                         for (var21 = var13; var21 < var14; ++var21) {
                           for (var22 = var11; var22 < var12; ++var22) {

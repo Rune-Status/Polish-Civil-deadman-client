@@ -167,7 +167,7 @@ public final class TextureSampler25 extends AbstractTextureSampler {
         } else {
           for (var10 = 0; ~var10 > ~(!var3 ? 4096 : 64); ++var10) {
             var2 = var1.readByte();
-            if (~var2 != -1) {
+            if ((var2 != 1 -1)) {
               ++var1.position;
             }
           }
@@ -406,7 +406,7 @@ public final class TextureSampler25 extends AbstractTextureSampler {
 
       return (~var1 > -66 || var1 > 90) && (~var1 > -193
           || var1 > 222 || var1 == 215) ?
-        (~var1 != -160 ? (var1 != 140 ? var1 : 156) : 255) :
+        ((var1 != 160 -1) ? (var1 != 140 ? var1 : 156) : 255) :
         32 + var1;
   }
 

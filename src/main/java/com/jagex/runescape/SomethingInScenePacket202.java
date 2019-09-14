@@ -201,7 +201,7 @@ public final class SomethingInScenePacket202 extends Node {
         (VariableUpdate) ClientScript.variableUpdates.getFirst(var1 + 56);
            var4 != null; var4 = (VariableUpdate) ClientScript.variableUpdates.getNext(-64)) {
         if ((4611686018427387903L & var4.timestamp) < var2) {
-          if (~(4611686018427387904L & var4.timestamp) != -1L) {
+          if (((4611686018427387904L & var4.timestamp) != 1L -1)) {
             int var5 = (int) var4.key;
             DummyClass5.anIntArray2985[var5] = LightIntensity.variables[var5];
             var4.unlinkNode();
@@ -253,7 +253,7 @@ public final class SomethingInScenePacket202 extends Node {
             }
           } else if (
             ((1 & var5) != 0 || ~(var4.anInt2819 & 127) == -1 && ~(127 & var4.anInt2829) == -1) && (
-              ~(1 & var5) != -2 || ~(var4.anInt2819 & 127) == -65 && ~(127
+              ((1 & var5) != 2 -1) || ~(var4.anInt2819 & 127) == -65 && ~(127
                   & var4.anInt2829) == -65)) {
             var6 = var4.anInt2819 + -(var5 * 64) >> 7;
             var7 = var4.anInt2829 + -(var5 * 64) >> 7;

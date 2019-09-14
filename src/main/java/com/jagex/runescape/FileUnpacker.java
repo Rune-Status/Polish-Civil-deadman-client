@@ -278,7 +278,7 @@ public final class FileUnpacker {
 
       if (this.method2122()) {
         if (var2 >= 0 && this.table.unpackedLengths.length > var2
-          && ~this.table.unpackedLengths[var2] != -1) {
+          && (this.table.unpackedLengths[var2] != 1 -1)) {
           return true;
         } else if (!DummyClass21.aBoolean1765) {
           return false;
@@ -330,7 +330,7 @@ public final class FileUnpacker {
           return true;
         } else {
           byte[] var21;
-          if (var3 != null && (~var3[0] != -1 || ~var3[1] != -1 || var3[2] != 0
+          if (var3 != null && ((var3[0] != 1 -1) || (var3[1] != 1 -1) || var3[2] != 0
               || var3[3] != 0)) {
             var21 = NPC.method1985(-124, this.anObjectArray1954[var1], true);
             Buffer var22 = new Buffer(var21);
@@ -511,7 +511,7 @@ public final class FileUnpacker {
         return this.getBytes(0, var1);
       } else if (!this.method2130(false, var1)) {
         return null;
-      } else if (~this.table.unpackedLengths[var1] != -2) {
+      } else if ((this.table.unpackedLengths[var1] != 2 -1)) {
 
         throw new RuntimeException();
 

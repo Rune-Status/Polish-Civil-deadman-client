@@ -397,7 +397,7 @@ public final class TextureSampler28 extends AbstractTextureSampler {
       return var2 ?
         120 :
         (var1 == 0
-            ? var3 : (var1 != 1 ? (~var1 != -3 ? var0 : -var3 + 1023) : -var0 + 1023));
+            ? var3 : (var1 != 1 ? ((var1 != 3 -1) ? var0 : -var3 + 1023) : -var0 + 1023));
   }
 
 }

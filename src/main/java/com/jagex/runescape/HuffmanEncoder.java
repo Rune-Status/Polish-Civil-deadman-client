@@ -43,7 +43,7 @@ public final class HuffmanEncoder {
 
       for (int var5 = 0; var2 > var5; ++var5) {
         byte var6 = var1[var5];
-        if (~var6 != -1) {
+        if ((var6 != 1 -1)) {
           int var7 = 1 << 32 + -var6;
           int var8 = var3[var6];
           this.lengths[var5] = var8;

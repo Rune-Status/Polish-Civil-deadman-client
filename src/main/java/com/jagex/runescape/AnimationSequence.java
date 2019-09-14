@@ -122,7 +122,7 @@ public final class AnimationSequence {
               ((GlModel) var10).method1902();
             }
           }
-        } else if (~var5 != -2) {
+        } else if ((var5 != 2 -1)) {
           if (~var5 == -3) {
             var10.method1874();
           } else {
@@ -163,7 +163,7 @@ public final class AnimationSequence {
         if (this.anIntArray1870 != null) {
           if (this.anIntArray1870.length > var5) {
             var13 = this.anIntArray1870[var5];
-            if (~var13 != -65536) {
+            if ((var13 != 65536 -1)) {
               var10 = AreaSoundEffect.method133(var13 >> 16, 0);
               var13 &= '\uffff';
             }
@@ -172,7 +172,7 @@ public final class AnimationSequence {
           if ((this.tween || MonoChromaticImageBuffer.tweening) && var3 != -1
             && this.anIntArray1870.length > var3) {
             var14 = this.anIntArray1870[var3];
-            if (~var14 != -65536) {
+            if ((var14 != 65536 -1)) {
               var11 = AreaSoundEffect.method133(var14 >> 16, 0);
               var14 &= '\uffff';
             }
@@ -359,10 +359,10 @@ public final class AnimationSequence {
         }
       } else if (var1 == 2) {
         this.anInt1865 = var3.readUnsignedShort();
-      } else if (~var1 != -4) {
+      } else if ((var1 != 4 -1)) {
         if (var1 == 4) {
           this.aBoolean1859 = true;
-        } else if (~var1 != -6) {
+        } else if ((var1 != 6 -1)) {
           if (var1 == 6) {
             this.anInt1854 = var3.readUnsignedShort();
           } else {
@@ -405,7 +405,7 @@ public final class AnimationSequence {
                         }
                       }
                     }
-                  } else if (~var1 != -15) {
+                  } else if ((var1 != 15 -1)) {
                     if (var1 == 15) {
                       this.tween = true;
                     } else {

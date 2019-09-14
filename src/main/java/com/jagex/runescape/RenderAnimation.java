@@ -100,7 +100,7 @@ public final class RenderAnimation {
         }
       } else if (~var1 == -3) {
         this.anInt398 = var3.readUnsignedShort();
-      } else if (~var1 != -4) {
+      } else if ((var1 != 4 -1)) {
         if (var1 == 4) {
           this.anInt406 = var3.readUnsignedShort();
         } else if (var1 != 5) {
@@ -116,7 +116,7 @@ public final class RenderAnimation {
                 if (var1 == 26) {
                   this.anInt395 = (short) (4 * var3.readUnsignedByte());
                   this.anInt381 = (short) (4 * var3.readUnsignedByte());
-                } else if (~var1 != -28) {
+                } else if ((var1 != 28 -1)) {
                   if (~var1 == -30) {
                     this.anInt369 = var3.readUnsignedByte();
                   } else {
@@ -147,7 +147,7 @@ public final class RenderAnimation {
                                 this.anInt390 = var3.readUnsignedShort();
                               } else if (var1 == 42) {
                                 this.anInt364 = var3.readUnsignedShort();
-                              } else if (~var1 != -44) {
+                              } else if ((var1 != 44 -1)) {
                                 if (~var1 == -45) {
                                   var3.readUnsignedShort();
                                 } else {

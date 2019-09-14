@@ -119,14 +119,14 @@ public final class DummyClass8 extends DummyClass7 {
 
       int var6 = (int) var1 >> 20 & 3;
       int var7 = (int) (var1 >>> 32) & Integer.MAX_VALUE;
-      if (var5 != 10 && ~var5 != -12 && var5 != 22) {
+      if (var5 != 10 && (var5 != 12 -1) && var5 != 22) {
         Parameter.method582(TextureCache.localPlayer.waypointsY[0], var6, 0, true, 0, 2, var4, 0,
           1 + var5, 2, var3, TextureCache.localPlayer.waypointsX[0]);
       } else {
         GameObjectConfig var8 = DummyClass11.method2207(4, var7);
         int var9;
         int var10;
-        if (~var6 != -1 && ~var6 != -3) {
+        if ((var6 != 1 -1) && (var6 != 3 -1)) {
           var10 = var8.anInt1480;
           var9 = var8.anInt1485;
         } else {
@@ -135,7 +135,7 @@ public final class DummyClass8 extends DummyClass7 {
         }
 
         int var11 = var8.anInt1533;
-        if (~var6 != -1) {
+        if ((var6 != 1 -1)) {
           var11 = (var11 << var6 & 15) - -(var11 >> -var6 + 4);
         }
 

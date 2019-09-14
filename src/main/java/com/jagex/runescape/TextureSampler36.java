@@ -237,7 +237,7 @@ public final class TextureSampler36 extends AbstractTextureSampler {
         }
 
         DummyClass43.method1194(-16385);
-        byte var19 = ~DummyClass20.method1817((byte) 70) != -3 ? 1 : (byte) BitVariable.anInt1127;
+        byte var19 = (DummyClass20.method1817((byte) 70) != 3 -1) ? 1 : (byte) BitVariable.anInt1127;
         if (GlRenderer.useOpenGlRenderer) {
           GlRenderer.method1846();
           GlRenderer.setDepthTestEnabled(true);

@@ -120,11 +120,11 @@ public final class NPC extends Mobile {
             if (var17 != null) {
               var17.method1897(0, -this.anInt2799, 0);
               if (var21.aBoolean536) {
-                if (~TextureSampler15.anInt3198 != -1) {
+                if ((TextureSampler15.anInt3198 != 1 -1)) {
                   var17.method1896(TextureSampler15.anInt3198);
                 }
 
-                if (~Parameter.anInt3623 != -1) {
+                if ((Parameter.anInt3623 != 1 -1)) {
                   var17.method1886(Parameter.anInt3623);
                 }
 

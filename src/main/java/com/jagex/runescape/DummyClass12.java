@@ -197,7 +197,7 @@ public final class DummyClass12 {
                             (var0.method1075(64) ?
                                 (!var3.method1075(64) ? 1 : 0) :
                                 (var3.method1075(64) ? -1 : 0)) :
-                            (~var1 != -7 ?
+                            ((var1 != 7 -1) ?
                                 (var1 == 7 ?
                                     (var0.method1070(8) ?
                                         (var3.method1070(8) ? 0 : 1) :

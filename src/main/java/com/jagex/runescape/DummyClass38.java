@@ -24,7 +24,7 @@ public final class DummyClass38 {
         var5 = SpotAnimationConfig.gameBuffer.readUnsignedByte();
         int var6 = SpotAnimationConfig.gameBuffer.readUnsignedByte();
         var7 = SpotAnimationConfig.gameBuffer.position;
-        boolean var8 = ~('\u8000' & var4) != -1;
+        boolean var8 = (('\u8000' & var4) != 1 -1);
         if (var3.name != null && var3.appearance != null) {
           long var9 = var3.name.toBase37();
           boolean var11 = false;
@@ -92,7 +92,7 @@ public final class DummyClass38 {
         SpotAnimationConfig.gameBuffer.position = var7 + var6;
       }
 
-      if (~(var0 & 1) != -1) {
+      if (((var0 & 1) != 1 -1)) {
         var4 = SpotAnimationConfig.gameBuffer.readUnsignedShortSmart();
         var5 = SpotAnimationConfig.gameBuffer.method751((byte) -99);
         var3.method1970(var5, -8, AbstractGameWorld.updateCycle, var4);
@@ -126,7 +126,7 @@ public final class DummyClass38 {
         }
       }
 
-      if (~(1024 & var0) != -1) {
+      if (((1024 & var0) != 1 -1)) {
         var3.anInt2784 = SpotAnimationConfig.gameBuffer.method786(true);
         var3.anInt2835 = SpotAnimationConfig.gameBuffer.readUnsignedByte();
         var3.anInt2823 = SpotAnimationConfig.gameBuffer.method751((byte) -106);
@@ -140,7 +140,7 @@ public final class DummyClass38 {
         var3.anInt2811 = 0;
       }
 
-      if (~(var0 & 32) != -1) {
+      if (((var0 & 32) != 1 -1)) {
         var3.aClass94_2825 = SpotAnimationConfig.gameBuffer.readString();
         if (~var3.aClass94_2825.charAt(0) == -127) {
           var3.aClass94_2825 = var3.aClass94_2825.substring(1);
@@ -154,13 +154,13 @@ public final class DummyClass38 {
         var3.anInt2814 = 150;
       }
 
-      if (~(var0 & 512) != -1) {
+      if (((var0 & 512) != 1 -1)) {
         var4 = SpotAnimationConfig.gameBuffer.readUnsignedShortSmart();
         var5 = SpotAnimationConfig.gameBuffer.method754(true);
         var3.method1970(var5, var2 + 71, AbstractGameWorld.updateCycle, var4);
       }
 
-      if (~(2048 & var0) != -1) {
+      if (((2048 & var0) != 1 -1)) {
         var4 = SpotAnimationConfig.gameBuffer.method786(true);
         int[] var18 = new int[var4];
         int[] var17 = new int[var4];
@@ -220,7 +220,7 @@ public final class DummyClass38 {
       }
 
       if (var2 == -79) {
-        if (~(var0 & 64) != -1) {
+        if (((var0 & 64) != 1 -1)) {
           var3.anInt2786 = SpotAnimationConfig.gameBuffer.readUnsignedShort();
           var3.anInt2762 = SpotAnimationConfig.gameBuffer.readShortLEAdd();
         }
@@ -318,7 +318,7 @@ public final class DummyClass38 {
             }
           }
 
-          if (~(var11 & 2) != -1) {
+          if (((var11 & 2) != 1 -1)) {
             for (var12 = 0; ~var12 > ~var5; ++var12) {
               for (var13 = 0; var13 < var6; ++var13) {
                 byte var14 = var9[var5 * var13 + var12] = var2.readByte();

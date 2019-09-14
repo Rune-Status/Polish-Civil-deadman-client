@@ -37,7 +37,7 @@ public final class Player extends Mobile {
       int var3 = buffer.readUnsignedByte();
       int var8 = -1;
       int var4 = 1 & var3;
-      boolean var6 = ~(var3 & 4) != -1;
+      boolean var6 = ((var3 & 4) != 1 -1);
       int var7 = super.getSize();
       int[] var9 = new int[12];
       this.method1976(1 + (var3 >> 3 & 7), 2);

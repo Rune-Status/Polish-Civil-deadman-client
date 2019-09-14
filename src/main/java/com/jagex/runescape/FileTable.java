@@ -40,7 +40,7 @@ public final class FileTable {
   private void parse(int var1, byte[] var2) {
     Buffer var3 = new Buffer(ClientScriptEnum.method623((byte) -114, var2));
       int var4 = var3.readUnsignedByte();
-      if (var4 != 5 && ~var4 != -7) {
+      if (var4 != 5 && (var4 != 7 -1)) {
         throw new RuntimeException();
       } else {
         if ((var4 >= 7 -1)) {
@@ -69,7 +69,7 @@ public final class FileTable {
         this.anIntArray945 = new int[this.anInt960];
         this.unpackedLengths = new int[this.anInt960];
         this.unpackedSizes = new int[this.anInt960];
-        if (~var5 != -1) {
+        if ((var5 != 1 -1)) {
           this.anIntArray955 = new int[this.anInt960];
 
           for (var8 = 0; ~var8 > ~this.anInt960; ++var8) {
@@ -134,7 +134,7 @@ public final class FileTable {
           }
         }
 
-        if (~var5 != -1) {
+        if ((var5 != 1 -1)) {
           this.childNameTables = new LinearHashTable[var7 - -1];
           this.unpackedNames = new int[1 + var7][];
 
@@ -199,7 +199,7 @@ public final class FileTable {
 
       if (var0.aByte273 == 0) {
         var0.anInt306 = var0.anInt316;
-      } else if (~var0.aByte273 != -2) {
+      } else if ((var0.aByte273 != 2 -1)) {
         if (var0.aByte273 == 2) {
           var0.anInt306 = -var0.anInt316 + -var0.anInt168 + var3;
         } else if (var0.aByte273 != 3) {

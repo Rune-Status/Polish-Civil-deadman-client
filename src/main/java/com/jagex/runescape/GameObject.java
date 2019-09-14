@@ -270,7 +270,7 @@ public final class GameObject extends SceneNode {
         var6 = this.anInt2724 & 3;
         int var7;
         int var8;
-        if (~var6 != var2 && ~var6 != -4) {
+        if (~var6 != var2 && (var6 != 4 -1)) {
           var7 = var4.anInt1480;
           var8 = var4.anInt1485;
         } else {
@@ -336,7 +336,7 @@ public final class GameObject extends SceneNode {
               }
 
               int var21 = 0;
-              if (~this.anInt2732 != -1) {
+              if ((this.anInt2732 != 1 -1)) {
                 int[][] var22 = AbstractGameWorld.heightMap[0];
                 var21 = var15 - (var22[var10][var11] + var22[var9][var11] - (-var22[var9][var12]
                   - var22[var10][var12]) >> 2);
@@ -394,7 +394,7 @@ public final class GameObject extends SceneNode {
           var17 = 9;
         } else if (var7 == 2) {
           var17 = 12;
-        } else if (~var7 != -4) {
+        } else if ((var7 != 4 -1)) {
           if (var7 == 4) {
             var17 = 18;
           } else {

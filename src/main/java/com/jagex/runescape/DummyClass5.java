@@ -57,7 +57,7 @@ public class DummyClass5 extends DummyClass6 {
             int var4;
             if (DummyClass36.aBoolean2615) {
               int var11;
-              if (~var1 != -2) {
+              if ((var1 != 2 -1)) {
                 var3 = HashTable.anInt1709;
                 var11 = SomethingTilek.anInt1676;
                 if (~var11 > ~(AbstractIndexedColorSprite.anInt1462 - 10)

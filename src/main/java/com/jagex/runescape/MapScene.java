@@ -82,10 +82,10 @@ public final class MapScene {
   }
 
   public static boolean method73(short var0, int var1) {
-    if (var0 != 47 && ~var0 != -6 && var0 != 43 && ~var0 != -36 && ~var0 != -59 &&
-        ~var0 != -23
+    if (var0 != 47 && (var0 != 6 -1) && var0 != 43 && (var0 != 36 -1) && (var0 != 59 -1) &&
+        (var0 != 23 -1)
         && var0 != 40 && var0 != 3) {
-        if (~var0 != -10 && ~var0 != -13 && ~var0 != -1007 && ~var0 != -1004) {
+        if ((var0 != 10 -1) && (var0 != 13 -1) && (var0 != 1007 -1) && (var0 != 1004 -1)) {
           if (var1 <= 42) {
             MapScene.anInt59 = 1;
           }
@@ -183,7 +183,7 @@ public final class MapScene {
           break;
         }
 
-        if (~var1 != -1) {
+        if ((var1 != 1 -1)) {
           if ((var1 < 5 || ~var1 == -11)
             && BlockConfig.collisionMaps[GameWorldSomething.currentPlane].method1488(var4, var12,
             false, var13, var8, -1 + var1, 2, var7)) {
@@ -198,7 +198,7 @@ public final class MapScene {
           }
         }
 
-        if (var0 != 0 && ~var6 != -1
+        if (var0 != 0 && (var6 != 1 -1)
           && BlockConfig.collisionMaps[GameWorldSomething.currentPlane].method1498(true, var8,
           var13, var12, 2, var0, var2, var4, var6)) {
           var16 = true;
@@ -380,12 +380,12 @@ public final class MapScene {
 
         if ((var18 & 2) != 0) {
           ++var12;
-        } else if (~(8 & var18) != -1) {
+        } else if (((8 & var18) != 1 -1)) {
           --var12;
         }
 
         if ((var18 & 1) == 0) {
-          if (~(var18 & 4) != -1) {
+          if (((var18 & 4) != 1 -1)) {
             --var13;
           }
         } else {

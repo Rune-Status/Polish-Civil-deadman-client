@@ -51,7 +51,7 @@ public final class DummyClass31 {
       if (!GlRenderer.useOpenGlRenderer || !var11.aBoolean1530) {
         int var12;
         int var13;
-        if (~var10 != -2 && ~var10 != -4) {
+        if ((var10 != 2 -1) && (var10 != 4 -1)) {
           var12 = var11.anInt1480;
           var13 = var11.anInt1485;
         } else {
@@ -88,7 +88,7 @@ public final class DummyClass31 {
               >> 2;
           int var22 = 0;
           int[][] var23;
-          if (GlRenderer.useOpenGlRenderer && ~var0 != -1) {
+          if (GlRenderer.useOpenGlRenderer && (var0 != 1 -1)) {
             var23 = AbstractGameWorld.heightMap[0];
             var22 = var19 - (
               var23[var15][var17] + var23[var15][var16] + var23[var14][var16] + var23[var14][var17]
@@ -144,13 +144,13 @@ public final class DummyClass31 {
                 EnumStringFetcher.method835(var2, var7, var9, var19, 1, 1,
                     var27, 0,
                   var24);
-                if (var1 && ~var6 >= -18 && ~var6 != -14 && var2 > 0) {
+                if (var1 && ~var6 >= -18 && (var6 != 14 -1) && var2 > 0) {
                   DummyClass36.anIntArrayArrayArray2609[var2][var7][var9] =
                     TextureSampler3.method308(
                       DummyClass36.anIntArrayArrayArray2609[var2][var7][var9], 4);
                 }
 
-                if (~var11.anInt1538 != -1 && var4 != null) {
+                if ((var11.anInt1538 != 1 -1) && var4 != null) {
                   var4.method1489(var7, var11.aBoolean1486, (byte) 73, var9, var12, var13);
                 }
 
@@ -235,7 +235,7 @@ public final class DummyClass31 {
                   var4.method1486(var10, 2, 0, var11.aBoolean1486, var9, var7);
                 }
 
-                if (~var11.anInt1528 != -17) {
+                if ((var11.anInt1528 != 17 -1)) {
                   StillGraphic.method1956(var2, var7, var9, var11.anInt1528);
                 }
 
@@ -277,7 +277,7 @@ public final class DummyClass31 {
                   }
                 }
 
-                if (~var11.anInt1538 != -1 && var4 != null) {
+                if ((var11.anInt1538 != 1 -1) && var4 != null) {
                   var4.method1486(var10, 2, var6, var11.aBoolean1486, var9, var7);
                 }
 
@@ -371,7 +371,7 @@ public final class DummyClass31 {
                     var4.method1486(var10, 2, var6, var11.aBoolean1486, var9, var7);
                   }
 
-                  if (~var11.anInt1528 != -17) {
+                  if ((var11.anInt1528 != 17 -1)) {
                     StillGraphic.method1956(var2, var7, var9, var11.anInt1528);
                   }
 
@@ -418,7 +418,7 @@ public final class DummyClass31 {
                     var4.method1486(var10, 2, 3, var11.aBoolean1486, var9, var7);
                   }
 
-                } else if (~var6 != -10) {
+                } else if ((var6 != 10 -1)) {
                   if (var6 == 4) {
                     if (var11.anInt1531 == -1 && var11.anIntArray1524 == null
                         && !var11.aBoolean1510) {
@@ -451,7 +451,7 @@ public final class DummyClass31 {
                     if (~var6 == -6) {
                       var43 = 16;
                       var44 = SomethingAudio.method2174(var2, var7, var9);
-                      if (~var44 != -1L) {
+                      if ((var44 != 1L -1)) {
                         var43 = DummyClass11.method2207(4,
                             Integer.MAX_VALUE & (int) (var44 >>> 32)).anInt1528;
                       }
@@ -490,7 +490,7 @@ public final class DummyClass31 {
                       if (~var6 == -7) {
                         var43 = 8;
                         var44 = SomethingAudio.method2174(var2, var7, var9);
-                        if (~var44 != -1L) {
+                        if ((var44 != 1L -1)) {
                           var43 = DummyClass11.method2207(4,
                               Integer.MAX_VALUE & (int) (var44
                                   >>> 32)).anInt1528 / 2;
@@ -561,7 +561,7 @@ public final class DummyClass31 {
                           if (var6 == 8) {
                             var43 = 8;
                             var44 = SomethingAudio.method2174(var2, var7, var9);
-                            if (~var44 != -1L) {
+                            if ((var44 != 1L -1)) {
                               var43 = DummyClass11.method2207(4,
                                   Integer.MAX_VALUE & (int) (var44
                                       >>> 32)).anInt1528 / 2;
@@ -645,11 +645,11 @@ public final class DummyClass31 {
                   EnumStringFetcher.method835(var2, var7, var9, var19, 1, 1,
                       var27, 0,
                     var24);
-                  if (~var11.anInt1538 != -1 && var4 != null) {
+                  if ((var11.anInt1538 != 1 -1) && var4 != null) {
                     var4.method1489(var7, var11.aBoolean1486, (byte) 127, var9, var12, var13);
                   }
 
-                  if (~var11.anInt1528 != -17) {
+                  if ((var11.anInt1528 != 17 -1)) {
                     StillGraphic.method1956(var2, var7, var9, var11.anInt1528);
                   }
 
@@ -701,7 +701,7 @@ public final class DummyClass31 {
               }
 
             }
-          } else if (Keyboard.aBoolean1905 || ~var11.anInt1529 != -1 ||
+          } else if (Keyboard.aBoolean1905 || (var11.anInt1529 != 1 -1) ||
               ~var11.anInt1538 == -2
             || var11.aBoolean1483) {
             if (~var11.anInt1531 == 0 && var11.anIntArray1524 == null && !var11.aBoolean1510) {

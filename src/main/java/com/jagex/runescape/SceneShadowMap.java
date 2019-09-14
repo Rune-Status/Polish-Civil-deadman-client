@@ -53,7 +53,7 @@ public final class SceneShadowMap {
                     var22[var27] != null) {
                   int var28 = (63 & var17 + var4) + (4032 & var9 + var23 << 6);
                   int var29 = var22[var27][var28];
-                  if (~var29 != -1) {
+                  if ((var29 != 1 -1)) {
                     GameObjectConfig var14 = DummyClass11.method2207(4, -1 + var29);
                     if (!AudioStreamEncoder4.aBooleanArray3503[var14.anInt1482]) {
                       if (~var13 != 0 && ~var14.anInt1482 == ~FileSystem.anInt101) {

@@ -467,7 +467,7 @@ public final class CollisionMap {
                     & this.anIntArrayArray1304[var2][var4]) == -1) {
                   return true;
                 }
-              } else if (~var8 != -3) {
+              } else if ((var8 != 3 -1)) {
                 if (~var8 == -4) {
                   if (~var2 == -var5 && var1 == var4) {
                     return true;
@@ -869,7 +869,7 @@ public final class CollisionMap {
                   this.anIntArrayArray1304[var3][var10] & 2) == 0) {
                 return true;
               }
-            } else if (~var6 != -3) {
+            } else if ((var6 != 3 -1)) {
               if (var6 == 3) {
                 if (~(1 + var3) == ~var7 && var4 <= var1 && ~var1 >= ~var10
                     && ~(128 & this.anIntArrayArray1304[var7][var1]) == -1) {
@@ -1162,14 +1162,14 @@ public final class CollisionMap {
                 var9 -= 65536;
                 if (var5 >= var4) {
                   if (var5 > var4) {
-                    if (~(19661184 & this.anIntArrayArray1304[var5][var2]) != -1) {
+                    if (((19661184 & this.anIntArrayArray1304[var5][var2]) != 1 -1)) {
                       return false;
                     }
 
                     --var5;
                   }
                 } else {
-                  if (~(19661064 & this.anIntArrayArray1304[var5][var2]) != -1) {
+                  if (((19661064 & this.anIntArrayArray1304[var5][var2]) != 1 -1)) {
                     return false;
                   }
 
@@ -1184,7 +1184,7 @@ public final class CollisionMap {
             while (~var4 != ~var5) {
               if (~var5 <= ~var4) {
                 if (var4 < var5) {
-                  if (~(this.anIntArrayArray1304[var5][var2] & 19661184) != -1) {
+                  if (((this.anIntArrayArray1304[var5][var2] & 19661184) != 1 -1)) {
                     return false;
                   }
 

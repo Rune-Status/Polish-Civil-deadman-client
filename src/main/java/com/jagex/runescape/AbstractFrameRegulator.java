@@ -166,18 +166,18 @@ public abstract class AbstractFrameRegulator {
                   continue;
                 }
 
-                if (~var7[var23][var19] != -1) {
+                if ((var7[var23][var19] != 1 -1)) {
                   var28 = DummyClass21.anIntArrayArray1763[var7[var23][var19]];
                   var14.anInt651 += 3 * (-2 + (var28.length >> 1));
                   var14.anInt657 += var28.length >> 1;
                   continue;
                 }
-              } else if (~var25 != -1) {
+              } else if ((var25 != 1 -1)) {
                 var27 = TextureSampler10.method350((byte) 123, var25 - 1);
                 byte var42;
                 if (var27.anInt2103 == -1) {
                   var42 = var7[var23][var19];
-                  if (~var42 != -1) {
+                  if ((var42 != 1 -1)) {
                     var29 = SceneSomething.anIntArrayArray499[var42];
                     var14.anInt651 += 3 * (-2 + (var29.length >> 1));
                     var14.anInt657 += var29.length >> 1;
@@ -319,7 +319,7 @@ public abstract class AbstractFrameRegulator {
                   continue;
                 }
               } else {
-                if (~var43 != -1) {
+                if ((var43 != 1 -1)) {
                   var46 = TextureSampler10.method350((byte) 113, -1 + var43);
                   if (var46.anInt2103 == -1) {
                     TextureSampler18.method284(var0, var9, var23, var6, var19,

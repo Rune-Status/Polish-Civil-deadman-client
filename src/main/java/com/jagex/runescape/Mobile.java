@@ -224,7 +224,7 @@ public abstract class Mobile extends SceneNode {
       assert var4 != null;
       int var5 = var4.anInt395;
       int var6 = var4.anInt381;
-      if (~var5 != -1 && var6 != 0) {
+      if ((var5 != 1 -1) && var6 != 0) {
         int var7 = DummyClass40.SINE_TABLE[var3];
         int var8 = DummyClass40.COSINE_TABLE[var3];
         int var9 = -var5 / 2;
@@ -308,7 +308,7 @@ public abstract class Mobile extends SceneNode {
       if (var3.anInt400 != 0 || var3.anInt371 != 0) {
         int var4 = 0;
         int var5 = 0;
-        if (this.aBoolean2769 && ~this.anInt2821 != -1) {
+        if (this.aBoolean2769 && (this.anInt2821 != 1 -1)) {
           var5 = var3.anInt371;
           if (this.anInt2821 >= 0) {
             var4 = var3.anInt400;
@@ -411,7 +411,7 @@ public abstract class Mobile extends SceneNode {
         }
 
         this.anInt2787 += this.anInt2754;
-        if (~this.anInt2787 != -1) {
+        if ((this.anInt2787 != 1 -1)) {
           var6 = (this.anInt2787 & '\ufff1') >> 5;
           var7 = var1.getMinimumY() / 2;
           var1.method1897(0, -var7, 0);
@@ -511,7 +511,7 @@ public abstract class Mobile extends SceneNode {
         }
 
         this.anInt2834 += this.anInt2830;
-        if (~this.anInt2834 != -1) {
+        if ((this.anInt2834 != 1 -1)) {
           var6 = (this.anInt2834 & '\uffe6') >> 5;
           var7 = var1.getMinimumY() / 2;
           var1.method1897(0, -var7, 0);

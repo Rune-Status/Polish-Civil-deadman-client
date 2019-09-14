@@ -44,7 +44,7 @@ public final class DummyClass27 {
 
           int var4;
           int var5;
-          if (~var1.anInt2284 != -2 && ~var1.anInt2284 != -4) {
+          if ((var1.anInt2284 != 2 -1) && (var1.anInt2284 != 4 -1)) {
             var4 = var20.anInt1480;
             var5 = var20.anInt1485;
           } else {
@@ -68,7 +68,7 @@ public final class DummyClass27 {
             if (var14 != null) {
               var12 = var14.sceneNode0;
             }
-          } else if (~var13 != -2) {
+          } else if ((var13 != 2 -1)) {
             if (var13 == 2) {
               SceneSomething var23 =
                 AbstractSomethingTexture.method1336(GameWorldSomething.currentPlane, var1.anInt2271,

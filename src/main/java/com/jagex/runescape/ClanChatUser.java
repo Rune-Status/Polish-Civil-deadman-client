@@ -71,7 +71,7 @@ public final class ClanChatUser extends Node {
           for (var7 = 0; var7 < 104; ++var7) {
             long var20 =
               SceneGraphTile.method104(GameWorldSomething.currentPlane, var6 + var2, var7 - -var3);
-            if (~var20 != -1L) {
+            if ((var20 != 1L -1)) {
               GameObjectConfig var10 =
                 DummyClass11.method2207(4, (int) (var20 >>> 32) & Integer.MAX_VALUE);
               int var11 = var10.anInt1482;
@@ -92,7 +92,7 @@ public final class ClanChatUser extends Node {
               if ((var11 >= 1 -1)) {
                 int var21 = var3 + var7;
                 var12 = var2 + var6;
-                if (var11 != 22 && var11 != 29 && var11 != 34 && ~var11 != -37
+                if (var11 != 22 && var11 != 29 && var11 != 34 && (var11 != 37 -1)
                     &&
                     var11 != 46
                   && var11 != 47 && var11 != 48) {
@@ -155,7 +155,7 @@ public final class ClanChatUser extends Node {
           }
 
           if (~var1 > -4
-            && ~(BZipDecompressorState.tileFlags[1 + var1][var7 + var2][var6 + var3] & 8) != -1
+            && ((BZipDecompressorState.tileFlags[1 + var1][var7 + var2][var6 + var3] & 8) != 1 -1)
             && !GameString.method1529(var3, var7, var18, var6, var5, var2, 1 + var1, true)) {
             if (GlRenderer.useOpenGlRenderer) {
               DummyClass47.anIntArray1100 = null;

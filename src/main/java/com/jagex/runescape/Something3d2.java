@@ -245,7 +245,7 @@ public class Something3d2 extends Something3dRoot {
                 var5 -= var9;
               }
 
-              if (var7 == 2 && ~var9 != -1) {
+              if (var7 == 2 && (var9 != 1 -1)) {
                 var5 /= var9;
               }
 

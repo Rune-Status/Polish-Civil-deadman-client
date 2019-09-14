@@ -31,7 +31,7 @@ public final class VariableUpdate extends Node {
 
       var1 &= 3;
       return var1 != 0 ?
-        (~var1 != -2 ? (var1 != 2 ? -var0 + 7 + 1 + -var3 : -var6 + (7 - (var4 + -1))) : var0) :
+        ((var1 != 2 -1) ? (var1 != 2 ? -var0 + 7 + 1 + -var3 : -var6 + (7 - (var4 + -1))) : var0) :
         var6;
   }
 

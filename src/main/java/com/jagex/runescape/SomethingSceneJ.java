@@ -78,7 +78,7 @@ public final class SomethingSceneJ {
           AbstractGameWorld.heightMap[var0][var3][var2] =
             AbstractGameWorld.heightMap[var0][var3 + -1][var2];
         } else if ((var2 > 1 -1)
-            && ~AbstractGameWorld.heightMap[var0][var3][var2 - 1] != -1) {
+            && (AbstractGameWorld.heightMap[var0][var3][var2 - 1] != 1 -1)) {
           AbstractGameWorld.heightMap[var0][var3][var2] =
             AbstractGameWorld.heightMap[var0][var3][var2 + -1];
         } else if (var3 > 0 && var2 > 0

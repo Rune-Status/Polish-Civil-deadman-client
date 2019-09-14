@@ -56,7 +56,7 @@ public final class SpotAnimationConfig {
             this.rotationY = var1.readUnsignedShort();
           } else if (var2 == 7) {
             this.anInt538 = var1.readUnsignedByte();
-          } else if (~var2 != -9) {
+          } else if ((var2 != 9 -1)) {
             if (~var2 == -10) {
               this.aBoolean536 = true;
             } else {

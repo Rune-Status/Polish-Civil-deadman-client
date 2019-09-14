@@ -168,7 +168,7 @@ public final class StillGraphic extends SceneNode {
       int var11 = 0;
       int var13;
       int var14;
-      if (~var8 != -1) {
+      if ((var8 != 1 -1)) {
         var14 = DummyClass40.COSINE_TABLE[var8];
         var13 = DummyClass40.SINE_TABLE[var8];
         var11 = var13 * -var4 >> 16;

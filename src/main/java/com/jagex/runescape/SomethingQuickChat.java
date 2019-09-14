@@ -209,11 +209,11 @@ public final class SomethingQuickChat extends SubNode {
             return;
           }
 
-          if (~DummyClass30.anInt453 != -1) {
+          if ((DummyClass30.anInt453 != 1 -1)) {
             MapScene.anInterface5Array70[DummyClass30.anInt453].disable();
           }
 
-          if (~var2 != -1) {
+          if ((var2 != 1 -1)) {
             MaterialShader var3 = MapScene.anInterface5Array70[var2];
             var3.enable();
             var3.set(var1);

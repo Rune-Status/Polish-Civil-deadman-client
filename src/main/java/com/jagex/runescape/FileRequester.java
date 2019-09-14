@@ -309,7 +309,7 @@ public final class FileRequester extends AbstractFileRequester {
                     this.method2109(2, this.anInt2964, 47);
                   }
 
-                  if (~this.aByteArray2949[this.anInt2964] != -2) {
+                  if ((this.aByteArray2949[this.anInt2964] != 2 -1)) {
                     var3 = new Node();
                     var3.key = this.anInt2964;
                     this.aClass61_2966.addLast(var3);
@@ -387,7 +387,7 @@ public final class FileRequester extends AbstractFileRequester {
                 .request(-51, this.anInt2957, (byte) 2, var2, true);
           }
         } else if (var1 != 1) {
-          if (~var1 != -3) {
+          if ((var1 != 3 -1)) {
             throw new RuntimeException();
           }
 
@@ -524,7 +524,7 @@ public final class FileRequester extends AbstractFileRequester {
               var2 != null; var2 = this.aClass61_2963.getNext()) {
             int var3 = (int) var2.key;
             if (var3 >= 0 && this.aClass62_2944.anInt960 > var3
-              && ~this.aClass62_2944.unpackedSizes[var3] != -1) {
+              && (this.aClass62_2944.unpackedSizes[var3] != 1 -1)) {
               if (this.aByteArray2949[var3] == 0) {
                 this.method2109(1, var3, var1 + 80);
               }
@@ -557,7 +557,7 @@ public final class FileRequester extends AbstractFileRequester {
   public static void method2100(byte var0) {
     SpotAnimationConfig.gameBuffer.method807((byte) 118);
       int var1 = SpotAnimationConfig.gameBuffer.readBits(1);
-      if (~var1 != -1) {
+      if ((var1 != 1 -1)) {
         int var2 = SpotAnimationConfig.gameBuffer.readBits(2);
         if (var2 == 0) {
           DummyClass60.anIntArray441[OndemandRequester.anInt997++] = 2047;
@@ -617,7 +617,7 @@ public final class FileRequester extends AbstractFileRequester {
   public static void method2104(Widget var0, boolean var1, int var2) {
     int var3 = 57 % ((var2 - -58) / 47);
       int var4 = var0.anInt240 != 0 ? var0.anInt240 : var0.anInt168;
-      int var5 = ~var0.anInt252 != -1 ? var0.anInt252 : var0.anInt193;
+      int var5 = (var0.anInt252 != 1 -1) ? var0.anInt252 : var0.anInt193;
       AbstractImageProducer.method2183(var0.anInt279, var1, var4, 235, var5,
         SceneNode.aClass11ArrayArray1834[var0.anInt279 >> 16]);
       if (var0.aClass11Array262 != null) {

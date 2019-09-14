@@ -24,8 +24,7 @@ public final class DummyClass18 {
       }
 
       return (8 & BZipDecompressorState.tileFlags[var3][var1][var0]) == 0 ?
-        ((var3 > 1 -1) && ~(BZipDecompressorState.tileFlags[1][var1][var0] & 2)
-            != -1 ?
+        ((var3 > 1 -1) && ((BZipDecompressorState.tileFlags[1][var1][var0] & 2) != 1 -1) ?
           -1 + var3 :
           var3) :
         0;
@@ -405,7 +404,7 @@ public final class DummyClass18 {
           Mouse.anInt1921 = (1 + Mouse.anInt1921) % 100;
           GameString var61 =
             StringNode.method733(12345678, var11).method555(28021, SpotAnimationConfig.gameBuffer);
-          if (~var10 != -3 && var10 != 3) {
+          if ((var10 != 3 -1) && var10 != 3) {
             if (~var10 == -2) {
               InventoryConfig.method611(var11, 20, var61,
                   FileCache.stringFromBase37(-29664, var4)
@@ -751,7 +750,7 @@ public final class DummyClass18 {
                 }
               }
             }
-          } else if (~(var21 >> 28) != -1) {
+          } else if (((var21 >> 28) != 1 -1)) {
             var6 = var21 & '\uffff';
             Player var60;
             if (~WidgetAccess.localPlayerId == ~var6) {
@@ -1428,7 +1427,7 @@ public final class DummyClass18 {
         var48.anInt1351 = SpotAnimationConfig.gameBuffer.readUnsignedByte();
         if ((var48.anInt1351 >= 1 -1)
           && ~var48.anInt1351 > ~SomethingIndex150.aClass3_Sub28_Sub16Array2072.length) {
-          if (~var48.anInt1360 != -2 && var48.anInt1360 != 10) {
+          if ((var48.anInt1360 != 2 -1) && var48.anInt1360 != 10) {
             if ((var48.anInt1360 >= 3 -1) && var48.anInt1360 <= 6) {
               if (var48.anInt1360 == 2) {
                 var48.anInt1346 = 64;
@@ -1569,7 +1568,7 @@ public final class DummyClass18 {
           Mouse.anInt1921 = (Mouse.anInt1921 - -1) % 100;
           GameString var52 = AbstractFont.otherFormat(
             DummyClass34.decompressString(SpotAnimationConfig.gameBuffer).format(96));
-          if (~var8 != -3 && ~var8 != -4) {
+          if ((var8 != 3 -1) && (var8 != 4 -1)) {
             if (var8 == 1) {
               GameBuffer.printMessage(RenderAnimation.concat(new GameString[]{
                   DummyClass34.aClass94_592,
@@ -1637,7 +1636,7 @@ public final class DummyClass18 {
           Mouse.anInt1921 = (Mouse.anInt1921 + 1) % 100;
           var57 = AbstractFont.otherFormat(
             DummyClass34.decompressString(SpotAnimationConfig.gameBuffer).format(116));
-          if (~var10 != -3 && ~var10 != -4) {
+          if ((var10 != 3 -1) && (var10 != 4 -1)) {
             if (~var10 == -2) {
               TextureSampler1.method221(-1, var57, RenderAnimation.concat(new GameString[] {
                 DummyClass34.aClass94_592,
@@ -1858,7 +1857,7 @@ public final class DummyClass18 {
         var2 = SpotAnimationConfig.gameBuffer.readLong();
         var21 = SpotAnimationConfig.gameBuffer.readUnsignedShort();
         byte var28 = SpotAnimationConfig.gameBuffer.readByte();
-        var31 = ~(Long.MIN_VALUE & var2) != -1L;
+        var31 = ((Long.MIN_VALUE & var2) != 1L -1);
 
         if (var31) {
           if (~SubNode.anInt2572 == -1) {

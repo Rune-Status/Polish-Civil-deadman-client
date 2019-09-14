@@ -52,7 +52,7 @@ public final class VertexNormal {
           SomethingSceneI var12 = AbstractGameWorld.method1068(var0, var6, var4);
           if (var12 != null) {
             var9 = (int) (var12.aLong428 >>> 32) & Integer.MAX_VALUE;
-            if (~var3 != -5 && ~var3 != -6) {
+            if ((var3 != 5 -1) && (var3 != 6 -1)) {
               if (~var3 == -7) {
                 var12.aClass140_429 =
                     new GameObject(var9, 4, var2 - -4, var0, var6, var4, var7,

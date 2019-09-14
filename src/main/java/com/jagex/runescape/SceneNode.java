@@ -103,7 +103,7 @@ public abstract class SceneNode {
       return ~var1 == -1 ?
         var6 :
         (var1 != 1
-            ? (~var1 != -3 ? var4 : -var3 + 1 + -var6 + 7) : -var4 + 7 + -var0 - -1);
+            ? ((var1 != 3 -1) ? var4 : -var3 + 1 + -var6 + 7) : -var4 + 7 + -var0 - -1);
   }
 
   public static void method1864(boolean var0, byte var1, FileUnpacker var2, SoftwareFont var3,
@@ -126,7 +126,7 @@ public abstract class SceneNode {
     int var6 = var2 - var3;
       int var7 = var4 + -var5;
       if (var7 == 0) {
-        if (~var6 != -1) {
+        if ((var6 != 1 -1)) {
           TextureSampler15.method244(2, var3, var5, var2, var1);
         }
 

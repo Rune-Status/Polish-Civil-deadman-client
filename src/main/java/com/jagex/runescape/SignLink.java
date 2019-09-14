@@ -290,7 +290,7 @@ public class SignLink implements Runnable {
                           var1.anInt979 >> 8 & 255) + "." + (255
                           & var1.anInt979);
                   var1.result = InetAddress.getByName(var4).getHostName();
-                } else if (~var2 != -6) {
+                } else if ((var2 != 6 -1)) {
                   if (~var2 == -7) {
                     Frame var5 = new Frame("Jagex Full Screen");
                     var1.result = var5;
@@ -298,7 +298,7 @@ public class SignLink implements Runnable {
                     this.aDisplay1208.method918(-56, var1.anInt980 & '\uffff',
                         var1.anInt980 >> 16, '\uffff' & var1.anInt979, var5,
                         var1.anInt979 >>> 16);
-                  } else if (~var2 != -8) {
+                  } else if ((var2 != 8 -1)) {
                     if (var2 == 10) {
                     } else {
                       int var18;

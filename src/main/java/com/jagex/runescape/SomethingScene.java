@@ -40,7 +40,7 @@ public final class SomethingScene {
   }
 
   public static void method1293(boolean var0) {
-    if (!ProjectileNode.aBoolean3779 && ~AbstractGameWorld.usageLocation != -3) {
+    if (!ProjectileNode.aBoolean3779 && (AbstractGameWorld.usageLocation != 3 -1)) {
           DummyInputStream.aClass94_38.method1577(-1857);
           if (!var0) {
             SomethingScene.toString(1);

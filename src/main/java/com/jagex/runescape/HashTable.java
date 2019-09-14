@@ -236,7 +236,7 @@ public final class HashTable {
   public static AbstractTextureSampler createTextureSampler(int type, boolean var1) {
     if (~type == -1) {
         return new TextureSampler0();
-      } else if (~type != -2) {
+      } else if ((type != 2 -1)) {
         if (type == 2) {
           return new TextureSampler2();
         } else {
@@ -259,10 +259,10 @@ public final class HashTable {
                   } else if (type != 11) {
                     if (~type == -13) {
                       return new TextureSampler12();
-                    } else if (~type != -14) {
+                    } else if ((type != 14 -1)) {
                       if (type == 14) {
                         return new TextureSampler14();
-                      } else if (~type != -16) {
+                      } else if ((type != 16 -1)) {
                         if (type == 16) {
                           return new TextureSampler16();
                         } else if (type != 17) {
@@ -292,7 +292,7 @@ public final class HashTable {
                                     } else {
                                       if (~type == -29) {
                                         return new TextureSampler28();
-                                      } else if (~type != -30) {
+                                      } else if ((type != 30 -1)) {
                                         if (type == 30) {
                                           return new TextureSampler30();
                                         } else {
@@ -308,7 +308,7 @@ public final class HashTable {
                                                 return new TextureSampler34();
                                               } else if (type == 35) {
                                                 return new TextureSampler35();
-                                              } else if (~type != -37) {
+                                              } else if ((type != 37 -1)) {
                                                 if (type == 37) {
                                                   return new TextureSampler37();
                                                 } else if (type != 38) {

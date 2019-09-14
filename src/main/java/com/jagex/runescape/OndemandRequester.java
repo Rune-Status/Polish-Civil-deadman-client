@@ -117,7 +117,7 @@ public final class OndemandRequester {
 
               this.socketStream.read(this.currentRequest.buffer.bytes,
                   this.currentRequest.buffer.position, var7);
-              if (~this.encryptionKey != -1) {
+              if ((this.encryptionKey != 1 -1)) {
                 for (var8 = 0; var7 > var8; ++var8) {
                   this.currentRequest.buffer.bytes[this.currentRequest.buffer.position - -var8] =
                     (byte) ObjectCache.bitXor(
@@ -174,7 +174,7 @@ public final class OndemandRequester {
                   int var9 = this.aClass3_Sub30_1008.readUnsignedByte();
                   int length = this.aClass3_Sub30_1008.readInt();
                   int compression = 127 & var9;
-                  boolean priority = ~(var9 & 128) != -1;
+                  boolean priority = ((var9 & 128) != 1 -1);
                   OndemandFileRequest var15 = null;
                   long var13 = (var7 << 16) - -var8;
                   if (priority) {

@@ -318,7 +318,7 @@ public final class Cache {
               int var29;
               int var28;
               int var47;
-              if (~var11.anInt189 != -1) {
+              if ((var11.anInt189 != 1 -1)) {
                 if (~var11.anInt189 == -1338
                   || var11.anInt189 == 1403 && GlRenderer.useOpenGlRenderer) {
                   FloorOverlay.aClass11_2091 = var11;
@@ -733,7 +733,7 @@ public final class Cache {
                       }
                     }
 
-                    if (~var15 != -1) {
+                    if ((var15 != 1 -1)) {
                       if (var11.aBoolean226) {
                         if (GlRenderer.useOpenGlRenderer) {
                           GlUtils.fillQuad(var13, var14, var11.anInt168,
@@ -794,7 +794,7 @@ public final class Cache {
                             var45 = VertexNormal.aClass94_829;
                           }
 
-                          if ((~var50.anInt764 == -2 || ~var11.anInt271 != -2)
+                          if ((~var50.anInt764 == -2 || (var11.anInt271 != 2 -1))
                             && var11.anInt271 != -1) {
                             var45 = RenderAnimation.concat(new GameString[] {
                               TextureSampler6.aClass94_3042, var45, ClassCheckRequest.aClass94_2306,

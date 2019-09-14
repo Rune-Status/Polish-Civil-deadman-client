@@ -143,7 +143,7 @@ public final class GroundItem extends SceneNode {
                       (int) (var4[var16][var9][var12].sceneGraphNodes[var17].aLong498 >> 20 & 3L);
                     var20 = var18 | var19 << 6;
                     if (~var20 == ~var10 || var11 != 0 && var20 == var11
-                      || ~var13 != -1 && var13 == var20) {
+                      || (var13 != 1 -1) && var13 == var20) {
                       continue label257;
                     }
                   }

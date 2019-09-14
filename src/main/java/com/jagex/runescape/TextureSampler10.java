@@ -14,7 +14,7 @@ public final class TextureSampler10 extends AbstractTextureSampler {
   }
 
   private void method345(int var1, boolean var2) {
-    if (~var1 != -1) {
+    if ((var1 != 1 -1)) {
         if (~var1 == -2) {
           this.anIntArrayArray3438 = new int[2][4];
           this.anIntArrayArray3438[0][1] = 0;

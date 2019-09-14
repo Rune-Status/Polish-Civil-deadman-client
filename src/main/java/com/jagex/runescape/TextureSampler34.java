@@ -213,7 +213,7 @@ public final class TextureSampler34 extends AbstractTextureSampler {
 
       var14 = 3 & this.aByteArray3059[var2 + var12];
       if (var14 > 1) {
-        var9 = ~var14 != -3 ? -var10 + -var11 : var11 - var10;
+        var9 = (var14 != 3 -1) ? -var10 + -var11 : var11 - var10;
       } else {
         var9 = var14 == 0 ? var11 + var10 : var10 + -var11;
       }
@@ -355,7 +355,7 @@ public final class TextureSampler34 extends AbstractTextureSampler {
         int var6 = DummyClass40.textureCache.method19(111, var0 & '\uffff');
         int var7;
         int var9;
-        if (~var6 != -1) {
+        if ((var6 != 1 -1)) {
           if ((lightness >= 1 -1)) {
             if ((lightness > 128 -1)) {
               var7 = 16777215;
@@ -379,7 +379,7 @@ public final class TextureSampler34 extends AbstractTextureSampler {
         }
 
         var7 = DummyClass40.textureCache.method10(106, '\uffff' & var0);
-        if (~var7 != -1) {
+        if ((var7 != 1 -1)) {
           var7 += 256;
           int var8 = ((16711680 & var5) >> 16) * var7;
           if (var8 > '\uffff') {

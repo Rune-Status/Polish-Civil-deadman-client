@@ -27,7 +27,7 @@ public final class TextureSampler17 extends AbstractTextureSampler {
   public void parseConfig(int var1, Buffer var2, boolean var3 ) {
     if (~var1 == -1) {
         this.anInt3175 = var2.method787((byte) 18);
-      } else if (~var1 != -2) {
+      } else if ((var1 != 2 -1)) {
         if (~var1 == -3) {
           this.anInt3176 = (var2.readByte() << 12) / 100;
         }

@@ -34,7 +34,7 @@ public final class SomethingVolume15 extends Node {
       this.aByteArray2425 = new byte[128];
 
       Buffer var2;
-      for (var2 = new Buffer(var1); ~var2.bytes[var3 + var2.position] != -1; ++var3) {
+      for (var2 = new Buffer(var1); (var2.bytes[var3 + var2.position] != 1 -1); ++var3) {
       }
 
       byte[] var4 = new byte[var3];
@@ -65,7 +65,7 @@ public final class SomethingVolume15 extends Node {
       int var9 = 0;
       var8 = var2.position;
 
-      for (var2.position += var6; ~var2.bytes[var9 + var2.position] != -1; ++var9) {
+      for (var2.position += var6; (var2.bytes[var9 + var2.position] != 1 -1); ++var9) {
       }
 
       byte[] var10 = new byte[var9];
@@ -125,7 +125,7 @@ public final class SomethingVolume15 extends Node {
       byte[] var39 = (var14 > 1 -1) ? new byte[var14 * 2] : null;
 
       int var17;
-      for (var17 = 0; ~var2.bytes[var17 + var2.position] != -1; ++var17) {
+      for (var17 = 0; (var2.bytes[var17 + var2.position] != 1 -1); ++var17) {
       }
 
       byte[] var18 = new byte[var17];
@@ -180,7 +180,7 @@ public final class SomethingVolume15 extends Node {
 
       int var24;
       for (var24 = 0; ~var24 > -129; ++var24) {
-        if (~this.anIntArray2423[var24] != -1) {
+        if ((this.anIntArray2423[var24] != 1 -1)) {
           if (var20 == 0) {
             var23 = var2.bytes[var5++] + -1;
             if (var4.length > var21) {
@@ -200,7 +200,7 @@ public final class SomethingVolume15 extends Node {
       var24 = 0;
 
       for (int var25 = 0; ~var25 > -129; ++var25) {
-        if (~this.anIntArray2423[var25] != -1) {
+        if ((this.anIntArray2423[var25] != 1 -1)) {
           if (var20 == 0) {
             var24 = var2.bytes[var8++] - -16 << 2;
             if (~var21 > ~var7.length) {
@@ -221,7 +221,7 @@ public final class SomethingVolume15 extends Node {
 
       int var26;
       for (var26 = 0; ~var26 > -129; ++var26) {
-        if (~this.anIntArray2423[var26] != -1) {
+        if ((this.anIntArray2423[var26] != 1 -1)) {
           if (var20 == 0) {
             var43 = var38[var37[var21]];
             if (var21 >= var10.length) {
@@ -476,7 +476,7 @@ public final class SomethingVolume15 extends Node {
         for (int var8 = 0; ~var8 > -129; ++var8) {
           if (var4 == null || var4[var8] != 0) {
             int var9 = this.anIntArray2423[var8];
-            if (~var9 != -1) {
+            if ((var9 != 1 -1)) {
               if (var6 != var9) {
                 var6 = var9--;
                 if ((var9 & 1) == 0) {

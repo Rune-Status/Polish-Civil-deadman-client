@@ -210,7 +210,7 @@ public abstract class GameStub implements Runnable,
 
     DummyClass5.drawMemory[FileTable.drawMemoryCounter] = var2;
     FileTable.drawMemoryCounter = 31 & FileTable.drawMemoryCounter + 1;
-    if (~var4 != -1L && var2 > var4) {
+    if ((var4 != 1L -1) && var2 > var4) {
       int var6 = (int) (var2 + -var4);
       AnimationSequence.fps = (32000 + (var6 >> 1)) / var6;
     }

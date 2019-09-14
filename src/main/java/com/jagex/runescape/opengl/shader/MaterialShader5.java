@@ -119,7 +119,7 @@ public final class MaterialShader5 implements MaterialShader {
     float var4 = (1 + (var1 >> 3 & 3)) * 0.01F;
       float var3 = -0.01F * (1 + (var1 & 3));
       float var5 = (var1 & 64) == 0 ? 4.8828125E-4F : 9.765625E-4F;
-      boolean var6 = ~(128 & var1) != -1;
+      boolean var6 = ((128 & var1) != 1 -1);
       if (var6) {
         this.aFloatArray2174[0] = var5;
         this.aFloatArray2174[1] = 0.0F;
@@ -213,8 +213,8 @@ public final class MaterialShader5 implements MaterialShader {
   public static boolean method1627(int var0, byte var1) {
     GameWorld var2 = ClassCheckRequest.method130(97, var0);
       if (var2 != null) {
-        if (SignLink.anInt1214 != 1 && ~SignLink.anInt1214 != -3
-          && ~AbstractGameWorld.usageLocation != -3) {
+        if (SignLink.anInt1214 != 1 && (SignLink.anInt1214 != 3 -1)
+          && (AbstractGameWorld.usageLocation != 3 -1)) {
           GameString var9 = GameStub.aClass94_8;
           if (AbstractGameWorld.usageLocation != 0) {
             var9 = RenderAnimation.concat(new GameString[] {
@@ -257,7 +257,7 @@ public final class MaterialShader5 implements MaterialShader {
           byte[] var3 = var2.aClass94_2625.method1568(0);
           DummyClass36.aString2611 = new String(var3, 0, var3.length);
           ClientScriptCall.anInt2451 = var2.anInt2621;
-          if (~AbstractGameWorld.usageLocation != -1) {
+          if ((AbstractGameWorld.usageLocation != 1 -1)) {
             DummyClass11.anInt2036 = '\u9c40' + ClientScriptCall.anInt2451;
             Projectile.anInt2894 = DummyClass11.anInt2036;
             GameWorldSomething.anInt506 = ClientScriptCall.anInt2451 + '\uc350';
@@ -281,7 +281,7 @@ public final class MaterialShader5 implements MaterialShader {
         int var7 = DummyClass17.screenLowerX;
         int var11 = (var5 - var3) * (-var7 + var8) / var1 - -var7;
         var12 = var9 + (var10 + -var9) * (-var0 + var4) / var2;
-        if (SceneNode.aBoolean1837 && ~(64 & Something3dRoot.anInt2051) != -1) {
+        if (SceneNode.aBoolean1837 && ((64 & Something3dRoot.anInt2051) != 1 -1)) {
           Widget var13 =
             AbstractDirectColorSprite
                 .method638((byte) -19, ScriptState.anInt872, Widget.anInt278);

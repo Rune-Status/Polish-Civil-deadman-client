@@ -175,8 +175,7 @@ public final class ItemConfig {
         int var4 = -1;
 
         for (int var5 = 0; var5 < 10; ++var5) {
-          if (this.anIntArray766[var5] <= var1 && ~this.anIntArray766[var5]
-              != -1) {
+          if (this.anIntArray766[var5] <= var1 && (this.anIntArray766[var5] != 1 -1)) {
             var4 = this.anIntArray804[var5];
           }
         }
@@ -283,7 +282,7 @@ public final class ItemConfig {
         int var7 = -1;
 
         for (int var8 = 0; var8 < 10; ++var8) {
-          if (~var5 <= ~this.anIntArray766[var8] && ~this.anIntArray766[var8] != -1) {
+          if (~var5 <= ~this.anIntArray766[var8] && (this.anIntArray766[var8] != 1 -1)) {
             var7 = this.anIntArray804[var8];
           }
         }
@@ -323,7 +322,7 @@ public final class ItemConfig {
         }
 
         var11 = var12.method2008(this.anInt784 + 64, 768 + this.anInt790, -50, -10, -50);
-        if (~this.anInt805 != -129 || this.anInt780 != 128 || ~this.anInt797 != -129) {
+        if ((this.anInt805 != 129 -1) || this.anInt780 != 128 || (this.anInt797 != 129 -1)) {
           var11.scale(this.anInt805, this.anInt780, this.anInt797);
         }
 
@@ -382,12 +381,12 @@ public final class ItemConfig {
             if ((this.translateX > 32768 -1)) {
               this.translateX -= 65536;
             }
-          } else if (~var3 != -9) {
+          } else if ((var3 != 9 -1)) {
             if (var3 == 11) {
               this.anInt764 = 1;
             } else if (~var3 == -13) {
               this.anInt757 = var2.readInt();
-            } else if (~var3 != -17) {
+            } else if ((var3 != 17 -1)) {
               if (var3 == 23) {
                 this.anInt793 = var2.readUnsignedShort();
               } else if (var3 != 24) {
@@ -440,7 +439,7 @@ public final class ItemConfig {
                           }
                         } else if (var3 == 65) {
                           this.aBoolean807 = true;
-                        } else if (~var3 != -79) {
+                        } else if ((var3 != 79 -1)) {
                           if (~var3 == -80) {
                             this.anInt776 = var2.readUnsignedShort();
                           } else if (var3 == 90) {
@@ -475,7 +474,7 @@ public final class ItemConfig {
                                 } else {
                                   if (~var3 == -113) {
                                     this.anInt797 = var2.readUnsignedShort();
-                                  } else if (~var3 != -114) {
+                                  } else if ((var3 != 114 -1)) {
                                     if (~var3 == -115) {
                                       this.anInt790 = 5 * var2.readByte();
                                     } else if (var3 == 115) {
@@ -494,7 +493,7 @@ public final class ItemConfig {
                                               .readUnsignedByte();
                                           this.anInt758 = var2
                                               .readUnsignedShort();
-                                        } else if (~var3 != -129) {
+                                        } else if ((var3 != 129 -1)) {
                                           if (~var3 == -130) {
                                             var2.readUnsignedByte();
                                             var2.readUnsignedShort();
@@ -663,15 +662,12 @@ public final class ItemConfig {
           }
         }
 
-        if (!var1 && (~this.anInt760 != -1 || ~this.anInt778
-            != -1 || ~this.anInt775 != -1)) {
+        if (!var1 && ((this.anInt760 != 1 -1) || (this.anInt778 != 1 -1) || (this.anInt775 != 1 -1))) {
           assert var6 != null;
           var6.translate(this.anInt760, this.anInt778, this.anInt775);
         }
 
-        if (var1 && (~this.anInt777 != -1 || ~this.anInt802
-            != -1 || ~this.anInt752
-            != -1)) {
+        if (var1 && ((this.anInt777 != 1 -1) || (this.anInt802 != 1 -1) || (this.anInt752 != 1 -1))) {
           assert var6 != null;
           var6.translate(this.anInt777, this.anInt802, this.anInt752);
         }
@@ -749,8 +745,8 @@ public final class ItemConfig {
           this.method1105(-67, null, -37);
         }
 
-        if (~this.anInt805 != -129 || ~this.anInt780 != -129
-            || ~this.anInt797 != -129) {
+        if ((this.anInt805 != 129 -1) || (this.anInt780 != 129 -1)
+            || (this.anInt797 != 129 -1)) {
           var5.scale(this.anInt805, this.anInt780, this.anInt797);
         }
 
@@ -1137,7 +1133,7 @@ public final class ItemConfig {
           }
           continue;
         }
-        if (~j1 != -202) {
+        if ((j1 != 202 -1)) {
           break;
         }
         int l6 = GroundItem.anIntArray2929[--k];
@@ -1241,7 +1237,7 @@ public final class ItemConfig {
             }
             continue;
           }
-          if (~j1 != -1006) {
+          if ((j1 != 1006 -1)) {
             break;
           }
           class11_2.aBoolean219 = GroundItem.anIntArray2929[--k] == 1;
@@ -1336,7 +1332,7 @@ public final class ItemConfig {
                   GroundItem.anIntArray2929[k++] = class11_4.aBoolean155 ? 1 : 0;
                   continue;
                 }
-                if (~j1 != -1506) {
+                if ((j1 != 1506 -1)) {
                   break;
                 }
                 GroundItem.anIntArray2929[k++] = class11_4.anInt190;
@@ -1393,7 +1389,7 @@ public final class ItemConfig {
                   GroundItem.anIntArray2929[k++] = class11_5.anInt264;
                   continue;
                 }
-                if (~j1 != -1613) {
+                if ((j1 != 1613 -1)) {
                   break;
                 }
                 GroundItem.anIntArray2929[k++] = class11_5.anInt224;
@@ -1419,7 +1415,7 @@ public final class ItemConfig {
                     }
                     continue;
                   }
-                  if (~j1 != -1803) {
+                  if ((j1 != 1803 -1)) {
                     break;
                   }
                   if (class11_6.aClass94_277 != null) {
@@ -1527,7 +1523,7 @@ public final class ItemConfig {
                           WidgetUpdate.createIndexedColorSprite(k46, k7, 79, class11_20);
                           continue;
                         }
-                        if (~j1 != -3111) {
+                        if ((j1 != 3111 -1)) {
                           break;
                         }
                         TextureSampler15.anInt3199++;
@@ -1547,7 +1543,7 @@ public final class ItemConfig {
                           BlockConfig.method1427(true, GroundItem.anIntArray2929[--k]);
                           continue;
                         }
-                        if (~j1 != -3203) {
+                        if ((j1 != 3203 -1)) {
                           break;
                         }
                         k -= 2;
@@ -1821,14 +1817,14 @@ public final class ItemConfig {
                           }
                           ClientScriptEnum class3_sub28_sub13_2 =
                             TextureSampler36.getEnum(j13, true);
-                          if (~class3_sub28_sub13_2.paramType != -116) {
+                          if ((class3_sub28_sub13_2.paramType != 116 -1)) {
                             throw new RuntimeException("C3410-1");
                           }
                           GroundItem.anIntArray2929[k++] =
                             class3_sub28_sub13_2.hasValue(class94_45, 8729) ? 1 : 0;
                           continue;
                         }
-                        if (~j1 != -3412) {
+                        if ((j1 != 3412 -1)) {
                           break;
                         }
                         int k13 = GroundItem.anIntArray2929[--k];
@@ -1849,7 +1845,7 @@ public final class ItemConfig {
                         }
                         if (j1 == 3601) {
                           int l13 = GroundItem.anIntArray2929[--k];
-                          if (~HintMarker.anInt1357 != -3 || ~l13 <= ~FileSystem.anInt104) {
+                          if ((HintMarker.anInt1357 != 3 -1) || ~l13 <= ~FileSystem.anInt104) {
                             Node.aClass94Array75[l++] = AreaSoundEffect.aClass94_2331;
                           } else {
                             Node.aClass94Array75[l++] = SceneSomething2.aClass94Array1046[l13];
@@ -1858,7 +1854,7 @@ public final class ItemConfig {
                         }
                         if (~j1 == -3603) {
                           int i14 = GroundItem.anIntArray2929[--k];
-                          if (~HintMarker.anInt1357 != -3
+                          if ((HintMarker.anInt1357 != 3 -1)
                               || ~FileSystem.anInt104 >= ~i14) {
                             GroundItem.anIntArray2929[k++] = 0;
                           } else {
@@ -2067,7 +2063,7 @@ public final class ItemConfig {
                           GroundItem.anIntArray2929[k++] = DummyClass18.method826(class94_16, -1);
                           continue;
                         }
-                        if (~j1 != -3630) {
+                        if ((j1 != 3630 -1)) {
                           break;
                         }
                         GroundItem.anIntArray2929[k++] = SomethingPacket151.anInt2607;
@@ -2119,7 +2115,7 @@ public final class ItemConfig {
                         if (j1 == 3911) {
                           int j18 = GroundItem.anIntArray2929[--k];
                           int k50 = TextureSampler29.aClass133Array3393[j18].method1804(false);
-                          GroundItem.anIntArray2929[k++] = ~k50 != -3 ? 0 : 1;
+                          GroundItem.anIntArray2929[k++] = (k50 != 3 -1) ? 0 : 1;
                           continue;
                         }
                         if (~j1 == -3913) {
@@ -2128,7 +2124,7 @@ public final class ItemConfig {
                           GroundItem.anIntArray2929[k++] = ~l50 == -6 ? 1 : 0;
                           continue;
                         }
-                        if (~j1 != -3914) {
+                        if ((j1 != 3914 -1)) {
                           break;
                         }
                         int l18 = GroundItem.anIntArray2929[--k];
@@ -2684,7 +2680,7 @@ public final class ItemConfig {
                                   l -= 2;
                                   GameString class94_48 = Node.aClass94Array75[l + 1];
                                   GameString class94_19 = Node.aClass94Array75[l];
-                                  if (~TextureSampler35.rights != -1
+                                  if ((TextureSampler35.rights != 1 -1)
                                     || (!SomethingVolume15.aBoolean2433 || BufferData.aBoolean1641)
                                     && !TextureSampler31.aBoolean3166) {
                                     TextureSampler12.secureBuffer.writePacket(201);
@@ -3206,11 +3202,11 @@ public final class ItemConfig {
                                   DummyClass60.method915(Node.aClass94Array75[--l], -1);
                                   continue;
                                 }
-                                if (~j1 != -5221) {
+                                if ((j1 != 5221 -1)) {
                                   break;
                                 }
                                 GroundItem.anIntArray2929[k++] =
-                                  ~GameObject.anInt2737 != -101 ? 0 : 1;
+                                  (GameObject.anInt2737 != 101 -1) ? 0 : 1;
                                 continue;
                               }
                               if (j1 < 5400) {
@@ -3475,7 +3471,7 @@ public final class ItemConfig {
                                   DummyClass12.anInt2027 = GroundItem.anIntArray2929[--k];
                                   continue;
                                 }
-                                if (~j1 != -5428) {
+                                if ((j1 != 5428 -1)) {
                                   break;
                                 }
                                 k -= 2;
@@ -3829,10 +3825,10 @@ public final class ItemConfig {
                                     DummyClass25.writeSettings(DummyClass35.signLink);
                                     continue;
                                   }
-                                  if (~j1 != -6029) {
+                                  if ((j1 != 6029 -1)) {
                                     break;
                                   }
-                                  DummyClass4.aBoolean3004 = ~GroundItem.anIntArray2929[--k] != -1;
+                                  DummyClass4.aBoolean3004 = (GroundItem.anIntArray2929[--k] != 1 -1);
                                   DummyClass25.writeSettings(DummyClass35.signLink);
                                   continue;
                                 }
@@ -3974,7 +3970,7 @@ public final class ItemConfig {
                                         Parameter.aCalendar3616.get(1);
                                       continue;
                                     }
-                                    if (~j1 != -6305) {
+                                    if ((j1 != 6305 -1)) {
                                       break;
                                     }
                                     boolean flag7 = true;
@@ -3982,7 +3978,7 @@ public final class ItemConfig {
                                     if ((l36 >= 1 -1)) {
                                       if (l36 >= 1582) {
                                         if (~(l36 % 4) == -1) {
-                                          if (~(l36 % 100) != -1) {
+                                          if (((l36 % 100) != 1 -1)) {
                                             flag7 = true;
                                           } else if (l36 % 400 != 0) {
                                             flag7 = false;
@@ -4002,8 +3998,8 @@ public final class ItemConfig {
                                   if ((j1 >= 6501 -1)) {
                                     if (j1 < 6600) {
                                       if (j1 == 6500) {
-                                        if (~DummyClass15.state != -11
-                                          || ~TextureSampler2.anInt3375 != -1
+                                        if ((DummyClass15.state != 11 -1)
+                                          || (TextureSampler2.anInt3375 != 1 -1)
                                           || TextureSampler28.loginState != 0
                                           || DummyCanvas.anInt23 != 0) {
                                           GroundItem.anIntArray2929[k++] = 1;
@@ -4058,10 +4054,10 @@ public final class ItemConfig {
                                       }
                                       if (~j1 == -6504) {
                                         int i37 = GroundItem.anIntArray2929[--k];
-                                        if (~DummyClass15.state != -11
-                                          || ~TextureSampler2.anInt3375 != -1
+                                        if ((DummyClass15.state != 11 -1)
+                                          || (TextureSampler2.anInt3375 != 1 -1)
                                           || TextureSampler28.loginState != 0
-                                          || ~DummyCanvas.anInt23 != -1) {
+                                          || (DummyCanvas.anInt23 != 1 -1)) {
                                           GroundItem.anIntArray2929[k++] = 0;
                                         } else {
                                           GroundItem.anIntArray2929[k++] =
@@ -4099,7 +4095,7 @@ public final class ItemConfig {
                                         }
                                         continue;
                                       }
-                                      if (~j1 != -6508) {
+                                      if ((j1 != 6508 -1)) {
                                         break;
                                       }
                                       k -= 4;
@@ -4130,7 +4126,7 @@ public final class ItemConfig {
                                       Cache.method1088(false) ? 1 : 0;
                                     continue;
                                   }
-                                  if (~j1 != -6407) {
+                                  if ((j1 != 6407 -1)) {
                                     break;
                                   }
                                   GroundItem.anIntArray2929[k++] =
@@ -4335,7 +4331,7 @@ public final class ItemConfig {
                             }
                             continue;
                           }
-                          if (~j1 != -4401) {
+                          if ((j1 != 4401 -1)) {
                             break;
                           }
                           k -= 2;
@@ -4668,7 +4664,7 @@ public final class ItemConfig {
                       if (j1 != 4124) {
                         break;
                       }
-                      boolean flag1 = ~GroundItem.anIntArray2929[--k] != -1;
+                      boolean flag1 = (GroundItem.anIntArray2929[--k] != 1 -1);
                       int k64 = GroundItem.anIntArray2929[--k];
                       Node.aClass94Array75[l++] =
                         SomethingOtherWorldMap.method407(TriChromaticImageBuffer.languageId, flag1,
@@ -4753,7 +4749,7 @@ public final class ItemConfig {
                     }
                     continue;
                   }
-                  if (~j1 != -2705 && j1 != 2705) {
+                  if ((j1 != 2705 -1) && j1 != 2705) {
                     break;
                   }
                   k -= 2;
@@ -4899,7 +4895,7 @@ public final class ItemConfig {
                     } else if (j1 != 1407) {
                       if (~j1 == -1409) {
                         class11_14.anObjectArray269 = aobj1;
-                      } else if (~j1 != -1410) {
+                      } else if ((j1 != 1410 -1)) {
                         if (j1 == 1410) {
                           class11_14.anObjectArray229 = aobj1;
                         } else {
@@ -4923,7 +4919,7 @@ public final class ItemConfig {
                                 class11_14.anObjectArray220 = aobj1;
                               } else if (~j1 == -1421) {
                                 class11_14.anObjectArray156 = aobj1;
-                              } else if (~j1 != -1422) {
+                              } else if ((j1 != 1422 -1)) {
                                 if (j1 == 1422) {
                                   class11_14.anObjectArray315 = aobj1;
                                 } else if (j1 != 1423) {
@@ -4931,7 +4927,7 @@ public final class ItemConfig {
                                     class11_14.anObjectArray176 = aobj1;
                                   } else if (j1 == 1425) {
                                     class11_14.anObjectArray268 = aobj1;
-                                  } else if (~j1 != -1427) {
+                                  } else if ((j1 != 1427 -1)) {
                                     if (j1 == 1427) {
                                       class11_14.anObjectArray235 = aobj1;
                                     } else {
@@ -5036,7 +5032,7 @@ public final class ItemConfig {
             }
             continue;
           }
-          if (~j1 != -1205) {
+          if ((j1 != 1205 -1)) {
             break;
           }
           class11_15.anInt202 = 5;

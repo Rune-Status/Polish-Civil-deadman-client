@@ -199,7 +199,7 @@ public final class ClassCheckRequest extends Node {
             }
 
             boolean var32 = false;
-            if (~TextureCache.localPlayer.anInt3956 != -1 && var23.anInt3956
+            if ((TextureCache.localPlayer.anInt3956 != 1 -1) && var23.anInt3956
                 != 0
               && var23.anInt3956 == TextureCache.localPlayer.anInt3956) {
               var32 = true;
@@ -227,7 +227,7 @@ public final class ClassCheckRequest extends Node {
 
         for (var10 = 0; ~var10 > ~var24.length; ++var10) {
           HintMarker var26 = var24[var10];
-          if (var26 != null && ~var26.anInt1360 != -1
+          if (var26 != null && (var26.anInt1360 != 1 -1)
               && AbstractGameWorld.updateCycle % 20 < 10) {
             if (~var26.anInt1360 == -2 && var26.anInt1359 >= 0
               && var26.anInt1359 < TextureSampler5.npcs.length) {
@@ -470,7 +470,7 @@ public final class ClassCheckRequest extends Node {
         }
 
         MidiSomething.aBoolean1158 = false;
-      } else if (~BZipDecompressorState.anInt120 != -1
+      } else if ((BZipDecompressorState.anInt120 != 1 -1)
           && ~AbstractFrameRegulator.anInt1691 != 0
         && !BitVariable.method1391(var0 + 91)) {
         TextureSampler12.secureBuffer.writePacket(137);

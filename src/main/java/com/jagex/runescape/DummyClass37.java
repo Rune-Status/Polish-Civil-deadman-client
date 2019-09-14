@@ -386,7 +386,7 @@ public final class DummyClass37 {
               var2, 0);
           }
 
-        } else if (~GameString.packetId != -21) {
+        } else if ((GameString.packetId != 21 -1)) {
           int var14;
           if (GameString.packetId == 202) {
             var1 = SpotAnimationConfig.gameBuffer.readUnsignedByte();
@@ -477,7 +477,7 @@ public final class DummyClass37 {
 
               if ((var2 >= 1 -1) && var3 >= 0 && ~var2 > -105 && var3 < 104
                   && (var4 >= 1 -1) && var5 >= 0
-                  && ~var4 > -105 && var5 < 104 && ~var7 != -65536) {
+                  && ~var4 > -105 && var5 < 104 && (var7 != 65536 -1)) {
                 var5 = var5 * 128 + 64;
                 var3 = 128 * var3 + 64;
                 var2 = 128 * var2 + 64;
@@ -525,7 +525,7 @@ public final class DummyClass37 {
                   var2 *= 64;
                   var5 *= 64;
                   var3 *= 64;
-                  if (~var6 != -1) {
+                  if ((var6 != 1 -1)) {
                     int var15;
                     int var17;
                     Mobile var16;

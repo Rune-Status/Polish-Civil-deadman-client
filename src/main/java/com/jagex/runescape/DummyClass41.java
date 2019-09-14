@@ -154,7 +154,7 @@ public final class DummyClass41 {
 
   public static GameString method1174(Widget var0, byte var1) {
     int var2 = 49 % ((var1 - 22) / 46);
-      return ~GameClient.method44(var0).method101(-69) != -1 ?
+      return (GameClient.method44(var0).method101(-69) != 1 -1) ?
         (var0.aClass94_245 != null
             && var0.aClass94_245.method1564(1).getLength() != 0 ?
           var0.aClass94_245 :

@@ -720,7 +720,7 @@ public final class Widget {
 
       if (var4 < 125) {
         return null;
-      } else if (~var8 != -1) {
+      } else if ((var8 != 1 -1)) {
         if (~var8 == -2 && var9 == -1) {
           return null;
         } else {
@@ -758,7 +758,7 @@ public final class Widget {
                   return null;
                 }
               } else if (var8 != 6) {
-                if (~var8 != -8) {
+                if ((var8 != 8 -1)) {
                   return null;
                 } else if (var7 != null) {
                   int var15 = this.anInt201 >>> 16;
@@ -891,7 +891,7 @@ public final class Widget {
     this.aBoolean233 = true;
       ++var2.position;
       this.anInt187 = var2.readUnsignedByte();
-      if (~(128 & this.anInt187) != -1) {
+      if (((128 & this.anInt187) != 1 -1)) {
         this.anInt187 &= 127;
         var2.readString();
       }
@@ -924,8 +924,8 @@ public final class Widget {
         this.anInt224 = var2.readInt();
         this.anInt301 = var2.readUnsignedShort();
         var3 = var2.readUnsignedByte();
-        this.aBoolean157 = ~(2 & var3) != -1;
-        this.aBoolean186 = ~(1 & var3) != -1;
+        this.aBoolean157 = ((2 & var3) != 1 -1);
+        this.aBoolean186 = ((1 & var3) != 1 -1);
         this.anInt223 = var2.readUnsignedByte();
         this.anInt288 = var2.readUnsignedByte();
         this.anInt287 = var2.readInt();
@@ -997,7 +997,7 @@ public final class Widget {
         this.anIntArray299 = new int[10];
         this.aByteArray263 = new byte[10];
 
-        for (this.aByteArray231 = new byte[10]; ~var4 != -1; var4 = var2.readUnsignedByte()) {
+        for (this.aByteArray231 = new byte[10]; (var4 != 1 -1); var4 = var2.readUnsignedByte()) {
           var5 = (var4 >> 4) - 1;
           var4 = var2.readUnsignedByte() | var4 << 8;
           var4 &= 4095;
@@ -1122,7 +1122,7 @@ public final class Widget {
 
       GameString var1 = ObjectNode.aClass94_4052;
       GameString var2 = GroundItemNode.EMPTY_STRING;
-      if (~AbstractGameWorld.usageLocation != -1) {
+      if ((AbstractGameWorld.usageLocation != 1 -1)) {
         var1 = Player.aClass94_3971;
       }
 
@@ -1158,7 +1158,7 @@ public final class Widget {
   }
 
   public static int method869(int var0, int var1) {
-    return ~var1 != -16711936 ? (var0 < 97 ? -63 : DummyClass42.method1186(0, var1)) : -1;
+    return (var1 != 16711936 -1) ? (var0 < 97 ? -63 : DummyClass42.method1186(0, var1)) : -1;
   }
 
 }

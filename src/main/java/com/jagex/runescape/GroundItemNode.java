@@ -50,7 +50,7 @@ public final class GroundItemNode extends SubNode {
               if (Buffer.aClass3_Sub28_Sub3_2600.anInt3563 == 75) {
                 AbstractGameWorld.aFloat727 = 6.0F;
                 NPC.aFloat3979 = 6.0F;
-              } else if (~Buffer.aClass3_Sub28_Sub3_2600.anInt3563 != -101) {
+              } else if ((Buffer.aClass3_Sub28_Sub3_2600.anInt3563 != 101 -1)) {
                 if (Buffer.aClass3_Sub28_Sub3_2600.anInt3563 == 200) {
                   AbstractGameWorld.aFloat727 = 16.0F;
                   NPC.aFloat3979 = 16.0F;
@@ -110,7 +110,7 @@ public final class GroundItemNode extends SubNode {
                 Buffer.aClass3_Sub28_Sub3_2600.aClass94_3561)), false);
             GameObject.anInt2737 = 40;
             SomethingTexture4.resetFrameRegulator();
-          } else if (~GameObject.anInt2737 != -41) {
+          } else if ((GameObject.anInt2737 != 41 -1)) {
             if (GameObject.anInt2737 == 50) {
               HintMarker.method1587((byte) -83, new Buffer(
                   TextureSampler23.worldMaps

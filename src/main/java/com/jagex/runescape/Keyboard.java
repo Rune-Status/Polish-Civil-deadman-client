@@ -70,7 +70,7 @@ public final class Keyboard implements KeyListener, FocusListener {
         }
 
         var3 = var1.getModifiers();
-        if (~(var3 & 10) != -1 || var2 == 85 || ~var2 == -11) {
+        if (((var3 & 10) != 1 -1) || var2 == 85 || ~var2 == -11) {
           var1.consume();
         }
       }

@@ -176,7 +176,7 @@ public abstract class BufferObject {
               Parameter var12 = LinearHashTable.anInt1038 == -1 ?
                 null :
                 Deque.method1210(64, LinearHashTable.anInt1038);
-              if (~(2 & Something3dRoot.anInt2051) != -1 && (var12 == null
+              if (((2 & Something3dRoot.anInt2051) != 1 -1) && (var12 == null
                 || var0.method1475(LinearHashTable.anInt1038, -26460, var12.anInt3614)
                 != var12.anInt3614)) {
                 ScriptState.method1177(BufferObject.anInt1887, var3, (byte) -93,

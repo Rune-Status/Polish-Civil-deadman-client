@@ -16,7 +16,7 @@ public class MovedStatics0 {
         int var2 = DummyClass60.anIntArray441[var1];
         Player var3 = TextureSampler0.players[var2];
         int var4 = SpotAnimationConfig.gameBuffer.readUnsignedByte();
-        if (~(16 & var4) != -1) {
+        if (((16 & var4) != 1 -1)) {
           var4 += SpotAnimationConfig.gameBuffer.readUnsignedByte() << 8;
         }
 
@@ -137,7 +137,7 @@ public class MovedStatics0 {
       int var29;
       while (var25.bytes.length > var25.position) {
         var14 = var25.readUnsignedByte();
-        if (~var14 != -130) {
+        if ((var14 != 130 -1)) {
           --var25.position;
           break;
         }
@@ -227,7 +227,7 @@ public class MovedStatics0 {
           if (var15 == 0) {
             var26 = new BlockConfig(var25);
           } else {
-            if (~var15 != -2) {
+            if ((var15 != 2 -1)) {
               throw new IllegalStateException();
             }
 
@@ -262,8 +262,7 @@ public class MovedStatics0 {
                   if (var29 >= 0 && (var20 >= 1 -1) && var29 < 104
                       && var20 < 104) {
                     var30.aBoolean696 =
-                        ~(2 & BZipDecompressorState.tileFlags[1][var29][var20])
-                            != -1;
+                        ((2 & BZipDecompressorState.tileFlags[1][var29][var20]) != 1 -1);
                     var30.anInt697 =
                         AbstractGameWorld.heightMap[var30.anInt704][var29][var20]
                             - var30.anInt697;

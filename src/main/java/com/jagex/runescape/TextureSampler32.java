@@ -105,7 +105,7 @@ public final class TextureSampler32 extends AbstractTextureSampler {
         int var5 = this.anIntArray3348[1] * this.anIntArray3348[1] >> 12;
         int var4 = this.anIntArray3348[0] * this.anIntArray3348[0] >> 12;
         int var7 = (int) (4096.0D * Math.sqrt(var4 - (-var5 - var6) >> 12));
-        if (~var7 != -1) {
+        if ((var7 != 1 -1)) {
           this.anIntArray3348[2] = (this.anIntArray3348[2] << 12) / var7;
           this.anIntArray3348[0] = (this.anIntArray3348[0] << 12) / var7;
           this.anIntArray3348[1] = (this.anIntArray3348[1] << 12) / var7;

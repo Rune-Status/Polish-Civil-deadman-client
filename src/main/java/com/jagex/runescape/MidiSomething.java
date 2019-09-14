@@ -104,7 +104,7 @@ public final class MidiSomething {
         return null;
       } else if (~this.midiInstruments.method2121(0) == -2) {
         return this.method1415(0, var3, var2, (byte) 11);
-      } else if (~this.midiInstruments.getAmountChildren(var2, (byte) 99) != -2) {
+      } else if ((this.midiInstruments.getAmountChildren(var2, (byte) 99) != 2 -1)) {
         throw new RuntimeException();
       } else {
         return this.method1415(var2, var3, 0, (byte) 11);
@@ -219,7 +219,7 @@ public final class MidiSomething {
 
                     var35 = var42[var28] != null ? var42[var28][var31] : 0;
                     var36 = var35 & 252;
-                    if (~var36 != -1 && (var16 > 2 -1) && var27 > 1) {
+                    if ((var36 != 1 -1) && (var16 > 2 -1) && var27 > 1) {
                       FloorOverlay.method2272(DummyClass47.anIntArray1100, var33, var14, var35 & 3,
                         var32, var36 >> 2, var27, var16, var25, true, (byte) 21);
                     } else {
@@ -227,7 +227,7 @@ public final class MidiSomething {
                     }
                   }
 
-                  if (~var34 != -1) {
+                  if ((var34 != 1 -1)) {
                     if (var34 == -1) {
                       var34 = var32;
                     }
@@ -245,7 +245,7 @@ public final class MidiSomething {
 
                 if (var23[var28] != null) {
                   int var49 = var23[var28][var31] & 255;
-                  if (~var49 != -1) {
+                  if ((var49 != 1 -1)) {
                     if (var16 == 1) {
                       var36 = var14;
                     } else {
@@ -387,7 +387,7 @@ public final class MidiSomething {
                   if (var41[var44] != null) {
                     var25 = var41[var44][var24];
                     var26 = 16383 & var25;
-                    if (~var26 != -1) {
+                    if ((var26 != 1 -1)) {
                       var28 = ('\ud228' & var25) >> 14;
                       MapScene var47 = WidgetUpdate.c(-1 + var26, 0);
                       SoftwareIndexedColorSprite var48 = var47.getSprite(var28, (byte) -71);
@@ -407,7 +407,7 @@ public final class MidiSomething {
                           var31 = var22 * var33;
                         }
 
-                        if (~var30 != -1 && ~var31 != -1) {
+                        if ((var30 != 1 -1) && (var31 != 1 -1)) {
                           if (~var47.anInt61 == -1) {
                             var48.method1677(var14, -var31 + var20 - -var22, var30, var31);
                           } else {

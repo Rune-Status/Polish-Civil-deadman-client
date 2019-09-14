@@ -44,7 +44,7 @@ public final class GameString implements UnusedInterface1 {
         // 0-9
         int offset = bytes[i++] & 255;
         str.bytes[str.length++] = (byte) (offset - 48 + 43 * (ch - 40));
-      } else if (~ch != -1) {
+      } else if ((ch != 1 -1)) {
         str.bytes[str.length++] = (byte) ch;
       }
     }
@@ -241,7 +241,7 @@ public final class GameString implements UnusedInterface1 {
             (~var5 > 31 || ~var5 < 1 || var5 == -9)) {
           if ((var5 < 65 || (var5 > 91 -1)) &&
               (var5 < -64 || var5 > -34 || ~var5 == 40)) {
-            if (~var5 != -47 && var5 != 33 && var5 != 63) {
+            if ((var5 != 47 -1) && var5 != 33 && var5 != 63) {
               if (var5 == 32) {
                 if (var3 != 2) {
                   var3 = 1;
@@ -382,9 +382,9 @@ public final class GameString implements UnusedInterface1 {
     int var9 = 0;
     int var10 = 0;
 
-    while (~var5 != -1 && var6 != 0) {
-      if (~var3 != -157 && var3 != 230) {
-        if (var3 != 140 && ~var3 != -199) {
+    while ((var5 != 1 -1) && var6 != 0) {
+      if ((var3 != 157 -1) && var3 != 230) {
+        if (var3 != 140 && (var3 != 199 -1)) {
           if (var3 == 223) {
             var3 = 115;
           } else {
@@ -405,7 +405,7 @@ public final class GameString implements UnusedInterface1 {
       }
 
       if (var4 != 156 && var4 != 230) {
-        if (~var4 != -141 && ~var4 != -199) {
+        if ((var4 != 141 -1) && (var4 != 199 -1)) {
           if (var4 == 223) {
             var4 = 115;
           } else {
@@ -1054,7 +1054,7 @@ public final class GameString implements UnusedInterface1 {
     int var14;
     int[] var15;
     int var16;
-    if (~var8 != -1L) {
+    if ((var8 != 1L -1)) {
       var10 = 3 & (int) var8 >> 20;
       var11 = (508650 & (int) var8) >> 14;
       var12 = Integer.MAX_VALUE & (int) (var8 >>> 32);
@@ -1073,7 +1073,7 @@ public final class GameString implements UnusedInterface1 {
             var15[512 + var16] = var14;
             var15[var16 - -1024] = var14;
             var15[1536 + var16] = var14;
-          } else if (~var10 != -2) {
+          } else if ((var10 != 2 -1)) {
             if (~var10 == -3) {
               var15[var16 - -3] = var14;
               var15[var16 - -3 - -512] = var14;
@@ -1163,7 +1163,7 @@ public final class GameString implements UnusedInterface1 {
 
         var16 = var1 * 4 + (24624 - -(2048 * (103 - var3)));
         var15 = DummyClass47.anIntArray1100;
-        if (~var10 != -1 && ~var10 != -3) {
+        if ((var10 != 1 -1) && (var10 != 3 -1)) {
           var15[var16] = var14;
           var15[var16 - -512 - -1] = var14;
           var15[var16 - -1024 - -2] = var14;
@@ -1323,7 +1323,7 @@ public final class GameString implements UnusedInterface1 {
         DummyClass47.method1319(var15.pixels, 36, 32);
       }
 
-      if (~var0 != -1) {
+      if ((var0 != 1 -1)) {
         var15.method668(var0);
       }
 

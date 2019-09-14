@@ -66,7 +66,7 @@ public final class DummyClass9 extends DummyClass5 {
         DummyClass9.unbindKeyboard(null, 14);
       }
 
-      if (~TextureSampler2.anInt3375 != -1) {
+      if ((TextureSampler2.anInt3375 != 1 -1)) {
         try {
           if (++SceneGraphTile.anInt2246 > 1500) {
             if (SomethingVolume15.gameSocket != null) {
@@ -131,7 +131,7 @@ public final class DummyClass9 extends DummyClass5 {
               SomethingWorldMappy.audioOutputStream1.pause();
             }
 
-            if (~var1 != -102) {
+            if ((var1 != 102 -1)) {
               AbstractImageProducer.loginResponse = var1;
               TextureSampler2.anInt3375 = 0;
               SomethingVolume15.gameSocket.destroy();

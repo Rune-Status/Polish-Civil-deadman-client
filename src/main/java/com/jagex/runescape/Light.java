@@ -51,8 +51,8 @@ public final class Light {
       }
 
       this.anInt704 = var1.readUnsignedByte();
-      this.aBoolean690 = ~(this.anInt704 & 16) != -1;
-      this.aBoolean711 = ~(this.anInt704 & 8) != -1;
+      this.aBoolean690 = ((this.anInt704 & 16) != 1 -1);
+      this.aBoolean711 = ((this.anInt704 & 8) != 1 -1);
       this.anInt704 &= 7;
       this.anInt703 = var1.readUnsignedShort();
       this.anInt708 = var1.readUnsignedShort();
@@ -102,7 +102,7 @@ public final class Light {
       } else if (var6 != 3) {
         if (var6 == 4) {
           var4 = var5 >> 10 << 11;
-        } else if (~var6 != -3) {
+        } else if ((var6 != 3 -1)) {
           if (~var6 == -6) {
             var4 = (var5 < 1024 ? var5 : 2048 - var5) << 1;
           } else {
@@ -139,25 +139,25 @@ public final class Light {
           this.anInt709 = 4096;
           this.anInt694 = 1;
           this.anInt702 = 2048;
-        } else if (~var2 != -5) {
+        } else if ((var2 != 5 -1)) {
           if (~var2 == -6) {
             this.anInt694 = 4;
             this.anInt702 = 2048;
             this.anInt709 = 8192;
             this.anInt693 = 0;
-          } else if (~var2 != -13) {
+          } else if ((var2 != 13 -1)) {
             if (var2 == 13) {
               this.anInt709 = 8192;
               this.anInt702 = 2048;
               this.anInt694 = 2;
               this.anInt693 = 0;
-            } else if (~var2 != -11) {
+            } else if ((var2 != 11 -1)) {
               if (var2 == 11) {
                 this.anInt694 = 3;
                 this.anInt709 = 4096;
                 this.anInt702 = 512;
                 this.anInt693 = 1536;
-              } else if (~var2 != -7) {
+              } else if ((var2 != 7 -1)) {
                 if (~var2 == -8) {
                   this.anInt702 = 768;
                   this.anInt693 = 1280;
@@ -173,13 +173,13 @@ public final class Light {
                   this.anInt693 = 1024;
                   this.anInt702 = 1024;
                   this.anInt694 = 3;
-                } else if (~var2 != -15) {
+                } else if ((var2 != 15 -1)) {
                   if (~var2 == -16) {
                     this.anInt702 = 512;
                     this.anInt709 = 4096;
                     this.anInt693 = 1536;
                     this.anInt694 = 1;
-                  } else if (~var2 != -17) {
+                  } else if ((var2 != 17 -1)) {
                     this.anInt709 = 2048;
                     this.anInt693 = 0;
                     this.anInt702 = 2048;

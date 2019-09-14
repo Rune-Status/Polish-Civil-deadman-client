@@ -175,7 +175,7 @@ public final class TextureSampler26 extends AbstractTextureSampler {
         TextureSampler26.focused = true;
       }
 
-      if (~ClientScriptCall.anInt2453 != -1
+      if ((ClientScriptCall.anInt2453 != 1 -1)
           && var0 != 0 && ~SomethingLight0.anInt1552 > -51
         && ~var1 != 0) {
         Inventory.anIntArray2550[SomethingLight0.anInt1552] = var1;

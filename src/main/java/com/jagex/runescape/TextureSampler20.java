@@ -337,7 +337,7 @@ public final class TextureSampler20 extends AbstractTextureSampler {
             }
           }
 
-          if (~Structure.anInt3644 != -1) {
+          if ((Structure.anInt3644 != 1 -1)) {
             ++LightIntensity.anInt900;
             long var15 =
               (-AbstractIndexedColorSprite.aLong1465 + AbstractSomethingTexture.aLong1102) / 50L;
@@ -494,7 +494,7 @@ public final class TextureSampler20 extends AbstractTextureSampler {
                         var20.anInt283 = 0;
                         DummyClass29.method909(-117, var20);
                       }
-                    } else if (~var3 != -7) {
+                    } else if ((var3 != 7 -1)) {
                       if (~var3 == -8) {
                         var20 = EnumStringFetcher.getWidget((byte) 124, var4);
                         boolean var24 = var16.anInt3598 == 1;

@@ -117,8 +117,8 @@ public final class TextureSampler13 extends AbstractTextureSampler {
                     var14 = 2000;
                   }
 
-                  if (~TextureCache.localPlayer.anInt3956 != -1
-                      && ~var3.anInt3956 != -1) {
+                  if ((TextureCache.localPlayer.anInt3956 != 1 -1)
+                      && (var3.anInt3956 != 1 -1)) {
                     if (~TextureCache.localPlayer.anInt3956
                         == ~var3.anInt3956) {
                       var14 = 2000;
@@ -184,7 +184,7 @@ public final class TextureSampler13 extends AbstractTextureSampler {
       TextureSampler33.method183(-108);
       StringNode.method727(91);
       SomethingWorldMappy.method397((byte) -41);
-      if (~TextureSampler20.usageMode != -1) {
+      if ((TextureSampler20.usageMode != 1 -1)) {
         for (int var1 = 0; SomethingMidiFile.byteArrayPool.length > var1; ++var1) {
           SomethingMidiFile.byteArrayPool[var1] = null;
         }

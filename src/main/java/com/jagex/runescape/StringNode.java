@@ -128,7 +128,7 @@ public final class StringNode extends Node {
     var3.length = 0;
 
     for (int var4 = 0; var4 < var2.length; ++var4) {
-      if (~var2[var4] != -1) {
+      if ((var2[var4] != 1 -1)) {
         var2[var3.length++] = var2[var4];
       }
     }

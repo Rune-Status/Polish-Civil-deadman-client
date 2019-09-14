@@ -108,7 +108,7 @@ public final class DummyClass29 {
         }
 
         int var18 = ((int) var7 & 4109484) >> 20;
-        if (~var7 != -1L) {
+        if ((var7 != 1L -1)) {
           SceneNode var13 = null;
           SceneNode var14 = null;
           if (var4 == 0) {
@@ -118,7 +118,7 @@ public final class DummyClass29 {
               var14 = var15.sceneNode1;
             }
 
-            if (~var12.anInt1538 != -1) {
+            if ((var12.anInt1538 != 1 -1)) {
               var6.method1485(var18, var12.aBoolean1486, -104, var1, var19, var2);
             }
           } else if (var4 != 1) {

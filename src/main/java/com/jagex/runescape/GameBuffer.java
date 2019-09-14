@@ -1171,7 +1171,7 @@ public final class GameBuffer extends Buffer {
               }
             }
 
-            if (~Something3d.anInt3012 != -1) {
+            if ((Something3d.anInt3012 != 1 -1)) {
               Something3d.anInt3012 = 0;
               DummyClass29.method909(120,
                   EnumStringFetcher

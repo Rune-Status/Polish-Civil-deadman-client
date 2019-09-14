@@ -27,7 +27,7 @@ public final class IntegerNode extends Node {
   }
 
   public static void method383(int var0, int var1) {
-    if (var1 == DummyClass30.anInt453 && ~var1 != -1) {
+    if (var1 == DummyClass30.anInt453 && (var1 != 1 -1)) {
         MaterialShader var2 = MapScene.anInterface5Array70[var1];
         var2.set(TextureSampler37.anInt3263);
       }

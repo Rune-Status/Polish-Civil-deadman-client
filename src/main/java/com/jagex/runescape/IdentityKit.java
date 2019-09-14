@@ -98,7 +98,7 @@ public final class IdentityKit {
           }
         } else if (~var3 == -4) {
           this.aBoolean476 = true;
-        } else if (~var3 != -41) {
+        } else if ((var3 != 41 -1)) {
           if (~var3 == -42) {
             var4 = var2.readUnsignedByte();
             this.aShortArray471 = new short[var4];
@@ -359,7 +359,7 @@ public final class IdentityKit {
   }
 
   public static void method950(Widget var0, int var1, int var2, int var3) {
-    if (TextureSampler25.amountContextActions >= 2 || ~Something3d.anInt3012 != -1
+    if (TextureSampler25.amountContextActions >= 2 || (Something3d.anInt3012 != 1 -1)
         || SceneNode.aBoolean1837) {
         if (var1 > -55) {
           IdentityKit.aClass94_473 = null;

@@ -226,7 +226,7 @@ public class Buffer extends Node {
         int var3 = this.position;
 
         assert this.bytes != null;
-        while (~this.bytes[this.position++] != -1) {
+        while ((this.bytes[this.position++] != 1 -1)) {
         }
 
         return TextureSampler33.createString(this.bytes, var3,
@@ -320,8 +320,8 @@ public class Buffer extends Node {
   }
 
   public final void method771(int var1, int var2) {
-    if (~(-128 & var2) != -1) {
-        if (~(-16384 & var2) != -1) {
+    if (((-128 & var2) != 1 -1)) {
+        if (((-16384 & var2) != 1 -1)) {
           if ((var2 & -2097152) != 0) {
             if ((-268435456 & var2) != 0) {
               this.writeByte(var2 >>> 28 | 128);
@@ -804,7 +804,7 @@ public class Buffer extends Node {
             if (var12 == 0) {
               var22 = new BlockConfig(var20);
             } else {
-              if (~var12 != -2) {
+              if ((var12 != 2 -1)) {
                 throw new IllegalStateException();
               }
 

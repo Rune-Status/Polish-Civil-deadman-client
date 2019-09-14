@@ -314,7 +314,7 @@ public final class AudioStreamEncoder4 extends AudioStreamEncoder {
 
   private void method486(int var1, int var2, int var3, int var4) {
     this.method493((byte) -123, var4, 64, var2);
-      if (~(2 & this.anIntArray3518[var2]) != -1) {
+      if (((2 & this.anIntArray3518[var2]) != 1 -1)) {
         for (AudioSomethingSomething var5 =
              (AudioSomethingSomething) this.aClass3_Sub24_Sub3_3527.aClass61_3489.method1212(2);
              var5 != null; var5 =
@@ -412,7 +412,7 @@ public final class AudioStreamEncoder4 extends AudioStreamEncoder {
           var5 = 127 & var2 >> 8;
           var6 = 127 & var2 >> 16;
           this.method495(var6, var5, var1 ^ 17363, var4);
-        } else if (~var3 != -177) {
+        } else if ((var3 != 177 -1)) {
           if (var3 == 192) {
             var5 = var2 >> 8 & 127;
             var4 = 15 & var2;
@@ -812,7 +812,7 @@ public final class AudioStreamEncoder4 extends AudioStreamEncoder {
               break;
             }
 
-            if (~(var6 & 128) != -1) {
+            if (((var6 & 128) != 1 -1)) {
               this.method488((byte) 56, var6);
             }
 
@@ -1271,7 +1271,7 @@ public final class AudioStreamEncoder4 extends AudioStreamEncoder {
       if (var3.aBoolean233) {
         if (SceneNode.aBoolean1837) {
           if (GameClient.method44(var3).method97(-20710)
-            && ~(32 & Something3dRoot.anInt2051) != -1) {
+            && ((32 & Something3dRoot.anInt2051) != 1 -1)) {
             ++PlayerVariable.anInt562;
             ScriptState.method1177(BufferObject.anInt1887, 0L, (byte) -113,
               RenderAnimation.concat(new GameString[] {

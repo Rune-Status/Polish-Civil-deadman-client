@@ -316,7 +316,7 @@ public final class TextureCache implements ITextureCache {
           int var4 = var3.getSize();
           int var5;
           if (var4 != 1) {
-            if ((~(1 & var4) != -1 || ~(127 & var3.anInt2819) == -1 &&
+            if ((((1 & var4) != 1 -1) || ~(127 & var3.anInt2819) == -1 &&
                 (127 & var3.anInt2829) == 0)
               && ((var4 & 1) != 1 || ~(127 & var3.anInt2819) == -65 && (127
                 & var3.anInt2829) == 64)) {
@@ -363,7 +363,7 @@ public final class TextureCache implements ITextureCache {
         if (var3 != null && var3.hasConfiguration((byte) 17) && !var3.config.aBoolean1263 == !var1
           && var3.config.method1472((byte) 74)) {
           var6 = var3.getSize();
-          if (~var6 != -2) {
+          if ((var6 != 2 -1)) {
             if ((var6 & 1) == 0 && ~(var3.anInt2819 & 127) == -1 &&
                 ~(127 & var3.anInt2829) == -1
               || ~(var6 & 1) == -2 && ~(var3.anInt2819 & 127) == -65

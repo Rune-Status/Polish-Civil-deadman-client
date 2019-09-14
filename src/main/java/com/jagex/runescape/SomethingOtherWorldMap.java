@@ -106,7 +106,7 @@ public final class SomethingOtherWorldMap extends Node {
       } else {
         GameString var12;
         for (var12 = Cache.createString(0); var3 > 0L; var3 /= 10L) {
-          if (var1 && ~var11 != -1 && ~(var11 % 3) == -1) {
+          if (var1 && (var11 != 1 -1) && ~(var11 % 3) == -1) {
             var12.append(var8);
           }
 

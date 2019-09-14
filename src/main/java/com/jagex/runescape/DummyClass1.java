@@ -58,7 +58,7 @@ public final class DummyClass1 {
           var4 =
             -((-ProceduralTexture.anInt1152 + (var1.anInt2762 - ProceduralTexture.anInt1152)) * 64)
               + var1.anInt2829;
-          if (~var9 != -1 || var4 != 0) {
+          if ((var9 != 1 -1) || var4 != 0) {
             var1.anInt2806 = (int) (Math.atan2(var9, var4) * 325.949D) & 2047;
           }
 

@@ -81,10 +81,10 @@ public final class BitVariable {
             var3 = 30;
           } else if (~var2 == -8) {
             var3 = 29;
-          } else if (~var2 != -7) {
+          } else if ((var2 != 7 -1)) {
             if (~var2 == -6) {
               var3 = 28;
-            } else if (~var2 != -5) {
+            } else if ((var2 != 5 -1)) {
               if (~var2 == -4) {
                 var3 = 23;
               } else if (~var2 == -3) {
@@ -199,7 +199,7 @@ public final class BitVariable {
           }
 
           if ((var2 >= 12 -1)) {
-            DummyClass4.aBoolean3004 = ~var0.readUnsignedByte() != -1;
+            DummyClass4.aBoolean3004 = (var0.readUnsignedByte() != 1 -1);
           }
 
         }
