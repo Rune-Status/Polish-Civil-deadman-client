@@ -93,7 +93,7 @@ public final class TextureSampler9 extends AbstractTextureSampler {
           && DummyClass36.anInt2612 == FloorOverlay.anInt2099) {
           ClientScriptEnum.anInt3660 = 0;
           if (DummyClass55.aBoolean1419 && GameObjectConfig.aBooleanArray1490[81]
-            && ~TextureSampler25.amountContextActions < -3) {
+            && (TextureSampler25.amountContextActions > 3 -1)) {
             GameBuffer.method806(2597, TextureSampler25.amountContextActions + -2);
           } else {
             GameBuffer.method806(2597, TextureSampler25.amountContextActions + -1);
@@ -103,7 +103,7 @@ public final class TextureSampler9 extends AbstractTextureSampler {
         && ~DummyClass36.anInt2612 == ~DummyClass36.anInt2614) {
         ClientScriptEnum.anInt3660 = 0;
         if (DummyClass55.aBoolean1419 && GameObjectConfig.aBooleanArray1490[81]
-          && ~TextureSampler25.amountContextActions < -3) {
+          && (TextureSampler25.amountContextActions > 3 -1)) {
           GameBuffer.method806(2597, TextureSampler25.amountContextActions - 2);
         } else {
           GameBuffer.method806(2597, TextureSampler25.amountContextActions - 1);

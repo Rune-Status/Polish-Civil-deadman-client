@@ -327,7 +327,7 @@ public final class TextureCache implements ITextureCache {
                 var5 = 0;
               }
 
-              if (~var7 < -105) {
+              if ((var7 > 105 -1)) {
                 var7 = 104;
               }
 
@@ -377,7 +377,7 @@ public final class TextureCache implements ITextureCache {
 
               boolean var11 = true;
               var9 = var7 + var6;
-              if (~var10 < -105) {
+              if ((var10 > 105 -1)) {
                 var10 = 104;
               }
 
@@ -385,7 +385,7 @@ public final class TextureCache implements ITextureCache {
                 var7 = 0;
               }
 
-              if (~var9 < -105) {
+              if ((var9 > 105 -1)) {
                 var9 = 104;
               }
 

@@ -62,7 +62,7 @@ public class Something3d2 extends Something3dRoot {
       } else {
         this.anInt3023 = this.anInt3022 * this.anInt3024 >> 12;
         if (~this.anInt3023 <= -1) {
-          if (~this.anInt3023 < -4097) {
+          if ((this.anInt3023 > 4097 -1)) {
             this.anInt3023 = 4096;
           }
         } else {

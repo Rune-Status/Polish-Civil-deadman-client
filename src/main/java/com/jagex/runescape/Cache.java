@@ -456,7 +456,7 @@ public final class Cache {
                   Runtime var57 = Runtime.getRuntime();
                   var23 = (int) ((var57.totalMemory() + -var57.freeMemory()) / 1024L);
                   var24 = 16776960;
-                  if (~var23 < -65537) {
+                  if ((var23 > 65537 -1)) {
                     var24 = 16711680;
                   }
 
@@ -584,7 +584,7 @@ public final class Cache {
                 }
               }
 
-              if (HashTable.aBooleanArray1712[var12] || ~ClientScript.rectangleDebugType < -2) {
+              if (HashTable.aBooleanArray1712[var12] || (ClientScript.rectangleDebugType > 2 -1)) {
                 if (~var11.anInt187 == -1 && !var11.aBoolean233
                   && var11.anInt252 > var11.anInt193) {
                   TextureSampler24.method224((byte) 120, var11.anInt208, var11.anInt252,
@@ -674,8 +674,7 @@ public final class Cache {
                                 }
 
                                 int var32;
-                                if (var30 > (var26 + var24) && ~var51.anInt208
-                                    < -1) {
+                                if (var30 > (var26 + var24) && (var51.anInt208 > 1 -1)) {
                                   var32 = DisplayMode.loopCycle * (-var26 + var30 + -var24) / 3;
                                   if (var32 > (DisplayMode.loopCycle * 10)) {
                                     var32 = 10 * DisplayMode.loopCycle;
@@ -777,7 +776,7 @@ public final class Cache {
                             var21 = var11.anInt222;
                           }
 
-                          if (~var11.aClass94_172.getLength() < -1) {
+                          if ((var11.aClass94_172.getLength() > 1 -1)) {
                             var45 = var11.aClass94_172;
                           }
                         } else {
@@ -883,7 +882,7 @@ public final class Cache {
                         }
 
                         if (var38 != null) {
-                          if (~var11.anInt184 < -1) {
+                          if ((var11.anInt184 > 1 -1)) {
                             var24 = (var11.anInt168 << 8) / var11.anInt184;
                           } else {
                             var24 = 256;
@@ -1029,7 +1028,7 @@ public final class Cache {
                           var43 = FileCacheRequester.method1303(var11, var43, 0);
 
                           GameString var44;
-                          while (~var43.getLength() < -1) {
+                          while ((var43.getLength() > 1 -1)) {
                             var25 = var43.indexOf(Buffer.LINE_BREAK);
                             if (var25 == -1) {
                               var44 = var43;
@@ -1075,7 +1074,7 @@ public final class Cache {
 
                           for (
                             var43 = FileCacheRequester.method1303(var11, var43, 0);
-                            ~var43.getLength() < -1; var47 += var35.anInt3727 + 1) {
+                            (var43.getLength() > 1 -1); var47 += var35.anInt3727 + 1) {
                             var28 = var43.indexOf(Buffer.LINE_BREAK);
                             if (~var28 == 0) {
                               var44 = var43;
@@ -1285,7 +1284,7 @@ public final class Cache {
         AreaSoundEffect.anInt2309 = 128;
       }
 
-      if (~AreaSoundEffect.anInt2309 < -384) {
+      if ((AreaSoundEffect.anInt2309 > 384 -1)) {
         AreaSoundEffect.anInt2309 = 383;
       }
 
@@ -1301,7 +1300,7 @@ public final class Cache {
           FileTable.anInt942);
       int var4 = 0;
       int var5;
-      if (~var1 < -4 && var2 > 3 && var1 < 100 && var2 < 100) {
+      if ((var1 > 4 -1) && var2 > 3 && var1 < 100 && var2 < 100) {
         for (var5 = -4 + var1; var1 - -4 >= var5; ++var5) {
           for (int var6 = -4 + var2; var6 <= 4 + var2; ++var6) {
             int var7 = GameWorldSomething.currentPlane;
@@ -1320,7 +1319,7 @@ public final class Cache {
       }
 
       var5 = 192 * var4;
-      if (~var5 < -98049) {
+      if ((var5 > 98049 -1)) {
         var5 = 98048;
       }
 

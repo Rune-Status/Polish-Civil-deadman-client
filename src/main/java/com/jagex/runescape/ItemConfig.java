@@ -171,7 +171,7 @@ public final class ItemConfig {
 
   public ItemConfig method1106(int var1, int var2 ) {
     int var3 = 58 % ((-28 - var2) / 48);
-      if (this.anIntArray804 != null && ~var1 < -2) {
+      if (this.anIntArray804 != null && (var1 > 2 -1)) {
         int var4 = -1;
 
         for (int var5 = 0; var5 < 10; ++var5) {
@@ -279,7 +279,7 @@ public final class ItemConfig {
         this.anInt755 = -67;
       }
 
-      if (this.anIntArray804 != null && ~var5 < -2) {
+      if (this.anIntArray804 != null && (var5 > 2 -1)) {
         int var7 = -1;
 
         for (int var8 = 0; var8 < 10; ++var8) {
@@ -379,7 +379,7 @@ public final class ItemConfig {
             this.rotationY = var2.readUnsignedShort();
           } else if (~var3 == -8) {
             this.translateX = var2.readUnsignedShort();
-            if (~this.translateX < -32768) {
+            if ((this.translateX > 32768 -1)) {
               this.translateX -= 65536;
             }
           } else if (~var3 != -9) {
@@ -1170,12 +1170,12 @@ public final class ItemConfig {
             int l66 = GroundItem.anIntArray2929[3 + k];
             if (~l66 > -1) {
               l66 = 0;
-            } else if (~l66 < -6) {
+            } else if ((l66 > 6 -1)) {
               l66 = 5;
             }
             int k44 = GroundItem.anIntArray2929[k + 2];
             if (k44 >= 0) {
-              if (~k44 < -6) {
+              if ((k44 > 6 -1)) {
                 k44 = 5;
               }
             } else {
@@ -1208,7 +1208,7 @@ public final class ItemConfig {
             class11_2.aByte241 = (byte) i67;
             if (~l44 > -1) {
               l44 = 0;
-            } else if (~l44 < -5) {
+            } else if ((l44 > 5 -1)) {
               l44 = 4;
             }
             class11_2.aByte304 = (byte) l44;
@@ -1259,7 +1259,7 @@ public final class ItemConfig {
               }
               if (~j1 == -1301) {
                 int i45 = GroundItem.anIntArray2929[--k] + -1;
-                if (i45 < 0 || ~i45 < -10) {
+                if (i45 < 0 || (i45 > 10 -1)) {
                   l--;
                 } else {
                   class11_3.method857((byte) 112, Node.aClass94Array75[--l], i45);
@@ -3268,7 +3268,7 @@ public final class ItemConfig {
                                 }
                                 if (j1 == 5307) {
                                   int k32 = GroundItem.anIntArray2929[--k];
-                                  if (~k32 > -1 || ~k32 < -3) {
+                                  if (~k32 > -1 || (k32 > 3 -1)) {
                                     k32 = 0;
                                   }
                                   SceneNode.setWindowMode(false, k32, -8914, -1, -1);
@@ -3282,7 +3282,7 @@ public final class ItemConfig {
                                   break;
                                 }
                                 int l32 = GroundItem.anIntArray2929[--k];
-                                if (~l32 > -1 || ~l32 < -3) {
+                                if (~l32 > -1 || (l32 > 3 -1)) {
                                   l32 = 0;
                                 }
                                 SubNode.anInt2577 = l32;
@@ -3425,14 +3425,14 @@ public final class ItemConfig {
                                   l -= 2;
                                   GameString class94_55 = Node.aClass94Array75[1 + l];
                                   GameString class94_26 = Node.aClass94Array75[l];
-                                  if (~class94_26.getLength() < -1) {
+                                  if ((class94_26.getLength() > 1 -1)) {
                                     if (GameBuffer.titlePrefixes == null) {
                                       GameBuffer.titlePrefixes =
                                         new GameString[TextureSampler19.anIntArray3218[AbstractImageProducer.gameId]];
                                     }
                                     GameBuffer.titlePrefixes[i72] = class94_26;
                                   }
-                                  if (~class94_55.getLength() < -1) {
+                                  if ((class94_55.getLength() > 1 -1)) {
                                     if (DummyOutputStream.titleSuffixes == null) {
                                       DummyOutputStream.titleSuffixes =
                                         new GameString[TextureSampler19.anIntArray3218[AbstractImageProducer.gameId]];
@@ -3572,7 +3572,7 @@ public final class ItemConfig {
                                     if (~k34 > -2) {
                                       k34 = 1;
                                     }
-                                    if (~k34 < -5) {
+                                    if ((k34 > 5 -1)) {
                                       k34 = 4;
                                     }
                                     AbstractFileRequest.brightnessSetting = k34;
@@ -3728,7 +3728,7 @@ public final class ItemConfig {
                                     if (GlRenderer.useOpenGlRenderer) {
                                       AnimationSomething.replaceCanvas = true;
                                     }
-                                    if (i35 < 0 || ~i35 < -3) {
+                                    if (i35 < 0 || (i35 > 3 -1)) {
                                       i35 = 0;
                                     }
                                     GroundItemNode.anInt3671 = i35;
@@ -3747,7 +3747,7 @@ public final class ItemConfig {
                                     if (j35 < 0) {
                                       j35 = 0;
                                     }
-                                    if (~j35 < -128) {
+                                    if ((j35 > 128 -1)) {
                                       j35 = 127;
                                     }
                                     ClientScriptCall.anInt2453 = j35;
@@ -3760,7 +3760,7 @@ public final class ItemConfig {
                                     if (k35 < 0) {
                                       k35 = 0;
                                     }
-                                    if (~k35 < -256) {
+                                    if ((k35 > 256 -1)) {
                                       k35 = 255;
                                     }
                                     if (~k35 != ~BZipDecompressorState.anInt120) {
@@ -3806,7 +3806,7 @@ public final class ItemConfig {
                                     if (i36 < 0) {
                                       i36 = 0;
                                     }
-                                    if (~i36 < -3) {
+                                    if ((i36 > 3 -1)) {
                                       i36 = 2;
                                     }
                                     boolean flag6 = false;
@@ -4854,7 +4854,7 @@ public final class ItemConfig {
               }
               int[] ai3 = null;
               GameString class94_62 = Node.aClass94Array75[--l];
-              if (~class94_62.getLength() < -1 && ~class94_62.charAt(
+              if ((class94_62.getLength() > 1 -1) && ~class94_62.charAt(
                   class94_62.getLength() + -1) == -90) {
                 int i79 = GroundItem.anIntArray2929[--k];
                 if (i79 > 0) {

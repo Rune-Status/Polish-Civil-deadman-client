@@ -119,7 +119,7 @@ public final class Mouse implements MouseListener, MouseMotionListener,
         }
 
         if (var1.aliveTime != 0) {
-          if (~var1.anInt2261 < -1) {
+          if ((var1.anInt2261 > 1 -1)) {
             --var1.anInt2261;
           }
 

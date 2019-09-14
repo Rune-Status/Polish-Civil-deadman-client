@@ -167,7 +167,7 @@ public final class MidiSomething {
               var25 = var7 * var24 + var9 >> 16;
               var26 = var9 - -((1 + var24) * var7) >> 16;
               int var27 = -var25 + var26;
-              if (~var27 < -1) {
+              if ((var27 > 1 -1)) {
                 var26 += var0;
                 var28 = var3 + var24 >> 6;
                 int var29 = 63 & var3 + var24;
@@ -219,7 +219,7 @@ public final class MidiSomething {
 
                     var35 = var42[var28] != null ? var42[var28][var31] : 0;
                     var36 = var35 & 252;
-                    if (~var36 != -1 && ~var16 < -2 && var27 > 1) {
+                    if (~var36 != -1 && (var16 > 2 -1) && var27 > 1) {
                       FloorOverlay.method2272(DummyClass47.anIntArray1100, var33, var14, var35 & 3,
                         var32, var36 >> 2, var27, var16, var25, true, (byte) 21);
                     } else {
@@ -366,7 +366,7 @@ public final class MidiSomething {
         var14 = var1 - -(var13 * var8) >> 16;
         var15 = var8 * (var13 + 1) + var1 >> 16;
         var16 = -var14 + var15;
-        if (~var16 < -1) {
+        if ((var16 > 1 -1)) {
           var14 += var5;
           var17 = var6 + var13 >> 6;
           var10000 = var15 + var5;
@@ -378,7 +378,7 @@ public final class MidiSomething {
               var20 = var9 - -(var19 * var7) >> 16;
               var21 = var9 - -((var19 + 1) * var7) >> 16;
               var22 = var21 + -var20;
-              if (~var22 < -1) {
+              if ((var22 > 1 -1)) {
                 var20 += var0;
                 int var44 = var19 - -var3 >> 6;
                 var10000 = var21 + var0;

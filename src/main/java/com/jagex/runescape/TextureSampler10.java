@@ -284,7 +284,7 @@ public final class TextureSampler10 extends AbstractTextureSampler {
       }
 
       int var5 = this.anIntArrayArray3438.length;
-      if (~var5 < -1) {
+      if ((var5 > 1 -1)) {
         for (int var6 = 0; var6 < 257; ++var6) {
           int var7 = 0;
           int var8 = var6 << 4;
@@ -324,7 +324,7 @@ public final class TextureSampler10 extends AbstractTextureSampler {
           var3 >>= 4;
           if (var2 < 0) {
             var2 = 0;
-          } else if (~var2 < -256) {
+          } else if ((var2 > 256 -1)) {
             var2 = 255;
           }
 
@@ -336,7 +336,7 @@ public final class TextureSampler10 extends AbstractTextureSampler {
 
           var4 >>= 4;
           if (var4 >= 0) {
-            if (~var4 < -256) {
+            if ((var4 > 256 -1)) {
               var4 = 255;
             }
           } else {

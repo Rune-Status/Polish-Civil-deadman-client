@@ -41,10 +41,10 @@ public final class TextureSampler37 extends AbstractTextureSampler {
           var8 = var8 < -2048 ? var8 + 4096 : var8;
           var8 = ~var8 >= -2049 ? var8 : -4096 + var8;
           var10 = ~var10 <= 2047 ? var10 : 4096 + var10;
-          var10 = ~var10 < -2049 ? var10 - 4096 : var10;
+          var10 = (var10 > 2049 -1) ? var10 - 4096 : var10;
           int var11 = var5 - -this.anInt3262;
           var11 = var11 < -2048 ? var11 + 4096 : var11;
-          var11 = ~var11 < -2049 ? var11 - 4096 : var11;
+          var11 = (var11 > 2049 -1) ? var11 - 4096 : var11;
           var3[var6] =
             !this.method271(var8, var9, (byte) 113) && !this
                 .method270((byte) -44, var10, var11) ?

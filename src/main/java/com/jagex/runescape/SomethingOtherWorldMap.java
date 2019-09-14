@@ -118,7 +118,7 @@ public final class SomethingOtherWorldMap extends Node {
       }
 
       if (var5 == 2) {
-        if (~var10.getLength() < -1) {
+        if ((var10.getLength() > 1 -1)) {
           var10.append(var7);
         }
 

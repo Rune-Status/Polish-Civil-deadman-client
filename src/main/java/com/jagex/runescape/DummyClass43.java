@@ -57,7 +57,7 @@ public final class DummyClass43 {
           var9.samples = new int[(!GameString.stereo ? 1 : 2) * 256];
           var9.bind(var2);
           var9.sampleBufferSize = (var0 & 0xfffffc00) + 1024;
-          if (~var9.sampleBufferSize < -16385) {
+          if ((var9.sampleBufferSize > 16385 -1)) {
             var9.sampleBufferSize = 16384;
           }
 
@@ -90,7 +90,7 @@ public final class DummyClass43 {
             var5.bind(var2);
             var5.sampleBufferSize = 16384;
             var5.setBufferSize(var5.sampleBufferSize);
-            if (~AudioStreamEncoder4.anInt3507 < -1 &&
+            if ((AudioStreamEncoder4.anInt3507 > 1 -1) &&
                 DummyClass36.aClass15_2613 == null) {
               DummyClass36.aClass15_2613 = new AudioWorker();
               DummyClass36.aClass15_2613.aClass87_350 = var1;

@@ -426,7 +426,7 @@ public final class FileRequester extends AbstractFileRequester {
         OndemandFileRequest var12;
         if (var4 instanceof FileCacheRequest) {
           try {
-            if (var5 != null && ~var5.length < -3) {
+            if (var5 != null && (var5.length > 3 -1)) {
               TextureSampler24.aCRC32_3143.reset();
               TextureSampler24.aCRC32_3143.update(var5, 0, -2 + var5.length);
               var7 = (int) TextureSampler24.aCRC32_3143.getValue();

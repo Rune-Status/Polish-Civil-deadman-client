@@ -255,7 +255,7 @@ public final class TextureSampler28 extends AbstractTextureSampler {
   private void method291(int var1, Random var2, int var3, int var4, byte var5, int var6,
                                int[][] var7) {
     if (var5 == -69) {
-        int var8 = ~this.anInt3316 < -1 ?
+        int var8 = (this.anInt3316 > 1 -1) ?
           4096 + -FloorUnderlay.method1603((byte) -128, this.anInt3316, var2) :
           4096;
         int var9 = this.anInt3299 * this.anInt3314 >> 12;

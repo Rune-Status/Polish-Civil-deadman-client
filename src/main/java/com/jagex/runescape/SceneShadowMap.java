@@ -18,7 +18,7 @@ public final class SceneShadowMap {
                                int var7, int var8, int var9, int var10) {
     int var11 = var2 - var4;
       int var13 = -1;
-      if (~AbstractDirectColorSprite.anInt3704 < -1) {
+      if ((AbstractDirectColorSprite.anInt3704 > 1 -1)) {
         if (ByteArrayNode.anInt3611 <= 10) {
           var13 = 5 * ByteArrayNode.anInt3611;
         } else {
@@ -34,7 +34,7 @@ public final class SceneShadowMap {
         int var18 = var5 - -(var17 * var8) >> 16;
         int var19 = var8 * (var17 + 1) + var5 >> 16;
         int var20 = -var18 + var19;
-        if (~var20 < -1) {
+        if ((var20 > 1 -1)) {
           int var21 = var4 + var17 >> 6;
           var18 += var0;
           int var10000 = var19 + var0;

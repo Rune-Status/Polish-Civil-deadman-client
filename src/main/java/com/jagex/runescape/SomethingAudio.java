@@ -34,7 +34,7 @@ public final class SomethingAudio {
             var8 = 0;
           }
 
-          if (~var9 < -15) {
+          if ((var9 > 15 -1)) {
             var9 = 14;
           }
 

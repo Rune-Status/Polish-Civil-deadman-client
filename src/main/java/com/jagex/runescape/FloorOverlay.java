@@ -998,7 +998,7 @@ public final class FloorOverlay {
 
         for (int var2 = 0; ~var2 > ~(-1 + TextureSampler25.amountContextActions); ++var2) {
           if (TextureSampler27.aShortArray3095[var2] < 1000
-            && ~TextureSampler27.aShortArray3095[1 + var2] < -1001) {
+            && (TextureSampler27.aShortArray3095[1 + var2] > 1001 -1)) {
             GameString var3 = DummyClass8.aClass94Array4016[var2];
             var1 = false;
             DummyClass8.aClass94Array4016[var2] = DummyClass8.aClass94Array4016[1 + var2];

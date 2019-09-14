@@ -380,7 +380,7 @@ public final class HuffmanEncoder {
             var9 = (127 & var8) + var1;
             if (~var9 > -1) {
               var9 = 0;
-            } else if (~var9 < -128) {
+            } else if ((var9 > 128 -1)) {
               var9 = 127;
             }
 

@@ -25,7 +25,7 @@ public final class SomethingQuickChat extends SubNode {
         if (this.anIntArray3566 != null) {
           for (int var4 = 0; this.anIntArray3566.length > var4 && ~var4 > ~var2.length; ++var4) {
             int var5 = GameException.anIntArray2113[this.method550(89, var4)];
-            if (~var5 < -1) {
+            if ((var5 > 1 -1)) {
               var1.method739(0, var5, var2[var4]);
             }
           }

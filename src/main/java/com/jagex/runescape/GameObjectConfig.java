@@ -214,7 +214,7 @@ public final class GameObjectConfig {
           }
         }
 
-        if (~var6 < -2) {
+        if ((var6 > 2 -1)) {
           var4 = new Model(Something3dRoot.aClass140_Sub5Array2058, var6);
         }
       } else {
@@ -393,7 +393,7 @@ public final class GameObjectConfig {
       int var5;
       if (var2 == 1) {
         var4 = var1.readUnsignedByte();
-        if (~var4 < -1) {
+        if ((var4 > 1 -1)) {
           if (this.anIntArray1519 != null && !Cache.aBoolean742) {
             var1.position += var4 * 3;
           } else {
@@ -707,7 +707,7 @@ public final class GameObjectConfig {
         }
       } else {
         var4 = var1.readUnsignedByte();
-        if (~var4 < -1) {
+        if ((var4 > 1 -1)) {
           if (this.anIntArray1519 != null && !Cache.aBoolean742) {
             var1.position += var4 * 2;
           } else {

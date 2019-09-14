@@ -139,7 +139,7 @@ public final class TextureSampler32 extends AbstractTextureSampler {
         if (~GameWorldSomething.currentPlane == ~projectile.anInt2907
           && ~projectile.anInt2899 <= ~AbstractGameWorld.updateCycle) {
           if (AbstractGameWorld.updateCycle >= projectile.anInt2925) {
-            if (~projectile.targetId < -1) {
+            if ((projectile.targetId > 1 -1)) {
               NPC var3 = TextureSampler5.npcs[-1 + projectile.targetId];
               if (var3 != null && var3.anInt2819 >= 0 && var3.anInt2819 < 13312
                 && var3.anInt2829 >= 0 && ~var3.anInt2829 > -13313) {

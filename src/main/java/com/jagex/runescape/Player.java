@@ -236,7 +236,7 @@ public final class Player extends Mobile {
                     this.anInt2832,
                     this.anInt2813);
         int var16 = AbstractObjectNodeWrapper.method1727((byte) 123);
-        if (GlRenderer.useOpenGlRenderer && AudioStreamEncoder3.anInt3492 < 96 && ~var16 < -51) {
+        if (GlRenderer.useOpenGlRenderer && AudioStreamEncoder3.anInt3492 < 96 && (var16 > 51 -1)) {
           WidgetAccess.method90(1);
         }
 

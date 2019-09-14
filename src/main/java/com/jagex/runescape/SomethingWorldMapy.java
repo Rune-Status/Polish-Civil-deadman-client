@@ -103,7 +103,7 @@ public final class SomethingWorldMapy extends SubNode {
   public static int method540(int var0, int var1, int var2) {
     if (var1 == -14314) {
         int var3;
-        for (var3 = 0; ~var0 < -1; --var0) {
+        for (var3 = 0; (var0 > 1 -1); --var0) {
           var3 = var3 << 1 | 1 & var2;
           var2 >>>= 1;
         }

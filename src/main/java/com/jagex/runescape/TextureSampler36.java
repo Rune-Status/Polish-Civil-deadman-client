@@ -182,7 +182,7 @@ public final class TextureSampler36 extends AbstractTextureSampler {
                 DummyClass17.anInt1823 = 128;
               }
 
-              if (~DummyClass17.anInt1823 < -384) {
+              if ((DummyClass17.anInt1823 > 384 -1)) {
                 DummyClass17.anInt1823 = 383;
               }
             }

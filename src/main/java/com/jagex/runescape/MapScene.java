@@ -276,7 +276,7 @@ public final class MapScene {
           TriChromaticImageCache.anIntArrayArray1373[1 + var12][var13 + -1] = var18;
         }
 
-        if (~var12 < -1 && ~var13 > -103 &&
+        if ((var12 > 1 -1) && ~var13 > -103 &&
             DummyClass51.anIntArrayArray1160[var12 - 1][var13
                 + 1] == 0 && ~(var17[-1 + var12][var13 - -1] & 19661070) == -1 &&
             (19661112 & var17[-1

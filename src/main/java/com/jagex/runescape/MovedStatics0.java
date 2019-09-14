@@ -82,7 +82,7 @@ public class MovedStatics0 {
       if (!var10) {
         for (int var12 = 0; ~var12 > -9; ++var12) {
           for (var13 = 0; var13 < 8; ++var13) {
-            if (var1 - -var12 > 0 && var12 + var1 < 103 && ~(var13 + var4) < -1
+            if (var1 - -var12 > 0 && var12 + var1 < 103 && ((var13 + var4) > 1 -1)
                 && ~(var4
                 + var13) > -104) {
               var3[var2].anIntArrayArray1304[var12 + var1][var13 + var4] =
@@ -232,7 +232,7 @@ public class MovedStatics0 {
             }
 
             var28 = var25.readUnsignedByte();
-            if (~var28 < -1) {
+            if ((var28 > 1 -1)) {
               for (var17 = 0; ~var17 > ~var28; ++var17) {
                 Light var30 = new Light(var25);
                 if (~var30.anInt705 == -32) {

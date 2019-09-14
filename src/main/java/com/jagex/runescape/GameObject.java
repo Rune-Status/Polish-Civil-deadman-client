@@ -165,7 +165,7 @@ public final class GameObject extends SceneNode {
   private void method1961(int var1, int var2, int var3) {
     if (this.aClass142_2722 != null) {
         int var4 = AbstractGameWorld.updateCycle - this.anInt2749;
-        if (~var4 < -101 && this.aClass142_2722.anInt1865 > 0) {
+        if ((var4 > 101 -1) && this.aClass142_2722.anInt1865 > 0) {
           int var5;
           for (
             var5 = this.aClass142_2722.anIntArray1851.length - this.aClass142_2722.anInt1865;
@@ -477,7 +477,7 @@ public final class GameObject extends SceneNode {
             var21 = var32 + 128;
           }
 
-          if (~var9 < -129 && ~var9 > -897) {
+          if ((var9 > 129 -1) && ~var9 > -897) {
             var33 -= 128;
           }
         }

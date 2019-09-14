@@ -144,8 +144,8 @@ public abstract class GameStub implements Runnable,
     if (this == StringNode.applet && !PlayerVariable.aBoolean554) {
         TextureSampler30.aBoolean3116 = true;
         if (DummyClass20.aBoolean1784 && !GlRenderer.useOpenGlRenderer
-            && ~(-AnimationSequence.canvasInitializedTime + Time
-            .getCurrentTimeMillis()) < -1001L) {
+            && ((-AnimationSequence.canvasInitializedTime + Time
+            .getCurrentTimeMillis()) > 1001L -1)) {
           Rectangle var2 = var1.getClipBounds();
           if (var2 == null || ~var2.width <= ~AreaSoundEffect.windowWidth
               && ~SceneSomething2.windowHeight >= ~var2.height) {

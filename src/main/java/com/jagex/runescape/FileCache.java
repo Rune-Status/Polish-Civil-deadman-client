@@ -82,7 +82,7 @@ public final class FileCache {
 
               int var10 = -var8 + var4;
               this.aClass30_681.seek(-113, 520 * var5);
-              if (~var10 < -513) {
+              if ((var10 > 513 -1)) {
                 var10 = 512;
               }
 
@@ -226,7 +226,7 @@ public final class FileCache {
                 }
 
                 DummyClass11.aByteArray2040[4] = (byte) (var10 >> 16);
-                if (~var11 < -513) {
+                if ((var11 > 513 -1)) {
                   var11 = 512;
                 }
 
@@ -329,7 +329,7 @@ public final class FileCache {
   }
 
   public static GameString stringFromBase37(int var0, long var1) {
-    if (~var1 < -1L && ~var1 > -6582952005840035282L) {
+    if ((var1 > 1L -1) && ~var1 > -6582952005840035282L) {
         if (~(var1 % 37L) == -1L) {
           return null;
         } else {

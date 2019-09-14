@@ -58,7 +58,7 @@ public final class ByteArrayNode extends SubNode {
               HashTable var11 = new HashTable(DummyClass53.nearestPo2((byte) 119, var10));
               var2.aClass130Array3685[var9] = var11;
 
-              while (~(var10--) < -1) {
+              while (((var10--) > 1 -1)) {
                 int var12 = var4.readInt();
                 int var13 = var4.readInt();
                 var11.put(var12, new IntegerNode(var13));

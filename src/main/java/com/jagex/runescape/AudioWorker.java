@@ -153,7 +153,7 @@ public final class AudioWorker implements Runnable {
           var14 = var12 + 5;
           if (var27 > var14) {
             var15 = 255 & var4[var14][var34];
-            if (~var15 < -1) {
+            if ((var15 > 1 -1)) {
               FloorUnderlay var16 = ClientScript.getFloorUnderlay(var15 - 1);
               var28[var34] += var16.anInt1408;
               var29[var34] += var16.anInt1406;
@@ -248,7 +248,7 @@ public final class AudioWorker implements Runnable {
           AudioWorker.method891(19);
         }
 
-        if (~var2.length < -137 && !DummyClass38.aBoolean732) {
+        if ((var2.length > 137 -1) && !DummyClass38.aBoolean732) {
           try {
             BufferObject var3 = (BufferObject) Class.forName(
                 "com.jagex.runescape.NativeBufferObject").newInstance();

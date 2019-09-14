@@ -1081,7 +1081,7 @@ public final class GameBuffer extends Buffer {
                 AbstractFileRequest
                     .method589(GameWorldSomething.currentPlane, var2, var3);
               } else {
-                if (~TextureSampler35.rights < -1
+                if ((TextureSampler35.rights > 1 -1)
                     && GameObjectConfig.aBooleanArray1490[82]
                     && GameObjectConfig.aBooleanArray1490[81]) {
                   BufferedFile.method979(var2 + WorldMapLabel.anInt1716,

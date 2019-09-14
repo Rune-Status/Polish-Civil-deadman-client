@@ -24,7 +24,7 @@ public final class DummyClass18 {
       }
 
       return (8 & BZipDecompressorState.tileFlags[var3][var1][var0]) == 0 ?
-        (~var3 < -1 && ~(BZipDecompressorState.tileFlags[1][var1][var0] & 2)
+        ((var3 > 1 -1) && ~(BZipDecompressorState.tileFlags[1][var1][var0] & 2)
             != -1 ?
           -1 + var3 :
           var3) :
@@ -477,13 +477,13 @@ public final class DummyClass18 {
             var32 = false;
             var10 = SubNode.anInt2572;
 
-            while (~var10 < -1) {
+            while ((var10 > 1 -1)) {
               var32 = true;
               --var10;
 
               for (var11 = 0; var10 > var11; ++var11) {
-                if (~var7[var11].name
-                    .method1559(var7[var11 - -1].name, var0 ^ 82) < -1) {
+                if ((var7[var11].name
+                    .method1559(var7[var11 - -1].name, var0 ^ 82) > 1 -1)) {
                   var32 = false;
                   ClanChatUser var9 = var7[var11];
                   var7[var11] = var7[1 + var11];
@@ -1003,7 +1003,7 @@ public final class DummyClass18 {
         }
 
         var41 = GroundItemNode.EMPTY_STRING;
-        if (~var21 < -1) {
+        if ((var21 > 1 -1)) {
           var41 = SpotAnimationConfig.gameBuffer.readString();
         }
 
@@ -1050,7 +1050,7 @@ public final class DummyClass18 {
         DummyClass31.anInt1472 = TextureSampler23.anInt3213;
         var10 = FileSystem.anInt104;
 
-        while (~var10 < -1) {
+        while ((var10 > 1 -1)) {
           --var10;
           var45 = true;
 
@@ -2170,7 +2170,7 @@ public final class DummyClass18 {
             -1 + TextureSampler25.amountContextActions, ~var0))
             && TextureSampler25.amountContextActions > 2) {
             DummyClass22.method1801((byte) -97);
-          } else if (~TextureSampler25.amountContextActions < -1) {
+          } else if ((TextureSampler25.amountContextActions > 1 -1)) {
             TextureSampler9.method203(96);
           }
 
@@ -2178,7 +2178,7 @@ public final class DummyClass18 {
         }
 
       } else {
-        if (~SomethingTexture3.anInt2658 < -2) {
+        if ((SomethingTexture3.anInt2658 > 2 -1)) {
           DummyClass42.aClass11_886 = null;
         }
 

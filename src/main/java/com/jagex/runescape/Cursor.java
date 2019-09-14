@@ -71,7 +71,7 @@ public final class Cursor {
         if (~var1.animationId != 0 && var1.anInt2828 == 0) {
           AnimationSequence var3 = GameClient
               .method45(var1.animationId, (byte) -20);
-          if (~var1.anInt2811 < -1 && var3.anInt1866 == 0) {
+          if ((var1.anInt2811 > 1 -1) && var3.anInt1866 == 0) {
             ++var1.anInt2824;
             return;
           }
@@ -88,8 +88,8 @@ public final class Cursor {
             var1.waypointsX[-1 + var1.anInt2816] * 128 - -(var1.getSize() * 64);
         int var6 =
             128 * var1.waypointsY[-1 + var1.anInt2816] - -(var1.getSize() * 64);
-        if (~(var5 + -var18) < -257 || -var18 + var5 < -256
-            || ~(var6 - var4) < -257
+        if (((var5 + -var18) > 257 -1) || -var18 + var5 < -256
+            || ((var6 - var4) > 257 -1)
             || var6 - var4 < -256) {
           var1.anInt2819 = var5;
           var1.anInt2829 = var6;
@@ -160,7 +160,7 @@ public final class Cursor {
             var9 = 8;
           }
 
-          if (~var1.anInt2824 < -1 && ~var1.anInt2816 < -2) {
+          if ((var1.anInt2824 > 1 -1) && (var1.anInt2816 > 2 -1)) {
             var9 = 8;
             --var1.anInt2824;
           }
@@ -169,11 +169,11 @@ public final class Cursor {
             var9 = 6;
           }
 
-          if (~var1.anInt2816 < -3) {
+          if ((var1.anInt2816 > 3 -1)) {
             var9 = 8;
           }
 
-          if (~var1.anInt2824 < -1 && var1.anInt2816 > 1) {
+          if ((var1.anInt2824 > 1 -1) && var1.anInt2816 > 1) {
             --var1.anInt2824;
             var9 = 8;
           }

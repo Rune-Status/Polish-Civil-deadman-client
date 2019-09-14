@@ -1056,7 +1056,7 @@ public final class CollisionMap {
       int var7,
       int var8,
       int var9 ) {
-    if (~var5 < -2) {
+    if ((var5 > 2 -1)) {
         return this.method1487(var5, var6, var2, var9, var3, var8, var5, var4,
             (byte) -125) || this
             .method1494(var2, var8, var6, var7, true, var9, var4,

@@ -118,7 +118,7 @@ public final class TextureSampler33 extends AbstractTextureSampler {
         }
 
         ++FileCacheRequester.anInt1088;
-        if (~FileCacheRequester.anInt1088 < -5) {
+        if ((FileCacheRequester.anInt1088 > 5 -1)) {
           Light.anInt692 = 0;
           FileCacheRequester.anInt1088 = 0;
           return var1;

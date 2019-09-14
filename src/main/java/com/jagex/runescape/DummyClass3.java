@@ -332,7 +332,7 @@ public final class DummyClass3 {
           var58 = 255 & var10[var13][var14];
           if ((8 & var11[var3][var13][var14]) != 0) {
             var15 = 0;
-          } else if ((var11[1][var13][var14] & 2) == 2 && ~var3 < -1) {
+          } else if ((var11[1][var13][var14] & 2) == 2 && (var3 > 1 -1)) {
             var15 = var3 + -1;
           } else {
             var15 = var3;
@@ -620,7 +620,7 @@ public final class DummyClass3 {
               var85 = var44 + 1;
               var45[var44] = var50;
               var45[var85++] = var52;
-              if (~var79.length < -3) {
+              if ((var79.length > 3 -1)) {
                 var45[var85++] =
                   BufferData.method1734(var43, 0.0F, var40, var41, null, var2, var13, var4, var42,
                     (byte) -117, 0, var79[2], var39, var1, var14, 64, var0, 128);
@@ -641,7 +641,7 @@ public final class DummyClass3 {
               }
 
               var45[var85++] = var54;
-              if (~var84.length < -3) {
+              if ((var84.length > 3 -1)) {
                 var45[var85++] =
                   BufferData.method1734(var43, 0.0F, var40, var41, null, var2, var13, var4, var42,
                     (byte) -127, 0, var84[2], var39, var1, var14, 128, var0, 64);
@@ -741,9 +741,9 @@ public final class DummyClass3 {
           DummyClass47.method1311(var15, var6, var7, var8, var9);
         }
 
-        if (~AbstractDirectColorSprite.anInt3704 < -1) {
+        if ((AbstractDirectColorSprite.anInt3704 > 1 -1)) {
           int var10;
-          if (~ByteArrayNode.anInt3611 < -11) {
+          if ((ByteArrayNode.anInt3611 > 11 -1)) {
             var10 = (-ByteArrayNode.anInt3611 + 20) * 25;
           } else {
             var10 = 25 * ByteArrayNode.anInt3611;

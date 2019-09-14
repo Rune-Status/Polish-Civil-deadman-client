@@ -126,7 +126,7 @@ public abstract class Mobile extends SceneNode {
             ++this.anInt2816;
           }
 
-          for (int var8 = this.anInt2816; ~var8 < -1; --var8) {
+          for (int var8 = this.anInt2816; (var8 > 1 -1); --var8) {
             this.waypointsX[var8] = this.waypointsX[-1 + var8];
             this.waypointsY[var8] = this.waypointsY[var8 + -1];
             this.aByteArray2795[var8] = this.aByteArray2795[var8 - 1];
@@ -169,7 +169,7 @@ public abstract class Mobile extends SceneNode {
       }
 
       int var6;
-      for (var6 = this.anInt2816; ~var6 < -1; --var6) {
+      for (var6 = this.anInt2816; (var6 > 1 -1); --var6) {
         this.waypointsX[var6] = this.waypointsX[-1 + var6];
         this.waypointsY[var6] = this.waypointsY[-1 + var6];
         this.aByteArray2795[var6] = this.aByteArray2795[-1 + var6];
@@ -323,7 +323,7 @@ public abstract class Mobile extends SceneNode {
         int var9;
         if (this.anInt2827 != var4) {
           this.anInt2827 = var4;
-          if (~this.anInt2754 < -1 && this.anInt2787 < var4) {
+          if ((this.anInt2754 > 1 -1) && this.anInt2787 < var4) {
             var6 = this.anInt2754 * this.anInt2754 / (2 * var3.anInt387);
             var7 = -this.anInt2787 + var4;
             if (var6 <= var7) {
@@ -421,7 +421,7 @@ public abstract class Mobile extends SceneNode {
 
         if (var5 != this.anInt2766) {
           this.anInt2766 = var5;
-          if (~this.anInt2830 < -1 && this.anInt2834 < var5) {
+          if ((this.anInt2830 > 1 -1) && this.anInt2834 < var5) {
             var6 = this.anInt2830 * this.anInt2830 / (2 * var3.anInt403);
             var7 = -this.anInt2834 + var5;
             if (var6 > var7) {
@@ -477,7 +477,7 @@ public abstract class Mobile extends SceneNode {
             }
           }
         } else {
-          if (~this.anInt2830 < -1) {
+          if ((this.anInt2830 > 1 -1)) {
             if (~this.anInt2834 <= ~this.anInt2757) {
               this.aBoolean2783 = false;
             }

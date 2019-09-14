@@ -66,7 +66,7 @@ public final class TextureSampler17 extends AbstractTextureSampler {
           }
 
           this.anInt3189 += this.anInt3178;
-          if (~this.anInt3188 < -4097) {
+          if ((this.anInt3188 > 4097 -1)) {
             this.anInt3188 = 4096;
           }
 
@@ -82,7 +82,7 @@ public final class TextureSampler17 extends AbstractTextureSampler {
               this.anInt3180 += this.anInt3175; ~this.anInt3180 > -1; this.anInt3180 += 4096) {
           }
 
-          while (~this.anInt3180 < -4097) {
+          while ((this.anInt3180 > 4097 -1)) {
             this.anInt3180 -= 4096;
           }
 
@@ -99,7 +99,7 @@ public final class TextureSampler17 extends AbstractTextureSampler {
   private void method239(int var1, int var2, int var3, int var4) {
     int var6 = 32 / ((15 - var3) / 45);
       int var5 = var1 <= 2048 ? var1 * (4096 + var2) >> 12 : -(var1 * var2 >> 12) + var1 + var2;
-      if (~var5 < -1) {
+      if ((var5 > 1 -1)) {
         var4 *= 6;
         int var7 = -var5 + var1 + var1;
         int var9 = var4 >> 12;
@@ -177,7 +177,7 @@ public final class TextureSampler17 extends AbstractTextureSampler {
       }
 
       this.anInt3188 = (var6 - -var5) / 2;
-      if (~this.anInt3188 < -1 && this.anInt3188 < 4096) {
+      if ((this.anInt3188 > 1 -1) && this.anInt3188 < 4096) {
         this.anInt3189 =
           (var7 << 12) / (this.anInt3188 > 2048 ? 8192 - 2 * this.anInt3188 :
               this.anInt3188 * 2);

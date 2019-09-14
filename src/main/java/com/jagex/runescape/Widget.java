@@ -376,7 +376,7 @@ public final class Widget {
 
       int var3 = var2.readUnsignedByte();
       int var4;
-      if (~var3 < -1) {
+      if ((var3 > 1 -1)) {
         this.anIntArray307 = new int[var3];
         this.anIntArray275 = new int[var3];
 
@@ -390,7 +390,7 @@ public final class Widget {
       int var5;
       int var6;
       int var7;
-      if (~var4 < -1) {
+      if ((var4 > 1 -1)) {
         this.anIntArrayArray298 = new int[var4][];
 
         for (var5 = 0; var4 > var5; ++var5) {
@@ -464,7 +464,7 @@ public final class Widget {
 
         for (var10 = 0; var10 < 5; ++var10) {
           GameString var14 = var2.readString();
-          if (~var14.getLength() < -1) {
+          if ((var14.getLength() > 1 -1)) {
             this.aClass94Array173[var10] = var14;
             var5 |= 1 << 23 - -var10;
           }

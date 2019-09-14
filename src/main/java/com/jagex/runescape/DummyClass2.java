@@ -13,7 +13,7 @@ public class DummyClass2 {
     if (TextureSampler28.loginState != 0
           && TextureSampler28.loginState != 5) {
         try {
-          if (~(++VertexNormal.anInt820) < -2001) {
+          if (((++VertexNormal.anInt820) > 2001 -1)) {
             if (SomethingVolume15.gameSocket != null) {
               SomethingVolume15.gameSocket.destroy();
               SomethingVolume15.gameSocket = null;

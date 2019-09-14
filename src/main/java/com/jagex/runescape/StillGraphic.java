@@ -149,7 +149,7 @@ public final class StillGraphic extends SceneNode {
       if (GlRenderer.useOpenGlRenderer) {
         var8 = -334 + var2;
         if (var8 >= 0) {
-          if (~var8 < -101) {
+          if ((var8 > 101 -1)) {
             var8 = 100;
           }
         } else {

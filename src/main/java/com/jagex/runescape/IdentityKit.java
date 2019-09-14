@@ -240,7 +240,7 @@ public final class IdentityKit {
             int var16 = var2 + var12;
             int var15 = var1 + var13;
             int var14 = var6.readUnsignedByte() >> 2;
-            if (~var15 < -1 && var16 > 0 && var15 < 103 && var16 < 103) {
+            if ((var15 > 1 -1) && var16 > 0 && var15 < 103 && var16 < 103) {
               GameObjectConfig var17 = DummyClass11.method2207(4, var7);
               if (var14 != 22 || Keyboard.aBoolean1905 || var17.anInt1529 != 0
                   || ~var17.anInt1538 == -2 || var17.aBoolean1483) {

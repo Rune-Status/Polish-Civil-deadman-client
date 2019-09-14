@@ -40,7 +40,7 @@ public abstract class AbstractFrameRegulator {
   }
 
   public static void method1768(int var0, int var1, int var2) {
-    if (~Keyboard.anInt1908 < -1) {
+    if ((Keyboard.anInt1908 > 1 -1)) {
         DummyClass13.method2195(Keyboard.anInt1908, 0);
         Keyboard.anInt1908 = 0;
       }
@@ -66,12 +66,12 @@ public abstract class AbstractFrameRegulator {
             TriChromaticImageCache.aClass3_Sub28_Sub16_Sub2_1381.pixels[var6++] = var11;
           } else {
             int var12 = 18 + var10;
-            if (~var12 < -256) {
+            if ((var12 > 256 -1)) {
               var12 = 255;
             }
 
             int var13 = 256 - var10 - 18;
-            if (~var13 < -256) {
+            if ((var13 > 256 -1)) {
               var13 = 255;
             }
 
@@ -287,7 +287,7 @@ public abstract class AbstractFrameRegulator {
             var20 = var13.aShortArray706[var15];
             var21 = (var20 >> 8) + var16;
             var22 = -1 + (255 & var20) + var21;
-            if (~var22 < -104) {
+            if ((var22 > 104 -1)) {
               var22 = 103;
             }
 
@@ -425,7 +425,7 @@ public abstract class AbstractFrameRegulator {
             ++var15;
           }
 
-          if (~var14.anInt653 < -1 && var14.anInt655 > 0) {
+          if ((var14.anInt653 > 1 -1) && var14.anInt655 > 0) {
             var14.method1019();
             var13.aClass37_712 = var14;
           }

@@ -258,7 +258,7 @@ public final class TextureSampler13 extends AbstractTextureSampler {
               int var24 =
                 SceneNode.method1863(var22.anInt1480, var4, (byte) 126, var22.anInt1485, 7 & var17,
                   var21, 7 & var16) + var6;
-              if (~var23 < -1 && var24 > 0 && ~var23 > -104 && var24 < 103) {
+              if ((var23 > 1 -1) && var24 > 0 && ~var23 > -104 && var24 < 103) {
                 CollisionMap var25 = null;
                 if (!var7) {
                   int var26 = var1;

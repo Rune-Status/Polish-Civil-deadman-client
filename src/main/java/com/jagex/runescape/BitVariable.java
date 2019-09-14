@@ -107,7 +107,7 @@ public final class BitVariable {
         if (~(var0.bytes.length - var0.position) <= ~var3) {
           AbstractFileRequest.brightnessSetting = var0.readUnsignedByte();
           if (~AbstractFileRequest.brightnessSetting <= -2) {
-            if (~AbstractFileRequest.brightnessSetting < -5) {
+            if ((AbstractFileRequest.brightnessSetting > 5 -1)) {
               AbstractFileRequest.brightnessSetting = 4;
             }
           } else {
@@ -135,20 +135,20 @@ public final class BitVariable {
           DummyHashTable.aBoolean1685 = var0.readUnsignedByte() == 1;
           DummyClass35.aBoolean661 = ~var0.readUnsignedByte() == -2;
           Parameter.anInt3622 = var0.readUnsignedByte();
-          if (~Parameter.anInt3622 < -3) {
+          if ((Parameter.anInt3622 > 3 -1)) {
             Parameter.anInt3622 = 2;
           }
 
           GroundItemNode.anInt3671 = Parameter.anInt3622;
           TextureSampler17.aBoolean3184 = ~var0.readUnsignedByte() == -2;
           ClientScriptCall.anInt2453 = var0.readUnsignedByte();
-          if (~ClientScriptCall.anInt2453 < -128) {
+          if ((ClientScriptCall.anInt2453 > 128 -1)) {
             ClientScriptCall.anInt2453 = 127;
           }
 
           BZipDecompressorState.anInt120 = var0.readUnsignedByte();
           DummyClass28.anInt340 = var0.readUnsignedByte();
-          if (~DummyClass28.anInt340 < -128) {
+          if ((DummyClass28.anInt340 > 128 -1)) {
             DummyClass28.anInt340 = 127;
           }
 

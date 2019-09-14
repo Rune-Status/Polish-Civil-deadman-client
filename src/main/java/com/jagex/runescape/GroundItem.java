@@ -152,7 +152,7 @@ public final class GroundItem extends SceneNode {
 
               var15 = true;
               SceneGraphTile var24 = var4[var16][var9][var12];
-              if (var24 != null && ~var24.anInt2223 < -1) {
+              if (var24 != null && (var24.anInt2223 > 1 -1)) {
                 for (var18 = 0; var24.anInt2223 > var18; ++var18) {
                   SceneSomething var25 = var24.sceneGraphNodes[var18];
                   if (~var25.anInt495 != ~var25.anInt483 || ~var25.anInt481 != ~var25.anInt478) {

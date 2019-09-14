@@ -255,7 +255,7 @@ public abstract class AbstractObjectNodeWrapper {
             var9 = -var9;
           }
 
-          if (~var9 < -10) {
+          if ((var9 > 10 -1)) {
             var9 += 39;
           }
 

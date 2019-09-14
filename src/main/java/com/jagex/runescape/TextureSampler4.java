@@ -52,7 +52,7 @@ public final class TextureSampler4 extends AbstractTextureSampler {
       for (int var5 = 0; ~var5 > ~this.anInt3233; ++var5) {
         int var6;
         int var7;
-        if (~var5 < -1) {
+        if ((var5 > 1 -1)) {
           var6 = this.anInt3222;
           var7 = (FloorUnderlay.method1603((byte) 59, 4096, var2) + -2048) * this.anInt3219
               >> 12;

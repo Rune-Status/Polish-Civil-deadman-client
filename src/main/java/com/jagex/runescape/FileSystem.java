@@ -133,7 +133,7 @@ public final class FileSystem {
 
       int var14;
       int var15;
-      if (~(var7 - -var11) < -105) {
+      if (((var7 - -var11) > 105 -1)) {
         var15 = 1 + var7;
         var14 = var7;
       } else {

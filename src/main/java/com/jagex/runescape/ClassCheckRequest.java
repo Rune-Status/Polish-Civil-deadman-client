@@ -351,7 +351,7 @@ public final class ClassCheckRequest extends Node {
       }
 
       if (~var0 >= -244) {
-        if (~var0 < -218) {
+        if ((var0 > 218 -1)) {
           var2 >>= 3;
         } else if (var0 <= 192) {
           if (var0 > 179) {
@@ -445,7 +445,7 @@ public final class ClassCheckRequest extends Node {
               var3 = DummyClass28.anInt340 * (var4 + -var9) / var4;
             }
 
-            if (~var3 < -1) {
+            if ((var3 > 1 -1)) {
               SomethingMusic0 var12 = var11.method1812().method151(DummyClass32.aClass157_524);
               AudioStreamEncoder1 var13 = AudioStreamEncoder1.method437(var12, 100, var3);
               assert var13 != null;

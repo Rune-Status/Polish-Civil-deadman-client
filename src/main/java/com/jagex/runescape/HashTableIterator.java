@@ -24,7 +24,7 @@ public final class HashTableIterator {
 
   public Node getNext() {
     Node var2;
-      if (~this.anInt1132 < -1
+      if ((this.anInt1132 > 1 -1)
           && this.table.nodes[this.anInt1132 + -1] != this.iterator) {
         var2 = this.iterator;
         this.iterator = var2.nextNode;
@@ -67,7 +67,7 @@ public final class HashTableIterator {
       int var1 = DummyClass51.viewX;
       int var4 = -GroundItem.viewHeight + (SceneSomething2.windowHeight - var2);
       int var3 = -var1 + AreaSoundEffect.windowWidth - DummyClass30.viewWidth;
-      if (~var1 < var0 || ~var3 < -1 || var2 > 0 || ~var4 < -1) {
+      if (~var1 < var0 || (var3 > 1 -1) || var2 > 0 || (var4 > 1 -1)) {
         try {
           Component var5 = null;
           if (TextureSampler30.fullScreenFrame != null) {
@@ -89,7 +89,7 @@ public final class HashTableIterator {
 
           Graphics var11 = var5.getGraphics();
           var11.setColor(Color.black);
-          if (~var1 < -1) {
+          if ((var1 > 1 -1)) {
             var11.fillRect(var6, var7, var1, SceneSomething2.windowHeight);
           }
 
@@ -102,7 +102,7 @@ public final class HashTableIterator {
               SceneSomething2.windowHeight);
           }
 
-          if (~var4 < -1) {
+          if ((var4 > 1 -1)) {
             var11.fillRect(var6, -var4 + var7 + SceneSomething2.windowHeight,
               AreaSoundEffect.windowWidth, var4);
           }

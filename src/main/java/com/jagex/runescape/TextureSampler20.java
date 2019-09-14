@@ -203,11 +203,11 @@ public final class TextureSampler20 extends AbstractTextureSampler {
   }
 
   public static void method235(boolean var0) {
-    if (~DummyClass13.anInt2023 < -1) {
+    if ((DummyClass13.anInt2023 > 1 -1)) {
         --DummyClass13.anInt2023;
       }
 
-      if (~DummyClass36.updateTime < -2) {
+      if ((DummyClass36.updateTime > 2 -1)) {
         --DummyClass36.updateTime;
         Projectile.anInt2905 = TextureSampler23.anInt3213;
       }
@@ -247,7 +247,7 @@ public final class TextureSampler20 extends AbstractTextureSampler {
                   var6 = DisplayMode.aClass67_1443.anIntArray1020[var4];
                   if (~var5 > -1) {
                     var5 = 0;
-                  } else if (~var5 < -65535) {
+                  } else if ((var5 > 65535 -1)) {
                     var5 = '\ufffe';
                   }
 
@@ -515,7 +515,7 @@ public final class TextureSampler20 extends AbstractTextureSampler {
                             var20.rotationY = var16.anInt3597;
                             if (var20.anInt192 != -1) {
                               if (~var20.anInt184 >= -1) {
-                                if (~var20.anInt177 < -1) {
+                                if ((var20.anInt177 > 1 -1)) {
                                   var20.anInt164 =
                                       32 * var20.anInt164 / var20.anInt177;
                                 }
@@ -685,7 +685,7 @@ public final class TextureSampler20 extends AbstractTextureSampler {
                     -1 + TextureSampler25.amountContextActions, 0))
                     && TextureSampler25.amountContextActions > 2) {
                     DummyClass22.method1801((byte) -116);
-                  } else if (~TextureSampler25.amountContextActions < -1) {
+                  } else if ((TextureSampler25.amountContextActions > 1 -1)) {
                     TextureSampler9.method203(56);
                   }
 
@@ -740,7 +740,7 @@ public final class TextureSampler20 extends AbstractTextureSampler {
                             DummyClass18.method829(-1);
                           }
 
-                          if (~TextureSampler35.rights < -1
+                          if ((TextureSampler35.rights > 1 -1)
                             && GameObjectConfig.aBooleanArray1490[82]
                             && GameObjectConfig.aBooleanArray1490[81]
                             && PlayerVariable.mouseWheelOffset != 0) {
@@ -841,7 +841,7 @@ public final class TextureSampler20 extends AbstractTextureSampler {
                           }
 
                           if (DummyClass29.aClass11_439 == null) {
-                            if (~AbstractSomethingTexture.anInt1109 < -1) {
+                            if ((AbstractSomethingTexture.anInt1109 > 1 -1)) {
                               --AbstractSomethingTexture.anInt1109;
                             }
                           } else if (AbstractSomethingTexture.anInt1109
@@ -866,7 +866,7 @@ public final class TextureSampler20 extends AbstractTextureSampler {
 
                           var5 = ProceduralTexture.method1406((byte) -43);
                           var6 = TextureSampler32.method301((byte) -119);
-                          if (~var5 < -15001 && ~var6 < -15001) {
+                          if ((var5 > 15001 -1) && (var6 > 15001 -1)) {
                             DummyClass13.anInt2023 = 250;
                             DummyClass30.method940(112, 14500);
                             ++ObjectCache.anInt1330;
@@ -904,7 +904,7 @@ public final class TextureSampler20 extends AbstractTextureSampler {
                             }
                           }
 
-                          if (~Light.anInt716 < -501) {
+                          if ((Light.anInt716 > 501 -1)) {
                             Light.anInt716 = 0;
                             var22 = (int) (8.0D * Math.random());
                             if (~(1 & var22) == -2) {
@@ -944,7 +944,7 @@ public final class TextureSampler20 extends AbstractTextureSampler {
                             AbstractMouseWheel.anInt1901 = -2;
                           }
 
-                          if (~StringNode.anInt2589 < -41) {
+                          if ((StringNode.anInt2589 > 41 -1)) {
                             DummyHashTable.anInt1682 = -1;
                           }
 
@@ -956,7 +956,7 @@ public final class TextureSampler20 extends AbstractTextureSampler {
                             DummyOutputStream.anInt48 = -2;
                           }
 
-                          if (~TextureSampler18.anInt4032 < -51) {
+                          if ((TextureSampler18.anInt4032 > 51 -1)) {
                             ++SomethingQuickChat.anInt3569;
                             TextureSampler12.secureBuffer.writePacket(93);
                           }
@@ -968,7 +968,7 @@ public final class TextureSampler20 extends AbstractTextureSampler {
 
                           try {
                             if (SomethingVolume15.gameSocket != null
-                              && ~TextureSampler12.secureBuffer.position < -1) {
+                              && (TextureSampler12.secureBuffer.position > 1 -1)) {
                               SomethingVolume15.gameSocket.write(
                                 TextureSampler12.secureBuffer.bytes, 0,
                                 TextureSampler12.secureBuffer.position);

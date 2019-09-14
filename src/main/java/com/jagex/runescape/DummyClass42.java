@@ -64,7 +64,7 @@ public final class DummyClass42 {
       var12 /= 6.0D;
       if (var20 < 0) {
         var20 = 0;
-      } else if (~var20 < -256) {
+      } else if ((var20 > 256 -1)) {
         var20 = 255;
       }
 
@@ -79,9 +79,9 @@ public final class DummyClass42 {
 
       if (~var20 >= -244) {
         if (~var20 >= -218) {
-          if (~var20 < -193) {
+          if ((var20 > 193 -1)) {
             var19 >>= 2;
-          } else if (~var20 < -180) {
+          } else if ((var20 > 180 -1)) {
             var19 >>= 1;
           }
         } else {

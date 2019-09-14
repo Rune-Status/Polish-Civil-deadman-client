@@ -472,7 +472,7 @@ public class Buffer extends Node {
       if (var1 < 4) {
         return -83;
       } else {
-        if (~var2 < -32768) {
+        if ((var2 > 32768 -1)) {
           var2 -= 65536;
         }
 
@@ -633,8 +633,8 @@ public class Buffer extends Node {
         for (int var9 = 0; var9 < 4; ++var9) {
           for (var10 = 0; ~var10 > -65; ++var10) {
             for (var11 = 0; ~var11 > -65; ++var11) {
-              if (~(var5 - -var10) < -1 && var10 + var5 < 103 &&
-                  ~(var3 + var11) < -1 && ~(var11 + var3) > -104) {
+              if (((var5 - -var10) > 1 -1) && var10 + var5 < 103 &&
+                  ((var3 + var11) > 1 -1) && ~(var11 + var3) > -104) {
                 collisionMaps[var9]
                     .anIntArrayArray1304[var10 + var5][var3 - -var11] =
                     ClientScript.bitAnd(
@@ -742,7 +742,7 @@ public class Buffer extends Node {
                 }
               }
             } else {
-              if (var13 == 2 && ~var12 < -1) {
+              if (var13 == 2 && (var12 > 1 -1)) {
                 var15 = var5 + 64;
                 var24 = var3;
                 var17 = var3 + 64;
@@ -992,7 +992,7 @@ public class Buffer extends Node {
               / 1024L);
           int var13 = 16776960;
           var10 -= 15;
-          if (~var12 < -65537) {
+          if ((var12 > 65537 -1)) {
             var13 = 16711680;
           }
 
@@ -1037,7 +1037,7 @@ public class Buffer extends Node {
         Buffer.method746((byte) -33);
       }
 
-      return ~DummyClass8.aClass94Array4016[var0].getLength() < -1
+      return (DummyClass8.aClass94Array4016[var0].getLength() > 1 -1)
           ? RenderAnimation.concat(
           new GameString[]{GroundItem.aClass94Array2935[var0],
               DummyInputStream.aClass94_43,

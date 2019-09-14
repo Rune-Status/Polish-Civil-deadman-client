@@ -34,7 +34,7 @@ public abstract class SceneNode {
     if (SceneSomething2.aDouble1050 != var0) {
         for (int var3 = 0; var3 < 256; ++var3) {
           int var4 = (int) (255.0D * Math.pow(var3 / 255.0D, var0));
-          GameBuffer.anIntArray3804[var3] = ~var4 < -256 ? 255 : var4;
+          GameBuffer.anIntArray3804[var3] = (var4 > 256 -1) ? 255 : var4;
         }
 
         SceneSomething2.aDouble1050 = var0;
@@ -68,7 +68,7 @@ public abstract class SceneNode {
         replaceCanvas = true;
       }
 
-      if (SignLink.formattedOsName.startsWith("mac") && ~windowMode < -1) {
+      if (SignLink.formattedOsName.startsWith("mac") && (windowMode > 1 -1)) {
         replaceCanvas = true;
       }
 
@@ -77,11 +77,11 @@ public abstract class SceneNode {
       }
 
       boolean var6 = false;
-      if (currentWindowMode > 0 != ~windowMode < -1) {
+      if (currentWindowMode > 0 != (windowMode > 1 -1)) {
         var6 = true;
       }
 
-      if (replaceCanvas && ~windowMode < -1) {
+      if (replaceCanvas && (windowMode > 1 -1)) {
         var6 = true;
       }
 
@@ -175,7 +175,7 @@ public abstract class SceneNode {
           for (var15 = var5; var4 >= var15; ++var15) {
             DummyClass35.anIntArrayArray663[var15][var10] = var1;
             var13 += var12;
-            if (~var13 < -1) {
+            if ((var13 > 1 -1)) {
               var10 += var14;
               var13 -= var11;
             }

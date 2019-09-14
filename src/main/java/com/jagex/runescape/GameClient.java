@@ -282,7 +282,7 @@ public final class GameClient extends GameStub {
       }
 
       DummyClass8.anInt4026 = DummyClass43.ondemandRequester.anInt1011;
-      if (~TextureSampler21.anInt3068 < -1) {
+      if ((TextureSampler21.anInt3068 > 1 -1)) {
         --TextureSampler21.anInt3068;
       } else {
         try {
@@ -320,8 +320,8 @@ public final class GameClient extends GameStub {
           if (DummyClass18.anInt80 == 3) {
             if (~DummyClass15.state != -1 && ~DummyClass15.state != -6
                 && DummyInputStream.updateSocket.available() <= 0) {
-              if (~(Time.getCurrentTimeMillis()
-                  + -TextureSampler13.lastWrittenTime) < -30001L) {
+              if (((Time.getCurrentTimeMillis()
+                  + -TextureSampler13.lastWrittenTime) > 30001L -1)) {
                 this.setUpdateError(1001);
                 return;
               }

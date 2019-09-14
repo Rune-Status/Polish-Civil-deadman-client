@@ -180,7 +180,7 @@ public final class OndemandFileRequest extends AbstractFileRequest {
           }
         }
 
-        if (var1 == 0 && ~var3 < -1) {
+        if (var1 == 0 && (var3 > 1 -1)) {
           GlRenderer.method1834(GameCanvas.INSTANCE);
         }
 
@@ -237,7 +237,7 @@ public final class OndemandFileRequest extends AbstractFileRequest {
         if (!GlRenderer.useOpenGlRenderer && var1 > 0) {
           OndemandFileRequest.setWindowMode(true, 0, true, var3, false, -1, -1);
         } else {
-          if (~var1 < -1 && ~var3 == -1) {
+          if ((var1 > 1 -1) && ~var3 == -1) {
             DummyClass1.gameThread.setPriority(5);
             Something3d.viewImageProducer = null;
             SoftwareModel.method1935();

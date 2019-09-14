@@ -71,7 +71,7 @@ public final class DummyClass31 {
 
         int var17;
         int var16;
-        if (~(var13 + var9) < -105) {
+        if (((var13 + var9) > 105 -1)) {
           var16 = var9;
           var17 = var9 - -1;
         } else {
@@ -679,7 +679,7 @@ public final class DummyClass31 {
                   int var29 = 15;
                   if (var27 instanceof AbstractModel) {
                     var29 = ((AbstractModel) var27).method1888() / 4;
-                    if (~var29 < -31) {
+                    if ((var29 > 31 -1)) {
                       var29 = 30;
                     }
                   }

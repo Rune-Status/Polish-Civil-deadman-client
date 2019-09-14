@@ -401,7 +401,7 @@ public final class AudioStreamEncoder4 extends AudioStreamEncoder {
           var5 = 127 & var2 >> 8;
           var4 = var2 & 15;
           var6 = 127 & var2 >> 16;
-          if (~var6 < -1) {
+          if ((var6 > 1 -1)) {
             this.method486(var6, var4, 71, var5);
           } else {
             this.method493((byte) -122, var5, 64, var4);
@@ -661,8 +661,8 @@ public final class AudioStreamEncoder4 extends AudioStreamEncoder {
           ((var3.anInt2520 - 60 << 8) + (var3.anInt2502 * var3.anInt2522
             >> 12)) * 5.086263020833333E-6D;
         boolean var8 = false;
-        if (~var7.anInt2078 < -1) {
-          if (~var7.anInt2063 < -1) {
+        if ((var7.anInt2078 > 1 -1)) {
+          if ((var7.anInt2063 > 1 -1)) {
             var3.anInt2523 +=
               (int) (Math.pow(2.0D, var9 * var7.anInt2063) * 128.0D + 0.5D);
           } else {
@@ -696,7 +696,7 @@ public final class AudioStreamEncoder4 extends AudioStreamEncoder {
         if (~var3.anInt2506 <= -1 && var7.aByteArray2076 != null && ~(1
             & this.anIntArray3518[var3.anInt2514]) == -1 && (var3.anInt2517 < 0
           || this.aClass3_Sub22ArrayArray3513[var3.anInt2514][var3.anInt2517] != var3)) {
-          if (~var7.anInt2071 < -1) {
+          if ((var7.anInt2071 > 1 -1)) {
             var3.anInt2506 +=
               (int) (Math.pow(2.0D, var7.anInt2071 * var9) * 128.0D + 0.5D);
           } else {
@@ -730,7 +730,7 @@ public final class AudioStreamEncoder4 extends AudioStreamEncoder {
           var3.method401(221);
           if (var3.anInt2506 >= 0) {
             var3.unlinkNode();
-            if (~var3.anInt2517 < -1
+            if ((var3.anInt2517 > 1 -1)
               && this.aClass3_Sub22ArrayArray3513[var3.anInt2514][var3.anInt2517] == var3) {
               this.aClass3_Sub22ArrayArray3513[var3.anInt2514][var3.anInt2517] = null;
             }
@@ -873,8 +873,8 @@ public final class AudioStreamEncoder4 extends AudioStreamEncoder {
       var3 += this.anIntArray3504[var2.anInt2514] * (-8192 + this.anIntArray3499[var2.anInt2514])
         >> 12;
       int var5;
-      if (~var4.anInt2077 < -1 && (~var4.anInt2066 < -1
-        || ~this.anIntArray3502[var2.anInt2514] < -1)) {
+      if ((var4.anInt2077 > 1 -1) && ((var4.anInt2066 > 1 -1)
+        || (this.anIntArray3502[var2.anInt2514] > 1 -1))) {
         var5 = var4.anInt2066 << 2;
         int var6 = var4.anInt2069 << 1;
         if (var6 > var2.anInt2515) {
@@ -967,7 +967,7 @@ public final class AudioStreamEncoder4 extends AudioStreamEncoder {
       } else {
         if (~var1.anInt2506 <= -1) {
           var1.unlinkNode();
-          if (~var1.anInt2517 < -1
+          if ((var1.anInt2517 > 1 -1)
             && this.aClass3_Sub22ArrayArray3513[var1.anInt2514][var1.anInt2517] == var1) {
             this.aClass3_Sub22ArrayArray3513[var1.anInt2514][var1.anInt2517] = null;
           }
@@ -1128,7 +1128,7 @@ public final class AudioStreamEncoder4 extends AudioStreamEncoder {
             if (~var2 <= ~var7 && ~var8 >= ~var0 && 32 + var7 > var2 && (var8 + 32) > var0) {
               DummyClass54.aClass11_1402 = var3;
               StillGraphic.anInt2701 = var15;
-              if (~var3.anIntArray254[var15] < -1) {
+              if ((var3.anIntArray254[var15] > 1 -1)) {
                 WidgetAccess var9 = GameClient.method44(var3);
                 ItemConfig var10 =
                   DummyClass35.getItemConfig(var3.anIntArray254[var15] + -1, (byte) 69);

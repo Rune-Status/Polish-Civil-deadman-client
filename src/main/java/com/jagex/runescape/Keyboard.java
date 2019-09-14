@@ -123,8 +123,8 @@ public final class Keyboard implements KeyListener, FocusListener {
         int var1 = TextureCache.localPlayer.anInt2819 + TextureSampler19.anInt3216;
         int var2 = TextureCache.localPlayer.anInt2829 - -DummyInputStream.anInt42;
         if (~(-var1 + TextureSampler20.anInt3155) > 499
-          || ~(-var1 + TextureSampler20.anInt3155) < -501 || ~(FileTable.anInt942 + -var2) > 499
-          || ~(-var2 + FileTable.anInt942) < -501) {
+          || ((-var1 + TextureSampler20.anInt3155) > 501 -1) || ~(FileTable.anInt942 + -var2) > 499
+          || ((-var2 + FileTable.anInt942) > 501 -1)) {
           TextureSampler20.anInt3155 = var1;
           FileTable.anInt942 = var2;
         }

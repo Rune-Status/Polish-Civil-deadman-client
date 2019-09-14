@@ -113,16 +113,16 @@ public final class SomethingVolume15 extends Node {
         }
 
         var16 = var2.readUnsignedByte();
-        if (~var16 < -1) {
+        if ((var16 > 1 -1)) {
           var41.aByteArray2076 = new byte[var16 * 2 + 2];
           var41.aByteArray2076[1] = 64;
         }
       }
 
       var14 = var2.readUnsignedByte();
-      byte[] var40 = ~var14 < -1 ? new byte[var14 * 2] : null;
+      byte[] var40 = (var14 > 1 -1) ? new byte[var14 * 2] : null;
       var14 = var2.readUnsignedByte();
-      byte[] var39 = ~var14 < -1 ? new byte[var14 * 2] : null;
+      byte[] var39 = (var14 > 1 -1) ? new byte[var14 * 2] : null;
 
       int var17;
       for (var17 = 0; ~var2.bytes[var17 + var2.position] != -1; ++var17) {
@@ -397,7 +397,7 @@ public final class SomethingVolume15 extends Node {
               var35 = 0;
             }
 
-            if (~var35 < -129) {
+            if ((var35 > 129 -1)) {
               var35 = 128;
             }
 
@@ -437,7 +437,7 @@ public final class SomethingVolume15 extends Node {
           var28.anInt2071 = var2.readUnsignedByte();
         }
 
-        if (~var28.anInt2078 < -1) {
+        if ((var28.anInt2078 > 1 -1)) {
           var28.anInt2063 = var2.readUnsignedByte();
         }
       }
@@ -455,7 +455,7 @@ public final class SomethingVolume15 extends Node {
 
       for (var27 = 0; var27 < var12; ++var27) {
         var28 = var38[var27];
-        if (~var28.anInt2066 < -1) {
+        if ((var28.anInt2066 > 1 -1)) {
           var28.anInt2069 = var2.readUnsignedByte();
         }
       }

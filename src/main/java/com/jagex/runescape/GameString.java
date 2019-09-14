@@ -90,7 +90,7 @@ public final class GameString implements UnusedInterface1 {
   }
 
   public int method1530(byte var1, int var2) {
-    if (var2 < 1 || ~var2 < -37) {
+    if (var2 < 1 || (var2 > 37 -1)) {
       var2 = 10;
     }
 
@@ -117,7 +117,7 @@ public final class GameString implements UnusedInterface1 {
       } else if (var8 >= 65 && ~var8 >= -91) {
         var8 -= 55;
       } else {
-        if (~var8 > -98 || ~var8 < -123) {
+        if (~var8 > -98 || (var8 > 123 -1)) {
           throw new NumberFormatException();
         }
 
@@ -239,7 +239,7 @@ public final class GameString implements UnusedInterface1 {
         byte var5 = this.bytes[var4];
         if ((~var5 > -98 || var5 > 122) &&
             (~var5 > 31 || ~var5 < 1 || var5 == -9)) {
-          if ((var5 < 65 || ~var5 < -91) &&
+          if ((var5 < 65 || (var5 > 91 -1)) &&
               (var5 < -64 || var5 > -34 || ~var5 == 40)) {
             if (~var5 != -47 && var5 != 33 && var5 != 63) {
               if (var5 == 32) {
@@ -440,7 +440,7 @@ public final class GameString implements UnusedInterface1 {
   }
 
   public GameString method1548(boolean var1, int var2) {
-    if (~var2 < -1 && ~var2 >= -256) {
+    if ((var2 > 1 -1) && ~var2 >= -256) {
       GameString var3 = new GameString();
       var3.bytes = new byte[1 + this.length];
       var3.length = this.length + 1;
@@ -681,7 +681,7 @@ public final class GameString implements UnusedInterface1 {
       } else if (~var7 <= -66 && ~var7 >= -91) {
         var7 -= 55;
       } else {
-        if (var7 < 97 || ~var7 < -123) {
+        if (var7 < 97 || (var7 > 123 -1)) {
           return false;
         }
 
@@ -1061,7 +1061,7 @@ public final class GameString implements UnusedInterface1 {
       var13 = DummyClass11.method2207(4, var12);
       if (~var13.anInt1516 == 0) {
         var14 = var2;
-        if (~var8 < -1L) {
+        if ((var8 > 1L -1)) {
           var14 = var4;
         }
 
@@ -1157,7 +1157,7 @@ public final class GameString implements UnusedInterface1 {
         }
       } else if (var11 == 9) {
         var14 = 15658734;
-        if (~var8 < -1L) {
+        if ((var8 > 1L -1)) {
           var14 = 15597568;
         }
 
@@ -1254,7 +1254,7 @@ public final class GameString implements UnusedInterface1 {
       boolean var4, int var5,
       int var6, boolean var7) {
     ItemConfig var8 = DummyClass35.getItemConfig(var3, (byte) 106);
-    if (~var6 < -2 && var8.anIntArray804 != null) {
+    if ((var6 > 2 -1) && var8.anIntArray804 != null) {
       int var9 = -1;
 
       for (int var10 = 0; ~var10 > -11; ++var10) {

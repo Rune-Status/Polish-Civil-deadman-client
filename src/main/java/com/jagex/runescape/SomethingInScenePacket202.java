@@ -271,7 +271,7 @@ public final class SomethingInScenePacket202 extends Node {
               var7 = 0;
             }
 
-            if (~var9 < -105) {
+            if ((var9 > 105 -1)) {
               var9 = 104;
             }
 
@@ -298,7 +298,7 @@ public final class SomethingInScenePacket202 extends Node {
 
           if (var4 != null && var4.hasConfiguration((byte) 17)) {
             var4.aBoolean3968 =
-              (Widget.aBoolean236 && ~DummyClass13.anInt2022 < -201 ||
+              (Widget.aBoolean236 && (DummyClass13.anInt2022 > 201 -1) ||
                   DummyClass13.anInt2022 > 50)
                 && !var0 && var4.anInt2764 == Objects
                   .requireNonNull(var4.getRenderAnimationId(false)).anInt368;
@@ -312,7 +312,7 @@ public final class SomethingInScenePacket202 extends Node {
                   continue;
                 }
 
-                if (~DummyClass9.anIntArrayArray4010[var8][var9] < -2) {
+                if ((DummyClass9.anIntArrayArray4010[var8][var9] > 2 -1)) {
                   --DummyClass9.anIntArrayArray4010[var8][var9];
                   continue;
                 }

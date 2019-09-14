@@ -110,7 +110,7 @@ public final class DummyClass45 {
       if (GlRenderer.useOpenGlRenderer) {
         int var6 = var3 + -334;
         if (var6 >= 0) {
-          if (~var6 < -101) {
+          if ((var6 > 101 -1)) {
             var6 = 100;
           }
         } else {

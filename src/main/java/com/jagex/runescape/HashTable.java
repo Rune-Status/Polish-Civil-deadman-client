@@ -63,7 +63,7 @@ public final class HashTable {
 
   public Node getNext(int var1 ) {
     Node var2;
-      if (~this.iteratorBucketId < -1 && this.aClass3_1713 != this.nodes[
+      if ((this.iteratorBucketId > 1 -1) && this.aClass3_1713 != this.nodes[
           this.iteratorBucketId
         - 1]) {
         var2 = this.aClass3_1713;

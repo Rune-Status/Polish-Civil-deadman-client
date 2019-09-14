@@ -804,7 +804,7 @@ public final class PlayerAppearance {
             }
           }
 
-          if (~var14 < -1 && DummyClass51.anIntArrayArray1160[var13][-1
+          if ((var14 > 1 -1) && DummyClass51.anIntArrayArray1160[var13][-1
               + var14] == 0
               && (19661070 & var18[var13][-1 + var14]) == 0 && (19661187
               & var18[-1 + var5
@@ -856,7 +856,7 @@ public final class PlayerAppearance {
             }
           }
 
-          if (var13 > 0 && ~var14 < -1
+          if (var13 > 0 && (var14 > 1 -1)
               && ~DummyClass51.anIntArrayArray1160[var13 + -1][var14
               + -1] == -1
               && ~(var18[var13 + -1][-1 + var5 + -1 + var14] & 19661112) == -1
@@ -887,7 +887,7 @@ public final class PlayerAppearance {
             }
           }
 
-          if (var13 < 102 && ~var14 < -1
+          if (var13 < 102 && (var14 > 1 -1)
               && ~DummyClass51.anIntArrayArray1160[1 + var13][-1
               + var14] == -1 && ~(19661070 & var18[1 + var13][-1 + var14]) == -1
               && (var18[var5 + var13][-1 + var14] & 19661187) == 0
@@ -916,7 +916,7 @@ public final class PlayerAppearance {
             }
           }
 
-          if (~var13 < -1 && var14 < 102
+          if ((var13 > 1 -1) && var14 < 102
               && ~DummyClass51.anIntArrayArray1160[-1 + var13][
               var14 - -1] == -1 && (19661070 & var18[var13 - 1][1 + var14]) == 0
               && (19661112 & var18[-1 + var13][var14 + var5]) == 0 && (

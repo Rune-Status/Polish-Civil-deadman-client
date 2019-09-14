@@ -75,11 +75,11 @@ public final class ProceduralTexture {
 
         var9 = var7.method159(4);
         int var10 = var7.method155((byte) 19);
-        if (~var9 < -1) {
+        if ((var9 > 1 -1)) {
           this.anIntArray1144[var3++] = var9;
         }
 
-        if (~var10 < -1) {
+        if ((var10 > 1 -1)) {
           this.anIntArray1149[var4++] = var10;
         }
 
@@ -167,7 +167,7 @@ public final class ProceduralTexture {
             var21 = 0;
           }
 
-          if (~var22 < -256) {
+          if ((var22 > 256 -1)) {
             var22 = 255;
           }
 
@@ -250,7 +250,7 @@ public final class ProceduralTexture {
             }
 
             int var18 = var13[var16] >> 4;
-            if (~var18 < -256) {
+            if ((var18 > 256 -1)) {
               var18 = 255;
             }
 
