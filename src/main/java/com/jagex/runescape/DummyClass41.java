@@ -96,7 +96,7 @@ public final class DummyClass41 {
       int var9 = var8.indexOf(40);
       int var10 = var8.indexOf(41, 1 + var9);
       String var11;
-      if (~var9 == 0) {
+      if ((var9 == -1)) {
         var11 = var8;
       } else {
         var11 = var8.substring(0, var9);

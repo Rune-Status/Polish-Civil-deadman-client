@@ -98,7 +98,7 @@ public final class NpcConfiguration {
 
   public NpcConfiguration method1471(byte var1 ) {
     int var2 = -1;
-      if (~this.anInt1257 == 0) {
+      if ((this.anInt1257 == -1)) {
         if (this.anInt1295 != -1) {
           var2 = DummyClass5.anIntArray2985[this.anInt1295];
         }
@@ -113,7 +113,7 @@ public final class NpcConfiguration {
         return SubNode.getNpcConfiguration(this.anIntArray1292[var2]);
       } else {
         var3 = this.anIntArray1292[-1 + this.anIntArray1292.length];
-        return ~var3 == 0 ? null : SubNode.getNpcConfiguration(var3);
+        return (var3 == -1) ? null : SubNode.getNpcConfiguration(var3);
       }
   }
 

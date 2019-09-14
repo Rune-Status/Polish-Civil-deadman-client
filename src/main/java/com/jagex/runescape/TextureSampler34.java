@@ -322,7 +322,7 @@ public final class TextureSampler34 extends AbstractTextureSampler {
       int var1;
       for (var1 = -1; DummyClass13.anInt2022 > var1; ++var1) {
         int var3;
-        if (~var1 == 0) {
+        if ((var1 == -1)) {
           var3 = 2047;
         } else {
           var3 = DummyClass42.anIntArray887[var1];

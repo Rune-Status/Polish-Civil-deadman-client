@@ -67,7 +67,7 @@ public final class DummyClass18 {
       if (available == 0) {
         return false;
       }
-      if (~GameString.packetId == 0) {
+      if ((GameString.packetId == -1)) {
         SomethingVolume15.gameSocket.read(SpotAnimationConfig.gameBuffer.bytes, 0, 1);
         SpotAnimationConfig.gameBuffer.position = 0;
         GameString.packetId = SpotAnimationConfig.gameBuffer.readPacketId();

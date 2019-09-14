@@ -102,7 +102,7 @@ public final class TextureSampler26 extends AbstractTextureSampler {
                 DummyClass10.UL_PREFIX, SomethingScene.toString(var7), TextureSampler31.UNDERSCORE,
                 SomethingScene.toString(var8)
               }));
-            if (~TextureSampler5.anIntArray3290[var11] == 0) {
+            if ((TextureSampler5.anIntArray3290[var11] == -1)) {
               GameClient.mapFileIds[var11] = -1;
               DummyClass55.landscapeFileIds[var11] = -1;
               TextureSampler17.updatedMapIds[var11] = -1;

@@ -165,7 +165,7 @@ public final class GameObjectConfig {
         return DummyClass11.method2207(4, this.anIntArray1524[var2]);
       } else {
         int var3 = this.anIntArray1524[-1 + this.anIntArray1524.length];
-        return ~var3 == 0 ? null : DummyClass11.method2207(4, var3);
+        return (var3 == -1) ? null : DummyClass11.method2207(4, var3);
       }
   }
 
@@ -227,7 +227,7 @@ public final class GameObjectConfig {
           }
         }
 
-        if (~var6 == 0) {
+        if ((var6 == -1)) {
           return null;
         }
 
@@ -750,7 +750,7 @@ public final class GameObjectConfig {
           }
         }
 
-        if (~var8 == 0) {
+        if ((var8 == -1)) {
           return null;
         }
 

@@ -129,7 +129,7 @@ public final class TextureSampler20 extends AbstractTextureSampler {
             }
           }
 
-          if (~var0 == 0 && (DummyClass45.anInt991 != -1)) {
+          if ((var0 == -1) && (DummyClass45.anInt991 != -1)) {
             DummyClass35.signLink.method1434(null, 10000, -1, GameCanvas.INSTANCE, new Point(),
               -1);
             DummyClass45.anInt991 = -1;
@@ -261,7 +261,7 @@ public final class TextureSampler20 extends AbstractTextureSampler {
 
                   boolean var7 = false;
                   if (DisplayMode.aClass67_1443.anIntArray1019[var4] == -1
-                    && ~DisplayMode.aClass67_1443.anIntArray1020[var4] == 0) {
+                    && (DisplayMode.aClass67_1443.anIntArray1020[var4] == -1)) {
                     var7 = true;
                     var5 = -1;
                     var6 = -1;
@@ -487,7 +487,7 @@ public final class TextureSampler20 extends AbstractTextureSampler {
                       var20 = EnumStringFetcher.getWidget((byte) 117, var4);
                       assert var20 != null;
                       if ((var20.anInt305 != var16.anInt3598)
-                          || ~var16.anInt3598 == 0) {
+                          || (var16.anInt3598 == -1)) {
                         var20.anInt260 = 1;
                         var20.anInt267 = 0;
                         var20.anInt305 = var16.anInt3598;

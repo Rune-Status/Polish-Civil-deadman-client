@@ -187,7 +187,7 @@ public final class HashTable {
         if ((var5 == 3 -1)) {
           var3.anInt2773 = 0;
         }
-      } else if (~var1 == 0 || var3.animationId == -1
+      } else if ((var1 == -1) || var3.animationId == -1
         || GameClient.method45(var1, (byte) -20).anInt1857 >= GameClient.method45(var3.animationId,
         (byte) -20).anInt1857) {
         var3.anInt2760 = 0;

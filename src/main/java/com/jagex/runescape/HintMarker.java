@@ -88,7 +88,7 @@ public final class HintMarker {
                       GameObjectConfig var3 = DummyClass11.method2207(4, var2);
                       if (var3.anIntArray1524 != null) {
                         var3 = var3.method1685(0);
-                        if (var3 == null || ~var3.anInt1482 == 0) {
+                        if (var3 == null || (var3.anInt1482 == -1)) {
                           continue;
                         }
                       }

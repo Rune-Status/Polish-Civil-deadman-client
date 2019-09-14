@@ -140,7 +140,7 @@ public final class ItemConfig {
         this.method1113(41, null);
       }
 
-      if (~var3 == 0) {
+      if ((var3 == -1)) {
         return true;
       } else {
         boolean var5 = true;
@@ -199,7 +199,7 @@ public final class ItemConfig {
         var4 = this.anInt794;
       }
 
-      if (~var3 == 0) {
+      if ((var3 == -1)) {
         return true;
       } else {
         boolean var7 = true;
@@ -646,7 +646,7 @@ public final class ItemConfig {
         var4 = this.anInt794;
       }
 
-      if (~var3 == 0) {
+      if ((var3 == -1)) {
         return null;
       } else {
         Model var6 = Model.getModel(StringNode.aClass153_2581, var3, 0);
@@ -1121,7 +1121,7 @@ public final class ItemConfig {
           int k6 = GroundItem.anIntArray2929[k];
           int j44 = GroundItem.anIntArray2929[k - -1];
           Widget class11_19 = AbstractDirectColorSprite.method638((byte) -19, k6, j44);
-          if (class11_19 == null || ~j44 == 0) {
+          if (class11_19 == null || (j44 == -1)) {
             GroundItem.anIntArray2929[k++] = 0;
           } else {
             GroundItem.anIntArray2929[k++] = 1;
@@ -1181,7 +1181,7 @@ public final class ItemConfig {
             class11_2.aByte273 = (byte) k44;
             DummyClass29.method909(109, class11_2);
             TextureSampler24.method225(14, class11_2);
-            if (~class11_2.anInt191 == 0) {
+            if ((class11_2.anInt191 == -1)) {
               FloorOverlay.method2280(2714, class11_2.anInt279);
             }
             continue;
@@ -1797,7 +1797,7 @@ public final class ItemConfig {
                           int l49 = GroundItem.anIntArray2929[k - -1];
                           int l68 = GroundItem.anIntArray2929[k + 2];
                           int i13 = GroundItem.anIntArray2929[k];
-                          if (~l49 == 0) {
+                          if ((l49 == -1)) {
                             throw new RuntimeException("C3409-2");
                           }
                           ClientScriptEnum class3_sub28_sub13_3 =
@@ -3113,7 +3113,7 @@ public final class ItemConfig {
                                   int j30 = MouseRecorder.method1258((byte) -53);
                                   int k70 = 0;
                                   GameString class94_51;
-                                  if (~j30 == 0) {
+                                  if ((j30 == -1)) {
                                     class94_51 = AreaSoundEffect.aClass94_2331;
                                   } else {
                                     class94_51 = DummyClass25.aClass131_1624.aClass94Array1721[j30];
@@ -3130,7 +3130,7 @@ public final class ItemConfig {
                                   int i71 = 0;
                                   int k30 = TextureSampler23.method251(-1);
                                   GameString class94_52;
-                                  if (~k30 == 0) {
+                                  if ((k30 == -1)) {
                                     class94_52 = AreaSoundEffect.aClass94_2331;
                                   } else {
                                     class94_52 = DummyClass25.aClass131_1624.aClass94Array1721[k30];
@@ -4002,7 +4002,7 @@ public final class ItemConfig {
                                           GroundItem.anIntArray2929[k++] = 1;
                                         } else {
                                           GroundItem.anIntArray2929[k++] =
-                                            ~BufferData.method1735(29984) == 0 ? 0 : 1;
+                                            (BufferData.method1735(29984) == -1) ? 0 : 1;
                                         }
                                         continue;
                                       }
@@ -4562,7 +4562,7 @@ public final class ItemConfig {
                       if (j1 == 4112) {
                         GameString class94_38 = Node.aClass94Array75[--l];
                         int k63 = GroundItem.anIntArray2929[--k];
-                        if (~k63 == 0) {
+                        if ((k63 == -1)) {
                           throw new RuntimeException("null char");
                         }
                         Node.aClass94Array75[l++] = class94_38.method1548(false, k63);
@@ -4823,7 +4823,7 @@ public final class ItemConfig {
                 continue;
               }
               if (j1 == 1701) {
-                if (~class11_13.anInt192 == 0) {
+                if ((class11_13.anInt192 == -1)) {
                   GroundItem.anIntArray2929[k++] = 0;
                 } else {
                   GroundItem.anIntArray2929[k++] = class11_13.anInt271;
@@ -4867,7 +4867,7 @@ public final class ItemConfig {
               }
 
               int j81 = GroundItem.anIntArray2929[--k];
-              if (~j81 == 0) {
+              if ((j81 == -1)) {
                 aobj1 = null;
               } else {
                 aobj1[0] = new Integer(j81);
@@ -5023,7 +5023,7 @@ public final class ItemConfig {
           if (j1 == 1203) {
             class11_15.anInt202 = 6;
             class11_15.anInt201 = GroundItem.anIntArray2929[--k];
-            if (~class11_15.anInt191 == 0) {
+            if ((class11_15.anInt191 == -1)) {
               DummyClass11.method2206(true, class11_15.anInt279);
             }
             continue;
@@ -5033,7 +5033,7 @@ public final class ItemConfig {
           }
           class11_15.anInt202 = 5;
           class11_15.anInt201 = GroundItem.anIntArray2929[--k];
-          if (~class11_15.anInt191 == 0) {
+          if ((class11_15.anInt191 == -1)) {
             DummyClass11.method2206(true, class11_15.anInt279);
           }
           continue;
@@ -5070,7 +5070,7 @@ public final class ItemConfig {
         if (j1 == 1101) {
           class11_16.anInt218 = GroundItem.anIntArray2929[--k];
           DummyClass29.method909(-123, class11_16);
-          if (~class11_16.anInt191 == 0) {
+          if ((class11_16.anInt191 == -1)) {
             MovedStatics0.method56(class11_16.anInt279, 99);
           }
           continue;
@@ -5109,7 +5109,7 @@ public final class ItemConfig {
           class11_16.anInt202 = 1;
           class11_16.anInt201 = GroundItem.anIntArray2929[--k];
           DummyClass29.method909(2, class11_16);
-          if (~class11_16.anInt191 == 0) {
+          if ((class11_16.anInt191 == -1)) {
             DummyClass11.method2206(true, class11_16.anInt279);
           }
           continue;
@@ -5123,7 +5123,7 @@ public final class ItemConfig {
           class11_16.rotationZ = GroundItem.anIntArray2929[k - -4];
           class11_16.anInt164 = GroundItem.anIntArray2929[5 + k];
           DummyClass29.method909(-59, class11_16);
-          if (~class11_16.anInt191 == 0) {
+          if ((class11_16.anInt191 == -1)) {
             TextureSampler4.method265((byte) -42, class11_16.anInt279);
             DummyClass56.method1649(class11_16.anInt279, -106);
           }
@@ -5138,7 +5138,7 @@ public final class ItemConfig {
             class11_16.anInt260 = 1;
             DummyClass29.method909(116, class11_16);
           }
-          if (~class11_16.anInt191 == 0) {
+          if ((class11_16.anInt191 == -1)) {
             DummyClass58.method1657(class11_16.anInt279, -903);
           }
           continue;
@@ -5154,7 +5154,7 @@ public final class ItemConfig {
             class11_16.aClass94_232 = class94_63;
             DummyClass29.method909(117, class11_16);
           }
-          if (~class11_16.anInt191 == 0) {
+          if ((class11_16.anInt191 == -1)) {
             ObjectCache.method1516(class11_16.anInt279, 91);
           }
           continue;
@@ -5224,7 +5224,7 @@ public final class ItemConfig {
         }
         class11_16.anInt164 = GroundItem.anIntArray2929[--k];
         DummyClass29.method909(-126, class11_16);
-        if (~class11_16.anInt191 == 0) {
+        if ((class11_16.anInt191 == -1)) {
           TextureSampler4.method265((byte) -42, class11_16.anInt279);
         }
         continue;

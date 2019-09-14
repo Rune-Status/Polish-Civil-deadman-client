@@ -217,7 +217,7 @@ public final class Texture extends SubNode {
         int var6 = !var4 ? 128 : 64;
         int flags = DummyClass32.method961(1536);
         if (((1 & flags) == 1 -1)) {
-          if (~this.anInt3795 == 0) {
+          if ((this.anInt3795 == -1)) {
             int[] var8 = new int[1];
             GlRenderer.GL.glGenTextures(1, var8, 0);
             this.anInt3791 = DummyClass33.anInt582;

@@ -239,7 +239,7 @@ public final class SomethingTexture extends AbstractSomethingTexture {
 
         for (int var9 = 0; (var7 != 1 -1) && (var9 < var2.aClass145Array2809.length); var7 >>>= 1) {
           if (((1 & var7) != 1 -1)) {
-            if (~var6 == 0) {
+            if ((var6 == -1)) {
               var2.aClass145Array2809[var9] = null;
             } else {
               AnimationSequence var10 = GameClient.method45(var6, (byte) -20);

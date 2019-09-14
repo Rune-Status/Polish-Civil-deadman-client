@@ -85,7 +85,7 @@ public final class DummyClass1 {
 
               if ((var2.anInt368 == var1.anInt2764) && (var1.anInt2789 > 25
                   || var11)) {
-                if (~var2.anInt367 == 0) {
+                if ((var2.anInt367 == -1)) {
                   var1.anInt2764 = var2.anInt382;
                 } else {
                   var1.anInt2764 = var2.anInt367;
@@ -112,7 +112,7 @@ public final class DummyClass1 {
             var1.rotationY &= 2047;
           } else {
             if ((var2.anInt368 == var1.anInt2764) && var1.anInt2789 > 25) {
-              if (~var2.anInt407 == 0) {
+              if ((var2.anInt407 == -1)) {
                 var1.anInt2764 = var2.anInt382;
               } else {
                 var1.anInt2764 = var2.anInt407;

@@ -211,9 +211,8 @@ public final class GameString implements UnusedInterface1 {
     var2.bytes = new byte[this.length];
 
     for (int var3 = 0; this.length > var3; ++var3) {
-      byte var4 = this.bytes[var3];
-      if (var4 >= 65 && var4 <= 90 ||
-          var4 >= -64 && ~var4 >= 33 && var4 != -41) {
+      byte var4 = (byte) (this.bytes[var3] & 0xff);
+      if (var4 >= 65 && var4 <= 90) {
         var4 = (byte) (var4 + 32);
       }
 
@@ -1057,7 +1056,7 @@ public final class GameString implements UnusedInterface1 {
       var11 = (508650 & (int) var8) >> 14;
       var12 = Integer.MAX_VALUE & (int) (var8 >>> 32);
       var13 = DummyClass11.method2207(4, var12);
-      if (~var13.anInt1516 == 0) {
+      if ((var13.anInt1516 == -1)) {
         var14 = var2;
         if ((var8 > 1L - 1)) {
           var14 = var4;
@@ -1272,7 +1271,7 @@ public final class GameString implements UnusedInterface1 {
       return null;
     } else {
       SoftwareDirectColorSprite var22 = null;
-      if (~var8.anInt791 == 0) {
+      if ((var8.anInt791 == -1)) {
         if (var8.anInt762 != -1) {
           var22 = (SoftwareDirectColorSprite) GameString.method1570(
               var0, (byte) -107, true, var8.anInt795, false, var5, var6,

@@ -244,11 +244,11 @@ public final class GameObject extends SceneNode {
             this.aClass142_2722 == null
                 || (this.aClass142_2722.anInt1864 != var4.anInt1531))) {
           var6 = var4.anInt1531;
-          if (~var4.anInt1531 == 0) {
+          if ((var4.anInt1531 == -1)) {
             var6 = var5;
           }
 
-          if (~var6 == 0) {
+          if ((var6 == -1)) {
             this.aClass142_2722 = null;
           } else {
             this.aClass142_2722 = GameClient.method45(var6, (byte) -20);

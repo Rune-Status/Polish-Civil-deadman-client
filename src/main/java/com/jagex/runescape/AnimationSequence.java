@@ -283,7 +283,7 @@ public final class AnimationSequence {
 
   public void method2058(byte var1 ) {
     if (var1 == -41) {
-        if (~this.anInt1866 == 0) {
+        if ((this.anInt1866 == -1)) {
           if (this.aBooleanArray1855 == null) {
             this.anInt1866 = 0;
           } else {

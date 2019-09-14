@@ -76,7 +76,7 @@ public final class StringNode extends Node {
       return 88;
     } else if (var1 == -2) {
       return 12345678;
-    } else if (~var1 == 0) {
+    } else if ((var1 == -1)) {
       if (var2 < 2) {
         var2 = 2;
       } else if ((var2 > 127 - 1)) {

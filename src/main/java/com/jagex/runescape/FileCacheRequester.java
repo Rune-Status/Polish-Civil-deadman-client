@@ -366,23 +366,23 @@ public final class FileCacheRequester implements Runnable {
       } else {
         while (true) {
           int var3 = var1.indexOf(SomethingSceneJ.aClass94_331);
-          if (~var3 == 0) {
+          if ((var3 == -1)) {
             while (true) {
               var3 = var1.indexOf(SomethingIndex150.aClass94_2080);
               if (var3 == -1) {
                 while (true) {
                   var3 = var1.indexOf(CollisionMap.aClass94_1301);
-                  if (~var3 == 0) {
+                  if ((var3 == -1)) {
                     while (true) {
                       var3 = var1.indexOf(PlayerAppearance.aClass94_852);
-                      if (~var3 == 0) {
+                      if ((var3 == -1)) {
                         while (true) {
                           var3 = var1.indexOf(TextureSampler22.aClass94_3418);
-                          if (~var3 == 0) {
+                          if ((var3 == -1)) {
                             while (true) {
                               var3 = var1
                                   .indexOf(SceneSomething2.aClass94_1051);
-                              if (~var3 == 0) {
+                              if ((var3 == -1)) {
                                 return var1;
                               }
 

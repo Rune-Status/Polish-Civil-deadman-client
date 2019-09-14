@@ -256,7 +256,7 @@ public final class GameClient extends GameStub {
         }
 
         if ((DummyClass43.ondemandRequester.anInt1011 >= 5 -1)
-            && ~DummyClass43.ondemandRequester.anInt1010 == 0) {
+            && (DummyClass43.ondemandRequester.anInt1010 == -1)) {
           this.reportError("js5crc");
           DummyClass15.state = 1000;
           return;

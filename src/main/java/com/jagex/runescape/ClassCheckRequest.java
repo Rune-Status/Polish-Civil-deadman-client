@@ -128,7 +128,7 @@ public final class ClassCheckRequest extends Node {
           GameObjectConfig var20 = DummyClass11.method2207(4, ClientScript.anIntArray3693[var9]);
           if (var20.anIntArray1524 != null) {
             var20 = var20.method1685(var1 + -59);
-            if (var20 == null || ~var20.anInt1482 == 0) {
+            if (var20 == null || (var20.anInt1482 == -1)) {
               continue;
             }
           }
@@ -160,7 +160,7 @@ public final class ClassCheckRequest extends Node {
             if (var22 != null && var22.aBoolean1285 && var22.aBoolean1270) {
               var12 = var21.anInt2819 / 32 - TextureCache.localPlayer.anInt2819 / 32;
               var13 = var21.anInt2829 / 32 + -(TextureCache.localPlayer.anInt2829 / 32);
-              if (~var22.anInt1283 == 0) {
+              if ((var22.anInt1283 == -1)) {
                 DummyClass36.method1030(var4,
                     HashTableIterator.aClass3_Sub28_Sub16Array1136[1],
                     var13, var12, var2, (byte) 11, var3);

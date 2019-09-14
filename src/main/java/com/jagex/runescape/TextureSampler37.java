@@ -286,7 +286,7 @@ public final class TextureSampler37 extends AbstractTextureSampler {
             }
           }
 
-          if (~var3 == 0) {
+          if ((var3 == -1)) {
             TextureSampler13.anIntArray3367[TextureSampler11.anInt3244] =
               AudioStreamEncoder3.regionHashes[var2];
             var3 = TextureSampler11.anInt3244++;

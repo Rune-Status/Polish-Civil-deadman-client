@@ -49,7 +49,7 @@ public final class GameWorld extends AbstractGameWorld {
           int var3 = 0;
 
           for (int var4 = 0; var4 < var2.ids.length; ++var4) {
-            if (~var2.ids[var4] == 0) {
+            if ((var2.ids[var4] == -1)) {
               ++var3;
             }
           }

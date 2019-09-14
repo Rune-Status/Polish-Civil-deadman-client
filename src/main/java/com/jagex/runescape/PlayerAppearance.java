@@ -210,7 +210,7 @@ public final class PlayerAppearance {
       int var10,
       int var11 ) {
     int var12 = 102 % ((var7 - -39) / 61);
-      if (~this.npcId == 0) {
+      if ((this.npcId == -1)) {
         int[] var15 = this.anIntArray857;
         long var13 = this.aLong860;
         if (var4 != null && ((var4.anInt1854 >= 1 -1) || (var4.anInt1849 >= 1 -1))) {
@@ -599,7 +599,7 @@ public final class PlayerAppearance {
       AnimationSequence var3,
       int var4,
       int var5 ) {
-    if (~this.npcId == 0) {
+    if ((this.npcId == -1)) {
         AbstractModel var6 = (AbstractModel) HashTableIterator.aClass93_1131.get(
             this.aLong860);
         if (var2 < 122) {

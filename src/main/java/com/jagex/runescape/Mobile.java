@@ -99,7 +99,7 @@ public abstract class Mobile extends SceneNode {
     int var2 = this.getRenderAnimationId();
       return var1 ?
         null :
-        (~var2 == 0 ?
+        ((var2 == -1) ?
           DummyClass18.DEFAULT_RENDER_ANIMATION :
           StringNode0.getRenderAnimation(false, var2));
   }

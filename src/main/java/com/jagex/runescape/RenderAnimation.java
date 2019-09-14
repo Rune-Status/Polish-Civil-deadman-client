@@ -298,7 +298,7 @@ public final class RenderAnimation {
       int var6;
       if ((var0.anInt2842 != -1) && (AbstractGameWorld.updateCycle >= var0.anInt2759)) {
         var6 = RenderAnimation.method898((byte) 42, var0.anInt2842).anInt542;
-        if (~var6 == 0) {
+        if ((var6 == -1)) {
           var0.anInt2842 = -1;
         } else {
           AnimationSequence var3 = GameClient.method45(var6, (byte) -20);

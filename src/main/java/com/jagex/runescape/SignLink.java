@@ -358,7 +358,7 @@ public class SignLink implements Runnable {
                               "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789?&=,.%+-_#:/*";
 
                           for (var18 = 0; var18 < var4.length(); ++var18) {
-                            if (~var25.indexOf(var4.charAt(var18)) == 0) {
+                            if ((var25.indexOf(var4.charAt(var18)) == -1)) {
                               throw new Exception();
                             }
                           }

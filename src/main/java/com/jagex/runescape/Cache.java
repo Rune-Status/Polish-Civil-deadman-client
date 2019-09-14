@@ -214,7 +214,7 @@ public final class Cache {
         if (var11 != null && ((var11.anInt190 == var5)
           || var5 == 0xabcdabcd && var11 == DummyClass42.aClass11_886)) {
           int var12;
-          if (~var9 == 0) {
+          if ((var9 == -1)) {
             AbstractAudioOutputStream.quadx0[SomethingWorldMapy.widgetQuads] =
                 var2 + var11.anInt306;
             Player.quady0[SomethingWorldMapy.widgetQuads] =
@@ -835,7 +835,7 @@ public final class Cache {
                           if (var42 != null) {
                             var42 = var42.method1106(var11.anInt271, 78);
                             AnimationSequence var52 =
-                              ~var21 == 0 ? null : GameClient.method45(var21, (byte) -20);
+                              (var21 == -1) ? null : GameClient.method45(var21, (byte) -20);
                             var38 = var42.getModel(100, var11.anInt260, var11.anInt267, var52, 1,
                               var11.anInt283);
                             if (var38 == null) {
@@ -845,7 +845,7 @@ public final class Cache {
                             }
                           }
                         } else if (var11.anInt202 != 5) {
-                          if (~var21 == 0) {
+                          if ((var21 == -1)) {
                             var38 = var11.method865(-1, null, -1, 126, 0, var41,
                               TextureCache.localPlayer.appearance);
                             if (var38 == null && GameStub.aBoolean6) {
@@ -1076,7 +1076,7 @@ public final class Cache {
                             var43 = FileCacheRequester.method1303(var11, var43, 0);
                             (var43.getLength() > 1 -1); var47 += var35.anInt3727 + 1) {
                             var28 = var43.indexOf(Buffer.LINE_BREAK);
-                            if (~var28 == 0) {
+                            if ((var28 == -1)) {
                               var44 = var43;
                               var43 = GroundItemNode.EMPTY_STRING;
                             } else {
@@ -1337,7 +1337,7 @@ public final class Cache {
   }
 
   public static int repackHSL(int lightness, boolean var1, int hsl) {
-    if (~hsl == 0) {
+    if ((hsl == -1)) {
         return 12345678;
       } else {
 

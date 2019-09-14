@@ -347,7 +347,7 @@ public final class ProceduralTexture {
       int var32;
       for (var7 = -1; var7 < DummyClass13.anInt2022 + DummyClass6.anInt2046; ++var7) {
         Mobile var8;
-        if (~var7 == 0) {
+        if ((var7 == -1)) {
           var8 = TextureCache.localPlayer;
         } else if (DummyClass13.anInt2022 > var7) {
           var8 = TextureSampler0.players[DummyClass42.anIntArray887[var7]];
@@ -417,7 +417,7 @@ public final class ProceduralTexture {
 
             assert var9 != null;
             if ((var9.anInt1269 >= 1 -1) && NPC.aClass3_Sub28_Sub16Array3977.length > var9.anInt1269) {
-              if (~var9.anInt1265 == 0) {
+              if ((var9.anInt1265 == -1)) {
                 var22 = 15 + var8.method1975(27855);
               } else {
                 var22 = 15 + var9.anInt1265;
@@ -543,7 +543,7 @@ public final class ProceduralTexture {
               if (var8 instanceof NPC) {
                 NPC var30 = (NPC) var8;
                 NpcConfiguration var26 = var30.config;
-                if (~var26.anInt1265 == 0) {
+                if ((var26.anInt1265 == -1)) {
                   var22 = var8.method1975(27855) / 2;
                 } else {
                   var22 = var26.anInt1265 / 2;

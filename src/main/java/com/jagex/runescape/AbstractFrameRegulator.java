@@ -162,7 +162,7 @@ public abstract class AbstractFrameRegulator {
                 }
 
                 var27 = TextureSampler10.method350((byte) -103, var25 + -1);
-                if (~var27.anInt2103 == 0) {
+                if ((var27.anInt2103 == -1)) {
                   continue;
                 }
 

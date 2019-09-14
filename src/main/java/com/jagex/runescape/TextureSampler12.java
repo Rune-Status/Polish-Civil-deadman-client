@@ -146,7 +146,7 @@ public final class TextureSampler12 extends AbstractTextureSampler {
         Cache.method1095(var2, var8, var4, SceneNode.aClass11ArrayArray1834[var1], var3, -1, var7,
           var6, (byte) 119, var5);
       } else {
-        if (~var5 == 0) {
+        if ((var5 == -1)) {
           for (int var9 = 0; (var9 < 101 -1); ++var9) {
             GroundItemNode.aBooleanArray3674[var9] = true;
           }

@@ -97,7 +97,7 @@ public final class FloorOverlay {
   }
 
   public static void method2270(Mobile var0, byte var1) {
-    if (AbstractGameWorld.updateCycle == var0.anInt2790 || ~var0.animationId == 0
+    if (AbstractGameWorld.updateCycle == var0.anInt2790 || (var0.animationId == -1)
         || var0.anInt2828 != 0 || (1 + var0.anInt2760) > GameClient.method45(var0.animationId,
         (byte) -20).anIntArray1869[var0.anInt2832]) {
         int var2 = var0.anInt2790 + -var0.anInt2800;

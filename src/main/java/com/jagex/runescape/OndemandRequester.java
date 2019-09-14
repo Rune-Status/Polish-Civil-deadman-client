@@ -161,7 +161,7 @@ public final class OndemandRequester {
                     throw new IOException();
                   }
 
-                  if (~this.aClass3_Sub30_1008.bytes[0] == 0) {
+                  if ((this.aClass3_Sub30_1008.bytes[0] == -1)) {
                     this.currentRequest.anInt4067 = 1;
                     this.aClass3_Sub30_1008.position = 0;
                   } else {

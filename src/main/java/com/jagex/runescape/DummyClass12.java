@@ -165,7 +165,7 @@ public final class DummyClass12 {
             var6 = 2001;
           }
 
-          if (~var5 == 0) {
+          if ((var5 == -1)) {
             var5 = 2001;
           }
         }

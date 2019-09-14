@@ -137,7 +137,7 @@ public final class Cursor {
         }
 
         int var9 = 4;
-        if (~var8 == 0) {
+        if ((var8 == -1)) {
           var8 = var2.anInt382;
         }
 
@@ -147,7 +147,7 @@ public final class Cursor {
         }
 
         if (var10) {
-          if ((var1.rotationY != var1.anInt2806) && ~var1.anInt2772 == 0
+          if ((var1.rotationY != var1.anInt2806) && (var1.anInt2772 == -1)
               && (var1.anInt2779 != 1 -1)) {
             var9 = 2;
           }

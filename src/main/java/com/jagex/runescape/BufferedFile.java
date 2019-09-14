@@ -136,7 +136,7 @@ public final class BufferedFile {
 
           for (this.aLong570 = this.aLong569; var3 > 0; this.aLong569 += var9) {
             var9 = this.aClass122_573.method1739(var1, 0, var3, var2);
-            if (~var9 == 0) {
+            if ((var9 == -1)) {
               break;
             }
 
@@ -239,7 +239,7 @@ public final class BufferedFile {
 
         var3 = this.aClass122_573.method1739(this.anInt575, 0, var2,
             this.aByteArray564);
-        if (~var3 == 0) {
+        if ((var3 == -1)) {
           break;
         }
 

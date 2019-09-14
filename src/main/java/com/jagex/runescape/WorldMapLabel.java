@@ -151,7 +151,7 @@ public final class WorldMapLabel {
       GroundItemNode.username = var0;
       if (!GroundItemNode.username.method1528((byte) -42, GroundItemNode.EMPTY_STRING)
         && !GroundItemNode.password.method1528((byte) -42, GroundItemNode.EMPTY_STRING)) {
-        if (~ClientScriptCall.anInt2451 == 0) {
+        if ((ClientScriptCall.anInt2451 == -1)) {
           SceneGraphTile.anInt2246 = 0;
           DummyClass26.anInt1616 = 0;
           AbstractImageProducer.loginResponse = -3;

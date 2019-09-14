@@ -616,7 +616,7 @@ public final class Widget {
         return null;
       } else if ((var2 >= 1 -1) && var2 < this.anIntArray197.length) {
         int var3 = this.anIntArray197[var2];
-        if (~var3 == 0) {
+        if ((var3 == -1)) {
           return null;
         } else {
           AbstractDirectColorSprite var4 =
@@ -820,7 +820,7 @@ public final class Widget {
         var3 = this.anInt224;
       }
 
-      if (~var3 == 0) {
+      if ((var3 == -1)) {
         return null;
       } else {
         long var4 =
@@ -1094,7 +1094,7 @@ public final class Widget {
   public AbstractFont method868(AbstractIndexedColorSprite[] var1,
       int var2 ) {
     GameStub.aBoolean6 = false;
-      if (~this.anInt270 == 0) {
+      if ((this.anInt270 == -1)) {
         return null;
       } else {
         AbstractFont var3 = (AbstractFont) Cache.aClass93_743.get(this.anInt270);

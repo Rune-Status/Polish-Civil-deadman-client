@@ -178,7 +178,7 @@ public final class MidiSomething {
                     != null) {
                   var32 = var41[var28][var31];
                 } else {
-                  if (~Buffer.aClass3_Sub28_Sub3_2600.anInt3550 == 0) {
+                  if ((Buffer.aClass3_Sub28_Sub3_2600.anInt3550 == -1)) {
                     if (((4 & var24 + var3) == (var6 + var13 & 4))) {
                       var32 = DummyClass51.anIntArray1161[1
                           + TextureSampler26.anInt3081];
@@ -213,7 +213,7 @@ public final class MidiSomething {
                 } else {
                   byte var35;
                   if (var33 != 0) {
-                    if (~var33 == 0) {
+                    if ((var33 == -1)) {
                       var33 = 1;
                     }
 

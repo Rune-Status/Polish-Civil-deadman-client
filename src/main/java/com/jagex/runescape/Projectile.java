@@ -57,7 +57,7 @@ public final class Projectile extends SceneNode {
       this.anInt2925 = var6;
       this.anInt2911 = var5;
       int var12 = RenderAnimation.method898((byte) 42, this.anInt2915).anInt542;
-      if (~var12 == 0) {
+      if ((var12 == -1)) {
         this.aClass142_2923 = null;
       } else {
         this.aClass142_2923 = GameClient.method45(var12, (byte) -20);
@@ -166,7 +166,7 @@ public final class Projectile extends SceneNode {
       this.aDouble2921 =
         Math.sqrt(this.aDouble2918 * this.aDouble2918
             + this.aDouble2895 * this.aDouble2895);
-      if (~this.anInt2927 == 0) {
+      if ((this.anInt2927 == -1)) {
         this.aDouble2913 = (-this.aDouble2914 + var4) / var6;
       } else {
         if (!this.aBoolean2904) {

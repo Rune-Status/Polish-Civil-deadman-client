@@ -155,7 +155,7 @@ public final class DummyClass31 {
                 }
 
               } else if (var6 == 0) {
-                if (~var11.anInt1531 == 0 && var11.anIntArray1524 == null && !var11.aBoolean1510) {
+                if ((var11.anInt1531 == -1) && var11.anIntArray1524 == null && !var11.aBoolean1510) {
                   var28 =
                     var11.method1696(var10, var20, var18, 0, var19, var23, var1, null, (byte) -74,
                       var26, var21);
@@ -287,7 +287,7 @@ public final class DummyClass31 {
                   var43 = 1 + var10 & 3;
                   SceneNode var38;
                   SceneNode var42;
-                  if (~var11.anInt1531 == 0 && var11.anIntArray1524 == null
+                  if ((var11.anInt1531 == -1) && var11.anIntArray1524 == null
                     && !var11.aBoolean1510) {
                     SceneShadowMap var45 =
                       var11.method1696(var10 + 4, var20, var18, 2, var19, var23, var1, null,
@@ -376,7 +376,7 @@ public final class DummyClass31 {
                   }
 
                 } else if (var6 == 3) {
-                  if (~var11.anInt1531 == 0 && var11.anIntArray1524 == null
+                  if ((var11.anInt1531 == -1) && var11.anIntArray1524 == null
                     && !var11.aBoolean1510) {
                     var28 =
                       var11.method1696(var10, var20, var18, 3, var19, var23, var1, null, (byte) -54,
@@ -456,7 +456,7 @@ public final class DummyClass31 {
                             Integer.MAX_VALUE & (int) (var44 >>> 32)).anInt1528;
                       }
 
-                      if (~var11.anInt1531 == 0 && var11.anIntArray1524 == null
+                      if ((var11.anInt1531 == -1) && var11.anIntArray1524 == null
                           && !var11.aBoolean1510) {
                         var47 = var11
                             .method1696(var10, var20, var18, 4, var19, var23,
@@ -531,7 +531,7 @@ public final class DummyClass31 {
                       } else {
                         if (var6 == 7) {
                           int var40 = 3 & var10 - -2;
-                          if (~var11.anInt1531 == 0
+                          if ((var11.anInt1531 == -1)
                               && var11.anIntArray1524 == null
                               && !var11.aBoolean1510) {
                             SceneShadowMap var41 =
@@ -626,7 +626,7 @@ public final class DummyClass31 {
                     }
                   }
                 } else {
-                  if (~var11.anInt1531 == 0 && var11.anIntArray1524 == null
+                  if ((var11.anInt1531 == -1) && var11.anIntArray1524 == null
                     && !var11.aBoolean1510) {
                     var28 = var11.method1696(var10, var20, var18, var6, var19, var23, var1, null,
                       (byte) -30, var26, var21);
@@ -656,7 +656,7 @@ public final class DummyClass31 {
                 }
               }
             } else {
-              if (~var11.anInt1531 == 0 && var11.anIntArray1524 == null && !var11.aBoolean1510) {
+              if ((var11.anInt1531 == -1) && var11.anIntArray1524 == null && !var11.aBoolean1510) {
                 var28 =
                   var11.method1696(var6 == 11 ? 4 + var10 : var10, var20, var18, 10, var19, var23,
                     var1, null, (byte) -26, var26, var21);
@@ -703,7 +703,7 @@ public final class DummyClass31 {
           } else if (Keyboard.aBoolean1905 || (var11.anInt1529 != 1 -1) ||
               (var11.anInt1538 == 2 -1)
             || var11.aBoolean1483) {
-            if (~var11.anInt1531 == 0 && var11.anIntArray1524 == null && !var11.aBoolean1510) {
+            if ((var11.anInt1531 == -1) && var11.anIntArray1524 == null && !var11.aBoolean1510) {
               var28 =
                 var11.method1696(var10, var20, var18, 22, var19, var23, var1, null, (byte) -126,
                   var26, var21);
