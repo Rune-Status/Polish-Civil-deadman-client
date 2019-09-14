@@ -17,8 +17,7 @@ public abstract class AbstractFileRequester {
   public abstract byte[] method2098(int var1,int var2 );
 
   public static void method2093(int var0) {
-    try {
-      AbstractFileRequester.fileSystem = null;
+    AbstractFileRequester.fileSystem = null;
       AbstractFileRequester.aClass94_1932 = null;
       AbstractFileRequester.aFloatArray1934 = null;
       AbstractFileRequester.COMMAND_DROP_CLIENT = null;
@@ -26,10 +25,6 @@ public abstract class AbstractFileRequester {
       if (var0 != 1) {
         AbstractFileRequester.method2096(-83, 44, -77, 121L);
       }
-
-    } catch (RuntimeException var2) {
-      throw AbstractGameWorld.cascadeException(var2, "v.R(" + var0 + ')');
-    }
   }
 
   public static boolean method2096(int var0, int var1, int var2, long var3) {
@@ -55,8 +50,7 @@ public abstract class AbstractFileRequester {
 
   public static void method2099(boolean var0, int var1, int var2, FileUnpacker var3, boolean var4,
                                int var5, int var6) {
-    try {
-      DummyClass55.aClass153_1423 = var3;
+    DummyClass55.aClass153_1423 = var3;
       DummyClass22.anInt1741 = var2;
       TextureSampler8.anInt3463 = var1;
       AreaSoundEffect.aBoolean2311 = var4;
@@ -67,11 +61,6 @@ public abstract class AbstractFileRequester {
       }
 
       TextureSampler36.anInt3423 = var5;
-    } catch (RuntimeException var8) {
-      throw AbstractGameWorld.cascadeException(var8,
-          "v.Q(" + ',' + var1 + ',' + var2 + ',' + (var3 != null ? "{...}"
-              : "null") + ',' + var4 + ',' + var5 + ',' + var6 + ')');
-    }
   }
 
 }

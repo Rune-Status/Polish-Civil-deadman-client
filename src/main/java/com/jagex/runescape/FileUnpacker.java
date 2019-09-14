@@ -16,19 +16,13 @@ public final class FileUnpacker {
 
 
   public FileUnpacker(AbstractFileRequester var1, boolean var2, boolean var3 ) {
-    try {
-      this.aClass151_1947 = var1;
+    this.aClass151_1947 = var1;
       this.aBoolean1945 = var2;
       this.aBoolean1946 = var3;
-    } catch (RuntimeException var5) {
-      throw AbstractGameWorld.cascadeException(var5,
-        "ve.<init>(" + (var1 != null ? "{...}" : "null") + ',' + var2 + ',' + var3 + ')');
-    }
   }
 
   public boolean method2113(byte var1 ) {
-    try {
-      if (this.method2122()) {
+    if (this.method2122()) {
         if (var1 <= 15) {
           this.method2113((byte) 39);
         }
@@ -49,14 +43,10 @@ public final class FileUnpacker {
       } else {
         return false;
       }
-    } catch (RuntimeException var5) {
-      throw AbstractGameWorld.cascadeException(var5, "ve.IA(" + var1 + ')');
-    }
   }
 
   private int method2114(int var1, int var2) {
-    try {
-      if (this.method2130(false, var1)) {
+    if (this.method2130(false, var1)) {
         if (var2 != 0) {
           this.method2115(36, false, true);
         }
@@ -67,14 +57,10 @@ public final class FileUnpacker {
       } else {
         return 0;
       }
-    } catch (RuntimeException var4) {
-      throw AbstractGameWorld.cascadeException(var4, "ve.J(" + var1 + ',' + var2 + ')');
-    }
   }
 
   public void method2115(int var1, boolean var2, boolean var3 ) {
-    try {
-      int var4 = 9 / ((var1 - 35) / 44);
+    int var4 = 9 / ((var1 - 35) / 44);
       if (this.method2122()) {
         if (var2) {
           this.table.anIntArray955 = null;
@@ -87,15 +73,10 @@ public final class FileUnpacker {
         }
 
       }
-    } catch (RuntimeException var5) {
-      throw AbstractGameWorld.cascadeException(var5,
-        "ve.R(" + var1 + ',' + var2 + ',' + var3 + ')');
-    }
   }
 
   public int method2116(int var1,GameString var2 ) {
-    try {
-      if (this.method2122()) {
+    if (this.method2122()) {
         var2 = var2.method1534();
         if (var1 == 22813) {
           int var3 = this.table.fileNameTable.get(var2.getDbj2Hash(false));
@@ -106,15 +87,10 @@ public final class FileUnpacker {
       } else {
         return 0;
       }
-    } catch (RuntimeException var4) {
-      throw AbstractGameWorld.cascadeException(var4,
-        "ve.P(" + var1 + ',' + (var2 != null ? "{...}" : "null") + ')');
-    }
   }
 
   public boolean method2117(int var1, int var2 ) {
-    try {
-      if (var1 >= -88) {
+    if (var1 >= -88) {
         this.aBoolean1945 = true;
       }
 
@@ -128,42 +104,28 @@ public final class FileUnpacker {
       } else {
         return false;
       }
-    } catch (RuntimeException var4) {
-      throw AbstractGameWorld.cascadeException(var4, "ve.GA(" + var1 + ',' + var2 + ')');
-    }
   }
 
   public int getTableChecksum() {
-    try {
-
-      if (this.method2122()) {
+    if (this.method2122()) {
         return this.table.checksum;
       } else {
         throw new IllegalStateException("");
       }
-    } catch (RuntimeException var3) {
-      throw AbstractGameWorld.cascadeException(var3, "ve.T()");
-    }
   }
 
   public int getFileId(GameString var1 ) {
-    try {
-      if (this.method2122()) {
+    if (this.method2122()) {
         var1 = var1.method1534();
         int var3 = this.table.fileNameTable.get(var1.getDbj2Hash(false));
         return this.method2130(false, var3) ? (var3) : -1;
       } else {
         return -1;
       }
-    } catch (RuntimeException var4) {
-      throw AbstractGameWorld.cascadeException(var4,
-        "ve.EA(" + (var1 != null ? "{...}" : "null") + ')');
-    }
   }
 
   public int method2121(int var1 ) {
-    try {
-      if (this.method2122()) {
+    if (this.method2122()) {
         if (var1 != 0) {
           this.method2139(45, 104, -3);
         }
@@ -172,15 +134,10 @@ public final class FileUnpacker {
       } else {
         return -1;
       }
-    } catch (RuntimeException var3) {
-      throw AbstractGameWorld.cascadeException(var3, "ve.D(" + var1 + ')');
-    }
   }
 
   private boolean method2122() {
-    try {
-
-      if (this.table == null) {
+    if (this.table == null) {
         this.table = this.aClass151_1947.method2094(0);
         if (null == this.table) {
           return false;
@@ -191,14 +148,10 @@ public final class FileUnpacker {
       }
 
       return true;
-    } catch (RuntimeException var3) {
-      throw AbstractGameWorld.cascadeException(var3, "ve.W()");
-    }
   }
 
   public byte[] method2123(int var1,GameString var2,GameString var3 ) {
-    try {
-      if (this.method2122()) {
+    if (this.method2122()) {
         var3 = var3.method1534();
         var2 = var2.method1534();
         int var4 = this.table.fileNameTable.get(var3.getDbj2Hash(false));
@@ -216,31 +169,19 @@ public final class FileUnpacker {
       } else {
         return null;
       }
-    } catch (RuntimeException var6) {
-      throw AbstractGameWorld.cascadeException(var6,
-        "ve.C(" + var1 + ',' + (var2 != null ? "{...}" : "null") + ',' + (var3 != null ?
-          "{...}" :
-          "null") + ')');
-    }
   }
 
   public void method2124(int var1,GameString var2 ) {
-    try {
-      if (this.method2122()) {
+    if (this.method2122()) {
         var2 = var2.method1534();
         int var3 = this.table.fileNameTable.get(var2.getDbj2Hash(false));
         this.method2131(119, var3);
         int var4 = 123 % ((var1 - -60) / 62);
       }
-    } catch (RuntimeException var5) {
-      throw AbstractGameWorld.cascadeException(var5,
-        "ve.V(" + var1 + ',' + (var2 != null ? "{...}" : "null") + ')');
-    }
   }
 
   public boolean method2125(GameString var1, byte var2,GameString var3 ) {
-    try {
-      if (this.method2122()) {
+    if (this.method2122()) {
         var3 = var3.method1534();
         var1 = var1.method1534();
         int var4 = this.table.fileNameTable.get(var3.getDbj2Hash(false));
@@ -258,17 +199,10 @@ public final class FileUnpacker {
       } else {
         return false;
       }
-    } catch (RuntimeException var6) {
-      throw AbstractGameWorld.cascadeException(var6,
-        "ve.DA(" + (var1 != null ? "{...}" : "null") + ',' + var2 + ',' + (var3 != null ?
-          "{...}" :
-          "null") + ')');
-    }
   }
 
   public byte[] unpack(int fileId, int[] var2, int var3, int childId ) {
-    try {
-      if (this.method2139(fileId, 0, childId)) {
+    if (this.method2139(fileId, 0, childId)) {
         if (this.buffers[fileId] == null
             || this.buffers[fileId][childId] == null) {
           boolean var5 = this.method2132(fileId, false, var2);
@@ -298,31 +232,20 @@ public final class FileUnpacker {
       } else {
         return null;
       }
-    } catch (RuntimeException var6) {
-      throw AbstractGameWorld.cascadeException(var6,
-        "ve.BA(" + fileId + ',' + (var2 != null ? "{...}" : "null") + ',' + var3 + ',' + childId
-          + ')');
-    }
   }
 
   public boolean method2127(byte var1,GameString var2 ) {
-    try {
-      if (this.method2122()) {
+    if (this.method2122()) {
         var2 = var2.method1534();
         int var3 = this.table.fileNameTable.get(var2.getDbj2Hash(false));
         return var1 != -83 || this.method2117(-104, var3);
       } else {
         return false;
       }
-    } catch (RuntimeException var4) {
-      throw AbstractGameWorld.cascadeException(var4,
-        "ve.O(" + var1 + ',' + (var2 != null ? "{...}" : "null") + ')');
-    }
   }
 
   public void method2128(int var1, int var2 ) {
-    try {
-      if (var1 == 7561) {
+    if (var1 == 7561) {
         if (this.method2130(false, var2)) {
           if (null != this.buffers) {
             this.buffers[var2] = null;
@@ -330,14 +253,10 @@ public final class FileUnpacker {
 
         }
       }
-    } catch (RuntimeException var4) {
-      throw AbstractGameWorld.cascadeException(var4, "ve.B(" + var1 + ',' + var2 + ')');
-    }
   }
 
   public boolean method2129(byte var1, int var2, int var3 ) {
-    try {
-      int var4 = 78 / ((-10 - var1) / 59);
+    int var4 = 78 / ((-10 - var1) / 59);
       if (this.method2139(var3, 0, var2)) {
         if (this.buffers[var3] != null && null != this.buffers[var3][var2]) {
           return true;
@@ -350,15 +269,10 @@ public final class FileUnpacker {
       } else {
         return false;
       }
-    } catch (RuntimeException var5) {
-      throw AbstractGameWorld.cascadeException(var5,
-        "ve.FA(" + var1 + ',' + var2 + ',' + var3 + ')');
-    }
   }
 
   private boolean method2130(boolean var1, int var2) {
-    try {
-      if (var1) {
+    if (var1) {
         FileUnpacker.aBoolean1951 = false;
       }
 
@@ -374,26 +288,17 @@ public final class FileUnpacker {
       } else {
         return false;
       }
-    } catch (RuntimeException var4) {
-      throw AbstractGameWorld.cascadeException(var4, "ve.E(" + var1 + ',' + var2 + ')');
-    }
   }
 
   private void method2131(int var1, int var2) {
-    try {
-      this.aClass151_1947.method2095(var2, 127);
+    this.aClass151_1947.method2095(var2, 127);
       if (var1 < 101) {
         this.method2132(53, false, null);
       }
-
-    } catch (RuntimeException var4) {
-      throw AbstractGameWorld.cascadeException(var4, "ve.L(" + var1 + ',' + var2 + ')');
-    }
   }
 
   private boolean method2132(int var1, boolean var2, int[] var3) {
-    try {
-      if (!this.method2130(var2, var1)) {
+    if (!this.method2130(var2, var1)) {
         return false;
       } else if (this.anObjectArray1954[var1] == null) {
         return false;
@@ -526,23 +431,14 @@ public final class FileUnpacker {
           return true;
         }
       }
-    } catch (RuntimeException var20) {
-      throw AbstractGameWorld.cascadeException(var20,
-        "ve.I(" + var1 + ',' + var2 + ',' + (var3 != null ? "{...}" : "null") + ')');
-    }
   }
 
   public byte[] getBytes(int fileId, int childId ) {
-    try {
-      return this.unpack(fileId, null, 52, childId);
-    } catch (RuntimeException var5) {
-      throw AbstractGameWorld.cascadeException(var5, "ve.M(" + fileId + ',' + childId + ')');
-    }
+    return this.unpack(fileId, null, 52, childId);
   }
 
   private void method2134(boolean var1, int var2) {
-    try {
-      if (this.aBoolean1945) {
+    if (this.aBoolean1945) {
         this.anObjectArray1954[var2] = this.aClass151_1947.method2098(var2, 0);
       } else {
         this.anObjectArray1954[var2] =
@@ -553,15 +449,10 @@ public final class FileUnpacker {
       if (var1) {
         this.aBoolean1945 = false;
       }
-
-    } catch (RuntimeException var4) {
-      throw AbstractGameWorld.cascadeException(var4, "ve.F(" + var1 + ',' + var2 + ')');
-    }
   }
 
   public boolean method2135(GameString var1, int var2 ) {
-    try {
-      if (var2 >= -103) {
+    if (var2 >= -103) {
         return false;
       } else if (this.method2122()) {
         var1 = var1.method1534();
@@ -570,15 +461,10 @@ public final class FileUnpacker {
       } else {
         return false;
       }
-    } catch (RuntimeException var4) {
-      throw AbstractGameWorld.cascadeException(var4,
-        "ve.S(" + (var1 != null ? "{...}" : "null") + ',' + var2 + ')');
-    }
   }
 
   public int method2136(byte var1 ) {
-    try {
-      if (var1 > -121) {
+    if (var1 > -121) {
         FileUnpacker.sunColor = -3;
       }
 
@@ -603,14 +489,10 @@ public final class FileUnpacker {
       } else {
         return 0;
       }
-    } catch (RuntimeException var5) {
-      throw AbstractGameWorld.cascadeException(var5, "ve.N(" + var1 + ')');
-    }
   }
 
   public void method2137(byte var1 ) {
-    try {
-      if (var1 != 56) {
+    if (var1 != 56) {
         this.buffers = null;
       }
 
@@ -619,15 +501,10 @@ public final class FileUnpacker {
           this.buffers[var2] = null;
         }
       }
-
-    } catch (RuntimeException var3) {
-      throw AbstractGameWorld.cascadeException(var3, "ve.Q(" + var1 + ')');
-    }
   }
 
   public byte[] getBytes(int var1 ) {
-    try {
-      if (!this.method2122()) {
+    if (!this.method2122()) {
         return null;
       } else if (~this.table.unpackedLengths.length == -2) {
         return this.getBytes(0, var1);
@@ -640,14 +517,10 @@ public final class FileUnpacker {
       } else {
         return this.getBytes(var1, 0);
       }
-    } catch (RuntimeException var4) {
-      throw AbstractGameWorld.cascadeException(var4, "ve.HA(" + var1 + ')');
-    }
   }
 
   private boolean method2139(int var1, int var2, int var3) {
-    try {
-      if (this.method2122()) {
+    if (this.method2122()) {
         if (var2 <= var1 && -1 >= ~var3 && ~this.table.unpackedLengths.length < ~var1
           && this.table.unpackedLengths[var1] > var3) {
           return true;
@@ -659,15 +532,10 @@ public final class FileUnpacker {
       } else {
         return false;
       }
-    } catch (RuntimeException var5) {
-      throw AbstractGameWorld.cascadeException(var5,
-        "ve.K(" + var1 + ',' + var2 + ',' + var3 + ')');
-    }
   }
 
   public byte[] getBytes(int var1, int var2, int var3 ) {
-    try {
-      if (this.method2139(var2, var3 + var3, var1)) {
+    if (this.method2139(var2, var3 + var3, var1)) {
         if (this.buffers[var2] == null || null == this.buffers[var2][var1]) {
           boolean var4 = this.method2132(var2, false, null);
           if (!var4) {
@@ -684,15 +552,10 @@ public final class FileUnpacker {
       } else {
         return null;
       }
-    } catch (RuntimeException var5) {
-      throw AbstractGameWorld.cascadeException(var5,
-        "ve.CA(" + var1 + ',' + var2 + ',' + var3 + ')');
-    }
   }
 
   public int[] getChildIds(byte var1, int var2 ) {
-    try {
-      if (var1 != -128) {
+    if (var1 != -128) {
         FileUnpacker.updateMemoryCounter = -69;
       }
 
@@ -709,14 +572,10 @@ public final class FileUnpacker {
       } else {
         return null;
       }
-    } catch (RuntimeException var5) {
-      throw AbstractGameWorld.cascadeException(var5, "ve.G(" + var1 + ',' + var2 + ')');
-    }
   }
 
   public int getAmountChildren(int var1, byte var2 ) {
-    try {
-      if (this.method2130(false, var1)) {
+    if (this.method2130(false, var1)) {
         if (var2 <= 60) {
           this.method2122();
         }
@@ -725,14 +584,10 @@ public final class FileUnpacker {
       } else {
         return 0;
       }
-    } catch (RuntimeException var4) {
-      throw AbstractGameWorld.cascadeException(var4, "ve.H(" + var1 + ',' + var2 + ')');
-    }
   }
 
   public boolean isLoaded(int fileId ) {
-    try {
-      if (!this.method2122()) {
+    if (!this.method2122()) {
         return false;
       } else if (~this.table.unpackedLengths.length == -2) {
         return this.method2129((byte) 86, fileId, 0);
@@ -745,26 +600,18 @@ public final class FileUnpacker {
       } else {
         return false;
       }
-    } catch (RuntimeException var4) {
-      throw AbstractGameWorld.cascadeException(var4, "ve.A(" + fileId + ')');
-    }
   }
 
   public static void method2119(int var0) {
-    try {
-      if (var0 != 100) {
+    if (var0 != 100) {
         FileUnpacker.method2143((byte) -45, -91, 7, -83, 24);
       }
 
       FileUnpacker.fileUnpacker13 = null;
-    } catch (RuntimeException var2) {
-      throw AbstractGameWorld.cascadeException(var2, "ve.AA(" + var0 + ')');
-    }
   }
 
   public static void method2143(byte var0, int var1, int var2, int var3, int var4) {
-    try {
-      WidgetUpdate var5 = AudioStreamEncoder3.method466(4, 8, var2);
+    WidgetUpdate var5 = AudioStreamEncoder3.method466(4, 8, var2);
       var5.g((byte) 33);
       var5.anInt3596 = var1;
       if (var0 >= -120) {
@@ -773,10 +620,6 @@ public final class FileUnpacker {
 
       var5.anInt3598 = var4;
       var5.anInt3597 = var3;
-    } catch (RuntimeException var6) {
-      throw AbstractGameWorld.cascadeException(var6,
-        "ve.U(" + var0 + ',' + var1 + ',' + var2 + ',' + var3 + ',' + var4 + ')');
-    }
   }
 
 }

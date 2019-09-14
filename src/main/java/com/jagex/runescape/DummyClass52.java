@@ -14,8 +14,7 @@ public final class DummyClass52 {
 
 
   public static int method1423(boolean var0, Buffer var1, GameString var2) {
-    try {
-      if (var0) {
+    if (var0) {
         DummyClass52.method1426(17);
       }
 
@@ -26,28 +25,17 @@ public final class DummyClass52 {
         TextureSampler16.huffmanEncoder.method1015(var4.length, -81, var1.bytes, var4, 0,
           var1.position);
       return var1.position + -var3;
-    } catch (RuntimeException var5) {
-      throw AbstractGameWorld.cascadeException(var5,
-        "lg.A(" + var0 + ',' + (var1 != null ? "{...}" : "null") + ',' + (var2 != null ?
-          "{...}" :
-          "null") + ')');
-    }
   }
 
   public static AbstractIndexedColorSprite[] method1424(FileUnpacker var0, byte var1, int var2,
                                                        int var3) {
-    try {
-      if (var1 != -12) {
+    if (var1 != -12) {
         DummyClass52.anInt1174 = 37;
       }
 
       return SomethingTexture4.loadSprites(var0, var2, var3, -30901) ?
         TextureSampler36.method343(1854847236) :
         null;
-    } catch (RuntimeException var5) {
-      throw AbstractGameWorld.cascadeException(var5,
-        "lg.C(" + (var0 != null ? "{...}" : "null") + ',' + var1 + ',' + var2 + ',' + var3 + ')');
-    }
   }
 
   public static void method1425(int var0) {
@@ -65,17 +53,13 @@ public final class DummyClass52 {
   }
 
   public static void method1426(int var0) {
-    try {
-      DummyClass52.aClass153_1171 = null;
+    DummyClass52.aClass153_1171 = null;
       if (var0 != -25247) {
         DummyClass52.aClass142Array1168 = null;
       }
 
       DummyClass52.aClass94_1173 = null;
       DummyClass52.aClass142Array1168 = null;
-    } catch (RuntimeException var2) {
-      throw AbstractGameWorld.cascadeException(var2, "lg.B(" + var0 + ')');
-    }
   }
 
 }

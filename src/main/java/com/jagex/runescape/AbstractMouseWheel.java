@@ -19,39 +19,25 @@ public abstract class AbstractMouseWheel {
   public abstract void bind(Component var1, int var2);
 
   public static boolean updateInterfaceCounter(int counter, byte var1) {
-    try {
-      SomethingLight0.interfaceCounter = counter - -1 & '\uffff';
+    SomethingLight0.interfaceCounter = counter - -1 & '\uffff';
       RenderAnimation.interfaceCounterUpdated = true;
       return true;
-    } catch (RuntimeException var3) {
-      throw AbstractGameWorld
-          .cascadeException(var3, "uc.D(" + counter + ',' + var1 + ')');
-    }
   }
 
   public static int compact(int var0, int var1) {
-    try {
-      var0 = (0xd5555555 & var0 >>> 1) + (0x55555555 & var0);
+    var0 = (0xd5555555 & var0 >>> 1) + (0x55555555 & var0);
       var0 = ((0xcccccccc & var0) >>> 2) + (var0 & 0x33333333);
       var0 = 0xf0f0f0f & (var0 >>> 4) + var0;
       var0 += var0 >>> 8;
       var0 += var0 >>> 16;
       return 255 & var0;
-    } catch (RuntimeException var3) {
-      throw AbstractGameWorld
-          .cascadeException(var3, "uc.E(" + var0 + ',' + var1 + ')');
-    }
   }
 
   public static void method2081(int var0) {
-    try {
-      AbstractMouseWheel.anIntArrayArrayArray1903 = null;
+    AbstractMouseWheel.anIntArrayArrayArray1903 = null;
       if (var0 == 0) {
         AbstractMouseWheel.soundEffects = null;
       }
-    } catch (RuntimeException var2) {
-      throw AbstractGameWorld.cascadeException(var2, "uc.A(" + var0 + ')');
-    }
   }
 
   public static void drawScene(int var0, int var1, int var2, byte[][][] var3,

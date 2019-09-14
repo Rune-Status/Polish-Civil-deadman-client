@@ -33,8 +33,7 @@ public final class DummyClass13 {
   }
 
   public static void method2195(int var0, int var1) {
-    try {
-      short var2 = 256;
+    short var2 = 256;
       if (var0 > var2) {
         var0 = var2;
       }
@@ -145,37 +144,25 @@ public final class DummyClass13 {
           }
         }
       }
-
-    } catch (RuntimeException var11) {
-      throw AbstractGameWorld.cascadeException(var11, "vl.E(" + var0 + ',' + var1 + ')');
-    }
   }
 
   public static void method2196(int var0) {
-    try {
-      TextureSampler25.aClass93_3412.method1523((byte) -107);
+    TextureSampler25.aClass93_3412.method1523((byte) -107);
       if (var0 != 128) {
         DummyClass13.anInt2024 = 111;
       }
 
       TextureSampler2.aClass93_3369.method1523((byte) -110);
-    } catch (RuntimeException var2) {
-      throw AbstractGameWorld.cascadeException(var2, "vl.D(" + var0 + ')');
-    }
   }
 
   public static void method2197(boolean var0) {
-    try {
-      if (var0) {
+    if (var0) {
         DummyClass13.anIntArray2021 = null;
         DummyClass13.aClass94_2018 = null;
         DummyClass13.anIntArray2017 = null;
         DummyClass13.models = null;
         DummyClass13.aClass93_2016 = null;
       }
-    } catch (RuntimeException var2) {
-      throw AbstractGameWorld.cascadeException(var2, "vl.C(" + var0 + ')');
-    }
   }
 
 }

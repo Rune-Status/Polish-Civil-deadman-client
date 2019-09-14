@@ -12,17 +12,12 @@ public final class Deque {
 
 
   public Deque() {
-    try {
-      this.root.prevNode = this.root;
+    this.root.prevNode = this.root;
       this.root.nextNode = this.root;
-    } catch (RuntimeException var2) {
-      throw AbstractGameWorld.cascadeException(var2, "ih.<init>()");
-    }
   }
 
   public void clear(int var1 ) {
-    try {
-      while (true) {
+    while (true) {
         Node var2 = this.root.nextNode;
         if (var2 == this.root) {
           if (var1 > -47) {
@@ -35,14 +30,10 @@ public final class Deque {
 
         var2.unlinkNode();
       }
-    } catch (RuntimeException var3) {
-      throw AbstractGameWorld.cascadeException(var3, "ih.C(" + var1 + ')');
-    }
   }
 
   public Node method1212(int var1 ) {
-    try {
-      Node var2 = this.root.prevNode;
+    Node var2 = this.root.prevNode;
       if (var1 != 2) {
         Deque.method1213(56, null);
       }
@@ -54,14 +45,10 @@ public final class Deque {
         this.iterator = var2.prevNode;
         return var2;
       }
-    } catch (RuntimeException var3) {
-      throw AbstractGameWorld.cascadeException(var3, "ih.B(" + var1 + ')');
-    }
   }
 
   public void addLast(Node var2 ) {
-    try {
-      if (null != var2.prevNode) {
+    if (null != var2.prevNode) {
         var2.unlinkNode();
       }
 
@@ -70,16 +57,10 @@ public final class Deque {
 
       var2.prevNode.nextNode = var2;
       var2.nextNode.prevNode = var2;
-
-    } catch (RuntimeException var4) {
-      throw AbstractGameWorld.cascadeException(var4,
-        "ih.D(" + (var2 != null ? "{...}" : "null") + ')');
-    }
   }
 
   public void method1216(int var1, Node var2 ) {
-    try {
-      if (null != var2.prevNode) {
+    if (null != var2.prevNode) {
         var2.unlinkNode();
       }
 
@@ -90,16 +71,10 @@ public final class Deque {
       if (var1 != 64) {
         this.getNext();
       }
-
-    } catch (RuntimeException var4) {
-      throw AbstractGameWorld.cascadeException(var4,
-        "ih.N(" + var1 + ',' + (var2 != null ? "{...}" : "null") + ')');
-    }
   }
 
   public Node method1219(int var1 ) {
-    try {
-      if (var1 < 13) {
+    if (var1 < 13) {
         this.root = null;
       }
 
@@ -111,14 +86,10 @@ public final class Deque {
         this.iterator = var2.prevNode;
         return var2;
       }
-    } catch (RuntimeException var3) {
-      throw AbstractGameWorld.cascadeException(var3, "ih.H(" + var1 + ')');
-    }
   }
 
   public Node method1220(byte var1 ) {
-    try {
-      Node var2 = this.root.nextNode;
+    Node var2 = this.root.nextNode;
       if (var1 != -3) {
         return null;
       } else if (this.root != var2) {
@@ -127,15 +98,10 @@ public final class Deque {
       } else {
         return null;
       }
-    } catch (RuntimeException var3) {
-      throw AbstractGameWorld.cascadeException(var3, "ih.E(" + var1 + ')');
-    }
   }
 
   public Node getNext() {
-    try {
-
-      Node var2 = this.iterator;
+    Node var2 = this.iterator;
       if (var2 == this.root) {
         this.iterator = null;
         return null;
@@ -143,15 +109,10 @@ public final class Deque {
         this.iterator = var2.nextNode;
         return var2;
       }
-
-    } catch (RuntimeException var3) {
-      throw AbstractGameWorld.cascadeException(var3, "ih.L()");
-    }
   }
 
   public Node getFirst() {
-    try {
-      Node var2 = this.root.nextNode;
+    Node var2 = this.root.nextNode;
       if (this.root == var2) {
         this.iterator = null;
         return null;
@@ -159,9 +120,6 @@ public final class Deque {
         this.iterator = var2.nextNode;
         return var2;
       }
-    } catch (RuntimeException var3) {
-      throw AbstractGameWorld.cascadeException(var3, "ih.F()");
-    }
   }
 
   public static SceneSomething2 method1209(int var0, int var1, int var2) {
@@ -176,8 +134,7 @@ public final class Deque {
   }
 
   public static Parameter method1210(int var0, int var1) {
-    try {
-      Parameter var2 = (Parameter) DummyClass6.aClass47_2041.get(var1, 1400);
+    Parameter var2 = (Parameter) DummyClass6.aClass47_2041.get(var1, 1400);
       if (var0 != 64) {
         Deque.method1218(false, -77, -82);
       }
@@ -194,9 +151,6 @@ public final class Deque {
       } else {
         return var2;
       }
-    } catch (RuntimeException var4) {
-      throw AbstractGameWorld.cascadeException(var4, "ih.G(" + var0 + ',' + var1 + ')');
-    }
   }
 
   public static void method1213(int var0, SomethingGl0[] var1) {
@@ -204,8 +158,7 @@ public final class Deque {
   }
 
   public static void method1214(int var0, int var1, int var2, int var3, int var4) {
-    try {
-      AreaSoundEffect var5;
+    AreaSoundEffect var5;
       for (
         var5 = (AreaSoundEffect) Node.aClass61_78.getFirst();
         var5 != null; var5 = (AreaSoundEffect) Node.aClass61_78.getNext()) {
@@ -315,31 +268,17 @@ public final class Deque {
         }
 
       }
-    } catch (RuntimeException var9) {
-      throw AbstractGameWorld.cascadeException(var9,
-        "ih.K(" + var0 + ',' + var1 + ',' + var2 + ',' + var3 + ',' + var4 + ')');
-    }
   }
 
   public static void method1217(int var0) {
-    try {
-      Deque.aClass93_939 = null;
+    Deque.aClass93_939 = null;
       if (var0 != 0) {
         Deque.method1213(56, null);
       }
-
-    } catch (RuntimeException var2) {
-      throw AbstractGameWorld.cascadeException(var2, "ih.J(" + var0 + ')');
-    }
   }
 
   public static GameString method1218(boolean var0, int var1, int var2) {
-    try {
-      return var1 <= 122 ? null : AbstractObjectNodeWrapper.method1723((byte) -128, var0, 10, var2);
-    } catch (RuntimeException var4) {
-      throw AbstractGameWorld.cascadeException(var4,
-        "ih.A(" + var0 + ',' + var1 + ',' + var2 + ')');
-    }
+    return var1 <= 122 ? null : AbstractObjectNodeWrapper.method1723((byte) -128, var0, 10, var2);
   }
 
 }

@@ -21,28 +21,17 @@ public class Something3d2 extends Something3dRoot {
       float var8 ) {
     super(var1, var2, var3, var4, var5);
 
-    try {
-      this.anInt3022 = (int) (4096.0F * var8);
+    this.anInt3022 = (int) (4096.0F * var8);
       this.anInt3026 = (int) (var7 * 4096.0F);
       this.anInt3018 = this.anInt3021 = (int) (Math.pow(0.5D, -var6) * 4096.0D);
-    } catch (RuntimeException var10) {
-      throw AbstractGameWorld.cascadeException(var10,
-        "we.<init>(" + var1 + ',' + var2 + ',' + var3 + ',' + var4 + ',' + var5 + ',' + var6 + ','
-          + var7 + ',' + var8 + ')');
-    }
   }
 
   public void method2244(int var1, byte var2 ) {
-    try {
-      this.aByteArray3025[var1] = var2;
-    } catch (RuntimeException var4) {
-      throw AbstractGameWorld.cascadeException(var4, "we.G(" + var1 + ',' + var2 + ')');
-    }
+    this.aByteArray3025[var1] = var2;
   }
 
   public final void method2231(byte var1) {
-    try {
-      this.anInt3018 = this.anInt3021;
+    this.anInt3018 = this.anInt3021;
       this.anInt3029 >>= 4;
       if (0 > this.anInt3029) {
         this.anInt3029 = 0;
@@ -54,27 +43,18 @@ public class Something3d2 extends Something3dRoot {
       if (var1 == -92) {
         this.anInt3029 = 0;
       }
-    } catch (RuntimeException var3) {
-      throw AbstractGameWorld.cascadeException(var3, "we.A(" + var1 + ')');
-    }
   }
 
   public final void method2233(int var1) {
-    try {
-      this.anInt3028 = 0;
+    this.anInt3028 = 0;
       this.anInt3029 = 0;
       if (var1 != -949697716) {
         Something3d2.method2249((byte) -82, -73);
       }
-
-    } catch (RuntimeException var3) {
-      throw AbstractGameWorld.cascadeException(var3, "we.C(" + var1 + ')');
-    }
   }
 
   public final void method2237(int var1, int var2, int var3) {
-    try {
-      if (0 == var2) {
+    if (0 == var2) {
         this.anInt3023 = 4096;
         this.anInt3024 = -(-1 >= ~var1 ? var1 : -var1) + this.anInt3026;
         this.anInt3024 = this.anInt3024 * this.anInt3024 >> 12;
@@ -99,29 +79,19 @@ public class Something3d2 extends Something3dRoot {
       if (var3 != -20975) {
         this.method2244(-80, (byte) -24);
       }
-
-    } catch (RuntimeException var5) {
-      throw AbstractGameWorld.cascadeException(var5,
-        "we.H(" + var1 + ',' + var2 + ',' + var3 + ')');
-    }
   }
 
   public static void method2245(byte var0) {
-    try {
-      Something3d2.aClass33_3019 = null;
+    Something3d2.aClass33_3019 = null;
       if (var0 != -74) {
         Something3d2.aByteArrayArray3027 = null;
       }
 
       Something3d2.aByteArrayArray3027 = null;
-    } catch (RuntimeException var2) {
-      throw AbstractGameWorld.cascadeException(var2, "we.I(" + var0 + ')');
-    }
   }
 
   public static int method2246(byte var0, int var1) {
-    try {
-      int var2 = var1 * (var1 * var1 >> 12) >> 12;
+    int var2 = var1 * (var1 * var1 >> 12) >> 12;
       if (var0 <= 59) {
         Something3d2.aByteArrayArray3027 = null;
       }
@@ -129,14 +99,10 @@ public class Something3d2 extends Something3dRoot {
       int var3 = 6 * var1 - '\uf000';
       int var4 = (var1 * var3 >> 12) + '\ua000';
       return var2 * var4 >> 12;
-    } catch (RuntimeException var5) {
-      throw AbstractGameWorld.cascadeException(var5, "we.E(" + var0 + ',' + var1 + ')');
-    }
   }
 
   public static int method2247(byte var0, int var1, Widget var2) {
-    try {
-      if (var2.anIntArrayArray298 != null && ~var1 > ~var2.anIntArrayArray298.length) {
+    if (var2.anIntArrayArray298 != null && ~var1 > ~var2.anIntArrayArray298.length) {
         int var3 = -92 % ((var0 - 71) / 34);
 
         try {
@@ -298,29 +264,20 @@ public class Something3d2 extends Something3dRoot {
       } else {
         return -2;
       }
-    } catch (RuntimeException var16) {
-      throw AbstractGameWorld.cascadeException(var16,
-        "we.D(" + var0 + ',' + var1 + ',' + (var2 != null ? "{...}" : "null") + ')');
-    }
   }
 
   public static boolean method2248(int var0, int var1) {
-    try {
-      if (var0 != -157) {
+    if (var0 != -157) {
         Something3d2.aClass33_3019 = null;
       }
 
       return 32 <= var1 && -127 <= ~var1 || (~var1 <= -161 && 255 >= var1 || (
           ~var1 == -129 || -141 == ~var1
               || ~var1 == -152 || ~var1 == -157 || var1 == 159));
-    } catch (RuntimeException var3) {
-      throw AbstractGameWorld.cascadeException(var3, "we.B(" + var0 + ',' + var1 + ')');
-    }
   }
 
   public static void method2249(byte var0, int var1) {
-    try {
-      Node var2 = DummyClass23.aClass130_1659.getFirst(var0 + -6);
+    Node var2 = DummyClass23.aClass130_1659.getFirst(var0 + -6);
       if (var0 != 83) {
         Something3d2.aClass33_3019 = null;
       }
@@ -330,10 +287,6 @@ public class Something3d2 extends Something3dRoot {
           var2.unlinkNode();
         }
       }
-
-    } catch (RuntimeException var3) {
-      throw AbstractGameWorld.cascadeException(var3, "we.F(" + var0 + ',' + var1 + ')');
-    }
   }
 
 }

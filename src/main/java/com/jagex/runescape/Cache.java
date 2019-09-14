@@ -20,20 +20,15 @@ public final class Cache {
 
 
   public Cache(int size ) {
-    try {
-      int tableSize = 1;
+    int tableSize = 1;
       for (this.capacity = size; tableSize + tableSize < size; tableSize += tableSize) {
       }
       this.size = size;
       this.table = new HashTable(tableSize);
-    } catch (RuntimeException var3) {
-      throw AbstractGameWorld.cascadeException(var3, "gn.<init>(" + size + ')');
-    }
   }
 
   public SubNode get(long var1, int var3 ) {
-    try {
-      if (var3 != 1400) {
+    if (var3 != 1400) {
         this.capacity = -79;
       }
 
@@ -43,22 +38,14 @@ public final class Cache {
       }
 
       return var4;
-    } catch (RuntimeException var5) {
-      throw AbstractGameWorld.cascadeException(var5, "gn.N(" + var1 + ',' + var3 + ')');
-    }
   }
 
   public Node method1094(int var1 ) {
-    try {
-      return var1 != 0 ? null : this.table.getFirst(38);
-    } catch (RuntimeException var3) {
-      throw AbstractGameWorld.cascadeException(var3, "gn.A(" + var1 + ')');
-    }
+    return var1 != 0 ? null : this.table.getFirst(38);
   }
 
   public void put(long var2, SubNode var1 ) {
-    try {
-      if (-1 == ~this.capacity) {
+    if (-1 == ~this.capacity) {
         SubNode var5 = this.queue.poll();
         var5.unlinkNode();
         var5.unlinkSubNode();
@@ -73,27 +60,18 @@ public final class Cache {
 
       this.table.put(var2, var1);
       this.queue.addLast(var1);
-    } catch (RuntimeException var6) {
-      throw AbstractGameWorld.cascadeException(var6,
-        "gn.L(" + (var1 != null ? "{...}" : "null") + ',' + var2 + ')');
-    }
   }
 
   public Node method1099(int var1 ) {
-    try {
-      if (var1 != -1) {
+    if (var1 != -1) {
         Cache.aClass93_743 = null;
       }
 
       return this.table.getNext(-119);
-    } catch (RuntimeException var3) {
-      throw AbstractGameWorld.cascadeException(var3, "gn.F(" + var1 + ')');
-    }
   }
 
   public void method1101(int var1 ) {
-    try {
-      this.queue.clear();
+    this.queue.clear();
       this.table.clear(-112);
       this.aClass3_Sub28_744 = new SubNode();
       if (var1 != 2) {
@@ -101,14 +79,10 @@ public final class Cache {
       }
 
       this.capacity = this.size;
-    } catch (RuntimeException var3) {
-      throw AbstractGameWorld.cascadeException(var3, "gn.E(" + var1 + ')');
-    }
   }
 
   public static boolean method1088(boolean var0) {
-    try {
-      if (Structure.aBoolean3641) {
+    if (Structure.aBoolean3641) {
         try {
           FileSystem.aClass94_106.method1577(-1857);
           return true;
@@ -121,15 +95,11 @@ public final class Cache {
       }
 
       return false;
-    } catch (RuntimeException var3) {
-      throw AbstractGameWorld.cascadeException(var3, "gn.K(" + var0 + ')');
-    }
   }
 
   public static AnimationSomething method1089(FileUnpacker bases, boolean var1, FileUnpacker frames,
                                              byte var3, int var4) {
-    try {
-      boolean var5 = true;
+    boolean var5 = true;
       if (var3 <= 71) {
         return null;
       } else {
@@ -164,28 +134,17 @@ public final class Cache {
           return null;
         }
       }
-    } catch (RuntimeException var12) {
-      throw AbstractGameWorld.cascadeException(var12,
-        "gn.J(" + (bases != null ? "{...}" : "null") + ',' + var1 + ',' + (frames != null ?
-          "{...}" :
-          "null") + ',' + var3 + ',' + var4 + ')');
-    }
   }
 
   public static GameString createString(int len) {
-    try {
-      GameString str = new GameString();
+    GameString str = new GameString();
       str.length = 0;
       str.bytes = new byte[len];
       return str;
-    } catch (RuntimeException var3) {
-      throw AbstractGameWorld.cascadeException(var3, "gn.M(" + len + ')');
-    }
   }
 
   public static void method1091(boolean var0, int var1) {
-    try {
-      byte var2;
+    byte var2;
       byte[][] fileData;
       if (GlRenderer.useOpenGlRenderer && var0) {
         var2 = 1;
@@ -229,31 +188,21 @@ public final class Cache {
           }
         }
       }
-
-    } catch (RuntimeException var10) {
-      throw AbstractGameWorld.cascadeException(var10, "gn.I(" + var0 + ',' + var1 + ')');
-    }
   }
 
   public static void method1093(boolean var0) {
-    try {
-      if (var0) {
+    if (var0) {
         Cache.method1093(true);
       }
 
       for (int var1 = 0; var1 < 100; ++var1) {
         GroundItemNode.aBooleanArray3674[var1] = true;
       }
-
-    } catch (RuntimeException var2) {
-      throw AbstractGameWorld.cascadeException(var2, "gn.H(" + var0 + ')');
-    }
   }
 
   public static void method1095(int x, int var1, int var2, Widget[] var3, int width, int var5, int y,
                                int height, byte var8, int var9) {
-    try {
-      if (GlRenderer.useOpenGlRenderer) {
+    if (GlRenderer.useOpenGlRenderer) {
         GlUtils.clip(x, y, width, height);
       } else {
         DummyClass47.method1324(x, y, width, height);
@@ -1312,31 +1261,20 @@ public final class Cache {
       if (var8 <= 31) {
         Cache.quickchats = null;
       }
-
-    } catch (RuntimeException var33) {
-      throw AbstractGameWorld.cascadeException(var33,
-        "gn.B(" + x + ',' + var1 + ',' + var2 + ',' + (var3 != null ? "{...}" : "null") + ','
-          + width + ',' + var5 + ',' + y + ',' + height + ',' + var8 + ',' + var9 + ')');
-    }
   }
 
   public static void method1096(byte var0) {
-    try {
-      Cache.quickchats = null;
+    Cache.quickchats = null;
       if (var0 < 84) {
         Cache.method1091(true, -127);
       }
 
       Cache.aClass94_750 = null;
       Cache.aClass93_743 = null;
-    } catch (RuntimeException var2) {
-      throw AbstractGameWorld.cascadeException(var2, "gn.G(" + var0 + ')');
-    }
   }
 
   public static void method1098(byte var0) {
-    try {
-      if (-129 < ~AreaSoundEffect.anInt2309) {
+    if (-129 < ~AreaSoundEffect.anInt2309) {
         AreaSoundEffect.anInt2309 = 128;
       }
 
@@ -1389,15 +1327,10 @@ public final class Cache {
       } else {
         SomethingTexture4.anInt2670 += (-SomethingTexture4.anInt2670 + var5) / 24;
       }
-
-    } catch (RuntimeException var9) {
-      throw AbstractGameWorld.cascadeException(var9, "gn.D(" + var0 + ')');
-    }
   }
 
   public static int repackHSL(int lightness, boolean var1, int hsl) {
-    try {
-      if (0 == ~hsl) {
+    if (0 == ~hsl) {
         return 12345678;
       } else {
 
@@ -1412,10 +1345,6 @@ public final class Cache {
 
         return lightness + ('\uff80' & hsl);
       }
-    } catch (RuntimeException var4) {
-      throw AbstractGameWorld.cascadeException(var4,
-        "gn.C(" + lightness + ',' + var1 + ',' + hsl + ')');
-    }
   }
 
 }

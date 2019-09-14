@@ -15,17 +15,11 @@ public final class GroundItemNode extends SubNode {
 
 
   public GroundItemNode(GroundItem var1 ) {
-    try {
-      this.aClass140_Sub7_3676 = var1;
-    } catch (RuntimeException var3) {
-      throw AbstractGameWorld.cascadeException(var3,
-        "pa.<init>(" + (var1 != null ? "{...}" : "null") + ')');
-    }
+    this.aClass140_Sub7_3676 = var1;
   }
 
   public static void method626(int var0) {
-    try {
-      if (null != Buffer.aClass3_Sub28_Sub3_2600) {
+    if (null != Buffer.aClass3_Sub28_Sub3_2600) {
         if (GameObject.anInt2737 < 10) {
           if (!TextureSampler23.worldMaps.method2127((byte) -83,
             Buffer.aClass3_Sub28_Sub3_2600.aClass94_3561)) {
@@ -221,28 +215,20 @@ public final class GroundItemNode extends SubNode {
           SomethingTexture4.resetFrameRegulator();
         }
       }
-    } catch (RuntimeException var7) {
-      throw AbstractGameWorld.cascadeException(var7, "pa.B(" + var0 + ')');
-    }
   }
 
   public static void method627(byte var0) {
-    try {
-      if (var0 <= -112) {
+    if (var0 <= -112) {
         GroundItemNode.username = null;
         GroundItemNode.password = null;
         GroundItemNode.updatedMapsData = null;
         GroundItemNode.EMPTY_STRING = null;
         GroundItemNode.aBooleanArray3674 = null;
       }
-    } catch (RuntimeException var2) {
-      throw AbstractGameWorld.cascadeException(var2, "pa.A(" + var0 + ')');
-    }
   }
 
   public static void method628(int var0, int var1, int var2, Player var3) {
-    try {
-      if (var0 != 0) {
+    if (var0 != 0) {
         GroundItemNode.aBooleanArray3674 = null;
       }
 
@@ -277,11 +263,6 @@ public final class GroundItemNode extends SubNode {
             183921384, var3.anInt2819, var3 == TextureCache.localPlayer, var3.anInt2832);
         }
       }
-
-    } catch (RuntimeException var6) {
-      throw AbstractGameWorld.cascadeException(var6,
-        "pa.C(" + var0 + ',' + var1 + ',' + var2 + ',' + (var3 != null ? "{...}" : "null") + ')');
-    }
   }
 
 }

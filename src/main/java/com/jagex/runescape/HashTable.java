@@ -24,8 +24,7 @@ public final class HashTable {
 
 
   public HashTable(int var1 ) {
-    try {
-      this.nodes = new Node[var1];
+    this.nodes = new Node[var1];
       this.capacity = var1;
 
       for (int var2 = 0; var2 < var1; ++var2) {
@@ -33,15 +32,10 @@ public final class HashTable {
         var3.prevNode = var3;
         var3.nextNode = var3;
       }
-
-    } catch (RuntimeException var4) {
-      throw AbstractGameWorld.cascadeException(var4, "sc.<init>(" + var1 + ')');
-    }
   }
 
   public void clear(int var1 ) {
-    try {
-      int var2 = 0;
+    int var2 = 0;
 
       while (var2 < this.capacity) {
         Node var3 = this.nodes[var2];
@@ -60,23 +54,15 @@ public final class HashTable {
       this.aClass3_1713 = null;
       var2 = 1 % ((73 - var1) / 34);
       this.iterator = null;
-    } catch (RuntimeException var5) {
-      throw AbstractGameWorld.cascadeException(var5, "sc.G(" + var1 + ')');
-    }
   }
 
   public Node getFirst(int var1 ) {
-    try {
-      this.iteratorBucketId = 0;
+    this.iteratorBucketId = 0;
       return this.getNext(-66);
-    } catch (RuntimeException var3) {
-      throw AbstractGameWorld.cascadeException(var3, "sc.B(" + var1 + ')');
-    }
   }
 
   public Node getNext(int var1 ) {
-    try {
-      Node var2;
+    Node var2;
       if (-1 > ~this.iteratorBucketId && this.aClass3_1713 != this.nodes[
           this.iteratorBucketId
         - 1]) {
@@ -99,14 +85,10 @@ public final class HashTable {
         this.aClass3_1713 = var2.nextNode;
         return var2;
       }
-    } catch (RuntimeException var3) {
-      throw AbstractGameWorld.cascadeException(var3, "sc.K(" + var1 + ')');
-    }
   }
 
   public void put(long var3, Node var2 ) {
-    try {
-      if (null != var2.prevNode) {
+    if (null != var2.prevNode) {
         var2.unlinkNode();
       }
 
@@ -116,16 +98,10 @@ public final class HashTable {
       var2.prevNode = var5.prevNode;
       var2.prevNode.nextNode = var2;
       var2.nextNode.prevNode = var2;
-    } catch (RuntimeException var6) {
-      throw AbstractGameWorld.cascadeException(var6,
-        "sc.E(" + (var2 != null ? "{...}" : "null") + ',' + var3 + ')');
-    }
   }
 
   public Node get(long var1 ) {
-    try {
-
-      this.lastFetchedKey = var1;
+    this.lastFetchedKey = var1;
       Node var4 = this.nodes[(int) (var1 & (-1 + this.capacity))];
       for (
           this.iterator = var4.nextNode;
@@ -139,14 +115,10 @@ public final class HashTable {
 
       this.iterator = null;
       return null;
-    } catch (RuntimeException var6) {
-      throw AbstractGameWorld.cascadeException(var6, "sc.C(" + var1 + ')');
-    }
   }
 
   public int getSize() {
-    try {
-      int var3 = 0;
+    int var3 = 0;
 
       for (int var4 = 0; var4 < this.capacity; ++var4) {
         Node var5 = this.nodes[var4];
@@ -157,15 +129,10 @@ public final class HashTable {
       }
 
       return var3;
-    } catch (RuntimeException var7) {
-      throw AbstractGameWorld.cascadeException(var7, "sc.N()");
-    }
   }
 
   public int getNodes(Node[] var1 ) {
-    try {
-
-      int var3 = 0;
+    int var3 = 0;
 
       for (int var4 = 0; var4 < this.capacity; ++var4) {
         Node var5 = this.nodes[var4];
@@ -176,15 +143,10 @@ public final class HashTable {
       }
 
       return var3;
-    } catch (RuntimeException var7) {
-      throw AbstractGameWorld.cascadeException(var7,
-        "sc.D(" + (var1 != null ? "{...}" : "null") + ')');
-    }
   }
 
   public Node getLastFetchedNode() {
-    try {
-      if (null != this.iterator) {
+    if (null != this.iterator) {
         Node var2 = this.nodes[(int) (this.lastFetchedKey
             & (-1 + this.capacity))];
         while (var2 != this.iterator) {
@@ -202,22 +164,14 @@ public final class HashTable {
       } else {
         return null;
       }
-    } catch (RuntimeException var4) {
-      throw AbstractGameWorld.cascadeException(var4, "sc.A()");
-    }
   }
 
   public int getCapacity() {
-    try {
-      return this.capacity;
-    } catch (RuntimeException var3) {
-      throw AbstractGameWorld.cascadeException(var3, "sc.F()");
-    }
+    return this.capacity;
   }
 
   public static void method1772(int var0, int var1, int var2, NPC var3) {
-    try {
-      if (var3.animationId == var1 && -1 != var1) {
+    if (var3.animationId == var1 && -1 != var1) {
         AnimationSequence var4 = GameClient.method45(var1, (byte) -20);
         int var5 = var4.anInt1845;
         if (var5 == 1) {
@@ -252,16 +206,10 @@ public final class HashTable {
       if (var2 != 39) {
         HashTable.anInt1711 = 41;
       }
-
-    } catch (RuntimeException var6) {
-      throw AbstractGameWorld.cascadeException(var6,
-        "sc.J(" + var0 + ',' + var1 + ',' + var2 + ',' + (var3 != null ? "{...}" : "null") + ')');
-    }
   }
 
   public static void method1774(int var0) {
-    try {
-      HashTable.aClass94_1698 = null;
+    HashTable.aClass94_1698 = null;
       HashTable.aClass94_1707 = null;
       HashTable.aBooleanArray1712 = null;
       HashTable.aClass94_1702 = null;
@@ -273,9 +221,6 @@ public final class HashTable {
       }
 
       HashTable.aClass94_1710 = null;
-    } catch (RuntimeException var2) {
-      throw AbstractGameWorld.cascadeException(var2, "sc.H(" + var0 + ')');
-    }
   }
 
   public static void method1775() {
@@ -289,8 +234,7 @@ public final class HashTable {
   }
 
   public static AbstractTextureSampler createTextureSampler(int type, boolean var1) {
-    try {
-      if (-1 == ~type) {
+    if (-1 == ~type) {
         return new TextureSampler0();
       } else if (-2 != ~type) {
         if (2 == type) {
@@ -423,9 +367,6 @@ public final class HashTable {
       } else {
         return new TextureSampler1();
       }
-    } catch (RuntimeException var3) {
-      throw AbstractGameWorld.cascadeException(var3, "sc.I(" + type + ',' + var1 + ')');
-    }
   }
 
 }

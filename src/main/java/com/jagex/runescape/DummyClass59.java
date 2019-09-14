@@ -18,17 +18,11 @@ public final class DummyClass59 {
 
 
   public static int method1040(int var0, int var1, byte var2, int var3) {
-    try {
-      return var2 != 0 ? -127 : (~var3 < ~var1 ? var3 : (var1 > var0 ? var0 : var1));
-    } catch (RuntimeException var5) {
-      throw AbstractGameWorld.cascadeException(var5,
-        "gd.C(" + var0 + ',' + var1 + ',' + var2 + ',' + var3 + ')');
-    }
+    return var2 != 0 ? -127 : (~var3 < ~var1 ? var3 : (var1 > var0 ? var0 : var1));
   }
 
   public static void method1041(long var0, int var2) {
-    try {
-      TextureSampler12.secureBuffer.position = 0;
+    TextureSampler12.secureBuffer.position = 0;
       TextureSampler12.secureBuffer.writeByte(186);
       TextureSampler12.secureBuffer.writeLong(var0);
       DummyCanvas.anInt23 = 1;
@@ -37,68 +31,47 @@ public final class DummyClass59 {
         SpotAnimationConfig.anInt548 = 0;
         HashTable.anInt1711 = -3;
       }
-    } catch (RuntimeException var4) {
-      throw AbstractGameWorld.cascadeException(var4, "gd.D(" + var0 + ',' + var2 + ')');
-    }
   }
 
   public static void method1042(boolean var0) {
-    try {
-      DummyClass59.soundEffects = null;
+    DummyClass59.soundEffects = null;
       DummyClass59.aClass94_676 = null;
 
       DummyClass59.aClass94_672 = null;
       DummyClass59.anIntArray675 = null;
       DummyClass59.aClass94_673 = null;
       DummyClass59.titlebackground = null;
-    } catch (RuntimeException var2) {
-      throw AbstractGameWorld.cascadeException(var2, "gd.A(" + var0 + ')');
-    }
   }
 
   public static SoftwareDirectColorSprite method1043(int var0, FileUnpacker var1, int var2,
                                                     int var3) {
-    try {
-      if (var2 != -3178) {
+    if (var2 != -3178) {
         DummyClass59.method1044(-55);
       }
 
       return SomethingTexture4.loadSprites(var1, var0, var3, -30901) ?
         DummyClass26.method1722(-53) :
         null;
-    } catch (RuntimeException var5) {
-      throw AbstractGameWorld.cascadeException(var5,
-        "gd.G(" + var0 + ',' + (var1 != null ? "{...}" : "null") + ',' + var2 + ',' + var3 + ')');
-    }
   }
 
   public static void method1044(int var0) {
-    try {
-      if (var0 != -3782) {
+    if (var0 != -3782) {
         DummyClass59.aClass94_672 = null;
       }
 
       ClientScriptCall.aClass93_2450.method1523((byte) -109);
-    } catch (RuntimeException var2) {
-      throw AbstractGameWorld.cascadeException(var2, "gd.E(" + var0 + ')');
-    }
   }
 
   public static void method1045(int var0) {
-    try {
-      if (var0 != -19761) {
+    if (var0 != -19761) {
         DummyClass59.method1046(-110);
       }
 
       DummyHashTable.aClass93_1683.method1524(3);
-    } catch (RuntimeException var2) {
-      throw AbstractGameWorld.cascadeException(var2, "gd.B(" + var0 + ')');
-    }
   }
 
   public static void method1046(int var0) {
-    try {
-      DummyClass5.method2210((byte) -90, false);
+    DummyClass5.method2210((byte) -90, false);
       TextureSampler5.anInt3293 = 0;
       boolean var1 = true;
 
@@ -442,9 +415,6 @@ public final class DummyClass59 {
       } else {
         DummyClass8.anInt4019 = 1;
       }
-    } catch (RuntimeException var10) {
-      throw AbstractGameWorld.cascadeException(var10, "gd.F(" + var0 + ')');
-    }
   }
 
 }

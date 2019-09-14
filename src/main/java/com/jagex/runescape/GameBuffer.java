@@ -68,31 +68,18 @@ public final class GameBuffer extends Buffer {
 
   public void writePacket(int id) {
     System.out.println("GameBuffer.writePacket " + id);
-    try {
-      this.bytes[this.position++] = (byte) (id + this.cipher.getNextValue());
-    } catch (RuntimeException var4) {
-      throw AbstractGameWorld.cascadeException(var4, "i.B(" + id + ')');
-    }
+    this.bytes[this.position++] = (byte) (id + this.cipher.getNextValue());
   }
 
   public int readPacketId() {
-    try {
-      return 255 & this.bytes[this.position++] - this.cipher.getNextValue();
-    } catch (RuntimeException var3) {
-      throw AbstractGameWorld.cascadeException(var3, "i.P()");
-    }
+    return 255 & this.bytes[this.position++] - this.cipher.getNextValue();
   }
 
   public void method818(boolean var1) {
-    try {
-      this.position = (this.bitOffset + 7) / 8;
+    this.position = (this.bitOffset + 7) / 8;
       if (var1) {
         this.readBits(-75);
       }
-
-    } catch (RuntimeException var3) {
-      throw AbstractGameWorld.cascadeException(var3, "i.Q(" + ')');
-    }
   }
 
   public static void printMessage(GameString var0, int var1, GameString var2,

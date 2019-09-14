@@ -912,8 +912,7 @@ public class SoftwareDirectColorSprite extends AbstractDirectColorSprite {
   public void method660(int var1,int var2, int var3, int var4, int var5, int var6,
       double var7,
       int var9 ) {
-    try {
-      int var10 = -var3 / 2;
+    int var10 = -var3 / 2;
       int var11 = -var4 / 2;
       int var12 = (int) (Math.sin(var7) * 65536.0D);
       int var13 = (int) (Math.cos(var7) * 65536.0D);
@@ -944,8 +943,6 @@ public class SoftwareDirectColorSprite extends AbstractDirectColorSprite {
         var15 += var13;
         var16 += DummyClass47.anInt1092;
       }
-    } catch (Exception var21) {
-    }
 
   }
 
@@ -968,8 +965,7 @@ public class SoftwareDirectColorSprite extends AbstractDirectColorSprite {
       int var8,
       int[] var9,
       int[] var10 ) {
-    try {
-      int var11 = -var3 / 2;
+    int var11 = -var3 / 2;
       int var12 = -var4 / 2;
       int var13 = (int) (Math.sin(var7 / 326.11D) * 65536.0D);
       int var14 = (int) (Math.cos(var7 / 326.11D) * 65536.0D);
@@ -996,8 +992,6 @@ public class SoftwareDirectColorSprite extends AbstractDirectColorSprite {
         var16 += var14;
         var17 += DummyClass47.anInt1092;
       }
-    } catch (Exception var22) {
-    }
 
   }
 
@@ -1122,8 +1116,7 @@ public class SoftwareDirectColorSprite extends AbstractDirectColorSprite {
       int var8,
       int[] var9,
       int[] var10 ) {
-    try {
-      int var11 = -var3 / 2;
+    int var11 = -var3 / 2;
       int var12 = -var4 / 2;
       int var13 = (int) (Math.sin(var7 / 326.11D) * 65536.0D);
       int var14 = (int) (Math.cos(var7 / 326.11D) * 65536.0D);
@@ -1155,8 +1148,6 @@ public class SoftwareDirectColorSprite extends AbstractDirectColorSprite {
         var16 += var14;
         var17 += DummyClass47.anInt1092;
       }
-    } catch (Exception var23) {
-    }
 
   }
 

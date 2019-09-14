@@ -23,8 +23,7 @@ public final class TextureSampler26 extends AbstractTextureSampler {
   }
 
   public int[] method154(int var1, byte var2 ) {
-    try {
-      int var3 = 69 / ((var2 - 30) / 36);
+    int var3 = 69 / ((var2 - 30) / 36);
       int[] var4 = this.monoChromaticImageCache.method1709(-16409, var1);
       if (this.monoChromaticImageCache.aBoolean1580) {
         int[] var5 = this.method152(0, var1, 32755);
@@ -36,14 +35,10 @@ public final class TextureSampler26 extends AbstractTextureSampler {
       }
 
       return var4;
-    } catch (RuntimeException var8) {
-      throw AbstractGameWorld.cascadeException(var8, "ca.D(" + var1 + ',' + var2 + ')');
-    }
   }
 
   public void parseConfig(int var1, Buffer var2, boolean var3 ) {
-    try {
-      if (!var3) {
+    if (!var3) {
         TextureSampler26.method196(true);
       }
 
@@ -54,16 +49,10 @@ public final class TextureSampler26 extends AbstractTextureSampler {
           this.anInt3074 = var2.readUnsignedShort();
         }
       }
-
-    } catch (RuntimeException var5) {
-      throw AbstractGameWorld.cascadeException(var5,
-        "ca.A(" + var1 + ',' + (var2 != null ? "{...}" : "null") + ',' + var3 + ')');
-    }
   }
 
   public static void method195(int var0) {
-    try {
-      int var1 = (NPC.anInt3995 >> 10) - -(WorldMapLabel.anInt1716 >> 3);
+    int var1 = (NPC.anInt3995 >> 10) - -(WorldMapLabel.anInt1716 >> 3);
       int var2 = (DummyClass49.anInt1111 >> 10) - -(ProceduralTexture.anInt1152 >> 3);
       if (var0 == 20479) {
         byte var3 = 0;
@@ -134,27 +123,18 @@ public final class TextureSampler26 extends AbstractTextureSampler {
 
         FileCacheRequester.rebuildScene(var3, var2, var1, var5, true, var4, true);
       }
-    } catch (RuntimeException var10) {
-      throw AbstractGameWorld.cascadeException(var10, "ca.F(" + var0 + ')');
-    }
   }
 
   public static void method196(boolean var0) {
-    try {
-      FileCache.aClass93_684.method1523((byte) -117);
+    FileCache.aClass93_684.method1523((byte) -117);
       DummyClass5.aClass93_2984.method1523((byte) -111);
       if (var0) {
         TextureSampler26.anIntArray3083 = null;
       }
-
-    } catch (RuntimeException var2) {
-      throw AbstractGameWorld.cascadeException(var2, "ca.B(" + var0 + ')');
-    }
   }
 
   public static void method197(int var0) {
-    try {
-      TextureSampler26.aClass94_3079 = null;
+    TextureSampler26.aClass94_3079 = null;
       TextureSampler26.anIntArray3076 = null;
       TextureSampler26.aClass61_3075 = null;
       TextureSampler26.anIntArray3082 = null;
@@ -163,14 +143,10 @@ public final class TextureSampler26 extends AbstractTextureSampler {
         TextureSampler26.anIntArray3083 = null;
         TextureSampler26.maps = null;
       }
-    } catch (RuntimeException var2) {
-      throw AbstractGameWorld.cascadeException(var2, "ca.O(" + var0 + ')');
-    }
   }
 
   public static void method198(boolean var0, int var1) {
-    try {
-      if (var1 != -32624) {
+    if (var1 != -32624) {
         TextureSampler26.method196(true);
       }
 
@@ -192,15 +168,10 @@ public final class TextureSampler26 extends AbstractTextureSampler {
           SomethingVolume15.method374(var6, var0, var5, var7, 0, BlockConfig.collisionMaps);
         }
       }
-
-    } catch (RuntimeException var8) {
-      throw AbstractGameWorld.cascadeException(var8, "ca.E(" + var0 + ',' + var1 + ')');
-    }
   }
 
   public static void method199(int var0, int var1, int var2, int var3) {
-    try {
-      if (var3 != -799) {
+    if (var3 != -799) {
         TextureSampler26.focused = true;
       }
 
@@ -213,11 +184,6 @@ public final class TextureSampler26 extends AbstractTextureSampler {
         TextureSampler26.anIntArray3083[SomethingLight0.anInt1552] = 0;
         ++SomethingLight0.anInt1552;
       }
-
-    } catch (RuntimeException var5) {
-      throw AbstractGameWorld.cascadeException(var5,
-        "ca.C(" + var0 + ',' + var1 + ',' + var2 + ',' + var3 + ')');
-    }
   }
 
 }

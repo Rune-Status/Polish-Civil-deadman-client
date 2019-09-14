@@ -13,28 +13,15 @@ public final class ObjectNode extends AbstractObjectNode {
   private final Object anObject4044;
 
   public ObjectNode(Object var1) {
-    try {
-      this.anObject4044 = var1;
-    } catch (RuntimeException var3) {
-      throw AbstractGameWorld.cascadeException(var3,
-          "he.<init>(" + (var1 != null ? "{...}" : "null") + ')');
-    }
+    this.anObject4044 = var1;
   }
 
   public Object getObject(boolean var1) {
-    try {
-      return !var1 ? null : this.anObject4044;
-    } catch (RuntimeException var3) {
-      throw AbstractGameWorld.cascadeException(var3, "he.B(" + var1 + ')');
-    }
+    return !var1 ? null : this.anObject4044;
   }
 
   public boolean method568(int var1) {
-    try {
-      return var1 != -22358;
-    } catch (RuntimeException var3) {
-      throw AbstractGameWorld.cascadeException(var3, "he.A(" + var1 + ')');
-    }
+    return var1 != -22358;
   }
 
   public static void method569(int var0, int var1) {
@@ -45,8 +32,7 @@ public final class ObjectNode extends AbstractObjectNode {
   }
 
   public static void method570(int var0) {
-    try {
-      ObjectNode.aClass94_4049 = null;
+    ObjectNode.aClass94_4049 = null;
       ObjectNode.anIntArray4050 = null;
       Mouse.INSTANCE = null;
       ObjectNode.aClass130_4046 = null;
@@ -58,9 +44,6 @@ public final class ObjectNode extends AbstractObjectNode {
       }
 
       ObjectNode.aClass93_4051 = null;
-    } catch (RuntimeException var2) {
-      throw AbstractGameWorld.cascadeException(var2, "he.D(" + var0 + ')');
-    }
   }
 
 }

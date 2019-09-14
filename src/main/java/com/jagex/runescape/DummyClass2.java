@@ -10,8 +10,7 @@ public class DummyClass2 {
   public static int[] anIntArray1681;
 
   public static void handleLogin() {
-    try {
-      if (0 != TextureSampler28.loginState
+    if (0 != TextureSampler28.loginState
           && 5 != TextureSampler28.loginState) {
         try {
           if (~(++VertexNormal.anInt820) < -2001) {
@@ -394,9 +393,6 @@ public class DummyClass2 {
         }
 
       }
-    } catch (RuntimeException var8) {
-      throw AbstractGameWorld.cascadeException(var8, "ri.A()");
-    }
   }
 
   public static int repackHSL(int var0, int var1) {
@@ -411,17 +407,13 @@ public class DummyClass2 {
   }
 
   public static void method1754(int var0) {
-    try {
-      DummyClass2.aClass153_1680 = null;
+    DummyClass2.aClass153_1680 = null;
       DummyClass2.anIntArray1679 = null;
       if (var0 >= -49) {
         DummyClass2.handleLogin();
       }
 
       DummyClass2.anIntArray1681 = null;
-    } catch (RuntimeException var2) {
-      throw AbstractGameWorld.cascadeException(var2, "ri.B(" + var0 + ')');
-    }
   }
 
 }

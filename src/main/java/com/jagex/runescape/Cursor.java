@@ -9,9 +9,7 @@ public final class Cursor {
   private int anInt883;
 
   public SoftwareDirectColorSprite method1179(byte var1 ) {
-    try {
-
-      SoftwareDirectColorSprite var2 =
+    SoftwareDirectColorSprite var2 =
         (SoftwareDirectColorSprite) DummyClass5.aClass93_2984.get(this.anInt883);
       if (null != var2) {
         return var2;
@@ -27,14 +25,10 @@ public final class Cursor {
 
         return var2;
       }
-    } catch (RuntimeException var3) {
-      throw AbstractGameWorld.cascadeException(var3, "ia.F(" + var1 + ')');
-    }
   }
 
   public void method1182(Buffer var1, int var2, byte var3 ) {
-    try {
-      if (var3 < 75) {
+    if (var3 < 75) {
         this.method1182(null, -111, (byte) 47);
       }
 
@@ -46,15 +40,10 @@ public final class Cursor {
 
         this.method1183(-18426, var2, var4, var1);
       }
-    } catch (RuntimeException var5) {
-      throw AbstractGameWorld.cascadeException(var5,
-        "ia.G(" + (var1 != null ? "{...}" : "null") + ',' + var2 + ',' + var3 + ')');
-    }
   }
 
   private void method1183(int var1, int var2, int var3, Buffer var4) {
-    try {
-      if (var1 != -18426) {
+    if (var1 != -18426) {
         this.anInt881 = -82;
       }
 
@@ -66,16 +55,10 @@ public final class Cursor {
           this.anInt879 = var4.readUnsignedByte();
         }
       }
-
-    } catch (RuntimeException var6) {
-      throw AbstractGameWorld.cascadeException(var6,
-        "ia.D(" + var1 + ',' + var2 + ',' + var3 + ',' + (var4 != null ? "{...}" : "null") + ')');
-    }
   }
 
   public static void method1180(byte var0, Mobile var1) {
-    try {
-      RenderAnimation var2 = var1.getRenderAnimationId(false);
+    RenderAnimation var2 = var1.getRenderAnimationId(false);
       assert var2 != null;
       var1.anInt2764 = var2.anInt368;
       if (var0 >= -5) {
@@ -306,25 +289,14 @@ public final class Cursor {
           }
         }
       }
-
-    } catch (RuntimeException var17) {
-      throw AbstractGameWorld.cascadeException(var17,
-        "ia.C(" + var0 + ',' + (var1 != null ? "{...}" : "null") + ')');
-    }
   }
 
   public static void method1181(byte var0) {
-    try {
-      Cursor.anIntArray882 = null;
-
-    } catch (RuntimeException var2) {
-      throw AbstractGameWorld.cascadeException(var2, "ia.E(" + var0 + ')');
-    }
+    Cursor.anIntArray882 = null;
   }
 
   public static int method1184(int var0, byte var1) {
-    try {
-      int var2 = 91 / ((var1 - 28) / 39);
+    int var2 = 91 / ((var1 - 28) / 39);
       int var3 = var0 & 63;
       int var4 = (var0 & 217) >> 6;
       if (~var3 == -19) {
@@ -364,21 +336,14 @@ public final class Cursor {
       }
 
       return 0;
-    } catch (RuntimeException var5) {
-      throw AbstractGameWorld.cascadeException(var5, "ia.A(" + var0 + ',' + var1 + ')');
-    }
   }
 
   public static int method1185(int var0) {
-    try {
-      if (var0 != 6098) {
+    if (var0 != 6098) {
         Cursor.method1180((byte) -98, null);
       }
 
       return 2;
-    } catch (RuntimeException var2) {
-      throw AbstractGameWorld.cascadeException(var2, "ia.B(" + var0 + ')');
-    }
   }
 
 }

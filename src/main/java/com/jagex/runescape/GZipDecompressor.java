@@ -25,8 +25,7 @@ public final class GZipDecompressor {
   }
 
   public void decompress(byte[] var1, Buffer var2, boolean var3) {
-    try {
-      if (var3) {
+    if (var3) {
         GZipDecompressor.anInt815 = -81;
       }
 
@@ -49,17 +48,10 @@ public final class GZipDecompressor {
       } else {
         throw new RuntimeException("Invalid GZIP header!");
       }
-    } catch (RuntimeException var6) {
-      throw AbstractGameWorld.cascadeException(var6,
-          "ha.D(" + (var1 != null ? "{...}" : "null") + ',' + (var2 != null
-              ? "{...}" : "null") + ','
-              + var3 + ')');
-    }
   }
 
   public static void method1121(boolean var0, byte var1) {
-    try {
-      byte var2;
+    byte var2;
       byte[][] var3;
       if (GlRenderer.useOpenGlRenderer && var0) {
         var2 = 1;
@@ -112,16 +104,10 @@ public final class GZipDecompressor {
       if (var1 <= 49) {
         GZipDecompressor.anInt817 = 32;
       }
-
-    } catch (RuntimeException var15) {
-      throw AbstractGameWorld
-          .cascadeException(var15, "ha.E(" + var0 + ',' + var1 + ')');
-    }
   }
 
   public static Widget method1122(int var0, Widget var1) {
-    try {
-      if (var0 != 0) {
+    if (var0 != 0) {
         GZipDecompressor.method1123(103, 118);
       }
 
@@ -131,15 +117,10 @@ public final class GZipDecompressor {
       }
 
       return var2;
-    } catch (RuntimeException var3) {
-      throw AbstractGameWorld.cascadeException(var3,
-          "ha.J(" + var0 + ',' + (var1 != null ? "{...}" : "null") + ')');
-    }
   }
 
   public static byte[] method1123(int var0, int var1) {
-    try {
-      ByteArrayNode var2 =
+    ByteArrayNode var2 =
           (ByteArrayNode) SceneSomething.aClass47_480
               .get(var1, var0 + -16710535);
       if (null == var2) {
@@ -164,16 +145,11 @@ public final class GZipDecompressor {
       }
 
       return var0 != 16711935 ? null : var2.aByteArray3612;
-    } catch (RuntimeException var9) {
-      throw AbstractGameWorld
-          .cascadeException(var9, "ha.B(" + var0 + ',' + var1 + ')');
-    }
   }
 
   public static GameString method1124(int[] var0, long var1, int var3,
       boolean var4) {
-    try {
-      if (var4) {
+    if (var4) {
         return null;
       } else {
         if (DummyClass43.anInterface4_915 != null) {
@@ -186,11 +162,6 @@ public final class GZipDecompressor {
 
         return InventoryConfig.method612(var1, (byte) 124);
       }
-    } catch (RuntimeException var6) {
-      throw AbstractGameWorld.cascadeException(var6,
-          "ha.H(" + (var0 != null ? "{...}" : "null") + ',' + var1 + ',' + var3
-              + ',' + ')');
-    }
   }
 
   public static void reportError(String var0, Throwable var1, byte var2) {
@@ -201,19 +172,13 @@ public final class GZipDecompressor {
   }
 
   public static void method1126(int var0, int var1) {
-    try {
-      WidgetUpdate var2 = AudioStreamEncoder3.method466(4, 2, var1);
+    WidgetUpdate var2 = AudioStreamEncoder3.method466(4, 2, var1);
       int var3 = -67 % ((var0 - -37) / 48);
       var2.createIndexedColorSprite(true);
-    } catch (RuntimeException var4) {
-      throw AbstractGameWorld
-          .cascadeException(var4, "ha.I(" + var0 + ',' + var1 + ')');
-    }
   }
 
   public static void method1127(int var0) {
-    try {
-      if (!DummyClass36.aBoolean2615) {
+    if (!DummyClass36.aBoolean2615) {
         if (ClientScriptEnum.anInt3660 != 0) {
           NpcConfiguration.anInt1297 = TextureSampler8.anInt3460;
           DummyClass36.anInt2612 = FloorOverlay.anInt2099;
@@ -334,15 +299,11 @@ public final class GZipDecompressor {
             1);
         DisplayMode.loopCycle = 0;
       }
-    } catch (RuntimeException var3) {
-      throw AbstractGameWorld.cascadeException(var3, "ha.G(" + var0 + ')');
-    }
   }
 
   public static void method1129(int var0, int var1, int var2, int var3,
       int var4) {
-    try {
-      int var5 = var3;
+    int var5 = var3;
       int var6 = var2;
       int var7 = -var2;
       int var8 = -1;
@@ -418,26 +379,16 @@ public final class GZipDecompressor {
           }
         }
       }
-
-    } catch (RuntimeException var15) {
-      throw AbstractGameWorld.cascadeException(var15,
-          "ha.A(" + var0 + ',' + var1 + ',' + var2 + ',' + var3 + ',' + var4
-              + ')');
-    }
   }
 
   public static void method1130(int var0) {
-    try {
-      GZipDecompressor.aClass3_Sub28_Sub16_812 = null;
+    GZipDecompressor.aClass3_Sub28_Sub16_812 = null;
       if (var0 < 54) {
         GZipDecompressor.anInt819 = -109;
       }
 
       GZipDecompressor.aClass47_818 = null;
       GZipDecompressor.tileOnScreen = null;
-    } catch (RuntimeException var2) {
-      throw AbstractGameWorld.cascadeException(var2, "ha.F(" + var0 + ')');
-    }
   }
 
 }

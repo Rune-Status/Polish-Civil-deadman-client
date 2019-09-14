@@ -20,8 +20,7 @@ public final class DummyClass12 {
   public static void method2200(int var0, int var1, int var2, int var3,
       int var4, int var5, int var6,
       int var7) {
-    try {
-      int var8 = 0;
+    int var8 = 0;
       int var9 = var6;
       int var10 = 0;
       int var11 = var4 + -var7;
@@ -154,19 +153,11 @@ public final class DummyClass12 {
                   var3);
         }
       }
-
-    } catch (RuntimeException var47) {
-      throw AbstractGameWorld.cascadeException(var47,
-          "wb.A(" + var0 + ',' + var1 + ',' + var2 + ',' + var3 + ',' + var4
-              + ',' + var5 + ',' + var6
-              + ',' + var7 + ')');
-    }
   }
 
   public static int method2201(GameWorld var0, int var1, int var2,
       GameWorld var3, boolean var4) {
-    try {
-      if (-2 == ~var1) {
+    if (-2 == ~var1) {
         int var5 = var0.anInt722;
         int var6 = var3.anInt722;
         if (!var4) {
@@ -216,17 +207,10 @@ public final class DummyClass12 {
                                     (!var3.method1072(false) ? 1 : 0) :
                                     (var3.method1072(false) ? -1 : 0)))))));
       }
-    } catch (RuntimeException var7) {
-      throw AbstractGameWorld.cascadeException(var7,
-          "wb.C(" + (var0 != null ? "{...}" : "null") + ',' + var1 + ',' + var2
-              + ',' + (
-              var3 != null ? "{...}" : "null") + ',' + var4 + ')');
-    }
   }
 
   public static void method2202(int var0) {
-    try {
-      DummyClass12.aClass94_2031 = null;
+    DummyClass12.aClass94_2031 = null;
       DummyClass12.aClass94_2025 = null;
       DummyClass12.aClass94_2033 = null;
       if (var0 != -196) {
@@ -239,9 +223,6 @@ public final class DummyClass12 {
       DummyClass12.LANDSCAPE_PREFIX = null;
       DummyClass12.aClass94_2035 = null;
       DummyClass12.aClass94_2032 = null;
-    } catch (RuntimeException var2) {
-      throw AbstractGameWorld.cascadeException(var2, "wb.B(" + var0 + ')');
-    }
   }
 
 }

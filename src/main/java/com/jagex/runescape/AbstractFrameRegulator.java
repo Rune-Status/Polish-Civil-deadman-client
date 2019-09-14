@@ -20,20 +20,15 @@ public abstract class AbstractFrameRegulator {
   public abstract void reset(int var1 );
 
   public static int method1765(int var0, int var1) {
-    try {
-      if (var1 != -1732504441) {
+    if (var1 != -1732504441) {
         AbstractFrameRegulator.method1765(97, -97);
       }
 
       return var0 >>> 7;
-    } catch (RuntimeException var3) {
-      throw AbstractGameWorld.cascadeException(var3, "s.D(" + var0 + ',' + var1 + ')');
-    }
   }
 
   public static void method1766(int var0) {
-    try {
-      AbstractFrameRegulator.anIntArray1695 = null;
+    AbstractFrameRegulator.anIntArray1695 = null;
       if (var0 != 24241) {
         AbstractFrameRegulator.method1766(84);
       }
@@ -42,14 +37,10 @@ public abstract class AbstractFrameRegulator {
       AbstractFrameRegulator.keyQueue = null;
       AbstractFrameRegulator.aClass94_1694 = null;
       AbstractFrameRegulator.aClass94_1696 = null;
-    } catch (RuntimeException var2) {
-      throw AbstractGameWorld.cascadeException(var2, "s.E(" + var0 + ')');
-    }
   }
 
   public static void method1768(int var0, int var1, int var2) {
-    try {
-      if (-1 > ~Keyboard.anInt1908) {
+    if (-1 > ~Keyboard.anInt1908) {
         DummyClass13.method2195(Keyboard.anInt1908, 0);
         Keyboard.anInt1908 = 0;
       }
@@ -116,17 +107,12 @@ public abstract class AbstractFrameRegulator {
         }
 
       }
-    } catch (RuntimeException var14) {
-      throw AbstractGameWorld.cascadeException(var14,
-        "s.F(" + var0 + ',' + var1 + ',' + var2 + ')');
-    }
   }
 
   public static void method1769(float[][] var0, byte[][] var1, byte[][] var2, Light[] var3, int var4,
                                int var5, float[][] var6, byte[][] var7, byte[][] var8, int[][] var9,
                                int var10, float[][] var11) {
-    try {
-      for (int var12 = 0; ~var12 > ~var5; ++var12) {
+    for (int var12 = 0; ~var12 > ~var5; ++var12) {
         Light var13 = var3[var12];
         if (var13.anInt704 == var4) {
           int var15 = 0;
@@ -449,17 +435,6 @@ public abstract class AbstractFrameRegulator {
       if (var10 != -8771) {
         AbstractFrameRegulator.method1765(-30, -124);
       }
-
-    } catch (RuntimeException var37) {
-      throw AbstractGameWorld.cascadeException(var37,
-        "s.C(" + (var0 != null ? "{...}" : "null") + ',' + (var1 != null ? "{...}" : "null") + ','
-          + (var2 != null ? "{...}" : "null") + ',' + (var3 != null ? "{...}" : "null") + ',' + var4
-          + ',' + var5 + ',' + (var6 != null ? "{...}" : "null") + ',' + (var7 != null ?
-          "{...}" :
-          "null") + ',' + (var8 != null ? "{...}" : "null") + ',' + (var9 != null ?
-          "{...}" :
-          "null") + ',' + var10 + ',' + (var11 != null ? "{...}" : "null") + ')');
-    }
   }
 
 }

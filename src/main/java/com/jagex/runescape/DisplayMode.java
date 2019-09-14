@@ -18,8 +18,7 @@ public final class DisplayMode {
   public int anInt1450;
 
   public static void method1642(int var0, GameString var1) {
-    try {
-      if (null != ClientScript.aClass3_Sub19Array3694) {
+    if (null != ClientScript.aClass3_Sub19Array3694) {
         if (var0 != 3803) {
           DisplayMode.aClass67_1443 = null;
         }
@@ -40,15 +39,10 @@ public final class DisplayMode {
           }
         }
       }
-    } catch (RuntimeException var5) {
-      throw AbstractGameWorld.cascadeException(var5,
-        "od.C(" + var0 + ',' + (var1 != null ? "{...}" : "null") + ')');
-    }
   }
 
   public static int method1643(int var0, boolean var1, int var2, int var3) {
-    try {
-      if (var0 != 10131) {
+    if (var0 != 10131) {
         DisplayMode.method1644((byte) 95);
       }
 
@@ -76,21 +70,13 @@ public final class DisplayMode {
       } else {
         return 0;
       }
-    } catch (RuntimeException var9) {
-      throw AbstractGameWorld.cascadeException(var9,
-        "od.B(" + var0 + ',' + var1 + ',' + var2 + ',' + var3 + ')');
-    }
   }
 
   public static void method1644(byte var0) {
-    try {
-      DisplayMode.aClass67_1443 = null;
+    DisplayMode.aClass67_1443 = null;
 
       DisplayMode.CONNECTED_TO_UPDATE_SERVER = null;
       DisplayMode.aClass94_1440 = null;
-    } catch (RuntimeException var2) {
-      throw AbstractGameWorld.cascadeException(var2, "od.A(" + var0 + ')');
-    }
   }
 
 }

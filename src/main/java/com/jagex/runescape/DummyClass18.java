@@ -19,8 +19,7 @@ public final class DummyClass18 {
 
 
   public static int method823(int var0, int var1, int var2, int var3) {
-    try {
-      if (var2 >= -76) {
+    if (var2 >= -76) {
         DummyClass18.aShort83 = -91;
       }
 
@@ -29,36 +28,21 @@ public final class DummyClass18 {
           -1 + var3 :
           var3) :
         0;
-    } catch (RuntimeException var5) {
-      throw AbstractGameWorld.cascadeException(var5,
-        "ac.G(" + var0 + ',' + var1 + ',' + var2 + ',' + var3 + ')');
-    }
   }
 
   public static void method824(long[] var0, Object[] var1, int var2) {
-    try {
-      int var3 = 38 % ((var2 - 28) / 52);
+    int var3 = 38 % ((var2 - 28) / 52);
       DummyClass21.method1809(var0.length - 1, var0, 122, 0, var1);
-    } catch (RuntimeException var4) {
-      throw AbstractGameWorld.cascadeException(var4,
-        "ac.E(" + (var0 != null ? "{...}" : "null") + ',' + (var1 != null ? "{...}" : "null") + ','
-          + var2 + ')');
-    }
   }
 
   public static void method825(byte var0, int var1) {
-    try {
-      int var2 = -51 % ((26 - var0) / 33);
+    int var2 = -51 % ((26 - var0) / 33);
       WidgetUpdate var3 = AudioStreamEncoder3.method466(4, 1, var1);
       var3.createIndexedColorSprite(true);
-    } catch (RuntimeException var4) {
-      throw AbstractGameWorld.cascadeException(var4, "ac.D(" + var0 + ',' + var1 + ')');
-    }
   }
 
   public static int method826(GameString var0, int var1) {
-    try {
-      if (var1 != -1) {
+    if (var1 != -1) {
         DummyClass18.method826(null, 65);
       }
 
@@ -73,15 +57,10 @@ public final class DummyClass18 {
       } else {
         return -1;
       }
-    } catch (RuntimeException var3) {
-      throw AbstractGameWorld.cascadeException(var3,
-        "ac.B(" + (var0 != null ? "{...}" : "null") + ',' + var1 + ')');
-    }
   }
 
   public static boolean parsePacket(byte var0) throws IOException {
-    try {
-      if (SomethingVolume15.gameSocket == null) {
+    if (SomethingVolume15.gameSocket == null) {
         return false;
       }
       int available = SomethingVolume15.gameSocket.available();
@@ -2094,14 +2073,10 @@ public final class DummyClass18 {
           + IdentityKit.lastPacketId2 + " - " + HashTable.packetLength, null, (byte) 117);
       DummyClass10.destroyGame((byte) 46);
       return true;
-    } catch (RuntimeException var19) {
-      throw AbstractGameWorld.cascadeException(var19, "ac.C(" + var0 + ')');
-    }
   }
 
   public static void method828(int var0) {
-    try {
-      DummyClass18.DEFAULT_RENDER_ANIMATION = null;
+    DummyClass18.DEFAULT_RENDER_ANIMATION = null;
       DummyClass18.aByteArrayArrayArray81 = null;
       DummyClass18.aClass94_85 = null;
       if (var0 > -88) {
@@ -2110,14 +2085,10 @@ public final class DummyClass18 {
 
       DummyClass18.aClass61_82 = null;
       DummyClass18.aClass11_88 = null;
-    } catch (RuntimeException var2) {
-      throw AbstractGameWorld.cascadeException(var2, "ac.A(" + var0 + ')');
-    }
   }
 
   public static void method829(int var0) {
-    try {
-      DummyClass29.method909(var0 + 111, DummyClass42.aClass11_886);
+    DummyClass29.method909(var0 + 111, DummyClass42.aClass11_886);
       ++SomethingTexture3.anInt2658;
       if (DummyClass60.aBoolean440 && DummyClass52.aBoolean1167) {
         int var1 = SomethingTilek.anInt1676;
@@ -2207,9 +2178,6 @@ public final class DummyClass18 {
         }
 
       }
-    } catch (RuntimeException var9) {
-      throw AbstractGameWorld.cascadeException(var9, "ac.F(" + var0 + ')');
-    }
   }
 
 }

@@ -27,8 +27,7 @@ public final class BlockConfig {
   public float aFloat1190;
 
   public BlockConfig() {
-    try {
-      this.anInt1177 = GlEnvironment.defaultSunColor;
+    this.anInt1177 = GlEnvironment.defaultSunColor;
       this.aFloat1189 = 1.2F;
       this.sunPosZ = -50;
       this.aFloat1187 = 1.1523438F;
@@ -37,14 +36,10 @@ public final class BlockConfig {
       this.aFloat1190 = 0.69921875F;
       this.anInt1184 = 0;
       this.sunPositionX = -50;
-    } catch (RuntimeException var2) {
-      throw AbstractGameWorld.cascadeException(var2, "li.<init>()");
-    }
   }
 
   public BlockConfig(Buffer var1 ) {
-    try {
-      int var2 = var1.readUnsignedByte();
+    int var2 = var1.readUnsignedByte();
       if (~(var2 & 1) == -1) {
         this.anInt1177 = GlEnvironment.defaultSunColor;
       } else {
@@ -90,16 +85,10 @@ public final class BlockConfig {
       } else {
         this.anInt1184 = var1.readUnsignedShort();
       }
-
-    } catch (RuntimeException var3) {
-      throw AbstractGameWorld.cascadeException(var3,
-        "li.<init>(" + (var1 != null ? "{...}" : "null") + ')');
-    }
   }
 
   public static void method1427(boolean var0, int var1) {
-    try {
-      if (-1 == var1 && !MidiSomething.aBoolean1158) {
+    if (-1 == var1 && !MidiSomething.aBoolean1158) {
         SceneNode.method1870(false);
       } else if (var1 != -1 && (AbstractFrameRegulator.anInt1691 != var1 || !BitVariable.method1391(
         -1)) && BZipDecompressorState.anInt120 != 0 && !MidiSomething.aBoolean1158) {
@@ -112,14 +101,10 @@ public final class BlockConfig {
       }
 
       AbstractFrameRegulator.anInt1691 = var1;
-    } catch (RuntimeException var3) {
-      throw AbstractGameWorld.cascadeException(var3, "li.B(" + var0 + ',' + var1 + ')');
-    }
   }
 
   public static void method1428(int var0, int var1, int var2) {
-    try {
-      if (var1 < 21) {
+    if (var1 < 21) {
         BlockConfig.method1430(34, -13);
       }
 
@@ -132,16 +117,10 @@ public final class BlockConfig {
       } else {
         var3.timestamp = 500L + Time.getCurrentTimeMillis();
       }
-
-    } catch (RuntimeException var4) {
-      throw AbstractGameWorld.cascadeException(var4,
-        "li.D(" + var0 + ',' + var1 + ',' + var2 + ')');
-    }
   }
 
   public static void method1429(byte var0) {
-    try {
-      BlockConfig.aClass3_Sub24_Sub4_1193 = null;
+    BlockConfig.aClass3_Sub24_Sub4_1193 = null;
       BlockConfig.COMMAND_REBUILD = null;
       BlockConfig.collisionMaps = null;
       BlockConfig.aClass94_1192 = null;
@@ -151,15 +130,10 @@ public final class BlockConfig {
       BlockConfig.tableCache = null;
       BlockConfig.aClass130_1194 = null;
       BlockConfig.aClass94_1180 = null;
-
-    } catch (RuntimeException var2) {
-      throw AbstractGameWorld.cascadeException(var2, "li.C(" + var0 + ')');
-    }
   }
 
   public static SoftwareFont method1430(int var0, int var1) {
-    try {
-      if (var0 == -28922) {
+    if (var0 == -28922) {
         SoftwareFont var2 = (SoftwareFont) HashTableIterator.aClass93_1135.get(
             var1);
         if (var2 != null) {
@@ -174,9 +148,6 @@ public final class BlockConfig {
       } else {
         return null;
       }
-    } catch (RuntimeException var4) {
-      throw AbstractGameWorld.cascadeException(var4, "li.A(" + var0 + ',' + var1 + ')');
-    }
   }
 
 }

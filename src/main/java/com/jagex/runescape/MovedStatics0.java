@@ -6,8 +6,7 @@ import com.jagex.runescape.opengl.GlRenderer;
 public class MovedStatics0 {
 
   public static void method58(int var0) {
-    try {
-      int var1 = 0;
+    int var1 = 0;
       if (var0 >= -46) {
         method60(95, -37, -27, null, -59, (byte) -121, null, -69, -50, -72,
                 false);
@@ -24,26 +23,16 @@ public class MovedStatics0 {
         DummyClass38.method1080(var4, var2, (byte) -79, var3);
         ++var1;
       }
-
-    } catch (RuntimeException var5) {
-      throw AbstractGameWorld.cascadeException(var5, "tm.D(" + var0 + ')');
-    }
   }
 
   public static void method56(int var0, int var1) {
-    try {
-      int var3 = 81 % ((39 - var1) / 41);
+    int var3 = 81 % ((39 - var1) / 41);
       WidgetUpdate var2 = AudioStreamEncoder3.method466(4, 6, var0);
       var2.createIndexedColorSprite(true);
-    } catch (RuntimeException var4) {
-      throw AbstractGameWorld
-          .cascadeException(var4, "tm.C(" + var0 + ',' + var1 + ')');
-    }
   }
 
   public static boolean method57(int var0, int var1) {
-    try {
-      if (HashTable.aBooleanArray1703[var0]) {
+    if (HashTable.aBooleanArray1703[var0]) {
         return true;
       } else {
         if (TextureSampler3.aClass153_3361.method2117(-99, var0)) {
@@ -84,17 +73,12 @@ public class MovedStatics0 {
           return false;
         }
       }
-    } catch (RuntimeException var6) {
-      throw AbstractGameWorld
-          .cascadeException(var6, "tm.A(" + var0 + ',' + var1 + ')');
-    }
   }
 
   public static void method60(int var0, int var1, int var2, CollisionMap[] var3,
       int var4, byte var5,
       byte[] var6, int var7, int var8, int var9, boolean var10) {
-    try {
-      int var13;
+    int var13;
       if (!var10) {
         for (int var12 = 0; -9 < ~var12; ++var12) {
           for (var13 = 0; 8 > var13; ++var13) {
@@ -306,20 +290,10 @@ public class MovedStatics0 {
           SceneShadowMap.aByteArrayArrayArray1774[var2][var28][var17] = 0;
         }
       }
-
-    } catch (RuntimeException var24) {
-      throw AbstractGameWorld.cascadeException(var24,
-          "tm.E(" + var0 + ',' + var1 + ',' + var2 + ',' + (var3 != null
-              ? "{...}" : "null") + ','
-              + var4 + ',' + var5 + ',' + (var6 != null ? "{...}" : "null")
-              + ',' + var7 + ',' + var8
-              + ',' + var9 + ',' + var10 + ')');
-    }
   }
 
   public static void method59(byte var0) {
-    try {
-      GameCanvas.aClass94_28 = null;
+    GameCanvas.aClass94_28 = null;
       GameCanvas.aClass94_35 = null;
       GameCanvas.aClass94_34 = null;
       if (var0 >= -69) {
@@ -328,8 +302,5 @@ public class MovedStatics0 {
 
       GameCanvas.aClass94_36 = null;
       GameCanvas.aClass94_32 = null;
-    } catch (RuntimeException var2) {
-      throw AbstractGameWorld.cascadeException(var2, "tm.B(" + var0 + ')');
-    }
   }
 }

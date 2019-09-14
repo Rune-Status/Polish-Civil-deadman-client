@@ -11,34 +11,24 @@ public final class SomethingPacket151 extends Node {
   public int anInt2603;
 
   public static void method820(int var0, int var1) {
-    try {
-      Keyboard.aClass93_1911.method1522(-127, var0);
+    Keyboard.aClass93_1911.method1522(-127, var0);
       if (var1 == 64) {
         HashTableIterator.aClass93_1131.method1522(-126, var0);
       }
-    } catch (RuntimeException var3) {
-      throw AbstractGameWorld.cascadeException(var3, "wk.C(" + var0 + ',' + var1 + ')');
-    }
   }
 
   public static void method821(int var0) {
-    try {
-      SomethingPacket151.aClass93_2604 = null;
+    SomethingPacket151.aClass93_2604 = null;
       SomethingPacket151.anIntArray2606 = null;
       SomethingPacket151.COMMAND_DROP_JS5 = null;
       SomethingPacket151.aClass94_2608 = null;
       if (var0 != 26971) {
         SomethingPacket151.method820(-51, -76);
       }
-
-    } catch (RuntimeException var2) {
-      throw AbstractGameWorld.cascadeException(var2, "wk.B(" + var0 + ')');
-    }
   }
 
   public static GameString[] method822(int var0, GameString[] var1) {
-    try {
-      GameString[] var2 = new GameString[5];
+    GameString[] var2 = new GameString[5];
       if (var0 != 19406) {
         SomethingPacket151.method821(-26);
       }
@@ -52,10 +42,6 @@ public final class SomethingPacket151 extends Node {
       }
 
       return var2;
-    } catch (RuntimeException var4) {
-      throw AbstractGameWorld.cascadeException(var4,
-        "wk.A(" + var0 + ',' + (var1 != null ? "{...}" : "null") + ')');
-    }
   }
 
 }

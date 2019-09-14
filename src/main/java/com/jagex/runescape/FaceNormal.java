@@ -33,23 +33,17 @@ public final class FaceNormal {
   public int y;
 
   public static void method1731(int var0) {
-    try {
-      FaceNormal.anIntArray1638 = null;
+    FaceNormal.anIntArray1638 = null;
       FaceNormal.aClass94_1637 = null;
       FaceNormal.aClass94_1636 = null;
       FaceNormal.aLongArray1631 = null;
       if (var0 != 12881) {
         FaceNormal.method1732(null, (byte) -74, -125);
       }
-
-    } catch (RuntimeException var2) {
-      throw AbstractGameWorld.cascadeException(var2, "qj.A(" + var0 + ')');
-    }
   }
 
   public static GameString method1732(Widget var0, byte var1, int var2) {
-    try {
-      if (var1 >= -8) {
+    if (var1 >= -8) {
         FaceNormal.anIntArray1638 = null;
       }
 
@@ -64,9 +58,5 @@ public final class FaceNormal {
               null :
               RenderAnimation.concat(
                 new GameString[] {BufferData.aClass94_1645, SomethingScene.toString(var2)})));
-    } catch (RuntimeException var4) {
-      throw AbstractGameWorld.cascadeException(var4,
-        "qj.B(" + (var0 != null ? "{...}" : "null") + ',' + var1 + ',' + var2 + ')');
-    }
   }
 }

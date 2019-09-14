@@ -37,14 +37,16 @@ public class Display {
     Field var4;
     boolean var5;
     try {
-      var4 = Class.forName("sun.awt.Win32GraphicsDevice").getDeclaredField("valid");
+      var4 = Class.forName("sun.awt.Win32GraphicsDevice")
+          .getDeclaredField("valid");
       var4.setAccessible(true);
       var5 = ((Boolean) var4.get(this.aGraphicsDevice445)).booleanValue();
       if (var5) {
         var4.set(this.aGraphicsDevice445, Boolean.FALSE);
         var3 = true;
       }
-    } catch (Throwable var15) {
+    } catch (NoSuchFieldException | ClassNotFoundException | IllegalAccessException e) {
+      e.printStackTrace();
     }
 
     var5 = false;
@@ -61,9 +63,11 @@ public class Display {
     } finally {
       if (var5 && var3) {
         try {
-          Field var7 = Class.forName("sun.awt.Win32GraphicsDevice").getDeclaredField("valid");
+          Field var7 = Class.forName("sun.awt.Win32GraphicsDevice")
+              .getDeclaredField("valid");
           var7.set(this.aGraphicsDevice445, Boolean.TRUE);
-        } catch (Throwable var13) {
+        } catch (NoSuchFieldException | ClassNotFoundException | IllegalAccessException e) {
+          e.printStackTrace();
         }
       }
 
@@ -71,9 +75,11 @@ public class Display {
 
     if (var3) {
       try {
-        var4 = Class.forName("sun.awt.Win32GraphicsDevice").getDeclaredField("valid");
+        var4 = Class.forName("sun.awt.Win32GraphicsDevice")
+            .getDeclaredField("valid");
         var4.set(this.aGraphicsDevice445, Boolean.TRUE);
-      } catch (Throwable var14) {
+      } catch (NoSuchFieldException | ClassNotFoundException | IllegalAccessException e) {
+        e.printStackTrace();
       }
     }
 

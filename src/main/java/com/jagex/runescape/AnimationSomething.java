@@ -25,8 +25,7 @@ public final class AnimationSomething extends SubNode {
 
   public AnimationSomething(FileUnpacker bases, FileUnpacker frames, int var3,
       boolean var4 ) {
-    try {
-      Deque var5 = new Deque();
+    Deque var5 = new Deque();
       int var6 = bases.getAmountChildren(var3, (byte) 69);
       this.aClass98Array3588 = new AnimationBase[var6];
       int[] var7 = bases.getChildIds((byte) -128, var3);
@@ -66,34 +65,18 @@ public final class AnimationSomething extends SubNode {
           break;
         }
       }
-
-    } catch (RuntimeException var14) {
-      throw AbstractGameWorld.cascadeException(var14,
-        "cl.<init>(" + (bases != null ? "{...}" : "null") + ',' + (frames != null ?
-          "{...}" :
-          "null") + ',' + var3 + ',' + var4 + ')');
-    }
   }
 
   public boolean method559(int var1, int var2 ) {
-    try {
-      return var1 == 1317095745 && this.aClass98Array3588[var2].aBoolean1386;
-    } catch (RuntimeException var4) {
-      throw AbstractGameWorld.cascadeException(var4, "cl.D(" + var1 + ',' + var2 + ')');
-    }
+    return var1 == 1317095745 && this.aClass98Array3588[var2].aBoolean1386;
   }
 
   public boolean method561(int var1, byte var2 ) {
-    try {
-      return var2 < 114 || this.aClass98Array3588[var1].aBoolean1382;
-    } catch (RuntimeException var4) {
-      throw AbstractGameWorld.cascadeException(var4, "cl.F(" + var1 + ',' + var2 + ')');
-    }
+    return var2 < 114 || this.aClass98Array3588[var1].aBoolean1382;
   }
 
   public static void method556(int var0, int var1, int var2, byte var3, int var4, int var5) {
-    try {
-      if (var3 < -93) {
+    if (var3 < -93) {
         int var8 = var2 * var2;
         int var6 = 0;
         int var7 = var1;
@@ -161,10 +144,6 @@ public final class AnimationSomething extends SubNode {
         }
 
       }
-    } catch (RuntimeException var25) {
-      throw AbstractGameWorld.cascadeException(var25,
-        "cl.C(" + var0 + ',' + var1 + ',' + var2 + ',' + var3 + ',' + var4 + ',' + var5 + ')');
-    }
   }
 
   public static long method557(int var0, int var1, int var2) {
@@ -184,8 +163,7 @@ public final class AnimationSomething extends SubNode {
   }
 
   public static void method558(int var0) {
-    try {
-      AnimationSomething.aClass94_3585 = null;
+    AnimationSomething.aClass94_3585 = null;
       AnimationSomething.anIntArray3592 = null;
       AnimationSomething.aClass94_3582 = null;
       AnimationSomething.aClass94_3586 = null;
@@ -198,14 +176,10 @@ public final class AnimationSomething extends SubNode {
       AnimationSomething.aClass94_3583 = null;
       AnimationSomething.aClass94_3584 = null;
       AnimationSomething.aCalendar3581 = null;
-    } catch (RuntimeException var2) {
-      throw AbstractGameWorld.cascadeException(var2, "cl.B(" + var0 + ')');
-    }
   }
 
   public static void method560(int var0) {
-    try {
-      for (int var1 = 0; ~var1 > -6; ++var1) {
+    for (int var1 = 0; ~var1 > -6; ++var1) {
         MaterialShader5.aBooleanArray2169[var1] = false;
       }
 
@@ -218,9 +192,6 @@ public final class AnimationSomething extends SubNode {
       NpcConfiguration.anInt1252 = -1;
       VariableUpdate.anInt2293 = -1;
       SomethingPacket116.anInt1753 = 1;
-    } catch (RuntimeException var2) {
-      throw AbstractGameWorld.cascadeException(var2, "cl.A(" + var0 + ')');
-    }
   }
 
 }

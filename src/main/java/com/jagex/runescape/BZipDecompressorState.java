@@ -47,8 +47,7 @@ public final class BZipDecompressorState {
 
 
   public static void method848(int var0) {
-    try {
-      if (AbstractGameWorld.aFloat727 < NPC.aFloat3979) {
+    if (AbstractGameWorld.aFloat727 < NPC.aFloat3979) {
         AbstractGameWorld.aFloat727 = (float) (AbstractGameWorld.aFloat727
           + AbstractGameWorld.aFloat727 / 30.0D);
         if (NPC.aFloat3979 < AbstractGameWorld.aFloat727) {
@@ -90,29 +89,20 @@ public final class BZipDecompressorState {
       if (var0 != 4) {
         BZipDecompressorState.COMMAND_PREFIX = null;
       }
-
-    } catch (RuntimeException var3) {
-      throw AbstractGameWorld.cascadeException(var3, "bb.A(" + var0 + ')');
-    }
   }
 
   public static void method849(int var0) {
-    try {
-      BZipDecompressorState.aClass94_145 = null;
+    BZipDecompressorState.aClass94_145 = null;
       if (var0 == 2) {
         BZipDecompressorState.aByteArrayArray125 = null;
         BZipDecompressorState.FILE_RUNES = null;
         BZipDecompressorState.COMMAND_PREFIX = null;
         BZipDecompressorState.tileFlags = null;
       }
-    } catch (RuntimeException var2) {
-      throw AbstractGameWorld.cascadeException(var2, "bb.B(" + var0 + ')');
-    }
   }
 
   public static void method850(byte var0) {
-    try {
-      TextureSampler24.aClass94_3142 = InventoryConfig.aClass94_3649;
+    TextureSampler24.aClass94_3142 = InventoryConfig.aClass94_3649;
       StillGraphicNode.aClass94_3546 = SomethingAudio.aClass94_2002;
       VertexNormal.aClass94_825 = NpcConfiguration.aClass94_1281;
       DummyClass44.aClass94_935 = DummyClass10.aClass94_2086;
@@ -206,9 +196,6 @@ public final class BZipDecompressorState {
       TextureSampler14.aClass94_3388 = DummyClass34.aClass94_593;
       DummyClass32.aClass94_523 = Buffer.aClass94_2599;
       DummyClass24.aClass94_1653 = Light.aClass94_701;
-    } catch (RuntimeException var2) {
-      throw AbstractGameWorld.cascadeException(var2, "bb.C(" + var0 + ')');
-    }
   }
 
 }

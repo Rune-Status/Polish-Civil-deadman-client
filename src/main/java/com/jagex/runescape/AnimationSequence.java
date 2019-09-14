@@ -37,8 +37,7 @@ public final class AnimationSequence {
   private int[] anIntArray1870;
 
   public void method2053(Buffer var1, byte var2 ) {
-    try {
-      if (var2 != -102) {
+    if (var2 != -102) {
         this.method2055(null, (byte) 88, 7, 103, 54);
       }
 
@@ -50,17 +49,12 @@ public final class AnimationSequence {
 
         this.method2060(var3, (byte) -73, var1);
       }
-    } catch (RuntimeException var4) {
-      throw AbstractGameWorld.cascadeException(var4,
-        "tk.I(" + (var1 != null ? "{...}" : "null") + ',' + var2 + ')');
-    }
   }
 
   public AbstractModel method2054(int var1,int var2,int var3,
       AbstractModel var4,int var5,
       int var6 ) {
-    try {
-      int var7 = this.anIntArray1869[var2];
+    int var7 = this.anIntArray1869[var2];
       var2 = this.anIntArray1851[var2];
       AnimationSomething var8 = AreaSoundEffect.method133(var2 >> 16, var1 + -19749);
       var2 &= '\uffff';
@@ -142,18 +136,12 @@ public final class AnimationSequence {
 
         return var10;
       }
-    } catch (RuntimeException var11) {
-      throw AbstractGameWorld.cascadeException(var11,
-        "tk.D(" + var1 + ',' + var2 + ',' + var3 + ',' + (var4 != null ? "{...}" : "null") + ','
-          + var5 + ',' + var6 + ')');
-    }
   }
 
   public AbstractModel method2055(AbstractModel var1, byte var2,int var3,
       int var4,
       int var5 ) {
-    try {
-      int var7 = this.anIntArray1851[var5];
+    int var7 = this.anIntArray1851[var5];
       int var6 = this.anIntArray1869[var5];
       AnimationSomething var8 = AreaSoundEffect.method133(var7 >> 16, 0);
       var7 &= '\uffff';
@@ -218,18 +206,12 @@ public final class AnimationSequence {
 
         return var17;
       }
-    } catch (RuntimeException var18) {
-      throw AbstractGameWorld.cascadeException(var18,
-        "tk.E(" + (var1 != null ? "{...}" : "null") + ',' + var2 + ',' + var3 + ',' + var4 + ','
-          + var5 + ')');
-    }
   }
 
   public AbstractModel method2056(int var1,int var2, int var3,int var4,
       AbstractModel var5,
       int var6 ) {
-    try {
-      int var7 = this.anIntArray1869[var2];
+    int var7 = this.anIntArray1869[var2];
       var2 = this.anIntArray1851[var2];
       AnimationSomething var8 = AreaSoundEffect.method133(var2 >> 16, var6 + -3);
       var2 &= '\uffff';
@@ -297,17 +279,10 @@ public final class AnimationSequence {
 
         return var10;
       }
-    } catch (RuntimeException var11) {
-      throw AbstractGameWorld.cascadeException(var11,
-        "tk.B(" + var1 + ',' + var2 + ',' + var3 + ',' + var4 + ',' + (var5 != null ?
-          "{...}" :
-          "null") + ',' + var6 + ')');
-    }
   }
 
   public void method2058(byte var1 ) {
-    try {
-      if (var1 == -41) {
+    if (var1 == -41) {
         if (0 == ~this.anInt1866) {
           if (null == this.aBooleanArray1855) {
             this.anInt1866 = 0;
@@ -325,15 +300,11 @@ public final class AnimationSequence {
         }
 
       }
-    } catch (RuntimeException var3) {
-      throw AbstractGameWorld.cascadeException(var3, "tk.C(" + var1 + ')');
-    }
   }
 
   public AbstractModel method2059(int var1, int var2,int var3, byte var4,
       AbstractModel var5 ) {
-    try {
-      int var6 = this.anIntArray1869[var3];
+    int var6 = this.anIntArray1869[var3];
       var3 = this.anIntArray1851[var3];
       AnimationSomething var7 = AreaSoundEffect.method133(var3 >> 16, 0);
       var3 &= '\uffff';
@@ -364,17 +335,10 @@ public final class AnimationSequence {
             this.aBoolean1848);
         return var10;
       }
-    } catch (RuntimeException var11) {
-      throw AbstractGameWorld.cascadeException(var11,
-        "tk.G(" + var1 + ',' + var2 + ',' + var3 + ',' + var4 + ',' + (var5 != null ?
-          "{...}" :
-          "null") + ')');
-    }
   }
 
   private void method2060(int var1, byte var2, Buffer var3) {
-    try {
-      int var4;
+    int var4;
       int var5;
       if (~var1 == -2) {
         var4 = var3.readUnsignedShort();
@@ -471,15 +435,10 @@ public final class AnimationSequence {
       }
 
       var4 = 49 % ((-12 - var2) / 34);
-    } catch (RuntimeException var8) {
-      throw AbstractGameWorld.cascadeException(var8,
-        "tk.H(" + var1 + ',' + var2 + ',' + (var3 != null ? "{...}" : "null") + ')');
-    }
   }
 
   public static SomethingGl0 method2052(HashTable var0, boolean var1, FloorOverlay var2) {
-    try {
-      long var3 =
+    long var3 =
         ((var2.anInt2095 - -1 << 16) + var2.anInt2090) + (((long) var2.anInt2100 << 56) - -(
           (long) var2.anInt2094 << 32));
       if (var1) {
@@ -494,31 +453,20 @@ public final class AnimationSequence {
       }
 
       return var5;
-    } catch (RuntimeException var6) {
-      throw AbstractGameWorld.cascadeException(var6,
-        "tk.J(" + (var0 != null ? "{...}" : "null") + ',' + var1 + ',' + (var2 != null ?
-          "{...}" :
-          "null") + ')');
-    }
   }
 
   public static void method2057(byte var0) {
-    try {
-      AnimationSequence.aClass25Array1868 = null;
+    AnimationSequence.aClass25Array1868 = null;
       AnimationSequence.logoSprite = null;
       AnimationSequence.animationSequences = null;
       AnimationSequence.aClass153_1852 = null;
 
       AnimationSequence.aClass94_1863 = null;
       AnimationSequence.anIntArray1871 = null;
-    } catch (RuntimeException var2) {
-      throw AbstractGameWorld.cascadeException(var2, "tk.F(" + var0 + ')');
-    }
   }
 
   public static void method2061(boolean var0) {
-    try {
-      MonoChromaticImageBuffer.anInt2556 = 0;
+    MonoChromaticImageBuffer.anInt2556 = 0;
       Mobile.aBoolean2774 = true;
       AbstractIndexedColorSprite.aLong1465 = 0L;
       SceneSomething2.anInt1060 = 0;
@@ -799,9 +747,6 @@ public final class AnimationSequence {
       AbstractTextureSampler.method165(-7878);
       FileUnpacker.aBoolean1951 = false;
       TextureSampler9.method204(-3);
-    } catch (RuntimeException var6) {
-      throw AbstractGameWorld.cascadeException(var6, "tk.A(" + var0 + ')');
-    }
   }
 
 }

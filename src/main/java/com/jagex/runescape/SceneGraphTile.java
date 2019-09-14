@@ -37,19 +37,13 @@ public final class SceneGraphTile extends Node {
   public SomethingScene aClass72_2245;
 
   public SceneGraphTile(int var1, int var2, int var3 ) {
-    try {
-      this.anInt2231 = var3;
+    this.anInt2231 = var3;
       this.anInt2238 = this.anInt2244 = var1;
       this.anInt2239 = var2;
-    } catch (RuntimeException var5) {
-      throw AbstractGameWorld.cascadeException(var5,
-        "bj.<init>(" + var1 + ',' + var2 + ',' + var3 + ')');
-    }
   }
 
   public static void method102(int var0) {
-    try {
-      SceneGraphTile.aClass130_2220 = null;
+    SceneGraphTile.aClass130_2220 = null;
       if (var0 != 3353893) {
         SceneGraphTile.aClass94_2216 = null;
       }
@@ -59,23 +53,16 @@ public final class SceneGraphTile extends Node {
       SceneGraphTile.aClass94_2215 = null;
       SceneGraphTile.aClass94_2224 = null;
       SceneGraphTile.aClass94_2216 = null;
-    } catch (RuntimeException var2) {
-      throw AbstractGameWorld.cascadeException(var2, "bj.A(" + var0 + ')');
-    }
   }
 
   public static void method103(byte var0) {
-    try {
-      GameClient.aClass130_2194.clear(122);
+    GameClient.aClass130_2194.clear(122);
       if (var0 <= 18) {
         SceneGraphTile.aClass94_2224 = null;
       }
 
       DummyClass50.aClass13_1139.clear();
       SomethingTilek.aClass13_1666.clear();
-    } catch (RuntimeException var2) {
-      throw AbstractGameWorld.cascadeException(var2, "bj.B(" + var0 + ')');
-    }
   }
 
   public static long method104(int var0, int var1, int var2) {

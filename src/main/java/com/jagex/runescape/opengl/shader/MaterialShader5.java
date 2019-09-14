@@ -104,32 +104,19 @@ public final class MaterialShader5 implements MaterialShader {
 
 
   public MaterialShader5() {
-    try {
-      this.method1631(2);
-    } catch (RuntimeException var2) {
-      throw AbstractGameWorld.cascadeException(var2, "ob.<init>()");
-    }
+    this.method1631(2);
   }
 
   public void disable() {
-    try {
-      GlRenderer.GL.glCallList(1 + this.anInt2173);
-    } catch (RuntimeException var2) {
-      throw AbstractGameWorld.cascadeException(var2, "ob.A()");
-    }
+    GlRenderer.GL.glCallList(1 + this.anInt2173);
   }
 
   public void enable() {
-    try {
-      GlRenderer.GL.glCallList(this.anInt2173);
-    } catch (RuntimeException var2) {
-      throw AbstractGameWorld.cascadeException(var2, "ob.D()");
-    }
+    GlRenderer.GL.glCallList(this.anInt2173);
   }
 
   public void set(int var1) {
-    try {
-      float var4 = (1 + (var1 >> 3 & 3)) * 0.01F;
+    float var4 = (1 + (var1 >> 3 & 3)) * 0.01F;
       float var3 = -0.01F * (1 + (var1 & 3));
       float var5 = 0 == (var1 & 64) ? 4.8828125E-4F : 9.765625E-4F;
       boolean var6 = -1 != ~(128 & var1);
@@ -175,22 +162,14 @@ public final class MaterialShader5 implements MaterialShader {
       }
 
       GlRenderer.GL.glActiveTexture('\u84c0');
-    } catch (RuntimeException var8) {
-      throw AbstractGameWorld.cascadeException(var8, "ob.B(" + var1 + ')');
-    }
   }
 
   public int method24() {
-    try {
-      return 0;
-    } catch (RuntimeException var2) {
-      throw AbstractGameWorld.cascadeException(var2, "ob.C()");
-    }
+    return 0;
   }
 
   private void method1631(int var1) {
-    try {
-      this.anInt2173 = GlRenderer.GL.glGenLists(var1);
+    this.anInt2173 = GlRenderer.GL.glGenLists(var1);
       GlRenderer.GL.glNewList(this.anInt2173, 4864);
       GlRenderer.GL.glActiveTexture('\u84c1');
       if (SomethingGl.aBoolean1227) {
@@ -221,26 +200,18 @@ public final class MaterialShader5 implements MaterialShader {
       GlRenderer.GL.glDisable(3169);
       GlRenderer.GL.glActiveTexture('\u84c0');
       GlRenderer.GL.glEndList();
-    } catch (RuntimeException var3) {
-      throw AbstractGameWorld.cascadeException(var3, "ob.I(" + var1 + ')');
-    }
   }
 
   public static void method1626(byte var0) {
-    try {
-      SomethingQuickChat.aClass93_3572.method1524(3);
+    SomethingQuickChat.aClass93_3572.method1524(3);
       DummyClass15.aClass93_1874.method1524(3);
       if (var0 <= -124) {
         MouseRecorder.aClass93_1013.method1524(3);
       }
-    } catch (RuntimeException var2) {
-      throw AbstractGameWorld.cascadeException(var2, "ob.F(" + var0 + ')');
-    }
   }
 
   public static boolean method1627(int var0, byte var1) {
-    try {
-      GameWorld var2 = ClassCheckRequest.method130(97, var0);
+    GameWorld var2 = ClassCheckRequest.method130(97, var0);
       if (var2 != null) {
         if (1 != SignLink.anInt1214 && -3 != ~SignLink.anInt1214
           && -3 != ~AbstractGameWorld.usageLocation) {
@@ -297,15 +268,11 @@ public final class MaterialShader5 implements MaterialShader {
       } else {
         return false;
       }
-    } catch (RuntimeException var8) {
-      throw AbstractGameWorld.cascadeException(var8, "ob.E(" + var0 + ',' + var1 + ')');
-    }
   }
 
   public static void method1628(int var0, int var1, int var2, int var3, int var4, int var5,
                                byte var6) {
-    try {
-      int var9;
+    int var9;
       int var12;
       if (~Something3d.anInt3012 == -1) {
         int var10 = BlockConfig.screenLowerY;
@@ -605,11 +572,6 @@ public final class MaterialShader5 implements MaterialShader {
         }
 
       }
-    } catch (RuntimeException var24) {
-      throw AbstractGameWorld.cascadeException(var24,
-        "ob.K(" + var0 + ',' + var1 + ',' + var2 + ',' + var3 + ',' + var4 + ',' + var5 + ',' + var6
-          + ')');
-    }
   }
 
   public static void method1629(int var0, int var1, int var2, int var3, int var4, int var5, int var6,
@@ -658,8 +620,7 @@ public final class MaterialShader5 implements MaterialShader {
   }
 
   public static void method1630(byte var0) {
-    try {
-      MaterialShader5.aClass94_2171 = null;
+    MaterialShader5.aClass94_2171 = null;
       MaterialShader5.aClass153_2172 = null;
       MaterialShader5.aBooleanArray2169 = null;
       MaterialShader5.aClass94_2176 = null;
@@ -669,14 +630,10 @@ public final class MaterialShader5 implements MaterialShader {
 
       MaterialShader5.aClass94_2170 = null;
       MaterialShader5.aClass94_2175 = null;
-    } catch (RuntimeException var2) {
-      throw AbstractGameWorld.cascadeException(var2, "ob.J(" + var0 + ')');
-    }
   }
 
   public static void method1632(int var0, int var1, int var2, int var3, int var4, int var5) {
-    try {
-      if (var0 <= 66) {
+    if (var0 <= 66) {
         MaterialShader5.method1630((byte) -33);
       }
 
@@ -684,11 +641,6 @@ public final class MaterialShader5 implements MaterialShader {
         TextureSampler18
             .method282(DummyClass35.anIntArrayArray663[var6], var4, 121, var2, var5);
       }
-
-    } catch (RuntimeException var7) {
-      throw AbstractGameWorld.cascadeException(var7,
-        "ob.G(" + var0 + ',' + var1 + ',' + var2 + ',' + var3 + ',' + var4 + ',' + var5 + ')');
-    }
   }
 
 }

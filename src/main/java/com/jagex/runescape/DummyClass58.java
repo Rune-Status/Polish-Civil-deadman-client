@@ -15,8 +15,7 @@ public final class DummyClass58 {
 
   public static void method1652(int var0, int var1, int var2, int var3, int var4, int var5, int var6,
                                int var7, int var8, int var9) {
-    try {
-      if (var9 != 0) {
+    if (var9 != 0) {
         DummyClass58.COMMAND_WM1 = null;
       }
 
@@ -33,17 +32,10 @@ public final class DummyClass58 {
       } else {
         DummyClass53.method1583(var5, var0, var7, 3, var8, var3, var2, var1, var6, var4);
       }
-
-    } catch (RuntimeException var11) {
-      throw AbstractGameWorld.cascadeException(var11,
-        "oi.C(" + var0 + ',' + var1 + ',' + var2 + ',' + var3 + ',' + var4 + ',' + var5 + ',' + var6
-          + ',' + var7 + ',' + var8 + ',' + var9 + ')');
-    }
   }
 
   public static GameString method1653(int var0, int var1) {
-    try {
-      if (var1 != 0) {
+    if (var1 != 0) {
         DummyClass58.method1660(-41);
       }
 
@@ -53,22 +45,14 @@ public final class DummyClass58 {
         SomethingScene.toString(255 & var0 >> 8), DummyClass8.aClass94_4023,
         SomethingScene.toString(var0 & 255)
       });
-    } catch (RuntimeException var3) {
-      throw AbstractGameWorld.cascadeException(var3, "oi.F(" + var0 + ',' + var1 + ')');
-    }
   }
 
   public static void method1654(int var0) {
-    try {
-      Mobile.aClass93_2792.method1523((byte) -108);
-    } catch (RuntimeException var2) {
-      throw AbstractGameWorld.cascadeException(var2, "oi.E(" + var0 + ')');
-    }
+    Mobile.aClass93_2792.method1523((byte) -108);
   }
 
   public static byte[] method1655(byte var0, byte[] var1) {
-    try {
-      if (var1 == null) {
+    if (var1 == null) {
         return null;
       } else {
         if (var0 > -30) {
@@ -79,15 +63,10 @@ public final class DummyClass58 {
         ArrayUtils.copy(var1, 0, var2, 0, var1.length);
         return var2;
       }
-    } catch (RuntimeException var3) {
-      throw AbstractGameWorld.cascadeException(var3,
-          "oi.H(" + var0 + ',' + "{...}" + ')');
-    }
   }
 
   public static void loadTitleScreenSprites(FileUnpacker var0, byte var1) {
-    try {
-      if (!StillGraphic.aBoolean2713) {
+    if (!StillGraphic.aBoolean2713) {
         if (GlRenderer.useOpenGlRenderer) {
           GlUtils.clear();
         } else {
@@ -111,72 +90,41 @@ public final class DummyClass58 {
         }
 
       }
-    } catch (RuntimeException var4) {
-      throw AbstractGameWorld.cascadeException(var4,
-        "oi.B(" + (var0 != null ? "{...}" : "null") + ',' + var1 + ')');
-    }
   }
 
   public static void method1657(int var0, int var1) {
-    try {
-      WidgetUpdate var2 = AudioStreamEncoder3.method466(4, 5, var0);
+    WidgetUpdate var2 = AudioStreamEncoder3.method466(4, 5, var0);
       var2.createIndexedColorSprite(true);
       if (var1 != -903) {
         DummyClass58.COMMAND_WM1 = null;
       }
-
-    } catch (RuntimeException var3) {
-      throw AbstractGameWorld.cascadeException(var3, "oi.J(" + var0 + ',' + var1 + ')');
-    }
   }
 
   public static void method1658(int var0, int[] var1, Object[] var2) {
-    try {
-      SceneSomething.method956(var2, var1.length - 1, var1, 74, 0);
+    SceneSomething.method956(var2, var1.length - 1, var1, 74, 0);
       int var3 = 113 % ((76 - var0) / 45);
-    } catch (RuntimeException var4) {
-      throw AbstractGameWorld.cascadeException(var4,
-        "oi.I(" + var0 + ',' + (var1 != null ? "{...}" : "null") + ',' + (var2 != null ?
-          "{...}" :
-          "null") + ')');
-    }
   }
 
   public static void method1659(int var0) {
-    try {
-      Deque.aClass93_939.method1524(3);
-    } catch (RuntimeException var2) {
-      throw AbstractGameWorld.cascadeException(var2, "oi.G(" + var0 + ')');
-    }
+    Deque.aClass93_939.method1524(3);
   }
 
   public static void method1660(int var0) {
-    try {
-      DummyClass58.aClass3_Sub28_Sub16_1457 = null;
+    DummyClass58.aClass3_Sub28_Sub16_1457 = null;
       DummyClass58.COMMAND_WM1 = null;
       DummyClass58.COMMAND_QA_OP_TEST = null;
 
       DummyClass58.aClass94_1459 = null;
-    } catch (RuntimeException var2) {
-      throw AbstractGameWorld.cascadeException(var2, "oi.A(" + var0 + ')');
-    }
   }
 
   public static void method1661(int var0, FileUnpacker var1, FileUnpacker var2, boolean var3) {
-    try {
-      DummyClass28.aBoolean337 = var3;
+    DummyClass28.aBoolean337 = var3;
       LinearHashTable.aClass153_1043 = var2;
       if (var0 != 2) {
         DummyClass58.method1658(22, null, null);
       }
 
       DummyClass52.aClass153_1171 = var1;
-    } catch (RuntimeException var5) {
-      throw AbstractGameWorld.cascadeException(var5,
-        "oi.D(" + var0 + ',' + (var1 != null ? "{...}" : "null") + ',' + (var2 != null ?
-          "{...}" :
-          "null") + ',' + var3 + ')');
-    }
   }
 
 }

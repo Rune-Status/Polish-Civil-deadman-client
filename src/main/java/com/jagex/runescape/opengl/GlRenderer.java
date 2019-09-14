@@ -252,8 +252,7 @@ public final class GlRenderer {
   }
 
   public static void method1834(Canvas var0) {
-    try {
-      if (!var0.isDisplayable()) {
+    if (!var0.isDisplayable()) {
         return;
       }
       GLCapabilities capabilities = new GLCapabilities(GLProfile.getDefault());
@@ -269,9 +268,6 @@ public final class GlRenderer {
       var3.release();
       var3.destroy();
       var2.setRealized(false);
-    } catch (GLException e) {
-      e.printStackTrace();
-    }
 
   }
 
@@ -342,13 +338,9 @@ public final class GlRenderer {
     String var2 = GlRenderer.GL.glGetString(7938);
     String[] var3 = var2.split("[. ]");
     if (var3.length >= 2) {
-      try {
-        int var4 = Integer.parseInt(var3[0]);
+      int var4 = Integer.parseInt(var3[0]);
         int var5 = Integer.parseInt(var3[1]);
         GlRenderer.anInt1812 = var4 * 10 + var5;
-      } catch (NumberFormatException var11) {
-        var0 |= 4;
-      }
     } else {
       var0 |= 4;
     }
@@ -416,12 +408,8 @@ public final class GlRenderer {
       }
 
       if (GlRenderer.vertexBufferSupport) {
-        try {
-          int[] var14 = new int[1];
+        int[] var14 = new int[1];
           GlRenderer.GL.glGenBuffers(1, var14, 0);
-        } catch (Throwable var10) {
-          return -4;
-        }
       }
 
       return 0;
@@ -646,15 +634,11 @@ public final class GlRenderer {
   }
 
   private static Optional<GLContext> acquireGLContext(GLDrawable drawable) {
-    try {
-      GLContext context = drawable.createContext(null);
+    GLContext context = drawable.createContext(null);
       int result = context.makeCurrent();
       if (result != 0) {
         return Optional.of(context);
       }
-    } catch (GLException e) {
-      e.printStackTrace();
-    }
     return Optional.empty();
   }
 

@@ -24,8 +24,7 @@ public final class TextureSampler34 extends AbstractTextureSampler {
   }
 
   public void method186(boolean var1, int var2, int[] var3) {
-    try {
-      int var5 = this.anInt3056 * DummyClass4.anIntArray2999[var2];
+    int var5 = this.anInt3056 * DummyClass4.anIntArray2999[var2];
       if (var1) {
         int var4;
         int var6;
@@ -138,16 +137,10 @@ public final class TextureSampler34 extends AbstractTextureSampler {
         }
 
       }
-    } catch (RuntimeException var19) {
-      throw AbstractGameWorld.cascadeException(var19,
-          "bi.C(" + var1 + ',' + var2 + ',' + (var3 != null ? "{...}" : "null")
-              + ')');
-    }
   }
 
   private void method191(boolean var1) {
-    try {
-      int var2;
+    int var2;
       if (this.anInt3062 <= 0) {
         if (this.aShortArray3066
             != null && this.aShortArray3066.length == this.anInt3058) {
@@ -173,17 +166,12 @@ public final class TextureSampler34 extends AbstractTextureSampler {
       if (!var1) {
         this.method192(54, 5, -23, 103, -114, -67, -27);
       }
-
-    } catch (RuntimeException var3) {
-      throw AbstractGameWorld.cascadeException(var3, "bi.F(" + var1 + ')');
-    }
   }
 
   private int method192(int var1, int var2, int var3, int var4, int var5,
       int var6,
       int var7) {
-    try {
-      if (var5 < 117) {
+    if (var5 < 117) {
         this.method158(89);
       }
 
@@ -232,32 +220,20 @@ public final class TextureSampler34 extends AbstractTextureSampler {
 
       int var17 = var8 + ((-var8 + var9) * var15 >> 12);
       return var16 - -(var7 * (var17 + -var16) >> 12);
-    } catch (RuntimeException var18) {
-      throw AbstractGameWorld.cascadeException(var18,
-          "bi.R(" + var1 + ',' + var2 + ',' + var3 + ',' + var4 + ',' + var5
-              + ',' + var6 + ',' + var7
-              + ')');
-    }
   }
 
   public int[] method154(int var1, byte var2) {
-    try {
-      int var4 = 111 % ((30 - var2) / 36);
+    int var4 = 111 % ((30 - var2) / 36);
       int[] var3 = this.monoChromaticImageCache.method1709(-16409, var1);
       if (this.monoChromaticImageCache.aBoolean1580) {
         this.method186(true, var1, var3);
       }
 
       return var3;
-    } catch (RuntimeException var5) {
-      throw AbstractGameWorld
-          .cascadeException(var5, "bi.D(" + var1 + ',' + var2 + ')');
-    }
   }
 
   public void parseConfig(int var1, Buffer var2, boolean var3) {
-    try {
-      if (!var3) {
+    if (!var3) {
         this.method192(49, -110, -55, -117, 117, 10, -51);
       }
 
@@ -283,17 +259,10 @@ public final class TextureSampler34 extends AbstractTextureSampler {
       } else if (var1 == 6) {
         this.anInt3056 = var2.readUnsignedByte();
       }
-
-    } catch (RuntimeException var5) {
-      throw AbstractGameWorld.cascadeException(var5,
-          "bi.A(" + var1 + ',' + (var2 != null ? "{...}" : "null") + ',' + var3
-              + ')');
-    }
   }
 
   public void method158(int var1) {
-    try {
-      this.aByteArray3059 = GZipDecompressor.method1123(16711935,
+    this.aByteArray3059 = GZipDecompressor.method1123(16711935,
           this.anInt3067);
       this.method191(true);
 
@@ -309,10 +278,6 @@ public final class TextureSampler34 extends AbstractTextureSampler {
       if (var1 != 16251) {
         this.anInt3062 = 101;
       }
-
-    } catch (RuntimeException var4) {
-      throw AbstractGameWorld.cascadeException(var4, "bi.P(" + var1 + ')');
-    }
   }
 
   public static boolean method185(int var0, int var1, int var2, int var3,
@@ -335,34 +300,24 @@ public final class TextureSampler34 extends AbstractTextureSampler {
   }
 
   public static void method187(boolean var0) {
-    try {
-      TextureSampler34.updatedLandscapesData = null;
+    TextureSampler34.updatedLandscapesData = null;
       if (var0) {
         TextureSampler34.aClass94_3055 = null;
       }
 
       TextureSampler34.aClass94_3055 = null;
-    } catch (RuntimeException var2) {
-      throw AbstractGameWorld.cascadeException(var2, "bi.S(" + var0 + ')');
-    }
   }
 
   public static void method188(int var0, int var1) {
-    try {
-      if (var1 != 0) {
+    if (var1 != 0) {
         TextureSampler34.method188(38, 29);
       }
 
       DummyClass14.aClass93_1955.method1522(-125, var0);
-    } catch (RuntimeException var3) {
-      throw AbstractGameWorld
-          .cascadeException(var3, "bi.U(" + var0 + ',' + var1 + ')');
-    }
   }
 
   public static void method189(byte var0) {
-    try {
-      int var2 = -18 / ((28 - var0) / 32);
+    int var2 = -18 / ((28 - var0) / 32);
 
       int var1;
       for (var1 = -1; DummyClass13.anInt2022 > var1; ++var1) {
@@ -392,15 +347,10 @@ public final class TextureSampler34 extends AbstractTextureSampler {
           }
         }
       }
-
-    } catch (RuntimeException var5) {
-      throw AbstractGameWorld.cascadeException(var5, "bi.B(" + var0 + ')');
-    }
   }
 
   public static int method190(int var0, int hsl, byte var2, int lightness) {
-    try {
-      int var5 = DummyClass40.hslTable[SoftwareModel.repackHSL(hsl, lightness)];
+    int var5 = DummyClass40.hslTable[SoftwareModel.repackHSL(hsl, lightness)];
       if (-1 > ~var0) {
         int var6 = DummyClass40.textureCache.method19(111, var0 & '\uffff');
         int var7;
@@ -451,24 +401,15 @@ public final class TextureSampler34 extends AbstractTextureSampler {
       }
 
       return var5;
-    } catch (RuntimeException var11) {
-      throw AbstractGameWorld.cascadeException(var11,
-          "bi.E(" + var0 + ',' + hsl + ',' + var2 + ',' + lightness + ')');
-    }
   }
 
   public static void method193(byte var0, Component var1) {
-    try {
-      if (var0 < 49) {
+    if (var0 < 49) {
         TextureSampler34.anInt3054 = 85;
       }
       var1.setFocusTraversalKeysEnabled(false);
       var1.addKeyListener(TextureSampler33.keyboard);
       var1.addFocusListener(TextureSampler33.keyboard);
-    } catch (RuntimeException var5) {
-      throw AbstractGameWorld.cascadeException(var5,
-          "bi.Q(" + var0 + ',' + (var1 != null ? "{...}" : "null") + ')');
-    }
   }
 
 }

@@ -25,17 +25,11 @@ public final class SomethingMidiFile extends Node {
   public byte[] aByteArray2289;
 
   public SomethingMidiFile(byte[] var1 ) {
-    try {
-      this.aByteArray2289 = var1;
-    } catch (RuntimeException var3) {
-      throw AbstractGameWorld.cascadeException(var3,
-        "ea.<init>(" + (var1 != null ? "{...}" : "null") + ')');
-    }
+    this.aByteArray2289 = var1;
   }
 
   public static void method118(int var0) {
-    try {
-      SomethingMidiFile.BIT_MASKS = null;
+    SomethingMidiFile.BIT_MASKS = null;
       SomethingMidiFile.byteArrayPool = null;
       SomethingMidiFile.aClass94_2285 = null;
       if (var0 != 2) {
@@ -43,23 +37,15 @@ public final class SomethingMidiFile extends Node {
       }
 
       SomethingMidiFile.aClass94_2286 = null;
-    } catch (RuntimeException var2) {
-      throw AbstractGameWorld.cascadeException(var2, "ea.A(" + var0 + ')');
-    }
   }
 
   public static float[] method119(float[] var0, int var1) {
-    try {
-      if (var0 != null) {
+    if (var0 != null) {
         float[] var2 = new float[var0.length];
         ArrayUtils.method1360(var0, var1, var2, 0, var0.length);
         return var2;
       } else {
         return null;
       }
-    } catch (RuntimeException var3) {
-      throw AbstractGameWorld.cascadeException(var3,
-          "ea.B(" + "{...}" + ',' + var1 + ')');
-    }
   }
 }

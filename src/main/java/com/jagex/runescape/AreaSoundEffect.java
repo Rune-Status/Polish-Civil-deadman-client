@@ -33,8 +33,7 @@ public final class AreaSoundEffect extends Node {
   public int[] anIntArray2333;
 
   public void method134(int var1 ) {
-    try {
-      int var2 = this.anInt2332;
+    int var2 = this.anInt2332;
       if (null != this.aClass111_2320) {
         GameObjectConfig var3 = this.aClass111_2320.method1685(0);
         if (var3 == null) {
@@ -81,14 +80,10 @@ public final class AreaSoundEffect extends Node {
         }
 
       }
-    } catch (RuntimeException var5) {
-      throw AbstractGameWorld.cascadeException(var5, "fl.A(" + var1 + ')');
-    }
   }
 
   public static AnimationSomething method133(int var0, int var1) {
-    try {
-      if (var1 != 0) {
+    if (var1 != 0) {
         AreaSoundEffect.method135(-59, 112, 16, -6, 77, -69);
       }
 
@@ -106,14 +101,10 @@ public final class AreaSoundEffect extends Node {
       } else {
         return var2;
       }
-    } catch (RuntimeException var3) {
-      throw AbstractGameWorld.cascadeException(var3, "fl.B(" + var0 + ',' + var1 + ')');
-    }
   }
 
   public static void method135(int var0, int var1, int var2, int var3, int var4, int var5) {
-    try {
-      TextureSampler18.method282(DummyClass35.anIntArrayArray663[var0], var1 - var2, -76,
+    TextureSampler18.method282(DummyClass35.anIntArrayArray663[var0], var1 - var2, -76,
         var2 + var1, var5);
       int var6 = 0;
       int var8 = var2 * var2;
@@ -167,16 +158,10 @@ public final class AreaSoundEffect extends Node {
           var5);
         TextureSampler18.method282(DummyClass35.anIntArrayArray663[var22], var24, 112, var23, var5);
       }
-
-    } catch (RuntimeException var25) {
-      throw AbstractGameWorld.cascadeException(var25,
-        "fl.C(" + var0 + ',' + var1 + ',' + var2 + ',' + var3 + ',' + var4 + ',' + var5 + ')');
-    }
   }
 
   public static void method136(int var0) {
-    try {
-      AreaSoundEffect.aClass94_2323 = null;
+    AreaSoundEffect.aClass94_2323 = null;
       AreaSoundEffect.aClass94_2335 = null;
       if (var0 != -3) {
         AreaSoundEffect.anInt2317 = 98;
@@ -185,22 +170,15 @@ public final class AreaSoundEffect extends Node {
       AreaSoundEffect.aClass94_2331 = null;
       AreaSoundEffect.socketRequest = null;
       AreaSoundEffect.landscapeEncryptionKeys = null;
-    } catch (RuntimeException var2) {
-      throw AbstractGameWorld.cascadeException(var2, "fl.D(" + var0 + ')');
-    }
   }
 
   public static void method137(int var0, byte var1) {
-    try {
-      if (var1 >= -111) {
+    if (var1 >= -111) {
         AreaSoundEffect.aClass94_2335 = null;
       }
 
       ProceduralTexture.aClass93_1146.method1522(-127, var0);
       DummyClass13.aClass93_2016.method1522(-126, var0);
-    } catch (RuntimeException var3) {
-      throw AbstractGameWorld.cascadeException(var3, "fl.E(" + var0 + ',' + var1 + ')');
-    }
   }
 
 }

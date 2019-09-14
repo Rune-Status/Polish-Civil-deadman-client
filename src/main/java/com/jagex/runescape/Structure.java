@@ -19,8 +19,7 @@ public final class Structure extends SubNode {
   private HashTable aClass130_3636;
 
   public int method600(int var1, int var2, byte var3 ) {
-    try {
-      if (this.aClass130_3636 != null) {
+    if (this.aClass130_3636 != null) {
         if (var3 != -29) {
           this.method604(null, (byte) 56, 110);
         }
@@ -30,15 +29,10 @@ public final class Structure extends SubNode {
       } else {
         return var2;
       }
-    } catch (RuntimeException var5) {
-      throw AbstractGameWorld.cascadeException(var5,
-        "lk.Q(" + var1 + ',' + var2 + ',' + var3 + ')');
-    }
   }
 
   private void method601(Buffer var1, int var2, byte var3) {
-    try {
-      if (var3 < -2) {
+    if (var3 < -2) {
         if (249 == var2) {
           int var4 = var1.readUnsignedByte();
           int var5;
@@ -62,15 +56,10 @@ public final class Structure extends SubNode {
         }
 
       }
-    } catch (RuntimeException var9) {
-      throw AbstractGameWorld.cascadeException(var9,
-        "lk.P(" + (var1 != null ? "{...}" : "null") + ',' + var2 + ',' + var3 + ')');
-    }
   }
 
   public GameString method604(GameString var1, byte var2, int var3 ) {
-    try {
-      if (this.aClass130_3636 == null) {
+    if (this.aClass130_3636 == null) {
         return var1;
       } else {
         StringNode var4 = (StringNode) this.aClass130_3636.get(var3);
@@ -80,15 +69,10 @@ public final class Structure extends SubNode {
 
         return null != var4 ? var4.aClass94_2586 : var1;
       }
-    } catch (RuntimeException var5) {
-      throw AbstractGameWorld.cascadeException(var5,
-        "lk.B(" + (var1 != null ? "{...}" : "null") + ',' + var2 + ',' + var3 + ')');
-    }
   }
 
   public void method608(int var1, Buffer var2 ) {
-    try {
-      while (true) {
+    while (true) {
         int var3 = var2.readUnsignedByte();
         if (0 == var3) {
           if (var1 != 5) {
@@ -100,15 +84,10 @@ public final class Structure extends SubNode {
 
         this.method601(var2, var3, (byte) -5);
       }
-    } catch (RuntimeException var4) {
-      throw AbstractGameWorld.cascadeException(var4,
-        "lk.C(" + var1 + ',' + (var2 != null ? "{...}" : "null") + ')');
-    }
   }
 
   public static int method599(int var0, FileUnpacker var1) {
-    try {
-      int var2 = 0;
+    int var2 = 0;
       if (var0 == -20916) {
         if (var1.isLoaded(DummyClass14.titleBackgroundFileId)) {
           ++var2;
@@ -122,16 +101,11 @@ public final class Structure extends SubNode {
       } else {
         return -88;
       }
-    } catch (RuntimeException var3) {
-      throw AbstractGameWorld.cascadeException(var3,
-        "lk.F(" + var0 + ',' + (var1 != null ? "{...}" : "null") + ')');
-    }
   }
 
   public static AbstractDirectColorSprite method602(int var0, int var1, byte var2,
                                                    FileUnpacker var3) {
-    try {
-      if (SomethingTexture4.loadSprites(var3, var0, var1, var2 ^ 30885)) {
+    if (SomethingTexture4.loadSprites(var3, var0, var1, var2 ^ 30885)) {
         if (var2 != -18) {
           Structure.method607(true);
         }
@@ -140,15 +114,10 @@ public final class Structure extends SubNode {
       } else {
         return null;
       }
-    } catch (RuntimeException var5) {
-      throw AbstractGameWorld.cascadeException(var5,
-        "lk.R(" + var0 + ',' + var1 + ',' + var2 + ',' + (var3 != null ? "{...}" : "null") + ')');
-    }
   }
 
   public static void method603(int var0, int var1, int var2, Widget var3, boolean var4) {
-    try {
-      int var5 = var3.anInt168;
+    int var5 = var3.anInt168;
       int var6 = var3.anInt193;
       if (var1 != 13987) {
         Structure.method602(-115, 65, (byte) -119, null);
@@ -225,17 +194,10 @@ public final class Structure extends SubNode {
         var7.aClass11_2449 = var3;
         DummyClass31.aClass61_1471.addLast(var7);
       }
-
-    } catch (RuntimeException var8) {
-      throw AbstractGameWorld.cascadeException(var8,
-        "lk.E(" + var0 + ',' + var1 + ',' + var2 + ',' + (var3 != null ? "{...}" : "null") + ','
-          + var4 + ')');
-    }
   }
 
   public static void method605(int var0) {
-    try {
-      Structure.aClass94_3637 = null;
+    Structure.aClass94_3637 = null;
       Structure.aClass94_3638 = null;
       Structure.aClass94_3639 = null;
       Structure.aClass94_3643 = null;
@@ -244,15 +206,11 @@ public final class Structure extends SubNode {
       }
 
       Structure.aClass94_3645 = null;
-    } catch (RuntimeException var2) {
-      throw AbstractGameWorld.cascadeException(var2, "lk.D(" + var0 + ')');
-    }
   }
 
   public static void method606(int var0, AreaSoundEffect var1, int var2, int var3, int var4,
                               int var5) {
-    try {
-      if (var5 > 44) {
+    if (var5 > 44) {
         if (~var1.anInt2332 != 0 || var1.anIntArray2333 != null) {
           int var6 = 0;
           if (var1.anInt2321 < var0) {
@@ -332,16 +290,10 @@ public final class Structure extends SubNode {
           }
         }
       }
-    } catch (RuntimeException var12) {
-      throw AbstractGameWorld.cascadeException(var12,
-        "lk.O(" + var0 + ',' + (var1 != null ? "{...}" : "null") + ',' + var2 + ',' + var3 + ','
-          + var4 + ',' + var5 + ')');
-    }
   }
 
   public static void method607(boolean var0) {
-    try {
-      GameObject.aClass94_2751 = SomethingLight0.aClass94_1546;
+    GameObject.aClass94_2751 = SomethingLight0.aClass94_1546;
       TextureSampler36.aClass94_3426 = MonoChromaticImageCache.aClass94_1575;
       DummyClass35.aClass94_662 = IdentityKit.aClass94_463;
       TextureSampler24.aClass94_3142 = SceneGraphTile.aClass94_2215;
@@ -435,9 +387,6 @@ public final class Structure extends SubNode {
       BlockConfig.aClass94_1183 = SpawnedGameObject.aClass94_2260;
       WorldMapLabel.aClass94_1731 = TextureSampler25.aClass94_3409;
       DummyClass32.aClass94_525 = GameWorld.aClass94_2628;
-    } catch (RuntimeException var2) {
-      throw AbstractGameWorld.cascadeException(var2, "lk.A(" + var0 + ')');
-    }
   }
 
 }

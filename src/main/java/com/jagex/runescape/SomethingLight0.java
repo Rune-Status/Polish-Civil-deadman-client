@@ -29,8 +29,7 @@ public final class SomethingLight0 {
   public int anInt1566;
 
   public static void method1702(byte var0, boolean var1) {
-    try {
-      if (!var1 != !DummyClass28.aBoolean337) {
+    if (!var1 != !DummyClass28.aBoolean337) {
         DummyClass28.aBoolean337 = var1;
         if (var0 > -117) {
           SomethingLight0.aClass94_1546 = null;
@@ -38,14 +37,10 @@ public final class SomethingLight0 {
 
         StringNode0.method139(76);
       }
-    } catch (RuntimeException var3) {
-      throw AbstractGameWorld.cascadeException(var3, "pe.B(" + var0 + ',' + var1 + ')');
-    }
   }
 
   public static void method1703(int var0) {
-    try {
-      SomethingLight0.aClass94_1558 = null;
+    SomethingLight0.aClass94_1558 = null;
       if (var0 != 10967) {
         SomethingLight0.method1703(-117);
       }
@@ -53,9 +48,6 @@ public final class SomethingLight0 {
       SomethingLight0.aClass94_1546 = null;
       SomethingLight0.aClass94_1556 = null;
       SomethingLight0.aClass94_1567 = null;
-    } catch (RuntimeException var2) {
-      throw AbstractGameWorld.cascadeException(var2, "pe.A(" + var0 + ')');
-    }
   }
 
 }

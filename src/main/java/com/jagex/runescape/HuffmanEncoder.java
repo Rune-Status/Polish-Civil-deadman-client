@@ -34,8 +34,7 @@ public final class HuffmanEncoder {
   private final int[] lengths;
 
   public HuffmanEncoder(byte[] var1 ) {
-    try {
-      int[] var3 = new int[33];
+    int[] var3 = new int[33];
       int var2 = var1.length;
       this.anIntArray633 = new int[8];
       this.lengths = new int[var2];
@@ -114,17 +113,11 @@ public final class HuffmanEncoder {
           }
         }
       }
-
-    } catch (RuntimeException var15) {
-      throw AbstractGameWorld.cascadeException(var15,
-        "fi.<init>(" + (var1 != null ? "{...}" : "null") + ')');
-    }
   }
 
   public int method1015(int var1, int var2, byte[] var3, byte[] var4,int var5,
       int var6 ) {
-    try {
-      var1 += var5;
+    var1 += var5;
       int var7 = 0;
 
       int var8;
@@ -170,16 +163,10 @@ public final class HuffmanEncoder {
       }
 
       return -var6 + (var8 + 7 >> 3);
-    } catch (RuntimeException var15) {
-      throw AbstractGameWorld.cascadeException(var15,
-        "fi.A(" + var1 + ',' + var2 + ',' + (var3 != null ? "{...}" : "null") + ',' + (
-          var4 != null ? "{...}" : "null") + ',' + var5 + ',' + var6 + ')');
-    }
   }
 
   public int decompress(byte[] src, int srcOff, byte[] dest,int destOff,int len ) {
-    try {
-      if (~len == -1) {
+    if (~len == -1) {
         return 0;
       } else {
         int var7 = 0;
@@ -314,16 +301,10 @@ public final class HuffmanEncoder {
 
         return -srcOff + 1 + var8;
       }
-    } catch (RuntimeException var11) {
-      throw AbstractGameWorld.cascadeException(var11,
-        "fi.E(" + destOff + ',' + len + ',' + (dest != null ? "{...}" : "null") + ',' + (
-          src != null ? "{...}" : "null") + ',' + srcOff + ')');
-    }
   }
 
   public static AbstractFrameRegulator method1012(byte var0) {
     try {
-      try {
         if (var0 != -31) {
           HuffmanEncoder.aClass3_Sub28_Sub16_637 = null;
         }
@@ -333,14 +314,10 @@ public final class HuffmanEncoder {
       } catch (Throwable var2) {
         return new MilliFrameRegulator();
       }
-    } catch (RuntimeException var3) {
-      throw AbstractGameWorld.cascadeException(var3, "fi.F(" + var0 + ')');
-    }
   }
 
   public static GameString method1013(byte var0, int var1) {
-    try {
-      GameString var2 = SomethingScene.toString(var1);
+    GameString var2 = SomethingScene.toString(var1);
       if (var0 >= -87) {
         return null;
       } else {
@@ -363,14 +340,10 @@ public final class HuffmanEncoder {
           RenderAnimation.concat(
             new GameString[] {DummyClass10.aClass94_2082, var2, StringNode.aClass94_2584}));
       }
-    } catch (RuntimeException var4) {
-      throw AbstractGameWorld.cascadeException(var4, "fi.D(" + var0 + ',' + var1 + ')');
-    }
   }
 
   public static void method1014(int var0, int var1, int var2) {
-    try {
-      int var3 = 120 / ((15 - var0) / 41);
+    int var3 = 120 / ((15 - var0) / 41);
 
       for (int var4 = 0; var4 < ScriptState.amountFloors; ++var4) {
         FloorOverlay var5 = TextureSampler10.method350((byte) 120, var4);
@@ -418,24 +391,15 @@ public final class HuffmanEncoder {
           DummyClass51.anIntArray1161[1 + var4] = var7;
         }
       }
-
-    } catch (RuntimeException var11) {
-      throw AbstractGameWorld.cascadeException(var11,
-        "fi.B(" + var0 + ',' + var1 + ',' + var2 + ')');
-    }
   }
 
   public static void method1016(byte var0) {
-    try {
-      HuffmanEncoder.aByteArrayArrayArray640 = null;
+    HuffmanEncoder.aByteArrayArrayArray640 = null;
       if (var0 <= 85) {
         HuffmanEncoder.anInt638 = 33;
       }
 
       HuffmanEncoder.anIntArray634 = null;
       HuffmanEncoder.aClass3_Sub28_Sub16_637 = null;
-    } catch (RuntimeException var2) {
-      throw AbstractGameWorld.cascadeException(var2, "fi.C(" + var0 + ')');
-    }
   }
 }

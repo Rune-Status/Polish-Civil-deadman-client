@@ -38,8 +38,7 @@ public final class TextureSampler4 extends AbstractTextureSampler {
   }
 
   private void method263(int var1) {
-    try {
-      Random var2 = new Random(this.anInt3233);
+    Random var2 = new Random(this.anInt3233);
       this.anInt3222 = 4096 / this.anInt3233;
       this.anInt3223 = this.anInt3224 / 2;
       this.anIntArrayArray3225 = new int[this.anInt3233][1 + this.anInt3242];
@@ -83,14 +82,10 @@ public final class TextureSampler4 extends AbstractTextureSampler {
       }
 
       this.anIntArray3230[this.anInt3233] = 4096;
-    } catch (RuntimeException var9) {
-      throw AbstractGameWorld.cascadeException(var9, "mc.E(" + var1 + ')');
-    }
   }
 
   public int[] method154(int var1, byte var2 ) {
-    try {
-      int[] var3 = this.monoChromaticImageCache.method1709(-16409, var1);
+    int[] var3 = this.monoChromaticImageCache.method1709(-16409, var1);
       int var4;
       if (this.monoChromaticImageCache.aBoolean1580) {
         int var7 = 0;
@@ -147,14 +142,10 @@ public final class TextureSampler4 extends AbstractTextureSampler {
 
       var4 = -48 % ((30 - var2) / 36);
       return var3;
-    } catch (RuntimeException var17) {
-      throw AbstractGameWorld.cascadeException(var17, "mc.D(" + var1 + ',' + var2 + ')');
-    }
   }
 
   public void parseConfig(int var1, Buffer var2, boolean var3 ) {
-    try {
-      if (0 == var1) {
+    if (0 == var1) {
         this.anInt3242 = var2.readUnsignedByte();
       } else {
         if (~var1 == -2) {
@@ -187,43 +178,28 @@ public final class TextureSampler4 extends AbstractTextureSampler {
       if (!var3) {
         TextureSampler4.LANG_FRENCH = null;
       }
-
-    } catch (RuntimeException var5) {
-      throw AbstractGameWorld.cascadeException(var5,
-        "mc.A(" + var1 + ',' + (var2 != null ? "{...}" : "null") + ',' + var3 + ')');
-    }
   }
 
   public void method158(int var1 ) {
-    try {
-      if (var1 != 16251) {
+    if (var1 != 16251) {
         this.method158(-93);
       }
 
       this.method263(0);
-    } catch (RuntimeException var3) {
-      throw AbstractGameWorld.cascadeException(var3, "mc.P(" + var1 + ')');
-    }
   }
 
   public static void method260(int var0, int var1, int var2) {
-    try {
-      if (var0 != -16207) {
+    if (var0 != -16207) {
         TextureSampler4.LANG_PORTUGUESE = null;
       }
 
       WidgetUpdate var3 = AudioStreamEncoder3.method466(4, 7, var1);
       var3.g((byte) 33);
       var3.anInt3598 = var2;
-    } catch (RuntimeException var4) {
-      throw AbstractGameWorld.cascadeException(var4,
-        "mc.O(" + var0 + ',' + var1 + ',' + var2 + ')');
-    }
   }
 
   public static void method261(int var0) {
-    try {
-      int var1 = -31 / ((-43 - var0) / 55);
+    int var1 = -31 / ((-43 - var0) / 55);
       TextureSampler4.aClass153_3227 = null;
       TextureSampler4.LANG_GERMAN = null;
       TextureSampler4.LANG_PORTUGUESE = null;
@@ -234,15 +210,11 @@ public final class TextureSampler4 extends AbstractTextureSampler {
       TextureSampler4.aClass94Array3226 = null;
       TextureSampler4.LANG_ENGLISH = null;
       TextureSampler4.aClass3_Sub28_Sub16_Sub2_3221 = null;
-    } catch (RuntimeException var2) {
-      throw AbstractGameWorld.cascadeException(var2, "mc.F(" + var0 + ')');
-    }
   }
 
   public static void method262(int var0, int var1, int var2, int var3, int var4, int var5, int var6,
                               int var7) {
-    try {
-      int var8 = var5 + var2;
+    int var8 = var5 + var2;
       int var10 = var5 + var7;
 
       int var12;
@@ -266,16 +238,10 @@ public final class TextureSampler4 extends AbstractTextureSampler {
         }
 
       }
-    } catch (RuntimeException var14) {
-      throw AbstractGameWorld.cascadeException(var14,
-        "mc.Q(" + var0 + ',' + var1 + ',' + var2 + ',' + var3 + ',' + var4 + ',' + var5 + ',' + var6
-          + ',' + var7 + ')');
-    }
   }
 
   public static void method264(byte var0) {
-    try {
-      ++TextureSampler25.anInt3402;
+    ++TextureSampler25.anInt3402;
       TextureSampler12.secureBuffer.writePacket(184);
 
       for (SomethingPacket151 var1 =
@@ -294,23 +260,14 @@ public final class TextureSampler4 extends AbstractTextureSampler {
         DummyClass29.method909(125, TextureSampler27.aClass11_3087);
         TextureSampler27.aClass11_3087 = null;
       }
-
-    } catch (RuntimeException var2) {
-      throw AbstractGameWorld.cascadeException(var2, "mc.C(" + var0 + ')');
-    }
   }
 
   public static void method265(byte var0, int var1) {
-    try {
-      WidgetUpdate var2 = AudioStreamEncoder3.method466(4, 8, var1);
+    WidgetUpdate var2 = AudioStreamEncoder3.method466(4, 8, var1);
       var2.createIndexedColorSprite(true);
       if (var0 != -42) {
         TextureSampler4.LANG_FRENCH = null;
       }
-
-    } catch (RuntimeException var3) {
-      throw AbstractGameWorld.cascadeException(var3, "mc.B(" + var0 + ',' + var1 + ')');
-    }
   }
 
 }

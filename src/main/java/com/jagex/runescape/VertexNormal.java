@@ -22,21 +22,15 @@ public final class VertexNormal {
   }
 
   public VertexNormal(VertexNormal var1 ) {
-    try {
-      this.c = var1.c;
+    this.c = var1.c;
       this.x = var1.x;
       this.y = var1.y;
       this.z = var1.z;
-    } catch (RuntimeException var3) {
-      throw AbstractGameWorld.cascadeException(var3,
-          "hd.<init>(" + "null" + ')');
-    }
   }
 
   public static void method1131(int var0, int var1, int var2, int var3, int var4, int var5, int var6,
                                int var7) {
-    try {
-      if (~var6 <= -1 && 0 <= var4 && -104 < ~var6 && 103 > var4) {
+    if (~var6 <= -1 && 0 <= var4 && -104 < ~var6 && 103 > var4) {
         int var9;
         if (-1 == ~var5) {
           SceneSomething2 var8 = DummyClass14.method2147(var0, var6, var4);
@@ -114,29 +108,17 @@ public final class VertexNormal {
       if (var1 <= 104) {
         VertexNormal.method1132(-79);
       }
-
-    } catch (RuntimeException var10) {
-      throw AbstractGameWorld.cascadeException(var10,
-        "hd.B(" + var0 + ',' + var1 + ',' + var2 + ',' + var3 + ',' + var4 + ',' + var5 + ',' + var6
-          + ',' + var7 + ')');
-    }
   }
 
   public static void method1132(int var0) {
-    try {
-      DummyHashTable.aClass93_1683.method1523((byte) -111);
+    DummyHashTable.aClass93_1683.method1523((byte) -111);
       if (var0 != 103) {
         VertexNormal.method1132(14);
       }
-
-    } catch (RuntimeException var2) {
-      throw AbstractGameWorld.cascadeException(var2, "hd.A(" + var0 + ')');
-    }
   }
 
   public static void method1133(byte var0) {
-    try {
-      VertexNormal.aClass94_833 = null;
+    VertexNormal.aClass94_833 = null;
       VertexNormal.aClass94_822 = null;
       VertexNormal.aClass94_827 = null;
       VertexNormal.aClass94_829 = null;
@@ -145,9 +127,6 @@ public final class VertexNormal {
       VertexNormal.aClass94_825 = null;
       VertexNormal.aLongArray826 = null;
       VertexNormal.aClass3_Sub28_Sub16_824 = null;
-    } catch (RuntimeException var2) {
-      throw AbstractGameWorld.cascadeException(var2, "hd.C(" + var0 + ')');
-    }
   }
 
 }

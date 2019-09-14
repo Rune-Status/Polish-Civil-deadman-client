@@ -24,49 +24,31 @@ public final class GroundItem extends SceneNode {
       long var9,
       int var11,
       DummyClass0 var12 ) {
-    try {
-      AbstractModel var13 = DummyClass35.getItemConfig(this.anInt2936, (byte) 84)
+    AbstractModel var13 = DummyClass35.getItemConfig(this.anInt2936, (byte) 84)
         .getModel(124, -1, 0, null, this.anInt2930, 0);
       if (null != var13) {
         var13.draw(var1, var2, var3, var4, var5, translateX, translateY, translateZ, var9, var11,
           var12);
         this.anInt2932 = var13.getMinimumY();
       }
-    } catch (RuntimeException var14) {
-      throw AbstractGameWorld.cascadeException(var14,
-        "uj.IA(" + var1 + ',' + var2 + ',' + var3 + ',' + var4 + ',' + var5 + ',' + translateX + ','
-          + translateY + ',' + translateZ + ',' + var9 + ',' + var11 + ',' + (var12 != null ?
-          "{...}" :
-          "null") + ')');
-    }
   }
 
   public int getMinimumY() {
-    try {
-      return this.anInt2932;
-    } catch (RuntimeException var2) {
-      throw AbstractGameWorld.cascadeException(var2, "uj.MA()");
-    }
+    return this.anInt2932;
   }
 
   public static boolean loadSprites(FileUnpacker sprites, int fileId) {
-    try {
-      byte[] bytes = sprites.getBytes(fileId);
+    byte[] bytes = sprites.getBytes(fileId);
       if (null != bytes) {
         DummyClass38.loadSprites(bytes, 19);
         return true;
       } else {
         return false;
       }
-    } catch (RuntimeException var4) {
-      throw AbstractGameWorld.cascadeException(var4,
-        "uj.B(" + (sprites != null ? "{...}" : "null") + ',' + fileId + ')');
-    }
   }
 
   public static void method2030(byte var0) {
-    try {
-      GroundItem.anIntArray2929 = null;
+    GroundItem.anIntArray2929 = null;
       if (var0 < 82) {
         GroundItem.method2031((byte) -61, false, -20, 24, null, 124);
       }
@@ -76,15 +58,11 @@ public final class GroundItem extends SceneNode {
       GroundItem.aClass94Array2935 = null;
       GroundItem.aClass94_2928 = null;
       GroundItem.fileUnpacker24 = null;
-    } catch (RuntimeException var2) {
-      throw AbstractGameWorld.cascadeException(var2, "uj.C(" + var0 + ')');
-    }
   }
 
   public static boolean method2031(byte var0, boolean var1, int var2, int var3,
                                   SceneGraphTile[][][] var4, int var5) {
-    try {
-      byte var6 = !var1 ? (byte) (255 & BitVariable.anInt1127) : 1;
+    byte var6 = !var1 ? (byte) (255 & BitVariable.anInt1127) : 1;
       if (~var6
         == ~AbstractImageProducer.aByteArrayArrayArray2008[GameWorldSomething.currentPlane][var2][var3]) {
         return false;
@@ -335,29 +313,18 @@ public final class GroundItem extends SceneNode {
 
         return true;
       }
-    } catch (RuntimeException var22) {
-      throw AbstractGameWorld.cascadeException(var22,
-        "uj.A(" + var0 + ',' + var1 + ',' + var2 + ',' + var3 + ',' + (var4 != null ?
-          "{...}" :
-          "null") + ',' + var5 + ')');
-    }
   }
 
   public static int method2032(int var0, int var1) {
-    try {
-      if (var1 != 5439488) {
+    if (var1 != 5439488) {
         GroundItem.anInt2937 = 102;
       }
 
       return var0 >>> 10;
-    } catch (RuntimeException var3) {
-      throw AbstractGameWorld.cascadeException(var3, "uj.E(" + var0 + ',' + var1 + ')');
-    }
   }
 
   public static GameString decompressString(Buffer buffer, int maximumLen) {
     try {
-      try {
         int len = buffer.readUnsignedShortSmart();
         if (maximumLen < len) {
           len = maximumLen;
@@ -370,10 +337,6 @@ public final class GroundItem extends SceneNode {
       } catch (Exception var6) {
         return DummyClass13.aClass94_2018;
       }
-    } catch (RuntimeException var7) {
-      throw AbstractGameWorld.cascadeException(var7,
-        "uj.D(" + (buffer != null ? "{...}" : "null") + maximumLen + ')');
-    }
   }
 
 }

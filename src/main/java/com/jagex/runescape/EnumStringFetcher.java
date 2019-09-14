@@ -15,8 +15,7 @@ public final class EnumStringFetcher implements Interface4 {
   public static GameString aClass94_2168 = GameString.create("<br>");
 
   public GameString method20(int var1, int[] enums, int var3, long key) {
-    try {
-      if (var1 == 0) {
+    if (var1 == 0) {
         ClientScriptEnum var6 = TextureSampler36.getEnum(enums[0], true);
         return var6.getString((int) key, (byte) 120);
       } else {
@@ -30,10 +29,6 @@ public final class EnumStringFetcher implements Interface4 {
           return var8.aClass94_770;
         }
       }
-    } catch (RuntimeException var7) {
-      throw AbstractGameWorld.cascadeException(var7,
-        "af.A(" + var1 + ',' + (enums != null ? "{...}" : "null") + ',' + var3 + ',' + key + ')');
-    }
   }
 
   public static void printError(int var0, String var1) {
@@ -45,8 +40,7 @@ public final class EnumStringFetcher implements Interface4 {
   }
 
   public static Widget getWidget(byte var0, int var1) {
-    try {
-      int var2 = var1 >> 16;
+    int var2 = var1 >> 16;
       if (var0 < 108) {
         EnumStringFetcher.getWidget((byte) 87, 19);
       }
@@ -61,36 +55,24 @@ public final class EnumStringFetcher implements Interface4 {
       }
 
       return SceneNode.aClass11ArrayArray1834[var2][var3];
-    } catch (RuntimeException var5) {
-      throw AbstractGameWorld.cascadeException(var5, "af.F(" + var0 + ',' + var1 + ')');
-    }
   }
 
   public static void method833(byte var0) {
-    try {
-      EnumStringFetcher.aShortArray2167 = null;
+    EnumStringFetcher.aShortArray2167 = null;
       EnumStringFetcher.animationFrames = null;
       EnumStringFetcher.aClass94_2164 = null;
       EnumStringFetcher.aClass94_2168 = null;
       int var1 = 124 / ((var0 - 28) / 41);
       EnumStringFetcher.aClass94_2163 = null;
-    } catch (RuntimeException var2) {
-      throw AbstractGameWorld.cascadeException(var2, "af.E(" + var0 + ')');
-    }
   }
 
   public static void method834(byte var0) {
-    try {
-      OndemandRequester.method1250(43, false);
+    OndemandRequester.method1250(43, false);
       System.gc();
       DummyClass26.setState(25, 5);
       if (var0 >= -80) {
         EnumStringFetcher.lastPacketId1 = -89;
       }
-
-    } catch (RuntimeException var2) {
-      throw AbstractGameWorld.cascadeException(var2, "af.D(" + var0 + ')');
-    }
   }
 
   public static boolean method835(int var0, int var1, int var2, int var3, int var4, int var5,

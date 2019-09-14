@@ -31,8 +31,7 @@ public final class TextureSampler36 extends AbstractTextureSampler {
   }
 
   private boolean method339(boolean var1) {
-    try {
-      if (var1) {
+    if (var1) {
         return true;
       } else if (this.anIntArray3425 == null) {
         if (~this.anInt3434 > -1) {
@@ -52,51 +51,33 @@ public final class TextureSampler36 extends AbstractTextureSampler {
       } else {
         return true;
       }
-    } catch (RuntimeException var5) {
-      throw AbstractGameWorld.cascadeException(var5, "ui.LA(" + ')');
-    }
   }
 
   public int method155(byte var1 ) {
-    try {
-      if (var1 != 19) {
+    if (var1 != 19) {
         this.method155((byte) -60);
       }
 
       return this.anInt3434;
-    } catch (RuntimeException var3) {
-      throw AbstractGameWorld.cascadeException(var3, "ui.HA(" + var1 + ')');
-    }
   }
 
   public void parseConfig(int var1, Buffer var2, boolean var3 ) {
-    try {
-      if (!var3) {
+    if (!var3) {
         TextureSampler36.animationSequences = null;
       }
 
       if (0 == var1) {
         this.anInt3434 = var2.readUnsignedShort();
       }
-
-    } catch (RuntimeException var5) {
-      throw AbstractGameWorld.cascadeException(var5,
-        "ui.A(" + var1 + ',' + (var2 != null ? "{...}" : "null") + ',' + var3 + ')');
-    }
   }
 
   public void method161(byte var1 ) {
-    try {
-      super.method161(var1);
+    super.method161(var1);
       this.anIntArray3425 = null;
-    } catch (RuntimeException var3) {
-      throw AbstractGameWorld.cascadeException(var3, "ui.BA(" + var1 + ')');
-    }
   }
 
   public int[][] method166(int var1, int var2 ) {
-    try {
-      if (var1 != -1) {
+    if (var1 != -1) {
         this.anInt3434 = 6;
       }
 
@@ -130,14 +111,10 @@ public final class TextureSampler36 extends AbstractTextureSampler {
       }
 
       return var3;
-    } catch (RuntimeException var11) {
-      throw AbstractGameWorld.cascadeException(var11, "ui.T(" + var1 + ',' + var2 + ')');
-    }
   }
 
   public static void method338(int var0, int var1, boolean var2, int var3, int var4, int var5) {
-    try {
-      ++BitVariable.anInt1127;
+    ++BitVariable.anInt1127;
       DummyClass23.method1745(0);
       if (!var2) {
         SomethingInScenePacket202.method116(true, 670232012);
@@ -339,24 +316,15 @@ public final class TextureSampler36 extends AbstractTextureSampler {
         }
 
       }
-    } catch (RuntimeException var15) {
-      throw AbstractGameWorld.cascadeException(var15,
-        "ui.OA(" + var0 + ',' + var1 + ',' + var2 + ',' + var3 + ',' + var4 + ',' + var5 + ')');
-    }
   }
 
   public static int method340(int var0, int var1) {
-    try {
-      int var2 = 74 % ((8 - var1) / 54);
+    int var2 = 74 % ((8 - var1) / 54);
       return var0 >>> 8;
-    } catch (RuntimeException var3) {
-      throw AbstractGameWorld.cascadeException(var3, "ui.NA(" + var0 + ',' + var1 + ')');
-    }
   }
 
   public static void method341(byte var0) {
-    try {
-      TextureSampler36.aClass94_3428 = null;
+    TextureSampler36.aClass94_3428 = null;
       TextureSampler36.aClass94_3437 = null;
       TextureSampler36.aClass94_3427 = null;
       TextureSampler36.aClass94_3426 = null;
@@ -366,14 +334,10 @@ public final class TextureSampler36 extends AbstractTextureSampler {
         TextureSampler36.floorUnderlayIds = null;
         TextureSampler36.aClass94_3436 = null;
       }
-    } catch (RuntimeException var2) {
-      throw AbstractGameWorld.cascadeException(var2, "ui.MA(" + var0 + ')');
-    }
   }
 
   public static ClientScriptEnum getEnum(int var0, boolean var1) {
-    try {
-      ClientScriptEnum var2 =
+    ClientScriptEnum var2 =
         (ClientScriptEnum) MilliFrameRegulator.aClass47_2686.get(var0, 1400);
       if (var2 != null) {
         return var2;
@@ -392,14 +356,10 @@ public final class TextureSampler36 extends AbstractTextureSampler {
         MilliFrameRegulator.aClass47_2686.put(var0, var2);
         return var2;
       }
-    } catch (RuntimeException var4) {
-      throw AbstractGameWorld.cascadeException(var4, "ui.IA(" + var0 + ',' + var1 + ')');
-    }
   }
 
   public static AbstractIndexedColorSprite[] method343(int var0) {
-    try {
-      AbstractIndexedColorSprite[] var1 = new AbstractIndexedColorSprite[DummyClass53.spriteCount];
+    AbstractIndexedColorSprite[] var1 = new AbstractIndexedColorSprite[DummyClass53.spriteCount];
 
       for (int i = 0; i < DummyClass53.spriteCount; i++) {
         if (GlRenderer.useOpenGlRenderer) {
@@ -427,23 +387,16 @@ public final class TextureSampler36 extends AbstractTextureSampler {
 
       DummyClass37.method1035((byte) 113);
       return var1;
-    } catch (RuntimeException var3) {
-      throw AbstractGameWorld.cascadeException(var3, "ui.JA(" + var0 + ')');
-    }
   }
 
   public static void method344(int var0, int var1) {
-    try {
-      if (0 <= var0 && AudioStreamEncoder4.aBooleanArray3503.length > var0) {
+    if (0 <= var0 && AudioStreamEncoder4.aBooleanArray3503.length > var0) {
         AudioStreamEncoder4.aBooleanArray3503[var0] = !AudioStreamEncoder4.aBooleanArray3503[var0];
         if (var1 != 4) {
           TextureSampler36.floorUnderlayIds = null;
         }
 
       }
-    } catch (RuntimeException var3) {
-      throw AbstractGameWorld.cascadeException(var3, "ui.KA(" + var0 + ',' + var1 + ')');
-    }
   }
 
 }

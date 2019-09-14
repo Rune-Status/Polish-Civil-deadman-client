@@ -14,19 +14,12 @@ public final class MidiSomething {
 
 
   public MidiSomething(FileUnpacker var1, FileUnpacker var2 ) {
-    try {
-      this.soundEffects = var1;
+    this.soundEffects = var1;
       this.midiInstruments = var2;
-    } catch (RuntimeException var4) {
-      throw AbstractGameWorld.cascadeException(var4,
-        "le.<init>(" + (var1 != null ? "{...}" : "null") + ',' + (var2 != null ? "{...}" : "null")
-          + ')');
-    }
   }
 
   private SomethingMusic0 method1412(int[] var1, int var2, int var3, int var4) {
-    try {
-      if (var2 == 31947) {
+    if (var2 == 31947) {
         int var5 = var4 ^ (var3 >>> 12 | var3 << 4 & '\ufff3');
         var5 |= var3 << 16;
         long var6 = var5;
@@ -53,15 +46,10 @@ public final class MidiSomething {
       } else {
         return null;
       }
-    } catch (RuntimeException var10) {
-      throw AbstractGameWorld.cascadeException(var10,
-        "le.B(" + (var1 != null ? "{...}" : "null") + ',' + var2 + ',' + var3 + ',' + var4 + ')');
-    }
   }
 
   public SomethingMusic0 method1413(int var1, int var2, int[] var3 ) {
-    try {
-      if (1 == this.soundEffects.method2121(0)) {
+    if (1 == this.soundEffects.method2121(0)) {
         return this.method1412(var3, 31947, 0, var1);
       } else {
         if (-2 == ~this.soundEffects.getAmountChildren(var1, (byte) 83)) {
@@ -74,15 +62,10 @@ public final class MidiSomething {
           throw new RuntimeException();
         }
       }
-    } catch (RuntimeException var5) {
-      throw AbstractGameWorld.cascadeException(var5,
-        "le.A(" + var1 + ',' + var2 + ',' + (var3 != null ? "{...}" : "null") + ')');
-    }
   }
 
   private SomethingMusic0 method1415(int var1, int[] var2, int var3, byte var4) {
-    try {
-      int var5 = var3 ^ (var1 >>> 12 | '\ufff3' & var1 << 4);
+    int var5 = var3 ^ (var1 >>> 12 | '\ufff3' & var1 << 4);
       var5 |= var1 << 16;
       long var6 = var5 ^ 4294967296L;
       SomethingMusic0 var8 = (SomethingMusic0) this.aClass130_1159.get(var6);
@@ -114,16 +97,10 @@ public final class MidiSomething {
           return var8;
         }
       }
-    } catch (RuntimeException var10) {
-      // var10.printStackTrace();
-      throw AbstractGameWorld.cascadeException(var10,
-        "le.F(" + var1 + ',' + (var2 != null ? "{...}" : "null") + ',' + var3 + ',' + var4 + ')');
-    }
   }
 
   public SomethingMusic0 method1416(int var1, int var2, int[] var3 ) {
-    try {
-      if (var1 != 10089) {
+    if (var1 != 10089) {
         return null;
       } else if (-2 == ~this.midiInstruments.method2121(0)) {
         return this.method1415(0, var3, var2, (byte) 11);
@@ -132,16 +109,11 @@ public final class MidiSomething {
       } else {
         return this.method1415(var2, var3, 0, (byte) 11);
       }
-    } catch (RuntimeException var5) {
-      throw AbstractGameWorld.cascadeException(var5,
-        "le.G(" + var1 + ',' + var2 + ',' + (var3 != null ? "{...}" : "null") + ')');
-    }
   }
 
   public static void method1410(int var0, int var1, int var2, int var3, int var4, int var5, int var6,
                                int var7, int var8, int var9, int var10) {
-    try {
-      int var11 = var4 - var6;
+    int var11 = var4 - var6;
       int var12 = -var3 + var2;
       if (DummyClass30.anInt455 > var4) {
         ++var11;
@@ -448,17 +420,10 @@ public final class MidiSomething {
           }
         }
       }
-
-    } catch (RuntimeException var40) {
-      throw AbstractGameWorld.cascadeException(var40,
-        "le.C(" + var0 + ',' + var1 + ',' + var2 + ',' + var3 + ',' + var4 + ',' + var5 + ',' + var6
-          + ',' + var7 + ',' + var8 + ',' + var9 + ',' + var10 + ')');
-    }
   }
 
   public static int getWindowMode() {
-    try {
-      if (TextureSampler30.fullScreenFrame == null) {
+    if (TextureSampler30.fullScreenFrame == null) {
         if (GlRenderer.useOpenGlRenderer && SomethingVolume15.aBoolean2427) {
           return 2;
         } else {
@@ -468,21 +433,14 @@ public final class MidiSomething {
       } else {
         return 3;
       }
-    } catch (RuntimeException var2) {
-      throw AbstractGameWorld.cascadeException(var2, "le.D()");
-    }
   }
 
   public static void method1414(int var0) {
-    try {
-      if (var0 < 86) {
+    if (var0 < 86) {
         MidiSomething.method1410(73, 59, 119, 60, 89, -42, -25, 37, 88, -62, 69);
       }
 
       MidiSomething.aClass3_Sub27_1154 = null;
-    } catch (RuntimeException var2) {
-      throw AbstractGameWorld.cascadeException(var2, "le.E(" + var0 + ')');
-    }
   }
 
 }

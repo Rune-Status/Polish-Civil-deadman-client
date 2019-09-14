@@ -17,14 +17,9 @@ public abstract class AbstractSomethingTexture {
 
 
   public AbstractSomethingTexture(int var1, int var2, int var3 ) {
-    try {
-      this.anInt1104 = var2;
+    this.anInt1104 = var2;
       this.anInt1106 = var3;
       this.anInt1101 = var1;
-    } catch (RuntimeException var5) {
-      throw AbstractGameWorld.cascadeException(var5,
-        "kf.<init>(" + var1 + ',' + var2 + ',' + var3 + ')');
-    }
   }
 
   public abstract void method1335(int var1,int var2,int var3 );
@@ -34,13 +29,8 @@ public abstract class AbstractSomethingTexture {
   public abstract void method1341(int var1,int var2,int var3 );
 
   public static void method1334(byte var0) {
-    try {
-      AbstractSomethingTexture.OBJECT_TYPES = null;
+    AbstractSomethingTexture.OBJECT_TYPES = null;
       AbstractSomethingTexture.aClass3_Sub28_Sub5Array1103 = null;
-
-    } catch (RuntimeException var2) {
-      throw AbstractGameWorld.cascadeException(var2, "kf.J(" + var0 + ')');
-    }
   }
 
   public static SceneSomething method1336(int var0, int var1, int var2) {
@@ -60,20 +50,15 @@ public abstract class AbstractSomethingTexture {
   }
 
   public static int method1338(int var0, int var1) {
-    try {
-      if (var1 <= 13) {
+    if (var1 <= 13) {
         AbstractSomethingTexture.OBJECT_TYPES = null;
       }
 
       return 255 & var0;
-    } catch (RuntimeException var3) {
-      throw AbstractGameWorld.cascadeException(var3, "kf.H(" + var0 + ',' + var1 + ')');
-    }
   }
 
   public static void method1339(GameString var0, int var1) {
-    try {
-      if (var1 == 0) {
+    if (var1 == 0) {
         for (SomethingWorldMapy var2 = (SomethingWorldMapy) DummyClass21.aClass61_1758.getFirst();
              var2 != null; var2 = (SomethingWorldMapy) DummyClass21.aClass61_1758.getNext()) {
           if (var2.aClass94_3561.method1528((byte) -42, var0)) {
@@ -83,15 +68,10 @@ public abstract class AbstractSomethingTexture {
         }
 
       }
-    } catch (RuntimeException var3) {
-      throw AbstractGameWorld.cascadeException(var3,
-        "kf.G(" + (var0 != null ? "{...}" : "null") + ',' + var1 + ')');
-    }
   }
 
   public static void method1340(int var0, int var1, byte var2, int var3, int var4) {
-    try {
-      if (var2 != -40) {
+    if (var2 != -40) {
         AbstractSomethingTexture.anInt1105 = 43;
       }
 
@@ -102,11 +82,6 @@ public abstract class AbstractSomethingTexture {
           GroundItemNode.aBooleanArray3674[var5] = true;
         }
       }
-
-    } catch (RuntimeException var6) {
-      throw AbstractGameWorld.cascadeException(var6,
-        "kf.I(" + var0 + ',' + var1 + ',' + var2 + ',' + var3 + ',' + var4 + ')');
-    }
   }
 
 }

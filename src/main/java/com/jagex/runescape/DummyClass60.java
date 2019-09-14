@@ -11,22 +11,17 @@ public final class DummyClass60 {
 
 
   public static void method911(int var0) {
-    try {
-      if (var0 != 26) {
+    if (var0 != 26) {
         DummyClass60.anIntArray441 = null;
       }
 
       DummyClass60.anIntArray441 = null;
       DummyClass60.aClass94_444 = null;
       DummyClass60.aClass94_442 = null;
-    } catch (RuntimeException var2) {
-      throw AbstractGameWorld.cascadeException(var2, "dh.B(" + var0 + ')');
-    }
   }
 
   public static void method912(boolean var0) {
-    try {
-      TextureSampler12.secureBuffer.position = 0;
+    TextureSampler12.secureBuffer.position = 0;
       EnumStringFetcher.lastPacketId1 = -1;
       DummyClass36.aBoolean2615 = var0;
       HashTable.packetLength = 0;
@@ -62,14 +57,10 @@ public final class DummyClass60 {
       }
 
       TextureSampler9.method204(-3);
-    } catch (RuntimeException var2) {
-      throw AbstractGameWorld.cascadeException(var2, "dh.F(" + var0 + ')');
-    }
   }
 
   public static AbstractObjectNodeWrapper method913(int var0) {
     try {
-      try {
         if (var0 != 31431) {
           DummyClass60.method913(123);
         }
@@ -80,14 +71,10 @@ public final class DummyClass60 {
       } catch (Throwable var2) {
         return null;
       }
-    } catch (RuntimeException var3) {
-      throw AbstractGameWorld.cascadeException(var3, "dh.C(" + var0 + ')');
-    }
   }
 
   public static SomethingPacket151 method914(int var0, int var1, int var2, int var3) {
-    try {
-      SomethingPacket151 var4 = new SomethingPacket151();
+    SomethingPacket151 var4 = new SomethingPacket151();
       var4.anInt2603 = var3;
       var4.anInt2602 = var1;
       TextureSampler23.aClass130_3208.put(var2, var4);
@@ -147,28 +134,18 @@ public final class DummyClass60 {
       }
 
       return var4;
-    } catch (RuntimeException var10) {
-      throw AbstractGameWorld.cascadeException(var10,
-        "dh.D(" + var0 + ',' + var1 + ',' + var2 + ',' + var3 + ')');
-    }
   }
 
   public static void method915(GameString var0, int var1) {
-    try {
-      int var2 = ByteArrayNode.method576(var0, false);
+    int var2 = ByteArrayNode.method576(var0, false);
       if (var1 != var2) {
         AbstractObjectNode.method565((byte) 86, DummyClass25.aClass131_1624.aShortArray1727[var2],
           DummyClass25.aClass131_1624.aShortArray1718[var2]);
       }
-    } catch (RuntimeException var3) {
-      throw AbstractGameWorld.cascadeException(var3,
-        "dh.A(" + (var0 != null ? "{...}" : "null") + ',' + var1 + ')');
-    }
   }
 
   public static AbstractMouseWheel createMouseWheel(byte var0) {
-    try {
-      if (var0 != 15) {
+    if (var0 != 15) {
         DummyClass60.aClass94_442 = null;
       }
 
@@ -178,9 +155,6 @@ public final class DummyClass60 {
       } catch (Throwable var2) {
         return null;
       }
-    } catch (RuntimeException var3) {
-      throw AbstractGameWorld.cascadeException(var3, "dh.E(" + var0 + ')');
-    }
   }
 
 }

@@ -61,8 +61,7 @@ public final class NPC extends Mobile {
       long var9,
       int var11,
       DummyClass0 var12 ) {
-    try {
-      if (this.config != null) {
+    if (this.config != null) {
         AnimationSequence var13 = 0 != ~this.animationId
             && -1 == ~this.anInt2828 ?
           GameClient.method45(this.animationId, (byte) -20) :
@@ -169,37 +168,22 @@ public final class NPC extends Mobile {
 
         }
       }
-    } catch (RuntimeException var20) {
-      throw AbstractGameWorld.cascadeException(var20,
-        "km.IA(" + var1 + ',' + var2 + ',' + var3 + ',' + var4 + ',' + var5 + ',' + var6 + ','
-          + var7 + ',' + var8 + ',' + var9 + ',' + var11 + ',' + (var12 != null ? "{...}" : "null")
-          + ')');
-    }
   }
 
   public int getMinimumY() {
-    try {
-      return this.anInt2820;
-    } catch (RuntimeException var2) {
-      throw AbstractGameWorld.cascadeException(var2, "km.MA()");
-    }
+    return this.anInt2820;
   }
 
   public boolean hasConfiguration(byte var1 ) {
-    try {
-      if (var1 != 17) {
+    if (var1 != 17) {
         NPC.method1984(-101, -40, 63);
       }
 
       return null != this.config;
-    } catch (RuntimeException var3) {
-      throw AbstractGameWorld.cascadeException(var3, "km.L(" + var1 + ')');
-    }
   }
 
   public int getRenderAnimationId() {
-    try {
-      if (AbstractImageProducer.gameId != 0 && this.config.anIntArray1292 != null) {
+    if (AbstractImageProducer.gameId != 0 && this.config.anIntArray1292 != null) {
         NpcConfiguration var2 = this.config.method1471((byte) 21);
         if (var2 != null && 0 != ~var2.renderAnimationId) {
           return var2.renderAnimationId;
@@ -207,29 +191,20 @@ public final class NPC extends Mobile {
       }
 
       return this.renderAnimationId;
-    } catch (RuntimeException var3) {
-      throw AbstractGameWorld.cascadeException(var3, "km.B()");
-    }
   }
 
   public void setConfiguration(int var1, NpcConfiguration var2 ) {
-    try {
-      this.config = var2;
+    this.config = var2;
       if (var1 == -1) {
         if (this.aClass127_Sub1_2801 != null) {
           this.aClass127_Sub1_2801.method1759();
         }
 
       }
-    } catch (RuntimeException var4) {
-      throw AbstractGameWorld.cascadeException(var4,
-        "km.R(" + var1 + ',' + (var2 != null ? "{...}" : "null") + ')');
-    }
   }
 
   public static void method1983(int var0) {
-    try {
-      NPC.anIntArray3986 = null;
+    NPC.anIntArray3986 = null;
       NPC.aClass94_3984 = null;
       NPC.aClass94_3983 = null;
       NPC.aClass94_3989 = null;
@@ -255,14 +230,10 @@ public final class NPC extends Mobile {
         NPC.aClass94_4003 = null;
         NPC.aClass94_4000 = null;
       }
-    } catch (RuntimeException var2) {
-      throw AbstractGameWorld.cascadeException(var2, "km.N(" + var0 + ')');
-    }
   }
 
   public static int method1984(int var0, int var1, int var2) {
-    try {
-      if (var1 == 38) {
+    if (var1 == 38) {
         int var3 = 57 * var2 + var0;
         var3 ^= var3 << 13;
         int var4 = Integer.MAX_VALUE
@@ -271,15 +242,10 @@ public final class NPC extends Mobile {
       } else {
         return 88;
       }
-    } catch (RuntimeException var5) {
-      throw AbstractGameWorld.cascadeException(var5,
-        "km.S(" + var0 + ',' + var1 + ',' + var2 + ')');
-    }
   }
 
   public static byte[] method1985(int var0, Object var1, boolean var2) {
-    try {
-      if (var1 == null) {
+    if (var1 == null) {
         return null;
       } else if (var1 instanceof byte[]) {
         byte[] var5 = (byte[]) var1;
@@ -296,27 +262,18 @@ public final class NPC extends Mobile {
           throw new IllegalArgumentException();
         }
       }
-    } catch (RuntimeException var4) {
-      throw AbstractGameWorld.cascadeException(var4,
-          "km.Q(" + var0 + ',' + "{...}" + ',' + var2 + ')');
-    }
   }
 
   public static boolean method1986(int var0) {
-    try {
-      if (var0 <= 22) {
+    if (var0 <= 22) {
         NPC.method1984(-48, 88, 31);
       }
 
       return GlRenderer.useOpenGlRenderer || ClientScriptEnum.aBoolean3665;
-    } catch (RuntimeException var2) {
-      throw AbstractGameWorld.cascadeException(var2, "km.O(" + var0 + ')');
-    }
   }
 
   public static boolean method1988(boolean var0) {
-    try {
-      if (var0) {
+    if (var0) {
         NPC.aClass94_3980 = null;
       }
 
@@ -359,9 +316,6 @@ public final class NPC extends Mobile {
       }
 
       return false;
-    } catch (RuntimeException var3) {
-      throw AbstractGameWorld.cascadeException(var3, "km.P(" + var0 + ')');
-    }
   }
 
 }

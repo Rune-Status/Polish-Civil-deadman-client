@@ -16,23 +16,17 @@ public final class DummyHashTable {
 
 
   public DummyHashTable(int var1 ) {
-    try {
-      this.aClass3_Sub28Array1684 = new SubNode[var1];
+    this.aClass3_Sub28Array1684 = new SubNode[var1];
 
       for (int var2 = 0; ~var2 > ~var1; ++var2) {
         SubNode var3 = this.aClass3_Sub28Array1684[var2] = new SubNode();
         var3.prevSubNode = var3;
         var3.nextSubNode = var3;
       }
-
-    } catch (RuntimeException var4) {
-      throw AbstractGameWorld.cascadeException(var4, "rm.<init>(" + var1 + ')');
-    }
   }
 
   public static void method1760(int var0, byte var1, int var2) {
-    try {
-      Deque var3 = TextureSampler0.groundItems[GameWorldSomething.currentPlane][var2][var0];
+    Deque var3 = TextureSampler0.groundItems[GameWorldSomething.currentPlane][var2][var0];
       if (var3 != null) {
         if (var1 == 65) {
           int var4 = -99999999;
@@ -86,43 +80,29 @@ public final class DummyHashTable {
       } else {
         GameObjectConfig.method1688(GameWorldSomething.currentPlane, var2, var0);
       }
-    } catch (RuntimeException var11) {
-      throw AbstractGameWorld.cascadeException(var11,
-        "rm.E(" + var0 + ',' + var1 + ',' + var2 + ')');
-    }
   }
 
   public static void method1761(byte var0) {
-    try {
-      DummyHashTable.aClass94_1688 = null;
+    DummyHashTable.aClass94_1688 = null;
       DummyHashTable.aClass94_1686 = null;
       DummyHashTable.aClass94_1689 = null;
       DummyHashTable.aClass94_1687 = null;
       if (var0 < -46) {
         DummyHashTable.aClass93_1683 = null;
       }
-    } catch (RuntimeException var2) {
-      throw AbstractGameWorld.cascadeException(var2, "rm.C(" + var0 + ')');
-    }
   }
 
   public static void sleep(long var0) {
     try {
-      try {
 
         Thread.sleep(var0);
       } catch (InterruptedException var4) {
       }
-
-    } catch (RuntimeException var5) {
-      throw AbstractGameWorld.cascadeException(var5, "rm.B(" + var0 + ')');
-    }
   }
 
   public static AbstractModel method1763(boolean var0, int var1, int var2, int var3, int var4,
                                         AbstractModel var5, int var6) {
-    try {
-      long var7 = var3;
+    long var7 = var3;
       AbstractModel var9 = (AbstractModel) Deque.aClass93_939.get(var7);
       if (var9 == null) {
         Model var10 = Model.getModel(DummyClass13.models, var3, 0);
@@ -173,12 +153,6 @@ public final class DummyHashTable {
       }
 
       return var9;
-    } catch (RuntimeException var16) {
-      throw AbstractGameWorld.cascadeException(var16,
-        "rm.D(" + var0 + ',' + var1 + ',' + var2 + ',' + var3 + ',' + var4 + ',' + (var5 != null ?
-          "{...}" :
-          "null") + ',' + var6 + ')');
-    }
   }
 
   public static void method1764(int var0, int var1, int var2) {

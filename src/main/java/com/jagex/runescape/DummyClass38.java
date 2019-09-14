@@ -16,8 +16,7 @@ public final class DummyClass38 {
 
 
   public static void method1080(int var0, int var1, byte var2, Player var3) {
-    try {
-      int var4;
+    int var4;
       int var5;
       int var7;
       if (0 != (var0 & 128)) {
@@ -227,15 +226,10 @@ public final class DummyClass38 {
         }
 
       }
-    } catch (RuntimeException var15) {
-      throw AbstractGameWorld.cascadeException(var15,
-        "gk.A(" + var0 + ',' + var1 + ',' + var2 + ',' + (var3 != null ? "{...}" : "null") + ')');
-    }
   }
 
   public static void method1081(byte var0) {
-    try {
-      DummyClass38.aClass3_Sub28_Sub16_736 = null;
+    DummyClass38.aClass3_Sub28_Sub16_736 = null;
       DummyClass38.anIntArray729 = null;
       DummyClass38.aClass94_728 = null;
       if (var0 <= 63) {
@@ -243,14 +237,10 @@ public final class DummyClass38 {
       }
 
       DummyClass38.aClass153_731 = null;
-    } catch (RuntimeException var2) {
-      throw AbstractGameWorld.cascadeException(var2, "gk.E(" + var0 + ')');
-    }
   }
 
   public static void loadSprites(byte[] var0, int var1) {
-    try {
-      Buffer var2 = new Buffer(var0);
+    Buffer var2 = new Buffer(var0);
       var2.position = -2 + var0.length;
       DummyClass53.spriteCount = var2.readUnsignedShort();
       TextureSampler26.anIntArray3076 = new int[DummyClass53.spriteCount];
@@ -340,26 +330,16 @@ public final class DummyClass38 {
 
         TextureSampler0.aBooleanArray3272[var4] = var10;
       }
-
-    } catch (RuntimeException var15) {
-      throw AbstractGameWorld.cascadeException(var15,
-        "gk.B(" + (var0 != null ? "{...}" : "null") + ',' + var1 + ')');
-    }
   }
 
   public static void method1083(byte var0) {
-    try {
-      TextureSampler16.anIntArray3107 =
+    TextureSampler16.anIntArray3107 =
         DummyInputStream.method62(true, 14585, 8, 2048, 4, 0.4F, 8, 35);
       int var1 = -5 / ((var0 - 45) / 59);
-    } catch (RuntimeException var2) {
-      throw AbstractGameWorld.cascadeException(var2, "gk.C(" + var0 + ')');
-    }
   }
 
   public static void method1084(SubNode var0, SubNode var1, byte var2) {
-    try {
-      if (var1.prevSubNode != null) {
+    if (var1.prevSubNode != null) {
         var1.unlinkSubNode();
       }
 
@@ -371,11 +351,6 @@ public final class DummyClass38 {
       }
 
       var1.nextSubNode.prevSubNode = var1;
-    } catch (RuntimeException var4) {
-      throw AbstractGameWorld.cascadeException(var4,
-        "gk.D(" + (var0 != null ? "{...}" : "null") + ',' + (var1 != null ? "{...}" : "null") + ','
-          + var2 + ')');
-    }
   }
 
 }

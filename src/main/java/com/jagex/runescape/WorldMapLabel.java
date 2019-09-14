@@ -20,65 +20,44 @@ public final class WorldMapLabel {
   public byte[] aByteArray1730;
 
   public WorldMapLabel(int var1 ) {
-    try {
-      this.anInt1720 = var1;
+    this.anInt1720 = var1;
       this.aClass94Array1721 = new GameString[this.anInt1720];
       this.aShortArray1718 = new short[this.anInt1720];
       this.anIntArray1725 = new int[this.anInt1720];
       this.aByteArray1730 = new byte[this.anInt1720];
       this.aShortArray1727 = new short[this.anInt1720];
-    } catch (RuntimeException var3) {
-      throw AbstractGameWorld.cascadeException(var3, "se.<init>(" + var1 + ')');
-    }
   }
 
   public boolean method1787(int var1, byte var2 ) {
-    try {
-      if (var2 != -124) {
+    if (var2 != -124) {
         WorldMapLabel.method1793(null, null, -17, (byte) 94);
       }
 
       return (this.aByteArray1730[var1] & 8) != 0;
-    } catch (RuntimeException var4) {
-      throw AbstractGameWorld.cascadeException(var4, "se.G(" + var1 + ',' + var2 + ')');
-    }
   }
 
   public boolean method1789(int var1, int var2 ) {
-    try {
-      if (var2 != 530) {
+    if (var2 != 530) {
         this.method1794(-111, 26);
       }
 
       return ~(4 & this.aByteArray1730[var1]) != -1;
-    } catch (RuntimeException var4) {
-      throw AbstractGameWorld.cascadeException(var4, "se.A(" + var1 + ',' + var2 + ')');
-    }
   }
 
   public int method1791(int var1, int var2 ) {
-    try {
-      return var2 != 8 ? 35 : this.aByteArray1730[var1] & 3;
-    } catch (RuntimeException var4) {
-      throw AbstractGameWorld.cascadeException(var4, "se.I(" + var1 + ',' + var2 + ')');
-    }
+    return var2 != 8 ? 35 : this.aByteArray1730[var1] & 3;
   }
 
   public boolean method1794(int var1, int var2 ) {
-    try {
-      if (var2 != -20138) {
+    if (var2 != -20138) {
         WorldMapLabel.method1788(122, 38, -120, -29, false);
       }
 
       return 0 == (this.aByteArray1730[var1] & 16);
-    } catch (RuntimeException var4) {
-      throw AbstractGameWorld.cascadeException(var4, "se.E(" + var1 + ',' + var2 + ')');
-    }
   }
 
   public static void method1786(int var0) {
-    try {
-      while (true) {
+    while (true) {
         if (~SpotAnimationConfig.gameBuffer.method815(HashTable.packetLength, 32666) <= -12) {
           int var1 = SpotAnimationConfig.gameBuffer.readBits(11);
           if (var1 != 2047) {
@@ -128,14 +107,10 @@ public final class WorldMapLabel {
         SpotAnimationConfig.gameBuffer.method818(false);
         return;
       }
-    } catch (RuntimeException var9) {
-      throw AbstractGameWorld.cascadeException(var9, "se.D(" + var0 + ')');
-    }
   }
 
   public static int method1788(int var0, int var1, int var2, int var3, boolean var4) {
-    try {
-      if (var4) {
+    if (var4) {
         int var5 = 15 & var3;
         int var7 =
             -5 >= ~var5 ? (~var5 != -13 && -15 != ~var5 ? var1 : var0) : var2;
@@ -145,30 +120,20 @@ public final class WorldMapLabel {
       } else {
         return 127;
       }
-    } catch (RuntimeException var8) {
-      throw AbstractGameWorld.cascadeException(var8,
-        "se.H(" + var0 + ',' + var1 + ',' + var2 + ',' + var3 + ',' + var4 + ')');
-    }
   }
 
   public static void method1790(int var0, int var1, int var2) {
-    try {
-      if (var2 < 90) {
+    if (var2 < 90) {
         WorldMapLabel.aClass94_1731 = null;
       }
 
       WidgetUpdate var3 = AudioStreamEncoder3.method466(4, 5, var0);
       var3.g((byte) 33);
       var3.anInt3598 = var1;
-    } catch (RuntimeException var4) {
-      throw AbstractGameWorld.cascadeException(var4,
-        "se.B(" + var0 + ',' + var1 + ',' + var2 + ')');
-    }
   }
 
   public static void method1792(int var0) {
-    try {
-      WorldMapLabel.anIntArray1729 = null;
+    WorldMapLabel.anIntArray1729 = null;
       if (var0 == 0) {
         WorldMapLabel.animationBases = null;
         WorldMapLabel.aClass94_1726 = null;
@@ -178,14 +143,10 @@ public final class WorldMapLabel {
         WorldMapLabel.aClass94_1728 = null;
         WorldMapLabel.aClass94_1724 = null;
       }
-    } catch (RuntimeException var2) {
-      throw AbstractGameWorld.cascadeException(var2, "se.F(" + var0 + ')');
-    }
   }
 
   public static void method1793(GameString var0, GameString var1, int var2, byte var3) {
-    try {
-      GroundItemNode.password = var1;
+    GroundItemNode.password = var1;
       EnumStringFetcher.anInt2161 = var2;
       GroundItemNode.username = var0;
       if (!GroundItemNode.username.method1528((byte) -42, GroundItemNode.EMPTY_STRING)
@@ -215,11 +176,6 @@ public final class WorldMapLabel {
       } else {
         AbstractImageProducer.loginResponse = 3;
       }
-    } catch (RuntimeException var6) {
-      throw AbstractGameWorld.cascadeException(var6,
-        "se.C(" + (var0 != null ? "{...}" : "null") + ',' + (var1 != null ? "{...}" : "null") + ','
-          + var2 + ',' + var3 + ')');
-    }
   }
 
 }

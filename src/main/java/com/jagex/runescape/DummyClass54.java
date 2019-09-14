@@ -19,8 +19,7 @@ public final class DummyClass54 {
   }
 
   public static Frame method1597(int var0, int var1, int var2, int var3, int var4, SignLink var5) {
-    try {
-      if (var5.method1432(false)) {
+    if (var5.method1432(false)) {
         if (0 == var2) {
           DisplayMode[] var6 = OndemandFileRequest.method596(10, var5);
 
@@ -61,30 +60,19 @@ public final class DummyClass54 {
       } else {
         return null;
       }
-    } catch (RuntimeException var9) {
-      throw AbstractGameWorld.cascadeException(var9,
-        "nf.D(" + var0 + ',' + var1 + ',' + var2 + ',' + var3 + ',' + var4 + ',' + (var5 != null ?
-          "{...}" :
-          "null") + ')');
-    }
   }
 
   public static void method1598(int var0) {
-    try {
-      if (var0 <= -106) {
+    if (var0 <= -106) {
         DummyClass54.aShortArray1398 = null;
         DummyClass54.aClass11_1402 = null;
         DummyClass54.aClass93_1401 = null;
         DummyClass54.aClass33_1399 = null;
       }
-    } catch (RuntimeException var2) {
-      throw AbstractGameWorld.cascadeException(var2, "nf.B(" + var0 + ')');
-    }
   }
 
   public static int method1599(int var0, int var1, byte[] var2, byte var3) {
-    try {
-      int var4 = -1;
+    int var4 = -1;
       int var5 = -16 % ((var3 - 61) / 57);
 
       for (int var6 = var0; var1 > var6; ++var6) {
@@ -93,10 +81,6 @@ public final class DummyClass54 {
 
       var4 = ~var4;
       return var4;
-    } catch (RuntimeException var7) {
-      throw AbstractGameWorld.cascadeException(var7,
-        "nf.A(" + var0 + ',' + var1 + ',' + (var2 != null ? "{...}" : "null") + ',' + var3 + ')');
-    }
   }
 
 }

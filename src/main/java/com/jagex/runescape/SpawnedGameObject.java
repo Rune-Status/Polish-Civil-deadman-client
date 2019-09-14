@@ -27,8 +27,7 @@ public final class SpawnedGameObject extends Node {
 
 
   public static int method107(FileUnpacker var0, byte var1) {
-    try {
-      int var2 = 0;
+    int var2 = 0;
       if (var0.isLoaded(FloorOverlay.anInt2104)) {
         ++var2;
       }
@@ -94,15 +93,10 @@ public final class SpawnedGameObject extends Node {
       }
 
       return var2;
-    } catch (RuntimeException var3) {
-      throw AbstractGameWorld.cascadeException(var3,
-        "cd.B(" + (var0 != null ? "{...}" : "null") + ',' + var1 + ')');
-    }
   }
 
   public static void method109(int var0) {
-    try {
-      SpawnedGameObject.aClass94_2255 = null;
+    SpawnedGameObject.aClass94_2255 = null;
       SpawnedGameObject.aClass94_2260 = null;
       SpawnedGameObject.aClass94_2252 = null;
       if (var0 != 2) {
@@ -110,9 +104,6 @@ public final class SpawnedGameObject extends Node {
       }
 
       SpawnedGameObject.fileUnpacker25 = null;
-    } catch (RuntimeException var2) {
-      throw AbstractGameWorld.cascadeException(var2, "cd.A(" + var0 + ')');
-    }
   }
 
   public static void initializeScene(int planes, int sceneWidth, int sceneHeight, int viewportLength,

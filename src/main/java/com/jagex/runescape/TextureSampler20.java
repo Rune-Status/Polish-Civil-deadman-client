@@ -26,8 +26,7 @@ public final class TextureSampler20 extends AbstractTextureSampler {
   }
 
   public int[] method154(int var1, byte var2 ) {
-    try {
-      int var3 = 39 % ((30 - var2) / 36);
+    int var3 = 39 % ((30 - var2) / 36);
       int[] var10 = this.monoChromaticImageCache.method1709(-16409, var1);
       if (this.monoChromaticImageCache.aBoolean1580) {
         int var5 = SomethingLight0.anInt1559 / this.anInt3149;
@@ -52,14 +51,10 @@ public final class TextureSampler20 extends AbstractTextureSampler {
       }
 
       return var10;
-    } catch (RuntimeException var9) {
-      throw AbstractGameWorld.cascadeException(var9, "gg.D(" + var1 + ',' + var2 + ')');
-    }
   }
 
   public void parseConfig(int var1, Buffer var2, boolean var3 ) {
-    try {
-      if (!var3) {
+    if (!var3) {
         TextureSampler20.usageMode = -117;
       }
 
@@ -68,16 +63,10 @@ public final class TextureSampler20 extends AbstractTextureSampler {
       } else if (1 == var1) {
         this.anInt3147 = var2.readUnsignedByte();
       }
-
-    } catch (RuntimeException var5) {
-      throw AbstractGameWorld.cascadeException(var5,
-        "gg.A(" + var1 + ',' + (var2 != null ? "{...}" : "null") + ',' + var3 + ')');
-    }
   }
 
   public int[][] method166(int var1, int var2 ) {
-    try {
-      if (var1 == -1) {
+    if (var1 == -1) {
         int[][] var3 = this.triChromaticImageCache
             .method1594((byte) -123, var2);
         if (this.triChromaticImageCache.aBoolean1379) {
@@ -119,14 +108,10 @@ public final class TextureSampler20 extends AbstractTextureSampler {
       } else {
         return null;
       }
-    } catch (RuntimeException var16) {
-      throw AbstractGameWorld.cascadeException(var16, "gg.T(" + var1 + ',' + var2 + ')');
-    }
   }
 
   public static void method229(int var0, int var1) {
-    try {
-      if (!DummyClass4.aBoolean3004) {
+    if (!DummyClass4.aBoolean3004) {
         var0 = -1;
       }
 
@@ -152,27 +137,17 @@ public final class TextureSampler20 extends AbstractTextureSampler {
 
         }
       }
-    } catch (RuntimeException var4) {
-      throw AbstractGameWorld.cascadeException(var4, "gg.C(" + var0 + ',' + var1 + ')');
-    }
   }
 
   public static void method230(int[][] var0, boolean var1) {
-    try {
-      DummyClass35.anIntArrayArray663 = var0;
+    DummyClass35.anIntArrayArray663 = var0;
       if (!var1) {
         TextureSampler20.method234(20);
       }
-
-    } catch (RuntimeException var3) {
-      throw AbstractGameWorld.cascadeException(var3,
-          "gg.Q(" + (var0 != null ? "{...}" : "null") + ',' + ')');
-    }
   }
 
   public static IdentityKit getIdentityKit(int var0, int var1) {
-    try {
-      IdentityKit var2 = (IdentityKit) Mobile.aClass93_2792.get(var0);
+    IdentityKit var2 = (IdentityKit) Mobile.aClass93_2792.get(var0);
       if (var2 == null) {
         byte[] var3 = DummyClass2.aClass153_1680.getBytes(3, var0);
         var2 = new IdentityKit();
@@ -189,14 +164,10 @@ public final class TextureSampler20 extends AbstractTextureSampler {
       } else {
         return var2;
       }
-    } catch (RuntimeException var4) {
-      throw AbstractGameWorld.cascadeException(var4, "gg.B(" + var0 + ',' + var1 + ')');
-    }
   }
 
   public static void method232(int var0, int var1) {
-    try {
-      if (MovedStatics0.method57(var0, 104)) {
+    if (MovedStatics0.method57(var0, 104)) {
         Widget[] var2 = SceneNode.aClass11ArrayArray1834[var0];
 
         for (int var3 = 0; ~var2.length < ~var3; ++var3) {
@@ -213,23 +184,14 @@ public final class TextureSampler20 extends AbstractTextureSampler {
         }
 
       }
-    } catch (RuntimeException var5) {
-      throw AbstractGameWorld.cascadeException(var5, "gg.E(" + var0 + ',' + var1 + ')');
-    }
   }
 
   public static void setRunesFileId(FileUnpacker var1) {
-    try {
-      NPC.runesFileId = var1.getFileId(BZipDecompressorState.FILE_RUNES);
-    } catch (RuntimeException var3) {
-      throw AbstractGameWorld.cascadeException(var3,
-        "gg.R(" + (var1 != null ? "{...}" : "null") + ')');
-    }
+    NPC.runesFileId = var1.getFileId(BZipDecompressorState.FILE_RUNES);
   }
 
   public static void method234(int var0) {
-    try {
-      TextureSampler20.aClass94_3157 = null;
+    TextureSampler20.aClass94_3157 = null;
       TextureSampler20.aClass94_3150 = null;
       if (var0 != -3) {
         TextureSampler20.setRunesFileId(null);
@@ -238,14 +200,10 @@ public final class TextureSampler20 extends AbstractTextureSampler {
       TextureSampler20.aClass94_3146 = null;
       TextureSampler20.aClass153_3154 = null;
       TextureSampler20.COMMAND_GC = null;
-    } catch (RuntimeException var2) {
-      throw AbstractGameWorld.cascadeException(var2, "gg.O(" + var0 + ')');
-    }
   }
 
   public static void method235(boolean var0) {
-    try {
-      if (-1 > ~DummyClass13.anInt2023) {
+    if (-1 > ~DummyClass13.anInt2023) {
         --DummyClass13.anInt2023;
       }
 
@@ -1065,9 +1023,6 @@ public final class TextureSampler20 extends AbstractTextureSampler {
           }
         }
       }
-    } catch (RuntimeException var13) {
-      throw AbstractGameWorld.cascadeException(var13, "gg.F(" + var0 + ')');
-    }
   }
 
 }

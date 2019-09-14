@@ -17,22 +17,17 @@ public final class DummyClass43 {
 
 
   public static void method1193(int var0) {
-    try {
-      DummyClass43.anInterface4_915 = null;
+    DummyClass43.anInterface4_915 = null;
       DummyClass43.anIntArrayArrayArray911 = null;
       DummyClass43.somethingHeightMap = null;
       DummyClass43.ondemandRequester = null;
       DummyClass43.anIntArray912 = null;
 
       DummyClass43.COMMAND_FPS_ON = null;
-    } catch (RuntimeException var2) {
-      throw AbstractGameWorld.cascadeException(var2, "id.C(" + var0 + ')');
-    }
   }
 
   public static void method1194(int var0) {
-    try {
-      if (var0 == -16385) {
+    if (var0 == -16385) {
         if (null != SomethingWorldMappy.audioOutputStream1) {
           SomethingWorldMappy.audioOutputStream1.process((byte) -34);
         }
@@ -42,16 +37,12 @@ public final class DummyClass43 {
         }
 
       }
-    } catch (RuntimeException var2) {
-      throw AbstractGameWorld.cascadeException(var2, "id.A(" + var0 + ')');
-    }
   }
 
   public static AbstractAudioOutputStream createAudioOutputStream(int var0, SignLink var1,
                                                                  Component var2, int var3,
                                                                  int var4) {
-    try {
-      if (DummyClass60.sampleRate == 0) {
+    if (DummyClass60.sampleRate == 0) {
         throw new IllegalStateException();
       } else if (0 <= var3 && 2 > var3) {
         if (-257 < ~var0) {
@@ -121,17 +112,10 @@ public final class DummyClass43 {
       } else {
         throw new IllegalArgumentException();
       }
-    } catch (RuntimeException var8) {
-      throw AbstractGameWorld.cascadeException(var8,
-        "id.D(" + var0 + ',' + (var1 != null ? "{...}" : "null") + ',' + (var2 != null ?
-          "{...}" :
-          "null") + ',' + var3 + ',' + var4 + ')');
-    }
   }
 
   public static void method1196(int var0, int var1, byte var2, int var3, int var4) {
-    try {
-      GlTexture2d.anInt3765 = var4;
+    GlTexture2d.anInt3765 = var4;
       if (var2 != 111) {
         DummyClass43.aBoolean913 = true;
       }
@@ -139,23 +123,14 @@ public final class DummyClass43 {
       DummyClass55.anInt1425 = var1;
       DummyClass13.anInt2020 = var0;
       LightIntensity.anInt902 = var3;
-    } catch (RuntimeException var6) {
-      throw AbstractGameWorld.cascadeException(var6,
-        "id.B(" + var0 + ',' + var1 + ',' + var2 + ',' + var3 + ',' + var4 + ')');
-    }
   }
 
   public static void method1197(FileUnpacker var0, byte var1) {
-    try {
-      if (var1 != 69) {
+    if (var1 != 69) {
         DummyClass43.createAudioOutputStream(-53, null, null, 79, 12);
       }
 
       DummyClass39.aClass153_737 = var0;
-    } catch (RuntimeException var3) {
-      throw AbstractGameWorld.cascadeException(var3,
-        "id.E(" + (var0 != null ? "{...}" : "null") + ',' + var1 + ')');
-    }
   }
 
 }

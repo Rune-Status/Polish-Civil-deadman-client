@@ -26,20 +26,15 @@ public final class OndemandRequester {
   private OndemandFileRequest currentRequest;
 
   public boolean method1241(int var1 ) {
-    try {
-      if (var1 != -30064) {
+    if (var1 != -30064) {
         this.priorityRequests = null;
       }
 
       return 20 <= this.method1246(11706);
-    } catch (RuntimeException var3) {
-      throw AbstractGameWorld.cascadeException(var3, "jb.N(" + var1 + ')');
-    }
   }
 
   public boolean method1243(byte var1 ) {
-    try {
-      int avail;
+    int avail;
       if (null != this.socketStream) {
         long currentTime = Time.getCurrentTimeMillis();
         int diff = (int) (currentTime - this.lastUpdatedTime);
@@ -230,14 +225,10 @@ public final class OndemandRequester {
           return 0 == this.method1253(4) && ~this.method1246(11706) == -1;
         }
       }
-    } catch (RuntimeException var20) {
-      throw AbstractGameWorld.cascadeException(var20, "jb.H(" + var1 + ')');
-    }
   }
 
   public void drop(boolean var1 ) {
-    try {
-      if (this.socketStream != null) {
+    if (this.socketStream != null) {
         try {
           this.buffer.position = 0;
           if (!var1) {
@@ -259,26 +250,18 @@ public final class OndemandRequester {
         }
 
       }
-    } catch (RuntimeException var6) {
-      throw AbstractGameWorld.cascadeException(var6, "jb.O(" + var1 + ')');
-    }
   }
 
   private int method1246(int var1) {
-    try {
-      if (var1 != 11706) {
+    if (var1 != 11706) {
         OndemandRequester.aClass3_Sub28_Sub16Array996 = null;
       }
 
       return this.aClass13_1001.size() - -this.normalRequests.size();
-    } catch (RuntimeException var3) {
-      throw AbstractGameWorld.cascadeException(var3, "jb.K(" + var1 + ')');
-    }
   }
 
   public void writeStatus(boolean var1, boolean var2 ) {
-    try {
-      if (var2) {
+    if (var2) {
         if (null != this.socketStream) {
           try {
             this.buffer.position = 0;
@@ -298,29 +281,20 @@ public final class OndemandRequester {
 
         }
       }
-    } catch (RuntimeException var7) {
-      throw AbstractGameWorld.cascadeException(var7, "jb.B(" + var1 + ',' + ')');
-    }
   }
 
   public void method1248(int var1 ) {
-    try {
-      if (var1 != -29340) {
+    if (var1 != -29340) {
         this.method1246(-28);
       }
 
       if (this.socketStream != null) {
         this.socketStream.method1467();
       }
-
-    } catch (RuntimeException var3) {
-      throw AbstractGameWorld.cascadeException(var3, "jb.P(" + var1 + ')');
-    }
   }
 
   public void setSocket(boolean var1, SocketStream var2 ) {
-    try {
-      if (null != this.socketStream) {
+    if (null != this.socketStream) {
         try {
           this.socketStream.destroy();
         } catch (Exception var8) {
@@ -371,24 +345,15 @@ public final class OndemandRequester {
 
         this.aClass13_993.addLast(var4);
       }
-    } catch (RuntimeException var9) {
-      throw AbstractGameWorld.cascadeException(var9,
-        "jb.M(" + var1 + ',' + (var2 != null ? "{...}" : "null") + ')');
-    }
   }
 
   public boolean method1251(byte var1 ) {
-    try {
-      int var2 = 33 % ((2 - var1) / 58);
+    int var2 = 33 % ((2 - var1) / 58);
       return 20 <= this.method1253(4);
-    } catch (RuntimeException var3) {
-      throw AbstractGameWorld.cascadeException(var3, "jb.L(" + var1 + ')');
-    }
   }
 
   public void method1252(byte var1 ) {
-    try {
-      int var2 = -116 / ((var1 - 45) / 51);
+    int var2 = -116 / ((var1 - 45) / 51);
 
       try {
         this.socketStream.destroy();
@@ -399,43 +364,30 @@ public final class OndemandRequester {
       this.encryptionKey = (byte) ((int) (255.0D * Math.random() + 1.0D));
       this.socketStream = null;
       ++this.anInt1011;
-    } catch (RuntimeException var5) {
-      throw AbstractGameWorld.cascadeException(var5, "jb.A(" + var1 + ')');
-    }
   }
 
   public int method1253(int var1 ) {
-    try {
-      if (var1 != 4) {
+    if (var1 != 4) {
         this.method1252((byte) -45);
       }
 
       return this.aClass13_993.size() - -this.priorityRequests.size();
-    } catch (RuntimeException var3) {
-      throw AbstractGameWorld.cascadeException(var3, "jb.C(" + var1 + ')');
-    }
   }
 
   public void shutdown(boolean var1 ) {
-    try {
-      if (this.socketStream != null) {
+    if (this.socketStream != null) {
         this.socketStream.destroy();
       }
 
       if (var1) {
         this.writeStatus(true, false);
       }
-
-    } catch (RuntimeException var3) {
-      throw AbstractGameWorld.cascadeException(var3, "jb.D(" + var1 + ')');
-    }
   }
 
   public OndemandFileRequest request(int var1, int var2, byte var3,
       int var4,
       boolean var5 ) {
-    try {
-      OndemandFileRequest var8 = new OndemandFileRequest();
+    OndemandFileRequest var8 = new OndemandFileRequest();
       long var6 = var4 + (var2 << 16);
       var8.aBoolean3628 = var5;
       var8.subnodeKey = var6;
@@ -456,15 +408,10 @@ public final class OndemandRequester {
       }
 
       return var8;
-    } catch (RuntimeException var10) {
-      throw AbstractGameWorld.cascadeException(var10,
-        "jb.I(" + var1 + ',' + var2 + ',' + var3 + ',' + var4 + ',' + var5 + ')');
-    }
   }
 
   private void method1256(byte var1) {
-    try {
-      if (this.socketStream != null) {
+    if (this.socketStream != null) {
         if (var1 == -77) {
           try {
             this.buffer.position = 0;
@@ -484,41 +431,28 @@ public final class OndemandRequester {
 
         }
       }
-    } catch (RuntimeException var6) {
-      throw AbstractGameWorld.cascadeException(var6, "jb.J(" + var1 + ')');
-    }
   }
 
   public static void method1242(byte var0) {
-    try {
-      OndemandRequester.aClass3_Sub28_Sub16Array996 = null;
+    OndemandRequester.aClass3_Sub28_Sub16Array996 = null;
       if (var0 != -88) {
         OndemandRequester.method1250(-72, true);
       }
 
       OndemandRequester.aClass94_995 = null;
-    } catch (RuntimeException var2) {
-      throw AbstractGameWorld.cascadeException(var2, "jb.G(" + var0 + ')');
-    }
   }
 
   public static SomethingVolume15 method1245(int var0, FileUnpacker var1, int var2) {
-    try {
-      if (var0 <= 12) {
+    if (var0 <= 12) {
         OndemandRequester.anInt1002 = 107;
       }
 
       byte[] var3 = var1.getBytes(var2);
       return var3 != null ? new SomethingVolume15(var3) : null;
-    } catch (RuntimeException var4) {
-      throw AbstractGameWorld.cascadeException(var4,
-        "jb.F(" + var0 + ',' + (var1 != null ? "{...}" : "null") + ',' + var2 + ')');
-    }
   }
 
   public static void method1250(int var0, boolean var1) {
-    try {
-      StringNode0.aByteArrayArrayArray2339 = null;
+    StringNode0.aByteArrayArrayArray2339 = null;
       AbstractGameWorld.anIntArrayArrayArray720 = null;
       if (var0 < 14) {
         OndemandRequester.method1250(10, true);
@@ -554,9 +488,6 @@ public final class OndemandRequester {
       HuffmanEncoder.aClass3_Sub28_Sub16_637 = null;
       ProceduralTexture.anInt1150 = -1;
       TextureSampler4.aClass3_Sub28_Sub16_Sub2_3221 = null;
-    } catch (RuntimeException var3) {
-      throw AbstractGameWorld.cascadeException(var3, "jb.E(" + var0 + ',' + var1 + ')');
-    }
   }
 
 }

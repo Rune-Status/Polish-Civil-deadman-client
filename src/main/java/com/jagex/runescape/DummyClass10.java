@@ -11,8 +11,7 @@ public final class DummyClass10 {
 
 
   public static void method2261(int var0) {
-    try {
-      while (true) {
+    while (true) {
         if (SpotAnimationConfig.gameBuffer.method815(HashTable.packetLength, 32666) >= 27) {
           int var1 = SpotAnimationConfig.gameBuffer.readBits(15);
           if (32767 != var1) {
@@ -76,22 +75,15 @@ public final class DummyClass10 {
 
         return;
       }
-    } catch (RuntimeException var9) {
-      throw AbstractGameWorld.cascadeException(var9, "wj.E(" + var0 + ')');
-    }
   }
 
   public static void method2262(byte var0) {
-    try {
-      DummyClass10.aClass94_2083 = null;
+    DummyClass10.aClass94_2083 = null;
       if (var0 > 0) {
         DummyClass10.aClass94_2086 = null;
         DummyClass10.aClass94_2082 = null;
         DummyClass10.UL_PREFIX = null;
       }
-    } catch (RuntimeException var2) {
-      throw AbstractGameWorld.cascadeException(var2, "wj.F(" + var0 + ')');
-    }
   }
 
   public static void method2263(int var0, int var1, int var2, int var3, int var4, int var5,
@@ -127,20 +119,14 @@ public final class DummyClass10 {
   }
 
   public static void method2265(int var0) {
-    try {
-      ClientScriptCall.aClass93_2442.method1524(3);
+    ClientScriptCall.aClass93_2442.method1524(3);
       if (var0 != 0) {
         DummyClass10.UL_PREFIX = null;
       }
-
-    } catch (RuntimeException var2) {
-      throw AbstractGameWorld.cascadeException(var2, "wj.B(" + var0 + ')');
-    }
   }
 
   public static void method2266(int var0, int var1, byte var2) {
-    try {
-      if (BZipDecompressorState.anInt120 != 0 && var1 != -1) {
+    if (BZipDecompressorState.anInt120 != 0 && var1 != -1) {
         SceneSomething2.method1285(SubNode.fileUnpacker11, false, var1, 0, false,
           BZipDecompressorState.anInt120);
         MidiSomething.aBoolean1158 = true;
@@ -149,17 +135,11 @@ public final class DummyClass10 {
       if (var2 != -1) {
         DummyClass10.UL_PREFIX = null;
       }
-
-    } catch (RuntimeException var4) {
-      throw AbstractGameWorld.cascadeException(var4,
-        "wj.D(" + var0 + ',' + var1 + ',' + var2 + ')');
-    }
   }
 
   public static void readTileData(int var0, int var1, boolean var2, Buffer var3, int y, int x,
                                  byte var6, int var7, int var8) {
-    try {
-      int opcode;
+    int opcode;
       if (-1 >= ~x && ~x > -105 && y >= 0 && -105 < ~y) {
         if (!var2) {
           BZipDecompressorState.tileFlags[var8][x][y] = 0;
@@ -235,17 +215,10 @@ public final class DummyClass10 {
       if (var6 < 58) {
         DummyClass10.anInt2087 = 87;
       }
-
-    } catch (RuntimeException var11) {
-      throw AbstractGameWorld.cascadeException(var11,
-        "wj.A(" + var0 + ',' + var1 + ',' + var2 + ',' + (var3 != null ? "{...}" : "null") + ',' + y
-          + ',' + x + ',' + var6 + ',' + var7 + ',' + var8 + ')');
-    }
   }
 
   public static int method2268(byte var0, int var1, int var2) {
-    try {
-      Inventory var3 = (Inventory) SceneGraphTile.aClass130_2220.get(var1);
+    Inventory var3 = (Inventory) SceneGraphTile.aClass130_2220.get(var1);
       if (var3 != null) {
         if (var2 == -1) {
           return 0;
@@ -267,15 +240,10 @@ public final class DummyClass10 {
       } else {
         return 0;
       }
-    } catch (RuntimeException var6) {
-      throw AbstractGameWorld.cascadeException(var6,
-        "wj.H(" + var0 + ',' + var1 + ',' + var2 + ')');
-    }
   }
 
   public static void destroyGame(byte var0) {
-    try {
-      if (null != SomethingVolume15.gameSocket) {
+    if (null != SomethingVolume15.gameSocket) {
         SomethingVolume15.gameSocket.destroy();
         SomethingVolume15.gameSocket = null;
       }
@@ -331,9 +299,6 @@ public final class DummyClass10 {
       SomethingLight0.interfaceCounter = 0;
       TextureSampler6.resetVariables(var0 + -161);
       TextureSampler1.method219(true, 3000);
-    } catch (RuntimeException var4) {
-      throw AbstractGameWorld.cascadeException(var4, "wj.C(" + var0 + ')');
-    }
   }
 
 }

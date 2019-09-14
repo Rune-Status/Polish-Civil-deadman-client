@@ -25,22 +25,17 @@ public class DummyClass7 extends DummyClass6 {
   }
 
   public static void method2218(byte var0) {
-    try {
-      DummyClass7.settings = null;
+    DummyClass7.settings = null;
       DummyClass7.aClass94_2997 = null;
       if (var0 != -83) {
         DummyClass7.method2218((byte) -9);
       }
 
       DummyClass7.cacheIndexFiles = null;
-    } catch (RuntimeException var2) {
-      throw AbstractGameWorld.cascadeException(var2, "dk.B(" + var0 + ')');
-    }
   }
 
   public static void method2219(Buffer var0, boolean var1) {
-    try {
-      if (var1) {
+    if (var1) {
         DummyClass7.cacheIndexFiles = null;
       }
 
@@ -98,11 +93,6 @@ public class DummyClass7 extends DummyClass6 {
           }
         }
       }
-
-    } catch (RuntimeException var15) {
-      throw AbstractGameWorld.cascadeException(var15,
-        "dk.C(" + (var0 != null ? "{...}" : "null") + ',' + var1 + ')');
-    }
   }
 
 }

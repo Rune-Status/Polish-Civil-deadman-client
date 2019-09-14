@@ -21,8 +21,7 @@ public final class HintMarker {
   public int anInt1360;
 
   public static void method1587(byte var0, Buffer var1) {
-    try {
-      label134:
+    label134:
       while (true) {
         if (~var1.bytes.length < ~var1.position) {
           boolean var18 = false;
@@ -137,23 +136,15 @@ public final class HintMarker {
         int var4 = -58 % ((var0 - 42) / 32);
         return;
       }
-    } catch (RuntimeException var17) {
-      throw AbstractGameWorld.cascadeException(var17,
-        "nc.A(" + var0 + ',' + (var1 != null ? "{...}" : "null") + ')');
-    }
   }
 
   public static void method1588(byte var0) {
-    try {
-      if (var0 <= 38) {
+    if (var0 <= 38) {
         HintMarker.method1588((byte) -126);
       }
 
       HintMarker.aClass94_1349 = null;
       HintMarker.aClass94_1348 = null;
-    } catch (RuntimeException var2) {
-      throw AbstractGameWorld.cascadeException(var2, "nc.B(" + var0 + ')');
-    }
   }
 
 }

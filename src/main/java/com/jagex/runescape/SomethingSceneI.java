@@ -18,16 +18,12 @@ public final class SomethingSceneI {
   public int anInt432;
 
   public static void method906(byte var0) {
-    try {
-      SomethingSceneI.aClass94_422 = null;
+    SomethingSceneI.aClass94_422 = null;
       if (var0 != 112) {
         SomethingSceneI.method906((byte) -42);
       }
 
       SomethingSceneI.aClass94_431 = null;
-    } catch (RuntimeException var2) {
-      throw AbstractGameWorld.cascadeException(var2, "df.A(" + var0 + ')');
-    }
   }
 
 }

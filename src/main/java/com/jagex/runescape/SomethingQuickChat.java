@@ -21,8 +21,7 @@ public final class SomethingQuickChat extends SubNode {
   private GameString[] strings;
 
   public void method545(Buffer var1, int[] var2, boolean var3 ) {
-    try {
-      if (!var3) {
+    if (!var3) {
         if (this.anIntArray3566 != null) {
           for (int var4 = 0; ~this.anIntArray3566.length < ~var4 && ~var4 > ~var2.length; ++var4) {
             int var5 = GameException.anIntArray2113[this.method550(89, var4)];
@@ -33,16 +32,10 @@ public final class SomethingQuickChat extends SubNode {
 
         }
       }
-    } catch (RuntimeException var6) {
-      throw AbstractGameWorld.cascadeException(var6,
-          "cb.O(" + (var1 != null ? "{...}" : "null") + ',' + (var2 != null
-              ? "{...}" : "null") + ',' + ')');
-    }
   }
 
   public void method546(Buffer var1, int var2 ) {
-    try {
-      while (true) {
+    while (true) {
         int var3 = var1.readUnsignedByte();
         if (0 == var3) {
           if (var2 != -1) {
@@ -54,15 +47,10 @@ public final class SomethingQuickChat extends SubNode {
 
         this.method553(var1, var3, -14637);
       }
-    } catch (RuntimeException var4) {
-      throw AbstractGameWorld.cascadeException(var4,
-        "cb.D(" + (var1 != null ? "{...}" : "null") + ',' + var2 + ')');
-    }
   }
 
   public void method548(int var1 ) {
-    try {
-      if (null != this.anIntArray3567) {
+    if (null != this.anIntArray3567) {
         for (int var2 = 0; ~this.anIntArray3567.length < ~var2; ++var2) {
           this.anIntArray3567[var2] =
             TextureSampler3.method308(this.anIntArray3567[var2], '\u8000');
@@ -72,15 +60,10 @@ public final class SomethingQuickChat extends SubNode {
       if (var1 != 60) {
         this.method552(true);
       }
-
-    } catch (RuntimeException var3) {
-      throw AbstractGameWorld.cascadeException(var3, "cb.Q(" + var1 + ')');
-    }
   }
 
   public int method549(int var1, int var2, int var3 ) {
-    try {
-      if (var1 > -99) {
+    if (var1 > -99) {
         SomethingQuickChat.aClass94_3577 = null;
       }
 
@@ -91,15 +74,10 @@ public final class SomethingQuickChat extends SubNode {
             this.anIntArrayArray3570[var3][var2] :
           -1) :
         -1;
-    } catch (RuntimeException var5) {
-      throw AbstractGameWorld.cascadeException(var5,
-        "cb.P(" + var1 + ',' + var2 + ',' + var3 + ')');
-    }
   }
 
   public int method550(int var1, int var2 ) {
-    try {
-      if (null != this.anIntArray3566
+    if (null != this.anIntArray3566
           && -1 >= ~var2 && var2 <= this.anIntArray3566.length) {
         if (var1 <= 33) {
           SomethingQuickChat.aClass94_3578 = null;
@@ -109,22 +87,14 @@ public final class SomethingQuickChat extends SubNode {
       } else {
         return -1;
       }
-    } catch (RuntimeException var4) {
-      throw AbstractGameWorld.cascadeException(var4, "cb.S(" + var1 + ',' + var2 + ')');
-    }
   }
 
   public int method552(boolean var1 ) {
-    try {
-      return !var1 ? -22 : (this.anIntArray3566 != null ? this.anIntArray3566.length : 0);
-    } catch (RuntimeException var3) {
-      throw AbstractGameWorld.cascadeException(var3, "cb.E(" + var1 + ')');
-    }
+    return !var1 ? -22 : (this.anIntArray3566 != null ? this.anIntArray3566.length : 0);
   }
 
   private void method553(Buffer var1, int var2, int var3) {
-    try {
-      if (var3 != -14637) {
+    if (var3 != -14637) {
         this.method548(-20);
       }
 
@@ -165,16 +135,10 @@ public final class SomethingQuickChat extends SubNode {
           }
         }
       }
-
-    } catch (RuntimeException var8) {
-      throw AbstractGameWorld.cascadeException(var8,
-        "cb.R(" + (var1 != null ? "{...}" : "null") + ',' + var2 + ',' + var3 + ')');
-    }
   }
 
   public GameString method554(int var1 ) {
-    try {
-      if (var1 == -1) {
+    if (var1 == -1) {
         GameString var2 = Cache.createString(80);
         if (null == this.strings) {
           return TextureSampler3.aClass94_3357;
@@ -191,14 +155,10 @@ public final class SomethingQuickChat extends SubNode {
       } else {
         return null;
       }
-    } catch (RuntimeException var4) {
-      throw AbstractGameWorld.cascadeException(var4, "cb.C(" + var1 + ')');
-    }
   }
 
   public GameString method555(int var1, Buffer var2 ) {
-    try {
-      if (var1 != 28021) {
+    if (var1 != 28021) {
         this.anIntArrayArray3570 = null;
       }
 
@@ -214,15 +174,10 @@ public final class SomethingQuickChat extends SubNode {
 
       string.append(this.strings[-1 + this.strings.length]);
       return string.pack();
-    } catch (RuntimeException var5) {
-      throw AbstractGameWorld.cascadeException(var5,
-        "cb.B(" + var1 + ',' + (var2 != null ? "{...}" : "null") + ')');
-    }
   }
 
   public static void method547(int var0) {
-    try {
-      if (var0 != -2951) {
+    if (var0 != -2951) {
         SomethingQuickChat.aClass94_3576 = null;
       }
 
@@ -235,14 +190,10 @@ public final class SomethingQuickChat extends SubNode {
       SomethingQuickChat.aClass94_3573 = null;
       SomethingQuickChat.aClass83_3579 = null;
       SomethingQuickChat.anIntArray3565 = null;
-    } catch (RuntimeException var2) {
-      throw AbstractGameWorld.cascadeException(var2, "cb.F(" + var0 + ')');
-    }
   }
 
   public static void method551(int var0, int var1, int var2) {
-    try {
-      if (var0 == 0) {
+    if (var0 == 0) {
         if (4 == var2 && !DummyHashTable.aBoolean1685) {
           var2 = 2;
           var1 = 2;
@@ -273,10 +224,6 @@ public final class SomethingQuickChat extends SubNode {
         }
 
       }
-    } catch (RuntimeException var4) {
-      throw AbstractGameWorld.cascadeException(var4,
-        "cb.A(" + var0 + ',' + var1 + ',' + var2 + ')');
-    }
   }
 
 }

@@ -21,35 +21,23 @@ public final class ClientScriptCall extends Node {
   public Widget aClass11_2449;
 
   public static void method375(int var0, FileUnpacker var1, FileUnpacker var2) {
-    try {
-      SomethingQuickChatK.aClass153_152 = var1;
+    SomethingQuickChatK.aClass153_152 = var1;
       DummyClass2.aClass153_1680 = var2;
       SceneSomething.anInt497 = DummyClass2.aClass153_1680.getAmountChildren(var0, (byte) 95);
-    } catch (RuntimeException var4) {
-      throw AbstractGameWorld.cascadeException(var4,
-        "jl.D(" + var0 + ',' + (var1 != null ? "{...}" : "null") + ',' + (var2 != null ?
-          "{...}" :
-          "null") + ')');
-    }
   }
 
   public static void method376(boolean var0) {
-    try {
-      ClientScriptCall.aClass93_2442 = null;
+    ClientScriptCall.aClass93_2442 = null;
       if (var0) {
         ClientScriptCall.method378(97, (byte) -80);
       }
 
       ClientScriptCall.aByteArrayArrayArray2452 = null;
       ClientScriptCall.aClass93_2450 = null;
-    } catch (RuntimeException var2) {
-      throw AbstractGameWorld.cascadeException(var2, "jl.E(" + ')');
-    }
   }
 
   public static void method377(int var0, int var1, int var2, int var3, int var4) {
-    try {
-      TextureSampler12.secureBuffer.position = 0;
+    TextureSampler12.secureBuffer.position = 0;
       TextureSampler12.secureBuffer.writeByte(147);
       TextureSampler12.secureBuffer.writeByte(var2);
       TextureSampler12.secureBuffer.writeByte(var3);
@@ -59,15 +47,10 @@ public final class ClientScriptCall extends Node {
       SpotAnimationConfig.anInt548 = 0;
       DummyCanvas.anInt23 = var4;
       HashTable.anInt1711 = -3;
-    } catch (RuntimeException var6) {
-      throw AbstractGameWorld.cascadeException(var6,
-        "jl.C(" + var0 + ',' + var1 + ',' + var2 + ',' + var3 + ',' + var4 + ')');
-    }
   }
 
   public static BitVariable method378(int var0, byte var1) {
-    try {
-      BitVariable var2 = (BitVariable) ClientScriptCall.aClass93_2450.get(var0);
+    BitVariable var2 = (BitVariable) ClientScriptCall.aClass93_2450.get(var0);
       if (var2 == null) {
         if (var1 < 126) {
           return null;
@@ -85,14 +68,10 @@ public final class ClientScriptCall extends Node {
       } else {
         return var2;
       }
-    } catch (RuntimeException var4) {
-      throw AbstractGameWorld.cascadeException(var4, "jl.A(" + var0 + ',' + var1 + ')');
-    }
   }
 
   public static void method379(int var0) {
-    try {
-      int var2 = AbstractMouseWheel.anInt1904 * 128 - -64;
+    int var2 = AbstractMouseWheel.anInt1904 * 128 - -64;
       int var1 = 128 * GameCanvas.anInt30 + 64;
       int var3 = BufferData.method1736(GameWorldSomething.currentPlane, 1, var1, var2)
         - TextureSampler25.anInt3414;
@@ -221,10 +200,6 @@ public final class ClientScriptCall extends Node {
       if (var11 < 0 && -1 > ~var10 || var11 > 0 && ~var10 > -1) {
         TextureSampler28.anInt3315 = var9;
       }
-
-    } catch (RuntimeException var12) {
-      throw AbstractGameWorld.cascadeException(var12, "jl.B(" + var0 + ')');
-    }
   }
 
 }

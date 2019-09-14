@@ -11,8 +11,7 @@ public final class SomethingQuickChatK {
   public int[] anIntArray153;
 
   public static SoftwareDirectColorSprite[] createSprites() {
-    try {
-      SoftwareDirectColorSprite[] var1 = new SoftwareDirectColorSprite[DummyClass53.spriteCount];
+    SoftwareDirectColorSprite[] var1 = new SoftwareDirectColorSprite[DummyClass53.spriteCount];
       for (int var2 = 0; ~var2 > ~DummyClass53.spriteCount; ++var2) {
         int var3 = TextureSampler26.anIntArray3076[var2] * GroundItem.anIntArray2931[var2];
         byte[] var4 = DummyClass5.aByteArrayArray2987[var2];
@@ -30,14 +29,10 @@ public final class SomethingQuickChatK {
 
       DummyClass37.method1035((byte) 113);
       return var1;
-    } catch (RuntimeException var7) {
-      throw AbstractGameWorld.cascadeException(var7, "bd.B()");
-    }
   }
 
   public static void method852(byte var0, int var1) {
-    try {
-      Inventory var2 = (Inventory) SceneGraphTile.aClass130_2220.get(var1);
+    Inventory var2 = (Inventory) SceneGraphTile.aClass130_2220.get(var1);
       if (var2 != null) {
         if (var0 != 114) {
           SomethingQuickChatK.aClass153_152 = null;
@@ -49,20 +44,13 @@ public final class SomethingQuickChatK {
         }
 
       }
-    } catch (RuntimeException var4) {
-      throw AbstractGameWorld.cascadeException(var4, "bd.C(" + var0 + ',' + var1 + ')');
-    }
   }
 
   public static void method853(int var0) {
-    try {
-      SomethingQuickChatK.aClass94_148 = null;
+    SomethingQuickChatK.aClass94_148 = null;
       SomethingQuickChatK.aClass94_150 = null;
 
       SomethingQuickChatK.aClass153_152 = null;
-    } catch (RuntimeException var2) {
-      throw AbstractGameWorld.cascadeException(var2, "bd.A(" + var0 + ')');
-    }
   }
 
 }

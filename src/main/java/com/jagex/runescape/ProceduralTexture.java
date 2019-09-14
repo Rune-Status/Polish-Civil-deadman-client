@@ -18,8 +18,7 @@ public final class ProceduralTexture {
 
 
   public ProceduralTexture() {
-    try {
-      this.anIntArray1149 = new int[0];
+    this.anIntArray1149 = new int[0];
       this.anIntArray1144 = new int[0];
       this.aClass3_Sub13_1145 = new TextureSampler0();
       this.aClass3_Sub13_1145.cacheSize = 1;
@@ -28,14 +27,10 @@ public final class ProceduralTexture {
         new AbstractTextureSampler[] {this.aClass3_Sub13_1145,
             this.aClass3_Sub13_1148};
       this.aClass3_Sub13_1148.cacheSize = 1;
-    } catch (RuntimeException var2) {
-      throw AbstractGameWorld.cascadeException(var2, "lc.<init>()");
-    }
   }
 
   public ProceduralTexture(Buffer var1 ) {
-    try {
-      int var2 = var1.readUnsignedByte();
+    int var2 = var1.readUnsignedByte();
       this.aClass3_Sub13Array1147 = new AbstractTextureSampler[var2];
       int[][] var5 = new int[var2][];
       int var4 = 0;
@@ -94,10 +89,6 @@ public final class ProceduralTexture {
       this.aClass3_Sub13_1145 = this.aClass3_Sub13Array1147[var1.readUnsignedByte()];
       var5 = null;
       this.aClass3_Sub13_1148 = this.aClass3_Sub13Array1147[var1.readUnsignedByte()];
-    } catch (RuntimeException var11) {
-      throw AbstractGameWorld.cascadeException(var11,
-        "lc.<init>(" + (var1 != null ? "{...}" : "null") + ')');
-    }
   }
 
   public int[] method1404(int var1, boolean var2, int var3, double var4,
@@ -105,8 +96,7 @@ public final class ProceduralTexture {
       FileUnpacker var7,
       ITextureCache var8,
       boolean var9 ) {
-    try {
-      SceneNode.method1859(var4, var6 ^ 359938);
+    SceneNode.method1859(var4, var6 ^ 359938);
       DummyClass1.anInterface2_408 = var8;
       MaterialShader5.aClass153_2172 = var7;
       TextureSampler33.method180(-1, var1, var3);
@@ -199,12 +189,6 @@ public final class ProceduralTexture {
       }
 
       return var10;
-    } catch (RuntimeException var23) {
-      throw AbstractGameWorld.cascadeException(var23,
-        "lc.C(" + var1 + ',' + var2 + ',' + var3 + ',' + var4 + ',' + var6 + ',' + (var7 != null ?
-          "{...}" :
-          "null") + ',' + (var8 != null ? "{...}" : "null") + ',' + var9 + ')');
-    }
   }
 
   public byte[] method1407(int var1, int var2, boolean var3,
@@ -212,8 +196,7 @@ public final class ProceduralTexture {
       double var5,
       int var7,
       FileUnpacker var8 ) {
-    try {
-      byte[] var9 = new byte[4 * var2 * var1];
+    byte[] var9 = new byte[4 * var2 * var1];
       if (var7 == 8839) {
         SceneNode.method1859(var5, 32258);
         MaterialShader5.aClass153_2172 = var8;
@@ -319,17 +302,11 @@ public final class ProceduralTexture {
       } else {
         return null;
       }
-    } catch (RuntimeException var21) {
-      throw AbstractGameWorld.cascadeException(var21,
-        "lc.F(" + var1 + ',' + var2 + ',' + var3 + ',' + (var4 != null ? "{...}" : "null") + ','
-          + var5 + ',' + var7 + ',' + (var8 != null ? "{...}" : "null") + ')');
-    }
   }
 
   public boolean method1408(boolean var1, ITextureCache var2,
       FileUnpacker var3 ) {
-    try {
-      int var4;
+    int var4;
       if (0 < SomethingTilek.anInt1668) {
         for (var4 = 0; ~var4 > ~this.anIntArray1144.length; ++var4) {
           if (!var3.method2129((byte) -78, this.anIntArray1144[var4], SomethingTilek.anInt1668)) {
@@ -355,18 +332,11 @@ public final class ProceduralTexture {
       }
 
       return true;
-    } catch (RuntimeException var5) {
-      throw AbstractGameWorld.cascadeException(var5,
-        "lc.B(" + var1 + ',' + (var2 != null ? "{...}" : "null") + ',' + (var3 != null ?
-          "{...}" :
-          "null") + ')');
-    }
   }
 
   public static void method1405(int var0, int var1, int var2, int var3, int var4, int var5,
                                int var6) {
-    try {
-      TextureSampler8.anInt3464 = 0;
+    TextureSampler8.anInt3464 = 0;
 
       int var7;
       int var15;
@@ -781,34 +751,20 @@ public final class ProceduralTexture {
             var0 + WidgetAccess.anInt2208, 16776960, 0);
         }
       }
-
-    } catch (RuntimeException var17) {
-      throw AbstractGameWorld.cascadeException(var17,
-        "lc.D(" + var0 + ',' + var1 + ',' + var2 + ',' + var3 + ',' + var4 + ',' + var5 + ',' + var6
-          + ')');
-    }
   }
 
   public static int method1406(byte var0) {
-    try {
-      int var1 = -21 % ((63 - var0) / 49);
+    int var1 = -21 % ((63 - var0) / 49);
       return ObjectNode.anInt4045;
-    } catch (RuntimeException var2) {
-      throw AbstractGameWorld.cascadeException(var2, "lc.E(" + var0 + ')');
-    }
   }
 
   public static void method1409(boolean var0) {
-    try {
-      ProceduralTexture.aClass93_1146 = null;
+    ProceduralTexture.aClass93_1146 = null;
       if (var0) {
         ProceduralTexture.SETTINGS_EQ = null;
       }
 
       ProceduralTexture.SETTINGS_EQ = null;
-    } catch (RuntimeException var2) {
-      throw AbstractGameWorld.cascadeException(var2, "lc.A(" + var0 + ')');
-    }
   }
 
 }

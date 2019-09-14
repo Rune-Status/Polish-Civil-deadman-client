@@ -17,8 +17,7 @@ public final class DummyClass42 {
   public static GameString DEFAULT_WALK_TOOLTIP = DummyClass42.aClass94_894;
 
   public static int method1186(int var0, int var1) {
-    try {
-      double var2 = (255 & var1 >> 16) / 256.0D;
+    double var2 = (255 & var1 >> 16) / 256.0D;
       double var4 = (255 & var1 >> 8) / 256.0D;
       double var12 = 0.0D;
       double var6 = (255 & var1) / 256.0D;
@@ -93,14 +92,10 @@ public final class DummyClass42 {
       }
 
       return (var18 >> 2 << 10) + (var19 >> 5 << 7) + (var20 >> 1);
-    } catch (RuntimeException var21) {
-      throw AbstractGameWorld.cascadeException(var21, "ib.A(" + var0 + ',' + var1 + ')');
-    }
   }
 
   public static void method1187(int var0) {
-    try {
-      if (var0 != 30351) {
+    if (var0 != 30351) {
         DummyClass42
             .addNodeToSceneGraph(-73, -127, -26, 43, 67, 125, 38, 80, null, -92, true, 27L);
       }
@@ -114,14 +109,10 @@ public final class DummyClass42 {
       DummyClass42.aClass47_885 = null;
       DummyClass42.aClass106Array890 = null;
       DummyClass42.aClass3_Sub26_884 = null;
-    } catch (RuntimeException var2) {
-      throw AbstractGameWorld.cascadeException(var2, "ib.B(" + var0 + ')');
-    }
   }
 
   public static void method1188(int var0) {
-    try {
-      Mouse.anIntArray1920 = null;
+    Mouse.anIntArray1920 = null;
       DummyClass36.anIntArrayArrayArray2609 = null;
       IntegerNode.anIntArray2469 = null;
       ObjectCache.tileOrientation = null;
@@ -136,9 +127,6 @@ public final class DummyClass42 {
 
       AbstractFrameRegulator.anIntArray1695 = null;
       SomethingPacket151.anIntArray2606 = null;
-    } catch (RuntimeException var2) {
-      throw AbstractGameWorld.cascadeException(var2, "ib.D(" + var0 + ')');
-    }
   }
 
   public static boolean addNodeToSceneGraph(int plane, int var1, int var2, int var3, int var4,

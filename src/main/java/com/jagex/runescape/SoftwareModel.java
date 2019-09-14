@@ -1532,8 +1532,7 @@ public final class SoftwareModel extends AbstractModel {
   public void draw(int var1, int var2, int var3, int var4, int var5, int var6,
       int var7,
       long var8 ) {
-    try {
-      if (!this.aBoolean3897) {
+    if (!this.aBoolean3897) {
         this.method1947();
       }
 
@@ -1588,8 +1587,6 @@ public final class SoftwareModel extends AbstractModel {
       }
 
       this.method1945(false, var8 >= 0L, var8, this.aShort3886, this.aShort3886 << 1, null);
-    } catch (RuntimeException var26) {
-    }
 
   }
 
@@ -1799,10 +1796,7 @@ public final class SoftwareModel extends AbstractModel {
                   }
                 }
 
-                try {
-                  this.method1945(var23, var30, var9, var16 - var14, var13 - var14 + 2, var12);
-                } catch (Exception var45) {
-                }
+                this.method1945(var23, var30, var9, var16 - var14, var13 - var14 + 2, var12);
 
               }
             }
@@ -2705,8 +2699,7 @@ public final class SoftwareModel extends AbstractModel {
       int var6,
       int var7,
       int var8 ) {
-    try {
-      if (!this.aBoolean3897) {
+    if (!this.aBoolean3897) {
         this.method1947();
       }
 
@@ -2761,8 +2754,6 @@ public final class SoftwareModel extends AbstractModel {
       }
 
       this.method1945(false, false, 0L, this.aShort3886, this.aShort3886 << 1, null);
-    } catch (RuntimeException var25) {
-    }
 
   }
 

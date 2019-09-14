@@ -12,29 +12,20 @@ public class Node {
   public Node prevNode;
 
   public final boolean method82(int var1) {
-    try {
-      return var1 == 0 && null != this.prevNode;
-    } catch (RuntimeException var3) {
-      throw AbstractGameWorld.cascadeException(var3, "ab.I(" + var1 + ')');
-    }
+    return var1 == 0 && null != this.prevNode;
   }
 
   public final void unlinkNode() {
-    try {
-      if (null != this.prevNode) {
+    if (null != this.prevNode) {
         this.prevNode.nextNode = this.nextNode;
         this.nextNode.prevNode = this.prevNode;
         this.prevNode = null;
         this.nextNode = null;
       }
-    } catch (RuntimeException var3) {
-      throw AbstractGameWorld.cascadeException(var3, "ab.L()");
-    }
   }
 
   public static void method83(byte var0) {
-    try {
-      Node.aClass94_77 = null;
+    Node.aClass94_77 = null;
       Node.aClass94Array75 = null;
       if (var0 != 30) {
         Node.method84(null, 89);
@@ -42,14 +33,10 @@ public class Node {
 
       Node.aClass61_78 = null;
       Node.aBooleanArray73 = null;
-    } catch (RuntimeException var2) {
-      throw AbstractGameWorld.cascadeException(var2, "ab.H(" + var0 + ')');
-    }
   }
 
   public static void method84(GameString var0, int var1) {
-    try {
-      if (var1 != -801) {
+    if (var1 != -801) {
         Node.aClass94_77 = null;
       }
 
@@ -58,24 +45,15 @@ public class Node {
         AbstractObjectNode.method565((byte) 86, DummyClass25.aClass131_1624.aShortArray1727[var2],
           DummyClass25.aClass131_1624.aShortArray1718[var2]);
       }
-    } catch (RuntimeException var3) {
-      throw AbstractGameWorld.cascadeException(var3,
-        "ab.N(" + (var0 != null ? "{...}" : "null") + ',' + var1 + ')');
-    }
   }
 
   public static void method85(byte var0) {
-    try {
-      int var1 = -122 % ((var0 - -63) / 48);
+    int var1 = -122 % ((var0 - -63) / 48);
       SceneShadowMap.aClass93_1772.method1523((byte) -99);
-    } catch (RuntimeException var2) {
-      throw AbstractGameWorld.cascadeException(var2, "ab.G(" + var0 + ')');
-    }
   }
 
   public static void setupLanguagePacket(int var1) {
-    try {
-      if (var1 != 0) {
+    if (var1 != 0) {
         if (var1 == 1) {
           Structure.method607(false);
         } else {
@@ -86,14 +64,10 @@ public class Node {
         }
 
       }
-    } catch (RuntimeException var3) {
-      throw AbstractGameWorld.cascadeException(var3, "ab.K(" + var1 + ')');
-    }
   }
 
   public static DisplayMode[] method88(byte var0) {
-    try {
-      if (var0 != 28) {
+    if (var0 != 28) {
         Node.aBooleanArray73 = null;
       }
 
@@ -135,15 +109,11 @@ public class Node {
       }
 
       return DummyClass42.aClass106Array890;
-    } catch (RuntimeException var8) {
-      throw AbstractGameWorld.cascadeException(var8, "ab.M(" + var0 + ')');
-    }
   }
 
   public static void method89(boolean var0, FileUnpacker var1, FileUnpacker var2, FileUnpacker var3,
                              FileUnpacker var4) {
-    try {
-      SomethingSceneJ.aClass153_323 = var2;
+    SomethingSceneJ.aClass153_323 = var2;
       TriChromaticImageCache.aClass153_1378 = var1;
       TextureSampler3.aClass153_3361 = var3;
       DummyClass25.aClass153_1628 = var4;
@@ -153,14 +123,6 @@ public class Node {
 
       SceneNode.aClass11ArrayArray1834 = new Widget[TextureSampler3.aClass153_3361.method2121(0)][];
       HashTable.aBooleanArray1703 = new boolean[TextureSampler3.aClass153_3361.method2121(0)];
-    } catch (RuntimeException var6) {
-      throw AbstractGameWorld.cascadeException(var6,
-        "ab.J(" + var0 + ',' + (var1 != null ? "{...}" : "null") + ',' + (var2 != null ?
-          "{...}" :
-          "null") + ',' + (var3 != null ? "{...}" : "null") + ',' + (var4 != null ?
-          "{...}" :
-          "null") + ')');
-    }
   }
 
 }

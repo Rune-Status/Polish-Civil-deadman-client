@@ -97,8 +97,7 @@ public final class NpcConfiguration {
   }
 
   public NpcConfiguration method1471(byte var1 ) {
-    try {
-      int var2 = -1;
+    int var2 = -1;
       if (~this.anInt1257 == 0) {
         if (this.anInt1295 != -1) {
           var2 = DummyClass5.anIntArray2985[this.anInt1295];
@@ -116,14 +115,10 @@ public final class NpcConfiguration {
         var3 = this.anIntArray1292[-1 + this.anIntArray1292.length];
         return ~var3 == 0 ? null : SubNode.getNpcConfiguration(var3);
       }
-    } catch (RuntimeException var4) {
-      throw AbstractGameWorld.cascadeException(var4, "me.G(" + var1 + ')');
-    }
   }
 
   public boolean method1472(byte var1 ) {
-    try {
-      if (var1 != 74) {
+    if (var1 != 74) {
         return true;
       } else if (null == this.anIntArray1292) {
         return true;
@@ -145,14 +140,10 @@ public final class NpcConfiguration {
           return 0 != ~var3;
         }
       }
-    } catch (RuntimeException var4) {
-      throw AbstractGameWorld.cascadeException(var4, "me.L(" + var1 + ')');
-    }
   }
 
   public boolean method1474(int var1 ) {
-    try {
-      if (var1 != -1) {
+    if (var1 != -1) {
         NpcConfiguration.method1480(false, null, -57);
       }
 
@@ -171,14 +162,10 @@ public final class NpcConfiguration {
       } else {
         return -1 != this.anInt1262 || this.anInt1293 != -1 || this.anInt1276 != -1;
       }
-    } catch (RuntimeException var4) {
-      throw AbstractGameWorld.cascadeException(var4, "me.E(" + var1 + ')');
-    }
   }
 
   public int method1475(int var1, int var2, int var3 ) {
-    try {
-      if (null != this.aClass130_1272) {
+    if (null != this.aClass130_1272) {
         IntegerNode var4 = (IntegerNode) this.aClass130_1272.get(var1);
         if (var2 != -26460) {
           NpcConfiguration.aClass94_1294 = null;
@@ -188,10 +175,6 @@ public final class NpcConfiguration {
       } else {
         return var3;
       }
-    } catch (RuntimeException var5) {
-      throw AbstractGameWorld.cascadeException(var5,
-        "me.N(" + var1 + ',' + var2 + ',' + var3 + ')');
-    }
   }
 
   public AbstractModel method1476(Unsure[] var1, int var2, byte var3,
@@ -202,8 +185,7 @@ public final class NpcConfiguration {
       AnimationSequence var8,
       int var9,
       AnimationSequence var10 ) {
-    try {
-      if (this.anIntArray1292 != null) {
+    if (this.anIntArray1292 != null) {
         NpcConfiguration var33 = this.method1471((byte) 32);
         return null != var33 ?
           var33.method1476(var1, var2, (byte) -102, var4, var5, var6, var7, var8, var9, var10) :
@@ -538,31 +520,19 @@ public final class NpcConfiguration {
           return var45;
         }
       }
-    } catch (RuntimeException var32) {
-      throw AbstractGameWorld.cascadeException(var32,
-        "me.M(" + (var1 != null ? "{...}" : "null") + ',' + var2 + ',' + var3 + ',' + var4 + ','
-          + var5 + ',' + var6 + ',' + var7 + ',' + (var8 != null ? "{...}" : "null") + ',' + var9
-          + ',' + (var10 != null ? "{...}" : "null") + ')');
-    }
   }
 
   public GameString method1477(int var1, GameString var2, boolean var3 ) {
-    try {
-      if (null != this.aClass130_1272) {
+    if (null != this.aClass130_1272) {
         StringNode var4 = (StringNode) this.aClass130_1272.get(var1);
         return !var3 ? null : (null == var4 ? var2 : var4.aClass94_2586);
       } else {
         return var2;
       }
-    } catch (RuntimeException var5) {
-      throw AbstractGameWorld.cascadeException(var5,
-        "me.I(" + var1 + ',' + (var2 != null ? "{...}" : "null") + ',' + var3 + ')');
-    }
   }
 
   public void method1478(Buffer var1, int var2 ) {
-    try {
-      while (true) {
+    while (true) {
         int var3 = var1.readUnsignedByte();
         if (-1 == ~var3) {
           var3 = -88 % ((5 - var2) / 52);
@@ -571,26 +541,17 @@ public final class NpcConfiguration {
 
         this.method1483(27, var3, var1);
       }
-    } catch (RuntimeException var4) {
-      throw AbstractGameWorld.cascadeException(var4,
-        "me.F(" + (var1 != null ? "{...}" : "null") + ',' + var2 + ')');
-    }
   }
 
   public void method1481(int var1 ) {
-    try {
-      int var2 = 36 % ((12 - var1) / 41);
-    } catch (RuntimeException var3) {
-      throw AbstractGameWorld.cascadeException(var3, "me.D(" + var1 + ')');
-    }
+    int var2 = 36 % ((12 - var1) / 41);
   }
 
   public AbstractModel method1482(AnimationSequence var1, int var2,
       int var3,
       int var4,
       int var5 ) {
-    try {
-      if (this.anIntArray1292 == null) {
+    if (this.anIntArray1292 == null) {
         if (null == this.anIntArray1250) {
           return null;
         } else {
@@ -665,16 +626,10 @@ public final class NpcConfiguration {
         NpcConfiguration var6 = this.method1471((byte) -100);
         return null == var6 ? null : var6.method1482(var1, var2, var3, 54, var5);
       }
-    } catch (RuntimeException var11) {
-      throw AbstractGameWorld.cascadeException(var11,
-        "me.A(" + (var1 != null ? "{...}" : "null") + ',' + var2 + ',' + var3 + ',' + var4 + ','
-          + var5 + ')');
-    }
   }
 
   private void method1483(int var1, int var2, Buffer var3) {
-    try {
-      int var4;
+    int var4;
       int var5;
       if (1 == var2) {
         var4 = var3.readUnsignedByte();
@@ -920,29 +875,20 @@ public final class NpcConfiguration {
       }
 
       var4 = 11 % ((-39 - var1) / 60);
-    } catch (RuntimeException var9) {
-      throw AbstractGameWorld.cascadeException(var9,
-        "me.H(" + var1 + ',' + var2 + ',' + (var3 != null ? "{...}" : "null") + ')');
-    }
   }
 
   public static void method1473(byte var0) {
-    try {
-      NpcConfiguration.anIntArray1277 = null;
+    NpcConfiguration.anIntArray1277 = null;
       if (var0 != 103) {
         NpcConfiguration.anInt1297 = -20;
       }
 
       NpcConfiguration.aClass94_1294 = null;
       NpcConfiguration.aClass94_1281 = null;
-    } catch (RuntimeException var2) {
-      throw AbstractGameWorld.cascadeException(var2, "me.K(" + var0 + ')');
-    }
   }
 
   public static void method1479(int var0, byte var1) {
-    try {
-      TextureSampler13.anInt3362 = -1;
+    TextureSampler13.anInt3362 = -1;
       if (var1 < 5) {
         NpcConfiguration.anIntArray1277 = null;
       }
@@ -962,15 +908,10 @@ public final class NpcConfiguration {
       } else {
         NPC.aFloat3979 = 4.0F;
       }
-
-    } catch (RuntimeException var3) {
-      throw AbstractGameWorld.cascadeException(var3, "me.C(" + var0 + ',' + var1 + ')');
-    }
   }
 
   public static void method1480(boolean var0, GameString var1, int var2) {
-    try {
-      short[] var3 = new short[16];
+    short[] var3 = new short[16];
       var1 = var1.method1534();
       int var4 = 0;
 
@@ -1009,15 +950,10 @@ public final class NpcConfiguration {
 
       int var12 = -44 / ((45 - var2) / 33);
       TextureSampler3.method307(var10, DummyClass54.aShortArray1398, 77);
-    } catch (RuntimeException var9) {
-      throw AbstractGameWorld.cascadeException(var9,
-        "me.J(" + var0 + ',' + (var1 != null ? "{...}" : "null") + ',' + var2 + ')');
-    }
   }
 
   public static int method1484(int var0, int var1) {
-    try {
-      if (var0 != 64835055) {
+    if (var0 != 64835055) {
         NpcConfiguration.anIntArray1277 = null;
       }
 
@@ -1028,9 +964,6 @@ public final class NpcConfiguration {
       int var4 = var2.low;
       int var6 = SomethingMidiFile.BIT_MASKS[var5 + -var4];
       return DummyClass5.anIntArray2985[var3] >> var4 & var6;
-    } catch (RuntimeException var7) {
-      throw AbstractGameWorld.cascadeException(var7, "me.B(" + var0 + ',' + var1 + ')');
-    }
   }
 
 }

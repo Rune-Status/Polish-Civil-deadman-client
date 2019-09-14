@@ -228,8 +228,7 @@ public abstract class AbstractObjectNodeWrapper {
   public abstract AbstractObjectNode wrap(AbstractObjectNode var1);
 
   public static GameString method1723(byte var0, boolean var1, int var2, int var3) {
-    try {
-      if (var2 >= 2 && 36 >= var2) {
+    if (var2 >= 2 && 36 >= var2) {
         int var4 = 1;
 
         for (int var5 = var3 / var2; 0 != var5; ++var4) {
@@ -275,16 +274,11 @@ public abstract class AbstractObjectNodeWrapper {
       } else {
         throw new IllegalArgumentException("Invalid radix:" + var2);
       }
-    } catch (RuntimeException var10) {
-      throw AbstractGameWorld.cascadeException(var10,
-        "q.A(" + var0 + ',' + var1 + ',' + var2 + ',' + var3 + ')');
-    }
   }
 
   public static void method1724(int var0, int var1, int var2, int var3, int var4, int var5,
                                byte var6, int var7) {
-    try {
-      if (var5 >= 128 && ~var2 <= -129 && -13057 <= ~var5 && ~var2 >= -13057) {
+    if (var5 >= 128 && ~var2 <= -129 && -13057 <= ~var5 && ~var2 >= -13057) {
         int var8 = BufferData.method1736(GameWorldSomething.currentPlane, 1, var5, var2) + -var3;
         var2 -= DummyClass49.anInt1111;
         var8 -= EnumStringFetcher.anInt2162;
@@ -317,37 +311,23 @@ public abstract class AbstractObjectNodeWrapper {
         WidgetAccess.anInt2208 = -1;
         DummyClass34.anInt590 = -1;
       }
-    } catch (RuntimeException var16) {
-      throw AbstractGameWorld.cascadeException(var16,
-        "q.C(" + var0 + ',' + var1 + ',' + var2 + ',' + var3 + ',' + var4 + ',' + var5 + ',' + var6
-          + ',' + var7 + ')');
-    }
   }
 
   public static void method1726(int var0) {
-    try {
-      AbstractObjectNodeWrapper.aClass94_1618 = null;
+    AbstractObjectNodeWrapper.aClass94_1618 = null;
       AbstractObjectNodeWrapper.aClass94_1620 = null;
       AbstractObjectNodeWrapper.aClass94_1622 = null;
       AbstractObjectNodeWrapper.aShortArrayArray1619 = null;
       AbstractObjectNodeWrapper.aClass94_1617 = null;
       AbstractObjectNodeWrapper.aClass94_1621 = null;
-
-    } catch (RuntimeException var2) {
-      throw AbstractGameWorld.cascadeException(var2, "q.B(" + var0 + ')');
-    }
   }
 
   public static int method1727(byte var0) {
-    try {
-      if (var0 != 123) {
+    if (var0 != 123) {
         AbstractObjectNodeWrapper.method1726(-123);
       }
 
       return Keyboard.aClass93_1911.method1520(-12623);
-    } catch (RuntimeException var2) {
-      throw AbstractGameWorld.cascadeException(var2, "q.D(" + var0 + ')');
-    }
   }
 
 }

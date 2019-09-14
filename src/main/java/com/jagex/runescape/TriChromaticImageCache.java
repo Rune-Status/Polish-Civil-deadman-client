@@ -41,20 +41,14 @@ public final class TriChromaticImageCache {
   private TriChromaticImageBuffer[] aClass3_Sub20Array1371;
 
   public TriChromaticImageCache(int var1, int var2, int var3 ) {
-    try {
-      this.anInt1369 = var2;
+    this.anInt1369 = var2;
       this.anInt1367 = var1;
       this.aClass3_Sub20Array1371 = new TriChromaticImageBuffer[this.anInt1369];
       this.anIntArrayArrayArray1362 = new int[this.anInt1367][3][var3];
-    } catch (RuntimeException var5) {
-      throw AbstractGameWorld.cascadeException(var5,
-        "nd.<init>(" + var1 + ',' + var2 + ',' + var3 + ')');
-    }
   }
 
   public int[][][] method1589(byte var1 ) {
-    try {
-      if (~this.anInt1369 == ~this.anInt1367) {
+    if (~this.anInt1369 == ~this.anInt1367) {
         if (var1 > -12) {
           this.anInt1365 = -104;
         }
@@ -67,14 +61,10 @@ public final class TriChromaticImageCache {
       } else {
         throw new RuntimeException("Can only retrieve a full image cache");
       }
-    } catch (RuntimeException var3) {
-      throw AbstractGameWorld.cascadeException(var3, "nd.F(" + var1 + ')');
-    }
   }
 
   public void method1590(byte var1 ) {
-    try {
-      if (var1 < -1) {
+    if (var1 < -1) {
         for (int var2 = 0; ~this.anInt1367 < ~var2; ++var2) {
           this.anIntArrayArrayArray1362[var2][0] = null;
           this.anIntArrayArrayArray1362[var2][1] = null;
@@ -87,14 +77,10 @@ public final class TriChromaticImageCache {
         this.aClass61_1366.clear(-118);
         this.aClass61_1366 = null;
       }
-    } catch (RuntimeException var3) {
-      throw AbstractGameWorld.cascadeException(var3, "nd.E(" + var1 + ')');
-    }
   }
 
   public int[][] method1594(byte var1, int var2 ) {
-    try {
-      int var3 = -50 % ((var1 - -57) / 57);
+    int var3 = -50 % ((var1 - -57) / 57);
       if (this.anInt1367 == this.anInt1369) {
         this.aBoolean1379 = null == this.aClass3_Sub20Array1371[var2];
         this.aClass3_Sub20Array1371[var2] = SomethingQuickChat2.aClass3_Sub20_3532;
@@ -129,14 +115,10 @@ public final class TriChromaticImageCache {
           return this.anIntArrayArrayArray1362[var4.anInt2483];
         }
       }
-    } catch (RuntimeException var6) {
-      throw AbstractGameWorld.cascadeException(var6, "nd.D(" + var1 + ',' + var2 + ')');
-    }
   }
 
   public static void method1591(boolean var0, AudioStreamEncoder var1) {
-    try {
-      if (var1.aClass3_Sub12_2544 != null) {
+    if (var1.aClass3_Sub12_2544 != null) {
         var1.aClass3_Sub12_2544.anInt2374 = 0;
       }
 
@@ -149,16 +131,10 @@ public final class TriChromaticImageCache {
       if (!var0) {
         TriChromaticImageCache.cameraTileX = -103;
       }
-
-    } catch (RuntimeException var3) {
-      throw AbstractGameWorld.cascadeException(var3,
-        "nd.A(" + var0 + ',' + (var1 != null ? "{...}" : "null") + ')');
-    }
   }
 
   public static void method1592(byte var0) {
-    try {
-      TriChromaticImageCache.materials = null;
+    TriChromaticImageCache.materials = null;
       TriChromaticImageCache.aClass153_1378 = null;
       TriChromaticImageCache.anIntArrayArray1373 = null;
       TriChromaticImageCache.aClass94_1363 = null;
@@ -171,19 +147,10 @@ public final class TriChromaticImageCache {
         TriChromaticImageCache.aByteArray1364 = null;
         TriChromaticImageCache.aClass94_1374 = null;
       }
-    } catch (RuntimeException var2) {
-      throw AbstractGameWorld.cascadeException(var2, "nd.B(" + var0 + ')');
-    }
   }
 
   public static void method1593(int var0, FileUnpacker var1) {
-    try {
-      DummyClass14.titleBackgroundFileId = var1.getFileId(SomethingQuickChat.TITLE_BACKGROUND);
+    DummyClass14.titleBackgroundFileId = var1.getFileId(SomethingQuickChat.TITLE_BACKGROUND);
       BitVariable.logoFileId = var1.getFileId(DummyClass53.LOGO);
-
-    } catch (RuntimeException var3) {
-      throw AbstractGameWorld.cascadeException(var3,
-        "nd.C(" + var0 + ',' + (var1 != null ? "{...}" : "null") + ')');
-    }
   }
 }

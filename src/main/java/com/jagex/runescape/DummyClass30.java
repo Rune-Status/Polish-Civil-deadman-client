@@ -13,20 +13,15 @@ public final class DummyClass30 {
 
 
   public static void method937(int var0) {
-    try {
-      DummyClass30.adjacentTileOnScreen = null;
+    DummyClass30.adjacentTileOnScreen = null;
       DummyClass30.aClass94_458 = null;
 
       DummyClass30.aClass94_459 = null;
-    } catch (RuntimeException var2) {
-      throw AbstractGameWorld.cascadeException(var2, "dl.A(" + var0 + ')');
-    }
   }
 
   public static void method938(int var0, int var1, int var2, int var3, int var4, int var5, int var6,
                               int var7, int var8) {
-    try {
-      if (var6 != 1) {
+    if (var6 != 1) {
         DummyClass30.aClass94_458 = null;
       }
 
@@ -35,16 +30,10 @@ public final class DummyClass30 {
       int var11 = (-var1 + var0 << 16) / var9;
       int var12 = (-var5 + var4 << 16) / var10;
       SceneShadowMap.method1814(var1, var3, var2, var12, var7, 0, 0, 127, var11, var8, var5);
-    } catch (RuntimeException var13) {
-      throw AbstractGameWorld.cascadeException(var13,
-        "dl.B(" + var0 + ',' + var1 + ',' + var2 + ',' + var3 + ',' + var4 + ',' + var5 + ',' + var6
-          + ',' + var7 + ',' + var8 + ')');
-    }
   }
 
   public static Buffer method939(byte var0) {
-    try {
-      Buffer var1 = new Buffer(34);
+    Buffer var1 = new Buffer(34);
       var1.writeByte(11);
       var1.writeByte(AbstractFileRequest.brightnessSetting);
       var1.writeByte(!ClientScriptEnum.aBoolean3665 ? 0 : 1);
@@ -75,22 +64,15 @@ public final class DummyClass30 {
       var1.writeByte(FileCacheRequester.aBoolean1080 ? 1 : 0);
       var1.writeByte(DummyClass4.aBoolean3004 ? 1 : 0);
       return var1;
-    } catch (RuntimeException var2) {
-      throw AbstractGameWorld.cascadeException(var2, "dl.C(" + var0 + ')');
-    }
   }
 
   public static void method940(int var0, int var1) {
-    try {
-      if (var0 >= 101) {
+    if (var0 >= 101) {
         Mouse var2 = Mouse.INSTANCE;
         synchronized (var2) {
           ObjectNode.anInt4045 = var1;
         }
       }
-    } catch (RuntimeException var5) {
-      throw AbstractGameWorld.cascadeException(var5, "dl.D(" + var0 + ',' + var1 + ')');
-    }
   }
 
 }

@@ -19,8 +19,7 @@ public final class MapScene {
   public boolean aBoolean69;
 
   public void method74(byte var1, Buffer var2, int var3 ) {
-    try {
-      while (true) {
+    while (true) {
         int var4 = var2.readUnsignedByte();
         if (-1 == ~var4) {
           if (var1 > -108) {
@@ -32,15 +31,10 @@ public final class MapScene {
 
         this.method79(var4, var2, var3, 95);
       }
-    } catch (RuntimeException var5) {
-      throw AbstractGameWorld.cascadeException(var5,
-        "aa.F(" + var1 + ',' + (var2 != null ? "{...}" : "null") + ',' + var3 + ')');
-    }
   }
 
   public SoftwareIndexedColorSprite getSprite(int var1, byte var2 ) {
-    try {
-      SoftwareIndexedColorSprite var3 =
+    SoftwareIndexedColorSprite var3 =
         (SoftwareIndexedColorSprite) TextureSampler2.aClass93_3369.get(
             var1 << 16 | this.spriteId);
       if (var3 != null) {
@@ -65,14 +59,10 @@ public final class MapScene {
 
         return var3;
       }
-    } catch (RuntimeException var6) {
-      throw AbstractGameWorld.cascadeException(var6, "aa.D(" + var1 + ',' + var2 + ')');
-    }
   }
 
   private void method79(int var1, Buffer var2, int var3, int var4) {
-    try {
-      if (var1 == 1) {
+    if (var1 == 1) {
         this.spriteId = var2.readUnsignedShort();
       } else if (var1 != 2) {
         if (~var1 == -4) {
@@ -89,16 +79,10 @@ public final class MapScene {
       if (var4 <= 7) {
         MapScene.anInt65 = 123;
       }
-
-    } catch (RuntimeException var6) {
-      throw AbstractGameWorld.cascadeException(var6,
-        "aa.B(" + var1 + ',' + (var2 != null ? "{...}" : "null") + ',' + var3 + ',' + var4 + ')');
-    }
   }
 
   public static boolean method73(short var0, int var1) {
-    try {
-      if (var0 != 47 && ~var0 != -6 && var0 != 43 && ~var0 != -36 && ~var0 != -59 && -23 != ~var0
+    if (var0 != 47 && ~var0 != -6 && var0 != 43 && ~var0 != -36 && ~var0 != -59 && -23 != ~var0
         && var0 != 40 && var0 != 3) {
         if (-10 != ~var0 && ~var0 != -13 && -1007 != ~var0 && -1004 != ~var0) {
           if (var1 <= 42) {
@@ -115,14 +99,10 @@ public final class MapScene {
       } else {
         return true;
       }
-    } catch (RuntimeException var3) {
-      throw AbstractGameWorld.cascadeException(var3, "aa.C(" + var0 + ',' + var1 + ')');
-    }
   }
 
   public static void method75(Widget[] var0, boolean var1, int var2) {
-    try {
-      if (var1) {
+    if (var1) {
         for (int var3 = 0; ~var3 > ~var0.length; ++var3) {
           Widget var4 = var0[var3];
           if (null != var4) {
@@ -166,16 +146,11 @@ public final class MapScene {
         }
 
       }
-    } catch (RuntimeException var6) {
-      throw AbstractGameWorld.cascadeException(var6,
-          "aa.I(" + (var0 != null ? "{...}" : "null") + ',' + ',' + var2 + ')');
-    }
   }
 
   public static boolean method76(int var0, int var1, int var2, int var3, int var4, boolean var5,
                                 int var6, int var7, int var8, int var9, int var10, int var11) {
-    try {
-      int var12;
+    int var12;
       int var13;
       for (var12 = 0; 104 > var12; ++var12) {
         for (var13 = 0; -105 < ~var13; ++var13) {
@@ -406,30 +381,19 @@ public final class MapScene {
         TextureSampler7.method299(113, var15, var9);
         return true;
       }
-    } catch (RuntimeException var26) {
-      throw AbstractGameWorld.cascadeException(var26,
-        "aa.A(" + var0 + ',' + var1 + ',' + var2 + ',' + var3 + ',' + var4 + ',' + var5 + ',' + var6
-          + ',' + var7 + ',' + var8 + ',' + var9 + ',' + var10 + ',' + var11 + ')');
-    }
   }
 
   public static void method78(int var0, boolean var1, int var2) {
-    try {
-      ++FileUnpacker.anInt1944;
+    ++FileUnpacker.anInt1944;
       TextureSampler12.secureBuffer.writePacket(132);
       TextureSampler12.secureBuffer.method775(var2, 1437452424);
       if (!var1) {
         TextureSampler12.secureBuffer.writeShortLE(-1, var0);
       }
-    } catch (RuntimeException var4) {
-      throw AbstractGameWorld.cascadeException(var4,
-        "aa.E(" + var0 + ',' + var1 + ',' + var2 + ')');
-    }
   }
 
   public static void method80(int var0) {
-    try {
-      MapScene.aClass94_60 = null;
+    MapScene.aClass94_60 = null;
       MapScene.aShortArray63 = null;
       if (var0 != -27401) {
         MapScene.anInt65 = 93;
@@ -438,14 +402,10 @@ public final class MapScene {
       MapScene.aClass94_68 = null;
       MapScene.anInterface5Array70 = null;
       MapScene.aClass94_62 = null;
-    } catch (RuntimeException var2) {
-      throw AbstractGameWorld.cascadeException(var2, "aa.G(" + var0 + ')');
-    }
   }
 
   public static void method81(byte var0, Widget var1) {
-    try {
-      if (var0 != -128) {
+    if (var0 != -128) {
         MapScene.method75(null, true, 21);
       }
 
@@ -502,10 +462,6 @@ public final class MapScene {
           }
         }
       }
-    } catch (RuntimeException var3) {
-      throw AbstractGameWorld.cascadeException(var3,
-        "aa.H(" + var0 + ',' + (var1 != null ? "{...}" : "null") + ')');
-    }
   }
 
 }

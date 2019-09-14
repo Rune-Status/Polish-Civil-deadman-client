@@ -27,24 +27,18 @@ public final class DummyClass3 {
   }
 
   public static void method69(HuffmanEncoder var0, int var1) {
-    try {
-      if (var1 < 2) {
+    if (var1 < 2) {
         DummyClass3.method69(null, -115);
       }
 
       TextureSampler16.huffmanEncoder = var0;
-    } catch (RuntimeException var3) {
-      throw AbstractGameWorld.cascadeException(var3,
-        "a.B(" + (var0 != null ? "{...}" : "null") + ',' + var1 + ')');
-    }
   }
 
   public static SomethingGl0[] method70(float[][] var0, float[][] var1, int[][] var2, int var3,
                                        float[][] var4, byte[][] var5, int[][] var6, int var7,
                                        byte[][] var8, byte[][] var9, byte[][] var10,
                                        byte[][][] var11) {
-    try {
-      HashTable var12 = new HashTable(128);
+    HashTable var12 = new HashTable(128);
 
       int var13;
       int var14;
@@ -679,20 +673,10 @@ public final class DummyClass3 {
 
       DummyClass18.method824(var59, var57, var7 + -27);
       return var57;
-    } catch (RuntimeException var55) {
-      throw AbstractGameWorld.cascadeException(var55,
-        "a.A(" + (var0 != null ? "{...}" : "null") + ',' + (var1 != null ? "{...}" : "null") + ','
-          + (var2 != null ? "{...}" : "null") + ',' + var3 + ',' + (var4 != null ? "{...}" : "null")
-          + ',' + (var5 != null ? "{...}" : "null") + ',' + (var6 != null ? "{...}" : "null") + ','
-          + var7 + ',' + (var8 != null ? "{...}" : "null") + ',' + (var9 != null ? "{...}" : "null")
-          + ',' + (var10 != null ? "{...}" : "null") + ',' + (var11 != null ? "{...}" : "null")
-          + ')');
-    }
   }
 
   public static void method71(byte var0) {
-    try {
-      DummyClass3.aBooleanArray54 = null;
+    DummyClass3.aBooleanArray54 = null;
       DummyClass3.openingMusic = null;
       if (var0 != -124) {
         DummyClass3.aClass94_58 = null;
@@ -700,14 +684,10 @@ public final class DummyClass3 {
 
       DummyClass3.aClass94_58 = null;
       DummyClass3.anIntArray52 = null;
-    } catch (RuntimeException var2) {
-      throw AbstractGameWorld.cascadeException(var2, "a.C(" + var0 + ')');
-    }
   }
 
   public static void method72(int var0, int var1, int var2, int var3, int var4) {
-    try {
-      if (GlRenderer.useOpenGlRenderer) {
+    if (GlRenderer.useOpenGlRenderer) {
         GlUtils.clip(var0, var4, var2 + var0, var1 + var4);
         GlUtils.fillQuad(var0, var4, var2, var1, 0);
       } else {
@@ -784,9 +764,5 @@ public final class DummyClass3 {
         }
 
       }
-    } catch (RuntimeException var14) {
-      throw AbstractGameWorld.cascadeException(var14,
-        "a.D(" + var0 + ',' + var1 + ',' + var2 + ',' + var3 + ',' + var4 + ')');
-    }
   }
 }

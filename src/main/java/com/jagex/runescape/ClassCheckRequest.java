@@ -21,23 +21,17 @@ public final class ClassCheckRequest extends Node {
   public int anInt2305;
 
   public static void method124(int var0, int var1, int var2) {
-    try {
-      if (var0 <= 23) {
+    if (var0 <= 23) {
         ClassCheckRequest.aClass94_2306 = null;
       }
 
       if (MovedStatics0.method57(var2, 104)) {
         MapScene.method75(SceneNode.aClass11ArrayArray1834[var2], true, var1);
       }
-    } catch (RuntimeException var4) {
-      throw AbstractGameWorld.cascadeException(var4,
-        "ed.A(" + var0 + ',' + var1 + ',' + var2 + ')');
-    }
   }
 
   public static void method125(int var0, byte var1, int var2, int var3, Widget var4) {
-    try {
-      DummyClass43.method1194(-16385);
+    DummyClass43.method1194(-16385);
       if (GlRenderer.useOpenGlRenderer) {
         GlUtils.clip(var3, var2, var3 + var4.anInt168, var2 + var4.anInt193);
       } else {
@@ -291,17 +285,10 @@ public final class ClassCheckRequest extends Node {
       if (var1 == 59) {
         DummyClass9.aBooleanArray4008[var0] = true;
       }
-    } catch (RuntimeException var18) {
-      throw AbstractGameWorld.cascadeException(var18,
-        "ed.B(" + var0 + ',' + var1 + ',' + var2 + ',' + var3 + ',' + (var4 != null ?
-          "{...}" :
-          "null") + ')');
-    }
   }
 
   public static void method126(boolean var0, int var1, int var2, int var3, int var4) {
-    try {
-      if (!var0) {
+    if (!var0) {
         if (~var4 <= ~DummyClass55.anInt1425 && var4 <= GlTexture2d.anInt3765) {
           var2 = DummyClass59.method1040(LightIntensity.anInt902, var2, (byte) 0,
             DummyClass13.anInt2020);
@@ -311,15 +298,10 @@ public final class ClassCheckRequest extends Node {
         }
 
       }
-    } catch (RuntimeException var6) {
-      throw AbstractGameWorld.cascadeException(var6,
-          "ed.F(" + ',' + var1 + ',' + var2 + ',' + var3 + ',' + var4 + ')');
-    }
   }
 
   public static void method127(short[] var0, int var1, GameString[] var2, int var3, int var4) {
-    try {
-      if (~var1 < ~var4) {
+    if (~var1 < ~var4) {
         int var6 = var4;
         int var5 = (var4 - -var1) / 2;
         GameString var7 = var2[var5];
@@ -351,30 +333,17 @@ public final class ClassCheckRequest extends Node {
       if (var3 != -909) {
         ClassCheckRequest.method125(-13, (byte) 113, -27, -120, null);
       }
-
-    } catch (RuntimeException var12) {
-      throw AbstractGameWorld.cascadeException(var12,
-        "ed.E(" + (var0 != null ? "{...}" : "null") + ',' + var1 + ',' + (var2 != null ?
-          "{...}" :
-          "null") + ',' + var3 + ',' + var4 + ')');
-    }
   }
 
   public static void method128(int var0) {
-    try {
-      AbstractGameWorld.floorUnderlays.method1524(3);
+    AbstractGameWorld.floorUnderlays.method1524(3);
       if (var0 != 2) {
         ClassCheckRequest.method127(null, -27, null, -4, -64);
       }
-
-    } catch (RuntimeException var2) {
-      throw AbstractGameWorld.cascadeException(var2, "ed.O(" + var0 + ')');
-    }
   }
 
   public static int method129(int var0, int var1, int var2, int var3) {
-    try {
-      if (var1 != 2) {
+    if (var1 != 2) {
         ClassCheckRequest.method131(14);
       }
 
@@ -393,43 +362,29 @@ public final class ClassCheckRequest extends Node {
       }
 
       return (var0 >> 1) + (var2 >> 5 << 7) + (var3 >> 2 << 10);
-    } catch (RuntimeException var5) {
-      throw AbstractGameWorld.cascadeException(var5,
-        "ed.D(" + var0 + ',' + var1 + ',' + var2 + ',' + var3 + ')');
-    }
   }
 
   public static GameWorld method130(int var0, int var1) {
-    try {
-      if (BufferedFile.aBoolean579 && ~var1 <= ~TextureSampler34.anInt3054
+    if (BufferedFile.aBoolean579 && ~var1 <= ~TextureSampler34.anInt3054
         && ~var1 >= ~FloorUnderlay.anInt1416) {
         int var2 = 120 / ((0 - var0) / 32);
         return DummyClass26.aClass44_Sub1Array1609[var1 - TextureSampler34.anInt3054];
       } else {
         return null;
       }
-    } catch (RuntimeException var3) {
-      throw AbstractGameWorld.cascadeException(var3, "ed.P(" + var0 + ',' + var1 + ')');
-    }
   }
 
   public static void method131(int var0) {
-    try {
-      ClassCheckRequest.aClass94_2297 = null;
+    ClassCheckRequest.aClass94_2297 = null;
       ClassCheckRequest.DETAILS = null;
       ClassCheckRequest.aClass94_2306 = null;
       if (var0 >= -104) {
         ClassCheckRequest.method132((byte) -28);
       }
-
-    } catch (RuntimeException var2) {
-      throw AbstractGameWorld.cascadeException(var2, "ed.Q(" + var0 + ')');
-    }
   }
 
   public static void method132(byte var0) {
-    try {
-      for (int var1 = 0; var1 < SomethingLight0.anInt1552; ++var1) {
+    for (int var1 = 0; var1 < SomethingLight0.anInt1552; ++var1) {
         --GameString.anIntArray2157[var1];
         if (~GameString.anIntArray2157[var1] > 9) {
           --SomethingLight0.anInt1552;
@@ -518,10 +473,6 @@ public final class ClassCheckRequest extends Node {
         AbstractFrameRegulator.anInt1691 = -1;
         ++Parameter.anInt3618;
       }
-
-    } catch (RuntimeException var10) {
-      throw AbstractGameWorld.cascadeException(var10, "ed.C(" + var0 + ')');
-    }
   }
 
 }

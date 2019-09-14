@@ -24,8 +24,7 @@ public final class PlayerAppearance {
       int var6,
       int var7,
       int var8 ) {
-    try {
-      if (var8 != -2012759707) {
+    if (var8 != -2012759707) {
         this.npcId = -32;
       }
 
@@ -78,17 +77,10 @@ public final class PlayerAppearance {
       }
 
       return var11;
-    } catch (RuntimeException var16) {
-      throw AbstractGameWorld.cascadeException(var16,
-        "hh.J(" + var1 + ',' + var2 + ',' + var3 + ',' + var4 + ',' + (var5 != null ?
-          "{...}" :
-          "null") + ',' + var6 + ',' + var7 + ',' + var8 + ')');
-    }
   }
 
   private void method1158(int var1) {
-    try {
-      long var2 = this.aLong860;
+    long var2 = this.aLong860;
       this.aLong860 = -1L;
       long[] var4 = FaceNormal.aLongArray1631;
       this.aLong860 =
@@ -133,29 +125,20 @@ public final class PlayerAppearance {
       if (-1L != ~var2 && this.aLong860 != var2) {
         Keyboard.aClass93_1911.method1518(var2, (byte) -124);
       }
-
-    } catch (RuntimeException var6) {
-      throw AbstractGameWorld.cascadeException(var6, "hh.K(" + var1 + ')');
-    }
   }
 
   public void method1159(boolean var1, boolean var2 ) {
-    try {
-      if (!var2) {
+    if (!var2) {
         PlayerAppearance.anIntArray859 = null;
       }
 
       this.aBoolean864 = var1;
       this.method1158(459557008);
-    } catch (RuntimeException var4) {
-      throw AbstractGameWorld.cascadeException(var4, "hh.A(" + var1 + ',' + var2 + ')');
-    }
   }
 
   public void update(int[] var1, int var2, boolean var3, int var4,int[] var5,
       int var6 ) {
-    try {
-      if (var6 != this.anInt858) {
+    if (var6 != this.anInt858) {
         this.anInt858 = var6;
         this.anIntArrayArray863 = null;
       }
@@ -184,30 +167,18 @@ public final class PlayerAppearance {
         this.anIntArray857 = var5;
         this.method1158(0 + 459557008);
       }
-    } catch (RuntimeException var10) {
-      throw AbstractGameWorld.cascadeException(var10,
-          "hh.G(" + (var1 != null ? "{...}" : "null") + ',' + var2 + ',' + var3
-              + ',' + var4 + ',' + "{...}" + ',' + var6 + ')');
-    }
   }
 
   public void method1162(int var1, boolean var2, int var3 ) {
-    try {
-      this.anIntArray862[var1] = var3;
+    this.anIntArray862[var1] = var3;
       this.method1158(459557008);
       if (var2) {
         this.method1159(false, false);
       }
-
-    } catch (RuntimeException var5) {
-      throw AbstractGameWorld.cascadeException(var5,
-        "hh.L(" + var1 + ',' + var2 + ',' + var3 + ')');
-    }
   }
 
   public int method1163(int var1 ) {
-    try {
-      if (var1 != -24861) {
+    if (var1 != -24861) {
         PlayerAppearance.anIntArray859 = null;
       }
 
@@ -217,23 +188,15 @@ public final class PlayerAppearance {
             this.anIntArray862[4]
           << 20)) - (-(this.anIntArray857[0] << 15) - ((this.anIntArray857[11] << 5)
           + this.anIntArray857[1]));
-    } catch (RuntimeException var3) {
-      throw AbstractGameWorld.cascadeException(var3, "hh.E(" + var1 + ')');
-    }
   }
 
   public void method1164(int var1, int var2, int var3 ) {
-    try {
-      int var4 = DummyClass6.anIntArray2043[var1];
+    int var4 = DummyClass6.anIntArray2043[var1];
       if (-1 != ~this.anIntArray857[var4]) {
         TextureSampler20.getIdentityKit(var2, var3);
         this.anIntArray857[var4] = TextureSampler3.method308(var2, Integer.MIN_VALUE);
         this.method1158(459557008);
       }
-    } catch (RuntimeException var5) {
-      throw AbstractGameWorld.cascadeException(var5,
-        "hh.I(" + var1 + ',' + var2 + ',' + var3 + ')');
-    }
   }
 
   public AbstractModel method1165(Unsure[] var1, int var2,
@@ -246,8 +209,7 @@ public final class PlayerAppearance {
       boolean var9,
       int var10,
       int var11 ) {
-    try {
-      int var12 = 102 % ((var7 - -39) / 61);
+    int var12 = 102 % ((var7 - -39) / 61);
       if (0 == ~this.npcId) {
         int[] var15 = this.anIntArray857;
         long var13 = this.aLong860;
@@ -631,21 +593,13 @@ public final class PlayerAppearance {
             .method1476(var1, var6, (byte) -128, var11, var2, var8, var10, var3,
                 var5, var4);
       }
-    } catch (RuntimeException var36) {
-      throw AbstractGameWorld.cascadeException(var36,
-        "hh.D(" + (var1 != null ? "{...}" : "null") + ',' + var2 + ',' + (var3 != null ?
-          "{...}" :
-          "null") + ',' + (var4 != null ? "{...}" : "null") + ',' + var5 + ',' + var6 + ',' + var7
-          + ',' + var8 + ',' + var9 + ',' + var10 + ',' + var11 + ')');
-    }
   }
 
   public AbstractModel method1167(int var1, byte var2,
       AnimationSequence var3,
       int var4,
       int var5 ) {
-    try {
-      if (0 == ~this.npcId) {
+    if (0 == ~this.npcId) {
         AbstractModel var6 = (AbstractModel) HashTableIterator.aClass93_1131.get(
             this.aLong860);
         if (var2 < 122) {
@@ -722,32 +676,22 @@ public final class PlayerAppearance {
       } else {
         return SubNode.getNpcConfiguration(this.npcId).method1482(var3, var1, var5, -109, var4);
       }
-    } catch (RuntimeException var13) {
-      throw AbstractGameWorld.cascadeException(var13,
-        "hh.F(" + var1 + ',' + var2 + ',' + (var3 != null ? "{...}" : "null") + ',' + var4 + ','
-          + var5 + ')');
-    }
   }
 
   public static void method1160(int var0, int var1) {
-    try {
-      if (MovedStatics0.method57(var1, 104)) {
+    if (MovedStatics0.method57(var1, 104)) {
         if (var0 > -100) {
           PlayerAppearance.method1168(52);
         }
 
         MouseRecorder.method1260(23206, -1, SceneNode.aClass11ArrayArray1834[var1]);
       }
-    } catch (RuntimeException var3) {
-      throw AbstractGameWorld.cascadeException(var3, "hh.B(" + var0 + ',' + var1 + ')');
-    }
   }
 
   public static boolean method1166(int var0, byte var1, int var2, int var3, int var4, int var5,
                                   int var6, int var7, int var8, int var9, int var10, boolean var11,
                                   int var12) {
-    try {
-      int var13;
+    int var13;
       int var14;
       for (var13 = 0; ~var13 > -105; ++var13) {
         for (var14 = 0; var14 < 104; ++var14) {
@@ -1118,25 +1062,16 @@ public final class PlayerAppearance {
       } else {
         return true;
       }
-    } catch (RuntimeException var27) {
-      throw AbstractGameWorld.cascadeException(var27,
-        "hh.C(" + var0 + ',' + var1 + ',' + var2 + ',' + var3 + ',' + var4 + ',' + var5 + ',' + var6
-          + ',' + var7 + ',' + var8 + ',' + var9 + ',' + var10 + ',' + var11 + ',' + var12 + ')');
-    }
   }
 
   public static void method1168(int var0) {
-    try {
-      PlayerAppearance.aClass94_853 = null;
+    PlayerAppearance.aClass94_853 = null;
       PlayerAppearance.aClass94_852 = null;
       if (var0 == 8160) {
         PlayerAppearance.anIntArray859 = null;
         PlayerAppearance.COMMAND_WM0 = null;
         PlayerAppearance.anIntArray861 = null;
       }
-    } catch (RuntimeException var2) {
-      throw AbstractGameWorld.cascadeException(var2, "hh.H(" + var0 + ')');
-    }
   }
 
 }

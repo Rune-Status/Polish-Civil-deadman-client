@@ -8,19 +8,13 @@ public final class DummyClass27 {
 
 
   public static void method1712(int var0) {
-    try {
-      DummyClass27.blockConfigs = null;
+    DummyClass27.blockConfigs = null;
       DummyClass27.aClass94_1583 = null;
       DummyClass27.aClass94_1582 = null;
-
-    } catch (RuntimeException var2) {
-      throw AbstractGameWorld.cascadeException(var2, "ph.B(" + var0 + ')');
-    }
   }
 
   public static void method1713(byte var0) {
-    try {
-      if (var0 > -45) {
+    if (var0 > -45) {
         DummyClass27.blockConfigs = null;
       }
 
@@ -131,22 +125,15 @@ public final class DummyClass27 {
           }
         }
       }
-    } catch (RuntimeException var19) {
-      throw AbstractGameWorld.cascadeException(var19, "ph.A(" + var0 + ')');
-    }
   }
 
   public static void method1714(byte var0) {
-    try {
-      Keyboard.aClass93_1911.method1523((byte) -112);
+    Keyboard.aClass93_1911.method1523((byte) -112);
       if (var0 != -6) {
         DummyClass27.method1712(-114);
       }
 
       HashTableIterator.aClass93_1131.method1523((byte) -100);
-    } catch (RuntimeException var2) {
-      throw AbstractGameWorld.cascadeException(var2, "ph.C(" + var0 + ')');
-    }
   }
 
 }

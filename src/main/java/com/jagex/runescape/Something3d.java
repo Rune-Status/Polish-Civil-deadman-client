@@ -18,31 +18,20 @@ public class Something3d extends Something3dRoot {
   public Something3d(int var1, int var2, int var3, int var4, int var5, float var6 ) {
     super(var1, var2, var3, var4, var5);
 
-    try {
-      this.anIntArray3014 = new int[this.anInt2062];
+    this.anIntArray3014 = new int[this.anInt2062];
 
       for (int var7 = 0; ~this.anInt2062 < ~var7; ++var7) {
         this.anIntArray3014[var7] =
           (short) ((int) (Math.pow(var6, var7) * 4096.0D));
       }
-
-    } catch (RuntimeException var8) {
-      throw AbstractGameWorld.cascadeException(var8,
-        "vd.<init>(" + var1 + ',' + var2 + ',' + var3 + ',' + var4 + ',' + var5 + ',' + var6 + ')');
-    }
   }
 
   public void method2242(int var1, byte var2 ) {
-    try {
-      this.aByteArray3015[this.anInt3016++] = (byte) (127 + (ClientScript.bitAnd(var2, 255) >> 1));
-    } catch (RuntimeException var4) {
-      throw AbstractGameWorld.cascadeException(var4, "vd.B(" + var1 + ',' + var2 + ')');
-    }
+    this.aByteArray3015[this.anInt3016++] = (byte) (127 + (ClientScript.bitAnd(var2, 255) >> 1));
   }
 
   public final void method2231(byte var1) {
-    try {
-      this.anInt3010 = Math.abs(this.anInt3010);
+    this.anInt3010 = Math.abs(this.anInt3010);
       if (var1 != -92) {
         this.method2231((byte) -112);
       }
@@ -53,38 +42,24 @@ public class Something3d extends Something3dRoot {
 
       this.method2242(this.anInt3016++, (byte) (this.anInt3010 >> 4));
       this.anInt3010 = 0;
-    } catch (RuntimeException var3) {
-      throw AbstractGameWorld.cascadeException(var3, "vd.A(" + var1 + ')');
-    }
   }
 
   public final void method2233(int var1) {
-    try {
-      if (var1 == -949697716) {
+    if (var1 == -949697716) {
         this.anInt3016 = 0;
         this.anInt3010 = 0;
       }
-    } catch (RuntimeException var3) {
-      throw AbstractGameWorld.cascadeException(var3, "vd.C(" + var1 + ')');
-    }
   }
 
   public final void method2237(int var1, int var2, int var3) {
-    try {
-      this.anInt3010 += var1 * this.anIntArray3014[var2] >> 12;
+    this.anInt3010 += var1 * this.anIntArray3014[var2] >> 12;
       if (var3 != -20975) {
         Something3d.method2239(-22, -68, -14, 89);
       }
-
-    } catch (RuntimeException var5) {
-      throw AbstractGameWorld.cascadeException(var5,
-        "vd.H(" + var1 + ',' + var2 + ',' + var3 + ')');
-    }
   }
 
   public static void method2238(int var0, int var1, int var2, int var3, byte var4, int var5) {
-    try {
-      AbstractSomethingTexture.anInt1105 = var2;
+    AbstractSomethingTexture.anInt1105 = var2;
       SomethingAudio.anInt1996 = var1;
       DummyClass8.anInt4014 = var5;
       Mouse.anInt1923 = var3;
@@ -116,10 +91,6 @@ public class Something3d extends Something3dRoot {
       }
 
       SomethingPacket116.anInt1753 = 2;
-    } catch (RuntimeException var13) {
-      throw AbstractGameWorld.cascadeException(var13,
-        "vd.F(" + var0 + ',' + var1 + ',' + var2 + ',' + var3 + ',' + var4 + ',' + var5 + ')');
-    }
   }
 
   public static boolean method2239(int var0, int var1, int var2, int var3) {
@@ -263,21 +234,16 @@ public class Something3d extends Something3dRoot {
   }
 
   public static void method2240(int var0) {
-    try {
-      Something3d.aClass94_3008 = null;
+    Something3d.aClass94_3008 = null;
       Something3d.aShortArray3011 = null;
       Something3d.ZERO = null;
       if (var0 == 128) {
         Something3d.viewImageProducer = null;
       }
-    } catch (RuntimeException var2) {
-      throw AbstractGameWorld.cascadeException(var2, "vd.I(" + var0 + ')');
-    }
   }
 
   public static void method2241(byte var0, boolean var1) {
-    try {
-      int var2 = -47 / ((var0 - 5) / 49);
+    int var2 = -47 / ((var0 - 5) / 49);
 
       AreaSoundEffect var3;
       for (
@@ -321,10 +287,6 @@ public class Something3d extends Something3dRoot {
           var3.unlinkNode();
         }
       }
-
-    } catch (RuntimeException var4) {
-      throw AbstractGameWorld.cascadeException(var4, "vd.G(" + var0 + ',' + var1 + ')');
-    }
   }
 
 }

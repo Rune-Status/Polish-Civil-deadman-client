@@ -14,16 +14,11 @@ public final class DummyOutputStream extends OutputStream {
   public static GameString aClass94_51 = GameString.create("; Expires=");
 
   public void write(int var1) throws IOException {
-    try {
-      throw new IOException();
-    } catch (RuntimeException var3) {
-      throw AbstractGameWorld.cascadeException(var3, "vg.writeByte(" + var1 + ')');
-    }
+    throw new IOException();
   }
 
   public static short[] copy(int var0, short[] var1) {
-    try {
-      if (var0 != 23032) {
+    if (var0 != 23032) {
         return null;
       } else if (null != var1) {
         short[] var2 = new short[var1.length];
@@ -32,15 +27,10 @@ public final class DummyOutputStream extends OutputStream {
       } else {
         return null;
       }
-    } catch (RuntimeException var3) {
-      throw AbstractGameWorld.cascadeException(var3,
-          "vg.A(" + var0 + ',' + "{...}" + ')');
-    }
   }
 
   public static void method66(GameString var0, int var1, int var2, byte var3, int var4) {
-    try {
-      Widget var5 = AbstractDirectColorSprite.method638((byte) -19, var4, var1);
+    Widget var5 = AbstractDirectColorSprite.method638((byte) -19, var4, var1);
       if (null != var5) {
         if (var5.anObjectArray314 != null) {
           ClientScriptCall var6 = new ClientScriptCall();
@@ -133,16 +123,10 @@ public final class DummyOutputStream extends OutputStream {
           }
         }
       }
-    } catch (RuntimeException var7) {
-      throw AbstractGameWorld.cascadeException(var7,
-        "vg.D(" + (var0 != null ? "{...}" : "null") + ',' + var1 + ',' + var2 + ',' + var3 + ','
-          + var4 + ')');
-    }
   }
 
   public static void method67(boolean var0) {
-    try {
-      DummyOutputStream.aClass94_50 = null;
+    DummyOutputStream.aClass94_50 = null;
       DummyOutputStream.titleSuffixes = null;
       if (!var0) {
         DummyOutputStream.aBoolean47 = true;
@@ -150,14 +134,10 @@ public final class DummyOutputStream extends OutputStream {
 
       DummyOutputStream.anIntArray49 = null;
       DummyOutputStream.aClass94_51 = null;
-    } catch (RuntimeException var2) {
-      throw AbstractGameWorld.cascadeException(var2, "vg.B(" + var0 + ')');
-    }
   }
 
   public static void method68(int var0, int var1, Mobile var2) {
-    try {
-      if (~AbstractGameWorld.updateCycle <= ~var2.anInt2800) {
+    if (~AbstractGameWorld.updateCycle <= ~var2.anInt2800) {
         if (var2.anInt2790 >= AbstractGameWorld.updateCycle) {
           FloorOverlay.method2270(var2, (byte) -56);
         } else {
@@ -193,10 +173,6 @@ public final class DummyOutputStream extends OutputStream {
         DummyClass1.method904(65536, var2);
         RenderAnimation.method900(var2, -11973);
       }
-    } catch (RuntimeException var4) {
-      throw AbstractGameWorld.cascadeException(var4,
-        "vg.C(" + var0 + ',' + var1 + ',' + (var2 != null ? "{...}" : "null") + ')');
-    }
   }
 
 }

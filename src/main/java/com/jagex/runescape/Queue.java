@@ -12,56 +12,39 @@ public final class Queue {
 
 
   public Queue() {
-    try {
-      this.root.nextSubNode = this.root;
+    this.root.nextSubNode = this.root;
       this.root.prevSubNode = this.root;
-    } catch (RuntimeException var2) {
-      throw AbstractGameWorld.cascadeException(var2, "ce.<init>()");
-    }
   }
 
   public int size() {
-    try {
-      int var2 = 0;
+    int var2 = 0;
       for (SubNode node = this.root.nextSubNode; node != this.root; ++var2) {
         node = node.nextSubNode;
       }
       return var2;
-    } catch (RuntimeException var4) {
-      throw AbstractGameWorld.cascadeException(var4, "ce.H()");
-    }
   }
 
   public SubNode getFirst() {
-    try {
-      SubNode node = this.root.nextSubNode;
+    SubNode node = this.root.nextSubNode;
       if (this.root == node) {
         this.iterator = null;
         return null;
       }
       this.iterator = node.nextSubNode;
       return node;
-    } catch (RuntimeException var3) {
-      throw AbstractGameWorld.cascadeException(var3, "ce.K()");
-    }
   }
 
   public SubNode poll() {
-    try {
-      SubNode var2 = this.root.nextSubNode;
+    SubNode var2 = this.root.nextSubNode;
       if (this.root == var2) {
         return null;
       }
       var2.unlinkSubNode();
       return var2;
-    } catch (RuntimeException var3) {
-      throw AbstractGameWorld.cascadeException(var3, "ce.B()");
-    }
   }
 
   public SubNode getNext() {
-    try {
-      SubNode var2 = this.iterator;
+    SubNode var2 = this.iterator;
       if (var2 == this.root) {
         this.iterator = null;
         return null;
@@ -69,14 +52,10 @@ public final class Queue {
         this.iterator = var2.nextSubNode;
         return var2;
       }
-    } catch (RuntimeException var4) {
-      throw AbstractGameWorld.cascadeException(var4, "ce.A()");
-    }
   }
 
   public void addLast(SubNode var1 ) {
-    try {
-      if (var1.prevSubNode != null) {
+    if (var1.prevSubNode != null) {
         var1.unlinkSubNode();
       }
 
@@ -84,15 +63,10 @@ public final class Queue {
       var1.nextSubNode = this.root;
       var1.prevSubNode.nextSubNode = var1;
       var1.nextSubNode.prevSubNode = var1;
-    } catch (RuntimeException var4) {
-      throw AbstractGameWorld.cascadeException(var4,
-        "ce.E(" + (var1 != null ? "{...}" : "null") + ')');
-    }
   }
 
   public void clear() {
-    try {
-      while (true) {
+    while (true) {
         SubNode var2 = this.root.nextSubNode;
         if (this.root == var2) {
           this.iterator = null;
@@ -101,24 +75,16 @@ public final class Queue {
 
         var2.unlinkSubNode();
       }
-    } catch (RuntimeException var3) {
-      throw AbstractGameWorld.cascadeException(var3, "ce.I()");
-    }
   }
 
   public static void method875(byte var0) {
-    try {
-      int var1 = -102 / ((var0 - 35) / 48);
+    int var1 = -102 / ((var0 - 35) / 48);
       Queue.globalQuickchats = null;
       Queue.aClass94_334 = null;
-    } catch (RuntimeException var2) {
-      throw AbstractGameWorld.cascadeException(var2, "ce.C(" + var0 + ')');
-    }
   }
 
   public static AbstractFont createFont(int var0, byte[] var1) {
-    try {
-      if (null != var1) {
+    if (null != var1) {
         if (var0 == -22376) {
           AbstractFont var2;
           if (GlRenderer.useOpenGlRenderer) {
@@ -141,16 +107,11 @@ public final class Queue {
       } else {
         return null;
       }
-    } catch (RuntimeException var3) {
-      throw AbstractGameWorld.cascadeException(var3,
-          "ce.G(" + var0 + ',' + "{...}" + ')');
-    }
   }
 
   public static void method881(int var0, int var1, int var2, int var3, int var4, int var5, int var6,
                               int var7, int var8, int var9) {
-    try {
-      if (var2 <= -65) {
+    if (var2 <= -65) {
         SpawnedGameObject var10 = null;
 
         for (SpawnedGameObject var11 =
@@ -179,30 +140,20 @@ public final class Queue {
         var10.anInt2265 = var6;
         var10.anInt2256 = var3;
       }
-    } catch (RuntimeException var12) {
-      throw AbstractGameWorld.cascadeException(var12,
-        "ce.J(" + var0 + ',' + var1 + ',' + var2 + ',' + var3 + ',' + var4 + ',' + var5 + ',' + var6
-          + ',' + var7 + ',' + var8 + ',' + var9 + ')');
-    }
   }
 
   public static void method882(int var0, int var1) {
-    try {
-      TextureSampler36.anInt3423 = 0;
+    TextureSampler36.anInt3423 = 0;
       DummyClass22.anInt1741 = -1;
       SomethingQuickChatK.anInt154 = 1;
       SpotAnimationConfig.anInt546 = var1;
       AreaSoundEffect.aBoolean2311 = false;
       DummyClass55.aClass153_1423 = null;
       TextureSampler8.anInt3463 = var0;
-    } catch (RuntimeException var3) {
-      throw AbstractGameWorld.cascadeException(var3, "ce.F(" + var0 + ',' + var1 + ')');
-    }
   }
 
   public static SomethingWorldMapy method884(int var0, byte var1, int var2) {
-    try {
-      SomethingWorldMapy var3 = (SomethingWorldMapy) DummyClass21.aClass61_1758.getFirst();
+    SomethingWorldMapy var3 = (SomethingWorldMapy) DummyClass21.aClass61_1758.getFirst();
 
       for (int var4 = -82 % ((var1 - 11) / 32);
            var3 != null; var3 = (SomethingWorldMapy) DummyClass21.aClass61_1758.getNext()) {
@@ -212,10 +163,6 @@ public final class Queue {
       }
 
       return null;
-    } catch (RuntimeException var5) {
-      throw AbstractGameWorld.cascadeException(var5,
-        "ce.D(" + var0 + ',' + var1 + ',' + var2 + ')');
-    }
   }
 
 }

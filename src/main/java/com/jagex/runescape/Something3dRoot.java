@@ -23,23 +23,17 @@ public abstract class Something3dRoot {
 
 
   public Something3dRoot(int var1, int var2, int var3, int var4, int var5 ) {
-    try {
-      this.anInt2056 = var4;
+    this.anInt2056 = var4;
       this.anInt2062 = var2;
       this.anInt2054 = var1;
       this.anInt2060 = var5;
       this.anInt2057 = var3;
       this.method2232((byte) -60);
       this.method2236(-190126388);
-    } catch (RuntimeException var7) {
-      throw AbstractGameWorld.cascadeException(var7,
-        "wf.<init>(" + var1 + ',' + var2 + ',' + var3 + ',' + var4 + ',' + var5 + ')');
-    }
   }
 
   public final void method2230(int var1, int var2, int var3, int var4) {
-    try {
-      int[] var39 = new int[var2];
+    int[] var39 = new int[var2];
       int[] var40 = new int[var4];
       int[] var41 = new int[var3];
 
@@ -159,18 +153,12 @@ public abstract class Something3dRoot {
           }
         }
       }
-
-    } catch (RuntimeException var43) {
-      throw AbstractGameWorld.cascadeException(var43,
-        "wf.M(" + var1 + ',' + var2 + ',' + var3 + ',' + var4 + ')');
-    }
   }
 
   public abstract void method2231(byte var1 );
 
   private void method2232(byte var1) {
-    try {
-      this.aShortArray2049 = new short[this.anInt2062];
+    this.aShortArray2049 = new short[this.anInt2062];
       int var2 = 0;
       if (var1 != -60) {
         Something3dRoot.method2234(-92, 105);
@@ -180,17 +168,12 @@ public abstract class Something3dRoot {
         this.aShortArray2049[var2] = (short) ((int) Math.pow(2.0D, var2));
         ++var2;
       }
-
-    } catch (RuntimeException var3) {
-      throw AbstractGameWorld.cascadeException(var3, "wf.L(" + var1 + ')');
-    }
   }
 
   public abstract void method2233(int var1 );
 
   private void method2236(int var1) {
-    try {
-      Random var2 = new Random(this.anInt2054);
+    Random var2 = new Random(this.anInt2054);
 
       int var3;
       for (var3 = 0; var3 < 255; ++var3) {
@@ -208,26 +191,17 @@ public abstract class Something3dRoot {
         this.aShortArray2047[var5] = this.aShortArray2047[var4];
         this.aShortArray2047[var4] = this.aShortArray2047[256 + var4] = var6;
       }
-
-    } catch (RuntimeException var7) {
-      throw AbstractGameWorld.cascadeException(var7, "wf.N(" + var1 + ')');
-    }
   }
 
   public abstract void method2237(int var1,int var2,int var3 );
 
   public static int method2234(int var0, int var1) {
-    try {
-      int var2 = -27 / ((var1 - -87) / 39);
+    int var2 = -27 / ((var1 - -87) / 39);
       return 1023 & var0;
-    } catch (RuntimeException var3) {
-      throw AbstractGameWorld.cascadeException(var3, "wf.K(" + var0 + ',' + var1 + ')');
-    }
   }
 
   public static void method2235(int var0) {
-    try {
-      Something3dRoot.anIntArray2048 = null;
+    Something3dRoot.anIntArray2048 = null;
       Something3dRoot.configs = null;
       if (var0 == 4) {
         Something3dRoot.aClass94_2053 = null;
@@ -235,9 +209,6 @@ public abstract class Something3dRoot {
         Something3dRoot.aClass94_2061 = null;
         Something3dRoot.aClass11_2055 = null;
       }
-    } catch (RuntimeException var2) {
-      throw AbstractGameWorld.cascadeException(var2, "wf.J(" + var0 + ')');
-    }
   }
 
 }

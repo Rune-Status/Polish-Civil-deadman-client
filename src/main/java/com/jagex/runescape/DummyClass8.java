@@ -32,19 +32,14 @@ public final class DummyClass8 extends DummyClass7 {
   public static GameString aClass94_4024 = DummyClass8.aClass94_4022;
 
   public static void method2220(int var0) {
-    try {
-      if (var0 == 0) {
+    if (var0 == 0) {
         Mobile.aClass93_2792.method1524(3);
       }
-    } catch (RuntimeException var2) {
-      throw AbstractGameWorld.cascadeException(var2, "t.H(" + var0 + ')');
-    }
   }
 
   public static void method2221(int var0, int var1, int var2, boolean var3, int var4, int var5,
                                int var6) {
-    try {
-      int var8 = 0;
+    int var8 = 0;
 
       for (HintMarker[] var7 = GameException.aClass96Array2114; ~var7.length < ~var8; ++var8) {
         HintMarker var9 = var7[var8];
@@ -63,31 +58,19 @@ public final class DummyClass8 extends DummyClass7 {
       if (!var3) {
         DummyClass8.aBoolean4018 = true;
       }
-
-    } catch (RuntimeException var10) {
-      throw AbstractGameWorld.cascadeException(var10,
-        "t.E(" + var0 + ',' + var1 + ',' + var2 + ',' + var3 + ',' + var4 + ',' + var5 + ',' + var6
-          + ')');
-    }
   }
 
   public static void method2222(byte var0) {
-    try {
-      ObjectNode.aClass93_4043.method1523((byte) -117);
+    ObjectNode.aClass93_4043.method1523((byte) -117);
       ClientScriptCall.aClass93_2442.method1523((byte) -108);
       DummyClass14.aClass93_1964.method1523((byte) -117);
       if (var0 <= 122) {
         DummyClass8.method2223(true, (byte) -67);
       }
-
-    } catch (RuntimeException var2) {
-      throw AbstractGameWorld.cascadeException(var2, "t.G(" + var0 + ')');
-    }
   }
 
   public static void method2223(boolean var0, byte var1) {
-    try {
-      int var2 = 85 % ((-17 - var1) / 59);
+    int var2 = 85 % ((-17 - var1) / 59);
       byte var3;
       byte[][] var4;
       if (GlRenderer.useOpenGlRenderer && var0) {
@@ -125,15 +108,10 @@ public final class DummyClass8 extends DummyClass7 {
           }
         }
       }
-
-    } catch (RuntimeException var15) {
-      throw AbstractGameWorld.cascadeException(var15, "t.J(" + var0 + ',' + var1 + ')');
-    }
   }
 
   public static boolean method2224(byte var0, long var1, int var3, int var4) {
-    try {
-      int var5 = (int) var1 >> 14 & 31;
+    int var5 = (int) var1 >> 14 & 31;
       if (var0 != 39) {
         DummyClass8.method2220(-62);
       }
@@ -169,15 +147,10 @@ public final class DummyClass8 extends DummyClass7 {
       HuffmanEncoder.anInt638 = 2;
       SceneSomething2.anInt1053 = DummyClass5.anInt2993;
       return true;
-    } catch (RuntimeException var12) {
-      throw AbstractGameWorld.cascadeException(var12,
-        "t.D(" + var0 + ',' + var1 + ',' + var3 + ',' + var4 + ')');
-    }
   }
 
   public static void method2225(byte var0) {
-    try {
-      int var1 = 58 % ((var0 - 7) / 43);
+    int var1 = 58 % ((var0 - 7) / 43);
       DummyClass8.aClass89_4012 = null;
       DummyClass8.aClass94_4024 = null;
       DummyClass8.aClass109_Sub1Array4027 = null;
@@ -187,14 +160,10 @@ public final class DummyClass8 extends DummyClass7 {
       DummyClass8.aLongArray4017 = null;
       DummyClass8.aClass94_4022 = null;
       DummyClass8.aClass94_4023 = null;
-    } catch (RuntimeException var2) {
-      throw AbstractGameWorld.cascadeException(var2, "t.F(" + var0 + ')');
-    }
   }
 
   public static void method2226(GameBuffer var0, int var1, int var2) {
-    try {
-      if (var2 > -109) {
+    if (var2 > -109) {
         DummyClass8.method2226(null, 67, 54);
       }
 
@@ -330,10 +299,6 @@ public final class DummyClass8 extends DummyClass7 {
         var0.method769((byte) -127, var0.position - var5);
         var3.unlinkNode();
       }
-    } catch (RuntimeException var25) {
-      throw AbstractGameWorld.cascadeException(var25,
-        "t.I(" + (var0 != null ? "{...}" : "null") + ',' + var1 + ',' + var2 + ')');
-    }
   }
 
 }

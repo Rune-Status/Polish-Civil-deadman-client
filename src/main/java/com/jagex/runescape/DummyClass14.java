@@ -18,8 +18,7 @@ public final class DummyClass14 {
   public static GameString aClass94_1962 = DummyClass14.aClass94_1963;
 
   public static void method2145(byte var0) {
-    try {
-      DummyClass14.aClass93_1955 = null;
+    DummyClass14.aClass93_1955 = null;
       DummyClass14.aClass94_1962 = null;
       DummyClass14.ATTEMPTING_TO_RECONNECT = null;
       if (var0 >= -41) {
@@ -33,9 +32,6 @@ public final class DummyClass14 {
       DummyClass14.aClass93_1965 = null;
       DummyClass14.aClass94_1961 = null;
       DummyClass14.aClass93_1964 = null;
-    } catch (RuntimeException var2) {
-      throw AbstractGameWorld.cascadeException(var2, "vf.A(" + var0 + ')');
-    }
   }
 
   public static void method2146(int var0, int var1, int var2, int var3, SceneNode var4,
@@ -68,8 +64,7 @@ public final class DummyClass14 {
   }
 
   public static GameString method2148(int var0, byte var1) {
-    try {
-      if (999999999 <= var0) {
+    if (999999999 <= var0) {
         if (var1 != -78) {
           DummyClass14.method2145((byte) -8);
         }
@@ -78,9 +73,6 @@ public final class DummyClass14 {
       } else {
         return SomethingScene.toString(var0);
       }
-    } catch (RuntimeException var3) {
-      throw AbstractGameWorld.cascadeException(var3, "vf.C(" + var0 + ',' + var1 + ')');
-    }
   }
 
 }

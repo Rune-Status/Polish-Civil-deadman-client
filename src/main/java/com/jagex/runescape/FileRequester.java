@@ -39,8 +39,7 @@ public final class FileRequester extends AbstractFileRequester {
       int var6,
       int var7,
       boolean var8 ) {
-    try {
-      this.anInt2957 = var1;
+    this.anInt2957 = var1;
       this.aClass41_2954 = var2;
       if (this.aClass41_2954 != null) {
         this.aBoolean2962 = true;
@@ -60,20 +59,10 @@ public final class FileRequester extends AbstractFileRequester {
             this.aClass73_2956.method1309(this.aClass41_2943, (byte) 113,
                 this.anInt2957);
       }
-
-    } catch (RuntimeException var10) {
-      throw AbstractGameWorld.cascadeException(var10,
-        "bg.<init>(" + var1 + ',' + (var2 != null ? "{...}" : "null") + ',' + (var3 != null ?
-          "{...}" :
-          "null") + ',' + (var4 != null ? "{...}" : "null") + ',' + (var5 != null ?
-          "{...}" :
-          "null") + ',' + var6 + ',' + var7 + ',' + var8 + ')');
-    }
   }
 
   public FileTable method2094(int var1 ) {
-    try {
-      if (this.aClass62_2944 != null) {
+    if (this.aClass62_2944 != null) {
         return this.aClass62_2944;
       } else if (var1 != 0) {
         return null;
@@ -150,14 +139,10 @@ public final class FileRequester extends AbstractFileRequester {
           return this.aClass62_2944;
         }
       }
-    } catch (RuntimeException var6) {
-      throw AbstractGameWorld.cascadeException(var6, "bg.B(" + var1 + ')');
-    }
   }
 
   public void method2095(int var1, int var2 ) {
-    try {
-      if (null != this.aClass41_2954) {
+    if (null != this.aClass41_2954) {
         Node var3;
         for (
           var3 = this.aClass61_2963
@@ -173,14 +158,10 @@ public final class FileRequester extends AbstractFileRequester {
         var3.key = var1;
         this.aClass61_2963.addLast(var3);
       }
-    } catch (RuntimeException var5) {
-      throw AbstractGameWorld.cascadeException(var5, "bg.H(" + var1 + ',' + var2 + ')');
-    }
   }
 
   public int method2097(int var1, int var2 ) {
-    try {
-      if (var2 != '\uffff') {
+    if (var2 != '\uffff') {
         this.anInt2964 = 25;
       }
 
@@ -188,14 +169,10 @@ public final class FileRequester extends AbstractFileRequester {
           .get(
           var1);
       return null != var3 ? var3.method586(false) : 0;
-    } catch (RuntimeException var4) {
-      throw AbstractGameWorld.cascadeException(var4, "bg.L(" + var1 + ',' + var2 + ')');
-    }
   }
 
   public byte[] method2098(int var1, int var2 ) {
-    try {
-      AbstractFileRequest var3 = this.method2109(var2, var1, 103);
+    AbstractFileRequest var3 = this.method2109(var2, var1, 103);
       if (var3 == null) {
         return null;
       } else {
@@ -203,40 +180,28 @@ public final class FileRequester extends AbstractFileRequester {
         var3.unlinkNode();
         return var4;
       }
-    } catch (RuntimeException var5) {
-      throw AbstractGameWorld.cascadeException(var5, "bg.K(" + var1 + ',' + var2 + ')');
-    }
   }
 
   public void method2101(boolean var1 ) {
-    try {
-      if (this.aClass41_2954 != null) {
+    if (this.aClass41_2954 != null) {
         this.aBoolean2965 = var1;
         if (this.aClass61_2966 == null) {
           this.aClass61_2966 = new Deque();
         }
 
       }
-    } catch (RuntimeException var3) {
-      throw AbstractGameWorld.cascadeException(var3, "bg.A(" + var1 + ')');
-    }
   }
 
   public int method2102(int var1 ) {
-    try {
-      if (var1 != 0) {
+    if (var1 != 0) {
         this.method2106(-4);
       }
 
       return this.anInt2948;
-    } catch (RuntimeException var3) {
-      throw AbstractGameWorld.cascadeException(var3, "bg.I(" + var1 + ')');
-    }
   }
 
   public int method2106(int var1 ) {
-    try {
-      if (null != this.aClass62_2944) {
+    if (null != this.aClass62_2944) {
         if (this.aBoolean2962) {
           Node var2 = this.aClass61_2966.getFirst();
           if (null != var2) {
@@ -254,14 +219,10 @@ public final class FileRequester extends AbstractFileRequester {
       } else {
         return 0;
       }
-    } catch (RuntimeException var3) {
-      throw AbstractGameWorld.cascadeException(var3, "bg.O(" + var1 + ')');
-    }
   }
 
   public void method2107(boolean var1 ) {
-    try {
-      if (var1) {
+    if (var1) {
         if (null != this.aClass61_2966) {
           if (this.method2094(0) == null) {
             return;
@@ -391,14 +352,10 @@ public final class FileRequester extends AbstractFileRequester {
         }
 
       }
-    } catch (RuntimeException var5) {
-      throw AbstractGameWorld.cascadeException(var5, "bg.J(" + ')');
-    }
   }
 
   public int method2108(byte var1 ) {
-    try {
-      if (this.aClass62_2944 != null) {
+    if (this.aClass62_2944 != null) {
         if (var1 != 1) {
           FileRequester.anInt2958 = 100;
         }
@@ -407,14 +364,10 @@ public final class FileRequester extends AbstractFileRequester {
       } else {
         return 0;
       }
-    } catch (RuntimeException var3) {
-      throw AbstractGameWorld.cascadeException(var3, "bg.M(" + var1 + ')');
-    }
   }
 
   private AbstractFileRequest method2109(int var1, int var2, int var3) {
-    try {
-      Node var4 = this.aClass130_2946.get(var2);
+    Node var4 = this.aClass130_2946.get(var2);
       if (null != var4 && ~var1 == -1 && !((AbstractFileRequest) var4).aBoolean3628
         && ((AbstractFileRequest) var4).aBoolean3632) {
         var4.unlinkNode();
@@ -563,15 +516,10 @@ public final class FileRequester extends AbstractFileRequester {
           return (AbstractFileRequest) var4;
         }
       }
-    } catch (RuntimeException var11) {
-      throw AbstractGameWorld.cascadeException(var11,
-        "bg.C(" + var1 + ',' + var2 + ',' + var3 + ')');
-    }
   }
 
   public void method2110(int var1 ) {
-    try {
-      if (this.aClass61_2966 != null) {
+    if (this.aClass61_2966 != null) {
         if (null != this.method2094(var1)) {
           for (Node var2 = this.aClass61_2963.getFirst();
                null != var2; var2 = this.aClass61_2963.getNext()) {
@@ -596,27 +544,19 @@ public final class FileRequester extends AbstractFileRequester {
 
         }
       }
-    } catch (RuntimeException var4) {
-      throw AbstractGameWorld.cascadeException(var4, "bg.D(" + var1 + ')');
-    }
   }
 
   public int method2111(int var1 ) {
-    try {
-      int var2 = -96 / ((20 - var1) / 33);
+    int var2 = -96 / ((20 - var1) / 33);
       return null != this.method2094(0) ?
         100 :
         (null == this.aClass3_Sub28_Sub10_2950 ?
           0 :
             this.aClass3_Sub28_Sub10_2950.method586(false));
-    } catch (RuntimeException var3) {
-      throw AbstractGameWorld.cascadeException(var3, "bg.E(" + var1 + ')');
-    }
   }
 
   public static void method2100(byte var0) {
-    try {
-      SpotAnimationConfig.gameBuffer.method807((byte) 118);
+    SpotAnimationConfig.gameBuffer.method807((byte) 118);
       int var1 = SpotAnimationConfig.gameBuffer.readBits(1);
       if (-1 != ~var1) {
         int var2 = SpotAnimationConfig.gameBuffer.readBits(2);
@@ -668,23 +608,15 @@ public final class FileRequester extends AbstractFileRequester {
           }
         }
       }
-    } catch (RuntimeException var8) {
-      throw AbstractGameWorld.cascadeException(var8, "bg.G(" + var0 + ')');
-    }
   }
 
   public static boolean method2103(int var0, int var1) {
-    try {
-      return var1 >= -78 || (-199 == ~var0 || 230 == var0 || var0 == 156
+    return var1 >= -78 || (-199 == ~var0 || 230 == var0 || var0 == 156
           || ~var0 == -141 || 223 == var0);
-    } catch (RuntimeException var3) {
-      throw AbstractGameWorld.cascadeException(var3, "bg.P(" + var0 + ',' + var1 + ')');
-    }
   }
 
   public static void method2104(Widget var0, boolean var1, int var2) {
-    try {
-      int var3 = 57 % ((var2 - -58) / 47);
+    int var3 = 57 % ((var2 - -58) / 47);
       int var4 = var0.anInt240 != 0 ? var0.anInt240 : var0.anInt168;
       int var5 = -1 != ~var0.anInt252 ? var0.anInt252 : var0.anInt193;
       AbstractImageProducer.method2183(var0.anInt279, var1, var4, 235, var5,
@@ -699,16 +631,10 @@ public final class FileRequester extends AbstractFileRequester {
       if (var6 != null) {
         SomethingTexture4.method1352(var5, var1, -1, var6.anInt2602, var4);
       }
-
-    } catch (RuntimeException var7) {
-      throw AbstractGameWorld.cascadeException(var7,
-        "bg.N(" + (var0 != null ? "{...}" : "null") + ',' + var1 + ',' + var2 + ')');
-    }
   }
 
   public static void method2105(boolean var0) {
-    try {
-      FileRequester.aClass94_2959 = null;
+    FileRequester.aClass94_2959 = null;
       FileRequester.aClass94_2951 = null;
       if (!var0) {
         FileRequester.anIntArray2952 = null;
@@ -717,9 +643,6 @@ public final class FileRequester extends AbstractFileRequester {
         FileRequester.aClass94_2961 = null;
         FileRequester.aClass94_2945 = null;
       }
-    } catch (RuntimeException var2) {
-      throw AbstractGameWorld.cascadeException(var2, "bg.F(" + var0 + ')');
-    }
   }
 
 }

@@ -43,18 +43,13 @@ public final class AudioSomethingSomething extends Node {
   public SomethingVolume15 aClass3_Sub15_2527;
 
   public void method401(int var1) {
-    try {
-      this.aClass166_2504 = null;
+    this.aClass166_2504 = null;
       this.aClass3_Sub12_Sub1_2509 = null;
       this.aClass3_Sub24_Sub1_2507 = null;
       this.aClass3_Sub15_2527 = null;
       if (var1 != 221) {
         AudioSomethingSomething.aClass94_2518 = null;
       }
-
-    } catch (RuntimeException var3) {
-      throw AbstractGameWorld.cascadeException(var3, "mf.A(" + var1 + ')');
-    }
   }
 
   public static void drawScene(int cameraX, int cameraY, int cameraZ, int pitch,
@@ -208,8 +203,7 @@ public final class AudioSomethingSomething extends Node {
   }
 
   public static void method399(int var0) {
-    try {
-      if (var0 != 186) {
+    if (var0 != 186) {
         AudioSomethingSomething.aClass94_2518 = null;
       }
 
@@ -221,27 +215,18 @@ public final class AudioSomethingSomething extends Node {
       AudioSomethingSomething.aClass94_2499 = null;
       AudioSomethingSomething.aClass49_2505 = null;
       AudioSomethingSomething.aClass94_2518 = null;
-    } catch (RuntimeException var2) {
-      throw AbstractGameWorld.cascadeException(var2, "mf.E(" + var0 + ')');
-    }
   }
 
   public static void method400(long var0, int var2) {
-    try {
-      if (var2 != var0) {
+    if (var2 != var0) {
         TextureSampler12.secureBuffer.writePacket(104);
         TextureSampler12.secureBuffer.writeLong(var0);
         ++DummyClass4.anInt3001;
       }
-    } catch (RuntimeException var4) {
-      throw AbstractGameWorld
-          .cascadeException(var4, "mf.F(" + var0 + ',' + var2 + ')');
-    }
   }
 
   public static void initializeKeyTable() {
-    try {
-      if (~SignLink.aString1216.toLowerCase().indexOf("microsoft") == 0) {
+    if (~SignLink.aString1216.toLowerCase().indexOf("microsoft") == 0) {
         if (null == SignLink.setFocusTraversalKeyEnabledMethod) {
           DummyClass26.keyTable[192] = 58;
           DummyClass26.keyTable[222] = 59;
@@ -274,26 +259,16 @@ public final class AudioSomethingSomething extends Node {
         DummyClass26.keyTable[220] = 74;
         DummyClass26.keyTable[189] = 26;
       }
-
-
-    } catch (RuntimeException var2) {
-      throw AbstractGameWorld.cascadeException(var2, "mf.O()");
-    }
   }
 
   public static SomethingTexture4 method404(byte var0, Buffer var1) {
-    try {
-      return var0 > -55 ?
+    return var0 > -55 ?
           null :
           new SomethingTexture4(var1.method787((byte) 93),
               var1.method787((byte) 55),
               var1.method787((byte) 81), var1.method787((byte) 95),
               var1.readUnsignedMedium((byte) 124),
               var1.readUnsignedMedium((byte) 120), var1.readUnsignedByte());
-    } catch (RuntimeException var3) {
-      throw AbstractGameWorld.cascadeException(var3,
-          "mf.C(" + var0 + ',' + (var1 != null ? "{...}" : "null") + ')');
-    }
   }
 
 }

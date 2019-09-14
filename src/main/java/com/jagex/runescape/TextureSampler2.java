@@ -27,17 +27,12 @@ public final class TextureSampler2 extends AbstractTextureSampler {
   }
 
   public int[] method154(int var1, byte var2 ) {
-    try {
-      int var3 = -96 / ((var2 - 30) / 36);
+    int var3 = -96 / ((var2 - 30) / 36);
       return TextureCache.anIntArray2125;
-    } catch (RuntimeException var4) {
-      throw AbstractGameWorld.cascadeException(var4, "rl.D(" + var1 + ',' + var2 + ')');
-    }
   }
 
   public static void method317(int var0) {
-    try {
-      TextureSampler2.aClass94Array3376 = null;
+    TextureSampler2.aClass94Array3376 = null;
       TextureSampler2.aClass94_3378 = null;
       TextureSampler2.aClass94_3374 = null;
       TextureSampler2.aClass94_3382 = null;
@@ -53,14 +48,10 @@ public final class TextureSampler2 extends AbstractTextureSampler {
       TextureSampler2.aClass3_Sub28_Sub16Array3373 = null;
       TextureSampler2.aClass94_3370 = null;
       TextureSampler2.aClass94_3371 = null;
-    } catch (RuntimeException var2) {
-      throw AbstractGameWorld.cascadeException(var2, "rl.C(" + var0 + ')');
-    }
   }
 
   public static void method318(int var0) {
-    try {
-      SpawnedGameObject var1 = (SpawnedGameObject) TextureSampler26.aClass61_3075.getFirst();
+    SpawnedGameObject var1 = (SpawnedGameObject) TextureSampler26.aClass61_3075.getFirst();
       if (var0 != 7759444) {
         TextureSampler2.aClass94_3379 = null;
       }
@@ -73,10 +64,6 @@ public final class TextureSampler2 extends AbstractTextureSampler {
           var1.unlinkNode();
         }
       }
-
-    } catch (RuntimeException var2) {
-      throw AbstractGameWorld.cascadeException(var2, "rl.B(" + var0 + ')');
-    }
   }
 
 }

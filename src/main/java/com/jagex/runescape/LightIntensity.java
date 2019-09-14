@@ -20,8 +20,7 @@ public final class LightIntensity {
   public int anInt908 = 2048;
 
   public void method1190(int var1, Buffer var2, int var3 ) {
-    try {
-      while (true) {
+    while (true) {
         int var4 = var2.readUnsignedByte();
         if (var4 == 0) {
           if (var1 != 2) {
@@ -33,15 +32,10 @@ public final class LightIntensity {
 
         this.method1191(var4, var2, var3, true);
       }
-    } catch (RuntimeException var5) {
-      throw AbstractGameWorld.cascadeException(var5,
-        "ic.A(" + var1 + ',' + (var2 != null ? "{...}" : "null") + ',' + var3 + ')');
-    }
   }
 
   private void method1191(int var1, Buffer var2, int var3, boolean var4) {
-    try {
-      if (1 == var1) {
+    if (1 == var1) {
         this.anInt896 = var2.readUnsignedByte();
       } else {
         if (var1 == 2) {
@@ -56,16 +50,10 @@ public final class LightIntensity {
       if (!var4) {
         LightIntensity.method1192((byte) 123);
       }
-
-    } catch (RuntimeException var6) {
-      throw AbstractGameWorld.cascadeException(var6,
-        "ic.C(" + var1 + ',' + (var2 != null ? "{...}" : "null") + ',' + var3 + ',' + var4 + ')');
-    }
   }
 
   public static void method1192(byte var0) {
-    try {
-      LightIntensity.aClass94_897 = null;
+    LightIntensity.aClass94_897 = null;
       LightIntensity.variables = null;
       LightIntensity.aClass94_901 = null;
       LightIntensity.anIntArray904 = null;
@@ -73,9 +61,6 @@ public final class LightIntensity {
       if (var0 == -86) {
         LightIntensity.aClass3_Sub28_Sub16_895 = null;
       }
-    } catch (RuntimeException var2) {
-      throw AbstractGameWorld.cascadeException(var2, "ic.B(" + var0 + ')');
-    }
   }
 
 }

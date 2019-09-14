@@ -26,24 +26,16 @@ public final class SocketStream implements Runnable {
   private boolean aBoolean1243;
 
   public SocketStream(Socket var1, SignLink var2) throws IOException {
-    try {
-      this.aClass87_1239 = var2;
+    this.aClass87_1239 = var2;
       this.aSocket1235 = var1;
       this.aSocket1235.setSoTimeout(30000);
       this.aSocket1235.setTcpNoDelay(true);
       this.anInputStream1232 = this.aSocket1235.getInputStream();
       this.anOutputStream1231 = this.aSocket1235.getOutputStream();
-    } catch (RuntimeException var4) {
-      throw AbstractGameWorld.cascadeException(var4,
-          "ma.<init>(" + (var1 != null ? "{...}" : "null") + ',' + (var2 != null
-              ? "{...}" : "null")
-              + ')');
-    }
   }
 
   public void run() {
-    try {
-      while (true) {
+    while (true) {
         try {
           label88:
           {
@@ -113,15 +105,10 @@ public final class SocketStream implements Runnable {
 
         return;
       }
-    } catch (RuntimeException var12) {
-      throw AbstractGameWorld.cascadeException(var12, "ma.run()");
-    }
   }
 
   public void read(byte[] var4, int var1, int var2) throws IOException {
-    try {
-
-      if (!this.aBoolean1241) {
+    if (!this.aBoolean1241) {
         while (var2 > 0) {
           int var5 = this.anInputStream1232.read(var4, var1, var2);
           if (0 >= var5) {
@@ -133,25 +120,14 @@ public final class SocketStream implements Runnable {
         }
 
       }
-
-    } catch (RuntimeException var6) {
-      throw AbstractGameWorld.cascadeException(var6,
-          "ma.D(" + var1 + ',' + var2 + ',' + (var4 != null ? "{...}" : "null")
-              + ')');
-    }
   }
 
   public int read() throws IOException {
-    try {
-      return !this.aBoolean1241 ? this.anInputStream1232.read() : 0;
-    } catch (RuntimeException var3) {
-      throw AbstractGameWorld.cascadeException(var3, "ma.E()");
-    }
+    return !this.aBoolean1241 ? this.anInputStream1232.read() : 0;
   }
 
   public void write(byte[] var3, int var2, int var4) throws IOException {
-    try {
-      if (!this.aBoolean1241) {
+    if (!this.aBoolean1241) {
         if (this.aBoolean1243) {
           this.aBoolean1243 = false;
           throw new IOException();
@@ -176,59 +152,35 @@ public final class SocketStream implements Runnable {
           }
         }
       }
-    } catch (RuntimeException var9) {
-      throw AbstractGameWorld.cascadeException(var9,
-          "ma.K(" + var2 + ',' + (var3 != null ? "{...}" : "null") + ',' + var4
-              + ')');
-    }
   }
 
   protected void finalize() {
-    try {
-      this.destroy();
-    } catch (RuntimeException var2) {
-      throw AbstractGameWorld.cascadeException(var2, "ma.finalize()");
-    }
+    this.destroy();
   }
 
   public int available() throws IOException {
-    try {
-
-      return this.aBoolean1241 ? 0 : this.anInputStream1232.available();
-    } catch (RuntimeException var3) {
-      throw AbstractGameWorld.cascadeException(var3, "ma.B()");
-    }
+    return this.aBoolean1241 ? 0 : this.anInputStream1232.available();
   }
 
   public void method1466(int var1) throws IOException {
-    try {
-      int var2 = -97 % ((52 - var1) / 50);
+    int var2 = -97 % ((52 - var1) / 50);
       if (!this.aBoolean1241) {
         if (this.aBoolean1243) {
           this.aBoolean1243 = false;
           throw new IOException();
         }
       }
-    } catch (RuntimeException var3) {
-      throw AbstractGameWorld.cascadeException(var3, "ma.G(" + var1 + ')');
-    }
   }
 
   public void method1467() {
-    try {
-
-      if (!this.aBoolean1241) {
+    if (!this.aBoolean1241) {
         this.anInputStream1232 = new DummyInputStream();
         this.anOutputStream1231 = new DummyOutputStream();
       }
-    } catch (RuntimeException var3) {
-      throw AbstractGameWorld.cascadeException(var3, "ma.H()");
-    }
   }
 
   public void destroy() {
-    try {
-      if (!this.aBoolean1241) {
+    if (!this.aBoolean1241) {
         synchronized (this) {
           this.aBoolean1241 = true;
           this.notifyAll();
@@ -249,16 +201,12 @@ public final class SocketStream implements Runnable {
 
         this.aClass64_1237 = null;
       }
-    } catch (RuntimeException var6) {
-      throw AbstractGameWorld.cascadeException(var6, "ma.J()");
-    }
   }
 
   public static void method1460(int var0, int var1, byte var2, int var3,
       int var4, int var5,
       int var6) {
-    try {
-      if (~(var5 - var4) <= ~DummyClass55.anInt1425
+    if (~(var5 - var4) <= ~DummyClass55.anInt1425
           && GlTexture2d.anInt3765 >= var5 - -var4
           && DummyClass13.anInt2020 <= -var4 + var1
           && LightIntensity.anInt902 >= var4 + var1) {
@@ -270,26 +218,15 @@ public final class SocketStream implements Runnable {
       if (var2 > -107) {
         SocketStream.anInt1244 = 89;
       }
-
-    } catch (RuntimeException var8) {
-      throw AbstractGameWorld.cascadeException(var8,
-          "ma.A(" + var0 + ',' + var1 + ',' + var2 + ',' + var3 + ',' + var4
-              + ',' + var5 + ',' + var6
-              + ')');
-    }
   }
 
   public static void method1463(int var0) {
-    try {
-      if (var0 != 0) {
+    if (var0 != 0) {
         SocketStream.aClass61_1242 = null;
       }
 
       SocketStream.aClass61_1242 = null;
       SocketStream.aClass33_1238 = null;
-    } catch (RuntimeException var2) {
-      throw AbstractGameWorld.cascadeException(var2, "ma.I(" + var0 + ')');
-    }
   }
 
   public static void method1469(int[] var0, int var1, int var2, int var3,
@@ -359,8 +296,7 @@ public final class SocketStream implements Runnable {
   public static void method1470(int var0, AnimationSequence var1, int var2,
       int var3, boolean var4,
       int var5) {
-    try {
-      if (-51 < ~SomethingLight0.anInt1552) {
+    if (-51 < ~SomethingLight0.anInt1552) {
         if (var1.anIntArrayArray1867 != null
             && ~var5 > ~var1.anIntArrayArray1867.length
             && null != var1.anIntArrayArray1867[var5]) {
@@ -401,12 +337,6 @@ public final class SocketStream implements Runnable {
           }
         }
       }
-    } catch (RuntimeException var12) {
-      throw AbstractGameWorld.cascadeException(var12,
-          "ma.C(" + var0 + ',' + (var1 != null ? "{...}" : "null") + ',' + var2
-              + ',' + var3 + ','
-              + var4 + ',' + var5 + ')');
-    }
   }
 
 }

@@ -24,23 +24,17 @@ public final class SomethingOtherWorldMap extends Node {
   public int anInt2539;
 
   public static void method405(boolean var0) {
-    try {
-      SomethingOtherWorldMap.aClass153_2536 = null;
+    SomethingOtherWorldMap.aClass153_2536 = null;
       SomethingOtherWorldMap.anIntArray2533 = null;
       SomethingOtherWorldMap.aClass3_Sub11ArrayArray2542 = null;
       SomethingOtherWorldMap.aBooleanArray2538 = null;
       if (!var0) {
         SomethingOtherWorldMap.method408(-65, (byte) -3, 110, null, -123, 122);
       }
-
-    } catch (RuntimeException var2) {
-      throw AbstractGameWorld.cascadeException(var2, "oj.B(" + ')');
-    }
   }
 
   public static void drawLoadingScreen(AbstractFont var2, boolean var1) {
-    try {
-      int var3;
+    int var3;
       if (GlRenderer.useOpenGlRenderer || var1) {
         var3 = GroundItem.viewHeight;
         int var4 = var3 * 956 / 503;
@@ -71,17 +65,10 @@ public final class SomethingOtherWorldMap extends Node {
 
       var2.draw(AnimationFrame.loadingText, DummyClass30.viewWidth / 2,
         4 + GroundItem.viewHeight / 2, 16777215, -1);
-
-
-    } catch (RuntimeException var5) {
-      throw AbstractGameWorld.cascadeException(var5,
-        "oj.D(" + var1 + ',' + (var2 != null ? "{...}" : "null") + ')');
-    }
   }
 
   public static GameString method407(int var0, boolean var1, int var2, long var3, int var5) {
-    try {
-      GameString var6 = Cache.createString(0);
+    GameString var6 = Cache.createString(0);
       if (~var3 > -1L) {
         var3 = -var3;
         var6.append(TextureSampler1.aClass94_3133);
@@ -141,23 +128,13 @@ public final class SomethingOtherWorldMap extends Node {
       } else {
         return null;
       }
-    } catch (RuntimeException var13) {
-      throw AbstractGameWorld.cascadeException(var13,
-        "oj.C(" + var0 + ',' + var1 + ',' + var2 + ',' + var3 + ',' + var5 + ')');
-    }
   }
 
   public static int method408(int var0, byte var1, int var2, int[][] var3, int var4, int var5) {
-    try {
-      int var6 = var0 * var3[1 + var4][var2] + (128 - var0) * var3[var4][var2] >> 7;
+    int var6 = var0 * var3[1 + var4][var2] + (128 - var0) * var3[var4][var2] >> 7;
       int var7 = var3[var4][1 + var2] * (-var0 + 128) + var3[var4 - -1][var2 - -1] * var0 >> 7;
       int var8 = -121 / ((var1 - 5) / 46);
       return var6 * (128 + -var5) - -(var5 * var7) >> 7;
-    } catch (RuntimeException var9) {
-      throw AbstractGameWorld.cascadeException(var9,
-        "oj.A(" + var0 + ',' + var1 + ',' + var2 + ',' + (var3 != null ? "{...}" : "null") + ','
-          + var4 + ',' + var5 + ')');
-    }
   }
 
 }

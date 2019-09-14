@@ -17,8 +17,7 @@ public final class TextureSampler11 extends AbstractTextureSampler {
   }
 
   public void parseConfig(int var1, Buffer var2, boolean var3 ) {
-    try {
-      if (-1 == ~var1) {
+    if (-1 == ~var1) {
         this.anInt3252 = var2.readUnsignedShort();
       } else {
         if (var1 == 1) {
@@ -33,16 +32,10 @@ public final class TextureSampler11 extends AbstractTextureSampler {
       if (!var3) {
         TextureSampler11.method266(12);
       }
-
-    } catch (RuntimeException var5) {
-      throw AbstractGameWorld.cascadeException(var5,
-        "mg.A(" + var1 + ',' + (var2 != null ? "{...}" : "null") + ',' + var3 + ')');
-    }
   }
 
   public int[][] method166(int var1, int var2 ) {
-    try {
-      if (var1 != -1) {
+    if (var1 != -1) {
         TextureSampler11.anInt3244 = -40;
       }
 
@@ -75,22 +68,15 @@ public final class TextureSampler11 extends AbstractTextureSampler {
       }
 
       return var3;
-    } catch (RuntimeException var15) {
-      throw AbstractGameWorld.cascadeException(var15, "mg.T(" + var1 + ',' + var2 + ')');
-    }
   }
 
   public static void method266(int var0) {
-    try {
-      TextureSampler11.aClass94_3249 = null;
+    TextureSampler11.aClass94_3249 = null;
       TextureSampler11.aClass94_3247 = null;
       if (var0 == -1443422260) {
         TextureSampler11.aClass94_3246 = null;
         TextureSampler11.aClass94_3251 = null;
       }
-    } catch (RuntimeException var2) {
-      throw AbstractGameWorld.cascadeException(var2, "mg.U(" + var0 + ')');
-    }
   }
 
 }

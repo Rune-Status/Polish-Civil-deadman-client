@@ -20,17 +20,11 @@ public final class AudioStreamEncoder3 extends AudioStreamEncoder {
 
 
   public AudioStreamEncoder3(AudioStreamEncoder4 var1 ) {
-    try {
-      this.aClass3_Sub24_Sub4_3493 = var1;
-    } catch (RuntimeException var3) {
-      throw AbstractGameWorld.cascadeException(var3,
-        "te.<init>(" + (var1 != null ? "{...}" : "null") + ')');
-    }
+    this.aClass3_Sub24_Sub4_3493 = var1;
   }
 
   private void method464(AudioSomethingSomething var1, int var2, int var3) {
-    try {
-      if (-1 != ~(this.aClass3_Sub24_Sub4_3493.anIntArray3518[var1.anInt2514] & 4)
+    if (-1 != ~(this.aClass3_Sub24_Sub4_3493.anIntArray3518[var1.anInt2514] & 4)
         && -1 < ~var1.anInt2506) {
         int var4 =
             this.aClass3_Sub24_Sub4_3493.anIntArray3509[var1.anInt2514] / DummyClass60.sampleRate;
@@ -68,37 +62,23 @@ public final class AudioStreamEncoder3 extends AudioStreamEncoder {
       if (var2 != 7) {
         this.aClass3_Sub24_Sub2_3495 = null;
       }
-
-    } catch (RuntimeException var6) {
-      throw AbstractGameWorld.cascadeException(var6,
-        "te.P(" + (var1 != null ? "{...}" : "null") + ',' + var2 + ',' + var3 + ')');
-    }
   }
 
   public int method409() {
-    try {
-      return 0;
-    } catch (RuntimeException var2) {
-      throw AbstractGameWorld.cascadeException(var2, "te.D()");
-    }
+    return 0;
   }
 
   public AudioStreamEncoder method411() {
-    try {
-      AudioSomethingSomething var1 = (AudioSomethingSomething) this.aClass61_3489
+    AudioSomethingSomething var1 = (AudioSomethingSomething) this.aClass61_3489
           .getFirst();
       return null != var1 ?
         (null != var1.aClass3_Sub24_Sub1_2507 ? var1.aClass3_Sub24_Sub1_2507 : this
             .method414()) :
         null;
-    } catch (RuntimeException var2) {
-      throw AbstractGameWorld.cascadeException(var2, "te.Q()");
-    }
   }
 
   public void method413(int[] var1, int var2, int var3 ) {
-    try {
-      this.aClass3_Sub24_Sub2_3495.method413(var1, var2, var3);
+    this.aClass3_Sub24_Sub2_3495.method413(var1, var2, var3);
 
       for (AudioSomethingSomething var6 = (AudioSomethingSomething) this.aClass61_3489
           .getFirst();
@@ -125,16 +105,10 @@ public final class AudioStreamEncoder3 extends AudioStreamEncoder {
           }
         }
       }
-
-    } catch (RuntimeException var7) {
-      throw AbstractGameWorld.cascadeException(var7,
-        "te.E(" + (var1 != null ? "{...}" : "null") + ',' + var2 + ',' + var3 + ')');
-    }
   }
 
   public AudioStreamEncoder method414() {
-    try {
-      AudioSomethingSomething var1;
+    AudioSomethingSomething var1;
       do {
         var1 = (AudioSomethingSomething) this.aClass61_3489.getNext();
         if (null == var1) {
@@ -143,14 +117,10 @@ public final class AudioStreamEncoder3 extends AudioStreamEncoder {
       } while (var1.aClass3_Sub24_Sub1_2507 == null);
 
       return var1.aClass3_Sub24_Sub1_2507;
-    } catch (RuntimeException var2) {
-      throw AbstractGameWorld.cascadeException(var2, "te.B()");
-    }
   }
 
   public void method415(int var1 ) {
-    try {
-      this.aClass3_Sub24_Sub2_3495.method415(var1);
+    this.aClass3_Sub24_Sub2_3495.method415(var1);
 
       for (AudioSomethingSomething var3 = (AudioSomethingSomething) this.aClass61_3489
           .getFirst();
@@ -175,16 +145,11 @@ public final class AudioStreamEncoder3 extends AudioStreamEncoder {
           }
         }
       }
-
-    } catch (RuntimeException var4) {
-      throw AbstractGameWorld.cascadeException(var4, "te.R(" + var1 + ')');
-    }
   }
 
   private void method469(int[] var1, AudioSomethingSomething var2, int var3, int var4,
                                int var5, byte var6) {
-    try {
-      if ((4 & this.aClass3_Sub24_Sub4_3493.anIntArray3518[var2.anInt2514]) != 0
+    if ((4 & this.aClass3_Sub24_Sub4_3493.anIntArray3518[var2.anInt2514]) != 0
         && -1 < ~var2.anInt2506) {
         int var7 =
             this.aClass3_Sub24_Sub4_3493.anIntArray3509[var2.anInt2514] / DummyClass60.sampleRate;
@@ -241,42 +206,27 @@ public final class AudioStreamEncoder3 extends AudioStreamEncoder {
       if (var6 == 4) {
         var2.aClass3_Sub24_Sub1_2507.method413(var1, var3, var4);
       }
-    } catch (RuntimeException var12) {
-      throw AbstractGameWorld.cascadeException(var12,
-        "te.S(" + (var1 != null ? "{...}" : "null") + ',' + (var2 != null ? "{...}" : "null") + ','
-          + var3 + ',' + var4 + ',' + var5 + ',' + var6 + ')');
-    }
   }
 
   public static void method463(int var0) {
-    try {
-      AudioStreamEncoder3.aClass153_3490 = null;
+    AudioStreamEncoder3.aClass153_3490 = null;
       AudioStreamEncoder3.anIntArray3491 = null;
       AudioStreamEncoder3.regionHashes = null;
       if (var0 != -28918) {
         AudioStreamEncoder3.method468(-39);
       }
-
-    } catch (RuntimeException var2) {
-      throw AbstractGameWorld.cascadeException(var2, "te.C(" + var0 + ')');
-    }
   }
 
   public static void method465(int var0, boolean var1) {
-    try {
-      if (!var1) {
+    if (!var1) {
         AudioStreamEncoder3.method463(92);
       }
 
       Mobile.aClass93_2792.method1522(-128, var0);
-    } catch (RuntimeException var3) {
-      throw AbstractGameWorld.cascadeException(var3, "te.O(" + var0 + ',' + var1 + ')');
-    }
   }
 
   public static WidgetUpdate method466(int var0, int var1, int var2) {
-    try {
-      WidgetUpdate var3 =
+    WidgetUpdate var3 =
         (WidgetUpdate) GameClient.aClass130_2194.get(var2 | (long) var1 << 32);
       if (null == var3) {
         var3 = new WidgetUpdate(var1, var2);
@@ -284,15 +234,10 @@ public final class AudioStreamEncoder3 extends AudioStreamEncoder {
       }
 
       return var3;
-    } catch (RuntimeException var4) {
-      throw AbstractGameWorld.cascadeException(var4,
-        "te.F(" + var0 + ',' + var1 + ',' + var2 + ')');
-    }
   }
 
   public static boolean method467(GameString var0, int var1) {
-    try {
-      if (var0 == null) {
+    if (var0 == null) {
         return false;
       } else {
         for (int var2 = var1; ~AnimationSomething.anInt3591 < ~var2; ++var2) {
@@ -303,15 +248,10 @@ public final class AudioStreamEncoder3 extends AudioStreamEncoder {
 
         return false;
       }
-    } catch (RuntimeException var3) {
-      throw AbstractGameWorld.cascadeException(var3,
-          "te.A(" + "{...}" + ',' + var1 + ')');
-    }
   }
 
   public static void method468(int var0) {
-    try {
-      SomethingGl.method1456();
+    SomethingGl.method1456();
       MapScene.anInterface5Array70 = new MaterialShader[7];
       MapScene.anInterface5Array70[1] = new SkyboxMaterialShader();
       MapScene.anInterface5Array70[2] = new WaterShader();
@@ -319,9 +259,6 @@ public final class AudioStreamEncoder3 extends AudioStreamEncoder {
       MapScene.anInterface5Array70[4] = new MaterialShader4();
       MapScene.anInterface5Array70[5] = new MaterialShader5();
       MapScene.anInterface5Array70[var0] = new BumpShader();
-    } catch (RuntimeException var2) {
-      throw AbstractGameWorld.cascadeException(var2, "te.T(" + var0 + ')');
-    }
   }
 
 }

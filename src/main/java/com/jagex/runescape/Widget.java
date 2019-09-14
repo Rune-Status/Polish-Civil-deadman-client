@@ -254,8 +254,7 @@ public final class Widget {
   }
 
   public void method854(int var1, int var2, byte var3 ) {
-    try {
-      if (this.anIntArray249 == null || ~this.anIntArray249.length >= ~var1) {
+    if (this.anIntArray249 == null || ~this.anIntArray249.length >= ~var1) {
         int[] var4 = new int[1 + var1];
         if (this.anIntArray249 != null) {
           int var5;
@@ -275,16 +274,10 @@ public final class Widget {
       if (var3 != 43) {
         this.anIntArray211 = null;
       }
-
-    } catch (RuntimeException var6) {
-      throw AbstractGameWorld.cascadeException(var6,
-        "be.P(" + var1 + ',' + var2 + ',' + var3 + ')');
-    }
   }
 
   public boolean method855(int var1 ) {
-    try {
-      if (this.anIntArray207 != null) {
+    if (this.anIntArray207 != null) {
         return true;
       } else {
         SoftwareIndexedColorSprite var2 =
@@ -333,14 +326,10 @@ public final class Widget {
           return true;
         }
       }
-    } catch (RuntimeException var7) {
-      throw AbstractGameWorld.cascadeException(var7, "be.G(" + var1 + ')');
-    }
   }
 
   public void method857(byte var1, GameString var2, int var3 ) {
-    try {
-      if (null == this.aClass94Array171 || ~this.aClass94Array171.length >= ~var3) {
+    if (null == this.aClass94Array171 || ~this.aClass94Array171.length >= ~var3) {
         GameString[] var4 = new GameString[1 + var3];
         if (null != this.aClass94Array171) {
           for (int var5 = 0; ~this.aClass94Array171.length < ~var5; ++var5) {
@@ -353,15 +342,10 @@ public final class Widget {
 
       this.aClass94Array171[var3] = var2;
       int var7 = -124 % ((-10 - var1) / 60);
-    } catch (RuntimeException var6) {
-      throw AbstractGameWorld.cascadeException(var6,
-        "be.B(" + var1 + ',' + (var2 != null ? "{...}" : "null") + ',' + var3 + ')');
-    }
   }
 
   public void method858(int var1, Buffer var2 ) {
-    try {
-      if (var1 >= -94) {
+    if (var1 >= -94) {
         this.anInt214 = -74;
       }
 
@@ -624,15 +608,10 @@ public final class Widget {
       }
 
       this.aClass3_Sub1_257 = new WidgetAccess(var5, -1);
-    } catch (RuntimeException var12) {
-      throw AbstractGameWorld.cascadeException(var12,
-        "be.M(" + var1 + ',' + (var2 != null ? "{...}" : "null") + ')');
-    }
   }
 
   public AbstractDirectColorSprite method859(boolean var1, int var2 ) {
-    try {
-      GameStub.aBoolean6 = false;
+    GameStub.aBoolean6 = false;
       if (!var1) {
         return null;
       } else if (~var2 <= -1 && var2 < this.anIntArray197.length) {
@@ -662,14 +641,10 @@ public final class Widget {
       } else {
         return null;
       }
-    } catch (RuntimeException var5) {
-      throw AbstractGameWorld.cascadeException(var5, "be.I(" + ',' + var2 + ')');
-    }
   }
 
   private Object[] method862(int var1, Buffer var2) {
-    try {
-      if (var1 == -65536) {
+    if (var1 == -65536) {
         int var3 = var2.readUnsignedByte();
         if (-1 == ~var3) {
           return null;
@@ -693,15 +668,10 @@ public final class Widget {
       } else {
         return null;
       }
-    } catch (RuntimeException var7) {
-      throw AbstractGameWorld.cascadeException(var7,
-        "be.K(" + var1 + ',' + (var2 != null ? "{...}" : "null") + ')');
-    }
   }
 
   private int[] method863(Buffer var1, boolean var2) {
-    try {
-      int var3 = var1.readUnsignedByte();
+    int var3 = var1.readUnsignedByte();
       if (-1 == ~var3) {
         return null;
       } else {
@@ -716,15 +686,10 @@ public final class Widget {
 
         return var4;
       }
-    } catch (RuntimeException var6) {
-      throw AbstractGameWorld.cascadeException(var6,
-        "be.H(" + (var1 != null ? "{...}" : "null") + ',' + var2 + ')');
-    }
   }
 
   public void method864(int var1, int var2, int var3 ) {
-    try {
-      int var4 = this.anIntArray254[var2];
+    int var4 = this.anIntArray254[var2];
       this.anIntArray254[var2] = this.anIntArray254[var1];
       if (var3 > -66) {
         this.method858(36, null);
@@ -734,10 +699,6 @@ public final class Widget {
       var4 = this.anIntArray317[var2];
       this.anIntArray317[var2] = this.anIntArray317[var1];
       this.anIntArray317[var1] = var4;
-    } catch (RuntimeException var5) {
-      throw AbstractGameWorld.cascadeException(var5,
-        "be.L(" + var1 + ',' + var2 + ',' + var3 + ')');
-    }
   }
 
   public AbstractModel method865(int var1, AnimationSequence var2,
@@ -746,8 +707,7 @@ public final class Widget {
       int var5,
       boolean var6,
       PlayerAppearance var7 ) {
-    try {
-      GameStub.aBoolean6 = false;
+    GameStub.aBoolean6 = false;
       int var8;
       int var9;
       if (var6) {
@@ -849,16 +809,10 @@ public final class Widget {
       } else {
         return null;
       }
-    } catch (RuntimeException var14) {
-      throw AbstractGameWorld.cascadeException(var14,
-        "be.E(" + var1 + ',' + (var2 != null ? "{...}" : "null") + ',' + var3 + ',' + var4 + ','
-          + var5 + ',' + var6 + ',' + (var7 != null ? "{...}" : "null") + ')');
-    }
   }
 
   public AbstractDirectColorSprite method866(byte var1, boolean var2 ) {
-    try {
-      GameStub.aBoolean6 = false;
+    GameStub.aBoolean6 = false;
       int var3;
       if (var2) {
         var3 = this.anInt296;
@@ -931,14 +885,10 @@ public final class Widget {
           }
         }
       }
-    } catch (RuntimeException var8) {
-      throw AbstractGameWorld.cascadeException(var8, "be.O(" + var1 + ',' + var2 + ')');
-    }
   }
 
   public void method867(int var1, Buffer var2 ) {
-    try {
-      this.aBoolean233 = true;
+    this.aBoolean233 = true;
       ++var2.position;
       this.anInt187 = var2.readUnsignedByte();
       if (-1 != ~(128 & this.anInt187)) {
@@ -1139,16 +1089,11 @@ public final class Widget {
       this.anIntArray274 = this.method863(var2, false);
       this.anIntArray211 = this.method863(var2, false);
       this.anIntArray185 = this.method863(var2, false);
-    } catch (RuntimeException var10) {
-      throw AbstractGameWorld.cascadeException(var10,
-        "be.C(" + var1 + ',' + (var2 != null ? "{...}" : "null") + ')');
-    }
   }
 
   public AbstractFont method868(AbstractIndexedColorSprite[] var1,
       int var2 ) {
-    try {
-      GameStub.aBoolean6 = false;
+    GameStub.aBoolean6 = false;
       if (0 == ~this.anInt270) {
         return null;
       } else {
@@ -1168,15 +1113,10 @@ public final class Widget {
           return var3;
         }
       }
-    } catch (RuntimeException var4) {
-      throw AbstractGameWorld.cascadeException(var4,
-        "be.A(" + (var1 != null ? "{...}" : "null") + ',' + var2 + ')');
-    }
   }
 
   public static GameString method856(boolean var0) {
-    try {
-      if (!var0) {
+    if (!var0) {
         Widget.method869(127, -68);
       }
 
@@ -1198,43 +1138,27 @@ public final class Widget {
         SomethingScene.toString(MonoChromaticImageBuffer.affiliateId), var2,
         GameObject.aClass94_2735
       });
-    } catch (RuntimeException var3) {
-      throw AbstractGameWorld.cascadeException(var3, "be.N(" + var0 + ')');
-    }
   }
 
   public static void method860(int var0) {
-    try {
-      Widget.aClass94_297 = null;
+    Widget.aClass94_297 = null;
       Widget.EVENT_OP_BASE = null;
       if (var0 < 63) {
         Widget.method860(42);
       }
 
       Widget.aClass94_251 = null;
-    } catch (RuntimeException var2) {
-      throw AbstractGameWorld.cascadeException(var2, "be.F(" + var0 + ')');
-    }
   }
 
   public static int method861(int var0, int var1, int var2) {
-    try {
-      Inventory var3 = (Inventory) SceneGraphTile.aClass130_2220.get(var0);
+    Inventory var3 = (Inventory) SceneGraphTile.aClass130_2220.get(var0);
       return null == var3 ?
         -1 :
         (0 <= var2 && var2 < var3.ids.length ? (var1 < 39 ? -69 : var3.ids[var2]) : -1);
-    } catch (RuntimeException var4) {
-      throw AbstractGameWorld.cascadeException(var4,
-        "be.J(" + var0 + ',' + var1 + ',' + var2 + ')');
-    }
   }
 
   public static int method869(int var0, int var1) {
-    try {
-      return ~var1 != -16711936 ? (var0 < 97 ? -63 : DummyClass42.method1186(0, var1)) : -1;
-    } catch (RuntimeException var3) {
-      throw AbstractGameWorld.cascadeException(var3, "be.D(" + var0 + ',' + var1 + ')');
-    }
+    return ~var1 != -16711936 ? (var0 < 97 ? -63 : DummyClass42.method1186(0, var1)) : -1;
   }
 
 }

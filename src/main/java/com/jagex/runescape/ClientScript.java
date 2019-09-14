@@ -22,8 +22,7 @@ public final class ClientScript extends SubNode {
   public int[] anIntArray3690;
 
   public static FloorUnderlay getFloorUnderlay(int var1) {
-    try {
-      FloorUnderlay underlay = (FloorUnderlay) AbstractGameWorld.floorUnderlays.get(
+    FloorUnderlay underlay = (FloorUnderlay) AbstractGameWorld.floorUnderlays.get(
           var1);
       if (underlay != null) {
         return underlay;
@@ -35,54 +34,33 @@ public final class ClientScript extends SubNode {
       }
       AbstractGameWorld.floorUnderlays.get((byte) -104, underlay, var1);
       return underlay;
-    } catch (RuntimeException var4) {
-      throw AbstractGameWorld.cascadeException(var4, "qc.B(" + var1 + ')');
-    }
   }
 
   public static int method630(byte var0, int var1) {
-    try {
-      if (var0 != -34) {
+    if (var0 != -34) {
         ClientScript.aClass94_3692 = null;
       }
 
       return 127 & var1 >> 11;
-    } catch (RuntimeException var3) {
-      throw AbstractGameWorld.cascadeException(var3, "qc.A(" + var0 + ',' + var1 + ')');
-    }
   }
 
   public static void setFloorFileUnpacker(boolean var0, FileUnpacker var1) {
-    try {
-      if (!var0) {
+    if (!var0) {
         AnimationSomething.configs = var1;
         ScriptState.amountFloors = AnimationSomething.configs.getAmountChildren(4, (byte) 112);
       }
-    } catch (RuntimeException var3) {
-      throw AbstractGameWorld.cascadeException(var3,
-          "qc.D(" + ',' + (var1 != null ? "{...}" : "null") + ')');
-    }
   }
 
   public static void method632(int var0) {
-    try {
-      ClientScript.aClass94_3692 = null;
+    ClientScript.aClass94_3692 = null;
       ClientScript.aClass94_3691 = null;
       ClientScript.aClass3_Sub19Array3694 = null;
       ClientScript.variableUpdates = null;
       ClientScript.anIntArray3693 = null;
-
-    } catch (RuntimeException var2) {
-      throw AbstractGameWorld.cascadeException(var2, "qc.E(" + var0 + ')');
-    }
   }
 
   public static int bitAnd(int var0, int var1) {
-    try {
-      return var0 & var1;
-    } catch (RuntimeException var3) {
-      throw AbstractGameWorld.cascadeException(var3, "qc.C(" + var0 + ',' + var1 + ')');
-    }
+    return var0 & var1;
   }
 
 }

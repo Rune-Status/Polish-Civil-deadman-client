@@ -21,8 +21,7 @@ public final class FileCacheRequester implements Runnable {
 
 
   public FileCacheRequester() {
-    try {
-      SignLinkRequest var1 = DummyClass35.signLink.createThread(0, 5, this);
+    SignLinkRequest var1 = DummyClass35.signLink.createThread(0, 5, this);
 
       assert var1 != null;
       while (-1 == ~var1.status) {
@@ -34,14 +33,10 @@ public final class FileCacheRequester implements Runnable {
       } else {
         this.aThread1090 = (Thread) var1.result;
       }
-    } catch (RuntimeException var2) {
-      throw AbstractGameWorld.cascadeException(var2, "k.<init>()");
-    }
   }
 
   private void method1299(FileCacheRequest var1, int var2) {
-    try {
-      Queue var3 = this.aClass13_1086;
+    Queue var3 = this.aClass13_1086;
       synchronized (var3) {
         if (var2 != 104) {
           this.shutdown(-114);
@@ -51,15 +46,10 @@ public final class FileCacheRequester implements Runnable {
         ++this.anInt1087;
         this.aClass13_1086.notifyAll();
       }
-    } catch (RuntimeException var6) {
-      throw AbstractGameWorld.cascadeException(var6,
-        "k.G(" + (var1 != null ? "{...}" : "null") + ',' + var2 + ')');
-    }
   }
 
   public void shutdown(int var1 ) {
-    try {
-      this.aBoolean1091 = true;
+    this.aBoolean1091 = true;
       Queue var2 = this.aClass13_1086;
       synchronized (var2) {
         this.aClass13_1086.notifyAll();
@@ -71,16 +61,11 @@ public final class FileCacheRequester implements Runnable {
       }
 
       this.aThread1090 = null;
-
-    } catch (RuntimeException var6) {
-      throw AbstractGameWorld.cascadeException(var6, "k.B(" + var1 + ')');
-    }
   }
 
   public FileCacheRequest method1305(FileCache var1, int var2, byte[] var3,
       int var4 ) {
-    try {
-      FileCacheRequest var5 = new FileCacheRequest();
+    FileCacheRequest var5 = new FileCacheRequest();
       var5.aByteArray4059 = var3;
       var5.aBoolean3628 = false;
       var5.subnodeKey = var4;
@@ -88,17 +73,10 @@ public final class FileCacheRequester implements Runnable {
       var5.anInt4061 = var2;
       this.method1299(var5, 104);
       return var5;
-    } catch (RuntimeException var6) {
-      throw AbstractGameWorld.cascadeException(var6,
-        "k.A(" + (var1 != null ? "{...}" : "null") + ',' + var2 + ',' + (var3 != null ?
-          "{...}" :
-          "null") + ',' + var4 + ')');
-    }
   }
 
   public FileCacheRequest method1307(int var1, int var2, FileCache var3 ) {
-    try {
-      FileCacheRequest var4 = new FileCacheRequest();
+    FileCacheRequest var4 = new FileCacheRequest();
       var4.aClass41_4056 = var3;
       var4.anInt4061 = 3;
       var4.aBoolean3628 = false;
@@ -109,15 +87,10 @@ public final class FileCacheRequester implements Runnable {
       var4.subnodeKey = var1;
       this.method1299(var4, 104);
       return var4;
-    } catch (RuntimeException var5) {
-      throw AbstractGameWorld.cascadeException(var5,
-        "k.E(" + var1 + ',' + var2 + ',' + (var3 != null ? "{...}" : "null") + ')');
-    }
   }
 
   public FileCacheRequest method1309(FileCache var1, byte var2, int var3 ) {
-    try {
-      FileCacheRequest var4 = new FileCacheRequest();
+    FileCacheRequest var4 = new FileCacheRequest();
       var4.anInt4061 = 1;
       Queue var5 = this.aClass13_1086;
       synchronized (var5) {
@@ -147,15 +120,10 @@ public final class FileCacheRequester implements Runnable {
       var4.aBoolean3632 = false;
       var4.aBoolean3628 = true;
       return var4;
-    } catch (RuntimeException var9) {
-      throw AbstractGameWorld.cascadeException(var9,
-        "k.F(" + (var1 != null ? "{...}" : "null") + ',' + var2 + ',' + var3 + ')');
-    }
   }
 
   public void run() {
-    try {
-      while (!this.aBoolean1091) {
+    while (!this.aBoolean1091) {
         Queue var2 = this.aClass13_1086;
         FileCacheRequest var1;
         synchronized (var2) {
@@ -189,35 +157,22 @@ public final class FileCacheRequester implements Runnable {
 
         var1.aBoolean3632 = false;
       }
-
-    } catch (RuntimeException var8) {
-      throw AbstractGameWorld.cascadeException(var8, "k.run()");
-    }
   }
 
   public static AbstractFont createFont(int var0, int var1, byte var2, FileUnpacker var3,
                                        FileUnpacker var4) {
-    try {
-      if (var2 < 123) {
+    if (var2 < 123) {
         FileCacheRequester.aBoolean1080 = false;
       }
 
       return !SomethingTexture4.loadSprites(var3, var0, var1, -30901) ?
         null :
         Queue.createFont(-22376, var4.getBytes(var1, var0));
-    } catch (RuntimeException var6) {
-      throw AbstractGameWorld.cascadeException(var6,
-        "k.C(" + var0 + ',' + var1 + ',' + var2 + ',' + (var3 != null ? "{...}" : "null") + ',' + (
-          var4 != null ?
-            "{...}" :
-            "null") + ')');
-    }
   }
 
   public static void rebuildScene(int plane, int var1, int var2, int y, boolean var4, int x,
                                  boolean var6) {
-    try {
-      if (AbstractObjectNode.anInt3606 != var2 || ~var1 != ~VariableUpdate.anInt2294
+    if (AbstractObjectNode.anInt3606 != var2 || ~var1 != ~VariableUpdate.anInt2294
         || ~GameObject.plane != ~plane && !NPC.method1986(45)) {
         AbstractObjectNode.anInt3606 = var2;
         VariableUpdate.anInt2294 = var1;
@@ -374,16 +329,10 @@ public final class FileCacheRequester implements Runnable {
           TextureSampler13.projectiles.clear(-87);
         }
       }
-    } catch (RuntimeException var22) {
-      throw AbstractGameWorld.cascadeException(var22,
-        "k.D(" + plane + ',' + var1 + ',' + var2 + ',' + y + ',' + var4 + ',' + x + ',' + var6
-          + ')');
-    }
   }
 
   public static WidgetUpdate method1302(byte var0) {
-    try {
-      WidgetUpdate var1 = (WidgetUpdate) SomethingTilek.aClass13_1666.getFirst();
+    WidgetUpdate var1 = (WidgetUpdate) SomethingTilek.aClass13_1666.getFirst();
       if (var1 != null) {
         var1.unlinkNode();
         var1.unlinkSubNode();
@@ -407,14 +356,10 @@ public final class FileCacheRequester implements Runnable {
 
         return var1;
       }
-    } catch (RuntimeException var2) {
-      throw AbstractGameWorld.cascadeException(var2, "k.J(" + var0 + ')');
-    }
   }
 
   public static GameString method1303(Widget var0, GameString var1, int var2) {
-    try {
-      if (~var1.indexOf(IdentityKit.aClass94_468) == var2) {
+    if (~var1.indexOf(IdentityKit.aClass94_468) == var2) {
         return var1;
       } else {
         while (true) {
@@ -508,28 +453,18 @@ public final class FileCacheRequester implements Runnable {
           });
         }
       }
-    } catch (RuntimeException var7) {
-      throw AbstractGameWorld.cascadeException(var7,
-        "k.K(" + (var0 != null ? "{...}" : "null") + ',' + (var1 != null ? "{...}" : "null") + ','
-          + var2 + ')');
-    }
   }
 
   public static void method1306(int var0) {
-    try {
-      FileCacheRequester.aClass94_1089 = null;
+    FileCacheRequester.aClass94_1089 = null;
       if (var0 == -16222) {
         FileCacheRequester.aClass94_1085 = null;
         FileCacheRequester.anIntArray1083 = null;
       }
-    } catch (RuntimeException var2) {
-      throw AbstractGameWorld.cascadeException(var2, "k.I(" + var0 + ')');
-    }
   }
 
   public static void handleCommand(GameString command) {
-    try {
-      if (TextureSampler35.rights >= 2) {
+    if (TextureSampler35.rights >= 2) {
         int var2;
         int var3;
         Runtime var6;
@@ -701,12 +636,6 @@ public final class FileCacheRequester implements Runnable {
       TextureSampler12.secureBuffer.writeByte(command.getLength() - 2 - 1);
       ++FaceNormal.anInt1633;
       TextureSampler12.secureBuffer.writeString(command.substring(2));
-
-
-    } catch (RuntimeException var5) {
-      throw AbstractGameWorld.cascadeException(var5,
-        "k.H(" + (command != null ? "{...}" : "null") + ')');
-    }
   }
 
 }

@@ -28,54 +28,32 @@ public final class DirectImageProducer extends AbstractImageProducer
   private ColorModel aColorModel2979;
 
   public synchronized void addConsumer(ImageConsumer var1) {
-    try {
-      this.anImageConsumer2978 = var1;
+    this.anImageConsumer2978 = var1;
       var1.setDimensions(this.anInt2012, this.anInt2011);
       var1.setProperties(null);
       var1.setColorModel(this.aColorModel2979);
       var1.setHints(14);
-    } catch (RuntimeException var3) {
-      throw AbstractGameWorld.cascadeException(var3,
-        "di.addConsumer(" + (var1 != null ? "{...}" : "null") + ')');
-    }
   }
 
   public synchronized boolean isConsumer(ImageConsumer var1) {
-    try {
-      return this.anImageConsumer2978 == var1;
-    } catch (RuntimeException var3) {
-      throw AbstractGameWorld.cascadeException(var3,
-        "di.isConsumer(" + (var1 != null ? "{...}" : "null") + ')');
-    }
+    return this.anImageConsumer2978 == var1;
   }
 
   public synchronized void removeConsumer(ImageConsumer var1) {
-    try {
-      if (this.anImageConsumer2978 == var1) {
+    if (this.anImageConsumer2978 == var1) {
         this.anImageConsumer2978 = null;
       }
-
-    } catch (RuntimeException var3) {
-      throw AbstractGameWorld.cascadeException(var3,
-        "di.removeConsumer(" + (var1 != null ? "{...}" : "null") + ')');
-    }
   }
 
   public void startProduction(ImageConsumer var1) {
-    try {
-      this.addConsumer(var1);
-    } catch (RuntimeException var3) {
-      throw AbstractGameWorld.cascadeException(var3,
-        "di.startProduction(" + (var1 != null ? "{...}" : "null") + ')');
-    }
+    this.addConsumer(var1);
   }
 
   public void requestTopDownLeftRightResend(ImageConsumer var1) {
   }
 
   private synchronized void method2188(int var1, int var2, int var3, byte var4, int var5) {
-    try {
-      if (null != this.anImageConsumer2978) {
+    if (null != this.anImageConsumer2978) {
         this.anImageConsumer2978.setPixels(var3, var5, var1, var2,
             this.aColorModel2979,
             this.anIntArray2007, var5 * this.anInt2012 + var3, this.anInt2012);
@@ -85,15 +63,10 @@ public final class DirectImageProducer extends AbstractImageProducer
         }
 
       }
-    } catch (RuntimeException var7) {
-      throw AbstractGameWorld.cascadeException(var7,
-        "di.N(" + var1 + ',' + var2 + ',' + var3 + ',' + var4 + ',' + var5 + ')');
-    }
   }
 
   private synchronized void method2190(int var1) {
-    try {
-      if (var1 == 19661184) {
+    if (var1 == 19661184) {
         if (this.anImageConsumer2978 != null) {
           this.anImageConsumer2978
               .setPixels(0, 0, this.anInt2012, this.anInt2011,
@@ -101,47 +74,31 @@ public final class DirectImageProducer extends AbstractImageProducer
           this.anImageConsumer2978.imageComplete(2);
         }
       }
-    } catch (RuntimeException var3) {
-      throw AbstractGameWorld.cascadeException(var3, "di.L(" + var1 + ')');
-    }
   }
 
   public void draw(int var1, int var2, Graphics var3, int var4 ) {
-    try {
-      if (var4 != 0) {
+    if (var4 != 0) {
         DirectImageProducer.aBoolean2981 = true;
       }
 
       this.method2190(var4 ^ 19661184);
       var3.drawImage(this.anImage2009, var1, var2, this);
-    } catch (RuntimeException var6) {
-      throw AbstractGameWorld.cascadeException(var6,
-        "di.C(" + var1 + ',' + var2 + ',' + (var3 != null ? "{...}" : "null") + ',' + var4 + ')');
-    }
   }
 
   public void draw(Graphics var5, int var1, int var2, int var4, int var6,
       int var3 ) {
-    try {
-      this.method2188(var1, var4, var2, (byte) -124, var6);
+    this.method2188(var1, var4, var2, (byte) -124, var6);
       if (var3 == 6260) {
         Shape var7 = var5.getClip();
         var5.clipRect(var2, var6, var1, var4);
         var5.drawImage(this.anImage2009, 0, 0, this);
         var5.setClip(var7);
       }
-    } catch (RuntimeException var8) {
-      throw AbstractGameWorld.cascadeException(var8,
-        "di.E(" + var1 + ',' + var2 + ',' + var3 + ',' + var4 + ',' + (var5 != null ?
-          "{...}" :
-          "null") + ',' + var6 + ')');
-    }
   }
 
   public void setDimensions(int var1, boolean var2, int var3,
       Component var4 ) {
-    try {
-      this.anInt2011 = var1;
+    this.anInt2011 = var1;
       this.anIntArray2007 = new int[var3 * var1 + 1];
       this.anInt2012 = var3;
       this.aColorModel2979 = new DirectColorModel(32, 16711680, '\uff00', 255);
@@ -156,40 +113,23 @@ public final class DirectImageProducer extends AbstractImageProducer
       if (var2) {
         this.addConsumer(null);
       }
-
-    } catch (RuntimeException var6) {
-      throw AbstractGameWorld.cascadeException(var6,
-        "di.F(" + var1 + ',' + var2 + ',' + var3 + ',' + (var4 != null ? "{...}" : "null") + ')');
-    }
   }
 
   public boolean imageUpdate(Image var1, int var2, int var3, int var4, int var5, int var6) {
-    try {
-      return true;
-    } catch (RuntimeException var8) {
-      throw AbstractGameWorld.cascadeException(var8,
-        "di.imageUpdate(" + (var1 != null ? "{...}" : "null") + ',' + var2 + ',' + var3 + ',' + var4
-          + ',' + var5 + ',' + var6 + ')');
-    }
+    return true;
   }
 
   public static void method2187(int var0) {
-    try {
-      DirectImageProducer.aClass94Array2977 = null;
+    DirectImageProducer.aClass94Array2977 = null;
       DirectImageProducer.aClass93_2982 = null;
       DirectImageProducer.aClass3_Sub1_2980 = null;
       if (var0 != 27316) {
         DirectImageProducer.aBoolean2981 = true;
       }
-
-    } catch (RuntimeException var2) {
-      throw AbstractGameWorld.cascadeException(var2, "di.I(" + var0 + ')');
-    }
   }
 
   public static void method2189(CollisionMap[] collisionMaps, boolean var1, int var2) {
-    try {
-      int var4;
+    int var4;
       int var5;
       if (!var1) {
         for (var4 = 0; var4 < 4; ++var4) {
@@ -919,18 +859,12 @@ public final class DirectImageProducer extends AbstractImageProducer
           }
         }
       }
-
-    } catch (RuntimeException var33) {
-      throw AbstractGameWorld.cascadeException(var33,
-        "di.K(" + (collisionMaps != null ? "{...}" : "null") + ',' + var1 + ',' + var2 + ')');
-    }
   }
 
   public static boolean method2191(int var0, int var1, int var2, int var3, int var4, int var5,
                                   int var6, int var7, boolean var8, int var9, int var10,
                                   int var11) {
-    try {
-      int var12;
+    int var12;
       int var13;
       for (var12 = 0; -105 < ~var12; ++var12) {
         for (var13 = 0; -105 < ~var13; ++var13) {
@@ -1189,24 +1123,15 @@ public final class DirectImageProducer extends AbstractImageProducer
       } else {
         return false;
       }
-    } catch (RuntimeException var26) {
-      throw AbstractGameWorld.cascadeException(var26,
-        "di.J(" + var0 + ',' + var1 + ',' + var2 + ',' + var3 + ',' + var4 + ',' + var5 + ',' + var6
-          + ',' + var7 + ',' + var8 + ',' + var9 + ',' + var10 + ',' + var11 + ')');
-    }
   }
 
   public static void method2192(int var0) {
-    try {
-      if (var0 > -26) {
+    if (var0 > -26) {
         DirectImageProducer
             .method2191(-54, -79, 96, 36, -65, 4, -120, 29, false, -60, -74, 43);
       }
 
       DummyClass14.aClass93_1955.method1523((byte) -110);
-    } catch (RuntimeException var2) {
-      throw AbstractGameWorld.cascadeException(var2, "di.M(" + var0 + ')');
-    }
   }
 
 }

@@ -30,8 +30,7 @@ public final class TextureSampler19 extends AbstractTextureSampler {
   }
 
   public int[] method154(int var1, byte var2 ) {
-    try {
-      int var3 = -89 / ((30 - var2) / 36);
+    int var3 = -89 / ((30 - var2) / 36);
       int[] var4 = this.monoChromaticImageCache.method1709(-16409, var1);
       if (this.monoChromaticImageCache.aBoolean1580) {
         int[] var5 = this.method152(1, var1, 32755);
@@ -50,14 +49,10 @@ public final class TextureSampler19 extends AbstractTextureSampler {
       }
 
       return var4;
-    } catch (RuntimeException var15) {
-      throw AbstractGameWorld.cascadeException(var15, "ke.D(" + var1 + ',' + var2 + ')');
-    }
   }
 
   public void parseConfig(int var1, Buffer var2, boolean var3 ) {
-    try {
-      if (~var1 == -1) {
+    if (~var1 == -1) {
         this.anInt3217 = var2.readUnsignedShort() << 4;
       } else {
         if (var1 == 1) {
@@ -68,28 +63,18 @@ public final class TextureSampler19 extends AbstractTextureSampler {
       if (!var3) {
         TextureSampler19.anInt3216 = -7;
       }
-
-    } catch (RuntimeException var5) {
-      throw AbstractGameWorld.cascadeException(var5,
-        "ke.A(" + var1 + ',' + (var2 != null ? "{...}" : "null") + ',' + var3 + ')');
-    }
   }
 
   public void method158(int var1 ) {
-    try {
-      if (var1 != 16251) {
+    if (var1 != 16251) {
         TextureSampler19.method255(33, 78, 124);
       }
 
       FileSystem.method844((byte) -9);
-    } catch (RuntimeException var3) {
-      throw AbstractGameWorld.cascadeException(var3, "ke.P(" + var1 + ')');
-    }
   }
 
   public int[][] method166(int var1, int var2 ) {
-    try {
-      if (var1 != -1) {
+    if (var1 != -1) {
         TextureSampler19.spotAnimations = null;
       }
 
@@ -117,14 +102,10 @@ public final class TextureSampler19 extends AbstractTextureSampler {
       }
 
       return var3;
-    } catch (RuntimeException var17) {
-      throw AbstractGameWorld.cascadeException(var17, "ke.T(" + var1 + ',' + var2 + ')');
-    }
   }
 
   public static void method254(boolean var0, SomethingPacket151 var1, boolean var2) {
-    try {
-      int var4 = (int) var1.key;
+    int var4 = (int) var1.key;
       if (var2) {
         TextureSampler19.method258(25);
       }
@@ -184,27 +165,16 @@ public final class TextureSampler19 extends AbstractTextureSampler {
       if (-1 != InventoryConfig.anInt3655) {
         ClassCheckRequest.method124(115, 1, InventoryConfig.anInt3655);
       }
-
-    } catch (RuntimeException var10) {
-      throw AbstractGameWorld.cascadeException(var10,
-        "ke.O(" + var0 + ',' + (var1 != null ? "{...}" : "null") + ',' + var2 + ')');
-    }
   }
 
   public static void method255(int var0, int var1, int var2) {
-    try {
-      WidgetUpdate var3 = AudioStreamEncoder3.method466(4, var2, var0);
+    WidgetUpdate var3 = AudioStreamEncoder3.method466(4, var2, var0);
       var3.g((byte) 33);
       var3.anInt3598 = var1;
-    } catch (RuntimeException var4) {
-      throw AbstractGameWorld.cascadeException(var4,
-        "ke.Q(" + var0 + ',' + var1 + ',' + var2 + ')');
-    }
   }
 
   public static void method256(int var0, int var1, int var2, byte var3, int var4) {
-    try {
-      WidgetUpdate var5 = AudioStreamEncoder3.method466(4, 4, var2);
+    WidgetUpdate var5 = AudioStreamEncoder3.method466(4, 4, var2);
       var5.g((byte) 33);
       var5.anInt3597 = var4;
       var5.anInt3596 = var0;
@@ -213,15 +183,10 @@ public final class TextureSampler19 extends AbstractTextureSampler {
       }
 
       var5.anInt3598 = var1;
-    } catch (RuntimeException var6) {
-      throw AbstractGameWorld.cascadeException(var6,
-        "ke.E(" + var0 + ',' + var1 + ',' + var2 + ',' + var3 + ',' + var4 + ')');
-    }
   }
 
   public static void method257(byte var0) {
-    try {
-      int var1 = 0;
+    int var1 = 0;
       if (var0 <= 122) {
         TextureSampler19.method259(null, 69, 54, -87, 72, -85, 88, 37, true);
       }
@@ -238,21 +203,13 @@ public final class TextureSampler19 extends AbstractTextureSampler {
           }
         }
       }
-
-    } catch (RuntimeException var4) {
-      throw AbstractGameWorld.cascadeException(var4, "ke.C(" + var0 + ')');
-    }
   }
 
   public static void method258(int var0) {
-    try {
-      TextureSampler19.anIntArray3218 = null;
+    TextureSampler19.anIntArray3218 = null;
       TextureSampler19.anIntArrayArray3215 = null;
       int var1 = -20 % ((-31 - var0) / 39);
       TextureSampler19.spotAnimations = null;
-    } catch (RuntimeException var2) {
-      throw AbstractGameWorld.cascadeException(var2, "ke.B(" + var0 + ')');
-    }
   }
 
   public static void method259(SomethingTilek var0, int var1, int var2, int var3, int var4, int var5,

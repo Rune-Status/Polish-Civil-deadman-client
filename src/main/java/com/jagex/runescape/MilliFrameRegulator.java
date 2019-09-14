@@ -22,8 +22,7 @@ public final class MilliFrameRegulator extends AbstractFrameRegulator {
 
 
   public MilliFrameRegulator() {
-    try {
-      this.anInt2688 = 256;
+    this.anInt2688 = 256;
       this.anInt2691 = 1;
       this.anInt2692 = 0;
       this.aLong2683 = Time.getCurrentTimeMillis();
@@ -31,15 +30,10 @@ public final class MilliFrameRegulator extends AbstractFrameRegulator {
       for (int var1 = 0; var1 < 10; ++var1) {
         this.aLongArray2694[var1] = this.aLong2683;
       }
-
-    } catch (RuntimeException var2) {
-      throw AbstractGameWorld.cascadeException(var2, "lj.<init>()");
-    }
   }
 
   public int sleep(int var1, int var2, int var3 ) {
-    try {
-      if (var1 != -1) {
+    if (var1 != -1) {
         this.sleep(-14, 83, 10);
       }
 
@@ -94,28 +88,19 @@ public final class MilliFrameRegulator extends AbstractFrameRegulator {
 
       this.anInt2692 &= 255;
       return var6;
-    } catch (RuntimeException var7) {
-      throw AbstractGameWorld.cascadeException(var7,
-        "lj.B(" + var1 + ',' + var2 + ',' + var3 + ')');
-    }
   }
 
   public void reset(int var1 ) {
-    try {
-      int var2;
+    int var2;
       for (var2 = 0; ~var2 > -11; ++var2) {
         this.aLongArray2694[var2] = 0L;
       }
 
       var2 = -114 % ((var1 - -82) / 42);
-    } catch (RuntimeException var3) {
-      throw AbstractGameWorld.cascadeException(var3, "lj.A(" + var1 + ')');
-    }
   }
 
   public static void method1771(int var0) {
-    try {
-      MilliFrameRegulator.aClass94_2687 = null;
+    MilliFrameRegulator.aClass94_2687 = null;
       MilliFrameRegulator.anIntArray2696 = null;
       MilliFrameRegulator.anImage2695 = null;
       if (var0 != 14635) {
@@ -124,9 +109,6 @@ public final class MilliFrameRegulator extends AbstractFrameRegulator {
 
       MilliFrameRegulator.aClass3_Sub28_Sub16Array2690 = null;
       MilliFrameRegulator.aClass47_2686 = null;
-    } catch (RuntimeException var2) {
-      throw AbstractGameWorld.cascadeException(var2, "lj.G(" + var0 + ')');
-    }
   }
 
 }

@@ -15,8 +15,7 @@ public final class DummyClass50 {
       GameString.create("Chargement du module texte )2 ");
 
   public static void writeUUID(Buffer var0, boolean var1) {
-    try {
-      if (!var1) {
+    if (!var1) {
         DummyClass50.anIntArrayArrayArray1142 = null;
       }
 
@@ -41,15 +40,10 @@ public final class DummyClass50 {
       }
 
       var0.write(var2, 0, 24);
-    } catch (RuntimeException var6) {
-      throw AbstractGameWorld.cascadeException(var6,
-          "la.G(" + (var0 != null ? "{...}" : "null") + ',' + var1 + ')');
-    }
   }
 
   public static int method1398(int var0, Player var1) {
-    try {
-      if (var0 != 0) {
+    if (var0 != 0) {
         DummyClass50.writeUUID(null, false);
       }
 
@@ -73,15 +67,10 @@ public final class DummyClass50 {
       }
 
       return var2;
-    } catch (RuntimeException var4) {
-      throw AbstractGameWorld.cascadeException(var4,
-          "la.A(" + var0 + ',' + (var1 != null ? "{...}" : "null") + ')');
-    }
   }
 
   public static void method1399(int var0, long var1) {
-    try {
-      if (var1 != 0L) {
+    if (var1 != 0L) {
         if (AnimationSomething.anInt3591 < 100) {
           int var3 = -103 / ((var0 - -20) / 41);
           GameString var4 = Objects
@@ -127,10 +116,6 @@ public final class DummyClass50 {
               BufferObject.aClass94_1884, -1);
         }
       }
-    } catch (RuntimeException var6) {
-      throw AbstractGameWorld
-          .cascadeException(var6, "la.B(" + var0 + ',' + var1 + ')');
-    }
   }
 
   public static void method1400(SignLink var0, Object var1) {
@@ -147,8 +132,7 @@ public final class DummyClass50 {
   }
 
   public static LightIntensity method1401(int var0, int var1) {
-    try {
-      LightIntensity var2 = (LightIntensity) DummyHashTable.aClass93_1683.get(
+    LightIntensity var2 = (LightIntensity) DummyHashTable.aClass93_1683.get(
           var1);
       if (var2 != null) {
         return var2;
@@ -166,28 +150,18 @@ public final class DummyClass50 {
         DummyHashTable.aClass93_1683.get((byte) -75, var2, var1);
         return var2;
       }
-    } catch (RuntimeException var4) {
-      throw AbstractGameWorld
-          .cascadeException(var4, "la.D(" + var0 + ',' + var1 + ')');
-    }
   }
 
   public static void method1402(byte var0) {
-    try {
-      DummyClass50.aClass13_1139 = null;
+    DummyClass50.aClass13_1139 = null;
       DummyClass50.anIntArrayArrayArray1142 = null;
       DummyClass50.aClass94_1143 = null;
       DummyClass50.aClass94_1140 = null;
-
-    } catch (RuntimeException var2) {
-      throw AbstractGameWorld.cascadeException(var2, "la.F(" + var0 + ')');
-    }
   }
 
   public static WorldMapLabel method1403(int var0, GameString var1,
       FileUnpacker var2) {
-    try {
-      int var3 = var2.getFileId(var1);
+    int var3 = var2.getFileId(var1);
       if (var3 == -1) {
         return new WorldMapLabel(0);
       } else if (var0 > -38) {
@@ -208,13 +182,6 @@ public final class DummyClass50 {
 
         return var5;
       }
-    } catch (RuntimeException var8) {
-      throw AbstractGameWorld.cascadeException(var8,
-          "la.C(" + var0 + ',' + (var1 != null ? "{...}" : "null") + ',' + (
-              var2 != null ?
-                  "{...}" :
-                  "null") + ')');
-    }
   }
 
 }

@@ -10,17 +10,11 @@ public final class ByteArrayNode extends SubNode {
 
 
   public ByteArrayNode(byte[] var1 ) {
-    try {
-      this.aByteArray3612 = var1;
-    } catch (RuntimeException var3) {
-      throw AbstractGameWorld.cascadeException(var3,
-        "hc.<init>(" + (var1 != null ? "{...}" : "null") + ')');
-    }
+    this.aByteArray3612 = var1;
   }
 
   public static int method571(int var0) {
-    try {
-      return var0 >= -57 ?
+    return var0 >= -57 ?
         -107 :
         (NPC.aFloat3979 == 3.0D ?
           37 :
@@ -29,14 +23,10 @@ public final class ByteArrayNode extends SubNode {
             (6.0D != NPC.aFloat3979 ?
               (NPC.aFloat3979 == 8.0D ? 100 : 200) :
               75)));
-    } catch (RuntimeException var2) {
-      throw AbstractGameWorld.cascadeException(var2, "hc.E(" + var0 + ')');
-    }
   }
 
   public static ClientScript method572(int var0, byte var1) {
-    try {
-      ClientScript var2 = (ClientScript) DummyClass42.aClass47_885.get(var0, 1400);
+    ClientScript var2 = (ClientScript) DummyClass42.aClass47_885.get(var0, 1400);
       if (var2 != null) {
         return var2;
       } else {
@@ -103,26 +93,18 @@ public final class ByteArrayNode extends SubNode {
           return null;
         }
       }
-    } catch (RuntimeException var14) {
-      throw AbstractGameWorld.cascadeException(var14, "hc.O(" + var0 + ',' + var1 + ')');
-    }
   }
 
   public static void method573(int var0) {
-    try {
-      if (var0 != -11346) {
+    if (var0 != -11346) {
         ByteArrayNode.anInt3611 = -69;
       }
 
       ByteArrayNode.aClass113Array3610 = null;
-    } catch (RuntimeException var2) {
-      throw AbstractGameWorld.cascadeException(var2, "hc.A(" + var0 + ')');
-    }
   }
 
   public static void method574(NPC var0, boolean var1) {
-    try {
-      if (!var1) {
+    if (!var1) {
         for (AreaSoundEffect var2 = (AreaSoundEffect) SocketStream.aClass61_1242.getFirst();
              var2 != null; var2 = (AreaSoundEffect) SocketStream.aClass61_1242.getNext()) {
           if (var0 == var2.aClass140_Sub4_Sub2_2324) {
@@ -138,28 +120,18 @@ public final class ByteArrayNode extends SubNode {
         }
 
       }
-    } catch (RuntimeException var3) {
-      throw AbstractGameWorld.cascadeException(var3,
-          "hc.D(" + (var0 != null ? "{...}" : "null") + ',' + ')');
-    }
   }
 
   public static void method575(FileUnpacker var0, int var1) {
-    try {
-      if (var1 != -1) {
+    if (var1 != -1) {
         ByteArrayNode.method575(null, -38);
       }
 
       SomethingOtherWorldMap.aClass153_2536 = var0;
-    } catch (RuntimeException var3) {
-      throw AbstractGameWorld.cascadeException(var3,
-        "hc.C(" + (var0 != null ? "{...}" : "null") + ',' + var1 + ')');
-    }
   }
 
   public static int method576(GameString var0, boolean var1) {
-    try {
-      if (DummyClass25.aClass131_1624 != null && var0.getLength() != 0) {
+    if (DummyClass25.aClass131_1624 != null && var0.getLength() != 0) {
         if (var1) {
           return -117;
         } else {
@@ -176,10 +148,6 @@ public final class ByteArrayNode extends SubNode {
       } else {
         return -1;
       }
-    } catch (RuntimeException var3) {
-      throw AbstractGameWorld.cascadeException(var3,
-        "hc.F(" + (var0 != null ? "{...}" : "null") + ',' + var1 + ')');
-    }
   }
 
   public static void method577(int var0, int var1, int var2, int var3, SceneNode var4,

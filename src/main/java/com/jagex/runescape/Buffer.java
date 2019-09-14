@@ -24,49 +24,30 @@ public class Buffer extends Node {
   public int position;
 
   public Buffer(int var1) {
-    try {
-      this.bytes = DummyClass21.method1807(66, var1);
+    this.bytes = DummyClass21.method1807(66, var1);
       this.position = 0;
-    } catch (RuntimeException var3) {
-      throw AbstractGameWorld.cascadeException(var3, "wa.<init>(" + var1 + ')');
-    }
   }
 
   public Buffer(byte[] var1) {
-    try {
-      this.position = 0;
+    this.position = 0;
       this.bytes = var1;
-    } catch (RuntimeException var3) {
-      throw AbstractGameWorld.cascadeException(
-          var3, "wa.<init>(" + (var1 != null ? "{...}" : "null") + ')');
-    }
   }
 
   public final int readUnsignedShort() {
-    try {
-
-      this.position += 2;
+    this.position += 2;
       return (this.bytes[-2 + this.position] << 8 & '\uff00') +
           (this.bytes[-1 + this.position] & 255);
-    } catch (RuntimeException var3) {
-      throw AbstractGameWorld.cascadeException(var3, "wa.EB()");
-    }
   }
 
   public final void writeInt(int var2) {
-    try {
-      this.bytes[this.position++] = (byte) (var2 >> 24);
+    this.bytes[this.position++] = (byte) (var2 >> 24);
       this.bytes[this.position++] = (byte) (var2 >> 16);
       this.bytes[this.position++] = (byte) (var2 >> 8);
       this.bytes[this.position++] = (byte) var2;
-    } catch (RuntimeException var4) {
-      throw AbstractGameWorld.cascadeException(var4, "wa.UC(" + var2 + ')');
-    }
   }
 
   public final void method739(int var1, int var2, long var3) {
-    try {
-      --var2;
+    --var2;
       if (~var2 <= -1 && -8 <= ~var2) {
         if (var1 == 0) {
           for (int var5 = var2 * 8; 0 <= var5; var5 -= 8) {
@@ -76,15 +57,10 @@ public class Buffer extends Node {
       } else {
         throw new IllegalArgumentException();
       }
-    } catch (RuntimeException var6) {
-      throw AbstractGameWorld.cascadeException(
-          var6, "wa.OB(" + var1 + ',' + var2 + ',' + var3 + ')');
-    }
   }
 
   public final void writeLong(long var1) {
-    try {
-      this.bytes[this.position++] = (byte) ((int) (var1 >> 56));
+    this.bytes[this.position++] = (byte) ((int) (var1 >> 56));
       this.bytes[this.position++] = (byte) ((int) (var1 >> 48));
 
       this.bytes[this.position++] = (byte) ((int) (var1 >> 40));
@@ -93,15 +69,10 @@ public class Buffer extends Node {
       this.bytes[this.position++] = (byte) ((int) (var1 >> 16));
       this.bytes[this.position++] = (byte) ((int) (var1 >> 8));
       this.bytes[this.position++] = (byte) ((int) var1);
-
-    } catch (RuntimeException var5) {
-      throw AbstractGameWorld.cascadeException(var5, "wa.AC(" + var1 + ')');
-    }
   }
 
   public final int method741(byte var1) {
-    try {
-      byte var2 = this.bytes[this.position++];
+    byte var2 = this.bytes[this.position++];
       if (var1 < 112) {
         Buffer.aClass94_2599 = null;
       }
@@ -112,14 +83,10 @@ public class Buffer extends Node {
       }
 
       return var2 | var3;
-    } catch (RuntimeException var4) {
-      throw AbstractGameWorld.cascadeException(var4, "wa.WA(" + var1 + ')');
-    }
   }
 
   public final void method742(int var1, int var2) {
-    try {
-      this.bytes[-4 + this.position + -var2] = (byte) (var2 >> 24);
+    this.bytes[-4 + this.position + -var2] = (byte) (var2 >> 24);
       this.bytes[-var2 + this.position - 3] = (byte) (var2 >> 16);
       this.bytes[-2 + this.position + -var2] = (byte) (var2 >> 8);
       if (var1 < 78) {
@@ -127,39 +94,23 @@ public class Buffer extends Node {
       }
 
       this.bytes[-var2 + this.position + -1] = (byte) var2;
-    } catch (RuntimeException var4) {
-      throw AbstractGameWorld.cascadeException(var4, "wa.VB(" + var1 + ',' +
-          var2 + ')');
-    }
   }
 
   public final void method743(int var1, int var2) {
-    try {
-      this.bytes[this.position++] = (byte) (-var2 + 128);
+    this.bytes[this.position++] = (byte) (-var2 + 128);
       if (var1 != 10213) {
         this.method759(-121, -23);
       }
-
-    } catch (RuntimeException var4) {
-      throw AbstractGameWorld.cascadeException(var4, "wa.PC(" + var1 + ',' +
-          var2 + ')');
-    }
   }
 
   public final void writeString(GameString var2) {
-    try {
-      this.position +=
+    this.position +=
           var2.method1580(true, this.bytes, this.position, 0, var2.getLength());
       this.bytes[this.position++] = 0;
-    } catch (RuntimeException var4) {
-      throw AbstractGameWorld.cascadeException(
-          var4, "wa.LA(" + (var2 != null ? "{...}" : "null") + ')');
-    }
   }
 
   public final int method747(int var1) {
-    try {
-      this.position += 2;
+    this.position += 2;
       int var2 = (this.bytes[-2 + this.position] << 8 & '\uff00') -
           -(-128 + this.bytes[this.position + -1] & 255);
       if (var1 != -58) {
@@ -171,34 +122,22 @@ public class Buffer extends Node {
       }
 
       return var2;
-    } catch (RuntimeException var3) {
-      throw AbstractGameWorld.cascadeException(var3, "wa.NA(" + var1 + ')');
-    }
   }
 
   public final int readInt() {
-    try {
-      this.position += 4;
+    this.position += 4;
       return ((255 & this.bytes[this.position - 4]) << 24) +
           (0xff0000 & this.bytes[this.position + -3] << 16) +
           (((0xff & this.bytes[this.position - 2]) << 8) +
               (this.bytes[this.position - 1] & 255));
-    } catch (RuntimeException var3) {
-      throw AbstractGameWorld.cascadeException(var3, "wa.KA()");
-    }
   }
 
   public final byte method749(boolean var1) {
-    try {
-      return var1 ? -79 : (byte) (-this.bytes[this.position++] + 128);
-    } catch (RuntimeException var3) {
-      throw AbstractGameWorld.cascadeException(var3, "wa.JB(" + ')');
-    }
+    return var1 ? -79 : (byte) (-this.bytes[this.position++] + 128);
   }
 
   public final GameString method750(byte var1) {
-    try {
-      if (var1 != 78) {
+    if (var1 != 78) {
         return null;
       } else if (this.bytes[this.position] != 0) {
         return this.readString();
@@ -206,53 +145,30 @@ public class Buffer extends Node {
         ++this.position;
         return null;
       }
-    } catch (RuntimeException var3) {
-      throw AbstractGameWorld.cascadeException(var3, "wa.IB(" + var1 + ')');
-    }
   }
 
   public final int method751(byte var1) {
-    try {
-      return 255 & this.bytes[this.position++] - 128;
-    } catch (RuntimeException var3) {
-      throw AbstractGameWorld.cascadeException(var3, "wa.DC(" + var1 + ')');
-    }
+    return 255 & this.bytes[this.position++] - 128;
   }
 
   public final void writeByte(int var2) {
-    try {
-      this.bytes[this.position++] = (byte) var2;
-
-    } catch (RuntimeException var4) {
-      throw AbstractGameWorld.cascadeException(var4, "wa.RA(" + var2 + ')');
-    }
+    this.bytes[this.position++] = (byte) var2;
   }
 
   public final void write(byte[] var1, int var2, int var3) {
-    try {
-      int var5 = var2;
+    int var5 = var2;
       while (~var5 > ~(var2 + var3)) {
         this.bytes[this.position++] = var1[var5];
         ++var5;
       }
-
-    } catch (RuntimeException var6) {
-      throw AbstractGameWorld.cascadeException(
-          var6, "wa.QC(" + (var1 != null ? "{...}" : "null") + ',' + var2 +
-              ',' + var3 + ')');
-    }
   }
 
   public final int method754(boolean var1) {
-    try {
-      if (!var1) {
+    if (!var1) {
         this.position = 61;
       }
 
       return -this.bytes[this.position++] + 128 & 255;
-    } catch (RuntimeException var3) {
-      throw AbstractGameWorld.cascadeException(var3, "wa.PB(" + var1 + ')');
-    }
   }
 
   public final int method755(byte var1) {
@@ -263,20 +179,13 @@ public class Buffer extends Node {
   }
 
   public final long readLong() {
-    try {
-
-      long var2 = this.readInt() & 0xffffffffL;
+    long var2 = this.readInt() & 0xffffffffL;
       long var4 = this.readInt() & 0xffffffffL;
       return var4 + (var2 << 32);
-
-    } catch (RuntimeException var6) {
-      throw AbstractGameWorld.cascadeException(var6, "wa.GA()");
-    }
   }
 
   public final void writeIntLE(int var1, int var2) {
-    try {
-      this.bytes[this.position++] = (byte) var1;
+    this.bytes[this.position++] = (byte) var1;
       if (var2 < 54) {
         this.method749(false);
       }
@@ -284,25 +193,16 @@ public class Buffer extends Node {
       this.bytes[this.position++] = (byte) (var1 >> 8);
       this.bytes[this.position++] = (byte) (var1 >> 16);
       this.bytes[this.position++] = (byte) (var1 >> 24);
-    } catch (RuntimeException var4) {
-      throw AbstractGameWorld.cascadeException(var4, "wa.AB(" + var1 + ',' +
-          var2 + ')');
-    }
   }
 
   public final int readUnsignedShortAdd() {
-    try {
-      this.position += 2;
+    this.position += 2;
       return (this.bytes[-1 + this.position] - 128 & 255) +
           ('\uff00' & this.bytes[-2 + this.position] << 8);
-    } catch (RuntimeException var3) {
-      throw AbstractGameWorld.cascadeException(var3, "wa.LC()");
-    }
   }
 
   public final void method759(int var1, int var2) {
-    try {
-      this.bytes[this.position++] = (byte) (var2 >> 16);
+    this.bytes[this.position++] = (byte) (var2 >> 16);
       this.bytes[this.position++] = (byte) (var2 >> 24);
       if (var1 >= -56) {
         this.writeSmart(82, 22);
@@ -310,23 +210,14 @@ public class Buffer extends Node {
 
       this.bytes[this.position++] = (byte) var2;
       this.bytes[this.position++] = (byte) (var2 >> 8);
-    } catch (RuntimeException var4) {
-      throw AbstractGameWorld.cascadeException(var4, "wa.MC(" + var1 + ',' +
-          var2 + ')');
-    }
   }
 
   public final byte readByte() {
-    try {
-      return this.bytes[this.position++];
-    } catch (RuntimeException var3) {
-      throw AbstractGameWorld.cascadeException(var3, "wa.TA()");
-    }
+    return this.bytes[this.position++];
   }
 
   public final GameString method761(int var1) {
-    try {
-      byte var2 = this.bytes[this.position++];
+    byte var2 = this.bytes[this.position++];
       if (var1 < 50) {
         this.bytes = null;
       }
@@ -343,23 +234,15 @@ public class Buffer extends Node {
       } else {
         throw new IllegalStateException("Bad version number in gjstr2");
       }
-    } catch (IllegalStateException var4) {
-      throw AbstractGameWorld.cascadeException(var4, "wa.DA(" + var1 + ')');
-    }
   }
 
   public final void writeFloatLE(float var1) {
-    try {
-      int var3 = Float.floatToRawIntBits(var1);
+    int var3 = Float.floatToRawIntBits(var1);
       this.bytes[this.position++] = (byte) var3;
 
       this.bytes[this.position++] = (byte) (var3 >> 8);
       this.bytes[this.position++] = (byte) (var3 >> 16);
       this.bytes[this.position++] = (byte) (var3 >> 24);
-
-    } catch (RuntimeException var4) {
-      throw AbstractGameWorld.cascadeException(var4, "wa.CC(" + var1 + ')');
-    }
   }
 
   public final byte readByteNegate() {
@@ -381,18 +264,13 @@ public class Buffer extends Node {
   }
 
   public final int readUnsignedShortLE() {
-    try {
-      this.position += 2;
+    this.position += 2;
       return (255 & this.bytes[this.position - 2]) +
           ('\uff00' & this.bytes[this.position - 1] << 8);
-    } catch (RuntimeException var3) {
-      throw AbstractGameWorld.cascadeException(var3, "wa.BB()");
-    }
   }
 
   public final void writeSmart(int var1, int var2) {
-    try {
-      if (var1 != -32769) {
+    if (var1 != -32769) {
         this.writeInt(-9);
       }
 
@@ -403,25 +281,15 @@ public class Buffer extends Node {
       } else {
         throw new IllegalArgumentException();
       }
-    } catch (RuntimeException var4) {
-      throw AbstractGameWorld.cascadeException(var4, "wa.UA(" + var1 + ',' +
-          var2 + ')');
-    }
   }
 
   public final void method769(byte var1, int var2) {
-    try {
-      this.bytes[-1 + -var2 + this.position] = (byte) var2;
+    this.bytes[-1 + -var2 + this.position] = (byte) var2;
       int var3 = 120 % ((-78 - var1) / 48);
-    } catch (RuntimeException var4) {
-      throw AbstractGameWorld.cascadeException(var4, "wa.MB(" + var1 + ',' +
-          var2 + ')');
-    }
   }
 
   public final void method770(int[] var1, int var2, int var3, int var4) {
-    try {
-      int var5 = this.position;
+    int var5 = this.position;
       this.position = var3;
       int var6 = (-var3 + var4) / 8;
 
@@ -449,16 +317,10 @@ public class Buffer extends Node {
       }
 
       this.position = var5;
-    } catch (RuntimeException var13) {
-      throw AbstractGameWorld.cascadeException(
-          var13, "wa.SC(" + (var1 != null ? "{...}" : "null") + ',' + var2 +
-              ',' + var3 + ',' + var4 + ')');
-    }
   }
 
   public final void method771(int var1, int var2) {
-    try {
-      if (~(-128 & var2) != -1) {
+    if (~(-128 & var2) != -1) {
         if (-1 != ~(-16384 & var2)) {
           if ((var2 & -2097152) != 0) {
             if (0 != (-268435456 & var2)) {
@@ -478,16 +340,10 @@ public class Buffer extends Node {
       if (var1 != 17038) {
         Buffer.aClass94_2594 = null;
       }
-
-    } catch (RuntimeException var4) {
-      throw AbstractGameWorld.cascadeException(var4, "wa.DB(" + var1 + ',' +
-          var2 + ')');
-    }
   }
 
   public final long readVariableLengthValue(int bytes, int var2) {
-    try {
-      --bytes;
+    --bytes;
       if (var2 <= bytes && ~bytes >= -8) {
         long var4 = 0L;
 
@@ -499,15 +355,10 @@ public class Buffer extends Node {
       } else {
         throw new IllegalArgumentException();
       }
-    } catch (RuntimeException var6) {
-      throw AbstractGameWorld.cascadeException(var6, "wa.VA(" + bytes + ',' +
-          var2 + ')');
-    }
   }
 
   public final int method773(byte var1) {
-    try {
-      if (var1 >= -120) {
+    if (var1 >= -120) {
         return 3;
       } else {
         int var3 = readUnsignedShortSmart();
@@ -520,28 +371,18 @@ public class Buffer extends Node {
         var2 += var3;
         return var2;
       }
-    } catch (RuntimeException var4) {
-      throw AbstractGameWorld.cascadeException(var4, "wa.UB(" + var1 + ')');
-    }
   }
 
   public final void method774(int var1, int var2, byte[] var3, int var4) {
-    try {
-      if (var1 == 2) {
+    if (var1 == 2) {
         for (int var5 = var4 - (-var2 - -1); ~var4 >= ~var5; --var5) {
           var3[var5] = this.bytes[this.position++];
         }
       }
-    } catch (RuntimeException var6) {
-      throw AbstractGameWorld.cascadeException(
-          var6, "wa.HC(" + var1 + ',' + var2 + ',' +
-              (var3 != null ? "{...}" : "null") + ',' + var4 + ')');
-    }
   }
 
   public final void method775(int var1, int var2) {
-    try {
-      if (var2 != 1437452424) {
+    if (var2 != 1437452424) {
         this.readInt((byte) 113);
       }
 
@@ -549,73 +390,47 @@ public class Buffer extends Node {
       this.bytes[this.position++] = (byte) var1;
       this.bytes[this.position++] = (byte) (var1 >> 24);
       this.bytes[this.position++] = (byte) (var1 >> 16);
-    } catch (RuntimeException var4) {
-      throw AbstractGameWorld.cascadeException(var4, "wa.GC(" + var1 + ',' +
-          var2 + ')');
-    }
   }
 
   public final GameString readString() {
-    try {
-
-      int var2 = this.position;
+    int var2 = this.position;
 
       while (0 != this.bytes[this.position++]) {
       }
 
       return TextureSampler33.createString(this.bytes, var2,
           -var2 + (this.position - 1));
-    } catch (RuntimeException var3) {
-      throw AbstractGameWorld.cascadeException(var3, "wa.FC()");
-    }
   }
 
   public final int readUnsignedShortSmart() {
-    try {
-      int first = this.bytes[this.position] & 255;
+    int first = this.bytes[this.position] & 255;
       return 128 <= first ? -32768 + this.readUnsignedShort()
           : this.readUnsignedByte();
-    } catch (RuntimeException var3) {
-      throw AbstractGameWorld.cascadeException(var3, "wa.JA()");
-    }
   }
 
   public final void writeMedium(int var1) {
-    try {
-      this.bytes[this.position++] = (byte) (var1 >> 16);
+    this.bytes[this.position++] = (byte) (var1 >> 16);
       this.bytes[this.position++] = (byte) (var1 >> 8);
       this.bytes[this.position++] = (byte) var1;
-    } catch (RuntimeException var4) {
-      throw AbstractGameWorld.cascadeException(var4, "wa.FB(" + var1 + ')');
-    }
   }
 
   public final int method780(int var1) {
-    try {
-      this.position += 4;
+    this.position += 4;
       return ((this.bytes[this.position - 2] & 255) << 24) +
           ((255 & this.bytes[this.position - 1]) << 16) +
           ('\uff00' & this.bytes[-4 + this.position] << 8) -
           -(this.bytes[this.position + -3] & 255);
-    } catch (RuntimeException var3) {
-      throw AbstractGameWorld.cascadeException(var3, "wa.NB(" + var1 + ')');
-    }
   }
 
   public final int readShortLEAdd() {
-    try {
-      this.position += 2;
+    this.position += 2;
 
       return (this.bytes[-1 + this.position] << 8 & '\uff00') -
           -(255 & -128 + this.bytes[this.position + -2]);
-    } catch (RuntimeException var3) {
-      throw AbstractGameWorld.cascadeException(var3, "wa.TB()");
-    }
   }
 
   public final int method782(int var1) {
-    try {
-      this.position += 4;
+    this.position += 4;
       if (var1 >= -42) {
         this.readByteNegate();
       }
@@ -624,52 +439,34 @@ public class Buffer extends Node {
           (16711680 & this.bytes[this.position - 2] << 16) +
           ((255 & this.bytes[this.position + -1]) << 24) +
           ((this.bytes[-3 + this.position] & 255) << 8);
-    } catch (RuntimeException var3) {
-      throw AbstractGameWorld.cascadeException(var3, "wa.EA(" + var1 + ')');
-    }
   }
 
   public final void method783(int var1, int var2) {
-    try {
-      if (var2 == -268435456) {
+    if (var2 == -268435456) {
         this.bytes[this.position++] = (byte) (var1 >> 8);
         this.bytes[this.position++] = (byte) (128 + var1);
       }
-    } catch (RuntimeException var4) {
-      throw AbstractGameWorld.cascadeException(var4, "wa.LB(" + var1 + ',' +
-          var2 + ')');
-    }
   }
 
   public final void method785(int var1, byte var2) {
-    try {
-      this.bytes[this.position++] = (byte) var1;
+    this.bytes[this.position++] = (byte) var1;
       this.bytes[this.position++] = (byte) (var1 >> 8);
       if (var2 <= -118) {
         this.bytes[this.position++] = (byte) (var1 >> 16);
         this.bytes[this.position++] = (byte) (var1 >> 24);
       }
-    } catch (RuntimeException var4) {
-      throw AbstractGameWorld.cascadeException(var4, "wa.IA(" + var1 + ',' +
-          var2 + ')');
-    }
   }
 
   public final int method786(boolean var1) {
-    try {
-      if (!var1) {
+    if (!var1) {
         this.position = 46;
       }
 
       return 255 & 0 + -this.bytes[this.position++];
-    } catch (RuntimeException var3) {
-      throw AbstractGameWorld.cascadeException(var3, "wa.CB(" + var1 + ')');
-    }
   }
 
   public final int method787(byte var1) {
-    try {
-      this.position += 2;
+    this.position += 2;
       int var2 = (this.bytes[-1 + this.position] & 255) +
           ((255 & this.bytes[this.position + -2]) << 8);
       if (var1 < 4) {
@@ -681,14 +478,10 @@ public class Buffer extends Node {
 
         return var2;
       }
-    } catch (RuntimeException var3) {
-      throw AbstractGameWorld.cascadeException(var3, "wa.TC(" + var1 + ')');
-    }
   }
 
   public final int method788(int var1) {
-    try {
-      this.position += 2;
+    this.position += 2;
       int var2 = ((this.bytes[this.position - 1] & 255) << 8) -
           -(this.bytes[-2 + this.position] - 128 & 255);
       if (var1 != -1741292848) {
@@ -702,35 +495,22 @@ public class Buffer extends Node {
       }
 
       return var2;
-    } catch (RuntimeException var3) {
-      throw AbstractGameWorld.cascadeException(var3, "wa.EC(" + var1 + ')');
-    }
   }
 
   public final byte method789(int var1) {
-    try {
-      return var1 != 0 ? -51 : (byte) (-128 + this.bytes[this.position++]);
-    } catch (RuntimeException var3) {
-      throw AbstractGameWorld.cascadeException(var3, "wa.CA(" + var1 + ')');
-    }
+    return var1 != 0 ? -51 : (byte) (-128 + this.bytes[this.position++]);
   }
 
   public final void method790(int var1, int var2) {
-    try {
-      if (var2 != -13071) {
+    if (var2 != -13071) {
         readUnsignedSmart();
       }
 
       this.bytes[this.position++] = (byte) (128 + var1);
-    } catch (RuntimeException var4) {
-      throw AbstractGameWorld.cascadeException(var4, "wa.KC(" + var1 + ',' +
-          var2 + ')');
-    }
   }
 
   public final int method791(byte var1) {
-    try {
-      this.position += 2;
+    this.position += 2;
       if (var1 != 10) {
         this.method751((byte) 109);
       }
@@ -742,14 +522,10 @@ public class Buffer extends Node {
       }
 
       return var2;
-    } catch (RuntimeException var3) {
-      throw AbstractGameWorld.cascadeException(var3, "wa.SA(" + var1 + ')');
-    }
   }
 
   public final int writeChecksum(byte var1, int var2) {
-    try {
-      if (var1 < 1) {
+    if (var1 < 1) {
         return 65;
       } else {
         int var3 =
@@ -758,15 +534,10 @@ public class Buffer extends Node {
         this.writeInt(var3);
         return var3;
       }
-    } catch (RuntimeException var4) {
-      throw AbstractGameWorld.cascadeException(var4, "wa.QB(" + var1 + ',' +
-          var2 + ')');
-    }
   }
 
   public final int readUnsignedMedium(byte var1) {
-    try {
-      if (var1 < 76) {
+    if (var1 < 76) {
         this.readUnsignedShortLE();
       }
 
@@ -774,45 +545,29 @@ public class Buffer extends Node {
       return (16711680 & this.bytes[this.position + -3] << 16) +
           (('\uff00' & this.bytes[-2 + this.position] << 8) -
               -(this.bytes[this.position + -1] & 255));
-    } catch (RuntimeException var3) {
-      throw AbstractGameWorld.cascadeException(var3, "wa.GB(" + var1 + ')');
-    }
   }
 
   public final void writeShortLE(int var1, int var2) {
-    try {
-      if (var1 != -1) {
+    if (var1 != -1) {
         Buffer.aClass94Array2596 = null;
       }
 
       this.bytes[this.position++] = (byte) var2;
       this.bytes[this.position++] = (byte) (var2 >> 8);
-    } catch (RuntimeException var4) {
-      throw AbstractGameWorld.cascadeException(var4, "wa.PA(" + var1 + ',' +
-          var2 + ')');
-    }
   }
 
   public final int readUnsignedSmart() {
-    try {
-      int var2 = this.bytes[this.position] & 255;
+    int var2 = this.bytes[this.position] & 255;
       return ~var2 > -129 ? -64 + this.readUnsignedByte()
           : this.readUnsignedShort() - '\uc000';
-    } catch (RuntimeException var3) {
-      throw AbstractGameWorld.cascadeException(var3, "wa.WB()");
-    }
   }
 
   public final int readInt(byte var1) {
-    try {
-      this.position += 4;
+    this.position += 4;
       return ((this.bytes[-3 + this.position] & 255) << 24) -
           -(16711680 & this.bytes[this.position + -4] << 16) +
           (((this.bytes[this.position + -1] & 255) << 8) -
               -(255 & this.bytes[this.position + -2]));
-    } catch (RuntimeException var3) {
-      throw AbstractGameWorld.cascadeException(var3, "wa.NC(" + var1 + ')');
-    }
   }
 
   public final void encipherRSA(BigInteger exponent, BigInteger modulus) {
@@ -829,57 +584,36 @@ public class Buffer extends Node {
   }
 
   public final void writeFloat(float var2) {
-    try {
-      int var3 = Float.floatToRawIntBits(var2);
+    int var3 = Float.floatToRawIntBits(var2);
       this.bytes[this.position++] = (byte) (var3 >> 24);
       this.bytes[this.position++] = (byte) (var3 >> 16);
       this.bytes[this.position++] = (byte) (var3 >> 8);
       this.bytes[this.position++] = (byte) var3;
-    } catch (RuntimeException var4) {
-      throw AbstractGameWorld.cascadeException(var4, "wa.QA(" + var2 + ')');
-    }
   }
 
   public final int readUnsignedByte() {
-    try {
-      return this.bytes[this.position++] & 255;
-    } catch (RuntimeException var3) {
-      throw AbstractGameWorld.cascadeException(var3, "wa.RC()");
-    }
+    return this.bytes[this.position++] & 255;
   }
 
   public final void writeShort(int var2) {
-    try {
-      this.bytes[this.position++] = (byte) (var2 >> 8);
+    this.bytes[this.position++] = (byte) (var2 >> 8);
       this.bytes[this.position++] = (byte) var2;
-    } catch (RuntimeException var4) {
-      throw AbstractGameWorld.cascadeException(var4, "wa.JC(" + var2 + ')');
-    }
   }
 
   public static void method744(boolean var0) {
-    try {
-      if (!var0) {
+    if (!var0) {
         Buffer.method784(-10, -32, -21);
       }
 
       ++Keyboard.anInt1908;
-    } catch (RuntimeException var2) {
-      throw AbstractGameWorld.cascadeException(var2, "wa.HA(" + var0 + ')');
-    }
   }
 
   public static void method746(byte var0) {
-    try {
-      MouseRecorder.aClass93_1013.method1524(3);
-    } catch (RuntimeException var2) {
-      throw AbstractGameWorld.cascadeException(var2, "wa.VC(" + var0 + ')');
-    }
+    MouseRecorder.aClass93_1013.method1524(3);
   }
 
   public static void method767(int var0) {
-    try {
-      Buffer.aClass94_2599 = null;
+    Buffer.aClass94_2599 = null;
       Buffer.anIntArray2591 = null;
       Buffer.LOADED_INTERFACES = null;
       Buffer.aClass3_Sub28_Sub3_2600 = null;
@@ -888,17 +622,12 @@ public class Buffer extends Node {
       Buffer.aClass94_2593 = null;
       Buffer.aClass151_Sub1Array2601 = null;
       Buffer.LINE_BREAK = null;
-
-    } catch (RuntimeException var2) {
-      throw AbstractGameWorld.cascadeException(var2, "wa.IC(" + var0 + ')');
-    }
   }
 
   public static void method777(CollisionMap[] collisionMaps, boolean var1,
       int var2, int var3, int var4, int var5, int var6,
       byte[] bytes) {
-    try {
-      int var10;
+    int var10;
       int var11;
       if (!var1) {
         for (int var9 = 0; 4 > var9; ++var9) {
@@ -1141,13 +870,6 @@ public class Buffer extends Node {
           }
         }
       }
-    } catch (RuntimeException var19) {
-      throw AbstractGameWorld.cascadeException(
-          var19, "wa.OA(" + (collisionMaps != null ? "{...}" : "null") + ',' +
-              var1 + ',' + var2 + ',' + var3 + ',' + var4 + ',' + var5 +
-              ',' + var6 + ',' + (bytes != null ? "{...}" : "null") +
-              ')');
-    }
   }
 
   public static SomethingSceneJ method784(int var0, int var1, int var2) {
@@ -1157,8 +879,7 @@ public class Buffer extends Node {
   }
 
   public static void method792(int var0) {
-    try {
-      if (var0 == 9179409) {
+    if (var0 == 9179409) {
         int var1 = DummyClass20.method1817((byte) 70);
         if (0 == var1) {
           AbstractImageProducer.aByteArrayArrayArray2008 = null;
@@ -1173,28 +894,19 @@ public class Buffer extends Node {
           SceneShadowMap.method1816(2, -7);
         }
       }
-    } catch (RuntimeException var2) {
-      throw AbstractGameWorld.cascadeException(var2, "wa.AA(" + var0 + ')');
-    }
   }
 
   public static void method795(byte var0, int var1) {
-    try {
-      if (var0 != 14) {
+    if (var0 != 14) {
         Buffer.anIntArray2591 = null;
       }
 
       ClientScriptCall.aClass93_2450.method1522(var0 ^ -114, var1);
-    } catch (RuntimeException var3) {
-      throw AbstractGameWorld.cascadeException(var3, "wa.OC(" + var0 + ',' +
-          var1 + ')');
-    }
   }
 
   public static void method799(int var0, int var1, int var2, int var3,
       int var4) {
-    try {
-      if (~GameObject.anInt2737 > -101) {
+    if (~GameObject.anInt2737 > -101) {
         GroundItemNode.method626(64);
       }
 
@@ -1319,16 +1031,10 @@ public class Buffer extends Node {
         FloorOverlay.aClass3_Sub28_Sub17_2096.draw(
             IdentityKit.aClass94_462, var6, var5 + var7, 16777215, -1);
       }
-    } catch (RuntimeException var14) {
-      throw AbstractGameWorld.cascadeException(
-          var14, "wa.FA(" + var0 + ',' + var1 + ',' + var2 + ',' + var3 + ',' +
-              var4 + ')');
-    }
   }
 
   public static GameString method802(int var0, boolean var1) {
-    try {
-      if (!var1) {
+    if (!var1) {
         Buffer.method746((byte) -33);
       }
 
@@ -1338,9 +1044,5 @@ public class Buffer extends Node {
               DummyInputStream.aClass94_43,
               DummyClass8.aClass94Array4016[var0]})
           : GroundItem.aClass94Array2935[var0];
-    } catch (RuntimeException var3) {
-      throw AbstractGameWorld.cascadeException(var3, "wa.RB(" + var0 + ',' +
-          var1 + ')');
-    }
   }
 }

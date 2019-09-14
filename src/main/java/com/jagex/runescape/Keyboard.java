@@ -23,8 +23,7 @@ public final class Keyboard implements KeyListener, FocusListener {
   public static int anInt1918;
 
   public void keyTyped(KeyEvent var1) {
-    try {
-      if (TextureSampler33.keyboard != null) {
+    if (TextureSampler33.keyboard != null) {
         int var2 = BitVariable.method1386(true, var1);
         if (-1 >= ~var2) {
           int var3 = 1 + SceneSomething.anInt491 & 127;
@@ -37,15 +36,10 @@ public final class Keyboard implements KeyListener, FocusListener {
       }
 
       var1.consume();
-    } catch (RuntimeException var4) {
-      throw AbstractGameWorld.cascadeException(var4,
-        "uf.keyTyped(" + (var1 != null ? "{...}" : "null") + ')');
-    }
   }
 
   public synchronized void keyPressed(KeyEvent var1) {
-    try {
-      if (null != TextureSampler33.keyboard) {
+    if (null != TextureSampler33.keyboard) {
         TextureSampler29.anInt3398 = 0;
         int var2 = var1.getKeyCode();
         if (0 <= var2 && DummyClass26.keyTable.length > var2) {
@@ -80,16 +74,10 @@ public final class Keyboard implements KeyListener, FocusListener {
           var1.consume();
         }
       }
-
-    } catch (RuntimeException var4) {
-      throw AbstractGameWorld.cascadeException(var4,
-        "uf.keyPressed(" + (var1 != null ? "{...}" : "null") + ')');
-    }
   }
 
   public synchronized void keyReleased(KeyEvent var1) {
-    try {
-      if (null != TextureSampler33.keyboard) {
+    if (null != TextureSampler33.keyboard) {
         TextureSampler29.anInt3398 = 0;
         int var2 = var1.getKeyCode();
         if (var2 >= 0 && ~DummyClass26.keyTable.length < ~var2) {
@@ -108,30 +96,19 @@ public final class Keyboard implements KeyListener, FocusListener {
       }
 
       var1.consume();
-    } catch (RuntimeException var3) {
-      throw AbstractGameWorld.cascadeException(var3,
-        "uf.keyReleased(" + (var1 != null ? "{...}" : "null") + ')');
-    }
   }
 
   public void focusGained(FocusEvent var1) {
   }
 
   public synchronized void focusLost(FocusEvent var1) {
-    try {
-      if (null != TextureSampler33.keyboard) {
+    if (null != TextureSampler33.keyboard) {
         AbstractTextureSampler.anInt2384 = -1;
       }
-
-    } catch (RuntimeException var3) {
-      throw AbstractGameWorld.cascadeException(var3,
-        "uf.focusLost(" + (var1 != null ? "{...}" : "null") + ')');
-    }
   }
 
   public static void method2085(int var0) {
-    try {
-      Keyboard.aClass93_1911 = null;
+    Keyboard.aClass93_1911 = null;
       Keyboard.sprites = null;
       if (var0 > 81) {
         Keyboard.aClass94_1915 = null;
@@ -139,14 +116,10 @@ public final class Keyboard implements KeyListener, FocusListener {
         Keyboard.aClass94_1917 = null;
         Keyboard.aClass94_1907 = null;
       }
-    } catch (RuntimeException var2) {
-      throw AbstractGameWorld.cascadeException(var2, "uf.A(" + var0 + ')');
-    }
   }
 
   public static void method2086(byte var0) {
-    try {
-      if (var0 >= 62) {
+    if (var0 >= 62) {
         int var1 = TextureCache.localPlayer.anInt2819 + TextureSampler19.anInt3216;
         int var2 = TextureCache.localPlayer.anInt2829 - -DummyInputStream.anInt42;
         if (499 < ~(-var1 + TextureSampler20.anInt3155)
@@ -213,9 +186,6 @@ public final class Keyboard implements KeyListener, FocusListener {
 
         Cache.method1098((byte) -94);
       }
-    } catch (RuntimeException var5) {
-      throw AbstractGameWorld.cascadeException(var5, "uf.B(" + var0 + ')');
-    }
   }
 
 }

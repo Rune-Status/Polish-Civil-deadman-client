@@ -9,36 +9,27 @@ public final class DummyClass20 {
 
 
   public static int method1817(byte var0) {
-    try {
-      if (var0 != 70) {
+    if (var0 != 70) {
         DummyClass20.method1818(true);
       }
 
       return !FileCacheRequester.aBoolean1084 ?
         (!NPC.method1986(var0 ^ 28) ? 1 : (AbstractObjectNode.aBoolean3604 ? 2 : 1)) :
         0;
-    } catch (RuntimeException var2) {
-      throw AbstractGameWorld.cascadeException(var2, "tc.B(" + var0 + ')');
-    }
   }
 
   public static void method1818(boolean var0) {
-    try {
-      DummyClass20.aClass94_1782 = null;
+    DummyClass20.aClass94_1782 = null;
       if (var0) {
         DummyClass20.aClass94_1783 = null;
       }
 
       DummyClass20.aClass94_1783 = null;
-    } catch (RuntimeException var2) {
-      throw AbstractGameWorld.cascadeException(var2, "tc.C(" + var0 + ')');
-    }
   }
 
   public static void method1819(int var0, int var1, Widget var2, byte var3, int var4, int var5,
                                int var6, int var7) {
-    try {
-      if (var3 >= -89) {
+    if (var3 >= -89) {
         DummyClass20.method1818(true);
       }
 
@@ -81,12 +72,6 @@ public final class DummyClass20 {
           DummyClass29.method909(-116, var2);
         }
       }
-
-    } catch (RuntimeException var11) {
-      throw AbstractGameWorld.cascadeException(var11,
-        "tc.A(" + var0 + ',' + var1 + ',' + (var2 != null ? "{...}" : "null") + ',' + var3 + ','
-          + var4 + ',' + var5 + ',' + var6 + ',' + var7 + ')');
-    }
   }
 
 }

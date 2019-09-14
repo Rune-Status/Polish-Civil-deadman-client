@@ -13,8 +13,7 @@ public final class DummyClass22 {
 
 
   public static void method1798(int var0, SpawnedGameObject var1) {
-    try {
-      long var2 = 0L;
+    long var2 = 0L;
       int var4 = -1;
       if (var0 <= 17) {
         DummyClass22.anInt1740 = -43;
@@ -47,36 +46,21 @@ public final class DummyClass22 {
       var1.anInt2254 = var4;
       var1.anInt2253 = var5;
       var1.anInt2257 = var6;
-    } catch (RuntimeException var7) {
-      throw AbstractGameWorld.cascadeException(var7,
-        "sf.B(" + var0 + ',' + (var1 != null ? "{...}" : "null") + ')');
-    }
   }
 
   public static void method1799(byte var0, FileUnpacker var1) {
-    try {
-      TextureSampler27.aClass153_3098 = var1;
+    TextureSampler27.aClass153_3098 = var1;
       int var2 = 113 / ((1 - var0) / 63);
-    } catch (RuntimeException var3) {
-      throw AbstractGameWorld.cascadeException(var3,
-        "sf.C(" + var0 + ',' + (var1 != null ? "{...}" : "null") + ')');
-    }
   }
 
   public static void method1800(byte var0) {
-    try {
-      DummyClass22.aClass94Array1739 = null;
+    DummyClass22.aClass94Array1739 = null;
       DummyClass22.aClass94_1738 = null;
       DummyClass22.particles = null;
-
-    } catch (RuntimeException var2) {
-      throw AbstractGameWorld.cascadeException(var2, "sf.A(" + var0 + ')');
-    }
   }
 
   public static void method1801(byte var0) {
-    try {
-      if (var0 >= -94) {
+    if (var0 >= -94) {
         DummyClass22.method1799((byte) -90, null);
       }
 
@@ -136,10 +120,6 @@ public final class DummyClass22 {
         TextureSampler8.anInt3460 = DummyClass5.anInt2993;
         ClientScriptEnum.anInt3660 = 1;
       }
-
-    } catch (RuntimeException var5) {
-      throw AbstractGameWorld.cascadeException(var5, "sf.D(" + var0 + ')');
-    }
   }
 
 }

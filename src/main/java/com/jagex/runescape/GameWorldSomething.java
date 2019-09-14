@@ -14,13 +14,9 @@ public final class GameWorldSomething {
   public GameString aClass94_508;
 
   public static void method960(int var0) {
-    try {
-      GameWorldSomething.anIntArray509 = null;
+    GameWorldSomething.anIntArray509 = null;
       GameWorldSomething.aClass94_500 = null;
       GameWorldSomething.FONT_P12 = null;
-    } catch (RuntimeException var2) {
-      throw AbstractGameWorld.cascadeException(var2, "ee.A(" + var0 + ')');
-    }
   }
 
 }

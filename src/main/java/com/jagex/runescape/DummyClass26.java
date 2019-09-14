@@ -37,8 +37,7 @@ public final class DummyClass26 {
   public static GameString aClass94_1615 = DummyClass26.aClass94_1610;
 
   public static void setState(int var0, int var1) {
-    try {
-      if (DummyClass15.state != var0) {
+    if (DummyClass15.state != var0) {
         if (-1 == ~DummyClass15.state) {
           ObjectCache.method1517((byte) -118);
         }
@@ -98,14 +97,10 @@ public final class DummyClass26 {
 
         DummyClass15.state = var0;
       }
-    } catch (RuntimeException var4) {
-      throw AbstractGameWorld.cascadeException(var4, "pl.C(" + var0 + ',' + var1 + ')');
-    }
   }
 
   public static void method1720(boolean var0, int var1) {
-    try {
-      AbstractFrameRegulator.anIntArray1695 = new int[104];
+    AbstractFrameRegulator.anIntArray1695 = new int[104];
       HashTableIterator.anIntArray1138 = new int[104];
       DummyClass52.anInt1174 = 99;
       Mouse.anIntArray1920 = new int[104];
@@ -124,14 +119,10 @@ public final class DummyClass26 {
       SomethingPacket151.anIntArray2606 = new int[104];
       DummyClass18.aByteArrayArrayArray81 = new byte[var2][104][104];
       TextureSampler36.floorUnderlayIds = new byte[var2][104][104];
-    } catch (RuntimeException var3) {
-      throw AbstractGameWorld.cascadeException(var3, "pl.B(" + var0 + ',' + var1 + ')');
-    }
   }
 
   public static void method1721(boolean var0) {
-    try {
-      DummyClass26.aClass94_1610 = null;
+    DummyClass26.aClass94_1610 = null;
       DummyClass26.keyTable = null;
       DummyClass26.aClass94_1612 = null;
       DummyClass26.TRADE_REQUEST = null;
@@ -142,14 +133,10 @@ public final class DummyClass26 {
 
       DummyClass26.anIntArray1613 = null;
       DummyClass26.aClass94_1615 = null;
-    } catch (RuntimeException var2) {
-      throw AbstractGameWorld.cascadeException(var2, "pl.D(" + ')');
-    }
   }
 
   public static SoftwareDirectColorSprite method1722(int var0) {
-    try {
-      int var1 = GroundItem.anIntArray2931[0] * TextureSampler26.anIntArray3076[0];
+    int var1 = GroundItem.anIntArray2931[0] * TextureSampler26.anIntArray3076[0];
       byte[] var2 = DummyClass5.aByteArrayArray2987[0];
       int[] var3 = new int[var1];
 
@@ -163,9 +150,6 @@ public final class DummyClass26 {
           TextureSampler26.anIntArray3076[0], var3);
       DummyClass37.method1035((byte) 122);
       return var0 >= -51 ? null : var6;
-    } catch (RuntimeException var5) {
-      throw AbstractGameWorld.cascadeException(var5, "pl.A(" + var0 + ')');
-    }
   }
 
 }

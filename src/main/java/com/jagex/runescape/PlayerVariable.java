@@ -16,8 +16,7 @@ public final class PlayerVariable {
   public int anInt556;
 
   public void method970(int var1, Buffer var2 ) {
-    try {
-      while (true) {
+    while (true) {
         int var3 = var2.readUnsignedByte();
         if (0 == var3) {
           if (var1 != -20638) {
@@ -29,31 +28,20 @@ public final class PlayerVariable {
 
         this.method972(var2, (byte) -117, var3);
       }
-    } catch (RuntimeException var4) {
-      throw AbstractGameWorld.cascadeException(var4,
-        "eh.B(" + var1 + ',' + (var2 != null ? "{...}" : "null") + ')');
-    }
   }
 
   private void method972(Buffer var1, byte var2, int var3) {
-    try {
-      if (var2 > -86) {
+    if (var2 > -86) {
         this.method970(-83, null);
       }
 
       if (~var3 == -6) {
         this.anInt556 = var1.readUnsignedShort();
       }
-
-    } catch (RuntimeException var5) {
-      throw AbstractGameWorld.cascadeException(var5,
-        "eh.F(" + (var1 != null ? "{...}" : "null") + ',' + var2 + ',' + var3 + ')');
-    }
   }
 
   public static void method968(int var0) {
-    try {
-      int[] var1 = new int[TextureSampler39.anInt3287];
+    int[] var1 = new int[TextureSampler39.anInt3287];
       int var2 = 0;
 
       int var3;
@@ -73,31 +61,20 @@ public final class PlayerVariable {
       if (var0 != 128) {
         PlayerVariable.method968(19);
       }
-
-    } catch (RuntimeException var5) {
-      throw AbstractGameWorld.cascadeException(var5, "eh.A(" + var0 + ')');
-    }
   }
 
   public static void method969(FileUnpacker var0, int var1) {
-    try {
-      SomethingSceneJ.aClass153_322 = var0;
+    SomethingSceneJ.aClass153_322 = var0;
       if (var1 < 39) {
         PlayerVariable.mouseWheelOffset = -82;
       }
-
-    } catch (RuntimeException var3) {
-      throw AbstractGameWorld.cascadeException(var3,
-        "eh.D(" + (var0 != null ? "{...}" : "null") + ',' + var1 + ')');
-    }
   }
 
   public static void method971(int var0, int[][] var1, float[][] var2, int var3, float[][] var4,
                               int var5, byte var6, int var7, int var8, byte var9, boolean var10,
                               byte var11, int var12, float[][] var13, int var14,
                               SomethingGl0 var15) {
-    try {
-      int var16 = 255 + (var0 << 8);
+    int var16 = 255 + (var0 << 8);
       int var17 = (var5 << 8) - -255;
       int var18 = (var8 << 8) - -255;
       int var19 = (var14 << 8) - -255;
@@ -293,28 +270,13 @@ public final class PlayerVariable {
 
         var15.method150(var7, var3, var12, var22, var21, false);
       }
-    } catch (RuntimeException var26) {
-      throw AbstractGameWorld.cascadeException(var26,
-        "eh.C(" + var0 + ',' + (var1 != null ? "{...}" : "null") + ',' + (var2 != null ?
-          "{...}" :
-          "null") + ',' + var3 + ',' + (var4 != null ? "{...}" : "null") + ',' + var5 + ',' + var6
-          + ',' + var7 + ',' + var8 + ',' + var9 + ',' + var10 + ',' + var11 + ',' + var12 + ',' + (
-          var13 != null ?
-            "{...}" :
-            "null") + ',' + var14 + ',' + (var15 != null ? "{...}" : "null") + ')');
-    }
   }
 
   public static void method973(byte var0) {
-    try {
-      PlayerVariable.aClass94_559 = null;
+    PlayerVariable.aClass94_559 = null;
       PlayerVariable.aClass94_560 = null;
       PlayerVariable.aClass153_557 = null;
       PlayerVariable.anIntArrayArrayArray558 = null;
-
-    } catch (RuntimeException var2) {
-      throw AbstractGameWorld.cascadeException(var2, "eh.E(" + var0 + ')');
-    }
   }
 
 }

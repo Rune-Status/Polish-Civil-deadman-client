@@ -19,8 +19,7 @@ public final class DummyClass36 extends DummyClass35 {
 
   public static void method1030(Widget var0, AbstractDirectColorSprite var1, int var2, int var3,
                                int var4, byte var5, int var6) {
-    try {
-      if (null != var1) {
+    if (null != var1) {
         if (var5 != 11) {
           DummyClass36.method1032(true);
         }
@@ -50,28 +49,18 @@ public final class DummyClass36 extends DummyClass35 {
 
         }
       }
-    } catch (RuntimeException var14) {
-      throw AbstractGameWorld.cascadeException(var14,
-          "em.B(" + (var0 != null ? "{...}" : "null") + ',' + "{...}" + ','
-              + var2 + ',' + var3 + ',' + var4 + ',' + var5 + ',' + var6 + ')');
-    }
   }
 
   public static int method1031(int var0, int var1) {
-    try {
-      if (var1 != 2) {
+    if (var1 != 2) {
         DummyClass36.aClass94_2610 = null;
       }
 
       return var0 >>> 7;
-    } catch (RuntimeException var3) {
-      throw AbstractGameWorld.cascadeException(var3, "em.C(" + var0 + ',' + var1 + ')');
-    }
   }
 
   public static void method1032(boolean var0) {
-    try {
-      DummyClass36.anIntArrayArrayArray2609 = null;
+    DummyClass36.anIntArrayArrayArray2609 = null;
       DummyClass36.aString2611 = null;
       DummyClass36.aClass94_2616 = null;
       DummyClass36.aClass94_2610 = null;
@@ -79,10 +68,6 @@ public final class DummyClass36 extends DummyClass35 {
       if (var0) {
         DummyClass36.method1032(true);
       }
-
-    } catch (RuntimeException var2) {
-      throw AbstractGameWorld.cascadeException(var2, "em.A(" + ')');
-    }
   }
 
 }

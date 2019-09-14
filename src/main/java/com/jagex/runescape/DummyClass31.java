@@ -13,36 +13,26 @@ public final class DummyClass31 {
 
 
   public static void method1681(int var0) {
-    try {
-      if (TextureSampler28.loginState == 5) {
+    if (TextureSampler28.loginState == 5) {
         if (var0 != -1) {
           DummyClass31.SERVER_JS5_DROP = null;
         }
 
         TextureSampler28.loginState = 6;
       }
-    } catch (RuntimeException var2) {
-      throw AbstractGameWorld.cascadeException(var2, "p.A(" + var0 + ')');
-    }
   }
 
   public static void method1682(int var0) {
-    try {
-      DummyClass31.SERVER_JS5_DROP = null;
+    DummyClass31.SERVER_JS5_DROP = null;
       DummyClass31.aClass61_1471 = null;
       if (var0 >= -65) {
         DummyClass31.method1681(-121);
       }
-
-    } catch (RuntimeException var2) {
-      throw AbstractGameWorld.cascadeException(var2, "p.C(" + var0 + ')');
-    }
   }
 
   public static void method1683(int var0, boolean var1, int var2, boolean var3, CollisionMap var4,
                                int var5, int var6, int var7, byte var8, int var9, int var10) {
-    try {
-      if (var1 && !NPC.method1986(103) && 0 == (2
+    if (var1 && !NPC.method1986(103) && 0 == (2
         & BZipDecompressorState.tileFlags[0][var7][var9])) {
         if (0 != (16 & BZipDecompressorState.tileFlags[var2][var7][var9])) {
           return;
@@ -738,13 +728,6 @@ public final class DummyClass31 {
           }
         }
       }
-    } catch (RuntimeException var36) {
-      throw AbstractGameWorld.cascadeException(var36,
-        "p.B(" + var0 + ',' + var1 + ',' + var2 + ',' + var3 + ',' + (var4 != null ?
-          "{...}" :
-          "null") + ',' + var5 + ',' + var6 + ',' + var7 + ',' + var8 + ',' + var9 + ',' + var10
-          + ')');
-    }
   }
 
 }

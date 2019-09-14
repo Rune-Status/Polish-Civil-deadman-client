@@ -14,8 +14,7 @@ public final class ScriptState {
   public int anInt877 = -1;
 
   public static void method1175(int var0, int var1) {
-    try {
-      TextureSampler13.anInt3362 = -1;
+    TextureSampler13.anInt3362 = -1;
       ProceduralTexture.anInt1150 = -1;
       if (var1 <= 55) {
         ScriptState
@@ -24,14 +23,10 @@ public final class ScriptState {
 
       SomethingQuickChat2.anInt3536 = var0;
       SomethingInScenePacket202.method117((byte) 87);
-    } catch (RuntimeException var3) {
-      throw AbstractGameWorld.cascadeException(var3, "hj.D(" + var0 + ',' + var1 + ')');
-    }
   }
 
   public static boolean method1176(GameString var0, byte var1) {
-    try {
-      if (var0 != null) {
+    if (var0 != null) {
         for (int var2 = 0; FileSystem.anInt104 > var2; ++var2) {
           if (var0.method1531(SceneSomething2.aClass94Array1046[var2])) {
             return true;
@@ -46,16 +41,11 @@ public final class ScriptState {
       } else {
         return false;
       }
-    } catch (RuntimeException var3) {
-      throw AbstractGameWorld.cascadeException(var3,
-          "hj.A(" + "{...}" + ',' + var1 + ')');
-    }
   }
 
   public static void method1177(int var0, long var1, byte var3, GameString var4, int var5,
                                short var6, GameString var7, int var8) {
-    try {
-      if (var3 > -23) {
+    if (var3 > -23) {
         ScriptState
             .method1177(-45, 37L, (byte) -37, null, -16, (short) 110, null, -75);
       }
@@ -74,22 +64,13 @@ public final class ScriptState {
         }
 
       }
-    } catch (RuntimeException var10) {
-      throw AbstractGameWorld.cascadeException(var10,
-        "hj.C(" + var0 + ',' + var1 + ',' + var3 + ',' + (var4 != null ? "{...}" : "null") + ','
-          + var5 + ',' + var6 + ',' + (var7 != null ? "{...}" : "null") + ',' + var8 + ')');
-    }
   }
 
   public static void method1178(byte var0) {
-    try {
-      int var1 = 103 / ((var0 - -13) / 52);
+    int var1 = 103 / ((var0 - -13) / 52);
       ScriptState.aClass94_875 = null;
       ScriptState.HINT_HEAD_ICONS = null;
       ScriptState.configs = null;
-    } catch (RuntimeException var2) {
-      throw AbstractGameWorld.cascadeException(var2, "hj.B(" + var0 + ')');
-    }
   }
 
 }

@@ -24,8 +24,7 @@ public final class SomethingVolume15 extends Node {
   }
 
   public SomethingVolume15(byte[] var1 ) {
-    try {
-      this.aShortArray2434 = new short[128];
+    this.aShortArray2434 = new short[128];
       this.aByteArray2430 = new byte[128];
       this.aClass3_Sub12_Sub1Array2431 = new SomethingMusic0[128];
       this.aByteArray2422 = new byte[128];
@@ -460,26 +459,16 @@ public final class SomethingVolume15 extends Node {
           var28.anInt2069 = var2.readUnsignedByte();
         }
       }
-
-    } catch (RuntimeException var36) {
-      throw AbstractGameWorld.cascadeException(var36,
-        "jk.<init>(" + (var1 != null ? "{...}" : "null") + ')');
-    }
   }
 
   public void method369(byte var1 ) {
-    try {
-      int var2 = 127 % ((-70 - var1) / 42);
+    int var2 = 127 % ((-70 - var1) / 42);
       this.anIntArray2423 = null;
-    } catch (RuntimeException var3) {
-      throw AbstractGameWorld.cascadeException(var3, "jk.A(" + var1 + ')');
-    }
   }
 
   public boolean method373(int var1, int[] var2, MidiSomething var3,
       byte[] var4 ) {
-    try {
-      if (var1 == 17904) {
+    if (var1 == 17904) {
         int var6 = 0;
         SomethingMusic0 var7 = null;
         boolean var5 = true;
@@ -513,26 +502,15 @@ public final class SomethingVolume15 extends Node {
       } else {
         return false;
       }
-    } catch (RuntimeException var10) {
-      throw AbstractGameWorld.cascadeException(var10,
-        "jk.E(" + var1 + ',' + (var2 != null ? "{...}" : "null") + ',' + (var3 != null ?
-          "{...}" :
-          "null") + ',' + (var4 != null ? "{...}" : "null") + ')');
-    }
   }
 
   public static void method370(byte var0) {
-    try {
-      int var1 = -125 / ((0 - var0) / 59);
+    int var1 = -125 / ((0 - var0) / 59);
       DummyClass14.aClass93_1955.method1524(3);
-    } catch (RuntimeException var2) {
-      throw AbstractGameWorld.cascadeException(var2, "jk.B(" + var0 + ')');
-    }
   }
 
   public static SomethingWorldMapy method371(int var0, GameString var1) {
-    try {
-      if (var0 != 2) {
+    if (var0 != 2) {
         SomethingVolume15.method372(false);
       }
 
@@ -544,28 +522,19 @@ public final class SomethingVolume15 extends Node {
       }
 
       return null;
-    } catch (RuntimeException var3) {
-      throw AbstractGameWorld.cascadeException(var3,
-        "jk.C(" + var0 + ',' + (var1 != null ? "{...}" : "null") + ')');
-    }
   }
 
   public static void method372(boolean var0) {
-    try {
-      SomethingVolume15.COMMAND_TWEEN = null;
+    SomethingVolume15.COMMAND_TWEEN = null;
       if (var0) {
         SomethingVolume15.aClass93_2428 = null;
         SomethingVolume15.gameSocket = null;
       }
-    } catch (RuntimeException var2) {
-      throw AbstractGameWorld.cascadeException(var2, "jk.D(" + var0 + ')');
-    }
   }
 
   public static void method374(int var0, boolean var1, byte[] var2, int var3, int var4,
                               CollisionMap[] var5) {
-    try {
-      Buffer var6 = new Buffer(var2);
+    Buffer var6 = new Buffer(var2);
       int var7 = -1;
 
       while (true) {
@@ -614,11 +583,6 @@ public final class SomethingVolume15 extends Node {
           }
         }
       }
-    } catch (RuntimeException var21) {
-      throw AbstractGameWorld.cascadeException(var21,
-        "jk.F(" + var0 + ',' + var1 + ',' + (var2 != null ? "{...}" : "null") + ',' + var3 + ','
-          + var4 + ',' + (var5 != null ? "{...}" : "null") + ')');
-    }
   }
 
 }

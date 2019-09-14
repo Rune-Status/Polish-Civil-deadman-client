@@ -21,8 +21,7 @@ public final class FloorUnderlay {
   private int anInt1404;
 
   private void setHSL(int var1, byte var2) {
-    try {
-      double red = (255 & var1 >> 16) / 256.0D;
+    double red = (255 & var1 >> 16) / 256.0D;
       double green = (255 & var1 >> 8) / 256.0D;
       double min = red;
       double blue = (var1 & 255) / 256.0D;
@@ -98,15 +97,10 @@ public final class FloorUnderlay {
       } else {
         this.anInt1406 = 0;
       }
-
-    } catch (RuntimeException var20) {
-      throw AbstractGameWorld.cascadeException(var20, "ni.D(" + var1 + ',' + var2 + ')');
-    }
   }
 
   public void parseConfig(int var1, Buffer var2, int var3 ) {
-    try {
-      while (true) {
+    while (true) {
         int opcode = var2.readUnsignedByte();
         if (opcode == 0) {
           return;
@@ -114,15 +108,10 @@ public final class FloorUnderlay {
 
         this.method1604(opcode, var2, var1);
       }
-    } catch (RuntimeException var5) {
-      throw AbstractGameWorld.cascadeException(var5,
-        "ni.F(" + var1 + ',' + (var2 != null ? "{...}" : "null") + ',' + var3 + ')');
-    }
   }
 
   private void method1604(int var2, Buffer var3, int var4) {
-    try {
-      if (-2 == ~var2) {
+    if (-2 == ~var2) {
         this.anInt1404 = var3.readUnsignedMedium((byte) 93);
         this.setHSL(this.anInt1404, (byte) 81);
       } else {
@@ -139,16 +128,10 @@ public final class FloorUnderlay {
           }
         }
       }
-
-    } catch (RuntimeException var6) {
-      throw AbstractGameWorld.cascadeException(var6,
-        "ni.E(" + var2 + ',' + (var3 != null ? "{...}" : "null") + ',' + var4 + ')');
-    }
   }
 
   public static int method1602(int var0, GameString var1) {
-    try {
-      if (DummyClass25.aClass131_1624 != null && ~var1.getLength() != -1) {
+    if (DummyClass25.aClass131_1624 != null && ~var1.getLength() != -1) {
         for (int var2 = var0; ~DummyClass25.aClass131_1624.anInt1720 < ~var2; ++var2) {
           if (DummyClass25.aClass131_1624.aClass94Array1721[var2].method1560(
             TextureSampler15.aClass94_3192, true, OndemandFileRequest.aClass94_4066)
@@ -161,15 +144,10 @@ public final class FloorUnderlay {
       } else {
         return -1;
       }
-    } catch (RuntimeException var3) {
-      throw AbstractGameWorld.cascadeException(var3,
-        "ni.G(" + var0 + ',' + (var1 != null ? "{...}" : "null") + ')');
-    }
   }
 
   public static int method1603(byte var0, int var1, Random var2) {
-    try {
-      if (~var1 >= -1) {
+    if (~var1 >= -1) {
         throw new IllegalArgumentException();
       } else if (Projectile.isPo2((byte) -115, var1)) {
         return (int) ((var2.nextInt() & 4294967295L) * var1 >> 32);
@@ -184,36 +162,23 @@ public final class FloorUnderlay {
         int var5 = -101 % ((var0 - -52) / 33);
         return TextureSampler27.method201(var4, var1, -58);
       }
-    } catch (RuntimeException var6) {
-      throw AbstractGameWorld.cascadeException(var6,
-        "ni.C(" + var0 + ',' + var1 + ',' + (var2 != null ? "{...}" : "null") + ')');
-    }
   }
 
   public static void method1605(int var0, GameString var1, int var2) {
-    try {
-      ++SomethingSceneI.anInt421;
+    ++SomethingSceneI.anInt421;
       TextureSampler12.secureBuffer.writePacket(188);
       TextureSampler12.secureBuffer.method790(var2, var0 + -13326);
       if (var0 == 255) {
         TextureSampler12.secureBuffer.writeLong(var1.toBase37());
       }
-    } catch (RuntimeException var4) {
-      throw AbstractGameWorld.cascadeException(var4,
-        "ni.B(" + var0 + ',' + (var1 != null ? "{...}" : "null") + ',' + var2 + ')');
-    }
   }
 
   public static void method1606(byte var0) {
-    try {
-      FloorUnderlay.aClass94_1415 = null;
+    FloorUnderlay.aClass94_1415 = null;
       FloorUnderlay.aClass94_1409 = null;
       int var1 = 86 % ((49 - var0) / 48);
       FloorUnderlay.fileUnpacker19 = null;
       FloorUnderlay.aClass136_1413 = null;
-    } catch (RuntimeException var2) {
-      throw AbstractGameWorld.cascadeException(var2, "ni.A(" + var0 + ')');
-    }
   }
 
 }

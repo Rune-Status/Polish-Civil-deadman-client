@@ -36,21 +36,15 @@ public final class GameClient extends GameStub {
   public static GameString aClass94_2197 = GameClient.aClass94_2198;
 
   private void setUpdateError(int var2) {
-    try {
-      ++DummyClass43.ondemandRequester.anInt1011;
+    ++DummyClass43.ondemandRequester.anInt1011;
       DummyClass1.socketRequest = null;
       DummyClass43.ondemandRequester.anInt1010 = var2;
       DummyInputStream.updateSocket = null;
       DummyClass18.anInt80 = 0;
-    } catch (RuntimeException var4) {
-      throw AbstractGameWorld.cascadeException(var4,
-          "com.jagex.runescape.GameClient.P(" + var2 + ')');
-    }
   }
 
   private void updateGame(byte var1) {
-    try {
-      for (
+    for (
           SomethingOtherWorldMap.anInt2537 = 0; FileCacheRequest.hasKeyInput()
           && ~SomethingOtherWorldMap.anInt2537 > -129;
           ++SomethingOtherWorldMap.anInt2537) {
@@ -227,15 +221,10 @@ public final class GameClient extends GameStub {
 
         Light.executeScript(var11);
       }
-    } catch (RuntimeException var10) {
-      throw AbstractGameWorld.cascadeException(var10,
-          "com.jagex.runescape.GameClient.I(" + var1 + ')');
-    }
   }
 
   private void method48(boolean var1) {
-    try {
-      boolean var2 = DummyClass43.ondemandRequester.method1243((byte) -61);
+    boolean var2 = DummyClass43.ondemandRequester.method1243((byte) -61);
       if (!var1) {
         GameClient.aClass94_2198 = null;
       }
@@ -243,17 +232,10 @@ public final class GameClient extends GameStub {
       if (!var2) {
         this.method49();
       }
-
-    } catch (RuntimeException var3) {
-      throw AbstractGameWorld.cascadeException(var3,
-          "com.jagex.runescape.GameClient.J(" + var1 + ')');
-    }
   }
 
   private void method49() {
-    try {
-
-      if (~DummyClass8.anInt4026 > ~DummyClass43.ondemandRequester.anInt1011) {
+    if (~DummyClass8.anInt4026 > ~DummyClass43.ondemandRequester.anInt1011) {
         TextureSampler21.anInt3068 =
             5 * 50 * (DummyClass43.ondemandRequester.anInt1011 + -1);
         if (DummyClass11.anInt2036 == Projectile.anInt2894) {
@@ -369,15 +351,10 @@ public final class GameClient extends GameStub {
         }
 
       }
-    } catch (RuntimeException var4) {
-      throw AbstractGameWorld
-          .cascadeException(var4, "com.jagex.runescape.GameClient.E()");
-    }
   }
 
   private void handleLoading() {
-    try {
-      if (!GameString.safemode) {
+    if (!GameString.safemode) {
         while (FileCacheRequest.hasKeyInput()) {
           if (~TextureSampler7.anInt3342 == -116
               || ~TextureSampler7.anInt3342 == -84) {
@@ -896,15 +873,10 @@ public final class GameClient extends GameStub {
         }
 
       }
-    } catch (RuntimeException var6) {
-      throw AbstractGameWorld
-          .cascadeException(var6, "com.jagex.runescape.GameClient.A()");
-    }
   }
 
   public void update() {
-    try {
-      if (-1001 != ~DummyClass15.state) {
+    if (-1001 != ~DummyClass15.state) {
         ++AbstractGameWorld.updateCycle;
         if (AbstractGameWorld.updateCycle % 1000 == 1) {
           GregorianCalendar calendar = new GregorianCalendar();
@@ -962,15 +934,10 @@ public final class GameClient extends GameStub {
         }
 
       }
-    } catch (RuntimeException var3) {
-      throw AbstractGameWorld
-          .cascadeException(var3, "com.jagex.runescape.GameClient.N()");
-    }
   }
 
   public void destroy(byte var1) {
-    try {
-      if (GlRenderer.useOpenGlRenderer) {
+    if (GlRenderer.useOpenGlRenderer) {
         GlRenderer.releaseGlResources();
       }
 
@@ -1041,16 +1008,10 @@ public final class GameClient extends GameStub {
         }
       } catch (IOException var3) {
       }
-
-    } catch (RuntimeException var4) {
-      throw AbstractGameWorld.cascadeException(var4,
-          "com.jagex.runescape.GameClient.F(" + var1 + ')');
-    }
   }
 
   public void method33(int var1) {
-    try {
-      GameClient.method43(true);
+    GameClient.method43(true);
       GameString.method1541(-8635);
       DummyClass35.method1024(21474);
       SomethingWorldMapy.method542((byte) -46);
@@ -1329,10 +1290,6 @@ public final class GameClient extends GameStub {
       SomethingTexture3.method1348((byte) 100);
       SomethingTexture4.method1350((byte) 75);
       SomethingTexture1.method1345(-71);
-    } catch (RuntimeException var3) {
-      throw AbstractGameWorld.cascadeException(var3,
-          "com.jagex.runescape.GameClient.C(" + var1 + ')');
-    }
 
     if (GameStub.anInt12 != 0) {
       GameClient.aBoolean2201 = true;
@@ -1341,8 +1298,7 @@ public final class GameClient extends GameStub {
   }
 
   public void init() {
-    try {
-      if (this.isValidHost()) {
+    if (this.isValidHost()) {
         GameObjectConfig.portOffset = Integer
             .parseInt(this.getParameter("worldid"));
         AbstractGameWorld.usageLocation = Integer
@@ -1412,15 +1368,10 @@ public final class GameClient extends GameStub {
         this.method41((byte) -56, 765, 32 - -TextureSampler20.usageMode, 1530,
             503);
       }
-    } catch (RuntimeException var11) {
-      throw AbstractGameWorld
-          .cascadeException(var11, "com.jagex.runescape.GameClient.init()");
-    }
   }
 
   public void handleDraw(int var1) {
-    try {
-      if (~DummyClass15.state != -1001) {
+    if (~DummyClass15.state != -1001) {
         boolean var2 = NPC.method1988(false);
         if (var2 && MidiSomething.aBoolean1158
             && GameWorld.audioOutputStream0 != null) {
@@ -1599,15 +1550,10 @@ public final class GameClient extends GameStub {
         }
 
       }
-    } catch (RuntimeException var9) {
-      throw AbstractGameWorld.cascadeException(var9,
-          "com.jagex.runescape.GameClient.K(" + var1 + ')');
-    }
   }
 
   public void initialize(int var1) {
-    try {
-      DummyClass25.resizeCanvas();
+    DummyClass25.resizeCanvas();
       TextureSampler31.fileCacheRequester = new FileCacheRequester();
       DummyClass43.ondemandRequester = new OndemandRequester();
       if (TextureSampler20.usageMode != 0) {
@@ -1706,11 +1652,6 @@ public final class GameClient extends GameStub {
       if (~AbstractGameWorld.usageLocation != -1) {
         DummyClass29.aBoolean438 = true;
       }
-
-    } catch (RuntimeException var4) {
-      throw AbstractGameWorld.cascadeException(var4,
-          "com.jagex.runescape.GameClient.B(" + var1 + ')');
-    }
   }
 
   public static Widget method42(Widget var0) {
@@ -1730,8 +1671,7 @@ public final class GameClient extends GameStub {
   }
 
   public static void method43(boolean var0) {
-    try {
-      if (!var0) {
+    if (!var0) {
         GameClient.aClass3_Sub11ArrayArray2199 = null;
       }
 
@@ -1741,10 +1681,6 @@ public final class GameClient extends GameStub {
       GameClient.aClass130_2194 = null;
       GameClient.aClass94_2197 = null;
       GameClient.aClass3_Sub11ArrayArray2199 = null;
-    } catch (RuntimeException var2) {
-      throw AbstractGameWorld.cascadeException(var2,
-          "com.jagex.runescape.GameClient.O(" + var0 + ')');
-    }
   }
 
   public static WidgetAccess method44(Widget var0) {
@@ -1782,7 +1718,6 @@ public final class GameClient extends GameStub {
 
   public static void main(String[] args) {
     try {
-      try {
         if (args.length != 5) {
           TextureSampler18.printUsage("argument count");
         }
@@ -1851,12 +1786,6 @@ public final class GameClient extends GameStub {
       } catch (Exception var4) {
         GZipDecompressor.reportError(null, var4, (byte) 119);
       }
-
-    } catch (RuntimeException var5) {
-      throw AbstractGameWorld.cascadeException(var5,
-          "com.jagex.runescape.GameClient.main(" + (args != null ? "{...}"
-              : "null") + ')');
-    }
   }
 
   public static void method50(Widget[] var0, int var1, int var2, int var3,

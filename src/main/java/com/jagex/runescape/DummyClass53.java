@@ -19,8 +19,7 @@ public final class DummyClass53 {
   public static GameString aClass94_1335 = DummyClass53.aClass94_1334;
 
   public static void method1582(int var0) {
-    try {
-      DummyClass53.aClass94_1335 = null;
+    DummyClass53.aClass94_1335 = null;
       DummyClass53.aClass3_Sub28_Sub16_1339 = null;
       DummyClass53.aClass94_1342 = null;
       DummyClass53.UM_PREFIX = null;
@@ -31,15 +30,11 @@ public final class DummyClass53 {
 
       DummyClass53.aClass94_1334 = null;
       DummyClass53.aClass94_1337 = null;
-    } catch (RuntimeException var2) {
-      throw AbstractGameWorld.cascadeException(var2, "nb.D(" + var0 + ')');
-    }
   }
 
   public static void method1583(int var0, int var1, int var2, int var3, int var4, int var5, int var6,
                                int var7, int var8, int var9) {
-    try {
-      if (var3 != 3) {
+    if (var3 != 3) {
         DummyClass53.method1582(45);
       }
 
@@ -77,17 +72,10 @@ public final class DummyClass53 {
           var11 = var34;
         }
       }
-
-    } catch (RuntimeException var35) {
-      throw AbstractGameWorld.cascadeException(var35,
-        "nb.B(" + var0 + ',' + var1 + ',' + var2 + ',' + var3 + ',' + var4 + ',' + var5 + ',' + var6
-          + ',' + var7 + ',' + var8 + ',' + var9 + ')');
-    }
   }
 
   public static void method1584(int var0, int var1, int var2, int var3, int var4, int var5) {
-    try {
-      if (var4 != -26571) {
+    if (var4 != -26571) {
         DummyClass53.method1586(92, 25);
       }
 
@@ -103,29 +91,20 @@ public final class DummyClass53 {
         }
 
       }
-    } catch (RuntimeException var7) {
-      throw AbstractGameWorld.cascadeException(var7,
-        "nb.E(" + var0 + ',' + var1 + ',' + var2 + ',' + var3 + ',' + var4 + ',' + var5 + ')');
-    }
   }
 
   public static int nearestPo2(byte var0, int var1) {
-    try {
-      --var1;
+    --var1;
       var1 |= var1 >>> 1;
       var1 |= var1 >>> 2;
       var1 |= var1 >>> 4;
       var1 |= var1 >>> 8;
       var1 |= var1 >>> 16;
       return 1 + var1;
-    } catch (RuntimeException var3) {
-      throw AbstractGameWorld.cascadeException(var3, "nb.C(" + var0 + ',' + var1 + ')');
-    }
   }
 
   public static GameString method1586(int var0, int var1) {
-    try {
-      if (-1 > ~var1 && -256 <= ~var1) {
+    if (-1 > ~var1 && -256 <= ~var1) {
         GameString var2 = new GameString();
         if (var0 != 23161) {
           DummyClass53.aClass3_Sub28_Sub16_1339 = null;
@@ -138,9 +117,6 @@ public final class DummyClass53 {
       } else {
         throw new IllegalArgumentException();
       }
-    } catch (RuntimeException var3) {
-      throw AbstractGameWorld.cascadeException(var3, "nb.A(" + var0 + ',' + var1 + ')');
-    }
   }
 
 }

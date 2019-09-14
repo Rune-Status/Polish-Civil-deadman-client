@@ -63,8 +63,7 @@ public final class DummyClass29 {
   }
 
   public static void method908(int var0) {
-    try {
-      DummyClass29.aClass11_439 = null;
+    DummyClass29.aClass11_439 = null;
       if (var0 != 5157) {
         DummyClass29.aClass94_434 = null;
       }
@@ -72,28 +71,19 @@ public final class DummyClass29 {
       DummyClass29.aClass94_436 = null;
       DummyClass29.aClass94_434 = null;
       DummyClass29.aShortArrayArray435 = null;
-    } catch (RuntimeException var2) {
-      throw AbstractGameWorld.cascadeException(var2, "dg.A(" + var0 + ')');
-    }
   }
 
   public static void method909(int var0, Widget var1) {
-    try {
-      if (~SomethingOtherWorldMap.anInt2535 == ~var1.anInt204) {
+    if (~SomethingOtherWorldMap.anInt2535 == ~var1.anInt204) {
         GroundItemNode.aBooleanArray3674[var1.anInt292] = true;
       }
 
       int var2 = -100 / ((var0 - 55) / 52);
-    } catch (RuntimeException var3) {
-      throw AbstractGameWorld.cascadeException(var3,
-        "dg.C(" + var0 + ',' + (var1 != null ? "{...}" : "null") + ')');
-    }
   }
 
   public static void method910(int var0, int var1, int var2, int var3, int var4, int var5,
                               CollisionMap var6) {
-    try {
-      boolean var9 = true;
+    boolean var9 = true;
       long var7 = 0L;
       if (var4 == 0) {
         var7 = SomethingAudio.method2174(var3, var2, var1);
@@ -250,13 +240,6 @@ public final class DummyClass29 {
         }
 
       }
-    } catch (RuntimeException var16) {
-      throw AbstractGameWorld.cascadeException(var16,
-        "dg.B(" + var0 + ',' + var1 + ',' + var2 + ',' + var3 + ',' + var4 + ',' + var5 + ',' + (
-          var6 != null ?
-            "{...}" :
-            "null") + ')');
-    }
   }
 
 }

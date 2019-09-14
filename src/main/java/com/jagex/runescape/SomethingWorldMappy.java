@@ -15,44 +15,29 @@ public final class SomethingWorldMappy extends Node {
 
 
   public SomethingWorldMappy(int var1, int var2, int var3, int var4 ) {
-    try {
-      this.anInt2497 = var4;
+    this.anInt2497 = var4;
       this.anInt2494 = var2;
       this.anInt2495 = var3;
       this.anInt2492 = var1;
-    } catch (RuntimeException var6) {
-      throw AbstractGameWorld.cascadeException(var6,
-        "lh.<init>(" + var1 + ',' + var2 + ',' + var3 + ',' + var4 + ')');
-    }
   }
 
   public boolean method393(byte var1, int var2, int var3 ) {
-    try {
-      if (var1 != -45) {
+    if (var1 != -45) {
         SomethingWorldMappy.method394(6, -105);
       }
 
       return var3 >= this.anInt2492
           && ~this.anInt2495 <= ~var3 && this.anInt2494 <= var2
         && var2 <= this.anInt2497;
-    } catch (RuntimeException var5) {
-      throw AbstractGameWorld.cascadeException(var5,
-        "lh.D(" + var1 + ',' + var2 + ',' + var3 + ')');
-    }
   }
 
   public static void method394(int var0, int var1) {
-    try {
-      TextureSampler39.anInt3285 = var0;
+    TextureSampler39.anInt3285 = var0;
       IntegerNode.method383(-32584, 3);
       IntegerNode.method383(-32584, 4);
       if (var1 <= 83) {
         SomethingWorldMappy.method395(null, -43, -61, -51, 101, -106, -58, true);
       }
-
-    } catch (RuntimeException var3) {
-      throw AbstractGameWorld.cascadeException(var3, "lh.E(" + var0 + ',' + var1 + ')');
-    }
   }
 
   public static void method395(SomethingSceneTile var0, int var1, int var2, int var3, int var4,
@@ -151,31 +136,23 @@ public final class SomethingWorldMappy extends Node {
   }
 
   public static void method396(int var0) {
-    try {
-      if (var0 != 0) {
+    if (var0 != 0) {
         SomethingWorldMappy.method397((byte) 35);
       }
 
       SomethingWorldMappy.audioOutputStream1 = null;
       SomethingWorldMappy.aClass94_2498 = null;
       SomethingWorldMappy.aClass94_2496 = null;
-    } catch (RuntimeException var2) {
-      throw AbstractGameWorld.cascadeException(var2, "lh.B(" + var0 + ')');
-    }
   }
 
   public static void method397(byte var0) {
-    try {
-      MonoChromaticImageCache.aClass93_1569.method1524(3);
+    MonoChromaticImageCache.aClass93_1569.method1524(3);
       SomethingVolume15.aClass93_2428.method1524(3);
       if (var0 != -41) {
         SomethingWorldMappy.method394(14, 52);
       }
 
       Cache.aClass93_743.method1524(3);
-    } catch (RuntimeException var2) {
-      throw AbstractGameWorld.cascadeException(var2, "lh.C(" + var0 + ')');
-    }
   }
 
 }

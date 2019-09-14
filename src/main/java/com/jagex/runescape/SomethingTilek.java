@@ -23,32 +23,21 @@ public final class SomethingTilek {
 
   public SomethingTilek(int var1, int var2, int var3, int var4, int var5, int var6,
       boolean var7 ) {
-    try {
-      this.anInt1667 = var2;
+    this.anInt1667 = var2;
       this.anInt1664 = var3;
       this.anInt1675 = var1;
       this.anInt1673 = var6;
       this.aBoolean1674 = var7;
       this.anInt1663 = var4;
       this.anInt1670 = var5;
-    } catch (RuntimeException var9) {
-      throw AbstractGameWorld.cascadeException(var9,
-        "rh.<init>(" + var1 + ',' + var2 + ',' + var3 + ',' + var4 + ',' + var5 + ',' + var6 + ','
-          + var7 + ')');
-    }
   }
 
   public static void method1751(byte var0) {
-    try {
-      SomethingTilek.aClass13_1666 = null;
+    SomethingTilek.aClass13_1666 = null;
       SomethingTilek.client = null;
       SomethingTilek.OK = null;
       SomethingTilek.anIntArray1662 = null;
       SomethingTilek.p12Font = null;
-
-    } catch (RuntimeException var2) {
-      throw AbstractGameWorld.cascadeException(var2, "rh.A(" + var0 + ')');
-    }
   }
 
 }

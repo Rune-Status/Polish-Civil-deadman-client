@@ -33,8 +33,7 @@ public final class Player extends Mobile {
   private int titleId;
 
   public void parseConfig(Buffer buffer ) {
-    try {
-      buffer.position = 0;
+    buffer.position = 0;
       int var3 = buffer.readUnsignedByte();
       int var8 = -1;
       int var4 = 1 & var3;
@@ -145,18 +144,12 @@ public final class Player extends Mobile {
       if (this.aClass127_Sub1_2801 != null) {
         this.aClass127_Sub1_2801.method1759();
       }
-
-    } catch (RuntimeException var18) {
-      throw AbstractGameWorld.cascadeException(var18,
-        "e.P(" + (buffer != null ? "{...}" : "null") + ')');
-    }
   }
 
   private void draw(DummyClass0 var1, int var2, AbstractModel var3, int var4, int var5,
                           int var6, int var7, int var8, int var9, int var10, int var11, int var12,
                           int var13, int var14, int var15) {
-    try {
-      int var16 = var4 * var4 - -(var2 * var2);
+    int var16 = var4 * var4 - -(var2 * var2);
       if (-17 >= ~var16 && -360001 <= ~var16) {
         int var17 = (int) (325.949D * Math.atan2(var4, var2)) & var7;
         AbstractModel var18 =
@@ -178,51 +171,30 @@ public final class Player extends Mobile {
         }
 
       }
-    } catch (RuntimeException var21) {
-      throw AbstractGameWorld.cascadeException(var21,
-        "e.N(" + (var1 != null ? "{...}" : "null") + ',' + var2 + ',' + (var3 != null ?
-          "{...}" :
-          "null") + ',' + var4 + ',' + var5 + ',' + var6 + ',' + var7 + ',' + var8 + ',' + var9
-          + ',' + var10 + ',' + var11 + ',' + var12 + ',' + var13 + ',' + var14 + ',' + var15
-          + ')');
-    }
   }
 
   public boolean hasConfiguration(byte var1 ) {
-    try {
-      if (var1 != 17) {
+    if (var1 != 17) {
         Player.quady0 = null;
       }
 
       return this.appearance != null;
-    } catch (RuntimeException var3) {
-      throw AbstractGameWorld.cascadeException(var3, "e.L(" + var1 + ')');
-    }
   }
 
   public int getRenderAnimationId() {
-    try {
-      return this.renderAnimationId;
-    } catch (RuntimeException var3) {
-      throw AbstractGameWorld.cascadeException(var3, "e.B()");
-    }
+    return this.renderAnimationId;
   }
 
   public int getSize() {
-    try {
-      if (this.appearance != null && this.appearance.npcId != -1) {
+    if (this.appearance != null && this.appearance.npcId != -1) {
         return SubNode.getNpcConfiguration(this.appearance.npcId).size;
       } else {
         return super.getSize();
       }
-    } catch (RuntimeException var3) {
-      throw AbstractGameWorld.cascadeException(var3, "e.H((");
-    }
   }
 
   public GameString getFullName() {
-    try {
-      GameString name = this.name;
+    GameString name = this.name;
 
       if (GameBuffer.titlePrefixes != null) {
         name =
@@ -235,9 +207,6 @@ public final class Player extends Mobile {
       }
 
       return name;
-    } catch (RuntimeException var3) {
-      throw AbstractGameWorld.cascadeException(var3, "e.Q()");
-    }
   }
 
   public void method1867(int var1, int var2, int var3, int var4, int var5 ) {
@@ -249,8 +218,7 @@ public final class Player extends Mobile {
       long var9,
       int var11,
       DummyClass0 var12 ) {
-    try {
-      if (this.appearance != null) {
+    if (this.appearance != null) {
         AnimationSequence var13 =
             this.animationId != -1 && 0 == this.anInt2828 ?
           GameClient.method45(this.animationId, (byte) -20) :
@@ -445,36 +413,21 @@ public final class Player extends Mobile {
 
         }
       }
-    } catch (RuntimeException var22) {
-      throw AbstractGameWorld.cascadeException(var22,
-        "e.IA(" + var1 + ',' + var2 + ',' + var3 + ',' + var4 + ',' + var5 + ',' + var6 + ',' + var7
-          + ',' + var8 + ',' + var9 + ',' + var11 + ',' + (var12 != null ? "{...}" : "null") + ')');
-    }
   }
 
   public int getMinimumY() {
-    try {
-      return this.anInt2820;
-    } catch (RuntimeException var2) {
-      throw AbstractGameWorld.cascadeException(var2, "e.MA()");
-    }
+    return this.anInt2820;
   }
 
   public void setPosition(byte var1, int x, boolean var3, int y ) {
-    try {
-      this.setPosition(this.getSize(), x, y, var3);
-    } catch (RuntimeException var6) {
-      throw AbstractGameWorld.cascadeException(var6,
-        "e.O(" + var1 + ',' + x + ',' + var3 + ',' + y + ')');
-    }
+    this.setPosition(this.getSize(), x, y, var3);
   }
 
   protected void finalize() {
   }
 
   public static void method1982(byte var0) {
-    try {
-      Player.aClass94_3971 = null;
+    Player.aClass94_3971 = null;
       Player.aClass94_3957 = null;
       Player.anIntArray3951 = null;
       Player.FORCED_TWEENING_ENABLED = null;
@@ -485,9 +438,6 @@ public final class Player extends Mobile {
 
       Player.quady0 = null;
       Player.LABELS = null;
-    } catch (RuntimeException var2) {
-      throw AbstractGameWorld.cascadeException(var2, "e.R(" + var0 + ')');
-    }
   }
 
 }

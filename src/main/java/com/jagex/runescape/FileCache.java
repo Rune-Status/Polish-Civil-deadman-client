@@ -17,30 +17,18 @@ public final class FileCache {
 
 
   public FileCache(int var1, BufferedFile var2, BufferedFile var3, int var4 ) {
-    try {
-      this.anInt687 = var4;
+    this.anInt687 = var4;
       this.aClass30_683 = var3;
       this.anInt682 = var1;
       this.aClass30_681 = var2;
-    } catch (RuntimeException var6) {
-      throw AbstractGameWorld.cascadeException(var6,
-        "ge.<init>(" + var1 + ',' + (var2 != null ? "{...}" : "null") + ',' + (var3 != null ?
-          "{...}" :
-          "null") + ',' + var4 + ')');
-    }
   }
 
   public String toString() {
-    try {
-      return "com.jagex.runescape.Cache:" + this.anInt682;
-    } catch (RuntimeException var2) {
-      throw AbstractGameWorld.cascadeException(var2, "ge.toString()");
-    }
+    return "com.jagex.runescape.Cache:" + this.anInt682;
   }
 
   public boolean method1050(int var1, int var2, byte[] var3, byte var4 ) {
-    try {
-      BufferedFile var5 = this.aClass30_681;
+    BufferedFile var5 = this.aClass30_681;
       synchronized (var5) {
         if (var4 != -41) {
           return true;
@@ -55,15 +43,10 @@ public final class FileCache {
           throw new IllegalArgumentException();
         }
       }
-    } catch (RuntimeException var9) {
-      throw AbstractGameWorld.cascadeException(var9,
-        "ge.D(" + var1 + ',' + var2 + ',' + (var3 != null ? "{...}" : "null") + ',' + var4 + ')');
-    }
   }
 
   public byte[] method1051(int var1, byte var2 ) {
-    try {
-      BufferedFile var3 = this.aClass30_681;
+    BufferedFile var3 = this.aClass30_681;
       synchronized (var3) {
         Object var10000;
         try {
@@ -141,14 +124,10 @@ public final class FileCache {
 
         return null;
       }
-    } catch (RuntimeException var19) {
-      throw AbstractGameWorld.cascadeException(var19, "ge.C(" + var1 + ',' + var2 + ')');
-    }
   }
 
   private boolean method1054(byte var1, int var2, int var3, byte[] var4, boolean var5) {
-    try {
-      BufferedFile var6 = this.aClass30_681;
+    BufferedFile var6 = this.aClass30_681;
       synchronized (var6) {
         try {
           int var7;
@@ -274,17 +253,11 @@ public final class FileCache {
           return false;
         }
       }
-    } catch (RuntimeException var18) {
-      throw AbstractGameWorld.cascadeException(var18,
-        "ge.E(" + var1 + ',' + var2 + ',' + var3 + ',' + (var4 != null ? "{...}" : "null") + ','
-          + var5 + ')');
-    }
   }
 
   public static void method1047(int var0, int var1, int var2, boolean var3, int var4, boolean var5,
                                boolean var6) {
-    try {
-      if (!var6) {
+    if (!var6) {
         if (var2 > var4) {
           int var7 = (var2 + var4) / 2;
           int var8 = var4;
@@ -311,17 +284,11 @@ public final class FileCache {
         }
 
       }
-    } catch (RuntimeException var12) {
-      throw AbstractGameWorld.cascadeException(var12,
-          "ge.A(" + var0 + ',' + var1 + ',' + var2 + ',' + var3 + ',' + var4
-              + ',' + var5 + ',' + ')');
-    }
   }
 
   public static void method1048(int var0, int var1, int var2, int var3, int var4, int var5, int var6,
                                int var7) {
-    try {
-      if (var5 > -15) {
+    if (var5 > -15) {
         FileCache.anInt688 = -64;
       }
 
@@ -352,27 +319,15 @@ public final class FileCache {
           Keyboard.aBoolean1905 = var9;
         }
       }
-
-    } catch (RuntimeException var10) {
-      throw AbstractGameWorld.cascadeException(var10,
-        "ge.H(" + var0 + ',' + var1 + ',' + var2 + ',' + var3 + ',' + var4 + ',' + var5 + ',' + var6
-          + ',' + var7 + ')');
-    }
   }
 
   public static void method1049(boolean var0) {
-    try {
-      FileCache.anIntArray686 = null;
+    FileCache.anIntArray686 = null;
       FileCache.aClass93_684 = null;
-
-    } catch (RuntimeException var2) {
-      throw AbstractGameWorld.cascadeException(var2, "ge.G(" + var0 + ')');
-    }
   }
 
   public static GameString stringFromBase37(int var0, long var1) {
-    try {
-      if (-1L > ~var1 && -6582952005840035282L < ~var1) {
+    if (-1L > ~var1 && -6582952005840035282L < ~var1) {
         if (-1L == ~(var1 % 37L)) {
           return null;
         } else {
@@ -402,19 +357,11 @@ public final class FileCache {
       } else {
         return null;
       }
-    } catch (RuntimeException var9) {
-      throw AbstractGameWorld.cascadeException(var9, "ge.B(" + var0 + ',' + var1 + ')');
-    }
   }
 
   public static void method1053(byte var0, FileUnpacker var1) {
-    try {
-      TriChromaticImageCache.aClass153_1372 = var1;
+    TriChromaticImageCache.aClass153_1372 = var1;
       int var2 = -52 / ((var0 - -55) / 36);
-    } catch (RuntimeException var3) {
-      throw AbstractGameWorld.cascadeException(var3,
-        "ge.F(" + var0 + ',' + (var1 != null ? "{...}" : "null") + ')');
-    }
   }
 
 }

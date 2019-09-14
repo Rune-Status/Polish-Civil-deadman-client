@@ -15,8 +15,7 @@ public final class DummyClass11 {
 
 
   public static void method2203(Player var0, int var1) {
-    try {
-      AreaSoundEffect var2 = (AreaSoundEffect) ObjectNode.aClass130_4046.get(var0.name.toBase37());
+    AreaSoundEffect var2 = (AreaSoundEffect) ObjectNode.aClass130_4046.get(var0.name.toBase37());
       if (var1 != 8) {
         DummyClass11.writeUID(null, -44);
       }
@@ -29,16 +28,10 @@ public final class DummyClass11 {
 
         var2.unlinkNode();
       }
-
-    } catch (RuntimeException var3) {
-      throw AbstractGameWorld.cascadeException(var3,
-        "wc.B(" + (var0 != null ? "{...}" : "null") + ',' + var1 + ')');
-    }
   }
 
   public static void writeUID(Buffer var0, int var1) {
-    try {
-      if (null != LinearHashTable.uidFile) {
+    if (null != LinearHashTable.uidFile) {
         try {
           LinearHashTable.uidFile.seek(-117, 0L);
           LinearHashTable.uidFile.write(var0.bytes, var0.position, -903171152, 24);
@@ -49,37 +42,23 @@ public final class DummyClass11 {
       if (var1 >= 45) {
         var0.position += 24;
       }
-    } catch (RuntimeException var4) {
-      throw AbstractGameWorld.cascadeException(var4,
-          "wc.E(" + "null" + ',' + var1 + ')');
-    }
   }
 
   public static void method2205(int var0) {
-    try {
-      DummyClass11.anIntArrayArray2039 = null;
+    DummyClass11.anIntArrayArray2039 = null;
       DummyClass11.aByteArray2040 = null;
       if (var0 != -17413) {
         DummyClass11.anInt2036 = 77;
       }
-
-    } catch (RuntimeException var2) {
-      throw AbstractGameWorld.cascadeException(var2, "wc.C(" + var0 + ')');
-    }
   }
 
   public static void method2206(boolean var0, int var1) {
-    try {
-      WidgetUpdate var2 = AudioStreamEncoder3.method466(4, 4, var1);
+    WidgetUpdate var2 = AudioStreamEncoder3.method466(4, 4, var1);
       var2.createIndexedColorSprite(var0);
-    } catch (RuntimeException var3) {
-      throw AbstractGameWorld.cascadeException(var3, "wc.A(" + var0 + ',' + var1 + ')');
-    }
   }
 
   public static GameObjectConfig method2207(int var0, int var1) {
-    try {
-      if (var0 != 4) {
+    if (var0 != 4) {
         DummyClass11.method2205(95);
       }
 
@@ -109,9 +88,6 @@ public final class DummyClass11 {
       } else {
         return var2;
       }
-    } catch (RuntimeException var4) {
-      throw AbstractGameWorld.cascadeException(var4, "wc.D(" + var0 + ',' + var1 + ')');
-    }
   }
 
 }

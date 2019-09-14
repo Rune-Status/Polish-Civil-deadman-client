@@ -23,27 +23,17 @@ public final class StringNode extends Node {
   }
 
   public StringNode(GameString var1) {
-    try {
-      this.aClass94_2586 = var1;
-    } catch (RuntimeException var3) {
-      throw AbstractGameWorld.cascadeException(var3,
-          "sj.<init>(" + (var1 != null ? "{...}" : "null") + ')');
-    }
+    this.aClass94_2586 = var1;
   }
 
   public static void method727(int var0) {
-    try {
-      Keyboard.aClass93_1911.method1524(3);
+    Keyboard.aClass93_1911.method1524(3);
       int var1 = 56 / ((var0 - 7) / 54);
       HashTableIterator.aClass93_1131.method1524(3);
-    } catch (RuntimeException var2) {
-      throw AbstractGameWorld.cascadeException(var2, "sj.O(" + var0 + ')');
-    }
   }
 
   public static void method728(boolean var0) {
-    try {
-      if (var0) {
+    if (var0) {
         StringNode.method731(null, (byte) 118);
       }
 
@@ -79,15 +69,10 @@ public final class StringNode extends Node {
         SomethingQuickChatK.anInt154 = 0;
         SomethingQuickChat.aClass83_3579 = null;
       }
-
-    } catch (RuntimeException var3) {
-      throw AbstractGameWorld.cascadeException(var3, "sj.A(" + var0 + ')');
-    }
   }
 
   public static int method729(byte var0, int var1, int var2) {
-    try {
-      if (var0 > -32) {
+    if (var0 > -32) {
         return 88;
       } else if (var1 == -2) {
         return 12345678;
@@ -109,16 +94,11 @@ public final class StringNode extends Node {
 
         return (var1 & '\uff80') - -var2;
       }
-    } catch (RuntimeException var4) {
-      throw AbstractGameWorld.cascadeException(var4,
-          "sj.E(" + var0 + ',' + var1 + ',' + var2 + ')');
-    }
   }
 
   public static void method730(int var0, int var1, byte var2, int var3,
       int var4, int var5) {
-    try {
-      int var6 = 19 % ((var2 - -44) / 47);
+    int var6 = 19 % ((var2 - -44) / 47);
       if (~var0 <= ~DummyClass55.anInt1425 && var4 <= GlTexture2d.anInt3765
           && DummyClass13.anInt2020 <= var5
           && LightIntensity.anInt902 >= var3) {
@@ -126,29 +106,17 @@ public final class StringNode extends Node {
       } else {
         ObjectCache.method1525(3074, var1, var4, var5, var0, var3);
       }
-
-    } catch (RuntimeException var7) {
-      throw AbstractGameWorld.cascadeException(var7,
-          "sj.R(" + var0 + ',' + var1 + ',' + var2 + ',' + var3 + ',' + var4
-              + ',' + var5 + ')');
-    }
   }
 
   public static void method731(FileUnpacker var0, byte var1) {
-    try {
-      int var2 = 3 / ((var1 - -62) / 37);
+    int var2 = 3 / ((var1 - -62) / 37);
       TextureSampler20.aClass153_3154 = var0;
       DummyClass53.anInt1344 = TextureSampler20.aClass153_3154
           .getAmountChildren(16, (byte) 71);
-    } catch (RuntimeException var3) {
-      throw AbstractGameWorld.cascadeException(var3,
-          "sj.B(" + (var0 != null ? "{...}" : "null") + ',' + var1 + ')');
-    }
   }
 
   public static GameString method732(String var0, int var1) {
-    try {
-      if (var1 != 27307) {
+    if (var1 != 27307) {
         StringNode.anInt2589 = -93;
       }
 
@@ -166,15 +134,10 @@ public final class StringNode extends Node {
       }
 
       return var3;
-    } catch (RuntimeException var6) {
-      throw AbstractGameWorld.cascadeException(var6,
-          "sj.D(" + (var0 != null ? "{...}" : "null") + ',' + var1 + ')');
-    }
   }
 
   public static SomethingQuickChat method733(int var0, int var1) {
-    try {
-      SomethingQuickChat var2 =
+    SomethingQuickChat var2 =
           (SomethingQuickChat) ProjectileNode.aClass47_3776.get(var1, 1400);
       if (null == var2) {
         byte[] var3;
@@ -202,10 +165,6 @@ public final class StringNode extends Node {
       } else {
         return var2;
       }
-    } catch (RuntimeException var4) {
-      throw AbstractGameWorld
-          .cascadeException(var4, "sj.Q(" + var0 + ',' + var1 + ')');
-    }
   }
 
   public static void setSettings(int var0, GameString var1) {
@@ -213,8 +172,7 @@ public final class StringNode extends Node {
   }
 
   public static void method735(int var0) {
-    try {
-      StringNode.aClass153_2581 = null;
+    StringNode.aClass153_2581 = null;
       StringNode.aClass94Array2580 = null;
       StringNode.aClass94_2584 = null;
       if (var0 != -22749) {
@@ -222,14 +180,10 @@ public final class StringNode extends Node {
       }
 
       StringNode.aClass94_2585 = null;
-    } catch (RuntimeException var2) {
-      throw AbstractGameWorld.cascadeException(var2, "sj.C(" + var0 + ')');
-    }
   }
 
   public static void method736(int var0, int var1) {
-    try {
-      if (var1 <= 61) {
+    if (var1 <= 61) {
         StringNode.method736(-60, -93);
       }
 
@@ -238,11 +192,6 @@ public final class StringNode extends Node {
       } else {
         TextureSampler36.anInt3423 = var0;
       }
-
-    } catch (RuntimeException var3) {
-      throw AbstractGameWorld
-          .cascadeException(var3, "sj.P(" + var0 + ',' + var1 + ')');
-    }
   }
 
 }

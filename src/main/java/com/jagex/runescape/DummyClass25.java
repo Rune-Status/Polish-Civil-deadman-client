@@ -16,8 +16,7 @@ public final class DummyClass25 {
 
 
   public static void method1728(int var0) {
-    try {
-      DummyClass25.aClass33_1626 = null;
+    DummyClass25.aClass33_1626 = null;
       DummyClass25.aClass131_1624 = null;
       DummyClass25.aClass26Array1627 = null;
       DummyClass25.MEMORY_PREFIX = null;
@@ -26,15 +25,10 @@ public final class DummyClass25 {
       if (var0 != -14256) {
         DummyClass25.method1728(46);
       }
-
-    } catch (RuntimeException var2) {
-      throw AbstractGameWorld.cascadeException(var2, "qh.B(" + var0 + ')');
-    }
   }
 
   public static void resizeCanvas() {
-    try {
-      Component var1 = null;
+    Component var1 = null;
       if (null == TextureSampler30.fullScreenFrame) {
         if (TextureSampler27.FRAME != null) {
           var1 = TextureSampler27.FRAME;
@@ -83,15 +77,10 @@ public final class DummyClass25 {
       }
 
       HashTableIterator.method1396(-1);
-    } catch (RuntimeException var3) {
-      throw AbstractGameWorld.cascadeException(var3, "qh.C()");
-    }
   }
 
   public static void writeSettings(SignLink var0) {
-    try {
-
-      FileOnDisk var2 = null;
+    FileOnDisk var2 = null;
 
       try {
         SignLinkRequest var3 = var0.getSettings("runescape", 12);
@@ -114,12 +103,6 @@ public final class DummyClass25 {
         }
       } catch (Exception var5) {
       }
-
-
-    } catch (RuntimeException var7) {
-      throw AbstractGameWorld.cascadeException(var7,
-        "qh.A(" + (var0 != null ? "{...}" : "null") + ')');
-    }
   }
 
 }

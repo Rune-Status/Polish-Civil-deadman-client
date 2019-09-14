@@ -21,25 +21,19 @@ public final class BufferData {
 
 
   public static void method1733(int var0) {
-    try {
-      BufferData.aClass94_1647 = null;
+    BufferData.aClass94_1647 = null;
       BufferData.COMMAND_WM2 = null;
       BufferData.aClass94_1645 = null;
       if (var0 != -17148) {
         BufferData.anInt1642 = 54;
       }
-
-    } catch (RuntimeException var2) {
-      throw AbstractGameWorld.cascadeException(var2, "ql.C(" + var0 + ')');
-    }
   }
 
   public static int method1734(int var0, float var1, int var2, int var3, int[][] var4, int[][] var5,
                               int var6, float[][] var7, int var8, byte var9, int var10,
                               boolean var11, SomethingGl0 var12, float[][] var13, int var14,
                               int var15, float[][] var16, int var17) {
-    try {
-      int var18;
+    int var18;
       if (~var10 == -2) {
         var18 = var15;
         var15 = var17;
@@ -116,24 +110,10 @@ public final class BufferData {
               var17)) / var1 :
             0.0F);
       }
-    } catch (RuntimeException var29) {
-      throw AbstractGameWorld.cascadeException(var29,
-        "ql.A(" + var0 + ',' + var1 + ',' + var2 + ',' + var3 + ',' + (var4 != null ?
-          "{...}" :
-          "null") + ',' + (var5 != null ? "{...}" : "null") + ',' + var6 + ',' + (var7 != null ?
-          "{...}" :
-          "null") + ',' + var8 + ',' + var9 + ',' + var10 + ',' + var11 + ',' + (var12 != null ?
-          "{...}" :
-          "null") + ',' + (var13 != null ? "{...}" : "null") + ',' + var14 + ',' + var15 + ',' + (
-          var16 != null ?
-            "{...}" :
-            "null") + ',' + var17 + ')');
-    }
   }
 
   public static int method1735(int var0) {
     try {
-      try {
         if (~Light.anInt692 == -1) {
           if (~(Time.getCurrentTimeMillis() + -5000L) > ~TextureSampler25.aLong3411) {
             return 0;
@@ -261,14 +241,10 @@ public final class BufferData {
       }
 
       return -1;
-    } catch (RuntimeException var6) {
-      throw AbstractGameWorld.cascadeException(var6, "ql.D(" + var0 + ')');
-    }
   }
 
   public static int method1736(int var0, int var1, int var2, int var3) {
-    try {
-      if (null == AbstractGameWorld.heightMap) {
+    if (null == AbstractGameWorld.heightMap) {
         return 0;
       } else {
         int var4 = var2 >> 7;
@@ -290,10 +266,6 @@ public final class BufferData {
           return 0;
         }
       }
-    } catch (RuntimeException var11) {
-      throw AbstractGameWorld.cascadeException(var11,
-        "ql.B(" + var0 + ',' + var1 + ',' + var2 + ',' + var3 + ')');
-    }
   }
 
 }

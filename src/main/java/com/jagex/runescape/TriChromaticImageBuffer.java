@@ -20,30 +20,20 @@ public final class TriChromaticImageBuffer extends Node {
   public int anInt2489;
 
   public TriChromaticImageBuffer(int var1, int var2 ) {
-    try {
-      this.anInt2483 = var2;
+    this.anInt2483 = var2;
       this.anInt2489 = var1;
-    } catch (RuntimeException var4) {
-      throw AbstractGameWorld.cascadeException(var4, "lb.<init>(" + var1 + ',' + var2 + ')');
-    }
   }
 
   public static void method388(byte var0) {
-    try {
-      int var1 = 44 / ((-2 - var0) / 52);
+    int var1 = 44 / ((-2 - var0) / 52);
       if (TextureSampler4.aClass94_3220 != null) {
         StringNode0.method138(TextureSampler4.aClass94_3220, 0);
         TextureSampler4.aClass94_3220 = null;
       }
-
-    } catch (RuntimeException var2) {
-      throw AbstractGameWorld.cascadeException(var2, "lb.A(" + var0 + ')');
-    }
   }
 
   public static void method389(boolean var0) {
-    try {
-      DummyClass34.method995();
+    DummyClass34.method995();
       GZipDecompressor.aClass3_Sub28_Sub16_812 = null;
       DummyClass43.anInt909 = -1;
       TextureSampler13.method313((byte) 55);
@@ -88,16 +78,11 @@ public final class TriChromaticImageBuffer extends Node {
       if (DummyClass15.state == 30) {
         DummyClass26.setState(25, 5);
       }
-
-    } catch (RuntimeException var3) {
-      throw AbstractGameWorld.cascadeException(var3, "lb.C(" + var0 + ')');
-    }
   }
 
   public static void method390(boolean var0, int var1, int var2, int var3, byte var4, int var5,
                               int var6) {
-    try {
-      AbstractFileRequest.anInt3631 = var3;
+    AbstractFileRequest.anInt3631 = var3;
       TextureSampler25.anInt3414 = var2;
       GameCanvas.anInt30 = var6;
       DummyClass8.anInt4021 = var1;
@@ -112,16 +97,10 @@ public final class TriChromaticImageBuffer extends Node {
 
       int var7 = 76 % ((-79 - var4) / 35);
       SomethingPacket116.anInt1753 = 2;
-    } catch (RuntimeException var8) {
-      throw AbstractGameWorld.cascadeException(var8,
-        "lb.D(" + var0 + ',' + var1 + ',' + var2 + ',' + var3 + ',' + var4 + ',' + var5 + ',' + var6
-          + ')');
-    }
   }
 
   public static void method391(int var0) {
-    try {
-      TriChromaticImageBuffer.aClass94_2490 = null;
+    TriChromaticImageBuffer.aClass94_2490 = null;
       TriChromaticImageBuffer.anIntArray2480 = null;
       TriChromaticImageBuffer.aClass94_2481 = null;
       if (var0 != 25) {
@@ -130,23 +109,14 @@ public final class TriChromaticImageBuffer extends Node {
 
       TriChromaticImageBuffer.aClass94_2486 = null;
       TriChromaticImageBuffer.aClass94_2482 = null;
-    } catch (RuntimeException var2) {
-      throw AbstractGameWorld.cascadeException(var2, "lb.B(" + var0 + ')');
-    }
   }
 
   public static void setAnimationFileUnpackers(FileUnpacker var0, FileUnpacker var1, int var2,
                                               FileUnpacker var3) {
-    try {
-      AnimationSequence.animationSequences = var1;
+    AnimationSequence.animationSequences = var1;
       int var4 = -110 / ((-7 - var2) / 43);
       EnumStringFetcher.animationFrames = var0;
       WorldMapLabel.animationBases = var3;
-    } catch (RuntimeException var5) {
-      throw AbstractGameWorld.cascadeException(var5,
-        "lb.E(" + (var0 != null ? "{...}" : "null") + ',' + (var1 != null ? "{...}" : "null") + ','
-          + var2 + ',' + (var3 != null ? "{...}" : "null") + ')');
-    }
   }
 
 }

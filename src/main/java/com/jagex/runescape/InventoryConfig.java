@@ -37,8 +37,7 @@ public final class InventoryConfig extends SubNode {
   public int size;
 
   public void method610(Buffer var1, int var2 ) {
-    try {
-      if (var2 != 0) {
+    if (var2 != 0) {
         InventoryConfig.aClass94_3649 = null;
       }
 
@@ -50,31 +49,20 @@ public final class InventoryConfig extends SubNode {
 
         this.method614(var1, var3, false);
       }
-    } catch (RuntimeException var4) {
-      throw AbstractGameWorld.cascadeException(var4,
-        "md.E(" + (var1 != null ? "{...}" : "null") + ',' + var2 + ')');
-    }
   }
 
   private void method614(Buffer var1, int var2, boolean var3) {
-    try {
-      if (var3) {
+    if (var3) {
         this.method610(null, -89);
       }
 
       if (~var2 == -3) {
         this.size = var1.readUnsignedShort();
       }
-
-    } catch (RuntimeException var5) {
-      throw AbstractGameWorld.cascadeException(var5,
-        "md.A(" + (var1 != null ? "{...}" : "null") + ',' + var2 + ',' + var3 + ')');
-    }
   }
 
   public static boolean method609(Widget var0, int var1) {
-    try {
-      if (null != var0.anIntArray275) {
+    if (null != var0.anIntArray275) {
         int var2 = 0;
         if (var1 <= 20) {
           InventoryConfig.aClass94_3651 = null;
@@ -104,16 +92,11 @@ public final class InventoryConfig extends SubNode {
       } else {
         return false;
       }
-    } catch (RuntimeException var5) {
-      throw AbstractGameWorld.cascadeException(var5,
-        "md.C(" + (var0 != null ? "{...}" : "null") + ',' + var1 + ')');
-    }
   }
 
   public static void method611(int var0, int var1, GameString var2, GameString var3, byte var4,
                               GameString var5) {
-    try {
-      if (var4 != 50) {
+    if (var4 != 50) {
         InventoryConfig.aShortArrayArray3654 = null;
       }
 
@@ -132,25 +115,14 @@ public final class InventoryConfig extends SubNode {
       SceneNode.anIntArray1835[0] = var0;
       StringNode.aClass94Array2580[0] = var2;
       DummyClass4.aClass94Array3003[0] = var3;
-    } catch (RuntimeException var7) {
-      throw AbstractGameWorld.cascadeException(var7,
-        "md.D(" + var0 + ',' + var1 + ',' + (var2 != null ? "{...}" : "null") + ',' + (
-          var3 != null ? "{...}" : "null") + ',' + var4 + ',' + (var5 != null ? "{...}" : "null")
-          + ')');
-    }
   }
 
   public static GameString method612(long var0, byte var2) {
-    try {
-      return var2 <= 85 ? null : TextureSampler9.method207(10, false, 116, var0);
-    } catch (RuntimeException var4) {
-      throw AbstractGameWorld.cascadeException(var4, "md.F(" + var0 + ',' + var2 + ')');
-    }
+    return var2 <= 85 ? null : TextureSampler9.method207(10, false, 116, var0);
   }
 
   public static void method613(int var0) {
-    try {
-      InventoryConfig.aClass94_3646 = null;
+    InventoryConfig.aClass94_3646 = null;
       InventoryConfig.aClass94_3656 = null;
       GameCanvas.INSTANCE = null;
       InventoryConfig.aClass94_3649 = null;
@@ -160,9 +132,6 @@ public final class InventoryConfig extends SubNode {
         InventoryConfig.aClass94_3651 = null;
         InventoryConfig.aClass94_3650 = null;
       }
-    } catch (RuntimeException var2) {
-      throw AbstractGameWorld.cascadeException(var2, "md.B(" + var0 + ')');
-    }
   }
 
 }

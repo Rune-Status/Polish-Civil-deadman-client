@@ -29,8 +29,7 @@ public final class SpotAnimationConfig {
   private short[] colorIds;
 
   public void method963(Buffer var1, byte var2 ) {
-    try {
-      if (var2 != -113) {
+    if (var2 != -113) {
         SpotAnimationConfig.method967(88, -118, 75, -51, -96, -50, 45, 127);
       }
 
@@ -42,15 +41,10 @@ public final class SpotAnimationConfig {
 
         this.method965(var1, var3, 128);
       }
-    } catch (RuntimeException var4) {
-      throw AbstractGameWorld.cascadeException(var4,
-        "eg.A(" + (var1 != null ? "{...}" : "null") + ',' + var2 + ')');
-    }
   }
 
   private void method965(Buffer var1, int var2, int var3) {
-    try {
-      if (var2 == 1) {
+    if (var2 == 1) {
         this.anInt541 = var1.readUnsignedShort();
       } else if (2 == var2) {
         this.anInt542 = var1.readUnsignedShort();
@@ -103,16 +97,10 @@ public final class SpotAnimationConfig {
       if (var3 != 128) {
         this.colorIds = null;
       }
-
-    } catch (RuntimeException var6) {
-      throw AbstractGameWorld.cascadeException(var6,
-        "eg.D(" + (var1 != null ? "{...}" : "null") + ',' + var2 + ',' + var3 + ')');
-    }
   }
 
   public AbstractModel method966(int var1, byte var2, int var3, int var4 ) {
-    try {
-      AbstractModel var5 = (AbstractModel) DummyClass32.aClass93_511.get(
+    AbstractModel var5 = (AbstractModel) DummyClass32.aClass93_511.get(
           this.anInt539);
       if (var2 == -30) {
         if (var5 == null) {
@@ -171,15 +159,10 @@ public final class SpotAnimationConfig {
       } else {
         return null;
       }
-    } catch (RuntimeException var8) {
-      throw AbstractGameWorld.cascadeException(var8,
-        "eg.C(" + var1 + ',' + var2 + ',' + var3 + ',' + var4 + ')');
-    }
   }
 
   public static void method964(int var0) {
-    try {
-      SpotAnimationConfig.aClass94_553 = null;
+    SpotAnimationConfig.aClass94_553 = null;
       SpotAnimationConfig.gameBuffer = null;
       if (var0 != 6) {
         SpotAnimationConfig.method964(-57);
@@ -189,25 +172,16 @@ public final class SpotAnimationConfig {
       SpotAnimationConfig.aClass94_547 = null;
       SpotAnimationConfig.aClass94_551 = null;
       SpotAnimationConfig.aClass94_552 = null;
-    } catch (RuntimeException var2) {
-      throw AbstractGameWorld.cascadeException(var2, "eg.E(" + var0 + ')');
-    }
   }
 
   public static void method967(int var0, int var1, int var2, int var3, int var4, int var5, int var6,
                               int var7) {
-    try {
-      if (MovedStatics0.method57(var5, 104)) {
+    if (MovedStatics0.method57(var5, 104)) {
         if (var2 == 2) {
           GameClient.method50(SceneNode.aClass11ArrayArray1834[var5], -1, var6, var1, var4, var7,
             var0, var3);
         }
       }
-    } catch (RuntimeException var9) {
-      throw AbstractGameWorld.cascadeException(var9,
-        "eg.B(" + var0 + ',' + var1 + ',' + var2 + ',' + var3 + ',' + var4 + ',' + var5 + ',' + var6
-          + ',' + var7 + ')');
-    }
   }
 
 }

@@ -32,8 +32,7 @@ public final class StillGraphic extends SceneNode {
 
   public StillGraphic(int var1, int var2, int var3, int var4, int var5, int var6,
       int var7 ) {
-    try {
-      this.anInt2710 = var4;
+    this.anInt2710 = var4;
       this.anInt2716 = var3;
       this.anInt2717 = var2;
       this.anInt2703 = var7 + var6;
@@ -46,17 +45,10 @@ public final class StillGraphic extends SceneNode {
         this.aBoolean2718 = false;
         this.aClass142_2711 = GameClient.method45(var8, (byte) -20);
       }
-
-    } catch (RuntimeException var9) {
-      throw AbstractGameWorld.cascadeException(var9,
-        "bh.<init>(" + var1 + ',' + var2 + ',' + var3 + ',' + var4 + ',' + var5 + ',' + var6 + ','
-          + var7 + ')');
-    }
   }
 
   private AbstractModel getModel(boolean var1) {
-    try {
-      SpotAnimationConfig var2 = RenderAnimation.method898((byte) 42,
+    SpotAnimationConfig var2 = RenderAnimation.method898((byte) 42,
           this.anInt2708);
       if (var1) {
         StillGraphic.aClass94_2707 = null;
@@ -71,14 +63,10 @@ public final class StillGraphic extends SceneNode {
       }
 
       return var3;
-    } catch (RuntimeException var4) {
-      throw AbstractGameWorld.cascadeException(var4, "bh.E(" + var1 + ')');
-    }
   }
 
   public void method1955(boolean var1, int var2 ) {
-    try {
-      if (!this.aBoolean2718) {
+    if (!this.aBoolean2718) {
         if (!var1) {
           this.method1955(true, -72);
         }
@@ -96,10 +84,6 @@ public final class StillGraphic extends SceneNode {
         }
 
       }
-    } catch (RuntimeException var4) {
-      throw AbstractGameWorld
-          .cascadeException(var4, "bh.A(" + var1 + ',' + var2 + ')');
-    }
   }
 
   public void method1867(int var1, int var2, int var3, int var4, int var5 ) {
@@ -111,32 +95,20 @@ public final class StillGraphic extends SceneNode {
       long var9,
       int var11,
       DummyClass0 var12 ) {
-    try {
-      AbstractModel var13 = this.getModel(false);
+    AbstractModel var13 = this.getModel(false);
       if (var13 != null) {
         var13.draw(var1, var2, var3, var4, var5, var6, var7, var8, var9, var11,
             this.aClass127_Sub1_2704);
         this.anInt2715 = var13.getMinimumY();
       }
-    } catch (RuntimeException var14) {
-      throw AbstractGameWorld.cascadeException(var14,
-        "bh.IA(" + var1 + ',' + var2 + ',' + var3 + ',' + var4 + ',' + var5 + ',' + var6 + ','
-          + var7 + ',' + var8 + ',' + var9 + ',' + var11 + ',' + (var12 != null ? "{...}" : "null")
-          + ')');
-    }
   }
 
   public int getMinimumY() {
-    try {
-      return this.anInt2715;
-    } catch (RuntimeException var2) {
-      throw AbstractGameWorld.cascadeException(var2, "bh.MA()");
-    }
+    return this.anInt2715;
   }
 
   public static void method1950(Mobile var0, boolean var1) {
-    try {
-      int var2 = var0.anInt2800 - AbstractGameWorld.updateCycle;
+    int var2 = var0.anInt2800 - AbstractGameWorld.updateCycle;
       int var3 = 128 * var0.anInt2784 - -(64 * var0.getSize());
       if (var1) {
         int var4 = 128 * var0.anInt2835 - -(var0.getSize() * 64);
@@ -160,28 +132,19 @@ public final class StillGraphic extends SceneNode {
         }
 
       }
-    } catch (RuntimeException var5) {
-      throw AbstractGameWorld.cascadeException(var5,
-        "bh.F(" + (var0 != null ? "{...}" : "null") + ',' + var1 + ')');
-    }
   }
 
   public static int method1951(int var0, byte var1) {
-    try {
-      if (var1 > -67) {
+    if (var1 > -67) {
         StillGraphic.aBoolean2713 = false;
       }
 
       return var0 >>> 8;
-    } catch (RuntimeException var3) {
-      throw AbstractGameWorld.cascadeException(var3, "bh.D(" + var0 + ',' + var1 + ')');
-    }
   }
 
   public static void method1952(int var0, int var1, int var2, int var3, int var4, int var5, int var6,
                                int var7) {
-    try {
-      int var8;
+    int var8;
       int var9;
       if (GlRenderer.useOpenGlRenderer) {
         var8 = -334 + var2;
@@ -228,37 +191,24 @@ public final class StillGraphic extends SceneNode {
       DummyClass49.anInt1111 = var6 + -var12;
       NPC.anInt3995 = var0 + -var10;
       EnumStringFetcher.anInt2162 = -var11 + var3;
-    } catch (RuntimeException var15) {
-      throw AbstractGameWorld.cascadeException(var15,
-        "bh.G(" + var0 + ',' + var1 + ',' + var2 + ',' + var3 + ',' + var4 + ',' + var5 + ',' + var6
-          + ',' + var7 + ')');
-    }
   }
 
   public static GameWorld method1953(byte var0) {
-    try {
-      if (var0 <= 97) {
+    if (var0 <= 97) {
         StillGraphic.BIT_MASKS = null;
       }
 
       SomethingMidiFile.anInt2291 = 0;
       return ItemConfig.method1107(5422);
-    } catch (RuntimeException var2) {
-      throw AbstractGameWorld.cascadeException(var2, "bh.H(" + var0 + ')');
-    }
   }
 
   public static void method1954(int var0) {
-    try {
-      if (var0 == 0) {
+    if (var0 == 0) {
         StillGraphic.FLOOR_SHADOWS = null;
         StillGraphic.FONT_P11 = null;
         StillGraphic.BIT_MASKS = null;
         StillGraphic.aClass94_2707 = null;
       }
-    } catch (RuntimeException var2) {
-      throw AbstractGameWorld.cascadeException(var2, "bh.B(" + var0 + ')');
-    }
   }
 
   public static void method1956(int var0, int var1, int var2, int var3) {

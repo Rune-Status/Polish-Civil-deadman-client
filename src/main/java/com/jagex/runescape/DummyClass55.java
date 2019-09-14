@@ -18,8 +18,7 @@ public final class DummyClass55 {
 
 
   public static void method1607(int var0, int var1, boolean var2, int[] var3, int[] var4) {
-    try {
-      if (var2) {
+    if (var2) {
         DummyClass55.method1608((byte) 106);
       }
 
@@ -51,19 +50,10 @@ public final class DummyClass55 {
         DummyClass55.method1607(var0, var6 - 1, var2, var3, var4);
         DummyClass55.method1607(var6 + 1, var1, var2, var3, var4);
       }
-
-    } catch (RuntimeException var12) {
-      throw AbstractGameWorld.cascadeException(var12,
-        "nj.C(" + var0 + ',' + var1 + ',' + var2 + ',' + (var3 != null ? "{...}" : "null") + ',' + (
-          var4 != null ?
-            "{...}" :
-            "null") + ')');
-    }
   }
 
   public static void method1608(byte var0) {
-    try {
-      DummyClass55.fileUnpacker18 = null;
+    DummyClass55.fileUnpacker18 = null;
       DummyClass55.aClass61_1424 = null;
       DummyClass55.aShortArrayArray1429 = null;
       DummyClass55.landscapeFileIds = null;
@@ -75,22 +65,15 @@ public final class DummyClass55 {
       }
 
       DummyClass55.aClass153_1420 = null;
-    } catch (RuntimeException var2) {
-      throw AbstractGameWorld.cascadeException(var2, "nj.A(" + var0 + ')');
-    }
   }
 
   public static void method1609(int var0) {
-    try {
-      MapScene.anInterface5Array70 = null;
+    MapScene.anInterface5Array70 = null;
       if (var0 <= 49) {
         DummyClass55.method1608((byte) 96);
       }
 
       SomethingGl.method1455();
-    } catch (RuntimeException var2) {
-      throw AbstractGameWorld.cascadeException(var2, "nj.B(" + var0 + ')');
-    }
   }
 
 }

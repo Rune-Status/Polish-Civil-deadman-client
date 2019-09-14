@@ -14,8 +14,7 @@ public final class DummyClass51 {
 
 
   public static void method1417(int var0) {
-    try {
-      if (var0 < 98) {
+    if (var0 < 98) {
         DummyClass51.method1418(55, null);
       }
 
@@ -26,15 +25,10 @@ public final class DummyClass51 {
       if (~DummyClass15.state == -31) {
         DummyClass26.setState(25, 5);
       }
-
-    } catch (RuntimeException var2) {
-      throw AbstractGameWorld.cascadeException(var2, "lf.D(" + var0 + ')');
-    }
   }
 
   public static void method1418(int var0, FileUnpacker var1) {
-    try {
-      DummyClass8.aClass109_Sub1Array4027 =
+    DummyClass8.aClass109_Sub1Array4027 =
         ClientScriptEnum.createSprites((byte) 65, NPC.runesFileId, var1);
       PlayerAppearance.anIntArray861 = new int[256];
 
@@ -71,15 +65,10 @@ public final class DummyClass51 {
       DummyClass2.anIntArray1681 = new int['\u8000'];
       TriChromaticImageCache.aClass3_Sub28_Sub16_Sub2_1381 =
         new SoftwareDirectColorSprite(128, 254);
-    } catch (RuntimeException var13) {
-      throw AbstractGameWorld.cascadeException(var13,
-        "lf.E(" + var0 + ',' + (var1 != null ? "{...}" : "null") + ')');
-    }
   }
 
   public static void method1419(int var0) {
-    try {
-      int var2 = TextureSampler29.anInt3395;
+    int var2 = TextureSampler29.anInt3395;
       int var3 = SomethingWorldMapy.anInt3552;
       int var1 = AbstractIndexedColorSprite.anInt1462;
       int var5 = 6116423;
@@ -115,14 +104,10 @@ public final class DummyClass51 {
 
       LinearHashTable.method1282(AbstractIndexedColorSprite.anInt1462, (byte) 107,
         TextureSampler29.anInt3395, SomethingQuickChat2.anInt3537, SomethingWorldMapy.anInt3552);
-    } catch (RuntimeException var11) {
-      throw AbstractGameWorld.cascadeException(var11, "lf.A(" + var0 + ')');
-    }
   }
 
   public static void method1420(int var0, int var1, int var2, int var3, byte var4) {
-    try {
-      WidgetUpdate var5 = AudioStreamEncoder3.method466(4, 10, var0);
+    WidgetUpdate var5 = AudioStreamEncoder3.method466(4, 10, var0);
       var5.g((byte) 33);
       var5.anInt3597 = var2;
       var5.anInt3598 = var3;
@@ -130,16 +115,10 @@ public final class DummyClass51 {
       if (var4 >= -35) {
         DummyClass51.anInt1165 = 86;
       }
-
-    } catch (RuntimeException var6) {
-      throw AbstractGameWorld.cascadeException(var6,
-        "lf.C(" + var0 + ',' + var1 + ',' + var2 + ',' + var3 + ',' + var4 + ')');
-    }
   }
 
   public static int getSettings() {
-    try {
-      return ((TextureSampler17.aBoolean3184 ? 1 : 0) << 19) + (
+    return ((TextureSampler17.aBoolean3184 ? 1 : 0) << 19) + (
         ((DummyClass35.aBoolean661 ? 1 : 0) << 16) + ((!DummyHashTable.aBoolean1685 ? 0 : 1) << 15)
           + ((!DisplayMode.useBumpMaps ? 0 : 1) << 13) + ((Projectile.aBoolean2910 ? 1 : 0) << 10)
           + ((TextureSampler0.aBoolean3275 ? 1 : 0) << 9) + ((Widget.aBoolean236 ? 1 : 0) << 7) + (
@@ -152,24 +131,16 @@ public final class DummyClass51 {
               ((~BZipDecompressorState.anInt120 != -1 ? 1 : 0) << 21) + (
                 (~DummyClass28.anInt340 == -1 ? 0 : 1) << 22)))) - -(DummyClass0.method1757()
           << 23));
-    } catch (RuntimeException var2) {
-      throw AbstractGameWorld.cascadeException(var2, "lf.F()");
-    }
   }
 
   public static void method1422(byte var0) {
-    try {
-      DummyClass51.anIntArrayArray1160 = null;
+    DummyClass51.anIntArrayArray1160 = null;
       DummyClass51.anIntArray1161 = null;
       DummyClass51.aClass61_1162 = null;
       DummyClass51.anIntArray1163 = null;
       if (var0 != 24) {
         DummyClass51.method1420(-74, 65, 51, 91, (byte) -26);
       }
-
-    } catch (RuntimeException var2) {
-      throw AbstractGameWorld.cascadeException(var2, "lf.B(" + var0 + ')');
-    }
   }
 
 }

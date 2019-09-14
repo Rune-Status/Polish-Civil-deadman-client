@@ -9,17 +9,11 @@ public final class DummyClass34 {
 
 
   public static GameString decompressString(Buffer var0) {
-    try {
-      return GroundItem.decompressString(var0, 32767);
-    } catch (RuntimeException var3) {
-      throw AbstractGameWorld.cascadeException(var3,
-        "fc.C(" + (var0 != null ? "{...}" : "null") + ')');
-    }
+    return GroundItem.decompressString(var0, 32767);
   }
 
   public static int perlinNoise(int var0, int var2) {
-    try {
-      int var3 = -128 + (DummyClass45.method1234(4, var2 + '\ub135', var0 - -91923, 512) + (
+    int var3 = -128 + (DummyClass45.method1234(4, var2 + '\ub135', var0 - -91923, 512) + (
         DummyClass45.method1234(2, var2 + 10294, '\u93bd' + var0, 512) + -128 >> 1) - -(
         DummyClass45.method1234(1, var2, var0, 512) + -128 >> 2));
       var3 = 35 + (int) (0.3D * var3);
@@ -32,21 +26,14 @@ public final class DummyClass34 {
       }
 
       return var3;
-    } catch (RuntimeException var4) {
-      throw AbstractGameWorld.cascadeException(var4, "fc.B(" + var0 + ',' + var2 + ')');
-    }
   }
 
   public static void method994(int var0) {
-    try {
-      DummyClass34.aClass94_591 = null;
+    DummyClass34.aClass94_591 = null;
       if (var0 == '\u93bd') {
         DummyClass34.aClass94_592 = null;
         DummyClass34.aClass94_593 = null;
       }
-    } catch (RuntimeException var2) {
-      throw AbstractGameWorld.cascadeException(var2, "fc.A(" + var0 + ')');
-    }
   }
 
   public static void method995() {
@@ -97,8 +84,7 @@ public final class DummyClass34 {
   }
 
   public static void method996(int var0) {
-    try {
-      if (var0 >= -35) {
+    if (var0 >= -35) {
         DummyClass34.perlinNoise(3, -24);
       }
 
@@ -127,9 +113,6 @@ public final class DummyClass34 {
 
         DummyClass21.anInt1762 = SceneSomething.anInt491;
       }
-    } catch (RuntimeException var5) {
-      throw AbstractGameWorld.cascadeException(var5, "fc.E(" + var0 + ')');
-    }
   }
 
 }

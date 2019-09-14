@@ -28,8 +28,7 @@ public final class TextureSampler15 extends AbstractTextureSampler {
   }
 
   private void method242(byte var1) {
-    try {
-      Random var2 = new Random(this.anInt3197);
+    Random var2 = new Random(this.anInt3197);
       this.aShortArray3200 = new short[512];
       if (var1 == 37) {
         if (0 < this.anInt3193) {
@@ -40,14 +39,10 @@ public final class TextureSampler15 extends AbstractTextureSampler {
         }
 
       }
-    } catch (RuntimeException var4) {
-      throw AbstractGameWorld.cascadeException(var4, "hm.C(" + var1 + ')');
-    }
   }
 
   public int[] method154(int var1, byte var2 ) {
-    try {
-      int var4 = 68 % ((30 - var2) / 36);
+    int var4 = 68 % ((30 - var2) / 36);
       int[] var3 = this.monoChromaticImageCache.method1709(-16409, var1);
       if (this.monoChromaticImageCache.aBoolean1580) {
         int var5 = this.anInt3204 * DummyClass4.anIntArray2999[var1] + 2048;
@@ -153,14 +148,10 @@ public final class TextureSampler15 extends AbstractTextureSampler {
       }
 
       return var3;
-    } catch (RuntimeException var20) {
-      throw AbstractGameWorld.cascadeException(var20, "hm.D(" + var1 + ',' + var2 + ')');
-    }
   }
 
   public void parseConfig(int var1, Buffer var2, boolean var3 ) {
-    try {
-      if (!var3) {
+    if (!var3) {
         this.parseConfig(-122, null, false);
       }
 
@@ -181,45 +172,30 @@ public final class TextureSampler15 extends AbstractTextureSampler {
       } else {
         this.anInt3193 = var2.readUnsignedShort();
       }
-
-    } catch (RuntimeException var5) {
-      throw AbstractGameWorld.cascadeException(var5,
-        "hm.A(" + var1 + ',' + (var2 != null ? "{...}" : "null") + ',' + var3 + ')');
-    }
   }
 
   public void method158(int var1 ) {
-    try {
-      if (var1 != 16251) {
+    if (var1 != 16251) {
         TextureSampler15.aClass44_Sub1Array3201 = null;
       }
 
       this.aByteArray3195 = GZipDecompressor.method1123(var1 ^ 16727940,
           this.anInt3197);
       this.method242((byte) 37);
-    } catch (RuntimeException var3) {
-      throw AbstractGameWorld.cascadeException(var3, "hm.P(" + var1 + ')');
-    }
   }
 
   public static int getLanguageForTag(GameString var0) {
-    try {
-      for (int i = 0; ~i > ~TextureSampler4.LANGUAGES.length; ++i) {
+    for (int i = 0; ~i > ~TextureSampler4.LANGUAGES.length; ++i) {
         if (TextureSampler4.LANGUAGES[i].method1531(var0)) {
           return i;
         }
       }
 
       return -1;
-    } catch (RuntimeException var3) {
-      throw AbstractGameWorld.cascadeException(var3,
-        "hm.F(" + (var0 != null ? "{...}" : "null") + ')');
-    }
   }
 
   public static void method244(int var0, int var1, int var2, int var3, int var4) {
-    try {
-      int var5;
+    int var5;
       if (~var1 >= ~var3) {
         for (var5 = var1; var5 < var3; ++var5) {
           DummyClass35.anIntArrayArray663[var5][var2] = var4;
@@ -233,16 +209,10 @@ public final class TextureSampler15 extends AbstractTextureSampler {
       if (var0 != 2) {
         TextureSampler15.anInt3198 = -110;
       }
-
-    } catch (RuntimeException var6) {
-      throw AbstractGameWorld.cascadeException(var6,
-        "hm.E(" + var0 + ',' + var1 + ',' + var2 + ',' + var3 + ',' + var4 + ')');
-    }
   }
 
   public static void method245(int var0) {
-    try {
-      TextureSampler15.aClass44_Sub1Array3201 = null;
+    TextureSampler15.aClass44_Sub1Array3201 = null;
       TextureSampler15.aClass94_3192 = null;
       TextureSampler15.aClass94_3206 = null;
       if (var0 != 0) {
@@ -251,9 +221,6 @@ public final class TextureSampler15 extends AbstractTextureSampler {
 
       TextureSampler15.aClass94_3190 = null;
       TextureSampler15.aClass94_3196 = null;
-    } catch (RuntimeException var2) {
-      throw AbstractGameWorld.cascadeException(var2, "hm.B(" + var0 + ')');
-    }
   }
 
 }

@@ -16,8 +16,7 @@ public final class SomethingAudio {
   private int anInt2001;
 
   public SomethingAudio(int var1,int var2 ) {
-    try {
-      if (var2 != var1) {
+    if (var2 != var1) {
         int var3 = DummyClass56.method1651(19067, var2, var1);
         var2 /= var3;
         this.anInt2001 = var2;
@@ -53,14 +52,10 @@ public final class SomethingAudio {
         }
 
       }
-    } catch (RuntimeException var16) {
-      throw AbstractGameWorld.cascadeException(var16, "vj.<init>(" + var1 + ',' + var2 + ')');
-    }
   }
 
   public byte[] method2173(byte[] var1, byte var2 ) {
-    try {
-      int var3 = 53 % ((var2 - -39) / 50);
+    int var3 = 53 % ((var2 - -39) / 50);
       if (null != this.anIntArrayArray1999) {
         int var4 = 14 + (int) ((long) var1.length * this.anInt2001
             / this.anInt1997);
@@ -101,28 +96,19 @@ public final class SomethingAudio {
       }
 
       return var1;
-    } catch (RuntimeException var12) {
-      throw AbstractGameWorld.cascadeException(var12,
-        "vj.E(" + (var1 != null ? "{...}" : "null") + ',' + var2 + ')');
-    }
   }
 
   public int method2177(int var1, byte var2 ) {
-    try {
-      if (null != this.anIntArrayArray1999) {
+    if (null != this.anIntArrayArray1999) {
         var1 = (int) ((long) this.anInt2001
             * var1 / this.anInt1997);
       }
 
       return var2 != 90 ? 81 : var1;
-    } catch (RuntimeException var4) {
-      throw AbstractGameWorld.cascadeException(var4, "vj.C(" + var1 + ',' + var2 + ')');
-    }
   }
 
   public int method2178(boolean var1,int var2 ) {
-    try {
-      if (var1) {
+    if (var1) {
         return -69;
       } else {
         if (null != this.anIntArrayArray1999) {
@@ -132,9 +118,6 @@ public final class SomethingAudio {
 
         return var2;
       }
-    } catch (RuntimeException var4) {
-      throw AbstractGameWorld.cascadeException(var4, "vj.D(" + ',' + var2 + ')');
-    }
   }
 
   public static long method2174(int var0, int var1, int var2) {
@@ -143,23 +126,18 @@ public final class SomethingAudio {
   }
 
   public static void method2175(byte var0) {
-    try {
-      SomethingAudio.aClass94_2002 = null;
+    SomethingAudio.aClass94_2002 = null;
       SomethingAudio.CONNECTING_TO_UPDATE_SERVER = null;
       SomethingAudio.aClass3_Sub28_Sub17_Sub1_2000 = null;
       if (var0 == -110) {
         SomethingAudio.aClass94_2003 = null;
         SomethingAudio.aClass94_1998 = null;
       }
-    } catch (RuntimeException var2) {
-      throw AbstractGameWorld.cascadeException(var2, "vj.F(" + var0 + ')');
-    }
   }
 
   public static SoftwareDirectColorSprite[] method2176(int var0, int var1, int var2,
                                                       FileUnpacker var3) {
-    try {
-      if (SomethingTexture4.loadSprites(var3, var0, var2, -30901)) {
+    if (SomethingTexture4.loadSprites(var3, var0, var2, -30901)) {
         if (var1 != 32767) {
           SomethingAudio.method2176(-111, 55, -18, null);
         }
@@ -168,10 +146,6 @@ public final class SomethingAudio {
       } else {
         return null;
       }
-    } catch (RuntimeException var5) {
-      throw AbstractGameWorld.cascadeException(var5,
-        "vj.A(" + var0 + ',' + var1 + ',' + var2 + ',' + (var3 != null ? "{...}" : "null") + ')');
-    }
   }
 
 }

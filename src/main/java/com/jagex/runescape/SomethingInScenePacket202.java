@@ -27,8 +27,7 @@ public final class SomethingInScenePacket202 extends Node {
 
   public static void method111(byte var0, int var1, int var2, int var3, int var4, int var5, int var6,
                               int var7, int var8) {
-    try {
-      if (var0 < -47) {
+    if (var0 < -47) {
         for (int var9 = 0; ~DummyClass25.aClass131_1624.anInt1720 < ~var9; ++var9) {
           if (DummyClass25.aClass131_1624.method1787(var9, (byte) -124)) {
             int var10 =
@@ -120,16 +119,10 @@ public final class SomethingInScenePacket202 extends Node {
         }
 
       }
-    } catch (RuntimeException var20) {
-      throw AbstractGameWorld.cascadeException(var20,
-        "cn.B(" + var0 + ',' + var1 + ',' + var2 + ',' + var3 + ',' + var4 + ',' + var5 + ',' + var6
-          + ',' + var7 + ',' + var8 + ')');
-    }
   }
 
   public static void method112(byte var0, byte var1) {
-    try {
-      if (null == AbstractImageProducer.aByteArrayArrayArray2008) {
+    if (null == AbstractImageProducer.aByteArrayArrayArray2008) {
         AbstractImageProducer.aByteArrayArrayArray2008 = new byte[4][104][104];
       }
 
@@ -144,29 +137,20 @@ public final class SomethingInScenePacket202 extends Node {
           }
         }
       }
-
-    } catch (RuntimeException var5) {
-      throw AbstractGameWorld.cascadeException(var5, "cn.A(" + var0 + ',' + var1 + ')');
-    }
   }
 
   public static void method113(byte var0) {
-    try {
-      SomethingInScenePacket202.aClass94_2274 = null;
+    SomethingInScenePacket202.aClass94_2274 = null;
       SomethingInScenePacket202.aClass94_2276 = null;
       SomethingInScenePacket202.aClass94_2280 = null;
       SomethingInScenePacket202.aClass94_2267 = null;
       SomethingInScenePacket202.aClass94_2269 = null;
       int var1 = -100 % ((var0 - -43) / 46);
-    } catch (RuntimeException var2) {
-      throw AbstractGameWorld.cascadeException(var2, "cn.D(" + var0 + ')');
-    }
   }
 
   public static void method114(int var0, int var1, int var2, int var3, int var4, int var5, int var6,
                               int var7, int var8, int var9) {
-    try {
-      if (var0 != 3) {
+    if (var0 != 3) {
         SomethingInScenePacket202.method117((byte) -26);
       }
 
@@ -204,17 +188,10 @@ public final class SomethingInScenePacket202 extends Node {
           var11 = var34;
         }
       }
-
-    } catch (RuntimeException var35) {
-      throw AbstractGameWorld.cascadeException(var35,
-        "cn.O(" + var0 + ',' + var1 + ',' + var2 + ',' + var3 + ',' + var4 + ',' + var5 + ',' + var6
-          + ',' + var7 + ',' + var8 + ',' + var9 + ')');
-    }
   }
 
   public static int method115(boolean var0, int var1) {
-    try {
-      long var2 = Time.getCurrentTimeMillis();
+    long var2 = Time.getCurrentTimeMillis();
       if (var1 != -1) {
         SomethingInScenePacket202.method116(false, 11);
       }
@@ -236,14 +213,10 @@ public final class SomethingInScenePacket202 extends Node {
       }
 
       return -1;
-    } catch (RuntimeException var6) {
-      throw AbstractGameWorld.cascadeException(var6, "cn.F(" + var0 + ',' + var1 + ')');
-    }
   }
 
   public static void method116(boolean var0, int var1) {
-    try {
-      int var2 = DummyClass13.anInt2022;
+    int var2 = DummyClass13.anInt2022;
       if (DummyClass45.anInt987 == TextureCache.localPlayer.anInt2819 >> 7
         && ~(TextureCache.localPlayer.anInt2829 >> 7) == ~DummyClass38.anInt733) {
         DummyClass45.anInt987 = 0;
@@ -417,14 +390,10 @@ public final class SomethingInScenePacket202 extends Node {
         }
 
       }
-    } catch (RuntimeException var15) {
-      throw AbstractGameWorld.cascadeException(var15, "cn.C(" + var0 + ',' + var1 + ')');
-    }
   }
 
   public static void method117(byte var0) {
-    try {
-      if (0 > SomethingQuickChat2.anInt3536) {
+    if (0 > SomethingQuickChat2.anInt3536) {
         TextureSampler13.anInt3362 = -1;
         SomethingQuickChat2.anInt3536 = 0;
         ProceduralTexture.anInt1150 = -1;
@@ -451,10 +420,6 @@ public final class SomethingInScenePacket202 extends Node {
         TextureSampler13.anInt3362 = -1;
         ProceduralTexture.anInt1150 = -1;
       }
-
-    } catch (RuntimeException var2) {
-      throw AbstractGameWorld.cascadeException(var2, "cn.E(" + var0 + ')');
-    }
   }
 
 }

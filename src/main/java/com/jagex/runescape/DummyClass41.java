@@ -18,30 +18,20 @@ public final class DummyClass41 {
 
 
   public static void method1169(boolean var0) {
-    try {
-      DummyClass41.aClass94_868 = null;
+    DummyClass41.aClass94_868 = null;
       if (var0) {
         DummyClass41.method1170((byte) 25, 28);
       }
-
-    } catch (RuntimeException var2) {
-      throw AbstractGameWorld.cascadeException(var2, "hi.C(" + ')');
-    }
   }
 
   public static int method1170(byte var0, int var1) {
-    try {
-      int var2 = -77 / ((-34 - var0) / 52);
+    int var2 = -77 / ((-34 - var0) / 52);
       return var1 >>> 8;
-    } catch (RuntimeException var3) {
-      throw AbstractGameWorld.cascadeException(var3, "hi.E(" + var0 + ',' + var1 + ')');
-    }
   }
 
   public static void method1171(int var0, int var1, int var2, int var3, int var4, Widget var5,
                                boolean var6) {
-    try {
-      int var7 = var3 * var3 + var4 * var4;
+    int var7 = var3 * var3 + var4 * var4;
       if (-360001 <= ~var7) {
         int var8 = Math.min(var5.anInt168 / 2, var5.anInt193 / 2);
         if (var6) {
@@ -75,12 +65,6 @@ public final class DummyClass41 {
         }
 
       }
-    } catch (RuntimeException var18) {
-      throw AbstractGameWorld.cascadeException(var18,
-        "hi.D(" + var0 + ',' + var1 + ',' + var2 + ',' + var3 + ',' + var4 + ',' + (var5 != null ?
-          "{...}" :
-          "null") + ',' + var6 + ')');
-    }
   }
 
   public static String method1172(int var0, Throwable var1) throws IOException {
@@ -134,8 +118,7 @@ public final class DummyClass41 {
   }
 
   public static void method1173(Buffer var0, int var1) {
-    try {
-      int var2 = var0.readUnsignedShortSmart();
+    int var2 = var0.readUnsignedShortSmart();
       DummyClass25.aClass26Array1627 = new GameWorldSomething[var2];
 
       int var3;
@@ -167,24 +150,15 @@ public final class DummyClass41 {
 
       AbstractObjectNode.anInt3608 = var0.readInt();
       BufferedFile.aBoolean579 = true;
-    } catch (RuntimeException var6) {
-      throw AbstractGameWorld.cascadeException(var6,
-        "hi.B(" + (var0 != null ? "{...}" : "null") + ',' + var1 + ')');
-    }
   }
 
   public static GameString method1174(Widget var0, byte var1) {
-    try {
-      int var2 = 49 % ((var1 - 22) / 46);
+    int var2 = 49 % ((var1 - 22) / 46);
       return ~GameClient.method44(var0).method101(-69) != -1 ?
         (null != var0.aClass94_245 && var0.aClass94_245.method1564(1).getLength() != 0 ?
           var0.aClass94_245 :
           (LinearHashTable.aBoolean1040 ? GameException.aClass94_2116 : null)) :
         null;
-    } catch (RuntimeException var3) {
-      throw AbstractGameWorld.cascadeException(var3,
-        "hi.F(" + (var0 != null ? "{...}" : "null") + ',' + var1 + ')');
-    }
   }
 
 }

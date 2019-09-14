@@ -12,8 +12,7 @@ public final class MouseRecorder implements Runnable {
   public int[] anIntArray1020 = new int[500];
 
   public void run() {
-    try {
-      for (; this.aBoolean1015; TextureSampler25.sleep(50L)) {
+    for (; this.aBoolean1015; TextureSampler25.sleep(50L)) {
         Object var1 = this.anObject1016;
         synchronized (var1) {
           if (-501 < ~this.anInt1018) {
@@ -23,51 +22,34 @@ public final class MouseRecorder implements Runnable {
           }
         }
       }
-
-    } catch (RuntimeException var4) {
-      throw AbstractGameWorld.cascadeException(var4, "jd.run()");
-    }
   }
 
   public static void method1257(int var0) {
-    try {
-      if (var0 == 25951) {
+    if (var0 == 25951) {
         MouseRecorder.aClass11_1017 = null;
         MouseRecorder.aByteArrayArrayArray1014 = null;
         MouseRecorder.aClass93_1013 = null;
       }
-    } catch (RuntimeException var2) {
-      throw AbstractGameWorld.cascadeException(var2, "jd.B(" + var0 + ')');
-    }
   }
 
   public static int method1258(byte var0) {
-    try {
-      SceneShadowMap.anInt1780 = 0;
+    SceneShadowMap.anInt1780 = 0;
       if (var0 != -53) {
         MouseRecorder.method1258((byte) -35);
       }
 
       return TextureSampler23.method251(-1);
-    } catch (RuntimeException var2) {
-      throw AbstractGameWorld.cascadeException(var2, "jd.D(" + var0 + ')');
-    }
   }
 
   public static void method1259(int var0, byte var1) {
-    try {
-      if (var1 > 12) {
+    if (var1 > 12) {
         WidgetUpdate var2 = AudioStreamEncoder3.method466(4, 12, var0);
         var2.createIndexedColorSprite(true);
       }
-    } catch (RuntimeException var3) {
-      throw AbstractGameWorld.cascadeException(var3, "jd.A(" + var0 + ',' + var1 + ')');
-    }
   }
 
   public static void method1260(int var0, int var1, Widget[] var2) {
-    try {
-      for (int var3 = 0; var3 < var2.length; ++var3) {
+    for (int var3 = 0; var3 < var2.length; ++var3) {
         Widget var4 = var2[var3];
         if (null != var4 && ~var4.anInt190 == ~var1 && (!var4.aBoolean233 || !GameClient.method51(
           var4))) {
@@ -143,16 +125,10 @@ public final class MouseRecorder implements Runnable {
       if (var0 != 23206) {
         MouseRecorder.method1257(107);
       }
-
-    } catch (RuntimeException var8) {
-      throw AbstractGameWorld.cascadeException(var8,
-        "jd.E(" + var0 + ',' + var1 + ',' + (var2 != null ? "{...}" : "null") + ')');
-    }
   }
 
   public static GameString method1261(int var0, int var1, GameString[] var2, int var3) {
-    try {
-      int var4 = 0;
+    int var4 = 0;
 
       for (int var5 = 0; var1 > var5; ++var5) {
         if (null == var2[var0 - -var5]) {
@@ -179,22 +155,14 @@ public final class MouseRecorder implements Runnable {
 
       var11.bytes = var10;
       return var11;
-    } catch (RuntimeException var9) {
-      throw AbstractGameWorld.cascadeException(var9,
-        "jd.C(" + var0 + ',' + var1 + ',' + (var2 != null ? "{...}" : "null") + ',' + var3 + ')');
-    }
   }
 
   public static int method1262(int var0, int var1) {
-    try {
-      if (var0 < 20) {
+    if (var0 < 20) {
         MouseRecorder.method1262(15, 87);
       }
 
       return var1 & 127;
-    } catch (RuntimeException var3) {
-      throw AbstractGameWorld.cascadeException(var3, "jd.F(" + var0 + ',' + var1 + ')');
-    }
   }
 
 }

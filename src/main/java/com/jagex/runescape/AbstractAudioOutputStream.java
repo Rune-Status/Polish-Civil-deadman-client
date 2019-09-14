@@ -145,8 +145,7 @@ public class AbstractAudioOutputStream {
   }
 
   public final synchronized void process(byte var1) {
-    try {
-      if (null != this.samples) {
+    if (null != this.samples) {
         long start = Time.getCurrentTimeMillis();
 
         try {
@@ -235,23 +234,14 @@ public class AbstractAudioOutputStream {
         }
 
       }
-    } catch (RuntimeException var8) {
-      throw AbstractGameWorld.cascadeException(var8, "vh.Q(" + var1 + ')');
-    }
   }
 
   public final synchronized void method2154(int var1, AudioStreamEncoder var2) {
-    try {
-      this.aClass3_Sub24_1973 = var2;
-    } catch (RuntimeException var4) {
-      throw AbstractGameWorld.cascadeException(var4,
-        "vh.I(" + var1 + ',' + (var2 != null ? "{...}" : "null") + ')');
-    }
+    this.aClass3_Sub24_1973 = var2;
   }
 
   private void method2155(AudioStreamEncoder var1, int var2, byte var3) {
-    try {
-      if (var3 != -24) {
+    if (var3 != -24) {
         this.method2155(null, -105, (byte) 87);
       }
 
@@ -265,23 +255,14 @@ public class AbstractAudioOutputStream {
 
       this.aClass3_Sub24Array1983[var4] = var1;
       var1.anInt2543 = var2;
-    } catch (RuntimeException var6) {
-      throw AbstractGameWorld.cascadeException(var6,
-        "vh.H(" + (var1 != null ? "{...}" : "null") + ',' + var2 + ',' + var3 + ')');
-    }
   }
 
   public int getAmountBufferedSamples() {
-    try {
-      return this.sampleBufferSize;
-    } catch (RuntimeException var2) {
-      throw AbstractGameWorld.cascadeException(var2, "vh.B()");
-    }
+    return this.sampleBufferSize;
   }
 
   public final synchronized void method2158(byte var1) {
-    try {
-      this.paused = true;
+    this.paused = true;
 
       try {
         this.flush();
@@ -289,27 +270,17 @@ public class AbstractAudioOutputStream {
         this.close();
         this.pauseTime = Time.getCurrentTimeMillis() + 2000L;
       }
-
-    } catch (RuntimeException var4) {
-      throw AbstractGameWorld.cascadeException(var4, "vh.L(" + var1 + ')');
-    }
   }
 
   final void pause() {
-    try {
-      this.paused = true;
-
-    } catch (RuntimeException var3) {
-      throw AbstractGameWorld.cascadeException(var3, "vh.J()");
-    }
+    this.paused = true;
   }
 
   public void close() {
   }
 
   private void method2161(int var1, int var2) {
-    try {
-      this.anInt1987 -= var1;
+    this.anInt1987 -= var1;
       if (0 > this.anInt1987) {
         this.anInt1987 = 0;
       }
@@ -321,15 +292,10 @@ public class AbstractAudioOutputStream {
       if (null != this.aClass3_Sub24_1973) {
         this.aClass3_Sub24_1973.method415(var1);
       }
-
-    } catch (RuntimeException var4) {
-      throw AbstractGameWorld.cascadeException(var4, "vh.K(" + var1 + ',' + var2 + ')');
-    }
   }
 
   public final synchronized void method2163(boolean var1) {
-    try {
-      if (null != DummyClass36.aClass15_2613) {
+    if (null != DummyClass36.aClass15_2613) {
         boolean var2 = true;
 
         for (int var3 = 0; ~var3 > -3; ++var3) {
@@ -355,17 +321,13 @@ public class AbstractAudioOutputStream {
 
       this.close();
       this.samples = null;
-    } catch (RuntimeException var4) {
-      throw AbstractGameWorld.cascadeException(var4, "vh.P(" + var1 + ')');
-    }
   }
 
   public void bind(Component var1 ) throws Exception {
   }
 
   public static SomethingQuickChatK method2156(int var0, Buffer var1) {
-    try {
-      SomethingQuickChatK var2 = new SomethingQuickChatK();
+    SomethingQuickChatK var2 = new SomethingQuickChatK();
       var2.anInt149 = var1.readUnsignedShort();
       if (var0 != 1024) {
         AbstractAudioOutputStream.method2162(null, 34, 103, -93);
@@ -373,10 +335,6 @@ public class AbstractAudioOutputStream {
 
       var2.aClass3_Sub28_Sub4_151 = StringNode.method733(12345678, var2.anInt149);
       return var2;
-    } catch (RuntimeException var3) {
-      throw AbstractGameWorld.cascadeException(var3,
-        "vh.M(" + var0 + ',' + (var1 != null ? "{...}" : "null") + ')');
-    }
   }
 
   public static void method2162(SceneNode var0, int var1, int var2, int var3) {
@@ -416,8 +374,7 @@ public class AbstractAudioOutputStream {
   }
 
   public static void method2165(int var0) {
-    try {
-      AbstractAudioOutputStream.aClass94_1970 = null;
+    AbstractAudioOutputStream.aClass94_1970 = null;
       AbstractAudioOutputStream.aClass94_1974 = null;
       AbstractAudioOutputStream.anIntArray1976 = null;
       if (var0 != 0) {
@@ -426,9 +383,6 @@ public class AbstractAudioOutputStream {
 
       AbstractAudioOutputStream.quadx0 = null;
       AbstractAudioOutputStream.otherKeyQueue = null;
-    } catch (RuntimeException var2) {
-      throw AbstractGameWorld.cascadeException(var2, "vh.G(" + var0 + ')');
-    }
   }
 
 }

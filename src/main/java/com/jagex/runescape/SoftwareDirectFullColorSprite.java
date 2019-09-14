@@ -801,8 +801,7 @@ public final class SoftwareDirectFullColorSprite extends SoftwareDirectColorSpri
       int var6,
       double var7,
       int var9 ) {
-    try {
-      int var10 = -var3 / 2;
+    int var10 = -var3 / 2;
       int var11 = -var4 / 2;
       int var12 = (int) (Math.sin(var7) * 65536.0D);
       int var13 = (int) (Math.cos(var7) * 65536.0D);
@@ -833,8 +832,6 @@ public final class SoftwareDirectFullColorSprite extends SoftwareDirectColorSpri
         var15 += var13;
         var16 += DummyClass47.anInt1092;
       }
-    } catch (Exception var24) {
-    }
 
   }
 
@@ -844,8 +841,7 @@ public final class SoftwareDirectFullColorSprite extends SoftwareDirectColorSpri
       int var8,
       int[] var9,
       int[] var10 ) {
-    try {
-      int var11 = -var3 / 2;
+    int var11 = -var3 / 2;
       int var12 = -var4 / 2;
       int var13 = (int) (Math.sin(var7 / 326.11D) * 65536.0D);
       int var14 = (int) (Math.cos(var7 / 326.11D) * 65536.0D);
@@ -877,8 +873,6 @@ public final class SoftwareDirectFullColorSprite extends SoftwareDirectColorSpri
         var16 += var14;
         var17 += DummyClass47.anInt1092;
       }
-    } catch (Exception var26) {
-    }
 
   }
 
@@ -888,8 +882,7 @@ public final class SoftwareDirectFullColorSprite extends SoftwareDirectColorSpri
       int var8,
       int[] var9,
       int[] var10 ) {
-    try {
-      int var11 = -var3 / 2;
+    int var11 = -var3 / 2;
       int var12 = -var4 / 2;
       int var13 = (int) (Math.sin(var7 / 326.11D) * 65536.0D);
       int var14 = (int) (Math.cos(var7 / 326.11D) * 65536.0D);
@@ -921,8 +914,6 @@ public final class SoftwareDirectFullColorSprite extends SoftwareDirectColorSpri
         var16 += var14;
         var17 += DummyClass47.anInt1092;
       }
-    } catch (Exception var26) {
-    }
 
   }
 

@@ -19,8 +19,7 @@ public final class ISAACCipher {
   private int anInt972;
 
   public ISAACCipher(int[] var1) {
-    try {
-      this.anIntArray970 = new int[256];
+    this.anIntArray970 = new int[256];
       this.anIntArray971 = new int[256];
 
       for (int var2 = 0; ~var2 > ~var1.length; ++var2) {
@@ -28,15 +27,10 @@ public final class ISAACCipher {
       }
 
       this.method1227(true);
-    } catch (RuntimeException var3) {
-      throw AbstractGameWorld.cascadeException(var3,
-          "ij.<init>(" + (var1 != null ? "{...}" : "null") + ')');
-    }
   }
 
   private void method1227(boolean var1) {
-    try {
-      if (!var1) {
+    if (!var1) {
         this.method1229(82);
       }
 
@@ -165,9 +159,6 @@ public final class ISAACCipher {
 
       this.method1229(-1879);
       this.anInt968 = 256;
-    } catch (RuntimeException var11) {
-      throw AbstractGameWorld.cascadeException(var11, "ij.E(" + var1 + ')');
-    }
   }
 
   public int getNextValue() {
@@ -179,8 +170,7 @@ public final class ISAACCipher {
   }
 
   private void method1229(int var1) {
-    try {
-      this.anInt967 += ++this.anInt966;
+    this.anInt967 += ++this.anInt966;
       int var2 = 0;
       if (var1 != -1879) {
         this.anInt968 = -98;
@@ -211,15 +201,10 @@ public final class ISAACCipher {
                     >> 2];
         ++var2;
       }
-
-    } catch (RuntimeException var5) {
-      throw AbstractGameWorld.cascadeException(var5, "ij.A(" + var1 + ')');
-    }
   }
 
   public static void method1230(byte var0) {
-    try {
-      int var1 = AbstractIndexedColorSprite.anInt1462;
+    int var1 = AbstractIndexedColorSprite.anInt1462;
       int var2 = TextureSampler29.anInt3395;
       int var4 = SomethingQuickChat2.anInt3537;
       int var3 = SomethingWorldMapy.anInt3552;
@@ -414,27 +399,18 @@ public final class ISAACCipher {
           .method1282(AbstractIndexedColorSprite.anInt1462, (byte) 122,
               TextureSampler29.anInt3395, SomethingQuickChat2.anInt3537,
               SomethingWorldMapy.anInt3552);
-    } catch (RuntimeException var10) {
-      throw AbstractGameWorld.cascadeException(var10, "ij.F(" + var0 + ')');
-    }
   }
 
   public static void method1231(int var0) {
-    try {
-      ISAACCipher.aClass94_973 = null;
+    ISAACCipher.aClass94_973 = null;
       ISAACCipher.aClass94_965 = null;
       if (var0 <= 116) {
         ISAACCipher.method1230((byte) -73);
       }
-
-    } catch (RuntimeException var2) {
-      throw AbstractGameWorld.cascadeException(var2, "ij.D(" + var0 + ')');
-    }
   }
 
   public static int method1232(NPC var0, int var1) {
-    try {
-      if (var1 == -1) {
+    if (var1 == -1) {
         NpcConfiguration var2 = var0.config;
         if (null != var2.anIntArray1292) {
           var2 = var2.method1471((byte) -108);
@@ -466,10 +442,6 @@ public final class ISAACCipher {
       } else {
         return 103;
       }
-    } catch (RuntimeException var5) {
-      throw AbstractGameWorld.cascadeException(var5,
-          "ij.B(" + (var0 != null ? "{...}" : "null") + ',' + var1 + ')');
-    }
   }
 
 }

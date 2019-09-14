@@ -17,37 +17,27 @@ public final class DummyClass28 {
 
   private static SoftwareIndexedColorSprite[] method885(boolean var0, int var1,
                                                               FileUnpacker var2, int var3) {
-    try {
-      if (!var0) {
+    if (!var0) {
         DummyClass28.aClass94_338 = null;
       }
 
       return !SomethingTexture4.loadSprites(var2, var3, var1, -30901) ?
         null :
         LinearHashTable.createSprites(0);
-    } catch (RuntimeException var5) {
-      throw AbstractGameWorld.cascadeException(var5,
-        "cg.C(" + var0 + ',' + var1 + ',' + (var2 != null ? "{...}" : "null") + ',' + var3 + ')');
-    }
   }
 
   public static void method886(byte var0) {
-    try {
-      if (var0 < 26) {
+    if (var0 < 26) {
         DummyClass28.aClass94_339 = null;
       }
 
       DummyClass28.aClass94_338 = null;
       DummyClass28.aClass94_339 = null;
       DummyClass28.aClass94_341 = null;
-    } catch (RuntimeException var2) {
-      throw AbstractGameWorld.cascadeException(var2, "cg.B(" + var0 + ')');
-    }
   }
 
   public static void method887(int var0, FileUnpacker var1) {
-    try {
-      TextureCache.aClass3_Sub28_Sub16_Sub2Array2140 =
+    TextureCache.aClass3_Sub28_Sub16_Sub2Array2140 =
         SomethingAudio.method2176(0, 32767, FloorOverlay.anInt2104, var1);
       SomethingTexture3.aClass3_Sub28_Sub16Array2656 =
         Projectile.method2027(0, (byte) 11, TextureSampler18.anInt4042, var1);
@@ -140,11 +130,6 @@ public final class DummyClass28 {
       } else {
         Mobile.aClass3_Sub28_Sub16Array2839 = TextureCache.aClass3_Sub28_Sub16_Sub2Array2140;
       }
-
-    } catch (RuntimeException var9) {
-      throw AbstractGameWorld.cascadeException(var9,
-        "cg.A(" + var0 + ',' + (var1 != null ? "{...}" : "null") + ')');
-    }
   }
 
 }

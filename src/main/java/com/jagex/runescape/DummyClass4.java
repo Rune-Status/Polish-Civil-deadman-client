@@ -16,8 +16,7 @@ public final class DummyClass4 extends DummyClass6 {
 
 
   public static void method2227(byte var0) {
-    try {
-      DummyClass4.aClass94_3006 = null;
+    DummyClass4.aClass94_3006 = null;
       DummyClass4.anIntArray3007 = null;
       DummyClass4.aClass94Array3003 = null;
       if (var0 == 37) {
@@ -26,14 +25,10 @@ public final class DummyClass4 extends DummyClass6 {
         DummyClass4.aClass94_3000 = null;
         DummyClass4.anIntArray2999 = null;
       }
-    } catch (RuntimeException var2) {
-      throw AbstractGameWorld.cascadeException(var2, "fb.A(" + var0 + ')');
-    }
   }
 
   public static void parsePlayerUpdate(byte var0) {
-    try {
-      OndemandRequester.anInt997 = 0;
+    OndemandRequester.anInt997 = 0;
       DummyClass17.anInt1829 = 0;
       FileRequester.method2100((byte) 81);
       GameObject.method1964(false);
@@ -68,14 +63,10 @@ public final class DummyClass4 extends DummyClass6 {
                   + HashTable.packetLength);
         }
       }
-    } catch (RuntimeException var3) {
-      throw AbstractGameWorld.cascadeException(var3, "fb.B(" + var0 + ')');
-    }
   }
 
   public static void method2229(long var0, byte var2) {
-    try {
-      if (-1L != ~var0) {
+    if (-1L != ~var0) {
         if ((100 > FileSystem.anInt104 || TextureSampler3.aBoolean3358)
           && ~FileSystem.anInt104 > -201) {
           GameString var3 = Objects
@@ -120,9 +111,6 @@ public final class DummyClass4 extends DummyClass6 {
           GameBuffer.printMessage(GroundItemNode.EMPTY_STRING, 0, DummyClass8.aClass94_4024, -1);
         }
       }
-    } catch (RuntimeException var5) {
-      throw AbstractGameWorld.cascadeException(var5, "fb.C(" + var0 + ',' + var2 + ')');
-    }
   }
 
 }

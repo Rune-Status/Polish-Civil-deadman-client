@@ -46,8 +46,7 @@ public final class GameObject extends SceneNode {
       int var7,
       boolean var8,
       SceneNode var9 ) {
-    try {
-      this.anInt2732 = var4;
+    this.anInt2732 = var4;
       this.anInt2724 = var3;
       this.anInt2736 = var5;
       this.anInt2734 = var2;
@@ -121,26 +120,14 @@ public final class GameObject extends SceneNode {
           this.aBoolean2721 = true;
         }
       }
-
-    } catch (RuntimeException var11) {
-      throw AbstractGameWorld.cascadeException(var11,
-        "dc.<init>(" + var1 + ',' + var2 + ',' + var3 + ',' + var4 + ',' + var5 + ',' + var6 + ','
-          + var7 + ',' + var8 + ',' + (var9 != null ? "{...}" : "null") + ')');
-    }
   }
 
   public void method1867(int var1, int var2, int var3, int var4, int var5 ) {
-    try {
-      if (GlRenderer.useOpenGlRenderer) {
+    if (GlRenderer.useOpenGlRenderer) {
         this.method1962(true, -2);
       } else {
         this.method1961(var5, var4, -101);
       }
-
-    } catch (RuntimeException var7) {
-      throw AbstractGameWorld.cascadeException(var7,
-        "dc.IB(" + var1 + ',' + var2 + ',' + var3 + ',' + var4 + ',' + var5 + ')');
-    }
   }
 
   public void draw(int var1, int var2, int var3, int var4, int var5, int var6,
@@ -149,31 +136,19 @@ public final class GameObject extends SceneNode {
       long var9,
       int var11,
       DummyClass0 var12 ) {
-    try {
-      SceneNode var13 = this.method1963(3);
+    SceneNode var13 = this.method1963(3);
       if (null != var13) {
         var13.draw(var1, var2, var3, var4, var5, var6, var7, var8, var9, var11,
             this.aClass127_Sub1_2742);
       }
-    } catch (RuntimeException var14) {
-      throw AbstractGameWorld.cascadeException(var14,
-        "dc.IA(" + var1 + ',' + var2 + ',' + var3 + ',' + var4 + ',' + var5 + ',' + var6 + ','
-          + var7 + ',' + var8 + ',' + var9 + ',' + var11 + ',' + (var12 != null ? "{...}" : "null")
-          + ')');
-    }
   }
 
   public int getMinimumY() {
-    try {
-      return this.anInt2741;
-    } catch (RuntimeException var2) {
-      throw AbstractGameWorld.cascadeException(var2, "dc.MA()");
-    }
+    return this.anInt2741;
   }
 
   public void method1960(int var1 ) {
-    try {
-      if (this.aClass109_Sub1_2738 != null) {
+    if (this.aClass109_Sub1_2738 != null) {
         DummyClass16.method2047(this.aClass109_Sub1_2738, this.anInt2725,
             this.anInt2720,
             this.anInt2748);
@@ -182,17 +157,13 @@ public final class GameObject extends SceneNode {
       this.anInt2750 = -1;
       this.anInt2752 = var1;
       this.aClass109_Sub1_2738 = null;
-    } catch (RuntimeException var3) {
-      throw AbstractGameWorld.cascadeException(var3, "dc.F(" + var1 + ')');
-    }
   }
 
   protected void finalize() {
   }
 
   private void method1961(int var1, int var2, int var3) {
-    try {
-      if (this.aClass142_2722 != null) {
+    if (this.aClass142_2722 != null) {
         int var4 = AbstractGameWorld.updateCycle - this.anInt2749;
         if (-101 > ~var4 && this.aClass142_2722.anInt1865 > 0) {
           int var5;
@@ -250,16 +221,10 @@ public final class GameObject extends SceneNode {
         this.anInt2746 = var4;
         this.anInt2749 = -var4 + AbstractGameWorld.updateCycle;
       }
-
-    } catch (RuntimeException var8) {
-      throw AbstractGameWorld.cascadeException(var8,
-        "dc.A(" + var1 + ',' + var2 + ',' + var3 + ')');
-    }
   }
 
   private SceneNode method1962(boolean var1, int var2) {
-    try {
-      boolean var3 = !Arrays.deepEquals(DummyClass43.somethingHeightMap,
+    boolean var3 = !Arrays.deepEquals(DummyClass43.somethingHeightMap,
           AbstractGameWorld.heightMap);
       GameObjectConfig var4 = DummyClass11.method2207(var2 + 6, this.anInt2729);
       int var5 = var4.anInt1531;
@@ -402,28 +367,20 @@ public final class GameObject extends SceneNode {
           }
         }
       }
-    } catch (RuntimeException var23) {
-      throw AbstractGameWorld.cascadeException(var23, "dc.H(" + var1 + ',' + var2 + ')');
-    }
   }
 
   public SceneNode method1963(int var1 ) {
-    try {
-      if (var1 != 3) {
+    if (var1 != 3) {
         GameObject.aClass94_2731 = null;
       }
 
       return this.method1962(false, var1 + -5);
-    } catch (RuntimeException var3) {
-      throw AbstractGameWorld.cascadeException(var3, "dc.C(" + var1 + ')');
-    }
   }
 
   public static AbstractModel method1957(int var0, boolean var1, AnimationSequence var2, int var3,
                                         int var4, int var5, int var6, int var7, AbstractModel var8,
                                         int var9, int var10, int var11, int var12, byte var13) {
-    try {
-      long var14 =
+    long var14 =
         ((long) var4 << 48) + (var7 + (var0 << 16) - -(var12 << 24)) + ((long) var6 << 32);
       AbstractModel var16 = (AbstractModel) DirectImageProducer.aClass93_2982.get(var14);
       int var21;
@@ -594,17 +551,10 @@ public final class GameObject extends SceneNode {
       } else {
         return null;
       }
-    } catch (RuntimeException var30) {
-      throw AbstractGameWorld.cascadeException(var30,
-        "dc.E(" + var0 + ',' + var1 + ',' + (var2 != null ? "{...}" : "null") + ',' + var3 + ','
-          + var4 + ',' + var5 + ',' + var6 + ',' + var7 + ',' + (var8 != null ? "{...}" : "null")
-          + ',' + var9 + ',' + var10 + ',' + var11 + ',' + var12 + ',' + var13 + ')');
-    }
   }
 
   public static void method1958(int var0) {
-    try {
-      GameObject.aClass94_2751 = null;
+    GameObject.aClass94_2751 = null;
       GameObject.OPTION_DROP = null;
       GameObject.aClass94_2723 = null;
       GameObject.widgets = null;
@@ -617,14 +567,10 @@ public final class GameObject extends SceneNode {
       GameObject.aByteArrayArray2747 = null;
       GameObject.aClass94_2735 = null;
       GameObject.aClass94_2739 = null;
-    } catch (RuntimeException var2) {
-      throw AbstractGameWorld.cascadeException(var2, "dc.G(" + var0 + ')');
-    }
   }
 
   public static void method1959(int var0, int var1, int var2, boolean var3) {
-    try {
-      if (~var2 <= -8001 && var2 <= '\ubb80') {
+    if (~var2 <= -8001 && var2 <= '\ubb80') {
         AudioStreamEncoder4.anInt3507 = var1;
         if (var0 != 256) {
           GameObject.OPTION_DROP = null;
@@ -635,15 +581,10 @@ public final class GameObject extends SceneNode {
       } else {
         throw new IllegalArgumentException();
       }
-    } catch (RuntimeException var5) {
-      throw AbstractGameWorld.cascadeException(var5,
-        "dc.D(" + var0 + ',' + var1 + ',' + var2 + ',' + var3 + ')');
-    }
   }
 
   public static void method1964(boolean var0) {
-    try {
-      int var1 = SpotAnimationConfig.gameBuffer.readBits(8);
+    int var1 = SpotAnimationConfig.gameBuffer.readBits(8);
       int var2;
       if (~DummyClass13.anInt2022 < ~var1) {
         for (var2 = var1; ~var2 > ~DummyClass13.anInt2022; ++var2) {
@@ -715,9 +656,6 @@ public final class GameObject extends SceneNode {
       } else {
         throw new RuntimeException("gppov1");
       }
-    } catch (RuntimeException var9) {
-      throw AbstractGameWorld.cascadeException(var9, "dc.B(" + var0 + ')');
-    }
   }
 
 }

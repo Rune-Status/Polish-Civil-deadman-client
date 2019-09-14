@@ -20,8 +20,7 @@ public final class ClientScriptEnum extends SubNode {
   }
 
   private void parseOpcode(int opcode, Buffer var2, byte var3) {
-    try {
-      if (var3 > -29) {
+    if (var3 > -29) {
         ClientScriptEnum.cameraY = 70;
       }
 
@@ -56,30 +55,20 @@ public final class ClientScriptEnum extends SubNode {
           this.defaultValue = var2.readString();
         }
       }
-
-    } catch (RuntimeException var8) {
-      throw AbstractGameWorld.cascadeException(var8,
-        "ml.C(" + opcode + ',' + (var2 != null ? "{...}" : "null") + ',' + var3 + ')');
-    }
   }
 
   public GameString getString(int var1, byte var2 ) {
-    try {
-      int var3 = 10 / ((var2 - 68) / 50);
+    int var3 = 10 / ((var2 - 68) / 50);
       if (null == this.table) {
         return this.defaultValue;
       } else {
         StringNode var4 = (StringNode) this.table.get(var1);
         return null == var4 ? this.defaultValue : var4.aClass94_2586;
       }
-    } catch (RuntimeException var5) {
-      throw AbstractGameWorld.cascadeException(var5, "ml.S(" + var1 + ',' + var2 + ')');
-    }
   }
 
   public boolean hasValue(GameString name, int var2 ) {
-    try {
-      if (null == this.table) {
+    if (null == this.table) {
         return false;
       } else {
         if (var2 != 8729) {
@@ -99,15 +88,10 @@ public final class ClientScriptEnum extends SubNode {
 
         return false;
       }
-    } catch (RuntimeException var4) {
-      throw AbstractGameWorld.cascadeException(var4,
-        "ml.F(" + (name != null ? "{...}" : "null") + ',' + var2 + ')');
-    }
   }
 
   private void method618(int var1) {
-    try {
-      this.aClass130_3666 = new HashTable(this.table.getCapacity());
+    this.aClass130_3666 = new HashTable(this.table.getCapacity());
       StringNode var2 = (StringNode) this.table.getFirst(var1 + 88);
       if (var1 == 0) {
         while (var2 != null) {
@@ -117,27 +101,19 @@ public final class ClientScriptEnum extends SubNode {
         }
 
       }
-    } catch (RuntimeException var4) {
-      throw AbstractGameWorld.cascadeException(var4, "ml.O(" + var1 + ')');
-    }
   }
 
   public int getInteger(int var1, int var2 ) {
-    try {
-      if (this.table != null) {
+    if (this.table != null) {
         IntegerNode var3 = (IntegerNode) this.table.get(var2);
         return var3 != null ? var3.anInt2467 : this.defaultIntegerValue;
       } else {
         return this.defaultIntegerValue;
       }
-    } catch (RuntimeException var4) {
-      throw AbstractGameWorld.cascadeException(var4, "ml.E(" + var1 + ',' + var2 + ')');
-    }
   }
 
   public boolean method621(int var1, int var2 ) {
-    try {
-      if (null != this.table) {
+    if (null != this.table) {
         if (this.aClass130_3666 == null) {
           this.method622(109);
         }
@@ -147,14 +123,10 @@ public final class ClientScriptEnum extends SubNode {
       } else {
         return false;
       }
-    } catch (RuntimeException var4) {
-      throw AbstractGameWorld.cascadeException(var4, "ml.B(" + var1 + ',' + var2 + ')');
-    }
   }
 
   private void method622(int var1) {
-    try {
-      this.aClass130_3666 = new HashTable(this.table.getCapacity());
+    this.aClass130_3666 = new HashTable(this.table.getCapacity());
       int var3 = -48 % ((26 - var1) / 58);
 
       for (IntegerNode var2 = (IntegerNode) this.table.getFirst(123);
@@ -162,15 +134,10 @@ public final class ClientScriptEnum extends SubNode {
         IntegerNode var4 = new IntegerNode((int) var2.key);
         this.aClass130_3666.put(var2.anInt2467, var4);
       }
-
-    } catch (RuntimeException var5) {
-      throw AbstractGameWorld.cascadeException(var5, "ml.D(" + var1 + ')');
-    }
   }
 
   public void parseConfig(Buffer buffer ) {
-    try {
-      while (true) {
+    while (true) {
         int opcode = buffer.readUnsignedByte();
         if (-1 == ~opcode) {
           return;
@@ -178,26 +145,16 @@ public final class ClientScriptEnum extends SubNode {
 
         this.parseOpcode(opcode, buffer, (byte) -84);
       }
-    } catch (RuntimeException var4) {
-      throw AbstractGameWorld.cascadeException(var4,
-        "ml.Q(" + (buffer != null ? "{...}" : "null") + ')');
-    }
   }
 
   public static SoftwareIndexedColorSprite[] createSprites(byte var0, int var1, FileUnpacker var2) {
-    try {
-      return GroundItem.loadSprites(var2, var1) ?
+    return GroundItem.loadSprites(var2, var1) ?
         (var0 <= 52 ? null : LinearHashTable.createSprites(0)) :
         null;
-    } catch (RuntimeException var4) {
-      throw AbstractGameWorld.cascadeException(var4,
-        "ml.A(" + var0 + ',' + var1 + ',' + (var2 != null ? "{...}" : "null") + ')');
-    }
   }
 
   public static byte[] method623(byte var0, byte[] var1) {
-    try {
-      if (var0 > -112) {
+    if (var0 > -112) {
         ClientScriptEnum.createSprites((byte) 43, -121, null);
       }
 
@@ -230,22 +187,13 @@ public final class ClientScriptEnum extends SubNode {
       } else {
         throw new RuntimeException();
       }
-    } catch (RuntimeException var7) {
-      throw AbstractGameWorld.cascadeException(var7,
-        "ml.R(" + var0 + ',' + (var1 != null ? "{...}" : "null") + ')');
-    }
   }
 
   public static void method624(int var0) {
-    try {
-      ClientScriptEnum.aClass94_3661 = null;
+    ClientScriptEnum.aClass94_3661 = null;
       if (var0 != -1) {
         ClientScriptEnum.method623((byte) -86, null);
       }
-
-    } catch (RuntimeException var2) {
-      throw AbstractGameWorld.cascadeException(var2, "ml.P(" + var0 + ')');
-    }
   }
 
 }

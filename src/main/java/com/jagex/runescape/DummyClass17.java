@@ -16,16 +16,12 @@ public final class DummyClass17 {
 
 
   public static void method1858(int var0) {
-    try {
-      DummyClass17.aClass94_1830 = null;
+    DummyClass17.aClass94_1830 = null;
       DummyClass17.tileFloors = null;
       DummyClass17.aFontMetrics1822 = null;
       DummyClass17.aClass94_1826 = null;
 
       DummyClass17.aClass3_Sub28_Sub16Array1825 = null;
-    } catch (RuntimeException var2) {
-      throw AbstractGameWorld.cascadeException(var2, "tg.A(" + var0 + ')');
-    }
   }
 
 }

@@ -23,8 +23,7 @@ public final class TextureSampler38 extends AbstractTextureSampler {
   }
 
   public int[] method154(int var1, byte var2 ) {
-    try {
-      int var4 = 64 % ((var2 - 30) / 36);
+    int var4 = 64 % ((var2 - 30) / 36);
       int[] var3 = this.monoChromaticImageCache.method1709(-16409, var1);
       if (this.monoChromaticImageCache.aBoolean1580) {
         int var5 = this.anInt3450 >> 1;
@@ -109,14 +108,10 @@ public final class TextureSampler38 extends AbstractTextureSampler {
       }
 
       return var3;
-    } catch (RuntimeException var28) {
-      throw AbstractGameWorld.cascadeException(var28, "vc.D(" + var1 + ',' + var2 + ')');
-    }
   }
 
   public void parseConfig(int var1, Buffer var2, boolean var3 ) {
-    try {
-      if (-1 == ~var1) {
+    if (-1 == ~var1) {
         this.anInt3454 = var2.readUnsignedByte();
       } else if (~var1 == -2) {
         this.anInt3447 = var2.readUnsignedShort();
@@ -129,28 +124,17 @@ public final class TextureSampler38 extends AbstractTextureSampler {
       } else {
         this.anInt3451 = var2.readUnsignedByte();
       }
-
-    } catch (RuntimeException var5) {
-      throw AbstractGameWorld.cascadeException(var5,
-        "vc.A(" + var1 + ',' + (var2 != null ? "{...}" : "null") + ',' + var3 + ')');
-    }
   }
 
   public void method158(int var1 ) {
-    try {
-      FileSystem.method844((byte) -9);
+    FileSystem.method844((byte) -9);
       if (var1 != 16251) {
         this.anInt3454 = 107;
       }
-
-    } catch (RuntimeException var3) {
-      throw AbstractGameWorld.cascadeException(var3, "vc.P(" + var1 + ')');
-    }
   }
 
   public static void method351(int var0) {
-    try {
-      TextureSampler38.aShortArray3455 = null;
+    TextureSampler38.aShortArray3455 = null;
       TextureSampler38.aClass94_3449 = null;
       TextureSampler38.anIntArray3446 = null;
       if (var0 == -1) {
@@ -160,9 +144,6 @@ public final class TextureSampler38 extends AbstractTextureSampler {
         TextureSampler38.anIntArray3456 = null;
         TextureSampler38.aClass94_3452 = null;
       }
-    } catch (RuntimeException var2) {
-      throw AbstractGameWorld.cascadeException(var2, "vc.B(" + var0 + ')');
-    }
   }
 
 }

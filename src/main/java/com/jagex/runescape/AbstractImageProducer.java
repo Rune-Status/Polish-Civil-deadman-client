@@ -36,16 +36,11 @@ public abstract class AbstractImageProducer {
   public abstract void draw(int var1,int var2,Graphics var3,int var4 );
 
   public final void method2182(int var1) {
-    try {
-      DummyClass47.method1319(this.anIntArray2007, this.anInt2012,
+    DummyClass47.method1319(this.anIntArray2007, this.anInt2012,
           this.anInt2011);
       if (var1 != 0) {
         AbstractImageProducer.anInt2015 = -118;
       }
-
-    } catch (RuntimeException var3) {
-      throw AbstractGameWorld.cascadeException(var3, "vk.G(" + var1 + ')');
-    }
   }
 
   public abstract void draw(Graphics var5,int var1,int var2,int var4,int var6,int var3 );
@@ -53,23 +48,16 @@ public abstract class AbstractImageProducer {
   public abstract void setDimensions(int var1,boolean var2,int var3,Component var4 );
 
   public static void method2180(FileUnpacker var0, FileUnpacker var1, int var2) {
-    try {
-      if (var2 != 11504) {
+    if (var2 != 11504) {
         AbstractImageProducer.aClass94_2013 = null;
       }
 
       ObjectNode.models = var0;
       TextureSampler19.spotAnimations = var1;
-    } catch (RuntimeException var4) {
-      throw AbstractGameWorld.cascadeException(var4,
-        "vk.D(" + (var0 != null ? "{...}" : "null") + ',' + (var1 != null ? "{...}" : "null") + ','
-          + var2 + ')');
-    }
   }
 
   public static void method2181(boolean var0) {
-    try {
-      AbstractImageProducer.aByteArrayArrayArray2008 = null;
+    AbstractImageProducer.aByteArrayArrayArray2008 = null;
       AbstractImageProducer.anIntArray2004 = null;
       AbstractImageProducer.aClass94_2013 = null;
       if (var0) {
@@ -77,15 +65,11 @@ public abstract class AbstractImageProducer {
       }
 
       AbstractImageProducer.aClass94_2006 = null;
-    } catch (RuntimeException var2) {
-      throw AbstractGameWorld.cascadeException(var2, "vk.H(" + ')');
-    }
   }
 
   public static void method2183(int var0, boolean var1, int var2, int var3, int var4,
                                Widget[] var5) {
-    try {
-      int var6 = 0;
+    int var6 = 0;
       if (var3 == 235) {
         for (; ~var6 > ~var5.length; ++var6) {
           Widget var7 = var5[var6];
@@ -115,12 +99,6 @@ public abstract class AbstractImageProducer {
         }
 
       }
-    } catch (RuntimeException var8) {
-      throw AbstractGameWorld.cascadeException(var8,
-        "vk.A(" + var0 + ',' + var1 + ',' + var2 + ',' + var3 + ',' + var4 + ',' + (var5 != null ?
-          "{...}" :
-          "null") + ')');
-    }
   }
 
   public static void method2186(SceneSomething var0) {

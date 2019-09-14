@@ -22,22 +22,17 @@ public final class CollisionMap {
 
 
   public CollisionMap(int var1, int var2 ) {
-    try {
-      this.anInt1303 = var2;
+    this.anInt1303 = var2;
       this.anInt1306 = 0;
       this.anInt1309 = 0;
       this.anInt1300 = var1;
       this.anIntArrayArray1304 = new int[this.anInt1300][this.anInt1303];
       this.method1496(0);
-    } catch (RuntimeException var4) {
-      throw AbstractGameWorld.cascadeException(var4, "mj.<init>(" + var1 + ',' + var2 + ')');
-    }
   }
 
   public void method1485(int var1, boolean var2, int var3,int var4,
       int var5,int var6 ) {
-    try {
-      var6 -= this.anInt1309;
+    var6 -= this.anInt1309;
       if (var3 > -101) {
         CollisionMap.isOnScreen(-88, -61, -44, 72, 121);
       }
@@ -184,16 +179,10 @@ public final class CollisionMap {
           }
         }
       }
-
-    } catch (RuntimeException var8) {
-      throw AbstractGameWorld.cascadeException(var8,
-        "mj.L(" + var1 + ',' + var2 + ',' + var3 + ',' + var4 + ',' + var5 + ',' + var6 + ')');
-    }
   }
 
   public void method1486(int var1, int var2, int var3, boolean var4,int var5,int var6 ) {
-    try {
-      var6 -= this.anInt1309;
+    var6 -= this.anInt1309;
       var5 -= this.anInt1306;
       if (-1 == ~var3) {
         if (0 == var1) {
@@ -339,16 +328,11 @@ public final class CollisionMap {
         }
 
       }
-    } catch (RuntimeException var8) {
-      throw AbstractGameWorld.cascadeException(var8,
-        "mj.N(" + var1 + ',' + var2 + ',' + var3 + ',' + var4 + ',' + var5 + ',' + var6 + ')');
-    }
   }
 
   private boolean method1487(int var1, int var2, int var3, int var4, int var5, int var6,
                                    int var7, int var8, byte var9) {
-    try {
-      if (var2 + var3 > var8 && var3 < var1 + var8) {
+    if (var2 + var3 > var8 && var3 < var1 + var8) {
         if (var9 != -125) {
           this.method1488(92, -42, true, -119, -67, -14, -88, 5);
         }
@@ -357,19 +341,13 @@ public final class CollisionMap {
       } else {
         return false;
       }
-    } catch (RuntimeException var11) {
-      throw AbstractGameWorld.cascadeException(var11,
-        "mj.M(" + var1 + ',' + var2 + ',' + var3 + ',' + var4 + ',' + var5 + ',' + var6 + ',' + var7
-          + ',' + var8 + ',' + var9 + ')');
-    }
   }
 
   public boolean method1488(int var1,int var2, boolean var3,int var4,int var5,
       int var6,
       int var7,
       int var8 ) {
-    try {
-      if (1 != var7) {
+    if (1 != var7) {
         if (var2 <= var5 && var2 + var7 + -1 >= var5 && ~var1 >= ~(var7 + var1
             + -1)) {
           return true;
@@ -731,18 +709,12 @@ public final class CollisionMap {
 
         return false;
       }
-    } catch (RuntimeException var11) {
-      throw AbstractGameWorld.cascadeException(var11,
-          "mj.D(" + var1 + ',' + var2 + ',' + ',' + var4 + ',' + var5 + ','
-              + var6 + ',' + var7 + ',' + var8 + ')');
-    }
   }
 
   public void method1489(int var1, boolean var2, byte var3,int var4,
       int var5,
       int var6 ) {
-    try {
-      var4 -= this.anInt1306;
+    var4 -= this.anInt1306;
       var1 -= this.anInt1309;
       int var7 = 256;
       if (var2) {
@@ -762,30 +734,20 @@ public final class CollisionMap {
         }
 
       }
-    } catch (RuntimeException var10) {
-      throw AbstractGameWorld.cascadeException(var10,
-        "mj.B(" + var1 + ',' + var2 + ',' + var3 + ',' + var4 + ',' + var5 + ',' + var6 + ')');
-    }
   }
 
   private void method1490(int var1, byte var2, int var3, int var4) {
-    try {
-      if (var2 != -80) {
+    if (var2 != -80) {
         this.method1498(false, 25, 78, -38, 60, 54, 58, 117, 109);
       }
 
       this.anIntArrayArray1304[var3][var4] =
         TextureSampler3.method308(this.anIntArrayArray1304[var3][var4], var1);
-    } catch (RuntimeException var6) {
-      throw AbstractGameWorld.cascadeException(var6,
-        "mj.J(" + var1 + ',' + var2 + ',' + var3 + ',' + var4 + ')');
-    }
   }
 
   public boolean method1492(int var1, int var2,int var3,int var4, int var5,int var6,int var7,
       int var8 ) {
-    try {
-      if (-2 == ~var5) {
+    if (-2 == ~var5) {
         if (var3 == var7 && ~var1 == ~var4) {
           return true;
         }
@@ -956,17 +918,11 @@ public final class CollisionMap {
       }
 
       return false;
-    } catch (RuntimeException var11) {
-      throw AbstractGameWorld.cascadeException(var11,
-        "mj.Q(" + var1 + ',' + var2 + ',' + var3 + ',' + var4 + ',' + var5 + ',' + var6 + ',' + var7
-          + ',' + var8 + ')');
-    }
   }
 
   private boolean method1494(int var1, int var2, int var3, int var4, boolean var5, int var6,
                                    int var7, int var8, int var9, int var10) {
-    try {
-      int var11 = var7 + var9;
+    int var11 = var7 + var9;
       int var12 = var8 + var10;
       if (var5) {
         int var13 = var3 + var1;
@@ -1068,16 +1024,10 @@ public final class CollisionMap {
       } else {
         return true;
       }
-    } catch (RuntimeException var17) {
-      throw AbstractGameWorld.cascadeException(var17,
-          "mj.O(" + var1 + ',' + var2 + ',' + var3 + ',' + var4 + ',' + ','
-              + var6 + ',' + var7 + ',' + var8 + ',' + var9 + ',' + var10 + ')');
-    }
   }
 
   public void method1496(int var1 ) {
-    try {
-      for (int var2 = var1; ~this.anInt1300 < ~var2; ++var2) {
+    for (int var2 = var1; ~this.anInt1300 < ~var2; ++var2) {
         for (int var3 = 0; ~this.anInt1303 < ~var3; ++var3) {
           if (var2 != 0 && 0 != var3 && var2 < this.anInt1300
               - 5 && this.anInt1303 - 5 > var3) {
@@ -1087,24 +1037,15 @@ public final class CollisionMap {
           }
         }
       }
-
-    } catch (RuntimeException var4) {
-      throw AbstractGameWorld.cascadeException(var4, "mj.P(" + var1 + ')');
-    }
   }
 
   public void method1497(int var1, int var2,int var3 ) {
-    try {
-      if (var2 == 7605) {
+    if (var2 == 7605) {
         var1 -= this.anInt1306;
         var3 -= this.anInt1309;
         this.anIntArrayArray1304[var3][var1] =
           TextureSampler3.method308(this.anIntArrayArray1304[var3][var1], 2097152);
       }
-    } catch (RuntimeException var5) {
-      throw AbstractGameWorld.cascadeException(var5,
-        "mj.E(" + var1 + ',' + var2 + ',' + var3 + ')');
-    }
   }
 
   public boolean method1498(boolean var1, int var2, int var3, int var4,
@@ -1113,8 +1054,7 @@ public final class CollisionMap {
       int var7,
       int var8,
       int var9 ) {
-    try {
-      if (-2 > ~var5) {
+    if (-2 > ~var5) {
         return this.method1487(var5, var6, var2, var9, var3, var8, var5, var4,
             (byte) -125) || this
             .method1494(var2, var8, var6, var7, true, var9, var4,
@@ -1153,32 +1093,20 @@ public final class CollisionMap {
                           == -1 && -1 == ~(var7 & 1)));
         }
       }
-    } catch (RuntimeException var12) {
-      throw AbstractGameWorld.cascadeException(var12,
-        "mj.S(" + var1 + ',' + var2 + ',' + var3 + ',' + var4 + ',' + var5 + ',' + var6 + ',' + var7
-          + ',' + var8 + ',' + var9 + ')');
-    }
   }
 
   public void method1499(int var1, byte var2,int var3 ) {
-    try {
-      var3 -= this.anInt1309;
+    var3 -= this.anInt1309;
       var1 -= this.anInt1306;
       this.anIntArrayArray1304[var3][var1] =
         ClientScript.bitAnd(this.anIntArrayArray1304[var3][var1], -262145);
       if (var2 != -73) {
         this.method1502(-117, 28, -110, true, 123, -33, 13);
       }
-
-    } catch (RuntimeException var5) {
-      throw AbstractGameWorld.cascadeException(var5,
-        "mj.I(" + var1 + ',' + var2 + ',' + var3 + ')');
-    }
   }
 
   public boolean method1500(int var1,int var2,int var3,int var4,int var5 ) {
-    try {
-      if (var5 == var4 && ~var2 == ~var3) {
+    if (var5 == var4 && ~var2 == ~var3) {
         return true;
       } else {
         var3 -= this.anInt1306;
@@ -1292,28 +1220,18 @@ public final class CollisionMap {
           return false;
         }
       }
-    } catch (RuntimeException var10) {
-      throw AbstractGameWorld.cascadeException(var10,
-        "mj.G(" + var1 + ',' + var2 + ',' + var3 + ',' + var4 + ',' + var5 + ')');
-    }
   }
 
   private void method1501(byte var1, int var2, int var3, int var4) {
-    try {
-      if (var1 >= 18) {
+    if (var1 >= 18) {
         this.anIntArrayArray1304[var3][var2] =
           ClientScript.bitAnd(this.anIntArrayArray1304[var3][var2], ~var4);
       }
-    } catch (RuntimeException var6) {
-      throw AbstractGameWorld.cascadeException(var6,
-        "mj.H(" + var1 + ',' + var2 + ',' + var3 + ',' + var4 + ')');
-    }
   }
 
   public void method1502(int var1,int var2,int var3, boolean var4,
       int var5,int var6,int var7 ) {
-    try {
-      var2 -= this.anInt1309;
+    var2 -= this.anInt1309;
       var7 -= this.anInt1306;
       int var8 = 256;
       if (var1 != 20851) {
@@ -1340,31 +1258,19 @@ public final class CollisionMap {
           }
         }
       }
-
-    } catch (RuntimeException var11) {
-      throw AbstractGameWorld.cascadeException(var11,
-        "mj.A(" + var1 + ',' + var2 + ',' + var3 + ',' + var4 + ',' + var5 + ',' + var6 + ',' + var7
-          + ')');
-    }
   }
 
   public void method1503(int var1,int var2, int var3 ) {
-    try {
-      var2 -= this.anInt1306;
+    var2 -= this.anInt1306;
       if (var3 < -3) {
         var1 -= this.anInt1309;
         this.anIntArrayArray1304[var1][var2] =
           TextureSampler3.method308(this.anIntArrayArray1304[var1][var2], 262144);
       }
-    } catch (RuntimeException var5) {
-      throw AbstractGameWorld.cascadeException(var5,
-        "mj.C(" + var1 + ',' + var2 + ',' + var3 + ')');
-    }
   }
 
   public static void method1491(byte var0) {
-    try {
-      if (var0 > -123) {
+    if (var0 > -123) {
         CollisionMap.method1491((byte) -27);
       }
 
@@ -1372,14 +1278,10 @@ public final class CollisionMap {
       CollisionMap.playerOptions = null;
       CollisionMap.aClass94_1301 = null;
       CollisionMap.aClass33_1305 = null;
-    } catch (RuntimeException var2) {
-      throw AbstractGameWorld.cascadeException(var2, "mj.R(" + var0 + ')');
-    }
   }
 
   public static void method1493(int var0, int var1, Widget var2, int var3, byte var4) {
-    try {
-      if (var4 == 59) {
+    if (var4 == 59) {
         if (GlRenderer.useOpenGlRenderer) {
           GlUtils.clip(var0, var1, var2.anInt168 + var0, var2.anInt193 + var1);
         }
@@ -1408,11 +1310,6 @@ public final class CollisionMap {
 
         DummyClass9.aBooleanArray4008[var3] = true;
       }
-    } catch (RuntimeException var6) {
-      throw AbstractGameWorld.cascadeException(var6,
-        "mj.K(" + var0 + ',' + var1 + ',' + (var2 != null ? "{...}" : "null") + ',' + var3 + ','
-          + var4 + ')');
-    }
   }
 
   public static boolean isOnScreen(int x, int var1, int var2, int z, int far) {

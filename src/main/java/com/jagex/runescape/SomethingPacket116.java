@@ -32,23 +32,15 @@ public final class SomethingPacket116 {
   }
 
   public int method1804(boolean var1) {
-    try {
-      if (var1) {
+    if (var1) {
         SomethingPacket116.anInt1753 = -21;
       }
 
       return this.aByte1742 & 7;
-    } catch (RuntimeException var3) {
-      throw AbstractGameWorld.cascadeException(var3, "sg.B(" + var1 + ')');
-    }
   }
 
   public int method1805(byte var1) {
-    try {
-      return 8 != (this.aByte1742 & 8) ? 0 : 1;
-    } catch (RuntimeException var3) {
-      throw AbstractGameWorld.cascadeException(var3, "sg.C(" + var1 + ')');
-    }
+    return 8 != (this.aByte1742 & 8) ? 0 : 1;
   }
 
   public static void method1802() {

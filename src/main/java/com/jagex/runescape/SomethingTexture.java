@@ -194,15 +194,10 @@ public final class SomethingTexture extends AbstractSomethingTexture {
       int var6 ) {
     super(-1, var5, var6);
 
-    try {
-      this.anInt2632 = var4;
+    this.anInt2632 = var4;
       this.anInt2630 = var2;
       this.anInt2629 = var1;
       this.anInt2635 = var3;
-    } catch (RuntimeException var8) {
-      throw AbstractGameWorld.cascadeException(var8,
-        "ci.<init>(" + var1 + ',' + var2 + ',' + var3 + ',' + var4 + ',' + var5 + ',' + var6 + ')');
-    }
   }
 
   public void method1335(int var1, int var2, int var3 ) {
@@ -214,8 +209,7 @@ public final class SomethingTexture extends AbstractSomethingTexture {
   }
 
   public void method1337(int var1, boolean var2, int var3 ) {
-    try {
-      int var4 = var3 * this.anInt2629 >> 12;
+    int var4 = var3 * this.anInt2629 >> 12;
       if (!var2) {
         this.method1335(67, -82, -112);
       }
@@ -224,27 +218,16 @@ public final class SomethingTexture extends AbstractSomethingTexture {
       int var6 = var1 * this.anInt2630 >> 12;
       int var7 = var1 * this.anInt2632 >> 12;
       TextureSampler25.method330(this.anInt1104, -111, var7, var4, var6, var5);
-    } catch (RuntimeException var8) {
-      throw AbstractGameWorld.cascadeException(var8,
-        "ci.E(" + var1 + ',' + var2 + ',' + var3 + ')');
-    }
   }
 
   public void method1341(int var1, int var2, int var3 ) {
-    try {
-      if (var1 != 2) {
+    if (var1 != 2) {
         SomethingTexture.method1342(null, null, null, (byte) -68, null);
       }
-
-    } catch (RuntimeException var5) {
-      throw AbstractGameWorld.cascadeException(var5,
-        "ci.A(" + var1 + ',' + var2 + ',' + var3 + ')');
-    }
   }
 
   public static void method1342(int[] var0, int[] var1, Player var2, byte var3, int[] var4) {
-    try {
-      int var5 = 0;
+    int var5 = 0;
       if (var3 > -97) {
         SomethingTexture.method1343(true);
       }
@@ -305,23 +288,11 @@ public final class SomethingTexture extends AbstractSomethingTexture {
 
         ++var5;
       }
-
-    } catch (RuntimeException var13) {
-      throw AbstractGameWorld.cascadeException(var13,
-        "ci.B(" + (var0 != null ? "{...}" : "null") + ',' + (var1 != null ? "{...}" : "null") + ','
-          + (var2 != null ? "{...}" : "null") + ',' + var3 + ',' + (var4 != null ? "{...}" : "null")
-          + ')');
-    }
   }
 
   public static void method1343(boolean var0) {
-    try {
-      SomethingTexture.aClass109_Sub1_2631 = null;
+    SomethingTexture.aClass109_Sub1_2631 = null;
       SomethingTexture.aShortArrayArray2634 = null;
-
-    } catch (RuntimeException var2) {
-      throw AbstractGameWorld.cascadeException(var2, "ci.C(" + var0 + ')');
-    }
   }
 
 }

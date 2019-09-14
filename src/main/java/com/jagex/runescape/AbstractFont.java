@@ -287,12 +287,9 @@ public abstract class AbstractFont extends SubNode {
             } else {
               if (!var8.method1528((byte) -42, AbstractFont.aClass94_3743)) {
                 if (var8.method1558(AbstractFont.aClass94_3739, 0)) {
-                  try {
-                    int var9 = var8.substring(4).toInteger();
+                  int var9 = var8.substring(4).toInteger();
                     var4 += this.aClass109Array3740[var9].anInt1469;
                     var3 = 0;
-                  } catch (Exception var10) {
-                  }
                 }
                 continue;
               }
@@ -347,8 +344,7 @@ public abstract class AbstractFont extends SubNode {
   }
 
   private void method685(GameString var1) {
-    try {
-      if (var1.method1558(AbstractFont.aClass94_3725, 0)) {
+    if (var1.method1558(AbstractFont.aClass94_3725, 0)) {
         AbstractFont.anInt3755 = var1.substring(4).method1530((byte) 70, 16);
       } else if (var1.method1528((byte) -42, AbstractFont.aClass94_3720)) {
         AbstractFont.anInt3755 = AbstractFont.anInt3749;
@@ -378,8 +374,6 @@ public abstract class AbstractFont extends SubNode {
         this.method701(AbstractFont.anInt3749, AbstractFont.anInt3752,
             AbstractFont.anInt3751);
       }
-    } catch (Exception var3) {
-    }
 
   }
 
@@ -524,12 +518,9 @@ public abstract class AbstractFont extends SubNode {
 
               var10 = 174;
             } else if (var15.method1558(AbstractFont.aClass94_3739, 0)) {
-              try {
-                int var16 = var15.substring(4).toInteger();
+              int var16 = var15.substring(4).toInteger();
                 var4 += this.aClass109Array3740[var16].anInt1469;
                 var10 = 0;
-              } catch (Exception var17) {
-              }
             }
 
             var14 = 0;
@@ -940,8 +931,7 @@ public abstract class AbstractFont extends SubNode {
           } else {
             if (!var12.method1528((byte) -42, AbstractFont.aClass94_3743)) {
               if (var12.method1558(AbstractFont.aClass94_3739, 0)) {
-                try {
-                  if (var4 != null) {
+                if (var4 != null) {
                     var13 = var4[var8];
                   } else {
                     var13 = 0;
@@ -970,8 +960,6 @@ public abstract class AbstractFont extends SubNode {
 
                   var2 += var20.anInt1469;
                   var7 = 0;
-                } catch (Exception var18) {
-                }
               } else {
                 this.method685(var12);
               }

@@ -108,8 +108,7 @@ public final class Mouse implements MouseListener, MouseMotionListener,
   }
 
   public static void method2087(byte var0) {
-    try {
-      SpawnedGameObject var1 = (SpawnedGameObject) TextureSampler26.aClass61_3075
+    SpawnedGameObject var1 = (SpawnedGameObject) TextureSampler26.aClass61_3075
           .getFirst();
 
       for (int var2 = -37 / ((-21 - var0) / 48);
@@ -151,48 +150,30 @@ public final class Mouse implements MouseListener, MouseMotionListener,
           var1.unlinkNode();
         }
       }
-
-    } catch (RuntimeException var3) {
-      throw AbstractGameWorld.cascadeException(var3, "ug.A(" + var0 + ')');
-    }
   }
 
   public static void method2088(boolean var0) {
-    try {
-      Mouse.aClass94_1922 = null;
+    Mouse.aClass94_1922 = null;
       Mouse.anIntArray1920 = null;
 
       Mouse.aFloatArray1919 = null;
-    } catch (RuntimeException var2) {
-      throw AbstractGameWorld.cascadeException(var2, "ug.C(" + var0 + ')');
-    }
   }
 
   public static void method2089(byte var0) {
-    try {
-      DirectImageProducer.aClass93_2982.method1523((byte) -105);
-    } catch (RuntimeException var2) {
-      throw AbstractGameWorld.cascadeException(var2, "ug.D(" + var0 + ')');
-    }
+    DirectImageProducer.aClass93_2982.method1523((byte) -105);
   }
 
   public static void method2090(int var0) {
-    try {
-      if (INSTANCE != null) {
+    if (INSTANCE != null) {
         Mouse var1 = INSTANCE;
         synchronized (var1) {
           INSTANCE = null;
         }
       }
-
-    } catch (RuntimeException var4) {
-      throw AbstractGameWorld.cascadeException(var4, "ug.F(" + var0 + ')');
-    }
   }
 
   public static void method2091(int var0, int var1) {
-    try {
-      if (SceneNode.anIntArray1838 == null
+    if (SceneNode.anIntArray1838 == null
           || SceneNode.anIntArray1838.length < var0) {
         SceneNode.anIntArray1838 = new int[var0];
       }
@@ -200,25 +181,15 @@ public final class Mouse implements MouseListener, MouseMotionListener,
       if (var1 != 4) {
         Mouse.anInt1926 = -75;
       }
-
-    } catch (RuntimeException var3) {
-      throw AbstractGameWorld
-          .cascadeException(var3, "ug.E(" + var0 + ',' + var1 + ')');
-    }
   }
 
   public static void method2092(int var0, byte var1) {
-    try {
-      if (var1 != -47) {
+    if (var1 != -47) {
         Mouse.aClass94_1922 = null;
       }
 
       WidgetUpdate var2 = AudioStreamEncoder3.method466(4, 9, var0);
       var2.createIndexedColorSprite(true);
-    } catch (RuntimeException var3) {
-      throw AbstractGameWorld
-          .cascadeException(var3, "ug.B(" + var0 + ',' + var1 + ')');
-    }
   }
 
 }

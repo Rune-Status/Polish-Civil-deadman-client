@@ -22,11 +22,7 @@ public final class TextureSampler1 extends AbstractTextureSampler {
   private TextureSampler1(int var1) {
     super(0, false);
 
-    try {
-      this.method218((byte) 75, var1);
-    } catch (RuntimeException var3) {
-      throw AbstractGameWorld.cascadeException(var3, "fm.<init>(" + var1 + ')');
-    }
+    this.method218((byte) 75, var1);
   }
 
   public TextureSampler1() {
@@ -34,36 +30,25 @@ public final class TextureSampler1 extends AbstractTextureSampler {
   }
 
   private void method218(byte var1, int var2) {
-    try {
-      this.anInt3134 = 4080 & var2 >> 4;
+    this.anInt3134 = 4080 & var2 >> 4;
       this.anInt3135 = var2 << 4 & 4080;
       if (var1 == 75) {
         this.anInt3129 = (var2 & 16711680) >> 12;
       }
-    } catch (RuntimeException var4) {
-      throw AbstractGameWorld.cascadeException(var4, "fm.Q(" + var1 + ',' + var2 + ')');
-    }
   }
 
   public void parseConfig(int var1, Buffer var2, boolean var3 ) {
-    try {
-      if (!var3) {
+    if (!var3) {
         TextureSampler1.method221(-64, null, null, null, 34);
       }
 
       if (-1 == ~var1) {
         this.method218((byte) 75, var2.readUnsignedMedium((byte) 82));
       }
-
-    } catch (RuntimeException var5) {
-      throw AbstractGameWorld.cascadeException(var5,
-        "fm.A(" + var1 + ',' + (var2 != null ? "{...}" : "null") + ',' + var3 + ')');
-    }
   }
 
   public int[][] method166(int var1, int var2 ) {
-    try {
-      if (var1 != -1) {
+    if (var1 != -1) {
         TextureSampler1.method222(-87, 26, 75, -56, 22, -68);
       }
 
@@ -82,14 +67,10 @@ public final class TextureSampler1 extends AbstractTextureSampler {
       }
 
       return var3;
-    } catch (RuntimeException var8) {
-      throw AbstractGameWorld.cascadeException(var8, "fm.T(" + var1 + ',' + var2 + ')');
-    }
   }
 
   public static void method217(int var0) {
-    try {
-      TextureSampler1.FONT_B12 = null;
+    TextureSampler1.FONT_B12 = null;
       TextureSampler1.aClass94_3133 = null;
       TextureSampler1.aClass94_3140 = null;
       TextureSampler1.aClass93_3130 = null;
@@ -97,14 +78,10 @@ public final class TextureSampler1 extends AbstractTextureSampler {
       TextureSampler1.aClass94_3131 = null;
 
       TextureSampler1.aClass47_3137 = null;
-    } catch (RuntimeException var2) {
-      throw AbstractGameWorld.cascadeException(var2, "fm.B(" + var0 + ')');
-    }
   }
 
   public static void method219(boolean var0, int var1) {
-    try {
-      if (var0) {
+    if (var0) {
         if (-1 != InventoryConfig.anInt3655) {
           DummyClass44.method1208((byte) -128, InventoryConfig.anInt3655);
         }
@@ -145,34 +122,19 @@ public final class TextureSampler1 extends AbstractTextureSampler {
         DummyClass51.method1418(-110, Projectile.sprites);
         DummyClass26.setState(10, 5);
       }
-
-    } catch (RuntimeException var3) {
-      throw AbstractGameWorld.cascadeException(var3, "fm.E(" + var0 + ',' + var1 + ')');
-    }
   }
 
   public static void updateSunPosition(int x, int y) {
-    try {
-      DummyClass39.sunPositionX = DummyClass27.blockConfigs[x][y].sunPositionX;
+    DummyClass39.sunPositionX = DummyClass27.blockConfigs[x][y].sunPositionX;
       TextureSampler0.sunPositionY = DummyClass27.blockConfigs[x][y].sunPositionY;
       BlockConfig.sunPositionZ = DummyClass27.blockConfigs[x][y].sunPosZ;
       GlEnvironment.setSunPosition(DummyClass39.sunPositionX,
           TextureSampler0.sunPositionY, BlockConfig.sunPositionZ);
-    } catch (RuntimeException var4) {
-      throw AbstractGameWorld.cascadeException(var4, "fm.C(" + y + ',' + x + ')');
-    }
   }
 
   public static void method221(int var0, GameString var1, GameString var2, GameString var3,
                               int var4) {
-    try {
-      InventoryConfig.method611(var0, var4, var1, var3, (byte) 50, var2);
-    } catch (RuntimeException var6) {
-      throw AbstractGameWorld.cascadeException(var6,
-        "fm.F(" + var0 + ',' + (var1 != null ? "{...}" : "null") + ',' + (var2 != null ?
-          "{...}" :
-          "null") + ',' + (var3 != null ? "{...}" : "null") + ',' + var4 + ')');
-    }
+    InventoryConfig.method611(var0, var4, var1, var3, (byte) 50, var2);
   }
 
   public static boolean method222(int var0, int var1, int var2, int var3, int var4, int var5) {

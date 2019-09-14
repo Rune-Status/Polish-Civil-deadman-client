@@ -241,8 +241,7 @@ public final class SomethingFont {
     int var6 = var2.charWidth(var3);
     int var7 = var6;
     if (var5) {
-      try {
-        if (var3 == 47) {
+      if (var3 == 47) {
           var5 = false;
         }
 
@@ -250,8 +249,6 @@ public final class SomethingFont {
           || var3 == 121 || var3 == 65 || var3 == 86 || var3 == 87) {
           ++var6;
         }
-      } catch (Exception var23) {
-      }
     }
 
     int var8 = var2.getMaxAscent();
@@ -273,7 +270,8 @@ public final class SomethingFont {
 
     try {
       var14.grabPixels();
-    } catch (Exception var22) {
+    } catch (InterruptedException e) {
+      e.printStackTrace();
     }
 
     var11.flush();

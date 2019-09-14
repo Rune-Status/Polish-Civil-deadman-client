@@ -20,20 +20,14 @@ public final class MonoChromaticImageCache {
 
 
   public MonoChromaticImageCache(int var1, int var2, int var3 ) {
-    try {
-      this.anInt1568 = var2;
+    this.anInt1568 = var2;
       this.aClass3_Sub26Array1571 = new MonoChromaticImageBuffer[this.anInt1568];
       this.anInt1579 = var1;
       this.anIntArrayArray1573 = new int[this.anInt1579][var3];
-    } catch (RuntimeException var5) {
-      throw AbstractGameWorld.cascadeException(var5,
-        "pf.<init>(" + var1 + ',' + var2 + ',' + var3 + ')');
-    }
   }
 
   public void method1706(int var1 ) {
-    try {
-      for (int var2 = 0; var2 < this.anInt1579; ++var2) {
+    for (int var2 = 0; var2 < this.anInt1579; ++var2) {
         this.anIntArrayArray1573[var2] = null;
       }
 
@@ -45,14 +39,10 @@ public final class MonoChromaticImageCache {
       this.aClass3_Sub26Array1571 = null;
       this.aClass61_1577.clear(-85);
       this.aClass61_1577 = null;
-    } catch (RuntimeException var3) {
-      throw AbstractGameWorld.cascadeException(var3, "pf.A(" + var1 + ')');
-    }
   }
 
   public int[] method1709(int var1, int var2 ) {
-    try {
-      if (var1 != -16409) {
+    if (var1 != -16409) {
         this.aBoolean1580 = false;
       }
 
@@ -90,14 +80,10 @@ public final class MonoChromaticImageCache {
           return this.anIntArrayArray1573[var3.anInt2555];
         }
       }
-    } catch (RuntimeException var5) {
-      throw AbstractGameWorld.cascadeException(var5, "pf.C(" + var1 + ',' + var2 + ')');
-    }
   }
 
   public int[][] method1710(byte var1 ) {
-    try {
-      if (var1 <= 67) {
+    if (var1 <= 67) {
         return null;
       } else if (this.anInt1579 != this.anInt1568) {
         throw new RuntimeException("Can only retrieve a full image cache");
@@ -108,14 +94,10 @@ public final class MonoChromaticImageCache {
 
         return this.anIntArrayArray1573;
       }
-    } catch (RuntimeException var3) {
-      throw AbstractGameWorld.cascadeException(var3, "pf.H(" + var1 + ')');
-    }
   }
 
   public static void method1704(int var0) {
-    try {
-      MonoChromaticImageCache.aClass93_1569 = null;
+    MonoChromaticImageCache.aClass93_1569 = null;
       if (var0 != 65536) {
         MonoChromaticImageCache.method1705(-109, -68);
       }
@@ -124,14 +106,10 @@ public final class MonoChromaticImageCache {
       MonoChromaticImageCache.aLongArray1574 = null;
       MonoChromaticImageCache.aClass94_1575 = null;
       MonoChromaticImageCache.tableIndexFile = null;
-    } catch (RuntimeException var2) {
-      throw AbstractGameWorld.cascadeException(var2, "pf.G(" + var0 + ')');
-    }
   }
 
   public static float[] method1705(int var0, int var1) {
-    try {
-      float var2 = GlEnvironment.method1514() + GlEnvironment.method1505();
+    float var2 = GlEnvironment.method1514() + GlEnvironment.method1505();
       int var3 = GlEnvironment.method1510();
       float var7 = 0.58823526F;
       Mouse.aFloatArray1919[3] = 1.0F;
@@ -145,15 +123,11 @@ public final class MonoChromaticImageCache {
       Mouse.aFloatArray1919[2] =
         ClientScript.bitAnd(255, var0) / 255.0F * var6 * var7 * var2;
       return Mouse.aFloatArray1919;
-    } catch (RuntimeException var8) {
-      throw AbstractGameWorld.cascadeException(var8, "pf.F(" + var0 + ',' + var1 + ')');
-    }
   }
 
   public static AbstractDirectColorSprite method1707(int var0, int var1, boolean var2, int var3,
                                                     int var4, int var5) {
-    try {
-      if (var5 == 65536) {
+    if (var5 == 65536) {
         int var7 = (!var2 ? 0 : 65536) + var1 + (var0 << 17) + (var4 << 19);
         long var8 = var7 * 3849834839L + 3147483667L * var3;
         AbstractDirectColorSprite var10 =
@@ -174,37 +148,23 @@ public final class MonoChromaticImageCache {
       } else {
         return null;
       }
-    } catch (RuntimeException var11) {
-      throw AbstractGameWorld.cascadeException(var11,
-        "pf.B(" + var0 + ',' + var1 + ',' + var2 + ',' + var3 + ',' + var4 + ',' + var5 + ')');
-    }
   }
 
   public static void method1708(int var0, int var1, int var2) {
-    try {
-      if (var2 == -2553) {
+    if (var2 == -2553) {
         WidgetUpdate var3 = AudioStreamEncoder3.method466(-2553 ^ -2557, 13, var1);
         var3.g((byte) 33);
         var3.anInt3598 = var0;
       }
-    } catch (RuntimeException var4) {
-      throw AbstractGameWorld.cascadeException(var4,
-        "pf.E(" + var0 + ',' + var1 + ',' + var2 + ')');
-    }
   }
 
   public static void method1711(int var0, int var1) {
-    try {
-      SomethingQuickChat.aClass93_3572.method1522(-127, var0);
+    SomethingQuickChat.aClass93_3572.method1522(-127, var0);
       DummyClass15.aClass93_1874.method1522(var1 + -383, var0);
       MouseRecorder.aClass93_1013.method1522(var1 ^ -132, var0);
       if (var1 != 255) {
         MonoChromaticImageCache.method1711(20, 87);
       }
-
-    } catch (RuntimeException var3) {
-      throw AbstractGameWorld.cascadeException(var3, "pf.D(" + var0 + ',' + var1 + ')');
-    }
   }
 
 }

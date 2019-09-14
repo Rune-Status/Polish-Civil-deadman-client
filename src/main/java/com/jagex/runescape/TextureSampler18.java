@@ -21,8 +21,7 @@ public final class TextureSampler18 extends TextureSampler39 {
   public static GameString aClass94_4040 = TextureSampler18.aClass94_4030;
 
   public int[][] method166(int var1, int var2 ) {
-    try {
-      int[][] var3 = this.triChromaticImageCache
+    int[][] var3 = this.triChromaticImageCache
           .method1594((byte) -119, var2);
       if (this.triChromaticImageCache.aBoolean1379 && this.method279(-128)) {
         int[] var4 = var3[0];
@@ -43,14 +42,10 @@ public final class TextureSampler18 extends TextureSampler39 {
       }
 
       return var3;
-    } catch (RuntimeException var10) {
-      throw AbstractGameWorld.cascadeException(var10, "kd.T(" + var1 + ',' + var2 + ')');
-    }
   }
 
   public static void method282(int[] var0, int var1, int var2, int var3, int var4) {
-    try {
-      int var5 = 116 / ((24 - var2) / 63);
+    int var5 = 116 / ((24 - var2) / 63);
       --var1;
       --var3;
 
@@ -76,30 +71,18 @@ public final class TextureSampler18 extends TextureSampler39 {
         ++var1;
         var0[var1] = var4;
       }
-
-    } catch (RuntimeException var7) {
-      throw AbstractGameWorld.cascadeException(var7,
-        "kd.B(" + (var0 != null ? "{...}" : "null") + ',' + var1 + ',' + var2 + ',' + var3 + ','
-          + var4 + ')');
-    }
   }
 
   public static void printUsage(String var0) {
-    try {
-      System.out.println(
+    System.out.println(
         "Bad " + var0 + ", Usage: worldid, <live/rc/wip>, <english/german>, <game0/game1>");
       System.exit(1);
-    } catch (RuntimeException var3) {
-      throw AbstractGameWorld.cascadeException(var3,
-        "kd.O(" + (var0 != null ? "{...}" : "null") + ')');
-    }
   }
 
   public static void method284(float[][] var0, int[][] var1, int var2, float[][] var3, int var4,
                               int[] var5, SomethingLight var6, byte var7, Light var8,
                               float[][] var9, int var10) {
-    try {
-      int[] var11 = new int[var5.length / 2];
+    int[] var11 = new int[var5.length / 2];
 
       int var12;
       for (var12 = 0; ~var12 > ~var11.length; ++var12) {
@@ -170,21 +153,11 @@ public final class TextureSampler18 extends TextureSampler39 {
 
       var6.method1022(var11);
       var12 = 105 % ((-20 - var7) / 54);
-    } catch (RuntimeException var23) {
-      throw AbstractGameWorld.cascadeException(var23,
-        "kd.Q(" + (var0 != null ? "{...}" : "null") + ',' + (var1 != null ? "{...}" : "null") + ','
-          + var2 + ',' + (var3 != null ? "{...}" : "null") + ',' + var4 + ',' + (var5 != null ?
-          "{...}" :
-          "null") + ',' + (var6 != null ? "{...}" : "null") + ',' + var7 + ',' + (var8 != null ?
-          "{...}" :
-          "null") + ',' + (var9 != null ? "{...}" : "null") + ',' + var10 + ')');
-    }
   }
 
   public static AbstractImageProducer createImageProducer(int var0, int var1, boolean var2,
                                                          Component var3) {
-    try {
-      if (var2) {
+    if (var2) {
         try {
           Class var4 = Class.forName(
               "com.jagex.runescape.ComponentImageProducer");
@@ -200,32 +173,21 @@ public final class TextureSampler18 extends TextureSampler39 {
       } else {
         return null;
       }
-    } catch (RuntimeException var7) {
-      throw AbstractGameWorld.cascadeException(var7,
-          "kd.C(" + var0 + ',' + var1 + ',' + ',' + (var3 != null ? "{...}"
-              : "null") + ')');
-    }
   }
 
   public static AbstractDirectColorSprite[] method286(int var0, int var1, int var2,
                                                      FileUnpacker var3) {
-    try {
-      if (var0 != -1) {
+    if (var0 != -1) {
         TextureSampler18.createImageProducer(-95, 48, true, null);
       }
 
       return !SomethingTexture4.loadSprites(var3, var1, var2, -30901) ?
         null :
         AudioWorker.method891(var0 ^ 4);
-    } catch (RuntimeException var5) {
-      throw AbstractGameWorld.cascadeException(var5,
-        "kd.F(" + var0 + ',' + var1 + ',' + var2 + ',' + (var3 != null ? "{...}" : "null") + ')');
-    }
   }
 
   public static void method287(boolean var0) {
-    try {
-      TextureSampler18.aClass94_4030 = null;
+    TextureSampler18.aClass94_4030 = null;
       TextureSampler18.aClass94_4036 = null;
       TextureSampler18.aClass94_4040 = null;
       TextureSampler18.anIntArray4035 = null;
@@ -233,10 +195,6 @@ public final class TextureSampler18 extends TextureSampler39 {
       if (var0) {
         TextureSampler18.method282(null, -113, 119, -92, 70);
       }
-
-    } catch (RuntimeException var2) {
-      throw AbstractGameWorld.cascadeException(var2, "kd.E(" + ')');
-    }
   }
 
 }

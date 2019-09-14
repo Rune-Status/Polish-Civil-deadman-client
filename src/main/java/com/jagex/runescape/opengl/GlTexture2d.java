@@ -33,8 +33,7 @@ public final class GlTexture2d extends SubNode {
   private int anInt3767;
 
   public GlTexture2d(int color) {
-    try {
-      int[] var3 = new int[1];
+    int[] var3 = new int[1];
       GlRenderer.GL.glGenTextures(1, var3, 0);
       this.anInt3759 = var3[0];
       this.anInt3760 = DummyClass33.anInt582;
@@ -49,29 +48,20 @@ public final class GlTexture2d extends SubNode {
       GlRenderer.GL.glTexParameteri(3553, 10240, 9729);
       DummyClass33.textureMemory += var6.limit() - this.anInt3767;
       this.anInt3767 = var6.limit();
-    } catch (RuntimeException var7) {
-      throw AbstractGameWorld
-          .cascadeException(var7, "sd.<init>(" + color + ')');
-    }
   }
 
   protected void finalize() throws Throwable {
-    try {
-      if (this.anInt3759 != -1) {
+    if (this.anInt3759 != -1) {
         DummyClass33.method985(this.anInt3759, this.anInt3767, this.anInt3760);
         this.anInt3759 = -1;
         this.anInt3767 = 0;
       }
 
       super.finalize();
-    } catch (RuntimeException var2) {
-      throw AbstractGameWorld.cascadeException(var2, "sd.finalize()");
-    }
   }
 
   public void initialize(byte var1) {
-    try {
-      int var2 = DummyClass32.method961(var1 + 1530);
+    int var2 = DummyClass32.method961(var1 + 1530);
       if (-1 == ~(1 & var2)) {
         GlRenderer.bindTexture(this.anInt3759);
       }
@@ -87,10 +77,6 @@ public final class GlTexture2d extends SubNode {
       if (var1 != 6) {
         GlTexture2d.aClass94_3763 = null;
       }
-
-    } catch (RuntimeException var3) {
-      throw AbstractGameWorld.cascadeException(var3, "sd.E(" + var1 + ')');
-    }
   }
 
   public static void method709(int var0, int var1) {
@@ -122,18 +108,13 @@ public final class GlTexture2d extends SubNode {
   }
 
   public static void method710(byte var0) {
-    try {
-      if (var0 >= 122) {
+    if (var0 >= 122) {
         AbstractGameWorld.floorUnderlays.method1523((byte) -104);
       }
-    } catch (RuntimeException var2) {
-      throw AbstractGameWorld.cascadeException(var2, "sd.C(" + var0 + ')');
-    }
   }
 
   public static void method711(int var0) {
-    try {
-      GlTexture2d.aClass94_3762 = null;
+    GlTexture2d.aClass94_3762 = null;
       GlTexture2d.aClass94_3758 = null;
       GlTexture2d.quadx1 = null;
       if (var0 != 1) {
@@ -142,14 +123,10 @@ public final class GlTexture2d extends SubNode {
 
       GlTexture2d.aClass94_3763 = null;
       GlTexture2d.aClass94_3761 = null;
-    } catch (RuntimeException var2) {
-      throw AbstractGameWorld.cascadeException(var2, "sd.B(" + var0 + ')');
-    }
   }
 
   public static void method713(int var0) {
     try {
-      try {
         Method var1 = Runtime.class.getMethod("maxMemory", new Class[var0]);
         if (null != var1) {
           try {
@@ -162,10 +139,6 @@ public final class GlTexture2d extends SubNode {
         }
       } catch (Exception var5) {
       }
-
-    } catch (RuntimeException var6) {
-      throw AbstractGameWorld.cascadeException(var6, "sd.A(" + var0 + ')');
-    }
   }
 
 }

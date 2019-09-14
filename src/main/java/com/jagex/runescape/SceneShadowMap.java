@@ -16,8 +16,7 @@ public final class SceneShadowMap {
 
   public static void method1814(int var0, int var1, int var2, int var3, int var4, int var5, int var6,
                                int var7, int var8, int var9, int var10) {
-    try {
-      int var11 = var2 - var4;
+    int var11 = var2 - var4;
       int var13 = -1;
       if (~AbstractDirectColorSprite.anInt3704 < -1) {
         if (ByteArrayNode.anInt3611 <= 10) {
@@ -89,16 +88,10 @@ public final class SceneShadowMap {
 
         DummyClass55.aClass61_1424.clear(-76);
       }
-    } catch (RuntimeException var31) {
-      throw AbstractGameWorld.cascadeException(var31,
-        "sm.B(" + var0 + ',' + var1 + ',' + var2 + ',' + var3 + ',' + var4 + ',' + var5 + ',' + var6
-          + ',' + var7 + ',' + var8 + ',' + var9 + ',' + var10 + ')');
-    }
   }
 
   public static void method1815(byte var0) {
-    try {
-      SceneShadowMap.aShortArray1779 = null;
+    SceneShadowMap.aShortArray1779 = null;
       SceneShadowMap.aClass93_1772 = null;
       SceneShadowMap.aClass64_1778 = null;
       if (var0 > -33) {
@@ -108,23 +101,16 @@ public final class SceneShadowMap {
       SceneShadowMap.CONNECTION_LOST = null;
       SceneShadowMap.aByteArrayArrayArray1774 = null;
       SceneShadowMap.aClass94_1775 = null;
-    } catch (RuntimeException var2) {
-      throw AbstractGameWorld.cascadeException(var2, "sm.A(" + var0 + ')');
-    }
   }
 
   public static void method1816(int var0, int var1) {
-    try {
-      if (var1 == -7) {
+    if (var1 == -7) {
         MilliFrameRegulator.anIntArray2696 = new int[var0];
         DummyClass13.anIntArray2021 = new int[var0];
         AnimationSequence.anIntArray1871 = new int[var0];
         Player.anIntArray3959 = new int[var0];
         FileCache.anIntArray686 = new int[var0];
       }
-    } catch (RuntimeException var3) {
-      throw AbstractGameWorld.cascadeException(var3, "sm.C(" + var0 + ',' + var1 + ')');
-    }
   }
 
 }

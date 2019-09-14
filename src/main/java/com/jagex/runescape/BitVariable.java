@@ -208,12 +208,8 @@ public final class BitVariable {
   }
 
   public static boolean method1391(int var0) {
-    try {
-      return var0 != ~SomethingQuickChatK.anInt154
+    return var0 != ~SomethingQuickChatK.anInt154
           || DummyClass55.aClass3_Sub24_Sub4_1421.method473(-128);
-    } catch (RuntimeException var2) {
-      throw AbstractGameWorld.cascadeException(var2, "kk.A(" + var0 + ')');
-    }
   }
 
 }

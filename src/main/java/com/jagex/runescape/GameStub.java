@@ -120,41 +120,28 @@ public abstract class GameStub implements Runnable,
   public abstract void init();
 
   public final void start() {
-    try {
-      if (StringNode.applet == this && !PlayerVariable.aBoolean554) {
+    if (StringNode.applet == this && !PlayerVariable.aBoolean554) {
         AreaSoundEffect.destroyTime = 0L;
       }
-    } catch (RuntimeException var2) {
-      throw AbstractGameWorld.cascadeException(var2, "rc.start()");
-    }
   }
 
   public final void stop() {
-    try {
-      if (StringNode.applet == this && !PlayerVariable.aBoolean554) {
+    if (StringNode.applet == this && !PlayerVariable.aBoolean554) {
         AreaSoundEffect.destroyTime = 4000L + Time.getCurrentTimeMillis();
       }
-    } catch (RuntimeException var2) {
-      throw AbstractGameWorld.cascadeException(var2, "rc.stop()");
-    }
   }
 
   public final void destroy() {
-    try {
-      if (this == StringNode.applet && !PlayerVariable.aBoolean554) {
+    if (this == StringNode.applet && !PlayerVariable.aBoolean554) {
         AreaSoundEffect.destroyTime = Time.getCurrentTimeMillis();
         TextureSampler25.sleep(5000L);
         TextureSampler30.signLink = null;
         this.shutdown(46, false);
       }
-    } catch (RuntimeException var2) {
-      throw AbstractGameWorld.cascadeException(var2, "rc.destroy()");
-    }
   }
 
   public final void paint(Graphics var1) {
-    try {
-      if (this == StringNode.applet && !PlayerVariable.aBoolean554) {
+    if (this == StringNode.applet && !PlayerVariable.aBoolean554) {
         TextureSampler30.aBoolean3116 = true;
         if (DummyClass20.aBoolean1784 && !GlRenderer.useOpenGlRenderer
             && ~(-AnimationSequence.canvasInitializedTime + Time
@@ -167,10 +154,6 @@ public abstract class GameStub implements Runnable,
         }
 
       }
-    } catch (RuntimeException var3) {
-      throw AbstractGameWorld.cascadeException(var3,
-          "rc.paint(" + (var1 != null ? "{...}" : "null") + ')');
-    }
   }
 
   private void shutdown(int var1, boolean clean) {
@@ -210,8 +193,7 @@ public abstract class GameStub implements Runnable,
   }
 
   private void handleUpdate() {
-    try {
-      long currentTime = Time.getCurrentTimeMillis();
+    long currentTime = Time.getCurrentTimeMillis();
       long sampledTime = DummyClass21.updateMemory[FileUnpacker.updateMemoryCounter];
       DummyClass21.updateMemory[FileUnpacker.updateMemoryCounter] = currentTime;
       FileUnpacker.updateMemoryCounter =
@@ -220,10 +202,6 @@ public abstract class GameStub implements Runnable,
         TextureSampler26.focused = DummyClass8.focused;
       }
       this.update();
-
-    } catch (RuntimeException var9) {
-      throw AbstractGameWorld.cascadeException(var9, "rc.R()");
-    }
   }
 
   private void draw() {
@@ -261,8 +239,7 @@ public abstract class GameStub implements Runnable,
   public abstract void handleDraw(int var1);
 
   public final void run() {
-    try {
-      GlTexture2d.method713(0);
+    GlTexture2d.method713(0);
       this.initializeCanvas();
       Something3d.viewImageProducer =
           TextureSampler18.createImageProducer(GroundItem.viewHeight,
@@ -281,10 +258,6 @@ public abstract class GameStub implements Runnable,
         }
         this.draw();
       }
-    } catch (Exception var5) {
-      GZipDecompressor.reportError(null, var5, (byte) 127);
-      this.reportError("crash");
-    }
 
     this.shutdown(107, true);
 
@@ -333,12 +306,7 @@ public abstract class GameStub implements Runnable,
   }
 
   public final void windowClosing(WindowEvent var1) {
-    try {
-      this.destroy();
-    } catch (RuntimeException var3) {
-      throw AbstractGameWorld.cascadeException(var3,
-          "rc.windowClosing(" + (var1 != null ? "{...}" : "null") + ')');
-    }
+    this.destroy();
   }
 
   public void windowClosed(WindowEvent var1) {
@@ -359,7 +327,6 @@ public abstract class GameStub implements Runnable,
   public final void method41(byte var1, int var2, int var3, int var4,
       int var5) {
     try {
-      try {
         if (StringNode.applet != null) {
           ++HuffmanEncoder.anInt639;
           if (~HuffmanEncoder.anInt639 <= -4) {
@@ -404,17 +371,10 @@ public abstract class GameStub implements Runnable,
         GZipDecompressor.reportError(null, var8, (byte) 113);
         this.reportError("crash");
       }
-
-    } catch (RuntimeException var9) {
-      throw AbstractGameWorld.cascadeException(var9,
-          "rc.CA(" + var1 + ',' + var2 + ',' + var3 + ',' + var4 + ',' + var5
-              + ')');
-    }
   }
 
   public static void method26(int var0) {
-    try {
-      if (var0 < 15) {
+    if (var0 < 15) {
         GameStub.method27(null, true);
       }
 
@@ -424,14 +384,10 @@ public abstract class GameStub implements Runnable,
       GameStub.aClass94_9 = null;
       GameStub.aClass94_5 = null;
       GameStub.aClass94_4 = null;
-    } catch (RuntimeException var2) {
-      throw AbstractGameWorld.cascadeException(var2, "rc.W(" + var0 + ')');
-    }
   }
 
   public static GameString method27(GameString var0, boolean var1) {
-    try {
-      if (!var1) {
+    if (!var1) {
         GameStub.method26(-78);
       }
 
@@ -441,27 +397,17 @@ public abstract class GameStub implements Runnable,
               TextureSampler15.aClass94_3192, true,
               OndemandFileRequest.aClass94_4066) :
           ObjectNode.aClass94_4049;
-    } catch (RuntimeException var3) {
-      throw AbstractGameWorld.cascadeException(var3,
-          "rc.V(" + (var0 != null ? "{...}" : "null") + ',' + var1 + ')');
-    }
   }
 
   public static void method28(boolean var0) {
-    try {
-      DummyClass15.aClass93_1874.method1524(3);
+    DummyClass15.aClass93_1874.method1524(3);
       if (!var0) {
         GameStub.aBoolean11 = false;
       }
-
-    } catch (RuntimeException var2) {
-      throw AbstractGameWorld.cascadeException(var2, "rc.Q(" + var0 + ')');
-    }
   }
 
   public static void method34(int var0) {
-    try {
-      if (null != GameWorld.audioOutputStream0) {
+    if (null != GameWorld.audioOutputStream0) {
         GameWorld.audioOutputStream0.method2163(false);
       }
 
@@ -486,19 +432,11 @@ public abstract class GameStub implements Runnable,
               14);
       SomethingWorldMappy.audioOutputStream1.method2154(-126,
           MonoChromaticImageBuffer.aClass3_Sub24_Sub2_2563);
-    } catch (RuntimeException var2) {
-      throw AbstractGameWorld.cascadeException(var2, "rc.DA(" + var0 + ')');
-    }
   }
 
   public static void provideSignLink(SignLink var0) {
-    try {
-      DummyClass35.signLink = var0;
+    DummyClass35.signLink = var0;
       TextureSampler30.signLink = var0;
-    } catch (RuntimeException var2) {
-      throw AbstractGameWorld.cascadeException(var2,
-          "rc.provideSignLink(" + (var0 != null ? "{...}" : "null") + ')');
-    }
   }
 
 }

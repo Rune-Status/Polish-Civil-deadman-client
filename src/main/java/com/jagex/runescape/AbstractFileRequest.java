@@ -19,8 +19,7 @@ public abstract class AbstractFileRequest extends SubNode {
   public abstract byte[] method587(boolean var1 );
 
   public static void method588(byte var0) {
-    try {
-      AbstractFileRequest.aClass94_3626 = null;
+    AbstractFileRequest.aClass94_3626 = null;
       AbstractFileRequest.aClass94_3634 = null;
       if (var0 != 120) {
         AbstractFileRequest.aClass94_3633 = null;
@@ -28,9 +27,6 @@ public abstract class AbstractFileRequest extends SubNode {
 
       AbstractFileRequest.aClass94_3633 = null;
       AbstractFileRequest.aClass94_3629 = null;
-    } catch (RuntimeException var2) {
-      throw AbstractGameWorld.cascadeException(var2, "il.C(" + var0 + ')');
-    }
   }
 
   public static void method589(int var0, int var1, int var2) {
@@ -43,8 +39,7 @@ public abstract class AbstractFileRequest extends SubNode {
   }
 
   public static boolean method590(byte var0, int var1, int var2) {
-    try {
-      if (11 == var2) {
+    if (11 == var2) {
         var2 = 10;
       }
 
@@ -54,10 +49,6 @@ public abstract class AbstractFileRequest extends SubNode {
 
       GameObjectConfig var4 = DummyClass11.method2207(4, var1);
       return var4.method1684(115, var2);
-    } catch (RuntimeException var5) {
-      throw AbstractGameWorld.cascadeException(var5,
-        "il.D(" + var0 + ',' + var1 + ',' + var2 + ')');
-    }
   }
 
 }

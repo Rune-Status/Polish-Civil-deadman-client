@@ -17,22 +17,14 @@ public abstract class BufferObject {
   public abstract void put(int var1,byte[] var2 );
 
   public static void method2065(byte var0, FileUnpacker var1, FileUnpacker var2) {
-    try {
-      TextureSampler4.aClass153_3227 = var1;
+    TextureSampler4.aClass153_3227 = var1;
       if (var0 <= -103) {
         AnimationSequence.aClass153_1852 = var2;
       }
-    } catch (RuntimeException var4) {
-      throw AbstractGameWorld.cascadeException(var4,
-        "u.D(" + var0 + ',' + (var1 != null ? "{...}" : "null") + ',' + (var2 != null ?
-          "{...}" :
-          "null") + ')');
-    }
   }
 
   public static void method2067(boolean var0) {
-    try {
-      if (!var0) {
+    if (!var0) {
         for (StillGraphicNode var1 = (StillGraphicNode) TextureSampler17.stillGraphics.getFirst();
              null != var1; var1 = (StillGraphicNode) TextureSampler17.stillGraphics.getNext()) {
           StillGraphic var2 = var1.aClass140_Sub2_3545;
@@ -53,14 +45,10 @@ public abstract class BufferObject {
         }
 
       }
-    } catch (RuntimeException var3) {
-      throw AbstractGameWorld.cascadeException(var3, "u.G(" + ')');
-    }
   }
 
   public static void method2068(NpcConfiguration var0, int var1, int var2, int var3, int var4) {
-    try {
-      if (TextureSampler25.amountContextActions < 400) {
+    if (TextureSampler25.amountContextActions < 400) {
         if (var0.anIntArray1292 != null) {
           var0 = var0.method1471((byte) 66);
         }
@@ -202,16 +190,10 @@ public abstract class BufferObject {
           }
         }
       }
-    } catch (RuntimeException var10) {
-      throw AbstractGameWorld.cascadeException(var10,
-        "u.A(" + (var0 != null ? "{...}" : "null") + ',' + var1 + ',' + var2 + ',' + var3 + ','
-          + var4 + ')');
-    }
   }
 
   public static InventoryConfig method2069(int var0, int var1) {
-    try {
-      if (var1 >= -99) {
+    if (var1 >= -99) {
         return null;
       } else {
         InventoryConfig var2 =
@@ -229,14 +211,10 @@ public abstract class BufferObject {
           return var2;
         }
       }
-    } catch (RuntimeException var4) {
-      throw AbstractGameWorld.cascadeException(var4, "u.C(" + var0 + ',' + var1 + ')');
-    }
   }
 
   public static void method2070(byte var0) {
-    try {
-      BufferObject.aClass94_1884 = null;
+    BufferObject.aClass94_1884 = null;
       BufferObject.aClass94_1888 = null;
       if (var0 < 0) {
         BufferObject.anInt1881 = -60;
@@ -244,9 +222,6 @@ public abstract class BufferObject {
 
       BufferObject.aClass94_1882 = null;
       BufferObject.COOKIE_HOST = null;
-    } catch (RuntimeException var2) {
-      throw AbstractGameWorld.cascadeException(var2, "u.F(" + var0 + ')');
-    }
   }
 
 }

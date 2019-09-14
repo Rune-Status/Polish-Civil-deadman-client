@@ -22,8 +22,7 @@ public final class DummyClass21 {
 
 
   public static void method1806(int var0) {
-    try {
-      DummyClass21.HEAD_ICONS_PRAYER = null;
+    DummyClass21.HEAD_ICONS_PRAYER = null;
       DummyClass21.aClass61_1758 = null;
       if (var0 != 3846) {
         DummyClass21.anInt1762 = 60;
@@ -32,14 +31,10 @@ public final class DummyClass21 {
       DummyClass21.anIntArrayArray1763 = null;
       DummyClass21.updateMemory = null;
       DummyClass21.aClass94_1760 = null;
-    } catch (RuntimeException var2) {
-      throw AbstractGameWorld.cascadeException(var2, "sh.D(" + var0 + ')');
-    }
   }
 
   public static synchronized byte[] method1807(int var0, int var1) {
-    try {
-      byte[] var2;
+    byte[] var2;
       if (~var1 == -101 && -1 > ~DummyClass45.anInt984) {
         var2 = TextureSampler8.aByteArrayArray3461[--DummyClass45.anInt984];
         TextureSampler8.aByteArrayArray3461[DummyClass45.anInt984] = null;
@@ -61,28 +56,18 @@ public final class DummyClass21 {
           return new byte[var1];
         }
       }
-    } catch (RuntimeException var3) {
-      throw AbstractGameWorld.cascadeException(var3, "sh.A(" + var0 + ',' + var1 + ')');
-    }
   }
 
   public static void method1808(int var0, boolean var1, byte var2, int var3, boolean var4) {
-    try {
-      FileCache.method1047(var0, var3, TextureSampler15.aClass44_Sub1Array3201.length - 1, var4, 0,
+    FileCache.method1047(var0, var3, TextureSampler15.aClass44_Sub1Array3201.length - 1, var4, 0,
         var1, false);
       if (var2 != 30) {
         DummyClass21.aClass94_1760 = null;
       }
-
-    } catch (RuntimeException var6) {
-      throw AbstractGameWorld.cascadeException(var6,
-        "sh.C(" + var0 + ',' + var1 + ',' + var2 + ',' + var3 + ',' + var4 + ')');
-    }
   }
 
   public static void method1809(int var0, long[] var1, int var2, int var3, Object[] var4) {
-    try {
-      if (var2 < 85) {
+    if (var2 < 85) {
         DummyClass21.aClass61_1758 = null;
       }
 
@@ -114,14 +99,6 @@ public final class DummyClass21 {
         DummyClass21.method1809(-1 + var6, var1, 107, var3, var4);
         DummyClass21.method1809(var0, var1, 89, var6 - -1, var4);
       }
-
-    } catch (RuntimeException var14) {
-      throw AbstractGameWorld.cascadeException(var14,
-        "sh.B(" + var0 + ',' + (var1 != null ? "{...}" : "null") + ',' + var2 + ',' + var3 + ',' + (
-          var4 != null ?
-            "{...}" :
-            "null") + ')');
-    }
   }
 
 }

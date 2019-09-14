@@ -18,8 +18,7 @@ public final class DummyClass1 {
   }
 
   public static void method904(int var0, Mobile var1) {
-    try {
-      if (var1.anInt2779 != 0) {
+    if (var1.anInt2779 != 0) {
         RenderAnimation var2 = var1.getRenderAnimationId(false);
         int var4;
         int var5;
@@ -227,24 +226,16 @@ public final class DummyClass1 {
         }
 
       }
-    } catch (RuntimeException var8) {
-      throw AbstractGameWorld.cascadeException(var8,
-        "cm.A(" + var0 + ',' + (var1 != null ? "{...}" : "null") + ')');
-    }
   }
 
   public static void method905(int var0) {
-    try {
-      DummyClass1.anInterface2_408 = null;
+    DummyClass1.anInterface2_408 = null;
       DummyClass1.aClass94_414 = null;
       DummyClass1.aClass94_415 = null;
       DummyClass1.aClass94_412 = null;
       DummyClass1.socketRequest = null;
 
       DummyClass1.gameThread = null;
-    } catch (RuntimeException var2) {
-      throw AbstractGameWorld.cascadeException(var2, "cm.B(" + var0 + ')');
-    }
   }
 
 }

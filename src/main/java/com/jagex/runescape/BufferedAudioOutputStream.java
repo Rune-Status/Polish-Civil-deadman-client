@@ -19,12 +19,13 @@ public final class BufferedAudioOutputStream extends AbstractAudioOutputStream {
   private byte[] buffer;
 
   public void write() {
+    Synthesizer synthesizer = null;
     try {
-      Synthesizer synthesizer = MidiSystem.getSynthesizer();
-      synthesizer.getLatency();
+      synthesizer = MidiSystem.getSynthesizer();
     } catch (MidiUnavailableException e) {
       e.printStackTrace();
     }
+    synthesizer.getLatency();
     int sampleLen = 256;
     if (GameString.stereo) {
       sampleLen <<= 1;
@@ -44,8 +45,7 @@ public final class BufferedAudioOutputStream extends AbstractAudioOutputStream {
 
   public void setBufferSize(int bufferSize)
       throws LineUnavailableException {
-    try {
-      javax.sound.sampled.DataLine.Info var2 =
+    javax.sound.sampled.DataLine.Info var2 =
           new javax.sound.sampled.DataLine.Info(SourceDataLine.class,
               this.audioFormat,
               bufferSize << (!GameString.stereo ? 1 : 2));
@@ -53,14 +53,6 @@ public final class BufferedAudioOutputStream extends AbstractAudioOutputStream {
       this.sourceDataLine.open();
       this.sourceDataLine.start();
       this.bufferSize = bufferSize;
-    } catch (LineUnavailableException exception) {
-      if (~AbstractMouseWheel.compact(bufferSize, -125) == -2) {
-        this.sourceDataLine = null;
-        throw exception;
-      } else {
-        this.setBufferSize(DummyClass53.nearestPo2((byte) 76, bufferSize));
-      }
-    }
   }
 
   public void flush() throws LineUnavailableException {

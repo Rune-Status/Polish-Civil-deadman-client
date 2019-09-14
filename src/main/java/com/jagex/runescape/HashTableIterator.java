@@ -19,17 +19,11 @@ public final class HashTableIterator {
 
 
   public HashTableIterator(HashTable var1 ) {
-    try {
-      this.table = var1;
-    } catch (RuntimeException var3) {
-      throw AbstractGameWorld.cascadeException(var3,
-        "l.<init>(" + (var1 != null ? "{...}" : "null") + ')');
-    }
+    this.table = var1;
   }
 
   public Node getNext() {
-    try {
-      Node var2;
+    Node var2;
       if (-1 > ~this.anInt1132
           && this.table.nodes[this.anInt1132 + -1] != this.iterator) {
         var2 = this.iterator;
@@ -47,31 +41,20 @@ public final class HashTableIterator {
         this.iterator = var2.nextNode;
         return var2;
       }
-    } catch (RuntimeException var3) {
-      throw AbstractGameWorld.cascadeException(var3, "l.D()");
-    }
   }
 
   public Node getFirst() {
-    try {
-      this.anInt1132 = 0;
+    this.anInt1132 = 0;
       return this.getNext();
-    } catch (RuntimeException var3) {
-      throw AbstractGameWorld.cascadeException(var3, "l.C()");
-    }
   }
 
   public static void method1394(byte var0) {
-    try {
-      HashTableIterator.anIntArray1138 = null;
+    HashTableIterator.anIntArray1138 = null;
       int var1 = 118 / ((-33 - var0) / 45);
       HashTableIterator.aClass93_1131 = null;
       HashTableIterator.aClass94_1133 = null;
       HashTableIterator.aClass93_1135 = null;
       HashTableIterator.aClass3_Sub28_Sub16Array1136 = null;
-    } catch (RuntimeException var2) {
-      throw AbstractGameWorld.cascadeException(var2, "l.E(" + var0 + ')');
-    }
   }
 
   public static long method1395(int var0, int var1, int var2) {
@@ -80,8 +63,7 @@ public final class HashTableIterator {
   }
 
   public static void method1396(int var0) {
-    try {
-      int var2 = DisplayMode.viewY;
+    int var2 = DisplayMode.viewY;
       int var1 = DummyClass51.viewX;
       int var4 = -GroundItem.viewHeight + (SceneSomething2.windowHeight - var2);
       int var3 = -var1 + AreaSoundEffect.windowWidth - DummyClass30.viewWidth;
@@ -127,10 +109,6 @@ public final class HashTableIterator {
         } catch (Exception var9) {
         }
       }
-
-    } catch (RuntimeException var10) {
-      throw AbstractGameWorld.cascadeException(var10, "l.A(" + var0 + ')');
-    }
   }
 
 }

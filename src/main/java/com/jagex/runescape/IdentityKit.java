@@ -25,8 +25,7 @@ public final class IdentityKit {
   private final int[] anIntArray475 = {-1, -1, -1, -1, -1};
 
   public Model method941(boolean var1 ) {
-    try {
-      if (var1) {
+    if (var1) {
         int var3 = 0;
         Model[] var2 = new Model[5];
 
@@ -58,14 +57,10 @@ public final class IdentityKit {
       } else {
         return null;
       }
-    } catch (RuntimeException var6) {
-      throw AbstractGameWorld.cascadeException(var6, "dm.F(" + ')');
-    }
   }
 
   public boolean method942(int var1 ) {
-    try {
-      if (null == this.anIntArray474) {
+    if (null == this.anIntArray474) {
         return true;
       } else {
         boolean var2 = true;
@@ -82,14 +77,10 @@ public final class IdentityKit {
 
         return var2;
       }
-    } catch (RuntimeException var4) {
-      throw AbstractGameWorld.cascadeException(var4, "dm.J(" + var1 + ')');
-    }
   }
 
   private void method946(byte var1, Buffer var2, int var3) {
-    try {
-      if (var1 >= -16) {
+    if (var1 >= -16) {
         this.aShortArray470 = null;
       }
 
@@ -131,16 +122,10 @@ public final class IdentityKit {
           }
         }
       }
-
-    } catch (RuntimeException var6) {
-      throw AbstractGameWorld.cascadeException(var6,
-        "dm.K(" + var1 + ',' + (var2 != null ? "{...}" : "null") + ',' + var3 + ')');
-    }
   }
 
   public Model method947(byte var1 ) {
-    try {
-      if (this.anIntArray474 == null) {
+    if (this.anIntArray474 == null) {
         return null;
       } else {
         Model[] var2 = new Model[this.anIntArray474.length];
@@ -175,14 +160,10 @@ public final class IdentityKit {
 
         return var7;
       }
-    } catch (RuntimeException var6) {
-      throw AbstractGameWorld.cascadeException(var6, "dm.H(" + var1 + ')');
-    }
   }
 
   public boolean method948(int var1 ) {
-    try {
-      boolean var2 = true;
+    boolean var2 = true;
       if (var1 != 18991) {
         this.aShortArray460 = null;
       }
@@ -195,14 +176,10 @@ public final class IdentityKit {
       }
 
       return var2;
-    } catch (RuntimeException var4) {
-      throw AbstractGameWorld.cascadeException(var4, "dm.B(" + var1 + ')');
-    }
   }
 
   public void method952(int var1, Buffer var2 ) {
-    try {
-      if (var1 == -31957) {
+    if (var1 == -31957) {
         while (true) {
           int var3 = var2.readUnsignedByte();
           if (0 == var3) {
@@ -212,15 +189,10 @@ public final class IdentityKit {
           this.method946((byte) -84, var2, var3);
         }
       }
-    } catch (RuntimeException var4) {
-      throw AbstractGameWorld.cascadeException(var4,
-        "dm.L(" + var1 + ',' + (var2 != null ? "{...}" : "null") + ')');
-    }
   }
 
   public static void method943(int var0) {
-    try {
-      IdentityKit.aClass94_468 = null;
+    IdentityKit.aClass94_468 = null;
       IdentityKit.aClass94_473 = null;
       if (var0 == -9893) {
         IdentityKit.aClass94_477 = null;
@@ -229,14 +201,10 @@ public final class IdentityKit {
         IdentityKit.aClass94_463 = null;
         IdentityKit.aClass94_461 = null;
       }
-    } catch (RuntimeException var2) {
-      throw AbstractGameWorld.cascadeException(var2, "dm.C(" + var0 + ')');
-    }
   }
 
   public static boolean method944(byte var0, int var1, int var2, byte[] var3) {
-    try {
-      int var4 = 106 % ((-11 - var0) / 51);
+    int var4 = 106 % ((-11 - var0) / 51);
       boolean var5 = true;
       int var7 = -1;
       Buffer var6 = new Buffer(var3);
@@ -286,15 +254,10 @@ public final class IdentityKit {
           }
         }
       }
-    } catch (RuntimeException var18) {
-      throw AbstractGameWorld.cascadeException(var18,
-        "dm.A(" + var0 + ',' + var1 + ',' + var2 + ',' + (var3 != null ? "{...}" : "null") + ')');
-    }
   }
 
   public static void method945(byte var0) {
-    try {
-      SpotAnimationConfig.gameBuffer.method807((byte) -98);
+    SpotAnimationConfig.gameBuffer.method807((byte) -98);
       int var1 = SpotAnimationConfig.gameBuffer.readBits(8);
       int var2;
       if (~DummyClass6.anInt2046 < ~var1) {
@@ -360,14 +323,10 @@ public final class IdentityKit {
         }
 
       }
-    } catch (RuntimeException var9) {
-      throw AbstractGameWorld.cascadeException(var9, "dm.E(" + var0 + ')');
-    }
   }
 
   public static void method949(int var0, byte var1, int var2, int var3, int var4) {
-    try {
-      int var5 = -44 / ((24 - var1) / 59);
+    int var5 = -44 / ((24 - var1) / 59);
       int var6 = 0;
       TextureSampler18.method282(DummyClass35.anIntArrayArray663[var4], -var2 + var0, 100,
         var0 - -var2, var3);
@@ -397,16 +356,10 @@ public final class IdentityKit {
         TextureSampler18.method282(var17, var15, -61, var16, var3);
         TextureSampler18.method282(var18, var15, -93, var16, var3);
       }
-
-    } catch (RuntimeException var14) {
-      throw AbstractGameWorld.cascadeException(var14,
-        "dm.I(" + var0 + ',' + var1 + ',' + var2 + ',' + var3 + ',' + var4 + ')');
-    }
   }
 
   public static void method950(Widget var0, int var1, int var2, int var3) {
-    try {
-      if (2 <= TextureSampler25.amountContextActions || ~Something3d.anInt3012 != -1
+    if (2 <= TextureSampler25.amountContextActions || ~Something3d.anInt3012 != -1
         || SceneNode.aBoolean1837) {
         if (var1 > -55) {
           IdentityKit.aClass94_473 = null;
@@ -433,24 +386,16 @@ public final class IdentityKit {
         }
 
       }
-    } catch (RuntimeException var6) {
-      throw AbstractGameWorld.cascadeException(var6,
-        "dm.D(" + (var0 != null ? "{...}" : "null") + ',' + var1 + ',' + var2 + ',' + var3 + ')');
-    }
   }
 
   public static void method951(int var0) {
-    try {
-      GlTexture2d.aBoolean3769 = false;
+    GlTexture2d.aBoolean3769 = false;
       TextureSampler25.anInt3413 = 0;
       AbstractImageProducer.loginResponse = -3;
       VertexNormal.anInt820 = 0;
       TextureSampler28.loginState = 1;
       SomethingIndex150.anInt2079 = var0;
       MonoChromaticImageBuffer.anInt2561 = -1;
-    } catch (RuntimeException var2) {
-      throw AbstractGameWorld.cascadeException(var2, "dm.G(" + var0 + ')');
-    }
   }
 
 }

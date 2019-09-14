@@ -22,24 +22,18 @@ public final class Unsure {
   public int anInt1900;
 
   public static void method2071(byte var0) {
-    try {
-      Unsure.aClass94_1892 = null;
+    Unsure.aClass94_1892 = null;
       Unsure.aClass94_1889 = null;
       Unsure.aClass113Array1895 = null;
       Unsure.aClass94_1899 = null;
       if (var0 <= 1) {
         Unsure.method2075(112, (byte) 44);
       }
-
-    } catch (RuntimeException var2) {
-      throw AbstractGameWorld.cascadeException(var2, "ub.G(" + var0 + ')');
-    }
   }
 
   public static void method2072(int var0, int var1, int var2, int var3, int var4, int var5,
                                int var6) {
-    try {
-      if (DummyClass55.anInt1425 <= var1 && GlTexture2d.anInt3765 >= var3
+    if (DummyClass55.anInt1425 <= var1 && GlTexture2d.anInt3765 >= var3
         && ~DummyClass13.anInt2020 >= ~var2 && var4 <= LightIntensity.anInt902) {
         if (-2 == ~var5) {
           DummyClass49.method1367(var0, var3, var2, (byte) 34, var4, var1);
@@ -55,12 +49,6 @@ public final class Unsure {
       if (var6 != -2) {
         Unsure.method2075(89, (byte) -73);
       }
-
-    } catch (RuntimeException var8) {
-      throw AbstractGameWorld.cascadeException(var8,
-        "ub.F(" + var0 + ',' + var1 + ',' + var2 + ',' + var3 + ',' + var4 + ',' + var5 + ',' + var6
-          + ')');
-    }
   }
 
   public static void drawSceneTile(SceneGraphTile var0, boolean var1) {
@@ -608,8 +596,7 @@ public final class Unsure {
         }
 
         if (var2.aBoolean2236) {
-          try {
-            var9 = var2.anInt2223;
+          var9 = var2.anInt2223;
             var2.aBoolean2236 = false;
             var10 = 0;
 
@@ -747,9 +734,6 @@ public final class Unsure {
             if (var2.aBoolean2236) {
               continue;
             }
-          } catch (Exception var20) {
-            var2.aBoolean2236 = false;
-          }
         }
 
         if (var2.aBoolean2225 && var2.anInt2227 == 0) {
@@ -944,8 +928,7 @@ public final class Unsure {
 
   public static void method2074(int var0, int var1, int var2, int var3, int var4, int var5,
                                int var6) {
-    try {
-      Widget var7 = AbstractDirectColorSprite.method638((byte) -19, var0, var1);
+    Widget var7 = AbstractDirectColorSprite.method638((byte) -19, var0, var1);
       if (null != var7 && null != var7.anObjectArray203) {
         ClientScriptCall var8 = new ClientScriptCall();
         var8.aClass11_2449 = var7;
@@ -963,25 +946,15 @@ public final class Unsure {
         AnimationSomething.anInt3590 = var6;
         DummyClass29.method909(126, var7);
       }
-    } catch (RuntimeException var9) {
-      throw AbstractGameWorld.cascadeException(var9,
-        "ub.C(" + var0 + ',' + var1 + ',' + var2 + ',' + var3 + ',' + var4 + ',' + var5 + ',' + var6
-          + ')');
-    }
   }
 
   public static int method2075(int var0, byte var1) {
-    try {
-      int var2 = 110 / ((var1 - 34) / 61);
+    int var2 = 110 / ((var1 - 34) / 61);
       return 255 & var0;
-    } catch (RuntimeException var3) {
-      throw AbstractGameWorld.cascadeException(var3, "ub.A(" + var0 + ',' + var1 + ')');
-    }
   }
 
   public static PlayerVariable getPlayerVariable(int var0, int var1) {
-    try {
-      PlayerVariable var2 = (PlayerVariable) SceneShadowMap.aClass93_1772.get(
+    PlayerVariable var2 = (PlayerVariable) SceneShadowMap.aClass93_1772.get(
           var1);
       if (var2 != null) {
         return var2;
@@ -999,22 +972,15 @@ public final class Unsure {
           return var2;
         }
       }
-    } catch (RuntimeException var4) {
-      throw AbstractGameWorld.cascadeException(var4, "ub.D(" + var0 + ',' + var1 + ')');
-    }
   }
 
   public static void method2077(boolean var0) {
-    try {
-      SomethingPacket151.aClass93_2604.method1524(3);
+    SomethingPacket151.aClass93_2604.method1524(3);
       if (!var0) {
         Unsure.aClass94_1899 = null;
       }
 
       DummyClass32.aClass93_511.method1524(3);
-    } catch (RuntimeException var2) {
-      throw AbstractGameWorld.cascadeException(var2, "ub.B(" + var0 + ')');
-    }
   }
 
 }

@@ -23,8 +23,7 @@ public final class DummyClass9 extends DummyClass5 {
 
 
   public static void method2213(byte var0) {
-    try {
-      DummyClass9.anIntArray4009 = null;
+    DummyClass9.anIntArray4009 = null;
       DummyClass9.aByteArray4005 = null;
       DummyClass9.aBooleanArray4008 = null;
       if (var0 != 104) {
@@ -33,14 +32,10 @@ public final class DummyClass9 extends DummyClass5 {
 
       DummyClass9.aClass94_4007 = null;
       DummyClass9.anIntArrayArray4010 = null;
-    } catch (RuntimeException var2) {
-      throw AbstractGameWorld.cascadeException(var2, "ch.F(" + var0 + ')');
-    }
   }
 
   public static void method2214(int var0) {
-    try {
-      if (var0 != 0) {
+    if (var0 != 0) {
         DummyClass9.aByteArray4005 = null;
       }
 
@@ -56,27 +51,18 @@ public final class DummyClass9 extends DummyClass5 {
         }
 
       }
-    } catch (RuntimeException var2) {
-      throw AbstractGameWorld.cascadeException(var2, "ch.E(" + var0 + ')');
-    }
   }
 
   public static void unbindKeyboard(Component var0, int var1) {
-    try {
-      if (var1 == -9320) {
+    if (var1 == -9320) {
         var0.removeKeyListener(TextureSampler33.keyboard);
         var0.removeFocusListener(TextureSampler33.keyboard);
         AbstractTextureSampler.anInt2384 = -1;
       }
-    } catch (RuntimeException var3) {
-      throw AbstractGameWorld.cascadeException(var3,
-        "ch.G(" + (var0 != null ? "{...}" : "null") + ',' + var1 + ')');
-    }
   }
 
   public static void method2216(byte var0) {
-    try {
-      if (var0 != 81) {
+    if (var0 != 81) {
         DummyClass9.unbindKeyboard(null, 14);
       }
 
@@ -201,9 +187,6 @@ public final class DummyClass9 extends DummyClass5 {
         }
 
       }
-    } catch (RuntimeException var3) {
-      throw AbstractGameWorld.cascadeException(var3, "ch.D(" + var0 + ')');
-    }
   }
 
 }

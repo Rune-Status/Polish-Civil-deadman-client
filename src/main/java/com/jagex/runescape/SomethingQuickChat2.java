@@ -18,8 +18,7 @@ public final class SomethingQuickChat2 extends SubNode {
   public int[] anIntArray3540;
 
   public void method525(int var1 ) {
-    try {
-      int var2;
+    int var2;
       if (null != this.anIntArray3540) {
         for (var2 = 0; ~this.anIntArray3540.length < ~var2; ++var2) {
           this.anIntArray3540[var2] =
@@ -35,14 +34,10 @@ public final class SomethingQuickChat2 extends SubNode {
       }
 
       var2 = 46 / ((var1 - -27) / 38);
-    } catch (RuntimeException var3) {
-      throw AbstractGameWorld.cascadeException(var3, "bc.O(" + var1 + ')');
-    }
   }
 
   public int method526(int var1, int var2 ) {
-    try {
-      if (this.anIntArray3540 != null) {
+    if (this.anIntArray3540 != null) {
         for (int var3 = var2; ~var3 > ~this.anIntArray3540.length; ++var3) {
           if (var1 == this.anIntArray3533[var3]) {
             return this.anIntArray3540[var3];
@@ -53,14 +48,10 @@ public final class SomethingQuickChat2 extends SubNode {
       } else {
         return -1;
       }
-    } catch (RuntimeException var4) {
-      throw AbstractGameWorld.cascadeException(var4, "bc.Q(" + var1 + ',' + var2 + ')');
-    }
   }
 
   private void method527(Buffer var1, int var2, int var3) {
-    try {
-      if (var2 != 0) {
+    if (var2 != 0) {
         this.method526(-91, -3);
       }
 
@@ -93,16 +84,10 @@ public final class SomethingQuickChat2 extends SubNode {
           }
         }
       }
-
-    } catch (RuntimeException var6) {
-      throw AbstractGameWorld.cascadeException(var6,
-        "bc.E(" + (var1 != null ? "{...}" : "null") + ',' + var2 + ',' + var3 + ')');
-    }
   }
 
   public int method529(byte var1, int var2 ) {
-    try {
-      int var3 = 45 / ((var1 - -30) / 49);
+    int var3 = 45 / ((var1 - -30) / 49);
       if (null == this.anIntArray3534) {
         return -1;
       } else {
@@ -114,14 +99,10 @@ public final class SomethingQuickChat2 extends SubNode {
 
         return -1;
       }
-    } catch (RuntimeException var5) {
-      throw AbstractGameWorld.cascadeException(var5, "bc.P(" + var1 + ',' + var2 + ')');
-    }
   }
 
   public void method530(Buffer var1, byte var2 ) {
-    try {
-      if (var2 <= 104) {
+    if (var2 <= 104) {
         this.anIntArray3534 = null;
       }
 
@@ -133,27 +114,17 @@ public final class SomethingQuickChat2 extends SubNode {
 
         this.method527(var1, 0, var3);
       }
-    } catch (RuntimeException var4) {
-      throw AbstractGameWorld.cascadeException(var4,
-        "bc.D(" + (var1 != null ? "{...}" : "null") + ',' + var2 + ')');
-    }
   }
 
   public static void method528(int var0) {
-    try {
-      SomethingQuickChat2.aClass3_Sub20_3532 = null;
+    SomethingQuickChat2.aClass3_Sub20_3532 = null;
       if (var0 != -1667) {
         SomethingQuickChat2.anInt3539 = 101;
       }
-
-    } catch (RuntimeException var2) {
-      throw AbstractGameWorld.cascadeException(var2, "bc.B(" + var0 + ')');
-    }
   }
 
   public static GameString method531(byte var0) {
-    try {
-      GameString var1;
+    GameString var1;
       if (-2 == ~Something3d.anInt3012 && -3 < ~TextureSampler25.amountContextActions) {
         var1 = RenderAnimation.concat(new GameString[] {
           TextureSampler14.aClass94_3388, DummyInputStream.aClass94_43,
@@ -181,28 +152,20 @@ public final class SomethingQuickChat2 extends SubNode {
 
       int var2 = -97 % ((var0 - 55) / 32);
       return var1;
-    } catch (RuntimeException var3) {
-      throw AbstractGameWorld.cascadeException(var3, "bc.F(" + var0 + ')');
-    }
   }
 
   public static void method532(int var0, int var1) {
-    try {
-      if (var1 == -28236) {
+    if (var1 == -28236) {
         Inventory var2 = (Inventory) SceneGraphTile.aClass130_2220.get(var0);
         if (null != var2) {
           var2.unlinkNode();
         }
       }
-    } catch (RuntimeException var3) {
-      throw AbstractGameWorld.cascadeException(var3, "bc.A(" + var0 + ',' + var1 + ')');
-    }
   }
 
   public static void drawLoadingBar(Color var0, boolean var1, boolean var2, GameString var3,
                                    int var4) {
     try {
-      try {
         Graphics var5 = GameCanvas.INSTANCE.getGraphics();
         if (TextureSampler14.aFont3384 == null) {
           TextureSampler14.aFont3384 = new Font("Helvetica", 1, 13);
@@ -269,12 +232,6 @@ public final class SomethingQuickChat2 extends SubNode {
       } catch (Exception var10) {
         GameCanvas.INSTANCE.repaint();
       }
-
-    } catch (RuntimeException var11) {
-      throw AbstractGameWorld.cascadeException(var11,
-        "bc.C(" + (var0 != null ? "{...}" : "null") + ',' + var1 + ',' + var2 + ',' + (
-          var3 != null ? "{...}" : "null") + ',' + var4 + ')');
-    }
   }
 
 }

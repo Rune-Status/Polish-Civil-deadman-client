@@ -19,33 +19,22 @@ public abstract class AbstractObjectNode extends SubNode {
 
   public static SoftwareDirectColorSprite method562(FileUnpacker var0, int var1, int var2,
                                                    byte var3) {
-    try {
-      return SomethingTexture4.loadSprites(var0, var1, var2, -30901) ?
+    return SomethingTexture4.loadSprites(var0, var1, var2, -30901) ?
         (var3 != 39 ? null : Parameter.method578(var3 ^ 84)) :
         null;
-    } catch (RuntimeException var5) {
-      throw AbstractGameWorld.cascadeException(var5,
-        "gf.O(" + (var0 != null ? "{...}" : "null") + ',' + var1 + ',' + var2 + ',' + var3 + ')');
-    }
   }
 
   public static void method563(int var0) {
-    try {
-      AbstractObjectNode.othrrHeightMap = null;
+    AbstractObjectNode.othrrHeightMap = null;
       AbstractObjectNode.aClass94_3601 = null;
       AbstractObjectNode.anIntArray3607 = null;
       if (var0 != 3) {
         AbstractObjectNode.viewportLowerZ = -108;
       }
-
-    } catch (RuntimeException var2) {
-      throw AbstractGameWorld.cascadeException(var2, "gf.Q(" + var0 + ')');
-    }
   }
 
   public static void loadSettings(SignLink var0, int var1) {
-    try {
-      AbstractFileRequest.brightnessSetting = 3;
+    AbstractFileRequest.brightnessSetting = 3;
       SceneSomething.method957(96, true);
       AbstractObjectNode.aBoolean3604 = true;
       TextureSampler17.aBoolean3184 = true;
@@ -111,16 +100,10 @@ public abstract class AbstractObjectNode extends SubNode {
         }
       } catch (Exception var7) {
       }
-
-    } catch (RuntimeException var9) {
-      throw AbstractGameWorld.cascadeException(var9,
-        "gf.F(" + (var0 != null ? "{...}" : "null") + ',' + var1 + ')');
-    }
   }
 
   public static void method565(byte var0, int var1, int var2) {
-    try {
-      ProceduralTexture.anInt1150 = -TextureSampler37.anInt3256 + var1;
+    ProceduralTexture.anInt1150 = -TextureSampler37.anInt3256 + var1;
       if (var0 != 86) {
         AbstractObjectNode.anIntArray3607 = null;
       }
@@ -159,26 +142,16 @@ public abstract class AbstractObjectNode extends SubNode {
           -((int) (SomethingWorldMapy.aClass11_3551.anInt193 / AbstractGameWorld.aFloat727))
             + DummyClass58.anInt1460;
       }
-
-    } catch (RuntimeException var7) {
-      throw AbstractGameWorld.cascadeException(var7,
-        "gf.E(" + var0 + ',' + var1 + ',' + var2 + ')');
-    }
   }
 
   public static void method566(GameString var0, int var1, int var2) {
-    try {
-      WidgetUpdate var3 = AudioStreamEncoder3.method466(var1 + 4, 3, var2);
+    WidgetUpdate var3 = AudioStreamEncoder3.method466(var1 + 4, 3, var2);
       var3.g((byte) 33);
       if (var1 != 0) {
         AbstractObjectNode.viewportLowerZ = 112;
       }
 
       var3.text = var0;
-    } catch (RuntimeException var4) {
-      throw AbstractGameWorld.cascadeException(var4,
-        "gf.P(" + (var0 != null ? "{...}" : "null") + ',' + var1 + ',' + var2 + ')');
-    }
   }
 
 }

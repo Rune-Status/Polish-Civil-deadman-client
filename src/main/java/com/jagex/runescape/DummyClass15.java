@@ -15,8 +15,7 @@ public final class DummyClass15 {
 
   public static void method2062(int var0, int var1, int var2, int var3, int var4, int var5, int var6,
                                int var7) {
-    try {
-      int var12 =
+    int var12 =
         DummyClass59.method1040(LightIntensity.anInt902, var6, (byte) 0, DummyClass13.anInt2020);
       int var13 =
         DummyClass59.method1040(LightIntensity.anInt902, var3, (byte) 0, DummyClass13.anInt2020);
@@ -52,17 +51,10 @@ public final class DummyClass15 {
         TextureSampler18.method282(var17, var10, 111, var11, var1);
         TextureSampler18.method282(var17, var11, 109, var15, var5);
       }
-
-    } catch (RuntimeException var18) {
-      throw AbstractGameWorld.cascadeException(var18,
-        "tl.B(" + var0 + ',' + var1 + ',' + var2 + ',' + var3 + ',' + var4 + ',' + var5 + ',' + var6
-          + ',' + var7 + ')');
-    }
   }
 
   public static void method2063(int var0) {
-    try {
-      DummyClass15.aClass94_1878 = null;
+    DummyClass15.aClass94_1878 = null;
       DummyClass15.aClass93_1874 = null;
       DummyClass15.aClass94_1880 = null;
       DummyClass15.aClass94_1877 = null;
@@ -70,9 +62,6 @@ public final class DummyClass15 {
       if (var0 == 0) {
         DummyClass15.aClass94_1879 = null;
       }
-    } catch (RuntimeException var2) {
-      throw AbstractGameWorld.cascadeException(var2, "tl.A(" + var0 + ')');
-    }
   }
 
 }

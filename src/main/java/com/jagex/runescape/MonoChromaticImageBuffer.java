@@ -16,44 +16,30 @@ public final class MonoChromaticImageBuffer extends Node {
 
 
   public MonoChromaticImageBuffer(int var1, int var2 ) {
-    try {
-      this.anInt2555 = var2;
+    this.anInt2555 = var2;
       this.anInt2553 = var1;
-    } catch (RuntimeException var4) {
-      throw AbstractGameWorld.cascadeException(var4, "qi.<init>(" + var1 + ',' + var2 + ')');
-    }
   }
 
   public static void method511(byte var0) {
-    try {
-      int var1 = -59 / ((var0 - 67) / 36);
+    int var1 = -59 / ((var0 - 67) / 36);
       MonoChromaticImageBuffer.aClass3_Sub28_Sub16_2560 = null;
       MonoChromaticImageBuffer.anIntArray2559 = null;
       MonoChromaticImageBuffer.aClass94_2562 = null;
       MonoChromaticImageBuffer.aClass61_2557 = null;
       MonoChromaticImageBuffer.aClass3_Sub24_Sub2_2563 = null;
-    } catch (RuntimeException var2) {
-      throw AbstractGameWorld.cascadeException(var2, "qi.A(" + var0 + ')');
-    }
   }
 
   public static void method512(byte var0) {
-    try {
-      ObjectNode.aClass93_4043.method1524(3);
+    ObjectNode.aClass93_4043.method1524(3);
       ClientScriptCall.aClass93_2442.method1524(3);
       DummyClass14.aClass93_1964.method1524(3);
       if (var0 != -108) {
         MonoChromaticImageBuffer.aClass3_Sub24_Sub2_2563 = null;
       }
-
-    } catch (RuntimeException var2) {
-      throw AbstractGameWorld.cascadeException(var2, "qi.D(" + var0 + ')');
-    }
   }
 
   public static int method513(int var0, int var1) {
-    try {
-      int var2 = 0;
+    int var2 = 0;
       if (~var0 > -1 || ~var0 <= -65537) {
         var2 += 16;
         var0 >>>= 16;
@@ -80,23 +66,15 @@ public final class MonoChromaticImageBuffer extends Node {
       }
 
       return var0 + var2;
-    } catch (RuntimeException var3) {
-      throw AbstractGameWorld.cascadeException(var3, "qi.B(" + var0 + ',' + var1 + ')');
-    }
   }
 
   public static int method514(int var0, int var1, byte var2, int var3) {
-    try {
-      var0 &= 3;
+    var0 &= 3;
       if (var2 >= -66) {
         MonoChromaticImageBuffer.method513(-92, 76);
       }
 
       return ~var0 == -1 ? var1 : (1 == var0 ? var3 : (2 != var0 ? -var3 + 1023 : 1023 + -var1));
-    } catch (RuntimeException var5) {
-      throw AbstractGameWorld.cascadeException(var5,
-        "qi.C(" + var0 + ',' + var1 + ',' + var2 + ',' + var3 + ')');
-    }
   }
 
 }

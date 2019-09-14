@@ -16,8 +16,7 @@ public class DummyClass35 {
   public static GameString aClass94_666 = DummyClass35.aClass94_658;
 
   public static ItemConfig getItemConfig(int var0, byte var1) {
-    try {
-      ItemConfig var2 = (ItemConfig) SomethingQuickChat.aClass93_3572.get(var0);
+    ItemConfig var2 = (ItemConfig) SomethingQuickChat.aClass93_3572.get(var0);
       if (var2 == null) {
         byte[] var3 =
           TriChromaticImageCache.aClass153_1370.getBytes(StillGraphic.method1951(var0, (byte) -115),
@@ -57,14 +56,10 @@ public class DummyClass35 {
       } else {
         return var2;
       }
-    } catch (RuntimeException var4) {
-      throw AbstractGameWorld.cascadeException(var4, "fk.F(" + var0 + ',' + var1 + ')');
-    }
   }
 
   public static void method1024(int var0) {
-    try {
-      DummyClass35.aClass94_658 = null;
+    DummyClass35.aClass94_658 = null;
       DummyClass35.aClass94_667 = null;
       if (var0 != 21474) {
         DummyClass35.method1029(-65);
@@ -77,45 +72,28 @@ public class DummyClass35 {
       DummyClass35.aClass94_659 = null;
       DummyClass35.aClass94_662 = null;
       DummyClass35.aClass94_666 = null;
-    } catch (RuntimeException var2) {
-      throw AbstractGameWorld.cascadeException(var2, "fk.E(" + var0 + ')');
-    }
   }
 
   public static void method1025(byte var0) {
-    try {
-      SomethingPacket151.aClass93_2604.method1523((byte) -121);
+    SomethingPacket151.aClass93_2604.method1523((byte) -121);
       if (var0 > -51) {
         DummyClass35.method1025((byte) 86);
       }
 
       DummyClass32.aClass93_511.method1523((byte) -120);
-    } catch (RuntimeException var2) {
-      throw AbstractGameWorld.cascadeException(var2, "fk.I(" + var0 + ')');
-    }
   }
 
   public static int getChecksum(byte[] var0, int var1, boolean var2) {
-    try {
-      return var2 ? -3 : DummyClass54.method1599(0, var1, var0, (byte) -35);
-    } catch (RuntimeException var4) {
-      throw AbstractGameWorld.cascadeException(var4,
-          "fk.H(" + (var0 != null ? "{...}" : "null") + ',' + var1 + ',' + ')');
-    }
+    return var2 ? -3 : DummyClass54.method1599(0, var1, var0, (byte) -35);
   }
 
   public static void method1027(int var0, byte var1) {
-    try {
-      AbstractGameWorld.floorUnderlays.method1522(-128, var0);
+    AbstractGameWorld.floorUnderlays.method1522(-128, var0);
       int var2 = -38 % ((var1 - 29) / 40);
-    } catch (RuntimeException var3) {
-      throw AbstractGameWorld.cascadeException(var3, "fk.J(" + var0 + ',' + var1 + ')');
-    }
   }
 
   public static void method1028(int var0) {
-    try {
-      for (int var1 = -1; ~var1 > ~DummyClass13.anInt2022; ++var1) {
+    for (int var1 = -1; ~var1 > ~DummyClass13.anInt2022; ++var1) {
         int var2;
         if (0 == ~var1) {
           var2 = 2047;
@@ -132,20 +110,12 @@ public class DummyClass35 {
       if (var0 >= -3) {
         DummyClass35.aClass94_666 = null;
       }
-
-    } catch (RuntimeException var4) {
-      throw AbstractGameWorld.cascadeException(var4, "fk.G(" + var0 + ')');
-    }
   }
 
   public static void method1029(int var0) {
-    try {
-      TextureSampler12.secureBuffer.writePacket(177);
+    TextureSampler12.secureBuffer.writePacket(177);
       ++ScriptState.anInt876;
       TextureSampler12.secureBuffer.writeShort(SomethingLight0.interfaceCounter);
-    } catch (RuntimeException var2) {
-      throw AbstractGameWorld.cascadeException(var2, "fk.D(" + var0 + ')');
-    }
   }
 
 }

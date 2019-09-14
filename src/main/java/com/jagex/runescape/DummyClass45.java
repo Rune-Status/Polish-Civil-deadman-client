@@ -22,8 +22,7 @@ public final class DummyClass45 {
 
 
   public static int[] method1233(int[] var0, int var1) {
-    try {
-      if (null != var0) {
+    if (null != var0) {
         if (var1 != 2) {
           DummyClass45.anInt984 = 113;
         }
@@ -34,15 +33,10 @@ public final class DummyClass45 {
       } else {
         return null;
       }
-    } catch (RuntimeException var3) {
-      throw AbstractGameWorld.cascadeException(var3,
-          "ja.H(" + "{...}" + ',' + var1 + ')');
-    }
   }
 
   public static int method1234(int var0, int var1, int var2, int var3) {
-    try {
-      int var4 = var1 / var0;
+    int var4 = var1 / var0;
       int var6 = var2 / var0;
       int var7 = var2 & var0 - 1;
       int var5 = -1 + var0 & var1;
@@ -58,15 +52,10 @@ public final class DummyClass45 {
       } else {
         return -57;
       }
-    } catch (RuntimeException var14) {
-      throw AbstractGameWorld.cascadeException(var14,
-        "ja.G(" + var0 + ',' + var1 + ',' + var2 + ',' + var3 + ')');
-    }
   }
 
   public static void method1235(int var0, int var1, int var2, int var3, byte var4) {
-    try {
-      if (HuffmanEncoder.anInt638 == 1) {
+    if (HuffmanEncoder.anInt638 == 1) {
         DummyClass17.aClass3_Sub28_Sub16Array1825[FileRequester.anInt2958 / 100].method643(
           -8 + SceneSomething2.anInt1053, -8 + FileCacheRequest.anInt4062);
       }
@@ -81,38 +70,23 @@ public final class DummyClass45 {
       }
 
       TextureSampler10.method347(true);
-    } catch (RuntimeException var6) {
-      throw AbstractGameWorld.cascadeException(var6,
-        "ja.A(" + var0 + ',' + var1 + ',' + var2 + ',' + var3 + ',' + var4 + ')');
-    }
   }
 
   public static void setQuickchatFileUnpackers(FileUnpacker var0, FileUnpacker var1, int var2) {
-    try {
-      Cache.quickchats = var1;
+    Cache.quickchats = var1;
       if (var2 >= -94) {
         DummyClass45.aClass94_992 = null;
       }
 
       Queue.globalQuickchats = var0;
-    } catch (RuntimeException var4) {
-      throw AbstractGameWorld.cascadeException(var4,
-        "ja.F(" + (var0 != null ? "{...}" : "null") + ',' + (var1 != null ? "{...}" : "null") + ','
-          + var2 + ')');
-    }
   }
 
   public static void method1237(int var0, int var1) {
-    try {
-      GameWorld.deltaTime = var1 / var0;
-    } catch (RuntimeException var3) {
-      throw AbstractGameWorld.cascadeException(var3, "ja.D(" + var0 + ',' + var1 + ')');
-    }
+    GameWorld.deltaTime = var1 / var0;
   }
 
   public static void method1238(int var0) {
-    try {
-      DummyClass45.aClass94_992 = null;
+    DummyClass45.aClass94_992 = null;
       if (var0 < -83) {
         DummyClass45.aClass94_988 = null;
         DummyClass45.aClass61_983 = null;
@@ -122,14 +96,10 @@ public final class DummyClass45 {
         DummyClass45.configs = null;
         DummyClass45.aClass94_982 = null;
       }
-    } catch (RuntimeException var2) {
-      throw AbstractGameWorld.cascadeException(var2, "ja.B(" + var0 + ')');
-    }
   }
 
   public static void method1239(int var0, int var1, int var2, int var3, int var4, boolean var5) {
-    try {
-      if (-2 < ~var0) {
+    if (-2 < ~var0) {
         var0 = 1;
       }
 
@@ -208,15 +178,10 @@ public final class DummyClass45 {
 
       SomethingWorldMapy.anInt3564 = var2;
       DummyClass5.anInt2989 = var4;
-    } catch (RuntimeException var11) {
-      throw AbstractGameWorld.cascadeException(var11,
-        "ja.C(" + var0 + ',' + var1 + ',' + var2 + ',' + var3 + ',' + var4 + ',' + var5 + ')');
-    }
   }
 
   public static void method1240(boolean var0) {
-    try {
-      SomethingTilek.p12Font = null;
+    SomethingTilek.p12Font = null;
       SomethingTexture3.aClass3_Sub28_Sub16Array2656 = null;
       DummyClass17.aClass3_Sub28_Sub16Array1825 = null;
       TextureSampler0.aClass109Array3270 = null;
@@ -238,10 +203,6 @@ public final class DummyClass45 {
       if (var0) {
         DummyClass45.method1233(null, -51);
       }
-
-    } catch (RuntimeException var2) {
-      throw AbstractGameWorld.cascadeException(var2, "ja.E(" + ')');
-    }
   }
 
 }

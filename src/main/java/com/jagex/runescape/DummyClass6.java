@@ -12,21 +12,16 @@ public class DummyClass6 {
 
 
   public static void method2208(int var0) {
-    try {
-      DummyClass6.aClass47_2041 = null;
+    DummyClass6.aClass47_2041 = null;
       DummyClass6.anIntArray2043 = null;
       DummyClass6.COMMAND_ERROR_TEST = null;
       DummyClass6.COOKIE_PREFIX = null;
 
       DummyClass6.aClass94_2042 = null;
-    } catch (RuntimeException var2) {
-      throw AbstractGameWorld.cascadeException(var2, "wd.L(" + var0 + ')');
-    }
   }
 
   public static void method2209(byte var0, int var1, int var2) {
-    try {
-      if (var0 >= -99) {
+    if (var0 >= -99) {
         DummyClass6.method2209((byte) 57, -14, 120);
       }
 
@@ -43,10 +38,6 @@ public class DummyClass6 {
       var7 <<= low;
       TextureSampler39.updateVariable(variableId,
         var1 << low & var7 | ~var7 & LightIntensity.variables[variableId]);
-    } catch (RuntimeException var8) {
-      throw AbstractGameWorld.cascadeException(var8,
-        "wd.K(" + var0 + ',' + var1 + ',' + var2 + ')');
-    }
   }
 
 }

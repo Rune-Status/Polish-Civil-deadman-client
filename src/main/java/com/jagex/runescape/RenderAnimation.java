@@ -67,19 +67,13 @@ public final class RenderAnimation {
   public int anInt407 = -1;
 
   public void method899(int var1 ) {
-    try {
-      if (var1 <= 68) {
+    if (var1 <= 68) {
         RenderAnimation.method900(null, -23);
       }
-
-    } catch (RuntimeException var3) {
-      throw AbstractGameWorld.cascadeException(var3, "ck.B(" + var1 + ')');
-    }
   }
 
   public void method901(int var1, Buffer var2 ) {
-    try {
-      if (var1 != -1) {
+    if (var1 != -1) {
         RenderAnimation.method900(null, -18);
       }
 
@@ -91,15 +85,10 @@ public final class RenderAnimation {
 
         this.method902(var3, (byte) -106, var2);
       }
-    } catch (RuntimeException var4) {
-      throw AbstractGameWorld.cascadeException(var4,
-        "ck.H(" + var1 + ',' + (var2 != null ? "{...}" : "null") + ')');
-    }
   }
 
   private void method902(int var1, byte var2, Buffer var3) {
-    try {
-      if (var1 == 1) {
+    if (var1 == 1) {
         this.anInt368 = var3.readUnsignedShort();
         this.anInt382 = var3.readUnsignedShort();
         if (-65536 == ~this.anInt382) {
@@ -207,16 +196,10 @@ public final class RenderAnimation {
       if (var2 != -106) {
         this.method901(96, null);
       }
-
-    } catch (RuntimeException var6) {
-      throw AbstractGameWorld.cascadeException(var6,
-        "ck.E(" + var1 + ',' + var2 + ',' + (var3 != null ? "{...}" : "null") + ')');
-    }
   }
 
   public static void method896(boolean var0) {
-    try {
-      RenderAnimation.aClass94_388 = null;
+    RenderAnimation.aClass94_388 = null;
       RenderAnimation.aClass94_374 = null;
       RenderAnimation.aClass94_392 = null;
       RenderAnimation.aClass94_385 = null;
@@ -241,15 +224,11 @@ public final class RenderAnimation {
       RenderAnimation.aClass94_363 = null;
       RenderAnimation.aByteArrayArrayArray383 = null;
       RenderAnimation.aClass94_404 = null;
-    } catch (RuntimeException var2) {
-      throw AbstractGameWorld.cascadeException(var2, "ck.A(" + ')');
-    }
   }
 
   public static boolean method897(int var0, AudioStreamEncoder4 var1, FileUnpacker var2,
                                  FileUnpacker midiInstruments, FileUnpacker soundEffects) {
-    try {
-      DummyClass23.aClass153_1661 = var2;
+    DummyClass23.aClass153_1661 = var2;
       if (var0 != 17770) {
         RenderAnimation.aClass94_366 = null;
       }
@@ -258,18 +237,10 @@ public final class RenderAnimation {
       Texture.midiInstruments = midiInstruments;
       DummyClass55.aClass3_Sub24_Sub4_1421 = var1;
       return true;
-    } catch (RuntimeException var6) {
-      throw AbstractGameWorld.cascadeException(var6,
-        "ck.C(" + var0 + ',' + (var1 != null ? "{...}" : "null") + ',' + (var2 != null ?
-          "{...}" :
-          "null") + ',' + (midiInstruments != null ? "{...}" : "null") + ',' + (
-          soundEffects != null ? "{...}" : "null") + ')');
-    }
   }
 
   public static SpotAnimationConfig method898(byte var0, int var1) {
-    try {
-      SpotAnimationConfig var2 =
+    SpotAnimationConfig var2 =
         (SpotAnimationConfig) SomethingPacket151.aClass93_2604.get(var1);
       if (var2 != null) {
         return var2;
@@ -290,14 +261,10 @@ public final class RenderAnimation {
         SomethingPacket151.aClass93_2604.get((byte) -109, var2, var1);
         return var2;
       }
-    } catch (RuntimeException var4) {
-      throw AbstractGameWorld.cascadeException(var4, "ck.D(" + var0 + ',' + var1 + ')');
-    }
   }
 
   public static void method900(Mobile var0, int var1) {
-    try {
-      var0.aBoolean2810 = false;
+    var0.aBoolean2810 = false;
       AnimationSequence var2;
       if (-1 != var0.anInt2764) {
         var2 = GameClient.method45(var0.anInt2764, (byte) -20);
@@ -478,24 +445,15 @@ public final class RenderAnimation {
         }
 
       }
-    } catch (RuntimeException var5) {
-      throw AbstractGameWorld.cascadeException(var5,
-        "ck.F(" + (var0 != null ? "{...}" : "null") + ',' + var1 + ')');
-    }
   }
 
   public static GameString concat(GameString[] var0) {
-    try {
-      if (-3 >= ~var0.length) {
+    if (-3 >= ~var0.length) {
 
         return MouseRecorder.method1261(0, var0.length, var0, 2774);
       } else {
         throw new IllegalArgumentException();
       }
-    } catch (RuntimeException var3) {
-      throw AbstractGameWorld.cascadeException(var3,
-        "ck.G(" + (var0 != null ? "{...}" : "null") + ')');
-    }
   }
 
 }

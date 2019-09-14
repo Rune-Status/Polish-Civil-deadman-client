@@ -20,8 +20,7 @@ public final class SceneSomething2 {
   public int anInt1059;
 
   public static void method1284(byte var0) {
-    try {
-      if (var0 != -87) {
+    if (var0 != -87) {
         SceneSomething2.aClass94Array1046 = null;
       }
 
@@ -29,15 +28,11 @@ public final class SceneSomething2 {
       SceneSomething2.aClass94_1051 = null;
       SceneSomething2.aClass94Array1046 = null;
       SceneSomething2.aClass10_1056 = null;
-    } catch (RuntimeException var2) {
-      throw AbstractGameWorld.cascadeException(var2, "jh.A(" + var0 + ')');
-    }
   }
 
   public static void method1285(FileUnpacker var0, boolean var1, int var2, int var3, boolean var4,
                                int var5) {
-    try {
-      DummyClass55.aClass153_1423 = var0;
+    DummyClass55.aClass153_1423 = var0;
       SomethingQuickChatK.anInt154 = 1;
       TextureSampler36.anInt3423 = var5;
       DummyClass22.anInt1741 = var3;
@@ -48,17 +43,11 @@ public final class SceneSomething2 {
       }
 
       SpotAnimationConfig.anInt546 = 10000;
-    } catch (RuntimeException var7) {
-      throw AbstractGameWorld.cascadeException(var7,
-        "jh.D(" + (var0 != null ? "{...}" : "null") + ',' + var1 + ',' + var2 + ',' + var3 + ','
-          + var4 + ',' + var5 + ')');
-    }
   }
 
   public static void method1286(int var0, boolean var1, GameObjectConfig var2, int var3, NPC var4,
                                int var5, int var6, Player var7) {
-    try {
-      if (var1) {
+    if (var1) {
         SceneSomething2.windowHeight = 94;
       }
 
@@ -117,20 +106,11 @@ public final class SceneSomething2 {
         var8.anInt2328 = 128 * var7.anInt3969;
         ObjectNode.aClass130_4046.put(var7.name.toBase37(), var8);
       }
-
-    } catch (RuntimeException var11) {
-      throw AbstractGameWorld.cascadeException(var11,
-        "jh.C(" + var0 + ',' + var1 + ',' + (var2 != null ? "{...}" : "null") + ',' + var3 + ',' + (
-          var4 != null ?
-            "{...}" :
-            "null") + ',' + var5 + ',' + var6 + ',' + (var7 != null ? "{...}" : "null") + ')');
-    }
   }
 
   public static SoftwareFont method1287(int var0, int var1, FileUnpacker var2, FileUnpacker var3,
                                        int var4) {
-    try {
-      if (SomethingTexture4.loadSprites(var3, var1, var0, var4 ^ 30900)) {
+    if (SomethingTexture4.loadSprites(var3, var1, var0, var4 ^ 30900)) {
         if (var4 != -1) {
           SceneSomething2.method1284((byte) -124);
         }
@@ -139,11 +119,6 @@ public final class SceneSomething2 {
       } else {
         return null;
       }
-    } catch (RuntimeException var6) {
-      throw AbstractGameWorld.cascadeException(var6,
-        "jh.B(" + var0 + ',' + var1 + ',' + (var2 != null ? "{...}" : "null") + ',' + (
-          var3 != null ? "{...}" : "null") + ',' + var4 + ')');
-    }
   }
 
 }

@@ -29,22 +29,16 @@ public final class FileTable {
 
 
   public FileTable(byte[] var1, int var2 ) {
-    try {
-      this.checksum = DummyClass35.getChecksum(var1, var1.length, false);
+    this.checksum = DummyClass35.getChecksum(var1, var1.length, false);
       if (var2 == this.checksum) {
         this.parse(2, var1);
       } else {
         throw new RuntimeException();
       }
-    } catch (RuntimeException var4) {
-      throw AbstractGameWorld.cascadeException(var4,
-        "ii.<init>(" + (var1 != null ? "{...}" : "null") + ',' + var2 + ')');
-    }
   }
 
   private void parse(int var1, byte[] var2) {
-    try {
-      Buffer var3 = new Buffer(ClientScriptEnum.method623((byte) -114, var2));
+    Buffer var3 = new Buffer(ClientScriptEnum.method623((byte) -114, var2));
       int var4 = var3.readUnsignedByte();
       if (var4 != 5 && ~var4 != -7) {
         throw new RuntimeException();
@@ -169,28 +163,19 @@ public final class FileTable {
         }
 
       }
-    } catch (RuntimeException var14) {
-      throw AbstractGameWorld.cascadeException(var14,
-        "ii.C(" + var1 + ',' + (var2 != null ? "{...}" : "null") + ')');
-    }
   }
 
   public static void method1223(int var0) {
-    try {
-      FileTable.aClass94_951 = null;
+    FileTable.aClass94_951 = null;
       FileTable.aClass94_946 = null;
       if (var0 == 0) {
         FileTable.aClass94_948 = null;
         FileTable.aClass94_957 = null;
       }
-    } catch (RuntimeException var2) {
-      throw AbstractGameWorld.cascadeException(var2, "ii.A(" + var0 + ')');
-    }
   }
 
   public static void method1224(Widget var0, int var1, int var2, int var3) {
-    try {
-      if (0 == var0.aByte162) {
+    if (0 == var0.aByte162) {
         var0.anInt210 = var0.anInt166;
       } else {
         if (var0.aByte162 == 1) {
@@ -250,16 +235,10 @@ public final class FileTable {
       if (var1 != 23730) {
         FileTable.method1223(19);
       }
-
-    } catch (RuntimeException var5) {
-      throw AbstractGameWorld.cascadeException(var5,
-        "ii.B(" + (var0 != null ? "{...}" : "null") + ',' + var1 + ',' + var2 + ',' + var3 + ')');
-    }
   }
 
   public static void method1225(int var0) {
-    try {
-      Mouse var1 = Mouse.INSTANCE;
+    Mouse var1 = Mouse.INSTANCE;
       synchronized (var1) {
         if (var0 != 18074) {
           FileTable.aClass94_946 = null;
@@ -275,9 +254,6 @@ public final class FileTable {
         AbstractSomethingTexture.aLong1102 = Projectile.lastMousePressedTime;
         GameObject.anInt2743 = 0;
       }
-    } catch (RuntimeException var4) {
-      throw AbstractGameWorld.cascadeException(var4, "ii.D(" + var0 + ')');
-    }
   }
 
 }

@@ -27,8 +27,7 @@ public final class SomethingIndex150 {
   public int anInt2078;
 
   public static void method2255(byte var0) {
-    try {
-      SomethingIndex150.anIntArray2073 = null;
+    SomethingIndex150.anIntArray2073 = null;
       SomethingIndex150.aClass3_Sub2ArrayArrayArray2065 = null;
       SomethingIndex150.aClass94_2080 = null;
       SomethingIndex150.RECTANGLE_DEBUG_EQ = null;
@@ -37,9 +36,6 @@ public final class SomethingIndex150 {
       SomethingIndex150.aClass3_Sub28_Sub5Array2070 = null;
       SomethingIndex150.aClass3_Sub28_Sub16Array2072 = null;
       SomethingIndex150.aClass94_2074 = null;
-    } catch (RuntimeException var2) {
-      throw AbstractGameWorld.cascadeException(var2, "wh.B(" + var0 + ')');
-    }
   }
 
   public static boolean method2256(int var0, int var1, int var2, int var3) {
@@ -64,20 +60,15 @@ public final class SomethingIndex150 {
   }
 
   public static void method2257(int var0) {
-    try {
-      if (var0 < 60) {
+    if (var0 < 60) {
         SomethingIndex150.aClass3_Sub28_Sub16Array2072 = null;
       }
 
       DummyClass8.aClass93_4015.method1524(3);
-    } catch (RuntimeException var2) {
-      throw AbstractGameWorld.cascadeException(var2, "wh.F(" + var0 + ')');
-    }
   }
 
   public static void method2258(int var0, int var1, GameString var2) {
-    try {
-      GameString var3 = Objects.requireNonNull(var2.method1579(-17)).formatName((byte) -50);
+    GameString var3 = Objects.requireNonNull(var2.method1579(-17)).formatName((byte) -50);
       boolean var4 = false;
 
       for (int var5 = var1; ~var5 > ~DummyClass13.anInt2022; ++var5) {
@@ -126,16 +117,10 @@ public final class SomethingIndex150 {
         GameBuffer.printMessage(GroundItemNode.EMPTY_STRING, 0,
           RenderAnimation.concat(new GameString[] {Light.aClass94_691, var3}), -1);
       }
-
-    } catch (RuntimeException var7) {
-      throw AbstractGameWorld.cascadeException(var7,
-        "wh.D(" + var0 + ',' + var1 + ',' + (var2 != null ? "{...}" : "null") + ')');
-    }
   }
 
   public static AbstractIndexedColorSprite createIndexedColorSprite() {
-    try {
-      AbstractIndexedColorSprite var1;
+    AbstractIndexedColorSprite var1;
       if (GlRenderer.useOpenGlRenderer) {
         var1 = new GlIndexedColorSprite(SomethingVolume15.anInt2426, SomethingPacket116.anInt1748,
           Something3dRoot.anIntArray2048[0], Buffer.anIntArray2591[0], GroundItem.anIntArray2931[0],
@@ -150,20 +135,13 @@ public final class SomethingIndex150 {
       }
       DummyClass37.method1035((byte) 116);
       return var1;
-    } catch (RuntimeException var2) {
-      throw AbstractGameWorld.cascadeException(var2, "wh.A()");
-    }
   }
 
   public static void method2260(int var0, int var1) {
-    try {
-      TextureSampler25.aClass93_3412.method1522(var0 + 919, var1);
+    TextureSampler25.aClass93_3412.method1522(var0 + 919, var1);
       if (var0 == -1045) {
         TextureSampler2.aClass93_3369.method1522(-1045 ^ 1130, var1);
       }
-    } catch (RuntimeException var3) {
-      throw AbstractGameWorld.cascadeException(var3, "wh.E(" + var0 + ',' + var1 + ')');
-    }
   }
 
 }

@@ -38,20 +38,15 @@ public final class Light {
   private int anInt714;
 
   protected Light() {
-    try {
-      if (TextureSampler16.anIntArray3107 == null) {
+    if (TextureSampler16.anIntArray3107 == null) {
         DummyClass38.method1083((byte) -90);
       }
 
       this.method1064(3);
-    } catch (RuntimeException var2) {
-      throw AbstractGameWorld.cascadeException(var2, "gi.<init>()");
-    }
   }
 
   public Light(Buffer var1 ) {
-    try {
-      if (null == TextureSampler16.anIntArray3107) {
+    if (null == TextureSampler16.anIntArray3107) {
         DummyClass38.method1083((byte) -94);
       }
 
@@ -78,39 +73,24 @@ public final class Light {
       if (31 != this.anInt705) {
         this.method1064(3);
       }
-
-    } catch (RuntimeException var3) {
-      throw AbstractGameWorld.cascadeException(var3,
-        "gi.<init>(" + (var1 != null ? "{...}" : "null") + ')');
-    }
   }
 
   public void method1060(byte var1, int var2, int var3, int var4, int var5 ) {
-    try {
-      this.anInt694 = var2;
+    this.anInt694 = var2;
       this.anInt702 = var4;
       this.anInt693 = var5;
       int var6 = -4 % ((var1 - 7) / 62);
       this.anInt709 = var3;
-    } catch (RuntimeException var7) {
-      throw AbstractGameWorld.cascadeException(var7,
-        "gi.F(" + var1 + ',' + var2 + ',' + var3 + ',' + var4 + ',' + var5 + ')');
-    }
   }
 
   private void method1061(int var1) {
-    try {
-      int var2 = (this.anInt698 << 7) - -64;
+    int var2 = (this.anInt698 << 7) - -64;
       this.aFloat710 = 1.0F / (var2 * var2);
       int var3 = 9 % ((9 - var1) / 57);
-    } catch (RuntimeException var4) {
-      throw AbstractGameWorld.cascadeException(var4, "gi.C(" + var1 + ')');
-    }
   }
 
   public void method1063(boolean var1, int var2, int var3 ) {
-    try {
-      if (var3 != -3696) {
+    if (var3 != -3696) {
         Light.method1058(-127, -32, -68, -32, (byte) -77);
       }
 
@@ -144,15 +124,10 @@ public final class Light {
       this.colors[0] = (ClientScript.bitAnd(this.color, 16771365) >> 16) * var8;
       this.colors[2] = var8 * ClientScript.bitAnd(255, this.color);
       this.colors[1] = (ClientScript.bitAnd(this.color, '\uffe7') >> 8) * var8;
-    } catch (RuntimeException var7) {
-      throw AbstractGameWorld.cascadeException(var7,
-        "gi.A(" + var1 + ',' + var2 + ',' + var3 + ')');
-    }
   }
 
   private void method1064(int var1) {
-    try {
-      int var2 = this.anInt705;
+    int var2 = this.anInt705;
       if (var2 == 2) {
         this.anInt702 = 2048;
         this.anInt693 = 0;
@@ -250,45 +225,30 @@ public final class Light {
       if (var1 != 3) {
         this.anInt714 = -84;
       }
-
-    } catch (RuntimeException var3) {
-      throw AbstractGameWorld.cascadeException(var3, "gi.G(" + var1 + ')');
-    }
   }
 
   public static void method1058(int var0, int var1, int var2, int var3, byte var4) {
-    try {
-      int var5 = 25 % ((25 - var4) / 52);
+    int var5 = 25 % ((25 - var4) / 52);
       if (~(var1 + -var0) <= ~DummyClass55.anInt1425 && GlTexture2d.anInt3765 >= var0 + var1
         && var3 + -var0 >= DummyClass13.anInt2020 && LightIntensity.anInt902 >= var0 + var3) {
         IdentityKit.method949(var1, (byte) 118, var0, var2, var3);
       } else {
         GZipDecompressor.method1129(var2, var3, var0, 0, var1);
       }
-
-    } catch (RuntimeException var6) {
-      throw AbstractGameWorld.cascadeException(var6,
-        "gi.B(" + var0 + ',' + var1 + ',' + var2 + ',' + var3 + ',' + var4 + ')');
-    }
   }
 
   public static void method1059(byte var0) {
-    try {
-      Light.aClass94_695 = null;
+    Light.aClass94_695 = null;
       Light.aClass94_701 = null;
       Light.aClass94_699 = null;
       Light.aClass94_691 = null;
       if (var0 == -2) {
         Light.aClass94_700 = null;
       }
-    } catch (RuntimeException var2) {
-      throw AbstractGameWorld.cascadeException(var2, "gi.E(" + var0 + ')');
-    }
   }
 
   public static AbstractDirectColorSprite method1062(int var0) {
-    try {
-      byte[] var2 = DummyClass5.aByteArrayArray2987[0];
+    byte[] var2 = DummyClass5.aByteArrayArray2987[0];
       int var1 = GroundItem.anIntArray2931[0] * TextureSampler26.anIntArray3076[0];
       int[] var3 = new int[var1];
       if (var0 < 70) {
@@ -317,19 +277,10 @@ public final class Light {
 
       DummyClass37.method1035((byte) 111);
       return var6;
-    } catch (RuntimeException var5) {
-      throw AbstractGameWorld.cascadeException(var5, "gi.D(" + var0 + ')');
-    }
   }
 
   public static void executeScript(ClientScriptCall var1) {
-    try {
-
-      ItemConfig.callScript((byte) -93, 200000, var1);
-    } catch (RuntimeException var3) {
-      throw AbstractGameWorld.cascadeException(var3,
-        "gi.H(" + (var1 != null ? "{...}" : "null") + ')');
-    }
+    ItemConfig.callScript((byte) -93, 200000, var1);
   }
 
 }

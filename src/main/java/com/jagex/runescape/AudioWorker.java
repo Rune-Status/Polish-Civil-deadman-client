@@ -21,8 +21,7 @@ public final class AudioWorker implements Runnable {
   public volatile boolean aBoolean353;
 
   public void run() {
-    try {
-      this.aBoolean353 = true;
+    this.aBoolean353 = true;
 
       try {
         while (!this.aBoolean345) {
@@ -40,17 +39,12 @@ public final class AudioWorker implements Runnable {
       } finally {
         this.aBoolean353 = false;
       }
-
-    } catch (RuntimeException var9) {
-      throw AbstractGameWorld.cascadeException(var9, "cj.run()");
-    }
   }
 
   public static boolean method888(int var0, GameObjectConfig var1, boolean var2,
       int var3, int var4,
       int var5, int var6) {
-    try {
-      MapScene var7 = WidgetUpdate.c(var1.anInt1516, 0);
+    MapScene var7 = WidgetUpdate.c(var1.anInt1516, 0);
       if (var7.spriteId == -1) {
         return true;
       } else {
@@ -95,17 +89,10 @@ public final class AudioWorker implements Runnable {
           return true;
         }
       }
-    } catch (RuntimeException var13) {
-      throw AbstractGameWorld.cascadeException(var13,
-          "cj.D(" + var0 + ',' + (var1 != null ? "{...}" : "null") + ',' + var2
-              + ',' + var3 + ','
-              + var4 + ',' + var5 + ',' + var6 + ')');
-    }
   }
 
   public static void method889(byte var0, Buffer var1) {
-    try {
-      if (var0 != 105) {
+    if (var0 != 105) {
         AudioWorker.anIntArray347 = null;
       }
 
@@ -251,16 +238,10 @@ public final class AudioWorker implements Runnable {
           }
         }
       }
-
-    } catch (RuntimeException var26) {
-      throw AbstractGameWorld.cascadeException(var26,
-          "cj.H(" + var0 + ',' + (var1 != null ? "{...}" : "null") + ')');
-    }
   }
 
   public static Object method890(boolean var0, int var1, byte[] var2) {
-    try {
-      if (var2 == null) {
+    if (var2 == null) {
         return null;
       } else {
         if (var1 >= -67) {
@@ -280,15 +261,10 @@ public final class AudioWorker implements Runnable {
 
         return var0 ? SomethingSceneJ.method873((byte) 62, var2) : var2;
       }
-    } catch (RuntimeException var5) {
-      throw AbstractGameWorld.cascadeException(var5,
-          "cj.E(" + var0 + ',' + var1 + ',' + "{...}" + ')');
-    }
   }
 
   public static AbstractDirectColorSprite[] method891(int var0) {
-    try {
-      AbstractDirectColorSprite[] var1 = new AbstractDirectColorSprite[DummyClass53.spriteCount];
+    AbstractDirectColorSprite[] var1 = new AbstractDirectColorSprite[DummyClass53.spriteCount];
       if (var0 != -5) {
         AudioWorker.method894(113L, (byte) 48);
       }
@@ -325,14 +301,10 @@ public final class AudioWorker implements Runnable {
 
       DummyClass37.method1035((byte) 116);
       return var1;
-    } catch (RuntimeException var7) {
-      throw AbstractGameWorld.cascadeException(var7, "cj.C(" + var0 + ')');
-    }
   }
 
   public static void method892(int var0) {
-    try {
-      AudioWorker.aShortArrayArray344 = null;
+    AudioWorker.aShortArrayArray344 = null;
       AudioWorker.aClass94_343 = null;
       AudioWorker.aClass64_351 = null;
       if (var0 <= 75) {
@@ -340,9 +312,6 @@ public final class AudioWorker implements Runnable {
       }
 
       AudioWorker.anIntArray347 = null;
-    } catch (RuntimeException var2) {
-      throw AbstractGameWorld.cascadeException(var2, "cj.G(" + var0 + ')');
-    }
   }
 
   public static int method893(int var0, byte var1) {

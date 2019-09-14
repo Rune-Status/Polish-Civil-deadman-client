@@ -15,23 +15,17 @@ public final class ClanChatUser extends Node {
   public int anInt2478;
 
   public static SomethingTexture1 method384(Buffer var0, byte var1) {
-    try {
-      if (var1 <= 40) {
+    if (var1 <= 40) {
         ClanChatUser.midiInstruments = null;
       }
 
       return new SomethingTexture1(var0.method787((byte) 38), var0.method787((byte) 51),
         var0.method787((byte) 66), var0.method787((byte) 68), var0.readUnsignedMedium((byte) 86),
         var0.readUnsignedMedium((byte) 86), var0.readUnsignedByte());
-    } catch (RuntimeException var3) {
-      throw AbstractGameWorld.cascadeException(var3,
-        "kl.C(" + (var0 != null ? "{...}" : "null") + ',' + var1 + ')');
-    }
   }
 
   public static boolean method385(int var0, int var1) {
-    try {
-      int var2 = var0;
+    int var2 = var0;
       byte var3 = 0;
       int var5;
       int var6;
@@ -191,30 +185,19 @@ public final class ClanChatUser extends Node {
 
       DummyClass32.aClass3_Sub28_Sub16_Sub2_518 = null;
       return true;
-    } catch (RuntimeException var17) {
-      throw AbstractGameWorld.cascadeException(var17, "kl.B(" + var0 + ',' + var1 + ')');
-    }
   }
 
   public static void method386(int var0, int var1) {
-    try {
-      SomethingPacket151.aClass93_2604.method1522(-128, var0);
+    SomethingPacket151.aClass93_2604.method1522(-128, var0);
       if (var1 <= -109) {
         DummyClass32.aClass93_511.method1522(-126, var0);
       }
-    } catch (RuntimeException var3) {
-      throw AbstractGameWorld.cascadeException(var3, "kl.D(" + var0 + ',' + var1 + ')');
-    }
   }
 
   public static void method387(int var0) {
-    try {
-      int var1 = 41 % ((var0 - -70) / 32);
+    int var1 = 41 % ((var0 - -70) / 32);
       ClanChatUser.aClass94_2477 = null;
       ClanChatUser.midiInstruments = null;
-    } catch (RuntimeException var2) {
-      throw AbstractGameWorld.cascadeException(var2, "kl.A(" + var0 + ')');
-    }
   }
 
 }

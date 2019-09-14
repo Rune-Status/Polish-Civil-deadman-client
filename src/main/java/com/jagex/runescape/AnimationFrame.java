@@ -21,8 +21,7 @@ public final class AnimationFrame extends Node {
   public int[] anIntArray2466;
 
   public AnimationFrame(int var1, byte[] var2 ) {
-    try {
-      this.anInt2454 = var1;
+    this.anInt2454 = var1;
       Buffer var3 = new Buffer(var2);
       this.anInt2462 = var3.readUnsignedByte();
       this.anIntArrayArray2460 = new int[this.anInt2462][];
@@ -52,16 +51,10 @@ public final class AnimationFrame extends Node {
           this.anIntArrayArray2460[var4][var5] = var3.readUnsignedByte();
         }
       }
-
-    } catch (RuntimeException var6) {
-      throw AbstractGameWorld.cascadeException(var6,
-        "jm.<init>(" + var1 + ',' + (var2 != null ? "{...}" : "null") + ')');
-    }
   }
 
   public static void method380(int var0) {
-    try {
-      AnimationFrame.loadingText = null;
+    AnimationFrame.loadingText = null;
       if (var0 != -29113) {
         AnimationFrame.method381(false);
       }
@@ -69,14 +62,10 @@ public final class AnimationFrame extends Node {
       AnimationFrame.aClass94_2458 = null;
       AnimationFrame.aClass94_2465 = null;
       AnimationFrame.aClass94_2461 = null;
-    } catch (RuntimeException var2) {
-      throw AbstractGameWorld.cascadeException(var2, "jm.B(" + var0 + ')');
-    }
   }
 
   public static void method381(boolean var0) {
-    try {
-      if (0 != ~InventoryConfig.anInt3655) {
+    if (0 != ~InventoryConfig.anInt3655) {
         PlayerAppearance.method1160(-120, InventoryConfig.anInt3655);
       }
 
@@ -113,9 +102,6 @@ public final class AnimationFrame extends Node {
       }
 
       DisplayMode.loopCycle = 0;
-    } catch (RuntimeException var2) {
-      throw AbstractGameWorld.cascadeException(var2, "jm.A(" + var0 + ')');
-    }
   }
 
 }

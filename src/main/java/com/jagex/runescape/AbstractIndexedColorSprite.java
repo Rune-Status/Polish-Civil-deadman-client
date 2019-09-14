@@ -18,8 +18,7 @@ public abstract class AbstractIndexedColorSprite {
   public abstract void draw(int var1,int var2 );
 
   public static void addLast(Node first, Node second) {
-    try {
-      if (null != first.prevNode) {
+    if (null != first.prevNode) {
         first.unlinkNode();
       }
 
@@ -27,28 +26,17 @@ public abstract class AbstractIndexedColorSprite {
       first.prevNode = second.prevNode;
       first.prevNode.nextNode = first;
       first.nextNode.prevNode = first;
-    } catch (RuntimeException var4) {
-      throw AbstractGameWorld.cascadeException(var4,
-        "ok.C(" + (first != null ? "{...}" : "null") + ',' + (second != null ? "{...}" : "null")
-          + ')');
-    }
   }
 
   public static void method1663(int var0) {
-    try {
-      AbstractIndexedColorSprite.aClass94_1466 = null;
+    AbstractIndexedColorSprite.aClass94_1466 = null;
       if (var0 != 33) {
         AbstractIndexedColorSprite.anInt1463 = 15;
       }
-
-    } catch (RuntimeException var2) {
-      throw AbstractGameWorld.cascadeException(var2, "ok.D(" + var0 + ')');
-    }
   }
 
   public static Queue method1664(int var0, int var1, byte var2) {
-    try {
-      Queue var3 = new Queue();
+    Queue var3 = new Queue();
 
       for (SomethingWorldMapy var4 = (SomethingWorldMapy) DummyClass21.aClass61_1758.getFirst();
            var4 != null; var4 = (SomethingWorldMapy) DummyClass21.aClass61_1758.getNext()) {
@@ -58,16 +46,11 @@ public abstract class AbstractIndexedColorSprite {
       }
 
       return var3;
-    } catch (RuntimeException var5) {
-      throw AbstractGameWorld.cascadeException(var5,
-        "ok.B(" + var0 + ',' + var1 + ',' + var2 + ')');
-    }
   }
 
   public static void method1665(int var0, int var1, int var2, int var3, int var4, int var5,
                                int var6) {
-    try {
-      int var7 = var5 + var2;
+    int var7 = var5 + var2;
       int var8 = -var5 + var4;
       if (var0 != -19619) {
         AbstractIndexedColorSprite.method1665(-17, 11, -118, -38, 115, -2, 113);
@@ -91,12 +74,6 @@ public abstract class AbstractIndexedColorSprite {
         TextureSampler18.method282(var12, var6, -111, var9, var3);
         TextureSampler18.method282(var12, var10, -124, var1, var3);
       }
-
-    } catch (RuntimeException var13) {
-      throw AbstractGameWorld.cascadeException(var13,
-        "ok.A(" + var0 + ',' + var1 + ',' + var2 + ',' + var3 + ',' + var4 + ',' + var5 + ',' + var6
-          + ')');
-    }
   }
 
 }

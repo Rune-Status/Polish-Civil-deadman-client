@@ -16,8 +16,7 @@ public final class TextureSampler21 extends AbstractTextureSampler {
   }
 
   public int[] method154(int var1, byte var2 ) {
-    try {
-      int[] var3 = this.monoChromaticImageCache.method1709(-16409, var1);
+    int[] var3 = this.monoChromaticImageCache.method1709(-16409, var1);
       int var4 = 51 / ((30 - var2) / 36);
       if (this.monoChromaticImageCache.aBoolean1580) {
         int[] var5 = this.method152(0, var1, 32755);
@@ -37,30 +36,20 @@ public final class TextureSampler21 extends AbstractTextureSampler {
       }
 
       return var3;
-    } catch (RuntimeException var10) {
-      throw AbstractGameWorld.cascadeException(var10, "bl.D(" + var1 + ',' + var2 + ')');
-    }
   }
 
   public void parseConfig(int var1, Buffer var2, boolean var3 ) {
-    try {
-      if (var1 == 0) {
+    if (var1 == 0) {
         this.monoChromatic = var2.readUnsignedByte() == 1;
       }
 
       if (!var3) {
         this.parseConfig(118, null, true);
       }
-
-    } catch (RuntimeException var5) {
-      throw AbstractGameWorld.cascadeException(var5,
-        "bl.A(" + var1 + ',' + (var2 != null ? "{...}" : "null") + ',' + var3 + ')');
-    }
   }
 
   public int[][] method166(int var1, int var2 ) {
-    try {
-      if (var1 != -1) {
+    if (var1 != -1) {
         TextureSampler21.anInt3069 = 67;
       }
 
@@ -103,26 +92,16 @@ public final class TextureSampler21 extends AbstractTextureSampler {
       }
 
       return var3;
-    } catch (RuntimeException var19) {
-      throw AbstractGameWorld.cascadeException(var19, "bl.T(" + var1 + ',' + var2 + ')');
-    }
   }
 
   public static void method194(int var0, int var1, int var2, int var3, int var4, int var5, int var6,
                               int var7) {
-    try {
-      if (~DummyClass55.anInt1425 >= ~var7 && GlTexture2d.anInt3765 >= var6
+    if (~DummyClass55.anInt1425 >= ~var7 && GlTexture2d.anInt3765 >= var6
         && var4 >= DummyClass13.anInt2020 && var1 <= LightIntensity.anInt902) {
         TextureSampler4.method262(var3, 119, var4, var1, var2, var0, var6, var7);
       } else {
         DummyClass15.method2062(var6, var2, var5 + -4185, var1, var0, var3, var4, var7);
       }
-
-    } catch (RuntimeException var9) {
-      throw AbstractGameWorld.cascadeException(var9,
-        "bl.B(" + var0 + ',' + var1 + ',' + var2 + ',' + var3 + ',' + var4 + ',' + var5 + ',' + var6
-          + ',' + var7 + ')');
-    }
   }
 
 }

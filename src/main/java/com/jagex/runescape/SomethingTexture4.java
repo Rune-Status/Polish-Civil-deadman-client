@@ -125,22 +125,14 @@ public final class SomethingTexture4 extends AbstractSomethingTexture {
       int var7) {
     super(var5, var6, var7);
 
-    try {
-      this.anInt2672 = var2;
+    this.anInt2672 = var2;
       this.anInt2666 = var3;
       this.anInt2671 = var1;
       this.anInt2669 = var4;
-    } catch (RuntimeException var9) {
-      throw AbstractGameWorld.cascadeException(var9,
-          "ta.<init>(" + var1 + ',' + var2 + ',' + var3 + ',' + var4 + ','
-              + var5 + ',' + var6 + ','
-              + var7 + ')');
-    }
   }
 
   public void method1335(int var1, int var2, int var3) {
-    try {
-      if (var3 == 4898) {
+    if (var3 == 4898) {
         int var4 = var2 * this.anInt2671 >> 12;
         int var6 = this.anInt2672 * var1 >> 12;
         int var5 = var2 * this.anInt2666 >> 12;
@@ -149,15 +141,10 @@ public final class SomethingTexture4 extends AbstractSomethingTexture {
             this.anInt1104, var6, 4096,
             var5, var4);
       }
-    } catch (RuntimeException var8) {
-      throw AbstractGameWorld.cascadeException(var8,
-          "ta.D(" + var1 + ',' + var2 + ',' + var3 + ')');
-    }
   }
 
   public void method1337(int var1, boolean var2, int var3) {
-    try {
-      int var5 = var3 * this.anInt2666 >> 12;
+    int var5 = var3 * this.anInt2666 >> 12;
       int var7 = this.anInt2669 * var1 >> 12;
       int var4 = this.anInt2671 * var3 >> 12;
       int var6 = this.anInt2672 * var1 >> 12;
@@ -165,15 +152,10 @@ public final class SomethingTexture4 extends AbstractSomethingTexture {
         Unsure.method2072(this.anInt1104, var4, var6, var5, var7,
             this.anInt1106, -2);
       }
-    } catch (RuntimeException var8) {
-      throw AbstractGameWorld.cascadeException(var8,
-          "ta.E(" + var1 + ',' + ',' + var3 + ')');
-    }
   }
 
   public void method1341(int var1, int var2, int var3) {
-    try {
-      int var4 = this.anInt2671 * var2 >> 12;
+    int var4 = this.anInt2671 * var2 >> 12;
       int var5 = var2 * this.anInt2666 >> 12;
       int var6 = var3 * this.anInt2672 >> 12;
       int var7 = var3 * this.anInt2669 >> 12;
@@ -181,16 +163,10 @@ public final class SomethingTexture4 extends AbstractSomethingTexture {
       if (var1 != 2) {
         SomethingTexture4.aClass94_2665 = null;
       }
-
-    } catch (RuntimeException var8) {
-      throw AbstractGameWorld.cascadeException(var8,
-          "ta.A(" + var1 + ',' + var2 + ',' + var3 + ')');
-    }
   }
 
   public static void method1349() {
-    try {
-      int var1;
+    int var1;
       for (var1 = 0; OndemandRequester.anInt997 > var1; ++var1) {
         int var2 = DummyClass60.anIntArray441[var1];
         NPC var3 = TextureSampler5.npcs[var2];
@@ -325,15 +301,10 @@ public final class SomethingTexture4 extends AbstractSomethingTexture {
           var3.anInt2762 = SpotAnimationConfig.gameBuffer.readUnsignedShort();
         }
       }
-
-    } catch (RuntimeException var11) {
-      throw AbstractGameWorld.cascadeException(var11, "ta.M()");
-    }
   }
 
   public static void method1350(byte var0) {
-    try {
-      SomethingTexture4.anIntArray2664 = null;
+    SomethingTexture4.anIntArray2664 = null;
       SomethingTexture4.aClass94_2662 = null;
       SomethingTexture4.aClass94_2665 = null;
       if (var0 != 75) {
@@ -343,15 +314,11 @@ public final class SomethingTexture4 extends AbstractSomethingTexture {
       SomethingTexture4.aClass94_2667 = null;
       SomethingTexture4.PACKET_LENGTHS = null;
       SomethingTexture4.anIntArray2663 = null;
-    } catch (RuntimeException var2) {
-      throw AbstractGameWorld.cascadeException(var2, "ta.C(" + var0 + ')');
-    }
   }
 
   public static boolean loadSprites(FileUnpacker var0, int var1, int var2,
       int var3) {
-    try {
-      byte[] var4 = var0.getBytes(var2, var1);
+    byte[] var4 = var0.getBytes(var2, var1);
       if (var3 != -30901) {
         SomethingTexture4.aClass94_2662 = null;
       }
@@ -362,31 +329,19 @@ public final class SomethingTexture4 extends AbstractSomethingTexture {
       } else {
         return false;
       }
-    } catch (RuntimeException var5) {
-      throw AbstractGameWorld.cascadeException(var5,
-          "ta.N(" + (var0 != null ? "{...}" : "null") + ',' + var1 + ',' + var2
-              + ',' + var3 + ')');
-    }
   }
 
   public static void method1352(int var0, boolean var1, int var2, int var3,
       int var4) {
-    try {
-      if (MovedStatics0.method57(var3, 104)) {
+    if (MovedStatics0.method57(var3, 104)) {
         AbstractImageProducer.method2183(var2, var1, var4, 235, var0,
             SceneNode.aClass11ArrayArray1834[var3]);
       }
-    } catch (RuntimeException var6) {
-      throw AbstractGameWorld.cascadeException(var6,
-          "ta.K(" + var0 + ',' + var1 + ',' + var2 + ',' + var3 + ',' + var4
-              + ')');
-    }
   }
 
   public static void method1353(SoftwareDirectColorSprite[] var0, int var1,
       FileUnpacker var2) {
-    try {
-      TextureSampler23.worldMaps = var2;
+    TextureSampler23.worldMaps = var2;
       SceneNode.aClass3_Sub28_Sub16_Sub2Array1839 = var0;
       if (var1 == -11931) {
         AudioStreamEncoder4.aBooleanArray3503 =
@@ -404,19 +359,11 @@ public final class SomethingTexture4 extends AbstractSomethingTexture {
         }
 
       }
-    } catch (RuntimeException var6) {
-      throw AbstractGameWorld.cascadeException(var6,
-          "ta.B(" + (var0 != null ? "{...}" : "null") + ',' + var1 + ',' + (
-              var2 != null ?
-                  "{...}" :
-                  "null") + ')');
-    }
   }
 
   public static void method1354(int var0, int var1, boolean var2, int var3,
       int var4) {
-    try {
-      if (var4 >= DummyClass13.anInt2020 && var4 <= LightIntensity.anInt902) {
+    if (var4 >= DummyClass13.anInt2020 && var4 <= LightIntensity.anInt902) {
         var0 =
             DummyClass59.method1040(GlTexture2d.anInt3765, var0, (byte) 0,
                 DummyClass55.anInt1425);
@@ -429,17 +376,10 @@ public final class SomethingTexture4 extends AbstractSomethingTexture {
       if (!var2) {
         SomethingTexture4.aClass94_2665 = null;
       }
-
-    } catch (RuntimeException var6) {
-      throw AbstractGameWorld.cascadeException(var6,
-          "ta.L(" + var0 + ',' + var1 + ',' + var2 + ',' + var3 + ',' + var4
-              + ')');
-    }
   }
 
   public static void resetFrameRegulator() {
-    try {
-      Inventory.frameRateRegulator.reset(-124);
+    Inventory.frameRateRegulator.reset(-124);
       int var1;
       for (var1 = 0; var1 < 32; ++var1) {
         DummyClass5.drawMemory[var1] = 0L;
@@ -448,9 +388,6 @@ public final class SomethingTexture4 extends AbstractSomethingTexture {
         DummyClass21.updateMemory[var1] = 0L;
       }
       SomethingPacket116.cycles = 0;
-    } catch (RuntimeException var2) {
-      throw AbstractGameWorld.cascadeException(var2, "ta.O()");
-    }
   }
 
 }

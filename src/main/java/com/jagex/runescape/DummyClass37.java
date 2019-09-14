@@ -12,8 +12,7 @@ public final class DummyClass37 {
 
 
   public static void parseSceneRebuild(boolean var1) {
-    try {
-      StringNode.dynamicScene = var1;
+    StringNode.dynamicScene = var1;
       int var2;
       int count;
       int var4;
@@ -228,27 +227,18 @@ public final class DummyClass37 {
         FileCacheRequester
             .rebuildScene(var4, var6, var5, var7, false, var2, true);
       }
-
-    } catch (RuntimeException var17) {
-      throw AbstractGameWorld.cascadeException(var17, "g.F(" + var1 + ')');
-    }
   }
 
   public static void method1034(int var0) {
-    try {
-      if (var0 != 8642) {
+    if (var0 != 8642) {
         DummyClass37.aClass94_669 = null;
       }
 
       DummyClass37.aClass94_669 = null;
-    } catch (RuntimeException var2) {
-      throw AbstractGameWorld.cascadeException(var2, "g.B(" + var0 + ')');
-    }
   }
 
   public static void method1035(byte var0) {
-    try {
-      GroundItem.anIntArray2931 = null;
+    GroundItem.anIntArray2931 = null;
       Buffer.anIntArray2591 = null;
       if (var0 <= 103) {
         DummyClass37.method1037(46, 44, 46);
@@ -258,14 +248,10 @@ public final class DummyClass37 {
       DummyClass5.aByteArrayArray2987 = null;
       Something3dRoot.anIntArray2048 = null;
       TextureSampler38.anIntArray3446 = null;
-    } catch (RuntimeException var2) {
-      throw AbstractGameWorld.cascadeException(var2, "g.E(" + var0 + ')');
-    }
   }
 
   public static void method1036(int var0) {
-    try {
-      BlockConfig var1 = new BlockConfig();
+    BlockConfig var1 = new BlockConfig();
       if (var0 <= 101) {
         DummyClass37.method1039(22, null);
       }
@@ -275,10 +261,6 @@ public final class DummyClass37 {
           DummyClass27.blockConfigs[var2][var3] = var1;
         }
       }
-
-    } catch (RuntimeException var4) {
-      throw AbstractGameWorld.cascadeException(var4, "g.D(" + var0 + ')');
-    }
   }
 
   public static SomethingSceneI method1037(int var0, int var1, int var2) {
@@ -293,8 +275,7 @@ public final class DummyClass37 {
   }
 
   public static void parseEntityUpdate(byte var0) {
-    try {
-      int var1;
+    int var1;
       int var2;
       int var3;
       int var4;
@@ -685,14 +666,10 @@ public final class DummyClass37 {
             var2, var8);
         }
       }
-    } catch (RuntimeException var23) {
-      throw AbstractGameWorld.cascadeException(var23, "g.G(" + var0 + ')');
-    }
   }
 
   public static void method1039(int var0, FileUnpacker var1) {
-    try {
-      HintMarker.p11FontFileId = var1.getFileId(StillGraphic.FONT_P11);
+    HintMarker.p11FontFileId = var1.getFileId(StillGraphic.FONT_P11);
       SomethingTexture1.p12FontFileId = var1.getFileId(GameWorldSomething.FONT_P12);
       TextureSampler1.b12FontFileId = var1.getFileId(TextureSampler1.FONT_B12);
       FloorOverlay.anInt2104 = var1.getFileId(FileRequester.aClass94_2959);
@@ -714,10 +691,6 @@ public final class DummyClass37 {
       DummyClass38.floorShadowsFileId = var1.getFileId(StillGraphic.FLOOR_SHADOWS);
       ObjectCache.anInt1325 = var1.getFileId(FloorOverlay.aClass94_2089);
       IntegerNode.anInt2471 = var1.getFileId(EnumStringFetcher.aClass94_2164);
-    } catch (RuntimeException var3) {
-      throw AbstractGameWorld.cascadeException(var3,
-        "g.C(" + var0 + ',' + (var1 != null ? "{...}" : "null") + ')');
-    }
   }
 
 }

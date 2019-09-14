@@ -10,8 +10,7 @@ public final class Inventory extends Node {
   public int[] counts = {0};
 
   public static void method509(int var0, int var1) {
-    try {
-      --TextureSampler25.amountContextActions;
+    --TextureSampler25.amountContextActions;
       if (TextureSampler25.amountContextActions != var1) {
         ArrayUtils.copy(GroundItem.aClass94Array2935, var1 + 1, GroundItem.aClass94Array2935, var1,
           -var1 + TextureSampler25.amountContextActions);
@@ -29,23 +28,16 @@ public final class Inventory extends Node {
         ArrayUtils.method1358(DummyClass32.anIntArray512, 1 + var1, DummyClass32.anIntArray512,
           var1, TextureSampler25.amountContextActions + -var1);
       }
-    } catch (RuntimeException var3) {
-      throw AbstractGameWorld.cascadeException(var3, "qe.A(" + var0 + ',' + var1 + ')');
-    }
   }
 
   public static void method510(int var0) {
-    try {
-      if (var0 > -73) {
+    if (var0 > -73) {
         Inventory.method510(-59);
       }
 
       Inventory.frameRateRegulator = null;
       Inventory.aShortArray2548 = null;
       Inventory.anIntArray2550 = null;
-    } catch (RuntimeException var2) {
-      throw AbstractGameWorld.cascadeException(var2, "qe.B(" + var0 + ')');
-    }
   }
 
 }

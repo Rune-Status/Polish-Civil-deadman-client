@@ -23,8 +23,7 @@ public final class FloorOverlay {
   public int anInt2103;
 
   public void method2274(int var1, Buffer var2, int var3 ) {
-    try {
-      while (true) {
+    while (true) {
         int var4 = var2.readUnsignedByte();
         if (var4 == 0) {
           if (var1 != 24559) {
@@ -36,15 +35,10 @@ public final class FloorOverlay {
 
         this.method2279(0, var4, var2, var3);
       }
-    } catch (RuntimeException var5) {
-      throw AbstractGameWorld.cascadeException(var5,
-        "wl.H(" + var1 + ',' + (var2 != null ? "{...}" : "null") + ',' + var3 + ')');
-    }
   }
 
   private void method2279(int var1, int var2, Buffer var3, int var4) {
-    try {
-      if (var1 == 0) {
+    if (var1 == 0) {
         if (-2 == ~var2) {
           this.anInt2103 = Widget
               .method869(116, var3.readUnsignedMedium((byte) 83));
@@ -100,15 +94,10 @@ public final class FloorOverlay {
         }
 
       }
-    } catch (RuntimeException var6) {
-      throw AbstractGameWorld.cascadeException(var6,
-        "wl.E(" + var1 + ',' + var2 + ',' + (var3 != null ? "{...}" : "null") + ',' + var4 + ')');
-    }
   }
 
   public static void method2270(Mobile var0, byte var1) {
-    try {
-      if (AbstractGameWorld.updateCycle == var0.anInt2790 || ~var0.animationId == 0
+    if (AbstractGameWorld.updateCycle == var0.anInt2790 || ~var0.animationId == 0
         || var0.anInt2828 != 0 || ~(1 + var0.anInt2760) < ~GameClient.method45(var0.animationId,
         (byte) -20).anIntArray1869[var0.anInt2832]) {
         int var2 = var0.anInt2790 + -var0.anInt2800;
@@ -141,15 +130,10 @@ public final class FloorOverlay {
 
         var0.rotationY = var0.anInt2806;
       }
-    } catch (RuntimeException var8) {
-      throw AbstractGameWorld.cascadeException(var8,
-        "wl.K(" + (var0 != null ? "{...}" : "null") + ',' + var1 + ')');
-    }
   }
 
   public static void method2271(int var0, int var1, int var2, int var3) {
-    try {
-      if (var2 != 1) {
+    if (var2 != 1) {
         FloorOverlay.method2273(null, 43);
       }
 
@@ -157,16 +141,11 @@ public final class FloorOverlay {
       var4.g((byte) 33);
       var4.anInt3597 = var3;
       var4.anInt3598 = var0;
-    } catch (RuntimeException var5) {
-      throw AbstractGameWorld.cascadeException(var5,
-        "wl.F(" + var0 + ',' + var1 + ',' + var2 + ',' + var3 + ')');
-    }
   }
 
   public static void method2272(int[] var0, int var1, int var2, int var3, int var4, int var5,
                                int var6, int var7, int var8, boolean var9, byte var10) {
-    try {
-      int var11 = var2;
+    int var11 = var2;
       if (~DummyClass47.anInt1096 < ~var2) {
         if (~var2 > ~DummyClass47.anInt1093) {
           var11 = DummyClass47.anInt1093;
@@ -799,17 +778,10 @@ public final class FloorOverlay {
           }
         }
       }
-    } catch (RuntimeException var23) {
-      throw AbstractGameWorld.cascadeException(var23,
-          "wl.C(" + "null" + ',' + var1 + ',' + var2 + ',' + var3 + ',' + var4
-              + ',' + var5 + ',' + var6 + ',' + var7 + ',' + var8 + ',' + var9
-              + ',' + var10 + ')');
-    }
   }
 
   public static Widget method2273(Widget var0, int var1) {
-    try {
-      if (var1 < 57) {
+    if (var1 < 57) {
         FloorOverlay.method2273(null, -22);
       }
 
@@ -828,16 +800,11 @@ public final class FloorOverlay {
       } else {
         return EnumStringFetcher.getWidget((byte) 118, var0.anInt190);
       }
-    } catch (RuntimeException var5) {
-      throw AbstractGameWorld.cascadeException(var5,
-        "wl.J(" + (var0 != null ? "{...}" : "null") + ',' + var1 + ')');
-    }
   }
 
   public static void method2275(int var0, byte var1, int var2, int var3, int var4, int var5,
                                int var6) {
-    try {
-      if (var1 <= 68) {
+    if (var1 <= 68) {
         FloorOverlay.method2273(null, 38);
       }
 
@@ -980,30 +947,19 @@ public final class FloorOverlay {
           }
         }
       }
-
-    } catch (RuntimeException var23) {
-      throw AbstractGameWorld.cascadeException(var23,
-        "wl.I(" + var0 + ',' + var1 + ',' + var2 + ',' + var3 + ',' + var4 + ',' + var5 + ',' + var6
-          + ')');
-    }
   }
 
   public static void method2276(int var0) {
-    try {
-      FloorOverlay.aClass3_Sub28_Sub17_2096 = null;
+    FloorOverlay.aClass3_Sub28_Sub17_2096 = null;
       if (var0 == -2) {
         FloorOverlay.aClass94_2089 = null;
         FloorOverlay.fileUnpacker16 = null;
         FloorOverlay.aClass11_2091 = null;
       }
-    } catch (RuntimeException var2) {
-      throw AbstractGameWorld.cascadeException(var2, "wl.G(" + var0 + ')');
-    }
   }
 
   public static void method2277(int var0, int var1, int var2, int var3, byte var4) {
-    try {
-      Inventory var5 = (Inventory) SceneGraphTile.aClass130_2220.get(var3);
+    Inventory var5 = (Inventory) SceneGraphTile.aClass130_2220.get(var3);
       if (var5 == null) {
         var5 = new Inventory();
         SceneGraphTile.aClass130_2220.put(var3, var5);
@@ -1032,15 +988,10 @@ public final class FloorOverlay {
         var5.ids[var1] = var0;
         var5.counts[var1] = var2;
       }
-    } catch (RuntimeException var9) {
-      throw AbstractGameWorld.cascadeException(var9,
-        "wl.A(" + var0 + ',' + var1 + ',' + var2 + ',' + var3 + ',' + var4 + ')');
-    }
   }
 
   public static void method2278(int var0) {
-    try {
-      boolean var1 = false;
+    boolean var1 = false;
 
       while (!var1) {
         var1 = true;
@@ -1078,23 +1029,15 @@ public final class FloorOverlay {
       if (var0 <= 103) {
         FloorOverlay.aClass94_2089 = null;
       }
-
-    } catch (RuntimeException var9) {
-      throw AbstractGameWorld.cascadeException(var9, "wl.D(" + var0 + ')');
-    }
   }
 
   public static void method2280(int var0, int var1) {
-    try {
-      if (var0 != 2714) {
+    if (var0 != 2714) {
         FloorOverlay.method2277(-80, -123, -59, 60, (byte) 40);
       }
 
       WidgetUpdate var2 = AudioStreamEncoder3.method466(4, 11, var1);
       var2.createIndexedColorSprite(true);
-    } catch (RuntimeException var3) {
-      throw AbstractGameWorld.cascadeException(var3, "wl.B(" + var0 + ',' + var1 + ')');
-    }
   }
 
 }

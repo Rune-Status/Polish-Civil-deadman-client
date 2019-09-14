@@ -22,21 +22,16 @@ public final class OndemandFileRequest extends AbstractFileRequest {
   public Buffer buffer;
 
   public int method586(boolean var1) {
-    try {
-      return var1 ?
+    return var1 ?
           92 :
           (this.buffer == null ?
               0 :
               this.buffer.position * 100 / (-this.aByte4064
                   + this.buffer.bytes.length));
-    } catch (RuntimeException var3) {
-      throw AbstractGameWorld.cascadeException(var3, "pm.A(" + ')');
-    }
   }
 
   public byte[] method587(boolean var1) {
-    try {
-      if (!this.aBoolean3632 && ~this.buffer.position <= ~(-this.aByte4064
+    if (!this.aBoolean3632 && ~this.buffer.position <= ~(-this.aByte4064
           + this.buffer.bytes.length)) {
         if (var1) {
           this.method586(false);
@@ -46,14 +41,10 @@ public final class OndemandFileRequest extends AbstractFileRequest {
       } else {
         throw new RuntimeException();
       }
-    } catch (RuntimeException var3) {
-      throw AbstractGameWorld.cascadeException(var3, "pm.E(" + var1 + ')');
-    }
   }
 
   public static DisplayMode[] method596(int var0, SignLink var1) {
-    try {
-      if (var1.method1432(false)) {
+    if (var1.method1432(false)) {
         SignLinkRequest var2 = var1.method1453((byte) 8);
 
         while (0 == var2.status) {
@@ -84,29 +75,20 @@ public final class OndemandFileRequest extends AbstractFileRequest {
       } else {
         return new DisplayMode[0];
       }
-    } catch (RuntimeException var7) {
-      throw AbstractGameWorld.cascadeException(var7,
-          "pm.P(" + var0 + ',' + (var1 != null ? "{...}" : "null") + ')');
-    }
   }
 
   public static void method597(byte var0) {
-    try {
-      OndemandFileRequest.aClass94_4072 = null;
+    OndemandFileRequest.aClass94_4072 = null;
       OndemandFileRequest.tiles = null;
       OndemandFileRequest.aClass94_4066 = null;
 
       OndemandFileRequest.aClass94_4071 = null;
-    } catch (RuntimeException var2) {
-      throw AbstractGameWorld.cascadeException(var2, "pm.O(" + var0 + ')');
-    }
   }
 
   public static void setWindowMode(boolean replaceCanvas, int var1,
       boolean var2, int var3,
       boolean var4, int var5, int var6) {
-    try {
-      if (var2) {
+    if (var2) {
         GlRenderer.releaseGlResources();
       }
 
@@ -319,12 +301,6 @@ public final class OndemandFileRequest extends AbstractFileRequest {
           TextureSampler30.aBoolean3116 = true;
         }
       }
-    } catch (RuntimeException var10) {
-      throw AbstractGameWorld.cascadeException(var10,
-          "pm.F(" + replaceCanvas + ',' + var1 + ',' + var2 + ',' + var3 + ','
-              + var4 + ',' + var5
-              + ',' + var6 + ')');
-    }
   }
 
 }

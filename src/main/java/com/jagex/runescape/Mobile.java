@@ -96,33 +96,24 @@ public abstract class Mobile extends SceneNode {
   private int anInt2834;
 
   public final RenderAnimation getRenderAnimationId(boolean var1) {
-    try {
-      int var2 = this.getRenderAnimationId();
+    int var2 = this.getRenderAnimationId();
       return var1 ?
         null :
         (0 == ~var2 ?
           DummyClass18.DEFAULT_RENDER_ANIMATION :
           StringNode0.getRenderAnimation(false, var2));
-    } catch (RuntimeException var3) {
-      throw AbstractGameWorld.cascadeException(var3, "fe.D(" + var1 + ')');
-    }
   }
 
   public boolean hasConfiguration(byte var1 ) {
-    try {
-      if (var1 != 17) {
+    if (var1 != 17) {
         this.method1975(-109);
       }
 
       return false;
-    } catch (RuntimeException var3) {
-      throw AbstractGameWorld.cascadeException(var3, "fe.L(" + var1 + ')');
-    }
   }
 
   public final void setPosition(int size, int x, int y, boolean var5) {
-    try {
-      if (~this.animationId != 0 && -2 == ~GameClient.method45(this.animationId,
+    if (~this.animationId != 0 && -2 == ~GameClient.method45(this.animationId,
         (byte) -20).anInt1850) {
         this.animationId = -1;
       }
@@ -158,16 +149,10 @@ public abstract class Mobile extends SceneNode {
       if (GlRenderer.useOpenGlRenderer && TextureCache.localPlayer == this) {
         TextureSampler31.method236((byte) 64);
       }
-
-    } catch (RuntimeException var9) {
-      throw AbstractGameWorld.cascadeException(var9,
-        "fe.J(" + size + ',' + x + ',' + y + ',' + var5 + ')');
-    }
   }
 
   public final void method1968(int var1, byte var2, int var3) {
-    try {
-      int var4 = this.waypointsX[0];
+    int var4 = this.waypointsX[0];
       int var5 = this.waypointsY[0];
       if (0 == var3) {
         --var4;
@@ -225,15 +210,10 @@ public abstract class Mobile extends SceneNode {
       this.waypointsX[0] = var4;
       var6 = -106 / ((var2 - -10) / 40);
       this.waypointsY[0] = var5;
-    } catch (RuntimeException var7) {
-      throw AbstractGameWorld.cascadeException(var7,
-        "fe.E(" + var1 + ',' + var2 + ',' + var3 + ')');
-    }
   }
 
   public final void method1969(byte var1, AbstractModel var2, int var3) {
-    try {
-      if (var1 <= 33) {
+    if (var1 <= 33) {
         this.method1971(null, (byte) -26);
       }
 
@@ -302,16 +282,10 @@ public abstract class Mobile extends SceneNode {
           var2.method1897(0, TextureSampler16.anInt3111, 0);
         }
       }
-
-    } catch (RuntimeException var33) {
-      throw AbstractGameWorld.cascadeException(var33,
-        "fe.M(" + var1 + ',' + (var2 != null ? "{...}" : "null") + ',' + var3 + ')');
-    }
   }
 
   public final void method1970(int var1, int var2, int var3, int var4) {
-    try {
-      if (var2 == -8) {
+    if (var2 == -8) {
         for (int var5 = 0; -5 < ~var5; ++var5) {
           if (var3 >= this.anIntArray2768[var5]) {
             this.anIntArray2836[var5] = var4;
@@ -322,15 +296,10 @@ public abstract class Mobile extends SceneNode {
         }
 
       }
-    } catch (RuntimeException var6) {
-      throw AbstractGameWorld.cascadeException(var6,
-        "fe.G(" + var1 + ',' + var2 + ',' + var3 + ',' + var4 + ')');
-    }
   }
 
   public final void method1971(AbstractModel var1, byte var2) {
-    try {
-      if (var2 > -102) {
+    if (var2 > -102) {
         this.method1976(1, -96);
       }
 
@@ -550,57 +519,34 @@ public abstract class Mobile extends SceneNode {
           var1.method1897(0, var7, 0);
         }
       }
-
-    } catch (RuntimeException var10) {
-      throw AbstractGameWorld.cascadeException(var10,
-        "fe.A(" + (var1 != null ? "{...}" : "null") + ',' + var2 + ')');
-    }
   }
 
   public abstract int getRenderAnimationId();
 
   public final void method1973(int var1) {
-    try {
-      if (var1 < -75) {
+    if (var1 < -75) {
         this.anInt2816 = 0;
         this.anInt2811 = 0;
       }
-    } catch (RuntimeException var3) {
-      throw AbstractGameWorld.cascadeException(var3, "fe.I(" + var1 + ')');
-    }
   }
 
   public final int method1975(int var1) {
-    try {
-      return var1 != 27855 ? 107 : (this.anInt2820 != -32768 ? -this.anInt2820 : 200);
-    } catch (RuntimeException var3) {
-      throw AbstractGameWorld.cascadeException(var3, "fe.F(" + var1 + ')');
-    }
+    return var1 != 27855 ? 107 : (this.anInt2820 != -32768 ? -this.anInt2820 : 200);
   }
 
   public final void method1976(int var1, int var2) {
-    try {
-      this.size = var1;
+    this.size = var1;
       if (var2 != 2) {
         this.aBoolean2807 = false;
       }
-
-    } catch (RuntimeException var4) {
-      throw AbstractGameWorld.cascadeException(var4, "fe.C(" + var1 + ',' + var2 + ')');
-    }
   }
 
   public int getSize() {
-    try {
-      return this.size;
-    } catch (RuntimeException var3) {
-      throw AbstractGameWorld.cascadeException(var3, "fe.H()");
-    }
+    return this.size;
   }
 
   public static void method1974(byte var0) {
-    try {
-      if (var0 > -101) {
+    if (var0 > -101) {
         Mobile.aClass3_Sub28_Sub16Array2839 = null;
       }
 
@@ -609,9 +555,6 @@ public abstract class Mobile extends SceneNode {
       Mobile.aClass93_2792 = null;
       Mobile.aClass3_Sub28_Sub16Array2839 = null;
       Mobile.quady1 = null;
-    } catch (RuntimeException var2) {
-      throw AbstractGameWorld.cascadeException(var2, "fe.K(" + var0 + ')');
-    }
   }
 
 }

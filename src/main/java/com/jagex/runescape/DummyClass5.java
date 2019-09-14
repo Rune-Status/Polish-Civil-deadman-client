@@ -34,10 +34,10 @@ public class DummyClass5 extends DummyClass6 {
               SomethingVolume15.gameSocket
                   .write(TextureSampler12.secureBuffer.bytes, 0,
                       TextureSampler12.secureBuffer.position);
-              TextureSampler12.secureBuffer.position = 0;
-            } catch (IOException var3) {
-              GlTexture2d.aBoolean3769 = true;
+            } catch (IOException e) {
+              e.printStackTrace();
             }
+            TextureSampler12.secureBuffer.position = 0;
 
             ++SomethingQuickChat.anInt3569;
           }
@@ -49,8 +49,7 @@ public class DummyClass5 extends DummyClass6 {
   }
 
   public static void method2211(int var0) {
-    try {
-      if (var0 == -48) {
+    if (var0 == -48) {
         if (null == MouseRecorder.aClass11_1017) {
           if (null == DummyClass42.aClass11_886) {
             int var1 = Structure.anInt3644;
@@ -173,14 +172,10 @@ public class DummyClass5 extends DummyClass6 {
           }
         }
       }
-    } catch (RuntimeException var10) {
-      throw AbstractGameWorld.cascadeException(var10, "ah.A(" + var0 + ')');
-    }
   }
 
   public static void method2212(boolean var0) {
-    try {
-      DummyClass5.anIntArray2985 = null;
+    DummyClass5.anIntArray2985 = null;
       DummyClass5.aClass94_2988 = null;
       DummyClass5.aClass93_2984 = null;
       DummyClass5.aClass61_2990 = null;
@@ -193,9 +188,6 @@ public class DummyClass5 extends DummyClass6 {
       DummyClass5.aByteArrayArray2987 = null;
       DummyClass5.aClass94_2995 = null;
       DummyClass5.aClass94_2991 = null;
-    } catch (RuntimeException var2) {
-      throw AbstractGameWorld.cascadeException(var2, "ah.C(" + ')');
-    }
   }
 
 }

@@ -13,8 +13,7 @@ public final class TextureSampler22 extends AbstractTextureSampler {
   }
 
   public int[] method154(int var1, byte var2 ) {
-    try {
-      int[] var3 = this.monoChromaticImageCache.method1709(-16409, var1);
+    int[] var3 = this.monoChromaticImageCache.method1709(-16409, var1);
       if (this.monoChromaticImageCache.aBoolean1580) {
         int[] var4 = this.method152(0, var1, 32755);
 
@@ -25,28 +24,19 @@ public final class TextureSampler22 extends AbstractTextureSampler {
 
       int var7 = 59 % ((30 - var2) / 36);
       return var3;
-    } catch (RuntimeException var6) {
-      throw AbstractGameWorld.cascadeException(var6, "tb.D(" + var1 + ',' + var2 + ')');
-    }
   }
 
   public void parseConfig(int var1, Buffer var2, boolean var3 ) {
-    try {
-      if (var3) {
+    if (var3) {
         if (var1 == 0) {
           this.monoChromatic = -2 == ~var2.readUnsignedByte();
         }
 
       }
-    } catch (RuntimeException var5) {
-      throw AbstractGameWorld.cascadeException(var5,
-          "tb.A(" + var1 + ',' + (var2 != null ? "{...}" : "null") + ',' + ')');
-    }
   }
 
   public int[][] method166(int var1, int var2 ) {
-    try {
-      if (var1 == -1) {
+    if (var1 == -1) {
         int[][] var3 = this.triChromaticImageCache
             .method1594((byte) -128, var2);
         if (this.triChromaticImageCache.aBoolean1379) {
@@ -70,14 +60,10 @@ public final class TextureSampler22 extends AbstractTextureSampler {
       } else {
         return null;
       }
-    } catch (RuntimeException var12) {
-      throw AbstractGameWorld.cascadeException(var12, "tb.T(" + var1 + ',' + var2 + ')');
-    }
   }
 
   public static int method335(int var0) {
-    try {
-      if (var0 != 16859) {
+    if (var0 != 16859) {
         TextureSampler22.aClass131_3421 = null;
       }
 
@@ -85,14 +71,10 @@ public final class TextureSampler22 extends AbstractTextureSampler {
         && 2 < TextureSampler25.amountContextActions ?
         MonoChromaticImageCache.anIntArray1578[-2 + TextureSampler25.amountContextActions] :
         MonoChromaticImageCache.anIntArray1578[TextureSampler25.amountContextActions - 1];
-    } catch (RuntimeException var2) {
-      throw AbstractGameWorld.cascadeException(var2, "tb.C(" + var0 + ')');
-    }
   }
 
   public static SomethingQuickChat2 method336(int var0, byte var1) {
-    try {
-      SomethingQuickChat2 var2 =
+    SomethingQuickChat2 var2 =
         (SomethingQuickChat2) TextureSampler1.aClass47_3137.get(var0, 1400);
       if (null != var2) {
         return var2;
@@ -120,22 +102,15 @@ public final class TextureSampler22 extends AbstractTextureSampler {
         TextureSampler1.aClass47_3137.put(var0, var2);
         return var2;
       }
-    } catch (RuntimeException var4) {
-      throw AbstractGameWorld.cascadeException(var4, "tb.B(" + var0 + ',' + var1 + ')');
-    }
   }
 
   public static void method337(int var0) {
-    try {
-      TextureSampler22.aClass94_3418 = null;
+    TextureSampler22.aClass94_3418 = null;
       if (var0 != 2) {
         TextureSampler22.anInt3419 = -53;
       }
 
       TextureSampler22.aClass131_3421 = null;
-    } catch (RuntimeException var2) {
-      throw AbstractGameWorld.cascadeException(var2, "tb.E(" + var0 + ')');
-    }
   }
 
 }

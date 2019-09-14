@@ -20,8 +20,7 @@ public final class SomethingScene {
 
 
   public static Structure method1292(byte var0, int var1) {
-    try {
-      Structure var2 = (Structure) TextureSampler25.aClass47_3407.get(var1, 1400);
+    Structure var2 = (Structure) TextureSampler25.aClass47_3407.get(var1, 1400);
       if (var2 != null) {
         return var2;
       } else {
@@ -38,22 +37,15 @@ public final class SomethingScene {
         TextureSampler25.aClass47_3407.put(var1, var2);
         return var2;
       }
-    } catch (RuntimeException var4) {
-      throw AbstractGameWorld.cascadeException(var4, "jj.D(" + var0 + ',' + var1 + ')');
-    }
   }
 
   public static void method1293(boolean var0) {
-    try {
-      if (!ProjectileNode.aBoolean3779 && ~AbstractGameWorld.usageLocation != -3) {
+    if (!ProjectileNode.aBoolean3779 && ~AbstractGameWorld.usageLocation != -3) {
           DummyInputStream.aClass94_38.method1577(-1857);
           if (!var0) {
             SomethingScene.toString(1);
           }
       }
-    } catch (RuntimeException var3) {
-      throw AbstractGameWorld.cascadeException(var3, "jj.G(" + var0 + ')');
-    }
   }
 
   public static void method1294() {
@@ -225,8 +217,7 @@ public final class SomethingScene {
   }
 
   public static GameString method1295(int var0, byte var1, int var2) {
-    try {
-      int var3 = -var0 + var2;
+    int var3 = -var0 + var2;
       return 8 >= ~var3 ?
         (5 >= ~var3 ?
           (~var3 <= 2 ?
@@ -244,27 +235,18 @@ public final class SomethingScene {
             HashTable.aClass94_1714) :
           DummyClass4.aClass94_3006) :
         TextureSampler5.aClass94_3298;
-    } catch (RuntimeException var4) {
-      throw AbstractGameWorld.cascadeException(var4,
-        "jj.E(" + var0 + ',' + var1 + ',' + var2 + ')');
-    }
   }
 
   public static void method1296(int var0) {
-    try {
-      SomethingScene.aClass94_1076 = null;
+    SomethingScene.aClass94_1076 = null;
       if (var0 == 1) {
         SomethingScene.aClass94_1072 = null;
         SomethingScene.aClass94_1070 = null;
       }
-    } catch (RuntimeException var2) {
-      throw AbstractGameWorld.cascadeException(var2, "jj.F(" + var0 + ')');
-    }
   }
 
   public static float[] method1297(byte var0) {
-    try {
-      float var1 = GlEnvironment.method1514() + GlEnvironment.method1505();
+    float var1 = GlEnvironment.method1514() + GlEnvironment.method1505();
       int var2 = GlEnvironment.method1510();
       float var3 = (255 & var2 >> 16) / 255.0F;
       Mouse.aFloatArray1919[3] = 1.0F;
@@ -282,17 +264,10 @@ public final class SomethingScene {
       } else {
         return null;
       }
-    } catch (RuntimeException var7) {
-      throw AbstractGameWorld.cascadeException(var7, "jj.A(" + var0 + ')');
-    }
   }
 
   public static GameString toString(int var1) {
-    try {
-      return AbstractObjectNodeWrapper.method1723((byte) -117, false, 10, var1);
-    } catch (RuntimeException var3) {
-      throw AbstractGameWorld.cascadeException(var3, "jj.C(" + var1 + ')');
-    }
+    return AbstractObjectNodeWrapper.method1723((byte) -117, false, 10, var1);
   }
 
 }

@@ -35,22 +35,17 @@ public final class SceneSomething {
   public long aLong498;
 
   public static void method953(int var0, int var1) {
-    try {
-      MonoChromaticImageCache.aClass93_1569.method1522(var0 ^ 13501, var1);
+    MonoChromaticImageCache.aClass93_1569.method1522(var0 ^ 13501, var1);
       if (var0 != -13508) {
         SceneSomething.aClass94_485 = null;
       }
 
       SomethingVolume15.aClass93_2428.method1522(-126, var1);
       Cache.aClass93_743.method1522(-126, var1);
-    } catch (RuntimeException var3) {
-      throw AbstractGameWorld.cascadeException(var3, "ec.D(" + var0 + ',' + var1 + ')');
-    }
   }
 
   public static void method954(int var0) {
-    try {
-      SceneSomething.aClass47_480 = null;
+    SceneSomething.aClass47_480 = null;
       SceneSomething.anIntArrayArray499 = null;
       SceneSomething.aClass94_492 = null;
       if (var0 != 128) {
@@ -58,9 +53,6 @@ public final class SceneSomething {
       }
 
       SceneSomething.aClass94_485 = null;
-    } catch (RuntimeException var2) {
-      throw AbstractGameWorld.cascadeException(var2, "ec.A(" + var0 + ')');
-    }
   }
 
   public static void method955(int[][] var0, boolean var1, int var2, SomethingGl0 var3, int[] var4,
@@ -68,8 +60,7 @@ public final class SceneSomething {
                               boolean var10, int var11, float[][] var12, int var13, int var14,
                               int var15, boolean var16, int[][] var17, float[][] var18, byte var19,
                               int var20, boolean[] var21) {
-    try {
-      int var22 = (var2 << 8) + (var1 ? 255 : 0);
+    int var22 = (var2 << 8) + (var1 ? 255 : 0);
       int var24 = (!var8 ? 0 : 255) + (var15 << 8);
       int[] var26 = new int[var4.length / var11];
       int var25 = (var10 ? 255 : 0) + (var14 << 8);
@@ -85,22 +76,10 @@ public final class SceneSomething {
       }
 
       var3.method150(var6, var7, var5, var26, null, false);
-    } catch (RuntimeException var31) {
-      throw AbstractGameWorld.cascadeException(var31,
-        "ec.F(" + (var0 != null ? "{...}" : "null") + ',' + var1 + ',' + var2 + ',' + (
-          var3 != null ? "{...}" : "null") + ',' + (var4 != null ? "{...}" : "null") + ',' + var5
-          + ',' + var6 + ',' + var7 + ',' + var8 + ',' + (var9 != null ? "{...}" : "null") + ','
-          + var10 + ',' + var11 + ',' + (var12 != null ? "{...}" : "null") + ',' + var13 + ','
-          + var14 + ',' + var15 + ',' + var16 + ',' + (var17 != null ? "{...}" : "null") + ',' + (
-          var18 != null ?
-            "{...}" :
-            "null") + ',' + var19 + ',' + var20 + ',' + (var21 != null ? "{...}" : "null") + ')');
-    }
   }
 
   public static void method956(Object[] var0, int var1, int[] var2, int var3, int var4) {
-    try {
-      if (var4 < var1) {
+    if (var4 < var1) {
         int var5 = (var4 + var1) / 2;
         int var7 = var2[var5];
         int var6 = var4;
@@ -134,29 +113,17 @@ public final class SceneSomething {
             .method955(null, true, 94, null, null, -50, -107, -51, false, null, true, 73, null, -92, -7,
           -23, true, null, null, (byte) 52, 41, null);
       }
-
-    } catch (RuntimeException var12) {
-      throw AbstractGameWorld.cascadeException(var12,
-        "ec.G(" + (var0 != null ? "{...}" : "null") + ',' + var1 + ',' + (var2 != null ?
-          "{...}" :
-          "null") + ',' + var3 + ',' + var4 + ')');
-    }
   }
 
   public static void method957(int var0, boolean var1) {
-    try {
-      if (var0 == 96) {
+    if (var0 == 96) {
         ClientScriptEnum.aBoolean3665 = var1;
         Cache.aBoolean742 = !NPC.method1986(42);
       }
-    } catch (RuntimeException var3) {
-      throw AbstractGameWorld.cascadeException(var3, "ec.C(" + var0 + ',' + var1 + ')');
-    }
   }
 
   public static void method958(byte var0) {
-    try {
-      if (SceneNode.aBoolean1837) {
+    if (SceneNode.aBoolean1837) {
         int var2 = 88 / ((57 - var0) / 59);
         Widget var1 =
           AbstractDirectColorSprite.method638((byte) -19, ScriptState.anInt872, Widget.anInt278);
@@ -171,21 +138,13 @@ public final class SceneSomething {
         AnimationSomething.anInt3590 = -1;
         DummyClass29.method909(-107, var1);
       }
-    } catch (RuntimeException var4) {
-      throw AbstractGameWorld.cascadeException(var4, "ec.E(" + var0 + ')');
-    }
   }
 
   public static void method959(int var0) {
-    try {
-      ClientScriptCall.aClass93_2450.method1524(3);
+    ClientScriptCall.aClass93_2450.method1524(3);
       if (var0 != 0) {
         SceneSomething.method957(121, true);
       }
-
-    } catch (RuntimeException var2) {
-      throw AbstractGameWorld.cascadeException(var2, "ec.B(" + var0 + ')');
-    }
   }
 
 }

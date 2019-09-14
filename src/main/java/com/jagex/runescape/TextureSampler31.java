@@ -23,8 +23,7 @@ public final class TextureSampler31 extends AbstractTextureSampler {
   }
 
   public int[] method154(int var1, byte var2 ) {
-    try {
-      int var4 = -72 % ((30 - var2) / 36);
+    int var4 = -72 % ((30 - var2) / 36);
       int[] var3 = this.monoChromaticImageCache.method1709(-16409, var1);
       if (this.monoChromaticImageCache.aBoolean1580) {
         for (int var5 = 0; ~SomethingLight0.anInt1559 < ~var5; ++var5) {
@@ -54,14 +53,10 @@ public final class TextureSampler31 extends AbstractTextureSampler {
       }
 
       return var3;
-    } catch (RuntimeException var15) {
-      throw AbstractGameWorld.cascadeException(var15, "gm.D(" + var1 + ',' + var2 + ')');
-    }
   }
 
   public void parseConfig(int var1, Buffer var2, boolean var3 ) {
-    try {
-      if (!var3) {
+    if (!var3) {
         TextureSampler31.aClass94_3168 = null;
       }
 
@@ -80,26 +75,16 @@ public final class TextureSampler31 extends AbstractTextureSampler {
           }
         }
       }
-
-    } catch (RuntimeException var5) {
-      throw AbstractGameWorld.cascadeException(var5,
-        "gm.A(" + var1 + ',' + (var2 != null ? "{...}" : "null") + ',' + var3 + ')');
-    }
   }
 
   public static void method236(byte var0) {
-    try {
-      if (var0 == 64) {
+    if (var0 == 64) {
         TextureSampler14.aBoolean3387 = true;
       }
-    } catch (RuntimeException var2) {
-      throw AbstractGameWorld.cascadeException(var2, "gm.C(" + var0 + ')');
-    }
   }
 
   public static void parseNpcUpdate() {
-    try {
-      OndemandRequester.anInt997 = 0;
+    OndemandRequester.anInt997 = 0;
       DummyClass17.anInt1829 = 0;
       IdentityKit.method945((byte) -11);
       DummyClass10.method2261(113);
@@ -128,14 +113,10 @@ public final class TextureSampler31 extends AbstractTextureSampler {
         throw new RuntimeException("gnp1 pos:" + SpotAnimationConfig.gameBuffer.position + " psize:"
           + HashTable.packetLength);
       }
-    } catch (RuntimeException var3) {
-      throw AbstractGameWorld.cascadeException(var3, "gm.B()");
-    }
   }
 
   public static void method238(int var0) {
-    try {
-      if (var0 == 9423) {
+    if (var0 == 9423) {
         RSAConfiguration.PUBLIC_EXPONENT = null;
         TextureSampler31.aClass94_3169 = null;
         TextureSampler31.anIntArray3171 = null;
@@ -147,9 +128,6 @@ public final class TextureSampler31 extends AbstractTextureSampler {
         TextureSampler31.aClass94_3170 = null;
         TextureSampler31.aClass94_3172 = null;
       }
-    } catch (RuntimeException var2) {
-      throw AbstractGameWorld.cascadeException(var2, "gm.E(" + var0 + ')');
-    }
   }
 
 }

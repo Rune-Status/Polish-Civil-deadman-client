@@ -15,35 +15,26 @@ public final class TextureSampler3 extends AbstractTextureSampler {
   }
 
   public int[] method154(int var1, byte var2 ) {
-    try {
-      int[] var3 = this.monoChromaticImageCache.method1709(-16409, var1);
+    int[] var3 = this.monoChromaticImageCache.method1709(-16409, var1);
       if (this.monoChromaticImageCache.aBoolean1580) {
         ArrayUtils.fill(var3, 0, SomethingLight0.anInt1559, DummyClass4.anIntArray2999[var1]);
       }
 
       int var4 = -123 % ((30 - var2) / 36);
       return var3;
-    } catch (RuntimeException var5) {
-      throw AbstractGameWorld.cascadeException(var5, "qg.D(" + var1 + ',' + var2 + ')');
-    }
   }
 
   public static void method304(int var0) {
-    try {
-      if (var0 != 6799) {
+    if (var0 != 6799) {
         TextureSampler3.method305(null, null, -13, (byte) 41);
       }
 
       TextureSampler25.aClass93_3412.method1524(3);
       TextureSampler2.aClass93_3369.method1524(3);
-    } catch (RuntimeException var2) {
-      throw AbstractGameWorld.cascadeException(var2, "qg.F(" + var0 + ')');
-    }
   }
 
   public static void method305(SignLink var0, Buffer var1, int var2, byte var3) {
-    try {
-      int var5 = 123 % ((var3 - -66) / 57);
+    int var5 = 123 % ((var3 - -66) / 57);
       ClassCheckRequest var4 = new ClassCheckRequest();
       var4.anInt2296 = var1.readUnsignedByte();
       var4.anInt2305 = var1.readInt();
@@ -119,16 +110,10 @@ public final class TextureSampler3 extends AbstractTextureSampler {
       }
 
       MonoChromaticImageBuffer.aClass61_2557.addLast(var4);
-    } catch (RuntimeException var20) {
-      throw AbstractGameWorld.cascadeException(var20,
-        "qg.E(" + (var0 != null ? "{...}" : "null") + ',' + (var1 != null ? "{...}" : "null") + ','
-          + var2 + ',' + var3 + ')');
-    }
   }
 
   public static void method306(int var0, boolean var1, int var2) {
-    try {
-      BitVariable var3 = ClientScriptCall.method378(var0, (byte) 127);
+    BitVariable var3 = ClientScriptCall.method378(var0, (byte) 127);
       assert var3 != null;
       int var6 = var3.high;
       if (!var1) {
@@ -143,47 +128,28 @@ public final class TextureSampler3 extends AbstractTextureSampler {
         BlockConfig.method1428(var4, 72,
           var7 & var2 << var5 | DummyClass5.anIntArray2985[var4] & ~var7);
       }
-    } catch (RuntimeException var8) {
-      throw AbstractGameWorld.cascadeException(var8,
-        "qg.Q(" + var0 + ',' + var1 + ',' + var2 + ')');
-    }
   }
 
   public static void method307(GameString[] var0, short[] var1, int var2) {
-    try {
-      ClassCheckRequest.method127(var1, -1 + var0.length, var0, -909, 0);
+    ClassCheckRequest.method127(var1, -1 + var0.length, var0, -909, 0);
       int var3 = 91 % ((var2 - -1) / 63);
-    } catch (RuntimeException var4) {
-      throw AbstractGameWorld.cascadeException(var4,
-        "qg.C(" + (var0 != null ? "{...}" : "null") + ',' + (var1 != null ? "{...}" : "null") + ','
-          + var2 + ')');
-    }
   }
 
   public static int method308(int var0, int var1) {
-    try {
-      return var0 | var1;
-    } catch (RuntimeException var3) {
-      throw AbstractGameWorld.cascadeException(var3, "qg.R(" + var0 + ',' + var1 + ')');
-    }
+    return var0 | var1;
   }
 
   public static void method309(boolean var0) {
-    try {
-      TextureSampler3.anIntArray3359 = null;
+    TextureSampler3.anIntArray3359 = null;
       if (var0) {
         TextureSampler3.aClass153_3361 = null;
         TextureSampler3.aClass94_3357 = null;
         TextureSampler3.aClass94_3360 = null;
       }
-    } catch (RuntimeException var2) {
-      throw AbstractGameWorld.cascadeException(var2, "qg.S(" + var0 + ')');
-    }
   }
 
   public static int method310(int var0, byte var1, int var2, int var3) {
-    try {
-      var0 &= 3;
+    var0 &= 3;
       if (~var0 == -1) {
         return var3;
       } else {
@@ -193,15 +159,10 @@ public final class TextureSampler3 extends AbstractTextureSampler {
 
         return var0 == 1 ? 7 + -var2 : (~var0 == -3 ? -var3 + 7 : var2);
       }
-    } catch (RuntimeException var5) {
-      throw AbstractGameWorld.cascadeException(var5,
-        "qg.B(" + var0 + ',' + var1 + ',' + var2 + ',' + var3 + ')');
-    }
   }
 
   public static Cursor method311(int var0, int var1) {
-    try {
-      Cursor var2 = (Cursor) FileCache.aClass93_684.get(var0);
+    Cursor var2 = (Cursor) FileCache.aClass93_684.get(var0);
       if (var2 != null) {
         return var2;
       } else {
@@ -218,9 +179,6 @@ public final class TextureSampler3 extends AbstractTextureSampler {
         FileCache.aClass93_684.get((byte) -112, var2, var0);
         return var2;
       }
-    } catch (RuntimeException var4) {
-      throw AbstractGameWorld.cascadeException(var4, "qg.O(" + var0 + ',' + var1 + ')');
-    }
   }
 
 }

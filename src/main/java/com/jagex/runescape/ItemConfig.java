@@ -129,8 +129,7 @@ public final class ItemConfig {
   }
 
   public boolean method1102(boolean var1, boolean var2 ) {
-    try {
-      int var3 = this.anInt803;
+    int var3 = this.anInt803;
       int var4 = this.anInt796;
       if (var1) {
         var3 = this.anInt773;
@@ -155,14 +154,10 @@ public final class ItemConfig {
 
         return var5;
       }
-    } catch (RuntimeException var6) {
-      throw AbstractGameWorld.cascadeException(var6, "h.G(" + var1 + ',' + var2 + ')');
-    }
   }
 
   private GameString method1105(int var1, GameString var2, int var3) {
-    try {
-      if (this.aClass130_798 == null) {
+    if (this.aClass130_798 == null) {
         return var2;
       } else {
         if (var1 < 90) {
@@ -172,15 +167,10 @@ public final class ItemConfig {
         StringNode var4 = (StringNode) this.aClass130_798.get(var3);
         return null != var4 ? var4.aClass94_2586 : var2;
       }
-    } catch (RuntimeException var5) {
-      throw AbstractGameWorld.cascadeException(var5,
-        "h.S(" + var1 + ',' + (var2 != null ? "{...}" : "null") + ',' + var3 + ')');
-    }
   }
 
   public ItemConfig method1106(int var1, int var2 ) {
-    try {
-      int var3 = 58 % ((-28 - var2) / 48);
+    int var3 = 58 % ((-28 - var2) / 48);
       if (this.anIntArray804 != null && -2 > ~var1) {
         int var4 = -1;
 
@@ -196,14 +186,10 @@ public final class ItemConfig {
       }
 
       return this;
-    } catch (RuntimeException var6) {
-      throw AbstractGameWorld.cascadeException(var6, "h.H(" + var1 + ',' + var2 + ')');
-    }
   }
 
   public boolean method1108(byte var1, boolean var2 ) {
-    try {
-      int var4 = this.anInt771;
+    int var4 = this.anInt771;
       int var3 = this.anInt793;
       int var6 = 106 % ((var1 - 24) / 58);
       int var5 = this.anInt769;
@@ -233,14 +219,10 @@ public final class ItemConfig {
 
         return var7;
       }
-    } catch (RuntimeException var8) {
-      throw AbstractGameWorld.cascadeException(var8, "h.C(" + var1 + ',' + var2 + ')');
-    }
   }
 
   public void method1109(byte var1, ItemConfig var2, ItemConfig var3 ) {
-    try {
-      this.aByteArray785 = var2.aByteArray785;
+    this.aByteArray785 = var2.aByteArray785;
       this.anInt778 = var2.anInt778;
       this.aClass130_798 = var2.aClass130_798;
       this.anInt769 = var2.anInt769;
@@ -286,20 +268,13 @@ public final class ItemConfig {
       }
 
       this.inventoryOptions[4] = RenderAnimation.aClass94_361;
-    } catch (RuntimeException var5) {
-      throw AbstractGameWorld.cascadeException(var5,
-        "h.J(" + var1 + ',' + (var2 != null ? "{...}" : "null") + ',' + (var3 != null ?
-          "{...}" :
-          "null") + ')');
-    }
   }
 
   public AbstractModel getModel(int var1, int var2, int var3,
       AnimationSequence var4,
       int var5,
       int var6 ) {
-    try {
-      if (var1 < 94) {
+    if (var1 < 94) {
         this.anInt755 = -67;
       }
 
@@ -364,27 +339,16 @@ public final class ItemConfig {
       }
 
       return var11;
-    } catch (RuntimeException var10) {
-      throw AbstractGameWorld.cascadeException(var10,
-        "h.E(" + var1 + ',' + var2 + ',' + var3 + ',' + (var4 != null ? "{...}" : "null") + ','
-          + var5 + ',' + var6 + ')');
-    }
   }
 
   public void method1112(int var1 ) {
-    try {
-      if (var1 != 5401) {
+    if (var1 != 5401) {
         ItemConfig.method1103(null, null, true);
       }
-
-    } catch (RuntimeException var3) {
-      throw AbstractGameWorld.cascadeException(var3, "h.O(" + var1 + ')');
-    }
   }
 
   public void method1113(int var1, Buffer var2 ) {
-    try {
-      while (true) {
+    while (true) {
         int var3 = var2.readUnsignedByte();
         if (0 == var3) {
           if (var1 != 1) {
@@ -396,15 +360,10 @@ public final class ItemConfig {
 
         this.method1114((byte) -72, var2, var3);
       }
-    } catch (RuntimeException var4) {
-      throw AbstractGameWorld.cascadeException(var4,
-        "h.M(" + var1 + ',' + (var2 != null ? "{...}" : "null") + ')');
-    }
   }
 
   private void method1114(byte var1, Buffer var2, int var3) {
-    try {
-      int var4 = -118 % ((var1 - 48) / 61);
+    int var4 = -118 % ((var1 - 48) / 61);
       if (~var3 == -2) {
         this.anInt755 = var2.readUnsignedShort();
       } else {
@@ -618,30 +577,20 @@ public final class ItemConfig {
           }
         }
       }
-
-    } catch (RuntimeException var10) {
-      throw AbstractGameWorld.cascadeException(var10,
-        "h.Q(" + var1 + ',' + (var2 != null ? "{...}" : "null") + ',' + var3 + ')');
-    }
   }
 
   public int method1115(int var1, int var2, int var3 ) {
-    try {
-      int var4 = -82 % ((-63 - var2) / 55);
+    int var4 = -82 % ((-63 - var2) / 55);
       if (this.aClass130_798 != null) {
         IntegerNode var5 = (IntegerNode) this.aClass130_798.get(var3);
         return null != var5 ? var5.anInt2467 : var1;
       } else {
         return var1;
       }
-    } catch (RuntimeException var6) {
-      throw AbstractGameWorld.cascadeException(var6, "h.I(" + var1 + ',' + var2 + ',' + var3 + ')');
-    }
   }
 
   public Model method1116(boolean var1, byte var2 ) {
-    try {
-      int var4 = this.anInt796;
+    int var4 = this.anInt796;
       if (var2 == -109) {
         int var3 = this.anInt803;
         if (var1) {
@@ -681,14 +630,10 @@ public final class ItemConfig {
       } else {
         return null;
       }
-    } catch (RuntimeException var8) {
-      throw AbstractGameWorld.cascadeException(var8, "h.A(" + var1 + ',' + var2 + ')');
-    }
   }
 
   public Model method1117(boolean var1, int var2 ) {
-    try {
-      int var3 = this.anInt793;
+    int var3 = this.anInt793;
       if (var2 < 77) {
         this.aClass130_798 = null;
       }
@@ -748,14 +693,10 @@ public final class ItemConfig {
 
         return var6;
       }
-    } catch (RuntimeException var10) {
-      throw AbstractGameWorld.cascadeException(var10, "h.D(" + var1 + ',' + var2 + ')');
-    }
   }
 
   public void method1118(ItemConfig var1, ItemConfig var2, boolean var3 ) {
-    try {
-      this.aClass94_770 = var1.aClass94_770;
+    this.aClass94_770 = var1.aClass94_770;
       this.anInt810 = var2.anInt810;
       if (var3) {
         this.anInt780 = -70;
@@ -775,16 +716,10 @@ public final class ItemConfig {
       this.translateX = var2.translateX;
       this.aShortArray765 = var2.aShortArray765;
       this.aBoolean779 = var1.aBoolean779;
-    } catch (RuntimeException var5) {
-      throw AbstractGameWorld.cascadeException(var5,
-        "h.N(" + (var1 != null ? "{...}" : "null") + ',' + (var2 != null ? "{...}" : "null") + ','
-          + var3 + ')');
-    }
   }
 
   public SoftwareModel method1120(int var1 ) {
-    try {
-      Model var2 = Model.getModel(StringNode.aClass153_2581,
+    Model var2 = Model.getModel(StringNode.aClass153_2581,
           this.anInt755, 0);
       if (var2 == null) {
         return null;
@@ -820,20 +755,11 @@ public final class ItemConfig {
 
         return var5;
       }
-    } catch (RuntimeException var4) {
-      throw AbstractGameWorld.cascadeException(var4, "h.L(" + var1 + ')');
-    }
   }
 
   public static void method1103(FileUnpacker var0, FileUnpacker var1, boolean var2) {
-    try {
-      TextureSampler31.aClass153_3173 = var0;
+    TextureSampler31.aClass153_3173 = var0;
       PlayerVariable.aClass153_557 = var1;
-    } catch (RuntimeException var4) {
-      throw AbstractGameWorld.cascadeException(var4,
-        "h.B(" + (var0 != null ? "{...}" : "null") + ',' + (var1 != null ? "{...}" : "null") + ','
-          + var2 + ')');
-    }
   }
 
   public static void callScript(byte byte0, int i, ClientScriptCall class3_sub16) {
@@ -5330,8 +5256,7 @@ public final class ItemConfig {
   }
 
   public static GameWorld method1107(int var0) {
-    try {
-      if (TextureSampler15.aClass44_Sub1Array3201.length > SomethingMidiFile.anInt2291) {
+    if (TextureSampler15.aClass44_Sub1Array3201.length > SomethingMidiFile.anInt2291) {
         return TextureSampler15.aClass44_Sub1Array3201[SomethingMidiFile.anInt2291++];
       } else {
         if (var0 != 5422) {
@@ -5340,23 +5265,16 @@ public final class ItemConfig {
 
         return null;
       }
-    } catch (RuntimeException var2) {
-      throw AbstractGameWorld.cascadeException(var2, "h.R(" + var0 + ')');
-    }
   }
 
   public static void method1111(int var0) {
-    try {
-      ItemConfig.aClass94_808 = null;
+    ItemConfig.aClass94_808 = null;
       ItemConfig.anIntArray781 = null;
       ItemConfig.aClass94_809 = null;
       if (var0 == 3327) {
         ItemConfig.aClass94_806 = null;
         ItemConfig.aClass94_811 = null;
       }
-    } catch (RuntimeException var2) {
-      throw AbstractGameWorld.cascadeException(var2, "h.P(" + var0 + ')');
-    }
   }
 
 }

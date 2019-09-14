@@ -8,45 +8,30 @@ public final class DummyClass23 {
 
 
   public static void method1744(boolean var0) {
-    try {
-      DummyClass23.aClass130_1659 = null;
+    DummyClass23.aClass130_1659 = null;
       DummyClass23.aClass153_1661 = null;
       DummyClass23.aClass94_1660 = null;
-
-    } catch (RuntimeException var2) {
-      throw AbstractGameWorld.cascadeException(var2, "rb.A(" + var0 + ')');
-    }
   }
 
   public static void method1745(int var0) {
-    try {
-      for (int var1 = var0; ~var1 > -105; ++var1) {
+    for (int var1 = var0; ~var1 > -105; ++var1) {
         for (int var2 = 0; 104 > var2; ++var2) {
           DummyClass9.anIntArrayArray4010[var1][var2] = 0;
         }
       }
-
-    } catch (RuntimeException var3) {
-      throw AbstractGameWorld.cascadeException(var3, "rb.B(" + var0 + ')');
-    }
   }
 
   public static void method1746(boolean var0, byte var1) {
-    try {
-      if (var1 > -31) {
+    if (var1 > -31) {
         DummyClass23.aClass153_1661 = null;
       }
 
       SomethingTexture4.method1352(GroundItem.viewHeight, var0, -1, InventoryConfig.anInt3655,
         DummyClass30.viewWidth);
-    } catch (RuntimeException var3) {
-      throw AbstractGameWorld.cascadeException(var3, "rb.C(" + var0 + ',' + var1 + ')');
-    }
   }
 
   public static SomethingWorldMapy method1747(Buffer var0, boolean var1) {
-    try {
-      SomethingWorldMapy var2 =
+    SomethingWorldMapy var2 =
         new SomethingWorldMapy(var0.readString(), var0.readString(), var0.readUnsignedShort(),
           var0.readUnsignedShort(), var0.readInt(), var0.readUnsignedByte() == 1,
           var0.readUnsignedByte());
@@ -60,10 +45,6 @@ public final class DummyClass23 {
 
       var2.method538((byte) 103);
       return var2;
-    } catch (RuntimeException var5) {
-      throw AbstractGameWorld.cascadeException(var5,
-        "rb.D(" + (var0 != null ? "{...}" : "null") + ',' + var1 + ')');
-    }
   }
 
 }

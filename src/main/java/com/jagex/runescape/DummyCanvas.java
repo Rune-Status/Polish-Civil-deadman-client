@@ -30,29 +30,19 @@ public final class DummyCanvas extends Canvas implements FocusListener {
   }
 
   public static void method53(int var0) {
-    try {
-      DummyCanvas.aClass93_21 = null;
+    DummyCanvas.aClass93_21 = null;
       DummyCanvas.aClass94_24 = null;
       DummyCanvas.aClass94_22 = null;
       DummyCanvas.anIntArrayArray20 = null;
       DummyCanvas.aClass94_26 = null;
-
-    } catch (RuntimeException var2) {
-      throw AbstractGameWorld.cascadeException(var2, "oe.C(" + var0 + ')');
-    }
   }
 
   public static int method54(int var0, boolean var1) {
-    try {
-      return var1 ? -81 : var0 & 127;
-    } catch (RuntimeException var3) {
-      throw AbstractGameWorld.cascadeException(var3, "oe.A(" + var0 + ',' + var1 + ')');
-    }
+    return var1 ? -81 : var0 & 127;
   }
 
   public static void method55(int var0) {
-    try {
-      if (var0 != 22683) {
+    if (var0 != 22683) {
         DummyCanvas.method53(43);
       }
 
@@ -60,9 +50,6 @@ public final class DummyCanvas extends Canvas implements FocusListener {
       DummyClass54.aClass93_1401.method1523((byte) -105);
       ObjectNode.aClass93_4051.method1523((byte) -101);
       DummyClass14.aClass93_1965.method1523((byte) -119);
-    } catch (RuntimeException var2) {
-      throw AbstractGameWorld.cascadeException(var2, "oe.B(" + var0 + ')');
-    }
   }
 
 }

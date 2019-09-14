@@ -35,8 +35,7 @@ public final class TextureCache implements ITextureCache {
       FileUnpacker sprites,
       int var4,
       boolean var5 ) {
-    try {
-      this.sprites = sprites;
+    this.sprites = sprites;
       this.aBoolean2134 = var5;
       this.cacheSize = var4;
       this.textures = textures;
@@ -118,18 +117,10 @@ public final class TextureCache implements ITextureCache {
           this.textureColors[var8] = (short) var6.readUnsignedShort();
         }
       }
-
-    } catch (RuntimeException var9) {
-      throw AbstractGameWorld.cascadeException(var9,
-        "nk.<init>(" + (textures != null ? "{...}" : "null") + ',' + (materials != null ?
-          "{...}" :
-          "null") + ',' + (sprites != null ? "{...}" : "null") + ',' + var4 + ',' + var5 + ')');
-    }
   }
 
   public void update(boolean var1, int cycle ) {
-    try {
-      if (!var1) {
+    if (!var1) {
         this.method7((byte) 113, 17);
       }
 
@@ -140,15 +131,10 @@ public final class TextureCache implements ITextureCache {
           var3.needsUpdate = false;
         }
       }
-
-    } catch (RuntimeException var4) {
-      throw AbstractGameWorld.cascadeException(var4, "nk.P(" + var1 + ',' + cycle + ')');
-    }
   }
 
   private Texture getConfig(int var1, int var2) {
-    try {
-      if (var2 != 1) {
+    if (var2 != 1) {
         this.aBooleanArray2128 = null;
       }
 
@@ -166,26 +152,18 @@ public final class TextureCache implements ITextureCache {
           return null;
         }
       }
-    } catch (RuntimeException var6) {
-      throw AbstractGameWorld.cascadeException(var6, "nk.T(" + var1 + ',' + var2 + ')');
-    }
   }
 
   public boolean method7(byte var1, int var2) {
-    try {
-      if (var1 != 88) {
+    if (var1 != 88) {
         this.method19(-99, -37);
       }
 
       return this.aBooleanArray2128[var2];
-    } catch (RuntimeException var4) {
-      throw AbstractGameWorld.cascadeException(var4, "nk.M(" + var1 + ',' + var2 + ')');
-    }
   }
 
   public void initializeMaterial(int var1, boolean var2) {
-    try {
-      SomethingQuickChat.method551(0, 255 & this.aByteArray2143[var1],
+    SomethingQuickChat.method551(0, 255 & this.aByteArray2143[var1],
           this.aByteArray2144[var1] & 255);
       if (var2) {
         boolean var3 = false;
@@ -201,56 +179,36 @@ public final class TextureCache implements ITextureCache {
         }
 
       }
-    } catch (RuntimeException var5) {
-      throw AbstractGameWorld.cascadeException(var5, "nk.G(" + var1 + ',' + var2 + ')');
-    }
   }
 
   public int method9(int var1, boolean var2) {
-    try {
-      return var2 ? -63 : 255 & this.aByteArray2143[var1];
-    } catch (RuntimeException var4) {
-      throw AbstractGameWorld.cascadeException(var4, "nk.D(" + var1 + ',' + ')');
-    }
+    return var2 ? -63 : 255 & this.aByteArray2143[var1];
   }
 
   public int method10(int var1, int var2) {
-    try {
-      int var3 = -81 % ((var1 - 4) / 55);
+    int var3 = -81 % ((var1 - 4) / 55);
       return this.aByteArray2126[var2] & 255;
-    } catch (RuntimeException var4) {
-      throw AbstractGameWorld.cascadeException(var4, "nk.C(" + var1 + ',' + var2 + ')');
-    }
   }
 
   public boolean method11(int var1, int var2) {
-    try {
-      if (var1 < 0) {
+    if (var1 < 0) {
         this.method7((byte) 68, -47);
       }
 
       Texture var3 = this.getConfig(var2, 1);
       return null != var3 && var3.method722(-5, this, this.sprites);
-    } catch (RuntimeException var4) {
-      throw AbstractGameWorld.cascadeException(var4, "nk.H(" + var1 + ',' + var2 + ')');
-    }
   }
 
   public boolean method12(int var1, int var2) {
-    try {
-      if (var2 != -65) {
+    if (var2 != -65) {
         TextureCache.method1614(false, null, null);
       }
 
       return this.aBooleanArray2135[var1];
-    } catch (RuntimeException var4) {
-      throw AbstractGameWorld.cascadeException(var4, "nk.I(" + var1 + ',' + var2 + ')');
-    }
   }
 
   public int[] method13(int var1, boolean var2, float var3) {
-    try {
-      Texture var4 = this.getConfig(var1, 1);
+    Texture var4 = this.getConfig(var1, 1);
       if (null == var4) {
         return null;
       } else {
@@ -258,35 +216,22 @@ public final class TextureCache implements ITextureCache {
         return var4.method718(this, 0, var3, this.sprites,
             this.aBoolean2134 || this.aBooleanArray2122[var1]);
       }
-    } catch (RuntimeException var5) {
-      throw AbstractGameWorld.cascadeException(var5,
-        "nk.L(" + var1 + ',' + var2 + ',' + var3 + ')');
-    }
   }
 
   public boolean method14(byte var1, int var2) {
-    try {
-      return var1 >= -97 || (this.aBoolean2134 || this.aBooleanArray2122[var2]);
-    } catch (RuntimeException var4) {
-      throw AbstractGameWorld.cascadeException(var4, "nk.J(" + var1 + ',' + var2 + ')');
-    }
+    return var1 >= -97 || (this.aBoolean2134 || this.aBooleanArray2122[var2]);
   }
 
   public int method15(int var1, int var2) {
-    try {
-      if (var2 != '\uffff') {
+    if (var2 != '\uffff') {
         this.method11(-82, -17);
       }
 
       return '\uffff' & this.textureColors[var1];
-    } catch (RuntimeException var4) {
-      throw AbstractGameWorld.cascadeException(var4, "nk.E(" + var1 + ',' + var2 + ')');
-    }
   }
 
   public int[] method16(int var1, int var2) {
-    try {
-      if (var1 != 64) {
+    if (var1 != 64) {
         this.method12(105, -92);
       }
 
@@ -295,44 +240,28 @@ public final class TextureCache implements ITextureCache {
         null :
         var3.method720(false, this.aBoolean2134 || this.aBooleanArray2122[var2], this,
             this.sprites);
-    } catch (RuntimeException var4) {
-      throw AbstractGameWorld.cascadeException(var4, "nk.F(" + var1 + ',' + var2 + ')');
-    }
   }
 
   public boolean method17(int var1, int var2) {
-    try {
-      int var3 = -8 / ((20 - var2) / 45);
+    int var3 = -8 / ((20 - var2) / 45);
       return this.aBooleanArray2124[var1];
-    } catch (RuntimeException var4) {
-      throw AbstractGameWorld.cascadeException(var4, "nk.K(" + var1 + ',' + var2 + ')');
-    }
   }
 
   public int method18(int var1, int var2) {
-    try {
-      if (var2 != 255) {
+    if (var2 != 255) {
         TextureCache.method1612(-48);
       }
 
       return 255 & this.aByteArray2144[var1];
-    } catch (RuntimeException var4) {
-      throw AbstractGameWorld.cascadeException(var4, "nk.B(" + var1 + ',' + var2 + ')');
-    }
   }
 
   public int method19(int var1, int var2) {
-    try {
-      int var3 = -115 / ((-12 - var1) / 56);
+    int var3 = -115 / ((-12 - var1) / 56);
       return 255 & this.aByteArray2129[var2];
-    } catch (RuntimeException var4) {
-      throw AbstractGameWorld.cascadeException(var4, "nk.A(" + var1 + ',' + var2 + ')');
-    }
   }
 
   private GlTexture2d getTexture(int textureId) {
-    try {
-      GlTexture2d var4 = (GlTexture2d) this.glTextures.get(textureId, 1400);
+    GlTexture2d var4 = (GlTexture2d) this.glTextures.get(textureId, 1400);
       if (null == var4) {
         var4 = new GlTexture2d(this.textureColors[textureId] & '\uffff');
         this.glTextures.put(textureId, var4);
@@ -340,37 +269,25 @@ public final class TextureCache implements ITextureCache {
       } else {
         return var4;
       }
-    } catch (RuntimeException var5) {
-      throw AbstractGameWorld.cascadeException(var5, "nk.U(" + textureId + ')');
-    }
   }
 
   public void method1616(boolean var1, int var2 ) {
-    try {
-      this.aBoolean2134 = var1;
+    this.aBoolean2134 = var1;
       this.method1618(0);
-    } catch (RuntimeException var4) {
-      throw AbstractGameWorld.cascadeException(var4, "nk.S(" + var1 + ',' + var2 + ')');
-    }
   }
 
   public void method1618(int var1 ) {
-    try {
-      this.aClass47_2142.method1101(2);
+    this.aClass47_2142.method1101(2);
       if (var1 == 0) {
         if (null != this.glTextures) {
           this.glTextures.method1101(2);
         }
 
       }
-    } catch (RuntimeException var3) {
-      throw AbstractGameWorld.cascadeException(var3, "nk.O(" + var1 + ')');
-    }
   }
 
   public void method1619(int var1, int var2 ) {
-    try {
-      if (var2 != -1) {
+    if (var2 != -1) {
         TextureCache.localPlayer = null;
       }
 
@@ -381,15 +298,10 @@ public final class TextureCache implements ITextureCache {
       } else {
         this.glTextures = null;
       }
-
-    } catch (RuntimeException var4) {
-      throw AbstractGameWorld.cascadeException(var4, "nk.N(" + var1 + ',' + var2 + ')');
-    }
   }
 
   public static void method1611(int var0, boolean var1) {
-    try {
-      int var2;
+    int var2;
       NPC var3;
       int var6;
       int var7;
@@ -527,14 +439,10 @@ public final class TextureCache implements ITextureCache {
       }
 
       var2 = -28 / ((var0 - -7) / 34);
-    } catch (RuntimeException var14) {
-      throw AbstractGameWorld.cascadeException(var14, "nk.V(" + var0 + ',' + var1 + ')');
-    }
   }
 
   public static void method1612(int var0) {
-    try {
-      TextureCache.localPlayer = null;
+    TextureCache.localPlayer = null;
       if (var0 != -11565) {
         TextureCache.method1614(false, null, null);
       }
@@ -543,29 +451,17 @@ public final class TextureCache implements ITextureCache {
       TextureCache.aClass94_2132 = null;
       TextureCache.aClass3_Sub28_Sub16_Sub2Array2140 = null;
       TextureCache.aClass135Array2131 = null;
-    } catch (RuntimeException var2) {
-      throw AbstractGameWorld.cascadeException(var2, "nk.W(" + var0 + ')');
-    }
   }
 
   public static void method1614(boolean var0, long[] var1, int[] var2) {
-    try {
-      AbstractGameWorld.method1069(var1, 0, -1 + var1.length, var2, -24337);
+    AbstractGameWorld.method1069(var1, 0, -1 + var1.length, var2, -24337);
       if (!var0) {
         TextureCache.method1612(103);
       }
-
-    } catch (RuntimeException var4) {
-      throw AbstractGameWorld.cascadeException(var4,
-        "nk.Q(" + var0 + ',' + (var1 != null ? "{...}" : "null") + ',' + (var2 != null ?
-          "{...}" :
-          "null") + ')');
-    }
   }
 
   public static void method1617(int var0, int var1, int var2, int var3, int var4, byte var5) {
-    try {
-      if (~var4 >= ~LightIntensity.anInt902 && ~var2 <= ~DummyClass13.anInt2020) {
+    if (~var4 >= ~LightIntensity.anInt902 && ~var2 <= ~DummyClass13.anInt2020) {
         boolean var6;
         if (DummyClass55.anInt1425 <= var1) {
           if (GlTexture2d.anInt3765 >= var1) {
@@ -622,11 +518,6 @@ public final class TextureCache implements ITextureCache {
           }
         }
       }
-
-    } catch (RuntimeException var10) {
-      throw AbstractGameWorld.cascadeException(var10,
-        "nk.R(" + var0 + ',' + var1 + ',' + var2 + ',' + var3 + ',' + var4 + ',' + var5 + ')');
-    }
   }
 
 }
