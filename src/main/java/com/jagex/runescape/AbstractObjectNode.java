@@ -119,7 +119,7 @@ public abstract class AbstractObjectNode extends SubNode {
           (int) (SomethingWorldMapy.aClass11_3551.anInt168 / AbstractGameWorld.aFloat727);
       }
 
-      TextureSampler13.anInt3362 = DummyClass58.anInt1460 + -1 + MapScene.anInt65 + -var2;
+      TextureSampler13.anInt3362 = DummyClass58.anInt1460 - 1 + MapScene.anInt65 - var2;
       int var6 =
         (int) (SomethingWorldMapy.aClass11_3551.anInt193 / AbstractGameWorld.aFloat727)
           + TextureSampler13.anInt3362;
@@ -128,7 +128,7 @@ public abstract class AbstractObjectNode extends SubNode {
           / AbstractGameWorld.aFloat727);
       if (var4 > DummyClass30.anInt455) {
         ProceduralTexture.anInt1150 =
-          DummyClass30.anInt455 + -((int) (SomethingWorldMapy.aClass11_3551.anInt168
+          DummyClass30.anInt455 - ((int) (SomethingWorldMapy.aClass11_3551.anInt168
             / AbstractGameWorld.aFloat727));
       }
 

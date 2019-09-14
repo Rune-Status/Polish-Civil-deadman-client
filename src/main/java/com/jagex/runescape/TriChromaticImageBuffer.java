@@ -92,7 +92,7 @@ public final class TriChromaticImageBuffer extends Node {
         DummyClass49.anInt1111 = 128 * AbstractMouseWheel.anInt1904 + 64;
         EnumStringFetcher.anInt2162 =
           BufferData.method1736(GameWorldSomething.currentPlane, 1, NPC.anInt3995,
-            DummyClass49.anInt1111) + -TextureSampler25.anInt3414;
+            DummyClass49.anInt1111) - TextureSampler25.anInt3414;
       }
 
       int var7 = 76 % ((-79 - var4) / 35);

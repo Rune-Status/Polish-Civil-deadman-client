@@ -274,7 +274,7 @@ public final class TextureSampler20 extends AbstractTextureSampler {
                   } else {
                     var8 = -AbstractAudioOutputStream.anInt1977 + var6;
                     AbstractAudioOutputStream.anInt1977 = var6;
-                    var9 = var5 + -DummyCanvas.anInt14;
+                    var9 = var5 - DummyCanvas.anInt14;
                     DummyCanvas.anInt14 = var5;
                     if ((MonoChromaticImageBuffer.anInt2556 < 8) && var8 >= -32 &&
                         var8 <= 31
@@ -287,14 +287,14 @@ public final class TextureSampler20 extends AbstractTextureSampler {
                     } else if (MonoChromaticImageBuffer.anInt2556 < 32 && (var8 >= 127)
                       && (var8 <= 127) && var9 >= -128 && var9 <= 127) {
                       TextureSampler12.secureBuffer.writeByte(
-                        128 - -MonoChromaticImageBuffer.anInt2556);
+                        128 + MonoChromaticImageBuffer.anInt2556);
                       var9 += 128;
                       var8 += 128;
                       TextureSampler12.secureBuffer.writeShort((var8 << 8) + var9);
                       MonoChromaticImageBuffer.anInt2556 = 0;
                     } else if (MonoChromaticImageBuffer.anInt2556 < 32) {
                       TextureSampler12.secureBuffer.writeByte(
-                        192 - -MonoChromaticImageBuffer.anInt2556);
+                        192 + MonoChromaticImageBuffer.anInt2556);
                       if (var7) {
                         TextureSampler12.secureBuffer.writeInt(Integer.MIN_VALUE);
                       } else {
@@ -564,8 +564,8 @@ public final class TextureSampler20 extends AbstractTextureSampler {
                                   .getWidget((byte) 116, var4);
                               var6 = var16.anInt3598;
                               if (var20 != null && var20.anInt187 == 0) {
-                                if (var6 > var20.anInt252 + -var20.anInt193) {
-                                  var6 = var20.anInt252 + -var20.anInt193;
+                                if (var6 > var20.anInt252 - var20.anInt193) {
+                                  var6 = var20.anInt252 - var20.anInt193;
                                 }
 
                                 if (var6 < 0) {
@@ -762,7 +762,7 @@ public final class TextureSampler20 extends AbstractTextureSampler {
                             if (DummyClass32.anInt515 != -1) {
                               BufferedFile.method979(
                                 WorldMapLabel.anInt1716 + DummyClass32.anInt515,
-                                ProceduralTexture.anInt1152 - -OndemandRequester.anInt999,
+                                ProceduralTexture.anInt1152 + OndemandRequester.anInt999,
                                 GameWorldSomething.currentPlane, (byte) -4);
                             }
 

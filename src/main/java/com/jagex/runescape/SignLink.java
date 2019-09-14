@@ -114,7 +114,7 @@ public class SignLink implements Runnable {
       this.method1442(null, 99);
     }
 
-    SignLink.aLong1221 = Time.getCurrentTimeMillis() - -5000L;
+    SignLink.aLong1221 = Time.getCurrentTimeMillis() + 5000L;
   }
 
   public final boolean method1432(boolean var1) {
@@ -130,7 +130,7 @@ public class SignLink implements Runnable {
       this.aClass122_1207 = null;
     }
 
-    return this.method1435(12, 0, var1, 0, var2 + -58);
+    return this.method1435(12, 0, var1, 0, var2 - 58);
   }
 
   public final SignLinkRequest method1434(int[] var1, int var2, int var3,
@@ -174,7 +174,7 @@ public class SignLink implements Runnable {
     if (var1 == 14) {
       Point var5 = var3.getLocationOnScreen();
       return this
-          .method1435(14, var4 - -var5.y, null, var5.x + var2, var1 + -105);
+          .method1435(14, var4 + var5.y, null, var5.x + var2, var1 - 105);
     } else {
       return null;
     }
@@ -481,7 +481,7 @@ public class SignLink implements Runnable {
       this.tableIndexFile = null;
     }
 
-    return this.method1435(3, 0, null, var2, var1 + -96);
+    return this.method1435(3, 0, null, var2, var1 - 96);
   }
 
   public final SignLinkRequest method1450(int var1, int var2, int var3,

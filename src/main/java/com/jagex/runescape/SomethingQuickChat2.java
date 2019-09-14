@@ -33,7 +33,7 @@ public final class SomethingQuickChat2 extends SubNode {
         }
       }
 
-      var2 = 46 / ((var1 - -27) / 38);
+      var2 = 46 / ((var1 + 27) / 38);
   }
 
   public int method526(int var1, int var2 ) {
@@ -87,7 +87,7 @@ public final class SomethingQuickChat2 extends SubNode {
   }
 
   public int method529(byte var1, int var2 ) {
-    int var3 = 45 / ((var1 - -30) / 49);
+    int var3 = 45 / ((var1 + 30) / 49);
       if (this.anIntArray3534 == null) {
         return -1;
       } else {
@@ -138,7 +138,7 @@ public final class SomethingQuickChat2 extends SubNode {
         });
       } else if (DummyClass55.aBoolean1419 && GameObjectConfig.aBooleanArray1490[81]
         && TextureSampler25.amountContextActions > 2) {
-        var1 = Buffer.method802(TextureSampler25.amountContextActions + -2, true);
+        var1 = Buffer.method802(TextureSampler25.amountContextActions - 2, true);
       } else {
         var1 = Buffer.method802(TextureSampler25.amountContextActions - 1, true);
       }
@@ -213,8 +213,8 @@ public final class SomethingQuickChat2 extends SubNode {
           var5.drawRect(var7, var8, 303, 33);
           var5.fillRect(var7 + 2, 2 + var8, 3 * var4, 30);
           var5.setColor(Color.black);
-          var5.drawRect(1 + var7, var8 - -1, 301, 31);
-          var5.fillRect(3 * var4 + (var7 - -2), 2 + var8, 300 - var4 * 3, 30);
+          var5.drawRect(1 + var7, var8 + 1, 301, 31);
+          var5.fillRect(3 * var4 + (var7 + 2), 2 + var8, 300 - var4 * 3, 30);
           var5.setFont(TextureSampler14.aFont3384);
           var5.setColor(Color.white);
           var3.method1532(22 + var8,

@@ -102,7 +102,7 @@ public final class TextureSampler36 extends AbstractTextureSampler {
         } else {
           for (var8 = 0; var8 < SomethingLight0.anInt1559; ++var8) {
             var9 = this.anInt3431 * var8 / SomethingLight0.anInt1559;
-            int var10 = this.anIntArray3425[var4 - -var9];
+            int var10 = this.anIntArray3425[var4 + var9];
             var7[var8] = ClientScript.bitAnd(var10 << 4, 4080);
             var6[var8] = ClientScript.bitAnd('\uff00', var10) >> 4;
             var5[var8] = ClientScript.bitAnd(var10 >> 12, 4080);
@@ -152,8 +152,8 @@ public final class TextureSampler36 extends AbstractTextureSampler {
 
         StillGraphic.method1952(TextureSampler20.anInt3155, -1907397104, var1,
           BufferData.method1736(GameWorldSomething.currentPlane, 1,
-            TextureCache.localPlayer.anInt2819, TextureCache.localPlayer.anInt2829) + -50,
-          600 - -(var6 * 3), var7, FileTable.anInt942, var6);
+            TextureCache.localPlayer.anInt2819, TextureCache.localPlayer.anInt2829) - 50,
+          600 + (var6 * 3), var7, FileTable.anInt942, var6);
       }
 
       if (var0 == -6403) {
@@ -203,7 +203,7 @@ public final class TextureSampler36 extends AbstractTextureSampler {
 
         Texture.method725(-118);
         if (GlRenderer.useOpenGlRenderer) {
-          GlUtils.clip(var3, var5, var3 + var4, var5 - -var1);
+          GlUtils.clip(var3, var5, var3 + var4, var5 + var1);
           float var17 = DummyClass17.anInt1823 * 0.17578125F;
           float var16 = 0.17578125F * TextureSampler28.anInt3315;
           if (SomethingPacket116.anInt1753 == 3) {
@@ -211,7 +211,7 @@ public final class TextureSampler36 extends AbstractTextureSampler {
             var16 = DummyClass38.aFloat730 * 360.0F / 6.2831855F;
           }
 
-          GlRenderer.method1844(var3, var5, var4, var1, var4 / 2 + var3, var5 - -(var1 / 2), var17,
+          GlRenderer.method1844(var3, var5, var4, var1, var4 / 2 + var3, var5 + (var1 / 2), var17,
             var16, HashTable.anInt1705, HashTable.anInt1705);
         } else {
           DummyClass47.method1324(var3, var5, var4 + var3, var1 + var5);
@@ -279,11 +279,11 @@ public final class TextureSampler36 extends AbstractTextureSampler {
             DummyClass49.anInt1111, DummyClass17.anInt1823, TextureSampler28.anInt3315,
             AbstractImageProducer.aByteArrayArrayArray2008, FileCache.anIntArray686,
             MilliFrameRegulator.anIntArray2696, DummyClass13.anIntArray2021, Player.anIntArray3959,
-            AnimationSequence.anIntArray1871, GameWorldSomething.currentPlane - -1, var19,
+            AnimationSequence.anIntArray1871, GameWorldSomething.currentPlane + 1, var19,
             TextureCache.localPlayer.anInt2819 >> 7, TextureCache.localPlayer.anInt2829 >> 7);
-          DummyClass43.method1194(var0 + -9982);
+          DummyClass43.method1194(var0 - 9982);
           HashTable.method1775();
-          ProceduralTexture.method1405(var5, var4, var3, 256, var1, 256, var0 + -994);
+          ProceduralTexture.method1405(var5, var4, var3, 256, var1, 256, var0 - 994);
           DummyClass8.method2221(var4, var3, var1, true, 256, 256, var5);
         }
 

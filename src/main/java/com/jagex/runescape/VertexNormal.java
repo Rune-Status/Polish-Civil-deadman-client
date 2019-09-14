@@ -55,13 +55,13 @@ public final class VertexNormal {
             if ((var3 != 4) && (var3 != 5)) {
               if ((var3 == 6)) {
                 var12.aClass140_429 =
-                    new GameObject(var9, 4, var2 - -4, var0, var6, var4, var7,
+                    new GameObject(var9, 4, var2 + 4, var0, var6, var4, var7,
                         false,
                         var12.aClass140_429);
               } else {
                 if (var3 == 7) {
                   var12.aClass140_429 =
-                      new GameObject(var9, 4, (var2 - -2 & 3) - -4, var0, var6,
+                      new GameObject(var9, 4, (var2 + 2 & 3) + 4, var0, var6,
                           var4, var7, false,
                           var12.aClass140_429);
                 } else if (var3 == 8) {

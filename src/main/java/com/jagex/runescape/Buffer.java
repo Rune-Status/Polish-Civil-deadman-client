@@ -86,14 +86,14 @@ public class Buffer extends Node {
   }
 
   public final void method742(int var1, int var2) {
-    this.bytes[-4 + this.position + -var2] = (byte) (var2 >> 24);
+    this.bytes[-4 + this.position - var2] = (byte) (var2 >> 24);
       this.bytes[-var2 + this.position - 3] = (byte) (var2 >> 16);
-      this.bytes[-2 + this.position + -var2] = (byte) (var2 >> 8);
+      this.bytes[-2 + this.position - var2] = (byte) (var2 >> 8);
       if (var1 < 78) {
         this.method771(-102, 37);
       }
 
-      this.bytes[-var2 + this.position + -1] = (byte) var2;
+      this.bytes[-var2 + this.position - 1] = (byte) var2;
   }
 
   public final void method743(int var1, int var2) {
@@ -112,7 +112,7 @@ public class Buffer extends Node {
   public final int method747(int var1) {
     this.position += 2;
       int var2 = (this.bytes[-2 + this.position] << 8 & '\uff00') -
-          -(-128 + this.bytes[this.position + -1] & 255);
+          -(-128 + this.bytes[this.position - 1] & 255);
       if (var1 != -58) {
         this.readByte();
       }
@@ -127,7 +127,7 @@ public class Buffer extends Node {
   public final int readInt() {
     this.position += 4;
       return ((255 & this.bytes[this.position - 4]) << 24) +
-          (0xff0000 & this.bytes[this.position + -3] << 16) +
+          (0xff0000 & this.bytes[this.position - 3] << 16) +
           (((0xff & this.bytes[this.position - 2]) << 8) +
               (this.bytes[this.position - 1] & 255));
   }
@@ -173,7 +173,7 @@ public class Buffer extends Node {
 
   public final int method755(byte var1) {
     this.position += 3;
-    return ((this.bytes[this.position + -2] & 255) << 8) +
+    return ((this.bytes[this.position - 2] & 255) << 8) +
         ((this.bytes[-1 + this.position] & 255) << 16) +
         (this.bytes[-3 + this.position] & 255);
   }
@@ -230,7 +230,7 @@ public class Buffer extends Node {
         }
 
         return TextureSampler33.createString(this.bytes, var3,
-            this.position - (var3 - -1));
+            this.position - (var3 + 1));
       } else {
         throw new IllegalStateException("Bad version number in gjstr2");
       }
@@ -284,7 +284,7 @@ public class Buffer extends Node {
   }
 
   public final void method769(byte var1, int var2) {
-    this.bytes[-1 + -var2 + this.position] = (byte) var2;
+    this.bytes[-1 - var2 + this.position] = (byte) var2;
       int var3 = 120 % ((-78 - var1) / 48);
   }
 
@@ -375,7 +375,7 @@ public class Buffer extends Node {
 
   public final void method774(int var1, int var2, byte[] var3, int var4) {
     if (var1 == 2) {
-        for (int var5 = var4 - (-var2 - -1); (var4 <= var5); --var5) {
+        for (int var5 = var4 - (-var2 + 1); (var4 <= var5); --var5) {
           var3[var5] = this.bytes[this.position++];
         }
       }
@@ -419,14 +419,14 @@ public class Buffer extends Node {
       return ((this.bytes[this.position - 2] & 255) << 24) +
           ((255 & this.bytes[this.position - 1]) << 16) +
           ('\uff00' & this.bytes[-4 + this.position] << 8) -
-          -(this.bytes[this.position + -3] & 255);
+          -(this.bytes[this.position - 3] & 255);
   }
 
   public final int readShortLEAdd() {
     this.position += 2;
 
       return (this.bytes[-1 + this.position] << 8 & '\uff00') -
-          -(255 & -128 + this.bytes[this.position + -2]);
+          -(255 & -128 + this.bytes[this.position - 2]);
   }
 
   public final int method782(int var1) {
@@ -437,7 +437,7 @@ public class Buffer extends Node {
 
       return (255 & this.bytes[-4 + this.position]) +
           (16711680 & this.bytes[this.position - 2] << 16) +
-          ((255 & this.bytes[this.position + -1]) << 24) +
+          ((255 & this.bytes[this.position - 1]) << 24) +
           ((this.bytes[-3 + this.position] & 255) << 8);
   }
 
@@ -468,7 +468,7 @@ public class Buffer extends Node {
   public final int method787(byte var1) {
     this.position += 2;
       int var2 = (this.bytes[-1 + this.position] & 255) +
-          ((255 & this.bytes[this.position + -2]) << 8);
+          ((255 & this.bytes[this.position - 2]) << 8);
       if (var1 < 4) {
         return -83;
       } else {
@@ -516,7 +516,7 @@ public class Buffer extends Node {
       }
 
       int var2 = (this.bytes[-2 + this.position] & 255) +
-          ('\uff00' & this.bytes[this.position + -1] << 8);
+          ('\uff00' & this.bytes[this.position - 1] << 8);
       if (var2 > 32767) {
         var2 -= 65536;
       }
@@ -542,9 +542,9 @@ public class Buffer extends Node {
       }
 
       this.position += 3;
-      return (16711680 & this.bytes[this.position + -3] << 16) +
+      return (16711680 & this.bytes[this.position - 3] << 16) +
           (('\uff00' & this.bytes[-2 + this.position] << 8) -
-              -(this.bytes[this.position + -1] & 255));
+              -(this.bytes[this.position - 1] & 255));
   }
 
   public final void writeShortLE(int var1, int var2) {
@@ -565,9 +565,9 @@ public class Buffer extends Node {
   public final int readInt(byte var1) {
     this.position += 4;
       return ((this.bytes[-3 + this.position] & 255) << 24) -
-          -(16711680 & this.bytes[this.position + -4] << 16) +
-          (((this.bytes[this.position + -1] & 255) << 8) -
-              -(255 & this.bytes[this.position + -2]));
+          -(16711680 & this.bytes[this.position - 4] << 16) +
+          (((this.bytes[this.position - 1] & 255) << 8) -
+              -(255 & this.bytes[this.position - 2]));
   }
 
   public final void encipherRSA(BigInteger exponent, BigInteger modulus) {
@@ -633,13 +633,13 @@ public class Buffer extends Node {
         for (int var9 = 0; var9 < 4; ++var9) {
           for (var10 = 0; (var10 < 64); ++var10) {
             for (var11 = 0; (var11 < 64); ++var11) {
-              if (((var5 - -var10) > 0) && var10 + var5 < 103 &&
+              if (((var5 + var10) > 0) && var10 + var5 < 103 &&
                   ((var3 + var11) > 0) && ((var11 + var3) < 103)) {
                 collisionMaps[var9]
-                    .anIntArrayArray1304[var10 + var5][var3 - -var11] =
+                    .anIntArrayArray1304[var10 + var5][var3 + var11] =
                     ClientScript.bitAnd(
                         collisionMaps[var9]
-                            .anIntArrayArray1304[var10 + var5][var3 - -var11],
+                            .anIntArrayArray1304[var10 + var5][var3 + var11],
                         -16777217);
               }
             }
@@ -659,7 +659,7 @@ public class Buffer extends Node {
       for (var10 = 0; var8 > var10; ++var10) {
         for (var11 = 0; (var11 < 64); ++var11) {
           for (var12 = 0; var12 < 64; ++var12) {
-            DummyClass10.readTileData(var2, var6, var1, var20, var12 - -var3,
+            DummyClass10.readTileData(var2, var6, var1, var20, var12 + var3,
                 var5 + var11, (byte) 91, 0, var10);
           }
         }
@@ -782,7 +782,7 @@ public class Buffer extends Node {
                     SceneShadowMap
                         .aByteArrayArrayArray1774[var12][var14][var24] =
                         SceneShadowMap
-                            .aByteArrayArrayArray1774[var12 + -1][var14][var24];
+                            .aByteArrayArrayArray1774[var12 - 1][var14][var24];
                     ++var24;
                   }
 
@@ -858,7 +858,7 @@ public class Buffer extends Node {
           for (var11 = 0; var11 < 4; ++var11) {
             for (var12 = 0; var12 < 16; ++var12) {
               for (var23 = 0; var23 < 16; ++var23) {
-                var14 = (var5 >> 2) - -var12;
+                var14 = (var5 >> 2) + var12;
                 var15 = var23 + (var3 >> 2);
                 if (var14 >= 0 && var14 < 26 && var15 >= 0 && var15 < 26) {
                   SceneShadowMap.aByteArrayArrayArray1774[var11][var14][var15] =
@@ -961,11 +961,11 @@ public class Buffer extends Node {
           DummyClass47.anIntArray1100 = null;
         } else {
           SubNode.method523(var4 + var0, var2, 0, var7, var6, var0, var8,
-              var2 - -var3, var15);
+              var2 + var3, var15);
           DummyClass30.method938(var0 + var4, var0, var7, var8, var3 + var2,
               var2, 1, var15, var6);
           SomethingInScenePacket202.method111((byte) -100, var0, var2, var15,
-              var0 - -var4, var8, var6, var7,
+              var0 + var4, var8, var6, var7,
               var3 + var2);
         }
 
@@ -978,8 +978,8 @@ public class Buffer extends Node {
         }
 
         if (DummyClass29.aBoolean438) {
-          int var10 = -8 + var2 - -var3;
-          int var9 = -5 + (var0 - -var4);
+          int var10 = -8 + var2 + var3;
+          int var9 = -5 + (var0 + var4);
           SomethingTilek.p12Font.method688(
               RenderAnimation.concat(new GameString[]{
                   DummyClass45.aClass94_985,
@@ -1004,24 +1004,24 @@ public class Buffer extends Node {
 
       } else {
         byte var5 = 20;
-        var6 = var0 - -(var4 / 2);
-        var7 = var3 / 2 + (var2 - 18) + -var5;
+        var6 = var0 + (var4 / 2);
+        var7 = var3 / 2 + (var2 - 18) - var5;
         if (GlRenderer.useOpenGlRenderer) {
           GlUtils.fillQuad(var0, var2, var4, var3, 0);
           GlUtils.drawQuad(var6 - 152, var7, 304, 34, 9179409);
-          GlUtils.drawQuad(var6 + -151, var7 + 1, 302, 32, 0);
+          GlUtils.drawQuad(var6 - 151, var7 + 1, 302, 32, 0);
           GlUtils.fillQuad(-150 + var6, var7 + 2, 3 * GameObject.anInt2737, 30,
               9179409);
-          GlUtils.fillQuad(-150 + var6 + GameObject.anInt2737 * 3, var7 - -2,
-              300 + -(3 * GameObject.anInt2737), 30, 0);
+          GlUtils.fillQuad(-150 + var6 + GameObject.anInt2737 * 3, var7 + 2,
+              300 - (3 * GameObject.anInt2737), 30, 0);
         } else {
           DummyClass47.method1323(var0, var2, var4, var3, 0);
-          DummyClass47.method1311(var6 + -152, var7, 304, 34, 9179409);
-          DummyClass47.method1311(var6 + -151, 1 + var7, 302, 32, 0);
-          DummyClass47.method1323(var6 + -150, var7 + 2,
+          DummyClass47.method1311(var6 - 152, var7, 304, 34, 9179409);
+          DummyClass47.method1311(var6 - 151, 1 + var7, 302, 32, 0);
+          DummyClass47.method1323(var6 - 150, var7 + 2,
               GameObject.anInt2737 * 3, 30, 9179409);
-          DummyClass47.method1323(3 * GameObject.anInt2737 + -150 + var6,
-              var7 - -2, -(GameObject.anInt2737 * 3) + 300,
+          DummyClass47.method1323(3 * GameObject.anInt2737 - 150 + var6,
+              var7 + 2, -(GameObject.anInt2737 * 3) + 300,
               30, 0);
         }
 

@@ -63,7 +63,7 @@ public final class FileTable {
           }
         }
 
-        this.anInt960 = var7 - -1;
+        this.anInt960 = var7 + 1;
         this.anIntArray958 = new int[this.anInt960];
         this.unpackedIds = new int[this.anInt960][];
         this.anIntArray945 = new int[this.anInt960];
@@ -135,7 +135,7 @@ public final class FileTable {
         }
 
         if ((var5 != 0)) {
-          this.childNameTables = new LinearHashTable[var7 - -1];
+          this.childNameTables = new LinearHashTable[var7 + 1];
           this.unpackedNames = new int[1 + var7][];
 
           for (var8 = 0; var8 < this.anInt947; ++var8) {
@@ -189,7 +189,7 @@ public final class FileTable {
                   (var2 * var0.anInt166 >> 14) + (-var0.anInt193 + var2) / 2;
             } else {
               var0.anInt210 =
-                  -(var2 * var0.anInt166 >> 14) + -var0.anInt193 + var2;
+                  -(var2 * var0.anInt166 >> 14) - var0.anInt193 + var2;
             }
           } else {
             var0.anInt210 = var0.anInt166 * var2 >> 14;
@@ -201,14 +201,14 @@ public final class FileTable {
         var0.anInt306 = var0.anInt316;
       } else if ((var0.aByte273 != 1)) {
         if (var0.aByte273 == 2) {
-          var0.anInt306 = -var0.anInt316 + -var0.anInt168 + var3;
+          var0.anInt306 = -var0.anInt316 - var0.anInt168 + var3;
         } else if (var0.aByte273 != 3) {
           if (var0.aByte273 == 4) {
             var0.anInt306 =
                 (var0.anInt316 * var3 >> 14) + (var3 - var0.anInt168) / 2;
           } else {
             var0.anInt306 =
-                -(var3 * var0.anInt316 >> 14) + var3 + -var0.anInt168;
+                -(var3 * var0.anInt316 >> 14) + var3 - var0.anInt168;
           }
         } else {
           var0.anInt306 = var0.anInt316 * var3 >> 14;
@@ -222,13 +222,13 @@ public final class FileTable {
         if ((var0.anInt210 < 0)) {
           var0.anInt210 = 0;
         } else if (var0.anInt193 + var0.anInt210 > var2) {
-          var0.anInt210 = var2 + -var0.anInt193;
+          var0.anInt210 = var2 - var0.anInt193;
         }
 
         if (var0.anInt306 < 0) {
           var0.anInt306 = 0;
-        } else if (var3 < var0.anInt306 - -var0.anInt168) {
-          var0.anInt306 = var3 + -var0.anInt168;
+        } else if (var3 < var0.anInt306 + var0.anInt168) {
+          var0.anInt306 = var3 - var0.anInt168;
         }
       }
 

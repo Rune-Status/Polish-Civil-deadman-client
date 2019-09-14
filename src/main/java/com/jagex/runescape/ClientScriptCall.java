@@ -71,7 +71,7 @@ public final class ClientScriptCall extends Node {
   }
 
   public static void method379(int var0) {
-    int var2 = AbstractMouseWheel.anInt1904 * 128 - -64;
+    int var2 = AbstractMouseWheel.anInt1904 * 128 + 64;
       int var1 = 128 * GameCanvas.anInt30 + 64;
       int var3 = BufferData.method1736(GameWorldSomething.currentPlane, 1, var1, var2)
         - TextureSampler25.anInt3414;
@@ -79,8 +79,8 @@ public final class ClientScriptCall extends Node {
         NPC.anInt3995 = 64 + GameCanvas.anInt30 * 128;
         DummyClass49.anInt1111 = 64 + AbstractMouseWheel.anInt1904 * 128;
         EnumStringFetcher.anInt2162 =
-          BufferData.method1736(GameWorldSomething.currentPlane, var0 + -1023, NPC.anInt3995,
-            DummyClass49.anInt1111) + -TextureSampler25.anInt3414;
+          BufferData.method1736(GameWorldSomething.currentPlane, var0 - 1023, NPC.anInt3995,
+            DummyClass49.anInt1111) - TextureSampler25.anInt3414;
       } else {
         if (NPC.anInt3995 < var1) {
           NPC.anInt3995 +=
@@ -101,7 +101,7 @@ public final class ClientScriptCall extends Node {
 
         if (NPC.anInt3995 > var1) {
           NPC.anInt3995 -=
-            DummyClass8.anInt4021 + (NPC.anInt3995 + -var1) * AbstractFileRequest.anInt3631 / 1000;
+            DummyClass8.anInt4021 + (NPC.anInt3995 - var1) * AbstractFileRequest.anInt3631 / 1000;
           if (NPC.anInt3995 < var1) {
             NPC.anInt3995 = var1;
           }
@@ -125,7 +125,7 @@ public final class ClientScriptCall extends Node {
         }
 
         if (DummyClass49.anInt1111 > var2) {
-          DummyClass49.anInt1111 -= DummyClass8.anInt4021 - -(
+          DummyClass49.anInt1111 -= DummyClass8.anInt4021 + (
             (-var2 + DummyClass49.anInt1111) * AbstractFileRequest.anInt3631 / 1000);
           if (var2 > DummyClass49.anInt1111) {
             DummyClass49.anInt1111 = var2;
@@ -133,11 +133,11 @@ public final class ClientScriptCall extends Node {
         }
       }
 
-      var2 = SomethingAudio.anInt1996 * 128 - -64;
+      var2 = SomethingAudio.anInt1996 * 128 + 64;
       var1 = Mouse.anInt1923 * 128 + 64;
       var3 = BufferData.method1736(GameWorldSomething.currentPlane, 1, var1, var2)
-        + -SpotAnimationConfig.anInt529;
-      int var5 = var3 + -EnumStringFetcher.anInt2162;
+        - SpotAnimationConfig.anInt529;
+      int var5 = var3 - EnumStringFetcher.anInt2162;
       int var6 = -DummyClass49.anInt1111 + var2;
       int var4 = -NPC.anInt3995 + var1;
       int var7 = (int) Math.sqrt(var4 * var4 + var6 * var6);

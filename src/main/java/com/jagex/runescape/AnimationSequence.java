@@ -56,7 +56,7 @@ public final class AnimationSequence {
       int var6 ) {
     int var7 = this.anIntArray1869[var2];
       var2 = this.anIntArray1851[var2];
-      AnimationSomething var8 = AreaSoundEffect.method133(var2 >> 16, var1 + -19749);
+      AnimationSomething var8 = AreaSoundEffect.method133(var2 >> 16, var1 - 19749);
       var2 &= '\uffff';
       if (var8 == null) {
         return var4.method1890(true, true, true);
@@ -200,7 +200,7 @@ public final class AnimationSequence {
         var17.method1880(var8, var7, var9, var3, var4 - 1, var6,
             this.aBoolean1848);
         if (var10 != null) {
-          var17.method1880(var10, var13, var11, var14, var4 + -1, var6,
+          var17.method1880(var10, var13, var11, var14, var4 - 1, var6,
               this.aBoolean1848);
         }
 
@@ -213,7 +213,7 @@ public final class AnimationSequence {
       int var6 ) {
     int var7 = this.anIntArray1869[var2];
       var2 = this.anIntArray1851[var2];
-      AnimationSomething var8 = AreaSoundEffect.method133(var2 >> 16, var6 + -3);
+      AnimationSomething var8 = AreaSoundEffect.method133(var2 >> 16, var6 - 3);
       var2 &= '\uffff';
       if (var8 == null) {
         return var5.method1894(true, true, true);
@@ -223,7 +223,7 @@ public final class AnimationSequence {
         if ((this.tween || MonoChromaticImageBuffer.tweening) && (var1 != -1)
           && (var1 < this.anIntArray1851.length)) {
           var1 = this.anIntArray1851[var1];
-          var9 = AreaSoundEffect.method133(var1 >> 16, var6 + -3);
+          var9 = AreaSoundEffect.method133(var1 >> 16, var6 - 3);
           var1 &= '\uffff';
         }
 
@@ -257,7 +257,7 @@ public final class AnimationSequence {
           var10.rotateQuarterY();
         }
 
-        var10.method1880(var8, var2, var9, var1, var3 + -1, var7,
+        var10.method1880(var8, var2, var9, var1, var3 - 1, var7,
             this.aBoolean1848);
         if (this.aBoolean1848 && GlRenderer.useOpenGlRenderer) {
           if ((var4 == 1)) {
@@ -331,7 +331,7 @@ public final class AnimationSequence {
               !this.aBoolean1848);
         }
 
-        var10.method1880(var7, var3, var9, var1, var2 + -1, var6,
+        var10.method1880(var7, var3, var9, var1, var2 - 1, var6,
             this.aBoolean1848);
         return var10;
       }
@@ -439,7 +439,7 @@ public final class AnimationSequence {
 
   public static SomethingGl0 method2052(HashTable var0, boolean var1, FloorOverlay var2) {
     long var3 =
-        ((var2.anInt2095 - -1 << 16) + var2.anInt2090) + (((long) var2.anInt2100 << 56) - -(
+        ((var2.anInt2095 + 1 << 16) + var2.anInt2090) + (((long) var2.anInt2100 << 56) + (
           (long) var2.anInt2094 << 32));
       if (var1) {
         AnimationSequence.aClass94_1863 = null;
@@ -630,13 +630,13 @@ public final class AnimationSequence {
       }
 
       Something3d.anInt3012 = 0;
-      TextureSampler19.anInt3216 = (int) (Math.random() * 100.0D) + -50;
+      TextureSampler19.anInt3216 = (int) (Math.random() * 100.0D) - 50;
       DummyClass38.anInt733 = 0;
       SpotAnimationConfig.anInt531 = 2047 & (int) (Math.random() * 20.0D) - 10;
       DummyClass43.anInt909 = -1;
       DummyClass13.anInt2022 = 0;
       DummyClass12.minimapMode = 0;
-      DummyInputStream.anInt42 = (int) (110.0D * Math.random()) + -55;
+      DummyInputStream.anInt42 = (int) (110.0D * Math.random()) - 55;
       SceneNode.aBoolean1837 = false;
       Something3d2.anInt3020 = -20 + (int) (30.0D * Math.random());
       SomethingLight0.anInt1552 = 0;

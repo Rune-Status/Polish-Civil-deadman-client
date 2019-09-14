@@ -38,28 +38,28 @@ public final class SomethingOtherWorldMap extends Node {
       if (GlRenderer.useOpenGlRenderer || var1) {
         var3 = GroundItem.viewHeight;
         int var4 = var3 * 956 / 503;
-        DummyClass59.titlebackground.draw((DummyClass30.viewWidth + -var4) / 2, 0, var4, var3);
+        DummyClass59.titlebackground.draw((DummyClass30.viewWidth - var4) / 2, 0, var4, var3);
         AnimationSequence.logoSprite.draw(
           -(AnimationSequence.logoSprite.width / 2) + DummyClass30.viewWidth / 2, 18);
       }
 
       var2.draw(SceneSomething.aClass94_485, DummyClass30.viewWidth / 2,
         GroundItem.viewHeight / 2 - 26, 16777215, -1);
-      var3 = GroundItem.viewHeight / 2 + -18;
+      var3 = GroundItem.viewHeight / 2 - 18;
       if (GlRenderer.useOpenGlRenderer) {
         GlUtils
             .drawQuad(DummyClass30.viewWidth / 2 - 152, var3, 304, 34, 9179409);
-        GlUtils.drawQuad(-151 + DummyClass30.viewWidth / 2, var3 - -1, 302, 32, 0);
+        GlUtils.drawQuad(-151 + DummyClass30.viewWidth / 2, var3 + 1, 302, 32, 0);
         GlUtils.fillQuad(DummyClass30.viewWidth / 2 - 150, var3 + 2,
           ClientScript.loadingPercent * 3, 30, 9179409);
-        GlUtils.fillQuad(DummyClass30.viewWidth / 2 + -150 - -(3 * ClientScript.loadingPercent),
-          2 + var3, 300 + -(3 * ClientScript.loadingPercent), 30, 0);
+        GlUtils.fillQuad(DummyClass30.viewWidth / 2 - 150 + (3 * ClientScript.loadingPercent),
+          2 + var3, 300 - (3 * ClientScript.loadingPercent), 30, 0);
       } else {
-        DummyClass47.method1311(DummyClass30.viewWidth / 2 + -152, var3, 304, 34, 9179409);
+        DummyClass47.method1311(DummyClass30.viewWidth / 2 - 152, var3, 304, 34, 9179409);
         DummyClass47.method1311(-151 + DummyClass30.viewWidth / 2, var3 + 1, 302, 32, 0);
-        DummyClass47.method1323(DummyClass30.viewWidth / 2 + -150, var3 + 2,
+        DummyClass47.method1323(DummyClass30.viewWidth / 2 - 150, var3 + 2,
           ClientScript.loadingPercent * 3, 30, 9179409);
-        DummyClass47.method1323(3 * ClientScript.loadingPercent + -150 + DummyClass30.viewWidth / 2,
+        DummyClass47.method1323(3 * ClientScript.loadingPercent - 150 + DummyClass30.viewWidth / 2,
           2 + var3, -(3 * ClientScript.loadingPercent) + 300, 30, 0);
       }
 
@@ -132,9 +132,9 @@ public final class SomethingOtherWorldMap extends Node {
 
   public static int method408(int var0, byte var1, int var2, int[][] var3, int var4, int var5) {
     int var6 = var0 * var3[1 + var4][var2] + (128 - var0) * var3[var4][var2] >> 7;
-      int var7 = var3[var4][1 + var2] * (-var0 + 128) + var3[var4 - -1][var2 - -1] * var0 >> 7;
+      int var7 = var3[var4][1 + var2] * (-var0 + 128) + var3[var4 + 1][var2 + 1] * var0 >> 7;
       int var8 = -121 / ((var1 - 5) / 46);
-      return var6 * (128 + -var5) - -(var5 * var7) >> 7;
+      return var6 * (128 - var5) + (var5 * var7) >> 7;
   }
 
 }

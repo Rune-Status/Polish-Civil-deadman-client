@@ -63,7 +63,7 @@ public final class DummyClass31 {
         int var15;
         if (var7 + var12 <= 104) {
           var14 = var7 + (var12 >> 1);
-          var15 = var7 - -(1 + var12 >> 1);
+          var15 = var7 + (1 + var12 >> 1);
         } else {
           var15 = 1 + var7;
           var14 = var7;
@@ -73,7 +73,7 @@ public final class DummyClass31 {
         int var16;
         if (((var13 + var9) > 104)) {
           var16 = var9;
-          var17 = var9 - -1;
+          var17 = var9 + 1;
         } else {
           var16 = (var13 >> 1) + var9;
           var17 = var9 + (var13 + 1 >> 1);
@@ -196,10 +196,10 @@ public final class DummyClass31 {
 
                       if (var11.aBoolean1542) {
                         DummyClass36.anIntArrayArrayArray2609[var2][var7
-                            - -1][var9] =
+                            + 1][var9] =
                             TextureSampler3.method308(
                                 DummyClass36.anIntArrayArrayArray2609[var2][var7
-                                    - -1][var9], 1);
+                                    + 1][var9], 1);
                       }
                     } else {
                       if ((var10 == 3)) {
@@ -219,8 +219,8 @@ public final class DummyClass31 {
                     }
                   } else {
                     if (var11.aBoolean1525) {
-                      MouseRecorder.aByteArrayArrayArray1014[var2][var7][var9 - -1] = 50;
-                      MouseRecorder.aByteArrayArrayArray1014[var2][var7 - -1][var9 + 1] = 50;
+                      MouseRecorder.aByteArrayArrayArray1014[var2][var7][var9 + 1] = 50;
+                      MouseRecorder.aByteArrayArrayArray1014[var2][var7 + 1][var9 + 1] = 50;
                     }
 
                     if (var11.aBoolean1542) {
@@ -264,7 +264,7 @@ public final class DummyClass31 {
                         + 1] = 50;
                   } else {
                     if ((var10 == 1)) {
-                      MouseRecorder.aByteArrayArrayArray1014[var2][var7 - -1][1
+                      MouseRecorder.aByteArrayArrayArray1014[var2][var7 + 1][1
                           + var9] = 50;
                     } else {
                       if ((var10 == 2)) {
@@ -333,15 +333,15 @@ public final class DummyClass31 {
                     } else {
                       if ((var10 == 1)) {
                         DummyClass36.anIntArrayArrayArray2609[var2][var7][var9
-                            - -1] =
+                            + 1] =
                             TextureSampler3.method308(
                                 DummyClass36.anIntArrayArrayArray2609[var2][var7][
-                                    var9 - -1], 2);
+                                    var9 + 1], 2);
                         DummyClass36.anIntArrayArrayArray2609[var2][var7
-                            - -1][var9] =
+                            + 1][var9] =
                             TextureSampler3.method308(
                                 DummyClass36.anIntArrayArrayArray2609[var2][var7
-                                    - -1][var9], 1);
+                                    + 1][var9], 1);
                       } else {
                         if ((var10 == 2)) {
                           DummyClass36.anIntArrayArrayArray2609[var2][1
@@ -465,7 +465,7 @@ public final class DummyClass31 {
                         if (GlRenderer.useOpenGlRenderer && var26) {
                           assert var47 != null;
                           DummyClass16.method2051(var47.shadow,
-                              var20 + -(RenderAnimation.anIntArray356[var10]
+                              var20 - (RenderAnimation.anIntArray356[var10]
                                   * 8), var22,
                               -(AudioStreamEncoder3.anIntArray3491[var10] * 8)
                                   + var21);
@@ -530,12 +530,12 @@ public final class DummyClass31 {
                             var43 * DummyClass4.anIntArray3007[var10], var24);
                       } else {
                         if (var6 == 7) {
-                          int var40 = 3 & var10 - -2;
+                          int var40 = 3 & var10 + 2;
                           if ((var11.anInt1531 == -1)
                               && var11.anIntArray1524 == null
                               && !var11.aBoolean1510) {
                             SceneShadowMap var41 =
-                                var11.method1696(var40 - -4, var20, var18, 4,
+                                var11.method1696(var40 + 4, var20, var18, 4,
                                     var19, var23, var1,
                                     null, (byte) -39, var26, var21);
                             if (GlRenderer.useOpenGlRenderer && var26) {
@@ -583,7 +583,7 @@ public final class DummyClass31 {
                               if (GlRenderer.useOpenGlRenderer && var26) {
                                 assert var35 != null;
                                 DummyClass16
-                                    .method2051(var35.shadow, var20 + -var33,
+                                    .method2051(var35.shadow, var20 - var33,
                                         var22,
                                         -var34 + var21);
                               }
@@ -591,7 +591,7 @@ public final class DummyClass31 {
                               assert var35 != null;
                               var39 = var35.node;
                               var35 =
-                                  var11.method1696(var32 - -4, var20, var18, 4,
+                                  var11.method1696(var32 + 4, var20, var18, 4,
                                       var19, var23, var1,
                                       null, (byte) -101, var26, var21);
                               if (GlRenderer.useOpenGlRenderer && var26) {
@@ -668,7 +668,7 @@ public final class DummyClass31 {
                 assert var28 != null;
                 var27 = var28.node;
               } else {
-                var27 = new GameObject(var5, 10, var6 == 11 ? 4 - -var10 : var10, var0, var7, var9,
+                var27 = new GameObject(var5, 10, var6 == 11 ? 4 + var10 : var10, var0, var7, var9,
                   var11.anInt1531, var11.aBoolean1492, null);
               }
 
@@ -687,7 +687,7 @@ public final class DummyClass31 {
                   for (int var30 = 0; var30 <= var12; ++var30) {
                     for (int var31 = 0; var13 >= var31; ++var31) {
                       if ((MouseRecorder.aByteArrayArrayArray1014[var2][var7 + var30][var31 + var9] < var29)) {
-                        MouseRecorder.aByteArrayArrayArray1014[var2][var7 - -var30][var9 - -var31] =
+                        MouseRecorder.aByteArrayArrayArray1014[var2][var7 + var30][var9 + var31] =
                           (byte) var29;
                       }
                     }
@@ -722,7 +722,7 @@ public final class DummyClass31 {
             TextureSampler39.method276(var2, var7, var9, var19, var27, var24,
               var11.aBoolean1502);
             if (var11.anInt1538 == 1 && var4 != null) {
-              var4.method1503(var7, var9, var8 + -55);
+              var4.method1503(var7, var9, var8 - 55);
             }
 
           }

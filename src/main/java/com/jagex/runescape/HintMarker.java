@@ -36,7 +36,7 @@ public final class HintMarker {
           int var7 = var1.readUnsignedByte();
           int var8 = var1.readUnsignedByte();
           int var9 = -TextureSampler37.anInt3256 + 64 * var7;
-          int var10 = -(var8 * 64) - (-MapScene.anInt65 - -1) + DummyClass58.anInt1460;
+          int var10 = -(var8 * 64) - (-MapScene.anInt65 + 1) + DummyClass58.anInt1460;
           int var11;
           int var12;
           if ((var9 >= 0) && -63 + var10 >= 0 && DummyClass30.anInt455 > var9 + 63
@@ -51,8 +51,8 @@ public final class HintMarker {
               }
 
               for (int var14 = 0; (var14 < 64); ++var14) {
-                if (!var18 || ((8 * var5) <= var13) && (var13 < (8 * var5 - -8)) && (var14 >= (8
-                  * var6)) && var14 < var6 * 8 - -8) {
+                if (!var18 || ((8 * var5) <= var13) && (var13 < (8 * var5 + 8)) && (var14 >= (8
+                  * var6)) && var14 < var6 * 8 + 8) {
                   int var15 = var1.readUnsignedByte();
                   if (var15 != 0) {
                     int var2;

@@ -28,7 +28,7 @@ public final class TextureSampler32 extends AbstractTextureSampler {
       if (this.monoChromaticImageCache.aBoolean1580) {
         int var8 = DummyClass53.anInt1343 * this.anInt3350 >> 12;
         int[] var9 = this
-            .method152(0, TriChromaticImageBuffer.anInt2487 & var1 + -1, 32755);
+            .method152(0, TriChromaticImageBuffer.anInt2487 & var1 - 1, 32755);
         int[] var10 = this.method152(0, var1, 32755);
         int[] var11 = this
             .method152(0, 1 + var1 & TriChromaticImageBuffer.anInt2487, 32755);
@@ -56,7 +56,7 @@ public final class TextureSampler32 extends AbstractTextureSampler {
           }
 
           int var17 =
-            TriChromaticImageCache.aByteArray1364[(var16 * (var16 - -1) >> 1) + var15] & 255;
+            TriChromaticImageCache.aByteArray1364[(var16 * (var16 + 1) >> 1) + var15] & 255;
           int var6 = var13 * var17 >> 8;
           int var5 = var17 * var14 >> 8;
           var6 = var6 * this.anIntArray3348[1] >> 12;
@@ -145,12 +145,12 @@ public final class TextureSampler32 extends AbstractTextureSampler {
                 && var3.anInt2829 >= 0 && (var3.anInt2829 < 13312)) {
                 projectile.method2024(var3.anInt2829, 1, AbstractGameWorld.updateCycle,
                   BufferData.method1736(projectile.anInt2907, 1, var3.anInt2819, var3.anInt2829)
-                    + -projectile.anInt2903, var3.anInt2819);
+                    - projectile.anInt2903, var3.anInt2819);
               }
             }
 
             if (projectile.targetId < 0) {
-              int var4 = -1 + -projectile.targetId;
+              int var4 = -1 - projectile.targetId;
               Player player;
               if (WidgetAccess.localPlayerId == var4) {
                 player = TextureCache.localPlayer;

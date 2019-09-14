@@ -70,7 +70,7 @@ public final class SceneSomething {
         int var28 = var4[var27 + var27];
         int[][] var30 =
             var0 != null && var21 != null && var21[var27] ? var0 : var17;
-        int var29 = var4[var27 + var27 - -1];
+        int var29 = var4[var27 + var27 + 1];
         var26[var27] =
           BufferData.method1734(var25, var13, var22, var23, var0, var30, var7, var18, var24,
             (byte) -116, var19, false, var3, var9, var5, var28, var12, var29);

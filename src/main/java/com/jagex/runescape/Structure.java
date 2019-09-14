@@ -127,14 +127,14 @@ public final class Structure extends SubNode {
         var3.anInt168 = var3.anInt177;
       } else {
         if ((var3.aByte304 == 1)) {
-          var3.anInt168 = var2 + -var3.anInt177;
+          var3.anInt168 = var2 - var3.anInt177;
         } else {
           if ((var3.aByte304 == 2)) {
             var3.anInt168 = var3.anInt177 * var2 >> 14;
           } else if (var3.aByte304 == 3) {
             if ((var3.anInt187 == 2)) {
               var3.anInt168 =
-                  var3.anInt177 * 32 - -((var3.anInt177 - 1) * var3.anInt285);
+                  var3.anInt177 * 32 + ((var3.anInt177 - 1) * var3.anInt285);
             } else {
               if (var3.anInt187 == 7) {
                 var3.anInt168 =
@@ -153,7 +153,7 @@ public final class Structure extends SubNode {
         var3.anInt193 = var0 * var3.anInt244 >> 14;
       } else if (var3.aByte241 == 3) {
         if ((var3.anInt187 == 2)) {
-          var3.anInt193 = (var3.anInt244 + -1) * var3.anInt290 + var3.anInt244 * 32;
+          var3.anInt193 = (var3.anInt244 - 1) * var3.anInt290 + var3.anInt244 * 32;
         } else if ((var3.anInt187 == 7)) {
           var3.anInt193 = var3.anInt244 * 12 + (-1 + var3.anInt244) * var3.anInt290;
         }

@@ -153,9 +153,9 @@ public final class DummyOutputStream extends OutputStream {
         var2.anInt2842 = -1;
         var2.anInt2800 = 0;
         var2.anInt2790 = 0;
-        var2.anInt2819 = 128 * var2.waypointsX[0] - -(64 * var2.getSize());
+        var2.anInt2819 = 128 * var2.waypointsX[0] + (64 * var2.getSize());
         var2.anInt2829 = var2.waypointsY[0] * 128 + var2.getSize() * 64;
-        var2.method1973(var1 + -2395);
+        var2.method1973(var1 - 2395);
       }
 
       if (var1 == 2279) {

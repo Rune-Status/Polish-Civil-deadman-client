@@ -131,7 +131,7 @@ public final class TextureSampler23 extends AbstractTextureSampler {
   }
 
   public static void method247(byte var0) {
-    int var1 = 105 % ((var0 - -39) / 41);
+    int var1 = 105 % ((var0 + 39) / 41);
       if (StillGraphic.aBoolean2713) {
         AnimationSequence.logoSprite = null;
         StillGraphic.aBoolean2713 = false;

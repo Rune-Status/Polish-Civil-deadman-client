@@ -21,7 +21,7 @@ public final class TextureSampler9 extends AbstractTextureSampler {
       if (this.monoChromaticImageCache.aBoolean1580) {
         int[] var5 =
             this.method152(0, !this.aBoolean3104
-                  ? var1 : TriChromaticImageBuffer.anInt2487 + -var1,
+                  ? var1 : TriChromaticImageBuffer.anInt2487 - var1,
             32755);
         if (this.aBoolean3100) {
           for (int var6 = 0; var6 < SomethingLight0.anInt1559; ++var6) {
@@ -70,7 +70,7 @@ public final class TextureSampler9 extends AbstractTextureSampler {
         int var11;
         if (this.aBoolean3100) {
           for (var11 = 0; SomethingLight0.anInt1559 > var11; ++var11) {
-            var8[var11] = var5[RenderAnimation.anInt396 + -var11];
+            var8[var11] = var5[RenderAnimation.anInt396 - var11];
             var9[var11] = var6[-var11 + RenderAnimation.anInt396];
             var10[var11] = var7[RenderAnimation.anInt396 - var11];
           }
@@ -94,9 +94,9 @@ public final class TextureSampler9 extends AbstractTextureSampler {
           ClientScriptEnum.anInt3660 = 0;
           if (DummyClass55.aBoolean1419 && GameObjectConfig.aBooleanArray1490[81]
             && (TextureSampler25.amountContextActions > 2)) {
-            GameBuffer.method806(2597, TextureSampler25.amountContextActions + -2);
+            GameBuffer.method806(2597, TextureSampler25.amountContextActions - 2);
           } else {
-            GameBuffer.method806(2597, TextureSampler25.amountContextActions + -1);
+            GameBuffer.method806(2597, TextureSampler25.amountContextActions - 1);
           }
         }
       } else if (NpcConfiguration.anInt1297 == DummyClass5.anInt2993
@@ -191,7 +191,7 @@ public final class TextureSampler9 extends AbstractTextureSampler {
             var11 += 39;
           }
 
-          var9[-1 + -var10 + var8] = (byte) (var11 + 48);
+          var9[-1 - var10 + var8] = (byte) (var11 + 48);
         }
 
         GameString var13 = new GameString();

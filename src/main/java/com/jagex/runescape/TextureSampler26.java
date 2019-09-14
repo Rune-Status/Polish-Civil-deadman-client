@@ -52,8 +52,8 @@ public final class TextureSampler26 extends AbstractTextureSampler {
   }
 
   public static void method195(int var0) {
-    int var1 = (NPC.anInt3995 >> 10) - -(WorldMapLabel.anInt1716 >> 3);
-      int var2 = (DummyClass49.anInt1111 >> 10) - -(ProceduralTexture.anInt1152 >> 3);
+    int var1 = (NPC.anInt3995 >> 10) + (WorldMapLabel.anInt1716 >> 3);
+      int var2 = (DummyClass49.anInt1111 >> 10) + (ProceduralTexture.anInt1152 >> 3);
       if (var0 == 20479) {
         byte var3 = 0;
         byte var4 = 8;
@@ -76,7 +76,7 @@ public final class TextureSampler26 extends AbstractTextureSampler {
         int var7;
         for (var7 = (-6 + var1) / 8; (var7 <= ((6 + var1) / 8)); ++var7) {
           for (int var8 = (-6 + var2) / 8; (((var2 + 6) / 8) >= var8); ++var8) {
-            int var9 = (var7 << 8) - -var8;
+            int var9 = (var7 << 8) + var8;
             AudioStreamEncoder3.regionHashes[var11] = var9;
             GameClient.mapFileIds[var11] = TextureSampler26.maps.getFileId(RenderAnimation.concat(new GameString[] {
               GameBuffer.MAP_PREFIX, SomethingScene.toString(var7), TextureSampler31.UNDERSCORE,
@@ -163,7 +163,7 @@ public final class TextureSampler26 extends AbstractTextureSampler {
         if (var5 != null) {
           int var6 = -WorldMapLabel.anInt1716 + 64 * (AudioStreamEncoder3.regionHashes[var4] >> 8);
           int var7 =
-            (AudioStreamEncoder3.regionHashes[var4] & 255) * 64 + -ProceduralTexture.anInt1152;
+            (AudioStreamEncoder3.regionHashes[var4] & 255) * 64 - ProceduralTexture.anInt1152;
           DummyClass43.method1194(var1 + 16239);
           SomethingVolume15.method374(var6, var0, var5, var7, 0, BlockConfig.collisionMaps);
         }

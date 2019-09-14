@@ -32,11 +32,11 @@ public final class SomethingInScenePacket202 extends Node {
           if (DummyClass25.aClass131_1624.method1787(var9, (byte) -124)) {
             int var10 =
               -TextureSampler37.anInt3256 + DummyClass25.aClass131_1624.aShortArray1727[var9];
-            int var11 = MapScene.anInt65 - (DummyClass25.aClass131_1624.aShortArray1718[var9] - -1
+            int var11 = MapScene.anInt65 - (DummyClass25.aClass131_1624.aShortArray1718[var9] + 1
               - DummyClass58.anInt1460);
             int var12 = var1 + (-var1 + var4) * (var10 - var3) / (-var3 + var7);
             int var14 = DummyClass25.aClass131_1624.method1791(var9, 8);
-            int var13 = (var8 + -var2) * (var11 - var6) / (var5 + -var6) + var2;
+            int var13 = (var8 - var2) * (var11 - var6) / (var5 - var6) + var2;
             int var15 = 16777215;
             SomethingFont var16 = null;
             if (var14 == 0) {
@@ -102,7 +102,7 @@ public final class SomethingInScenePacket202 extends Node {
               int var17 = AbstractTextureSampler.aClass3_Sub28_Sub17_2379.method691(
                 DummyClass25.aClass131_1624.aClass94Array1721[var9], null,
                 DirectImageProducer.aClass94Array2977);
-              var13 -= var16.method998() * (var17 + -1) / 2;
+              var13 -= var16.method998() * (var17 - 1) / 2;
               var13 += var16.method1006() / 2;
 
               for (int var18 = 0; var17 > var18; ++var18) {
@@ -145,7 +145,7 @@ public final class SomethingInScenePacket202 extends Node {
       SomethingInScenePacket202.aClass94_2280 = null;
       SomethingInScenePacket202.aClass94_2267 = null;
       SomethingInScenePacket202.aClass94_2269 = null;
-      int var1 = -100 % ((var0 - -43) / 46);
+      int var1 = -100 % ((var0 + 43) / 46);
   }
 
   public static void method114(int var0, int var1, int var2, int var3, int var4, int var5, int var6,
@@ -165,12 +165,12 @@ public final class SomethingInScenePacket202 extends Node {
         int var15 = var3 * 3;
         int var16 = var4 * 3;
         int var17 = var1 * 3;
-        int var18 = var5 + -var16 + var14 + -var9;
-        int var19 = -var7 + var6 - (var17 + -var15);
-        int var20 = var12 + -var14 + -var14 + var16;
-        int var21 = var13 + -var15 + var17 + -var15;
+        int var18 = var5 - var16 + var14 - var9;
+        int var19 = -var7 + var6 - (var17 - var15);
+        int var20 = var12 - var14 - var14 + var16;
+        int var21 = var13 - var15 + var17 - var15;
         int var22 = -var12 + var14;
-        int var23 = var15 + -var13;
+        int var23 = var15 - var13;
 
         for (int var24 = 128; (var24 <= 4096); var24 += 128) {
           int var25 = var24 * var24 >> 12;
@@ -181,7 +181,7 @@ public final class SomethingInScenePacket202 extends Node {
           int var30 = var25 * var21;
           int var31 = var22 * var24;
           int var32 = var23 * var24;
-          int var33 = (var31 + (var27 - -var29) >> 12) + var9;
+          int var33 = (var31 + (var27 + var29) >> 12) + var9;
           int var34 = var7 + (var32 + var28 + var30 >> 12);
           SceneNode.method1869((byte) -119, var2, var34, var11, var33, var10);
           var10 = var33;
@@ -255,8 +255,8 @@ public final class SomethingInScenePacket202 extends Node {
             ((1 & var5) != 0 || ((var4.anInt2819 & 127) == 0) && ((127 & var4.anInt2829) == 0)) && (
               ((1 & var5) != 1) || ((var4.anInt2819 & 127) == 64) && ((127
                   & var4.anInt2829) == 64))) {
-            var6 = var4.anInt2819 + -(var5 * 64) >> 7;
-            var7 = var4.anInt2829 + -(var5 * 64) >> 7;
+            var6 = var4.anInt2819 - (var5 * 64) >> 7;
+            var7 = var4.anInt2829 - (var5 * 64) >> 7;
             var8 = var4.getSize() + var6;
             if (var8 > 104) {
               var8 = 104;
@@ -321,7 +321,7 @@ public final class SomethingInScenePacket202 extends Node {
               ((1 & var7) == 0) && ((127 & var4.anInt2819) == 0) && (var4.anInt2829 & 127) == 0
                 || (1 & var7) == 1 && ((127 & var4.anInt2819) == 64)
                 && (var4.anInt2829 & 127) == 0) {
-              var8 = var4.anInt2819 + -(64 * var7) >> 7;
+              var8 = var4.anInt2819 - (64 * var7) >> 7;
               var10 = var7 + var8;
               var9 = -(var7 * 64) + var4.anInt2829 >> 7;
               if (var10 > 104) {

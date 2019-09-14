@@ -53,7 +53,7 @@ public final class DummyClass1 {
 
         if ((var1.anInt2786 != 0 || var1.anInt2762 != 0) && (var1.anInt2816 == 0
           || (var1.anInt2824 > 0))) {
-          var9 = var1.anInt2819 + -(
+          var9 = var1.anInt2819 - (
             (-WorldMapLabel.anInt1716 + (var1.anInt2786 - WorldMapLabel.anInt1716)) * 64);
           var4 =
             -((-ProceduralTexture.anInt1152 + (var1.anInt2762 - ProceduralTexture.anInt1152)) * 64)
@@ -139,7 +139,7 @@ public final class DummyClass1 {
                   var1.anInt2803 = -var7 + var5;
                 }
               } else if (var1.anInt2821 < 0 && var6 <= -var5 + 65536
-                  && 65536 + -var5 + -var6 < '\u8000') {
+                  && 65536 - var5 - var6 < '\u8000') {
                 var1.anInt2803 = (-var5 + 65536) / 2;
                 var1.aBoolean2769 = true;
                 var7 = var2.anInt357 * var2.anInt357 / (var2.anInt369 * 2);

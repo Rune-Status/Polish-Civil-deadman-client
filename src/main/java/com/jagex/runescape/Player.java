@@ -43,7 +43,7 @@ public final class Player extends Mobile {
       this.method1976(1 + (var3 >> 3 & 7), 2);
       this.titleId = 3 & var3 >> 6;
       this.anInt2819 += (-var7 + this.getSize()) * 64;
-      this.anInt2829 += 64 * (this.getSize() + -var7);
+      this.anInt2829 += 64 * (this.getSize() - var7);
       this.anInt3972 = buffer.readByte();
       this.anInt3955 = buffer.readByte();
       this.anInt3956 = 0;
@@ -58,7 +58,7 @@ public final class Player extends Mobile {
           var9[var10] = 0;
         } else {
           var12 = buffer.readUnsignedByte();
-          var13 = (var11 << 8) - -var12;
+          var13 = (var11 << 8) + var12;
           if ((var10 == 0) && (var13 == 65535)) {
             var8 = buffer.readUnsignedShort();
             this.anInt3956 = buffer.readUnsignedByte();
@@ -136,7 +136,7 @@ public final class Player extends Mobile {
           this.renderAnimationId);
       if ((var14 != var8)) {
         this.anInt2819 = 128 * this.waypointsX[0] + this.getSize() * 64;
-        this.anInt2829 = 128 * this.waypointsY[0] - -(64 * this.getSize());
+        this.anInt2829 = 128 * this.waypointsY[0] + (64 * this.getSize());
       }
 
       if (this.aClass127_Sub1_2801 != null) {
@@ -147,7 +147,7 @@ public final class Player extends Mobile {
   private void draw(DummyClass0 var1, int var2, AbstractModel var3, int var4, int var5,
                           int var6, int var7, int var8, int var9, int var10, int var11, int var12,
                           int var13, int var14, int var15) {
-    int var16 = var4 * var4 - -(var2 * var2);
+    int var16 = var4 * var4 + (var2 * var2);
       if ((var16 >= 16) && (var16 <= 360000)) {
         int var17 = (int) (325.949D * Math.atan2(var4, var2)) & var7;
         AbstractModel var18 =
@@ -275,7 +275,7 @@ public final class Player extends Mobile {
           }
 
           if (TextureCache.localPlayer == this) {
-            for (var17 = GameException.aClass96Array2114.length + -1;
+            for (var17 = GameException.aClass96Array2114.length - 1;
                 (var17 >= 0); --var17) {
               HintMarker var27 = GameException.aClass96Array2114[var17];
               if (var27 != null && (var27.anInt1355 != -1)) {
@@ -293,7 +293,7 @@ public final class Player extends Mobile {
                 }
 
                 if (var27.anInt1360 == 2) {
-                  int var29 = 4 * (-WorldMapLabel.anInt1716 + var27.anInt1356) + 2 + -(
+                  int var29 = 4 * (-WorldMapLabel.anInt1716 + var27.anInt1356) + 2 - (
                     TextureCache.localPlayer.anInt2819 / 32);
                   var20 = 2 + (4 * (var27.anInt1347 - ProceduralTexture.anInt1152)
                     - TextureCache.localPlayer.anInt2829 / 32);
@@ -306,7 +306,7 @@ public final class Player extends Mobile {
                   Player var28 = TextureSampler0.players[var27.anInt1359];
                   if (var28 != null) {
                     var20 = -(TextureCache.localPlayer.anInt2819 / 32) + var28.anInt2819 / 32;
-                    var21 = var28.anInt2829 / 32 + -(TextureCache.localPlayer.anInt2829 / 32);
+                    var21 = var28.anInt2829 / 32 - (TextureCache.localPlayer.anInt2829 / 32);
                     this.draw(null, var21, var15, var20, var6, var11, 2047, var1, var8, var5, var4,
                       var2, var27.anInt1355, var3, var7);
                   }
@@ -356,9 +356,9 @@ public final class Player extends Mobile {
                 var25 = (AbstractModel) this.anObject2796;
               }
 
-              var25.method1897(this.anInt2782 + -this.anInt2819, this.anInt2812
-                      + -this.anInt2831,
-                  this.anInt2833 + -this.anInt2829);
+              var25.method1897(this.anInt2782 - this.anInt2819, this.anInt2812
+                      - this.anInt2831,
+                  this.anInt2833 - this.anInt2829);
               if ((this.anInt2806 == 512)) {
                 var25.method1900();
               } else {

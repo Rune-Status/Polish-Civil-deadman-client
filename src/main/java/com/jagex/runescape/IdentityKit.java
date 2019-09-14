@@ -234,7 +234,7 @@ public final class IdentityKit {
               break;
             }
 
-            var9 += var11 + -1;
+            var9 += var11 - 1;
             int var12 = 63 & var9;
             int var13 = (4088 & var9) >> 6;
             int var16 = var2 + var12;
@@ -329,7 +329,7 @@ public final class IdentityKit {
     int var5 = -44 / ((24 - var1) / 59);
       int var6 = 0;
       TextureSampler18.method282(DummyClass35.anIntArrayArray663[var4], -var2 + var0, 100,
-        var0 - -var2, var3);
+        var0 + var2, var3);
       int var8 = -var2;
       int var7 = var2;
       int var9 = -1;
@@ -341,9 +341,9 @@ public final class IdentityKit {
         if (var8 >= 0) {
           --var7;
           var8 -= var7 << 1;
-          int[] var10 = DummyClass35.anIntArrayArray663[var4 - -var7];
+          int[] var10 = DummyClass35.anIntArrayArray663[var4 + var7];
           int[] var11 = DummyClass35.anIntArrayArray663[var4 - var7];
-          int var12 = var0 - -var6;
+          int var12 = var0 + var6;
           int var13 = -var6 + var0;
           TextureSampler18.method282(var10, var13, 115, var12, var3);
           TextureSampler18.method282(var11, var13, 114, var12, var3);
@@ -351,7 +351,7 @@ public final class IdentityKit {
 
         int var16 = var7 + var0;
         int var15 = -var7 + var0;
-        int[] var17 = DummyClass35.anIntArrayArray663[var4 - -var6];
+        int[] var17 = DummyClass35.anIntArrayArray663[var4 + var6];
         int[] var18 = DummyClass35.anIntArrayArray663[-var6 + var4];
         TextureSampler18.method282(var17, var15, -61, var16, var3);
         TextureSampler18.method282(var18, var15, -93, var16, var3);
@@ -368,7 +368,7 @@ public final class IdentityKit {
         GameString var4 = SomethingQuickChat2.method531((byte) 94);
         if (var0 == null) {
           int var5 =
-            FloorOverlay.aClass3_Sub28_Sub17_2096.method683(var4, 4 + var3, var2 - -15, 16777215, 0,
+            FloorOverlay.aClass3_Sub28_Sub17_2096.method683(var4, 4 + var3, var2 + 15, 16777215, 0,
               TextureSampler27.random, DummyClass36.anInt2618);
           AbstractSomethingTexture.method1340(4 + var3,
             FloorOverlay.aClass3_Sub28_Sub17_2096.method682(var4) + var5, (byte) -40, var2, 15);

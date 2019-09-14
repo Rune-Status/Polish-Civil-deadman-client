@@ -286,7 +286,7 @@ public final class RenderAnimation {
               TextureCache.localPlayer == var0, var0.anInt2813);
           }
 
-          var0.anInt2793 = var0.anInt2813 - -1;
+          var0.anInt2793 = var0.anInt2813 + 1;
           if ((var0.anInt2793 >= var2.anIntArray1851.length)) {
             var0.anInt2793 = 0;
           }
@@ -324,7 +324,7 @@ public final class RenderAnimation {
               var0.anInt2842 = -1;
             }
 
-            var0.anInt2826 = var0.anInt2805 - -1;
+            var0.anInt2826 = var0.anInt2805 + 1;
             if ((var3.anIntArray1851.length <= var0.anInt2826)) {
               var0.anInt2826 = -1;
             }

@@ -32,13 +32,13 @@ public final class TextureSampler38 extends AbstractTextureSampler {
 
         for (int var8 = 0; this.anInt3447 > var8; ++var8) {
           int var9 = this.anInt3450 > 0 ?
-              this.anInt3444 + -var5 + FloorUnderlay.method1603((byte) -99,
+              this.anInt3444 - var5 + FloorUnderlay.method1603((byte) -99,
                   this.anInt3450, var7) :
               this.anInt3444;
           int var10 = FloorUnderlay.method1603((byte) -96, SomethingLight0.anInt1559, var7);
           var9 = (var9 & 4088) >> 4;
           int var11 = FloorUnderlay.method1603((byte) 62, DummyClass55.anInt1427, var7);
-          int var12 = var10 - -(this.anInt3451 * SomethingTexture1.anIntArray2639[var9] >> 12);
+          int var12 = var10 + (this.anInt3451 * SomethingTexture1.anIntArray2639[var9] >> 12);
           int var13 = var11 + (TextureSampler23.anIntArray3212[var9] * this.anInt3451
               >> 12);
           int var15 = var12 - var10;
@@ -74,7 +74,7 @@ public final class TextureSampler38 extends AbstractTextureSampler {
             }
 
             var18 = -var10 + var12;
-            int var19 = var13 + -var11;
+            int var19 = var13 - var11;
             var17 = var11;
             if ((var19 < 0)) {
               var19 = -var19;

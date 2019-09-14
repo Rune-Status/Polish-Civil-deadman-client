@@ -52,10 +52,10 @@ public class DummyClass7 extends DummyClass6 {
         int var6 = var0.readUnsignedByte();
         int var7 = var0.readUnsignedByte();
         int var9 = -(var7 * 64) - (-MapScene.anInt65 - DummyClass58.anInt1460 + 1);
-        int var8 = var6 * 64 + -TextureSampler37.anInt3256;
+        int var8 = var6 * 64 - TextureSampler37.anInt3256;
         byte var2;
         int var10;
-        if (var8 >= 0 && var9 + -63 >= 0 && ((var8 - -63) < DummyClass30.anInt455)
+        if (var8 >= 0 && var9 - 63 >= 0 && ((var8 + 63) < DummyClass30.anInt455)
           && var9 < DummyClass58.anInt1460) {
           var10 = var8 >> 6;
           int var11 = var9 >> 6;

@@ -73,7 +73,7 @@ public final class DummyClass21 {
 
       if ((var3 < var0)) {
         int var6 = var3;
-        int var5 = (var3 - -var0) / 2;
+        int var5 = (var3 + var0) / 2;
         long var7 = var1[var5];
         var1[var5] = var1[var0];
         var1[var0] = var7;
@@ -97,7 +97,7 @@ public final class DummyClass21 {
         var4[var0] = var4[var6];
         var4[var6] = var9;
         DummyClass21.method1809(-1 + var6, var1, 107, var3, var4);
-        DummyClass21.method1809(var0, var1, 89, var6 - -1, var4);
+        DummyClass21.method1809(var0, var1, 89, var6 + 1, var4);
       }
   }
 

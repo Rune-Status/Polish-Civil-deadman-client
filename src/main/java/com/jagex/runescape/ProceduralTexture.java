@@ -177,9 +177,9 @@ public final class ProceduralTexture {
           }
 
           var22 = GameBuffer.anIntArray3804[var22];
-          var10[var14++] = (var20 << 16) - -(var21 << 8) + var22;
+          var10[var14++] = (var20 << 16) + (var21 << 8) + var22;
           if (var2) {
-            var14 += var3 + -1;
+            var14 += var3 - 1;
           }
         }
       }
@@ -206,7 +206,7 @@ public final class ProceduralTexture {
         int var10;
         for (var10 = 0; this.aClass3_Sub13Array1147.length > var10; ++var10) {
           this.aClass3_Sub13Array1147[var10]
-              .method160(var1, var2, var7 + -8589);
+              .method160(var1, var2, var7 - 8589);
         }
 
         var10 = 0;
@@ -375,7 +375,7 @@ public final class ProceduralTexture {
             Player var10 = (Player) var8;
             if (var10.anInt3972 != -1 || var10.anInt3955 != -1) {
               DummyClass56.method1647((byte) 122, var4 >> 1, var3, var8, var5,
-                var8.method1975(var6 ^ -28716) - -15, var1 >> 1);
+                var8.method1975(var6 ^ -28716) + 15, var1 >> 1);
               if (DummyClass34.anInt590 > -1) {
                 if ((var10.anInt3972 != -1)) {
                   TextureSampler2.aClass3_Sub28_Sub16Array3373[var10.anInt3972].method643(
@@ -399,7 +399,7 @@ public final class ProceduralTexture {
                 if (var13 != null && (var13.anInt1360 == 10)
                   && DummyClass42.anIntArray887[var7] == var13.anInt1359) {
                   DummyClass56.method1647((byte) 122, var4 >> 1, var3, var8, var5,
-                    var8.method1975(var6 ^ -28716) - -15, var1 >> 1);
+                    var8.method1975(var6 ^ -28716) + 15, var1 >> 1);
                   if (DummyClass34.anInt590 > -1) {
                     SomethingIndex150.aClass3_Sub28_Sub16Array2072[var13.anInt1351].method643(
                       var2 - (-DummyClass34.anInt590 + 12),
@@ -427,7 +427,7 @@ public final class ProceduralTexture {
                 var1 >> 1);
               if ((DummyClass34.anInt590 > 0)) {
                 NPC.aClass3_Sub28_Sub16Array3977[var9.anInt1269].method643(
-                  var2 - -DummyClass34.anInt590 - 12, -30 + var0 - -WidgetAccess.anInt2208);
+                  var2 + DummyClass34.anInt590 - 12, -30 + var0 + WidgetAccess.anInt2208);
               }
             }
 
@@ -518,7 +518,7 @@ public final class ProceduralTexture {
               var23.anInt3696 + 10 + var21, var1 >> 1);
             if (DummyClass34.anInt590 > -1) {
               var12 = -(var23.anInt3707 >> 1) + DummyClass34.anInt590 + var2;
-              var29 = WidgetAccess.anInt2208 + var0 + -3;
+              var29 = WidgetAccess.anInt2208 + var0 - 3;
               var23.method643(var12, var29);
               var32 = var23.anInt3707 * var8.anInt2775 / 255;
               var15 = var23.anInt3696;
@@ -531,7 +531,7 @@ public final class ProceduralTexture {
 
               var25.method643(var12, var29);
               if (GlRenderer.useOpenGlRenderer) {
-                GlUtils.clip(var2, var0, var1 + var2, var0 - -var4);
+                GlUtils.clip(var2, var0, var1 + var2, var0 + var4);
               } else {
                 DummyClass47.method1324(var2, var0, var1 + var2, var4 + var0);
               }
@@ -599,7 +599,7 @@ public final class ProceduralTexture {
 
           for (var29 = 0; var7 > var29; ++var29) {
             if (TextureSampler35.anIntArray3337[var29] - TextureSampler35.anIntArray3327[var29]
-              < 2 + var19 && -var21 + var19 < TextureSampler35.anIntArray3337[var29] - -2
+              < 2 + var19 && -var21 + var19 < TextureSampler35.anIntArray3337[var29] + 2
               && -var22 + var18
               < TextureSampler35.anIntArray3319[var29] + TextureSampler35.anIntArray3329[var29]
               && TextureSampler35.anIntArray3319[var29] - TextureSampler35.anIntArray3329[var29]
@@ -642,7 +642,7 @@ public final class ProceduralTexture {
                   var32 = -500 - (-(5 * var15) - '\uff00');
                 }
               } else {
-                var32 = 16776960 + 16384000 + -(327680 * var15);
+                var32 = 16776960 + 16384000 - (327680 * var15);
               }
             } else {
               var32 = var15 * 1280 + 16711680;
@@ -655,7 +655,7 @@ public final class ProceduralTexture {
               if ((var15 < 100)) {
                 var32 = -(327680 * (-50 + var15)) + 16711935;
               } else if (var15 < 150) {
-                var32 = 327680 * var15 - (32768000 - (255 + -(5 * var15) + 500));
+                var32 = 327680 * var15 - (32768000 - (255 - (5 * var15) + 500));
               }
             } else {
               var32 = 16711680 + var15 * 5;
@@ -663,14 +663,14 @@ public final class ProceduralTexture {
           }
 
           if (TextureSampler35.anIntArray3331[var7] == 11) {
-            var15 = 150 + -TextureSampler35.anIntArray3318[var7];
+            var15 = 150 - TextureSampler35.anIntArray3318[var7];
             if (var15 >= 50) {
               if ((var15 >= 100)) {
                 if (var15 < 150) {
                   var32 = 16777215 - var15 * 327680 + 32768000;
                 }
               } else {
-                var32 = '\uff00' - (-(327685 * var15) - -16384250);
+                var32 = '\uff00' - (-(327685 * var15) + 16384250);
               }
             } else {
               var32 = 16777215 - 327685 * var15;
@@ -683,13 +683,13 @@ public final class ProceduralTexture {
           }
 
           if (TextureSampler35.anIntArray3336[var7] == 1) {
-            FloorOverlay.aClass3_Sub28_Sub17_2096.method696(var33, var2 - -DummyClass34.anInt590,
+            FloorOverlay.aClass3_Sub28_Sub17_2096.method696(var33, var2 + DummyClass34.anInt590,
               WidgetAccess.anInt2208 + var0, var32, 0, BitVariable.anInt1127);
           }
 
           if (TextureSampler35.anIntArray3336[var7] == 2) {
-            FloorOverlay.aClass3_Sub28_Sub17_2096.method695(var33, var2 - -DummyClass34.anInt590,
-              var0 - -WidgetAccess.anInt2208, var32, 0, BitVariable.anInt1127);
+            FloorOverlay.aClass3_Sub28_Sub17_2096.method695(var33, var2 + DummyClass34.anInt590,
+              var0 + WidgetAccess.anInt2208, var32, 0, BitVariable.anInt1127);
           }
 
           if ((TextureSampler35.anIntArray3336[var7] == 3)) {
@@ -700,23 +700,23 @@ public final class ProceduralTexture {
 
           if (TextureSampler35.anIntArray3336[var7] == 4) {
             var15 = (-TextureSampler35.anIntArray3318[var7] + 150) * (
-              FloorOverlay.aClass3_Sub28_Sub17_2096.method682(var33) - -100) / 150;
+              FloorOverlay.aClass3_Sub28_Sub17_2096.method682(var33) + 100) / 150;
             if (GlRenderer.useOpenGlRenderer) {
-              GlUtils.method931(DummyClass34.anInt590 + var2 + -50, var0,
-                  DummyClass34.anInt590 + var2 - -50, var4 + var0);
+              GlUtils.method931(DummyClass34.anInt590 + var2 - 50, var0,
+                  DummyClass34.anInt590 + var2 + 50, var4 + var0);
             } else {
               DummyClass47
-                  .method1326(-50 + (var2 - -DummyClass34.anInt590), var0,
+                  .method1326(-50 + (var2 + DummyClass34.anInt590), var0,
                       50 + DummyClass34.anInt590 + var2, var4 + var0);
             }
 
             FloorOverlay.aClass3_Sub28_Sub17_2096.method681(var33,
-              var2 - (-DummyClass34.anInt590 + -50) + -var15, var0 + WidgetAccess.anInt2208, var32,
+              var2 - (-DummyClass34.anInt590 - 50) - var15, var0 + WidgetAccess.anInt2208, var32,
               0);
             if (GlRenderer.useOpenGlRenderer) {
               GlUtils.clip(var2, var0, var1 + var2, var4 + var0);
             } else {
-              DummyClass47.method1324(var2, var0, var2 - -var1, var0 + var4);
+              DummyClass47.method1324(var2, var0, var2 + var1, var0 + var4);
             }
           }
 
@@ -725,16 +725,16 @@ public final class ProceduralTexture {
             var15 = -TextureSampler35.anIntArray3318[var7] + 150;
             if (GlRenderer.useOpenGlRenderer) {
               GlUtils.method931(var2,
-                -1 + -FloorOverlay.aClass3_Sub28_Sub17_2096.anInt3727 + WidgetAccess.anInt2208
-                  + var0, var1 + var2, 5 + var0 - -WidgetAccess.anInt2208);
+                -1 - FloorOverlay.aClass3_Sub28_Sub17_2096.anInt3727 + WidgetAccess.anInt2208
+                  + var0, var1 + var2, 5 + var0 + WidgetAccess.anInt2208);
             } else {
               DummyClass47.method1326(var2,
-                -1 + -FloorOverlay.aClass3_Sub28_Sub17_2096.anInt3727 + WidgetAccess.anInt2208
+                -1 - FloorOverlay.aClass3_Sub28_Sub17_2096.anInt3727 + WidgetAccess.anInt2208
                   + var0, var2 + var1, 5 + WidgetAccess.anInt2208 + var0);
             }
 
             if (var15 < 25) {
-              var16 = var15 + -25;
+              var16 = var15 - 25;
             } else if (var15 > 125) {
               var16 = var15 - 125;
             }
@@ -742,13 +742,13 @@ public final class ProceduralTexture {
             FloorOverlay.aClass3_Sub28_Sub17_2096.draw(var33, DummyClass34.anInt590 + var2,
               var16 + var0 + WidgetAccess.anInt2208, var32, 0);
             if (GlRenderer.useOpenGlRenderer) {
-              GlUtils.clip(var2, var0, var2 - -var1, var0 + var4);
+              GlUtils.clip(var2, var0, var2 + var1, var0 + var4);
             } else {
               DummyClass47.method1324(var2, var0, var2 + var1, var0 + var4);
             }
           }
         } else {
-          FloorOverlay.aClass3_Sub28_Sub17_2096.draw(var33, var2 - -DummyClass34.anInt590,
+          FloorOverlay.aClass3_Sub28_Sub17_2096.draw(var33, var2 + DummyClass34.anInt590,
             var0 + WidgetAccess.anInt2208, 16776960, 0);
         }
       }

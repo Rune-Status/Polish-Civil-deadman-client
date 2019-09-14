@@ -85,10 +85,10 @@ public final class Cursor {
         int var18 = var1.anInt2819;
         int var4 = var1.anInt2829;
         int var5 =
-            var1.waypointsX[-1 + var1.anInt2816] * 128 - -(var1.getSize() * 64);
+            var1.waypointsX[-1 + var1.anInt2816] * 128 + (var1.getSize() * 64);
         int var6 =
-            128 * var1.waypointsY[-1 + var1.anInt2816] - -(var1.getSize() * 64);
-        if (((var5 + -var18) > 256) || -var18 + var5 < -256
+            128 * var1.waypointsY[-1 + var1.anInt2816] + (var1.getSize() * 64);
+        if (((var5 - var18) > 256) || -var18 + var5 < -256
             || ((var6 - var4) > 256)
             || var6 - var4 < -256) {
           var1.anInt2819 = var5;

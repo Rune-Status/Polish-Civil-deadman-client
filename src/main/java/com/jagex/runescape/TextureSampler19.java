@@ -92,7 +92,7 @@ public final class TextureSampler19 extends AbstractTextureSampler {
           int var12 = var11 * SomethingTexture1.anIntArray2639[var10] >> 12;
           int var13 = TextureSampler23.anIntArray3212[var10] * var11 >> 12;
           int var14 = (var12 >> 12) + var9 & RenderAnimation.anInt396;
-          int var15 = TriChromaticImageBuffer.anInt2487 & var2 - -(var13 >> 12);
+          int var15 = TriChromaticImageBuffer.anInt2487 & var2 + (var13 >> 12);
           int[][] var16 = this.method162(var15, 0, (byte) -117);
           assert var16 != null;
           var6[var9] = var16[0][var14];

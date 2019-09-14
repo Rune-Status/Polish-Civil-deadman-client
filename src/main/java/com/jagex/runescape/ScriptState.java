@@ -67,7 +67,7 @@ public final class ScriptState {
   }
 
   public static void method1178(byte var0) {
-    int var1 = 103 / ((var0 - -13) / 52);
+    int var1 = 103 / ((var0 + 13) / 52);
       ScriptState.aClass94_875 = null;
       ScriptState.HINT_HEAD_ICONS = null;
       ScriptState.configs = null;

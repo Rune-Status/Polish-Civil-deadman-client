@@ -259,7 +259,7 @@ public abstract class AbstractObjectNodeWrapper {
             var9 += 39;
           }
 
-          var7[var6 + -var8 + -1] = (byte) (48 + var9);
+          var7[var6 - var8 - 1] = (byte) (48 + var9);
           var3 /= var2;
         }
 
@@ -279,7 +279,7 @@ public abstract class AbstractObjectNodeWrapper {
   public static void method1724(int var0, int var1, int var2, int var3, int var4, int var5,
                                byte var6, int var7) {
     if (var5 >= 128 && (var2 >= 128) && (var5 <= 13056) && (var2 <= 13056)) {
-        int var8 = BufferData.method1736(GameWorldSomething.currentPlane, 1, var5, var2) + -var3;
+        int var8 = BufferData.method1736(GameWorldSomething.currentPlane, 1, var5, var2) - var3;
         var2 -= DummyClass49.anInt1111;
         var8 -= EnumStringFetcher.anInt2162;
         var5 -= NPC.anInt3995;
@@ -288,7 +288,7 @@ public abstract class AbstractObjectNodeWrapper {
         int var11 = DummyClass40.SINE_TABLE[TextureSampler28.anInt3315];
         int var12 = DummyClass40.COSINE_TABLE[TextureSampler28.anInt3315];
         int var13 = var5 * var12 + var11 * var2 >> 16;
-        var2 = var2 * var12 + -(var11 * var5) >> 16;
+        var2 = var2 * var12 - (var11 * var5) >> 16;
         var5 = var13;
         var13 = var10 * var8 - var2 * var9 >> 16;
         if (var6 <= -47) {

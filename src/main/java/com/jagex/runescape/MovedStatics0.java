@@ -82,7 +82,7 @@ public class MovedStatics0 {
       if (!var10) {
         for (int var12 = 0; (var12 < 8); ++var12) {
           for (var13 = 0; var13 < 8; ++var13) {
-            if (var1 - -var12 > 0 && var12 + var1 < 103 && ((var13 + var4) > 0)
+            if (var1 + var12 > 0 && var12 + var1 < 103 && ((var13 + var4) > 0)
                 && ((var4
                 + var13) < 103)) {
               var3[var2].anIntArrayArray1304[var12 + var1][var13 + var4] =
@@ -156,7 +156,7 @@ public class MovedStatics0 {
                         if ((var20 >= var9) && (var20 < (8 + var9))
                             && (var21 >= var8)
                             && (var8 + 8) > var8) {
-                          var22 = var1 - -SubNode
+                          var22 = var1 + SubNode
                               .method519(var0, true, var21 & 7, var20 & 7);
 
                           int var23 =
@@ -178,7 +178,7 @@ public class MovedStatics0 {
           } else if (var15 <= var7) {
             var18 = 7 + var1;
             var17 = var1;
-            var20 = var4 - -7;
+            var20 = var4 + 7;
             if ((var20 < 0)) {
               var20 = 0;
             } else if (var20 >= 104) {
@@ -247,8 +247,8 @@ public class MovedStatics0 {
                 var29 = var30.anInt703 >> 7;
                 var20 = var30.anInt708 >> 7;
                 if ((var7 == var30.anInt704) && (var29 >= var9)
-                    && var9 - -8 > var29
-                    && (var8 <= var20) && (var8 - -8) > var20) {
+                    && var9 + 8 > var29
+                    && (var8 <= var20) && (var8 + 8) > var20) {
                   var21 =
                       MonoChromaticImageBuffer
                           .method514(var0, var30.anInt703 & 1023, (byte) -83,
@@ -283,7 +283,7 @@ public class MovedStatics0 {
       }
 
       var14 = 7 + var1;
-      var15 = var4 - -7;
+      var15 = var4 + 7;
 
       for (var28 = var1; (var28 < var14); ++var28) {
         for (var17 = var4; (var17 < var15); ++var17) {

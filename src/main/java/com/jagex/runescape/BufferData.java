@@ -45,7 +45,7 @@ public final class BufferData {
         } else {
           if ((var10 == 3)) {
             var18 = var15;
-            var15 = 128 + -var17;
+            var15 = 128 - var17;
             var17 = var18;
           }
         }
@@ -66,32 +66,32 @@ public final class BufferData {
         var20 = var7[1 + var6][var14];
         var30 = var13[var6 + 1][var14];
       } else if ((var15 == 128) && (var17 == 128)) {
-        var20 = var7[1 + var6][var14 - -1];
+        var20 = var7[1 + var6][var14 + 1];
         var30 = var13[var6 + 1][1 + var14];
-        var19 = var16[1 + var6][var14 - -1];
+        var19 = var16[1 + var6][var14 + 1];
         var21 = var8;
       } else if ((var15 == 0) && (var17 == 128)) {
         var20 = var7[var6][1 + var14];
         var19 = var16[var6][1 + var14];
-        var30 = var13[var6][var14 - -1];
+        var30 = var13[var6][var14 + 1];
         var21 = var0;
       } else {
         var30 = var13[var6][var14];
         var19 = var16[var6][var14];
         float var23 = var17 / 128.0F;
         float var22 = var15 / 128.0F;
-        var30 += (var13[var6 - -1][var14] - var30) * var22;
+        var30 += (var13[var6 + 1][var14] - var30) * var22;
         var19 += (-var19 + var16[var6 + 1][var14]) * var22;
         float var24 = var13[var6][var14 + 1];
-        float var25 = var16[var6][var14 - -1];
-        var25 += (-var25 + var16[var6 + 1][var14 - -1]) * var22;
+        float var25 = var16[var6][var14 + 1];
+        var25 += (-var25 + var16[var6 + 1][var14 + 1]) * var22;
         var20 = var7[var6][var14];
         var19 += var23 * (-var19 + var25);
         float var26 = var7[var6][1 + var14];
-        var24 += (-var24 + var13[var6 - -1][var14 + 1]) * var22;
+        var24 += (-var24 + var13[var6 + 1][var14 + 1]) * var22;
         var30 += var23 * (-var30 + var24);
-        var26 += (-var26 + var7[1 + var6][var14 - -1]) * var22;
-        var20 += (-var20 + var7[var6 - -1][var14]) * var22;
+        var26 += (-var26 + var7[1 + var6][var14 + 1]) * var22;
+        var20 += (-var20 + var7[var6 + 1][var14]) * var22;
         var20 += (-var20 + var26) * var23;
         int var27 = TextureSampler30.method210(18348, var15, var2, var3);
         int var28 = TextureSampler30.method210(18348, var15, var0, var8);
@@ -103,10 +103,10 @@ public final class BufferData {
       } else {
         int var32 = var17 + (var14 << 7);
         int var33 = SomethingOtherWorldMap.method408(var15, (byte) -51, var14, var5, var6, var17);
-        int var31 = (var6 << 7) - -var15;
+        int var31 = (var6 << 7) + var15;
         return var12.method146(var31, var33, var32, var30, var19, var20,
           !var11 ? var21 : -256 & var21, var4 != null ?
-            (var33 + -SomethingOtherWorldMap.method408(var15, (byte) 103, var14, var4, var6,
+            (var33 - SomethingOtherWorldMap.method408(var15, (byte) 103, var14, var4, var6,
               var17)) / var1 :
             0.0F);
       }
@@ -115,7 +115,7 @@ public final class BufferData {
   public static int method1735(int var0) {
     try {
         if ((Light.anInt692 == 0)) {
-          if (((Time.getCurrentTimeMillis() + -5000L) < TextureSampler25.aLong3411)) {
+          if (((Time.getCurrentTimeMillis() - 5000L) < TextureSampler25.aLong3411)) {
             return 0;
           }
 
@@ -198,7 +198,7 @@ public final class BufferData {
           }
 
           if (var1 > -TriChromaticImageBuffer.anInt2484 + OndemandRequester.anInt1002) {
-            var1 = OndemandRequester.anInt1002 + -TriChromaticImageBuffer.anInt2484;
+            var1 = OndemandRequester.anInt1002 - TriChromaticImageBuffer.anInt2484;
           }
 
           SomethingVolume15.gameSocket.read(TextureSampler29.aByteArray3396,

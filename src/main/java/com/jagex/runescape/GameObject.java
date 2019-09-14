@@ -95,7 +95,7 @@ public final class GameObject extends SceneNode {
         if (var8 && this.aClass142_2722.anInt1865 != -1) {
           this.anInt2726 =
             (int) (Math.random() * this.aClass142_2722.anIntArray1851.length);
-          this.anInt2733 = this.anInt2726 - -1;
+          this.anInt2733 = this.anInt2726 + 1;
           if ((this.anInt2733 >= this.aClass142_2722.anIntArray1851.length)) {
             this.anInt2733 -= this.aClass142_2722.anInt1865;
             if (this.anInt2733 < 0
@@ -104,7 +104,7 @@ public final class GameObject extends SceneNode {
             }
           }
 
-          this.anInt2746 = 1 - -((int) (Math.random()
+          this.anInt2746 = 1 + ((int) (Math.random()
             * this.aClass142_2722.anIntArray1869[this.anInt2726]));
           this.anInt2749 = -this.anInt2746 + AbstractGameWorld.updateCycle;
         }
@@ -208,7 +208,7 @@ public final class GameObject extends SceneNode {
             }
           }
 
-          this.anInt2733 = this.anInt2726 - -1;
+          this.anInt2733 = this.anInt2726 + 1;
           if ((this.aClass142_2722.anIntArray1851.length <= this.anInt2733)) {
             this.anInt2733 -= this.aClass142_2722.anInt1865;
             if ((this.anInt2733 < 0)
@@ -262,7 +262,7 @@ public final class GameObject extends SceneNode {
                 (int) (Math.random() * this.aClass142_2722.anIntArray1869[this.anInt2726]);
             } else {
               this.anInt2726 = 0;
-              this.anInt2749 = AbstractGameWorld.updateCycle + -1;
+              this.anInt2749 = AbstractGameWorld.updateCycle - 1;
             }
           }
         }
@@ -278,10 +278,10 @@ public final class GameObject extends SceneNode {
           var7 = var4.anInt1485;
         }
 
-        int var10 = this.anInt2736 - -(1 + var7 >> 1);
+        int var10 = this.anInt2736 + (1 + var7 >> 1);
         int var9 = (var7 >> 1) + this.anInt2736;
         int var11 = (var8 >> 1) + this.anInt2730;
-        int var12 = (var8 - -1 >> 1) + this.anInt2730;
+        int var12 = (var8 + 1 >> 1) + this.anInt2730;
         this.method1961(128 * var11, var9 * 128, -101);
         boolean var13 = !var3 && var4.aBoolean1503 && (var4.anInt1527 != this.anInt2750
             ||
@@ -374,14 +374,14 @@ public final class GameObject extends SceneNode {
         GameObject.aClass94_2731 = null;
       }
 
-      return this.method1962(false, var1 + -5);
+      return this.method1962(false, var1 - 5);
   }
 
   public static AbstractModel method1957(int var0, boolean var1, AnimationSequence var2, int var3,
                                         int var4, int var5, int var6, int var7, AbstractModel var8,
                                         int var9, int var10, int var11, int var12, byte var13) {
     long var14 =
-        ((long) var4 << 48) + (var7 + (var0 << 16) - -(var12 << 24)) + ((long) var6 << 32);
+        ((long) var4 << 48) + (var7 + (var0 << 16) + (var12 << 24)) + ((long) var6 << 32);
       AbstractModel var16 = (AbstractModel) DirectImageProducer.aClass93_2982.get(var14);
       int var21;
       int var23;
@@ -416,15 +416,15 @@ public final class GameObject extends SceneNode {
 
           for (int var26 = 0; var26 < var17; ++var26) {
             int var27 = (var26 << 11) / var17;
-            int var29 = var5 - -(DummyClass40.COSINE_TABLE[var27] * var25) >> 16;
+            int var29 = var5 + (DummyClass40.COSINE_TABLE[var27] * var25) >> 16;
             var28 = var3 + DummyClass40.SINE_TABLE[var27] * var24 >> 16;
             var22[var23][var26] = var20.addVertex(var28, 0, var29);
           }
         }
 
         for (var23 = 0; var23 < var18; ++var23) {
-          var24 = (256 * var23 - -128) / var18;
-          var25 = 256 + -var24;
+          var24 = (256 * var23 + 128) / var18;
+          var25 = 256 - var24;
           byte var38 = (byte) (var12 * var24 + var0 * var25 >> 8);
           short var39 = (short) (((var6 & 127) * var25 + (127 & var4) * var24 & 32512) + (
             var25 * (var6 & 896) + var24 * (var4 & 896) & 229376) + (
@@ -435,8 +435,8 @@ public final class GameObject extends SceneNode {
               var20.appendFace(var21, var22[0][(1 + var28) % var17], var22[0][var28], (byte) 1,
                 var39, var38);
             } else {
-              var20.appendFace(var22[var23 - 1][var28], var22[var23 + -1][(var28 + 1) % var17],
-                var22[var23][(var28 - -1) % var17], (byte) 1, var39, var38);
+              var20.appendFace(var22[var23 - 1][var28], var22[var23 - 1][(var28 + 1) % var17],
+                var22[var23][(var28 + 1) % var17], (byte) 1, var39, var38);
               var20.appendFace(var22[-1 + var23][var28], var22[var23][(1 + var28) % var17],
                 var22[var23][var28], (byte) 1, var39, var38);
             }
@@ -447,7 +447,7 @@ public final class GameObject extends SceneNode {
         DirectImageProducer.aClass93_2982.get((byte) -125, var16, var14);
       }
 
-      int var32 = var7 * 64 + -1;
+      int var32 = var7 * 64 - 1;
       if (var13 == -49) {
         int var33 = -var32;
         int var31 = -var32;
@@ -492,12 +492,12 @@ public final class GameObject extends SceneNode {
 
         if (var40 == null) {
           var16 = var16.method1882(true, true, true);
-          var16.scale((var23 + -var35) / 2, 128, (var25 - var24) / 2);
-          var16.method1897((var35 + var23) / 2, 0, (var24 - -var25) / 2);
+          var16.scale((var23 - var35) / 2, 128, (var25 - var24) / 2);
+          var16.method1897((var35 + var23) / 2, 0, (var24 + var25) / 2);
         } else {
           var16 = var16.method1882(!var40.method559(1317095745, var10),
               !var40.method561(var10, (byte) 115), true);
-          var16.scale((var23 + -var35) / 2, 128, (var25 + -var24) / 2);
+          var16.scale((var23 - var35) / 2, 128, (var25 - var24) / 2);
           var16.method1897((var35 + var23) / 2, 0, (var24 + var25) / 2);
           var16.method1877(var40, var10);
         }
@@ -510,15 +510,15 @@ public final class GameObject extends SceneNode {
           GlModel var36 = (GlModel) var16;
           if ((BufferData
               .method1736(GameWorldSomething.currentPlane, var13 ^ -50,
-                  var3 - -var35,
+                  var3 + var35,
                   var24 + var5) != var11) ||
               (BufferData
                   .method1736(GameWorldSomething.currentPlane, 1, var23 + var3,
-                      var5 - -var25) != var11)) {
+                      var5 + var25) != var11)) {
             for (var28 = 0; var28 < var36.vertexCCC; ++var28) {
               var36.vy[var28] += -var11 + BufferData
                   .method1736(GameWorldSomething.currentPlane,
-                      ObjectCache.bitXor(var13, -50), var36.vx[var28] - -var3,
+                      ObjectCache.bitXor(var13, -50), var36.vx[var28] + var3,
                       var5 + var36.vz[var28]);
             }
 
@@ -529,10 +529,10 @@ public final class GameObject extends SceneNode {
           SoftwareModel var37 = (SoftwareModel) var16;
           if (
               (BufferData
-                  .method1736(GameWorldSomething.currentPlane, 1, var3 - -var35,
-                      var5 - -var24) != var11) || var11 != BufferData
+                  .method1736(GameWorldSomething.currentPlane, 1, var3 + var35,
+                      var5 + var24) != var11) || var11 != BufferData
                   .method1736(GameWorldSomething.currentPlane, 1,
-                      var3 + var23, var5 - -var25)) {
+                      var3 + var23, var5 + var25)) {
             for (var28 = 0; var37.anInt3891 > var28; ++var28) {
               var37.anIntArray3883[var28] +=
                   -var11 + BufferData

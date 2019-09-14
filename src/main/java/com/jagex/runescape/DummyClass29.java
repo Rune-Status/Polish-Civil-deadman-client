@@ -167,7 +167,7 @@ public final class DummyClass29 {
                 ((GameObject) var14).method1960(-1);
               } else {
                 FileSystem
-                    .method840(var12, (byte) -100, 0, 3 & var18 - -1, 0, var19,
+                    .method840(var12, (byte) -100, 0, 3 & var18 + 1, 0, var19,
                         var2, var1,
                         var5);
               }
@@ -179,7 +179,7 @@ public final class DummyClass29 {
                   } else {
                     FileSystem.method840(var12, (byte) -28,
                         8 * DummyClass4.anIntArray3007[var18],
-                        4 - -var18,
+                        4 + var18,
                         8 * AbstractTextureSampler.anIntArray2386[var18], 4,
                         var2, var1,
                         var5);
@@ -189,7 +189,7 @@ public final class DummyClass29 {
                     ((GameObject) var13).method1960(-1);
                   } else {
                     FileSystem
-                        .method840(var12, (byte) -120, 0, 4 - -(3 & 2 + var18),
+                        .method840(var12, (byte) -120, 0, 4 + (3 & 2 + var18),
                             0, 4, var2,
                             var1, var5);
                   }
@@ -210,7 +210,7 @@ public final class DummyClass29 {
                   } else {
                     FileSystem.method840(var12, (byte) -24,
                         DummyClass4.anIntArray3007[var18] * 8,
-                        4 - -(3 & 2 + var18),
+                        4 + (3 & 2 + var18),
                         AbstractTextureSampler.anIntArray2386[var18] * 8, 4,
                         var2, var1, var5);
                   }

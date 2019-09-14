@@ -81,7 +81,7 @@ public final class GameClient extends GameStub {
                         var4.anInt2819 >> 7, var4.getSize(), false, 0,
                         var4.getSize(),
                         var4.anInt2829 >> 7);
-                if (var4.waypointsX[0] >= 0 && var4.waypointsX[0] <= 104 + -var4
+                if (var4.waypointsX[0] >= 0 && var4.waypointsX[0] <= 104 - var4
                     .getSize()
                     && var4.waypointsY[0] >= 0
                     && var4.waypointsY[0] <= 104 - var4.getSize()
@@ -92,7 +92,7 @@ public final class GameClient extends GameStub {
                         var4.anInt2819 >> 7)) {
                   if (var4.getSize() > 1) {
                     for (int var8 = var4.waypointsX[0];
-                        (var4.waypointsX[0] - -var4.getSize()) > var8;
+                        (var4.waypointsX[0] + var4.getSize()) > var8;
                         ++var8) {
                       for (int var9 = var4.waypointsY[0];
                           var4.waypointsY[0] + var4.getSize() > var9; ++var9) {
@@ -237,7 +237,7 @@ public final class GameClient extends GameStub {
   private void method49() {
     if ((DummyClass8.anInt4026 < DummyClass43.ondemandRequester.anInt1011)) {
         TextureSampler21.anInt3068 =
-            5 * 50 * (DummyClass43.ondemandRequester.anInt1011 + -1);
+            5 * 50 * (DummyClass43.ondemandRequester.anInt1011 - 1);
         if (DummyClass11.anInt2036 == Projectile.anInt2894) {
           Projectile.anInt2894 = GameWorldSomething.anInt506;
         } else {
@@ -321,7 +321,7 @@ public final class GameClient extends GameStub {
             if ((DummyClass15.state != 0) && (DummyClass15.state != 5)
                 && DummyInputStream.updateSocket.available() <= 0) {
               if (((Time.getCurrentTimeMillis()
-                  + -TextureSampler13.lastWrittenTime) > 30000L)) {
+                  - TextureSampler13.lastWrittenTime) > 30000L)) {
                 this.setUpdateError(1001);
                 return;
               }
@@ -658,7 +658,7 @@ public final class GameClient extends GameStub {
                                   AnimationFrame.loadingText =
                                       RenderAnimation.concat(new GameString[]{
                                           FileRequester.aClass94_2961,
-                                          SomethingScene.toString(90 - -(
+                                          SomethingScene.toString(90 + (
                                               SomethingPacket116.worldMapData
                                                   .method2116(22813,
                                                       DummyClass53.aClass94_1342)
@@ -672,7 +672,7 @@ public final class GameClient extends GameStub {
                                     RenderAnimation.concat(new GameString[]{
                                         FileRequester.aClass94_2961,
                                         SomethingScene.toString(
-                                            85 - -(FileUnpacker.fileUnpacker13
+                                            85 + (FileUnpacker.fileUnpacker13
                                                 .method2136((byte) -124)
                                                 / 20)), IdentityKit.aClass94_468
                                     });
@@ -683,7 +683,7 @@ public final class GameClient extends GameStub {
                                   .concat(new GameString[]{
                                       FileRequester.aClass94_2961,
                                       SomethingScene.toString(
-                                          75 - -(WidgetAccess.scripts
+                                          75 + (WidgetAccess.scripts
                                               .method2136((byte) -128) / 10)),
                                       IdentityKit.aClass94_468
                                   });
@@ -881,7 +881,7 @@ public final class GameClient extends GameStub {
         if (AbstractGameWorld.updateCycle % 1000 == 1) {
           GregorianCalendar calendar = new GregorianCalendar();
           DummyClass36.anInt2618 =
-              calendar.get(11) * 600 - (-(calendar.get(12) * 10) + -(
+              calendar.get(11) * 600 - (-(calendar.get(12) * 10) - (
                   calendar.get(13) / 6));
           TextureSampler27.random.setSeed(DummyClass36.anInt2618);
         }
@@ -1366,7 +1366,7 @@ public final class GameClient extends GameStub {
         DisplayMode.aBoolean1451 = "1".equals(var6);
 
         SomethingTilek.client = this;
-        this.method41((byte) -56, 765, 32 - -TextureSampler20.usageMode, 1530,
+        this.method41((byte) -56, 765, 32 + TextureSampler20.usageMode, 1530,
             503);
       }
   }
@@ -1415,7 +1415,7 @@ public final class GameClient extends GameStub {
               DummyClass25.resizeCanvas();
             }
 
-            DummyClass41.aLong866 = Time.getCurrentTimeMillis() - -500L;
+            DummyClass41.aLong866 = Time.getCurrentTimeMillis() + 500L;
           }
         }
 
@@ -1455,7 +1455,7 @@ public final class GameClient extends GameStub {
         } else if ((DummyClass15.state != 10)) {
           if (DummyClass15.state != 25 && (DummyClass15.state != 28)) {
             if (DummyClass15.state == 30) {
-              GZipDecompressor.method1127(var1 + -40);
+              GZipDecompressor.method1127(var1 - 40);
             } else if (DummyClass15.state == 40) {
               AbstractTextureSampler
                   .drawLoadingBox(RenderAnimation.concat(new GameString[]{
@@ -1489,7 +1489,7 @@ public final class GameClient extends GameStub {
               StringNode.anInt2579 = TextureSampler5.anInt3293;
             }
 
-            var4 = 50 * (StringNode.anInt2579 + -TextureSampler5.anInt3293)
+            var4 = 50 * (StringNode.anInt2579 - TextureSampler5.anInt3293)
                 / StringNode.anInt2579;
             AbstractTextureSampler
                 .drawLoadingBox(RenderAnimation.concat(new GameString[]{

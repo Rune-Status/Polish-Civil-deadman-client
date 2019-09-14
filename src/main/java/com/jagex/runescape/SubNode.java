@@ -49,7 +49,7 @@ public class SubNode extends Node {
   }
 
   public static SomethingWorldMapy method520(byte var0) {
-    int var1 = -122 % ((var0 - -48) / 33);
+    int var1 = -122 % ((var0 + 48) / 33);
       return Buffer.aClass3_Sub28_Sub3_2600;
   }
 
@@ -89,7 +89,7 @@ public class SubNode extends Node {
     int var9 = var3 - var8;
       int var11 = (-var5 + var0 << 16) / var9;
       int var10 = -var4 + var6;
-      int var12 = (var7 + -var1 << 16) / var10;
+      int var12 = (var7 - var1 << 16) / var10;
       MidiSomething.method1410(var1, 0, var6, var4, var3, var5, var8, var12, var11, var2, -12541);
   }
 

@@ -75,15 +75,15 @@ public final class DummyClass51 {
       int var4 = SomethingQuickChat2.anInt3537;
       if (GlRenderer.useOpenGlRenderer) {
         GlUtils.fillQuad(var1, var2, var3, var4, var5);
-        GlUtils.fillQuad(1 + var1, 1 + var2, var3 + -2, 16, 0);
-        GlUtils.drawQuad(1 + var1, var2 + 18, var3 + -2, -19 + var4, 0);
+        GlUtils.fillQuad(1 + var1, 1 + var2, var3 - 2, 16, 0);
+        GlUtils.drawQuad(1 + var1, var2 + 18, var3 - 2, -19 + var4, 0);
       } else {
         DummyClass47.method1323(var1, var2, var3, var4, var5);
-        DummyClass47.method1323(1 + var1, 1 + var2, var3 + -2, 16, 0);
+        DummyClass47.method1323(1 + var1, 1 + var2, var3 - 2, 16, 0);
         DummyClass47.method1311(1 + var1, var2 + 18, -2 + var3, -19 + var4, 0);
       }
 
-      FloorOverlay.aClass3_Sub28_Sub17_2096.method681(SomethingTexture4.aClass94_2667, var1 - -3,
+      FloorOverlay.aClass3_Sub28_Sub17_2096.method681(SomethingTexture4.aClass94_2667, var1 + 3,
         var2 + 14, var5, -1);
       int var7 = HashTable.anInt1709;
       int var6 = SomethingTilek.anInt1676;
@@ -92,13 +92,13 @@ public final class DummyClass51 {
       }
 
       for (int var8 = 0; TextureSampler25.amountContextActions > var8; ++var8) {
-        int var9 = (-var8 + -1 + TextureSampler25.amountContextActions) * 15 + var2 - -31;
+        int var9 = (-var8 - 1 + TextureSampler25.amountContextActions) * 15 + var2 + 31;
         int var10 = 16777215;
-        if ((var1 < var6) && (var6 < (var1 - -var3)) && -13 + var9 < var7 && (var7 < (3 + var9))) {
+        if ((var1 < var6) && (var6 < (var1 + var3)) && -13 + var9 < var7 && (var7 < (3 + var9))) {
           var10 = 16776960;
         }
 
-        FloorOverlay.aClass3_Sub28_Sub17_2096.method681(Buffer.method802(var8, true), var1 - -3,
+        FloorOverlay.aClass3_Sub28_Sub17_2096.method681(Buffer.method802(var8, true), var1 + 3,
           var9, var10, 0);
       }
 
@@ -124,12 +124,12 @@ public final class DummyClass51 {
           + ((TextureSampler0.aBoolean3275 ? 1 : 0) << 9) + ((Widget.aBoolean236 ? 1 : 0) << 7) + (
           (!SceneSomething.aBoolean488 ? 0 : 1) << 6) + ((Keyboard.aBoolean1905 ? 1 : 0) << 5) + (
           ((!ClientScriptEnum.aBoolean3665 ? 0 : 1) << 3) + (AbstractFileRequest.brightnessSetting
-            & 7) - (-((!AbstractObjectNode.aBoolean3604 ? 0 : 1) << 4) + -(
+            & 7) - (-((!AbstractObjectNode.aBoolean3604 ? 0 : 1) << 4) - (
             (GameWorld.aBoolean2623 ? 1 : 0) << 8)) - (
-            -(HashTableIterator.anInt1137 << 11 & 6144) + -(
+            -(HashTableIterator.anInt1137 << 11 & 6144) - (
               ((ClientScriptCall.anInt2453 == 0) ? 0 : 1) << 20) - (
               (((BZipDecompressorState.anInt120 != 0) ? 1 : 0) << 21) + (
-                ((DummyClass28.anInt340 == 0) ? 0 : 1) << 22)))) - -(DummyClass0.method1757()
+                ((DummyClass28.anInt340 == 0) ? 0 : 1) << 22)))) + (DummyClass0.method1757()
           << 23));
   }
 

@@ -128,7 +128,7 @@ public final class DummyHashTable {
         GlModel var14 = (GlModel) var9;
         if (var6 != BufferData.method1736(GameWorldSomething.currentPlane, 1, var4 + var17,
           var2 + var12) || var6 != BufferData.method1736(GameWorldSomething.currentPlane, 1,
-          var4 - -var11, var13 + var2)) {
+          var4 + var11, var13 + var2)) {
           for (var15 = 0; (var15 < var14.vertexCCC); ++var15) {
             var14.vy[var15] +=
               BufferData.method1736(GameWorldSomething.currentPlane, 1, var14.vx[var15] + var4,
@@ -142,7 +142,7 @@ public final class DummyHashTable {
         SoftwareModel var18 = (SoftwareModel) var9;
         if (var6 != BufferData.method1736(GameWorldSomething.currentPlane, 1, var17 + var4,
           var12 + var2) || var6 != BufferData.method1736(GameWorldSomething.currentPlane, 1,
-          var4 - -var11, var13 + var2)) {
+          var4 + var11, var13 + var2)) {
           for (var15 = 0; var18.anInt3891 > var15; ++var15) {
             var18.anIntArray3883[var15] += BufferData.method1736(GameWorldSomething.currentPlane, 1,
               var4 + var18.anIntArray3885[var15], var18.anIntArray3895[var15] + var2) - var6;

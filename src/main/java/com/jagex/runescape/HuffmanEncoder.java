@@ -44,7 +44,7 @@ public final class HuffmanEncoder {
       for (int var5 = 0; var2 > var5; ++var5) {
         byte var6 = var1[var5];
         if ((var6 != 0)) {
-          int var7 = 1 << 32 + -var6;
+          int var7 = 1 << 32 - var6;
           int var8 = var3[var6];
           this.lengths[var5] = var8;
           int var9;
@@ -109,7 +109,7 @@ public final class HuffmanEncoder {
 
           this.anIntArray633[var10] = ~var5;
           if ((var10 >= var4)) {
-            var4 = var10 - -1;
+            var4 = var10 + 1;
           }
         }
       }
@@ -321,7 +321,7 @@ public final class HuffmanEncoder {
       if (var0 >= -87) {
         return null;
       } else {
-        for (int var3 = var2.getLength() + -3; var3 > 0; var3 -= 3) {
+        for (int var3 = var2.getLength() - 3; var3 > 0; var3 -= 3) {
           var2 = RenderAnimation.concat(new GameString[] {
             var2.substring(var3, 0, 0), TextureSampler0.aClass94_3268, var2.substring(var3)
           });

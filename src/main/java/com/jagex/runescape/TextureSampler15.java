@@ -47,7 +47,7 @@ public final class TextureSampler15 extends AbstractTextureSampler {
       if (this.monoChromaticImageCache.aBoolean1580) {
         int var5 = this.anInt3204 * DummyClass4.anIntArray2999[var1] + 2048;
         int var6 = var5 >> 12;
-        int var7 = var6 - -1;
+        int var7 = var6 + 1;
 
         for (int var15 = 0; var15 < SomethingLight0.anInt1559; ++var15) {
           TextureSampler36.anInt3422 = Integer.MAX_VALUE;
@@ -65,7 +65,7 @@ public final class TextureSampler15 extends AbstractTextureSampler {
               255 & this.aByteArray3195[((this.anInt3204 <= var9) ? -this.anInt3204 + var9 : var9)
                 & 255];
 
-            for (int var8 = var17 + -1; var18 >= var8; ++var8) {
+            for (int var8 = var17 - 1; var18 >= var8; ++var8) {
               int var14 = (255 & this.aByteArray3195[
                 ((this.anInt3203 <= var8) ? -this.anInt3203 + var8 : var8) + var13 & 255]) * 2;
               int var10 = -(var8 << 12) - (this.aShortArray3200[var14++] - var16);
@@ -102,7 +102,7 @@ public final class TextureSampler15 extends AbstractTextureSampler {
                       (var11 * var11 + var10 * var10) / 1.6777216E7F));
                 } else {
                   var12 =
-                      ((var10 >= 0) ? var10 : -var10) - -((var11 < 0) ? -var11
+                      ((var10 >= 0) ? var10 : -var10) + ((var11 < 0) ? -var11
                           : var11);
                 }
               }
@@ -138,7 +138,7 @@ public final class TextureSampler15 extends AbstractTextureSampler {
             } else if (var19 == 4) {
               var3[var15] = TextureSampler36.anInt3422;
             } else if ((var19 == 2)) {
-              var3[var15] = LinearHashTable.anInt1042 + -AnimationSomething.anInt3589;
+              var3[var15] = LinearHashTable.anInt1042 - AnimationSomething.anInt3589;
             }
           } else {
             var3[var15] = LinearHashTable.anInt1042;

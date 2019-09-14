@@ -112,7 +112,7 @@ public final class BlockConfig {
       VariableUpdate var3 = (VariableUpdate) ClientScript.variableUpdates.get(
           var0);
       if (var3 == null) {
-        var3 = new VariableUpdate(Time.getCurrentTimeMillis() - -500L);
+        var3 = new VariableUpdate(Time.getCurrentTimeMillis() + 500L);
         ClientScript.variableUpdates.put(var0, var3);
       } else {
         var3.timestamp = 500L + Time.getCurrentTimeMillis();

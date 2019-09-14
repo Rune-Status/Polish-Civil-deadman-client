@@ -134,7 +134,7 @@ public final class DummyClass38 {
         var3.anInt2800 =
           SpotAnimationConfig.gameBuffer.readUnsignedShortLE() + AbstractGameWorld.updateCycle;
         var3.anInt2790 =
-          SpotAnimationConfig.gameBuffer.readUnsignedShortLE() - -AbstractGameWorld.updateCycle;
+          SpotAnimationConfig.gameBuffer.readUnsignedShortLE() + AbstractGameWorld.updateCycle;
         var3.anInt2840 = SpotAnimationConfig.gameBuffer.method786(true);
         var3.anInt2816 = 1;
         var3.anInt2811 = 0;
@@ -253,7 +253,7 @@ public final class DummyClass38 {
       var2.position = -(8 * DummyClass53.spriteCount) + var0.length - 7;
       SomethingVolume15.anInt2426 = var2.readUnsignedShort();
       SomethingPacket116.anInt1748 = var2.readUnsignedShort();
-      int var3 = (var2.readUnsignedByte() & 255) - -1;
+      int var3 = (var2.readUnsignedByte() & 255) + 1;
 
       int var4;
       for (var4 = 0; (var4 < DummyClass53.spriteCount); ++var4) {
@@ -276,7 +276,7 @@ public final class DummyClass38 {
         TextureSampler26.anIntArray3076[var4] = var2.readUnsignedShort();
       }
 
-      var2.position = -(8 * DummyClass53.spriteCount) + var0.length + -7 + 3 + -(var3 * 3);
+      var2.position = -(8 * DummyClass53.spriteCount) + var0.length - 7 + 3 - (var3 * 3);
       TextureSampler38.anIntArray3446 = new int[var3];
 
       for (var4 = 1; (var4 < var3); ++var4) {

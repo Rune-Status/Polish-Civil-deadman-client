@@ -28,7 +28,7 @@ public final class TextureSampler5 extends AbstractTextureSampler {
         int[][] var9 = new int[var5][];
 
         int var10;
-        for (var10 = -this.anInt3297 + var1; (var10 <= (var1 - -this.anInt3297)); ++var10) {
+        for (var10 = -this.anInt3297 + var1; (var10 <= (var1 + this.anInt3297)); ++var10) {
           int[] var11 = this
               .method152(0, var10 & TriChromaticImageBuffer.anInt2487, 32755);
           int[] var12 = new int[SomethingLight0.anInt1559];
@@ -48,7 +48,7 @@ public final class TextureSampler5 extends AbstractTextureSampler {
             ++var14;
           }
 
-          var9[this.anInt3297 + var10 + -var1] = var12;
+          var9[this.anInt3297 + var10 - var1] = var12;
         }
 
         for (var10 = 0; SomethingLight0.anInt1559 > var10; ++var10) {
@@ -89,9 +89,9 @@ public final class TextureSampler5 extends AbstractTextureSampler {
       int[][] var3 = this.triChromaticImageCache
           .method1594((byte) 90, var2);
       if (this.triChromaticImageCache.aBoolean1379) {
-        int var6 = this.anInt3294 - -this.anInt3294 - -1;
+        int var6 = this.anInt3294 + this.anInt3294 + 1;
         int var7 = 65536 / var6;
-        int var4 = this.anInt3297 + (this.anInt3297 - -1);
+        int var4 = this.anInt3297 + (this.anInt3297 + 1);
         int var5 = 65536 / var4;
         int[][][] var8 = new int[var4][][];
 
@@ -126,7 +126,7 @@ public final class TextureSampler5 extends AbstractTextureSampler {
             var31[var21] = var12 * var7 >> 16;
             var30[var21] = var13 * var7 >> 16;
             var20[var21] = var7 * var14 >> 16;
-            var22 = RenderAnimation.anInt396 & var21 + -this.anInt3294;
+            var22 = RenderAnimation.anInt396 & var21 - this.anInt3294;
             var14 -= var17[var22];
             ++var21;
             var12 -= var15[var22];

@@ -45,13 +45,13 @@ public final class DummyClass8 extends DummyClass7 {
         HintMarker var9 = var7[var8];
         if (var9 != null && var9.anInt1360 == 2) {
           AbstractObjectNodeWrapper.method1724(var0 >> 1, var5,
-            (-ProceduralTexture.anInt1152 + var9.anInt1347 << 7) - -var9.anInt1350,
+            (-ProceduralTexture.anInt1152 + var9.anInt1347 << 7) + var9.anInt1350,
             var9.anInt1353 * 2, var2 >> 1,
-            var9.anInt1346 + (var9.anInt1356 + -WorldMapLabel.anInt1716 << 7), (byte) -114, var4);
+            var9.anInt1346 + (var9.anInt1356 - WorldMapLabel.anInt1716 << 7), (byte) -114, var4);
           if (DummyClass34.anInt590 > -1
               && ((AbstractGameWorld.updateCycle % 20) < 10)) {
             SomethingIndex150.aClass3_Sub28_Sub16Array2072[var9.anInt1351].method643(
-              -12 + var1 + DummyClass34.anInt590, -28 + var6 - -WidgetAccess.anInt2208);
+              -12 + var1 + DummyClass34.anInt590, -28 + var6 + WidgetAccess.anInt2208);
           }
         }
       }
@@ -136,7 +136,7 @@ public final class DummyClass8 extends DummyClass7 {
 
         int var11 = var8.anInt1533;
         if ((var6 != 0)) {
-          var11 = (var11 << var6 & 15) - -(var11 >> -var6 + 4);
+          var11 = (var11 << var6 & 15) + (var11 >> -var6 + 4);
         }
 
         Parameter.method582(TextureCache.localPlayer.waypointsY[0], 0, var10, true, var11, 2, var4,

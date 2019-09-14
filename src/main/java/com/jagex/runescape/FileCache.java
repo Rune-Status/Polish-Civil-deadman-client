@@ -58,7 +58,7 @@ public final class FileCache {
           this.aClass30_683.seek(-35, 6 * var1);
           this.aClass30_683.method978(0, DummyClass11.aByteArray2040, 6, 0);
           int var5 = ((255 & DummyClass11.aByteArray2040[3]) << 16) - (
-            -(DummyClass11.aByteArray2040[4] << 8 & '\uff00') + -(255
+            -(DummyClass11.aByteArray2040[4] << 8 & '\uff00') - (255
               & DummyClass11.aByteArray2040[5]));
           int var6 = 24 / ((-4 - var2) / 40);
           int var4 = (DummyClass11.aByteArray2040[2] & 255) + ('\uff00'
@@ -88,7 +88,7 @@ public final class FileCache {
 
               this.aClass30_681
                   .method978(0, DummyClass11.aByteArray2040, 8 + var10, 0);
-              int var11 = (DummyClass11.aByteArray2040[0] << 8 & '\uff00') - -(255
+              int var11 = (DummyClass11.aByteArray2040[0] << 8 & '\uff00') + (255
                 & DummyClass11.aByteArray2040[1]);
               int var12 = (DummyClass11.aByteArray2040[3] & 255) + ('\uff00'
                 & DummyClass11.aByteArray2040[2] << 8);
@@ -147,7 +147,7 @@ public final class FileCache {
               return false;
             }
           } else {
-            var7 = (int) ((this.aClass30_681.method976(var1 + -87) - -519L) / 520L);
+            var7 = (int) ((this.aClass30_681.method976(var1 - 87) + 519L) / 520L);
             if ((var7 == 0)) {
               var7 = 1;
             }
@@ -186,7 +186,7 @@ public final class FileCache {
                   }
 
                   var10 = ((DummyClass11.aByteArray2040[4] & 255) << 16) + ('\uff00'
-                    & DummyClass11.aByteArray2040[5] << 8) - -(DummyClass11.aByteArray2040[6]
+                    & DummyClass11.aByteArray2040[5] << 8) + (DummyClass11.aByteArray2040[6]
                     & 255);
                   var11 =
                     (255 & DummyClass11.aByteArray2040[1]) + ((DummyClass11.aByteArray2040[0] & 255)
@@ -209,7 +209,7 @@ public final class FileCache {
                 var11 = -var8 + var2;
                 if ((var10 == 0)) {
                   var5 = false;
-                  var10 = (int) ((this.aClass30_681.method976(0) - -519L) / 520L);
+                  var10 = (int) ((this.aClass30_681.method976(0) + 519L) / 520L);
                   if ((var10 == 0)) {
                     ++var10;
                   }
@@ -236,7 +236,7 @@ public final class FileCache {
                 DummyClass11.aByteArray2040[3] = (byte) var9;
                 ++var9;
                 DummyClass11.aByteArray2040[5] = (byte) (var10 >> 8);
-                this.aClass30_681.seek(var1 + -128, var7 * 520);
+                this.aClass30_681.seek(var1 - 128, var7 * 520);
                 var7 = var10;
                 this.aClass30_681
                     .write(DummyClass11.aByteArray2040, 0, -903171152, 8);
@@ -280,7 +280,7 @@ public final class FileCache {
             TextureSampler15.aClass44_Sub1Array3201[var8];
           TextureSampler15.aClass44_Sub1Array3201[var8] = var9;
           FileCache.method1047(var0, var1, -1 + var8, var3, var4, var5, false);
-          FileCache.method1047(var0, var1, var2, var3, var8 - -1, var5, false);
+          FileCache.method1047(var0, var1, var2, var3, var8 + 1, var5, false);
         }
 
       }
@@ -362,7 +362,7 @@ public final class FileCache {
 
   public static void method1053(byte var0, FileUnpacker var1) {
     TriChromaticImageCache.aClass153_1372 = var1;
-      int var2 = -52 / ((var0 - -55) / 36);
+      int var2 = -52 / ((var0 + 55) / 36);
   }
 
 }

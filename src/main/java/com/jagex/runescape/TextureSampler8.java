@@ -44,14 +44,14 @@ public final class TextureSampler8 extends AbstractTextureSampler {
           }
 
           var6 = this.anIntArrayArray3469[var3];
-          var5 = this.anIntArrayArray3469[var3 + -1];
-          var7 = this.method356((byte) -106, var3 + -2)[1];
+          var5 = this.anIntArrayArray3469[var3 - 1];
+          var7 = this.method356((byte) -106, var3 - 2)[1];
           var9 = var6[1];
           var8 = var5[1];
           int var15 = var9 - var7;
           var10 = this.method356((byte) -106, var3 + 1)[1];
-          int var11 = (var4 + -var5[0] << 12) / (var6[0] + -var5[0]);
-          int var13 = var10 + -var9 + -var7 + var8;
+          int var11 = (var4 - var5[0] << 12) / (var6[0] - var5[0]);
+          int var13 = var10 - var9 - var7 + var8;
           int var12 = var11 * var11 >> 12;
           int var14 = var7 + (-var8 - var13);
           int var19 = var15 * var11 >> 12;
@@ -80,8 +80,8 @@ public final class TextureSampler8 extends AbstractTextureSampler {
 
             var5 = this.anIntArrayArray3469[-1 + var3];
             var6 = this.anIntArrayArray3469[var3];
-            var7 = (var4 + -var5[0] << 12) / (-var5[0] + var6[0]);
-            var8 = 4096 + -SomethingTexture1.anIntArray2639[(8189 & var7) >> 5]
+            var7 = (var4 - var5[0] << 12) / (-var5[0] + var6[0]);
+            var8 = 4096 - SomethingTexture1.anIntArray2639[(8189 & var7) >> 5]
                 >> 1;
             var9 = -var8 + 4096;
             var10 = var8 * var6[1] + var5[1] * var9 >> 12;
@@ -192,11 +192,11 @@ public final class TextureSampler8 extends AbstractTextureSampler {
       }
 
       int[] var3 = this.anIntArrayArray3469[1];
-      int[] var4 = this.anIntArrayArray3469[this.anIntArrayArray3469.length + -2];
+      int[] var4 = this.anIntArrayArray3469[this.anIntArrayArray3469.length - 2];
       int[] var5 = this.anIntArrayArray3469[-1 + this.anIntArrayArray3469.length];
       this.anIntArray3457 =
-        new int[] {var2[0] - (var3[0] + -var2[0]), -var3[1] + var2[1] + var2[1]};
-      this.anIntArray3467 = new int[] {var4[0] + var4[0] + -var5[0], -var5[1] - -var4[1] + var4[1]};
+        new int[] {var2[0] - (var3[0] - var2[0]), -var3[1] + var2[1] + var2[1]};
+      this.anIntArray3467 = new int[] {var4[0] + var4[0] - var5[0], -var5[1] + var4[1] + var4[1]};
   }
 
   private int[] method356(byte var1, int var2) {

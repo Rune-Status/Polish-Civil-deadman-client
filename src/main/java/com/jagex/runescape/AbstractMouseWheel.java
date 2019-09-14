@@ -19,7 +19,7 @@ public abstract class AbstractMouseWheel {
   public abstract void bind(Component var1, int var2);
 
   public static boolean updateInterfaceCounter(int counter, byte var1) {
-    SomethingLight0.interfaceCounter = counter - -1 & '\uffff';
+    SomethingLight0.interfaceCounter = counter + 1 & '\uffff';
       RenderAnimation.interfaceCounterUpdated = true;
       return true;
   }

@@ -48,7 +48,7 @@ public final class DummyClass41 {
           int var10 = DummyClass40.SINE_TABLE[var9];
           var10 = var10 * 256 / (256 + Something3d2.anInt3020);
           var11 = var11 * 256 / (Something3d2.anInt3020 + 256);
-          int var12 = var4 * var10 - -(var11 * var3) >> 16;
+          int var12 = var4 * var10 + (var11 * var3) >> 16;
           int var13 = -(var10 * var3) + var4 * var11 >> 16;
           double var14 = Math.atan2(var12, var13);
           int var16 = (int) (Math.sin(var14) * var8);
@@ -59,7 +59,7 @@ public final class DummyClass41 {
               16 * (-var17 + var5.anInt193 / 2 + var1), (int) (10430.378D * var14), 4096);
           } else {
             ((SoftwareDirectColorSprite) TextureSampler8.aClass3_Sub28_Sub16Array3458[var0]).method660(
-              -10 + var16 + var5.anInt168 / 2 + var2, -10 + var5.anInt193 / 2 + var1 + -var17, 20,
+              -10 + var16 + var5.anInt168 / 2 + var2, -10 + var5.anInt193 / 2 + var1 - var17, 20,
               20, 15, 15, var14, 256);
           }
         }
@@ -143,7 +143,7 @@ public final class DummyClass41 {
         GameWorld var5 = DummyClass26.aClass44_Sub1Array1609[var4] = new GameWorld();
         var5.anInt721 = var0.readUnsignedByte();
         var5.flags = var0.readInt();
-        var5.anInt2621 = var4 - -TextureSampler34.anInt3054;
+        var5.anInt2621 = var4 + TextureSampler34.anInt3054;
         var5.aClass94_2620 = var0.method761(98);
         var5.aClass94_2625 = var0.method761(79);
       }

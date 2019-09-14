@@ -24,7 +24,7 @@ public final class DummyClass52 {
       var1.position +=
         TextureSampler16.huffmanEncoder.method1015(var4.length, -81, var1.bytes, var4, 0,
           var1.position);
-      return var1.position + -var3;
+      return var1.position - var3;
   }
 
   public static AbstractIndexedColorSprite[] method1424(FileUnpacker var0, byte var1, int var2,

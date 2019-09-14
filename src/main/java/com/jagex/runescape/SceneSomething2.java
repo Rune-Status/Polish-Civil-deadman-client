@@ -78,7 +78,7 @@ public final class SceneSomething2 {
 
         if (var8.anIntArray2333 != null) {
           var8.anInt2316 =
-            var8.anInt2310 - -((int) (Math.random() * (-var8.anInt2310 + var8.anInt2325)));
+            var8.anInt2310 + ((int) (Math.random() * (-var8.anInt2310 + var8.anInt2325)));
         }
 
         Node.aClass61_78.addLast(var8);
@@ -92,7 +92,7 @@ public final class SceneSomething2 {
 
         if (var12 != null) {
           var8.anInt2307 = 128 * (var12.size + var0);
-          var8.anInt2321 = 128 * (var5 - -var12.size);
+          var8.anInt2321 = 128 * (var5 + var12.size);
           var8.anInt2332 = ISAACCipher.method1232(var4, -1);
           var8.anInt2328 = 128 * var12.anInt1291;
         }

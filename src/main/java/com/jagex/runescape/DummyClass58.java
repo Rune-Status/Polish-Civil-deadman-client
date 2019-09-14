@@ -78,12 +78,12 @@ public final class DummyClass58 {
         int var2 = GroundItem.viewHeight;
         int var3 = var2 * 956 / 503;
         assert DummyClass59.titlebackground != null;
-        DummyClass59.titlebackground.draw((DummyClass30.viewWidth + -var3) / 2, 0, var3, var2);
+        DummyClass59.titlebackground.draw((DummyClass30.viewWidth - var3) / 2, 0, var3, var2);
         AnimationSequence.logoSprite =
           WidgetUpdate.createIndexedColorSprite(var0, BitVariable.logoFileId);
         assert AnimationSequence.logoSprite != null;
         AnimationSequence.logoSprite.draw(
-          DummyClass30.viewWidth / 2 + -(AnimationSequence.logoSprite.width / 2), 18);
+          DummyClass30.viewWidth / 2 - (AnimationSequence.logoSprite.width / 2), 18);
         StillGraphic.aBoolean2713 = true;
         if (var1 > -50) {
           DummyClass58.method1654(-27);

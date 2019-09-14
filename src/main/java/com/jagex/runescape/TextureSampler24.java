@@ -59,36 +59,36 @@ public final class TextureSampler24 extends AbstractTextureSampler {
     SceneNode.aClass109Array1831[0].draw(var3, var4);
       SceneNode.aClass109Array1831[1].draw(var3, -16 + var5 + var4);
       int var8 = 44 % ((var0 - 38) / 57);
-      int var6 = var5 * (var5 + -32) / var2;
+      int var6 = var5 * (var5 - 32) / var2;
       if (var6 < 8) {
         var6 = 8;
       }
 
-      int var7 = var1 * (-var6 + -32 + var5) / (var2 + -var5);
+      int var7 = var1 * (-var6 - 32 + var5) / (var2 - var5);
       if (GlRenderer.useOpenGlRenderer) {
         GlUtils.fillQuad(var3, 16 + var4, 16, -32 + var5, SomethingOtherWorldMap.anInt2530);
         GlUtils.fillQuad(var3, 16 + var4 + var7, 16, var6, SceneSomething.anInt486);
-        GlUtils.drawVerticalLine(var3, var7 + (var4 - -16), var6, TextureSampler2.anInt3377);
+        GlUtils.drawVerticalLine(var3, var7 + (var4 + 16), var6, TextureSampler2.anInt3377);
         GlUtils.drawVerticalLine(var3 + 1, var7 + 16 + var4, var6, TextureSampler2.anInt3377);
         GlUtils.drawHorizontalLine(var3, var7 + 16 + var4, 16, TextureSampler2.anInt3377);
         GlUtils.drawHorizontalLine(var3, var7 + var4 + 17, 16, TextureSampler2.anInt3377);
-        GlUtils.drawVerticalLine(15 + var3, var4 + (16 - -var7), var6, SceneGraphTile.anInt2243);
-        GlUtils.drawVerticalLine(14 + var3, 17 + (var4 - -var7), -1 + var6,
+        GlUtils.drawVerticalLine(15 + var3, var4 + (16 + var7), var6, SceneGraphTile.anInt2243);
+        GlUtils.drawVerticalLine(14 + var3, 17 + (var4 + var7), -1 + var6,
           SceneGraphTile.anInt2243);
         GlUtils.drawHorizontalLine(var3, var6 + 15 + var4 + var7, 16, SceneGraphTile.anInt2243);
-        GlUtils.drawHorizontalLine(var3 + 1, var4 + 14 - -var7 + var6, 15,
+        GlUtils.drawHorizontalLine(var3 + 1, var4 + 14 + var7 + var6, 15,
           SceneGraphTile.anInt2243);
       } else {
         DummyClass47.method1323(var3, 16 + var4, 16, -32 + var5, SomethingOtherWorldMap.anInt2530);
-        DummyClass47.method1323(var3, var7 + (var4 - -16), 16, var6, SceneSomething.anInt486);
+        DummyClass47.method1323(var3, var7 + (var4 + 16), 16, var6, SceneSomething.anInt486);
         DummyClass47.method1318(var3, var7 + var4 + 16, var6, TextureSampler2.anInt3377);
         DummyClass47.method1318(var3 + 1, var7 + 16 + var4, var6, TextureSampler2.anInt3377);
-        DummyClass47.method1317(var3, var4 + (16 - -var7), 16, TextureSampler2.anInt3377);
+        DummyClass47.method1317(var3, var4 + (16 + var7), 16, TextureSampler2.anInt3377);
         DummyClass47.method1317(var3, 17 + var4 + var7, 16, TextureSampler2.anInt3377);
-        DummyClass47.method1318(var3 - -15, var7 + 16 + var4, var6, SceneGraphTile.anInt2243);
-        DummyClass47.method1318(14 + var3, var4 - -17 - -var7, -1 + var6, SceneGraphTile.anInt2243);
+        DummyClass47.method1318(var3 + 15, var7 + 16 + var4, var6, SceneGraphTile.anInt2243);
+        DummyClass47.method1318(14 + var3, var4 + 17 + var7, -1 + var6, SceneGraphTile.anInt2243);
         DummyClass47.method1317(var3, var6 + 15 + var4 + var7, 16, SceneGraphTile.anInt2243);
-        DummyClass47.method1317(1 + var3, var6 + var4 - (-14 + -var7), 15,
+        DummyClass47.method1317(1 + var3, var6 + var4 - (-14 - var7), 15,
           SceneGraphTile.anInt2243);
       }
   }

@@ -29,7 +29,7 @@ public class Sensor {
   }
 
   public final void method1796(int var1, int var2, int var3) {
-    int var4 = -58 / ((var2 - -29) / 57);
+    int var4 = -58 / ((var2 + 29) / 57);
     this.aRobot1732.mouseMove(var1, var3);
   }
 

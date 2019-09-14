@@ -398,7 +398,7 @@ public final class ItemConfig {
                   } else {
                     if (var3 >= 30 && (var3 < 35)) {
                       this.aClass94Array801[-30 + var3] = var2.readString();
-                      if (this.aClass94Array801[var3 + -30].method1531(
+                      if (this.aClass94Array801[var3 - 30].method1531(
                           TextureSampler33.aClass94_3051)) {
                         this.aClass94Array801[-30 + var3] = null;
                       }
@@ -466,7 +466,7 @@ public final class ItemConfig {
 
                                 this.anIntArray804[-100 + var3] = var2
                                     .readUnsignedShort();
-                                this.anIntArray766[var3 + -100] = var2
+                                this.anIntArray766[var3 - 100] = var2
                                     .readUnsignedShort();
                               } else if (var3 != 110) {
                                 if ((var3 == 111)) {
@@ -740,7 +740,7 @@ public final class ItemConfig {
         }
 
         SoftwareModel var5 =
-          var2.method2000(64 - -this.anInt784, 768 - -this.anInt790, -50, -10, -50);
+          var2.method2000(64 + this.anInt784, 768 + this.anInt790, -50, -10, -50);
         if (var1 != 18206) {
           this.method1105(-67, null, -37);
         }
@@ -877,7 +877,7 @@ public final class ItemConfig {
         }
         if ((j1 == 10)) {
           k -= 2;
-          if (GroundItem.anIntArray2929[k - -1] < GroundItem.anIntArray2929[k]) {
+          if (GroundItem.anIntArray2929[k + 1] < GroundItem.anIntArray2929[k]) {
             i1 += ai1[i1];
           }
           continue;
@@ -960,7 +960,7 @@ public final class ItemConfig {
           }
 
           for (int i76 = 0; class3_sub28_sub15_1.anInt3682 > i76; i76++) {
-            aclass94[i76] = Node.aClass94Array75[i76 + -class3_sub28_sub15_1.anInt3682 + l];
+            aclass94[i76] = Node.aClass94Array75[i76 - class3_sub28_sub15_1.anInt3682 + l];
           }
 
           k -= class3_sub28_sub15_1.anInt3678;
@@ -1119,7 +1119,7 @@ public final class ItemConfig {
         if ((j1 == 200)) {
           k -= 2;
           int k6 = GroundItem.anIntArray2929[k];
-          int j44 = GroundItem.anIntArray2929[k - -1];
+          int j44 = GroundItem.anIntArray2929[k + 1];
           Widget class11_19 = AbstractDirectColorSprite.method638((byte) -19, k6, j44);
           if (class11_19 == null || (j44 == -1)) {
             GroundItem.anIntArray2929[k++] = 0;
@@ -1229,7 +1229,7 @@ public final class ItemConfig {
           if ((j1 == 1004)) {
             k -= 2;
             class11_2.anInt216 = GroundItem.anIntArray2929[k];
-            class11_2.anInt160 = GroundItem.anIntArray2929[k - -1];
+            class11_2.anInt160 = GroundItem.anIntArray2929[k + 1];
             DummyClass29.method909(-99, class11_2);
             TextureSampler24.method225(14, class11_2);
             if (class11_2.anInt187 == 0) {
@@ -1254,7 +1254,7 @@ public final class ItemConfig {
                 class11_3 = flag ? Something3dRoot.aClass11_2055 : SomethingPacket116.aClass11_1749;
               }
               if ((j1 == 1300)) {
-                int i45 = GroundItem.anIntArray2929[--k] + -1;
+                int i45 = GroundItem.anIntArray2929[--k] - 1;
                 if (i45 < 0 || (i45 > 9)) {
                   l--;
                 } else {
@@ -1304,7 +1304,7 @@ public final class ItemConfig {
               int k45 = GroundItem.anIntArray2929[--k];
               int k67 = GroundItem.anIntArray2929[--k];
               if ((k67 >= 1) && (k67 <= 10)) {
-                class11_3.method854(k67 + -1, k45, (byte) 43);
+                class11_3.method854(k67 - 1, k45, (byte) 43);
               }
               continue;
             }
@@ -1465,7 +1465,7 @@ public final class ItemConfig {
                         }
                         if ((j1 == 3101)) {
                           k -= 2;
-                          GroundItemNode.method628(0, GroundItem.anIntArray2929[k - -1],
+                          GroundItemNode.method628(0, GroundItem.anIntArray2929[k + 1],
                             GroundItem.anIntArray2929[k], TextureCache.localPlayer);
                           continue;
                         }
@@ -1507,7 +1507,7 @@ public final class ItemConfig {
                         }
                         if ((j1 == 3108)) {
                           k -= 3;
-                          int j46 = GroundItem.anIntArray2929[k - -1];
+                          int j46 = GroundItem.anIntArray2929[k + 1];
                           int j7 = GroundItem.anIntArray2929[k];
                           int l67 = GroundItem.anIntArray2929[2 + k];
                           Widget class11_22 = EnumStringFetcher.getWidget((byte) 114, l67);
@@ -1535,7 +1535,7 @@ public final class ItemConfig {
                       if ((j1 < 3300)) {
                         if ((j1 == 3200)) {
                           k -= 3;
-                          TextureSampler26.method199(GroundItem.anIntArray2929[k - -1],
+                          TextureSampler26.method199(GroundItem.anIntArray2929[k + 1],
                             GroundItem.anIntArray2929[k], GroundItem.anIntArray2929[k + 2], -799);
                           continue;
                         }
@@ -1572,7 +1572,7 @@ public final class ItemConfig {
                         }
                         if (j1 == 3303) {
                           k -= 2;
-                          int j47 = GroundItem.anIntArray2929[k - -1];
+                          int j47 = GroundItem.anIntArray2929[k + 1];
                           int k8 = GroundItem.anIntArray2929[k];
                           GroundItem.anIntArray2929[k++] =
                             DummyClass10.method2268((byte) -107, k8, j47);
@@ -1604,7 +1604,7 @@ public final class ItemConfig {
                           int k47 =
                             WorldMapLabel.anInt1716 + (TextureCache.localPlayer.anInt2819 >> 7);
                           int i68 = (TextureCache.localPlayer.anInt2829 >> 7)
-                            - -ProceduralTexture.anInt1152;
+                            + ProceduralTexture.anInt1152;
                           GroundItem.anIntArray2929[k++] = (l9 << 28) - (-(k47 << 14) - i68);
                           continue;
                         }
@@ -1630,13 +1630,13 @@ public final class ItemConfig {
                         if (j1 == 3313) {
                           k -= 2;
                           int l10 = 32768 + GroundItem.anIntArray2929[k];
-                          int l47 = GroundItem.anIntArray2929[k - -1];
+                          int l47 = GroundItem.anIntArray2929[k + 1];
                           GroundItem.anIntArray2929[k++] = Widget.method861(l10, 118, l47);
                           continue;
                         }
                         if (j1 == 3314) {
                           k -= 2;
-                          int i11 = GroundItem.anIntArray2929[k] - -32768;
+                          int i11 = GroundItem.anIntArray2929[k] + 32768;
                           int i48 = GroundItem.anIntArray2929[1 + k];
                           GroundItem.anIntArray2929[k++] = SomethingSceneJ.method872(-1, i11, i48);
                           continue;
@@ -1744,7 +1744,7 @@ public final class ItemConfig {
                         }
                         if ((j1 == 3336)) {
                           k -= 4;
-                          int i49 = GroundItem.anIntArray2929[k - -1];
+                          int i49 = GroundItem.anIntArray2929[k + 1];
                           int j12 = GroundItem.anIntArray2929[k];
                           j12 += i49 << 14;
                           int k76 = GroundItem.anIntArray2929[3 + k];
@@ -1776,7 +1776,7 @@ public final class ItemConfig {
                           int l12 = GroundItem.anIntArray2929[k];
                           int k49 = GroundItem.anIntArray2929[1 + k];
                           int l76 = GroundItem.anIntArray2929[3 + k];
-                          int k68 = GroundItem.anIntArray2929[k - -2];
+                          int k68 = GroundItem.anIntArray2929[k + 2];
                           ClientScriptEnum class3_sub28_sub13_4 =
                             TextureSampler36.getEnum(k68, true);
                           if (class3_sub28_sub13_4.someType != l12
@@ -1794,7 +1794,7 @@ public final class ItemConfig {
                         }
                         if ((j1 == 3409)) {
                           k -= 3;
-                          int l49 = GroundItem.anIntArray2929[k - -1];
+                          int l49 = GroundItem.anIntArray2929[k + 1];
                           int l68 = GroundItem.anIntArray2929[k + 2];
                           int i13 = GroundItem.anIntArray2929[k];
                           if ((l49 == -1)) {
@@ -2136,7 +2136,7 @@ public final class ItemConfig {
                         if (j1 == 4000) {
                           k -= 2;
                           int i19 = GroundItem.anIntArray2929[k];
-                          int j51 = GroundItem.anIntArray2929[k - -1];
+                          int j51 = GroundItem.anIntArray2929[k + 1];
                           GroundItem.anIntArray2929[k++] = j51 + i19;
                           continue;
                         }
@@ -2157,7 +2157,7 @@ public final class ItemConfig {
                         if (j1 == 4003) {
                           k -= 2;
                           int l19 = GroundItem.anIntArray2929[k];
-                          int i52 = GroundItem.anIntArray2929[k - -1];
+                          int i52 = GroundItem.anIntArray2929[k + 1];
                           GroundItem.anIntArray2929[k++] = l19 / i52;
                           continue;
                         }
@@ -2175,12 +2175,12 @@ public final class ItemConfig {
                         if (j1 == 4006) {
                           k -= 5;
                           int k20 = GroundItem.anIntArray2929[k];
-                          int j52 = GroundItem.anIntArray2929[k - -1];
-                          int i77 = GroundItem.anIntArray2929[k - -3];
+                          int j52 = GroundItem.anIntArray2929[k + 1];
+                          int i77 = GroundItem.anIntArray2929[k + 3];
                           int i69 = GroundItem.anIntArray2929[2 + k];
                           int j79 = GroundItem.anIntArray2929[k + 4];
                           GroundItem.anIntArray2929[k++] =
-                            ((-k20 + j52) * (j79 + -i69)) / (-i69 + i77) + k20;
+                            ((-k20 + j52) * (j79 - i69)) / (-i69 + i77) + k20;
                           continue;
                         }
                         if ((j1 == 4007)) {
@@ -2208,14 +2208,14 @@ public final class ItemConfig {
                         if ((j1 == 4010)) {
                           k -= 2;
                           int k21 = GroundItem.anIntArray2929[k];
-                          int i53 = GroundItem.anIntArray2929[k - -1];
+                          int i53 = GroundItem.anIntArray2929[k + 1];
                           GroundItem.anIntArray2929[k++] =
                             ClientScript.bitAnd(k21, 1 << i53) != 0 ? 1 : 0;
                           continue;
                         }
                         if (j1 == 4011) {
                           k -= 2;
-                          int j53 = GroundItem.anIntArray2929[k - -1];
+                          int j53 = GroundItem.anIntArray2929[k + 1];
                           int l21 = GroundItem.anIntArray2929[k];
                           GroundItem.anIntArray2929[k++] = l21 % j53;
                           continue;
@@ -2234,7 +2234,7 @@ public final class ItemConfig {
                         }
                         if ((j1 == 4013)) {
                           k -= 2;
-                          int l53 = GroundItem.anIntArray2929[k - -1];
+                          int l53 = GroundItem.anIntArray2929[k + 1];
                           int j22 = GroundItem.anIntArray2929[k];
                           if ((j22 == 0)) {
                             GroundItem.anIntArray2929[k++] = 0;
@@ -2768,7 +2768,7 @@ public final class ItemConfig {
                                 if (j1 == 5052) {
                                   k -= 2;
                                   int l25 = GroundItem.anIntArray2929[k];
-                                  int i56 = GroundItem.anIntArray2929[k - -1];
+                                  int i56 = GroundItem.anIntArray2929[k + 1];
                                   SomethingQuickChat2 class3_sub28_sub1_2 =
                                     TextureSampler22.method336(l25, (byte) -54);
                                   int j77 = class3_sub28_sub1_2.anIntArray3534[i56];
@@ -2861,7 +2861,7 @@ public final class ItemConfig {
                                     TextureSampler12.secureBuffer,
                                     SceneSomething2.aClass10_1056.anIntArray153, false);
                                   TextureSampler12.secureBuffer.method769((byte) 108,
-                                    TextureSampler12.secureBuffer.position + -l56);
+                                    TextureSampler12.secureBuffer.position - l56);
                                   continue;
                                 }
                                 if ((j1 == 5061)) {
@@ -2889,7 +2889,7 @@ public final class ItemConfig {
                                 }
                                 if ((j1 == 5063)) {
                                   k -= 2;
-                                  int j57 = GroundItem.anIntArray2929[k - -1];
+                                  int j57 = GroundItem.anIntArray2929[k + 1];
                                   int i28 = GroundItem.anIntArray2929[k];
                                   GroundItem.anIntArray2929[k++] =
                                     TextureSampler22.method336(i28, (byte) -54).anIntArray3533[j57];
@@ -2954,7 +2954,7 @@ public final class ItemConfig {
                                 if (j1 == 5070) {
                                   k -= 3;
                                   int l29 = GroundItem.anIntArray2929[k];
-                                  int j70 = GroundItem.anIntArray2929[k - -2];
+                                  int j70 = GroundItem.anIntArray2929[k + 2];
                                   int l58 = GroundItem.anIntArray2929[k + 1];
                                   SomethingQuickChat class3_sub28_sub4_1 =
                                     StringNode.method733(0xbc614e, l29);
@@ -3077,7 +3077,7 @@ public final class ItemConfig {
                                   GroundItem.anIntArray2929[k++] =
                                     TextureSampler37.anInt3256 + SomethingQuickChat2.anInt3536;
                                   GroundItem.anIntArray2929[k++] =
-                                    MapScene.anInt65 + -SpawnedGameObject.anInt2251 + (-1
+                                    MapScene.anInt65 - SpawnedGameObject.anInt2251 + (-1
                                       + DummyClass58.anInt1460);
                                   continue;
                                 }
@@ -3289,13 +3289,13 @@ public final class ItemConfig {
                                 if ((j1 == 5400)) {
                                   l -= 2;
                                   GameString class94_23 = Node.aClass94Array75[l];
-                                  GameString class94_54 = Node.aClass94Array75[l - -1];
+                                  GameString class94_54 = Node.aClass94Array75[l + 1];
                                   int k71 = GroundItem.anIntArray2929[--k];
                                   AnimationSequence.anInt1853++;
                                   TextureSampler12.secureBuffer.writePacket(117);
                                   TextureSampler12.secureBuffer.writeByte(
                                     TextureSampler29.getByteLength(class94_23) - (
-                                      -TextureSampler29.getByteLength(class94_54) + -1));
+                                      -TextureSampler29.getByteLength(class94_54) - 1));
                                   TextureSampler12.secureBuffer.writeString(class94_23);
                                   TextureSampler12.secureBuffer.writeString(class94_54);
                                   TextureSampler12.secureBuffer.writeByte(k71);
@@ -3327,7 +3327,7 @@ public final class ItemConfig {
                                   k -= 7;
                                   int j33 = GroundItem.anIntArray2929[k];
                                   int l59 = GroundItem.anIntArray2929[1 + k] << 1;
-                                  int k77 = GroundItem.anIntArray2929[k - -3];
+                                  int k77 = GroundItem.anIntArray2929[k + 3];
                                   int l71 = GroundItem.anIntArray2929[2 + k];
                                   int j80 = GroundItem.anIntArray2929[4 + k];
                                   int j82 = GroundItem.anIntArray2929[6 + k];
@@ -3444,7 +3444,7 @@ public final class ItemConfig {
                                 if (j1 == 5424) {
                                   k -= 11;
                                   WidgetUpdate.anInt3600 = GroundItem.anIntArray2929[k];
-                                  FileTable.anInt963 = GroundItem.anIntArray2929[k - -1];
+                                  FileTable.anInt963 = GroundItem.anIntArray2929[k + 1];
                                   Mouse.anInt1926 = GroundItem.anIntArray2929[k + 2];
                                   SceneShadowMap.anInt1771 = GroundItem.anIntArray2929[3 + k];
                                   GameWorldSomething.anInt502 = GroundItem.anIntArray2929[4 + k];
@@ -3483,8 +3483,8 @@ public final class ItemConfig {
                                 if (j1 == 5500) {
                                   k -= 4;
                                   int l33 = GroundItem.anIntArray2929[k];
-                                  int l77 = GroundItem.anIntArray2929[k - -3];
-                                  int j72 = GroundItem.anIntArray2929[k - -2];
+                                  int l77 = GroundItem.anIntArray2929[k + 3];
+                                  int j72 = GroundItem.anIntArray2929[k + 2];
                                   int i60 = GroundItem.anIntArray2929[k + 1];
                                   TriChromaticImageBuffer.method390(false, j72, i60, l77,
                                     (byte) -128, -ProceduralTexture.anInt1152 + (0x3fff & l33),
@@ -3495,7 +3495,7 @@ public final class ItemConfig {
                                   k -= 4;
                                   int j60 = GroundItem.anIntArray2929[1 + k];
                                   int i34 = GroundItem.anIntArray2929[k];
-                                  int i78 = GroundItem.anIntArray2929[k - -3];
+                                  int i78 = GroundItem.anIntArray2929[k + 3];
                                   int k72 = GroundItem.anIntArray2929[k + 2];
                                   Something3d.method2238(j60,
                                     (0x3fff & i34) - ProceduralTexture.anInt1152, k72,
@@ -3510,7 +3510,7 @@ public final class ItemConfig {
                                     throw new RuntimeException();
                                   }
                                   NpcConfiguration.anInt1252 = j34;
-                                  int k60 = GroundItem.anIntArray2929[k - -1];
+                                  int k60 = GroundItem.anIntArray2929[k + 1];
                                   if (
                                     ((DummyClass43.anIntArrayArrayArray911[NpcConfiguration.anInt1252].length
                                       >> 1) <= (1 + k60))) {
@@ -3949,7 +3949,7 @@ public final class ItemConfig {
                                     if (j1 == 6302) {
                                       k -= 3;
                                       int i73 = GroundItem.anIntArray2929[k + 2];
-                                      int l60 = GroundItem.anIntArray2929[k - -1];
+                                      int l60 = GroundItem.anIntArray2929[k + 1];
                                       int k36 = GroundItem.anIntArray2929[k];
                                       Parameter.aCalendar3616.clear();
                                       Parameter.aCalendar3616.set(11, 12);
@@ -4098,7 +4098,7 @@ public final class ItemConfig {
                                       k -= 4;
                                       int j73 = GroundItem.anIntArray2929[k + 2];
                                       int k37 = GroundItem.anIntArray2929[k];
-                                      boolean flag11 = (GroundItem.anIntArray2929[k - -3] == 1);
+                                      boolean flag11 = (GroundItem.anIntArray2929[k + 3] == 1);
                                       boolean flag8 = GroundItem.anIntArray2929[1 + k] == 1;
                                       DummyClass21.method1808(j73, flag8, (byte) 30, k37, flag11);
                                       continue;
@@ -4176,7 +4176,7 @@ public final class ItemConfig {
                                     GameWorldSomething.aShort505 = 1;
                                   }
                                   TextureSampler18.aShort4038 =
-                                    (short) GroundItem.anIntArray2929[k - -3];
+                                    (short) GroundItem.anIntArray2929[k + 3];
                                   if (TextureSampler18.aShort4038 > 0) {
                                     if ((TextureSampler18.aShort4038 < GameWorldSomething.aShort505)) {
                                       TextureSampler18.aShort4038 = GameWorldSomething.aShort505;
@@ -4236,7 +4236,7 @@ public final class ItemConfig {
                                   && (TextureSampler28.loginState == 0)
                                   && (DummyCanvas.anInt23 == 0)
                                     && (Light.anInt692 == 0)) {
-                                  ClientScriptCall.method377(GroundItem.anIntArray2929[k - -2],
+                                  ClientScriptCall.method377(GroundItem.anIntArray2929[k + 2],
                                     GroundItem.anIntArray2929[k + 3], GroundItem.anIntArray2929[k],
                                     GroundItem.anIntArray2929[k + 1], 1);
                                 }
@@ -4262,7 +4262,7 @@ public final class ItemConfig {
                                   && Light.anInt692 == 0) {
                                   WidgetUpdate.createIndexedColorSprite(
                                     GroundItem.anIntArray2929[k], 10603,
-                                    GroundItem.anIntArray2929[k - -3],
+                                    GroundItem.anIntArray2929[k + 3],
                                     GroundItem.anIntArray2929[1 + k], Node.aClass94Array75[1 + l],
                                     Node.aClass94Array75[l].toBase37(),
                                     GroundItem.anIntArray2929[2 + k]);
@@ -4311,7 +4311,7 @@ public final class ItemConfig {
                             }
                             k -= 2;
                             int i38 = GroundItem.anIntArray2929[k];
-                            int i61 = GroundItem.anIntArray2929[k - -1];
+                            int i61 = GroundItem.anIntArray2929[k + 1];
                             Parameter class3_sub28_sub9_1 = Deque.method1210(64, i61);
                             if (class3_sub28_sub9_1.method585(0)) {
                               Node.aClass94Array75[l++] = SomethingScene
@@ -4331,7 +4331,7 @@ public final class ItemConfig {
                             break;
                           }
                           k -= 2;
-                          int j61 = GroundItem.anIntArray2929[k - -1];
+                          int j61 = GroundItem.anIntArray2929[k + 1];
                           int j38 = GroundItem.anIntArray2929[k];
                           Parameter class3_sub28_sub9_2 = Deque.method1210(64, j61);
                           if (class3_sub28_sub9_2.method585(0)) {
@@ -4356,7 +4356,7 @@ public final class ItemConfig {
                         if (j1 == 4201) {
                           k -= 2;
                           int l38 = GroundItem.anIntArray2929[k];
-                          int k61 = GroundItem.anIntArray2929[k - -1];
+                          int k61 = GroundItem.anIntArray2929[k + 1];
                           ItemConfig class48_2 = DummyClass35.getItemConfig(l38, (byte) 77);
                           if ((k61 < 1) || k61 > 5
                             || class48_2.aClass94Array801[-1 + k61] == null) {
@@ -4373,7 +4373,7 @@ public final class ItemConfig {
                           ItemConfig class48_3 = DummyClass35.getItemConfig(i39, (byte) 70);
                           if (l61 >= 1 && (l61 <= 5) &&
                               class48_3.inventoryOptions[l61
-                                  + -1] != null) {
+                                  - 1] != null) {
                             Node.aClass94Array75[l++] = class48_3.inventoryOptions[-1 + l61];
                           } else {
                             Node.aClass94Array75[l++] = AreaSoundEffect.aClass94_2331;
@@ -4421,7 +4421,7 @@ public final class ItemConfig {
                         if ((j1 == 4208)) {
                           k -= 2;
                           int k40 = GroundItem.anIntArray2929[k];
-                          int i62 = GroundItem.anIntArray2929[k - -1];
+                          int i62 = GroundItem.anIntArray2929[k + 1];
                           Parameter class3_sub28_sub9_3 = Deque.method1210(64, i62);
                           if (class3_sub28_sub9_3.method585(0)) {
                             Node.aClass94Array75[l++] = DummyClass35.getItemConfig(k40, (byte) 126)
@@ -4522,13 +4522,13 @@ public final class ItemConfig {
                         l -= 2;
                         GroundItem.anIntArray2929[k++] =
                           Node.aClass94Array75[l].method1546((byte) -63,
-                            Node.aClass94Array75[l - -1]);
+                            Node.aClass94Array75[l + 1]);
                         continue;
                       }
                       if (j1 == 4108) {
                         GameString class94_34 = Node.aClass94Array75[--l];
                         k -= 2;
-                        int l73 = GroundItem.anIntArray2929[k - -1];
+                        int l73 = GroundItem.anIntArray2929[k + 1];
                         int i63 = GroundItem.anIntArray2929[k];
                         GroundItem.anIntArray2929[k++] =
                           BlockConfig.method1430(-28922, l73).method684(class94_34, i63);
@@ -4546,7 +4546,7 @@ public final class ItemConfig {
                       if ((j1 == 4110)) {
                         l -= 2;
                         GameString class94_36 = Node.aClass94Array75[l];
-                        GameString class94_59 = Node.aClass94Array75[l - -1];
+                        GameString class94_59 = Node.aClass94Array75[l + 1];
                         if (GroundItem.anIntArray2929[--k] == 1) {
                           Node.aClass94Array75[l++] = class94_36;
                         } else {
@@ -4847,7 +4847,7 @@ public final class ItemConfig {
               int[] ai3 = null;
               GameString class94_62 = Node.aClass94Array75[--l];
               if ((class94_62.getLength() > 0) && (class94_62.charAt(
-                  class94_62.getLength() + -1) == 89)) {
+                  class94_62.getLength() - 1) == 89)) {
                 int i79 = GroundItem.anIntArray2929[--k];
                 if (i79 > 0) {
                   ai3 = new int[i79];
@@ -4857,9 +4857,9 @@ public final class ItemConfig {
                 }
                 class94_62 = class94_62.substring(class94_62.getLength() - 1, 0, 0);
               }
-              Object[] aobj1 = new Object[class94_62.getLength() - -1];
+              Object[] aobj1 = new Object[class94_62.getLength() + 1];
               for (int i81 = -1 + aobj1.length; i81 >= 1; i81--) {
-                if (class94_62.charAt(i81 + -1) == 115) {
+                if (class94_62.charAt(i81 - 1) == 115) {
                   aobj1[i81] = Node.aClass94Array75[--l];
                 } else {
                   aobj1[i81] = new Integer(GroundItem.anIntArray2929[--k]);
@@ -5048,15 +5048,15 @@ public final class ItemConfig {
         if (j1 == 1100) {
           k -= 2;
           class11_16.anInt247 = GroundItem.anIntArray2929[k];
-          if (class11_16.anInt247 > (class11_16.anInt240 + -class11_16.anInt168)) {
-            class11_16.anInt247 = class11_16.anInt240 + -class11_16.anInt168;
+          if (class11_16.anInt247 > (class11_16.anInt240 - class11_16.anInt168)) {
+            class11_16.anInt247 = class11_16.anInt240 - class11_16.anInt168;
           }
           if ((class11_16.anInt247 < 0)) {
             class11_16.anInt247 = 0;
           }
           class11_16.anInt208 = GroundItem.anIntArray2929[k + 1];
-          if (class11_16.anInt208 > class11_16.anInt252 + -class11_16.anInt193) {
-            class11_16.anInt208 = class11_16.anInt252 + -class11_16.anInt193;
+          if (class11_16.anInt208 > class11_16.anInt252 - class11_16.anInt193) {
+            class11_16.anInt208 = class11_16.anInt252 - class11_16.anInt193;
           }
           if ((class11_16.anInt208 < 0)) {
             class11_16.anInt208 = 0;
@@ -5119,8 +5119,8 @@ public final class ItemConfig {
           class11_16.anInt258 = GroundItem.anIntArray2929[k];
           class11_16.anInt264 = GroundItem.anIntArray2929[k + 1];
           class11_16.rotationX0 = GroundItem.anIntArray2929[2 + k];
-          class11_16.rotationY = GroundItem.anIntArray2929[k - -3];
-          class11_16.rotationZ = GroundItem.anIntArray2929[k - -4];
+          class11_16.rotationY = GroundItem.anIntArray2929[k + 3];
+          class11_16.rotationZ = GroundItem.anIntArray2929[k + 4];
           class11_16.anInt164 = GroundItem.anIntArray2929[5 + k];
           DummyClass29.method909(-59, class11_16);
           if ((class11_16.anInt191 == -1)) {
@@ -5231,7 +5231,7 @@ public final class ItemConfig {
       }
       if (j1 == 403) {
         k -= 2;
-        int i66 = GroundItem.anIntArray2929[k - -1];
+        int i66 = GroundItem.anIntArray2929[k + 1];
         int j43 = GroundItem.anIntArray2929[k];
         int k75 = 0;
         do {

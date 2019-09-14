@@ -14,7 +14,7 @@ public final class DummyClass56 {
       ScriptState.configs = var0;
       int var5 = (int) (21.0D * Math.random()) - 10;
       ScriptState.configs.getAmountChildren(34, (byte) 103);
-      int var3 = (int) (Math.random() * 21.0D) + -10;
+      int var3 = (int) (Math.random() * 21.0D) - 10;
       int var6 = -20 + (int) (41.0D * Math.random());
       AbstractImageProducer.anInt2015 = var6 + var5;
       if (var2 == -67) {

@@ -33,16 +33,16 @@ public final class TextureSampler37 extends AbstractTextureSampler {
 
         for (int var6 = 0; var6 < SomethingLight0.anInt1559; ++var6) {
           int var9 = var5 + this.anInt3253;
-          int var7 = TextureCache.anIntArray2125[var6] + -2048;
+          int var7 = TextureCache.anIntArray2125[var6] - 2048;
           int var8 = this.anInt3265 + var7;
-          var9 = (var9 < 2047) ? var9 - -4096 : var9;
+          var9 = (var9 < 2047) ? var9 + 4096 : var9;
           var9 = var9 > 2048 ? -4096 + var9 : var9;
           int var10 = var7 + this.anInt3258;
           var8 = var8 < -2048 ? var8 + 4096 : var8;
           var8 = (var8 <= 2048) ? var8 : -4096 + var8;
           var10 = (var10 >= 2047) ? var10 : 4096 + var10;
           var10 = (var10 > 2048) ? var10 - 4096 : var10;
-          int var11 = var5 - -this.anInt3262;
+          int var11 = var5 + this.anInt3262;
           var11 = var11 < -2048 ? var11 + 4096 : var11;
           var11 = (var11 > 2048) ? var11 - 4096 : var11;
           var3[var6] =
@@ -99,7 +99,7 @@ public final class TextureSampler37 extends AbstractTextureSampler {
       var5 = (var5 << 12) / this.anInt3257;
       var5 = (var5 << 12) / this.anInt3266;
       var5 = var5 * this.anInt3254 >> 12;
-      return var5 > -var2 + var3 && ((-var5) < (var3 + -var2));
+      return var5 > -var2 + var3 && ((-var5) < (var3 - var2));
   }
 
   private boolean method271(int var1, int var2, byte var3) {
@@ -304,13 +304,13 @@ public final class TextureSampler37 extends AbstractTextureSampler {
             int var11 =
               var9 + 64 * (AudioStreamEncoder3.regionHashes[var2] >> 8) - WorldMapLabel.anInt1716;
             int var10 = var7 & 63;
-            int var12 = var10 + -ProceduralTexture.anInt1152 + 64 * (255
+            int var12 = var10 - ProceduralTexture.anInt1152 + 64 * (255
               & AudioStreamEncoder3.regionHashes[var2]);
             NpcConfiguration var13 = SubNode.getNpcConfiguration(var16.readUnsignedShort());
             if (TextureSampler5.npcs[var6] == null && (var13.aByte1267 & 1) > 0
               && (var8 == GameObject.plane) && (var11 >= 0) &&
                 var13.size + var11 < 104
-              && (var12 >= 0) && var12 - -var13.size < 104) {
+              && (var12 >= 0) && var12 + var13.size < 104) {
               TextureSampler5.npcs[var6] = new NPC();
               NPC npc = TextureSampler5.npcs[var6];
               AudioWorker.anIntArray347[DummyClass6.anInt2046++] = var6;

@@ -345,7 +345,7 @@ public final class GameObjectConfig {
         for (int var2 = 0; (var2 < this.anIntArray1524.length); ++var2) {
           if ((this.anIntArray1524[var2] != -1)) {
             GameObjectConfig var3 =
-              DummyClass11.method2207(var1 + -28929, this.anIntArray1524[var2]);
+              DummyClass11.method2207(var1 - 28929, this.anIntArray1524[var2]);
             if ((var3.anInt1512 != -1) || var3.anIntArray1539 != null) {
               return true;
             }
@@ -647,7 +647,7 @@ public final class GameObjectConfig {
 
                                         var5 = var1.readUnsignedByte();
                                         this.anIntArray1524 = new int[var5
-                                            - -2];
+                                            + 2];
 
                                         for (int var6 = 0; var5 >= var6;
                                             ++var6) {
@@ -901,7 +901,7 @@ public final class GameObjectConfig {
         long var12;
         if (GlRenderer.useOpenGlRenderer) {
           if (this.anIntArray1487 != null) {
-            var12 = var1 + (this.anInt1527 << 10) - -(var4 << 3);
+            var12 = var1 + (this.anInt1527 << 10) + (var4 << 3);
           } else {
             var12 = (this.anInt1527 << 10) + var1;
           }
@@ -956,7 +956,7 @@ public final class GameObjectConfig {
           return FloorUnderlay.aClass136_1413;
         } else {
           if (this.anIntArray1487 != null) {
-            var12 = (var4 << 3) + ((this.anInt1527 << 10) - -var1);
+            var12 = (var4 << 3) + ((this.anInt1527 << 10) + var1);
           } else {
             var12 = (this.anInt1527 << 10) + var1;
           }
@@ -989,7 +989,7 @@ public final class GameObjectConfig {
               var21.updateNormals();
             } else {
               var22 =
-                  new SoftwareModel(var21, 64 - -this.anInt1494,
+                  new SoftwareModel(var21, 64 + this.anInt1494,
                       5 * this.anInt1489
                           + 768, -50, -10,
                       -50);
@@ -1045,7 +1045,7 @@ public final class GameObjectConfig {
       long var15;
       if (GlRenderer.useOpenGlRenderer) {
         if (this.anIntArray1487 != null) {
-          var15 = (var13 << 3) + ((this.anInt1527 << 10) - -var6);
+          var15 = (var13 << 3) + ((this.anInt1527 << 10) + var6);
         } else {
           var15 = var6 + (this.anInt1527 << 10);
         }

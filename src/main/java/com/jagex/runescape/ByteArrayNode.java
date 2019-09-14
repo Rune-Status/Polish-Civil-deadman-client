@@ -40,7 +40,7 @@ public final class ByteArrayNode extends SubNode {
           Buffer var4 = new Buffer(var3);
           var4.position = -2 + var4.bytes.length;
           int var5 = var4.readUnsignedShort();
-          int var6 = -12 + var4.bytes.length + -2 - var5;
+          int var6 = -12 + var4.bytes.length - 2 - var5;
           var4.position = var6;
           int var7 = var4.readInt();
           var2.anInt3680 = var4.readUnsignedShort();

@@ -78,9 +78,9 @@ public final class DummyClass22 {
       var2 = 15 * TextureSampler25.amountContextActions + 21;
       int var4 = DummyClass36.anInt2612;
       var1 += 8;
-      var3 = NpcConfiguration.anInt1297 + -(var1 / 2);
+      var3 = NpcConfiguration.anInt1297 - (var1 / 2);
       if ((var4 + var2) > GroundItem.viewHeight) {
-        var4 = GroundItem.viewHeight + -var2;
+        var4 = GroundItem.viewHeight - var2;
       }
 
       if (DummyClass30.viewWidth < var3 + var1) {
@@ -99,7 +99,7 @@ public final class DummyClass22 {
         if ((NpcConfiguration.anInt1297 == TextureSampler8.anInt3460)
           && (FloorOverlay.anInt2099 == DummyClass36.anInt2612)) {
           SomethingQuickChat2.anInt3537 =
-            TextureSampler25.amountContextActions * 15 - -(!FileUnpacker.aBoolean1951 ? 22 : 26);
+            TextureSampler25.amountContextActions * 15 + (!FileUnpacker.aBoolean1951 ? 22 : 26);
           ClientScriptEnum.anInt3660 = 0;
           TextureSampler29.anInt3395 = var4;
           AbstractIndexedColorSprite.anInt1462 = var3;

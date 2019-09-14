@@ -160,7 +160,7 @@ public final class MonoChromaticImageCache {
 
   public static void method1711(int var0, int var1) {
     SomethingQuickChat.aClass93_3572.method1522(-127, var0);
-      DummyClass15.aClass93_1874.method1522(var1 + -383, var0);
+      DummyClass15.aClass93_1874.method1522(var1 - 383, var0);
       MouseRecorder.aClass93_1013.method1522(var1 ^ -132, var0);
       if (var1 != 255) {
         MonoChromaticImageCache.method1711(20, 87);

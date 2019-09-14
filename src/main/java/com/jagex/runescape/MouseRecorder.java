@@ -76,7 +76,7 @@ public final class MouseRecorder implements Runnable {
           if (var4.anInt187 == 6) {
             int var6;
             if ((var4.anInt305 != -1) || (var4.anInt198 != -1)) {
-              boolean var9 = InventoryConfig.method609(var4, var0 + -23173);
+              boolean var9 = InventoryConfig.method609(var4, var0 - 23173);
               if (var9) {
                 var6 = var4.anInt198;
               } else {
@@ -115,7 +115,7 @@ public final class MouseRecorder implements Runnable {
               var6 = var4.anInt237 << 16 >> 16;
               var4.rotationX0 = 2047 & var10 + var4.rotationX0;
               var6 *= DisplayMode.loopCycle;
-              var4.rotationY = var4.rotationY - -var6 & 2047;
+              var4.rotationY = var4.rotationY + var6 & 2047;
               DummyClass29.method909(117, var4);
             }
           }
@@ -131,7 +131,7 @@ public final class MouseRecorder implements Runnable {
     int var4 = 0;
 
       for (int var5 = 0; var1 > var5; ++var5) {
-        if (var2[var0 - -var5] == null) {
+        if (var2[var0 + var5] == null) {
           var2[var5 + var0] = TextureSampler7.aClass94_3339;
         }
 

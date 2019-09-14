@@ -168,7 +168,7 @@ public final class GroundItem extends SceneNode {
           }
 
           if (var15) {
-            if (AbstractGameWorld.heightMap[GameWorldSomething.currentPlane - -1][var9][var12]
+            if (AbstractGameWorld.heightMap[GameWorldSomething.currentPlane + 1][var9][var12]
               > FileCache.anIntArray686[var5]) {
               FileCache.anIntArray686[var5] =
                 AbstractGameWorld.heightMap[GameWorldSomething.currentPlane + 1][var9][var12];
@@ -205,11 +205,11 @@ public final class GroundItem extends SceneNode {
 
             ++var12;
             if (var12 < 104) {
-              if (((var9 + -1) >= 0) && (var6 != AbstractImageProducer.aByteArrayArrayArray2008[GameWorldSomething.currentPlane][
+              if (((var9 - 1) >= 0) && (var6 != AbstractImageProducer.aByteArrayArrayArray2008[GameWorldSomething.currentPlane][
                 -1 + var9][var12]) &&
                 ((BZipDecompressorState.tileFlags[GameWorldSomething.currentPlane][var9][var12] & 4) == 0) &&
                 ((BZipDecompressorState.tileFlags[GameWorldSomething.currentPlane][-1 + var9][var12
-                  + -1] & 4) == 0)) {
+                  - 1] & 4) == 0)) {
                 TextureSampler38.anIntArray3456[var23] = TextureSampler3.method308(1375731712,
                   TextureSampler3.method308(1179648, -1 + var9));
                 DummyClass38.anIntArray729[var23] = TextureSampler3.method308(var12, 1245184);
@@ -240,15 +240,15 @@ public final class GroundItem extends SceneNode {
                   TextureSampler3.method308(5373952, var9 + 1));
                 DummyClass38.anIntArray729[var23] = TextureSampler3.method308(5439488, var12);
                 AbstractImageProducer.aByteArrayArrayArray2008[GameWorldSomething.currentPlane][var9
-                  - -1][var12] = var6;
-                var23 = 4095 & var23 - -1;
+                  + 1][var12] = var6;
+                var23 = 4095 & var23 + 1;
               }
             }
 
             --var12;
             if (1 + var9 < 104 && var6
               != AbstractImageProducer.aByteArrayArrayArray2008[GameWorldSomething.currentPlane][
-              var9 - -1][var12]) {
+              var9 + 1][var12]) {
               TextureSampler38.anIntArray3456[var23] =
                 TextureSampler3.method308(TextureSampler3.method308(1 + var9, 9568256), 1392508928);
               DummyClass38.anIntArray729[var23] = TextureSampler3.method308(var12, 9633792);
@@ -259,11 +259,11 @@ public final class GroundItem extends SceneNode {
 
             --var12;
             if ((var12 >= 0)) {
-              if (var9 + -1 >= 0 &&
+              if (var9 - 1 >= 0 &&
                 AbstractImageProducer.aByteArrayArrayArray2008[GameWorldSomething.currentPlane][-1
                   + var9][var12] != var6 &&
                 ((BZipDecompressorState.tileFlags[GameWorldSomething.currentPlane][var9][var12] & 4) == 0) &&
-                ((BZipDecompressorState.tileFlags[GameWorldSomething.currentPlane][var9 + -1][1
+                ((BZipDecompressorState.tileFlags[GameWorldSomething.currentPlane][var9 - 1][1
                   + var12] & 4) == 0)) {
                 TextureSampler38.anIntArray3456[var23] =
                   TextureSampler3.method308(TextureSampler3.method308(-1 + var9, 13762560),
@@ -271,7 +271,7 @@ public final class GroundItem extends SceneNode {
                 DummyClass38.anIntArray729[var23] = TextureSampler3.method308(var12, 13828096);
                 AbstractImageProducer.aByteArrayArrayArray2008[GameWorldSomething.currentPlane][-1
                   + var9][var12] = var6;
-                var23 = 4095 & var23 - -1;
+                var23 = 4095 & var23 + 1;
               }
 
               if (var6
@@ -279,19 +279,19 @@ public final class GroundItem extends SceneNode {
                 TextureSampler38.anIntArray3456[var23] =
                   TextureSampler3.method308(TextureSampler3.method308(var9, 13762560), -1828716544);
                 DummyClass38.anIntArray729[var23] = TextureSampler3.method308(13828096, var12);
-                var23 = var23 - -1 & 4095;
+                var23 = var23 + 1 & 4095;
                 AbstractImageProducer.aByteArrayArrayArray2008[GameWorldSomething.currentPlane][var9][var12] =
                   var6;
               }
 
-              if (((var9 - -1) < 104) &&
+              if (((var9 + 1) < 104) &&
                 AbstractImageProducer.aByteArrayArrayArray2008[GameWorldSomething.currentPlane][var9
                   + 1][var12] != var6 &&
                 ((4 & BZipDecompressorState.tileFlags[GameWorldSomething.currentPlane][var9][var12]) == 0) &&
                 ((BZipDecompressorState.tileFlags[GameWorldSomething.currentPlane][1 + var9][1
                   + var12] & 4) == 0)) {
                 TextureSampler38.anIntArray3456[var23] = TextureSampler3.method308(-771751936,
-                  TextureSampler3.method308(var9 - -1, 9568256));
+                  TextureSampler3.method308(var9 + 1, 9568256));
                 DummyClass38.anIntArray729[var23] = TextureSampler3.method308(9633792, var12);
                 AbstractImageProducer.aByteArrayArrayArray2008[GameWorldSomething.currentPlane][var9
                   + 1][var12] = var6;

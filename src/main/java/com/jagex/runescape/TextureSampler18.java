@@ -114,13 +114,13 @@ public final class TextureSampler18 extends TextureSampler39 {
           var24 = var9[var2][var4];
           var17 = var0[var2][var4];
         } else if ((var13 == 128) && (var14 == 0)) {
-          var17 = var0[var2 - -1][var4];
+          var17 = var0[var2 + 1][var4];
           var24 = var9[1 + var2][var4];
-          var16 = var3[var2 - -1][var4];
+          var16 = var3[var2 + 1][var4];
         } else if (var13 == 128 && (var14 == 128)) {
           var16 = var3[var2 + 1][var4 + 1];
           var24 = var9[var2 + 1][var4 + 1];
-          var17 = var0[var2 - -1][var4 + 1];
+          var17 = var0[var2 + 1][var4 + 1];
         } else if (var13 == 0 && var14 == 128) {
           var17 = var0[var2][1 + var4];
           var16 = var3[var2][var4 + 1];
@@ -132,9 +132,9 @@ public final class TextureSampler18 extends TextureSampler39 {
           var16 = var3[var2][var4];
           var16 += (-var16 + var3[1 + var2][var4]) * var18;
           var17 += var18 * (var0[1 + var2][var4] - var17);
-          var24 += (-var24 + var9[var2 - -1][var4]) * var18;
+          var24 += (-var24 + var9[var2 + 1][var4]) * var18;
           float var20 = var9[var2][1 + var4];
-          var20 += (var9[var2 - -1][var4 - -1] - var20) * var18;
+          var20 += (var9[var2 + 1][var4 + 1] - var20) * var18;
           float var21 = var3[var2][1 + var4];
           float var19 = var14 / 128.0F;
           var24 += (-var24 + var20) * var19;
@@ -146,7 +146,7 @@ public final class TextureSampler18 extends TextureSampler39 {
         }
 
         int var26 = (var2 << 7) + var13;
-        int var25 = (var4 << 7) - -var14;
+        int var25 = (var4 << 7) + var14;
         int var27 = SomethingOtherWorldMap.method408(var13, (byte) -53, var4, var1, var2, var14);
         var11[var12] = var6.method1018(var8, var26, var27, var25, var24, var16, var17);
       }

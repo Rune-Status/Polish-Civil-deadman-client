@@ -16,7 +16,7 @@ public final class WidgetUpdate extends SubNode {
   }
 
   public void createIndexedColorSprite(boolean var1 ) {
-    this.subnodeKey = Time.getCurrentTimeMillis() - -500L | Long.MIN_VALUE & this.subnodeKey;
+    this.subnodeKey = Time.getCurrentTimeMillis() + 500L | Long.MIN_VALUE & this.subnodeKey;
       if (!var1) {
         WidgetUpdate.f(-42);
       }
@@ -86,25 +86,25 @@ public final class WidgetUpdate extends SubNode {
           int var12;
           for (int var5 = 0; (var5 < 3); ++var5) {
             var8 =
-              (DummyClass43.anIntArrayArrayArray911[NpcConfiguration.anInt1252][var4 - -2][var5]
-                + -DummyClass43.anIntArrayArrayArray911[NpcConfiguration.anInt1252][var4 - -3][var5]
-                - -DummyClass43.anIntArrayArrayArray911[NpcConfiguration.anInt1252][var4
-                - -2][var5]) * 3;
+              (DummyClass43.anIntArrayArrayArray911[NpcConfiguration.anInt1252][var4 + 2][var5]
+                - DummyClass43.anIntArrayArrayArray911[NpcConfiguration.anInt1252][var4 + 3][var5]
+                + DummyClass43.anIntArrayArrayArray911[NpcConfiguration.anInt1252][var4
+                + 2][var5]) * 3;
             var9 = DummyClass43.anIntArrayArrayArray911[NpcConfiguration.anInt1252][var4][var5];
             var7 =
               3 * DummyClass43.anIntArrayArrayArray911[NpcConfiguration.anInt1252][var4 + 1][var5];
             var6 = 3 * DummyClass43.anIntArrayArrayArray911[NpcConfiguration.anInt1252][var4][var5];
             var10 = -var6 + var7;
-            var11 = var8 + -(var7 * 2) + var6;
+            var11 = var8 - (var7 * 2) + var6;
             var12 = DummyClass43.anIntArrayArrayArray911[NpcConfiguration.anInt1252][2 + var4][var5]
-              + -var9 - -var7 - var8;
+              - var9 + var7 - var8;
             var3[var5] =
               var9 + ((var12 * var2 + var11) * var2 + var10) * var2;
           }
 
           EnumStringFetcher.anInt2162 = -1 * (int) var3[1];
-          NPC.anInt3995 = (int) var3[0] + -(128 * WorldMapLabel.anInt1716);
-          DummyClass49.anInt1111 = (int) var3[2] + -(ProceduralTexture.anInt1152 * 128);
+          NPC.anInt3995 = (int) var3[0] - (128 * WorldMapLabel.anInt1716);
+          DummyClass49.anInt1111 = (int) var3[2] - (ProceduralTexture.anInt1152 * 128);
           float[] var16 = new float[3];
           var6 = DummyClass37.anInt670 * 2;
 
@@ -112,15 +112,15 @@ public final class WidgetUpdate extends SubNode {
             var8 = DummyClass43.anIntArrayArrayArray911[VariableUpdate.anInt2293][var6][var7] * 3;
             var10 = (DummyClass43.anIntArrayArrayArray911[VariableUpdate.anInt2293][2 + var6][var7]
               - DummyClass43.anIntArrayArrayArray911[VariableUpdate.anInt2293][3 + var6][var7]
-              + DummyClass43.anIntArrayArrayArray911[VariableUpdate.anInt2293][var6 - -2][var7])
+              + DummyClass43.anIntArrayArrayArray911[VariableUpdate.anInt2293][var6 + 2][var7])
               * 3;
             var11 = DummyClass43.anIntArrayArrayArray911[VariableUpdate.anInt2293][var6][var7];
             var9 =
               DummyClass43.anIntArrayArrayArray911[VariableUpdate.anInt2293][1 + var6][var7] * 3;
-            var12 = var9 + -var8;
-            int var13 = var10 + var8 + -(2 * var9);
+            var12 = var9 - var8;
+            int var13 = var10 + var8 - (2 * var9);
             int var14 = -var10 + DummyClass43.anIntArrayArrayArray911[VariableUpdate.anInt2293][var6
-              - -2][var7] + -var11 + var9;
+              + 2][var7] - var11 + var9;
             var16[var7] = var11 + var2 * (var2 * (var2 * var14 + var13)
               + var12);
           }

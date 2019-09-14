@@ -55,7 +55,7 @@ public final class TextureSampler27 extends AbstractTextureSampler {
           short var6 = 0;
 
           for (var7 = 0; this.anInt3085 > var7; ++var7) {
-            if ((this.anIntArray3089[var7] <= var5) && (var5 < this.anIntArray3089[var7 - -1])) {
+            if ((this.anIntArray3089[var7] <= var5) && (var5 < this.anIntArray3089[var7 + 1])) {
               if (var5 < this.anIntArray3091[var7]) {
                 var6 = 4096;
               }
@@ -76,14 +76,14 @@ public final class TextureSampler27 extends AbstractTextureSampler {
                 var7 = (-var5 + var9 >> 1) + 2048;
               }
             } else {
-              var7 = (var9 + var5 + -4096 >> 1) + 2048;
+              var7 = (var9 + var5 - 4096 >> 1) + 2048;
             }
 
             short var8 = 0;
 
             for (var10 = 0; var10 < this.anInt3085; ++var10) {
               if ((this.anIntArray3089[var10] <= var7) && (var7 < this.anIntArray3089[var10
-                - -1])) {
+                + 1])) {
                 if ((var7 < this.anIntArray3091[var10])) {
                   var8 = 4096;
                 }
@@ -137,7 +137,7 @@ public final class TextureSampler27 extends AbstractTextureSampler {
   }
 
   public static int method201(int var0, int var1, int var2) {
-    int var3 = var1 + -1 & var0 >> 31;
+    int var3 = var1 - 1 & var0 >> 31;
       int var4 = -95 % ((33 - var2) / 54);
       return var3 + (var0 + (var0 >>> 31)) % var1;
   }

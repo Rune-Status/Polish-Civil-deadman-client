@@ -72,7 +72,7 @@ public final class DummyClass50 {
   public static void method1399(int var0, long var1) {
     if (var1 != 0L) {
         if (AnimationSomething.anInt3591 < 100) {
-          int var3 = -103 / ((var0 - -20) / 41);
+          int var3 = -103 / ((var0 + 20) / 41);
           GameString var4 = Objects
               .requireNonNull(FileCache.stringFromBase37(-29664, var1))
               .formatName((byte) -50);

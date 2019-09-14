@@ -63,10 +63,10 @@ public class DummyClass5 extends DummyClass6 {
                 if ((var11 < (AbstractIndexedColorSprite.anInt1462 - 10))
                     || var11 > (
                     SomethingWorldMapy.anInt3552 + (
-                        AbstractIndexedColorSprite.anInt1462 - -10))
+                        AbstractIndexedColorSprite.anInt1462 + 10))
                     || (-10 + TextureSampler29.anInt3395) > var3 || var3 > (
                     SomethingQuickChat2.anInt3537 + (TextureSampler29.anInt3395
-                        - -10))) {
+                        + 10))) {
                   DummyClass36.aBoolean2615 = false;
                   AbstractSomethingTexture
                       .method1340(AbstractIndexedColorSprite.anInt1462,
@@ -88,15 +88,15 @@ public class DummyClass5 extends DummyClass6 {
                     ++var8) {
                   int var9;
                   if (FileUnpacker.aBoolean1951) {
-                    var9 = 15 * (TextureSampler25.amountContextActions + -1
-                        + -var8) + 35 + var3;
+                    var9 = 15 * (TextureSampler25.amountContextActions - 1
+                        - var8) + 35 + var3;
                   } else {
                     var9 = 15 * (-var8 + (TextureSampler25.amountContextActions
                         - 1)) + var3 + 31;
                   }
 
-                  if (var12 > var11 && (var11 - -var4) > var12
-                      && var9 + -13 < var13
+                  if (var12 > var11 && (var11 + var4) > var12
+                      && var9 - 13 < var13
                       && (3 + var9) > var13) {
                     var7 = var8;
                   }
@@ -126,7 +126,7 @@ public class DummyClass5 extends DummyClass6 {
                   var3 = DummyClass26.anIntArray1613[-1
                       + TextureSampler25.amountContextActions];
                   var4 = DummyClass32.anIntArray512[
-                      TextureSampler25.amountContextActions + -1];
+                      TextureSampler25.amountContextActions - 1];
                   Widget var5 = EnumStringFetcher.getWidget((byte) 113, var4);
                   assert var5 != null;
                   WidgetAccess var6 = GameClient.method44(var5);
@@ -153,7 +153,7 @@ public class DummyClass5 extends DummyClass6 {
                   (OndemandRequester.anInt998 == 1)
                       && TextureSampler25.amountContextActions > 2
                       || TextureSampler8
-                      .method353(TextureSampler25.amountContextActions + -1,
+                      .method353(TextureSampler25.amountContextActions - 1,
                           0))) {
                 var1 = 2;
               }

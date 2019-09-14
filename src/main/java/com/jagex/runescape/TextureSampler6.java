@@ -147,12 +147,12 @@ public final class TextureSampler6 extends AbstractTextureSampler {
       int var12 = -var8;
       int var14 = -1;
       int[] var15 = DummyClass35.anIntArrayArray663[var2];
-      int var17 = var6 - -var8;
+      int var17 = var6 + var8;
       int var13 = -1;
       int var16 = -var8 + var6;
       TextureSampler18.method282(var15, -var5 + var6, -40, var16, var0);
       TextureSampler18.method282(var15, var16, -51, var17, var4);
-      TextureSampler18.method282(var15, var17, -41, var6 - -var5, var0);
+      TextureSampler18.method282(var15, var17, -41, var6 + var5, var0);
       if (!var3) {
         TextureSampler6.anIntArray3045 = null;
       }
@@ -197,13 +197,13 @@ public final class TextureSampler6 extends AbstractTextureSampler {
             var18 = DummyClass35.anIntArrayArray663[var2 + var9];
             var19 = DummyClass35.anIntArrayArray663[var2 - var9];
             var20 = var7 + var6;
-            var21 = var6 + -var7;
+            var21 = var6 - var7;
             TextureSampler18.method282(var18, var21, 113, var20, var0);
             TextureSampler18.method282(var19, var21, -100, var20, var0);
           }
         }
 
-        var18 = DummyClass35.anIntArrayArray663[var2 - -var7];
+        var18 = DummyClass35.anIntArrayArray663[var2 + var7];
         var19 = DummyClass35.anIntArrayArray663[var2 - var7];
         var20 = var9 + var6;
         var21 = -var9 + var6;
@@ -213,7 +213,7 @@ public final class TextureSampler6 extends AbstractTextureSampler {
         } else {
           var22 = var7 <= var11 ? var11 : SceneNode.anIntArray1838[var7];
           var23 = var22 + var6;
-          var24 = var6 + -var22;
+          var24 = var6 - var22;
           TextureSampler18.method282(var18, var21, -94, var24, var0);
           TextureSampler18.method282(var18, var24, 115, var23, var4);
           TextureSampler18.method282(var18, var23, 110, var20, var0);

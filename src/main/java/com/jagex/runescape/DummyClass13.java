@@ -26,7 +26,7 @@ public final class DummyClass13 {
 
   public static boolean method2194(int var0) {
       if (Structure.aBoolean3641) {
-          return !((Boolean) TextureSampler23.aClass94_3209.method1577(var0 + -2112)).booleanValue();
+          return !((Boolean) TextureSampler23.aClass94_3209.method1577(var0 - 2112)).booleanValue();
       }
 
       return true;
@@ -51,13 +51,13 @@ public final class DummyClass13 {
       }
 
       var3 = var1;
-      int var5 = (var2 + -var0) * 128;
+      int var5 = (var2 - var0) * 128;
       int var4 = 128 * var0;
 
       int var6;
       int var7;
       for (var6 = 0; var5 > var6; ++var6) {
-        var7 = DummyClass2.anIntArray1681[var3 - -var4] -
+        var7 = DummyClass2.anIntArray1681[var3 + var4] -
           var0 * DummyClass12.anIntArray2026[-1 + DummyClass12.anIntArray2026.length
             & SomethingScene.anInt1071 + var3] / 6;
         if (var7 < 0) {
@@ -69,7 +69,7 @@ public final class DummyClass13 {
 
       int var8;
       int var9;
-      for (var6 = var2 + -var0; var2 > var6; ++var6) {
+      for (var6 = var2 - var0; var2 > var6; ++var6) {
         var7 = var6 * 128;
 
         for (var8 = 0; var8 < 128; ++var8) {
@@ -82,8 +82,8 @@ public final class DummyClass13 {
         }
       }
 
-      for (var6 = 0; var2 + -var0 > var6; ++var6) {
-        AnimationSomething.anIntArray3592[var6] = AnimationSomething.anIntArray3592[var6 - -var0];
+      for (var6 = 0; var2 - var0 > var6; ++var6) {
+        AnimationSomething.anIntArray3592[var6] = AnimationSomething.anIntArray3592[var6 + var0];
       }
 
       for (var6 = var2 - var0; var2 > var6; ++var6) {
@@ -95,12 +95,12 @@ public final class DummyClass13 {
       }
 
       DummyClass22.anInt1740 += var0;
-      var6 = (var0 - -(1 & AbstractGameWorld.updateCycle)) / 2;
+      var6 = (var0 + (1 & AbstractGameWorld.updateCycle)) / 2;
       if ((var6 > 0)) {
         for (var7 = 0; DummyClass22.anInt1740 > var7; ++var7) {
           var8 = 2 + (int) (124.0D * Math.random());
           var9 = (int) (128.0D * Math.random()) + 128;
-          DummyClass2.anIntArray1681[var8 - -(var9 << 7)] = 192;
+          DummyClass2.anIntArray1681[var8 + (var9 << 7)] = 192;
         }
 
         DummyClass22.anInt1740 = 0;
@@ -112,11 +112,11 @@ public final class DummyClass13 {
 
           for (var10 = -var6; (var10 < 128); ++var10) {
             if (var6 + var10 < 128) {
-              var8 += DummyClass2.anIntArray1681[var9 + (var10 - -var6)];
+              var8 += DummyClass2.anIntArray1681[var9 + (var10 + var6)];
             }
 
-            if (((-1 + -var6 + var10) >= 0)) {
-              var8 -= DummyClass2.anIntArray1681[-var6 + -1 + var10 + var9];
+            if (((-1 - var6 + var10) >= 0)) {
+              var8 -= DummyClass2.anIntArray1681[-var6 - 1 + var10 + var9];
             }
 
             if (var10 >= 0) {
@@ -131,15 +131,15 @@ public final class DummyClass13 {
           for (var9 = -var6; var2 > var9; ++var9) {
             var10 = var9 * 128;
             if (((var9 + var6) < var2)) {
-              var8 += GameBuffer.anIntArray3805[var6 * 128 + (var7 - -var10)];
+              var8 += GameBuffer.anIntArray3805[var6 * 128 + (var7 + var10)];
             }
 
             if (var9 - var6 - 1 >= 0) {
-              var8 -= GameBuffer.anIntArray3805[-((1 + var6) * 128) + (var7 - -var10)];
+              var8 -= GameBuffer.anIntArray3805[-((1 + var6) * 128) + (var7 + var10)];
             }
 
             if (var9 >= 0) {
-              DummyClass2.anIntArray1681[var10 + var7] = var8 / (var6 * 2 - -1);
+              DummyClass2.anIntArray1681[var10 + var7] = var8 / (var6 * 2 + 1);
             }
           }
         }

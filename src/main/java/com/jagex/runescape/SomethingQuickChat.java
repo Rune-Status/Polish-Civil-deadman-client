@@ -168,7 +168,7 @@ public final class SomethingQuickChat extends SubNode {
           string.append(this.strings[var4]);
           string.append(GZipDecompressor.method1124(this.anIntArrayArray3570[var4],
             var2.readVariableLengthValue(WidgetAccess.anIntArray2209[this.anIntArray3566[var4]],
-              var1 + -28021), this.anIntArray3566[var4], false));
+              var1 - 28021), this.anIntArray3566[var4], false));
         }
       }
 

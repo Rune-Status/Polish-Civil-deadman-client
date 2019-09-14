@@ -20,13 +20,13 @@ public final class Inventory extends Node {
           MonoChromaticImageCache.anIntArray1578, var1,
           -var1 + TextureSampler25.amountContextActions);
         ArrayUtils.method1361(TextureSampler27.aShortArray3095, 1 + var1,
-          TextureSampler27.aShortArray3095, var1, TextureSampler25.amountContextActions + -var1);
+          TextureSampler27.aShortArray3095, var1, TextureSampler25.amountContextActions - var1);
         ArrayUtils.method1356(TextureSampler0.aLongArray3271, 1 + var1,
           TextureSampler0.aLongArray3271, var1, -var1 + TextureSampler25.amountContextActions);
         ArrayUtils.method1358(DummyClass26.anIntArray1613, var1 + var0, DummyClass26.anIntArray1613,
           var1, -var1 + TextureSampler25.amountContextActions);
         ArrayUtils.method1358(DummyClass32.anIntArray512, 1 + var1, DummyClass32.anIntArray512,
-          var1, TextureSampler25.amountContextActions + -var1);
+          var1, TextureSampler25.amountContextActions - var1);
       }
   }
 

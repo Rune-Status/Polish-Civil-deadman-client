@@ -40,7 +40,7 @@ public final class GameException extends RuntimeException {
     return ((var0 < 97) || (var0 > 122)) && ((var0 < 224) || (var0 > 254) ||
         var0 == 247) ?
         ((var0 != 255) ? (var0 != 156 ? (var1 != 59 ? 72 : var0) : 140) : 159) :
-        var0 + -32;
+        var0 - 32;
   }
 
   public static void method2288(boolean var0) {

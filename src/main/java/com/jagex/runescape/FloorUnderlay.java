@@ -159,7 +159,7 @@ public final class FloorUnderlay {
           var4 = var2.nextInt();
         } while (var3 <= var4);
 
-        int var5 = -101 % ((var0 - -52) / 33);
+        int var5 = -101 % ((var0 + 52) / 33);
         return TextureSampler27.method201(var4, var1, -58);
       }
   }
@@ -167,7 +167,7 @@ public final class FloorUnderlay {
   public static void method1605(int var0, GameString var1, int var2) {
     ++SomethingSceneI.anInt421;
       TextureSampler12.secureBuffer.writePacket(188);
-      TextureSampler12.secureBuffer.method790(var2, var0 + -13326);
+      TextureSampler12.secureBuffer.method790(var2, var0 - 13326);
       if (var0 == 255) {
         TextureSampler12.secureBuffer.writeLong(var1.toBase37());
       }

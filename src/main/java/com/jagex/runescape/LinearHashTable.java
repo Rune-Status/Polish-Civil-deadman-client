@@ -27,10 +27,10 @@ public final class LinearHashTable {
       }
 
       int var4;
-      for (var3 = 0; var1.length > var3; this.anIntArray1041[var4 - -var4 - -1] = var3++) {
+      for (var3 = 0; var1.length > var3; this.anIntArray1041[var4 + var4 + 1] = var3++) {
         for (
           var4 = -1 + var2 & var1[var3];
-            (this.anIntArray1041[1 + var4 - -var4] != -1); var4 = -1 + var2 & 1 + var4) {
+            (this.anIntArray1041[1 + var4 + var4] != -1); var4 = -1 + var2 & 1 + var4) {
         }
 
         this.anIntArray1041[var4 + var4] = var1[var3];
@@ -38,7 +38,7 @@ public final class LinearHashTable {
   }
 
   public int get(int var1 ) {
-    int var3 = (this.anIntArray1041.length >> 1) + -1;
+    int var3 = (this.anIntArray1041.length >> 1) - 1;
       int var4 = var3 & var1;
 
       while (true) {
@@ -51,7 +51,7 @@ public final class LinearHashTable {
           return var5;
         }
 
-        var4 = var4 - -1 & var3;
+        var4 = var4 + 1 & var3;
       }
   }
 
@@ -74,9 +74,9 @@ public final class LinearHashTable {
     int var5 = 0;
 
       for (int var6 = 58 / ((56 - var1) / 49); SomethingWorldMapy.widgetQuads > var5; ++var5) {
-        if (var0 < AbstractAudioOutputStream.quadx0[var5] - -GlTexture2d.quadx1[var5]
+        if (var0 < AbstractAudioOutputStream.quadx0[var5] + GlTexture2d.quadx1[var5]
           && var0 + var4 > AbstractAudioOutputStream.quadx0[var5]
-          && (Player.quady0[var5] - -Mobile.quady1[var5]) > var2 && (Player.quady0[var5] < (var3
+          && (Player.quady0[var5] + Mobile.quady1[var5]) > var2 && (Player.quady0[var5] < (var3
           + var2))) {
           DummyClass9.aBooleanArray4008[var5] = true;
         }

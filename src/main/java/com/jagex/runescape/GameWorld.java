@@ -22,7 +22,7 @@ public final class GameWorld extends AbstractGameWorld {
 
   public static void method1076(int var0) {
     DummyClass14.aClass93_1964.method1524(3);
-      int var1 = -86 % ((var0 - -55) / 41);
+      int var1 = -86 % ((var0 + 55) / 41);
   }
 
   public static void method1077(int var0) {
@@ -54,7 +54,7 @@ public final class GameWorld extends AbstractGameWorld {
             }
           }
 
-          var3 += Objects.requireNonNull(BufferObject.method2069(var0, -100)).size + -var2.ids.length;
+          var3 += Objects.requireNonNull(BufferObject.method2069(var0, -100)).size - var2.ids.length;
           return var3;
         }
       }

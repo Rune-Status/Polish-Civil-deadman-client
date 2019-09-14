@@ -161,7 +161,7 @@ public final class Texture extends SubNode {
                 --var25;
                 var10[var25] = TextureSampler3.method308(var22,
                     TextureSampler3.method308(var20 << 16, var21 << 8));
-                var28 += var7[var27] + -var7[var26];
+                var28 += var7[var27] - var7[var26];
                 var29 += var9[var27] - var9[var26];
                 var30 += -var8[var26] + var8[var27];
                 if ((var26 == 0)) {
@@ -179,11 +179,11 @@ public final class Texture extends SubNode {
                 --var14;
                 int var24 = this.anIntArray3793[var14];
                 var7[var11] +=
-                    (ClientScript.bitAnd(var24, 16729186) >> 16) + -ClientScript
+                    (ClientScript.bitAnd(var24, 16729186) >> 16) - ClientScript
                         .bitAnd(var23 >> 16,
                             255);
                 var8[var11] +=
-                    (ClientScript.bitAnd('\uff8b', var24) >> 8) + -ClientScript
+                    (ClientScript.bitAnd('\uff8b', var24) >> 8) - ClientScript
                         .bitAnd(255,
                             var23 >> 8);
                 var9[var11] += -ClientScript.bitAnd(var23, 255) + ClientScript
@@ -337,7 +337,7 @@ public final class Texture extends SubNode {
           int var5 = var1 * this.anInt3783;
           int var3 = (this.anIntArray3793.length == 4096) ? 64 : 128;
           int var4 = this.anIntArray3793.length;
-          int var6 = var3 + -1;
+          int var6 = var3 - 1;
           int var7 = this.anInt3799 * var1 * var3;
           int var8 = -1 + var4;
 
@@ -345,7 +345,7 @@ public final class Texture extends SubNode {
             int var10 = var7 + var9 & var8;
 
             for (int var11 = 0; var3 > var11; ++var11) {
-              int var13 = (var6 & var11 - -var5) + var10;
+              int var13 = (var6 & var11 + var5) + var10;
               int var12 = var11 + var9;
               SomethingOtherWorldMap.anIntArray2533[var12] = this.anIntArray3793[var13];
             }
@@ -387,7 +387,7 @@ public final class Texture extends SubNode {
   public static void method725(int var0) {
     int var1 = 67 / ((-60 - var0) / 41);
       if ((DummyClass20.method1817((byte) 70) == 2)) {
-        byte var2 = (byte) (255 & BitVariable.anInt1127 + -4);
+        byte var2 = (byte) (255 & BitVariable.anInt1127 - 4);
         int var3 = BitVariable.anInt1127 % 104;
 
         int var4;
@@ -520,7 +520,7 @@ public final class Texture extends SubNode {
             var4 = BufferData
                 .method1736(GameWorldSomething.currentPlane, 1, NPC.anInt3995,
                     DummyClass49.anInt1111);
-            if (var4 + -EnumStringFetcher.anInt2162 < 800 &&
+            if (var4 - EnumStringFetcher.anInt2162 < 800 &&
                 (4
                     & BZipDecompressorState.tileFlags[GameWorldSomething.currentPlane][
                     NPC.anInt3995

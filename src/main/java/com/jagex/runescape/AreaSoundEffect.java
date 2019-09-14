@@ -51,7 +51,7 @@ public final class AreaSoundEffect extends Node {
         }
       } else if (this.aClass140_Sub4_Sub2_2324 == null) {
         if (this.aClass140_Sub4_Sub1_2327 != null) {
-          this.anInt2332 = DummyClass50.method1398(var1 + -1,
+          this.anInt2332 = DummyClass50.method1398(var1 - 1,
               this.aClass140_Sub4_Sub1_2327);
           this.anInt2328 = 128 * this.aClass140_Sub4_Sub1_2327.anInt3969;
         }
@@ -113,7 +113,7 @@ public final class AreaSoundEffect extends Node {
       int var10 = var9 << 1;
       int var11 = var8 << 1;
       int var12 = var4 << 1;
-      int var13 = var10 + (1 + -var12) * var8;
+      int var13 = var10 + (1 - var12) * var8;
       int var14 = var9 - var11 * (var12 - 1);
       int var15 = var8 << 2;
       if (var3 > -110) {
@@ -122,7 +122,7 @@ public final class AreaSoundEffect extends Node {
 
       int var16 = var9 << 2;
       int var17 = var10 * (3 + (var6 << 1));
-      int var18 = var11 * ((var4 << 1) + -3);
+      int var18 = var11 * ((var4 << 1) - 3);
       int var19 = (1 + var6) * var16;
       int var20 = var15 * (var4 - 1);
 
@@ -152,7 +152,7 @@ public final class AreaSoundEffect extends Node {
         var14 += -var18;
         var18 -= var15;
         var13 += -var20;
-        int var24 = var1 + -var6;
+        int var24 = var1 - var6;
         var20 -= var15;
         TextureSampler18.method282(DummyClass35.anIntArrayArray663[var21], var24, -110, var23,
           var5);

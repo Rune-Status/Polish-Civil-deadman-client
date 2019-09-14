@@ -30,8 +30,8 @@ public final class SceneShadowMap {
       int var15 = 983040 / var8;
       int var16 = 983040 / var3;
 
-      for (int var17 = -var15; var17 < var11 - -var15; ++var17) {
-        int var18 = var5 - -(var17 * var8) >> 16;
+      for (int var17 = -var15; var17 < var11 + var15; ++var17) {
+        int var18 = var5 + (var17 * var8) >> 16;
         int var19 = var8 * (var17 + 1) + var5 >> 16;
         int var20 = -var18 + var19;
         if ((var20 > 0)) {
@@ -41,10 +41,10 @@ public final class SceneShadowMap {
           if ((var21 >= 0) && var21 <= -1 + AbstractGameWorld.anIntArrayArrayArray720.length) {
             int[][] var22 = AbstractGameWorld.anIntArrayArrayArray720[var21];
 
-            for (int var23 = -var16; var23 < var12 - -var16; ++var23) {
-              int var25 = var6 - -(var3 * (var23 - -1)) >> 16;
+            for (int var23 = -var16; var23 < var12 + var16; ++var23) {
+              int var25 = var6 + (var3 * (var23 + 1)) >> 16;
               int var24 = var23 * var3 + var6 >> 16;
-              int var26 = var25 + -var24;
+              int var26 = var25 - var24;
               if (var26 > 0) {
                 var24 += var10;
                 int var27 = var9 + var23 >> 6;
@@ -64,7 +64,7 @@ public final class SceneShadowMap {
                         DummyClass55.aClass61_1424.addLast(var30);
                       } else {
                         SceneNode.aClass3_Sub28_Sub16_Sub2Array1839[var14.anInt1482].method643(
-                          var18 + -7, -7 + var24);
+                          var18 - 7, -7 + var24);
                       }
                     }
                   }

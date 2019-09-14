@@ -237,7 +237,7 @@ public final class NPC extends Mobile {
         int var3 = 57 * var2 + var0;
         var3 ^= var3 << 13;
         int var4 = Integer.MAX_VALUE
-            & 1376312589 + (var3 * var3 * 15731 - -789221) * var3;
+            & 1376312589 + (var3 * var3 * 15731 + 789221) * var3;
         return (var4 & 133802063) >> 19;
       } else {
         return 88;

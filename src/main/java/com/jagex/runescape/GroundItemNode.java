@@ -38,7 +38,7 @@ public final class GroundItemNode extends SubNode {
           DummyClass58.anInt1460 =
             (Buffer.aClass3_Sub28_Sub3_2600.anInt3549 >> 6 << 6) - MapScene.anInt65 + 64;
           DummyClass30.anInt455 =
-            64 + (Buffer.aClass3_Sub28_Sub3_2600.anInt3559 >> 6 << 6) + -TextureSampler37.anInt3256;
+            64 + (Buffer.aClass3_Sub28_Sub3_2600.anInt3559 >> 6 << 6) - TextureSampler37.anInt3256;
           if (Buffer.aClass3_Sub28_Sub3_2600.anInt3563 == 37) {
             AbstractGameWorld.aFloat727 = 3.0F;
             NPC.aFloat3979 = 3.0F;
@@ -68,8 +68,8 @@ public final class GroundItemNode extends SubNode {
           int var1 = -TextureSampler37.anInt3256 + (TextureCache.localPlayer.anInt2819 >> 7)
             + WorldMapLabel.anInt1716;
           var1 += -5 + (int) (Math.random() * 10.0D);
-          int var2 = -ProceduralTexture.anInt1152 + -(TextureCache.localPlayer.anInt2829 >> 7)
-            + MapScene.anInt65 + -1 + DummyClass58.anInt1460;
+          int var2 = -ProceduralTexture.anInt1152 - (TextureCache.localPlayer.anInt2829 >> 7)
+            + MapScene.anInt65 - 1 + DummyClass58.anInt1460;
           var2 += -5 + (int) (Math.random() * 10.0D);
           if ((var1 >= 0) && DummyClass30.anInt455 > var1 && var2 >= 0
             && (var2 < DummyClass58.anInt1460)) {
@@ -78,9 +78,9 @@ public final class GroundItemNode extends SubNode {
           } else {
             SpawnedGameObject.anInt2251 =
               MapScene.anInt65 - Buffer.aClass3_Sub28_Sub3_2600.anInt3556 * 64
-                + DummyClass58.anInt1460 + -1;
+                + DummyClass58.anInt1460 - 1;
             SomethingQuickChat2.anInt3536 =
-              Buffer.aClass3_Sub28_Sub3_2600.anInt3558 * 64 + -TextureSampler37.anInt3256;
+              Buffer.aClass3_Sub28_Sub3_2600.anInt3558 * 64 - TextureSampler37.anInt3256;
           }
 
           SomethingInScenePacket202.method117((byte) 87);
@@ -114,7 +114,7 @@ public final class GroundItemNode extends SubNode {
             if (GameObject.anInt2737 == 50) {
               HintMarker.method1587((byte) -83, new Buffer(
                   TextureSampler23.worldMaps
-                      .method2123(var0 + -64, SomethingSceneI.aClass94_422,
+                      .method2123(var0 - 64, SomethingSceneI.aClass94_422,
                           Buffer.aClass3_Sub28_Sub3_2600.aClass94_3561)));
               GameObject.anInt2737 = 60;
               DummyClass5.method2210((byte) -90, true);
@@ -135,7 +135,7 @@ public final class GroundItemNode extends SubNode {
                   }
 
                   DummyClass25.aClass131_1624 =
-                      DummyClass50.method1403(var0 + -120,
+                      DummyClass50.method1403(var0 - 120,
                           RenderAnimation.concat(new GameString[]{
                               Buffer.aClass3_Sub28_Sub3_2600.aClass94_3561,
                               SomethingAudio.aClass94_2003

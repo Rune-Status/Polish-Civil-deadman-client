@@ -170,12 +170,12 @@ public final class SomethingWorldMapy extends SubNode {
         return -52;
       } else {
         int var3 =
-          NPC.method1984(var0 + -1, 38, -1 + var1) - -NPC.method1984(1 + var0, 38, -1 + var1) - (
-            -NPC.method1984(-1 + var0, 38, var1 - -1) + -NPC.method1984(var0 + 1, 38, var1 - -1));
-        int var4 = NPC.method1984(var0 + -1, 38, var1) + NPC.method1984(var0 + 1, 38, var1) + (
-          NPC.method1984(var0, 38, -1 + var1) - -NPC.method1984(var0, 38, 1 + var1));
+          NPC.method1984(var0 - 1, 38, -1 + var1) + NPC.method1984(1 + var0, 38, -1 + var1) - (
+            -NPC.method1984(-1 + var0, 38, var1 + 1) - NPC.method1984(var0 + 1, 38, var1 + 1));
+        int var4 = NPC.method1984(var0 - 1, 38, var1) + NPC.method1984(var0 + 1, 38, var1) + (
+          NPC.method1984(var0, 38, -1 + var1) + NPC.method1984(var0, 38, 1 + var1));
         int var5 = NPC.method1984(var0, 38, var1);
-        return var4 / 8 + var3 / 16 - -(var5 / 4);
+        return var4 / 8 + var3 / 16 + (var5 / 4);
       }
   }
 

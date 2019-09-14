@@ -28,7 +28,7 @@ public final class TextureSampler21 extends AbstractTextureSampler {
           if (var9 == 4096) {
             var3[var8] = var5[var8];
           } else if ((var9 != 0)) {
-            var3[var8] = var9 * var5[var8] - -((-var9 + 4096) * var6[var8]) >> 12;
+            var3[var8] = var9 * var5[var8] + ((-var9 + 4096) * var6[var8]) >> 12;
           } else {
             var3[var8] = var6[var8];
           }
@@ -100,7 +100,7 @@ public final class TextureSampler21 extends AbstractTextureSampler {
         && var4 >= DummyClass13.anInt2020 && var1 <= LightIntensity.anInt902) {
         TextureSampler4.method262(var3, 119, var4, var1, var2, var0, var6, var7);
       } else {
-        DummyClass15.method2062(var6, var2, var5 + -4185, var1, var0, var3, var4, var7);
+        DummyClass15.method2062(var6, var2, var5 - 4185, var1, var0, var3, var4, var7);
       }
   }
 

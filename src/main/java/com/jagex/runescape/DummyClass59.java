@@ -306,7 +306,7 @@ public final class DummyClass59 {
             var12 = GameWorldSomething.currentPlane;
           }
 
-          if ((var12 < (GameWorldSomething.currentPlane + -1))) {
+          if ((var12 < (GameWorldSomething.currentPlane - 1))) {
             var12 = -1 + GameWorldSomething.currentPlane;
           }
 
@@ -374,10 +374,10 @@ public final class DummyClass59 {
             int var7 = (VariableUpdate.anInt2294 + 6) / 8;
             int var6 = (VariableUpdate.anInt2294 - 6) / 8;
             var4 = (AbstractObjectNode.anInt3606 - 6) / 8;
-            var5 = (AbstractObjectNode.anInt3606 - -6) / 8;
+            var5 = (AbstractObjectNode.anInt3606 + 6) / 8;
 
-            for (int var8 = var4 - 1; (var8 <= (var5 - -1)); ++var8) {
-              for (int var9 = -1 + var6; (var9 <= (var7 - -1)); ++var9) {
+            for (int var8 = var4 - 1; (var8 <= (var5 + 1)); ++var8) {
+              for (int var9 = -1 + var6; (var9 <= (var7 + 1)); ++var9) {
                 if ((var8 < var4) || var8 > var5 || (var9 < var6)
                     || var9 > var7) {
                   TextureSampler26.maps

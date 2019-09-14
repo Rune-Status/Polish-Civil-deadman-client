@@ -40,7 +40,7 @@ public final class FileSystem {
           return false;
         } else {
           this.updateTableBuffer = new Buffer(this.updateTableRequest.method587(false));
-          this.fileRequesters = new FileRequester[(this.updateTableBuffer.bytes.length + -5) / 8];
+          this.fileRequesters = new FileRequester[(this.updateTableBuffer.bytes.length - 5) / 8];
           return true;
         }
       } else {
@@ -133,24 +133,24 @@ public final class FileSystem {
 
       int var14;
       int var15;
-      if (((var7 - -var11) > 104)) {
+      if (((var7 + var11) > 104)) {
         var15 = 1 + var7;
         var14 = var7;
       } else {
-        var14 = var7 - -(var11 >> 1);
-        var15 = var7 - -(1 + var11 >> 1);
+        var14 = var7 + (var11 >> 1);
+        var15 = var7 + (1 + var11 >> 1);
       }
 
-      int var16 = (var6 << 7) - -(var10 << 6);
+      int var16 = (var6 << 7) + (var10 << 6);
       int var17 = (var7 << 7) + (var11 << 6);
       int var12;
       int var13;
-      if (var6 - -var10 > 104) {
+      if (var6 + var10 > 104) {
         var12 = var6;
         var13 = var6 + 1;
       } else {
         var12 = var6 + (var10 >> 1);
-        var13 = (var10 - -1 >> 1) + var6;
+        var13 = (var10 + 1 >> 1) + var6;
       }
 
       int[][] var18 = AbstractGameWorld.heightMap[var8];
@@ -161,7 +161,7 @@ public final class FileSystem {
       if ((var8 != 0)) {
         var21 = AbstractGameWorld.heightMap[0];
         var20 =
-          -(var21[var12][var15] + var21[var13][var14] + (var21[var12][var14] - -var21[var13][var15])
+          -(var21[var12][var15] + var21[var13][var14] + (var21[var12][var14] + var21[var13][var15])
             >> 2) + var19;
       }
 
@@ -174,7 +174,7 @@ public final class FileSystem {
         var0.method1696(var3, var16, var18, var5, var19, var21, false, null, (byte) -69, true,
           var17);
       assert var22 != null;
-      DummyClass16.method2047(var22.shadow, -var4 + var16, var20, var17 + -var2);
+      DummyClass16.method2047(var22.shadow, -var4 + var16, var20, var17 - var2);
   }
 
   public static void method841(boolean var0) {

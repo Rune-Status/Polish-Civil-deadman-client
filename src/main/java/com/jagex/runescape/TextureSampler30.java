@@ -34,7 +34,7 @@ public final class TextureSampler30 extends AbstractTextureSampler {
         int[] var4 = this.method152(0, var1, 32755);
 
         for (int var5 = 0; var5 < SomethingLight0.anInt1559; ++var5) {
-          var7[var5] = this.anInt3128 - -(var4[var5] * this.anInt3126 >> 12);
+          var7[var5] = this.anInt3128 + (var4[var5] * this.anInt3126 >> 12);
         }
       }
 
@@ -77,7 +77,7 @@ public final class TextureSampler30 extends AbstractTextureSampler {
         int[] var10 = var3[2];
 
         for (int var11 = 0; (var11 < SomethingLight0.anInt1559); ++var11) {
-          var8[var11] = this.anInt3128 - -(this.anInt3126 * var5[var11] >> 12);
+          var8[var11] = this.anInt3128 + (this.anInt3126 * var5[var11] >> 12);
           var9[var11] = (this.anInt3126 * var6[var11] >> 12) + this.anInt3128;
           var10[var11] = this.anInt3128 + (this.anInt3126 * var7[var11] >> 12);
         }
@@ -101,8 +101,8 @@ public final class TextureSampler30 extends AbstractTextureSampler {
 
         int var5 =
           var1 * ((-16711936 & var3) >>> 7) + var4 * ((-16711936 & var2) >>> 7) & -16711936;
-        int var6 = var4 * (16711935 & var2) - -((var3 & 16711935) * var1) & -16711936;
-        return var5 - -(var6 >> 7);
+        int var6 = var4 * (16711935 & var2) + ((var3 & 16711935) * var1) & -16711936;
+        return var5 + (var6 >> 7);
       }
   }
 
@@ -260,10 +260,10 @@ public final class TextureSampler30 extends AbstractTextureSampler {
       for (var3 = 0; (var3 < 20); ++var3) {
         for (var4 = 1; (-1 + var2) > var4; ++var4) {
           for (var5 = 1; var5 < 127; ++var5) {
-            var6 = var5 - -(var4 << 7);
+            var6 = var5 + (var4 << 7);
             DummyOutputStream.anIntArray49[var6] =
               (DummyClass12.anIntArray2026[128 + var6] + DummyClass12.anIntArray2026[-1 + var6]
-                + DummyClass12.anIntArray2026[1 + var6] - -DummyClass12.anIntArray2026[-128 + var6])
+                + DummyClass12.anIntArray2026[1 + var6] + DummyClass12.anIntArray2026[-128 + var6])
                 / 4;
           }
         }
@@ -280,8 +280,8 @@ public final class TextureSampler30 extends AbstractTextureSampler {
           for (var5 = 0; var1.width > var5; ++var5) {
             if (var1.aByteArray2674[var3++] != 0) {
               var6 = var1.offsetX + var5 + 16;
-              int var7 = var1.offsetY + (var4 - -16);
-              int var8 = var6 - -(var7 << 7);
+              int var7 = var1.offsetY + (var4 + 16);
+              int var8 = var6 + (var7 << 7);
               DummyClass12.anIntArray2026[var8] = 0;
             }
           }

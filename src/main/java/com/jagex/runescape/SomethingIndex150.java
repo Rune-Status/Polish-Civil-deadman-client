@@ -85,7 +85,7 @@ public final class SomethingIndex150 {
           } else if (var0 != 4) {
             if (var0 == 5) {
               TextureSampler12.secureBuffer.writePacket(4);
-              TextureSampler12.secureBuffer.writeShortLE(var1 + -1,
+              TextureSampler12.secureBuffer.writeShortLE(var1 - 1,
                   DummyClass42.anIntArray887[var5]);
               ++SocketStream.anInt1240;
             } else {

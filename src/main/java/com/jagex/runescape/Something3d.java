@@ -73,8 +73,8 @@ public class Something3d extends Something3dRoot {
         int var7 = 64 + SomethingAudio.anInt1996 * 128;
         int var8 = BufferData.method1736(GameWorldSomething.currentPlane, 1, var6, var7)
           - SpotAnimationConfig.anInt529;
-        int var10 = var8 + -EnumStringFetcher.anInt2162;
-        int var9 = var6 + -NPC.anInt3995;
+        int var10 = var8 - EnumStringFetcher.anInt2162;
+        int var9 = var6 - NPC.anInt3995;
         int var11 = -DummyClass49.anInt1111 + var7;
         int var12 = (int) Math.sqrt(var11 * var11 + var9 * var9);
         DummyClass17.anInt1823 =

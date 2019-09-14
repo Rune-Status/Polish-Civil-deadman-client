@@ -119,8 +119,8 @@ public abstract class Mobile extends SceneNode {
       }
 
       if (!var5) {
-        int var6 = x + -this.waypointsX[0];
-        int var7 = y + -this.waypointsY[0];
+        int var6 = x - this.waypointsX[0];
+        int var7 = y - this.waypointsY[0];
         if ((var6 >= 7) && var6 <= 8 && (var7 >= 7) && (var7 <= 8)) {
           if (this.anInt2816 < 9) {
             ++this.anInt2816;
@@ -128,7 +128,7 @@ public abstract class Mobile extends SceneNode {
 
           for (int var8 = this.anInt2816; (var8 > 0); --var8) {
             this.waypointsX[var8] = this.waypointsX[-1 + var8];
-            this.waypointsY[var8] = this.waypointsY[var8 + -1];
+            this.waypointsY[var8] = this.waypointsY[var8 - 1];
             this.aByteArray2795[var8] = this.aByteArray2795[var8 - 1];
           }
 
@@ -208,7 +208,7 @@ public abstract class Mobile extends SceneNode {
       }
 
       this.waypointsX[0] = var4;
-      var6 = -106 / ((var2 - -10) / 40);
+      var6 = -106 / ((var2 + 10) / 40);
       this.waypointsY[0] = var5;
   }
 
@@ -230,7 +230,7 @@ public abstract class Mobile extends SceneNode {
         int var9 = -var5 / 2;
         int var10 = -var6 / 2;
         int var12 = -(var9 * var7) + var10 * var8 >> 16;
-        int var11 = var7 * var10 - -(var8 * var9) >> 16;
+        int var11 = var7 * var10 + (var8 * var9) >> 16;
         int var13 =
           BufferData.method1736(GameWorldSomething.currentPlane, 1, var11 + this.anInt2819,
               this.anInt2829 + var12);
@@ -238,15 +238,15 @@ public abstract class Mobile extends SceneNode {
         int var15 = -var6 / 2;
         int var16 = var14 * var8 + var15 * var7 >> 16;
         int var20 = var6 / 2;
-        int var17 = var15 * var8 + -(var14 * var7) >> 16;
+        int var17 = var15 * var8 - (var14 * var7) >> 16;
         int var18 =
           BufferData.method1736(GameWorldSomething.currentPlane, 1, var16 + this.anInt2819,
-              this.anInt2829 - -var17);
+              this.anInt2829 + var17);
         int var19 = -var5 / 2;
         int var22 = -(var7 * var19) + var20 * var8 >> 16;
         int var25 = var6 / 2;
         int var24 = var5 / 2;
-        int var21 = var7 * var20 - -(var8 * var19) >> 16;
+        int var21 = var7 * var20 + (var8 * var19) >> 16;
         int var27 = var25 * var8 - var7 * var24 >> 16;
         int var26 = var7 * var25 + var8 * var24 >> 16;
         int var23 =
@@ -342,7 +342,7 @@ public abstract class Mobile extends SceneNode {
             var7 = var4 - this.anInt2787;
             if (var7 >= var6) {
               this.aBoolean2807 = true;
-              this.anInt2804 = (this.anInt2787 + var6 - -var4) / 2;
+              this.anInt2804 = (this.anInt2787 + var6 + var4) / 2;
               var8 = var3.anInt370 * var3.anInt370 / (2 * var3.anInt387);
               var9 = var8 + var4;
               if (this.anInt2804 > var9) {
@@ -430,7 +430,7 @@ public abstract class Mobile extends SceneNode {
               this.anInt2757 = (-var6 + this.anInt2834 + var5) / 2;
               this.aBoolean2783 = true;
               var8 = var3.anInt399 * var3.anInt399 / (2 * var3.anInt403);
-              var9 = var5 + -var8;
+              var9 = var5 - var8;
               if ((this.anInt2757 < var9)) {
                 this.anInt2757 = var9;
               }
@@ -439,7 +439,7 @@ public abstract class Mobile extends SceneNode {
             var7 = -this.anInt2834 + var5;
             var6 = this.anInt2830 * this.anInt2830 / (2 * var3.anInt403);
             if (var7 >= var6) {
-              this.anInt2757 = (var6 + this.anInt2834 - -var5) / 2;
+              this.anInt2757 = (var6 + this.anInt2834 + var5) / 2;
               this.aBoolean2783 = true;
               var8 = var3.anInt399 * var3.anInt399 / (2 * var3.anInt403);
               var9 = var8 + var5;

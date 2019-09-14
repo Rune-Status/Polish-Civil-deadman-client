@@ -119,7 +119,7 @@ public final class OndemandRequester {
                   this.currentRequest.buffer.position, var7);
               if ((this.encryptionKey != 0)) {
                 for (var8 = 0; var7 > var8; ++var8) {
-                  this.currentRequest.buffer.bytes[this.currentRequest.buffer.position - -var8] =
+                  this.currentRequest.buffer.bytes[this.currentRequest.buffer.position + var8] =
                     (byte) ObjectCache.bitXor(
                         this.currentRequest.buffer.bytes[this.currentRequest.buffer.position + var8],
                         this.encryptionKey);
@@ -176,7 +176,7 @@ public final class OndemandRequester {
                   int compression = 127 & var9;
                   boolean priority = ((var9 & 128) != 0);
                   OndemandFileRequest var15 = null;
-                  long var13 = (var7 << 16) - -var8;
+                  long var13 = (var7 << 16) + var8;
                   if (priority) {
                     for (
                         var15 = (OndemandFileRequest) this.normalRequests
@@ -257,7 +257,7 @@ public final class OndemandRequester {
         OndemandRequester.aClass3_Sub28_Sub16Array996 = null;
       }
 
-      return this.aClass13_1001.size() - -this.normalRequests.size();
+      return this.aClass13_1001.size() + this.normalRequests.size();
   }
 
   public void writeStatus(boolean var1, boolean var2 ) {
@@ -371,7 +371,7 @@ public final class OndemandRequester {
         this.method1252((byte) -45);
       }
 
-      return this.aClass13_993.size() - -this.priorityRequests.size();
+      return this.aClass13_993.size() + this.priorityRequests.size();
   }
 
   public void shutdown(boolean var1 ) {

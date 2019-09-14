@@ -132,7 +132,7 @@ public class Display {
       for (int var4 = 0; var2.length > var4; ++var4) {
         var3[var4 << 2] = var2[var4].getWidth();
         var3[1 + (var4 << 2)] = var2[var4].getHeight();
-        var3[(var4 << 2) - -2] = var2[var4].getBitDepth();
+        var3[(var4 << 2) + 2] = var2[var4].getBitDepth();
         var3[3 + (var4 << 2)] = var2[var4].getRefreshRate();
       }
 

@@ -176,7 +176,7 @@ public final class FileUnpacker {
         var2 = var2.method1534();
         int var3 = this.table.fileNameTable.get(var2.getDbj2Hash(false));
         this.method2131(119, var3);
-        int var4 = 123 % ((var1 - -60) / 62);
+        int var4 = 123 % ((var1 + 60) / 62);
       }
   }
 

@@ -156,22 +156,22 @@ public abstract class AbstractTextureSampler extends Node {
       int var6 = SomethingTilek.p12Font.method680(text, 250);
       int var7 = SomethingTilek.p12Font.method684(text, 250) * 13;
       if (GlRenderer.useOpenGlRenderer) {
-        GlUtils.fillQuad(var4 - var3, -var3 + var5, var3 + var6 - -var3,
+        GlUtils.fillQuad(var4 - var3, -var3 + var5, var3 + var6 + var3,
             var3 + var3 + var7, 0);
-        GlUtils.drawQuad(-var3 + var4, -var3 + var5, var6 + var3 - -var3,
+        GlUtils.drawQuad(-var3 + var4, -var3 + var5, var6 + var3 + var3,
             var3 + var7 + var3,
             16777215);
       } else {
-        DummyClass47.method1323(var4 - var3, -var3 + var5, var3 + var6 - -var3,
+        DummyClass47.method1323(var4 - var3, -var3 + var5, var3 + var6 + var3,
             var3 + var3 + var7,
             0);
-        DummyClass47.method1311(var4 + -var3, var5 - var3, var3 + var3 + var6,
+        DummyClass47.method1311(var4 - var3, var5 - var3, var3 + var3 + var6,
             var3 + var3 + var7,
             16777215);
       }
 
       SomethingTilek.p12Font.draw(text, var4, var5, var6, var7, 16777215, -1, 1, 1, 0);
-      AbstractSomethingTexture.method1340(var4 + -var3, var6 + (var3 - -var3), (byte) -40,
+      AbstractSomethingTexture.method1340(var4 - var3, var6 + (var3 + var3), (byte) -40,
         -var3 + var5, var3 + var7 + var3);
       if (draw) {
         if (GlRenderer.useOpenGlRenderer) {

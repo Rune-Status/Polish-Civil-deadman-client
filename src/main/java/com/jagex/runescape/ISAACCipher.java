@@ -73,13 +73,13 @@ public final class ISAACCipher {
 
       for (var2 = 0; (var2 < 256); var2 += 8) {
         var6 += this.anIntArray970[3 + var2];
-        var7 += this.anIntArray970[var2 - -4];
+        var7 += this.anIntArray970[var2 + 4];
         var9 += this.anIntArray970[var2 + 6];
         var3 += this.anIntArray970[var2];
         var5 += this.anIntArray970[2 + var2];
-        var8 += this.anIntArray970[var2 - -5];
+        var8 += this.anIntArray970[var2 + 5];
         var10 += this.anIntArray970[7 + var2];
-        var4 += this.anIntArray970[var2 - -1];
+        var4 += this.anIntArray970[var2 + 1];
         var3 ^= var4 << 11;
         var4 += var5;
         var4 ^= var5 >>> 2;
@@ -110,7 +110,7 @@ public final class ISAACCipher {
         this.anIntArray971[var2 + 3] = var6;
         this.anIntArray971[4 + var2] = var7;
         this.anIntArray971[5 + var2] = var8;
-        this.anIntArray971[var2 - -6] = var9;
+        this.anIntArray971[var2 + 6] = var9;
         this.anIntArray971[7 + var2] = var10;
       }
 
@@ -149,12 +149,12 @@ public final class ISAACCipher {
         var3 += var4;
         this.anIntArray971[var2] = var3;
         this.anIntArray971[1 + var2] = var4;
-        this.anIntArray971[var2 - -2] = var5;
+        this.anIntArray971[var2 + 2] = var5;
         this.anIntArray971[3 + var2] = var6;
         this.anIntArray971[4 + var2] = var7;
         this.anIntArray971[5 + var2] = var8;
         this.anIntArray971[var2 + 6] = var9;
-        this.anIntArray971[var2 - -7] = var10;
+        this.anIntArray971[var2 + 7] = var10;
       }
 
       this.method1229(-1879);
@@ -261,12 +261,12 @@ public final class ISAACCipher {
 
         DummyClass58.aClass3_Sub28_Sub16_1457.method643(var1, var2);
         DummyClass58.aClass3_Sub28_Sub16_1457.method641(
-            -DummyClass58.aClass3_Sub28_Sub16_1457.anInt3707 + (var1 - -var3),
+            -DummyClass58.aClass3_Sub28_Sub16_1457.anInt3707 + (var1 + var3),
             var2);
       }
 
       FloorOverlay.aClass3_Sub28_Sub17_2096
-          .method681(SomethingTexture4.aClass94_2667, var1 - -3,
+          .method681(SomethingTexture4.aClass94_2667, var1 + 3,
               14 + var2, TextureSampler32.anInt3351, -1);
       if (GlRenderer.useOpenGlRenderer) {
         GlUtils
@@ -289,13 +289,13 @@ public final class ISAACCipher {
       for (var7 = 0; TextureSampler25.amountContextActions > var7; ++var7) {
         var8 = (-var7 + TextureSampler25.amountContextActions - 1) * 15 + var2
             + 35;
-        if (var1 < var5 && var5 < var1 - -var3 && var6 > (-13 + var8)
+        if (var1 < var5 && var5 < var1 + var3 && var6 > (-13 + var8)
             && (var6 < (var8 + 3))) {
           if (GlRenderer.useOpenGlRenderer) {
-            GlUtils.fillQuad(var1, var8 + -13, var3, 16, Mouse.anInt1926,
+            GlUtils.fillQuad(var1, var8 - 13, var3, 16, Mouse.anInt1926,
                 -SceneShadowMap.anInt1771 + 256);
           } else {
-            DummyClass47.method1312(var1, var8 + -13, var3, 16, Mouse.anInt1926,
+            DummyClass47.method1312(var1, var8 - 13, var3, 16, Mouse.anInt1926,
                 -SceneShadowMap.anInt1771 + 256);
           }
         }
@@ -356,7 +356,7 @@ public final class ISAACCipher {
         for (var8 = 0; var7 > var8; ++var8) {
           DummyClass53.aClass3_Sub28_Sub16_1339.method643(
               var1 + DummyClass53.aClass3_Sub28_Sub16_1339.anInt3707 * var8,
-              var4 + var2 + -DummyClass53.aClass3_Sub28_Sub16_1339.anInt3696);
+              var4 + var2 - DummyClass53.aClass3_Sub28_Sub16_1339.anInt3696);
         }
 
         var8 = (-20 + var4) / VertexNormal.aClass3_Sub28_Sub16_824.anInt3696;
@@ -366,7 +366,7 @@ public final class ISAACCipher {
               var2 + 20
                   + var9 * VertexNormal.aClass3_Sub28_Sub16_824.anInt3696);
           VertexNormal.aClass3_Sub28_Sub16_824.method641(
-              var1 - (-var3 - -VertexNormal.aClass3_Sub28_Sub16_824.anInt3707),
+              var1 - (-var3 + VertexNormal.aClass3_Sub28_Sub16_824.anInt3707),
               var2 + 20
                   + var9 * VertexNormal.aClass3_Sub28_Sub16_824.anInt3696);
         }
@@ -377,16 +377,16 @@ public final class ISAACCipher {
         MonoChromaticImageBuffer.aClass3_Sub28_Sub16_2560.method641(
             var1 + var3
                 - MonoChromaticImageBuffer.aClass3_Sub28_Sub16_2560.anInt3707,
-            var2 - -var4
-                + -MonoChromaticImageBuffer.aClass3_Sub28_Sub16_2560.anInt3696);
+            var2 + var4
+                - MonoChromaticImageBuffer.aClass3_Sub28_Sub16_2560.anInt3696);
       }
 
       for (var7 = 0; var7 < TextureSampler25.amountContextActions; ++var7) {
-        var8 = 15 * (TextureSampler25.amountContextActions - 1 + -var7) + var2
+        var8 = 15 * (TextureSampler25.amountContextActions - 1 - var7) + var2
             + 35;
         var9 = TextureSampler32.anInt3351;
         if (var1 < var5 && var3 + var1 > var5 && ((var8 - 13) < var6)
-            && (var6 < (var8 - -3))) {
+            && (var6 < (var8 + 3))) {
           var9 = DummyClass14.anInt1957;
         }
 

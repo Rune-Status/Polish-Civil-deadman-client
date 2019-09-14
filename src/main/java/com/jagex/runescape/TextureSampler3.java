@@ -34,7 +34,7 @@ public final class TextureSampler3 extends AbstractTextureSampler {
   }
 
   public static void method305(SignLink var0, Buffer var1, int var2, byte var3) {
-    int var5 = 123 % ((var3 - -66) / 57);
+    int var5 = 123 % ((var3 + 66) / 57);
       ClassCheckRequest var4 = new ClassCheckRequest();
       var4.anInt2296 = var1.readUnsignedByte();
       var4.anInt2305 = var1.readInt();
@@ -132,7 +132,7 @@ public final class TextureSampler3 extends AbstractTextureSampler {
 
   public static void method307(GameString[] var0, short[] var1, int var2) {
     ClassCheckRequest.method127(var1, -1 + var0.length, var0, -909, 0);
-      int var3 = 91 % ((var2 - -1) / 63);
+      int var3 = 91 % ((var2 + 1) / 63);
   }
 
   public static int method308(int var0, int var1) {
@@ -157,7 +157,7 @@ public final class TextureSampler3 extends AbstractTextureSampler {
           TextureSampler3.aClass94_3357 = null;
         }
 
-        return var0 == 1 ? 7 + -var2 : ((var0 == 2) ? -var3 + 7 : var2);
+        return var0 == 1 ? 7 - var2 : ((var0 == 2) ? -var3 + 7 : var2);
       }
   }
 

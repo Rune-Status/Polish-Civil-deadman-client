@@ -167,7 +167,7 @@ public final class DummyClass10 {
             int var10 = var3.readUnsignedByte();
             if (var2) {
               AbstractGameWorld.heightMap[0][x][y] =
-                  DummyClass43.somethingHeightMap[0][x][y] - -(var10 * 8);
+                  DummyClass43.somethingHeightMap[0][x][y] + (var10 * 8);
             } else {
               if ((var10 == 1)) {
                 var10 = 0;
@@ -297,7 +297,7 @@ public final class DummyClass10 {
 
       AnimationSomething.method560(-21556);
       SomethingLight0.interfaceCounter = 0;
-      TextureSampler6.resetVariables(var0 + -161);
+      TextureSampler6.resetVariables(var0 - 161);
       TextureSampler1.method219(true, 3000);
   }
 

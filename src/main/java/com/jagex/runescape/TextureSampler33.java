@@ -35,7 +35,7 @@ public final class TextureSampler33 extends AbstractTextureSampler {
           .method1594((byte) 58, var2);
       if (this.triChromaticImageCache.aBoolean1379) {
         int[] var4 = this
-            .method152(0, TriChromaticImageBuffer.anInt2487 & var2 + -1, 32755);
+            .method152(0, TriChromaticImageBuffer.anInt2487 & var2 - 1, 32755);
         int[] var5 = this.method152(0, var2, 32755);
         int[] var6 = this
             .method152(0, 1 + var2 & TriChromaticImageBuffer.anInt2487, 32755);
@@ -53,7 +53,7 @@ public final class TextureSampler33 extends AbstractTextureSampler {
           int var19 = var17 * var17 >> 12;
           int var18 = var16 * var16 >> 12;
           int var20 =
-            (int) (Math.sqrt((var18 + var19 - -4096) / 4096.0F) * 4096.0D);
+            (int) (Math.sqrt((var18 + var19 + 4096) / 4096.0F) * 4096.0D);
           int var11;
           int var12;
           int var13;
@@ -68,7 +68,7 @@ public final class TextureSampler33 extends AbstractTextureSampler {
           }
 
           if (this.aBoolean3050) {
-            var12 = 2048 - -(var12 >> 1);
+            var12 = 2048 + (var12 >> 1);
             var13 = (var13 >> 1) + 2048;
             var11 = (var11 >> 1) + 2048;
           }
@@ -164,7 +164,7 @@ public final class TextureSampler33 extends AbstractTextureSampler {
         }
 
         DummyClass55.anInt1427 = var1;
-        TriChromaticImageBuffer.anInt2487 = var1 + -1;
+        TriChromaticImageBuffer.anInt2487 = var1 - 1;
       }
   }
 
@@ -177,7 +177,7 @@ public final class TextureSampler33 extends AbstractTextureSampler {
       } catch (Exception var5) {
         String var2 = "T2 - " + GameString.packetId + "," + EnumStringFetcher.lastPacketId1 + ","
           + IdentityKit.lastPacketId2 + " - " + HashTable.packetLength + "," + (
-          WorldMapLabel.anInt1716 - -TextureCache.localPlayer.waypointsX[0]) + "," + (
+          WorldMapLabel.anInt1716 + TextureCache.localPlayer.waypointsX[0]) + "," + (
           TextureCache.localPlayer.waypointsY[0] + ProceduralTexture.anInt1152) + " - ";
 
         for (int var3 = 0; var3 < HashTable.packetLength && var3 < 50; ++var3) {
@@ -244,7 +244,7 @@ public final class TextureSampler33 extends AbstractTextureSampler {
       for (var15 = var7; (var15 <= var8); ++var15) {
         int[] var16 = DummyClass35.anIntArrayArray663[var15];
         TextureSampler18.method282(var16, var13, -59, var9, var5);
-        TextureSampler18.method282(var16, var10, var4 + -97, var14, var5);
+        TextureSampler18.method282(var16, var10, var4 - 97, var14, var5);
       }
   }
 

@@ -78,10 +78,10 @@ public final class AudioWorker implements Runnable {
           }
 
           if ((var7.anInt61 == 0)) {
-            var8.method1677(var0 * 4 + 48, 48 + 4 * (-var10 + -var5 + 104),
+            var8.method1677(var0 * 4 + 48, 48 + 4 * (-var10 - var5 + 104),
                 var11, var12);
           } else {
-            var8.method1669(48 + 4 * var0, 4 * (-var10 + -var5 + 104) + 48,
+            var8.method1669(48 + 4 * var0, 4 * (-var10 - var5 + 104) + 48,
                 var11, var12,
                 var7.anInt61);
           }
@@ -118,10 +118,10 @@ public final class AudioWorker implements Runnable {
         int var10 = -TextureSampler37.anInt3256 + var8 * 64;
         int var11 = -1 + DummyClass58.anInt1460 - var9 * 64 + MapScene.anInt65;
         if ((var10 >= 0) && -63 + var11 >= 0
-            && DummyClass30.anInt455 > var10 - -63
+            && DummyClass30.anInt455 > var10 + 63
             && DummyClass58.anInt1460 > var11) {
           for (var12 = 0; var12 < 64; ++var12) {
-            byte[] var13 = var4[var10 - -var12];
+            byte[] var13 = var4[var10 + var12];
 
             for (var14 = 0; var14 < 64; ++var14) {
               if (!var5 || var12 >= 8 * var6 && 8 + 8 * var6 > var12
@@ -163,7 +163,7 @@ public final class AudioWorker implements Runnable {
             }
           }
 
-          var15 = var12 + -5;
+          var15 = var12 - 5;
           if ((var15 >= 0)) {
             var35 = var4[var15][var34] & 255;
             if (var35 > 0) {
@@ -187,7 +187,7 @@ public final class AudioWorker implements Runnable {
           var35 = 0;
 
           for (int var19 = -5; (var19 < var6); ++var19) {
-            int var20 = var19 - -5;
+            int var20 = var19 + 5;
             if (var6 > var20) {
               var18 += var31[var20];
               var15 += var29[var20];
@@ -213,7 +213,7 @@ public final class AudioWorker implements Runnable {
                   0;
               if (var4[var12][var19] == 0) {
                 if (var22 != null) {
-                  var22[ClientScript.bitAnd(4032, var19 << 6) - -ClientScript
+                  var22[ClientScript.bitAnd(4032, var19 << 6) + ClientScript
                       .bitAnd(var12, 63)] =
                       0;
                 }
@@ -332,7 +332,7 @@ public final class AudioWorker implements Runnable {
     int var8 = AnimationSomething.aCalendar3581.get(12);
     int var9 = AnimationSomething.aCalendar3581.get(13);
     return RenderAnimation.concat(new GameString[]{
-        TextureSampler2.aClass94Array3376[var3 + -1],
+        TextureSampler2.aClass94Array3376[var3 - 1],
         TextureSampler24.aClass94_3145,
         SomethingScene.toString(var4 / 10), SomethingScene.toString(var4 % 10),
         DummyClass12.aClass94_2025, NPC.aClass94Array3985[var5],

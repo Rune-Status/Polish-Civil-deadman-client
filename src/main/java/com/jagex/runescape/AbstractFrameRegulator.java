@@ -50,7 +50,7 @@ public abstract class AbstractFrameRegulator {
       int var5 = DummyClass47.anInt1092 * var2;
       int var6 = 0;
 
-      for (int var7 = 1; var7 < var3 + -1; ++var7) {
+      for (int var7 = 1; var7 < var3 - 1; ++var7) {
         int var8 = (var3 - var7) * AnimationSomething.anIntArray3592[var7] / var3;
         if (var8 < 0) {
           var8 = 0;
@@ -79,8 +79,8 @@ public abstract class AbstractFrameRegulator {
             TriChromaticImageCache.aClass3_Sub28_Sub16_Sub2_1381.pixels[var6++] =
                 ClientScript.bitAnd(var13 * ClientScript.bitAnd(var11, 16711935)
                     + ClientScript.bitAnd(16711935, var10) * var12, -16711936)
-                    - -ClientScript.bitAnd(
-                    ClientScript.bitAnd(var10, '\uff00') * var12 - -(
+                    + ClientScript.bitAnd(
+                    ClientScript.bitAnd(var10, '\uff00') * var12 + (
                         ClientScript.bitAnd('\uff00', var11) * var13), 16711680)
                     >> 8;
           }
@@ -91,7 +91,7 @@ public abstract class AbstractFrameRegulator {
             DummyClass47.anIntArray1100[var0 + var5++];
         }
 
-        var5 += DummyClass47.anInt1092 + -128;
+        var5 += DummyClass47.anInt1092 - 128;
       }
 
       if (var1 > 70) {
@@ -140,7 +140,7 @@ public abstract class AbstractFrameRegulator {
           for (var19 = var17; (var18 >= var19); ++var19) {
             var20 = var13.aShortArray706[var15];
             var21 = var16 + (var20 >> 8);
-            var22 = -1 + var21 - -(255 & var20);
+            var22 = -1 + var21 + (255 & var20);
             if (var22 > 103) {
               var22 = 103;
             }
@@ -161,7 +161,7 @@ public abstract class AbstractFrameRegulator {
                   continue;
                 }
 
-                var27 = TextureSampler10.method350((byte) -103, var25 + -1);
+                var27 = TextureSampler10.method350((byte) -103, var25 - 1);
                 if ((var27.anInt2103 == -1)) {
                   continue;
                 }
@@ -202,8 +202,8 @@ public abstract class AbstractFrameRegulator {
                   short var33;
                   if ((1 & var30) == 0) {
                     var32 = var22 >= 1 + var23;
-                    var31 = var23 + -1 >= var21;
-                    if (!var31 && ((var19 - -1) <= var18)) {
+                    var31 = var23 - 1 >= var21;
+                    if (!var31 && ((var19 + 1) <= var18)) {
                       var33 = var13.aShortArray706[1 + var15];
                       var34 = var16 + (var33 >> 8);
                       var35 = var34 + (255 & var33);
@@ -211,9 +211,9 @@ public abstract class AbstractFrameRegulator {
                     }
 
                     if (!var32 && -1 + var19 >= var17) {
-                      var33 = var13.aShortArray706[var15 + -1];
+                      var33 = var13.aShortArray706[var15 - 1];
                       var34 = var16 + (var33 >> 8);
-                      var35 = var34 - -(var33 & 255);
+                      var35 = var34 + (var33 & 255);
                       var32 = var23 > var34 && (var23 < var35);
                     }
 
@@ -237,7 +237,7 @@ public abstract class AbstractFrameRegulator {
                     if (!var32 && ((1 + var19) <= var18)) {
                       var33 = var13.aShortArray706[var15 + 1];
                       var34 = (var33 >> 8) + var16;
-                      var35 = var34 - -(255 & var33);
+                      var35 = var34 + (255 & var33);
                       var32 = (var34 < var23) && var35 > var23;
                     }
 
@@ -348,7 +348,7 @@ public abstract class AbstractFrameRegulator {
                   if ((1 & var47) == 0) {
                     var32 = ((-1 + var23) >= var21);
                     var51 = (var22 >= (var23 + 1));
-                    if (!var32 && var18 >= var19 - -1) {
+                    if (!var32 && var18 >= var19 + 1) {
                       var50 = var13.aShortArray706[1 + var15];
                       var35 = (var50 >> 8) + var16;
                       var36 = (var50 & 255) + var35;
@@ -382,7 +382,7 @@ public abstract class AbstractFrameRegulator {
                     }
 
                     if (!var51 && (var18 >= (var19 + 1))) {
-                      var50 = var13.aShortArray706[var15 - -1];
+                      var50 = var13.aShortArray706[var15 + 1];
                       var35 = var16 + (var50 >> 8);
                       var36 = (255 & var50) + var35;
                       var51 = var23 > var35 && var36 > var23;

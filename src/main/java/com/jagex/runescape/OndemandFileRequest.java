@@ -62,8 +62,8 @@ public final class OndemandFileRequest extends AbstractFileRequest {
             var4[var5] = var6;
             var6.anInt1447 = var3[var5 << 2];
             var6.anInt1449 = var3[(var5 << 2) + 1];
-            var6.anInt1450 = var3[(var5 << 2) - -2];
-            var6.anInt1448 = var3[(var5 << 2) - -3];
+            var6.anInt1450 = var3[(var5 << 2) + 2];
+            var6.anInt1448 = var3[(var5 << 2) + 3];
           }
 
           if (var0 != 10) {
@@ -143,7 +143,7 @@ public final class OndemandFileRequest extends AbstractFileRequest {
           DisplayMode.viewY = 0;
         } else {
           DisplayMode.viewY = 0;
-          DummyClass51.viewX = (AreaSoundEffect.windowWidth + -765) / 2;
+          DummyClass51.viewX = (AreaSoundEffect.windowWidth - 765) / 2;
           DummyClass30.viewWidth = 765;
           GroundItem.viewHeight = 503;
         }
@@ -172,7 +172,7 @@ public final class OndemandFileRequest extends AbstractFileRequest {
           if (TextureSampler27.FRAME == var7) {
             var8 = TextureSampler27.FRAME.getInsets();
             GameCanvas.INSTANCE
-                .setLocation(var8.left - -DummyClass51.viewX,
+                .setLocation(var8.left + DummyClass51.viewX,
                     var8.top + DisplayMode.viewY);
           } else {
             GameCanvas.INSTANCE

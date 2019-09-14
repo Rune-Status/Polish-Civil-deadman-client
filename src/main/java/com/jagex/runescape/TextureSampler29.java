@@ -154,7 +154,7 @@ public final class TextureSampler29 extends AbstractTextureSampler {
         TextureSampler29.aClass94_3397 = null;
       }
 
-      WidgetUpdate var3 = AudioStreamEncoder3.method466(var2 + -64, 12, var1);
+      WidgetUpdate var3 = AudioStreamEncoder3.method466(var2 - 64, 12, var1);
       var3.g((byte) 33);
       var3.anInt3598 = var0;
   }

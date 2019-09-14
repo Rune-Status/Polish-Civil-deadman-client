@@ -38,7 +38,7 @@ public final class Unsure {
         if ((var5 == 1)) {
           DummyClass49.method1367(var0, var3, var2, (byte) 34, var4, var1);
         } else {
-          AbstractIndexedColorSprite.method1665(var6 + -19617, var3, var2, var0, var4, var5, var1);
+          AbstractIndexedColorSprite.method1665(var6 - 19617, var3, var2, var0, var4, var5, var1);
         }
       } else if (var5 != 1) {
         TextureSampler33.method184(var4, var5, var3, var1, 1, var0, var2);

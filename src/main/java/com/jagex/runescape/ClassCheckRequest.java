@@ -35,7 +35,7 @@ public final class ClassCheckRequest extends Node {
       if (GlRenderer.useOpenGlRenderer) {
         GlUtils.clip(var3, var2, var3 + var4.anInt168, var2 + var4.anInt193);
       } else {
-        DummyClass47.method1324(var3, var2, var3 - -var4.anInt168, var2 + var4.anInt193);
+        DummyClass47.method1324(var3, var2, var3 + var4.anInt168, var2 + var4.anInt193);
       }
 
       if (DummyClass12.minimapMode != 2 && DummyClass12.minimapMode != 5
@@ -53,7 +53,7 @@ public final class ClassCheckRequest extends Node {
           ((SoftwareDirectColorSprite) GZipDecompressor.aClass3_Sub28_Sub16_812)
               .method664(var3,
                   var2, var4.anInt168, var4.anInt193, var6, var7, var19,
-                  256 - -Something3d2.anInt3020,
+                  256 + Something3d2.anInt3020,
                   var4.anIntArray207, var4.anIntArray291);
         }
 
@@ -69,7 +69,7 @@ public final class ClassCheckRequest extends Node {
           for (int var8 = 0; var8 < TextureSampler22.aClass131_3421.anInt1720; ++var8) {
             if (TextureSampler22.aClass131_3421.method1789(var8, var1 ^ 553)) {
               var9 = 2 + 4 * (TextureSampler22.aClass131_3421.aShortArray1727[var8]
-                + -WorldMapLabel.anInt1716) + -(TextureCache.localPlayer.anInt2819 / 32);
+                - WorldMapLabel.anInt1716) - (TextureCache.localPlayer.anInt2819 / 32);
               var11 = DummyClass40.SINE_TABLE[var19];
               var12 = DummyClass40.COSINE_TABLE[var19];
               AbstractFont var15 = AbstractTextureSampler.aClass3_Sub28_Sub17_2379;
@@ -79,7 +79,7 @@ public final class ClassCheckRequest extends Node {
                 - TextureCache.localPlayer.anInt2829 / 32;
               var12 = var12 * 256 / (256 + Something3d2.anInt3020);
               var14 = -(var9 * var11) + var10 * var12 >> 16;
-              if (TextureSampler22.aClass131_3421.method1791(var8, var1 + -51) == 1) {
+              if (TextureSampler22.aClass131_3421.method1791(var8, var1 - 51) == 1) {
                 var15 = SomethingTilek.p12Font;
               }
 
@@ -87,7 +87,7 @@ public final class ClassCheckRequest extends Node {
                 var15 = FloorOverlay.aClass3_Sub28_Sub17_2096;
               }
 
-              var13 = var11 * var10 - -(var12 * var9) >> 16;
+              var13 = var11 * var10 + (var12 * var9) >> 16;
               var16 = var15.method680(TextureSampler22.aClass131_3421.aClass94Array1721[var8], 100);
               var13 -= var16 / 2;
               if ((var13 >= (-var4.anInt168)) && var13 <= var4.anInt168 && var14 >= -var4.anInt193
@@ -106,7 +106,7 @@ public final class ClassCheckRequest extends Node {
                 }
 
                 var15.method693(TextureSampler22.aClass131_3421.aClass94Array1721[var8],
-                  var3 + var13 + var4.anInt168 / 2, var2 + var4.anInt193 / 2 + -var14, var16, 50,
+                  var3 + var13 + var4.anInt168 / 2, var2 + var4.anInt193 / 2 - var14, var16, 50,
                   var17, 0, 256, 1, 0, 0);
                 if (GlRenderer.useOpenGlRenderer) {
                   GlUtils.method921();
@@ -127,7 +127,7 @@ public final class ClassCheckRequest extends Node {
                 ObjectNode.anIntArray4050[var9] * 4);
           GameObjectConfig var20 = DummyClass11.method2207(4, ClientScript.anIntArray3693[var9]);
           if (var20.anIntArray1524 != null) {
-            var20 = var20.method1685(var1 + -59);
+            var20 = var20.method1685(var1 - 59);
             if (var20 == null || (var20.anInt1482 == -1)) {
               continue;
             }
@@ -141,7 +141,7 @@ public final class ClassCheckRequest extends Node {
           for (var10 = 0; (var10 < 104); ++var10) {
             Deque var25 = TextureSampler0.groundItems[GameWorldSomething.currentPlane][var9][var10];
             if (var25 != null) {
-              var12 = 2 + var9 * 4 + -(TextureCache.localPlayer.anInt2819 / 32);
+              var12 = 2 + var9 * 4 - (TextureCache.localPlayer.anInt2819 / 32);
               var13 = -(TextureCache.localPlayer.anInt2829 / 32) + 2 + 4 * var10;
               DummyClass36.method1030(var4, HashTableIterator.aClass3_Sub28_Sub16Array1136[0],
                 var13, var12, var2, (byte) 11, var3);
@@ -159,7 +159,7 @@ public final class ClassCheckRequest extends Node {
 
             if (var22 != null && var22.aBoolean1285 && var22.aBoolean1270) {
               var12 = var21.anInt2819 / 32 - TextureCache.localPlayer.anInt2819 / 32;
-              var13 = var21.anInt2829 / 32 + -(TextureCache.localPlayer.anInt2829 / 32);
+              var13 = var21.anInt2829 / 32 - (TextureCache.localPlayer.anInt2829 / 32);
               if ((var22.anInt1283 == -1)) {
                 DummyClass36.method1030(var4,
                     HashTableIterator.aClass3_Sub28_Sub16Array1136[1],
@@ -234,7 +234,7 @@ public final class ClassCheckRequest extends Node {
               NPC var27 = TextureSampler5.npcs[var26.anInt1359];
               if (var27 != null) {
                 var13 = -(TextureCache.localPlayer.anInt2819 / 32) + var27.anInt2819 / 32;
-                var14 = var27.anInt2829 / 32 + -(TextureCache.localPlayer.anInt2829 / 32);
+                var14 = var27.anInt2829 / 32 - (TextureCache.localPlayer.anInt2829 / 32);
                 DummyClass41.method1171(var26.anInt1351, var2, var3, var13, var14, var4, false);
               }
             }
@@ -251,8 +251,8 @@ public final class ClassCheckRequest extends Node {
               && TextureSampler0.players.length > var26.anInt1359) {
               Player var30 = TextureSampler0.players[var26.anInt1359];
               if (var30 != null) {
-                var14 = var30.anInt2829 / 32 + -(TextureCache.localPlayer.anInt2829 / 32);
-                var13 = var30.anInt2819 / 32 + -(TextureCache.localPlayer.anInt2819 / 32);
+                var14 = var30.anInt2829 / 32 - (TextureCache.localPlayer.anInt2829 / 32);
+                var13 = var30.anInt2819 / 32 - (TextureCache.localPlayer.anInt2819 / 32);
                 DummyClass41.method1171(var26.anInt1351, var2, var3, var13, var14, var4, false);
               }
             }
@@ -267,8 +267,8 @@ public final class ClassCheckRequest extends Node {
         }
 
         if (GlRenderer.useOpenGlRenderer) {
-          GlUtils.fillQuad(-1 + (var3 - -(var4.anInt168 / 2)),
-              -1 + var2 - -(var4.anInt193 / 2), 3,
+          GlUtils.fillQuad(-1 + (var3 + (var4.anInt168 / 2)),
+              -1 + var2 + (var4.anInt193 / 2), 3,
               3, 16777215);
         } else {
           DummyClass47.method1323(-1 + var4.anInt168 / 2 + var3,
@@ -305,7 +305,7 @@ public final class ClassCheckRequest extends Node {
   public static void method127(short[] var0, int var1, GameString[] var2, int var3, int var4) {
     if (var1 > var4) {
         int var6 = var4;
-        int var5 = (var4 - -var1) / 2;
+        int var5 = (var4 + var1) / 2;
         GameString var7 = var2[var5];
         var2[var5] = var2[var1];
         var2[var1] = var7;
@@ -330,7 +330,7 @@ public final class ClassCheckRequest extends Node {
         var0[var1] = var0[var6];
         var0[var6] = var8;
         ClassCheckRequest.method127(var0, -1 + var6, var2, -909, var4);
-        ClassCheckRequest.method127(var0, var1, var2, -909, var6 - -1);
+        ClassCheckRequest.method127(var0, var1, var2, -909, var6 + 1);
       }
 
       if (var3 != -909) {
@@ -393,11 +393,11 @@ public final class ClassCheckRequest extends Node {
           --SomethingLight0.anInt1552;
 
           for (int var2 = var1; var2 < SomethingLight0.anInt1552; ++var2) {
-            Inventory.anIntArray2550[var2] = Inventory.anIntArray2550[var2 - -1];
+            Inventory.anIntArray2550[var2] = Inventory.anIntArray2550[var2 + 1];
             TextureCache.aClass135Array2131[var2] = TextureCache.aClass135Array2131[var2 + 1];
             SomethingIndex150.anIntArray2068[var2] = SomethingIndex150.anIntArray2068[1 + var2];
             GameString.anIntArray2157[var2] = GameString.anIntArray2157[1 + var2];
-            TextureSampler26.anIntArray3083[var2] = TextureSampler26.anIntArray3083[var2 - -1];
+            TextureSampler26.anIntArray3083[var2] = TextureSampler26.anIntArray3083[var2 + 1];
           }
 
           --var1;
@@ -442,14 +442,14 @@ public final class ClassCheckRequest extends Node {
                 var9 = 0;
               }
 
-              var3 = DummyClass28.anInt340 * (var4 + -var9) / var4;
+              var3 = DummyClass28.anInt340 * (var4 - var9) / var4;
             }
 
             if ((var3 > 0)) {
               SomethingMusic0 var12 = var11.method1812().method151(DummyClass32.aClass157_524);
               AudioStreamEncoder1 var13 = AudioStreamEncoder1.method437(var12, 100, var3);
               assert var13 != null;
-              var13.method429(SomethingIndex150.anIntArray2068[var1] + -1);
+              var13.method429(SomethingIndex150.anIntArray2068[var1] - 1);
               MonoChromaticImageBuffer.aClass3_Sub24_Sub2_2563.method457(var13);
             }
 

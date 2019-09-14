@@ -42,7 +42,7 @@ public final class DummyClass20 {
       DirectImageProducer.aBoolean2981 = false;
       int var8;
       if ((TextureSampler21.anInt3069 != 0)) {
-        if ((var5 <= var4) && (var5 + 16) > var4 && var0 >= var6 && var6 - -16 > var0) {
+        if ((var5 <= var4) && (var5 + 16) > var4 && var0 >= var6 && var6 + 16 > var0) {
           var2.anInt208 -= 4;
           DummyClass29.method909(113, var2);
         } else if (var4 >= var5 && (var4 < (16 + var5)) && (var0 >= (var1 + (var6 - 16)))
@@ -58,7 +58,7 @@ public final class DummyClass20 {
           }
 
           int var10 = -32 + (var1 - var8);
-          int var9 = -(var8 / 2) + -16 + -var6 + var0;
+          int var9 = -(var8 / 2) - 16 - var6 + var0;
           var2.anInt208 = (-var1 + var7) * var9 / var10;
           DummyClass29.method909(-48, var2);
           DirectImageProducer.aBoolean2981 = true;

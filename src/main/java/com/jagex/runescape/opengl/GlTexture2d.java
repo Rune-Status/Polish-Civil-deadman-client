@@ -133,7 +133,7 @@ public final class GlTexture2d extends SubNode {
             Runtime var2 = Runtime.getRuntime();
             Long var3 = (Long) var1.invoke(var2, (Object[]) null);
             AudioStreamEncoder3.anInt3492 =
-                (int) (var3.longValue() / 1048576L) - -1;
+                (int) (var3.longValue() / 1048576L) + 1;
           } catch (Throwable var4) {
           }
         }

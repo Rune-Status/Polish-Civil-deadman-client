@@ -225,11 +225,11 @@ public class Something3d2 extends Something3dRoot {
             }
 
             if ((var8 == 18)) {
-              var9 = (TextureCache.localPlayer.anInt2819 >> 7) - -WorldMapLabel.anInt1716;
+              var9 = (TextureCache.localPlayer.anInt2819 >> 7) + WorldMapLabel.anInt1716;
             }
 
             if ((var8 == 19)) {
-              var9 = (TextureCache.localPlayer.anInt2829 >> 7) - -ProceduralTexture.anInt1152;
+              var9 = (TextureCache.localPlayer.anInt2829 >> 7) + ProceduralTexture.anInt1152;
             }
 
             if (var8 == 20) {
@@ -277,7 +277,7 @@ public class Something3d2 extends Something3dRoot {
   }
 
   public static void method2249(byte var0, int var1) {
-    Node var2 = DummyClass23.aClass130_1659.getFirst(var0 + -6);
+    Node var2 = DummyClass23.aClass130_1659.getFirst(var0 - 6);
       if (var0 != 83) {
         Something3d2.aClass33_3019 = null;
       }

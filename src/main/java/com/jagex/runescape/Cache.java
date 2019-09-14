@@ -167,7 +167,7 @@ public final class Cache {
         if (bytes != null) {
           DummyClass43.method1194(-16385);
           Buffer.method777(BlockConfig.collisionMaps, var0, -48 + 8 * AbstractObjectNode.anInt3606,
-            var7, 4, var6, (VariableUpdate.anInt2294 + -6) * 8, bytes);
+            var7, 4, var6, (VariableUpdate.anInt2294 - 6) * 8, bytes);
         }
       }
 
@@ -218,7 +218,7 @@ public final class Cache {
             AbstractAudioOutputStream.quadx0[SomethingWorldMapy.widgetQuads] =
                 var2 + var11.anInt306;
             Player.quady0[SomethingWorldMapy.widgetQuads] =
-                var11.anInt210 - -var1;
+                var11.anInt210 + var1;
             GlTexture2d.quadx1[SomethingWorldMapy.widgetQuads] = var11.anInt168;
             Mobile.quady1[SomethingWorldMapy.widgetQuads] = var11.anInt193;
             var12 = SomethingWorldMapy.widgetQuads++;
@@ -235,7 +235,7 @@ public final class Cache {
 
             int var14 = var1 + var11.anInt210;
             int var15 = var11.anInt223;
-            int var13 = var11.anInt306 - -var2;
+            int var13 = var11.anInt306 + var2;
             if (LinearHashTable.aBoolean1040 && (
                 GameClient.method44(var11).anInt2205 != 0
               || var11.anInt187 == 0) && var15 > 127) {
@@ -299,7 +299,7 @@ public final class Cache {
               var17 = var14 > y ? var14 : y;
               var16 = (x < var13) ? var13 : x;
               var20 = var11.anInt168 + var13;
-              var21 = var14 - -var11.anInt193;
+              var21 = var14 + var11.anInt193;
               if ((var11.anInt187 == 9)) {
                 ++var21;
                 ++var20;
@@ -362,14 +362,14 @@ public final class Cache {
                   }
 
                   var21 -= var11.anInt193 / 2;
-                  var23 = 2047 & SpotAnimationConfig.anInt531 - -TextureSampler9.anInt3102;
+                  var23 = 2047 & SpotAnimationConfig.anInt531 + TextureSampler9.anInt3102;
                   var20 -= var11.anInt168 / 2;
                   var24 = DummyClass40.SINE_TABLE[var23];
                   var25 = DummyClass40.COSINE_TABLE[var23];
                   var24 = (Something3d2.anInt3020 + 256) * var24 >> 8;
-                  var25 = (Something3d2.anInt3020 - -256) * var25 >> 8;
+                  var25 = (Something3d2.anInt3020 + 256) * var25 >> 8;
                   var47 = -(var24 * var20) + var25 * var21 >> 11;
-                  var26 = var21 * var24 - -(var20 * var25) >> 11;
+                  var26 = var21 * var24 + (var20 * var25) >> 11;
                   var28 = TextureCache.localPlayer.anInt2819 + var26 >> 7;
                   var29 = -var47 + TextureCache.localPlayer.anInt2829 >> 7;
                   if (SceneNode.aBoolean1837 && (Something3dRoot.anInt2051 & 64)
@@ -454,7 +454,7 @@ public final class Cache {
                   }), var20, var21, 16776960, -1);
                   var21 += 15;
                   Runtime var57 = Runtime.getRuntime();
-                  var23 = (int) ((var57.totalMemory() + -var57.freeMemory()) / 1024L);
+                  var23 = (int) ((var57.totalMemory() - var57.freeMemory()) / 1024L);
                   var24 = 16776960;
                   if ((var23 > 65536)) {
                     var24 = 16711680;
@@ -529,7 +529,7 @@ public final class Cache {
 
                 if (var16 <= NpcConfiguration.anInt1297 && (var17 <= DummyClass36.anInt2612)
                   && var18 > NpcConfiguration.anInt1297 && var19 > DummyClass36.anInt2612) {
-                  AudioStreamEncoder4.method477(DummyClass36.anInt2612 + -var14, true,
+                  AudioStreamEncoder4.method477(DummyClass36.anInt2612 - var14, true,
                     -var13 + NpcConfiguration.anInt1297, var11);
                 }
               }
@@ -599,7 +599,7 @@ public final class Cache {
 
                     for (var21 = 0; (var21 < var11.anInt244); ++var21) {
                       for (var22 = 0; var11.anInt177 > var22; ++var22) {
-                        var24 = var14 + var21 * (32 - -var11.anInt290);
+                        var24 = var14 + var21 * (32 + var11.anInt290);
                         var23 = (var11.anInt285 + 32) * var22 + var13;
                         if (var20 < 20) {
                           var24 += var11.anIntArray300[var20];
@@ -620,8 +620,8 @@ public final class Cache {
                         } else {
                           var39 = false;
                           var46 = false;
-                          var47 = var11.anIntArray254[var20] + -1;
-                          if (x < 32 + var23 && (var23 < width) && (y < (var24 - -32))
+                          var47 = var11.anIntArray254[var20] - 1;
+                          if (x < 32 + var23 && (var23 < width) && (y < (var24 + 32))
                             && (var24 < height) || var11 == MouseRecorder.aClass11_1017
                             && (DummyClass18.anInt86 == var20)) {
                             AbstractDirectColorSprite var54;
@@ -660,7 +660,7 @@ public final class Cache {
                                 var26 = 0;
                               }
 
-                              var54.method637(var23 + var25, var24 - -var26, 128);
+                              var54.method637(var23 + var25, var24 + var26, 128);
                               if (var5 != -1) {
                                 Widget var51 = var3[var5 & '\uffff'];
                                 int var31;
@@ -675,7 +675,7 @@ public final class Cache {
 
                                 int var32;
                                 if (var30 > (var26 + var24) && (var51.anInt208 > 0)) {
-                                  var32 = DisplayMode.loopCycle * (-var26 + var30 + -var24) / 3;
+                                  var32 = DisplayMode.loopCycle * (-var26 + var30 - var24) / 3;
                                   if (var32 > (DisplayMode.loopCycle * 10)) {
                                     var32 = 10 * DisplayMode.loopCycle;
                                   }
@@ -692,13 +692,13 @@ public final class Cache {
                                 if (var31 < 32 + var26 + var24
                                   && var51.anInt208 < -var51.anInt193 + var51.anInt252) {
                                   var32 =
-                                    (-var31 + 32 + (var24 - -var26)) * DisplayMode.loopCycle / 3;
+                                    (-var31 + 32 + (var24 + var26)) * DisplayMode.loopCycle / 3;
                                   if (var32 > DisplayMode.loopCycle * 10) {
                                     var32 = 10 * DisplayMode.loopCycle;
                                   }
 
-                                  if (-var51.anInt208 + var51.anInt252 + -var51.anInt193 < var32) {
-                                    var32 = var51.anInt252 + -var51.anInt193 + -var51.anInt208;
+                                  if (-var51.anInt208 + var51.anInt252 - var51.anInt193 < var32) {
+                                    var32 = var51.anInt252 - var51.anInt193 - var51.anInt208;
                                   }
 
                                   var51.anInt208 += var32;
@@ -742,11 +742,11 @@ public final class Cache {
                         } else {
                           DummyClass47.method1312(var13, var14, var11.anInt168,
                               var11.anInt193,
-                              var20, 256 + -(255 & var15));
+                              var20, 256 - (255 & var15));
                         }
                       } else if (GlRenderer.useOpenGlRenderer) {
                         GlUtils.drawQuad(var13, var14, var11.anInt168, var11.anInt193, var20,
-                          256 + -(var15 & 255));
+                          256 - (var15 & 255));
                       } else {
                         DummyClass47.method1315(var13, var14, var11.anInt168, var11.anInt193, var20,
                           -(var15 & 255) + 256);
@@ -894,7 +894,7 @@ public final class Cache {
                             var25 = (var11.anInt193 << 8) / var11.anInt312;
                           }
 
-                          var26 = var13 - -(var11.anInt168 / 2) - -(var24 * var11.anInt259
+                          var26 = var13 + (var11.anInt168 / 2) + (var24 * var11.anInt259
                             >> 8);
                           var47 =
                             var11.anInt193 / 2 + var14 + (var25 * var11.anInt230 >> 8);
@@ -955,7 +955,7 @@ public final class Cache {
                                 var11.anInt164);
                             } else {
                               var38.draw(0, var11.rotationY, var11.rotationZ, var11.rotationX0,
-                                var11.anInt258, var11.anInt264 + (var28 - -var23),
+                                var11.anInt258, var11.anInt264 + (var28 + var23),
                                 var29 + var11.anInt264, -1L);
                             }
 
@@ -977,7 +977,7 @@ public final class Cache {
                           for (var22 = 0; var11.anInt244 > var22; ++var22) {
                             for (var23 = 0; var23 < var11.anInt177; ++var23) {
                               if (var11.anIntArray254[var21] > 0) {
-                                var42 = DummyClass35.getItemConfig(var11.anIntArray254[var21] + -1,
+                                var42 = DummyClass35.getItemConfig(var11.anIntArray254[var21] - 1,
                                   (byte) 104);
                                 GameString var40;
                                 if (var42.anInt764 != 1 &&
@@ -1039,20 +1039,20 @@ public final class Cache {
                             }
 
                             var26 = var35.method682(var44);
-                            var21 += var35.anInt3727 - -1;
+                            var21 += var35.anInt3727 + 1;
                             if ((var20 < var26)) {
                               var20 = var26;
                             }
                           }
 
-                          var26 = var14 - -var11.anInt193 - -5;
+                          var26 = var14 + var11.anInt193 + 5;
                           var20 += 6;
                           var21 += 7;
-                          if ((var26 - -var21) > height) {
+                          if ((var26 + var21) > height) {
                             var26 = -var21 + height;
                           }
 
-                          var25 = -var20 + -5 + var13 - -var11.anInt168;
+                          var25 = -var20 - 5 + var13 + var11.anInt168;
                           if (var25 < 5 + var13) {
                             var25 = 5 + var13;
                           }
@@ -1070,7 +1070,7 @@ public final class Cache {
                           }
 
                           var43 = var11.aClass94_232;
-                          var47 = 2 + (var26 - -var35.anInt3727);
+                          var47 = 2 + (var26 + var35.anInt3727);
 
                           for (
                             var43 = FileCacheRequester.method1303(var11, var43, 0);
@@ -1091,13 +1091,13 @@ public final class Cache {
                         if ((var11.anInt187 == 9)) {
                           if (var11.aBoolean167) {
                             var20 = var13;
-                            var22 = var13 - -var11.anInt168;
-                            var21 = var14 - -var11.anInt193;
+                            var22 = var13 + var11.anInt168;
+                            var21 = var14 + var11.anInt193;
                             var23 = var14;
                           } else {
                             var20 = var13;
                             var21 = var14;
-                            var23 = var14 - -var11.anInt193;
+                            var23 = var14 + var11.anInt193;
                             var22 = var13 + var11.anInt168;
                           }
 
@@ -1139,8 +1139,8 @@ public final class Cache {
                           var21 = var37.anInt3697;
                           var22 = var37.anInt3706;
                           if (var11.aBoolean186) {
-                            var23 = (var21 + -1 + var11.anInt168) / var21;
-                            var24 = (var11.anInt193 - 1 - -var22) / var22;
+                            var23 = (var21 - 1 + var11.anInt168) / var21;
+                            var24 = (var11.anInt193 - 1 + var22) / var22;
                             if (GlRenderer.useOpenGlRenderer) {
                               GlUtils.method931(var13, var14,
                                   var11.anInt168 + var13,
@@ -1166,14 +1166,14 @@ public final class Cache {
                                   } else {
                                     var27
                                         .method646(var13, var14 + var28 * var22,
-                                            256 + -(var15 & 255), var23, 1);
+                                            256 - (var15 & 255), var23, 1);
                                   }
                                 }
                               } else if (!var46) {
                                 for (var28 = 0; (var28 < var23); ++var28) {
                                   for (var29 = 0; var24 > var29; ++var29) {
                                     if (var15 == 0) {
-                                      var37.method643(var13 - -(var21 * var28),
+                                      var37.method643(var13 + (var21 * var28),
                                           var22 * var29 + var14);
                                     } else {
                                       var37.method637(var28 * var21 + var13,
@@ -1199,8 +1199,8 @@ public final class Cache {
                               GlUtils.clip(x, y, width, height);
                             } else {
                               DummyClass47.method1326(var13, var14,
-                                  var13 - -var11.anInt168,
-                                  var14 - -var11.anInt193);
+                                  var13 + var11.anInt168,
+                                  var14 + var11.anInt193);
 
                               for (var25 = 0; var25 < var23; ++var25) {
                                 for (var26 = 0; (var26 < var24); ++var26) {
@@ -1215,7 +1215,7 @@ public final class Cache {
                                     }
                                   } else {
                                     var37.method640(
-                                        var14 - -(var22 * var26) + var22 / 2,
+                                        var14 + (var22 * var26) + var22 / 2,
                                         var11.anInt301, 4096,
                                         var25 * var21 + var13 + var21 / 2,
                                         -1470985020);
@@ -1301,7 +1301,7 @@ public final class Cache {
       int var4 = 0;
       int var5;
       if ((var1 > 3) && var2 > 3 && var1 < 100 && var2 < 100) {
-        for (var5 = -4 + var1; var1 - -4 >= var5; ++var5) {
+        for (var5 = -4 + var1; var1 + 4 >= var5; ++var5) {
           for (int var6 = -4 + var2; var6 <= 4 + var2; ++var6) {
             int var7 = GameWorldSomething.currentPlane;
             if (var7 < 3 && (2 & BZipDecompressorState.tileFlags[1][var5][var6])

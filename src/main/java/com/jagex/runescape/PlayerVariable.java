@@ -75,9 +75,9 @@ public final class PlayerVariable {
                               byte var11, int var12, float[][] var13, int var14,
                               SomethingGl0 var15) {
     int var16 = 255 + (var0 << 8);
-      int var17 = (var5 << 8) - -255;
-      int var18 = (var8 << 8) - -255;
-      int var19 = (var14 << 8) - -255;
+      int var17 = (var5 << 8) + 255;
+      int var18 = (var8 << 8) + 255;
+      int var19 = (var14 << 8) + 255;
       int[] var20 = DummyClass21.anIntArrayArray1763[var11];
       int[] var22 = new int[var20.length >> 1];
 

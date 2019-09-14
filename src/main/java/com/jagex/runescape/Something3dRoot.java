@@ -71,9 +71,9 @@ public abstract class Something3dRoot {
               int var11 = var5 >> 12;
               var5 &= 4095;
               int var15 = var7 >> 12;
-              int var20 = var5 + -4096;
+              int var20 = var5 - 4096;
               int var12 = var11 + 1;
-              int var16 = var15 - -1;
+              int var16 = var15 + 1;
               int var6 = var40[var36] * var42 >> 12;
               int var17 = DummyClass3.anIntArray52[var5];
               var6 *= this.anInt2056;
@@ -96,7 +96,7 @@ public abstract class Something3dRoot {
               }
 
               var6 &= 4095;
-              short var28 = this.aShortArray2047[var14 - -var24];
+              short var28 = this.aShortArray2047[var14 + var24];
               var7 &= 4095;
               var13 &= 255;
               int var19 = DummyClass3.anIntArray52[var7];
@@ -116,9 +116,9 @@ public abstract class Something3dRoot {
                 WorldMapLabel.method1788(var5, var7, var6, this.aShortArray2047[var25 + var11],
                   true);
               int var30 =
-                WorldMapLabel.method1788(var20, var7, var6, this.aShortArray2047[var12 - -var25],
+                WorldMapLabel.method1788(var20, var7, var6, this.aShortArray2047[var12 + var25],
                   true);
-              int var31 = var29 - -(var17 * (var30 - var29) >> 12);
+              int var31 = var29 + (var17 * (var30 - var29) >> 12);
               var29 =
                 WorldMapLabel.method1788(var5, var7, var21, this.aShortArray2047[var26 + var11],
                   true);
@@ -135,17 +135,17 @@ public abstract class Something3dRoot {
                 WorldMapLabel.method1788(var20, var22, var6,
                     this.aShortArray2047[var12 + var27],
                   true);
-              var31 = (var17 * (var30 + -var29) >> 12) + var29;
+              var31 = (var17 * (var30 - var29) >> 12) + var29;
               var29 =
                 WorldMapLabel.method1788(var5, var22, var21,
-                    this.aShortArray2047[var11 - -var28],
+                    this.aShortArray2047[var11 + var28],
                   true);
               var30 =
                 WorldMapLabel.method1788(var20, var22, var21,
                     this.aShortArray2047[var12 + var28],
                   true);
               var32 = var29 + ((-var29 + var30) * var17 >> 12);
-              int var34 = var31 - -((var32 + -var31) * var18 >> 12);
+              int var34 = var31 + ((var32 - var31) * var18 >> 12);
               this.method2237(((-var33 + var34) * var19 >> 12) + var33, var38, -20975);
             }
 
@@ -196,7 +196,7 @@ public abstract class Something3dRoot {
   public abstract void method2237(int var1,int var2,int var3 );
 
   public static int method2234(int var0, int var1) {
-    int var2 = -27 / ((var1 - -87) / 39);
+    int var2 = -27 / ((var1 + 87) / 39);
       return 1023 & var0;
   }
 

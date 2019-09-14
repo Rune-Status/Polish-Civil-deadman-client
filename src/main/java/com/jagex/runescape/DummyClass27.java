@@ -52,13 +52,13 @@ public final class DummyClass27 {
             var4 = var20.anInt1485;
           }
 
-          int var7 = (var4 - -1 >> 1) + var1.anInt2271;
+          int var7 = (var4 + 1 >> 1) + var1.anInt2271;
           int var6 = (var4 >> 1) + var1.anInt2271;
           int var8 = (var5 >> 1) + var1.anInt2282;
           int var9 = (var5 + 1 >> 1) + var1.anInt2282;
           int[][] var10 = AbstractGameWorld.heightMap[GameWorldSomething.currentPlane];
           int var11 =
-            var10[var7][var9] + var10[var6][var9] + (var10[var6][var8] - -var10[var7][var8]) >> 2;
+            var10[var7][var9] + var10[var6][var9] + (var10[var6][var8] + var10[var7][var8]) >> 2;
           SceneNode var12 = null;
           int var13 = AbstractSomethingTexture.OBJECT_TYPES[var1.anInt2278];
           if ((var13 == 0)) {
@@ -94,7 +94,7 @@ public final class DummyClass27 {
 
           if (var12 != null) {
             Queue.method881(GameWorldSomething.currentPlane, var1.anInt2282, -96, 0, var1.anInt2271,
-              var1.anInt2283 - -1, -1, var13, 0, var1.anInt2266 - -1);
+              var1.anInt2283 + 1, -1, var13, 0, var1.anInt2266 + 1);
             var2.anInt2778 = var1.anInt2283 + AbstractGameWorld.updateCycle;
             var2.anInt2833 = 64 * var5 + var1.anInt2282 * 128;
             var2.anInt2782 = var4 * 64 + 128 * var1.anInt2271;
@@ -121,7 +121,7 @@ public final class DummyClass27 {
 
             var2.anInt2777 = var1.anInt2282 + var16;
             var2.anInt2817 = var17 + var1.anInt2282;
-            var2.anInt2788 = var1.anInt2271 - -var22;
+            var2.anInt2788 = var1.anInt2271 + var22;
           }
         }
       }

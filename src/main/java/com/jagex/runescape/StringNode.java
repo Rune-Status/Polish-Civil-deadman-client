@@ -92,13 +92,13 @@ public final class StringNode extends Node {
         var2 = 126;
       }
 
-      return (var1 & '\uff80') - -var2;
+      return (var1 & '\uff80') + var2;
     }
   }
 
   public static void method730(int var0, int var1, byte var2, int var3,
       int var4, int var5) {
-    int var6 = 19 % ((var2 - -44) / 47);
+    int var6 = 19 % ((var2 + 44) / 47);
     if ((var0 >= DummyClass55.anInt1425) && var4 <= GlTexture2d.anInt3765
         && DummyClass13.anInt2020 <= var5
         && LightIntensity.anInt902 >= var3) {
@@ -109,7 +109,7 @@ public final class StringNode extends Node {
   }
 
   public static void method731(FileUnpacker var0, byte var1) {
-    int var2 = 3 / ((var1 - -62) / 37);
+    int var2 = 3 / ((var1 + 62) / 37);
     TextureSampler20.aClass153_3154 = var0;
     DummyClass53.anInt1344 = TextureSampler20.aClass153_3154
         .getAmountChildren(16, (byte) 71);

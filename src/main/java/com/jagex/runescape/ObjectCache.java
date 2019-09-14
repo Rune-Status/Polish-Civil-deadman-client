@@ -200,7 +200,7 @@ public final class ObjectCache {
         DummyClass59.method1040(GlTexture2d.anInt3765, var2, (byte) 0, DummyClass55.anInt1425);
 
       for (int var10 = var6; var10 <= var7; ++var10) {
-        TextureSampler18.method282(DummyClass35.anIntArrayArray663[var10], var8, var0 + -2974, var9,
+        TextureSampler18.method282(DummyClass35.anIntArrayArray663[var10], var8, var0 - 2974, var9,
           var1);
       }
   }

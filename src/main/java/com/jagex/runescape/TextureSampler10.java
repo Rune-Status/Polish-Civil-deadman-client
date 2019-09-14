@@ -303,8 +303,8 @@ public final class TextureSampler10 extends AbstractTextureSampler {
             var14 = this.anIntArrayArray3438[var7];
             if (var7 > 0) {
               int[] var10 = this.anIntArrayArray3438[-1 + var7];
-              int var11 = (var8 - var10[0] << 12) / (var14[0] + -var10[0]);
-              int var12 = 4096 + -var11;
+              int var11 = (var8 - var10[0] << 12) / (var14[0] - var10[0]);
+              int var12 = 4096 - var11;
               var4 = var10[3] * var12 + var14[3] * var11 >> 12;
               var2 = var12 * var10[1] + var11 * var14[1] >> 12;
               var3 = var12 * var10[2] + var11 * var14[2] >> 12;
@@ -314,7 +314,7 @@ public final class TextureSampler10 extends AbstractTextureSampler {
               var3 = var14[2];
             }
           } else {
-            var14 = this.anIntArrayArray3438[var5 + -1];
+            var14 = this.anIntArrayArray3438[var5 - 1];
             var4 = var14[3];
             var3 = var14[2];
             var2 = var14[1];
@@ -359,7 +359,7 @@ public final class TextureSampler10 extends AbstractTextureSampler {
       int var1 =
           WorldMapLabel.anInt1716 + (TextureCache.localPlayer.anInt2819 >> 7);
       int var2 = (TextureCache.localPlayer.anInt2829 >> 7)
-          - -ProceduralTexture.anInt1152;
+          + ProceduralTexture.anInt1152;
       if ((var1 >= 3053) && (var1 <= 3156) && (var2 >= 3056) && var2 <= 3136) {
         GameWorld.anInt2622 = 1;
       }

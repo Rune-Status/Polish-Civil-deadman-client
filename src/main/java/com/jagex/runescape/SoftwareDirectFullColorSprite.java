@@ -62,10 +62,10 @@ public final class SoftwareDirectFullColorSprite extends SoftwareDirectColorSpri
       double var7 = (var5 & '\uffff') * 9.587379924285257E-5D;
       int var9 = (int) Math.floor(Math.sin(var7) * var6 + 0.5D);
       int var10 = (int) Math.floor(Math.cos(var7) * var6 + 0.5D);
-      int var11 = -var1 * var10 + -var2 * var9;
-      int var12 = -(-var1) * var9 + -var2 * var10;
-      int var13 = ((this.anInt3707 << 4) - var1) * var10 + -var2 * var9;
-      int var14 = -((this.anInt3707 << 4) - var1) * var9 + -var2 * var10;
+      int var11 = -var1 * var10 - var2 * var9;
+      int var12 = -(-var1) * var9 - var2 * var10;
+      int var13 = ((this.anInt3707 << 4) - var1) * var10 - var2 * var9;
+      int var14 = -((this.anInt3707 << 4) - var1) * var9 - var2 * var10;
       int var15 = -var1 * var10 + ((this.anInt3696 << 4) - var2) * var9;
       int var16 = -(-var1) * var9 + ((this.anInt3696 << 4) - var2) * var10;
       int var17 = ((this.anInt3707 << 4) - var1) * var10 + ((

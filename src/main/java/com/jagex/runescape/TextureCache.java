@@ -320,7 +320,7 @@ public final class TextureCache implements ITextureCache {
                 (127 & var3.anInt2829) == 0)
               && ((var4 & 1) != 1 || ((127 & var3.anInt2819) == 64) && (127
                 & var3.anInt2829) == 64)) {
-              var5 = var3.anInt2819 + -(var4 * 64) >> 7;
+              var5 = var3.anInt2819 - (var4 * 64) >> 7;
               var6 = -(var4 * 64) + var3.anInt2829 >> 7;
               var7 = var3.getSize() + var5;
               if ((var5 < 0)) {
@@ -371,7 +371,7 @@ public final class TextureCache implements ITextureCache {
               && (127 & var3.anInt2829) == 64) {
               var7 = -(64 * var6) + var3.anInt2819 >> 7;
               var8 = -(var6 * 64) + var3.anInt2829 >> 7;
-              var10 = var8 - -var6;
+              var10 = var8 + var6;
               if (var8 < 0) {
                 var8 = 0;
               }
@@ -442,7 +442,7 @@ public final class TextureCache implements ITextureCache {
         }
       }
 
-      var2 = -28 / ((var0 - -7) / 34);
+      var2 = -28 / ((var0 + 7) / 34);
   }
 
   public static void method1612(int var0) {

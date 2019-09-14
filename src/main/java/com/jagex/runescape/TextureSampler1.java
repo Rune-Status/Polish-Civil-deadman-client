@@ -87,7 +87,7 @@ public final class TextureSampler1 extends AbstractTextureSampler {
         }
 
         for (SomethingPacket151 var2 =
-             (SomethingPacket151) TextureSampler23.aClass130_3208.getFirst(var1 + -2908);
+             (SomethingPacket151) TextureSampler23.aClass130_3208.getFirst(var1 - 2908);
             var2 != null;
              var2 = (SomethingPacket151) TextureSampler23.aClass130_3208.getNext(-122)) {
           TextureSampler19.method254(true, var2, false);
@@ -95,7 +95,7 @@ public final class TextureSampler1 extends AbstractTextureSampler {
 
         InventoryConfig.anInt3655 = -1;
         TextureSampler23.aClass130_3208 = new HashTable(8);
-        VariableUpdate.method122(var1 + -2918);
+        VariableUpdate.method122(var1 - 2918);
         InventoryConfig.anInt3655 = AudioSomethingSomething.anInt2529;
         DummyClass23.method1746(false, (byte) -36);
         Cache.method1093(false);

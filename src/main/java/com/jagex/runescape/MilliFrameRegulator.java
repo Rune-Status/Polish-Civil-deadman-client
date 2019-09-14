@@ -48,7 +48,7 @@ public final class MilliFrameRegulator extends AbstractFrameRegulator {
       } else if (this.aLongArray2694[this.anInt2685] < this.aLong2683) {
         this.anInt2688 =
           (int) ((var3 * 2560) / (this.aLong2683
-              + -this.aLongArray2694[this.anInt2685]));
+              - this.aLongArray2694[this.anInt2685]));
       }
 
       if (this.anInt2688 < 25) {
@@ -96,7 +96,7 @@ public final class MilliFrameRegulator extends AbstractFrameRegulator {
         this.aLongArray2694[var2] = 0L;
       }
 
-      var2 = -114 % ((var1 - -82) / 42);
+      var2 = -114 % ((var1 + 82) / 42);
   }
 
   public static void method1771(int var0) {

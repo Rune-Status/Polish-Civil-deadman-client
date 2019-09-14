@@ -84,7 +84,7 @@ public final class Light {
   }
 
   private void method1061(int var1) {
-    int var2 = (this.anInt698 << 7) - -64;
+    int var2 = (this.anInt698 << 7) + 64;
       this.aFloat710 = 1.0F / (var2 * var2);
       int var3 = 9 % ((9 - var1) / 57);
   }
@@ -98,7 +98,7 @@ public final class Light {
       int var6 = this.anInt694;
       int var4;
       if (var6 == 1) {
-        var4 = 1024 - -(DummyClass40.SINE_TABLE[var5] >> 6);
+        var4 = 1024 + (DummyClass40.SINE_TABLE[var5] >> 6);
       } else if (var6 != 3) {
         if (var6 == 4) {
           var4 = var5 >> 10 << 11;
@@ -229,8 +229,8 @@ public final class Light {
 
   public static void method1058(int var0, int var1, int var2, int var3, byte var4) {
     int var5 = 25 % ((25 - var4) / 52);
-      if (((var1 + -var0) >= DummyClass55.anInt1425) && GlTexture2d.anInt3765 >= var0 + var1
-        && var3 + -var0 >= DummyClass13.anInt2020 && LightIntensity.anInt902 >= var0 + var3) {
+      if (((var1 - var0) >= DummyClass55.anInt1425) && GlTexture2d.anInt3765 >= var0 + var1
+        && var3 - var0 >= DummyClass13.anInt2020 && LightIntensity.anInt902 >= var0 + var3) {
         IdentityKit.method949(var1, (byte) 118, var0, var2, var3);
       } else {
         GZipDecompressor.method1129(var2, var3, var0, 0, var1);

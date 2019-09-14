@@ -55,7 +55,7 @@ public final class SomethingAudio {
   }
 
   public byte[] method2173(byte[] var1, byte var2 ) {
-    int var3 = 53 % ((var2 - -39) / 50);
+    int var3 = 53 % ((var2 + 39) / 50);
       if (this.anIntArrayArray1999 != null) {
         int var4 = 14 + (int) ((long) var1.length * this.anInt2001
             / this.anInt1997);
@@ -70,7 +70,7 @@ public final class SomethingAudio {
 
           int var11;
           for (var11 = 0; (var11 < 14); ++var11) {
-            var5[var6 - -var11] += var10[var11] * var9;
+            var5[var6 + var11] += var10[var11] * var9;
           }
 
           var7 += this.anInt2001;
@@ -82,7 +82,7 @@ public final class SomethingAudio {
         var1 = new byte[var4];
 
         for (var8 = 0; var4 > var8; ++var8) {
-          int var13 = var5[var8] - -32768 >> 16;
+          int var13 = var5[var8] + 32768 >> 16;
           if ((var13 >= 127)) {
             if (var13 <= 127) {
               var1[var8] = (byte) var13;

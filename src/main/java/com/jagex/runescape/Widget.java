@@ -466,7 +466,7 @@ public final class Widget {
           GameString var14 = var2.readString();
           if ((var14.getLength() > 0)) {
             this.aClass94Array173[var10] = var14;
-            var5 |= 1 << 23 - -var10;
+            var5 |= 1 << 23 + var10;
           }
         }
       }
@@ -561,7 +561,7 @@ public final class Widget {
           GameString var13 = var2.readString();
           if (var13.getLength() > 0) {
             this.aClass94Array173[var7] = var13;
-            var5 |= 1 << 23 - -var7;
+            var5 |= 1 << 23 + var7;
           }
         }
       }
@@ -728,7 +728,7 @@ public final class Widget {
           if (var8 == 1) {
             var10 =
               (AbstractModel) SomethingVolume15.aClass93_2428.get(
-                  (65536) - -var9);
+                  (65536) + var9);
             if (var10 == null) {
               Model var18 = Model.getModel(DummyClass25.aClass153_1628, var9, 0);
               if (var18 == null) {
@@ -909,7 +909,7 @@ public final class Widget {
       if ((this.anInt190 == 65535)) {
         this.anInt190 = -1;
       } else {
-        this.anInt190 = (this.anInt279 & -65536) - -this.anInt190;
+        this.anInt190 = (this.anInt279 & -65536) + this.anInt190;
       }
 
       this.aBoolean155 = (var2.readUnsignedByte() == 1);
@@ -1065,12 +1065,12 @@ public final class Widget {
 
       this.aClass3_Sub1_257 = new WidgetAccess(var3, var8);
       this.anObjectArray159 = this.method862(-65536, var2);
-      this.anObjectArray248 = this.method862(var1 + -65535, var2);
+      this.anObjectArray248 = this.method862(var1 - 65535, var2);
       this.anObjectArray281 = this.method862(-65536, var2);
       this.anObjectArray303 = this.method862(var1 ^ '\uffff', var2);
       this.anObjectArray203 = this.method862(-65536, var2);
       this.anObjectArray282 = this.method862(var1 ^ '\uffff', var2);
-      this.anObjectArray174 = this.method862(var1 + -65535, var2);
+      this.anObjectArray174 = this.method862(var1 - 65535, var2);
       this.anObjectArray158 = this.method862(-65536, var2);
       this.anObjectArray269 = this.method862(-65536, var2);
       this.anObjectArray314 = this.method862(var1 ^ '\uffff', var2);

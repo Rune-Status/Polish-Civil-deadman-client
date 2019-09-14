@@ -27,7 +27,7 @@ public final class TextureSampler14 extends AbstractTextureSampler {
           int var7 = TextureCache.anIntArray2125[var6];
           int var8;
           if (var7 > this.anInt3385 && 4096 - this.anInt3385 > var7
-            && ((2048 + -this.anInt3385) < var5) && (var5 < (this.anInt3385 + 2048))) {
+            && ((2048 - this.anInt3385) < var5) && (var5 < (this.anInt3385 + 2048))) {
             var8 = 2048 - var7;
             var8 = var8 < 0 ? -var8 : var8;
             var8 <<= 12;
@@ -35,7 +35,7 @@ public final class TextureSampler14 extends AbstractTextureSampler {
             var3[var6] = -var8 + 4096;
           } else if (var7 > (-this.anInt3385 + 2048) && var7 < this.anInt3385
               + 2048) {
-            var8 = var5 + -2048;
+            var8 = var5 - 2048;
             var8 = (var8 >= 0) ? var8 : -var8;
             var8 -= this.anInt3385;
             var8 <<= 12;
@@ -52,7 +52,7 @@ public final class TextureSampler14 extends AbstractTextureSampler {
               var3[var6] = -var8 + 4096;
             }
           } else {
-            var8 = var7 + -2048;
+            var8 = var7 - 2048;
             var8 = var8 < 0 ? -var8 : var8;
             var8 -= this.anInt3385;
             var8 <<= 12;

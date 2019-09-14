@@ -197,7 +197,7 @@ public abstract class GameStub implements Runnable,
       long sampledTime = DummyClass21.updateMemory[FileUnpacker.updateMemoryCounter];
       DummyClass21.updateMemory[FileUnpacker.updateMemoryCounter] = currentTime;
       FileUnpacker.updateMemoryCounter =
-          31 & FileUnpacker.updateMemoryCounter - -1;
+          31 & FileUnpacker.updateMemoryCounter + 1;
       synchronized (this) {
         TextureSampler26.focused = DummyClass8.focused;
       }
@@ -211,7 +211,7 @@ public abstract class GameStub implements Runnable,
     DummyClass5.drawMemory[FileTable.drawMemoryCounter] = var2;
     FileTable.drawMemoryCounter = 31 & FileTable.drawMemoryCounter + 1;
     if ((var4 != 0L) && var2 > var4) {
-      int var6 = (int) (var2 + -var4);
+      int var6 = (int) (var2 - var4);
       AnimationSequence.fps = (32000 + (var6 >> 1)) / var6;
     }
 

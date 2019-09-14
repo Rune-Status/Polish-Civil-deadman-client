@@ -207,7 +207,7 @@ public final class SocketStream implements Runnable {
       int var4, int var5,
       int var6) {
     if (((var5 - var4) >= DummyClass55.anInt1425)
-          && GlTexture2d.anInt3765 >= var5 - -var4
+          && GlTexture2d.anInt3765 >= var5 + var4
           && DummyClass13.anInt2020 <= -var4 + var1
           && LightIntensity.anInt902 >= var4 + var1) {
         TextureSampler6.method175(var6, var0, var1, true, var3, var4, var5);
@@ -323,7 +323,7 @@ public final class SocketStream implements Runnable {
               Inventory.anIntArray2550[SomethingLight0.anInt1552] = var7;
               SomethingIndex150.anIntArray2068[SomethingLight0.anInt1552] = var8;
               int var11 = (-64 + var0) / 128;
-              var10 = (var3 + -64) / 128;
+              var10 = (var3 - 64) / 128;
               GameString.anIntArray2157[SomethingLight0.anInt1552] = 0;
               TextureCache.aClass135Array2131[SomethingLight0.anInt1552] = null;
               TextureSampler26.anIntArray3083[SomethingLight0.anInt1552] =

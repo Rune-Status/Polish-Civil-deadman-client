@@ -40,9 +40,9 @@ public final class TextureSampler35 extends AbstractTextureSampler {
             .method152(0, TriChromaticImageBuffer.anInt2487 & var1 + 1, 32755);
 
         for (int var8 = 0; SomethingLight0.anInt1559 > var8; ++var8) {
-          int var9 = (var7[var8] + -var5[var8]) * this.anInt3322;
+          int var9 = (var7[var8] - var5[var8]) * this.anInt3322;
           int var10 = this.anInt3322 * (-var6[var8 - 1 & RenderAnimation.anInt396] + var6[
-            RenderAnimation.anInt396 & var8 - -1]);
+            RenderAnimation.anInt396 & var8 + 1]);
           int var11 = var10 >> 12;
           int var12 = var9 >> 12;
           int var13 = var11 * var11 >> 12;
@@ -50,7 +50,7 @@ public final class TextureSampler35 extends AbstractTextureSampler {
           int var15 =
             (int) (Math.sqrt((4096 + var14 + var13) / 4096.0F) * 4096.0D);
           int var16 = var15 != 0 ? 16777216 / var15 : 0;
-          var4[var8] = 4096 + -var16;
+          var4[var8] = 4096 - var16;
         }
       }
 

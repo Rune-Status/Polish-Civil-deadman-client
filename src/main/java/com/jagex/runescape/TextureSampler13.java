@@ -23,9 +23,9 @@ public final class TextureSampler13 extends AbstractTextureSampler {
         this.method314(-83, 92, 48);
       }
 
-      int var4 = var3 - -(57 * var1);
+      int var4 = var3 + (57 * var1);
       var4 ^= var4 << 1;
-      return 4096 + -((var4 * (var4 * var4 * 15731 - -789221) - -1376312589 & Integer.MAX_VALUE)
+      return 4096 - ((var4 * (var4 * var4 * 15731 + 789221) + 1376312589 & Integer.MAX_VALUE)
         / 262144);
   }
 
@@ -58,7 +58,7 @@ public final class TextureSampler13 extends AbstractTextureSampler {
               int var8 = (TextureCache.localPlayer.anInt3970 < var3.anInt3970) ?
                 TextureCache.localPlayer.anInt3970 :
                 var3.anInt3970;
-              int var9 = 5 - -(var7 * 10 / 100) + var8;
+              int var9 = 5 + (var7 * 10 / 100) + var8;
               int var10 = -var3.combatLevel + TextureCache.localPlayer.combatLevel;
               if (var10 < 0) {
                 var10 = -var10;
@@ -79,7 +79,7 @@ public final class TextureSampler13 extends AbstractTextureSampler {
                   TextureCache.localPlayer.combatLevel) :
                 MonoChromaticImageBuffer.aClass94_2562, SomethingScene.aClass94_1072, var13,
                 SomethingScene.toString(var3.combatLevel), DummyClass59.aClass94_673,
-                SomethingScene.toString(var3.anInt3965 + -var3.combatLevel),
+                SomethingScene.toString(var3.anInt3965 - var3.combatLevel),
                 AreaSoundEffect.aClass94_2335
               });
             } else {

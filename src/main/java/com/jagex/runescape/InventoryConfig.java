@@ -104,7 +104,7 @@ public final class InventoryConfig extends SubNode {
         TextureSampler26.anIntArray3082[var6] = TextureSampler26.anIntArray3082[var6 - 1];
         TextureSampler4.aClass94Array3226[var6] = TextureSampler4.aClass94Array3226[var6 - 1];
         StringNode.aClass94Array2580[var6] = StringNode.aClass94Array2580[-1 + var6];
-        DummyClass4.aClass94Array3003[var6] = DummyClass4.aClass94Array3003[var6 + -1];
+        DummyClass4.aClass94Array3003[var6] = DummyClass4.aClass94Array3003[var6 - 1];
         SceneNode.anIntArray1835[var6] = SceneNode.anIntArray1835[var6 - 1];
       }
 

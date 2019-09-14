@@ -247,7 +247,7 @@ public final class Projectile extends SceneNode {
   }
 
   public static int method2028(int var0, int var1, int var2) {
-    int var3 = 96 / ((var2 - -75) / 33);
+    int var3 = 96 / ((var2 + 75) / 33);
 
       int var4;
       for (var4 = 1; var0 > 1; var0 >>= 1) {

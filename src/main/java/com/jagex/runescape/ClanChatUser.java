@@ -47,10 +47,10 @@ public final class ClanChatUser extends Node {
           var4[var6] = 1;
         }
 
-        for (var6 = var3 + 1; -1 + -var3 + 104 > var6; ++var6) {
-          var7 = 4 * 512 * (var3 + 103 + -var6) + 24628;
+        for (var6 = var3 + 1; -1 - var3 + 104 > var6; ++var6) {
+          var7 = 4 * 512 * (var3 + 103 - var6) + 24628;
 
-          for (var8 = 1 + var2; (var8 < (-var2 + 104 + -1)); ++var8) {
+          for (var8 = 1 + var2; (var8 < (-var2 + 104 - 1)); ++var8) {
             if (((BZipDecompressorState.tileFlags[var1][var8][var6] & 24) == 0)) {
               SocketStream.method1469(var4, var7, 512, var1, var8, var6);
             }
@@ -70,7 +70,7 @@ public final class ClanChatUser extends Node {
         for (var6 = 0; var6 < 104; ++var6) {
           for (var7 = 0; var7 < 104; ++var7) {
             long var20 =
-              SceneGraphTile.method104(GameWorldSomething.currentPlane, var6 + var2, var7 - -var3);
+              SceneGraphTile.method104(GameWorldSomething.currentPlane, var6 + var2, var7 + var3);
             if ((var20 != 0L)) {
               GameObjectConfig var10 =
                 DummyClass11.method2207(4, (int) (var20 >>> 32) & Integer.MAX_VALUE);
@@ -107,7 +107,7 @@ public final class ClanChatUser extends Node {
                     }
 
                     if (var16 == 1 && (var12 < 103) && (3 + var6) > var12
-                      && (var14[var12 - -1][var21] & 19661184) == 0) {
+                      && (var14[var12 + 1][var21] & 19661184) == 0) {
                       ++var12;
                     }
 
@@ -116,7 +116,7 @@ public final class ClanChatUser extends Node {
                       --var21;
                     }
 
-                    if (var16 == 3 && var21 < 103 && (var21 < (var7 - -3)) &&
+                    if (var16 == 3 && var21 < 103 && (var21 < (var7 + 3)) &&
                         (19661088
                             & var14[var12][1 + var21]) == 0) {
                       ++var21;
@@ -126,7 +126,7 @@ public final class ClanChatUser extends Node {
 
                 ClientScript.anIntArray3693[Mouse.anInt1924] = var10.anInt1527;
                 DummyClass51.anIntArray1163[Mouse.anInt1924] = -var2 + var12;
-                ObjectNode.anIntArray4050[Mouse.anInt1924] = var21 + -var3;
+                ObjectNode.anIntArray4050[Mouse.anInt1924] = var21 - var3;
                 ++Mouse.anInt1924;
               }
             }
@@ -137,12 +137,12 @@ public final class ClanChatUser extends Node {
       DummyClass32.aClass3_Sub28_Sub16_Sub2_518.method658();
       int var18 =
         (238 + (int) (20.0D * Math.random()) - 10 << 8) + (-10 + (int) (Math.random() * 20.0D) + 238
-          << 16) + (228 - -((int) (20.0D * Math.random())));
-      var5 = (int) (Math.random() * 20.0D) + 238 + -10 << 16;
+          << 16) + (228 + ((int) (20.0D * Math.random())));
+      var5 = (int) (Math.random() * 20.0D) + 238 - 10 << 16;
 
       for (var6 = 1; (var6 < 103); ++var6) {
         for (var7 = 1; var7 < 103; ++var7) {
-          if ((BZipDecompressorState.tileFlags[var1][var7 + var2][var6 - -var3]
+          if ((BZipDecompressorState.tileFlags[var1][var7 + var2][var6 + var3]
               & 24) == 0
             && !GameString.method1529(var3, var7, var18, var6, var5, var2, var1, true)) {
             if (GlRenderer.useOpenGlRenderer) {
@@ -202,7 +202,7 @@ public final class ClanChatUser extends Node {
   }
 
   public static void method387(int var0) {
-    int var1 = 41 % ((var0 - -70) / 32);
+    int var1 = 41 % ((var0 + 70) / 32);
       ClanChatUser.aClass94_2477 = null;
       ClanChatUser.midiInstruments = null;
   }

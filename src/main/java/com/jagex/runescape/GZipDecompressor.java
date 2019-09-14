@@ -122,7 +122,7 @@ public final class GZipDecompressor {
   public static byte[] method1123(int var0, int var1) {
     ByteArrayNode var2 =
           (ByteArrayNode) SceneSomething.aClass47_480
-              .get(var1, var0 + -16710535);
+              .get(var1, var0 - 16710535);
       if (var2 == null) {
         Random var4 = new Random(var1);
         byte[] var3 = new byte[512];
@@ -137,7 +137,7 @@ public final class GZipDecompressor {
           int var7 = FloorUnderlay.method1603((byte) 125, var6, var4);
           byte var8 = var3[var7];
           var3[var7] = var3[var6];
-          var3[var6] = var3[511 + -var5] = var8;
+          var3[var6] = var3[511 - var5] = var8;
         }
 
         var2 = new ByteArrayNode(var3);
@@ -173,7 +173,7 @@ public final class GZipDecompressor {
 
   public static void method1126(int var0, int var1) {
     WidgetUpdate var2 = AudioStreamEncoder3.method466(4, 2, var1);
-      int var3 = -67 % ((var0 - -37) / 48);
+      int var3 = -67 % ((var0 + 37) / 48);
       var2.createIndexedColorSprite(true);
   }
 
@@ -332,7 +332,7 @@ public final class GZipDecompressor {
           if (var12 >= DummyClass13.anInt2020
               && var11 <= LightIntensity.anInt902) {
             var13 = DummyClass59
-                .method1040(GlTexture2d.anInt3765, var4 - -var5, (byte) 0,
+                .method1040(GlTexture2d.anInt3765, var4 + var5, (byte) 0,
                     DummyClass55.anInt1425);
             var14 = DummyClass59
                 .method1040(GlTexture2d.anInt3765, -var5 + var4, (byte) 0,
@@ -359,7 +359,7 @@ public final class GZipDecompressor {
         if (var12 >= DummyClass13.anInt2020
             && (LightIntensity.anInt902 >= var11)) {
           var13 = DummyClass59
-              .method1040(GlTexture2d.anInt3765, var4 - -var6, (byte) 0,
+              .method1040(GlTexture2d.anInt3765, var4 + var6, (byte) 0,
                   DummyClass55.anInt1425);
           var14 = DummyClass59
               .method1040(GlTexture2d.anInt3765, -var6 + var4, (byte) 0,

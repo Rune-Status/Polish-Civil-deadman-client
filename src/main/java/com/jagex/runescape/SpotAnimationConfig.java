@@ -124,7 +124,7 @@ public final class SpotAnimationConfig {
           }
 
           var5 = var6
-              .method2008(64 - -this.anInt538, this.anInt537 + 850, -30, -50,
+              .method2008(64 + this.anInt538, this.anInt537 + 850, -30, -50,
                   -30);
           DummyClass32.aClass93_511.get((byte) -96, var5, this.anInt539);
         }

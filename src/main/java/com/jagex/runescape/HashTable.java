@@ -80,7 +80,7 @@ public final class HashTable {
           }
 
           var2 = this.nodes[this.iteratorBucketId++].nextNode;
-        } while (this.nodes[this.iteratorBucketId + -1] == var2);
+        } while (this.nodes[this.iteratorBucketId - 1] == var2);
 
         this.aClass3_1713 = var2.nextNode;
         return var2;

@@ -73,7 +73,7 @@ public final class DummyClass11 {
           var2.method1692(6219, new Buffer(var3));
         }
 
-        var2.method1689(var0 + -2120);
+        var2.method1689(var0 - 2120);
         if (!DummyClass28.aBoolean337 && var2.aBoolean1491) {
           var2.aClass94Array1499 = null;
         }

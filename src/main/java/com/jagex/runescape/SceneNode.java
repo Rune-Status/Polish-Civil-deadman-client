@@ -103,14 +103,14 @@ public abstract class SceneNode {
       return (var1 == 0) ?
         var6 :
         (var1 != 1
-            ? ((var1 != 2) ? var4 : -var3 + 1 + -var6 + 7) : -var4 + 7 + -var0 - -1);
+            ? ((var1 != 2) ? var4 : -var3 + 1 - var6 + 7) : -var4 + 7 - var0 + 1);
   }
 
   public static void method1864(boolean var0, byte var1, FileUnpacker var2, SoftwareFont var3,
                                FileUnpacker var4) {
     DummyClass17.aBoolean1827 = var0;
       StringNode.aClass153_2581 = var4;
-      int var6 = -127 / ((var1 - -87) / 32);
+      int var6 = -127 / ((var1 + 87) / 32);
       TriChromaticImageCache.aClass153_1370 = var2;
       int var5 = TriChromaticImageCache.aClass153_1370.method2121(0) - 1;
       TextureSampler39.anInt3287 =
@@ -124,7 +124,7 @@ public abstract class SceneNode {
 
   public static void method1869(byte var0, int var1, int var2, int var3, int var4, int var5) {
     int var6 = var2 - var3;
-      int var7 = var4 + -var5;
+      int var7 = var4 - var5;
       if (var7 == 0) {
         if ((var6 != 0)) {
           TextureSampler15.method244(2, var3, var5, var2, var1);
@@ -163,7 +163,7 @@ public abstract class SceneNode {
 
         var10 = var3;
         var11 = var4 - var5;
-        int var12 = var2 + -var3;
+        int var12 = var2 - var3;
         int var13 = -(var11 >> 1);
         int var14 = var2 <= var3 ? -1 : 1;
         if ((var12 < 0)) {

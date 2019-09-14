@@ -53,7 +53,7 @@ public final class Keyboard implements KeyListener, FocusListener {
 
         if ((AbstractTextureSampler.anInt2384 >= 0) && (var2 >= 0)) {
           FileRequester.anIntArray2952[AbstractTextureSampler.anInt2384] = var2;
-          AbstractTextureSampler.anInt2384 = 127 & AbstractTextureSampler.anInt2384 - -1;
+          AbstractTextureSampler.anInt2384 = 127 & AbstractTextureSampler.anInt2384 + 1;
           if (AbstractTextureSampler.anInt2384 == SomethingPacket116.anInt1744) {
             AbstractTextureSampler.anInt2384 = -1;
           }
@@ -121,9 +121,9 @@ public final class Keyboard implements KeyListener, FocusListener {
   public static void method2086(byte var0) {
     if (var0 >= 62) {
         int var1 = TextureCache.localPlayer.anInt2819 + TextureSampler19.anInt3216;
-        int var2 = TextureCache.localPlayer.anInt2829 - -DummyInputStream.anInt42;
+        int var2 = TextureCache.localPlayer.anInt2829 + DummyInputStream.anInt42;
         if (((-var1 + TextureSampler20.anInt3155) < 499)
-          || ((-var1 + TextureSampler20.anInt3155) > 500) || ((FileTable.anInt942 + -var2) < 499)
+          || ((-var1 + TextureSampler20.anInt3155) > 500) || ((FileTable.anInt942 - var2) < 499)
           || ((-var2 + FileTable.anInt942) > 500)) {
           TextureSampler20.anInt3155 = var1;
           FileTable.anInt942 = var2;
@@ -165,12 +165,12 @@ public final class Keyboard implements KeyListener, FocusListener {
           } else if (!GameObjectConfig.aBooleanArray1490[99]) {
             DummyClass32.anInt517 /= 2;
           } else {
-            DummyClass32.anInt517 += (-DummyClass32.anInt517 + -12) / 2;
+            DummyClass32.anInt517 += (-DummyClass32.anInt517 - 12) / 2;
           }
 
           if (GameObjectConfig.aBooleanArray1490[96]) {
             SomethingInScenePacket202.anInt2281 +=
-                (-SomethingInScenePacket202.anInt2281 + -24) / 2;
+                (-SomethingInScenePacket202.anInt2281 - 24) / 2;
           } else {
             if (GameObjectConfig.aBooleanArray1490[97]) {
               SomethingInScenePacket202.anInt2281 +=

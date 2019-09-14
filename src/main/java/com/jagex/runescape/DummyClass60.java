@@ -96,7 +96,7 @@ public final class DummyClass60 {
 
       int var7;
       for (var7 = 0; var6 > var7; ++var7) {
-        if (MapScene.method73(TextureSampler27.aShortArray3095[var7], var0 + -6301)) {
+        if (MapScene.method73(TextureSampler27.aShortArray3095[var7], var0 - 6301)) {
           Inventory.method509(1, var7);
         }
       }

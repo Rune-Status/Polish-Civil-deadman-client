@@ -270,23 +270,23 @@ public final class NpcConfiguration {
                     var28 = DummyClass40.COSINE_TABLE[var22] >> 1;
                     var27 = DummyClass40.SINE_TABLE[var21] >> 1;
                     var29 = DummyClass40.SINE_TABLE[var22] >> 1;
-                    var23[3] = var24 * var29 - -16384 >> 15;
+                    var23[3] = var24 * var29 + 16384 >> 15;
                     var23[8] = 16384 + var24 * var26 >> 15;
                     var23[5] = -var25;
                     int var31 = 16384 + var25 * var29 >> 15;
                     int var30 = var28 * var25 + 16384 >> 15;
-                    var23[1] = 16384 + -var29 * var26 - -(var30 * var27) >> 15;
+                    var23[1] = 16384 - var29 * var26 + (var30 * var27) >> 15;
                     var23[2] = 16384 + var27 * var24 >> 15;
-                    var23[6] = 16384 + -var27 * var28 + var31 * var26 >> 15;
+                    var23[6] = 16384 - var27 * var28 + var31 * var26 >> 15;
                     var23[14] =
-                      16384 + var23[8] * -var19 + -var18 * var23[5] + var23[2] * -var17 >> 15;
+                      16384 + var23[8] * -var19 - var18 * var23[5] + var23[2] * -var17 >> 15;
                     var23[4] = 16384 + var24 * var28 >> 15;
-                    var23[7] = 16384 + -var27 * -var29 + var30 * var26 >> 15;
+                    var23[7] = 16384 - var27 * -var29 + var30 * var26 >> 15;
                     var23[0] = var27 * var31 + var26 * var28 + 16384 >> 15;
                     var23[12] =
-                      16384 + var23[6] * -var19 + var23[3] * -var18 + -var17 * var23[0] >> 15;
+                      16384 + var23[6] * -var19 + var23[3] * -var18 - var17 * var23[0] >> 15;
                     var23[13] =
-                      -var19 * var23[7] + -var17 * var23[1] + (-var18 * var23[4] - -16384) >> 15;
+                      -var19 * var23[7] - var17 * var23[1] + (-var18 * var23[4] + 16384) >> 15;
                   }
 
                   var23[10] = var18;
@@ -498,15 +498,15 @@ public final class NpcConfiguration {
           }
 
           if (var40 != null && var44 != null) {
-            var45.method1892(var40, var17, var43, var18, var6 + -1, var19, var44, var22, var46,
-              var42, var9 + -1, var24, var10.aBooleanArray1855,
+            var45.method1892(var40, var17, var43, var18, var6 - 1, var19, var44, var22, var46,
+              var42, var9 - 1, var24, var10.aBooleanArray1855,
               var10.aBoolean1848 | var8.aBoolean1848);
           } else if (var40 == null) {
             if (var44 != null) {
               var45.method1880(var44, var22, var46, var42, -1 + var9, var24, var8.aBoolean1848);
             }
           } else {
-            var45.method1880(var40, var17, var43, var18, var6 + -1, var19, var10.aBoolean1848);
+            var45.method1880(var40, var17, var43, var18, var6 - 1, var19, var10.aBoolean1848);
           }
 
           for (var28 = 0; (var28 < var16); ++var28) {
@@ -621,7 +621,7 @@ public final class NpcConfiguration {
             var12 = var1.method2055(var12, (byte) -75, var3, var2, var5);
           }
 
-          int var13 = 5 % ((var4 - -64) / 36);
+          int var13 = 5 % ((var4 + 64) / 36);
           return var12;
         }
       } else {
@@ -966,7 +966,7 @@ public final class NpcConfiguration {
       int var3 = var2.id;
       int var5 = var2.high;
       int var4 = var2.low;
-      int var6 = SomethingMidiFile.BIT_MASKS[var5 + -var4];
+      int var6 = SomethingMidiFile.BIT_MASKS[var5 - var4];
       return DummyClass5.anIntArray2985[var3] >> var4 & var6;
   }
 

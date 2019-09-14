@@ -76,7 +76,7 @@ public final class DummyClass28 {
       }
 
       SoftwareDirectColorSprite var10 =
-        DummyClass59.method1043(0, var1, var0 + -3199, ObjectCache.anInt1325);
+        DummyClass59.method1043(0, var1, var0 - 3199, ObjectCache.anInt1325);
       assert var10 != null;
       var10.method665();
       if (GlRenderer.useOpenGlRenderer) {

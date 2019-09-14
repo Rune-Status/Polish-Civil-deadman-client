@@ -182,7 +182,7 @@ public final class SomethingVolume15 extends Node {
       for (var24 = 0; (var24 < 128); ++var24) {
         if ((this.anIntArray2423[var24] != 0)) {
           if (var20 == 0) {
-            var23 = var2.bytes[var5++] + -1;
+            var23 = var2.bytes[var5++] - 1;
             if (var4.length > var21) {
               var20 = var4[var21++];
             } else {
@@ -202,7 +202,7 @@ public final class SomethingVolume15 extends Node {
       for (int var25 = 0; (var25 < 128); ++var25) {
         if ((this.anIntArray2423[var25] != 0)) {
           if (var20 == 0) {
-            var24 = var2.bytes[var8++] - -16 << 2;
+            var24 = var2.bytes[var8++] + 16 << 2;
             if ((var21 < var7.length)) {
               var20 = var7[var21++];
             } else {
@@ -271,7 +271,7 @@ public final class SomethingVolume15 extends Node {
         }
 
         if (var28.aByteArray2076 != null) {
-          for (var29 = 3; var29 < var28.aByteArray2076.length + -2; var29 += 2) {
+          for (var29 = 3; var29 < var28.aByteArray2076.length - 2; var29 += 2) {
             var28.aByteArray2076[var29] = var2.readByte();
           }
         }
@@ -295,7 +295,7 @@ public final class SomethingVolume15 extends Node {
           var19 = 0;
 
           for (var29 = 2; (var29 < var28.aByteArray2076.length); var29 += 2) {
-            var19 -= -1 + -var2.readUnsignedByte();
+            var19 -= -1 - var2.readUnsignedByte();
             var28.aByteArray2076[var29] = (byte) var19;
           }
         }
@@ -307,7 +307,7 @@ public final class SomethingVolume15 extends Node {
           var19 = 0;
 
           for (var29 = 2; (var29 < var28.aByteArray2064.length); var29 += 2) {
-            var19 = var19 - -1 - -var2.readUnsignedByte();
+            var19 = var19 + 1 + var2.readUnsignedByte();
             var28.aByteArray2064[var29] = (byte) var19;
           }
         }
@@ -324,7 +324,7 @@ public final class SomethingVolume15 extends Node {
         var40[0] = (byte) var19;
 
         for (var27 = 2; var40.length > var27; var27 += 2) {
-          var19 = 1 + (var19 - -var2.readUnsignedByte());
+          var19 = 1 + (var19 + var2.readUnsignedByte());
           var40[var27] = (byte) var19;
         }
 
@@ -343,8 +343,8 @@ public final class SomethingVolume15 extends Node {
 
           for (var33 = var48; (var33 < var30); ++var33) {
             var34 = TextureSampler14.method319(var32, -125, -var48 + var30);
-            var32 += var31 + -var46;
-            this.aByteArray2430[var33] = (byte) (var34 * this.aByteArray2430[var33] - -32 >> 6);
+            var32 += var31 - var46;
+            this.aByteArray2430[var33] = (byte) (var34 * this.aByteArray2430[var33] + 32 >> 6);
           }
 
           var46 = var31;
@@ -362,7 +362,7 @@ public final class SomethingVolume15 extends Node {
         var39[0] = (byte) var19;
 
         for (var27 = 2; var27 < var39.length; var27 += 2) {
-          var19 = 1 + (var19 - -var2.readUnsignedByte());
+          var19 = 1 + (var19 + var2.readUnsignedByte());
           var39[var27] = (byte) var19;
         }
 
@@ -385,7 +385,7 @@ public final class SomethingVolume15 extends Node {
         int var45;
         for (var29 = 2; (var29 < var39.length); var47 = var45) {
           var30 = var39[var29];
-          var32 = (-var48 + var30) * var47 - -((var30 - var48) / 2);
+          var32 = (-var48 + var30) * var47 + ((var30 - var48) / 2);
           var45 = var39[1 + var29] << 1;
           var29 += 2;
 

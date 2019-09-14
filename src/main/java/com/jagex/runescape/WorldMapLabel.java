@@ -115,7 +115,7 @@ public final class WorldMapLabel {
         int var7 =
             (var5 >= 4) ? ((var5 != 12) && (var5 != 14) ? var1 : var0) : var2;
         int var6 = (var5 < 8) ? var0 : var2;
-        return (((var5 & 1) != 0) ? -var6 : var6) - -(((2 & var5) != 0) ? -var7
+        return (((var5 & 1) != 0) ? -var6 : var6) + (((2 & var5) != 0) ? -var7
             : var7);
       } else {
         return 127;

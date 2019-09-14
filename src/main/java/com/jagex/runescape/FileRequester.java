@@ -421,7 +421,7 @@ public final class FileRequester extends AbstractFileRequester {
         return null;
       } else {
         byte[] var5 = ((AbstractFileRequest) var4).method587(false);
-        int var6 = -57 % ((var3 - -10) / 55);
+        int var6 = -57 % ((var3 + 10) / 55);
         int var7;
         OndemandFileRequest var12;
         if (var4 instanceof FileCacheRequest) {
@@ -432,7 +432,7 @@ public final class FileRequester extends AbstractFileRequester {
               var7 = (int) TextureSampler24.aCRC32_3143.getValue();
               if (this.aClass62_2944.anIntArray945[var2] == var7) {
                 int var8 =
-                    (var5[-2 + var5.length] << 8 & '\uff00') - -(255 & var5[-1
+                    (var5[-2 + var5.length] << 8 & '\uff00') + (255 & var5[-1
                         + var5.length]);
                 if ((var8 == ('\uffff'
                     & this.aClass62_2944.anIntArray958[var2]))) {
@@ -498,7 +498,7 @@ public final class FileRequester extends AbstractFileRequester {
             return null;
           }
 
-          var5[var5.length + -2] = (byte) (this.aClass62_2944.anIntArray958[var2] >>> 8);
+          var5[var5.length - 2] = (byte) (this.aClass62_2944.anIntArray958[var2] >>> 8);
           var5[var5.length - 1] = (byte) this.aClass62_2944.anIntArray958[var2];
           if (this.aClass41_2954 != null) {
             this.aClass73_2956.method1305(this.aClass41_2954, 2, var5, var2);
@@ -615,7 +615,7 @@ public final class FileRequester extends AbstractFileRequester {
   }
 
   public static void method2104(Widget var0, boolean var1, int var2) {
-    int var3 = 57 % ((var2 - -58) / 47);
+    int var3 = 57 % ((var2 + 58) / 47);
       int var4 = var0.anInt240 != 0 ? var0.anInt240 : var0.anInt168;
       int var5 = (var0.anInt252 != 0) ? var0.anInt252 : var0.anInt193;
       AbstractImageProducer.method2183(var0.anInt279, var1, var4, 235, var5,

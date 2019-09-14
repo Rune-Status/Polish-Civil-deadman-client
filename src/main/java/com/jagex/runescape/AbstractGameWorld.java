@@ -82,7 +82,7 @@ public abstract class AbstractGameWorld {
         var3[var2] = var9;
 
         for (int var10 = var1; var2 > var10; ++var10) {
-          if (var0[var10] < var7 - -(1 & var10)) {
+          if (var0[var10] < var7 + (1 & var10)) {
             long var11 = var0[var10];
             var0[var10] = var0[var6];
             var0[var6] = var11;

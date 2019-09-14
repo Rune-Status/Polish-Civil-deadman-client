@@ -196,7 +196,7 @@ public final class FileCacheRequester implements Runnable {
           Queue.method884(8 * AbstractObjectNode.anInt3606, (byte) 88,
             8 * VariableUpdate.anInt2294);
         int var10 = -var8 + ProceduralTexture.anInt1152;
-        int var9 = WorldMapLabel.anInt1716 + -var7;
+        int var9 = WorldMapLabel.anInt1716 - var7;
         var7 = WorldMapLabel.anInt1716;
         var8 = ProceduralTexture.anInt1152;
         TextureSampler22.aClass131_3421 = null;
@@ -414,7 +414,7 @@ public final class FileCacheRequester implements Runnable {
                               var1.substring(var3, 0, 0),
                               DummyClass14.method2148(
                                   Something3d2.method2247((byte) -4, 4, var0),
-                                  (byte) -78), var1.substring(var3 - -2)
+                                  (byte) -78), var1.substring(var3 + 2)
                           });
                         }
                       }
@@ -493,7 +493,7 @@ public final class FileCacheRequester implements Runnable {
           }
 
           var6 = Runtime.getRuntime();
-          var3 = (int) ((var6.totalMemory() + -var6.freeMemory()) / 1024L);
+          var3 = (int) ((var6.totalMemory() - var6.freeMemory()) / 1024L);
           GameBuffer.printMessage(null, 0, RenderAnimation.concat(new GameString[] {
             DummyClass25.aClass94_1625, SomethingScene.toString(var3), FileRequester.aClass94_2951
           }), -1);
@@ -504,7 +504,7 @@ public final class FileCacheRequester implements Runnable {
             System.gc();
           }
 
-          var3 = (int) ((var6.totalMemory() + -var6.freeMemory()) / 1024L);
+          var3 = (int) ((var6.totalMemory() - var6.freeMemory()) / 1024L);
           GameBuffer.printMessage(null, 0, RenderAnimation.concat(new GameString[] {
             DummyClass12.aClass94_2033, SomethingScene.toString(var3), FileRequester.aClass94_2951
           }), -1);

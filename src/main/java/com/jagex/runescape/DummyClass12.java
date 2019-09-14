@@ -23,9 +23,9 @@ public final class DummyClass12 {
     int var8 = 0;
       int var9 = var6;
       int var10 = 0;
-      int var11 = var4 + -var7;
+      int var11 = var4 - var7;
       int var13 = var4 * var4;
-      int var12 = var6 + -var7;
+      int var12 = var6 - var7;
       int var14 = var6 * var6;
       int var16 = var12 * var12;
       int var17 = var14 << 1;
@@ -36,7 +36,7 @@ public final class DummyClass12 {
       int var21 = var6 << 1;
       int var22 = var12 << 1;
       int var24 = -((-1 + var21) * var18) + var14;
-      int var25 = var15 * (-var22 + 1) - -var19;
+      int var25 = var15 * (-var22 + 1) + var19;
       int var23 = (-var21 + 1) * var13 + var17;
       int var27 = var13 << 2;
       int var26 = -(var20 * (var22 - 1)) + var16;
@@ -58,8 +58,8 @@ public final class DummyClass12 {
       int[] var39 = DummyClass35.anIntArrayArray663[var2];
       TextureSampler18.method282(var39, -var4 + var1, -87, -var11 + var1, var3);
       TextureSampler18
-          .method282(var39, -var11 + var1, -66, var1 - -var11, var0);
-      TextureSampler18.method282(var39, var1 - -var11, -68, var4 + var1, var3);
+          .method282(var39, -var11 + var1, -66, var1 + var11, var0);
+      TextureSampler18.method282(var39, var1 + var11, -68, var4 + var1, var3);
 
       while (var9 > 0) {
         if ((var23 < 0)) {

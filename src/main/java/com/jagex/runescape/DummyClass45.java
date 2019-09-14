@@ -66,7 +66,7 @@ public final class DummyClass45 {
 
       if ((HuffmanEncoder.anInt638 == 2)) {
         DummyClass17.aClass3_Sub28_Sub16Array1825[4 + FileRequester.anInt2958 / 100].method643(
-          SceneSomething2.anInt1053 + -8, -8 + FileCacheRequest.anInt4062);
+          SceneSomething2.anInt1053 - 8, -8 + FileCacheRequest.anInt4062);
       }
 
       TextureSampler10.method347(true);
@@ -108,7 +108,7 @@ public final class DummyClass45 {
       }
 
       if (GlRenderer.useOpenGlRenderer) {
-        int var6 = var3 + -334;
+        int var6 = var3 - 334;
         if (var6 >= 0) {
           if ((var6 > 100)) {
             var6 = 100;
@@ -117,7 +117,7 @@ public final class DummyClass45 {
           var6 = 0;
         }
 
-        int var7 = var6 * (TextureSampler33.aShort3052 + -DisplayMode.aShort1444) / 100
+        int var7 = var6 * (TextureSampler33.aShort3052 - DisplayMode.aShort1444) / 100
           + DisplayMode.aShort1444;
         if (TextureSampler4.aShort3241 <= var7) {
           if (DummyClass18.aShort83 < var7) {

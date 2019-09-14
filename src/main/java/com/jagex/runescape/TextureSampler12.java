@@ -27,9 +27,9 @@ public final class TextureSampler12 extends AbstractTextureSampler {
           int var9 = -2048 + var8 >> 1;
           int var7;
           if ((this.anInt3038 == 0)) {
-            var7 = (var8 + -var4) * this.anInt3037;
+            var7 = (var8 - var4) * this.anInt3037;
           } else {
-            int var10 = var9 * var9 - -(var5 * var5) >> 12;
+            int var10 = var9 * var9 + (var5 * var5) >> 12;
             var7 = (int) (Math.sqrt(var10 / 4096.0F) * 4096.0D);
             var7 = (int) (3.141592653589793D * (var7 * this.anInt3037));
           }
@@ -108,7 +108,7 @@ public final class TextureSampler12 extends AbstractTextureSampler {
       }
 
       for (int var1 = 0; var1 < 4; ++var1) {
-        BlockConfig.collisionMaps[var1].method1496(var0 + -22230);
+        BlockConfig.collisionMaps[var1].method1496(var0 - 22230);
       }
 
       System.gc();

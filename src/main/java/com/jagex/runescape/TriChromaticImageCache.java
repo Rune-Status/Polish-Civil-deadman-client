@@ -80,7 +80,7 @@ public final class TriChromaticImageCache {
   }
 
   public int[][] method1594(byte var1, int var2 ) {
-    int var3 = -50 % ((var1 - -57) / 57);
+    int var3 = -50 % ((var1 + 57) / 57);
       if (this.anInt1367 == this.anInt1369) {
         this.aBoolean1379 = this.aClass3_Sub20Array1371[var2] == null;
         this.aClass3_Sub20Array1371[var2] = SomethingQuickChat2.aClass3_Sub20_3532;
