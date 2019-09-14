@@ -1090,7 +1090,7 @@ public final class GameClient extends GameStub {
       DummyCanvas.method53(0);
       DummyClass11.method2205(-17413);
       GlobalStatics_1.method1663(33);
-      AbstractFont.method689();
+      GlobalStatics_4.method689();
       DummyClass52.method1426(-25247);
       AudioSomethingSomething.method399(186);
       SomethingMidiFile0.method1369();

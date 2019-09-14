@@ -1343,7 +1343,7 @@ public final class DummyClass18 {
       // Chat
       if ((GlobalStatics_0.packetId == 71)) {
         var2 = SpotAnimationConfig.gameBuffer.readLong();
-        var58 = AbstractFont.otherFormat(
+        var58 = GlobalStatics_4.otherFormat(
           DummyClass34.decompressString(SpotAnimationConfig.gameBuffer).format(121));
         GameBuffer.printMessage(
             GameStringStatics.stringFromBase37(-29664, var2).formatName((byte) -50), 6,
@@ -1580,7 +1580,7 @@ public final class DummyClass18 {
         if (!var42 && (GameWorld.anInt2622 == 0)) {
           DummyClass8.aLongArray4017[Mouse.anInt1921] = var35;
           Mouse.anInt1921 = (Mouse.anInt1921 + 1) % 100;
-          GameString var52 = AbstractFont.otherFormat(
+          GameString var52 = GlobalStatics_4.otherFormat(
             DummyClass34.decompressString(SpotAnimationConfig.gameBuffer).format(96));
           if ((var8 != 2) && (var8 != 3)) {
             if (var8 == 1) {
@@ -1648,7 +1648,7 @@ public final class DummyClass18 {
         if (!var13 && GameWorld.anInt2622 == 0) {
           DummyClass8.aLongArray4017[Mouse.anInt1921] = var44;
           Mouse.anInt1921 = (Mouse.anInt1921 + 1) % 100;
-          var57 = AbstractFont.otherFormat(
+          var57 = GlobalStatics_4.otherFormat(
             DummyClass34.decompressString(SpotAnimationConfig.gameBuffer).format(116));
           if ((var10 != 2) && (var10 != 3)) {
             if ((var10 == 1)) {

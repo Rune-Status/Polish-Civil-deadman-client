@@ -4578,7 +4578,7 @@ public final class ItemConfig {
                       }
                       if (j1 == 4111) {
                         GameString class94_37 = GlobalStatics_0.aClass94Array75[--l];
-                        GlobalStatics_0.aClass94Array75[l++] = AbstractFont.otherFormat(class94_37);
+                        GlobalStatics_0.aClass94Array75[l++] = GlobalStatics_4.otherFormat(class94_37);
                         continue;
                       }
                       if (j1 == 4112) {

@@ -1,7 +1,6 @@
 package com.jagex.runescape;
 
 import com.jagex.runescape.common.GameString;
-import com.jagex.runescape.common.GameStringStatics;
 import com.jagex.runescape.node.SubNode;
 import com.jagex.runescape.opengl.GlRenderer;
 import com.jagex.runescape.opengl.GlUtils;
@@ -10,43 +9,6 @@ import java.util.Random;
 
 public abstract class AbstractFont extends SubNode {
 
-  private static GameString aClass94_3711 = GameStringStatics.create("gt");
-  private static GameString aClass94_3712 = GameStringStatics.create("lt");
-  private static GameString aClass94_3713 = GameStringStatics.create("shad=");
-  private static GameString aClass94_3714 = GameStringStatics.create("shy");
-  private static GameString aClass94_3715 = GameStringStatics.create("trans=");
-  private static GameString aClass94_3716 = GameStringStatics.create("u=");
-  private static GameString aClass94_3717 = GameStringStatics.create("str=");
-  private static GameString aClass94_3718 = GameStringStatics.create("euro");
-  private static GameString aClass94_3720 = GameStringStatics.create(")4col");
-  private static GameString aClass94_3724 = GameStringStatics.create(")4shad");
-  private static GameString aClass94_3725 = GameStringStatics.create("col=");
-  private static GameString GT = GameStringStatics.create("<gt>");
-  private static GameString aClass94_3728 = GameStringStatics.create("u");
-  private static GameString aClass94_3729 = GameStringStatics.create("times");
-  private static GameString aClass94_3731 = GameStringStatics.create(")4trans");
-  private static GameString aClass94_3732 = GameStringStatics.create("nbsp");
-  private static GameString LT = GameStringStatics.create("<lt>");
-  private static GameString aClass94_3735 = GameStringStatics.create(")4u");
-  private static GameString aClass94_3737 = GameStringStatics.create("br");
-  private static GameString aClass94_3738 = GameStringStatics.create("shad");
-  private static GameString aClass94_3739 = GameStringStatics.create("img=");
-  private static GameString aClass94_3741 = GameStringStatics.create("copy");
-  private static GameString aClass94_3742 = GameStringStatics.create(")4str");
-  private static GameString aClass94_3743 = GameStringStatics.create("reg");
-  private static GameString aClass94_3744 = GameStringStatics.create("str");
-  private static GameString aClass94_3745 = GameStringStatics.createString(100);
-  private static int anInt3746 = -1;
-  private static int anInt3747 = -1;
-  private static int anInt3748;
-  private static int anInt3749;
-  private static int anInt3750 = 256;
-  private static int anInt3751 = 256;
-  private static int anInt3752 = -1;
-  private static GameString[] aClass94Array3753 = new GameString[100];
-  private static int anInt3754 = -1;
-  private static int anInt3755;
-  private static int anInt3756;
   public int[] anIntArray3709;
   public int[] anIntArray3721;
   public int anInt3727;
@@ -113,33 +75,33 @@ public abstract class AbstractFont extends SubNode {
         if (var8 == 62 && var4 != -1) {
           GameString var9 = var1.substring(var7, 0, var4 + 1);
           var4 = -1;
-          if (var9.method1528((byte) -42, AbstractFont.aClass94_3712)) {
+          if (var9.method1528((byte) -42, GlobalStatics_4.aClass94_3712)) {
             var8 = 60;
-          } else if (var9.method1528((byte) -42, AbstractFont.aClass94_3711)) {
+          } else if (var9.method1528((byte) -42, GlobalStatics_4.aClass94_3711)) {
             var8 = 62;
-          } else if (var9.method1528((byte) -42, AbstractFont.aClass94_3732)) {
+          } else if (var9.method1528((byte) -42, GlobalStatics_4.aClass94_3732)) {
             var8 = 160;
-          } else if (var9.method1528((byte) -42, AbstractFont.aClass94_3714)) {
+          } else if (var9.method1528((byte) -42, GlobalStatics_4.aClass94_3714)) {
             var8 = 173;
-          } else if (var9.method1528((byte) -42, AbstractFont.aClass94_3729)) {
+          } else if (var9.method1528((byte) -42, GlobalStatics_4.aClass94_3729)) {
             var8 = 215;
-          } else if (var9.method1528((byte) -42, AbstractFont.aClass94_3718)) {
+          } else if (var9.method1528((byte) -42, GlobalStatics_4.aClass94_3718)) {
             var8 = 128;
-          } else if (var9.method1528((byte) -42, AbstractFont.aClass94_3741)) {
+          } else if (var9.method1528((byte) -42, GlobalStatics_4.aClass94_3741)) {
             var8 = 169;
           } else {
-            if (!var9.method1528((byte) -42, AbstractFont.aClass94_3743)) {
-              if (var9.method1558(AbstractFont.aClass94_3739, 0)) {
+            if (!var9.method1528((byte) -42, GlobalStatics_4.aClass94_3743)) {
+              if (var9.method1558(GlobalStatics_4.aClass94_3739, 0)) {
                 var10 = var9.substring(4).toInteger();
                 AbstractIndexedColorSprite var15 = this.aClass109Array3740[var10];
                 int var12 =
                     this.anIntArray3723 != null ? this.anIntArray3723[var10]
                         : var15.anInt1467;
-                if (AbstractFont.anInt3750 == 256) {
+                if (GlobalStatics_4.anInt3750 == 256) {
                   var15.draw(var2, var3 + this.anInt3727 - var12);
                 } else {
                   var15.draw(var2, var3 + this.anInt3727 - var12,
-                      AbstractFont.anInt3750);
+                      GlobalStatics_4.anInt3750);
                 }
 
                 var2 += var15.anInt1469;
@@ -162,55 +124,55 @@ public abstract class AbstractFont extends SubNode {
           int var14 = this.anIntArray3709[var8];
           var10 = this.anIntArray3721[var8];
           if (var8 != 32) {
-            if (AbstractFont.anInt3750 == 256) {
-              if (AbstractFont.anInt3754 != -1) {
+            if (GlobalStatics_4.anInt3750 == 256) {
+              if (GlobalStatics_4.anInt3754 != -1) {
                 this.method678(var8, var2 + this.anIntArray3719[var8] + 1,
                     var3 + this.anIntArray3730[var8] + 1, var14, var10,
-                    AbstractFont.anInt3754);
+                    GlobalStatics_4.anInt3754);
               }
 
               this.method678(var8, var2 + this.anIntArray3719[var8],
                   var3 + this.anIntArray3730[var8], var14, var10,
-                  AbstractFont.anInt3755);
+                  GlobalStatics_4.anInt3755);
             } else {
-              if (AbstractFont.anInt3754 != -1) {
+              if (GlobalStatics_4.anInt3754 != -1) {
                 this.method679(var8, var2 + this.anIntArray3719[var8] + 1,
                     var3 + this.anIntArray3730[var8] + 1, var14, var10,
-                    AbstractFont.anInt3754,
-                    AbstractFont.anInt3750);
+                    GlobalStatics_4.anInt3754,
+                    GlobalStatics_4.anInt3750);
               }
 
               this.method679(var8, var2 + this.anIntArray3719[var8],
                   var3 + this.anIntArray3730[var8], var14, var10,
-                  AbstractFont.anInt3755,
-                  AbstractFont.anInt3750);
+                  GlobalStatics_4.anInt3755,
+                  GlobalStatics_4.anInt3750);
             }
-          } else if (AbstractFont.anInt3756 > 0) {
-            AbstractFont.anInt3748 += AbstractFont.anInt3756;
-            var2 += AbstractFont.anInt3748 >> 8;
-            AbstractFont.anInt3748 &= 255;
+          } else if (GlobalStatics_4.anInt3756 > 0) {
+            GlobalStatics_4.anInt3748 += GlobalStatics_4.anInt3756;
+            var2 += GlobalStatics_4.anInt3748 >> 8;
+            GlobalStatics_4.anInt3748 &= 255;
           }
 
           int var11 = this.anIntArray3736[var8];
-          if (AbstractFont.anInt3746 != -1) {
+          if (GlobalStatics_4.anInt3746 != -1) {
             if (GlRenderer.useOpenGlRenderer) {
               GlUtils.drawHorizontalLine(var2, var3 + (int) (this.anInt3727
                       * 0.7D), var11,
-                  AbstractFont.anInt3746);
+                  GlobalStatics_4.anInt3746);
             } else {
               DummyClass47.method1317(var2, var3 + (int) (this.anInt3727
                       * 0.7D), var11,
-                  AbstractFont.anInt3746);
+                  GlobalStatics_4.anInt3746);
             }
           }
 
-          if (AbstractFont.anInt3747 != -1) {
+          if (GlobalStatics_4.anInt3747 != -1) {
             if (GlRenderer.useOpenGlRenderer) {
               GlUtils.drawHorizontalLine(var2, var3 + this.anInt3727 + 1, var11,
-                  AbstractFont.anInt3747);
+                  GlobalStatics_4.anInt3747);
             } else {
               DummyClass47.method1317(var2, var3 + this.anInt3727 + 1, var11,
-                  AbstractFont.anInt3747);
+                  GlobalStatics_4.anInt3747);
             }
           }
 
@@ -230,11 +192,11 @@ public abstract class AbstractFont extends SubNode {
 
   public final int method680(GameString var1, int var2) {
     int var3 = this.method691(var1, new int[]{var2},
-        AbstractFont.aClass94Array3753);
+        GlobalStatics_4.aClass94Array3753);
     int var4 = 0;
 
     for (int var5 = 0; var5 < var3; ++var5) {
-      int var6 = this.method682(AbstractFont.aClass94Array3753[var5]);
+      int var6 = this.method682(GlobalStatics_4.aClass94Array3753[var5]);
       if (var6 > var4) {
         var4 = var6;
       }
@@ -268,29 +230,29 @@ public abstract class AbstractFont extends SubNode {
           if (var7 == 62 && var2 != -1) {
             GameString var8 = var1.substring(var6, 0, var2 + 1);
             var2 = -1;
-            if (var8.method1528((byte) -42, AbstractFont.aClass94_3712)) {
+            if (var8.method1528((byte) -42, GlobalStatics_4.aClass94_3712)) {
               var7 = 60;
             } else if (var8
-                .method1528((byte) -42, AbstractFont.aClass94_3711)) {
+                .method1528((byte) -42, GlobalStatics_4.aClass94_3711)) {
               var7 = 62;
             } else if (var8
-                .method1528((byte) -42, AbstractFont.aClass94_3732)) {
+                .method1528((byte) -42, GlobalStatics_4.aClass94_3732)) {
               var7 = 160;
             } else if (var8
-                .method1528((byte) -42, AbstractFont.aClass94_3714)) {
+                .method1528((byte) -42, GlobalStatics_4.aClass94_3714)) {
               var7 = 173;
             } else if (var8
-                .method1528((byte) -42, AbstractFont.aClass94_3729)) {
+                .method1528((byte) -42, GlobalStatics_4.aClass94_3729)) {
               var7 = 215;
             } else if (var8
-                .method1528((byte) -42, AbstractFont.aClass94_3718)) {
+                .method1528((byte) -42, GlobalStatics_4.aClass94_3718)) {
               var7 = 128;
             } else if (var8
-                .method1528((byte) -42, AbstractFont.aClass94_3741)) {
+                .method1528((byte) -42, GlobalStatics_4.aClass94_3741)) {
               var7 = 169;
             } else {
-              if (!var8.method1528((byte) -42, AbstractFont.aClass94_3743)) {
-                if (var8.method1558(AbstractFont.aClass94_3739, 0)) {
+              if (!var8.method1528((byte) -42, GlobalStatics_4.aClass94_3743)) {
+                if (var8.method1558(GlobalStatics_4.aClass94_3739, 0)) {
                   int var9 = var8.substring(4).toInteger();
                     var4 += this.aClass109Array3740[var9].anInt1469;
                     var3 = 0;
@@ -344,39 +306,39 @@ public abstract class AbstractFont extends SubNode {
 
   public final int method684(GameString var1, int var2) {
     return this.method691(var1, new int[]{var2},
-        AbstractFont.aClass94Array3753);
+        GlobalStatics_4.aClass94Array3753);
   }
 
   private void method685(GameString var1) {
-    if (var1.method1558(AbstractFont.aClass94_3725, 0)) {
-        AbstractFont.anInt3755 = var1.substring(4).method1530((byte) 70, 16);
-      } else if (var1.method1528((byte) -42, AbstractFont.aClass94_3720)) {
-        AbstractFont.anInt3755 = AbstractFont.anInt3749;
-      } else if (var1.method1558(AbstractFont.aClass94_3715, 0)) {
-        AbstractFont.anInt3750 = var1.substring(6).toInteger();
-      } else if (var1.method1528((byte) -42, AbstractFont.aClass94_3731)) {
-        AbstractFont.anInt3750 = AbstractFont.anInt3751;
-      } else if (var1.method1558(AbstractFont.aClass94_3717, 0)) {
-        AbstractFont.anInt3746 = var1.substring(4).method1530((byte) 54, 16);
-      } else if (var1.method1528((byte) -42, AbstractFont.aClass94_3744)) {
-        AbstractFont.anInt3746 = 8388608;
-      } else if (var1.method1528((byte) -42, AbstractFont.aClass94_3742)) {
-        AbstractFont.anInt3746 = -1;
-      } else if (var1.method1558(AbstractFont.aClass94_3716, 0)) {
-        AbstractFont.anInt3747 = var1.substring(2).method1530((byte) 62, 16);
-      } else if (var1.method1528((byte) -42, AbstractFont.aClass94_3728)) {
-        AbstractFont.anInt3747 = 0;
-      } else if (var1.method1528((byte) -42, AbstractFont.aClass94_3735)) {
-        AbstractFont.anInt3747 = -1;
-      } else if (var1.method1558(AbstractFont.aClass94_3713, 0)) {
-        AbstractFont.anInt3754 = var1.substring(5).method1530((byte) 82, 16);
-      } else if (var1.method1528((byte) -42, AbstractFont.aClass94_3738)) {
-        AbstractFont.anInt3754 = 0;
-      } else if (var1.method1528((byte) -42, AbstractFont.aClass94_3724)) {
-        AbstractFont.anInt3754 = AbstractFont.anInt3752;
-      } else if (var1.method1528((byte) -42, AbstractFont.aClass94_3737)) {
-        this.method701(AbstractFont.anInt3749, AbstractFont.anInt3752,
-            AbstractFont.anInt3751);
+    if (var1.method1558(GlobalStatics_4.aClass94_3725, 0)) {
+        GlobalStatics_4.anInt3755 = var1.substring(4).method1530((byte) 70, 16);
+      } else if (var1.method1528((byte) -42, GlobalStatics_4.aClass94_3720)) {
+        GlobalStatics_4.anInt3755 = GlobalStatics_4.anInt3749;
+      } else if (var1.method1558(GlobalStatics_4.aClass94_3715, 0)) {
+        GlobalStatics_4.anInt3750 = var1.substring(6).toInteger();
+      } else if (var1.method1528((byte) -42, GlobalStatics_4.aClass94_3731)) {
+        GlobalStatics_4.anInt3750 = GlobalStatics_4.anInt3751;
+      } else if (var1.method1558(GlobalStatics_4.aClass94_3717, 0)) {
+        GlobalStatics_4.anInt3746 = var1.substring(4).method1530((byte) 54, 16);
+      } else if (var1.method1528((byte) -42, GlobalStatics_4.aClass94_3744)) {
+        GlobalStatics_4.anInt3746 = 8388608;
+      } else if (var1.method1528((byte) -42, GlobalStatics_4.aClass94_3742)) {
+        GlobalStatics_4.anInt3746 = -1;
+      } else if (var1.method1558(GlobalStatics_4.aClass94_3716, 0)) {
+        GlobalStatics_4.anInt3747 = var1.substring(2).method1530((byte) 62, 16);
+      } else if (var1.method1528((byte) -42, GlobalStatics_4.aClass94_3728)) {
+        GlobalStatics_4.anInt3747 = 0;
+      } else if (var1.method1528((byte) -42, GlobalStatics_4.aClass94_3735)) {
+        GlobalStatics_4.anInt3747 = -1;
+      } else if (var1.method1558(GlobalStatics_4.aClass94_3713, 0)) {
+        GlobalStatics_4.anInt3754 = var1.substring(5).method1530((byte) 82, 16);
+      } else if (var1.method1528((byte) -42, GlobalStatics_4.aClass94_3738)) {
+        GlobalStatics_4.anInt3754 = 0;
+      } else if (var1.method1528((byte) -42, GlobalStatics_4.aClass94_3724)) {
+        GlobalStatics_4.anInt3754 = GlobalStatics_4.anInt3752;
+      } else if (var1.method1528((byte) -42, GlobalStatics_4.aClass94_3737)) {
+        this.method701(GlobalStatics_4.anInt3749, GlobalStatics_4.anInt3752,
+            GlobalStatics_4.anInt3751);
       }
 
   }
@@ -410,7 +372,7 @@ public abstract class AbstractFont extends SubNode {
     }
 
     if (var3 > 0) {
-      AbstractFont.anInt3756 = (var2 - this.method682(var1) << 8) / var3;
+      GlobalStatics_4.anInt3756 = (var2 - this.method682(var1) << 8) / var3;
     }
 
   }
@@ -419,7 +381,7 @@ public abstract class AbstractFont extends SubNode {
     if (var1 == null) {
       return 0;
     } else {
-      AbstractFont.aClass94_3745.method1553(0, false);
+      GlobalStatics_4.aClass94_3745.method1553(0, false);
       int var4 = 0;
       int var5 = 0;
       int var6 = -1;
@@ -438,27 +400,27 @@ public abstract class AbstractFont extends SubNode {
           if (var14 == 62 && var9 != -1) {
             GameString var15 = var1.substring(var13, 0, var9 + 1);
             var9 = -1;
-            AbstractFont.aClass94_3745.method1572(60, (byte) 111);
-            AbstractFont.aClass94_3745.append(var15);
-            AbstractFont.aClass94_3745.method1572(62, (byte) 112);
-            if (var15.method1528((byte) -42, AbstractFont.aClass94_3737)) {
+            GlobalStatics_4.aClass94_3745.method1572(60, (byte) 111);
+            GlobalStatics_4.aClass94_3745.append(var15);
+            GlobalStatics_4.aClass94_3745.method1572(62, (byte) 112);
+            if (var15.method1528((byte) -42, GlobalStatics_4.aClass94_3737)) {
               if (var3[var11] != null) {
                 var3[var11].method1553(0, false);
-                var3[var11].method1542(1, AbstractFont.aClass94_3745, var5,
-                    AbstractFont.aClass94_3745.getLength());
+                var3[var11].method1542(1, GlobalStatics_4.aClass94_3745, var5,
+                    GlobalStatics_4.aClass94_3745.getLength());
               } else {
                 var3[var11] =
-                    AbstractFont.aClass94_3745.method1563(101).substring(
-                        AbstractFont.aClass94_3745.getLength(), 0, var5);
+                    GlobalStatics_4.aClass94_3745.method1563(101).substring(
+                        GlobalStatics_4.aClass94_3745.getLength(), 0, var5);
               }
 
               ++var11;
-              var5 = AbstractFont.aClass94_3745.getLength();
+              var5 = GlobalStatics_4.aClass94_3745.getLength();
               var4 = 0;
               var6 = -1;
               var10 = 0;
             } else if (var15
-                .method1528((byte) -42, AbstractFont.aClass94_3712)) {
+                .method1528((byte) -42, GlobalStatics_4.aClass94_3712)) {
               var4 += this.method687(60);
               if (this.aByteArray3733 != null && var10 != 0) {
                 var4 += this.aByteArray3733[(var10 << 8) + 60];
@@ -466,7 +428,7 @@ public abstract class AbstractFont extends SubNode {
 
               var10 = 60;
             } else if (var15
-                .method1528((byte) -42, AbstractFont.aClass94_3711)) {
+                .method1528((byte) -42, GlobalStatics_4.aClass94_3711)) {
               var4 += this.method687(62);
               if (this.aByteArray3733 != null && var10 != 0) {
                 var4 += this.aByteArray3733[(var10 << 8) + 62];
@@ -474,7 +436,7 @@ public abstract class AbstractFont extends SubNode {
 
               var10 = 62;
             } else if (var15
-                .method1528((byte) -42, AbstractFont.aClass94_3732)) {
+                .method1528((byte) -42, GlobalStatics_4.aClass94_3732)) {
               var4 += this.method687(160);
               if (this.aByteArray3733 != null && var10 != 0) {
                 var4 += this.aByteArray3733[(var10 << 8) + 160];
@@ -482,7 +444,7 @@ public abstract class AbstractFont extends SubNode {
 
               var10 = 160;
             } else if (var15
-                .method1528((byte) -42, AbstractFont.aClass94_3714)) {
+                .method1528((byte) -42, GlobalStatics_4.aClass94_3714)) {
               var4 += this.method687(173);
               if (this.aByteArray3733 != null && var10 != 0) {
                 var4 += this.aByteArray3733[(var10 << 8) + 173];
@@ -490,7 +452,7 @@ public abstract class AbstractFont extends SubNode {
 
               var10 = 173;
             } else if (var15
-                .method1528((byte) -42, AbstractFont.aClass94_3729)) {
+                .method1528((byte) -42, GlobalStatics_4.aClass94_3729)) {
               var4 += this.method687(215);
               if (this.aByteArray3733 != null && var10 != 0) {
                 var4 += this.aByteArray3733[(var10 << 8) + 215];
@@ -498,7 +460,7 @@ public abstract class AbstractFont extends SubNode {
 
               var10 = 215;
             } else if (var15
-                .method1528((byte) -42, AbstractFont.aClass94_3718)) {
+                .method1528((byte) -42, GlobalStatics_4.aClass94_3718)) {
               var4 += this.method687(128);
               if (this.aByteArray3733 != null && var10 != 0) {
                 var4 += this.aByteArray3733[(var10 << 8) + 128];
@@ -506,7 +468,7 @@ public abstract class AbstractFont extends SubNode {
 
               var10 = 128;
             } else if (var15
-                .method1528((byte) -42, AbstractFont.aClass94_3741)) {
+                .method1528((byte) -42, GlobalStatics_4.aClass94_3741)) {
               var4 += this.method687(169);
               if (this.aByteArray3733 != null && var10 != 0) {
                 var4 += this.aByteArray3733[(var10 << 8) + 169];
@@ -514,14 +476,14 @@ public abstract class AbstractFont extends SubNode {
 
               var10 = 169;
             } else if (var15
-                .method1528((byte) -42, AbstractFont.aClass94_3743)) {
+                .method1528((byte) -42, GlobalStatics_4.aClass94_3743)) {
               var4 += this.method687(174);
               if (this.aByteArray3733 != null && var10 != 0) {
                 var4 += this.aByteArray3733[(var10 << 8) + 174];
               }
 
               var10 = 174;
-            } else if (var15.method1558(AbstractFont.aClass94_3739, 0)) {
+            } else if (var15.method1558(GlobalStatics_4.aClass94_3739, 0)) {
               int var16 = var15.substring(4).toInteger();
                 var4 += this.aClass109Array3740[var16].anInt1469;
                 var10 = 0;
@@ -532,7 +494,7 @@ public abstract class AbstractFont extends SubNode {
 
           if (var9 == -1) {
             if (var14 != 0) {
-              AbstractFont.aClass94_3745.method1572(var14, (byte) 127);
+              GlobalStatics_4.aClass94_3745.method1572(var14, (byte) 127);
               var4 += this.anIntArray3736[var14];
               if (this.aByteArray3733 != null && var10 != 0) {
                 var4 += this.aByteArray3733[(var10 << 8) + var14];
@@ -542,7 +504,7 @@ public abstract class AbstractFont extends SubNode {
             }
 
             if (var14 == 32) {
-              var6 = AbstractFont.aClass94_3745.getLength();
+              var6 = GlobalStatics_4.aClass94_3745.getLength();
               var7 = var4;
               var8 = 1;
             }
@@ -553,9 +515,9 @@ public abstract class AbstractFont extends SubNode {
               if (var3[var11] != null) {
                 var3[var11].method1553(0, false);
                 var3[var11] = var3[var11].method1542(1,
-                    AbstractFont.aClass94_3745, var5, var6 - var8);
+                    GlobalStatics_4.aClass94_3745, var5, var6 - var8);
               } else {
-                var3[var11] = AbstractFont.aClass94_3745
+                var3[var11] = GlobalStatics_4.aClass94_3745
                     .method1563(88).substring(var6 - var8, 0, var5);
               }
 
@@ -567,7 +529,7 @@ public abstract class AbstractFont extends SubNode {
             }
 
             if (var14 == 45) {
-              var6 = AbstractFont.aClass94_3745.getLength();
+              var6 = GlobalStatics_4.aClass94_3745.getLength();
               var7 = var4;
               var8 = 0;
             }
@@ -575,15 +537,15 @@ public abstract class AbstractFont extends SubNode {
         }
       }
 
-      if (AbstractFont.aClass94_3745.getLength() > var5) {
+      if (GlobalStatics_4.aClass94_3745.getLength() > var5) {
         if (var3[var11] != null) {
           var3[var11].method1553(0, false);
           var3[var11] = var3[var11]
-              .method1542(1, AbstractFont.aClass94_3745, var5,
-                  AbstractFont.aClass94_3745.getLength());
+              .method1542(1, GlobalStatics_4.aClass94_3745, var5,
+                  GlobalStatics_4.aClass94_3745.getLength());
         } else {
-          var3[var11] = AbstractFont.aClass94_3745.method1563(94).substring(
-              AbstractFont.aClass94_3745.getLength(), 0, var5);
+          var3[var11] = GlobalStatics_4.aClass94_3745.method1563(94).substring(
+              GlobalStatics_4.aClass94_3745.getLength(), 0, var5);
         }
 
         ++var11;
@@ -635,7 +597,7 @@ public abstract class AbstractFont extends SubNode {
         var12 = null;
       }
 
-      int var13 = this.method691(var1, var12, AbstractFont.aClass94Array3753);
+      int var13 = this.method691(var1, var12, GlobalStatics_4.aClass94Array3753);
       if (var10 == 3 && var13 == 1) {
         var10 = 1;
       }
@@ -664,22 +626,22 @@ public abstract class AbstractFont extends SubNode {
 
       for (var15 = 0; var15 < var13; ++var15) {
         if (var9 == 0) {
-          this.method677(AbstractFont.aClass94Array3753[var15], var2, var14);
+          this.method677(GlobalStatics_4.aClass94Array3753[var15], var2, var14);
         } else if (var9 == 1) {
-          this.method677(AbstractFont.aClass94Array3753[var15],
+          this.method677(GlobalStatics_4.aClass94Array3753[var15],
               var2 +
-                  (var4 - this.method682(AbstractFont.aClass94Array3753[var15]))
+                  (var4 - this.method682(GlobalStatics_4.aClass94Array3753[var15]))
                       / 2, var14);
         } else if (var9 == 2) {
-          this.method677(AbstractFont.aClass94Array3753[var15],
+          this.method677(GlobalStatics_4.aClass94Array3753[var15],
               var2 + var4 - this
-                  .method682(AbstractFont.aClass94Array3753[var15]), var14);
+                  .method682(GlobalStatics_4.aClass94Array3753[var15]), var14);
         } else if (var15 == var13 - 1) {
-          this.method677(AbstractFont.aClass94Array3753[var15], var2, var14);
+          this.method677(GlobalStatics_4.aClass94Array3753[var15], var2, var14);
         } else {
-          this.method690(AbstractFont.aClass94Array3753[var15], var4);
-          this.method677(AbstractFont.aClass94Array3753[var15], var2, var14);
-          AbstractFont.anInt3756 = 0;
+          this.method690(GlobalStatics_4.aClass94Array3753[var15], var4);
+          this.method677(GlobalStatics_4.aClass94Array3753[var15], var2, var14);
+          GlobalStatics_4.anInt3756 = 0;
         }
 
         var14 += var11;
@@ -733,16 +695,16 @@ public abstract class AbstractFont extends SubNode {
   }
 
   private void method698(int var1, int var2) {
-    AbstractFont.anInt3746 = -1;
-    AbstractFont.anInt3747 = -1;
-    AbstractFont.anInt3752 = var2;
-    AbstractFont.anInt3754 = var2;
-    AbstractFont.anInt3749 = var1;
-    AbstractFont.anInt3755 = var1;
-    AbstractFont.anInt3751 = 256;
-    AbstractFont.anInt3750 = 256;
-    AbstractFont.anInt3756 = 0;
-    AbstractFont.anInt3748 = 0;
+    GlobalStatics_4.anInt3746 = -1;
+    GlobalStatics_4.anInt3747 = -1;
+    GlobalStatics_4.anInt3752 = var2;
+    GlobalStatics_4.anInt3754 = var2;
+    GlobalStatics_4.anInt3749 = var1;
+    GlobalStatics_4.anInt3755 = var1;
+    GlobalStatics_4.anInt3751 = 256;
+    GlobalStatics_4.anInt3750 = 256;
+    GlobalStatics_4.anInt3756 = 0;
+    GlobalStatics_4.anInt3748 = 0;
   }
 
   public final void draw(GameString var1, int var2, int var3, int var4,
@@ -814,7 +776,7 @@ public abstract class AbstractFont extends SubNode {
           for (var8 = 0; var8 < 256; ++var8) {
             if (var8 != 32 && var8 != 160) {
               this.aByteArray3733[(var13 << 8) + var8] =
-                  (byte) AbstractFont
+                  (byte) GlobalStatics_4
                       .method694(var12, var11, var4, this.anIntArray3736, var10,
                           var13, var8);
             }
@@ -828,16 +790,16 @@ public abstract class AbstractFont extends SubNode {
   }
 
   private void method701(int var1, int var2, int var3) {
-    AbstractFont.anInt3746 = -1;
-    AbstractFont.anInt3747 = -1;
-    AbstractFont.anInt3752 = var2;
-    AbstractFont.anInt3754 = var2;
-    AbstractFont.anInt3749 = var1;
-    AbstractFont.anInt3755 = var1;
-    AbstractFont.anInt3751 = var3;
-    AbstractFont.anInt3750 = var3;
-    AbstractFont.anInt3756 = 0;
-    AbstractFont.anInt3748 = 0;
+    GlobalStatics_4.anInt3746 = -1;
+    GlobalStatics_4.anInt3747 = -1;
+    GlobalStatics_4.anInt3752 = var2;
+    GlobalStatics_4.anInt3754 = var2;
+    GlobalStatics_4.anInt3749 = var1;
+    GlobalStatics_4.anInt3755 = var1;
+    GlobalStatics_4.anInt3751 = var3;
+    GlobalStatics_4.anInt3750 = var3;
+    GlobalStatics_4.anInt3756 = 0;
+    GlobalStatics_4.anInt3748 = 0;
   }
 
   public final int method702(GameString var1, int var2, int var3, int var4,
@@ -918,23 +880,23 @@ public abstract class AbstractFont extends SubNode {
         if (var11 == 62 && var6 != -1) {
           GameString var12 = var1.substring(var10, 0, var6 + 1);
           var6 = -1;
-          if (var12.method1528((byte) -42, AbstractFont.aClass94_3712)) {
+          if (var12.method1528((byte) -42, GlobalStatics_4.aClass94_3712)) {
             var11 = 60;
-          } else if (var12.method1528((byte) -42, AbstractFont.aClass94_3711)) {
+          } else if (var12.method1528((byte) -42, GlobalStatics_4.aClass94_3711)) {
             var11 = 62;
-          } else if (var12.method1528((byte) -42, AbstractFont.aClass94_3732)) {
+          } else if (var12.method1528((byte) -42, GlobalStatics_4.aClass94_3732)) {
             var11 = 160;
-          } else if (var12.method1528((byte) -42, AbstractFont.aClass94_3714)) {
+          } else if (var12.method1528((byte) -42, GlobalStatics_4.aClass94_3714)) {
             var11 = 173;
-          } else if (var12.method1528((byte) -42, AbstractFont.aClass94_3729)) {
+          } else if (var12.method1528((byte) -42, GlobalStatics_4.aClass94_3729)) {
             var11 = 215;
-          } else if (var12.method1528((byte) -42, AbstractFont.aClass94_3718)) {
+          } else if (var12.method1528((byte) -42, GlobalStatics_4.aClass94_3718)) {
             var11 = 128;
-          } else if (var12.method1528((byte) -42, AbstractFont.aClass94_3741)) {
+          } else if (var12.method1528((byte) -42, GlobalStatics_4.aClass94_3741)) {
             var11 = 169;
           } else {
-            if (!var12.method1528((byte) -42, AbstractFont.aClass94_3743)) {
-              if (var12.method1558(AbstractFont.aClass94_3739, 0)) {
+            if (!var12.method1528((byte) -42, GlobalStatics_4.aClass94_3743)) {
+              if (var12.method1558(GlobalStatics_4.aClass94_3739, 0)) {
                 if (var4 != null) {
                     var13 = var4[var8];
                   } else {
@@ -953,13 +915,13 @@ public abstract class AbstractFont extends SubNode {
                   int var17 =
                       this.anIntArray3723 != null ? this.anIntArray3723[var15]
                           : var20.anInt1467;
-                  if (AbstractFont.anInt3750 == 256) {
+                  if (GlobalStatics_4.anInt3750 == 256) {
                     var20.draw(var2 + var13,
                         var3 + this.anInt3727 - var17 + var14);
                   } else {
                     var20.draw(var2 + var13,
                         var3 + this.anInt3727 - var17 + var14,
-                        AbstractFont.anInt3750);
+                        GlobalStatics_4.anInt3750);
                   }
 
                   var2 += var20.anInt1469;
@@ -995,59 +957,59 @@ public abstract class AbstractFont extends SubNode {
 
           ++var8;
           if (var11 != 32) {
-            if (AbstractFont.anInt3750 == 256) {
-              if (AbstractFont.anInt3754 != -1) {
+            if (GlobalStatics_4.anInt3750 == 256) {
+              if (GlobalStatics_4.anInt3754 != -1) {
                 this.method678(var11,
                     var2 + this.anIntArray3719[var11] + 1 + var14,
                     var3 + this.anIntArray3730[var11] + 1 + var15, var19, var13,
-                    AbstractFont.anInt3754);
+                    GlobalStatics_4.anInt3754);
               }
 
               this.method678(var11, var2 + this.anIntArray3719[var11] + var14,
                   var3 + this.anIntArray3730[var11] + var15, var19, var13,
-                  AbstractFont.anInt3755);
+                  GlobalStatics_4.anInt3755);
             } else {
-              if (AbstractFont.anInt3754 != -1) {
+              if (GlobalStatics_4.anInt3754 != -1) {
                 this.method679(var11,
                     var2 + this.anIntArray3719[var11] + 1 + var14,
                     var3 + this.anIntArray3730[var11] + 1 + var15, var19, var13,
-                    AbstractFont.anInt3754,
-                    AbstractFont.anInt3750
+                    GlobalStatics_4.anInt3754,
+                    GlobalStatics_4.anInt3750
                 );
               }
 
               this.method679(var11, var2 + this.anIntArray3719[var11] + var14,
                   var3 + this.anIntArray3730[var11] + var15, var19, var13,
-                  AbstractFont.anInt3755,
-                  AbstractFont.anInt3750
+                  GlobalStatics_4.anInt3755,
+                  GlobalStatics_4.anInt3750
               );
             }
-          } else if (AbstractFont.anInt3756 > 0) {
-            AbstractFont.anInt3748 += AbstractFont.anInt3756;
-            var2 += AbstractFont.anInt3748 >> 8;
-            AbstractFont.anInt3748 &= 255;
+          } else if (GlobalStatics_4.anInt3756 > 0) {
+            GlobalStatics_4.anInt3748 += GlobalStatics_4.anInt3756;
+            var2 += GlobalStatics_4.anInt3748 >> 8;
+            GlobalStatics_4.anInt3748 &= 255;
           }
 
           int var16 = this.anIntArray3736[var11];
-          if (AbstractFont.anInt3746 != -1) {
+          if (GlobalStatics_4.anInt3746 != -1) {
             if (GlRenderer.useOpenGlRenderer) {
               GlUtils.drawHorizontalLine(var2, var3 + (int) (this.anInt3727
                       * 0.7D), var16,
-                  AbstractFont.anInt3746);
+                  GlobalStatics_4.anInt3746);
             } else {
               DummyClass47.method1317(var2, var3 + (int) (this.anInt3727
                       * 0.7D), var16,
-                  AbstractFont.anInt3746);
+                  GlobalStatics_4.anInt3746);
             }
           }
 
-          if (AbstractFont.anInt3747 != -1) {
+          if (GlobalStatics_4.anInt3747 != -1) {
             if (GlRenderer.useOpenGlRenderer) {
               GlUtils.drawHorizontalLine(var2, var3 + this.anInt3727, var16,
-                  AbstractFont.anInt3747);
+                  GlobalStatics_4.anInt3747);
             } else {
               DummyClass47.method1317(var2, var3 + this.anInt3727, var16,
-                  AbstractFont.anInt3747);
+                  GlobalStatics_4.anInt3747);
             }
           }
 
@@ -1057,101 +1019,6 @@ public abstract class AbstractFont extends SubNode {
       }
     }
 
-  }
-
-  public static GameString otherFormat(GameString var0) {
-    int var1 = var0.getLength();
-    int var2 = 0;
-
-    int var4;
-    for (int var3 = 0; var3 < var1; ++var3) {
-      var4 = var0.charAt(var3);
-      if (var4 == 60 || var4 == 62) {
-        var2 += 3;
-      }
-    }
-
-    GameString var6 = GameStringStatics.createString(var1 + var2);
-
-    for (var4 = 0; var4 < var1; ++var4) {
-      int var5 = var0.charAt(var4);
-      if (var5 == 60) {
-        var6.append(AbstractFont.LT);
-      } else if (var5 == 62) {
-        var6.append(AbstractFont.GT);
-      } else {
-        var6.method1572(var5, (byte) 115);
-      }
-    }
-
-    return var6;
-  }
-
-  public static void method689() {
-    AbstractFont.aClass94_3712 = null;
-    AbstractFont.aClass94_3711 = null;
-    AbstractFont.aClass94_3732 = null;
-    AbstractFont.aClass94_3714 = null;
-    AbstractFont.aClass94_3729 = null;
-    AbstractFont.aClass94_3718 = null;
-    AbstractFont.aClass94_3741 = null;
-    AbstractFont.aClass94_3743 = null;
-    AbstractFont.aClass94_3739 = null;
-    AbstractFont.aClass94_3737 = null;
-    AbstractFont.LT = null;
-    AbstractFont.GT = null;
-    AbstractFont.aClass94_3725 = null;
-    AbstractFont.aClass94_3720 = null;
-    AbstractFont.aClass94_3715 = null;
-    AbstractFont.aClass94_3731 = null;
-    AbstractFont.aClass94_3716 = null;
-    AbstractFont.aClass94_3728 = null;
-    AbstractFont.aClass94_3735 = null;
-    AbstractFont.aClass94_3713 = null;
-    AbstractFont.aClass94_3738 = null;
-    AbstractFont.aClass94_3724 = null;
-    AbstractFont.aClass94_3717 = null;
-    AbstractFont.aClass94_3744 = null;
-    AbstractFont.aClass94_3742 = null;
-    AbstractFont.aClass94_3745 = null;
-    AbstractFont.aClass94Array3753 = null;
-  }
-
-  private static int method694(byte[][] var0, byte[][] var1, int[] var2,
-      int[] var3,
-      int[] var4, int var5, int var6) {
-    int var7 = var2[var5];
-    int var8 = var7 + var4[var5];
-    int var9 = var2[var6];
-    int var10 = var9 + var4[var6];
-    int var11 = var7;
-    if (var9 > var7) {
-      var11 = var9;
-    }
-
-    int var12 = var8;
-    if (var10 < var8) {
-      var12 = var10;
-    }
-
-    int var13 = var3[var5];
-    if (var3[var6] < var13) {
-      var13 = var3[var6];
-    }
-
-    byte[] var14 = var1[var5];
-    byte[] var15 = var0[var6];
-    int var16 = var11 - var7;
-    int var17 = var11 - var9;
-
-    for (int var18 = var11; var18 < var12; ++var18) {
-      int var19 = var14[var16++] + var15[var17++];
-      if (var19 < var13) {
-        var13 = var19;
-      }
-    }
-
-    return -var13;
   }
 
 }
