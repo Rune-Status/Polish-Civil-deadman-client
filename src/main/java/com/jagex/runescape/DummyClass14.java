@@ -75,7 +75,7 @@ public final class DummyClass14 {
 
         return DummyHashTable.aClass94_1687;
       } else {
-        return SomethingScene.toString(var0);
+        return GlobalStatics_9.toString(var0);
       }
   }
 

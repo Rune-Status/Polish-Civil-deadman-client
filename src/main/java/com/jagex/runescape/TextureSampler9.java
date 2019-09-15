@@ -2,17 +2,10 @@ package com.jagex.runescape;
 
 import com.jagex.runescape.buffer.Buffer;
 import com.jagex.runescape.common.ArrayUtils;
-import com.jagex.runescape.common.GameString;
-import com.jagex.runescape.common.GameStringStatics;
 import com.jagex.runescape.done.AbstractTextureSampler;
 
 public final class TextureSampler9 extends AbstractTextureSampler {
 
-  public static int anInt3101;
-  public static int anInt3102;
-  public static int anInt3103;
-  public static float aFloat3105;
-  public static GameString aClass94_3106 = GameStringStatics.create("clignotant2:");
   private boolean aBoolean3100 = true;
   private boolean aBoolean3104 = true;
 
@@ -27,14 +20,14 @@ public final class TextureSampler9 extends AbstractTextureSampler {
       if (this.monoChromaticImageCache.aBoolean1580) {
         int[] var5 =
             this.method152(0, !this.aBoolean3104
-                  ? var1 : TriChromaticImageBuffer.anInt2487 - var1,
+                  ? var1 : GlobalStatics_10.anInt2487 - var1,
             32755);
         if (this.aBoolean3100) {
-          for (int var6 = 0; var6 < SomethingLight0.anInt1559; ++var6) {
-            var4[var6] = var5[-var6 + RenderAnimation.anInt396];
+          for (int var6 = 0; var6 < GlobalStatics_9.anInt1559; ++var6) {
+            var4[var6] = var5[-var6 + GlobalStatics_9.anInt396];
           }
         } else {
-          ArrayUtils.method1358(var5, 0, var4, 0, SomethingLight0.anInt1559);
+          ArrayUtils.method1358(var5, 0, var4, 0, GlobalStatics_9.anInt1559);
         }
       }
 
@@ -43,7 +36,7 @@ public final class TextureSampler9 extends AbstractTextureSampler {
 
   public void parseConfig(int var1, Buffer var2, boolean var3 ) {
     if (!var3) {
-        TextureSampler9.method207(18, false, -19, 102L);
+        GlobalStatics_9.method207(18, false, -19, 102L);
       }
 
       if ((var1 == 0)) {
@@ -57,14 +50,14 @@ public final class TextureSampler9 extends AbstractTextureSampler {
 
   public int[][] method166(int var1, int var2 ) {
     if (var1 != -1) {
-        TextureSampler9.method207(-98, true, 95, 79L);
+        GlobalStatics_9.method207(-98, true, 95, 79L);
       }
 
       int[][] var3 = this.triChromaticImageCache
           .method1594((byte) 54, var2);
       if (this.triChromaticImageCache.aBoolean1379) {
         int[][] var4 =
-            this.method162(!this.aBoolean3104 ? var2 : -var2 + TriChromaticImageBuffer.anInt2487, 0,
+            this.method162(!this.aBoolean3104 ? var2 : -var2 + GlobalStatics_10.anInt2487, 0,
             (byte) -105);
         assert var4 != null;
         int[] var5 = var4[0];
@@ -75,13 +68,13 @@ public final class TextureSampler9 extends AbstractTextureSampler {
         int[] var8 = var3[0];
         int var11;
         if (this.aBoolean3100) {
-          for (var11 = 0; SomethingLight0.anInt1559 > var11; ++var11) {
-            var8[var11] = var5[RenderAnimation.anInt396 - var11];
-            var9[var11] = var6[-var11 + RenderAnimation.anInt396];
-            var10[var11] = var7[RenderAnimation.anInt396 - var11];
+          for (var11 = 0; GlobalStatics_9.anInt1559 > var11; ++var11) {
+            var8[var11] = var5[GlobalStatics_9.anInt396 - var11];
+            var9[var11] = var6[-var11 + GlobalStatics_9.anInt396];
+            var10[var11] = var7[GlobalStatics_9.anInt396 - var11];
           }
         } else {
-          for (var11 = 0; SomethingLight0.anInt1559 > var11; ++var11) {
+          for (var11 = 0; GlobalStatics_9.anInt1559 > var11; ++var11) {
             var8[var11] = var5[var11];
             var9[var11] = var6[var11];
             var10[var11] = var7[var11];
@@ -90,123 +83,6 @@ public final class TextureSampler9 extends AbstractTextureSampler {
       }
 
       return var3;
-  }
-
-  public static void method203(int var0) {
-    int var1 = 15 / ((-11 - var0) / 63);
-      if (GlobalStatics_7.anInt3660 == 2) {
-        if ((NpcConfiguration.anInt1297 == TextureSampler8.anInt3460)
-          && DummyClass36.anInt2612 == FloorOverlay.anInt2099) {
-          GlobalStatics_7.anInt3660 = 0;
-          if (DummyClass55.aBoolean1419 && GameObjectConfig.aBooleanArray1490[81]
-            && (TextureSampler25.amountContextActions > 2)) {
-            GameBuffer.method806(2597, TextureSampler25.amountContextActions - 2);
-          } else {
-            GameBuffer.method806(2597, TextureSampler25.amountContextActions - 1);
-          }
-        }
-      } else if (NpcConfiguration.anInt1297 == DummyClass5.anInt2993
-        && (DummyClass36.anInt2612 == DummyClass36.anInt2614)) {
-        GlobalStatics_7.anInt3660 = 0;
-        if (DummyClass55.aBoolean1419 && GameObjectConfig.aBooleanArray1490[81]
-          && (TextureSampler25.amountContextActions > 2)) {
-          GameBuffer.method806(2597, TextureSampler25.amountContextActions - 2);
-        } else {
-          GameBuffer.method806(2597, TextureSampler25.amountContextActions - 1);
-        }
-      } else {
-        FloorOverlay.anInt2099 = DummyClass36.anInt2614;
-        GlobalStatics_7.anInt3660 = 2;
-        TextureSampler8.anInt3460 = DummyClass5.anInt2993;
-      }
-  }
-
-  public static void method204(int var0) {
-    TextureSampler12.secureBuffer.writePacket(243);
-      TextureSampler12.secureBuffer.writeByte(MidiSomething.getWindowMode());
-      TextureSampler12.secureBuffer.writeShort(DummyClass30.viewWidth);
-      if (var0 != -3) {
-        TextureSampler9.anInt3103 = -41;
-      }
-
-      ++GameStub.anInt2;
-      TextureSampler12.secureBuffer.writeShort(GroundItem.viewHeight);
-      TextureSampler12.secureBuffer.writeByte(GroundItemNode.anInt3671);
-  }
-
-  public static void method205(FileUnpacker var0, int var1, FileUnpacker var2, Interface4 var3) {
-    DummyClass14.aClass153_1967 = var0;
-      DummyClass43.anInterface4_915 = var3;
-      GlobalStatics_6.aClass153_3490 = var2;
-      if (GlobalStatics_6.aClass153_3490 != null) {
-        MidiSomething.anInt1156 =
-          GlobalStatics_6.aClass153_3490.getAmountChildren(1, (byte) 100);
-      }
-
-      if (DummyClass14.aClass153_1967 != null) {
-        RenderAnimation.anInt377 = DummyClass14.aClass153_1967.getAmountChildren(1, (byte) 83);
-      }
-
-      if (var1 <= 32) {
-        TextureSampler9.aClass94_3106 = null;
-      }
-  }
-
-  public static void method206(boolean var0) {
-    TextureSampler9.aClass94_3106 = null;
-      if (!var0) {
-        TextureSampler9.method204(-76);
-      }
-  }
-
-  public static GameString method207(int var0, boolean var1, int var2, long var3) {
-    if ((var0 >= 2) && var0 <= 36) {
-        if (var2 <= 71) {
-          TextureSampler9.aFloat3105 = 1.3008908F;
-        }
-
-        long var6 = var3 / var0;
-
-        int var5;
-        for (var5 = 1; var6 != 0L; var6 /= var0) {
-          ++var5;
-        }
-
-        int var8 = var5;
-        if (var3 < 0L || var1) {
-          var8 = var5 + 1;
-        }
-
-        byte[] var9 = new byte[var8];
-        if (var3 >= 0L) {
-          if (var1) {
-            var9[0] = 43;
-          }
-        } else {
-          var9[0] = 45;
-        }
-
-        for (int var10 = 0; var5 > var10; ++var10) {
-          int var11 = (int) (var3 % var0);
-          var3 /= var0;
-          if (var11 < 0) {
-            var11 = -var11;
-          }
-
-          if (var11 > 9) {
-            var11 += 39;
-          }
-
-          var9[-1 - var10 + var8] = (byte) (var11 + 48);
-        }
-
-        GameString var13 = new GameString();
-        var13.bytes = var9;
-        var13.length = var8;
-        return var13;
-      } else {
-        throw new IllegalArgumentException("Invalid radix:" + var0);
-      }
   }
 
 }

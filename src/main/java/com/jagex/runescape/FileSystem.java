@@ -3,8 +3,12 @@ package com.jagex.runescape;
 import com.jagex.runescape.buffer.Buffer;
 import com.jagex.runescape.common.GameString;
 import com.jagex.runescape.common.GameStringStatics;
-import com.jagex.runescape.opengl.SomethingShadows;
+import com.jagex.runescape.done.FileCache;
+import com.jagex.runescape.done.FileCacheRequester;
+import com.jagex.runescape.done.FileRequester;
+import com.jagex.runescape.done.FileUnpacker;
 import com.jagex.runescape.opengl.MaterialShader5;
+import com.jagex.runescape.opengl.SomethingShadows;
 
 public final class FileSystem {
 
@@ -82,7 +86,7 @@ public final class FileSystem {
   }
 
   private FileRequester method847(FileCache var1, int var2, int var3, boolean var4,
-                                        FileCache var5) {
+                                  FileCache var5) {
     if (this.updateTableBuffer != null) {
         this.updateTableBuffer.position = 5 + var3 * 8;
         if (var2 >= -1) {
@@ -181,14 +185,14 @@ public final class FileSystem {
   }
 
   public static void method841(boolean var0) {
-    SceneNode.aClass11Array1836 = null;
-      TextureSampler12.method171(-101, InventoryConfig.anInt3655, 0, DummyClass30.viewWidth, 0, -1,
-        GroundItem.viewHeight, 0, 0);
-      if (SceneNode.aClass11Array1836 != null) {
+    GlobalStatics_9.aClass11Array1836 = null;
+      GlobalStatics_9.method171(-101, GlobalStatics_9.anInt3655, 0, DummyClass30.viewWidth, 0, -1,
+        GlobalStatics_9.viewHeight, 0, 0);
+      if (GlobalStatics_9.aClass11Array1836 != null) {
         GlobalStatics_6.method1095(0, GlobalStatics_7.anInt1082, GlobalStatics_2.anInt3602,
-          SceneNode.aClass11Array1836, DummyClass30.viewWidth, -1412584499, 0,
-          GroundItem.viewHeight, (byte) 73, DummyClass18.aClass11_88.anInt292);
-        SceneNode.aClass11Array1836 = null;
+          GlobalStatics_9.aClass11Array1836, DummyClass30.viewWidth, -1412584499, 0,
+          GlobalStatics_9.viewHeight, (byte) 73, DummyClass18.aClass11_88.anInt292);
+        GlobalStatics_9.aClass11Array1836 = null;
       }
 
       if (!var0) {
@@ -234,15 +238,15 @@ public final class FileSystem {
         FileSystem.aClass94_106 = null;
       }
 
-      if (TextureSampler23.anIntArray3212 == null ||
-          SomethingTexture1.anIntArray2639 == null) {
-        TextureSampler23.anIntArray3212 = new int[256];
-        SomethingTexture1.anIntArray2639 = new int[256];
+      if (GlobalStatics_10.anIntArray3212 == null ||
+          GlobalStatics_9.anIntArray2639 == null) {
+        GlobalStatics_10.anIntArray3212 = new int[256];
+        GlobalStatics_9.anIntArray2639 = new int[256];
 
         for (int var1 = 0; var1 < 256; ++var1) {
           double var2 = var1 / 255.0D * 6.283185307179586D;
-          TextureSampler23.anIntArray3212[var1] = (int) (Math.sin(var2) * 4096.0D);
-          SomethingTexture1.anIntArray2639[var1] = (int) (4096.0D * Math.cos(var2));
+          GlobalStatics_10.anIntArray3212[var1] = (int) (Math.sin(var2) * 4096.0D);
+          GlobalStatics_9.anIntArray2639[var1] = (int) (4096.0D * Math.cos(var2));
         }
       }
   }
@@ -260,23 +264,23 @@ public final class FileSystem {
 
   public static boolean method846(int var0, int var1, int var2) {
     int var3 = DummyClass50.anIntArrayArrayArray1142[var0][var1][var2];
-    if (var3 == -SomethingQuickChat2.anInt3539) {
+    if (var3 == -GlobalStatics_9.anInt3539) {
       return false;
-    } else if (var3 == SomethingQuickChat2.anInt3539) {
+    } else if (var3 == GlobalStatics_9.anInt3539) {
       return true;
     } else {
       int var4 = var1 << 7;
       int var5 = var2 << 7;
-      if (TextureSampler10.method349(var4 + 1, GlobalStatics_4.heightMap[var0][var1][var2],
-        var5 + 1) && TextureSampler10.method349(var4 + 128 - 1,
-        GlobalStatics_4.heightMap[var0][var1 + 1][var2], var5 + 1) && TextureSampler10.method349(
+      if (GlobalStatics_9.method349(var4 + 1, GlobalStatics_4.heightMap[var0][var1][var2],
+        var5 + 1) && GlobalStatics_9.method349(var4 + 128 - 1,
+        GlobalStatics_4.heightMap[var0][var1 + 1][var2], var5 + 1) && GlobalStatics_9.method349(
         var4 + 128 - 1, GlobalStatics_4.heightMap[var0][var1 + 1][var2 + 1], var5 + 128 - 1)
-        && TextureSampler10.method349(var4 + 1, GlobalStatics_4.heightMap[var0][var1][var2 + 1],
+        && GlobalStatics_9.method349(var4 + 1, GlobalStatics_4.heightMap[var0][var1][var2 + 1],
         var5 + 128 - 1)) {
-        DummyClass50.anIntArrayArrayArray1142[var0][var1][var2] = SomethingQuickChat2.anInt3539;
+        DummyClass50.anIntArrayArrayArray1142[var0][var1][var2] = GlobalStatics_9.anInt3539;
         return true;
       } else {
-        DummyClass50.anIntArrayArrayArray1142[var0][var1][var2] = -SomethingQuickChat2.anInt3539;
+        DummyClass50.anIntArrayArrayArray1142[var0][var1][var2] = -GlobalStatics_9.anInt3539;
         return false;
       }
     }

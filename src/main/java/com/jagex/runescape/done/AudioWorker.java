@@ -1,9 +1,8 @@
 package com.jagex.runescape.done;
 
-import com.jagex.runescape.GZipDecompressor;
+import com.jagex.runescape.GlobalStatics_10;
+import com.jagex.runescape.GlobalStatics_9;
 import com.jagex.runescape.SignLink;
-import com.jagex.runescape.TextureSampler25;
-import com.jagex.runescape.done.AbstractAudioOutputStream;
 
 public final class AudioWorker implements Runnable {
 
@@ -24,10 +23,10 @@ public final class AudioWorker implements Runnable {
             }
           }
 
-          TextureSampler25.sleep(10L);
+          GlobalStatics_10.sleep(10L);
         }
       } catch (Exception var7) {
-        GZipDecompressor.reportError(null, var7, (byte) 111);
+        GlobalStatics_9.reportError(null, var7, (byte) 111);
       } finally {
         this.aBoolean353 = false;
       }

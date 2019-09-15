@@ -41,11 +41,11 @@ public final class DummyClass26 {
   public static void setState(int var0, int var1) {
     if (DummyClass15.state != var0) {
         if ((DummyClass15.state == 0)) {
-          ObjectCache.method1517((byte) -118);
+          GlobalStatics_9.method1517((byte) -118);
         }
 
         if (var0 == 40) {
-          IdentityKit.method951(0);
+          GlobalStatics_9.method951(0);
         }
 
         boolean var2 = var0 == 5 || var0 == 10 || var0 == 28;
@@ -58,19 +58,19 @@ public final class DummyClass26 {
           DummyClass11.anInt2038 = 0;
           GlobalStatics_0.anInt2579 = 1;
           DummyClass8.anInt4019 = 0;
-          SomethingInScenePacket202.anInt2275 = 1;
-          TextureSampler5.anInt3293 = 0;
-          OndemandRequester.method1250(102, true);
+          GlobalStatics_9.anInt2275 = 1;
+          GlobalStatics_8.anInt3293 = 0;
+          GlobalStatics_9.method1250(102, true);
         }
 
         if ((var0 == 25) || var0 == 10) {
-          SomethingScene.method1293(true);
+          GlobalStatics_9.method1293(true);
         }
 
         if ((var0 == 5)) {
           DummyClass58.loadTitleScreenSprites(Projectile.sprites, (byte) -111);
         } else {
-          TextureSampler23.method247((byte) -121);
+          GlobalStatics_10.method247((byte) -121);
         }
 
         boolean var3 =
@@ -78,18 +78,18 @@ public final class DummyClass26 {
               (DummyClass15.state == 28);
         if (var3 == !var2) {
           if (var2) {
-            GlobalStatics_4.anInt1691 = Keyboard.openingMusicFileId;
+            GlobalStatics_4.anInt1691 = GlobalStatics_9.openingMusicFileId;
             if (BZipDecompressorState.anInt120 == 0) {
-              Queue.method882(-1, 2);
+              GlobalStatics_9.method882(-1, 2);
             } else {
               GlobalStatics_5
-                  .method2099(true, Keyboard.openingMusicFileId, 0,
-                      SomethingTexture1.fileUnpacker6, false, 255, 2);
+                  .method2099(true, GlobalStatics_9.openingMusicFileId, 0,
+                      GlobalStatics_9.fileUnpacker6, false, 255, 2);
             }
 
             DummyClass43.ondemandRequester.writeStatus(false, true);
           } else {
-            Queue.method882(-1, 2);
+            GlobalStatics_9.method882(-1, 2);
             DummyClass43.ondemandRequester.writeStatus(true, true);
           }
         }
@@ -104,9 +104,9 @@ public final class DummyClass26 {
 
   public static void method1720(boolean var0, int var1) {
     GlobalStatics_4.anIntArray1695 = new int[104];
-      HashTableIterator.anIntArray1138 = new int[104];
+      GlobalStatics_9.anIntArray1138 = new int[104];
       DummyClass52.anInt1174 = 99;
-      Mouse.anIntArray1920 = new int[104];
+      GlobalStatics_9.anIntArray1920 = new int[104];
       byte var2;
       if (var0) {
         var2 = 1;
@@ -114,14 +114,14 @@ public final class DummyClass26 {
         var2 = 4;
       }
 
-      ObjectCache.tileOrientation = new byte[var2][104][104];
-      IntegerNode.anIntArray2469 = new int[104];
+      GlobalStatics_9.tileOrientation = new byte[var2][104][104];
+      GlobalStatics_9.anIntArray2469 = new int[104];
       DummyClass36.anIntArrayArrayArray2609 = new int[var2][105][var1];
-      MouseRecorder.aByteArrayArrayArray1014 = new byte[var2][105][105];
+      GlobalStatics_9.aByteArrayArrayArray1014 = new byte[var2][105][105];
       DummyClass17.tileFloors = new byte[var2][104][104];
-      SomethingPacket151.anIntArray2606 = new int[104];
+      GlobalStatics_9.anIntArray2606 = new int[104];
       DummyClass18.aByteArrayArrayArray81 = new byte[var2][104][104];
-      TextureSampler36.floorUnderlayIds = new byte[var2][104][104];
+      GlobalStatics_10.floorUnderlayIds = new byte[var2][104][104];
   }
 
   public static void method1721(boolean var0) {
@@ -139,18 +139,18 @@ public final class DummyClass26 {
   }
 
   public static SoftwareDirectColorSprite method1722(int var0) {
-    int var1 = GroundItem.anIntArray2931[0] * TextureSampler26.anIntArray3076[0];
+    int var1 = GlobalStatics_9.anIntArray2931[0] * GlobalStatics_10.anIntArray3076[0];
       byte[] var2 = DummyClass5.aByteArrayArray2987[0];
       int[] var3 = new int[var1];
 
       for (int var4 = 0; var1 > var4; ++var4) {
-        var3[var4] = TextureSampler38.anIntArray3446[(int) var2[var4] & 255];
+        var3[var4] = GlobalStatics_10.anIntArray3446[(int) var2[var4] & 255];
       }
 
       SoftwareDirectColorSprite var6 =
-        new SoftwareDirectColorSprite(SomethingVolume15.anInt2426, SomethingPacket116.anInt1748,
-          Something3dRoot.anIntArray2048[0], GlobalStatics_0.anIntArray2591[0], GroundItem.anIntArray2931[0],
-          TextureSampler26.anIntArray3076[0], var3);
+        new SoftwareDirectColorSprite(GlobalStatics_9.anInt2426, GlobalStatics_9.anInt1748,
+          GlobalStatics_9.anIntArray2048[0], GlobalStatics_0.anIntArray2591[0], GlobalStatics_9.anIntArray2931[0],
+          GlobalStatics_10.anIntArray3076[0], var3);
       DummyClass37.method1035((byte) 122);
       return var0 >= -51 ? null : var6;
   }

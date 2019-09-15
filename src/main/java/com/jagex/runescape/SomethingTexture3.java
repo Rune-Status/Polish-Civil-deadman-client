@@ -1,21 +1,9 @@
 package com.jagex.runescape;
 
-import com.jagex.runescape.common.GameString;
-import com.jagex.runescape.common.GameStringStatics;
-import com.jagex.runescape.done.AbstractDirectColorSprite;
 import com.jagex.runescape.done.AbstractSomethingTexture;
-import com.jagex.runescape.huffman.HuffmanEncoderStatics;
-import com.jagex.runescape.opengl.GlDirectColorSprite;
-import com.jagex.runescape.opengl.GlDirectFullColorSprite;
-import com.jagex.runescape.opengl.GlRenderer;
 
 public final class SomethingTexture3 extends AbstractSomethingTexture {
 
-  public static int anInt2651;
-  public static GameString aClass94_2653 = GameStringStatics.create("Hierhin gehen");
-  public static AbstractDirectColorSprite[] aClass3_Sub28_Sub16Array2656;
-  public static int anInt2658;
-  public static FileUnpacker animationFrames;
   private final int anInt2649;
   private final int anInt2650;
   private final int anInt2652;
@@ -59,7 +47,7 @@ public final class SomethingTexture3 extends AbstractSomethingTexture {
       int var9 = var1 * this.anInt2652 >> 12;
       int var10 = this.anInt2659 * var3 >> 12;
       if (!var2) {
-        SomethingTexture3.aClass94_2653 = null;
+        GlobalStatics_9.aClass94_2653 = null;
       }
 
       int var11 = var1 * this.anInt2650 >> 12;
@@ -69,108 +57,8 @@ public final class SomethingTexture3 extends AbstractSomethingTexture {
 
   public void method1341(int var1, int var2, int var3 ) {
     if (var1 != 2) {
-        SomethingTexture3.animationFrames = null;
+        GlobalStatics_9.animationFrames = null;
       }
-  }
-
-  public static void method1346(int var0) {
-    TextureSampler6.method174(4096, 5);
-      DummyClass35.method1027(5, (byte) 69);
-      GlobalStatics_6.method465(5, true);
-      GlobalStatics_6.method474(2, 5);
-      Projectile.method2025((byte) -62, 5);
-      MonoChromaticImageCache.method1711(5, var0 - 25956);
-      GlobalStatics_6.method137(5, (byte) -118);
-      GlobalStatics_6.method386(5, var0 ^ -26138);
-      GlobalStatics_0.method795((byte) 14, 5);
-      SomethingWorldMapy.method539(0, 5);
-      TextureSampler34.method188(5, 0);
-      SomethingIndex150.method2260(var0 - 27256, 5);
-      GlobalStatics_7.method594(var0 - 26090, 5);
-      GlobalStatics_7.method595(5, 109);
-      SomethingPacket151.method820(5, 64);
-      SceneSomething.method953(-13508, 50);
-      TextureSampler37.method269(-5, 5);
-      DummyClass49.method1366(104, 5);
-      TextureSampler1.aClass93_3130.method1522(-125, 5);
-      HashTableIterator.aClass93_1135.method1522(var0 ^ -26142, 5);
-  }
-
-  public static AbstractDirectColorSprite[] method1347(int var0) {
-    if (var0 == -26802) {
-        AbstractDirectColorSprite[] var1 = new AbstractDirectColorSprite[DummyClass53.spriteCount];
-
-        for (int var2 = 0; DummyClass53.spriteCount > var2; ++var2) {
-          byte[] var4 = DummyClass5.aByteArrayArray2987[var2];
-          int var3 = TextureSampler26.anIntArray3076[var2]
-              * GroundItem.anIntArray2931[var2];
-          if (TextureSampler0.aBooleanArray3272[var2]) {
-            int[] var6 = new int[var3];
-            byte[] var5 = DummyClass4.aByteArrayArray3005[var2];
-
-            for (int var7 = 0; var3 > var7; ++var7) {
-              var6[var7] = HuffmanEncoderStatics.method308(
-                  TextureSampler38.anIntArray3446[(int) var4[var7] & 255],
-                  -16777216 & var5[var7] << 24);
-            }
-
-            if (GlRenderer.useOpenGlRenderer) {
-              var1[var2] = new GlDirectFullColorSprite(
-                  SomethingVolume15.anInt2426,
-                  SomethingPacket116.anInt1748,
-                  Something3dRoot.anIntArray2048[var2],
-                  GlobalStatics_0.anIntArray2591[var2], GroundItem.anIntArray2931[var2],
-                  TextureSampler26.anIntArray3076[var2], var6);
-            } else {
-              var1[var2] = new SoftwareDirectFullColorSprite(
-                  SomethingVolume15.anInt2426,
-                  SomethingPacket116.anInt1748,
-                  Something3dRoot.anIntArray2048[var2],
-                  GlobalStatics_0.anIntArray2591[var2], GroundItem.anIntArray2931[var2],
-                  TextureSampler26.anIntArray3076[var2], var6);
-            }
-          } else {
-            int[] var9 = new int[var3];
-
-            for (int var10 = 0; (var10 < var3); ++var10) {
-              var9[var10] = TextureSampler38.anIntArray3446[(int) var4[var10]
-                  & 255];
-            }
-
-            if (GlRenderer.useOpenGlRenderer) {
-              var1[var2] =
-                  new GlDirectColorSprite(SomethingVolume15.anInt2426,
-                      SomethingPacket116.anInt1748,
-                      Something3dRoot.anIntArray2048[var2],
-                      GlobalStatics_0.anIntArray2591[var2],
-                      GroundItem.anIntArray2931[var2],
-                      TextureSampler26.anIntArray3076[var2], var9);
-            } else {
-              var1[var2] = new SoftwareDirectColorSprite(
-                  SomethingVolume15.anInt2426,
-                  SomethingPacket116.anInt1748,
-                  Something3dRoot.anIntArray2048[var2],
-                  GlobalStatics_0.anIntArray2591[var2], GroundItem.anIntArray2931[var2],
-                  TextureSampler26.anIntArray3076[var2], var9);
-            }
-          }
-        }
-
-        DummyClass37.method1035((byte) 106);
-        return var1;
-      } else {
-        return null;
-      }
-  }
-
-  public static void method1348(byte var0) {
-    SomethingTexture3.animationFrames = null;
-      if (var0 != 100) {
-        SomethingTexture3.method1347(-79);
-      }
-
-      SomethingTexture3.aClass94_2653 = null;
-      SomethingTexture3.aClass3_Sub28_Sub16Array2656 = null;
   }
 
 }

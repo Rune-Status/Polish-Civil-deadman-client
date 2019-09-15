@@ -2,27 +2,12 @@ package com.jagex.runescape;
 
 import com.jagex.runescape.buffer.Buffer;
 import com.jagex.runescape.common.ArrayUtils;
-import com.jagex.runescape.common.GameString;
-import com.jagex.runescape.common.GameStringStatics;
 import com.jagex.runescape.done.AbstractTextureSampler;
 
 import java.util.Random;
 
 public final class TextureSampler4 extends AbstractTextureSampler {
 
-  private static GameString LANG_PORTUGUESE = GameStringStatics.create("pt");
-  private static GameString LANG_ENGLISH = GameStringStatics.create("en");
-  private static GameString LANG_FRENCH = GameStringStatics.create("fr");
-  private static GameString LANG_GERMAN = GameStringStatics.create("de");
-  public static GameString aClass94_3220;
-  public static SoftwareDirectColorSprite aClass3_Sub28_Sub16_Sub2_3221;
-  public static GameString[] aClass94Array3226 = new GameString[100];
-  public static FileUnpacker aClass153_3227;
-  public static int[] anIntArray3228 = {7, 8, 9, 10, 11, 12, 13, 15};
-  public static short aShort3241 = 1;
-  public static GameString[] LANGUAGES =
-      {TextureSampler4.LANG_ENGLISH, TextureSampler4.LANG_GERMAN, TextureSampler4.LANG_FRENCH,
-          TextureSampler4.LANG_PORTUGUESE};
   private int anInt3219 = 204;
   private int anInt3222;
   private int anInt3223;
@@ -60,7 +45,7 @@ public final class TextureSampler4 extends AbstractTextureSampler {
         int var7;
         if ((var5 > 0)) {
           var6 = this.anInt3222;
-          var7 = (FloorUnderlay.method1603((byte) 59, 4096, var2) - 2048) * this.anInt3219
+          var7 = (GlobalStatics_8.method1603((byte) 59, 4096, var2) - 2048) * this.anInt3219
               >> 12;
           var6 += var7 * var4 >> 12;
           this.anIntArray3230[var5] = this.anIntArray3230[var5 - 1] + var6;
@@ -72,7 +57,7 @@ public final class TextureSampler4 extends AbstractTextureSampler {
           if (var6 > 0) {
             var7 = this.anInt3235;
             int var8 =
-              (-2048 + FloorUnderlay.method1603((byte) -1, 4096, var2)) * this.anInt3236
+              (-2048 + GlobalStatics_8.method1603((byte) -1, 4096, var2)) * this.anInt3236
                   >> 12;
             var7 += var3 * var8 >> 12;
             this.anIntArrayArray3225[var5][var6] =
@@ -81,7 +66,7 @@ public final class TextureSampler4 extends AbstractTextureSampler {
 
           this.anIntArrayArray3240[var5][var6] = (this.anInt3229 <= 0) ?
             4096 :
-            4096 - FloorUnderlay.method1603((byte) 33, this.anInt3229, var2);
+            4096 - GlobalStatics_8.method1603((byte) 33, this.anInt3229, var2);
         }
 
         this.anIntArrayArray3225[var5][this.anInt3242] = 4096;
@@ -113,13 +98,13 @@ public final class TextureSampler4 extends AbstractTextureSampler {
         boolean var12 = (var7 & 1) == 0;
         int var16 = this.anIntArray3230[var7 - 1];
         if (var16 + this.anInt3223 < var9 && (var15 - this.anInt3223) > var9) {
-          for (var4 = 0; var4 < SomethingLight0.anInt1559; ++var4) {
+          for (var4 = 0; var4 < GlobalStatics_9.anInt1559; ++var4) {
             int var6 = 0;
             int var5 = !var12 ? -this.anInt3234 : this.anInt3234;
 
             int var8;
             for (
-              var8 = TextureCache.anIntArray2125[var4] + (this.anInt3235 * var5 >> 12);
+              var8 = GlobalStatics_9.anIntArray2125[var4] + (this.anInt3235 * var5 >> 12);
               (var8 < 0); var8 += 4096) {
             }
 
@@ -141,7 +126,7 @@ public final class TextureSampler4 extends AbstractTextureSampler {
             }
           }
         } else {
-          ArrayUtils.fill(var3, 0, SomethingLight0.anInt1559, 0);
+          ArrayUtils.fill(var3, 0, GlobalStatics_9.anInt1559, 0);
         }
       }
 
@@ -181,7 +166,7 @@ public final class TextureSampler4 extends AbstractTextureSampler {
       }
 
       if (!var3) {
-        TextureSampler4.LANG_FRENCH = null;
+        GlobalStatics_9.LANG_FRENCH = null;
       }
   }
 
@@ -191,88 +176,6 @@ public final class TextureSampler4 extends AbstractTextureSampler {
       }
 
       this.method263(0);
-  }
-
-  public static void method260(int var0, int var1, int var2) {
-    if (var0 != -16207) {
-        TextureSampler4.LANG_PORTUGUESE = null;
-      }
-
-      WidgetUpdate var3 = GlobalStatics_6.method466(4, 7, var1);
-      var3.g((byte) 33);
-      var3.anInt3598 = var2;
-  }
-
-  public static void method261(int var0) {
-    int var1 = -31 / ((-43 - var0) / 55);
-      TextureSampler4.aClass153_3227 = null;
-      TextureSampler4.LANG_GERMAN = null;
-      TextureSampler4.LANG_PORTUGUESE = null;
-      TextureSampler4.LANG_FRENCH = null;
-      TextureSampler4.aClass94_3220 = null;
-      TextureSampler4.anIntArray3228 = null;
-      TextureSampler4.LANGUAGES = null;
-      TextureSampler4.aClass94Array3226 = null;
-      TextureSampler4.LANG_ENGLISH = null;
-      TextureSampler4.aClass3_Sub28_Sub16_Sub2_3221 = null;
-  }
-
-  public static void method262(int var0, int var1, int var2, int var3, int var4, int var5, int var6,
-                              int var7) {
-    int var8 = var5 + var2;
-      int var10 = var5 + var7;
-
-      int var12;
-      for (var12 = var2; var12 < var8; ++var12) {
-        TextureSampler18.method282(DummyClass35.anIntArrayArray663[var12], var7, 125, var6, var0);
-      }
-
-      int var9 = -var5 + var3;
-      int var11 = -var5 + var6;
-
-      for (var12 = var3; var12 > var9; --var12) {
-        TextureSampler18.method282(DummyClass35.anIntArrayArray663[var12], var7, 103, var6, var0);
-      }
-
-      if (var1 > 118) {
-        for (var12 = var8; (var9 >= var12); ++var12) {
-          int[] var13 = DummyClass35.anIntArrayArray663[var12];
-          TextureSampler18.method282(var13, var7, 117, var10, var0);
-          TextureSampler18.method282(var13, var10, 111, var11, var4);
-          TextureSampler18.method282(var13, var11, -75, var6, var0);
-        }
-
-      }
-  }
-
-  public static void method264(byte var0) {
-    ++TextureSampler25.anInt3402;
-      TextureSampler12.secureBuffer.writePacket(184);
-
-      for (SomethingPacket151 var1 =
-           (SomethingPacket151) TextureSampler23.aClass130_3208.getFirst(124);
-          var1 != null; var1 = (SomethingPacket151) TextureSampler23.aClass130_3208.getNext(-79)) {
-        if (var1.anInt2603 == 0) {
-          TextureSampler19.method254(true, var1, false);
-        }
-      }
-
-      if (var0 < 83) {
-        TextureSampler4.LANG_PORTUGUESE = null;
-      }
-
-      if (TextureSampler27.aClass11_3087 != null) {
-        DummyClass29.method909(125, TextureSampler27.aClass11_3087);
-        TextureSampler27.aClass11_3087 = null;
-      }
-  }
-
-  public static void method265(byte var0, int var1) {
-    WidgetUpdate var2 = GlobalStatics_6.method466(4, 8, var1);
-      var2.createIndexedColorSprite(true);
-      if (var0 != -42) {
-        TextureSampler4.LANG_FRENCH = null;
-      }
   }
 
 }

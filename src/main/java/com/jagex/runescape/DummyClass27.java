@@ -24,7 +24,7 @@ public final class DummyClass27 {
 
       while (true) {
         SomethingInScenePacket202 var1 =
-          (SomethingInScenePacket202) IntegerNode.aClass61_2468.method1220((byte) -3);
+          (SomethingInScenePacket202) GlobalStatics_9.aClass61_2468.method1220((byte) -3);
         if (var1 == null) {
           return;
         }
@@ -33,14 +33,14 @@ public final class DummyClass27 {
         int var3;
         if (var1.anInt2273 < 0) {
           var3 = -var1.anInt2273 - 1;
-          if ((var3 == WidgetAccess.localPlayerId)) {
-            var2 = TextureCache.localPlayer;
+          if ((var3 == GlobalStatics_10.localPlayerId)) {
+            var2 = GlobalStatics_9.localPlayer;
           } else {
-            var2 = TextureSampler0.players[var3];
+            var2 = GlobalStatics_9.players[var3];
           }
         } else {
           var3 = var1.anInt2273 - 1;
-          var2 = TextureSampler5.npcs[var3];
+          var2 = GlobalStatics_8.npcs[var3];
         }
 
         if (var2 != null) {
@@ -60,14 +60,14 @@ public final class DummyClass27 {
           int var6 = (var4 >> 1) + var1.anInt2271;
           int var8 = (var5 >> 1) + var1.anInt2282;
           int var9 = (var5 + 1 >> 1) + var1.anInt2282;
-          int[][] var10 = GlobalStatics_4.heightMap[GameWorldSomething.currentPlane];
+          int[][] var10 = GlobalStatics_4.heightMap[GlobalStatics_9.currentPlane];
           int var11 =
             var10[var7][var9] + var10[var6][var9] + (var10[var6][var8] + var10[var7][var8]) >> 2;
           SceneNode var12 = null;
           int var13 = GlobalStatics_3.OBJECT_TYPES[var1.anInt2278];
           if ((var13 == 0)) {
             SceneSomething2 var14 =
-              DummyClass14.method2147(GameWorldSomething.currentPlane, var1.anInt2271,
+              DummyClass14.method2147(GlobalStatics_9.currentPlane, var1.anInt2271,
                 var1.anInt2282);
             if (var14 != null) {
               var12 = var14.sceneNode0;
@@ -75,21 +75,21 @@ public final class DummyClass27 {
           } else if ((var13 != 1)) {
             if (var13 == 2) {
               SceneSomething var23 =
-                GlobalStatics_3.method1336(GameWorldSomething.currentPlane, var1.anInt2271,
+                GlobalStatics_3.method1336(GlobalStatics_9.currentPlane, var1.anInt2271,
                   var1.anInt2282);
               if (var23 != null) {
                 var12 = var23.sceneNode;
               }
             } else if (var13 == 3) {
               SomethingSceneJ var24 =
-                GlobalStatics_0.method784(GameWorldSomething.currentPlane, var1.anInt2271, var1.anInt2282);
+                GlobalStatics_0.method784(GlobalStatics_9.currentPlane, var1.anInt2271, var1.anInt2282);
               if (var24 != null) {
                 var12 = var24.aClass140_320;
               }
             }
           } else {
             SomethingSceneI var21 =
-              GlobalStatics_4.method1068(GameWorldSomething.currentPlane, var1.anInt2271,
+              GlobalStatics_4.method1068(GlobalStatics_9.currentPlane, var1.anInt2271,
                 var1.anInt2282);
             if (var21 != null) {
               var12 = var21.aClass140_429;
@@ -97,7 +97,7 @@ public final class DummyClass27 {
           }
 
           if (var12 != null) {
-            Queue.method881(GameWorldSomething.currentPlane, var1.anInt2282, -96, 0, var1.anInt2271,
+            GlobalStatics_9.method881(GlobalStatics_9.currentPlane, var1.anInt2282, -96, 0, var1.anInt2271,
               var1.anInt2283 + 1, -1, var13, 0, var1.anInt2266 + 1);
             var2.anInt2778 = var1.anInt2283 + GlobalStatics_4.updateCycle;
             var2.anInt2833 = 64 * var5 + var1.anInt2282 * 128;
@@ -132,12 +132,12 @@ public final class DummyClass27 {
   }
 
   public static void method1714(byte var0) {
-    Keyboard.aClass93_1911.method1523((byte) -112);
+    GlobalStatics_9.aClass93_1911.method1523((byte) -112);
       if (var0 != -6) {
         DummyClass27.method1712(-114);
       }
 
-      HashTableIterator.aClass93_1131.method1523((byte) -100);
+      GlobalStatics_9.aClass93_1131.method1523((byte) -100);
   }
 
 }

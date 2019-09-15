@@ -4,7 +4,6 @@ import com.jagex.runescape.common.GameString;
 import com.jagex.runescape.common.GameStringStatics;
 import com.jagex.runescape.common.HashTable;
 import com.jagex.runescape.node.Node;
-import com.jagex.runescape.opengl.SomethingGl0;
 
 public class GlobalStatics_1 {
 
@@ -15,8 +14,8 @@ public class GlobalStatics_1 {
   public static HashTable aClass130_2194 = new HashTable(16);
   public static int anInt2195;
   public static int[] mapFileIds;
-  public static GameString aClass94_2196 = GameClient.aClass94_2198;
-  public static GameString aClass94_2197 = GameClient.aClass94_2198;
+  public static GameString aClass94_2196 = GlobalStatics_8.aClass94_2198;
+  public static GameString aClass94_2197 = GlobalStatics_8.aClass94_2198;
   static SoftwareModel aClass140_Sub1_Sub2_3902 = new SoftwareModel();
   static int[] anIntArray3904 = new int[1];
   static int[] anIntArray3905 = new int[1];
@@ -111,13 +110,13 @@ public class GlobalStatics_1 {
 
     int var11;
     for (var11 = var2; (var11 < var7); ++var11) {
-      TextureSampler18
+      GlobalStatics_10
           .method282(DummyClass35.anIntArrayArray663[var11], var6, -91, var1,
               var3);
     }
 
     for (var11 = var4; var8 < var11; --var11) {
-      TextureSampler18
+      GlobalStatics_10
           .method282(DummyClass35.anIntArrayArray663[var11], var6, -113, var1,
               var3);
     }
@@ -126,8 +125,8 @@ public class GlobalStatics_1 {
 
     for (var11 = var7; (var8 >= var11); ++var11) {
       int[] var12 = DummyClass35.anIntArrayArray663[var11];
-      TextureSampler18.method282(var12, var6, -111, var9, var3);
-      TextureSampler18.method282(var12, var10, -124, var1, var3);
+      GlobalStatics_10.method282(var12, var6, -111, var9, var3);
+      GlobalStatics_10.method282(var12, var10, -124, var1, var3);
     }
   }
 

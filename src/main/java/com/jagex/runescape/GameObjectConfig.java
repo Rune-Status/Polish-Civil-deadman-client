@@ -2,7 +2,6 @@ package com.jagex.runescape;
 
 import com.jagex.runescape.buffer.Buffer;
 import com.jagex.runescape.common.GameString;
-import com.jagex.runescape.common.GameStringStatics;
 import com.jagex.runescape.common.HashTable;
 import com.jagex.runescape.common.StringNode;
 import com.jagex.runescape.done.AnimationSequence;
@@ -14,15 +13,6 @@ import com.jagex.runescape.sprite.SoftwareIndexedColorSprite;
 
 public final class GameObjectConfig {
 
-  public static boolean[] aBooleanArray1490 = new boolean[112];
-  public static int[][][] anIntArrayArrayArray1497 = new int[4][13][13];
-  public static GameString aClass94_1508 = GameStringStatics.create("Choisir une option");
-  public static GameString aClass94_1509 = GameStringStatics.create("Chargement des textures )2 ");
-  public static int portOffset = 1;
-  public static int anInt1521;
-  public static GameString aClass94_1523 =
-    GameStringStatics.create("Chargement en cours)3 Veuillez patienter)3");
-  public static short aShort1535 = 320;
   public int anInt1478;
   public int anInt1480 = 1;
   public int anInt1482;
@@ -85,7 +75,7 @@ public final class GameObjectConfig {
 
 
   public GameObjectConfig() {
-    this.aClass94_1504 = TextureSampler20.aClass94_3150;
+    this.aClass94_1504 = GlobalStatics_10.aClass94_3150;
     this.aBoolean1503 = true;
     this.anInt1493 = -1;
     this.anInt1515 = 0;
@@ -135,7 +125,7 @@ public final class GameObjectConfig {
       if (this.anIntArray1487 != null) {
         for (int var7 = 0; this.anIntArray1487.length > var7; ++var7) {
           if ((var2 == this.anIntArray1487[var7])) {
-            return LinearHashTable.aClass153_1043.method2129((byte) 72, 0,
+            return GlobalStatics_9.aClass153_1043.method2129((byte) 72, 0,
                 this.anIntArray1519[var7] & '\uffff');
           }
         }
@@ -149,7 +139,7 @@ public final class GameObjectConfig {
         boolean var4 = true;
 
         for (int var5 = 0; this.anIntArray1519.length > var5; ++var5) {
-          var4 &= LinearHashTable.aClass153_1043.method2129((byte) 71, 0,
+          var4 &= GlobalStatics_9.aClass153_1043.method2129((byte) 71, 0,
             '\uffff' & this.anIntArray1519[var5]);
         }
 
@@ -164,7 +154,7 @@ public final class GameObjectConfig {
 
       int var2 = -1;
       if (this.anInt1526 != -1) {
-        var2 = NpcConfiguration.method1484(64835055, this.anInt1526);
+        var2 = GlobalStatics_9.method1484(64835055, this.anInt1526);
       } else if (this.anInt1532 != -1) {
         var2 = DummyClass5.anIntArray2985[this.anInt1532];
       }
@@ -206,7 +196,7 @@ public final class GameObjectConfig {
 
           var4 = (Model) DummyClass54.aClass93_1401.get(var8);
           if (var4 == null) {
-            var4 = Model.getModel(LinearHashTable.aClass153_1043, var8 & '\uffff', 0);
+            var4 = Model.getModel(GlobalStatics_9.aClass153_1043, var8 & '\uffff', 0);
             if (var4 == null) {
               return null;
             }
@@ -219,12 +209,12 @@ public final class GameObjectConfig {
           }
 
           if (var6 > 1) {
-            Something3dRoot.aClass140_Sub5Array2058[var7] = var4;
+            GlobalStatics_9.aClass140_Sub5Array2058[var7] = var4;
           }
         }
 
         if ((var6 > 1)) {
-          var4 = new Model(Something3dRoot.aClass140_Sub5Array2058, var6);
+          var4 = new Model(GlobalStatics_9.aClass140_Sub5Array2058, var6);
         }
       } else {
         var6 = -1;
@@ -247,7 +237,7 @@ public final class GameObjectConfig {
 
         var4 = (Model) DummyClass54.aClass93_1401.get(var7);
         if (var4 == null) {
-          var4 = Model.getModel(LinearHashTable.aClass153_1043, var7 & '\uffff', 0);
+          var4 = Model.getModel(GlobalStatics_9.aClass153_1043, var7 & '\uffff', 0);
           if (var4 == null) {
             return null;
           }
@@ -295,7 +285,7 @@ public final class GameObjectConfig {
         for (var9 = 0; this.aShortArray1477.length > var9; ++var9) {
           if (this.aByteArray1513 != null && this.aByteArray1513.length > var9) {
             var13.replaceColor(this.aShortArray1477[var9],
-              TextureSampler16.aShortArray3110[255 & this.aByteArray1513[var9]]);
+              GlobalStatics_10.aShortArray3110[255 & this.aByteArray1513[var9]]);
           } else {
             var13.replaceColor(this.aShortArray1477[var9], this.aShortArray1506[var9]);
           }
@@ -455,7 +445,7 @@ public final class GameObjectConfig {
                             this.aClass94Array1499[var2 - 30] = var1
                                 .readString();
                             if (this.aClass94Array1499[-30 + var2].method1531(
-                                TextureSampler33.aClass94_3051)) {
+                                GlobalStatics_10.aClass94_3051)) {
                               this.aClass94Array1499[-30 + var2] = null;
                             }
                           } else if (var2 == 40) {
@@ -734,7 +724,7 @@ public final class GameObjectConfig {
         boolean var2 = true;
 
         for (int var3 = 0; this.anIntArray1519.length > var3; ++var3) {
-          var2 &= LinearHashTable.aClass153_1043.method2129((byte) 64, 0,
+          var2 &= GlobalStatics_9.aClass153_1043.method2129((byte) 64, 0,
             '\uffff' & this.anIntArray1519[var3]);
         }
 
@@ -770,7 +760,7 @@ public final class GameObjectConfig {
 
         var5 = (GlModel) DummyClass54.aClass93_1401.get(var9);
         if (var5 == null) {
-          Model var10 = Model.getModel(LinearHashTable.aClass153_1043, '\uffff' & var9, 0);
+          Model var10 = Model.getModel(GlobalStatics_9.aClass153_1043, '\uffff' & var9, 0);
           if (var10 == null) {
             return null;
           }
@@ -808,7 +798,7 @@ public final class GameObjectConfig {
 
           for (var12 = 0; var8 > var12; ++var12) {
             var17 =
-              Model.getModel(LinearHashTable.aClass153_1043,
+              Model.getModel(GlobalStatics_9.aClass153_1043,
                   this.anIntArray1519[var12] & '\uffff',
                 0);
             if (var17 == null) {
@@ -816,12 +806,12 @@ public final class GameObjectConfig {
             }
 
             if (var8 > 1) {
-              Something3dRoot.aClass140_Sub5Array2058[var12] = var17;
+              GlobalStatics_9.aClass140_Sub5Array2058[var12] = var17;
             }
           }
 
           if (var8 > 1) {
-            var17 = new Model(Something3dRoot.aClass140_Sub5Array2058, var8);
+            var17 = new Model(GlobalStatics_9.aClass140_Sub5Array2058, var8);
           }
 
           assert var17 != null;
@@ -915,16 +905,16 @@ public final class GameObjectConfig {
             var12 = (this.anInt1527 << 10) + var1;
           }
 
-          SceneShadowMap var16 = (SceneShadowMap) ObjectNode.aClass93_4051
+          SceneShadowMap var16 = (SceneShadowMap) GlobalStatics_9.aClass93_4051
               .get(var12);
           GlModel var14;
           SoftwareIndexedColorSprite var15;
           if (var16 == null) {
             var14 = this.method1695(var1, false, true, var4);
             if (var14 == null) {
-              FloorUnderlay.aClass136_1413.node = null;
-              FloorUnderlay.aClass136_1413.shadow = null;
-              return FloorUnderlay.aClass136_1413;
+              GlobalStatics_8.aClass136_1413.node = null;
+              GlobalStatics_8.aClass136_1413.shadow = null;
+              return GlobalStatics_8.aClass136_1413;
             }
 
             if ((var4 == 10) && var1 > 3) {
@@ -940,7 +930,7 @@ public final class GameObjectConfig {
             var16 = new SceneShadowMap();
             var16.node = var14;
             var16.shadow = var15;
-            ObjectNode.aClass93_4051.get((byte) -93, var16, var12);
+            GlobalStatics_9.aClass93_4051.get((byte) -93, var16, var12);
           } else {
             var14 = (GlModel) var16.node;
             var15 = var16.shadow;
@@ -959,10 +949,10 @@ public final class GameObjectConfig {
           var18.method1920((this.anInt1529 == 0) && !this.aBoolean1510, true,
               true, true,
               (this.anInt1529 == 0), true, false);
-          FloorUnderlay.aClass136_1413.node = var18;
+          GlobalStatics_8.aClass136_1413.node = var18;
           var18.aBoolean3809 = var17;
-          FloorUnderlay.aClass136_1413.shadow = var15;
-          return FloorUnderlay.aClass136_1413;
+          GlobalStatics_8.aClass136_1413.shadow = var15;
+          return GlobalStatics_8.aClass136_1413;
         } else {
           if (this.anIntArray1487 != null) {
             var12 = (var4 << 3) + ((this.anInt1527 << 10) + var1);
@@ -978,12 +968,12 @@ public final class GameObjectConfig {
             var20 = false;
           }
 
-          Object var22 = ObjectNode.aClass93_4051.get(var12);
+          Object var22 = GlobalStatics_9.aClass93_4051.get(var12);
           if (var22 == null) {
             Model var21 = this.method1686(var1, var4, -1);
             if (var21 == null) {
-              FloorUnderlay.aClass136_1413.node = null;
-              return FloorUnderlay.aClass136_1413;
+              GlobalStatics_8.aClass136_1413.node = null;
+              return GlobalStatics_8.aClass136_1413;
             }
 
             var21.method2010();
@@ -1004,7 +994,7 @@ public final class GameObjectConfig {
                       -50);
             }
 
-            ObjectNode.aClass93_4051.get((byte) -89, var22, var12);
+            GlobalStatics_9.aClass93_4051.get((byte) -89, var22, var12);
           }
 
           if (var20) {
@@ -1028,8 +1018,8 @@ public final class GameObjectConfig {
             }
           }
 
-          FloorUnderlay.aClass136_1413.node = (SceneNode) var22;
-          return FloorUnderlay.aClass136_1413;
+          GlobalStatics_8.aClass136_1413.node = (SceneNode) var22;
+          return GlobalStatics_8.aClass136_1413;
         }
       }
   }
@@ -1088,9 +1078,9 @@ public final class GameObjectConfig {
         }
 
         if (var8) {
-          FloorUnderlay.aClass136_1413.shadow = var22.createShadowMap(var3);
+          GlobalStatics_8.aClass136_1413.shadow = var22.createShadowMap(var3);
         } else {
-          FloorUnderlay.aClass136_1413.shadow = null;
+          GlobalStatics_8.aClass136_1413.shadow = null;
         }
 
         if (this.aByte1505 != 0) {
@@ -1102,8 +1092,8 @@ public final class GameObjectConfig {
           var22.method1919(this.aByte1505, this.aShort1500, var23, var7, var11, var2, var4, var1);
         }
 
-        FloorUnderlay.aClass136_1413.node = var22;
-        return FloorUnderlay.aClass136_1413;
+        GlobalStatics_8.aClass136_1413.node = var22;
+        return GlobalStatics_8.aClass136_1413;
       } else {
         if (this.anIntArray1487 == null) {
           var15 = (this.anInt1527 << 10) + var6;
@@ -1148,14 +1138,14 @@ public final class GameObjectConfig {
             var17.method1941(this.aByte1505, this.aShort1500, var7, var11, var2, var4, var1, false);
         }
 
-        FloorUnderlay.aClass136_1413.node = var17;
-        return FloorUnderlay.aClass136_1413;
+        GlobalStatics_8.aClass136_1413.node = var17;
+        return GlobalStatics_8.aClass136_1413;
       }
   }
 
   public GameString method1698(GameString var1, int var2, int var3 ) {
     if (var2 != -23085) {
-        GameObjectConfig.method1688(108, -11, 57);
+        GlobalStatics_8.method1688(108, -11, 57);
       }
 
       if (this.aClass130_1501 != null) {
@@ -1164,28 +1154,6 @@ public final class GameObjectConfig {
       } else {
         return var1;
       }
-  }
-
-  public static void method1687(int var0) {
-    GameObjectConfig.aClass94_1508 = null;
-      GameObjectConfig.aClass94_1523 = null;
-      GameObjectConfig.anIntArrayArrayArray1497 = null;
-      GameObjectConfig.aBooleanArray1490 = null;
-      GameObjectConfig.aClass94_1509 = null;
-      if (var0 != -11) {
-        GameObjectConfig.anInt1521 = -96;
-      }
-  }
-
-  public static SomethingScene method1688(int var0, int var1, int var2) {
-    SceneGraphTile var3 = GLStatics.sceneGraphTiles[var0][var1][var2];
-    if (var3 == null) {
-      return null;
-    } else {
-      SomethingScene var4 = var3.aClass72_2245;
-      var3.aClass72_2245 = null;
-      return var4;
-    }
   }
 
 }

@@ -8,16 +8,6 @@ import com.jagex.runescape.node.SubNode;
 
 public final class SomethingQuickChat extends SubNode {
 
-  private static GameString aClass94_3578 = GameStringStatics.create("Loaded title screen");
-  public static int[] anIntArray3565 = new int[32];
-  public static int anInt3569;
-  public static ObjectCache aClass93_3572 = new ObjectCache(64);
-  public static GameString aClass94_3573 = GameStringStatics.create(" )2> <col=00ffff>");
-  public static GameString TITLE_BACKGROUND = GameStringStatics.create("titlebg");
-  public static GameString aClass94_3576 = GameStringStatics.create("name_icons");
-  public static GameString aClass94_3577 = GameStringStatics.create(": ");
-  public static MidiSomething aClass83_3579;
-  public static GameString aClass94_3575 = SomethingQuickChat.aClass94_3578;
   public int[] anIntArray3567;
   public boolean aBoolean3568 = true;
   private int[] anIntArray3566;
@@ -28,7 +18,7 @@ public final class SomethingQuickChat extends SubNode {
     if (!var3) {
         if (this.anIntArray3566 != null) {
           for (int var4 = 0; this.anIntArray3566.length > var4 && (var4 < var2.length); ++var4) {
-            int var5 = GameException.anIntArray2113[this.method550(89, var4)];
+            int var5 = GlobalStatics_8.anIntArray2113[this.method550(89, var4)];
             if ((var5 > 0)) {
               var1.method739(0, var5, var2[var4]);
             }
@@ -68,7 +58,7 @@ public final class SomethingQuickChat extends SubNode {
 
   public int method549(int var1, int var2, int var3 ) {
     if (var1 > -99) {
-        SomethingQuickChat.aClass94_3577 = null;
+        GlobalStatics_9.aClass94_3577 = null;
       }
 
       return this.anIntArray3566 != null
@@ -84,7 +74,7 @@ public final class SomethingQuickChat extends SubNode {
     if (this.anIntArray3566 != null
           && (var2 >= 0) && var2 <= this.anIntArray3566.length) {
         if (var1 <= 33) {
-          SomethingQuickChat.aClass94_3578 = null;
+          GlobalStatics_9.aClass94_3578 = null;
         }
 
         return this.anIntArray3566[var2];
@@ -145,12 +135,12 @@ public final class SomethingQuickChat extends SubNode {
     if (var1 == -1) {
         GameString var2 = GameStringStatics.createString(80);
         if (this.strings == null) {
-          return TextureSampler3.aClass94_3357;
+          return GlobalStatics_9.aClass94_3357;
         } else {
           var2.append(this.strings[0]);
 
           for (int var3 = 1; var3 < this.strings.length; ++var3) {
-            var2.append(GameStub.aClass94_9);
+            var2.append(GlobalStatics_8.aClass94_9);
             var2.append(this.strings[var3]);
           }
 
@@ -170,30 +160,14 @@ public final class SomethingQuickChat extends SubNode {
       if (this.anIntArray3566 != null) {
         for (int var4 = 0; var4 < this.anIntArray3566.length; ++var4) {
           string.append(this.strings[var4]);
-          string.append(GZipDecompressor.method1124(this.anIntArrayArray3570[var4],
-            var2.readVariableLengthValue(WidgetAccess.anIntArray2209[this.anIntArray3566[var4]],
+          string.append(GlobalStatics_9.method1124(this.anIntArrayArray3570[var4],
+            var2.readVariableLengthValue(GlobalStatics_10.anIntArray2209[this.anIntArray3566[var4]],
               var1 - 28021), this.anIntArray3566[var4], false));
         }
       }
 
       string.append(this.strings[-1 + this.strings.length]);
       return string.pack();
-  }
-
-  public static void method547(int var0) {
-    if (var0 != -2951) {
-        SomethingQuickChat.aClass94_3576 = null;
-      }
-
-      SomethingQuickChat.aClass94_3578 = null;
-      SomethingQuickChat.aClass93_3572 = null;
-      SomethingQuickChat.aClass94_3575 = null;
-      SomethingQuickChat.TITLE_BACKGROUND = null;
-      SomethingQuickChat.aClass94_3577 = null;
-      SomethingQuickChat.aClass94_3576 = null;
-      SomethingQuickChat.aClass94_3573 = null;
-      SomethingQuickChat.aClass83_3579 = null;
-      SomethingQuickChat.anIntArray3565 = null;
   }
 
 }

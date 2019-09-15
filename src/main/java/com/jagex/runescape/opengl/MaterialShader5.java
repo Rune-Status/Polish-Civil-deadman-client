@@ -53,9 +53,9 @@ public final class MaterialShader5 implements MaterialShader {
       GlRenderer.GL.glLoadIdentity();
       GlRenderer.GL.glRotatef(180.0F, 1.0F, 0.0F, 0.0F);
       GlRenderer.GL
-          .glRotatef(GroundItem.anInt2938 * 360.0F / 2048.0F, 1.0F, 0.0F, 0.0F);
+          .glRotatef(GlobalStatics_9.anInt2938 * 360.0F / 2048.0F, 1.0F, 0.0F, 0.0F);
       GlRenderer.GL
-          .glRotatef(360.0F * TextureSampler9.anInt3103 / 2048.0F, 0.0F, 1.0F, 0.0F);
+          .glRotatef(360.0F * GlobalStatics_9.anInt3103 / 2048.0F, 0.0F, 1.0F, 0.0F);
       GlRenderer.GL.glTranslatef((-BZipDecompressorState.anInt144),
           (-GlobalStatics_6.anInt3695), (-GlobalStatics_0.anInt2587));
       GlRenderer.GL.glTexGenfv(8192, 9474, this.aFloatArray2174, 0);
@@ -118,49 +118,49 @@ public final class MaterialShader5 implements MaterialShader {
   }
 
   public static void method1626(byte var0) {
-    SomethingQuickChat.aClass93_3572.method1524(3);
+    GlobalStatics_9.aClass93_3572.method1524(3);
       DummyClass15.aClass93_1874.method1524(3);
       if (var0 <= -124) {
-        MouseRecorder.aClass93_1013.method1524(3);
+        GlobalStatics_9.aClass93_1013.method1524(3);
       }
   }
 
   public static boolean method1627(int var0, byte var1) {
     GameWorld var2 = GlobalStatics_6.method130(97, var0);
       if (var2 != null) {
-        if (SignLink.anInt1214 != 1 && (SignLink.anInt1214 != 2)
+        if (GlobalStatics_9.anInt1214 != 1 && (GlobalStatics_9.anInt1214 != 2)
           && (GlobalStatics_4.usageLocation != 2)) {
-          GameString var9 = GameStub.aClass94_8;
+          GameString var9 = GlobalStatics_8.aClass94_8;
           if (GlobalStatics_4.usageLocation != 0) {
-            var9 = RenderAnimation.concat(new GameString[] {
-              DummyClass9.aClass94_4007, SomethingScene.toString(var2.anInt2621 + 7000)
+            var9 = GlobalStatics_9.concat(new GameString[] {
+              DummyClass9.aClass94_4007, GlobalStatics_9.toString(var2.anInt2621 + 7000)
             });
           }
 
           if (var1 > -2) {
             return false;
           } else {
-            GameString var4 = GameStub.aClass94_8;
+            GameString var4 = GlobalStatics_8.aClass94_8;
             if (DummyClass7.settings != null) {
-              var4 = RenderAnimation.concat(
-                new GameString[] {TriChromaticImageCache.aClass94_1380, DummyClass7.settings});
+              var4 = GlobalStatics_9.concat(
+                new GameString[] {GlobalStatics_10.aClass94_1380, DummyClass7.settings});
             }
 
-            GameString var5 = RenderAnimation.concat(new GameString[] {
-              DummyClass45.aClass94_992, var2.aClass94_2625, var9, SomethingPacket151.aClass94_2608,
-              SomethingScene.toString(TriChromaticImageBuffer.languageId),
+            GameString var5 = GlobalStatics_9.concat(new GameString[] {
+              DummyClass45.aClass94_992, var2.aClass94_2625, var9, GlobalStatics_9.aClass94_2608,
+              GlobalStatics_9.toString(GlobalStatics_10.languageId),
                 MaterialShader5.aClass94_2175,
-              SomethingScene.toString(MonoChromaticImageBuffer.affiliateId), var4,
-              HashTableIterator.aClass94_1133,
-              !Structure.aBoolean3641 ? Something3d.ZERO : DummyClass28.aClass94_339,
+              GlobalStatics_9.toString(GlobalStatics_9.affiliateId), var4,
+              GlobalStatics_9.aClass94_1133,
+              !GlobalStatics_9.aBoolean3641 ? GlobalStatics_9.ZERO : DummyClass28.aClass94_339,
               DummyClass36.aClass94_2610,
-              !DummyClass8.aBoolean4018 ? Something3d.ZERO : DummyClass28.aClass94_339,
+              !DummyClass8.aBoolean4018 ? GlobalStatics_9.ZERO : DummyClass28.aClass94_339,
               GlobalStatics_5.aClass94_1617,
-              ProjectileNode.aBoolean3779 ? DummyClass28.aClass94_339 : Something3d.ZERO
+              GlobalStatics_9.aBoolean3779 ? DummyClass28.aClass94_339 : GlobalStatics_9.ZERO
             });
 
             try {
-              SomethingTilek.client.getAppletContext()
+              GlobalStatics_9.client.getAppletContext()
                 .showDocument(var5.method1527(false), "_self");
             } catch (Exception var7) {
               return false;
@@ -174,8 +174,8 @@ public final class MaterialShader5 implements MaterialShader {
           GlobalStatics_7.anInt2451 = var2.anInt2621;
           if ((GlobalStatics_4.usageLocation != 0)) {
             DummyClass11.anInt2036 = '\u9c40' + GlobalStatics_7.anInt2451;
-            Projectile.anInt2894 = DummyClass11.anInt2036;
-            GameWorldSomething.anInt506 = GlobalStatics_7.anInt2451 + '\uc350';
+            GlobalStatics_9.anInt2894 = DummyClass11.anInt2036;
+            GlobalStatics_9.anInt506 = GlobalStatics_7.anInt2451 + '\uc350';
           }
 
           return true;
@@ -189,40 +189,40 @@ public final class MaterialShader5 implements MaterialShader {
                                byte var6) {
     int var9;
       int var12;
-      if ((Something3d.anInt3012 == 0)) {
+      if ((GlobalStatics_9.anInt3012 == 0)) {
         int var10 = GLStatics.screenLowerY;
         var9 = DummyClass3.screenUpperY;
-        int var8 = Unsure.screenUpperX;
+        int var8 = GlobalStatics_10.screenUpperX;
         int var7 = DummyClass17.screenLowerX;
         int var11 = (var5 - var3) * (-var7 + var8) / var1 + var7;
         var12 = var9 + (var10 - var9) * (-var0 + var4) / var2;
-        if (SceneNode.aBoolean1837 && ((64 & Something3dRoot.anInt2051) != 0)) {
+        if (GlobalStatics_9.aBoolean1837 && ((64 & GlobalStatics_9.anInt2051) != 0)) {
           Widget var13 =
             GlobalStatics_2
-                .method638((byte) -19, ScriptState.anInt872, Widget.anInt278);
+                .method638((byte) -19, GlobalStatics_9.anInt872, GlobalStatics_10.anInt278);
           if (var13 != null) {
-            ScriptState.method1177(GlobalStatics_6.anInt1887, 0L, (byte) -53,
-              WorldMapLabel.aClass94_1724, var11, (short) 11, Parameter.aClass94_3621, var12);
+            GlobalStatics_9.method1177(GlobalStatics_6.anInt1887, 0L, (byte) -53,
+              GlobalStatics_10.aClass94_1724, var11, (short) 11, GlobalStatics_9.aClass94_3621, var12);
           } else {
-            SceneSomething.method958((byte) -87);
+            GlobalStatics_9.method958((byte) -87);
           }
         } else {
           ++GlobalStatics_2.anInt2571;
           if ((GlobalStatics_5.gameId == 1)) {
-            ScriptState.method1177(-1, 0L, (byte) -62, GroundItemNode.EMPTY_STRING, var11,
+            GlobalStatics_9.method1177(-1, 0L, (byte) -62, GlobalStatics_9.EMPTY_STRING, var11,
               (short) 36, GlTexture2d.aClass94_3762, var12);
           }
 
-          ScriptState.method1177(-1, 0L, (byte) -75, GroundItemNode.EMPTY_STRING, var11, (short) 60,
-            TextureSampler32.walkTooltip, var12);
+          GlobalStatics_9.method1177(-1, 0L, (byte) -75, GlobalStatics_9.EMPTY_STRING, var11, (short) 60,
+            GlobalStatics_10.walkTooltip, var12);
         }
       }
 
       if (var6 > 48) {
         long var25 = -1L;
 
-        for (var9 = 0; MapScene.anInt59 > var9; ++var9) {
-          long var26 = TextureSampler38.entityKeys[var9];
+        for (var9 = 0; GlobalStatics_9.anInt59 > var9; ++var9) {
+          long var26 = GlobalStatics_10.entityKeys[var9];
           var12 = (int) var26 & 127;
           int var14 = ((int) var26 & 2009320690) >> 29;
           int var15 = (int) (var26 >>> 32) & Integer.MAX_VALUE;
@@ -230,7 +230,7 @@ public final class MaterialShader5 implements MaterialShader {
           if ((var26 != var25)) {
             var25 = var26;
             int var18;
-            if ((var14 == 2) && GlobalStatics_5.method2096(GameWorldSomething.currentPlane,
+            if ((var14 == 2) && GlobalStatics_5.method2096(GlobalStatics_9.currentPlane,
               var12, var27, var26)) {
               GameObjectConfig var16 = DummyClass11.method2207(4, var15);
               if (var16.anIntArray1524 != null) {
@@ -241,24 +241,24 @@ public final class MaterialShader5 implements MaterialShader {
                 continue;
               }
 
-              if ((Something3d.anInt3012 == 1)) {
-                ScriptState.method1177(DummyClass54.anInt1403, var26, (byte) -58,
-                  RenderAnimation.concat(new GameString[] {
-                    RenderAnimation.aClass94_378, SomethingQuickChat.aClass94_3573,
+              if ((GlobalStatics_9.anInt3012 == 1)) {
+                GlobalStatics_9.method1177(DummyClass54.anInt1403, var26, (byte) -58,
+                  GlobalStatics_9.concat(new GameString[] {
+                    GlobalStatics_9.aClass94_378, GlobalStatics_9.aClass94_3573,
                     var16.aClass94_1504
-                  }), var12, (short) 14, TextureSampler14.aClass94_3388, var27);
+                  }), var12, (short) 14, GlobalStatics_10.aClass94_3388, var27);
                 ++GLStatics.anInt715;
-              } else if (!SceneNode.aBoolean1837) {
+              } else if (!GlobalStatics_9.aBoolean1837) {
                 ++DummyClass28.anInt336;
                 GameString[] var29 = var16.aClass94Array1499;
                 if (DummyClass24.aBoolean1656) {
-                  var29 = SomethingPacket151.method822(19406, var29);
+                  var29 = GlobalStatics_9.method822(19406, var29);
                 }
 
                 if (var29 != null) {
                   for (var18 = 4; var18 >= 0; --var18) {
                     if (var29[var18] != null) {
-                      ++StringNode0.anInt2337;
+                      ++GlobalStatics_9.anInt2337;
                       short var19 = 0;
                       if (var18 == 0) {
                         var19 = 42;
@@ -289,28 +289,28 @@ public final class MaterialShader5 implements MaterialShader {
                         var19 = 1001;
                       }
 
-                      ScriptState.method1177(var20, var26, (byte) -91, RenderAnimation.concat(
+                      GlobalStatics_9.method1177(var20, var26, (byte) -91, GlobalStatics_9.concat(
                         new GameString[] {DummyClass17.aClass94_1826, var16.aClass94_1504}), var12,
                         var19, var29[var18], var27);
                     }
                   }
                 }
 
-                ScriptState.method1177(WorldMapLabel.anInt1719, var16.anInt1527, (byte) -26,
-                  RenderAnimation.concat(
+                GlobalStatics_9.method1177(GlobalStatics_10.anInt1719, var16.anInt1527, (byte) -26,
+                  GlobalStatics_9.concat(
                     new GameString[] {DummyClass17.aClass94_1826, var16.aClass94_1504}), var12,
                   (short) 1004, GlobalStatics_0.aClass94_1180, var27);
               } else {
-                Parameter var17 = LinearHashTable.anInt1038 == -1 ?
+                Parameter var17 = GlobalStatics_9.anInt1038 == -1 ?
                   null :
-                  GlobalStatics_0.method1210(64, LinearHashTable.anInt1038);
-                if ((Something3dRoot.anInt2051 & 4) != 0 && (var17 == null
-                  || (var16.method1691(var17.anInt3614, LinearHashTable.anInt1038, (byte) 98) != var17.anInt3614))) {
-                  ScriptState.method1177(GlobalStatics_6.anInt1887, var26, (byte) -77,
-                    RenderAnimation.concat(new GameString[] {
-                      DummyClass59.aClass94_676, SomethingQuickChat.aClass94_3573,
+                  GlobalStatics_0.method1210(64, GlobalStatics_9.anInt1038);
+                if ((GlobalStatics_9.anInt2051 & 4) != 0 && (var17 == null
+                  || (var16.method1691(var17.anInt3614, GlobalStatics_9.anInt1038, (byte) 98) != var17.anInt3614))) {
+                  GlobalStatics_9.method1177(GlobalStatics_6.anInt1887, var26, (byte) -77,
+                    GlobalStatics_9.concat(new GameString[] {
+                      DummyClass59.aClass94_676, GlobalStatics_9.aClass94_3573,
                       var16.aClass94_1504
-                    }), var12, (short) 38, Parameter.aClass94_3621, var27);
+                    }), var12, (short) 38, GlobalStatics_9.aClass94_3621, var27);
                   ++DummyClass9.anInt4011;
                 }
               }
@@ -323,7 +323,7 @@ public final class MaterialShader5 implements MaterialShader {
             NPC var36;
             int var37;
             if ((var14 == 1)) {
-              NPC var31 = TextureSampler5.npcs[var15];
+              NPC var31 = GlobalStatics_8.npcs[var15];
               if (((var31.config.size & 1) == 0) && ((127 & var31.anInt2819) == 0)
                 && ((var31.anInt2829 & 127) == 0)
                 || (var31.config.size & 1) == 1 && (127 & var31.anInt2819) == 64 &&
@@ -333,7 +333,7 @@ public final class MaterialShader5 implements MaterialShader {
                 var18 = -((-1 + var31.config.size) * 64) + var31.anInt2829;
 
                 for (var37 = 0; var37 < DummyClass6.anInt2046; ++var37) {
-                  var36 = TextureSampler5.npcs[GlobalStatics_2.anIntArray347[var37]];
+                  var36 = GlobalStatics_8.npcs[GlobalStatics_2.anIntArray347[var37]];
                   var21 = -(var36.config.size * 64) + 64 + var36.anInt2819;
                   var22 = var36.anInt2829 - (var36.config.size * 64) + 64;
                   if (var31 != var36 && (var21 >= var33)
@@ -347,7 +347,7 @@ public final class MaterialShader5 implements MaterialShader {
                 }
 
                 for (var37 = 0; DummyClass13.anInt2022 > var37; ++var37) {
-                  var38 = TextureSampler0.players[DummyClass42.anIntArray887[var37]];
+                  var38 = GlobalStatics_9.players[DummyClass42.anIntArray887[var37]];
                   var21 = var38.anInt2819 + 64 - (64 * var38.getSize());
                   var22 = var38.anInt2829 - (var38.getSize() * 64 - 64);
                   if (var21 >= var33 && (var38.getSize() <= (var31.config.size
@@ -355,7 +355,7 @@ public final class MaterialShader5 implements MaterialShader {
                       var21 - var33 >> 7))) && (var22 >= var18)
                       && var38.getSize()
                       <= -(-var18 + var22 >> 7) + var31.config.size) {
-                    TextureSampler13
+                    GlobalStatics_9
                         .method312(DummyClass42.anIntArray887[var37], 5, var27, var38,
                       var12);
                   }
@@ -366,14 +366,14 @@ public final class MaterialShader5 implements MaterialShader {
             }
 
             if (var14 == 0) {
-              Player var30 = TextureSampler0.players[var15];
+              Player var30 = GlobalStatics_9.players[var15];
               if ((127 & var30.anInt2819) == 64 && (127 & var30.anInt2829)
                   == 64) {
                 var33 = var30.anInt2819 - (64 * (-1 + var30.getSize()));
                 var18 = var30.anInt2829 + 64 - (var30.getSize() * 64);
 
                 for (var37 = 0; var37 < DummyClass6.anInt2046; ++var37) {
-                  var36 = TextureSampler5.npcs[GlobalStatics_2.anIntArray347[var37]];
+                  var36 = GlobalStatics_8.npcs[GlobalStatics_2.anIntArray347[var37]];
                   var21 = var36.anInt2819 - (var36.config.size * 64) + 64;
                   var22 = var36.anInt2829 - 64 * var36.config.size + 64;
                   if (var21 >= var33
@@ -386,46 +386,46 @@ public final class MaterialShader5 implements MaterialShader {
                 }
 
                 for (var37 = 0; var37 < DummyClass13.anInt2022; ++var37) {
-                  var38 = TextureSampler0.players[DummyClass42.anIntArray887[var37]];
+                  var38 = GlobalStatics_9.players[DummyClass42.anIntArray887[var37]];
                   var21 = var38.anInt2819 - (var38.getSize() - 1) * 64;
                   var22 = var38.anInt2829 - (-64 + 64 * var38.getSize());
                   if (var38 != var30 && (var33 <= var21)
                       && var38.getSize() <= var30.getSize() - (var21 - var33
                       >> 7) && (var22 >= var18) && (var38.getSize() <= (
                       -(var22 - var18 >> 7) + var30.getSize()))) {
-                    TextureSampler13.method312(DummyClass42.anIntArray887[var37], 9, var27, var38,
+                    GlobalStatics_9.method312(DummyClass42.anIntArray887[var37], 9, var27, var38,
                       var12);
                   }
                 }
               }
 
-              TextureSampler13.method312(var15, 31, var27, var30, var12);
+              GlobalStatics_9.method312(var15, 31, var27, var30, var12);
             }
 
             if ((var14 == 3)) {
               Deque var28 =
-                TextureSampler0.groundItems[GameWorldSomething.currentPlane][var12][var27];
+                GlobalStatics_9.groundItems[GlobalStatics_9.currentPlane][var12][var27];
               if (var28 != null) {
                 for (GroundItemNode var32 = (GroundItemNode) var28.method1212();
                     var32 != null; var32 = (GroundItemNode) var28.method1219(41)) {
                   var18 = var32.aClass140_Sub7_3676.anInt2936;
                   ItemConfig var40 = DummyClass35.getItemConfig(var18, (byte) 71);
-                  if ((Something3d.anInt3012 == 1)) {
-                    ++SomethingMidiFile.anInt2290;
-                    ScriptState.method1177(DummyClass54.anInt1403, var18, (byte) -75,
-                      RenderAnimation.concat(new GameString[] {
-                        RenderAnimation.aClass94_378, GlobalStatics_0.aClass94_1699, var40.aClass94_770
-                      }), var12, (short) 33, TextureSampler14.aClass94_3388, var27);
-                  } else if (!SceneNode.aBoolean1837) {
-                    ++Projectile.anInt2901;
+                  if ((GlobalStatics_9.anInt3012 == 1)) {
+                    ++GlobalStatics_9.anInt2290;
+                    GlobalStatics_9.method1177(DummyClass54.anInt1403, var18, (byte) -75,
+                      GlobalStatics_9.concat(new GameString[] {
+                        GlobalStatics_9.aClass94_378, GlobalStatics_0.aClass94_1699, var40.aClass94_770
+                      }), var12, (short) 33, GlobalStatics_10.aClass94_3388, var27);
+                  } else if (!GlobalStatics_9.aBoolean1837) {
+                    ++GlobalStatics_9.anInt2901;
                     GameString[] var34 = var40.aClass94Array801;
                     if (DummyClass24.aBoolean1656) {
-                      var34 = SomethingPacket151.method822(19406, var34);
+                      var34 = GlobalStatics_9.method822(19406, var34);
                     }
 
                     for (var21 = 4; (var21 >= 0); --var21) {
                       if (var34 != null && var34[var21] != null) {
-                        ++GameCanvas.anInt27;
+                        ++GlobalStatics_8.anInt27;
                         byte var35 = 0;
                         if ((var21 == 0)) {
                           var35 = 21;
@@ -456,28 +456,28 @@ public final class MaterialShader5 implements MaterialShader {
                           var35 = 24;
                         }
 
-                        ScriptState.method1177(var23, var18, (byte) -43,
-                          RenderAnimation.concat(
-                            new GameString[] {TextureSampler6.aClass94_3042, var40.aClass94_770}),
+                        GlobalStatics_9.method1177(var23, var18, (byte) -43,
+                          GlobalStatics_9.concat(
+                            new GameString[] {GlobalStatics_9.aClass94_3042, var40.aClass94_770}),
                           var12, var35, var34[var21], var27);
                       }
                     }
 
-                    ScriptState.method1177(WorldMapLabel.anInt1719, var18, (byte) -43,
-                      RenderAnimation.concat(
-                        new GameString[] {TextureSampler6.aClass94_3042, var40.aClass94_770}),
+                    GlobalStatics_9.method1177(GlobalStatics_10.anInt1719, var18, (byte) -43,
+                      GlobalStatics_9.concat(
+                        new GameString[] {GlobalStatics_9.aClass94_3042, var40.aClass94_770}),
                       var12, (short) 1002, GlobalStatics_0.aClass94_1180, var27);
                   } else {
-                    Parameter var39 = LinearHashTable.anInt1038 == -1 ?
+                    Parameter var39 = GlobalStatics_9.anInt1038 == -1 ?
                       null :
-                      GlobalStatics_0.method1210(64, LinearHashTable.anInt1038);
-                    if ((Something3dRoot.anInt2051 & 1) != 0 && (var39 == null
-                      || (var40.method1115(var39.anInt3614, 100, LinearHashTable.anInt1038) != var39.anInt3614))) {
+                      GlobalStatics_0.method1210(64, GlobalStatics_9.anInt1038);
+                    if ((GlobalStatics_9.anInt2051 & 1) != 0 && (var39 == null
+                      || (var40.method1115(var39.anInt3614, 100, GlobalStatics_9.anInt1038) != var39.anInt3614))) {
                       ++GlobalStatics_7.anInt1439;
-                      ScriptState.method1177(GlobalStatics_6.anInt1887, var18, (byte) -70,
-                        RenderAnimation.concat(new GameString[] {
+                      GlobalStatics_9.method1177(GlobalStatics_6.anInt1887, var18, (byte) -70,
+                        GlobalStatics_9.concat(new GameString[] {
                           DummyClass59.aClass94_676, GlobalStatics_0.aClass94_1699, var40.aClass94_770
-                        }), var12, (short) 39, Parameter.aClass94_3621, var27);
+                        }), var12, (short) 39, GlobalStatics_9.aClass94_3621, var27);
                     }
                   }
                 }
@@ -553,7 +553,7 @@ public final class MaterialShader5 implements MaterialShader {
       }
 
       for (int var6 = var3; (var1 >= var6); ++var6) {
-        TextureSampler18
+        GlobalStatics_10
             .method282(DummyClass35.anIntArrayArray663[var6], var4, 121, var2, var5);
       }
   }

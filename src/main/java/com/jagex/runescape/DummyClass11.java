@@ -18,14 +18,14 @@ public final class DummyClass11 {
 
 
   public static void method2203(Player var0, int var1) {
-    AreaSoundEffect var2 = (AreaSoundEffect) ObjectNode.aClass130_4046.get(var0.name.toBase37());
+    AreaSoundEffect var2 = (AreaSoundEffect) GlobalStatics_9.aClass130_4046.get(var0.name.toBase37());
       if (var1 != 8) {
         DummyClass11.writeUID(null, -44);
       }
 
       if (var2 != null) {
         if (var2.aClass3_Sub24_Sub1_2312 != null) {
-          MonoChromaticImageBuffer.aClass3_Sub24_Sub2_2563.method461(var2.aClass3_Sub24_Sub1_2312);
+          GlobalStatics_9.aClass3_Sub24_Sub2_2563.method461(var2.aClass3_Sub24_Sub1_2312);
           var2.aClass3_Sub24_Sub1_2312 = null;
         }
 
@@ -34,10 +34,10 @@ public final class DummyClass11 {
   }
 
   public static void writeUID(Buffer var0, int var1) {
-    if (LinearHashTable.uidFile != null) {
+    if (GlobalStatics_9.uidFile != null) {
         try {
-          LinearHashTable.uidFile.seek(-117, 0L);
-          LinearHashTable.uidFile.write(var0.bytes, var0.position, -903171152, 24);
+          GlobalStatics_9.uidFile.seek(-117, 0L);
+          GlobalStatics_9.uidFile.write(var0.bytes, var0.position, -903171152, 24);
         } catch (Exception var3) {
         }
       }
@@ -68,7 +68,7 @@ public final class DummyClass11 {
       GameObjectConfig var2 = (GameObjectConfig) DummyCanvas.aClass93_21.get(
           var1);
       if (var2 == null) {
-        byte[] var3 = DummyClass52.aClass153_1171.getBytes(TextureSampler36.method340(var1, -51),
+        byte[] var3 = DummyClass52.aClass153_1171.getBytes(GlobalStatics_10.method340(var1, -51),
           GlobalStatics_2.method893(var1, (byte) 110));
         var2 = new GameObjectConfig();
         var2.anInt1527 = var1;

@@ -92,7 +92,7 @@ public class GlobalStatics_2 {
     }
 
     DummyClass50.aClass13_1139.clear();
-    SomethingTilek.aClass13_1666.clear();
+    GlobalStatics_9.aClass13_1666.clear();
   }
 
   public static void method2037(int var0, int var1, boolean var2, boolean var3,
@@ -211,8 +211,8 @@ public class GlobalStatics_2 {
 
   public static SoftwareDirectColorSprite method562(FileUnpacker var0, int var1, int var2,
                                                    byte var3) {
-    return SomethingTexture4.loadSprites(var0, var1, var2, -30901) ?
-        (var3 != 39 ? null : Parameter.method578(var3 ^ 84)) :
+    return GlobalStatics_9.loadSprites(var0, var1, var2, -30901) ?
+        (var3 != 39 ? null : GlobalStatics_9.method578(var3 ^ 84)) :
         null;
   }
 
@@ -227,25 +227,25 @@ public class GlobalStatics_2 {
 
   public static void loadSettings(SignLink var0, int var1) {
     GlobalStatics_4.brightnessSetting = 3;
-      SceneSomething.method957(96, true);
+      GlobalStatics_9.method957(96, true);
       aBoolean3604 = true;
       TextureSampler17.aBoolean3184 = true;
       GLStatics.aBoolean1685 = true;
-      Parameter.anInt3622 = 0;
-      TextureSampler21.anInt3071 = 0;
-      Keyboard.aBoolean1905 = true;
-      GameWorld.aBoolean2623 = true;
-      Widget.aBoolean236 = true;
+      GlobalStatics_9.anInt3622 = 0;
+      GlobalStatics_10.anInt3071 = 0;
+      GlobalStatics_9.aBoolean1905 = true;
+      GlobalStatics_9.aBoolean2623 = true;
+      GlobalStatics_10.aBoolean236 = true;
       DummyClass28.anInt340 = 127;
       DummyClass35.aBoolean661 = true;
-      Projectile.aBoolean2910 = true;
+      GlobalStatics_9.aBoolean2910 = true;
       GlobalStatics_3.anInt2378 = 0;
       GLStatics.anInt1137 = 2;
-      TextureSampler0.aBoolean3275 = true;
+      GlobalStatics_9.aBoolean3275 = true;
       GLStatics.useBumpMaps = true;
       BZipDecompressorState.anInt120 = 255;
-      SceneSomething.aBoolean488 = true;
-      GroundItemNode.anInt3671 = 0;
+      GlobalStatics_9.aBoolean488 = true;
+      GlobalStatics_9.anInt3671 = 0;
       FileOnDisk var2 = null;
       GlobalStatics_7.anInt2453 = 127;
       if (GlobalStatics_6.anInt3492 >= 96) {
@@ -255,7 +255,7 @@ public class GlobalStatics_2 {
       }
 
       GlobalStatics_0.anInt2148 = var1;
-      TriChromaticImageBuffer.anInt2488 = 0;
+      GlobalStatics_10.anInt2488 = 0;
       aBoolean346 = false;
       DummyClass4.aBoolean3004 = true;
       GlobalStatics_0.safemode = false;
@@ -266,7 +266,7 @@ public class GlobalStatics_2 {
         SignLinkRequest var3 = var0.getSettings("runescape", 12);
 
         while (var3.status == 0) {
-          TextureSampler25.sleep(1L);
+          GlobalStatics_10.sleep(1L);
         }
 
         if ((var3.status == 1)) {
@@ -295,43 +295,43 @@ public class GlobalStatics_2 {
   }
 
   public static void method565(byte var0, int var1, int var2) {
-    ProceduralTexture.anInt1150 = -TextureSampler37.anInt3256 + var1;
+    GlobalStatics_9.anInt1150 = -GlobalStatics_10.anInt3256 + var1;
       if (var0 != 86) {
         anIntArray3607 = null;
       }
 
       int var3 =
-        -((int) (SomethingWorldMapy.aClass11_3551.anInt168 / GlobalStatics_4.aFloat727))
-          + ProceduralTexture.anInt1150;
+        -((int) (GlobalStatics_9.aClass11_3551.anInt168 / GlobalStatics_4.aFloat727))
+          + GlobalStatics_9.anInt1150;
       int var4 =
-        ProceduralTexture.anInt1150 + (int) (SomethingWorldMapy.aClass11_3551.anInt168
+        GlobalStatics_9.anInt1150 + (int) (GlobalStatics_9.aClass11_3551.anInt168
           / GlobalStatics_4.aFloat727);
       if (var3 < 0) {
-        ProceduralTexture.anInt1150 =
-          (int) (SomethingWorldMapy.aClass11_3551.anInt168 / GlobalStatics_4.aFloat727);
+        GlobalStatics_9.anInt1150 =
+          (int) (GlobalStatics_9.aClass11_3551.anInt168 / GlobalStatics_4.aFloat727);
       }
 
-      TextureSampler13.anInt3362 = DummyClass58.anInt1460 - 1 + MapScene.anInt65 - var2;
+      GlobalStatics_9.anInt3362 = DummyClass58.anInt1460 - 1 + GlobalStatics_9.anInt65 - var2;
       int var6 =
-        (int) (SomethingWorldMapy.aClass11_3551.anInt193 / GlobalStatics_4.aFloat727)
-          + TextureSampler13.anInt3362;
+        (int) (GlobalStatics_9.aClass11_3551.anInt193 / GlobalStatics_4.aFloat727)
+          + GlobalStatics_9.anInt3362;
       int var5 =
-        TextureSampler13.anInt3362 - (int) (SomethingWorldMapy.aClass11_3551.anInt193
+        GlobalStatics_9.anInt3362 - (int) (GlobalStatics_9.aClass11_3551.anInt193
           / GlobalStatics_4.aFloat727);
       if (var4 > DummyClass30.anInt455) {
-        ProceduralTexture.anInt1150 =
-          DummyClass30.anInt455 - ((int) (SomethingWorldMapy.aClass11_3551.anInt168
+        GlobalStatics_9.anInt1150 =
+          DummyClass30.anInt455 - ((int) (GlobalStatics_9.aClass11_3551.anInt168
             / GlobalStatics_4.aFloat727));
       }
 
       if ((var5 < 0)) {
-        TextureSampler13.anInt3362 =
-          (int) (SomethingWorldMapy.aClass11_3551.anInt193 / GlobalStatics_4.aFloat727);
+        GlobalStatics_9.anInt3362 =
+          (int) (GlobalStatics_9.aClass11_3551.anInt193 / GlobalStatics_4.aFloat727);
       }
 
       if ((DummyClass58.anInt1460 < var6)) {
-        TextureSampler13.anInt3362 =
-          -((int) (SomethingWorldMapy.aClass11_3551.anInt193 / GlobalStatics_4.aFloat727))
+        GlobalStatics_9.anInt3362 =
+          -((int) (GlobalStatics_9.aClass11_3551.anInt193 / GlobalStatics_4.aFloat727))
             + DummyClass58.anInt1460;
       }
   }
@@ -347,7 +347,7 @@ public class GlobalStatics_2 {
   }
 
   public static void method518(Player var0, int var1) {
-    AreaSoundEffect var2 = (AreaSoundEffect) ObjectNode.aClass130_4046
+    AreaSoundEffect var2 = (AreaSoundEffect) GlobalStatics_9.aClass130_4046
         .get(var0.name.toBase37());
     if (var1 >= -85) {
       method523(40, -17, -52, -32, 9, -51, -85, -84, -19);
@@ -356,9 +356,9 @@ public class GlobalStatics_2 {
     if (var2 != null) {
       var2.method134(1);
     } else {
-      SceneSomething2.method1286(var0.waypointsY[0], false, null, 0, null,
+      GlobalStatics_9.method1286(var0.waypointsY[0], false, null, 0, null,
           var0.waypointsX[0],
-          GameWorldSomething.currentPlane, var0);
+          GlobalStatics_9.currentPlane, var0);
     }
   }
 
@@ -388,10 +388,10 @@ public class GlobalStatics_2 {
   }
 
   public static NpcConfiguration getNpcConfiguration(int var0) {
-    NpcConfiguration var2 = (NpcConfiguration) ObjectNode.aClass93_4043.get(
+    NpcConfiguration var2 = (NpcConfiguration) GlobalStatics_9.aClass93_4043.get(
         var0);
     if (var2 == null) {
-      byte[] var3 = PlayerVariable.aClass153_557
+      byte[] var3 = GlobalStatics_9.aClass153_557
           .getBytes(DummyClass36.method1031(var0, 2),
               DummyCanvas.method54(var0, false));
       var2 = new NpcConfiguration();
@@ -402,7 +402,7 @@ public class GlobalStatics_2 {
       }
 
       var2.method1481(98);
-      ObjectNode.aClass93_4043.get((byte) -95, var2, var0);
+      GlobalStatics_9.aClass93_4043.get((byte) -95, var2, var0);
       return var2;
     } else {
       return var2;
@@ -415,7 +415,7 @@ public class GlobalStatics_2 {
     int var11 = (-var5 + var0 << 16) / var9;
     int var10 = -var4 + var6;
     int var12 = (var7 - var1 << 16) / var10;
-    MidiSomething
+    GlobalStatics_9
         .method1410(var1, 0, var6, var4, var3, var5, var8, var12, var11, var2,
             -12541);
   }
@@ -446,7 +446,7 @@ public class GlobalStatics_2 {
     var9.anInt3062 = (int) (var5 * 4096.0F);
     var9.aBoolean3065 = var0;
     var9.method158(16251);
-    TextureSampler33.method180(-106, 1, var3);
+    GlobalStatics_10.method180(-106, 1, var3);
     var9.method186(true, 0, var8);
     return var8;
   }
@@ -483,7 +483,7 @@ public class GlobalStatics_2 {
   public static boolean method888(int var0, GameObjectConfig var1, boolean var2,
       int var3, int var4,
       int var5, int var6) {
-    MapScene var7 = WidgetUpdate.c(var1.anInt1516, 0);
+    MapScene var7 = GlobalStatics_10.c(var1.anInt1516, 0);
       if (var7.spriteId == -1) {
         return true;
       } else {
@@ -536,7 +536,7 @@ public class GlobalStatics_2 {
       }
 
       int var3 = GlobalStatics_5.anInt2010 >> 1;
-      int var2 = TextureSampler18.anInt4034 >> 2 << 10;
+      int var2 = GlobalStatics_10.anInt4034 >> 2 << 10;
       byte[][] var4 = new byte[DummyClass30.anInt455][DummyClass58.anInt1460];
 
       int var6;
@@ -554,8 +554,8 @@ public class GlobalStatics_2 {
 
         int var8 = var1.readUnsignedByte();
         int var9 = var1.readUnsignedByte();
-        int var10 = -TextureSampler37.anInt3256 + var8 * 64;
-        int var11 = -1 + DummyClass58.anInt1460 - var9 * 64 + MapScene.anInt65;
+        int var10 = -GlobalStatics_10.anInt3256 + var8 * 64;
+        int var11 = -1 + DummyClass58.anInt1460 - var9 * 64 + GlobalStatics_9.anInt65;
         if ((var10 >= 0) && -63 + var11 >= 0
             && DummyClass30.anInt455 > var10 + 63
             && DummyClass58.anInt1460 > var11) {
@@ -696,7 +696,7 @@ public class GlobalStatics_2 {
           }
         }
 
-        return var0 ? SomethingSceneJ.method873((byte) 62, var2) : var2;
+        return var0 ? GlobalStatics_9.method873((byte) 62, var2) : var2;
       }
   }
 
@@ -707,31 +707,31 @@ public class GlobalStatics_2 {
       }
 
       for (int var2 = 0; DummyClass53.spriteCount > var2; ++var2) {
-        int var3 = GroundItem.anIntArray2931[var2]
-            * TextureSampler26.anIntArray3076[var2];
+        int var3 = GlobalStatics_9.anIntArray2931[var2]
+            * GlobalStatics_10.anIntArray3076[var2];
         byte[] var4 = DummyClass5.aByteArrayArray2987[var2];
         int[] var5 = new int[var3];
 
         for (int var6 = 0; var6 < var3; ++var6) {
-          var5[var6] = TextureSampler38.anIntArray3446[255 & (int) var4[var6]];
+          var5[var6] = GlobalStatics_10.anIntArray3446[255 & (int) var4[var6]];
         }
 
         if (GlRenderer.useOpenGlRenderer) {
           var1[var2] =
-              new GlDirectColorSprite(SomethingVolume15.anInt2426,
-                  SomethingPacket116.anInt1748,
-                  Something3dRoot.anIntArray2048[var2],
+              new GlDirectColorSprite(GlobalStatics_9.anInt2426,
+                  GlobalStatics_9.anInt1748,
+                  GlobalStatics_9.anIntArray2048[var2],
                   GlobalStatics_0.anIntArray2591[var2],
-                  GroundItem.anIntArray2931[var2],
-                  TextureSampler26.anIntArray3076[var2], var5);
+                  GlobalStatics_9.anIntArray2931[var2],
+                  GlobalStatics_10.anIntArray3076[var2], var5);
         } else {
           var1[var2] =
-              new SoftwareDirectColorSprite(SomethingVolume15.anInt2426,
-                  SomethingPacket116.anInt1748,
-                  Something3dRoot.anIntArray2048[var2],
+              new SoftwareDirectColorSprite(GlobalStatics_9.anInt2426,
+                  GlobalStatics_9.anInt1748,
+                  GlobalStatics_9.anIntArray2048[var2],
                   GlobalStatics_0.anIntArray2591[var2],
-                  GroundItem.anIntArray2931[var2],
-                  TextureSampler26.anIntArray3076[var2], var5);
+                  GlobalStatics_9.anIntArray2931[var2],
+                  GlobalStatics_10.anIntArray3076[var2], var5);
         }
       }
 
@@ -767,20 +767,20 @@ public class GlobalStatics_2 {
     int var7 = GlobalStatics_6.aCalendar3581.get(11);
     int var8 = GlobalStatics_6.aCalendar3581.get(12);
     int var9 = GlobalStatics_6.aCalendar3581.get(13);
-    return RenderAnimation.concat(new GameString[]{
-        TextureSampler2.aClass94Array3376[var3 - 1],
-        TextureSampler24.aClass94_3145,
-        SomethingScene.toString(var4 / 10), SomethingScene.toString(var4 % 10),
-        DummyClass12.aClass94_2025, NPC.aClass94Array3985[var5],
+    return GlobalStatics_9.concat(new GameString[]{
+        GlobalStatics_9.aClass94Array3376[var3 - 1],
+        GlobalStatics_10.aClass94_3145,
+        GlobalStatics_9.toString(var4 / 10), GlobalStatics_9.toString(var4 % 10),
+        DummyClass12.aClass94_2025, GlobalStatics_9.aClass94Array3985[var5],
         DummyClass12.aClass94_2025,
-        SomethingScene.toString(var6), IdentityKit.aClass94_465,
-        SomethingScene.toString(var7 / 10),
-        SomethingScene.toString(var7 % 10),
+        GlobalStatics_9.toString(var6), GlobalStatics_9.aClass94_465,
+        GlobalStatics_9.toString(var7 / 10),
+        GlobalStatics_9.toString(var7 % 10),
         GlobalStatics_5.aClass94_1970,
-        SomethingScene.toString(var8 / 10), SomethingScene.toString(var8 % 10),
+        GlobalStatics_9.toString(var8 / 10), GlobalStatics_9.toString(var8 % 10),
         GlobalStatics_5.aClass94_1970,
-        SomethingScene.toString(var9 / 10),
-        SomethingScene.toString(var9 % 10), GameWorldSomething.aClass94_500
+        GlobalStatics_9.toString(var9 / 10),
+        GlobalStatics_9.toString(var9 % 10), GlobalStatics_9.aClass94_500
     });
   }
 
@@ -799,7 +799,7 @@ public class GlobalStatics_2 {
     var10.aBoolean3065 = var0;
     var10.anInt3060 = var6;
     var10.method158(16251);
-    TextureSampler33.method180(122, var3, var2);
+    GlobalStatics_10.method180(122, var3, var2);
 
     for (int var11 = 0; var3 > var11; ++var11) {
       var10.method186(true, var11, var9[var11]);

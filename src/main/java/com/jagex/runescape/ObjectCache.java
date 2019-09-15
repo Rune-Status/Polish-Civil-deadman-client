@@ -1,18 +1,11 @@
 package com.jagex.runescape;
 
-import com.jagex.runescape.common.GameString;
-import com.jagex.runescape.common.GameStringStatics;
 import com.jagex.runescape.common.HashTable;
 import com.jagex.runescape.node.AbstractObjectNode;
-import com.jagex.runescape.opengl.GlTexture2d;
 import com.jagex.runescape.opengl.Texture;
 
 public final class ObjectCache {
 
-  public static int anInt1325;
-  public static GameString aClass94_1326 = GameStringStatics.create(")2");
-  public static byte[][][] tileOrientation;
-  public static int anInt1330;
   private int anInt1327;
   private final Queue aClass13_1329 = new Queue();
   private int anInt1331;
@@ -156,56 +149,6 @@ public final class ObjectCache {
           ++this.anInt1327;
           return null;
         }
-      }
-  }
-
-  public static void method1516(int var0, int var1) {
-    WidgetUpdate var2 = GlobalStatics_6.method466(4, 3, var0);
-      var2.createIndexedColorSprite(true);
-      if (var1 < 87) {
-        ObjectCache.aClass94_1326 = null;
-      }
-  }
-
-  public static void method1517(byte var0) {
-    DummyClass17.aFontMetrics1822 = null;
-      TextureSampler14.aFont3384 = null;
-      if (var0 != -118) {
-        ObjectCache.method1516(64, 82);
-      }
-
-      MilliFrameRegulator.anImage2695 = null;
-  }
-
-  public static int bitXor(int var0, int var1) {
-    return var0 ^ var1;
-  }
-
-  public static void method1521(int var0) {
-    ObjectCache.tileOrientation = null;
-      ObjectCache.aClass94_1326 = null;
-      if (var0 != 3101) {
-        ObjectCache.method1516(99, -14);
-      }
-  }
-
-  public static void method1525(int var0, int var1, int var2, int var3, int var4, int var5) {
-    int var6 =
-        DummyClass59.method1040(LightIntensity.anInt902, var3, (byte) 0, DummyClass13.anInt2020);
-      int var7 =
-        DummyClass59.method1040(LightIntensity.anInt902, var5, (byte) 0, DummyClass13.anInt2020);
-      int var8 =
-        DummyClass59.method1040(GlTexture2d.anInt3765, var4, (byte) 0, DummyClass55.anInt1425);
-      if (var0 != 3074) {
-        ObjectCache.method1516(75, -7);
-      }
-
-      int var9 =
-        DummyClass59.method1040(GlTexture2d.anInt3765, var2, (byte) 0, DummyClass55.anInt1425);
-
-      for (int var10 = var6; var10 <= var7; ++var10) {
-        TextureSampler18.method282(DummyClass35.anIntArrayArray663[var10], var8, var0 - 2974, var9,
-          var1);
       }
   }
 

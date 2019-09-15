@@ -2,7 +2,6 @@ package com.jagex.runescape;
 
 import com.jagex.runescape.buffer.Buffer;
 import com.jagex.runescape.common.GameString;
-import com.jagex.runescape.common.GameStringStatics;
 import com.jagex.runescape.done.AbstractDirectColorSprite;
 import com.jagex.runescape.done.AbstractFont;
 import com.jagex.runescape.done.AbstractModel;
@@ -16,13 +15,6 @@ import com.jagex.runescape.sprite.SoftwareIndexedColorSprite;
 
 public final class Widget {
 
-  public static GameString EVENT_OP_BASE = GameStringStatics.create("event_opbase");
-  public static boolean aBoolean236 = true;
-  public static float aFloat246;
-  public static GameString aClass94_251;
-  public static long aLong261;
-  public static int anInt278 = -1;
-  public static GameString aClass94_297 = GameStringStatics.create("Nehmen");
   public boolean aBoolean155;
   public Object[] anObjectArray156;
   public boolean aBoolean157;
@@ -290,7 +282,7 @@ public final class Widget {
         return true;
       } else {
         SoftwareIndexedColorSprite var2 =
-          GlobalStatics_0.createSprite(0, true, this.anInt224, SomethingSceneJ.aClass153_323);
+          GlobalStatics_0.createSprite(0, true, this.anInt224, GlobalStatics_9.aClass153_323);
         if (var2 == null) {
           return false;
         } else {
@@ -595,11 +587,11 @@ public final class Widget {
           }
 
           if ((this.anInt318 == 4)) {
-            this.aClass94_289 = WorldMapLabel.aClass94_1722;
+            this.aClass94_289 = GlobalStatics_10.aClass94_1722;
           }
 
           if (this.anInt318 == 5) {
-            this.aClass94_289 = WorldMapLabel.aClass94_1722;
+            this.aClass94_289 = GlobalStatics_10.aClass94_1722;
           }
 
           if (this.anInt318 == 6) {
@@ -620,7 +612,7 @@ public final class Widget {
   }
 
   public AbstractDirectColorSprite method859(boolean var1, int var2 ) {
-    GameStub.aBoolean6 = false;
+    GlobalStatics_8.aBoolean6 = false;
       if (!var1) {
         return null;
       } else if ((var2 >= 0) && var2 < this.anIntArray197.length) {
@@ -629,17 +621,17 @@ public final class Widget {
           return null;
         } else {
           AbstractDirectColorSprite var4 =
-              (AbstractDirectColorSprite) MonoChromaticImageCache.aClass93_1569
+              (AbstractDirectColorSprite) GlobalStatics_9.aClass93_1569
                   .get(
                       var3);
           if (var4 == null) {
-            var4 = Structure
-                .method602(0, var3, (byte) -18, SomethingSceneJ.aClass153_323);
+            var4 = GlobalStatics_9
+                .method602(0, var3, (byte) -18, GlobalStatics_9.aClass153_323);
             if (var4 != null) {
-              MonoChromaticImageCache.aClass93_1569
+              GlobalStatics_9.aClass93_1569
                   .get((byte) -126, var4, var3);
             } else {
-              GameStub.aBoolean6 = true;
+              GlobalStatics_8.aBoolean6 = true;
             }
 
             return var4;
@@ -716,7 +708,7 @@ public final class Widget {
                                  int var5,
                                  boolean var6,
                                  PlayerAppearance var7 ) {
-    GameStub.aBoolean6 = false;
+    GlobalStatics_8.aBoolean6 = false;
       int var8;
       int var9;
       if (var6) {
@@ -736,17 +728,17 @@ public final class Widget {
           AbstractModel var10;
           if (var8 == 1) {
             var10 =
-              (AbstractModel) SomethingVolume15.aClass93_2428.get(
+              (AbstractModel) GlobalStatics_9.aClass93_2428.get(
                   (65536) + var9);
             if (var10 == null) {
               Model var18 = Model.getModel(DummyClass25.aClass153_1628, var9, 0);
               if (var18 == null) {
-                GameStub.aBoolean6 = true;
+                GlobalStatics_8.aBoolean6 = true;
                 return null;
               }
 
               var10 = var18.method2008(64, 768, -50, -10, -50);
-              SomethingVolume15.aClass93_2428.get((byte) -115, var10,
+              GlobalStatics_9.aClass93_2428.get((byte) -115, var10,
                   var9 + (var8 << 16));
             }
 
@@ -763,7 +755,7 @@ public final class Widget {
                 if (var17 != null) {
                   return var17;
                 } else {
-                  GameStub.aBoolean6 = true;
+                  GlobalStatics_8.aBoolean6 = true;
                   return null;
                 }
               } else if (var8 != 6) {
@@ -776,7 +768,7 @@ public final class Widget {
                   AbstractModel var13 =
                     var7.method1157(var1, var12, var15, var5, var2, var3, var11, -2012759707);
                   if (var13 == null) {
-                    GameStub.aBoolean6 = true;
+                    GlobalStatics_8.aBoolean6 = true;
                     return null;
                   } else {
                     return var13;
@@ -790,7 +782,7 @@ public final class Widget {
                 if (var10 != null) {
                   return var10;
                 } else {
-                  GameStub.aBoolean6 = true;
+                  GlobalStatics_8.aBoolean6 = true;
                   return null;
                 }
               }
@@ -799,7 +791,7 @@ public final class Widget {
             } else {
               var10 = var7.method1167(var5, (byte) 127, var2, var3, var1);
               if (var10 == null) {
-                GameStub.aBoolean6 = true;
+                GlobalStatics_8.aBoolean6 = true;
                 return null;
               } else {
                 return var10;
@@ -811,7 +803,7 @@ public final class Widget {
             if (var10 != null) {
               return var10;
             } else {
-              GameStub.aBoolean6 = true;
+              GlobalStatics_8.aBoolean6 = true;
               return null;
             }
           }
@@ -822,7 +814,7 @@ public final class Widget {
   }
 
   public AbstractDirectColorSprite method866(byte var1, boolean var2 ) {
-    GameStub.aBoolean6 = false;
+    GlobalStatics_8.aBoolean6 = false;
       int var3;
       if (var2) {
         var3 = this.anInt296;
@@ -838,20 +830,20 @@ public final class Widget {
             + ((long) this.anInt288 << 36) + ((this.aBoolean199 ? 1L : 0L) << 39) + (
             (long) this.anInt287 << 40);
         AbstractDirectColorSprite var6 =
-          (AbstractDirectColorSprite) MonoChromaticImageCache.aClass93_1569.get(var4);
+          (AbstractDirectColorSprite) GlobalStatics_9.aClass93_1569.get(var4);
         if (var6 != null) {
           return var6;
         } else {
           SoftwareDirectColorSprite var7;
           if (this.aBoolean157) {
             var7 = GlobalStatics_2
-                .method562(SomethingSceneJ.aClass153_323, 0, var3, (byte) 39);
+                .method562(GlobalStatics_9.aClass153_323, 0, var3, (byte) 39);
           } else {
-            var7 = DummyClass59.method1043(0, SomethingSceneJ.aClass153_323, -3178, var3);
+            var7 = DummyClass59.method1043(0, GlobalStatics_9.aClass153_323, -3178, var3);
           }
 
           if (var7 == null) {
-            GameStub.aBoolean6 = true;
+            GlobalStatics_8.aBoolean6 = true;
             return null;
           } else if (var1 != -113) {
             return null;
@@ -891,7 +883,7 @@ public final class Widget {
               var9 = var7;
             }
 
-            MonoChromaticImageCache.aClass93_1569.get((byte) -75, var9, var4);
+            GlobalStatics_9.aClass93_1569.get((byte) -75, var9, var4);
             return var9;
           }
         }
@@ -1104,7 +1096,7 @@ public final class Widget {
 
   public AbstractFont method868(AbstractIndexedColorSprite[] var1,
                                 int var2 ) {
-    GameStub.aBoolean6 = false;
+    GlobalStatics_8.aBoolean6 = false;
       if ((this.anInt270 == -1)) {
         return null;
       } else {
@@ -1113,9 +1105,9 @@ public final class Widget {
           return var3;
         } else {
           var3 = GlobalStatics_7.createFont(var2, this.anInt270, (byte) 127,
-            SomethingSceneJ.aClass153_323, TriChromaticImageCache.aClass153_1378);
+            GlobalStatics_9.aClass153_323, GlobalStatics_10.aClass153_1378);
           if (var3 == null) {
-            GameStub.aBoolean6 = true;
+            GlobalStatics_8.aBoolean6 = true;
           } else {
             var3.method697(var1, null);
             GlobalStatics_6.aClass93_743.get((byte) -77, var3, this.anInt270);
@@ -1124,52 +1116,6 @@ public final class Widget {
           return var3;
         }
       }
-  }
-
-  public static GameString method856(boolean var0) {
-    if (!var0) {
-        Widget.method869(127, -68);
-      }
-
-      GameString var1 = ObjectNode.aClass94_4052;
-      GameString var2 = GroundItemNode.EMPTY_STRING;
-      if ((GlobalStatics_4.usageLocation != 0)) {
-        var1 = Player.aClass94_3971;
-      }
-
-      if (DummyClass7.settings != null) {
-        var2 =
-          RenderAnimation.concat(new GameString[] {Structure.aClass94_3637, DummyClass7.settings});
-      }
-
-      return RenderAnimation.concat(new GameString[] {
-        GlobalStatics_6.aClass94_577, var1, GlobalStatics_2.aClass94_3601,
-        SomethingScene.toString(TriChromaticImageBuffer.languageId),
-        GlobalStatics_5.aClass94_1932,
-        SomethingScene.toString(MonoChromaticImageBuffer.affiliateId), var2,
-        GameObject.aClass94_2735
-      });
-  }
-
-  public static void method860(int var0) {
-    Widget.aClass94_297 = null;
-      Widget.EVENT_OP_BASE = null;
-      if (var0 < 63) {
-        Widget.method860(42);
-      }
-
-      Widget.aClass94_251 = null;
-  }
-
-  public static int method861(int var0, int var1, int var2) {
-    Inventory var3 = (Inventory) GlobalStatics_2.aClass130_2220.get(var0);
-      return var3 == null ?
-        -1 :
-        (var2 >= 0 && var2 < var3.ids.length ? (var1 < 39 ? -69 : var3.ids[var2]) : -1);
-  }
-
-  public static int method869(int var0, int var1) {
-    return (var1 != 16711935) ? (var0 < 97 ? -63 : DummyClass42.method1186(0, var1)) : -1;
   }
 
 }

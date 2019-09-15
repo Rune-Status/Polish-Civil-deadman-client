@@ -1,19 +1,9 @@
 package com.jagex.runescape;
 
-import com.jagex.runescape.common.GameString;
-import com.jagex.runescape.common.GameStringStatics;
-import com.jagex.runescape.done.AbstractDirectColorSprite;
-import com.jagex.runescape.done.BufferedFile;
 import com.jagex.runescape.node.Deque;
-import com.jagex.runescape.opengl.GLStatics;
 
 public final class MonoChromaticImageCache {
 
-  public static ObjectCache aClass93_1569 = new ObjectCache(200);
-  public static BufferedFile tableIndexFile;
-  public static long[] aLongArray1574 = new long[100];
-  public static GameString aClass94_1575 = GameStringStatics.create(" weitere Optionen");
-  public static int[] anIntArray1578 = new int[500];
   public boolean aBoolean1580;
   private final int anInt1568;
   private int anInt1570;
@@ -37,7 +27,7 @@ public final class MonoChromaticImageCache {
       }
 
       if (var1 != 1127165736) {
-        MonoChromaticImageCache.method1711(118, 75);
+        GlobalStatics_9.method1711(118, 75);
       }
 
       this.anIntArrayArray1573 = null;
@@ -98,60 +88,6 @@ public final class MonoChromaticImageCache {
         }
 
         return this.anIntArrayArray1573;
-      }
-  }
-
-  public static void method1704(int var0) {
-    MonoChromaticImageCache.aClass93_1569 = null;
-      if (var0 != 65536) {
-        GLStatics.method1705(-109, -68);
-      }
-
-      MonoChromaticImageCache.anIntArray1578 = null;
-      MonoChromaticImageCache.aLongArray1574 = null;
-      MonoChromaticImageCache.aClass94_1575 = null;
-      MonoChromaticImageCache.tableIndexFile = null;
-  }
-
-  public static AbstractDirectColorSprite method1707(int var0, int var1, boolean var2, int var3,
-                                                     int var4, int var5) {
-    if (var5 == 65536) {
-        int var7 = (!var2 ? 0 : 65536) + var1 + (var0 << 17) + (var4 << 19);
-        long var8 = var7 * 3849834839L + 3147483667L * var3;
-        AbstractDirectColorSprite var10 =
-            (AbstractDirectColorSprite) MouseRecorder.aClass93_1013.get(var8);
-        if (var10 == null) {
-          DummyClass40.aBoolean837 = false;
-          var10 = GlobalStatics_0
-              .method1570(var4, (byte) 13, false, var1, var2, var0, var3,
-                  false);
-          if (var10 != null && !DummyClass40.aBoolean837) {
-            MouseRecorder.aClass93_1013.get((byte) -79, var10, var8);
-          }
-
-          return var10;
-        } else {
-          return var10;
-        }
-      } else {
-        return null;
-      }
-  }
-
-  public static void method1708(int var0, int var1, int var2) {
-    if (var2 == -2553) {
-        WidgetUpdate var3 = GlobalStatics_6.method466(4, 13, var1);
-        var3.g((byte) 33);
-        var3.anInt3598 = var0;
-      }
-  }
-
-  public static void method1711(int var0, int var1) {
-    SomethingQuickChat.aClass93_3572.method1522(-127, var0);
-      DummyClass15.aClass93_1874.method1522(var1 - 383, var0);
-      MouseRecorder.aClass93_1013.method1522(var1 ^ -132, var0);
-      if (var1 != 255) {
-        MonoChromaticImageCache.method1711(20, 87);
       }
   }
 

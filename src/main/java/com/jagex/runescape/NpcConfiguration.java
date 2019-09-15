@@ -2,13 +2,11 @@ package com.jagex.runescape;
 
 import com.jagex.runescape.buffer.Buffer;
 import com.jagex.runescape.common.GameString;
-import com.jagex.runescape.common.GameStringStatics;
 import com.jagex.runescape.common.HashTable;
 import com.jagex.runescape.common.StringNode;
 import com.jagex.runescape.done.AbstractModel;
 import com.jagex.runescape.done.AnimationSequence;
 import com.jagex.runescape.done.AnimationSomething;
-import com.jagex.runescape.done.BitVariable;
 import com.jagex.runescape.node.Node;
 import com.jagex.runescape.opengl.GLStatics;
 import com.jagex.runescape.opengl.GlModel;
@@ -16,12 +14,6 @@ import com.jagex.runescape.opengl.GlRenderer;
 
 public final class NpcConfiguration {
 
-  public static int anInt1252 = -1;
-  public static int[] anIntArray1277 = new int[2000];
-  public static GameString aClass94_1281 = GameStringStatics.create("violet:");
-  public static GameString aClass94_1294 =
-    GameStringStatics.create("Votre liste noire est pleine (X100 noms maximum(Y)3");
-  public static int anInt1297;
   public int size = 1;
   public boolean aBoolean1249;
   public int anInt1253;
@@ -114,7 +106,7 @@ public final class NpcConfiguration {
           var2 = DummyClass5.anIntArray2985[this.anInt1295];
         }
       } else {
-        var2 = NpcConfiguration.method1484(64835055, this.anInt1257);
+        var2 = GlobalStatics_9.method1484(64835055, this.anInt1257);
       }
 
       int var3;
@@ -140,7 +132,7 @@ public final class NpcConfiguration {
             var2 = DummyClass5.anIntArray2985[this.anInt1295];
           }
         } else {
-          var2 = NpcConfiguration.method1484(64835055, this.anInt1257);
+          var2 = GlobalStatics_9.method1484(64835055, this.anInt1257);
         }
 
         if (var2 >= 0 && var2 < -1 + this.anIntArray1292.length
@@ -155,7 +147,7 @@ public final class NpcConfiguration {
 
   public boolean method1474(int var1 ) {
     if (var1 != -1) {
-        NpcConfiguration.method1480(false, null, -57);
+        GlobalStatics_9.method1480(false, null, -57);
       }
 
       if (this.anIntArray1292 != null) {
@@ -180,7 +172,7 @@ public final class NpcConfiguration {
     if (this.aClass130_1272 != null) {
         IntegerNode var4 = (IntegerNode) this.aClass130_1272.get(var1);
         if (var2 != -26460) {
-          NpcConfiguration.aClass94_1294 = null;
+          GlobalStatics_9.aClass94_1294 = null;
         }
 
         return var4 != null ? var4.anInt2467 : var3;
@@ -221,7 +213,7 @@ public final class NpcConfiguration {
           var12 = false;
 
           for (int var13 = 0; var13 < this.anIntArray1288.length; ++var13) {
-            if (this.anIntArray1288[var13] != -1 && !TextureSampler31.aClass153_3173.method2129(
+            if (this.anIntArray1288[var13] != -1 && !GlobalStatics_10.aClass153_3173.method2129(
               (byte) 102, 0, this.anIntArray1288[var13])) {
               var12 = true;
             }
@@ -236,7 +228,7 @@ public final class NpcConfiguration {
           for (int var15 = 0; this.anIntArray1288.length > var15; ++var15) {
             if ((this.anIntArray1288[var15] != -1)) {
               var14[var15] =
-                Model.getModel(TextureSampler31.aClass153_3173,
+                Model.getModel(GlobalStatics_10.aClass153_3173,
                     this.anIntArray1288[var15], 0);
               if (this.anIntArrayArray1261 != null
                   && this.anIntArrayArray1261[var15] != null
@@ -249,7 +241,7 @@ public final class NpcConfiguration {
 
           RenderAnimation var38 = null;
           if (this.renderAnimationId != -1) {
-            var38 = StringNode0.getRenderAnimation(false,
+            var38 = GlobalStatics_9.getRenderAnimation(false,
                 this.renderAnimationId);
           }
 
@@ -329,7 +321,7 @@ public final class NpcConfiguration {
                   && this.aByteArray1247.length > var16) {
                 assert var34 != null;
                 var34.replaceColor(this.aShortArray1248[var16],
-                  SceneShadowMap.aShortArray1779[this.aByteArray1247[var16] & 255]);
+                  GlobalStatics_9.aShortArray1779[this.aByteArray1247[var16] & 255]);
               } else {
                 assert var34 != null;
                 var34.replaceColor(
@@ -364,44 +356,44 @@ public final class NpcConfiguration {
         for (var17 = 0; var16 > var17; ++var17) {
           assert var1 != null;
           if (var1[var17] != null) {
-            AnimationSequence var39 = GameClient.method45(var1[var17].anInt1890, (byte) -20);
+            AnimationSequence var39 = GlobalStatics_8.method45(var1[var17].anInt1890, (byte) -20);
             if (var39.anIntArray1851 != null) {
               DummyClass52.aClass142Array1168[var17] = var39;
               var20 = var1[var17].anInt1891;
               var12 = true;
               var19 = var1[var17].anInt1893;
               var21 = var39.anIntArray1851[var19];
-              TextureSampler12.aClass3_Sub28_Sub5Array3041[var17] =
+              GlobalStatics_9.aClass3_Sub28_Sub5Array3041[var17] =
                 GlobalStatics_6.method133(var21 >>> 16, 0);
               var21 &= '\uffff';
               DummyClass43.anIntArray912[var17] = var21;
-              if (TextureSampler12.aClass3_Sub28_Sub5Array3041[var17] != null) {
+              if (GlobalStatics_9.aClass3_Sub28_Sub5Array3041[var17] != null) {
                 var35 |=
-                  TextureSampler12.aClass3_Sub28_Sub5Array3041[var17].method561(var21, (byte) 124);
+                  GlobalStatics_9.aClass3_Sub28_Sub5Array3041[var17].method561(var21, (byte) 124);
                 var37 |=
-                  TextureSampler12.aClass3_Sub28_Sub5Array3041[var17].method559(1317095745, var21);
+                  GlobalStatics_9.aClass3_Sub28_Sub5Array3041[var17].method559(1317095745, var21);
                 var36 |= var39.aBoolean1848;
               }
 
-              if ((var39.tween || MonoChromaticImageBuffer.tweening) && (var20 != -1)
+              if ((var39.tween || GlobalStatics_9.tweening) && (var20 != -1)
                 && var39.anIntArray1851.length > var20) {
                 DummyClass35.anIntArray664[var17] = var39.anIntArray1869[var19];
                 GlobalStatics_2.anIntArray2574[var17] = var1[var17].anInt1897;
                 var22 = var39.anIntArray1851[var20];
-                TextureSampler18.aClass3_Sub28_Sub5Array4031[var17] =
+                GlobalStatics_10.aClass3_Sub28_Sub5Array4031[var17] =
                   GlobalStatics_6.method133(var22 >>> 16, 0);
                 var22 &= '\uffff';
                 GlobalStatics_6.anIntArray574[var17] = var22;
-                if (TextureSampler18.aClass3_Sub28_Sub5Array4031[var17] != null) {
-                  var35 |= TextureSampler18.aClass3_Sub28_Sub5Array4031[var17].method561(var22,
+                if (GlobalStatics_10.aClass3_Sub28_Sub5Array4031[var17] != null) {
+                  var35 |= GlobalStatics_10.aClass3_Sub28_Sub5Array4031[var17].method561(var22,
                     (byte) 124);
-                  var37 |= TextureSampler18.aClass3_Sub28_Sub5Array4031[var17].method559(1317095745,
+                  var37 |= GlobalStatics_10.aClass3_Sub28_Sub5Array4031[var17].method559(1317095745,
                     var22);
                 }
               } else {
                 DummyClass35.anIntArray664[var17] = 0;
                 GlobalStatics_2.anIntArray2574[var17] = 0;
-                TextureSampler18.aClass3_Sub28_Sub5Array4031[var17] = null;
+                GlobalStatics_10.aClass3_Sub28_Sub5Array4031[var17] = null;
                 GlobalStatics_6.anIntArray574[var17] = -1;
               }
             }
@@ -433,7 +425,7 @@ public final class NpcConfiguration {
               var36 |= var10.aBoolean1848;
             }
 
-            if ((var10.tween || MonoChromaticImageBuffer.tweening) && (var5 != -1)
+            if ((var10.tween || GlobalStatics_9.tweening) && (var5 != -1)
               && var10.anIntArray1851.length > var5) {
               var19 = var10.anIntArray1869[var7];
               var18 = var10.anIntArray1851[var5];
@@ -472,7 +464,7 @@ public final class NpcConfiguration {
               var36 |= var8.aBoolean1848;
             }
 
-            if ((var8.tween || MonoChromaticImageBuffer.tweening) && (var2 != -1)
+            if ((var8.tween || GlobalStatics_9.tweening) && (var2 != -1)
               && var2 < var8.anIntArray1851.length) {
               var24 = var8.anIntArray1869[var4];
               var42 = var8.anIntArray1851[var2];
@@ -495,10 +487,10 @@ public final class NpcConfiguration {
           var29 = 1;
 
           for (var28 = 0; var28 < var16; ++var28) {
-            if (TextureSampler12.aClass3_Sub28_Sub5Array3041[var28] != null) {
-              var45.method1887(TextureSampler12.aClass3_Sub28_Sub5Array3041[var28],
+            if (GlobalStatics_9.aClass3_Sub28_Sub5Array3041[var28] != null) {
+              var45.method1887(GlobalStatics_9.aClass3_Sub28_Sub5Array3041[var28],
                 DummyClass43.anIntArray912[var28],
-                TextureSampler18.aClass3_Sub28_Sub5Array4031[var28],
+                GlobalStatics_10.aClass3_Sub28_Sub5Array4031[var28],
                 GlobalStatics_6.anIntArray574[var28], -1 + GlobalStatics_2.anIntArray2574[var28],
                 DummyClass35.anIntArray664[var28], var29,
                 DummyClass52.aClass142Array1168[var28].aBoolean1848,
@@ -521,8 +513,8 @@ public final class NpcConfiguration {
           }
 
           for (var28 = 0; (var28 < var16); ++var28) {
-            TextureSampler12.aClass3_Sub28_Sub5Array3041[var28] = null;
-            TextureSampler18.aClass3_Sub28_Sub5Array4031[var28] = null;
+            GlobalStatics_9.aClass3_Sub28_Sub5Array3041[var28] = null;
+            GlobalStatics_10.aClass3_Sub28_Sub5Array4031[var28] = null;
             DummyClass52.aClass142Array1168[var28] = null;
           }
 
@@ -574,7 +566,7 @@ public final class NpcConfiguration {
             boolean var7 = false;
 
             for (int var8 = 0; (var8 < this.anIntArray1250.length); ++var8) {
-              if (!TextureSampler31.aClass153_3173.method2129((byte) -69, 0,
+              if (!GlobalStatics_10.aClass153_3173.method2129((byte) -69, 0,
                   this.anIntArray1250[var8])) {
                 var7 = true;
               }
@@ -588,7 +580,7 @@ public final class NpcConfiguration {
 
             for (int var9 = 0; (var9 < this.anIntArray1250.length); ++var9) {
               var14[var9] =
-                Model.getModel(TextureSampler31.aClass153_3173,
+                Model.getModel(GlobalStatics_10.aClass153_3173,
                     this.anIntArray1250[var9], 0);
             }
 
@@ -606,7 +598,7 @@ public final class NpcConfiguration {
                     != null && (var10 < this.aByteArray1247.length)) {
                   assert var15 != null;
                   var15.replaceColor(this.aShortArray1248[var10],
-                    SceneShadowMap.aShortArray1779[255 & this.aByteArray1247[var10]]);
+                    GlobalStatics_9.aShortArray1779[255 & this.aByteArray1247[var10]]);
                 } else {
                   assert var15 != null;
                   var15.replaceColor(this.aShortArray1248[var10],
@@ -661,7 +653,7 @@ public final class NpcConfiguration {
           if (var2 >= 30 && (var2 < 35)) {
             this.aClass94Array1259[-30 + var2] = var3.readString();
             if (this.aClass94Array1259[-30 + var2]
-                .method1531(TextureSampler33.aClass94_3051)) {
+                .method1531(GlobalStatics_10.aClass94_3051)) {
               this.aClass94Array1259[var2 - 30] = null;
             }
           } else if (var2 != 40) {
@@ -888,97 +880,6 @@ public final class NpcConfiguration {
       }
 
       var4 = 11 % ((-39 - var1) / 60);
-  }
-
-  public static void method1473(byte var0) {
-    NpcConfiguration.anIntArray1277 = null;
-      if (var0 != 103) {
-        NpcConfiguration.anInt1297 = -20;
-      }
-
-      NpcConfiguration.aClass94_1294 = null;
-      NpcConfiguration.aClass94_1281 = null;
-  }
-
-  public static void method1479(int var0, byte var1) {
-    TextureSampler13.anInt3362 = -1;
-      if (var1 < 5) {
-        NpcConfiguration.anIntArray1277 = null;
-      }
-
-      if ((var0 == 37)) {
-        NPC.aFloat3979 = 3.0F;
-      } else if (var0 != 50) {
-        if (var0 == 75) {
-          NPC.aFloat3979 = 6.0F;
-        } else if (var0 != 100) {
-          if (var0 == 200) {
-            NPC.aFloat3979 = 16.0F;
-          }
-        } else {
-          NPC.aFloat3979 = 8.0F;
-        }
-      } else {
-        NPC.aFloat3979 = 4.0F;
-      }
-  }
-
-  public static void method1480(boolean var0, GameString var1, int var2) {
-    short[] var3 = new short[16];
-      var1 = var1.method1534();
-      int var4 = 0;
-
-      for (int var5 = 0; (var5 < TextureSampler39.anInt3287); ++var5) {
-        ItemConfig var6 = DummyClass35.getItemConfig(var5, (byte) 93);
-        if ((!var0 || var6.aBoolean807) && var6.anInt791 == -1 && var6.anInt762
-            == -1
-          && (var6.anInt800 == 0)
-            && var6.aClass94_770.method1534().indexOf(var1) != -1) {
-          if ((var4 >= 250)) {
-            DummyClass54.aShortArray1398 = null;
-            FileTable.anInt952 = -1;
-            return;
-          }
-
-          if ((var4 >= var3.length)) {
-            short[] var7 = new short[2 * var3.length];
-
-            for (int var8 = 0; var8 < var4; ++var8) {
-              var7[var8] = var3[var8];
-            }
-
-            var3 = var7;
-          }
-
-          var3[var4++] = (short) var5;
-        }
-      }
-
-      DummyClass54.aShortArray1398 = var3;
-      Mobile.anInt2756 = 0;
-      FileTable.anInt952 = var4;
-      GameString[] var10 = new GameString[FileTable.anInt952];
-
-      for (int var11 = 0; FileTable.anInt952 > var11; ++var11) {
-        var10[var11] = DummyClass35.getItemConfig(var3[var11], (byte) 112).aClass94_770;
-      }
-
-      int var12 = -44 / ((45 - var2) / 33);
-      TextureSampler3.method307(var10, DummyClass54.aShortArray1398, 77);
-  }
-
-  public static int method1484(int var0, int var1) {
-    if (var0 != 64835055) {
-        NpcConfiguration.anIntArray1277 = null;
-      }
-
-      BitVariable var2 = GlobalStatics_7.method378(var1, (byte) 127);
-      assert var2 != null;
-      int var3 = var2.id;
-      int var5 = var2.high;
-      int var4 = var2.low;
-      int var6 = SomethingMidiFile.BIT_MASKS[var5 - var4];
-      return DummyClass5.anIntArray2985[var3] >> var4 & var6;
   }
 
 }

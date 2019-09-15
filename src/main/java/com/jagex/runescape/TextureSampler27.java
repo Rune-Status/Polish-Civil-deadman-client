@@ -2,26 +2,10 @@ package com.jagex.runescape;
 
 import com.jagex.runescape.buffer.Buffer;
 import com.jagex.runescape.common.ArrayUtils;
-import com.jagex.runescape.common.GameString;
-import com.jagex.runescape.common.GameStringStatics;
-import com.jagex.runescape.done.AbstractDirectColorSprite;
 import com.jagex.runescape.done.AbstractTextureSampler;
-
-import java.awt.Frame;
-import java.util.Random;
 
 public final class TextureSampler27 extends AbstractTextureSampler {
 
-  private static GameString aClass94_3096 = GameStringStatics.create("Close");
-  public static Widget aClass11_3087;
-  public static Random random = new Random();
-  public static int anInt3090;
-  public static Frame FRAME;
-  public static boolean aBoolean3094;
-  public static short[] aShortArray3095 = new short[500];
-  public static FileUnpacker aClass153_3098;
-  public static AbstractDirectColorSprite aClass3_Sub28_Sub16_3099;
-  public static GameString aClass94_3097 = TextureSampler27.aClass94_3096;
   private int anInt3085 = 10;
   private int anInt3086;
   private int[] anIntArray3089;
@@ -70,10 +54,10 @@ public final class TextureSampler27 extends AbstractTextureSampler {
             }
           }
 
-          ArrayUtils.fill(var3, 0, SomethingLight0.anInt1559, var6);
+          ArrayUtils.fill(var3, 0, GlobalStatics_9.anInt1559, var6);
         } else {
-          for (int var12 = 0; (var12 < SomethingLight0.anInt1559); ++var12) {
-            int var9 = TextureCache.anIntArray2125[var12];
+          for (int var12 = 0; (var12 < GlobalStatics_9.anInt1559); ++var12) {
+            int var9 = GlobalStatics_9.anIntArray2125[var12];
             var7 = 0;
             int var10 = this.anInt3086;
             if (var10 == 1) {
@@ -126,27 +110,6 @@ public final class TextureSampler27 extends AbstractTextureSampler {
     if (var1 == 16251) {
         this.method202(1);
       }
-  }
-
-  public static void method200(byte var0) {
-    TextureSampler27.aClass94_3097 = null;
-      TextureSampler27.aShortArray3095 = null;
-      if (var0 != 122) {
-        TextureSampler27.method201(62, -109, 127);
-      }
-
-      TextureSampler27.FRAME = null;
-      TextureSampler27.random = null;
-      TextureSampler27.aClass94_3096 = null;
-      TextureSampler27.aClass3_Sub28_Sub16_3099 = null;
-      TextureSampler27.aClass11_3087 = null;
-      TextureSampler27.aClass153_3098 = null;
-  }
-
-  public static int method201(int var0, int var1, int var2) {
-    int var3 = var1 - 1 & var0 >> 31;
-      int var4 = -95 % ((33 - var2) / 54);
-      return var3 + (var0 + (var0 >>> 31)) % var1;
   }
 
 }

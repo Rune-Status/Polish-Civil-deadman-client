@@ -1,7 +1,7 @@
 package com.jagex.runescape.opengl;
 
+import com.jagex.runescape.GlobalStatics_9;
 import com.jagex.runescape.SceneGraphTile;
-import com.jagex.runescape.SomethingTilek;
 
 public final class DummyClass46 {
 
@@ -427,8 +427,8 @@ public final class DummyClass46 {
           int var7 = 0;
           int var8 = (var5.anInt708 >> 7) - var5.anInt698;
           int var9 = (var5.anInt708 >> 7) + var5.anInt698;
-          if (var9 >= SomethingTilek.viewportUpperZ) {
-            var9 = SomethingTilek.viewportUpperZ - 1;
+          if (var9 >= GlobalStatics_9.viewportUpperZ) {
+            var9 = GlobalStatics_9.viewportUpperZ - 1;
           }
 
           if (var8 < GLStatics.viewportLowerZ) {

@@ -1,23 +1,9 @@
 package com.jagex.runescape;
 
-import com.jagex.runescape.common.GameString;
-import com.jagex.runescape.common.GameStringStatics;
-import com.jagex.runescape.done.AbstractDirectColorSprite;
 import com.jagex.runescape.done.AbstractFrameRegulator;
-
-import java.awt.Image;
 
 public final class MilliFrameRegulator extends AbstractFrameRegulator {
 
-  public static int anInt2684;
-  public static Cache aClass47_2686 = new Cache(128);
-  public static GameString aClass94_2687 = GameStringStatics.create("Fallen lassen");
-  public static int anInt2689;
-  public static AbstractDirectColorSprite[] aClass3_Sub28_Sub16Array2690;
-  public static int anInt2693;
-  public static Image anImage2695;
-  public static int[] anIntArray2696 = new int[2];
-  public static int cameraPosX;
   private long aLong2683;
   private int anInt2685;
   private int anInt2688;
@@ -30,7 +16,7 @@ public final class MilliFrameRegulator extends AbstractFrameRegulator {
     this.anInt2688 = 256;
       this.anInt2691 = 1;
       this.anInt2692 = 0;
-      this.aLong2683 = Time.getCurrentTimeMillis();
+      this.aLong2683 = GlobalStatics_10.getCurrentTimeMillis();
 
       for (int var1 = 0; var1 < 10; ++var1) {
         this.aLongArray2694[var1] = this.aLong2683;
@@ -46,7 +32,7 @@ public final class MilliFrameRegulator extends AbstractFrameRegulator {
       int var4 = this.anInt2688;
       this.anInt2688 = 300;
       this.anInt2691 = 1;
-      this.aLong2683 = Time.getCurrentTimeMillis();
+      this.aLong2683 = GlobalStatics_10.getCurrentTimeMillis();
       if (this.aLongArray2694[this.anInt2685] == 0L) {
         this.anInt2688 = var4;
         this.anInt2691 = var5;
@@ -85,7 +71,7 @@ public final class MilliFrameRegulator extends AbstractFrameRegulator {
         this.anInt2691 = var2;
       }
 
-      TextureSampler25.sleep(this.anInt2691);
+      GlobalStatics_10.sleep(this.anInt2691);
 
       for (var6 = 0; this.anInt2692 < 256; ++var6) {
         this.anInt2692 += this.anInt2688;
@@ -102,18 +88,6 @@ public final class MilliFrameRegulator extends AbstractFrameRegulator {
       }
 
       var2 = -114 % ((var1 + 82) / 42);
-  }
-
-  public static void method1771(int var0) {
-    MilliFrameRegulator.aClass94_2687 = null;
-      MilliFrameRegulator.anIntArray2696 = null;
-      MilliFrameRegulator.anImage2695 = null;
-      if (var0 != 14635) {
-        MilliFrameRegulator.aClass47_2686 = null;
-      }
-
-      MilliFrameRegulator.aClass3_Sub28_Sub16Array2690 = null;
-      MilliFrameRegulator.aClass47_2686 = null;
   }
 
 }

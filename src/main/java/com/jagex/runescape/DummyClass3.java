@@ -22,7 +22,7 @@ public final class DummyClass3 {
 
   static {
     for (int var0 = 0; var0 < 4096; ++var0) {
-      DummyClass3.anIntArray52[var0] = Something3d2.method2246((byte) 83, var0);
+      DummyClass3.anIntArray52[var0] = GlobalStatics_9.method2246((byte) 83, var0);
     }
 
     DummyClass3.aBooleanArray54 = new boolean[8];
@@ -36,7 +36,7 @@ public final class DummyClass3 {
         DummyClass3.method69(null, -115);
       }
 
-      TextureSampler16.huffmanEncoder = var0;
+      GlobalStatics_10.huffmanEncoder = var0;
   }
 
   public static SomethingGl0[] method70(float[][] var0, float[][] var1, int[][] var2, int var3,
@@ -74,7 +74,7 @@ public final class DummyClass3 {
           var15 = var9[var13][var14] & 255;
           var16 = 255 & var10[var13][var14];
           if ((var16 != 0)) {
-            FloorOverlay var17 = TextureSampler10.method350((byte) -81, -1 + var16);
+            FloorOverlay var17 = GlobalStatics_9.method350((byte) -81, -1 + var16);
             if (var17.anInt2103 == -1) {
               continue;
             }
@@ -110,14 +110,14 @@ public final class DummyClass3 {
             byte var32;
             boolean var70;
             if (var27 != 0 && (var16 != var27)) {
-              var31 = TextureSampler10.method350((byte) 106, -1 + var27);
+              var31 = GlobalStatics_9.method350((byte) 106, -1 + var27);
               if (var31.aBoolean2092 && (var31.anInt2103 != -1)) {
                 var32 = var5[var13 - 1][var14 + 1];
                 var33 = var8[-1 + var13][var14 + 1];
-                var34 = SomethingTexture1.anIntArray2642[4 * var33 + (2 + var32 & 3)];
-                var35 = SomethingTexture1.anIntArray2642[(3 + var32 & 3) + 4 * var33];
-                if (TextureSampler8.aBooleanArrayArray3468[var35][1]
-                  && TextureSampler8.aBooleanArrayArray3468[var34][0]) {
+                var34 = GlobalStatics_9.anIntArray2642[4 * var33 + (2 + var32 & 3)];
+                var35 = GlobalStatics_9.anIntArray2642[(3 + var32 & 3) + 4 * var33];
+                if (GlobalStatics_9.aBooleanArrayArray3468[var35][1]
+                  && GlobalStatics_9.aBooleanArrayArray3468[var34][0]) {
                   var70 = false;
                 } else {
                   for (var36 = 0; var36 < 8; ++var36) {
@@ -140,14 +140,14 @@ public final class DummyClass3 {
 
             boolean var69;
             if ((var28 != 0) && var28 != var16) {
-              var31 = TextureSampler10.method350((byte) 114, -1 + var28);
+              var31 = GlobalStatics_9.method350((byte) 114, -1 + var28);
               if (var31.aBoolean2092 && (var31.anInt2103 != -1)) {
                 var32 = var5[-1 + var13][var14 - 1];
                 var33 = var8[-1 + var13][-1 + var14];
-                var34 = SomethingTexture1.anIntArray2642[var33 * 4 + (var32 & 3)];
-                var35 = SomethingTexture1.anIntArray2642[(var32 + 3 & 3) + var33 * 4];
-                if (TextureSampler8.aBooleanArrayArray3468[var34][1]
-                  && TextureSampler8.aBooleanArrayArray3468[var35][0]) {
+                var34 = GlobalStatics_9.anIntArray2642[var33 * 4 + (var32 & 3)];
+                var35 = GlobalStatics_9.anIntArray2642[(var32 + 3 & 3) + var33 * 4];
+                if (GlobalStatics_9.aBooleanArrayArray3468[var34][1]
+                  && GlobalStatics_9.aBooleanArrayArray3468[var35][0]) {
                   var69 = false;
                 } else {
                   for (var36 = 0; (var36 < 8); ++var36) {
@@ -170,14 +170,14 @@ public final class DummyClass3 {
 
             boolean var72;
             if ((var29 != 0) && (var16 != var29)) {
-              var31 = TextureSampler10.method350((byte) 107, var29 - 1);
+              var31 = GlobalStatics_9.method350((byte) 107, var29 - 1);
               if (var31.aBoolean2092 && (var31.anInt2103 != -1)) {
                 var32 = var5[1 + var13][var14 - 1];
                 var33 = var8[var13 + 1][var14 - 1];
-                var35 = SomethingTexture1.anIntArray2642[4 * var33 + (3 & 1 + var32)];
-                var34 = SomethingTexture1.anIntArray2642[var33 * 4 + (var32 & 3)];
-                if (TextureSampler8.aBooleanArrayArray3468[var35][1]
-                  && TextureSampler8.aBooleanArrayArray3468[var34][0]) {
+                var35 = GlobalStatics_9.anIntArray2642[4 * var33 + (3 & 1 + var32)];
+                var34 = GlobalStatics_9.anIntArray2642[var33 * 4 + (var32 & 3)];
+                if (GlobalStatics_9.aBooleanArrayArray3468[var35][1]
+                  && GlobalStatics_9.aBooleanArrayArray3468[var34][0]) {
                   var72 = false;
                 } else {
                   for (var36 = 0; (var36 < 8); ++var36) {
@@ -200,14 +200,14 @@ public final class DummyClass3 {
 
             boolean var71;
             if (var30 != 0 && (var30 != var16)) {
-              var31 = TextureSampler10.method350((byte) 105, var30 - 1);
+              var31 = GlobalStatics_9.method350((byte) 105, var30 - 1);
               if (var31.aBoolean2092 && (var31.anInt2103 != -1)) {
                 var32 = var5[var13 + 1][1 + var14];
                 var33 = var8[var13 + 1][1 + var14];
-                var35 = SomethingTexture1.anIntArray2642[4 * var33 + (var32 + 1 & 3)];
-                var34 = SomethingTexture1.anIntArray2642[var33 * 4 + (var32 + 2 & 3)];
-                if (TextureSampler8.aBooleanArrayArray3468[var34][1]
-                  && TextureSampler8.aBooleanArrayArray3468[var35][0]) {
+                var35 = GlobalStatics_9.anIntArray2642[4 * var33 + (var32 + 1 & 3)];
+                var34 = GlobalStatics_9.anIntArray2642[var33 * 4 + (var32 + 2 & 3)];
+                if (GlobalStatics_9.aBooleanArrayArray3468[var34][1]
+                  && GlobalStatics_9.aBooleanArrayArray3468[var35][0]) {
                   var71 = false;
                 } else {
                   for (var36 = 0; (var36 < 8); ++var36) {
@@ -229,9 +229,9 @@ public final class DummyClass3 {
             }
 
             if ((var23 != 0) && (var16 != var23)) {
-              var31 = TextureSampler10.method350((byte) -29, -1 + var23);
+              var31 = GlobalStatics_9.method350((byte) -29, -1 + var23);
               if (var31.aBoolean2092 && var31.anInt2103 != -1) {
-                var60 = SomethingTexture1.anIntArray2642[4 * var8[var13][var14 + 1] + (
+                var60 = GlobalStatics_9.anIntArray2642[4 * var8[var13][var14 + 1] + (
                   var5[var13][var14 + 1] + 2 & 3)];
 
                 for (var74 = 0; (var74 < 8); ++var74) {
@@ -248,9 +248,9 @@ public final class DummyClass3 {
             }
 
             if (var24 != 0 && (var16 != var24)) {
-              var31 = TextureSampler10.method350((byte) -32, var24 - 1);
+              var31 = GlobalStatics_9.method350((byte) -32, var24 - 1);
               if (var31.aBoolean2092 && var31.anInt2103 != -1) {
-                var65 = SomethingTexture1.anIntArray2642[(3 & 3 + var5[var13 - 1][var14])
+                var65 = GlobalStatics_9.anIntArray2642[(3 & 3 + var5[var13 - 1][var14])
                   + var8[var13 - 1][var14] * 4];
 
                 for (var74 = 0; (var74 < 8); ++var74) {
@@ -267,9 +267,9 @@ public final class DummyClass3 {
             }
 
             if ((var25 != 0) && var16 != var25) {
-              var31 = TextureSampler10.method350((byte) 112, -1 + var25);
+              var31 = GlobalStatics_9.method350((byte) 112, -1 + var25);
               if (var31.aBoolean2092 && (var31.anInt2103 != -1)) {
-                var21 = SomethingTexture1.anIntArray2642[(3 & var5[var13][var14 - 1])
+                var21 = GlobalStatics_9.anIntArray2642[(3 & var5[var13][var14 - 1])
                   + var8[var13][var14 - 1] * 4];
 
                 for (var74 = 0; (var74 < 8); ++var74) {
@@ -286,10 +286,10 @@ public final class DummyClass3 {
             }
 
             if (var26 != 0 && var16 != var26) {
-              var31 = TextureSampler10.method350((byte) -41, var26 - 1);
+              var31 = GlobalStatics_9.method350((byte) -41, var26 - 1);
               if (var31.aBoolean2092 && (var31.anInt2103 != -1)) {
                 var22 =
-                  SomethingTexture1.anIntArray2642[(3 & var5[var13 + 1][var14] + 1) + 4 * var8[1
+                  GlobalStatics_9.anIntArray2642[(3 & var5[var13 + 1][var14] + 1) + 4 * var8[1
                     + var13][var14]];
 
                 for (var74 = 0; (var74 < 8); ++var74) {
@@ -307,11 +307,11 @@ public final class DummyClass3 {
 
             for (var73 = 0; var58 > var73; ++var73) {
               var74 = var63[var73];
-              var79 = TextureSampler8.aBooleanArrayArray3468[(var24 != var74) ? 0 : var65];
-              var75 = TextureSampler8.aBooleanArrayArray3468[(var74 != var25) ? 0 : var21];
-              boolean[] var80 = TextureSampler8.aBooleanArrayArray3468[var23 == var74 ? var60 : 0];
-              var81 = TextureSampler8.aBooleanArrayArray3468[var26 == var74 ? var22 : 0];
-              FloorOverlay var37 = TextureSampler10.method350((byte) 113, -1 + var74);
+              var79 = GlobalStatics_9.aBooleanArrayArray3468[(var24 != var74) ? 0 : var65];
+              var75 = GlobalStatics_9.aBooleanArrayArray3468[(var74 != var25) ? 0 : var21];
+              boolean[] var80 = GlobalStatics_9.aBooleanArrayArray3468[var23 == var74 ? var60 : 0];
+              var81 = GlobalStatics_9.aBooleanArrayArray3468[var26 == var74 ? var22 : 0];
+              FloorOverlay var37 = GlobalStatics_9.method350((byte) 113, -1 + var74);
               SomethingGl0 var38 = GlobalStatics_3.method2052(var12, false, var37);
               var38.anInt2342 += 5;
               var38.anInt2342 += -2 + var80.length;
@@ -344,7 +344,7 @@ public final class DummyClass3 {
           }
 
           if (var58 != 0) {
-            FloorOverlay var62 = TextureSampler10.method350((byte) -25, -1 + var58);
+            FloorOverlay var62 = GlobalStatics_9.method350((byte) -25, -1 + var58);
             if (var62.anInt2103 == -1) {
               continue;
             }
@@ -352,15 +352,15 @@ public final class DummyClass3 {
             SomethingGl0 var66 = GlobalStatics_3.method2052(var12, false, var62);
             byte var67 = var8[var13][var14];
             byte var68 = var5[var13][var14];
-            var22 = TextureSampler34.method190(var62.anInt2095, var62.anInt2103, (byte) -111,
+            var22 = GlobalStatics_10.method190(var62.anInt2095, var62.anInt2103, (byte) -111,
               var6[var13][var14]);
-            var23 = TextureSampler34.method190(var62.anInt2095, var62.anInt2103, (byte) 65,
+            var23 = GlobalStatics_10.method190(var62.anInt2095, var62.anInt2103, (byte) 65,
               var6[var13 + 1][var14]);
-            var24 = TextureSampler34.method190(var62.anInt2095, var62.anInt2103, (byte) 68,
+            var24 = GlobalStatics_10.method190(var62.anInt2095, var62.anInt2103, (byte) 68,
               var6[1 + var13][var14 + 1]);
-            var25 = TextureSampler34.method190(var62.anInt2095, var62.anInt2103, (byte) -84,
+            var25 = GlobalStatics_10.method190(var62.anInt2095, var62.anInt2103, (byte) -84,
               var6[var13][var14 + 1]);
-            PlayerVariable.method971(var22, var2, var1, var13, var0, var23, var68, var15, var24,
+            GlobalStatics_9.method971(var22, var2, var1, var13, var0, var23, var68, var15, var24,
               (byte) 88, (var16 != 0) && var62.aBoolean2092, var67, var14, var4, var25, var66);
           }
 
@@ -384,14 +384,14 @@ public final class DummyClass3 {
             byte var77;
             int var83;
             if (var28 != 0 && var28 != var58) {
-              var76 = TextureSampler10.method350((byte) -88, -1 + var28);
+              var76 = GlobalStatics_9.method350((byte) -88, -1 + var28);
               if (var76.aBoolean2092 && var76.anInt2103 != -1) {
                 var33 = var5[var13 - 1][1 + var14];
                 var77 = var8[-1 + var13][1 + var14];
-                var35 = SomethingTexture1.anIntArray2642[4 * var77 + (2 + var33 & 3)];
-                var36 = SomethingTexture1.anIntArray2642[var77 * 4 + (3 + var33 & 3)];
-                if (TextureSampler8.aBooleanArrayArray3468[var36][1]
-                  && TextureSampler8.aBooleanArrayArray3468[var35][0]) {
+                var35 = GlobalStatics_9.anIntArray2642[4 * var77 + (2 + var33 & 3)];
+                var36 = GlobalStatics_9.anIntArray2642[var77 * 4 + (3 + var33 & 3)];
+                if (GlobalStatics_9.aBooleanArrayArray3468[var36][1]
+                  && GlobalStatics_9.aBooleanArrayArray3468[var35][0]) {
                   var28 = 0;
                 } else {
                   for (var83 = 0; (var83 < 8); ++var83) {
@@ -413,14 +413,14 @@ public final class DummyClass3 {
             }
 
             if (var29 != 0 && (var58 != var29)) {
-              var76 = TextureSampler10.method350((byte) -87, -1 + var29);
+              var76 = GlobalStatics_9.method350((byte) -87, -1 + var29);
               if (var76.aBoolean2092 && var76.anInt2103 != -1) {
                 var33 = var5[var13 - 1][-1 + var14];
                 var77 = var8[-1 + var13][var14 - 1];
-                var35 = SomethingTexture1.anIntArray2642[(3 & var33) + var77 * 4];
-                var36 = SomethingTexture1.anIntArray2642[(var33 + 3 & 3) + 4 * var77];
-                if (TextureSampler8.aBooleanArrayArray3468[var35][1]
-                  && TextureSampler8.aBooleanArrayArray3468[var36][0]) {
+                var35 = GlobalStatics_9.anIntArray2642[(3 & var33) + var77 * 4];
+                var36 = GlobalStatics_9.anIntArray2642[(var33 + 3 & 3) + 4 * var77];
+                if (GlobalStatics_9.aBooleanArrayArray3468[var35][1]
+                  && GlobalStatics_9.aBooleanArrayArray3468[var36][0]) {
                   var29 = 0;
                 } else {
                   for (var83 = 0; var83 < 8; ++var83) {
@@ -442,14 +442,14 @@ public final class DummyClass3 {
             }
 
             if (var30 != 0 && (var30 != var58)) {
-              var76 = TextureSampler10.method350((byte) -123, -1 + var30);
+              var76 = GlobalStatics_9.method350((byte) -123, -1 + var30);
               if (var76.aBoolean2092 && var76.anInt2103 != -1) {
                 var33 = var5[1 + var13][var14 - 1];
                 var77 = var8[1 + var13][var14 - 1];
-                var36 = SomethingTexture1.anIntArray2642[(1 + var33 & 3) + 4 * var77];
-                var35 = SomethingTexture1.anIntArray2642[var77 * 4 + (var33 & 3)];
-                if (TextureSampler8.aBooleanArrayArray3468[var36][1]
-                  && TextureSampler8.aBooleanArrayArray3468[var35][0]) {
+                var36 = GlobalStatics_9.anIntArray2642[(1 + var33 & 3) + 4 * var77];
+                var35 = GlobalStatics_9.anIntArray2642[var77 * 4 + (var33 & 3)];
+                if (GlobalStatics_9.aBooleanArrayArray3468[var36][1]
+                  && GlobalStatics_9.aBooleanArrayArray3468[var35][0]) {
                   var30 = 0;
                 } else {
                   for (var83 = 0; var83 < 8; ++var83) {
@@ -471,14 +471,14 @@ public final class DummyClass3 {
             }
 
             if ((var73 != 0) && (var58 != var73)) {
-              var76 = TextureSampler10.method350((byte) 119, -1 + var73);
+              var76 = GlobalStatics_9.method350((byte) 119, -1 + var73);
               if (var76.aBoolean2092 && var76.anInt2103 != -1) {
                 var77 = var8[1 + var13][1 + var14];
                 var33 = var5[1 + var13][var14 + 1];
-                var35 = SomethingTexture1.anIntArray2642[(3 & var33 + 2) + 4 * var77];
-                var36 = SomethingTexture1.anIntArray2642[(var33 + 1 & 3) + 4 * var77];
-                if (TextureSampler8.aBooleanArrayArray3468[var35][1]
-                  && TextureSampler8.aBooleanArrayArray3468[var36][0]) {
+                var35 = GlobalStatics_9.anIntArray2642[(3 & var33 + 2) + 4 * var77];
+                var36 = GlobalStatics_9.anIntArray2642[(var33 + 1 & 3) + 4 * var77];
+                if (GlobalStatics_9.aBooleanArrayArray3468[var35][1]
+                  && GlobalStatics_9.aBooleanArrayArray3468[var36][0]) {
                   var73 = 0;
                 } else {
                   for (var83 = 0; (var83 < 8); ++var83) {
@@ -501,9 +501,9 @@ public final class DummyClass3 {
 
             int var78;
             if ((var24 != 0) && (var24 != var58)) {
-              var76 = TextureSampler10.method350((byte) 113, var24 - 1);
+              var76 = GlobalStatics_9.method350((byte) 113, var24 - 1);
               if (var76.aBoolean2092 && var76.anInt2103 != -1) {
-                var65 = SomethingTexture1.anIntArray2642[var8[var13][var14 + 1] * 4 + (
+                var65 = GlobalStatics_9.anIntArray2642[var8[var13][var14 + 1] * 4 + (
                   2 + var5[var13][var14 + 1] & 3)];
 
                 for (var78 = 0; var78 < 8; ++var78) {
@@ -520,10 +520,10 @@ public final class DummyClass3 {
             }
 
             if (var25 != 0 && var58 != var25) {
-              var76 = TextureSampler10.method350((byte) -103, var25 - 1);
+              var76 = GlobalStatics_9.method350((byte) -103, var25 - 1);
               if (var76.aBoolean2092 && (var76.anInt2103 != -1)) {
                 var21 =
-                  SomethingTexture1.anIntArray2642[(3 & var5[var13 - 1][var14] + 3) + 4 * var8[
+                  GlobalStatics_9.anIntArray2642[(3 & var5[var13 - 1][var14] + 3) + 4 * var8[
                     var13 - 1][var14]];
 
                 for (var78 = 0; var78 < 8; ++var78) {
@@ -540,10 +540,10 @@ public final class DummyClass3 {
             }
 
             if (var26 != 0 && (var26 != var58)) {
-              var76 = TextureSampler10.method350((byte) 126, var26 - 1);
+              var76 = GlobalStatics_9.method350((byte) 126, var26 - 1);
               if (var76.aBoolean2092 && var76.anInt2103 != -1) {
                 var22 =
-                  SomethingTexture1.anIntArray2642[(var5[var13][var14 - 1] & 3) + 4 * var8[var13][
+                  GlobalStatics_9.anIntArray2642[(var5[var13][var14 - 1] & 3) + 4 * var8[var13][
                     -1 + var14]];
 
                 for (var78 = 0; (var78 < 8); ++var78) {
@@ -560,9 +560,9 @@ public final class DummyClass3 {
             }
 
             if (var27 != 0 && var27 != var58) {
-              var76 = TextureSampler10.method350((byte) 116, var27 - 1);
+              var76 = GlobalStatics_9.method350((byte) 116, var27 - 1);
               if (var76.aBoolean2092 && var76.anInt2103 != -1) {
-                var23 = SomethingTexture1.anIntArray2642[4 * var8[1 + var13][var14] + (3
+                var23 = GlobalStatics_9.anIntArray2642[4 * var8[1 + var13][var14] + (3
                   & var5[var13 + 1][var14] + 1)];
 
                 for (var78 = 0; (var78 < 8); ++var78) {
@@ -580,22 +580,22 @@ public final class DummyClass3 {
 
             for (var74 = 0; (var74 < var61); ++var74) {
               var78 = var64[var74];
-              var79 = TextureSampler8.aBooleanArrayArray3468[var78 == var24 ? var65 : 0];
-              var75 = TextureSampler8.aBooleanArrayArray3468[var25 == var78 ? var21 : 0];
-              var81 = TextureSampler8.aBooleanArrayArray3468[(var78 == var26) ? var22 : 0];
-              boolean[] var84 = TextureSampler8.aBooleanArrayArray3468[var78 != var27 ? 0 : var23];
-              FloorOverlay var82 = TextureSampler10.method350((byte) 121, -1 + var78);
+              var79 = GlobalStatics_9.aBooleanArrayArray3468[var78 == var24 ? var65 : 0];
+              var75 = GlobalStatics_9.aBooleanArrayArray3468[var25 == var78 ? var21 : 0];
+              var81 = GlobalStatics_9.aBooleanArrayArray3468[(var78 == var26) ? var22 : 0];
+              boolean[] var84 = GlobalStatics_9.aBooleanArrayArray3468[var78 != var27 ? 0 : var23];
+              FloorOverlay var82 = GlobalStatics_9.method350((byte) 121, -1 + var78);
               SomethingGl0 var39 = GlobalStatics_3.method2052(var12, false, var82);
-              int var40 = TextureSampler34.method190(var82.anInt2095, var82.anInt2103, (byte) -76,
+              int var40 = GlobalStatics_10.method190(var82.anInt2095, var82.anInt2103, (byte) -76,
                 var6[var13][var14]) << 8 | 255;
               byte var44 = 6;
               int var41 = 255 |
-                TextureSampler34.method190(var82.anInt2095, var82.anInt2103, (byte) -85,
+                GlobalStatics_10.method190(var82.anInt2095, var82.anInt2103, (byte) -85,
                   var6[1 + var13][var14]) << 8;
-              int var42 = TextureSampler34.method190(var82.anInt2095, var82.anInt2103, (byte) 123,
+              int var42 = GlobalStatics_10.method190(var82.anInt2095, var82.anInt2103, (byte) 123,
                 var6[var13 + 1][var14 + 1]) << 8 | 255;
               int var43 = 255 |
-                TextureSampler34.method190(var82.anInt2095, var82.anInt2103, (byte) 106,
+                GlobalStatics_10.method190(var82.anInt2095, var82.anInt2103, (byte) 106,
                   var6[var13][var14 + 1]) << 8;
               boolean var48 = (var78 != var29) && var81[0] && var75[1];
               boolean var47 = (var78 != var73) && var79[0] && var84[1];
@@ -702,7 +702,7 @@ public final class DummyClass3 {
         DummyClass47.method1323(var0, var4, var2, var1, 0);
       }
 
-      if ((GameObject.anInt2737 >= 100)) {
+      if ((GlobalStatics_8.anInt2737 >= 100)) {
         if (GlobalStatics_0.aClass3_Sub28_Sub16_637 == null
           || var2 != GlobalStatics_0.aClass3_Sub28_Sub16_637.anInt3707
           || GlobalStatics_0.aClass3_Sub28_Sub16_637.anInt3696 != var1) {
@@ -720,7 +720,7 @@ public final class DummyClass3 {
           if (GlRenderer.useOpenGlRenderer) {
             SoftwareIndexedColorSpriteStatics.anIntArray1100 = null;
           } else {
-            Something3d.viewImageProducer.method2182(0);
+            GlobalStatics_9.viewImageProducer.method2182(0);
           }
         }
 
@@ -733,7 +733,7 @@ public final class DummyClass3 {
         int var6 = var1 * DummyClass44.anInt934 / DummyClass58.anInt1460 + var4;
         int var8 = DummyClass1.anInt410 * var1 / DummyClass58.anInt1460;
         int var15 = var0 + var2 * DummyClass44.anInt930 / DummyClass30.anInt455;
-        int var7 = var2 * GZipDecompressor.anInt817 / DummyClass30.anInt455;
+        int var7 = var2 * GlobalStatics_9.anInt817 / DummyClass30.anInt455;
         int var9 = 16711680;
         if ((GlobalStatics_5.gameId == 1)) {
           var9 = 16777215;

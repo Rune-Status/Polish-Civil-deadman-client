@@ -1597,7 +1597,7 @@ public final class SoftwareModel extends AbstractModel {
         int var18 = var17 + this.aShort3884 << 9;
         if (var18 / var13 > DummyClass17.screenLowerX) {
           int var19 = var17 - this.aShort3884 << 9;
-          if (var19 / var13 < Unsure.screenUpperX) {
+          if (var19 / var13 < GlobalStatics_10.screenUpperX) {
             int var20 = var7 * var3 - var15 * var2 >> 16;
             int var21 = var20 + (
                 this.aShort3884 * var2 + this.aShort3892 * var3 >> 16) << 9;
@@ -1622,7 +1622,7 @@ public final class SoftwareModel extends AbstractModel {
                 int var34;
                 int var32;
                 int var33;
-                if (var9 > 0L && TextureSampler27.aBoolean3094 && var14 > 0) {
+                if (var9 > 0L && GlobalStatics_10.aBoolean3094 && var14 > 0) {
                   if (var17 > 0) {
                     var31 = var19 / var13;
                     var33 = var18 / var14;
@@ -1639,8 +1639,8 @@ public final class SoftwareModel extends AbstractModel {
                     var34 = var21 / var13;
                   }
 
-                  if (Structure.anInt3642 >= var31 && Structure.anInt3642 <= var33
-                    && RenderAnimation.anInt384 >= var32 && RenderAnimation.anInt384 <= var34) {
+                  if (GlobalStatics_9.anInt3642 >= var31 && GlobalStatics_9.anInt3642 <= var33
+                    && GlobalStatics_9.anInt384 >= var32 && GlobalStatics_9.anInt384 <= var34) {
                     var31 = 999999;
                     var33 = -999999;
                     var32 = 999999;
@@ -1704,10 +1704,10 @@ public final class SoftwareModel extends AbstractModel {
                       }
                     }
 
-                    if (Structure.anInt3642 >= var31 && Structure.anInt3642 <= var33
-                      && RenderAnimation.anInt384 >= var32 && RenderAnimation.anInt384 <= var34) {
+                    if (GlobalStatics_9.anInt3642 >= var31 && GlobalStatics_9.anInt3642 <= var33
+                      && GlobalStatics_9.anInt384 >= var32 && GlobalStatics_9.anInt384 <= var34) {
                       if (this.aBoolean2699) {
-                        TextureSampler38.entityKeys[MapScene.anInt59++] = var9;
+                        GlobalStatics_10.entityKeys[GlobalStatics_9.anInt59++] = var9;
                       } else {
                         var30 = true;
                       }
@@ -2366,11 +2366,11 @@ public final class SoftwareModel extends AbstractModel {
               }
             }
           } else {
-            if (var2 && this.method1944(Structure.anInt3642 + DummyClass40.anInt846,
-              RenderAnimation.anInt384 + DummyClass40.anInt835,
+            if (var2 && this.method1944(GlobalStatics_9.anInt3642 + DummyClass40.anInt846,
+              GlobalStatics_9.anInt384 + DummyClass40.anInt835,
                 GlobalStatics_1.anIntArray3932[var11],
                 GlobalStatics_1.anIntArray3932[var12], GlobalStatics_1.anIntArray3932[var13], var14, var15, var16)) {
-              TextureSampler38.entityKeys[MapScene.anInt59++] = var3;
+              GlobalStatics_10.entityKeys[GlobalStatics_9.anInt59++] = var3;
               var2 = false;
             }
 

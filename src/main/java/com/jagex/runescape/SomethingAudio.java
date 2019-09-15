@@ -1,20 +1,8 @@
 package com.jagex.runescape;
 
-import com.jagex.runescape.common.GameString;
-import com.jagex.runescape.common.GameStringStatics;
-import com.jagex.runescape.opengl.GLStatics;
-
 public final class SomethingAudio {
 
 
-  private static GameString aClass94_1998 =
-    GameStringStatics.create("Connecting to update server");
-  public static int anInt1996;
-  public static SoftwareFont aClass3_Sub28_Sub17_Sub1_2000;
-  public static GameString aClass94_2002 =
-    GameStringStatics.create("Chargement des fichiers config )2 ");
-  public static GameString aClass94_2003 = GameStringStatics.create("_labels");
-  public static GameString CONNECTING_TO_UPDATE_SERVER = SomethingAudio.aClass94_1998;
   private int anInt1997;
   private int[][] anIntArrayArray1999;
   private int anInt2001;
@@ -121,34 +109,6 @@ public final class SomethingAudio {
         }
 
         return var2;
-      }
-  }
-
-  public static long method2174(int var0, int var1, int var2) {
-    SceneGraphTile var3 = GLStatics.sceneGraphTiles[var0][var1][var2];
-    return var3 != null && var3.aClass70_2234 != null ? var3.aClass70_2234.key : 0L;
-  }
-
-  public static void method2175(byte var0) {
-    SomethingAudio.aClass94_2002 = null;
-      SomethingAudio.CONNECTING_TO_UPDATE_SERVER = null;
-      SomethingAudio.aClass3_Sub28_Sub17_Sub1_2000 = null;
-      if (var0 == -110) {
-        SomethingAudio.aClass94_2003 = null;
-        SomethingAudio.aClass94_1998 = null;
-      }
-  }
-
-  public static SoftwareDirectColorSprite[] method2176(int var0, int var1, int var2,
-                                                      FileUnpacker var3) {
-    if (SomethingTexture4.loadSprites(var3, var0, var2, -30901)) {
-        if (var1 != 32767) {
-          SomethingAudio.method2176(-111, 55, -18, null);
-        }
-
-        return SomethingQuickChatK.createSprites();
-      } else {
-        return null;
       }
   }
 

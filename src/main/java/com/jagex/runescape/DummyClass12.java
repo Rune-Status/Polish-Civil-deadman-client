@@ -60,10 +60,10 @@ public final class DummyClass12 {
 
       int var36 = (-1 + var6) * var27;
       int[] var39 = DummyClass35.anIntArrayArray663[var2];
-      TextureSampler18.method282(var39, -var4 + var1, -87, -var11 + var1, var3);
-      TextureSampler18
+      GlobalStatics_10.method282(var39, -var4 + var1, -87, -var11 + var1, var3);
+      GlobalStatics_10
           .method282(var39, -var11 + var1, -66, var1 + var11, var0);
-      TextureSampler18.method282(var39, var1 + var11, -68, var4 + var1, var3);
+      GlobalStatics_10.method282(var39, var1 + var11, -68, var4 + var1, var3);
 
       while (var9 > 0) {
         if ((var23 < 0)) {
@@ -122,36 +122,36 @@ public final class DummyClass12 {
         if (var40) {
           int var45 = var1 + var10;
           int var46 = -var10 + var1;
-          TextureSampler18
+          GlobalStatics_10
               .method282(DummyClass35.anIntArrayArray663[var41], var44, -93,
                   var46,
                   var3);
-          TextureSampler18
+          GlobalStatics_10
               .method282(DummyClass35.anIntArrayArray663[var41], var46, 121,
                   var45,
                   var0);
-          TextureSampler18
+          GlobalStatics_10
               .method282(DummyClass35.anIntArrayArray663[var41], var45, -47,
                   var43,
                   var3);
-          TextureSampler18
+          GlobalStatics_10
               .method282(DummyClass35.anIntArrayArray663[var42], var44, 124,
                   var46,
                   var3);
-          TextureSampler18
+          GlobalStatics_10
               .method282(DummyClass35.anIntArrayArray663[var42], var46, -73,
                   var45,
                   var0);
-          TextureSampler18
+          GlobalStatics_10
               .method282(DummyClass35.anIntArrayArray663[var42], var45, 111,
                   var43,
                   var3);
         } else {
-          TextureSampler18
+          GlobalStatics_10
               .method282(DummyClass35.anIntArrayArray663[var41], var44, 96,
                   var43,
                   var3);
-          TextureSampler18
+          GlobalStatics_10
               .method282(DummyClass35.anIntArrayArray663[var42], var44, 124,
                   var43,
                   var3);
@@ -181,13 +181,13 @@ public final class DummyClass12 {
                 var3.method1078(-119).aClass94_508) :
             ((var1 == 3) ?
                 (var0.aClass94_2620
-                    .method1528((byte) -42, FileTable.aClass94_946) ?
+                    .method1528((byte) -42, GlobalStatics_8.aClass94_946) ?
                     (var3.aClass94_2620
-                        .method1528((byte) -42, FileTable.aClass94_946) ?
+                        .method1528((byte) -42, GlobalStatics_8.aClass94_946) ?
                         0 :
                         (var4 ? -1 : 1)) :
                     (var3.aClass94_2620
-                        .method1528((byte) -42, FileTable.aClass94_946) ?
+                        .method1528((byte) -42, GlobalStatics_8.aClass94_946) ?
                         (var4 ? 1 : -1) :
                         var0.aClass94_2620
                             .method1546((byte) -100, var3.aClass94_2620))) :

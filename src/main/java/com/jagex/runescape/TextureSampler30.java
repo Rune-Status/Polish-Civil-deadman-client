@@ -1,30 +1,10 @@
 package com.jagex.runescape;
 
 import com.jagex.runescape.buffer.Buffer;
-import com.jagex.runescape.common.GameString;
-import com.jagex.runescape.common.GameStringStatics;
 import com.jagex.runescape.done.AbstractTextureSampler;
-import com.jagex.runescape.opengl.GLStatics;
-import com.jagex.runescape.sprite.SoftwareIndexedColorSprite;
-import java.awt.Frame;
 
 public final class TextureSampler30 extends AbstractTextureSampler {
 
-  private static GameString aClass94_3120 = GameStringStatics.create("M");
-  public static volatile boolean aBoolean3116 = true;
-  public static boolean[][] aBooleanArrayArray3118 = {
-    new boolean[0], {true, false, true}, {true, false, false, true}, {false, false, true, true},
-    {true, true, false}, {false, true, true}, {true, false, false, true},
-    {false, false, false, true, true}, {false, true, true}, {true, false, true, true, true},
-    {false, true, true, true, true}, {false, true, true, true, true, false}
-  };
-  public static GameString aClass94_3119 = GameStringStatics.create("vert:");
-  public static Frame fullScreenFrame;
-  public static int anInt3122;
-  public static GameString COMMAND_NOCLIP = GameStringStatics.create("::noclip");
-  public static SignLink signLink;
-  public static GameString aClass94_3124 = TextureSampler30.aClass94_3120;
-  public static GameString aClass94_3117 = TextureSampler30.aClass94_3120;
   private int anInt3126 = 2048;
   private int anInt3127 = 3072;
   private int anInt3128 = 1024;
@@ -39,7 +19,7 @@ public final class TextureSampler30 extends AbstractTextureSampler {
       if (this.monoChromaticImageCache.aBoolean1580) {
         int[] var4 = this.method152(0, var1, 32755);
 
-        for (int var5 = 0; var5 < SomethingLight0.anInt1559; ++var5) {
+        for (int var5 = 0; var5 < GlobalStatics_9.anInt1559; ++var5) {
           var7[var5] = this.anInt3128 + (var4[var5] * this.anInt3126 >> 12);
         }
       }
@@ -82,7 +62,7 @@ public final class TextureSampler30 extends AbstractTextureSampler {
         int[] var9 = var3[1];
         int[] var10 = var3[2];
 
-        for (int var11 = 0; (var11 < SomethingLight0.anInt1559); ++var11) {
+        for (int var11 = 0; (var11 < GlobalStatics_9.anInt1559); ++var11) {
           var8[var11] = this.anInt3128 + (this.anInt3126 * var5[var11] >> 12);
           var9[var11] = (this.anInt3126 * var6[var11] >> 12) + this.anInt3128;
           var10[var11] = this.anInt3128 + (this.anInt3126 * var7[var11] >> 12);
@@ -90,227 +70,10 @@ public final class TextureSampler30 extends AbstractTextureSampler {
       }
 
       if (var1 != -1) {
-        TextureSampler30.method211(51);
+        GlobalStatics_10.method211(51);
       }
 
       return var3;
-  }
-
-  public static int method210(int var0, int var1, int var2, int var3) {
-    if ((var2 == var3)) {
-        return var2;
-      } else {
-        int var4 = -var1 + 128;
-        if (var0 != 18348) {
-          TextureSampler30.method213(82, -103, 50, -59, null, 126L, null, null);
-        }
-
-        int var5 =
-          var1 * ((-16711936 & var3) >>> 7) + var4 * ((-16711936 & var2) >>> 7) & -16711936;
-        int var6 = var4 * (16711935 & var2) + ((var3 & 16711935) * var1) & -16711936;
-        return var5 + (var6 >> 7);
-      }
-  }
-
-  public static void method211(int var0) {
-    TextureSampler30.aClass94_3124 = null;
-      TextureSampler30.aClass94_3117 = null;
-      if (var0 != 1024) {
-        TextureSampler30.signLink = null;
-      }
-
-      TextureSampler30.aClass94_3120 = null;
-      TextureSampler30.COMMAND_NOCLIP = null;
-      TextureSampler30.fullScreenFrame = null;
-      TextureSampler30.aBooleanArrayArray3118 = null;
-      TextureSampler30.aClass94_3119 = null;
-      TextureSampler30.signLink = null;
-  }
-
-  public static void method212(long var0, int var2) {
-    if (var0 != 0L) {
-        for (int var3 = var2; (var3 < GlobalStatics_6.anInt3591); ++var3) {
-          if (MonoChromaticImageCache.aLongArray1574[var3] == var0) {
-            ++DummyClass20.anInt1781;
-            --GlobalStatics_6.anInt3591;
-
-            for (int var4 = var3; GlobalStatics_6.anInt3591 > var4; ++var4) {
-              MonoChromaticImageCache.aLongArray1574[var4] =
-                MonoChromaticImageCache.aLongArray1574[var4 + 1];
-              TextureSampler7.aClass94Array3341[var4] = TextureSampler7.aClass94Array3341[1 + var4];
-            }
-
-            DummyClass31.anInt1472 = TextureSampler23.anInt3213;
-            TextureSampler12.secureBuffer.writePacket(213);
-            TextureSampler12.secureBuffer.writeLong(var0);
-            break;
-          }
-        }
-
-      }
-  }
-
-  public static void method213(int var0, int var1, int var2, int var3, SceneNode var4, long var5,
-                              SceneNode var7, SceneNode var8) {
-    SomethingScene var9 = new SomethingScene();
-    var9.aClass140_1073 = var4;
-    var9.anInt1078 = var1 * 128 + 64;
-    var9.anInt1075 = var2 * 128 + 64;
-    var9.anInt1068 = var3;
-    var9.aLong1079 = var5;
-    var9.aClass140_1067 = var7;
-    var9.aClass140_1069 = var8;
-    int var10 = 0;
-    SceneGraphTile var11 = GLStatics.sceneGraphTiles[var0][var1][var2];
-    if (var11 != null) {
-      for (int var12 = 0; var12 < var11.anInt2223; ++var12) {
-        SceneSomething var13 = var11.sceneGraphNodes[var12];
-        if ((var13.aLong498 & 4194304L) == 4194304L) {
-          int var14 = var13.sceneNode.getMinimumY();
-          if (var14 != -32768 && var14 < var10) {
-            var10 = var14;
-          }
-        }
-      }
-    }
-
-    var9.anInt1077 = -var10;
-    if (GLStatics.sceneGraphTiles[var0][var1][var2] == null) {
-      GLStatics.sceneGraphTiles[var0][var1][var2] = new SceneGraphTile(var0, var1, var2);
-    }
-
-    GLStatics.sceneGraphTiles[var0][var1][var2].aClass72_2245 = var9;
-  }
-
-  public static void method214(SceneNode var0, int var1, int var2, int var3, int var4, int var5) {
-    boolean var6 = true;
-    int var7 = var2;
-    int var8 = var2 + var4;
-    int var9 = var3 - 1;
-    int var10 = var3 + var5;
-
-    for (int var11 = var1; var11 <= var1 + 1; ++var11) {
-      if (var11 != GLStatics.anInt2456) {
-        for (int var12 = var7; var12 <= var8; ++var12) {
-          if (var12 >= 0 && var12 < SocketStream.sceneWidth) {
-            for (int var13 = var9; var13 <= var10; ++var13) {
-              if (var13 >= 0 && var13 < TextureSampler17.sceneHeight && (!var6 || var12 >= var8
-                || var13 >= var10 || var13 < var3 && var12 != var2)) {
-                SceneGraphTile var14 = GLStatics.sceneGraphTiles[var11][var12][var13];
-                if (var14 != null) {
-                  int var15 = (GlobalStatics_4.heightMap[var11][var12][var13]
-                    + GlobalStatics_4.heightMap[var11][var12 + 1][var13]
-                    + GlobalStatics_4.heightMap[var11][var12][var13 + 1]
-                    + GlobalStatics_4.heightMap[var11][var12 + 1][var13 + 1]) / 4 -
-                    (GlobalStatics_4.heightMap[var1][var2][var3]
-                      + GlobalStatics_4.heightMap[var1][var2 + 1][var3]
-                      + GlobalStatics_4.heightMap[var1][var2][var3 + 1]
-                      + GlobalStatics_4.heightMap[var1][var2 + 1][var3 + 1]) / 4;
-                  SceneSomething2 var16 = var14.aClass70_2234;
-                  if (var16 != null) {
-                    if (var16.sceneNode0.method1865()) {
-                      var0.method1866(var16.sceneNode0, (var12 - var2) * 128 + (1 - var4) * 64,
-                        var15, (var13 - var3) * 128 + (1 - var5) * 64, var6);
-                    }
-
-                    if (var16.sceneNode1 != null && var16.sceneNode1.method1865()) {
-                      var0.method1866(var16.sceneNode1, (var12 - var2) * 128 + (1 - var4) * 64,
-                        var15, (var13 - var3) * 128 + (1 - var5) * 64, var6);
-                    }
-                  }
-
-                  for (int var17 = 0; var17 < var14.anInt2223; ++var17) {
-                    SceneSomething var18 = var14.sceneGraphNodes[var17];
-                    if (var18 != null && var18.sceneNode.method1865() && (var12 == var18.anInt483
-                      || var12 == var7) && (var13 == var18.anInt478 || var13 == var9)) {
-                      int var19 = var18.anInt495 - var18.anInt483 + 1;
-                      int var20 = var18.anInt481 - var18.anInt478 + 1;
-                      var0.method1866(var18.sceneNode,
-                        (var18.anInt483 - var2) * 128 + (var19 - var4) * 64, var15,
-                        (var18.anInt478 - var3) * 128 + (var20 - var5) * 64, var6);
-                    }
-                  }
-                }
-              }
-            }
-          }
-        }
-
-        --var7;
-        var6 = false;
-      }
-    }
-
-  }
-
-  public static void method215(byte var0, SoftwareIndexedColorSprite var1) {
-    short var2 = 256;
-      int var3 = 0;
-      if (var0 >= -80) {
-        TextureSampler30.aBoolean3116 = true;
-      }
-
-      while (DummyClass12.anIntArray2026.length > var3) {
-        DummyClass12.anIntArray2026[var3] = 0;
-        ++var3;
-      }
-
-      int var4;
-      for (var3 = 0; (var3 < 5000); ++var3) {
-        var4 = (int) (var2 * Math.random() * 128.0D);
-        DummyClass12.anIntArray2026[var4] = (int) (Math.random() * 284.0D);
-      }
-
-      int var5;
-      int var6;
-      for (var3 = 0; (var3 < 20); ++var3) {
-        for (var4 = 1; (-1 + var2) > var4; ++var4) {
-          for (var5 = 1; var5 < 127; ++var5) {
-            var6 = var5 + (var4 << 7);
-            DummyOutputStream.anIntArray49[var6] =
-              (DummyClass12.anIntArray2026[128 + var6] + DummyClass12.anIntArray2026[-1 + var6]
-                + DummyClass12.anIntArray2026[1 + var6] + DummyClass12.anIntArray2026[-128 + var6])
-                / 4;
-          }
-        }
-
-        int[] var10 = DummyClass12.anIntArray2026;
-        DummyClass12.anIntArray2026 = DummyOutputStream.anIntArray49;
-        DummyOutputStream.anIntArray49 = var10;
-      }
-
-      if (var1 != null) {
-        var3 = 0;
-
-        for (var4 = 0; var1.height > var4; ++var4) {
-          for (var5 = 0; var1.width > var5; ++var5) {
-            if (var1.aByteArray2674[var3++] != 0) {
-              var6 = var1.offsetX + var5 + 16;
-              int var7 = var1.offsetY + (var4 + 16);
-              int var8 = var6 + (var7 << 7);
-              DummyClass12.anIntArray2026[var8] = 0;
-            }
-          }
-        }
-      }
-  }
-
-  public static void method216(Buffer var0, int var1) {
-    for (int var2 = 0; LightIntensity.anInt906 > var2; ++var2) {
-        int var3 = var0.readUnsignedShortSmart();
-        int var4 = var0.readUnsignedShort();
-        if ((var4 == 65535)) {
-          var4 = -1;
-        }
-
-        if (DummyClass26.aClass44_Sub1Array1609[var3] != null) {
-          DummyClass26.aClass44_Sub1Array1609[var3].anInt722 = var4;
-        }
-      }
-
-      if (var1 != -14991) {
-        TextureSampler30.COMMAND_NOCLIP = null;
-      }
   }
 
 }

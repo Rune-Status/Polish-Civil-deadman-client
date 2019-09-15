@@ -14,7 +14,7 @@ public final class NanoFrameRegulator extends AbstractFrameRegulator {
         var6 = var4;
       }
 
-      TextureSampler25.sleep(var6 / 1000000L);
+      GlobalStatics_10.sleep(var6 / 1000000L);
       int var10 = 0;
 
       long var8;

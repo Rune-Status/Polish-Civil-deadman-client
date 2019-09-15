@@ -116,21 +116,21 @@ public final class DummyClass42 {
   }
 
   public static void method1188(int var0) {
-    Mouse.anIntArray1920 = null;
+    GlobalStatics_9.anIntArray1920 = null;
       DummyClass36.anIntArrayArrayArray2609 = null;
-      IntegerNode.anIntArray2469 = null;
-      ObjectCache.tileOrientation = null;
+      GlobalStatics_9.anIntArray2469 = null;
+      GlobalStatics_9.tileOrientation = null;
       DummyClass18.aByteArrayArrayArray81 = null;
-      MouseRecorder.aByteArrayArrayArray1014 = null;
+      GlobalStatics_9.aByteArrayArrayArray1014 = null;
       DummyClass17.tileFloors = null;
-      TextureSampler36.floorUnderlayIds = null;
-      HashTableIterator.anIntArray1138 = null;
+      GlobalStatics_10.floorUnderlayIds = null;
+      GlobalStatics_9.anIntArray1138 = null;
       if (var0 >= -60) {
         DummyClass42.DEFAULT_WALK_TOOLTIP = null;
       }
 
       GlobalStatics_4.anIntArray1695 = null;
-      SomethingPacket151.anIntArray2606 = null;
+      GlobalStatics_9.anIntArray2606 = null;
   }
 
   public static boolean addNodeToSceneGraph(int plane, int var1, int var2, int var3, int var4,
@@ -199,8 +199,8 @@ public final class DummyClass42 {
         var22.anIntArray2237[var22.anInt2223] = var18;
         var22.flags |= var18;
         ++var22.anInt2223;
-        if (var13 && TextureSampler16.anIntArrayArray3115[x][y] != 0) {
-          var14 = TextureSampler16.anIntArrayArray3115[x][y];
+        if (var13 && GlobalStatics_10.anIntArrayArray3115[x][y] != 0) {
+          var14 = GlobalStatics_10.anIntArrayArray3115[x][y];
         }
       }
     }
@@ -208,15 +208,15 @@ public final class DummyClass42 {
     if (var13 && var14 != 0) {
       for (x = var1; x < var1 + var3; ++x) {
         for (y = var2; y < var2 + var4; ++y) {
-          if (TextureSampler16.anIntArrayArray3115[x][y] == 0) {
-            TextureSampler16.anIntArrayArray3115[x][y] = var14;
+          if (GlobalStatics_10.anIntArrayArray3115[x][y] == 0) {
+            GlobalStatics_10.anIntArrayArray3115[x][y] = var14;
           }
         }
       }
     }
 
     if (var10) {
-      GlobalStatics_3.aClass25Array1868[TextureSampler21.anInt3070++] = var20;
+      GlobalStatics_3.aClass25Array1868[GlobalStatics_10.anInt3070++] = var20;
     }
 
     return true;

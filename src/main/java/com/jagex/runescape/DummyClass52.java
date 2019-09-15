@@ -29,7 +29,7 @@ public final class DummyClass52 {
       byte[] var4 = var2.method1568(0);
       var1.writeSmart(-32769, var4.length);
       var1.position +=
-        TextureSampler16.huffmanEncoder.method1015(var4.length, -81, var1.bytes, var4, 0,
+        GlobalStatics_10.huffmanEncoder.method1015(var4.length, -81, var1.bytes, var4, 0,
           var1.position);
       return var1.position - var3;
   }
@@ -40,8 +40,8 @@ public final class DummyClass52 {
         DummyClass52.anInt1174 = 37;
       }
 
-      return SomethingTexture4.loadSprites(var0, var2, var3, -30901) ?
-        TextureSampler36.method343(1854847236) :
+      return GlobalStatics_9.loadSprites(var0, var2, var3, -30901) ?
+        GlobalStatics_10.method343(1854847236) :
         null;
   }
 

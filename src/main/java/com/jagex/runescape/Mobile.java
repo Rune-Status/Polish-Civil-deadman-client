@@ -1,22 +1,12 @@
 package com.jagex.runescape;
 
 import com.jagex.runescape.common.GameString;
-import com.jagex.runescape.common.GameStringStatics;
-import com.jagex.runescape.done.AbstractDirectColorSprite;
 import com.jagex.runescape.done.AbstractModel;
 import com.jagex.runescape.opengl.GLStatics;
 import com.jagex.runescape.opengl.GlRenderer;
 
 public abstract class Mobile extends SceneNode {
 
-  public static int anInt2756;
-  public static GameString aClass94_2765 = GameStringStatics.create(" ");
-  public static int anInt2770;
-  public static boolean aBoolean2774 = true;
-  public static ObjectCache aClass93_2792 = new ObjectCache(64);
-  public static int[] quady1 = new int[100];
-  public static AbstractDirectColorSprite[] aClass3_Sub28_Sub16Array2839;
-  public static ScriptState[] aClass54Array2841 = new ScriptState[50];
   public int anInt2753;
   public int[] waypointsY = new int[10];
   public int anInt2758;
@@ -106,7 +96,7 @@ public abstract class Mobile extends SceneNode {
         null :
         ((var2 == -1) ?
           DummyClass18.DEFAULT_RENDER_ANIMATION :
-          StringNode0.getRenderAnimation(false, var2));
+          GlobalStatics_9.getRenderAnimation(false, var2));
   }
 
   public boolean hasConfiguration(byte var1 ) {
@@ -118,7 +108,7 @@ public abstract class Mobile extends SceneNode {
   }
 
   public final void setPosition(int size, int x, int y, boolean var5) {
-    if ((this.animationId != -1) && (GameClient.method45(this.animationId,
+    if ((this.animationId != -1) && (GlobalStatics_8.method45(this.animationId,
         (byte) -20).anInt1850 == 1)) {
         this.animationId = -1;
       }
@@ -151,8 +141,8 @@ public abstract class Mobile extends SceneNode {
       this.anInt2811 = 0;
       this.anInt2829 = 64 * size + this.waypointsY[0] * 128;
       this.anInt2819 = size * 64 + 128 * this.waypointsX[0];
-      if (GlRenderer.useOpenGlRenderer && TextureCache.localPlayer == this) {
-        TextureSampler31.method236((byte) 64);
+      if (GlRenderer.useOpenGlRenderer && GlobalStatics_9.localPlayer == this) {
+        GlobalStatics_10.method236((byte) 64);
       }
   }
 
@@ -164,7 +154,7 @@ public abstract class Mobile extends SceneNode {
         ++var5;
       }
 
-      if ((this.animationId != -1) && GameClient.method45(this.animationId,
+      if ((this.animationId != -1) && GlobalStatics_8.method45(this.animationId,
           (byte) -20).anInt1850 == 1) {
         this.animationId = -1;
       }
@@ -222,9 +212,9 @@ public abstract class Mobile extends SceneNode {
         this.method1971(null, (byte) -26);
       }
 
-      Parameter.anInt3623 = 0;
-      TextureSampler15.anInt3198 = 0;
-      TextureSampler16.anInt3111 = 0;
+      GlobalStatics_9.anInt3623 = 0;
+      GlobalStatics_10.anInt3198 = 0;
+      GlobalStatics_10.anInt3111 = 0;
       RenderAnimation var4 = this.getRenderAnimationId(false);
       assert var4 != null;
       int var5 = var4.anInt395;
@@ -237,7 +227,7 @@ public abstract class Mobile extends SceneNode {
         int var12 = -(var9 * var7) + var10 * var8 >> 16;
         int var11 = var7 * var10 + (var8 * var9) >> 16;
         int var13 =
-          GlobalStatics_6.method1736(GameWorldSomething.currentPlane, 1, var11 + this.anInt2819,
+          GlobalStatics_6.method1736(GlobalStatics_9.currentPlane, 1, var11 + this.anInt2819,
               this.anInt2829 + var12);
         int var14 = var5 / 2;
         int var15 = -var6 / 2;
@@ -245,7 +235,7 @@ public abstract class Mobile extends SceneNode {
         int var20 = var6 / 2;
         int var17 = var15 * var8 - (var14 * var7) >> 16;
         int var18 =
-          GlobalStatics_6.method1736(GameWorldSomething.currentPlane, 1, var16 + this.anInt2819,
+          GlobalStatics_6.method1736(GlobalStatics_9.currentPlane, 1, var16 + this.anInt2819,
               this.anInt2829 + var17);
         int var19 = -var5 / 2;
         int var22 = -(var7 * var19) + var20 * var8 >> 16;
@@ -255,36 +245,36 @@ public abstract class Mobile extends SceneNode {
         int var27 = var25 * var8 - var7 * var24 >> 16;
         int var26 = var7 * var25 + var8 * var24 >> 16;
         int var23 =
-          GlobalStatics_6.method1736(GameWorldSomething.currentPlane, 1,
+          GlobalStatics_6.method1736(GlobalStatics_9.currentPlane, 1,
               this.anInt2819 + var21,
             var22 + this.anInt2829);
         int var29 = var18 > var13 ? var13 : var18;
         int var28 =
-          GlobalStatics_6.method1736(GameWorldSomething.currentPlane, 1, var26 + this.anInt2819,
+          GlobalStatics_6.method1736(GlobalStatics_9.currentPlane, 1, var26 + this.anInt2819,
             var27 + this.anInt2829);
         int var30 = var28 > var23 ? var23 : var28;
         int var31 = var28 > var18 ? var18 : var28;
         int var32 = var23 <= var13 ? var23 : var13;
-        TextureSampler15.anInt3198 =
+        GlobalStatics_10.anInt3198 =
           2047 & (int) (325.95D * Math.atan2(var29 - var30, var6));
-        if (TextureSampler15.anInt3198 != 0) {
-          var2.method1896(TextureSampler15.anInt3198);
+        if (GlobalStatics_10.anInt3198 != 0) {
+          var2.method1896(GlobalStatics_10.anInt3198);
         }
 
-        Parameter.anInt3623 =
+        GlobalStatics_9.anInt3623 =
           2047 & (int) (325.95D * Math.atan2(-var31 + var32, var5));
-        if (Parameter.anInt3623 != 0) {
-          var2.method1886(Parameter.anInt3623);
+        if (GlobalStatics_9.anInt3623 != 0) {
+          var2.method1886(GlobalStatics_9.anInt3623);
         }
 
-        TextureSampler16.anInt3111 = var28 + var13;
-        if (((var23 + var18) < TextureSampler16.anInt3111)) {
-          TextureSampler16.anInt3111 = var23 + var18;
+        GlobalStatics_10.anInt3111 = var28 + var13;
+        if (((var23 + var18) < GlobalStatics_10.anInt3111)) {
+          GlobalStatics_10.anInt3111 = var23 + var18;
         }
 
-        TextureSampler16.anInt3111 = (TextureSampler16.anInt3111 >> 1) - this.anInt2831;
-        if (TextureSampler16.anInt3111 != 0) {
-          var2.method1897(0, TextureSampler16.anInt3111, 0);
+        GlobalStatics_10.anInt3111 = (GlobalStatics_10.anInt3111 >> 1) - this.anInt2831;
+        if (GlobalStatics_10.anInt3111 != 0) {
+          var2.method1897(0, GlobalStatics_10.anInt3111, 0);
         }
       }
   }
@@ -548,18 +538,6 @@ public abstract class Mobile extends SceneNode {
 
   public int getSize() {
     return this.size;
-  }
-
-  public static void method1974(byte var0) {
-    if (var0 > -101) {
-        Mobile.aClass3_Sub28_Sub16Array2839 = null;
-      }
-
-      Mobile.aClass54Array2841 = null;
-      Mobile.aClass94_2765 = null;
-      Mobile.aClass93_2792 = null;
-      Mobile.aClass3_Sub28_Sub16Array2839 = null;
-      Mobile.quady1 = null;
   }
 
 }

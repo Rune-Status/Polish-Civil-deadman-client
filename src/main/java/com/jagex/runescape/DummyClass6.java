@@ -34,14 +34,14 @@ public class DummyClass6 {
       int variableId = var3.id;
       int high = var3.high;
       int low = var3.low;
-      int var7 = SomethingMidiFile.BIT_MASKS[high - low];
+      int var7 = GlobalStatics_9.BIT_MASKS[high - low];
       if ((var1 < 0) || var7 < var1) {
         var1 = 0;
       }
 
       var7 <<= low;
-      TextureSampler39.updateVariable(variableId,
-        var1 << low & var7 | ~var7 & LightIntensity.variables[variableId]);
+      GlobalStatics_10.updateVariable(variableId,
+        var1 << low & var7 | ~var7 & GlobalStatics_9.variables[variableId]);
   }
 
 }

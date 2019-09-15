@@ -17,12 +17,12 @@ public final class MovedStatics0 {
                 false);
       }
 
-      while (var1 < OndemandRequester.anInt997) {
+      while (var1 < GlobalStatics_9.anInt997) {
         int var2 = DummyClass60.anIntArray441[var1];
-        Player var3 = TextureSampler0.players[var2];
-        int var4 = SpotAnimationConfig.gameBuffer.readUnsignedByte();
+        Player var3 = GlobalStatics_9.players[var2];
+        int var4 = GlobalStatics_9.gameBuffer.readUnsignedByte();
         if (((16 & var4) != 0)) {
-          var4 += SpotAnimationConfig.gameBuffer.readUnsignedByte() << 8;
+          var4 += GlobalStatics_9.gameBuffer.readUnsignedByte() << 8;
         }
 
         DummyClass38.method1080(var4, var2, (byte) -79, var3);
@@ -40,23 +40,23 @@ public final class MovedStatics0 {
     if (GlobalStatics_0.aBooleanArray1703[var0]) {
         return true;
       } else {
-        if (TextureSampler3.aClass153_3361.method2117(-99, var0)) {
-          int var2 = TextureSampler3.aClass153_3361
+        if (GlobalStatics_9.aClass153_3361.method2117(-99, var0)) {
+          int var2 = GlobalStatics_9.aClass153_3361
               .getAmountChildren(var0, (byte) 94);
           if (var2 == 0) {
             GlobalStatics_0.aBooleanArray1703[var0] = true;
             return true;
           } else {
-            if (SceneNode.aClass11ArrayArray1834[var0] == null) {
-              SceneNode.aClass11ArrayArray1834[var0] = new Widget[var2];
+            if (GlobalStatics_9.aClass11ArrayArray1834[var0] == null) {
+              GlobalStatics_9.aClass11ArrayArray1834[var0] = new Widget[var2];
             }
 
             for (int var3 = 0; var3 < var2; ++var3) {
-              if (SceneNode.aClass11ArrayArray1834[var0][var3] == null) {
-                byte[] var4 = TextureSampler3.aClass153_3361
+              if (GlobalStatics_9.aClass11ArrayArray1834[var0][var3] == null) {
+                byte[] var4 = GlobalStatics_9.aClass153_3361
                     .getBytes(var0, var3);
                 if (var4 != null) {
-                  Widget var5 = SceneNode.aClass11ArrayArray1834[var0][var3] = new Widget();
+                  Widget var5 = GlobalStatics_9.aClass11ArrayArray1834[var0][var3] = new Widget();
                   var5.anInt279 = var3 + (var0 << 16);
                   if (var4[0] == -1) {
                     var5.method867(var1 ^ -105, new Buffer(var4));
@@ -99,7 +99,7 @@ public final class MovedStatics0 {
       }
 
       if (var5 >= -91) {
-        GameCanvas.aClass94_36 = null;
+        GlobalStatics_8.aClass94_36 = null;
       }
 
       byte var11;
@@ -120,7 +120,7 @@ public final class MovedStatics0 {
                 && var8 <= var15
                 && var15 < 8 + var8) {
               DummyClass10.readTileData(0, 0, var10, var25,
-                  TextureSampler3
+                  GlobalStatics_9
                       .method310(var0, (byte) -117, 7 & var14, 7 & var15)
                       + var4,
                   GlobalStatics_2.method519(var0, true, var15 & 7, var14 & 7) + var1,
@@ -163,13 +163,13 @@ public final class MovedStatics0 {
                               .method519(var0, true, var21 & 7, var20 & 7);
 
                           int var23 =
-                              TextureSampler3
+                              GlobalStatics_9
                                   .method310(var0, (byte) -97, 7 & var20,
                                       var21 & 7)
                                   + var4;
                           if (var22 >= 0 && var22 < 104 && (var23 >= 0)
                               && (var23 < 104)) {
-                            SceneShadowMap.aByteArrayArrayArray1774[var2][var22][var23] = var19;
+                            GlobalStatics_9.aByteArrayArrayArray1774[var2][var22][var23] = var19;
                           }
                         }
                       }
@@ -211,7 +211,7 @@ public final class MovedStatics0 {
 
             while (var18 > var17) {
               while (var29 < var20) {
-                SceneShadowMap.aByteArrayArrayArray1774[var2][var17][var29] = 0;
+                GlobalStatics_9.aByteArrayArrayArray1774[var2][var17][var29] = 0;
                 ++var29;
               }
 
@@ -253,10 +253,10 @@ public final class MovedStatics0 {
                     && var9 + 8 > var29
                     && (var8 <= var20) && (var8 + 8) > var20) {
                   var21 =
-                      MonoChromaticImageBuffer
+                      GlobalStatics_9
                           .method514(var0, var30.anInt703 & 1023, (byte) -83,
                               1023 & var30.anInt708) + (var1 << 7);
-                  var22 = TextureSampler28
+                  var22 = GlobalStatics_10
                       .method293(var30.anInt703 & 1023, var0, false,
                           1023 & var30.anInt708) + (var4 << 7);
                   var30.anInt703 = var21;
@@ -290,20 +290,20 @@ public final class MovedStatics0 {
 
       for (var28 = var1; (var28 < var14); ++var28) {
         for (var17 = var4; (var17 < var15); ++var17) {
-          SceneShadowMap.aByteArrayArrayArray1774[var2][var28][var17] = 0;
+          GlobalStatics_9.aByteArrayArrayArray1774[var2][var28][var17] = 0;
         }
       }
   }
 
   public static void method59(byte var0) {
-    GameCanvas.aClass94_28 = null;
-      GameCanvas.aClass94_35 = null;
-      GameCanvas.aClass94_34 = null;
+    GlobalStatics_8.aClass94_28 = null;
+      GlobalStatics_8.aClass94_35 = null;
+      GlobalStatics_8.aClass94_34 = null;
       if (var0 >= -69) {
-        GameCanvas.aBoolean29 = false;
+        GlobalStatics_8.aBoolean29 = false;
       }
 
-      GameCanvas.aClass94_36 = null;
-      GameCanvas.aClass94_32 = null;
+      GlobalStatics_8.aClass94_36 = null;
+      GlobalStatics_8.aClass94_32 = null;
   }
 }

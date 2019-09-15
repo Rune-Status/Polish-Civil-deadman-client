@@ -19,12 +19,12 @@ public final class DummyClass31 {
 
 
   public static void method1681(int var0) {
-    if (TextureSampler28.loginState == 5) {
+    if (GlobalStatics_10.loginState == 5) {
         if (var0 != -1) {
           DummyClass31.SERVER_JS5_DROP = null;
         }
 
-        TextureSampler28.loginState = 6;
+        GlobalStatics_10.loginState = 6;
       }
   }
 
@@ -38,13 +38,13 @@ public final class DummyClass31 {
 
   public static void method1683(int var0, boolean var1, int var2, boolean var3, CollisionMap var4,
                                int var5, int var6, int var7, byte var8, int var9, int var10) {
-    if (var1 && !NPC.method1986(103) && (2
+    if (var1 && !GlobalStatics_9.method1986(103) && (2
         & BZipDecompressorState.tileFlags[0][var7][var9]) == 0) {
         if ((16 & BZipDecompressorState.tileFlags[var2][var7][var9]) != 0) {
           return;
         }
 
-        if ((DummyClass18.method823(var9, var7, var8 ^ -127, var2) != GameObject.plane)) {
+        if ((DummyClass18.method823(var9, var7, var8 ^ -127, var2) != GlobalStatics_8.plane)) {
           return;
         }
       }
@@ -122,7 +122,7 @@ public final class DummyClass31 {
           }
 
           if (var11.method1690(28933)) {
-            SceneSomething2.method1286(var9, false, var11, var10, null, var7, var2, null);
+            GlobalStatics_9.method1286(var9, false, var11, var10, null, var7, var2, null);
           }
 
           boolean var26 = var11.aBoolean1503 & !var3;
@@ -184,8 +184,8 @@ public final class DummyClass31 {
                 if (var1) {
                   if ((var10 == 0)) {
                     if (var11.aBoolean1525) {
-                      MouseRecorder.aByteArrayArrayArray1014[var2][var7][var9] = 50;
-                      MouseRecorder.aByteArrayArrayArray1014[var2][var7][1 + var9] = 50;
+                      GlobalStatics_9.aByteArrayArrayArray1014[var2][var7][var9] = 50;
+                      GlobalStatics_9.aByteArrayArrayArray1014[var2][var7][1 + var9] = 50;
                     }
 
                     if (var11.aBoolean1542) {
@@ -196,9 +196,9 @@ public final class DummyClass31 {
                   } else if (var10 != 1) {
                     if ((var10 == 2)) {
                       if (var11.aBoolean1525) {
-                        MouseRecorder.aByteArrayArrayArray1014[var2][var7
+                        GlobalStatics_9.aByteArrayArrayArray1014[var2][var7
                             + 1][var9] = 50;
-                        MouseRecorder.aByteArrayArrayArray1014[var2][1 + var7][1
+                        GlobalStatics_9.aByteArrayArrayArray1014[var2][1 + var7][1
                             + var9] = 50;
                       }
 
@@ -212,8 +212,8 @@ public final class DummyClass31 {
                     } else {
                       if ((var10 == 3)) {
                         if (var11.aBoolean1525) {
-                          MouseRecorder.aByteArrayArrayArray1014[var2][var7][var9] = 50;
-                          MouseRecorder.aByteArrayArrayArray1014[var2][1
+                          GlobalStatics_9.aByteArrayArrayArray1014[var2][var7][var9] = 50;
+                          GlobalStatics_9.aByteArrayArrayArray1014[var2][1
                               + var7][var9] = 50;
                         }
 
@@ -227,8 +227,8 @@ public final class DummyClass31 {
                     }
                   } else {
                     if (var11.aBoolean1525) {
-                      MouseRecorder.aByteArrayArrayArray1014[var2][var7][var9 + 1] = 50;
-                      MouseRecorder.aByteArrayArrayArray1014[var2][var7 + 1][var9 + 1] = 50;
+                      GlobalStatics_9.aByteArrayArrayArray1014[var2][var7][var9 + 1] = 50;
+                      GlobalStatics_9.aByteArrayArrayArray1014[var2][var7 + 1][var9 + 1] = 50;
                     }
 
                     if (var11.aBoolean1542) {
@@ -244,7 +244,7 @@ public final class DummyClass31 {
                 }
 
                 if ((var11.anInt1528 != 16)) {
-                  StillGraphic.method1956(var2, var7, var9, var11.anInt1528);
+                  GlobalStatics_9.method1956(var2, var7, var9, var11.anInt1528);
                 }
 
               } else if ((var6 == 1)) {
@@ -269,18 +269,18 @@ public final class DummyClass31 {
                   DummyClass59.anIntArray675[var10], 0, var24);
                 if (var11.aBoolean1525 && var1) {
                   if (var10 == 0) {
-                    MouseRecorder.aByteArrayArrayArray1014[var2][var7][var9
+                    GlobalStatics_9.aByteArrayArrayArray1014[var2][var7][var9
                         + 1] = 50;
                   } else {
                     if ((var10 == 1)) {
-                      MouseRecorder.aByteArrayArrayArray1014[var2][var7 + 1][1
+                      GlobalStatics_9.aByteArrayArrayArray1014[var2][var7 + 1][1
                           + var9] = 50;
                     } else {
                       if ((var10 == 2)) {
-                        MouseRecorder.aByteArrayArrayArray1014[var2][1
+                        GlobalStatics_9.aByteArrayArrayArray1014[var2][1
                             + var7][var9] = 50;
                       } else if (var10 == 3) {
-                        MouseRecorder.aByteArrayArrayArray1014[var2][var7][var9] = 50;
+                        GlobalStatics_9.aByteArrayArrayArray1014[var2][var7][var9] = 50;
                       }
                     }
                   }
@@ -383,7 +383,7 @@ public final class DummyClass31 {
                   }
 
                   if ((var11.anInt1528 != 16)) {
-                    StillGraphic.method1956(var2, var7, var9, var11.anInt1528);
+                    GlobalStatics_9.method1956(var2, var7, var9, var11.anInt1528);
                   }
 
                 } else if (var6 == 3) {
@@ -409,18 +409,18 @@ public final class DummyClass31 {
                     DummyClass59.anIntArray675[var10], 0, var24);
                   if (var11.aBoolean1525 && var1) {
                     if (var10 == 0) {
-                      MouseRecorder.aByteArrayArrayArray1014[var2][var7][var9
+                      GlobalStatics_9.aByteArrayArrayArray1014[var2][var7][var9
                           + 1] = 50;
                     } else {
                       if (var10 == 1) {
-                        MouseRecorder.aByteArrayArrayArray1014[var2][1 + var7][
+                        GlobalStatics_9.aByteArrayArrayArray1014[var2][1 + var7][
                             var9 + 1] = 50;
                       } else if (var10 != 2) {
                         if ((var10 == 3)) {
-                          MouseRecorder.aByteArrayArrayArray1014[var2][var7][var9] = 50;
+                          GlobalStatics_9.aByteArrayArrayArray1014[var2][var7][var9] = 50;
                         }
                       } else {
-                        MouseRecorder.aByteArrayArrayArray1014[var2][1
+                        GlobalStatics_9.aByteArrayArrayArray1014[var2][1
                             + var7][var9] = 50;
                       }
                     }
@@ -462,7 +462,7 @@ public final class DummyClass31 {
                     long var44;
                     if ((var6 == 5)) {
                       var43 = 16;
-                      var44 = SomethingAudio.method2174(var2, var7, var9);
+                      var44 = GlobalStatics_9.method2174(var2, var7, var9);
                       if ((var44 != 0L)) {
                         var43 = DummyClass11.method2207(4,
                             Integer.MAX_VALUE & (int) (var44 >>> 32)).anInt1528;
@@ -477,7 +477,7 @@ public final class DummyClass31 {
                         if (GlRenderer.useOpenGlRenderer && var26) {
                           assert var47 != null;
                           SomethingShadows.method2051(var47.shadow,
-                              var20 - (RenderAnimation.anIntArray356[var10]
+                              var20 - (GlobalStatics_9.anIntArray356[var10]
                                   * 8), var22,
                               -(GlobalStatics_6.anIntArray3491[var10] * 8)
                                   + var21);
@@ -495,13 +495,13 @@ public final class DummyClass31 {
                           .method577(var2, var7, var9, var19, var39,
                               null,
                               DummyClass13.anIntArray2017[var10], 0,
-                              var43 * RenderAnimation.anIntArray356[var10],
+                              var43 * GlobalStatics_9.anIntArray356[var10],
                               GlobalStatics_6.anIntArray3491[var10] * var43,
                               var24);
                     } else {
                       if ((var6 == 6)) {
                         var43 = 8;
-                        var44 = SomethingAudio.method2174(var2, var7, var9);
+                        var44 = GlobalStatics_9.method2174(var2, var7, var9);
                         if ((var44 != 0L)) {
                           var43 = DummyClass11.method2207(4,
                               Integer.MAX_VALUE & (int) (var44
@@ -572,7 +572,7 @@ public final class DummyClass31 {
                         } else {
                           if (var6 == 8) {
                             var43 = 8;
-                            var44 = SomethingAudio.method2174(var2, var7, var9);
+                            var44 = GlobalStatics_9.method2174(var2, var7, var9);
                             if ((var44 != 0L)) {
                               var43 = DummyClass11.method2207(4,
                                   Integer.MAX_VALUE & (int) (var44
@@ -663,7 +663,7 @@ public final class DummyClass31 {
                   }
 
                   if ((var11.anInt1528 != 16)) {
-                    StillGraphic.method1956(var2, var7, var9, var11.anInt1528);
+                    GlobalStatics_9.method1956(var2, var7, var9, var11.anInt1528);
                   }
 
                 }
@@ -699,8 +699,8 @@ public final class DummyClass31 {
 
                   for (int var30 = 0; var30 <= var12; ++var30) {
                     for (int var31 = 0; var13 >= var31; ++var31) {
-                      if ((MouseRecorder.aByteArrayArrayArray1014[var2][var7 + var30][var31 + var9] < var29)) {
-                        MouseRecorder.aByteArrayArrayArray1014[var2][var7 + var30][var9 + var31] =
+                      if ((GlobalStatics_9.aByteArrayArrayArray1014[var2][var7 + var30][var31 + var9] < var29)) {
+                        GlobalStatics_9.aByteArrayArrayArray1014[var2][var7 + var30][var9 + var31] =
                           (byte) var29;
                       }
                     }
@@ -713,7 +713,7 @@ public final class DummyClass31 {
               }
 
             }
-          } else if (Keyboard.aBoolean1905 || (var11.anInt1529 != 0) ||
+          } else if (GlobalStatics_9.aBoolean1905 || (var11.anInt1529 != 0) ||
               (var11.anInt1538 == 1)
             || var11.aBoolean1483) {
             if ((var11.anInt1531 == -1) && var11.anIntArray1524 == null && !var11.aBoolean1510) {
@@ -732,7 +732,7 @@ public final class DummyClass31 {
                 var11.aBoolean1492, null);
             }
 
-            TextureSampler39.method276(var2, var7, var9, var19, var27, var24,
+            GlobalStatics_10.method276(var2, var7, var9, var19, var27, var24,
               var11.aBoolean1502);
             if (var11.anInt1538 == 1 && var4 != null) {
               var4.method1503(var7, var9, var8 - 55);

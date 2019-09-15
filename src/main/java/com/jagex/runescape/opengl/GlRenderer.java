@@ -475,7 +475,7 @@ public final class GlRenderer {
 
     GlRenderer.viewportSetup = false;
     DummyClass17.screenLowerX = left;
-    Unsure.screenUpperX = right;
+    GlobalStatics_10.screenUpperX = right;
     DummyClass3.screenUpperY = top;
     GLStatics.screenLowerY = bottom;
   }

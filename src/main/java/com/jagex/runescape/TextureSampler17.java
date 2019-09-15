@@ -64,7 +64,7 @@ public final class TextureSampler17 extends AbstractTextureSampler {
         int[] var10 = var3[2];
         int[] var8 = var3[0];
 
-        for (int var11 = 0; SomethingLight0.anInt1559 > var11; ++var11) {
+        for (int var11 = 0; GlobalStatics_9.anInt1559 > var11; ++var11) {
           this.method240((byte) -91, var5[var11], var6[var11], var7[var11]);
           this.anInt3188 += this.anInt3176;
           if (this.anInt3188 < 0) {

@@ -30,7 +30,7 @@ public final class DummyClass32 {
         96 :
         (DummyClass30.anInt453 == 0 ?
           0 :
-          MapScene.anInterface5Array70[DummyClass30.anInt453].method24());
+          GlobalStatics_9.anInterface5Array70[DummyClass30.anInt453].method24());
   }
 
   public static void method962(byte var0) {

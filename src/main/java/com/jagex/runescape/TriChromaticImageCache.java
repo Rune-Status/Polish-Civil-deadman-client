@@ -1,39 +1,24 @@
 package com.jagex.runescape;
 
-import com.jagex.runescape.common.GameString;
 import com.jagex.runescape.common.GameStringStatics;
-import com.jagex.runescape.done.AudioStreamEncoder;
 import com.jagex.runescape.node.Deque;
-import com.jagex.runescape.opengl.GLStatics;
 
 public final class TriChromaticImageCache {
-
-  public static GameString aClass94_1363 = GameStringStatics.create("Clientscript error in: ");
-  public static byte[] aByteArray1364 = new byte['\u8080'];
-  public static FileUnpacker aClass153_1370;
-  public static FileUnpacker aClass153_1372;
-  public static int[][] anIntArrayArray1373;
-  public static GameString aClass94_1374;
-  public static FileUnpacker materials;
-  public static GameString aClass94_1377;
-  public static FileUnpacker aClass153_1378;
-  public static GameString aClass94_1380;
-  public static SoftwareDirectColorSprite aClass3_Sub28_Sub16_Sub2_1381;
 
   static {
     int var0 = 0;
 
     for (int var1 = 0; var1 < 256; ++var1) {
       for (int var2 = 0; var2 <= var1; ++var2) {
-        TriChromaticImageCache.aByteArray1364[var0++] = (byte) ((int) (255.0D / Math.sqrt(
+        GlobalStatics_10.aByteArray1364[var0++] = (byte) ((int) (255.0D / Math.sqrt(
             ('\uffff' + var2 * var2 + var1 * var1) / 65535.0F)));
       }
     }
 
-    TriChromaticImageCache.aClass94_1374 = GameStringStatics.create("zap");
-    TriChromaticImageCache.aClass94_1377 = GameStringStatics.create("Abbrechen");
-    TriChromaticImageCache.anIntArrayArray1373 = new int[104][104];
-    TriChromaticImageCache.aClass94_1380 = GameStringStatics.create(")4p=");
+    GlobalStatics_10.aClass94_1374 = GameStringStatics.create("zap");
+    GlobalStatics_10.aClass94_1377 = GameStringStatics.create("Abbrechen");
+    GlobalStatics_10.anIntArrayArray1373 = new int[104][104];
+    GlobalStatics_10.aClass94_1380 = GameStringStatics.create(")4p=");
   }
 
   public boolean aBoolean1379;
@@ -59,7 +44,7 @@ public final class TriChromaticImageCache {
         }
 
         for (int var2 = 0; this.anInt1367 > var2; ++var2) {
-          this.aClass3_Sub20Array1371[var2] = SomethingQuickChat2.aClass3_Sub20_3532;
+          this.aClass3_Sub20Array1371[var2] = GlobalStatics_9.aClass3_Sub20_3532;
         }
 
         return this.anIntArrayArrayArray1362;
@@ -88,7 +73,7 @@ public final class TriChromaticImageCache {
     int var3 = -50 % ((var1 + 57) / 57);
       if (this.anInt1367 == this.anInt1369) {
         this.aBoolean1379 = this.aClass3_Sub20Array1371[var2] == null;
-        this.aClass3_Sub20Array1371[var2] = SomethingQuickChat2.aClass3_Sub20_3532;
+        this.aClass3_Sub20Array1371[var2] = GlobalStatics_9.aClass3_Sub20_3532;
         return this.anIntArrayArrayArray1362[var2];
       } else {
         if (this.anInt1367 == 1) {
@@ -122,40 +107,4 @@ public final class TriChromaticImageCache {
       }
   }
 
-  public static void method1591(boolean var0, AudioStreamEncoder var1) {
-    if (var1.aClass3_Sub12_2544 != null) {
-        var1.aClass3_Sub12_2544.anInt2374 = 0;
-      }
-
-      var1.aBoolean2545 = false;
-
-      for (AudioStreamEncoder var2 = var1.method411(); var2 != null; var2 = var1.method414()) {
-        TriChromaticImageCache.method1591(true, var2);
-      }
-
-      if (!var0) {
-        GLStatics.cameraTileX = -103;
-      }
-  }
-
-  public static void method1592(byte var0) {
-    TriChromaticImageCache.materials = null;
-      TriChromaticImageCache.aClass153_1378 = null;
-      TriChromaticImageCache.anIntArrayArray1373 = null;
-      TriChromaticImageCache.aClass94_1363 = null;
-      TriChromaticImageCache.aClass3_Sub28_Sub16_Sub2_1381 = null;
-      if (var0 > 25) {
-        TriChromaticImageCache.aClass94_1377 = null;
-        TriChromaticImageCache.aClass94_1380 = null;
-        TriChromaticImageCache.aClass153_1372 = null;
-        TriChromaticImageCache.aClass153_1370 = null;
-        TriChromaticImageCache.aByteArray1364 = null;
-        TriChromaticImageCache.aClass94_1374 = null;
-      }
-  }
-
-  public static void method1593(int var0, FileUnpacker var1) {
-    DummyClass14.titleBackgroundFileId = var1.getFileId(SomethingQuickChat.TITLE_BACKGROUND);
-      GlobalStatics_6.logoFileId = var1.getFileId(DummyClass53.LOGO);
-  }
 }

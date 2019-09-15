@@ -1,22 +1,10 @@
 package com.jagex.runescape;
 
 import com.jagex.runescape.buffer.Buffer;
-import com.jagex.runescape.buffer.BufferStatics;
-import com.jagex.runescape.done.AbstractDirectColorSprite;
 import com.jagex.runescape.done.AbstractTextureSampler;
-import com.jagex.runescape.opengl.GLStatics;
 
 public final class TextureSampler8 extends AbstractTextureSampler {
 
-  public static AbstractDirectColorSprite[] aClass3_Sub28_Sub16Array3458;
-  public static int anInt3459;
-  public static int anInt3460;
-  public static int anInt3463;
-  public static int anInt3464;
-  public static boolean[][] aBooleanArrayArray3468 = {
-    {true, true, true}, {false, false}, {false, true}, {true, false}, {false, true, true},
-    {true, false, true}, {false, true, false}, {true, false, false}
-  };
   private int[] anIntArray3457;
   private int anInt3462;
   private short[] aShortArray3465 = new short[257];
@@ -85,7 +73,7 @@ public final class TextureSampler8 extends AbstractTextureSampler {
             var5 = this.anIntArrayArray3469[-1 + var3];
             var6 = this.anIntArrayArray3469[var3];
             var7 = (var4 - var5[0] << 12) / (-var5[0] + var6[0]);
-            var8 = 4096 - SomethingTexture1.anIntArray2639[(8189 & var7) >> 5]
+            var8 = 4096 - GlobalStatics_9.anIntArray2639[(8189 & var7) >> 5]
                 >> 1;
             var9 = -var8 + 4096;
             var10 = var8 * var6[1] + var5[1] * var9 >> 12;
@@ -135,7 +123,7 @@ public final class TextureSampler8 extends AbstractTextureSampler {
       if (this.monoChromaticImageCache.aBoolean1580) {
         int[] var5 = this.method152(0, var1, 32755);
 
-        for (int var6 = 0; SomethingLight0.anInt1559 > var6; ++var6) {
+        for (int var6 = 0; GlobalStatics_9.anInt1559 > var6; ++var6) {
           int var4 = var5[var6] >> 4;
           if (var4 < 0) {
             var4 = 0;
@@ -181,7 +169,7 @@ public final class TextureSampler8 extends AbstractTextureSampler {
         }
 
         if (var1 != 16251) {
-          TextureSampler8.anInt3463 = 22;
+          GlobalStatics_9.anInt3463 = 22;
         }
 
         FileSystem.method844((byte) -9);
@@ -217,39 +205,6 @@ public final class TextureSampler8 extends AbstractTextureSampler {
       } else {
         return this.anIntArray3457;
       }
-  }
-
-  public static boolean method353(int var0, int var1) {
-    if (var1 > var0) {
-        return false;
-      } else {
-        int var2 = TextureSampler27.aShortArray3095[var0];
-        if (var2 >= 2000) {
-          var2 -= 2000;
-        }
-
-        return (var2 == 1003);
-      }
-  }
-
-  public static void method354(int var0, int var1) {
-    TextureSampler13.anInt3362 = -1;
-      if (var0 >= -121) {
-        GLStatics.viewportLength = -58;
-      }
-
-      SpawnedGameObject.anInt2251 = var1;
-      SomethingInScenePacket202.method117((byte) 87);
-  }
-
-  public static void method357(boolean var0) {
-    BufferStatics.aByteArrayArray3461 = null;
-      TextureSampler8.aClass3_Sub28_Sub16Array3458 = null;
-      if (var0) {
-        TextureSampler8.method353(-71, 100);
-      }
-
-      TextureSampler8.aBooleanArrayArray3468 = null;
   }
 
 }

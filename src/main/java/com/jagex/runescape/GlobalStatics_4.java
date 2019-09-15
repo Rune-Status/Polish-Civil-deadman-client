@@ -288,12 +288,12 @@ public class GlobalStatics_4 {
   }
 
   public static void method589(int var0, int var1, int var2) {
-    TextureSampler37.aBoolean3261 = true;
+    GlobalStatics_10.aBoolean3261 = true;
     GlobalStatics_7.anInt1302 = var0;
-    GZipDecompressor.anInt819 = var1;
-    TextureSampler18.anInt4039 = var2;
+    GlobalStatics_9.anInt819 = var1;
+    GlobalStatics_10.anInt4039 = var2;
     DummyClass32.anInt515 = -1;
-    OndemandRequester.anInt999 = -1;
+    GlobalStatics_9.anInt999 = -1;
   }
 
   public static boolean method590(byte var0, int var1, int var2) {
@@ -330,9 +330,9 @@ public class GlobalStatics_4 {
     }
 
     public static void method1768(int var0, int var1, int var2) {
-      if ((Keyboard.anInt1908 > 0)) {
-          DummyClass13.method2195(Keyboard.anInt1908, 0);
-          Keyboard.anInt1908 = 0;
+      if ((GlobalStatics_9.anInt1908 > 0)) {
+          DummyClass13.method2195(GlobalStatics_9.anInt1908, 0);
+          GlobalStatics_9.anInt1908 = 0;
         }
 
         short var3 = 256;
@@ -353,7 +353,7 @@ public class GlobalStatics_4 {
             int var11 = SoftwareIndexedColorSpriteStatics.anIntArray1100[var5++ + var0];
             int var10 = DummyClass2.anIntArray1681[var4++];
             if (var10 == 0) {
-              TriChromaticImageCache.aClass3_Sub28_Sub16_Sub2_1381.pixels[var6++] = var11;
+              GlobalStatics_10.aClass3_Sub28_Sub16_Sub2_1381.pixels[var6++] = var11;
             } else {
               int var12 = 18 + var10;
               if ((var12 > 255)) {
@@ -365,8 +365,8 @@ public class GlobalStatics_4 {
                 var13 = 255;
               }
 
-              var10 = PlayerAppearance.anIntArray861[var10];
-              TriChromaticImageCache.aClass3_Sub28_Sub16_Sub2_1381.pixels[var6++] =
+              var10 = GlobalStatics_9.anIntArray861[var10];
+              GlobalStatics_10.aClass3_Sub28_Sub16_Sub2_1381.pixels[var6++] =
                   (var13 * (var11 & 16711935)
                       + (16711935 & var10) * var12 & -16711936)
                       + ((var10 & (int) '\uff00') * var12 + (
@@ -376,7 +376,7 @@ public class GlobalStatics_4 {
           }
 
           for (var9 = 0; var9 < var8; ++var9) {
-            TriChromaticImageCache.aClass3_Sub28_Sub16_Sub2_1381.pixels[var6++] =
+            GlobalStatics_10.aClass3_Sub28_Sub16_Sub2_1381.pixels[var6++] =
               SoftwareIndexedColorSpriteStatics.anIntArray1100[var0 + var5++];
           }
 
@@ -386,12 +386,12 @@ public class GlobalStatics_4 {
         if (var1 > 70) {
           if (GlRenderer.useOpenGlRenderer) {
             GlUtils.drawImage(
-                TriChromaticImageCache.aClass3_Sub28_Sub16_Sub2_1381.pixels, var0,
+                GlobalStatics_10.aClass3_Sub28_Sub16_Sub2_1381.pixels, var0,
                 var2,
-                TriChromaticImageCache.aClass3_Sub28_Sub16_Sub2_1381.anInt3707,
-                TriChromaticImageCache.aClass3_Sub28_Sub16_Sub2_1381.anInt3696);
+                GlobalStatics_10.aClass3_Sub28_Sub16_Sub2_1381.anInt3707,
+                GlobalStatics_10.aClass3_Sub28_Sub16_Sub2_1381.anInt3696);
           } else {
-            TriChromaticImageCache.aClass3_Sub28_Sub16_Sub2_1381
+            GlobalStatics_10.aClass3_Sub28_Sub16_Sub2_1381
                 .method635(var0, var2);
           }
 
@@ -450,7 +450,7 @@ public class GlobalStatics_4 {
                     continue;
                   }
 
-                  var27 = TextureSampler10.method350((byte) -103, var25 - 1);
+                  var27 = GlobalStatics_9.method350((byte) -103, var25 - 1);
                   if ((var27.anInt2103 == -1)) {
                     continue;
                   }
@@ -462,12 +462,12 @@ public class GlobalStatics_4 {
                     continue;
                   }
                 } else if ((var25 != 0)) {
-                  var27 = TextureSampler10.method350((byte) 123, var25 - 1);
+                  var27 = GlobalStatics_9.method350((byte) 123, var25 - 1);
                   byte var42;
                   if (var27.anInt2103 == -1) {
                     var42 = var7[var23][var19];
                     if ((var42 != 0)) {
-                      var29 = SceneSomething.anIntArrayArray499[var42];
+                      var29 = GlobalStatics_9.anIntArrayArray499[var42];
                       var14.anInt651 += 3 * (-2 + (var29.length >> 1));
                       var14.anInt657 += var29.length >> 1;
                     }
@@ -550,7 +550,7 @@ public class GlobalStatics_4 {
                 }
 
                 if (var26) {
-                  var29 = SceneSomething.anIntArrayArray499[var7[var23][var19]];
+                  var29 = GlobalStatics_9.anIntArrayArray499[var7[var23][var19]];
                   var28 = DummyClass21.anIntArrayArray1763[var7[var23][var19]];
                   var14.anInt651 += (-2 + (var28.length >> 1)) * 3;
                   var14.anInt651 += ((var29.length >> 1) - 2) * 3;
@@ -595,13 +595,13 @@ public class GlobalStatics_4 {
                     continue;
                   }
 
-                  var46 = TextureSampler10.method350((byte) -49, var43 - 1);
+                  var46 = GlobalStatics_9.method350((byte) -49, var43 - 1);
                   if (var46.anInt2103 == -1) {
                     continue;
                   }
 
                   if (var7[var23][var19] != 0) {
-                    TextureSampler18.method284(var0, var9, var23, var6, var19,
+                    GlobalStatics_10.method284(var0, var9, var23, var6, var19,
                         DummyClass21.anIntArrayArray1763[var7[var23][var19]],
                         var14, (byte) -88, var13,
                         var11, var2[var23][var19]);
@@ -609,10 +609,10 @@ public class GlobalStatics_4 {
                   }
                 } else {
                   if ((var43 != 0)) {
-                    var46 = TextureSampler10.method350((byte) 113, -1 + var43);
+                    var46 = GlobalStatics_9.method350((byte) 113, -1 + var43);
                     if (var46.anInt2103 == -1) {
-                      TextureSampler18.method284(var0, var9, var23, var6, var19,
-                          SceneSomething.anIntArrayArray499[var7[var23][var19]],
+                      GlobalStatics_10.method284(var0, var9, var23, var6, var19,
+                          GlobalStatics_9.anIntArrayArray499[var7[var23][var19]],
                           var14, (byte) 116,
                           var13, var11, var2[var23][var19]);
                       continue;
@@ -691,7 +691,7 @@ public class GlobalStatics_4 {
                     }
 
                     if (var45 != null) {
-                      TextureSampler18.method284(var0, var9, var23, var6, var19, var45, var14,
+                      GlobalStatics_10.method284(var0, var9, var23, var6, var19, var45, var14,
                         (byte) 98, var13, var11, var38);
                     }
                     continue;
@@ -699,14 +699,14 @@ public class GlobalStatics_4 {
                 }
 
                 if (var39) {
-                  TextureSampler18.method284(var0, var9, var23, var6, var19,
-                    SceneSomething.anIntArrayArray499[var7[var23][var19]], var14, (byte) 96, var13,
+                  GlobalStatics_10.method284(var0, var9, var23, var6, var19,
+                    GlobalStatics_9.anIntArrayArray499[var7[var23][var19]], var14, (byte) 96, var13,
                     var11, var2[var23][var19]);
-                  TextureSampler18.method284(var0, var9, var23, var6, var19,
+                  GlobalStatics_10.method284(var0, var9, var23, var6, var19,
                     DummyClass21.anIntArrayArray1763[var7[var23][var19]], var14, (byte) -117, var13,
                     var11, var2[var23][var19]);
                 } else {
-                  TextureSampler18.method284(var0, var9, var23, var6, var19,
+                  GlobalStatics_10.method284(var0, var9, var23, var6, var19,
                     DummyClass21.anIntArrayArray1763[0], var14, (byte) 61, var13, var11, var38);
                 }
               }

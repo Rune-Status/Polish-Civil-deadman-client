@@ -24,7 +24,7 @@ public final class SomethingMidiInstrument {
 
       for (var3 = MidiInstrument.method368(5) + 1; var2 < this.anInt1065; ++var3) {
         int var4 =
-          MidiInstrument.method368(MonoChromaticImageBuffer.method513(
+          MidiInstrument.method368(GlobalStatics_9.method513(
               this.anInt1065 - var2, 4));
 
         for (var5 = 0; var5 < var4; ++var5) {
@@ -216,8 +216,8 @@ public final class SomethingMidiInstrument {
   private static int method1291(int var0, int var1) {
     int var2;
     for (
-      var2 = (int) Math.pow(var0, 1.0D / var1) + 1;
-      Projectile.method2028(var1, var2, -122) > var0; --var2) {
+            var2 = (int) Math.pow(var0, 1.0D / var1) + 1;
+            GlobalStatics_9.method2028(var1, var2, -122) > var0; --var2) {
     }
 
     return var2;

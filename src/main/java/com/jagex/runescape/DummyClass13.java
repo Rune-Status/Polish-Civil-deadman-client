@@ -29,8 +29,8 @@ public final class DummyClass13 {
   }
 
   public static boolean method2194(int var0) {
-      if (Structure.aBoolean3641) {
-          return !((Boolean) TextureSampler23.aClass94_3209.method1577(var0 - 2112)).booleanValue();
+      if (GlobalStatics_9.aBoolean3641) {
+          return !((Boolean) GlobalStatics_10.aClass94_3209.method1577(var0 - 2112)).booleanValue();
       }
 
       return true;
@@ -46,12 +46,12 @@ public final class DummyClass13 {
         var0 = 10;
       }
 
-      SomethingScene.anInt1071 += var0 * 128;
+      GlobalStatics_9.anInt1071 += var0 * 128;
       int var3;
-      if (DummyClass12.anIntArray2026.length < SomethingScene.anInt1071) {
-        SomethingScene.anInt1071 -= DummyClass12.anIntArray2026.length;
+      if (DummyClass12.anIntArray2026.length < GlobalStatics_9.anInt1071) {
+        GlobalStatics_9.anInt1071 -= DummyClass12.anIntArray2026.length;
         var3 = (int) (12.0D * Math.random());
-        TextureSampler30.method215((byte) -119, DummyClass8.aClass109_Sub1Array4027[var3]);
+        GlobalStatics_10.method215((byte) -119, DummyClass8.aClass109_Sub1Array4027[var3]);
       }
 
       var3 = var1;
@@ -63,7 +63,7 @@ public final class DummyClass13 {
       for (var6 = 0; var5 > var6; ++var6) {
         var7 = DummyClass2.anIntArray1681[var3 + var4] -
           var0 * DummyClass12.anIntArray2026[-1 + DummyClass12.anIntArray2026.length
-            & SomethingScene.anInt1071 + var3] / 6;
+            & GlobalStatics_9.anInt1071 + var3] / 6;
         if (var7 < 0) {
           var7 = 0;
         }
@@ -124,7 +124,7 @@ public final class DummyClass13 {
             }
 
             if (var10 >= 0) {
-              GameBuffer.anIntArray3805[var10 + var9] = var8 / (1 + var6 * 2);
+              GlobalStatics_8.anIntArray3805[var10 + var9] = var8 / (1 + var6 * 2);
             }
           }
         }
@@ -135,11 +135,11 @@ public final class DummyClass13 {
           for (var9 = -var6; var2 > var9; ++var9) {
             var10 = var9 * 128;
             if (((var9 + var6) < var2)) {
-              var8 += GameBuffer.anIntArray3805[var6 * 128 + (var7 + var10)];
+              var8 += GlobalStatics_8.anIntArray3805[var6 * 128 + (var7 + var10)];
             }
 
             if (var9 - var6 - 1 >= 0) {
-              var8 -= GameBuffer.anIntArray3805[-((1 + var6) * 128) + (var7 + var10)];
+              var8 -= GlobalStatics_8.anIntArray3805[-((1 + var6) * 128) + (var7 + var10)];
             }
 
             if (var9 >= 0) {
@@ -151,12 +151,12 @@ public final class DummyClass13 {
   }
 
   public static void method2196(int var0) {
-    TextureSampler25.aClass93_3412.method1523((byte) -107);
+    GlobalStatics_10.aClass93_3412.method1523((byte) -107);
       if (var0 != 128) {
         DummyClass13.anInt2024 = 111;
       }
 
-      TextureSampler2.aClass93_3369.method1523((byte) -110);
+      GlobalStatics_9.aClass93_3369.method1523((byte) -110);
   }
 
   public static void method2197(boolean var0) {

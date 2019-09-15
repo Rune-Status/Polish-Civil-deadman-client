@@ -2,16 +2,9 @@ package com.jagex.runescape;
 
 import com.jagex.runescape.buffer.Buffer;
 import com.jagex.runescape.done.AbstractTextureSampler;
-import com.jagex.runescape.huffman.HuffmanEncoder;
 
 public final class TextureSampler16 extends AbstractTextureSampler {
 
-  public static int[] anIntArray3107;
-  public static short[] aShortArray3110 = new short[256];
-  public static int anInt3111;
-  public static HuffmanEncoder huffmanEncoder;
-  public static int anInt3114;
-  public static int[][] anIntArrayArray3115;
   private int anInt3108 = 1;
   private int anInt3109 = 204;
   private int anInt3113 = 1;
@@ -25,8 +18,8 @@ public final class TextureSampler16 extends AbstractTextureSampler {
     int var3 = -24 / ((var2 - 30) / 36);
       int[] var4 = this.monoChromaticImageCache.method1709(-16409, var1);
       if (this.monoChromaticImageCache.aBoolean1580) {
-        for (int var5 = 0; SomethingLight0.anInt1559 > var5; ++var5) {
-          int var6 = TextureCache.anIntArray2125[var5];
+        for (int var5 = 0; GlobalStatics_9.anInt1559 > var5; ++var5) {
+          int var6 = GlobalStatics_9.anIntArray2125[var5];
           int var7 = DummyClass4.anIntArray2999[var1];
           int var8 = this.anInt3108 * var6 >> 12;
           int var9 = var7 * this.anInt3113 >> 12;
@@ -84,23 +77,6 @@ public final class TextureSampler16 extends AbstractTextureSampler {
           }
         }
 
-      }
-  }
-
-  public static int method208(int var0) {
-    if (var0 > -22) {
-        TextureSampler16.aShortArray3110 = null;
-      }
-
-      return 15;
-  }
-
-  public static void method209(byte var0) {
-    TextureSampler16.aShortArray3110 = null;
-      TextureSampler16.huffmanEncoder = null;
-      if (var0 >= 30) {
-        TextureSampler16.anIntArray3107 = null;
-        TextureSampler16.anIntArrayArray3115 = null;
       }
   }
 

@@ -117,9 +117,9 @@ public final class MaterialShader3 implements MaterialShader {
       GlRenderer.GL.glLoadIdentity();
       GlRenderer.GL.glRotatef(180.0F, 1.0F, 0.0F, 0.0F);
       GlRenderer.GL
-          .glRotatef(GroundItem.anInt2938 * 360.0F / 2048.0F, 1.0F, 0.0F, 0.0F);
+          .glRotatef(GlobalStatics_9.anInt2938 * 360.0F / 2048.0F, 1.0F, 0.0F, 0.0F);
       GlRenderer.GL
-          .glRotatef(TextureSampler9.anInt3103 * 360.0F / 2048.0F, 0.0F, 1.0F,
+          .glRotatef(GlobalStatics_9.anInt3103 * 360.0F / 2048.0F, 0.0F, 1.0F,
               0.0F);
       GlRenderer.GL.glTranslatef((-BZipDecompressorState.anInt144),
           (-GlobalStatics_6.anInt3695), (-GlobalStatics_0.anInt2587));
@@ -146,9 +146,9 @@ public final class MaterialShader3 implements MaterialShader {
           .glTexEnvfv(8960, 8705, GLStatics.calculateFogColor(), 0);
       if (var1 >= 0) {
         this.aFloatArray2190[0] = 0.0F;
-        this.aFloatArray2190[1] = 1.0F / TextureSampler39.anInt3285;
+        this.aFloatArray2190[1] = 1.0F / GlobalStatics_10.anInt3285;
         this.aFloatArray2190[2] = 0.0F;
-        this.aFloatArray2190[3] = 1.0F * var1 / TextureSampler39.anInt3285;
+        this.aFloatArray2190[3] = 1.0F * var1 / GlobalStatics_10.anInt3285;
         GlRenderer.GL.glTexGenfv(8192, 9474, this.aFloatArray2190, 0);
         GlRenderer.GL.glEnable(3168);
       } else {

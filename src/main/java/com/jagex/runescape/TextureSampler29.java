@@ -1,25 +1,11 @@
 package com.jagex.runescape;
 
 import com.jagex.runescape.buffer.Buffer;
-import com.jagex.runescape.common.GameString;
-import com.jagex.runescape.common.GameStringStatics;
 import com.jagex.runescape.done.AbstractSomethingTexture;
 import com.jagex.runescape.done.AbstractTextureSampler;
-import com.jagex.runescape.opengl.GlEnvironment;
 
 public final class TextureSampler29 extends AbstractTextureSampler {
 
-  private static GameString aClass94_3400 = GameStringStatics.create("Take");
-  public static byte[][][] aByteArrayArrayArray3390;
-  public static GameString[] aClass94Array3391;
-  public static SomethingPacket116[] aClass133Array3393 = new SomethingPacket116[6];
-  public static GameString aClass94_3394 = GameStringStatics.create("<col=ffb000>");
-  public static int anInt3395;
-  public static byte[] aByteArray3396;
-  public static volatile int anInt3398;
-  public static GameString aClass94_3399 = GameStringStatics.create("<br>(X");
-  public static GameString aClass94_3401 = GameStringStatics.create("Weiter");
-  public static GameString aClass94_3397 = TextureSampler29.aClass94_3400;
   private AbstractSomethingTexture[] aClass75Array3392;
 
   public TextureSampler29() {
@@ -45,7 +31,7 @@ public final class TextureSampler29 extends AbstractTextureSampler {
           if (var5 == 0) {
             this.aClass75Array3392[var4] = FileSystem.method843(-5232, var2);
           } else if ((var5 == 1)) {
-            this.aClass75Array3392[var4] = StillGraphicNode.method536((byte) 54, var2);
+            this.aClass75Array3392[var4] = GlobalStatics_9.method536((byte) 54, var2);
           } else if (var5 != 2) {
             if (var5 == 3) {
               this.aClass75Array3392[var4] = GlobalStatics_6.method384(var2, (byte) 80);
@@ -68,7 +54,7 @@ public final class TextureSampler29 extends AbstractTextureSampler {
         int[][] var3 = this.triChromaticImageCache
             .method1594((byte) -117, var2);
         if (this.triChromaticImageCache.aBoolean1379) {
-          int var4 = SomethingLight0.anInt1559;
+          int var4 = GlobalStatics_9.anInt1559;
           int var5 = DummyClass55.anInt1427;
           int[][] var6 = new int[var5][var4];
           int[][][] var7 = this.triChromaticImageCache.method1589((byte) -56);
@@ -81,7 +67,7 @@ public final class TextureSampler29 extends AbstractTextureSampler {
             int[] var12 = var10[1];
             int[] var13 = var10[2];
 
-            for (int var14 = 0; (var14 < SomethingLight0.anInt1559); ++var14) {
+            for (int var14 = 0; (var14 < GlobalStatics_9.anInt1559); ++var14) {
               int var15 = var9[var14];
               var13[var14] = (255 & var15) << 4;
               var12[var14] = 4080 & var15 >> 4;
@@ -98,10 +84,10 @@ public final class TextureSampler29 extends AbstractTextureSampler {
 
   private void method323(int var1, int[][] var2) {
     int var4 = DummyClass55.anInt1427;
-      int var3 = SomethingLight0.anInt1559;
-      TextureSampler20.method230(var2, true);
-      DummyClass43.method1196(0, 0, (byte) 111, TriChromaticImageBuffer.anInt2487,
-        RenderAnimation.anInt396);
+      int var3 = GlobalStatics_9.anInt1559;
+      GlobalStatics_10.method230(var2, true);
+      DummyClass43.method1196(0, 0, (byte) 111, GlobalStatics_10.anInt2487,
+        GlobalStatics_9.anInt396);
       if (this.aClass75Array3392 != null) {
         for (int var5 = 0; this.aClass75Array3392.length > var5; ++var5) {
           AbstractSomethingTexture var6 = this.aClass75Array3392[var5];
@@ -120,48 +106,8 @@ public final class TextureSampler29 extends AbstractTextureSampler {
       }
 
       if (var1 != -60) {
-        TextureSampler29.getByteLength(null);
+        GlobalStatics_10.getByteLength(null);
       }
-  }
-
-  public static int method322(boolean var0, byte var1) {
-    return !var0 ? 104 : 255 & var1;
-  }
-
-  public static void setupDefaultSun(int brightness) {
-    GlEnvironment.setSunColor(GlEnvironment.defaultSunColor,
-        (0.7F + brightness * 0.1F) * 1.1523438F, 0.69921875F, 0.69921875F);
-      GlEnvironment.setSunPosition(-50.0f, -60.0f, -50.0f);
-      GlEnvironment.setFogColor(GlEnvironment.defaultFogColor, 0);
-      GlEnvironment.updateSunPosition();
-  }
-
-  public static void method325(int var0) {
-    TextureSampler29.aClass94_3401 = null;
-      TextureSampler29.aByteArrayArrayArray3390 = null;
-      if (var0 == 0) {
-        TextureSampler29.aByteArray3396 = null;
-        TextureSampler29.aClass133Array3393 = null;
-        TextureSampler29.aClass94_3400 = null;
-        TextureSampler29.aClass94Array3391 = null;
-        TextureSampler29.aClass94_3397 = null;
-        TextureSampler29.aClass94_3399 = null;
-        TextureSampler29.aClass94_3394 = null;
-      }
-  }
-
-  public static int getByteLength(GameString var1) {
-    return var1.getLength() + 1;
-  }
-
-  public static void method327(int var0, int var1, byte var2) {
-    if (var2 != 68) {
-        TextureSampler29.aClass94_3397 = null;
-      }
-
-      WidgetUpdate var3 = GlobalStatics_6.method466(var2 - 64, 12, var1);
-      var3.g((byte) 33);
-      var3.anInt3598 = var0;
   }
 
 }

@@ -25,12 +25,12 @@ public final class DummyClass22 {
 
       int var5 = 0;
       if ((var1.anInt2263 == 0)) {
-        var2 = SomethingAudio.method2174(var1.anInt2250, var1.anInt2264, var1.anInt2248);
+        var2 = GlobalStatics_9.method2174(var1.anInt2250, var1.anInt2264, var1.anInt2248);
       }
 
       int var6 = 0;
       if ((var1.anInt2263 == 1)) {
-        var2 = HashTableIterator.method1395(var1.anInt2250, var1.anInt2264, var1.anInt2248);
+        var2 = GlobalStatics_9.method1395(var1.anInt2250, var1.anInt2264, var1.anInt2248);
       }
 
       if (var1.anInt2263 == 2) {
@@ -53,7 +53,7 @@ public final class DummyClass22 {
   }
 
   public static void method1799(byte var0, FileUnpacker var1) {
-    TextureSampler27.aClass153_3098 = var1;
+    GlobalStatics_10.aClass153_3098 = var1;
       int var2 = 113 / ((1 - var0) / 63);
   }
 
@@ -68,24 +68,24 @@ public final class DummyClass22 {
         DummyClass22.method1799((byte) -90, null);
       }
 
-      int var1 = FloorOverlay.aClass3_Sub28_Sub17_2096.method682(SomethingTexture4.aClass94_2667);
+      int var1 = GlobalStatics_8.aClass3_Sub28_Sub17_2096.method682(GlobalStatics_9.aClass94_2667);
 
       int var2;
       int var3;
-      for (var2 = 0; TextureSampler25.amountContextActions > var2; ++var2) {
-        var3 = FloorOverlay.aClass3_Sub28_Sub17_2096.method682(
+      for (var2 = 0; GlobalStatics_10.amountContextActions > var2; ++var2) {
+        var3 = GlobalStatics_8.aClass3_Sub28_Sub17_2096.method682(
             GlobalStatics_0.method802(var2, true));
         if (var3 > var1) {
           var1 = var3;
         }
       }
 
-      var2 = 15 * TextureSampler25.amountContextActions + 21;
+      var2 = 15 * GlobalStatics_10.amountContextActions + 21;
       int var4 = DummyClass36.anInt2612;
       var1 += 8;
-      var3 = NpcConfiguration.anInt1297 - (var1 / 2);
-      if ((var4 + var2) > GroundItem.viewHeight) {
-        var4 = GroundItem.viewHeight - var2;
+      var3 = GlobalStatics_9.anInt1297 - (var1 / 2);
+      if ((var4 + var2) > GlobalStatics_9.viewHeight) {
+        var4 = GlobalStatics_9.viewHeight - var2;
       }
 
       if (DummyClass30.viewWidth < var3 + var1) {
@@ -101,28 +101,28 @@ public final class DummyClass22 {
       }
 
       if ((GlobalStatics_7.anInt3660 == 1)) {
-        if ((NpcConfiguration.anInt1297 == TextureSampler8.anInt3460)
-          && (FloorOverlay.anInt2099 == DummyClass36.anInt2612)) {
-          SomethingQuickChat2.anInt3537 =
-            TextureSampler25.amountContextActions * 15 + (!FileUnpacker.aBoolean1951 ? 22 : 26);
+        if ((GlobalStatics_9.anInt1297 == GlobalStatics_9.anInt3460)
+          && (GlobalStatics_8.anInt2099 == DummyClass36.anInt2612)) {
+          GlobalStatics_9.anInt3537 =
+            GlobalStatics_10.amountContextActions * 15 + (!GlobalStatics_8.aBoolean1951 ? 22 : 26);
           GlobalStatics_7.anInt3660 = 0;
-          TextureSampler29.anInt3395 = var4;
+          GlobalStatics_10.anInt3395 = var4;
           GlobalStatics_1.anInt1462 = var3;
           DummyClass36.aBoolean2615 = true;
-          SomethingWorldMapy.anInt3552 = var1;
+          GlobalStatics_9.anInt3552 = var1;
         }
-      } else if ((NpcConfiguration.anInt1297 == DummyClass5.anInt2993)
+      } else if ((GlobalStatics_9.anInt1297 == DummyClass5.anInt2993)
         && (DummyClass36.anInt2612 == DummyClass36.anInt2614)) {
         GlobalStatics_1.anInt1462 = var3;
         GlobalStatics_7.anInt3660 = 0;
-        SomethingWorldMapy.anInt3552 = var1;
-        TextureSampler29.anInt3395 = var4;
-        SomethingQuickChat2.anInt3537 =
-          (FileUnpacker.aBoolean1951 ? 26 : 22) + TextureSampler25.amountContextActions * 15;
+        GlobalStatics_9.anInt3552 = var1;
+        GlobalStatics_10.anInt3395 = var4;
+        GlobalStatics_9.anInt3537 =
+          (GlobalStatics_8.aBoolean1951 ? 26 : 22) + GlobalStatics_10.amountContextActions * 15;
         DummyClass36.aBoolean2615 = true;
       } else {
-        FloorOverlay.anInt2099 = DummyClass36.anInt2614;
-        TextureSampler8.anInt3460 = DummyClass5.anInt2993;
+        GlobalStatics_8.anInt2099 = DummyClass36.anInt2614;
+        GlobalStatics_9.anInt3460 = DummyClass5.anInt2993;
         GlobalStatics_7.anInt3660 = 1;
       }
   }

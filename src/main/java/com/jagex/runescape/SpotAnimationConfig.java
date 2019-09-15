@@ -1,24 +1,10 @@
 package com.jagex.runescape;
 
 import com.jagex.runescape.buffer.Buffer;
-import com.jagex.runescape.common.GameString;
-import com.jagex.runescape.common.GameStringStatics;
 import com.jagex.runescape.done.AbstractModel;
 
 public final class SpotAnimationConfig {
 
-  private static GameString aClass94_553 = GameStringStatics.create("slide:");
-  public static int anInt529;
-  public static int anInt531;
-  public static GameBuffer gameBuffer = new GameBuffer(5000);
-  public static int anInt544;
-  public static int anInt546;
-  public static int anInt548;
-  public static volatile int anInt549;
-  public static GameString aClass94_550 = GameStringStatics.create("Jeter");
-  public static GameString aClass94_552 = GameStringStatics.create("Sprites geladen)3");
-  public static GameString aClass94_547 = SpotAnimationConfig.aClass94_553;
-  public static GameString aClass94_551 = SpotAnimationConfig.aClass94_553;
   public boolean aBoolean536;
   public int anInt539;
   public int anInt542 = -1;
@@ -35,7 +21,7 @@ public final class SpotAnimationConfig {
 
   public void method963(Buffer var1, byte var2 ) {
     if (var2 != -113) {
-        SpotAnimationConfig.method967(88, -118, 75, -51, -96, -50, 45, 127);
+        GlobalStatics_9.method967(88, -118, 75, -51, -96, -50, 45, 127);
       }
 
       while (true) {
@@ -109,7 +95,7 @@ public final class SpotAnimationConfig {
           this.anInt539);
       if (var2 == -30) {
         if (var5 == null) {
-          Model var6 = Model.getModel(ObjectNode.models, this.anInt541, 0);
+          Model var6 = Model.getModel(GlobalStatics_9.models, this.anInt541, 0);
           if (var6 == null) {
             return null;
           }
@@ -136,7 +122,7 @@ public final class SpotAnimationConfig {
 
         AbstractModel var9;
         if ((this.anInt542 != -1) && var3 != -1) {
-          var9 = GameClient.method45(this.anInt542, (byte) -20)
+          var9 = GlobalStatics_8.method45(this.anInt542, (byte) -20)
               .method2059(var1, var4, var3, (byte) -52, var5);
         } else {
           var9 = var5.method1882(true, true, true);
@@ -163,29 +149,6 @@ public final class SpotAnimationConfig {
         return var9;
       } else {
         return null;
-      }
-  }
-
-  public static void method964(int var0) {
-    SpotAnimationConfig.aClass94_553 = null;
-      SpotAnimationConfig.gameBuffer = null;
-      if (var0 != 6) {
-        SpotAnimationConfig.method964(-57);
-      }
-
-      SpotAnimationConfig.aClass94_550 = null;
-      SpotAnimationConfig.aClass94_547 = null;
-      SpotAnimationConfig.aClass94_551 = null;
-      SpotAnimationConfig.aClass94_552 = null;
-  }
-
-  public static void method967(int var0, int var1, int var2, int var3, int var4, int var5, int var6,
-                              int var7) {
-    if (MovedStatics0.method57(var5, 104)) {
-        if (var2 == 2) {
-          GameClient.method50(SceneNode.aClass11ArrayArray1834[var5], -1, var6, var1, var4, var7,
-            var0, var3);
-        }
       }
   }
 

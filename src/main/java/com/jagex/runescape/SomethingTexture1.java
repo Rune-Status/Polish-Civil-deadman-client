@@ -1,24 +1,9 @@
 package com.jagex.runescape;
 
-import com.jagex.runescape.common.GameString;
-import com.jagex.runescape.common.GameStringStatics;
-import com.jagex.runescape.done.AbstractDirectColorSprite;
 import com.jagex.runescape.done.AbstractSomethingTexture;
-import com.jagex.runescape.opengl.GLStatics;
 
 public final class SomethingTexture1 extends AbstractSomethingTexture {
 
-  public static SomethingFont aClass33_2637;
-  public static int[] anIntArray2639;
-  public static int anInt2640;
-  public static GameString aClass94_2641 = GameStringStatics.create("K");
-  public static int[] anIntArray2642 = {
-    1, 1, 1, 1, 4, 1, 1, 5, 6, 1, 5, 0, 7, 0, 4, 1, 7, 2, 1, 1, 6, 1, 1, 3, 6, 1, 7, 0, 0, 6, 7, 0,
-    1, 7, 6, 1, 1, 1, 5, 4, 3, 2, 1, 1, 0, 4, 1, 5
-  };
-  public static int p12FontFileId;
-  public static FileUnpacker fileUnpacker6;
-  public static SomethingFont aClass33_2648;
   private final int anInt2636;
   private int anInt2644;
   private final int anInt2646;
@@ -45,7 +30,7 @@ public final class SomethingTexture1 extends AbstractSomethingTexture {
       int var7 = this.anInt2647 * var1 >> 12;
       int var6 = this.anInt2644 * var1 >> 12;
       int var5 = this.anInt2636 * var2 >> 12;
-      TextureSampler24.method223(true, this.anInt1106, var4, var6, var7,
+      GlobalStatics_10.method223(true, this.anInt1106, var4, var6, var7,
           this.anInt1104,
           this.anInt1101, var5);
   }
@@ -64,28 +49,6 @@ public final class SomethingTexture1 extends AbstractSomethingTexture {
       if (var1 == 2) {
         DummyClass53.method1584(this.anInt1101, var7, var4, var6, -26571, var5);
       }
-  }
-
-  public static AbstractDirectColorSprite method1344(int var0, FileUnpacker var1, int var2) {
-    if (var0 < 29) {
-        GLStatics.sceneGraphTiles = null;
-      }
-
-      return !GroundItem.loadSprites(var1, var2) ? null : GLStatics.method1062(99);
-  }
-
-  public static void method1345(int var0) {
-    SomethingTexture1.aClass94_2641 = null;
-      if (var0 >= -38) {
-        SomethingTexture1.method1344(93, null, -70);
-      }
-
-      SomethingTexture1.anIntArray2642 = null;
-      GLStatics.sceneGraphTiles = null;
-      SomethingTexture1.aClass33_2648 = null;
-      SomethingTexture1.aClass33_2637 = null;
-      SomethingTexture1.fileUnpacker6 = null;
-      SomethingTexture1.anIntArray2639 = null;
   }
 
 }

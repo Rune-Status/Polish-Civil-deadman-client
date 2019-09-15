@@ -1,6 +1,6 @@
 package com.jagex.runescape.opengl;
 
-import com.jagex.runescape.TextureSampler16;
+import com.jagex.runescape.GlobalStatics_10;
 import com.jagex.runescape.buffer.Buffer;
 
 public final class Light {
@@ -27,7 +27,7 @@ public final class Light {
   private int anInt714;
 
   public Light(Buffer var1) {
-    if (TextureSampler16.anIntArray3107 == null) {
+    if (GlobalStatics_10.anIntArray3107 == null) {
       GLStatics.method1083();
     }
 
@@ -93,7 +93,7 @@ public final class Light {
         var4 = var5;
       }
     } else {
-      var4 = TextureSampler16.anIntArray3107[var5] >> 1;
+      var4 = GlobalStatics_10.anIntArray3107[var5] >> 1;
     }
 
     if (var1) {

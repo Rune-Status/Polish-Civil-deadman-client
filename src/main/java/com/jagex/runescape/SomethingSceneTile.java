@@ -2,27 +2,6 @@ package com.jagex.runescape;
 
 public final class SomethingSceneTile {
 
-  private static int[][] anIntArrayArray619 = {
-    {1, 3, 5, 7}, {1, 3, 5, 7}, {1, 3, 5, 7}, {1, 3, 5, 7, 6}, {1, 3, 5, 7, 6}, {1, 3, 5, 7, 6},
-    {1, 3, 5, 7, 6}, {1, 3, 5, 7, 2, 6}, {1, 3, 5, 7, 2, 8}, {1, 3, 5, 7, 2, 8},
-    {1, 3, 5, 7, 11, 12}, {1, 3, 5, 7, 11, 12}, {1, 3, 5, 7, 13, 14}
-  };
-  private static int[][] anIntArrayArray620 = {
-    {0, 1, 2, 3, 0, 0, 1, 3}, {1, 1, 2, 3, 1, 0, 1, 3}, {0, 1, 2, 3, 1, 0, 1, 3},
-    {0, 0, 1, 2, 0, 0, 2, 4, 1, 0, 4, 3}, {0, 0, 1, 4, 0, 0, 4, 3, 1, 1, 2, 4},
-    {0, 0, 4, 3, 1, 0, 1, 2, 1, 0, 2, 4}, {0, 1, 2, 4, 1, 0, 1, 4, 1, 0, 4, 3},
-    {0, 4, 1, 2, 0, 4, 2, 5, 1, 0, 4, 5, 1, 0, 5, 3},
-    {0, 4, 1, 2, 0, 4, 2, 3, 0, 4, 3, 5, 1, 0, 4, 5},
-    {0, 0, 4, 5, 1, 4, 1, 2, 1, 4, 2, 3, 1, 4, 3, 5},
-    {0, 0, 1, 5, 0, 1, 4, 5, 0, 1, 2, 4, 1, 0, 5, 3, 1, 5, 4, 3, 1, 4, 2, 3},
-    {1, 0, 1, 5, 1, 1, 4, 5, 1, 1, 2, 4, 0, 0, 5, 3, 0, 5, 4, 3, 0, 4, 2, 3},
-    {1, 0, 5, 4, 1, 0, 1, 5, 0, 0, 4, 3, 0, 4, 5, 3, 0, 5, 2, 3, 0, 1, 2, 5}
-  };
-  public static int[] anIntArray614 = new int[6];
-  public static int[] anIntArray622 = new int[6];
-  public static int[] anIntArray623 = new int[6];
-  public static int[] anIntArray628 = new int[6];
-  public static int[] anIntArray630 = new int[6];
   public int anInt611;
   public int anInt612;
   public int[] anIntArray613;
@@ -67,7 +46,7 @@ public final class SomethingSceneTile {
     int var21 = var20 / 2;
     int var22 = var20 / 4;
     int var23 = var20 * 3 / 4;
-    int[] var24 = SomethingSceneTile.anIntArrayArray619[var1];
+    int[] var24 = GlobalStatics_9.anIntArrayArray619[var1];
     int var25 = var24.length;
     this.anIntArray627 = new int[var25];
     this.anIntArray615 = new int[var25];
@@ -202,7 +181,7 @@ public final class SomethingSceneTile {
       var27[var30] = var36;
     }
 
-    int[] var38 = SomethingSceneTile.anIntArrayArray620[var1];
+    int[] var38 = GlobalStatics_9.anIntArrayArray620[var1];
     var31 = var38.length / 4;
     this.anIntArray624 = new int[var31];
     this.anIntArray617 = new int[var31];
@@ -278,16 +257,6 @@ public final class SomethingSceneTile {
 
     var33 /= 14;
     var34 /= 14;
-  }
-
-  public static void method1011() {
-    SomethingSceneTile.anIntArray623 = null;
-    SomethingSceneTile.anIntArray622 = null;
-    SomethingSceneTile.anIntArray614 = null;
-    SomethingSceneTile.anIntArray630 = null;
-    SomethingSceneTile.anIntArray628 = null;
-    SomethingSceneTile.anIntArrayArray619 = null;
-    SomethingSceneTile.anIntArrayArray620 = null;
   }
 
 }

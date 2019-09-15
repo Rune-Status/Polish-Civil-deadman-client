@@ -26,21 +26,21 @@ public final class DummyClass38 {
       int var5;
       int var7;
       if ((var0 & 128) != 0) {
-        var4 = SpotAnimationConfig.gameBuffer.readUnsignedShortLE();
-        var5 = SpotAnimationConfig.gameBuffer.readUnsignedByte();
-        int var6 = SpotAnimationConfig.gameBuffer.readUnsignedByte();
-        var7 = SpotAnimationConfig.gameBuffer.position;
+        var4 = GlobalStatics_9.gameBuffer.readUnsignedShortLE();
+        var5 = GlobalStatics_9.gameBuffer.readUnsignedByte();
+        int var6 = GlobalStatics_9.gameBuffer.readUnsignedByte();
+        var7 = GlobalStatics_9.gameBuffer.position;
         boolean var8 = (('\u8000' & var4) != 0);
         if (var3.name != null && var3.appearance != null) {
           long var9 = var3.name.toBase37();
           boolean var11 = false;
           if (var5 <= 1) {
-            if (!var8 && (SomethingVolume15.aBoolean2433 && !GlobalStatics_6.aBoolean1641
-              || TextureSampler31.aBoolean3166)) {
+            if (!var8 && (GlobalStatics_9.aBoolean2433 && !GlobalStatics_6.aBoolean1641
+              || GlobalStatics_10.aBoolean3166)) {
               var11 = true;
             } else {
               for (int var12 = 0; var12 < GlobalStatics_6.anInt3591; ++var12) {
-                if (MonoChromaticImageCache.aLongArray1574[var12] == var9) {
+                if (GlobalStatics_9.aLongArray1574[var12] == var9) {
                   var11 = true;
                   break;
                 }
@@ -48,9 +48,9 @@ public final class DummyClass38 {
             }
           }
 
-          if (!var11 && GameWorld.anInt2622 == 0) {
+          if (!var11 && GlobalStatics_9.anInt2622 == 0) {
             DummyClass12.aClass3_Sub30_2030.position = 0;
-            SpotAnimationConfig.gameBuffer.method774(2, var6, DummyClass12.aClass3_Sub30_2030.bytes,
+            GlobalStatics_9.gameBuffer.method774(2, var6, DummyClass12.aClass3_Sub30_2030.bytes,
               0);
             DummyClass12.aClass3_Sub30_2030.position = 0;
             int var13 = -1;
@@ -74,20 +74,20 @@ public final class DummyClass38 {
             var3.anInt2814 = 150;
             var3.anInt2837 = var4 >> 8;
             if ((var5 == 2)) {
-              InventoryConfig
+              GlobalStatics_9
                   .method611(var13, !var8 ? 1 : 17, var25, null, (byte) 50,
-                      RenderAnimation.concat(
+                      GlobalStatics_9.concat(
                           new GameString[]{DummyClass60.aClass94_444,
                               var3.getFullName()}));
             } else {
               if ((var5 == 1)) {
-                InventoryConfig
+                GlobalStatics_9
                     .method611(var13, var8 ? 17 : 1, var25, null, (byte) 50,
-                        RenderAnimation.concat(
+                        GlobalStatics_9.concat(
                             new GameString[]{DummyClass34.aClass94_592,
                                 var3.getFullName()}));
               } else {
-                InventoryConfig
+                GlobalStatics_9
                     .method611(var13, var8 ? 17 : 2, var25, null, (byte) 50,
                         var3.getFullName());
               }
@@ -95,64 +95,64 @@ public final class DummyClass38 {
           }
         }
 
-        SpotAnimationConfig.gameBuffer.position = var7 + var6;
+        GlobalStatics_9.gameBuffer.position = var7 + var6;
       }
 
       if (((var0 & 1) != 0)) {
-        var4 = SpotAnimationConfig.gameBuffer.readUnsignedShortSmart();
-        var5 = SpotAnimationConfig.gameBuffer.method751((byte) -99);
+        var4 = GlobalStatics_9.gameBuffer.readUnsignedShortSmart();
+        var5 = GlobalStatics_9.gameBuffer.method751((byte) -99);
         var3.method1970(var5, -8, GlobalStatics_4.updateCycle, var4);
         var3.anInt2781 = 300 + GlobalStatics_4.updateCycle;
-        var3.anInt2775 = SpotAnimationConfig.gameBuffer.method754(true);
+        var3.anInt2775 = GlobalStatics_9.gameBuffer.method754(true);
       }
 
       if ((var0 & 8) != 0) {
-        var4 = SpotAnimationConfig.gameBuffer.readUnsignedShort();
+        var4 = GlobalStatics_9.gameBuffer.readUnsignedShort();
         if ((var4 == 65535)) {
           var4 = -1;
         }
 
-        var5 = SpotAnimationConfig.gameBuffer.readUnsignedByte();
-        GroundItemNode.method628(0, var5, var4, var3);
+        var5 = GlobalStatics_9.gameBuffer.readUnsignedByte();
+        GlobalStatics_9.method628(0, var5, var4, var3);
       }
 
       if ((4 & var0) != 0) {
-        var4 = SpotAnimationConfig.gameBuffer.method751((byte) -118);
+        var4 = GlobalStatics_9.gameBuffer.method751((byte) -118);
         byte[] var16 = new byte[var4];
         Buffer var19 = new Buffer(var16);
-        SpotAnimationConfig.gameBuffer.copy(0, var4, var16);
+        GlobalStatics_9.gameBuffer.copy(0, var4, var16);
         DummyClass45.configs[var1] = var19;
         var3.parseConfig(var19);
       }
 
       if ((2 & var0) != 0) {
-        var3.anInt2772 = SpotAnimationConfig.gameBuffer.readUnsignedShortAdd();
+        var3.anInt2772 = GlobalStatics_9.gameBuffer.readUnsignedShortAdd();
         if ((var3.anInt2772 == 65535)) {
           var3.anInt2772 = -1;
         }
       }
 
       if (((1024 & var0) != 0)) {
-        var3.anInt2784 = SpotAnimationConfig.gameBuffer.method786(true);
-        var3.anInt2835 = SpotAnimationConfig.gameBuffer.readUnsignedByte();
-        var3.anInt2823 = SpotAnimationConfig.gameBuffer.method751((byte) -106);
-        var3.anInt2798 = SpotAnimationConfig.gameBuffer.readUnsignedByte();
+        var3.anInt2784 = GlobalStatics_9.gameBuffer.method786(true);
+        var3.anInt2835 = GlobalStatics_9.gameBuffer.readUnsignedByte();
+        var3.anInt2823 = GlobalStatics_9.gameBuffer.method751((byte) -106);
+        var3.anInt2798 = GlobalStatics_9.gameBuffer.readUnsignedByte();
         var3.anInt2800 =
-          SpotAnimationConfig.gameBuffer.readUnsignedShortLE() + GlobalStatics_4.updateCycle;
+          GlobalStatics_9.gameBuffer.readUnsignedShortLE() + GlobalStatics_4.updateCycle;
         var3.anInt2790 =
-          SpotAnimationConfig.gameBuffer.readUnsignedShortLE() + GlobalStatics_4.updateCycle;
-        var3.anInt2840 = SpotAnimationConfig.gameBuffer.method786(true);
+          GlobalStatics_9.gameBuffer.readUnsignedShortLE() + GlobalStatics_4.updateCycle;
+        var3.anInt2840 = GlobalStatics_9.gameBuffer.method786(true);
         var3.anInt2816 = 1;
         var3.anInt2811 = 0;
       }
 
       if (((var0 & 32) != 0)) {
-        var3.aClass94_2825 = SpotAnimationConfig.gameBuffer.readString();
+        var3.aClass94_2825 = GlobalStatics_9.gameBuffer.readString();
         if ((var3.aClass94_2825.charAt(0) == 126)) {
           var3.aClass94_2825 = var3.aClass94_2825.substring(1);
-          GameBuffer.printMessage(var3.getFullName(), 2, var3.aClass94_2825, var2 ^ 78);
-        } else if (var3 == TextureCache.localPlayer) {
-          GameBuffer.printMessage(var3.getFullName(), 2, var3.aClass94_2825, var2 + 78);
+          GlobalStatics_8.printMessage(var3.getFullName(), 2, var3.aClass94_2825, var2 ^ 78);
+        } else if (var3 == GlobalStatics_9.localPlayer) {
+          GlobalStatics_8.printMessage(var3.getFullName(), 2, var3.aClass94_2825, var2 + 78);
         }
 
         var3.anInt2753 = 0;
@@ -161,43 +161,43 @@ public final class DummyClass38 {
       }
 
       if (((var0 & 512) != 0)) {
-        var4 = SpotAnimationConfig.gameBuffer.readUnsignedShortSmart();
-        var5 = SpotAnimationConfig.gameBuffer.method754(true);
+        var4 = GlobalStatics_9.gameBuffer.readUnsignedShortSmart();
+        var5 = GlobalStatics_9.gameBuffer.method754(true);
         var3.method1970(var5, var2 + 71, GlobalStatics_4.updateCycle, var4);
       }
 
       if (((2048 & var0) != 0)) {
-        var4 = SpotAnimationConfig.gameBuffer.method786(true);
+        var4 = GlobalStatics_9.gameBuffer.method786(true);
         int[] var18 = new int[var4];
         int[] var17 = new int[var4];
         int[] var20 = new int[var4];
 
         for (int var22 = 0; var4 > var22; ++var22) {
-          int var23 = SpotAnimationConfig.gameBuffer.readUnsignedShortLE();
+          int var23 = GlobalStatics_9.gameBuffer.readUnsignedShortLE();
           if (var23 == '\uffff') {
             var23 = -1;
           }
 
           var18[var22] = var23;
-          var17[var22] = SpotAnimationConfig.gameBuffer.method751((byte) 125);
-          var20[var22] = SpotAnimationConfig.gameBuffer.readUnsignedShort();
+          var17[var22] = GlobalStatics_9.gameBuffer.method751((byte) 125);
+          var20[var22] = GlobalStatics_9.gameBuffer.readUnsignedShort();
         }
 
-        SomethingTexture.method1342(var17, var18, var3, (byte) -113, var20);
+        GlobalStatics_9.method1342(var17, var18, var3, (byte) -113, var20);
       }
 
       if ((256 & var0) != 0) {
-        var4 = SpotAnimationConfig.gameBuffer.readUnsignedShortLE();
+        var4 = GlobalStatics_9.gameBuffer.readUnsignedShortLE();
         if (var4 == '\uffff') {
           var4 = -1;
         }
 
-        var5 = SpotAnimationConfig.gameBuffer.readInt((byte) -73);
+        var5 = GlobalStatics_9.gameBuffer.readInt((byte) -73);
         boolean var21 = true;
         if ((var4 != -1) && (var3.anInt2842 != -1) &&
-          GameClient.method45(RenderAnimation.method898((byte) 42, var4).anInt542,
-            (byte) -20).anInt1857 < GameClient.method45(
-            RenderAnimation.method898((byte) 42, var3.anInt2842).anInt542, (byte) -20).anInt1857) {
+          GlobalStatics_8.method45(GlobalStatics_9.method898((byte) 42, var4).anInt542,
+            (byte) -20).anInt1857 < GlobalStatics_8.method45(
+            GlobalStatics_9.method898((byte) 42, var3.anInt2842).anInt542, (byte) -20).anInt1857) {
           var21 = false;
         }
 
@@ -213,12 +213,12 @@ public final class DummyClass38 {
           var3.anInt2799 = var5 >> 16;
           var3.anInt2826 = 1;
           if ((var3.anInt2842 != -1) && GlobalStatics_4.updateCycle == var3.anInt2759) {
-            var7 = RenderAnimation.method898((byte) 42, var3.anInt2842).anInt542;
+            var7 = GlobalStatics_9.method898((byte) 42, var3.anInt2842).anInt542;
             if ((var7 != -1)) {
-              AnimationSequence var24 = GameClient.method45(var7, (byte) -20);
+              AnimationSequence var24 = GlobalStatics_8.method45(var7, (byte) -20);
               if (var24.anIntArray1851 != null) {
                 SocketStream.method1470(var3.anInt2829, var24, 183921384, var3.anInt2819,
-                  var3 == TextureCache.localPlayer, 0);
+                  var3 == GlobalStatics_9.localPlayer, 0);
               }
             }
           }
@@ -227,8 +227,8 @@ public final class DummyClass38 {
 
       if (var2 == -79) {
         if (((var0 & 64) != 0)) {
-          var3.anInt2786 = SpotAnimationConfig.gameBuffer.readUnsignedShort();
-          var3.anInt2762 = SpotAnimationConfig.gameBuffer.readShortLEAdd();
+          var3.anInt2786 = GlobalStatics_9.gameBuffer.readUnsignedShort();
+          var3.anInt2762 = GlobalStatics_9.gameBuffer.readShortLEAdd();
         }
 
       }
@@ -249,21 +249,21 @@ public final class DummyClass38 {
     Buffer var2 = new Buffer(var0);
       var2.position = -2 + var0.length;
       DummyClass53.spriteCount = var2.readUnsignedShort();
-      TextureSampler26.anIntArray3076 = new int[DummyClass53.spriteCount];
-      GroundItem.anIntArray2931 = new int[DummyClass53.spriteCount];
-      Something3dRoot.anIntArray2048 = new int[DummyClass53.spriteCount];
-      TextureSampler0.aBooleanArray3272 = new boolean[DummyClass53.spriteCount];
+      GlobalStatics_10.anIntArray3076 = new int[DummyClass53.spriteCount];
+      GlobalStatics_9.anIntArray2931 = new int[DummyClass53.spriteCount];
+      GlobalStatics_9.anIntArray2048 = new int[DummyClass53.spriteCount];
+      GlobalStatics_9.aBooleanArray3272 = new boolean[DummyClass53.spriteCount];
       DummyClass4.aByteArrayArray3005 = new byte[DummyClass53.spriteCount][];
       GlobalStatics_0.anIntArray2591 = new int[DummyClass53.spriteCount];
       DummyClass5.aByteArrayArray2987 = new byte[DummyClass53.spriteCount][];
       var2.position = -(8 * DummyClass53.spriteCount) + var0.length - 7;
-      SomethingVolume15.anInt2426 = var2.readUnsignedShort();
-      SomethingPacket116.anInt1748 = var2.readUnsignedShort();
+      GlobalStatics_9.anInt2426 = var2.readUnsignedShort();
+      GlobalStatics_9.anInt1748 = var2.readUnsignedShort();
       int var3 = (var2.readUnsignedByte() & 255) + 1;
 
       int var4;
       for (var4 = 0; (var4 < DummyClass53.spriteCount); ++var4) {
-        Something3dRoot.anIntArray2048[var4] = var2.readUnsignedShort();
+        GlobalStatics_9.anIntArray2048[var4] = var2.readUnsignedShort();
       }
 
       if (var1 < 11) {
@@ -275,28 +275,28 @@ public final class DummyClass38 {
       }
 
       for (var4 = 0; DummyClass53.spriteCount > var4; ++var4) {
-        GroundItem.anIntArray2931[var4] = var2.readUnsignedShort();
+        GlobalStatics_9.anIntArray2931[var4] = var2.readUnsignedShort();
       }
 
       for (var4 = 0; (var4 < DummyClass53.spriteCount); ++var4) {
-        TextureSampler26.anIntArray3076[var4] = var2.readUnsignedShort();
+        GlobalStatics_10.anIntArray3076[var4] = var2.readUnsignedShort();
       }
 
       var2.position = -(8 * DummyClass53.spriteCount) + var0.length - 7 + 3 - (var3 * 3);
-      TextureSampler38.anIntArray3446 = new int[var3];
+      GlobalStatics_10.anIntArray3446 = new int[var3];
 
       for (var4 = 1; (var4 < var3); ++var4) {
-        TextureSampler38.anIntArray3446[var4] = var2.readUnsignedMedium((byte) 122);
-        if (TextureSampler38.anIntArray3446[var4] == 0) {
-          TextureSampler38.anIntArray3446[var4] = 1;
+        GlobalStatics_10.anIntArray3446[var4] = var2.readUnsignedMedium((byte) 122);
+        if (GlobalStatics_10.anIntArray3446[var4] == 0) {
+          GlobalStatics_10.anIntArray3446[var4] = 1;
         }
       }
 
       var2.position = 0;
 
       for (var4 = 0; var4 < DummyClass53.spriteCount; ++var4) {
-        int var5 = GroundItem.anIntArray2931[var4];
-        int var6 = TextureSampler26.anIntArray3076[var4];
+        int var5 = GlobalStatics_9.anIntArray2931[var4];
+        int var6 = GlobalStatics_10.anIntArray3076[var4];
         int var7 = var5 * var6;
         byte[] var8 = new byte[var7];
         boolean var10 = false;
@@ -334,7 +334,7 @@ public final class DummyClass38 {
           }
         }
 
-        TextureSampler0.aBooleanArray3272[var4] = var10;
+        GlobalStatics_9.aBooleanArray3272[var4] = var10;
       }
   }
 

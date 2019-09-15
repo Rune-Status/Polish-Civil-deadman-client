@@ -22,7 +22,7 @@ public final class DummyClass54 {
   public static Frame method1597(int var0, int var1, int var2, int var3, int var4, SignLink var5) {
     if (var5.method1432(false)) {
         if (var2 == 0) {
-          DisplayMode[] var6 = OndemandFileRequest.method596(10, var5);
+          DisplayMode[] var6 = GlobalStatics_9.method596(10, var5);
 
           boolean var7 = false;
 
@@ -44,7 +44,7 @@ public final class DummyClass54 {
         SignLinkRequest var10 = var5.method1450(var1, var2, var3, var4, -121);
 
         while (var10.status == 0) {
-          TextureSampler25.sleep(10L);
+          GlobalStatics_10.sleep(10L);
         }
 
         Frame var11 = (Frame) var10.result;

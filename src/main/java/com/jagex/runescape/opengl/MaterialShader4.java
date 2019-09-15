@@ -1,7 +1,8 @@
 package com.jagex.runescape.opengl;
 
 import com.jagex.runescape.GlobalStatics_5;
-import com.jagex.runescape.GroundItem;
+import com.jagex.runescape.GlobalStatics_9;
+
 import java.nio.ByteBuffer;
 
 public final class MaterialShader4 implements MaterialShader {
@@ -106,7 +107,7 @@ public final class MaterialShader4 implements MaterialShader {
     GlRenderer.loadIdentityTextureMatrix();
     GlRenderer.GL.glCallList(this.anInt2177);
     float var2 = 2662.4001F;
-    var2 += (GroundItem.anInt2938 - 128) * 0.5F;
+    var2 += (GlobalStatics_9.anInt2938 - 128) * 0.5F;
     if (var2 >= 3328.0F) {
       var2 = 3327.0F;
     }

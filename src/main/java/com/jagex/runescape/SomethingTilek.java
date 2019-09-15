@@ -1,21 +1,7 @@
 package com.jagex.runescape;
 
-import com.jagex.runescape.common.GameString;
-import com.jagex.runescape.common.GameStringStatics;
-import com.jagex.runescape.done.AbstractFont;
-
 public final class SomethingTilek {
 
-  public static int[] anIntArray1662;
-  public static int viewportUpperZ;
-  public static Queue aClass13_1666 = new Queue();
-  public static int anInt1668 = -1;
-  public static AbstractFont p12Font;
-  public static GameClient client;
-  public static int anInt1672;
-  public static int anInt1676;
-  public static int anInt1677;
-  public static GameString OK = GameStringStatics.create("OK");
   public int anInt1663;
   public int anInt1664;
   public int anInt1667;
@@ -34,14 +20,6 @@ public final class SomethingTilek {
       this.aBoolean1674 = var7;
       this.anInt1663 = var4;
       this.anInt1670 = var5;
-  }
-
-  public static void method1751(byte var0) {
-    SomethingTilek.aClass13_1666 = null;
-      SomethingTilek.client = null;
-      SomethingTilek.OK = null;
-      SomethingTilek.anIntArray1662 = null;
-      SomethingTilek.p12Font = null;
   }
 
 }

@@ -1,30 +1,13 @@
 package com.jagex.runescape.opengl;
 
+import com.jagex.runescape.*;
 import com.jagex.runescape.done.AbstractModel;
-import com.jagex.runescape.GlobalStatics_1;
 import com.jagex.runescape.common.ArrayUtils;
 import com.jagex.runescape.buffer.Buffer;
 import com.jagex.runescape.done.BufferData;
-import com.jagex.runescape.DummyClass0;
-import com.jagex.runescape.DummyClass17;
-import com.jagex.runescape.DummyClass3;
-import com.jagex.runescape.DummyClass40;
-import com.jagex.runescape.DummyClass45;
-import com.jagex.runescape.DummyClass58;
-import com.jagex.runescape.DummyOutputStream;
 import com.jagex.runescape.FaceNormal;
-import com.jagex.runescape.MapScene;
-import com.jagex.runescape.Model;
-import com.jagex.runescape.RenderAnimation;
-import com.jagex.runescape.SceneNode;
 import com.jagex.runescape.sprite.SoftwareIndexedColorSprite;
-import com.jagex.runescape.SomethingMidiFile;
-import com.jagex.runescape.Structure;
-import com.jagex.runescape.TextureCache;
-import com.jagex.runescape.TextureSampler27;
-import com.jagex.runescape.TextureSampler38;
-import com.jagex.runescape.Unsure;
-import com.jagex.runescape.VertexNormal;
+
 import java.nio.ByteBuffer;
 
 public final class GlModel extends AbstractModel {
@@ -148,7 +131,7 @@ public final class GlModel extends AbstractModel {
       var60[var7] = ((long) var9 << 32) + var62;
     }
 
-    TextureCache.method1614(true, var60, var5);
+    GlobalStatics_9.method1614(true, var60, var5);
     this.vertexCCC = model.amountVertices;
     this.vx = model.vx;
     this.vy = model.vy;
@@ -1326,7 +1309,7 @@ public final class GlModel extends AbstractModel {
           int var21 = var20 + var13 << 9;
           if (var21 / depth > DummyClass17.screenLowerX) {
             int var22 = var20 - var13 << 9;
-            if (var22 / depth < Unsure.screenUpperX) {
+            if (var22 / depth < GlobalStatics_10.screenUpperX) {
               int var23 = translateY * var3 - var16 * var2 >> 16;
               int var24 = var23 + (var13 * var2 + var15 * var3 >> 16) << 9;
               if (var24 / depth > DummyClass3.screenUpperY) {
@@ -1339,7 +1322,7 @@ public final class GlModel extends AbstractModel {
                     var27 = DummyClass40.COSINE_TABLE[rotationY];
                   }
 
-                  if (key > 0L && TextureSampler27.aBoolean3094 && var19 > 0) {
+                  if (key > 0L && GlobalStatics_10.aBoolean3094 && var19 > 0) {
                     int var28;
                     int var30;
                     if (var20 > 0) {
@@ -1360,8 +1343,8 @@ public final class GlModel extends AbstractModel {
                       var31 = var24 / depth;
                     }
 
-                    if (Structure.anInt3642 >= var28 && Structure.anInt3642 <= var30
-                      && RenderAnimation.anInt384 >= var29 && RenderAnimation.anInt384 <= var31) {
+                    if (GlobalStatics_9.anInt3642 >= var28 && GlobalStatics_9.anInt3642 <= var30
+                      && GlobalStatics_9.anInt384 >= var29 && GlobalStatics_9.anInt384 <= var31) {
                       var28 = 999999;
                       var30 = -999999;
                       var29 = 999999;
@@ -1423,10 +1406,10 @@ public final class GlModel extends AbstractModel {
                         }
                       }
 
-                      if (Structure.anInt3642 >= var28 && Structure.anInt3642 <= var30
-                        && RenderAnimation.anInt384 >= var29 && RenderAnimation.anInt384 <= var31) {
+                      if (GlobalStatics_9.anInt3642 >= var28 && GlobalStatics_9.anInt3642 <= var30
+                        && GlobalStatics_9.anInt384 >= var29 && GlobalStatics_9.anInt384 <= var31) {
                         if (this.aBoolean2699) {
-                          TextureSampler38.entityKeys[MapScene.anInt59++] = key;
+                          GlobalStatics_10.entityKeys[GlobalStatics_9.anInt59++] = key;
                         } else {
                           if (GlModel.screenCoordinatesX.length < this.amountVertices) {
                             GlModel.screenCoordinatesX = new int[this.amountVertices];
@@ -1448,15 +1431,15 @@ public final class GlModel extends AbstractModel {
                                 short var53 = this.v0[var39];
                                 short var52 = this.v1[var39];
                                 short var51 = this.v2[var39];
-                                if (this.isWithinBoundaries(Structure.anInt3642,
-                                  RenderAnimation.anInt384,
+                                if (this.isWithinBoundaries(GlobalStatics_9.anInt3642,
+                                  GlobalStatics_9.anInt384,
                                     GlModel.screenCoordinatesY[var53],
                                     GlModel.screenCoordinatesY[var52],
                                     GlModel.screenCoordinatesY[var51],
                                     GlModel.screenCoordinatesX[var53],
                                     GlModel.screenCoordinatesX[var52],
                                     GlModel.screenCoordinatesX[var51])) {
-                                  TextureSampler38.entityKeys[MapScene.anInt59++] = key;
+                                  GlobalStatics_10.entityKeys[GlobalStatics_9.anInt59++] = key;
                                   break label118;
                                 }
 
@@ -3414,9 +3397,9 @@ public final class GlModel extends AbstractModel {
       var12.aFloatArray3847 = this.aFloatArray3847;
       var12.vertexTextureData = this.vertexTextureData;
     } else {
-      var12.aFloatArray3824 = SomethingMidiFile
+      var12.aFloatArray3824 = GlobalStatics_9
           .method119(this.aFloatArray3824, 0);
-      var12.aFloatArray3847 = SomethingMidiFile.method119(this.aFloatArray3847, 0);
+      var12.aFloatArray3847 = GlobalStatics_9.method119(this.aFloatArray3847, 0);
       var12.vertexTextureData = new BufferData();
     }
 

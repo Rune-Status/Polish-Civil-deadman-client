@@ -1,7 +1,5 @@
 package com.jagex.runescape;
 
-import com.jagex.runescape.common.GameString;
-import com.jagex.runescape.common.GameStringStatics;
 import com.jagex.runescape.opengl.GlRenderer;
 import com.jagex.runescape.opengl.GlTexture2d;
 import java.applet.AppletContext;
@@ -21,21 +19,6 @@ import java.util.Objects;
 public abstract class GameStub implements Runnable,
     FocusListener, WindowListener {
 
-  private static GameString aClass94_5 =
-      GameStringStatics.create(" from your ignore list first)3");
-  public static int anInt12;
-  public static boolean aBoolean13;
-  public static int anInt2;
-  public static int anInt3;
-  public static boolean aBoolean6;
-  public static GameString aClass94_7 = GameStringStatics
-      .create(" s(West d-Bconnect-B)3");
-  public static GameString aClass94_8 = GameStringStatics.create("");
-  public static GameString aClass94_9 = GameStringStatics.create(")3)3)3");
-  public static GameString COMMAND_RECTANGLE_DEBUG = GameStringStatics
-      .create("::rect_debug");
-  public static boolean aBoolean11;
-  public static GameString aClass94_4 = GameStub.aClass94_5;
   private boolean encounteredError;
 
   public abstract void update();
@@ -43,7 +26,7 @@ public abstract class GameStub implements Runnable,
   public final void focusGained(FocusEvent var1) {
     System.out.println("GameStub.focusGained");
     DummyClass8.focused = true;
-    TextureSampler30.aBoolean3116 = true;
+    GlobalStatics_10.aBoolean3116 = true;
   }
 
   public final void focusLost(FocusEvent var1) {
@@ -56,39 +39,39 @@ public abstract class GameStub implements Runnable,
   }
 
   public final void initializeCanvas() {
-    if (GameCanvas.INSTANCE != null) {
-      GameCanvas.INSTANCE.removeFocusListener(this);
-      GameCanvas.INSTANCE
-          .getParent().remove(GameCanvas.INSTANCE);
+    if (GlobalStatics_8.INSTANCE != null) {
+      GlobalStatics_8.INSTANCE.removeFocusListener(this);
+      GlobalStatics_8.INSTANCE
+          .getParent().remove(GlobalStatics_8.INSTANCE);
     }
 
     Container container = null;
-    if (TextureSampler30.fullScreenFrame != null) {
-      container = TextureSampler30.fullScreenFrame;
-    } else if (TextureSampler27.FRAME != null) {
-      container = TextureSampler27.FRAME;
+    if (GlobalStatics_10.fullScreenFrame != null) {
+      container = GlobalStatics_10.fullScreenFrame;
+    } else if (GlobalStatics_10.FRAME != null) {
+      container = GlobalStatics_10.FRAME;
     }
     container.setLayout(null);
-    GameCanvas.INSTANCE = new GameCanvas();
-    GameCanvas.INSTANCE
-        .setSize(DummyClass30.viewWidth, GroundItem.viewHeight);
+    GlobalStatics_8.INSTANCE = new GameCanvas();
+    GlobalStatics_8.INSTANCE
+        .setSize(DummyClass30.viewWidth, GlobalStatics_9.viewHeight);
 
-    container.add(GameCanvas.INSTANCE);
-    if (container == TextureSampler27.FRAME) {
-      Insets insets = TextureSampler27.FRAME.getInsets();
-      GameCanvas.INSTANCE.setLocation(DummyClass51.viewX + insets.left,
+    container.add(GlobalStatics_8.INSTANCE);
+    if (container == GlobalStatics_10.FRAME) {
+      Insets insets = GlobalStatics_10.FRAME.getInsets();
+      GlobalStatics_8.INSTANCE.setLocation(DummyClass51.viewX + insets.left,
           insets.top + GlobalStatics_7.viewY);
     } else {
-      GameCanvas.INSTANCE
+      GlobalStatics_8.INSTANCE
           .setLocation(DummyClass51.viewX, GlobalStatics_7.viewY);
     }
-    GameCanvas.INSTANCE.addFocusListener(this);
-    GameCanvas.INSTANCE.requestFocus();
+    GlobalStatics_8.INSTANCE.addFocusListener(this);
+    GlobalStatics_8.INSTANCE.requestFocus();
     DummyClass8.focused = true;
-    TextureSampler30.aBoolean3116 = true;
-    TextureSampler26.focused = true;
+    GlobalStatics_10.aBoolean3116 = true;
+    GlobalStatics_10.focused = true;
     GlobalStatics_6.replaceCanvas = false;
-    GlobalStatics_3.canvasInitializedTime = Time.getCurrentTimeMillis();
+    GlobalStatics_3.canvasInitializedTime = GlobalStatics_10.getCurrentTimeMillis();
 
   }
 
@@ -122,35 +105,35 @@ public abstract class GameStub implements Runnable,
   public abstract void init();
 
   public final void start() {
-    if (GlobalStatics_0.applet == this && !PlayerVariable.aBoolean554) {
+    if (GlobalStatics_0.applet == this && !GlobalStatics_9.aBoolean554) {
         GlobalStatics_6.destroyTime = 0L;
       }
   }
 
   public final void stop() {
-    if (GlobalStatics_0.applet == this && !PlayerVariable.aBoolean554) {
-        GlobalStatics_6.destroyTime = 4000L + Time.getCurrentTimeMillis();
+    if (GlobalStatics_0.applet == this && !GlobalStatics_9.aBoolean554) {
+        GlobalStatics_6.destroyTime = 4000L + GlobalStatics_10.getCurrentTimeMillis();
       }
   }
 
   public final void destroy() {
-    if (this == GlobalStatics_0.applet && !PlayerVariable.aBoolean554) {
-        GlobalStatics_6.destroyTime = Time.getCurrentTimeMillis();
-        TextureSampler25.sleep(5000L);
-        TextureSampler30.signLink = null;
+    if (this == GlobalStatics_0.applet && !GlobalStatics_9.aBoolean554) {
+        GlobalStatics_6.destroyTime = GlobalStatics_10.getCurrentTimeMillis();
+        GlobalStatics_10.sleep(5000L);
+        GlobalStatics_10.signLink = null;
         this.shutdown(46, false);
       }
   }
 
   public final void paint(Graphics var1) {
-    if (this == GlobalStatics_0.applet && !PlayerVariable.aBoolean554) {
-        TextureSampler30.aBoolean3116 = true;
+    if (this == GlobalStatics_0.applet && !GlobalStatics_9.aBoolean554) {
+        GlobalStatics_10.aBoolean3116 = true;
         if (DummyClass20.aBoolean1784 && !GlRenderer.useOpenGlRenderer
-            && ((-GlobalStatics_3.canvasInitializedTime + Time
+            && ((-GlobalStatics_3.canvasInitializedTime + GlobalStatics_10
             .getCurrentTimeMillis()) > 1000L)) {
           Rectangle var2 = var1.getClipBounds();
           if (var2 == null || (var2.width >= GlobalStatics_6.windowWidth)
-              && (SceneSomething2.windowHeight <= var2.height)) {
+              && (GlobalStatics_9.windowHeight <= var2.height)) {
             GlobalStatics_6.replaceCanvas = true;
           }
         }
@@ -160,19 +143,19 @@ public abstract class GameStub implements Runnable,
 
   private void shutdown(int var1, boolean clean) {
     synchronized (this) {
-      if (PlayerVariable.aBoolean554) {
+      if (GlobalStatics_9.aBoolean554) {
         return;
       }
 
-      PlayerVariable.aBoolean554 = true;
+      GlobalStatics_9.aBoolean554 = true;
     }
 
     this.destroy((byte) 23);
 
-    if (GameCanvas.INSTANCE != null) {
-      GameCanvas.INSTANCE.removeFocusListener(this);
-      GameCanvas.INSTANCE
-          .getParent().remove(GameCanvas.INSTANCE);
+    if (GlobalStatics_8.INSTANCE != null) {
+      GlobalStatics_8.INSTANCE.removeFocusListener(this);
+      GlobalStatics_8.INSTANCE
+          .getParent().remove(GlobalStatics_8.INSTANCE);
 
     }
 
@@ -186,7 +169,7 @@ public abstract class GameStub implements Runnable,
       this.start(-50, -104, -76, 78, null, 49, false);
     }
 
-    if (TextureSampler27.FRAME != null) {
+    if (GlobalStatics_10.FRAME != null) {
       System.exit(0);
     }
 
@@ -195,42 +178,42 @@ public abstract class GameStub implements Runnable,
   }
 
   private void handleUpdate() {
-    long currentTime = Time.getCurrentTimeMillis();
-      long sampledTime = DummyClass21.updateMemory[FileUnpacker.updateMemoryCounter];
-      DummyClass21.updateMemory[FileUnpacker.updateMemoryCounter] = currentTime;
-      FileUnpacker.updateMemoryCounter =
-          31 & FileUnpacker.updateMemoryCounter + 1;
+    long currentTime = GlobalStatics_10.getCurrentTimeMillis();
+      long sampledTime = DummyClass21.updateMemory[GlobalStatics_8.updateMemoryCounter];
+      DummyClass21.updateMemory[GlobalStatics_8.updateMemoryCounter] = currentTime;
+      GlobalStatics_8.updateMemoryCounter =
+          31 & GlobalStatics_8.updateMemoryCounter + 1;
       synchronized (this) {
-        TextureSampler26.focused = DummyClass8.focused;
+        GlobalStatics_10.focused = DummyClass8.focused;
       }
       this.update();
   }
 
   private void draw() {
-    long var2 = Time.getCurrentTimeMillis();
-    long var4 = DummyClass5.drawMemory[FileTable.drawMemoryCounter];
+    long var2 = GlobalStatics_10.getCurrentTimeMillis();
+    long var4 = DummyClass5.drawMemory[GlobalStatics_8.drawMemoryCounter];
 
-    DummyClass5.drawMemory[FileTable.drawMemoryCounter] = var2;
-    FileTable.drawMemoryCounter = 31 & FileTable.drawMemoryCounter + 1;
+    DummyClass5.drawMemory[GlobalStatics_8.drawMemoryCounter] = var2;
+    GlobalStatics_8.drawMemoryCounter = 31 & GlobalStatics_8.drawMemoryCounter + 1;
     if ((var4 != 0L) && var2 > var4) {
       int var6 = (int) (var2 - var4);
       GlobalStatics_3.fps = (32000 + (var6 >> 1)) / var6;
     }
 
-    if (TextureSampler28.anInt3313++ > 50) {
-      TextureSampler30.aBoolean3116 = true;
-      TextureSampler28.anInt3313 -= 50;
-      GameCanvas.INSTANCE
-          .setSize(DummyClass30.viewWidth, GroundItem.viewHeight);
-      GameCanvas.INSTANCE.setVisible(true);
-      if (TextureSampler27.FRAME != null
-          && TextureSampler30.fullScreenFrame == null) {
-        Insets var8 = TextureSampler27.FRAME.getInsets();
-        GameCanvas.INSTANCE
+    if (GlobalStatics_10.anInt3313++ > 50) {
+      GlobalStatics_10.aBoolean3116 = true;
+      GlobalStatics_10.anInt3313 -= 50;
+      GlobalStatics_8.INSTANCE
+          .setSize(DummyClass30.viewWidth, GlobalStatics_9.viewHeight);
+      GlobalStatics_8.INSTANCE.setVisible(true);
+      if (GlobalStatics_10.FRAME != null
+          && GlobalStatics_10.fullScreenFrame == null) {
+        Insets var8 = GlobalStatics_10.FRAME.getInsets();
+        GlobalStatics_8.INSTANCE
             .setLocation(var8.left + DummyClass51.viewX,
                 GlobalStatics_7.viewY + var8.top);
       } else {
-        GameCanvas.INSTANCE
+        GlobalStatics_8.INSTANCE
             .setLocation(DummyClass51.viewX, GlobalStatics_7.viewY);
       }
     }
@@ -243,19 +226,19 @@ public abstract class GameStub implements Runnable,
   public final void run() {
     GlTexture2d.method713(0);
       this.initializeCanvas();
-      Something3d.viewImageProducer =
-          TextureSampler18.createImageProducer(GroundItem.viewHeight,
+      GlobalStatics_9.viewImageProducer =
+          GlobalStatics_10.createImageProducer(GlobalStatics_9.viewHeight,
               DummyClass30.viewWidth, true,
-              GameCanvas.INSTANCE);
+              GlobalStatics_8.INSTANCE);
       this.initialize(2);
-      Inventory.frameRateRegulator = GlobalStatics_0.method1012((byte) -31);
+      GlobalStatics_9.frameRateRegulator = GlobalStatics_0.method1012((byte) -31);
 
       while ((GlobalStatics_6.destroyTime == 0L)
-          || GlobalStatics_6.destroyTime > Time.getCurrentTimeMillis()) {
-        SomethingPacket116.cycles =
-            Inventory.frameRateRegulator
-                .sleep(-1, DummyClass22.minimumDelta, GameWorld.deltaTime);
-        for (int cycle = 0; cycle < SomethingPacket116.cycles; ++cycle) {
+          || GlobalStatics_6.destroyTime > GlobalStatics_10.getCurrentTimeMillis()) {
+        GlobalStatics_9.cycles =
+            GlobalStatics_9.frameRateRegulator
+                .sleep(-1, DummyClass22.minimumDelta, GlobalStatics_9.deltaTime);
+        for (int cycle = 0; cycle < GlobalStatics_9.cycles; ++cycle) {
           this.handleUpdate();
         }
         this.draw();
@@ -271,26 +254,26 @@ public abstract class GameStub implements Runnable,
       String gameName,
       int amountVolumes,
       boolean var3) {
-    SceneSomething2.windowHeight = height;
+    GlobalStatics_9.windowHeight = height;
     DummyClass51.viewX = 0;
     GlobalStatics_7.viewY = 0;
-    TextureSampler18.build = build;
+    GlobalStatics_10.build = build;
     DummyClass30.viewWidth = width;
-    GroundItem.viewHeight = height;
+    GlobalStatics_9.viewHeight = height;
     GlobalStatics_6.windowWidth = width;
     GlobalStatics_0.applet = this;
-    TextureSampler27.FRAME = new Frame();
-    TextureSampler27.FRAME.setTitle("Jagex");
-    TextureSampler27.FRAME.setResizable(true);
-    TextureSampler27.FRAME.addWindowListener(this);
-    TextureSampler27.FRAME.setVisible(true);
-    TextureSampler27.FRAME.toFront();
-    Insets insets = TextureSampler27.FRAME.getInsets();
-    TextureSampler27.FRAME
+    GlobalStatics_10.FRAME = new Frame();
+    GlobalStatics_10.FRAME.setTitle("Jagex");
+    GlobalStatics_10.FRAME.setResizable(true);
+    GlobalStatics_10.FRAME.addWindowListener(this);
+    GlobalStatics_10.FRAME.setVisible(true);
+    GlobalStatics_10.FRAME.toFront();
+    Insets insets = GlobalStatics_10.FRAME.getInsets();
+    GlobalStatics_10.FRAME
         .setSize(insets.left + GlobalStatics_6.windowWidth + insets.right,
-            insets.top + SceneSomething2.windowHeight + insets.bottom);
+            insets.top + GlobalStatics_9.windowHeight + insets.bottom);
     try {
-      TextureSampler30.signLink =
+      GlobalStatics_10.signLink =
           DummyClass35.signLink = new SignLink(nodeId, gameName,
               amountVolumes);
     } catch (IOException e) {
@@ -299,7 +282,7 @@ public abstract class GameStub implements Runnable,
     SignLinkRequest request = DummyClass35.signLink
         .createThread(0, 1, this);
     while (request.status == 0) {
-      TextureSampler25.sleep(10L);
+      GlobalStatics_10.sleep(10L);
     }
     DummyClass1.gameThread = (Thread) request.result;
   }
@@ -343,21 +326,21 @@ public abstract class GameStub implements Runnable,
 
         GlobalStatics_0.applet = this;
         GlobalStatics_7.viewY = 0;
-        TextureSampler18.build = var4;
+        GlobalStatics_10.build = var4;
         if (var1 >= -23) {
-          GameStub.aClass94_5 = null;
+          GlobalStatics_8.aClass94_5 = null;
         }
 
         DummyClass30.viewWidth = var2;
         GlobalStatics_6.windowWidth = var2;
         DummyClass51.viewX = 0;
-        GroundItem.viewHeight = var5;
-        SceneSomething2.windowHeight = var5;
+        GlobalStatics_9.viewHeight = var5;
+        GlobalStatics_9.windowHeight = var5;
         String var6 = this.getParameter("openwinjs");
-        WidgetUpdate.aBoolean3594 = "1".equals(var6);
+        GlobalStatics_10.aBoolean3594 = "1".equals(var6);
 
         if (DummyClass35.signLink == null) {
-          TextureSampler30.signLink = DummyClass35.signLink = new SignLink(var3,
+          GlobalStatics_10.signLink = DummyClass35.signLink = new SignLink(var3,
               null, 0);
         }
 
@@ -365,80 +348,14 @@ public abstract class GameStub implements Runnable,
 
         assert var7 != null;
         while ((var7.status == 0)) {
-          TextureSampler25.sleep(10L);
+          GlobalStatics_10.sleep(10L);
         }
 
         DummyClass1.gameThread = (Thread) var7.result;
       } catch (Exception var8) {
-        GZipDecompressor.reportError(null, var8, (byte) 113);
+        GlobalStatics_9.reportError(null, var8, (byte) 113);
         this.reportError("crash");
       }
-  }
-
-  public static void method26(int var0) {
-    if (var0 < 15) {
-        GameStub.method27(null, true);
-      }
-
-      GameStub.aClass94_7 = null;
-      GameStub.aClass94_8 = null;
-      GameStub.COMMAND_RECTANGLE_DEBUG = null;
-      GameStub.aClass94_9 = null;
-      GameStub.aClass94_5 = null;
-      GameStub.aClass94_4 = null;
-  }
-
-  public static GameString method27(GameString var0, boolean var1) {
-    if (!var1) {
-        GameStub.method26(-78);
-      }
-
-      int var2 = FloorUnderlay.method1602(0, var0);
-      return var2 != -1 ?
-          DummyClass25.aClass131_1624.aClass94Array1721[var2].method1560(
-              TextureSampler15.aClass94_3192, true,
-              OndemandFileRequest.aClass94_4066) :
-          ObjectNode.aClass94_4049;
-  }
-
-  public static void method28(boolean var0) {
-    DummyClass15.aClass93_1874.method1524(3);
-      if (!var0) {
-        GameStub.aBoolean11 = false;
-      }
-  }
-
-  public static void method34(int var0) {
-    if (GameWorld.audioOutputStream0 != null) {
-        GameWorld.audioOutputStream0.method2163(false);
-      }
-
-      if (var0 != -32589) {
-        GameStub.method26(-25);
-      }
-
-      if (SomethingWorldMappy.audioOutputStream1 != null) {
-        SomethingWorldMappy.audioOutputStream1.method2163(false);
-      }
-
-      GameObject.method1959(256, 2, 22050, TextureSampler17.aBoolean3184);
-      GameWorld.audioOutputStream0 =
-          DummyClass43.createAudioOutputStream(22050, DummyClass35.signLink,
-              GameCanvas.INSTANCE,
-              0, 14);
-      GameWorld.audioOutputStream0
-          .method2154(114, GlobalStatics_0.aClass3_Sub24_Sub4_1193);
-      SomethingWorldMappy.audioOutputStream1 =
-          DummyClass43.createAudioOutputStream(2048, DummyClass35.signLink,
-              GameCanvas.INSTANCE, 1,
-              14);
-      SomethingWorldMappy.audioOutputStream1.method2154(-126,
-          MonoChromaticImageBuffer.aClass3_Sub24_Sub2_2563);
-  }
-
-  public static void provideSignLink(SignLink var0) {
-    DummyClass35.signLink = var0;
-      TextureSampler30.signLink = var0;
   }
 
 }

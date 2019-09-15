@@ -1,18 +1,9 @@
 package com.jagex.runescape;
 
-import com.jagex.runescape.common.GameString;
-import com.jagex.runescape.common.GameStringStatics;
-import com.jagex.runescape.done.AbstractAudioOutputStream;
 import com.jagex.runescape.node.Node;
-import com.jagex.runescape.opengl.GLStatics;
-import com.jagex.runescape.opengl.GlRenderer;
 
 public final class SomethingWorldMappy extends Node {
 
-  public static AbstractAudioOutputStream audioOutputStream1;
-  public static volatile int lastMouseX = -1;
-  public static GameString aClass94_2496 = GameStringStatics.create("scrollen:");
-  public static GameString aClass94_2498 = GameStringStatics.create("(U (X");
   public int anInt2492;
   public int anInt2494;
   public int anInt2495;
@@ -28,136 +19,12 @@ public final class SomethingWorldMappy extends Node {
 
   public boolean method393(byte var1, int var2, int var3 ) {
     if (var1 != -45) {
-        SomethingWorldMappy.method394(6, -105);
+        GlobalStatics_9.method394(6, -105);
       }
 
       return var3 >= this.anInt2492
           && (this.anInt2495 >= var3) && this.anInt2494 <= var2
         && var2 <= this.anInt2497;
-  }
-
-  public static void method394(int var0, int var1) {
-    TextureSampler39.anInt3285 = var0;
-      IntegerNode.method383(-32584, 3);
-      IntegerNode.method383(-32584, 4);
-      if (var1 <= 83) {
-        SomethingWorldMappy.method395(null, -43, -61, -51, 101, -106, -58, true);
-      }
-  }
-
-  public static void method395(SomethingSceneTile var0, int var1, int var2, int var3, int var4,
-                              int var5, int var6, boolean var7) {
-    int var8 = var0.anIntArray627.length;
-
-    int var9;
-    int var10;
-    int var11;
-    int var12;
-    int var13;
-    for (var9 = 0; var9 < var8; ++var9) {
-      var10 = var0.anIntArray627[var9] - MilliFrameRegulator.cameraPosX;
-      var11 = var0.anIntArray615[var9] - GlobalStatics_7.cameraY;
-      var12 = var0.anIntArray618[var9] - TextureSampler13.cameraZ;
-      var13 = var12 * var3 + var10 * var4 >> 16;
-      var12 = var12 * var4 - var10 * var3 >> 16;
-      var10 = var13;
-      var13 = var11 * var2 - var12 * var1 >> 16;
-      var12 = var11 * var1 + var12 * var2 >> 16;
-      if (var12 < 50) {
-        return;
-      }
-
-      if (var0.anIntArray616 != null) {
-        SomethingSceneTile.anIntArray614[var9] = var10;
-        SomethingSceneTile.anIntArray630[var9] = var13;
-        SomethingSceneTile.anIntArray628[var9] = var12;
-      }
-
-      SomethingSceneTile.anIntArray623[var9] = DummyClass40.anInt846 + (var10 << 9) / var12;
-      SomethingSceneTile.anIntArray622[var9] = DummyClass40.anInt835 + (var13 << 9) / var12;
-    }
-
-    DummyClass40.anInt850 = 0;
-    var8 = var0.anIntArray624.length;
-
-    for (var9 = 0; var9 < var8; ++var9) {
-      var10 = var0.anIntArray624[var9];
-      var11 = var0.anIntArray617[var9];
-      var12 = var0.anIntArray613[var9];
-      var13 = SomethingSceneTile.anIntArray623[var10];
-      int var14 = SomethingSceneTile.anIntArray623[var11];
-      int var15 = SomethingSceneTile.anIntArray623[var12];
-      int var16 = SomethingSceneTile.anIntArray622[var10];
-      int var17 = SomethingSceneTile.anIntArray622[var11];
-      int var18 = SomethingSceneTile.anIntArray622[var12];
-      if ((var13 - var14) * (var18 - var17) - (var16 - var17) * (var15 - var14) > 0) {
-        if (TextureSampler37.aBoolean3261 && TextureSampler34.method185(
-          GZipDecompressor.anInt819 + DummyClass40.anInt846,
-          TextureSampler18.anInt4039 + DummyClass40.anInt835, var16, var17, var18, var13, var14,
-          var15)) {
-          DummyClass32.anInt515 = var5;
-          OndemandRequester.anInt999 = var6;
-        }
-
-        if (!GlRenderer.useOpenGlRenderer && !var7) {
-          DummyClass40.aBoolean849 =
-            var13 < 0 || var14 < 0 || var15 < 0 || var13 > DummyClass40.anInt847
-              || var14 > DummyClass40.anInt847 || var15 > DummyClass40.anInt847;
-
-          if (var0.anIntArray616 != null && var0.anIntArray616[var9] != -1) {
-            if (TextureSampler0.aBoolean3275) {
-              if (var0.aBoolean629) {
-                DummyClass40.method1135(var16, var17, var18, var13, var14, var15,
-                  var0.anIntArray625[var9], var0.anIntArray632[var9], var0.anIntArray631[var9],
-                  SomethingSceneTile.anIntArray614[0], SomethingSceneTile.anIntArray614[1],
-                  SomethingSceneTile.anIntArray614[3], SomethingSceneTile.anIntArray630[0],
-                  SomethingSceneTile.anIntArray630[1], SomethingSceneTile.anIntArray630[3],
-                  SomethingSceneTile.anIntArray628[0], SomethingSceneTile.anIntArray628[1],
-                  SomethingSceneTile.anIntArray628[3], var0.anIntArray616[var9]);
-              } else {
-                DummyClass40.method1135(var16, var17, var18, var13, var14, var15,
-                  var0.anIntArray625[var9], var0.anIntArray632[var9], var0.anIntArray631[var9],
-                  SomethingSceneTile.anIntArray614[var10], SomethingSceneTile.anIntArray614[var11],
-                  SomethingSceneTile.anIntArray614[var12], SomethingSceneTile.anIntArray630[var10],
-                  SomethingSceneTile.anIntArray630[var11], SomethingSceneTile.anIntArray630[var12],
-                  SomethingSceneTile.anIntArray628[var10], SomethingSceneTile.anIntArray628[var11],
-                  SomethingSceneTile.anIntArray628[var12], var0.anIntArray616[var9]);
-              }
-            } else {
-              int var19 = GLStatics.textureCache.method15(var0.anIntArray616[var9], '\uffff');
-              DummyClass40.method1154(var16, var17, var18, var13, var14, var15,
-                DummyClass2.repackHSL(var19, var0.anIntArray625[var9]),
-                DummyClass2.repackHSL(var19, var0.anIntArray632[var9]),
-                DummyClass2.repackHSL(var19, var0.anIntArray631[var9]));
-            }
-          } else if (var0.anIntArray625[var9] != 12345678) {
-            DummyClass40.method1154(var16, var17, var18, var13, var14, var15,
-              var0.anIntArray625[var9], var0.anIntArray632[var9], var0.anIntArray631[var9]);
-          }
-        }
-      }
-    }
-
-  }
-
-  public static void method396(int var0) {
-    if (var0 != 0) {
-        SomethingWorldMappy.method397((byte) 35);
-      }
-
-      SomethingWorldMappy.audioOutputStream1 = null;
-      SomethingWorldMappy.aClass94_2498 = null;
-      SomethingWorldMappy.aClass94_2496 = null;
-  }
-
-  public static void method397(byte var0) {
-    MonoChromaticImageCache.aClass93_1569.method1524(3);
-      SomethingVolume15.aClass93_2428.method1524(3);
-      if (var0 != -41) {
-        SomethingWorldMappy.method394(14, 52);
-      }
-
-      GlobalStatics_6.aClass93_743.method1524(3);
   }
 
 }

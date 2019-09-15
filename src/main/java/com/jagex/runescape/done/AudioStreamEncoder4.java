@@ -2,10 +2,6 @@ package com.jagex.runescape.done;
 
 import com.jagex.runescape.*;
 import com.jagex.runescape.common.HashTable;
-import com.jagex.runescape.done.AudioSomethingSomething;
-import com.jagex.runescape.done.AudioStreamEncoder;
-import com.jagex.runescape.done.AudioStreamEncoder1;
-import com.jagex.runescape.done.AudioStreamEncoder3;
 import com.jagex.runescape.huffman.HuffmanEncoderStatics;
 
 public final class AudioStreamEncoder4 extends AudioStreamEncoder {
@@ -68,7 +64,7 @@ public final class AudioStreamEncoder4 extends AudioStreamEncoder {
         SomethingVolume15 var11 = (SomethingVolume15) this.aClass130_3508.get(
             var10);
         if (var11 == null) {
-          var11 = OndemandRequester.method1245(117, var3, var10);
+          var11 = GlobalStatics_9.method1245(117, var3, var10);
           if (var11 == null) {
             var6 = false;
             continue;

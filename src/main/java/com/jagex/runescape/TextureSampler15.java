@@ -1,23 +1,12 @@
 package com.jagex.runescape;
 
 import com.jagex.runescape.buffer.Buffer;
-import com.jagex.runescape.common.GameString;
-import com.jagex.runescape.common.GameStringStatics;
 import com.jagex.runescape.done.AbstractTextureSampler;
 
 import java.util.Random;
 
 public final class TextureSampler15 extends AbstractTextureSampler {
 
-  public static GameString aClass94_3190 = GameStringStatics.create("<img=1>");
-  public static GameString aClass94_3192 = GameStringStatics.create(" ");
-  public static GameString aClass94_3196 = GameStringStatics.create("Fps:");
-  public static int anInt3198;
-  public static int anInt3199;
-  public static GameWorld[] aClass44_Sub1Array3201 = new GameWorld[0];
-  public static long encodedUsername;
-  public static int anInt3205;
-  public static GameString aClass94_3206 = GameStringStatics.create("Moteur son pr-Bpar-B");
   private int anInt3191 = 2;
   private int anInt3193 = 2048;
   private int anInt3194 = 1;
@@ -39,7 +28,7 @@ public final class TextureSampler15 extends AbstractTextureSampler {
         if (this.anInt3193 > 0) {
           for (int var3 = 0; var3 < 512; ++var3) {
             this.aShortArray3200[var3] =
-              (short) FloorUnderlay.method1603((byte) 23, this.anInt3193, var2);
+              (short) GlobalStatics_8.method1603((byte) 23, this.anInt3193, var2);
           }
         }
 
@@ -54,13 +43,13 @@ public final class TextureSampler15 extends AbstractTextureSampler {
         int var6 = var5 >> 12;
         int var7 = var6 + 1;
 
-        for (int var15 = 0; var15 < SomethingLight0.anInt1559; ++var15) {
-          TextureSampler36.anInt3422 = Integer.MAX_VALUE;
-          Keyboard.anInt1914 = Integer.MAX_VALUE;
-          LinearHashTable.anInt1042 = Integer.MAX_VALUE;
+        for (int var15 = 0; var15 < GlobalStatics_9.anInt1559; ++var15) {
+          GlobalStatics_10.anInt3422 = Integer.MAX_VALUE;
+          GlobalStatics_9.anInt1914 = Integer.MAX_VALUE;
+          GlobalStatics_9.anInt1042 = Integer.MAX_VALUE;
           GlobalStatics_6.anInt3589 = Integer.MAX_VALUE;
           int var16 =
-              this.anInt3203 * TextureCache.anIntArray2125[var15] + 2048;
+              this.anInt3203 * GlobalStatics_9.anIntArray2125[var15] + 2048;
           int var17 = var16 >> 12;
           int var18 = 1 + var17;
 
@@ -113,22 +102,22 @@ public final class TextureSampler15 extends AbstractTextureSampler {
               }
 
               if (var12 >= GlobalStatics_6.anInt3589) {
-                if ((var12 < LinearHashTable.anInt1042)) {
-                  TextureSampler36.anInt3422 = Keyboard.anInt1914;
-                  Keyboard.anInt1914 = LinearHashTable.anInt1042;
-                  LinearHashTable.anInt1042 = var12;
-                } else if (Keyboard.anInt1914 <= var12) {
-                  if (var12 < TextureSampler36.anInt3422) {
-                    TextureSampler36.anInt3422 = var12;
+                if ((var12 < GlobalStatics_9.anInt1042)) {
+                  GlobalStatics_10.anInt3422 = GlobalStatics_9.anInt1914;
+                  GlobalStatics_9.anInt1914 = GlobalStatics_9.anInt1042;
+                  GlobalStatics_9.anInt1042 = var12;
+                } else if (GlobalStatics_9.anInt1914 <= var12) {
+                  if (var12 < GlobalStatics_10.anInt3422) {
+                    GlobalStatics_10.anInt3422 = var12;
                   }
                 } else {
-                  TextureSampler36.anInt3422 = Keyboard.anInt1914;
-                  Keyboard.anInt1914 = var12;
+                  GlobalStatics_10.anInt3422 = GlobalStatics_9.anInt1914;
+                  GlobalStatics_9.anInt1914 = var12;
                 }
               } else {
-                TextureSampler36.anInt3422 = Keyboard.anInt1914;
-                Keyboard.anInt1914 = LinearHashTable.anInt1042;
-                LinearHashTable.anInt1042 = GlobalStatics_6.anInt3589;
+                GlobalStatics_10.anInt3422 = GlobalStatics_9.anInt1914;
+                GlobalStatics_9.anInt1914 = GlobalStatics_9.anInt1042;
+                GlobalStatics_9.anInt1042 = GlobalStatics_6.anInt3589;
                 GlobalStatics_6.anInt3589 = var12;
               }
             }
@@ -139,14 +128,14 @@ public final class TextureSampler15 extends AbstractTextureSampler {
             var3[var15] = GlobalStatics_6.anInt3589;
           } else if (var19 != 1) {
             if ((var19 == 3)) {
-              var3[var15] = Keyboard.anInt1914;
+              var3[var15] = GlobalStatics_9.anInt1914;
             } else if (var19 == 4) {
-              var3[var15] = TextureSampler36.anInt3422;
+              var3[var15] = GlobalStatics_10.anInt3422;
             } else if ((var19 == 2)) {
-              var3[var15] = LinearHashTable.anInt1042 - GlobalStatics_6.anInt3589;
+              var3[var15] = GlobalStatics_9.anInt1042 - GlobalStatics_6.anInt3589;
             }
           } else {
-            var3[var15] = LinearHashTable.anInt1042;
+            var3[var15] = GlobalStatics_9.anInt1042;
           }
         }
       }
@@ -180,51 +169,12 @@ public final class TextureSampler15 extends AbstractTextureSampler {
 
   public void method158(int var1 ) {
     if (var1 != 16251) {
-        TextureSampler15.aClass44_Sub1Array3201 = null;
+        GlobalStatics_10.aClass44_Sub1Array3201 = null;
       }
 
-      this.aByteArray3195 = GZipDecompressor.method1123(var1 ^ 16727940,
+      this.aByteArray3195 = GlobalStatics_9.method1123(var1 ^ 16727940,
           this.anInt3197);
       this.method242((byte) 37);
-  }
-
-  public static int getLanguageForTag(GameString var0) {
-    for (int i = 0; (i < TextureSampler4.LANGUAGES.length); ++i) {
-        if (TextureSampler4.LANGUAGES[i].method1531(var0)) {
-          return i;
-        }
-      }
-
-      return -1;
-  }
-
-  public static void method244(int var0, int var1, int var2, int var3, int var4) {
-    int var5;
-      if ((var1 <= var3)) {
-        for (var5 = var1; var5 < var3; ++var5) {
-          DummyClass35.anIntArrayArray663[var5][var2] = var4;
-        }
-      } else {
-        for (var5 = var3; (var5 < var1); ++var5) {
-          DummyClass35.anIntArrayArray663[var5][var2] = var4;
-        }
-      }
-
-      if (var0 != 2) {
-        TextureSampler15.anInt3198 = -110;
-      }
-  }
-
-  public static void method245(int var0) {
-    TextureSampler15.aClass44_Sub1Array3201 = null;
-      TextureSampler15.aClass94_3192 = null;
-      TextureSampler15.aClass94_3206 = null;
-      if (var0 != 0) {
-        TextureSampler15.method245(111);
-      }
-
-      TextureSampler15.aClass94_3190 = null;
-      TextureSampler15.aClass94_3196 = null;
   }
 
 }

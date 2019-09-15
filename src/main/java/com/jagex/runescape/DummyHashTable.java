@@ -31,7 +31,7 @@ public final class DummyHashTable {
   }
 
   public static void method1760(int var0, byte var1, int var2) {
-    Deque var3 = TextureSampler0.groundItems[GameWorldSomething.currentPlane][var2][var0];
+    Deque var3 = GlobalStatics_9.groundItems[GlobalStatics_9.currentPlane][var2][var0];
       if (var3 != null) {
         if (var1 == 65) {
           int var4 = -99999999;
@@ -75,15 +75,15 @@ public final class DummyHashTable {
             }
 
             long var13 = 1610612736 + (var0 << 7) + var2;
-            TextureSampler30.method213(GameWorldSomething.currentPlane, var2, var0,
-              GlobalStatics_6.method1736(GameWorldSomething.currentPlane, 1, 64 + 128 * var2,
+            GlobalStatics_10.method213(GlobalStatics_9.currentPlane, var2, var0,
+              GlobalStatics_6.method1736(GlobalStatics_9.currentPlane, 1, 64 + 128 * var2,
                 64 + var0 * 128), var5.aClass140_Sub7_3676, var13, var12, var14);
           } else {
-            GameObjectConfig.method1688(GameWorldSomething.currentPlane, var2, var0);
+            GlobalStatics_8.method1688(GlobalStatics_9.currentPlane, var2, var0);
           }
         }
       } else {
-        GameObjectConfig.method1688(GameWorldSomething.currentPlane, var2, var0);
+        GlobalStatics_8.method1688(GlobalStatics_9.currentPlane, var2, var0);
       }
   }
 
@@ -131,12 +131,12 @@ public final class DummyHashTable {
       int var15;
       if (GlRenderer.useOpenGlRenderer) {
         GlModel var14 = (GlModel) var9;
-        if (var6 != GlobalStatics_6.method1736(GameWorldSomething.currentPlane, 1, var4 + var17,
-          var2 + var12) || var6 != GlobalStatics_6.method1736(GameWorldSomething.currentPlane, 1,
+        if (var6 != GlobalStatics_6.method1736(GlobalStatics_9.currentPlane, 1, var4 + var17,
+          var2 + var12) || var6 != GlobalStatics_6.method1736(GlobalStatics_9.currentPlane, 1,
           var4 + var11, var13 + var2)) {
           for (var15 = 0; (var15 < var14.vertexCCC); ++var15) {
             var14.vy[var15] +=
-              GlobalStatics_6.method1736(GameWorldSomething.currentPlane, 1, var14.vx[var15] + var4,
+              GlobalStatics_6.method1736(GlobalStatics_9.currentPlane, 1, var14.vx[var15] + var4,
                 var14.vz[var15] + var2) - var6;
           }
 
@@ -145,11 +145,11 @@ public final class DummyHashTable {
         }
       } else {
         SoftwareModel var18 = (SoftwareModel) var9;
-        if (var6 != GlobalStatics_6.method1736(GameWorldSomething.currentPlane, 1, var17 + var4,
-          var12 + var2) || var6 != GlobalStatics_6.method1736(GameWorldSomething.currentPlane, 1,
+        if (var6 != GlobalStatics_6.method1736(GlobalStatics_9.currentPlane, 1, var17 + var4,
+          var12 + var2) || var6 != GlobalStatics_6.method1736(GlobalStatics_9.currentPlane, 1,
           var4 + var11, var13 + var2)) {
           for (var15 = 0; var18.anInt3891 > var15; ++var15) {
-            var18.anIntArray3883[var15] += GlobalStatics_6.method1736(GameWorldSomething.currentPlane, 1,
+            var18.anIntArray3883[var15] += GlobalStatics_6.method1736(GlobalStatics_9.currentPlane, 1,
               var4 + var18.anIntArray3885[var15], var18.anIntArray3895[var15] + var2) - var6;
           }
 
@@ -168,9 +168,9 @@ public final class DummyHashTable {
           if (var6 != null) {
             SceneSomething2 var7 = var6.aClass70_2234;
             if (var7 != null && var7.sceneNode0.method1865()) {
-              TextureSampler30.method214(var7.sceneNode0, var3, var4, var5, 1, 1);
+              GlobalStatics_10.method214(var7.sceneNode0, var3, var4, var5, 1, 1);
               if (var7.sceneNode1 != null && var7.sceneNode1.method1865()) {
-                TextureSampler30.method214(var7.sceneNode1, var3, var4, var5, 1, 1);
+                GlobalStatics_10.method214(var7.sceneNode1, var3, var4, var5, 1, 1);
                 var7.sceneNode0.method1866(var7.sceneNode1, 0, 0, 0, false);
                 var7.sceneNode1 = var7.sceneNode1.method1861(var0, var1, var2);
               }
@@ -181,7 +181,7 @@ public final class DummyHashTable {
             for (int var8 = 0; var8 < var6.anInt2223; ++var8) {
               SceneSomething var9 = var6.sceneGraphNodes[var8];
               if (var9 != null && var9.sceneNode.method1865()) {
-                TextureSampler30.method214(var9.sceneNode, var3, var4, var5,
+                GlobalStatics_10.method214(var9.sceneNode, var3, var4, var5,
                   var9.anInt495 - var9.anInt483 + 1, var9.anInt481 - var9.anInt478 + 1);
                 var9.sceneNode = var9.sceneNode.method1861(var0, var1, var2);
               }

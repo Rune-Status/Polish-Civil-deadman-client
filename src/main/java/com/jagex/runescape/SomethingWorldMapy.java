@@ -3,14 +3,9 @@ package com.jagex.runescape;
 import com.jagex.runescape.common.GameString;
 import com.jagex.runescape.node.Deque;
 import com.jagex.runescape.node.SubNode;
-import java.util.Objects;
 
 public final class SomethingWorldMapy extends SubNode {
 
-  public static Widget aClass11_3551;
-  public static int anInt3552;
-  public static int widgetQuads;
-  public static int anInt3564;
   public int anInt3549;
   public int anInt3550 = -1;
   public boolean aBoolean3553 = true;
@@ -56,7 +51,7 @@ public final class SomethingWorldMapy extends SubNode {
         }
 
         if (var2 != 97) {
-          SomethingWorldMapy.method544(-51, 82);
+          GlobalStatics_9.method544(-51, 82);
         }
 
         return false;
@@ -69,7 +64,7 @@ public final class SomethingWorldMapy extends SubNode {
     this.anInt3562 = 12800;
       this.anInt3559 = 0;
       if (var1 != 103) {
-        SomethingWorldMapy.aClass11_3551 = null;
+        GlobalStatics_9.aClass11_3551 = null;
       }
 
       this.anInt3549 = 0;
@@ -93,97 +88,6 @@ public final class SomethingWorldMapy extends SubNode {
           this.anInt3549 = var2.anInt2497;
         }
       }
-  }
-
-  public static void method539(int var0, int var1) {
-    if (var0 != 0) {
-        SomethingWorldMapy.method542((byte) 73);
-      }
-
-      SceneShadowMap.aClass93_1772.method1522(var0 ^ -126, var1);
-  }
-
-  public static int method540(int var0, int var1, int var2) {
-    if (var1 == -14314) {
-        int var3;
-        for (var3 = 0; (var0 > 0); --var0) {
-          var3 = var3 << 1 | 1 & var2;
-          var2 >>>= 1;
-        }
-
-        return var3;
-      } else {
-        return 116;
-      }
-  }
-
-  public static void method541(byte var0, boolean var1, GameString var2) {
-    var2 = var2.method1534();
-      int var4 = 0;
-      int var5 = -26 / ((62 - var0) / 58);
-      short[] var3 = new short[16];
-      int var6 = !var1 ? 0 : '\u8000';
-      int var7 = (!var1 ? MidiSomething.anInt1156 : RenderAnimation.anInt377) + var6;
-
-      for (int var8 = var6; var8 < var7; ++var8) {
-        SomethingQuickChat var9 = GlobalStatics_0.method733(12345678, var8);
-        if (var9.aBoolean3568 && Objects.requireNonNull(var9.method554(-1)).method1534().indexOf(var2) != -1) {
-          if (var4 >= 50) {
-            FileTable.anInt952 = -1;
-            DummyClass54.aShortArray1398 = null;
-            return;
-          }
-
-          if (var4 >= var3.length) {
-            short[] var10 = new short[2 * var3.length];
-
-            for (int var11 = 0; var4 > var11; ++var11) {
-              var10[var11] = var3[var11];
-            }
-
-            var3 = var10;
-          }
-
-          var3[var4++] = (short) var8;
-        }
-      }
-
-      DummyClass54.aShortArray1398 = var3;
-      FileTable.anInt952 = var4;
-      Mobile.anInt2756 = 0;
-      GameString[] var13 = new GameString[FileTable.anInt952];
-
-      for (int var14 = 0; FileTable.anInt952 > var14; ++var14) {
-        var13[var14] = GlobalStatics_0.method733(12345678, var3[var14]).method554(-1);
-      }
-
-      TextureSampler3.method307(var13, DummyClass54.aShortArray1398, 100);
-  }
-
-  public static void method542(byte var0) {
-    if (var0 != -46) {
-        SomethingWorldMapy.anInt3552 = 7;
-      }
-
-      SomethingWorldMapy.aClass11_3551 = null;
-  }
-
-  public static int method543(int var0, int var1, byte var2) {
-    if (var2 > -71) {
-        return -52;
-      } else {
-        int var3 =
-          NPC.method1984(var0 - 1, 38, -1 + var1) + NPC.method1984(1 + var0, 38, -1 + var1) - (
-            -NPC.method1984(-1 + var0, 38, var1 + 1) - NPC.method1984(var0 + 1, 38, var1 + 1));
-        int var4 = NPC.method1984(var0 - 1, 38, var1) + NPC.method1984(var0 + 1, 38, var1) + (
-          NPC.method1984(var0, 38, -1 + var1) + NPC.method1984(var0, 38, 1 + var1));
-        int var5 = NPC.method1984(var0, 38, var1);
-        return var4 / 8 + var3 / 16 + (var5 / 4);
-      }
-  }
-
-  public static boolean method544(int var0, int var1) {
-    return var0 != -49 || (var1 >= 48) && var1 <= 57;
   }
 
 }

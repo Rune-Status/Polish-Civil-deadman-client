@@ -31,7 +31,7 @@ public final class DummyClass23 {
         DummyClass23.aClass153_1661 = null;
       }
 
-      SomethingTexture4.method1352(GroundItem.viewHeight, var0, -1, InventoryConfig.anInt3655,
+      GlobalStatics_9.method1352(GlobalStatics_9.viewHeight, var0, -1, GlobalStatics_9.anInt3655,
         DummyClass30.viewWidth);
   }
 

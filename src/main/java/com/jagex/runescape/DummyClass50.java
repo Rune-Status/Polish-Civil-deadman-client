@@ -23,10 +23,10 @@ public final class DummyClass50 {
       }
 
       byte[] var2 = new byte[24];
-      if (LinearHashTable.uidFile != null) {
+      if (GlobalStatics_9.uidFile != null) {
         try {
-          LinearHashTable.uidFile.seek(-41, 0L);
-          LinearHashTable.uidFile.method982(false, var2);
+          GlobalStatics_9.uidFile.seek(-41, 0L);
+          GlobalStatics_9.uidFile.method982(false, var2);
 
           int var3;
           for (var3 = 0; (var3 < 24) && (var2[var3] == 0); ++var3) {
@@ -82,10 +82,10 @@ public final class DummyClass50 {
 
           int var5;
           for (var5 = 0; GlobalStatics_6.anInt3591 > var5; ++var5) {
-            if (MonoChromaticImageCache.aLongArray1574[var5] == var1) {
-              GameBuffer.printMessage(GroundItemNode.EMPTY_STRING, 0,
-                  RenderAnimation.concat(
-                      new GameString[]{var4, TextureSampler28.aClass94_3311}),
+            if (GlobalStatics_9.aLongArray1574[var5] == var1) {
+              GlobalStatics_8.printMessage(GlobalStatics_9.EMPTY_STRING, 0,
+                  GlobalStatics_9.concat(
+                      new GameString[]{var4, GlobalStatics_10.aClass94_3311}),
                   -1);
               return;
             }
@@ -93,29 +93,29 @@ public final class DummyClass50 {
 
           for (var5 = 0; FileSystem.anInt104 > var5; ++var5) {
             if ((GlobalStatics_4.aLongArray826[var5] == var1)) {
-              GameBuffer.printMessage(GroundItemNode.EMPTY_STRING, 0,
-                  RenderAnimation.concat(new GameString[]{
+              GlobalStatics_8.printMessage(GlobalStatics_9.EMPTY_STRING, 0,
+                  GlobalStatics_9.concat(new GameString[]{
                       DummyClass35.aClass94_666, var4,
-                      OndemandFileRequest.aClass94_4071
+                      GlobalStatics_9.aClass94_4071
                   }), -1);
               return;
             }
           }
 
-          if (var4.method1528((byte) -42, TextureCache.localPlayer.name)) {
-            GameBuffer.printMessage(GroundItemNode.EMPTY_STRING, 0,
+          if (var4.method1528((byte) -42, GlobalStatics_9.localPlayer.name)) {
+            GlobalStatics_8.printMessage(GlobalStatics_9.EMPTY_STRING, 0,
                 DummyClass53.aClass94_1335, -1);
           } else {
-            ++TextureSampler0.anInt3267;
-            MonoChromaticImageCache.aLongArray1574[GlobalStatics_6.anInt3591] = var1;
-            TextureSampler7.aClass94Array3341[GlobalStatics_6.anInt3591++] =
+            ++GlobalStatics_9.anInt3267;
+            GlobalStatics_9.aLongArray1574[GlobalStatics_6.anInt3591] = var1;
+            GlobalStatics_9.aClass94Array3341[GlobalStatics_6.anInt3591++] =
                 GameStringStatics.stringFromBase37(-29664, var1);
-            DummyClass31.anInt1472 = TextureSampler23.anInt3213;
-            TextureSampler12.secureBuffer.writePacket(34);
-            TextureSampler12.secureBuffer.writeLong(var1);
+            DummyClass31.anInt1472 = GlobalStatics_10.anInt3213;
+            GlobalStatics_9.secureBuffer.writePacket(34);
+            GlobalStatics_9.secureBuffer.writeLong(var1);
           }
         } else {
-          GameBuffer.printMessage(GroundItemNode.EMPTY_STRING, 0,
+          GlobalStatics_8.printMessage(GlobalStatics_9.EMPTY_STRING, 0,
               GlobalStatics_6.aClass94_1884, -1);
         }
       }
@@ -126,7 +126,7 @@ public final class DummyClass50 {
     if (var0.eventQueue != null) {
       for (int var3 = 0; var3 < 50 && var0.eventQueue.peekEvent() != null;
           ++var3) {
-        TextureSampler25.sleep(1L);
+        GlobalStatics_10.sleep(1L);
       }
       if (var1 != null) {
         var0.eventQueue.postEvent(new ActionEvent(var1, 1001, "dummy"));

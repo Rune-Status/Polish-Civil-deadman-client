@@ -1,21 +1,9 @@
 package com.jagex.runescape;
 
 import com.jagex.runescape.buffer.Buffer;
-import com.jagex.runescape.common.GameString;
-import com.jagex.runescape.common.GameStringStatics;
 
 public final class SomethingPacket116 {
 
-  public static int[] anIntArray1743 = new int[25];
-  public static int anInt1744;
-  public static GameString aClass94_1745 = GameStringStatics.create("settings");
-  public static int anInt1748;
-  public static Widget aClass11_1749;
-  public static FileUnpacker worldMapData;
-  public static int anInt1753;
-  public static int cycles;
-  public static int[] anIntArray1755 = new int[128];
-  public static int anInt1756;
   public int anInt1746;
   public int anInt1747;
   public int anInt1750;
@@ -37,7 +25,7 @@ public final class SomethingPacket116 {
 
   public int method1804(boolean var1) {
     if (var1) {
-        SomethingPacket116.anInt1753 = -21;
+        GlobalStatics_9.anInt1753 = -21;
       }
 
       return this.aByte1742 & 7;
@@ -45,21 +33,6 @@ public final class SomethingPacket116 {
 
   public int method1805(byte var1) {
     return (this.aByte1742 & 8) != 8 ? 0 : 1;
-  }
-
-  public static void method1802() {
-    SomethingPacket116.aClass94_1745 = null;
-    SomethingPacket116.anIntArray1743 = null;
-    SomethingPacket116.anIntArray1755 = null;
-    SomethingPacket116.worldMapData = null;
-    SomethingPacket116.aClass11_1749 = null;
-  }
-
-  public static void method1803(byte var0) {
-    if (var0 >= 4) {
-      ProceduralTexture.aClass93_1146.method1523((byte) -119);
-      DummyClass13.aClass93_2016.method1523((byte) -103);
-    }
   }
 
 }

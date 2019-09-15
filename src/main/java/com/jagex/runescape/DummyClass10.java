@@ -17,41 +17,41 @@ public final class DummyClass10 {
 
   public static void method2261(int var0) {
     while (true) {
-        if (SpotAnimationConfig.gameBuffer.method815(GlobalStatics_0.packetLength, 32666) >= 27) {
-          int var1 = SpotAnimationConfig.gameBuffer.readBits(15);
+        if (GlobalStatics_9.gameBuffer.method815(GlobalStatics_0.packetLength, 32666) >= 27) {
+          int var1 = GlobalStatics_9.gameBuffer.readBits(15);
           if (var1 != 32767) {
             boolean var2 = false;
-            if (TextureSampler5.npcs[var1] == null) {
+            if (GlobalStatics_8.npcs[var1] == null) {
               var2 = true;
-              TextureSampler5.npcs[var1] = new NPC();
+              GlobalStatics_8.npcs[var1] = new NPC();
             }
 
-            NPC var3 = TextureSampler5.npcs[var1];
+            NPC var3 = GlobalStatics_8.npcs[var1];
             GlobalStatics_2.anIntArray347[DummyClass6.anInt2046++] = var1;
             var3.anInt2838 = GlobalStatics_4.updateCycle;
             if (var3.config != null && var3.config.method1474(-1)) {
               GlobalStatics_6.method574(var3, false);
             }
 
-            int var4 = SpotAnimationConfig.gameBuffer.readBits(1);
-            int var5 = DummyClass32.anIntArray510[SpotAnimationConfig.gameBuffer.readBits(3)];
+            int var4 = GlobalStatics_9.gameBuffer.readBits(1);
+            int var5 = DummyClass32.anIntArray510[GlobalStatics_9.gameBuffer.readBits(3)];
             if (var2) {
               var3.anInt2806 = var3.rotationY = var5;
             }
 
-            int var6 = SpotAnimationConfig.gameBuffer.readBits(1);
+            int var6 = GlobalStatics_9.gameBuffer.readBits(1);
             if ((var6 == 1)) {
-              DummyClass60.anIntArray441[OndemandRequester.anInt997++] = var1;
+              DummyClass60.anIntArray441[GlobalStatics_9.anInt997++] = var1;
             }
 
-            int var7 = SpotAnimationConfig.gameBuffer.readBits(5);
+            int var7 = GlobalStatics_9.gameBuffer.readBits(5);
             var3.setConfiguration(-1,
-              GlobalStatics_2.getNpcConfiguration(SpotAnimationConfig.gameBuffer.readBits(14)));
+              GlobalStatics_2.getNpcConfiguration(GlobalStatics_9.gameBuffer.readBits(14)));
             if (var7 > 15) {
               var7 -= 32;
             }
 
-            int var8 = SpotAnimationConfig.gameBuffer.readBits(5);
+            int var8 = GlobalStatics_9.gameBuffer.readBits(5);
             if (var8 > 15) {
               var8 -= 32;
             }
@@ -63,17 +63,17 @@ public final class DummyClass10 {
               var3.rotationY = 0;
             }
 
-            var3.setPosition(var3.getSize(), TextureCache.localPlayer.waypointsX[0] + var8,
-              var7 + TextureCache.localPlayer.waypointsY[0], (var4 == 1));
+            var3.setPosition(var3.getSize(), GlobalStatics_9.localPlayer.waypointsX[0] + var8,
+              var7 + GlobalStatics_9.localPlayer.waypointsY[0], (var4 == 1));
             if (var3.config.method1474(-1)) {
-              SceneSomething2.method1286(var3.waypointsY[0], false, null, 0, var3,
-                var3.waypointsX[0], GameWorldSomething.currentPlane, null);
+              GlobalStatics_9.method1286(var3.waypointsY[0], false, null, 0, var3,
+                var3.waypointsX[0], GlobalStatics_9.currentPlane, null);
             }
             continue;
           }
         }
 
-        SpotAnimationConfig.gameBuffer.method818(false);
+        GlobalStatics_9.gameBuffer.method818(false);
         if (var0 <= 0) {
           DummyClass10.method2265(-16);
         }
@@ -105,17 +105,17 @@ public final class DummyClass10 {
     var7.anInt1550 = var4;
     var7.anInt1544 = var5;
     var7.anInt1548 = var6;
-    GlobalStatics_6.aClass113Array3610[SpawnedGameObject.anInt2249++] = var7;
+    GlobalStatics_6.aClass113Array3610[GlobalStatics_9.anInt2249++] = var7;
   }
 
   public static void method2264(boolean var0) {
     if (var0) {
-      GLStatics.sceneGraphTiles = SomethingIndex150.aClass3_Sub2ArrayArrayArray2065;
+      GLStatics.sceneGraphTiles = GlobalStatics_9.aClass3_Sub2ArrayArrayArray2065;
       GlobalStatics_4.heightMap = GlobalStatics_2.othrrHeightMap;
       GLStatics.aClass3_Sub11ArrayArray2542 =
-        TextureSampler32.aClass3_Sub11ArrayArray3346;
+        GlobalStatics_10.aClass3_Sub11ArrayArray3346;
     } else {
-      GLStatics.sceneGraphTiles = OndemandFileRequest.tiles;
+      GLStatics.sceneGraphTiles = GlobalStatics_9.tiles;
       GlobalStatics_4.heightMap = DummyClass43.somethingHeightMap;
       GLStatics.aClass3_Sub11ArrayArray2542 = GLStatics.aClass3_Sub11ArrayArray2199;
     }
@@ -132,9 +132,9 @@ public final class DummyClass10 {
 
   public static void method2266(int var0, int var1, byte var2) {
     if (BZipDecompressorState.anInt120 != 0 && var1 != -1) {
-        SceneSomething2.method1285(GlobalStatics_2.fileUnpacker11, false, var1, 0, false,
+        GlobalStatics_9.method1285(GlobalStatics_2.fileUnpacker11, false, var1, 0, false,
           BZipDecompressorState.anInt120);
-        MidiSomething.aBoolean1158 = true;
+        GlobalStatics_9.aBoolean1158 = true;
       }
 
       if (var2 != -1) {
@@ -190,11 +190,11 @@ public final class DummyClass10 {
 
           if (opcode <= 49) {
             DummyClass17.tileFloors[var8][x][y] = var3.readByte();
-            ObjectCache.tileOrientation[var8][x][y] = (byte) ((-2 + opcode) / 4);
+            GlobalStatics_9.tileOrientation[var8][x][y] = (byte) ((-2 + opcode) / 4);
             DummyClass18.aByteArrayArrayArray81[var8][x][y] =
               (byte) (-2 + opcode + var7 & 3);
           } else if (opcode > 81) {
-            TextureSampler36.floorUnderlayIds[var8][x][y] = (byte) (-81 + opcode);
+            GlobalStatics_10.floorUnderlayIds[var8][x][y] = (byte) (-81 + opcode);
           } else if (!var2) {
             BZipDecompressorState.tileFlags[var8][x][y] = (byte) (opcode - 49);
           }
@@ -248,12 +248,12 @@ public final class DummyClass10 {
   }
 
   public static void destroyGame(byte var0) {
-    if (SomethingVolume15.gameSocket != null) {
-        SomethingVolume15.gameSocket.destroy();
-        SomethingVolume15.gameSocket = null;
+    if (GlobalStatics_9.gameSocket != null) {
+        GlobalStatics_9.gameSocket.destroy();
+        GlobalStatics_9.gameSocket = null;
       }
 
-      TextureSampler13.method313((byte) 110);
+      GlobalStatics_9.method313((byte) 110);
       DummyClass34.method995();
 
       int var1;
@@ -261,20 +261,20 @@ public final class DummyClass10 {
         GlobalStatics_0.collisionMaps[var1].method1496(0);
       }
 
-      OndemandRequester.method1250(62, false);
+      GlobalStatics_9.method1250(62, false);
       System.gc();
-      Queue.method882(-1, 2);
-      MidiSomething.aBoolean1158 = false;
+      GlobalStatics_9.method882(-1, 2);
+      GlobalStatics_9.aBoolean1158 = false;
       GlobalStatics_4.anInt1691 = -1;
-      Something3d.method2241((byte) -77, true);
+      GlobalStatics_9.method2241((byte) -77, true);
       GlobalStatics_0.dynamicScene = false;
-      ProceduralTexture.anInt1152 = 0;
+      GlobalStatics_9.anInt1152 = 0;
       GlobalStatics_2.anInt3606 = 0;
-      VariableUpdate.anInt2294 = 0;
-      WorldMapLabel.anInt1716 = 0;
+      GlobalStatics_10.anInt2294 = 0;
+      GlobalStatics_10.anInt1716 = 0;
 
-      for (var1 = 0; GameException.aClass96Array2114.length > var1; ++var1) {
-        GameException.aClass96Array2114[var1] = null;
+      for (var1 = 0; GlobalStatics_8.aClass96Array2114.length > var1; ++var1) {
+        GlobalStatics_8.aClass96Array2114[var1] = null;
       }
 
       DummyClass13.anInt2022 = 0;
@@ -284,26 +284,26 @@ public final class DummyClass10 {
       }
 
       for (var1 = 0; var1 < 2048; ++var1) {
-        TextureSampler0.players[var1] = null;
+        GlobalStatics_9.players[var1] = null;
         DummyClass45.configs[var1] = null;
       }
 
       for (var1 = 0; (var1 < 32768); ++var1) {
-        TextureSampler5.npcs[var1] = null;
+        GlobalStatics_8.npcs[var1] = null;
       }
 
       for (var1 = 0; var1 < 4; ++var1) {
         for (int var2 = 0; (var2 < 104); ++var2) {
           for (int var3 = 0; (var3 < 104); ++var3) {
-            TextureSampler0.groundItems[var1][var2][var3] = null;
+            GlobalStatics_9.groundItems[var1][var2][var3] = null;
           }
         }
       }
 
       GlobalStatics_6.method560(-21556);
-      SomethingLight0.interfaceCounter = 0;
-      TextureSampler6.resetVariables(var0 - 161);
-      TextureSampler1.method219(true, 3000);
+      GlobalStatics_9.interfaceCounter = 0;
+      GlobalStatics_9.resetVariables(var0 - 161);
+      GlobalStatics_9.method219(true, 3000);
   }
 
 }

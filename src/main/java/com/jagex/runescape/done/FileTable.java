@@ -1,21 +1,10 @@
-package com.jagex.runescape;
+package com.jagex.runescape.done;
 
+import com.jagex.runescape.*;
 import com.jagex.runescape.buffer.Buffer;
-import com.jagex.runescape.common.GameString;
-import com.jagex.runescape.common.GameStringStatics;
 
 public final class FileTable {
 
-  private static GameString aClass94_948 =
-    GameStringStatics.create("You can(Wt add yourself to your own friend list)3");
-  public static int anInt942;
-  public static int anInt944;
-  public static GameString aClass94_946 = GameStringStatics.create(")2");
-  public static int drawMemoryCounter;
-  public static GameString aClass94_951 = GameStringStatics.create("Interfaces charg-Bes");
-  public static int anInt952;
-  public static int anInt963;
-  public static GameString aClass94_957 = FileTable.aClass94_948;
   public int[][] unpackedNames;
   public int[] anIntArray945;
   public int anInt947;
@@ -106,7 +95,7 @@ public final class FileTable {
 
         var8 = 0;
         if (var1 != 2) {
-          FileTable.aClass94_957 = null;
+          GlobalStatics_8.aClass94_957 = null;
         }
 
         while (this.anInt947 > var8) {
@@ -166,97 +155,6 @@ public final class FileTable {
           }
         }
 
-      }
-  }
-
-  public static void method1223(int var0) {
-    FileTable.aClass94_951 = null;
-      FileTable.aClass94_946 = null;
-      if (var0 == 0) {
-        FileTable.aClass94_948 = null;
-        FileTable.aClass94_957 = null;
-      }
-  }
-
-  public static void method1224(Widget var0, int var1, int var2, int var3) {
-    if (var0.aByte162 == 0) {
-        var0.anInt210 = var0.anInt166;
-      } else {
-        if (var0.aByte162 == 1) {
-          var0.anInt210 = (var2 - var0.anInt193) / 2 + var0.anInt166;
-        } else {
-          if (var0.aByte162 == 2) {
-            var0.anInt210 = var2 - var0.anInt193 - var0.anInt166;
-          } else if (var0.aByte162 != 3) {
-            if (var0.aByte162 == 4) {
-              var0.anInt210 =
-                  (var2 * var0.anInt166 >> 14) + (-var0.anInt193 + var2) / 2;
-            } else {
-              var0.anInt210 =
-                  -(var2 * var0.anInt166 >> 14) - var0.anInt193 + var2;
-            }
-          } else {
-            var0.anInt210 = var0.anInt166 * var2 >> 14;
-          }
-        }
-      }
-
-      if (var0.aByte273 == 0) {
-        var0.anInt306 = var0.anInt316;
-      } else if ((var0.aByte273 != 1)) {
-        if (var0.aByte273 == 2) {
-          var0.anInt306 = -var0.anInt316 - var0.anInt168 + var3;
-        } else if (var0.aByte273 != 3) {
-          if (var0.aByte273 == 4) {
-            var0.anInt306 =
-                (var0.anInt316 * var3 >> 14) + (var3 - var0.anInt168) / 2;
-          } else {
-            var0.anInt306 =
-                -(var3 * var0.anInt316 >> 14) + var3 - var0.anInt168;
-          }
-        } else {
-          var0.anInt306 = var0.anInt316 * var3 >> 14;
-        }
-      } else {
-        var0.anInt306 = var0.anInt316 + (var3 - var0.anInt168) / 2;
-      }
-
-      if (LinearHashTable.aBoolean1040 && (GameClient.method44(var0).anInt2205 != 0
-        || (var0.anInt187 == 0))) {
-        if ((var0.anInt210 < 0)) {
-          var0.anInt210 = 0;
-        } else if (var0.anInt193 + var0.anInt210 > var2) {
-          var0.anInt210 = var2 - var0.anInt193;
-        }
-
-        if (var0.anInt306 < 0) {
-          var0.anInt306 = 0;
-        } else if (var3 < var0.anInt306 + var0.anInt168) {
-          var0.anInt306 = var3 - var0.anInt168;
-        }
-      }
-
-      if (var1 != 23730) {
-        FileTable.method1223(19);
-      }
-  }
-
-  public static void method1225(int var0) {
-    Mouse var1 = Mouse.INSTANCE;
-      synchronized (var1) {
-        if (var0 != 18074) {
-          FileTable.aClass94_946 = null;
-        }
-
-        TextureSampler21.anInt3069 = SpotAnimationConfig.anInt549;
-        SomethingTilek.anInt1676 = SomethingWorldMappy.lastMouseX;
-        GlobalStatics_0.anInt1709 = DummyClass53.lastMouseY;
-        Structure.anInt3644 = GameObject.anInt2743;
-        DummyClass5.anInt2993 = RenderAnimation.anInt362;
-        ++ObjectNode.anInt4045;
-        DummyClass36.anInt2614 = TextureSampler14.anInt3389;
-        GlobalStatics_3.aLong1102 = Projectile.lastMousePressedTime;
-        GameObject.anInt2743 = 0;
       }
   }
 

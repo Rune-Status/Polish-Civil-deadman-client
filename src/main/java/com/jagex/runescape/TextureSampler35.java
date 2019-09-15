@@ -1,32 +1,10 @@
 package com.jagex.runescape;
 
 import com.jagex.runescape.buffer.Buffer;
-import com.jagex.runescape.common.GameString;
-import com.jagex.runescape.common.GameStringStatics;
 import com.jagex.runescape.done.AbstractTextureSampler;
 
 public final class TextureSampler35 extends AbstractTextureSampler {
 
-  private static GameString aClass94_3334 = GameStringStatics.create("wave2:");
-  public static int anInt3332 = 50;
-  public static GameString[] aClass94Array3317 = new GameString[TextureSampler35.anInt3332];
-  public static int[] anIntArray3318 = new int[TextureSampler35.anInt3332];
-  public static int[] anIntArray3319 = new int[TextureSampler35.anInt3332];
-  public static int rights;
-  public static int[] anIntArray3321 = {76, 8, 137, 4, 0, 1, 38, 2, 19};
-  public static int anInt3323 = 50;
-  public static GameString aClass94_3324 = GameStringStatics.create(" loggt sich ein)3");
-  public static GameString aClass94_3326 = GameStringStatics.create("leuchten1:");
-  public static int[] anIntArray3327 = new int[TextureSampler35.anInt3332];
-  public static int[] anIntArray3328 = new int[8];
-  public static int[] anIntArray3329 = new int[TextureSampler35.anInt3332];
-  public static GameString ASSIST_REQ = GameStringStatics.create(":assistreq:");
-  public static int[] anIntArray3331 = new int[TextureSampler35.anInt3332];
-  public static byte[][] aByteArrayArray3335;
-  public static int[] anIntArray3336 = new int[TextureSampler35.anInt3332];
-  public static int[] anIntArray3337 = new int[TextureSampler35.anInt3332];
-  public static GameString aClass94_3325 = TextureSampler35.aClass94_3334;
-  public static GameString aClass94_3333 = TextureSampler35.aClass94_3334;
   private int anInt3322 = 4096;
 
 
@@ -39,15 +17,15 @@ public final class TextureSampler35 extends AbstractTextureSampler {
       int[] var4 = this.monoChromaticImageCache.method1709(-16409, var1);
       if (this.monoChromaticImageCache.aBoolean1580) {
         int[] var5 = this
-            .method152(0, var1 - 1 & TriChromaticImageBuffer.anInt2487, 32755);
+            .method152(0, var1 - 1 & GlobalStatics_10.anInt2487, 32755);
         int[] var6 = this.method152(0, var1, 32755);
         int[] var7 = this
-            .method152(0, TriChromaticImageBuffer.anInt2487 & var1 + 1, 32755);
+            .method152(0, GlobalStatics_10.anInt2487 & var1 + 1, 32755);
 
-        for (int var8 = 0; SomethingLight0.anInt1559 > var8; ++var8) {
+        for (int var8 = 0; GlobalStatics_9.anInt1559 > var8; ++var8) {
           int var9 = (var7[var8] - var5[var8]) * this.anInt3322;
-          int var10 = this.anInt3322 * (-var6[var8 - 1 & RenderAnimation.anInt396] + var6[
-            RenderAnimation.anInt396 & var8 + 1]);
+          int var10 = this.anInt3322 * (-var6[var8 - 1 & GlobalStatics_9.anInt396] + var6[
+            GlobalStatics_9.anInt396 & var8 + 1]);
           int var11 = var10 >> 12;
           int var12 = var9 >> 12;
           int var13 = var11 * var11 >> 12;
@@ -64,33 +42,12 @@ public final class TextureSampler35 extends AbstractTextureSampler {
 
   public void parseConfig(int var1, Buffer var2, boolean var3 ) {
     if (!var3) {
-        TextureSampler35.method294((byte) -57);
+        GlobalStatics_10.method294((byte) -57);
       }
 
       if (var1 == 0) {
         this.anInt3322 = var2.readUnsignedShort();
       }
-  }
-
-  public static void method294(byte var0) {
-    TextureSampler35.anIntArray3327 = null;
-      TextureSampler35.anIntArray3337 = null;
-      TextureSampler35.aClass94_3326 = null;
-      TextureSampler35.aClass94Array3317 = null;
-      TextureSampler35.aClass94_3334 = null;
-      TextureSampler35.anIntArray3328 = null;
-      TextureSampler35.ASSIST_REQ = null;
-      TextureSampler35.aClass94_3324 = null;
-      TextureSampler35.anIntArray3319 = null;
-      TextureSampler35.aByteArrayArray3335 = null;
-      TextureSampler35.anIntArray3329 = null;
-      TextureSampler35.aClass94_3333 = null;
-      TextureSampler35.anIntArray3336 = null;
-      int var1 = -62 % ((-59 - var0) / 47);
-      TextureSampler35.anIntArray3321 = null;
-      TextureSampler35.anIntArray3318 = null;
-      TextureSampler35.anIntArray3331 = null;
-      TextureSampler35.aClass94_3325 = null;
   }
 
 }

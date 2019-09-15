@@ -43,7 +43,7 @@ public final class DummyClass53 {
       }
 
       if ((var0 == var1) && (var9 == var2) && var8 == var7 && var5 == var6) {
-        TextureSampler25.method330(var4, var3 - 111, var5, var0, var9, var7);
+        GlobalStatics_10.method330(var4, var3 - 111, var5, var0, var9, var7);
       } else {
         int var10 = var0;
         int var13 = 3 * var9;
@@ -71,7 +71,7 @@ public final class DummyClass53 {
           int var33 = var0 + (var29 + (var27 + var31) >> 12);
           int var32 = var24 * var23;
           int var34 = var9 + (var32 + var28 + var30 >> 12);
-          TextureSampler25.method330(var4, -88, var34, var10, var11, var33);
+          GlobalStatics_10.method330(var4, -88, var34, var10, var11, var33);
           var10 = var33;
           var11 = var34;
         }
@@ -88,7 +88,7 @@ public final class DummyClass53 {
       } else {
         if (DummyClass55.anInt1425 <= var2 - var5 && var2 + var5 <= GlTexture2d.anInt3765
           && -var1 + var3 >= DummyClass13.anInt2020
-          && ((var3 + var1) <= LightIntensity.anInt902)) {
+          && ((var3 + var1) <= GlobalStatics_9.anInt902)) {
           GlobalStatics_6.method135(var3, var2, var5, -111, var1, var0);
         } else {
           GlobalStatics_6.method556(var0, var1, var5, (byte) -123, var2, var3);

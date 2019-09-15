@@ -102,7 +102,7 @@ public final class SocketStream implements Runnable {
 
           this.aByteArray1233 = null;
         } catch (Exception var11) {
-          GZipDecompressor.reportError(null, var11, (byte) 103);
+          GlobalStatics_9.reportError(null, var11, (byte) 103);
         }
 
         return;
@@ -190,7 +190,7 @@ public final class SocketStream implements Runnable {
 
         if (this.aClass64_1237 != null) {
           while (this.aClass64_1237.status == 0) {
-            TextureSampler25.sleep(1L);
+            GlobalStatics_10.sleep(1L);
           }
 
           if ((this.aClass64_1237.status == 1)) {
@@ -211,10 +211,10 @@ public final class SocketStream implements Runnable {
     if (((var5 - var4) >= DummyClass55.anInt1425)
           && GlTexture2d.anInt3765 >= var5 + var4
           && DummyClass13.anInt2020 <= -var4 + var1
-          && LightIntensity.anInt902 >= var4 + var1) {
-        TextureSampler6.method175(var6, var0, var1, true, var3, var4, var5);
+          && GlobalStatics_9.anInt902 >= var4 + var1) {
+        GlobalStatics_9.method175(var6, var0, var1, true, var3, var4, var5);
       } else {
-        FloorOverlay.method2275(var3, (byte) 109, var1, var4, var6, var0, var5);
+        GlobalStatics_8.method2275(var3, (byte) 109, var1, var4, var6, var0, var5);
       }
 
       if (var2 > -107) {
@@ -256,7 +256,7 @@ public final class SocketStream implements Runnable {
           int var10 = var8.anInt612;
           int var11 = var8.anInt626;
           int var12 = var8.anInt621;
-          int[] var13 = TextureSampler19.anIntArrayArray3215[var9];
+          int[] var13 = GlobalStatics_10.anIntArrayArray3215[var9];
           int[] var14 = DummyClass11.anIntArrayArray2039[var10];
           int var15 = 0;
           int var16;
@@ -298,7 +298,7 @@ public final class SocketStream implements Runnable {
   public static void method1470(int var0, AnimationSequence var1, int var2,
                                 int var3, boolean var4,
                                 int var5) {
-    if ((SomethingLight0.anInt1552 < 50)) {
+    if ((GlobalStatics_9.anInt1552 < 50)) {
         if (var1.anIntArrayArray1867 != null
             && (var5 < var1.anIntArrayArray1867.length)
             && var1.anIntArrayArray1867[var5] != null) {
@@ -317,24 +317,24 @@ public final class SocketStream implements Runnable {
           int var9 = var6 & 31;
           if ((var9 == 0)) {
             if (var4) {
-              TextureSampler26.method199(var8, var7, 0, -799);
+              GlobalStatics_10.method199(var8, var7, 0, -799);
             }
 
           } else {
             if (DummyClass28.anInt340 != 0) {
-              Inventory.anIntArray2550[SomethingLight0.anInt1552] = var7;
-              SomethingIndex150.anIntArray2068[SomethingLight0.anInt1552] = var8;
+              GlobalStatics_9.anIntArray2550[GlobalStatics_9.anInt1552] = var7;
+              GlobalStatics_9.anIntArray2068[GlobalStatics_9.anInt1552] = var8;
               int var11 = (-64 + var0) / 128;
               var10 = (var3 - 64) / 128;
-              GlobalStatics_0.anIntArray2157[SomethingLight0.anInt1552] = 0;
-              TextureCache.aClass135Array2131[SomethingLight0.anInt1552] = null;
-              TextureSampler26.anIntArray3083[SomethingLight0.anInt1552] =
+              GlobalStatics_0.anIntArray2157[GlobalStatics_9.anInt1552] = 0;
+              GlobalStatics_9.aClass135Array2131[GlobalStatics_9.anInt1552] = null;
+              GlobalStatics_10.anIntArray3083[GlobalStatics_9.anInt1552] =
                   var9 + (var10 << 16) + (var11 << 8);
               if (var2 != 183921384) {
                 SocketStream.aClass33_1238 = null;
               }
 
-              ++SomethingLight0.anInt1552;
+              ++GlobalStatics_9.anInt1552;
             }
           }
         }

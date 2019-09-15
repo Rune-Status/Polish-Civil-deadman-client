@@ -2,8 +2,6 @@ package com.jagex.runescape.done;
 
 import com.jagex.runescape.*;
 import com.jagex.runescape.common.HashTable;
-import com.jagex.runescape.done.AbstractFileRequest;
-import com.jagex.runescape.done.AbstractFileRequester;
 import com.jagex.runescape.node.Deque;
 import com.jagex.runescape.node.Node;
 
@@ -327,7 +325,7 @@ public final class FileRequester extends AbstractFileRequester {
           }
         }
 
-        if (this.aBoolean2968 && this.aLong2967 <= Time.getCurrentTimeMillis()) {
+        if (this.aBoolean2968 && this.aLong2967 <= GlobalStatics_10.getCurrentTimeMillis()) {
           for (AbstractFileRequest var6 = (AbstractFileRequest) this.aClass130_2946
               .getFirst(71);
                var6 != null; var6 = (AbstractFileRequest) this.aClass130_2946.getNext(-115)) {
@@ -344,7 +342,7 @@ public final class FileRequester extends AbstractFileRequester {
             }
           }
 
-          this.aLong2967 = 1000L + Time.getCurrentTimeMillis();
+          this.aLong2967 = 1000L + GlobalStatics_10.getCurrentTimeMillis();
         }
 
       }
@@ -424,9 +422,9 @@ public final class FileRequester extends AbstractFileRequester {
         if (var4 instanceof FileCacheRequest) {
           try {
             if (var5 != null && (var5.length > 2)) {
-              TextureSampler24.aCRC32_3143.reset();
-              TextureSampler24.aCRC32_3143.update(var5, 0, -2 + var5.length);
-              var7 = (int) TextureSampler24.aCRC32_3143.getValue();
+              GlobalStatics_10.aCRC32_3143.reset();
+              GlobalStatics_10.aCRC32_3143.update(var5, 0, -2 + var5.length);
+              var7 = (int) GlobalStatics_10.aCRC32_3143.getValue();
               if (this.aClass62_2944.anIntArray945[var2] == var7) {
                 int var8 =
                     (var5[-2 + var5.length] << 8 & '\uff00') + (255 & var5[-1
@@ -472,9 +470,9 @@ public final class FileRequester extends AbstractFileRequester {
               throw new RuntimeException();
             }
 
-            TextureSampler24.aCRC32_3143.reset();
-            TextureSampler24.aCRC32_3143.update(var5, 0, var5.length - 2);
-            var7 = (int) TextureSampler24.aCRC32_3143.getValue();
+            GlobalStatics_10.aCRC32_3143.reset();
+            GlobalStatics_10.aCRC32_3143.update(var5, 0, var5.length - 2);
+            var7 = (int) GlobalStatics_10.aCRC32_3143.getValue();
             if ((this.aClass62_2944.anIntArray945[var2] != var7)) {
               throw new RuntimeException();
             }

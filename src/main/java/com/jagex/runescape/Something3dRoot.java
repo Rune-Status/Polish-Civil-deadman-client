@@ -1,20 +1,12 @@
 package com.jagex.runescape;
 
-import com.jagex.runescape.common.GameString;
-import com.jagex.runescape.common.GameStringStatics;
+import com.jagex.runescape.done.FileUnpacker;
+
 import java.util.Random;
 
 public abstract class Something3dRoot {
 
-  public static int[] anIntArray2048;
-  public static int anInt2050;
-  public static int anInt2051;
   public static FileUnpacker configs;
-  public static GameString aClass94_2053 = GameStringStatics.create("Update)2Liste geladen)3");
-  public static Widget aClass11_2055;
-  public static Model[] aClass140_Sub5Array2058 = new Model[4];
-  public static int anInt2059;
-  public static GameString aClass94_2061 = GameStringStatics.create("Forced tweening disabled)3");
   public int anInt2062 = 4;
   private final short[] aShortArray2047 = new short[512];
   private short[] aShortArray2049;
@@ -115,35 +107,35 @@ public abstract class Something3dRoot {
               int var22 = var7 - 4096;
               short var26 = this.aShortArray2047[var23 + var14];
               int var29 =
-                WorldMapLabel.method1788(var5, var7, var6, this.aShortArray2047[var25 + var11],
+                GlobalStatics_10.method1788(var5, var7, var6, this.aShortArray2047[var25 + var11],
                   true);
               int var30 =
-                WorldMapLabel.method1788(var20, var7, var6, this.aShortArray2047[var12 + var25],
+                GlobalStatics_10.method1788(var20, var7, var6, this.aShortArray2047[var12 + var25],
                   true);
               int var31 = var29 + (var17 * (var30 - var29) >> 12);
               var29 =
-                WorldMapLabel.method1788(var5, var7, var21, this.aShortArray2047[var26 + var11],
+                GlobalStatics_10.method1788(var5, var7, var21, this.aShortArray2047[var26 + var11],
                   true);
               var30 =
-                WorldMapLabel.method1788(var20, var7, var21,
+                GlobalStatics_10.method1788(var20, var7, var21,
                     this.aShortArray2047[var12 + var26],
                   true);
               int var32 = var29 + (var17 * (-var29 + var30) >> 12);
               int var33 = ((-var31 + var32) * var18 >> 12) + var31;
               var29 =
-                WorldMapLabel.method1788(var5, var22, var6, this.aShortArray2047[var11 + var27],
+                GlobalStatics_10.method1788(var5, var22, var6, this.aShortArray2047[var11 + var27],
                   true);
               var30 =
-                WorldMapLabel.method1788(var20, var22, var6,
+                GlobalStatics_10.method1788(var20, var22, var6,
                     this.aShortArray2047[var12 + var27],
                   true);
               var31 = (var17 * (var30 - var29) >> 12) + var29;
               var29 =
-                WorldMapLabel.method1788(var5, var22, var21,
+                GlobalStatics_10.method1788(var5, var22, var21,
                     this.aShortArray2047[var11 + var28],
                   true);
               var30 =
-                WorldMapLabel.method1788(var20, var22, var21,
+                GlobalStatics_10.method1788(var20, var22, var21,
                     this.aShortArray2047[var12 + var28],
                   true);
               var32 = var29 + ((-var29 + var30) * var17 >> 12);
@@ -163,7 +155,7 @@ public abstract class Something3dRoot {
     this.aShortArray2049 = new short[this.anInt2062];
       int var2 = 0;
       if (var1 != -60) {
-        Something3dRoot.method2234(-92, 105);
+        GlobalStatics_9.method2234(-92, 105);
       }
 
       while (this.anInt2062 > var2) {
@@ -183,12 +175,12 @@ public abstract class Something3dRoot {
       }
 
       if (var1 != -190126388) {
-        Something3dRoot.anInt2051 = -58;
+        GlobalStatics_9.anInt2051 = -58;
       }
 
       for (var3 = 0; var3 < 255; ++var3) {
         int var4 = -var3 + 255;
-        int var5 = FloorUnderlay.method1603((byte) -120, var4, var2);
+        int var5 = GlobalStatics_8.method1603((byte) -120, var4, var2);
         short var6 = this.aShortArray2047[var5];
         this.aShortArray2047[var5] = this.aShortArray2047[var4];
         this.aShortArray2047[var4] = this.aShortArray2047[256 + var4] = var6;
@@ -196,21 +188,5 @@ public abstract class Something3dRoot {
   }
 
   public abstract void method2237(int var1,int var2,int var3 );
-
-  public static int method2234(int var0, int var1) {
-    int var2 = -27 / ((var1 + 87) / 39);
-      return 1023 & var0;
-  }
-
-  public static void method2235(int var0) {
-    Something3dRoot.anIntArray2048 = null;
-      Something3dRoot.configs = null;
-      if (var0 == 4) {
-        Something3dRoot.aClass94_2053 = null;
-        Something3dRoot.aClass140_Sub5Array2058 = null;
-        Something3dRoot.aClass94_2061 = null;
-        Something3dRoot.aClass11_2055 = null;
-      }
-  }
 
 }

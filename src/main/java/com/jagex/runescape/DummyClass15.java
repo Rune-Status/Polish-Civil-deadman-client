@@ -18,25 +18,25 @@ public final class DummyClass15 {
   public static void method2062(int var0, int var1, int var2, int var3, int var4, int var5, int var6,
                                int var7) {
     int var12 =
-        DummyClass59.method1040(LightIntensity.anInt902, var6, (byte) 0, DummyClass13.anInt2020);
+        DummyClass59.method1040(GlobalStatics_9.anInt902, var6, (byte) 0, DummyClass13.anInt2020);
       int var13 =
-        DummyClass59.method1040(LightIntensity.anInt902, var3, (byte) 0, DummyClass13.anInt2020);
+        DummyClass59.method1040(GlobalStatics_9.anInt902, var3, (byte) 0, DummyClass13.anInt2020);
       int var14 =
         DummyClass59.method1040(GlTexture2d.anInt3765, var7, (byte) 0, DummyClass55.anInt1425);
       int var15 =
         DummyClass59.method1040(GlTexture2d.anInt3765, var0, (byte) 0, DummyClass55.anInt1425);
-      int var8 = DummyClass59.method1040(LightIntensity.anInt902, var4 + var6, (byte) 0,
+      int var8 = DummyClass59.method1040(GlobalStatics_9.anInt902, var4 + var6, (byte) 0,
         DummyClass13.anInt2020);
-      int var9 = DummyClass59.method1040(LightIntensity.anInt902, -var4 + var3, (byte) 0,
+      int var9 = DummyClass59.method1040(GlobalStatics_9.anInt902, -var4 + var3, (byte) 0,
         DummyClass13.anInt2020);
 
       int var16;
       for (var16 = var12; (var16 < var8); ++var16) {
-        TextureSampler18.method282(DummyClass35.anIntArrayArray663[var16], var14, 97, var15, var5);
+        GlobalStatics_10.method282(DummyClass35.anIntArrayArray663[var16], var14, 97, var15, var5);
       }
 
       for (var16 = var13; var16 > var9; --var16) {
-        TextureSampler18.method282(DummyClass35.anIntArrayArray663[var16], var14, 94, var15, var5);
+        GlobalStatics_10.method282(DummyClass35.anIntArrayArray663[var16], var14, 94, var15, var5);
       }
 
       int var10 = DummyClass59.method1040(GlTexture2d.anInt3765, var4 + var7, (byte) 0,
@@ -49,9 +49,9 @@ public final class DummyClass15 {
 
       for (var16 = var8; (var16 <= var9); ++var16) {
         int[] var17 = DummyClass35.anIntArrayArray663[var16];
-        TextureSampler18.method282(var17, var14, 105, var10, var5);
-        TextureSampler18.method282(var17, var10, 111, var11, var1);
-        TextureSampler18.method282(var17, var11, 109, var15, var5);
+        GlobalStatics_10.method282(var17, var14, 105, var10, var5);
+        GlobalStatics_10.method282(var17, var10, 111, var11, var1);
+        GlobalStatics_10.method282(var17, var11, 109, var15, var5);
       }
   }
 

@@ -37,7 +37,7 @@ public final class DummyClass8 extends DummyClass7 {
 
   public static void method2220(int var0) {
     if (var0 == 0) {
-        Mobile.aClass93_2792.method1524(3);
+        GlobalStatics_9.aClass93_2792.method1524(3);
       }
   }
 
@@ -45,17 +45,17 @@ public final class DummyClass8 extends DummyClass7 {
                                int var6) {
     int var8 = 0;
 
-      for (HintMarker[] var7 = GameException.aClass96Array2114; var7.length > var8; ++var8) {
+      for (HintMarker[] var7 = GlobalStatics_8.aClass96Array2114; var7.length > var8; ++var8) {
         HintMarker var9 = var7[var8];
         if (var9 != null && var9.anInt1360 == 2) {
           GlobalStatics_5.method1724(var0 >> 1, var5,
-            (-ProceduralTexture.anInt1152 + var9.anInt1347 << 7) + var9.anInt1350,
+            (-GlobalStatics_9.anInt1152 + var9.anInt1347 << 7) + var9.anInt1350,
             var9.anInt1353 * 2, var2 >> 1,
-            var9.anInt1346 + (var9.anInt1356 - WorldMapLabel.anInt1716 << 7), (byte) -114, var4);
+            var9.anInt1346 + (var9.anInt1356 - GlobalStatics_10.anInt1716 << 7), (byte) -114, var4);
           if (DummyClass34.anInt590 > -1
               && ((GlobalStatics_4.updateCycle % 20) < 10)) {
-            SomethingIndex150.aClass3_Sub28_Sub16Array2072[var9.anInt1351].method643(
-              -12 + var1 + DummyClass34.anInt590, -28 + var6 + WidgetAccess.anInt2208);
+            GlobalStatics_9.aClass3_Sub28_Sub16Array2072[var9.anInt1351].method643(
+              -12 + var1 + DummyClass34.anInt590, -28 + var6 + GlobalStatics_10.anInt2208);
           }
         }
       }
@@ -66,7 +66,7 @@ public final class DummyClass8 extends DummyClass7 {
   }
 
   public static void method2222(byte var0) {
-    ObjectNode.aClass93_4043.method1523((byte) -117);
+    GlobalStatics_9.aClass93_4043.method1523((byte) -117);
       GlobalStatics_7.aClass93_2442.method1523((byte) -108);
       DummyClass14.aClass93_1964.method1523((byte) -117);
       if (var0 <= 122) {
@@ -79,7 +79,7 @@ public final class DummyClass8 extends DummyClass7 {
       byte var3;
       byte[][] var4;
       if (GlRenderer.useOpenGlRenderer && var0) {
-        var4 = TextureSampler34.updatedLandscapesData;
+        var4 = GlobalStatics_10.updatedLandscapesData;
         var3 = 1;
       } else {
         var3 = 4;
@@ -91,7 +91,7 @@ public final class DummyClass8 extends DummyClass7 {
 
         for (int var6 = 0; (var6 < 13); ++var6) {
           for (int var7 = 0; (var7 < 13); ++var7) {
-            int var8 = GameObjectConfig.anIntArrayArrayArray1497[var5][var6][var7];
+            int var8 = GlobalStatics_8.anIntArrayArrayArray1497[var5][var6][var7];
             if ((var8 != -1)) {
               int var9 = var8 >> 24 & 3;
               if (!var0 || var9 == 0) {
@@ -102,7 +102,7 @@ public final class DummyClass8 extends DummyClass7 {
 
                 for (int var14 = 0; GlobalStatics_6.regionHashes.length > var14; ++var14) {
                   if ((GlobalStatics_6.regionHashes[var14] == var13) && var4[var14] != null) {
-                    TextureSampler13.method316(GlobalStatics_0.collisionMaps, var5, var4[var14], var9,
+                    GlobalStatics_9.method316(GlobalStatics_0.collisionMaps, var5, var4[var14], var9,
                       var10, 8 * var6, var7 * 8, var0, (var11 & 7) * 8, 8 * (7 & var12),
                       (byte) -54);
                     break;
@@ -124,8 +124,8 @@ public final class DummyClass8 extends DummyClass7 {
       int var6 = (int) var1 >> 20 & 3;
       int var7 = (int) (var1 >>> 32) & Integer.MAX_VALUE;
       if (var5 != 10 && (var5 != 11) && var5 != 22) {
-        Parameter.method582(TextureCache.localPlayer.waypointsY[0], var6, 0, true, 0, 2, var4, 0,
-          1 + var5, 2, var3, TextureCache.localPlayer.waypointsX[0]);
+        GlobalStatics_9.method582(GlobalStatics_9.localPlayer.waypointsY[0], var6, 0, true, 0, 2, var4, 0,
+          1 + var5, 2, var3, GlobalStatics_9.localPlayer.waypointsX[0]);
       } else {
         GameObjectConfig var8 = DummyClass11.method2207(4, var7);
         int var9;
@@ -143,14 +143,14 @@ public final class DummyClass8 extends DummyClass7 {
           var11 = (var11 << var6 & 15) + (var11 >> -var6 + 4);
         }
 
-        Parameter.method582(TextureCache.localPlayer.waypointsY[0], 0, var10, true, var11, 2, var4,
-          var9, 0, 2, var3, TextureCache.localPlayer.waypointsX[0]);
+        GlobalStatics_9.method582(GlobalStatics_9.localPlayer.waypointsY[0], 0, var10, true, var11, 2, var4,
+          var9, 0, 2, var3, GlobalStatics_9.localPlayer.waypointsX[0]);
       }
 
       GlobalStatics_7.anInt4062 = DummyClass36.anInt2614;
       GlobalStatics_7.anInt2958 = 0;
       GlobalStatics_0.anInt638 = 2;
-      SceneSomething2.anInt1053 = DummyClass5.anInt2993;
+      GlobalStatics_9.anInt1053 = DummyClass5.anInt2993;
       return true;
   }
 
@@ -174,7 +174,7 @@ public final class DummyClass8 extends DummyClass7 {
 
       while (true) {
         ClassCheckRequest var3 =
-          (ClassCheckRequest) MonoChromaticImageBuffer.aClass61_2557.getFirst();
+          (ClassCheckRequest) GlobalStatics_9.aClass61_2557.getFirst();
         if (var3 == null) {
           return;
         }

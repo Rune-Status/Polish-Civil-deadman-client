@@ -57,8 +57,8 @@ public class DummyClass7 extends DummyClass6 {
 
         int var6 = var0.readUnsignedByte();
         int var7 = var0.readUnsignedByte();
-        int var9 = -(var7 * 64) - (-MapScene.anInt65 - DummyClass58.anInt1460 + 1);
-        int var8 = var6 * 64 - TextureSampler37.anInt3256;
+        int var9 = -(var7 * 64) - (-GlobalStatics_9.anInt65 - DummyClass58.anInt1460 + 1);
+        int var8 = var6 * 64 - GlobalStatics_10.anInt3256;
         byte var2;
         int var10;
         if (var8 >= 0 && var9 - 63 >= 0 && ((var8 + 63) < DummyClass30.anInt455)
@@ -73,18 +73,18 @@ public class DummyClass7 extends DummyClass6 {
                 8 + var5 * 8))) {
                 var2 = var0.readByte();
                 if ((var2 != 0)) {
-                  if (RenderAnimation.aByteArrayArrayArray383[var10][var11] == null) {
-                    RenderAnimation.aByteArrayArrayArray383[var10][var11] = new byte[4096];
+                  if (GlobalStatics_9.aByteArrayArrayArray383[var10][var11] == null) {
+                    GlobalStatics_9.aByteArrayArrayArray383[var10][var11] = new byte[4096];
                   }
 
-                  RenderAnimation.aByteArrayArrayArray383[var10][var11][var12 + (-var13 + 63
+                  GlobalStatics_9.aByteArrayArrayArray383[var10][var11][var12 + (-var13 + 63
                     << 6)] = var2;
                   byte var14 = var0.readByte();
-                  if (StringNode0.aByteArrayArrayArray2339[var10][var11] == null) {
-                    StringNode0.aByteArrayArrayArray2339[var10][var11] = new byte[4096];
+                  if (GlobalStatics_9.aByteArrayArrayArray2339[var10][var11] == null) {
+                    GlobalStatics_9.aByteArrayArrayArray2339[var10][var11] = new byte[4096];
                   }
 
-                  StringNode0.aByteArrayArrayArray2339[var10][var11][var12 + (63 - var13 << 6)] =
+                  GlobalStatics_9.aByteArrayArrayArray2339[var10][var11][var12 + (63 - var13 << 6)] =
                     var14;
                 }
               }

@@ -129,7 +129,7 @@ public final class MidiInstrument extends Node {
   private float[] method366(int var1) {
     MidiInstrument.method365(this.aByteArrayArray2410[var1], 0);
     MidiInstrument.method364();
-    int var2 = MidiInstrument.method368(MonoChromaticImageBuffer.method513(
+    int var2 = MidiInstrument.method368(GlobalStatics_9.method513(
         MidiInstrument.anIntArray2420.length - 1, 4));
     boolean var3 = MidiInstrument.aBooleanArray2393[var2];
     int var4 = var3 ? MidiInstrument.anInt2396 : MidiInstrument.anInt2402;
@@ -241,7 +241,7 @@ public final class MidiInstrument extends Node {
         var20[4 * var25 + 1] = (var27 - var29) * var30 + (var26 - var28) * var31;
       }
 
-      var25 = MonoChromaticImageBuffer.method513(var4 - 1, 4);
+      var25 = GlobalStatics_9.method513(var4 - 1, 4);
 
       int var47;
       int var49;
@@ -499,10 +499,10 @@ public final class MidiInstrument extends Node {
       }
 
       int[] var15 = new int[var5];
-      int var10 = MonoChromaticImageBuffer.method513(var5 - 1, 4);
+      int var10 = GlobalStatics_9.method513(var5 - 1, 4);
 
       for (int var11 = 0; var11 < var5; ++var11) {
-        var15[var11] = SomethingWorldMapy.method540(var10, -14314, var11);
+        var15[var11] = GlobalStatics_9.method540(var10, -14314, var11);
       }
 
       if (var1 == 0) {

@@ -6,31 +6,16 @@ import java.awt.Frame;
 import java.awt.Point;
 import java.awt.Toolkit;
 import java.io.DataInputStream;
-import java.io.File;
 import java.io.IOException;
-import java.io.RandomAccessFile;
 import java.lang.reflect.Field;
 import java.lang.reflect.Method;
 import java.net.InetAddress;
 import java.net.Socket;
 import java.net.URL;
-import java.util.Hashtable;
 import java.util.Vector;
 
 public class SignLink implements Runnable {
 
-  private static String aString1209;
-  private static final Hashtable CACHED_FILES = new Hashtable(16);
-  public static String aString1196;
-  public static String formattedOsName;
-  public static String aString1205;
-  public static String aString1210;
-  public static int anInt1214 = 1;
-  public static String aString1216;
-  public static String aString1218;
-  public static Method aMethod1220;
-  public static Method setFocusTraversalKeyEnabledMethod;
-  public static volatile long aLong1221;
   public FileOnDisk[] cacheIndexFiles;
   public FileOnDisk cacheDataFile;
   public EventQueue eventQueue;
@@ -48,46 +33,46 @@ public class SignLink implements Runnable {
 
   public SignLink(int var2, String gameName, int var4)
       throws IOException {
-    SignLink.aString1196 = "1.1";
+    GlobalStatics_9.aString1196 = "1.1";
     this.gameName = gameName;
     this.anInt1215 = var2;
-    SignLink.aString1216 = "Unknown";
+    GlobalStatics_9.aString1216 = "Unknown";
 
-    SignLink.aString1216 = System.getProperty("java.vendor");
-    SignLink.aString1196 = System.getProperty("java.version");
-    SignLink.aString1205 = System.getProperty("os.name");
-    SignLink.formattedOsName = SignLink.aString1205.toLowerCase();
-    SignLink.aString1218 = System.getProperty("os.arch").toLowerCase();
-    SignLink.aString1210 = System.getProperty("os.version").toLowerCase();
-    SignLink.aString1209 = System.getProperty("user.home");
-    if (SignLink.aString1209 != null) {
-      SignLink.aString1209 = SignLink.aString1209 + "/";
+    GlobalStatics_9.aString1216 = System.getProperty("java.vendor");
+    GlobalStatics_9.aString1196 = System.getProperty("java.version");
+    GlobalStatics_9.aString1205 = System.getProperty("os.name");
+    GlobalStatics_9.formattedOsName = GlobalStatics_9.aString1205.toLowerCase();
+    GlobalStatics_9.aString1218 = System.getProperty("os.arch").toLowerCase();
+    GlobalStatics_9.aString1210 = System.getProperty("os.version").toLowerCase();
+    GlobalStatics_9.aString1209 = System.getProperty("user.home");
+    if (GlobalStatics_9.aString1209 != null) {
+      GlobalStatics_9.aString1209 = GlobalStatics_9.aString1209 + "/";
     }
 
-    if (SignLink.aString1209 == null) {
-      SignLink.aString1209 = "~/";
+    if (GlobalStatics_9.aString1209 == null) {
+      GlobalStatics_9.aString1209 = "~/";
     }
     this.eventQueue = Toolkit.getDefaultToolkit().getSystemEventQueue();
 
     this.aClass122_1207 =
         new FileOnDisk(
-            SignLink.openFile(this.gameName, true, "random.dat"),
+            GlobalStatics_9.openFile(this.gameName, true, "random.dat"),
             "rw",
             25L);
     this.cacheDataFile =
         new FileOnDisk(
-            SignLink.openFile(this.gameName, true,
+            GlobalStatics_9.openFile(this.gameName, true,
                 "main_file_cache.dat2"), "rw",
             104857600L);
     this.tableIndexFile =
-        new FileOnDisk(SignLink.openFile(this.gameName, true,
+        new FileOnDisk(GlobalStatics_9.openFile(this.gameName, true,
             "main_file_cache.idx255"),
             "rw", 1048576L);
     this.cacheIndexFiles = new FileOnDisk[var4];
 
     for (int var5 = 0; var4 > var5; ++var5) {
       this.cacheIndexFiles[var5] = new FileOnDisk(
-          SignLink.openFile(this.gameName, true,
+          GlobalStatics_9.openFile(this.gameName, true,
               "main_file_cache.idx" + var5), "rw",
           1048576L);
     }
@@ -114,7 +99,7 @@ public class SignLink implements Runnable {
       this.method1442(null, 99);
     }
 
-    SignLink.aLong1221 = Time.getCurrentTimeMillis() + 5000L;
+    GlobalStatics_9.aLong1221 = GlobalStatics_10.getCurrentTimeMillis() + 5000L;
   }
 
   public final boolean method1432(boolean var1) {
@@ -205,7 +190,7 @@ public class SignLink implements Runnable {
   public final SignLinkRequest method1443(Class var1, Class[] var2, int var3,
       String var4) {
     if (var3 > -7) {
-      SignLink.aString1209 = null;
+      GlobalStatics_9.aString1209 = null;
     }
 
     return this.method1435(8, 0, new Object[]{var1, var4, var2}, 0, -75);
@@ -239,7 +224,7 @@ public class SignLink implements Runnable {
       try {
         int var2 = var1.anInt975;
         if (var2 == 1) {
-          if (SignLink.aLong1221 > Time.getCurrentTimeMillis()) {
+          if (GlobalStatics_9.aLong1221 > GlobalStatics_10.getCurrentTimeMillis()) {
             throw new IOException();
           }
 
@@ -250,7 +235,7 @@ public class SignLink implements Runnable {
           var1.result = new Socket(InetAddress.getByName(host), port);
         } else if (var2 != 2) {
           if ((var2 == 4)) {
-            if (SignLink.aLong1221 > Time.getCurrentTimeMillis()) {
+            if (GlobalStatics_9.aLong1221 > GlobalStatics_10.getCurrentTimeMillis()) {
               throw new IOException();
             }
 
@@ -280,7 +265,7 @@ public class SignLink implements Runnable {
               } else {
                 String var4;
                 if ((var2 == 3)) {
-                  if ((Time.getCurrentTimeMillis() < SignLink.aLong1221)) {
+                  if ((GlobalStatics_10.getCurrentTimeMillis() < GlobalStatics_9.aLong1221)) {
                     throw new IOException();
                   }
 
@@ -327,7 +312,7 @@ public class SignLink implements Runnable {
                         var20.setAccessible(false);
                       } else if ((var2 == 12)) {
                         var4 = (String) var1.anObject977;
-                        FileOnDisk var19 = SignLink
+                        FileOnDisk var19 = GlobalStatics_9
                             .openGamePreferences(false, var4);
                         var1.result = var19;
                       } else if ((var2 == 14)) {
@@ -344,7 +329,7 @@ public class SignLink implements Runnable {
                         }
 
                         try {
-                          if (!SignLink.formattedOsName.startsWith("win")) {
+                          if (!GlobalStatics_9.formattedOsName.startsWith("win")) {
                             throw new Exception();
                           }
 
@@ -423,7 +408,7 @@ public class SignLink implements Runnable {
     }
 
     if (var1 != 0) {
-      SignLink.openGamePreferences(false, null);
+      GlobalStatics_9.openGamePreferences(false, null);
     }
 
     if (this.cacheDataFile != null) {
@@ -511,107 +496,4 @@ public class SignLink implements Runnable {
     return this.method1435(5, 0, null, 0, -127);
   }
 
-  private static FileOnDisk openGamePreferences(boolean var0, String var1) {
-    if (var0) {
-      SignLink.openGamePreferences(true, null);
-    }
-
-    String[] var2 = {
-        "c:/rscache/", "/rscache/", SignLink.aString1209, "c:/windows/",
-        "c:/winnt/", "c:/", "/tmp/", ""
-    };
-
-    for (int var3 = 0; var2.length > var3; ++var3) {
-      String var4 = var2[var3];
-      if (var4.length() <= 0 || (new File(var4)).exists()) {
-        try {
-          FileOnDisk var5 =
-              new FileOnDisk(
-                  new File(var4, "jagex_" + var1 + "_preferences.dat"), "rw",
-                  10000L);
-          return var5;
-        } catch (Exception e) {
-          e.printStackTrace();
-        }
-      }
-    }
-
-    return null;
-  }
-
-  public static File openFile(String parent, boolean dontOpenGamePreferences,
-      String name) {
-    File cached = (File) SignLink.CACHED_FILES.get(name);
-    if (cached != null) {
-      return cached;
-    } else {
-      if (!dontOpenGamePreferences) {
-        SignLink.openGamePreferences(true, null);
-      }
-
-      File cacheHome = new File(
-          String.join(
-              File.separator,
-              System.getProperty("user.home"),
-              "DMM",
-              ".cache"
-          )
-      );
-
-      SignLink.ensureDirectoryCreated(cacheHome);
-
-      File parentFile = new File(cacheHome + File.separator + parent);
-      SignLink.ensureDirectoryCreated(parentFile);
-
-      File file =
-          new File(parentFile.getAbsolutePath() + File.separator + name);
-      SignLink.ensureFileCreated(file);
-
-      try (RandomAccessFile rwFile = new RandomAccessFile(file, "rw")) {
-        int firstByte = rwFile.read();
-        rwFile.seek(0L);
-        rwFile.write(firstByte);
-        rwFile.seek(0L);
-        rwFile.close();
-        SignLink.CACHED_FILES.put(name, rwFile);
-      } catch (IOException e) {
-        throw new IllegalStateException(e);
-      }
-      return file;
-    }
-  }
-
-  private static void ensureFileCreated(File file) {
-    if (!file.exists()) {
-      try {
-        boolean fileNotCreated = !file.createNewFile();
-        if (fileNotCreated) {
-          throw new IllegalStateException(
-              String.format(
-                  "Couldn't create file at %s",
-                  file.getAbsolutePath()
-              )
-          );
-        }
-      } catch (IOException exception) {
-        throw new IllegalStateException(
-            String.format("File = [%s]", file.getAbsolutePath()),
-            exception
-        );
-      }
-    }
-  }
-
-  private static void ensureDirectoryCreated(File cacheHome) {
-    if (!cacheHome.exists()) {
-      boolean homeNotCreated = !cacheHome.mkdirs();
-      if (homeNotCreated) {
-        throw new IllegalStateException(
-            String.format(
-                "Couldn't create home at %s",
-                cacheHome.getAbsolutePath())
-        );
-      }
-    }
-  }
 }

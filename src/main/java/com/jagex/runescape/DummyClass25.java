@@ -32,54 +32,54 @@ public final class DummyClass25 {
 
   public static void resizeCanvas() {
     Component var1 = null;
-      if (TextureSampler30.fullScreenFrame == null) {
-        if (TextureSampler27.FRAME != null) {
-          var1 = TextureSampler27.FRAME;
+      if (GlobalStatics_10.fullScreenFrame == null) {
+        if (GlobalStatics_10.FRAME != null) {
+          var1 = GlobalStatics_10.FRAME;
         }
       } else {
-        var1 = TextureSampler30.fullScreenFrame;
+        var1 = GlobalStatics_10.fullScreenFrame;
       }
 
       GlobalStatics_6.windowWidth = var1.getSize().width;
-      SceneSomething2.windowHeight = var1.getSize().height;
+      GlobalStatics_9.windowHeight = var1.getSize().height;
       Insets var2;
-      if (var1 == TextureSampler27.FRAME) {
-        var2 = TextureSampler27.FRAME.getInsets();
-        SceneSomething2.windowHeight -= var2.bottom + var2.top;
+      if (var1 == GlobalStatics_10.FRAME) {
+        var2 = GlobalStatics_10.FRAME.getInsets();
+        GlobalStatics_9.windowHeight -= var2.bottom + var2.top;
         GlobalStatics_6.windowWidth -= var2.right + var2.left;
       }
 
-      if ((MidiSomething.getWindowMode() >= 2)) {
+      if ((GlobalStatics_9.getWindowMode() >= 2)) {
         DummyClass30.viewWidth = GlobalStatics_6.windowWidth;
         DummyClass51.viewX = 0;
         GlobalStatics_7.viewY = 0;
-        GroundItem.viewHeight = SceneSomething2.windowHeight;
+        GlobalStatics_9.viewHeight = GlobalStatics_9.windowHeight;
       } else {
         GlobalStatics_7.viewY = 0;
         DummyClass51.viewX = (-765 + GlobalStatics_6.windowWidth) / 2;
-        GroundItem.viewHeight = 503;
+        GlobalStatics_9.viewHeight = 503;
         DummyClass30.viewWidth = 765;
       }
 
       if (GlRenderer.useOpenGlRenderer) {
-        GlRenderer.setViewportDimensions(DummyClass30.viewWidth, GroundItem.viewHeight);
+        GlRenderer.setViewportDimensions(DummyClass30.viewWidth, GlobalStatics_9.viewHeight);
       }
 
-      GameCanvas.INSTANCE.setSize(DummyClass30.viewWidth, GroundItem.viewHeight);
-      if (var1 == TextureSampler27.FRAME) {
-        var2 = TextureSampler27.FRAME.getInsets();
-        GameCanvas.INSTANCE.setLocation(var2.left + DummyClass51.viewX,
+      GlobalStatics_8.INSTANCE.setSize(DummyClass30.viewWidth, GlobalStatics_9.viewHeight);
+      if (var1 == GlobalStatics_10.FRAME) {
+        var2 = GlobalStatics_10.FRAME.getInsets();
+        GlobalStatics_8.INSTANCE.setLocation(var2.left + DummyClass51.viewX,
             GlobalStatics_7.viewY + var2.top);
       } else {
-        GameCanvas.INSTANCE
+        GlobalStatics_8.INSTANCE
             .setLocation(DummyClass51.viewX, GlobalStatics_7.viewY);
       }
 
-      if ((InventoryConfig.anInt3655 != -1)) {
+      if ((GlobalStatics_9.anInt3655 != -1)) {
         DummyClass23.method1746(true, (byte) -125);
       }
 
-      HashTableIterator.method1396(-1);
+      GlobalStatics_9.method1396(-1);
   }
 
   public static void writeSettings(SignLink var0) {
@@ -89,7 +89,7 @@ public final class DummyClass25 {
         SignLinkRequest var3 = var0.getSettings("runescape", 12);
 
         while (var3.status == 0) {
-          TextureSampler25.sleep(1L);
+          GlobalStatics_10.sleep(1L);
         }
 
         if ((var3.status == 1)) {

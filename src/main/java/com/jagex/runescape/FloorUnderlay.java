@@ -1,19 +1,9 @@
 package com.jagex.runescape;
 
 import com.jagex.runescape.buffer.Buffer;
-import com.jagex.runescape.common.GameString;
-import com.jagex.runescape.common.GameStringStatics;
-import java.util.Random;
 
 public final class FloorUnderlay {
 
-  private static GameString aClass94_1415 = GameStringStatics.create("Loaded input handler");
-  public static int anInt1405;
-  public static int anInt1407;
-  public static FileUnpacker fileUnpacker19;
-  public static SceneShadowMap aClass136_1413 = new SceneShadowMap();
-  public static int anInt1416;
-  public static GameString aClass94_1409 = FloorUnderlay.aClass94_1415;
   public int anInt1406;
   public int anInt1408;
   public boolean aBoolean1411 = true;
@@ -131,57 +121,6 @@ public final class FloorUnderlay {
           }
         }
       }
-  }
-
-  public static int method1602(int var0, GameString var1) {
-    if (DummyClass25.aClass131_1624 != null && (var1.getLength() != 0)) {
-        for (int var2 = var0; DummyClass25.aClass131_1624.anInt1720 > var2; ++var2) {
-          if (DummyClass25.aClass131_1624.aClass94Array1721[var2].method1560(
-            TextureSampler15.aClass94_3192, true, OndemandFileRequest.aClass94_4066)
-            .method1562((byte) -32, var1)) {
-            return var2;
-          }
-        }
-
-        return -1;
-      } else {
-        return -1;
-      }
-  }
-
-  public static int method1603(byte var0, int var1, Random var2) {
-    if ((var1 <= 0)) {
-        throw new IllegalArgumentException();
-      } else if (Projectile.isPo2((byte) -115, var1)) {
-        return (int) ((var2.nextInt() & 4294967295L) * var1 >> 32);
-      } else {
-        int var3 = -((int) (4294967296L % var1)) + Integer.MIN_VALUE;
-
-        int var4;
-        do {
-          var4 = var2.nextInt();
-        } while (var3 <= var4);
-
-        int var5 = -101 % ((var0 + 52) / 33);
-        return TextureSampler27.method201(var4, var1, -58);
-      }
-  }
-
-  public static void method1605(int var0, GameString var1, int var2) {
-    ++SomethingSceneI.anInt421;
-      TextureSampler12.secureBuffer.writePacket(188);
-      TextureSampler12.secureBuffer.method790(var2, var0 - 13326);
-      if (var0 == 255) {
-        TextureSampler12.secureBuffer.writeLong(var1.toBase37());
-      }
-  }
-
-  public static void method1606(byte var0) {
-    FloorUnderlay.aClass94_1415 = null;
-      FloorUnderlay.aClass94_1409 = null;
-      int var1 = 86 % ((49 - var0) / 48);
-      FloorUnderlay.fileUnpacker19 = null;
-      FloorUnderlay.aClass136_1413 = null;
   }
 
 }

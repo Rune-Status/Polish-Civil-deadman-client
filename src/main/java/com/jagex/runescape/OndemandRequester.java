@@ -1,21 +1,11 @@
 package com.jagex.runescape;
 
 import com.jagex.runescape.buffer.Buffer;
-import com.jagex.runescape.common.GameString;
-import com.jagex.runescape.common.GameStringStatics;
-import com.jagex.runescape.done.AbstractDirectColorSprite;
 
 import java.io.IOException;
 
 public final class OndemandRequester {
 
-  public static int anInt994;
-  public static GameString aClass94_995 = GameStringStatics.create("(Y<)4col>");
-  public static AbstractDirectColorSprite[] aClass3_Sub28_Sub16Array996;
-  public static int anInt997;
-  public static int anInt998;
-  public static int anInt999 = -1;
-  public static int anInt1002;
   public volatile int anInt1010;
   public volatile int anInt1011;
   private final Queue aClass13_993 = new Queue();
@@ -41,7 +31,7 @@ public final class OndemandRequester {
   public boolean method1243(byte var1 ) {
     int avail;
       if (this.socketStream != null) {
-        long currentTime = Time.getCurrentTimeMillis();
+        long currentTime = GlobalStatics_10.getCurrentTimeMillis();
         int diff = (int) (currentTime - this.lastUpdatedTime);
         this.lastUpdatedTime = currentTime;
         if (diff > 200) {
@@ -125,7 +115,7 @@ public final class OndemandRequester {
               if ((this.encryptionKey != 0)) {
                 for (var8 = 0; var7 > var8; ++var8) {
                   this.currentRequest.buffer.bytes[this.currentRequest.buffer.position + var8] =
-                    (byte) ObjectCache.bitXor(
+                    (byte) GlobalStatics_9.bitXor(
                         this.currentRequest.buffer.bytes[this.currentRequest.buffer.position + var8],
                         this.encryptionKey);
                 }
@@ -153,7 +143,7 @@ public final class OndemandRequester {
               if (this.encryptionKey != 0) {
                 for (var7 = 0; var7 < var6; ++var7) {
                   this.aClass3_Sub30_1008.bytes[var7 + this.aClass3_Sub30_1008.position] =
-                    (byte) ObjectCache.bitXor(
+                    (byte) GlobalStatics_9.bitXor(
                         this.aClass3_Sub30_1008.bytes[var7 + this.aClass3_Sub30_1008.position],
                         this.encryptionKey);
                 }
@@ -259,7 +249,7 @@ public final class OndemandRequester {
 
   private int method1246(int var1) {
     if (var1 != 11706) {
-        OndemandRequester.aClass3_Sub28_Sub16Array996 = null;
+        GlobalStatics_9.aClass3_Sub28_Sub16Array996 = null;
       }
 
       return this.aClass13_1001.size() + this.normalRequests.size();
@@ -340,7 +330,7 @@ public final class OndemandRequester {
               }
 
               this.timeDiff = 0;
-              this.lastUpdatedTime = Time.getCurrentTimeMillis();
+              this.lastUpdatedTime = GlobalStatics_10.getCurrentTimeMillis();
               return;
             }
 
@@ -436,63 +426,6 @@ public final class OndemandRequester {
 
         }
       }
-  }
-
-  public static void method1242(byte var0) {
-    OndemandRequester.aClass3_Sub28_Sub16Array996 = null;
-      if (var0 != -88) {
-        OndemandRequester.method1250(-72, true);
-      }
-
-      OndemandRequester.aClass94_995 = null;
-  }
-
-  public static SomethingVolume15 method1245(int var0, FileUnpacker var1, int var2) {
-    if (var0 <= 12) {
-        OndemandRequester.anInt1002 = 107;
-      }
-
-      byte[] var3 = var1.getBytes(var2);
-      return var3 != null ? new SomethingVolume15(var3) : null;
-  }
-
-  public static void method1250(int var0, boolean var1) {
-    StringNode0.aByteArrayArrayArray2339 = null;
-      GlobalStatics_4.anIntArrayArrayArray720 = null;
-      if (var0 < 14) {
-        OndemandRequester.method1250(10, true);
-      }
-
-      SomethingWorldMapy.aClass11_3551 = null;
-      RenderAnimation.aByteArrayArrayArray383 = null;
-      DummyClass51.anIntArray1161 = null;
-      GlobalStatics_7.aByteArrayArrayArray2452 = null;
-      if (var1 && GlobalStatics_0.aClass3_Sub28_Sub3_2600 != null) {
-        TextureSampler4.aClass94_3220 = GlobalStatics_0.aClass3_Sub28_Sub3_2600.aClass94_3561;
-      } else {
-        TextureSampler4.aClass94_3220 = null;
-      }
-
-      GlobalStatics_0.aByteArrayArrayArray640 = null;
-      TextureSampler29.aByteArrayArrayArray3390 = null;
-      PlayerVariable.anIntArrayArrayArray558 = null;
-      GlobalStatics_5.anIntArrayArrayArray1903 = null;
-      GameObject.anInt2737 = 0;
-      GlobalStatics_0.aClass3_Sub28_Sub3_2600 = null;
-      DummyClass51.aClass61_1162.clear(-108);
-      DummyClass25.aClass131_1624 = null;
-      TextureSampler13.anInt3362 = -1;
-      SomethingTexture1.aClass33_2648 = null;
-      GlobalStatics_7.aClass33_1305 = null;
-      SocketStream.aClass33_1238 = null;
-      DummyClass12.aClass33_2034 = null;
-      Something3d2.aClass33_3019 = null;
-      DummyClass54.aClass33_1399 = null;
-      SomethingTexture1.aClass33_2637 = null;
-      DummyClass25.aClass33_1626 = null;
-      GlobalStatics_0.aClass3_Sub28_Sub16_637 = null;
-      ProceduralTexture.anInt1150 = -1;
-      TextureSampler4.aClass3_Sub28_Sub16_Sub2_3221 = null;
   }
 
 }

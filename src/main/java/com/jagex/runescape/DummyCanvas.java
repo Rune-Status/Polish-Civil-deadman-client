@@ -50,7 +50,7 @@ public final class DummyCanvas extends Canvas implements FocusListener {
 
       DummyCanvas.aClass93_21.method1523((byte) -100);
       DummyClass54.aClass93_1401.method1523((byte) -105);
-      ObjectNode.aClass93_4051.method1523((byte) -101);
+      GlobalStatics_9.aClass93_4051.method1523((byte) -101);
       DummyClass14.aClass93_1965.method1523((byte) -119);
   }
 

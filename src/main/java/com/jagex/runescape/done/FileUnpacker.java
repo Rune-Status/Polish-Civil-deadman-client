@@ -1,17 +1,12 @@
-package com.jagex.runescape;
+package com.jagex.runescape.done;
 
+import com.jagex.runescape.*;
 import com.jagex.runescape.buffer.Buffer;
 import com.jagex.runescape.common.ArrayUtils;
 import com.jagex.runescape.common.GameString;
-import com.jagex.runescape.done.AbstractFileRequester;
 
 public final class FileUnpacker {
 
-  public static int anInt1944;
-  public static FileUnpacker fileUnpacker13;
-  public static int sunColor;
-  public static boolean aBoolean1951;
-  public static int updateMemoryCounter;
   private boolean aBoolean1945;
   private final boolean aBoolean1946;
   private final AbstractFileRequester aClass151_1947;
@@ -223,7 +218,7 @@ public final class FileUnpacker {
         if (var3 < 35) {
           return null;
         } else {
-          byte[] var7 = NPC
+          byte[] var7 = GlobalStatics_9
               .method1985(-119, this.buffers[fileId][childId], false);
           if (this.aBoolean1946) {
             this.buffers[fileId][childId] = null;
@@ -278,7 +273,7 @@ public final class FileUnpacker {
 
   private boolean method2130(boolean var1, int var2) {
     if (var1) {
-        FileUnpacker.aBoolean1951 = false;
+        GlobalStatics_8.aBoolean1951 = false;
       }
 
       if (this.method2122()) {
@@ -337,11 +332,11 @@ public final class FileUnpacker {
           byte[] var21;
           if (var3 != null && ((var3[0] != 0) || (var3[1] != 0) || var3[2] != 0
               || var3[3] != 0)) {
-            var21 = NPC.method1985(-124, this.anObjectArray1954[var1], true);
+            var21 = GlobalStatics_9.method1985(-124, this.anObjectArray1954[var1], true);
             Buffer var22 = new Buffer(var21);
             var22.method770(var3, 120, 5, var22.bytes.length);
           } else {
-            var21 = NPC.method1985(-128, this.anObjectArray1954[var1], false);
+            var21 = GlobalStatics_9.method1985(-128, this.anObjectArray1954[var1], false);
           }
 
           byte[] var23;
@@ -471,7 +466,7 @@ public final class FileUnpacker {
 
   public int method2136(byte var1 ) {
     if (var1 > -121) {
-        FileUnpacker.sunColor = -3;
+        GlobalStatics_8.sunColor = -3;
       }
 
       if (this.method2122()) {
@@ -553,7 +548,7 @@ public final class FileUnpacker {
           }
         }
 
-        byte[] var6 = NPC.method1985(-126, this.buffers[var2][var1], false);
+        byte[] var6 = GlobalStatics_9.method1985(-126, this.buffers[var2][var1], false);
         return var6;
       } else {
         return null;
@@ -562,7 +557,7 @@ public final class FileUnpacker {
 
   public int[] getChildIds(byte var1, int var2 ) {
     if (var1 != -128) {
-        FileUnpacker.updateMemoryCounter = -69;
+        GlobalStatics_8.updateMemoryCounter = -69;
       }
 
       if (this.method2130(false, var2)) {
@@ -606,26 +601,6 @@ public final class FileUnpacker {
       } else {
         return false;
       }
-  }
-
-  public static void method2119(int var0) {
-    if (var0 != 100) {
-        FileUnpacker.method2143((byte) -45, -91, 7, -83, 24);
-      }
-
-      FileUnpacker.fileUnpacker13 = null;
-  }
-
-  public static void method2143(byte var0, int var1, int var2, int var3, int var4) {
-    WidgetUpdate var5 = GlobalStatics_6.method466(4, 8, var2);
-      var5.g((byte) 33);
-      var5.anInt3596 = var1;
-      if (var0 >= -120) {
-        FileUnpacker.sunColor = -14;
-      }
-
-      var5.anInt3598 = var4;
-      var5.anInt3597 = var3;
   }
 
 }

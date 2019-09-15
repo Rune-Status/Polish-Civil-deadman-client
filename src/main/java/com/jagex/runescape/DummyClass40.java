@@ -1417,7 +1417,7 @@ public final class DummyClass40 {
     DummyClass40.anInt846 = DummyClass40.anInt847 / 2;
     DummyClass40.anInt835 = DummyClass40.anInt844 / 2;
     DummyClass17.screenLowerX = -DummyClass40.anInt846;
-    Unsure.screenUpperX = DummyClass40.anInt847 - DummyClass40.anInt846;
+    GlobalStatics_10.screenUpperX = DummyClass40.anInt847 - DummyClass40.anInt846;
     DummyClass3.screenUpperY = -DummyClass40.anInt835;
     GLStatics.screenLowerY = DummyClass40.anInt844 - DummyClass40.anInt835;
   }
@@ -2750,7 +2750,7 @@ public final class DummyClass40 {
     DummyClass40.anInt846 = var0 - var4;
     DummyClass40.anInt835 = var1 - var3;
     DummyClass17.screenLowerX = -DummyClass40.anInt846;
-    Unsure.screenUpperX = DummyClass40.anInt847 - DummyClass40.anInt846;
+    GlobalStatics_10.screenUpperX = DummyClass40.anInt847 - DummyClass40.anInt846;
     DummyClass3.screenUpperY = -DummyClass40.anInt835;
     GLStatics.screenLowerY = DummyClass40.anInt844 - DummyClass40.anInt835;
   }

@@ -48,80 +48,80 @@ public final class DummyOutputStream extends OutputStream {
 
         boolean var8 = true;
         if (var5.anInt189 > 0) {
-          var8 = ProjectileNode.method715(205, var5);
+          var8 = GlobalStatics_9.method715(205, var5);
         }
 
         if (var8) {
-          if (GameClient.method44(var5).method92(var2 - 1, (byte) -108)) {
+          if (GlobalStatics_8.method44(var5).method92(var2 - 1, (byte) -108)) {
             if (var2 == 1) {
-              TextureSampler12.secureBuffer.writePacket(155);
-              TextureSampler12.secureBuffer.writeInt(var4);
+              GlobalStatics_9.secureBuffer.writePacket(155);
+              GlobalStatics_9.secureBuffer.writeInt(var4);
               ++GlobalStatics_0.anInt937;
-              TextureSampler12.secureBuffer.writeShort(var1);
+              GlobalStatics_9.secureBuffer.writeShort(var1);
             }
 
             if (var3 < -7) {
               if ((var2 == 2)) {
-                ++TextureSampler30.anInt3122;
-                TextureSampler12.secureBuffer.writePacket(196);
-                TextureSampler12.secureBuffer.writeInt(var4);
-                TextureSampler12.secureBuffer.writeShort(var1);
+                ++GlobalStatics_10.anInt3122;
+                GlobalStatics_9.secureBuffer.writePacket(196);
+                GlobalStatics_9.secureBuffer.writeInt(var4);
+                GlobalStatics_9.secureBuffer.writeShort(var1);
               }
 
               if ((var2 == 3)) {
                 ++DummyClass42.anInt889;
-                TextureSampler12.secureBuffer.writePacket(124);
-                TextureSampler12.secureBuffer.writeInt(var4);
-                TextureSampler12.secureBuffer.writeShort(var1);
+                GlobalStatics_9.secureBuffer.writePacket(124);
+                GlobalStatics_9.secureBuffer.writeInt(var4);
+                GlobalStatics_9.secureBuffer.writeShort(var1);
               }
 
               if (var2 == 4) {
-                TextureSampler12.secureBuffer.writePacket(199);
-                TextureSampler12.secureBuffer.writeInt(var4);
-                TextureSampler12.secureBuffer.writeShort(var1);
-                ++Keyboard.anInt1909;
+                GlobalStatics_9.secureBuffer.writePacket(199);
+                GlobalStatics_9.secureBuffer.writeInt(var4);
+                GlobalStatics_9.secureBuffer.writeShort(var1);
+                ++GlobalStatics_9.anInt1909;
               }
 
               if ((var2 == 5)) {
-                TextureSampler12.secureBuffer.writePacket(234);
-                TextureSampler12.secureBuffer.writeInt(var4);
-                TextureSampler12.secureBuffer.writeShort(var1);
-                ++SomethingIndex150.anInt2081;
+                GlobalStatics_9.secureBuffer.writePacket(234);
+                GlobalStatics_9.secureBuffer.writeInt(var4);
+                GlobalStatics_9.secureBuffer.writeShort(var1);
+                ++GlobalStatics_9.anInt2081;
               }
 
               if (var2 == 6) {
-                TextureSampler12.secureBuffer.writePacket(168);
+                GlobalStatics_9.secureBuffer.writePacket(168);
                 ++DummyClass52.anInt1172;
-                TextureSampler12.secureBuffer.writeInt(var4);
-                TextureSampler12.secureBuffer.writeShort(var1);
+                GlobalStatics_9.secureBuffer.writeInt(var4);
+                GlobalStatics_9.secureBuffer.writeShort(var1);
               }
 
               if ((var2 == 7)) {
                 ++DummyClass59.anInt674;
-                TextureSampler12.secureBuffer.writePacket(166);
-                TextureSampler12.secureBuffer.writeInt(var4);
-                TextureSampler12.secureBuffer.writeShort(var1);
+                GlobalStatics_9.secureBuffer.writePacket(166);
+                GlobalStatics_9.secureBuffer.writeInt(var4);
+                GlobalStatics_9.secureBuffer.writeShort(var1);
               }
 
               if ((var2 == 8)) {
-                TextureSampler12.secureBuffer.writePacket(64);
-                ++LightIntensity.anInt903;
-                TextureSampler12.secureBuffer.writeInt(var4);
-                TextureSampler12.secureBuffer.writeShort(var1);
+                GlobalStatics_9.secureBuffer.writePacket(64);
+                ++GlobalStatics_9.anInt903;
+                GlobalStatics_9.secureBuffer.writeInt(var4);
+                GlobalStatics_9.secureBuffer.writeShort(var1);
               }
 
               if ((var2 == 9)) {
                 ++DummyClass52.anInt1166;
-                TextureSampler12.secureBuffer.writePacket(53);
-                TextureSampler12.secureBuffer.writeInt(var4);
-                TextureSampler12.secureBuffer.writeShort(var1);
+                GlobalStatics_9.secureBuffer.writePacket(53);
+                GlobalStatics_9.secureBuffer.writeInt(var4);
+                GlobalStatics_9.secureBuffer.writeShort(var1);
               }
 
               if ((var2 == 10)) {
                 ++GlobalStatics_7.anInt1307;
-                TextureSampler12.secureBuffer.writePacket(9);
-                TextureSampler12.secureBuffer.writeInt(var4);
-                TextureSampler12.secureBuffer.writeShort(var1);
+                GlobalStatics_9.secureBuffer.writePacket(9);
+                GlobalStatics_9.secureBuffer.writeInt(var4);
+                GlobalStatics_9.secureBuffer.writeShort(var1);
               }
 
             }
@@ -144,12 +144,12 @@ public final class DummyOutputStream extends OutputStream {
   public static void method68(int var0, int var1, Mobile var2) {
     if ((GlobalStatics_4.updateCycle >= var2.anInt2800)) {
         if (var2.anInt2790 >= GlobalStatics_4.updateCycle) {
-          FloorOverlay.method2270(var2, (byte) -56);
+          GlobalStatics_8.method2270(var2, (byte) -56);
         } else {
           GlobalStatics_7.method1180((byte) -22, var2);
         }
       } else {
-        StillGraphic.method1950(var2, true);
+        GlobalStatics_9.method1950(var2, true);
       }
 
       if ((var2.anInt2819 < 128) || var2.anInt2829 < 128 || var2.anInt2819 >= 13184
@@ -164,7 +164,7 @@ public final class DummyOutputStream extends OutputStream {
       }
 
       if (var1 == 2279) {
-        if (var2 == TextureCache.localPlayer && (var2.anInt2819 < 1536 ||
+        if (var2 == GlobalStatics_9.localPlayer && (var2.anInt2819 < 1536 ||
             (var2.anInt2829 < 1536)
           || (var2.anInt2819 >= 11776) || var2.anInt2829 >= 11776)) {
           var2.anInt2842 = -1;
@@ -177,7 +177,7 @@ public final class DummyOutputStream extends OutputStream {
         }
 
         DummyClass1.method904(65536, var2);
-        RenderAnimation.method900(var2, -11973);
+        GlobalStatics_9.method900(var2, -11973);
       }
   }
 

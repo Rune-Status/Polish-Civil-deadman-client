@@ -298,9 +298,9 @@ public final class Texture extends SubNode {
 
       if (this.anIntArray3793 != null) {
         if (this.anInt3799 != 0 || (this.anInt3783 != 0)) {
-          if (SomethingOtherWorldMap.anIntArray2533 == null
-              || (SomethingOtherWorldMap.anIntArray2533.length < this.anIntArray3793.length)) {
-            SomethingOtherWorldMap.anIntArray2533 = new int[this.anIntArray3793.length];
+          if (GlobalStatics_9.anIntArray2533 == null
+              || (GlobalStatics_9.anIntArray2533.length < this.anIntArray3793.length)) {
+            GlobalStatics_9.anIntArray2533 = new int[this.anIntArray3793.length];
           }
 
           int var5 = var1 * this.anInt3783;
@@ -316,13 +316,13 @@ public final class Texture extends SubNode {
             for (int var11 = 0; var3 > var11; ++var11) {
               int var13 = (var6 & var11 + var5) + var10;
               int var12 = var11 + var9;
-              SomethingOtherWorldMap.anIntArray2533[var12] = this.anIntArray3793[var13];
+              GlobalStatics_9.anIntArray2533[var12] = this.anIntArray3793[var13];
             }
           }
 
           int[] var15 = this.anIntArray3793;
-          this.anIntArray3793 = SomethingOtherWorldMap.anIntArray2533;
-          SomethingOtherWorldMap.anIntArray2533 = var15;
+          this.anIntArray3793 = GlobalStatics_9.anIntArray2533;
+          GlobalStatics_9.anIntArray2533 = var15;
         }
 
       }
@@ -367,29 +367,29 @@ public final class Texture extends SubNode {
           }
         }
 
-        if (GameWorldSomething.currentPlane != 3) {
+        if (GlobalStatics_9.currentPlane != 3) {
           for (var4 = 0; (var4 < 2); ++var4) {
             GlobalStatics_7.anIntArray686[var4] = -1000000;
-            MilliFrameRegulator.anIntArray2696[var4] = 1000000;
+            GlobalStatics_9.anIntArray2696[var4] = 1000000;
             DummyClass13.anIntArray2021[var4] = 0;
             GlobalStatics_3.anIntArray1871[var4] = 1000000;
-            Player.anIntArray3959[var4] = 0;
+            GlobalStatics_9.anIntArray3959[var4] = 0;
           }
 
-          if (SomethingPacket116.anInt1753 == 1) {
+          if (GlobalStatics_9.anInt1753 == 1) {
             if ((4
-                & BZipDecompressorState.tileFlags[GameWorldSomething.currentPlane][
-                TextureCache.localPlayer.anInt2819 >> 7][
-                TextureCache.localPlayer.anInt2829 >> 7])
+                & BZipDecompressorState.tileFlags[GlobalStatics_9.currentPlane][
+                GlobalStatics_9.localPlayer.anInt2819 >> 7][
+                GlobalStatics_9.localPlayer.anInt2829 >> 7])
                 != 0) {
-              GroundItem.method2031((byte) -85, false,
-                  TextureCache.localPlayer.anInt2819 >> 7,
-                  TextureCache.localPlayer.anInt2829 >> 7,
+              GlobalStatics_9.method2031((byte) -85, false,
+                  GlobalStatics_9.localPlayer.anInt2819 >> 7,
+                  GlobalStatics_9.localPlayer.anInt2829 >> 7,
                   GLStatics.sceneGraphTiles, 0);
             }
 
             if ((DummyClass17.anInt1823 < 310)) {
-              int var7 = TextureCache.localPlayer.anInt2829 >> 7;
+              int var7 = GlobalStatics_9.localPlayer.anInt2829 >> 7;
               var5 = DummyClass49.anInt1111 >> 7;
               int var9;
               if (var5 < var7) {
@@ -398,8 +398,8 @@ public final class Texture extends SubNode {
                 var9 = -var7 + var5;
               }
 
-              var4 = NPC.anInt3995 >> 7;
-              int var6 = TextureCache.localPlayer.anInt2819 >> 7;
+              var4 = GlobalStatics_9.anInt3995 >> 7;
+              int var6 = GlobalStatics_9.localPlayer.anInt2819 >> 7;
               int var8;
               if (var6 > var4) {
                 var8 = -var4 + var6;
@@ -421,9 +421,9 @@ public final class Texture extends SubNode {
                   }
 
                   if (((
-                      BZipDecompressorState.tileFlags[GameWorldSomething.currentPlane][var4][var5]
+                      BZipDecompressorState.tileFlags[GlobalStatics_9.currentPlane][var4][var5]
                           & 4) != 0)) {
-                    GroundItem.method2031((byte) -29, false, var4, var5,
+                    GlobalStatics_9.method2031((byte) -29, false, var4, var5,
                         GLStatics.sceneGraphTiles, 1);
                     break;
                   }
@@ -440,8 +440,8 @@ public final class Texture extends SubNode {
 
                     var11 -= 65536;
                     if (((4
-                        & BZipDecompressorState.tileFlags[GameWorldSomething.currentPlane][var4][var5]) != 0)) {
-                      GroundItem.method2031((byte) -120, false, var4, var5,
+                        & BZipDecompressorState.tileFlags[GlobalStatics_9.currentPlane][var4][var5]) != 0)) {
+                      GlobalStatics_9.method2031((byte) -120, false, var4, var5,
                           GLStatics.sceneGraphTiles, 1);
                       break;
                     }
@@ -459,8 +459,8 @@ public final class Texture extends SubNode {
                   }
 
                   if (((4
-                      & BZipDecompressorState.tileFlags[GameWorldSomething.currentPlane][var4][var5]) != 0)) {
-                    GroundItem.method2031((byte) -13, false, var4, var5,
+                      & BZipDecompressorState.tileFlags[GlobalStatics_9.currentPlane][var4][var5]) != 0)) {
+                    GlobalStatics_9.method2031((byte) -13, false, var4, var5,
                         GLStatics.sceneGraphTiles, 1);
                     break;
                   }
@@ -475,9 +475,9 @@ public final class Texture extends SubNode {
 
                     var11 -= 65536;
                     if ((4
-                        & BZipDecompressorState.tileFlags[GameWorldSomething.currentPlane][var4][var5])
+                        & BZipDecompressorState.tileFlags[GlobalStatics_9.currentPlane][var4][var5])
                         != 0) {
-                      GroundItem.method2031((byte) -37, false, var4, var5,
+                      GlobalStatics_9.method2031((byte) -37, false, var4, var5,
                           GLStatics.sceneGraphTiles, 1);
                       break;
                     }
@@ -487,14 +487,14 @@ public final class Texture extends SubNode {
             }
           } else {
             var4 = GlobalStatics_6
-                .method1736(GameWorldSomething.currentPlane, 1, NPC.anInt3995,
+                .method1736(GlobalStatics_9.currentPlane, 1, GlobalStatics_9.anInt3995,
                     DummyClass49.anInt1111);
             if (var4 - GlobalStatics_7.anInt2162 < 800 &&
                 (4
-                    & BZipDecompressorState.tileFlags[GameWorldSomething.currentPlane][
-                    NPC.anInt3995
+                    & BZipDecompressorState.tileFlags[GlobalStatics_9.currentPlane][
+                    GlobalStatics_9.anInt3995
                         >> 7][DummyClass49.anInt1111 >> 7]) != 0) {
-              GroundItem.method2031((byte) -107, false, NPC.anInt3995 >> 7,
+              GlobalStatics_9.method2031((byte) -107, false, GlobalStatics_9.anInt3995 >> 7,
                   DummyClass49.anInt1111 >> 7,
                   GLStatics.sceneGraphTiles, 1);
             }

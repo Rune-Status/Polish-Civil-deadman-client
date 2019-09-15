@@ -15,7 +15,7 @@ public final class FileCacheRequester implements Runnable {
 
       assert var1 != null;
       while ((var1.status == 0)) {
-        TextureSampler25.sleep(10L);
+        GlobalStatics_10.sleep(10L);
       }
 
       if (var1.status == 2) {
@@ -142,7 +142,7 @@ public final class FileCacheRequester implements Runnable {
             }
           }
         } catch (Exception var5) {
-          GZipDecompressor.reportError(null, var5, (byte) 111);
+          GlobalStatics_9.reportError(null, var5, (byte) 111);
         }
 
         var1.aBoolean3632 = false;

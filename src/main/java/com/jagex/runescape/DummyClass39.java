@@ -28,13 +28,13 @@ public final class DummyClass39 {
   }
 
   public static void method1087(int var0, int var1) {
-    GameBuffer.method819(false);
-      TextureSampler23.method252(8);
+    GlobalStatics_8.method819(false);
+      GlobalStatics_10.method252(8);
       if (var0 < 38) {
         DummyClass39.sunPositionX = 118;
       }
 
-      int var2 = Objects.requireNonNull(Unsure.getPlayerVariable(-37, var1)).anInt556;
+      int var2 = Objects.requireNonNull(GlobalStatics_10.getPlayerVariable(-37, var1)).anInt556;
       if (var2 != 0) {
         int var3 = DummyClass5.anIntArray2985[var1];
         if (var2 == 6) {
@@ -42,7 +42,7 @@ public final class DummyClass39 {
         }
 
         if ((var2 == 5)) {
-          OndemandRequester.anInt998 = var3;
+          GlobalStatics_9.anInt998 = var3;
         }
 
         if ((var2 == 9)) {

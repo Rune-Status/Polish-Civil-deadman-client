@@ -2,23 +2,12 @@ package com.jagex.runescape;
 
 import com.jagex.runescape.buffer.Buffer;
 import com.jagex.runescape.common.ArrayUtils;
-import com.jagex.runescape.common.GameString;
-import com.jagex.runescape.common.GameStringStatics;
 import com.jagex.runescape.done.AbstractTextureSampler;
 
 import java.util.Random;
 
 public final class TextureSampler28 extends AbstractTextureSampler {
 
-  private static GameString aClass94_3306 =
-    GameStringStatics.create(" is already on your ignore list)3");
-  public static GameString aClass94_3302 = GameStringStatics.create("Connexion perdue)3");
-  public static FileUnpacker fileUnpacker10;
-  public static int loginState;
-  public static GameString aClass94_3307 = GameStringStatics.create("<col=00ff80>");
-  public static int anInt3313 = 500;
-  public static int anInt3315;
-  public static GameString aClass94_3311 = TextureSampler28.aClass94_3306;
   private int anInt3299 = 1024;
   private int anInt3300 = 1024;
   private int anInt3301 = 819;
@@ -49,28 +38,28 @@ public final class TextureSampler28 extends AbstractTextureSampler {
         boolean var12 = true;
         int var13 = 0;
         int var14 = 0;
-        int var15 = SomethingLight0.anInt1559 * this.anInt3300 >> 12;
-        int var16 = SomethingLight0.anInt1559 * this.anInt3308 >> 12;
+        int var15 = GlobalStatics_9.anInt1559 * this.anInt3300 >> 12;
+        int var16 = GlobalStatics_9.anInt1559 * this.anInt3308 >> 12;
         int var18 = this.anInt3301 * DummyClass55.anInt1427 >> 12;
         int var17 = DummyClass55.anInt1427 * this.anInt3310 >> 12;
         if (var18 <= 1) {
           assert var5 != null;
           return var5[var1];
         } else {
-          int var19 = SomethingLight0.anInt1559 / var15 + 1;
-          this.anInt3314 = SomethingLight0.anInt1559 / 8 * this.anInt3303 >> 12;
+          int var19 = GlobalStatics_9.anInt1559 / var15 + 1;
+          this.anInt3314 = GlobalStatics_9.anInt1559 / 8 * this.anInt3303 >> 12;
           int[][] var21 = new int[var19][3];
           int[][] var20 = new int[var19][3];
           Random var22 = new Random(this.anInt3312);
 
           while (true) {
             while (true) {
-              int var24 = var15 + FloorUnderlay.method1603((byte) -93, var16 - var15, var22);
-              int var25 = FloorUnderlay.method1603((byte) -96, -var17 + var18, var22) + var17;
+              int var24 = var15 + GlobalStatics_8.method1603((byte) -93, var16 - var15, var22);
+              int var25 = GlobalStatics_8.method1603((byte) -96, -var17 + var18, var22) + var17;
               int var26 = var9 + var24;
-              if (SomethingLight0.anInt1559 < var26) {
-                var26 = SomethingLight0.anInt1559;
-                var24 = SomethingLight0.anInt1559 - var9;
+              if (GlobalStatics_9.anInt1559 < var26) {
+                var26 = GlobalStatics_9.anInt1559;
+                var24 = GlobalStatics_9.anInt1559 - var9;
               }
 
               int var23;
@@ -84,11 +73,11 @@ public final class TextureSampler28 extends AbstractTextureSampler {
                 var29 = 0;
                 int var30 = var6 + var26;
                 if (var30 < 0) {
-                  var30 += SomethingLight0.anInt1559;
+                  var30 += GlobalStatics_9.anInt1559;
                 }
 
-                if ((SomethingLight0.anInt1559 < var30)) {
-                  var30 -= SomethingLight0.anInt1559;
+                if ((GlobalStatics_9.anInt1559 < var30)) {
+                  var30 -= GlobalStatics_9.anInt1559;
                 }
 
                 while (true) {
@@ -97,11 +86,11 @@ public final class TextureSampler28 extends AbstractTextureSampler {
                     if (var10 != var27) {
                       int var42 = var6 + var9;
                       if ((var42 < 0)) {
-                        var42 += SomethingLight0.anInt1559;
+                        var42 += GlobalStatics_9.anInt1559;
                       }
 
-                      if (var42 > SomethingLight0.anInt1559) {
-                        var42 -= SomethingLight0.anInt1559;
+                      if (var42 > GlobalStatics_9.anInt1559) {
+                        var42 -= GlobalStatics_9.anInt1559;
                       }
 
                       int var32;
@@ -124,7 +113,7 @@ public final class TextureSampler28 extends AbstractTextureSampler {
                             var36 = Math.min(var30, var38);
                           } else if (var37 != 0) {
                             var35 = Math.max(var42, var37);
-                            var36 = SomethingLight0.anInt1559;
+                            var36 = GlobalStatics_9.anInt1559;
                           } else {
                             var36 = Math.min(var30, var38);
                             var35 = 0;
@@ -156,7 +145,7 @@ public final class TextureSampler28 extends AbstractTextureSampler {
               }
 
               int[] var40;
-              if ((var26 == SomethingLight0.anInt1559)) {
+              if ((var26 == GlobalStatics_9.anInt1559)) {
                 this.method291(var23, var22, var7 + var9, var24, (byte) -69, var25, var5);
                 if (var11) {
                   return var3;
@@ -172,19 +161,19 @@ public final class TextureSampler28 extends AbstractTextureSampler {
                 var14 = 0;
                 var40[2] = var25 + var23;
                 var40[1] = var26;
-                var7 = FloorUnderlay.method1603((byte) -107, SomethingLight0.anInt1559, var22);
+                var7 = GlobalStatics_8.method1603((byte) -107, GlobalStatics_9.anInt1559, var22);
                 var6 = var7 - var8;
                 int[][] var41 = var21;
                 var9 = 0;
                 var21 = var20;
                 var29 = var6;
                 if (var6 < 0) {
-                  var29 = var6 + SomethingLight0.anInt1559;
+                  var29 = var6 + GlobalStatics_9.anInt1559;
                 }
 
                 var20 = var41;
-                if ((SomethingLight0.anInt1559 < var29)) {
-                  var29 -= SomethingLight0.anInt1559;
+                if ((GlobalStatics_9.anInt1559 < var29)) {
+                  var29 -= GlobalStatics_9.anInt1559;
                 }
 
                 while (true) {
@@ -262,13 +251,13 @@ public final class TextureSampler28 extends AbstractTextureSampler {
                                int[][] var7) {
     if (var5 == -69) {
         int var8 = (this.anInt3316 > 0) ?
-          4096 - FloorUnderlay.method1603((byte) -128, this.anInt3316, var2) :
+          4096 - GlobalStatics_8.method1603((byte) -128, this.anInt3316, var2) :
           4096;
         int var9 = this.anInt3299 * this.anInt3314 >> 12;
         int var10 =
-            this.anInt3314 - (var9 > 0 ? FloorUnderlay.method1603((byte) 39, var9, var2) : 0);
-        if (SomethingLight0.anInt1559 <= var3) {
-          var3 -= SomethingLight0.anInt1559;
+            this.anInt3314 - (var9 > 0 ? GlobalStatics_8.method1603((byte) 39, var9, var2) : 0);
+        if (GlobalStatics_9.anInt1559 <= var3) {
+          var3 -= GlobalStatics_9.anInt1559;
         }
 
         int var11;
@@ -295,22 +284,22 @@ public final class TextureSampler28 extends AbstractTextureSampler {
               if ((this.anInt3309 == 0)) {
                 for (var20 = 0; var13 > var20; ++var20) {
                   var21 = var20 * var8 / var13;
-                  var18[RenderAnimation.anInt396 & var20 + var3] =
-                      var18[-1 + var4 + var3 - var20 & RenderAnimation.anInt396] = var21 * var19 >> 12;
+                  var18[GlobalStatics_9.anInt396 & var20 + var3] =
+                      var18[-1 + var4 + var3 - var20 & GlobalStatics_9.anInt396] = var21 * var19 >> 12;
                 }
               } else {
                 for (var20 = 0; var20 < var13; ++var20) {
                   var21 = var20 * var8 / var13;
-                  var18[RenderAnimation.anInt396 & var3 + var20] =
-                      var18[RenderAnimation.anInt396 & var4 + var3 - var20 - 1] =
+                  var18[GlobalStatics_9.anInt396 & var3 + var20] =
+                      var18[GlobalStatics_9.anInt396 & var4 + var3 - var20 - 1] =
                           (var19 <= var21) ? var19 : var21;
                 }
               }
 
-              if (SomethingLight0.anInt1559 >= var16 + var15) {
+              if (GlobalStatics_9.anInt1559 >= var16 + var15) {
                 ArrayUtils.fill(var18, var15, var16, var19);
               } else {
-                var20 = -var15 + SomethingLight0.anInt1559;
+                var20 = -var15 + GlobalStatics_9.anInt1559;
                 ArrayUtils.fill(var18, var15, var20, var19);
                 ArrayUtils.fill(var18, 0, -var20 + var16, var19);
               }
@@ -318,12 +307,12 @@ public final class TextureSampler28 extends AbstractTextureSampler {
               var19 = var6 - var17 - 1;
               if ((var19 >= var14)) {
                 for (var20 = 0; var13 > var20; ++var20) {
-                  var18[RenderAnimation.anInt396 & var3 + var20] =
-                    var18[-1 - var20 + var3 + var4 & RenderAnimation.anInt396] = var8 * var20 / var13;
+                  var18[GlobalStatics_9.anInt396 & var3 + var20] =
+                    var18[-1 - var20 + var3 + var4 & GlobalStatics_9.anInt396] = var8 * var20 / var13;
                 }
 
-                if ((var15 + var16) > SomethingLight0.anInt1559) {
-                  var20 = -var15 + SomethingLight0.anInt1559;
+                if ((var15 + var16) > GlobalStatics_9.anInt1559) {
+                  var20 = -var15 + GlobalStatics_9.anInt1559;
                   ArrayUtils.fill(var18, var15, var20, var8);
                   ArrayUtils.fill(var18, 0, var16 - var20, var8);
                 } else {
@@ -336,19 +325,19 @@ public final class TextureSampler28 extends AbstractTextureSampler {
                   for (var21 = 0; var13 > var21; ++var21) {
                     var22 = var8 * var21 / var13;
                     int var110 = -1 + var3 - (-var4 + var21);
-                    var18[RenderAnimation.anInt396 & var3 + var21] =
-                      var18[RenderAnimation.anInt396 & var110] = var22 * var20 >> 12;
+                    var18[GlobalStatics_9.anInt396 & var3 + var21] =
+                      var18[GlobalStatics_9.anInt396 & var110] = var22 * var20 >> 12;
                   }
                 } else {
                   for (var21 = 0; var13 > var21; ++var21) {
                     var22 = var21 * var8 / var13;
-                    var18[var3 + var21 & RenderAnimation.anInt396] =
-                      var18[-1 - var21 + var4 + var3 & RenderAnimation.anInt396] = (var20 <= var22) ? var20 : var22;
+                    var18[var3 + var21 & GlobalStatics_9.anInt396] =
+                      var18[-1 - var21 + var4 + var3 & GlobalStatics_9.anInt396] = (var20 <= var22) ? var20 : var22;
                   }
                 }
 
-                if (var16 + var15 > SomethingLight0.anInt1559) {
-                  var21 = SomethingLight0.anInt1559 - var15;
+                if (var16 + var15 > GlobalStatics_9.anInt1559) {
+                  var21 = GlobalStatics_9.anInt1559 - var15;
                   ArrayUtils.fill(var18, var15, var21, var20);
                   ArrayUtils.fill(var18, 0, -var21 + var16, var20);
                 } else {
@@ -357,12 +346,12 @@ public final class TextureSampler28 extends AbstractTextureSampler {
               }
             }
           }
-        } else if ((SomethingLight0.anInt1559 >= (var3 + var4))) {
+        } else if ((GlobalStatics_9.anInt1559 >= (var3 + var4))) {
           for (var11 = 0; var6 > var11; ++var11) {
             ArrayUtils.fill(var7[var1 + var11], var3, var4, var8);
           }
         } else {
-          var11 = SomethingLight0.anInt1559 - var3;
+          var11 = GlobalStatics_9.anInt1559 - var3;
 
           for (var12 = 0; var6 > var12; ++var12) {
             int[] var24 = var7[var12 + var1];
@@ -372,32 +361,6 @@ public final class TextureSampler28 extends AbstractTextureSampler {
         }
 
       }
-  }
-
-  public static void method290(int var0) {
-    TextureSampler28.aClass94_3307 = null;
-      TextureSampler28.aClass94_3302 = null;
-      if (var0 == -9) {
-        TextureSampler28.fileUnpacker10 = null;
-        TextureSampler28.aClass94_3306 = null;
-        TextureSampler28.aClass94_3311 = null;
-      }
-  }
-
-  public static boolean method292(int var0, int var1, int var2, int var3, SceneNode var4, int var5,
-                                 long var6, int var8, int var9, int var10, int var11) {
-    return var4 == null || DummyClass42
-        .addNodeToSceneGraph(var0, var8, var9, var10 - var8 + 1,
-            var11 - var9 + 1, var1,
-            var2, var3, var4, var5, true, var6);
-  }
-
-  public static int method293(int var0, int var1, boolean var2, int var3) {
-    var1 &= 3;
-      return var2 ?
-        120 :
-        (var1 == 0
-            ? var3 : (var1 != 1 ? ((var1 != 2) ? var0 : -var3 + 1023) : -var0 + 1023));
   }
 
 }

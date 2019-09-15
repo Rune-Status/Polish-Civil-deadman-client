@@ -68,9 +68,9 @@ public class GLStatics {
       }
 
       if ((DummyClass30.anInt453 == var2)) {
-        if (var2 != 0 && var1 != TextureSampler37.anInt3263) {
-          MapScene.anInterface5Array70[var2].set(var1);
-          TextureSampler37.anInt3263 = var1;
+        if (var2 != 0 && var1 != GlobalStatics_10.anInt3263) {
+          GlobalStatics_9.anInterface5Array70[var2].set(var1);
+          GlobalStatics_10.anInt3263 = var1;
         }
       } else {
         if (aBoolean3207) {
@@ -78,17 +78,17 @@ public class GLStatics {
         }
 
         if ((DummyClass30.anInt453 != 0)) {
-          MapScene.anInterface5Array70[DummyClass30.anInt453].disable();
+          GlobalStatics_9.anInterface5Array70[DummyClass30.anInt453].disable();
         }
 
         if ((var2 != 0)) {
-          MaterialShader var3 = MapScene.anInterface5Array70[var2];
+          MaterialShader var3 = GlobalStatics_9.anInterface5Array70[var2];
           var3.enable();
           var3.set(var1);
         }
 
         DummyClass30.anInt453 = var2;
-        TextureSampler37.anInt3263 = var1;
+        GlobalStatics_10.anInt3263 = var1;
       }
 
     }
@@ -123,8 +123,8 @@ public class GLStatics {
         (var1 >> 8 & 255) / 255.0F;
     GlobalStatics_5.aFloatArray1934[2] = (255 & var1)
         / 255.0F;
-    IntegerNode.method383(-32584, 3);
-    IntegerNode.method383(-32584, 4);
+    GlobalStatics_9.method383(-32584, 3);
+    GlobalStatics_9.method383(-32584, 4);
     if (var0 != 56) {
       method535((byte) 127, 99);
     }
@@ -135,10 +135,10 @@ public class GLStatics {
     if (((var1 - var0) >= DummyClass55.anInt1425)
         && GlTexture2d.anInt3765 >= var0 + var1
         && var3 - var0 >= DummyClass13.anInt2020
-        && LightIntensity.anInt902 >= var0 + var3) {
-      IdentityKit.method949(var1, (byte) 118, var0, var2, var3);
+        && GlobalStatics_9.anInt902 >= var0 + var3) {
+      GlobalStatics_9.method949(var1, (byte) 118, var0, var2, var3);
     } else {
-      GZipDecompressor.method1129(var2, var3, var0, 0, var1);
+      GlobalStatics_9.method1129(var2, var3, var0, 0, var1);
     }
   }
 
@@ -155,31 +155,31 @@ public class GLStatics {
   public static AbstractDirectColorSprite method1062(int var0) {
     byte[] var2 = DummyClass5.aByteArrayArray2987[0];
     int var1 =
-        GroundItem.anIntArray2931[0] * TextureSampler26.anIntArray3076[0];
+        GlobalStatics_9.anIntArray2931[0] * GlobalStatics_10.anIntArray3076[0];
     int[] var3 = new int[var1];
     if (var0 < 70) {
       method1062(67);
     }
 
     for (int var4 = 0; var1 > var4; ++var4) {
-      var3[var4] = TextureSampler38.anIntArray3446[(int) var2[var4] & 255];
+      var3[var4] = GlobalStatics_10.anIntArray3446[(int) var2[var4] & 255];
     }
 
     AbstractDirectColorSprite var6;
     if (GlRenderer.useOpenGlRenderer) {
-      var6 = new GlDirectColorSprite(SomethingVolume15.anInt2426,
-          SomethingPacket116.anInt1748,
-          Something3dRoot.anIntArray2048[0], GlobalStatics_0.anIntArray2591[0],
-          GroundItem.anIntArray2931[0],
-          TextureSampler26.anIntArray3076[0], var3);
+      var6 = new GlDirectColorSprite(GlobalStatics_9.anInt2426,
+          GlobalStatics_9.anInt1748,
+          GlobalStatics_9.anIntArray2048[0], GlobalStatics_0.anIntArray2591[0],
+          GlobalStatics_9.anIntArray2931[0],
+          GlobalStatics_10.anIntArray3076[0], var3);
     } else {
       var6 =
-          new SoftwareDirectColorSprite(SomethingVolume15.anInt2426,
-              SomethingPacket116.anInt1748,
-              Something3dRoot.anIntArray2048[0],
+          new SoftwareDirectColorSprite(GlobalStatics_9.anInt2426,
+              GlobalStatics_9.anInt1748,
+              GlobalStatics_9.anIntArray2048[0],
               GlobalStatics_0.anIntArray2591[0],
-              GroundItem.anIntArray2931[0],
-              TextureSampler26.anIntArray3076[0], var3);
+              GlobalStatics_9.anIntArray2931[0],
+              GlobalStatics_10.anIntArray3076[0], var3);
     }
 
     DummyClass37.method1035((byte) 111);
@@ -191,7 +191,7 @@ public class GLStatics {
   }
 
   public static void method1083() {
-    TextureSampler16.anIntArray3107 =
+    GlobalStatics_10.anIntArray3107 =
         GlobalStatics_2.method62(true, 14585, 8, 2048, 4, 0.4F, 8, 35);
   }
 

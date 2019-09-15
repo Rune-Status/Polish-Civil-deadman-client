@@ -12,17 +12,17 @@ public final class DummyClass56 {
 
 
   public static void method1645(FileUnpacker var0, FileUnpacker var1, byte var2) {
-    Keyboard.sprites = var1;
+    GlobalStatics_9.sprites = var1;
       int var4 = (int) (21.0D * Math.random()) - 10;
-      ScriptState.configs = var0;
+      GlobalStatics_9.configs = var0;
       int var5 = (int) (21.0D * Math.random()) - 10;
-      ScriptState.configs.getAmountChildren(34, (byte) 103);
+      GlobalStatics_9.configs.getAmountChildren(34, (byte) 103);
       int var3 = (int) (Math.random() * 21.0D) - 10;
       int var6 = -20 + (int) (41.0D * Math.random());
       GlobalStatics_5.anInt2015 = var6 + var5;
       if (var2 == -67) {
         DummyClass39.anInt740 = var4 + var6;
-        TextureCache.anInt2136 = var6 + var3;
+        GlobalStatics_9.anInt2136 = var6 + var3;
       }
   }
 

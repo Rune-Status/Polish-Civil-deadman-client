@@ -78,8 +78,8 @@ public final class DummyClass29 {
   }
 
   public static void method909(int var0, Widget var1) {
-    if ((SomethingOtherWorldMap.anInt2535 == var1.anInt204)) {
-        GroundItemNode.aBooleanArray3674[var1.anInt292] = true;
+    if ((GlobalStatics_9.anInt2535 == var1.anInt204)) {
+        GlobalStatics_9.aBooleanArray3674[var1.anInt292] = true;
       }
 
       int var2 = -100 / ((var0 - 55) / 52);
@@ -90,7 +90,7 @@ public final class DummyClass29 {
     boolean var9 = true;
       long var7 = 0L;
       if (var4 == 0) {
-        var7 = SomethingAudio.method2174(var3, var2, var1);
+        var7 = GlobalStatics_9.method2174(var3, var2, var1);
       } else if (var4 != 1) {
         if ((var4 == 2)) {
           var7 = GlobalStatics_6.method557(var3, var2, var1);
@@ -98,7 +98,7 @@ public final class DummyClass29 {
           var7 = GLStatics.method104(var3, var2, var1);
         }
       } else {
-        var7 = HashTableIterator.method1395(var3, var2, var1);
+        var7 = GlobalStatics_9.method1395(var3, var2, var1);
       }
 
       boolean var10 = false;
@@ -108,7 +108,7 @@ public final class DummyClass29 {
         int var17 = (int) (var7 >>> 32) & Integer.MAX_VALUE;
         GameObjectConfig var12 = DummyClass11.method2207(4, var17);
         if (var12.method1690(28933)) {
-          Projectile.method2020(var2, var12, (byte) -73, var1, var3);
+          GlobalStatics_9.method2020(var2, var12, (byte) -73, var1, var3);
         }
 
         int var18 = ((int) var7 & 4109484) >> 20;
@@ -238,7 +238,7 @@ public final class DummyClass29 {
               } else {
                 FileSystem.method840(var12, (byte) -119,
                     GlobalStatics_6.anIntArray3491[var18] * 8, var18,
-                    RenderAnimation.anIntArray356[var18] * 8, 4, var2, var1,
+                    GlobalStatics_9.anIntArray356[var18] * 8, 4, var2, var1,
                     var5);
               }
             }

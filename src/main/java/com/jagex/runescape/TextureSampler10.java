@@ -6,10 +6,6 @@ import com.jagex.runescape.huffman.HuffmanEncoderStatics;
 
 public final class TextureSampler10 extends AbstractTextureSampler {
 
-  public static int anInt3439;
-  public static SoftwareFont aClass3_Sub28_Sub17_Sub1_3440;
-
-  public static int anInt3442;
   private int[][] anIntArrayArray3438;
   private int[] anIntArray3443 = new int[257];
 
@@ -211,7 +207,7 @@ public final class TextureSampler10 extends AbstractTextureSampler {
       }
 
       if (var2) {
-        TextureSampler10.aClass3_Sub28_Sub17_Sub1_3440 = null;
+        GlobalStatics_9.aClass3_Sub28_Sub17_Sub1_3440 = null;
       }
   }
 
@@ -262,7 +258,7 @@ public final class TextureSampler10 extends AbstractTextureSampler {
         int[] var6 = var3[0];
         int[] var8 = var3[2];
 
-        for (int var9 = 0; SomethingLight0.anInt1559 > var9; ++var9) {
+        for (int var9 = 0; GlobalStatics_9.anInt1559 > var9; ++var9) {
           int var4 = var5[var9] >> 4;
           if ((var4 < 0)) {
             var4 = 0;
@@ -284,7 +280,7 @@ public final class TextureSampler10 extends AbstractTextureSampler {
 
   private void method346(int var1) {
     if (var1 <= 95) {
-        TextureSampler10.method350((byte) -28, -113);
+        GlobalStatics_9.method350((byte) -28, -113);
       }
 
       int var5 = this.anIntArrayArray3438.length;
@@ -351,124 +347,6 @@ public final class TextureSampler10 extends AbstractTextureSampler {
               HuffmanEncoderStatics.method308(var4,
                   HuffmanEncoderStatics.method308(var3 << 8, var2 << 16));
         }
-      }
-  }
-
-  public static void method347(boolean var0) {
-    GameWorld.anInt2622 = 0;
-      if (!var0) {
-        TextureSampler10.method347(true);
-      }
-
-      int var1 =
-          WorldMapLabel.anInt1716 + (TextureCache.localPlayer.anInt2819 >> 7);
-      int var2 = (TextureCache.localPlayer.anInt2829 >> 7)
-          + ProceduralTexture.anInt1152;
-      if ((var1 >= 3053) && (var1 <= 3156) && (var2 >= 3056) && var2 <= 3136) {
-        GameWorld.anInt2622 = 1;
-      }
-
-      if (var1 >= 3072 && var1 <= 3118 && var2 >= 9492 && var2 <= 9535) {
-        GameWorld.anInt2622 = 1;
-      }
-
-      if ((GameWorld.anInt2622 == 1) && (var1 >= 3139) && (var1 <= 3199)
-          && var2 >= 3008
-          && var2 <= 3062) {
-        GameWorld.anInt2622 = 0;
-      }
-  }
-
-  public static void method348(int var0) {
-    if (var0 >= 7) {
-        TextureSampler10.aClass3_Sub28_Sub17_Sub1_3440 = null;
-        RSAConfiguration.MODULUS = null;
-      }
-  }
-
-  public static boolean method349(int var0, int var1, int var2) {
-    for (int var3 = 0; var3 < SomethingTilek.anInt1672; ++var3) {
-      SomethingLight0 var4 = Unsure.aClass113Array1895[var3];
-      int var5;
-      int var6;
-      int var7;
-      int var8;
-      int var9;
-      if (var4.anInt1564 == 1) {
-        var5 = var4.anInt1562 - var0;
-        if (var5 > 0) {
-          var6 = var4.anInt1560 + (var4.anInt1555 * var5 >> 8);
-          var7 = var4.anInt1550 + (var4.anInt1551 * var5 >> 8);
-          var8 = var4.anInt1544 + (var4.anInt1561 * var5 >> 8);
-          var9 = var4.anInt1548 + (var4.anInt1565 * var5 >> 8);
-          if (var2 >= var6 && var2 <= var7 && var1 >= var8 && var1 <= var9) {
-            return true;
-          }
-        }
-      } else if (var4.anInt1564 == 2) {
-        var5 = var0 - var4.anInt1562;
-        if (var5 > 0) {
-          var6 = var4.anInt1560 + (var4.anInt1555 * var5 >> 8);
-          var7 = var4.anInt1550 + (var4.anInt1551 * var5 >> 8);
-          var8 = var4.anInt1544 + (var4.anInt1561 * var5 >> 8);
-          var9 = var4.anInt1548 + (var4.anInt1565 * var5 >> 8);
-          if (var2 >= var6 && var2 <= var7 && var1 >= var8 && var1 <= var9) {
-            return true;
-          }
-        }
-      } else if (var4.anInt1564 == 3) {
-        var5 = var4.anInt1560 - var2;
-        if (var5 > 0) {
-          var6 = var4.anInt1562 + (var4.anInt1549 * var5 >> 8);
-          var7 = var4.anInt1545 + (var4.anInt1557 * var5 >> 8);
-          var8 = var4.anInt1544 + (var4.anInt1561 * var5 >> 8);
-          var9 = var4.anInt1548 + (var4.anInt1565 * var5 >> 8);
-          if (var0 >= var6 && var0 <= var7 && var1 >= var8 && var1 <= var9) {
-            return true;
-          }
-        }
-      } else if (var4.anInt1564 == 4) {
-        var5 = var2 - var4.anInt1560;
-        if (var5 > 0) {
-          var6 = var4.anInt1562 + (var4.anInt1549 * var5 >> 8);
-          var7 = var4.anInt1545 + (var4.anInt1557 * var5 >> 8);
-          var8 = var4.anInt1544 + (var4.anInt1561 * var5 >> 8);
-          var9 = var4.anInt1548 + (var4.anInt1565 * var5 >> 8);
-          if (var0 >= var6 && var0 <= var7 && var1 >= var8 && var1 <= var9) {
-            return true;
-          }
-        }
-      } else if (var4.anInt1564 == 5) {
-        var5 = var1 - var4.anInt1544;
-        if (var5 > 0) {
-          var6 = var4.anInt1562 + (var4.anInt1549 * var5 >> 8);
-          var7 = var4.anInt1545 + (var4.anInt1557 * var5 >> 8);
-          var8 = var4.anInt1560 + (var4.anInt1555 * var5 >> 8);
-          var9 = var4.anInt1550 + (var4.anInt1551 * var5 >> 8);
-          if (var0 >= var6 && var0 <= var7 && var2 >= var8 && var2 <= var9) {
-            return true;
-          }
-        }
-      }
-    }
-
-    return false;
-  }
-
-  public static FloorOverlay method350(byte var0, int var1) {
-    FloorOverlay var2 = (FloorOverlay) DummyClass8.aClass93_4015.get(var1);
-      if (var2 == null) {
-        int var3 = 70 % ((var0 - 43) / 57);
-        byte[] var4 = GlobalStatics_6.configs.getBytes(4, var1);
-        var2 = new FloorOverlay();
-        if (var4 != null) {
-          var2.method2274(24559, new Buffer(var4), var1);
-        }
-
-        DummyClass8.aClass93_4015.get((byte) -109, var2, var1);
-        return var2;
-      } else {
-        return var2;
       }
   }
 

@@ -26,7 +26,7 @@ public final class DummyClass1 {
         int var4;
         int var5;
         if (var1.anInt2772 != -1 && var1.anInt2772 < '\u8000') {
-          NPC var3 = TextureSampler5.npcs[var1.anInt2772];
+          NPC var3 = GlobalStatics_8.npcs[var1.anInt2772];
           if (var3 != null) {
             var5 = -var3.anInt2829 + var1.anInt2829;
             var4 = -var3.anInt2819 + var1.anInt2819;
@@ -40,11 +40,11 @@ public final class DummyClass1 {
         int var9;
         if (var1.anInt2772 >= '\u8000') {
           var9 = -32768 + var1.anInt2772;
-          if ((var9 == WidgetAccess.localPlayerId)) {
+          if ((var9 == GlobalStatics_10.localPlayerId)) {
             var9 = 2047;
           }
 
-          Player var10 = TextureSampler0.players[var9];
+          Player var10 = GlobalStatics_9.players[var9];
           if (var10 != null) {
             var6 = -var10.anInt2829 + var1.anInt2829;
             var5 = -var10.anInt2819 + var1.anInt2819;
@@ -57,9 +57,9 @@ public final class DummyClass1 {
         if ((var1.anInt2786 != 0 || var1.anInt2762 != 0) && (var1.anInt2816 == 0
           || (var1.anInt2824 > 0))) {
           var9 = var1.anInt2819 - (
-            (-WorldMapLabel.anInt1716 + (var1.anInt2786 - WorldMapLabel.anInt1716)) * 64);
+            (-GlobalStatics_10.anInt1716 + (var1.anInt2786 - GlobalStatics_10.anInt1716)) * 64);
           var4 =
-            -((-ProceduralTexture.anInt1152 + (var1.anInt2762 - ProceduralTexture.anInt1152)) * 64)
+            -((-GlobalStatics_9.anInt1152 + (var1.anInt2762 - GlobalStatics_9.anInt1152)) * 64)
               + var1.anInt2829;
           if ((var9 != 0) || var4 != 0) {
             var1.anInt2806 = (int) (Math.atan2(var9, var4) * 325.949D) & 2047;

@@ -32,12 +32,12 @@ public final class DummyClass43 {
 
   public static void method1194(int var0) {
     if (var0 == -16385) {
-        if (SomethingWorldMappy.audioOutputStream1 != null) {
-          SomethingWorldMappy.audioOutputStream1.process((byte) -34);
+        if (GlobalStatics_9.audioOutputStream1 != null) {
+          GlobalStatics_9.audioOutputStream1.process((byte) -34);
         }
 
-        if (GameWorld.audioOutputStream0 != null) {
-          GameWorld.audioOutputStream0.process((byte) -34);
+        if (GlobalStatics_9.audioOutputStream0 != null) {
+          GlobalStatics_9.audioOutputStream0.process((byte) -34);
         }
 
       }
@@ -128,7 +128,7 @@ public final class DummyClass43 {
 
       DummyClass55.anInt1425 = var1;
       DummyClass13.anInt2020 = var0;
-      LightIntensity.anInt902 = var3;
+      GlobalStatics_9.anInt902 = var3;
   }
 
   public static void method1197(FileUnpacker var0, byte var1) {

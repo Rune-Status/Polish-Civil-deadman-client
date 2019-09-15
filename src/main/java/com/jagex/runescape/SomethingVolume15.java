@@ -1,21 +1,10 @@
 package com.jagex.runescape;
 
 import com.jagex.runescape.buffer.Buffer;
-import com.jagex.runescape.common.GameString;
-import com.jagex.runescape.common.GameStringStatics;
-import com.jagex.runescape.done.CollisionMap;
 import com.jagex.runescape.node.Node;
 
 public final class SomethingVolume15 extends Node {
 
-  public static int anInt2421 = -1;
-  public static int anInt2426;
-  public static boolean aBoolean2427;
-  public static ObjectCache aClass93_2428 = new ObjectCache(50);
-  public static SocketStream gameSocket;
-  public static GameString COMMAND_TWEEN = GameStringStatics.create("::tween");
-  public static boolean aBoolean2433;
-  public static int anInt2436;
   public byte[] aByteArray2422;
   public int anInt2424;
   public byte[] aByteArray2425;
@@ -349,7 +338,7 @@ public final class SomethingVolume15 extends Node {
           var32 = (var30 - var48) * var46 + (var30 - var48) / 2;
 
           for (var33 = var48; (var33 < var30); ++var33) {
-            var34 = TextureSampler14.method319(var32, -125, -var48 + var30);
+            var34 = GlobalStatics_10.method319(var32, -125, -var48 + var30);
             var32 += var31 - var46;
             this.aByteArray2430[var33] = (byte) (var34 * this.aByteArray2430[var33] + 32 >> 6);
           }
@@ -397,7 +386,7 @@ public final class SomethingVolume15 extends Node {
           var29 += 2;
 
           for (var33 = var48; var30 > var33; ++var33) {
-            var34 = TextureSampler14.method319(var32, -116, -var48 + var30);
+            var34 = GlobalStatics_10.method319(var32, -116, -var48 + var30);
             var32 += -var47 + var45;
             int var35 = var34 + (this.aByteArray2422[var33] & 255);
             if (var35 < 0) {
@@ -508,87 +497,6 @@ public final class SomethingVolume15 extends Node {
         return var5;
       } else {
         return false;
-      }
-  }
-
-  public static void method370(byte var0) {
-    int var1 = -125 / ((0 - var0) / 59);
-      DummyClass14.aClass93_1955.method1524(3);
-  }
-
-  public static SomethingWorldMapy method371(int var0, GameString var1) {
-    if (var0 != 2) {
-        SomethingVolume15.method372(false);
-      }
-
-      for (SomethingWorldMapy var2 = (SomethingWorldMapy) DummyClass21.aClass61_1758.getFirst();
-           var2 != null; var2 = (SomethingWorldMapy) DummyClass21.aClass61_1758.getNext()) {
-        if (var2.aClass94_3561.method1528((byte) -42, var1)) {
-          return var2;
-        }
-      }
-
-      return null;
-  }
-
-  public static void method372(boolean var0) {
-    SomethingVolume15.COMMAND_TWEEN = null;
-      if (var0) {
-        SomethingVolume15.aClass93_2428 = null;
-        SomethingVolume15.gameSocket = null;
-      }
-  }
-
-  public static void method374(int var0, boolean var1, byte[] var2, int var3, int var4,
-                              CollisionMap[] var5) {
-    Buffer var6 = new Buffer(var2);
-      int var7 = -1;
-
-      while (true) {
-        int var8 = var6.method773((byte) -126);
-        if (var8 == 0) {
-          if (var4 != 0) {
-            SomethingVolume15.method372(true);
-          }
-
-          return;
-        }
-
-        var7 += var8;
-        int var9 = 0;
-
-        while (true) {
-          int var10 = var6.readUnsignedShortSmart();
-          if ((var10 == 0)) {
-            break;
-          }
-
-          var9 += var10 - 1;
-          int var11 = var9 & 63;
-          int var13 = var9 >> 12;
-          int var12 = var9 >> 6 & 63;
-          int var14 = var6.readUnsignedByte();
-          int var15 = var14 >> 2;
-          int var16 = var14 & 3;
-          int var17 = var0 + var12;
-          int var18 = var11 + var3;
-          if (var17 > 0 && var18 > 0 && var17 < 103 && (var18 < 103)) {
-            CollisionMap var19 = null;
-            if (!var1) {
-              int var20 = var13;
-              if (((2 & BZipDecompressorState.tileFlags[1][var17][var18]) == 2)) {
-                var20 = var13 - 1;
-              }
-
-              if (var20 >= 0) {
-                var19 = var5[var20];
-              }
-            }
-
-            DummyClass31.method1683(var13, !var1, var13, var1, var19, var7, var15, var17, (byte) 50,
-              var18, var16);
-          }
-        }
       }
   }
 

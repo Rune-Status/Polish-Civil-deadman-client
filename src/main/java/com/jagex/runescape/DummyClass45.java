@@ -45,15 +45,15 @@ public final class DummyClass45 {
       int var6 = var2 / var0;
       int var7 = var2 & var0 - 1;
       int var5 = -1 + var0 & var1;
-      int var8 = SomethingWorldMapy.method543(var4, var6, (byte) -82);
-      int var9 = SomethingWorldMapy.method543(var4 + 1, var6, (byte) -104);
-      int var10 = SomethingWorldMapy.method543(var4, 1 + var6, (byte) -100);
+      int var8 = GlobalStatics_9.method543(var4, var6, (byte) -82);
+      int var9 = GlobalStatics_9.method543(var4 + 1, var6, (byte) -104);
+      int var10 = GlobalStatics_9.method543(var4, 1 + var6, (byte) -100);
       if (var3 == 512) {
-        int var11 = SomethingWorldMapy
+        int var11 = GlobalStatics_9
             .method543(1 + var4, var6 + 1, (byte) -109);
-        int var12 = TextureSampler39.method275(var8, var9, var5, 96, var0);
-        int var13 = TextureSampler39.method275(var10, var11, var5, 16, var0);
-        return TextureSampler39.method275(var12, var13, var7, 87, var0);
+        int var12 = GlobalStatics_10.method275(var8, var9, var5, 96, var0);
+        int var13 = GlobalStatics_10.method275(var10, var11, var5, 16, var0);
+        return GlobalStatics_10.method275(var12, var13, var7, 87, var0);
       } else {
         return -57;
       }
@@ -62,7 +62,7 @@ public final class DummyClass45 {
   public static void method1235(int var0, int var1, int var2, int var3, byte var4) {
     if (GlobalStatics_0.anInt638 == 1) {
         DummyClass17.aClass3_Sub28_Sub16Array1825[GlobalStatics_7.anInt2958 / 100].method643(
-          -8 + SceneSomething2.anInt1053, -8 + GlobalStatics_7.anInt4062);
+          -8 + GlobalStatics_9.anInt1053, -8 + GlobalStatics_7.anInt4062);
       }
 
       if (var4 != -121) {
@@ -71,10 +71,10 @@ public final class DummyClass45 {
 
       if ((GlobalStatics_0.anInt638 == 2)) {
         DummyClass17.aClass3_Sub28_Sub16Array1825[4 + GlobalStatics_7.anInt2958 / 100].method643(
-          SceneSomething2.anInt1053 - 8, -8 + GlobalStatics_7.anInt4062);
+          GlobalStatics_9.anInt1053 - 8, -8 + GlobalStatics_7.anInt4062);
       }
 
-      TextureSampler10.method347(true);
+      GlobalStatics_9.method347(true);
   }
 
   public static void setQuickchatFileUnpackers(FileUnpacker var0, FileUnpacker var1, int var2) {
@@ -83,11 +83,11 @@ public final class DummyClass45 {
         DummyClass45.aClass94_992 = null;
       }
 
-      Queue.globalQuickchats = var0;
+      GlobalStatics_9.globalQuickchats = var0;
   }
 
   public static void method1237(int var0, int var1) {
-    GameWorld.deltaTime = var1 / var0;
+    GlobalStatics_9.deltaTime = var1 / var0;
   }
 
   public static void method1238(int var0) {
@@ -122,26 +122,26 @@ public final class DummyClass45 {
           var6 = 0;
         }
 
-        int var7 = var6 * (TextureSampler33.aShort3052 - GlobalStatics_7.aShort1444) / 100
+        int var7 = var6 * (GlobalStatics_10.aShort3052 - GlobalStatics_7.aShort1444) / 100
           + GlobalStatics_7.aShort1444;
-        if (TextureSampler4.aShort3241 <= var7) {
+        if (GlobalStatics_9.aShort3241 <= var7) {
           if (DummyClass18.aShort83 < var7) {
             var7 = DummyClass18.aShort83;
           }
         } else {
-          var7 = TextureSampler4.aShort3241;
+          var7 = GlobalStatics_9.aShort3241;
         }
 
         int var8 = var7 * var3 * 512 / (var0 * 334);
         int var9;
         int var10;
         short var12;
-        if (var8 >= GameWorldSomething.aShort505) {
-          if ((TextureSampler18.aShort4038 < var8)) {
-            var12 = TextureSampler18.aShort4038;
+        if (var8 >= GlobalStatics_9.aShort505) {
+          if ((GlobalStatics_10.aShort4038 < var8)) {
+            var12 = GlobalStatics_10.aShort4038;
             var7 = var12 * var0 * 334 / (var3 * 512);
-            if (TextureSampler4.aShort3241 > var7) {
-              var7 = TextureSampler4.aShort3241;
+            if (GlobalStatics_9.aShort3241 > var7) {
+              var7 = GlobalStatics_9.aShort3241;
               var9 = var12 * var0 * 334 / (512 * var7);
               var10 = (-var9 + var3) / 2;
               if (var5) {
@@ -155,7 +155,7 @@ public final class DummyClass45 {
             }
           }
         } else {
-          var12 = GameWorldSomething.aShort505;
+          var12 = GlobalStatics_9.aShort505;
           var7 = 334 * var0 * var12 / (512 * var3);
           if (DummyClass18.aShort83 < var7) {
             var7 = DummyClass18.aShort83;
@@ -175,36 +175,36 @@ public final class DummyClass45 {
         GlobalStatics_0.anInt1705 = var7 * var3 / 334;
       }
 
-      HintMarker.anInt1358 = (short) var0;
-      GameCanvas.anInt31 = (short) var3;
+      GlobalStatics_9.anInt1358 = (short) var0;
+      GlobalStatics_8.anInt31 = (short) var3;
       if (var1 < 11) {
         DummyClass45.method1233(null, 18);
       }
 
-      SomethingWorldMapy.anInt3564 = var2;
+      GlobalStatics_9.anInt3564 = var2;
       DummyClass5.anInt2989 = var4;
   }
 
   public static void method1240(boolean var0) {
-    SomethingTilek.p12Font = null;
-      SomethingTexture3.aClass3_Sub28_Sub16Array2656 = null;
+    GlobalStatics_9.p12Font = null;
+      GlobalStatics_9.aClass3_Sub28_Sub16Array2656 = null;
       DummyClass17.aClass3_Sub28_Sub16Array1825 = null;
-      TextureSampler0.aClass109Array3270 = null;
-      SomethingAudio.aClass3_Sub28_Sub17_Sub1_2000 = null;
-      TextureCache.aClass3_Sub28_Sub16_Sub2Array2140 = null;
-      Mobile.aClass3_Sub28_Sub16Array2839 = null;
-      MilliFrameRegulator.aClass3_Sub28_Sub16Array2690 = null;
-      NPC.aClass3_Sub28_Sub16Array3977 = null;
-      FloorOverlay.aClass3_Sub28_Sub17_2096 = null;
-      LightIntensity.aClass3_Sub28_Sub16_895 = null;
-      HashTableIterator.aClass3_Sub28_Sub16Array1136 = null;
+      GlobalStatics_9.aClass109Array3270 = null;
+      GlobalStatics_9.aClass3_Sub28_Sub17_Sub1_2000 = null;
+      GlobalStatics_9.aClass3_Sub28_Sub16_Sub2Array2140 = null;
+      GlobalStatics_9.aClass3_Sub28_Sub16Array2839 = null;
+      GlobalStatics_9.aClass3_Sub28_Sub16Array2690 = null;
+      GlobalStatics_9.aClass3_Sub28_Sub16Array3977 = null;
+      GlobalStatics_8.aClass3_Sub28_Sub17_2096 = null;
+      GlobalStatics_9.aClass3_Sub28_Sub16_895 = null;
+      GlobalStatics_9.aClass3_Sub28_Sub16Array1136 = null;
       GlobalStatics_3.aClass3_Sub28_Sub17_2379 = null;
       DummyClass38.aClass3_Sub28_Sub16_736 = null;
-      OndemandRequester.aClass3_Sub28_Sub16Array996 = null;
-      TextureSampler8.aClass3_Sub28_Sub16Array3458 = null;
-      SomethingIndex150.aClass3_Sub28_Sub16Array2072 = null;
-      TextureSampler2.aClass3_Sub28_Sub16Array3373 = null;
-      SceneNode.aClass109Array1831 = null;
+      GlobalStatics_9.aClass3_Sub28_Sub16Array996 = null;
+      GlobalStatics_9.aClass3_Sub28_Sub16Array3458 = null;
+      GlobalStatics_9.aClass3_Sub28_Sub16Array2072 = null;
+      GlobalStatics_9.aClass3_Sub28_Sub16Array3373 = null;
+      GlobalStatics_9.aClass109Array1831 = null;
       if (var0) {
         DummyClass45.method1233(null, -51);
       }

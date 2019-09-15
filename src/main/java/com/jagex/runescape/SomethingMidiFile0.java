@@ -4,23 +4,6 @@ import com.jagex.runescape.buffer.Buffer;
 
 public final class SomethingMidiFile0 {
 
-  private static byte[] aByteArray1117 = {
-    (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2,
-    (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2,
-    (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2,
-    (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2,
-    (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2,
-    (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2,
-    (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2,
-    (byte) 2, (byte) 1, (byte) 1, (byte) 1, (byte) 1, (byte) 1, (byte) 1, (byte) 1, (byte) 1,
-    (byte) 1, (byte) 1, (byte) 1, (byte) 1, (byte) 1, (byte) 1, (byte) 1, (byte) 1, (byte) 1,
-    (byte) 1, (byte) 1, (byte) 1, (byte) 1, (byte) 1, (byte) 1, (byte) 1, (byte) 1, (byte) 1,
-    (byte) 1, (byte) 1, (byte) 1, (byte) 1, (byte) 1, (byte) 1, (byte) 2, (byte) 2, (byte) 2,
-    (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2,
-    (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 0, (byte) 1, (byte) 2, (byte) 1, (byte) 0,
-    (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0,
-    (byte) 0, (byte) 0
-  };
   public int[] anIntArray1114;
   public int anInt1116;
   private final Buffer aClass3_Sub30_1113 = new Buffer(null);
@@ -111,7 +94,7 @@ public final class SomethingMidiFile0 {
         return 3;
       }
     } else {
-      byte var3 = SomethingMidiFile0.aByteArray1117[var2 - 128];
+      byte var3 = GlobalStatics_9.aByteArray1117[var2 - 128];
       var4 = var2;
       if (var3 >= 1) {
         var4 = var2 | this.aClass3_Sub30_1113.readUnsignedByte() << 8;
@@ -215,10 +198,6 @@ public final class SomethingMidiFile0 {
 
   public void method1384() {
     this.aClass3_Sub30_1113.position = -1;
-  }
-
-  public static void method1369() {
-    SomethingMidiFile0.aByteArray1117 = null;
   }
 
 }

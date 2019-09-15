@@ -50,43 +50,43 @@ public final class BZipDecompressorState {
 
 
   public static void method848(int var0) {
-    if (GlobalStatics_4.aFloat727 < NPC.aFloat3979) {
+    if (GlobalStatics_4.aFloat727 < GlobalStatics_9.aFloat3979) {
         GlobalStatics_4.aFloat727 = (float) (GlobalStatics_4.aFloat727
           + GlobalStatics_4.aFloat727 / 30.0D);
-        if (NPC.aFloat3979 < GlobalStatics_4.aFloat727) {
-          GlobalStatics_4.aFloat727 = NPC.aFloat3979;
+        if (GlobalStatics_9.aFloat3979 < GlobalStatics_4.aFloat727) {
+          GlobalStatics_4.aFloat727 = GlobalStatics_9.aFloat3979;
         }
 
-        SomethingInScenePacket202.method117((byte) 87);
-      } else if (NPC.aFloat3979 < GlobalStatics_4.aFloat727) {
+        GlobalStatics_9.method117((byte) 87);
+      } else if (GlobalStatics_9.aFloat3979 < GlobalStatics_4.aFloat727) {
         GlobalStatics_4.aFloat727 = (float) (GlobalStatics_4.aFloat727
           - GlobalStatics_4.aFloat727 / 30.0D);
-        if (NPC.aFloat3979 > GlobalStatics_4.aFloat727) {
-          GlobalStatics_4.aFloat727 = NPC.aFloat3979;
+        if (GlobalStatics_9.aFloat3979 > GlobalStatics_4.aFloat727) {
+          GlobalStatics_4.aFloat727 = GlobalStatics_9.aFloat3979;
         }
 
-        SomethingInScenePacket202.method117((byte) 87);
+        GlobalStatics_9.method117((byte) 87);
       }
 
-      if ((ProceduralTexture.anInt1150 != -1) && TextureSampler13.anInt3362 != -1) {
-        int var1 = -SomethingQuickChat2.anInt3536 + ProceduralTexture.anInt1150;
+      if ((GlobalStatics_9.anInt1150 != -1) && GlobalStatics_9.anInt3362 != -1) {
+        int var1 = -GlobalStatics_9.anInt3536 + GlobalStatics_9.anInt1150;
         if (var1 < 2 || (var1 > 2)) {
           var1 >>= 4;
         }
 
-        int var2 = -SpawnedGameObject.anInt2251 + TextureSampler13.anInt3362;
+        int var2 = -GlobalStatics_9.anInt2251 + GlobalStatics_9.anInt3362;
         if (var2 < 2 || var2 > 2) {
           var2 >>= 4;
         }
 
-        SpawnedGameObject.anInt2251 -= -var2;
-        SomethingQuickChat2.anInt3536 += var1;
+        GlobalStatics_9.anInt2251 -= -var2;
+        GlobalStatics_9.anInt3536 += var1;
         if (var1 == 0 && var2 == 0) {
-          ProceduralTexture.anInt1150 = -1;
-          TextureSampler13.anInt3362 = -1;
+          GlobalStatics_9.anInt1150 = -1;
+          GlobalStatics_9.anInt3362 = -1;
         }
 
-        SomethingInScenePacket202.method117((byte) 87);
+        GlobalStatics_9.method117((byte) 87);
       }
 
       if (var0 != 4) {
@@ -105,98 +105,98 @@ public final class BZipDecompressorState {
   }
 
   public static void method850(byte var0) {
-    TextureSampler24.aClass94_3142 = InventoryConfig.aClass94_3649;
-      StillGraphicNode.aClass94_3546 = SomethingAudio.aClass94_2002;
-      GlobalStatics_4.aClass94_825 = NpcConfiguration.aClass94_1281;
+    GlobalStatics_10.aClass94_3142 = GlobalStatics_9.aClass94_3649;
+      GlobalStatics_9.aClass94_3546 = GlobalStatics_9.aClass94_2002;
+      GlobalStatics_4.aClass94_825 = GlobalStatics_9.aClass94_1281;
       DummyClass44.aClass94_935 = DummyClass10.aClass94_2086;
       DummyClass32.SKILL = DummyClass1.aClass94_415;
-      GlobalStatics_0.aClass94_1180 = TextureSampler26.aClass94_3079;
+      GlobalStatics_0.aClass94_1180 = GlobalStatics_10.aClass94_3079;
       GlobalStatics_0.aClass94_1183 = DummyClass50.aClass94_1143;
-      DummyClass14.aClass94_1962 = WidgetAccess.aClass94_2207;
-      TextureSampler30.aClass94_3124 = DummyClass4.aClass94_3002;
-      GameCanvas.aClass94_36 = TextureSampler9.aClass94_3106;
-      TextureSampler35.aClass94_3333 = DummyClass35.aClass94_667;
-      TextureSampler36.aClass94_3427 = DummyClass49.aClass94_1110;
+      DummyClass14.aClass94_1962 = GlobalStatics_10.aClass94_2207;
+      GlobalStatics_10.aClass94_3124 = DummyClass4.aClass94_3002;
+      GlobalStatics_8.aClass94_36 = GlobalStatics_9.aClass94_3106;
+      GlobalStatics_10.aClass94_3333 = DummyClass35.aClass94_667;
+      GlobalStatics_10.aClass94_3427 = DummyClass49.aClass94_1110;
       DummyClass8.aClass94_4024 = GlobalStatics_7.aClass94_2945;
-      TextureSampler28.aClass94_3311 = TextureSampler20.aClass94_3157;
-      RenderAnimation.aClass94_374 = GlobalStatics_4.aClass94_3634;
-      FloorUnderlay.aClass94_1409 = Player.aClass94_3957;
-      TriChromaticImageBuffer.aClass94_2481 = GlobalStatics_7.aClass94_1636;
-      GameObject.aClass94_2751 = NPC.aClass94_3991;
-      SomethingAudio.CONNECTING_TO_UPDATE_SERVER = GlobalStatics_0.aClass94_2585;
+      GlobalStatics_10.aClass94_3311 = GlobalStatics_10.aClass94_3157;
+      GlobalStatics_9.aClass94_374 = GlobalStatics_4.aClass94_3634;
+      GlobalStatics_8.aClass94_1409 = GlobalStatics_9.aClass94_3957;
+      GlobalStatics_10.aClass94_2481 = GlobalStatics_7.aClass94_1636;
+      GlobalStatics_8.aClass94_2751 = GlobalStatics_9.aClass94_3991;
+      GlobalStatics_9.CONNECTING_TO_UPDATE_SERVER = GlobalStatics_0.aClass94_2585;
       if (var0 != 121) {
         BZipDecompressorState.method848(-68);
       }
 
-      Structure.aClass94_3645 = DummyClass45.aClass94_989;
+      GlobalStatics_9.aClass94_3645 = DummyClass45.aClass94_989;
       DummyHashTable.aClass94_1688 = DummyClass15.aClass94_1878;
-      IdentityKit.aClass94_461 = DummyClass41.aClass94_868;
-      TextureSampler36.aClass94_3426 = Keyboard.aClass94_1907;
+      GlobalStatics_9.aClass94_461 = DummyClass41.aClass94_868;
+      GlobalStatics_10.aClass94_3426 = GlobalStatics_9.aClass94_1907;
       DummyClass30.aClass94_459 = GlobalStatics_6.aClass94_3585;
       GlobalStatics_2.aClass94_2576 = GlobalStatics_6.aClass94_1882;
       GlobalStatics_2.aClass94_2216 = GlobalStatics_0.aClass94_1179;
-      GlTexture2d.aClass94_3762 = TextureSampler31.aClass94_3172;
-      TextureSampler30.aClass94_3117 = DummyClass4.aClass94_3002;
-      GlobalStatics_7.aClass94_4058 = TextureSampler20.aClass94_3146;
+      GlTexture2d.aClass94_3762 = GlobalStatics_10.aClass94_3172;
+      GlobalStatics_10.aClass94_3117 = DummyClass4.aClass94_3002;
+      GlobalStatics_7.aClass94_4058 = GlobalStatics_10.aClass94_3146;
       GlobalStatics_1.aClass94_2196 = DummyClass58.aClass94_1459;
-      Structure.aClass94_3643 = GlobalStatics_5.aClass94_1621;
-      NPC.aClass94_3988 = GLStatics.aClass94_699;
-      DummyClass27.aClass94_1583 = SomethingTilek.OK;
-      DummyClass53.aClass94_1335 = SomethingInScenePacket202.aClass94_2274;
-      TextureSampler31.aClass94_3167 = GlobalStatics_4.aClass94_3633;
+      GlobalStatics_9.aClass94_3643 = GlobalStatics_5.aClass94_1621;
+      GlobalStatics_9.aClass94_3988 = GLStatics.aClass94_699;
+      DummyClass27.aClass94_1583 = GlobalStatics_9.OK;
+      DummyClass53.aClass94_1335 = GlobalStatics_9.aClass94_2274;
+      GlobalStatics_10.aClass94_3167 = GlobalStatics_4.aClass94_3633;
       DummyClass5.aClass94_2991 = GlobalStatics_6.aClass94_3583;
-      SomethingInScenePacket202.aClass94_2267 = InventoryConfig.aClass94_3646;
-      SomethingSceneJ.aClass94_327 = DummyClass35.aClass94_659;
+      GlobalStatics_9.aClass94_2267 = GlobalStatics_9.aClass94_3646;
+      GlobalStatics_9.aClass94_327 = DummyClass35.aClass94_659;
       DummyClass14.ATTEMPTING_TO_RECONNECT = GlTexture2d.aClass94_3758;
-      SpotAnimationConfig.aClass94_551 = TextureSampler32.aClass94_3345;
-      TextureSampler18.aClass94_4040 = GlobalStatics_6.aClass94_1122;
-      WorldMapLabel.aClass94_1731 = TextureSampler15.aClass94_3206;
-      GlobalStatics_0.aClass94_2151 = TextureSampler11.aClass94_3251;
-      GameObject.OPTION_DROP = GlobalStatics_6.aClass94_2518;
-      GlobalStatics_2.aClass94_43 = TextureSampler1.aClass94_3131;
-      DummyClass42.DEFAULT_WALK_TOOLTIP = SpawnedGameObject.aClass94_2252;
-      GLStatics.aClass94_691 = InventoryConfig.aClass94_3656;
-      SomethingQuickChat.aClass94_3575 = SomethingSceneJ.aClass94_325;
-      OndemandFileRequest.aClass94_4071 = DummyClass20.aClass94_1783;
-      TextureSampler38.aClass94_3445 = GlobalStatics_7.aClass94_1089;
+      GlobalStatics_9.aClass94_551 = GlobalStatics_10.aClass94_3345;
+      GlobalStatics_10.aClass94_4040 = GlobalStatics_6.aClass94_1122;
+      GlobalStatics_10.aClass94_1731 = GlobalStatics_10.aClass94_3206;
+      GlobalStatics_0.aClass94_2151 = GlobalStatics_9.aClass94_3251;
+      GlobalStatics_8.OPTION_DROP = GlobalStatics_6.aClass94_2518;
+      GlobalStatics_2.aClass94_43 = GlobalStatics_9.aClass94_3131;
+      DummyClass42.DEFAULT_WALK_TOOLTIP = GlobalStatics_9.aClass94_2252;
+      GLStatics.aClass94_691 = GlobalStatics_9.aClass94_3656;
+      GlobalStatics_9.aClass94_3575 = GlobalStatics_9.aClass94_325;
+      GlobalStatics_9.aClass94_4071 = DummyClass20.aClass94_1783;
+      GlobalStatics_10.aClass94_3445 = GlobalStatics_7.aClass94_1089;
       GlobalStatics_6.aClass94_3691 = GlobalStatics_0.aClass94_77;
-      GameWorld.aClass94_2624 = LightIntensity.aClass94_897;
+      GlobalStatics_9.aClass94_2624 = GlobalStatics_9.aClass94_897;
       DummyClass15.aClass94_1879 = GlobalStatics_0.aClass94_2594;
-      TextureSampler29.aClass94_3397 = DummyClass20.aClass94_1782;
+      GlobalStatics_10.aClass94_3397 = DummyClass20.aClass94_1782;
       GlobalStatics_6.aClass94_2526 = DummyClass26.aClass94_1612;
-      RenderAnimation.aClass94_361 = SpotAnimationConfig.aClass94_550;
-      TextureSampler27.aClass94_3097 = InventoryConfig.aClass94_3650;
-      SomethingMidiFile.aClass94_2285 = DummyClass45.aClass94_988;
-      StillGraphicNode.aClass94_3544 = TextureSampler36.aClass94_3436;
-      GameStub.aClass94_4 = ISAACCipher.aClass94_973;
-      MapScene.aClass94_62 = GlobalStatics_7.aClass94_1085;
-      SomethingTexture4.aClass94_2667 = GameObjectConfig.aClass94_1508;
-      IdentityKit.aClass94_462 = ProjectileNode.aClass94_3771;
-      WidgetAccess.aClass94_2210 = GlobalStatics_2.aClass94_343;
-      GlobalStatics_0.aClass94_1707 = LightIntensity.aClass94_905;
+      GlobalStatics_9.aClass94_361 = GlobalStatics_9.aClass94_550;
+      GlobalStatics_10.aClass94_3097 = GlobalStatics_9.aClass94_3650;
+      GlobalStatics_9.aClass94_2285 = DummyClass45.aClass94_988;
+      GlobalStatics_9.aClass94_3544 = GlobalStatics_10.aClass94_3436;
+      GlobalStatics_8.aClass94_4 = GlobalStatics_9.aClass94_973;
+      GlobalStatics_9.aClass94_62 = GlobalStatics_7.aClass94_1085;
+      GlobalStatics_9.aClass94_2667 = GlobalStatics_8.aClass94_1508;
+      GlobalStatics_9.aClass94_462 = GlobalStatics_9.aClass94_3771;
+      GlobalStatics_10.aClass94_2210 = GlobalStatics_2.aClass94_343;
+      GlobalStatics_0.aClass94_1707 = GlobalStatics_9.aClass94_905;
       GlobalStatics_7.aClass94_2961 = DummyClass32.aClass94_520;
-      FileTable.aClass94_957 = DummyClass1.aClass94_412;
+      GlobalStatics_8.aClass94_957 = DummyClass1.aClass94_412;
       DummyClass35.aClass94_662 = DummyClass5.aClass94_2995;
-      DummyClass12.aClass94_2031 = GameCanvas.aClass94_35;
+      DummyClass12.aClass94_2031 = GlobalStatics_8.aClass94_35;
       DummyClass26.aClass94_1615 = GlobalStatics_3.aClass94_2458;
       GlobalStatics_4.aClass94_3629 = DummyClass39.aClass94_738;
-      GlobalStatics_6.aClass94_3584 = SomethingTexture1.aClass94_2641;
+      GlobalStatics_6.aClass94_3584 = GlobalStatics_9.aClass94_2641;
       DummyClass32.aClass94_525 = DummyClass45.aClass94_982;
-      GlobalStatics_6.aClass94_3586 = SomethingTexture1.aClass94_2641;
-      WorldMapLabel.aClass94_1722 = DummyClass45.aClass94_981;
-      SceneShadowMap.CONNECTION_LOST = TextureSampler28.aClass94_3302;
-      GlobalStatics_6.aClass94_1884 = NpcConfiguration.aClass94_1294;
-      GlobalStatics_0.LOADED_INTERFACES = FileTable.aClass94_951;
-      SceneSomething.aClass94_485 = DummyCanvas.aClass94_24;
-      TextureSampler11.aClass94_3249 = ProjectileNode.aClass94_3774;
+      GlobalStatics_6.aClass94_3586 = GlobalStatics_9.aClass94_2641;
+      GlobalStatics_10.aClass94_1722 = DummyClass45.aClass94_981;
+      GlobalStatics_9.CONNECTION_LOST = GlobalStatics_10.aClass94_3302;
+      GlobalStatics_6.aClass94_1884 = GlobalStatics_9.aClass94_1294;
+      GlobalStatics_0.LOADED_INTERFACES = GlobalStatics_8.aClass94_951;
+      GlobalStatics_9.aClass94_485 = DummyCanvas.aClass94_24;
+      GlobalStatics_9.aClass94_3249 = GlobalStatics_9.aClass94_3774;
       DummyClass35.aClass94_666 = DummyClass5.aClass94_2995;
-      ItemConfig.aClass94_809 = TextureSampler30.aClass94_3119;
-      TextureSampler33.aClass94_3051 = GlobalStatics_5.aClass94_1620;
-      TextureSampler39.LOADING_PLEASE_WAIT = GameObjectConfig.aClass94_1523;
-      GlobalStatics_7.CONNECTED_TO_UPDATE_SERVER = TextureSampler18.aClass94_4036;
-      GlobalStatics_4.aClass94_822 = GameStub.aClass94_7;
-      Unsure.aClass94_1892 = GameObjectConfig.aClass94_1509;
-      TextureSampler14.aClass94_3388 = DummyClass34.aClass94_593;
+      ItemConfig.aClass94_809 = GlobalStatics_10.aClass94_3119;
+      GlobalStatics_10.aClass94_3051 = GlobalStatics_5.aClass94_1620;
+      GlobalStatics_10.LOADING_PLEASE_WAIT = GlobalStatics_8.aClass94_1523;
+      GlobalStatics_7.CONNECTED_TO_UPDATE_SERVER = GlobalStatics_10.aClass94_4036;
+      GlobalStatics_4.aClass94_822 = GlobalStatics_8.aClass94_7;
+      GlobalStatics_10.aClass94_1892 = GlobalStatics_8.aClass94_1509;
+      GlobalStatics_10.aClass94_3388 = DummyClass34.aClass94_593;
       DummyClass32.aClass94_523 = GlobalStatics_0.aClass94_2599;
       DummyClass24.aClass94_1653 = GLStatics.aClass94_701;
   }

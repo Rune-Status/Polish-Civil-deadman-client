@@ -12,7 +12,7 @@ public class AbstractAudioOutputStream {
   public int sampleRate;
   public int sampleBufferSize;
   private final int anInt1968 = 32;
-  private long aLong1972 = Time.getCurrentTimeMillis();
+  private long aLong1972 = GlobalStatics_10.getCurrentTimeMillis();
   private AudioStreamEncoder aClass3_Sub24_1973;
   private long aLong1979;
   private final AudioStreamEncoder[] aClass3_Sub24Array1980 = new AudioStreamEncoder[8];
@@ -44,7 +44,7 @@ public class AbstractAudioOutputStream {
     this.anInt1987 -= len;
     if (this.aClass3_Sub24_1973 != null && this.anInt1987 <= 0) {
       this.anInt1987 += DummyClass60.sampleRate >> 4;
-      TriChromaticImageCache.method1591(true, this.aClass3_Sub24_1973);
+      GlobalStatics_10.method1591(true, this.aClass3_Sub24_1973);
       this.method2155(this.aClass3_Sub24_1973, this.aClass3_Sub24_1973.method412(), (byte) -24);
       int var4 = 0;
       int var5 = 255;
@@ -136,12 +136,12 @@ public class AbstractAudioOutputStream {
       this.aClass3_Sub24_1973.method413(samples, 0, len);
     }
 
-    this.aLong1972 = Time.getCurrentTimeMillis();
+    this.aLong1972 = GlobalStatics_10.getCurrentTimeMillis();
   }
 
   public final synchronized void process(byte var1) {
     if (this.samples != null) {
-        long start = Time.getCurrentTimeMillis();
+        long start = GlobalStatics_10.getCurrentTimeMillis();
 
         try {
           if (this.pauseTime != 0L) {
@@ -263,7 +263,7 @@ public class AbstractAudioOutputStream {
         this.flush();
       } catch (Exception var3) {
         this.close();
-        this.pauseTime = Time.getCurrentTimeMillis() + 2000L;
+        this.pauseTime = GlobalStatics_10.getCurrentTimeMillis() + 2000L;
       }
   }
 
@@ -307,7 +307,7 @@ public class AbstractAudioOutputStream {
           DummyClass36.aClass15_2613.aBoolean345 = true;
 
           while (DummyClass36.aClass15_2613.aBoolean353) {
-            TextureSampler25.sleep(50L);
+            GlobalStatics_10.sleep(50L);
           }
 
           DummyClass36.aClass15_2613 = null;

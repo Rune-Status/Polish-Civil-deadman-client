@@ -1,7 +1,7 @@
 package com.jagex.runescape.done;
 
 import com.jagex.runescape.GlobalStatics_6;
-import com.jagex.runescape.MonoChromaticImageBuffer;
+import com.jagex.runescape.GlobalStatics_9;
 import com.jagex.runescape.buffer.Buffer;
 import com.jagex.runescape.opengl.GlModel;
 import com.jagex.runescape.opengl.GlRenderer;
@@ -58,7 +58,7 @@ public final class AnimationSequence {
           this.method2053(null, (byte) -126);
         }
 
-        if ((this.tween || MonoChromaticImageBuffer.tweening) && (var3 != -1)
+        if ((this.tween || GlobalStatics_9.tweening) && (var3 != -1)
           && this.anIntArray1851.length > var3) {
           var3 = this.anIntArray1851[var3];
           var9 = GlobalStatics_6.method133(var3 >> 16, 0);
@@ -140,7 +140,7 @@ public final class AnimationSequence {
         return var1.method1894(true, true, true);
       } else {
         AnimationSomething var9 = null;
-        if ((this.tween || MonoChromaticImageBuffer.tweening) && (var3 != -1)
+        if ((this.tween || GlobalStatics_9.tweening) && (var3 != -1)
           && (var3 < this.anIntArray1851.length)) {
           var3 = this.anIntArray1851[var3];
           var9 = GlobalStatics_6.method133(var3 >> 16, 0);
@@ -160,7 +160,7 @@ public final class AnimationSequence {
             }
           }
 
-          if ((this.tween || MonoChromaticImageBuffer.tweening) && var3 != -1
+          if ((this.tween || GlobalStatics_9.tweening) && var3 != -1
             && this.anIntArray1870.length > var3) {
             var14 = this.anIntArray1870[var3];
             if ((var14 != 65535)) {
@@ -211,7 +211,7 @@ public final class AnimationSequence {
       } else {
         var4 &= var6;
         AnimationSomething var9 = null;
-        if ((this.tween || MonoChromaticImageBuffer.tweening) && (var1 != -1)
+        if ((this.tween || GlobalStatics_9.tweening) && (var1 != -1)
           && (var1 < this.anIntArray1851.length)) {
           var1 = this.anIntArray1851[var1];
           var9 = GlobalStatics_6.method133(var1 >> 16, var6 - 3);
@@ -303,7 +303,7 @@ public final class AnimationSequence {
         return var5.method1882(true, true, true);
       } else {
         AnimationSomething var9 = null;
-        if ((this.tween || MonoChromaticImageBuffer.tweening) && (var1 != -1)
+        if ((this.tween || GlobalStatics_9.tweening) && (var1 != -1)
           && this.anIntArray1851.length > var1) {
           var1 = this.anIntArray1851[var1];
           var9 = GlobalStatics_6.method133(var1 >> 16, 0);

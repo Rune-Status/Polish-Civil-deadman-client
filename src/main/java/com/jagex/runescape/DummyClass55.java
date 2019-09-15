@@ -71,7 +71,7 @@ public final class DummyClass55 {
   }
 
   public static void method1609(int var0) {
-    MapScene.anInterface5Array70 = null;
+    GlobalStatics_9.anInterface5Array70 = null;
       if (var0 <= 49) {
         DummyClass55.method1608((byte) 96);
       }

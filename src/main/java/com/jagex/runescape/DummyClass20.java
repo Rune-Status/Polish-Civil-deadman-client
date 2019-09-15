@@ -17,7 +17,7 @@ public final class DummyClass20 {
       }
 
       return !GlobalStatics_7.aBoolean1084 ?
-        (!NPC.method1986(var0 ^ 28) ? 1 : (GlobalStatics_2.aBoolean3604 ? 2 : 1)) :
+        (!GlobalStatics_9.method1986(var0 ^ 28) ? 1 : (GlobalStatics_2.aBoolean3604 ? 2 : 1)) :
         0;
   }
 
@@ -44,7 +44,7 @@ public final class DummyClass20 {
 
       GlobalStatics_7.aBoolean2981 = false;
       int var8;
-      if ((TextureSampler21.anInt3069 != 0)) {
+      if ((GlobalStatics_10.anInt3069 != 0)) {
         if ((var5 <= var4) && (var5 + 16) > var4 && var0 >= var6 && var6 + 16 > var0) {
           var2.anInt208 -= 4;
           DummyClass29.method909(113, var2);
@@ -68,10 +68,10 @@ public final class DummyClass20 {
         }
       }
 
-      if ((PlayerVariable.mouseWheelOffset != 0)) {
+      if ((GlobalStatics_9.mouseWheelOffset != 0)) {
         var8 = var2.anInt168;
         if (((-var8 + var5) <= var4) && (var6 <= var0) && var4 < 16 + var5 && var1 + var6 >= var0) {
-          var2.anInt208 += 45 * PlayerVariable.mouseWheelOffset;
+          var2.anInt208 += 45 * GlobalStatics_9.mouseWheelOffset;
           DummyClass29.method909(-116, var2);
         }
       }

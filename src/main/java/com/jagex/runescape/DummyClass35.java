@@ -22,11 +22,11 @@ public class DummyClass35 {
   public static GameString aClass94_666 = DummyClass35.aClass94_658;
 
   public static ItemConfig getItemConfig(int var0, byte var1) {
-    ItemConfig var2 = (ItemConfig) SomethingQuickChat.aClass93_3572.get(var0);
+    ItemConfig var2 = (ItemConfig) GlobalStatics_9.aClass93_3572.get(var0);
       if (var2 == null) {
         byte[] var3 =
-          TriChromaticImageCache.aClass153_1370.getBytes(StillGraphic.method1951(var0, (byte) -115),
-            Unsure.method2075(var0, (byte) 102));
+          GlobalStatics_10.aClass153_1370.getBytes(GlobalStatics_9.method1951(var0, (byte) -115),
+            GlobalStatics_10.method2075(var0, (byte) 102));
         if (var1 <= 68) {
           DummyClass35.method1027(-113, (byte) 110);
         }
@@ -52,12 +52,12 @@ public class DummyClass35 {
         if (!DummyClass17.aBoolean1827 && var2.aBoolean779) {
           var2.aClass94_770 = GlobalStatics_6.aClass94_3691;
           var2.anInt782 = 0;
-          var2.inventoryOptions = GameException.DEFAULT_INVENTORY_OPTIONS;
+          var2.inventoryOptions = GlobalStatics_8.DEFAULT_INVENTORY_OPTIONS;
           var2.aBoolean807 = false;
           var2.aClass94Array801 = GlobalStatics_0.aClass94Array2596;
         }
 
-        SomethingQuickChat.aClass93_3572.get((byte) -107, var2, var0);
+        GlobalStatics_9.aClass93_3572.get((byte) -107, var2, var0);
         return var2;
       } else {
         return var2;
@@ -81,7 +81,7 @@ public class DummyClass35 {
   }
 
   public static void method1025(byte var0) {
-    SomethingPacket151.aClass93_2604.method1523((byte) -121);
+    GlobalStatics_9.aClass93_2604.method1523((byte) -121);
       if (var0 > -51) {
         DummyClass35.method1025((byte) 86);
       }
@@ -107,7 +107,7 @@ public class DummyClass35 {
           var2 = DummyClass42.anIntArray887[var1];
         }
 
-        Player var3 = TextureSampler0.players[var2];
+        Player var3 = GlobalStatics_9.players[var2];
         if (var3 != null) {
           DummyOutputStream.method68(var3.getSize(), 2279, var3);
         }
@@ -119,9 +119,9 @@ public class DummyClass35 {
   }
 
   public static void method1029(int var0) {
-    TextureSampler12.secureBuffer.writePacket(177);
-      ++ScriptState.anInt876;
-      TextureSampler12.secureBuffer.writeShort(SomethingLight0.interfaceCounter);
+    GlobalStatics_9.secureBuffer.writePacket(177);
+      ++GlobalStatics_9.anInt876;
+      GlobalStatics_9.secureBuffer.writeShort(GlobalStatics_9.interfaceCounter);
   }
 
 }

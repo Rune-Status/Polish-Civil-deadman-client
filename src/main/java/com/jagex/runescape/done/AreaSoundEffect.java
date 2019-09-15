@@ -48,7 +48,7 @@ public final class AreaSoundEffect extends Node {
           this.anInt2328 = 128 * this.aClass140_Sub4_Sub1_2327.anInt3969;
         }
       } else {
-        int var6 = ISAACCipher.method1232(this.aClass140_Sub4_Sub2_2324, var1 ^ -2);
+        int var6 = GlobalStatics_9.method1232(this.aClass140_Sub4_Sub2_2324, var1 ^ -2);
         if (var2 != var6) {
           NpcConfiguration var4 = this.aClass140_Sub4_Sub2_2324.config;
           this.anInt2332 = var6;
@@ -66,7 +66,7 @@ public final class AreaSoundEffect extends Node {
 
       if (var1 == 1) {
         if (this.anInt2332 != var2 && this.aClass3_Sub24_Sub1_2312 != null) {
-          MonoChromaticImageBuffer.aClass3_Sub24_Sub2_2563.method461(
+          GlobalStatics_9.aClass3_Sub24_Sub2_2563.method461(
               this.aClass3_Sub24_Sub1_2312);
           this.aClass3_Sub24_Sub1_2312 = null;
         }
