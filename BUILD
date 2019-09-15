@@ -7,7 +7,7 @@ java_binary(
         "live",
         "english",
         "game1",
-        "95.160.142.230",
+        "127.0.0.1",
     ],
     jvm_flags = ["-Djogamp.debug"],
     main_class = "com.jagex.runescape.Launcher",
