@@ -1,12 +1,9 @@
 package com.jagex.runescape.statics;
 
-import com.jagex.runescape.model.SpawnedGameObject;
-import com.jagex.runescape.model.Widget;
-import com.jagex.runescape.model.WidgetAccess;
-import com.jagex.runescape.model.WidgetUpdate;
 import com.jagex.runescape.buffer.Buffer;
 import com.jagex.runescape.common.GameString;
 import com.jagex.runescape.common.GameStringStatics;
+import com.jagex.runescape.huffman.HuffmanEncoderStatics;
 import com.jagex.runescape.model.AbstractDirectColorSprite;
 import com.jagex.runescape.model.AbstractFont;
 import com.jagex.runescape.model.AnimationSequence;
@@ -34,7 +31,10 @@ import com.jagex.runescape.model.SignLinkRequest;
 import com.jagex.runescape.model.SoftwareDirectColorSprite;
 import com.jagex.runescape.model.SomethingFont;
 import com.jagex.runescape.model.SomethingPacket151;
-import com.jagex.runescape.huffman.HuffmanEncoderStatics;
+import com.jagex.runescape.model.SpawnedGameObject;
+import com.jagex.runescape.model.Widget;
+import com.jagex.runescape.model.WidgetAccess;
+import com.jagex.runescape.model.WidgetUpdate;
 import com.jagex.runescape.opengl.DummyClass33;
 import com.jagex.runescape.opengl.DummyClass46;
 import com.jagex.runescape.opengl.GLStatics;
@@ -2541,9 +2541,9 @@ public class GlobalStatics_7 {
     }
 
     GlobalStatics_9.secureBuffer.writePacket(44);
-    GlobalStatics_9.secureBuffer.writeByte(command.getLength() - 2 - 1);
-    ++anInt1633;
+    GlobalStatics_9.secureBuffer.writeByte(command.getLength() - 2 + 1);
     GlobalStatics_9.secureBuffer.writeString(command.substring(2));
+    ++anInt1633;
   }
 
   public static void method1047(int var0, int var1, int var2, boolean var3,

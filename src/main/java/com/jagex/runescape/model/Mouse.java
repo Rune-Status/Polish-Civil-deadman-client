@@ -14,28 +14,24 @@ public final class Mouse implements MouseListener, MouseMotionListener,
     FocusListener {
 
   public void mouseDragged(MouseEvent e) {
-    System.out.println("Mouse.mouseDragged");
     GlobalStatics_9.anInt4045 = 0;
     GlobalStatics_9.lastMouseX = e.getX();
     DummyClass53.lastMouseY = e.getY();
   }
 
   public void mouseMoved(MouseEvent e) {
-    System.out.println("Mouse.mouseMoved");
     GlobalStatics_9.anInt4045 = 0;
     GlobalStatics_9.lastMouseX = e.getX();
     DummyClass53.lastMouseY = e.getY();
   }
 
   public void mouseClicked(MouseEvent e) {
-    System.out.println("var1 = " + e);
     if (e.isPopupTrigger()) {
       e.consume();
     }
   }
 
   public void mousePressed(MouseEvent e) {
-    System.out.println("Mouse.mousePressed");
     GlobalStatics_9.anInt4045 = 0;
     GlobalStatics_9.anInt362 = e.getX();
     GlobalStatics_10.anInt3389 = e.getY();

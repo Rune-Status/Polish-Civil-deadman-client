@@ -86,9 +86,9 @@ public class Buffer extends Node {
     }
   }
 
-  public final void writeString(GameString var2) {
-    this.position +=
-        var2.method1580(true, this.bytes, this.position, 0, var2.getLength());
+  public final void writeString(GameString data) {
+    this.position += data
+        .method1580(this.bytes, this.position, 0, data.getLength());
     this.bytes[this.position++] = 0;
   }
 
