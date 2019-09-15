@@ -1,7 +1,7 @@
 package com.jagex.runescape.opengl;
 
-import com.jagex.runescape.Something3dTexture;
-import com.jagex.runescape.Something3dTexture1;
+import com.jagex.runescape.model.Something3dTexture;
+import com.jagex.runescape.model.Something3dTexture1;
 import java.nio.ByteBuffer;
 
 public final class SomethingGl {

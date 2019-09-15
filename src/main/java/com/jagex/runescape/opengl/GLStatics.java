@@ -1,10 +1,23 @@
 package com.jagex.runescape.opengl;
 
-import com.jagex.runescape.*;
-import com.jagex.runescape.done.AbstractDirectColorSprite;
+import com.jagex.runescape.model.AbstractDirectColorSprite;
 import com.jagex.runescape.common.GameString;
 import com.jagex.runescape.common.GameStringStatics;
-import com.jagex.runescape.done.ClientScriptCall;
+import com.jagex.runescape.model.ClientScriptCall;
+import com.jagex.runescape.model.ITextureCache;
+import com.jagex.runescape.model.SceneGraphTile;
+import com.jagex.runescape.model.SoftwareDirectColorSprite;
+import com.jagex.runescape.statics.DummyClass13;
+import com.jagex.runescape.statics.DummyClass30;
+import com.jagex.runescape.statics.DummyClass37;
+import com.jagex.runescape.statics.DummyClass5;
+import com.jagex.runescape.statics.DummyClass55;
+import com.jagex.runescape.statics.GlobalStatics_0;
+import com.jagex.runescape.statics.GlobalStatics_10;
+import com.jagex.runescape.statics.GlobalStatics_11;
+import com.jagex.runescape.statics.GlobalStatics_2;
+import com.jagex.runescape.statics.GlobalStatics_5;
+import com.jagex.runescape.statics.GlobalStatics_9;
 
 public class GLStatics {
 
@@ -187,7 +200,7 @@ public class GLStatics {
   }
 
   public static void executeScript(ClientScriptCall var1) {
-    ItemConfig.callScript((byte) -93, 200000, var1);
+    GlobalStatics_11.callScript((byte) -93, 200000, var1);
   }
 
   public static void method1083() {

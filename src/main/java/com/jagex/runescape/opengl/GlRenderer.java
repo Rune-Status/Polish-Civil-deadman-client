@@ -1,8 +1,13 @@
 package com.jagex.runescape.opengl;
 
-import com.jagex.runescape.*;
 import com.jagex.runescape.common.GameString;
 import com.jagex.runescape.common.GameStringStatics;
+import com.jagex.runescape.statics.DummyClass17;
+import com.jagex.runescape.statics.DummyClass3;
+import com.jagex.runescape.statics.DummyClass55;
+import com.jagex.runescape.statics.GlobalStatics_10;
+import com.jagex.runescape.statics.GlobalStatics_4;
+import com.jagex.runescape.statics.GlobalStatics_6;
 import com.jogamp.nativewindow.awt.AWTGraphicsConfiguration;
 import com.jogamp.nativewindow.awt.JAWTWindow;
 import com.jogamp.opengl.GL2;

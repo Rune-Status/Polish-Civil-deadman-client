@@ -2,9 +2,9 @@ package com.jagex.runescape.opengl;
 
 import com.jagex.runescape.buffer.Buffer;
 import com.jagex.runescape.common.HashTable;
-import com.jagex.runescape.IntegerNode;
+import com.jagex.runescape.model.IntegerNode;
 import com.jagex.runescape.node.Node;
-import com.jagex.runescape.SceneGraphTile;
+import com.jagex.runescape.model.SceneGraphTile;
 import java.nio.ByteBuffer;
 import java.nio.ByteOrder;
 

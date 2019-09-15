@@ -4,7 +4,8 @@ java_library(
     name = "runescape",
     srcs = glob([
         "*.java",
-        "done/*.java",
+        "model/*.java",
+        "statics/*.java",
         "opengl/**/*.java",
     ]),
     deps = [

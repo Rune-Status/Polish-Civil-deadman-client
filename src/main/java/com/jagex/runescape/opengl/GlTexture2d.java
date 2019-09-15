@@ -1,9 +1,13 @@
 package com.jagex.runescape.opengl;
 
-import com.jagex.runescape.*;
 import com.jagex.runescape.common.GameString;
+import com.jagex.runescape.model.SceneGraphTile;
+import com.jagex.runescape.model.SceneSomething;
 import com.jagex.runescape.node.SubNode;
 import com.jagex.runescape.common.GameStringStatics;
+import com.jagex.runescape.statics.DummyClass32;
+import com.jagex.runescape.statics.GlobalStatics_4;
+import com.jagex.runescape.statics.GlobalStatics_6;
 import java.lang.reflect.Method;
 import java.nio.ByteBuffer;
 

@@ -1,6 +1,16 @@
 package com.jagex.runescape;
 
 import com.jagex.runescape.common.GameStringStatics;
+import com.jagex.runescape.model.GameClient;
+import com.jagex.runescape.statics.DummyClass7;
+import com.jagex.runescape.statics.DummyClass8;
+import com.jagex.runescape.statics.GlobalStatics_0;
+import com.jagex.runescape.statics.GlobalStatics_10;
+import com.jagex.runescape.statics.GlobalStatics_4;
+import com.jagex.runescape.statics.GlobalStatics_5;
+import com.jagex.runescape.statics.GlobalStatics_7;
+import com.jagex.runescape.statics.GlobalStatics_8;
+import com.jagex.runescape.statics.GlobalStatics_9;
 import java.nio.charset.StandardCharsets;
 
 public class Launcher {

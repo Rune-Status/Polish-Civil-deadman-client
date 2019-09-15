@@ -1,13 +1,24 @@
 package com.jagex.runescape.opengl;
 
-import com.jagex.runescape.*;
-import com.jagex.runescape.done.AbstractModel;
-import com.jagex.runescape.common.ArrayUtils;
+import com.jagex.runescape.statics.GlobalStatics_1;
+import com.jagex.runescape.statics.GlobalStatics_10;
+import com.jagex.runescape.statics.GlobalStatics_11;
+import com.jagex.runescape.statics.GlobalStatics_9;
+import com.jagex.runescape.model.Model;
+import com.jagex.runescape.model.SceneNode;
+import com.jagex.runescape.model.VertexNormal;
 import com.jagex.runescape.buffer.Buffer;
-import com.jagex.runescape.done.BufferData;
-import com.jagex.runescape.FaceNormal;
+import com.jagex.runescape.common.ArrayUtils;
+import com.jagex.runescape.model.AbstractModel;
+import com.jagex.runescape.model.BufferData;
+import com.jagex.runescape.model.FaceNormal;
 import com.jagex.runescape.sprite.SoftwareIndexedColorSprite;
-
+import com.jagex.runescape.statics.DummyClass0;
+import com.jagex.runescape.statics.DummyClass17;
+import com.jagex.runescape.statics.DummyClass3;
+import com.jagex.runescape.statics.DummyClass40;
+import com.jagex.runescape.statics.DummyClass45;
+import com.jagex.runescape.statics.DummyClass58;
 import java.nio.ByteBuffer;
 
 public final class GlModel extends AbstractModel {
@@ -74,18 +85,19 @@ public final class GlModel extends AbstractModel {
   private byte aByte3851;
   private int anInt3852;
 
-
   private GlModel() {
   }
 
-  public GlModel(Model model, int var2, int var3, boolean var4 ) {
+  public GlModel(Model model, int var2, int var3, boolean var4) {
     int[] var5 = new int[model.amountFaces];
     this.vertexCounts = new int[model.amountVertices + 1];
 
     for (int face = 0; face < model.amountFaces; ++face) {
-      if ((model.normalTypes == null || model.normalTypes[face] != 2) && (model.materials == null
-        || model.materials[face] == -1 || !GLStatics.textureCache.method12(
-        model.materials[face] & '\uffff', -65))) {
+      if ((model.normalTypes == null || model.normalTypes[face] != 2) && (
+          model.materials == null
+              || model.materials[face] == -1 || !GLStatics.textureCache
+              .method12(
+                  model.materials[face] & '\uffff', -65))) {
         var5[this.anInt3852++] = face;
         ++this.vertexCounts[model.v0[face]];
         ++this.vertexCounts[model.v1[face]];
@@ -114,8 +126,10 @@ public final class GlModel extends AbstractModel {
         }
       }
 
-      boolean var14 = model.aByteArray2843 != null && model.aByteArray2843[var8] != 0
-        || var13 != -1 && !GLStatics.textureCache.method7((byte) 88, var13 & '\uffff');
+      boolean var14 =
+          model.aByteArray2843 != null && model.aByteArray2843[var8] != 0
+              || var13 != -1 && !GLStatics.textureCache
+              .method7((byte) 88, var13 & '\uffff');
       if ((var4 || var14) && model.aByteArray2889 != null) {
         var9 += model.aByteArray2889[var8] << 17;
       }
@@ -289,8 +303,10 @@ public final class GlModel extends AbstractModel {
             var79 = model.aShortArray2851[var20] / 1024.0F;
           }
 
-          var65[var20] = GlModel.method1906(model.aShortArray2884[var20], model.aShortArray2846[var20],
-            model.aShortArray2891[var20], model.aByteArray2845[var20] & 255, var75, var82, var79);
+          var65[var20] = GlModel.method1906(model.aShortArray2884[var20],
+              model.aShortArray2846[var20],
+              model.aShortArray2891[var20], model.aByteArray2845[var20] & 255,
+              var75, var82, var79);
         }
       }
     }
@@ -387,7 +403,8 @@ public final class GlModel extends AbstractModel {
             float var56 = var42 * var55 - var43 * var54;
             float var57 = var43 * var53 - var41 * var55;
             float var58 = var41 * var54 - var42 * var53;
-            float var59 = 1.0F / (var56 * var38 + var57 * var39 + var58 * var40);
+            float var59 =
+                1.0F / (var56 * var38 + var57 * var39 + var58 * var40);
             var73 = (var56 * var44 + var57 * var45 + var58 * var46) * var59;
             var77 = (var56 * var47 + var57 * var48 + var58 * var49) * var59;
             var82 = (var56 * var50 + var57 * var51 + var58 * var52) * var59;
@@ -411,18 +428,21 @@ public final class GlModel extends AbstractModel {
             if (var28 == 1) {
               var38 = (model.aShortArray2851[var72] & '\uffff') / 1024.0F;
               GlModel
-                  .method1904(model.vx[var29], model.vy[var29], model.vz[var29], var88, var87, var94,
-                var93, var38, var90, var37);
+                  .method1904(model.vx[var29], model.vy[var29], model.vz[var29],
+                      var88, var87, var94,
+                      var93, var38, var90, var37);
               var73 = GlModel.aFloat3863;
               var78 = GlModel.aFloat3866;
               GlModel
-                  .method1904(model.vx[var30], model.vy[var30], model.vz[var30], var88, var87, var94,
-                var93, var38, var90, var37);
+                  .method1904(model.vx[var30], model.vy[var30], model.vz[var30],
+                      var88, var87, var94,
+                      var93, var38, var90, var37);
               var77 = GlModel.aFloat3863;
               var75 = GlModel.aFloat3866;
               GlModel
-                  .method1904(model.vx[var31], model.vy[var31], model.vz[var31], var88, var87, var94,
-                var93, var38, var90, var37);
+                  .method1904(model.vx[var31], model.vy[var31], model.vz[var31],
+                      var88, var87, var94,
+                      var93, var38, var90, var37);
               var82 = GlModel.aFloat3863;
               var79 = GlModel.aFloat3866;
               var39 = var38 / 2.0F;
@@ -475,44 +495,50 @@ public final class GlModel extends AbstractModel {
               var50 = 64.0F / (model.aShortArray2882[var72] & '\uffff');
               var51 = 64.0F / (model.aShortArray2851[var72] & '\uffff');
               var52 =
-                (var99 * var93[0] + var100 * var93[1] + var104 * var93[2])
-                  / var49;
+                  (var99 * var93[0] + var100 * var93[1] + var104 * var93[2])
+                      / var49;
               var53 =
-                (var99 * var93[3] + var100 * var93[4] + var104 * var93[5])
-                  / var50;
+                  (var99 * var93[3] + var100 * var93[4] + var104 * var93[5])
+                      / var50;
               var54 =
-                (var99 * var93[6] + var100 * var93[7] + var104 * var93[8])
-                  / var51;
+                  (var99 * var93[6] + var100 * var93[7] + var104 * var93[8])
+                      / var51;
               var27 = GlModel.method1901(var52, var53, var54);
               GlModel
-                  .method1913(model.vx[var29], model.vy[var29], model.vz[var29], var88, var87, var94,
-                var27, var93, var90, var37, var38, var39);
+                  .method1913(model.vx[var29], model.vy[var29], model.vz[var29],
+                      var88, var87, var94,
+                      var27, var93, var90, var37, var38, var39);
               var73 = GlModel.aFloat3864;
               var78 = GlModel.aFloat3858;
               GlModel
-                  .method1913(model.vx[var30], model.vy[var30], model.vz[var30], var88, var87, var94,
-                var27, var93, var90, var37, var38, var39);
+                  .method1913(model.vx[var30], model.vy[var30], model.vz[var30],
+                      var88, var87, var94,
+                      var27, var93, var90, var37, var38, var39);
               var77 = GlModel.aFloat3864;
               var75 = GlModel.aFloat3858;
               GlModel
-                  .method1913(model.vx[var31], model.vy[var31], model.vz[var31], var88, var87, var94,
-                var27, var93, var90, var37, var38, var39);
+                  .method1913(model.vx[var31], model.vy[var31], model.vz[var31],
+                      var88, var87, var94,
+                      var27, var93, var90, var37, var38, var39);
               var82 = GlModel.aFloat3864;
               var79 = GlModel.aFloat3858;
             } else if (var28 == 3) {
               GlModel
-                  .method1910(model.vx[var29], model.vy[var29], model.vz[var29], var88, var87, var94,
-                var93, var90, var37);
+                  .method1910(model.vx[var29], model.vy[var29], model.vz[var29],
+                      var88, var87, var94,
+                      var93, var90, var37);
               var73 = GlModel.aFloat3867;
               var78 = GlModel.aFloat3860;
               GlModel
-                  .method1910(model.vx[var30], model.vy[var30], model.vz[var30], var88, var87, var94,
-                var93, var90, var37);
+                  .method1910(model.vx[var30], model.vy[var30], model.vz[var30],
+                      var88, var87, var94,
+                      var93, var90, var37);
               var77 = GlModel.aFloat3867;
               var75 = GlModel.aFloat3860;
               GlModel
-                  .method1910(model.vx[var31], model.vy[var31], model.vz[var31], var88, var87, var94,
-                var93, var90, var37);
+                  .method1910(model.vx[var31], model.vy[var31], model.vz[var31],
+                      var88, var87, var94,
+                      var93, var90, var37);
               var82 = GlModel.aFloat3867;
               var79 = GlModel.aFloat3860;
               if ((var90 & 1) == 0) {
@@ -562,35 +588,44 @@ public final class GlModel extends AbstractModel {
 
       if (var28 == 0) {
         long var86 =
-          (var72 << 2) + ((long) (var27 << 24) + (var67 << 8) + var74 << 32);
+            (var72 << 2) + ((long) (var27 << 24) + (var67 << 8) + var74 << 32);
         var31 = model.v0[var70];
         VertexNormal var89 = model.vertexNormals[var31];
         this.v0[var68] =
-            this.method1907(model, var31, var86, var89.x, var89.y, var89.z, var89.c, var73, var78);
+            this.method1907(model, var31, var86, var89.x, var89.y, var89.z,
+                var89.c, var73, var78);
         var87 = model.v1[var70];
         VertexNormal var95 = model.vertexNormals[var87];
         this.v1[var68] =
-            this.method1907(model, var87, var86 + var81, var95.x, var95.y, var95.z, var95.c,
-            var77, var75);
+            this.method1907(model, var87, var86 + var81, var95.x, var95.y,
+                var95.z, var95.c,
+                var77, var75);
         int var92 = model.v2[var70];
         VertexNormal var91 = model.vertexNormals[var92];
         this.v2[var68] =
-            this.method1907(model, var92, var86 + var83, var91.x, var91.y, var91.z, var91.c,
-            var82, var79);
+            this.method1907(model, var92, var86 + var83, var91.x, var91.y,
+                var91.z, var91.c,
+                var82, var79);
       } else if (var28 == 1) {
         FaceNormal var85 = model.faceNormals[var70];
-        long var84 = ((var72 << 2) + (var85.x > 0 ? 1024 : 2048) + (var85.y + 256 << 12) + (
-          var85.z + 256 << 22)) + ((long) (var27 << 24) + (var67 << 8) + var74
-            << 32);
+        long var84 =
+            ((var72 << 2) + (var85.x > 0 ? 1024 : 2048) + (var85.y + 256 << 12)
+                + (
+                var85.z + 256 << 22)) + (
+                (long) (var27 << 24) + (var67 << 8) + var74
+                    << 32);
         this.v0[var68] =
-            this.method1907(model, model.v0[var70], var84, var85.x, var85.y, var85.z, 0, var73,
-            var78);
+            this.method1907(model, model.v0[var70], var84, var85.x, var85.y,
+                var85.z, 0, var73,
+                var78);
         this.v1[var68] =
-            this.method1907(model, model.v1[var70], var84 + var81, var85.x, var85.y, var85.z,
-            0, var77, var75);
+            this.method1907(model, model.v1[var70], var84 + var81, var85.x,
+                var85.y, var85.z,
+                0, var77, var75);
         this.v2[var68] =
-            this.method1907(model, model.v2[var70], var84 + var83, var85.x, var85.y, var85.z,
-            0, var82, var79);
+            this.method1907(model, model.v2[var70], var84 + var83, var85.x,
+                var85.y, var85.z,
+                0, var82, var79);
       }
 
       if (model.materials != null) {
@@ -725,7 +760,7 @@ public final class GlModel extends AbstractModel {
     this.vertexPositionData.updated = false;
   }
 
-  public void method1876(int var1 ) {
+  public void method1876(int var1) {
     int var2 = GLStatics.SINE_TABLE[var1];
     int var3 = DummyClass40.COSINE_TABLE[var1];
 
@@ -750,7 +785,7 @@ public final class GlModel extends AbstractModel {
     this.vertexPositionData.updated = false;
   }
 
-  public void scale(int var1, int var2, int var3 ) {
+  public void scale(int var1, int var2, int var3) {
     for (int var4 = 0; var4 < this.vertexCCC; ++var4) {
       this.vx[var4] = this.vx[var4] * var1 >> 7;
       this.vy[var4] = this.vy[var4] * var2 >> 7;
@@ -761,7 +796,7 @@ public final class GlModel extends AbstractModel {
     this.vertexPositionData.updated = false;
   }
 
-  public AbstractModel method1882(boolean var1, boolean var2, boolean var3 ) {
+  public AbstractModel method1882(boolean var1, boolean var2, boolean var3) {
     return this.method1923(var1, var2, var3, GlModel.aClass140_Sub1_Sub1_3854,
         GlModel.aClass140_Sub1_Sub1_3853);
   }
@@ -793,7 +828,7 @@ public final class GlModel extends AbstractModel {
     this.vertexPositionData.updated = false;
   }
 
-  public void method1886(int var1 ) {
+  public void method1886(int var1) {
     int var2 = GLStatics.SINE_TABLE[var1];
     int var3 = DummyClass40.COSINE_TABLE[var1];
 
@@ -815,7 +850,7 @@ public final class GlModel extends AbstractModel {
     return this.aClass6_3835.aShort93;
   }
 
-  public void method1889(int var1, int var2, int var3, int var4 ) {
+  public void method1889(int var1, int var2, int var3, int var4) {
     int var5;
     int var6;
     if (var1 == 0) {
@@ -860,7 +895,8 @@ public final class GlModel extends AbstractModel {
             var6 = GLStatics.SINE_TABLE[var4];
             var7 = DummyClass40.COSINE_TABLE[var4];
             var8 = this.vy[var5] * var6 + this.vx[var5] * var7 + 32767 >> 16;
-            this.vy[var5] = this.vy[var5] * var7 - this.vx[var5] * var6 + 32767 >> 16;
+            this.vy[var5] =
+                this.vy[var5] * var7 - this.vx[var5] * var6 + 32767 >> 16;
             this.vx[var5] = var8;
           }
 
@@ -868,7 +904,8 @@ public final class GlModel extends AbstractModel {
             var6 = GLStatics.SINE_TABLE[var2];
             var7 = DummyClass40.COSINE_TABLE[var2];
             var8 = this.vy[var5] * var7 - this.vz[var5] * var6 + 32767 >> 16;
-            this.vz[var5] = this.vy[var5] * var6 + this.vz[var5] * var7 + 32767 >> 16;
+            this.vz[var5] =
+                this.vy[var5] * var6 + this.vz[var5] * var7 + 32767 >> 16;
             this.vy[var5] = var8;
           }
 
@@ -876,7 +913,8 @@ public final class GlModel extends AbstractModel {
             var6 = GLStatics.SINE_TABLE[var3];
             var7 = DummyClass40.COSINE_TABLE[var3];
             var8 = this.vz[var5] * var6 + this.vx[var5] * var7 + 32767 >> 16;
-            this.vz[var5] = this.vz[var5] * var7 - this.vx[var5] * var6 + 32767 >> 16;
+            this.vz[var5] =
+                this.vz[var5] * var7 - this.vx[var5] * var6 + 32767 >> 16;
             this.vx[var5] = var8;
           }
 
@@ -920,7 +958,8 @@ public final class GlModel extends AbstractModel {
               var9 = 127;
             }
 
-            this.aShortArray3808[var5] = (short) (var7 << 10 | var8 << 7 | var9);
+            this.aShortArray3808[var5] = (short) (var7 << 10 | var8 << 7
+                | var9);
           }
 
           this.vertexColorData.updated = false;
@@ -942,13 +981,13 @@ public final class GlModel extends AbstractModel {
     }
   }
 
-  public AbstractModel method1890(boolean var1, boolean var2, boolean var3 ) {
+  public AbstractModel method1890(boolean var1, boolean var2, boolean var3) {
     return this.method1923(var1, var2, var3, GlModel.aClass140_Sub1_Sub1_3856,
         GlModel.aClass140_Sub1_Sub1_3855);
   }
 
-  public void method1891(int var1, int[] var2,int var3,int var4,int var5,
-      boolean var6 ) {
+  public void method1891(int var1, int[] var2, int var3, int var4, int var5,
+      boolean var6) {
     int var7 = var2.length;
     int var8;
     int var9;
@@ -1029,9 +1068,11 @@ public final class GlModel extends AbstractModel {
                   var13 = GLStatics.SINE_TABLE[var5];
                   var14 = DummyClass40.COSINE_TABLE[var5];
                   var15 =
-                      this.vy[var12] * var13 + this.vx[var12] * var14 + 32767 >> 16;
+                      this.vy[var12] * var13 + this.vx[var12] * var14 + 32767
+                          >> 16;
                   this.vy[var12] =
-                      this.vy[var12] * var14 - this.vx[var12] * var13 + 32767 >> 16;
+                      this.vy[var12] * var14 - this.vx[var12] * var13 + 32767
+                          >> 16;
                   this.vx[var12] = var15;
                 }
 
@@ -1039,9 +1080,11 @@ public final class GlModel extends AbstractModel {
                   var13 = GLStatics.SINE_TABLE[var3];
                   var14 = DummyClass40.COSINE_TABLE[var3];
                   var15 =
-                      this.vy[var12] * var14 - this.vz[var12] * var13 + 32767 >> 16;
+                      this.vy[var12] * var14 - this.vz[var12] * var13 + 32767
+                          >> 16;
                   this.vz[var12] =
-                      this.vy[var12] * var13 + this.vz[var12] * var14 + 32767 >> 16;
+                      this.vy[var12] * var13 + this.vz[var12] * var14 + 32767
+                          >> 16;
                   this.vy[var12] = var15;
                 }
 
@@ -1049,9 +1092,11 @@ public final class GlModel extends AbstractModel {
                   var13 = GLStatics.SINE_TABLE[var4];
                   var14 = DummyClass40.COSINE_TABLE[var4];
                   var15 =
-                      this.vz[var12] * var13 + this.vx[var12] * var14 + 32767 >> 16;
+                      this.vz[var12] * var13 + this.vx[var12] * var14 + 32767
+                          >> 16;
                   this.vz[var12] =
-                      this.vz[var12] * var14 - this.vx[var12] * var13 + 32767 >> 16;
+                      this.vz[var12] * var14 - this.vx[var12] * var13 + 32767
+                          >> 16;
                   this.vx[var12] = var15;
                 }
 
@@ -1086,11 +1131,13 @@ public final class GlModel extends AbstractModel {
                       var17 = GLStatics.SINE_TABLE[var5];
                       var18 = DummyClass40.COSINE_TABLE[var5];
                       var19 =
-                          this.aShortArray3826[var16] * var17 + this.aShortArray3810[var16] * var18
-                          + 32767 >> 16;
+                          this.aShortArray3826[var16] * var17
+                              + this.aShortArray3810[var16] * var18
+                              + 32767 >> 16;
                       this.aShortArray3826[var16] = (short) (
-                          this.aShortArray3826[var16] * var18 - this.aShortArray3810[var16] * var17
-                          + 32767 >> 16);
+                          this.aShortArray3826[var16] * var18
+                              - this.aShortArray3810[var16] * var17
+                              + 32767 >> 16);
                       this.aShortArray3810[var16] = (short) var19;
                     }
 
@@ -1098,11 +1145,13 @@ public final class GlModel extends AbstractModel {
                       var17 = GLStatics.SINE_TABLE[var3];
                       var18 = DummyClass40.COSINE_TABLE[var3];
                       var19 =
-                          this.aShortArray3826[var16] * var18 - this.aShortArray3837[var16] * var17
-                          + 32767 >> 16;
+                          this.aShortArray3826[var16] * var18
+                              - this.aShortArray3837[var16] * var17
+                              + 32767 >> 16;
                       this.aShortArray3837[var16] = (short) (
-                          this.aShortArray3826[var16] * var17 + this.aShortArray3837[var16] * var18
-                          + 32767 >> 16);
+                          this.aShortArray3826[var16] * var17
+                              + this.aShortArray3837[var16] * var18
+                              + 32767 >> 16);
                       this.aShortArray3826[var16] = (short) var19;
                     }
 
@@ -1110,11 +1159,13 @@ public final class GlModel extends AbstractModel {
                       var17 = GLStatics.SINE_TABLE[var4];
                       var18 = DummyClass40.COSINE_TABLE[var4];
                       var19 =
-                          this.aShortArray3837[var16] * var17 + this.aShortArray3810[var16] * var18
-                          + 32767 >> 16;
+                          this.aShortArray3837[var16] * var17
+                              + this.aShortArray3810[var16] * var18
+                              + 32767 >> 16;
                       this.aShortArray3837[var16] = (short) (
-                          this.aShortArray3837[var16] * var18 - this.aShortArray3810[var16] * var17
-                          + 32767 >> 16);
+                          this.aShortArray3837[var16] * var18
+                              - this.aShortArray3810[var16] * var17
+                              + 32767 >> 16);
                       this.aShortArray3810[var16] = (short) var19;
                     }
                   }
@@ -1202,7 +1253,8 @@ public final class GlModel extends AbstractModel {
                     var16 = 127;
                   }
 
-                  this.aShortArray3808[var12] = (short) (var14 << 10 | var15 << 7 | var16);
+                  this.aShortArray3808[var12] = (short) (var14 << 10
+                      | var15 << 7 | var16);
                 }
 
                 if (var10.length > 0) {
@@ -1221,7 +1273,7 @@ public final class GlModel extends AbstractModel {
       int translateX,
       int translateY,
       int translateZ,
-      long var8 ) {
+      long var8) {
     if (this.amountVertices != 0) {
       GlRenderer.GL.glPushMatrix();
       if (rotationX1 != 0) {
@@ -1246,12 +1298,12 @@ public final class GlModel extends AbstractModel {
     }
   }
 
-  public AbstractModel method1894(boolean var1, boolean var2, boolean var3 ) {
+  public AbstractModel method1894(boolean var1, boolean var2, boolean var3) {
     return this.method1923(var1, var2, var3, GlModel.aClass140_Sub1_Sub1_3850,
         GlModel.aClass140_Sub1_Sub1_3842);
   }
 
-  public void method1896(int var1 ) {
+  public void method1896(int var1) {
     int var2 = GLStatics.SINE_TABLE[var1];
     int var3 = DummyClass40.COSINE_TABLE[var1];
 
@@ -1265,7 +1317,7 @@ public final class GlModel extends AbstractModel {
     this.vertexPositionData.updated = false;
   }
 
-  public void method1897(int var1, int var2, int var3 ) {
+  public void method1897(int var1, int var2, int var3) {
     for (int var4 = 0; var4 < this.vertexCCC; ++var4) {
       this.vx[var4] += var1;
       this.vy[var4] += var2;
@@ -1290,7 +1342,7 @@ public final class GlModel extends AbstractModel {
       int translateZ,
       long key,
       int var11,
-      DummyClass0 var12 ) {
+      DummyClass0 var12) {
     if (this.amountVertices != 0) {
       if (!this.aClass6_3835.aBoolean98) {
         this.method1917();
@@ -1343,8 +1395,10 @@ public final class GlModel extends AbstractModel {
                       var31 = var24 / depth;
                     }
 
-                    if (GlobalStatics_9.anInt3642 >= var28 && GlobalStatics_9.anInt3642 <= var30
-                      && GlobalStatics_9.anInt384 >= var29 && GlobalStatics_9.anInt384 <= var31) {
+                    if (GlobalStatics_9.anInt3642 >= var28
+                        && GlobalStatics_9.anInt3642 <= var30
+                        && GlobalStatics_9.anInt384 >= var29
+                        && GlobalStatics_9.anInt384 <= var31) {
                       var28 = 999999;
                       var30 = -999999;
                       var29 = 999999;
@@ -1354,11 +1408,14 @@ public final class GlModel extends AbstractModel {
                       short var34 = this.aClass6_3835.aShort97;
                       short var35 = this.aClass6_3835.aShort96;
                       int[] var36 =
-                          {var32, var33, var32, var33, var32, var33, var32, var33};
+                          {var32, var33, var32, var33, var32, var33, var32,
+                              var33};
                       int[] var37 =
-                          {var34, var34, var35, var35, var34, var34, var35, var35};
+                          {var34, var34, var35, var35, var34, var34, var35,
+                              var35};
                       int[] var38 =
-                          {var14, var14, var14, var14, var15, var15, var15, var15};
+                          {var14, var14, var14, var14, var15, var15, var15,
+                              var15};
 
                       int var39;
                       int tz;
@@ -1406,12 +1463,15 @@ public final class GlModel extends AbstractModel {
                         }
                       }
 
-                      if (GlobalStatics_9.anInt3642 >= var28 && GlobalStatics_9.anInt3642 <= var30
-                        && GlobalStatics_9.anInt384 >= var29 && GlobalStatics_9.anInt384 <= var31) {
+                      if (GlobalStatics_9.anInt3642 >= var28
+                          && GlobalStatics_9.anInt3642 <= var30
+                          && GlobalStatics_9.anInt384 >= var29
+                          && GlobalStatics_9.anInt384 <= var31) {
                         if (this.aBoolean2699) {
                           GlobalStatics_10.entityKeys[GlobalStatics_9.anInt59++] = key;
                         } else {
-                          if (GlModel.screenCoordinatesX.length < this.amountVertices) {
+                          if (GlModel.screenCoordinatesX.length
+                              < this.amountVertices) {
                             GlModel.screenCoordinatesX = new int[this.amountVertices];
                             GlModel.screenCoordinatesY = new int[this.amountVertices];
                           }
@@ -1431,8 +1491,9 @@ public final class GlModel extends AbstractModel {
                                 short var53 = this.v0[var39];
                                 short var52 = this.v1[var39];
                                 short var51 = this.v2[var39];
-                                if (this.isWithinBoundaries(GlobalStatics_9.anInt3642,
-                                  GlobalStatics_9.anInt384,
+                                if (this.isWithinBoundaries(
+                                    GlobalStatics_9.anInt3642,
+                                    GlobalStatics_9.anInt384,
                                     GlModel.screenCoordinatesY[var53],
                                     GlModel.screenCoordinatesY[var52],
                                     GlModel.screenCoordinatesY[var51],
@@ -1491,7 +1552,8 @@ public final class GlModel extends AbstractModel {
                   }
 
                   GlRenderer.GL.glPushMatrix();
-                  GlRenderer.GL.glTranslatef(translateX, translateY, translateZ);
+                  GlRenderer.GL
+                      .glTranslatef(translateX, translateY, translateZ);
                   GlRenderer.GL
                       .glRotatef(rotationY * 0.17578125F, 0.0F, 1.0F, 0.0F);
                   this.draw();
@@ -1509,10 +1571,11 @@ public final class GlModel extends AbstractModel {
     }
   }
 
-  public void applyAnimationFrame(int opcode, int[] var2,int var3,int var4,int var5,
+  public void applyAnimationFrame(int opcode, int[] var2, int var3, int var4,
+      int var5,
       boolean var6,
       int var7,
-      int[] var8 ) {
+      int[] var8) {
     int var9 = var2.length;
     int var10;
     int var11;
@@ -1535,7 +1598,8 @@ public final class GlModel extends AbstractModel {
 
           for (var14 = 0; var14 < var48.length; ++var14) {
             var15 = var48[var14];
-            if (this.aShortArray3832 == null || (var7 & this.aShortArray3832[var15]) != 0) {
+            if (this.aShortArray3832 == null
+                || (var7 & this.aShortArray3832[var15]) != 0) {
               GlModel.anInt3859 += this.vx[var15];
               GlModel.anInt3865 += this.vy[var15];
               GlModel.anInt3862 += this.vz[var15];
@@ -1561,9 +1625,12 @@ public final class GlModel extends AbstractModel {
       int var13;
       if (opcode == 1) {
         if (var8 != null) {
-          var10 = var8[0] * var3 + var8[1] * var4 + var8[2] * var5 + 16384 >> 15;
-          var11 = var8[3] * var3 + var8[4] * var4 + var8[5] * var5 + 16384 >> 15;
-          var47 = var8[6] * var3 + var8[7] * var4 + var8[8] * var5 + 16384 >> 15;
+          var10 =
+              var8[0] * var3 + var8[1] * var4 + var8[2] * var5 + 16384 >> 15;
+          var11 =
+              var8[3] * var3 + var8[4] * var4 + var8[5] * var5 + 16384 >> 15;
+          var47 =
+              var8[6] * var3 + var8[7] * var4 + var8[8] * var5 + 16384 >> 15;
           var3 = var10;
           var4 = var11;
           var5 = var47;
@@ -1580,7 +1647,8 @@ public final class GlModel extends AbstractModel {
 
             for (var13 = 0; var13 < var12.length; ++var13) {
               var14 = var12[var13];
-              if (this.aShortArray3832 == null || (var7 & this.aShortArray3832[var14]) != 0) {
+              if (this.aShortArray3832 == null
+                  || (var7 & this.aShortArray3832[var14]) != 0) {
                 this.vx[var14] += var3;
                 this.vy[var14] += var4;
                 this.vz[var14] += var5;
@@ -1658,17 +1726,20 @@ public final class GlModel extends AbstractModel {
             var49[7] = var20 * var22 + var19 * var23 + 16384 >> 15;
             var49[8] = var19 * var17 + 16384 >> 15;
             int var50 =
-              var49[0] * -GlModel.anInt3859
-                  + var49[1] * -GlModel.anInt3865 + var49[2] * -GlModel.anInt3862
-                  + 16384 >> 15;
+                var49[0] * -GlModel.anInt3859
+                    + var49[1] * -GlModel.anInt3865
+                    + var49[2] * -GlModel.anInt3862
+                    + 16384 >> 15;
             var26 =
-              var49[3] * -GlModel.anInt3859
-                  + var49[4] * -GlModel.anInt3865 + var49[5] * -GlModel.anInt3862
-                  + 16384 >> 15;
+                var49[3] * -GlModel.anInt3859
+                    + var49[4] * -GlModel.anInt3865
+                    + var49[5] * -GlModel.anInt3862
+                    + 16384 >> 15;
             var27 =
-              var49[6] * -GlModel.anInt3859
-                  + var49[7] * -GlModel.anInt3865 + var49[8] * -GlModel.anInt3862
-                  + 16384 >> 15;
+                var49[6] * -GlModel.anInt3859
+                    + var49[7] * -GlModel.anInt3865
+                    + var49[8] * -GlModel.anInt3862
+                    + 16384 >> 15;
             var28 = var50 + GlModel.anInt3859;
             int var51 = var26 + GlModel.anInt3865;
             var30 = var27 + GlModel.anInt3862;
@@ -1686,9 +1757,15 @@ public final class GlModel extends AbstractModel {
               }
             }
 
-            var32 = var49[0] * var13 + var49[1] * var14 + var49[2] * var15 + 16384 >> 15;
-            var33 = var49[3] * var13 + var49[4] * var14 + var49[5] * var15 + 16384 >> 15;
-            var34 = var49[6] * var13 + var49[7] * var14 + var49[8] * var15 + 16384 >> 15;
+            var32 =
+                var49[0] * var13 + var49[1] * var14 + var49[2] * var15 + 16384
+                    >> 15;
+            var33 =
+                var49[3] * var13 + var49[4] * var14 + var49[5] * var15 + 16384
+                    >> 15;
+            var34 =
+                var49[6] * var13 + var49[7] * var14 + var49[8] * var15 + 16384
+                    >> 15;
             var32 += var28;
             var33 += var51;
             var34 += var30;
@@ -1706,9 +1783,12 @@ public final class GlModel extends AbstractModel {
               }
             }
 
-            var36 = var8[0] * var32 + var8[1] * var33 + var8[2] * var34 + 16384 >> 15;
-            var37 = var8[3] * var32 + var8[4] * var33 + var8[5] * var34 + 16384 >> 15;
-            var38 = var8[6] * var32 + var8[7] * var33 + var8[8] * var34 + 16384 >> 15;
+            var36 = var8[0] * var32 + var8[1] * var33 + var8[2] * var34 + 16384
+                >> 15;
+            var37 = var8[3] * var32 + var8[4] * var33 + var8[5] * var34 + 16384
+                >> 15;
+            var38 = var8[6] * var32 + var8[7] * var33 + var8[8] * var34 + 16384
+                >> 15;
             var36 += var10;
             var37 += var11;
             var38 += var47;
@@ -1722,12 +1802,15 @@ public final class GlModel extends AbstractModel {
                   int var43 = var41[var42];
                   if (this.aShortArray3832
                       == null || (var7 & this.aShortArray3832[var43]) != 0) {
-                    int var44 = var35[0] * this.vx[var43] + var35[1] * this.vy[var43]
-                      + var35[2] * this.vz[var43] + 16384 >> 15;
-                    int var45 = var35[3] * this.vx[var43] + var35[4] * this.vy[var43]
-                      + var35[5] * this.vz[var43] + 16384 >> 15;
-                    int var46 = var35[6] * this.vx[var43] + var35[7] * this.vy[var43]
-                      + var35[8] * this.vz[var43] + 16384 >> 15;
+                    int var44 =
+                        var35[0] * this.vx[var43] + var35[1] * this.vy[var43]
+                            + var35[2] * this.vz[var43] + 16384 >> 15;
+                    int var45 =
+                        var35[3] * this.vx[var43] + var35[4] * this.vy[var43]
+                            + var35[5] * this.vz[var43] + 16384 >> 15;
+                    int var46 =
+                        var35[6] * this.vx[var43] + var35[7] * this.vy[var43]
+                            + var35[8] * this.vz[var43] + 16384 >> 15;
                     var44 += var36;
                     var45 += var37;
                     var46 += var38;
@@ -1754,27 +1837,33 @@ public final class GlModel extends AbstractModel {
                     if (var5 != 0) {
                       var15 = GLStatics.SINE_TABLE[var5];
                       var16 = DummyClass40.COSINE_TABLE[var5];
-                      var17 = this.vy[var14] * var15 + this.vx[var14] * var16 + 32767 >> 16;
+                      var17 = this.vy[var14] * var15 + this.vx[var14] * var16
+                          + 32767 >> 16;
                       this.vy[var14] =
-                          this.vy[var14] * var16 - this.vx[var14] * var15 + 32767 >> 16;
+                          this.vy[var14] * var16 - this.vx[var14] * var15
+                              + 32767 >> 16;
                       this.vx[var14] = var17;
                     }
 
                     if (var3 != 0) {
                       var15 = GLStatics.SINE_TABLE[var3];
                       var16 = DummyClass40.COSINE_TABLE[var3];
-                      var17 = this.vy[var14] * var16 - this.vz[var14] * var15 + 32767 >> 16;
+                      var17 = this.vy[var14] * var16 - this.vz[var14] * var15
+                          + 32767 >> 16;
                       this.vz[var14] =
-                          this.vy[var14] * var15 + this.vz[var14] * var16 + 32767 >> 16;
+                          this.vy[var14] * var15 + this.vz[var14] * var16
+                              + 32767 >> 16;
                       this.vy[var14] = var17;
                     }
 
                     if (var4 != 0) {
                       var15 = GLStatics.SINE_TABLE[var4];
                       var16 = DummyClass40.COSINE_TABLE[var4];
-                      var17 = this.vz[var14] * var15 + this.vx[var14] * var16 + 32767 >> 16;
+                      var17 = this.vz[var14] * var15 + this.vx[var14] * var16
+                          + 32767 >> 16;
                       this.vz[var14] =
-                          this.vz[var14] * var16 - this.vx[var14] * var15 + 32767 >> 16;
+                          this.vz[var14] * var16 - this.vx[var14] * var15
+                              + 32767 >> 16;
                       this.vx[var14] = var17;
                     }
 
@@ -1809,10 +1898,12 @@ public final class GlModel extends AbstractModel {
                           var19 = GLStatics.SINE_TABLE[var5];
                           var20 = DummyClass40.COSINE_TABLE[var5];
                           var21 = this.aShortArray3826[var18] * var19
-                            + this.aShortArray3810[var18] * var20 + 32767 >> 16;
+                              + this.aShortArray3810[var18] * var20 + 32767
+                              >> 16;
                           this.aShortArray3826[var18] = (short) (
                               this.aShortArray3826[var18] * var20
-                            - this.aShortArray3810[var18] * var19 + 32767 >> 16);
+                                  - this.aShortArray3810[var18] * var19 + 32767
+                                  >> 16);
                           this.aShortArray3810[var18] = (short) var21;
                         }
 
@@ -1820,10 +1911,12 @@ public final class GlModel extends AbstractModel {
                           var19 = GLStatics.SINE_TABLE[var3];
                           var20 = DummyClass40.COSINE_TABLE[var3];
                           var21 = this.aShortArray3826[var18] * var20
-                            - this.aShortArray3837[var18] * var19 + 32767 >> 16;
+                              - this.aShortArray3837[var18] * var19 + 32767
+                              >> 16;
                           this.aShortArray3837[var18] = (short) (
                               this.aShortArray3826[var18] * var19
-                            + this.aShortArray3837[var18] * var20 + 32767 >> 16);
+                                  + this.aShortArray3837[var18] * var20 + 32767
+                                  >> 16);
                           this.aShortArray3826[var18] = (short) var21;
                         }
 
@@ -1831,10 +1924,12 @@ public final class GlModel extends AbstractModel {
                           var19 = GLStatics.SINE_TABLE[var4];
                           var20 = DummyClass40.COSINE_TABLE[var4];
                           var21 = this.aShortArray3837[var18] * var19
-                            + this.aShortArray3810[var18] * var20 + 32767 >> 16;
+                              + this.aShortArray3810[var18] * var20 + 32767
+                              >> 16;
                           this.aShortArray3837[var18] = (short) (
                               this.aShortArray3837[var18] * var20
-                            - this.aShortArray3810[var18] * var19 + 32767 >> 16);
+                                  - this.aShortArray3810[var18] * var19 + 32767
+                                  >> 16);
                           this.aShortArray3810[var18] = (short) var21;
                         }
                       }
@@ -1886,11 +1981,11 @@ public final class GlModel extends AbstractModel {
             var23 = var20 + GlModel.anInt3865;
             var24 = var21 + GlModel.anInt3862;
             int[] var25 = {
-              var16 * var8[0] + 16384 >> 15, var16 * var8[3] + 16384 >> 15,
-              var16 * var8[6] + 16384 >> 15, var17 * var8[1] + 16384 >> 15,
-              var17 * var8[4] + 16384 >> 15, var17 * var8[7] + 16384 >> 15,
-              var18 * var8[2] + 16384 >> 15, var18 * var8[5] + 16384 >> 15,
-              var18 * var8[8] + 16384 >> 15
+                var16 * var8[0] + 16384 >> 15, var16 * var8[3] + 16384 >> 15,
+                var16 * var8[6] + 16384 >> 15, var17 * var8[1] + 16384 >> 15,
+                var17 * var8[4] + 16384 >> 15, var17 * var8[7] + 16384 >> 15,
+                var18 * var8[2] + 16384 >> 15, var18 * var8[5] + 16384 >> 15,
+                var18 * var8[8] + 16384 >> 15
             };
             var26 = var16 * var13 + 16384 >> 15;
             var27 = var17 * var14 + 16384 >> 15;
@@ -1913,9 +2008,12 @@ public final class GlModel extends AbstractModel {
               }
             }
 
-            var30 = var8[0] * var26 + var8[1] * var27 + var8[2] * var28 + 16384 >> 15;
-            var31 = var8[3] * var26 + var8[4] * var27 + var8[5] * var28 + 16384 >> 15;
-            var32 = var8[6] * var26 + var8[7] * var27 + var8[8] * var28 + 16384 >> 15;
+            var30 = var8[0] * var26 + var8[1] * var27 + var8[2] * var28 + 16384
+                >> 15;
+            var31 = var8[3] * var26 + var8[4] * var27 + var8[5] * var28 + 16384
+                >> 15;
+            var32 = var8[6] * var26 + var8[7] * var27 + var8[8] * var28 + 16384
+                >> 15;
             var30 += var10;
             var31 += var11;
             var32 += var47;
@@ -1929,12 +2027,15 @@ public final class GlModel extends AbstractModel {
                   var37 = var35[var36];
                   if (this.aShortArray3832
                       == null || (var7 & this.aShortArray3832[var37]) != 0) {
-                    var38 = var29[0] * this.vx[var37] + var29[1] * this.vy[var37]
-                      + var29[2] * this.vz[var37] + 16384 >> 15;
-                    var39 = var29[3] * this.vx[var37] + var29[4] * this.vy[var37]
-                      + var29[5] * this.vz[var37] + 16384 >> 15;
-                    var40 = var29[6] * this.vx[var37] + var29[7] * this.vy[var37]
-                      + var29[8] * this.vz[var37] + 16384 >> 15;
+                    var38 =
+                        var29[0] * this.vx[var37] + var29[1] * this.vy[var37]
+                            + var29[2] * this.vz[var37] + 16384 >> 15;
+                    var39 =
+                        var29[3] * this.vx[var37] + var29[4] * this.vy[var37]
+                            + var29[5] * this.vz[var37] + 16384 >> 15;
+                    var40 =
+                        var29[6] * this.vx[var37] + var29[7] * this.vy[var37]
+                            + var29[8] * this.vz[var37] + 16384 >> 15;
                     var38 += var30;
                     var39 += var31;
                     var40 += var32;
@@ -2029,7 +2130,8 @@ public final class GlModel extends AbstractModel {
                       var18 = 127;
                     }
 
-                    this.aShortArray3808[var14] = (short) (var16 << 10 | var17 << 7 | var18);
+                    this.aShortArray3808[var14] = (short) (var16 << 10
+                        | var17 << 7 | var18);
                   }
                 }
 
@@ -2056,8 +2158,9 @@ public final class GlModel extends AbstractModel {
     this.vertexPositionData.updated = false;
   }
 
-  private short method1907(Model var1, int var2, long var3, int var5, int var6, int var7,
-                                 int var8, float var9, float var10) {
+  private short method1907(Model var1, int var2, long var3, int var5, int var6,
+      int var7,
+      int var8, float var9, float var10) {
     int var11 = this.vertexCounts[var2];
     int var12 = this.vertexCounts[var2 + 1];
     int var13 = 0;
@@ -2109,7 +2212,8 @@ public final class GlModel extends AbstractModel {
         var1[var3] = 0;
       }
 
-      for (var3 = 0; var3 < this.vertexCCC; this.anIntArrayArray3825[var4][var1[var4]++] = var3++) {
+      for (var3 = 0; var3 < this.vertexCCC;
+          this.anIntArrayArray3825[var4][var1[var4]++] = var3++) {
         var4 = this.anIntArray3844[var3] & 255;
       }
 
@@ -2135,7 +2239,8 @@ public final class GlModel extends AbstractModel {
         var1[var3] = 0;
       }
 
-      for (var3 = 0; var3 < this.anInt3852; this.anIntArrayArray3829[var4][var1[var4]++] = var3++) {
+      for (var3 = 0; var3 < this.anInt3852;
+          this.anIntArrayArray3829[var4][var1[var4]++] = var3++) {
         var4 = this.aByteArray3820[var3] & 255;
       }
 
@@ -2144,7 +2249,7 @@ public final class GlModel extends AbstractModel {
 
   }
 
-  public void method1909(int var1 ) {
+  public void method1909(int var1) {
     this.aShort3819 = (short) var1;
     if (this.vertexNormalData != null) {
       this.vertexNormalData.updated = false;
@@ -2207,7 +2312,8 @@ public final class GlModel extends AbstractModel {
       this.indices.byteBuffer = null;
       this.indices.buffer = var3;
     } else {
-      ByteBuffer var4 = ByteBuffer.allocateDirect(GlModel.indicesBuffer.position);
+      ByteBuffer var4 = ByteBuffer
+          .allocateDirect(GlModel.indicesBuffer.position);
       var4.put(GlModel.indicesBuffer.bytes, 0, GlModel.indicesBuffer.position);
       var4.flip();
       this.indices.updated = true;
@@ -2217,12 +2323,12 @@ public final class GlModel extends AbstractModel {
 
   }
 
-  public void method1914(int var1 ) {
+  public void method1914(int var1) {
     this.aShort3849 = (short) var1;
     this.vertexColorData.updated = false;
   }
 
-  public void method1916(short var1, short var2 ) {
+  public void method1916(short var1, short var2) {
     int var3;
     for (var3 = 0; var3 < this.anInt3852; ++var3) {
       if (this.materials[var3] == var1) {
@@ -2310,7 +2416,7 @@ public final class GlModel extends AbstractModel {
     this.aClass6_3835.aBoolean98 = true;
   }
 
-  public void method1918(short var1, short var2 ) {
+  public void method1918(short var1, short var2) {
     for (int var3 = 0; var3 < this.anInt3852; ++var3) {
       if (this.aShortArray3808[var3] == var1) {
         this.aShortArray3808[var3] = var2;
@@ -2324,7 +2430,7 @@ public final class GlModel extends AbstractModel {
       int[][] var5,
       int var6,
       int var7,
-      int var8 ) {
+      int var8) {
     if (!var3.aClass6_3835.aBoolean98) {
       var3.method1917();
     }
@@ -2334,15 +2440,16 @@ public final class GlModel extends AbstractModel {
     int var11 = var8 + var3.aClass6_3835.aShort97;
     int var12 = var8 + var3.aClass6_3835.aShort96;
     if (var1 != 1 && var1 != 2 && var1 != 3 && var1 != 5
-      || var9 >= 0 && var10 + 128 >> 7 < var4.length && var11 >= 0
-      && var12 + 128 >> 7 < var4[0].length) {
+        || var9 >= 0 && var10 + 128 >> 7 < var4.length && var11 >= 0
+        && var12 + 128 >> 7 < var4[0].length) {
       if (var1 != 4 && var1 != 5) {
         var9 >>= 7;
         var10 = var10 + 127 >> 7;
         var11 >>= 7;
         var12 = var12 + 127 >> 7;
-        if (var4[var9][var11] == var7 && var4[var10][var11] == var7 && var4[var9][var12] == var7
-          && var4[var10][var12] == var7) {
+        if (var4[var9][var11] == var7 && var4[var10][var11] == var7
+            && var4[var9][var12] == var7
+            && var4[var10][var12] == var7) {
           return;
         }
       } else {
@@ -2351,7 +2458,7 @@ public final class GlModel extends AbstractModel {
         }
 
         if (var9 < 0 || var10 + 128 >> 7 >= var5.length || var11 < 0
-          || var12 + 128 >> 7 >= var5[0].length) {
+            || var12 + 128 >> 7 >= var5[0].length) {
           return;
         }
       }
@@ -2374,8 +2481,10 @@ public final class GlModel extends AbstractModel {
           var17 = var15 & 127;
           var18 = var14 >> 7;
           var19 = var15 >> 7;
-          var20 = var4[var18][var19] * (128 - var16) + var4[var18 + 1][var19] * var16 >> 7;
-          var21 = var4[var18][var19 + 1] * (128 - var16) + var4[var18 + 1][var19 + 1] * var16 >> 7;
+          var20 = var4[var18][var19] * (128 - var16)
+              + var4[var18 + 1][var19] * var16 >> 7;
+          var21 = var4[var18][var19 + 1] * (128 - var16)
+              + var4[var18 + 1][var19 + 1] * var16 >> 7;
           var22 = var20 * (128 - var17) + var21 * var17 >> 7;
           this.vy[var13] = this.vy[var13] + var22 - var7;
         }
@@ -2394,9 +2503,11 @@ public final class GlModel extends AbstractModel {
               var19 = var17 & 127;
               var20 = var16 >> 7;
               var21 = var17 >> 7;
-              var22 = var4[var20][var21] * (128 - var18) + var4[var20 + 1][var21] * var18 >> 7;
+              var22 = var4[var20][var21] * (128 - var18)
+                  + var4[var20 + 1][var21] * var18 >> 7;
               var23 =
-                var4[var20][var21 + 1] * (128 - var18) + var4[var20 + 1][var21 + 1] * var18 >> 7;
+                  var4[var20][var21 + 1] * (128 - var18)
+                      + var4[var20 + 1][var21 + 1] * var18 >> 7;
               var24 = var22 * (128 - var19) + var23 * var19 >> 7;
               this.vy[var14] += (var24 - var7) * (var2 - var15) / var2;
             }
@@ -2415,9 +2526,11 @@ public final class GlModel extends AbstractModel {
             var18 = var16 & 127;
             var19 = var15 >> 7;
             var20 = var16 >> 7;
-            var21 = var5[var19][var20] * (128 - var17) + var5[var19 + 1][var20] * var17 >> 7;
+            var21 = var5[var19][var20] * (128 - var17)
+                + var5[var19 + 1][var20] * var17 >> 7;
             var22 =
-              var5[var19][var20 + 1] * (128 - var17) + var5[var19 + 1][var20 + 1] * var17 >> 7;
+                var5[var19][var20 + 1] * (128 - var17)
+                    + var5[var19 + 1][var20 + 1] * var17 >> 7;
             var23 = var21 * (128 - var18) + var22 * var18 >> 7;
             this.vy[var14] = this.vy[var14] + (var23 - var7) + var13;
           }
@@ -2431,16 +2544,21 @@ public final class GlModel extends AbstractModel {
             var18 = var16 & 127;
             var19 = var15 >> 7;
             var20 = var16 >> 7;
-            var21 = var4[var19][var20] * (128 - var17) + var4[var19 + 1][var20] * var17 >> 7;
+            var21 = var4[var19][var20] * (128 - var17)
+                + var4[var19 + 1][var20] * var17 >> 7;
             var22 =
-              var4[var19][var20 + 1] * (128 - var17) + var4[var19 + 1][var20 + 1] * var17 >> 7;
+                var4[var19][var20 + 1] * (128 - var17)
+                    + var4[var19 + 1][var20 + 1] * var17 >> 7;
             var23 = var21 * (128 - var18) + var22 * var18 >> 7;
-            var21 = var5[var19][var20] * (128 - var17) + var5[var19 + 1][var20] * var17 >> 7;
+            var21 = var5[var19][var20] * (128 - var17)
+                + var5[var19 + 1][var20] * var17 >> 7;
             var22 =
-              var5[var19][var20 + 1] * (128 - var17) + var5[var19 + 1][var20 + 1] * var17 >> 7;
+                var5[var19][var20 + 1] * (128 - var17)
+                    + var5[var19 + 1][var20 + 1] * var17 >> 7;
             var24 = var21 * (128 - var18) + var22 * var18 >> 7;
             int var25 = var23 - var24;
-            this.vy[var14] = ((this.vy[var14] << 8) / var13 * var25 >> 8) - (var7 - var23);
+            this.vy[var14] =
+                ((this.vy[var14] << 8) / var13 * var25 >> 8) - (var7 - var23);
           }
         }
       }
@@ -2454,15 +2572,17 @@ public final class GlModel extends AbstractModel {
       boolean var4,
       boolean var5,
       boolean var6,
-      boolean var7 ) {
+      boolean var7) {
     if (this.aByte3836 != 0) {
       throw new IllegalArgumentException();
     } else if (this.amountVertices != 0) {
       if (var7) {
-        boolean var8 = !this.vertexColorData.updated && (var2 || var3 && !GLStatics.useBumpMaps);
+        boolean var8 = !this.vertexColorData.updated && (var2
+            || var3 && !GLStatics.useBumpMaps);
         this.method1922(false, !this.vertexPositionData.updated && var1, var8,
-            this.vertexNormalData != null && !this.vertexNormalData.updated && var3,
-          !this.vertexTextureData.updated && var4);
+            this.vertexNormalData != null && !this.vertexNormalData.updated
+                && var3,
+            !this.vertexTextureData.updated && var4);
         if (!this.indices.updated && var5 && var2) {
           this.initializeIndicesBuffer();
         }
@@ -2533,8 +2653,9 @@ public final class GlModel extends AbstractModel {
     }
   }
 
-  private void method1922(boolean var1, boolean var2, boolean var3, boolean var4,
-                                boolean var5) {
+  private void method1922(boolean var1, boolean var2, boolean var3,
+      boolean var4,
+      boolean var5) {
     int var6 = 0;
     if (var2) {
       this.vertexPositionData.pointer = var6;
@@ -2765,15 +2886,21 @@ public final class GlModel extends AbstractModel {
             var30 = this.aShortArray3841[var9];
             if (var30 == 0) {
               assert this.aShortArray3810 != null;
-              GlModel.indicesBuffer.writeFloat(this.aShortArray3810[var9] * var26);
-              GlModel.indicesBuffer.writeFloat(this.aShortArray3826[var9] * var26);
-              GlModel.indicesBuffer.writeFloat(this.aShortArray3837[var9] * var26);
+              GlModel.indicesBuffer
+                  .writeFloat(this.aShortArray3810[var9] * var26);
+              GlModel.indicesBuffer
+                  .writeFloat(this.aShortArray3826[var9] * var26);
+              GlModel.indicesBuffer
+                  .writeFloat(this.aShortArray3837[var9] * var26);
             } else {
               var32 = var27 / var30;
               assert this.aShortArray3810 != null;
-              GlModel.indicesBuffer.writeFloat(this.aShortArray3810[var9] * var32);
-              GlModel.indicesBuffer.writeFloat(this.aShortArray3826[var9] * var32);
-              GlModel.indicesBuffer.writeFloat(this.aShortArray3837[var9] * var32);
+              GlModel.indicesBuffer
+                  .writeFloat(this.aShortArray3810[var9] * var32);
+              GlModel.indicesBuffer
+                  .writeFloat(this.aShortArray3826[var9] * var32);
+              GlModel.indicesBuffer
+                  .writeFloat(this.aShortArray3837[var9] * var32);
             }
 
             GlModel.indicesBuffer.position += var6 - 12;
@@ -2783,15 +2910,21 @@ public final class GlModel extends AbstractModel {
             var30 = this.aShortArray3841[var9];
             if (var30 == 0) {
               assert this.aShortArray3810 != null;
-              GlModel.indicesBuffer.writeFloatLE(this.aShortArray3810[var9] * var26);
-              GlModel.indicesBuffer.writeFloatLE(this.aShortArray3826[var9] * var26);
-              GlModel.indicesBuffer.writeFloatLE(this.aShortArray3837[var9] * var26);
+              GlModel.indicesBuffer
+                  .writeFloatLE(this.aShortArray3810[var9] * var26);
+              GlModel.indicesBuffer
+                  .writeFloatLE(this.aShortArray3826[var9] * var26);
+              GlModel.indicesBuffer
+                  .writeFloatLE(this.aShortArray3837[var9] * var26);
             } else {
               var32 = var27 / var30;
               assert this.aShortArray3810 != null;
-              GlModel.indicesBuffer.writeFloatLE(this.aShortArray3810[var9] * var32);
-              GlModel.indicesBuffer.writeFloatLE(this.aShortArray3826[var9] * var32);
-              GlModel.indicesBuffer.writeFloatLE(this.aShortArray3837[var9] * var32);
+              GlModel.indicesBuffer
+                  .writeFloatLE(this.aShortArray3810[var9] * var32);
+              GlModel.indicesBuffer
+                  .writeFloatLE(this.aShortArray3826[var9] * var32);
+              GlModel.indicesBuffer
+                  .writeFloatLE(this.aShortArray3837[var9] * var32);
             }
 
             GlModel.indicesBuffer.position += var6 - 12;
@@ -2820,7 +2953,8 @@ public final class GlModel extends AbstractModel {
       ByteBuffer var29;
       if (var1) {
         if (GlRenderer.aBoolean1817) {
-          var29 = ByteBuffer.wrap(GlModel.indicesBuffer.bytes, 0, GlModel.indicesBuffer.position);
+          var29 = ByteBuffer.wrap(GlModel.indicesBuffer.bytes, 0,
+              GlModel.indicesBuffer.position);
           if (this.aClass156_3812 == null) {
             this.aClass156_3812 = new GlBufferObject(true);
             this.aClass156_3812.setVertexBufferData(var29);
@@ -2856,14 +2990,17 @@ public final class GlModel extends AbstractModel {
             this.vertexTextureData.stride = var6;
           }
         } else {
-          if (GlModel.aByteBuffer3834 != null && GlModel.aByteBuffer3834.capacity() >= GlModel.indicesBuffer.position) {
+          if (GlModel.aByteBuffer3834 != null
+              && GlModel.aByteBuffer3834.capacity()
+              >= GlModel.indicesBuffer.position) {
             GlModel.aByteBuffer3834.clear();
           } else {
             GlModel.aByteBuffer3834 = ByteBuffer.allocateDirect(
                 GlModel.indicesBuffer.position + 100 * var6);
           }
 
-          GlModel.aByteBuffer3834.put(GlModel.indicesBuffer.bytes, 0, GlModel.indicesBuffer.position);
+          GlModel.aByteBuffer3834.put(GlModel.indicesBuffer.bytes, 0,
+              GlModel.indicesBuffer.position);
           GlModel.aByteBuffer3834.flip();
           if (var2) {
             this.vertexPositionData.updated = true;
@@ -2927,7 +3064,8 @@ public final class GlModel extends AbstractModel {
         }
       } else {
         var29 = ByteBuffer.allocateDirect(GlModel.indicesBuffer.position);
-        var29.put(GlModel.indicesBuffer.bytes, 0, GlModel.indicesBuffer.position);
+        var29.put(GlModel.indicesBuffer.bytes, 0,
+            GlModel.indicesBuffer.position);
         var29.flip();
         if (var2) {
           this.vertexPositionData.updated = true;
@@ -2961,8 +3099,9 @@ public final class GlModel extends AbstractModel {
     }
   }
 
-  private AbstractModel method1923(boolean var1, boolean var2, boolean var3, GlModel var4,
-                                         GlModel var5) {
+  private AbstractModel method1923(boolean var1, boolean var2, boolean var3,
+      GlModel var4,
+      GlModel var5) {
     var4.vertexCCC = this.vertexCCC;
     var4.amountVertices = this.amountVertices;
     var4.anInt3852 = this.anInt3852;
@@ -2995,7 +3134,8 @@ public final class GlModel extends AbstractModel {
     if (var1) {
       var4.aByteArray3816 = this.aByteArray3816;
     } else {
-      if (var5.aByteArray3816 == null || var5.aByteArray3816.length < this.anInt3852) {
+      if (var5.aByteArray3816 == null
+          || var5.aByteArray3816.length < this.anInt3852) {
         var5.aByteArray3816 = new byte[this.anInt3852 + 100];
       }
 
@@ -3009,7 +3149,8 @@ public final class GlModel extends AbstractModel {
     if (var2) {
       var4.aShortArray3808 = this.aShortArray3808;
     } else {
-      if (var5.aShortArray3808 == null || var5.aShortArray3808.length < this.anInt3852) {
+      if (var5.aShortArray3808 == null
+          || var5.aShortArray3808.length < this.anInt3852) {
         var5.aShortArray3808 = new short[this.anInt3852 + 100];
       }
 
@@ -3032,7 +3173,8 @@ public final class GlModel extends AbstractModel {
     }
 
     if (!var3 && this.aShortArray3810 != null) {
-      if (var5.aShortArray3810 == null || var5.aShortArray3810.length < this.amountVertices) {
+      if (var5.aShortArray3810 == null
+          || var5.aShortArray3810.length < this.amountVertices) {
         var5.aShortArray3810 = new short[this.amountVertices + 100];
         var5.aShortArray3826 = new short[this.amountVertices + 100];
         var5.aShortArray3837 = new short[this.amountVertices + 100];
@@ -3090,7 +3232,7 @@ public final class GlModel extends AbstractModel {
     return var4;
   }
 
-  public SceneNode method1861(int var1, int var2, int var3 ) {
+  public SceneNode method1861(int var1, int var2, int var3) {
     this.aBoolean3809 = false;
     if (this.aClass18_3843 != null) {
       this.aShortArray3810 = this.aClass18_3843.aShortArray417;
@@ -3108,7 +3250,7 @@ public final class GlModel extends AbstractModel {
   }
 
   public void method1866(SceneNode var1, int var2, int var3, int var4,
-      boolean var5 ) {
+      boolean var5) {
     GlModel var6 = (GlModel) var1;
     if (this.anInt3852 != 0 && var6.anInt3852 != 0) {
       int var7 = var6.vertexCCC;
@@ -3185,7 +3327,8 @@ public final class GlModel extends AbstractModel {
 
               if (var35 != -1) {
                 for (var38 = 0; var38 < var7; ++var38) {
-                  if (var33 == var8[var38] && var34 == var10[var38] && var32 == var9[var38]) {
+                  if (var33 == var8[var38] && var34 == var10[var38]
+                      && var32 == var9[var38]) {
                     int var39 = -1;
                     var36 = var23[var38];
                     var37 = var23[var38 + 1];
@@ -3201,21 +3344,25 @@ public final class GlModel extends AbstractModel {
                       if (var15 == null) {
                         this.aClass18_3843 = new SomethingGlModel();
                         var15 = this.aClass18_3843.aShortArray417 =
-                          DummyOutputStream.copy(23032, this.aShortArray3810);
+                            GlobalStatics_11.copy(23032, this.aShortArray3810);
                         var16 = this.aClass18_3843.aShortArray419 =
-                          DummyOutputStream.copy(23032, this.aShortArray3826);
+                            GlobalStatics_11.copy(23032, this.aShortArray3826);
                         var17 = this.aClass18_3843.aShortArray418 =
-                          DummyOutputStream.copy(23032, this.aShortArray3837);
+                            GlobalStatics_11.copy(23032, this.aShortArray3837);
                         var18 = this.aClass18_3843.aShortArray416 =
-                          DummyOutputStream.copy(23032, this.aShortArray3841);
+                            GlobalStatics_11.copy(23032, this.aShortArray3841);
                       }
 
                       if (var19 == null) {
                         SomethingGlModel var47 = var6.aClass18_3843 = new SomethingGlModel();
-                        var19 = var47.aShortArray417 = DummyOutputStream.copy(23032, var11);
-                        var20 = var47.aShortArray419 = DummyOutputStream.copy(23032, var12);
-                        var21 = var47.aShortArray418 = DummyOutputStream.copy(23032, var13);
-                        var22 = var47.aShortArray416 = DummyOutputStream.copy(23032, var14);
+                        var19 = var47.aShortArray417 = GlobalStatics_11
+                            .copy(23032, var11);
+                        var20 = var47.aShortArray419 = GlobalStatics_11
+                            .copy(23032, var12);
+                        var21 = var47.aShortArray418 = GlobalStatics_11
+                            .copy(23032, var13);
+                        var22 = var47.aShortArray416 = GlobalStatics_11
+                            .copy(23032, var14);
                       }
 
                       short var46 = this.aShortArray3810[var35];
@@ -3319,7 +3466,7 @@ public final class GlModel extends AbstractModel {
       boolean var8,
       boolean var9,
       boolean var10,
-      boolean directMaterials ) {
+      boolean directMaterials) {
     GlModel var12 = new GlModel();
     var12.vertexCCC = this.vertexCCC;
     var12.amountVertices = this.amountVertices;
@@ -3349,7 +3496,7 @@ public final class GlModel extends AbstractModel {
     if (var3) {
       var12.aShortArray3808 = this.aShortArray3808;
     } else {
-      var12.aShortArray3808 = DummyOutputStream.copy(23032,
+      var12.aShortArray3808 = GlobalStatics_11.copy(23032,
           this.aShortArray3808);
     }
 
@@ -3372,13 +3519,13 @@ public final class GlModel extends AbstractModel {
       var12.aShortArray3837 = this.aShortArray3837;
       var12.aShortArray3841 = this.aShortArray3841;
     } else {
-      var12.aShortArray3810 = DummyOutputStream.copy(23032,
+      var12.aShortArray3810 = GlobalStatics_11.copy(23032,
           this.aShortArray3810);
-      var12.aShortArray3826 = DummyOutputStream.copy(23032,
+      var12.aShortArray3826 = GlobalStatics_11.copy(23032,
           this.aShortArray3826);
-      var12.aShortArray3837 = DummyOutputStream.copy(23032,
+      var12.aShortArray3837 = GlobalStatics_11.copy(23032,
           this.aShortArray3837);
-      var12.aShortArray3841 = DummyOutputStream.copy(23032,
+      var12.aShortArray3841 = GlobalStatics_11.copy(23032,
           this.aShortArray3841);
     }
 
@@ -3399,7 +3546,8 @@ public final class GlModel extends AbstractModel {
     } else {
       var12.aFloatArray3824 = GlobalStatics_9
           .method119(this.aFloatArray3824, 0);
-      var12.aFloatArray3847 = GlobalStatics_9.method119(this.aFloatArray3847, 0);
+      var12.aFloatArray3847 = GlobalStatics_9
+          .method119(this.aFloatArray3847, 0);
       var12.vertexTextureData = new BufferData();
     }
 
@@ -3409,16 +3557,16 @@ public final class GlModel extends AbstractModel {
       var12.v2 = this.v2;
       var12.indices = this.indices;
     } else {
-      var12.v0 = DummyOutputStream.copy(23032, this.v0);
-      var12.v1 = DummyOutputStream.copy(23032, this.v1);
-      var12.v2 = DummyOutputStream.copy(23032, this.v2);
+      var12.v0 = GlobalStatics_11.copy(23032, this.v0);
+      var12.v1 = GlobalStatics_11.copy(23032, this.v1);
+      var12.v2 = GlobalStatics_11.copy(23032, this.v2);
       var12.indices = new BufferData();
     }
 
     if (directMaterials) {
       var12.materials = this.materials;
     } else {
-      var12.materials = DummyOutputStream.copy(23032, this.materials);
+      var12.materials = GlobalStatics_11.copy(23032, this.materials);
     }
 
     var12.anIntArray3844 = this.anIntArray3844;
@@ -3435,8 +3583,9 @@ public final class GlModel extends AbstractModel {
     return var12;
   }
 
-  private boolean isWithinBoundaries(int var1, int var2, int var3, int var4, int var5,
-                                           int var6, int var7, int var8) {
+  private boolean isWithinBoundaries(int var1, int var2, int var3, int var4,
+      int var5,
+      int var6, int var7, int var8) {
     return (var2 >= var3 || var2 >= var4 || var2 >= var5) && (
         (var2 <= var3 || var2 <= var4 || var2 <= var5) && (
             (var1 >= var6 || var1 >= var7 || var1 >= var8) && (var1 <= var6
@@ -3446,15 +3595,17 @@ public final class GlModel extends AbstractModel {
   private void draw() {
     if (this.anInt3852 != 0) {
       if (this.aByte3836 != 0) {
-        this.method1922(true, !this.vertexPositionData.updated && (this.aByte3836 & 1) != 0,
-          !this.vertexColorData.updated && (this.aByte3836 & 2) != 0,
+        this.method1922(true,
+            !this.vertexPositionData.updated && (this.aByte3836 & 1) != 0,
+            !this.vertexColorData.updated && (this.aByte3836 & 2) != 0,
             this.vertexNormalData != null && !this.vertexNormalData.updated
-            && (this.aByte3836 & 4) != 0, false);
+                && (this.aByte3836 & 4) != 0, false);
       }
 
-      this.method1922(false, !this.vertexPositionData.updated, !this.vertexColorData.updated,
+      this.method1922(false, !this.vertexPositionData.updated,
+          !this.vertexColorData.updated,
           this.vertexNormalData != null && !this.vertexNormalData.updated,
-        !this.vertexTextureData.updated);
+          !this.vertexTextureData.updated);
       if (!this.indices.updated) {
         this.initializeIndicesBuffer();
       }
@@ -3537,36 +3688,42 @@ public final class GlModel extends AbstractModel {
         this.indices.buffer.bindElementBuffer();
       }
 
-      if (this.vertexPositionData.buffer == null || this.vertexColorData.buffer == null
-        || GLStatics.useBumpMaps && this.vertexNormalData.buffer == null
-        || this.vertexTextureData.buffer == null) {
+      if (this.vertexPositionData.buffer == null
+          || this.vertexColorData.buffer == null
+          || GLStatics.useBumpMaps && this.vertexNormalData.buffer == null
+          || this.vertexTextureData.buffer == null) {
         if (GlRenderer.vertexBufferSupport) {
           //TODO ARB
           GlRenderer.GL.glBindBuffer('\u8892', 0);
         }
 
         if (this.vertexPositionData.buffer == null) {
-          this.vertexPositionData.byteBuffer.position(this.vertexPositionData.pointer);
+          this.vertexPositionData.byteBuffer
+              .position(this.vertexPositionData.pointer);
           GlRenderer.GL.glVertexPointer(3, 5126, this.vertexPositionData.stride,
               this.vertexPositionData.byteBuffer);
         }
 
         if (this.vertexColorData.buffer == null) {
-          this.vertexColorData.byteBuffer.position(this.vertexColorData.pointer);
+          this.vertexColorData.byteBuffer
+              .position(this.vertexColorData.pointer);
           GlRenderer.GL.glColorPointer(4, 5121, this.vertexColorData.stride,
               this.vertexColorData.byteBuffer);
         }
 
         if (GLStatics.useBumpMaps && this.vertexNormalData.buffer == null) {
-          this.vertexNormalData.byteBuffer.position(this.vertexNormalData.pointer);
+          this.vertexNormalData.byteBuffer
+              .position(this.vertexNormalData.pointer);
           GlRenderer.GL.glNormalPointer(5126, this.vertexNormalData.stride,
               this.vertexNormalData.byteBuffer);
         }
 
         if (this.vertexTextureData.buffer == null) {
-          this.vertexTextureData.byteBuffer.position(this.vertexTextureData.pointer);
-          GlRenderer.GL.glTexCoordPointer(2, 5126, this.vertexTextureData.stride,
-              this.vertexTextureData.byteBuffer);
+          this.vertexTextureData.byteBuffer
+              .position(this.vertexTextureData.pointer);
+          GlRenderer.GL
+              .glTexCoordPointer(2, 5126, this.vertexTextureData.stride,
+                  this.vertexTextureData.byteBuffer);
         }
       }
 
@@ -3592,7 +3749,8 @@ public final class GlModel extends AbstractModel {
           GlRenderer.GL.glDrawElements(4, (end - start) * 3, 5125, start * 12);
         } else {
           this.indices.byteBuffer.position(start * 12);
-          GlRenderer.GL.glDrawElements(4, (end - start) * 3, 5125, this.indices.byteBuffer);
+          GlRenderer.GL.glDrawElements(4, (end - start) * 3, 5125,
+              this.indices.byteBuffer);
         }
       }
 
@@ -3626,7 +3784,7 @@ public final class GlModel extends AbstractModel {
     this.indices.updated = false;
   }
 
-  public void method1932(int var1 ) {
+  public void method1932(int var1) {
     if (this.aShortArray3810 == null) {
       this.method1876(var1);
     } else {
@@ -3642,10 +3800,12 @@ public final class GlModel extends AbstractModel {
       }
 
       for (var4 = 0; var4 < this.amountVertices; ++var4) {
-        var5 = this.aShortArray3837[var4] * var2 + this.aShortArray3810[var4] * var3 >> 16;
+        var5 = this.aShortArray3837[var4] * var2
+            + this.aShortArray3810[var4] * var3 >> 16;
         this.aShortArray3837[var4] =
-          (short) (
-              this.aShortArray3837[var4] * var3 - this.aShortArray3810[var4] * var2 >> 16);
+            (short) (
+                this.aShortArray3837[var4] * var3
+                    - this.aShortArray3810[var4] * var2 >> 16);
         this.aShortArray3810[var4] = (short) var5;
       }
 
@@ -3659,7 +3819,7 @@ public final class GlModel extends AbstractModel {
   }
 
   public SoftwareIndexedColorSprite createShadowMap(
-      SoftwareIndexedColorSprite var1 ) {
+      SoftwareIndexedColorSprite var1) {
     if (this.amountVertices == 0) {
       return null;
     } else {
@@ -3671,36 +3831,44 @@ public final class GlModel extends AbstractModel {
       int var3;
       if (GlEnvironment.anInt1314 > 0) {
         var2 =
-            this.aClass6_3835.aShort95 - (this.aClass6_3835.aShort92 * GlEnvironment.anInt1314 >> 8)
-            >> 3;
+            this.aClass6_3835.aShort95 - (
+                this.aClass6_3835.aShort92 * GlEnvironment.anInt1314 >> 8)
+                >> 3;
         var3 =
-            this.aClass6_3835.aShort94 - (this.aClass6_3835.aShort91 * GlEnvironment.anInt1314 >> 8)
-            >> 3;
+            this.aClass6_3835.aShort94 - (
+                this.aClass6_3835.aShort91 * GlEnvironment.anInt1314 >> 8)
+                >> 3;
       } else {
         var2 =
-            this.aClass6_3835.aShort95 - (this.aClass6_3835.aShort91 * GlEnvironment.anInt1314 >> 8)
-            >> 3;
+            this.aClass6_3835.aShort95 - (
+                this.aClass6_3835.aShort91 * GlEnvironment.anInt1314 >> 8)
+                >> 3;
         var3 =
-            this.aClass6_3835.aShort94 - (this.aClass6_3835.aShort92 * GlEnvironment.anInt1314 >> 8)
-            >> 3;
+            this.aClass6_3835.aShort94 - (
+                this.aClass6_3835.aShort92 * GlEnvironment.anInt1314 >> 8)
+                >> 3;
       }
 
       int var4;
       int var5;
       if (GlEnvironment.anInt1315 > 0) {
         var4 =
-            this.aClass6_3835.aShort97 - (this.aClass6_3835.aShort92 * GlEnvironment.anInt1315 >> 8)
-            >> 3;
+            this.aClass6_3835.aShort97 - (
+                this.aClass6_3835.aShort92 * GlEnvironment.anInt1315 >> 8)
+                >> 3;
         var5 =
-            this.aClass6_3835.aShort96 - (this.aClass6_3835.aShort91 * GlEnvironment.anInt1315 >> 8)
-            >> 3;
+            this.aClass6_3835.aShort96 - (
+                this.aClass6_3835.aShort91 * GlEnvironment.anInt1315 >> 8)
+                >> 3;
       } else {
         var4 =
-            this.aClass6_3835.aShort97 - (this.aClass6_3835.aShort91 * GlEnvironment.anInt1315 >> 8)
-            >> 3;
+            this.aClass6_3835.aShort97 - (
+                this.aClass6_3835.aShort91 * GlEnvironment.anInt1315 >> 8)
+                >> 3;
         var5 =
-            this.aClass6_3835.aShort96 - (this.aClass6_3835.aShort92 * GlEnvironment.anInt1315 >> 8)
-            >> 3;
+            this.aClass6_3835.aShort96 - (
+                this.aClass6_3835.aShort92 * GlEnvironment.anInt1315 >> 8)
+                >> 3;
       }
 
       int var6 = var3 - var2 + 1;
@@ -3729,9 +3897,11 @@ public final class GlModel extends AbstractModel {
       int var15;
       while (var9 < this.vertexCCC) {
         int var10 = (
-            this.vx[var9] - (this.vy[var9] * GlEnvironment.anInt1314 >> 8) >> 3) - var2;
+            this.vx[var9] - (this.vy[var9] * GlEnvironment.anInt1314 >> 8) >> 3)
+            - var2;
         int var11 = (
-            this.vz[var9] - (this.vy[var9] * GlEnvironment.anInt1315 >> 8) >> 3) - var4;
+            this.vz[var9] - (this.vy[var9] * GlEnvironment.anInt1315 >> 8) >> 3)
+            - var4;
         int var12 = this.vertexCounts[var9];
         var13 = this.vertexCounts[var9 + 1];
         var14 = var12;
@@ -3762,9 +3932,12 @@ public final class GlModel extends AbstractModel {
         int var16 = GlModel.screenCoordinatesY[var20];
         int var17 = GlModel.screenCoordinatesY[var19];
         int var18 = GlModel.screenCoordinatesY[var21];
-        if ((var13 - var14) * (var17 - var18) - (var17 - var16) * (var15 - var14) > 0) {
-          DummyClass40.method1147(var8.aByteArray2674, var16, var17, var18, var13, var14, var15,
-            var6);
+        if ((var13 - var14) * (var17 - var18) - (var17 - var16) * (var15
+            - var14) > 0) {
+          DummyClass40
+              .method1147(var8.aByteArray2674, var16, var17, var18, var13,
+                  var14, var15,
+                  var6);
         }
       }
 
@@ -3777,12 +3950,14 @@ public final class GlModel extends AbstractModel {
     float var4 = var1 < 0.0F ? -var1 : var1;
     float var5 = var2 < 0.0F ? -var2 : var2;
     return var4 > var3 && var4 > var5 ?
-      (var1 > 0.0F ? 0 : 1) :
-      (var5 > var3 && var5 > var4 ? (var2 > 0.0F ? 2 : 3) : (var0 > 0.0F ? 4 : 5));
+        (var1 > 0.0F ? 0 : 1) :
+        (var5 > var3 && var5 > var4 ? (var2 > 0.0F ? 2 : 3)
+            : (var0 > 0.0F ? 4 : 5));
   }
 
-  private static void method1904(int var0, int var1, int var2, int var3, int var4, int var5,
-                                       float[] var6, float var7, int var8, float var9) {
+  private static void method1904(int var0, int var1, int var2, int var3,
+      int var4, int var5,
+      float[] var6, float var7, int var8, float var9) {
     var0 -= var3;
     var1 -= var4;
     var2 -= var5;
@@ -3832,8 +4007,11 @@ public final class GlModel extends AbstractModel {
           var4 = var6;
         } else {
           var8 = 256 - var5;
-          var4 = ((var6 & 16711935) * var5 + (var4 & 16711935) * var8 & -16711936) + (
-            (var6 & '\uff00') * var5 + (var4 & '\uff00') * var8 & 16711680) >> 8;
+          var4 =
+              ((var6 & 16711935) * var5 + (var4 & 16711935) * var8 & -16711936)
+                  + (
+                  (var6 & '\uff00') * var5 + (var4 & '\uff00') * var8
+                      & 16711680) >> 8;
         }
       }
 
@@ -3862,8 +4040,9 @@ public final class GlModel extends AbstractModel {
     return (var4 << 8) + (255 - (var3 & 255));
   }
 
-  private static float[] method1906(int var0, int var1, int var2, int var3, float var4,
-                                          float var5, float var6) {
+  private static float[] method1906(int var0, int var1, int var2, int var3,
+      float var4,
+      float var5, float var6) {
     float[] var7 = new float[9];
     float[] var8 = new float[9];
     float var9 = (float) Math.cos(var3 * 0.024543693F);
@@ -3925,15 +4104,17 @@ public final class GlModel extends AbstractModel {
     return var8;
   }
 
-  private static void method1910(int var0, int var1, int var2, int var3, int var4, int var5,
-                                       float[] var6, int var7, float var8) {
+  private static void method1910(int var0, int var1, int var2, int var3,
+      int var4, int var5,
+      float[] var6, int var7, float var8) {
     var0 -= var3;
     var1 -= var4;
     var2 -= var5;
     float var9 = var0 * var6[0] + var1 * var6[1] + var2 * var6[2];
     float var10 = var0 * var6[3] + var1 * var6[4] + var2 * var6[5];
     float var11 = var0 * var6[6] + var1 * var6[7] + var2 * var6[8];
-    float var12 = (float) Math.sqrt(var9 * var9 + var10 * var10 + var11 * var11);
+    float var12 = (float) Math
+        .sqrt(var9 * var9 + var10 * var10 + var11 * var11);
     float var13 = (float) Math.atan2(var9, var11) / 6.2831855F + 0.5F;
     float var14 = (float) Math.asin(var10 / var12) / 3.1415927F + 0.5F + var8;
     float var15;
@@ -3954,9 +4135,10 @@ public final class GlModel extends AbstractModel {
     GlModel.aFloat3860 = var14;
   }
 
-  private static void method1913(int var0, int var1, int var2, int var3, int var4, int var5,
-                                       int var6, float[] var7, int var8, float var9, float var10,
-                                       float var11) {
+  private static void method1913(int var0, int var1, int var2, int var3,
+      int var4, int var5,
+      int var6, float[] var7, int var8, float var9, float var10,
+      float var11) {
     var0 -= var3;
     var1 -= var4;
     var2 -= var5;

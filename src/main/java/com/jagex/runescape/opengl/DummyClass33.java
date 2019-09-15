@@ -1,8 +1,8 @@
 package com.jagex.runescape.opengl;
 
-import com.jagex.runescape.GlobalStatics_10;
+import com.jagex.runescape.statics.GlobalStatics_10;
 import com.jagex.runescape.node.Deque;
-import com.jagex.runescape.IntegerNode;
+import com.jagex.runescape.model.IntegerNode;
 
 public final class DummyClass33 {
 

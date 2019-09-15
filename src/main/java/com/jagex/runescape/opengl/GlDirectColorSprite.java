@@ -1,7 +1,7 @@
 package com.jagex.runescape.opengl;
 
-import com.jagex.runescape.done.AbstractDirectColorSprite;
-import com.jagex.runescape.SoftwareDirectColorSprite;
+import com.jagex.runescape.model.AbstractDirectColorSprite;
+import com.jagex.runescape.model.SoftwareDirectColorSprite;
 import java.nio.ByteBuffer;
 
 public class GlDirectColorSprite extends AbstractDirectColorSprite {

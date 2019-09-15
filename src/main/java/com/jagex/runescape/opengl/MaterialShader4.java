@@ -1,7 +1,7 @@
 package com.jagex.runescape.opengl;
 
-import com.jagex.runescape.GlobalStatics_5;
-import com.jagex.runescape.GlobalStatics_9;
+import com.jagex.runescape.statics.GlobalStatics_5;
+import com.jagex.runescape.statics.GlobalStatics_9;
 
 import java.nio.ByteBuffer;
 

@@ -2,7 +2,7 @@ package com.jagex.runescape.opengl;
 
 import com.jagex.runescape.buffer.Buffer;
 import com.jagex.runescape.common.HashTable;
-import com.jagex.runescape.IntegerNode;
+import com.jagex.runescape.model.IntegerNode;
 import java.nio.ByteBuffer;
 
 public final class SomethingLight {

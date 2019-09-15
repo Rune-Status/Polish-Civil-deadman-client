@@ -1,8 +1,12 @@
 package com.jagex.runescape.opengl;
 
-import com.jagex.runescape.*;
 import com.jagex.runescape.buffer.Buffer;
 
+import com.jagex.runescape.statics.GlobalStatics_0;
+import com.jagex.runescape.statics.GlobalStatics_10;
+import com.jagex.runescape.statics.GlobalStatics_2;
+import com.jagex.runescape.statics.GlobalStatics_6;
+import com.jagex.runescape.statics.GlobalStatics_9;
 import java.nio.ByteBuffer;
 import java.nio.ByteOrder;
 import java.nio.FloatBuffer;
@@ -65,7 +69,7 @@ public final class WaterShader implements MaterialShader {
       GlRenderer.GL.glCallList(this.anInt2186);
       GlRenderer.GL.glActiveTexture('\u84c1');
       GlRenderer.GL.glMatrixMode(5890);
-      GlRenderer.GL.glTranslatef(BZipDecompressorState.anInt144, GlobalStatics_6.anInt3695,
+      GlRenderer.GL.glTranslatef(GlobalStatics_10.anInt144, GlobalStatics_6.anInt3695,
           GlobalStatics_0.anInt2587);
       GlRenderer.GL
           .glRotatef(-(GlobalStatics_9.anInt3103 * 360.0F) / 2048.0F, 0.0F, 1.0F, 0.0F);
