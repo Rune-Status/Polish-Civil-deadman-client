@@ -1455,14 +1455,12 @@ public final class GameClient extends GameStub {
   }
 
   public void handleDraw(int var1) {
-    System.out.println("GameClient.handleDraw");
     if ((DummyClass15.state != 1000)) {
       boolean var2 = GlobalStatics_9.method1988(false);
       if (var2 && GlobalStatics_9.aBoolean1158
           && GlobalStatics_9.audioOutputStream0 != null) {
         GlobalStatics_9.audioOutputStream0.method2158((byte) -78);
       }
-
       if (((DummyClass15.state == 30) || (DummyClass15.state == 10)) && (
           GlobalStatics_6.replaceCanvas || (DummyClass41.aLong866 != 0L)
               && DummyClass41.aLong866 < GlobalStatics_10
