@@ -1,4 +1,4 @@
-package com.jagex.runescape;
+package com.jagex.runescape.launcher;
 
 import com.jagex.runescape.common.GameStringStatics;
 import com.jagex.runescape.model.GameClient;
@@ -35,7 +35,6 @@ public class Launcher {
           GlobalStatics_10.usageMode = 2;
         }
       }
-
       GlobalStatics_9.aBoolean3779 = false;
 
       try {

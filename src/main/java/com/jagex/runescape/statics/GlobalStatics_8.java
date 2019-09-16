@@ -2498,13 +2498,16 @@ public class GlobalStatics_8 {
           com.jagex.runescape.statics.GlobalStatics_0.anInt72 / 65536.0F;
       int var13 = com.jagex.runescape.statics.GlobalStatics_0.anInt72 >> 8;
       int var12 =
-          -com.jagex.runescape.statics.GlobalStatics_0.anInt72 + 65536 >> 8;
+          com.jagex.runescape.statics.GlobalStatics_0.anInt72 + 65536 >> 8;
       GlobalStatics_9.fogColor =
           (-16711936 & var13 * (GlobalStatics_9.anInt1345 & 16711935)
               + (16711935 & GlobalStatics_5.anInt1971) * var12) + (
               16711680
                   & var12 * (GlobalStatics_5.anInt1971 & '\uff00')
                   + ('\uff00' & GlobalStatics_9.anInt1345) * var13) >> 8;
+      GlobalStatics_9.fogColor = GlEnvironment.defaultFogColor;
+      System.out
+          .println("GlobalStatics_9.fogColor = " + GlobalStatics_9.fogColor);
       float var14 =
           (65536 - com.jagex.runescape.statics.GlobalStatics_0.anInt72)
               / 65536.0F;

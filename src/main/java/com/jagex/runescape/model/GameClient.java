@@ -1455,6 +1455,7 @@ public final class GameClient extends GameStub {
   }
 
   public void handleDraw(int var1) {
+    System.out.println("GameClient.handleDraw");
     if ((DummyClass15.state != 1000)) {
       boolean var2 = GlobalStatics_9.method1988(false);
       if (var2 && GlobalStatics_9.aBoolean1158
@@ -1671,7 +1672,6 @@ public final class GameClient extends GameStub {
     if (GlobalStatics_5.gameId == 1) {
       DummyClass55.aBoolean1419 = true;
       GlEnvironment.defaultSunColor = 0xffffff;
-      GlEnvironment.defaultFogColor = 0;
       GlobalStatics_2.aShortArrayArray344 = GlobalStatics_5.aShortArrayArray1619;
       DummyClass55.aShortArrayArray1429 = GlobalStatics_9.aShortArrayArray2634;
       GlobalStatics_9.aShortArray2548 = GlobalStatics_9.aShortArray63;

@@ -12,7 +12,7 @@ public final class GlEnvironment {
   public static float[] diffuseLight0 = new float[4];
   public static int anInt1314;
   public static int anInt1315;
-  public static int defaultFogColor = 13156520;
+  public static int defaultFogColor = 0xc8c0a8;
   public static float[] fogColorRgb = new float[4];
   public static int defaultSunColor = 16777215;
 
