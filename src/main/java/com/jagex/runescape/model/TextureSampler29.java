@@ -94,8 +94,7 @@ public final class TextureSampler29 extends AbstractTextureSampler {
       DummyClass43.method1196(0, 0, (byte) 111, GlobalStatics_10.anInt2487,
         GlobalStatics_9.anInt396);
       if (this.aClass75Array3392 != null) {
-        for (int var5 = 0; this.aClass75Array3392.length > var5; ++var5) {
-          AbstractSomethingTexture var6 = this.aClass75Array3392[var5];
+        for (AbstractSomethingTexture var6 : this.aClass75Array3392) {
           int var7 = var6.anInt1101;
           int var8 = var6.anInt1104;
           if (var7 >= 0) {

@@ -91,8 +91,7 @@ public final class BufferedAudioOutputStream extends AbstractAudioOutputStream {
     if (var2 != null) {
       Mixer.Info[] var3 = var2;
 
-      for (int var4 = 0; var4 < var3.length; ++var4) {
-        Mixer.Info var5 = var3[var4];
+      for (Mixer.Info var5 : var3) {
         if (var5 != null) {
           String var6 = var5.getName();
           if (var6 != null && var6.toLowerCase().indexOf("soundmax") >= 0) {

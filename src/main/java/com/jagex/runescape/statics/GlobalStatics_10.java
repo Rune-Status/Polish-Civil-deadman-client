@@ -1034,8 +1034,7 @@ public class GlobalStatics_10 {
     if (GlobalStatics_11.method57(var0, 104)) {
       Widget[] var2 = GlobalStatics_9.aClass11ArrayArray1834[var0];
 
-      for (int var3 = 0; var2.length > var3; ++var3) {
-        Widget var4 = var2[var3];
+      for (Widget var4 : var2) {
         if (var4 != null) {
           var4.anInt260 = 1;
           var4.anInt283 = 0;
@@ -2227,8 +2226,7 @@ public class GlobalStatics_10 {
       if (GlobalStatics_11.method57(var0, 104)) {
         Widget[] var2 = GlobalStatics_9.aClass11ArrayArray1834[var0];
 
-        for (int var3 = 0; var3 < var2.length; ++var3) {
-          Widget var4 = var2[var3];
+        for (Widget var4 : var2) {
           if (var4.anObjectArray159 != null) {
             ClientScriptCall var5 = new ClientScriptCall();
             var5.arguments = var4.anObjectArray159;
@@ -4433,7 +4431,7 @@ public class GlobalStatics_10 {
                     var4 + 1]
                     + DummyClass43.somethingHeightMap[0][var3 + 1][var4 + 1]
                     >> 2;
-            GLStatics.method551(0, -var12, 3);
+            GLStatics.method551(-var12, 3);
             var8 = 201.5F;
             GlRenderer.method1832(var8);
           } else {
@@ -5535,12 +5533,10 @@ public class GlobalStatics_10 {
           GlobalStatics_10.aClass94_2214 = null;
         }
 
-        for (int var2 = 0; var2 < var1.length; ++var2) {
-          SceneGraphTile[][] var3 = var1[var2];
-
-          for (int var4 = 0; var3.length > var4; ++var4) {
-            for (int var5 = 0; var3[var4].length > var5; ++var5) {
-              SceneGraphTile var6 = var3[var4][var5];
+        for (SceneGraphTile[][] var3 : var1) {
+          for (SceneGraphTile[] sceneGraphTiles : var3) {
+            for (int var5 = 0; sceneGraphTiles.length > var5; ++var5) {
+              SceneGraphTile var6 = sceneGraphTiles[var5];
               if (var6 != null) {
                 GlModel var7;
                 if (var6.aClass12_2230 != null

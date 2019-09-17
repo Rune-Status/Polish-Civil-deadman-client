@@ -72,7 +72,7 @@ public final class Light {
 
   public void method1063(boolean var1, int var2, int var3) {
     if (var3 != -3696) {
-      GLStatics.method1058(-127, -32, -68, -32, (byte) -77);
+      GLStatics.method1058(-127, -32, -68, -32);
     }
 
     int var5 = this.anInt714 + var2 * this.anInt709 / 50 & 2047;

@@ -259,7 +259,7 @@ public final class SomethingGl0 extends Node {
         GLStatics.textureCache.initializeMaterial(this.materialId, true);
       } else {
         GlRenderer.bindTexture(-1);
-        GLStatics.method551(0, 0, 0);
+        GLStatics.method551(0, 0);
       }
 
       int var11 = this.aBoolean2347 ? 40 : 36;

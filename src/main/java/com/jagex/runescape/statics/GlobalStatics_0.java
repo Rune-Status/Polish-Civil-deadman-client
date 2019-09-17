@@ -886,8 +886,7 @@ public final class GlobalStatics_0 {
       int var3 = 0;
 
       label58:
-      for (int var4 = 0; var4 < var1.length; ++var4) {
-        DisplayMode var5 = var1[var4];
+      for (DisplayMode var5 : var1) {
         if ((var5.anInt1450 <= 0 || var5.anInt1450 >= 24)
             && var5.anInt1447 >= 800
             && var5.anInt1449 >= 600) {

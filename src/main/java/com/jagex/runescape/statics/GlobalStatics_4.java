@@ -868,7 +868,7 @@ public class GlobalStatics_4 {
   }
 
   public static void method1073(int var0) {
-    GLStatics.method551(0, 0, 0);
+    GLStatics.method551(0, 0);
     if (var0 != 97) {
       GlobalStatics_4.method1068(-108, 80, 18);
     }

@@ -403,7 +403,7 @@ public final class DummyClass46 {
 
   public static void method1277(SceneGraphTile[][][] var2) {
     if (GLStatics.useBumpMaps) {
-      GLStatics.method551(0, 0, 0);
+      GLStatics.method551(0, 0);
       GlRenderer.method1856(0);
       GlRenderer.loadIdentityTextureMatrix();
       GlRenderer.bindTexture(GlRenderer.anInt1810);

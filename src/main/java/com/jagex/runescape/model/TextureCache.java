@@ -159,7 +159,7 @@ public final class TextureCache implements ITextureCache {
   }
 
   public void initializeMaterial(int var1, boolean var2) {
-    GLStatics.method551(0, 255 & this.aByteArray2143[var1],
+    GLStatics.method551(255 & this.aByteArray2143[var1],
           this.aByteArray2144[var1] & 255);
       if (var2) {
         boolean var3 = false;

@@ -145,9 +145,9 @@ public final class GameObjectConfig {
       } else {
         boolean var4 = true;
 
-        for (int var5 = 0; this.anIntArray1519.length > var5; ++var5) {
+        for (int i : this.anIntArray1519) {
           var4 &= GlobalStatics_9.aClass153_1043.method2129((byte) 71, 0,
-            0xffff & this.anIntArray1519[var5]);
+              0xffff & i);
         }
 
         return var4;
@@ -350,15 +350,15 @@ public final class GameObjectConfig {
           this.method1696(34, 54, null, 55, 80, null, true, null, (byte) 127, true, -38);
         }
 
-        for (int var2 = 0; var2 < this.anIntArray1524.length; ++var2) {
-          if (this.anIntArray1524[var2] != -1) {
-            GameObjectConfig var3 =
-              DummyClass11.method2207(var1 - 28929, this.anIntArray1524[var2]);
-            if (var3.anInt1512 != -1 || var3.anIntArray1539 != null) {
-              return true;
-            }
+      for (int i : this.anIntArray1524) {
+        if (i != -1) {
+          GameObjectConfig var3 =
+              DummyClass11.method2207(var1 - 28929, i);
+          if (var3.anInt1512 != -1 || var3.anIntArray1539 != null) {
+            return true;
           }
         }
+      }
 
         return false;
       } else {
@@ -733,10 +733,10 @@ public final class GameObjectConfig {
       } else {
         boolean var2 = true;
 
-        for (int var3 = 0; this.anIntArray1519.length > var3; ++var3) {
-          var2 &= GlobalStatics_9.aClass153_1043.method2129((byte) 64, 0,
-            0xffff & this.anIntArray1519[var3]);
-        }
+      for (int i : this.anIntArray1519) {
+        var2 &= GlobalStatics_9.aClass153_1043.method2129((byte) 64, 0,
+            0xffff & i);
+      }
 
         return var1 || var2;
       }

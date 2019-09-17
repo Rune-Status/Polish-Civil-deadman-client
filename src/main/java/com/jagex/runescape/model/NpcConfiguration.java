@@ -161,10 +161,10 @@ public final class NpcConfiguration {
       }
 
       if (this.anIntArray1292 != null) {
-        for (int var2 = 0; this.anIntArray1292.length > var2; ++var2) {
-          if (this.anIntArray1292[var2] != -1) {
+        for (int i : this.anIntArray1292) {
+          if (i != -1) {
             NpcConfiguration var3 = GlobalStatics_2.getNpcConfiguration(
-                this.anIntArray1292[var2]);
+                i);
             if (var3.anInt1262 != -1 || var3.anInt1293 != -1
                 || var3.anInt1276 != -1) {
               return true;
@@ -222,9 +222,9 @@ public final class NpcConfiguration {
         if (var11 == null) {
           var12 = false;
 
-          for (int var13 = 0; var13 < this.anIntArray1288.length; ++var13) {
-            if (this.anIntArray1288[var13] != -1 && !GlobalStatics_10.aClass153_3173.method2129(
-              (byte) 102, 0, this.anIntArray1288[var13])) {
+          for (int i : this.anIntArray1288) {
+            if (i != -1 && !GlobalStatics_10.aClass153_3173.method2129(
+                (byte) 102, 0, i)) {
               var12 = true;
             }
           }
@@ -577,9 +577,9 @@ public final class NpcConfiguration {
           if (var12 == null) {
             boolean var7 = false;
 
-            for (int var8 = 0; var8 < this.anIntArray1250.length; ++var8) {
+            for (int i : this.anIntArray1250) {
               if (!GlobalStatics_10.aClass153_3173.method2129((byte) -69, 0,
-                  this.anIntArray1250[var8])) {
+                  i)) {
                 var7 = true;
               }
             }

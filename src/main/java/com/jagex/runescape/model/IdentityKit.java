@@ -59,12 +59,12 @@ public final class IdentityKit {
           this.method948(44);
         }
 
-        for (int var3 = 0; var3 < this.anIntArray474.length; ++var3) {
-          if (!GlobalStatics_9.aClass153_152.method2129((byte) -90, 0,
-              this.anIntArray474[var3])) {
-            var2 = false;
-          }
+      for (int i : this.anIntArray474) {
+        if (!GlobalStatics_9.aClass153_152.method2129((byte) -90, 0,
+            i)) {
+          var2 = false;
         }
+      }
 
         return var2;
       }

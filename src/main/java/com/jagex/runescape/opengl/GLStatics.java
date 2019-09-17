@@ -1,8 +1,8 @@
 package com.jagex.runescape.opengl;
 
-import com.jagex.runescape.model.AbstractDirectColorSprite;
 import com.jagex.runescape.common.GameString;
 import com.jagex.runescape.common.GameStringStatics;
+import com.jagex.runescape.model.AbstractDirectColorSprite;
 import com.jagex.runescape.model.ClientScriptCall;
 import com.jagex.runescape.model.ITextureCache;
 import com.jagex.runescape.model.SceneGraphTile;
@@ -39,10 +39,12 @@ public class GLStatics {
   public static int cameraTileX;
   public static byte[] aByteArray2111 = new byte[16384];
   public static int anInt692;
-  public static GameString aClass94_699 = GameStringStatics.create("clignotant3:");
-  public static GameString aClass94_700 = GameStringStatics.create("blaugr-Un:");
+  public static GameString aClass94_699 = GameStringStatics
+      .create("clignotant3:");
+  public static GameString aClass94_700 = GameStringStatics
+      .create("blaugr-Un:");
   public static GameString aClass94_701 =
-    GameStringStatics.create("Chargement de la liste des serveurs");
+      GameStringStatics.create("Chargement de la liste des serveurs");
   public static int anInt715;
   public static int anInt716;
   public static int[] hslTable = new int[65536];
@@ -73,38 +75,36 @@ public class GLStatics {
     return GLStatics.FOG_COLOR;
   }
 
-  public static void method551(int var0, int var1, int var2) {
-    if (var0 == 0) {
-      if (var2 == 4 && !GLStatics.aBoolean1685) {
-        var2 = 2;
-        var1 = 2;
-      }
+  public static void method551(int var1, int var2) {
+    if (var2 == 4 && !GLStatics.aBoolean1685) {
+      var2 = 2;
+      var1 = 2;
+    }
 
-      if (DummyClass30.anInt453 == var2) {
-        if (var2 != 0 && var1 != GlobalStatics_10.anInt3263) {
-          GlobalStatics_9.anInterface5Array70[var2].set(var1);
-          GlobalStatics_10.anInt3263 = var1;
-        }
-      } else {
-        if (GLStatics.aBoolean3207) {
-          return;
-        }
-
-        if (DummyClass30.anInt453 != 0) {
-          GlobalStatics_9.anInterface5Array70[DummyClass30.anInt453].disable();
-        }
-
-        if (var2 != 0) {
-          MaterialShader var3 = GlobalStatics_9.anInterface5Array70[var2];
-          var3.enable();
-          var3.set(var1);
-        }
-
-        DummyClass30.anInt453 = var2;
+    if (DummyClass30.anInt453 == var2) {
+      if (var2 != 0 && var1 != GlobalStatics_10.anInt3263) {
+        GlobalStatics_9.anInterface5Array70[var2].set(var1);
         GlobalStatics_10.anInt3263 = var1;
       }
+    } else {
+      if (GLStatics.aBoolean3207) {
+        return;
+      }
 
+      if (DummyClass30.anInt453 != 0) {
+        GlobalStatics_9.anInterface5Array70[DummyClass30.anInt453].disable();
+      }
+
+      if (var2 != 0) {
+        MaterialShader var3 = GlobalStatics_9.anInterface5Array70[var2];
+        var3.enable();
+        var3.set(var1);
+      }
+
+      DummyClass30.anInt453 = var2;
+      GlobalStatics_10.anInt3263 = var1;
     }
+
   }
 
   public static float[] calculateFogColor() {
@@ -124,9 +124,12 @@ public class GLStatics {
     return GLStatics.FOG_COLOR;
   }
 
-  public static long method104(int var0, int var1, int var2) {
-    SceneGraphTile var3 = GLStatics.sceneGraphTiles[var0][var1][var2];
-    return var3 != null && var3.aClass12_2230 != null ? var3.aClass12_2230.aLong328 : 0L;
+  public static long method104(int x, int y, int z) {
+    SceneGraphTile tile = GLStatics.sceneGraphTiles[x][y][z];
+    if (tile == null || tile.aClass12_2230 == null) {
+      return 0L;
+    }
+    return tile.aClass12_2230.aLong328;
   }
 
   public static void method535(byte var0, int var1) {
@@ -143,13 +146,12 @@ public class GLStatics {
     }
   }
 
-  public static void method1058(int var0, int var1, int var2, int var3, byte var4) {
-    int var5 = 25 % ((25 - var4) / 52);
+  public static void method1058(int var0, int var1, int var2, int var3) {
     if (var1 - var0 >= DummyClass55.anInt1425
         && GlTexture2d.anInt3765 >= var0 + var1
         && var3 - var0 >= DummyClass13.anInt2020
         && GlobalStatics_9.anInt902 >= var0 + var3) {
-      GlobalStatics_9.method949(var1, (byte) 118, var0, var2, var3);
+      GlobalStatics_9.method949(var1, var0, var2, var3);
     } else {
       GlobalStatics_9.method1129(var2, var3, var0, 0, var1);
     }

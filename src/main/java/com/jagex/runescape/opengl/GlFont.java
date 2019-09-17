@@ -27,8 +27,8 @@ public final class GlFont extends AbstractFont {
     }
 
     if (this.anIntArray4085 != null) {
-      for (int var1 = 0; var1 < this.anIntArray4085.length; ++var1) {
-        DummyClass33.method986(this.anIntArray4085[var1], this.anInt4086);
+      for (int i : this.anIntArray4085) {
+        DummyClass33.method986(i, this.anInt4086);
       }
 
       this.anIntArray4085 = null;

@@ -47,7 +47,7 @@ public final class SomethingShadows {
     GlRenderer.method1847(1);
     GlRenderer.loadIdentityTextureMatrix();
     GlRenderer.setLightingEnabled(false);
-    GLStatics.method551(0, 0, 0);
+    GLStatics.method551(0, 0);
     GlRenderer.GL.glDepthMask(false);
 
     for (int blockX = 0; blockX < SomethingShadows.sceneWidthBlocks; ++blockX) {

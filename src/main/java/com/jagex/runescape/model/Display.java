@@ -8,26 +8,22 @@ import java.lang.reflect.Field;
 
 public class Display {
 
-  private GraphicsDevice aGraphicsDevice445;
-  private DisplayMode aDisplayMode446;
+  private GraphicsDevice device;
+  private DisplayMode displayMode;
 
+  public Display() {
+    GraphicsEnvironment env = GraphicsEnvironment
+        .getLocalGraphicsEnvironment();
+    this.device = env.getDefaultScreenDevice();
+    if (!this.device.isFullScreenSupported()) {
+      GraphicsDevice[] devices = env.getScreenDevices();
 
-  public Display() throws Exception {
-    GraphicsEnvironment var1 = GraphicsEnvironment.getLocalGraphicsEnvironment();
-    this.aGraphicsDevice445 = var1.getDefaultScreenDevice();
-    if (!this.aGraphicsDevice445.isFullScreenSupported()) {
-      GraphicsDevice[] var2 = var1.getScreenDevices();
-      GraphicsDevice[] var3 = var2;
-
-      for (int var4 = 0; var3.length > var4; ++var4) {
-        GraphicsDevice var5 = var3[var4];
-        if (var5 != null && var5.isFullScreenSupported()) {
-          this.aGraphicsDevice445 = var5;
+      for (GraphicsDevice device : devices) {
+        if (device != null && device.isFullScreenSupported()) {
+          this.device = device;
           return;
         }
       }
-
-      throw new Exception();
     }
   }
 
@@ -40,9 +36,9 @@ public class Display {
       var4 = Class.forName("sun.awt.Win32GraphicsDevice")
           .getDeclaredField("valid");
       var4.setAccessible(true);
-      var5 = ((Boolean) var4.get(this.aGraphicsDevice445)).booleanValue();
+      var5 = ((Boolean) var4.get(this.device)).booleanValue();
       if (var5) {
-        var4.set(this.aGraphicsDevice445, Boolean.FALSE);
+        var4.set(this.device, Boolean.FALSE);
         var3 = true;
       }
     } catch (NoSuchFieldException | ClassNotFoundException | IllegalAccessException e) {
@@ -53,7 +49,7 @@ public class Display {
 
     try {
       var5 = true;
-      this.aGraphicsDevice445.setFullScreenWindow(var1);
+      this.device.setFullScreenWindow(var1);
       if (var2 == -63) {
         var5 = false;
       } else {
@@ -65,7 +61,7 @@ public class Display {
         try {
           Field var7 = Class.forName("sun.awt.Win32GraphicsDevice")
               .getDeclaredField("valid");
-          var7.set(this.aGraphicsDevice445, Boolean.TRUE);
+          var7.set(this.device, Boolean.TRUE);
         } catch (NoSuchFieldException | ClassNotFoundException | IllegalAccessException e) {
           e.printStackTrace();
         }
@@ -77,7 +73,7 @@ public class Display {
       try {
         var4 = Class.forName("sun.awt.Win32GraphicsDevice")
             .getDeclaredField("valid");
-        var4.set(this.aGraphicsDevice445, Boolean.TRUE);
+        var4.set(this.device, Boolean.TRUE);
       } catch (NoSuchFieldException | ClassNotFoundException | IllegalAccessException e) {
         e.printStackTrace();
       }
@@ -87,26 +83,26 @@ public class Display {
 
   public final void method918(int var1, int var2, int var3, int var4,
       Frame var5, int var6) {
-    this.aDisplayMode446 = this.aGraphicsDevice445.getDisplayMode();
+    this.displayMode = this.device.getDisplayMode();
     if (var1 > -6) {
       this.method919(false);
     }
 
-    if (this.aDisplayMode446 == null) {
+    if (this.displayMode == null) {
       throw new NullPointerException();
     } else {
       var5.setUndecorated(true);
       var5.enableInputMethods(false);
       this.method917(var5, (byte) -63);
       if (var2 == 0) {
-        int var7 = this.aDisplayMode446.getRefreshRate();
-        DisplayMode[] var8 = this.aGraphicsDevice445.getDisplayModes();
+        int var7 = this.displayMode.getRefreshRate();
+        DisplayMode[] var8 = this.device.getDisplayModes();
         boolean var9 = false;
 
-        for (int var10 = 0; var8.length > var10; ++var10) {
-          if (var8[var10].getWidth() == var6 && var8[var10].getHeight() == var4
-            && var3 == var8[var10].getBitDepth()) {
-            int var11 = var8[var10].getRefreshRate();
+        for (DisplayMode mode : var8) {
+          if (mode.getWidth() == var6 && mode.getHeight() == var4
+              && var3 == mode.getBitDepth()) {
+            int var11 = mode.getRefreshRate();
             if (!var9 || Math.abs(var11 - var7) < Math.abs(0 - var7)) {
               var9 = true;
               var2 = var11;
@@ -119,14 +115,14 @@ public class Display {
         }
       }
 
-      this.aGraphicsDevice445
+      this.device
           .setDisplayMode(new DisplayMode(var6, var4, var3, var2));
     }
   }
 
   public final int[] method919(boolean var1) {
     if (var1) {
-      DisplayMode[] var2 = this.aGraphicsDevice445.getDisplayModes();
+      DisplayMode[] var2 = this.device.getDisplayModes();
       int[] var3 = new int[var2.length << 2];
 
       for (int var4 = 0; var2.length > var4; ++var4) {
@@ -143,13 +139,14 @@ public class Display {
   }
 
   public final void method920(int var1) {
-    if (this.aDisplayMode446 != null) {
-      this.aGraphicsDevice445.setDisplayMode(this.aDisplayMode446);
-      if (!this.aGraphicsDevice445.getDisplayMode().equals(this.aDisplayMode446)) {
+    if (this.displayMode != null) {
+      this.device.setDisplayMode(this.displayMode);
+      if (!this.device.getDisplayMode()
+          .equals(this.displayMode)) {
         throw new RuntimeException("Did not return to correct resolution!");
       }
 
-      this.aDisplayMode446 = null;
+      this.displayMode = null;
     }
 
     this.method917(null, (byte) -63);

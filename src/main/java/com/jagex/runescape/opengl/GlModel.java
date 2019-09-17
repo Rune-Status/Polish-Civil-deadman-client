@@ -1799,8 +1799,7 @@ public final class GlModel extends AbstractModel {
               if (var40 < this.anIntArrayArray3825.length) {
                 int[] var41 = this.anIntArrayArray3825[var40];
 
-                for (int var42 = 0; var42 < var41.length; ++var42) {
-                  int var43 = var41[var42];
+                for (int var43 : var41) {
                   if (this.aShortArray3832
                       == null || (var7 & this.aShortArray3832[var43]) != 0) {
                     int var44 =
@@ -3741,7 +3740,7 @@ public final class GlModel extends AbstractModel {
         short var7 = this.materials[start];
         if (var7 == -1) {
           GlRenderer.bindTexture(-1);
-          GLStatics.method551(0, 0, 0);
+          GLStatics.method551(0, 0);
         } else {
           GLStatics.textureCache.initializeMaterial(var7 & 0xffff, true);
         }

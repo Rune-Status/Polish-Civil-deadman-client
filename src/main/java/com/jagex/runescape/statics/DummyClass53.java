@@ -88,7 +88,7 @@ public final class DummyClass53 {
     }
 
     if (var1 == var5) {
-      GLStatics.method1058(var5, var2, var0, var3, (byte) -47);
+      GLStatics.method1058(var5, var2, var0, var3);
     } else {
       if (DummyClass55.anInt1425 <= var2 - var5
           && var2 + var5 <= GlTexture2d.anInt3765

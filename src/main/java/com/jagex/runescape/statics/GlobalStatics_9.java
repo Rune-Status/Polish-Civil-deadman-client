@@ -2429,11 +2429,11 @@ public class GlobalStatics_9 {
         }
       } else if (GlobalStatics_2.aClass11_3708 == null) {
         if (DummyClass41.anInt865 != -1) {
-          GlobalStatics_9.method950(null, -86, GlobalStatics_2.anInt2567,
+          GlobalStatics_9.method950(null, GlobalStatics_2.anInt2567,
               DummyClass41.anInt865);
         }
       } else {
-        GlobalStatics_9.method950(GlobalStatics_2.aClass11_3708, -120,
+        GlobalStatics_9.method950(GlobalStatics_2.aClass11_3708,
             GlobalStatics_8.anInt2115, GlobalStatics_10.anInt4041);
       }
 
@@ -2919,9 +2919,7 @@ public class GlobalStatics_9 {
     }
   }
 
-  public static void method949(int var0, byte var1, int var2, int var3,
-      int var4) {
-    int var5 = -44 / ((24 - var1) / 59);
+  public static void method949(int var0, int var2, int var3, int var4) {
     int var6 = 0;
     GlobalStatics_10
         .method282(DummyClass35.anIntArrayArray663[var4], -var2 + var0, 100,
@@ -2954,13 +2952,10 @@ public class GlobalStatics_9 {
     }
   }
 
-  public static void method950(Widget var0, int var1, int var2, int var3) {
+  public static void method950(Widget var0, int var2, int var3) {
     if (GlobalStatics_10.amountContextActions >= 2 || GlobalStatics_9.anInt3012
         != 0
         || GlobalStatics_9.aBoolean1837) {
-      if (var1 > -55) {
-        GlobalStatics_9.aClass94_473 = null;
-      }
 
       GameString var4 = GlobalStatics_9.method531((byte) 94);
       if (var0 == null) {
@@ -2972,13 +2967,13 @@ public class GlobalStatics_9 {
             GlobalStatics_8.aClass3_Sub28_Sub17_2096.method682(var4) + var5,
             (byte) -40, var2, 15);
       } else {
-        AbstractFont var7 = var0
+        AbstractFont font = var0
             .method868(GlobalStatics_9.aClass109Array3270, 0);
-        if (var7 == null) {
-          var7 = GlobalStatics_8.aClass3_Sub28_Sub17_2096;
+        if (font == null) {
+          font = GlobalStatics_8.aClass3_Sub28_Sub17_2096;
         }
 
-        var7.method702(var4, var3, var2, var0.anInt168, var0.anInt193,
+        font.method702(var4, var3, var2, var0.anInt168, var0.anInt193,
             var0.anInt218,
             var0.anInt287, var0.anInt194, var0.anInt225,
             GlobalStatics_10.random,
@@ -4045,8 +4040,7 @@ public class GlobalStatics_9 {
 
   public static void method75(Widget[] var0, boolean var1, int var2) {
     if (var1) {
-      for (int var3 = 0; var3 < var0.length; ++var3) {
-        Widget var4 = var0[var3];
+      for (Widget var4 : var0) {
         if (var4 != null) {
           if (var4.anInt187 == 0) {
             if (var4.aClass11Array262 != null) {
@@ -5049,8 +5043,7 @@ public class GlobalStatics_9 {
   }
 
   public static void method1260(int var0, int var1, Widget[] var2) {
-    for (int var3 = 0; var3 < var2.length; ++var3) {
-      Widget var4 = var2[var3];
+    for (Widget var4 : var2) {
       if (var4 != null && var4.anInt190 == var1 && (!var4.aBoolean233
           || !GlobalStatics_8.method51(
           var4))) {
@@ -7964,8 +7957,7 @@ public class GlobalStatics_9 {
         "c:/winnt/", "c:/", "/tmp/", ""
     };
 
-    for (int var3 = 0; var2.length > var3; ++var3) {
-      String var4 = var2[var3];
+    for (String var4 : var2) {
       if (var4.length() <= 0 || new File(var4).exists()) {
         try {
           FileOnDisk var5 =
@@ -10301,9 +10293,9 @@ public class GlobalStatics_9 {
       int[] var4 = GlobalStatics_10.worldMaps.getChildIds((byte) -128, var3);
 
       assert var4 != null;
-      for (int var5 = 0; var4.length > var5; ++var5) {
+      for (int i : var4) {
         DummyClass21.aClass61_1758.addLast(DummyClass23.method1747(
-            new Buffer(GlobalStatics_10.worldMaps.getBytes(var3, var4[var5]))
+            new Buffer(GlobalStatics_10.worldMaps.getBytes(var3, i))
         ));
       }
 

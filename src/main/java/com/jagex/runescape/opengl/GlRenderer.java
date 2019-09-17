@@ -77,7 +77,7 @@ public final class GlRenderer {
   }
 
   public static void method1822() {
-    GLStatics.method551(0, 0, 0);
+    GLStatics.method551(0, 0);
     GlRenderer.setupViewport();
     GlRenderer.method1856(1);
     GlRenderer.method1847(1);
@@ -98,7 +98,7 @@ public final class GlRenderer {
   }
 
   public static void method1824() {
-    GLStatics.method551(0, 0, 0);
+    GLStatics.method551(0, 0);
     GlRenderer.setupViewport();
     GlRenderer.method1856(0);
     GlRenderer.method1847(0);
@@ -148,7 +148,7 @@ public final class GlRenderer {
   }
 
   public static void method1828() {
-    GLStatics.method551(0, 0, 0);
+    GLStatics.method551(0, 0);
     GlRenderer.setupViewport();
     GlRenderer.method1856(0);
     GlRenderer.method1847(0);
@@ -249,21 +249,21 @@ public final class GlRenderer {
     if (!canvas.isDisplayable()) {
       return;
     }
-    GLCapabilities capabilities = new GLCapabilities(GLProfile.getDefault());
-    GLDrawableFactory drawableFactory = GLDrawableFactory
-        .getFactory(capabilities.getGLProfile());
-    System.out.println("Something with antialiasing");
-    GLDrawable drawable = drawableFactory.createExternalGLDrawable();
-    GLContext context = drawable.createContext(null);
-    context.makeCurrent();
-    context.release();
-    context.destroy();
-    drawable.setRealized(false);
+//    GLCapabilities capabilities = new GLCapabilities(GLProfile.getDefault());
+//    GLDrawableFactory drawableFactory = GLDrawableFactory
+//        .getFactory(capabilities.getGLProfile());
+//    System.out.println("Something with antialiasing");
+//    GLDrawable drawable = drawableFactory.createExternalGLDrawable();
+//    GLContext context = drawable.createContext(null);
+//    context.makeCurrent();
+//    context.release();
+//    context.destroy();
+//    drawable.setRealized(false);
 
   }
 
   public static void resetState() {
-    GLStatics.method551(0, 0, 0);
+    GLStatics.method551(0, 0);
     GlRenderer.setupViewport();
     GlRenderer.bindTexture(-1);
     GlRenderer.setLightingEnabled(false);
@@ -378,8 +378,7 @@ public final class GlRenderer {
         int var6 = 0;
         GameString[] var7 = var13.method1565(32, 40, 47).split(32);
 
-        for (int var8 = 0; var8 < var7.length; ++var8) {
-          GameString var9 = var7[var8];
+        for (GameString var9 : var7) {
           if (var9.getLength() >= 4 && var9.substring(4, 0, 0)
               .method1543(106)) {
             var6 = var9.substring(4, 0, 0).toInteger();

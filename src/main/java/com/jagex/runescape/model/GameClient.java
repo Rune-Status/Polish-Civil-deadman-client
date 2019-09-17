@@ -1723,10 +1723,10 @@ public final class GameClient extends GameStub {
                 GlobalStatics_9.tableIndexFile,
                 500000);
         GlobalStatics_9.uidFile = new BufferedFile(
-            DummyClass35.signLink.aClass122_1207, 24, 0);
+            DummyClass35.signLink.randomDataFile, 24, 0);
         DummyClass35.signLink.cacheIndexFiles = null;
         DummyClass35.signLink.tableIndexFile = null;
-        DummyClass35.signLink.aClass122_1207 = null;
+        DummyClass35.signLink.randomDataFile = null;
         DummyClass35.signLink.cacheDataFile = null;
       }
     } catch (IOException var3) {

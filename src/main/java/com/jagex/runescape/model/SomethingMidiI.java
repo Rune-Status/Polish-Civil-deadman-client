@@ -229,8 +229,7 @@ public final class SomethingMidiI {
       GlobalStatics_9.anIntArray927[1] = GlobalStatics_11.method368(var4);
       int var5 = 2;
 
-      for (int var6 = 0; var6 < this.anIntArray922.length; ++var6) {
-        int var7 = this.anIntArray922[var6];
+      for (int var7 : this.anIntArray922) {
         int var8 = this.anIntArray926[var7];
         int var9 = this.anIntArray924[var7];
         int var10 = (1 << var9) - 1;
@@ -244,7 +243,8 @@ public final class SomethingMidiI {
           int var13 = this.anIntArrayArray920[var7][var11 & var10];
           var11 >>>= var9;
           GlobalStatics_9.anIntArray927[var5++] =
-              var13 >= 0 ? GlobalStatics_11.aClass71Array2406[var13].method1290()
+              var13 >= 0 ? GlobalStatics_11.aClass71Array2406[var13]
+                  .method1290()
                   : 0;
         }
       }

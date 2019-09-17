@@ -37,7 +37,7 @@ public final class CommonGL {
     GlRenderer.GL.glTranslatef(-var0, -var1, -var2);
     if (var22) {
       CommonGL.method403();
-      GLStatics.method551(0, -1, 3);
+      GLStatics.method551(-1, 3);
       GLStatics.aBoolean3207 = true;
       MaterialShader3.method2254();
       GLStatics.anInt1244 = -1;

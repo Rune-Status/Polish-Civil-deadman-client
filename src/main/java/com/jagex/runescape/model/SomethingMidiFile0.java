@@ -29,8 +29,8 @@ public final class SomethingMidiFile0 {
   public boolean method1371() {
     int var1 = this.anIntArray1115.length;
 
-    for (int var2 = 0; var2 < var1; ++var2) {
-      if (this.anIntArray1115[var2] >= 0) {
+    for (int i : this.anIntArray1115) {
+      if (i >= 0) {
         return false;
       }
     }

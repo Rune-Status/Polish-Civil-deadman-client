@@ -2656,8 +2656,7 @@ public class GlobalStatics_8 {
   public static void method50(Widget[] var0, int var1, int var2, int var3,
       int var4, int var5,
       int var6, int var7) {
-    for (int var8 = 0; var8 < var0.length; ++var8) {
-      Widget var9 = var0[var8];
+    for (Widget var9 : var0) {
       if (var9 != null && var9.anInt190 == var1 && (!var9.aBoolean233
           || var9.anInt187 == 0
           || var9.aBoolean195 || GlobalStatics_8.method44(var9).anInt2205 != 0
@@ -2703,10 +2702,10 @@ public class GlobalStatics_8 {
             }
 
             if (var9.aBoolean219 && GlobalStatics_9.anInt1676 >= var12
-                && com.jagex.runescape.statics.GlobalStatics_0.anInt1709
+                && GlobalStatics_0.anInt1709
                 >= var13
                 && GlobalStatics_9.anInt1676 < var14
-                && com.jagex.runescape.statics.GlobalStatics_0.anInt1709
+                && GlobalStatics_0.anInt1709
                 < var15) {
               for (ClientScriptCall var27 =
                   (ClientScriptCall) DummyClass31.aClass61_1471.getFirst();
@@ -2731,10 +2730,10 @@ public class GlobalStatics_8 {
           if (var9.aBoolean233) {
             boolean var26;
             var26 = GlobalStatics_9.anInt1676 >= var12
-                && com.jagex.runescape.statics.GlobalStatics_0.anInt1709
+                && GlobalStatics_0.anInt1709
                 >= var13
                 && GlobalStatics_9.anInt1676 < var14
-                && com.jagex.runescape.statics.GlobalStatics_0.anInt1709
+                && GlobalStatics_0.anInt1709
                 < var15;
 
             boolean var25 = false;
@@ -2871,7 +2870,7 @@ public class GlobalStatics_8 {
 
                     GlobalStatics_6.anInt2475 = 1;
                     GlobalStatics_6.anInt1881 = GlobalStatics_9.anInt1676;
-                    DummyClass53.anInt1336 = com.jagex.runescape.statics.GlobalStatics_0.anInt1709;
+                    DummyClass53.anInt1336 = GlobalStatics_0.anInt1709;
                     continue;
                   }
 
@@ -2879,7 +2878,7 @@ public class GlobalStatics_8 {
                     if (GlobalStatics_6.anInt2475 == 1 && (
                         GlobalStatics_6.anInt1881 != GlobalStatics_9.anInt1676
                             || DummyClass53.anInt1336
-                            != com.jagex.runescape.statics.GlobalStatics_0.anInt1709)) {
+                            != GlobalStatics_0.anInt1709)) {
                       GlobalStatics_9.anInt4073 = GlobalStatics_9.anInt3536;
                       DummyClass35.anInt660 = GlobalStatics_9.anInt2251;
                       GlobalStatics_6.anInt2475 = 2;
@@ -2894,7 +2893,7 @@ public class GlobalStatics_8 {
                       GlobalStatics_9
                           .method354(-126, DummyClass35.anInt660 + (int) (
                               (DummyClass53.anInt1336
-                                  - com.jagex.runescape.statics.GlobalStatics_0.anInt1709)
+                                  - GlobalStatics_0.anInt1709)
                                   * 2.0D
                                   / GlobalStatics_9.aFloat3979));
                     }
@@ -2908,7 +2907,7 @@ public class GlobalStatics_8 {
                 if (var9.anInt189 == 1401) {
                   if (var25) {
                     GlobalStatics_10.method253(-22611, var9.anInt168,
-                        com.jagex.runescape.statics.GlobalStatics_0.anInt1709
+                        GlobalStatics_0.anInt1709
                             - var11,
                         GlobalStatics_9.anInt1676 - var10, var9.anInt193);
                   }
@@ -2942,7 +2941,7 @@ public class GlobalStatics_8 {
                 var30.aClass11_2449 = var9;
                 var30.anInt2447 = GlobalStatics_9.anInt1676 - var10;
                 var30.anInt2441 =
-                    com.jagex.runescape.statics.GlobalStatics_0.anInt1709
+                    GlobalStatics_0.anInt1709
                         - var11;
                 var30.arguments = var9.anObjectArray170;
                 DummyClass31.aClass61_1471.addLast(var30);
@@ -2956,7 +2955,7 @@ public class GlobalStatics_8 {
                   var30.aClass11_2449 = var9;
                   var30.anInt2447 = GlobalStatics_9.anInt1676 - var10;
                   var30.anInt2441 =
-                      com.jagex.runescape.statics.GlobalStatics_0.anInt1709
+                      GlobalStatics_0.anInt1709
                           - var11;
                   var30.arguments = var9.anObjectArray239;
                   DummyClass45.aClass61_983.addLast(var30);
@@ -2969,7 +2968,7 @@ public class GlobalStatics_8 {
                 var30.aClass11_2449 = var9;
                 var30.anInt2447 = GlobalStatics_9.anInt1676 - var10;
                 var30.anInt2441 =
-                    com.jagex.runescape.statics.GlobalStatics_0.anInt1709
+                    GlobalStatics_0.anInt1709
                         - var11;
                 var30.arguments = var9.anObjectArray180;
                 DummyClass31.aClass61_1471.addLast(var30);
@@ -2983,7 +2982,7 @@ public class GlobalStatics_8 {
                   var30.aClass11_2449 = var9;
                   var30.anInt2447 = GlobalStatics_9.anInt1676 - var10;
                   var30.anInt2441 =
-                      com.jagex.runescape.statics.GlobalStatics_0.anInt1709
+                      GlobalStatics_0.anInt1709
                           - var11;
                   var30.arguments = var9.anObjectArray248;
                   DummyClass31.aClass61_1471.addLast(var30);
@@ -2996,7 +2995,7 @@ public class GlobalStatics_8 {
                 var30.aClass11_2449 = var9;
                 var30.anInt2447 = GlobalStatics_9.anInt1676 - var10;
                 var30.anInt2441 =
-                    com.jagex.runescape.statics.GlobalStatics_0.anInt1709
+                    GlobalStatics_0.anInt1709
                         - var11;
                 var30.arguments = var9.anObjectArray276;
                 DummyClass31.aClass61_1471.addLast(var30);
@@ -3010,7 +3009,7 @@ public class GlobalStatics_8 {
                   var30.aClass11_2449 = var9;
                   var30.anInt2447 = GlobalStatics_9.anInt1676 - var10;
                   var30.anInt2441 =
-                      com.jagex.runescape.statics.GlobalStatics_0.anInt1709
+                      GlobalStatics_0.anInt1709
                           - var11;
                   var30.arguments = var9.anObjectArray281;
                   DummyClass45.aClass61_983.addLast(var30);
@@ -3086,14 +3085,14 @@ public class GlobalStatics_8 {
               }
 
               if (var9.anObjectArray282 != null
-                  && com.jagex.runescape.statics.GlobalStatics_0.anInt641
+                  && GlobalStatics_0.anInt641
                   > var9.anInt213) {
                 if (var9.anIntArray286 != null
-                    && com.jagex.runescape.statics.GlobalStatics_0.anInt641
+                    && GlobalStatics_0.anInt641
                     - var9.anInt213 <= 32) {
                   label493:
                   for (var19 = var9.anInt213; var19
-                      < com.jagex.runescape.statics.GlobalStatics_0.anInt641;
+                      < GlobalStatics_0.anInt641;
                       ++var19) {
                     var29 = GlobalStatics_4.anIntArray726[var19 & 31];
 
@@ -3115,7 +3114,7 @@ public class GlobalStatics_8 {
                   DummyClass31.aClass61_1471.addLast(var30);
                 }
 
-                var9.anInt213 = com.jagex.runescape.statics.GlobalStatics_0.anInt641;
+                var9.anInt213 = GlobalStatics_0.anInt641;
               }
 
               if (var9.anObjectArray174 != null
@@ -3246,10 +3245,10 @@ public class GlobalStatics_8 {
               && !DummyClass36.aBoolean2615) {
             if ((var9.anInt212 >= 0 || var9.anInt228 != 0)
                 && GlobalStatics_9.anInt1676 >= var12
-                && com.jagex.runescape.statics.GlobalStatics_0.anInt1709
+                && GlobalStatics_0.anInt1709
                 >= var13
                 && GlobalStatics_9.anInt1676 < var14
-                && com.jagex.runescape.statics.GlobalStatics_0.anInt1709
+                && GlobalStatics_0.anInt1709
                 < var15) {
               if (var9.anInt212 >= 0) {
                 DummyClass56.aClass11_1453 = var0[var9.anInt212];
@@ -3259,10 +3258,10 @@ public class GlobalStatics_8 {
             }
 
             if (var9.anInt187 == 8 && GlobalStatics_9.anInt1676 >= var12
-                && com.jagex.runescape.statics.GlobalStatics_0.anInt1709
+                && GlobalStatics_0.anInt1709
                 >= var13
                 && GlobalStatics_9.anInt1676 < var14
-                && com.jagex.runescape.statics.GlobalStatics_0.anInt1709
+                && GlobalStatics_0.anInt1709
                 < var15) {
               DummyClass29.aClass11_439 = var9;
             }
@@ -3270,7 +3269,7 @@ public class GlobalStatics_8 {
             if (var9.anInt252 > var9.anInt193) {
               DummyClass20
                   .method1819(
-                      com.jagex.runescape.statics.GlobalStatics_0.anInt1709,
+                      GlobalStatics_0.anInt1709,
                       var9.anInt193, var9,
                       (byte) -101,
                       GlobalStatics_9.anInt1676, var10 + var9.anInt168, var11,
@@ -3281,13 +3280,13 @@ public class GlobalStatics_8 {
           if (var9.anInt187 == 0) {
             GlobalStatics_8
                 .method50(var0, var9.anInt279, var12, var13, var14, var15,
-                var10 - var9.anInt247,
-                var11 - var9.anInt208);
+                    var10 - var9.anInt247,
+                    var11 - var9.anInt208);
             if (var9.aClass11Array262 != null) {
               GlobalStatics_8
                   .method50(var9.aClass11Array262, var9.anInt279, var12, var13,
-                  var14, var15,
-                  var10 - var9.anInt247, var11 - var9.anInt208);
+                      var14, var15,
+                      var10 - var9.anInt247, var11 - var9.anInt208);
             }
 
             SomethingPacket151 var28 =

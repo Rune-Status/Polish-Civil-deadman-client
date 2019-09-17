@@ -2159,8 +2159,7 @@ public final class SoftwareModel extends AbstractModel {
               if (var40 < this.anIntArrayArray3870.length) {
                 int[] var41 = this.anIntArrayArray3870[var40];
 
-                for (int var42 = 0; var42 < var41.length; ++var42) {
-                  int var43 = var41[var42];
+                for (int var43 : var41) {
                   if (this.aShortArray3893
                       == null || (var7 & this.aShortArray3893[var43]) != 0) {
                     int var44 =

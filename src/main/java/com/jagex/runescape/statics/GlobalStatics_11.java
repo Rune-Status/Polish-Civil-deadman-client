@@ -3636,7 +3636,7 @@ public final class GlobalStatics_11 {
                                   }
                                   if (j1 == 6012) {
                                     if (GlRenderer.useOpenGlRenderer) {
-                                      GLStatics.method551(0, 0, 0);
+                                      GLStatics.method551(0, 0);
                                     }
                                     GLStatics.useBumpMaps =
                                         GlobalStatics_9.anIntArray2929[--k]
