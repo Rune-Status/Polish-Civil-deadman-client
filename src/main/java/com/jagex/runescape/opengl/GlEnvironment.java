@@ -2,6 +2,7 @@ package com.jagex.runescape.opengl;
 
 import com.jogamp.opengl.GL;
 import com.jogamp.opengl.GL2ES1;
+import com.jogamp.opengl.fixedfunc.GLLightingFunc;
 
 public final class GlEnvironment {
 
@@ -42,21 +43,27 @@ public final class GlEnvironment {
           ambientIntensity * red, ambientIntensity * green,
           ambientIntensity * blue, 1.0F
       };
-      // GL_LIGHT_AMBIENT
-      GlRenderer.GL.glLightModelfv(2899, colors, 0);
-      // GL_LIGHT_0, DIFFUSE
-      float[] var9 = {
+      GlRenderer.GL.glLightModelfv(GL2ES1.GL_LIGHT_MODEL_AMBIENT, colors, 0);
+      float[] light0 = {
           diffuseIntensity * red, diffuseIntensity * green,
           diffuseIntensity * blue, 1.0F
       };
-      GlRenderer.GL.glLightfv(16384, 4609, var9, 0);
-
-      // GL_LIGHT_1
-      float[] var10 = {
+      GlRenderer.GL.glLightfv(
+          GLLightingFunc.GL_LIGHT0,
+          GLLightingFunc.GL_DIFFUSE,
+          light0,
+          0
+      );
+      float[] light1 = {
           -secondaryIntensity * red, -secondaryIntensity * green,
           -secondaryIntensity * blue, 1.0F
       };
-      GlRenderer.GL.glLightfv(16385, 4609, var10, 0);
+      GlRenderer.GL.glLightfv(
+          GLLightingFunc.GL_LIGHT1,
+          GLLightingFunc.GL_DIFFUSE,
+          light1,
+          0
+      );
     }
   }
 
@@ -67,7 +74,8 @@ public final class GlEnvironment {
   }
 
   public static void setFogColor(int color, int offset) {
-    if (GlEnvironment.FOG_COLOR != color || GlEnvironment.FOG_OFFSET != offset) {
+    if (GlEnvironment.FOG_COLOR != color
+        || GlEnvironment.FOG_OFFSET != offset) {
       GlEnvironment.FOG_COLOR = color;
       GlEnvironment.FOG_OFFSET = offset;
       GlEnvironment.FOG_COLOR_RGB[0] = (color >> 16 & 255) / 255.0F;
