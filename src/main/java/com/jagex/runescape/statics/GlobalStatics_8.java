@@ -2509,7 +2509,7 @@ public class GlobalStatics_8 {
               16711680
                   & var12 * (GlobalStatics_5.anInt1971 & 0xff00)
                   + (0xff00 & GlobalStatics_9.anInt1345) * var13) >> 8;
-      GlobalStatics_9.fogColor = GlEnvironment.defaultFogColor;
+      GlobalStatics_9.fogColor = GlEnvironment.DEFAULT_FOG_COLOR;
       System.out
           .println("GlobalStatics_9.fogColor = " + GlobalStatics_9.fogColor);
       float var14 =

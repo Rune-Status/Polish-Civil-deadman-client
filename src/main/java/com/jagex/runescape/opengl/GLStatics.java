@@ -58,8 +58,8 @@ public class GLStatics {
   public static GameString aClass94_691 = GLStatics.aClass94_695;
 
   public static float[] method1705(int var0, int var1) {
-    float var2 = GlEnvironment.AMBIENT_INTENSITY + GlEnvironment.method1505();
-    int var3 = GlEnvironment.method1510();
+    float var2 = GlEnvironment.AMBIENT_INTENSITY + GlEnvironment.DIFFUSE_INTENSITY;
+    int var3 = GlEnvironment.COLOR;
     float var7 = 0.58823526F;
     GLStatics.FOG_COLOR[3] = 1.0F;
     float var4 = (var3 >> 16 & 255) / 255.0F;
@@ -108,8 +108,8 @@ public class GLStatics {
   }
 
   public static float[] calculateFogColor() {
-    float var1 = GlEnvironment.AMBIENT_INTENSITY + GlEnvironment.method1505();
-    int var2 = GlEnvironment.method1510();
+    float var1 = GlEnvironment.AMBIENT_INTENSITY + GlEnvironment.DIFFUSE_INTENSITY;
+    int var2 = GlEnvironment.COLOR;
     float var3 = (255 & var2 >> 16) / 255.0F;
     GLStatics.FOG_COLOR[3] = 1.0F;
     float var4 = ((0xff59 & var2) >> 8) / 255.0F;

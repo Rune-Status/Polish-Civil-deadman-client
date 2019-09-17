@@ -2813,10 +2813,10 @@ public class GlobalStatics_10 {
   }
 
   public static void setupDefaultSun(int brightness) {
-    GlEnvironment.setSunColor(GlEnvironment.defaultSunColor,
+    GlEnvironment.setSunColor(GlEnvironment.DEFAULT_SUN_COLOR,
         (0.7F + brightness * 0.1F) * 1.1523438F, 0.69921875F, 0.69921875F);
     GlEnvironment.setSunPosition(-50.0f, -60.0f, -50.0f);
-    GlEnvironment.setFogColor(GlEnvironment.defaultFogColor, 0);
+    GlEnvironment.setFogColor(GlEnvironment.DEFAULT_FOG_COLOR, 0);
     GlEnvironment.updateSunPosition();
   }
 

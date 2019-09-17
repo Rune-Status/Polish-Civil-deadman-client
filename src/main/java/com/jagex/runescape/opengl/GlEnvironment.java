@@ -5,27 +5,23 @@ import com.jogamp.opengl.GL2ES1;
 
 public final class GlEnvironment {
 
-  private static int COLOR = -1;
-  private static float diffuseIntensity = -1.0f;
-  private static float secondaryIntensity = -1.0f;
+  public static int COLOR = -1;
+  public static float DIFFUSE_INTENSITY = -1.0f;
+  public static float SECONDARY_INTENSITY = -1.0f;
   public static float AMBIENT_INTENSITY;
-  private static float[] DIFFUSE_LIGHT_1 = new float[4];
-  private static int fogOffset = -1;
-  private static int FOG_COLOR = -1;
+  public static float[] DIFFUSE_LIGHT_1 = new float[4];
+  public static int FOG_OFFSET = -1;
+  public static int FOG_COLOR = -1;
   public static float[] DIFFUSE_LIGHT_0 = new float[4];
   public static int anInt1314;
   public static int anInt1315;
-  public static int defaultFogColor = 0xc8c0a8;
+  public static int DEFAULT_FOG_COLOR = 0xc8c0a8;
   public static float[] FOG_COLOR_RGB = new float[4];
-  public static int defaultSunColor = 16777215;
+  public static int DEFAULT_SUN_COLOR = 16777215;
 
   public static void updateSunPosition() {
     GlRenderer.GL.glLightfv(16384, 4611, GlEnvironment.DIFFUSE_LIGHT_0, 0);
     GlRenderer.GL.glLightfv(16385, 4611, GlEnvironment.DIFFUSE_LIGHT_1, 0);
-  }
-
-  public static float method1505() {
-    return GlEnvironment.diffuseIntensity;
   }
 
   public static void setSunColor(int color, float ambientIntensity,
@@ -33,12 +29,12 @@ public final class GlEnvironment {
       float secondaryIntensity) {
     if (GlEnvironment.COLOR != color
         || GlEnvironment.AMBIENT_INTENSITY != ambientIntensity
-        || GlEnvironment.diffuseIntensity != diffuseIntensity
-        || GlEnvironment.secondaryIntensity != secondaryIntensity) {
+        || GlEnvironment.DIFFUSE_INTENSITY != diffuseIntensity
+        || GlEnvironment.SECONDARY_INTENSITY != secondaryIntensity) {
       GlEnvironment.COLOR = color;
       GlEnvironment.AMBIENT_INTENSITY = ambientIntensity;
-      GlEnvironment.diffuseIntensity = diffuseIntensity;
-      GlEnvironment.secondaryIntensity = secondaryIntensity;
+      GlEnvironment.DIFFUSE_INTENSITY = diffuseIntensity;
+      GlEnvironment.SECONDARY_INTENSITY = secondaryIntensity;
       float red = (color >> 16 & 255) / 255.0F;
       float green = (color >> 8 & 255) / 255.0F;
       float blue = (color & 255) / 255.0F;
@@ -64,16 +60,16 @@ public final class GlEnvironment {
     }
   }
 
-  public static void method1507() {
+  public static void clear() {
     GlEnvironment.DIFFUSE_LIGHT_0 = null;
     GlEnvironment.DIFFUSE_LIGHT_1 = null;
     GlEnvironment.FOG_COLOR_RGB = null;
   }
 
   public static void setFogColor(int color, int offset) {
-    if (GlEnvironment.FOG_COLOR != color || GlEnvironment.fogOffset != offset) {
+    if (GlEnvironment.FOG_COLOR != color || GlEnvironment.FOG_OFFSET != offset) {
       GlEnvironment.FOG_COLOR = color;
-      GlEnvironment.fogOffset = offset;
+      GlEnvironment.FOG_OFFSET = offset;
       GlEnvironment.FOG_COLOR_RGB[0] = (color >> 16 & 255) / 255.0F;
       GlEnvironment.FOG_COLOR_RGB[1] = (color >> 8 & 255) / 255.0F;
       GlEnvironment.FOG_COLOR_RGB[2] = (color & 255) / 255.0F;
@@ -109,10 +105,6 @@ public final class GlEnvironment {
     }
   }
 
-  public static int method1510() {
-    return GlEnvironment.COLOR;
-  }
-
   public static void method1511() {
     GlRenderer.GL.glColorMaterial(1028, 5634);
     GlRenderer.GL.glEnable(2903);
@@ -133,11 +125,11 @@ public final class GlEnvironment {
     GlRenderer.GL.glFogfv(GL2ES1.GL_FOG_COLOR, color, 0);
   }
 
-  private static void method1513() {
+  public static void method1513() {
     GlEnvironment
-        .setSunColor(GlEnvironment.defaultSunColor, 1.1523438F, 0.69921875F,
+        .setSunColor(GlEnvironment.DEFAULT_SUN_COLOR, 1.1523438F, 0.69921875F,
             1.2F);
     GlEnvironment.setSunPosition(-50.0f, -60.0f, -50.0f);
-    GlEnvironment.setFogColor(GlEnvironment.defaultFogColor, 0);
+    GlEnvironment.setFogColor(GlEnvironment.DEFAULT_FOG_COLOR, 0);
   }
 }

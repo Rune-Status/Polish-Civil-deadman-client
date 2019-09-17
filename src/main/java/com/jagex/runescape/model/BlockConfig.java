@@ -16,11 +16,11 @@ public final class BlockConfig {
   public float aFloat1190;
 
   public BlockConfig() {
-    this.anInt1177 = GlEnvironment.defaultSunColor;
+    this.anInt1177 = GlEnvironment.DEFAULT_SUN_COLOR;
       this.aFloat1189 = 1.2F;
       this.sunPosZ = -50;
       this.aFloat1187 = 1.1523438F;
-      this.anInt1175 = GlEnvironment.defaultFogColor;
+      this.anInt1175 = GlEnvironment.DEFAULT_FOG_COLOR;
       this.sunPositionY = -60;
       this.aFloat1190 = 0.69921875F;
       this.anInt1184 = 0;
@@ -30,7 +30,7 @@ public final class BlockConfig {
   public BlockConfig(Buffer var1 ) {
     int var2 = var1.readUnsignedByte();
       if ((var2 & 1) == 0) {
-        this.anInt1177 = GlEnvironment.defaultSunColor;
+        this.anInt1177 = GlEnvironment.DEFAULT_SUN_COLOR;
       } else {
         this.anInt1177 = var1.readInt();
       }
@@ -64,7 +64,7 @@ public final class BlockConfig {
       }
 
       if ((32 & var2) == 0) {
-        this.anInt1175 = GlEnvironment.defaultFogColor;
+        this.anInt1175 = GlEnvironment.DEFAULT_FOG_COLOR;
       } else {
         this.anInt1175 = var1.readInt();
       }

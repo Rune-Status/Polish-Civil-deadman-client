@@ -1158,7 +1158,7 @@ public final class GameClient extends GameStub {
     GlobalStatics_9.method597((byte) 108);
     DummyClass54.method1598(-126);
     DummyClass51.method1422((byte) 24);
-    GlEnvironment.method1507();
+    GlEnvironment.clear();
     DummyClass59.method1042(true);
     GlobalStatics_10.destroy();
     GlobalStatics_9.method1815((byte) -45);
@@ -1668,7 +1668,7 @@ public final class GameClient extends GameStub {
 
     if (GlobalStatics_5.gameId == 1) {
       DummyClass55.aBoolean1419 = true;
-      GlEnvironment.defaultSunColor = 0xffffff;
+      GlEnvironment.DEFAULT_SUN_COLOR = 0xffffff;
       GlobalStatics_2.aShortArrayArray344 = GlobalStatics_5.aShortArrayArray1619;
       DummyClass55.aShortArrayArray1429 = GlobalStatics_9.aShortArrayArray2634;
       GlobalStatics_9.aShortArray2548 = GlobalStatics_9.aShortArray63;
