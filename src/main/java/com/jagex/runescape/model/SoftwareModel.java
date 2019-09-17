@@ -769,7 +769,7 @@ public final class SoftwareModel extends AbstractModel {
                     + var4[var20 + 1][var21 + 1] * var18 >> 7;
             var24 = var22 * (128 - var19) + var23 * var19 >> 7;
             var13.anIntArray3883[var15] =
-                this.anIntArray3883[var15] + (var24 - var6) + var14;
+                this.anIntArray3883[var15] + var24 - var6 + var14;
           }
         } else if (var1 == 5) {
           var14 = this.aShort3892 - this.aShort3894;
@@ -2479,10 +2479,10 @@ public final class SoftwareModel extends AbstractModel {
   private boolean method1944(int var1, int var2, int var3, int var4, int var5,
       int var6,
       int var7, int var8) {
-    return (var2 >= var3 || var2 >= var4 || var2 >= var5) && (
-        (var2 <= var3 || var2 <= var4 || var2 <= var5) && (
-            (var1 >= var6 || var1 >= var7 || var1 >= var8) && (var1 <= var6
-                || var1 <= var7 || var1 <= var8)));
+    return (var2 >= var3 || var2 >= var4 || var2 >= var5) && (var2 <= var3
+        || var2 <= var4 || var2 <= var5) && (var1 >= var6 || var1 >= var7
+        || var1 >= var8) && (var1 <= var6
+        || var1 <= var7 || var1 <= var8);
   }
 
   private void method1945(boolean var1, boolean var2, long var3, int var5,
@@ -3000,8 +3000,8 @@ public final class SoftwareModel extends AbstractModel {
     this.aShort3892 = (short) var5;
     this.aShort3879 = (short) var3;
     this.aShort3888 = (short) var6;
-    this.aShort3884 = (short) ((int) (Math.sqrt(var7) + 0.99D));
-    this.aShort3886 = (short) ((int) (Math.sqrt(var8) + 0.99D));
+    this.aShort3884 = (short) (int) (Math.sqrt(var7) + 0.99D);
+    this.aShort3886 = (short) (int) (Math.sqrt(var8) + 0.99D);
     this.aBoolean3897 = true;
   }
 

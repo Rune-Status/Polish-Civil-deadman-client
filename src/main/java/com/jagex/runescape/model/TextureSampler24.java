@@ -19,7 +19,7 @@ public final class TextureSampler24 extends AbstractTextureSampler {
         int[] var7 = var4[2];
         int[] var6 = var4[1];
 
-        for (int var8 = 0; (var8 < GlobalStatics_9.anInt1559); ++var8) {
+        for (int var8 = 0; var8 < GlobalStatics_9.anInt1559; ++var8) {
           var10[var8] = (var7[var8] + var5[var8] + var6[var8]) / 3;
         }
       }

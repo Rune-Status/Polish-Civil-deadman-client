@@ -20,13 +20,13 @@ public final class DummyClass34 {
 
   public static int perlinNoise(int var0, int var2) {
     int var3 =
-        -128 + (DummyClass45.method1234(4, var2 + '\ub135', var0 + 91923, 512)
+        -128 + DummyClass45.method1234(4, var2 + '\ub135', var0 + 91923, 512)
             + (
             DummyClass45.method1234(2, var2 + 10294, '\u93bd' + var0, 512) - 128
                 >> 1) + (
-            DummyClass45.method1234(1, var2, var0, 512) - 128 >> 2));
+            DummyClass45.method1234(1, var2, var0, 512) - 128 >> 2);
     var3 = 35 + (int) (0.3D * var3);
-    if ((var3 >= 10)) {
+    if (var3 >= 10) {
       if (var3 > 60) {
         var3 = 60;
       }
@@ -105,7 +105,7 @@ public final class DummyClass34 {
       ++GlobalStatics_10.anInt3398;
       int var2;
       if (GlobalStatics_3.anInt2384 < 0) {
-        for (var2 = 0; (var2 < 112); ++var2) {
+        for (var2 = 0; var2 < 112; ++var2) {
           GlobalStatics_8.aBooleanArray1490[var2] = false;
         }
 

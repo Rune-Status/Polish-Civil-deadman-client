@@ -21,7 +21,7 @@ public final class TextureSampler36 extends AbstractTextureSampler {
     if (var1) {
         return true;
       } else if (this.anIntArray3425 == null) {
-        if ((this.anInt3434 < 0)) {
+        if (this.anInt3434 < 0) {
           return false;
         } else {
           int var2 = GlobalStatics_9.anInt1559;
@@ -79,7 +79,7 @@ public final class TextureSampler36 extends AbstractTextureSampler {
         int[] var7 = var3[2];
         int var8;
         int var9;
-        if ((GlobalStatics_9.anInt1559 == this.anInt3431)) {
+        if (GlobalStatics_9.anInt1559 == this.anInt3431) {
           for (var8 = 0; var8 < GlobalStatics_9.anInt1559; ++var8) {
             var9 = this.anIntArray3425[var4++];
             var7[var8] = var9 << 4 & 4080;

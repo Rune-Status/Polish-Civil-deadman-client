@@ -892,7 +892,7 @@ public final class Model extends SceneNode {
             var24 =
               var4[var21][var22 + 1] * (128 - var19) + var4[var21 + 1][var22 + 1] * var19 >> 7;
             var25 = var23 * (128 - var20) + var24 * var20 >> 7;
-            var14.vy[var16] = this.vy[var16] + (var25 - var6) + var15;
+            var14.vy[var16] = this.vy[var16] + var25 - var6 + var15;
           }
         } else if (var1 == 5) {
           var15 = this.maximumY - this.minimumY;

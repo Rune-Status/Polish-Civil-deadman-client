@@ -25,7 +25,7 @@ public abstract class AbstractGameWorld {
         GlobalStatics_4.aFloat727 = -0.6283864f;
       }
 
-      return ((this.flags & 8) != 0);
+      return (this.flags & 8) != 0;
   }
 
   public final boolean method1075(int var1) {
@@ -33,7 +33,7 @@ public abstract class AbstractGameWorld {
         this.flags = 51;
       }
 
-      return ((2 & this.flags) != 0);
+      return (2 & this.flags) != 0;
   }
 
 }

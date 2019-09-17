@@ -126,7 +126,7 @@ public final class ItemConfig {
         this.method1113(41, null);
       }
 
-      if ((var3 == -1)) {
+      if (var3 == -1) {
         return true;
       } else {
         boolean var5 = true;
@@ -134,7 +134,7 @@ public final class ItemConfig {
           var5 = false;
         }
 
-        if ((var4 != -1) && !com.jagex.runescape.statics.GlobalStatics_0.aClass153_2581.method2129((byte) 58, 0, var4)) {
+        if (var4 != -1 && !com.jagex.runescape.statics.GlobalStatics_0.aClass153_2581.method2129((byte) 58, 0, var4)) {
           var5 = false;
         }
 
@@ -157,16 +157,16 @@ public final class ItemConfig {
 
   public ItemConfig method1106(int var1, int var2 ) {
     int var3 = 58 % ((-28 - var2) / 48);
-      if (this.anIntArray804 != null && (var1 > 1)) {
+      if (this.anIntArray804 != null && var1 > 1) {
         int var4 = -1;
 
         for (int var5 = 0; var5 < 10; ++var5) {
-          if (this.anIntArray766[var5] <= var1 && (this.anIntArray766[var5] != 0)) {
+          if (this.anIntArray766[var5] <= var1 && this.anIntArray766[var5] != 0) {
             var4 = this.anIntArray804[var5];
           }
         }
 
-        if ((var4 != -1)) {
+        if (var4 != -1) {
           return DummyClass35.getItemConfig(var4, (byte) 97);
         }
       }
@@ -185,7 +185,7 @@ public final class ItemConfig {
         var4 = this.anInt794;
       }
 
-      if ((var3 == -1)) {
+      if (var3 == -1) {
         return true;
       } else {
         boolean var7 = true;
@@ -193,7 +193,7 @@ public final class ItemConfig {
           var7 = false;
         }
 
-        if ((var4 != -1) && !com.jagex.runescape.statics.GlobalStatics_0.aClass153_2581
+        if (var4 != -1 && !com.jagex.runescape.statics.GlobalStatics_0.aClass153_2581
             .method2129((byte) -114, 0, var4)) {
           var7 = false;
         }
@@ -248,7 +248,7 @@ public final class ItemConfig {
       this.aBoolean779 = var2.aBoolean779;
       this.anInt776 = var2.anInt776;
       if (var2.inventoryOptions != null) {
-        for (int var4 = 0; (var4 < 4); ++var4) {
+        for (int var4 = 0; var4 < 4; ++var4) {
           this.inventoryOptions[var4] = var2.inventoryOptions[var4];
         }
       }
@@ -264,16 +264,16 @@ public final class ItemConfig {
         this.anInt755 = -67;
       }
 
-      if (this.anIntArray804 != null && (var5 > 1)) {
+      if (this.anIntArray804 != null && var5 > 1) {
         int var7 = -1;
 
         for (int var8 = 0; var8 < 10; ++var8) {
-          if ((var5 >= this.anIntArray766[var8]) && (this.anIntArray766[var8] != 0)) {
+          if (var5 >= this.anIntArray766[var8] && this.anIntArray766[var8] != 0) {
             var7 = this.anIntArray804[var8];
           }
         }
 
-        if ((var7 != -1)) {
+        if (var7 != -1) {
           return DummyClass35.getItemConfig(var7, (byte) 109)
             .getModel(113, var2, var3, var4, 1, var6);
         }
@@ -292,7 +292,7 @@ public final class ItemConfig {
         int var9;
         if (this.aShortArray774 != null) {
           for (var9 = 0; this.aShortArray774.length > var9; ++var9) {
-            if (this.aByteArray785 != null && (var9 < this.aByteArray785.length)) {
+            if (this.aByteArray785 != null && var9 < this.aByteArray785.length) {
               var12.replaceColor(this.aShortArray774[var9],
                 GlobalStatics_10.aShortArray3453[this.aByteArray785[var9] & 255]);
             } else {
@@ -309,7 +309,8 @@ public final class ItemConfig {
         }
 
         var11 = var12.method2008(this.anInt784 + 64, 768 + this.anInt790, -50, -10, -50);
-        if ((this.anInt805 != 128) || this.anInt780 != 128 || (this.anInt797 != 128)) {
+        if (this.anInt805 != 128
+            || this.anInt780 != 128 || this.anInt797 != 128) {
           var11.scale(this.anInt805, this.anInt780, this.anInt797);
         }
 
@@ -351,39 +352,39 @@ public final class ItemConfig {
 
   private void method1114(byte var1, Buffer var2, int var3) {
     int var4 = -118 % ((var1 - 48) / 61);
-      if ((var3 == 1)) {
+      if (var3 == 1) {
         this.anInt755 = var2.readUnsignedShort();
       } else {
         if (var3 == 2) {
           this.aClass94_770 = var2.readString();
         } else {
-          if ((var3 == 4)) {
+          if (var3 == 4) {
             this.anInt810 = var2.readUnsignedShort();
-          } else if ((var3 == 5)) {
+          } else if (var3 == 5) {
             this.rotationX = var2.readUnsignedShort();
-          } else if ((var3 == 6)) {
+          } else if (var3 == 6) {
             this.rotationY = var2.readUnsignedShort();
-          } else if ((var3 == 7)) {
+          } else if (var3 == 7) {
             this.translateX = var2.readUnsignedShort();
-            if ((this.translateX > 32767)) {
+            if (this.translateX > 32767) {
               this.translateX -= 65536;
             }
-          } else if ((var3 != 8)) {
+          } else if (var3 != 8) {
             if (var3 == 11) {
               this.anInt764 = 1;
-            } else if ((var3 == 12)) {
+            } else if (var3 == 12) {
               this.anInt757 = var2.readInt();
-            } else if ((var3 != 16)) {
+            } else if (var3 != 16) {
               if (var3 == 23) {
                 this.anInt793 = var2.readUnsignedShort();
               } else if (var3 != 24) {
-                if ((var3 == 25)) {
+                if (var3 == 25) {
                   this.anInt761 = var2.readUnsignedShort();
                 } else {
-                  if ((var3 == 26)) {
+                  if (var3 == 26) {
                     this.anInt794 = var2.readUnsignedShort();
                   } else {
-                    if (var3 >= 30 && (var3 < 35)) {
+                    if (var3 >= 30 && var3 < 35) {
                       this.aClass94Array801[-30 + var3] = var2.readString();
                       if (this.aClass94Array801[var3 - 30].method1531(
                           GlobalStatics_10.aClass94_3051)) {
@@ -394,7 +395,7 @@ public final class ItemConfig {
                     } else {
                       int var5;
                       int var6;
-                      if ((var3 == 40)) {
+                      if (var3 == 40) {
                         var5 = var2.readUnsignedByte();
                         this.aShortArray772 = new short[var5];
                         this.aShortArray774 = new short[var5];
@@ -406,7 +407,7 @@ public final class ItemConfig {
                               .readUnsignedShort();
                         }
                       } else {
-                        if ((var3 == 41)) {
+                        if (var3 == 41) {
                           var5 = var2.readUnsignedByte();
                           this.aShortArray751 = new short[var5];
                           this.aShortArray765 = new short[var5];
@@ -421,13 +422,13 @@ public final class ItemConfig {
                           var5 = var2.readUnsignedByte();
                           this.aByteArray785 = new byte[var5];
 
-                          for (var6 = 0; (var6 < var5); ++var6) {
+                          for (var6 = 0; var6 < var5; ++var6) {
                             this.aByteArray785[var6] = var2.readByte();
                           }
                         } else if (var3 == 65) {
                           this.aBoolean807 = true;
-                        } else if ((var3 != 78)) {
-                          if ((var3 == 79)) {
+                        } else if (var3 != 78) {
+                          if (var3 == 79) {
                             this.anInt776 = var2.readUnsignedShort();
                           } else if (var3 == 90) {
                             this.anInt803 = var2.readUnsignedShort();
@@ -437,15 +438,15 @@ public final class ItemConfig {
                             if (var3 == 93) {
                               this.anInt753 = var2.readUnsignedShort();
                             } else {
-                              if ((var3 == 95)) {
+                              if (var3 == 95) {
                                 this.rotationZ = var2.readUnsignedShort();
-                              } else if ((var3 == 96)) {
+                              } else if (var3 == 96) {
                                 this.anInt800 = var2.readUnsignedByte();
                               } else if (var3 == 97) {
                                 this.anInt789 = var2.readUnsignedShort();
-                              } else if ((var3 == 98)) {
+                              } else if (var3 == 98) {
                                 this.anInt791 = var2.readUnsignedShort();
-                              } else if ((var3 >= 100) && (var3 < 110)) {
+                              } else if (var3 >= 100 && var3 < 110) {
                                 if (this.anIntArray804 == null) {
                                   this.anIntArray804 = new int[10];
                                   this.anIntArray766 = new int[10];
@@ -456,13 +457,13 @@ public final class ItemConfig {
                                 this.anIntArray766[var3 - 100] = var2
                                     .readUnsignedShort();
                               } else if (var3 != 110) {
-                                if ((var3 == 111)) {
+                                if (var3 == 111) {
                                   this.anInt780 = var2.readUnsignedShort();
                                 } else {
-                                  if ((var3 == 112)) {
+                                  if (var3 == 112) {
                                     this.anInt797 = var2.readUnsignedShort();
-                                  } else if ((var3 != 113)) {
-                                    if ((var3 == 114)) {
+                                  } else if (var3 != 113) {
+                                    if (var3 == 114) {
                                       this.anInt790 = 5 * var2.readByte();
                                     } else if (var3 == 115) {
                                       this.anInt782 = var2.readUnsignedByte();
@@ -471,7 +472,7 @@ public final class ItemConfig {
                                         this.anInt762 = var2
                                             .readUnsignedShort();
                                       } else if (var3 != 125) {
-                                        if ((var3 == 126)) {
+                                        if (var3 == 126) {
                                           this.anInt777 = var2.readByte();
                                           this.anInt802 = var2.readByte();
                                           this.anInt752 = var2.readByte();
@@ -480,12 +481,12 @@ public final class ItemConfig {
                                               .readUnsignedByte();
                                           this.anInt758 = var2
                                               .readUnsignedShort();
-                                        } else if ((var3 != 128)) {
-                                          if ((var3 == 129)) {
+                                        } else if (var3 != 128) {
+                                          if (var3 == 129) {
                                             var2.readUnsignedByte();
                                             var2.readUnsignedShort();
                                           } else {
-                                            if ((var3 == 130)) {
+                                            if (var3 == 130) {
                                               var2.readUnsignedByte();
                                               var2.readUnsignedShort();
                                             } else if (var3 == 249) {
@@ -635,12 +636,12 @@ public final class ItemConfig {
         var4 = this.anInt794;
       }
 
-      if ((var3 == -1)) {
+      if (var3 == -1) {
         return null;
       } else {
         Model var6 = GlobalStatics_10
             .getModel(com.jagex.runescape.statics.GlobalStatics_0.aClass153_2581, var3, 0);
-        if ((var4 != -1)) {
+        if (var4 != -1) {
           Model var7 = GlobalStatics_10
               .getModel(com.jagex.runescape.statics.GlobalStatics_0.aClass153_2581, var4, 0);
           if (var5 == -1) {
@@ -654,12 +655,14 @@ public final class ItemConfig {
           }
         }
 
-        if (!var1 && ((this.anInt760 != 0) || (this.anInt778 != 0) || (this.anInt775 != 0))) {
+        if (!var1 && (this.anInt760 != 0 || this.anInt778 != 0
+            || this.anInt775 != 0)) {
           assert var6 != null;
           var6.translate(this.anInt760, this.anInt778, this.anInt775);
         }
 
-        if (var1 && ((this.anInt777 != 0) || (this.anInt802 != 0) || (this.anInt752 != 0))) {
+        if (var1 && (this.anInt777 != 0 || this.anInt802 != 0
+            || this.anInt752 != 0)) {
           assert var6 != null;
           var6.translate(this.anInt777, this.anInt802, this.anInt752);
         }
@@ -717,7 +720,7 @@ public final class ItemConfig {
         int var3;
         if (this.aShortArray774 != null) {
           for (var3 = 0; this.aShortArray774.length > var3; ++var3) {
-            if (this.aByteArray785 != null && (var3 < this.aByteArray785.length)) {
+            if (this.aByteArray785 != null && var3 < this.aByteArray785.length) {
               var2.replaceColor(this.aShortArray774[var3],
                 GlobalStatics_10.aShortArray3453[this.aByteArray785[var3] & 255]);
             } else {
@@ -738,8 +741,8 @@ public final class ItemConfig {
           this.method1105(-67, null, -37);
         }
 
-        if ((this.anInt805 != 128) || (this.anInt780 != 128)
-            || (this.anInt797 != 128)) {
+        if (this.anInt805 != 128 || this.anInt780 != 128
+            || this.anInt797 != 128) {
           var5.scale(this.anInt805, this.anInt780, this.anInt797);
         }
 

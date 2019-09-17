@@ -28,7 +28,7 @@ public final class TextureSampler8 extends AbstractTextureSampler {
       int var9;
       int var10;
       if (var2 == 2) {
-        for (var2 = 0; (var2 < 257); ++var2) {
+        for (var2 = 0; var2 < 257; ++var2) {
           var4 = var2 << 4;
 
           for (
@@ -46,7 +46,7 @@ public final class TextureSampler8 extends AbstractTextureSampler {
           int var11 = (var4 - var5[0] << 12) / (var6[0] - var5[0]);
           int var13 = var10 - var9 - var7 + var8;
           int var12 = var11 * var11 >> 12;
-          int var14 = var7 + (-var8 - var13);
+          int var14 = var7 + -var8 - var13;
           int var19 = var15 * var11 >> 12;
           int var18 = var12 * var14 >> 12;
           int var17 = var12 * (var11 * var13 >> 12) >> 12;
@@ -55,7 +55,7 @@ public final class TextureSampler8 extends AbstractTextureSampler {
             var20 = -32767;
           }
 
-          if ((var20 >= 32768)) {
+          if (var20 >= 32768) {
             var20 = 32767;
           }
 
@@ -63,12 +63,12 @@ public final class TextureSampler8 extends AbstractTextureSampler {
         }
       } else {
         if (var2 == 1) {
-          for (var2 = 0; (var2 < 257); ++var2) {
+          for (var2 = 0; var2 < 257; ++var2) {
             var4 = var2 << 4;
 
             for (
-                var3 = 1; (var3 < (-1 + this.anIntArrayArray3469.length))
-                && (this.anIntArrayArray3469[var3][0] <= var4); ++var3) {
+                var3 = 1; var3 < -1 + this.anIntArrayArray3469.length
+                && this.anIntArrayArray3469[var3][0] <= var4; ++var3) {
             }
 
             var5 = this.anIntArrayArray3469[-1 + var3];
@@ -78,7 +78,7 @@ public final class TextureSampler8 extends AbstractTextureSampler {
                 >> 1;
             var9 = -var8 + 4096;
             var10 = var8 * var6[1] + var5[1] * var9 >> 12;
-            if ((var10 <= 32767)) {
+            if (var10 <= 32767) {
               var10 = -32767;
             }
 
@@ -89,12 +89,12 @@ public final class TextureSampler8 extends AbstractTextureSampler {
             this.aShortArray3465[var2] = (short) var10;
           }
         } else {
-          for (var2 = 0; (var2 < 257); ++var2) {
+          for (var2 = 0; var2 < 257; ++var2) {
             var4 = var2 << 4;
 
             for (
                 var3 = 1; -1 + this.anIntArrayArray3469.length > var3
-                && (this.anIntArrayArray3469[var3][0] <= var4); ++var3) {
+                && this.anIntArrayArray3469[var3][0] <= var4; ++var3) {
             }
 
             var6 = this.anIntArrayArray3469[var3];
@@ -193,8 +193,8 @@ public final class TextureSampler8 extends AbstractTextureSampler {
   }
 
   private int[] method356(byte var1, int var2) {
-    if ((var2 >= 0)) {
-        if ((var2 >= this.anIntArrayArray3469.length)) {
+    if (var2 >= 0) {
+        if (var2 >= this.anIntArrayArray3469.length) {
           return this.anIntArray3467;
         } else {
           if (var1 != -106) {

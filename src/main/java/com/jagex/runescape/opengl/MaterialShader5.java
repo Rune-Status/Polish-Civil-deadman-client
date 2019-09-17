@@ -71,7 +71,7 @@ public final class MaterialShader5 implements MaterialShader {
     float var4 = (1 + (var1 >> 3 & 3)) * 0.01F;
     float var3 = -0.01f * (1 + (var1 & 3));
     float var5 = (var1 & 64) == 0 ? 4.8828125E-4F : 9.765625E-4F;
-    boolean var6 = ((128 & var1) != 0);
+    boolean var6 = (128 & var1) != 0;
     if (var6) {
       this.aFloatArray2174[0] = var5;
       this.aFloatArray2174[1] = 0.0F;
@@ -95,8 +95,8 @@ public final class MaterialShader5 implements MaterialShader {
     GlRenderer.GL
         .glRotatef(360.0F * GlobalStatics_9.anInt3103 / 2048.0F, 0.0F, 1.0F,
             0.0F);
-    GlRenderer.GL.glTranslatef((-GlobalStatics_10.anInt144),
-        (-GlobalStatics_6.anInt3695), (-GlobalStatics_0.anInt2587));
+    GlRenderer.GL.glTranslatef(-GlobalStatics_10.anInt144,
+        -GlobalStatics_6.anInt3695, -GlobalStatics_0.anInt2587);
     GlRenderer.GL.glTexGenfv(8192, 9474, this.aFloatArray2174, 0);
     this.aFloatArray2174[3] = var3 * GlRenderer.anInt1791;
     this.aFloatArray2174[0] = 0.0F;
@@ -167,8 +167,8 @@ public final class MaterialShader5 implements MaterialShader {
   public static boolean method1627(int var0, byte var1) {
     GameWorld var2 = GlobalStatics_6.method130(97, var0);
     if (var2 != null) {
-      if (GlobalStatics_9.anInt1214 != 1 && (GlobalStatics_9.anInt1214 != 2)
-          && (GlobalStatics_4.usageLocation != 2)) {
+      if (GlobalStatics_9.anInt1214 != 1 && GlobalStatics_9.anInt1214 != 2
+          && GlobalStatics_4.usageLocation != 2) {
         GameString var9 = GlobalStatics_8.aClass94_8;
         if (GlobalStatics_4.usageLocation != 0) {
           var9 = GlobalStatics_9.concat(new GameString[]{
@@ -217,7 +217,7 @@ public final class MaterialShader5 implements MaterialShader {
         byte[] var3 = var2.aClass94_2625.method1568(0);
         DummyClass36.aString2611 = new String(var3, 0, var3.length);
         GlobalStatics_7.anInt2451 = var2.anInt2621;
-        if ((GlobalStatics_4.usageLocation != 0)) {
+        if (GlobalStatics_4.usageLocation != 0) {
           DummyClass11.anInt2036 = '\u9c40' + GlobalStatics_7.anInt2451;
           GlobalStatics_9.anInt2894 = DummyClass11.anInt2036;
           GlobalStatics_9.anInt506 = GlobalStatics_7.anInt2451 + '\uc350';
@@ -235,15 +235,15 @@ public final class MaterialShader5 implements MaterialShader {
       byte var6) {
     int var9;
     int var12;
-    if ((GlobalStatics_9.anInt3012 == 0)) {
+    if (GlobalStatics_9.anInt3012 == 0) {
       int var10 = GLStatics.screenLowerY;
       var9 = DummyClass3.screenUpperY;
       int var8 = GlobalStatics_10.screenUpperX;
       int var7 = DummyClass17.screenLowerX;
       int var11 = (var5 - var3) * (-var7 + var8) / var1 + var7;
       var12 = var9 + (var10 - var9) * (-var0 + var4) / var2;
-      if (GlobalStatics_9.aBoolean1837 && ((64 & GlobalStatics_9.anInt2051)
-          != 0)) {
+      if (GlobalStatics_9.aBoolean1837 && (64 & GlobalStatics_9.anInt2051)
+          != 0) {
         Widget var13 =
             GlobalStatics_2
                 .method638((byte) -19, GlobalStatics_9.anInt872,
@@ -257,7 +257,7 @@ public final class MaterialShader5 implements MaterialShader {
         }
       } else {
         ++GlobalStatics_2.anInt2571;
-        if ((GlobalStatics_5.gameId == 1)) {
+        if (GlobalStatics_5.gameId == 1) {
           GlobalStatics_9
               .method1177(-1, 0L, (byte) -62, GlobalStatics_9.EMPTY_STRING,
                   var11,
@@ -280,10 +280,10 @@ public final class MaterialShader5 implements MaterialShader {
         int var14 = ((int) var26 & 2009320690) >> 29;
         int var15 = (int) (var26 >>> 32) & Integer.MAX_VALUE;
         int var27 = 127 & (int) var26 >> 7;
-        if ((var26 != var25)) {
+        if (var26 != var25) {
           var25 = var26;
           int var18;
-          if ((var14 == 2) && GlobalStatics_5
+          if (var14 == 2 && GlobalStatics_5
               .method2096(GlobalStatics_9.currentPlane,
                   var12, var27, var26)) {
             GameObjectConfig var16 = DummyClass11.method2207(4, var15);
@@ -295,7 +295,7 @@ public final class MaterialShader5 implements MaterialShader {
               continue;
             }
 
-            if ((GlobalStatics_9.anInt3012 == 1)) {
+            if (GlobalStatics_9.anInt3012 == 1) {
               GlobalStatics_9
                   .method1177(DummyClass54.anInt1403, var26, (byte) -58,
                       GlobalStatics_9.concat(new GameString[]{
@@ -321,7 +321,7 @@ public final class MaterialShader5 implements MaterialShader {
                       var19 = 42;
                     }
 
-                    if ((var18 == 1)) {
+                    if (var18 == 1) {
                       var19 = 50;
                     }
 
@@ -334,7 +334,7 @@ public final class MaterialShader5 implements MaterialShader {
                       var20 = var16.anInt1517;
                     }
 
-                    if ((var18 == 3)) {
+                    if (var18 == 3) {
                       var19 = 46;
                     }
 
@@ -342,7 +342,7 @@ public final class MaterialShader5 implements MaterialShader {
                       var20 = var16.anInt1522;
                     }
 
-                    if ((var18 == 4)) {
+                    if (var18 == 4) {
                       var19 = 1001;
                     }
 
@@ -367,9 +367,9 @@ public final class MaterialShader5 implements MaterialShader {
                   null :
                   GlobalStatics_0.method1210(64, GlobalStatics_9.anInt1038);
               if ((GlobalStatics_9.anInt2051 & 4) != 0 && (var17 == null
-                  || (var16
+                  || var16
                   .method1691(var17.anInt3614, GlobalStatics_9.anInt1038,
-                      (byte) 98) != var17.anInt3614))) {
+                      (byte) 98) != var17.anInt3614)) {
                 GlobalStatics_9
                     .method1177(GlobalStatics_6.anInt1887, var26, (byte) -77,
                         GlobalStatics_9.concat(new GameString[]{
@@ -389,22 +389,22 @@ public final class MaterialShader5 implements MaterialShader {
           Player var38;
           NPC var36;
           int var37;
-          if ((var14 == 1)) {
+          if (var14 == 1) {
             NPC var31 = GlobalStatics_8.npcs[var15];
-            if (((var31.config.size & 1) == 0) && ((127 & var31.anInt2819) == 0)
-                && ((var31.anInt2829 & 127) == 0)
+            if ((var31.config.size & 1) == 0 && (127 & var31.anInt2819) == 0
+                && (var31.anInt2829 & 127) == 0
                 || (var31.config.size & 1) == 1 && (127 & var31.anInt2819) == 64
                 &&
-                ((
-                    var31.anInt2829 & 127) == 64)) {
+                (
+                    var31.anInt2829 & 127) == 64) {
               var33 = var31.anInt2819 + 64 - 64 * var31.config.size;
               var18 = -((-1 + var31.config.size) * 64) + var31.anInt2829;
 
               for (var37 = 0; var37 < DummyClass6.anInt2046; ++var37) {
                 var36 = GlobalStatics_8.npcs[GlobalStatics_2.anIntArray347[var37]];
                 var21 = -(var36.config.size * 64) + 64 + var36.anInt2819;
-                var22 = var36.anInt2829 - (var36.config.size * 64) + 64;
-                if (var31 != var36 && (var21 >= var33)
+                var22 = var36.anInt2829 - var36.config.size * 64 + 64;
+                if (var31 != var36 && var21 >= var33
                     && var31.config.size - (-var33 + var21 >> 7)
                     >= var36.config.size && var18 <= var22
                     && var36.config.size
@@ -416,11 +416,11 @@ public final class MaterialShader5 implements MaterialShader {
 
               for (var37 = 0; DummyClass13.anInt2022 > var37; ++var37) {
                 var38 = GlobalStatics_9.players[DummyClass42.anIntArray887[var37]];
-                var21 = var38.anInt2819 + 64 - (64 * var38.getSize());
+                var21 = var38.anInt2819 + 64 - 64 * var38.getSize();
                 var22 = var38.anInt2829 - (var38.getSize() * 64 - 64);
-                if (var21 >= var33 && (var38.getSize() <= (var31.config.size
+                if (var21 >= var33 && var38.getSize() <= var31.config.size
                     - (
-                    var21 - var33 >> 7))) && (var22 >= var18)
+                    var21 - var33 >> 7) && var22 >= var18
                     && var38.getSize()
                     <= -(-var18 + var22 >> 7) + var31.config.size) {
                   GlobalStatics_9
@@ -438,17 +438,17 @@ public final class MaterialShader5 implements MaterialShader {
             Player var30 = GlobalStatics_9.players[var15];
             if ((127 & var30.anInt2819) == 64 && (127 & var30.anInt2829)
                 == 64) {
-              var33 = var30.anInt2819 - (64 * (-1 + var30.getSize()));
-              var18 = var30.anInt2829 + 64 - (var30.getSize() * 64);
+              var33 = var30.anInt2819 - 64 * (-1 + var30.getSize());
+              var18 = var30.anInt2829 + 64 - var30.getSize() * 64;
 
               for (var37 = 0; var37 < DummyClass6.anInt2046; ++var37) {
                 var36 = GlobalStatics_8.npcs[GlobalStatics_2.anIntArray347[var37]];
-                var21 = var36.anInt2819 - (var36.config.size * 64) + 64;
+                var21 = var36.anInt2819 - var36.config.size * 64 + 64;
                 var22 = var36.anInt2829 - 64 * var36.config.size + 64;
                 if (var21 >= var33
                     && var36.config.size <= -(var21 - var33 >> 7) + var30
-                    .getSize() && (var22 >= var18) && (var36.config.size <= (
-                    -(-var18 + var22 >> 7) + var30.getSize()))) {
+                    .getSize() && var22 >= var18 &&
+                    var36.config.size <= -(-var18 + var22 >> 7) + var30.getSize()) {
                   GlobalStatics_6.method2068(var36.config, var12, -121,
                       GlobalStatics_2.anIntArray347[var37], var27);
                 }
@@ -458,10 +458,10 @@ public final class MaterialShader5 implements MaterialShader {
                 var38 = GlobalStatics_9.players[DummyClass42.anIntArray887[var37]];
                 var21 = var38.anInt2819 - (var38.getSize() - 1) * 64;
                 var22 = var38.anInt2829 - (-64 + 64 * var38.getSize());
-                if (var38 != var30 && (var33 <= var21)
+                if (var38 != var30 && var33 <= var21
                     && var38.getSize() <= var30.getSize() - (var21 - var33
-                    >> 7) && (var22 >= var18) && (var38.getSize() <= (
-                    -(var22 - var18 >> 7) + var30.getSize()))) {
+                    >> 7) && var22 >= var18 &&
+                    var38.getSize() <= -(var22 - var18 >> 7) + var30.getSize()) {
                   GlobalStatics_9
                       .method312(DummyClass42.anIntArray887[var37], 9, var27,
                           var38,
@@ -473,7 +473,7 @@ public final class MaterialShader5 implements MaterialShader {
             GlobalStatics_9.method312(var15, 31, var27, var30, var12);
           }
 
-          if ((var14 == 3)) {
+          if (var14 == 3) {
             Deque var28 =
                 GlobalStatics_9.groundItems[GlobalStatics_9.currentPlane][var12][var27];
             if (var28 != null) {
@@ -482,7 +482,7 @@ public final class MaterialShader5 implements MaterialShader {
                   var32 = (GroundItemNode) var28.method1219(41)) {
                 var18 = var32.aClass140_Sub7_3676.anInt2936;
                 ItemConfig var40 = DummyClass35.getItemConfig(var18, (byte) 71);
-                if ((GlobalStatics_9.anInt3012 == 1)) {
+                if (GlobalStatics_9.anInt3012 == 1) {
                   ++GlobalStatics_9.anInt2290;
                   GlobalStatics_9
                       .method1177(DummyClass54.anInt1403, var18, (byte) -75,
@@ -498,11 +498,11 @@ public final class MaterialShader5 implements MaterialShader {
                     var34 = GlobalStatics_9.method822(19406, var34);
                   }
 
-                  for (var21 = 4; (var21 >= 0); --var21) {
+                  for (var21 = 4; var21 >= 0; --var21) {
                     if (var34 != null && var34[var21] != null) {
                       ++GlobalStatics_8.anInt27;
                       byte var35 = 0;
-                      if ((var21 == 0)) {
+                      if (var21 == 0) {
                         var35 = 21;
                       }
 
@@ -511,7 +511,7 @@ public final class MaterialShader5 implements MaterialShader {
                       }
 
                       int var23 = -1;
-                      if ((var21 == var40.anInt767)) {
+                      if (var21 == var40.anInt767) {
                         var23 = var40.anInt758;
                       }
 
@@ -523,11 +523,11 @@ public final class MaterialShader5 implements MaterialShader {
                         var23 = var40.anInt756;
                       }
 
-                      if ((var21 == 3)) {
+                      if (var21 == 3) {
                         var35 = 20;
                       }
 
-                      if ((var21 == 4)) {
+                      if (var21 == 4) {
                         var35 = 24;
                       }
 
@@ -551,8 +551,8 @@ public final class MaterialShader5 implements MaterialShader {
                       null :
                       GlobalStatics_0.method1210(64, GlobalStatics_9.anInt1038);
                   if ((GlobalStatics_9.anInt2051 & 1) != 0 && (var39 == null
-                      || (var40.method1115(var39.anInt3614, 100,
-                      GlobalStatics_9.anInt1038) != var39.anInt3614))) {
+                      || var40.method1115(var39.anInt3614, 100,
+                      GlobalStatics_9.anInt1038) != var39.anInt3614)) {
                     ++GlobalStatics_7.anInt1439;
                     GlobalStatics_9.method1177(GlobalStatics_6.anInt1887, var18,
                         (byte) -70,
@@ -638,7 +638,7 @@ public final class MaterialShader5 implements MaterialShader {
       MaterialShader5.method1630((byte) -33);
     }
 
-    for (int var6 = var3; (var1 >= var6); ++var6) {
+    for (int var6 = var3; var1 >= var6; ++var6) {
       GlobalStatics_10
           .method282(DummyClass35.anIntArrayArray663[var6], var4, 121, var2,
               var5);

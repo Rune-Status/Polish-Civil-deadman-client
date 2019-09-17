@@ -70,7 +70,7 @@ public final class SocketStream implements Runnable {
             this.anInt1236 = (var1 + this.anInt1236) % 5000;
 
             try {
-              if ((this.anInt1230 == this.anInt1236)) {
+              if (this.anInt1230 == this.anInt1236) {
                 this.anOutputStream1231.flush();
               }
             } catch (IOException var7) {
@@ -136,7 +136,7 @@ public final class SocketStream implements Runnable {
             for (int var6 = 0; var4 > var6; ++var6) {
               this.aByteArray1233[this.anInt1230] = var3[var2 + var6];
               this.anInt1230 = (this.anInt1230 + 1) % 5000;
-              if ((this.anInt1230 == ((4900 + this.anInt1236) % 5000))) {
+              if (this.anInt1230 == (4900 + this.anInt1236) % 5000) {
                 throw new IOException();
               }
             }
@@ -187,7 +187,7 @@ public final class SocketStream implements Runnable {
             GlobalStatics_10.sleep(1L);
           }
 
-          if ((this.aClass64_1237.status == 1)) {
+          if (this.aClass64_1237.status == 1) {
             try {
               ((Thread) this.aClass64_1237.result).join();
             } catch (InterruptedException var4) {

@@ -42,7 +42,7 @@ public final class GlFont extends AbstractFont {
       GlRenderer.method1824();
       GlRenderer.GL
           .glColor3ub((byte) (var6 >> 16), (byte) (var6 >> 8), (byte) var6);
-      GlRenderer.GL.glTranslatef(var2, (GlRenderer.viewHeight - var3), 0.0F);
+      GlRenderer.GL.glTranslatef(var2, GlRenderer.viewHeight - var3, 0.0F);
       float var9 = (var1 % 16) / 16.0F;
       float var10 = (var1 / 16) / 16.0F;
       float var11 = var9 + (float) this.anIntArray3709[var1] / this.anInt4087;
@@ -67,11 +67,11 @@ public final class GlFont extends AbstractFont {
       GlRenderer.GL.glVertex2f(0.0F, 0.0F);
       GlRenderer.GL.glMultiTexCoord2f('\u84c1', var14, var17);
       GlRenderer.GL.glTexCoord2f(var9, var12);
-      GlRenderer.GL.glVertex2f(0.0F, (-this.anIntArray3721[var1]));
+      GlRenderer.GL.glVertex2f(0.0F, -this.anIntArray3721[var1]);
       GlRenderer.GL.glMultiTexCoord2f('\u84c1', var16, var17);
       GlRenderer.GL.glTexCoord2f(var11, var12);
       GlRenderer.GL
-          .glVertex2f(this.anIntArray3709[var1], (-this.anIntArray3721[var1]));
+          .glVertex2f(this.anIntArray3709[var1], -this.anIntArray3721[var1]);
       GlRenderer.GL.glEnd();
       GlRenderer.GL.glTexEnvi(8960, '\u8571', 8448);
       GlRenderer.GL.glTexEnvi(8960, '\u8580', 5890);
@@ -83,7 +83,7 @@ public final class GlFont extends AbstractFont {
       GlRenderer.bindTexture(this.anInt4084);
       GlRenderer.GL
           .glColor3ub((byte) (var6 >> 16), (byte) (var6 >> 8), (byte) var6);
-      GlRenderer.GL.glTranslatef(var2, (GlRenderer.viewHeight - var3), 0.0F);
+      GlRenderer.GL.glTranslatef(var2, GlRenderer.viewHeight - var3, 0.0F);
       GlRenderer.GL.glCallList(this.anIntArray4085[var1]);
       GlRenderer.GL.glLoadIdentity();
     }
@@ -98,7 +98,7 @@ public final class GlFont extends AbstractFont {
     GlRenderer.GL
         .glColor4ub((byte) (var6 >> 16), (byte) (var6 >> 8), (byte) var6,
             var7 > 255 ? -1 : (byte) var7);
-    GlRenderer.GL.glTranslatef(var2, (GlRenderer.viewHeight - var3), 0.0F);
+    GlRenderer.GL.glTranslatef(var2, GlRenderer.viewHeight - var3, 0.0F);
     GlRenderer.GL.glCallList(this.anIntArray4085[var1]);
     GlRenderer.GL.glLoadIdentity();
   }
@@ -120,10 +120,10 @@ public final class GlFont extends AbstractFont {
         GlRenderer.GL.glTexCoord2f(var3, var4);
         GlRenderer.GL.glVertex2f(0.0F, 0.0F);
         GlRenderer.GL.glTexCoord2f(var3, var6);
-        GlRenderer.GL.glVertex2f(0.0F, (-this.anIntArray3721[var2]));
+        GlRenderer.GL.glVertex2f(0.0F, -this.anIntArray3721[var2]);
         GlRenderer.GL.glTexCoord2f(var5, var6);
         GlRenderer.GL.glVertex2f(this.anIntArray3709[var2],
-            (-this.anIntArray3721[var2]));
+            -this.anIntArray3721[var2]);
         GlRenderer.GL.glEnd();
         GlRenderer.GL.glEndList();
       }

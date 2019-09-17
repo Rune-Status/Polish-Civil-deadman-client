@@ -51,7 +51,7 @@ public final class HashTable {
 
   public Node getNext(int var1) {
     Node var2;
-    if ((this.iteratorBucketId > 0) && this.aClass3_1713 != this.nodes[
+    if (this.iteratorBucketId > 0 && this.aClass3_1713 != this.nodes[
         this.iteratorBucketId
             - 1]) {
       var2 = this.aClass3_1713;
@@ -59,7 +59,7 @@ public final class HashTable {
       return var2;
     } else {
       do {
-        if ((this.iteratorBucketId >= this.capacity)) {
+        if (this.iteratorBucketId >= this.capacity) {
           if (var1 > -61) {
             this.clear(119);
           }
@@ -80,7 +80,7 @@ public final class HashTable {
       var2.unlinkNode();
     }
 
-    Node var5 = this.nodes[(int) (var3 & (this.capacity - 1))];
+    Node var5 = this.nodes[(int) (var3 & this.capacity - 1)];
     var2.nextNode = var5;
     var2.key = var3;
     var2.prevNode = var5.prevNode;
@@ -90,11 +90,11 @@ public final class HashTable {
 
   public Node get(long var1) {
     this.lastFetchedKey = var1;
-    Node var4 = this.nodes[(int) (var1 & (-1 + this.capacity))];
+    Node var4 = this.nodes[(int) (var1 & -1 + this.capacity)];
     for (
         this.iterator = var4.nextNode;
         var4 != this.iterator; this.iterator = this.iterator.nextNode) {
-      if ((var1 == this.iterator.key)) {
+      if (var1 == this.iterator.key) {
         Node var5 = this.iterator;
         this.iterator = this.iterator.nextNode;
         return var5;
@@ -136,7 +136,7 @@ public final class HashTable {
   public Node getLastFetchedNode() {
     if (this.iterator != null) {
       Node var2 = this.nodes[(int) (this.lastFetchedKey
-          & (-1 + this.capacity))];
+          & -1 + this.capacity)];
       while (var2 != this.iterator) {
         if (this.iterator.key == this.lastFetchedKey) {
           Node var3 = this.iterator;

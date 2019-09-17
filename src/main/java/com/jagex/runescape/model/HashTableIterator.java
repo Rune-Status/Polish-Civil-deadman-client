@@ -16,14 +16,14 @@ public final class HashTableIterator {
 
   public Node getNext() {
     Node var2;
-      if ((this.anInt1132 > 0)
+      if (this.anInt1132 > 0
           && this.table.nodes[this.anInt1132 - 1] != this.iterator) {
         var2 = this.iterator;
         this.iterator = var2.nextNode;
         return var2;
       } else {
         do {
-          if ((this.table.capacity <= this.anInt1132)) {
+          if (this.table.capacity <= this.anInt1132) {
             return null;
           }
 

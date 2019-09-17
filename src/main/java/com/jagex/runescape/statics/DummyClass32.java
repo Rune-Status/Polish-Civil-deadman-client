@@ -35,10 +35,10 @@ public final class DummyClass32 {
   public static int method961(int var0) {
     return var0 != 1536 ?
         96 :
-        (DummyClass30.anInt453 == 0 ?
+        DummyClass30.anInt453 == 0 ?
             0 :
             GlobalStatics_9.anInterface5Array70[DummyClass30.anInt453]
-                .method24());
+                .method24();
   }
 
   public static void method962(byte var0) {

@@ -72,7 +72,7 @@ public final class DummyClass45 {
       DummyClass45.spawnSceneX = -21;
     }
 
-    if ((GlobalStatics_0.anInt638 == 2)) {
+    if (GlobalStatics_0.anInt638 == 2) {
       DummyClass17.aClass3_Sub28_Sub16Array1825[4
           + GlobalStatics_7.anInt2958 / 100].method643(
           GlobalStatics_9.anInt1053 - 8, -8 + GlobalStatics_7.anInt4062);
@@ -110,7 +110,7 @@ public final class DummyClass45 {
 
   public static void method1239(int var0, int var1, int var2, int var3,
       int var4, boolean var5) {
-    if ((var0 < 1)) {
+    if (var0 < 1) {
       var0 = 1;
     }
 
@@ -121,7 +121,7 @@ public final class DummyClass45 {
     if (GlRenderer.useOpenGlRenderer) {
       int var6 = var3 - 334;
       if (var6 >= 0) {
-        if ((var6 > 100)) {
+        if (var6 > 100) {
           var6 = 100;
         }
       } else {
@@ -145,7 +145,7 @@ public final class DummyClass45 {
       int var10;
       short var12;
       if (var8 >= GlobalStatics_9.aShort505) {
-        if ((GlobalStatics_10.aShort4038 < var8)) {
+        if (GlobalStatics_10.aShort4038 < var8) {
           var12 = GlobalStatics_10.aShort4038;
           var7 = var12 * var0 * 334 / (var3 * 512);
           if (GlobalStatics_9.aShort3241 > var7) {
@@ -155,7 +155,7 @@ public final class DummyClass45 {
             if (var5) {
               GlUtils.resetClip();
               GlUtils.fillQuad(var4, var2, var0, var10, 0);
-              GlUtils.fillQuad(var4, var2 + (var3 - var10), var0, var10, 0);
+              GlUtils.fillQuad(var4, var2 + var3 - var10, var0, var10, 0);
             }
 
             var3 -= var10 * 2;
@@ -172,7 +172,7 @@ public final class DummyClass45 {
           if (var5) {
             GlUtils.resetClip();
             GlUtils.fillQuad(var4, var2, var10, var3, 0);
-            GlUtils.fillQuad(var0 + (var4 - var10), var2, var10, var3, 0);
+            GlUtils.fillQuad(var0 + var4 - var10, var2, var10, var3, 0);
           }
 
           var4 += var10;

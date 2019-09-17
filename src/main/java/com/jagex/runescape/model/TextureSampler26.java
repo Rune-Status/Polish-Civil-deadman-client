@@ -22,7 +22,7 @@ public final class TextureSampler26 extends AbstractTextureSampler {
 
         for (int var6 = 0; var6 < GlobalStatics_9.anInt1559; ++var6) {
           int var7 = var5[var6];
-          var4[var6] = (this.anInt3073 <= var7) && (var7 <= this.anInt3074) ? 4096 : 0;
+          var4[var6] = this.anInt3073 <= var7 && var7 <= this.anInt3074 ? 4096 : 0;
         }
       }
 
@@ -34,7 +34,7 @@ public final class TextureSampler26 extends AbstractTextureSampler {
         GlobalStatics_10.method196(true);
       }
 
-      if ((var1 == 0)) {
+      if (var1 == 0) {
         this.anInt3073 = var2.readUnsignedShort();
       } else {
         if (var1 == 1) {

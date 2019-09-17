@@ -26,7 +26,7 @@ public final class DummyClass55 {
       DummyClass55.method1608((byte) 106);
     }
 
-    if ((var0 < var1)) {
+    if (var0 < var1) {
       int var5 = (var1 + var0) / 2;
       int var6 = var0;
       int var7 = var3[var5];
@@ -37,7 +37,7 @@ public final class DummyClass55 {
       var4[var1] = var8;
 
       for (int var9 = var0; var1 > var9; ++var9) {
-        if (var3[var9] > ((var9 & 1) + var7)) {
+        if (var3[var9] > (var9 & 1) + var7) {
           int var10 = var3[var9];
           var3[var9] = var3[var6];
           var3[var6] = var10;

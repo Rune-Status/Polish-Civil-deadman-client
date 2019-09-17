@@ -56,7 +56,7 @@ public final class DummyClass25 {
       GlobalStatics_6.windowWidth -= var2.right + var2.left;
     }
 
-    if ((GlobalStatics_9.getWindowMode() >= 2)) {
+    if (GlobalStatics_9.getWindowMode() >= 2) {
       DummyClass30.viewWidth = GlobalStatics_6.windowWidth;
       DummyClass51.viewX = 0;
       GlobalStatics_7.viewY = 0;
@@ -73,18 +73,18 @@ public final class DummyClass25 {
           GlobalStatics_9.viewHeight);
     }
 
-    GlobalStatics_8.INSTANCE
+    GlobalStatics_8.GAME_CANVAS
         .setSize(DummyClass30.viewWidth, GlobalStatics_9.viewHeight);
     if (var1 == GlobalStatics_10.FRAME) {
       var2 = GlobalStatics_10.FRAME.getInsets();
-      GlobalStatics_8.INSTANCE.setLocation(var2.left + DummyClass51.viewX,
+      GlobalStatics_8.GAME_CANVAS.setLocation(var2.left + DummyClass51.viewX,
           GlobalStatics_7.viewY + var2.top);
     } else {
-      GlobalStatics_8.INSTANCE
+      GlobalStatics_8.GAME_CANVAS
           .setLocation(DummyClass51.viewX, GlobalStatics_7.viewY);
     }
 
-    if ((GlobalStatics_9.anInt3655 != -1)) {
+    if (GlobalStatics_9.anInt3655 != -1) {
       DummyClass23.method1746(true, (byte) -125);
     }
 
@@ -101,7 +101,7 @@ public final class DummyClass25 {
         GlobalStatics_10.sleep(1L);
       }
 
-      if ((var3.status == 1)) {
+      if (var3.status == 1) {
         var2 = (FileOnDisk) var3.result;
         Buffer var4 = DummyClass30.method939((byte) -116);
         var2.method1738(116, var4.bytes, var4.position, 0);

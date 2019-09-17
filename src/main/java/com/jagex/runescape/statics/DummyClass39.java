@@ -43,11 +43,11 @@ public final class DummyClass39 {
         GlobalStatics_7.anInt688 = var3;
       }
 
-      if ((var2 == 5)) {
+      if (var2 == 5) {
         GlobalStatics_9.anInt998 = var3;
       }
 
-      if ((var2 == 9)) {
+      if (var2 == 9) {
         GlobalStatics_0.anInt15 = var3;
       }
 

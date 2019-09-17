@@ -137,11 +137,11 @@ public class SoftwareDirectColorSprite extends AbstractDirectColorSprite {
       int var9 = (int) Math.floor(Math.sin(var7) * var6 + 0.5D);
       int var10 = (int) Math.floor(Math.cos(var7) * var6 + 0.5D);
       int var11 = -var1 * var10 - var2 * var9;
-      int var12 = -(-var1) * var9 - var2 * var10;
+      int var12 = - -var1 * var9 - var2 * var10;
       int var13 = ((this.anInt3707 << 4) - var1) * var10 - var2 * var9;
       int var14 = -((this.anInt3707 << 4) - var1) * var9 - var2 * var10;
       int var15 = -var1 * var10 + ((this.anInt3696 << 4) - var2) * var9;
-      int var16 = -(-var1) * var9 + ((this.anInt3696 << 4) - var2) * var10;
+      int var16 = - -var1 * var9 + ((this.anInt3696 << 4) - var2) * var10;
       int var17 = ((this.anInt3707 << 4) - var1) * var10 + ((
           this.anInt3696 << 4) - var2) * var9;
       int var18 = -((this.anInt3707 << 4) - var1) * var9 + ((
@@ -923,7 +923,7 @@ public class SoftwareDirectColorSprite extends AbstractDirectColorSprite {
       var12 = var12 * var9 >> 8;
       var13 = var13 * var9 >> 8;
       int var14 = (var5 << 16) + var11 * var12 + var10 * var13;
-      int var15 = (var6 << 16) + (var11 * var13 - var10 * var12);
+      int var15 = (var6 << 16) + var11 * var13 - var10 * var12;
       int var16 = var1 + var2 * SoftwareIndexedColorSpriteStatics.anInt1092;
 
       for (var2 = 0; var2 < var4; ++var2) {
@@ -976,7 +976,7 @@ public class SoftwareDirectColorSprite extends AbstractDirectColorSprite {
       var13 = var13 * var8 >> 8;
       var14 = var14 * var8 >> 8;
       int var15 = (var5 << 16) + var12 * var13 + var11 * var14;
-      int var16 = (var6 << 16) + (var12 * var14 - var11 * var13);
+      int var16 = (var6 << 16) + var12 * var14 - var11 * var13;
       int var17 = var1 + var2 * SoftwareIndexedColorSpriteStatics.anInt1092;
 
       for (var2 = 0; var2 < var4; ++var2) {
@@ -1127,7 +1127,7 @@ public class SoftwareDirectColorSprite extends AbstractDirectColorSprite {
       var13 = var13 * var8 >> 8;
       var14 = var14 * var8 >> 8;
       int var15 = (var5 << 16) + var12 * var13 + var11 * var14;
-      int var16 = (var6 << 16) + (var12 * var14 - var11 * var13);
+      int var16 = (var6 << 16) + var12 * var14 - var11 * var13;
       int var17 = var1 + var2 * SoftwareIndexedColorSpriteStatics.anInt1092;
 
       for (var2 = 0; var2 < var4; ++var2) {

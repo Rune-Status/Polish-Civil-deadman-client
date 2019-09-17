@@ -46,7 +46,7 @@ public final class ProceduralTexture {
           ++var3;
         }
 
-        if ((var7.method155((byte) 19) >= 0)) {
+        if (var7.method155((byte) 19) >= 0) {
           ++var4;
         }
 
@@ -69,17 +69,17 @@ public final class ProceduralTexture {
         var7 = this.aClass3_Sub13Array1147[var6];
         var8 = var7.samplers.length;
 
-        for (var9 = 0; (var9 < var8); ++var9) {
+        for (var9 = 0; var9 < var8; ++var9) {
           var7.samplers[var9] = this.aClass3_Sub13Array1147[var5[var6][var9]];
         }
 
         var9 = var7.method159(4);
         int var10 = var7.method155((byte) 19);
-        if ((var9 > 0)) {
+        if (var9 > 0) {
           this.anIntArray1144[var3++] = var9;
         }
 
-        if ((var10 > 0)) {
+        if (var10 > 0) {
           this.anIntArray1149[var4++] = var10;
         }
 
@@ -126,7 +126,7 @@ public final class ProceduralTexture {
       int var14 = 0;
 
       int var15;
-      for (var15 = 0; (var15 < var1); ++var15) {
+      for (var15 = 0; var15 < var1; ++var15) {
         if (var2) {
           var14 = var15;
         }
@@ -152,7 +152,7 @@ public final class ProceduralTexture {
             var20 = 255;
           }
 
-          if ((var20 < 0)) {
+          if (var20 < 0) {
             var20 = 0;
           }
 
@@ -167,12 +167,12 @@ public final class ProceduralTexture {
             var21 = 0;
           }
 
-          if ((var22 > 255)) {
+          if (var22 > 255) {
             var22 = 255;
           }
 
           var21 = GlobalStatics_8.anIntArray3804[var21];
-          if ((var22 < 0)) {
+          if (var22 < 0) {
             var22 = 0;
           }
 
@@ -239,7 +239,7 @@ public final class ProceduralTexture {
             var15 = this.aClass3_Sub13_1148.method166(-1, var11)[0];
           }
 
-          for (int var16 = var2 - 1; (var16 >= 0); --var16) {
+          for (int var16 = var2 - 1; var16 >= 0; --var16) {
             int var17 = var12[var16] >> 4;
             if (var17 > 255) {
               var17 = 255;
@@ -250,7 +250,7 @@ public final class ProceduralTexture {
             }
 
             int var18 = var13[var16] >> 4;
-            if ((var18 > 255)) {
+            if (var18 > 255) {
               var18 = 255;
             }
 
@@ -260,18 +260,18 @@ public final class ProceduralTexture {
             }
 
             var17 = GlobalStatics_8.anIntArray3804[var17];
-            if ((var19 < 0)) {
+            if (var19 < 0) {
               var19 = 0;
             }
 
-            if ((var18 < 0)) {
+            if (var18 < 0) {
               var18 = 0;
             }
 
             var18 = GlobalStatics_8.anIntArray3804[var18];
             var19 = GlobalStatics_8.anIntArray3804[var19];
             int var20;
-            if ((var17 == 0) && (var18 == 0) && (var19 == 0)) {
+            if (var17 == 0 && var18 == 0 && var19 == 0) {
               var20 = 0;
             } else {
               var20 = var15[var16] >> 4;
@@ -279,7 +279,7 @@ public final class ProceduralTexture {
                 var20 = 255;
               }
 
-              if ((var20 < 0)) {
+              if (var20 < 0) {
                 var20 = 0;
               }
             }
@@ -294,7 +294,7 @@ public final class ProceduralTexture {
           }
         }
 
-        for (var11 = 0; (var11 < this.aClass3_Sub13Array1147.length); ++var11) {
+        for (var11 = 0; var11 < this.aClass3_Sub13Array1147.length; ++var11) {
           this.aClass3_Sub13Array1147[var11].method161((byte) -45);
         }
 
@@ -308,13 +308,13 @@ public final class ProceduralTexture {
       FileUnpacker var3 ) {
     int var4;
       if (GlobalStatics_9.anInt1668 > 0) {
-        for (var4 = 0; (var4 < this.anIntArray1144.length); ++var4) {
+        for (var4 = 0; var4 < this.anIntArray1144.length; ++var4) {
           if (!var3.method2129((byte) -78, this.anIntArray1144[var4], GlobalStatics_9.anInt1668)) {
             return false;
           }
         }
       } else {
-        for (var4 = 0; (var4 < this.anIntArray1144.length); ++var4) {
+        for (var4 = 0; var4 < this.anIntArray1144.length; ++var4) {
           if (!var3.isLoaded(this.anIntArray1144[var4])) {
             return false;
           }

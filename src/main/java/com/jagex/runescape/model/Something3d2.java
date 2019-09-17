@@ -55,20 +55,20 @@ public class Something3d2 extends Something3dRoot {
   public final void method2237(int var1, int var2, int var3) {
     if (var2 == 0) {
         this.anInt3023 = 4096;
-        this.anInt3024 = -((var1 >= 0) ? var1 : -var1) + this.anInt3026;
+        this.anInt3024 = -(var1 >= 0 ? var1 : -var1) + this.anInt3026;
         this.anInt3024 = this.anInt3024 * this.anInt3024 >> 12;
         this.anInt3029 = this.anInt3024;
       } else {
         this.anInt3023 = this.anInt3022 * this.anInt3024 >> 12;
-        if ((this.anInt3023 >= 0)) {
-          if ((this.anInt3023 > 4096)) {
+        if (this.anInt3023 >= 0) {
+          if (this.anInt3023 > 4096) {
             this.anInt3023 = 4096;
           }
         } else {
           this.anInt3023 = 0;
         }
 
-        this.anInt3024 = -((var1 >= 0) ? var1 : -var1) + this.anInt3026;
+        this.anInt3024 = -(var1 >= 0 ? var1 : -var1) + this.anInt3026;
         this.anInt3024 = this.anInt3024 * this.anInt3024 >> 12;
         this.anInt3024 = this.anInt3024 * this.anInt3023 >> 12;
         this.anInt3029 += this.anInt3018 * this.anInt3024 >> 12;

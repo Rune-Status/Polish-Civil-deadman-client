@@ -90,12 +90,12 @@ public class GlobalStatics_2 {
   public static FileUnpacker configs;
   static GameString aClass94_2224 = GameStringStatics
       .create("Please wait)3)3)3");
-  public static GameString aClass94_2216 = aClass94_2224;
+  public static GameString aClass94_2216 = GlobalStatics_2.aClass94_2224;
   static GameString aClass94_2568 = GameStringStatics
       .create("Started 3d Library");
-  public static GameString aClass94_2576 = aClass94_2568;
+  public static GameString aClass94_2576 = GlobalStatics_2.aClass94_2568;
   static GameString aClass94_44 = GameStringStatics.create(" ");
-  public static GameString aClass94_43 = aClass94_44;
+  public static GameString aClass94_43 = GlobalStatics_2.aClass94_44;
   public static String aString597 =
     "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!\"£$%^&*()-_=+[{]};:\'@#~,<.>/?\\| "
       + '\u00c4' + '\u00cb' + '\u00cf' + '\u00d6' + '\u00dc' + '\u00e4' + '\u00eb'
@@ -104,26 +104,26 @@ public class GlobalStatics_2 {
       + '\u00e0' + '\u00e9' + '\u00e8' + '\u00ed' + '\u00ec' + '\u00f3' + '\u00f2' + '\u00fa'
       + '\u00f9' + '\u00c2' + '\u00ca' + '\u00ce' + '\u00d4' + '\u00db' + '\u00e2' + '\u00ea'
       + '\u00ee' + '\u00f4' + '\u00fb' + '\u00c6' + '\u00e6';
-  public static final int anInt598 = aString597.length();
+  public static final int anInt598 = GlobalStatics_2.aString597.length();
   public static int[] anIntArray599 = new int[256];
 
   public static void method102(int var0) {
-    aClass130_2220 = null;
+    GlobalStatics_2.aClass130_2220 = null;
     if (var0 != 3353893) {
-      aClass94_2216 = null;
+      GlobalStatics_2.aClass94_2216 = null;
     }
 
-    aShortArray2219 = null;
-    aClass94_2242 = null;
-    aClass94_2215 = null;
-    aClass94_2224 = null;
-    aClass94_2216 = null;
+    GlobalStatics_2.aShortArray2219 = null;
+    GlobalStatics_2.aClass94_2242 = null;
+    GlobalStatics_2.aClass94_2215 = null;
+    GlobalStatics_2.aClass94_2224 = null;
+    GlobalStatics_2.aClass94_2216 = null;
   }
 
   public static void method103(byte var0) {
     GlobalStatics_1.aClass130_2194.clear(122);
     if (var0 <= 18) {
-      aClass94_2224 = null;
+      GlobalStatics_2.aClass94_2224 = null;
     }
 
     DummyClass50.aClass13_1139.clear();
@@ -142,7 +142,7 @@ public class GlobalStatics_2 {
           int var13 = var10 - (var11 * GlEnvironment.anInt1314 >> 8) >> 3;
           int var14 = var12 - (var11 * GlEnvironment.anInt1315 >> 8) >> 3;
           if (var0 != 0 && var0 != 1 && (var2 || var3)) {
-            method2050(SomethingShadows.floorShadows[var0],
+            GlobalStatics_2.method2050(SomethingShadows.floorShadows[var0],
                 SomethingShadows.shadowsSprite, var13 + 1, var14 + 1, var1,
                 var2);
           } else {
@@ -160,16 +160,16 @@ public class GlobalStatics_2 {
     for (int var7 = -16; var7 < 0; ++var7) {
       for (int var8 = -4; var8 < 0; ++var8) {
         int var10001 = var3++;
-        var0[var10001] = (byte) (var0[var10001] + (1 - var1[var2]));
+        var0[var10001] = (byte) (var0[var10001] + 1 - var1[var2]);
         var2 += var5;
         var10001 = var3++;
-        var0[var10001] = (byte) (var0[var10001] + (1 - var1[var2]));
+        var0[var10001] = (byte) (var0[var10001] + 1 - var1[var2]);
         var2 += var5;
         var10001 = var3++;
-        var0[var10001] = (byte) (var0[var10001] + (1 - var1[var2]));
+        var0[var10001] = (byte) (var0[var10001] + 1 - var1[var2]);
         var2 += var5;
         var10001 = var3++;
-        var0[var10001] = (byte) (var0[var10001] + (1 - var1[var2]));
+        var0[var10001] = (byte) (var0[var10001] + 1 - var1[var2]);
         var2 += var5;
       }
 
@@ -233,10 +233,12 @@ public class GlobalStatics_2 {
       }
 
       if (var5) {
-        method2046(var1.aByteArray2674, var0.aByteArray2674, var8, var6,
+        GlobalStatics_2
+            .method2046(var1.aByteArray2674, var0.aByteArray2674, var8, var6,
             var7, var9, var10);
       } else {
-        method2048(var1.aByteArray2674, var0.aByteArray2674, var8, var6,
+        GlobalStatics_2
+            .method2048(var1.aByteArray2674, var0.aByteArray2674, var8, var6,
             var7, var9, var10);
       }
 
@@ -248,14 +250,14 @@ public class GlobalStatics_2 {
       int var2,
       byte var3) {
     return GlobalStatics_9.loadSprites(var0, var1, var2, -30901) ?
-        (var3 != 39 ? null : GlobalStatics_9.method578(var3 ^ 84)) :
+        var3 != 39 ? null : GlobalStatics_9.method578(var3 ^ 84) :
         null;
   }
 
   public static void method563(int var0) {
-    othrrHeightMap = null;
-    aClass94_3601 = null;
-    anIntArray3607 = null;
+    GlobalStatics_2.othrrHeightMap = null;
+    GlobalStatics_2.aClass94_3601 = null;
+    GlobalStatics_2.anIntArray3607 = null;
     if (var0 != 3) {
       GLStatics.viewportLowerZ = -108;
     }
@@ -264,7 +266,7 @@ public class GlobalStatics_2 {
   public static void loadSettings(SignLink var0, int var1) {
     GlobalStatics_4.brightnessSetting = 3;
     GlobalStatics_9.method957(96, true);
-    aBoolean3604 = true;
+    GlobalStatics_2.aBoolean3604 = true;
     GlobalStatics_1.aBoolean3184 = true;
     GLStatics.aBoolean1685 = true;
     GlobalStatics_9.anInt3622 = 0;
@@ -292,11 +294,11 @@ public class GlobalStatics_2 {
 
     GlobalStatics_0.anInt2148 = var1;
     GlobalStatics_10.anInt2488 = 0;
-    aBoolean346 = false;
+    GlobalStatics_2.aBoolean346 = false;
     DummyClass4.aBoolean3004 = true;
     GlobalStatics_0.safemode = false;
     GlobalStatics_7.aBoolean1080 = false;
-    anInt2577 = 0;
+    GlobalStatics_2.anInt2577 = 0;
 
     try {
       SignLinkRequest var3 = var0.getSettings("runescape", 12);
@@ -305,12 +307,12 @@ public class GlobalStatics_2 {
         GlobalStatics_10.sleep(1L);
       }
 
-      if ((var3.status == 1)) {
+      if (var3.status == 1) {
         var2 = (FileOnDisk) var3.result;
         byte[] var4 = new byte[(int) var2.length(-1)];
 
         int var6;
-        for (int var5 = 0; (var5 < var4.length); var5 += var6) {
+        for (int var5 = 0; var5 < var4.length; var5 += var6) {
           var6 = var2.method1739(var5, var1, var4.length - var5, var4);
           if (var6 == -1) {
             throw new IOException("EOF");
@@ -333,7 +335,7 @@ public class GlobalStatics_2 {
   public static void method565(byte var0, int var1, int var2) {
     GlobalStatics_9.anInt1150 = -GlobalStatics_10.anInt3256 + var1;
     if (var0 != 86) {
-      anIntArray3607 = null;
+      GlobalStatics_2.anIntArray3607 = null;
     }
 
     int var3 =
@@ -362,17 +364,17 @@ public class GlobalStatics_2 {
                 / GlobalStatics_4.aFloat727);
     if (var4 > DummyClass30.anInt455) {
       GlobalStatics_9.anInt1150 =
-          DummyClass30.anInt455 - ((int) (GlobalStatics_9.aClass11_3551.anInt168
-              / GlobalStatics_4.aFloat727));
+          DummyClass30.anInt455 - (int) (GlobalStatics_9.aClass11_3551.anInt168
+              / GlobalStatics_4.aFloat727);
     }
 
-    if ((var5 < 0)) {
+    if (var5 < 0) {
       GlobalStatics_9.anInt3362 =
           (int) (GlobalStatics_9.aClass11_3551.anInt193
               / GlobalStatics_4.aFloat727);
     }
 
-    if ((DummyClass58.anInt1460 < var6)) {
+    if (DummyClass58.anInt1460 < var6) {
       GlobalStatics_9.anInt3362 =
           -((int) (GlobalStatics_9.aClass11_3551.anInt193
               / GlobalStatics_4.aFloat727))
@@ -394,7 +396,7 @@ public class GlobalStatics_2 {
     AreaSoundEffect var2 = (AreaSoundEffect) GlobalStatics_9.aClass130_4046
         .get(var0.name.toBase37());
     if (var1 >= -85) {
-      method523(40, -17, -52, -32, 9, -51, -85, -84, -19);
+      GlobalStatics_2.method523(40, -17, -52, -32, 9, -51, -85, -84, -19);
     }
 
     if (var2 != null) {
@@ -409,11 +411,11 @@ public class GlobalStatics_2 {
   public static int method519(int var0, boolean var1, int var2, int var3) {
     var0 &= 3;
     if (!var1) {
-      method520((byte) -89);
+      GlobalStatics_2.method520((byte) -89);
     }
 
-    return var0 != 0 ? ((var0 != 1) ? ((var0 == 2) ? -var3 + 7 : -var2 + 7)
-        : var2) : var3;
+    return var0 != 0 ? var0 != 1 ? var0 == 2 ? -var3 + 7 : -var2 + 7
+        : var2 : var3;
   }
 
   public static SomethingWorldMapy method520(byte var0) {
@@ -422,12 +424,12 @@ public class GlobalStatics_2 {
   }
 
   public static void method521(int var0) {
-    fileUnpacker11 = null;
+    GlobalStatics_2.fileUnpacker11 = null;
     if (var0 == -3) {
-      aClass94Array2566 = null;
-      aClass94_2568 = null;
-      anIntArray2574 = null;
-      aClass94_2576 = null;
+      GlobalStatics_2.aClass94Array2566 = null;
+      GlobalStatics_2.aClass94_2568 = null;
+      GlobalStatics_2.anIntArray2574 = null;
+      GlobalStatics_2.aClass94_2576 = null;
     }
   }
 
@@ -468,19 +470,19 @@ public class GlobalStatics_2 {
 
   public static void method61(int var0) {
     int var1 = 10 / ((-37 - var0) / 33);
-    aClass94_44 = null;
-    updateSocket = null;
-    aClass94_43 = null;
-    aClass94_38 = null;
-    aClass94_37 = null;
-    anIntArray39 = null;
+    GlobalStatics_2.aClass94_44 = null;
+    GlobalStatics_2.updateSocket = null;
+    GlobalStatics_2.aClass94_43 = null;
+    GlobalStatics_2.aClass94_38 = null;
+    GlobalStatics_2.aClass94_37 = null;
+    GlobalStatics_2.anIntArray39 = null;
   }
 
   public static int[] method62(boolean var0, int var1, int var2, int var3,
       int var4, float var5,
       int var6, int var7) {
     if (var1 != 14585) {
-      anInt40 = 43;
+      GlobalStatics_2.anInt40 = 43;
     }
 
     int[] var8 = new int[var3];
@@ -506,7 +508,7 @@ public class GlobalStatics_2 {
     var3.cacheSize = var1.readUnsignedByte();
     int var4 = var1.readUnsignedByte();
     if (var0 > -26) {
-      aClass94_43 = null;
+      GlobalStatics_2.aClass94_43 = null;
     }
 
     for (int var5 = 0; var5 < var4; ++var5) {
@@ -520,7 +522,7 @@ public class GlobalStatics_2 {
 
   public static int method64(boolean var0, int var1) {
     if (!var0) {
-      aClass94_43 = null;
+      GlobalStatics_2.aClass94_43 = null;
     }
 
     return var1 >>> 8;
@@ -541,7 +543,7 @@ public class GlobalStatics_2 {
       }
 
       if (var2) {
-        aClass64_351 = null;
+        GlobalStatics_2.aClass64_351 = null;
       }
 
       SoftwareIndexedColorSprite var8 = var7.getSprite(var6, (byte) -111);
@@ -562,7 +564,7 @@ public class GlobalStatics_2 {
           var11 = 4 * var9;
         }
 
-        if ((var7.anInt61 == 0)) {
+        if (var7.anInt61 == 0) {
           var8.method1677(var0 * 4 + 48, 48 + 4 * (-var10 - var5 + 104),
               var11, var12);
         } else {
@@ -578,7 +580,7 @@ public class GlobalStatics_2 {
 
   public static void method889(byte var0, Buffer var1) {
     if (var0 != 105) {
-      anIntArray347 = null;
+      GlobalStatics_2.anIntArray347 = null;
     }
 
     int var3 = GlobalStatics_5.anInt2010 >> 1;
@@ -592,7 +594,7 @@ public class GlobalStatics_2 {
       int var7 = 0;
       var6 = 0;
       boolean var5 = false;
-      if ((var1.readUnsignedByte() == 1)) {
+      if (var1.readUnsignedByte() == 1) {
         var6 = var1.readUnsignedByte();
         var7 = var1.readUnsignedByte();
         var5 = true;
@@ -603,7 +605,7 @@ public class GlobalStatics_2 {
       int var10 = -GlobalStatics_10.anInt3256 + var8 * 64;
       int var11 =
           -1 + DummyClass58.anInt1460 - var9 * 64 + GlobalStatics_9.anInt65;
-      if ((var10 >= 0) && -63 + var11 >= 0
+      if (var10 >= 0 && -63 + var11 >= 0
           && DummyClass30.anInt455 > var10 + 63
           && DummyClass58.anInt1460 > var11) {
         for (var12 = 0; var12 < 64; ++var12) {
@@ -632,14 +634,14 @@ public class GlobalStatics_2 {
     int[] var32 = new int[var6];
     int[] var31 = new int[var6];
 
-    for (var12 = -5; (var12 < var27); ++var12) {
+    for (var12 = -5; var12 < var27; ++var12) {
       int var15;
       int var35;
-      for (int var34 = 0; (var34 < var6); ++var34) {
+      for (int var34 = 0; var34 < var6; ++var34) {
         var14 = var12 + 5;
         if (var27 > var14) {
           var15 = 255 & var4[var14][var34];
-          if ((var15 > 0)) {
+          if (var15 > 0) {
             FloorUnderlay var16 = GlobalStatics_6.getFloorUnderlay(var15 - 1);
             var28[var34] += var16.anInt1408;
             var29[var34] += var16.anInt1406;
@@ -650,7 +652,7 @@ public class GlobalStatics_2 {
         }
 
         var15 = var12 - 5;
-        if ((var15 >= 0)) {
+        if (var15 >= 0) {
           var35 = var4[var15][var34] & 255;
           if (var35 > 0) {
             FloorUnderlay var17 = GlobalStatics_6.getFloorUnderlay(-1 + var35);
@@ -663,7 +665,7 @@ public class GlobalStatics_2 {
         }
       }
 
-      if ((var12 >= 0)) {
+      if (var12 >= 0) {
         int[][] var33 = GlobalStatics_5.anIntArrayArrayArray1903[var12
             >> 6];
         var14 = 0;
@@ -672,7 +674,7 @@ public class GlobalStatics_2 {
         int var18 = 0;
         var35 = 0;
 
-        for (int var19 = -5; (var19 < var6); ++var19) {
+        for (int var19 = -5; var19 < var6; ++var19) {
           int var20 = var19 + 5;
           if (var6 > var20) {
             var18 += var31[var20];
@@ -683,7 +685,7 @@ public class GlobalStatics_2 {
           }
 
           int var21 = -5 + var19;
-          if ((var21 >= 0)) {
+          if (var21 >= 0) {
             var35 -= var30[var21];
             var36 -= var32[var21];
             var14 -= var28[var21];
@@ -730,10 +732,10 @@ public class GlobalStatics_2 {
       return null;
     } else {
       if (var1 >= -67) {
-        method891(19);
+        GlobalStatics_2.method891(19);
       }
 
-      if ((var2.length > 136) && !DummyClass38.aBoolean732) {
+      if (var2.length > 136 && !DummyClass38.aBoolean732) {
         try {
           BufferObject var3 = (BufferObject) Class.forName(
               "com.jagex.runescape.model.NativeBufferObject").newInstance();
@@ -751,7 +753,7 @@ public class GlobalStatics_2 {
   public static AbstractDirectColorSprite[] method891(int var0) {
     AbstractDirectColorSprite[] var1 = new AbstractDirectColorSprite[DummyClass53.spriteCount];
     if (var0 != -5) {
-      method894(113L, (byte) 48);
+      GlobalStatics_2.method894(113L, (byte) 48);
     }
 
     for (int var2 = 0; DummyClass53.spriteCount > var2; ++var2) {
@@ -788,14 +790,14 @@ public class GlobalStatics_2 {
   }
 
   public static void method892(int var0) {
-    aShortArrayArray344 = null;
-    aClass94_343 = null;
-    aClass64_351 = null;
+    GlobalStatics_2.aShortArrayArray344 = null;
+    GlobalStatics_2.aClass94_343 = null;
+    GlobalStatics_2.aClass64_351 = null;
     if (var0 <= 75) {
-      aBoolean346 = false;
+      GlobalStatics_2.aBoolean346 = false;
     }
 
-    anIntArray347 = null;
+    GlobalStatics_2.anIntArray347 = null;
   }
 
   public static int method893(int var0, byte var1) {
@@ -808,7 +810,7 @@ public class GlobalStatics_2 {
     int var4 = GlobalStatics_6.aCalendar3581.get(5);
     int var5 = GlobalStatics_6.aCalendar3581.get(2);
     if (var2 < 9) {
-      method889((byte) 7, null);
+      GlobalStatics_2.method889((byte) 7, null);
     }
 
     int var6 = GlobalStatics_6.aCalendar3581.get(1);
@@ -838,7 +840,7 @@ public class GlobalStatics_2 {
       int var5,
       int var6, float var7, byte var8) {
     if (var8 >= -52) {
-      method891(115);
+      GlobalStatics_2.method891(115);
     }
 
     int[][] var9 = new int[var3][var2];
@@ -859,25 +861,25 @@ public class GlobalStatics_2 {
   }
 
   public static void method634(byte var0) {
-    aClass11_3708 = null;
-    aClass94_3702 = null;
-    aClass94_3705 = null;
+    GlobalStatics_2.aClass11_3708 = null;
+    GlobalStatics_2.aClass94_3702 = null;
+    GlobalStatics_2.aClass94_3705 = null;
     if (var0 == 108) {
-      aClass94_3703 = null;
-      COMMAND_CARD_MEMORY = null;
+      GlobalStatics_2.aClass94_3703 = null;
+      GlobalStatics_2.COMMAND_CARD_MEMORY = null;
     }
   }
 
   public static Widget method638(byte var0, int var1, int var2) {
     Widget var3 = GlobalStatics_7.getWidget((byte) 109, var1);
-    return (var2 == -1) ?
+    return var2 == -1 ?
         var3 :
-        (var0 != -19 ?
+        var0 != -19 ?
             null :
-            (var3 != null && var3.aClass11Array262 != null
+            var3 != null && var3.aClass11Array262 != null
                 && var3.aClass11Array262.length > var2 ?
                 var3.aClass11Array262[var2] :
-                null));
+                null;
   }
 
   public static MidiFile method517(FileUnpacker unpacker, int fileId,
@@ -887,7 +889,7 @@ public class GlobalStatics_2 {
   }
 
   public static void method999() {
-    aString597 = null;
-    anIntArray599 = null;
+    GlobalStatics_2.aString597 = null;
+    GlobalStatics_2.anIntArray599 = null;
   }
 }

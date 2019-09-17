@@ -28,7 +28,7 @@ public final class SomethingAudio {
             var8 = 0;
           }
 
-          if ((var9 > 14)) {
+          if (var9 > 14) {
             var9 = 14;
           }
 
@@ -58,12 +58,12 @@ public final class SomethingAudio {
         int var7 = 0;
 
         int var8;
-        for (var8 = 0; (var8 < var1.length); ++var8) {
+        for (var8 = 0; var8 < var1.length; ++var8) {
           int[] var10 = this.anIntArrayArray1999[var7];
           byte var9 = var1[var8];
 
           int var11;
-          for (var11 = 0; (var11 < 14); ++var11) {
+          for (var11 = 0; var11 < 14; ++var11) {
             var5[var6 + var11] += var10[var11] * var9;
           }
 
@@ -77,7 +77,7 @@ public final class SomethingAudio {
 
         for (var8 = 0; var4 > var8; ++var8) {
           int var13 = var5[var8] + 32768 >> 16;
-          if ((var13 >= 127)) {
+          if (var13 >= 127) {
             if (var13 <= 127) {
               var1[var8] = (byte) var13;
             } else {

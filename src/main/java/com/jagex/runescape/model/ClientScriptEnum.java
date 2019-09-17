@@ -29,16 +29,16 @@ public final class ClientScriptEnum extends SubNode {
         GlobalStatics_7.cameraY = 70;
       }
 
-      if ((opcode == 1)) {
+      if (opcode == 1) {
         this.someType = var2.readUnsignedByte();
       } else {
-        if ((opcode == 2)) {
+        if (opcode == 2) {
           this.paramType = var2.readUnsignedByte();
         } else if (opcode != 3) {
           if (opcode == 4) {
             this.defaultIntegerValue = var2.readInt();
           } else {
-            if (opcode == 5 || (opcode == 6)) {
+            if (opcode == 5 || opcode == 6) {
               int size = var2.readUnsignedShort();
               this.table = new HashTable(
                   GLStatics.nearestPo2((byte) 94, size));
@@ -46,7 +46,7 @@ public final class ClientScriptEnum extends SubNode {
               for (int var5 = 0; var5 < size; ++var5) {
                 int key = var2.readInt();
                 Node var7;
-                if ((opcode == 5)) {
+                if (opcode == 5) {
                   var7 = new StringNode(var2.readString());
                 } else {
                   var7 = new IntegerNode(var2.readInt());
@@ -144,7 +144,7 @@ public final class ClientScriptEnum extends SubNode {
   public void parseConfig(Buffer buffer ) {
     while (true) {
         int opcode = buffer.readUnsignedByte();
-        if ((opcode == 0)) {
+        if (opcode == 0) {
           return;
         }
 

@@ -45,7 +45,8 @@ public class SignLink implements Runnable {
     GlobalStatics_9.aString1205 = System.getProperty("os.name");
     GlobalStatics_9.formattedOsName = GlobalStatics_9.aString1205.toLowerCase();
     GlobalStatics_9.aString1218 = System.getProperty("os.arch").toLowerCase();
-    GlobalStatics_9.aString1210 = System.getProperty("os.version").toLowerCase();
+    GlobalStatics_9.aString1210 = System.getProperty("os.version")
+        .toLowerCase();
     GlobalStatics_9.aString1209 = System.getProperty("user.home");
     if (GlobalStatics_9.aString1209 != null) {
       GlobalStatics_9.aString1209 = GlobalStatics_9.aString1209 + "/";
@@ -117,7 +118,7 @@ public class SignLink implements Runnable {
       this.aClass122_1207 = null;
     }
 
-    return this.method1435(12, 0, var1, 0, var2 - 58);
+    return this.method1435(12, 0, var1, 0);
   }
 
   public final SignLinkRequest method1434(int[] var1, int var2, int var3,
@@ -125,35 +126,29 @@ public class SignLink implements Runnable {
       Point var5, int var6) {
     return var2 != 10000 ?
         null :
-        this.method1435(17, var6, new Object[]{var4, var1, var5}, var3, -57);
+        this.method1435(17, var6, new Object[]{var4, var1, var5}, var3);
   }
 
-  private SignLinkRequest method1435(int var1, int var2, Object var3, int var4,
-      int var5) {
-    SignLinkRequest var6 = new SignLinkRequest();
-    var6.anInt980 = var2;
-    var6.anInt979 = var4;
-    var6.anInt975 = var1;
-    var6.anObject977 = var3;
+  private SignLinkRequest method1435(int var1, int var2, Object var3, int var4) {
+    SignLinkRequest request = new SignLinkRequest();
+    request.anInt980 = var2;
+    request.anInt979 = var4;
+    request.anInt975 = var1;
+    request.anObject977 = var3;
     synchronized (this) {
-      if (var5 >= -2) {
-        return null;
+      if (this.aClass64_1203 != null) {
+        this.aClass64_1203.aClass64_976 = request;
+        this.aClass64_1203 = request;
       } else {
-        if (this.aClass64_1203 != null) {
-          this.aClass64_1203.aClass64_976 = var6;
-          this.aClass64_1203 = var6;
-        } else {
-          this.aClass64_1203 = this.aClass64_1213 = var6;
-        }
-
-        this.notify();
-        return var6;
+        this.aClass64_1203 = this.aClass64_1213 = request;
       }
+      this.notifyAll();
+      return request;
     }
   }
 
   public final SignLinkRequest method1436(Frame var1, int var2) {
-    return this.method1435(7, 0, var1, 0, -112);
+    return this.method1435(7, 0, var1, 0);
   }
 
   public final SignLinkRequest method1437(int var1, int var2, Component var3,
@@ -161,7 +156,7 @@ public class SignLink implements Runnable {
     if (var1 == 14) {
       Point var5 = var3.getLocationOnScreen();
       return this
-          .method1435(14, var4 + var5.y, null, var5.x + var2, var1 - 105);
+          .method1435(14, var4 + var5.y, null, var5.x + var2);
     } else {
       return null;
     }
@@ -172,21 +167,21 @@ public class SignLink implements Runnable {
       this.tableIndexFile = null;
     }
 
-    return this.method1435(4, 0, var2, 0, -118);
+    return this.method1435(4, 0, var2, 0);
   }
 
   public final SignLinkRequest method1440(boolean var1, int var2,
       Component var3) {
     int var4 = 34 % ((-10 - var2) / 52);
-    return this.method1435(15, 0, var3, var1 ? 1 : 0, -84);
+    return this.method1435(15, 0, var3, var1 ? 1 : 0);
   }
 
   public final SignLinkRequest method1441(byte var1, String var2, int var3) {
-    return var1 != 8 ? null : this.method1435(1, 0, var2, var3, -17);
+    return var1 != 8 ? null : this.method1435(1, 0, var2, var3);
   }
 
   public final SignLinkRequest method1442(Class var1, int var2) {
-    return var2 != 0 ? null : this.method1435(11, 0, var1, 0, -5);
+    return var2 != 0 ? null : this.method1435(11, 0, var1, 0);
   }
 
   public final SignLinkRequest method1443(Class var1, Class[] var2, int var3,
@@ -195,7 +190,7 @@ public class SignLink implements Runnable {
       GlobalStatics_9.aString1209 = null;
     }
 
-    return this.method1435(8, 0, new Object[]{var1, var4, var2}, 0, -75);
+    return this.method1435(8, 0, new Object[]{var1, var4, var2}, 0);
   }
 
   public final void run() {
@@ -226,7 +221,8 @@ public class SignLink implements Runnable {
       try {
         int var2 = var1.anInt975;
         if (var2 == 1) {
-          if (GlobalStatics_9.aLong1221 > GlobalStatics_10.getCurrentTimeMillis()) {
+          if (GlobalStatics_9.aLong1221 > GlobalStatics_10
+              .getCurrentTimeMillis()) {
             throw new IOException();
           }
 
@@ -236,8 +232,9 @@ public class SignLink implements Runnable {
           System.out.println("port = " + port);
           var1.result = new Socket(InetAddress.getByName(host), port);
         } else if (var2 != 2) {
-          if ((var2 == 4)) {
-            if (GlobalStatics_9.aLong1221 > GlobalStatics_10.getCurrentTimeMillis()) {
+          if (var2 == 4) {
+            if (GlobalStatics_9.aLong1221 > GlobalStatics_10
+                .getCurrentTimeMillis()) {
               throw new IOException();
             }
 
@@ -245,7 +242,7 @@ public class SignLink implements Runnable {
                 ((URL) var1.anObject977).openStream());
           } else {
             Object[] var3;
-            if ((var2 == 8)) {
+            if (var2 == 8) {
               var3 = (Object[]) var1.anObject977;
               if (((Class) var3[0]).getClassLoader() == null) {
                 throw new SecurityException();
@@ -256,7 +253,7 @@ public class SignLink implements Runnable {
                       .getDeclaredMethod((String) var3[1],
                           (Class<?>[]) var3[2]);
             } else {
-              if ((var2 == 9)) {
+              if (var2 == 9) {
                 var3 = (Object[]) var1.anObject977;
                 if (((Class) var3[0]).getClassLoader() == null) {
                   throw new SecurityException();
@@ -266,8 +263,9 @@ public class SignLink implements Runnable {
                     .getDeclaredField((String) var3[1]);
               } else {
                 String var4;
-                if ((var2 == 3)) {
-                  if ((GlobalStatics_10.getCurrentTimeMillis() < GlobalStatics_9.aLong1221)) {
+                if (var2 == 3) {
+                  if (GlobalStatics_10.getCurrentTimeMillis()
+                      < GlobalStatics_9.aLong1221) {
                     throw new IOException();
                   }
 
@@ -277,19 +275,19 @@ public class SignLink implements Runnable {
                           var1.anInt979 >> 8 & 255) + "." + (255
                           & var1.anInt979);
                   var1.result = InetAddress.getByName(var4).getHostName();
-                } else if ((var2 != 5)) {
-                  if ((var2 == 6)) {
+                } else if (var2 != 5) {
+                  if (var2 == 6) {
                     Frame var5 = new Frame("Jagex Full Screen");
                     var1.result = var5;
                     var5.setResizable(false);
                     this.aDisplay1208.method918(-56, var1.anInt980 & '\uffff',
                         var1.anInt980 >> 16, '\uffff' & var1.anInt979, var5,
                         var1.anInt979 >>> 16);
-                  } else if ((var2 != 7)) {
+                  } else if (var2 != 7) {
                     if (var2 == 10) {
                     } else {
                       int var18;
-                      if ((var2 == 11)) {
+                      if (var2 == 11) {
                         Field var20 = Class.forName("java.lang.ClassLoader")
                             .getDeclaredField("nativeLibraries");
                         var20.setAccessible(true);
@@ -312,12 +310,12 @@ public class SignLink implements Runnable {
                         }
 
                         var20.setAccessible(false);
-                      } else if ((var2 == 12)) {
+                      } else if (var2 == 12) {
                         var4 = (String) var1.anObject977;
                         FileOnDisk var19 = GlobalStatics_9
                             .openGamePreferences(false, var4);
                         var1.result = var19;
-                      } else if ((var2 == 14)) {
+                      } else if (var2 == 14) {
                         int var22 = var1.anInt980;
                         int var23 = var1.anInt979;
                         this.aSensor1206.method1796(var23, -112, var22);
@@ -331,7 +329,8 @@ public class SignLink implements Runnable {
                         }
 
                         try {
-                          if (!GlobalStatics_9.formattedOsName.startsWith("win")) {
+                          if (!GlobalStatics_9.formattedOsName
+                              .startsWith("win")) {
                             throw new Exception();
                           }
 
@@ -345,7 +344,7 @@ public class SignLink implements Runnable {
                               "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789?&=,.%+-_#:/*";
 
                           for (var18 = 0; var18 < var4.length(); ++var18) {
-                            if ((var25.indexOf(var4.charAt(var18)) == -1)) {
+                            if (var25.indexOf(var4.charAt(var18)) == -1) {
                               throw new Exception();
                             }
                           }
@@ -390,12 +389,8 @@ public class SignLink implements Runnable {
     }
   }
 
-  public final SignLinkRequest method1444(int var1, Class var2) {
-    if (var1 > -13) {
-      this.method1435(88, -20, null, 76, -127);
-    }
-
-    return this.method1435(10, 0, var2, 0, -113);
+  public final SignLinkRequest method1444(Class var2) {
+    return this.method1435(10, 0, var2, 0);
   }
 
   public final void method1445(int var1) {
@@ -460,7 +455,7 @@ public class SignLink implements Runnable {
       this.method1452(null, true);
     }
 
-    return this.method1435(9, 0, new Object[]{var3, var2}, 0, -43);
+    return this.method1435(9, 0, new Object[]{var3, var2}, 0);
   }
 
   public final SignLinkRequest method1449(int var1, int var2) {
@@ -468,18 +463,18 @@ public class SignLink implements Runnable {
       this.tableIndexFile = null;
     }
 
-    return this.method1435(3, 0, null, var2, var1 - 96);
+    return this.method1435(3, 0, null, var2);
   }
 
   public final SignLinkRequest method1450(int var1, int var2, int var3,
       int var4, int var5) {
     int var6 = -68 % ((var5 - 4) / 53);
     return this
-        .method1435(6, var1 + (var2 << 16), null, (var4 << 16) + var3, -49);
+        .method1435(6, var1 + (var2 << 16), null, (var4 << 16) + var3);
   }
 
   public final SignLinkRequest createThread(int var1, int var2, Runnable var3) {
-    return var1 != 0 ? null : this.method1435(2, 0, var3, var2, -27);
+    return var1 != 0 ? null : this.method1435(2, 0, var3, var2);
   }
 
   public final SignLinkRequest method1452(String var1, boolean var2) {
@@ -487,7 +482,7 @@ public class SignLink implements Runnable {
       this.method1436(null, 101);
     }
 
-    return this.method1435(16, 0, var1, 0, -10);
+    return this.method1435(16, 0, var1, 0);
   }
 
   public final SignLinkRequest method1453(byte var1) {
@@ -495,7 +490,7 @@ public class SignLink implements Runnable {
       this.method1443(null, null, -91, null);
     }
 
-    return this.method1435(5, 0, null, 0, -127);
+    return this.method1435(5, 0, null, 0);
   }
 
 }

@@ -35,7 +35,7 @@ public final class WidgetAccess extends Node {
       GlobalStatics_10.anInt2212 = 71;
     }
 
-    return ((1 & this.anInt2205) != 0);
+    return (1 & this.anInt2205) != 0;
   }
 
   public boolean method96(int var1) {
@@ -51,7 +51,7 @@ public final class WidgetAccess extends Node {
       GlobalStatics_10.anIntArray2209 = null;
     }
 
-    return ((this.anInt2205 >> 21 & 1) != 0);
+    return (this.anInt2205 >> 21 & 1) != 0;
   }
 
   public boolean method99(int var1) {
@@ -59,7 +59,7 @@ public final class WidgetAccess extends Node {
       GlobalStatics_10.scripts = null;
     }
 
-    return (((1738913629 & this.anInt2205) >> 30) != 0);
+    return (1738913629 & this.anInt2205) >> 30 != 0;
   }
 
   public boolean method100(byte var1) {

@@ -50,7 +50,7 @@ public final class GameString {
   }
 
   public int method1530(byte var1, int var2) {
-    if (var2 < 1 || (var2 > 36)) {
+    if (var2 < 1 || var2 > 36) {
       var2 = 10;
     }
 
@@ -61,7 +61,7 @@ public final class GameString {
 
     for (int var7 = 29 / ((-47 - var1) / 37); this.length > var6; ++var6) {
       int var8 = 255 & this.bytes[var6];
-      if ((var6 == 0)) {
+      if (var6 == 0) {
         if (var8 == 45) {
           var3 = true;
           continue;
@@ -74,17 +74,17 @@ public final class GameString {
 
       if (var8 >= 48 && var8 <= 57) {
         var8 -= 48;
-      } else if (var8 >= 65 && (var8 <= 90)) {
+      } else if (var8 >= 65 && var8 <= 90) {
         var8 -= 55;
       } else {
-        if ((var8 < 97) || (var8 > 122)) {
+        if (var8 < 97 || var8 > 122) {
           throw new NumberFormatException();
         }
 
         var8 -= 87;
       }
 
-      if ((var2 <= var8)) {
+      if (var2 <= var8) {
         throw new NumberFormatException();
       }
 
@@ -116,16 +116,16 @@ public final class GameString {
     } else {
       for (int var3 = 0; this.length > var3; ++var3) {
         byte var5 = (byte) (this.bytes[var3] & 0xff);
-        if ((var5 >= 65) && (var5 <= 90)) {
+        if (var5 >= 65 && var5 <= 90) {
           var5 = (byte) (var5 + 32);
         }
 
         byte var6 = (byte) (var2.bytes[var3] & 0xff);
-        if (var6 >= 65 && (var6 <= 90)) {
+        if (var6 >= 65 && var6 <= 90) {
           var6 = (byte) (var6 + 32);
         }
 
-        if ((var5 != var6)) {
+        if (var5 != var6) {
           return false;
         }
       }
@@ -148,7 +148,7 @@ public final class GameString {
     if (this.immutable) {
       if (var1.length + this.length > this.bytes.length) {
         int var3;
-        for (var3 = 1; (var1.length + this.length) > var3; var3 += var3) {
+        for (var3 = 1; var1.length + this.length > var3; var3 += var3) {
         }
 
         byte[] temp = new byte[var3];
@@ -193,11 +193,11 @@ public final class GameString {
 
       for (int var4 = 0; this.length > var4; ++var4) {
         byte var5 = this.bytes[var4];
-        if (((var5 < 97) || var5 > 122) &&
-            ((var5 < 31) || (var5 > 1) || var5 == -9)) {
-          if ((var5 < 65 || (var5 > 90)) &&
+        if ((var5 < 97 || var5 > 122) &&
+            (var5 < 31 || var5 > 1 || var5 == -9)) {
+          if ((var5 < 65 || var5 > 90) &&
               (var5 < -64 || var5 > -34 || ~var5 == 40)) {
-            if ((var5 != 46) && var5 != 33 && var5 != 63) {
+            if (var5 != 46 && var5 != 33 && var5 != 63) {
               if (var5 == 32) {
                 if (var3 != 2) {
                   var3 = 1;
@@ -248,10 +248,10 @@ public final class GameString {
       int var4) {
     if (!this.immutable) {
       throw new IllegalArgumentException();
-    } else if (var3 >= 0 && var3 <= var4 && (var4 <= var2.length)) {
-      if (this.length + (var4 - var3) > this.bytes.length) {
+    } else if (var3 >= 0 && var3 <= var4 && var4 <= var2.length) {
+      if (this.length + var4 - var3 > this.bytes.length) {
         int var5;
-        for (var5 = 1; (this.length + var2.length) > var5; var5 += var5) {
+        for (var5 = 1; this.length + var2.length > var5; var5 += var5) {
         }
 
         byte[] var6 = new byte[var5];
@@ -303,7 +303,7 @@ public final class GameString {
 
     for (; this.length > var4; ++var4) {
       byte var5 = this.bytes[var4];
-      if ((var5 == 95)) {
+      if (var5 == 95) {
         var3 = true;
         var2.bytes[var4] = 32;
       } else {
@@ -330,9 +330,9 @@ public final class GameString {
     int var9 = 0;
     int var10 = 0;
 
-    while ((var5 != 0) && var6 != 0) {
-      if ((var3 != 156) && var3 != 230) {
-        if (var3 != 140 && (var3 != 198)) {
+    while (var5 != 0 && var6 != 0) {
+      if (var3 != 156 && var3 != 230) {
+        if (var3 != 140 && var3 != 198) {
           if (var3 == 223) {
             var3 = 115;
           } else {
@@ -353,7 +353,7 @@ public final class GameString {
       }
 
       if (var4 != 156 && var4 != 230) {
-        if ((var4 != 140) && (var4 != 198)) {
+        if (var4 != 140 && var4 != 198) {
           if (var4 == 223) {
             var4 = 115;
           } else {
@@ -373,22 +373,22 @@ public final class GameString {
         --var6;
       }
 
-      if ((GameStringStatics.anIntArray2004[var3]
-          < GameStringStatics.anIntArray2004[var4])) {
+      if (GameStringStatics.anIntArray2004[var3]
+          < GameStringStatics.anIntArray2004[var4]) {
         return -1;
       }
 
-      if ((GameStringStatics.anIntArray2004[var4]
-          < GameStringStatics.anIntArray2004[var3])) {
+      if (GameStringStatics.anIntArray2004[var4]
+          < GameStringStatics.anIntArray2004[var3]) {
         return 1;
       }
     }
 
-    return var8 <= var7 ? (var7 > var8 ? 1 : 0) : -1;
+    return var8 <= var7 ? var7 > var8 ? 1 : 0 : -1;
   }
 
   public GameString method1548(boolean var1, int var2) {
-    if ((var2 > 0) && (var2 <= 255)) {
+    if (var2 > 0 && var2 <= 255) {
       GameString var3 = new GameString();
       var3.bytes = new byte[1 + this.length];
       var3.length = this.length + 1;
@@ -437,12 +437,12 @@ public final class GameString {
   public void method1553(int var1, boolean var2) {
     if (!this.immutable) {
       throw new IllegalArgumentException();
-    } else if ((var1 < 0)) {
+    } else if (var1 < 0) {
       throw new IllegalArgumentException();
     } else {
       int var3;
       if (var1 > this.bytes.length) {
-        for (var3 = 1; (var3 < var1); var3 += var3) {
+        for (var3 = 1; var3 < var1; var3 += var3) {
         }
 
         byte[] var4 = new byte[var3];
@@ -450,7 +450,7 @@ public final class GameString {
         this.bytes = var4;
       }
 
-      for (var3 = this.length; (var3 < var1); ++var3) {
+      for (var3 = this.length; var3 < var1; ++var3) {
         this.bytes[var3] = 32;
       }
 
@@ -465,7 +465,7 @@ public final class GameString {
   public int method1555(int var1, int var2, int var3) {
     byte var4 = (byte) var1;
     if (var3 == 1536) {
-      for (int var5 = var2; (var5 < this.length); ++var5) {
+      for (int var5 = var2; var5 < this.length; ++var5) {
         if (this.bytes[var5] == var4) {
           return var5;
         }
@@ -490,9 +490,9 @@ public final class GameString {
   }
 
   public boolean method1558(GameString var1, int var2) {
-    if ((this.length >= var1.length)) {
+    if (this.length >= var1.length) {
       for (int var3 = var2; var3 < var1.length; ++var3) {
-        if ((this.bytes[var3] != var1.bytes[var3])) {
+        if (this.bytes[var3] != var1.bytes[var3]) {
           return false;
         }
       }
@@ -520,14 +520,14 @@ public final class GameString {
         return -1;
       }
 
-      if (((var1.bytes[var4] & 255) < (this.bytes[var4] & 255))) {
+      if ((var1.bytes[var4] & 255) < (this.bytes[var4] & 255)) {
         return 1;
       }
     }
 
     if (var1.length > this.length) {
       return -1;
-    } else if ((var1.length >= this.length)) {
+    } else if (var1.length >= this.length) {
       return 0;
     } else {
       return 1;
@@ -549,7 +549,7 @@ public final class GameString {
         while (true) {
           int var8 = this.indexOf(var3, var6, -1);
           if (var8 < 0) {
-            while ((var6 < this.length)) {
+            while (var6 < this.length) {
               var10.method1572(255 & this.bytes[var6++], (byte) 117);
             }
 
@@ -591,7 +591,7 @@ public final class GameString {
   }
 
   private boolean method1561(int var1, boolean var2) {
-    if ((var1 < 1) || var1 > 36) {
+    if (var1 < 1 || var1 > 36) {
       var1 = 10;
     }
 
@@ -612,19 +612,19 @@ public final class GameString {
         }
       }
 
-      if (var7 >= 48 && (var7 <= 57)) {
+      if (var7 >= 48 && var7 <= 57) {
         var7 -= 48;
-      } else if ((var7 >= 65) && (var7 <= 90)) {
+      } else if (var7 >= 65 && var7 <= 90) {
         var7 -= 55;
       } else {
-        if (var7 < 97 || (var7 > 122)) {
+        if (var7 < 97 || var7 > 122) {
           return false;
         }
 
         var7 -= 87;
       }
 
-      if ((var7 >= var1)) {
+      if (var7 >= var1) {
         return false;
       }
 
@@ -633,7 +633,7 @@ public final class GameString {
       }
 
       int var8 = var7 + var1 * var5;
-      if ((var5 != (var8 / var1))) {
+      if (var5 != var8 / var1) {
         return false;
       }
 
@@ -660,12 +660,12 @@ public final class GameString {
           var5 = (byte) (var5 + 32);
         }
 
-        if (var4 >= 65 && (var4 <= 90) ||
+        if (var4 >= 65 && var4 <= 90 ||
             var4 >= -64 && var4 <= -34 && var4 != -41) {
           var4 = (byte) (var4 + 32);
         }
 
-        if ((var4 != var5)) {
+        if (var4 != var5) {
           return false;
         }
       }
@@ -686,20 +686,20 @@ public final class GameString {
     int var2;
     for (var2 = 0; var2 < this.length &&
         (this.bytes[var2] >= 0 && this.bytes[var2] <= 32 ||
-            ((255 & this.bytes[var2]) == 160));
+            (255 & this.bytes[var2]) == 160);
         ++var2) {
     }
 
     int var3;
     for (var3 = this.length;
         var3 > var2 &&
-            ((this.bytes[var3 - 1] >= 0) && (this.bytes[var3 - 1] <= 32)
+            (this.bytes[var3 - 1] >= 0 && this.bytes[var3 - 1] <= 32
                 ||
-                ((255 & this.bytes[var3 - 1]) == 160));
+                (255 & this.bytes[var3 - 1]) == 160);
         --var3) {
     }
 
-    if ((var2 == 0) && (this.length == var3)) {
+    if (var2 == 0 && this.length == var3) {
       return this;
     } else {
       GameString var4 = new GameString();
@@ -723,7 +723,7 @@ public final class GameString {
 
     for (int var7 = 0; this.length > var7; ++var7) {
       byte var8 = this.bytes[var7];
-      if ((var8 == var4)) {
+      if (var8 == var4) {
         var6.bytes[var7] = var5;
       } else {
         var6.bytes[var7] = var8;
@@ -736,9 +736,9 @@ public final class GameString {
   public int indexOf(GameString var1, int start, int var3) {
     int var4 = var1.length;
     if (start >= this.length) {
-      return (var4 == 0) ? this.length : -1;
+      return var4 == 0 ? this.length : -1;
     } else {
-      if ((start < 0)) {
+      if (start < 0) {
         start = 0;
       }
 
@@ -750,14 +750,14 @@ public final class GameString {
         byte var6 = var5[0];
         int var8 = start;
 
-        while ((var8 <= var7)) {
-          if ((var6 != this.bytes[var8])) {
+        while (var8 <= var7) {
+          if (var6 != this.bytes[var8]) {
             do {
               ++var8;
               if (var8 > var7) {
                 return -1;
               }
-            } while ((var6 != this.bytes[var8]));
+            } while (var6 != this.bytes[var8]);
           }
 
           boolean var9 = true;
@@ -766,7 +766,7 @@ public final class GameString {
 
           while (true) {
             if (var11 < var4) {
-              if ((var5[var11] == this.bytes[var10])) {
+              if (var5[var11] == this.bytes[var10]) {
                 ++var10;
                 ++var11;
                 continue;
@@ -793,7 +793,7 @@ public final class GameString {
     int var3 = 0;
 
     for (int var4 = 0; this.length > var4; ++var4) {
-      if ((ch == this.bytes[var4])) {
+      if (ch == this.bytes[var4]) {
         ++var3;
       }
     }
@@ -807,9 +807,9 @@ public final class GameString {
       int var6 = 0;
       int var7 = 0;
 
-      for (; (var7 < var3); ++var7) {
+      for (; var7 < var3; ++var7) {
         int var9;
-        for (var9 = 0; (ch != this.bytes[var9 + var6]); ++var9) {
+        for (var9 = 0; ch != this.bytes[var9 + var6]; ++var9) {
         }
 
         var11[var5++] = this.substring(var6 + var9, 0, var6);
@@ -864,7 +864,7 @@ public final class GameString {
       if (this.immutable) {
         if (this.length == this.bytes.length) {
           int var3;
-          for (var3 = 1; (var3 <= this.length); var3 += var3) {
+          for (var3 = 1; var3 <= this.length; var3 += var3) {
           }
 
           byte[] var4 = new byte[var3];
@@ -932,19 +932,19 @@ public final class GameString {
   public long toBase37() {
     long var2 = 0L;
 
-    for (int var4 = 0; this.length > var4 && (var4 < 12); ++var4) {
+    for (int var4 = 0; this.length > var4 && var4 < 12; ++var4) {
       byte var5 = this.bytes[var4];
       var2 *= 37L;
       if (var5 >= 65 && var5 <= 90) {
         var2 += -65 + 1 + var5;
-      } else if ((var5 >= 97) && var5 <= 122) {
+      } else if (var5 >= 97 && var5 <= 122) {
         var2 += -97 + var5 + 1;
       } else if (var5 >= 48 && var5 <= 57) {
         var2 += -48 + var5 + 27;
       }
     }
 
-    while (((var2 % 37L) == 0L) && var2 != 0L) {
+    while (var2 % 37L == 0L && var2 != 0L) {
       var2 /= 37L;
     }
 
@@ -955,7 +955,7 @@ public final class GameString {
     GameString var2 = GameStringStatics
         .stringFromBase37(-29664, this.toBase37());
     return var1 >= -4 ? null
-        : (var2 == null ? GameStringStatics.aClass94_1760 : var2);
+        : var2 == null ? GameStringStatics.aClass94_1760 : var2;
   }
 
   public int method1580(byte[] dest, int destOffset, int srcOffset,

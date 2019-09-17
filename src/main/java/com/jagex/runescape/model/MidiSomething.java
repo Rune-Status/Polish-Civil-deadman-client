@@ -25,7 +25,7 @@ public final class MidiSomething {
         SomethingMusic0 var8 = (SomethingMusic0) this.aClass130_1159.get(var6);
         if (var8 != null) {
           return var8;
-        } else if (var1 != null && (var1[0] <= 0)) {
+        } else if (var1 != null && var1[0] <= 0) {
           return null;
         } else {
           SoundEffect var9 = GlobalStatics_4
@@ -51,7 +51,7 @@ public final class MidiSomething {
     if (this.soundEffects.method2121(0) == 1) {
         return this.method1412(var3, 31947, 0, var1);
       } else {
-        if ((this.soundEffects.getAmountChildren(var1, (byte) 83) == 1)) {
+        if (this.soundEffects.getAmountChildren(var1, (byte) 83) == 1) {
           return this.method1412(var3, 31947, var1, 0);
         } else {
           if (var2 < 0) {
@@ -101,9 +101,9 @@ public final class MidiSomething {
   public SomethingMusic0 method1416(int var1, int var2, int[] var3 ) {
     if (var1 != 10089) {
         return null;
-      } else if ((this.midiInstruments.method2121(0) == 1)) {
+      } else if (this.midiInstruments.method2121(0) == 1) {
         return this.method1415(0, var3, var2, (byte) 11);
-      } else if ((this.midiInstruments.getAmountChildren(var2, (byte) 99) != 1)) {
+      } else if (this.midiInstruments.getAmountChildren(var2, (byte) 99) != 1) {
         throw new RuntimeException();
       } else {
         return this.method1415(var2, var3, 0, (byte) 11);

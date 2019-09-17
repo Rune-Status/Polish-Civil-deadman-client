@@ -165,7 +165,7 @@ public abstract class Something3dRoot {
     }
 
     while (this.anInt2062 > var2) {
-      this.aShortArray2049[var2] = (short) ((int) Math.pow(2.0D, var2));
+      this.aShortArray2049[var2] = (short) (int) Math.pow(2.0D, var2);
       ++var2;
     }
   }

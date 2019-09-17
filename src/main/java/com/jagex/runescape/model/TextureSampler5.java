@@ -24,7 +24,7 @@ public final class TextureSampler5 extends AbstractTextureSampler {
       int[][] var9 = new int[var5][];
 
       int var10;
-      for (var10 = -this.anInt3297 + var1; (var10 <= (var1 + this.anInt3297));
+      for (var10 = -this.anInt3297 + var1; var10 <= var1 + this.anInt3297;
           ++var10) {
         int[] var11 = this
             .method152(0, var10 & GlobalStatics_10.anInt2487, 32755);
@@ -32,7 +32,7 @@ public final class TextureSampler5 extends AbstractTextureSampler {
         int var13 = 0;
 
         int var14;
-        for (var14 = -this.anInt3294; (this.anInt3294 >= var14); ++var14) {
+        for (var14 = -this.anInt3294; this.anInt3294 >= var14; ++var14) {
           var13 += var11[var14 & GlobalStatics_9.anInt396];
         }
 
@@ -51,7 +51,7 @@ public final class TextureSampler5 extends AbstractTextureSampler {
       for (var10 = 0; GlobalStatics_9.anInt1559 > var10; ++var10) {
         int var16 = 0;
 
-        for (int var17 = 0; (var17 < var5); ++var17) {
+        for (int var17 = 0; var17 < var5; ++var17) {
           var16 += var9[var17][var10];
         }
 
@@ -63,7 +63,7 @@ public final class TextureSampler5 extends AbstractTextureSampler {
   }
 
   public void parseConfig(int var1, Buffer var2, boolean var3) {
-    if ((var1 == 0)) {
+    if (var1 == 0) {
       this.anInt3294 = var2.readUnsignedByte();
     } else if (var1 != 1) {
       if (var1 == 2) {
@@ -88,7 +88,7 @@ public final class TextureSampler5 extends AbstractTextureSampler {
     if (this.triChromaticImageCache.aBoolean1379) {
       int var6 = this.anInt3294 + this.anInt3294 + 1;
       int var7 = 65536 / var6;
-      int var4 = this.anInt3297 + (this.anInt3297 + 1);
+      int var4 = this.anInt3297 + this.anInt3297 + 1;
       int var5 = 65536 / var4;
       int[][][] var8 = new int[var4][][];
 

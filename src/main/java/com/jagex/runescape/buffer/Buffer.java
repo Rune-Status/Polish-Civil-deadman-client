@@ -35,10 +35,10 @@ public class Buffer extends Node {
 
   public final void method739(int var1, int var2, long var3) {
     --var2;
-    if ((var2 >= 0) && (var2 <= 7)) {
+    if (var2 >= 0 && var2 <= 7) {
       if (var1 == 0) {
         for (int var5 = var2 << 3; var5 >= 0; var5 -= 8) {
-          this.bytes[this.position++] = (byte) ((int) (var3 >> var5));
+          this.bytes[this.position++] = (byte) (int) (var3 >> var5);
         }
       }
     } else {
@@ -47,15 +47,15 @@ public class Buffer extends Node {
   }
 
   public final void writeLong(long var1) {
-    this.bytes[this.position++] = (byte) ((int) (var1 >> 56));
-    this.bytes[this.position++] = (byte) ((int) (var1 >> 48));
+    this.bytes[this.position++] = (byte) (int) (var1 >> 56);
+    this.bytes[this.position++] = (byte) (int) (var1 >> 48);
 
-    this.bytes[this.position++] = (byte) ((int) (var1 >> 40));
-    this.bytes[this.position++] = (byte) ((int) (var1 >> 32));
-    this.bytes[this.position++] = (byte) ((int) (var1 >> 24));
-    this.bytes[this.position++] = (byte) ((int) (var1 >> 16));
-    this.bytes[this.position++] = (byte) ((int) (var1 >> 8));
-    this.bytes[this.position++] = (byte) ((int) var1);
+    this.bytes[this.position++] = (byte) (int) (var1 >> 40);
+    this.bytes[this.position++] = (byte) (int) (var1 >> 32);
+    this.bytes[this.position++] = (byte) (int) (var1 >> 24);
+    this.bytes[this.position++] = (byte) (int) (var1 >> 16);
+    this.bytes[this.position++] = (byte) (int) (var1 >> 8);
+    this.bytes[this.position++] = (byte) (int) var1;
   }
 
   public final int method741() {
@@ -111,8 +111,8 @@ public class Buffer extends Node {
     this.position += 4;
     return ((255 & this.bytes[this.position - 4]) << 24) +
         (0xff0000 & this.bytes[this.position - 3] << 16) +
-        (((0xff & this.bytes[this.position - 2]) << 8) +
-            (this.bytes[this.position - 1] & 255));
+        ((0xff & this.bytes[this.position - 2]) << 8) +
+        (this.bytes[this.position - 1] & 255);
   }
 
   public final byte method749(boolean var1) {
@@ -140,7 +140,7 @@ public class Buffer extends Node {
 
   public final void write(byte[] var1, int var2, int var3) {
     int var5 = var2;
-    while ((var5 < (var2 + var3))) {
+    while (var5 < var2 + var3) {
       this.bytes[this.position++] = var1[var5];
       ++var5;
     }
@@ -209,7 +209,7 @@ public class Buffer extends Node {
       int var3 = this.position;
 
       assert this.bytes != null;
-      while ((this.bytes[this.position++] != 0)) {
+      while (this.bytes[this.position++] != 0) {
       }
 
       return GameStringStatics.createString(this.bytes, var3,
@@ -229,7 +229,7 @@ public class Buffer extends Node {
   }
 
   public final byte readByteNegate() {
-    return (byte) (-this.bytes[this.position++]);
+    return (byte) -this.bytes[this.position++];
 
   }
 
@@ -257,9 +257,9 @@ public class Buffer extends Node {
       this.writeInt(-9);
     }
 
-    if (var2 >= 0 && (var2 < 128)) {
+    if (var2 >= 0 && var2 < 128) {
       this.writeByte(var2);
-    } else if (var2 >= 0 && (var2 < 32768)) {
+    } else if (var2 >= 0 && var2 < 32768) {
       this.writeShort('\u8000' + var2);
     } else {
       throw new IllegalArgumentException();
@@ -298,8 +298,8 @@ public class Buffer extends Node {
   }
 
   public final void method771(int var1, int var2) {
-    if (((-128 & var2) != 0)) {
-      if (((-16384 & var2) != 0)) {
+    if ((-128 & var2) != 0) {
+      if ((-16384 & var2) != 0) {
         if ((var2 & -2097152) != 0) {
           if ((-268435456 & var2) != 0) {
             this.writeByte(var2 >>> 28 | 128);
@@ -319,10 +319,10 @@ public class Buffer extends Node {
 
   public final long readVariableLengthValue(int bytes, int var2) {
     --bytes;
-    if (var2 <= bytes && (bytes <= 7)) {
+    if (var2 <= bytes && bytes <= 7) {
       long var4 = 0L;
 
-      for (int var3 = bytes * 8; (var3 >= 0); var3 -= 8) {
+      for (int var3 = bytes * 8; var3 >= 0; var3 -= 8) {
         var4 |= (this.bytes[this.position++] & 255L) << var3;
       }
 
@@ -350,7 +350,7 @@ public class Buffer extends Node {
 
   public final void method774(int var1, int var2, byte[] var3, int var4) {
     if (var1 == 2) {
-      for (int var5 = var4 - (-var2 + 1); (var4 <= var5); --var5) {
+      for (int var5 = var4 - (-var2 + 1); var4 <= var5; --var5) {
         var3[var5] = this.bytes[this.position++];
       }
     }
@@ -374,7 +374,7 @@ public class Buffer extends Node {
     }
 
     return GameStringStatics.createString(this.bytes, var2,
-        -var2 + (this.position - 1));
+        -var2 + this.position - 1);
   }
 
   public final int readUnsignedShortSmart() {
@@ -447,7 +447,7 @@ public class Buffer extends Node {
     if (var1 < 4) {
       return -83;
     } else {
-      if ((var2 > 32767)) {
+      if (var2 > 32767) {
         var2 -= 65536;
       }
 
@@ -518,8 +518,8 @@ public class Buffer extends Node {
 
     this.position += 3;
     return (16711680 & this.bytes[this.position - 3] << 16) +
-        (('\uff00' & this.bytes[-2 + this.position] << 8) -
-            -(this.bytes[this.position - 1] & 255));
+        ('\uff00' & this.bytes[-2 + this.position] << 8) -
+        -(this.bytes[this.position - 1] & 255);
   }
 
   public final void writeShortLE(int var1, int var2) {
@@ -529,7 +529,7 @@ public class Buffer extends Node {
 
   public final int readUnsignedSmart() {
     int var2 = this.bytes[this.position] & 255;
-    return (var2 < 128) ? -64 + this.readUnsignedByte()
+    return var2 < 128 ? -64 + this.readUnsignedByte()
         : this.readUnsignedShort() - '\uc000';
   }
 
@@ -537,8 +537,8 @@ public class Buffer extends Node {
     this.position += 4;
     return ((this.bytes[-3 + this.position] & 255) << 24) -
         -(16711680 & this.bytes[this.position - 4] << 16) +
-        (((this.bytes[this.position - 1] & 255) << 8) -
-            -(255 & this.bytes[this.position - 2]));
+        ((this.bytes[this.position - 1] & 255) << 8) -
+        -(255 & this.bytes[this.position - 2]);
   }
 
   public final void encipherRSA(BigInteger exponent, BigInteger modulus) {

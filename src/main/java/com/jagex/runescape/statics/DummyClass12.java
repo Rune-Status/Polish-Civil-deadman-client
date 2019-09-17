@@ -68,7 +68,7 @@ public final class DummyClass12 {
     GlobalStatics_10.method282(var39, var1 + var11, -68, var4 + var1, var3);
 
     while (var9 > 0) {
-      if ((var23 < 0)) {
+      if (var23 < 0) {
         while (var23 < 0) {
           var24 += var35;
           var23 += var31;
@@ -88,8 +88,8 @@ public final class DummyClass12 {
 
       boolean var40 = var9 <= var12;
       if (var40) {
-        if ((var25 < 0)) {
-          while ((var25 < 0)) {
+        if (var25 < 0) {
+          while (var25 < 0) {
             var25 += var33;
             var33 += var30;
             ++var10;
@@ -163,7 +163,7 @@ public final class DummyClass12 {
 
   public static int method2201(GameWorld var0, int var1, int var2,
       GameWorld var3, boolean var4) {
-    if ((var1 == 1)) {
+    if (var1 == 1) {
       int var5 = var0.anInt722;
       int var6 = var3.anInt722;
       if (!var4) {
@@ -171,7 +171,7 @@ public final class DummyClass12 {
           var6 = 2001;
         }
 
-        if ((var5 == -1)) {
+        if (var5 == -1) {
           var5 = 2001;
         }
       }
@@ -181,37 +181,37 @@ public final class DummyClass12 {
       return var1 == 2 ?
           var0.method1078(102).aClass94_508.method1546((byte) -67,
               var3.method1078(-119).aClass94_508) :
-          ((var1 == 3) ?
-              (var0.aClass94_2620
+          var1 == 3 ?
+              var0.aClass94_2620
                   .method1528((byte) -42, GlobalStatics_8.aClass94_946) ?
-                  (var3.aClass94_2620
+                  var3.aClass94_2620
                       .method1528((byte) -42, GlobalStatics_8.aClass94_946) ?
                       0 :
-                      (var4 ? -1 : 1)) :
-                  (var3.aClass94_2620
+                      var4 ? -1 : 1 :
+                  var3.aClass94_2620
                       .method1528((byte) -42, GlobalStatics_8.aClass94_946) ?
-                      (var4 ? 1 : -1) :
+                      var4 ? 1 : -1 :
                       var0.aClass94_2620
-                          .method1546((byte) -100, var3.aClass94_2620))) :
-              (var2 <= 67 ?
+                          .method1546((byte) -100, var3.aClass94_2620) :
+              var2 <= 67 ?
                   36 :
-                  (var1 == 4 ?
-                      (!var0.method1074(-114) ?
-                          (!var3.method1074(-123) ? 0 : -1) :
-                          (var3.method1074(-108) ? 0 : 1)) :
-                      (var1 == 5 ?
-                          (var0.method1075(64) ?
-                              (!var3.method1075(64) ? 1 : 0) :
-                              (var3.method1075(64) ? -1 : 0)) :
-                          ((var1 != 6) ?
-                              (var1 == 7 ?
-                                  (var0.method1070(8) ?
-                                      (var3.method1070(8) ? 0 : 1) :
-                                      (var3.method1070(8) ? -1 : 0)) :
-                                  -var3.anInt2621 + var0.anInt2621) :
-                              (var0.method1072(false) ?
-                                  (!var3.method1072(false) ? 1 : 0) :
-                                  (var3.method1072(false) ? -1 : 0)))))));
+                  var1 == 4 ?
+                      !var0.method1074(-114) ?
+                          !var3.method1074(-123) ? 0 : -1 :
+                          var3.method1074(-108) ? 0 : 1 :
+                      var1 == 5 ?
+                          var0.method1075(64) ?
+                              !var3.method1075(64) ? 1 : 0 :
+                              var3.method1075(64) ? -1 : 0 :
+                          var1 != 6 ?
+                              var1 == 7 ?
+                                  var0.method1070(8) ?
+                                      var3.method1070(8) ? 0 : 1 :
+                                      var3.method1070(8) ? -1 : 0 :
+                                  -var3.anInt2621 + var0.anInt2621 :
+                              var0.method1072(false) ?
+                                  !var3.method1072(false) ? 1 : 0 :
+                                  var3.method1072(false) ? -1 : 0;
     }
   }
 

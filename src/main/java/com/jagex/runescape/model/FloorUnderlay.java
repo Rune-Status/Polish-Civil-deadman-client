@@ -73,7 +73,7 @@ public final class FloorUnderlay {
 
       this.anInt1406 = (int) (var16 * 256.0D);
       this.anInt1417 = (int) (256.0D * var18);
-      if ((this.anInt1417 >= 0)) {
+      if (this.anInt1417 >= 0) {
         if (this.anInt1417 > 255) {
           this.anInt1417 = 255;
         }
@@ -83,7 +83,7 @@ public final class FloorUnderlay {
 
       var14 /= 6.0D;
       this.anInt1408 = (int) (this.anInt1418 * var14);
-      if ((this.anInt1406 >= 0)) {
+      if (this.anInt1406 >= 0) {
         if (this.anInt1406 > 255) {
           this.anInt1406 = 255;
         }
@@ -104,19 +104,19 @@ public final class FloorUnderlay {
   }
 
   private void method1604(int var2, Buffer var3, int var4) {
-    if ((var2 == 1)) {
+    if (var2 == 1) {
         this.anInt1404 = var3.readUnsignedMedium((byte) 93);
         this.setHSL(this.anInt1404, (byte) 81);
       } else {
         if (var2 == 2) {
           this.anInt1412 = var3.readUnsignedShort();
-          if ((this.anInt1412 == 65535)) {
+          if (this.anInt1412 == 65535) {
             this.anInt1412 = -1;
           }
         } else {
           if (var2 == 3) {
             this.anInt1414 = var3.readUnsignedShort();
-          } else if ((var2 == 4)) {
+          } else if (var2 == 4) {
             this.aBoolean1411 = false;
           }
         }

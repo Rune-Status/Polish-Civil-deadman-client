@@ -11,9 +11,9 @@ public final class EnumStringFetcher implements Interface4 {
         ClientScriptEnum var6 = GlobalStatics_10.getEnum(enums[0], true);
         return var6.getString((int) key, (byte) 120);
       } else {
-        if (var1 != 1 && (var1 != 10)) {
+        if (var1 != 1 && var1 != 10) {
           return var1 != 6 && var1 != 7 && var1 != 11 ?
-              (var3 != 4936 ? null : null) :
+              var3 != 4936 ? null : null :
               GlobalStatics_10.getEnum(enums[0], true)
                   .getString((int) key, (byte) -69);
         } else {

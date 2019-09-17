@@ -49,13 +49,13 @@ public final class DummyClass31 {
         return;
       }
 
-      if ((DummyClass18.method823(var9, var7, var8 ^ -127, var2)
-          != GlobalStatics_8.plane)) {
+      if (DummyClass18.method823(var9, var7, var8 ^ -127, var2)
+          != GlobalStatics_8.plane) {
         return;
       }
     }
 
-    if ((var2 < DummyClass52.anInt1174)) {
+    if (var2 < DummyClass52.anInt1174) {
       DummyClass52.anInt1174 = var2;
     }
 
@@ -63,7 +63,7 @@ public final class DummyClass31 {
     if (!GlRenderer.useOpenGlRenderer || !var11.aBoolean1530) {
       int var12;
       int var13;
-      if ((var10 != 1) && (var10 != 3)) {
+      if (var10 != 1 && var10 != 3) {
         var12 = var11.anInt1480;
         var13 = var11.anInt1485;
       } else {
@@ -83,7 +83,7 @@ public final class DummyClass31 {
 
       int var17;
       int var16;
-      if (((var13 + var9) > 104)) {
+      if (var13 + var9 > 104) {
         var16 = var9;
         var17 = var9 + 1;
       } else {
@@ -101,7 +101,7 @@ public final class DummyClass31 {
                 >> 2;
         int var22 = 0;
         int[][] var23;
-        if (GlRenderer.useOpenGlRenderer && (var0 != 0)) {
+        if (GlRenderer.useOpenGlRenderer && var0 != 0) {
           var23 = GlobalStatics_4.heightMap[0];
           var22 = var19 - (
               var23[var15][var17] + var23[var15][var16] + var23[var14][var16]
@@ -113,7 +113,7 @@ public final class DummyClass31 {
         long var24 = 1073741824 | var7 | var9 << 7 | var6 << 14 | var10 << 20;
         if (var3) {
           var23 = DummyClass43.somethingHeightMap[0];
-        } else if ((var0 < 3)) {
+        } else if (var0 < 3) {
           var23 = GlobalStatics_4.heightMap[1 + var0];
         }
 
@@ -164,20 +164,20 @@ public final class DummyClass31 {
               GlobalStatics_7.method835(var2, var7, var9, var19, 1, 1,
                   var27, 0,
                   var24);
-              if (var1 && (var6 <= 17) && (var6 != 13) && var2 > 0) {
+              if (var1 && var6 <= 17 && var6 != 13 && var2 > 0) {
                 DummyClass36.anIntArrayArrayArray2609[var2][var7][var9] =
                     HuffmanEncoderStatics.method308(
                         DummyClass36.anIntArrayArrayArray2609[var2][var7][var9],
                         4);
               }
 
-              if ((var11.anInt1538 != 0) && var4 != null) {
+              if (var11.anInt1538 != 0 && var4 != null) {
                 var4.method1489(var7, var11.aBoolean1486, (byte) 73, var9,
                     var12, var13);
               }
 
             } else if (var6 == 0) {
-              if ((var11.anInt1531 == -1) && var11.anIntArray1524 == null
+              if (var11.anInt1531 == -1 && var11.anIntArray1524 == null
                   && !var11.aBoolean1510) {
                 var28 =
                     var11.method1696(var10, var20, var18, 0, var19, var23, var1,
@@ -200,7 +200,7 @@ public final class DummyClass31 {
               DummyClass14.method2146(var2, var7, var9, var19, var27, null,
                   DummyClass13.anIntArray2017[var10], 0, var24);
               if (var1) {
-                if ((var10 == 0)) {
+                if (var10 == 0) {
                   if (var11.aBoolean1525) {
                     GlobalStatics_9.aByteArrayArrayArray1014[var2][var7][var9] = 50;
                     GlobalStatics_9.aByteArrayArrayArray1014[var2][var7][1
@@ -214,7 +214,7 @@ public final class DummyClass31 {
                             1);
                   }
                 } else if (var10 != 1) {
-                  if ((var10 == 2)) {
+                  if (var10 == 2) {
                     if (var11.aBoolean1525) {
                       GlobalStatics_9.aByteArrayArrayArray1014[var2][var7
                           + 1][var9] = 50;
@@ -230,7 +230,7 @@ public final class DummyClass31 {
                                   + 1][var9], 1);
                     }
                   } else {
-                    if ((var10 == 3)) {
+                    if (var10 == 3) {
                       if (var11.aBoolean1525) {
                         GlobalStatics_9.aByteArrayArrayArray1014[var2][var7][var9] = 50;
                         GlobalStatics_9.aByteArrayArrayArray1014[var2][1
@@ -267,11 +267,11 @@ public final class DummyClass31 {
                 var4.method1486(var10, 2, 0, var11.aBoolean1486, var9, var7);
               }
 
-              if ((var11.anInt1528 != 16)) {
+              if (var11.anInt1528 != 16) {
                 GlobalStatics_9.method1956(var2, var7, var9, var11.anInt1528);
               }
 
-            } else if ((var6 == 1)) {
+            } else if (var6 == 1) {
               if (var11.anInt1531 == -1 && var11.anIntArray1524 == null
                   && !var11.aBoolean1510) {
                 var28 =
@@ -299,11 +299,11 @@ public final class DummyClass31 {
                   GlobalStatics_9.aByteArrayArrayArray1014[var2][var7][var9
                       + 1] = 50;
                 } else {
-                  if ((var10 == 1)) {
+                  if (var10 == 1) {
                     GlobalStatics_9.aByteArrayArrayArray1014[var2][var7 + 1][1
                         + var9] = 50;
                   } else {
-                    if ((var10 == 2)) {
+                    if (var10 == 2) {
                       GlobalStatics_9.aByteArrayArrayArray1014[var2][1
                           + var7][var9] = 50;
                     } else if (var10 == 3) {
@@ -313,17 +313,17 @@ public final class DummyClass31 {
                 }
               }
 
-              if ((var11.anInt1538 != 0) && var4 != null) {
+              if (var11.anInt1538 != 0 && var4 != null) {
                 var4.method1486(var10, 2, var6, var11.aBoolean1486, var9, var7);
               }
 
             } else {
               int var43;
-              if ((var6 == 2)) {
+              if (var6 == 2) {
                 var43 = 1 + var10 & 3;
                 SceneNode var38;
                 SceneNode var42;
-                if ((var11.anInt1531 == -1) && var11.anIntArray1524 == null
+                if (var11.anInt1531 == -1 && var11.anIntArray1524 == null
                     && !var11.aBoolean1510) {
                   SceneShadowMap var45 =
                       var11.method1696(var10 + 4, var20, var18, 2, var19, var23,
@@ -362,7 +362,7 @@ public final class DummyClass31 {
                     var38, DummyClass13.anIntArray2017[var10],
                     DummyClass13.anIntArray2017[var43], var24);
                 if (var11.aBoolean1542 && var1) {
-                  if ((var10 == 0)) {
+                  if (var10 == 0) {
                     DummyClass36.anIntArrayArrayArray2609[var2][var7][var9] =
                         HuffmanEncoderStatics.method308(
                             DummyClass36.anIntArrayArrayArray2609[var2][var7][var9],
@@ -373,7 +373,7 @@ public final class DummyClass31 {
                             DummyClass36.anIntArrayArrayArray2609[var2][var7][
                                 1 + var9], 2);
                   } else {
-                    if ((var10 == 1)) {
+                    if (var10 == 1) {
                       DummyClass36.anIntArrayArrayArray2609[var2][var7][var9
                           + 1] =
                           HuffmanEncoderStatics.method308(
@@ -385,7 +385,7 @@ public final class DummyClass31 {
                               DummyClass36.anIntArrayArrayArray2609[var2][var7
                                   + 1][var9], 1);
                     } else {
-                      if ((var10 == 2)) {
+                      if (var10 == 2) {
                         DummyClass36.anIntArrayArrayArray2609[var2][1
                             + var7][var9] =
                             HuffmanEncoderStatics.method308(
@@ -395,7 +395,7 @@ public final class DummyClass31 {
                             HuffmanEncoderStatics.method308(
                                 DummyClass36.anIntArrayArrayArray2609[var2][var7][var9],
                                 2);
-                      } else if ((var10 == 3)) {
+                      } else if (var10 == 3) {
                         DummyClass36.anIntArrayArrayArray2609[var2][var7][var9] =
                             HuffmanEncoderStatics.method308(
                                 DummyClass36.anIntArrayArrayArray2609[var2][var7][var9],
@@ -414,12 +414,12 @@ public final class DummyClass31 {
                       var7);
                 }
 
-                if ((var11.anInt1528 != 16)) {
+                if (var11.anInt1528 != 16) {
                   GlobalStatics_9.method1956(var2, var7, var9, var11.anInt1528);
                 }
 
               } else if (var6 == 3) {
-                if ((var11.anInt1531 == -1) && var11.anIntArray1524 == null
+                if (var11.anInt1531 == -1 && var11.anIntArray1524 == null
                     && !var11.aBoolean1510) {
                   var28 =
                       var11.method1696(var10, var20, var18, 3, var19, var23,
@@ -450,7 +450,7 @@ public final class DummyClass31 {
                       GlobalStatics_9.aByteArrayArrayArray1014[var2][1 + var7][
                           var9 + 1] = 50;
                     } else if (var10 != 2) {
-                      if ((var10 == 3)) {
+                      if (var10 == 3) {
                         GlobalStatics_9.aByteArrayArrayArray1014[var2][var7][var9] = 50;
                       }
                     } else {
@@ -464,7 +464,7 @@ public final class DummyClass31 {
                   var4.method1486(var10, 2, 3, var11.aBoolean1486, var9, var7);
                 }
 
-              } else if ((var6 != 9)) {
+              } else if (var6 != 9) {
                 if (var6 == 4) {
                   if (var11.anInt1531 == -1 && var11.anIntArray1524 == null
                       && !var11.aBoolean1510) {
@@ -494,15 +494,15 @@ public final class DummyClass31 {
                   SceneNode var39;
                   SceneShadowMap var47;
                   long var44;
-                  if ((var6 == 5)) {
+                  if (var6 == 5) {
                     var43 = 16;
                     var44 = GlobalStatics_9.method2174(var2, var7, var9);
-                    if ((var44 != 0L)) {
+                    if (var44 != 0L) {
                       var43 = DummyClass11.method2207(4,
                           Integer.MAX_VALUE & (int) (var44 >>> 32)).anInt1528;
                     }
 
-                    if ((var11.anInt1531 == -1) && var11.anIntArray1524 == null
+                    if (var11.anInt1531 == -1 && var11.anIntArray1524 == null
                         && !var11.aBoolean1510) {
                       var47 = var11
                           .method1696(var10, var20, var18, 4, var19, var23,
@@ -511,8 +511,8 @@ public final class DummyClass31 {
                       if (GlRenderer.useOpenGlRenderer && var26) {
                         assert var47 != null;
                         SomethingShadows.method2051(var47.shadow,
-                            var20 - (GlobalStatics_9.anIntArray356[var10]
-                                * 8), var22,
+                            var20 - GlobalStatics_9.anIntArray356[var10]
+                                * 8, var22,
                             -(GlobalStatics_6.anIntArray3491[var10] * 8)
                                 + var21);
                       }
@@ -533,10 +533,10 @@ public final class DummyClass31 {
                             GlobalStatics_6.anIntArray3491[var10] * var43,
                             var24);
                   } else {
-                    if ((var6 == 6)) {
+                    if (var6 == 6) {
                       var43 = 8;
                       var44 = GlobalStatics_9.method2174(var2, var7, var9);
-                      if ((var44 != 0L)) {
+                      if (var44 != 0L) {
                         var43 = DummyClass11.method2207(4,
                             Integer.MAX_VALUE & (int) (var44
                                 >>> 32)).anInt1528 / 2;
@@ -577,7 +577,7 @@ public final class DummyClass31 {
                     } else {
                       if (var6 == 7) {
                         int var40 = 3 & var10 + 2;
-                        if ((var11.anInt1531 == -1)
+                        if (var11.anInt1531 == -1
                             && var11.anIntArray1524 == null
                             && !var11.aBoolean1510) {
                           SceneShadowMap var41 =
@@ -607,7 +607,7 @@ public final class DummyClass31 {
                         if (var6 == 8) {
                           var43 = 8;
                           var44 = GlobalStatics_9.method2174(var2, var7, var9);
-                          if ((var44 != 0L)) {
+                          if (var44 != 0L) {
                             var43 = DummyClass11.method2207(4,
                                 Integer.MAX_VALUE & (int) (var44
                                     >>> 32)).anInt1528 / 2;
@@ -672,7 +672,7 @@ public final class DummyClass31 {
                   }
                 }
               } else {
-                if ((var11.anInt1531 == -1) && var11.anIntArray1524 == null
+                if (var11.anInt1531 == -1 && var11.anIntArray1524 == null
                     && !var11.aBoolean1510) {
                   var28 = var11
                       .method1696(var10, var20, var18, var6, var19, var23, var1,
@@ -695,19 +695,19 @@ public final class DummyClass31 {
                 GlobalStatics_7.method835(var2, var7, var9, var19, 1, 1,
                     var27, 0,
                     var24);
-                if ((var11.anInt1538 != 0) && var4 != null) {
+                if (var11.anInt1538 != 0 && var4 != null) {
                   var4.method1489(var7, var11.aBoolean1486, (byte) 127, var9,
                       var12, var13);
                 }
 
-                if ((var11.anInt1528 != 16)) {
+                if (var11.anInt1528 != 16) {
                   GlobalStatics_9.method1956(var2, var7, var9, var11.anInt1528);
                 }
 
               }
             }
           } else {
-            if ((var11.anInt1531 == -1) && var11.anIntArray1524 == null
+            if (var11.anInt1531 == -1 && var11.anIntArray1524 == null
                 && !var11.aBoolean1510) {
               var28 =
                   var11.method1696(var6 == 11 ? 4 + var10 : var10, var20, var18,
@@ -734,15 +734,15 @@ public final class DummyClass31 {
                 int var29 = 15;
                 if (var27 instanceof AbstractModel) {
                   var29 = ((AbstractModel) var27).method1888() / 4;
-                  if ((var29 > 30)) {
+                  if (var29 > 30) {
                     var29 = 30;
                   }
                 }
 
                 for (int var30 = 0; var30 <= var12; ++var30) {
                   for (int var31 = 0; var13 >= var31; ++var31) {
-                    if ((GlobalStatics_9.aByteArrayArrayArray1014[var2][var7
-                        + var30][var31 + var9] < var29)) {
+                    if (GlobalStatics_9.aByteArrayArrayArray1014[var2][var7
+                        + var30][var31 + var9] < var29) {
                       GlobalStatics_9.aByteArrayArrayArray1014[var2][var7
                           + var30][var9 + var31] =
                           (byte) var29;
@@ -758,10 +758,10 @@ public final class DummyClass31 {
             }
 
           }
-        } else if (GlobalStatics_9.aBoolean1905 || (var11.anInt1529 != 0) ||
-            (var11.anInt1538 == 1)
+        } else if (GlobalStatics_9.aBoolean1905 || var11.anInt1529 != 0 ||
+            var11.anInt1538 == 1
             || var11.aBoolean1483) {
-          if ((var11.anInt1531 == -1) && var11.anIntArray1524 == null
+          if (var11.anInt1531 == -1 && var11.anIntArray1524 == null
               && !var11.aBoolean1510) {
             var28 =
                 var11.method1696(var10, var20, var18, 22, var19, var23, var1,

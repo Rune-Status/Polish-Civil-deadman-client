@@ -37,7 +37,7 @@ public final class Cursor {
 
       while (true) {
         int var4 = var1.readUnsignedByte();
-        if ((var4 == 0)) {
+        if (var4 == 0) {
           return;
         }
 
@@ -50,7 +50,7 @@ public final class Cursor {
         this.anInt881 = -82;
       }
 
-      if ((var3 == 1)) {
+      if (var3 == 1) {
         this.anInt883 = var4.readUnsignedShort();
       } else {
         if (var3 == 2) {

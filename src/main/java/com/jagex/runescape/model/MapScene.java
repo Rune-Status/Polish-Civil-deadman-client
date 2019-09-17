@@ -16,7 +16,7 @@ public final class MapScene {
   public void method74(byte var1, Buffer var2, int var3 ) {
     while (true) {
         int var4 = var2.readUnsignedByte();
-        if ((var4 == 0)) {
+        if (var4 == 0) {
           if (var1 > -108) {
             this.method74((byte) 85, null, 63);
           }
@@ -61,7 +61,7 @@ public final class MapScene {
     if (var1 == 1) {
         this.spriteId = var2.readUnsignedShort();
       } else if (var1 != 2) {
-        if ((var1 == 3)) {
+        if (var1 == 3) {
           this.aBoolean69 = true;
         } else {
           if (var1 == 4) {

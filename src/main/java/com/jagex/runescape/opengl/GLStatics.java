@@ -53,48 +53,48 @@ public class GLStatics {
   public static int viewportUpperX;
   public static int screenLowerY;
   static GameString aClass94_695 = GameStringStatics.create("Unable to find ");
-  public static GameString aClass94_691 = aClass94_695;
+  public static GameString aClass94_691 = GLStatics.aClass94_695;
 
   public static float[] method1705(int var0, int var1) {
     float var2 = GlEnvironment.method1514() + GlEnvironment.method1505();
     int var3 = GlEnvironment.method1510();
     float var7 = 0.58823526F;
-    FOG_COLOR[3] = 1.0F;
+    GLStatics.FOG_COLOR[3] = 1.0F;
     float var4 = (var3 >> 16 & 255) / 255.0F;
     float var5 = (('\uff1e' & var3) >> 8) / 255.0F;
-    FOG_COLOR[1] =
+    GLStatics.FOG_COLOR[1] =
         var2 * (var0 >> 8 & 255) / 255.0F * var5 * var7;
-    FOG_COLOR[var1] =
+    GLStatics.FOG_COLOR[var1] =
         var2 * var7 * var4 * (((16754958 & var0) >> 16)
             / 255.0F);
     float var6 = (var3 & 255) / 255.0F;
-    FOG_COLOR[2] =
+    GLStatics.FOG_COLOR[2] =
         (255 & var0) / 255.0F * var6 * var7 * var2;
-    return FOG_COLOR;
+    return GLStatics.FOG_COLOR;
   }
 
   public static void method551(int var0, int var1, int var2) {
     if (var0 == 0) {
-      if (var2 == 4 && !aBoolean1685) {
+      if (var2 == 4 && !GLStatics.aBoolean1685) {
         var2 = 2;
         var1 = 2;
       }
 
-      if ((DummyClass30.anInt453 == var2)) {
+      if (DummyClass30.anInt453 == var2) {
         if (var2 != 0 && var1 != GlobalStatics_10.anInt3263) {
           GlobalStatics_9.anInterface5Array70[var2].set(var1);
           GlobalStatics_10.anInt3263 = var1;
         }
       } else {
-        if (aBoolean3207) {
+        if (GLStatics.aBoolean3207) {
           return;
         }
 
-        if ((DummyClass30.anInt453 != 0)) {
+        if (DummyClass30.anInt453 != 0) {
           GlobalStatics_9.anInterface5Array70[DummyClass30.anInt453].disable();
         }
 
-        if ((var2 != 0)) {
+        if (var2 != 0) {
           MaterialShader var3 = GlobalStatics_9.anInterface5Array70[var2];
           var3.enable();
           var3.set(var1);
@@ -111,21 +111,21 @@ public class GLStatics {
     float var1 = GlEnvironment.method1514() + GlEnvironment.method1505();
     int var2 = GlEnvironment.method1510();
     float var3 = (255 & var2 >> 16) / 255.0F;
-    FOG_COLOR[3] = 1.0F;
+    GLStatics.FOG_COLOR[3] = 1.0F;
     float var4 = (('\uff59' & var2) >> 8) / 255.0F;
     float var6 = 0.58823526F;
     float var5 = (255 & var2) / 255.0F;
-    FOG_COLOR[2] =
+    GLStatics.FOG_COLOR[2] =
         GlobalStatics_5.aFloatArray1934[2] * var5 * var6 * var1;
-    FOG_COLOR[0] =
+    GLStatics.FOG_COLOR[0] =
         GlobalStatics_5.aFloatArray1934[0] * var3 * var6 * var1;
-    FOG_COLOR[1] =
+    GLStatics.FOG_COLOR[1] =
         var1 * var6 * var4 * GlobalStatics_5.aFloatArray1934[1];
-    return FOG_COLOR;
+    return GLStatics.FOG_COLOR;
   }
 
   public static long method104(int var0, int var1, int var2) {
-    SceneGraphTile var3 = sceneGraphTiles[var0][var1][var2];
+    SceneGraphTile var3 = GLStatics.sceneGraphTiles[var0][var1][var2];
     return var3 != null && var3.aClass12_2230 != null ? var3.aClass12_2230.aLong328 : 0L;
   }
 
@@ -139,13 +139,13 @@ public class GLStatics {
     GlobalStatics_9.method383(-32584, 3);
     GlobalStatics_9.method383(-32584, 4);
     if (var0 != 56) {
-      method535((byte) 127, 99);
+      GLStatics.method535((byte) 127, 99);
     }
   }
 
   public static void method1058(int var0, int var1, int var2, int var3, byte var4) {
     int var5 = 25 % ((25 - var4) / 52);
-    if (((var1 - var0) >= DummyClass55.anInt1425)
+    if (var1 - var0 >= DummyClass55.anInt1425
         && GlTexture2d.anInt3765 >= var0 + var1
         && var3 - var0 >= DummyClass13.anInt2020
         && GlobalStatics_9.anInt902 >= var0 + var3) {
@@ -156,12 +156,12 @@ public class GLStatics {
   }
 
   public static void method1059(byte var0) {
-    aClass94_695 = null;
-    aClass94_701 = null;
-    aClass94_699 = null;
-    aClass94_691 = null;
+    GLStatics.aClass94_695 = null;
+    GLStatics.aClass94_701 = null;
+    GLStatics.aClass94_699 = null;
+    GLStatics.aClass94_691 = null;
     if (var0 == -2) {
-      aClass94_700 = null;
+      GLStatics.aClass94_700 = null;
     }
   }
 
@@ -171,7 +171,7 @@ public class GLStatics {
         GlobalStatics_9.anIntArray2931[0] * GlobalStatics_10.anIntArray3076[0];
     int[] var3 = new int[var1];
     if (var0 < 70) {
-      method1062(67);
+      GLStatics.method1062(67);
     }
 
     for (int var4 = 0; var1 > var4; ++var4) {

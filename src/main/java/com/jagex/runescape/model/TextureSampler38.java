@@ -41,12 +41,12 @@ public final class TextureSampler38 extends AbstractTextureSampler {
               >> 12);
           int var15 = var12 - var10;
           int var14 = -var11 + var13;
-          if ((var15 != 0) || (var14 != 0)) {
+          if (var15 != 0 || var14 != 0) {
             if (var15 < 0) {
               var15 = -var15;
             }
 
-            if ((var14 < 0)) {
+            if (var14 < 0) {
               var14 = -var14;
             }
 
@@ -74,13 +74,13 @@ public final class TextureSampler38 extends AbstractTextureSampler {
             var18 = -var10 + var12;
             int var19 = var13 - var11;
             var17 = var11;
-            if ((var19 < 0)) {
+            if (var19 < 0) {
               var19 = -var19;
             }
 
             int var20 = -var18 / 2;
             int var22 = -(GlobalStatics_8.method1603((byte) -18, 4096, var7) >> 2) + 1024;
-            int var23 = (var13 <= var11) ? -1 : 1;
+            int var23 = var13 <= var11 ? -1 : 1;
             int var21 = 2048 / var18;
 
             for (int var24 = var10; var12 > var24; ++var24) {
@@ -109,11 +109,11 @@ public final class TextureSampler38 extends AbstractTextureSampler {
   }
 
   public void parseConfig(int var1, Buffer var2, boolean var3 ) {
-    if ((var1 == 0)) {
+    if (var1 == 0) {
         this.anInt3454 = var2.readUnsignedByte();
-      } else if ((var1 == 1)) {
+      } else if (var1 == 1) {
         this.anInt3447 = var2.readUnsignedShort();
-      } else if ((var1 != 2)) {
+      } else if (var1 != 2) {
         if (var1 == 3) {
           this.anInt3444 = var2.readUnsignedShort();
         } else if (var1 == 4) {

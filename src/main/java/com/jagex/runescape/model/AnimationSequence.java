@@ -58,7 +58,7 @@ public final class AnimationSequence {
           this.method2053(null, (byte) -126);
         }
 
-        if ((this.tween || GlobalStatics_9.tweening) && (var3 != -1)
+        if ((this.tween || GlobalStatics_9.tweening) && var3 != -1
           && this.anIntArray1851.length > var3) {
           var3 = this.anIntArray1851[var3];
           var9 = GlobalStatics_6.method133(var3 >> 16, 0);
@@ -78,13 +78,13 @@ public final class AnimationSequence {
         }
 
         if (GlRenderer.useOpenGlRenderer && this.aBoolean1848) {
-          if ((var5 == 1)) {
+          if (var5 == 1) {
             ((GlModel) var10).method1902();
           } else {
             if (var5 == 2) {
               ((GlModel) var10).method1911();
             } else {
-              if ((var5 == 3)) {
+              if (var5 == 3) {
                 ((GlModel) var10).method1925();
               }
             }
@@ -113,8 +113,8 @@ public final class AnimationSequence {
               ((GlModel) var10).method1902();
             }
           }
-        } else if ((var5 != 1)) {
-          if ((var5 == 2)) {
+        } else if (var5 != 1) {
+          if (var5 == 2) {
             var10.method1874();
           } else {
             if (var5 == 3) {
@@ -140,8 +140,8 @@ public final class AnimationSequence {
         return var1.method1894(true, true, true);
       } else {
         AnimationSomething var9 = null;
-        if ((this.tween || GlobalStatics_9.tweening) && (var3 != -1)
-          && (var3 < this.anIntArray1851.length)) {
+        if ((this.tween || GlobalStatics_9.tweening) && var3 != -1
+          && var3 < this.anIntArray1851.length) {
           var3 = this.anIntArray1851[var3];
           var9 = GlobalStatics_6.method133(var3 >> 16, 0);
           var3 &= '\uffff';
@@ -154,7 +154,7 @@ public final class AnimationSequence {
         if (this.anIntArray1870 != null) {
           if (this.anIntArray1870.length > var5) {
             var13 = this.anIntArray1870[var5];
-            if ((var13 != 65535)) {
+            if (var13 != 65535) {
               var10 = GlobalStatics_6.method133(var13 >> 16, 0);
               var13 &= '\uffff';
             }
@@ -163,7 +163,7 @@ public final class AnimationSequence {
           if ((this.tween || GlobalStatics_9.tweening) && var3 != -1
             && this.anIntArray1870.length > var3) {
             var14 = this.anIntArray1870[var3];
-            if ((var14 != 65535)) {
+            if (var14 != 65535) {
               var11 = GlobalStatics_6.method133(var14 >> 16, 0);
               var14 &= '\uffff';
             }
@@ -211,8 +211,8 @@ public final class AnimationSequence {
       } else {
         var4 &= var6;
         AnimationSomething var9 = null;
-        if ((this.tween || GlobalStatics_9.tweening) && (var1 != -1)
-          && (var1 < this.anIntArray1851.length)) {
+        if ((this.tween || GlobalStatics_9.tweening) && var1 != -1
+          && var1 < this.anIntArray1851.length) {
           var1 = this.anIntArray1851[var1];
           var9 = GlobalStatics_6.method133(var1 >> 16, var6 - 3);
           var1 &= '\uffff';
@@ -234,9 +234,9 @@ public final class AnimationSequence {
           if (var4 == 1) {
             ((GlModel) var10).method1902();
           } else {
-            if ((var4 == 2)) {
+            if (var4 == 2) {
               ((GlModel) var10).method1911();
-            } else if ((var4 == 3)) {
+            } else if (var4 == 3) {
               ((GlModel) var10).method1925();
             }
           }
@@ -251,11 +251,11 @@ public final class AnimationSequence {
         var10.method1880(var8, var2, var9, var1, var3 - 1, var7,
             this.aBoolean1848);
         if (this.aBoolean1848 && GlRenderer.useOpenGlRenderer) {
-          if ((var4 == 1)) {
+          if (var4 == 1) {
             ((GlModel) var10).method1925();
-          } else if ((var4 == 2)) {
+          } else if (var4 == 2) {
             ((GlModel) var10).method1911();
-          } else if ((var4 == 3)) {
+          } else if (var4 == 3) {
             ((GlModel) var10).method1902();
           }
         } else if (var4 != 1) {
@@ -274,7 +274,7 @@ public final class AnimationSequence {
 
   public void method2058(byte var1 ) {
     if (var1 == -41) {
-        if ((this.anInt1866 == -1)) {
+        if (this.anInt1866 == -1) {
           if (this.aBooleanArray1855 == null) {
             this.anInt1866 = 0;
           } else {
@@ -303,7 +303,7 @@ public final class AnimationSequence {
         return var5.method1882(true, true, true);
       } else {
         AnimationSomething var9 = null;
-        if ((this.tween || GlobalStatics_9.tweening) && (var1 != -1)
+        if ((this.tween || GlobalStatics_9.tweening) && var1 != -1
           && this.anIntArray1851.length > var1) {
           var1 = this.anIntArray1851[var1];
           var9 = GlobalStatics_6.method133(var1 >> 16, 0);
@@ -331,7 +331,7 @@ public final class AnimationSequence {
   private void method2060(int var1, byte var2, Buffer var3) {
     int var4;
       int var5;
-      if ((var1 == 1)) {
+      if (var1 == 1) {
         var4 = var3.readUnsignedShort();
         this.anIntArray1869 = new int[var4];
 
@@ -341,7 +341,7 @@ public final class AnimationSequence {
 
         this.anIntArray1851 = new int[var4];
 
-        for (var5 = 0; (var5 < var4); ++var5) {
+        for (var5 = 0; var5 < var4; ++var5) {
           this.anIntArray1851[var5] = var3.readUnsignedShort();
         }
 
@@ -350,21 +350,21 @@ public final class AnimationSequence {
         }
       } else if (var1 == 2) {
         this.anInt1865 = var3.readUnsignedShort();
-      } else if ((var1 != 3)) {
+      } else if (var1 != 3) {
         if (var1 == 4) {
           this.aBoolean1859 = true;
-        } else if ((var1 != 5)) {
+        } else if (var1 != 5) {
           if (var1 == 6) {
             this.anInt1854 = var3.readUnsignedShort();
           } else {
-            if ((var1 == 7)) {
+            if (var1 == 7) {
               this.anInt1849 = var3.readUnsignedShort();
             } else if (var1 == 8) {
               this.anInt1861 = var3.readUnsignedByte();
             } else if (var1 == 9) {
               this.anInt1866 = var3.readUnsignedByte();
             } else if (var1 != 10) {
-              if ((var1 == 11)) {
+              if (var1 == 11) {
                 this.anInt1845 = var3.readUnsignedByte();
               } else {
                 if (var1 == 12) {
@@ -396,7 +396,7 @@ public final class AnimationSequence {
                         }
                       }
                     }
-                  } else if ((var1 != 14)) {
+                  } else if (var1 != 14) {
                     if (var1 == 15) {
                       this.tween = true;
                     } else {

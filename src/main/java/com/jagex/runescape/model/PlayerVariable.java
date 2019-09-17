@@ -27,7 +27,7 @@ public final class PlayerVariable {
         this.method970(-83, null);
       }
 
-      if ((var3 == 5)) {
+      if (var3 == 5) {
         this.anInt556 = var1.readUnsignedShort();
       }
   }

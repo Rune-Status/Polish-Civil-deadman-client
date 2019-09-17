@@ -66,8 +66,8 @@ public final class TextureSampler23 extends AbstractTextureSampler {
   }
 
   public void parseConfig(int var1, Buffer var2, boolean var3 ) {
-    if ((var1 == 0)) {
-        this.monoChromatic = (var2.readUnsignedByte() == 1);
+    if (var1 == 0) {
+        this.monoChromatic = var2.readUnsignedByte() == 1;
       }
 
       if (!var3) {

@@ -41,7 +41,7 @@ public final class DummyClass27 {
       int var3;
       if (var1.anInt2273 < 0) {
         var3 = -var1.anInt2273 - 1;
-        if ((var3 == GlobalStatics_10.localPlayerId)) {
+        if (var3 == GlobalStatics_10.localPlayerId) {
           var2 = GlobalStatics_9.localPlayer;
         } else {
           var2 = GlobalStatics_9.players[var3];
@@ -56,7 +56,7 @@ public final class DummyClass27 {
 
         int var4;
         int var5;
-        if ((var1.anInt2284 != 1) && (var1.anInt2284 != 3)) {
+        if (var1.anInt2284 != 1 && var1.anInt2284 != 3) {
           var4 = var20.anInt1480;
           var5 = var20.anInt1485;
         } else {
@@ -70,11 +70,11 @@ public final class DummyClass27 {
         int var9 = (var5 + 1 >> 1) + var1.anInt2282;
         int[][] var10 = GlobalStatics_4.heightMap[GlobalStatics_9.currentPlane];
         int var11 =
-            var10[var7][var9] + var10[var6][var9] + (var10[var6][var8]
-                + var10[var7][var8]) >> 2;
+            var10[var7][var9] + var10[var6][var9] + var10[var6][var8]
+                + var10[var7][var8] >> 2;
         SceneNode var12 = null;
         int var13 = GlobalStatics_3.OBJECT_TYPES[var1.anInt2278];
-        if ((var13 == 0)) {
+        if (var13 == 0) {
           SceneSomething2 var14 =
               DummyClass14
                   .method2147(GlobalStatics_9.currentPlane, var1.anInt2271,
@@ -82,7 +82,7 @@ public final class DummyClass27 {
           if (var14 != null) {
             var12 = var14.sceneNode0;
           }
-        } else if ((var13 != 1)) {
+        } else if (var13 != 1) {
           if (var13 == 2) {
             SceneSomething var23 =
                 GlobalStatics_3

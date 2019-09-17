@@ -21,7 +21,7 @@ public final class TextureSampler25 extends AbstractTextureSampler {
         if (var1 == 0) {
           this.anInt3404 = var2.readUnsignedShort();
         } else if (var1 != 1) {
-          if ((var1 == 2)) {
+          if (var1 == 2) {
             this.anInt3406 = var2.readUnsignedShort();
           } else if (var1 != 3) {
             if (var1 == 4) {
@@ -60,7 +60,7 @@ public final class TextureSampler25 extends AbstractTextureSampler {
         for (int var11 = 0; var11 < GlobalStatics_9.anInt1559; ++var11) {
           int var13 = var5[var11];
           int var12 = -this.anIntArray3403[0] + var13;
-          if ((var12 < 0)) {
+          if (var12 < 0) {
             var12 = -var12;
           }
 
@@ -71,7 +71,7 @@ public final class TextureSampler25 extends AbstractTextureSampler {
           } else {
             int var14 = var6[var11];
             var12 = var14 - this.anIntArray3403[1];
-            if ((var12 < 0)) {
+            if (var12 < 0) {
               var12 = -var12;
             }
 
@@ -86,7 +86,7 @@ public final class TextureSampler25 extends AbstractTextureSampler {
                 var12 = -var12;
               }
 
-              if ((var12 <= this.anInt3404)) {
+              if (var12 <= this.anInt3404) {
                 var8[var11] = this.anInt3410 * var13 >> 12;
                 var9[var11] = this.anInt3406 * var14 >> 12;
                 var10[var11] = this.anInt3405 * var15 >> 12;

@@ -41,7 +41,7 @@ public final class DummyClass41 {
       int var4, Widget var5,
       boolean var6) {
     int var7 = var3 * var3 + var4 * var4;
-    if ((var7 <= 360000)) {
+    if (var7 <= 360000) {
       int var8 = Math.min(var5.anInt168 / 2, var5.anInt193 / 2);
       if (var6) {
         DummyClass41.anInt865 = -79;
@@ -58,7 +58,7 @@ public final class DummyClass41 {
         int var10 = GLStatics.SINE_TABLE[var9];
         var10 = var10 * 256 / (256 + GlobalStatics_9.anInt3020);
         var11 = var11 * 256 / (GlobalStatics_9.anInt3020 + 256);
-        int var12 = var4 * var10 + (var11 * var3) >> 16;
+        int var12 = var4 * var10 + var11 * var3 >> 16;
         int var13 = -(var10 * var3) + var4 * var11 >> 16;
         double var14 = Math.atan2(var12, var13);
         int var16 = (int) (Math.sin(var14) * var8);
@@ -110,7 +110,7 @@ public final class DummyClass41 {
       int var9 = var8.indexOf(40);
       int var10 = var8.indexOf(41, 1 + var9);
       String var11;
-      if ((var9 == -1)) {
+      if (var9 == -1) {
         var11 = var8;
       } else {
         var11 = var8.substring(0, var9);
@@ -170,12 +170,12 @@ public final class DummyClass41 {
 
   public static GameString method1174(Widget var0, byte var1) {
     int var2 = 49 % ((var1 - 22) / 46);
-    return (GlobalStatics_8.method44(var0).method101(-69) != 0) ?
-        (var0.aClass94_245 != null
+    return GlobalStatics_8.method44(var0).method101(-69) != 0 ?
+        var0.aClass94_245 != null
             && var0.aClass94_245.method1564(1).getLength() != 0 ?
             var0.aClass94_245 :
-            (GlobalStatics_9.aBoolean1040 ? GlobalStatics_8.aClass94_2116
-                : null)) :
+            GlobalStatics_9.aBoolean1040 ? GlobalStatics_8.aClass94_2116
+                : null :
         null;
   }
 

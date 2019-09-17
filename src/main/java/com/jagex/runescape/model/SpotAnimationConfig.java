@@ -43,15 +43,15 @@ public final class SpotAnimationConfig {
       } else if (var2 == 2) {
         this.anInt542 = var1.readUnsignedShort();
       } else if (var2 != 4) {
-        if ((var2 == 5)) {
+        if (var2 == 5) {
           this.scaleY = var1.readUnsignedShort();
         } else {
           if (var2 == 6) {
             this.rotationY = var1.readUnsignedShort();
           } else if (var2 == 7) {
             this.anInt538 = var1.readUnsignedByte();
-          } else if ((var2 != 8)) {
-            if ((var2 == 9)) {
+          } else if (var2 != 8) {
+            if (var2 == 9) {
               this.aBoolean536 = true;
             } else {
               int var4;
@@ -61,7 +61,7 @@ public final class SpotAnimationConfig {
                 this.faceIds = new short[var4];
                 this.colorIds = new short[var4];
 
-                for (var5 = 0; (var5 < var4); ++var5) {
+                for (var5 = 0; var5 < var4; ++var5) {
                   this.faceIds[var5] = (short) var1.readUnsignedShort();
                   this.colorIds[var5] = (short) var1.readUnsignedShort();
                 }
@@ -125,7 +125,7 @@ public final class SpotAnimationConfig {
         }
 
         AbstractModel var9;
-        if ((this.anInt542 != -1) && var3 != -1) {
+        if (this.anInt542 != -1 && var3 != -1) {
           var9 = GlobalStatics_8.method45(this.anInt542, (byte) -20)
               .method2059(var1, var4, var3, (byte) -52, var5);
         } else {
@@ -137,7 +137,7 @@ public final class SpotAnimationConfig {
         }
 
         if (this.rotationY != 0) {
-          if ((this.rotationY == 90)) {
+          if (this.rotationY == 90) {
             var9.rotateQuarterY();
           }
 

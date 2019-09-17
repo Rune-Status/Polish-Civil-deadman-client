@@ -22,7 +22,7 @@ public final class DummyClass23 {
   }
 
   public static void method1745(int var0) {
-    for (int var1 = var0; (var1 < 104); ++var1) {
+    for (int var1 = var0; var1 < 104; ++var1) {
       for (int var2 = 0; var2 < 104; ++var2) {
         DummyClass9.anIntArrayArray4010[var1][var2] = 0;
       }
@@ -49,7 +49,7 @@ public final class DummyClass23 {
             var0.readUnsignedByte());
     int var3 = var0.readUnsignedByte();
 
-    for (int var4 = 0; (var4 < var3); ++var4) {
+    for (int var4 = 0; var4 < var3; ++var4) {
       var2.aClass61_3560.addLast(
           new SomethingWorldMappy(var0.readUnsignedShort(),
               var0.readUnsignedShort(),

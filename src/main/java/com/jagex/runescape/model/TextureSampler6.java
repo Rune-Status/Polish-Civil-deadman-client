@@ -71,7 +71,7 @@ public final class TextureSampler6 extends AbstractTextureSampler {
           int var13 = var6[var11];
           int var12 = var5[var11];
           int var14 = var7[var11];
-          if ((this.anInt3043 <= var12)) {
+          if (this.anInt3043 <= var12) {
             if (var12 > this.anInt3046) {
               var8[var11] = this.anInt3046;
             } else {

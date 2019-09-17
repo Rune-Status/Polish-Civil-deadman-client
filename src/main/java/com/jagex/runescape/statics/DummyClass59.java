@@ -25,7 +25,7 @@ public final class DummyClass59 {
 
   public static int method1040(int var0, int var1, byte var2, int var3) {
     return var2 != 0 ? -127
-        : (var3 > var1 ? var3 : (var1 > var0 ? var0 : var1));
+        : var3 > var1 ? var3 : var1 > var0 ? var0 : var1;
   }
 
   public static void method1041(long var0, int var2) {
@@ -84,9 +84,9 @@ public final class DummyClass59 {
     boolean var1 = true;
 
     int var2;
-    for (var2 = 0; (var2 < GlobalStatics_9.aByteArrayArray3027.length);
+    for (var2 = 0; var2 < GlobalStatics_9.aByteArrayArray3027.length;
         ++var2) {
-      if ((GlobalStatics_1.mapFileIds[var2] != -1) &&
+      if (GlobalStatics_1.mapFileIds[var2] != -1 &&
           GlobalStatics_9.aByteArrayArray3027[var2] == null) {
         GlobalStatics_9.aByteArrayArray3027[var2] =
             GlobalStatics_10.maps.getBytes(GlobalStatics_1.mapFileIds[var2], 0);
@@ -108,7 +108,7 @@ public final class DummyClass59 {
       }
 
       if (GlRenderer.useOpenGlRenderer) {
-        if ((GlobalStatics_1.updatedMapIds[var2] != -1)
+        if (GlobalStatics_1.updatedMapIds[var2] != -1
             && GlobalStatics_9.updatedMapsData[var2] == null) {
           GlobalStatics_9.updatedMapsData[var2] =
               GlobalStatics_10.maps
@@ -217,7 +217,7 @@ public final class DummyClass59 {
       }
 
       if (var1) {
-        if ((DummyClass8.anInt4019 != 0)) {
+        if (DummyClass8.anInt4019 != 0) {
           GlobalStatics_3.drawLoadingBox(GlobalStatics_9.concat(
               new GameString[]{GlobalStatics_10.LOADING_PLEASE_WAIT,
                   GlobalStatics_9.aClass94_2707}),
@@ -248,9 +248,9 @@ public final class DummyClass59 {
           GlobalStatics_0.collisionMaps[var12].method1496(0);
         }
 
-        for (var12 = 0; (var12 < 4); ++var12) {
+        for (var12 = 0; var12 < 4; ++var12) {
           for (var4 = 0; var4 < 104; ++var4) {
-            for (var5 = 0; (var5 < 104); ++var5) {
+            for (var5 = 0; var5 < 104; ++var5) {
               GlobalStatics_10.tileFlags[var12][var4][var5] = 0;
             }
           }
@@ -319,7 +319,7 @@ public final class DummyClass59 {
           var12 = GlobalStatics_9.currentPlane;
         }
 
-        if ((var12 < (GlobalStatics_9.currentPlane - 1))) {
+        if (var12 < GlobalStatics_9.currentPlane - 1) {
           var12 = -1 + GlobalStatics_9.currentPlane;
         }
 
@@ -356,7 +356,7 @@ public final class DummyClass59 {
 
         if (GlRenderer.useOpenGlRenderer) {
           for (var4 = 0; var4 < 13; ++var4) {
-            for (var5 = 0; (var5 < 13); ++var5) {
+            for (var5 = 0; var5 < 13; ++var5) {
               SomethingShadows.blockShadows[var4][var5]
                   .update(GlobalStatics_4.heightMap[0],
                       var4 * 8, var5 * 8);
@@ -389,9 +389,9 @@ public final class DummyClass59 {
           var4 = (GlobalStatics_2.anInt3606 - 6) / 8;
           var5 = (GlobalStatics_2.anInt3606 + 6) / 8;
 
-          for (int var8 = var4 - 1; (var8 <= (var5 + 1)); ++var8) {
-            for (int var9 = -1 + var6; (var9 <= (var7 + 1)); ++var9) {
-              if ((var8 < var4) || var8 > var5 || (var9 < var6)
+          for (int var8 = var4 - 1; var8 <= var5 + 1; ++var8) {
+            for (int var9 = -1 + var6; var9 <= var7 + 1; ++var9) {
+              if (var8 < var4 || var8 > var5 || var9 < var6
                   || var9 > var7) {
                 GlobalStatics_10.maps
                     .method2124(-124, GlobalStatics_9.concat(new GameString[]{

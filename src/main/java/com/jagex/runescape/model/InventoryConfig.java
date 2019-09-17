@@ -28,7 +28,7 @@ public final class InventoryConfig extends SubNode {
         this.method610(null, -89);
       }
 
-      if ((var2 == 2)) {
+      if (var2 == 2) {
         this.size = var1.readUnsignedShort();
       }
   }

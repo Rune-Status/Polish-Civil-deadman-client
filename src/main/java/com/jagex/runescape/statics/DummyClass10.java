@@ -46,7 +46,7 @@ public final class DummyClass10 {
           }
 
           int var6 = GlobalStatics_9.gameBuffer.readBits(1);
-          if ((var6 == 1)) {
+          if (var6 == 1) {
             DummyClass60.anIntArray441[GlobalStatics_9.anInt997++] = var1;
           }
 
@@ -66,13 +66,13 @@ public final class DummyClass10 {
           var3.method1976(var3.config.size, 2);
           var3.renderAnimationId = var3.config.renderAnimationId;
           var3.anInt2779 = var3.config.anInt1274;
-          if ((var3.anInt2779 == 0)) {
+          if (var3.anInt2779 == 0) {
             var3.rotationY = 0;
           }
 
           var3.setPosition(var3.getSize(),
               GlobalStatics_9.localPlayer.waypointsX[0] + var8,
-              var7 + GlobalStatics_9.localPlayer.waypointsY[0], (var4 == 1));
+              var7 + GlobalStatics_9.localPlayer.waypointsY[0], var4 == 1);
           if (var3.config.method1474(-1)) {
             GlobalStatics_9.method1286(var3.waypointsY[0], false, null, 0, var3,
                 var3.waypointsX[0], GlobalStatics_9.currentPlane, null);
@@ -156,18 +156,18 @@ public final class DummyClass10 {
       int y, int x,
       byte var6, int var7, int var8) {
     int opcode;
-    if ((x >= 0) && (x < 104) && y >= 0 && (y < 104)) {
+    if (x >= 0 && x < 104 && y >= 0 && y < 104) {
       if (!var2) {
         GlobalStatics_10.tileFlags[var8][x][y] = 0;
       }
 
       while (true) {
         opcode = var3.readUnsignedByte();
-        if ((opcode == 0)) {
+        if (opcode == 0) {
           if (var2) {
             GlobalStatics_4.heightMap[0][x][y] = DummyClass43.somethingHeightMap[0][x][y];
           } else {
-            if ((var8 == 0)) {
+            if (var8 == 0) {
               GlobalStatics_4.heightMap[0][x][y] =
                   8 * -DummyClass34
                       .perlinNoise(y + 556238 + var1, var0 + x + 932731);
@@ -183,13 +183,13 @@ public final class DummyClass10 {
           int var10 = var3.readUnsignedByte();
           if (var2) {
             GlobalStatics_4.heightMap[0][x][y] =
-                DummyClass43.somethingHeightMap[0][x][y] + (var10 * 8);
+                DummyClass43.somethingHeightMap[0][x][y] + var10 * 8;
           } else {
-            if ((var10 == 1)) {
+            if (var10 == 1) {
               var10 = 0;
             }
 
-            if ((var8 == 0)) {
+            if (var8 == 0) {
               GlobalStatics_4.heightMap[0][x][y] = 8 * -var10;
             } else {
               GlobalStatics_4.heightMap[var8][x][y] =
@@ -214,16 +214,16 @@ public final class DummyClass10 {
     } else {
       while (true) {
         opcode = var3.readUnsignedByte();
-        if ((opcode == 0)) {
+        if (opcode == 0) {
           break;
         }
 
-        if ((opcode == 1)) {
+        if (opcode == 1) {
           var3.readUnsignedByte();
           break;
         }
 
-        if ((opcode <= 49)) {
+        if (opcode <= 49) {
           var3.readUnsignedByte();
         }
       }
@@ -242,8 +242,8 @@ public final class DummyClass10 {
       } else {
         int var4 = 0;
 
-        for (int var5 = 0; (var5 < var3.counts.length); ++var5) {
-          if ((var2 == var3.ids[var5])) {
+        for (int var5 = 0; var5 < var3.counts.length; ++var5) {
+          if (var2 == var3.ids[var5]) {
             var4 += var3.counts[var5];
           }
         }
@@ -269,7 +269,7 @@ public final class DummyClass10 {
     DummyClass34.method995();
 
     int var1;
-    for (var1 = 0; (var1 < 4); ++var1) {
+    for (var1 = 0; var1 < 4; ++var1) {
       GlobalStatics_0.collisionMaps[var1].method1496(0);
     }
 
@@ -300,13 +300,13 @@ public final class DummyClass10 {
       DummyClass45.configs[var1] = null;
     }
 
-    for (var1 = 0; (var1 < 32768); ++var1) {
+    for (var1 = 0; var1 < 32768; ++var1) {
       GlobalStatics_8.npcs[var1] = null;
     }
 
     for (var1 = 0; var1 < 4; ++var1) {
-      for (int var2 = 0; (var2 < 104); ++var2) {
-        for (int var3 = 0; (var3 < 104); ++var3) {
+      for (int var2 = 0; var2 < 104; ++var2) {
+        for (int var3 = 0; var3 < 104; ++var3) {
           GlobalStatics_9.groundItems[var1][var2][var3] = null;
         }
       }

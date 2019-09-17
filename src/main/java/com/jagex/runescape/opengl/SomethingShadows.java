@@ -63,15 +63,15 @@ public final class SomethingShadows {
                   if (var10 - var1 >= -var2 && var10 - var1 <= var2 && var4[
                       var9 - var0 + var2][
                       var10 - var1 + var2]) {
-                    BlockShadowMap shadows = blockShadows[blockX][blockY];
+                    BlockShadowMap shadows = SomethingShadows.blockShadows[blockX][blockY];
                     if (shadows.needsUpdate) {
                       shadows
-                          .update(shadowsSprite, blockX, blockY);
+                          .update(SomethingShadows.shadowsSprite, blockX, blockY);
                       shadows.needsUpdate = false;
                     }
                     GlRenderer.GL.glPushMatrix();
                     GlRenderer.GL
-                        .glTranslatef((blockX * 1024), 0.0F, (blockY * 1024));
+                        .glTranslatef(blockX * 1024, 0.0F, blockY * 1024);
                     shadows.draw();
                     GlRenderer.GL.glPopMatrix();
                     break label42;
@@ -98,14 +98,14 @@ public final class SomethingShadows {
   public static void initializeShadows(int var0, int var1) {
     SomethingShadows.sceneWidthBlocks = var0 + 7 >> 3;
     SomethingShadows.sceneHeightBlocks = var1 + 7 >> 3;
-    shadowsSprite =
+    SomethingShadows.shadowsSprite =
         new SoftwareIndexedColorSprite(SomethingShadows.sceneWidthBlocks * 128 + 2,
             SomethingShadows.sceneHeightBlocks * 128 + 2, 0);
-    blockShadows = new BlockShadowMap[SomethingShadows.sceneWidthBlocks][SomethingShadows.sceneHeightBlocks];
+    SomethingShadows.blockShadows = new BlockShadowMap[SomethingShadows.sceneWidthBlocks][SomethingShadows.sceneHeightBlocks];
 
     for (int var2 = 0; var2 < SomethingShadows.sceneWidthBlocks; ++var2) {
       for (int var3 = 0; var3 < SomethingShadows.sceneHeightBlocks; ++var3) {
-        blockShadows[var2][var3] = new BlockShadowMap();
+        SomethingShadows.blockShadows[var2][var3] = new BlockShadowMap();
       }
     }
 
@@ -156,20 +156,20 @@ public final class SomethingShadows {
       SomethingShadows
           .method2035(var1.aByteArray2674, var0.aByteArray2674, var5, var4,
               var7, var6, var8, var9);
-      method2036(var2, var3, var7, var6);
+      SomethingShadows.method2036(var2, var3, var7, var6);
     }
   }
 
   public static void method2043() {
-    shadowsSprite = null;
-    floorShadows = null;
-    blockShadows = null;
+    SomethingShadows.shadowsSprite = null;
+    SomethingShadows.floorShadows = null;
+    SomethingShadows.blockShadows = null;
   }
 
   public static void method2045() {
-    shadowsSprite = null;
-    floorShadows = null;
-    blockShadows = null;
+    SomethingShadows.shadowsSprite = null;
+    SomethingShadows.floorShadows = null;
+    SomethingShadows.blockShadows = null;
   }
 
   public static void method2047(SoftwareIndexedColorSprite var0, int var1,
@@ -178,7 +178,7 @@ public final class SomethingShadows {
       int var4 = var1 - (var2 * GlEnvironment.anInt1314 >> 8) >> 3;
       int var5 = var3 - (var2 * GlEnvironment.anInt1315 >> 8) >> 3;
       SomethingShadows
-          .method2042(var0, shadowsSprite, var4 + 1, var5 + 1);
+          .method2042(var0, SomethingShadows.shadowsSprite, var4 + 1, var5 + 1);
     }
   }
 
@@ -189,7 +189,8 @@ public final class SomethingShadows {
     } else {
       int var4 = var1 - (var2 * GlEnvironment.anInt1314 >> 8) >> 3;
       int var5 = var3 - (var2 * GlEnvironment.anInt1315 >> 8) >> 3;
-      return method2040(var0, shadowsSprite, var4 + 1, var5 + 1);
+      return SomethingShadows
+          .method2040(var0, SomethingShadows.shadowsSprite, var4 + 1, var5 + 1);
     }
   }
 
@@ -198,7 +199,8 @@ public final class SomethingShadows {
     if (var0 != null) {
       int var4 = var1 - (var2 * GlEnvironment.anInt1314 >> 8) >> 3;
       int var5 = var3 - (var2 * GlEnvironment.anInt1315 >> 8) >> 3;
-      method2034(var0, shadowsSprite, var4 + 1, var5 + 1);
+      SomethingShadows
+          .method2034(var0, SomethingShadows.shadowsSprite, var4 + 1, var5 + 1);
     }
   }
 
@@ -210,7 +212,7 @@ public final class SomethingShadows {
 
     for (int var8 = var4; var8 <= var5; ++var8) {
       for (int var9 = var6; var9 <= var7; ++var9) {
-        blockShadows[var8][var9].needsUpdate = true;
+        SomethingShadows.blockShadows[var8][var9].needsUpdate = true;
       }
     }
 
@@ -258,9 +260,10 @@ public final class SomethingShadows {
     }
 
     if (var7 > 0 && var6 > 0) {
-      method2044(var1.aByteArray2674, var0.aByteArray2674, var5, var4,
+      SomethingShadows
+          .method2044(var1.aByteArray2674, var0.aByteArray2674, var5, var4,
               var7, var6, var8, var9);
-      method2036(var2, var3, var7, var6);
+      SomethingShadows.method2036(var2, var3, var7, var6);
     }
   }
 
@@ -367,8 +370,9 @@ public final class SomethingShadows {
     if (var6 > 0 && var5 > 0) {
       byte var9 = 8;
       var7 += (var9 - 1) * var1.width;
-      method2036(var2, var3, var6, var5);
-      return method2039(var1.aByteArray2674, var4, var6, var5, var7, var9);
+      SomethingShadows.method2036(var2, var3, var6, var5);
+      return SomethingShadows
+          .method2039(var1.aByteArray2674, var4, var6, var5, var7, var9);
     } else {
       return false;
     }

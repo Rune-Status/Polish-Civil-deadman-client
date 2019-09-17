@@ -87,7 +87,7 @@ public final class GlEnvironment {
         fogStart = minimumStart;
       }
       GlRenderer.GL.glFogf(2915, fogStart);
-      GlRenderer.GL.glFogf(2916, (fogEnd - 256));
+      GlRenderer.GL.glFogf(2916, fogEnd - 256);
       GlRenderer.GL.glFogfv(2918, GlEnvironment.fogColorRgb, 0);
     }
   }

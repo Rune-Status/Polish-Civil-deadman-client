@@ -50,7 +50,7 @@ public final class WidgetUpdate extends SubNode {
 
   public void g(byte var1 ) {
     this.subnodeKey |= Long.MIN_VALUE;
-      if ((this.b(true) == 0L)) {
+      if (this.b(true) == 0L) {
         GlobalStatics_9.aClass13_1666.addLast(this);
       }
 

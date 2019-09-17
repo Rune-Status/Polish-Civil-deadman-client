@@ -74,7 +74,7 @@ public final class GlIndexedColorSprite extends AbstractIndexedColorSprite {
     GlRenderer.bindTexture(this.textureId);
     this.initializeParameters(1);
     GlRenderer.GL.glColor4f(1.0F, 1.0F, 1.0F, alpha / 256.0F);
-    GlRenderer.GL.glTranslatef(x, (GlRenderer.viewHeight - y), 0.0F);
+    GlRenderer.GL.glTranslatef(x, GlRenderer.viewHeight - y, 0.0F);
     GlRenderer.GL.glCallList(this.listId);
     GlRenderer.GL.glLoadIdentity();
   }
@@ -85,7 +85,7 @@ public final class GlIndexedColorSprite extends AbstractIndexedColorSprite {
     y += this.offsetY;
     GlRenderer.bindTexture(this.textureId);
     this.initializeParameters(1);
-    GlRenderer.GL.glTranslatef(x, (GlRenderer.viewHeight - y), 0.0F);
+    GlRenderer.GL.glTranslatef(x, GlRenderer.viewHeight - y, 0.0F);
     GlRenderer.GL.glCallList(this.listId);
     GlRenderer.GL.glLoadIdentity();
   }
@@ -134,9 +134,9 @@ public final class GlIndexedColorSprite extends AbstractIndexedColorSprite {
     GlRenderer.GL.glTexCoord2f(0.0F, 0.0F);
     GlRenderer.GL.glVertex2f(0.0F, 0.0F);
     GlRenderer.GL.glTexCoord2f(0.0F, v);
-    GlRenderer.GL.glVertex2f(0.0F, (-this.height));
+    GlRenderer.GL.glVertex2f(0.0F, -this.height);
     GlRenderer.GL.glTexCoord2f(u, v);
-    GlRenderer.GL.glVertex2f(this.width, (-this.height));
+    GlRenderer.GL.glVertex2f(this.width, -this.height);
     GlRenderer.GL.glEnd();
     GlRenderer.GL.glEndList();
   }

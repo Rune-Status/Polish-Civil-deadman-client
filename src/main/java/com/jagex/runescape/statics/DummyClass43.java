@@ -54,7 +54,7 @@ public final class DummyClass43 {
     if (DummyClass60.sampleRate == 0) {
       throw new IllegalStateException();
     } else if (var3 >= 0 && var3 < 2) {
-      if ((var0 < 256)) {
+      if (var0 < 256) {
         var0 = 256;
       }
 
@@ -67,7 +67,7 @@ public final class DummyClass43 {
         var9.samples = new int[(!GlobalStatics_0.stereo ? 1 : 2) * 256];
         var9.bind(var2);
         var9.sampleBufferSize = (var0 & 0xfffffc00) + 1024;
-        if ((var9.sampleBufferSize > 16384)) {
+        if (var9.sampleBufferSize > 16384) {
           var9.sampleBufferSize = 16384;
         }
 
@@ -102,7 +102,7 @@ public final class DummyClass43 {
           var5.bind(var2);
           var5.sampleBufferSize = 16384;
           var5.setBufferSize(var5.sampleBufferSize);
-          if ((GlobalStatics_6.anInt3507 > 0) &&
+          if (GlobalStatics_6.anInt3507 > 0 &&
               DummyClass36.aClass15_2613 == null) {
             DummyClass36.aClass15_2613 = new AudioWorker();
             DummyClass36.aClass15_2613.aClass87_350 = var1;

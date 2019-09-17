@@ -79,7 +79,7 @@ public class GlobalStatics_7 {
   public static ObjectCache aClass93_2982 = new ObjectCache(32);
   public static GameString aClass94_1440 =
       GameStringStatics.create("Connected to update server");
-  public static GameString CONNECTED_TO_UPDATE_SERVER = aClass94_1440;
+  public static GameString CONNECTED_TO_UPDATE_SERVER = GlobalStatics_7.aClass94_1440;
   public static int anInt1439;
   public static int viewY;
   public static MouseRecorder aClass67_1443;
@@ -107,7 +107,7 @@ public class GlobalStatics_7 {
   public static int[] anIntArray1638;
   public static GameString aClass94_4055 = GameStringStatics
       .create(" has logged in)3");
-  public static GameString aClass94_4058 = aClass94_4055;
+  public static GameString aClass94_4058 = GlobalStatics_7.aClass94_4055;
   public static int anInt4054;
   public static GameString aClass94_4057 = GameStringStatics.create("Mem:");
   public static SceneSomething[] aClass25Array4060;
@@ -130,7 +130,7 @@ public class GlobalStatics_7 {
   public static int fogOffset;
   public static GameString aClass94_2960 =
       GameStringStatics.create("Loading interfaces )2 ");
-  public static GameString aClass94_2961 = aClass94_2960;
+  public static GameString aClass94_2961 = GlobalStatics_7.aClass94_2960;
   public static GameBuffer loginBuffer = new GameBuffer(5000);
   public static GameString aClass94_2945 = GameStringStatics.create(
       "Votre liste d(Wamis est pleine (X100 noms maximum pour la version gratuite et 200 pour les abonn-Bs(Y)3");
@@ -148,13 +148,13 @@ public class GlobalStatics_7 {
   }
 
   public static void method376(boolean var0) {
-    aClass93_2442 = null;
+    GlobalStatics_7.aClass93_2442 = null;
     if (var0) {
-      method378(97, (byte) -80);
+      GlobalStatics_7.method378(97, (byte) -80);
     }
 
-    aByteArrayArrayArray2452 = null;
-    aClass93_2450 = null;
+    GlobalStatics_7.aByteArrayArrayArray2452 = null;
+    GlobalStatics_7.aClass93_2450 = null;
   }
 
   public static void method377(int var0, int var1, int var2, int var3,
@@ -172,7 +172,7 @@ public class GlobalStatics_7 {
   }
 
   public static BitVariable method378(int var0, byte var1) {
-    BitVariable var2 = (BitVariable) aClass93_2450.get(var0);
+    BitVariable var2 = (BitVariable) GlobalStatics_7.aClass93_2450.get(var0);
     if (var2 == null) {
       if (var1 < 126) {
         return null;
@@ -185,7 +185,7 @@ public class GlobalStatics_7 {
           var2.method1387(new Buffer(var3));
         }
 
-        aClass93_2450.get((byte) -84, var2, var0);
+        GlobalStatics_7.aClass93_2450.get((byte) -84, var2, var0);
         return var2;
       }
     } else {
@@ -202,7 +202,7 @@ public class GlobalStatics_7 {
     if (GlobalStatics_4.anInt3631 >= 100) {
       GlobalStatics_9.anInt3995 = 64 + GlobalStatics_8.anInt30 * 128;
       DummyClass49.anInt1111 = 64 + GlobalStatics_5.anInt1904 * 128;
-      anInt2162 =
+      GlobalStatics_7.anInt2162 =
           GlobalStatics_6.method1736(GlobalStatics_9.currentPlane, var0 - 1023,
               GlobalStatics_9.anInt3995,
               DummyClass49.anInt1111) - GlobalStatics_10.anInt3414;
@@ -217,12 +217,12 @@ public class GlobalStatics_7 {
         }
       }
 
-      if ((anInt2162 < var3)) {
-        anInt2162 +=
-            (-anInt2162 + var3) * GlobalStatics_4.anInt3631 / 1000
+      if (GlobalStatics_7.anInt2162 < var3) {
+        GlobalStatics_7.anInt2162 +=
+            (-GlobalStatics_7.anInt2162 + var3) * GlobalStatics_4.anInt3631 / 1000
                 + DummyClass8.anInt4021;
-        if (anInt2162 > var3) {
-          anInt2162 = var3;
+        if (GlobalStatics_7.anInt2162 > var3) {
+          GlobalStatics_7.anInt2162 = var3;
         }
       }
 
@@ -240,24 +240,24 @@ public class GlobalStatics_7 {
         DummyClass49.anInt1111 += DummyClass8.anInt4021
             + GlobalStatics_4.anInt3631 * (var2 - DummyClass49.anInt1111)
             / 1000;
-        if ((var2 < DummyClass49.anInt1111)) {
+        if (var2 < DummyClass49.anInt1111) {
           DummyClass49.anInt1111 = var2;
         }
       }
 
-      if (var3 < anInt2162) {
-        anInt2162 -=
-            (anInt2162 - var3) * GlobalStatics_4.anInt3631 / 1000
+      if (var3 < GlobalStatics_7.anInt2162) {
+        GlobalStatics_7.anInt2162 -=
+            (GlobalStatics_7.anInt2162 - var3) * GlobalStatics_4.anInt3631 / 1000
                 + DummyClass8.anInt4021;
-        if (var3 > anInt2162) {
-          anInt2162 = var3;
+        if (var3 > GlobalStatics_7.anInt2162) {
+          GlobalStatics_7.anInt2162 = var3;
         }
       }
 
       if (DummyClass49.anInt1111 > var2) {
-        DummyClass49.anInt1111 -= DummyClass8.anInt4021 + (
+        DummyClass49.anInt1111 -= DummyClass8.anInt4021 +
             (-var2 + DummyClass49.anInt1111) * GlobalStatics_4.anInt3631
-                / 1000);
+                / 1000;
         if (var2 > DummyClass49.anInt1111) {
           DummyClass49.anInt1111 = var2;
         }
@@ -269,7 +269,7 @@ public class GlobalStatics_7 {
     var3 =
         GlobalStatics_6.method1736(GlobalStatics_9.currentPlane, 1, var1, var2)
             - GlobalStatics_9.anInt529;
-    int var5 = var3 - anInt2162;
+    int var5 = var3 - GlobalStatics_7.anInt2162;
     int var6 = -DummyClass49.anInt1111 + var2;
     int var4 = -GlobalStatics_9.anInt3995 + var1;
     int var7 = (int) Math.sqrt(var4 * var4 + var6 * var6);
@@ -278,12 +278,12 @@ public class GlobalStatics_7 {
       var8 = 128;
     }
 
-    if ((var8 > 383)) {
+    if (var8 > 383) {
       var8 = 383;
     }
 
     int var9 = (int) (-325.949 * Math.atan2(var4, var6)) & 2047;
-    if ((DummyClass17.anInt1823 < var8)) {
+    if (DummyClass17.anInt1823 < var8) {
       DummyClass17.anInt1823 += GlobalStatics_3.anInt1105
           + DummyClass8.anInt4014 * (-DummyClass17.anInt1823 + var8) / 1000;
       if (DummyClass17.anInt1823 > var8) {
@@ -295,7 +295,7 @@ public class GlobalStatics_7 {
       DummyClass17.anInt1823 -=
           (DummyClass17.anInt1823 - var8) * DummyClass8.anInt4014 / 1000
               + GlobalStatics_3.anInt1105;
-      if ((DummyClass17.anInt1823 < var8)) {
+      if (DummyClass17.anInt1823 < var8) {
         DummyClass17.anInt1823 = var8;
       }
     }
@@ -309,13 +309,13 @@ public class GlobalStatics_7 {
       var10 += 2048;
     }
 
-    if ((var10 > 0)) {
+    if (var10 > 0) {
       GlobalStatics_10.anInt3315 +=
           var10 * DummyClass8.anInt4014 / 1000 + GlobalStatics_3.anInt1105;
       GlobalStatics_10.anInt3315 &= 2047;
     }
 
-    if ((var10 < 0)) {
+    if (var10 < 0) {
       GlobalStatics_10.anInt3315 -=
           DummyClass8.anInt4014 * -var10 / 1000 + GlobalStatics_3.anInt1105;
       GlobalStatics_10.anInt3315 &= 2047;
@@ -326,11 +326,11 @@ public class GlobalStatics_7 {
       var11 -= 2048;
     }
 
-    if ((var11 < 1023)) {
+    if (var11 < 1023) {
       var11 += 2048;
     }
 
-    if (var11 < 0 && (var10 > 0) || var11 > 0 && (var10 < 0)) {
+    if (var11 < 0 && var10 > 0 || var11 > 0 && var10 < 0) {
       GlobalStatics_10.anInt3315 = var9;
     }
   }
@@ -338,28 +338,28 @@ public class GlobalStatics_7 {
   public static SoftwareIndexedColorSprite[] createSprites(byte var0, int var1,
       FileUnpacker var2) {
     return GlobalStatics_9.loadSprites(var2, var1) ?
-        (var0 <= 52 ? null : GlobalStatics_9.createSprites(0)) :
+        var0 <= 52 ? null : GlobalStatics_9.createSprites(0) :
         null;
   }
 
   public static byte[] method623(byte var0, byte[] var1) {
     if (var0 > -112) {
-      createSprites((byte) 43, -121, null);
+      GlobalStatics_7.createSprites((byte) 43, -121, null);
     }
 
     Buffer var2 = new Buffer(var1);
     int var3 = var2.readUnsignedByte();
     int var4 = var2.readInt();
-    if (var4 >= 0 && ((GlobalStatics_3.anInt1108 == 0)
-        || (GlobalStatics_3.anInt1108 >= var4))) {
-      if ((var3 == 0)) {
+    if (var4 >= 0 && (GlobalStatics_3.anInt1108 == 0
+        || GlobalStatics_3.anInt1108 >= var4)) {
+      if (var3 == 0) {
         byte[] var8 = new byte[var4];
         var2.copy(0, var4, var8);
         return var8;
       } else {
         int var5 = var2.readInt();
         if (var5 >= 0 && (GlobalStatics_3.anInt1108 == 0
-            || (GlobalStatics_3.anInt1108 >= var5))) {
+            || GlobalStatics_3.anInt1108 >= var5)) {
           byte[] var6 = new byte[var5];
           if (var3 == 1) {
             BZipDecompressor.method1640(var6, var5, var1, 9);
@@ -379,21 +379,21 @@ public class GlobalStatics_7 {
   }
 
   public static void method624(int var0) {
-    aClass94_3661 = null;
+    GlobalStatics_7.aClass94_3661 = null;
     if (var0 != -1) {
-      method623((byte) -86, null);
+      GlobalStatics_7.method623((byte) -86, null);
     }
   }
 
   public static void method1491(byte var0) {
     if (var0 > -123) {
-      method1491((byte) -27);
+      GlobalStatics_7.method1491((byte) -27);
     }
 
-    aShortArray1311 = null;
-    playerOptions = null;
-    aClass94_1301 = null;
-    aClass33_1305 = null;
+    GlobalStatics_7.aShortArray1311 = null;
+    GlobalStatics_7.playerOptions = null;
+    GlobalStatics_7.aClass94_1301 = null;
+    GlobalStatics_7.aClass33_1305 = null;
   }
 
   public static void method1493(int var0, int var1, Widget var2, int var3,
@@ -403,7 +403,7 @@ public class GlobalStatics_7 {
         GlUtils.clip(var0, var1, var2.anInt168 + var0, var2.anInt193 + var1);
       }
 
-      if ((DummyClass12.minimapMode >= 3)) {
+      if (DummyClass12.minimapMode >= 3) {
         if (GlRenderer.useOpenGlRenderer) {
           AbstractDirectColorSprite var5 = var2.method866((byte) -113, false);
           if (var5 != null) {
@@ -460,15 +460,15 @@ public class GlobalStatics_7 {
 
     int screenX0 = (xx << 9) / zz0;
     int screenY0 = (yy0 << 9) / zz0;
-    return !(zz < 50 && zz0 < 50) && (!(zz > far && zz0 > far) && (
-        !(screenX < DummyClass17.screenLowerX
-            && screenX0 < DummyClass17.screenLowerX) && (
-            !(screenX > GlobalStatics_10.screenUpperX
-                && screenX0 > GlobalStatics_10.screenUpperX) && (
-                !(screenY < DummyClass3.screenUpperY
-                    && screenY0 < DummyClass3.screenUpperY) && (
-                    screenY <= GLStatics.screenLowerY
-                        || screenY0 <= GLStatics.screenLowerY)))));
+    return !(zz < 50 && zz0 < 50) && !(zz > far && zz0 > far) && !(
+        screenX < DummyClass17.screenLowerX
+            && screenX0 < DummyClass17.screenLowerX) && !(
+        screenX > GlobalStatics_10.screenUpperX
+            && screenX0 > GlobalStatics_10.screenUpperX) && !(
+        screenY < DummyClass3.screenUpperY
+            && screenY0 < DummyClass3.screenUpperY) && (
+        screenY <= GLStatics.screenLowerY
+            || screenY0 <= GLStatics.screenLowerY);
   }
 
   public static void method1180(byte var0, Mobile var1) {
@@ -476,21 +476,21 @@ public class GlobalStatics_7 {
     assert var2 != null;
     var1.anInt2764 = var2.anInt368;
     if (var0 >= -5) {
-      anIntArray882 = null;
+      GlobalStatics_7.anIntArray882 = null;
     }
 
-    if ((var1.anInt2816 == 0)) {
+    if (var1.anInt2816 == 0) {
       var1.anInt2824 = 0;
     } else {
-      if ((var1.animationId != -1) && var1.anInt2828 == 0) {
+      if (var1.animationId != -1 && var1.anInt2828 == 0) {
         AnimationSequence var3 = GlobalStatics_8
             .method45(var1.animationId, (byte) -20);
-        if ((var1.anInt2811 > 0) && var3.anInt1866 == 0) {
+        if (var1.anInt2811 > 0 && var3.anInt1866 == 0) {
           ++var1.anInt2824;
           return;
         }
 
-        if ((var1.anInt2811 <= 0) && (var3.anInt1850 == 0)) {
+        if (var1.anInt2811 <= 0 && var3.anInt1850 == 0) {
           ++var1.anInt2824;
           return;
         }
@@ -499,11 +499,11 @@ public class GlobalStatics_7 {
       int var18 = var1.anInt2819;
       int var4 = var1.anInt2829;
       int var5 =
-          var1.waypointsX[-1 + var1.anInt2816] * 128 + (var1.getSize() * 64);
+          var1.waypointsX[-1 + var1.anInt2816] * 128 + var1.getSize() * 64;
       int var6 =
-          128 * var1.waypointsY[-1 + var1.anInt2816] + (var1.getSize() * 64);
-      if (((var5 - var18) > 256) || -var18 + var5 < -256
-          || ((var6 - var4) > 256)
+          128 * var1.waypointsY[-1 + var1.anInt2816] + var1.getSize() * 64;
+      if (var5 - var18 > 256 || -var18 + var5 < -256
+          || var6 - var4 > 256
           || var6 - var4 < -256) {
         var1.anInt2819 = var5;
         var1.anInt2829 = var6;
@@ -544,14 +544,14 @@ public class GlobalStatics_7 {
       byte var11 = 1;
       if (var7 >= -256 && var7 <= 256) {
         var8 = var2.anInt382;
-      } else if ((var7 >= 256) && var7 < 768) {
+      } else if (var7 >= 256 && var7 < 768) {
         var8 = var2.anInt364;
-      } else if ((var7 >= 767) && var7 <= -256) {
+      } else if (var7 >= 767 && var7 <= -256) {
         var8 = var2.anInt390;
       }
 
       int var9 = 4;
-      if ((var8 == -1)) {
+      if (var8 == -1) {
         var8 = var2.anInt382;
       }
 
@@ -561,8 +561,8 @@ public class GlobalStatics_7 {
       }
 
       if (var10) {
-        if ((var1.rotationY != var1.anInt2806) && (var1.anInt2772 == -1)
-            && (var1.anInt2779 != 0)) {
+        if (var1.rotationY != var1.anInt2806 && var1.anInt2772 == -1
+            && var1.anInt2779 != 0) {
           var9 = 2;
         }
 
@@ -574,7 +574,7 @@ public class GlobalStatics_7 {
           var9 = 8;
         }
 
-        if ((var1.anInt2824 > 0) && (var1.anInt2816 > 1)) {
+        if (var1.anInt2824 > 0 && var1.anInt2816 > 1) {
           var9 = 8;
           --var1.anInt2824;
         }
@@ -583,11 +583,11 @@ public class GlobalStatics_7 {
           var9 = 6;
         }
 
-        if ((var1.anInt2816 > 2)) {
+        if (var1.anInt2816 > 2) {
           var9 = 8;
         }
 
-        if ((var1.anInt2824 > 0) && var1.anInt2816 > 1) {
+        if (var1.anInt2824 > 0 && var1.anInt2816 > 1) {
           --var1.anInt2824;
           var9 = 8;
         }
@@ -597,26 +597,26 @@ public class GlobalStatics_7 {
         var9 <<= 1;
         var11 = 2;
       } else {
-        if ((var1.aByteArray2795[-1 + var1.anInt2816] == 0)) {
+        if (var1.aByteArray2795[-1 + var1.anInt2816] == 0) {
           var11 = 0;
           var9 >>= 1;
         }
       }
 
-      if ((var9 >= 8) && var2.anInt393 != -1) {
-        if ((var2.anInt389 == var1.anInt2764) && var2.anInt386 != -1) {
+      if (var9 >= 8 && var2.anInt393 != -1) {
+        if (var2.anInt389 == var1.anInt2764 && var2.anInt386 != -1) {
           var1.anInt2764 = var2.anInt386;
-        } else if (var1.anInt2764 == var2.anInt390 && (var2.anInt373 != -1)) {
+        } else if (var1.anInt2764 == var2.anInt390 && var2.anInt373 != -1) {
           var1.anInt2764 = var2.anInt373;
-        } else if ((var1.anInt2764 == var2.anInt364) && (var2.anInt375 != -1)) {
+        } else if (var1.anInt2764 == var2.anInt364 && var2.anInt375 != -1) {
           var1.anInt2764 = var2.anInt375;
         } else {
           var1.anInt2764 = var2.anInt393;
         }
-      } else if (var2.anInt398 != -1 && (var11 == 0)) {
-        if ((var2.anInt389 == var1.anInt2764) && (var2.anInt372 != -1)) {
+      } else if (var2.anInt398 != -1 && var11 == 0) {
+        if (var2.anInt389 == var1.anInt2764 && var2.anInt372 != -1) {
           var1.anInt2764 = var2.anInt372;
-        } else if ((var2.anInt390 == var1.anInt2764) && var2.anInt406 != -1) {
+        } else if (var2.anInt390 == var1.anInt2764 && var2.anInt406 != -1) {
           var1.anInt2764 = var2.anInt406;
         } else if (var2.anInt364 == var1.anInt2764 && var2.anInt379 != -1) {
           var1.anInt2764 = var2.anInt379;
@@ -627,18 +627,18 @@ public class GlobalStatics_7 {
 
       if (var2.anInt360 != -1) {
         var9 <<= 7;
-        if ((var1.anInt2816 == 1)) {
+        if (var1.anInt2816 == 1) {
           int var13 =
-              ((var5 >= var1.anInt2819) ? var5 - var1.anInt2819
+              (var5 >= var1.anInt2819 ? var5 - var1.anInt2819
                   : -var5 + var1.anInt2819) << 7;
           int var12 = var1.anInt2758 * var1.anInt2758;
           int var14 =
-              ((var6 < var1.anInt2829) ? -var6 + var1.anInt2829
+              (var6 < var1.anInt2829 ? -var6 + var1.anInt2829
                   : -var1.anInt2829 + var6) << 7;
           int var15 = var13 > var14 ? var13 : var14;
           int var16 = var2.anInt360 * 2 * var15;
-          if ((var16 >= var12)) {
-            if ((var15 < (var12 / 2))) {
+          if (var16 >= var12) {
+            if (var15 < var12 / 2) {
               var1.anInt2758 -= var2.anInt360;
               if (var1.anInt2758 < 0) {
                 var1.anInt2758 = 0;
@@ -654,7 +654,7 @@ public class GlobalStatics_7 {
           }
         } else if (var9 > var1.anInt2758) {
           var1.anInt2758 += var2.anInt360;
-          if ((var9 < var1.anInt2758)) {
+          if (var9 < var1.anInt2758) {
             var1.anInt2758 = var9;
           }
         } else if (var1.anInt2758 > 0) {
@@ -665,14 +665,14 @@ public class GlobalStatics_7 {
         }
 
         var9 = var1.anInt2758 >> 7;
-        if ((var9 < 1)) {
+        if (var9 < 1) {
           var9 = 1;
         }
       }
 
-      if ((var18 < var5)) {
+      if (var18 < var5) {
         var1.anInt2819 += var9;
-        if ((var5 < var1.anInt2819)) {
+        if (var5 < var1.anInt2819) {
           var1.anInt2819 = var5;
         }
       } else if (var18 > var5) {
@@ -696,7 +696,7 @@ public class GlobalStatics_7 {
         }
       }
 
-      if ((var1.anInt2819 == var5) && var6 == var1.anInt2829) {
+      if (var1.anInt2819 == var5 && var6 == var1.anInt2829) {
         --var1.anInt2816;
         if (var1.anInt2811 > 0) {
           --var1.anInt2811;
@@ -706,23 +706,23 @@ public class GlobalStatics_7 {
   }
 
   public static void method1181(byte var0) {
-    anIntArray882 = null;
+    GlobalStatics_7.anIntArray882 = null;
   }
 
   public static int method1184(int var0, byte var1) {
     int var2 = 91 / ((var1 - 28) / 39);
     int var3 = var0 & 63;
     int var4 = (var0 & 217) >> 6;
-    if ((var3 == 18)) {
+    if (var3 == 18) {
       if (var4 == 0) {
         return 1;
       }
 
-      if ((var4 == 1)) {
+      if (var4 == 1) {
         return 2;
       }
 
-      if ((var4 == 2)) {
+      if (var4 == 2) {
         return 4;
       }
 
@@ -730,7 +730,7 @@ public class GlobalStatics_7 {
         return 8;
       }
     } else {
-      if ((var3 == 19) || (var3 == 21)) {
+      if (var3 == 19 || var3 == 21) {
         if (var4 == 0) {
           return 16;
         }
@@ -743,7 +743,7 @@ public class GlobalStatics_7 {
           return 64;
         }
 
-        if ((var4 == 3)) {
+        if (var4 == 3) {
           return 128;
         }
       }
@@ -754,18 +754,18 @@ public class GlobalStatics_7 {
 
   public static int method1185(int var0) {
     if (var0 != 6098) {
-      method1180((byte) -98, null);
+      GlobalStatics_7.method1180((byte) -98, null);
     }
 
     return 2;
   }
 
   public static void method2187(int var0) {
-    aClass94Array2977 = null;
-    aClass93_2982 = null;
-    aClass3_Sub1_2980 = null;
+    GlobalStatics_7.aClass94Array2977 = null;
+    GlobalStatics_7.aClass93_2982 = null;
+    GlobalStatics_7.aClass3_Sub1_2980 = null;
     if (var0 != 27316) {
-      aBoolean2981 = true;
+      GlobalStatics_7.aBoolean2981 = true;
     }
   }
 
@@ -775,15 +775,15 @@ public class GlobalStatics_7 {
     int var5;
     if (!var1) {
       for (var4 = 0; var4 < 4; ++var4) {
-        for (var5 = 0; (var5 < 104); ++var5) {
-          for (int var6 = 0; (var6 < 104); ++var6) {
-            if (((1 & GlobalStatics_10.tileFlags[var4][var5][var6]) == 1)) {
+        for (var5 = 0; var5 < 104; ++var5) {
+          for (int var6 = 0; var6 < 104; ++var6) {
+            if ((1 & GlobalStatics_10.tileFlags[var4][var5][var6]) == 1) {
               int var7 = var4;
-              if (((2 & GlobalStatics_10.tileFlags[1][var5][var6]) == 2)) {
+              if ((2 & GlobalStatics_10.tileFlags[1][var5][var6]) == 2) {
                 var7 = var4 - 1;
               }
 
-              if ((var7 >= 0)) {
+              if (var7 >= 0) {
                 collisionMaps[var7].method1497(var6, 7605, var5);
               }
             }
@@ -792,11 +792,11 @@ public class GlobalStatics_7 {
       }
 
       GlobalStatics_1.anInt1463 += (int) (Math.random() * 5.0D) - 2;
-      if ((GlobalStatics_1.anInt1463 < 15)) {
+      if (GlobalStatics_1.anInt1463 < 15) {
         GlobalStatics_1.anInt1463 = -16;
       }
 
-      if ((GlobalStatics_1.anInt1463 > 16)) {
+      if (GlobalStatics_1.anInt1463 > 16) {
         GlobalStatics_1.anInt1463 = 16;
       }
 
@@ -805,7 +805,7 @@ public class GlobalStatics_7 {
         GlobalStatics_10.anInt3158 = -8;
       }
 
-      if ((GlobalStatics_10.anInt3158 > 8)) {
+      if (GlobalStatics_10.anInt3158 > 8) {
         GlobalStatics_10.anInt3158 = 8;
       }
     }
@@ -843,7 +843,7 @@ public class GlobalStatics_7 {
       if (GlRenderer.useOpenGlRenderer) {
         if (GLStatics.useBumpMaps) {
           for (lightPosX = 1; lightPosX < 103; ++lightPosX) {
-            for (lightPosY = 1; (lightPosY < 103); ++lightPosY) {
+            for (lightPosY = 1; lightPosY < 103; ++lightPosY) {
               lightMagnitude =
                   (var9[1 + lightPosY][lightPosX] >> 3) + (
                       var9[-1 + lightPosY][lightPosX] >> 2)
@@ -859,11 +859,11 @@ public class GlobalStatics_7 {
           lightPosY = (int) GlEnvironment.diffuseLight0[1];
           lightPosZ = (int) GlEnvironment.diffuseLight0[2];
           lightMagnitude = (int) Math.sqrt(
-              lightPosY * lightPosY + (lightPosX * lightPosX + (lightPosZ
-                  * lightPosZ)));
+              lightPosY * lightPosY + lightPosX * lightPosX + lightPosZ
+                  * lightPosZ);
           var14 = 1024 * lightMagnitude >> 8;
 
-          for (var15 = 1; (var15 < 103); ++var15) {
+          for (var15 = 1; var15 < 103; ++var15) {
             for (var16 = 1; var16 < 103; ++var16) {
               byte var17 = 96;
               var18 = GlobalStatics_4.heightMap[var8][var16 + 1][var15]
@@ -873,16 +873,16 @@ public class GlobalStatics_7 {
               var20 = (int) Math.sqrt(var18 * var18 + 65536 + var19 * var19);
               var21 = (var18 << 8) / var20;
               var24 = (var9[var16][1 + var15] >> 3) + (var9[var16][var15 - 1]
-                  >> 2) + (
-                  (var9[var16 - 1][var15] >> 2) + (var9[var16 + 1][var15]
+                  >> 2) + (var9[var16 - 1][var15] >> 2) + (
+                  var9[var16 + 1][var15]
                       >> 3) + (
-                      var9[var16][var15] >> 1));
+                  var9[var16][var15] >> 1);
               var22 = -65536 / var20;
               var23 = (var19 << 8) / var20;
               var44 =
-                  var17 + (lightPosZ * var23 + (lightPosX * var21 + (var22
-                      * lightPosY))) / var14;
-              var35[var16][var15] = var44 - ((int) (var24 * 1.7F));
+                  var17 + (lightPosZ * var23 + lightPosX * var21 + var22
+                      * lightPosY) / var14;
+              var35[var16][var15] = var44 - (int) (var24 * 1.7F);
             }
           }
         }
@@ -901,7 +901,7 @@ public class GlobalStatics_7 {
                 -GlobalStatics_4.heightMap[var8][lightMagnitude - 1][lightPosZ]
                     + GlobalStatics_4.heightMap[var8][lightMagnitude
                     + 1][lightPosZ];
-            var44 = (int) Math.sqrt(var15 * var15 + 65536 + (var16 * var16));
+            var44 = (int) Math.sqrt(var15 * var15 + 65536 + var16 * var16);
             var20 = (var16 << 8) / var44;
             var19 = -65536 / var44;
             var18 = (var15 << 8) / var44;
@@ -909,11 +909,11 @@ public class GlobalStatics_7 {
                 (var9[lightMagnitude][lightPosZ] >> 1) + (
                     var9[lightMagnitude][-1 + lightPosZ] >> 2)
                     + (var9[lightMagnitude + 1][lightPosZ] >> 3) + (
-                    (var9[lightMagnitude - 1][lightPosZ] >> 2) + (
-                        var9[lightMagnitude][lightPosZ + 1]
-                            >> 3));
+                    var9[lightMagnitude - 1][lightPosZ] >> 2) + (
+                    var9[lightMagnitude][lightPosZ + 1]
+                        >> 3);
             var14 =
-                var41 + (var20 * -50 + var18 * -50 + (var19 * -10)) / lightPosY;
+                var41 + (var20 * -50 + var18 * -50 + var19 * -10) / lightPosY;
             var35[lightMagnitude][lightPosZ] = var14 - var21;
           }
         }
@@ -927,7 +927,7 @@ public class GlobalStatics_7 {
         GlobalStatics_9.anIntArray2469[lightPosX] = 0;
       }
 
-      for (lightPosX = -5; (lightPosX < 104); ++lightPosX) {
+      for (lightPosX = -5; lightPosX < 104; ++lightPosX) {
         for (lightPosY = 0; lightPosY < 104; ++lightPosY) {
           lightPosZ = lightPosX + 5;
           if (lightPosZ < 104) {
@@ -978,7 +978,7 @@ public class GlobalStatics_7 {
             }
 
             var18 = var16 - 5;
-            if ((var18 >= 0)) {
+            if (var18 >= 0) {
               lightPosZ -= GlobalStatics_9.anIntArray1138[var18];
               var14 -= GlobalStatics_9.anIntArray1920[var18];
               lightPosY -= GlobalStatics_4.anIntArray1695[var18];
@@ -986,7 +986,7 @@ public class GlobalStatics_7 {
               lightMagnitude -= GlobalStatics_9.anIntArray2606[var18];
             }
 
-            if (var16 >= 0 && (var15 > 0)) {
+            if (var16 >= 0 && var15 > 0) {
               var34[lightPosX][var16] =
                   GlobalStatics_6
                       .method129(lightMagnitude / var15, 2, lightPosZ / var15,
@@ -996,14 +996,14 @@ public class GlobalStatics_7 {
         }
       }
 
-      for (lightPosX = 1; (lightPosX < 103); ++lightPosX) {
+      for (lightPosX = 1; lightPosX < 103; ++lightPosX) {
         label754:
-        for (lightPosY = 1; (lightPosY < 103); ++lightPosY) {
+        for (lightPosY = 1; lightPosY < 103; ++lightPosY) {
           if (var1 || GlobalStatics_9.method1986(66)
-              || ((2 & GlobalStatics_10.tileFlags[0][lightPosX][lightPosY])
-              != 0)
-              || ((16 & GlobalStatics_10.tileFlags[var8][lightPosX][lightPosY])
-              == 0)
+              || (2 & GlobalStatics_10.tileFlags[0][lightPosX][lightPosY])
+              != 0
+              || (16 & GlobalStatics_10.tileFlags[var8][lightPosX][lightPosY])
+              == 0
               && DummyClass18.method823(lightPosY, lightPosX, -87, var8)
               == GlobalStatics_8.plane) {
             if (DummyClass52.anInt1174 > var8) {
@@ -1014,7 +1014,7 @@ public class GlobalStatics_7 {
                 & GlobalStatics_10.floorUnderlayIds[var8][lightPosX][lightPosY];
             lightMagnitude =
                 DummyClass17.tileFloors[var8][lightPosX][lightPosY] & 255;
-            if (lightPosZ > 0 || (lightMagnitude > 0)) {
+            if (lightPosZ > 0 || lightMagnitude > 0) {
               var15 = GlobalStatics_4.heightMap[var8][lightPosX + 1][lightPosY];
               var14 = GlobalStatics_4.heightMap[var8][lightPosX][lightPosY];
               var44 = GlobalStatics_4.heightMap[var8][lightPosX][1 + lightPosY];
@@ -1029,14 +1029,14 @@ public class GlobalStatics_7 {
                   var47 = false;
                 }
 
-                if ((lightMagnitude > 0) && !GlobalStatics_9
+                if (lightMagnitude > 0 && !GlobalStatics_9
                     .method350((byte) -73,
                         lightMagnitude - 1).aBoolean2102) {
                   var47 = false;
                 }
 
-                if (var47 && var14 == var15 && (var14 == var16) && (var44
-                    == var14)) {
+                if (var47 && var14 == var15 && var14 == var16 && var44
+                    == var14) {
                   DummyClass36.anIntArrayArrayArray2609[var8][lightPosX][lightPosY] =
                       HuffmanEncoderStatics.method308(
                           DummyClass36.anIntArrayArrayArray2609[var8][lightPosX][lightPosY],
@@ -1044,14 +1044,14 @@ public class GlobalStatics_7 {
                 }
               }
 
-              if ((lightPosZ <= 0)) {
+              if (lightPosZ <= 0) {
                 var18 = -1;
                 var19 = 0;
               } else {
                 var18 = var34[lightPosX][lightPosY];
                 var20 = (var18 & 127) + var5;
-                if ((var20 >= 0)) {
-                  if ((var20 > 127)) {
+                if (var20 >= 0) {
+                  if (var20 > 127) {
                     var20 = 127;
                   }
                 } else {
@@ -1078,7 +1078,7 @@ public class GlobalStatics_7 {
                         GlobalStatics_6.repackHSL(var23, true, var18), 0, 0, 0,
                         0,
                         var19, 0);
-                if (GlRenderer.useOpenGlRenderer && var8 > 0 && (var18 != -1)
+                if (GlRenderer.useOpenGlRenderer && var8 > 0 && var18 != -1
                     && GlobalStatics_6
                     .getFloorUnderlay(-1 + lightPosZ).aBoolean1411) {
                   GlobalStatics_2
@@ -1096,19 +1096,19 @@ public class GlobalStatics_7 {
                 if (GlRenderer.useOpenGlRenderer && !var1
                     && GlobalStatics_10.anIntArrayArray3115 != null
                     && var8 == 0) {
-                  for (var24 = lightPosX - 1; (var24 <= (lightPosX + 1));
+                  for (var24 = lightPosX - 1; var24 <= lightPosX + 1;
                       ++var24) {
                     for (int var52 = -1 + lightPosY;
-                        ((1 + lightPosY) >= var52); ++var52) {
+                        1 + lightPosY >= var52; ++var52) {
                       if ((var24 != lightPosX || lightPosY != var52)
                           && var24 >= 0 && var24 < 104
-                          && var52 >= 0 && (var52 < 104)) {
+                          && var52 >= 0 && var52 < 104) {
                         int var54 =
                             DummyClass17.tileFloors[0][var24][var52] & 255;
                         if (var54 != 0) {
                           FloorOverlay var53 = GlobalStatics_9
                               .method350((byte) -25, -1 + var54);
-                          if ((var53.anInt2095 != -1)
+                          if (var53.anInt2095 != -1
                               && GLStatics.textureCache.method18(
                               var53.anInt2095, 255) == 4) {
                             GlobalStatics_10.anIntArrayArray3115[lightPosX][lightPosY] =
@@ -1140,23 +1140,23 @@ public class GlobalStatics_7 {
                         (var26.anInt2101 << 24) + var26.anInt2094;
                   } else {
                     label722:
-                    for (var27 = lightPosX - 1; (var27 <= (1 + lightPosX));
+                    for (var27 = lightPosX - 1; var27 <= 1 + lightPosX;
                         ++var27) {
-                      for (var28 = lightPosY - 1; (var28 <= (1 + lightPosY));
+                      for (var28 = lightPosY - 1; var28 <= 1 + lightPosY;
                           ++var28) {
-                        if (((lightPosX != var27) || (var28 != lightPosY))
-                            && (var27 >= 0)
-                            && var27 < 104 && var28 >= 0 && (var28 < 104)) {
+                        if ((lightPosX != var27 || var28 != lightPosY)
+                            && var27 >= 0
+                            && var27 < 104 && var28 >= 0 && var28 < 104) {
                           var29 =
                               DummyClass17.tileFloors[0][var27][var28] & 255;
-                          if ((var29 != 0)) {
+                          if (var29 != 0) {
                             FloorOverlay var30 =
                                 GlobalStatics_9
                                     .method350((byte) -14, -1 + var29);
-                            if ((var30.anInt2095 != -1)
-                                && (GLStatics.textureCache
+                            if (var30.anInt2095 != -1
+                                && GLStatics.textureCache
                                 .method18(var30.anInt2095,
-                                    255) == 4)) {
+                                    255) == 4) {
                               GlobalStatics_10.anIntArrayArray3115[lightPosX][lightPosY] =
                                   var30.anInt2094 + (var30.anInt2101 << 24);
                               break label722;
@@ -1183,8 +1183,8 @@ public class GlobalStatics_7 {
                   } else {
                     var28 = var26.anInt2103;
                     var55 = var5 + (var28 & 127);
-                    if ((var55 >= 0)) {
-                      if ((var55 > 127)) {
+                    if (var55 >= 0) {
+                      if (var55 > 127) {
                         var55 = 127;
                       }
                     } else {
@@ -1192,7 +1192,7 @@ public class GlobalStatics_7 {
                     }
 
                     var31 =
-                        (var28 & 896) + (('\ufc00' & var28 + var4) + var55);
+                        (var28 & 896) + ('\ufc00' & var28 + var4) + var55;
                     var29 = GLStatics.hslTable[com.jagex.runescape.statics.GlobalStatics_0
                         .method729((byte) -85, var31, 96)];
                   }
@@ -1204,10 +1204,10 @@ public class GlobalStatics_7 {
                           96)];
                 }
 
-                if ((var26.anInt2098 >= 0)) {
+                if (var26.anInt2098 >= 0) {
                   var55 = var26.anInt2098;
                   var31 = var5 + (var55 & 127);
-                  if ((var31 >= 0)) {
+                  if (var31 >= 0) {
                     if (var31 > 127) {
                       var31 = 127;
                     }
@@ -1216,7 +1216,7 @@ public class GlobalStatics_7 {
                   }
 
                   int var32 =
-                      (896 & var55) + (('\ufc00' & var55 + var4) + var31);
+                      (896 & var55) + ('\ufc00' & var55 + var4) + var31;
                   var29 = GLStatics.hslTable[com.jagex.runescape.statics.GlobalStatics_0
                       .method729((byte) -101, var32, 96)];
                 }
@@ -1238,9 +1238,9 @@ public class GlobalStatics_7 {
                         com.jagex.runescape.statics.GlobalStatics_0
                             .method729((byte) -93, var28, var23), var19,
                         var29);
-                if (GlRenderer.useOpenGlRenderer && (var8 > 0)) {
+                if (GlRenderer.useOpenGlRenderer && var8 > 0) {
                   GlobalStatics_2.method2037(var24, var25,
-                      (var28 == -1) || !var26.aBoolean2093,
+                      var28 == -1 || !var26.aBoolean2093,
                       var18 == -1 || !GlobalStatics_6
                           .getFloorUnderlay(-1 + lightPosZ).aBoolean1411,
                       lightPosX, lightPosY,
@@ -1265,12 +1265,12 @@ public class GlobalStatics_7 {
         float[][] var40 = new float[105][105];
         float[][] var43 = new float[105][105];
 
-        for (var14 = 1; (var14 <= 103); ++var14) {
-          for (var15 = 1; (var15 <= 103); ++var15) {
+        for (var14 = 1; var14 <= 103; ++var14) {
+          for (var15 = 1; var15 <= 103; ++var15) {
             var44 = var45[var15][var14 + 1] - var45[var15][-1 + var14];
             var16 = -var45[var15 - 1][var14] + var45[var15 + 1][var14];
             float var51 = (float) Math.sqrt(
-                var16 * var16 + 65536 + (var44 * var44));
+                var16 * var16 + 65536 + var44 * var44);
             var38[var15][var14] = var16 / var51;
             var40[var15][var14] = -256.0f / var51;
             var43[var15][var14] = var44 / var51;
@@ -1337,14 +1337,14 @@ public class GlobalStatics_7 {
     }
 
     if (var2 <= 26) {
-      method2187(86);
+      GlobalStatics_7.method2187(86);
     }
 
     GlobalStatics_10.method1764(-50, -10, -50);
     if (!var1) {
       int var36;
       for (var8 = 0; var8 < 104; ++var8) {
-        for (var36 = 0; (var36 < 104); ++var36) {
+        for (var36 = 0; var36 < 104; ++var36) {
           if ((GlobalStatics_10.tileFlags[1][var8][var36] & 2) == 2) {
             GlTexture2d.method709(var8, var36);
           }
@@ -1352,24 +1352,24 @@ public class GlobalStatics_7 {
       }
 
       for (var8 = 0; var8 < 4; ++var8) {
-        for (var36 = 0; (var36 <= 104); ++var36) {
-          for (lightPosX = 0; (lightPosX <= 104); ++lightPosX) {
+        for (var36 = 0; var36 <= 104; ++var36) {
+          for (lightPosX = 0; lightPosX <= 104; ++lightPosX) {
             short var48;
-            if (((
+            if ((
                 DummyClass36.anIntArrayArrayArray2609[var8][lightPosX][var36]
-                    & 1) != 0)) {
+                    & 1) != 0) {
               var14 = var8;
 
               for (
-                  lightPosY = var36; lightPosY > 0 && ((1
+                  lightPosY = var36; lightPosY > 0 && (1
                   & DummyClass36.anIntArrayArrayArray2609[var8][lightPosX][-1
-                  + lightPosY]) != 0); --lightPosY) {
+                  + lightPosY]) != 0; --lightPosY) {
               }
 
               lightMagnitude = var8;
 
               for (
-                  lightPosZ = var36; (lightPosZ < 104)
+                  lightPosZ = var36; lightPosZ < 104
                   &&
                   (1 & DummyClass36.anIntArrayArrayArray2609[var8][lightPosX][
                       lightPosZ + 1])
@@ -1379,10 +1379,10 @@ public class GlobalStatics_7 {
               label453:
               while (lightMagnitude > 0) {
                 for (var15 = lightPosY; var15 <= lightPosZ; ++var15) {
-                  if (((
+                  if ((
                       DummyClass36.anIntArrayArrayArray2609[lightMagnitude
                           - 1][lightPosX][var15]
-                          & 1) == 0)) {
+                          & 1) == 0) {
                     break label453;
                   }
                 }
@@ -1391,10 +1391,10 @@ public class GlobalStatics_7 {
               }
 
               label464:
-              while ((var14 < 3)) {
-                for (var15 = lightPosY; (lightPosZ >= var15); ++var15) {
-                  if (((1 & DummyClass36.anIntArrayArrayArray2609[var14
-                      + 1][lightPosX][var15]) == 0)) {
+              while (var14 < 3) {
+                for (var15 = lightPosY; lightPosZ >= var15; ++var15) {
+                  if ((1 & DummyClass36.anIntArrayArrayArray2609[var14
+                      + 1][lightPosX][var15]) == 0) {
                     break label464;
                   }
                 }
@@ -1402,8 +1402,8 @@ public class GlobalStatics_7 {
                 ++var14;
               }
 
-              var15 = (var14 - (-1 + lightMagnitude)) * (-lightPosY + (lightPosZ
-                  + 1));
+              var15 = (var14 - (-1 + lightMagnitude)) * (-lightPosY + lightPosZ
+                  + 1);
               if (var15 >= 8) {
                 var48 = 240;
                 var44 = -var48
@@ -1414,7 +1414,7 @@ public class GlobalStatics_7 {
                         128 * lightPosY,
                         lightPosZ * 128 + 128, var44, var18);
 
-                for (var19 = lightMagnitude; (var14 >= var19); ++var19) {
+                for (var19 = lightMagnitude; var14 >= var19; ++var19) {
                   for (var20 = lightPosY; lightPosZ >= var20; ++var20) {
                     DummyClass36.anIntArrayArrayArray2609[var19][lightPosX][var20] =
                         DummyClass36.anIntArrayArrayArray2609[var19][lightPosX][var20]
@@ -1429,8 +1429,8 @@ public class GlobalStatics_7 {
                 != 0) {
               for (
                   lightPosY = lightPosX; lightPosY > 0
-                  && ((DummyClass36.anIntArrayArrayArray2609[var8][-1
-                  + lightPosY][var36] & 2) != 0); --lightPosY) {
+                  && (DummyClass36.anIntArrayArrayArray2609[var8][-1
+                  + lightPosY][var36] & 2) != 0; --lightPosY) {
               }
 
               var14 = var8;
@@ -1444,7 +1444,7 @@ public class GlobalStatics_7 {
               }
 
               label503:
-              while ((lightMagnitude > 0)) {
+              while (lightMagnitude > 0) {
                 for (var15 = lightPosY; var15 <= lightPosZ; ++var15) {
                   if ((2 & DummyClass36.anIntArrayArrayArray2609[-1
                       + lightMagnitude][var15][var36]) == 0) {
@@ -1456,10 +1456,10 @@ public class GlobalStatics_7 {
               }
 
               label514:
-              while ((var14 < 3)) {
+              while (var14 < 3) {
                 for (var15 = lightPosY; var15 <= lightPosZ; ++var15) {
-                  if (((2 & DummyClass36.anIntArrayArrayArray2609[var14
-                      + 1][var15][var36]) == 0)) {
+                  if ((2 & DummyClass36.anIntArrayArrayArray2609[var14
+                      + 1][var15][var36]) == 0) {
                     break label514;
                   }
                 }
@@ -1502,15 +1502,14 @@ public class GlobalStatics_7 {
               }
 
               for (
-                  var14 = var36; (var14 < 104)
-                  && (
-                  (DummyClass36.anIntArrayArrayArray2609[var8][lightPosX][var14
-                      + 1] & 4) != 0); ++var14) {
+                  var14 = var36; var14 < 104
+                  && (DummyClass36.anIntArrayArrayArray2609[var8][lightPosX][var14
+                      + 1] & 4) != 0; ++var14) {
               }
 
               label554:
-              while ((lightPosY > 0)) {
-                for (var15 = lightMagnitude; (var15 <= var14); ++var15) {
+              while (lightPosY > 0) {
+                for (var15 = lightMagnitude; var15 <= var14; ++var15) {
                   if ((DummyClass36.anIntArrayArrayArray2609[var8][lightPosY
                       - 1][var15]
                       & 4) == 0) {
@@ -1561,8 +1560,8 @@ public class GlobalStatics_7 {
       int var11) {
     int var12;
     int var13;
-    for (var12 = 0; (var12 < 104); ++var12) {
-      for (var13 = 0; (var13 < 104); ++var13) {
+    for (var12 = 0; var12 < 104; ++var12) {
+      for (var13 = 0; var13 < 104; ++var13) {
         DummyClass51.anIntArrayArray1160[var12][var13] = 0;
         GlobalStatics_10.anIntArrayArray1373[var12][var13] = 99999999;
       }
@@ -1583,7 +1582,7 @@ public class GlobalStatics_7 {
           com.jagex.runescape.statics.GlobalStatics_0.collisionMaps[GlobalStatics_9.currentPlane].anIntArrayArray1304;
 
       int var18;
-      while ((var27 != var15)) {
+      while (var27 != var15) {
         var13 = DummyClass38.anIntArray729[var15];
         var12 = GlobalStatics_10.anIntArray3456[var15];
         var15 = 4095 & var15 + 1;
@@ -1592,8 +1591,8 @@ public class GlobalStatics_7 {
           break;
         }
 
-        if ((var9 != 0)) {
-          if (((var9 < 5) || var9 == 10)
+        if (var9 != 0) {
+          if ((var9 < 5 || var9 == 10)
               && com.jagex.runescape.statics.GlobalStatics_0.collisionMaps[GlobalStatics_9.currentPlane]
               .method1488(var4, var12,
                   false, var13, var0, var9 - 1, 1, var7)) {
@@ -1601,7 +1600,7 @@ public class GlobalStatics_7 {
             break;
           }
 
-          if ((var9 < 10)
+          if (var9 < 10
               && com.jagex.runescape.statics.GlobalStatics_0.collisionMaps[GlobalStatics_9.currentPlane]
               .method1492(var4,
                   -1 + var9, var0, var13, 1, var7, var12, 95)) {
@@ -1621,7 +1620,7 @@ public class GlobalStatics_7 {
         var18 = 1 + GlobalStatics_10.anIntArrayArray1373[var12][var13];
         if (var12 > 0
             && DummyClass51.anIntArrayArray1160[var12 - 1][var13] == 0
-            && ((19661064 & var17[var12 - 1][var13]) == 0)) {
+            && (19661064 & var17[var12 - 1][var13]) == 0) {
           GlobalStatics_10.anIntArray3456[var27] = -1 + var12;
           DummyClass38.anIntArray729[var27] = var13;
           var27 = var27 + 1 & 4095;
@@ -1632,8 +1631,8 @@ public class GlobalStatics_7 {
 
         if (var12 < 103
             && DummyClass51.anIntArrayArray1160[var12 + 1][var13] == 0
-            && ((
-            var17[var12 + 1][var13] & 19661184) == 0)) {
+            && (
+            var17[var12 + 1][var13] & 19661184) == 0) {
           GlobalStatics_10.anIntArray3456[var27] = var12 + 1;
           DummyClass38.anIntArray729[var27] = var13;
           var27 = 1 + var27 & 4095;
@@ -1642,9 +1641,9 @@ public class GlobalStatics_7 {
               + var12][var13] = var18;
         }
 
-        if ((var13 > 0) && (DummyClass51.anIntArrayArray1160[var12][
-            var13 - 1] == 0) && ((
-            19661058 & var17[var12][-1 + var13]) == 0)) {
+        if (var13 > 0 && DummyClass51.anIntArrayArray1160[var12][
+            var13 - 1] == 0 && (
+            19661058 & var17[var12][-1 + var13]) == 0) {
           GlobalStatics_10.anIntArray3456[var27] = var12;
           DummyClass38.anIntArray729[var27] = -1 + var13;
           DummyClass51.anIntArrayArray1160[var12][var13 - 1] = 1;
@@ -1654,9 +1653,9 @@ public class GlobalStatics_7 {
         }
 
         if (var13 < 103
-            && (DummyClass51.anIntArrayArray1160[var12][1 + var13] == 0)
-            && ((
-            19661088 & var17[var12][var13 + 1]) == 0)) {
+            && DummyClass51.anIntArrayArray1160[var12][1 + var13] == 0
+            && (
+            19661088 & var17[var12][var13 + 1]) == 0) {
           GlobalStatics_10.anIntArray3456[var27] = var12;
           DummyClass38.anIntArray729[var27] = var13 + 1;
           var27 = 1 + var27 & 4095;
@@ -1665,10 +1664,10 @@ public class GlobalStatics_7 {
               + 1] = var18;
         }
 
-        if ((var12 > 0) && (var13 > 0)
-            && (DummyClass51.anIntArrayArray1160[-1 + var12][var13 - 1] == 0)
-            && ((var17[var12 - 1][-1 + var13] & 19661070) == 0)
-            && ((19661064 & var17[var12 - 1][var13]) == 0)
+        if (var12 > 0 && var13 > 0
+            && DummyClass51.anIntArrayArray1160[-1 + var12][var13 - 1] == 0
+            && (var17[var12 - 1][-1 + var13] & 19661070) == 0
+            && (19661064 & var17[var12 - 1][var13]) == 0
             && (19661058 & var17[var12][-1 + var13]) == 0) {
           GlobalStatics_10.anIntArray3456[var27] = -1 + var12;
           DummyClass38.anIntArray729[var27] = var13 - 1;
@@ -1678,13 +1677,13 @@ public class GlobalStatics_7 {
               - 1] = var18;
         }
 
-        if ((var12 < 103) && var13 > 0
-            && (DummyClass51.anIntArrayArray1160[var12 + 1][
-            var13 - 1] == 0)
+        if (var12 < 103 && var13 > 0
+            && DummyClass51.anIntArrayArray1160[var12 + 1][
+            var13 - 1] == 0
             && (19661187 & var17[var12 + 1][-1 + var13]) == 0
-            && ((19661184
-            & var17[var12 + 1][var13]) == 0) && ((19661058 & var17[var12][-1
-            + var13]) == 0)) {
+            && (19661184
+            & var17[var12 + 1][var13]) == 0 && (19661058 & var17[var12][-1
+            + var13]) == 0) {
           GlobalStatics_10.anIntArray3456[var27] = var12 + 1;
           DummyClass38.anIntArray729[var27] = -1 + var13;
           var27 = 4095 & var27 + 1;
@@ -1693,12 +1692,12 @@ public class GlobalStatics_7 {
               + var13] = var18;
         }
 
-        if (var12 > 0 && (var13 < 103)
+        if (var12 > 0 && var13 < 103
             && DummyClass51.anIntArrayArray1160[var12 - 1][var13
             + 1] == 0 && (19661112 & var17[var12 - 1][1 + var13]) == 0 && (
             var17[var12 - 1][var13]
                 & 19661064) == 0
-            && ((19661088 & var17[var12][1 + var13]) == 0)) {
+            && (19661088 & var17[var12][1 + var13]) == 0) {
           GlobalStatics_10.anIntArray3456[var27] = var12 - 1;
           DummyClass38.anIntArray729[var27] = 1 + var13;
           DummyClass51.anIntArrayArray1160[-1 + var12][var13 + 1] = 6;
@@ -1707,12 +1706,12 @@ public class GlobalStatics_7 {
               + var13] = var18;
         }
 
-        if (var12 < 103 && (var13 < 103)
-            && (DummyClass51.anIntArrayArray1160[var12 + 1][1
-            + var13] == 0) && (19661280 & var17[1 + var12][var13 + 1]) == 0
-            && ((var17[1 + var12][var13] & 19661184) == 0) && ((19661088
+        if (var12 < 103 && var13 < 103
+            && DummyClass51.anIntArrayArray1160[var12 + 1][1
+            + var13] == 0 && (19661280 & var17[1 + var12][var13 + 1]) == 0
+            && (var17[1 + var12][var13] & 19661184) == 0 && (19661088
             & var17[var12][var13
-            + 1]) == 0)) {
+            + 1]) == 0) {
           GlobalStatics_10.anIntArray3456[var27] = var12 + 1;
           DummyClass38.anIntArray729[var27] = var13 + 1;
           DummyClass51.anIntArrayArray1160[var12 + 1][1 + var13] = 12;
@@ -1734,21 +1733,21 @@ public class GlobalStatics_7 {
         byte var20 = 10;
 
         for (int var21 = var0 - var20; var20 + var0 >= var21; ++var21) {
-          for (int var22 = var4 - var20; (var22 <= (var4 + var20));
+          for (int var22 = var4 - var20; var22 <= var4 + var20;
               ++var22) {
-            if ((var21 >= 0) && (var22 >= 0) && var21 < 104 && (var22 < 104)
+            if (var21 >= 0 && var22 >= 0 && var21 < 104 && var22 < 104
                 && GlobalStatics_10.anIntArrayArray1373[var21][var22]
                 < 100) {
               int var24 = 0;
-              if ((var22 < var4)) {
+              if (var22 < var4) {
                 var24 = var4 - var22;
               } else if (var6 + var4 - 1 < var22) {
-                var24 = 1 + (-var4 - var6) + var22;
+                var24 = 1 + -var4 - var6 + var22;
               }
 
               int var23 = 0;
-              if ((var21 >= var0)) {
-                if (var21 > (-1 + var11 + var0)) {
+              if (var21 >= var0) {
+                if (var21 > -1 + var11 + var0) {
                   var23 = 1 - var11 - (var0 - var21);
                 }
               } else {
@@ -1756,7 +1755,7 @@ public class GlobalStatics_7 {
               }
 
               int var25 = var24 * var24 + var23 * var23;
-              if ((var25 < var18) || (var25 == var18)
+              if (var25 < var18 || var25 == var18
                   && GlobalStatics_10.anIntArrayArray1373[var21][var22]
                   < var19) {
                 var13 = var22;
@@ -1768,11 +1767,11 @@ public class GlobalStatics_7 {
           }
         }
 
-        if ((var18 == 1000)) {
+        if (var18 == 1000) {
           return false;
         }
 
-        if (var2 == var12 && (var13 == var10)) {
+        if (var2 == var12 && var13 == var10) {
           return false;
         }
 
@@ -1794,7 +1793,7 @@ public class GlobalStatics_7 {
           DummyClass38.anIntArray729[var15++] = var13;
         }
 
-        if (((var18 & 2) == 0)) {
+        if ((var18 & 2) == 0) {
           if ((8 & var18) != 0) {
             --var12;
           }
@@ -1802,7 +1801,7 @@ public class GlobalStatics_7 {
           ++var12;
         }
 
-        if (((1 & var18) == 0)) {
+        if ((1 & var18) == 0) {
           if ((4 & var18) != 0) {
             --var13;
           }
@@ -1811,11 +1810,11 @@ public class GlobalStatics_7 {
         }
       }
 
-      if ((var15 > 0)) {
+      if (var15 > 0) {
         GlobalStatics_9.method299(100, var15, var5);
         return true;
       } else {
-        return (var5 != 1);
+        return var5 != 1;
       }
     } else {
       return false;
@@ -1824,7 +1823,8 @@ public class GlobalStatics_7 {
 
   public static void method2192(int var0) {
     if (var0 > -26) {
-      method2191(-54, -79, 96, 36, -65, 4, -120, 29, false, -60, -74, 43);
+      GlobalStatics_7
+          .method2191(-54, -79, 96, 36, -65, 4, -120, 29, false, -60, -74, 43);
     }
 
     DummyClass14.aClass93_1955.method1523((byte) -110);
@@ -1833,14 +1833,14 @@ public class GlobalStatics_7 {
   public static void method1642(int var0, GameString var1) {
     if (GlobalStatics_6.aClass3_Sub19Array3694 != null) {
       if (var0 != 3803) {
-        aClass67_1443 = null;
+        GlobalStatics_7.aClass67_1443 = null;
       }
 
       long var3 = var1.toBase37();
       int var2 = 0;
       if (var3 != 0L) {
         while (GlobalStatics_6.aClass3_Sub19Array3694.length > var2
-            && (GlobalStatics_6.aClass3_Sub19Array3694[var2].key != var3)) {
+            && GlobalStatics_6.aClass3_Sub19Array3694[var2].key != var3) {
           ++var2;
         }
 
@@ -1857,7 +1857,7 @@ public class GlobalStatics_7 {
 
   public static int method1643(int var0, boolean var1, int var2, int var3) {
     if (var0 != 10131) {
-      method1644((byte) 95);
+      GlobalStatics_7.method1644((byte) 95);
     }
 
     Inventory var4 = (Inventory) GlobalStatics_2.aClass130_2220.get(var2);
@@ -1889,17 +1889,17 @@ public class GlobalStatics_7 {
   }
 
   public static void method1644(byte var0) {
-    aClass67_1443 = null;
+    GlobalStatics_7.aClass67_1443 = null;
 
-    CONNECTED_TO_UPDATE_SERVER = null;
-    aClass94_1440 = null;
+    GlobalStatics_7.CONNECTED_TO_UPDATE_SERVER = null;
+    GlobalStatics_7.aClass94_1440 = null;
   }
 
   public static void printError(int var0, String var1) {
     System.out.println("Error: " + GlobalStatics_10
         .createIndexedColorSprite("%0a", "\n", 105, var1));
     if (var0 < 33) {
-      aClass94_2163 = null;
+      GlobalStatics_7.aClass94_2163 = null;
     }
 
   }
@@ -1907,7 +1907,7 @@ public class GlobalStatics_7 {
   public static Widget getWidget(byte var0, int var1) {
     int var2 = var1 >> 16;
     if (var0 < 108) {
-      getWidget((byte) 87, 19);
+      GlobalStatics_7.getWidget((byte) 87, 19);
     }
 
     int var3 = '\uffff' & var1;
@@ -1923,12 +1923,12 @@ public class GlobalStatics_7 {
   }
 
   public static void method833(byte var0) {
-    aShortArray2167 = null;
-    animationFrames = null;
-    aClass94_2164 = null;
-    aClass94_2168 = null;
+    GlobalStatics_7.aShortArray2167 = null;
+    GlobalStatics_7.animationFrames = null;
+    GlobalStatics_7.aClass94_2164 = null;
+    GlobalStatics_7.aClass94_2168 = null;
     int var1 = 124 / ((var0 - 28) / 41);
-    aClass94_2163 = null;
+    GlobalStatics_7.aClass94_2163 = null;
   }
 
   public static void method834(byte var0) {
@@ -1936,7 +1936,7 @@ public class GlobalStatics_7 {
     System.gc();
     DummyClass26.setState(25, 5);
     if (var0 >= -80) {
-      lastPacketId1 = -89;
+      GlobalStatics_7.lastPacketId1 = -89;
     }
   }
 
@@ -1955,41 +1955,41 @@ public class GlobalStatics_7 {
   }
 
   public static void method1731(int var0) {
-    anIntArray1638 = null;
-    aClass94_1637 = null;
-    aClass94_1636 = null;
-    aLongArray1631 = null;
+    GlobalStatics_7.anIntArray1638 = null;
+    GlobalStatics_7.aClass94_1637 = null;
+    GlobalStatics_7.aClass94_1636 = null;
+    GlobalStatics_7.aLongArray1631 = null;
     if (var0 != 12881) {
-      method1732(null, (byte) -74, -125);
+      GlobalStatics_7.method1732(null, (byte) -74, -125);
     }
   }
 
   public static GameString method1732(Widget var0, byte var1, int var2) {
     if (var1 >= -8) {
-      anIntArray1638 = null;
+      GlobalStatics_7.anIntArray1638 = null;
     }
 
     return
         !GlobalStatics_8.method44(var0).method92(var2, (byte) -110)
             && var0.anObjectArray314 == null ?
             null :
-            (var0.aClass94Array171 != null
+            var0.aClass94Array171 != null
                 && var0.aClass94Array171.length > var2
                 && var0.aClass94Array171[var2] != null
-                && (var0.aClass94Array171[var2].method1564(1).getLength() != 0)
+                && var0.aClass94Array171[var2].method1564(1).getLength() != 0
                 ?
                 var0.aClass94Array171[var2] :
-                (!GlobalStatics_9.aBoolean1040 ?
+                !GlobalStatics_9.aBoolean1040 ?
                     null :
                     GlobalStatics_9.concat(
                         new GameString[]{GlobalStatics_6.aClass94_1645,
-                            GlobalStatics_9.toString(var2)})));
+                            GlobalStatics_9.toString(var2)});
   }
 
   public static boolean hasKeyInput() {
     Keyboard var1 = GlobalStatics_10.keyboard;
     synchronized (var1) {
-      if ((DummyClass21.anInt1762 == GlobalStatics_9.anInt3620)) {
+      if (DummyClass21.anInt1762 == GlobalStatics_9.anInt3620) {
         return false;
       } else {
         GlobalStatics_9.anInt3624 = GlobalStatics_4.keyQueue[GlobalStatics_9.anInt3620];
@@ -2001,23 +2001,23 @@ public class GlobalStatics_7 {
   }
 
   public static void method592(byte var0) {
-    aClass25Array4060 = null;
-    aClass94_4057 = null;
+    GlobalStatics_7.aClass25Array4060 = null;
+    GlobalStatics_7.aClass94_4057 = null;
     if (var0 > 33) {
-      aClass94_4058 = null;
-      aClass94_4055 = null;
+      GlobalStatics_7.aClass94_4058 = null;
+      GlobalStatics_7.aClass94_4055 = null;
     }
   }
 
   public static void method593(Frame var0, boolean var1, SignLink var2) {
     if (!var1) {
-      method594(110, 94);
+      GlobalStatics_7.method594(110, 94);
     }
 
     while (true) {
       SignLinkRequest var3 = var2.method1436(var0, 86);
 
-      while ((var3.status == 0)) {
+      while (var3.status == 0) {
         GlobalStatics_10.sleep(10L);
       }
 
@@ -2033,7 +2033,7 @@ public class GlobalStatics_7 {
 
   public static void method594(int var0, int var1) {
     if (var0 < 83) {
-      method592((byte) 122);
+      GlobalStatics_7.method592((byte) 122);
     }
 
     GlobalStatics_10.aClass93_1683.method1522(-127, var1);
@@ -2041,7 +2041,7 @@ public class GlobalStatics_7 {
 
   public static void method595(int var0, int var1) {
     if (var1 > 108) {
-      aClass93_684.method1522(-128, var0);
+      GlobalStatics_7.aClass93_684.method1522(-128, var0);
       DummyClass5.aClass93_2984.method1522(-125, var0);
     }
   }
@@ -2050,7 +2050,7 @@ public class GlobalStatics_7 {
       FileUnpacker var3,
       FileUnpacker var4) {
     if (var2 < 123) {
-      aBoolean1080 = false;
+      GlobalStatics_7.aBoolean1080 = false;
     }
 
     return !GlobalStatics_9.loadSprites(var3, var0, var1, -30901) ?
@@ -2061,9 +2061,9 @@ public class GlobalStatics_7 {
   public static void rebuildScene(int plane, int var1, int var2, int y,
       boolean var4, int x,
       boolean var6) {
-    if (GlobalStatics_2.anInt3606 != var2 || (var1
-        != GlobalStatics_10.anInt2294)
-        || (GlobalStatics_8.plane != plane) && !GlobalStatics_9
+    if (GlobalStatics_2.anInt3606 != var2 || var1
+        != GlobalStatics_10.anInt2294
+        || GlobalStatics_8.plane != plane && !GlobalStatics_9
         .method1986(45)) {
       GlobalStatics_2.anInt3606 = var2;
       GlobalStatics_10.anInt2294 = var1;
@@ -2098,14 +2098,14 @@ public class GlobalStatics_7 {
       if (var4) {
         DummyClass6.anInt2046 = 0;
 
-        for (var11 = 0; (var11 < 32768); ++var11) {
+        for (var11 = 0; var11 < 32768; ++var11) {
           var12 = GlobalStatics_8.npcs[var11];
           if (var12 != null) {
             var12.anInt2819 -= 128 * var9;
             var12.anInt2829 -= 128 * var10;
-            if ((var12.anInt2819 >= 0) && (var12.anInt2819 <= 13184)
-                && (var12.anInt2829 >= 0)
-                && (var12.anInt2829 <= 13184)) {
+            if (var12.anInt2819 >= 0 && var12.anInt2819 <= 13184
+                && var12.anInt2829 >= 0
+                && var12.anInt2829 <= 13184) {
               for (var13 = 0; var13 < 10; ++var13) {
                 var12.waypointsX[var13] -= var9;
                 var12.waypointsY[var13] -= var10;
@@ -2154,26 +2154,26 @@ public class GlobalStatics_7 {
       byte var16 = 1;
       byte var15 = 104;
       byte var26 = 1;
-      if ((var10 < 0)) {
+      if (var10 < 0) {
         var16 = -1;
         var15 = -1;
         var14 = 103;
       }
 
-      if ((var9 < 0)) {
+      if (var9 < 0) {
         var26 = -1;
         var24 = 103;
         var25 = -1;
       }
 
-      for (int var17 = var24; (var17 != var25); var17 += var26) {
-        for (int var18 = var14; (var15 != var18); var18 += var16) {
+      for (int var17 = var24; var17 != var25; var17 += var26) {
+        for (int var18 = var14; var15 != var18; var18 += var16) {
           int var19 = var9 + var17;
           int var20 = var18 + var10;
 
           for (int var21 = 0; var21 < 4; ++var21) {
-            if ((var19 >= 0)
-                && (var20 >= 0) && (var19 < 104) && (var20 < 104)) {
+            if (var19 >= 0
+                && var20 >= 0 && var19 < 104 && var20 < 104) {
               GlobalStatics_9.groundItems[var21][var17][var18] =
                   GlobalStatics_9.groundItems[var21][var19][var20];
             } else {
@@ -2190,7 +2190,7 @@ public class GlobalStatics_7 {
               .getNext()) {
         var27.anInt2248 -= var10;
         var27.anInt2264 -= var9;
-        if (var27.anInt2264 < 0 || (var27.anInt2248 < 0)
+        if (var27.anInt2264 < 0 || var27.anInt2248 < 0
             || var27.anInt2264 >= 104
             || var27.anInt2248 >= 104) {
           var27.unlinkNode();
@@ -2261,23 +2261,23 @@ public class GlobalStatics_7 {
     } else {
       while (true) {
         int var3 = var1.indexOf(GlobalStatics_9.aClass94_331);
-        if ((var3 == -1)) {
+        if (var3 == -1) {
           while (true) {
             var3 = var1.indexOf(GlobalStatics_9.aClass94_2080);
             if (var3 == -1) {
               while (true) {
-                var3 = var1.indexOf(aClass94_1301);
-                if ((var3 == -1)) {
+                var3 = var1.indexOf(GlobalStatics_7.aClass94_1301);
+                if (var3 == -1) {
                   while (true) {
                     var3 = var1.indexOf(GlobalStatics_9.aClass94_852);
-                    if ((var3 == -1)) {
+                    if (var3 == -1) {
                       while (true) {
                         var3 = var1.indexOf(GlobalStatics_10.aClass94_3418);
-                        if ((var3 == -1)) {
+                        if (var3 == -1) {
                           while (true) {
                             var3 = var1
                                 .indexOf(GlobalStatics_9.aClass94_1051);
-                            if ((var3 == -1)) {
+                            if (var3 == -1) {
                               return var1;
                             }
 
@@ -2353,10 +2353,10 @@ public class GlobalStatics_7 {
   }
 
   public static void method1306(int var0) {
-    aClass94_1089 = null;
+    GlobalStatics_7.aClass94_1089 = null;
     if (var0 == -16222) {
-      aClass94_1085 = null;
-      anIntArray1083 = null;
+      GlobalStatics_7.aClass94_1085 = null;
+      GlobalStatics_7.anIntArray1083 = null;
     }
   }
 
@@ -2368,7 +2368,7 @@ public class GlobalStatics_7 {
       if (command.method1531(GlobalStatics_10.COMMAND_GC)) {
         GlobalStatics_10.method246(8);
 
-        for (var2 = 0; (var2 < 10); ++var2) {
+        for (var2 = 0; var2 < 10; ++var2) {
           System.gc();
         }
 
@@ -2377,7 +2377,7 @@ public class GlobalStatics_7 {
         GlobalStatics_8
             .printMessage(null, 0, GlobalStatics_9.concat(new GameString[]{
                 GlobalStatics_9.aClass94_3360, GlobalStatics_9.toString(var3),
-                aClass94_2951
+                GlobalStatics_7.aClass94_2951
             }), -1);
       }
 
@@ -2394,7 +2394,7 @@ public class GlobalStatics_7 {
         GlobalStatics_8
             .printMessage(null, 0, GlobalStatics_9.concat(new GameString[]{
                 DummyClass25.aClass94_1625, GlobalStatics_9.toString(var3),
-                aClass94_2951
+                GlobalStatics_7.aClass94_2951
             }), -1);
         GlobalStatics_10.method90(1);
         GlobalStatics_10.method246(8);
@@ -2407,7 +2407,7 @@ public class GlobalStatics_7 {
         GlobalStatics_8
             .printMessage(null, 0, GlobalStatics_9.concat(new GameString[]{
                 DummyClass12.aClass94_2033, GlobalStatics_9.toString(var3),
-                aClass94_2951
+                GlobalStatics_7.aClass94_2951
             }), -1);
       }
 
@@ -2478,8 +2478,8 @@ public class GlobalStatics_7 {
       }
 
       if (command.method1531(GlobalStatics_10.COMMAND_NOCLIP)) {
-        for (var2 = 0; (var2 < 4); ++var2) {
-          for (var3 = 1; (var3 < 103); ++var3) {
+        for (var2 = 0; var2 < 4; ++var2) {
+          for (var3 = 1; var3 < 103; ++var3) {
             for (var4 = 1; var4 < 103; ++var4) {
               com.jagex.runescape.statics.GlobalStatics_0.collisionMaps[var2].anIntArrayArray1304[var3][var4] = 0;
             }
@@ -2543,7 +2543,7 @@ public class GlobalStatics_7 {
     GlobalStatics_9.secureBuffer.writePacket(44);
     GlobalStatics_9.secureBuffer.writeByte(command.getLength() - 2 + 1);
     GlobalStatics_9.secureBuffer.writeString(command.substring(2));
-    ++anInt1633;
+    ++GlobalStatics_7.anInt1633;
   }
 
   public static void method1047(int var0, int var1, int var2, boolean var3,
@@ -2559,10 +2559,10 @@ public class GlobalStatics_7 {
         GlobalStatics_10.aClass44_Sub1Array3201[var2] = var9;
 
         for (int var10 = var4; var10 < var2; ++var10) {
-          if ((com.jagex.runescape.statics.GlobalStatics_0
+          if (GlobalStatics_0
               .method1535(var9, GlobalStatics_10.aClass44_Sub1Array3201[var10],
                   5730,
-                  var0, var1, var3, var5) <= 0)) {
+                  var0, var1, var3, var5) <= 0) {
             GameWorld var11 = GlobalStatics_10.aClass44_Sub1Array3201[var10];
             GlobalStatics_10.aClass44_Sub1Array3201[var10] =
                 GlobalStatics_10.aClass44_Sub1Array3201[var8];
@@ -2573,8 +2573,9 @@ public class GlobalStatics_7 {
         GlobalStatics_10.aClass44_Sub1Array3201[var2] =
             GlobalStatics_10.aClass44_Sub1Array3201[var8];
         GlobalStatics_10.aClass44_Sub1Array3201[var8] = var9;
-        method1047(var0, var1, -1 + var8, var3, var4, var5, false);
-        method1047(var0, var1, var2, var3, var8 + 1, var5, false);
+        GlobalStatics_7
+            .method1047(var0, var1, -1 + var8, var3, var4, var5, false);
+        GlobalStatics_7.method1047(var0, var1, var2, var3, var8 + 1, var5, false);
       }
 
     }
@@ -2584,10 +2585,10 @@ public class GlobalStatics_7 {
       int var4, int var5, int var6,
       int var7) {
     if (var5 > -15) {
-      anInt688 = -64;
+      GlobalStatics_7.anInt688 = -64;
     }
 
-    if ((var1 >= 1) && var4 >= 1 && var1 <= 102 && var4 <= 102) {
+    if (var1 >= 1 && var4 >= 1 && var1 <= 102 && var4 <= 102) {
       int var8;
       if (!GlobalStatics_9.method1986(41) &&
           (2 & GlobalStatics_10.tileFlags[0][var1][var4]) == 0) {
@@ -2602,8 +2603,8 @@ public class GlobalStatics_7 {
       }
 
       var8 = var2;
-      if ((var2 < 3) && ((2 & GlobalStatics_10.tileFlags[1][var1][var4])
-          == 2)) {
+      if (var2 < 3 && (2 & GlobalStatics_10.tileFlags[1][var1][var4])
+          == 2) {
         var8 = var2 + 1;
       }
 
@@ -2622,8 +2623,8 @@ public class GlobalStatics_7 {
   }
 
   public static void method1049(boolean var0) {
-    anIntArray686 = null;
-    aClass93_684 = null;
+    GlobalStatics_7.anIntArray686 = null;
+    GlobalStatics_7.aClass93_684 = null;
   }
 
   public static void method1053(byte var0, FileUnpacker var1) {
@@ -2634,7 +2635,7 @@ public class GlobalStatics_7 {
   public static void method2100(byte var0) {
     GlobalStatics_9.gameBuffer.method807((byte) 118);
     int var1 = GlobalStatics_9.gameBuffer.readBits(1);
-    if ((var1 != 0)) {
+    if (var1 != 0) {
       int var2 = GlobalStatics_9.gameBuffer.readBits(2);
       if (var2 == 0) {
         DummyClass60.anIntArray441[GlobalStatics_9.anInt997++] = 2047;
@@ -2642,22 +2643,22 @@ public class GlobalStatics_7 {
         int var3 = -112 / ((var0 - 26) / 40);
         int var4;
         int var5;
-        if ((var2 == 1)) {
+        if (var2 == 1) {
           var4 = GlobalStatics_9.gameBuffer.readBits(3);
           GlobalStatics_9.localPlayer.method1968(1, (byte) -128, var4);
           var5 = GlobalStatics_9.gameBuffer.readBits(1);
-          if ((var5 == 1)) {
+          if (var5 == 1) {
             DummyClass60.anIntArray441[GlobalStatics_9.anInt997++] = 2047;
           }
 
         } else if (var2 != 2) {
-          if ((var2 == 3)) {
+          if (var2 == 3) {
             var4 = GlobalStatics_9.gameBuffer.readBits(7);
             var5 = GlobalStatics_9.gameBuffer.readBits(1);
             GlobalStatics_9.currentPlane = GlobalStatics_9.gameBuffer
                 .readBits(2);
             int var6 = GlobalStatics_9.gameBuffer.readBits(1);
-            if ((var6 == 1)) {
+            if (var6 == 1) {
               DummyClass60.anIntArray441[GlobalStatics_9.anInt997++] = 2047;
             }
 
@@ -2689,7 +2690,7 @@ public class GlobalStatics_7 {
   public static void method2104(Widget var0, boolean var1, int var2) {
     int var3 = 57 % ((var2 + 58) / 47);
     int var4 = var0.anInt240 != 0 ? var0.anInt240 : var0.anInt168;
-    int var5 = (var0.anInt252 != 0) ? var0.anInt252 : var0.anInt193;
+    int var5 = var0.anInt252 != 0 ? var0.anInt252 : var0.anInt193;
     GlobalStatics_5.method2183(var0.anInt279, var1, var4, 235, var5,
         GlobalStatics_9.aClass11ArrayArray1834[var0.anInt279 >> 16]);
     if (var0.aClass11Array262 != null) {
@@ -2705,14 +2706,14 @@ public class GlobalStatics_7 {
   }
 
   public static void method2105(boolean var0) {
-    aClass94_2959 = null;
-    aClass94_2951 = null;
+    GlobalStatics_7.aClass94_2959 = null;
+    GlobalStatics_7.aClass94_2951 = null;
     if (!var0) {
-      anIntArray2952 = null;
-      loginBuffer = null;
-      aClass94_2960 = null;
-      aClass94_2961 = null;
-      aClass94_2945 = null;
+      GlobalStatics_7.anIntArray2952 = null;
+      GlobalStatics_7.loginBuffer = null;
+      GlobalStatics_7.aClass94_2960 = null;
+      GlobalStatics_7.aClass94_2961 = null;
+      GlobalStatics_7.aClass94_2945 = null;
     }
   }
 }

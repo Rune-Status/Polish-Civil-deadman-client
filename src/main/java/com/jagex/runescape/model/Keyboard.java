@@ -18,9 +18,9 @@ public final class Keyboard implements KeyListener, FocusListener {
     public void keyTyped(KeyEvent var1) {
     if (GlobalStatics_10.keyboard != null) {
         int var2 = GlobalStatics_6.method1386(true, var1);
-        if ((var2 >= 0)) {
+        if (var2 >= 0) {
           int var3 = 1 + GlobalStatics_9.anInt491 & 127;
-          if ((GlobalStatics_9.anInt3620 != var3)) {
+          if (GlobalStatics_9.anInt3620 != var3) {
             GlobalStatics_4.keyQueue[GlobalStatics_9.anInt491] = -1;
             GlobalStatics_5.otherKeyQueue[GlobalStatics_9.anInt491] = var2;
             GlobalStatics_9.anInt491 = var3;
@@ -44,7 +44,7 @@ public final class Keyboard implements KeyListener, FocusListener {
           var2 = -1;
         }
 
-        if ((GlobalStatics_3.anInt2384 >= 0) && (var2 >= 0)) {
+        if (GlobalStatics_3.anInt2384 >= 0 && var2 >= 0) {
           GlobalStatics_7.anIntArray2952[GlobalStatics_3.anInt2384] = var2;
           GlobalStatics_3.anInt2384 = 127 & GlobalStatics_3.anInt2384 + 1;
           if (GlobalStatics_3.anInt2384 == GlobalStatics_9.anInt1744) {
@@ -53,7 +53,7 @@ public final class Keyboard implements KeyListener, FocusListener {
         }
 
         int var3;
-        if ((var2 >= 0)) {
+        if (var2 >= 0) {
           var3 = 127 & 1 + GlobalStatics_9.anInt491;
           if (var3 != GlobalStatics_9.anInt3620) {
             GlobalStatics_4.keyQueue[GlobalStatics_9.anInt491] = var2;
@@ -63,7 +63,7 @@ public final class Keyboard implements KeyListener, FocusListener {
         }
 
         var3 = var1.getModifiers();
-        if (((var3 & 10) != 0) || var2 == 85 || (var2 == 10)) {
+        if ((var3 & 10) != 0 || var2 == 85 || var2 == 10) {
           var1.consume();
         }
       }
@@ -79,10 +79,10 @@ public final class Keyboard implements KeyListener, FocusListener {
           var2 = -1;
         }
 
-        if (GlobalStatics_3.anInt2384 >= 0 && (var2 >= 0)) {
+        if (GlobalStatics_3.anInt2384 >= 0 && var2 >= 0) {
           GlobalStatics_7.anIntArray2952[GlobalStatics_3.anInt2384] = ~var2;
           GlobalStatics_3.anInt2384 = 127 & 1 + GlobalStatics_3.anInt2384;
-          if ((GlobalStatics_9.anInt1744 == GlobalStatics_3.anInt2384)) {
+          if (GlobalStatics_9.anInt1744 == GlobalStatics_3.anInt2384) {
             GlobalStatics_3.anInt2384 = -1;
           }
         }

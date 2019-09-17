@@ -45,11 +45,11 @@ public final class DummyClass37 {
       GlobalStatics_9.gameBuffer.method807((byte) 112);
 
       int var18;
-      for (var6 = 0; (var6 < 4); ++var6) {
+      for (var6 = 0; var6 < 4; ++var6) {
         for (var7 = 0; var7 < 13; ++var7) {
           for (var18 = 0; var18 < 13; ++var18) {
             regionX = GlobalStatics_9.gameBuffer.readBits(1);
-            if ((regionX == 1)) {
+            if (regionX == 1) {
               GlobalStatics_8.anIntArrayArrayArray1497[var6][var7][var18] =
                   GlobalStatics_9.gameBuffer.readBits(26);
             } else {
@@ -65,8 +65,8 @@ public final class DummyClass37 {
               / 16;
       GlobalStatics_6.landscapeEncryptionKeys = new int[var6][4];
 
-      for (var7 = 0; (var7 < var6); ++var7) {
-        for (var18 = 0; (var18 < 4); ++var18) {
+      for (var7 = 0; var7 < var6; ++var7) {
+        for (var18 = 0; var18 < 4; ++var18) {
           GlobalStatics_6.landscapeEncryptionKeys[var7][var18] =
               GlobalStatics_9.gameBuffer.readInt((byte) -124);
         }
@@ -86,18 +86,18 @@ public final class DummyClass37 {
       GlobalStatics_9.updatedMapsData = new byte[var6][];
       var6 = 0;
 
-      for (var18 = 0; (var18 < 4); ++var18) {
+      for (var18 = 0; var18 < 4; ++var18) {
         for (regionX = 0; regionX < 13; ++regionX) {
-          for (regionY = 0; (regionY < 13); ++regionY) {
+          for (regionY = 0; regionY < 13; ++regionY) {
             regionHash = GlobalStatics_8.anIntArrayArrayArray1497[var18][regionX][regionY];
-            if ((regionHash != -1)) {
+            if (regionHash != -1) {
               int var12 = regionHash >> 14 & 1023;
               int var13 = (regionHash & 16378) >> 3;
               int var14 = var13 / 8 + (var12 / 8 << 8);
 
               int var15;
-              for (var15 = 0; (var15 < var6); ++var15) {
-                if ((var14 == GlobalStatics_6.regionHashes[var15])) {
+              for (var15 = 0; var15 < var6; ++var15) {
+                if (var14 == GlobalStatics_6.regionHashes[var15]) {
                   var14 = -1;
                   break;
                 }
@@ -179,7 +179,7 @@ public final class DummyClass37 {
       GlobalStatics_6.updatedLandscapeIds = new int[count];
       count = 0;
       boolean var8 = false;
-      if ((var5 / 8 == 48 || ((var5 / 8) == 49)) && var6 / 8 == 48) {
+      if ((var5 / 8 == 48 || var5 / 8 == 49) && var6 / 8 == 48) {
         var8 = true;
       }
 
@@ -188,12 +188,12 @@ public final class DummyClass37 {
       }
 
       for (regionX = (var5 - 6) / 8; (6 + var5) / 8 >= regionX; ++regionX) {
-        for (regionY = (-6 + var6) / 8; (((6 + var6) / 8) >= regionY);
+        for (regionY = (-6 + var6) / 8; (6 + var6) / 8 >= regionY;
             ++regionY) {
           regionHash = (regionX << 8) + regionY;
           if (var8 && (regionY == 49 || regionY == 149 || regionY == 147
-              || (regionX == 50)
-              || (regionX == 49) && (regionY == 47))) {
+              || regionX == 50
+              || regionX == 49 && regionY == 47)) {
             GlobalStatics_6.regionHashes[count] = regionHash;
             GlobalStatics_1.mapFileIds[count] = -1;
             DummyClass55.landscapeFileIds[count] = -1;
@@ -271,8 +271,8 @@ public final class DummyClass37 {
       DummyClass37.method1039(22, null);
     }
 
-    for (int var2 = 0; (var2 < 13); ++var2) {
-      for (int var3 = 0; (var3 < 13); ++var3) {
+    for (int var2 = 0; var2 < 13; ++var2) {
+      for (int var3 = 0; var3 < 13; ++var3) {
         DummyClass27.blockConfigs[var2][var3] = var1;
       }
     }
@@ -297,7 +297,7 @@ public final class DummyClass37 {
     int var5;
     int var6;
     int var7;
-    if ((GlobalStatics_0.packetId == 195)) {
+    if (GlobalStatics_0.packetId == 195) {
       var1 = GlobalStatics_9.gameBuffer.method786(true);
       var3 = var1 & 3;
       var2 = var1 >> 2;
@@ -305,20 +305,20 @@ public final class DummyClass37 {
       var5 = GlobalStatics_9.gameBuffer.readUnsignedByte();
       var6 = ((125 & var5) >> 4) + DummyClass45.spawnSceneX;
       var7 = (7 & var5) + DummyClass56.spawnSceneY;
-      if (var6 >= 0 && var7 >= 0 && (var6 < 104) && var7 < 104) {
+      if (var6 >= 0 && var7 >= 0 && var6 < 104 && var7 < 104) {
         GlobalStatics_9
             .method881(GlobalStatics_9.currentPlane, var7, -101, var3, var6, -1,
                 -1, var4,
                 var2, 0);
       }
 
-    } else if ((GlobalStatics_0.packetId == 33)) {
+    } else if (GlobalStatics_0.packetId == 33) {
       var1 = GlobalStatics_9.gameBuffer.readUnsignedShortLE();
       var2 = GlobalStatics_9.gameBuffer.readUnsignedByte();
       var4 = (7 & var2) + DummyClass56.spawnSceneY;
       var3 = ((120 & var2) >> 4) + DummyClass45.spawnSceneX;
       var5 = GlobalStatics_9.gameBuffer.readUnsignedShortAdd();
-      if ((var3 >= 0) && (var4 >= 0) && var3 < 104 && var4 < 104) {
+      if (var3 >= 0 && var4 >= 0 && var3 < 104 && var4 < 104) {
         GroundItem var31 = new GroundItem();
         var31.anInt2930 = var5;
         var31.anInt2936 = var1;
@@ -341,7 +341,7 @@ public final class DummyClass37 {
       int var28;
       int var35;
       Projectile var36;
-      if ((GlobalStatics_0.packetId == 121)) {
+      if (GlobalStatics_0.packetId == 121) {
         var1 = GlobalStatics_9.gameBuffer.readUnsignedByte();
         var2 = 2 * DummyClass45.spawnSceneX + (15 & var1 >> 4);
         var3 = (15 & var1) + 2 * DummyClass56.spawnSceneY;
@@ -354,14 +354,14 @@ public final class DummyClass37 {
         var10 = GlobalStatics_9.gameBuffer.readUnsignedShort();
         var11 = GlobalStatics_9.gameBuffer.readUnsignedShort();
         var35 = GlobalStatics_9.gameBuffer.readUnsignedByte();
-        if ((var35 == 255)) {
+        if (var35 == 255) {
           var35 = -1;
         }
 
         var13 = GlobalStatics_9.gameBuffer.readUnsignedByte();
         if (var2 >= 0 && var3 >= 0 && var2 < 208 && var3 < 208 && var4 >= 0 &&
             var5 >= 0
-            && var4 < 208 && (var5 < 208) && var7 != '\uffff') {
+            && var4 < 208 && var5 < 208 && var7 != '\uffff') {
           var5 *= 64;
           var4 = 64 * var4;
           var3 = 64 * var3;
@@ -380,14 +380,14 @@ public final class DummyClass37 {
           GlobalStatics_9.projectiles.addLast(new ProjectileNode(var36));
         }
 
-      } else if ((GlobalStatics_0.packetId == 17)) {
+      } else if (GlobalStatics_0.packetId == 17) {
         var1 = GlobalStatics_9.gameBuffer.readUnsignedByte();
         var2 = DummyClass45.spawnSceneX + (var1 >> 4 & 7);
         var3 = DummyClass56.spawnSceneY + (var1 & 7);
         var4 = GlobalStatics_9.gameBuffer.readUnsignedShort();
         var5 = GlobalStatics_9.gameBuffer.readUnsignedByte();
         var6 = GlobalStatics_9.gameBuffer.readUnsignedShort();
-        if ((var2 >= 0) && (var3 >= 0) && (var2 < 104) && (var3 < 104)) {
+        if (var2 >= 0 && var3 >= 0 && var2 < 104 && var3 < 104) {
           var2 = var2 * 128 + 64;
           var3 = var3 * 128 + 64;
           StillGraphic var32 = new StillGraphic(var4,
@@ -399,7 +399,7 @@ public final class DummyClass37 {
           GlobalStatics_1.stillGraphics.addLast(new StillGraphicNode(var32));
         }
 
-      } else if ((GlobalStatics_0.packetId == 179)) {
+      } else if (GlobalStatics_0.packetId == 179) {
         var1 = GlobalStatics_9.gameBuffer.method751((byte) -111);
         var2 = var1 >> 2;
         var3 = 3 & var1;
@@ -408,14 +408,14 @@ public final class DummyClass37 {
         var6 = DummyClass45.spawnSceneX + ((var5 & 125) >> 4);
         var7 = (7 & var5) + DummyClass56.spawnSceneY;
         var8 = GlobalStatics_9.gameBuffer.readUnsignedShortAdd();
-        if ((var6 >= 0) && var7 >= 0 && var6 < 104 && (var7 < 104)) {
+        if (var6 >= 0 && var7 >= 0 && var6 < 104 && var7 < 104) {
           GlobalStatics_9
               .method881(GlobalStatics_9.currentPlane, var7, -91, var3, var6,
                   -1, var8, var4,
                   var2, 0);
         }
 
-      } else if ((GlobalStatics_0.packetId != 20)) {
+      } else if (GlobalStatics_0.packetId != 20) {
         int var14;
         if (GlobalStatics_0.packetId == 202) {
           var1 = GlobalStatics_9.gameBuffer.readUnsignedByte();
@@ -440,21 +440,21 @@ public final class DummyClass37 {
           }
         }
 
-        if ((GlobalStatics_0.packetId == 14)) {
+        if (GlobalStatics_0.packetId == 14) {
           var1 = GlobalStatics_9.gameBuffer.readUnsignedByte();
           var3 = DummyClass56.spawnSceneY + (var1 & 7);
           var2 = ((var1 & 119) >> 4) + DummyClass45.spawnSceneX;
           var4 = GlobalStatics_9.gameBuffer.readUnsignedShort();
           var5 = GlobalStatics_9.gameBuffer.readUnsignedShort();
           var6 = GlobalStatics_9.gameBuffer.readUnsignedShort();
-          if (var2 >= 0 && (var3 >= 0) && var2 < 104 && (var3 < 104)) {
+          if (var2 >= 0 && var3 >= 0 && var2 < 104 && var3 < 104) {
             Deque var29 =
                 GlobalStatics_9.groundItems[GlobalStatics_9.currentPlane][var2][var3];
             if (var29 != null) {
               for (GroundItemNode var34 = (GroundItemNode) var29.getFirst();
                   var34 != null; var34 = (GroundItemNode) var29.getNext()) {
                 GroundItem var33 = var34.aClass140_Sub7_3676;
-                if (((var4 & 32767) == var33.anInt2936)
+                if ((var4 & 32767) == var33.anInt2936
                     && var5 == var33.anInt2930) {
                   var33.anInt2930 = var6;
                   break;
@@ -472,7 +472,7 @@ public final class DummyClass37 {
           var3 = (7 & var2 >> 4) + DummyClass45.spawnSceneX;
           var5 = GlobalStatics_9.gameBuffer.readUnsignedShortLE();
           var6 = GlobalStatics_9.gameBuffer.readUnsignedShortLE();
-          if (var3 >= 0 && (var4 >= 0) && var3 < 104 && (var4 < 104)
+          if (var3 >= 0 && var4 >= 0 && var3 < 104 && var4 < 104
               && GlobalStatics_10.localPlayerId != var1) {
             GroundItem var27 = new GroundItem();
             var27.anInt2930 = var5;
@@ -508,9 +508,9 @@ public final class DummyClass37 {
               var35 = -1;
             }
 
-            if ((var2 >= 0) && var3 >= 0 && (var2 < 104) && var3 < 104
-                && (var4 >= 0) && var5 >= 0
-                && (var4 < 104) && var5 < 104 && (var7 != 65535)) {
+            if (var2 >= 0 && var3 >= 0 && var2 < 104 && var3 < 104
+                && var4 >= 0 && var5 >= 0
+                && var4 < 104 && var5 < 104 && var7 != 65535) {
               var5 = var5 * 128 + 64;
               var3 = 128 * var3 + 64;
               var2 = 128 * var2 + 64;
@@ -551,14 +551,14 @@ public final class DummyClass37 {
                 var13 = -1;
               }
 
-              if (var2 >= 0 && (var3 >= 0) && var2 < 208 && var3 < 208
-                  && var4 >= 0 && (var5 >= 0)
+              if (var2 >= 0 && var3 >= 0 && var2 < 208 && var3 < 208
+                  && var4 >= 0 && var5 >= 0
                   && var4 < 208 && var5 < 208 && var8 != '\uffff') {
                 var4 = 64 * var4;
                 var2 *= 64;
                 var5 *= 64;
                 var3 *= 64;
-                if ((var6 != 0)) {
+                if (var6 != 0) {
                   int var15;
                   int var17;
                   Mobile var16;
@@ -622,7 +622,7 @@ public final class DummyClass37 {
               var2 = DummyClass45.spawnSceneX + (7 & var1 >> 4);
               var3 = DummyClass56.spawnSceneY + (var1 & 7);
               var4 = GlobalStatics_9.gameBuffer.readUnsignedShort();
-              if ((var4 == 65535)) {
+              if (var4 == 65535) {
                 var4 = -1;
               }
 
@@ -630,34 +630,34 @@ public final class DummyClass37 {
               var6 = (242 & var5) >> 4;
               var8 = GlobalStatics_9.gameBuffer.readUnsignedByte();
               var7 = 7 & var5;
-              if ((var2 >= 0) && (var3 >= 0) && var2 < 104 && var3 < 104) {
+              if (var2 >= 0 && var3 >= 0 && var2 < 104 && var3 < 104) {
                 var28 = 1 + var6;
-                if ((GlobalStatics_9.localPlayer.waypointsX[0] >= (var2
-                    - var28))
-                    && ((var28 + var2)
-                    >= GlobalStatics_9.localPlayer.waypointsX[0])
+                if (GlobalStatics_9.localPlayer.waypointsX[0] >= var2
+                    - var28
+                    && var28 + var2
+                    >= GlobalStatics_9.localPlayer.waypointsX[0]
                     && GlobalStatics_9.localPlayer.waypointsY[0]
                     >= -var28 + var3
                     && GlobalStatics_9.localPlayer.waypointsY[0] <= var28 + var3
                     && DummyClass28.anInt340 != 0 && var7 > 0
                     && GlobalStatics_9.anInt1552 < 50
-                    && (var4 != -1)) {
+                    && var4 != -1) {
                   GlobalStatics_9.anIntArray2550[GlobalStatics_9.anInt1552] = var4;
                   GlobalStatics_9.anIntArray2068[GlobalStatics_9.anInt1552] = var7;
                   GlobalStatics_0.anIntArray2157[GlobalStatics_9.anInt1552] = var8;
                   GlobalStatics_9.aClass135Array2131[GlobalStatics_9.anInt1552] = null;
                   GlobalStatics_10.anIntArray3083[GlobalStatics_9.anInt1552] =
-                      var6 + ((var2 << 16) + (var3 << 8));
+                      var6 + (var2 << 16) + (var3 << 8);
                   ++GlobalStatics_9.anInt1552;
                 }
               }
 
-            } else if ((GlobalStatics_0.packetId == 240)) {
+            } else if (GlobalStatics_0.packetId == 240) {
               var1 = GlobalStatics_9.gameBuffer.method754(true);
               var3 = DummyClass56.spawnSceneY + (var1 & 7);
               var2 = ((113 & var1) >> 4) + DummyClass45.spawnSceneX;
               var4 = GlobalStatics_9.gameBuffer.readUnsignedShort();
-              if ((var2 >= 0) && var3 >= 0 && var2 < 104 && var3 < 104) {
+              if (var2 >= 0 && var3 >= 0 && var2 < 104 && var3 < 104) {
                 Deque var24 =
                     GlobalStatics_9.groundItems[GlobalStatics_9.currentPlane][var2][var3];
                 if (var24 != null) {

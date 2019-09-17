@@ -107,7 +107,7 @@ public class Display {
           if (var8[var10].getWidth() == var6 && var8[var10].getHeight() == var4
             && var3 == var8[var10].getBitDepth()) {
             int var11 = var8[var10].getRefreshRate();
-            if (!var9 || (Math.abs(var11 - var7) < Math.abs(0 - var7))) {
+            if (!var9 || Math.abs(var11 - var7) < Math.abs(0 - var7)) {
               var9 = true;
               var2 = var11;
             }

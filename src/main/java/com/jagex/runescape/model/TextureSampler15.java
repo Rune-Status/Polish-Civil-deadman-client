@@ -58,24 +58,24 @@ public final class TextureSampler15 extends AbstractTextureSampler {
           int var18 = 1 + var17;
 
           int var19;
-          for (int var9 = var6 - 1; (var9 <= var7); ++var9) {
+          for (int var9 = var6 - 1; var9 <= var7; ++var9) {
             int var13 =
-              255 & this.aByteArray3195[((this.anInt3204 <= var9) ? -this.anInt3204 + var9 : var9)
+              255 & this.aByteArray3195[(this.anInt3204 <= var9 ? -this.anInt3204 + var9 : var9)
                 & 255];
 
             for (int var8 = var17 - 1; var18 >= var8; ++var8) {
               int var14 = (255 & this.aByteArray3195[
-                ((this.anInt3203 <= var8) ? -this.anInt3203 + var8 : var8) + var13 & 255]) * 2;
+                (this.anInt3203 <= var8 ? -this.anInt3203 + var8 : var8) + var13 & 255]) * 2;
               int var10 = -(var8 << 12) - (this.aShortArray3200[var14++] - var16);
               int var11 = var5 - (this.aShortArray3200[var14] + (var9 << 12));
               var19 = this.anInt3194;
               int var12;
-              if ((var19 == 1)) {
+              if (var19 == 1) {
                 var12 = var11 * var11 + var10 * var10 >> 12;
               } else {
                 if (var19 == 3) {
                   var10 = var10 < 0 ? -var10 : var10;
-                  var11 = (var11 >= 0) ? var11 : -var11;
+                  var11 = var11 >= 0 ? var11 : -var11;
                   var12 = var11 >= var10 ? var11 : var10;
                 } else if (var19 == 4) {
                   var10 =
@@ -84,11 +84,11 @@ public final class TextureSampler15 extends AbstractTextureSampler {
                           * 4096.0D);
                   var11 =
                       (int) (Math.sqrt(
-                          ((var11 >= 0) ? var11 : -var11) / 4096.0F)
+                          (var11 >= 0 ? var11 : -var11) / 4096.0F)
                           * 4096.0D);
                   var12 = var11 + var10;
                   var12 = var12 * var12 >> 12;
-                } else if ((var19 == 5)) {
+                } else if (var19 == 5) {
                   var10 *= var10;
                   var11 *= var11;
                   var12 =
@@ -100,13 +100,13 @@ public final class TextureSampler15 extends AbstractTextureSampler {
                       (var11 * var11 + var10 * var10) / 1.6777216E7F));
                 } else {
                   var12 =
-                      ((var10 >= 0) ? var10 : -var10) + ((var11 < 0) ? -var11
+                      (var10 >= 0 ? var10 : -var10) + (var11 < 0 ? -var11
                           : var11);
                 }
               }
 
               if (var12 >= GlobalStatics_6.anInt3589) {
-                if ((var12 < GlobalStatics_9.anInt1042)) {
+                if (var12 < GlobalStatics_9.anInt1042) {
                   GlobalStatics_10.anInt3422 = GlobalStatics_9.anInt1914;
                   GlobalStatics_9.anInt1914 = GlobalStatics_9.anInt1042;
                   GlobalStatics_9.anInt1042 = var12;
@@ -128,14 +128,14 @@ public final class TextureSampler15 extends AbstractTextureSampler {
           }
 
           var19 = this.anInt3191;
-          if ((var19 == 0)) {
+          if (var19 == 0) {
             var3[var15] = GlobalStatics_6.anInt3589;
           } else if (var19 != 1) {
-            if ((var19 == 3)) {
+            if (var19 == 3) {
               var3[var15] = GlobalStatics_9.anInt1914;
             } else if (var19 == 4) {
               var3[var15] = GlobalStatics_10.anInt3422;
-            } else if ((var19 == 2)) {
+            } else if (var19 == 2) {
               var3[var15] = GlobalStatics_9.anInt1042 - GlobalStatics_6.anInt3589;
             }
           } else {
@@ -152,12 +152,12 @@ public final class TextureSampler15 extends AbstractTextureSampler {
         this.parseConfig(-122, null, false);
       }
 
-      if ((var1 == 0)) {
+      if (var1 == 0) {
         this.anInt3203 = this.anInt3204 = var2.readUnsignedByte();
-      } else if ((var1 == 1)) {
+      } else if (var1 == 1) {
         this.anInt3197 = var2.readUnsignedByte();
       } else if (var1 != 2) {
-        if ((var1 == 3)) {
+        if (var1 == 3) {
           this.anInt3191 = var2.readUnsignedByte();
         } else if (var1 == 4) {
           this.anInt3194 = var2.readUnsignedByte();

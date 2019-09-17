@@ -79,18 +79,18 @@ public class GlDirectColorSprite extends AbstractDirectColorSprite {
       GlRenderer.GL.glMultiTexCoord2f('\u84c1', var7, var6);
       GlRenderer.GL.glTexCoord2f(var9, 0.0F);
       GlRenderer.GL
-          .glVertex2f((var1 + this.anInt3707), (GlRenderer.viewHeight - var2));
+          .glVertex2f(var1 + this.anInt3707, GlRenderer.viewHeight - var2);
       GlRenderer.GL.glMultiTexCoord2f('\u84c1', var5, var6);
       GlRenderer.GL.glTexCoord2f(0.0F, 0.0F);
-      GlRenderer.GL.glVertex2f(var1, (GlRenderer.viewHeight - var2));
+      GlRenderer.GL.glVertex2f(var1, GlRenderer.viewHeight - var2);
       GlRenderer.GL.glMultiTexCoord2f('\u84c1', var5, var8);
       GlRenderer.GL.glTexCoord2f(0.0F, var10);
       GlRenderer.GL
-          .glVertex2f(var1, (GlRenderer.viewHeight - (var2 + this.anInt3696)));
+          .glVertex2f(var1, GlRenderer.viewHeight - (var2 + this.anInt3696));
       GlRenderer.GL.glMultiTexCoord2f('\u84c1', var7, var8);
       GlRenderer.GL.glTexCoord2f(var9, var10);
-      GlRenderer.GL.glVertex2f((var1 + this.anInt3707),
-          (GlRenderer.viewHeight - (var2 + this.anInt3696)));
+      GlRenderer.GL.glVertex2f(var1 + this.anInt3707,
+          GlRenderer.viewHeight - (var2 + this.anInt3696));
       GlRenderer.GL.glEnd();
       GlRenderer.GL.glTexEnvi(8960, '\u8571', 8448);
       GlRenderer.GL.glTexEnvi(8960, '\u8580', 5890);
@@ -151,32 +151,32 @@ public class GlDirectColorSprite extends AbstractDirectColorSprite {
       var15 = var15 * var8 >> 8;
       var16 = var16 * var8 >> 8;
       int var17 = (var5 << 16) + var12 * var15 + var11 * var16;
-      int var18 = (var6 << 16) + (var12 * var16 - var11 * var15);
+      int var18 = (var6 << 16) + var12 * var16 - var11 * var15;
       int var19 = (var5 << 16) + var12 * var15 + var13 * var16;
-      int var20 = (var6 << 16) + (var12 * var16 - var13 * var15);
+      int var20 = (var6 << 16) + var12 * var16 - var13 * var15;
       int var21 = (var5 << 16) + var14 * var15 + var11 * var16;
-      int var22 = (var6 << 16) + (var14 * var16 - var11 * var15);
+      int var22 = (var6 << 16) + var14 * var16 - var11 * var15;
       int var23 = (var5 << 16) + var14 * var15 + var13 * var16;
-      int var24 = (var6 << 16) + (var14 * var16 - var13 * var15);
+      int var24 = (var6 << 16) + var14 * var16 - var13 * var15;
       float var25 = (float) sprite.anInt3707 / sprite.anInt4075;
       float var26 = (float) sprite.anInt3696 / sprite.anInt4079;
       GlRenderer.GL.glBegin(6);
       GlRenderer.GL.glColor4f(1.0F, 1.0F, 1.0F, 1.0F);
       float var27 = 65536.0F * this.anInt4075;
-      float var28 = (65536 * this.anInt4079);
+      float var28 = 65536 * this.anInt4079;
       GlRenderer.GL.glMultiTexCoord2f('\u84c1', var25, 0.0F);
       GlRenderer.GL.glTexCoord2f(var19 / var27, var20 / var28);
-      GlRenderer.GL.glVertex2f((var1 + var3), (GlRenderer.viewHeight - var2));
+      GlRenderer.GL.glVertex2f(var1 + var3, GlRenderer.viewHeight - var2);
       GlRenderer.GL.glMultiTexCoord2f('\u84c1', 0.0F, 0.0F);
       GlRenderer.GL.glTexCoord2f(var17 / var27, var18 / var28);
-      GlRenderer.GL.glVertex2f(var1, (GlRenderer.viewHeight - var2));
+      GlRenderer.GL.glVertex2f(var1, GlRenderer.viewHeight - var2);
       GlRenderer.GL.glMultiTexCoord2f('\u84c1', 0.0F, var26);
       GlRenderer.GL.glTexCoord2f(var21 / var27, var22 / var28);
-      GlRenderer.GL.glVertex2f(var1, (GlRenderer.viewHeight - (var2 + var4)));
+      GlRenderer.GL.glVertex2f(var1, GlRenderer.viewHeight - (var2 + var4));
       GlRenderer.GL.glMultiTexCoord2f('\u84c1', var25, var26);
       GlRenderer.GL.glTexCoord2f(var23 / var27, var24 / var28);
       GlRenderer.GL
-          .glVertex2f((var1 + var3), (GlRenderer.viewHeight - (var2 + var4)));
+          .glVertex2f(var1 + var3, GlRenderer.viewHeight - (var2 + var4));
       GlRenderer.GL.glEnd();
       GlRenderer.GL.glTexEnvi(8960, '\u8571', 8448);
       GlRenderer.GL.glTexEnvi(8960, '\u8580', 5890);
@@ -195,12 +195,12 @@ public class GlDirectColorSprite extends AbstractDirectColorSprite {
     GlRenderer.GL
         .glTranslatef(var3 / 16.0F, GlRenderer.viewHeight - var4 / 16.0F,
             0.0F);
-    GlRenderer.GL.glRotatef((-var5) * 0.005493164F, 0.0F, 0.0F, 1.0F);
+    GlRenderer.GL.glRotatef(-var5 * 0.005493164F, 0.0F, 0.0F, 1.0F);
     if (var6 != 4096) {
       GlRenderer.GL.glScalef(var6 / 4096.0F, var6 / 4096.0F, 0.0F);
     }
 
-    GlRenderer.GL.glTranslatef((-var1) / 16.0F, var2 / 16.0F, 0.0F);
+    GlRenderer.GL.glTranslatef(-var1 / 16.0F, var2 / 16.0F, 0.0F);
     GlRenderer.GL.glCallList(this.anInt4076);
     GlRenderer.GL.glLoadIdentity();
   }
@@ -211,7 +211,7 @@ public class GlDirectColorSprite extends AbstractDirectColorSprite {
     var2 += this.anInt3698;
     GlRenderer.bindTexture(this.textureId);
     this.initializeParameters(1);
-    GlRenderer.GL.glTranslatef(var1, (GlRenderer.viewHeight - var2), 0.0F);
+    GlRenderer.GL.glTranslatef(var1, GlRenderer.viewHeight - var2, 0.0F);
     GlRenderer.GL.glCallList(this.anInt4076);
     GlRenderer.GL.glLoadIdentity();
   }
@@ -231,7 +231,7 @@ public class GlDirectColorSprite extends AbstractDirectColorSprite {
       GlRenderer.GL.glScalef(var6 / 4096.0F, var6 / 4096.0F, 0.0F);
     }
 
-    GlRenderer.GL.glTranslatef((-var1) / 16.0F, var2 / 16.0F, 0.0F);
+    GlRenderer.GL.glTranslatef(-var1 / 16.0F, var2 / 16.0F, 0.0F);
     GlRenderer.GL.glCallList(this.anInt4076);
     GlRenderer.GL.glLoadIdentity();
   }
@@ -243,7 +243,7 @@ public class GlDirectColorSprite extends AbstractDirectColorSprite {
     GlRenderer.bindTexture(this.textureId);
     this.initializeParameters(1);
     GlRenderer.GL.glColor4f(1.0F, 1.0F, 1.0F, var3 / 256.0F);
-    GlRenderer.GL.glTranslatef(var1, (GlRenderer.viewHeight - var2), 0.0F);
+    GlRenderer.GL.glTranslatef(var1, GlRenderer.viewHeight - var2, 0.0F);
     GlRenderer.GL.glCallList(this.anInt4076);
     GlRenderer.GL.glLoadIdentity();
   }
@@ -284,7 +284,7 @@ public class GlDirectColorSprite extends AbstractDirectColorSprite {
       this.initializeParameters(2);
       float var14 = var1;
       float var15 = var14 + var3;
-      float var16 = (GlRenderer.viewHeight - var2);
+      float var16 = GlRenderer.viewHeight - var2;
       float var17 = var16 - var4;
       float var18 = (float) this.anInt3707 / this.anInt4075;
       float var19 = (float) this.anInt3696 / this.anInt4079;
@@ -307,7 +307,7 @@ public class GlDirectColorSprite extends AbstractDirectColorSprite {
     var2 += this.anInt3698;
     GlRenderer.bindTexture(this.textureId);
     this.initializeParameters(1);
-    GlRenderer.GL.glTranslatef(var1, (GlRenderer.viewHeight - var2), 0.0F);
+    GlRenderer.GL.glTranslatef(var1, GlRenderer.viewHeight - var2, 0.0F);
     float var4 = (float) this.anInt3707 / this.anInt4075;
     float var5 = (float) this.anInt3696 / this.anInt4079;
     GlRenderer.GL.glBegin(6);
@@ -316,9 +316,9 @@ public class GlDirectColorSprite extends AbstractDirectColorSprite {
     GlRenderer.GL.glTexCoord2f(var4, 0.0F);
     GlRenderer.GL.glVertex2f(0.0F, 0.0F);
     GlRenderer.GL.glTexCoord2f(var4, var5);
-    GlRenderer.GL.glVertex2f(0.0F, (-this.anInt3696));
+    GlRenderer.GL.glVertex2f(0.0F, -this.anInt3696);
     GlRenderer.GL.glTexCoord2f(0.0F, var5);
-    GlRenderer.GL.glVertex2f(this.anInt3707, (-this.anInt3696));
+    GlRenderer.GL.glVertex2f(this.anInt3707, -this.anInt3696);
     GlRenderer.GL.glEnd();
     GlRenderer.GL.glLoadIdentity();
   }
@@ -360,7 +360,7 @@ public class GlDirectColorSprite extends AbstractDirectColorSprite {
       this.initializeParameters(1);
       float var15 = var1;
       float var16 = var15 + var3;
-      float var17 = (GlRenderer.viewHeight - var2);
+      float var17 = GlRenderer.viewHeight - var2;
       float var18 = var17 - var4;
       float var19 = (float) this.anInt3707 / this.anInt4075;
       float var20 = (float) this.anInt3696 / this.anInt4079;
@@ -385,7 +385,7 @@ public class GlDirectColorSprite extends AbstractDirectColorSprite {
     var2 += this.anInt3698;
     GlRenderer.bindTexture(this.textureId);
     this.initializeParameters(1);
-    GlRenderer.GL.glTranslatef(var1, (GlRenderer.viewHeight - var2), 0.0F);
+    GlRenderer.GL.glTranslatef(var1, GlRenderer.viewHeight - var2, 0.0F);
     GlRenderer.GL.glCallList(this.anInt4076);
     GlRenderer.GL.glLoadIdentity();
   }
@@ -484,9 +484,9 @@ public class GlDirectColorSprite extends AbstractDirectColorSprite {
     GlRenderer.GL.glTexCoord2f(0.0F, 0.0F);
     GlRenderer.GL.glVertex2f(0.0F, 0.0F);
     GlRenderer.GL.glTexCoord2f(0.0F, var2);
-    GlRenderer.GL.glVertex2f(0.0F, (-this.anInt3696));
+    GlRenderer.GL.glVertex2f(0.0F, -this.anInt3696);
     GlRenderer.GL.glTexCoord2f(var1, var2);
-    GlRenderer.GL.glVertex2f(this.anInt3707, (-this.anInt3696));
+    GlRenderer.GL.glVertex2f(this.anInt3707, -this.anInt3696);
     GlRenderer.GL.glEnd();
     GlRenderer.GL.glEndList();
   }

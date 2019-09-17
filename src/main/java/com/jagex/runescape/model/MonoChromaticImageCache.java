@@ -43,7 +43,7 @@ public final class MonoChromaticImageCache {
         this.aBoolean1580 = false;
       }
 
-      if ((this.anInt1568 == this.anInt1579)) {
+      if (this.anInt1568 == this.anInt1579) {
         this.aBoolean1580 = this.aClass3_Sub26Array1571[var2] == null;
         this.aClass3_Sub26Array1571[var2] = DummyClass42.aClass3_Sub26_884;
         return this.anIntArrayArray1573[var2];

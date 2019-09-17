@@ -131,7 +131,7 @@ public final class GameObjectConfig {
     int var3 = -1 % ((31 - var1) / 41);
       if (this.anIntArray1487 != null) {
         for (int var7 = 0; this.anIntArray1487.length > var7; ++var7) {
-          if ((var2 == this.anIntArray1487[var7])) {
+          if (var2 == this.anIntArray1487[var7]) {
             return GlobalStatics_9.aClass153_1043.method2129((byte) 72, 0,
                 this.anIntArray1519[var7] & '\uffff');
           }
@@ -140,7 +140,7 @@ public final class GameObjectConfig {
         return true;
       } else if (this.anIntArray1519 == null) {
         return true;
-      } else if ((var2 != 10)) {
+      } else if (var2 != 10) {
         return true;
       } else {
         boolean var4 = true;
@@ -166,26 +166,26 @@ public final class GameObjectConfig {
         var2 = DummyClass5.anIntArray2985[this.anInt1532];
       }
 
-      if ((var2 >= 0) && (var2 < this.anIntArray1524.length -1)
-        && (this.anIntArray1524[var2] != -1)) {
+      if (var2 >= 0 && var2 < this.anIntArray1524.length -1
+        && this.anIntArray1524[var2] != -1) {
         return DummyClass11.method2207(4, this.anIntArray1524[var2]);
       } else {
         int var3 = this.anIntArray1524[-1 + this.anIntArray1524.length];
-        return (var3 == -1) ? null : DummyClass11.method2207(4, var3);
+        return var3 == -1 ? null : DummyClass11.method2207(4, var3);
       }
   }
 
   private Model method1686(int var1, int var2, int var3) {
     Model var4 = null;
       boolean var5 = this.aBoolean1536;
-      if ((var2 == 2) && var1 > 3) {
+      if (var2 == 2 && var1 > 3) {
         var5 = !var5;
       }
 
       int var6;
       int var7;
       if (this.anIntArray1487 == null) {
-        if ((var2 != 10)) {
+        if (var2 != 10) {
           return null;
         }
 
@@ -195,7 +195,7 @@ public final class GameObjectConfig {
 
         var6 = this.anIntArray1519.length;
 
-        for (var7 = 0; (var7 < var6); ++var7) {
+        for (var7 = 0; var7 < var6; ++var7) {
           int var8 = this.anIntArray1519[var7];
           if (var5) {
             var8 += 65536;
@@ -221,7 +221,7 @@ public final class GameObjectConfig {
           }
         }
 
-        if ((var6 > 1)) {
+        if (var6 > 1) {
           var4 = new Model(GlobalStatics_9.aClass140_Sub5Array2058, var6);
         }
       } else {
@@ -234,7 +234,7 @@ public final class GameObjectConfig {
           }
         }
 
-        if ((var6 == -1)) {
+        if (var6 == -1) {
           return null;
         }
 
@@ -261,26 +261,26 @@ public final class GameObjectConfig {
 
       boolean var11;
       var11 = !(this.anInt1479 == 128
-          && (this.anInt1488 == 128) && this.anInt1481 == 128);
+          && this.anInt1488 == 128 && this.anInt1481 == 128);
 
       boolean var12;
-      var12 = !(this.anInt1496 == 0 && (this.anInt1511 == 0)
+      var12 = !(this.anInt1496 == 0 && this.anInt1511 == 0
           && this.anInt1534 == 0);
 
       assert var4 != null;
       Model var13 = new Model(var4, var3 == ~var1 && !var11 && !var12,
           this.aShortArray1477 == null,
           this.aShortArray1476 == null, true);
-      if ((var2 == 4) && var1 > 3) {
+      if (var2 == 4 && var1 > 3) {
         var13.method2011(256);
         var13.translate(45, 0, -45);
       }
 
       var1 &= 3;
-      if ((var1 == 1)) {
+      if (var1 == 1) {
         var13.rotateQuarterY();
       } else {
-        if ((var1 == 2)) {
+        if (var1 == 2) {
           var13.rotateHalfY();
         } else {
           if (var1 == 3) {
@@ -323,7 +323,7 @@ public final class GameObjectConfig {
     if (this.anInt1529 == -1) {
         this.anInt1529 = 0;
         if (this.anIntArray1519 != null && (this.anIntArray1487 == null
-          || (this.anIntArray1487[0] == 10))) {
+          || this.anIntArray1487[0] == 10)) {
           this.anInt1529 = 1;
         }
 
@@ -340,7 +340,7 @@ public final class GameObjectConfig {
       }
 
       if (this.anInt1540 == -1) {
-        this.anInt1540 = (this.anInt1538 != 0) ? 1 : 0;
+        this.anInt1540 = this.anInt1538 != 0 ? 1 : 0;
       }
   }
 
@@ -350,11 +350,11 @@ public final class GameObjectConfig {
           this.method1696(34, 54, null, 55, 80, null, true, null, (byte) 127, true, -38);
         }
 
-        for (int var2 = 0; (var2 < this.anIntArray1524.length); ++var2) {
-          if ((this.anIntArray1524[var2] != -1)) {
+        for (int var2 = 0; var2 < this.anIntArray1524.length; ++var2) {
+          if (this.anIntArray1524[var2] != -1) {
             GameObjectConfig var3 =
               DummyClass11.method2207(var1 - 28929, this.anIntArray1524[var2]);
-            if ((var3.anInt1512 != -1) || var3.anIntArray1539 != null) {
+            if (var3.anInt1512 != -1 || var3.anIntArray1539 != null) {
               return true;
             }
           }
@@ -380,7 +380,7 @@ public final class GameObjectConfig {
   public void method1692(int var1, Buffer var2 ) {
     while (true) {
         int var3 = var2.readUnsignedByte();
-        if ((var3 == 0)) {
+        if (var3 == 0) {
           if (var1 != 6219) {
             this.method1696(105, -55, null, -39, 71, null, true, null, (byte) -117, false, -25);
           }
@@ -401,7 +401,7 @@ public final class GameObjectConfig {
       int var5;
       if (var2 == 1) {
         var4 = var1.readUnsignedByte();
-        if ((var4 > 0)) {
+        if (var4 > 0) {
           if (this.anIntArray1519 != null && !GlobalStatics_6.aBoolean742) {
             var1.position += var4 * 3;
           } else {
@@ -414,13 +414,13 @@ public final class GameObjectConfig {
             }
           }
         }
-      } else if ((var2 == 2)) {
+      } else if (var2 == 2) {
         this.aClass94_1504 = var1.readString();
-      } else if ((var2 != 5)) {
-        if ((var2 == 14)) {
+      } else if (var2 != 5) {
+        if (var2 == 14) {
           this.anInt1480 = var1.readUnsignedByte();
-        } else if ((var2 != 15)) {
-          if ((var2 == 17)) {
+        } else if (var2 != 15) {
+          if (var2 == 17) {
             this.anInt1538 = 0;
             this.aBoolean1486 = false;
           } else {
@@ -430,27 +430,27 @@ public final class GameObjectConfig {
               if (var2 == 19) {
                 this.anInt1529 = var1.readUnsignedByte();
               } else {
-                if ((var2 == 21)) {
+                if (var2 == 21) {
                   this.aByte1505 = 1;
                 } else {
-                  if ((var2 == 22)) {
+                  if (var2 == 22) {
                     this.aBoolean1541 = true;
                   } else {
-                    if ((var2 == 23)) {
+                    if (var2 == 23) {
                       this.aBoolean1542 = true;
                     } else {
-                      if ((var2 == 24)) {
+                      if (var2 == 24) {
                         this.anInt1531 = var1.readUnsignedShort();
-                        if ((this.anInt1531 == 65535)) {
+                        if (this.anInt1531 == 65535) {
                           this.anInt1531 = -1;
                         }
-                      } else if ((var2 != 27)) {
+                      } else if (var2 != 27) {
                         if (var2 == 28) {
                           this.anInt1528 = var1.readUnsignedByte();
-                        } else if ((var2 != 29)) {
+                        } else if (var2 != 29) {
                           if (var2 == 39) {
                             this.anInt1489 = var1.readByte() * 5;
-                          } else if ((var2 >= 30) && (var2 < 35)) {
+                          } else if (var2 >= 30 && var2 < 35) {
                             this.aClass94Array1499[var2 - 30] = var1
                                 .readString();
                             if (this.aClass94Array1499[-30 + var2].method1531(
@@ -473,18 +473,18 @@ public final class GameObjectConfig {
                               var4 = var1.readUnsignedByte();
                               this.aByteArray1513 = new byte[var4];
 
-                              for (var5 = 0; (var5 < var4); ++var5) {
+                              for (var5 = 0; var5 < var4; ++var5) {
                                 this.aByteArray1513[var5] = var1.readByte();
                               }
                             } else if (var2 != 60) {
-                              if ((var2 == 62)) {
+                              if (var2 == 62) {
                                 this.aBoolean1536 = true;
-                              } else if ((var2 != 64)) {
-                                if ((var2 == 65)) {
+                              } else if (var2 != 64) {
+                                if (var2 == 65) {
                                   this.anInt1479 = var1.readUnsignedShort();
-                                } else if ((var2 == 66)) {
+                                } else if (var2 == 66) {
                                   this.anInt1488 = var1.readUnsignedShort();
-                                } else if ((var2 == 67)) {
+                                } else if (var2 == 67) {
                                   this.anInt1481 = var1.readUnsignedShort();
                                 } else if (var2 != 69) {
                                   if (var2 == 70) {
@@ -500,14 +500,14 @@ public final class GameObjectConfig {
                                       if (var2 == 75) {
                                         this.anInt1540 = var1
                                             .readUnsignedByte();
-                                      } else if ((var2 != 77) && (var2 != 92)) {
+                                      } else if (var2 != 77 && var2 != 92) {
                                         if (var2 == 78) {
                                           this.anInt1512 = var1
                                               .readUnsignedShort();
                                           this.anInt1484 = var1
                                               .readUnsignedByte();
                                         } else {
-                                          if ((var2 == 79)) {
+                                          if (var2 == 79) {
                                             this.anInt1518 = var1
                                                 .readUnsignedShort();
                                             this.anInt1515 = var1
@@ -529,13 +529,13 @@ public final class GameObjectConfig {
                                                   (short) (256 * var1
                                                       .readUnsignedByte());
                                             } else {
-                                              if ((var2 == 82)) {
+                                              if (var2 == 82) {
                                                 this.aBoolean1530 = true;
                                               } else {
                                                 if (var2 == 88) {
                                                   this.aBoolean1503 = false;
                                                 } else {
-                                                  if ((var2 == 89)) {
+                                                  if (var2 == 89) {
                                                     this.aBoolean1492 = false;
                                                   } else {
                                                     if (var2 == 90) {
@@ -543,27 +543,28 @@ public final class GameObjectConfig {
                                                     } else {
                                                       if (var2 == 91) {
                                                         this.aBoolean1491 = true;
-                                                      } else if ((var2 == 93)) {
+                                                      } else if (var2 == 93) {
                                                         this.aByte1505 = 3;
                                                         this.aShort1500 =
                                                             (short) var1
                                                                 .readUnsignedShort();
                                                       } else if (var2 != 94) {
-                                                        if ((var2 == 95)) {
+                                                        if (var2 == 95) {
                                                           this.aByte1505 = 5;
-                                                        } else if ((var2 != 96)) {
-                                                          if ((var2 == 97)) {
+                                                        } else if (var2 != 96) {
+                                                          if (var2 == 97) {
                                                             this.aBoolean1537 = true;
                                                           } else if (var2
                                                               == 98) {
                                                             this.aBoolean1510 = true;
-                                                          } else if ((var2 != 99)) {
-                                                            if ((var2 == 100)) {
+                                                          } else if (var2 != 99) {
+                                                            if (var2 == 100) {
                                                               this.anInt1520 =
                                                                   var1.readUnsignedByte();
                                                               this.anInt1522 =
                                                                   var1.readUnsignedShort();
-                                                            } else if ((var2 != 101)) {
+                                                            } else if (
+                                                                var2 != 101) {
                                                               if (var2 == 102) {
                                                                 this.anInt1516 =
                                                                     var1.readUnsignedShort();
@@ -588,8 +589,8 @@ public final class GameObjectConfig {
                                                                           > var5;
                                                                       ++var5) {
                                                                     boolean var10 =
-                                                                        (var1
-                                                                            .readUnsignedByte() == 1);
+                                                                        var1
+                                                                            .readUnsignedByte() == 1;
                                                                     int var7 =
                                                                         var1.readUnsignedMedium(
                                                                             (byte) 122);
@@ -687,7 +688,7 @@ public final class GameObjectConfig {
                             this.aShortArray1495 = new short[var4];
                             this.aShortArray1476 = new short[var4];
 
-                            for (var5 = 0; (var5 < var4); ++var5) {
+                            for (var5 = 0; var5 < var4; ++var5) {
                               this.aShortArray1476[var5] = (short) var1
                                   .readUnsignedShort();
                               this.aShortArray1495[var5] = (short) var1
@@ -711,7 +712,7 @@ public final class GameObjectConfig {
         }
       } else {
         var4 = var1.readUnsignedByte();
-        if ((var4 > 0)) {
+        if (var4 > 0) {
           if (this.anIntArray1519 != null && !GlobalStatics_6.aBoolean742) {
             var1.position += var4 * 2;
           } else {
@@ -751,14 +752,14 @@ public final class GameObjectConfig {
         var8 = -1;
 
         int var9;
-        for (var9 = 0; (var9 < this.anIntArray1487.length); ++var9) {
-          if ((this.anIntArray1487[var9] == var4)) {
+        for (var9 = 0; var9 < this.anIntArray1487.length; ++var9) {
+          if (this.anIntArray1487[var9] == var4) {
             var8 = var9;
             break;
           }
         }
 
-        if ((var8 == -1)) {
+        if (var8 == -1) {
           return null;
         }
 
@@ -788,7 +789,7 @@ public final class GameObjectConfig {
         }
 
         var8 = this.anIntArray1519.length;
-        if ((var8 == 0)) {
+        if (var8 == 0) {
           return null;
         }
 
@@ -831,18 +832,19 @@ public final class GameObjectConfig {
       }
 
       boolean var14 = this.aBoolean1536;
-      if ((var4 == 2) && var1 > 3) {
+      if (var4 == 2 && var1 > 3) {
         var14 = !var14;
       }
 
-      boolean var15 = this.anInt1488 == 128 && (this.anInt1511 == 0);
+      boolean var15 = this.anInt1488 == 128 && this.anInt1511 == 0;
       boolean var18 =
-          (var1 == 0) && this.anInt1479 == 128
-            && (this.anInt1481 == 128) && (this.anInt1496 == 0)
+          var1 == 0 && this.anInt1479 == 128
+            && this.anInt1481 == 128 && this.anInt1496 == 0
           && this.anInt1534 == 0 && !var14;
       GlModel var19 = var5.createCopy(var18, var15,
           this.aShortArray1477 == null, true,
-        (var5.method1903() == var6), (var1 == 0) && !var14, var3, (var7 == var5.method1924()), true,
+          var5.method1903() == var6, var1 == 0 && !var14, var3,
+          var7 == var5.method1924(), true,
         !var14, this.aShortArray1476 == null);
       if (var14) {
         var19.method1931();
@@ -856,8 +858,8 @@ public final class GameObjectConfig {
       var1 &= 3;
       if (var1 == 1) {
         var19.method1925();
-      } else if ((var1 != 2)) {
-        if ((var1 == 3)) {
+      } else if (var1 != 2) {
+        if (var1 == 3) {
           var19.method1902();
         }
       } else {
@@ -876,11 +878,12 @@ public final class GameObjectConfig {
         }
       }
 
-      if (this.anInt1479 != 128 || (this.anInt1488 != 128) || (this.anInt1481 != 128)) {
+      if (this.anInt1479 != 128 || this.anInt1488 != 128
+          || this.anInt1481 != 128) {
         var19.scale(this.anInt1479, this.anInt1488, this.anInt1481);
       }
 
-      if ((this.anInt1496 != 0) || this.anInt1511 != 0 || this.anInt1534 != 0) {
+      if (this.anInt1496 != 0 || this.anInt1511 != 0 || this.anInt1534 != 0) {
         var19.method1897(this.anInt1496, this.anInt1511, this.anInt1534);
       }
 
@@ -927,7 +930,7 @@ public final class GameObjectConfig {
               return GlobalStatics_8.aClass136_1413;
             }
 
-            if ((var4 == 10) && var1 > 3) {
+            if (var4 == 10 && var1 > 3) {
               var14.method1876(256);
             }
 
@@ -948,24 +951,24 @@ public final class GameObjectConfig {
 
           boolean var17 = this.aBoolean1541 & var7;
           GlModel var18 =
-              var14.createCopy(this.aByte1505 != 3, (this.aByte1505 == 0), true,
+              var14.createCopy(this.aByte1505 != 3, this.aByte1505 == 0, true,
                   true, true, true,
                   !var17, true, true, true, true);
-          if ((this.aByte1505 != 0)) {
+          if (this.aByte1505 != 0) {
             var18.method1919(this.aByte1505, this.aShort1500, var14, var3, var6,
                 var2, var5, var11);
           }
 
-          var18.method1920((this.anInt1529 == 0) && !this.aBoolean1510, true,
+          var18.method1920(this.anInt1529 == 0 && !this.aBoolean1510, true,
               true, true,
-              (this.anInt1529 == 0), true, false);
+              this.anInt1529 == 0, true, false);
           GlobalStatics_8.aClass136_1413.node = var18;
           var18.aBoolean3809 = var17;
           GlobalStatics_8.aClass136_1413.shadow = var15;
           return GlobalStatics_8.aClass136_1413;
         } else {
           if (this.anIntArray1487 != null) {
-            var12 = (var4 << 3) + ((this.anInt1527 << 10) + var1);
+            var12 = (var4 << 3) + (this.anInt1527 << 10) + var1;
           } else {
             var12 = (this.anInt1527 << 10) + var1;
           }
@@ -987,7 +990,7 @@ public final class GameObjectConfig {
             }
 
             var21.method2010();
-            if ((var4 == 10) && var1 > 3) {
+            if (var4 == 10 && var1 > 3) {
               var21.method2011(256);
             }
 
@@ -1054,7 +1057,7 @@ public final class GameObjectConfig {
       long var15;
       if (GlRenderer.useOpenGlRenderer) {
         if (this.anIntArray1487 != null) {
-          var15 = (var13 << 3) + ((this.anInt1527 << 10) + var6);
+          var15 = (var13 << 3) + (this.anInt1527 << 10) + var6;
         } else {
           var15 = var6 + (this.anInt1527 << 10);
         }
@@ -1078,7 +1081,7 @@ public final class GameObjectConfig {
           var19 = true;
         }
 
-        if ((var13 == 10) && var6 > 3) {
+        if (var13 == 10 && var6 > 3) {
           if (!var19) {
             var22 = (GlModel) var22.method1890(true, true, true);
             var19 = true;
@@ -1129,7 +1132,7 @@ public final class GameObjectConfig {
           var17 = (SoftwareModel) var5.method2054(19749, var9, var12, var17, var6, var14);
         }
 
-        if ((var13 == 10) && var6 > 3) {
+        if (var13 == 10 && var6 > 3) {
           if (!var21) {
             var21 = true;
             var17 = (SoftwareModel) var17.method1890(true, true, true);

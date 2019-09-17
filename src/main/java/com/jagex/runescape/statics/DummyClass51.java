@@ -23,11 +23,11 @@ public final class DummyClass51 {
       DummyClass51.method1418(55, null);
     }
 
-    if ((DummyClass15.state == 10) && GlRenderer.useOpenGlRenderer) {
+    if (DummyClass15.state == 10 && GlRenderer.useOpenGlRenderer) {
       DummyClass26.setState(28, 5);
     }
 
-    if ((DummyClass15.state == 30)) {
+    if (DummyClass15.state == 30) {
       DummyClass26.setState(25, 5);
     }
   }
@@ -39,18 +39,18 @@ public final class DummyClass51 {
     GlobalStatics_9.anIntArray861 = new int[256];
 
     int var2;
-    for (var2 = 0; (var2 < 3); ++var2) {
+    for (var2 = 0; var2 < 3; ++var2) {
       int var4 = (GlobalStatics_10.anIntArray1729[1 + var2] & 16711680) >> 16;
-      float var3 = ((GlobalStatics_10.anIntArray1729[var2] & 16711680) >> 16);
-      float var6 = (GlobalStatics_10.anIntArray1729[var2] >> 8 & 255);
-      float var9 = (GlobalStatics_10.anIntArray1729[var2] & 255);
+      float var3 = (GlobalStatics_10.anIntArray1729[var2] & 16711680) >> 16;
+      float var6 = GlobalStatics_10.anIntArray1729[var2] >> 8 & 255;
+      float var9 = GlobalStatics_10.anIntArray1729[var2] & 255;
       float var5 = (var4 - var3) / 64.0F;
       int var7 = (GlobalStatics_10.anIntArray1729[var2 + 1] & '\uff00') >> 8;
       float var8 = (-var6 + var7) / 64.0F;
       int var10 = GlobalStatics_10.anIntArray1729[var2 + 1] & 255;
       float var11 = (var10 - var9) / 64.0F;
 
-      for (int var12 = 0; (var12 < 64); ++var12) {
+      for (int var12 = 0; var12 < 64; ++var12) {
         GlobalStatics_9.anIntArray861[var12 + 64 * var2] = HuffmanEncoderStatics
             .method308((int) var9,
                 HuffmanEncoderStatics
@@ -104,8 +104,8 @@ public final class DummyClass51 {
       int var9 =
           (-var8 - 1 + GlobalStatics_10.amountContextActions) * 15 + var2 + 31;
       int var10 = 16777215;
-      if ((var1 < var6) && (var6 < (var1 + var3)) && -13 + var9 < var7 && (var7
-          < (3 + var9))) {
+      if (var1 < var6 && var6 < var1 + var3 && -13 + var9 < var7 && var7
+          < 3 + var9) {
         var10 = 16776960;
       }
 
@@ -133,24 +133,24 @@ public final class DummyClass51 {
 
   public static int getSettings() {
     return ((GlobalStatics_1.aBoolean3184 ? 1 : 0) << 19) + (
-        ((DummyClass35.aBoolean661 ? 1 : 0) << 16) + (
-            (!GLStatics.aBoolean1685 ? 0 : 1) << 15)
-            + ((!GLStatics.useBumpMaps ? 0 : 1) << 13) + (
-            (GlobalStatics_9.aBoolean2910 ? 1 : 0) << 10)
-            + ((GlobalStatics_9.aBoolean3275 ? 1 : 0) << 9) + (
-            (GlobalStatics_10.aBoolean236 ? 1 : 0) << 7) + (
-            (!GlobalStatics_9.aBoolean488 ? 0 : 1) << 6) + (
-            (GlobalStatics_9.aBoolean1905 ? 1 : 0) << 5) + (
-            ((!GlobalStatics_7.aBoolean3665 ? 0 : 1) << 3) + (
-                GlobalStatics_4.brightnessSetting
-                    & 7) - (-((!GlobalStatics_2.aBoolean3604 ? 0 : 1) << 4) - (
-                (GlobalStatics_9.aBoolean2623 ? 1 : 0) << 8)) - (
-                -(GLStatics.anInt1137 << 11 & 6144) - (
-                    ((GlobalStatics_7.anInt2453 == 0) ? 0 : 1) << 20) - (
-                    (((GlobalStatics_10.anInt120 != 0) ? 1 : 0) << 21) + (
-                        ((DummyClass28.anInt340 == 0) ? 0 : 1) << 22)))) + (
-            DummyClass0.method1757()
-                << 23));
+        (DummyClass35.aBoolean661 ? 1 : 0) << 16) + (
+        (!GLStatics.aBoolean1685 ? 0 : 1) << 15)
+        + ((!GLStatics.useBumpMaps ? 0 : 1) << 13) + (
+        (GlobalStatics_9.aBoolean2910 ? 1 : 0) << 10)
+        + ((GlobalStatics_9.aBoolean3275 ? 1 : 0) << 9) + (
+        (GlobalStatics_10.aBoolean236 ? 1 : 0) << 7) + (
+        (!GlobalStatics_9.aBoolean488 ? 0 : 1) << 6) + (
+        (GlobalStatics_9.aBoolean1905 ? 1 : 0) << 5) + (
+        (!GlobalStatics_7.aBoolean3665 ? 0 : 1) << 3) + (
+        GlobalStatics_4.brightnessSetting
+            & 7) - (-((!GlobalStatics_2.aBoolean3604 ? 0 : 1) << 4) - (
+        (GlobalStatics_9.aBoolean2623 ? 1 : 0) << 8)) - (
+        -(GLStatics.anInt1137 << 11 & 6144) - (
+            (GlobalStatics_7.anInt2453 == 0 ? 0 : 1) << 20) - (
+            ((GlobalStatics_10.anInt120 != 0 ? 1 : 0) << 21) + (
+                (DummyClass28.anInt340 == 0 ? 0 : 1) << 22))) + (
+        DummyClass0.method1757()
+            << 23);
   }
 
   public static void method1422(byte var0) {

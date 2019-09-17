@@ -41,7 +41,7 @@ public final class DummyClass15 {
             DummyClass13.anInt2020);
 
     int var16;
-    for (var16 = var12; (var16 < var8); ++var16) {
+    for (var16 = var12; var16 < var8; ++var16) {
       GlobalStatics_10
           .method282(DummyClass35.anIntArrayArray663[var16], var14, 97, var15,
               var5);
@@ -63,7 +63,7 @@ public final class DummyClass15 {
       DummyClass15.aClass94_1876 = null;
     }
 
-    for (var16 = var8; (var16 <= var9); ++var16) {
+    for (var16 = var8; var16 <= var9; ++var16) {
       int[] var17 = DummyClass35.anIntArrayArray663[var16];
       GlobalStatics_10.method282(var17, var14, 105, var10, var5);
       GlobalStatics_10.method282(var17, var10, 111, var11, var1);

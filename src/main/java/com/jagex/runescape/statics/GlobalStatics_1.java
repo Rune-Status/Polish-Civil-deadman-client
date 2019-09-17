@@ -140,7 +140,7 @@ public class GlobalStatics_1 {
     int var9 = var5 + var6;
 
     int var11;
-    for (var11 = var2; (var11 < var7); ++var11) {
+    for (var11 = var2; var11 < var7; ++var11) {
       GlobalStatics_10
           .method282(DummyClass35.anIntArrayArray663[var11], var6, -91, var1,
               var3);
@@ -154,7 +154,7 @@ public class GlobalStatics_1 {
 
     int var10 = -var5 + var1;
 
-    for (var11 = var7; (var8 >= var11); ++var11) {
+    for (var11 = var7; var8 >= var11; ++var11) {
       int[] var12 = DummyClass35.anIntArrayArray663[var11];
       GlobalStatics_10.method282(var12, var6, -111, var9, var3);
       GlobalStatics_10.method282(var12, var10, -124, var1, var3);
@@ -264,10 +264,10 @@ public class GlobalStatics_1 {
   }
 
   public static void method241(byte var0) {
-    updatedMapIds = null;
-    stillGraphics = null;
+    GlobalStatics_1.updatedMapIds = null;
+    GlobalStatics_1.stillGraphics = null;
 
-    anIntArray3185 = null;
-    COMMAND_WM3 = null;
+    GlobalStatics_1.anIntArray3185 = null;
+    GlobalStatics_1.COMMAND_WM3 = null;
   }
 }

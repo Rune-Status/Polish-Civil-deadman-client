@@ -34,7 +34,7 @@ public final class TextureSampler30 extends AbstractTextureSampler {
       } else {
         if (var1 == 1) {
           this.anInt3127 = var2.readUnsignedShort();
-        } else if ((var1 == 2)) {
+        } else if (var1 == 2) {
           this.monoChromatic = var2.readUnsignedByte() == 1;
         }
       }
@@ -63,7 +63,7 @@ public final class TextureSampler30 extends AbstractTextureSampler {
         int[] var9 = var3[1];
         int[] var10 = var3[2];
 
-        for (int var11 = 0; (var11 < GlobalStatics_9.anInt1559); ++var11) {
+        for (int var11 = 0; var11 < GlobalStatics_9.anInt1559; ++var11) {
           var8[var11] = this.anInt3128 + (this.anInt3126 * var5[var11] >> 12);
           var9[var11] = (this.anInt3126 * var6[var11] >> 12) + this.anInt3128;
           var10[var11] = this.anInt3128 + (this.anInt3126 * var7[var11] >> 12);

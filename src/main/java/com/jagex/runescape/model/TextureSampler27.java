@@ -47,7 +47,7 @@ public final class TextureSampler27 extends AbstractTextureSampler {
           short var6 = 0;
 
           for (var7 = 0; this.anInt3085 > var7; ++var7) {
-            if ((this.anIntArray3089[var7] <= var5) && (var5 < this.anIntArray3089[var7 + 1])) {
+            if (this.anIntArray3089[var7] <= var5 && var5 < this.anIntArray3089[var7 + 1]) {
               if (var5 < this.anIntArray3091[var7]) {
                 var6 = 4096;
               }
@@ -57,14 +57,14 @@ public final class TextureSampler27 extends AbstractTextureSampler {
 
           ArrayUtils.fill(var3, 0, GlobalStatics_9.anInt1559, var6);
         } else {
-          for (int var12 = 0; (var12 < GlobalStatics_9.anInt1559); ++var12) {
+          for (int var12 = 0; var12 < GlobalStatics_9.anInt1559; ++var12) {
             int var9 = GlobalStatics_9.anIntArray2125[var12];
             var7 = 0;
             int var10 = this.anInt3086;
             if (var10 == 1) {
               var7 = var9;
             } else if (var10 != 2) {
-              if ((var10 == 3)) {
+              if (var10 == 3) {
                 var7 = (-var5 + var9 >> 1) + 2048;
               }
             } else {
@@ -74,9 +74,9 @@ public final class TextureSampler27 extends AbstractTextureSampler {
             short var8 = 0;
 
             for (var10 = 0; var10 < this.anInt3085; ++var10) {
-              if ((this.anIntArray3089[var10] <= var7) && (var7 < this.anIntArray3089[var10
-                + 1])) {
-                if ((var7 < this.anIntArray3091[var10])) {
+              if (this.anIntArray3089[var10] <= var7 && var7 < this.anIntArray3089[var10
+                + 1]) {
+                if (var7 < this.anIntArray3091[var10]) {
                   var8 = 4096;
                 }
                 break;
@@ -92,10 +92,10 @@ public final class TextureSampler27 extends AbstractTextureSampler {
   }
 
   public void parseConfig(int var1, Buffer var2, boolean var3 ) {
-    if ((var1 == 0)) {
+    if (var1 == 0) {
         this.anInt3085 = var2.readUnsignedByte();
-      } else if ((var1 != 1)) {
-        if ((var1 == 2)) {
+      } else if (var1 != 1) {
+        if (var1 == 2) {
           this.anInt3086 = var2.readUnsignedByte();
         }
       } else {

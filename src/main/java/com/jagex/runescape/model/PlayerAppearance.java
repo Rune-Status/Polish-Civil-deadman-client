@@ -39,7 +39,7 @@ public final class PlayerAppearance {
         this.npcId = -32;
       }
 
-      long var9 = (long) var3 | (var7 << 16) | (long) var2 << 32;
+      long var9 = (long) var3 | var7 << 16 | (long) var2 << 32;
       AbstractModel var11 = (AbstractModel) GlobalStatics_9.aClass93_1131.get(var9);
       if (var11 == null) {
         Model[] var12 = new Model[3];
@@ -67,8 +67,8 @@ public final class PlayerAppearance {
 
         var14 = new Model(var12, var13);
 
-        for (int var15 = 0; (var15 < 5); ++var15) {
-          if ((this.anIntArray862[var15] < GlobalStatics_2.aShortArrayArray344[var15].length)) {
+        for (int var15 = 0; var15 < 5; ++var15) {
+          if (this.anIntArray862[var15] < GlobalStatics_2.aShortArrayArray344[var15].length) {
             var14.replaceColor(GlobalStatics_9.aShortArray2548[var15],
               GlobalStatics_2.aShortArrayArray344[var15][this.anIntArray862[var15]]);
           }
@@ -95,7 +95,7 @@ public final class PlayerAppearance {
       this.aLong860 = -1L;
       long[] var4 = GlobalStatics_7.aLongArray1631;
       this.aLong860 =
-        var4[(int) (255L & ((this.anInt858 >> 8) ^ this.aLong860))] ^
+        var4[(int) (255L & (this.anInt858 >> 8 ^ this.aLong860))] ^
             this.aLong860 >>> 8;
       this.aLong860 =
         var4[(int) (255L & (this.aLong860
@@ -105,14 +105,12 @@ public final class PlayerAppearance {
       int var5;
       for (var5 = 0; var5 < 12; ++var5) {
         this.aLong860 = this.aLong860 >>> 8 ^ var4[(int) (
-          (this.aLong860 ^ (this.anIntArray857[var5] >> 24)) & 255L)];
+          (this.aLong860 ^ this.anIntArray857[var5] >> 24) & 255L)];
         this.aLong860 =
-            this.aLong860 >>> 8 ^ var4[(int) (255L & (this.aLong860 ^ (
-                this.anIntArray857[var5]
-            >> 16)))];
+            this.aLong860 >>> 8 ^ var4[(int) (255L & (this.aLong860 ^ this.anIntArray857[var5]
+        >> 16))];
         this.aLong860 =
-          var4[(int) (255L & ((
-              this.anIntArray857[var5] >> 8) ^ this.aLong860))]
+          var4[(int) (255L & (this.anIntArray857[var5] >> 8 ^ this.aLong860))]
             ^ this.aLong860 >>> 8;
         this.aLong860 =
             this.aLong860 >>> 8 ^ var4[(int) ((this.aLong860
@@ -133,7 +131,7 @@ public final class PlayerAppearance {
       this.aLong860 = var4[(int) (((this.aBoolean864
           ? 1 : 0) ^ this.aLong860) & 255L)]
         ^ this.aLong860 >>> 8;
-      if ((var2 != 0L) && this.aLong860 != var2) {
+      if (var2 != 0L && this.aLong860 != var2) {
         GlobalStatics_9.aClass93_1911.method1518(var2, (byte) -124);
       }
   }
@@ -157,12 +155,12 @@ public final class PlayerAppearance {
       if (var5 == null) {
         var5 = new int[12];
 
-        for (int var7 = 0; (var7 < 8); ++var7) {
+        for (int var7 = 0; var7 < 8; ++var7) {
           for (int var8 = 0; GlobalStatics_9.anInt497 > var8; ++var8) {
             IdentityKit var9 = GlobalStatics_10.getIdentityKit(var8, 0);
-            if (!var9.aBoolean476 && (var9.anInt466 == (!var3 ?
+            if (!var9.aBoolean476 && var9.anInt466 == (!var3 ?
                 GlobalStatics_9.anIntArray2559[var7] :
-                GlobalStatics_9.anIntArray3228[var7]))) {
+                GlobalStatics_9.anIntArray3228[var7])) {
               var5[DummyClass6.anIntArray2043[var7]] =
                 HuffmanEncoderStatics.method308(Integer.MIN_VALUE, var8);
               break;
@@ -195,15 +193,15 @@ public final class PlayerAppearance {
 
       return this.npcId != -1 ?
         305419896 + GlobalStatics_2.getNpcConfiguration(this.npcId).anInt1284 :
-        (this.anIntArray857[8] << 10) + ((this.anIntArray862[0] << 25) + (
+        (this.anIntArray857[8] << 10) + (this.anIntArray862[0] << 25) + (
             this.anIntArray862[4]
-          << 20)) - (-(this.anIntArray857[0] << 15) - ((this.anIntArray857[11] << 5)
+                << 20) - (-(this.anIntArray857[0] << 15) - ((this.anIntArray857[11] << 5)
           + this.anIntArray857[1]));
   }
 
   public void method1164(int var1, int var2, int var3 ) {
     int var4 = DummyClass6.anIntArray2043[var1];
-      if ((this.anIntArray857[var4] != 0)) {
+      if (this.anIntArray857[var4] != 0) {
         GlobalStatics_10.getIdentityKit(var2, var3);
         this.anIntArray857[var4] = HuffmanEncoderStatics.method308(var2, Integer.MIN_VALUE);
         this.method1158(459557008);
@@ -221,10 +219,10 @@ public final class PlayerAppearance {
       int var10,
       int var11 ) {
     int var12 = 102 % ((var7 + 39) / 61);
-      if ((this.npcId == -1)) {
+      if (this.npcId == -1) {
         int[] var15 = this.anIntArray857;
         long var13 = this.aLong860;
-        if (var4 != null && ((var4.anInt1854 >= 0) || (var4.anInt1849 >= 0))) {
+        if (var4 != null && (var4.anInt1854 >= 0 || var4.anInt1849 >= 0)) {
           var15 = new int[12];
 
           for (int var16 = 0; var16 < 12; ++var16) {
@@ -232,7 +230,7 @@ public final class PlayerAppearance {
           }
 
           if (var4.anInt1854 >= 0) {
-            if ((var4.anInt1854 == 65535)) {
+            if (var4.anInt1854 == 65535) {
               var13 ^= -4294967296L;
               var15[5] = 0;
             } else {
@@ -241,8 +239,8 @@ public final class PlayerAppearance {
             }
           }
 
-          if ((var4.anInt1849 >= 0)) {
-            if ((var4.anInt1849 == 65535)) {
+          if (var4.anInt1849 >= 0) {
+            if (var4.anInt1849 == 65535) {
               var15[3] = 0;
               var13 ^= 4294967295L;
             } else {
@@ -269,14 +267,14 @@ public final class PlayerAppearance {
           var17 = false;
 
           int var19;
-          for (int var18 = 0; (var18 < 12); ++var18) {
+          for (int var18 = 0; var18 < 12; ++var18) {
             var19 = var15[var18];
-            if (((var19 & 1073741824) != 0)) {
+            if ((var19 & 1073741824) != 0) {
               if (!DummyClass35.getItemConfig(1073741823 & var19, (byte) 92)
                   .method1108((byte) 95, this.aBoolean864)) {
                 var17 = true;
               }
-            } else if (((var19 & Integer.MIN_VALUE) != 0) && !GlobalStatics_10
+            } else if ((var19 & Integer.MIN_VALUE) != 0 && !GlobalStatics_10
                 .getIdentityKit(
                     1073741823 & var19, 0).method942(101)) {
               var17 = true;
@@ -297,11 +295,11 @@ public final class PlayerAppearance {
             Model[] var39 = new Model[12];
 
             int var20;
-            for (var19 = 0; (var19 < 12); ++var19) {
+            for (var19 = 0; var19 < 12; ++var19) {
               var20 = var15[var19];
               Model var21;
-              if (((var20 & 1073741824) == 0)) {
-                if (((Integer.MIN_VALUE & var20) != 0)) {
+              if ((var20 & 1073741824) == 0) {
+                if ((Integer.MIN_VALUE & var20) != 0) {
                   var21 =
                       GlobalStatics_10.getIdentityKit(var20 & 1073741823, 0)
                           .method947((byte) -26);
@@ -341,7 +339,7 @@ public final class PlayerAppearance {
 
                   if (this.anIntArrayArray863[var20] == null) {
                     int[] var27 = this.anIntArrayArray863[var20] = new int[15];
-                    if ((var24 == 0) && (var25 == 0) && var26 == 0) {
+                    if (var24 == 0 && var25 == 0 && var26 == 0) {
                       var27[12] = -var45;
                       var27[13] = -var22;
                       var27[0] = var27[4] = var27[8] = '\u8000';
@@ -364,11 +362,11 @@ public final class PlayerAppearance {
                           16384 + var27[8] * -var23 - var22 * var27[5]
                               + var27[2] * -var45 >> 15;
                       var27[6] =
-                          var30 * var35 + (var32 * -var31 + 16384) >> 15;
+                          var30 * var35 + var32 * -var31 + 16384 >> 15;
                       var34 = 16384 + var32 * var29 >> 15;
                       var27[7] = 16384 - var33 * -var31 + var34 * var30 >> 15;
                       var27[1] =
-                          var31 * var34 + (var30 * -var33 + 16384) >> 15;
+                          var31 * var34 + var30 * -var33 + 16384 >> 15;
                       var27[12] =
                           -var22 * var27[3] + var27[0] * -var45
                               - var23 * var27[6] + 16384 >> 15;
@@ -382,7 +380,7 @@ public final class PlayerAppearance {
                     var27[10] = var22;
                   }
 
-                  if (var24 != 0 || (var25 != 0) || (var26 != 0)) {
+                  if (var24 != 0 || var25 != 0 || var26 != 0) {
                     var39[var20].rotate(var24, var25, var26);
                   }
 
@@ -455,7 +453,7 @@ public final class PlayerAppearance {
               }
 
               if ((var41.tween || GlobalStatics_9.tweening)
-                  && (var25 != -1)
+                  && var25 != -1
                   && var25 < var41.anIntArray1851.length) {
                 DummyClass14.anIntArray1960[var22] = var41.anIntArray1869[var24];
                 GlobalStatics_9.anIntArray3139[var22] = var1[var22].anInt1897;
@@ -509,7 +507,7 @@ public final class PlayerAppearance {
               var28 = var23 >>> 16;
               var23 &= '\uffff';
               var24 = var4.anIntArray1869[var10];
-              if ((var47 == var28)) {
+              if (var47 == var28) {
                 var48 = var46;
               } else {
                 var48 = GlobalStatics_6.method133(var23 >>> 16, 0);
@@ -538,13 +536,13 @@ public final class PlayerAppearance {
               var44 |= var3.aBoolean1848;
             }
 
-            if ((var3.tween || GlobalStatics_9.tweening) && (var6 != -1)
+            if ((var3.tween || GlobalStatics_9.tweening) && var6 != -1
                 && var3.anIntArray1851.length > var6) {
               var29 = var3.anIntArray1869[var11];
               var28 = var3.anIntArray1851[var6];
               var33 = var28 >>> 16;
               var28 &= '\uffff';
-              if ((var32 == var33)) {
+              if (var32 == var33) {
                 var50 = var49;
               } else {
                 var50 = GlobalStatics_6.method133(var28 >>> 16, 0);
@@ -610,7 +608,7 @@ public final class PlayerAppearance {
       AnimationSequence var3,
       int var4,
       int var5 ) {
-    if ((this.npcId == -1)) {
+    if (this.npcId == -1) {
         AbstractModel var6 = (AbstractModel) GlobalStatics_9.aClass93_1131.get(
             this.aLong860);
         if (var2 < 122) {
@@ -624,7 +622,7 @@ public final class PlayerAppearance {
           for (int var8 = 0; var8 < 12; ++var8) {
             var9 = this.anIntArray857[var8];
             if ((1073741824 & var9) == 0) {
-              if (((var9 & Integer.MIN_VALUE) != 0) && !GlobalStatics_10.getIdentityKit(
+              if ((var9 & Integer.MIN_VALUE) != 0 && !GlobalStatics_10.getIdentityKit(
                 var9 & 1073741823, 0).method948(18991)) {
                 var7 = true;
               }
@@ -642,10 +640,10 @@ public final class PlayerAppearance {
           var9 = 0;
 
           int var11;
-          for (int var10 = 0; (var10 < 12); ++var10) {
+          for (int var10 = 0; var10 < 12; ++var10) {
             var11 = this.anIntArray857[var10];
             Model var12;
-            if (((1073741824 & var11) == 0)) {
+            if ((1073741824 & var11) == 0) {
               if ((Integer.MIN_VALUE & var11) != 0) {
                 var12 = GlobalStatics_10.getIdentityKit(1073741823 & var11, 0).method941(true);
                 if (var12 != null) {
@@ -663,7 +661,7 @@ public final class PlayerAppearance {
 
           Model var15 = new Model(var14, var9);
 
-          for (var11 = 0; (var11 < 5); ++var11) {
+          for (var11 = 0; var11 < 5; ++var11) {
             if (GlobalStatics_2.aShortArrayArray344[var11].length > this.anIntArray862[var11]) {
               var15.replaceColor(GlobalStatics_9.aShortArray2548[var11],
                 GlobalStatics_2.aShortArrayArray344[var11][this.anIntArray862[var11]]);

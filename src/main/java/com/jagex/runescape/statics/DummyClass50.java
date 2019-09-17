@@ -36,10 +36,10 @@ public final class DummyClass50 {
         GlobalStatics_9.uidFile.method982(false, var2);
 
         int var3;
-        for (var3 = 0; (var3 < 24) && (var2[var3] == 0); ++var3) {
+        for (var3 = 0; var3 < 24 && var2[var3] == 0; ++var3) {
         }
 
-        if ((var3 >= 24)) {
+        if (var3 >= 24) {
           throw new IOException();
         }
       } catch (Exception var5) {
@@ -60,16 +60,16 @@ public final class DummyClass50 {
     int var2 = var1.anInt3963;
     RenderAnimation var3 = var1.getRenderAnimationId(false);
     assert var3 != null;
-    if ((var3.anInt368 == var1.anInt2764)) {
+    if (var3.anInt368 == var1.anInt2764) {
       var2 = var1.anInt3952;
     } else if (var3.anInt393 != var1.anInt2764
         && var1.anInt2764 != var3.anInt386
         && var1.anInt2764 != var3.anInt375
         && var3.anInt373 != var1.anInt2764) {
-      if ((var1.anInt2764 == var3.anInt398)
-          || (var1.anInt2764 == var3.anInt372)
+      if (var1.anInt2764 == var3.anInt398
+          || var1.anInt2764 == var3.anInt372
           || var1.anInt2764 == var3.anInt379
-          || (var1.anInt2764 == var3.anInt406)) {
+          || var1.anInt2764 == var3.anInt406) {
         var2 = var1.anInt3966;
       }
     } else {
@@ -99,7 +99,7 @@ public final class DummyClass50 {
         }
 
         for (var5 = 0; GlobalStatics_10.anInt104 > var5; ++var5) {
-          if ((GlobalStatics_4.aLongArray826[var5] == var1)) {
+          if (GlobalStatics_4.aLongArray826[var5] == var1) {
             GlobalStatics_8.printMessage(GlobalStatics_9.EMPTY_STRING, 0,
                 GlobalStatics_9.concat(new GameString[]{
                     DummyClass35.aClass94_666, var4,
@@ -181,7 +181,7 @@ public final class DummyClass50 {
       assert var4 != null;
       WorldMapLabel var5 = new WorldMapLabel(var4.length);
 
-      for (int var6 = 0; (var6 < var5.anInt1720); ++var6) {
+      for (int var6 = 0; var6 < var5.anInt1720; ++var6) {
         Buffer var7 = new Buffer(var2.getBytes(var3, var4[var6]));
         var5.aClass94Array1721[var6] = var7.readString();
         var5.aByteArray1730[var6] = var7.readByte();

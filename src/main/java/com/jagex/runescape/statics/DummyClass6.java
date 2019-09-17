@@ -37,7 +37,7 @@ public class DummyClass6 {
     int high = var3.high;
     int low = var3.low;
     int var7 = GlobalStatics_9.BIT_MASKS[high - low];
-    if ((var1 < 0) || var7 < var1) {
+    if (var1 < 0 || var7 < var1) {
       var1 = 0;
     }
 

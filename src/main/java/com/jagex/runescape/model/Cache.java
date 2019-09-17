@@ -40,7 +40,7 @@ public final class Cache {
   }
 
   public void put(long var2, SubNode var1 ) {
-    if ((this.capacity == 0)) {
+    if (this.capacity == 0) {
         SubNode var5 = this.queue.poll();
         var5.unlinkNode();
         var5.unlinkSubNode();

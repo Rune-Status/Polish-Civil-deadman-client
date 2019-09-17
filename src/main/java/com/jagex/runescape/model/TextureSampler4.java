@@ -42,10 +42,10 @@ public final class TextureSampler4 extends AbstractTextureSampler {
       this.anIntArray3230[0] = var1;
       int var3 = this.anInt3235 / 2;
 
-      for (int var5 = 0; (var5 < this.anInt3233); ++var5) {
+      for (int var5 = 0; var5 < this.anInt3233; ++var5) {
         int var6;
         int var7;
-        if ((var5 > 0)) {
+        if (var5 > 0) {
           var6 = this.anInt3222;
           var7 = (GlobalStatics_8.method1603((byte) 59, 4096, var2) - 2048) * this.anInt3219
               >> 12;
@@ -55,7 +55,7 @@ public final class TextureSampler4 extends AbstractTextureSampler {
 
         this.anIntArrayArray3225[var5][0] = 0;
 
-        for (var6 = 0; (var6 < this.anInt3242); ++var6) {
+        for (var6 = 0; var6 < this.anInt3242; ++var6) {
           if (var6 > 0) {
             var7 = this.anInt3235;
             int var8 =
@@ -66,7 +66,7 @@ public final class TextureSampler4 extends AbstractTextureSampler {
                 this.anIntArrayArray3225[var5][var6 - 1] + var7;
           }
 
-          this.anIntArrayArray3240[var5][var6] = (this.anInt3229 <= 0) ?
+          this.anIntArrayArray3240[var5][var6] = this.anInt3229 <= 0 ?
             4096 :
             4096 - GlobalStatics_8.method1603((byte) 33, this.anInt3229, var2);
         }
@@ -84,14 +84,14 @@ public final class TextureSampler4 extends AbstractTextureSampler {
         int var7 = 0;
 
         int var9;
-        for (var9 = DummyClass4.anIntArray2999[var1] + this.anInt3231; (var9 < 0); var9 += 4096) {
+        for (var9 = DummyClass4.anIntArray2999[var1] + this.anInt3231; var9 < 0; var9 += 4096) {
         }
 
         while (var9 > 4096) {
           var9 -= 4096;
         }
 
-        while (this.anInt3233 > var7 && (var9 >= this.anIntArray3230[var7])) {
+        while (this.anInt3233 > var7 && var9 >= this.anIntArray3230[var7]) {
           ++var7;
         }
 
@@ -99,7 +99,7 @@ public final class TextureSampler4 extends AbstractTextureSampler {
         int var15 = this.anIntArray3230[var7];
         boolean var12 = (var7 & 1) == 0;
         int var16 = this.anIntArray3230[var7 - 1];
-        if (var16 + this.anInt3223 < var9 && (var15 - this.anInt3223) > var9) {
+        if (var16 + this.anInt3223 < var9 && var15 - this.anInt3223 > var9) {
           for (var4 = 0; var4 < GlobalStatics_9.anInt1559; ++var4) {
             int var6 = 0;
             int var5 = !var12 ? -this.anInt3234 : this.anInt3234;
@@ -107,21 +107,22 @@ public final class TextureSampler4 extends AbstractTextureSampler {
             int var8;
             for (
               var8 = GlobalStatics_9.anIntArray2125[var4] + (this.anInt3235 * var5 >> 12);
-              (var8 < 0); var8 += 4096) {
+                var8 < 0; var8 += 4096) {
             }
 
             while (var8 > 4096) {
               var8 -= 4096;
             }
 
-            while (this.anInt3242 > var6 && (var8 >= this.anIntArrayArray3225[var11][var6])) {
+            while (this.anInt3242 > var6 &&
+                var8 >= this.anIntArrayArray3225[var11][var6]) {
               ++var6;
             }
 
             int var14 = this.anIntArrayArray3225[var11][var6];
             int var10 = var6 - 1;
             int var13 = this.anIntArrayArray3225[var11][var10];
-            if (((var13 + this.anInt3223) < var8) && (-this.anInt3223 + var14) > var8) {
+            if (var13 + this.anInt3223 < var8 && -this.anInt3223 + var14 > var8) {
               var3[var4] = this.anIntArrayArray3240[var11][var10];
             } else {
               var3[var4] = 0;
@@ -140,19 +141,19 @@ public final class TextureSampler4 extends AbstractTextureSampler {
     if (var1 == 0) {
         this.anInt3242 = var2.readUnsignedByte();
       } else {
-        if ((var1 == 1)) {
+        if (var1 == 1) {
           this.anInt3233 = var2.readUnsignedByte();
-        } else if ((var1 != 2)) {
+        } else if (var1 != 2) {
           if (var1 == 3) {
             this.anInt3219 = var2.readUnsignedShort();
           } else {
             if (var1 == 4) {
               this.anInt3234 = var2.readUnsignedShort();
             } else {
-              if ((var1 == 5)) {
+              if (var1 == 5) {
                 this.anInt3231 = var2.readUnsignedShort();
               } else {
-                if ((var1 == 6)) {
+                if (var1 == 6) {
                   this.anInt3224 = var2.readUnsignedShort();
                 } else {
                   if (var1 == 7) {

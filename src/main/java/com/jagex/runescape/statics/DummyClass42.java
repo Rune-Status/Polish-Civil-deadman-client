@@ -77,12 +77,12 @@ public final class DummyClass42 {
     var12 /= 6.0D;
     if (var20 < 0) {
       var20 = 0;
-    } else if ((var20 > 255)) {
+    } else if (var20 > 255) {
       var20 = 255;
     }
 
     int var18 = (int) (var12 * 256.0D);
-    if ((var19 >= 0)) {
+    if (var19 >= 0) {
       if (var19 > 255) {
         var19 = 255;
       }
@@ -90,11 +90,11 @@ public final class DummyClass42 {
       var19 = 0;
     }
 
-    if ((var20 <= 243)) {
-      if ((var20 <= 217)) {
-        if ((var20 > 192)) {
+    if (var20 <= 243) {
+      if (var20 <= 217) {
+        if (var20 > 192) {
           var19 >>= 2;
-        } else if ((var20 > 179)) {
+        } else if (var20 > 179) {
           var19 >>= 1;
         }
       } else {

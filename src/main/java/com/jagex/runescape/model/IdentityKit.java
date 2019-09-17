@@ -20,8 +20,8 @@ public final class IdentityKit {
         int var3 = 0;
         Model[] var2 = new Model[5];
 
-        for (int var4 = 0; (var4 < 5); ++var4) {
-          if ((this.anIntArray475[var4] != -1)) {
+        for (int var4 = 0; var4 < 5; ++var4) {
+          if (this.anIntArray475[var4] != -1) {
             var2[var3++] =
                 GlobalStatics_10.getModel(GlobalStatics_9.aClass153_152,
                     this.anIntArray475[var4], 0);
@@ -31,7 +31,7 @@ public final class IdentityKit {
         Model var7 = new Model(var2, var3);
         int var5;
         if (this.aShortArray464 != null) {
-          for (var5 = 0; (var5 < this.aShortArray464.length); ++var5) {
+          for (var5 = 0; var5 < this.aShortArray464.length; ++var5) {
             var7.replaceColor(this.aShortArray464[var5],
                 this.aShortArray460[var5]);
           }
@@ -59,7 +59,7 @@ public final class IdentityKit {
           this.method948(44);
         }
 
-        for (int var3 = 0; (var3 < this.anIntArray474.length); ++var3) {
+        for (int var3 = 0; var3 < this.anIntArray474.length; ++var3) {
           if (!GlobalStatics_9.aClass153_152.method2129((byte) -90, 0,
               this.anIntArray474[var3])) {
             var2 = false;
@@ -75,22 +75,22 @@ public final class IdentityKit {
         this.aShortArray470 = null;
       }
 
-      if ((var3 == 1)) {
+      if (var3 == 1) {
         this.anInt466 = var2.readUnsignedByte();
       } else {
         int var4;
         int var5;
-        if ((var3 == 2)) {
+        if (var3 == 2) {
           var4 = var2.readUnsignedByte();
           this.anIntArray474 = new int[var4];
 
           for (var5 = 0; var4 > var5; ++var5) {
             this.anIntArray474[var5] = var2.readUnsignedShort();
           }
-        } else if ((var3 == 3)) {
+        } else if (var3 == 3) {
           this.aBoolean476 = true;
-        } else if ((var3 != 40)) {
-          if ((var3 == 41)) {
+        } else if (var3 != 40) {
+          if (var3 == 41) {
             var4 = var2.readUnsignedByte();
             this.aShortArray471 = new short[var4];
             this.aShortArray470 = new short[var4];
@@ -99,7 +99,7 @@ public final class IdentityKit {
               this.aShortArray471[var5] = (short) var2.readUnsignedShort();
               this.aShortArray470[var5] = (short) var2.readUnsignedShort();
             }
-          } else if ((var3 >= 60) && var3 < 70) {
+          } else if (var3 >= 60 && var3 < 70) {
             this.anIntArray475[-60 + var3] = var2.readUnsignedShort();
           }
         } else {
@@ -121,7 +121,7 @@ public final class IdentityKit {
       } else {
         Model[] var2 = new Model[this.anIntArray474.length];
 
-        for (int var3 = 0; (var3 < this.anIntArray474.length); ++var3) {
+        for (int var3 = 0; var3 < this.anIntArray474.length; ++var3) {
           var2[var3] =
             GlobalStatics_10.getModel(GlobalStatics_9.aClass153_152, this.anIntArray474[var3], 0);
         }
@@ -143,7 +143,7 @@ public final class IdentityKit {
         }
 
         if (this.aShortArray471 != null) {
-          for (var5 = 0; (var5 < this.aShortArray471.length); ++var5) {
+          for (var5 = 0; var5 < this.aShortArray471.length; ++var5) {
             assert var7 != null;
             var7.replaceMaterial(this.aShortArray471[var5], this.aShortArray470[var5]);
           }

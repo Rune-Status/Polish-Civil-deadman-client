@@ -30,7 +30,7 @@ public final class GameStringStatics {
       170, 170, 178, 255, 178
   };
   public static HashTable aClass130_1194;
-  public static GameString aClass94_1760 = create("");
+  public static GameString aClass94_1760 = GameStringStatics.create("");
   public static byte[] aByteArray4005 = {
       (byte) 95, (byte) 97, (byte) 98, (byte) 99, (byte) 100, (byte) 101,
       (byte) 102, (byte) 103,
@@ -64,8 +64,8 @@ public final class GameStringStatics {
   }
 
   public static GameString stringFromBase37(int var0, long var1) {
-    if ((var1 > 0L) && (var1 < 6582952005840035281L)) {
-      if (((var1 % 37L) == 0L)) {
+    if (var1 > 0L && var1 < 6582952005840035281L) {
+      if (var1 % 37L == 0L) {
         return null;
       } else {
         int var3 = 0;
@@ -80,7 +80,7 @@ public final class GameStringStatics {
           long var7 = var1;
           var1 /= 37L;
           --var3;
-          var6[var3] = aByteArray4005[(int) (-(var1 * 37L) + var7)];
+          var6[var3] = GameStringStatics.aByteArray4005[(int) (-(var1 * 37L) + var7)];
         }
 
         GameString var10 = new GameString();
@@ -94,8 +94,8 @@ public final class GameStringStatics {
   }
 
   public static boolean method2103(int var0, int var1) {
-    return var1 >= -78 || ((var0 == 198) || var0 == 230 || var0 == 156
-        || (var0 == 140) || var0 == 223);
+    return var1 >= -78 || var0 == 198 || var0 == 230 || var0 == 156
+        || var0 == 140 || var0 == 223;
   }
 
   public static GameString create(String string) {
@@ -115,7 +115,7 @@ public final class GameStringStatics {
         // 0-9
         int offset = bytes[i++] & 255;
         str.bytes[str.length++] = (byte) (offset - 48 + 43 * (ch - 40));
-      } else if ((ch != 0)) {
+      } else if (ch != 0) {
         str.bytes[str.length++] = (byte) ch;
       }
     }

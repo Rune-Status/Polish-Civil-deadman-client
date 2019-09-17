@@ -47,7 +47,7 @@ public final class FileCache {
       synchronized (var3) {
         Object var10000;
         try {
-          if ((this.aClass30_683.method976(0) < (var1 * 6 + 6))) {
+          if (this.aClass30_683.method976(0) < var1 * 6 + 6) {
             var10000 = null;
             return null;
           }
@@ -66,12 +66,12 @@ public final class FileCache {
             return null;
           }
 
-          if (var5 > 0 && (var5 <= (this.aClass30_681.method976(0) / 520L))) {
+          if (var5 > 0 && var5 <= this.aClass30_681.method976(0) / 520L) {
             byte[] var7 = new byte[var4];
             int var8 = 0;
 
             int var13;
-            for (int var9 = 0; (var8 < var4); var5 = var13) {
+            for (int var9 = 0; var8 < var4; var5 = var13) {
               if (var5 == 0) {
                 var10000 = null;
                 return null;
@@ -79,7 +79,7 @@ public final class FileCache {
 
               int var10 = -var8 + var4;
               this.aClass30_681.seek(-113, 520 * var5);
-              if ((var10 > 512)) {
+              if (var10 > 512) {
                 var10 = 512;
               }
 
@@ -103,7 +103,7 @@ public final class FileCache {
                 return null;
               }
 
-              for (int var15 = 0; (var15 < var10); ++var15) {
+              for (int var15 = 0; var15 < var10; ++var15) {
                 var7[var8++] = DummyClass11.aByteArray2040[var15 + 8];
               }
 
@@ -130,7 +130,7 @@ public final class FileCache {
           int var7;
           boolean var10000;
           if (var5) {
-            if (this.aClass30_683.method976(var1 ^ 87) < (6 + var3 * 6)) {
+            if (this.aClass30_683.method976(var1 ^ 87) < 6 + var3 * 6) {
               var10000 = false;
               return false;
             }
@@ -139,13 +139,13 @@ public final class FileCache {
             this.aClass30_683.method978(0, DummyClass11.aByteArray2040, 6, 0);
             var7 = (16711680 & DummyClass11.aByteArray2040[3] << 16) + ('\uff00'
               & DummyClass11.aByteArray2040[4] << 8) + (DummyClass11.aByteArray2040[5] & 255);
-            if ((var7 <= 0) || ((this.aClass30_681.method976(0) / 520L) < var7)) {
+            if (var7 <= 0 || this.aClass30_681.method976(0) / 520L < var7) {
               var10000 = false;
               return false;
             }
           } else {
             var7 = (int) ((this.aClass30_681.method976(var1 - 87) + 519L) / 520L);
-            if ((var7 == 0)) {
+            if (var7 == 0) {
               var7 = 1;
             }
           }
@@ -167,7 +167,7 @@ public final class FileCache {
               .write(DummyClass11.aByteArray2040, 0, var1 ^ -903171097, 6);
 
           while (true) {
-            if ((var8 < var2)) {
+            if (var8 < var2) {
               label146:
               {
                 int var10 = 0;
@@ -192,38 +192,39 @@ public final class FileCache {
                   int var12 =
                     (DummyClass11.aByteArray2040[3] & 255) + (DummyClass11.aByteArray2040[2] << 8
                       & '\uff00');
-                  if (var11 != var3 || (var9 != var12) || (this.anInt682 != var13)) {
+                  if (var11 != var3 || var9 != var12 || this.anInt682 != var13) {
                     var10000 = false;
                     return false;
                   }
 
-                  if (var10 < 0 || var10 > (this.aClass30_681.method976(0) / 520L)) {
+                  if (var10 < 0 || var10 >
+                      this.aClass30_681.method976(0) / 520L) {
                     var10000 = false;
                     return false;
                   }
                 }
 
                 var11 = -var8 + var2;
-                if ((var10 == 0)) {
+                if (var10 == 0) {
                   var5 = false;
                   var10 = (int) ((this.aClass30_681.method976(0) + 519L) / 520L);
-                  if ((var10 == 0)) {
+                  if (var10 == 0) {
                     ++var10;
                   }
 
-                  if ((var10 == var7)) {
+                  if (var10 == var7) {
                     ++var10;
                   }
                 }
 
                 DummyClass11.aByteArray2040[7] = (byte) this.anInt682;
                 DummyClass11.aByteArray2040[0] = (byte) (var3 >> 8);
-                if (((-var8 + var2) <= 512)) {
+                if (-var8 + var2 <= 512) {
                   var10 = 0;
                 }
 
                 DummyClass11.aByteArray2040[4] = (byte) (var10 >> 16);
-                if ((var11 > 512)) {
+                if (var11 > 512) {
                   var11 = 512;
                 }
 

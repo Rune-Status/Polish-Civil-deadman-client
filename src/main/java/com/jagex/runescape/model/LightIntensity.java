@@ -31,7 +31,7 @@ public final class LightIntensity {
       } else {
         if (var1 == 2) {
           this.anInt908 = var2.readUnsignedShort();
-        } else if ((var1 == 3)) {
+        } else if (var1 == 3) {
           this.anInt899 = var2.readUnsignedShort();
         } else if (var1 == 4) {
           this.anInt907 = var2.method787((byte) 46);

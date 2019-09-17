@@ -27,7 +27,7 @@ public final class TextureSampler16 extends AbstractTextureSampler {
           int var10 = this.anInt3108 * (var6 % (4096 / this.anInt3108));
           int var11 = var7 % (4096 / this.anInt3113) * this.anInt3113;
           if (this.anInt3109 > var11) {
-            for (var8 -= var9; (var8 < 0); var8 += 4) {
+            for (var8 -= var9; var8 < 0; var8 += 4) {
             }
 
             while (var8 > 3) {
@@ -49,7 +49,7 @@ public final class TextureSampler16 extends AbstractTextureSampler {
             for (var8 -= var9; var8 < 0; var8 += 4) {
             }
 
-            while ((var8 > 3)) {
+            while (var8 > 3) {
               var8 -= 4;
             }
 
@@ -68,7 +68,7 @@ public final class TextureSampler16 extends AbstractTextureSampler {
 
   public void parseConfig(int var1, Buffer var2, boolean var3 ) {
     if (var3) {
-        if ((var1 == 0)) {
+        if (var1 == 0) {
           this.anInt3108 = var2.readUnsignedByte();
         } else {
           if (var1 == 1) {

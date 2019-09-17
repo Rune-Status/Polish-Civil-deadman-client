@@ -48,7 +48,7 @@ public final class DummyClass60 {
       }
     }
 
-    for (var1 = 0; (var1 < GlobalStatics_8.npcs.length); ++var1) {
+    for (var1 = 0; var1 < GlobalStatics_8.npcs.length; ++var1) {
       if (GlobalStatics_8.npcs[var1] != null) {
         GlobalStatics_8.npcs[var1].anInt2772 = -1;
       }
@@ -140,7 +140,7 @@ public final class DummyClass60 {
     }
 
     GlobalStatics_10.method226(var1, 58);
-    if ((GlobalStatics_9.anInt3655 != -1)) {
+    if (GlobalStatics_9.anInt3655 != -1) {
       GlobalStatics_6.method124(var0 ^ 6509, 1, GlobalStatics_9.anInt3655);
     }
 

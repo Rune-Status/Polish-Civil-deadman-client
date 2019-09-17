@@ -61,7 +61,7 @@ public final class DummyClass8 extends DummyClass7 {
             var9.anInt1346 + (var9.anInt1356 - GlobalStatics_10.anInt1716 << 7),
             (byte) -114, var4);
         if (DummyClass34.anInt590 > -1
-            && ((GlobalStatics_4.updateCycle % 20) < 10)) {
+            && GlobalStatics_4.updateCycle % 20 < 10) {
           GlobalStatics_9.aClass3_Sub28_Sub16Array2072[var9.anInt1351]
               .method643(
                   -12 + var1 + DummyClass34.anInt590,
@@ -99,10 +99,10 @@ public final class DummyClass8 extends DummyClass7 {
     for (int var5 = 0; var5 < var3; ++var5) {
       DummyClass43.method1194(-16385);
 
-      for (int var6 = 0; (var6 < 13); ++var6) {
-        for (int var7 = 0; (var7 < 13); ++var7) {
+      for (int var6 = 0; var6 < 13; ++var6) {
+        for (int var7 = 0; var7 < 13; ++var7) {
           int var8 = GlobalStatics_8.anIntArrayArrayArray1497[var5][var6][var7];
-          if ((var8 != -1)) {
+          if (var8 != -1) {
             int var9 = var8 >> 24 & 3;
             if (!var0 || var9 == 0) {
               int var10 = (6 & var8) >> 1;
@@ -112,7 +112,7 @@ public final class DummyClass8 extends DummyClass7 {
 
               for (int var14 = 0; GlobalStatics_6.regionHashes.length > var14;
                   ++var14) {
-                if ((GlobalStatics_6.regionHashes[var14] == var13)
+                if (GlobalStatics_6.regionHashes[var14] == var13
                     && var4[var14] != null) {
                   GlobalStatics_9.method316(GlobalStatics_0.collisionMaps, var5,
                       var4[var14], var9,
@@ -137,7 +137,7 @@ public final class DummyClass8 extends DummyClass7 {
 
     int var6 = (int) var1 >> 20 & 3;
     int var7 = (int) (var1 >>> 32) & Integer.MAX_VALUE;
-    if (var5 != 10 && (var5 != 11) && var5 != 22) {
+    if (var5 != 10 && var5 != 11 && var5 != 22) {
       GlobalStatics_9
           .method582(GlobalStatics_9.localPlayer.waypointsY[0], var6, 0, true,
               0, 2, var4, 0,
@@ -146,7 +146,7 @@ public final class DummyClass8 extends DummyClass7 {
       GameObjectConfig var8 = DummyClass11.method2207(4, var7);
       int var9;
       int var10;
-      if ((var6 != 0) && (var6 != 2)) {
+      if (var6 != 0 && var6 != 2) {
         var10 = var8.anInt1480;
         var9 = var8.anInt1485;
       } else {
@@ -155,7 +155,7 @@ public final class DummyClass8 extends DummyClass7 {
       }
 
       int var11 = var8.anInt1533;
-      if ((var6 != 0)) {
+      if (var6 != 0) {
         var11 = (var11 << var6 & 15) + (var11 >> -var6 + 4);
       }
 
@@ -200,23 +200,23 @@ public final class DummyClass8 extends DummyClass7 {
       boolean var4 = false;
 
       int var5;
-      for (var5 = 0; (var5 < var3.anInt2296); ++var5) {
+      for (var5 = 0; var5 < var3.anInt2296; ++var5) {
         if (var3.aClass64Array2303[var5] != null) {
-          if ((var3.aClass64Array2303[var5].status == 2)) {
+          if (var3.aClass64Array2303[var5].status == 2) {
             var3.anIntArray2300[var5] = -5;
           }
 
-          if ((var3.aClass64Array2303[var5].status == 0)) {
+          if (var3.aClass64Array2303[var5].status == 0) {
             var4 = true;
           }
         }
 
         if (var3.aClass64Array2298[var5] != null) {
-          if ((var3.aClass64Array2298[var5].status == 2)) {
+          if (var3.aClass64Array2298[var5].status == 2) {
             var3.anIntArray2300[var5] = -6;
           }
 
-          if ((var3.aClass64Array2298[var5].status == 0)) {
+          if (var3.aClass64Array2298[var5].status == 0) {
             var4 = true;
           }
         }
@@ -232,18 +232,18 @@ public final class DummyClass8 extends DummyClass7 {
       var0.writeInt(var3.anInt2305);
 
       for (int var6 = 0; var3.anInt2296 > var6; ++var6) {
-        if ((var3.anIntArray2300[var6] == 0)) {
+        if (var3.anIntArray2300[var6] == 0) {
           try {
             int var7 = var3.anIntArray2301[var6];
             Field var8;
             int var9;
-            if ((var7 == 0)) {
+            if (var7 == 0) {
               var8 = (Field) var3.aClass64Array2303[var6].result;
               var9 = var8.getInt(null);
               var0.writeByte(0);
               var0.writeInt(var9);
             } else {
-              if ((var7 == 1)) {
+              if (var7 == 1) {
                 var8 = (Field) var3.aClass64Array2303[var6].result;
                 var8.setInt(null, var3.anIntArray2299[var6]);
                 var0.writeByte(0);

@@ -26,13 +26,13 @@ public final class DummyClass22 {
     }
 
     int var5 = 0;
-    if ((var1.anInt2263 == 0)) {
+    if (var1.anInt2263 == 0) {
       var2 = GlobalStatics_9
           .method2174(var1.anInt2250, var1.anInt2264, var1.anInt2248);
     }
 
     int var6 = 0;
-    if ((var1.anInt2263 == 1)) {
+    if (var1.anInt2263 == 1) {
       var2 = GlobalStatics_9
           .method1395(var1.anInt2250, var1.anInt2264, var1.anInt2248);
     }
@@ -42,7 +42,7 @@ public final class DummyClass22 {
           .method557(var1.anInt2250, var1.anInt2264, var1.anInt2248);
     }
 
-    if ((var1.anInt2263 == 3)) {
+    if (var1.anInt2263 == 3) {
       var2 = GLStatics
           .method104(var1.anInt2250, var1.anInt2264, var1.anInt2248);
     }
@@ -89,8 +89,8 @@ public final class DummyClass22 {
     var2 = 15 * GlobalStatics_10.amountContextActions + 21;
     int var4 = DummyClass36.anInt2612;
     var1 += 8;
-    var3 = GlobalStatics_9.anInt1297 - (var1 / 2);
-    if ((var4 + var2) > GlobalStatics_9.viewHeight) {
+    var3 = GlobalStatics_9.anInt1297 - var1 / 2;
+    if (var4 + var2 > GlobalStatics_9.viewHeight) {
       var4 = GlobalStatics_9.viewHeight - var2;
     }
 
@@ -98,17 +98,17 @@ public final class DummyClass22 {
       var3 = -var1 + DummyClass30.viewWidth;
     }
 
-    if ((var3 < 0)) {
+    if (var3 < 0) {
       var3 = 0;
     }
 
-    if ((var4 < 0)) {
+    if (var4 < 0) {
       var4 = 0;
     }
 
-    if ((GlobalStatics_7.anInt3660 == 1)) {
-      if ((GlobalStatics_9.anInt1297 == GlobalStatics_9.anInt3460)
-          && (GlobalStatics_8.anInt2099 == DummyClass36.anInt2612)) {
+    if (GlobalStatics_7.anInt3660 == 1) {
+      if (GlobalStatics_9.anInt1297 == GlobalStatics_9.anInt3460
+          && GlobalStatics_8.anInt2099 == DummyClass36.anInt2612) {
         GlobalStatics_9.anInt3537 =
             GlobalStatics_10.amountContextActions * 15 + (
                 !GlobalStatics_8.aBoolean1951 ? 22 : 26);
@@ -118,8 +118,8 @@ public final class DummyClass22 {
         DummyClass36.aBoolean2615 = true;
         GlobalStatics_9.anInt3552 = var1;
       }
-    } else if ((GlobalStatics_9.anInt1297 == DummyClass5.anInt2993)
-        && (DummyClass36.anInt2612 == DummyClass36.anInt2614)) {
+    } else if (GlobalStatics_9.anInt1297 == DummyClass5.anInt2993
+        && DummyClass36.anInt2612 == DummyClass36.anInt2614) {
       GlobalStatics_1.anInt1462 = var3;
       GlobalStatics_7.anInt3660 = 0;
       GlobalStatics_9.anInt3552 = var1;

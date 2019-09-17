@@ -18,7 +18,7 @@ public final class FileOnDisk {
       var3 = Long.MAX_VALUE;
     }
 
-    if ((var3 <= var1.length())) {
+    if (var3 <= var1.length()) {
       var1.delete();
     }
 
@@ -27,7 +27,7 @@ public final class FileOnDisk {
     this.aLong1649 = var3;
     this.aLong1652 = 0L;
     int var5 = this.aRandomAccessFile1651.read();
-    if ((var5 != -1) && !var2.equals("r")) {
+    if (var5 != -1 && !var2.equals("r")) {
       this.aRandomAccessFile1651.seek(0L);
       this.aRandomAccessFile1651.write(var5);
     }
@@ -54,7 +54,7 @@ public final class FileOnDisk {
   }
 
   public void method1738(int var1, byte[] var2, int var3, int var4) throws IOException {
-    if ((this.aLong1652 + var3) > this.aLong1649) {
+    if (this.aLong1652 + var3 > this.aLong1649) {
       this.aRandomAccessFile1651.seek(1L + this.aLong1649);
       this.aRandomAccessFile1651.write(1);
       throw new EOFException();

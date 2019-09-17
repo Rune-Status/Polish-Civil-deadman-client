@@ -27,12 +27,12 @@ public final class SomethingSoundEffect {
 
   private int method1716(int var1, int var2, int var3) {
     return var3 == 1 ?
-      ((var1 & 32767) < 16384 ? var2 : -var2) :
-      (var3 == 2 ?
-          GlobalStatics_9.anIntArray1591[var1 & 32767] * var2 >> 14 :
-        (var3 == 3 ?
-          ((var1 & 32767) * var2 >> 14) - var2 :
-          (var3 == 4 ? GlobalStatics_9.anIntArray1594[var1 / 2607 & 32767] * var2 : 0)));
+        (var1 & 32767) < 16384 ? var2 : -var2 :
+        var3 == 2 ?
+            GlobalStatics_9.anIntArray1591[var1 & 32767] * var2 >> 14 :
+            var3 == 3 ?
+            ((var1 & 32767) * var2 >> 14) - var2 :
+                var3 == 4 ? GlobalStatics_9.anIntArray1594[var1 / 2607 & 32767] * var2 : 0;
   }
 
   public int[] method1717(int var1, int var2 ) {

@@ -59,8 +59,8 @@ public final class Texture extends SubNode {
     this.proceduralTexture = new ProceduralTexture(var1);
     this.aBoolean3789 = var1.readUnsignedByte() == 1;
     this.aBoolean3800 = var1.readUnsignedByte() == 1;
-    this.aBoolean3787 = (var1.readUnsignedByte() == 1);
-    this.aBoolean3781 = (var1.readUnsignedByte() == 1);
+    this.aBoolean3787 = var1.readUnsignedByte() == 1;
+    this.aBoolean3781 = var1.readUnsignedByte() == 1;
     int var2 = 3 & var1.readUnsignedByte();
     this.anInt3783 = var1.readByte();
     this.anInt3799 = var1.readByte();
@@ -68,9 +68,9 @@ public final class Texture extends SubNode {
     var1.readUnsignedByte();
     if (var2 == 1) {
       this.textureEnvironmentOpcode = 2;
-    } else if ((var2 == 2)) {
+    } else if (var2 == 2) {
       this.textureEnvironmentOpcode = 3;
-    } else if ((var2 != 3)) {
+    } else if (var2 != 3) {
       this.textureEnvironmentOpcode = 0;
     } else {
       this.textureEnvironmentOpcode = 4;
@@ -124,14 +124,14 @@ public final class Texture extends SubNode {
 
           int var25 = var19;
 
-          for (int var31 = var18; (var31 >= 0); --var31) {
+          for (int var31 = var18; var31 >= 0; --var31) {
             int var30 = 0;
             int var29 = 0;
             int var28 = 0;
             int var26 = 1;
             int var27 = 1;
 
-            for (var11 = 2; (var11 >= 0); --var11) {
+            for (var11 = 2; var11 >= 0; --var11) {
               --var27;
               var30 += var8[var27];
               var29 += var9[var27];
@@ -141,7 +141,7 @@ public final class Texture extends SubNode {
               }
             }
 
-            for (var11 = var17; (var11 >= 0); --var11) {
+            for (var11 = var17; var11 >= 0; --var11) {
               --var26;
               int var21 = var30 / 9;
               int var22 = var29 / 9;
@@ -153,16 +153,16 @@ public final class Texture extends SubNode {
               var28 += var7[var27] - var7[var26];
               var29 += var9[var27] - var9[var26];
               var30 += -var8[var26] + var8[var27];
-              if ((var26 == 0)) {
+              if (var26 == 0) {
                 var26 = var15;
               }
 
-              if ((var27 == 0)) {
+              if (var27 == 0) {
                 var27 = var15;
               }
             }
 
-            for (var11 = var17; (var11 >= 0); --var11) {
+            for (var11 = var17; var11 >= 0; --var11) {
               --var13;
               int var23 = this.anIntArray3793[var13];
               --var14;
@@ -200,8 +200,8 @@ public final class Texture extends SubNode {
     } else if (this.proceduralTexture.method1408(true, var2, var1)) {
       int var6 = !var4 ? 128 : 64;
       int flags = DummyClass32.method961(1536);
-      if (((1 & flags) == 0)) {
-        if ((this.anInt3795 == -1)) {
+      if ((1 & flags) == 0) {
+        if (this.anInt3795 == -1) {
           int[] var8 = new int[1];
           GlRenderer.GL.glGenTextures(1, var8, 0);
           this.anInt3791 = DummyClass33.anInt582;
@@ -222,7 +222,7 @@ public final class Texture extends SubNode {
                 4 * var9.limit() / 3 - this.anInt3796;
             this.anInt3796 = var9.limit() * 4 / 3;
           } else {
-            if ((this.anInt3788 == 1)) {
+            if (this.anInt3788 == 1) {
               int var10 = 0;
 
               while (true) {
@@ -264,7 +264,7 @@ public final class Texture extends SubNode {
         }
       }
 
-      if (((2 & flags) == 0)) {
+      if ((2 & flags) == 0) {
         GlRenderer.method1856(this.textureEnvironmentOpcode);
       }
 
@@ -273,7 +273,7 @@ public final class Texture extends SubNode {
       }
 
       if ((flags & 8) == 0) {
-        if ((this.anInt3799 == 0) && this.anInt3783 == 0) {
+        if (this.anInt3799 == 0 && this.anInt3783 == 0) {
           GlRenderer.loadIdentityTextureMatrix();
         } else {
           float var12 =
@@ -312,15 +312,15 @@ public final class Texture extends SubNode {
     }
 
     if (this.anIntArray3793 != null) {
-      if (this.anInt3799 != 0 || (this.anInt3783 != 0)) {
+      if (this.anInt3799 != 0 || this.anInt3783 != 0) {
         if (GlobalStatics_9.anIntArray2533 == null
-            || (GlobalStatics_9.anIntArray2533.length
-            < this.anIntArray3793.length)) {
+            || GlobalStatics_9.anIntArray2533.length
+            < this.anIntArray3793.length) {
           GlobalStatics_9.anIntArray2533 = new int[this.anIntArray3793.length];
         }
 
         int var5 = var1 * this.anInt3783;
-        int var3 = (this.anIntArray3793.length == 4096) ? 64 : 128;
+        int var3 = this.anIntArray3793.length == 4096 ? 64 : 128;
         int var4 = this.anIntArray3793.length;
         int var6 = var3 - 1;
         int var7 = this.anInt3799 * var1 * var3;
@@ -371,20 +371,20 @@ public final class Texture extends SubNode {
 
   public static void method725(int var0) {
     int var1 = 67 / ((-60 - var0) / 41);
-    if ((DummyClass20.method1817((byte) 70) == 2)) {
+    if (DummyClass20.method1817((byte) 70) == 2) {
       byte var2 = (byte) (255 & GlobalStatics_6.anInt1127 - 4);
       int var3 = GlobalStatics_6.anInt1127 % 104;
 
       int var4;
       int var5;
-      for (var4 = 0; (var4 < 4); ++var4) {
+      for (var4 = 0; var4 < 4; ++var4) {
         for (var5 = 0; var5 < 104; ++var5) {
           GlobalStatics_5.aByteArrayArrayArray2008[var4][var3][var5] = var2;
         }
       }
 
       if (GlobalStatics_9.currentPlane != 3) {
-        for (var4 = 0; (var4 < 2); ++var4) {
+        for (var4 = 0; var4 < 2; ++var4) {
           GlobalStatics_7.anIntArray686[var4] = -1000000;
           GlobalStatics_9.anIntArray2696[var4] = 1000000;
           DummyClass13.anIntArray2021[var4] = 0;
@@ -404,7 +404,7 @@ public final class Texture extends SubNode {
                 GLStatics.sceneGraphTiles, 0);
           }
 
-          if ((DummyClass17.anInt1823 < 310)) {
+          if (DummyClass17.anInt1823 < 310) {
             int var7 = GlobalStatics_9.localPlayer.anInt2829 >> 7;
             var5 = DummyClass49.anInt1111 >> 7;
             int var9;
@@ -436,9 +436,9 @@ public final class Texture extends SubNode {
                   ++var4;
                 }
 
-                if (((
+                if ((
                     GlobalStatics_10.tileFlags[GlobalStatics_9.currentPlane][var4][var5]
-                        & 4) != 0)) {
+                        & 4) != 0) {
                   GlobalStatics_9.method2031((byte) -29, false, var4, var5,
                       GLStatics.sceneGraphTiles, 1);
                   break;
@@ -455,9 +455,9 @@ public final class Texture extends SubNode {
                   }
 
                   var11 -= 65536;
-                  if (((4
+                  if ((4
                       & GlobalStatics_10.tileFlags[GlobalStatics_9.currentPlane][var4][var5])
-                      != 0)) {
+                      != 0) {
                     GlobalStatics_9.method2031((byte) -120, false, var4, var5,
                         GLStatics.sceneGraphTiles, 1);
                     break;
@@ -468,23 +468,23 @@ public final class Texture extends SubNode {
               var11 = '\u8000';
               var10 = 65536 * var8 / var9;
 
-              while ((var5 != var7)) {
+              while (var5 != var7) {
                 if (var5 < var7) {
                   ++var5;
                 } else if (var5 > var7) {
                   --var5;
                 }
 
-                if (((4
+                if ((4
                     & GlobalStatics_10.tileFlags[GlobalStatics_9.currentPlane][var4][var5])
-                    != 0)) {
+                    != 0) {
                   GlobalStatics_9.method2031((byte) -13, false, var4, var5,
                       GLStatics.sceneGraphTiles, 1);
                   break;
                 }
 
                 var11 += var10;
-                if ((var11 >= 65536)) {
+                if (var11 >= 65536) {
                   if (var6 > var4) {
                     ++var4;
                   } else if (var6 < var4) {

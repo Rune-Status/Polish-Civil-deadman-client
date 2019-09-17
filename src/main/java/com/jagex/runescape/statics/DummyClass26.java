@@ -66,7 +66,7 @@ public final class DummyClass26 {
 
   public static void setState(int var0, int var1) {
     if (DummyClass15.state != var0) {
-      if ((DummyClass15.state == 0)) {
+      if (DummyClass15.state == 0) {
         GlobalStatics_9.method1517((byte) -118);
       }
 
@@ -89,11 +89,11 @@ public final class DummyClass26 {
         GlobalStatics_9.method1250(102, true);
       }
 
-      if ((var0 == 25) || var0 == 10) {
+      if (var0 == 25 || var0 == 10) {
         GlobalStatics_9.method1293(true);
       }
 
-      if ((var0 == 5)) {
+      if (var0 == 5) {
         DummyClass58
             .loadTitleScreenSprites(GlobalStatics_10.sprites, (byte) -111);
       } else {
@@ -101,8 +101,8 @@ public final class DummyClass26 {
       }
 
       boolean var3 =
-          var1 == DummyClass15.state || (DummyClass15.state == 10) ||
-              (DummyClass15.state == 28);
+          var1 == DummyClass15.state || DummyClass15.state == 10 ||
+              DummyClass15.state == 28;
       if (var3 == !var2) {
         if (var2) {
           GlobalStatics_4.anInt1691 = GlobalStatics_9.openingMusicFileId;
@@ -121,8 +121,8 @@ public final class DummyClass26 {
         }
       }
 
-      if (GlRenderer.useOpenGlRenderer && (var0 == 25 || var0 == 28 || (var0
-          == 40))) {
+      if (GlRenderer.useOpenGlRenderer && (var0 == 25 || var0 == 28 || var0
+          == 40)) {
         GlRenderer.method1833();
       }
 

@@ -234,7 +234,7 @@ public final class SomethingFont {
     int var8 = var2.getMaxAscent();
     int var9 = var2.getMaxAscent() + var2.getMaxDescent();
     int var10 = var2.getHeight();
-    Image var11 = GlobalStatics_8.INSTANCE.createImage(var6, var9);
+    Image var11 = GlobalStatics_8.GAME_CANVAS.createImage(var6, var9);
     Graphics var12 = var11.getGraphics();
     var12.setColor(Color.black);
     var12.fillRect(0, 0, var6, var9);

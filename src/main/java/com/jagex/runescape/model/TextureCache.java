@@ -62,25 +62,25 @@ public final class TextureCache implements ITextureCache {
 
       for (var8 = 0; amountMaterials > var8; ++var8) {
         if (this.materialActive[var8]) {
-          this.aBooleanArray2124[var8] = (var6.readUnsignedByte() == 1);
-        }
-      }
-
-      for (var8 = 0; (var8 < amountMaterials); ++var8) {
-        if (this.materialActive[var8]) {
-          this.aBooleanArray2128[var8] = var6.readUnsignedByte() == 1;
-        }
-      }
-
-      for (var8 = 0; (var8 < amountMaterials); ++var8) {
-        if (this.materialActive[var8]) {
-          this.aBooleanArray2122[var8] = (var6.readUnsignedByte() == 1);
+          this.aBooleanArray2124[var8] = var6.readUnsignedByte() == 1;
         }
       }
 
       for (var8 = 0; var8 < amountMaterials; ++var8) {
         if (this.materialActive[var8]) {
-          this.aBooleanArray2135[var8] = (var6.readUnsignedByte() == 1);
+          this.aBooleanArray2128[var8] = var6.readUnsignedByte() == 1;
+        }
+      }
+
+      for (var8 = 0; var8 < amountMaterials; ++var8) {
+        if (this.materialActive[var8]) {
+          this.aBooleanArray2122[var8] = var6.readUnsignedByte() == 1;
+        }
+      }
+
+      for (var8 = 0; var8 < amountMaterials; ++var8) {
+        if (this.materialActive[var8]) {
+          this.aBooleanArray2135[var8] = var6.readUnsignedByte() == 1;
         }
       }
 
@@ -102,7 +102,7 @@ public final class TextureCache implements ITextureCache {
         }
       }
 
-      for (var8 = 0; (var8 < amountMaterials); ++var8) {
+      for (var8 = 0; var8 < amountMaterials; ++var8) {
         if (this.materialActive[var8]) {
           this.aByteArray2143[var8] = var6.readByte();
         }
@@ -215,7 +215,7 @@ public final class TextureCache implements ITextureCache {
   }
 
   public boolean method14(byte var1, int var2) {
-    return var1 >= -97 || (this.aBoolean2134 || this.aBooleanArray2122[var2]);
+    return var1 >= -97 || this.aBoolean2134 || this.aBooleanArray2122[var2];
   }
 
   public int method15(int var1, int var2) {

@@ -36,10 +36,10 @@ public final class FileTable {
   private void parse(int var1, byte[] var2) {
     Buffer var3 = new Buffer(GlobalStatics_7.method623((byte) -114, var2));
       int var4 = var3.readUnsignedByte();
-      if (var4 != 5 && (var4 != 6)) {
+      if (var4 != 5 && var4 != 6) {
         throw new RuntimeException();
       } else {
-        if ((var4 >= 6)) {
+        if (var4 >= 6) {
           this.version = var3.readInt();
         } else {
           this.version = 0;
@@ -65,14 +65,14 @@ public final class FileTable {
         this.anIntArray945 = new int[this.anInt960];
         this.unpackedLengths = new int[this.anInt960];
         this.unpackedSizes = new int[this.anInt960];
-        if ((var5 != 0)) {
+        if (var5 != 0) {
           this.anIntArray955 = new int[this.anInt960];
 
-          for (var8 = 0; (var8 < this.anInt960); ++var8) {
+          for (var8 = 0; var8 < this.anInt960; ++var8) {
             this.anIntArray955[var8] = -1;
           }
 
-          for (var8 = 0; (var8 < this.anInt947); ++var8) {
+          for (var8 = 0; var8 < this.anInt947; ++var8) {
             this.anIntArray955[this.anIntArray953[var8]] = var3.readInt();
           }
 
@@ -110,7 +110,7 @@ public final class FileTable {
         int var10;
         int maximumId;
         int var12;
-        for (var8 = 0; (var8 < this.anInt947); ++var8) {
+        for (var8 = 0; var8 < this.anInt947; ++var8) {
           var6 = 0;
           entryId = this.anIntArray953[var8];
           var10 = this.unpackedSizes[entryId];
@@ -125,12 +125,12 @@ public final class FileTable {
           }
 
           this.unpackedLengths[entryId] = maximumId + 1;
-          if (((1 + maximumId) == var10)) {
+          if (1 + maximumId == var10) {
             this.unpackedIds[entryId] = null;
           }
         }
 
-        if ((var5 != 0)) {
+        if (var5 != 0) {
           this.childNameTables = new LinearHashTable[var7 + 1];
           this.unpackedNames = new int[1 + var7][];
 
@@ -143,7 +143,7 @@ public final class FileTable {
               this.unpackedNames[entryId][maximumId] = -1;
             }
 
-            for (maximumId = 0; (maximumId < var10); ++maximumId) {
+            for (maximumId = 0; maximumId < var10; ++maximumId) {
               if (this.unpackedIds[entryId] != null) {
                 var12 = this.unpackedIds[entryId][maximumId];
               } else {

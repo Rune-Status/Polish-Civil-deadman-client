@@ -15,10 +15,10 @@ public final class TextureSampler13 extends AbstractTextureSampler {
         this.method314(-83, 92, 48);
       }
 
-      int var4 = var3 + (57 * var1);
+      int var4 = var3 + 57 * var1;
       var4 ^= var4 << 1;
-      return 4096 - ((var4 * (var4 * var4 * 15731 + 789221) + 1376312589 & Integer.MAX_VALUE)
-        / 262144);
+      return 4096 - (var4 * (var4 * var4 * 15731 + 789221) + 1376312589 & Integer.MAX_VALUE)
+        / 262144;
   }
 
   public int[] method154(int var1, byte var2 ) {

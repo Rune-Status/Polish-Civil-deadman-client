@@ -84,7 +84,7 @@ public final class FileRequester extends AbstractFileRequester {
               }
 
               this.aClass62_2944 = new FileTable(var2, this.anInt2955);
-              if ((this.anInt2947 != this.aClass62_2944.version)) {
+              if (this.anInt2947 != this.aClass62_2944.version) {
                 throw new RuntimeException();
               }
             } catch (RuntimeException var4) {
@@ -144,7 +144,7 @@ public final class FileRequester extends AbstractFileRequester {
           var3 = this.aClass61_2963
               .getFirst(); var3 != null; var3 = this.aClass61_2963
             .getNext()) {
-          if ((var3.key == var1)) {
+          if (var3.key == var1) {
             return;
           }
         }
@@ -234,11 +234,11 @@ public final class FileRequester extends AbstractFileRequester {
                 var3 = this.aClass61_2966.getFirst();
                 var3 != null; var3 = this.aClass61_2966.getNext()) {
               var4 = (int) var3.key;
-              if ((this.aByteArray2949[var4] == 0)) {
+              if (this.aByteArray2949[var4] == 0) {
                 this.method2109(1, var4, 51);
               }
 
-              if ((this.aByteArray2949[var4] == 0)) {
+              if (this.aByteArray2949[var4] == 0) {
                 var2 = false;
               } else {
                 var3.unlinkNode();
@@ -246,10 +246,10 @@ public final class FileRequester extends AbstractFileRequester {
             }
 
             while (this.aClass62_2944.unpackedSizes.length > this.anInt2964) {
-              if ((this.aClass62_2944.unpackedSizes[this.anInt2964] == 0)) {
+              if (this.aClass62_2944.unpackedSizes[this.anInt2964] == 0) {
                 ++this.anInt2964;
               } else {
-                if ((this.aClass73_2956.anInt1087 >= 250)) {
+                if (this.aClass73_2956.anInt1087 >= 250) {
                   var2 = false;
                   break;
                 }
@@ -258,7 +258,7 @@ public final class FileRequester extends AbstractFileRequester {
                   this.method2109(1, this.anInt2964, 99);
                 }
 
-                if ((this.aByteArray2949[this.anInt2964] == 0)) {
+                if (this.aByteArray2949[this.anInt2964] == 0) {
                   var2 = false;
                   var3 = new Node();
                   var3.key = this.anInt2964;
@@ -293,7 +293,7 @@ public final class FileRequester extends AbstractFileRequester {
               }
 
               while (this.aClass62_2944.unpackedSizes.length > this.anInt2964) {
-                if ((this.aClass62_2944.unpackedSizes[this.anInt2964] == 0)) {
+                if (this.aClass62_2944.unpackedSizes[this.anInt2964] == 0) {
                   ++this.anInt2964;
                 } else {
                   if (this.aClass66_2953.method1241(-30064)) {
@@ -305,7 +305,7 @@ public final class FileRequester extends AbstractFileRequester {
                     this.method2109(2, this.anInt2964, 47);
                   }
 
-                  if ((this.aByteArray2949[this.anInt2964] != 1)) {
+                  if (this.aByteArray2949[this.anInt2964] != 1) {
                     var3 = new Node();
                     var3.key = this.anInt2964;
                     this.aClass61_2966.addLast(var3);
@@ -363,7 +363,7 @@ public final class FileRequester extends AbstractFileRequester {
 
   private AbstractFileRequest method2109(int var1, int var2, int var3) {
     Node var4 = this.aClass130_2946.get(var2);
-      if (var4 != null && (var1 == 0) && !((AbstractFileRequest) var4).aBoolean3628
+      if (var4 != null && var1 == 0 && !((AbstractFileRequest) var4).aBoolean3628
         && ((AbstractFileRequest) var4).aBoolean3632) {
         var4.unlinkNode();
         var4 = null;
@@ -371,7 +371,7 @@ public final class FileRequester extends AbstractFileRequester {
 
       if (var4 == null) {
         if (var1 == 0) {
-          if (this.aClass41_2954 != null && (this.aByteArray2949[var2] != -1)) {
+          if (this.aClass41_2954 != null && this.aByteArray2949[var2] != -1) {
             var4 = this.aClass73_2956
                 .method1309(this.aClass41_2954, (byte) 106, var2);
           } else {
@@ -383,7 +383,7 @@ public final class FileRequester extends AbstractFileRequester {
                 .request(-51, this.anInt2957, (byte) 2, var2, true);
           }
         } else if (var1 != 1) {
-          if ((var1 != 2)) {
+          if (var1 != 2) {
             throw new RuntimeException();
           }
 
@@ -391,7 +391,7 @@ public final class FileRequester extends AbstractFileRequester {
             throw new RuntimeException();
           }
 
-          if ((this.aByteArray2949[var2] != -1)) {
+          if (this.aByteArray2949[var2] != -1) {
             throw new RuntimeException();
           }
 
@@ -422,7 +422,7 @@ public final class FileRequester extends AbstractFileRequester {
         OndemandFileRequest var12;
         if (var4 instanceof FileCacheRequest) {
           try {
-            if (var5 != null && (var5.length > 2)) {
+            if (var5 != null && var5.length > 2) {
               GlobalStatics_10.aCRC32_3143.reset();
               GlobalStatics_10.aCRC32_3143.update(var5, 0, -2 + var5.length);
               var7 = (int) GlobalStatics_10.aCRC32_3143.getValue();
@@ -430,8 +430,8 @@ public final class FileRequester extends AbstractFileRequester {
                 int var8 =
                     (var5[-2 + var5.length] << 8 & '\uff00') + (255 & var5[-1
                         + var5.length]);
-                if ((var8 == ('\uffff'
-                    & this.aClass62_2944.anIntArray958[var2]))) {
+                if (var8 == ('\uffff'
+                    & this.aClass62_2944.anIntArray958[var2])) {
                   if (this.aByteArray2949[var2] != 1) {
 
                     ++this.anInt2948;
@@ -467,14 +467,14 @@ public final class FileRequester extends AbstractFileRequester {
           }
         } else {
           try {
-            if (var5 == null || (var5.length <= 2)) {
+            if (var5 == null || var5.length <= 2) {
               throw new RuntimeException();
             }
 
             GlobalStatics_10.aCRC32_3143.reset();
             GlobalStatics_10.aCRC32_3143.update(var5, 0, var5.length - 2);
             var7 = (int) GlobalStatics_10.aCRC32_3143.getValue();
-            if ((this.aClass62_2944.anIntArray945[var2] != var7)) {
+            if (this.aClass62_2944.anIntArray945[var2] != var7) {
               throw new RuntimeException();
             }
 
@@ -520,7 +520,7 @@ public final class FileRequester extends AbstractFileRequester {
               var2 != null; var2 = this.aClass61_2963.getNext()) {
             int var3 = (int) var2.key;
             if (var3 >= 0 && this.aClass62_2944.anInt960 > var3
-              && (this.aClass62_2944.unpackedSizes[var3] != 0)) {
+              && this.aClass62_2944.unpackedSizes[var3] != 0) {
               if (this.aByteArray2949[var3] == 0) {
                 this.method2109(1, var3, var1 + 80);
               }
@@ -529,7 +529,7 @@ public final class FileRequester extends AbstractFileRequester {
                 this.method2109(2, var3, var1 + 78);
               }
 
-              if ((this.aByteArray2949[var3] == 1)) {
+              if (this.aByteArray2949[var3] == 1) {
                 var2.unlinkNode();
               }
             } else {
@@ -545,9 +545,9 @@ public final class FileRequester extends AbstractFileRequester {
     int var2 = -96 / ((20 - var1) / 33);
       return this.method2094(0) != null ?
         100 :
-        (this.aClass3_Sub28_Sub10_2950 == null ?
-          0 :
-            this.aClass3_Sub28_Sub10_2950.method586(false));
+          this.aClass3_Sub28_Sub10_2950 == null ?
+            0 :
+              this.aClass3_Sub28_Sub10_2950.method586(false);
   }
 
 }

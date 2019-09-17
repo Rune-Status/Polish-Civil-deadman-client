@@ -107,7 +107,7 @@ public final class GameClient extends GameStub {
   private void updateGame(byte var1) {
     for (
         GlobalStatics_9.anInt2537 = 0; GlobalStatics_7.hasKeyInput()
-        && (GlobalStatics_9.anInt2537 < 128);
+        && GlobalStatics_9.anInt2537 < 128;
         ++GlobalStatics_9.anInt2537) {
       GlobalStatics_9.anIntArray1755[GlobalStatics_9.anInt2537] = GlobalStatics_9.anInt3624;
       GlobalStatics_7.anIntArray1638[GlobalStatics_9.anInt2537] = GlobalStatics_9.anInt3342;
@@ -125,11 +125,11 @@ public final class GameClient extends GameStub {
       int var2 = 19137023;
 
       label191:
-      for (int var3 = 0; (var3 < 32768); ++var3) {
+      for (int var3 = 0; var3 < 32768; ++var3) {
         NPC var4 = GlobalStatics_8.npcs[var3];
         if (var4 != null) {
           byte var5 = var4.config.aByte1267;
-          if ((var5 & 2) > 0 && (var4.anInt2816 == 0)
+          if ((var5 & 2) > 0 && var4.anInt2816 == 0
               && Math.random() * 1000.0D < 10.0D) {
             int var6 = (int) Math.round(-1.0 + 2.0D * Math.random());
             int var7 = (int) Math.round(Math.random() * 2.0D - 1.0D);
@@ -153,7 +153,7 @@ public final class GameClient extends GameStub {
                       var4.anInt2819 >> 7)) {
                 if (var4.getSize() > 1) {
                   for (int var8 = var4.waypointsX[0];
-                      (var4.waypointsX[0] + var4.getSize()) > var8;
+                      var4.waypointsX[0] + var4.getSize() > var8;
                       ++var8) {
                     for (int var9 = var4.waypointsY[0];
                         var4.waypointsY[0] + var4.getSize() > var9; ++var9) {
@@ -190,7 +190,7 @@ public final class GameClient extends GameStub {
       com.jagex.runescape.statics.GlobalStatics_0.method744(true);
     } else if (GlobalStatics_10.loginState == 0
         && GlobalStatics_0.anInt23 == 0) {
-      if ((GlobalStatics_9.anInt1753 == 2)) {
+      if (GlobalStatics_9.anInt1753 == 2) {
         GlobalStatics_7.method379(var1 ^ 1025);
       } else {
         GlobalStatics_10.d('\uffff');
@@ -198,9 +198,8 @@ public final class GameClient extends GameStub {
 
       if (GlobalStatics_9.anInt3995 >> 7 < 14
           || GlobalStatics_9.anInt3995 >> 7 >= 90
-          || DummyClass49.anInt1111 >> 7 < 14 || ((
-          DummyClass49.anInt1111
-              >> 7) >= 90)) {
+          || DummyClass49.anInt1111 >> 7 < 14 || DummyClass49.anInt1111
+              >> 7 >= 90) {
         GlobalStatics_10.method195(var1 ^ 20478);
       }
     }
@@ -248,7 +247,7 @@ public final class GameClient extends GameStub {
                 var13 = GlobalStatics_7
                     .getWidget((byte) 118, var12.anInt190);
                 if (var13 == null || var13.aClass11Array262 == null
-                    || (var13.aClass11Array262.length <= var12.anInt191)
+                    || var13.aClass11Array262.length <= var12.anInt191
                     || var12 != var13.aClass11Array262[var12.anInt191]) {
                   continue;
                 }
@@ -259,10 +258,10 @@ public final class GameClient extends GameStub {
           }
 
           var12 = var11.aClass11_2449;
-          if ((var12.anInt191 >= 0)) {
+          if (var12.anInt191 >= 0) {
             var13 = GlobalStatics_7.getWidget((byte) 112, var12.anInt190);
             if (var13 == null || var13.aClass11Array262 == null
-                || (var12.anInt191 >= var13.aClass11Array262.length)
+                || var12.anInt191 >= var13.aClass11Array262.length
                 || var12 != var13.aClass11Array262[var12.anInt191]) {
               continue;
             }
@@ -276,7 +275,7 @@ public final class GameClient extends GameStub {
       if (var12.anInt191 >= 0) {
         var13 = GlobalStatics_7.getWidget((byte) 126, var12.anInt190);
         if (var13 == null || var13.aClass11Array262 == null
-            || (var13.aClass11Array262.length <= var12.anInt191)
+            || var13.aClass11Array262.length <= var12.anInt191
             || var12 != var13.aClass11Array262[var12.anInt191]) {
           continue;
         }
@@ -298,7 +297,7 @@ public final class GameClient extends GameStub {
   }
 
   private void method49() {
-    if ((DummyClass8.anInt4026 < DummyClass43.ondemandRequester.anInt1011)) {
+    if (DummyClass8.anInt4026 < DummyClass43.ondemandRequester.anInt1011) {
       GlobalStatics_10.anInt3068 =
           5 * 50 * (DummyClass43.ondemandRequester.anInt1011 - 1);
       if (DummyClass11.anInt2036 == GlobalStatics_9.anInt2894) {
@@ -311,15 +310,15 @@ public final class GameClient extends GameStub {
         GlobalStatics_10.anInt3068 = 3000;
       }
 
-      if ((DummyClass43.ondemandRequester.anInt1011 >= 2)
+      if (DummyClass43.ondemandRequester.anInt1011 >= 2
           && DummyClass43.ondemandRequester.anInt1010 == 6) {
         this.reportError("js5connect_outofdate");
         DummyClass15.state = 1000;
         return;
       }
 
-      if ((DummyClass43.ondemandRequester.anInt1011 >= 4)
-          && (DummyClass43.ondemandRequester.anInt1010 == -1)) {
+      if (DummyClass43.ondemandRequester.anInt1011 >= 4
+          && DummyClass43.ondemandRequester.anInt1010 == -1) {
         this.reportError("js5crc");
         DummyClass15.state = 1000;
         return;
@@ -327,9 +326,9 @@ public final class GameClient extends GameStub {
 
       if (DummyClass43.ondemandRequester.anInt1011 >= 4 && (
           DummyClass15.state == 0
-              || (DummyClass15.state == 5))) {
-        if ((DummyClass43.ondemandRequester.anInt1010 != 7)
-            && (DummyClass43.ondemandRequester.anInt1010 != 9)) {
+              || DummyClass15.state == 5)) {
+        if (DummyClass43.ondemandRequester.anInt1010 != 7
+            && DummyClass43.ondemandRequester.anInt1010 != 9) {
           if (DummyClass43.ondemandRequester.anInt1010 > 0) {
             this.reportError("js5connect");
           } else {
@@ -345,11 +344,11 @@ public final class GameClient extends GameStub {
     }
 
     DummyClass8.anInt4026 = DummyClass43.ondemandRequester.anInt1011;
-    if ((GlobalStatics_10.anInt3068 > 0)) {
+    if (GlobalStatics_10.anInt3068 > 0) {
       --GlobalStatics_10.anInt3068;
     } else {
       try {
-        if ((DummyClass18.anInt80 == 0)) {
+        if (DummyClass18.anInt80 == 0) {
           DummyClass1.socketRequest =
               DummyClass35.signLink
                   .method1441((byte) 8, DummyClass36.aString2611,
@@ -363,7 +362,7 @@ public final class GameClient extends GameStub {
             return;
           }
 
-          if ((DummyClass1.socketRequest.status == 1)) {
+          if (DummyClass1.socketRequest.status == 1) {
             ++DummyClass18.anInt80;
           }
         }
@@ -382,10 +381,10 @@ public final class GameClient extends GameStub {
         }
 
         if (DummyClass18.anInt80 == 3) {
-          if ((DummyClass15.state != 0) && (DummyClass15.state != 5)
+          if (DummyClass15.state != 0 && DummyClass15.state != 5
               && GlobalStatics_2.updateSocket.available() <= 0) {
-            if (((GlobalStatics_10.getCurrentTimeMillis()
-                - GlobalStatics_9.lastWrittenTime) > 30000L)) {
+            if (GlobalStatics_10.getCurrentTimeMillis()
+                - GlobalStatics_9.lastWrittenTime > 30000L) {
               this.setUpdateError(1001);
               return;
             }
@@ -400,7 +399,7 @@ public final class GameClient extends GameStub {
           }
         }
 
-        if ((DummyClass18.anInt80 == 4)) {
+        if (DummyClass18.anInt80 == 4) {
           boolean offline =
               DummyClass15.state == 5 || DummyClass15.state == 10 ||
                   DummyClass15.state == 28;
@@ -420,8 +419,8 @@ public final class GameClient extends GameStub {
   private void handleLoading() {
     if (!com.jagex.runescape.statics.GlobalStatics_0.safemode) {
       while (GlobalStatics_7.hasKeyInput()) {
-        if ((GlobalStatics_9.anInt3342 == 115)
-            || (GlobalStatics_9.anInt3342 == 83)) {
+        if (GlobalStatics_9.anInt3342 == 115
+            || GlobalStatics_9.anInt3342 == 83) {
           com.jagex.runescape.statics.GlobalStatics_0.safemode = true;
         }
       }
@@ -433,7 +432,7 @@ public final class GameClient extends GameStub {
       int usedMemory = (int) ((runtime.totalMemory() - runtime.freeMemory())
           / 1024L);
       long var4 = GlobalStatics_10.getCurrentTimeMillis();
-      if ((GlobalStatics_8.aLong3296 == 0L)) {
+      if (GlobalStatics_8.aLong3296 == 0L) {
         GlobalStatics_8.aLong3296 = var4;
       }
 
@@ -452,10 +451,10 @@ public final class GameClient extends GameStub {
       }
     } else {
       int var2;
-      if ((GlobalStatics_9.loadingState == 10)) {
+      if (GlobalStatics_9.loadingState == 10) {
         DummyClass46.setSceneDimensions(4, 104, 104);
 
-        for (var2 = 0; (var2 < 4); ++var2) {
+        for (var2 = 0; var2 < 4; ++var2) {
           com.jagex.runescape.statics.GlobalStatics_0.collisionMaps[var2] = new CollisionMap(
               104, 104);
         }
@@ -534,8 +533,8 @@ public final class GameClient extends GameStub {
           GlobalStatics_3.loadingText = GlobalStatics_9.CONNECTING_TO_UPDATE_SERVER;
           GlobalStatics_6.loadingPercent = 12;
         }
-      } else if ((GlobalStatics_9.loadingState != 40)) {
-        if ((GlobalStatics_9.loadingState == 45)) {
+      } else if (GlobalStatics_9.loadingState != 40) {
+        if (GlobalStatics_9.loadingState == 45) {
           GlobalStatics_8
               .method1959(256, 2, 22050, GlobalStatics_1.aBoolean3184);
           com.jagex.runescape.statics.GlobalStatics_0.aClass3_Sub24_Sub4_1193 = new AudioStreamEncoder4();
@@ -544,7 +543,7 @@ public final class GameClient extends GameStub {
           GlobalStatics_9.audioOutputStream0 =
               DummyClass43
                   .createAudioOutputStream(22050, DummyClass35.signLink,
-                      GlobalStatics_8.INSTANCE, 0, 14);
+                      GlobalStatics_8.GAME_CANVAS, 0, 14);
           GlobalStatics_9.audioOutputStream0
               .method2154(-116,
                   com.jagex.runescape.statics.GlobalStatics_0.aClass3_Sub24_Sub4_1193);
@@ -557,7 +556,7 @@ public final class GameClient extends GameStub {
           GlobalStatics_9.audioOutputStream1 =
               DummyClass43
                   .createAudioOutputStream(2048, DummyClass35.signLink,
-                      GlobalStatics_8.INSTANCE, 1, 14);
+                      GlobalStatics_8.GAME_CANVAS, 1, 14);
           GlobalStatics_9.aClass3_Sub24_Sub2_2563 = new AudioStreamEncoder2();
           GlobalStatics_9.audioOutputStream1.method2154(-128,
               GlobalStatics_9.aClass3_Sub24_Sub2_2563);
@@ -569,7 +568,7 @@ public final class GameClient extends GameStub {
           GlobalStatics_6.loadingPercent = 30;
           GlobalStatics_9.loadingState = 50;
           GlobalStatics_3.loadingText = GlobalStatics_10.aClass94_1731;
-        } else if ((GlobalStatics_9.loadingState != 50)) {
+        } else if (GlobalStatics_9.loadingState != 50) {
           if (GlobalStatics_9.loadingState == 60) {
             var2 = GlobalStatics_9.method599(-20916, GlobalStatics_10.sprites);
             kkkk = GlobalStatics_7.method1185(6098);
@@ -587,7 +586,7 @@ public final class GameClient extends GameStub {
               GlobalStatics_6.loadingPercent = 40;
             }
           } else {
-            if ((GlobalStatics_9.loadingState == 65)) {
+            if (GlobalStatics_9.loadingState == 65) {
               GlobalStatics_9.method581(GlobalStatics_8.fileUnpacker13, 0,
                   GlobalStatics_10.sprites);
               GlobalStatics_6.loadingPercent = 45;
@@ -623,7 +622,7 @@ public final class GameClient extends GameStub {
                     .method2136((byte) -128);
                 DummyClass22.particles.method2113((byte) 126);
                 var2 += DummyClass22.particles.method2136((byte) -124);
-                if ((var2 >= 1100)) {
+                if (var2 >= 1100) {
                   DummyClass22.method1799((byte) 96, GlobalStatics_2.configs);
                   GlobalStatics_6
                       .setFloorFileUnpacker(false, GlobalStatics_2.configs);
@@ -712,9 +711,9 @@ public final class GameClient extends GameStub {
                         .isRunesSpritesLoaded(GlobalStatics_10.sprites)) {
                       GlobalStatics_9.loadingState = 110;
                     }
-                  } else if ((GlobalStatics_9.loadingState != 110)) {
-                    if ((GlobalStatics_9.loadingState != 120)) {
-                      if ((GlobalStatics_9.loadingState == 130)) {
+                  } else if (GlobalStatics_9.loadingState != 110) {
+                    if (GlobalStatics_9.loadingState != 120) {
+                      if (GlobalStatics_9.loadingState == 130) {
                         if (GlobalStatics_8.widgets.method2113((byte) 20)) {
                           if (GlobalStatics_10.scripts.method2113((byte) 46)) {
                             if (GlobalStatics_8.fileUnpacker13
@@ -733,11 +732,11 @@ public final class GameClient extends GameStub {
                                 GlobalStatics_3.loadingText =
                                     GlobalStatics_9.concat(new GameString[]{
                                         GlobalStatics_7.aClass94_2961,
-                                        GlobalStatics_9.toString(90 + (
+                                        GlobalStatics_9.toString(90 +
                                             GlobalStatics_9.worldMapData
                                                 .method2116(22813,
                                                     DummyClass53.aClass94_1342)
-                                                / 10)),
+                                                / 10),
                                         GlobalStatics_9.aClass94_468
                                     });
                                 GlobalStatics_6.loadingPercent = 85;
@@ -747,9 +746,9 @@ public final class GameClient extends GameStub {
                                   GlobalStatics_9.concat(new GameString[]{
                                       GlobalStatics_7.aClass94_2961,
                                       GlobalStatics_9.toString(
-                                          85 + (GlobalStatics_8.fileUnpacker13
+                                          85 + GlobalStatics_8.fileUnpacker13
                                               .method2136((byte) -124)
-                                              / 20)),
+                                              / 20),
                                       GlobalStatics_9.aClass94_468
                                   });
                               GlobalStatics_6.loadingPercent = 85;
@@ -759,8 +758,8 @@ public final class GameClient extends GameStub {
                                 .concat(new GameString[]{
                                     GlobalStatics_7.aClass94_2961,
                                     GlobalStatics_9.toString(
-                                        75 + (GlobalStatics_10.scripts
-                                            .method2136((byte) -128) / 10)),
+                                        75 + GlobalStatics_10.scripts
+                                            .method2136((byte) -128) / 10),
                                     GlobalStatics_9.aClass94_468
                                 });
                             GlobalStatics_6.loadingPercent = 85;
@@ -781,7 +780,7 @@ public final class GameClient extends GameStub {
                         if (var2 == -1) {
                           GlobalStatics_6.loadingPercent = 95;
                           GlobalStatics_3.loadingText = DummyClass24.aClass94_1653;
-                        } else if ((var2 != 7) && var2 != 9) {
+                        } else if (var2 != 7 && var2 != 9) {
                           if (GlobalStatics_6.aBoolean579) {
                             GlobalStatics_3.loadingText = GlobalStatics_9.aClass94_374;
                             GlobalStatics_9.loadingState = 140;
@@ -794,8 +793,8 @@ public final class GameClient extends GameStub {
                           this.reportError("worldlistfull");
                           DummyClass26.setState(1000, 5);
                         }
-                      } else if ((GlobalStatics_9.loadingState != 140)) {
-                        if ((GlobalStatics_9.loadingState == 150)) {
+                      } else if (GlobalStatics_9.loadingState != 140) {
+                        if (GlobalStatics_9.loadingState == 150) {
                           SomethingGl.method1454();
                           if (com.jagex.runescape.statics.GlobalStatics_0.safemode) {
                             GlobalStatics_9.anInt3622 = 0;
@@ -813,7 +812,7 @@ public final class GameClient extends GameStub {
                           GlobalStatics_6.loadingPercent = 100;
                           GlobalStatics_9.loadingState = 160;
                           GlobalStatics_3.loadingText = GlobalStatics_2.aClass94_2576;
-                        } else if ((GlobalStatics_9.loadingState == 160)) {
+                        } else if (GlobalStatics_9.loadingState == 160) {
                           GlobalStatics_9.method219(true, 3000);
                         }
                       } else {
@@ -879,7 +878,7 @@ public final class GameClient extends GameStub {
                           GlobalStatics_10.sprites, 20,
                           !GlobalStatics_9.aBoolean488);
                   DummyClass40.setTextureCache(var8);
-                  if ((GlobalStatics_4.brightnessSetting == 1)) {
+                  if (GlobalStatics_4.brightnessSetting == 1) {
                     DummyClass40.updateLightness(0.9F);
                   }
 
@@ -891,7 +890,7 @@ public final class GameClient extends GameStub {
                     DummyClass40.updateLightness(0.7F);
                   }
 
-                  if ((GlobalStatics_4.brightnessSetting == 4)) {
+                  if (GlobalStatics_4.brightnessSetting == 4) {
                     DummyClass40.updateLightness(0.6F);
                   }
 
@@ -909,7 +908,7 @@ public final class GameClient extends GameStub {
                       GlobalStatics_8.fileUnpacker13,
                       false);
           kkkk = GlobalStatics_8.method2286((byte) -5);
-          if ((var2 >= kkkk)) {
+          if (var2 >= kkkk) {
             GlobalStatics_3.loadingText = DummyClass15.aClass94_1879;
             GlobalStatics_6.loadingPercent = 35;
             GlobalStatics_9.loadingState = 60;
@@ -941,7 +940,7 @@ public final class GameClient extends GameStub {
           GlobalStatics_10.setRunesFileId(GlobalStatics_10.sprites);
           GlobalStatics_9.loadingState = 45;
         } else {
-          if ((var2 != 0)) {
+          if (var2 != 0) {
             GlobalStatics_3.loadingText = GlobalStatics_9
                 .concat(new GameString[]{
                     GlobalStatics_9.aClass94_327,
@@ -958,13 +957,12 @@ public final class GameClient extends GameStub {
   }
 
   public void update() {
-    if ((DummyClass15.state != 1000)) {
+    if (DummyClass15.state != 1000) {
       ++GlobalStatics_4.updateCycle;
       if (GlobalStatics_4.updateCycle % 1000 == 1) {
         GregorianCalendar calendar = new GregorianCalendar();
         DummyClass36.anInt2618 =
-            calendar.get(11) * 600 - (-(calendar.get(12) * 10) - (
-                calendar.get(13) / 6));
+            calendar.get(11) * 600 - (-(calendar.get(12) * 10) - calendar.get(13) / 6);
         GlobalStatics_10.random.setSeed(DummyClass36.anInt2618);
       }
 
@@ -987,14 +985,14 @@ public final class GameClient extends GameStub {
         GlobalStatics_9.mouseWheelOffset = var4;
       }
 
-      if ((DummyClass15.state == 0)) {
+      if (DummyClass15.state == 0) {
         this.handleLoading();
         GlobalStatics_9.resetFrameRegulator();
-      } else if ((DummyClass15.state == 5)) {
+      } else if (DummyClass15.state == 5) {
         this.handleLoading();
         GlobalStatics_9.resetFrameRegulator();
       } else if (
-          (DummyClass15.state == 25) || (DummyClass15.state == 28)) {
+          DummyClass15.state == 25 || DummyClass15.state == 28) {
         DummyClass59.method1046(-117);
       }
 
@@ -1008,9 +1006,9 @@ public final class GameClient extends GameStub {
       } else if (DummyClass15.state == 40) {
         DummyClass2.handleLogin();
         if (~GlobalStatics_5.loginResponse != 2) {
-          if ((GlobalStatics_5.loginResponse == 15)) {
+          if (GlobalStatics_5.loginResponse == 15) {
             DummyClass60.method912(false);
-          } else if ((GlobalStatics_5.loginResponse != 2)) {
+          } else if (GlobalStatics_5.loginResponse != 2) {
             DummyClass10.destroyGame((byte) 46);
           }
         }
@@ -1044,10 +1042,10 @@ public final class GameClient extends GameStub {
       GlobalStatics_9.gameSocket = null;
     }
 
-    DummyClass9.unbindKeyboard(GlobalStatics_8.INSTANCE, -9320);
-    GlobalStatics_9.unbind(GlobalStatics_8.INSTANCE);
+    DummyClass9.unbindKeyboard(GlobalStatics_8.GAME_CANVAS, -9320);
+    GlobalStatics_9.unbind(GlobalStatics_8.GAME_CANVAS);
     if (DummyClass35.mouseWheel != null) {
-      DummyClass35.mouseWheel.unbind(false, GlobalStatics_8.INSTANCE);
+      DummyClass35.mouseWheel.unbind(false, GlobalStatics_8.GAME_CANVAS);
     }
 
     GlobalStatics_9.method167(0);
@@ -1393,7 +1391,7 @@ public final class GameClient extends GameStub {
 
       GlobalStatics_10.usageMode = Integer
           .parseInt(this.getParameter("modewhat"));
-      if ((GlobalStatics_10.usageMode < 0)
+      if (GlobalStatics_10.usageMode < 0
           || GlobalStatics_10.usageMode > 2) {
         GlobalStatics_10.usageMode = 0;
       }
@@ -1455,14 +1453,14 @@ public final class GameClient extends GameStub {
   }
 
   public void handleDraw(int var1) {
-    if ((DummyClass15.state != 1000)) {
+    if (DummyClass15.state != 1000) {
       boolean var2 = GlobalStatics_9.method1988(false);
       if (var2 && GlobalStatics_9.aBoolean1158
           && GlobalStatics_9.audioOutputStream0 != null) {
         GlobalStatics_9.audioOutputStream0.method2158((byte) -78);
       }
-      if (((DummyClass15.state == 30) || (DummyClass15.state == 10)) && (
-          GlobalStatics_6.replaceCanvas || (DummyClass41.aLong866 != 0L)
+      if ((DummyClass15.state == 30 || DummyClass15.state == 10) && (
+          GlobalStatics_6.replaceCanvas || DummyClass41.aLong866 != 0L
               && DummyClass41.aLong866 < GlobalStatics_10
               .getCurrentTimeMillis())) {
         GlobalStatics_9.setWindowMode(GlobalStatics_6.replaceCanvas,
@@ -1490,7 +1488,7 @@ public final class GameClient extends GameStub {
         }
 
         if (var4 != GlobalStatics_6.windowWidth
-            || (var5 != GlobalStatics_9.windowHeight)) {
+            || var5 != GlobalStatics_9.windowHeight) {
           if (GlobalStatics_9.formattedOsName.startsWith("mac")) {
             GlobalStatics_6.windowWidth = var4;
             GlobalStatics_9.windowHeight = var5;
@@ -1525,20 +1523,20 @@ public final class GameClient extends GameStub {
       }
 
       if (GlRenderer.useOpenGlRenderer) {
-        for (var4 = 0; (var4 < 100); ++var4) {
+        for (var4 = 0; var4 < 100; ++var4) {
           GlobalStatics_9.aBooleanArray3674[var4] = true;
         }
       }
 
-      if ((DummyClass15.state == 0)) {
+      if (DummyClass15.state == 0) {
         GlobalStatics_9
             .drawLoadingBar(null, false, var10, GlobalStatics_3.loadingText,
                 GlobalStatics_6.loadingPercent);
       } else if (DummyClass15.state == 5) {
         GlobalStatics_9
             .drawLoadingScreen(GlobalStatics_8.aClass3_Sub28_Sub17_2096, false);
-      } else if ((DummyClass15.state != 10)) {
-        if (DummyClass15.state != 25 && (DummyClass15.state != 28)) {
+      } else if (DummyClass15.state != 10) {
+        if (DummyClass15.state != 25 && DummyClass15.state != 28) {
           if (DummyClass15.state == 30) {
             GlobalStatics_9.method1127(var1 - 40);
           } else if (DummyClass15.state == 40) {
@@ -1549,7 +1547,7 @@ public final class GameClient extends GameStub {
                     DummyClass14.ATTEMPTING_TO_RECONNECT
                 }), false);
           }
-        } else if ((DummyClass8.anInt4019 != 1)) {
+        } else if (DummyClass8.anInt4019 != 1) {
           if (DummyClass8.anInt4019 == 2) {
             if (GlobalStatics_9.anInt2275
                 < DummyClass11.anInt2038) {
@@ -1571,8 +1569,8 @@ public final class GameClient extends GameStub {
                 .drawLoadingBox(GlobalStatics_10.LOADING_PLEASE_WAIT, false);
           }
         } else {
-          if ((com.jagex.runescape.statics.GlobalStatics_0.anInt2579
-              < GlobalStatics_8.anInt3293)) {
+          if (GlobalStatics_0.anInt2579
+              < GlobalStatics_8.anInt3293) {
             com.jagex.runescape.statics.GlobalStatics_0.anInt2579 = GlobalStatics_8.anInt3293;
           }
 
@@ -1590,15 +1588,15 @@ public final class GameClient extends GameStub {
       } else {
         GlobalStatics_3.method381(true);
       }
-      if (GlRenderer.useOpenGlRenderer && (DummyClass15.state != 0)) {
+      if (GlRenderer.useOpenGlRenderer && DummyClass15.state != 0) {
         GlRenderer.swapBuffers();
         Arrays.fill(DummyClass9.aBooleanArray4008, false);
       } else {
         Graphics graphics;
-        if (((DummyClass15.state == 30) || DummyClass15.state == 10)
-            && (GlobalStatics_6.rectangleDebugType == 0) && !var10) {
+        if ((DummyClass15.state == 30 || DummyClass15.state == 10)
+            && GlobalStatics_6.rectangleDebugType == 0 && !var10) {
           try {
-            graphics = GlobalStatics_8.INSTANCE.getGraphics();
+            graphics = GlobalStatics_8.GAME_CANVAS.getGraphics();
 
             for (var5 = 0; GlobalStatics_9.widgetQuads > var5; ++var5) {
               if (DummyClass9.aBooleanArray4008[var5]) {
@@ -1611,11 +1609,11 @@ public final class GameClient extends GameStub {
               }
             }
           } catch (Exception var8) {
-            GlobalStatics_8.INSTANCE.repaint();
+            GlobalStatics_8.GAME_CANVAS.repaint();
           }
         } else if (DummyClass15.state != 0) {
           try {
-            graphics = GlobalStatics_8.INSTANCE.getGraphics();
+            graphics = GlobalStatics_8.GAME_CANVAS.getGraphics();
             GlobalStatics_9.viewImageProducer.draw(0, 0, graphics, 0);
 
             for (var5 = 0; var5 < GlobalStatics_9.widgetQuads; ++var5) {
@@ -1623,7 +1621,7 @@ public final class GameClient extends GameStub {
             }
           } catch (Exception var7) {
             var7.printStackTrace();
-            GlobalStatics_8.INSTANCE.repaint();
+            GlobalStatics_8.GAME_CANVAS.repaint();
           }
         }
       }
@@ -1634,7 +1632,7 @@ public final class GameClient extends GameStub {
 
       if (com.jagex.runescape.statics.GlobalStatics_0.safemode
           && DummyClass15.state == 10
-          && (GlobalStatics_9.anInt3655 != -1)) {
+          && GlobalStatics_9.anInt3655 != -1) {
         com.jagex.runescape.statics.GlobalStatics_0.safemode = false;
         DummyClass25.writeSettings(DummyClass35.signLink);
       }
@@ -1697,11 +1695,11 @@ public final class GameClient extends GameStub {
     }
 
     GlobalStatics_6.initializeKeyTable();
-    GlobalStatics_10.method193((byte) 115, GlobalStatics_8.INSTANCE);
-    GlobalStatics_9.bindMouseListener(GlobalStatics_8.INSTANCE);
+    GlobalStatics_10.method193((byte) 115, GlobalStatics_8.GAME_CANVAS);
+    GlobalStatics_9.bindMouseListener(GlobalStatics_8.GAME_CANVAS);
     DummyClass35.mouseWheel = DummyClass60.createMouseWheel((byte) 15);
     if (DummyClass35.mouseWheel != null) {
-      DummyClass35.mouseWheel.bind(GlobalStatics_8.INSTANCE, -97);
+      DummyClass35.mouseWheel.bind(GlobalStatics_8.GAME_CANVAS, -97);
     }
 
     DummyClass5.anInt2994 = GlobalStatics_9.anInt1214;
@@ -1711,7 +1709,7 @@ public final class GameClient extends GameStub {
         DummyClass55.cacheDataFile =
             new BufferedFile(DummyClass35.signLink.cacheDataFile, 5200, 0);
 
-        for (int var2 = 0; (var2 < 28); ++var2) {
+        for (int var2 = 0; var2 < 28; ++var2) {
           DummyClass7.cacheIndexFiles[var2] =
               new BufferedFile(DummyClass35.signLink.cacheIndexFiles[var2],
                   6000, 0);
@@ -1738,7 +1736,7 @@ public final class GameClient extends GameStub {
     }
 
     DummyClass10.aClass94_2083 = GlobalStatics_9.aClass94_485;
-    if ((GlobalStatics_4.usageLocation != 0)) {
+    if (GlobalStatics_4.usageLocation != 0) {
       DummyClass29.aBoolean438 = true;
     }
   }

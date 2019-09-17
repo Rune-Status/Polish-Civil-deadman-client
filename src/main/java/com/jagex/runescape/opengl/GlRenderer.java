@@ -8,7 +8,8 @@ import com.jagex.runescape.statics.DummyClass55;
 import com.jagex.runescape.statics.GlobalStatics_10;
 import com.jagex.runescape.statics.GlobalStatics_4;
 import com.jagex.runescape.statics.GlobalStatics_6;
-import com.jogamp.nativewindow.awt.AWTGraphicsConfiguration;
+import com.jagex.runescape.statics.GlobalStatics_8;
+import com.jogamp.nativewindow.NativeSurface;
 import com.jogamp.nativewindow.awt.JAWTWindow;
 import com.jogamp.opengl.GL2;
 import com.jogamp.opengl.GLCapabilities;
@@ -20,8 +21,6 @@ import java.awt.Canvas;
 import java.nio.ByteOrder;
 import java.nio.IntBuffer;
 import java.nio.charset.StandardCharsets;
-import java.util.Optional;
-import jogamp.newt.awt.NewtFactoryAWT;
 
 public final class GlRenderer {
 
@@ -246,23 +245,20 @@ public final class GlRenderer {
     GlRenderer.GL.glReadBuffer(var0[1]);
   }
 
-  public static void method1834(Canvas var0) {
-    if (!var0.isDisplayable()) {
-        return;
-      }
-      GLCapabilities capabilities = new GLCapabilities(GLProfile.getDefault());
-      GLDrawableFactory drawableFactory = GLDrawableFactory
-          .getFactory(capabilities.getGLProfile());
-      //TODO
-
-      GLDrawable var2 = drawableFactory
-          .createOffscreenDrawable(null, capabilities, null, 1024, 1024);
-      var2.setRealized(true);
-      GLContext var3 = var2.createContext(null);
-      var3.makeCurrent();
-      var3.release();
-      var3.destroy();
-      var2.setRealized(false);
+  public static void method1834(Canvas canvas) {
+    if (!canvas.isDisplayable()) {
+      return;
+    }
+    GLCapabilities capabilities = new GLCapabilities(GLProfile.getDefault());
+    GLDrawableFactory drawableFactory = GLDrawableFactory
+        .getFactory(capabilities.getGLProfile());
+    System.out.println("Something with antialiasing");
+    GLDrawable drawable = drawableFactory.createExternalGLDrawable();
+    GLContext context = drawable.createContext(null);
+    context.makeCurrent();
+    context.release();
+    context.destroy();
+    drawable.setRealized(false);
 
   }
 
@@ -317,7 +313,7 @@ public final class GlRenderer {
     return GlRenderer.aFloat1794;
   }
 
-  private static int getComptability() {
+  private static int initializeCompatibility() {
     int var0 = 0;
     GlRenderer.aString1785 = GlRenderer.GL.glGetString(7936);
     GlRenderer.aString1786 = GlRenderer.GL.glGetString(7937);
@@ -334,8 +330,8 @@ public final class GlRenderer {
     String[] var3 = var2.split("[. ]");
     if (var3.length >= 2) {
       int var4 = Integer.parseInt(var3[0]);
-        int var5 = Integer.parseInt(var3[1]);
-        GlRenderer.anInt1812 = var4 * 10 + var5;
+      int var5 = Integer.parseInt(var3[1]);
+      GlRenderer.anInt1812 = var4 * 10 + var5;
     } else {
       var0 |= 4;
     }
@@ -404,7 +400,7 @@ public final class GlRenderer {
 
       if (GlRenderer.vertexBufferSupport) {
         int[] var14 = new int[1];
-          GlRenderer.GL.glGenBuffers(1, var14, 0);
+        GlRenderer.GL.glGenBuffers(1, var14, 0);
       }
 
       return 0;
@@ -419,23 +415,23 @@ public final class GlRenderer {
 
   public static void releaseGlResources() {
     if (GlRenderer.GL != null) {
+      System.out.println("Releasing GL resources");
+      JAWTWindow surface = GlobalStatics_8.NATIVE_WINDOW;
+      surface.lockSurface();
       DummyClass55.method1609(90);
       GlRenderer.GL = null;
-    }
-
-    if (GlRenderer.GL_CONTEXT != null) {
       DummyClass33.method988();
 
       if (GLContext.getCurrent() == GlRenderer.GL_CONTEXT) {
         GlRenderer.GL_CONTEXT.release();
       }
+
       GlRenderer.GL_CONTEXT.destroy();
       GlRenderer.GL_CONTEXT = null;
-    }
 
-    if (GlRenderer.GL_DRAWABLE != null) {
       GlRenderer.GL_DRAWABLE.setRealized(false);
       GlRenderer.GL_DRAWABLE = null;
+      System.out.println("GL released");
     }
     DummyClass46.method1273();
     GlRenderer.useOpenGlRenderer = false;
@@ -463,7 +459,7 @@ public final class GlRenderer {
     GlRenderer.GL.glLoadIdentity();
     GlRenderer.setProjectionMatrix(left * GlRenderer.aFloat1801,
         right * GlRenderer.aFloat1801,
-        (-bottom) * GlRenderer.aFloat1801, (-top) * GlRenderer.aFloat1801,
+        -bottom * GlRenderer.aFloat1801, -top * GlRenderer.aFloat1801,
         50.0F, 3584F);
     GlRenderer.GL
         .glViewport(x, GlRenderer.viewHeight - y - height, width, height);
@@ -584,8 +580,8 @@ public final class GlRenderer {
     return GlRenderer.aFloat1797;
   }
 
-  public static void bindCanvas(Canvas awtCanvas, int var1) {
-    if (!awtCanvas.isDisplayable()) {
+  public static void bindCanvas(Canvas canvas, int var1) {
+    if (!canvas.isDisplayable()) {
       return;
     }
     GLProfile profile = GLProfile.getDefault();
@@ -595,32 +591,24 @@ public final class GlRenderer {
       capabilities.setSampleBuffers(true);
       capabilities.setNumSamples(var1);
     }
+    JAWTWindow surface = GlobalStatics_8.NATIVE_WINDOW;
+    GLDrawable drawable =
+        GlRenderer.bindDrawable(surface, profile);
+    GLContext context = GlRenderer.acquireGLContext(drawable);
+    surface.unlockSurface();
 
-    GLDrawableFactory drawableFactory =
-        GLDrawableFactory.getFactory(profile);
-
-    AWTGraphicsConfiguration awtGraphicsConfiguration = AWTGraphicsConfiguration
-        .create(awtCanvas.getGraphicsConfiguration(), capabilities,
-            capabilities);
-    JAWTWindow nativeWindow = NewtFactoryAWT
-        .getNativeWindow(awtCanvas, awtGraphicsConfiguration);
-    GLDrawable glDrawable = drawableFactory.createGLDrawable(nativeWindow);
-    glDrawable.setRealized(true);
-    GlRenderer.GL_DRAWABLE = glDrawable;
-    GlRenderer.GL_CONTEXT = GlRenderer.acquireGLContext(glDrawable)
-        .orElse(null);
-
-    nativeWindow.unlockSurface();
-    if (GlRenderer.GL_CONTEXT == null) {
-      System.err.println("Failed to acquire context.");
+    if (context == null) {
       GlRenderer.releaseGlResources();
       return;
     }
+    System.out.println("GL bound");
+    GlRenderer.GL_CONTEXT = context;
+    GlRenderer.GL_DRAWABLE = drawable;
     GlRenderer.GL = (GL2) GlRenderer.GL_CONTEXT.getGL();
     GlRenderer.useOpenGlRenderer = true;
-    GlRenderer.viewWidth = awtCanvas.getSize().width;
-    GlRenderer.viewHeight = awtCanvas.getSize().height;
-
+    GlRenderer.viewWidth = canvas.getSize().width;
+    GlRenderer.viewHeight = canvas.getSize().height;
+    GlRenderer.initializeCompatibility();
     GlRenderer.method1857();
     GlRenderer.method1829();
     GlRenderer.GL.glClear(16384);
@@ -628,13 +616,25 @@ public final class GlRenderer {
     GlRenderer.GL.glClear(16384);
   }
 
-  private static Optional<GLContext> acquireGLContext(GLDrawable drawable) {
+  private static GLDrawable bindDrawable(
+      NativeSurface surface,
+      GLProfile profile
+  ) {
+    System.out.println("Binding drawable");
+    GLDrawableFactory drawableFactory = GLDrawableFactory.getFactory(profile);
+    GLDrawable drawable = drawableFactory.createGLDrawable(surface);
+    drawable.setRealized(true);
+    return drawable;
+  }
+
+  private static GLContext acquireGLContext(GLDrawable drawable) {
+    System.out.println("Acquiring GL context ");
     GLContext context = drawable.createContext(null);
-      int result = context.makeCurrent();
-      if (result != 0) {
-        return Optional.of(context);
-      }
-    return Optional.empty();
+    int result = context.makeCurrent();
+    if (result != 0) {
+      return context;
+    }
+    return null;
   }
 
   public static void setViewportDimensions(int var0, int var1) {
@@ -655,7 +655,7 @@ public final class GlRenderer {
     float var11 = var10 * (256.0F / var4);
     float var12 = var10 * (256.0F / var5);
     GlRenderer.GL.glOrtho(var6 * var11, var7 * var11,
-        (-var9) * var12, (-var8) * var12,
+        -var9 * var12, -var8 * var12,
         50 - far,
         3584 - far);
     GlRenderer.GL.glViewport(0, 0, GlRenderer.viewWidth, GlRenderer.viewHeight);

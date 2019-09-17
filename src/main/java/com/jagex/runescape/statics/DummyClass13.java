@@ -46,7 +46,7 @@ public final class DummyClass13 {
       var0 = var2;
     }
 
-    if ((var0 > 10)) {
+    if (var0 > 10) {
       var0 = 10;
     }
 
@@ -84,7 +84,7 @@ public final class DummyClass13 {
 
       for (var8 = 0; var8 < 128; ++var8) {
         var9 = (int) (100.0D * Math.random());
-        if ((var9 < 50) && (var8 > 10) && (var8 < 118)) {
+        if (var9 < 50 && var8 > 10 && var8 < 118) {
           DummyClass2.anIntArray1681[var8 + var7] = 255;
         } else {
           DummyClass2.anIntArray1681[var8 + var7] = 0;
@@ -108,7 +108,7 @@ public final class DummyClass13 {
 
     DummyClass22.anInt1740 += var0;
     var6 = (var0 + (1 & GlobalStatics_4.updateCycle)) / 2;
-    if ((var6 > 0)) {
+    if (var6 > 0) {
       for (var7 = 0; DummyClass22.anInt1740 > var7; ++var7) {
         var8 = 2 + (int) (124.0D * Math.random());
         var9 = (int) (128.0D * Math.random()) + 128;
@@ -122,12 +122,12 @@ public final class DummyClass13 {
         var9 = var7 * 128;
         var8 = 0;
 
-        for (var10 = -var6; (var10 < 128); ++var10) {
+        for (var10 = -var6; var10 < 128; ++var10) {
           if (var6 + var10 < 128) {
-            var8 += DummyClass2.anIntArray1681[var9 + (var10 + var6)];
+            var8 += DummyClass2.anIntArray1681[var9 + var10 + var6];
           }
 
-          if (((-1 - var6 + var10) >= 0)) {
+          if (-1 - var6 + var10 >= 0) {
             var8 -= DummyClass2.anIntArray1681[-var6 - 1 + var10 + var9];
           }
 
@@ -143,13 +143,13 @@ public final class DummyClass13 {
 
         for (var9 = -var6; var2 > var9; ++var9) {
           var10 = var9 * 128;
-          if (((var9 + var6) < var2)) {
-            var8 += GlobalStatics_8.anIntArray3805[var6 * 128 + (var7 + var10)];
+          if (var9 + var6 < var2) {
+            var8 += GlobalStatics_8.anIntArray3805[var6 * 128 + var7 + var10];
           }
 
           if (var9 - var6 - 1 >= 0) {
-            var8 -= GlobalStatics_8.anIntArray3805[-((1 + var6) * 128) + (var7
-                + var10)];
+            var8 -= GlobalStatics_8.anIntArray3805[-((1 + var6) * 128) + var7
+                + var10];
           }
 
           if (var9 >= 0) {

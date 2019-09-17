@@ -15,13 +15,13 @@ public class DummyClass2 {
     if (GlobalStatics_10.loginState != 0
         && GlobalStatics_10.loginState != 5) {
       try {
-        if (((++GlobalStatics_4.anInt820) > 2000)) {
+        if (++GlobalStatics_4.anInt820 > 2000) {
           if (GlobalStatics_9.gameSocket != null) {
             GlobalStatics_9.gameSocket.destroy();
             GlobalStatics_9.gameSocket = null;
           }
 
-          if ((GlobalStatics_9.anInt2079 >= 1)) {
+          if (GlobalStatics_9.anInt2079 >= 1) {
             GlobalStatics_5.loginResponse = -5;
             GlobalStatics_10.loginState = 0;
             return;
@@ -46,9 +46,9 @@ public class DummyClass2 {
           GlobalStatics_10.loginState = 2;
         }
 
-        if ((GlobalStatics_10.loginState == 2)) {
+        if (GlobalStatics_10.loginState == 2) {
           assert GlobalStatics_6.socketRequest != null;
-          if ((GlobalStatics_6.socketRequest.status == 2)) {
+          if (GlobalStatics_6.socketRequest.status == 2) {
             throw new IOException();
           }
 
@@ -225,13 +225,13 @@ public class DummyClass2 {
           GlobalStatics_10.loginState = 4;
         }
 
-        if ((GlobalStatics_10.loginState == 4)) {
-          if ((GlobalStatics_9.gameSocket.available() < 1)) {
+        if (GlobalStatics_10.loginState == 4) {
+          if (GlobalStatics_9.gameSocket.available() < 1) {
             return;
           }
 
           int response = GlobalStatics_9.gameSocket.read();
-          if ((response == 21)) {
+          if (response == 21) {
             GlobalStatics_10.loginState = 7;
           } else {
             if (response == 29) {
@@ -244,8 +244,8 @@ public class DummyClass2 {
               }
 
               if (response != 2) {
-                if ((response != 15)) {
-                  if (response == 23 && (GlobalStatics_9.anInt2079 < 1)) {
+                if (response != 15) {
+                  if (response == 23 && GlobalStatics_9.anInt2079 < 1) {
                     GlobalStatics_10.loginState = 1;
                     ++GlobalStatics_9.anInt2079;
                     GlobalStatics_4.anInt820 = 0;
@@ -282,7 +282,7 @@ public class DummyClass2 {
         }
 
         if (GlobalStatics_10.loginState == 7) {
-          if ((GlobalStatics_9.gameSocket.available() >= 1)) {
+          if (GlobalStatics_9.gameSocket.available() >= 1) {
             GlobalStatics_10.anInt3413 =
                 60 * (3 + GlobalStatics_9.gameSocket.read());
             GlobalStatics_10.loginState = 0;
@@ -295,7 +295,7 @@ public class DummyClass2 {
           return;
         }
 
-        if ((GlobalStatics_10.loginState == 10)) {
+        if (GlobalStatics_10.loginState == 10) {
           if (GlobalStatics_9.gameSocket.available() >= 1) {
             GlobalStatics_9.anInt2561 = GlobalStatics_9.gameSocket
                 .read();
@@ -310,7 +310,7 @@ public class DummyClass2 {
         }
 
         if (GlobalStatics_10.loginState == 8) {
-          if ((GlobalStatics_9.gameSocket.available() < 14)) {
+          if (GlobalStatics_9.gameSocket.available() < 14) {
             return;
           }
 
@@ -326,7 +326,7 @@ public class DummyClass2 {
           GlobalStatics_6.aBoolean1641 =
               GlobalStatics_9.gameBuffer.readUnsignedByte() == 1;
           GlobalStatics_7.aBoolean4063 =
-              (GlobalStatics_9.gameBuffer.readUnsignedByte() == 1);
+              GlobalStatics_9.gameBuffer.readUnsignedByte() == 1;
           GlobalStatics_10.aBoolean3166 =
               GlobalStatics_9.gameBuffer.readUnsignedByte() == 1;
           GlobalStatics_8.aBoolean29 =
@@ -336,7 +336,7 @@ public class DummyClass2 {
           GlobalStatics_9.aBoolean3358 =
               GlobalStatics_9.gameBuffer.readUnsignedByte() == 1;
           GlobalStatics_9.aBoolean66 =
-              (GlobalStatics_9.gameBuffer.readUnsignedByte() == 1);
+              GlobalStatics_9.gameBuffer.readUnsignedByte() == 1;
           GlobalStatics_9.method1702((byte) -124, GlobalStatics_9.aBoolean66);
           GlobalStatics_10.method845(GlobalStatics_9.aBoolean66, 255);
           if (!GlobalStatics_9.aBoolean3779) {
@@ -355,9 +355,9 @@ public class DummyClass2 {
           GlobalStatics_10.loginState = 9;
         }
 
-        if ((GlobalStatics_10.loginState == 9)) {
-          if ((GlobalStatics_9.gameSocket.available()
-              < GlobalStatics_0.packetLength)) {
+        if (GlobalStatics_10.loginState == 9) {
+          if (GlobalStatics_9.gameSocket.available()
+              < GlobalStatics_0.packetLength) {
             return;
           }
 
@@ -387,7 +387,7 @@ public class DummyClass2 {
           GlobalStatics_10.loginState = 1;
           GlobalStatics_4.anInt820 = 0;
           ++GlobalStatics_9.anInt2079;
-          if ((DummyClass11.anInt2036 == GlobalStatics_9.anInt2894)) {
+          if (DummyClass11.anInt2036 == GlobalStatics_9.anInt2894) {
             GlobalStatics_9.anInt2894 = GlobalStatics_9.anInt506;
           } else {
             GlobalStatics_9.anInt2894 = DummyClass11.anInt2036;

@@ -51,8 +51,8 @@ public final class DummyClass4 extends DummyClass6 {
         }
       }
 
-      if ((com.jagex.runescape.statics.GlobalStatics_0.packetLength
-          == GlobalStatics_9.gameBuffer.position)) {
+      if (GlobalStatics_0.packetLength
+          == GlobalStatics_9.gameBuffer.position) {
         for (var1 = 0; var1 < DummyClass13.anInt2022; ++var1) {
           if (GlobalStatics_9.players[DummyClass42.anIntArray887[var1]]
               == null) {
@@ -70,9 +70,9 @@ public final class DummyClass4 extends DummyClass6 {
   }
 
   public static void method2229(long var0, byte var2) {
-    if ((var0 != 0L)) {
+    if (var0 != 0L) {
       if ((GlobalStatics_10.anInt104 < 100 || GlobalStatics_9.aBoolean3358)
-          && (GlobalStatics_10.anInt104 < 200)) {
+          && GlobalStatics_10.anInt104 < 200) {
         GameString var3 = Objects
             .requireNonNull(GameStringStatics.stringFromBase37(-29664, var0))
             .formatName((byte) -50);
@@ -82,7 +82,7 @@ public final class DummyClass4 extends DummyClass6 {
 
         int var4;
         for (var4 = 0; GlobalStatics_10.anInt104 > var4; ++var4) {
-          if ((GlobalStatics_4.aLongArray826[var4] == var0)) {
+          if (GlobalStatics_4.aLongArray826[var4] == var0) {
             GlobalStatics_8.printMessage(GlobalStatics_9.EMPTY_STRING, 0,
                 GlobalStatics_9.concat(
                     new GameString[]{var3, GlobalStatics_9.aClass94_3645}), -1);
@@ -91,7 +91,7 @@ public final class DummyClass4 extends DummyClass6 {
         }
 
         for (var4 = 0; GlobalStatics_6.anInt3591 > var4; ++var4) {
-          if ((var0 == GlobalStatics_9.aLongArray1574[var4])) {
+          if (var0 == GlobalStatics_9.aLongArray1574[var4]) {
             GlobalStatics_8.printMessage(GlobalStatics_9.EMPTY_STRING, 0,
                 GlobalStatics_9.concat(
                     new GameString[]{DummyClass35.aClass94_662, var3,

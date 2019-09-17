@@ -30,7 +30,6 @@ public final class DummyClass0 {
       float[] var1 = {1.0F, 0.0F, 5.0E-4F};
       GlRenderer.GL.glPointParameterfv('\u8129', var1, 0);
       FloatBuffer var2 = FloatBuffer.allocate(1);
-      int test = '\u2345';
       GlRenderer.GL.glGetFloatv('\u8127', var2);
       float var3 = var2.get(0);
       if (var3 > 1024.0F) {

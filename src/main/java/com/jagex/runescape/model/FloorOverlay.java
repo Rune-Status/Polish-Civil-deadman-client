@@ -34,7 +34,7 @@ public final class FloorOverlay {
 
   private void method2279(int var1, int var2, Buffer var3, int var4) {
     if (var1 == 0) {
-        if ((var2 == 1)) {
+        if (var2 == 1) {
           this.anInt2103 = GlobalStatics_10
               .method869(116, var3.readUnsignedMedium((byte) 83));
         } else {
@@ -50,17 +50,17 @@ public final class FloorOverlay {
               if (var2 == 5) {
                 this.aBoolean2102 = false;
               } else {
-                if ((var2 == 7)) {
+                if (var2 == 7) {
                   this.anInt2098 = GlobalStatics_10
                       .method869(116, var3.readUnsignedMedium((byte) 82));
                 } else {
-                  if ((var2 == 8)) {
+                  if (var2 == 8) {
                     GlobalStatics_10.anInt3081 = var4;
                   } else {
-                    if ((var2 == 9)) {
+                    if (var2 == 9) {
                       this.anInt2090 = var3.readUnsignedShort();
                     } else {
-                      if ((var2 == 10)) {
+                      if (var2 == 10) {
                         this.aBoolean2093 = false;
                       } else {
                         if (var2 == 11) {
@@ -73,7 +73,7 @@ public final class FloorOverlay {
                               this.anInt2094 = var3
                                   .readUnsignedMedium((byte) 110);
                             } else {
-                              if ((var2 == 14)) {
+                              if (var2 == 14) {
                                 this.anInt2101 = var3.readUnsignedByte();
                               }
                             }

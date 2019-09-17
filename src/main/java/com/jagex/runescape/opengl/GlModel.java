@@ -289,7 +289,7 @@ public final class GlModel extends AbstractModel {
               var79 = var80 / 1024.0F;
             } else {
               var79 = 1.0F;
-              var75 = (-var80) / 1024.0F;
+              var75 = -var80 / 1024.0F;
             }
 
             var82 = 64.0F / (model.aShortArray2882[var20] & '\uffff');
@@ -701,7 +701,7 @@ public final class GlModel extends AbstractModel {
       for (var1 = 0; var1 < this.amountVertices; ++var1) {
         short var3 = this.aShortArray3837[var1];
         this.aShortArray3837[var1] = this.aShortArray3810[var1];
-        this.aShortArray3810[var1] = (short) (-var3);
+        this.aShortArray3810[var1] = (short) -var3;
       }
 
       this.aClass6_3835.aBoolean98 = false;
@@ -1290,7 +1290,7 @@ public final class GlModel extends AbstractModel {
       }
 
       if (rotationZ != 0) {
-        GlRenderer.GL.glRotatef((-rotationZ) * 0.17578125F, 0.0F, 0.0F, 1.0F);
+        GlRenderer.GL.glRotatef(-rotationZ * 0.17578125F, 0.0F, 0.0F, 1.0F);
       }
 
       this.draw();
@@ -1558,9 +1558,9 @@ public final class GlModel extends AbstractModel {
                       .glRotatef(rotationY * 0.17578125F, 0.0F, 1.0F, 0.0F);
                   this.draw();
                   GlRenderer.GL
-                      .glRotatef((-rotationY) * 0.17578125F, 0.0F, 1.0F, 0.0F);
-                  GlRenderer.GL.glTranslatef((-translateX), (-translateY),
-                      (-translateZ));
+                      .glRotatef(-rotationY * 0.17578125F, 0.0F, 1.0F, 0.0F);
+                  GlRenderer.GL.glTranslatef(-translateX, -translateY,
+                      -translateZ);
                   GlRenderer.GL.glPopMatrix();
                 }
               }
@@ -2185,7 +2185,7 @@ public final class GlModel extends AbstractModel {
     this.aShortArray3841[this.amountVertices] = (short) var8;
     this.aFloatArray3824[this.amountVertices] = var9;
     this.aFloatArray3847[this.amountVertices] = var10;
-    return (short) (this.amountVertices++);
+    return (short) this.amountVertices++;
   }
 
   public void method1908() {
@@ -2268,8 +2268,8 @@ public final class GlModel extends AbstractModel {
       }
 
       for (var1 = 0; var1 < this.amountVertices; ++var1) {
-        this.aShortArray3810[var1] = (short) (-this.aShortArray3810[var1]);
-        this.aShortArray3837[var1] = (short) (-this.aShortArray3837[var1]);
+        this.aShortArray3810[var1] = (short) -this.aShortArray3810[var1];
+        this.aShortArray3837[var1] = (short) -this.aShortArray3837[var1];
       }
 
       this.aClass6_3835.aBoolean98 = false;
@@ -2411,7 +2411,7 @@ public final class GlModel extends AbstractModel {
     this.aClass6_3835.aShort92 = (short) var5;
     this.aClass6_3835.aShort97 = (short) var3;
     this.aClass6_3835.aShort96 = (short) var6;
-    this.aClass6_3835.aShort93 = (short) ((int) (Math.sqrt(var7) + 0.99D));
+    this.aClass6_3835.aShort93 = (short) (int) (Math.sqrt(var7) + 0.99D);
     Math.sqrt(var8);
     this.aClass6_3835.aBoolean98 = true;
   }
@@ -2532,7 +2532,7 @@ public final class GlModel extends AbstractModel {
                 var5[var19][var20 + 1] * (128 - var17)
                     + var5[var19 + 1][var20 + 1] * var17 >> 7;
             var23 = var21 * (128 - var18) + var22 * var18 >> 7;
-            this.vy[var14] = this.vy[var14] + (var23 - var7) + var13;
+            this.vy[var14] = this.vy[var14] + var23 - var7 + var13;
           }
         } else if (var1 == 5) {
           var13 = var3.aClass6_3835.aShort92 - var3.aClass6_3835.aShort91;
@@ -3446,7 +3446,7 @@ public final class GlModel extends AbstractModel {
       for (var1 = 0; var1 < this.amountVertices; ++var1) {
         short var3 = this.aShortArray3810[var1];
         this.aShortArray3810[var1] = this.aShortArray3837[var1];
-        this.aShortArray3837[var1] = (short) (-var3);
+        this.aShortArray3837[var1] = (short) -var3;
       }
 
       this.aClass6_3835.aBoolean98 = false;
@@ -3586,10 +3586,10 @@ public final class GlModel extends AbstractModel {
   private boolean isWithinBoundaries(int var1, int var2, int var3, int var4,
       int var5,
       int var6, int var7, int var8) {
-    return (var2 >= var3 || var2 >= var4 || var2 >= var5) && (
-        (var2 <= var3 || var2 <= var4 || var2 <= var5) && (
-            (var1 >= var6 || var1 >= var7 || var1 >= var8) && (var1 <= var6
-                || var1 <= var7 || var1 <= var8)));
+    return (var2 >= var3 || var2 >= var4 || var2 >= var5) && (var2 <= var3
+        || var2 <= var4 || var2 <= var5) && (var1 >= var6 || var1 >= var7
+        || var1 >= var8) && (var1 <= var6
+        || var1 <= var7 || var1 <= var8);
   }
 
   private void draw() {
@@ -3765,7 +3765,7 @@ public final class GlModel extends AbstractModel {
 
     if (this.aShortArray3837 != null) {
       for (var1 = 0; var1 < this.amountVertices; ++var1) {
-        this.aShortArray3837[var1] = (short) (-this.aShortArray3837[var1]);
+        this.aShortArray3837[var1] = (short) -this.aShortArray3837[var1];
       }
     }
 
@@ -3950,9 +3950,9 @@ public final class GlModel extends AbstractModel {
     float var4 = var1 < 0.0F ? -var1 : var1;
     float var5 = var2 < 0.0F ? -var2 : var2;
     return var4 > var3 && var4 > var5 ?
-        (var1 > 0.0F ? 0 : 1) :
-        (var5 > var3 && var5 > var4 ? (var2 > 0.0F ? 2 : 3)
-            : (var0 > 0.0F ? 4 : 5));
+        var1 > 0.0F ? 0 : 1 :
+        var5 > var3 && var5 > var4 ? var2 > 0.0F ? 2 : 3
+            : var0 > 0.0F ? 4 : 5;
   }
 
   private static void method1904(int var0, int var1, int var2, int var3,
@@ -4037,7 +4037,7 @@ public final class GlModel extends AbstractModel {
       }
     }
 
-    return (var4 << 8) + (255 - (var3 & 255));
+    return (var4 << 8) + 255 - (var3 & 255);
   }
 
   private static float[] method1906(int var0, int var1, int var2, int var3,
@@ -4068,7 +4068,7 @@ public final class GlModel extends AbstractModel {
       var8 = var7;
     } else {
       if (var15 != 0.0F) {
-        var13 = (-var2) / var15;
+        var13 = -var2 / var15;
         var14 = var0 / var15;
       }
 

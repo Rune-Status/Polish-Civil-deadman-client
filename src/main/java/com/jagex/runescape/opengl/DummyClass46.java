@@ -499,9 +499,9 @@ public final class DummyClass46 {
 
     GlRenderer.GL.glLightf(var5, 4617, var1.aFloat710);
     GlRenderer.GL.glLightfv(var5, 4609, var1.colors, 0);
-    DummyClass46.aFloatArray1022[0] = (var1.anInt703 - var2);
-    DummyClass46.aFloatArray1022[1] = (var1.anInt697 - var3);
-    DummyClass46.aFloatArray1022[2] = (var1.anInt708 - var4);
+    DummyClass46.aFloatArray1022[0] = var1.anInt703 - var2;
+    DummyClass46.aFloatArray1022[1] = var1.anInt697 - var3;
+    DummyClass46.aFloatArray1022[2] = var1.anInt708 - var4;
     GlRenderer.GL.glLightfv(var5, 4611, DummyClass46.aFloatArray1022, 0);
   }
 

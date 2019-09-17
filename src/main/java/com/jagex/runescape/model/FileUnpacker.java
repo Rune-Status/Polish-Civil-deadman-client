@@ -35,7 +35,7 @@ public final class FileUnpacker {
 
         boolean var2 = true;
 
-        for (int var3 = 0; (var3 < this.table.anIntArray953.length); ++var3) {
+        for (int var3 = 0; var3 < this.table.anIntArray953.length; ++var3) {
           int var4 = this.table.anIntArray953[var3];
           if (this.anObjectArray1954[var4] == null) {
             this.method2134(false, var4);
@@ -124,7 +124,7 @@ public final class FileUnpacker {
     if (this.method2122()) {
         var1 = var1.method1534();
         int var3 = this.table.fileNameTable.get(var1.getDbj2Hash(false));
-        return this.method2130(false, var3) ? (var3) : -1;
+        return this.method2130(false, var3) ? var3 : -1;
       } else {
         return -1;
       }
@@ -284,7 +284,7 @@ public final class FileUnpacker {
 
       if (this.method2122()) {
         if (var2 >= 0 && this.table.unpackedLengths.length > var2
-          && (this.table.unpackedLengths[var2] != 0)) {
+          && this.table.unpackedLengths[var2] != 0) {
           return true;
         } else if (!DummyClass21.aBoolean1765) {
           return false;
@@ -336,7 +336,7 @@ public final class FileUnpacker {
           return true;
         } else {
           byte[] var21;
-          if (var3 != null && ((var3[0] != 0) || (var3[1] != 0) || var3[2] != 0
+          if (var3 != null && (var3[0] != 0 || var3[1] != 0 || var3[2] != 0
               || var3[3] != 0)) {
             var21 = GlobalStatics_9.method1985(-124, this.anObjectArray1954[var1], true);
             Buffer var22 = new Buffer(var21);
@@ -376,7 +376,7 @@ public final class FileUnpacker {
 
             int var15;
             int var16;
-            for (int var14 = 0; (var14 < var11); ++var14) {
+            for (int var14 = 0; var14 < var11; ++var14) {
               var15 = 0;
 
               for (var16 = 0; var4 > var16; ++var16) {
@@ -388,7 +388,7 @@ public final class FileUnpacker {
 
             byte[][] var24 = new byte[var4][];
 
-            for (var15 = 0; (var15 < var4); ++var15) {
+            for (var15 = 0; var15 < var4; ++var15) {
               var24[var15] = new byte[var13[var15]];
               var13[var15] = 0;
             }
@@ -397,7 +397,7 @@ public final class FileUnpacker {
             var15 = 0;
 
             int var17;
-            for (var16 = 0; (var16 < var11); ++var16) {
+            for (var16 = 0; var16 < var11; ++var16) {
               var17 = 0;
 
               for (int var18 = 0; var4 > var18; ++var18) {
@@ -464,7 +464,7 @@ public final class FileUnpacker {
       } else if (this.method2122()) {
         var1 = var1.method1534();
         int var3 = this.table.fileNameTable.get(var1.getDbj2Hash(false));
-        return (var3 >= 0);
+        return var3 >= 0;
       } else {
         return false;
       }
@@ -513,11 +513,11 @@ public final class FileUnpacker {
   public byte[] getBytes(int var1 ) {
     if (!this.method2122()) {
         return null;
-      } else if ((this.table.unpackedLengths.length == 1)) {
+      } else if (this.table.unpackedLengths.length == 1) {
         return this.getBytes(0, var1);
       } else if (!this.method2130(false, var1)) {
         return null;
-      } else if ((this.table.unpackedLengths[var1] != 1)) {
+      } else if (this.table.unpackedLengths[var1] != 1) {
 
         throw new RuntimeException();
 
@@ -528,7 +528,7 @@ public final class FileUnpacker {
 
   private boolean method2139(int var1, int var2, int var3) {
     if (this.method2122()) {
-        if (var2 <= var1 && (var3 >= 0) && this.table.unpackedLengths.length > var1
+        if (var2 <= var1 && var3 >= 0 && this.table.unpackedLengths.length > var1
           && this.table.unpackedLengths[var1] > var3) {
           return true;
         } else if (!DummyClass21.aBoolean1765) {
@@ -596,7 +596,7 @@ public final class FileUnpacker {
   public boolean isLoaded(int fileId ) {
     if (!this.method2122()) {
         return false;
-      } else if ((this.table.unpackedLengths.length == 1)) {
+      } else if (this.table.unpackedLengths.length == 1) {
         return this.method2129((byte) 86, fileId, 0);
       } else if (this.method2130(false, fileId)) {
         if (this.table.unpackedLengths[fileId] == 1) {

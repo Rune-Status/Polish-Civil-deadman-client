@@ -23,7 +23,7 @@ public final class DummyClass44 {
   }
 
   public static void method1207(int var0) {
-    for (int var1 = 0; (var1 < DummyClass6.anInt2046); ++var1) {
+    for (int var1 = 0; var1 < DummyClass6.anInt2046; ++var1) {
       int var2 = GlobalStatics_2.anIntArray347[var1];
       NPC var3 = GlobalStatics_8.npcs[var2];
       if (var3 != null) {
@@ -47,8 +47,8 @@ public final class DummyClass44 {
               GlobalStatics_9.aClass11ArrayArray1834[var1].length > var3;
               ++var3) {
             if (GlobalStatics_9.aClass11ArrayArray1834[var1][var3] != null) {
-              if ((GlobalStatics_9.aClass11ArrayArray1834[var1][var3].anInt187
-                  == 2)) {
+              if (GlobalStatics_9.aClass11ArrayArray1834[var1][var3].anInt187
+                  == 2) {
                 var2 = false;
               } else {
                 GlobalStatics_9.aClass11ArrayArray1834[var1][var3] = null;

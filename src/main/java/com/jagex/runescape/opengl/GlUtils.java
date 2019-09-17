@@ -133,15 +133,15 @@ public final class GlUtils {
       GlRenderer.GL.glColor3ub((byte) (color >> 16), (byte) (color >> 8), (byte) color);
       GlRenderer.GL.glBegin(6);
       if (var12 <= var11) {
-        GlRenderer.GL.glVertex2f(x0, (GlRenderer.viewHeight - y0));
-        GlRenderer.GL.glVertex2f(x1, (GlRenderer.viewHeight - y1));
-        GlRenderer.GL.glVertex2f(x2, (GlRenderer.viewHeight - y2));
-        GlRenderer.GL.glVertex2f(x3, (GlRenderer.viewHeight - y3));
+        GlRenderer.GL.glVertex2f(x0, GlRenderer.viewHeight - y0);
+        GlRenderer.GL.glVertex2f(x1, GlRenderer.viewHeight - y1);
+        GlRenderer.GL.glVertex2f(x2, GlRenderer.viewHeight - y2);
+        GlRenderer.GL.glVertex2f(x3, GlRenderer.viewHeight - y3);
       } else {
-        GlRenderer.GL.glVertex2f(x3, (GlRenderer.viewHeight - y3));
-        GlRenderer.GL.glVertex2f(x2, (GlRenderer.viewHeight - y2));
-        GlRenderer.GL.glVertex2f(x1, (GlRenderer.viewHeight - y1));
-        GlRenderer.GL.glVertex2f(x0, (GlRenderer.viewHeight - y0));
+        GlRenderer.GL.glVertex2f(x3, GlRenderer.viewHeight - y3);
+        GlRenderer.GL.glVertex2f(x2, GlRenderer.viewHeight - y2);
+        GlRenderer.GL.glVertex2f(x1, GlRenderer.viewHeight - y1);
+        GlRenderer.GL.glVertex2f(x0, GlRenderer.viewHeight - y0);
       }
 
       GlRenderer.GL.glEnd();
@@ -152,7 +152,7 @@ public final class GlUtils {
     GlRenderer.resetState();
     float xx0 = x0;
     float xx1 = xx0 + x1;
-    float yy0 = (GlRenderer.viewHeight - y0);
+    float yy0 = GlRenderer.viewHeight - y0;
     float yy1 = yy0 - y1;
     GlRenderer.GL.glBegin(6);
     GlRenderer.GL.glColor4ub((byte) (color >> 16), (byte) (color >> 8), (byte) color,
@@ -216,7 +216,7 @@ public final class GlUtils {
     GlRenderer.resetState();
     float xx0 = x0;
     float xx1 = xx0 + x1;
-    float yy0 = (GlRenderer.viewHeight - y0);
+    float yy0 = GlRenderer.viewHeight - y0;
     float yy1 = yy0 - y1;
     GlRenderer.GL.glBegin(6);
     GlRenderer.GL.glColor3ub((byte) (color >> 16), (byte) (color >> 8), (byte) color);

@@ -33,8 +33,8 @@ public final class DummyClass9 extends DummyClass5 {
       GameStringStatics.aByteArray4005 = null;
     }
 
-    if (!GlobalStatics_9.method1986(90) && (GlobalStatics_8.plane
-        != GlobalStatics_9.currentPlane)) {
+    if (!GlobalStatics_9.method1986(90) && GlobalStatics_8.plane
+        != GlobalStatics_9.currentPlane) {
       GlobalStatics_7
           .rebuildScene(GlobalStatics_9.currentPlane,
               GlobalStatics_10.anInt2294,
@@ -42,7 +42,7 @@ public final class DummyClass9 extends DummyClass5 {
               GlobalStatics_9.localPlayer.waypointsY[0], false,
               GlobalStatics_9.localPlayer.waypointsX[0], true);
     } else {
-      if ((GlobalStatics_9.currentPlane != DummyClass43.anInt909)
+      if (GlobalStatics_9.currentPlane != DummyClass43.anInt909
           && GlobalStatics_6
           .method385(
               var0, GlobalStatics_9.currentPlane)) {
@@ -66,7 +66,7 @@ public final class DummyClass9 extends DummyClass5 {
       DummyClass9.unbindKeyboard(null, 14);
     }
 
-    if ((GlobalStatics_9.anInt3375 != 0)) {
+    if (GlobalStatics_9.anInt3375 != 0) {
       try {
         if (++GlobalStatics_2.anInt2246 > 1500) {
           if (GlobalStatics_9.gameSocket != null) {
@@ -90,7 +90,7 @@ public final class DummyClass9 extends DummyClass5 {
           }
         }
 
-        if ((GlobalStatics_9.anInt3375 == 1)) {
+        if (GlobalStatics_9.anInt3375 == 1) {
           GlobalStatics_6.socketRequest =
               DummyClass35.signLink
                   .method1441((byte) 8, GlobalStatics_8.serverHost,
@@ -99,9 +99,9 @@ public final class DummyClass9 extends DummyClass5 {
         }
 
         int var1;
-        if ((GlobalStatics_9.anInt3375 == 2)) {
+        if (GlobalStatics_9.anInt3375 == 2) {
           assert GlobalStatics_6.socketRequest != null;
-          if ((GlobalStatics_6.socketRequest.status == 2)) {
+          if (GlobalStatics_6.socketRequest.status == 2) {
             throw new IOException();
           }
 
@@ -133,7 +133,7 @@ public final class DummyClass9 extends DummyClass5 {
             GlobalStatics_9.audioOutputStream1.pause();
           }
 
-          if ((var1 != 101)) {
+          if (var1 != 101) {
             GlobalStatics_5.loginResponse = var1;
             GlobalStatics_9.anInt3375 = 0;
             GlobalStatics_9.gameSocket.destroy();
@@ -144,9 +144,9 @@ public final class DummyClass9 extends DummyClass5 {
           GlobalStatics_9.anInt3375 = 3;
         }
 
-        if ((GlobalStatics_9.anInt3375 == 3)) {
+        if (GlobalStatics_9.anInt3375 == 3) {
           assert GlobalStatics_9.gameSocket != null;
-          if ((GlobalStatics_9.gameSocket.available() < 2)) {
+          if (GlobalStatics_9.gameSocket.available() < 2) {
             return;
           }
 

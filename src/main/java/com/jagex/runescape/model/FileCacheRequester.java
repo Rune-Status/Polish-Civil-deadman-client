@@ -17,7 +17,7 @@ public final class FileCacheRequester implements Runnable {
     SignLinkRequest var1 = DummyClass35.signLink.createThread(0, 5, this);
 
       assert var1 != null;
-      while ((var1.status == 0)) {
+      while (var1.status == 0) {
         GlobalStatics_10.sleep(10L);
       }
 
@@ -98,7 +98,7 @@ public final class FileCacheRequester implements Runnable {
             break;
           }
 
-          if ((var6.subnodeKey == var3) && var6.aClass41_4056 == var1
+          if (var6.subnodeKey == var3 && var6.aClass41_4056 == var1
             && var6.anInt4061 == 2) {
             var4.aByteArray4059 = var6.aByteArray4059;
             var4.aBoolean3632 = false;
@@ -138,7 +138,7 @@ public final class FileCacheRequester implements Runnable {
                 .method1050((int) var1.subnodeKey, var1.aByteArray4059.length,
                     var1.aByteArray4059, (byte) -41);
           } else {
-            if ((var1.anInt4061 == 3)) {
+            if (var1.anInt4061 == 3) {
               var1.aByteArray4059 =
                   var1.aClass41_4056
                       .method1051((int) var1.subnodeKey, (byte) -77);

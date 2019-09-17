@@ -36,15 +36,15 @@ public final class BlockShadowMap {
         if (GlRenderer.bigEndian) {
           vertexBuffers.writeFloat(offsetX / 8.0F);
           vertexBuffers.writeFloat(offsetY / 8.0F);
-          vertexBuffers.writeFloat((offsetX * 128));
+          vertexBuffers.writeFloat(offsetX * 128);
           vertexBuffers.writeFloat(heights[offsetX + x][offsetY + y]);
-          vertexBuffers.writeFloat((offsetY * 128));
+          vertexBuffers.writeFloat(offsetY * 128);
         } else {
           vertexBuffers.writeFloatLE(offsetX / 8.0F);
           vertexBuffers.writeFloatLE(offsetY / 8.0F);
-          vertexBuffers.writeFloatLE((offsetX * 128));
+          vertexBuffers.writeFloatLE(offsetX * 128);
           vertexBuffers.writeFloatLE(heights[offsetX + x][offsetY + y]);
-          vertexBuffers.writeFloatLE((offsetY * 128));
+          vertexBuffers.writeFloatLE(offsetY * 128);
         }
       }
     }

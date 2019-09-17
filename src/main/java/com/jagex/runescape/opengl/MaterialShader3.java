@@ -123,8 +123,8 @@ public final class MaterialShader3 implements MaterialShader {
       GlRenderer.GL
           .glRotatef(GlobalStatics_9.anInt3103 * 360.0F / 2048.0F, 0.0F, 1.0F,
               0.0F);
-      GlRenderer.GL.glTranslatef((-GlobalStatics_10.anInt144),
-          (-GlobalStatics_6.anInt3695), (-GlobalStatics_0.anInt2587));
+      GlRenderer.GL.glTranslatef(-GlobalStatics_10.anInt144,
+          -GlobalStatics_6.anInt3695, -GlobalStatics_0.anInt2587);
       if (MaterialShader3.aBoolean2191) {
         this.aFloatArray2190[0] = 0.0010F;
         this.aFloatArray2190[1] = 9.0E-4F;

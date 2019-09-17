@@ -108,7 +108,7 @@ public final class DummyClass28 {
 
     int var4;
     assert var3 != null;
-    for (var4 = 0; (var4 < var3.length); ++var4) {
+    for (var4 = 0; var4 < var3.length; ++var4) {
       var3[var4].method665();
     }
 

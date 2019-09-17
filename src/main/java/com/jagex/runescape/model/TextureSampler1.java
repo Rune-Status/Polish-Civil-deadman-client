@@ -33,7 +33,7 @@ public final class TextureSampler1 extends AbstractTextureSampler {
         GlobalStatics_9.method221(-64, null, null, null, 34);
       }
 
-      if ((var1 == 0)) {
+      if (var1 == 0) {
         this.method218((byte) 75, var2.readUnsignedMedium((byte) 82));
       }
   }
@@ -50,7 +50,7 @@ public final class TextureSampler1 extends AbstractTextureSampler {
         int[] var5 = var3[1];
         int[] var6 = var3[2];
 
-        for (int var7 = 0; (var7 < GlobalStatics_9.anInt1559); ++var7) {
+        for (int var7 = 0; var7 < GlobalStatics_9.anInt1559; ++var7) {
           var4[var7] = this.anInt3129;
           var5[var7] = this.anInt3134;
           var6[var7] = this.anInt3135;

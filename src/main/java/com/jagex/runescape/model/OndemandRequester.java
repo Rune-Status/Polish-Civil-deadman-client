@@ -52,7 +52,7 @@ public final class OndemandRequester {
       }
 
       if (this.socketStream == null) {
-        return this.method1253(4) == 0 && (this.method1246(11706) == 0);
+        return this.method1253(4) == 0 && this.method1246(11706) == 0;
       } else {
         try {
           this.socketStream.method1466(127);
@@ -84,14 +84,14 @@ public final class OndemandRequester {
               throw new IOException();
             }
 
-            if ((avail == 0)) {
+            if (avail == 0) {
               break;
             }
 
             this.timeDiff = 0;
             byte read = 0;
             if (this.currentRequest != null) {
-              if ((this.currentRequest.anInt4067 == 0)) {
+              if (this.currentRequest.anInt4067 == 0) {
                 read = 1;
               }
             } else {
@@ -114,7 +114,7 @@ public final class OndemandRequester {
 
               this.socketStream.read(this.currentRequest.buffer.bytes,
                   this.currentRequest.buffer.position, var7);
-              if ((this.encryptionKey != 0)) {
+              if (this.encryptionKey != 0) {
                 for (var8 = 0; var7 > var8; ++var8) {
                   this.currentRequest.buffer.bytes[this.currentRequest.buffer.position + var8] =
                     (byte) GlobalStatics_9.bitXor(
@@ -125,12 +125,12 @@ public final class OndemandRequester {
 
               this.currentRequest.anInt4067 += var7;
               this.currentRequest.buffer.position += var7;
-              if ((this.currentRequest.buffer.position == var6)) {
+              if (this.currentRequest.buffer.position == var6) {
                 this.currentRequest.unlinkSubNode();
                 this.currentRequest.aBoolean3632 = false;
                 this.currentRequest = null;
               } else {
-                if ((this.currentRequest.anInt4067 == 512)) {
+                if (this.currentRequest.anInt4067 == 512) {
                   this.currentRequest.anInt4067 = 0;
                 }
               }
@@ -152,13 +152,13 @@ public final class OndemandRequester {
               }
 
               this.aClass3_Sub30_1008.position += var6;
-              if ((this.aClass3_Sub30_1008.position >= read)) {
+              if (this.aClass3_Sub30_1008.position >= read) {
                 if (this.currentRequest != null) {
                   if (this.currentRequest.anInt4067 != 0) {
                     throw new IOException();
                   }
 
-                  if ((this.aClass3_Sub30_1008.bytes[0] == -1)) {
+                  if (this.aClass3_Sub30_1008.bytes[0] == -1) {
                     this.currentRequest.anInt4067 = 1;
                     this.aClass3_Sub30_1008.position = 0;
                   } else {
@@ -171,14 +171,14 @@ public final class OndemandRequester {
                   int var9 = this.aClass3_Sub30_1008.readUnsignedByte();
                   int length = this.aClass3_Sub30_1008.readInt();
                   int compression = 127 & var9;
-                  boolean priority = ((var9 & 128) != 0);
+                  boolean priority = (var9 & 128) != 0;
                   OndemandFileRequest var15 = null;
                   long var13 = (var7 << 16) + var8;
                   if (priority) {
                     for (
                         var15 = (OndemandFileRequest) this.normalRequests
                             .getFirst();
-                        var15 != null && (var15.subnodeKey != var13);
+                        var15 != null && var15.subnodeKey != var13;
                         var15 = (OndemandFileRequest) this.normalRequests
                             .getNext()) {
                     }
@@ -186,7 +186,7 @@ public final class OndemandRequester {
                     for (
                         var15 = (OndemandFileRequest) this.priorityRequests
                             .getFirst();
-                        var15 != null && (var13 != var15.subnodeKey);
+                        var15 != null && var13 != var15.subnodeKey;
                         var15 = (OndemandFileRequest) this.priorityRequests
                             .getNext()) {
                     }
@@ -219,7 +219,7 @@ public final class OndemandRequester {
           this.anInt1010 = -2;
           ++this.anInt1011;
           this.socketStream = null;
-          return this.method1253(4) == 0 && (this.method1246(11706) == 0);
+          return this.method1253(4) == 0 && this.method1246(11706) == 0;
         }
       }
   }
@@ -358,7 +358,7 @@ public final class OndemandRequester {
       }
 
       this.anInt1010 = -1;
-      this.encryptionKey = (byte) ((int) (255.0D * Math.random() + 1.0D));
+      this.encryptionKey = (byte) (int) (255.0D * Math.random() + 1.0D);
       this.socketStream = null;
       ++this.anInt1011;
   }
@@ -391,7 +391,7 @@ public final class OndemandRequester {
       var8.aByte4064 = var3;
       int var9 = 120 / ((63 - var1) / 47);
       if (var5) {
-        if ((this.method1253(4) >= 20)) {
+        if (this.method1253(4) >= 20) {
           throw new RuntimeException();
         }
 

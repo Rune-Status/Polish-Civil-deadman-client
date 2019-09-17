@@ -32,13 +32,13 @@ public final class NPC extends Mobile {
       int var11,
       DummyClass0 var12 ) {
     if (this.config != null) {
-        AnimationSequence var13 = (this.animationId != -1)
-            && (this.anInt2828 == 0) ?
+        AnimationSequence var13 = this.animationId != -1
+            && this.anInt2828 == 0 ?
           GlobalStatics_8.method45(this.animationId, (byte) -20) :
           null;
         AnimationSequence var14 =
-            this.anInt2764 != -1 && ((this.anInt2764 != Objects
-              .requireNonNull(this.getRenderAnimationId(false)).anInt368)
+            this.anInt2764 != -1 && (this.anInt2764 != Objects
+              .requireNonNull(this.getRenderAnimationId(false)).anInt368
             || var13 == null) ? GlobalStatics_8.method45(this.anInt2764, (byte) -20) : null;
         AbstractModel var15 =
             this.config.method1476(this.aClass145Array2809, this.anInt2793, (byte) -116,
@@ -82,7 +82,7 @@ public final class NPC extends Mobile {
           this.method1971(var15, (byte) -111);
           this.method1969((byte) 115, var15, var1);
           var17 = null;
-          if ((this.anInt2842 != -1) && this.anInt2805 != -1) {
+          if (this.anInt2842 != -1 && this.anInt2805 != -1) {
             SpotAnimationConfig var21 = GlobalStatics_9.method898((byte) 42,
                 this.anInt2842);
             var17 = var21.method966(this.anInt2826, (byte) -30, this.anInt2805,
@@ -90,11 +90,11 @@ public final class NPC extends Mobile {
             if (var17 != null) {
               var17.method1897(0, -this.anInt2799, 0);
               if (var21.aBoolean536) {
-                if ((GlobalStatics_10.anInt3198 != 0)) {
+                if (GlobalStatics_10.anInt3198 != 0) {
                   var17.method1896(GlobalStatics_10.anInt3198);
                 }
 
-                if ((GlobalStatics_9.anInt3623 != 0)) {
+                if (GlobalStatics_9.anInt3623 != 0) {
                   var17.method1886(GlobalStatics_9.anInt3623);
                 }
 
@@ -106,7 +106,7 @@ public final class NPC extends Mobile {
           }
 
           if (GlRenderer.useOpenGlRenderer) {
-            if ((this.config.size == 1)) {
+            if (this.config.size == 1) {
               var15.aBoolean2699 = true;
             }
 
@@ -114,7 +114,7 @@ public final class NPC extends Mobile {
                 var11,
                 this.aClass127_Sub1_2801);
             if (var17 != null) {
-              if ((this.config.size == 1)) {
+              if (this.config.size == 1) {
                 var17.aBoolean2699 = true;
               }
 
@@ -155,7 +155,7 @@ public final class NPC extends Mobile {
   public int getRenderAnimationId() {
     if (GlobalStatics_5.gameId != 0 && this.config.anIntArray1292 != null) {
         NpcConfiguration var2 = this.config.method1471((byte) 21);
-        if (var2 != null && (var2.renderAnimationId != -1)) {
+        if (var2 != null && var2.renderAnimationId != -1) {
           return var2.renderAnimationId;
         }
       }

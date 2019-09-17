@@ -23,7 +23,7 @@ public final class TextureSampler20 extends AbstractTextureSampler {
         int var6 = DummyClass55.anInt1427 / this.anInt3147;
         int[] var4;
         int var7;
-        if ((var6 <= 0)) {
+        if (var6 <= 0) {
           var4 = this.method152(0, 0, 32755);
         } else {
           var7 = var1 % var6;
@@ -48,7 +48,7 @@ public final class TextureSampler20 extends AbstractTextureSampler {
         GlobalStatics_10.usageMode = -117;
       }
 
-      if ((var1 == 0)) {
+      if (var1 == 0) {
         this.anInt3149 = var2.readUnsignedByte();
       } else if (var1 == 1) {
         this.anInt3147 = var2.readUnsignedByte();
@@ -79,7 +79,7 @@ public final class TextureSampler20 extends AbstractTextureSampler {
           int[] var11 = var3[1];
           int[] var12 = var3[2];
 
-          for (int var13 = 0; (var13 < GlobalStatics_9.anInt1559); ++var13) {
+          for (int var13 = 0; var13 < GlobalStatics_9.anInt1559; ++var13) {
             int var14;
             if (var5 <= 0) {
               var14 = 0;

@@ -75,10 +75,10 @@ public final class DummyClass3 {
     boolean[] var75;
     boolean[] var81;
     for (var13 = 1; var13 <= 102; ++var13) {
-      for (var14 = 1; (var14 <= 102); ++var14) {
+      for (var14 = 1; var14 <= 102; ++var14) {
         var15 = var9[var13][var14] & 255;
         var16 = 255 & var10[var13][var14];
-        if ((var16 != 0)) {
+        if (var16 != 0) {
           FloorOverlay var17 = GlobalStatics_9
               .method350((byte) -81, -1 + var16);
           if (var17.anInt2103 == -1) {
@@ -95,8 +95,8 @@ public final class DummyClass3 {
           }
         }
 
-        if (((var9[var13][var14] & 255) != 0)
-            || (var16 != 0) && (var8[var13][var14] == 0)) {
+        if ((var9[var13][var14] & 255) != 0
+            || var16 != 0 && var8[var13][var14] == 0) {
           var58 = 0;
           int var60 = 0;
           var21 = 0;
@@ -115,9 +115,9 @@ public final class DummyClass3 {
           int var34;
           byte var32;
           boolean var70;
-          if (var27 != 0 && (var16 != var27)) {
+          if (var27 != 0 && var16 != var27) {
             var31 = GlobalStatics_9.method350((byte) 106, -1 + var27);
-            if (var31.aBoolean2092 && (var31.anInt2103 != -1)) {
+            if (var31.aBoolean2092 && var31.anInt2103 != -1) {
               var32 = var5[var13 - 1][var14 + 1];
               var33 = var8[-1 + var13][var14 + 1];
               var34 = GlobalStatics_9.anIntArray2642[4 * var33 + (2 + var32
@@ -129,12 +129,12 @@ public final class DummyClass3 {
                 var70 = false;
               } else {
                 for (var36 = 0; var36 < 8; ++var36) {
-                  if ((var36 == var58)) {
+                  if (var36 == var58) {
                     var63[var58++] = var27;
                     break;
                   }
 
-                  if ((var27 == var63[var36])) {
+                  if (var27 == var63[var36]) {
                     break;
                   }
                 }
@@ -147,9 +147,9 @@ public final class DummyClass3 {
           }
 
           boolean var69;
-          if ((var28 != 0) && var28 != var16) {
+          if (var28 != 0 && var28 != var16) {
             var31 = GlobalStatics_9.method350((byte) 114, -1 + var28);
-            if (var31.aBoolean2092 && (var31.anInt2103 != -1)) {
+            if (var31.aBoolean2092 && var31.anInt2103 != -1) {
               var32 = var5[-1 + var13][var14 - 1];
               var33 = var8[-1 + var13][-1 + var14];
               var34 = GlobalStatics_9.anIntArray2642[var33 * 4 + (var32 & 3)];
@@ -159,13 +159,13 @@ public final class DummyClass3 {
                   && GlobalStatics_9.aBooleanArrayArray3468[var35][0]) {
                 var69 = false;
               } else {
-                for (var36 = 0; (var36 < 8); ++var36) {
-                  if ((var58 == var36)) {
+                for (var36 = 0; var36 < 8; ++var36) {
+                  if (var58 == var36) {
                     var63[var58++] = var28;
                     break;
                   }
 
-                  if ((var63[var36] == var28)) {
+                  if (var63[var36] == var28) {
                     break;
                   }
                 }
@@ -178,9 +178,9 @@ public final class DummyClass3 {
           }
 
           boolean var72;
-          if ((var29 != 0) && (var16 != var29)) {
+          if (var29 != 0 && var16 != var29) {
             var31 = GlobalStatics_9.method350((byte) 107, var29 - 1);
-            if (var31.aBoolean2092 && (var31.anInt2103 != -1)) {
+            if (var31.aBoolean2092 && var31.anInt2103 != -1) {
               var32 = var5[1 + var13][var14 - 1];
               var33 = var8[var13 + 1][var14 - 1];
               var35 = GlobalStatics_9.anIntArray2642[4 * var33 + (3
@@ -190,13 +190,13 @@ public final class DummyClass3 {
                   && GlobalStatics_9.aBooleanArrayArray3468[var34][0]) {
                 var72 = false;
               } else {
-                for (var36 = 0; (var36 < 8); ++var36) {
-                  if ((var58 == var36)) {
+                for (var36 = 0; var36 < 8; ++var36) {
+                  if (var58 == var36) {
                     var63[var58++] = var29;
                     break;
                   }
 
-                  if ((var29 == var63[var36])) {
+                  if (var29 == var63[var36]) {
                     break;
                   }
                 }
@@ -209,9 +209,9 @@ public final class DummyClass3 {
           }
 
           boolean var71;
-          if (var30 != 0 && (var30 != var16)) {
+          if (var30 != 0 && var30 != var16) {
             var31 = GlobalStatics_9.method350((byte) 105, var30 - 1);
-            if (var31.aBoolean2092 && (var31.anInt2103 != -1)) {
+            if (var31.aBoolean2092 && var31.anInt2103 != -1) {
               var32 = var5[var13 + 1][1 + var14];
               var33 = var8[var13 + 1][1 + var14];
               var35 = GlobalStatics_9.anIntArray2642[4 * var33 + (var32 + 1
@@ -222,13 +222,13 @@ public final class DummyClass3 {
                   && GlobalStatics_9.aBooleanArrayArray3468[var35][0]) {
                 var71 = false;
               } else {
-                for (var36 = 0; (var36 < 8); ++var36) {
+                for (var36 = 0; var36 < 8; ++var36) {
                   if (var58 == var36) {
                     var63[var58++] = var30;
                     break;
                   }
 
-                  if ((var30 == var63[var36])) {
+                  if (var30 == var63[var36]) {
                     break;
                   }
                 }
@@ -240,15 +240,15 @@ public final class DummyClass3 {
             var71 = false;
           }
 
-          if ((var23 != 0) && (var16 != var23)) {
+          if (var23 != 0 && var16 != var23) {
             var31 = GlobalStatics_9.method350((byte) -29, -1 + var23);
             if (var31.aBoolean2092 && var31.anInt2103 != -1) {
               var60 = GlobalStatics_9.anIntArray2642[4 * var8[var13][var14 + 1]
                   + (
                   var5[var13][var14 + 1] + 2 & 3)];
 
-              for (var74 = 0; (var74 < 8); ++var74) {
-                if ((var58 == var74)) {
+              for (var74 = 0; var74 < 8; ++var74) {
+                if (var58 == var74) {
                   var63[var58++] = var23;
                   break;
                 }
@@ -260,35 +260,35 @@ public final class DummyClass3 {
             }
           }
 
-          if (var24 != 0 && (var16 != var24)) {
+          if (var24 != 0 && var16 != var24) {
             var31 = GlobalStatics_9.method350((byte) -32, var24 - 1);
             if (var31.aBoolean2092 && var31.anInt2103 != -1) {
               var65 = GlobalStatics_9.anIntArray2642[
                   (3 & 3 + var5[var13 - 1][var14])
                       + var8[var13 - 1][var14] * 4];
 
-              for (var74 = 0; (var74 < 8); ++var74) {
+              for (var74 = 0; var74 < 8; ++var74) {
                 if (var58 == var74) {
                   var63[var58++] = var24;
                   break;
                 }
 
-                if ((var24 == var63[var74])) {
+                if (var24 == var63[var74]) {
                   break;
                 }
               }
             }
           }
 
-          if ((var25 != 0) && var16 != var25) {
+          if (var25 != 0 && var16 != var25) {
             var31 = GlobalStatics_9.method350((byte) 112, -1 + var25);
-            if (var31.aBoolean2092 && (var31.anInt2103 != -1)) {
+            if (var31.aBoolean2092 && var31.anInt2103 != -1) {
               var21 = GlobalStatics_9.anIntArray2642[
                   (3 & var5[var13][var14 - 1])
                       + var8[var13][var14 - 1] * 4];
 
-              for (var74 = 0; (var74 < 8); ++var74) {
-                if ((var74 == var58)) {
+              for (var74 = 0; var74 < 8; ++var74) {
+                if (var74 == var58) {
                   var63[var58++] = var25;
                   break;
                 }
@@ -302,14 +302,14 @@ public final class DummyClass3 {
 
           if (var26 != 0 && var16 != var26) {
             var31 = GlobalStatics_9.method350((byte) -41, var26 - 1);
-            if (var31.aBoolean2092 && (var31.anInt2103 != -1)) {
+            if (var31.aBoolean2092 && var31.anInt2103 != -1) {
               var22 =
                   GlobalStatics_9.anIntArray2642[
                       (3 & var5[var13 + 1][var14] + 1) + 4 * var8[1
                           + var13][var14]];
 
-              for (var74 = 0; (var74 < 8); ++var74) {
-                if ((var58 == var74)) {
+              for (var74 = 0; var74 < 8; ++var74) {
+                if (var58 == var74) {
                   var63[var58++] = var26;
                   break;
                 }
@@ -323,9 +323,9 @@ public final class DummyClass3 {
 
           for (var73 = 0; var58 > var73; ++var73) {
             var74 = var63[var73];
-            var79 = GlobalStatics_9.aBooleanArrayArray3468[(var24 != var74) ? 0
+            var79 = GlobalStatics_9.aBooleanArrayArray3468[var24 != var74 ? 0
                 : var65];
-            var75 = GlobalStatics_9.aBooleanArrayArray3468[(var74 != var25) ? 0
+            var75 = GlobalStatics_9.aBooleanArrayArray3468[var74 != var25 ? 0
                 : var21];
             boolean[] var80 = GlobalStatics_9.aBooleanArrayArray3468[
                 var23 == var74 ? var60 : 0];
@@ -354,12 +354,12 @@ public final class DummyClass3 {
     }
 
     for (var13 = 1; var13 <= 102; ++var13) {
-      for (var14 = 1; (var14 <= 102); ++var14) {
+      for (var14 = 1; var14 <= 102; ++var14) {
         var16 = 255 & var9[var13][var14];
         var58 = 255 & var10[var13][var14];
         if ((8 & var11[var3][var13][var14]) != 0) {
           var15 = 0;
-        } else if ((var11[1][var13][var14] & 2) == 2 && (var3 > 0)) {
+        } else if ((var11[1][var13][var14] & 2) == 2 && var3 > 0) {
           var15 = var3 - 1;
         } else {
           var15 = var3;
@@ -390,11 +390,11 @@ public final class DummyClass3 {
           GlobalStatics_9
               .method971(var22, var2, var1, var13, var0, var23, var68, var15,
                   var24,
-                  (byte) 88, (var16 != 0) && var62.aBoolean2092, var67, var14,
+                  (byte) 88, var16 != 0 && var62.aBoolean2092, var67, var14,
                   var4, var25, var66);
         }
 
-        if (((var9[var13][var14] & 255) != 0) || (var58 != 0) &&
+        if ((var9[var13][var14] & 255) != 0 || var58 != 0 &&
             var8[var13][var14] == 0) {
           int[] var64 = new int[8];
           var65 = 0;
@@ -426,13 +426,13 @@ public final class DummyClass3 {
                   && GlobalStatics_9.aBooleanArrayArray3468[var35][0]) {
                 var28 = 0;
               } else {
-                for (var83 = 0; (var83 < 8); ++var83) {
+                for (var83 = 0; var83 < 8; ++var83) {
                   if (var61 == var83) {
                     var64[var61++] = var28;
                     break;
                   }
 
-                  if ((var64[var83] == var28)) {
+                  if (var64[var83] == var28) {
                     break;
                   }
                 }
@@ -444,7 +444,7 @@ public final class DummyClass3 {
             var28 = 0;
           }
 
-          if (var29 != 0 && (var58 != var29)) {
+          if (var29 != 0 && var58 != var29) {
             var76 = GlobalStatics_9.method350((byte) -87, -1 + var29);
             if (var76.aBoolean2092 && var76.anInt2103 != -1) {
               var33 = var5[var13 - 1][-1 + var14];
@@ -474,7 +474,7 @@ public final class DummyClass3 {
             var29 = 0;
           }
 
-          if (var30 != 0 && (var30 != var58)) {
+          if (var30 != 0 && var30 != var58) {
             var76 = GlobalStatics_9.method350((byte) -123, -1 + var30);
             if (var76.aBoolean2092 && var76.anInt2103 != -1) {
               var33 = var5[1 + var13][var14 - 1];
@@ -487,7 +487,7 @@ public final class DummyClass3 {
                 var30 = 0;
               } else {
                 for (var83 = 0; var83 < 8; ++var83) {
-                  if ((var83 == var61)) {
+                  if (var83 == var61) {
                     var64[var61++] = var30;
                     break;
                   }
@@ -504,7 +504,7 @@ public final class DummyClass3 {
             var30 = 0;
           }
 
-          if ((var73 != 0) && (var58 != var73)) {
+          if (var73 != 0 && var58 != var73) {
             var76 = GlobalStatics_9.method350((byte) 119, -1 + var73);
             if (var76.aBoolean2092 && var76.anInt2103 != -1) {
               var77 = var8[1 + var13][1 + var14];
@@ -517,8 +517,8 @@ public final class DummyClass3 {
                   && GlobalStatics_9.aBooleanArrayArray3468[var36][0]) {
                 var73 = 0;
               } else {
-                for (var83 = 0; (var83 < 8); ++var83) {
-                  if ((var83 == var61)) {
+                for (var83 = 0; var83 < 8; ++var83) {
+                  if (var83 == var61) {
                     var64[var61++] = var73;
                     break;
                   }
@@ -536,7 +536,7 @@ public final class DummyClass3 {
           }
 
           int var78;
-          if ((var24 != 0) && (var24 != var58)) {
+          if (var24 != 0 && var24 != var58) {
             var76 = GlobalStatics_9.method350((byte) 113, var24 - 1);
             if (var76.aBoolean2092 && var76.anInt2103 != -1) {
               var65 = GlobalStatics_9.anIntArray2642[var8[var13][var14 + 1] * 4
@@ -544,12 +544,12 @@ public final class DummyClass3 {
                   2 + var5[var13][var14 + 1] & 3)];
 
               for (var78 = 0; var78 < 8; ++var78) {
-                if ((var78 == var61)) {
+                if (var78 == var61) {
                   var64[var61++] = var24;
                   break;
                 }
 
-                if ((var64[var78] == var24)) {
+                if (var64[var78] == var24) {
                   break;
                 }
               }
@@ -558,14 +558,14 @@ public final class DummyClass3 {
 
           if (var25 != 0 && var58 != var25) {
             var76 = GlobalStatics_9.method350((byte) -103, var25 - 1);
-            if (var76.aBoolean2092 && (var76.anInt2103 != -1)) {
+            if (var76.aBoolean2092 && var76.anInt2103 != -1) {
               var21 =
                   GlobalStatics_9.anIntArray2642[
                       (3 & var5[var13 - 1][var14] + 3) + 4 * var8[
                           var13 - 1][var14]];
 
               for (var78 = 0; var78 < 8; ++var78) {
-                if ((var61 == var78)) {
+                if (var61 == var78) {
                   var64[var61++] = var25;
                   break;
                 }
@@ -577,7 +577,7 @@ public final class DummyClass3 {
             }
           }
 
-          if (var26 != 0 && (var26 != var58)) {
+          if (var26 != 0 && var26 != var58) {
             var76 = GlobalStatics_9.method350((byte) 126, var26 - 1);
             if (var76.aBoolean2092 && var76.anInt2103 != -1) {
               var22 =
@@ -585,13 +585,13 @@ public final class DummyClass3 {
                       + 4 * var8[var13][
                       -1 + var14]];
 
-              for (var78 = 0; (var78 < 8); ++var78) {
-                if ((var61 == var78)) {
+              for (var78 = 0; var78 < 8; ++var78) {
+                if (var61 == var78) {
                   var64[var61++] = var26;
                   break;
                 }
 
-                if ((var26 == var64[var78])) {
+                if (var26 == var64[var78]) {
                   break;
                 }
               }
@@ -605,26 +605,26 @@ public final class DummyClass3 {
                   + (3
                   & var5[var13 + 1][var14] + 1)];
 
-              for (var78 = 0; (var78 < 8); ++var78) {
-                if ((var78 == var61)) {
+              for (var78 = 0; var78 < 8; ++var78) {
+                if (var78 == var61) {
                   var64[var61++] = var27;
                   break;
                 }
 
-                if ((var64[var78] == var27)) {
+                if (var64[var78] == var27) {
                   break;
                 }
               }
             }
           }
 
-          for (var74 = 0; (var74 < var61); ++var74) {
+          for (var74 = 0; var74 < var61; ++var74) {
             var78 = var64[var74];
             var79 = GlobalStatics_9.aBooleanArrayArray3468[var78 == var24
                 ? var65 : 0];
             var75 = GlobalStatics_9.aBooleanArrayArray3468[var25 == var78
                 ? var21 : 0];
-            var81 = GlobalStatics_9.aBooleanArrayArray3468[(var78 == var26)
+            var81 = GlobalStatics_9.aBooleanArrayArray3468[var78 == var26
                 ? var22 : 0];
             boolean[] var84 = GlobalStatics_9.aBooleanArrayArray3468[
                 var78 != var27 ? 0 : var23];
@@ -647,11 +647,11 @@ public final class DummyClass3 {
                 GlobalStatics_10
                     .method190(var82.anInt2095, var82.anInt2103, (byte) 106,
                         var6[var13][var14 + 1]) << 8;
-            boolean var48 = (var78 != var29) && var81[0] && var75[1];
-            boolean var47 = (var78 != var73) && var79[0] && var84[1];
+            boolean var48 = var78 != var29 && var81[0] && var75[1];
+            boolean var47 = var78 != var73 && var79[0] && var84[1];
             boolean var46 = var28 != var78 && var75[0] && var79[1];
             int var85 = var44 - 2 + var79.length;
-            boolean var49 = (var78 != var30) && var84[0] && var81[1];
+            boolean var49 = var78 != var30 && var84[0] && var81[1];
             var85 += -2 + var75.length;
             var85 += var81.length - 2;
             var85 += -2 + var84.length;
@@ -688,7 +688,7 @@ public final class DummyClass3 {
             var85 = var44 + 1;
             var45[var44] = var50;
             var45[var85++] = var52;
-            if ((var79.length > 2)) {
+            if (var79.length > 2) {
               var45[var85++] =
                   GlobalStatics_6
                       .method1734(var43, 0.0F, var40, var41, null, var2, var13,
@@ -718,7 +718,7 @@ public final class DummyClass3 {
             }
 
             var45[var85++] = var54;
-            if ((var84.length > 2)) {
+            if (var84.length > 2) {
               var45[var85++] =
                   GlobalStatics_6
                       .method1734(var43, 0.0F, var40, var41, null, var2, var13,
@@ -737,7 +737,7 @@ public final class DummyClass3 {
     for (
         var56 = (SomethingGl0) var12.getFirst(62);
         var56 != null; var56 = (SomethingGl0) var12.getNext(-80)) {
-      if ((var56.anInt2343 == 0)) {
+      if (var56.anInt2343 == 0) {
         var56.unlinkNode();
       } else {
         var56.method148();
@@ -778,7 +778,7 @@ public final class DummyClass3 {
       DummyClass47.method1323(var0, var4, var2, var1, 0);
     }
 
-    if ((GlobalStatics_8.anInt2737 >= 100)) {
+    if (GlobalStatics_8.anInt2737 >= 100) {
       if (GlobalStatics_0.aClass3_Sub28_Sub16_637 == null
           || var2 != GlobalStatics_0.aClass3_Sub28_Sub16_637.anInt3707
           || GlobalStatics_0.aClass3_Sub28_Sub16_637.anInt3696 != var1) {
@@ -815,7 +815,7 @@ public final class DummyClass3 {
       int var15 = var0 + var2 * DummyClass44.anInt930 / DummyClass30.anInt455;
       int var7 = var2 * GlobalStatics_9.anInt817 / DummyClass30.anInt455;
       int var9 = 16711680;
-      if ((GlobalStatics_5.gameId == 1)) {
+      if (GlobalStatics_5.gameId == 1) {
         var9 = 16777215;
       }
 
@@ -827,9 +827,9 @@ public final class DummyClass3 {
         DummyClass47.method1311(var15, var6, var7, var8, var9);
       }
 
-      if ((GlobalStatics_2.anInt3704 > 0)) {
+      if (GlobalStatics_2.anInt3704 > 0) {
         int var10;
-        if ((GlobalStatics_6.anInt3611 > 10)) {
+        if (GlobalStatics_6.anInt3611 > 10) {
           var10 = (-GlobalStatics_6.anInt3611 + 20) * 25;
         } else {
           var10 = 25 * GlobalStatics_6.anInt3611;
@@ -840,9 +840,9 @@ public final class DummyClass3 {
             var11 != null;
             var11 = (SomethingOtherWorldMap) DummyClass51.aClass61_1162
                 .getNext()) {
-          if ((var11.anInt2532 == GlobalStatics_10.anInt101)) {
+          if (var11.anInt2532 == GlobalStatics_10.anInt101) {
             int var13 =
-                var4 + (var11.anInt2539 * var1 / DummyClass58.anInt1460);
+                var4 + var11.anInt2539 * var1 / DummyClass58.anInt1460;
             int var12 = var2 * var11.anInt2531 / DummyClass30.anInt455 + var0;
             if (GlRenderer.useOpenGlRenderer) {
               GlUtils.fillQuad(-2 + var12, -2 + var13, 4, 4, 16776960, var10);

@@ -844,7 +844,7 @@ public abstract class AbstractFont extends SubNode {
         var16 = var2 + (var4 - var18) / 2;
       } else if (var8 == 2) {
         var18 = this.method682(var1) + var15;
-        var16 = var2 + (var4 - var18);
+        var16 = var2 + var4 - var18;
       }
 
       this.method703(var1, var16, var17, var14, null);

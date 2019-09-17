@@ -473,7 +473,7 @@ public class GlobalStatics_5 {
   public static void method2180(FileUnpacker var0, FileUnpacker var1,
       int var2) {
     if (var2 != 11504) {
-      aClass94_2013 = null;
+      GlobalStatics_5.aClass94_2013 = null;
     }
 
     GlobalStatics_9.models = var0;
@@ -481,14 +481,14 @@ public class GlobalStatics_5 {
   }
 
   public static void method2181(boolean var0) {
-    aByteArrayArrayArray2008 = null;
+    GlobalStatics_5.aByteArrayArrayArray2008 = null;
     GameStringStatics.anIntArray2004 = null;
-    aClass94_2013 = null;
+    GlobalStatics_5.aClass94_2013 = null;
     if (var0) {
-      method2181(false);
+      GlobalStatics_5.method2181(false);
     }
 
-    aClass94_2006 = null;
+    GlobalStatics_5.aClass94_2006 = null;
   }
 
   public static void method2183(int var0, boolean var1, int var2, int var3,
@@ -496,12 +496,12 @@ public class GlobalStatics_5 {
       Widget[] var5) {
     int var6 = 0;
     if (var3 == 235) {
-      for (; (var6 < var5.length); ++var6) {
+      for (; var6 < var5.length; ++var6) {
         Widget var7 = var5[var6];
         if (var7 != null && var7.anInt190 == var0) {
           GlobalStatics_9.method603(var4, 13987, var2, var7, var1);
           GlobalStatics_8.method1224(var7, 23730, var4, var2);
-          if (((var7.anInt240 - var7.anInt168) < var7.anInt247)) {
+          if (var7.anInt240 - var7.anInt168 < var7.anInt247) {
             var7.anInt247 = var7.anInt240 - var7.anInt168;
           }
 
@@ -509,7 +509,7 @@ public class GlobalStatics_5 {
             var7.anInt208 = var7.anInt252 - var7.anInt193;
           }
 
-          if ((var7.anInt208 < 0)) {
+          if (var7.anInt208 < 0) {
             var7.anInt208 = 0;
           }
 
@@ -517,7 +517,7 @@ public class GlobalStatics_5 {
             var7.anInt247 = 0;
           }
 
-          if ((var7.anInt187 == 0)) {
+          if (var7.anInt187 == 0) {
             GlobalStatics_7.method2104(var7, var1, -108);
           }
         }
@@ -561,7 +561,7 @@ public class GlobalStatics_5 {
     SomethingQuickChatK var2 = new SomethingQuickChatK();
     var2.anInt149 = var1.readUnsignedShort();
     if (var0 != 1024) {
-      method2162(null, 34, 103, -93);
+      GlobalStatics_5.method2162(null, 34, 103, -93);
     }
 
     var2.aClass3_Sub28_Sub4_151 = GlobalStatics_0
@@ -607,25 +607,25 @@ public class GlobalStatics_5 {
   }
 
   public static void method2165(int var0) {
-    aClass94_1970 = null;
-    aClass94_1974 = null;
-    anIntArray1976 = null;
+    GlobalStatics_5.aClass94_1970 = null;
+    GlobalStatics_5.aClass94_1974 = null;
+    GlobalStatics_5.anIntArray1976 = null;
     if (var0 != 0) {
-      method2165(-20);
+      GlobalStatics_5.method2165(-20);
     }
 
-    quadx0 = null;
-    otherKeyQueue = null;
+    GlobalStatics_5.quadx0 = null;
+    GlobalStatics_5.otherKeyQueue = null;
   }
 
   public static void method2093(int var0) {
-    fileSystem = null;
-    aClass94_1932 = null;
-    aFloatArray1934 = null;
-    COMMAND_DROP_CLIENT = null;
-    aClass11_1933 = null;
+    GlobalStatics_5.fileSystem = null;
+    GlobalStatics_5.aClass94_1932 = null;
+    GlobalStatics_5.aFloatArray1934 = null;
+    GlobalStatics_5.COMMAND_DROP_CLIENT = null;
+    GlobalStatics_5.aClass11_1933 = null;
     if (var0 != 1) {
-      method2096(-83, 44, -77, 121L);
+      GlobalStatics_5.method2096(-83, 44, -77, 121L);
     }
   }
 
@@ -662,7 +662,7 @@ public class GlobalStatics_5 {
     GlobalStatics_9.anInt154 = 1;
     GlobalStatics_9.anInt546 = var6;
     if (!var0) {
-      method2096(-8, 46, 45, -6L);
+      GlobalStatics_5.method2096(-8, 46, 45, -6L);
     }
 
     GlobalStatics_10.anInt3423 = var5;
@@ -684,9 +684,9 @@ public class GlobalStatics_5 {
   }
 
   public static void method2081(int var0) {
-    anIntArrayArrayArray1903 = null;
+    GlobalStatics_5.anIntArrayArrayArray1903 = null;
     if (var0 == 0) {
-      soundEffects = null;
+      GlobalStatics_5.soundEffects = null;
     }
   }
 
@@ -932,11 +932,11 @@ public class GlobalStatics_5 {
 
       for (int var8 = 0; var4 > var8; ++var8) {
         int var9 = var3 % var2;
-        if ((var9 < 0)) {
+        if (var9 < 0) {
           var9 = -var9;
         }
 
-        if ((var9 > 9)) {
+        if (var9 > 9) {
           var9 += 39;
         }
 
@@ -945,7 +945,7 @@ public class GlobalStatics_5 {
       }
 
       if (var0 >= -111) {
-        method1727((byte) 53);
+        GlobalStatics_5.method1727((byte) 53);
       }
 
       GameString var11 = new GameString();
@@ -960,7 +960,7 @@ public class GlobalStatics_5 {
   public static void method1724(int var0, int var1, int var2, int var3,
       int var4, int var5,
       byte var6, int var7) {
-    if (var5 >= 128 && (var2 >= 128) && (var5 <= 13056) && (var2 <= 13056)) {
+    if (var5 >= 128 && var2 >= 128 && var5 <= 13056 && var2 <= 13056) {
       int var8 = GlobalStatics_6
           .method1736(GlobalStatics_9.currentPlane, 1, var5, var2) - var3;
       var2 -= DummyClass49.anInt1111;
@@ -971,7 +971,7 @@ public class GlobalStatics_5 {
       int var11 = GLStatics.SINE_TABLE[GlobalStatics_10.anInt3315];
       int var12 = DummyClass40.COSINE_TABLE[GlobalStatics_10.anInt3315];
       int var13 = var5 * var12 + var11 * var2 >> 16;
-      var2 = var2 * var12 - (var11 * var5) >> 16;
+      var2 = var2 * var12 - var11 * var5 >> 16;
       var5 = var13;
       var13 = var10 * var8 - var2 * var9 >> 16;
       if (var6 <= -47) {
@@ -997,17 +997,17 @@ public class GlobalStatics_5 {
   }
 
   public static void method1726(int var0) {
-    aClass94_1618 = null;
-    aClass94_1620 = null;
-    aClass94_1622 = null;
-    aShortArrayArray1619 = null;
-    aClass94_1617 = null;
-    aClass94_1621 = null;
+    GlobalStatics_5.aClass94_1618 = null;
+    GlobalStatics_5.aClass94_1620 = null;
+    GlobalStatics_5.aClass94_1622 = null;
+    GlobalStatics_5.aShortArrayArray1619 = null;
+    GlobalStatics_5.aClass94_1617 = null;
+    GlobalStatics_5.aClass94_1621 = null;
   }
 
   public static int method1727(byte var0) {
     if (var0 != 123) {
-      method1726(-123);
+      GlobalStatics_5.method1726(-123);
     }
 
     return GlobalStatics_9.aClass93_1911.method1520(-12623);

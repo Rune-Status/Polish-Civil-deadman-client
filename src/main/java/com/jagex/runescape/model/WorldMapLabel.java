@@ -34,7 +34,7 @@ public final class WorldMapLabel {
         this.method1794(-111, 26);
       }
 
-      return ((4 & this.aByteArray1730[var1]) != 0);
+      return (4 & this.aByteArray1730[var1]) != 0;
   }
 
   public int method1791(int var1, int var2 ) {

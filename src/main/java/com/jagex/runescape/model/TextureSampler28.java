@@ -79,16 +79,16 @@ public final class TextureSampler28 extends AbstractTextureSampler {
                   var30 += GlobalStatics_9.anInt1559;
                 }
 
-                if ((GlobalStatics_9.anInt1559 < var30)) {
+                if (GlobalStatics_9.anInt1559 < var30) {
                   var30 -= GlobalStatics_9.anInt1559;
                 }
 
                 while (true) {
                   int[] var31 = var21[var27];
-                  if ((var30 >= var31[0]) && (var31[1] >= var30)) {
+                  if (var30 >= var31[0] && var31[1] >= var30) {
                     if (var10 != var27) {
                       int var42 = var6 + var9;
-                      if ((var42 < 0)) {
+                      if (var42 < 0) {
                         var42 += GlobalStatics_9.anInt1559;
                       }
 
@@ -98,7 +98,7 @@ public final class TextureSampler28 extends AbstractTextureSampler {
 
                       int var32;
                       int[] var33;
-                      for (var32 = 1; (var29 >= var32); ++var32) {
+                      for (var32 = 1; var29 >= var32; ++var32) {
                         var33 = var21[(var10 + var32) % var13];
                         var23 = Math.max(var23, var33[2]);
                       }
@@ -106,7 +106,7 @@ public final class TextureSampler28 extends AbstractTextureSampler {
                       for (var32 = 0; var32 <= var29; ++var32) {
                         var33 = var21[(var10 + var32) % var13];
                         int var34 = var33[2];
-                        if ((var34 != var23)) {
+                        if (var34 != var23) {
                           int var37 = var33[0];
                           int var38 = var33[1];
                           int var35;
@@ -135,7 +135,7 @@ public final class TextureSampler28 extends AbstractTextureSampler {
 
                   ++var29;
                   ++var27;
-                  if ((var27 >= var13)) {
+                  if (var27 >= var13) {
                     var27 = 0;
                   }
                 }
@@ -148,7 +148,7 @@ public final class TextureSampler28 extends AbstractTextureSampler {
               }
 
               int[] var40;
-              if ((var26 == GlobalStatics_9.anInt1559)) {
+              if (var26 == GlobalStatics_9.anInt1559) {
                 this.method291(var23, var22, var7 + var9, var24, (byte) -69, var25, var5);
                 if (var11) {
                   return var3;
@@ -175,13 +175,13 @@ public final class TextureSampler28 extends AbstractTextureSampler {
                 }
 
                 var20 = var41;
-                if ((GlobalStatics_9.anInt1559 < var29)) {
+                if (GlobalStatics_9.anInt1559 < var29) {
                   var29 -= GlobalStatics_9.anInt1559;
                 }
 
                 while (true) {
                   int[] var43 = var21[var10];
-                  if (var43[0] <= var29 && (var43[1] >= var29)) {
+                  if (var43[0] <= var29 && var43[1] >= var29) {
                     break;
                   }
 
@@ -211,7 +211,7 @@ public final class TextureSampler28 extends AbstractTextureSampler {
         this.anInt3301 = 4;
       }
 
-      if ((var1 == 0)) {
+      if (var1 == 0) {
         this.anInt3312 = var2.readUnsignedByte();
       } else {
         if (var1 == 1) {
@@ -220,16 +220,16 @@ public final class TextureSampler28 extends AbstractTextureSampler {
           if (var1 == 3) {
             this.anInt3310 = var2.readUnsignedShort();
           } else {
-            if ((var1 == 4)) {
+            if (var1 == 4) {
               this.anInt3301 = var2.readUnsignedShort();
             } else if (var1 != 5) {
-              if ((var1 == 6)) {
+              if (var1 == 6) {
                 this.anInt3309 = var2.readUnsignedByte();
               } else {
-                if ((var1 == 7)) {
+                if (var1 == 7) {
                   this.anInt3299 = var2.readUnsignedShort();
                 } else {
-                  if ((var1 == 8)) {
+                  if (var1 == 8) {
                     this.anInt3316 = var2.readUnsignedShort();
                   }
                 }
@@ -253,7 +253,7 @@ public final class TextureSampler28 extends AbstractTextureSampler {
   private void method291(int var1, Random var2, int var3, int var4, byte var5, int var6,
                                int[][] var7) {
     if (var5 == -69) {
-        int var8 = (this.anInt3316 > 0) ?
+        int var8 = this.anInt3316 > 0 ?
           4096 - GlobalStatics_8.method1603((byte) -128, this.anInt3316, var2) :
           4096;
         int var9 = this.anInt3299 * this.anInt3314 >> 12;
@@ -273,8 +273,8 @@ public final class TextureSampler28 extends AbstractTextureSampler {
           var11 = var4 / 2;
           var12 = var6 / 2;
           int var13 = var11 < var10 ? var11 : var10;
-          int var14 = (var12 >= var10) ? var10 : var12;
-          int var16 = var4 - (2 * var13);
+          int var14 = var12 >= var10 ? var10 : var12;
+          int var16 = var4 - 2 * var13;
           int var15 = var13 + var3;
 
           for (int var17 = 0; var17 < var6; ++var17) {
@@ -282,9 +282,9 @@ public final class TextureSampler28 extends AbstractTextureSampler {
             int var19;
             int var21;
             int var20;
-            if ((var17 < var14)) {
+            if (var17 < var14) {
               var19 = var17 * var8 / var14;
-              if ((this.anInt3309 == 0)) {
+              if (this.anInt3309 == 0) {
                 for (var20 = 0; var13 > var20; ++var20) {
                   var21 = var20 * var8 / var13;
                   var18[GlobalStatics_9.anInt396 & var20 + var3] =
@@ -295,7 +295,7 @@ public final class TextureSampler28 extends AbstractTextureSampler {
                   var21 = var20 * var8 / var13;
                   var18[GlobalStatics_9.anInt396 & var3 + var20] =
                       var18[GlobalStatics_9.anInt396 & var4 + var3 - var20 - 1] =
-                          (var19 <= var21) ? var19 : var21;
+                          var19 <= var21 ? var19 : var21;
                 }
               }
 
@@ -308,13 +308,13 @@ public final class TextureSampler28 extends AbstractTextureSampler {
               }
             } else {
               var19 = var6 - var17 - 1;
-              if ((var19 >= var14)) {
+              if (var19 >= var14) {
                 for (var20 = 0; var13 > var20; ++var20) {
                   var18[GlobalStatics_9.anInt396 & var3 + var20] =
                     var18[-1 - var20 + var3 + var4 & GlobalStatics_9.anInt396] = var8 * var20 / var13;
                 }
 
-                if ((var15 + var16) > GlobalStatics_9.anInt1559) {
+                if (var15 + var16 > GlobalStatics_9.anInt1559) {
                   var20 = -var15 + GlobalStatics_9.anInt1559;
                   ArrayUtils.fill(var18, var15, var20, var8);
                   ArrayUtils.fill(var18, 0, var16 - var20, var8);
@@ -335,7 +335,8 @@ public final class TextureSampler28 extends AbstractTextureSampler {
                   for (var21 = 0; var13 > var21; ++var21) {
                     var22 = var21 * var8 / var13;
                     var18[var3 + var21 & GlobalStatics_9.anInt396] =
-                      var18[-1 - var21 + var4 + var3 & GlobalStatics_9.anInt396] = (var20 <= var22) ? var20 : var22;
+                      var18[-1 - var21 + var4 + var3 & GlobalStatics_9.anInt396] = var20 <= var22
+                          ? var20 : var22;
                   }
                 }
 
@@ -349,7 +350,7 @@ public final class TextureSampler28 extends AbstractTextureSampler {
               }
             }
           }
-        } else if ((GlobalStatics_9.anInt1559 >= (var3 + var4))) {
+        } else if (GlobalStatics_9.anInt1559 >= var3 + var4) {
           for (var11 = 0; var6 > var11; ++var11) {
             ArrayUtils.fill(var7[var1 + var11], var3, var4, var8);
           }

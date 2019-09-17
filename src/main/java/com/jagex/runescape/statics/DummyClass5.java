@@ -27,9 +27,9 @@ public class DummyClass5 extends DummyClass6 {
 
   public static void method2210(byte var0, boolean var1) {
     DummyClass43.method1194(-16385);
-    if (DummyClass15.state == 30 || (DummyClass15.state == 25)) {
+    if (DummyClass15.state == 30 || DummyClass15.state == 25) {
       ++GlobalStatics_10.anInt4032;
-      if ((GlobalStatics_10.anInt4032 >= 50) || var1) {
+      if (GlobalStatics_10.anInt4032 >= 50 || var1) {
         GlobalStatics_10.anInt4032 = 0;
         if (var0 == -90) {
           if (!GlTexture2d.aBoolean3769
@@ -63,16 +63,15 @@ public class DummyClass5 extends DummyClass6 {
           int var4;
           if (DummyClass36.aBoolean2615) {
             int var11;
-            if ((var1 != 1)) {
+            if (var1 != 1) {
               var3 = GlobalStatics_0.anInt1709;
               var11 = GlobalStatics_9.anInt1676;
-              if ((var11 < (GlobalStatics_1.anInt1462 - 10))
-                  || var11 > (
-                  GlobalStatics_9.anInt3552 + (
-                      GlobalStatics_1.anInt1462 + 10))
-                  || (-10 + GlobalStatics_10.anInt3395) > var3 || var3 > (
-                  GlobalStatics_9.anInt3537 + (GlobalStatics_10.anInt3395
-                      + 10))) {
+              if (var11 < GlobalStatics_1.anInt1462 - 10
+                  || var11 > GlobalStatics_9.anInt3552
+                  + GlobalStatics_1.anInt1462 + 10
+                  || -10 + GlobalStatics_10.anInt3395 > var3 || var3 >
+                  GlobalStatics_9.anInt3537 + GlobalStatics_10.anInt3395
+                      + 10) {
                 DummyClass36.aBoolean2615 = false;
                 GlobalStatics_3
                     .method1340(GlobalStatics_1.anInt1462,
@@ -82,7 +81,7 @@ public class DummyClass5 extends DummyClass6 {
               }
             }
 
-            if ((var1 == 1)) {
+            if (var1 == 1) {
               var11 = GlobalStatics_1.anInt1462;
               var3 = GlobalStatics_10.anInt3395;
               var4 = GlobalStatics_9.anInt3552;
@@ -97,18 +96,18 @@ public class DummyClass5 extends DummyClass6 {
                   var9 = 15 * (GlobalStatics_10.amountContextActions - 1
                       - var8) + 35 + var3;
                 } else {
-                  var9 = 15 * (-var8 + (GlobalStatics_10.amountContextActions
-                      - 1)) + var3 + 31;
+                  var9 = 15 * (-var8 + GlobalStatics_10.amountContextActions
+                      - 1) + var3 + 31;
                 }
 
-                if (var12 > var11 && (var11 + var4) > var12
+                if (var12 > var11 && var11 + var4 > var12
                     && var9 - 13 < var13
-                    && (3 + var9) > var13) {
+                    && 3 + var9 > var13) {
                   var7 = var8;
                 }
               }
 
-              if ((var7 != -1)) {
+              if (var7 != -1) {
                 GlobalStatics_8.method806(2597, var7);
               }
 
@@ -120,15 +119,15 @@ public class DummyClass5 extends DummyClass6 {
                       GlobalStatics_9.anInt3537);
             }
           } else {
-            if ((var1 == 1) && GlobalStatics_10.amountContextActions > 0) {
+            if (var1 == 1 && GlobalStatics_10.amountContextActions > 0) {
               short var2 =
                   GlobalStatics_10.aShortArray3095[-1
                       + GlobalStatics_10.amountContextActions];
-              if ((var2 == 25) || var2 == 23 || var2 == 48 || (var2 == 7)
+              if (var2 == 25 || var2 == 23 || var2 == 48 || var2 == 7
                   || var2 == 13
-                  || (var2 == 47) || (var2 == 5) || var2 == 43 || (var2 == 35)
-                  || (var2 == 58)
-                  || (var2 == 22) || var2 == 1006) {
+                  || var2 == 47 || var2 == 5 || var2 == 43 || var2 == 35
+                  || var2 == 58
+                  || var2 == 22 || var2 == 1006) {
                 var3 = DummyClass26.anIntArray1613[-1
                     + GlobalStatics_10.amountContextActions];
                 var4 = DummyClass32.anIntArray512[
@@ -155,8 +154,8 @@ public class DummyClass5 extends DummyClass6 {
               }
             }
 
-            if ((var1 == 1) && (
-                (GlobalStatics_9.anInt998 == 1)
+            if (var1 == 1 && (
+                GlobalStatics_9.anInt998 == 1
                     && GlobalStatics_10.amountContextActions > 2
                     || GlobalStatics_9
                     .method353(GlobalStatics_10.amountContextActions - 1,
@@ -164,13 +163,13 @@ public class DummyClass5 extends DummyClass6 {
               var1 = 2;
             }
 
-            if ((var1 == 2) && (GlobalStatics_10.amountContextActions > 0)
-                || (GlobalStatics_7.anInt3660 == 1)) {
+            if (var1 == 2 && GlobalStatics_10.amountContextActions > 0
+                || GlobalStatics_7.anInt3660 == 1) {
               DummyClass22.method1801((byte) -105);
             }
 
             if (var1 == 1 && GlobalStatics_10.amountContextActions > 0
-                || (GlobalStatics_7.anInt3660 == 2)) {
+                || GlobalStatics_7.anInt3660 == 2) {
               GlobalStatics_9.method203(100);
             }
           }

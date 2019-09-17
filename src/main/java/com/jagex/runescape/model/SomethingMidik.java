@@ -29,8 +29,8 @@ public final class SomethingMidik {
     }
     this.anIntArray1942 = new int[this.anInt1943 * 8];
     for (int i = 0; i < this.anInt1943 * 8; i++) {
-      this.anIntArray1942[i] = ((is[i >> 3] & 1 << (i & 0x7)) != 0 ? GlobalStatics_11
-          .method368(8) : -1);
+      this.anIntArray1942[i] = (is[i >> 3] & 1 << (i & 0x7)) != 0 ? GlobalStatics_11
+          .method368(8) : -1;
     }
   }
 
@@ -39,7 +39,7 @@ public final class SomethingMidik {
       fs[i_2_] = 0.0F;
     }
     if (!bool) {
-      int i_3_ = (GlobalStatics_11.aClass71Array2406[this.anInt1937].anInt1063);
+      int i_3_ = GlobalStatics_11.aClass71Array2406[this.anInt1937].anInt1063;
       int i_4_ = this.anInt1940 - this.anInt1938;
       int i_5_ = i_4_ / this.anInt1941;
       int[] is = new int[i_5_];
@@ -62,7 +62,7 @@ public final class SomethingMidik {
               int i_13_ = this.anInt1938 + i_7_ * this.anInt1941;
               SomethingMidiInstrument class71 = GlobalStatics_11.aClass71Array2406[i_12_];
               if (this.anInt1939 == 0) {
-                int i_14_ = (this.anInt1941 / class71.anInt1063);
+                int i_14_ = this.anInt1941 / class71.anInt1063;
                 for (int i_15_ = 0; i_15_ < i_14_; i_15_++) {
                   float[] fs_16_ = class71.method1288();
                   for (int i_17_ = 0; i_17_ < class71.anInt1063; i_17_++) {

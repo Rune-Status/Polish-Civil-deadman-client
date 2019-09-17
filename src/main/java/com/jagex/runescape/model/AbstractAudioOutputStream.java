@@ -158,7 +158,7 @@ public class AbstractAudioOutputStream {
           }
 
           int amountBufferedSamples = this.getAmountBufferedSamples();
-          if (this.anInt1981 < (this.anInt1985 - amountBufferedSamples)) {
+          if (this.anInt1981 < this.anInt1985 - amountBufferedSamples) {
             this.anInt1981 = this.anInt1985 - amountBufferedSamples;
           }
 
@@ -194,7 +194,7 @@ public class AbstractAudioOutputStream {
             if (this.paused) {
               this.paused = false;
             } else {
-              if ((this.anInt1981 == 0) && (this.anInt1988 == 0)) {
+              if (this.anInt1981 == 0 && this.anInt1988 == 0) {
                 this.close();
                 this.pauseTime = start + 2000L;
                 return;
@@ -296,7 +296,7 @@ public class AbstractAudioOutputStream {
     if (DummyClass36.aClass15_2613 != null) {
         boolean var2 = true;
 
-        for (int var3 = 0; (var3 < 2); ++var3) {
+        for (int var3 = 0; var3 < 2; ++var3) {
           if (this == DummyClass36.aClass15_2613.aClass155Array352[var3]) {
             DummyClass36.aClass15_2613.aClass155Array352[var3] = null;
           }

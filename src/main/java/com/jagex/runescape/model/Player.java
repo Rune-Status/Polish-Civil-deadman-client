@@ -43,7 +43,7 @@ public final class Player extends Mobile {
       int var3 = buffer.readUnsignedByte();
       int var8 = -1;
       int var4 = 1 & var3;
-      boolean var6 = ((var3 & 4) != 0);
+      boolean var6 = (var3 & 4) != 0;
       int var7 = super.getSize();
       int[] var9 = new int[12];
       this.method1976(1 + (var3 >> 3 & 7), 2);
@@ -58,14 +58,14 @@ public final class Player extends Mobile {
       int var12;
       int var13;
       int var14;
-      for (int var10 = 0; (var10 < 12); ++var10) {
+      for (int var10 = 0; var10 < 12; ++var10) {
         var11 = buffer.readUnsignedByte();
-        if ((var11 == 0)) {
+        if (var11 == 0) {
           var9[var10] = 0;
         } else {
           var12 = buffer.readUnsignedByte();
           var13 = (var11 << 8) + var12;
-          if ((var10 == 0) && (var13 == 65535)) {
+          if (var10 == 0 && var13 == 65535) {
             var8 = buffer.readUnsignedShort();
             this.anInt3956 = buffer.readUnsignedByte();
             break;
@@ -89,7 +89,7 @@ public final class Player extends Mobile {
 
       for (var11 = 0; var11 < 5; ++var11) {
         var12 = buffer.readUnsignedByte();
-        if ((var12 < 0) || var12 >= GlobalStatics_2.aShortArrayArray344[var11].length) {
+        if (var12 < 0 || var12 >= GlobalStatics_2.aShortArrayArray344[var11].length) {
           var12 = 0;
         }
 
@@ -109,14 +109,14 @@ public final class Player extends Mobile {
         this.skillTotal = 0;
         this.anInt3965 = buffer.readUnsignedByte();
         this.anInt3970 = buffer.readUnsignedByte();
-        if ((this.anInt3970 == 255)) {
+        if (this.anInt3970 == 255) {
           this.anInt3970 = -1;
         }
       }
 
       var13 = this.anInt3969;
       this.anInt3969 = buffer.readUnsignedByte();
-      if ((this.anInt3969 == 0)) {
+      if (this.anInt3969 == 0) {
         DummyClass11.method2203(this, 8);
       } else {
         int var15 = this.anInt3966;
@@ -127,8 +127,9 @@ public final class Player extends Mobile {
         this.anInt3966 = buffer.readUnsignedShort();
         this.anInt3963 = buffer.readUnsignedShort();
         this.anInt3973 = buffer.readUnsignedShort();
-        if (this.anInt3969 != var13 || (this.anInt3952 != var14) || (this.anInt3966 != var15)
-          || var16 != this.anInt3963 || (this.anInt3973 != var17)) {
+        if (this.anInt3969 != var13 || this.anInt3952 != var14
+            || this.anInt3966 != var15
+          || var16 != this.anInt3963 || this.anInt3973 != var17) {
           GlobalStatics_2.method518(this, -110);
         }
       }
@@ -138,11 +139,11 @@ public final class Player extends Mobile {
       }
 
       var14 = this.appearance.npcId;
-      this.appearance.update(var19, var8, (var4 == 1), 0, var9,
+      this.appearance.update(var19, var8, var4 == 1, 0, var9,
           this.renderAnimationId);
-      if ((var14 != var8)) {
+      if (var14 != var8) {
         this.anInt2819 = 128 * this.waypointsX[0] + this.getSize() * 64;
-        this.anInt2829 = 128 * this.waypointsY[0] + (64 * this.getSize());
+        this.anInt2829 = 128 * this.waypointsY[0] + 64 * this.getSize();
       }
 
       if (this.aClass127_Sub1_2801 != null) {
@@ -153,8 +154,8 @@ public final class Player extends Mobile {
   private void draw(DummyClass0 var1, int var2, AbstractModel var3, int var4, int var5,
                     int var6, int var7, int var8, int var9, int var10, int var11, int var12,
                     int var13, int var14, int var15) {
-    int var16 = var4 * var4 + (var2 * var2);
-      if ((var16 >= 16) && (var16 <= 360000)) {
+    int var16 = var4 * var4 + var2 * var2;
+      if (var16 >= 16 && var16 <= 360000) {
         int var17 = (int) (325.949D * Math.atan2(var4, var2)) & var7;
         AbstractModel var18 =
           GlobalStatics_10.method1763(true, var17, this.anInt2829, var13,
@@ -227,10 +228,11 @@ public final class Player extends Mobile {
             this.animationId != -1 && this.anInt2828 == 0 ?
           GlobalStatics_8.method45(this.animationId, (byte) -20) :
           null;
-        AnimationSequence var14 = (this.anInt2764 != -1)
+        AnimationSequence var14 = this.anInt2764 != -1
             && !this.aBoolean3968 && (
-          (this.anInt2764 != Objects
-              .requireNonNull(this.getRenderAnimationId(false)).anInt368) || var13 == null) ?
+          this.anInt2764 != Objects
+              .requireNonNull(this.getRenderAnimationId(false)).anInt368
+              || var13 == null) ?
           GlobalStatics_8.method45(this.anInt2764, (byte) -20) :
           null;
         AbstractModel var15 =
@@ -240,7 +242,8 @@ public final class Player extends Mobile {
                     this.anInt2832,
                     this.anInt2813);
         int var16 = GlobalStatics_5.method1727((byte) 123);
-        if (GlRenderer.useOpenGlRenderer && GlobalStatics_6.anInt3492 < 96 && (var16 > 50)) {
+        if (GlRenderer.useOpenGlRenderer && GlobalStatics_6.anInt3492 < 96 &&
+            var16 > 50) {
           GlobalStatics_10.method90(1);
         }
 
@@ -282,12 +285,12 @@ public final class Player extends Mobile {
 
           if (GlobalStatics_9.localPlayer == this) {
             for (var17 = GlobalStatics_8.aClass96Array2114.length - 1;
-                (var17 >= 0); --var17) {
+                var17 >= 0; --var17) {
               HintMarker var27 = GlobalStatics_8.aClass96Array2114[var17];
-              if (var27 != null && (var27.anInt1355 != -1)) {
+              if (var27 != null && var27.anInt1355 != -1) {
                 int var21;
                 int var20;
-                if ((var27.anInt1360 == 1) && var27.anInt1359 >= 0
+                if (var27.anInt1360 == 1 && var27.anInt1359 >= 0
                   && GlobalStatics_8.npcs.length > var27.anInt1359) {
                   NPC var24 = GlobalStatics_8.npcs[var27.anInt1359];
                   if (var24 != null) {
@@ -299,20 +302,20 @@ public final class Player extends Mobile {
                 }
 
                 if (var27.anInt1360 == 2) {
-                  int var29 = 4 * (-GlobalStatics_10.anInt1716 + var27.anInt1356) + 2 - (
-                    GlobalStatics_9.localPlayer.anInt2819 / 32);
-                  var20 = 2 + (4 * (var27.anInt1347 - GlobalStatics_9.anInt1152)
-                    - GlobalStatics_9.localPlayer.anInt2829 / 32);
+                  int var29 = 4 * (-GlobalStatics_10.anInt1716 + var27.anInt1356) + 2 -
+                      GlobalStatics_9.localPlayer.anInt2819 / 32;
+                  var20 = 2 + 4 * (var27.anInt1347 - GlobalStatics_9.anInt1152)
+                      - GlobalStatics_9.localPlayer.anInt2829 / 32;
                   this.draw(null, var20, var15, var29, var6, var11, 2047, var1, var8, var5, var4,
                     var2, var27.anInt1355, var3, var7);
                 }
 
-                if ((var27.anInt1360 == 10) && var27.anInt1359 >= 0
+                if (var27.anInt1360 == 10 && var27.anInt1359 >= 0
                   && GlobalStatics_9.players.length > var27.anInt1359) {
                   Player var28 = GlobalStatics_9.players[var27.anInt1359];
                   if (var28 != null) {
                     var20 = -(GlobalStatics_9.localPlayer.anInt2819 / 32) + var28.anInt2819 / 32;
-                    var21 = var28.anInt2829 / 32 - (GlobalStatics_9.localPlayer.anInt2829 / 32);
+                    var21 = var28.anInt2829 / 32 - GlobalStatics_9.localPlayer.anInt2829 / 32;
                     this.draw(null, var21, var15, var20, var6, var11, 2047, var1, var8, var5, var4,
                       var2, var27.anInt1355, var3, var7);
                   }
@@ -324,7 +327,7 @@ public final class Player extends Mobile {
           this.method1971(var15, (byte) -103);
           this.method1969((byte) 110, var15, var1);
           var23 = null;
-          if (!this.aBoolean3968 && (this.anInt2842 != -1) && this.anInt2805 != -1) {
+          if (!this.aBoolean3968 && this.anInt2842 != -1 && this.anInt2805 != -1) {
             SpotAnimationConfig var26 = GlobalStatics_9.method898((byte) 42,
                 this.anInt2842);
             var23 = var26.method966(this.anInt2826, (byte) -30, this.anInt2805,
@@ -353,7 +356,7 @@ public final class Player extends Mobile {
               this.anObject2796 = null;
             }
 
-            if ((this.anInt2797 <= GlobalStatics_4.updateCycle)
+            if (this.anInt2797 <= GlobalStatics_4.updateCycle
               && this.anInt2778 > GlobalStatics_4.updateCycle) {
               if (this.anObject2796 instanceof GameObject) {
                 var25 = (AbstractModel) ((GameObject) this.anObject2796)
@@ -365,13 +368,13 @@ public final class Player extends Mobile {
               var25.method1897(this.anInt2782 - this.anInt2819, this.anInt2812
                       - this.anInt2831,
                   this.anInt2833 - this.anInt2829);
-              if ((this.anInt2806 == 512)) {
+              if (this.anInt2806 == 512) {
                 var25.method1900();
               } else {
-                if ((this.anInt2806 == 1024)) {
+                if (this.anInt2806 == 1024) {
                   var25.method1874();
                 } else {
-                  if ((this.anInt2806 == 1536)) {
+                  if (this.anInt2806 == 1536) {
                     var25.rotateQuarterY();
                   }
                 }

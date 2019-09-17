@@ -37,9 +37,9 @@ public final class SomethingLight {
     }
 
     int var23 = var1.color;
-    float var11 = (var1.anInt703 - var2);
-    float var12 = (var1.anInt697 - var3);
-    float var13 = (var1.anInt708 - var4);
+    float var11 = var1.anInt703 - var2;
+    float var12 = var1.anInt697 - var3;
+    float var13 = var1.anInt708 - var4;
     float var14 = (float) Math.sqrt(
         var11 * var11 + var12 * var12 + var13 * var13);
     float var15 = 1.0F / var14;

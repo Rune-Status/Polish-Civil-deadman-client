@@ -97,7 +97,7 @@ public final class DummyClass29 {
   }
 
   public static void method909(int var0, Widget var1) {
-    if ((GlobalStatics_9.anInt2535 == var1.anInt204)) {
+    if (GlobalStatics_9.anInt2535 == var1.anInt204) {
       GlobalStatics_9.aBooleanArray3674[var1.anInt292] = true;
     }
 
@@ -112,7 +112,7 @@ public final class DummyClass29 {
     if (var4 == 0) {
       var7 = GlobalStatics_9.method2174(var3, var2, var1);
     } else if (var4 != 1) {
-      if ((var4 == 2)) {
+      if (var4 == 2) {
         var7 = GlobalStatics_6.method557(var3, var2, var1);
       } else if (var4 == 3) {
         var7 = GLStatics.method104(var3, var2, var1);
@@ -132,7 +132,7 @@ public final class DummyClass29 {
       }
 
       int var18 = ((int) var7 & 4109484) >> 20;
-      if ((var7 != 0L)) {
+      if (var7 != 0L) {
         SceneNode var13 = null;
         SceneNode var14 = null;
         if (var4 == 0) {
@@ -142,7 +142,7 @@ public final class DummyClass29 {
             var14 = var15.sceneNode1;
           }
 
-          if ((var12.anInt1538 != 0)) {
+          if (var12.anInt1538 != 0) {
             var6.method1485(var18, var12.aBoolean1486, -104, var1, var19, var2);
           }
         } else if (var4 != 1) {
@@ -153,14 +153,14 @@ public final class DummyClass29 {
             }
 
             if (var12.anInt1538 != 0 && var12.anInt1480 + var2 < 104 &&
-                ((var12.anInt1480
-                    + var1) < 104) && var2 + var12.anInt1485 < 104
-                && ((var1 + var12.anInt1485) < 104)) {
+                var12.anInt1480
+                    + var1 < 104 && var2 + var12.anInt1485 < 104
+                && var1 + var12.anInt1485 < 104) {
               var6.method1502(20851, var2, var12.anInt1480, var12.aBoolean1486,
                   var18,
                   var12.anInt1485, var1);
             }
-          } else if ((var4 == 3)) {
+          } else if (var4 == 3) {
             SomethingSceneJ var22 = DummyClass13.method2193(var3, var2, var1);
             if (var22 != null) {
               var13 = var22.aClass140_320;
@@ -198,7 +198,7 @@ public final class DummyClass29 {
             }
           } else {
             if (var19 != 5) {
-              if ((var19 == 6)) {
+              if (var19 == 6) {
                 if (var13 instanceof GameObject) {
                   ((GameObject) var13).method1960(-1);
                 } else {
@@ -209,7 +209,7 @@ public final class DummyClass29 {
                       var2, var1,
                       var5);
                 }
-              } else if ((var19 == 7)) {
+              } else if (var19 == 7) {
                 if (var13 instanceof GameObject) {
                   ((GameObject) var13).method1960(-1);
                 } else {

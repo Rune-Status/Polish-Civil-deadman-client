@@ -16,7 +16,7 @@ public final class MouseRecorder implements Runnable {
     for (; this.aBoolean1015; GlobalStatics_10.sleep(50L)) {
         Object var1 = this.anObject1016;
         synchronized (var1) {
-          if ((this.anInt1018 < 500)) {
+          if (this.anInt1018 < 500) {
             this.anIntArray1020[this.anInt1018] = GlobalStatics_9.anInt1676;
             this.anIntArray1019[this.anInt1018] = GlobalStatics_0.anInt1709;
             ++this.anInt1018;

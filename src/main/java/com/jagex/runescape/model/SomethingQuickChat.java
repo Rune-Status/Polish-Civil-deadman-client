@@ -21,9 +21,10 @@ public final class SomethingQuickChat extends SubNode {
   public void method545(Buffer var1, int[] var2, boolean var3 ) {
     if (!var3) {
         if (this.anIntArray3566 != null) {
-          for (int var4 = 0; this.anIntArray3566.length > var4 && (var4 < var2.length); ++var4) {
+          for (int var4 = 0; this.anIntArray3566.length > var4 &&
+              var4 < var2.length; ++var4) {
             int var5 = GlobalStatics_8.anIntArray2113[this.method550(89, var4)];
-            if ((var5 > 0)) {
+            if (var5 > 0) {
               var1.method739(0, var5, var2[var4]);
             }
           }
@@ -66,17 +67,17 @@ public final class SomethingQuickChat extends SubNode {
       }
 
       return this.anIntArray3566 != null
-          && var3 >= 0 && (var3 <= this.anIntArray3566.length) ?
-        (this.anIntArrayArray3570[var3] != null && (var2 >= 0)
-          && (var2 <= this.anIntArrayArray3570[var3].length) ?
-            this.anIntArrayArray3570[var3][var2] :
-          -1) :
+          && var3 >= 0 && var3 <= this.anIntArray3566.length ?
+          this.anIntArrayArray3570[var3] != null && var2 >= 0
+            && var2 <= this.anIntArrayArray3570[var3].length ?
+              this.anIntArrayArray3570[var3][var2] :
+            -1 :
         -1;
   }
 
   public int method550(int var1, int var2 ) {
     if (this.anIntArray3566 != null
-          && (var2 >= 0) && var2 <= this.anIntArray3566.length) {
+          && var2 >= 0 && var2 <= this.anIntArray3566.length) {
         if (var1 <= 33) {
           GlobalStatics_9.aClass94_3578 = null;
         }
@@ -88,7 +89,7 @@ public final class SomethingQuickChat extends SubNode {
   }
 
   public int method552(boolean var1 ) {
-    return !var1 ? -22 : (this.anIntArray3566 != null ? this.anIntArray3566.length : 0);
+    return !var1 ? -22 : this.anIntArray3566 != null ? this.anIntArray3566.length : 0;
   }
 
   private void method553(Buffer var1, int var2, int var3) {

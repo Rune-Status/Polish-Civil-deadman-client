@@ -34,7 +34,7 @@ public final class CommonGL {
     int var14;
     int var15;
     GlRenderer.GL.glPushMatrix();
-    GlRenderer.GL.glTranslatef((-var0), (-var1), (-var2));
+    GlRenderer.GL.glTranslatef(-var0, -var1, -var2);
     if (var22) {
       CommonGL.method403();
       GLStatics.method551(0, -1, 3);
