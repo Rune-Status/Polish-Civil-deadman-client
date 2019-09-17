@@ -37,7 +37,7 @@ public final class GlRenderer {
   private static boolean viewportSetup;
   private static GLContext GL_CONTEXT;
   private static final float aFloat1801 = 0.09765625F;
-  private static int textureId = -1;
+  private static int TEXTURE = -1;
   private static boolean depthTestEnabled = true;
   private static int anInt1806;
   private static float[] PROJECTION_MATRIX = new float[16];
@@ -161,7 +161,7 @@ public final class GlRenderer {
   private static void method1829() {
     GlRenderer.viewportSetup = false;
     GlRenderer.GL.glDisable(GL.GL_TEXTURE_2D);
-    GlRenderer.textureId = -1;
+    GlRenderer.TEXTURE = -1;
     GlRenderer.GL.glTexEnvi(8960, 8704, 0x8570);
     GlRenderer.GL.glTexEnvi(8960, 0x8571, 8448);
     GlRenderer.anInt1793 = 0;
@@ -556,18 +556,18 @@ public final class GlRenderer {
   }
 
   public static void bindTexture(int var0) {
-    if (var0 != GlRenderer.textureId) {
+    if (var0 != GlRenderer.TEXTURE) {
       if (var0 == -1) {
         GlRenderer.GL.glDisable(GL.GL_TEXTURE_2D);
       } else {
-        if (GlRenderer.textureId == -1) {
+        if (GlRenderer.TEXTURE == -1) {
           GlRenderer.GL.glEnable(GL.GL_TEXTURE_2D);
         }
 
         GlRenderer.GL.glBindTexture(GL.GL_TEXTURE_2D, var0);
       }
 
-      GlRenderer.textureId = var0;
+      GlRenderer.TEXTURE = var0;
     }
   }
 

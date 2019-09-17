@@ -10,7 +10,7 @@ public final class GlIndexedColorSprite extends AbstractIndexedColorSprite {
   private int textureWidth;
   private int textureHeight;
   private int list = -1;
-  private boolean linear;
+  private int linear = 0;
   private int anInt2678;
   private int anInt2679;
 
@@ -70,11 +70,12 @@ public final class GlIndexedColorSprite extends AbstractIndexedColorSprite {
   }
 
   public void draw(int x, int y, int alpha) {
+
     GlRenderer.method1828();
     x += this.offsetX;
     y += this.offsetY;
     GlRenderer.bindTexture(this.texture);
-    this.initializeParameters(true);
+    this.initializeParameters(1);
     GlRenderer.GL.glColor4f(1.0F, 1.0F, 1.0F, alpha / 256.0F);
     GlRenderer.GL.glTranslatef(x, GlRenderer.viewHeight - y, 0.0F);
     GlRenderer.GL.glCallList(this.list);
@@ -82,20 +83,21 @@ public final class GlIndexedColorSprite extends AbstractIndexedColorSprite {
   }
 
   public void draw(int x, int y) {
+
     GlRenderer.method1822();
     x += this.offsetX;
     y += this.offsetY;
     GlRenderer.bindTexture(this.texture);
-    this.initializeParameters(true);
+    this.initializeParameters(1);
     GlRenderer.GL.glTranslatef(x, GlRenderer.viewHeight - y, 0.0F);
     GlRenderer.GL.glCallList(this.list);
     GlRenderer.GL.glLoadIdentity();
   }
 
-  private void initializeParameters(boolean linear) {
+  private void initializeParameters(int linear) {
     if (this.linear != linear) {
       this.linear = linear;
-      if (linear) {
+      if (linear == 2) {
         GlRenderer.GL.glTexParameteri(GL.GL_TEXTURE_2D, 10241, GL.GL_LINEAR);
         GlRenderer.GL.glTexParameteri(GL.GL_TEXTURE_2D, 10240, GL.GL_LINEAR);
       } else {
