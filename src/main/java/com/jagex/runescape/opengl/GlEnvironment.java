@@ -8,7 +8,7 @@ public final class GlEnvironment {
   private static int COLOR = -1;
   private static float diffuseIntensity = -1.0f;
   private static float secondaryIntensity = -1.0f;
-  private static float ambientIntensity;
+  public static float AMBIENT_INTENSITY;
   private static float[] DIFFUSE_LIGHT_1 = new float[4];
   private static int fogOffset = -1;
   private static int FOG_COLOR = -1;
@@ -32,11 +32,11 @@ public final class GlEnvironment {
       float diffuseIntensity,
       float secondaryIntensity) {
     if (GlEnvironment.COLOR != color
-        || GlEnvironment.ambientIntensity != ambientIntensity
+        || GlEnvironment.AMBIENT_INTENSITY != ambientIntensity
         || GlEnvironment.diffuseIntensity != diffuseIntensity
         || GlEnvironment.secondaryIntensity != secondaryIntensity) {
       GlEnvironment.COLOR = color;
-      GlEnvironment.ambientIntensity = ambientIntensity;
+      GlEnvironment.AMBIENT_INTENSITY = ambientIntensity;
       GlEnvironment.diffuseIntensity = diffuseIntensity;
       GlEnvironment.secondaryIntensity = secondaryIntensity;
       float red = (color >> 16 & 255) / 255.0F;
@@ -89,7 +89,8 @@ public final class GlEnvironment {
       }
       GlRenderer.GL.glFogf(GL2ES1.GL_FOG_START, fogStart);
       GlRenderer.GL.glFogf(GL2ES1.GL_FOG_END, fogEnd - 256);
-      GlRenderer.GL.glFogfv(GL2ES1.GL_FOG_COLOR, GlEnvironment.FOG_COLOR_RGB, 0);
+      GlRenderer.GL
+          .glFogfv(GL2ES1.GL_FOG_COLOR, GlEnvironment.FOG_COLOR_RGB, 0);
     }
   }
 
@@ -125,12 +126,11 @@ public final class GlEnvironment {
     GlEnvironment.method1513();
   }
 
-  public static void setFogColor(float[] var0) {
-    if (var0 == null) {
-      var0 = GlEnvironment.FOG_COLOR_RGB;
+  public static void setFogColor(float[] color) {
+    if (color == null) {
+      color = GlEnvironment.FOG_COLOR_RGB;
     }
-
-    GlRenderer.GL.glFogfv(2918, var0, 0);
+    GlRenderer.GL.glFogfv(GL2ES1.GL_FOG_COLOR, color, 0);
   }
 
   private static void method1513() {
@@ -140,9 +140,4 @@ public final class GlEnvironment {
     GlEnvironment.setSunPosition(-50.0f, -60.0f, -50.0f);
     GlEnvironment.setFogColor(GlEnvironment.defaultFogColor, 0);
   }
-
-  public static float method1514() {
-    return GlEnvironment.ambientIntensity;
-  }
-
 }
