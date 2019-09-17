@@ -40,40 +40,6 @@ public final class DummyClass30 {
             var5);
   }
 
-  public static Buffer method939() {
-    Buffer var1 = new Buffer(34);
-    var1.writeByte(11);
-    var1.writeByte(GlobalStatics_4.brightnessSetting);
-    var1.writeByte(GlobalStatics_7.aBoolean3665 ? 1 : 0);
-    var1.writeByte(GlobalStatics_2.aBoolean3604 ? 1 : 0);
-    var1.writeByte(GlobalStatics_9.aBoolean1905 ? 1 : 0);
-    var1.writeByte(GlobalStatics_9.aBoolean488 ? 1 : 0);
-    var1.writeByte(GlobalStatics_10.aBoolean236 ? 1 : 0);
-    var1.writeByte(GlobalStatics_9.aBoolean2623 ? 1 : 0);
-    var1.writeByte(GlobalStatics_9.aBoolean3275 ? 1 : 0);
-    var1.writeByte(GlobalStatics_9.aBoolean2910 ? 1 : 0);
-    var1.writeByte(GLStatics.anInt1137);
-    var1.writeByte(GLStatics.useBumpMaps ? 1 : 0);
-    var1.writeByte(GLStatics.aBoolean1685 ? 1 : 0);
-    var1.writeByte(DummyClass35.aBoolean661 ? 1 : 0);
-    var1.writeByte(GlobalStatics_9.RENDERING_SAMPLES);
-    var1.writeByte(GlobalStatics_1.aBoolean3184 ? 1 : 0);
-    var1.writeByte(GlobalStatics_7.anInt2453);
-    var1.writeByte(GlobalStatics_10.anInt120);
-    var1.writeByte(DummyClass28.anInt340);
-    var1.writeShort(GlobalStatics_3.anInt2378);
-    var1.writeShort(GlobalStatics_10.anInt3071);
-    var1.writeByte(DummyClass0.method1757());
-    var1.writeInt(GlobalStatics_0.anInt2148);
-    var1.writeByte(GlobalStatics_2.anInt2577);
-    var1.writeByte(GlobalStatics_0.SAFE_MODE ? 1 : 0);
-    var1.writeByte(GlobalStatics_2.aBoolean346 ? 1 : 0);
-    var1.writeByte(GlobalStatics_10.anInt2488);
-    var1.writeByte(GlobalStatics_7.aBoolean1080 ? 1 : 0);
-    var1.writeByte(DummyClass4.aBoolean3004 ? 1 : 0);
-    return var1;
-  }
-
   public static void method940(int var0, int var1) {
     if (var0 >= 101) {
       Mouse var2 = GlobalStatics_9.INSTANCE;

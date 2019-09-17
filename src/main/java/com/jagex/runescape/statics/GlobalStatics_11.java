@@ -43,6 +43,7 @@ import com.jagex.runescape.opengl.GLStatics;
 import com.jagex.runescape.opengl.GlRenderer;
 import com.jagex.runescape.opengl.Light;
 import com.jagex.runescape.opengl.MaterialShader5;
+import com.jagex.runescape.settings.SettingsStatics;
 import java.nio.charset.StandardCharsets;
 import java.util.Date;
 
@@ -3146,7 +3147,7 @@ public final class GlobalStatics_11 {
                                   l32 = 0;
                                 }
                                 GlobalStatics_2.anInt2577 = l32;
-                                DummyClass25
+                                SettingsStatics
                                     .writeSettings(DummyClass35.signLink);
                                 continue;
                               }
@@ -3536,19 +3537,19 @@ public final class GlobalStatics_11 {
                                       }
                                     }
                                     GlobalStatics_0.method746((byte) -29);
-                                    DummyClass25
+                                    SettingsStatics
                                         .writeSettings(DummyClass35.signLink);
                                     GlobalStatics_9.aBoolean2705 = false;
                                     continue;
                                   }
                                   if (j1 == 6002) {
-                                    GlobalStatics_9.method957(96,
+                                    GlobalStatics_9.method957(
                                         GlobalStatics_9.anIntArray2929[--k]
                                             == 1);
                                     GlobalStatics_9.method139(66);
                                     DummyClass51.method1417(101);
                                     GlobalStatics_0.method792(0x8c1111);
-                                    DummyClass25
+                                    SettingsStatics
                                         .writeSettings(DummyClass35.signLink);
                                     GlobalStatics_9.aBoolean2705 = false;
                                     continue;
@@ -3558,7 +3559,7 @@ public final class GlobalStatics_11 {
                                         GlobalStatics_9.anIntArray2929[--k]
                                             == 1;
                                     GlobalStatics_0.method792(0x8c1111);
-                                    DummyClass25
+                                    SettingsStatics
                                         .writeSettings(DummyClass35.signLink);
                                     GlobalStatics_9.aBoolean2705 = false;
                                     continue;
@@ -3568,7 +3569,7 @@ public final class GlobalStatics_11 {
                                         GlobalStatics_9.anIntArray2929[--k]
                                             == 1;
                                     DummyClass51.method1417(112);
-                                    DummyClass25
+                                    SettingsStatics
                                         .writeSettings(DummyClass35.signLink);
                                     GlobalStatics_9.aBoolean2705 = false;
                                     continue;
@@ -3581,7 +3582,7 @@ public final class GlobalStatics_11 {
                                         .method1616(
                                             !GlobalStatics_9.aBoolean488,
                                             -17830);
-                                    DummyClass25
+                                    SettingsStatics
                                         .writeSettings(DummyClass35.signLink);
                                     GlobalStatics_9.aBoolean2705 = false;
                                     continue;
@@ -3590,7 +3591,7 @@ public final class GlobalStatics_11 {
                                     GlobalStatics_10.aBoolean236 =
                                         GlobalStatics_9.anIntArray2929[--k]
                                             == 1;
-                                    DummyClass25
+                                    SettingsStatics
                                         .writeSettings(DummyClass35.signLink);
                                     GlobalStatics_9.aBoolean2705 = false;
                                     continue;
@@ -3599,7 +3600,7 @@ public final class GlobalStatics_11 {
                                     GlobalStatics_9.aBoolean2623 =
                                         GlobalStatics_9.anIntArray2929[--k]
                                             == 1;
-                                    DummyClass25
+                                    SettingsStatics
                                         .writeSettings(DummyClass35.signLink);
                                     GlobalStatics_9.aBoolean2705 = false;
                                     continue;
@@ -3608,7 +3609,7 @@ public final class GlobalStatics_11 {
                                     GlobalStatics_9.aBoolean3275 =
                                         GlobalStatics_9.anIntArray2929[--k]
                                             == 1;
-                                    DummyClass25
+                                    SettingsStatics
                                         .writeSettings(DummyClass35.signLink);
                                     GlobalStatics_9.aBoolean2705 = false;
                                     continue;
@@ -3617,7 +3618,7 @@ public final class GlobalStatics_11 {
                                     GlobalStatics_9.aBoolean2910 =
                                         GlobalStatics_9.anIntArray2929[--k]
                                             == 1;
-                                    DummyClass25
+                                    SettingsStatics
                                         .writeSettings(DummyClass35.signLink);
                                     GlobalStatics_9.aBoolean2705 = false;
                                     continue;
@@ -3628,7 +3629,7 @@ public final class GlobalStatics_11 {
                                       l34 = 0;
                                     }
                                     GLStatics.anInt1137 = l34;
-                                    DummyClass25
+                                    SettingsStatics
                                         .writeSettings(DummyClass35.signLink);
                                     GlobalStatics_9.aBoolean2705 = false;
                                     continue;
@@ -3662,7 +3663,7 @@ public final class GlobalStatics_11 {
                                       }
                                     }
                                     DummyClass51.method1417(108);
-                                    DummyClass25
+                                    SettingsStatics
                                         .writeSettings(DummyClass35.signLink);
                                     GlobalStatics_9.aBoolean2705 = false;
                                     continue;
@@ -3674,7 +3675,7 @@ public final class GlobalStatics_11 {
                                     if (GlRenderer.useOpenGlRenderer) {
                                       DummyClass51.method1417(109);
                                     }
-                                    DummyClass25
+                                    SettingsStatics
                                         .writeSettings(DummyClass35.signLink);
                                     GlobalStatics_9.aBoolean2705 = false;
                                     continue;
@@ -3686,7 +3687,7 @@ public final class GlobalStatics_11 {
                                     if (GlRenderer.useOpenGlRenderer) {
                                       GlobalStatics_10.method236((byte) 64);
                                     }
-                                    DummyClass25
+                                    SettingsStatics
                                         .writeSettings(DummyClass35.signLink);
                                     GlobalStatics_9.aBoolean2705 = false;
                                     continue;
@@ -3710,7 +3711,7 @@ public final class GlobalStatics_11 {
                                         GlobalStatics_9.anIntArray2929[--k]
                                             == 1;
                                     GlobalStatics_8.method34(-32589);
-                                    DummyClass25
+                                    SettingsStatics
                                         .writeSettings(DummyClass35.signLink);
                                     GlobalStatics_9.aBoolean2705 = false;
                                     continue;
@@ -3724,7 +3725,7 @@ public final class GlobalStatics_11 {
                                       j35 = 127;
                                     }
                                     GlobalStatics_7.anInt2453 = j35;
-                                    DummyClass25
+                                    SettingsStatics
                                         .writeSettings(DummyClass35.signLink);
                                     GlobalStatics_9.aBoolean2705 = false;
                                     continue;
@@ -3755,7 +3756,7 @@ public final class GlobalStatics_11 {
                                       }
                                       GlobalStatics_10.anInt120 = k35;
                                     }
-                                    DummyClass25
+                                    SettingsStatics
                                         .writeSettings(DummyClass35.signLink);
                                     GlobalStatics_9.aBoolean2705 = false;
                                     continue;
@@ -3769,7 +3770,7 @@ public final class GlobalStatics_11 {
                                       l35 = 127;
                                     }
                                     DummyClass28.anInt340 = l35;
-                                    DummyClass25
+                                    SettingsStatics
                                         .writeSettings(DummyClass35.signLink);
                                     GlobalStatics_9.aBoolean2705 = false;
                                     continue;
@@ -3795,7 +3796,7 @@ public final class GlobalStatics_11 {
                                       i36 = 0;
                                     }
                                     DummyClass0.method1758(i36);
-                                    DummyClass25
+                                    SettingsStatics
                                         .writeSettings(DummyClass35.signLink);
                                     GlobalStatics_9.aBoolean2705 = false;
                                     GlobalStatics_9.anIntArray2929[k++] =
@@ -3808,7 +3809,7 @@ public final class GlobalStatics_11 {
                                       value = 0;
                                     }
                                     GlobalStatics_9.RENDERING_SAMPLES = value;
-                                    DummyClass25
+                                    SettingsStatics
                                         .writeSettings(DummyClass35.signLink);
                                     continue;
                                   }
@@ -3817,7 +3818,7 @@ public final class GlobalStatics_11 {
                                   }
                                   DummyClass4.aBoolean3004 =
                                       GlobalStatics_9.anIntArray2929[--k] != 0;
-                                  DummyClass25
+                                  SettingsStatics
                                       .writeSettings(DummyClass35.signLink);
                                   continue;
                                 }
@@ -4078,7 +4079,7 @@ public final class GlobalStatics_11 {
                                       }
                                       if (j1 == 6504) {
                                         GlobalStatics_0.anInt2148 = GlobalStatics_9.anIntArray2929[--k];
-                                        DummyClass25.writeSettings(
+                                        SettingsStatics.writeSettings(
                                             DummyClass35.signLink);
                                         continue;
                                       }
@@ -4132,7 +4133,7 @@ public final class GlobalStatics_11 {
                                       GlobalStatics_2.aBoolean346 =
                                           GlobalStatics_9.anIntArray2929[--k]
                                               == 1;
-                                      DummyClass25
+                                      SettingsStatics
                                           .writeSettings(DummyClass35.signLink);
                                       continue;
                                     }

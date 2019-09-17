@@ -113,12 +113,8 @@ public class SignLink implements Runnable {
     return this.aDisplay1208 != null;
   }
 
-  public final SignLinkRequest getSettings(String var1, int var2) {
-    if (var2 != 12) {
-      this.aClass122_1207 = null;
-    }
-
-    return this.method1435(12, 0, var1, 0);
+  public final SignLinkRequest getSettings(String name) {
+    return this.method1435(12, 0, name, 0);
   }
 
   public final SignLinkRequest method1434(int[] var1, int var2, int var3,
@@ -409,14 +405,14 @@ public class SignLink implements Runnable {
 
     if (this.cacheDataFile != null) {
       try {
-        this.cacheDataFile.close(var1 ^ 1);
+        this.cacheDataFile.close();
       } catch (IOException var7) {
       }
     }
 
     if (this.tableIndexFile != null) {
       try {
-        this.tableIndexFile.close(1);
+        this.tableIndexFile.close();
       } catch (IOException var6) {
       }
     }
@@ -425,7 +421,7 @@ public class SignLink implements Runnable {
       for (int var2 = 0; this.cacheIndexFiles.length > var2; ++var2) {
         if (this.cacheIndexFiles[var2] != null) {
           try {
-            this.cacheIndexFiles[var2].close(var1 ^ 1);
+            this.cacheIndexFiles[var2].close();
           } catch (IOException var5) {
           }
         }
@@ -434,7 +430,7 @@ public class SignLink implements Runnable {
 
     if (this.aClass122_1207 != null) {
       try {
-        this.aClass122_1207.close(var1 + 1);
+        this.aClass122_1207.close();
       } catch (IOException var4) {
       }
     }

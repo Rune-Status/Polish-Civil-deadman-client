@@ -24,7 +24,7 @@ public final class BufferedFile {
 
   public BufferedFile(FileOnDisk var1, int var2, int var3 ) throws IOException {
     this.aClass122_573 = var1;
-      this.aLong568 = this.aLong563 = var1.length(-1);
+      this.aLong568 = this.aLong563 = var1.length();
       this.aByteArray572 = new byte[var3];
       this.aByteArray564 = new byte[var2];
       this.aLong569 = 0L;
@@ -34,11 +34,11 @@ public final class BufferedFile {
     int var2 = 56 % ((45 - var1) / 44);
       if (this.aLong571 != -1L) {
         if (this.aLong571 != this.aLong570) {
-          this.aClass122_573.method1737((byte) -10, this.aLong571);
+          this.aClass122_573.seek(this.aLong571);
           this.aLong570 = this.aLong571;
         }
 
-        this.aClass122_573.method1738(127, this.aByteArray572, this.anInt566, 0);
+        this.aClass122_573.writeBytes(this.aByteArray572, 0, this.anInt566);
         long var3 = -1L;
         if (this.aLong576 <= this.aLong571
           && this.aLong576 + this.anInt575 > this.aLong571) {
@@ -89,7 +89,7 @@ public final class BufferedFile {
         GlobalStatics_6.method974(true);
       }
 
-      return this.aClass122_573.method1742(-83);
+      return this.aClass122_573.file();
   }
 
   public void method978(int var1, byte[] var2,int var3, int var4 )
@@ -128,10 +128,10 @@ public final class BufferedFile {
         }
 
         if (this.aByteArray564.length < var3) {
-          this.aClass122_573.method1737((byte) -10, this.aLong569);
+          this.aClass122_573.seek(this.aLong569);
 
           for (this.aLong570 = this.aLong569; var3 > 0; this.aLong569 += var9) {
-            var9 = this.aClass122_573.method1739(var1, 0, var3, var2);
+            var9 = this.aClass122_573.readBytes(var1, 0, var3, var2);
             if (var9 == -1) {
               break;
             }
@@ -207,7 +207,7 @@ public final class BufferedFile {
 
   public void close(boolean var1 ) throws IOException {
     this.method975((byte) -75);
-      this.aClass122_573.close(1);
+      this.aClass122_573.close();
       if (var1) {
         this.aLong569 = 91L;
       }
@@ -220,7 +220,7 @@ public final class BufferedFile {
       }
 
       if (this.aLong570 != this.aLong569) {
-        this.aClass122_573.method1737((byte) -10, this.aLong569);
+        this.aClass122_573.seek(this.aLong569);
         this.aLong570 = this.aLong569;
       }
 
@@ -233,7 +233,7 @@ public final class BufferedFile {
           var2 = 200000000;
         }
 
-        var3 = this.aClass122_573.method1739(this.anInt575, 0, var2,
+        var3 = this.aClass122_573.readBytes(this.anInt575, 0, var2,
             this.aByteArray564);
         if (var3 == -1) {
           break;
@@ -280,11 +280,11 @@ public final class BufferedFile {
 
         if (this.aByteArray572.length < var4) {
           if (this.aLong569 != this.aLong570) {
-            this.aClass122_573.method1737((byte) -10, this.aLong569);
+            this.aClass122_573.seek(this.aLong569);
             this.aLong570 = this.aLong569;
           }
 
-          this.aClass122_573.method1738(111, var1, var4, var2);
+          this.aClass122_573.writeBytes(var1, var2, var4);
           long var12 = -1L;
           if (this.aLong576 <= this.aLong569
             && this.anInt575 + this.aLong576 > this.aLong569) {

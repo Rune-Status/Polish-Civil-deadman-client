@@ -101,6 +101,7 @@ import com.jagex.runescape.opengl.MaterialShader;
 import com.jagex.runescape.opengl.MaterialShader5;
 import com.jagex.runescape.opengl.SomethingGl0;
 import com.jagex.runescape.opengl.Texture;
+import com.jagex.runescape.settings.SettingsStatics;
 import com.jagex.runescape.sprite.AbstractIndexedColorSprite;
 import com.jagex.runescape.sprite.SoftwareIndexedColorSprite;
 import com.jagex.runescape.sprite.SoftwareIndexedColorSpriteStatics;
@@ -3554,16 +3555,13 @@ public class GlobalStatics_9 {
     }
   }
 
-  public static void method957(int var0, boolean var1) {
-    if (var0 == 96) {
-      GlobalStatics_7.aBoolean3665 = var1;
-      GlobalStatics_6.aBoolean742 = !GlobalStatics_9.method1986(42);
-    }
+  public static void method957(boolean var1) {
+    GlobalStatics_7.aBoolean3665 = var1;
+    GlobalStatics_6.aBoolean742 = !GlobalStatics_9.method1986(42);
   }
 
-  public static void method958(byte var0) {
+  public static void method958() {
     if (GlobalStatics_9.aBoolean1837) {
-      int var2 = 88 / ((57 - var0) / 59);
       Widget var1 =
           GlobalStatics_2
               .method638((byte) -19, GlobalStatics_9.anInt872,
@@ -3584,7 +3582,7 @@ public class GlobalStatics_9 {
   public static void method959(int var0) {
     GlobalStatics_7.aClass93_2450.method1524(3);
     if (var0 != 0) {
-      GlobalStatics_9.method957(121, true);
+      GlobalStatics_9.method957(true);
     }
   }
 
@@ -5530,7 +5528,7 @@ public class GlobalStatics_9 {
       if (GlobalStatics_10.fullScreenFrame != null) {
         GlobalStatics_10.anInt3071 = var6;
         GlobalStatics_3.anInt2378 = var5;
-        DummyClass25.writeSettings(DummyClass35.signLink);
+        SettingsStatics.writeSettings(DummyClass35.signLink);
       }
     }
 
@@ -12408,7 +12406,8 @@ public class GlobalStatics_9 {
 
     ++GlobalStatics_8.anInt2;
     GlobalStatics_9.secureBuffer.writeShort(GlobalStatics_9.viewHeight);
-    GlobalStatics_9.secureBuffer.writeByte(GlobalStatics_9.GL_RENDERING_SAMPLES);
+    GlobalStatics_9.secureBuffer
+        .writeByte(GlobalStatics_9.GL_RENDERING_SAMPLES);
   }
 
   public static void method205(FileUnpacker var0, int var1, FileUnpacker var2,

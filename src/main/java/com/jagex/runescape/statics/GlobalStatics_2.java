@@ -29,6 +29,7 @@ import com.jagex.runescape.opengl.GlDirectColorSprite;
 import com.jagex.runescape.opengl.GlEnvironment;
 import com.jagex.runescape.opengl.GlRenderer;
 import com.jagex.runescape.opengl.SomethingShadows;
+import com.jagex.runescape.settings.SettingsStatics;
 import com.jagex.runescape.sprite.SoftwareIndexedColorSprite;
 import java.io.IOException;
 import java.util.Date;
@@ -265,7 +266,7 @@ public class GlobalStatics_2 {
 
   public static void loadSettings(SignLink var0, int var1) {
     GlobalStatics_4.brightnessSetting = 3;
-    GlobalStatics_9.method957(96, true);
+    GlobalStatics_9.method957(true);
     GlobalStatics_2.aBoolean3604 = true;
     GlobalStatics_1.aBoolean3184 = true;
     GLStatics.aBoolean1685 = true;
@@ -301,7 +302,7 @@ public class GlobalStatics_2 {
     GlobalStatics_2.anInt2577 = 0;
 
     try {
-      SignLinkRequest var3 = var0.getSettings("runescape", 12);
+      SignLinkRequest var3 = var0.getSettings("runescape");
 
       while (var3.status == 0) {
         GlobalStatics_10.sleep(1L);
@@ -309,24 +310,24 @@ public class GlobalStatics_2 {
 
       if (var3.status == 1) {
         var2 = (FileOnDisk) var3.result;
-        byte[] var4 = new byte[(int) var2.length(-1)];
+        byte[] var4 = new byte[(int) var2.length()];
 
         int var6;
         for (int var5 = 0; var5 < var4.length; var5 += var6) {
-          var6 = var2.method1739(var5, var1, var4.length - var5, var4);
+          var6 = var2.readBytes(var5, var1, var4.length - var5, var4);
           if (var6 == -1) {
             throw new IOException("EOF");
           }
         }
 
-        GlobalStatics_6.parseSettings(new Buffer(var4), -1);
+        SettingsStatics.parseSettings(new Buffer(var4), -1);
       }
     } catch (Exception var8) {
     }
 
     try {
       if (var2 != null) {
-        var2.close(1);
+        var2.close();
       }
     } catch (Exception var7) {
     }

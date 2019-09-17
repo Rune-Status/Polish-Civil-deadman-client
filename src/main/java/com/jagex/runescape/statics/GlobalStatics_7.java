@@ -45,6 +45,7 @@ import com.jagex.runescape.opengl.GlTexture2d;
 import com.jagex.runescape.opengl.GlUtils;
 import com.jagex.runescape.opengl.MaterialShader5;
 import com.jagex.runescape.opengl.SomethingGl0;
+import com.jagex.runescape.settings.SettingsStatics;
 import com.jagex.runescape.sprite.SoftwareIndexedColorSprite;
 import java.awt.Frame;
 import java.nio.charset.StandardCharsets;
@@ -2486,7 +2487,7 @@ public class GlobalStatics_7 {
 
       if (command.method1558(GlobalStatics_9.COMMAND_SET_PARTICLES, 0)) {
         DummyClass0.method1758(command.substring(15).toInteger());
-        DummyClass25.writeSettings(DummyClass35.signLink);
+        SettingsStatics.writeSettings(DummyClass35.signLink);
         GlobalStatics_9.aBoolean2705 = false;
       }
 

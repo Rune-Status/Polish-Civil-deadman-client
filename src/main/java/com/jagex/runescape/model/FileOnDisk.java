@@ -7,93 +7,70 @@ import java.io.RandomAccessFile;
 
 public final class FileOnDisk {
 
-  private long aLong1649;
-  private File aFile1650;
-  private RandomAccessFile aRandomAccessFile1651;
-  private long aLong1652;
+  private File file;
+  private RandomAccessFile randomAccessFile;
+  private final long size;
+  private long position;
 
-
-  public FileOnDisk(File var1, String var2, long var3) throws IOException {
-    if (~var3 == 0L) {
-      var3 = Long.MAX_VALUE;
+  public FileOnDisk(File file, String name, long size) throws IOException {
+    if (~size == 0L) {
+      size = Long.MAX_VALUE;
     }
 
-    if (var3 <= var1.length()) {
-      var1.delete();
+    if (size <= file.length()) {
+      file.delete();
     }
 
-    this.aRandomAccessFile1651 = new RandomAccessFile(var1, var2);
-    this.aFile1650 = var1;
-    this.aLong1649 = var3;
-    this.aLong1652 = 0L;
-    int var5 = this.aRandomAccessFile1651.read();
-    if (var5 != -1 && !var2.equals("r")) {
-      this.aRandomAccessFile1651.seek(0L);
-      this.aRandomAccessFile1651.write(var5);
+    this.randomAccessFile = new RandomAccessFile(file, name);
+    this.file = file;
+    this.size = size;
+    this.position = 0L;
+    int read = this.randomAccessFile.read();
+    if (read != -1 && !name.equals("r")) {
+      this.randomAccessFile.seek(0L);
+      this.randomAccessFile.write(read);
     }
-
-    this.aRandomAccessFile1651.seek(0L);
+    this.randomAccessFile.seek(0L);
   }
 
-  public void method1737(byte var1, long var2) throws IOException {
-    this.aRandomAccessFile1651.seek(var2);
-    this.aLong1652 = var2;
-    if (var1 != -10) {
-      this.method1742(49);
-    }
-
+  public void seek(long position) throws IOException {
+    this.randomAccessFile.seek(position);
+    this.position = position;
   }
 
-  protected void finalize() throws Throwable {
-    if (this.aRandomAccessFile1651 != null) {
-      System.out.println("Warning! fileondisk " + this.aFile1650
-        + " not closed correctly using close(). Auto-closing instead. ");
-      this.close(1);
-    }
-
-  }
-
-  public void method1738(int var1, byte[] var2, int var3, int var4) throws IOException {
-    if (this.aLong1652 + var3 > this.aLong1649) {
-      this.aRandomAccessFile1651.seek(1L + this.aLong1649);
-      this.aRandomAccessFile1651.write(1);
+  public void writeBytes(byte[] data, int offset, int length)
+      throws IOException {
+    if (this.position + length > this.size) {
+      this.randomAccessFile.seek(1L + this.size);
+      this.randomAccessFile.write(1);
       throw new EOFException();
     } else {
-      this.aRandomAccessFile1651.write(var2, var4, var3);
-      this.aLong1652 += var3;
-      if (var1 < 105) {
-        this.aLong1649 = -26L;
-      }
-
+      this.randomAccessFile.write(data, offset, length);
+      this.position += length;
     }
   }
 
-  public int method1739(int var1, int var2, int var3, byte[] var4) throws IOException {
-    int var5 = this.aRandomAccessFile1651.read(var4, var1, var3);
-    if (var5 > var2) {
-      this.aLong1652 += var5;
+  public int readBytes(int offset, int var2, int length, byte[] buffer)
+      throws IOException {
+    int read = this.randomAccessFile.read(buffer, offset, length);
+    if (read > var2) {
+      this.position += read;
     }
-
-    return var5;
+    return read;
   }
 
-  public void close(int var1) throws IOException {
-    if (var1 != 1) {
-      this.aFile1650 = null;
+  public void close() throws IOException {
+    if (this.randomAccessFile != null) {
+      this.randomAccessFile.close();
+      this.randomAccessFile = null;
     }
-
-    if (this.aRandomAccessFile1651 != null) {
-      this.aRandomAccessFile1651.close();
-      this.aRandomAccessFile1651 = null;
-    }
-
   }
 
-  public long length(int var1) throws IOException {
-    return var1 == -1 ? this.aRandomAccessFile1651.length() : 36L;
+  public long length() throws IOException {
+    return this.randomAccessFile.length();
   }
 
-  public File method1742(int var1) {
-    return var1 > -8 ? null : this.aFile1650;
+  public File file() {
+    return this.file;
   }
 }

@@ -91,30 +91,4 @@ public final class DummyClass25 {
     GlobalStatics_9.method1396(-1);
   }
 
-  public static void writeSettings(SignLink var0) {
-    FileOnDisk var2 = null;
-
-    try {
-      SignLinkRequest var3 = var0.getSettings("runescape", 12);
-
-      while (var3.status == 0) {
-        GlobalStatics_10.sleep(1L);
-      }
-
-      if (var3.status == 1) {
-        var2 = (FileOnDisk) var3.result;
-        Buffer var4 = DummyClass30.method939();
-        var2.method1738(116, var4.bytes, var4.position, 0);
-      }
-    } catch (Exception var6) {
-    }
-
-    try {
-      if (var2 != null) {
-        var2.close(1);
-      }
-    } catch (Exception var5) {
-    }
-  }
-
 }

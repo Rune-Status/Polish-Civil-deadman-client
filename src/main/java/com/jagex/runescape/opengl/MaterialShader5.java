@@ -254,7 +254,7 @@ public final class MaterialShader5 implements MaterialShader {
               GlobalStatics_10.aClass94_1724, var11, (short) 11,
               GlobalStatics_9.aClass94_3621, var12);
         } else {
-          GlobalStatics_9.method958((byte) -87);
+          GlobalStatics_9.method958();
         }
       } else {
         ++GlobalStatics_2.anInt2571;

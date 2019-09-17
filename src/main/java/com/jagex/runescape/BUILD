@@ -6,6 +6,7 @@ java_library(
         "*.java",
         "model/*.java",
         "statics/*.java",
+        "settings/*.java",
         "opengl/**/*.java",
     ]),
     deps = [

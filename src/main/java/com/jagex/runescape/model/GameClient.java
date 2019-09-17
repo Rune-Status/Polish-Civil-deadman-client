@@ -18,6 +18,7 @@ import com.jagex.runescape.opengl.SomethingGl0;
 import com.jagex.runescape.opengl.SomethingShadows;
 import com.jagex.runescape.opengl.Texture;
 import com.jagex.runescape.opengl.WaterShader;
+import com.jagex.runescape.settings.SettingsStatics;
 import com.jagex.runescape.statics.BZipDecompressor;
 import com.jagex.runescape.statics.DummyClass1;
 import com.jagex.runescape.statics.DummyClass10;
@@ -805,7 +806,7 @@ public final class GameClient extends GameStub {
                           }
 
                           GlobalStatics_0.SAFE_MODE = true;
-                          DummyClass25.writeSettings(DummyClass35.signLink);
+                          SettingsStatics.writeSettings(DummyClass35.signLink);
                           GlobalStatics_9
                               .setWindowMode(false, GlobalStatics_2.anInt2577,
                                   -1, -1);
@@ -1634,7 +1635,7 @@ public final class GameClient extends GameStub {
           && DummyClass15.state == 10
           && GlobalStatics_9.anInt3655 != -1) {
         GlobalStatics_0.SAFE_MODE = false;
-        DummyClass25.writeSettings(DummyClass35.signLink);
+        SettingsStatics.writeSettings(DummyClass35.signLink);
       }
 
     }

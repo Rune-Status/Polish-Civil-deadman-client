@@ -1814,7 +1814,7 @@ public class GlobalStatics_8 {
       if (var4 == 32) {
         var13 = GlobalStatics_2.method638((byte) -19, var3, var2);
         if (var13 != null) {
-          GlobalStatics_9.method958((byte) -126);
+          GlobalStatics_9.method958();
           WidgetAccess var16 = GlobalStatics_8.method44(var13);
           GlobalStatics_10
               .method2074(var3, var2, var16.method101(-120), var16.anInt2202,
@@ -2212,7 +2212,7 @@ public class GlobalStatics_8 {
         }
 
         if (var4 == 22) {
-          GlobalStatics_9.method958((byte) -86);
+          GlobalStatics_9.method958();
           var13 = GlobalStatics_7.getWidget((byte) 123, var3);
           GlTexture2d.anInt3764 = var3;
           DummyClass31.anInt1473 = var2;
@@ -2429,7 +2429,7 @@ public class GlobalStatics_8 {
             }
 
             if (GlobalStatics_9.aBoolean1837) {
-              GlobalStatics_9.method958((byte) -36);
+              GlobalStatics_9.method958();
             }
 
             if (GlobalStatics_5.aClass11_1933 != null
