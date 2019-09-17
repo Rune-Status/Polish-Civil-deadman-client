@@ -12,7 +12,7 @@ public class GlDirectColorSprite extends AbstractDirectColorSprite {
   public int textureId = -1;
   public int anInt4079;
   private int anInt4076 = -1;
-  private int anInt4078;
+  private boolean linear;
   private int anInt4080;
 
   public GlDirectColorSprite(int var1, int var2, int var3, int var4, int var5,
@@ -39,17 +39,16 @@ public class GlDirectColorSprite extends AbstractDirectColorSprite {
     this.method651();
   }
 
-  private void initializeParameters(int var1) {
-    if (this.anInt4078 != var1) {
-      this.anInt4078 = var1;
-      if (var1 == 2) {
-        GlRenderer.GL.glTexParameteri(GL.GL_TEXTURE_2D, 10241, 9729);
-        GlRenderer.GL.glTexParameteri(GL.GL_TEXTURE_2D, 10240, 9729);
+  private void initializeParameters(boolean linear) {
+    if (this.linear != linear) {
+      this.linear = linear;
+      if (linear) {
+        GlRenderer.GL.glTexParameteri(GL.GL_TEXTURE_2D, 10241, GL.GL_LINEAR);
+        GlRenderer.GL.glTexParameteri(GL.GL_TEXTURE_2D, 10240, GL.GL_LINEAR);
       } else {
-        GlRenderer.GL.glTexParameteri(GL.GL_TEXTURE_2D, 10241, 9728);
-        GlRenderer.GL.glTexParameteri(GL.GL_TEXTURE_2D, 10240, 9728);
+        GlRenderer.GL.glTexParameteri(GL.GL_TEXTURE_2D, 10241, GL.GL_NEAREST);
+        GlRenderer.GL.glTexParameteri(GL.GL_TEXTURE_2D, 10240, GL.GL_NEAREST);
       }
-
     }
   }
 
@@ -57,9 +56,9 @@ public class GlDirectColorSprite extends AbstractDirectColorSprite {
     if (var3 != null) {
       GlRenderer.method1822();
       GlRenderer.bindTexture(var3.textureId);
-      var3.initializeParameters(1);
+      var3.initializeParameters(false);
       GlRenderer.bindTexture(this.textureId);
-      this.initializeParameters(1);
+      this.initializeParameters(false);
       GlRenderer.GL.glActiveTexture(0x84c1);
       GlRenderer.GL.glEnable(GL.GL_TEXTURE_2D);
       GlRenderer.GL.glBindTexture(GL.GL_TEXTURE_2D, var3.textureId);
@@ -104,7 +103,7 @@ public class GlDirectColorSprite extends AbstractDirectColorSprite {
       int var5) {
     GlRenderer.method1828();
     GlRenderer.bindTexture(this.textureId);
-    this.initializeParameters(1);
+    this.initializeParameters(false);
     float var7 = (float) this.anInt3707 / this.anInt4075;
     float var8 = (float) this.anInt3696 / this.anInt4079;
     var7 *= var4;
@@ -135,9 +134,9 @@ public class GlDirectColorSprite extends AbstractDirectColorSprite {
     if (sprite != null) {
       GlRenderer.method1822();
       GlRenderer.bindTexture(sprite.textureId);
-      sprite.initializeParameters(1);
+      sprite.initializeParameters(false);
       GlRenderer.bindTexture(this.textureId);
-      this.initializeParameters(1);
+      this.initializeParameters(false);
       GlRenderer.GL.glActiveTexture(0x84c1);
       GlRenderer.GL.glEnable(GL.GL_TEXTURE_2D);
       GlRenderer.GL.glBindTexture(GL.GL_TEXTURE_2D, sprite.textureId);
@@ -190,7 +189,7 @@ public class GlDirectColorSprite extends AbstractDirectColorSprite {
       int var6) {
     GlRenderer.method1822();
     GlRenderer.bindTexture(this.textureId);
-    this.initializeParameters(2);
+    this.initializeParameters(true);
     var1 -= this.anInt3701 << 4;
     var2 -= this.anInt3698 << 4;
     GlRenderer.GL
@@ -211,7 +210,7 @@ public class GlDirectColorSprite extends AbstractDirectColorSprite {
     var1 += this.anInt3701;
     var2 += this.anInt3698;
     GlRenderer.bindTexture(this.textureId);
-    this.initializeParameters(1);
+    this.initializeParameters(false);
     GlRenderer.GL.glTranslatef(var1, GlRenderer.viewHeight - var2, 0.0F);
     GlRenderer.GL.glCallList(this.anInt4076);
     GlRenderer.GL.glLoadIdentity();
@@ -221,7 +220,7 @@ public class GlDirectColorSprite extends AbstractDirectColorSprite {
       int var6) {
     GlRenderer.method1822();
     GlRenderer.bindTexture(this.textureId);
-    this.initializeParameters(1);
+    this.initializeParameters(false);
     var1 -= this.anInt3701 << 4;
     var2 -= this.anInt3698 << 4;
     GlRenderer.GL
@@ -242,7 +241,7 @@ public class GlDirectColorSprite extends AbstractDirectColorSprite {
     var1 += this.anInt3701;
     var2 += this.anInt3698;
     GlRenderer.bindTexture(this.textureId);
-    this.initializeParameters(1);
+    this.initializeParameters(false);
     GlRenderer.GL.glColor4f(1.0F, 1.0F, 1.0F, var3 / 256.0F);
     GlRenderer.GL.glTranslatef(var1, GlRenderer.viewHeight - var2, 0.0F);
     GlRenderer.GL.glCallList(this.anInt4076);
@@ -282,7 +281,7 @@ public class GlDirectColorSprite extends AbstractDirectColorSprite {
       }
 
       GlRenderer.bindTexture(this.textureId);
-      this.initializeParameters(2);
+      this.initializeParameters(true);
       float var14 = var1;
       float var15 = var14 + var3;
       float var16 = GlRenderer.viewHeight - var2;
@@ -307,7 +306,7 @@ public class GlDirectColorSprite extends AbstractDirectColorSprite {
     var1 += this.anInt3701;
     var2 += this.anInt3698;
     GlRenderer.bindTexture(this.textureId);
-    this.initializeParameters(1);
+    this.initializeParameters(false);
     GlRenderer.GL.glTranslatef(var1, GlRenderer.viewHeight - var2, 0.0F);
     float var4 = (float) this.anInt3707 / this.anInt4075;
     float var5 = (float) this.anInt3696 / this.anInt4079;
@@ -358,7 +357,7 @@ public class GlDirectColorSprite extends AbstractDirectColorSprite {
       }
 
       GlRenderer.bindTexture(this.textureId);
-      this.initializeParameters(1);
+      this.initializeParameters(false);
       float var15 = var1;
       float var16 = var15 + var3;
       float var17 = GlRenderer.viewHeight - var2;
@@ -385,7 +384,7 @@ public class GlDirectColorSprite extends AbstractDirectColorSprite {
     var1 += this.anInt3701;
     var2 += this.anInt3698;
     GlRenderer.bindTexture(this.textureId);
-    this.initializeParameters(1);
+    this.initializeParameters(false);
     GlRenderer.GL.glTranslatef(var1, GlRenderer.viewHeight - var2, 0.0F);
     GlRenderer.GL.glCallList(this.anInt4076);
     GlRenderer.GL.glLoadIdentity();
@@ -409,7 +408,7 @@ public class GlDirectColorSprite extends AbstractDirectColorSprite {
   public final void method649(int var1, int var2, int var3, int var4) {
     GlRenderer.method1822();
     GlRenderer.bindTexture(this.textureId);
-    this.initializeParameters(1);
+    this.initializeParameters(false);
     float var6 = (float) this.anInt3707 / this.anInt4075;
     float var7 = (float) this.anInt3696 / this.anInt4079;
     var6 *= var3;
@@ -464,7 +463,8 @@ public class GlDirectColorSprite extends AbstractDirectColorSprite {
 
     GlRenderer.bindTexture(this.textureId);
     GlRenderer.GL
-        .glTexImage2D(GL.GL_TEXTURE_2D, 0, GL.GL_RGBA, this.anInt4075, this.anInt4079, 0, GL.GL_RGBA,
+        .glTexImage2D(GL.GL_TEXTURE_2D, 0, GL.GL_RGBA, this.anInt4075,
+            this.anInt4079, 0, GL.GL_RGBA,
             GL.GL_UNSIGNED_BYTE, var9);
     DummyClass33.texture2dMemory += var9.limit() - this.anInt4074;
     this.anInt4074 = var9.limit();

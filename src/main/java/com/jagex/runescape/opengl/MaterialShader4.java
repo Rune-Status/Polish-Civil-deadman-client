@@ -26,8 +26,8 @@ public final class MaterialShader4 implements MaterialShader {
     GlRenderer.GL.glGenTextures(1, var3, 0);
     GlRenderer.GL.glBindTexture(3552, var3[0]);
     GlRenderer.GL.glTexImage1D(3552, 0, 6406, 2, 0, 6406, GL.GL_UNSIGNED_BYTE, ByteBuffer.wrap(var1));
-    GlRenderer.GL.glTexParameteri(3552, 10241, 9729);
-    GlRenderer.GL.glTexParameteri(3552, 10240, 9729);
+    GlRenderer.GL.glTexParameteri(3552, 10241, GL.GL_LINEAR);
+    GlRenderer.GL.glTexParameteri(3552, 10240, GL.GL_LINEAR);
     GlRenderer.GL.glTexParameteri(3552, 10242, 0x812f);
     this.anInt2180 = var3[0];
   }

@@ -13,20 +13,20 @@ public final class SkyboxMaterialShader implements MaterialShader {
     if (GlRenderer.cubemapSupport && GlRenderer.maxTextureUnits >= 2) {
       this.initializeTextures();
       GlRenderer.GL.glBindTexture(0x8513, this.textureIds[0]);
-      GlRenderer.GL.glTexParameteri(0x8513, 10241, 9729);
-      GlRenderer.GL.glTexParameteri(0x8513, 10240, 9729);
+      GlRenderer.GL.glTexParameteri(0x8513, 10241, GL.GL_LINEAR);
+      GlRenderer.GL.glTexParameteri(0x8513, 10240, GL.GL_LINEAR);
       GlRenderer.GL.glTexParameteri(0x8513, 0x8072, 0x812f);
       GlRenderer.GL.glTexParameteri(0x8513, 10242, 0x812f);
       GlRenderer.GL.glTexParameteri(0x8513, 10243, 0x812f);
       GlRenderer.GL.glBindTexture(0x8513, this.textureIds[1]);
-      GlRenderer.GL.glTexParameteri(0x8513, 10241, 9729);
-      GlRenderer.GL.glTexParameteri(0x8513, 10240, 9729);
+      GlRenderer.GL.glTexParameteri(0x8513, 10241, GL.GL_LINEAR);
+      GlRenderer.GL.glTexParameteri(0x8513, 10240, GL.GL_LINEAR);
       GlRenderer.GL.glTexParameteri(0x8513, 0x8072, 0x812f);
       GlRenderer.GL.glTexParameteri(0x8513, 10242, 0x812f);
       GlRenderer.GL.glTexParameteri(0x8513, 10243, 0x812f);
       GlRenderer.GL.glBindTexture(0x8513, this.textureIds[2]);
-      GlRenderer.GL.glTexParameteri(0x8513, 10241, 9729);
-      GlRenderer.GL.glTexParameteri(0x8513, 10240, 9729);
+      GlRenderer.GL.glTexParameteri(0x8513, 10241, GL.GL_LINEAR);
+      GlRenderer.GL.glTexParameteri(0x8513, 10240, GL.GL_LINEAR);
       GlRenderer.GL.glTexParameteri(0x8513, 0x8072, 0x812f);
       GlRenderer.GL.glTexParameteri(0x8513, 10242, 0x812f);
       GlRenderer.GL.glTexParameteri(0x8513, 10243, 0x812f);

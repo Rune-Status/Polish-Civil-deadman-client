@@ -43,8 +43,8 @@ public final class GlTexture2d extends SubNode {
               (byte) -1};
       ByteBuffer var6 = ByteBuffer.wrap(var5);
       GlRenderer.GL.glTexImage2D(GL.GL_TEXTURE_2D, 0, GL.GL_RGBA, 1, 1, 0, GL.GL_RGBA, GL.GL_UNSIGNED_BYTE, var6);
-      GlRenderer.GL.glTexParameteri(GL.GL_TEXTURE_2D, 10241, 9729);
-      GlRenderer.GL.glTexParameteri(GL.GL_TEXTURE_2D, 10240, 9729);
+      GlRenderer.GL.glTexParameteri(GL.GL_TEXTURE_2D, 10241, GL.GL_LINEAR);
+      GlRenderer.GL.glTexParameteri(GL.GL_TEXTURE_2D, 10240, GL.GL_LINEAR);
       DummyClass33.textureMemory += var6.limit() - this.anInt3767;
       this.anInt3767 = var6.limit();
   }

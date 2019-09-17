@@ -27,8 +27,8 @@ public final class MaterialShader3 implements MaterialShader {
       GlRenderer.GL.glBindTexture(3552, var1[0]);
       GlRenderer.GL
           .glTexImage1D(3552, 0, 6406, 8, 0, 6406, GL.GL_UNSIGNED_BYTE, ByteBuffer.wrap(var2));
-      GlRenderer.GL.glTexParameteri(3552, 10241, 9729);
-      GlRenderer.GL.glTexParameteri(3552, 10240, 9729);
+      GlRenderer.GL.glTexParameteri(3552, 10241, GL.GL_LINEAR);
+      GlRenderer.GL.glTexParameteri(3552, 10240, GL.GL_LINEAR);
       GlRenderer.GL.glTexParameteri(3552, 10242, 0x812f);
       this.anInt2192 = var1[0];
       MaterialShader3.aBoolean2191 =

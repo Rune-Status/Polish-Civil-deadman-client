@@ -226,7 +226,7 @@ public final class Texture extends SubNode {
                 buffer
             );
             GlRenderer.GL.glTexParameteri(GL.GL_TEXTURE_2D, 10241, 9987);
-            GlRenderer.GL.glTexParameteri(GL.GL_TEXTURE_2D, 10240, 9729);
+            GlRenderer.GL.glTexParameteri(GL.GL_TEXTURE_2D, 10240, GL.GL_LINEAR);
             DummyClass33.textureMemory +=
                 4 * buffer.limit() / 3 - this.anInt3796;
             this.anInt3796 = buffer.limit() * 4 / 3;
@@ -243,7 +243,7 @@ public final class Texture extends SubNode {
                 size >>= 1;
                 if (size == 0) {
                   GlRenderer.GL.glTexParameteri(GL.GL_TEXTURE_2D, 10241, 9987);
-                  GlRenderer.GL.glTexParameteri(GL.GL_TEXTURE_2D, 10240, 9729);
+                  GlRenderer.GL.glTexParameteri(GL.GL_TEXTURE_2D, 10240, GL.GL_LINEAR);
                   DummyClass33.textureMemory +=
                       buffer.limit() * 4 / 3 - this.anInt3796;
                   this.anInt3796 = 4 * buffer.limit() / 3;
@@ -261,8 +261,8 @@ public final class Texture extends SubNode {
                       GL.GL_RGBA,
                       GL.GL_UNSIGNED_BYTE,
                       buffer);
-              GlRenderer.GL.glTexParameteri(GL.GL_TEXTURE_2D, 10241, 9729);
-              GlRenderer.GL.glTexParameteri(GL.GL_TEXTURE_2D, 10240, 9729);
+              GlRenderer.GL.glTexParameteri(GL.GL_TEXTURE_2D, 10241, GL.GL_LINEAR);
+              GlRenderer.GL.glTexParameteri(GL.GL_TEXTURE_2D, 10240, GL.GL_LINEAR);
               DummyClass33.textureMemory += buffer.limit() - this.anInt3796;
               this.anInt3796 = buffer.limit();
             }

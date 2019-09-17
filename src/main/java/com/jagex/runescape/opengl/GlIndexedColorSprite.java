@@ -6,13 +6,13 @@ import java.nio.ByteBuffer;
 
 public final class GlIndexedColorSprite extends AbstractIndexedColorSprite {
 
-  private int textureId = -1;
-  private int listId = -1;
-  private int anInt2677;
+  private int texture = -1;
+  private int textureWidth;
+  private int textureHeight;
+  private int list = -1;
+  private boolean linear;
   private int anInt2678;
   private int anInt2679;
-  private int textureHeight;
-  private int textureWidth;
 
   public GlIndexedColorSprite(int var1, int var2, int var3, int var4, int width,
       int height,
@@ -35,8 +35,8 @@ public final class GlIndexedColorSprite extends AbstractIndexedColorSprite {
     int destOff = 0;
     int indexOff = 0;
 
-    for (int var6 = 0; var6 < this.height; ++var6) {
-      for (int var7 = 0; var7 < this.width; ++var7) {
+    for (int y = 0; y < this.height; ++y) {
+      for (int x = 0; x < this.width; ++x) {
         byte i = index[indexOff++];
         if (i == 0) {
           destOff += 4;
@@ -53,16 +53,17 @@ public final class GlIndexedColorSprite extends AbstractIndexedColorSprite {
     }
 
     ByteBuffer buffer = ByteBuffer.wrap(dest);
-    if (this.textureId == -1) {
+    if (this.texture == -1) {
       int[] var12 = new int[1];
       GlRenderer.GL.glGenTextures(1, var12, 0);
-      this.textureId = var12[0];
+      this.texture = var12[0];
       this.anInt2679 = DummyClass33.anInt582;
     }
 
-    GlRenderer.bindTexture(this.textureId);
+    GlRenderer.bindTexture(this.texture);
     GlRenderer.GL
-        .glTexImage2D(GL.GL_TEXTURE_2D, 0, GL.GL_RGBA, this.textureWidth, this.textureHeight, 0,
+        .glTexImage2D(GL.GL_TEXTURE_2D, 0, GL.GL_RGBA, this.textureWidth,
+            this.textureHeight, 0,
             GL.GL_RGBA, GL.GL_UNSIGNED_BYTE, buffer);
     DummyClass33.texture2dMemory += buffer.limit() - this.anInt2678;
     this.anInt2678 = buffer.limit();
@@ -72,11 +73,11 @@ public final class GlIndexedColorSprite extends AbstractIndexedColorSprite {
     GlRenderer.method1828();
     x += this.offsetX;
     y += this.offsetY;
-    GlRenderer.bindTexture(this.textureId);
-    this.initializeParameters(1);
+    GlRenderer.bindTexture(this.texture);
+    this.initializeParameters(true);
     GlRenderer.GL.glColor4f(1.0F, 1.0F, 1.0F, alpha / 256.0F);
     GlRenderer.GL.glTranslatef(x, GlRenderer.viewHeight - y, 0.0F);
-    GlRenderer.GL.glCallList(this.listId);
+    GlRenderer.GL.glCallList(this.list);
     GlRenderer.GL.glLoadIdentity();
   }
 
@@ -84,37 +85,36 @@ public final class GlIndexedColorSprite extends AbstractIndexedColorSprite {
     GlRenderer.method1822();
     x += this.offsetX;
     y += this.offsetY;
-    GlRenderer.bindTexture(this.textureId);
-    this.initializeParameters(1);
+    GlRenderer.bindTexture(this.texture);
+    this.initializeParameters(true);
     GlRenderer.GL.glTranslatef(x, GlRenderer.viewHeight - y, 0.0F);
-    GlRenderer.GL.glCallList(this.listId);
+    GlRenderer.GL.glCallList(this.list);
     GlRenderer.GL.glLoadIdentity();
   }
 
-  private void initializeParameters(int var1) {
-    if (this.anInt2677 != var1) {
-      this.anInt2677 = var1;
-      if (var1 == 2) {
-        GlRenderer.GL.glTexParameteri(GL.GL_TEXTURE_2D, 10241, 9729);
-        GlRenderer.GL.glTexParameteri(GL.GL_TEXTURE_2D, 10240, 9729);
+  private void initializeParameters(boolean linear) {
+    if (this.linear != linear) {
+      this.linear = linear;
+      if (linear) {
+        GlRenderer.GL.glTexParameteri(GL.GL_TEXTURE_2D, 10241, GL.GL_LINEAR);
+        GlRenderer.GL.glTexParameteri(GL.GL_TEXTURE_2D, 10240, GL.GL_LINEAR);
       } else {
-        GlRenderer.GL.glTexParameteri(GL.GL_TEXTURE_2D, 10241, 9728);
-        GlRenderer.GL.glTexParameteri(GL.GL_TEXTURE_2D, 10240, 9728);
+        GlRenderer.GL.glTexParameteri(GL.GL_TEXTURE_2D, 10241, GL.GL_NEAREST);
+        GlRenderer.GL.glTexParameteri(GL.GL_TEXTURE_2D, 10240, GL.GL_NEAREST);
       }
-
     }
   }
 
   protected void finalize() throws Throwable {
-    if (this.textureId != -1) {
-      DummyClass33.method991(this.textureId, this.anInt2678, this.anInt2679);
-      this.textureId = -1;
+    if (this.texture != -1) {
+      DummyClass33.method991(this.texture, this.anInt2678, this.anInt2679);
+      this.texture = -1;
       this.anInt2678 = 0;
     }
 
-    if (this.listId != -1) {
-      DummyClass33.method986(this.listId, this.anInt2679);
-      this.listId = -1;
+    if (this.list != -1) {
+      DummyClass33.method986(this.list, this.anInt2679);
+      this.list = -1;
     }
 
     super.finalize();
@@ -123,12 +123,12 @@ public final class GlIndexedColorSprite extends AbstractIndexedColorSprite {
   private void initializeList() {
     float u = (float) this.width / this.textureWidth;
     float v = (float) this.height / this.textureHeight;
-    if (this.listId == -1) {
-      this.listId = GlRenderer.GL.glGenLists(1);
+    if (this.list == -1) {
+      this.list = GlRenderer.GL.glGenLists(1);
       this.anInt2679 = DummyClass33.anInt582;
     }
 
-    GlRenderer.GL.glNewList(this.listId, 4864);
+    GlRenderer.GL.glNewList(this.list, 4864);
     GlRenderer.GL.glBegin(6);
     GlRenderer.GL.glTexCoord2f(u, 0.0F);
     GlRenderer.GL.glVertex2f(this.width, 0.0F);

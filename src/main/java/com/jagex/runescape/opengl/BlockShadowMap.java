@@ -22,8 +22,8 @@ public final class BlockShadowMap {
     this.textureId = var2[0];
     DummyClass33.textureMemory += 16384;
     GlRenderer.bindTexture(this.textureId);
-    GlRenderer.GL.glTexParameteri(GL.GL_TEXTURE_2D, 10241, 9729);
-    GlRenderer.GL.glTexParameteri(GL.GL_TEXTURE_2D, 10240, 9729);
+    GlRenderer.GL.glTexParameteri(GL.GL_TEXTURE_2D, 10241, GL.GL_LINEAR);
+    GlRenderer.GL.glTexParameteri(GL.GL_TEXTURE_2D, 10240, GL.GL_LINEAR);
     GlRenderer.GL.glTexParameteri(GL.GL_TEXTURE_2D, 10242, 0x812f);
     GlRenderer.GL.glTexParameteri(GL.GL_TEXTURE_2D, 10243, 0x812f);
   }

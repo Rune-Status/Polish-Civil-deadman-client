@@ -856,9 +856,9 @@ public class GlobalStatics_7 {
             }
           }
         } else {
-          lightPosX = (int) GlEnvironment.diffuseLight0[0];
-          lightPosY = (int) GlEnvironment.diffuseLight0[1];
-          lightPosZ = (int) GlEnvironment.diffuseLight0[2];
+          lightPosX = (int) GlEnvironment.DIFFUSE_LIGHT_0[0];
+          lightPosY = (int) GlEnvironment.DIFFUSE_LIGHT_0[1];
+          lightPosZ = (int) GlEnvironment.DIFFUSE_LIGHT_0[2];
           lightMagnitude = (int) Math.sqrt(
               lightPosY * lightPosY + lightPosX * lightPosX + lightPosZ
                   * lightPosZ);

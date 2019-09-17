@@ -483,7 +483,7 @@ public final class DummyClass46 {
       GlRenderer.GL.glTexEnvi(8960, 0x8590, 768);
       GlRenderer.GL.glBlendFunc(770, 771);
       GlRenderer.GL.glDepthMask(true);
-      GlRenderer.GL.glFogfv(2918, GlEnvironment.fogColorRgb, 0);
+      GlRenderer.GL.glFogfv(2918, GlEnvironment.FOG_COLOR_RGB, 0);
       GlRenderer.GL.glEnableClientState(0x8078);
       GlRenderer.method1846();
     }

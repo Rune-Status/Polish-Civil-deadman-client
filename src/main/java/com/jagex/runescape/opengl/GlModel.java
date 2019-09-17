@@ -2754,9 +2754,9 @@ public final class GlModel extends AbstractModel {
             GlModel.indicesBuffer.writeInt(var8);
           }
         } else {
-          var7 = (int) GlEnvironment.diffuseLight0[0];
-          var8 = (int) GlEnvironment.diffuseLight0[1];
-          var9 = (int) GlEnvironment.diffuseLight0[2];
+          var7 = (int) GlEnvironment.DIFFUSE_LIGHT_0[0];
+          var8 = (int) GlEnvironment.DIFFUSE_LIGHT_0[1];
+          var9 = (int) GlEnvironment.DIFFUSE_LIGHT_0[2];
           var10 = (int) Math.sqrt(var7 * var7 + var8 * var8 + var9 * var9);
           var11 = (int) (this.aShort3849 * 1.3F);
           var12 = this.aShort3819 * var10 >> 8;
