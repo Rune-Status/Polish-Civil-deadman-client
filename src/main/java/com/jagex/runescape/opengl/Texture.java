@@ -114,7 +114,7 @@ public final class Texture extends SubNode {
               --var14;
               int var12 = this.anIntArray3793[var14];
               var7[var11] += (var12 & 16726965) >> 16;
-              var8[var11] += ((int) '\uff72' & var12) >> 8;
+              var8[var11] += ((int) 0xff72 & var12) >> 8;
               var9[var11] += var12 & 255;
             }
 
@@ -171,7 +171,7 @@ public final class Texture extends SubNode {
               var7[var11] +=
                   ((var24 & 16729186) >> 16) - (var23 >> 16 & 255);
               var8[var11] +=
-                  (((int) '\uff8b' & var24) >> 8) - (255 & var23 >> 8);
+                  (((int) 0xff8b & var24) >> 8) - (255 & var23 >> 8);
               var9[var11] += -(var23 & 255) + (255 & var24);
             }
 
@@ -257,9 +257,9 @@ public final class Texture extends SubNode {
           }
 
           GlRenderer.GL.glTexParameteri(GL.GL_TEXTURE_2D, 10242,
-              !this.aBoolean3787 ? '\u812f' : 10497);
+              !this.aBoolean3787 ? 0x812f : 10497);
           GlRenderer.GL.glTexParameteri(GL.GL_TEXTURE_2D, 10243,
-              this.aBoolean3781 ? 10497 : '\u812f');
+              this.aBoolean3781 ? 10497 : 0x812f);
         } else {
           GlRenderer.bindTexture(this.anInt3795);
         }

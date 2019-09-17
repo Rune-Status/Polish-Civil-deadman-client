@@ -15,21 +15,21 @@ public final class SkyboxMaterialShader implements MaterialShader {
       GlRenderer.GL.glBindTexture(0x8513, this.textureIds[0]);
       GlRenderer.GL.glTexParameteri(0x8513, 10241, 9729);
       GlRenderer.GL.glTexParameteri(0x8513, 10240, 9729);
-      GlRenderer.GL.glTexParameteri(0x8513, 0x8072, '\u812f');
-      GlRenderer.GL.glTexParameteri(0x8513, 10242, '\u812f');
-      GlRenderer.GL.glTexParameteri(0x8513, 10243, '\u812f');
+      GlRenderer.GL.glTexParameteri(0x8513, 0x8072, 0x812f);
+      GlRenderer.GL.glTexParameteri(0x8513, 10242, 0x812f);
+      GlRenderer.GL.glTexParameteri(0x8513, 10243, 0x812f);
       GlRenderer.GL.glBindTexture(0x8513, this.textureIds[1]);
       GlRenderer.GL.glTexParameteri(0x8513, 10241, 9729);
       GlRenderer.GL.glTexParameteri(0x8513, 10240, 9729);
-      GlRenderer.GL.glTexParameteri(0x8513, 0x8072, '\u812f');
-      GlRenderer.GL.glTexParameteri(0x8513, 10242, '\u812f');
-      GlRenderer.GL.glTexParameteri(0x8513, 10243, '\u812f');
+      GlRenderer.GL.glTexParameteri(0x8513, 0x8072, 0x812f);
+      GlRenderer.GL.glTexParameteri(0x8513, 10242, 0x812f);
+      GlRenderer.GL.glTexParameteri(0x8513, 10243, 0x812f);
       GlRenderer.GL.glBindTexture(0x8513, this.textureIds[2]);
       GlRenderer.GL.glTexParameteri(0x8513, 10241, 9729);
       GlRenderer.GL.glTexParameteri(0x8513, 10240, 9729);
-      GlRenderer.GL.glTexParameteri(0x8513, 0x8072, '\u812f');
-      GlRenderer.GL.glTexParameteri(0x8513, 10242, '\u812f');
-      GlRenderer.GL.glTexParameteri(0x8513, 10243, '\u812f');
+      GlRenderer.GL.glTexParameteri(0x8513, 0x8072, 0x812f);
+      GlRenderer.GL.glTexParameteri(0x8513, 10242, 0x812f);
+      GlRenderer.GL.glTexParameteri(0x8513, 10243, 0x812f);
       this.insufficientTextureUnits = GlRenderer.maxTextureUnits < 3;
     }
 
@@ -40,7 +40,7 @@ public final class SkyboxMaterialShader implements MaterialShader {
     this.listId = GlRenderer.GL.glGenLists(2);
     GlRenderer.GL.glNewList(this.listId, 4864);
     if (this.textureIds != null) {
-      GlRenderer.GL.glActiveTexture('\u84c1');
+      GlRenderer.GL.glActiveTexture(0x84c1);
       GlRenderer.GL.glTexGeni(8192, 9472, 0x8511);
       GlRenderer.GL.glTexGeni(8193, 9472, 0x8511);
       GlRenderer.GL.glTexGeni(8194, 9472, 0x8511);
@@ -61,7 +61,7 @@ public final class SkyboxMaterialShader implements MaterialShader {
         GlRenderer.GL.glTexEnvi(8960, 0x8571, 7681);
         GlRenderer.GL.glTexEnvi(8960, 0x8580, 0x8578);
         GlRenderer.GL.glTexEnvi(8960, 0x8572, 8448);
-        GlRenderer.GL.glActiveTexture('\u84c2');
+        GlRenderer.GL.glActiveTexture(0x84c2);
         GlRenderer.GL.glTexEnvi(8960, 8704, 0x8570);
         GlRenderer.GL.glTexEnvi(8960, 0x8571, 260);
         GlRenderer.GL.glTexEnvi(8960, 0x8580, 0x8578);
@@ -73,7 +73,7 @@ public final class SkyboxMaterialShader implements MaterialShader {
         GlRenderer.GL.glEnable(GL.GL_TEXTURE_2D);
       }
 
-      GlRenderer.GL.glActiveTexture('\u84c0');
+      GlRenderer.GL.glActiveTexture(0x84c0);
     } else {
       GlRenderer.GL.glTexEnvi(8960, 0x8588, 0x8577);
     }
@@ -81,7 +81,7 @@ public final class SkyboxMaterialShader implements MaterialShader {
     GlRenderer.GL.glEndList();
     GlRenderer.GL.glNewList(this.listId + 1, 4864);
     if (this.textureIds != null) {
-      GlRenderer.GL.glActiveTexture('\u84c1');
+      GlRenderer.GL.glActiveTexture(0x84c1);
       GlRenderer.GL.glDisable(3168);
       GlRenderer.GL.glDisable(3169);
       GlRenderer.GL.glDisable(3170);
@@ -97,7 +97,7 @@ public final class SkyboxMaterialShader implements MaterialShader {
       } else {
         GlRenderer.GL.glTexEnvi(8960, 0x8571, 8448);
         GlRenderer.GL.glTexEnvi(8960, 0x8580, 5890);
-        GlRenderer.GL.glActiveTexture('\u84c2');
+        GlRenderer.GL.glActiveTexture(0x84c2);
         GlRenderer.GL.glTexEnvi(8960, 8704, 8448);
         GlRenderer.GL.glTexEnvi(8960, 0x8571, 8448);
         GlRenderer.GL.glTexEnvi(8960, 0x8580, 5890);
@@ -107,7 +107,7 @@ public final class SkyboxMaterialShader implements MaterialShader {
         GlRenderer.GL.glDisable(GL.GL_TEXTURE_2D);
       }
 
-      GlRenderer.GL.glActiveTexture('\u84c0');
+      GlRenderer.GL.glActiveTexture(0x84c0);
     } else {
       GlRenderer.GL.glTexEnvi(8960, 0x8588, 5890);
     }
@@ -136,9 +136,9 @@ public final class SkyboxMaterialShader implements MaterialShader {
 
   public void set(int tex) {
     if (GLStatics.useBumpMaps && this.textureIds != null) {
-      GlRenderer.GL.glActiveTexture('\u84c1');
+      GlRenderer.GL.glActiveTexture(0x84c1);
       GlRenderer.GL.glBindTexture(0x8513, this.textureIds[tex - 1]);
-      GlRenderer.GL.glActiveTexture('\u84c0');
+      GlRenderer.GL.glActiveTexture(0x84c0);
     }
 
   }

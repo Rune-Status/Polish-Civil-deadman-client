@@ -84,12 +84,12 @@ public final class SomethingGl {
     if (SomethingGl.aBoolean1227) {
       int[] var1 = new int[1];
       GlRenderer.GL.glGenTextures(1, var1, 0);
-      GlRenderer.GL.glBindTexture('\u806f', var1[0]);
+      GlRenderer.GL.glBindTexture(0x806f, var1[0]);
       SomethingGl.aByteBuffer1226.position(0);
-      GlRenderer.GL.glTexImage3D('\u806f', 0, 6410, 64, 64, 64, 0, 6410, 5121,
+      GlRenderer.GL.glTexImage3D(0x806f, 0, 6410, 64, 64, 64, 0, 6410, 5121,
           SomethingGl.aByteBuffer1226);
-      GlRenderer.GL.glTexParameteri('\u806f', 10241, 9729);
-      GlRenderer.GL.glTexParameteri('\u806f', 10240, 9729);
+      GlRenderer.GL.glTexParameteri(0x806f, 10241, 9729);
+      GlRenderer.GL.glTexParameteri(0x806f, 10240, 9729);
       SomethingGl.anInt1228 = var1[0];
       DummyClass33.textureMemory += SomethingGl.aByteBuffer1226.limit() * 2;
     } else {
@@ -114,12 +114,12 @@ public final class SomethingGl {
     if (SomethingGl.aBoolean1227) {
       int[] var1 = new int[1];
       GlRenderer.GL.glGenTextures(1, var1, 0);
-      GlRenderer.GL.glBindTexture('\u806f', var1[0]);
+      GlRenderer.GL.glBindTexture(0x806f, var1[0]);
       SomethingGl.aByteBuffer1225.position(0);
-      GlRenderer.GL.glTexImage3D('\u806f', 0, 6410, 64, 64, 64, 0, 6410, 5121,
+      GlRenderer.GL.glTexImage3D(0x806f, 0, 6410, 64, 64, 64, 0, 6410, 5121,
           SomethingGl.aByteBuffer1225);
-      GlRenderer.GL.glTexParameteri('\u806f', 10241, 9729);
-      GlRenderer.GL.glTexParameteri('\u806f', 10240, 9729);
+      GlRenderer.GL.glTexParameteri(0x806f, 10241, 9729);
+      GlRenderer.GL.glTexParameteri(0x806f, 10240, 9729);
       SomethingGl.anInt1229 = var1[0];
       DummyClass33.textureMemory += SomethingGl.aByteBuffer1225.limit() * 2;
     } else {

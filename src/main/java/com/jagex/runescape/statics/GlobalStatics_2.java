@@ -98,12 +98,12 @@ public class GlobalStatics_2 {
   public static GameString aClass94_43 = GlobalStatics_2.aClass94_44;
   public static String aString597 =
     "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!\"£$%^&*()-_=+[{]};:\'@#~,<.>/?\\| "
-      + '\u00c4' + '\u00cb' + '\u00cf' + '\u00d6' + '\u00dc' + '\u00e4' + '\u00eb'
-      + '\u00ef' + '\u00f6' + '\u00fc' + '\u00ff' + '\u00df' + '\u00c1' + '\u00c0' + '\u00c9'
-      + '\u00c8' + '\u00cd' + '\u00cc' + '\u00d3' + '\u00d2' + '\u00da' + '\u00d9' + '\u00e1'
-      + '\u00e0' + '\u00e9' + '\u00e8' + '\u00ed' + '\u00ec' + '\u00f3' + '\u00f2' + '\u00fa'
-      + '\u00f9' + '\u00c2' + '\u00ca' + '\u00ce' + '\u00d4' + '\u00db' + '\u00e2' + '\u00ea'
-      + '\u00ee' + '\u00f4' + '\u00fb' + '\u00c6' + '\u00e6';
+      + 0x00c4 + 0x00cb + 0x00cf + 0x00d6 + 0x00dc + 0x00e4 + 0x00eb
+      + 0x00ef + 0x00f6 + 0x00fc + 0x00ff + 0x00df + 0x00c1 + 0x00c0 + 0x00c9
+      + 0x00c8 + 0x00cd + 0x00cc + 0x00d3 + 0x00d2 + 0x00da + 0x00d9 + 0x00e1
+      + 0x00e0 + 0x00e9 + 0x00e8 + 0x00ed + 0x00ec + 0x00f3 + 0x00f2 + 0x00fa
+      + 0x00f9 + 0x00c2 + 0x00ca + 0x00ce + 0x00d4 + 0x00db + 0x00e2 + 0x00ea
+      + 0x00ee + 0x00f4 + 0x00fb + 0x00c6 + 0x00e6;
   public static final int anInt598 = GlobalStatics_2.aString597.length();
   public static int[] anIntArray599 = new int[256];
 
@@ -716,7 +716,7 @@ public class GlobalStatics_2 {
                 var24 = 127;
               }
 
-              int var25 = var24 + (896 & var23) + (var23 + var2 & '\ufc00');
+              int var25 = var24 + (896 & var23) + (var23 + var2 & 0xfc00);
               var22[(4032 & var19 << 6) + (63 & var12)] =
                   GLStatics.hslTable[GlobalStatics_6
                       .repackHSL(96, true, var25)];

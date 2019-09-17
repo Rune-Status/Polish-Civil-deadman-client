@@ -787,7 +787,7 @@ public final class GlobalStatics_0 {
         if (var5.anInt2098 < 0) {
           if (var6 >= 0) {
             var7 = GLStatics.hslTable[GlobalStatics_0.method729((byte) -74,
-                GLStatics.textureCache.method15(var6, '\uffff'), 96)];
+                GLStatics.textureCache.method15(var6, 0xffff), 96)];
           } else if (var5.anInt2103 == -1) {
             var7 = -1;
           } else {
@@ -799,7 +799,7 @@ public final class GlobalStatics_0 {
               var9 = 127;
             }
 
-            var10 = var9 + (896 & var8) + ('\ufc00' & var8 + var2);
+            var10 = var9 + (896 & var8) + (0xfc00 & var8 + var2);
             var7 = GLStatics.hslTable[GlobalStatics_0
                 .method729((byte) -127, var10, 96)];
           }
@@ -812,7 +812,7 @@ public final class GlobalStatics_0 {
             var9 = 127;
           }
 
-          var10 = (896 & var8) + ('\ufc00' & var2 + var8) + var9;
+          var10 = (896 & var8) + (0xfc00 & var2 + var8) + var9;
           var7 = GLStatics.hslTable[GlobalStatics_0
               .method729((byte) -63, var10, 96)];
         }
@@ -962,7 +962,7 @@ public final class GlobalStatics_0 {
         }
 
         var15 = SoftwareIndexedColorSpriteStatics.anIntArray1100;
-        var16 = 4 * (-(var3 * 512) + '\uce00') + var1 * 4 + 24624;
+        var16 = 4 * (-(var3 * 512) + 0xce00) + var1 * 4 + 24624;
         if (var11 == 0 || var11 == 2) {
           if (var10 == 0) {
             var15[var16] = var14;
@@ -1315,7 +1315,7 @@ public final class GlobalStatics_0 {
         var2 = 126;
       }
 
-      return (var1 & '\uff80') + var2;
+      return (var1 & 0xff80) + var2;
     }
   }
 

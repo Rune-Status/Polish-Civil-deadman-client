@@ -280,8 +280,8 @@ public class SignLink implements Runnable {
                     Frame var5 = new Frame("Jagex Full Screen");
                     var1.result = var5;
                     var5.setResizable(false);
-                    this.aDisplay1208.method918(-56, var1.anInt980 & '\uffff',
-                        var1.anInt980 >> 16, '\uffff' & var1.anInt979, var5,
+                    this.aDisplay1208.method918(-56, var1.anInt980 & 0xffff,
+                        var1.anInt980 >> 16, 0xffff & var1.anInt979, var5,
                         var1.anInt979 >>> 16);
                   } else if (var2 != 7) {
                     if (var2 == 10) {

@@ -28,7 +28,7 @@ public final class MaterialShader3 implements MaterialShader {
           .glTexImage1D(3552, 0, 6406, 8, 0, 6406, 5121, ByteBuffer.wrap(var2));
       GlRenderer.GL.glTexParameteri(3552, 10241, 9729);
       GlRenderer.GL.glTexParameteri(3552, 10240, 9729);
-      GlRenderer.GL.glTexParameteri(3552, 10242, '\u812f');
+      GlRenderer.GL.glTexParameteri(3552, 10242, 0x812f);
       this.anInt2192 = var1[0];
       MaterialShader3.aBoolean2191 =
           GlRenderer.maxTextureUnits > 2 && GlRenderer.texture3dSupport;
@@ -40,9 +40,9 @@ public final class MaterialShader3 implements MaterialShader {
   private void method2251() {
     this.anInt2193 = GlRenderer.GL.glGenLists(2);
     GlRenderer.GL.glNewList(this.anInt2193, 4864);
-    GlRenderer.GL.glActiveTexture('\u84c1');
+    GlRenderer.GL.glActiveTexture(0x84c1);
     if (MaterialShader3.aBoolean2191) {
-      GlRenderer.GL.glBindTexture('\u806f', SomethingGl.anInt1228);
+      GlRenderer.GL.glBindTexture(0x806f, SomethingGl.anInt1228);
       GlRenderer.GL.glTexEnvi(8960, 0x8571, 260);
       GlRenderer.GL.glTexEnvi(8960, 0x8590, 768);
       GlRenderer.GL.glTexEnvi(8960, 0x8572, 7681);
@@ -57,8 +57,8 @@ public final class MaterialShader3 implements MaterialShader {
       GlRenderer.GL.glEnable(3169);
       GlRenderer.GL.glEnable(3170);
       GlRenderer.GL.glEnable(3171);
-      GlRenderer.GL.glEnable('\u806f');
-      GlRenderer.GL.glActiveTexture('\u84c2');
+      GlRenderer.GL.glEnable(0x806f);
+      GlRenderer.GL.glActiveTexture(0x84c2);
       GlRenderer.GL.glTexEnvi(8960, 8704, 0x8570);
     }
 
@@ -71,10 +71,10 @@ public final class MaterialShader3 implements MaterialShader {
     GlRenderer.GL.glTexGeni(8192, 9472, 9216);
     GlRenderer.GL.glEnable(3552);
     GlRenderer.GL.glEnable(3168);
-    GlRenderer.GL.glActiveTexture('\u84c0');
+    GlRenderer.GL.glActiveTexture(0x84c0);
     GlRenderer.GL.glEndList();
     GlRenderer.GL.glNewList(this.anInt2193 + 1, 4864);
-    GlRenderer.GL.glActiveTexture('\u84c1');
+    GlRenderer.GL.glActiveTexture(0x84c1);
     if (MaterialShader3.aBoolean2191) {
       GlRenderer.GL.glTexEnvi(8960, 0x8571, 8448);
       GlRenderer.GL.glTexEnvi(8960, 0x8590, 768);
@@ -84,8 +84,8 @@ public final class MaterialShader3 implements MaterialShader {
       GlRenderer.GL.glDisable(3169);
       GlRenderer.GL.glDisable(3170);
       GlRenderer.GL.glDisable(3171);
-      GlRenderer.GL.glDisable('\u806f');
-      GlRenderer.GL.glActiveTexture('\u84c2');
+      GlRenderer.GL.glDisable(0x806f);
+      GlRenderer.GL.glActiveTexture(0x84c2);
       GlRenderer.GL.glTexEnvi(8960, 8704, 8448);
     }
 
@@ -98,7 +98,7 @@ public final class MaterialShader3 implements MaterialShader {
     GlRenderer.GL.glTexEnvi(8960, 0x8588, 5890);
     GlRenderer.GL.glDisable(3552);
     GlRenderer.GL.glDisable(3168);
-    GlRenderer.GL.glActiveTexture('\u84c0');
+    GlRenderer.GL.glActiveTexture(0x84c0);
     GlRenderer.GL.glEndList();
   }
 
@@ -111,7 +111,7 @@ public final class MaterialShader3 implements MaterialShader {
   }
 
   public void set(int var1) {
-    GlRenderer.GL.glActiveTexture('\u84c1');
+    GlRenderer.GL.glActiveTexture(0x84c1);
     if (!MaterialShader3.aBoolean2191 && var1 < 0) {
       GlRenderer.GL.glDisable(3168);
     } else {
@@ -141,7 +141,7 @@ public final class MaterialShader3 implements MaterialShader {
         this.aFloatArray2190[2] = 0.0F;
         this.aFloatArray2190[3] = GlRenderer.anInt1791 * 0.0050F;
         GlRenderer.GL.glTexGenfv(8194, 9474, this.aFloatArray2190, 0);
-        GlRenderer.GL.glActiveTexture('\u84c2');
+        GlRenderer.GL.glActiveTexture(0x84c2);
       }
 
       GlRenderer.GL
@@ -160,7 +160,7 @@ public final class MaterialShader3 implements MaterialShader {
       GlRenderer.GL.glPopMatrix();
     }
 
-    GlRenderer.GL.glActiveTexture('\u84c0');
+    GlRenderer.GL.glActiveTexture(0x84c0);
   }
 
   public int method24() {
@@ -168,19 +168,19 @@ public final class MaterialShader3 implements MaterialShader {
   }
 
   public static int method2252() {
-    return MaterialShader3.aBoolean2191 ? '\u84c2' : '\u84c1';
+    return MaterialShader3.aBoolean2191 ? 0x84c2 : 0x84c1;
   }
 
   public static void method2253() {
     GlRenderer.GL.glClientActiveTexture(MaterialShader3.method2252());
     GlRenderer.GL.glDisableClientState(0x8078);
-    GlRenderer.GL.glClientActiveTexture('\u84c0');
+    GlRenderer.GL.glClientActiveTexture(0x84c0);
   }
 
   public static void method2254() {
     GlRenderer.GL.glClientActiveTexture(MaterialShader3.method2252());
     GlRenderer.GL.glEnableClientState(0x8078);
-    GlRenderer.GL.glClientActiveTexture('\u84c0');
+    GlRenderer.GL.glClientActiveTexture(0x84c0);
   }
 
 }

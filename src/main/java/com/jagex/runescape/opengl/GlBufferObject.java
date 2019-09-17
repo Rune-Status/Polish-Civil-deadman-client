@@ -52,7 +52,7 @@ public final class GlBufferObject {
   public void setElementBufferData(ByteBuffer var1 ) {
     GlRenderer.GL.glBindBuffer(0x8893, this.anInt1991);
     GlRenderer.GL.glBufferData(0x8893, var1.limit(), var1,
-        this.aBoolean1994 ? '\u88e0' : '\u88e4');
+        this.aBoolean1994 ? 0x88e0 : 0x88e4);
     DummyClass33.anInt585 += var1.limit() - this.anInt1993;
     this.anInt1993 = var1.limit();
   }
@@ -64,7 +64,7 @@ public final class GlBufferObject {
   public void setVertexBufferData(ByteBuffer buffer ) {
     GlRenderer.GL.glBindBuffer(0x8892, this.anInt1991);
     GlRenderer.GL.glBufferData(0x8892, buffer.limit(), buffer,
-        this.aBoolean1994 ? '\u88e0' : '\u88e4');
+        this.aBoolean1994 ? 0x88e0 : 0x88e4);
     DummyClass33.anInt585 += buffer.limit() - this.anInt1993;
     this.anInt1993 = buffer.limit();
   }

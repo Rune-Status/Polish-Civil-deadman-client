@@ -27,7 +27,7 @@ public final class MaterialShader4 implements MaterialShader {
     GlRenderer.GL.glTexImage1D(3552, 0, 6406, 2, 0, 6406, 5121, ByteBuffer.wrap(var1));
     GlRenderer.GL.glTexParameteri(3552, 10241, 9729);
     GlRenderer.GL.glTexParameteri(3552, 10240, 9729);
-    GlRenderer.GL.glTexParameteri(3552, 10242, '\u812f');
+    GlRenderer.GL.glTexParameteri(3552, 10242, 0x812f);
     this.anInt2180 = var3[0];
   }
 
@@ -47,17 +47,17 @@ public final class MaterialShader4 implements MaterialShader {
     GlRenderer.GL.glEnable(3168);
     GlRenderer.GL.glEnable(3169);
     if (SomethingGl.aBoolean1227) {
-      GlRenderer.GL.glBindTexture('\u806f', SomethingGl.anInt1228);
+      GlRenderer.GL.glBindTexture(0x806f, SomethingGl.anInt1228);
       GlRenderer.GL.glTexGeni(8194, 9472, 9217);
       GlRenderer.GL.glTexGeni(8195, 9472, 9217);
       GlRenderer.GL
           .glTexGenfv(8195, 9473, new float[] {0.0F, 0.0F, 0.0F, 1.0F}, 0);
       GlRenderer.GL.glEnable(3170);
       GlRenderer.GL.glEnable(3171);
-      GlRenderer.GL.glEnable('\u806f');
+      GlRenderer.GL.glEnable(0x806f);
     }
 
-    GlRenderer.GL.glActiveTexture('\u84c1');
+    GlRenderer.GL.glActiveTexture(0x84c1);
     GlRenderer.GL.glEnable(3552);
     GlRenderer.GL.glBindTexture(3552, this.anInt2180);
     GlRenderer.GL.glTexEnvi(8960, 0x8571, 0x8575);
@@ -65,14 +65,14 @@ public final class MaterialShader4 implements MaterialShader {
     GlRenderer.GL.glTexEnvi(8960, 0x8582, 5890);
     GlRenderer.GL.glTexEnvi(8960, 0x8572, 0x8575);
     GlRenderer.GL.glTexEnvi(8960, 0x8588, 0x8576);
-    GlRenderer.GL.glTexEnvi(8960, '\u858a', 5890);
+    GlRenderer.GL.glTexEnvi(8960, 0x858a, 5890);
     GlRenderer.GL.glEnable(3168);
     GlRenderer.GL.glTexGeni(8192, 9472, 9216);
     GlRenderer.GL.glPushMatrix();
     GlRenderer.GL.glLoadIdentity();
     GlRenderer.GL.glEndList();
     GlRenderer.GL.glNewList(this.anInt2177 + 1, 4864);
-    GlRenderer.GL.glActiveTexture('\u84c1');
+    GlRenderer.GL.glActiveTexture(0x84c1);
     GlRenderer.GL.glDisable(3552);
     GlRenderer.GL.glDisable(3168);
     GlRenderer.GL.glTexEnvi(8960, 0x8571, 8448);
@@ -80,8 +80,8 @@ public final class MaterialShader4 implements MaterialShader {
     GlRenderer.GL.glTexEnvi(8960, 0x8582, 0x8576);
     GlRenderer.GL.glTexEnvi(8960, 0x8572, 8448);
     GlRenderer.GL.glTexEnvi(8960, 0x8588, 5890);
-    GlRenderer.GL.glTexEnvi(8960, '\u858a', 0x8576);
-    GlRenderer.GL.glActiveTexture('\u84c0');
+    GlRenderer.GL.glTexEnvi(8960, 0x858a, 0x8576);
+    GlRenderer.GL.glActiveTexture(0x84c0);
     GlRenderer.GL.glTexEnvi(8960, 0x8590, 768);
     GlRenderer.GL.glTexEnvi(8960, 0x8581, 0x8578);
     GlRenderer.GL.glTexEnvf(8960, 0x8573, 1.0F);
@@ -91,7 +91,7 @@ public final class MaterialShader4 implements MaterialShader {
     if (SomethingGl.aBoolean1227) {
       GlRenderer.GL.glDisable(3170);
       GlRenderer.GL.glDisable(3171);
-      GlRenderer.GL.glDisable('\u806f');
+      GlRenderer.GL.glDisable(0x806f);
     }
 
     GlRenderer.GL.glEndList();
@@ -118,15 +118,15 @@ public final class MaterialShader4 implements MaterialShader {
     this.aFloatArray2179[3] = var2 / (var2 - 3328.0F);
     GlRenderer.GL.glTexGenfv(8192, 9474, this.aFloatArray2179, 0);
     GlRenderer.GL.glPopMatrix();
-    GlRenderer.GL.glActiveTexture('\u84c0');
+    GlRenderer.GL.glActiveTexture(0x84c0);
     GlRenderer.GL.glTexEnvfv(8960, 8705, MaterialShader4.aFloatArray2178, 0);
   }
 
   public void set(int var1) {
-    GlRenderer.GL.glActiveTexture('\u84c1');
+    GlRenderer.GL.glActiveTexture(0x84c1);
     GlRenderer.GL
         .glTexEnvfv(8960, 8705, GlobalStatics_5.aFloatArray1934, 0);
-    GlRenderer.GL.glActiveTexture('\u84c0');
+    GlRenderer.GL.glActiveTexture(0x84c0);
     if ((var1 & 1) == 1) {
       if (SomethingGl.aBoolean1227) {
         if (this.anInt2181 != GlRenderer.anInt1791) {

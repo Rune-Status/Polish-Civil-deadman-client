@@ -439,7 +439,7 @@ public final class PlayerAppearance {
               var26 = var41.anIntArray1851[var24];
               GlobalStatics_9.aClass3_Sub28_Sub5Array2070[var22] =
                   GlobalStatics_6.method133(var26 >>> 16, 0);
-              var26 &= '\uffff';
+              var26 &= 0xffff;
               GlobalStatics_9.anIntArray1833[var22] = var26;
               if (GlobalStatics_9.aClass3_Sub28_Sub5Array2070[var22]
                   != null) {
@@ -460,7 +460,7 @@ public final class PlayerAppearance {
                 var47 = var41.anIntArray1851[var25];
                 GlobalStatics_3.aClass3_Sub28_Sub5Array1103[var22] =
                     GlobalStatics_6.method133(var47 >>> 16, 0);
-                var47 &= '\uffff';
+                var47 &= 0xffff;
                 DummyClass2.anIntArray1679[var22] = var47;
                 if (GlobalStatics_3.aClass3_Sub28_Sub5Array1103[var22]
                     != null) {
@@ -494,7 +494,7 @@ public final class PlayerAppearance {
             var22 = var4.anIntArray1851[var10];
             var47 = var22 >>> 16;
             var46 = GlobalStatics_6.method133(var47, 0);
-            var22 &= '\uffff';
+            var22 &= 0xffff;
             if (var46 != null) {
               var42 |= var46.method561(var22, (byte) 124);
               var38 |= var46.method559(1317095745, var22);
@@ -505,7 +505,7 @@ public final class PlayerAppearance {
                 && var4.anIntArray1851.length > var2) {
               var23 = var4.anIntArray1851[var2];
               var28 = var23 >>> 16;
-              var23 &= '\uffff';
+              var23 &= 0xffff;
               var24 = var4.anIntArray1869[var10];
               if (var47 == var28) {
                 var48 = var46;
@@ -528,7 +528,7 @@ public final class PlayerAppearance {
           if (var3 != null) {
             var47 = var3.anIntArray1851[var11];
             var32 = var47 >>> 16;
-            var47 &= '\uffff';
+            var47 &= 0xffff;
             var49 = GlobalStatics_6.method133(var32, 0);
             if (var49 != null) {
               var42 |= var49.method561(var47, (byte) 123);
@@ -541,7 +541,7 @@ public final class PlayerAppearance {
               var29 = var3.anIntArray1869[var11];
               var28 = var3.anIntArray1851[var6];
               var33 = var28 >>> 16;
-              var28 &= '\uffff';
+              var28 &= 0xffff;
               if (var32 == var33) {
                 var50 = var49;
               } else {

@@ -57,7 +57,7 @@ public final class DummyClass40 {
         .method13(var18, true, DummyClass40.brightness);
     int var20;
     if (var19 == null) {
-      var20 = GLStatics.textureCache.method15(var18, '\uffff');
+      var20 = GLStatics.textureCache.method15(var18, 0xffff);
       DummyClass40.method1154(var0, var1, var2, var3, var4, var5,
           DummyClass40.method1136(var20, var6),
           DummyClass40.method1136(var20, var7),
@@ -805,7 +805,7 @@ public final class DummyClass40 {
       var1 = 126;
     }
 
-    return (var0 & '\uff80') + var1;
+    return (var0 & 0xff80) + var1;
   }
 
   public static void updateLightness(float var0) {
@@ -1553,7 +1553,7 @@ public final class DummyClass40 {
         }
       }
     } else {
-      var20 = GLStatics.textureCache.method15(var18, '\uffff');
+      var20 = GLStatics.textureCache.method15(var18, 0xffff);
       DummyClass40.aBoolean837 = true;
       DummyClass40.method1154(var0, var1, var2, var3, var4, var5,
           DummyClass40.method1136(var20, var6),
@@ -1645,49 +1645,49 @@ public final class DummyClass40 {
               var3 = var1[(var2 & 4032) + (var2 >>> 26)];
               var0[var4++] =
                   ((var3 & 16711935) * var15 & -16711936) + (
-                      (var3 & '\uff00') * var15 & 16711680)
+                      (var3 & 0xff00) * var15 & 16711680)
                       >> 8;
               var2 += var16;
               var3 = var1[(var2 & 4032) + (var2 >>> 26)];
               var0[var4++] =
                   ((var3 & 16711935) * var15 & -16711936) + (
-                      (var3 & '\uff00') * var15 & 16711680)
+                      (var3 & 0xff00) * var15 & 16711680)
                       >> 8;
               var2 += var16;
               var3 = var1[(var2 & 4032) + (var2 >>> 26)];
               var0[var4++] =
                   ((var3 & 16711935) * var15 & -16711936) + (
-                      (var3 & '\uff00') * var15 & 16711680)
+                      (var3 & 0xff00) * var15 & 16711680)
                       >> 8;
               var2 += var16;
               var3 = var1[(var2 & 4032) + (var2 >>> 26)];
               var0[var4++] =
                   ((var3 & 16711935) * var15 & -16711936) + (
-                      (var3 & '\uff00') * var15 & 16711680)
+                      (var3 & 0xff00) * var15 & 16711680)
                       >> 8;
               var2 += var16;
               var3 = var1[(var2 & 4032) + (var2 >>> 26)];
               var0[var4++] =
                   ((var3 & 16711935) * var15 & -16711936) + (
-                      (var3 & '\uff00') * var15 & 16711680)
+                      (var3 & 0xff00) * var15 & 16711680)
                       >> 8;
               var2 += var16;
               var3 = var1[(var2 & 4032) + (var2 >>> 26)];
               var0[var4++] =
                   ((var3 & 16711935) * var15 & -16711936) + (
-                      (var3 & '\uff00') * var15 & 16711680)
+                      (var3 & 0xff00) * var15 & 16711680)
                       >> 8;
               var2 += var16;
               var3 = var1[(var2 & 4032) + (var2 >>> 26)];
               var0[var4++] =
                   ((var3 & 16711935) * var15 & -16711936) + (
-                      (var3 & '\uff00') * var15 & 16711680)
+                      (var3 & 0xff00) * var15 & 16711680)
                       >> 8;
               var2 += var16;
               var3 = var1[(var2 & 4032) + (var2 >>> 26)];
               var0[var4++] =
                   ((var3 & 16711935) * var15 & -16711936) + (
-                      (var3 & '\uff00') * var15 & 16711680)
+                      (var3 & 0xff00) * var15 & 16711680)
                       >> 8;
               var10000 = var2 + var16;
               var18 = var20;
@@ -1718,7 +1718,7 @@ public final class DummyClass40 {
               var3 = var1[(var2 & 4032) + (var2 >>> 26)];
               var0[var4++] =
                   ((var3 & 16711935) * var15 & -16711936) + (
-                      (var3 & '\uff00') * var15 & 16711680)
+                      (var3 & 0xff00) * var15 & 16711680)
                       >> 8;
               var2 += var16;
               --var17;
@@ -1730,7 +1730,7 @@ public final class DummyClass40 {
               if ((var3 = var1[(var2 & 4032) + (var2 >>> 26)]) != 0) {
                 var0[var4] =
                     ((var3 & 16711935) * var15 & -16711936) + (
-                        (var3 & '\uff00') * var15 & 16711680)
+                        (var3 & 0xff00) * var15 & 16711680)
                         >> 8;
               }
 
@@ -1739,7 +1739,7 @@ public final class DummyClass40 {
               if ((var3 = var1[(var2 & 4032) + (var2 >>> 26)]) != 0) {
                 var0[var4] =
                     ((var3 & 16711935) * var15 & -16711936) + (
-                        (var3 & '\uff00') * var15 & 16711680)
+                        (var3 & 0xff00) * var15 & 16711680)
                         >> 8;
               }
 
@@ -1748,7 +1748,7 @@ public final class DummyClass40 {
               if ((var3 = var1[(var2 & 4032) + (var2 >>> 26)]) != 0) {
                 var0[var4] =
                     ((var3 & 16711935) * var15 & -16711936) + (
-                        (var3 & '\uff00') * var15 & 16711680)
+                        (var3 & 0xff00) * var15 & 16711680)
                         >> 8;
               }
 
@@ -1757,7 +1757,7 @@ public final class DummyClass40 {
               if ((var3 = var1[(var2 & 4032) + (var2 >>> 26)]) != 0) {
                 var0[var4] =
                     ((var3 & 16711935) * var15 & -16711936) + (
-                        (var3 & '\uff00') * var15 & 16711680)
+                        (var3 & 0xff00) * var15 & 16711680)
                         >> 8;
               }
 
@@ -1766,7 +1766,7 @@ public final class DummyClass40 {
               if ((var3 = var1[(var2 & 4032) + (var2 >>> 26)]) != 0) {
                 var0[var4] =
                     ((var3 & 16711935) * var15 & -16711936) + (
-                        (var3 & '\uff00') * var15 & 16711680)
+                        (var3 & 0xff00) * var15 & 16711680)
                         >> 8;
               }
 
@@ -1775,7 +1775,7 @@ public final class DummyClass40 {
               if ((var3 = var1[(var2 & 4032) + (var2 >>> 26)]) != 0) {
                 var0[var4] =
                     ((var3 & 16711935) * var15 & -16711936) + (
-                        (var3 & '\uff00') * var15 & 16711680)
+                        (var3 & 0xff00) * var15 & 16711680)
                         >> 8;
               }
 
@@ -1784,7 +1784,7 @@ public final class DummyClass40 {
               if ((var3 = var1[(var2 & 4032) + (var2 >>> 26)]) != 0) {
                 var0[var4] =
                     ((var3 & 16711935) * var15 & -16711936) + (
-                        (var3 & '\uff00') * var15 & 16711680)
+                        (var3 & 0xff00) * var15 & 16711680)
                         >> 8;
               }
 
@@ -1793,7 +1793,7 @@ public final class DummyClass40 {
               if ((var3 = var1[(var2 & 4032) + (var2 >>> 26)]) != 0) {
                 var0[var4] =
                     ((var3 & 16711935) * var15 & -16711936) + (
-                        (var3 & '\uff00') * var15 & 16711680)
+                        (var3 & 0xff00) * var15 & 16711680)
                         >> 8;
               }
 
@@ -1827,7 +1827,7 @@ public final class DummyClass40 {
               if ((var3 = var1[(var2 & 4032) + (var2 >>> 26)]) != 0) {
                 var0[var4] =
                     ((var3 & 16711935) * var15 & -16711936) + (
-                        (var3 & '\uff00') * var15 & 16711680)
+                        (var3 & 0xff00) * var15 & 16711680)
                         >> 8;
               }
 
@@ -1874,49 +1874,49 @@ public final class DummyClass40 {
               var3 = var1[(var2 & 16256) + (var2 >>> 25)];
               var0[var4++] =
                   ((var3 & 16711935) * var15 & -16711936) + (
-                      (var3 & '\uff00') * var15 & 16711680)
+                      (var3 & 0xff00) * var15 & 16711680)
                       >> 8;
               var2 += var16;
               var3 = var1[(var2 & 16256) + (var2 >>> 25)];
               var0[var4++] =
                   ((var3 & 16711935) * var15 & -16711936) + (
-                      (var3 & '\uff00') * var15 & 16711680)
+                      (var3 & 0xff00) * var15 & 16711680)
                       >> 8;
               var2 += var16;
               var3 = var1[(var2 & 16256) + (var2 >>> 25)];
               var0[var4++] =
                   ((var3 & 16711935) * var15 & -16711936) + (
-                      (var3 & '\uff00') * var15 & 16711680)
+                      (var3 & 0xff00) * var15 & 16711680)
                       >> 8;
               var2 += var16;
               var3 = var1[(var2 & 16256) + (var2 >>> 25)];
               var0[var4++] =
                   ((var3 & 16711935) * var15 & -16711936) + (
-                      (var3 & '\uff00') * var15 & 16711680)
+                      (var3 & 0xff00) * var15 & 16711680)
                       >> 8;
               var2 += var16;
               var3 = var1[(var2 & 16256) + (var2 >>> 25)];
               var0[var4++] =
                   ((var3 & 16711935) * var15 & -16711936) + (
-                      (var3 & '\uff00') * var15 & 16711680)
+                      (var3 & 0xff00) * var15 & 16711680)
                       >> 8;
               var2 += var16;
               var3 = var1[(var2 & 16256) + (var2 >>> 25)];
               var0[var4++] =
                   ((var3 & 16711935) * var15 & -16711936) + (
-                      (var3 & '\uff00') * var15 & 16711680)
+                      (var3 & 0xff00) * var15 & 16711680)
                       >> 8;
               var2 += var16;
               var3 = var1[(var2 & 16256) + (var2 >>> 25)];
               var0[var4++] =
                   ((var3 & 16711935) * var15 & -16711936) + (
-                      (var3 & '\uff00') * var15 & 16711680)
+                      (var3 & 0xff00) * var15 & 16711680)
                       >> 8;
               var2 += var16;
               var3 = var1[(var2 & 16256) + (var2 >>> 25)];
               var0[var4++] =
                   ((var3 & 16711935) * var15 & -16711936) + (
-                      (var3 & '\uff00') * var15 & 16711680)
+                      (var3 & 0xff00) * var15 & 16711680)
                       >> 8;
               var10000 = var2 + var16;
               var18 = var20;
@@ -1947,7 +1947,7 @@ public final class DummyClass40 {
               var3 = var1[(var2 & 16256) + (var2 >>> 25)];
               var0[var4++] =
                   ((var3 & 16711935) * var15 & -16711936) + (
-                      (var3 & '\uff00') * var15 & 16711680)
+                      (var3 & 0xff00) * var15 & 16711680)
                       >> 8;
               var2 += var16;
               --var17;
@@ -1959,7 +1959,7 @@ public final class DummyClass40 {
               if ((var3 = var1[(var2 & 16256) + (var2 >>> 25)]) != 0) {
                 var0[var4] =
                     ((var3 & 16711935) * var15 & -16711936) + (
-                        (var3 & '\uff00') * var15 & 16711680)
+                        (var3 & 0xff00) * var15 & 16711680)
                         >> 8;
               }
 
@@ -1968,7 +1968,7 @@ public final class DummyClass40 {
               if ((var3 = var1[(var2 & 16256) + (var2 >>> 25)]) != 0) {
                 var0[var4] =
                     ((var3 & 16711935) * var15 & -16711936) + (
-                        (var3 & '\uff00') * var15 & 16711680)
+                        (var3 & 0xff00) * var15 & 16711680)
                         >> 8;
               }
 
@@ -1977,7 +1977,7 @@ public final class DummyClass40 {
               if ((var3 = var1[(var2 & 16256) + (var2 >>> 25)]) != 0) {
                 var0[var4] =
                     ((var3 & 16711935) * var15 & -16711936) + (
-                        (var3 & '\uff00') * var15 & 16711680)
+                        (var3 & 0xff00) * var15 & 16711680)
                         >> 8;
               }
 
@@ -1986,7 +1986,7 @@ public final class DummyClass40 {
               if ((var3 = var1[(var2 & 16256) + (var2 >>> 25)]) != 0) {
                 var0[var4] =
                     ((var3 & 16711935) * var15 & -16711936) + (
-                        (var3 & '\uff00') * var15 & 16711680)
+                        (var3 & 0xff00) * var15 & 16711680)
                         >> 8;
               }
 
@@ -1995,7 +1995,7 @@ public final class DummyClass40 {
               if ((var3 = var1[(var2 & 16256) + (var2 >>> 25)]) != 0) {
                 var0[var4] =
                     ((var3 & 16711935) * var15 & -16711936) + (
-                        (var3 & '\uff00') * var15 & 16711680)
+                        (var3 & 0xff00) * var15 & 16711680)
                         >> 8;
               }
 
@@ -2004,7 +2004,7 @@ public final class DummyClass40 {
               if ((var3 = var1[(var2 & 16256) + (var2 >>> 25)]) != 0) {
                 var0[var4] =
                     ((var3 & 16711935) * var15 & -16711936) + (
-                        (var3 & '\uff00') * var15 & 16711680)
+                        (var3 & 0xff00) * var15 & 16711680)
                         >> 8;
               }
 
@@ -2013,7 +2013,7 @@ public final class DummyClass40 {
               if ((var3 = var1[(var2 & 16256) + (var2 >>> 25)]) != 0) {
                 var0[var4] =
                     ((var3 & 16711935) * var15 & -16711936) + (
-                        (var3 & '\uff00') * var15 & 16711680)
+                        (var3 & 0xff00) * var15 & 16711680)
                         >> 8;
               }
 
@@ -2022,7 +2022,7 @@ public final class DummyClass40 {
               if ((var3 = var1[(var2 & 16256) + (var2 >>> 25)]) != 0) {
                 var0[var4] =
                     ((var3 & 16711935) * var15 & -16711936) + (
-                        (var3 & '\uff00') * var15 & 16711680)
+                        (var3 & 0xff00) * var15 & 16711680)
                         >> 8;
               }
 
@@ -2056,7 +2056,7 @@ public final class DummyClass40 {
               if ((var3 = var1[(var2 & 16256) + (var2 >>> 25)]) != 0) {
                 var0[var4] =
                     ((var3 & 16711935) * var15 & -16711936) + (
-                        (var3 & '\uff00') * var15 & 16711680)
+                        (var3 & 0xff00) * var15 & 16711680)
                         >> 8;
               }
 
@@ -2134,49 +2134,49 @@ public final class DummyClass40 {
               var3 = var1[(var2 & 4032) + (var2 >>> 26)];
               var0[var4++] =
                   ((var3 & 16711935) * var15 & -16711936) + (
-                      (var3 & '\uff00') * var15 & 16711680)
+                      (var3 & 0xff00) * var15 & 16711680)
                       >> 8;
               var2 += var16;
               var3 = var1[(var2 & 4032) + (var2 >>> 26)];
               var0[var4++] =
                   ((var3 & 16711935) * var15 & -16711936) + (
-                      (var3 & '\uff00') * var15 & 16711680)
+                      (var3 & 0xff00) * var15 & 16711680)
                       >> 8;
               var2 += var16;
               var3 = var1[(var2 & 4032) + (var2 >>> 26)];
               var0[var4++] =
                   ((var3 & 16711935) * var15 & -16711936) + (
-                      (var3 & '\uff00') * var15 & 16711680)
+                      (var3 & 0xff00) * var15 & 16711680)
                       >> 8;
               var2 += var16;
               var3 = var1[(var2 & 4032) + (var2 >>> 26)];
               var0[var4++] =
                   ((var3 & 16711935) * var15 & -16711936) + (
-                      (var3 & '\uff00') * var15 & 16711680)
+                      (var3 & 0xff00) * var15 & 16711680)
                       >> 8;
               var2 += var16;
               var3 = var1[(var2 & 4032) + (var2 >>> 26)];
               var0[var4++] =
                   ((var3 & 16711935) * var15 & -16711936) + (
-                      (var3 & '\uff00') * var15 & 16711680)
+                      (var3 & 0xff00) * var15 & 16711680)
                       >> 8;
               var2 += var16;
               var3 = var1[(var2 & 4032) + (var2 >>> 26)];
               var0[var4++] =
                   ((var3 & 16711935) * var15 & -16711936) + (
-                      (var3 & '\uff00') * var15 & 16711680)
+                      (var3 & 0xff00) * var15 & 16711680)
                       >> 8;
               var2 += var16;
               var3 = var1[(var2 & 4032) + (var2 >>> 26)];
               var0[var4++] =
                   ((var3 & 16711935) * var15 & -16711936) + (
-                      (var3 & '\uff00') * var15 & 16711680)
+                      (var3 & 0xff00) * var15 & 16711680)
                       >> 8;
               var2 += var16;
               var3 = var1[(var2 & 4032) + (var2 >>> 26)];
               var0[var4++] =
                   ((var3 & 16711935) * var15 & -16711936) + (
-                      (var3 & '\uff00') * var15 & 16711680)
+                      (var3 & 0xff00) * var15 & 16711680)
                       >> 8;
               var2 += var16;
               var7 += var8;
@@ -2191,7 +2191,7 @@ public final class DummyClass40 {
               var3 = var1[(var2 & 4032) + (var2 >>> 26)];
               var0[var4++] =
                   ((var3 & 16711935) * var15 & -16711936) + (
-                      (var3 & '\uff00') * var15 & 16711680)
+                      (var3 & 0xff00) * var15 & 16711680)
                       >> 8;
               var2 += var16;
               --var17;
@@ -2203,7 +2203,7 @@ public final class DummyClass40 {
               if ((var3 = var1[(var2 & 4032) + (var2 >>> 26)]) != 0) {
                 var0[var4] =
                     ((var3 & 16711935) * var15 & -16711936) + (
-                        (var3 & '\uff00') * var15 & 16711680)
+                        (var3 & 0xff00) * var15 & 16711680)
                         >> 8;
               }
 
@@ -2212,7 +2212,7 @@ public final class DummyClass40 {
               if ((var3 = var1[(var2 & 4032) + (var2 >>> 26)]) != 0) {
                 var0[var4] =
                     ((var3 & 16711935) * var15 & -16711936) + (
-                        (var3 & '\uff00') * var15 & 16711680)
+                        (var3 & 0xff00) * var15 & 16711680)
                         >> 8;
               }
 
@@ -2221,7 +2221,7 @@ public final class DummyClass40 {
               if ((var3 = var1[(var2 & 4032) + (var2 >>> 26)]) != 0) {
                 var0[var4] =
                     ((var3 & 16711935) * var15 & -16711936) + (
-                        (var3 & '\uff00') * var15 & 16711680)
+                        (var3 & 0xff00) * var15 & 16711680)
                         >> 8;
               }
 
@@ -2230,7 +2230,7 @@ public final class DummyClass40 {
               if ((var3 = var1[(var2 & 4032) + (var2 >>> 26)]) != 0) {
                 var0[var4] =
                     ((var3 & 16711935) * var15 & -16711936) + (
-                        (var3 & '\uff00') * var15 & 16711680)
+                        (var3 & 0xff00) * var15 & 16711680)
                         >> 8;
               }
 
@@ -2239,7 +2239,7 @@ public final class DummyClass40 {
               if ((var3 = var1[(var2 & 4032) + (var2 >>> 26)]) != 0) {
                 var0[var4] =
                     ((var3 & 16711935) * var15 & -16711936) + (
-                        (var3 & '\uff00') * var15 & 16711680)
+                        (var3 & 0xff00) * var15 & 16711680)
                         >> 8;
               }
 
@@ -2248,7 +2248,7 @@ public final class DummyClass40 {
               if ((var3 = var1[(var2 & 4032) + (var2 >>> 26)]) != 0) {
                 var0[var4] =
                     ((var3 & 16711935) * var15 & -16711936) + (
-                        (var3 & '\uff00') * var15 & 16711680)
+                        (var3 & 0xff00) * var15 & 16711680)
                         >> 8;
               }
 
@@ -2257,7 +2257,7 @@ public final class DummyClass40 {
               if ((var3 = var1[(var2 & 4032) + (var2 >>> 26)]) != 0) {
                 var0[var4] =
                     ((var3 & 16711935) * var15 & -16711936) + (
-                        (var3 & '\uff00') * var15 & 16711680)
+                        (var3 & 0xff00) * var15 & 16711680)
                         >> 8;
               }
 
@@ -2266,7 +2266,7 @@ public final class DummyClass40 {
               if ((var3 = var1[(var2 & 4032) + (var2 >>> 26)]) != 0) {
                 var0[var4] =
                     ((var3 & 16711935) * var15 & -16711936) + (
-                        (var3 & '\uff00') * var15 & 16711680)
+                        (var3 & 0xff00) * var15 & 16711680)
                         >> 8;
               }
 
@@ -2284,7 +2284,7 @@ public final class DummyClass40 {
               if ((var3 = var1[(var2 & 4032) + (var2 >>> 26)]) != 0) {
                 var0[var4] =
                     ((var3 & 16711935) * var15 & -16711936) + (
-                        (var3 & '\uff00') * var15 & 16711680)
+                        (var3 & 0xff00) * var15 & 16711680)
                         >> 8;
               }
 
@@ -2331,49 +2331,49 @@ public final class DummyClass40 {
               var3 = var1[(var2 & 16256) + (var2 >>> 25)];
               var0[var4++] =
                   ((var3 & 16711935) * var15 & -16711936) + (
-                      (var3 & '\uff00') * var15 & 16711680)
+                      (var3 & 0xff00) * var15 & 16711680)
                       >> 8;
               var2 += var16;
               var3 = var1[(var2 & 16256) + (var2 >>> 25)];
               var0[var4++] =
                   ((var3 & 16711935) * var15 & -16711936) + (
-                      (var3 & '\uff00') * var15 & 16711680)
+                      (var3 & 0xff00) * var15 & 16711680)
                       >> 8;
               var2 += var16;
               var3 = var1[(var2 & 16256) + (var2 >>> 25)];
               var0[var4++] =
                   ((var3 & 16711935) * var15 & -16711936) + (
-                      (var3 & '\uff00') * var15 & 16711680)
+                      (var3 & 0xff00) * var15 & 16711680)
                       >> 8;
               var2 += var16;
               var3 = var1[(var2 & 16256) + (var2 >>> 25)];
               var0[var4++] =
                   ((var3 & 16711935) * var15 & -16711936) + (
-                      (var3 & '\uff00') * var15 & 16711680)
+                      (var3 & 0xff00) * var15 & 16711680)
                       >> 8;
               var2 += var16;
               var3 = var1[(var2 & 16256) + (var2 >>> 25)];
               var0[var4++] =
                   ((var3 & 16711935) * var15 & -16711936) + (
-                      (var3 & '\uff00') * var15 & 16711680)
+                      (var3 & 0xff00) * var15 & 16711680)
                       >> 8;
               var2 += var16;
               var3 = var1[(var2 & 16256) + (var2 >>> 25)];
               var0[var4++] =
                   ((var3 & 16711935) * var15 & -16711936) + (
-                      (var3 & '\uff00') * var15 & 16711680)
+                      (var3 & 0xff00) * var15 & 16711680)
                       >> 8;
               var2 += var16;
               var3 = var1[(var2 & 16256) + (var2 >>> 25)];
               var0[var4++] =
                   ((var3 & 16711935) * var15 & -16711936) + (
-                      (var3 & '\uff00') * var15 & 16711680)
+                      (var3 & 0xff00) * var15 & 16711680)
                       >> 8;
               var2 += var16;
               var3 = var1[(var2 & 16256) + (var2 >>> 25)];
               var0[var4++] =
                   ((var3 & 16711935) * var15 & -16711936) + (
-                      (var3 & '\uff00') * var15 & 16711680)
+                      (var3 & 0xff00) * var15 & 16711680)
                       >> 8;
               var2 += var16;
               var7 += var8;
@@ -2388,7 +2388,7 @@ public final class DummyClass40 {
               var3 = var1[(var2 & 16256) + (var2 >>> 25)];
               var0[var4++] =
                   ((var3 & 16711935) * var15 & -16711936) + (
-                      (var3 & '\uff00') * var15 & 16711680)
+                      (var3 & 0xff00) * var15 & 16711680)
                       >> 8;
               var2 += var16;
               --var17;
@@ -2400,7 +2400,7 @@ public final class DummyClass40 {
               if ((var3 = var1[(var2 & 16256) + (var2 >>> 25)]) != 0) {
                 var0[var4] =
                     ((var3 & 16711935) * var15 & -16711936) + (
-                        (var3 & '\uff00') * var15 & 16711680)
+                        (var3 & 0xff00) * var15 & 16711680)
                         >> 8;
               }
 
@@ -2409,7 +2409,7 @@ public final class DummyClass40 {
               if ((var3 = var1[(var2 & 16256) + (var2 >>> 25)]) != 0) {
                 var0[var4] =
                     ((var3 & 16711935) * var15 & -16711936) + (
-                        (var3 & '\uff00') * var15 & 16711680)
+                        (var3 & 0xff00) * var15 & 16711680)
                         >> 8;
               }
 
@@ -2418,7 +2418,7 @@ public final class DummyClass40 {
               if ((var3 = var1[(var2 & 16256) + (var2 >>> 25)]) != 0) {
                 var0[var4] =
                     ((var3 & 16711935) * var15 & -16711936) + (
-                        (var3 & '\uff00') * var15 & 16711680)
+                        (var3 & 0xff00) * var15 & 16711680)
                         >> 8;
               }
 
@@ -2427,7 +2427,7 @@ public final class DummyClass40 {
               if ((var3 = var1[(var2 & 16256) + (var2 >>> 25)]) != 0) {
                 var0[var4] =
                     ((var3 & 16711935) * var15 & -16711936) + (
-                        (var3 & '\uff00') * var15 & 16711680)
+                        (var3 & 0xff00) * var15 & 16711680)
                         >> 8;
               }
 
@@ -2436,7 +2436,7 @@ public final class DummyClass40 {
               if ((var3 = var1[(var2 & 16256) + (var2 >>> 25)]) != 0) {
                 var0[var4] =
                     ((var3 & 16711935) * var15 & -16711936) + (
-                        (var3 & '\uff00') * var15 & 16711680)
+                        (var3 & 0xff00) * var15 & 16711680)
                         >> 8;
               }
 
@@ -2445,7 +2445,7 @@ public final class DummyClass40 {
               if ((var3 = var1[(var2 & 16256) + (var2 >>> 25)]) != 0) {
                 var0[var4] =
                     ((var3 & 16711935) * var15 & -16711936) + (
-                        (var3 & '\uff00') * var15 & 16711680)
+                        (var3 & 0xff00) * var15 & 16711680)
                         >> 8;
               }
 
@@ -2454,7 +2454,7 @@ public final class DummyClass40 {
               if ((var3 = var1[(var2 & 16256) + (var2 >>> 25)]) != 0) {
                 var0[var4] =
                     ((var3 & 16711935) * var15 & -16711936) + (
-                        (var3 & '\uff00') * var15 & 16711680)
+                        (var3 & 0xff00) * var15 & 16711680)
                         >> 8;
               }
 
@@ -2463,7 +2463,7 @@ public final class DummyClass40 {
               if ((var3 = var1[(var2 & 16256) + (var2 >>> 25)]) != 0) {
                 var0[var4] =
                     ((var3 & 16711935) * var15 & -16711936) + (
-                        (var3 & '\uff00') * var15 & 16711680)
+                        (var3 & 0xff00) * var15 & 16711680)
                         >> 8;
               }
 
@@ -2481,7 +2481,7 @@ public final class DummyClass40 {
               if ((var3 = var1[(var2 & 16256) + (var2 >>> 25)]) != 0) {
                 var0[var4] =
                     ((var3 & 16711935) * var15 & -16711936) + (
-                        (var3 & '\uff00') * var15 & 16711680)
+                        (var3 & 0xff00) * var15 & 16711680)
                         >> 8;
               }
 
@@ -3081,28 +3081,28 @@ public final class DummyClass40 {
               var2 = GLStatics.hslTable[var6 >> 8];
               var6 += var7;
               var2 = ((var2 & 16711935) * var9 >> 8 & 16711935) + (
-                  (var2 & '\uff00') * var9 >> 8
-                      & '\uff00');
+                  (var2 & 0xff00) * var9 >> 8
+                      & 0xff00);
               var10 = var0[var1];
               var0[var1++] =
                   var2 + ((var10 & 16711935) * var8 >> 8 & 16711935) + (
-                      (var10 & '\uff00') * var8 >> 8
-                          & '\uff00');
+                      (var10 & 0xff00) * var8 >> 8
+                          & 0xff00);
               var10 = var0[var1];
               var0[var1++] =
                   var2 + ((var10 & 16711935) * var8 >> 8 & 16711935) + (
-                      (var10 & '\uff00') * var8 >> 8
-                          & '\uff00');
+                      (var10 & 0xff00) * var8 >> 8
+                          & 0xff00);
               var10 = var0[var1];
               var0[var1++] =
                   var2 + ((var10 & 16711935) * var8 >> 8 & 16711935) + (
-                      (var10 & '\uff00') * var8 >> 8
-                          & '\uff00');
+                      (var10 & 0xff00) * var8 >> 8
+                          & 0xff00);
               var10 = var0[var1];
               var0[var1++] =
                   var2 + ((var10 & 16711935) * var8 >> 8 & 16711935) + (
-                      (var10 & '\uff00') * var8 >> 8
-                          & '\uff00');
+                      (var10 & 0xff00) * var8 >> 8
+                          & 0xff00);
               --var3;
             } while (var3 > 0);
           }
@@ -3111,15 +3111,15 @@ public final class DummyClass40 {
           if (var3 > 0) {
             var2 = GLStatics.hslTable[var6 >> 8];
             var2 = ((var2 & 16711935) * var9 >> 8 & 16711935) + (
-                (var2 & '\uff00') * var9 >> 8
-                    & '\uff00');
+                (var2 & 0xff00) * var9 >> 8
+                    & 0xff00);
 
             do {
               var10 = var0[var1];
               var0[var1++] =
                   var2 + ((var10 & 16711935) * var8 >> 8 & 16711935) + (
-                      (var10 & '\uff00') * var8 >> 8
-                          & '\uff00');
+                      (var10 & 0xff00) * var8 >> 8
+                          & 0xff00);
               --var3;
             } while (var3 > 0);
           }
@@ -3141,13 +3141,13 @@ public final class DummyClass40 {
             var2 = GLStatics.hslTable[var6 >> 8];
             var6 += var7;
             var2 = ((var2 & 16711935) * var9 >> 8 & 16711935) + (
-                (var2 & '\uff00') * var9 >> 8
-                    & '\uff00');
+                (var2 & 0xff00) * var9 >> 8
+                    & 0xff00);
             var10 = var0[var1];
             var0[var1++] =
                 var2 + ((var10 & 16711935) * var8 >> 8 & 16711935) + (
-                    (var10 & '\uff00') * var8 >> 8
-                        & '\uff00');
+                    (var10 & 0xff00) * var8 >> 8
+                        & 0xff00);
             --var3;
           } while (var3 > 0);
         }
@@ -3654,7 +3654,7 @@ public final class DummyClass40 {
         int var7 = 256 - DummyClass40.anInt850;
         var2 =
             ((var2 & 16711935) * var7 >> 8 & 16711935) + (
-                (var2 & '\uff00') * var7 >> 8 & '\uff00');
+                (var2 & 0xff00) * var7 >> 8 & 0xff00);
 
         while (true) {
           --var3;
@@ -3671,31 +3671,31 @@ public final class DummyClass40 {
               var8 = var0[var1];
               var0[var1++] =
                   var2 + ((var8 & 16711935) * var6 >> 8 & 16711935) + (
-                      (var8 & '\uff00') * var6 >> 8
-                          & '\uff00');
+                      (var8 & 0xff00) * var6 >> 8
+                          & 0xff00);
             }
           }
 
           var8 = var0[var1];
           var0[var1++] =
               var2 + ((var8 & 16711935) * var6 >> 8 & 16711935) + (
-                  (var8 & '\uff00') * var6 >> 8
-                      & '\uff00');
+                  (var8 & 0xff00) * var6 >> 8
+                      & 0xff00);
           var8 = var0[var1];
           var0[var1++] =
               var2 + ((var8 & 16711935) * var6 >> 8 & 16711935) + (
-                  (var8 & '\uff00') * var6 >> 8
-                      & '\uff00');
+                  (var8 & 0xff00) * var6 >> 8
+                      & 0xff00);
           var8 = var0[var1];
           var0[var1++] =
               var2 + ((var8 & 16711935) * var6 >> 8 & 16711935) + (
-                  (var8 & '\uff00') * var6 >> 8
-                      & '\uff00');
+                  (var8 & 0xff00) * var6 >> 8
+                      & 0xff00);
           var8 = var0[var1];
           var0[var1++] =
               var2 + ((var8 & 16711935) * var6 >> 8 & 16711935) + (
-                  (var8 & '\uff00') * var6 >> 8
-                      & '\uff00');
+                  (var8 & 0xff00) * var6 >> 8
+                      & 0xff00);
         }
       }
     }

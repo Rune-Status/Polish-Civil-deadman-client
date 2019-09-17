@@ -2512,7 +2512,7 @@ public class GlobalStatics_6 {
 
                             var54.method637(var23 + var25, var24 + var26, 128);
                             if (var5 != -1) {
-                              Widget var51 = var3[var5 & '\uffff'];
+                              Widget var51 = var3[var5 & 0xffff];
                               int var31;
                               int var30;
                               if (GlRenderer.useOpenGlRenderer) {
@@ -3266,7 +3266,7 @@ public class GlobalStatics_6 {
         lightness = 2;
       }
 
-      return lightness + ('\uff80' & hsl);
+      return lightness + (0xff80 & hsl);
     }
   }
 
@@ -4045,7 +4045,7 @@ public class GlobalStatics_6 {
         int var20 = 256 - var19;
         var0[var5++] = ((var17 & 16711935) * var19 + (var18 & 16711935) * var20
             & -16711936) + (
-            (var17 & '\uff00') * var19 + (var18 & '\uff00') * var20 & 16711680)
+            (var17 & 0xff00) * var19 + (var18 & 0xff00) * var20 & 16711680)
             >>> 8;
         var3 += var9;
       }
@@ -4073,7 +4073,7 @@ public class GlobalStatics_6 {
           int var14 = var0[var4];
           var0[var4++] = ((var2 & 16711935) * var12 + (var14 & 16711935) * var13
               & -16711936) + (
-              (var2 & '\uff00') * var12 + (var14 & '\uff00') * var13 & 16711680)
+              (var2 & 0xff00) * var12 + (var14 & 0xff00) * var13 & 16711680)
               >>> 8;
         }
       }
@@ -4100,7 +4100,7 @@ public class GlobalStatics_6 {
           int var14 = var0[var4];
           var0[var4++] = ((var2 & 16711935) * var12 + (var14 & 16711935) * var13
               & -16711936) + (
-              (var2 & '\uff00') * var12 + (var14 & '\uff00') * var13 & 16711680)
+              (var2 & 0xff00) * var12 + (var14 & 0xff00) * var13 & 16711680)
               >>> 8;
         }
       }
@@ -4122,7 +4122,7 @@ public class GlobalStatics_6 {
         int var15 = var0[var4];
         var0[var4++] = ((var14 & 16711935) * var12 + (var15 & 16711935) * var13
             & -16711936) + (
-            (var14 & '\uff00') * var12 + (var15 & '\uff00') * var13 & 16711680)
+            (var14 & 0xff00) * var12 + (var15 & 0xff00) * var13 & 16711680)
             >>> 8;
       }
 
@@ -4151,7 +4151,7 @@ public class GlobalStatics_6 {
           int var18 = var0[var5];
           var0[var5++] = ((var2 & 16711935) * var16 + (var18 & 16711935) * var17
               & -16711936) + (
-              (var2 & '\uff00') * var16 + (var18 & '\uff00') * var17 & 16711680)
+              (var2 & 0xff00) * var16 + (var18 & 0xff00) * var17 & 16711680)
               >>> 8;
         }
 

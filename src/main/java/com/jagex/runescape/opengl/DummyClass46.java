@@ -295,7 +295,7 @@ public final class DummyClass46 {
             if ((var13 & 255) == 0) {
               DummyClass46.anIntArrayArrayArray1027[var4][var12][var8] =
                   var13 | var0 + 1;
-            } else if ((var13 & '\uff00') == 0) {
+            } else if ((var13 & 0xff00) == 0) {
               DummyClass46.anIntArrayArrayArray1027[var4][var12][var8] =
                   var13 | var0 + 1 << 8;
             } else if ((var13 & 16711680) == 0) {

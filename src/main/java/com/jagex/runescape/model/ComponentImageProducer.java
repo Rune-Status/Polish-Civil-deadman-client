@@ -34,7 +34,7 @@ public final class ComponentImageProducer extends AbstractImageProducer {
     this.anInt2012 = var3;
     DataBufferInt var5 = new DataBufferInt(this.anIntArray2007,
         this.anIntArray2007.length);
-    DirectColorModel var6 = new DirectColorModel(32, 16711680, '\uff00', 255);
+    DirectColorModel var6 = new DirectColorModel(32, 16711680, 0xff00, 255);
     WritableRaster var7 =
       Raster.createWritableRaster(var6.createCompatibleSampleModel(
           this.anInt2012,

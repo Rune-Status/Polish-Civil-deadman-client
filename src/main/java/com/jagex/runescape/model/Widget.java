@@ -520,12 +520,12 @@ public final class Widget {
         this.anInt202 = 1;
         this.anInt201 = var2.readUnsignedShort();
         this.anInt294 = 1;
-        if (this.anInt201 == '\uffff') {
+        if (this.anInt201 == 0xffff) {
           this.anInt201 = -1;
         }
 
         this.anInt196 = var2.readUnsignedShort();
-        if (this.anInt196 == '\uffff') {
+        if (this.anInt196 == 0xffff) {
           this.anInt196 = -1;
         }
 
@@ -535,7 +535,7 @@ public final class Widget {
         }
 
         this.anInt198 = var2.readUnsignedShort();
-        if (this.anInt198 == '\uffff') {
+        if (this.anInt198 == 0xffff) {
           this.anInt198 = -1;
         }
 
@@ -772,7 +772,7 @@ public final class Widget {
                   return null;
                 } else if (var7 != null) {
                   int var15 = this.anInt201 >>> 16;
-                  int var11 = this.anInt201 & '\uffff';
+                  int var11 = this.anInt201 & 0xffff;
                   int var12 = this.anInt265;
                   AbstractModel var13 =
                     var7.method1157(var1, var12, var15, var5, var2, var3, var11, -2012759707);
@@ -960,7 +960,7 @@ public final class Widget {
         this.rotationZ = var2.readUnsignedShort();
         this.anInt164 = var2.readUnsignedShort();
         this.anInt305 = var2.readUnsignedShort();
-        if (this.anInt305 == '\uffff') {
+        if (this.anInt305 == 0xffff) {
           this.anInt305 = -1;
         }
 
@@ -1066,12 +1066,12 @@ public final class Widget {
           var8 = -1;
         }
 
-        if (this.anInt266 == '\uffff') {
+        if (this.anInt266 == 0xffff) {
           this.anInt266 = -1;
         }
 
         this.anInt238 = var2.readUnsignedShort();
-        if (this.anInt238 == '\uffff') {
+        if (this.anInt238 == 0xffff) {
           this.anInt238 = -1;
         }
       }
@@ -1080,17 +1080,17 @@ public final class Widget {
       this.anObjectArray159 = this.method862(-65536, var2);
       this.anObjectArray248 = this.method862(var1 - 65535, var2);
       this.anObjectArray281 = this.method862(-65536, var2);
-      this.anObjectArray303 = this.method862(var1 ^ '\uffff', var2);
+      this.anObjectArray303 = this.method862(var1 ^ 0xffff, var2);
       this.anObjectArray203 = this.method862(-65536, var2);
-      this.anObjectArray282 = this.method862(var1 ^ '\uffff', var2);
+      this.anObjectArray282 = this.method862(var1 ^ 0xffff, var2);
       this.anObjectArray174 = this.method862(var1 - 65535, var2);
       this.anObjectArray158 = this.method862(-65536, var2);
       this.anObjectArray269 = this.method862(-65536, var2);
-      this.anObjectArray314 = this.method862(var1 ^ '\uffff', var2);
+      this.anObjectArray314 = this.method862(var1 ^ 0xffff, var2);
       this.anObjectArray276 = this.method862(-65536, var2);
       this.anObjectArray165 = this.method862(-65536, var2);
-      this.anObjectArray170 = this.method862(var1 ^ '\uffff', var2);
-      this.anObjectArray239 = this.method862(var1 ^ '\uffff', var2);
+      this.anObjectArray170 = this.method862(var1 ^ 0xffff, var2);
+      this.anObjectArray239 = this.method862(var1 ^ 0xffff, var2);
       this.anObjectArray180 = this.method862(-65536, var2);
       this.anObjectArray295 = this.method862(-65536, var2);
       this.anObjectArray229 = this.method862(-65536, var2);

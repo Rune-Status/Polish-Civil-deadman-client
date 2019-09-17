@@ -91,7 +91,7 @@ public final class SomethingFont {
             int var13 = var1[var5];
             var1[var5++] =
               ((var3 & 16711935) * var12 + (var13 & 16711935) * (256 - var12) & -16711936) + (
-                (var3 & '\uff00') * var12 + (var13 & '\uff00') * (256 - var12) & 16711680) >> 8;
+                (var3 & 0xff00) * var12 + (var13 & 0xff00) * (256 - var12) & 16711680) >> 8;
           }
         } else {
           ++var5;

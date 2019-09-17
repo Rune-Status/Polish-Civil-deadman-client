@@ -120,9 +120,9 @@ public final class SoftwareModel extends AbstractModel {
       int var11;
       for (var11 = 0; var11 < var1.anInt2862; ++var11) {
         if (var16[var11] > 0 && var1.aByteArray2857[var11] == 0) {
-          this.anIntArray3882[var17] = var1.aShortArray2884[var11] & '\uffff';
-          this.anIntArray3890[var17] = var1.aShortArray2846[var11] & '\uffff';
-          this.anIntArray3881[var17] = var1.aShortArray2891[var11] & '\uffff';
+          this.anIntArray3882[var17] = var1.aShortArray2884[var11] & 0xffff;
+          this.anIntArray3890[var17] = var1.aShortArray2846[var11] & 0xffff;
+          this.anIntArray3881[var17] = var1.aShortArray2891[var11] & 0xffff;
           var16[var11] = var17++;
         } else {
           var16[var11] = -1;
@@ -180,7 +180,7 @@ public final class SoftwareModel extends AbstractModel {
       FaceNormal var20;
       if (var12 == -1) {
         if (var18 == 0) {
-          int var15 = var1.triangleColors[var9] & '\uffff';
+          int var15 = var1.triangleColors[var9] & 0xffff;
           if (var1.aClass50Array2883 != null
               && var1.aClass50Array2883[this.anIntArray3901[var9]] != null) {
             var13 = var1.aClass50Array2883[this.anIntArray3901[var9]];
@@ -224,7 +224,7 @@ public final class SoftwareModel extends AbstractModel {
                   + var8 / 2) << 17;
           this.anIntArray3898[var9] =
               var14 | GlobalStatics_1
-                  .repackHSL(var1.triangleColors[var9] & '\uffff', var14 >> 17);
+                  .repackHSL(var1.triangleColors[var9] & 0xffff, var14 >> 17);
           this.anIntArray3896[var9] = -1;
         } else if (var18 == 3) {
           this.anIntArray3898[var9] = 128;
@@ -498,7 +498,7 @@ public final class SoftwareModel extends AbstractModel {
             GlobalStatics_1.anIntArray3943[var2],
             GlobalStatics_1.anIntArray3943[var3],
             GlobalStatics_1.anIntArray3943[var4],
-            GLStatics.hslTable[this.anIntArray3898[var1] & '\uffff']);
+            GLStatics.hslTable[this.anIntArray3898[var1] & 0xffff]);
       } else {
         DummyClass40.method1154(GlobalStatics_1.anIntArray3932[var2],
             GlobalStatics_1.anIntArray3932[var3],
@@ -506,9 +506,9 @@ public final class SoftwareModel extends AbstractModel {
             GlobalStatics_1.anIntArray3943[var2],
             GlobalStatics_1.anIntArray3943[var3],
             GlobalStatics_1.anIntArray3943[var4],
-            this.anIntArray3898[var1] & '\uffff',
-            this.anIntArray3874[var1] & '\uffff',
-            this.anIntArray3896[var1] & '\uffff');
+            this.anIntArray3898[var1] & 0xffff,
+            this.anIntArray3874[var1] & 0xffff,
+            this.anIntArray3896[var1] & 0xffff);
       }
 
     }
@@ -519,7 +519,7 @@ public final class SoftwareModel extends AbstractModel {
       short var3 =
           this.aShortArray3908 != null ? this.aShortArray3908[var4] : -1;
       if (var3 == -1) {
-        int var1 = this.aShortArray3869[var4] & '\uffff';
+        int var1 = this.aShortArray3869[var4] & 0xffff;
         int var2;
         if (this.anIntArray3896[var4] == -1) {
           var2 = this.anIntArray3898[var4] & -131072;
@@ -830,11 +830,11 @@ public final class SoftwareModel extends AbstractModel {
       GlobalStatics_1.anIntArray3919[var4] = GlobalStatics_1.anIntArray3943[var5];
       GlobalStatics_1.anIntArray3925[var4] = GlobalStatics_1.anIntArray3932[var5];
       GlobalStatics_1.anIntArray3936[var4++] =
-          this.anIntArray3898[var1] & '\uffff';
+          this.anIntArray3898[var1] & 0xffff;
     } else {
       var11 = GlobalStatics_1.anIntArray3948[var5];
       var12 = GlobalStatics_1.anIntArray3928[var5];
-      var13 = this.anIntArray3898[var1] & '\uffff';
+      var13 = this.anIntArray3898[var1] & 0xffff;
       if (var10 >= 50) {
         var14 = (50 - var8) * DummyClass40.anIntArray841[var10 - var8];
         GlobalStatics_1.anIntArray3919[var4] =
@@ -846,7 +846,7 @@ public final class SoftwareModel extends AbstractModel {
                 (var12 + ((GlobalStatics_1.anIntArray3928[var7] - var12) * var14
                     >> 16) << 9) / 50;
         GlobalStatics_1.anIntArray3936[var4++] =
-            var13 + (((this.anIntArray3896[var1] & '\uffff') - var13) * var14
+            var13 + (((this.anIntArray3896[var1] & 0xffff) - var13) * var14
                 >> 16);
       }
 
@@ -861,7 +861,7 @@ public final class SoftwareModel extends AbstractModel {
                 (var12 + ((GlobalStatics_1.anIntArray3928[var6] - var12) * var14
                     >> 16) << 9) / 50;
         GlobalStatics_1.anIntArray3936[var4++] =
-            var13 + (((this.anIntArray3874[var1] & '\uffff') - var13) * var14
+            var13 + (((this.anIntArray3874[var1] & 0xffff) - var13) * var14
                 >> 16);
       }
     }
@@ -870,11 +870,11 @@ public final class SoftwareModel extends AbstractModel {
       GlobalStatics_1.anIntArray3919[var4] = GlobalStatics_1.anIntArray3943[var6];
       GlobalStatics_1.anIntArray3925[var4] = GlobalStatics_1.anIntArray3932[var6];
       GlobalStatics_1.anIntArray3936[var4++] =
-          this.anIntArray3874[var1] & '\uffff';
+          this.anIntArray3874[var1] & 0xffff;
     } else {
       var11 = GlobalStatics_1.anIntArray3948[var6];
       var12 = GlobalStatics_1.anIntArray3928[var6];
-      var13 = this.anIntArray3874[var1] & '\uffff';
+      var13 = this.anIntArray3874[var1] & 0xffff;
       if (var8 >= 50) {
         var14 = (50 - var9) * DummyClass40.anIntArray841[var8 - var9];
         GlobalStatics_1.anIntArray3919[var4] =
@@ -886,7 +886,7 @@ public final class SoftwareModel extends AbstractModel {
                 (var12 + ((GlobalStatics_1.anIntArray3928[var5] - var12) * var14
                     >> 16) << 9) / 50;
         GlobalStatics_1.anIntArray3936[var4++] =
-            var13 + (((this.anIntArray3898[var1] & '\uffff') - var13) * var14
+            var13 + (((this.anIntArray3898[var1] & 0xffff) - var13) * var14
                 >> 16);
       }
 
@@ -901,7 +901,7 @@ public final class SoftwareModel extends AbstractModel {
                 (var12 + ((GlobalStatics_1.anIntArray3928[var7] - var12) * var14
                     >> 16) << 9) / 50;
         GlobalStatics_1.anIntArray3936[var4++] =
-            var13 + (((this.anIntArray3896[var1] & '\uffff') - var13) * var14
+            var13 + (((this.anIntArray3896[var1] & 0xffff) - var13) * var14
                 >> 16);
       }
     }
@@ -910,11 +910,11 @@ public final class SoftwareModel extends AbstractModel {
       GlobalStatics_1.anIntArray3919[var4] = GlobalStatics_1.anIntArray3943[var7];
       GlobalStatics_1.anIntArray3925[var4] = GlobalStatics_1.anIntArray3932[var7];
       GlobalStatics_1.anIntArray3936[var4++] =
-          this.anIntArray3896[var1] & '\uffff';
+          this.anIntArray3896[var1] & 0xffff;
     } else {
       var11 = GlobalStatics_1.anIntArray3948[var7];
       var12 = GlobalStatics_1.anIntArray3928[var7];
-      var13 = this.anIntArray3896[var1] & '\uffff';
+      var13 = this.anIntArray3896[var1] & 0xffff;
       if (var9 >= 50) {
         var14 = (50 - var10) * DummyClass40.anIntArray841[var9 - var10];
         GlobalStatics_1.anIntArray3919[var4] =
@@ -926,7 +926,7 @@ public final class SoftwareModel extends AbstractModel {
                 (var12 + ((GlobalStatics_1.anIntArray3928[var6] - var12) * var14
                     >> 16) << 9) / 50;
         GlobalStatics_1.anIntArray3936[var4++] =
-            var13 + (((this.anIntArray3874[var1] & '\uffff') - var13) * var14
+            var13 + (((this.anIntArray3874[var1] & 0xffff) - var13) * var14
                 >> 16);
       }
 
@@ -941,7 +941,7 @@ public final class SoftwareModel extends AbstractModel {
                 (var12 + ((GlobalStatics_1.anIntArray3928[var5] - var12) * var14
                     >> 16) << 9) / 50;
         GlobalStatics_1.anIntArray3936[var4++] =
-            var13 + (((this.anIntArray3898[var1] & '\uffff') - var13) * var14
+            var13 + (((this.anIntArray3898[var1] & 0xffff) - var13) * var14
                 >> 16);
       }
     }
@@ -1007,7 +1007,7 @@ public final class SoftwareModel extends AbstractModel {
         }
       } else if (this.anIntArray3896[var1] == -1) {
         DummyClass40.method1144(var14, var15, var16, var11, var12, var13,
-            GLStatics.hslTable[this.anIntArray3898[var1] & '\uffff']);
+            GLStatics.hslTable[this.anIntArray3898[var1] & 0xffff]);
       } else {
         DummyClass40.method1154(var14, var15, var16, var11, var12, var13,
             GlobalStatics_1.anIntArray3936[0],
@@ -1097,7 +1097,7 @@ public final class SoftwareModel extends AbstractModel {
                   GlobalStatics_1.anIntArray3921[var19], var21);
         }
       } else if (this.anIntArray3896[var1] == -1) {
-        var17 = GLStatics.hslTable[this.anIntArray3898[var1] & '\uffff'];
+        var17 = GLStatics.hslTable[this.anIntArray3898[var1] & 0xffff];
         DummyClass40
             .method1144(var14, var15, var16, var11, var12, var13, var17);
         DummyClass40
@@ -1353,7 +1353,7 @@ public final class SoftwareModel extends AbstractModel {
 
         } else if (var1 == 7) {
           for (var5 = 0; var5 < this.anInt3889; ++var5) {
-            var6 = this.aShortArray3869[var5] & '\uffff';
+            var6 = this.aShortArray3869[var5] & 0xffff;
             var7 = var6 >> 10 & 63;
             var8 = var6 >> 7 & 7;
             int var9 = var6 & 127;
@@ -1588,7 +1588,7 @@ public final class SoftwareModel extends AbstractModel {
 
                 for (var11 = 0; var11 < var10.length; ++var11) {
                   var12 = var10[var11];
-                  var13 = this.aShortArray3869[var12] & '\uffff';
+                  var13 = this.aShortArray3869[var12] & 0xffff;
                   var14 = var13 >> 10 & 63;
                   var15 = var13 >> 7 & 7;
                   int var16 = var13 & 127;
@@ -2427,7 +2427,7 @@ public final class SoftwareModel extends AbstractModel {
                   var14 = var12[var13];
                   if (this.aShortArray3871
                       == null || (var7 & this.aShortArray3871[var14]) != 0) {
-                    var15 = this.aShortArray3869[var14] & '\uffff';
+                    var15 = this.aShortArray3869[var14] & 0xffff;
                     var16 = var15 >> 10 & 63;
                     var17 = var15 >> 7 & 7;
                     var18 = var15 & 127;

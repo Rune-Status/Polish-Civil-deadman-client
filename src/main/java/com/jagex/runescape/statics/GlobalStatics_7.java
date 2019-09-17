@@ -1058,7 +1058,7 @@ public class GlobalStatics_7 {
                   var20 = 0;
                 }
 
-                var21 = (896 & var18) + (var18 + var4 & '\ufc00') + var20;
+                var21 = (896 & var18) + (var18 + var4 & 0xfc00) + var20;
                 var19 = GLStatics.hslTable[GlobalStatics_6
                     .repackHSL(96, true, var21)];
               }
@@ -1192,7 +1192,7 @@ public class GlobalStatics_7 {
                     }
 
                     var31 =
-                        (var28 & 896) + ('\ufc00' & var28 + var4) + var55;
+                        (var28 & 896) + (0xfc00 & var28 + var4) + var55;
                     var29 = GLStatics.hslTable[com.jagex.runescape.statics.GlobalStatics_0
                         .method729((byte) -85, var31, 96)];
                   }
@@ -1200,7 +1200,7 @@ public class GlobalStatics_7 {
                   var28 = -1;
                   var29 = GLStatics.hslTable[com.jagex.runescape.statics.GlobalStatics_0
                       .method729((byte) -126,
-                          GLStatics.textureCache.method15(var27, '\uffff'),
+                          GLStatics.textureCache.method15(var27, 0xffff),
                           96)];
                 }
 
@@ -1216,7 +1216,7 @@ public class GlobalStatics_7 {
                   }
 
                   int var32 =
-                      (896 & var55) + ('\ufc00' & var55 + var4) + var31;
+                      (896 & var55) + (0xfc00 & var55 + var4) + var31;
                   var29 = GLStatics.hslTable[com.jagex.runescape.statics.GlobalStatics_0
                       .method729((byte) -101, var32, 96)];
                 }
@@ -1910,7 +1910,7 @@ public class GlobalStatics_7 {
       GlobalStatics_7.getWidget((byte) 87, 19);
     }
 
-    int var3 = '\uffff' & var1;
+    int var3 = 0xffff & var1;
     if (GlobalStatics_9.aClass11ArrayArray1834[var2] == null
         || GlobalStatics_9.aClass11ArrayArray1834[var2][var3] == null) {
       boolean var4 = GlobalStatics_11.method57(var2, 104);

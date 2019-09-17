@@ -92,7 +92,7 @@ public final class DirectImageProducer extends AbstractImageProducer
     this.anInt2011 = var1;
       this.anIntArray2007 = new int[var3 * var1 + 1];
       this.anInt2012 = var3;
-      this.aColorModel2979 = new DirectColorModel(32, 16711680, '\uff00', 255);
+      this.aColorModel2979 = new DirectColorModel(32, 16711680, 0xff00, 255);
       this.anImage2009 = var4.createImage(this);
       this.method2190(19661184);
       var4.prepareImage(this.anImage2009, this);

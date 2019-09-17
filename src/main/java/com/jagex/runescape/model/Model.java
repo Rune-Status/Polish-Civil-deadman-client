@@ -1809,9 +1809,9 @@ public final class Model extends SceneNode {
       for (var43 = 0; var43 < var10; ++var43) {
         var44 = this.aByteArray2866[var43] & 255;
         if (var44 != 255) {
-          if ((this.aShortArray2884[var44] & '\uffff') == this.v0[var43]
-            && (this.aShortArray2846[var44] & '\uffff') == this.v1[var43]
-            && (this.aShortArray2891[var44] & '\uffff') == this.v2[var43]) {
+          if ((this.aShortArray2884[var44] & 0xffff) == this.v0[var43]
+            && (this.aShortArray2846[var44] & 0xffff) == this.v1[var43]
+            && (this.aShortArray2891[var44] & 0xffff) == this.v2[var43]) {
             this.aByteArray2866[var43] = -1;
           } else {
             var46 = true;

@@ -60,7 +60,7 @@ public class GlDirectColorSprite extends AbstractDirectColorSprite {
       var3.initializeParameters(1);
       GlRenderer.bindTexture(this.textureId);
       this.initializeParameters(1);
-      GlRenderer.GL.glActiveTexture('\u84c1');
+      GlRenderer.GL.glActiveTexture(0x84c1);
       GlRenderer.GL.glEnable(GL.GL_TEXTURE_2D);
       GlRenderer.GL.glBindTexture(GL.GL_TEXTURE_2D, var3.textureId);
       GlRenderer.GL.glTexEnvi(8960, 0x8571, 7681);
@@ -77,18 +77,18 @@ public class GlDirectColorSprite extends AbstractDirectColorSprite {
       GlRenderer.GL.glColor4f(1.0F, 1.0F, 1.0F, 1.0F);
       float var9 = (float) this.anInt3707 / this.anInt4075;
       float var10 = (float) this.anInt3696 / this.anInt4079;
-      GlRenderer.GL.glMultiTexCoord2f('\u84c1', var7, var6);
+      GlRenderer.GL.glMultiTexCoord2f(0x84c1, var7, var6);
       GlRenderer.GL.glTexCoord2f(var9, 0.0F);
       GlRenderer.GL
           .glVertex2f(var1 + this.anInt3707, GlRenderer.viewHeight - var2);
-      GlRenderer.GL.glMultiTexCoord2f('\u84c1', var5, var6);
+      GlRenderer.GL.glMultiTexCoord2f(0x84c1, var5, var6);
       GlRenderer.GL.glTexCoord2f(0.0F, 0.0F);
       GlRenderer.GL.glVertex2f(var1, GlRenderer.viewHeight - var2);
-      GlRenderer.GL.glMultiTexCoord2f('\u84c1', var5, var8);
+      GlRenderer.GL.glMultiTexCoord2f(0x84c1, var5, var8);
       GlRenderer.GL.glTexCoord2f(0.0F, var10);
       GlRenderer.GL
           .glVertex2f(var1, GlRenderer.viewHeight - (var2 + this.anInt3696));
-      GlRenderer.GL.glMultiTexCoord2f('\u84c1', var7, var8);
+      GlRenderer.GL.glMultiTexCoord2f(0x84c1, var7, var8);
       GlRenderer.GL.glTexCoord2f(var9, var10);
       GlRenderer.GL.glVertex2f(var1 + this.anInt3707,
           GlRenderer.viewHeight - (var2 + this.anInt3696));
@@ -96,7 +96,7 @@ public class GlDirectColorSprite extends AbstractDirectColorSprite {
       GlRenderer.GL.glTexEnvi(8960, 0x8571, 8448);
       GlRenderer.GL.glTexEnvi(8960, 0x8580, 5890);
       GlRenderer.GL.glDisable(GL.GL_TEXTURE_2D);
-      GlRenderer.GL.glActiveTexture('\u84c0');
+      GlRenderer.GL.glActiveTexture(0x84c0);
     }
   }
 
@@ -138,7 +138,7 @@ public class GlDirectColorSprite extends AbstractDirectColorSprite {
       sprite.initializeParameters(1);
       GlRenderer.bindTexture(this.textureId);
       this.initializeParameters(1);
-      GlRenderer.GL.glActiveTexture('\u84c1');
+      GlRenderer.GL.glActiveTexture(0x84c1);
       GlRenderer.GL.glEnable(GL.GL_TEXTURE_2D);
       GlRenderer.GL.glBindTexture(GL.GL_TEXTURE_2D, sprite.textureId);
       GlRenderer.GL.glTexEnvi(8960, 0x8571, 7681);
@@ -165,16 +165,16 @@ public class GlDirectColorSprite extends AbstractDirectColorSprite {
       GlRenderer.GL.glColor4f(1.0F, 1.0F, 1.0F, 1.0F);
       float var27 = 65536.0F * this.anInt4075;
       float var28 = 65536 * this.anInt4079;
-      GlRenderer.GL.glMultiTexCoord2f('\u84c1', var25, 0.0F);
+      GlRenderer.GL.glMultiTexCoord2f(0x84c1, var25, 0.0F);
       GlRenderer.GL.glTexCoord2f(var19 / var27, var20 / var28);
       GlRenderer.GL.glVertex2f(var1 + var3, GlRenderer.viewHeight - var2);
-      GlRenderer.GL.glMultiTexCoord2f('\u84c1', 0.0F, 0.0F);
+      GlRenderer.GL.glMultiTexCoord2f(0x84c1, 0.0F, 0.0F);
       GlRenderer.GL.glTexCoord2f(var17 / var27, var18 / var28);
       GlRenderer.GL.glVertex2f(var1, GlRenderer.viewHeight - var2);
-      GlRenderer.GL.glMultiTexCoord2f('\u84c1', 0.0F, var26);
+      GlRenderer.GL.glMultiTexCoord2f(0x84c1, 0.0F, var26);
       GlRenderer.GL.glTexCoord2f(var21 / var27, var22 / var28);
       GlRenderer.GL.glVertex2f(var1, GlRenderer.viewHeight - (var2 + var4));
-      GlRenderer.GL.glMultiTexCoord2f('\u84c1', var25, var26);
+      GlRenderer.GL.glMultiTexCoord2f(0x84c1, var25, var26);
       GlRenderer.GL.glTexCoord2f(var23 / var27, var24 / var28);
       GlRenderer.GL
           .glVertex2f(var1 + var3, GlRenderer.viewHeight - (var2 + var4));
@@ -182,7 +182,7 @@ public class GlDirectColorSprite extends AbstractDirectColorSprite {
       GlRenderer.GL.glTexEnvi(8960, 0x8571, 8448);
       GlRenderer.GL.glTexEnvi(8960, 0x8580, 5890);
       GlRenderer.GL.glDisable(GL.GL_TEXTURE_2D);
-      GlRenderer.GL.glActiveTexture('\u84c0');
+      GlRenderer.GL.glActiveTexture(0x84c0);
     }
   }
 

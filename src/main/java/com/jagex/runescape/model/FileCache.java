@@ -10,7 +10,7 @@ public final class FileCache {
   private BufferedFile aClass30_681;
   private final int anInt682;
   private BufferedFile aClass30_683;
-  private int anInt687 = '\ufde8';
+  private int anInt687 = 0xfde8;
 
 
   public FileCache(int var1, BufferedFile var2, BufferedFile var3, int var4 ) {
@@ -55,10 +55,10 @@ public final class FileCache {
           this.aClass30_683.seek(-35, 6 * var1);
           this.aClass30_683.method978(0, DummyClass11.aByteArray2040, 6, 0);
           int var5 = ((255 & DummyClass11.aByteArray2040[3]) << 16) - (
-            -(DummyClass11.aByteArray2040[4] << 8 & '\uff00') - (255
+            -(DummyClass11.aByteArray2040[4] << 8 & 0xff00) - (255
               & DummyClass11.aByteArray2040[5]));
           int var6 = 24 / ((-4 - var2) / 40);
-          int var4 = (DummyClass11.aByteArray2040[2] & 255) + ('\uff00'
+          int var4 = (DummyClass11.aByteArray2040[2] & 255) + (0xff00
             & DummyClass11.aByteArray2040[1] << 8) + (16711680
             & DummyClass11.aByteArray2040[0] << 16);
           if (this.anInt687 < var4) {
@@ -85,12 +85,12 @@ public final class FileCache {
 
               this.aClass30_681
                   .method978(0, DummyClass11.aByteArray2040, 8 + var10, 0);
-              int var11 = (DummyClass11.aByteArray2040[0] << 8 & '\uff00') + (255
+              int var11 = (DummyClass11.aByteArray2040[0] << 8 & 0xff00) + (255
                 & DummyClass11.aByteArray2040[1]);
-              int var12 = (DummyClass11.aByteArray2040[3] & 255) + ('\uff00'
+              int var12 = (DummyClass11.aByteArray2040[3] & 255) + (0xff00
                 & DummyClass11.aByteArray2040[2] << 8);
               int var14 = 255 & DummyClass11.aByteArray2040[7];
-              var13 = (DummyClass11.aByteArray2040[6] & 255) + ('\uff00'
+              var13 = (DummyClass11.aByteArray2040[6] & 255) + (0xff00
                 & DummyClass11.aByteArray2040[5] << 8) + (DummyClass11.aByteArray2040[4] << 16
                 & 16711680);
               if (var1 != var11 || var9 != var12 || this.anInt682 != var14) {
@@ -137,7 +137,7 @@ public final class FileCache {
 
             this.aClass30_683.seek(-116, 6 * var3);
             this.aClass30_683.method978(0, DummyClass11.aByteArray2040, 6, 0);
-            var7 = (16711680 & DummyClass11.aByteArray2040[3] << 16) + ('\uff00'
+            var7 = (16711680 & DummyClass11.aByteArray2040[3] << 16) + (0xff00
               & DummyClass11.aByteArray2040[4] << 8) + (DummyClass11.aByteArray2040[5] & 255);
             if (var7 <= 0 || this.aClass30_681.method976(0) / 520L < var7) {
               var10000 = false;
@@ -182,7 +182,7 @@ public final class FileCache {
                     break label146;
                   }
 
-                  var10 = ((DummyClass11.aByteArray2040[4] & 255) << 16) + ('\uff00'
+                  var10 = ((DummyClass11.aByteArray2040[4] & 255) << 16) + (0xff00
                     & DummyClass11.aByteArray2040[5] << 8) + (DummyClass11.aByteArray2040[6]
                     & 255);
                   var11 =
@@ -191,7 +191,7 @@ public final class FileCache {
                   int var13 = 255 & DummyClass11.aByteArray2040[7];
                   int var12 =
                     (DummyClass11.aByteArray2040[3] & 255) + (DummyClass11.aByteArray2040[2] << 8
-                      & '\uff00');
+                      & 0xff00);
                   if (var11 != var3 || var9 != var12 || this.anInt682 != var13) {
                     var10000 = false;
                     return false;

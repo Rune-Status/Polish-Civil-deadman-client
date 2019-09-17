@@ -2507,8 +2507,8 @@ public class GlobalStatics_8 {
           (-16711936 & var13 * (GlobalStatics_9.anInt1345 & 16711935)
               + (16711935 & GlobalStatics_5.anInt1971) * var12) + (
               16711680
-                  & var12 * (GlobalStatics_5.anInt1971 & '\uff00')
-                  + ('\uff00' & GlobalStatics_9.anInt1345) * var13) >> 8;
+                  & var12 * (GlobalStatics_5.anInt1971 & 0xff00)
+                  + (0xff00 & GlobalStatics_9.anInt1345) * var13) >> 8;
       GlobalStatics_9.fogColor = GlEnvironment.defaultFogColor;
       System.out
           .println("GlobalStatics_9.fogColor = " + GlobalStatics_9.fogColor);
@@ -2524,8 +2524,8 @@ public class GlobalStatics_8 {
       GlobalStatics_9.aFloat319 =
           var15 * GlobalStatics_10.aFloat246 + var14 * DummyClass31.aFloat1475;
       GlobalStatics_8.sunColor =
-          (16711680 & (DummyClass44.anInt932 & '\uff00') * var13 + var12 * (
-              GlobalStatics_10.anInt4037 & '\uff00')) + (
+          (16711680 & (DummyClass44.anInt932 & 0xff00) * var13 + var12 * (
+              GlobalStatics_10.anInt4037 & 0xff00)) + (
               (16711935 & GlobalStatics_10.anInt4037) * var12 +
                   (DummyClass44.anInt932 & 16711935)
                       * var13 & -16711936) >> 8;
@@ -3413,7 +3413,7 @@ public class GlobalStatics_8 {
         short var39 = (short) (
             ((var6 & 127) * var25 + (127 & var4) * var24 & 32512) + (
                 var25 * (var6 & 896) + var24 * (var4 & 896) & 229376) + (
-                var24 * (var4 & '\ufc00') + ('\ufc00' & var6) * var25
+                var24 * (var4 & 0xfc00) + (0xfc00 & var6) * var25
                     & 16515072) >> 8);
 
         for (var28 = 0; var28 < var17; ++var28) {
@@ -3449,7 +3449,7 @@ public class GlobalStatics_8 {
       if (var2 != null) {
         var10 = var2.anIntArray1851[var10];
         var40 = GlobalStatics_6.method133(var10 >> 16, 0);
-        var10 &= '\uffff';
+        var10 &= 0xffff;
       }
 
       var21 = var32;
@@ -3557,7 +3557,7 @@ public class GlobalStatics_8 {
   }
 
   public static void method1959(int var0, int var1, int var2, boolean var3) {
-    if (var2 >= 8000 && var2 <= '\ubb80') {
+    if (var2 >= 8000 && var2 <= 0xbb80) {
       GlobalStatics_6.anInt3507 = var1;
       if (var0 != 256) {
         GlobalStatics_8.OPTION_DROP = null;

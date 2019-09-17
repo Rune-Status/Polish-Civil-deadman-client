@@ -83,7 +83,7 @@ public final class TextureSampler36 extends AbstractTextureSampler {
           for (var8 = 0; var8 < GlobalStatics_9.anInt1559; ++var8) {
             var9 = this.anIntArray3425[var4++];
             var7[var8] = var9 << 4 & 4080;
-            var6[var8] = (var9 & (int) '\uff00') >> 4;
+            var6[var8] = (var9 & (int) 0xff00) >> 4;
             var5[var8] = (var9 & 16711680) >> 12;
           }
         } else {
@@ -91,7 +91,7 @@ public final class TextureSampler36 extends AbstractTextureSampler {
             var9 = this.anInt3431 * var8 / GlobalStatics_9.anInt1559;
             int var10 = this.anIntArray3425[var4 + var9];
             var7[var8] = var10 << 4 & 4080;
-            var6[var8] = ((int) '\uff00' & var10) >> 4;
+            var6[var8] = ((int) 0xff00 & var10) >> 4;
             var5[var8] = var10 >> 12 & 4080;
           }
         }

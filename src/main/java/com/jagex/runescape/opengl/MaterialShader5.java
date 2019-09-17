@@ -85,7 +85,7 @@ public final class MaterialShader5 implements MaterialShader {
       this.aFloatArray2174[0] = 0.0F;
     }
 
-    GlRenderer.GL.glActiveTexture('\u84c1');
+    GlRenderer.GL.glActiveTexture(0x84c1);
     GlRenderer.GL.glMatrixMode(5888);
     GlRenderer.GL.glPushMatrix();
     GlRenderer.GL.glLoadIdentity();
@@ -116,7 +116,7 @@ public final class MaterialShader5 implements MaterialShader {
       GlRenderer.GL.glBindTexture(GL.GL_TEXTURE_2D, SomethingGl.anIntArray1223[var7 % 64]);
     }
 
-    GlRenderer.GL.glActiveTexture('\u84c0');
+    GlRenderer.GL.glActiveTexture(0x84c0);
   }
 
   public int method24() {
@@ -126,12 +126,12 @@ public final class MaterialShader5 implements MaterialShader {
   private void method1631(int var1) {
     this.anInt2173 = GlRenderer.GL.glGenLists(var1);
     GlRenderer.GL.glNewList(this.anInt2173, 4864);
-    GlRenderer.GL.glActiveTexture('\u84c1');
+    GlRenderer.GL.glActiveTexture(0x84c1);
     if (SomethingGl.aBoolean1227) {
-      GlRenderer.GL.glBindTexture('\u806f', SomethingGl.anInt1229);
+      GlRenderer.GL.glBindTexture(0x806f, SomethingGl.anInt1229);
       GlRenderer.GL.glTexGeni(8194, 9472, 9217);
       GlRenderer.GL.glEnable(3170);
-      GlRenderer.GL.glEnable('\u806f');
+      GlRenderer.GL.glEnable(0x806f);
     } else {
       GlRenderer.GL.glEnable(GL.GL_TEXTURE_2D);
     }
@@ -140,12 +140,12 @@ public final class MaterialShader5 implements MaterialShader {
     GlRenderer.GL.glTexGeni(8193, 9472, 9216);
     GlRenderer.GL.glEnable(3168);
     GlRenderer.GL.glEnable(3169);
-    GlRenderer.GL.glActiveTexture('\u84c0');
+    GlRenderer.GL.glActiveTexture(0x84c0);
     GlRenderer.GL.glEndList();
     GlRenderer.GL.glNewList(this.anInt2173 + 1, 4864);
-    GlRenderer.GL.glActiveTexture('\u84c1');
+    GlRenderer.GL.glActiveTexture(0x84c1);
     if (SomethingGl.aBoolean1227) {
-      GlRenderer.GL.glDisable('\u806f');
+      GlRenderer.GL.glDisable(0x806f);
       GlRenderer.GL.glDisable(3170);
     } else {
       GlRenderer.GL.glDisable(GL.GL_TEXTURE_2D);
@@ -153,7 +153,7 @@ public final class MaterialShader5 implements MaterialShader {
 
     GlRenderer.GL.glDisable(3168);
     GlRenderer.GL.glDisable(3169);
-    GlRenderer.GL.glActiveTexture('\u84c0');
+    GlRenderer.GL.glActiveTexture(0x84c0);
     GlRenderer.GL.glEndList();
   }
 
@@ -219,9 +219,9 @@ public final class MaterialShader5 implements MaterialShader {
         DummyClass36.aString2611 = new String(var3, 0, var3.length);
         GlobalStatics_7.anInt2451 = var2.anInt2621;
         if (GlobalStatics_4.usageLocation != 0) {
-          DummyClass11.anInt2036 = '\u9c40' + GlobalStatics_7.anInt2451;
+          DummyClass11.anInt2036 = 0x9c40 + GlobalStatics_7.anInt2451;
           GlobalStatics_9.anInt2894 = DummyClass11.anInt2036;
-          GlobalStatics_9.anInt506 = GlobalStatics_7.anInt2451 + '\uc350';
+          GlobalStatics_9.anInt506 = GlobalStatics_7.anInt2451 + 0xc350;
         }
 
         return true;

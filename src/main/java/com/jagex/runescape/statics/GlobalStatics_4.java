@@ -123,7 +123,7 @@ public class GlobalStatics_4 {
       for (int var2 = 0; var2 <= var1; ++var2) {
         GlobalStatics_10.aByteArray1364[var0++] = (byte) (int) (255.0D / Math
             .sqrt(
-                ('\uffff' + var2 * var2 + var1 * var1) / 65535.0F));
+                (0xffff + var2 * var2 + var1 * var1) / 65535.0F));
       }
     }
 
@@ -430,7 +430,7 @@ public class GlobalStatics_4 {
           GlobalStatics_10.aClass3_Sub28_Sub16_Sub2_1381.pixels[var6++] =
               (var13 * (var11 & 16711935)
                   + (16711935 & var10) * var12 & -16711936)
-                  + ((var10 & (int) '\uff00') * var12 + ((int) '\uff00' & var11) * var13
+                  + ((var10 & (int) 0xff00) * var12 + ((int) 0xff00 & var11) * var13
                   & 16711680)
                   >> 8;
         }

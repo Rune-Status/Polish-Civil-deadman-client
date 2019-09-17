@@ -19,7 +19,7 @@ public final class MidiSomething {
 
   private SomethingMusic0 method1412(int[] var1, int var2, int var3, int var4) {
     if (var2 == 31947) {
-        int var5 = var4 ^ (var3 >>> 12 | var3 << 4 & '\ufff3');
+        int var5 = var4 ^ (var3 >>> 12 | var3 << 4 & 0xfff3);
         var5 |= var3 << 16;
         long var6 = var5;
         SomethingMusic0 var8 = (SomethingMusic0) this.aClass130_1159.get(var6);
@@ -64,7 +64,7 @@ public final class MidiSomething {
   }
 
   private SomethingMusic0 method1415(int var1, int[] var2, int var3, byte var4) {
-    int var5 = var3 ^ (var1 >>> 12 | '\ufff3' & var1 << 4);
+    int var5 = var3 ^ (var1 >>> 12 | 0xfff3 & var1 << 4);
       var5 |= var1 << 16;
       long var6 = var5 ^ 4294967296L;
       SomethingMusic0 var8 = (SomethingMusic0) this.aClass130_1159.get(var6);

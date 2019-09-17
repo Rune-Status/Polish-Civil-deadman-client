@@ -20,9 +20,9 @@ public final class DummyClass34 {
 
   public static int perlinNoise(int var0, int var2) {
     int var3 =
-        -128 + DummyClass45.method1234(4, var2 + '\ub135', var0 + 91923, 512)
+        -128 + DummyClass45.method1234(4, var2 + 0xb135, var0 + 91923, 512)
             + (
-            DummyClass45.method1234(2, var2 + 10294, '\u93bd' + var0, 512) - 128
+            DummyClass45.method1234(2, var2 + 10294, 0x93bd + var0, 512) - 128
                 >> 1) + (
             DummyClass45.method1234(1, var2, var0, 512) - 128 >> 2);
     var3 = 35 + (int) (0.3D * var3);
@@ -39,7 +39,7 @@ public final class DummyClass34 {
 
   public static void method994(int var0) {
     DummyClass34.aClass94_591 = null;
-    if (var0 == '\u93bd') {
+    if (var0 == 0x93bd) {
       DummyClass34.aClass94_592 = null;
       DummyClass34.aClass94_593 = null;
     }

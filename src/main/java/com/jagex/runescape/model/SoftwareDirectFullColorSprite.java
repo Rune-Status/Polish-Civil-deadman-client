@@ -62,7 +62,7 @@ public final class SoftwareDirectFullColorSprite extends SoftwareDirectColorSpri
     if (var6 != 0) {
       var1 -= this.anInt3701 << 4;
       var2 -= this.anInt3698 << 4;
-      double var7 = (var5 & '\uffff') * 9.587379924285257E-5D;
+      double var7 = (var5 & 0xffff) * 9.587379924285257E-5D;
       int var9 = (int) Math.floor(Math.sin(var7) * var6 + 0.5D);
       int var10 = (int) Math.floor(Math.cos(var7) * var6 + 0.5D);
       int var11 = -var1 * var10 - var2 * var9;
@@ -193,7 +193,7 @@ public final class SoftwareDirectFullColorSprite extends SoftwareDirectColorSpri
                     var41 = 256 - var40;
                     SoftwareIndexedColorSpriteStatics.anIntArray1100[var34++] =
                       ((var38 & 16711935) * var40 + (var39 & 16711935) * var41 & -16711936) + (
-                        (var38 & '\uff00') * var40 + (var39 & '\uff00') * var41 & 16711680) >>> 8;
+                        (var38 & 0xff00) * var40 + (var39 & 0xff00) * var41 & 16711680) >>> 8;
                     ++var37;
                   }
                 }
@@ -225,7 +225,7 @@ public final class SoftwareDirectFullColorSprite extends SoftwareDirectColorSpri
                     var41 = 256 - var40;
                     SoftwareIndexedColorSpriteStatics.anIntArray1100[var34++] =
                       ((var38 & 16711935) * var40 + (var39 & 16711935) * var41 & -16711936) + (
-                        (var38 & '\uff00') * var40 + (var39 & '\uff00') * var41 & 16711680) >>> 8;
+                        (var38 & 0xff00) * var40 + (var39 & 0xff00) * var41 & 16711680) >>> 8;
                     var36 += var26;
                     ++var37;
                   }
@@ -259,7 +259,7 @@ public final class SoftwareDirectFullColorSprite extends SoftwareDirectColorSpri
                     var41 = 256 - var40;
                     SoftwareIndexedColorSpriteStatics.anIntArray1100[var34++] =
                       ((var38 & 16711935) * var40 + (var39 & 16711935) * var41 & -16711936) + (
-                        (var38 & '\uff00') * var40 + (var39 & '\uff00') * var41 & 16711680) >>> 8;
+                        (var38 & 0xff00) * var40 + (var39 & 0xff00) * var41 & 16711680) >>> 8;
                     var36 += var26;
                     ++var37;
                   }
@@ -295,7 +295,7 @@ public final class SoftwareDirectFullColorSprite extends SoftwareDirectColorSpri
                     var41 = 256 - var40;
                     SoftwareIndexedColorSpriteStatics.anIntArray1100[var34++] =
                       ((var38 & 16711935) * var40 + (var39 & 16711935) * var41 & -16711936) + (
-                        (var38 & '\uff00') * var40 + (var39 & '\uff00') * var41 & 16711680) >>> 8;
+                        (var38 & 0xff00) * var40 + (var39 & 0xff00) * var41 & 16711680) >>> 8;
                     var35 += var27;
                     ++var37;
                   }
@@ -341,7 +341,7 @@ public final class SoftwareDirectFullColorSprite extends SoftwareDirectColorSpri
                   var41 = 256 - var40;
                   SoftwareIndexedColorSpriteStatics.anIntArray1100[var34++] =
                     ((var38 & 16711935) * var40 + (var39 & 16711935) * var41 & -16711936) + (
-                      (var38 & '\uff00') * var40 + (var39 & '\uff00') * var41 & 16711680) >>> 8;
+                      (var38 & 0xff00) * var40 + (var39 & 0xff00) * var41 & 16711680) >>> 8;
                   var35 += var27;
                   var36 += var26;
                   ++var37;
@@ -388,7 +388,7 @@ public final class SoftwareDirectFullColorSprite extends SoftwareDirectColorSpri
                   var41 = 256 - var40;
                   SoftwareIndexedColorSpriteStatics.anIntArray1100[var34++] =
                     ((var38 & 16711935) * var40 + (var39 & 16711935) * var41 & -16711936) + (
-                      (var38 & '\uff00') * var40 + (var39 & '\uff00') * var41 & 16711680) >>> 8;
+                      (var38 & 0xff00) * var40 + (var39 & 0xff00) * var41 & 16711680) >>> 8;
                   var35 += var27;
                   var36 += var26;
                   ++var37;
@@ -424,7 +424,7 @@ public final class SoftwareDirectFullColorSprite extends SoftwareDirectColorSpri
                   var41 = 256 - var40;
                   SoftwareIndexedColorSpriteStatics.anIntArray1100[var34++] =
                     ((var38 & 16711935) * var40 + (var39 & 16711935) * var41 & -16711936) + (
-                      (var38 & '\uff00') * var40 + (var39 & '\uff00') * var41 & 16711680) >>> 8;
+                      (var38 & 0xff00) * var40 + (var39 & 0xff00) * var41 & 16711680) >>> 8;
                   var35 += var27;
                   ++var37;
                 }
@@ -470,7 +470,7 @@ public final class SoftwareDirectFullColorSprite extends SoftwareDirectColorSpri
                 var41 = 256 - var40;
                 SoftwareIndexedColorSpriteStatics.anIntArray1100[var34++] =
                   ((var38 & 16711935) * var40 + (var39 & 16711935) * var41 & -16711936) + (
-                    (var38 & '\uff00') * var40 + (var39 & '\uff00') * var41 & 16711680) >>> 8;
+                    (var38 & 0xff00) * var40 + (var39 & 0xff00) * var41 & 16711680) >>> 8;
                 var35 += var27;
                 var36 += var26;
                 ++var37;
@@ -517,7 +517,7 @@ public final class SoftwareDirectFullColorSprite extends SoftwareDirectColorSpri
                 var41 = 256 - var40;
                 SoftwareIndexedColorSpriteStatics.anIntArray1100[var34++] =
                   ((var38 & 16711935) * var40 + (var39 & 16711935) * var41 & -16711936) + (
-                    (var38 & '\uff00') * var40 + (var39 & '\uff00') * var41 & 16711680) >>> 8;
+                    (var38 & 0xff00) * var40 + (var39 & 0xff00) * var41 & 16711680) >>> 8;
                 var35 += var27;
                 var36 += var26;
                 ++var37;
@@ -826,7 +826,7 @@ public final class SoftwareDirectFullColorSprite extends SoftwareDirectColorSpri
           int var23 = 256 - var22;
           SoftwareIndexedColorSpriteStatics.anIntArray1100[var17++] =
             ((var20 & 16711935) * var22 + (var21 & 16711935) * var23 & -16711936) + (
-              (var20 & '\uff00') * var22 + (var21 & '\uff00') * var23 & 16711680) >>> 8;
+              (var20 & 0xff00) * var22 + (var21 & 0xff00) * var23 & 16711680) >>> 8;
           var18 += var13;
           var19 -= var12;
         }
@@ -867,7 +867,7 @@ public final class SoftwareDirectFullColorSprite extends SoftwareDirectColorSpri
           int var25 = 256 - var24;
           SoftwareIndexedColorSpriteStatics.anIntArray1100[var19++] =
             ((var22 & 16711935) * var24 + (var23 & 16711935) * var25 & -16711936) + (
-              (var22 & '\uff00') * var24 + (var23 & '\uff00') * var25 & 16711680) >>> 8;
+              (var22 & 0xff00) * var24 + (var23 & 0xff00) * var25 & 16711680) >>> 8;
           var20 += var14;
           var21 -= var13;
         }
@@ -908,7 +908,7 @@ public final class SoftwareDirectFullColorSprite extends SoftwareDirectColorSpri
           int var25 = 256 - var24;
           SoftwareIndexedColorSpriteStatics.anIntArray1100[var19++] =
             ((var22 & 16711935) * var24 + (var23 & 16711935) * var25 & -16711936) + (
-              (var22 & '\uff00') * var24 + (var23 & '\uff00') * var25 & 16711680) >>> 8;
+              (var22 & 0xff00) * var24 + (var23 & 0xff00) * var25 & 16711680) >>> 8;
           var20 += var14;
           var21 -= var13;
         }

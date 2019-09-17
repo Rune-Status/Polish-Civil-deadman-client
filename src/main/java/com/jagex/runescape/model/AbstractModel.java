@@ -134,7 +134,7 @@ public abstract class AbstractModel extends SceneNode {
 
             if (var21 != -1) {
               var31 = var9 & var1.anIntArray2455[var21];
-              if (var31 == '\uffff') {
+              if (var31 == 0xffff) {
                 this.method1891(0, var1.anIntArrayArray2460[var21], 0, 0, 0, var8);
               } else {
                 this.applyAnimationFrame(0, var1.anIntArrayArray2460[var21], 0, 0, 0,
@@ -143,7 +143,7 @@ public abstract class AbstractModel extends SceneNode {
               }
             } else if (var26 != -1) {
               var31 = var9 & var1.anIntArray2455[var26];
-              if (var31 == '\uffff') {
+              if (var31 == 0xffff) {
                 this.method1891(0, var1.anIntArrayArray2460[var26], 0, 0, 0, var8);
               } else {
                 this.applyAnimationFrame(0, var1.anIntArrayArray2460[var26], 0, 0, 0,
@@ -153,7 +153,7 @@ public abstract class AbstractModel extends SceneNode {
             }
 
             var31 = var9 & var1.anIntArray2455[var35];
-            if (var31 == '\uffff') {
+            if (var31 == 0xffff) {
               this.method1891(var17, var1.anIntArrayArray2460[var35], var28, var29,
                   var30, var8);
             } else {
@@ -173,7 +173,7 @@ public abstract class AbstractModel extends SceneNode {
           int var14;
           if (var13 != -1) {
             var14 = var9 & var1.anIntArray2455[var13];
-            if (var14 == '\uffff') {
+            if (var14 == 0xffff) {
               this.method1891(0, var1.anIntArrayArray2460[var13], 0, 0, 0, var8);
             } else {
               this.applyAnimationFrame(0, var1.anIntArrayArray2460[var13], 0, 0, 0,
@@ -183,7 +183,7 @@ public abstract class AbstractModel extends SceneNode {
           }
 
           var14 = var9 & var1.anIntArray2455[var12];
-          if (var14 == '\uffff') {
+          if (var14 == 0xffff) {
             this.method1891(var1.anIntArray2466[var12],
                 var1.anIntArrayArray2460[var12],
                 var2.aShortArray1388[var11], var2.aShortArray1396[var11],
@@ -247,7 +247,7 @@ public abstract class AbstractModel extends SceneNode {
           }
         }
 
-        this.somethingAnimation(var9, var8, var10, var5, var6, null, false, var7, '\uffff', null);
+        this.somethingAnimation(var9, var8, var10, var5, var6, null, false, var7, 0xffff, null);
         this.method1879();
       }
     }
@@ -334,10 +334,10 @@ public abstract class AbstractModel extends SceneNode {
             }
           }
 
-          this.somethingAnimation(var16, var15, var17, var5, var6, var13, false, var14, '\uffff',
+          this.somethingAnimation(var16, var15, var17, var5, var6, var13, false, var14, 0xffff,
             null);
           this.method1891(0, new int[0], 0, 0, 0, var14);
-          this.somethingAnimation(var16, var18, var19, var11, var12, var13, true, var14, '\uffff',
+          this.somethingAnimation(var16, var18, var19, var11, var12, var13, true, var14, 0xffff,
             null);
           this.method1879();
         }

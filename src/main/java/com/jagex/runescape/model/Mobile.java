@@ -413,7 +413,7 @@ public abstract class Mobile extends SceneNode {
 
         this.anInt2787 += this.anInt2754;
         if (this.anInt2787 != 0) {
-          var6 = (this.anInt2787 & '\ufff1') >> 5;
+          var6 = (this.anInt2787 & 0xfff1) >> 5;
           var7 = var1.getMinimumY() / 2;
           var1.method1897(0, -var7, 0);
           var1.method1886(var6);
@@ -513,7 +513,7 @@ public abstract class Mobile extends SceneNode {
 
         this.anInt2834 += this.anInt2830;
         if (this.anInt2834 != 0) {
-          var6 = (this.anInt2834 & '\uffe6') >> 5;
+          var6 = (this.anInt2834 & 0xffe6) >> 5;
           var7 = var1.getMinimumY() / 2;
           var1.method1897(0, -var7, 0);
           var1.method1896(var6);

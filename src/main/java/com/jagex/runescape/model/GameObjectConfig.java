@@ -133,7 +133,7 @@ public final class GameObjectConfig {
         for (int var7 = 0; this.anIntArray1487.length > var7; ++var7) {
           if (var2 == this.anIntArray1487[var7]) {
             return GlobalStatics_9.aClass153_1043.method2129((byte) 72, 0,
-                this.anIntArray1519[var7] & '\uffff');
+                this.anIntArray1519[var7] & 0xffff);
           }
         }
 
@@ -147,7 +147,7 @@ public final class GameObjectConfig {
 
         for (int var5 = 0; this.anIntArray1519.length > var5; ++var5) {
           var4 &= GlobalStatics_9.aClass153_1043.method2129((byte) 71, 0,
-            '\uffff' & this.anIntArray1519[var5]);
+            0xffff & this.anIntArray1519[var5]);
         }
 
         return var4;
@@ -204,7 +204,7 @@ public final class GameObjectConfig {
           var4 = (Model) DummyClass54.aClass93_1401.get(var8);
           if (var4 == null) {
             var4 = GlobalStatics_10
-                .getModel(GlobalStatics_9.aClass153_1043, var8 & '\uffff', 0);
+                .getModel(GlobalStatics_9.aClass153_1043, var8 & 0xffff, 0);
             if (var4 == null) {
               return null;
             }
@@ -246,7 +246,7 @@ public final class GameObjectConfig {
         var4 = (Model) DummyClass54.aClass93_1401.get(var7);
         if (var4 == null) {
           var4 = GlobalStatics_10
-              .getModel(GlobalStatics_9.aClass153_1043, var7 & '\uffff', 0);
+              .getModel(GlobalStatics_9.aClass153_1043, var7 & 0xffff, 0);
           if (var4 == null) {
             return null;
           }
@@ -637,19 +637,19 @@ public final class GameObjectConfig {
                                         var4 = -1;
                                         this.anInt1526 = var1
                                             .readUnsignedShort();
-                                        if (this.anInt1526 == '\uffff') {
+                                        if (this.anInt1526 == 0xffff) {
                                           this.anInt1526 = -1;
                                         }
 
                                         this.anInt1532 = var1
                                             .readUnsignedShort();
-                                        if (this.anInt1532 == '\uffff') {
+                                        if (this.anInt1532 == 0xffff) {
                                           this.anInt1532 = -1;
                                         }
 
                                         if (var2 == 92) {
                                           var4 = var1.readUnsignedShort();
-                                          if (var4 == '\uffff') {
+                                          if (var4 == 0xffff) {
                                             var4 = -1;
                                           }
                                         }
@@ -663,7 +663,7 @@ public final class GameObjectConfig {
                                           this.anIntArray1524[var6] = var1
                                               .readUnsignedShort();
                                           if (this.anIntArray1524[var6]
-                                              == '\uffff') {
+                                              == 0xffff) {
                                             this.anIntArray1524[var6] = -1;
                                           }
                                         }
@@ -735,7 +735,7 @@ public final class GameObjectConfig {
 
         for (int var3 = 0; this.anIntArray1519.length > var3; ++var3) {
           var2 &= GlobalStatics_9.aClass153_1043.method2129((byte) 64, 0,
-            '\uffff' & this.anIntArray1519[var3]);
+            0xffff & this.anIntArray1519[var3]);
         }
 
         return var1 || var2;
@@ -771,7 +771,7 @@ public final class GameObjectConfig {
         var5 = (GlModel) DummyClass54.aClass93_1401.get(var9);
         if (var5 == null) {
           Model var10 = GlobalStatics_10
-              .getModel(GlobalStatics_9.aClass153_1043, '\uffff' & var9, 0);
+              .getModel(GlobalStatics_9.aClass153_1043, 0xffff & var9, 0);
           if (var10 == null) {
             return null;
           }
@@ -810,7 +810,7 @@ public final class GameObjectConfig {
           for (var12 = 0; var8 > var12; ++var12) {
             var17 =
               GlobalStatics_10.getModel(GlobalStatics_9.aClass153_1043,
-                  this.anIntArray1519[var12] & '\uffff',
+                  this.anIntArray1519[var12] & 0xffff,
                 0);
             if (var17 == null) {
               return null;

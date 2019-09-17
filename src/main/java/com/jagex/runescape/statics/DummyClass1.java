@@ -135,7 +135,7 @@ public final class DummyClass1 {
           if (var4 != var1.anInt2808) {
             var1.anInt2791 = 0;
             var1.anInt2808 = var4;
-            var5 = -var1.anInt2780 + var4 & '\uffff';
+            var5 = -var1.anInt2780 + var4 & 0xffff;
             var6 = var1.anInt2821 * var1.anInt2821 / (var2.anInt369 * 2);
             int var7;
             if (var1.anInt2821 > 0 && var5 >= var6
@@ -168,7 +168,7 @@ public final class DummyClass1 {
           }
 
           if (var1.anInt2821 == 0) {
-            var5 = -var1.anInt2780 + var1.anInt2808 & '\uffff';
+            var5 = -var1.anInt2780 + var1.anInt2808 & 0xffff;
             if (var5 < var2.anInt369) {
               var1.anInt2780 = var1.anInt2808;
             } else {
@@ -222,7 +222,7 @@ public final class DummyClass1 {
           }
 
           var1.anInt2780 += var1.anInt2821;
-          var1.anInt2780 &= '\uffff';
+          var1.anInt2780 &= 0xffff;
           if (var1.anInt2821 <= 0) {
             var1.anInt2791 -= var1.anInt2821;
           } else {

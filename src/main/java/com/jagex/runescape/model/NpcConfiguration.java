@@ -377,7 +377,7 @@ public final class NpcConfiguration {
               var21 = var39.anIntArray1851[var19];
               GlobalStatics_9.aClass3_Sub28_Sub5Array3041[var17] =
                 GlobalStatics_6.method133(var21 >>> 16, 0);
-              var21 &= '\uffff';
+              var21 &= 0xffff;
               DummyClass43.anIntArray912[var17] = var21;
               if (GlobalStatics_9.aClass3_Sub28_Sub5Array3041[var17] != null) {
                 var35 |=
@@ -394,7 +394,7 @@ public final class NpcConfiguration {
                 var22 = var39.anIntArray1851[var20];
                 GlobalStatics_10.aClass3_Sub28_Sub5Array4031[var17] =
                   GlobalStatics_6.method133(var22 >>> 16, 0);
-                var22 &= '\uffff';
+                var22 &= 0xffff;
                 GlobalStatics_6.anIntArray574[var17] = var22;
                 if (GlobalStatics_10.aClass3_Sub28_Sub5Array4031[var17] != null) {
                   var35 |= GlobalStatics_10.aClass3_Sub28_Sub5Array4031[var17].method561(var22,
@@ -429,7 +429,7 @@ public final class NpcConfiguration {
           if (var10 != null) {
             var17 = var10.anIntArray1851[var7];
             var22 = var17 >>> 16;
-            var17 &= '\uffff';
+            var17 &= 0xffff;
             var40 = GlobalStatics_6.method133(var22, 0);
             if (var40 != null) {
               var35 |= var40.method561(var17, (byte) 126);
@@ -442,7 +442,7 @@ public final class NpcConfiguration {
               var19 = var10.anIntArray1869[var7];
               var18 = var10.anIntArray1851[var5];
               var42 = var18 >>> 16;
-              var18 &= '\uffff';
+              var18 &= 0xffff;
               if (var22 == var42) {
                 var43 = var40;
               } else {
@@ -468,7 +468,7 @@ public final class NpcConfiguration {
           if (var8 != null) {
             var22 = var8.anIntArray1851[var4];
             var27 = var22 >>> 16;
-            var22 &= '\uffff';
+            var22 &= 0xffff;
             var44 = GlobalStatics_6.method133(var27, 0);
             if (var44 != null) {
               var35 |= var44.method561(var22, (byte) 124);
@@ -481,7 +481,7 @@ public final class NpcConfiguration {
               var24 = var8.anIntArray1869[var4];
               var42 = var8.anIntArray1851[var2];
               var28 = var42 >>> 16;
-              var42 &= '\uffff';
+              var42 &= 0xffff;
               if (var28 == var27) {
                 var46 = var44;
               } else {
@@ -654,7 +654,7 @@ public final class NpcConfiguration {
 
         for (var5 = 0; var4 > var5; ++var5) {
           this.anIntArray1288[var5] = var3.readUnsignedShort();
-          if (this.anIntArray1288[var5] == '\uffff') {
+          if (this.anIntArray1288[var5] == 0xffff) {
             this.anIntArray1288[var5] = -1;
           }
         }
@@ -801,7 +801,7 @@ public final class NpcConfiguration {
                                       }
                                     } else {
                                       this.anInt1262 = var3.readUnsignedShort();
-                                      if (this.anInt1262 == '\uffff') {
+                                      if (this.anInt1262 == 0xffff) {
                                         this.anInt1262 = -1;
                                       }
 

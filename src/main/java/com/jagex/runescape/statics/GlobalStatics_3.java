@@ -70,7 +70,7 @@ public class GlobalStatics_3 {
   public static int[] anIntArray1871 = new int[2];
   public static UnusedInterface0 anInterface1_2970;
   public static int[] BIT_MASKS = {
-    0, 1, 3, 7, 15, 31, 63, 127, 255, 511, 1023, 2047, 4095, 8191, 16383, 32767, '\uffff', 131071,
+    0, 1, 3, 7, 15, 31, 63, 127, 255, 511, 1023, 2047, 4095, 8191, 16383, 32767, 0xffff, 131071,
     262143, 524287, 1048575, 2097151, 4194303, 8388607, 16777215, 33554431, 67108863, 134217727,
     268435455, 536870911, 1073741823, Integer.MAX_VALUE, -1
   };
@@ -712,7 +712,7 @@ public class GlobalStatics_3 {
   public static void method706(int[] var0, byte[] var1, int var2, int var3,
       int var4,
       int var5, int var6, int var7, int var8, int var9) {
-    var2 = ((var2 & 16711935) * var9 & -16711936) + ((var2 & '\uff00') * var9
+    var2 = ((var2 & 16711935) * var9 & -16711936) + ((var2 & 0xff00) * var9
         & 16711680) >> 8;
     var9 = 256 - var9;
 
@@ -724,7 +724,7 @@ public class GlobalStatics_3 {
           int var12 = var0[var4];
           var0[var4++] =
               (((var12 & 16711935) * var9 & -16711936) + (
-                  (var12 & '\uff00') * var9 & 16711680) >> 8)
+                  (var12 & 0xff00) * var9 & 16711680) >> 8)
                   + var2;
         }
       }

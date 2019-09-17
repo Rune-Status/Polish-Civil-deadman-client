@@ -22,7 +22,7 @@ public class Buffer extends Node {
 
   public final int readUnsignedShort() {
     this.position += 2;
-    return (this.bytes[-2 + this.position] << 8 & '\uff00') +
+    return (this.bytes[-2 + this.position] << 8 & 0xff00) +
         (this.bytes[-1 + this.position] & 255);
   }
 
@@ -94,7 +94,7 @@ public class Buffer extends Node {
 
   public final int method747(int var1) {
     this.position += 2;
-    int var2 = (this.bytes[-2 + this.position] << 8 & '\uff00') -
+    int var2 = (this.bytes[-2 + this.position] << 8 & 0xff00) -
         -(-128 + this.bytes[this.position - 1] & 255);
     if (var1 != -58) {
       this.readByte();
@@ -181,7 +181,7 @@ public class Buffer extends Node {
   public final int readUnsignedShortAdd() {
     this.position += 2;
     return (this.bytes[-1 + this.position] - 128 & 255) +
-        ('\uff00' & this.bytes[-2 + this.position] << 8);
+        (0xff00 & this.bytes[-2 + this.position] << 8);
   }
 
   public final void method759(int var1, int var2) {
@@ -249,7 +249,7 @@ public class Buffer extends Node {
   public final int readUnsignedShortLE() {
     this.position += 2;
     return (255 & this.bytes[this.position - 2]) +
-        ('\uff00' & this.bytes[this.position - 1] << 8);
+        (0xff00 & this.bytes[this.position - 1] << 8);
   }
 
   public final void writeSmart(int var1, int var2) {
@@ -393,14 +393,14 @@ public class Buffer extends Node {
     this.position += 4;
     return ((this.bytes[this.position - 2] & 255) << 24) +
         ((255 & this.bytes[this.position - 1]) << 16) +
-        ('\uff00' & this.bytes[-4 + this.position] << 8) -
+        (0xff00 & this.bytes[-4 + this.position] << 8) -
         -(this.bytes[this.position - 3] & 255);
   }
 
   public final int readShortLEAdd() {
     this.position += 2;
 
-    return (this.bytes[-1 + this.position] << 8 & '\uff00') -
+    return (this.bytes[-1 + this.position] << 8 & 0xff00) -
         -(255 & -128 + this.bytes[this.position - 2]);
   }
 
@@ -491,7 +491,7 @@ public class Buffer extends Node {
     }
 
     int var2 = (this.bytes[-2 + this.position] & 255) +
-        ('\uff00' & this.bytes[this.position - 1] << 8);
+        (0xff00 & this.bytes[this.position - 1] << 8);
     if (var2 > 32767) {
       var2 -= 65536;
     }
@@ -518,7 +518,7 @@ public class Buffer extends Node {
 
     this.position += 3;
     return (16711680 & this.bytes[this.position - 3] << 16) +
-        ('\uff00' & this.bytes[-2 + this.position] << 8) -
+        (0xff00 & this.bytes[-2 + this.position] << 8) -
         -(this.bytes[this.position - 1] & 255);
   }
 
@@ -530,7 +530,7 @@ public class Buffer extends Node {
   public final int readUnsignedSmart() {
     int var2 = this.bytes[this.position] & 255;
     return var2 < 128 ? -64 + this.readUnsignedByte()
-        : this.readUnsignedShort() - '\uc000';
+        : this.readUnsignedShort() - 0xc000;
   }
 
   public final int readInt(byte var1) {

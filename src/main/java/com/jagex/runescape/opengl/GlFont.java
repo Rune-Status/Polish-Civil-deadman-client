@@ -50,7 +50,7 @@ public final class GlFont extends AbstractFont {
       float var12 = var10 + (float) this.anIntArray3721[var1] / this.anInt4087;
       GlRenderer.bindTexture(this.anInt4084);
       GlDirectColorSprite var13 = GlUtils.aClass3_Sub28_Sub16_Sub1_447;
-      GlRenderer.GL.glActiveTexture('\u84c1');
+      GlRenderer.GL.glActiveTexture(0x84c1);
       GlRenderer.GL.glEnable(GL.GL_TEXTURE_2D);
       GlRenderer.GL.glBindTexture(GL.GL_TEXTURE_2D, var13.textureId);
       GlRenderer.GL.glTexEnvi(8960, 0x8571, 7681);
@@ -60,16 +60,16 @@ public final class GlFont extends AbstractFont {
       float var16 = (float) (var2 + var4 - GlUtils.anInt449) / var13.anInt4075;
       float var17 = (float) (var3 + var5 - GlUtils.anInt448) / var13.anInt4079;
       GlRenderer.GL.glBegin(6);
-      GlRenderer.GL.glMultiTexCoord2f('\u84c1', var16, var15);
+      GlRenderer.GL.glMultiTexCoord2f(0x84c1, var16, var15);
       GlRenderer.GL.glTexCoord2f(var11, var10);
       GlRenderer.GL.glVertex2f(this.anIntArray3709[var1], 0.0F);
-      GlRenderer.GL.glMultiTexCoord2f('\u84c1', var14, var15);
+      GlRenderer.GL.glMultiTexCoord2f(0x84c1, var14, var15);
       GlRenderer.GL.glTexCoord2f(var9, var10);
       GlRenderer.GL.glVertex2f(0.0F, 0.0F);
-      GlRenderer.GL.glMultiTexCoord2f('\u84c1', var14, var17);
+      GlRenderer.GL.glMultiTexCoord2f(0x84c1, var14, var17);
       GlRenderer.GL.glTexCoord2f(var9, var12);
       GlRenderer.GL.glVertex2f(0.0F, -this.anIntArray3721[var1]);
-      GlRenderer.GL.glMultiTexCoord2f('\u84c1', var16, var17);
+      GlRenderer.GL.glMultiTexCoord2f(0x84c1, var16, var17);
       GlRenderer.GL.glTexCoord2f(var11, var12);
       GlRenderer.GL
           .glVertex2f(this.anIntArray3709[var1], -this.anIntArray3721[var1]);
@@ -77,7 +77,7 @@ public final class GlFont extends AbstractFont {
       GlRenderer.GL.glTexEnvi(8960, 0x8571, 8448);
       GlRenderer.GL.glTexEnvi(8960, 0x8580, 5890);
       GlRenderer.GL.glDisable(GL.GL_TEXTURE_2D);
-      GlRenderer.GL.glActiveTexture('\u84c0');
+      GlRenderer.GL.glActiveTexture(0x84c0);
       GlRenderer.GL.glLoadIdentity();
     } else {
       GlRenderer.method1824();

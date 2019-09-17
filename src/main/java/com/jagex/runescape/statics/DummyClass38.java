@@ -184,7 +184,7 @@ public final class DummyClass38 {
 
       for (int var22 = 0; var4 > var22; ++var22) {
         int var23 = GlobalStatics_9.gameBuffer.readUnsignedShortLE();
-        if (var23 == '\uffff') {
+        if (var23 == 0xffff) {
           var23 = -1;
         }
 
@@ -198,7 +198,7 @@ public final class DummyClass38 {
 
     if ((256 & var0) != 0) {
       var4 = GlobalStatics_9.gameBuffer.readUnsignedShortLE();
-      if (var4 == '\uffff') {
+      if (var4 == 0xffff) {
         var4 = -1;
       }
 
@@ -214,7 +214,7 @@ public final class DummyClass38 {
       }
 
       if (var21) {
-        var3.anInt2759 = (var5 & '\uffff') + GlobalStatics_4.updateCycle;
+        var3.anInt2759 = (var5 & 0xffff) + GlobalStatics_4.updateCycle;
         var3.anInt2761 = 0;
         var3.anInt2805 = 0;
         var3.anInt2842 = var4;

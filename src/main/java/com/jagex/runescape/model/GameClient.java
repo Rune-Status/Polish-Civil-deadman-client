@@ -193,7 +193,7 @@ public final class GameClient extends GameStub {
       if (GlobalStatics_9.anInt1753 == 2) {
         GlobalStatics_7.method379(var1 ^ 1025);
       } else {
-        GlobalStatics_10.d('\uffff');
+        GlobalStatics_10.d(0xffff);
       }
 
       if (GlobalStatics_9.anInt3995 >> 7 < 14
@@ -1310,7 +1310,7 @@ public final class GameClient extends GameStub {
     GlobalStatics_9.method2240(128);
     DummyClass32.method962((byte) -67);
     GlobalStatics_6.method131(-109);
-    DummyClass34.method994('\u93bd');
+    DummyClass34.method994(0x93bd);
     DummyClass44.method1206((byte) 26);
     int var2 = 87 % ((68 - var1) / 49);
     GlobalStatics_9.method274(-2);
@@ -1653,7 +1653,7 @@ public final class GameClient extends GameStub {
     if (GlobalStatics_4.usageLocation == 0) {
       GlobalStatics_8.serverHost = this.getCodeBase().getHost();
       DummyClass41.secondaryPort = 443;
-      GlobalStatics_9.primaryPort = '\uaa4a';
+      GlobalStatics_9.primaryPort = 0xaa4a;
     } else {
       if (GlobalStatics_4.usageLocation == 1) {
         GlobalStatics_8.serverHost = this.getCodeBase().getHost();

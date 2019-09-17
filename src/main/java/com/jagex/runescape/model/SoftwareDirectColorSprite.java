@@ -133,7 +133,7 @@ public class SoftwareDirectColorSprite extends AbstractDirectColorSprite {
     if (var6 != 0) {
       var1 -= this.anInt3701 << 4;
       var2 -= this.anInt3698 << 4;
-      double var7 = (var5 & '\uffff') * 9.587379924285257E-5D;
+      double var7 = (var5 & 0xffff) * 9.587379924285257E-5D;
       int var9 = (int) Math.floor(Math.sin(var7) * var6 + 0.5D);
       int var10 = (int) Math.floor(Math.cos(var7) * var6 + 0.5D);
       int var11 = -var1 * var10 - var2 * var9;

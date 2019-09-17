@@ -669,7 +669,7 @@ public class GlobalStatics_5 {
   }
 
   public static boolean updateInterfaceCounter(int counter, byte var1) {
-    GlobalStatics_9.interfaceCounter = counter + 1 & '\uffff';
+    GlobalStatics_9.interfaceCounter = counter + 1 & 0xffff;
     GlobalStatics_9.interfaceCounterUpdated = true;
     return true;
   }

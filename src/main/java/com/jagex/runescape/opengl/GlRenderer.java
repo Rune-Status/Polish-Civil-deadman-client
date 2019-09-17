@@ -174,11 +174,11 @@ public final class GlRenderer {
     GlRenderer.depthTestEnabled = true;
     GlRenderer.fogEnabled = true;
     GlobalStatics_4.method1073(97);
-    GlRenderer.GL.glActiveTexture('\u84c1');
+    GlRenderer.GL.glActiveTexture(0x84c1);
     GlRenderer.GL.glTexEnvi(8960, 8704, 0x8570);
     GlRenderer.GL.glTexEnvi(8960, 0x8571, 8448);
     GlRenderer.GL.glTexEnvi(8960, 0x8572, 8448);
-    GlRenderer.GL.glActiveTexture('\u84c0');
+    GlRenderer.GL.glActiveTexture(0x84c0);
     GlRenderer.GL.setSwapInterval(0);
     GlRenderer.GL.glClearColor(0.0F, 0.0F, 0.0F, 0.0F);
     GlRenderer.GL.glShadeModel(7425);
@@ -349,7 +349,7 @@ public final class GlRenderer {
     }
 
     int[] var12 = new int[1];
-    GlRenderer.GL.glGetIntegerv('\u84e2', var12, 0);
+    GlRenderer.GL.glGetIntegerv(0x84e2, var12, 0);
     GlRenderer.maxTextureUnits = var12[0];
     GlRenderer.GL.glGetIntegerv(0x8871, var12, 0);
     GlRenderer.anInt1814 = var12[0];
@@ -681,7 +681,7 @@ public final class GlRenderer {
       }
 
       if (var0 == 3) {
-        GlRenderer.GL.glTexEnvi(8960, 0x8571, '\u84e7');
+        GlRenderer.GL.glTexEnvi(8960, 0x8571, 0x84e7);
       }
 
       if (var0 == 4) {

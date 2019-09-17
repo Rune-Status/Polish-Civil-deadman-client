@@ -59,7 +59,7 @@ public final class FileUnpacker {
 
         return this.anObjectArray1954[var1] != null ?
             100 :
-            this.aClass151_1947.method2097(var1, '\uffff');
+            this.aClass151_1947.method2097(var1, 0xffff);
       } else {
         return 0;
       }

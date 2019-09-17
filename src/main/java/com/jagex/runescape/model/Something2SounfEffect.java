@@ -18,8 +18,8 @@ public final class Something2SounfEffect {
 
 
   public Something2SounfEffect() {
-    this.anIntArray604[1] = '\uffff';
-    this.anIntArray602[1] = '\uffff';
+    this.anIntArray604[1] = 0xffff;
+    this.anIntArray602[1] = 0xffff;
   }
 
   public int method1007(int var1 ) {

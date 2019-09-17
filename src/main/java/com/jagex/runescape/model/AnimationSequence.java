@@ -48,7 +48,7 @@ public final class AnimationSequence {
     int var7 = this.anIntArray1869[var2];
       var2 = this.anIntArray1851[var2];
       AnimationSomething var8 = GlobalStatics_6.method133(var2 >> 16, var1 - 19749);
-      var2 &= '\uffff';
+      var2 &= 0xffff;
       if (var8 == null) {
         return var4.method1890(true, true, true);
       } else {
@@ -62,7 +62,7 @@ public final class AnimationSequence {
           && this.anIntArray1851.length > var3) {
           var3 = this.anIntArray1851[var3];
           var9 = GlobalStatics_6.method133(var3 >> 16, 0);
-          var3 &= '\uffff';
+          var3 &= 0xffff;
         }
 
         AbstractModel var10;
@@ -135,7 +135,7 @@ public final class AnimationSequence {
     int var7 = this.anIntArray1851[var5];
       int var6 = this.anIntArray1869[var5];
       AnimationSomething var8 = GlobalStatics_6.method133(var7 >> 16, 0);
-      var7 &= '\uffff';
+      var7 &= 0xffff;
       if (var8 == null) {
         return var1.method1894(true, true, true);
       } else {
@@ -144,7 +144,7 @@ public final class AnimationSequence {
           && var3 < this.anIntArray1851.length) {
           var3 = this.anIntArray1851[var3];
           var9 = GlobalStatics_6.method133(var3 >> 16, 0);
-          var3 &= '\uffff';
+          var3 &= 0xffff;
         }
 
         AnimationSomething var10 = null;
@@ -156,7 +156,7 @@ public final class AnimationSequence {
             var13 = this.anIntArray1870[var5];
             if (var13 != 65535) {
               var10 = GlobalStatics_6.method133(var13 >> 16, 0);
-              var13 &= '\uffff';
+              var13 &= 0xffff;
             }
           }
 
@@ -165,7 +165,7 @@ public final class AnimationSequence {
             var14 = this.anIntArray1870[var3];
             if (var14 != 65535) {
               var11 = GlobalStatics_6.method133(var14 >> 16, 0);
-              var14 &= '\uffff';
+              var14 &= 0xffff;
             }
           }
         }
@@ -205,7 +205,7 @@ public final class AnimationSequence {
     int var7 = this.anIntArray1869[var2];
       var2 = this.anIntArray1851[var2];
       AnimationSomething var8 = GlobalStatics_6.method133(var2 >> 16, var6 - 3);
-      var2 &= '\uffff';
+      var2 &= 0xffff;
       if (var8 == null) {
         return var5.method1894(true, true, true);
       } else {
@@ -215,7 +215,7 @@ public final class AnimationSequence {
           && var1 < this.anIntArray1851.length) {
           var1 = this.anIntArray1851[var1];
           var9 = GlobalStatics_6.method133(var1 >> 16, var6 - 3);
-          var1 &= '\uffff';
+          var1 &= 0xffff;
         }
 
         AbstractModel var10;
@@ -298,7 +298,7 @@ public final class AnimationSequence {
     int var6 = this.anIntArray1869[var3];
       var3 = this.anIntArray1851[var3];
       AnimationSomething var7 = GlobalStatics_6.method133(var3 >> 16, 0);
-      var3 &= '\uffff';
+      var3 &= 0xffff;
       if (var7 == null) {
         return var5.method1882(true, true, true);
       } else {
@@ -307,7 +307,7 @@ public final class AnimationSequence {
           && this.anIntArray1851.length > var1) {
           var1 = this.anIntArray1851[var1];
           var9 = GlobalStatics_6.method133(var1 >> 16, 0);
-          var1 &= '\uffff';
+          var1 &= 0xffff;
         }
 
         AbstractModel var10;

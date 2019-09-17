@@ -408,7 +408,7 @@ public class GlobalStatics_10 {
   public static int localPlayerId = -1;
   public static int anInt2212;
   public static int[] anIntArray2213 =
-      {16776960, 16711680, '\uff00', '\uffff', 16711935, 16777215};
+      {16776960, 16711680, 0xff00, 0xffff, 16711935, 16777215};
   public static boolean aBoolean3594;
   public static GameString aClass94_3595 = GameStringStatics
       .create("(U0a )2 via: ");
@@ -912,7 +912,7 @@ public class GlobalStatics_10 {
                   }
                 } else {
                   var30 = GLStatics.textureCache
-                      .method15(var0.anInt1670, '\uffff');
+                      .method15(var0.anInt1670, 0xffff);
                   DummyClass40
                       .method1154(var27, var29, var25, var26, var28, var24,
                           DummyClass2.repackHSL(var30, var0.anInt1664),
@@ -955,7 +955,7 @@ public class GlobalStatics_10 {
                           var11, var15, var0.anInt1670);
                 } else {
                   var30 = GLStatics.textureCache
-                      .method15(var0.anInt1670, '\uffff');
+                      .method15(var0.anInt1670, 0xffff);
                   DummyClass40
                       .method1154(var23, var25, var29, var22, var24, var28,
                           DummyClass2.repackHSL(var30, var0.anInt1675),
@@ -1116,12 +1116,12 @@ public class GlobalStatics_10 {
                 if (var5 < 0) {
                   var5 = 0;
                 } else if (var5 > 65534) {
-                  var5 = '\ufffe';
+                  var5 = 0xfffe;
                 }
 
                 if (var6 >= 0) {
-                  if (var6 > '\ufffe') {
-                    var6 = '\ufffe';
+                  if (var6 > 0xfffe) {
+                    var6 = 0xfffe;
                   }
                 } else {
                   var6 = 0;
@@ -1174,7 +1174,7 @@ public class GlobalStatics_10 {
                     GlobalStatics_9.anInt2556 = 0;
                   } else {
                     GlobalStatics_9.secureBuffer.writeShort(
-                        GlobalStatics_9.anInt2556 + '\ue000');
+                        GlobalStatics_9.anInt2556 + 0xe000);
                     if (var7) {
                       GlobalStatics_9.secureBuffer.writeInt(Integer.MIN_VALUE);
                     } else {
@@ -1213,8 +1213,8 @@ public class GlobalStatics_10 {
               (-GlobalStatics_1.aLong1465 + GlobalStatics_3.aLong1102) / 50L;
           var3 = DummyClass36.anInt2614;
           if (var3 >= 0) {
-            if (var3 > '\uffff') {
-              var3 = '\uffff';
+            if (var3 > 0xffff) {
+              var3 = 0xffff;
             }
           } else {
             var3 = 0;
@@ -1228,8 +1228,8 @@ public class GlobalStatics_10 {
           GlobalStatics_1.aLong1465 = GlobalStatics_3.aLong1102;
           byte var19 = 0;
           if (var4 >= 0) {
-            if (var4 > '\uffff') {
-              var4 = '\uffff';
+            if (var4 > 0xffff) {
+              var4 = 0xffff;
             }
           } else {
             var4 = 0;
@@ -1765,7 +1765,7 @@ public class GlobalStatics_10 {
                         } else if (GlobalStatics_9.anInt1753 == 2) {
                           GlobalStatics_7.method379(1024);
                         } else {
-                          GlobalStatics_10.d('\uffff');
+                          GlobalStatics_10.d(0xffff);
                         }
 
                         for (var5 = 0; var5 < 5; ++var5) {
@@ -3460,7 +3460,7 @@ public class GlobalStatics_10 {
   public static int method190(int var0, int hsl, byte var2, int lightness) {
     int var5 = GLStatics.hslTable[GlobalStatics_1.repackHSL(hsl, lightness)];
     if (var0 > 0) {
-      int var6 = GLStatics.textureCache.method19(111, var0 & '\uffff');
+      int var6 = GLStatics.textureCache.method19(111, var0 & 0xffff);
       int var7;
       int var9;
       if (var6 != 0) {
@@ -3479,32 +3479,32 @@ public class GlobalStatics_10 {
         } else {
           var9 = -var6 + 256;
           var5 =
-              (16711680 & (var7 & '\uff00') * var6 + var9 * (var5 & '\uff00'))
+              (16711680 & (var7 & 0xff00) * var6 + var9 * (var5 & 0xff00))
                   + (
                   var6 * (var7 & 16711935) + (16711935 & var5) * var9
                       & -16711936) >> 8;
         }
       }
 
-      var7 = GLStatics.textureCache.method10(106, '\uffff' & var0);
+      var7 = GLStatics.textureCache.method10(106, 0xffff & var0);
       if (var7 != 0) {
         var7 += 256;
         int var8 = ((16711680 & var5) >> 16) * var7;
-        if (var8 > '\uffff') {
-          var8 = '\uffff';
+        if (var8 > 0xffff) {
+          var8 = 0xffff;
         }
 
-        var9 = ((var5 & '\uff00') >> 8) * var7;
-        if (var9 > '\uffff') {
-          var9 = '\uffff';
+        var9 = ((var5 & 0xff00) >> 8) * var7;
+        if (var9 > 0xffff) {
+          var9 = 0xffff;
         }
 
         int var10 = var7 * (var5 & 255);
-        if (var10 > '\uffff') {
-          var10 = '\uffff';
+        if (var10 > 0xffff) {
+          var10 = 0xffff;
         }
 
-        var5 = (var10 >> 8) + ('\uff00' & var9) + (16711711 & var8 << 8);
+        var5 = (var10 >> 8) + (0xff00 & var9) + (16711711 & var8 << 8);
       }
     }
 
@@ -5648,7 +5648,7 @@ public class GlobalStatics_10 {
       float[] var3 = new float[3];
       DummyClass8.anInt4020 += var1;
       if (DummyClass8.anInt4020 >= 65535) {
-        DummyClass8.anInt4020 = '\uffff';
+        DummyClass8.anInt4020 = 0xffff;
         GlobalStatics_9.aBoolean3531 = !GlobalStatics_9.aBoolean3668;
 
         GlobalStatics_9.aBoolean3668 = true;
@@ -5657,7 +5657,7 @@ public class GlobalStatics_10 {
         GlobalStatics_9.aBoolean3531 = false;
       }
 
-      if (var0 == '\uffff') {
+      if (var0 == 0xffff) {
         float var2 = DummyClass8.anInt4020 / 65535.0F;
         int var4 = GlobalStatics_7.anInt1081 * 2;
 
@@ -6680,7 +6680,7 @@ public class GlobalStatics_10 {
           int var18 = var0[var5];
           var0[var5++] = ((var2 & 16711935) * var12 + (var18 & 16711935) * var13
               & -16711936) + (
-              (var2 & '\uff00') * var12 + (var18 & '\uff00') * var13 & 16711680)
+              (var2 & 0xff00) * var12 + (var18 & 0xff00) * var13 & 16711680)
               >> 8;
         }
 
@@ -6708,7 +6708,7 @@ public class GlobalStatics_10 {
           int var13 = var0[var4];
           var0[var4++] = ((var2 & 16711935) * var9 + (var13 & 16711935) * var10
               & -16711936) + (
-              (var2 & '\uff00') * var9 + (var13 & '\uff00') * var10 & 16711680)
+              (var2 & 0xff00) * var9 + (var13 & 0xff00) * var10 & 16711680)
               >> 8;
         }
       }

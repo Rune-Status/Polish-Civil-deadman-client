@@ -70,7 +70,7 @@ public final class WaterShader implements MaterialShader {
   public void enable() {
     if (this.anInt2186 >= 0) {
       GlRenderer.GL.glCallList(this.anInt2186);
-      GlRenderer.GL.glActiveTexture('\u84c1');
+      GlRenderer.GL.glActiveTexture(0x84c1);
       GlRenderer.GL.glMatrixMode(5890);
       GlRenderer.GL
           .glTranslatef(GlobalStatics_10.anInt144, GlobalStatics_6.anInt3695,
@@ -89,7 +89,7 @@ public final class WaterShader implements MaterialShader {
                 (int) ((GlRenderer.anInt1791 * 64) * 0.0050F) % 64]);
       }
 
-      GlRenderer.GL.glActiveTexture('\u84c0');
+      GlRenderer.GL.glActiveTexture(0x84c0);
       if (this.anInt2182 != GlRenderer.anInt1791) {
         int var2 = (GlRenderer.anInt1791 & 255) * 256;
 
@@ -119,16 +119,16 @@ public final class WaterShader implements MaterialShader {
 
   public void set(int var1) {
     if (this.anInt2186 >= 0) {
-      GlRenderer.GL.glActiveTexture('\u84c1');
+      GlRenderer.GL.glActiveTexture(0x84c1);
       if ((var1 & 128) == 0) {
         GlRenderer.GL
-            .glEnable(SomethingGl.aBoolean1227 ? '\u806f' : GL.GL_TEXTURE_2D);
+            .glEnable(SomethingGl.aBoolean1227 ? 0x806f : GL.GL_TEXTURE_2D);
       } else {
         GlRenderer.GL
-            .glDisable(SomethingGl.aBoolean1227 ? '\u806f' : GL.GL_TEXTURE_2D);
+            .glDisable(SomethingGl.aBoolean1227 ? 0x806f : GL.GL_TEXTURE_2D);
       }
 
-      GlRenderer.GL.glActiveTexture('\u84c0');
+      GlRenderer.GL.glActiveTexture(0x84c0);
       if ((var1 & 64) == 0) {
         GlRenderer.GL.glGetFloatv(2899, WaterShader.aFloatArray2185, 0);
         GlRenderer.GL.glProgramLocalParameter4fvARB(0x8620, 66,
@@ -162,7 +162,7 @@ public final class WaterShader implements MaterialShader {
   private void method1749() {
     this.anInt2186 = GlRenderer.GL.glGenLists(2);
     GlRenderer.GL.glNewList(this.anInt2186, 4864);
-    GlRenderer.GL.glActiveTexture('\u84c1');
+    GlRenderer.GL.glActiveTexture(0x84c1);
     if (SomethingGl.aBoolean1227) {
       GlRenderer.GL.glBindTexture(GL2ES2.GL_TEXTURE_3D, SomethingGl.anInt1228);
     }
@@ -170,12 +170,12 @@ public final class WaterShader implements MaterialShader {
     GlRenderer.GL.glTexEnvi(8960, 0x8571, 260);
     GlRenderer.GL.glTexEnvi(8960, 0x8572, 7681);
     GlRenderer.GL.glTexEnvi(8960, 0x8588, 0x8578);
-    GlRenderer.GL.glActiveTexture('\u84c0');
+    GlRenderer.GL.glActiveTexture(0x84c0);
     GlRenderer.GL.glBindProgramARB(0x8620, this.anInt2184);
     GlRenderer.GL.glEnable(0x8620);
     GlRenderer.GL.glEndList();
     GlRenderer.GL.glNewList(this.anInt2186 + 1, 4864);
-    GlRenderer.GL.glActiveTexture('\u84c1');
+    GlRenderer.GL.glActiveTexture(0x84c1);
     GlRenderer.GL.glMatrixMode(5890);
     GlRenderer.GL.glLoadIdentity();
     GlRenderer.GL.glMatrixMode(5888);
@@ -183,8 +183,8 @@ public final class WaterShader implements MaterialShader {
     GlRenderer.GL.glTexEnvi(8960, 0x8572, 8448);
     GlRenderer.GL.glTexEnvi(8960, 0x8588, 5890);
     GlRenderer.GL
-        .glDisable(SomethingGl.aBoolean1227 ? '\u806f' : GL.GL_TEXTURE_2D);
-    GlRenderer.GL.glActiveTexture('\u84c0');
+        .glDisable(SomethingGl.aBoolean1227 ? 0x806f : GL.GL_TEXTURE_2D);
+    GlRenderer.GL.glActiveTexture(0x84c0);
     GlRenderer.GL.glBindProgramARB(0x8620, 0);
     GlRenderer.GL.glDisable(0x8620);
     GlRenderer.GL.glDisable(0x8804);
@@ -237,7 +237,7 @@ public final class WaterShader implements MaterialShader {
               + "MOV   oFogCoord.x, clipPos.z;\n" + "MOV   oPos, clipPos; \n"
               + "END").length(),
           "!!ARBvp1.0\nATTRIB  iPos         = vertex.position;\nATTRIB  iColour      = vertex.color;\nOUTPUT  oPos         = result.position;\nOUTPUT  oColour      = result.color;\nOUTPUT  oTexCoord0   = result.texcoord[0];\nOUTPUT  oTexCoord1   = result.texcoord[1];\nOUTPUT  oFogCoord    = result.fogcoord;\nPARAM   time         = program.local[65];\nPARAM   turbulence   = program.local[64];\nPARAM   lightAmbient = program.local[66]; \nPARAM   pMatrix[4]   = { state.matrix.projection };\nPARAM   mvMatrix[4]  = { state.matrix.modelview };\nPARAM   ivMatrix[4]  = { state.matrix.texture[1] };\nPARAM   fNoise[64]   = { program.local[0..63] };\nTEMP    noise, clipPos, viewPos, worldPos;\nADDRESS noiseAddr;\nDP4   viewPos.x, mvMatrix[0], iPos;\nDP4   viewPos.y, mvMatrix[1], iPos;\nDP4   viewPos.z, mvMatrix[2], iPos;\nDP4   viewPos.w, mvMatrix[3], iPos;\nDP4   worldPos.x, ivMatrix[0], viewPos;\nDP4   worldPos.y, ivMatrix[1], viewPos;\nDP4   worldPos.z, ivMatrix[2], viewPos;\nDP4   worldPos.w, ivMatrix[3], viewPos;\nADD   noise.x, worldPos.x, worldPos.z;SUB   noise.y, worldPos.z, worldPos.x;MUL   noise, noise, 0.0001220703125;\nFRC   noise, noise;\nMUL   noise, noise, 64;\nARL   noiseAddr.x, noise.x;\nMOV   noise.x, fNoise[noiseAddr.x].x;\nARL   noiseAddr.x, noise.y;\nMOV   noise.y, fNoise[noiseAddr.x].y;\nMUL   noise, noise, turbulence.x;\nMAD   oTexCoord0, worldPos.xzww, 0.0078125, noise;\nMOV   oTexCoord0.w, 1;\nMUL   oTexCoord1.xy, worldPos.xzww, 0.0009765625;\nMOV   oTexCoord1.zw, time.xxxw;\nDP4   clipPos.x, pMatrix[0], viewPos;\nDP4   clipPos.y, pMatrix[1], viewPos;\nDP4   clipPos.z, pMatrix[2], viewPos;\nDP4   clipPos.w, pMatrix[3], viewPos;\nMUL   oColour.xyz, iColour, lightAmbient;\nMOV   oColour.w, 1;\nMOV   oFogCoord.x, clipPos.z;\nMOV   oPos, clipPos; \nEND");
-      GlRenderer.GL.glGetIntegerv('\u864b', var2, 0);
+      GlRenderer.GL.glGetIntegerv(0x864b, var2, 0);
       if (var2[0] != -1) {
         return;
       }

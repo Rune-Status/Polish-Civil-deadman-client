@@ -24,8 +24,8 @@ public final class BlockShadowMap {
     GlRenderer.bindTexture(this.textureId);
     GlRenderer.GL.glTexParameteri(GL.GL_TEXTURE_2D, 10241, 9729);
     GlRenderer.GL.glTexParameteri(GL.GL_TEXTURE_2D, 10240, 9729);
-    GlRenderer.GL.glTexParameteri(GL.GL_TEXTURE_2D, 10242, '\u812f');
-    GlRenderer.GL.glTexParameteri(GL.GL_TEXTURE_2D, 10243, '\u812f');
+    GlRenderer.GL.glTexParameteri(GL.GL_TEXTURE_2D, 10242, 0x812f);
+    GlRenderer.GL.glTexParameteri(GL.GL_TEXTURE_2D, 10243, 0x812f);
   }
 
   public void update(int[][] heights, int x, int y) {

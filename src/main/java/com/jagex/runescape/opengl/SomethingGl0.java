@@ -274,7 +274,7 @@ public final class SomethingGl0 extends Node {
         if (this.aBoolean2347) {
           GlRenderer.GL.glClientActiveTexture(MaterialShader3.method2252());
           GlRenderer.GL.glTexCoordPointer(1, 5126, var11, 36L);
-          GlRenderer.GL.glClientActiveTexture('\u84c0');
+          GlRenderer.GL.glClientActiveTexture(0x84c0);
         }
       } else {
         if (GlRenderer.vertexBufferSupport) {
@@ -297,7 +297,7 @@ public final class SomethingGl0 extends Node {
           GlRenderer.GL.glClientActiveTexture(MaterialShader3.method2252());
           this.aByteBuffer2345.position(36);
           GlRenderer.GL.glTexCoordPointer(1, 5126, var11, this.aByteBuffer2345);
-          GlRenderer.GL.glClientActiveTexture('\u84c0');
+          GlRenderer.GL.glClientActiveTexture(0x84c0);
         }
       }
 

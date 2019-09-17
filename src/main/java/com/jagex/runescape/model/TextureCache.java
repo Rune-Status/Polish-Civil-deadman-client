@@ -219,11 +219,11 @@ public final class TextureCache implements ITextureCache {
   }
 
   public int method15(int var1, int var2) {
-    if (var2 != '\uffff') {
+    if (var2 != 0xffff) {
         this.method11(-82, -17);
       }
 
-      return '\uffff' & this.textureColors[var1];
+      return 0xffff & this.textureColors[var1];
   }
 
   public int[] method16(int var1, int var2) {
@@ -259,7 +259,7 @@ public final class TextureCache implements ITextureCache {
   private GlTexture2d getTexture(int textureId) {
     GlTexture2d var4 = (GlTexture2d) this.glTextures.get(textureId, 1400);
       if (var4 == null) {
-        var4 = new GlTexture2d(this.textureColors[textureId] & '\uffff');
+        var4 = new GlTexture2d(this.textureColors[textureId] & 0xffff);
         this.glTextures.put(textureId, var4);
         return var4;
       } else {

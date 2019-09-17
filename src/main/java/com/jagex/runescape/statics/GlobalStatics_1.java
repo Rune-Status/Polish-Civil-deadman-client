@@ -199,7 +199,7 @@ public class GlobalStatics_1 {
       lightness = 126;
     }
 
-    return (hsl & '\uff80') + lightness;
+    return (hsl & 0xff80) + lightness;
   }
 
   public static void method1948() {

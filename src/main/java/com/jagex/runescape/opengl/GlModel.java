@@ -97,7 +97,7 @@ public final class GlModel extends AbstractModel {
           model.materials == null
               || model.materials[face] == -1 || !GLStatics.textureCache
               .method12(
-                  model.materials[face] & '\uffff', -65))) {
+                  model.materials[face] & 0xffff, -65))) {
         var5[this.anInt3852++] = face;
         ++this.vertexCounts[model.v0[face]];
         ++this.vertexCounts[model.v1[face]];
@@ -121,15 +121,15 @@ public final class GlModel extends AbstractModel {
       if (model.materials != null) {
         var13 = model.materials[var8];
         if (var13 != -1) {
-          var11 = GLStatics.textureCache.method18(var13 & '\uffff', 255);
-          var12 = GLStatics.textureCache.method9(var13 & '\uffff', false);
+          var11 = GLStatics.textureCache.method18(var13 & 0xffff, 255);
+          var12 = GLStatics.textureCache.method9(var13 & 0xffff, false);
         }
       }
 
       boolean var14 =
           model.aByteArray2843 != null && model.aByteArray2843[var8] != 0
               || var13 != -1 && !GLStatics.textureCache
-              .method7((byte) 88, var13 & '\uffff');
+              .method7((byte) 88, var13 & 0xffff);
       if ((var4 || var14) && model.aByteArray2889 != null) {
         var9 += model.aByteArray2889[var8] << 17;
       }
@@ -140,8 +140,8 @@ public final class GlModel extends AbstractModel {
 
       var9 += (var11 & 255) << 8;
       var9 += var12 & 255;
-      var62 = var10 + ((var13 & '\uffff') << 16);
-      var62 += var7 & '\uffff';
+      var62 = var10 + ((var13 & 0xffff) << 16);
+      var62 += var7 & 0xffff;
       var60[var7] = ((long) var9 << 32) + var62;
     }
 
@@ -292,11 +292,11 @@ public final class GlModel extends AbstractModel {
               var75 = -var80 / 1024.0F;
             }
 
-            var82 = 64.0F / (model.aShortArray2882[var20] & '\uffff');
+            var82 = 64.0F / (model.aShortArray2882[var20] & 0xffff);
           } else if (var76 == 2) {
-            var75 = 64.0F / (model.aShortArray2888[var20] & '\uffff');
-            var82 = 64.0F / (model.aShortArray2882[var20] & '\uffff');
-            var79 = 64.0F / (model.aShortArray2851[var20] & '\uffff');
+            var75 = 64.0F / (model.aShortArray2888[var20] & 0xffff);
+            var82 = 64.0F / (model.aShortArray2882[var20] & 0xffff);
+            var79 = 64.0F / (model.aShortArray2851[var20] & 0xffff);
           } else {
             var75 = model.aShortArray2888[var20] / 1024.0F;
             var82 = model.aShortArray2882[var20] / 1024.0F;
@@ -315,7 +315,7 @@ public final class GlModel extends AbstractModel {
     int var67;
     for (var68 = 0; var68 < this.anInt3852; ++var68) {
       int var70 = var5[var68];
-      var67 = model.triangleColors[var70] & '\uffff';
+      var67 = model.triangleColors[var70] & 0xffff;
       if (model.materials == null) {
         var71 = -1;
       } else {
@@ -426,7 +426,7 @@ public final class GlModel extends AbstractModel {
             byte var90 = model.aByteArray2867[var72];
             var37 = model.aByteArray2877[var72] / 256.0F;
             if (var28 == 1) {
-              var38 = (model.aShortArray2851[var72] & '\uffff') / 1024.0F;
+              var38 = (model.aShortArray2851[var72] & 0xffff) / 1024.0F;
               GlModel
                   .method1904(model.vx[var29], model.vy[var29], model.vz[var29],
                       var88, var87, var94,
@@ -491,9 +491,9 @@ public final class GlModel extends AbstractModel {
               int var99 = var96 * var98 - var103 * var101;
               int var100 = var101 * var102 - var98 * var97;
               int var104 = var97 * var103 - var102 * var96;
-              var49 = 64.0F / (model.aShortArray2888[var72] & '\uffff');
-              var50 = 64.0F / (model.aShortArray2882[var72] & '\uffff');
-              var51 = 64.0F / (model.aShortArray2851[var72] & '\uffff');
+              var49 = 64.0F / (model.aShortArray2888[var72] & 0xffff);
+              var50 = 64.0F / (model.aShortArray2882[var72] & 0xffff);
+              var51 = 64.0F / (model.aShortArray2851[var72] & 0xffff);
               var52 =
                   (var99 * var93[0] + var100 * var93[1] + var104 * var93[2])
                       / var49;
@@ -939,7 +939,7 @@ public final class GlModel extends AbstractModel {
           this.vertexColorData.updated = false;
         } else if (var1 == 7) {
           for (var5 = 0; var5 < this.anInt3852; ++var5) {
-            var6 = this.aShortArray3808[var5] & '\uffff';
+            var6 = this.aShortArray3808[var5] & 0xffff;
             var7 = var6 >> 10 & 63;
             var8 = var6 >> 7 & 7;
             int var9 = var6 & 127;
@@ -1234,7 +1234,7 @@ public final class GlModel extends AbstractModel {
 
                 for (var11 = 0; var11 < var10.length; ++var11) {
                   var12 = var10[var11];
-                  var13 = this.aShortArray3808[var12] & '\uffff';
+                  var13 = this.aShortArray3808[var12] & 0xffff;
                   var14 = var13 >> 10 & 63;
                   var15 = var13 >> 7 & 7;
                   var16 = var13 & 127;
@@ -2111,7 +2111,7 @@ public final class GlModel extends AbstractModel {
                   var14 = var12[var13];
                   if (this.aShortArray3813
                       == null || (var7 & this.aShortArray3813[var14]) != 0) {
-                    var15 = this.aShortArray3808[var14] & '\uffff';
+                    var15 = this.aShortArray3808[var14] & 0xffff;
                     var16 = var15 >> 10 & 63;
                     var17 = var15 >> 7 & 7;
                     var18 = var15 & 127;
@@ -2339,15 +2339,15 @@ public final class GlModel extends AbstractModel {
     var3 = 0;
     int var4 = 0;
     if (var1 != -1) {
-      var3 = GLStatics.textureCache.method19(-125, var1 & '\uffff');
-      var4 = GLStatics.textureCache.method10(-98, var1 & '\uffff');
+      var3 = GLStatics.textureCache.method19(-125, var1 & 0xffff);
+      var4 = GLStatics.textureCache.method10(-98, var1 & 0xffff);
     }
 
     int var5 = 0;
     int var6 = 0;
     if (var2 != -1) {
-      var5 = GLStatics.textureCache.method19(57, var2 & '\uffff');
-      var6 = GLStatics.textureCache.method10(-114, var2 & '\uffff');
+      var5 = GLStatics.textureCache.method19(57, var2 & 0xffff);
+      var6 = GLStatics.textureCache.method10(-114, var2 & 0xffff);
     }
 
     if (var3 != var5 || var4 != var6) {
@@ -3742,7 +3742,7 @@ public final class GlModel extends AbstractModel {
           GlRenderer.bindTexture(-1);
           GLStatics.method551(0, 0, 0);
         } else {
-          GLStatics.textureCache.initializeMaterial(var7 & '\uffff', true);
+          GLStatics.textureCache.initializeMaterial(var7 & 0xffff, true);
         }
 
         if (this.indices.buffer != null) {
@@ -3991,7 +3991,7 @@ public final class GlModel extends AbstractModel {
   private static int method1905(int var0, short var1, int var2, byte var3) {
     int var4 = GLStatics.hslTable[GlobalStatics_1.repackHSL(var0, var2)];
     if (var1 != -1) {
-      int var5 = GLStatics.textureCache.method19(93, var1 & '\uffff');
+      int var5 = GLStatics.textureCache.method19(93, var1 & 0xffff);
       int var6;
       int var8;
       if (var5 != 0) {
@@ -4010,30 +4010,30 @@ public final class GlModel extends AbstractModel {
           var4 =
               ((var6 & 16711935) * var5 + (var4 & 16711935) * var8 & -16711936)
                   + (
-                  (var6 & '\uff00') * var5 + (var4 & '\uff00') * var8
+                  (var6 & 0xff00) * var5 + (var4 & 0xff00) * var8
                       & 16711680) >> 8;
         }
       }
 
-      var6 = GLStatics.textureCache.method10(90, var1 & '\uffff');
+      var6 = GLStatics.textureCache.method10(90, var1 & 0xffff);
       if (var6 != 0) {
         var6 += 256;
         int var7 = ((var4 & 16711680) >> 16) * var6;
-        if (var7 > '\uffff') {
-          var7 = '\uffff';
+        if (var7 > 0xffff) {
+          var7 = 0xffff;
         }
 
-        var8 = ((var4 & '\uff00') >> 8) * var6;
-        if (var8 > '\uffff') {
-          var8 = '\uffff';
+        var8 = ((var4 & 0xff00) >> 8) * var6;
+        if (var8 > 0xffff) {
+          var8 = 0xffff;
         }
 
         int var9 = (var4 & 255) * var6;
-        if (var9 > '\uffff') {
-          var9 = '\uffff';
+        if (var9 > 0xffff) {
+          var9 = 0xffff;
         }
 
-        var4 = (var7 << 8 & 16711680) + (var8 & '\uff00') + (var9 >> 8);
+        var4 = (var7 << 8 & 16711680) + (var8 & 0xff00) + (var9 >> 8);
       }
     }
 

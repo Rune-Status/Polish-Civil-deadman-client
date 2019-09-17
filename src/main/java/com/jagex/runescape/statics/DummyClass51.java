@@ -45,7 +45,7 @@ public final class DummyClass51 {
       float var6 = GlobalStatics_10.anIntArray1729[var2] >> 8 & 255;
       float var9 = GlobalStatics_10.anIntArray1729[var2] & 255;
       float var5 = (var4 - var3) / 64.0F;
-      int var7 = (GlobalStatics_10.anIntArray1729[var2 + 1] & '\uff00') >> 8;
+      int var7 = (GlobalStatics_10.anIntArray1729[var2 + 1] & 0xff00) >> 8;
       float var8 = (-var6 + var7) / 64.0F;
       int var10 = GlobalStatics_10.anIntArray1729[var2 + 1] & 255;
       float var11 = (var10 - var9) / 64.0F;

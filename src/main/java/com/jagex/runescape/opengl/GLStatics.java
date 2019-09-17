@@ -61,7 +61,7 @@ public class GLStatics {
     float var7 = 0.58823526F;
     GLStatics.FOG_COLOR[3] = 1.0F;
     float var4 = (var3 >> 16 & 255) / 255.0F;
-    float var5 = (('\uff1e' & var3) >> 8) / 255.0F;
+    float var5 = ((0xff1e & var3) >> 8) / 255.0F;
     GLStatics.FOG_COLOR[1] =
         var2 * (var0 >> 8 & 255) / 255.0F * var5 * var7;
     GLStatics.FOG_COLOR[var1] =
@@ -112,7 +112,7 @@ public class GLStatics {
     int var2 = GlEnvironment.method1510();
     float var3 = (255 & var2 >> 16) / 255.0F;
     GLStatics.FOG_COLOR[3] = 1.0F;
-    float var4 = (('\uff59' & var2) >> 8) / 255.0F;
+    float var4 = ((0xff59 & var2) >> 8) / 255.0F;
     float var6 = 0.58823526F;
     float var5 = (255 & var2) / 255.0F;
     GLStatics.FOG_COLOR[2] =

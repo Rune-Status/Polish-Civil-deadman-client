@@ -104,7 +104,7 @@ public final class Light {
     float var8 = this.aFloat707 / 255.0F;
     this.colors[0] = ((this.color & 16771365) >> 16) * var8;
     this.colors[2] = var8 * (255 & this.color);
-    this.colors[1] = ((this.color & (int) '\uffe7') >> 8) * var8;
+    this.colors[1] = ((this.color & (int) 0xffe7) >> 8) * var8;
   }
 
   private void method1064(int var1) {

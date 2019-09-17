@@ -406,7 +406,7 @@ public class DummyClass2 {
       var1 = 126;
     }
 
-    return (var0 & '\uff80') + var1;
+    return (var0 & 0xff80) + var1;
   }
 
   public static void method1754(int var0) {

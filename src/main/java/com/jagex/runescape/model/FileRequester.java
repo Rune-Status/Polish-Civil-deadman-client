@@ -157,7 +157,7 @@ public final class FileRequester extends AbstractFileRequester {
   }
 
   public int method2097(int var1, int var2 ) {
-    if (var2 != '\uffff') {
+    if (var2 != 0xffff) {
         this.anInt2964 = 25;
       }
 
@@ -428,9 +428,9 @@ public final class FileRequester extends AbstractFileRequester {
               var7 = (int) GlobalStatics_10.aCRC32_3143.getValue();
               if (this.aClass62_2944.anIntArray945[var2] == var7) {
                 int var8 =
-                    (var5[-2 + var5.length] << 8 & '\uff00') + (255 & var5[-1
+                    (var5[-2 + var5.length] << 8 & 0xff00) + (255 & var5[-1
                         + var5.length]);
-                if (var8 == ('\uffff'
+                if (var8 == (0xffff
                     & this.aClass62_2944.anIntArray958[var2])) {
                   if (this.aByteArray2949[var2] != 1) {
 

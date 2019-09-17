@@ -62,7 +62,7 @@ public final class RenderAnimation {
           this.anInt382 = -1;
         }
 
-        if (this.anInt368 == '\uffff') {
+        if (this.anInt368 == 0xffff) {
           this.anInt368 = -1;
         }
       } else if (var1 == 2) {

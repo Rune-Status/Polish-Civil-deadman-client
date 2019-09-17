@@ -106,7 +106,7 @@ public final class DummyClass37 {
               if (var14 != -1) {
                 GlobalStatics_6.regionHashes[var6] = var14;
                 int var16 = var14 & 255;
-                var15 = ('\uff6c' & var14) >> 8;
+                var15 = (0xff6c & var14) >> 8;
                 GlobalStatics_1.mapFileIds[var6] =
                     GlobalStatics_10.maps
                         .getFileId(GlobalStatics_9.concat(new GameString[]{
@@ -361,7 +361,7 @@ public final class DummyClass37 {
         var13 = GlobalStatics_9.gameBuffer.readUnsignedByte();
         if (var2 >= 0 && var3 >= 0 && var2 < 208 && var3 < 208 && var4 >= 0 &&
             var5 >= 0
-            && var4 < 208 && var5 < 208 && var7 != '\uffff') {
+            && var4 < 208 && var5 < 208 && var7 != 0xffff) {
           var5 *= 64;
           var4 = 64 * var4;
           var3 = 64 * var3;
@@ -553,7 +553,7 @@ public final class DummyClass37 {
 
               if (var2 >= 0 && var3 >= 0 && var2 < 208 && var3 < 208
                   && var4 >= 0 && var5 >= 0
-                  && var4 < 208 && var5 < 208 && var8 != '\uffff') {
+                  && var4 < 208 && var5 < 208 && var8 != 0xffff) {
                 var4 = 64 * var4;
                 var2 *= 64;
                 var5 *= 64;
@@ -693,7 +693,7 @@ public final class DummyClass37 {
         var6 = 3 & var4;
         var7 = GlobalStatics_3.OBJECT_TYPES[var5];
         var8 = GlobalStatics_9.gameBuffer.readUnsignedShortLE();
-        if (var8 == '\uffff') {
+        if (var8 == 0xffff) {
           var8 = -1;
         }
 

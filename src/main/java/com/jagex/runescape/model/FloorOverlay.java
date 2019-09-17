@@ -43,7 +43,7 @@ public final class FloorOverlay {
           } else {
             if (var2 == 3) {
               this.anInt2095 = var3.readUnsignedShort();
-              if (this.anInt2095 == '\uffff') {
+              if (this.anInt2095 == 0xffff) {
                 this.anInt2095 = -1;
               }
             } else {

@@ -141,7 +141,7 @@ public class SoftwareIndexedColorSpriteStatics {
           int var14 = var0[var4];
           var0[var4++] = ((var15 & 16711935) * var9 + (var14 & 16711935) * var10
               & -16711936) + (
-              (var15 & '\uff00') * var9 + (var14 & '\uff00') * var10 & 16711680)
+              (var15 & 0xff00) * var9 + (var14 & 0xff00) * var10 & 16711680)
               >> 8;
         }
       }

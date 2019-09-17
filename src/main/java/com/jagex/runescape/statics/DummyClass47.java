@@ -42,7 +42,7 @@ public final class DummyClass47 {
     }
 
     var4 = ((var4 & 16711935) * var5 >> 8 & 16711935) + (
-        (var4 & '\uff00') * var5 >> 8 & '\uff00');
+        (var4 & 0xff00) * var5 >> 8 & 0xff00);
     int var6 = 256 - var5;
     int var7 = SoftwareIndexedColorSpriteStatics.anInt1092 - var2;
     int var8 = var0 + var1 * SoftwareIndexedColorSpriteStatics.anInt1092;
@@ -52,7 +52,7 @@ public final class DummyClass47 {
         int var11 = SoftwareIndexedColorSpriteStatics.anIntArray1100[var8];
         var11 =
             ((var11 & 16711935) * var6 >> 8 & 16711935) + (
-                (var11 & '\uff00') * var6 >> 8 & '\uff00');
+                (var11 & 0xff00) * var6 >> 8 & 0xff00);
         SoftwareIndexedColorSpriteStatics.anIntArray1100[var8++] = var4 + var11;
       }
 

@@ -678,7 +678,7 @@ public final class AudioStreamEncoder4 extends AudioStreamEncoder {
           }
 
           while (var3.anInt2501 < var7.aByteArray2064.length - 2
-              && var3.anInt2511 > ('\uff00'
+              && var3.anInt2511 > (0xff00
             & var7.aByteArray2064[var3.anInt2501 + 2] << 8)) {
             var3.anInt2501 += 2;
           }
@@ -1025,7 +1025,7 @@ public final class AudioStreamEncoder4 extends AudioStreamEncoder {
           var6 = var3.aByteArray2064[1 + var2.anInt2501];
           if (var3.aByteArray2064.length - 2 > var2.anInt2501) {
             var8 = (var3.aByteArray2064[2 + var2.anInt2501] & 255) << 8;
-            var7 = '\uff00' & var3.aByteArray2064[var2.anInt2501] << 8;
+            var7 = 0xff00 & var3.aByteArray2064[var2.anInt2501] << 8;
             var6 +=
               (var3.aByteArray2064[3 + var2.anInt2501] - var6) * (var5 - var7) / (var8 - var7);
           }
@@ -1037,7 +1037,7 @@ public final class AudioStreamEncoder4 extends AudioStreamEncoder {
           var5 = var2.anInt2506;
           var6 = var3.aByteArray2076[1 + var2.anInt2519];
           if (-2 + var3.aByteArray2076.length > var2.anInt2519) {
-            var7 = '\uff00' & var3.aByteArray2076[var2.anInt2519] << 8;
+            var7 = 0xff00 & var3.aByteArray2076[var2.anInt2519] << 8;
             var8 = (var3.aByteArray2076[var2.anInt2519 + 2] & 255) << 8;
             var6 +=
               (var5 - var7) * (-var6 + var3.aByteArray2076[3 + var2.anInt2519]) / (-var7 + var8);
