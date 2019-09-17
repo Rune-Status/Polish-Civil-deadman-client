@@ -119,7 +119,7 @@ public final class SocketStream implements Runnable {
   }
 
   public int read() throws IOException {
-    return !this.aBoolean1241 ? this.anInputStream1232.read() : 0;
+    return this.aBoolean1241 ? 0 : this.anInputStream1232.read();
   }
 
   public void write(byte[] var3, int var2, int var4) throws IOException {

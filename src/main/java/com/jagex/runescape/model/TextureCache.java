@@ -165,7 +165,7 @@ public final class TextureCache implements ITextureCache {
         boolean var3 = false;
         Texture var4 = this.getConfig(var1, 1);
         if (var4 != null) {
-          var3 = var4.method719(this.sprites, this, 579100487,
+          var3 = var4.method719(this.sprites, this,
               this.aBoolean2134 || this.aBooleanArray2122[var1]);
         }
 

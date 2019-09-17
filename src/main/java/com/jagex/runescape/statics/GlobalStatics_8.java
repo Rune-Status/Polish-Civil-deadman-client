@@ -2547,7 +2547,7 @@ public class GlobalStatics_8 {
   }
 
   public static int method810(byte var0, int var1) {
-    return var0 != 3 ? 74 : 255 & var1;
+    return var0 == 3 ? 255 & var1 : 74;
   }
 
   public static void method813(int var0) {
@@ -3342,7 +3342,7 @@ public class GlobalStatics_8 {
   public static int method2287(int var0, byte var1) {
     return (var0 < 97 || var0 > 122) && (var0 < 224 || var0 > 254 ||
         var0 == 247) ?
-        var0 != 255 ? var0 != 156 ? var1 != 59 ? 72 : var0 : 140 : 159 :
+        var0 == 255 ? 159 : var0 == 156 ? 140 : var1 == 59 ? var0 : 72 :
         var0 - 32;
   }
 
@@ -3686,11 +3686,10 @@ public class GlobalStatics_8 {
     }
 
     int var2 = GlobalStatics_8.method1602(0, var0);
-    return var2 != -1 ?
-        DummyClass25.aClass131_1624.aClass94Array1721[var2].method1560(
+    return var2 == -1 ? GlobalStatics_9.aClass94_4049
+        : DummyClass25.aClass131_1624.aClass94Array1721[var2].method1560(
             GlobalStatics_10.aClass94_3192, true,
-            GlobalStatics_9.aClass94_4066) :
-        GlobalStatics_9.aClass94_4049;
+            GlobalStatics_9.aClass94_4066);
   }
 
   public static void method28(boolean var0) {

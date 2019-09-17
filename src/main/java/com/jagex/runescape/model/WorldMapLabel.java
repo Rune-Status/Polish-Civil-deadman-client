@@ -38,7 +38,7 @@ public final class WorldMapLabel {
   }
 
   public int method1791(int var1, int var2 ) {
-    return var2 != 8 ? 35 : this.aByteArray1730[var1] & 3;
+    return var2 == 8 ? this.aByteArray1730[var1] & 3 : 35;
   }
 
   public boolean method1794(int var1, int var2 ) {

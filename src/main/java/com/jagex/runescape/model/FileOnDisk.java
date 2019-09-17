@@ -90,7 +90,7 @@ public final class FileOnDisk {
   }
 
   public long length(int var1) throws IOException {
-    return var1 != -1 ? 36L : this.aRandomAccessFile1651.length();
+    return var1 == -1 ? this.aRandomAccessFile1651.length() : 36L;
   }
 
   public File method1742(int var1) {

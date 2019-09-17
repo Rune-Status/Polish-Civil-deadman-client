@@ -124,9 +124,8 @@ public class SignLink implements Runnable {
   public final SignLinkRequest method1434(int[] var1, int var2, int var3,
       Component var4,
       Point var5, int var6) {
-    return var2 != 10000 ?
-        null :
-        this.method1435(17, var6, new Object[]{var4, var1, var5}, var3);
+    return var2 == 10000 ? this
+        .method1435(17, var6, new Object[]{var4, var1, var5}, var3) : null;
   }
 
   private SignLinkRequest method1435(int var1, int var2, Object var3, int var4) {
@@ -177,7 +176,7 @@ public class SignLink implements Runnable {
   }
 
   public final SignLinkRequest method1441(byte var1, String var2, int var3) {
-    return var1 != 8 ? null : this.method1435(1, 0, var2, var3);
+    return var1 == 8 ? this.method1435(1, 0, var2, var3) : null;
   }
 
   public final SignLinkRequest method1442(Class var1, int var2) {

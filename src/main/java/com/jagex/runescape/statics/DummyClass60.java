@@ -132,7 +132,7 @@ public final class DummyClass60 {
       GlobalStatics_9.anInt3552 = 8 + var7;
       GlobalStatics_9.anInt3537 =
           15 * GlobalStatics_10.amountContextActions + (
-              !GlobalStatics_8.aBoolean1951 ? 22 : 26);
+              GlobalStatics_8.aBoolean1951 ? 26 : 22);
     }
 
     if (var5 != null) {

@@ -20,8 +20,8 @@ public final class TextureSampler9 extends AbstractTextureSampler {
       int[] var4 = this.monoChromaticImageCache.method1709(-16409, var1);
       if (this.monoChromaticImageCache.aBoolean1580) {
         int[] var5 =
-            this.method152(0, !this.aBoolean3104
-                  ? var1 : GlobalStatics_10.anInt2487 - var1,
+            this.method152(0,
+                this.aBoolean3104 ? GlobalStatics_10.anInt2487 - var1 : var1,
             32755);
         if (this.aBoolean3100) {
           for (int var6 = 0; var6 < GlobalStatics_9.anInt1559; ++var6) {
@@ -58,7 +58,8 @@ public final class TextureSampler9 extends AbstractTextureSampler {
           .method1594((byte) 54, var2);
       if (this.triChromaticImageCache.aBoolean1379) {
         int[][] var4 =
-            this.method162(!this.aBoolean3104 ? var2 : -var2 + GlobalStatics_10.anInt2487, 0,
+            this.method162(
+                this.aBoolean3104 ? -var2 + GlobalStatics_10.anInt2487 : var2, 0,
             (byte) -105);
         assert var4 != null;
         int[] var5 = var4[0];

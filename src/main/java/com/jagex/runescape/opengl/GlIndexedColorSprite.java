@@ -62,8 +62,8 @@ public final class GlIndexedColorSprite extends AbstractIndexedColorSprite {
 
     GlRenderer.bindTexture(this.textureId);
     GlRenderer.GL
-        .glTexImage2D(GL.GL_TEXTURE_2D, 0, 6408, this.textureWidth, this.textureHeight, 0,
-            6408, 5121, buffer);
+        .glTexImage2D(GL.GL_TEXTURE_2D, 0, GL.GL_RGBA, this.textureWidth, this.textureHeight, 0,
+            GL.GL_RGBA, GL.GL_UNSIGNED_BYTE, buffer);
     DummyClass33.texture2dMemory += buffer.limit() - this.anInt2678;
     this.anInt2678 = buffer.limit();
   }

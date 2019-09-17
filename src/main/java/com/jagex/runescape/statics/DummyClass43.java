@@ -64,7 +64,7 @@ public final class DummyClass43 {
                 "com.jagex.runescape.model.BufferedAudioOutputStream")
                 .newInstance();
         var9.sampleRate = var0;
-        var9.samples = new int[(!GlobalStatics_0.stereo ? 1 : 2) * 256];
+        var9.samples = new int[(GlobalStatics_0.stereo ? 2 : 1) * 256];
         var9.bind(var2);
         var9.sampleBufferSize = (var0 & 0xfffffc00) + 1024;
         if (var9.sampleBufferSize > 16384) {

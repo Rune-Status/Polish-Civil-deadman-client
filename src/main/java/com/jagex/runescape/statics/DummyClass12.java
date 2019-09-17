@@ -196,22 +196,19 @@ public final class DummyClass12 {
               var2 <= 67 ?
                   36 :
                   var1 == 4 ?
-                      !var0.method1074(-114) ?
-                          !var3.method1074(-123) ? 0 : -1 :
-                          var3.method1074(-108) ? 0 : 1 :
+                      var0.method1074(-114) ? var3.method1074(-108) ? 0 : 1
+                          : var3.method1074(-123) ? -1 : 0 :
                       var1 == 5 ?
                           var0.method1075(64) ?
-                              !var3.method1075(64) ? 1 : 0 :
+                              var3.method1075(64) ? 0 : 1 :
                               var3.method1075(64) ? -1 : 0 :
-                          var1 != 6 ?
-                              var1 == 7 ?
-                                  var0.method1070(8) ?
-                                      var3.method1070(8) ? 0 : 1 :
-                                      var3.method1070(8) ? -1 : 0 :
-                                  -var3.anInt2621 + var0.anInt2621 :
-                              var0.method1072(false) ?
-                                  !var3.method1072(false) ? 1 : 0 :
-                                  var3.method1072(false) ? -1 : 0;
+                          var1 == 6 ? var0.method1072(false) ?
+                              var3.method1072(false) ? 0 : 1 :
+                              var3.method1072(false) ? -1 : 0 : var1 == 7 ?
+                              var0.method1070(8) ?
+                                  var3.method1070(8) ? 0 : 1 :
+                                  var3.method1070(8) ? -1 : 0 :
+                              -var3.anInt2621 + var0.anInt2621;
     }
   }
 

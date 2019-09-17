@@ -217,15 +217,15 @@ public final class SkyboxMaterialShader implements MaterialShader {
       // GL_TEXTURE_CUBE_MAP
       GlRenderer.GL.glBindTexture(0x8513, this.textureIds[0]);
       GlRenderer.GL
-          .glTexImage2D(0x8515 + side, 0, 6406, 64, 64, 0, 6406, 5121,
+          .glTexImage2D(0x8515 + side, 0, 6406, 64, 64, 0, 6406, GL.GL_UNSIGNED_BYTE,
               ByteBuffer.wrap(var11));
       GlRenderer.GL.glBindTexture(0x8513, this.textureIds[1]);
       GlRenderer.GL
-          .glTexImage2D(0x8515 + side, 0, 6406, 64, 64, 0, 6406, 5121,
+          .glTexImage2D(0x8515 + side, 0, 6406, 64, 64, 0, 6406, GL.GL_UNSIGNED_BYTE,
               ByteBuffer.wrap(var12));
       GlRenderer.GL.glBindTexture(0x8513, this.textureIds[2]);
       GlRenderer.GL
-          .glTexImage2D(0x8515 + side, 0, 6406, 64, 64, 0, 6406, 5121,
+          .glTexImage2D(0x8515 + side, 0, 6406, 64, 64, 0, 6406, GL.GL_UNSIGNED_BYTE,
               ByteBuffer.wrap(var10));
       DummyClass33.textureMemory += var9 * 3;
     }

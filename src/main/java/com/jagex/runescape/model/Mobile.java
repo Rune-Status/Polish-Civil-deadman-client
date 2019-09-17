@@ -532,8 +532,8 @@ public abstract class Mobile extends SceneNode {
   }
 
   public final int method1975(int var1) {
-    return var1 != 27855 ? 107 :
-        this.anInt2820 != -32768 ? -this.anInt2820 : 200;
+    return var1 == 27855 ? this.anInt2820 == -32768 ? 200 : -this.anInt2820
+        : 107;
   }
 
   public final void method1976(int var1, int var2) {

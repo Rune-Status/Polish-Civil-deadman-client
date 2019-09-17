@@ -158,9 +158,9 @@ public final class PlayerAppearance {
         for (int var7 = 0; var7 < 8; ++var7) {
           for (int var8 = 0; GlobalStatics_9.anInt497 > var8; ++var8) {
             IdentityKit var9 = GlobalStatics_10.getIdentityKit(var8, 0);
-            if (!var9.aBoolean476 && var9.anInt466 == (!var3 ?
-                GlobalStatics_9.anIntArray2559[var7] :
-                GlobalStatics_9.anIntArray3228[var7])) {
+            if (!var9.aBoolean476 && var9.anInt466 == (var3
+                ? GlobalStatics_9.anIntArray3228[var7]
+                : GlobalStatics_9.anIntArray2559[var7])) {
               var5[DummyClass6.anIntArray2043[var7]] =
                 HuffmanEncoderStatics.method308(Integer.MIN_VALUE, var8);
               break;
@@ -191,12 +191,13 @@ public final class PlayerAppearance {
         GlobalStatics_9.anIntArray859 = null;
       }
 
-      return this.npcId != -1 ?
-        305419896 + GlobalStatics_2.getNpcConfiguration(this.npcId).anInt1284 :
-        (this.anIntArray857[8] << 10) + (this.anIntArray862[0] << 25) + (
-            this.anIntArray862[4]
-                << 20) - (-(this.anIntArray857[0] << 15) - ((this.anIntArray857[11] << 5)
-          + this.anIntArray857[1]));
+      return this.npcId == -1 ?
+          (this.anIntArray857[8] << 10) + (this.anIntArray862[0] << 25) + (
+              this.anIntArray862[4]
+                  << 20) - (-(this.anIntArray857[0] << 15) - (
+              (this.anIntArray857[11] << 5)
+                  + this.anIntArray857[1])) : 305419896 + GlobalStatics_2
+          .getNpcConfiguration(this.npcId).anInt1284;
   }
 
   public void method1164(int var1, int var2, int var3 ) {

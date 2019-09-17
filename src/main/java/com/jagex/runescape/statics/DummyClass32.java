@@ -33,12 +33,10 @@ public final class DummyClass32 {
   public static GameString aClass94_525 = DummyClass32.aClass94_527;
 
   public static int method961(int var0) {
-    return var0 != 1536 ?
-        96 :
-        DummyClass30.anInt453 == 0 ?
-            0 :
-            GlobalStatics_9.anInterface5Array70[DummyClass30.anInt453]
-                .method24();
+    return var0 == 1536 ? DummyClass30.anInt453 == 0 ?
+        0 :
+        GlobalStatics_9.anInterface5Array70[DummyClass30.anInt453]
+            .method24() : 96;
   }
 
   public static void method962(byte var0) {

@@ -51,7 +51,7 @@ public final class BufferedAudioOutputStream extends AbstractAudioOutputStream {
     javax.sound.sampled.DataLine.Info var2 =
           new javax.sound.sampled.DataLine.Info(SourceDataLine.class,
               this.audioFormat,
-              bufferSize << (!GlobalStatics_0.stereo ? 1 : 2));
+              bufferSize << (GlobalStatics_0.stereo ? 2 : 1));
       this.sourceDataLine = (SourceDataLine) AudioSystem.getLine(var2);
       this.sourceDataLine.open();
       this.sourceDataLine.start();
@@ -66,7 +66,7 @@ public final class BufferedAudioOutputStream extends AbstractAudioOutputStream {
       javax.sound.sampled.DataLine.Info var1 =
           new javax.sound.sampled.DataLine.Info(SourceDataLine.class,
               this.audioFormat,
-              this.bufferSize << (!GlobalStatics_0.stereo ? 1 : 2));
+              this.bufferSize << (GlobalStatics_0.stereo ? 2 : 1));
       this.sourceDataLine = (SourceDataLine) AudioSystem.getLine(var1);
       this.sourceDataLine.open();
       this.sourceDataLine.start();
@@ -75,8 +75,8 @@ public final class BufferedAudioOutputStream extends AbstractAudioOutputStream {
   }
 
   public int getAmountBufferedSamples() {
-    return this.bufferSize - (this.sourceDataLine.available() >> (!GlobalStatics_0.stereo ? 1
-        : 2));
+    return this.bufferSize - (this.sourceDataLine.available() >> (
+        GlobalStatics_0.stereo ? 2 : 1));
   }
 
   public void close() {
@@ -104,7 +104,7 @@ public final class BufferedAudioOutputStream extends AbstractAudioOutputStream {
 
     this.audioFormat =
         new AudioFormat(DummyClass60.sampleRate, 16,
-            !GlobalStatics_0.stereo ? 1 : 2, true, false);
+            GlobalStatics_0.stereo ? 2 : 1, true, false);
     this.buffer = new byte[256 << (GlobalStatics_0.stereo ? 2 : 1)];
   }
 }

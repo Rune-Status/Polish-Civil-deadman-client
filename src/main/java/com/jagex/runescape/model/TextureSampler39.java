@@ -55,7 +55,7 @@ public class TextureSampler39 extends AbstractTextureSampler {
   }
 
   public final int method159(int var1) {
-    return var1 != 4 ? 40 : this.anInt3278;
+    return var1 == 4 ? this.anInt3278 : 40;
   }
 
   public final void method161(byte var1) {

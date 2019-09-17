@@ -580,17 +580,19 @@ public final class GlRenderer {
     return GlRenderer.aFloat1797;
   }
 
-  public static void bindCanvas(Canvas canvas, int var1) {
+  public static void bindCanvas(Canvas canvas, int samples) {
+    System.out.printf("Binding canvas with samples%d%n", samples);
     if (!canvas.isDisplayable()) {
       return;
     }
     GLProfile profile = GLProfile.getDefault();
     GLCapabilities capabilities = new GLCapabilities(profile);
 
-    if (var1 > 0) {
+    if (samples > 0) {
       capabilities.setSampleBuffers(true);
-      capabilities.setNumSamples(var1);
+      capabilities.setNumSamples(samples);
     }
+
     JAWTWindow surface = GlobalStatics_8.NATIVE_WINDOW;
     GLDrawable drawable =
         GlRenderer.bindDrawable(surface, profile);
@@ -701,7 +703,8 @@ public final class GlRenderer {
     GlRenderer.GL.glGenTextures(1, var0, 0);
     GlRenderer.anInt1810 = var0[0];
     GlRenderer.GL.glBindTexture(GL.GL_TEXTURE_2D, GlRenderer.anInt1810);
-    GlRenderer.GL.glTexImage2D(GL.GL_TEXTURE_2D, 0, 4, 1, 1, 0, 6408, 5121,
+    GlRenderer.GL.glTexImage2D(GL.GL_TEXTURE_2D, 0, 4, 1, 1, 0, GL.GL_RGBA,
+        GL.GL_UNSIGNED_BYTE,
         IntBuffer.wrap(new int[]{-1}));
     DummyClass46.setupSceneGl();
     GlobalStatics_6.method468(6);

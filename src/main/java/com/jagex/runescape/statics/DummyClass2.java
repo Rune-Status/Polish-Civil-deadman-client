@@ -138,13 +138,13 @@ public class DummyClass2 {
           GlobalStatics_7.loginBuffer.writeInt(530);
           GlobalStatics_7.loginBuffer.writeByte(GlobalStatics_7.anInt2161);
           GlobalStatics_7.loginBuffer
-              .writeByte(!GlobalStatics_9.aBoolean3779 ? 0 : 1);
+              .writeByte(GlobalStatics_9.aBoolean3779 ? 1 : 0);
           GlobalStatics_7.loginBuffer.writeByte(1);
           GlobalStatics_7.loginBuffer
               .writeByte(GlobalStatics_9.getWindowMode());
           GlobalStatics_7.loginBuffer.writeShort(DummyClass30.viewWidth);
           GlobalStatics_7.loginBuffer.writeShort(GlobalStatics_9.viewHeight);
-          GlobalStatics_7.loginBuffer.writeByte(GlobalStatics_9.anInt3671);
+          GlobalStatics_7.loginBuffer.writeByte(GlobalStatics_9.GL_RENDERING_SAMPLES);
           DummyClass50.writeUUID(GlobalStatics_7.loginBuffer, true);
           GlobalStatics_7.loginBuffer.writeString(DummyClass7.settings);
           GlobalStatics_7.loginBuffer

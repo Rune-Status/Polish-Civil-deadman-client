@@ -250,7 +250,7 @@ public class GlobalStatics_2 {
       int var2,
       byte var3) {
     return GlobalStatics_9.loadSprites(var0, var1, var2, -30901) ?
-        var3 != 39 ? null : GlobalStatics_9.method578(var3 ^ 84) :
+        var3 == 39 ? GlobalStatics_9.method578(var3 ^ 84) : null :
         null;
   }
 
@@ -269,7 +269,8 @@ public class GlobalStatics_2 {
     GlobalStatics_2.aBoolean3604 = true;
     GlobalStatics_1.aBoolean3184 = true;
     GLStatics.aBoolean1685 = true;
-    GlobalStatics_9.anInt3622 = 0;
+    GlobalStatics_9.RENDERING_SAMPLES = 0;
+    GlobalStatics_9.GL_RENDERING_SAMPLES = 0;
     GlobalStatics_10.anInt3071 = 0;
     GlobalStatics_9.aBoolean1905 = true;
     GlobalStatics_9.aBoolean2623 = true;
@@ -283,7 +284,6 @@ public class GlobalStatics_2 {
     GLStatics.useBumpMaps = true;
     GlobalStatics_10.anInt120 = 255;
     GlobalStatics_9.aBoolean488 = true;
-    GlobalStatics_9.anInt3671 = 0;
     FileOnDisk var2 = null;
     GlobalStatics_7.anInt2453 = 127;
     if (GlobalStatics_6.anInt3492 >= 96) {
@@ -296,7 +296,7 @@ public class GlobalStatics_2 {
     GlobalStatics_10.anInt2488 = 0;
     GlobalStatics_2.aBoolean346 = false;
     DummyClass4.aBoolean3004 = true;
-    GlobalStatics_0.safemode = false;
+    GlobalStatics_0.SAFE_MODE = false;
     GlobalStatics_7.aBoolean1080 = false;
     GlobalStatics_2.anInt2577 = 0;
 
@@ -414,8 +414,7 @@ public class GlobalStatics_2 {
       GlobalStatics_2.method520((byte) -89);
     }
 
-    return var0 != 0 ? var0 != 1 ? var0 == 2 ? -var3 + 7 : -var2 + 7
-        : var2 : var3;
+    return var0 != 0 ? var0 == 1 ? var2 : var0 == 2 ? -var3 + 7 : -var2 + 7 : var3;
   }
 
   public static SomethingWorldMapy method520(byte var0) {
@@ -874,12 +873,10 @@ public class GlobalStatics_2 {
     Widget var3 = GlobalStatics_7.getWidget((byte) 109, var1);
     return var2 == -1 ?
         var3 :
-        var0 != -19 ?
-            null :
-            var3 != null && var3.aClass11Array262 != null
-                && var3.aClass11Array262.length > var2 ?
-                var3.aClass11Array262[var2] :
-                null;
+        var0 == -19 ? var3 != null && var3.aClass11Array262 != null
+            && var3.aClass11Array262.length > var2 ?
+            var3.aClass11Array262[var2] :
+            null : null;
   }
 
   public static MidiFile method517(FileUnpacker unpacker, int fileId,

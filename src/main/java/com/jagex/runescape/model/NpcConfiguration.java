@@ -542,7 +542,7 @@ public final class NpcConfiguration {
   public GameString method1477(int var1, GameString var2, boolean var3 ) {
     if (this.aClass130_1272 != null) {
         StringNode var4 = (StringNode) this.aClass130_1272.get(var1);
-        return !var3 ? null : var4 == null ? var2 : var4.aClass94_2586;
+        return var3 ? var4 == null ? var2 : var4.aClass94_2586 : null;
       } else {
         return var2;
       }

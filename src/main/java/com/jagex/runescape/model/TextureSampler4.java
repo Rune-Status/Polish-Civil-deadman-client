@@ -102,7 +102,7 @@ public final class TextureSampler4 extends AbstractTextureSampler {
         if (var16 + this.anInt3223 < var9 && var15 - this.anInt3223 > var9) {
           for (var4 = 0; var4 < GlobalStatics_9.anInt1559; ++var4) {
             int var6 = 0;
-            int var5 = !var12 ? -this.anInt3234 : this.anInt3234;
+            int var5 = var12 ? this.anInt3234 : -this.anInt3234;
 
             int var8;
             for (

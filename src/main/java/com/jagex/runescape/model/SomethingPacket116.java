@@ -33,7 +33,7 @@ public final class SomethingPacket116 {
   }
 
   public int method1805(byte var1) {
-    return (this.aByte1742 & 8) != 8 ? 0 : 1;
+    return (this.aByte1742 & 8) == 8 ? 1 : 0;
   }
 
 }

@@ -124,7 +124,7 @@ public final class GlobalStatics_0 {
       GameStringStatics.create("Allocated memory");
   public static GameString aClass94_2151 = GlobalStatics_0.aClass94_2158;
   public static int anInt2145;
-  public static boolean safemode;
+  public static boolean SAFE_MODE;
   public static int packetId;
   public static int anInt2148;
   public static boolean stereo;
@@ -1101,12 +1101,12 @@ public final class GlobalStatics_0 {
       } else if (var3 != -1) {
         int var8 =
             DummyClass12.method2201(var1, var3, var2 ^ 5651, var0, var5);
-        return !var5 ? var8 : -var8;
+        return var5 ? -var8 : var8;
       } else {
         return 0;
       }
     } else {
-      return !var6 ? var7 : -var7;
+      return var6 ? -var7 : var7;
     }
   }
 

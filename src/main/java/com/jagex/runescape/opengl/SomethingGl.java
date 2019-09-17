@@ -86,7 +86,7 @@ public final class SomethingGl {
       GlRenderer.GL.glGenTextures(1, var1, 0);
       GlRenderer.GL.glBindTexture(0x806f, var1[0]);
       SomethingGl.aByteBuffer1226.position(0);
-      GlRenderer.GL.glTexImage3D(0x806f, 0, 6410, 64, 64, 64, 0, 6410, 5121,
+      GlRenderer.GL.glTexImage3D(0x806f, 0, 6410, 64, 64, 64, 0, 6410, GL.GL_UNSIGNED_BYTE,
           SomethingGl.aByteBuffer1226);
       GlRenderer.GL.glTexParameteri(0x806f, 10241, 9729);
       GlRenderer.GL.glTexParameteri(0x806f, 10240, 9729);
@@ -99,7 +99,7 @@ public final class SomethingGl {
       for (int var2 = 0; var2 < 64; ++var2) {
         GlRenderer.bindTexture(SomethingGl.anIntArray1224[var2]);
         SomethingGl.aByteBuffer1226.position(var2 * 64 * 64 * 2);
-        GlRenderer.GL.glTexImage2D(GL.GL_TEXTURE_2D, 0, 6410, 64, 64, 0, 6410, 5121,
+        GlRenderer.GL.glTexImage2D(GL.GL_TEXTURE_2D, 0, 6410, 64, 64, 0, 6410, GL.GL_UNSIGNED_BYTE,
             SomethingGl.aByteBuffer1226);
         GlRenderer.GL.glTexParameteri(GL.GL_TEXTURE_2D, 10241, 9729);
         GlRenderer.GL.glTexParameteri(GL.GL_TEXTURE_2D, 10240, 9729);
@@ -116,7 +116,7 @@ public final class SomethingGl {
       GlRenderer.GL.glGenTextures(1, var1, 0);
       GlRenderer.GL.glBindTexture(0x806f, var1[0]);
       SomethingGl.aByteBuffer1225.position(0);
-      GlRenderer.GL.glTexImage3D(0x806f, 0, 6410, 64, 64, 64, 0, 6410, 5121,
+      GlRenderer.GL.glTexImage3D(0x806f, 0, 6410, 64, 64, 64, 0, 6410, GL.GL_UNSIGNED_BYTE,
           SomethingGl.aByteBuffer1225);
       GlRenderer.GL.glTexParameteri(0x806f, 10241, 9729);
       GlRenderer.GL.glTexParameteri(0x806f, 10240, 9729);
@@ -129,7 +129,7 @@ public final class SomethingGl {
       for (int var2 = 0; var2 < 64; ++var2) {
         GlRenderer.bindTexture(SomethingGl.anIntArray1223[var2]);
         SomethingGl.aByteBuffer1225.position(var2 * 64 * 64 * 2);
-        GlRenderer.GL.glTexImage2D(GL.GL_TEXTURE_2D, 0, 6410, 64, 64, 0, 6410, 5121,
+        GlRenderer.GL.glTexImage2D(GL.GL_TEXTURE_2D, 0, 6410, 64, 64, 0, 6410, GL.GL_UNSIGNED_BYTE,
             SomethingGl.aByteBuffer1225);
         GlRenderer.GL.glTexParameteri(GL.GL_TEXTURE_2D, 10241, 9729);
         GlRenderer.GL.glTexParameteri(GL.GL_TEXTURE_2D, 10240, 9729);

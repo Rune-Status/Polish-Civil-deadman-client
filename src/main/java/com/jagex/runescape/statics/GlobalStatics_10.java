@@ -687,9 +687,8 @@ public class GlobalStatics_10 {
       GlobalStatics_10.createImageProducer(-95, 48, true, null);
     }
 
-    return !GlobalStatics_9.loadSprites(var3, var1, var2, -30901) ?
-        null :
-        GlobalStatics_2.method891(var0 ^ 4);
+    return GlobalStatics_9.loadSprites(var3, var1, var2, -30901)
+        ? GlobalStatics_2.method891(var0 ^ 4) : null;
   }
 
   public static void method287(boolean var0) {
@@ -2341,7 +2340,7 @@ public class GlobalStatics_10 {
           }
         }
       } else {
-        for (var10 = 0; var10 < (!var3 ? 4096 : 64); ++var10) {
+        for (var10 = 0; var10 < (var3 ? 64 : 4096); ++var10) {
           var2 = var1.readByte();
           if (var2 != 0) {
             ++var1.position;
@@ -2592,7 +2591,7 @@ public class GlobalStatics_10 {
 
     return (var1 < 65 || var1 > 90) && (var1 < 192
         || var1 > 222 || var1 == 215) ?
-        var1 != 159 ? var1 != 140 ? var1 : 156 : 255 :
+        var1 == 159 ? 255 : var1 == 140 ? 156 : var1 :
         32 + var1;
   }
 
@@ -2808,11 +2807,11 @@ public class GlobalStatics_10 {
         120 :
         var1 == 0
             ? var3
-            : var1 != 1 ? var1 != 2 ? var0 : -var3 + 1023 : -var0 + 1023;
+            : var1 == 1 ? -var0 + 1023 : var1 == 2 ? -var3 + 1023 : var0;
   }
 
   public static int method322(boolean var0, byte var1) {
-    return !var0 ? 104 : 255 & var1;
+    return var0 ? 255 & var1 : 104;
   }
 
   public static void setupDefaultSun(int brightness) {
@@ -3263,7 +3262,7 @@ public class GlobalStatics_10 {
         GlobalStatics_9.anIntArray2125[var3] = (var3 << 12) / var2;
       }
 
-      DummyClass53.anInt1343 = var2 != 64 ? 4096 : 2048;
+      DummyClass53.anInt1343 = var2 == 64 ? 2048 : 4096;
       GlobalStatics_9.anInt396 = -1 + var2;
       GlobalStatics_9.anInt1559 = var2;
     }
@@ -3674,8 +3673,8 @@ public class GlobalStatics_10 {
       }
 
       DummyClass43.method1194(-16385);
-      byte var19 = DummyClass20.method1817((byte) 70) != 2 ? 1
-          : (byte) GlobalStatics_6.anInt1127;
+      byte var19 = DummyClass20.method1817((byte) 70) == 2
+          ? (byte) GlobalStatics_6.anInt1127 : 1;
       if (GlRenderer.useOpenGlRenderer) {
         GlRenderer.method1846();
         GlRenderer.setDepthTestEnabled(true);
@@ -5444,8 +5443,8 @@ public class GlobalStatics_10 {
 
     var1 &= 3;
     return var1 != 0 ?
-        var1 != 1 ? var1 != 2 ? -var0 + 7 + 1 - var3
-            : -var6 + 7 - (var4 - 1) : var0 :
+        var1 == 1 ? var0
+            : var1 == 2 ? -var6 + 7 - (var4 - 1) : -var0 + 7 + 1 - var3 :
         var6;
   }
 
@@ -5524,8 +5523,8 @@ public class GlobalStatics_10 {
   }
 
   public static int method869(int var0, int var1) {
-    return var1 != 16711935 ? var0 < 97 ? -63
-        : DummyClass42.method1186(0, var1) : -1;
+    return var1 == 16711935 ? -1 : var0 < 97 ? -63
+        : DummyClass42.method1186(0, var1);
   }
 
   public static void method90(int var0) {
@@ -5748,9 +5747,8 @@ public class GlobalStatics_10 {
 
   public static AbstractIndexedColorSprite createIndexedColorSprite(
       FileUnpacker var1, int fileId) {
-    return !GlobalStatics_9.loadSprites(var1, fileId) ?
-        null :
-        GlobalStatics_9.createIndexedColorSprite();
+    return GlobalStatics_9.loadSprites(var1, fileId) ? GlobalStatics_9
+        .createIndexedColorSprite() : null;
   }
 
   public static MapScene c(int var0, int var1) {
@@ -6264,13 +6262,11 @@ public class GlobalStatics_10 {
   }
 
   public static SomethingTexture method843(int var0, Buffer var1) {
-    return var0 != -5232 ?
-        null :
-        new SomethingTexture(var1.method787((byte) 46),
-            var1.method787((byte) 109),
-            var1.method787((byte) 68), var1.method787((byte) 127),
-            var1.readUnsignedMedium((byte) 91),
-            var1.readUnsignedByte());
+    return var0 == -5232 ? new SomethingTexture(var1.method787((byte) 46),
+        var1.method787((byte) 109),
+        var1.method787((byte) 68), var1.method787((byte) 127),
+        var1.readUnsignedMedium((byte) 91),
+        var1.readUnsignedByte()) : null;
   }
 
   public static void method844(byte var0) {

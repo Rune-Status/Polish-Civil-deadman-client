@@ -98,7 +98,7 @@ public final class SomethingAudio {
             * var1 / this.anInt1997);
       }
 
-      return var2 != 90 ? 81 : var1;
+      return var2 == 90 ? var1 : 81;
   }
 
   public int method2178(boolean var1,int var2 ) {

@@ -81,7 +81,7 @@ public final class DummyClass38 {
           var3.anInt2837 = var4 >> 8;
           if (var5 == 2) {
             GlobalStatics_9
-                .method611(var13, !var8 ? 1 : 17, var25, null, (byte) 50,
+                .method611(var13, var8 ? 17 : 1, var25, null, (byte) 50,
                     GlobalStatics_9.concat(
                         new GameString[]{DummyClass60.aClass94_444,
                             var3.getFullName()}));

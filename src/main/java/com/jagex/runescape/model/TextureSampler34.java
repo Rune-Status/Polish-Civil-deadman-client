@@ -186,7 +186,7 @@ public final class TextureSampler34 extends AbstractTextureSampler {
       int var15 = DummyClass3.anIntArray52[var1];
       int var8;
       if (var14 > 1) {
-        var8 = var14 != 2 ? -var1 - var6 : var1 - var6;
+        var8 = var14 == 2 ? var1 - var6 : -var1 - var6;
       } else {
         var8 = var14 == 0 ? var6 + var1 : -var1 + var6;
       }
@@ -204,14 +204,14 @@ public final class TextureSampler34 extends AbstractTextureSampler {
       var14 = this.aByteArray3059[var13 + var2] & 3;
       int var16 = var8 + ((var9 - var8) * var15 >> 12);
       if (var14 > 1) {
-        var8 = var14 != 2 ? -var1 - var10 : var1 - var10;
+        var8 = var14 == 2 ? var1 - var10 : -var1 - var10;
       } else {
         var8 = var14 != 0 ? var10 - var1 : var1 + var10;
       }
 
       var14 = 3 & this.aByteArray3059[var2 + var12];
       if (var14 > 1) {
-        var9 = var14 != 2 ? -var10 - var11 : var11 - var10;
+        var9 = var14 == 2 ? var11 - var10 : -var10 - var11;
       } else {
         var9 = var14 == 0 ? var11 + var10 : var10 - var11;
       }

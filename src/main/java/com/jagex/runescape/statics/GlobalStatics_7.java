@@ -1979,11 +1979,9 @@ public class GlobalStatics_7 {
                 && var0.aClass94Array171[var2].method1564(1).getLength() != 0
                 ?
                 var0.aClass94Array171[var2] :
-                !GlobalStatics_9.aBoolean1040 ?
-                    null :
-                    GlobalStatics_9.concat(
-                        new GameString[]{GlobalStatics_6.aClass94_1645,
-                            GlobalStatics_9.toString(var2)});
+                GlobalStatics_9.aBoolean1040 ? GlobalStatics_9.concat(
+                    new GameString[]{GlobalStatics_6.aClass94_1645,
+                        GlobalStatics_9.toString(var2)}) : null;
   }
 
   public static boolean hasKeyInput() {
@@ -2053,9 +2051,8 @@ public class GlobalStatics_7 {
       GlobalStatics_7.aBoolean1080 = false;
     }
 
-    return !GlobalStatics_9.loadSprites(var3, var0, var1, -30901) ?
-        null :
-        GlobalStatics_9.createFont(-22376, var4.getBytes(var1, var0));
+    return GlobalStatics_9.loadSprites(var3, var0, var1, -30901)
+        ? GlobalStatics_9.createFont(-22376, var4.getBytes(var1, var0)) : null;
   }
 
   public static void rebuildScene(int plane, int var1, int var2, int y,
@@ -2462,19 +2459,19 @@ public class GlobalStatics_7 {
       }
 
       if (command.method1531(GlobalStatics_9.COMMAND_WM0)) {
-        GlobalStatics_9.setWindowMode(false, 0, -8914, -1, -1);
+        GlobalStatics_9.setWindowMode(false, 0, -1, -1);
       }
 
       if (command.method1531(DummyClass58.COMMAND_WM1)) {
-        GlobalStatics_9.setWindowMode(false, 1, -8914, -1, -1);
+        GlobalStatics_9.setWindowMode(false, 1, -1, -1);
       }
 
       if (command.method1531(GlobalStatics_6.COMMAND_WM2)) {
-        GlobalStatics_9.setWindowMode(false, 2, -8914, -1, -1);
+        GlobalStatics_9.setWindowMode(false, 2, -1, -1);
       }
 
       if (command.method1531(GlobalStatics_1.COMMAND_WM3)) {
-        GlobalStatics_9.setWindowMode(false, 3, -8914, 1024, 768);
+        GlobalStatics_9.setWindowMode(false, 3, 1024, 768);
       }
 
       if (command.method1531(GlobalStatics_10.COMMAND_NOCLIP)) {

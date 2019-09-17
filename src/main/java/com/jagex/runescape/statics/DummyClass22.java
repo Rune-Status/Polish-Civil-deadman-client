@@ -111,7 +111,7 @@ public final class DummyClass22 {
           && GlobalStatics_8.anInt2099 == DummyClass36.anInt2612) {
         GlobalStatics_9.anInt3537 =
             GlobalStatics_10.amountContextActions * 15 + (
-                !GlobalStatics_8.aBoolean1951 ? 22 : 26);
+                GlobalStatics_8.aBoolean1951 ? 26 : 22);
         GlobalStatics_7.anInt3660 = 0;
         GlobalStatics_10.anInt3395 = var4;
         GlobalStatics_1.anInt1462 = var3;

@@ -26,8 +26,8 @@ public final class TextureSampler36 extends AbstractTextureSampler {
         } else {
           int var2 = GlobalStatics_9.anInt1559;
           int var3 = DummyClass55.anInt1427;
-          int var4 = !DummyClass1.anInterface2_408.method14((byte) -104,
-              this.anInt3434) ? 128 : 64;
+          int var4 = DummyClass1.anInterface2_408.method14((byte) -104,
+              this.anInt3434) ? 64 : 128;
           this.anIntArray3425 = DummyClass1.anInterface2_408.method16(64,
               this.anInt3434);
           this.anInt3433 = var4;
@@ -71,9 +71,8 @@ public final class TextureSampler36 extends AbstractTextureSampler {
       int[][] var3 = this.triChromaticImageCache
           .method1594((byte) -120, var2);
       if (this.triChromaticImageCache.aBoolean1379 && this.method339(false)) {
-        int var4 = (this.anInt3433 != DummyClass55.anInt1427 ?
-            this.anInt3433 * var2 / DummyClass55.anInt1427 :
-          var2) * this.anInt3431;
+        int var4 = (this.anInt3433 == DummyClass55.anInt1427 ? var2
+            : this.anInt3433 * var2 / DummyClass55.anInt1427) * this.anInt3431;
         int[] var5 = var3[0];
         int[] var6 = var3[1];
         int[] var7 = var3[2];

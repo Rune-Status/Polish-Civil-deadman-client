@@ -195,11 +195,11 @@ public final class MaterialShader5 implements MaterialShader {
               MaterialShader5.aClass94_2175,
               GlobalStatics_9.toString(GlobalStatics_9.affiliateId), var4,
               GlobalStatics_9.aClass94_1133,
-              !GlobalStatics_9.aBoolean3641 ? GlobalStatics_9.ZERO
-                  : DummyClass28.aClass94_339,
+              GlobalStatics_9.aBoolean3641 ? DummyClass28.aClass94_339
+                  : GlobalStatics_9.ZERO,
               DummyClass36.aClass94_2610,
-              !DummyClass8.aBoolean4018 ? GlobalStatics_9.ZERO
-                  : DummyClass28.aClass94_339,
+              DummyClass8.aBoolean4018 ? DummyClass28.aClass94_339
+                  : GlobalStatics_9.ZERO,
               GlobalStatics_5.aClass94_1617,
               GlobalStatics_9.aBoolean3779 ? DummyClass28.aClass94_339
                   : GlobalStatics_9.ZERO

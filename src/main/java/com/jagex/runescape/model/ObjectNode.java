@@ -11,7 +11,7 @@ public final class ObjectNode extends AbstractObjectNode {
   }
 
   public Object getObject(boolean var1) {
-    return !var1 ? null : this.anObject4044;
+    return var1 ? this.anObject4044 : null;
   }
 
   public boolean method568(int var1) {

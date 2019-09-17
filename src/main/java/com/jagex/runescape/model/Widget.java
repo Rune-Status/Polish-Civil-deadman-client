@@ -835,7 +835,7 @@ public final class Widget {
         return null;
       } else {
         long var4 =
-          ((this.aBoolean178 ? 1L : 0L) << 38) + ((!this.aBoolean157 ? 0L : 1L) << 35) + var3
+          ((this.aBoolean178 ? 1L : 0L) << 38) + ((this.aBoolean157 ? 1L : 0L) << 35) + var3
             + ((long) this.anInt288 << 36) + ((this.aBoolean199 ? 1L : 0L) << 39) + (
             (long) this.anInt287 << 40);
         AbstractDirectColorSprite var6 =

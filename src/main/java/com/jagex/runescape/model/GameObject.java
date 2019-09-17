@@ -315,7 +315,8 @@ public final class GameObject extends SceneNode {
           SceneShadowMap var20;
           if (this.aClass142_2722 != null) {
             var20 = var4.method1697(var17, var16,
-              !var19 ? this.aClass109_Sub1_2738 : GlobalStatics_9.aClass109_Sub1_2631, var15,
+                var19 ? GlobalStatics_9.aClass109_Sub1_2631
+                    : this.aClass109_Sub1_2738, var15,
                 this.aClass142_2722, this.anInt2724, var14, var13,
                 this.anInt2726, var2 ^ -8310,
               var18, this.anInt2733, this.anInt2734, this.anInt2746);

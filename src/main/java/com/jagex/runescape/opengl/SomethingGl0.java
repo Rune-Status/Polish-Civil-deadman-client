@@ -5,6 +5,7 @@ import com.jagex.runescape.common.HashTable;
 import com.jagex.runescape.model.IntegerNode;
 import com.jagex.runescape.node.Node;
 import com.jagex.runescape.model.SceneGraphTile;
+import com.jogamp.opengl.GL;
 import java.nio.ByteBuffer;
 import java.nio.ByteOrder;
 
@@ -265,7 +266,7 @@ public final class SomethingGl0 extends Node {
       if (this.aClass156_2363 != null) {
         this.aClass156_2363.bindVertexBuffer();
         GlRenderer.GL.glVertexPointer(3, 5126, var11, 0L);
-        GlRenderer.GL.glColorPointer(4, 5121, var11, 12L);
+        GlRenderer.GL.glColorPointer(4, GL.GL_UNSIGNED_BYTE, var11, 12L);
         if (GLStatics.useBumpMaps) {
           GlRenderer.GL.glNormalPointer(5126, var11, 16L);
         }
@@ -285,7 +286,7 @@ public final class SomethingGl0 extends Node {
         this.aByteBuffer2345.position(0);
         GlRenderer.GL.glVertexPointer(3, 5126, var11, this.aByteBuffer2345);
         this.aByteBuffer2345.position(12);
-        GlRenderer.GL.glColorPointer(4, 5121, var11, this.aByteBuffer2345);
+        GlRenderer.GL.glColorPointer(4, GL.GL_UNSIGNED_BYTE, var11, this.aByteBuffer2345);
         if (GLStatics.useBumpMaps) {
           this.aByteBuffer2345.position(16);
           GlRenderer.GL.glNormalPointer(5126, var11, this.aByteBuffer2345);

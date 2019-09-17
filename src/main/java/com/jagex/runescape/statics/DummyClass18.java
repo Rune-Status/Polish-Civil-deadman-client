@@ -1428,7 +1428,7 @@ public final class DummyClass18 {
     if (GlobalStatics_0.packetId == 42) {
       if (GlobalStatics_10.fullScreenFrame != null) {
         GlobalStatics_9
-            .setWindowMode(false, GlobalStatics_2.anInt2577, -8914, -1, -1);
+            .setWindowMode(false, GlobalStatics_2.anInt2577, -1, -1);
       }
 
       byte[] var22 = new byte[GlobalStatics_0.packetLength];

@@ -89,7 +89,8 @@ public final class SomethingQuickChat extends SubNode {
   }
 
   public int method552(boolean var1 ) {
-    return !var1 ? -22 : this.anIntArray3566 != null ? this.anIntArray3566.length : 0;
+    return var1 ? this.anIntArray3566 != null ? this.anIntArray3566.length : 0
+        : -22;
   }
 
   private void method553(Buffer var1, int var2, int var3) {

@@ -137,7 +137,7 @@ public final class GameClient extends GameStub {
               var4.aByteArray2795[0] = 1;
               var4.waypointsX[0] = var6 + (var4.anInt2819 >> 7);
               var4.waypointsY[0] = var7 + (var4.anInt2829 >> 7);
-              com.jagex.runescape.statics.GlobalStatics_0.collisionMaps[GlobalStatics_9.currentPlane]
+              GlobalStatics_0.collisionMaps[GlobalStatics_9.currentPlane]
                   .method1502(var1 + 20850,
                       var4.anInt2819 >> 7, var4.getSize(), false, 0,
                       var4.getSize(),
@@ -146,7 +146,7 @@ public final class GameClient extends GameStub {
                   .getSize()
                   && var4.waypointsY[0] >= 0
                   && var4.waypointsY[0] <= 104 - var4.getSize()
-                  && com.jagex.runescape.statics.GlobalStatics_0.collisionMaps[GlobalStatics_9.currentPlane]
+                  && GlobalStatics_0.collisionMaps[GlobalStatics_9.currentPlane]
                   .method1500(-2,
                       var4.anInt2829 >> 7, var4.waypointsY[0],
                       var4.waypointsX[0],
@@ -158,7 +158,7 @@ public final class GameClient extends GameStub {
                     for (int var9 = var4.waypointsY[0];
                         var4.waypointsY[0] + var4.getSize() > var9; ++var9) {
                       if ((var2
-                          & com.jagex.runescape.statics.GlobalStatics_0.collisionMaps[GlobalStatics_9.currentPlane].anIntArrayArray1304[var8][var9])
+                          & GlobalStatics_0.collisionMaps[GlobalStatics_9.currentPlane].anIntArrayArray1304[var8][var9])
                           != 0) {
                         continue label191;
                       }
@@ -174,7 +174,7 @@ public final class GameClient extends GameStub {
           GlobalStatics_7.method1180((byte) -122, var4);
           DummyClass1.method904(65536, var4);
           GlobalStatics_9.method900(var4, var1 ^ -11974);
-          com.jagex.runescape.statics.GlobalStatics_0.collisionMaps[GlobalStatics_9.currentPlane]
+          GlobalStatics_0.collisionMaps[GlobalStatics_9.currentPlane]
               .method1489(
                   var4.anInt2819 >> 7, false, (byte) 85, var4.anInt2829 >> 7,
                   var4.getSize(), var4.getSize());
@@ -187,7 +187,7 @@ public final class GameClient extends GameStub {
     }
 
     if (!GlRenderer.useOpenGlRenderer) {
-      com.jagex.runescape.statics.GlobalStatics_0.method744(true);
+      GlobalStatics_0.method744(true);
     } else if (GlobalStatics_10.loginState == 0
         && GlobalStatics_0.anInt23 == 0) {
       if (GlobalStatics_9.anInt1753 == 2) {
@@ -227,10 +227,10 @@ public final class GameClient extends GameStub {
                   if (GlobalStatics_2.aClass64_351.result != null) {
                     DummyClass54
                         .method1596(GlobalStatics_8.aClass94_3295, (byte) 126,
-                            com.jagex.runescape.statics.GlobalStatics_0.aBoolean2154);
+                            GlobalStatics_0.aBoolean2154);
                   }
 
-                  com.jagex.runescape.statics.GlobalStatics_0.aBoolean2154 = false;
+                  GlobalStatics_0.aBoolean2154 = false;
                   GlobalStatics_8.aClass94_3295 = null;
                   GlobalStatics_2.aClass64_351 = null;
                 }
@@ -417,11 +417,11 @@ public final class GameClient extends GameStub {
   }
 
   private void handleLoading() {
-    if (!com.jagex.runescape.statics.GlobalStatics_0.safemode) {
+    if (!GlobalStatics_0.SAFE_MODE) {
       while (GlobalStatics_7.hasKeyInput()) {
         if (GlobalStatics_9.anInt3342 == 115
             || GlobalStatics_9.anInt3342 == 83) {
-          com.jagex.runescape.statics.GlobalStatics_0.safemode = true;
+          GlobalStatics_0.SAFE_MODE = true;
         }
       }
     }
@@ -445,7 +445,7 @@ public final class GameClient extends GameStub {
         GlobalStatics_6.loadingPercent = 5;
         GlobalStatics_3.loadingText = GlobalStatics_10.aClass94_4040;
       } else {
-        GlobalStatics_3.loadingText = com.jagex.runescape.statics.GlobalStatics_0.aClass94_2151;
+        GlobalStatics_3.loadingText = GlobalStatics_0.aClass94_2151;
         GlobalStatics_9.loadingState = 10;
         GlobalStatics_6.loadingPercent = 5;
       }
@@ -455,7 +455,7 @@ public final class GameClient extends GameStub {
         DummyClass46.setSceneDimensions(4, 104, 104);
 
         for (var2 = 0; var2 < 4; ++var2) {
-          com.jagex.runescape.statics.GlobalStatics_0.collisionMaps[var2] = new CollisionMap(
+          GlobalStatics_0.collisionMaps[var2] = new CollisionMap(
               104, 104);
         }
 
@@ -537,8 +537,8 @@ public final class GameClient extends GameStub {
         if (GlobalStatics_9.loadingState == 45) {
           GlobalStatics_8
               .method1959(256, 2, 22050, GlobalStatics_1.aBoolean3184);
-          com.jagex.runescape.statics.GlobalStatics_0.aClass3_Sub24_Sub4_1193 = new AudioStreamEncoder4();
-          com.jagex.runescape.statics.GlobalStatics_0.aClass3_Sub24_Sub4_1193
+          GlobalStatics_0.aClass3_Sub24_Sub4_1193 = new AudioStreamEncoder4();
+          GlobalStatics_0.aClass3_Sub24_Sub4_1193
               .method479((byte) 98, 9, 128);
           GlobalStatics_9.audioOutputStream0 =
               DummyClass43
@@ -546,10 +546,10 @@ public final class GameClient extends GameStub {
                       GlobalStatics_8.GAME_CANVAS, 0, 14);
           GlobalStatics_9.audioOutputStream0
               .method2154(-116,
-                  com.jagex.runescape.statics.GlobalStatics_0.aClass3_Sub24_Sub4_1193);
+                  GlobalStatics_0.aClass3_Sub24_Sub4_1193);
           GlobalStatics_9
               .method897(17770,
-                  com.jagex.runescape.statics.GlobalStatics_0.aClass3_Sub24_Sub4_1193,
+                  GlobalStatics_0.aClass3_Sub24_Sub4_1193,
                   GlobalStatics_9.fileUnpacker15,
                   GlobalStatics_6.midiInstruments,
                   GlobalStatics_5.soundEffects);
@@ -650,9 +650,9 @@ public final class GameClient extends GameStub {
                   DummyClass56
                       .method1648(GlobalStatics_6.fileUnpacker22,
                           255);
-                  com.jagex.runescape.statics.GlobalStatics_0
+                  GlobalStatics_0
                       .method731(GlobalStatics_2.configs, (byte) -113);
-                  com.jagex.runescape.statics.GlobalStatics_0
+                  GlobalStatics_0
                       .method89(true, GlobalStatics_8.fileUnpacker13,
                           GlobalStatics_10.sprites,
                           GlobalStatics_8.widgets, DummyClass13.models);
@@ -703,7 +703,7 @@ public final class GameClient extends GameStub {
                     DummyClass28.method887(21, GlobalStatics_10.sprites);
                     GlobalStatics_9.loadingState = 90;
                     GlobalStatics_6.loadingPercent = 60;
-                    GlobalStatics_3.loadingText = com.jagex.runescape.statics.GlobalStatics_0.aClass94_1707;
+                    GlobalStatics_3.loadingText = GlobalStatics_0.aClass94_1707;
                   }
                 } else if (GlobalStatics_9.loadingState != 90) {
                   if (GlobalStatics_9.loadingState == 100) {
@@ -726,7 +726,7 @@ public final class GameClient extends GameStub {
                                     -11931,
                                     GlobalStatics_9.worldMapData);
                                 GlobalStatics_6.loadingPercent = 95;
-                                GlobalStatics_3.loadingText = com.jagex.runescape.statics.GlobalStatics_0.LOADED_INTERFACES;
+                                GlobalStatics_3.loadingText = GlobalStatics_0.LOADED_INTERFACES;
                                 GlobalStatics_9.loadingState = 135;
                               } else {
                                 GlobalStatics_3.loadingText =
@@ -796,18 +796,18 @@ public final class GameClient extends GameStub {
                       } else if (GlobalStatics_9.loadingState != 140) {
                         if (GlobalStatics_9.loadingState == 150) {
                           SomethingGl.method1454();
-                          if (com.jagex.runescape.statics.GlobalStatics_0.safemode) {
-                            GlobalStatics_9.anInt3622 = 0;
-                            GlobalStatics_9.anInt3671 = 0;
+                          if (GlobalStatics_0.SAFE_MODE) {
+                            System.out.println("Settling up safe mode config");
+                            GlobalStatics_9.RENDERING_SAMPLES = 0;
+                            GlobalStatics_9.GL_RENDERING_SAMPLES = 0;
                             GlobalStatics_2.anInt2577 = 0;
                             GlobalStatics_10.anInt2488 = 0;
                           }
 
-                          com.jagex.runescape.statics.GlobalStatics_0.safemode = true;
+                          GlobalStatics_0.SAFE_MODE = true;
                           DummyClass25.writeSettings(DummyClass35.signLink);
                           GlobalStatics_9
                               .setWindowMode(false, GlobalStatics_2.anInt2577,
-                                  -8914,
                                   -1, -1);
                           GlobalStatics_6.loadingPercent = 100;
                           GlobalStatics_9.loadingState = 160;
@@ -847,7 +847,7 @@ public final class GameClient extends GameStub {
                     } else {
                       GlobalStatics_3.loadingText = GlobalStatics_9
                           .concat(new GameString[]{
-                              com.jagex.runescape.statics.GlobalStatics_0.aClass94_1183,
+                              GlobalStatics_0.aClass94_1183,
                               GlobalStatics_2.aClass94_37
                           });
                       GlobalStatics_6.loadingPercent = 80;
@@ -927,7 +927,7 @@ public final class GameClient extends GameStub {
 
         for (kkkk = 0; kkkk < 28; ++kkkk) {
           var2 +=
-              com.jagex.runescape.statics.GlobalStatics_0.aClass151_Sub1Array2601[kkkk]
+              GlobalStatics_0.aClass151_Sub1Array2601[kkkk]
                   .method2111(-61)
                   * GlobalStatics_10.anIntArray3288[kkkk] / 100;
         }
@@ -971,7 +971,7 @@ public final class GameClient extends GameStub {
         GlobalStatics_5.fileSystem.method838((byte) -70);
       }
 
-      com.jagex.runescape.statics.GlobalStatics_0.method728(false);
+      GlobalStatics_0.method728(false);
       DummyClass43.method1194(-16385);
       DummyClass34.method996(-43);
       GlobalStatics_8.method1225(18074);
@@ -1093,7 +1093,7 @@ public final class GameClient extends GameStub {
 
   public void method33(int var1) {
     GlobalStatics_8.method43(true);
-    com.jagex.runescape.statics.GlobalStatics_0.method1541(-8635);
+    GlobalStatics_0.method1541(-8635);
     DummyClass35.method1024(21474);
     GlobalStatics_9.method542((byte) -46);
     GlobalStatics_10.method1792(0);
@@ -1103,7 +1103,7 @@ public final class GameClient extends GameStub {
     GlobalStatics_5.method2181(false);
     GlobalStatics_9.method1257(25951);
     GlobalStatics_9.method1588((byte) 106);
-    com.jagex.runescape.statics.GlobalStatics_0.method767(0);
+    GlobalStatics_0.method767(0);
     GlobalStatics_4.method1463(0);
     GlobalStatics_9.method1242((byte) -88);
     GlobalStatics_7.method1306(-16222);
@@ -1119,9 +1119,9 @@ public final class GameClient extends GameStub {
     GlobalStatics_10.method860(126);
     GlobalStatics_7.method1644((byte) 121);
     GlobalStatics_9.method1982((byte) 121);
-    com.jagex.runescape.statics.GlobalStatics_0.method1217(0);
+    GlobalStatics_0.method1217(0);
     GlobalStatics_2.method634((byte) 108);
-    com.jagex.runescape.statics.GlobalStatics_0.method1774(103);
+    GlobalStatics_0.method1774(103);
     GlobalStatics_5.method2081(0);
     GlobalStatics_6.method387(103);
     GlobalStatics_9.method1802();
@@ -1137,7 +1137,7 @@ public final class GameClient extends GameStub {
     GlobalStatics_9.method1473((byte) 103);
     GlobalStatics_9.method821(26971);
     GlobalStatics_10.method91((byte) 120);
-    com.jagex.runescape.statics.GlobalStatics_0.method83((byte) 30);
+    GlobalStatics_0.method83((byte) 30);
     GlobalStatics_9.method875((byte) 106);
     GlobalStatics_9.method1231(119);
     DummyClass53.method1582(3);
@@ -1216,7 +1216,7 @@ public final class GameClient extends GameStub {
     Texture.method721(20413);
     GlTexture2d.method711(1);
     DummyClass40.method1155();
-    com.jagex.runescape.statics.GlobalStatics_0.method1016((byte) 127);
+    GlobalStatics_0.method1016((byte) 127);
     DummyClass3.method71((byte) -124);
     DummyClass55.method1608((byte) 110);
     DummyClass41.method1169(false);
@@ -1228,7 +1228,7 @@ public final class GameClient extends GameStub {
     GlobalStatics_9.method853(0);
     GlobalStatics_7.method376(false);
     GlobalStatics_9.method1860(0);
-    com.jagex.runescape.statics.GlobalStatics_0.method1429((byte) 53);
+    GlobalStatics_0.method1429((byte) 53);
     SomethingGl0.method147();
     GlobalStatics_9.method954(128);
     GlobalStatics_9.method1703(10967);
@@ -1246,7 +1246,7 @@ public final class GameClient extends GameStub {
     DummyClass61.method726();
     GlobalStatics_6.method1733(-17148);
     SomethingShadows.method2045();
-    com.jagex.runescape.statics.GlobalStatics_0.clear();
+    GlobalStatics_0.clear();
     DummyClass49.method1365(119);
     DummyClass31.method1682(-82);
     GlobalStatics_10.method120(1000);
@@ -1268,7 +1268,7 @@ public final class GameClient extends GameStub {
     GlobalStatics_8.method1958(2);
     DummyClass23.method1744(true);
     GlobalStatics_9.method1394((byte) -94);
-    com.jagex.runescape.statics.GlobalStatics_0.method735(-22749);
+    GlobalStatics_0.method735(-22749);
     DummyClass21.method1806();
     GlobalStatics_9.method382(1);
     GlobalStatics_9.method396(0);
@@ -1406,7 +1406,7 @@ public final class GameClient extends GameStub {
         GlobalStatics_10.languageId = 0;
       }
 
-      com.jagex.runescape.statics.GlobalStatics_0
+      GlobalStatics_0
           .setupLanguagePacket(GlobalStatics_10.languageId);
       String var2 = this.getParameter("objecttag");
       DummyClass8.aBoolean4018 = "1".equals(var2);
@@ -1465,7 +1465,7 @@ public final class GameClient extends GameStub {
               .getCurrentTimeMillis())) {
         GlobalStatics_9.setWindowMode(GlobalStatics_6.replaceCanvas,
             GlobalStatics_9.getWindowMode(),
-            -8914, GlobalStatics_3.anInt2378,
+            GlobalStatics_3.anInt2378,
             GlobalStatics_10.anInt3071);
       }
 
@@ -1505,7 +1505,7 @@ public final class GameClient extends GameStub {
           && !GlobalStatics_10.focused && (
           DummyClass15.state == 30 || DummyClass15.state == 10)) {
         GlobalStatics_9
-            .setWindowMode(false, GlobalStatics_2.anInt2577, -8914, -1, -1);
+            .setWindowMode(false, GlobalStatics_2.anInt2577, -1, -1);
       }
 
       if (var1 != 40) {
@@ -1543,7 +1543,7 @@ public final class GameClient extends GameStub {
             GlobalStatics_3
                 .drawLoadingBox(GlobalStatics_9.concat(new GameString[]{
                     GlobalStatics_9.CONNECTION_LOST,
-                    com.jagex.runescape.statics.GlobalStatics_0.LINE_BREAK,
+                    GlobalStatics_0.LINE_BREAK,
                     DummyClass14.ATTEMPTING_TO_RECONNECT
                 }), false);
           }
@@ -1571,12 +1571,12 @@ public final class GameClient extends GameStub {
         } else {
           if (GlobalStatics_0.anInt2579
               < GlobalStatics_8.anInt3293) {
-            com.jagex.runescape.statics.GlobalStatics_0.anInt2579 = GlobalStatics_8.anInt3293;
+            GlobalStatics_0.anInt2579 = GlobalStatics_8.anInt3293;
           }
 
-          var4 = 50 * (com.jagex.runescape.statics.GlobalStatics_0.anInt2579
+          var4 = 50 * (GlobalStatics_0.anInt2579
               - GlobalStatics_8.anInt3293)
-              / com.jagex.runescape.statics.GlobalStatics_0.anInt2579;
+              / GlobalStatics_0.anInt2579;
           GlobalStatics_3
               .drawLoadingBox(GlobalStatics_9.concat(new GameString[]{
                   GlobalStatics_10.LOADING_PLEASE_WAIT,
@@ -1630,10 +1630,10 @@ public final class GameClient extends GameStub {
         GlobalStatics_9.method1346(26211);
       }
 
-      if (com.jagex.runescape.statics.GlobalStatics_0.safemode
+      if (GlobalStatics_0.SAFE_MODE
           && DummyClass15.state == 10
           && GlobalStatics_9.anInt3655 != -1) {
-        com.jagex.runescape.statics.GlobalStatics_0.safemode = false;
+        GlobalStatics_0.SAFE_MODE = false;
         DummyClass25.writeSettings(DummyClass35.signLink);
       }
 
@@ -1717,7 +1717,7 @@ public final class GameClient extends GameStub {
 
         GlobalStatics_9.tableIndexFile =
             new BufferedFile(DummyClass35.signLink.tableIndexFile, 6000, 0);
-        com.jagex.runescape.statics.GlobalStatics_0.tableCache =
+        GlobalStatics_0.tableCache =
             new FileCache(255, DummyClass55.cacheDataFile,
                 GlobalStatics_9.tableIndexFile,
                 500000);
@@ -1732,7 +1732,7 @@ public final class GameClient extends GameStub {
       GlobalStatics_9.uidFile = null;
       DummyClass55.cacheDataFile = null;
       GlobalStatics_9.tableIndexFile = null;
-      com.jagex.runescape.statics.GlobalStatics_0.tableCache = null;
+      GlobalStatics_0.tableCache = null;
     }
 
     DummyClass10.aClass94_2083 = GlobalStatics_9.aClass94_485;

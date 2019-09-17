@@ -19,6 +19,7 @@ import com.jagex.runescape.statics.DummyClass3;
 import com.jagex.runescape.statics.DummyClass40;
 import com.jagex.runescape.statics.DummyClass45;
 import com.jagex.runescape.statics.DummyClass58;
+import com.jogamp.opengl.GL;
 import java.nio.ByteBuffer;
 
 public final class GlModel extends AbstractModel {
@@ -3660,7 +3661,7 @@ public final class GlModel extends AbstractModel {
           buffer = this.vertexColorData.buffer;
         }
 
-        GlRenderer.GL.glColorPointer(4, 5121, this.vertexColorData.stride,
+        GlRenderer.GL.glColorPointer(4, GL.GL_UNSIGNED_BYTE, this.vertexColorData.stride,
             this.vertexColorData.pointer);
       }
 
@@ -3707,7 +3708,7 @@ public final class GlModel extends AbstractModel {
         if (this.vertexColorData.buffer == null) {
           this.vertexColorData.byteBuffer
               .position(this.vertexColorData.pointer);
-          GlRenderer.GL.glColorPointer(4, 5121, this.vertexColorData.stride,
+          GlRenderer.GL.glColorPointer(4, GL.GL_UNSIGNED_BYTE, this.vertexColorData.stride,
               this.vertexColorData.byteBuffer);
         }
 

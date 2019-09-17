@@ -50,8 +50,8 @@ public final class GlDirectFullColorSprite extends GlDirectColorSprite {
 
     GlRenderer.bindTexture(this.textureId);
     GlRenderer.GL
-        .glTexImage2D(GL.GL_TEXTURE_2D, 0, 6408, this.anInt4075, this.anInt4079, 0, 6408,
-            5121, var9);
+        .glTexImage2D(GL.GL_TEXTURE_2D, 0, GL.GL_RGBA, this.anInt4075, this.anInt4079, 0, GL.GL_RGBA,
+            GL.GL_UNSIGNED_BYTE, var9);
     DummyClass33.texture2dMemory += var9.limit() - this.anInt4074;
     this.anInt4074 = var9.limit();
   }

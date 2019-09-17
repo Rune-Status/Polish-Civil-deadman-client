@@ -26,9 +26,8 @@ public final class DummyClass28 {
       DummyClass28.aClass94_338 = null;
     }
 
-    return !GlobalStatics_9.loadSprites(var2, var3, var1, -30901) ?
-        null :
-        GlobalStatics_9.createSprites(0);
+    return GlobalStatics_9.loadSprites(var2, var3, var1, -30901)
+        ? GlobalStatics_9.createSprites(0) : null;
   }
 
   public static void method886(byte var0) {

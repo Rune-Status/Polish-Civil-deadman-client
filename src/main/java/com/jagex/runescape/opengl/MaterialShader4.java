@@ -3,6 +3,7 @@ package com.jagex.runescape.opengl;
 import com.jagex.runescape.statics.GlobalStatics_5;
 import com.jagex.runescape.statics.GlobalStatics_9;
 
+import com.jogamp.opengl.GL;
 import java.nio.ByteBuffer;
 
 public final class MaterialShader4 implements MaterialShader {
@@ -24,7 +25,7 @@ public final class MaterialShader4 implements MaterialShader {
     int[] var3 = new int[1];
     GlRenderer.GL.glGenTextures(1, var3, 0);
     GlRenderer.GL.glBindTexture(3552, var3[0]);
-    GlRenderer.GL.glTexImage1D(3552, 0, 6406, 2, 0, 6406, 5121, ByteBuffer.wrap(var1));
+    GlRenderer.GL.glTexImage1D(3552, 0, 6406, 2, 0, 6406, GL.GL_UNSIGNED_BYTE, ByteBuffer.wrap(var1));
     GlRenderer.GL.glTexParameteri(3552, 10241, 9729);
     GlRenderer.GL.glTexParameteri(3552, 10240, 9729);
     GlRenderer.GL.glTexParameteri(3552, 10242, 0x812f);

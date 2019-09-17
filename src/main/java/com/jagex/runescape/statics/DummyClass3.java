@@ -323,10 +323,10 @@ public final class DummyClass3 {
 
           for (var73 = 0; var58 > var73; ++var73) {
             var74 = var63[var73];
-            var79 = GlobalStatics_9.aBooleanArrayArray3468[var24 != var74 ? 0
-                : var65];
-            var75 = GlobalStatics_9.aBooleanArrayArray3468[var74 != var25 ? 0
-                : var21];
+            var79 = GlobalStatics_9.aBooleanArrayArray3468[var24 == var74
+                ? var65 : 0];
+            var75 = GlobalStatics_9.aBooleanArrayArray3468[var74 == var25
+                ? var21 : 0];
             boolean[] var80 = GlobalStatics_9.aBooleanArrayArray3468[
                 var23 == var74 ? var60 : 0];
             var81 = GlobalStatics_9.aBooleanArrayArray3468[var26 == var74
@@ -627,7 +627,7 @@ public final class DummyClass3 {
             var81 = GlobalStatics_9.aBooleanArrayArray3468[var78 == var26
                 ? var22 : 0];
             boolean[] var84 = GlobalStatics_9.aBooleanArrayArray3468[
-                var78 != var27 ? 0 : var23];
+                var78 == var27 ? var23 : 0];
             FloorOverlay var82 = GlobalStatics_9
                 .method350((byte) 121, -1 + var78);
             SomethingGl0 var39 = GlobalStatics_3

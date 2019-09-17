@@ -17,10 +17,10 @@ public final class DummyClass20 {
       DummyClass20.method1818(true);
     }
 
-    return !GlobalStatics_7.aBoolean1084 ?
-        !GlobalStatics_9.method1986(var0 ^ 28) ? 1
-            : GlobalStatics_2.aBoolean3604 ? 2 : 1 :
-        0;
+    return GlobalStatics_7.aBoolean1084 ? 0
+        : GlobalStatics_9.method1986(var0 ^ 28) ? GlobalStatics_2.aBoolean3604
+            ? 2
+            : 1 : 1;
   }
 
   public static void method1818(boolean var0) {

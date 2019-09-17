@@ -1,19 +1,13 @@
 package com.jagex.runescape.opengl;
 
-import com.jagex.runescape.statics.GlobalStatics_10;
-import com.jagex.runescape.statics.GlobalStatics_3;
-import com.jagex.runescape.statics.GlobalStatics_5;
-import com.jagex.runescape.statics.GlobalStatics_6;
-import com.jagex.runescape.statics.GlobalStatics_7;
-import com.jagex.runescape.statics.GlobalStatics_9;
-import com.jagex.runescape.model.ITextureCache;
-import com.jagex.runescape.model.ProceduralTexture;
 import com.jagex.runescape.buffer.Buffer;
 import com.jagex.runescape.common.GameString;
 import com.jagex.runescape.common.GameStringStatics;
+import com.jagex.runescape.huffman.HuffmanEncoderStatics;
 import com.jagex.runescape.model.AbstractObjectNodeWrapper;
 import com.jagex.runescape.model.FileUnpacker;
-import com.jagex.runescape.huffman.HuffmanEncoderStatics;
+import com.jagex.runescape.model.ITextureCache;
+import com.jagex.runescape.model.ProceduralTexture;
 import com.jagex.runescape.node.SubNode;
 import com.jagex.runescape.statics.DummyClass13;
 import com.jagex.runescape.statics.DummyClass17;
@@ -22,6 +16,12 @@ import com.jagex.runescape.statics.DummyClass32;
 import com.jagex.runescape.statics.DummyClass49;
 import com.jagex.runescape.statics.DummyClass60;
 import com.jagex.runescape.statics.DummyClass8;
+import com.jagex.runescape.statics.GlobalStatics_10;
+import com.jagex.runescape.statics.GlobalStatics_3;
+import com.jagex.runescape.statics.GlobalStatics_5;
+import com.jagex.runescape.statics.GlobalStatics_6;
+import com.jagex.runescape.statics.GlobalStatics_7;
+import com.jagex.runescape.statics.GlobalStatics_9;
 import com.jogamp.opengl.GL;
 import com.jogamp.opengl.glu.GLU;
 import com.jogamp.opengl.glu.gl2.GLUgl2;
@@ -89,7 +89,7 @@ public final class Texture extends SubNode {
           return null;
         }
 
-        int var6 = !var5 ? 128 : 64;
+        int var6 = var5 ? 64 : 128;
         this.anIntArray3793 =
             this.proceduralTexture.method1404(var6, this.aBoolean3800, var6,
                 var3,
@@ -194,12 +194,12 @@ public final class Texture extends SubNode {
     }
   }
 
-  public boolean method719(FileUnpacker var1, ITextureCache var2, int var3,
+  public boolean method719(
+      FileUnpacker unpacker,
+      ITextureCache cache,
       boolean var4) {
-    if (var3 != 579100487) {
-      return false;
-    } else if (this.proceduralTexture.method1408(true, var2, var1)) {
-      int var6 = !var4 ? 128 : 64;
+    if (this.proceduralTexture.method1408(true, cache, unpacker)) {
+      int size = var4 ? 64 : 128;
       int flags = DummyClass32.method961(1536);
       if ((1 & flags) == 0) {
         if (this.anInt3795 == -1) {
@@ -208,56 +208,68 @@ public final class Texture extends SubNode {
           this.anInt3791 = DummyClass33.anInt582;
           this.anInt3795 = var8[0];
           GlRenderer.bindTexture(this.anInt3795);
-          ByteBuffer var9 = ByteBuffer.wrap(
+          ByteBuffer buffer = ByteBuffer.wrap(
               Objects.requireNonNull(this.proceduralTexture
-                  .method1407(var6, var6, this.aBoolean3800, var2, 0.7D, 8839,
-                      var1)));
+                  .method1407(size, size, this.aBoolean3800, cache, 0.7D, 8839,
+                      unpacker)));
 
           if (this.anInt3788 == 2) {
             //TODO
-            GLU var14 = new GLUgl2();
-            var14.gluBuild2DMipmaps(GL.GL_TEXTURE_2D, 6408, var6, var6, 6408, 5121, var9);
+            GLU glu = new GLUgl2();
+            glu.gluBuild2DMipmaps(
+                GL.GL_TEXTURE_2D,
+                GL.GL_RGBA,
+                size,
+                size,
+                GL.GL_RGBA,
+                GL.GL_UNSIGNED_BYTE,
+                buffer
+            );
             GlRenderer.GL.glTexParameteri(GL.GL_TEXTURE_2D, 10241, 9987);
             GlRenderer.GL.glTexParameteri(GL.GL_TEXTURE_2D, 10240, 9729);
             DummyClass33.textureMemory +=
-                4 * var9.limit() / 3 - this.anInt3796;
-            this.anInt3796 = var9.limit() * 4 / 3;
+                4 * buffer.limit() / 3 - this.anInt3796;
+            this.anInt3796 = buffer.limit() * 4 / 3;
           } else {
             if (this.anInt3788 == 1) {
               int var10 = 0;
 
               while (true) {
                 GlRenderer.GL
-                    .glTexImage2D(GL.GL_TEXTURE_2D, var10++, 6408, var6, var6, 0, 6408,
-                        5121, var9);
-                var6 >>= 1;
-                if (var6 == 0) {
+                    .glTexImage2D(GL.GL_TEXTURE_2D, var10++, GL.GL_RGBA, size,
+                        size,
+                        0, GL.GL_RGBA,
+                        GL.GL_UNSIGNED_BYTE, buffer);
+                size >>= 1;
+                if (size == 0) {
                   GlRenderer.GL.glTexParameteri(GL.GL_TEXTURE_2D, 10241, 9987);
                   GlRenderer.GL.glTexParameteri(GL.GL_TEXTURE_2D, 10240, 9729);
                   DummyClass33.textureMemory +=
-                      var9.limit() * 4 / 3 - this.anInt3796;
-                  this.anInt3796 = 4 * var9.limit() / 3;
+                      buffer.limit() * 4 / 3 - this.anInt3796;
+                  this.anInt3796 = 4 * buffer.limit() / 3;
                   break;
                 }
 
-                var9 = ByteBuffer.wrap(
+                buffer = ByteBuffer.wrap(
                     Objects.requireNonNull(this.proceduralTexture
-                        .method1407(var6, var6, this.aBoolean3800, var2, 0.7D,
-                            8839, var1)));
+                        .method1407(size, size, this.aBoolean3800, cache, 0.7D,
+                            8839, unpacker)));
               }
             } else {
               GlRenderer.GL
-                  .glTexImage2D(GL.GL_TEXTURE_2D, 0, 6408, var6, var6, 0, 6408, 5121,
-                      var9);
+                  .glTexImage2D(GL.GL_TEXTURE_2D, 0, GL.GL_RGBA, size, size, 0,
+                      GL.GL_RGBA,
+                      GL.GL_UNSIGNED_BYTE,
+                      buffer);
               GlRenderer.GL.glTexParameteri(GL.GL_TEXTURE_2D, 10241, 9729);
               GlRenderer.GL.glTexParameteri(GL.GL_TEXTURE_2D, 10240, 9729);
-              DummyClass33.textureMemory += var9.limit() - this.anInt3796;
-              this.anInt3796 = var9.limit();
+              DummyClass33.textureMemory += buffer.limit() - this.anInt3796;
+              this.anInt3796 = buffer.limit();
             }
           }
 
           GlRenderer.GL.glTexParameteri(GL.GL_TEXTURE_2D, 10242,
-              !this.aBoolean3787 ? 0x812f : 10497);
+              this.aBoolean3787 ? 10497 : 0x812f);
           GlRenderer.GL.glTexParameteri(GL.GL_TEXTURE_2D, 10243,
               this.aBoolean3781 ? 10497 : 0x812f);
         } else {
@@ -278,9 +290,9 @@ public final class Texture extends SubNode {
           GlRenderer.loadIdentityTextureMatrix();
         } else {
           float var12 =
-              (float) (this.anInt3799 * GlRenderer.anInt1791) / var6;
+              (float) (this.anInt3799 * GlRenderer.anInt1791) / size;
           float var13 =
-              (float) (this.anInt3783 * GlRenderer.anInt1791) / var6;
+              (float) (this.anInt3783 * GlRenderer.anInt1791) / size;
           GlRenderer.translateTexture(var13, var12, 0.0F);
         }
       }
@@ -294,7 +306,7 @@ public final class Texture extends SubNode {
   public int[] method720(boolean var1, boolean var2, ITextureCache var3,
       FileUnpacker var4) {
     if (this.proceduralTexture.method1408(true, var3, var4)) {
-      int size = !var2 ? 128 : 64;
+      int size = var2 ? 64 : 128;
       return this.proceduralTexture
           .method1404(size, this.aBoolean3800, size, 1.0D, 327680, var4,
               var3, false);
