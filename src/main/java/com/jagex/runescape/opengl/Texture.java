@@ -22,6 +22,7 @@ import com.jagex.runescape.statics.DummyClass32;
 import com.jagex.runescape.statics.DummyClass49;
 import com.jagex.runescape.statics.DummyClass60;
 import com.jagex.runescape.statics.DummyClass8;
+import com.jogamp.opengl.GL;
 import com.jogamp.opengl.glu.GLU;
 import com.jogamp.opengl.glu.gl2.GLUgl2;
 import java.nio.ByteBuffer;
@@ -215,9 +216,9 @@ public final class Texture extends SubNode {
           if (this.anInt3788 == 2) {
             //TODO
             GLU var14 = new GLUgl2();
-            var14.gluBuild2DMipmaps(3553, 6408, var6, var6, 6408, 5121, var9);
-            GlRenderer.GL.glTexParameteri(3553, 10241, 9987);
-            GlRenderer.GL.glTexParameteri(3553, 10240, 9729);
+            var14.gluBuild2DMipmaps(GL.GL_TEXTURE_2D, 6408, var6, var6, 6408, 5121, var9);
+            GlRenderer.GL.glTexParameteri(GL.GL_TEXTURE_2D, 10241, 9987);
+            GlRenderer.GL.glTexParameteri(GL.GL_TEXTURE_2D, 10240, 9729);
             DummyClass33.textureMemory +=
                 4 * var9.limit() / 3 - this.anInt3796;
             this.anInt3796 = var9.limit() * 4 / 3;
@@ -227,12 +228,12 @@ public final class Texture extends SubNode {
 
               while (true) {
                 GlRenderer.GL
-                    .glTexImage2D(3553, var10++, 6408, var6, var6, 0, 6408,
+                    .glTexImage2D(GL.GL_TEXTURE_2D, var10++, 6408, var6, var6, 0, 6408,
                         5121, var9);
                 var6 >>= 1;
                 if (var6 == 0) {
-                  GlRenderer.GL.glTexParameteri(3553, 10241, 9987);
-                  GlRenderer.GL.glTexParameteri(3553, 10240, 9729);
+                  GlRenderer.GL.glTexParameteri(GL.GL_TEXTURE_2D, 10241, 9987);
+                  GlRenderer.GL.glTexParameteri(GL.GL_TEXTURE_2D, 10240, 9729);
                   DummyClass33.textureMemory +=
                       var9.limit() * 4 / 3 - this.anInt3796;
                   this.anInt3796 = 4 * var9.limit() / 3;
@@ -246,18 +247,18 @@ public final class Texture extends SubNode {
               }
             } else {
               GlRenderer.GL
-                  .glTexImage2D(3553, 0, 6408, var6, var6, 0, 6408, 5121,
+                  .glTexImage2D(GL.GL_TEXTURE_2D, 0, 6408, var6, var6, 0, 6408, 5121,
                       var9);
-              GlRenderer.GL.glTexParameteri(3553, 10241, 9729);
-              GlRenderer.GL.glTexParameteri(3553, 10240, 9729);
+              GlRenderer.GL.glTexParameteri(GL.GL_TEXTURE_2D, 10241, 9729);
+              GlRenderer.GL.glTexParameteri(GL.GL_TEXTURE_2D, 10240, 9729);
               DummyClass33.textureMemory += var9.limit() - this.anInt3796;
               this.anInt3796 = var9.limit();
             }
           }
 
-          GlRenderer.GL.glTexParameteri(3553, 10242,
+          GlRenderer.GL.glTexParameteri(GL.GL_TEXTURE_2D, 10242,
               !this.aBoolean3787 ? '\u812f' : 10497);
-          GlRenderer.GL.glTexParameteri(3553, 10243,
+          GlRenderer.GL.glTexParameteri(GL.GL_TEXTURE_2D, 10243,
               this.aBoolean3781 ? 10497 : '\u812f');
         } else {
           GlRenderer.bindTexture(this.anInt3795);
@@ -426,7 +427,7 @@ public final class Texture extends SubNode {
             int var10;
             int var11;
             if (var8 > var9) {
-              var11 = '\u8000';
+              var11 = 0x8000;
               var10 = var9 * 65536 / var8;
 
               while (var6 != var4) {
@@ -465,7 +466,7 @@ public final class Texture extends SubNode {
                 }
               }
             } else {
-              var11 = '\u8000';
+              var11 = 0x8000;
               var10 = 65536 * var8 / var9;
 
               while (var5 != var7) {

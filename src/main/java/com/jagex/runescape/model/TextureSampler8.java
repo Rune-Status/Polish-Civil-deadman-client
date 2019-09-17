@@ -106,7 +106,7 @@ public final class TextureSampler8 extends AbstractTextureSampler {
               var9 = -32767;
             }
 
-            if (var9 >= '\u8000') {
+            if (var9 >= 0x8000) {
               var9 = 32767;
             }
 

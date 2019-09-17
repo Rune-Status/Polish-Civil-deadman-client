@@ -33,7 +33,7 @@ public final class DummyClass38 {
       var5 = GlobalStatics_9.gameBuffer.readUnsignedByte();
       int var6 = GlobalStatics_9.gameBuffer.readUnsignedByte();
       var7 = GlobalStatics_9.gameBuffer.position;
-      boolean var8 = ('\u8000' & var4) != 0;
+      boolean var8 = (0x8000 & var4) != 0;
       if (var3.name != null && var3.appearance != null) {
         long var9 = var3.name.toBase37();
         boolean var11 = false;

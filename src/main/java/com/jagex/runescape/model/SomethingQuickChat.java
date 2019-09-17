@@ -52,7 +52,7 @@ public final class SomethingQuickChat extends SubNode {
     if (this.anIntArray3567 != null) {
         for (int var2 = 0; this.anIntArray3567.length > var2; ++var2) {
           this.anIntArray3567[var2] =
-            HuffmanEncoderStatics.method308(this.anIntArray3567[var2], '\u8000');
+            HuffmanEncoderStatics.method308(this.anIntArray3567[var2], 0x8000);
         }
       }
 

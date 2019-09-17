@@ -8,6 +8,7 @@ import com.jagex.runescape.common.GameStringStatics;
 import com.jagex.runescape.statics.DummyClass32;
 import com.jagex.runescape.statics.GlobalStatics_4;
 import com.jagex.runescape.statics.GlobalStatics_6;
+import com.jogamp.opengl.GL;
 import java.lang.reflect.Method;
 import java.nio.ByteBuffer;
 
@@ -41,9 +42,9 @@ public final class GlTexture2d extends SubNode {
           {(byte) (rgbColor >> 16), (byte) (rgbColor >> 8), (byte) rgbColor,
               (byte) -1};
       ByteBuffer var6 = ByteBuffer.wrap(var5);
-      GlRenderer.GL.glTexImage2D(3553, 0, 6408, 1, 1, 0, 6408, 5121, var6);
-      GlRenderer.GL.glTexParameteri(3553, 10241, 9729);
-      GlRenderer.GL.glTexParameteri(3553, 10240, 9729);
+      GlRenderer.GL.glTexImage2D(GL.GL_TEXTURE_2D, 0, 6408, 1, 1, 0, 6408, 5121, var6);
+      GlRenderer.GL.glTexParameteri(GL.GL_TEXTURE_2D, 10241, 9729);
+      GlRenderer.GL.glTexParameteri(GL.GL_TEXTURE_2D, 10240, 9729);
       DummyClass33.textureMemory += var6.limit() - this.anInt3767;
       this.anInt3767 = var6.limit();
   }

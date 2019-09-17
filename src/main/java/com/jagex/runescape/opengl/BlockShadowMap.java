@@ -2,6 +2,7 @@ package com.jagex.runescape.opengl;
 
 import com.jagex.runescape.buffer.Buffer;
 import com.jagex.runescape.sprite.SoftwareIndexedColorSprite;
+import com.jogamp.opengl.GL;
 import java.nio.ByteBuffer;
 import java.nio.ByteOrder;
 
@@ -21,10 +22,10 @@ public final class BlockShadowMap {
     this.textureId = var2[0];
     DummyClass33.textureMemory += 16384;
     GlRenderer.bindTexture(this.textureId);
-    GlRenderer.GL.glTexParameteri(3553, 10241, 9729);
-    GlRenderer.GL.glTexParameteri(3553, 10240, 9729);
-    GlRenderer.GL.glTexParameteri(3553, 10242, '\u812f');
-    GlRenderer.GL.glTexParameteri(3553, 10243, '\u812f');
+    GlRenderer.GL.glTexParameteri(GL.GL_TEXTURE_2D, 10241, 9729);
+    GlRenderer.GL.glTexParameteri(GL.GL_TEXTURE_2D, 10240, 9729);
+    GlRenderer.GL.glTexParameteri(GL.GL_TEXTURE_2D, 10242, '\u812f');
+    GlRenderer.GL.glTexParameteri(GL.GL_TEXTURE_2D, 10243, '\u812f');
   }
 
   public void update(int[][] heights, int x, int y) {
@@ -159,7 +160,7 @@ public final class BlockShadowMap {
       ByteBuffer var13 = ByteBuffer.wrap(GLStatics.aByteArray2111);
       var13.limit(16384);
       GlRenderer.bindTexture(this.textureId);
-      GlRenderer.GL.glTexImage2D(3553, 0, 6406, 128, 128, 0, 6406, 5121, var13);
+      GlRenderer.GL.glTexImage2D(GL.GL_TEXTURE_2D, 0, 6406, 128, 128, 0, 6406, 5121, var13);
       return true;
     }
   }
@@ -173,7 +174,7 @@ public final class BlockShadowMap {
     } else {
       if (GlRenderer.vertexBufferSupport) {
         //TODO ARB
-        GlRenderer.GL.glBindBuffer('\u8892', 0);
+        GlRenderer.GL.glBindBuffer(0x8892, 0);
       }
 
       GlRenderer.GL.glInterleavedArrays(10791, 20, this.vertexBuffer);
@@ -186,7 +187,7 @@ public final class BlockShadowMap {
     } else {
       if (GlRenderer.vertexBufferSupport) {
         //TODO ARB
-        GlRenderer.GL.glBindBuffer('\u8893', 0);
+        GlRenderer.GL.glBindBuffer(0x8893, 0);
       }
 
       GlRenderer.GL.glDrawElements(4, 384, 5125, this.elementBuffer);

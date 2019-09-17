@@ -412,8 +412,8 @@ public final class DummyClass46 {
       GlRenderer.GL.glBlendFunc(774, 1);
       // GL_FOG_COLOR
       GlRenderer.GL.glFogfv(2918, new float[]{0.0F, 0.0F, 0.0F, 0.0F}, 0);
-      GlRenderer.GL.glTexEnvi(8960, '\u8580', '\u8576');
-      GlRenderer.GL.glTexEnvi(8960, '\u8590', 770);
+      GlRenderer.GL.glTexEnvi(8960, 0x8580, 0x8576);
+      GlRenderer.GL.glTexEnvi(8960, 0x8590, 770);
 
       label69:
       for (int var4 = 0; var4 < DummyClass46.anInt1032; ++var4) {
@@ -479,12 +479,12 @@ public final class DummyClass46 {
         }
       }
 
-      GlRenderer.GL.glTexEnvi(8960, '\u8580', 5890);
-      GlRenderer.GL.glTexEnvi(8960, '\u8590', 768);
+      GlRenderer.GL.glTexEnvi(8960, 0x8580, 5890);
+      GlRenderer.GL.glTexEnvi(8960, 0x8590, 768);
       GlRenderer.GL.glBlendFunc(770, 771);
       GlRenderer.GL.glDepthMask(true);
       GlRenderer.GL.glFogfv(2918, GlEnvironment.fogColorRgb, 0);
-      GlRenderer.GL.glEnableClientState('\u8078');
+      GlRenderer.GL.glEnableClientState(0x8078);
       GlRenderer.method1846();
     }
   }

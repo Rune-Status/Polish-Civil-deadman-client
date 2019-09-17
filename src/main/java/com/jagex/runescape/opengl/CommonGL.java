@@ -3,7 +3,7 @@ package com.jagex.runescape.opengl;
 public final class CommonGL {
 
   public static void method403() {
-    GlRenderer.GL.glDisableClientState('\u8076');
+    GlRenderer.GL.glDisableClientState(0x8076);
     GlRenderer.setLightingEnabled(false);
     GlRenderer.GL.glDisable(2929);
     GlRenderer.GL.glPushAttrib(128);
@@ -23,7 +23,7 @@ public final class CommonGL {
       }
     }
 
-    GlRenderer.GL.glEnableClientState('\u8076');
+    GlRenderer.GL.glEnableClientState(0x8076);
     GlRenderer.method1846();
     GlRenderer.GL.glEnable(2929);
     GlRenderer.GL.glPopAttrib();

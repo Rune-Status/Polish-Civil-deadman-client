@@ -1,6 +1,7 @@
 package com.jagex.runescape.opengl;
 
 import com.jagex.runescape.model.SoftwareDirectColorSprite;
+import com.jogamp.opengl.GL;
 import java.nio.ByteBuffer;
 
 public final class GlDirectFullColorSprite extends GlDirectColorSprite {
@@ -49,7 +50,7 @@ public final class GlDirectFullColorSprite extends GlDirectColorSprite {
 
     GlRenderer.bindTexture(this.textureId);
     GlRenderer.GL
-        .glTexImage2D(3553, 0, 6408, this.anInt4075, this.anInt4079, 0, 6408,
+        .glTexImage2D(GL.GL_TEXTURE_2D, 0, 6408, this.anInt4075, this.anInt4079, 0, 6408,
             5121, var9);
     DummyClass33.texture2dMemory += var9.limit() - this.anInt4074;
     this.anInt4074 = var9.limit();

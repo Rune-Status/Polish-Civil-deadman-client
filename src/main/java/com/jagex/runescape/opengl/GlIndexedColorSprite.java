@@ -1,6 +1,7 @@
 package com.jagex.runescape.opengl;
 
 import com.jagex.runescape.sprite.AbstractIndexedColorSprite;
+import com.jogamp.opengl.GL;
 import java.nio.ByteBuffer;
 
 public final class GlIndexedColorSprite extends AbstractIndexedColorSprite {
@@ -61,7 +62,7 @@ public final class GlIndexedColorSprite extends AbstractIndexedColorSprite {
 
     GlRenderer.bindTexture(this.textureId);
     GlRenderer.GL
-        .glTexImage2D(3553, 0, 6408, this.textureWidth, this.textureHeight, 0,
+        .glTexImage2D(GL.GL_TEXTURE_2D, 0, 6408, this.textureWidth, this.textureHeight, 0,
             6408, 5121, buffer);
     DummyClass33.texture2dMemory += buffer.limit() - this.anInt2678;
     this.anInt2678 = buffer.limit();
@@ -94,11 +95,11 @@ public final class GlIndexedColorSprite extends AbstractIndexedColorSprite {
     if (this.anInt2677 != var1) {
       this.anInt2677 = var1;
       if (var1 == 2) {
-        GlRenderer.GL.glTexParameteri(3553, 10241, 9729);
-        GlRenderer.GL.glTexParameteri(3553, 10240, 9729);
+        GlRenderer.GL.glTexParameteri(GL.GL_TEXTURE_2D, 10241, 9729);
+        GlRenderer.GL.glTexParameteri(GL.GL_TEXTURE_2D, 10240, 9729);
       } else {
-        GlRenderer.GL.glTexParameteri(3553, 10241, 9728);
-        GlRenderer.GL.glTexParameteri(3553, 10240, 9728);
+        GlRenderer.GL.glTexParameteri(GL.GL_TEXTURE_2D, 10241, 9728);
+        GlRenderer.GL.glTexParameteri(GL.GL_TEXTURE_2D, 10240, 9728);
       }
 
     }

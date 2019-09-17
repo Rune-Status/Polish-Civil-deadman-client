@@ -147,7 +147,7 @@ public class GlobalStatics_8 {
   public static int[] anIntArray3290;
   public static GameString aClass94_3291 = GameStringStatics
       .create("Schlie-8en");
-  public static NPC[] npcs = new NPC['\u8000'];
+  public static NPC[] npcs = new NPC[0x8000];
   public static int anInt3293;
   public static GameString aClass94_3295;
   public static long aLong3296;

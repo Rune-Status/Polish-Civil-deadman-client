@@ -2,6 +2,7 @@ package com.jagex.runescape.opengl;
 
 import com.jagex.runescape.model.AbstractDirectColorSprite;
 import com.jagex.runescape.model.SoftwareDirectColorSprite;
+import com.jogamp.opengl.GL;
 import java.nio.ByteBuffer;
 
 public class GlDirectColorSprite extends AbstractDirectColorSprite {
@@ -42,11 +43,11 @@ public class GlDirectColorSprite extends AbstractDirectColorSprite {
     if (this.anInt4078 != var1) {
       this.anInt4078 = var1;
       if (var1 == 2) {
-        GlRenderer.GL.glTexParameteri(3553, 10241, 9729);
-        GlRenderer.GL.glTexParameteri(3553, 10240, 9729);
+        GlRenderer.GL.glTexParameteri(GL.GL_TEXTURE_2D, 10241, 9729);
+        GlRenderer.GL.glTexParameteri(GL.GL_TEXTURE_2D, 10240, 9729);
       } else {
-        GlRenderer.GL.glTexParameteri(3553, 10241, 9728);
-        GlRenderer.GL.glTexParameteri(3553, 10240, 9728);
+        GlRenderer.GL.glTexParameteri(GL.GL_TEXTURE_2D, 10241, 9728);
+        GlRenderer.GL.glTexParameteri(GL.GL_TEXTURE_2D, 10240, 9728);
       }
 
     }
@@ -60,10 +61,10 @@ public class GlDirectColorSprite extends AbstractDirectColorSprite {
       GlRenderer.bindTexture(this.textureId);
       this.initializeParameters(1);
       GlRenderer.GL.glActiveTexture('\u84c1');
-      GlRenderer.GL.glEnable(3553);
-      GlRenderer.GL.glBindTexture(3553, var3.textureId);
-      GlRenderer.GL.glTexEnvi(8960, '\u8571', 7681);
-      GlRenderer.GL.glTexEnvi(8960, '\u8580', '\u8578');
+      GlRenderer.GL.glEnable(GL.GL_TEXTURE_2D);
+      GlRenderer.GL.glBindTexture(GL.GL_TEXTURE_2D, var3.textureId);
+      GlRenderer.GL.glTexEnvi(8960, 0x8571, 7681);
+      GlRenderer.GL.glTexEnvi(8960, 0x8580, 0x8578);
       float var5 = (float) (var1 - GlUtils.anInt449) / var3.anInt4075;
       float var6 = (float) (var2 - GlUtils.anInt448) / var3.anInt4079;
       float var7 =
@@ -92,9 +93,9 @@ public class GlDirectColorSprite extends AbstractDirectColorSprite {
       GlRenderer.GL.glVertex2f(var1 + this.anInt3707,
           GlRenderer.viewHeight - (var2 + this.anInt3696));
       GlRenderer.GL.glEnd();
-      GlRenderer.GL.glTexEnvi(8960, '\u8571', 8448);
-      GlRenderer.GL.glTexEnvi(8960, '\u8580', 5890);
-      GlRenderer.GL.glDisable(3553);
+      GlRenderer.GL.glTexEnvi(8960, 0x8571, 8448);
+      GlRenderer.GL.glTexEnvi(8960, 0x8580, 5890);
+      GlRenderer.GL.glDisable(GL.GL_TEXTURE_2D);
       GlRenderer.GL.glActiveTexture('\u84c0');
     }
   }
@@ -138,10 +139,10 @@ public class GlDirectColorSprite extends AbstractDirectColorSprite {
       GlRenderer.bindTexture(this.textureId);
       this.initializeParameters(1);
       GlRenderer.GL.glActiveTexture('\u84c1');
-      GlRenderer.GL.glEnable(3553);
-      GlRenderer.GL.glBindTexture(3553, sprite.textureId);
-      GlRenderer.GL.glTexEnvi(8960, '\u8571', 7681);
-      GlRenderer.GL.glTexEnvi(8960, '\u8580', '\u8578');
+      GlRenderer.GL.glEnable(GL.GL_TEXTURE_2D);
+      GlRenderer.GL.glBindTexture(GL.GL_TEXTURE_2D, sprite.textureId);
+      GlRenderer.GL.glTexEnvi(8960, 0x8571, 7681);
+      GlRenderer.GL.glTexEnvi(8960, 0x8580, 0x8578);
       int var11 = -var3 / 2;
       int var12 = -var4 / 2;
       int var13 = -var11;
@@ -178,9 +179,9 @@ public class GlDirectColorSprite extends AbstractDirectColorSprite {
       GlRenderer.GL
           .glVertex2f(var1 + var3, GlRenderer.viewHeight - (var2 + var4));
       GlRenderer.GL.glEnd();
-      GlRenderer.GL.glTexEnvi(8960, '\u8571', 8448);
-      GlRenderer.GL.glTexEnvi(8960, '\u8580', 5890);
-      GlRenderer.GL.glDisable(3553);
+      GlRenderer.GL.glTexEnvi(8960, 0x8571, 8448);
+      GlRenderer.GL.glTexEnvi(8960, 0x8580, 5890);
+      GlRenderer.GL.glDisable(GL.GL_TEXTURE_2D);
       GlRenderer.GL.glActiveTexture('\u84c0');
     }
   }
@@ -463,7 +464,7 @@ public class GlDirectColorSprite extends AbstractDirectColorSprite {
 
     GlRenderer.bindTexture(this.textureId);
     GlRenderer.GL
-        .glTexImage2D(3553, 0, 6408, this.anInt4075, this.anInt4079, 0, 6408,
+        .glTexImage2D(GL.GL_TEXTURE_2D, 0, 6408, this.anInt4075, this.anInt4079, 0, 6408,
             5121, var9);
     DummyClass33.texture2dMemory += var9.limit() - this.anInt4074;
     this.anInt4074 = var9.limit();

@@ -100,7 +100,7 @@ public final class SomethingSoundEffect {
           var14 = this.aClass34_1595.method1007(var1);
           var15 = this.aClass34_1584.method1007(var1);
           var13 =
-            var13 * ((this.method1716(var10, var15, this.aClass34_1595.anInt601) >> 1) + '\u8000')
+            var13 * ((this.method1716(var10, var15, this.aClass34_1595.anInt601) >> 1) + 0x8000)
               >> 15;
           var10 += (var14 * var8 >> 16) + var9;
         }

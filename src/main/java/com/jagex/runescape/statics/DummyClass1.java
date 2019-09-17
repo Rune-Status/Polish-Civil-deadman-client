@@ -33,7 +33,7 @@ public final class DummyClass1 {
       RenderAnimation var2 = var1.getRenderAnimationId(false);
       int var4;
       int var5;
-      if (var1.anInt2772 != -1 && var1.anInt2772 < '\u8000') {
+      if (var1.anInt2772 != -1 && var1.anInt2772 < 0x8000) {
         NPC var3 = GlobalStatics_8.npcs[var1.anInt2772];
         if (var3 != null) {
           var5 = -var3.anInt2829 + var1.anInt2829;
@@ -46,7 +46,7 @@ public final class DummyClass1 {
 
       int var6;
       int var9;
-      if (var1.anInt2772 >= '\u8000') {
+      if (var1.anInt2772 >= 0x8000) {
         var9 = -32768 + var1.anInt2772;
         if (var9 == GlobalStatics_10.localPlayerId) {
           var9 = 2047;
@@ -139,7 +139,7 @@ public final class DummyClass1 {
             var6 = var1.anInt2821 * var1.anInt2821 / (var2.anInt369 * 2);
             int var7;
             if (var1.anInt2821 > 0 && var5 >= var6
-                && -var6 + var5 < '\u8000') {
+                && -var6 + var5 < 0x8000) {
               var1.anInt2803 = var5 / 2;
               var1.aBoolean2769 = true;
               var7 = var2.anInt357 * var2.anInt357 / (var2.anInt369 * 2);
@@ -151,7 +151,7 @@ public final class DummyClass1 {
                 var1.anInt2803 = -var7 + var5;
               }
             } else if (var1.anInt2821 < 0 && var6 <= -var5 + 65536
-                && 65536 - var5 - var6 < '\u8000') {
+                && 65536 - var5 - var6 < 0x8000) {
               var1.anInt2803 = (-var5 + 65536) / 2;
               var1.aBoolean2769 = true;
               var7 = var2.anInt357 * var2.anInt357 / (var2.anInt369 * 2);

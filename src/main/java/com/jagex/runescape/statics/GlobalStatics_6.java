@@ -3240,7 +3240,7 @@ public class GlobalStatics_6 {
     }
 
     if (var5 < 32768) {
-      var5 = '\u8000';
+      var5 = 0x8000;
     }
 
     if (GlobalStatics_9.anInt2670 >= var5) {

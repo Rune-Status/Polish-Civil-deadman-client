@@ -60,7 +60,7 @@ public final class GlUtils {
     GlRenderer.GL.glDisable(3042);
     GlRenderer.GL.glDisable(3008);
     GlRenderer.GL
-        .glDrawPixels(var3, var4, '\u80e1', GlRenderer.bigEndian ? '\u8367' : 5121,
+        .glDrawPixels(var3, var4, '\u80e1', GlRenderer.bigEndian ? 0x8367 : 5121,
       IntBuffer.wrap(var0));
     GlRenderer.GL.glEnable(3008);
     GlRenderer.GL.glEnable(3042);

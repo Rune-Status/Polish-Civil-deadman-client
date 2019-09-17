@@ -502,7 +502,7 @@ public class GlobalStatics_3 {
       DummyClass45.configs[var1] = null;
     }
 
-    for (var1 = 0; var1 < '\u8000'; ++var1) {
+    for (var1 = 0; var1 < 0x8000; ++var1) {
       GlobalStatics_8.npcs[var1] = null;
     }
 

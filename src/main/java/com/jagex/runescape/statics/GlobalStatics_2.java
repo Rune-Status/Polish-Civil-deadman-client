@@ -73,7 +73,7 @@ public class GlobalStatics_2 {
       .create("blanc:");
   public static short[][] aShortArrayArray344;
   public static boolean aBoolean346;
-  public static int[] anIntArray347 = new int['\u8000'];
+  public static int[] anIntArray347 = new int[0x8000];
   public static int anInt348;
   public static int anInt349;
   public static SignLinkRequest aClass64_351;

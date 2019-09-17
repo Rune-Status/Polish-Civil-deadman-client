@@ -41,6 +41,7 @@ import com.jagex.runescape.statics.DummyClass6;
 import com.jagex.runescape.statics.DummyClass7;
 import com.jagex.runescape.statics.DummyClass8;
 import com.jagex.runescape.statics.DummyClass9;
+import com.jogamp.opengl.GL;
 
 public final class MaterialShader5 implements MaterialShader {
 
@@ -112,7 +113,7 @@ public final class MaterialShader5 implements MaterialShader {
       GlRenderer.GL.glTexGenfv(8194, 9473, this.aFloatArray2174, 0);
     } else {
       int var7 = (int) (GlRenderer.anInt1791 * var4 * 64.0F);
-      GlRenderer.GL.glBindTexture(3553, SomethingGl.anIntArray1223[var7 % 64]);
+      GlRenderer.GL.glBindTexture(GL.GL_TEXTURE_2D, SomethingGl.anIntArray1223[var7 % 64]);
     }
 
     GlRenderer.GL.glActiveTexture('\u84c0');
@@ -132,7 +133,7 @@ public final class MaterialShader5 implements MaterialShader {
       GlRenderer.GL.glEnable(3170);
       GlRenderer.GL.glEnable('\u806f');
     } else {
-      GlRenderer.GL.glEnable(3553);
+      GlRenderer.GL.glEnable(GL.GL_TEXTURE_2D);
     }
 
     GlRenderer.GL.glTexGeni(8192, 9472, 9216);
@@ -147,7 +148,7 @@ public final class MaterialShader5 implements MaterialShader {
       GlRenderer.GL.glDisable('\u806f');
       GlRenderer.GL.glDisable(3170);
     } else {
-      GlRenderer.GL.glDisable(3553);
+      GlRenderer.GL.glDisable(GL.GL_TEXTURE_2D);
     }
 
     GlRenderer.GL.glDisable(3168);

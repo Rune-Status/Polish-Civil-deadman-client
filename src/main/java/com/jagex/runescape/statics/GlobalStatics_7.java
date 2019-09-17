@@ -2119,7 +2119,7 @@ public class GlobalStatics_7 {
           }
         }
       } else {
-        for (var11 = 0; var11 < '\u8000'; ++var11) {
+        for (var11 = 0; var11 < 0x8000; ++var11) {
           var12 = GlobalStatics_8.npcs[var11];
           if (var12 != null) {
             for (var13 = 0; var13 < 10; ++var13) {

@@ -1,5 +1,6 @@
 package com.jagex.runescape.opengl;
 
+import com.jogamp.opengl.GL;
 import java.nio.ByteBuffer;
 
 public final class SkyboxMaterialShader implements MaterialShader {
@@ -11,24 +12,24 @@ public final class SkyboxMaterialShader implements MaterialShader {
   public SkyboxMaterialShader() {
     if (GlRenderer.cubemapSupport && GlRenderer.maxTextureUnits >= 2) {
       this.initializeTextures();
-      GlRenderer.GL.glBindTexture('\u8513', this.textureIds[0]);
-      GlRenderer.GL.glTexParameteri('\u8513', 10241, 9729);
-      GlRenderer.GL.glTexParameteri('\u8513', 10240, 9729);
-      GlRenderer.GL.glTexParameteri('\u8513', '\u8072', '\u812f');
-      GlRenderer.GL.glTexParameteri('\u8513', 10242, '\u812f');
-      GlRenderer.GL.glTexParameteri('\u8513', 10243, '\u812f');
-      GlRenderer.GL.glBindTexture('\u8513', this.textureIds[1]);
-      GlRenderer.GL.glTexParameteri('\u8513', 10241, 9729);
-      GlRenderer.GL.glTexParameteri('\u8513', 10240, 9729);
-      GlRenderer.GL.glTexParameteri('\u8513', '\u8072', '\u812f');
-      GlRenderer.GL.glTexParameteri('\u8513', 10242, '\u812f');
-      GlRenderer.GL.glTexParameteri('\u8513', 10243, '\u812f');
-      GlRenderer.GL.glBindTexture('\u8513', this.textureIds[2]);
-      GlRenderer.GL.glTexParameteri('\u8513', 10241, 9729);
-      GlRenderer.GL.glTexParameteri('\u8513', 10240, 9729);
-      GlRenderer.GL.glTexParameteri('\u8513', '\u8072', '\u812f');
-      GlRenderer.GL.glTexParameteri('\u8513', 10242, '\u812f');
-      GlRenderer.GL.glTexParameteri('\u8513', 10243, '\u812f');
+      GlRenderer.GL.glBindTexture(0x8513, this.textureIds[0]);
+      GlRenderer.GL.glTexParameteri(0x8513, 10241, 9729);
+      GlRenderer.GL.glTexParameteri(0x8513, 10240, 9729);
+      GlRenderer.GL.glTexParameteri(0x8513, 0x8072, '\u812f');
+      GlRenderer.GL.glTexParameteri(0x8513, 10242, '\u812f');
+      GlRenderer.GL.glTexParameteri(0x8513, 10243, '\u812f');
+      GlRenderer.GL.glBindTexture(0x8513, this.textureIds[1]);
+      GlRenderer.GL.glTexParameteri(0x8513, 10241, 9729);
+      GlRenderer.GL.glTexParameteri(0x8513, 10240, 9729);
+      GlRenderer.GL.glTexParameteri(0x8513, 0x8072, '\u812f');
+      GlRenderer.GL.glTexParameteri(0x8513, 10242, '\u812f');
+      GlRenderer.GL.glTexParameteri(0x8513, 10243, '\u812f');
+      GlRenderer.GL.glBindTexture(0x8513, this.textureIds[2]);
+      GlRenderer.GL.glTexParameteri(0x8513, 10241, 9729);
+      GlRenderer.GL.glTexParameteri(0x8513, 10240, 9729);
+      GlRenderer.GL.glTexParameteri(0x8513, 0x8072, '\u812f');
+      GlRenderer.GL.glTexParameteri(0x8513, 10242, '\u812f');
+      GlRenderer.GL.glTexParameteri(0x8513, 10243, '\u812f');
       this.insufficientTextureUnits = GlRenderer.maxTextureUnits < 3;
     }
 
@@ -40,41 +41,41 @@ public final class SkyboxMaterialShader implements MaterialShader {
     GlRenderer.GL.glNewList(this.listId, 4864);
     if (this.textureIds != null) {
       GlRenderer.GL.glActiveTexture('\u84c1');
-      GlRenderer.GL.glTexGeni(8192, 9472, '\u8511');
-      GlRenderer.GL.glTexGeni(8193, 9472, '\u8511');
-      GlRenderer.GL.glTexGeni(8194, 9472, '\u8511');
+      GlRenderer.GL.glTexGeni(8192, 9472, 0x8511);
+      GlRenderer.GL.glTexGeni(8193, 9472, 0x8511);
+      GlRenderer.GL.glTexGeni(8194, 9472, 0x8511);
       GlRenderer.GL.glEnable(3168);
       GlRenderer.GL.glEnable(3169);
       GlRenderer.GL.glEnable(3170);
-      GlRenderer.GL.glEnable('\u8513');
+      GlRenderer.GL.glEnable(0x8513);
       GlRenderer.GL.glMatrixMode(5890);
       GlRenderer.GL.glLoadIdentity();
       GlRenderer.GL.glRotatef(22.5F, 1.0F, 0.0F, 0.0F);
       GlRenderer.GL.glMatrixMode(5888);
       if (this.insufficientTextureUnits) {
-        GlRenderer.GL.glTexEnvi(8960, '\u8571', 260);
-        GlRenderer.GL.glTexEnvi(8960, '\u8590', 770);
-        GlRenderer.GL.glTexEnvi(8960, '\u8572', 7681);
-        GlRenderer.GL.glTexEnvi(8960, '\u8588', '\u8577');
+        GlRenderer.GL.glTexEnvi(8960, 0x8571, 260);
+        GlRenderer.GL.glTexEnvi(8960, 0x8590, 770);
+        GlRenderer.GL.glTexEnvi(8960, 0x8572, 7681);
+        GlRenderer.GL.glTexEnvi(8960, 0x8588, 0x8577);
       } else {
-        GlRenderer.GL.glTexEnvi(8960, '\u8571', 7681);
-        GlRenderer.GL.glTexEnvi(8960, '\u8580', '\u8578');
-        GlRenderer.GL.glTexEnvi(8960, '\u8572', 8448);
+        GlRenderer.GL.glTexEnvi(8960, 0x8571, 7681);
+        GlRenderer.GL.glTexEnvi(8960, 0x8580, 0x8578);
+        GlRenderer.GL.glTexEnvi(8960, 0x8572, 8448);
         GlRenderer.GL.glActiveTexture('\u84c2');
-        GlRenderer.GL.glTexEnvi(8960, 8704, '\u8570');
-        GlRenderer.GL.glTexEnvi(8960, '\u8571', 260);
-        GlRenderer.GL.glTexEnvi(8960, '\u8580', '\u8578');
-        GlRenderer.GL.glTexEnvi(8960, '\u8581', '\u8578');
-        GlRenderer.GL.glTexEnvi(8960, '\u8591', 770);
-        GlRenderer.GL.glTexEnvi(8960, '\u8572', 7681);
-        GlRenderer.GL.glTexEnvi(8960, '\u8588', '\u8577');
-        GlRenderer.GL.glBindTexture(3553, GlRenderer.anInt1810);
-        GlRenderer.GL.glEnable(3553);
+        GlRenderer.GL.glTexEnvi(8960, 8704, 0x8570);
+        GlRenderer.GL.glTexEnvi(8960, 0x8571, 260);
+        GlRenderer.GL.glTexEnvi(8960, 0x8580, 0x8578);
+        GlRenderer.GL.glTexEnvi(8960, 0x8581, 0x8578);
+        GlRenderer.GL.glTexEnvi(8960, 0x8591, 770);
+        GlRenderer.GL.glTexEnvi(8960, 0x8572, 7681);
+        GlRenderer.GL.glTexEnvi(8960, 0x8588, 0x8577);
+        GlRenderer.GL.glBindTexture(GL.GL_TEXTURE_2D, GlRenderer.anInt1810);
+        GlRenderer.GL.glEnable(GL.GL_TEXTURE_2D);
       }
 
       GlRenderer.GL.glActiveTexture('\u84c0');
     } else {
-      GlRenderer.GL.glTexEnvi(8960, '\u8588', '\u8577');
+      GlRenderer.GL.glTexEnvi(8960, 0x8588, 0x8577);
     }
 
     GlRenderer.GL.glEndList();
@@ -84,31 +85,31 @@ public final class SkyboxMaterialShader implements MaterialShader {
       GlRenderer.GL.glDisable(3168);
       GlRenderer.GL.glDisable(3169);
       GlRenderer.GL.glDisable(3170);
-      GlRenderer.GL.glDisable('\u8513');
+      GlRenderer.GL.glDisable(0x8513);
       GlRenderer.GL.glMatrixMode(5890);
       GlRenderer.GL.glLoadIdentity();
       GlRenderer.GL.glMatrixMode(5888);
       if (this.insufficientTextureUnits) {
-        GlRenderer.GL.glTexEnvi(8960, '\u8571', 8448);
-        GlRenderer.GL.glTexEnvi(8960, '\u8590', 768);
-        GlRenderer.GL.glTexEnvi(8960, '\u8572', 8448);
-        GlRenderer.GL.glTexEnvi(8960, '\u8588', 5890);
+        GlRenderer.GL.glTexEnvi(8960, 0x8571, 8448);
+        GlRenderer.GL.glTexEnvi(8960, 0x8590, 768);
+        GlRenderer.GL.glTexEnvi(8960, 0x8572, 8448);
+        GlRenderer.GL.glTexEnvi(8960, 0x8588, 5890);
       } else {
-        GlRenderer.GL.glTexEnvi(8960, '\u8571', 8448);
-        GlRenderer.GL.glTexEnvi(8960, '\u8580', 5890);
+        GlRenderer.GL.glTexEnvi(8960, 0x8571, 8448);
+        GlRenderer.GL.glTexEnvi(8960, 0x8580, 5890);
         GlRenderer.GL.glActiveTexture('\u84c2');
         GlRenderer.GL.glTexEnvi(8960, 8704, 8448);
-        GlRenderer.GL.glTexEnvi(8960, '\u8571', 8448);
-        GlRenderer.GL.glTexEnvi(8960, '\u8580', 5890);
-        GlRenderer.GL.glTexEnvi(8960, '\u8591', 768);
-        GlRenderer.GL.glTexEnvi(8960, '\u8572', 8448);
-        GlRenderer.GL.glTexEnvi(8960, '\u8588', 5890);
-        GlRenderer.GL.glDisable(3553);
+        GlRenderer.GL.glTexEnvi(8960, 0x8571, 8448);
+        GlRenderer.GL.glTexEnvi(8960, 0x8580, 5890);
+        GlRenderer.GL.glTexEnvi(8960, 0x8591, 768);
+        GlRenderer.GL.glTexEnvi(8960, 0x8572, 8448);
+        GlRenderer.GL.glTexEnvi(8960, 0x8588, 5890);
+        GlRenderer.GL.glDisable(GL.GL_TEXTURE_2D);
       }
 
       GlRenderer.GL.glActiveTexture('\u84c0');
     } else {
-      GlRenderer.GL.glTexEnvi(8960, '\u8588', 5890);
+      GlRenderer.GL.glTexEnvi(8960, 0x8588, 5890);
     }
 
     GlRenderer.GL.glEndList();
@@ -118,7 +119,7 @@ public final class SkyboxMaterialShader implements MaterialShader {
     if (GLStatics.useBumpMaps) {
       GlRenderer.GL.glCallList(this.listId + 1);
     } else {
-      GlRenderer.GL.glTexEnvi(8960, '\u8588', 5890);
+      GlRenderer.GL.glTexEnvi(8960, 0x8588, 5890);
     }
 
   }
@@ -128,7 +129,7 @@ public final class SkyboxMaterialShader implements MaterialShader {
     if (GLStatics.useBumpMaps) {
       GlRenderer.GL.glCallList(this.listId);
     } else {
-      GlRenderer.GL.glTexEnvi(8960, '\u8588', '\u8577');
+      GlRenderer.GL.glTexEnvi(8960, 0x8588, 0x8577);
     }
 
   }
@@ -136,7 +137,7 @@ public final class SkyboxMaterialShader implements MaterialShader {
   public void set(int tex) {
     if (GLStatics.useBumpMaps && this.textureIds != null) {
       GlRenderer.GL.glActiveTexture('\u84c1');
-      GlRenderer.GL.glBindTexture('\u8513', this.textureIds[tex - 1]);
+      GlRenderer.GL.glBindTexture(0x8513, this.textureIds[tex - 1]);
       GlRenderer.GL.glActiveTexture('\u84c0');
     }
 
@@ -214,17 +215,17 @@ public final class SkyboxMaterialShader implements MaterialShader {
       }
 
       // GL_TEXTURE_CUBE_MAP
-      GlRenderer.GL.glBindTexture('\u8513', this.textureIds[0]);
+      GlRenderer.GL.glBindTexture(0x8513, this.textureIds[0]);
       GlRenderer.GL
-          .glTexImage2D('\u8515' + side, 0, 6406, 64, 64, 0, 6406, 5121,
+          .glTexImage2D(0x8515 + side, 0, 6406, 64, 64, 0, 6406, 5121,
               ByteBuffer.wrap(var11));
-      GlRenderer.GL.glBindTexture('\u8513', this.textureIds[1]);
+      GlRenderer.GL.glBindTexture(0x8513, this.textureIds[1]);
       GlRenderer.GL
-          .glTexImage2D('\u8515' + side, 0, 6406, 64, 64, 0, 6406, 5121,
+          .glTexImage2D(0x8515 + side, 0, 6406, 64, 64, 0, 6406, 5121,
               ByteBuffer.wrap(var12));
-      GlRenderer.GL.glBindTexture('\u8513', this.textureIds[2]);
+      GlRenderer.GL.glBindTexture(0x8513, this.textureIds[2]);
       GlRenderer.GL
-          .glTexImage2D('\u8515' + side, 0, 6406, 64, 64, 0, 6406, 5121,
+          .glTexImage2D(0x8515 + side, 0, 6406, 64, 64, 0, 6406, 5121,
               ByteBuffer.wrap(var10));
       DummyClass33.textureMemory += var9 * 3;
     }

@@ -342,7 +342,7 @@ public final class PlayerAppearance {
                     if (var24 == 0 && var25 == 0 && var26 == 0) {
                       var27[12] = -var45;
                       var27[13] = -var22;
-                      var27[0] = var27[4] = var27[8] = '\u8000';
+                      var27[0] = var27[4] = var27[8] = 0x8000;
                       var27[14] = -var23;
                     } else {
                       var28 = DummyClass40.COSINE_TABLE[var24] >> 1;

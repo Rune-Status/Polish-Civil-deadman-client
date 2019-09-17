@@ -626,7 +626,7 @@ public final class DummyClass18 {
 
         GlobalStatics_9.anInt3655 = var20;
         GlobalStatics_10.method232(var20, 16182);
-        DummyClass23.method1746(false, (byte) -64);
+        DummyClass23.method1746(false);
         GlobalStatics_10.method226(GlobalStatics_9.anInt3655, 69);
 
         for (var5 = 0; var5 < 100; ++var5) {
@@ -1826,7 +1826,7 @@ public final class DummyClass18 {
       var20 = GlobalStatics_9.gameBuffer.readInt();
       var3 = GlobalStatics_9.gameBuffer.readUnsignedShort();
       if (var20 < 69999) {
-        var3 += '\u8000';
+        var3 += 0x8000;
       }
 
       if (var20 < 0) {
@@ -2103,7 +2103,7 @@ public final class DummyClass18 {
       var20 = GlobalStatics_9.gameBuffer.readInt();
       var3 = GlobalStatics_9.gameBuffer.readUnsignedShort();
       if (var20 < 69999) {
-        var3 += '\u8000';
+        var3 += 0x8000;
       }
 
       if (var20 >= 0) {

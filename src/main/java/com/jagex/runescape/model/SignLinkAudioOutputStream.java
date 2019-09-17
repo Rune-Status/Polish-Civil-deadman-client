@@ -21,7 +21,7 @@ public final class SignLinkAudioOutputStream extends AbstractAudioOutputStream {
   }
 
   public void setBufferSize(int var1 ) throws Exception {
-    if (var1 > '\u8000') {
+    if (var1 > 0x8000) {
       throw new IllegalArgumentException();
     } else {
       GlobalStatics_3.anInterface1_2970.method3(this.anInt2969, 25349, var1);

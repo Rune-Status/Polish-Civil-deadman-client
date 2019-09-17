@@ -366,7 +366,7 @@ public class GlobalStatics_10 {
   public static int anInt2488;
   public static GameString aClass94_1363 = GameStringStatics
       .create("Clientscript error in: ");
-  public static byte[] aByteArray1364 = new byte['\u8080'];
+  public static byte[] aByteArray1364 = new byte[0x8080];
   public static FileUnpacker aClass153_1370;
   public static FileUnpacker aClass153_1372;
   public static int[][] anIntArrayArray1373;
@@ -1975,7 +1975,7 @@ public class GlobalStatics_10 {
       return var2;
     } else {
       byte[] var3;
-      if (var0 < '\u8000') {
+      if (var0 < 0x8000) {
         var3 = GlobalStatics_6.quickchats.getBytes(0, var0);
       } else {
         var3 = GlobalStatics_9.globalQuickchats.getBytes(0, var0 & 32767);

@@ -71,8 +71,8 @@ public final class Player extends Mobile {
             break;
           }
 
-          if (var13 >= '\u8000') {
-            var13 = GlobalStatics_9.anIntArray2664[var13 - '\u8000'];
+          if (var13 >= 0x8000) {
+            var13 = GlobalStatics_9.anIntArray2664[var13 - 0x8000];
             var9[var10] = HuffmanEncoderStatics.method308(1073741824, var13);
             var14 = DummyClass35.getItemConfig(var13, (byte) 119).anInt782;
             if (var14 != 0) {

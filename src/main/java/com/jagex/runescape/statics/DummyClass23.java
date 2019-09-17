@@ -29,10 +29,7 @@ public final class DummyClass23 {
     }
   }
 
-  public static void method1746(boolean var0, byte var1) {
-    if (var1 > -31) {
-      DummyClass23.aClass153_1661 = null;
-    }
+  public static void method1746(boolean var0) {
 
     GlobalStatics_9
         .method1352(GlobalStatics_9.viewHeight, var0, -1,
@@ -40,7 +37,7 @@ public final class DummyClass23 {
             DummyClass30.viewWidth);
   }
 
-  public static SomethingWorldMapy method1747(Buffer var0, boolean var1) {
+  public static SomethingWorldMapy method1747(Buffer var0) {
     SomethingWorldMapy var2 =
         new SomethingWorldMapy(var0.readString(), var0.readString(),
             var0.readUnsignedShort(),
@@ -56,7 +53,7 @@ public final class DummyClass23 {
               var0.readUnsignedShort(), var0.readUnsignedShort()));
     }
 
-    var2.method538((byte) 103);
+    var2.method538();
     return var2;
   }
 

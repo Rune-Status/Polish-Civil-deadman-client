@@ -876,7 +876,7 @@ public class GlobalStatics_9 {
   public static int[] anIntArray628 = new int[6];
   public static int[] anIntArray630 = new int[6];
   public static int[] anIntArray1591;
-  public static int[] anIntArray1594 = new int['\u8000'];
+  public static int[] anIntArray1594 = new int[0x8000];
   public static int[] anIntArray1598;
   public static int[] anIntArray1599;
   public static int[] anIntArray1600;
@@ -4010,7 +4010,7 @@ public class GlobalStatics_9 {
           && var0 + var4 > GlobalStatics_5.quadx0[var5]
           && GlobalStatics_9.quady0[var5] + GlobalStatics_9.quady1[var5]
           > var2 && GlobalStatics_9.quady0[var5] < var3
-              + var2) {
+          + var2) {
         DummyClass9.aBooleanArray4008[var5] = true;
       }
     }
@@ -5538,7 +5538,8 @@ public class GlobalStatics_9 {
 
     if (var1 == 3 && GlobalStatics_10.fullScreenFrame == null) {
       GlobalStatics_9
-          .setWindowMode(true, GlobalStatics_2.anInt2577, true, antialiasing, var4, -1,
+          .setWindowMode(true, GlobalStatics_2.anInt2577, true, antialiasing,
+              var4, -1,
               -1);
     } else {
       Component var7 = null;
@@ -5663,7 +5664,8 @@ public class GlobalStatics_9 {
       }
 
       if (!GlRenderer.useOpenGlRenderer && var1 > 0) {
-        GlobalStatics_9.setWindowMode(true, 0, true, antialiasing, false, -1, -1);
+        GlobalStatics_9
+            .setWindowMode(true, 0, true, antialiasing, false, -1, -1);
       } else {
         if (var1 > 0 && antialiasing == 0) {
           DummyClass1.gameThread.setPriority(5);
@@ -5713,7 +5715,7 @@ public class GlobalStatics_9 {
         GlobalStatics_9.aBoolean2427 = var1 >= 2;
 
         if (GlobalStatics_9.anInt3655 != -1) {
-          DummyClass23.method1746(true, (byte) -107);
+          DummyClass23.method1746(true);
         }
 
         if (GlobalStatics_9.gameSocket != null && (
@@ -7212,12 +7214,11 @@ public class GlobalStatics_9 {
   }
 
   public static SomethingWorldMapy method884(int var0, byte var1, int var2) {
-    SomethingWorldMapy var3 = (SomethingWorldMapy) DummyClass21.aClass61_1758
+    Deque deque = DummyClass21.aClass61_1758;
+    SomethingWorldMapy var3 = (SomethingWorldMapy) deque
         .getFirst();
 
-    for (int var4 = -82 % ((var1 - 11) / 32);
-        var3 != null;
-        var3 = (SomethingWorldMapy) DummyClass21.aClass61_1758.getNext()) {
+    for (; var3 != null; var3 = (SomethingWorldMapy) deque.getNext()) {
       if (var3.aBoolean3553 && var3.method537(var2, (byte) 97, var0)) {
         return var3;
       }
@@ -10310,8 +10311,8 @@ public class GlobalStatics_9 {
       assert var4 != null;
       for (int var5 = 0; var4.length > var5; ++var5) {
         DummyClass21.aClass61_1758.addLast(DummyClass23.method1747(
-            new Buffer(GlobalStatics_10.worldMaps.getBytes(var3, var4[var5])),
-            true));
+            new Buffer(GlobalStatics_10.worldMaps.getBytes(var3, var4[var5]))
+        ));
       }
 
     }
@@ -10615,7 +10616,7 @@ public class GlobalStatics_9 {
     int var4 = 0;
     int var5 = -26 / ((62 - var0) / 58);
     short[] var3 = new short[16];
-    int var6 = !var1 ? 0 : '\u8000';
+    int var6 = !var1 ? 0 : 0x8000;
     int var7 =
         (!var1 ? GlobalStatics_9.anInt1156 : GlobalStatics_9.anInt377) + var6;
 
@@ -11399,7 +11400,7 @@ public class GlobalStatics_9 {
       GlobalStatics_10.aClass130_3208 = new HashTable(8);
       GlobalStatics_10.method122(var1 - 2918);
       GlobalStatics_9.anInt3655 = GlobalStatics_6.anInt2529;
-      DummyClass23.method1746(false, (byte) -36);
+      DummyClass23.method1746(false);
       GlobalStatics_6.method1093(false);
       GlobalStatics_10.method226(GlobalStatics_9.anInt3655, var1 ^ 2960);
     }

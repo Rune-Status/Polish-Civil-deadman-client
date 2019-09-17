@@ -274,7 +274,7 @@ public final class NpcConfiguration {
                   if (var20 == 0 && var21 == 0 && var22 == 0) {
                     var23[13] = -var18;
                     var23[14] = -var19;
-                    var23[0] = var23[4] = var23[8] = '\u8000';
+                    var23[0] = var23[4] = var23[8] = 0x8000;
                     var23[12] = -var17;
                   } else {
                     var24 = DummyClass40.COSINE_TABLE[var20] >> 1;

@@ -6,7 +6,7 @@ import com.jagex.runescape.statics.GlobalStatics_9;
 
 public final class TextureSampler19 extends AbstractTextureSampler {
 
-  private int anInt3217 = '\u8000';
+  private int anInt3217 = 0x8000;
 
 
   public TextureSampler19() {

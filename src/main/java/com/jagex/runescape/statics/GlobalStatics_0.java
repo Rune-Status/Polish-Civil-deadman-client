@@ -263,13 +263,13 @@ public final class GlobalStatics_0 {
     Random random = new Random(0L);
 
     int var1;
-    for (var1 = 0; var1 < '\u8000'; ++var1) {
+    for (var1 = 0; var1 < 0x8000; ++var1) {
       GlobalStatics_9.anIntArray1594[var1] = (random.nextInt() & 2) - 1;
     }
 
-    GlobalStatics_9.anIntArray1591 = new int['\u8000'];
+    GlobalStatics_9.anIntArray1591 = new int[0x8000];
 
-    for (var1 = 0; var1 < '\u8000'; ++var1) {
+    for (var1 = 0; var1 < 0x8000; ++var1) {
       GlobalStatics_9.anIntArray1591[var1] = (int) (Math.sin(var1 / 5215.1903D)
           * 16384.0D);
     }
@@ -1379,7 +1379,7 @@ public final class GlobalStatics_0 {
         var2.method546(new Buffer(var3), -1);
       }
 
-      if (var1 >= '\u8000') {
+      if (var1 >= 0x8000) {
         var2.method548(60);
       }
 

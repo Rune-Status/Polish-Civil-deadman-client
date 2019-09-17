@@ -25,7 +25,7 @@ public final class DummyClass40 {
   static {
     int var0;
     for (var0 = 1; var0 < 512; ++var0) {
-      DummyClass40.anIntArray839[var0] = '\u8000' / var0;
+      DummyClass40.anIntArray839[var0] = 0x8000 / var0;
     }
 
     for (var0 = 1; var0 < 2048; ++var0) {

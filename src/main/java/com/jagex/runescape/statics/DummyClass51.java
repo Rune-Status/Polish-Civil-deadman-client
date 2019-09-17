@@ -66,11 +66,11 @@ public final class DummyClass51 {
     }
 
     var2 = -35 / ((-51 - var0) / 42);
-    DummyClass12.anIntArray2026 = new int['\u8000'];
-    GlobalStatics_11.anIntArray49 = new int['\u8000'];
+    DummyClass12.anIntArray2026 = new int[0x8000];
+    GlobalStatics_11.anIntArray49 = new int[0x8000];
     GlobalStatics_10.method215((byte) -89, null);
-    GlobalStatics_8.anIntArray3805 = new int['\u8000'];
-    DummyClass2.anIntArray1681 = new int['\u8000'];
+    GlobalStatics_8.anIntArray3805 = new int[0x8000];
+    DummyClass2.anIntArray1681 = new int[0x8000];
     GlobalStatics_10.aClass3_Sub28_Sub16_Sub2_1381 =
         new SoftwareDirectColorSprite(128, 254);
   }

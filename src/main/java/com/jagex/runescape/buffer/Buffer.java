@@ -260,7 +260,7 @@ public class Buffer extends Node {
     if (var2 >= 0 && var2 < 128) {
       this.writeByte(var2);
     } else if (var2 >= 0 && var2 < 32768) {
-      this.writeShort('\u8000' + var2);
+      this.writeShort(0x8000 + var2);
     } else {
       throw new IllegalArgumentException();
     }

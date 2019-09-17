@@ -90,7 +90,7 @@ public final class SomethingShadows {
       }
     }
 
-    GlRenderer.GL.glEnableClientState('\u8076');
+    GlRenderer.GL.glEnableClientState(0x8076);
     GlRenderer.GL.glDepthMask(true);
     GlRenderer.method1846();
   }

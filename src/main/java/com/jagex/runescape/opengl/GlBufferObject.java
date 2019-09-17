@@ -27,8 +27,8 @@ public final class GlBufferObject {
 
   public void method2168(ByteBuffer var1 ) {
     if (var1.limit() <= this.anInt1993) {
-      GlRenderer.GL.glBindBuffer('\u8892', this.anInt1991);
-      GlRenderer.GL.glBufferSubData('\u8892', 0, var1.limit(), var1);
+      GlRenderer.GL.glBindBuffer(0x8892, this.anInt1991);
+      GlRenderer.GL.glBufferSubData(0x8892, 0, var1.limit(), var1);
     } else {
       this.setVertexBufferData(var1);
     }
@@ -46,24 +46,24 @@ public final class GlBufferObject {
   }
 
   public void bindVertexBuffer() {
-    GlRenderer.GL.glBindBuffer('\u8892', this.anInt1991);
+    GlRenderer.GL.glBindBuffer(0x8892, this.anInt1991);
   }
 
   public void setElementBufferData(ByteBuffer var1 ) {
-    GlRenderer.GL.glBindBuffer('\u8893', this.anInt1991);
-    GlRenderer.GL.glBufferData('\u8893', var1.limit(), var1,
+    GlRenderer.GL.glBindBuffer(0x8893, this.anInt1991);
+    GlRenderer.GL.glBufferData(0x8893, var1.limit(), var1,
         this.aBoolean1994 ? '\u88e0' : '\u88e4');
     DummyClass33.anInt585 += var1.limit() - this.anInt1993;
     this.anInt1993 = var1.limit();
   }
 
   public void bindElementBuffer() {
-    GlRenderer.GL.glBindBuffer('\u8893', this.anInt1991);
+    GlRenderer.GL.glBindBuffer(0x8893, this.anInt1991);
   }
 
   public void setVertexBufferData(ByteBuffer buffer ) {
-    GlRenderer.GL.glBindBuffer('\u8892', this.anInt1991);
-    GlRenderer.GL.glBufferData('\u8892', buffer.limit(), buffer,
+    GlRenderer.GL.glBindBuffer(0x8892, this.anInt1991);
+    GlRenderer.GL.glBufferData(0x8892, buffer.limit(), buffer,
         this.aBoolean1994 ? '\u88e0' : '\u88e4');
     DummyClass33.anInt585 += buffer.limit() - this.anInt1993;
     this.anInt1993 = buffer.limit();

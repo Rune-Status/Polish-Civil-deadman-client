@@ -19,14 +19,14 @@ public final class SomethingQuickChat2 extends SubNode {
       if (this.anIntArray3540 != null) {
         for (var2 = 0; this.anIntArray3540.length > var2; ++var2) {
           this.anIntArray3540[var2] =
-            HuffmanEncoderStatics.method308(this.anIntArray3540[var2], '\u8000');
+            HuffmanEncoderStatics.method308(this.anIntArray3540[var2], 0x8000);
         }
       }
 
       if (this.anIntArray3534 != null) {
         for (var2 = 0; this.anIntArray3534.length > var2; ++var2) {
           this.anIntArray3534[var2] =
-            HuffmanEncoderStatics.method308(this.anIntArray3534[var2], '\u8000');
+            HuffmanEncoderStatics.method308(this.anIntArray3534[var2], 0x8000);
         }
       }
 

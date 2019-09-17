@@ -85,7 +85,7 @@ public final class DummyClass25 {
     }
 
     if (GlobalStatics_9.anInt3655 != -1) {
-      DummyClass23.method1746(true, (byte) -125);
+      DummyClass23.method1746(true);
     }
 
     GlobalStatics_9.method1396(-1);

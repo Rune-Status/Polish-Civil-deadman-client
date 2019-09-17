@@ -3694,7 +3694,7 @@ public final class GlModel extends AbstractModel {
           || this.vertexTextureData.buffer == null) {
         if (GlRenderer.vertexBufferSupport) {
           //TODO ARB
-          GlRenderer.GL.glBindBuffer('\u8892', 0);
+          GlRenderer.GL.glBindBuffer(0x8892, 0);
         }
 
         if (this.vertexPositionData.buffer == null) {
@@ -3729,7 +3729,7 @@ public final class GlModel extends AbstractModel {
 
       if (this.indices.buffer == null && GlRenderer.vertexBufferSupport) {
         //TODO ARB
-        GlRenderer.GL.glBindBuffer('\u8893', 0);
+        GlRenderer.GL.glBindBuffer(0x8893, 0);
       }
 
       int var3 = this.offsets.length - 1;

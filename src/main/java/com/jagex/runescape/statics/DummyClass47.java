@@ -407,7 +407,7 @@ public final class DummyClass47 {
       int var6;
       if (var2 > var3) {
         var1 <<= 16;
-        var1 += '\u8000';
+        var1 += 0x8000;
         var3 <<= 16;
         var5 = (int) Math.floor((double) var3 / var2 + 0.5D);
         var2 += var0;
@@ -433,7 +433,7 @@ public final class DummyClass47 {
         }
       } else {
         var0 <<= 16;
-        var0 += '\u8000';
+        var0 += 0x8000;
         var2 <<= 16;
         var5 = (int) Math.floor((double) var2 / var3 + 0.5D);
         var3 += var1;

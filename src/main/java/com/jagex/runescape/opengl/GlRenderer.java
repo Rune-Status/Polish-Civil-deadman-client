@@ -160,12 +160,12 @@ public final class GlRenderer {
 
   private static void method1829() {
     GlRenderer.viewportSetup = false;
-    GlRenderer.GL.glDisable(3553);
+    GlRenderer.GL.glDisable(GL.GL_TEXTURE_2D);
     GlRenderer.textureId = -1;
-    GlRenderer.GL.glTexEnvi(8960, 8704, '\u8570');
-    GlRenderer.GL.glTexEnvi(8960, '\u8571', 8448);
+    GlRenderer.GL.glTexEnvi(8960, 8704, 0x8570);
+    GlRenderer.GL.glTexEnvi(8960, 0x8571, 8448);
     GlRenderer.anInt1793 = 0;
-    GlRenderer.GL.glTexEnvi(8960, '\u8572', 8448);
+    GlRenderer.GL.glTexEnvi(8960, 0x8572, 8448);
     GlRenderer.anInt1792 = 0;
     GlRenderer.GL.glEnable(2896);
     GlRenderer.GL.glEnable(2912);
@@ -175,9 +175,9 @@ public final class GlRenderer {
     GlRenderer.fogEnabled = true;
     GlobalStatics_4.method1073(97);
     GlRenderer.GL.glActiveTexture('\u84c1');
-    GlRenderer.GL.glTexEnvi(8960, 8704, '\u8570');
-    GlRenderer.GL.glTexEnvi(8960, '\u8571', 8448);
-    GlRenderer.GL.glTexEnvi(8960, '\u8572', 8448);
+    GlRenderer.GL.glTexEnvi(8960, 8704, 0x8570);
+    GlRenderer.GL.glTexEnvi(8960, 0x8571, 8448);
+    GlRenderer.GL.glTexEnvi(8960, 0x8572, 8448);
     GlRenderer.GL.glActiveTexture('\u84c0');
     GlRenderer.GL.setSwapInterval(0);
     GlRenderer.GL.glClearColor(0.0F, 0.0F, 0.0F, 0.0F);
@@ -194,11 +194,11 @@ public final class GlRenderer {
     GlRenderer.GL.glBlendFunc(770, 771);
     GlRenderer.GL.glEnable(3008);
     GlRenderer.GL.glAlphaFunc(516, 0.0F);
-    GlRenderer.GL.glEnableClientState('\u8074');
-    GlRenderer.GL.glEnableClientState('\u8075');
+    GlRenderer.GL.glEnableClientState(0x8074);
+    GlRenderer.GL.glEnableClientState(0x8075);
     GlRenderer.aBoolean1798 = true;
-    GlRenderer.GL.glEnableClientState('\u8076');
-    GlRenderer.GL.glEnableClientState('\u8078');
+    GlRenderer.GL.glEnableClientState(0x8076);
+    GlRenderer.GL.glEnableClientState(0x8078);
     GlRenderer.GL.glMatrixMode(5888);
     GlRenderer.GL.glLoadIdentity();
     GlEnvironment.method1511();
@@ -351,9 +351,9 @@ public final class GlRenderer {
     int[] var12 = new int[1];
     GlRenderer.GL.glGetIntegerv('\u84e2', var12, 0);
     GlRenderer.maxTextureUnits = var12[0];
-    GlRenderer.GL.glGetIntegerv('\u8871', var12, 0);
+    GlRenderer.GL.glGetIntegerv(0x8871, var12, 0);
     GlRenderer.anInt1814 = var12[0];
-    GlRenderer.GL.glGetIntegerv('\u8872', var12, 0);
+    GlRenderer.GL.glGetIntegerv(0x8872, var12, 0);
     GlRenderer.anInt1806 = var12[0];
     if (GlRenderer.maxTextureUnits < 2 || GlRenderer.anInt1814 < 2
         || GlRenderer.anInt1806 < 2) {
@@ -484,9 +484,9 @@ public final class GlRenderer {
   private static void method1845(boolean var0) {
     if (var0 != GlRenderer.aBoolean1798) {
       if (var0) {
-        GlRenderer.GL.glEnableClientState('\u8075');
+        GlRenderer.GL.glEnableClientState(0x8075);
       } else {
-        GlRenderer.GL.glDisableClientState('\u8075');
+        GlRenderer.GL.glDisableClientState(0x8075);
       }
 
       GlRenderer.aBoolean1798 = var0;
@@ -507,15 +507,15 @@ public final class GlRenderer {
   public static void method1847(int var0) {
     if (var0 != GlRenderer.anInt1792) {
       if (var0 == 0) {
-        GlRenderer.GL.glTexEnvi(8960, '\u8572', 8448);
+        GlRenderer.GL.glTexEnvi(8960, 0x8572, 8448);
       }
 
       if (var0 == 1) {
-        GlRenderer.GL.glTexEnvi(8960, '\u8572', 7681);
+        GlRenderer.GL.glTexEnvi(8960, 0x8572, 7681);
       }
 
       if (var0 == 2) {
-        GlRenderer.GL.glTexEnvi(8960, '\u8572', 260);
+        GlRenderer.GL.glTexEnvi(8960, 0x8572, 260);
       }
 
       GlRenderer.anInt1792 = var0;
@@ -559,13 +559,13 @@ public final class GlRenderer {
   public static void bindTexture(int var0) {
     if (var0 != GlRenderer.textureId) {
       if (var0 == -1) {
-        GlRenderer.GL.glDisable(3553);
+        GlRenderer.GL.glDisable(GL.GL_TEXTURE_2D);
       } else {
         if (GlRenderer.textureId == -1) {
-          GlRenderer.GL.glEnable(3553);
+          GlRenderer.GL.glEnable(GL.GL_TEXTURE_2D);
         }
 
-        GlRenderer.GL.glBindTexture(3553, var0);
+        GlRenderer.GL.glBindTexture(GL.GL_TEXTURE_2D, var0);
       }
 
       GlRenderer.textureId = var0;
@@ -669,27 +669,27 @@ public final class GlRenderer {
     // Combine RGB modulate
     if (var0 != GlRenderer.anInt1793) {
       if (var0 == 0) {
-        GlRenderer.GL.glTexEnvi(8960, '\u8571', 8448);
+        GlRenderer.GL.glTexEnvi(8960, 0x8571, 8448);
       }
 
       if (var0 == 1) {
-        GlRenderer.GL.glTexEnvi(8960, '\u8571', 7681);
+        GlRenderer.GL.glTexEnvi(8960, 0x8571, 7681);
       }
 
       if (var0 == 2) {
-        GlRenderer.GL.glTexEnvi(8960, '\u8571', 260);
+        GlRenderer.GL.glTexEnvi(8960, 0x8571, 260);
       }
 
       if (var0 == 3) {
-        GlRenderer.GL.glTexEnvi(8960, '\u8571', '\u84e7');
+        GlRenderer.GL.glTexEnvi(8960, 0x8571, '\u84e7');
       }
 
       if (var0 == 4) {
-        GlRenderer.GL.glTexEnvi(8960, '\u8571', '\u8574');
+        GlRenderer.GL.glTexEnvi(8960, 0x8571, 0x8574);
       }
 
       if (var0 == 5) {
-        GlRenderer.GL.glTexEnvi(8960, '\u8571', '\u8575');
+        GlRenderer.GL.glTexEnvi(8960, 0x8571, 0x8575);
       }
 
       GlRenderer.anInt1793 = var0;
@@ -700,8 +700,8 @@ public final class GlRenderer {
     int[] var0 = new int[1];
     GlRenderer.GL.glGenTextures(1, var0, 0);
     GlRenderer.anInt1810 = var0[0];
-    GlRenderer.GL.glBindTexture(3553, GlRenderer.anInt1810);
-    GlRenderer.GL.glTexImage2D(3553, 0, 4, 1, 1, 0, 6408, 5121,
+    GlRenderer.GL.glBindTexture(GL.GL_TEXTURE_2D, GlRenderer.anInt1810);
+    GlRenderer.GL.glTexImage2D(GL.GL_TEXTURE_2D, 0, 4, 1, 1, 0, 6408, 5121,
         IntBuffer.wrap(new int[]{-1}));
     DummyClass46.setupSceneGl();
     GlobalStatics_6.method468(6);

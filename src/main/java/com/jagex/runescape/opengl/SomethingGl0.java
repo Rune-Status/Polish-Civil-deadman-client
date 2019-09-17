@@ -279,7 +279,7 @@ public final class SomethingGl0 extends Node {
       } else {
         if (GlRenderer.vertexBufferSupport) {
           //TODO ARB
-          GlRenderer.GL.glBindBuffer('\u8892', 0);
+          GlRenderer.GL.glBindBuffer(0x8892, 0);
         }
 
         this.aByteBuffer2345.position(0);
@@ -303,7 +303,7 @@ public final class SomethingGl0 extends Node {
 
       if (GlRenderer.vertexBufferSupport) {
         //TODO ARB
-        GlRenderer.GL.glBindBuffer('\u8893', 0);
+        GlRenderer.GL.glBindBuffer(0x8893, 0);
       }
 
       if (SomethingGl0.aClass3_Sub30_2372.position != 0) {

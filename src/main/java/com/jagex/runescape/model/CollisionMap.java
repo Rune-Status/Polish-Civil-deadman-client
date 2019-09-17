@@ -130,7 +130,7 @@ public final class CollisionMap {
 
           if (var1 == 1) {
             this.method1501((byte) 40, var4, var6, 2048);
-            this.method1501((byte) 88, 1 + var4, var6 + 1, '\u8000');
+            this.method1501((byte) 88, 1 + var4, var6 + 1, 0x8000);
           }
 
           if (var1 == 2) {
@@ -139,7 +139,7 @@ public final class CollisionMap {
           }
 
           if (var1 == 3) {
-            this.method1501((byte) 90, var4, var6, '\u8000');
+            this.method1501((byte) 90, var4, var6, 0x8000);
             this.method1501((byte) 47, var4 - 1, var6 - 1, 2048);
           }
         }
@@ -277,7 +277,7 @@ public final class CollisionMap {
 
             if (var1 == 1) {
               this.method1490(2048, (byte) -80, var6, var5);
-              this.method1490('\u8000', (byte) -80, 1 + var6, var5 + 1);
+              this.method1490(0x8000, (byte) -80, 1 + var6, var5 + 1);
             }
 
             if (var1 == 2) {
@@ -286,7 +286,7 @@ public final class CollisionMap {
             }
 
             if (var1 == 3) {
-              this.method1490('\u8000', (byte) -80, var6, var5);
+              this.method1490(0x8000, (byte) -80, var6, var5);
               this.method1490(2048, (byte) -80, -1 + var6, var5 - 1);
             }
           }
@@ -1124,7 +1124,7 @@ public final class CollisionMap {
           int var8;
           int var9;
           if (var6 <= var7) {
-            var9 = '\u8000';
+            var9 = 0x8000;
             var8 = 65536 * var6 / var7;
 
             while (var2 != var3) {
@@ -1164,7 +1164,7 @@ public final class CollisionMap {
             }
           } else {
             var8 = 65536 * var7 / var6;
-            var9 = '\u8000';
+            var9 = 0x8000;
 
             while (var4 != var5) {
               if (var5 >= var4) {

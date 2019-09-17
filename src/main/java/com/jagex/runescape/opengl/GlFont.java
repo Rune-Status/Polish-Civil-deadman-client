@@ -1,6 +1,7 @@
 package com.jagex.runescape.opengl;
 
 import com.jagex.runescape.model.AbstractFont;
+import com.jogamp.opengl.GL;
 import java.nio.ByteBuffer;
 
 public final class GlFont extends AbstractFont {
@@ -50,10 +51,10 @@ public final class GlFont extends AbstractFont {
       GlRenderer.bindTexture(this.anInt4084);
       GlDirectColorSprite var13 = GlUtils.aClass3_Sub28_Sub16_Sub1_447;
       GlRenderer.GL.glActiveTexture('\u84c1');
-      GlRenderer.GL.glEnable(3553);
-      GlRenderer.GL.glBindTexture(3553, var13.textureId);
-      GlRenderer.GL.glTexEnvi(8960, '\u8571', 7681);
-      GlRenderer.GL.glTexEnvi(8960, '\u8580', '\u8578');
+      GlRenderer.GL.glEnable(GL.GL_TEXTURE_2D);
+      GlRenderer.GL.glBindTexture(GL.GL_TEXTURE_2D, var13.textureId);
+      GlRenderer.GL.glTexEnvi(8960, 0x8571, 7681);
+      GlRenderer.GL.glTexEnvi(8960, 0x8580, 0x8578);
       float var14 = (float) (var2 - GlUtils.anInt449) / var13.anInt4075;
       float var15 = (float) (var3 - GlUtils.anInt448) / var13.anInt4079;
       float var16 = (float) (var2 + var4 - GlUtils.anInt449) / var13.anInt4075;
@@ -73,9 +74,9 @@ public final class GlFont extends AbstractFont {
       GlRenderer.GL
           .glVertex2f(this.anIntArray3709[var1], -this.anIntArray3721[var1]);
       GlRenderer.GL.glEnd();
-      GlRenderer.GL.glTexEnvi(8960, '\u8571', 8448);
-      GlRenderer.GL.glTexEnvi(8960, '\u8580', 5890);
-      GlRenderer.GL.glDisable(3553);
+      GlRenderer.GL.glTexEnvi(8960, 0x8571, 8448);
+      GlRenderer.GL.glTexEnvi(8960, 0x8580, 5890);
+      GlRenderer.GL.glDisable(GL.GL_TEXTURE_2D);
       GlRenderer.GL.glActiveTexture('\u84c0');
       GlRenderer.GL.glLoadIdentity();
     } else {
@@ -185,12 +186,12 @@ public final class GlFont extends AbstractFont {
 
       GlRenderer.bindTexture(this.anInt4084);
       GlRenderer.GL
-          .glTexImage2D(3553, 0, 6410, this.anInt4087, this.anInt4087, 0, 6410,
+          .glTexImage2D(GL.GL_TEXTURE_2D, 0, 6410, this.anInt4087, this.anInt4087, 0, 6410,
               5121, var14);
       DummyClass33.texture2dMemory += var14.limit() - this.anInt4083;
       this.anInt4083 = var14.limit();
-      GlRenderer.GL.glTexParameteri(3553, 10241, 9728);
-      GlRenderer.GL.glTexParameteri(3553, 10240, 9728);
+      GlRenderer.GL.glTexParameteri(GL.GL_TEXTURE_2D, 10241, 9728);
+      GlRenderer.GL.glTexParameteri(GL.GL_TEXTURE_2D, 10240, 9728);
     }
   }
 }
