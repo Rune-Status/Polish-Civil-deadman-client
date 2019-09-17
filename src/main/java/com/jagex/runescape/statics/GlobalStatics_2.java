@@ -356,12 +356,12 @@ public class GlobalStatics_2 {
     GlobalStatics_9.anInt3362 =
         DummyClass58.anInt1460 - 1 + GlobalStatics_9.anInt65 - var2;
     int var6 =
-        (int) (GlobalStatics_9.aClass11_3551.anInt193
+        (int) (GlobalStatics_9.aClass11_3551.zoom
             / GlobalStatics_4.aFloat727)
             + GlobalStatics_9.anInt3362;
     int var5 =
         GlobalStatics_9.anInt3362 - (int) (
-            GlobalStatics_9.aClass11_3551.anInt193
+            GlobalStatics_9.aClass11_3551.zoom
                 / GlobalStatics_4.aFloat727);
     if (var4 > DummyClass30.anInt455) {
       GlobalStatics_9.anInt1150 =
@@ -371,13 +371,13 @@ public class GlobalStatics_2 {
 
     if (var5 < 0) {
       GlobalStatics_9.anInt3362 =
-          (int) (GlobalStatics_9.aClass11_3551.anInt193
+          (int) (GlobalStatics_9.aClass11_3551.zoom
               / GlobalStatics_4.aFloat727);
     }
 
     if (DummyClass58.anInt1460 < var6) {
       GlobalStatics_9.anInt3362 =
-          -((int) (GlobalStatics_9.aClass11_3551.anInt193
+          -((int) (GlobalStatics_9.aClass11_3551.zoom
               / GlobalStatics_4.aFloat727))
               + DummyClass58.anInt1460;
     }

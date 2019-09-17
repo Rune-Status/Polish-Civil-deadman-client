@@ -7,7 +7,6 @@ import com.jagex.runescape.model.Inventory;
 import com.jagex.runescape.model.NPC;
 import com.jagex.runescape.model.SomethingLight0;
 import com.jagex.runescape.opengl.GLStatics;
-import java.util.Arrays;
 
 public final class DummyClass10 {
 
@@ -27,12 +26,12 @@ public final class DummyClass10 {
         int var1 = GlobalStatics_9.gameBuffer.readBits(15);
         if (var1 != 32767) {
           boolean var2 = false;
-          if (GlobalStatics_8.npcs[var1] == null) {
+          if (GlobalStatics_8.NPCS[var1] == null) {
             var2 = true;
-            GlobalStatics_8.npcs[var1] = new NPC();
+            GlobalStatics_8.NPCS[var1] = new NPC();
           }
 
-          NPC var3 = GlobalStatics_8.npcs[var1];
+          NPC var3 = GlobalStatics_8.NPCS[var1];
           GlobalStatics_2.anIntArray347[DummyClass6.anInt2046++] = var1;
           var3.anInt2838 = GlobalStatics_4.updateCycle;
           if (var3.config != null && var3.config.method1474(-1)) {
@@ -129,8 +128,6 @@ public final class DummyClass10 {
       GlobalStatics_4.heightMap = DummyClass43.somethingHeightMap;
       GLStatics.aClass3_Sub11ArrayArray2542 = GLStatics.aClass3_Sub11ArrayArray2199;
     }
-    System.out.println(
-        Arrays.deepToString(GLStatics.aClass3_Sub11ArrayArray2542));
     GLStatics.anInt2456 = GLStatics.sceneGraphTiles.length;
   }
 
@@ -303,7 +300,7 @@ public final class DummyClass10 {
     }
 
     for (var1 = 0; var1 < 32768; ++var1) {
-      GlobalStatics_8.npcs[var1] = null;
+      GlobalStatics_8.NPCS[var1] = null;
     }
 
     for (var1 = 0; var1 < 4; ++var1) {

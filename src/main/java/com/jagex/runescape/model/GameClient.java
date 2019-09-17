@@ -127,7 +127,7 @@ public final class GameClient extends GameStub {
 
       label191:
       for (int var3 = 0; var3 < 32768; ++var3) {
-        NPC var4 = GlobalStatics_8.npcs[var3];
+        NPC var4 = GlobalStatics_8.NPCS[var3];
         if (var4 != null) {
           byte var5 = var4.config.aByte1267;
           if ((var5 & 2) > 0 && var4.anInt2816 == 0
@@ -137,19 +137,19 @@ public final class GameClient extends GameStub {
             if (var6 != 0 || var7 != 0) {
               var4.aByteArray2795[0] = 1;
               var4.waypointsX[0] = var6 + (var4.anInt2819 >> 7);
-              var4.waypointsY[0] = var7 + (var4.anInt2829 >> 7);
+              var4.waypointsY[0] = var7 + (var4.sceneY >> 7);
               GlobalStatics_0.collisionMaps[GlobalStatics_9.currentPlane]
                   .method1502(var1 + 20850,
                       var4.anInt2819 >> 7, var4.getSize(), false, 0,
                       var4.getSize(),
-                      var4.anInt2829 >> 7);
+                      var4.sceneY >> 7);
               if (var4.waypointsX[0] >= 0 && var4.waypointsX[0] <= 104 - var4
                   .getSize()
                   && var4.waypointsY[0] >= 0
                   && var4.waypointsY[0] <= 104 - var4.getSize()
                   && GlobalStatics_0.collisionMaps[GlobalStatics_9.currentPlane]
                   .method1500(-2,
-                      var4.anInt2829 >> 7, var4.waypointsY[0],
+                      var4.sceneY >> 7, var4.waypointsY[0],
                       var4.waypointsX[0],
                       var4.anInt2819 >> 7)) {
                 if (var4.getSize() > 1) {
@@ -177,7 +177,7 @@ public final class GameClient extends GameStub {
           GlobalStatics_9.method900(var4, var1 ^ -11974);
           GlobalStatics_0.collisionMaps[GlobalStatics_9.currentPlane]
               .method1489(
-                  var4.anInt2819 >> 7, false, (byte) 85, var4.anInt2829 >> 7,
+                  var4.anInt2819 >> 7, false, (byte) 85, var4.sceneY >> 7,
                   var4.getSize(), var4.getSize());
         }
       }
@@ -995,7 +995,7 @@ public final class GameClient extends GameStub {
         GlobalStatics_9.resetFrameRegulator();
       } else if (
           DummyClass15.state == 25 || DummyClass15.state == 28) {
-        DummyClass59.method1046(-117);
+        DummyClass59.method1046();
       }
 
       if (DummyClass15.state == 10) {

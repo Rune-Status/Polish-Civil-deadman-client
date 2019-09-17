@@ -46,7 +46,7 @@ public final class DummyClass56 {
     }
 
     GlobalStatics_5
-        .method1724(var6, var2, var3.anInt2829, var5, var1, var3.anInt2819,
+        .method1724(var6, var2, var3.sceneY, var5, var1, var3.anInt2819,
             (byte) -85, var4);
   }
 

@@ -34,9 +34,9 @@ public final class DummyClass1 {
       int var4;
       int var5;
       if (var1.anInt2772 != -1 && var1.anInt2772 < 0x8000) {
-        NPC var3 = GlobalStatics_8.npcs[var1.anInt2772];
+        NPC var3 = GlobalStatics_8.NPCS[var1.anInt2772];
         if (var3 != null) {
-          var5 = -var3.anInt2829 + var1.anInt2829;
+          var5 = -var3.sceneY + var1.sceneY;
           var4 = -var3.anInt2819 + var1.anInt2819;
           if (var4 != 0 || var5 != 0) {
             var1.anInt2806 = (int) (Math.atan2(var4, var5) * 325.949D) & 2047;
@@ -54,7 +54,7 @@ public final class DummyClass1 {
 
         Player var10 = GlobalStatics_9.players[var9];
         if (var10 != null) {
-          var6 = -var10.anInt2829 + var1.anInt2829;
+          var6 = -var10.sceneY + var1.sceneY;
           var5 = -var10.anInt2819 + var1.anInt2819;
           if (var5 != 0 || var6 != 0) {
             var1.anInt2806 = (int) (Math.atan2(var5, var6) * 325.949D) & 2047;
@@ -69,7 +69,7 @@ public final class DummyClass1 {
         var4 =
             -((-GlobalStatics_9.anInt1152 + var1.anInt2762
                 - GlobalStatics_9.anInt1152) * 64)
-                + var1.anInt2829;
+                + var1.sceneY;
         if (var9 != 0 || var4 != 0) {
           var1.anInt2806 = (int) (Math.atan2(var9, var4) * 325.949D) & 2047;
         }

@@ -34,7 +34,7 @@ public final class DummyClass36 {
 
       int var9 = var3 * var3 + var2 * var2;
       int var7 = 2047 & GlobalStatics_9.anInt3102 + GlobalStatics_9.anInt531;
-      int var8 = Math.max(var0.anInt168 / 2, var0.anInt193 / 2) + 10;
+      int var8 = Math.max(var0.anInt168 / 2, var0.zoom / 2) + 10;
       if (var8 * var8 >= var9) {
         int var10 = GLStatics.SINE_TABLE[var7];
         var10 = var10 * 256 / (GlobalStatics_9.anInt3020 + 256);
@@ -45,12 +45,12 @@ public final class DummyClass36 {
         if (GlRenderer.USE_OPENGL) {
           ((GlDirectColorSprite) var1).method645(
               var0.anInt168 / 2 + var6 + var12 - var1.anInt3697 / 2,
-              var0.anInt193 / 2 + var4 - (var13 + var1.anInt3706 / 2),
+              var0.zoom / 2 + var4 - (var13 + var1.anInt3706 / 2),
               (GlDirectColorSprite) var0.method866((byte) -113, false));
         } else {
           ((SoftwareDirectColorSprite) var1).method666(
               var0.anInt168 / 2 + var6 + var12 - var1.anInt3697 / 2,
-              -(var1.anInt3706 / 2) + var0.anInt193 / 2 + var4 - var13,
+              -(var1.anInt3706 / 2) + var0.zoom / 2 + var4 - var13,
               var0.anIntArray207,
               var0.anIntArray291);
         }

@@ -754,7 +754,7 @@ public final class DummyClass18 {
         AnimationSequence var53;
         if (var21 >> 29 != 0) {
           var6 = 0xffff & var21;
-          NPC var62 = GlobalStatics_8.npcs[var6];
+          NPC var62 = GlobalStatics_8.NPCS[var6];
           if (var62 != null) {
             if (var5 == 65535) {
               var5 = -1;
@@ -787,7 +787,7 @@ public final class DummyClass18 {
                   var53 = GlobalStatics_8.method45(var33, (byte) -20);
                   if (var53 != null && var53.anIntArray1851 != null) {
                     GlobalStatics_4
-                        .method1470(var62.anInt2829, var53, 183921384,
+                        .method1470(var62.sceneY, var53, 183921384,
                             var62.anInt2819,
                             false, 0);
                   }
@@ -840,7 +840,7 @@ public final class DummyClass18 {
                   var53 = GlobalStatics_8.method45(var33, (byte) -20);
                   if (var53 != null && var53.anIntArray1851 != null) {
                     GlobalStatics_4
-                        .method1470(var60.anInt2829, var53, 183921384,
+                        .method1470(var60.sceneY, var53, 183921384,
                             var60.anInt2819,
                             var60 == GlobalStatics_9.localPlayer, 0);
                   }
@@ -1393,7 +1393,7 @@ public final class DummyClass18 {
       var20 = GlobalStatics_9.gameBuffer.readUnsignedShortLE();
       var3 = GlobalStatics_9.gameBuffer.method754(true);
       var21 = GlobalStatics_9.gameBuffer.readUnsignedShort();
-      NPC var39 = GlobalStatics_8.npcs[var20];
+      NPC var39 = GlobalStatics_8.NPCS[var20];
       if (var39 != null) {
         GlobalStatics_0.method1772(var3, var21, 39, var39);
       }
@@ -1500,9 +1500,9 @@ public final class DummyClass18 {
         }
       }
 
-      for (var20 = 0; GlobalStatics_8.npcs.length > var20; ++var20) {
-        if (GlobalStatics_8.npcs[var20] != null) {
-          GlobalStatics_8.npcs[var20].animationId = -1;
+      for (var20 = 0; GlobalStatics_8.NPCS.length > var20; ++var20) {
+        if (GlobalStatics_8.NPCS[var20] != null) {
+          GlobalStatics_8.NPCS[var20].animationId = -1;
         }
       }
 
@@ -2231,11 +2231,11 @@ public final class DummyClass18 {
         var2 = DummyClass21.anInt1761;
       }
 
-      if (DummyClass21.anInt1761 + DummyClass18.aClass11_88.anInt193
-          < var2 + DummyClass42.aClass11_886.anInt193) {
+      if (DummyClass21.anInt1761 + DummyClass18.aClass11_88.zoom
+          < var2 + DummyClass42.aClass11_886.zoom) {
         var2 =
-            DummyClass21.anInt1761 + DummyClass18.aClass11_88.anInt193
-                - DummyClass42.aClass11_886.anInt193;
+            DummyClass21.anInt1761 + DummyClass18.aClass11_88.zoom
+                - DummyClass42.aClass11_886.zoom;
       }
 
       if (var0 != -1) {

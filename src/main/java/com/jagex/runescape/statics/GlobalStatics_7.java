@@ -399,7 +399,7 @@ public class GlobalStatics_7 {
       byte var4) {
     if (var4 == 59) {
       if (GlRenderer.USE_OPENGL) {
-        GlUtils.clip(var0, var1, var2.anInt168 + var0, var2.anInt193 + var1);
+        GlUtils.clip(var0, var1, var2.anInt168 + var0, var2.zoom + var1);
       }
 
       if (DummyClass12.minimapMode >= 3) {
@@ -415,7 +415,7 @@ public class GlobalStatics_7 {
       } else if (GlRenderer.USE_OPENGL) {
         ((GlDirectColorSprite) GlobalStatics_9.aClass3_Sub28_Sub16_895)
             .draw(var0, var1,
-                var2.anInt168, var2.anInt193,
+                var2.anInt168, var2.zoom,
                 GlobalStatics_9.aClass3_Sub28_Sub16_895.anInt3707 / 2,
                 GlobalStatics_9.aClass3_Sub28_Sub16_895.anInt3696 / 2,
                 GlobalStatics_9.anInt531, 256,
@@ -423,7 +423,7 @@ public class GlobalStatics_7 {
       } else {
         ((SoftwareDirectColorSprite) GlobalStatics_9.aClass3_Sub28_Sub16_895)
             .method667(var0, var1,
-                var2.anInt168, var2.anInt193,
+                var2.anInt168, var2.zoom,
                 GlobalStatics_9.aClass3_Sub28_Sub16_895.anInt3707 / 2,
                 GlobalStatics_9.aClass3_Sub28_Sub16_895.anInt3696 / 2,
                 GlobalStatics_9.anInt531, 256,
@@ -496,7 +496,7 @@ public class GlobalStatics_7 {
       }
 
       int var18 = var1.anInt2819;
-      int var4 = var1.anInt2829;
+      int var4 = var1.sceneY;
       int var5 =
           var1.waypointsX[-1 + var1.anInt2816] * 128 + var1.getSize() * 64;
       int var6 =
@@ -505,7 +505,7 @@ public class GlobalStatics_7 {
           || var6 - var4 > 256
           || var6 - var4 < -256) {
         var1.anInt2819 = var5;
-        var1.anInt2829 = var6;
+        var1.sceneY = var6;
         return;
       }
 
@@ -632,8 +632,8 @@ public class GlobalStatics_7 {
                   : -var5 + var1.anInt2819) << 7;
           int var12 = var1.anInt2758 * var1.anInt2758;
           int var14 =
-              (var6 < var1.anInt2829 ? -var6 + var1.anInt2829
-                  : -var1.anInt2829 + var6) << 7;
+              (var6 < var1.sceneY ? -var6 + var1.sceneY
+                  : -var1.sceneY + var6) << 7;
           int var15 = var13 > var14 ? var13 : var14;
           int var16 = var2.anInt360 * 2 * var15;
           if (var16 >= var12) {
@@ -683,19 +683,19 @@ public class GlobalStatics_7 {
 
       if (var4 >= var6) {
         if (var6 < var4) {
-          var1.anInt2829 -= var9;
-          if (var6 > var1.anInt2829) {
-            var1.anInt2829 = var6;
+          var1.sceneY -= var9;
+          if (var6 > var1.sceneY) {
+            var1.sceneY = var6;
           }
         }
       } else {
-        var1.anInt2829 += var9;
-        if (var1.anInt2829 > var6) {
-          var1.anInt2829 = var6;
+        var1.sceneY += var9;
+        if (var1.sceneY > var6) {
+          var1.sceneY = var6;
         }
       }
 
-      if (var1.anInt2819 == var5 && var6 == var1.anInt2829) {
+      if (var1.anInt2819 == var5 && var6 == var1.sceneY) {
         --var1.anInt2816;
         if (var1.anInt2811 > 0) {
           --var1.anInt2811;
@@ -2094,13 +2094,13 @@ public class GlobalStatics_7 {
         DummyClass6.anInt2046 = 0;
 
         for (var11 = 0; var11 < 32768; ++var11) {
-          var12 = GlobalStatics_8.npcs[var11];
+          var12 = GlobalStatics_8.NPCS[var11];
           if (var12 != null) {
             var12.anInt2819 -= 128 * var9;
-            var12.anInt2829 -= 128 * var10;
+            var12.sceneY -= 128 * var10;
             if (var12.anInt2819 >= 0 && var12.anInt2819 <= 13184
-                && var12.anInt2829 >= 0
-                && var12.anInt2829 <= 13184) {
+                && var12.sceneY >= 0
+                && var12.sceneY <= 13184) {
               for (var13 = 0; var13 < 10; ++var13) {
                 var12.waypointsX[var13] -= var9;
                 var12.waypointsY[var13] -= var10;
@@ -2108,14 +2108,14 @@ public class GlobalStatics_7 {
 
               GlobalStatics_2.anIntArray347[DummyClass6.anInt2046++] = var11;
             } else {
-              GlobalStatics_8.npcs[var11].setConfiguration(-1, null);
-              GlobalStatics_8.npcs[var11] = null;
+              GlobalStatics_8.NPCS[var11].setConfiguration(-1, null);
+              GlobalStatics_8.NPCS[var11] = null;
             }
           }
         }
       } else {
         for (var11 = 0; var11 < 0x8000; ++var11) {
-          var12 = GlobalStatics_8.npcs[var11];
+          var12 = GlobalStatics_8.NPCS[var11];
           if (var12 != null) {
             for (var13 = 0; var13 < 10; ++var13) {
               var12.waypointsX[var13] -= var9;
@@ -2123,7 +2123,7 @@ public class GlobalStatics_7 {
             }
 
             var12.anInt2819 -= 128 * var9;
-            var12.anInt2829 -= var10 * 128;
+            var12.sceneY -= var10 * 128;
           }
         }
       }
@@ -2137,7 +2137,7 @@ public class GlobalStatics_7 {
           }
 
           var23.anInt2819 -= 128 * var9;
-          var23.anInt2829 -= 128 * var10;
+          var23.sceneY -= 128 * var10;
         }
       }
 
@@ -2682,7 +2682,7 @@ public class GlobalStatics_7 {
   public static void method2104(Widget var0, boolean var1, int var2) {
     int var3 = 57 % ((var2 + 58) / 47);
     int var4 = var0.anInt240 != 0 ? var0.anInt240 : var0.anInt168;
-    int var5 = var0.anInt252 != 0 ? var0.anInt252 : var0.anInt193;
+    int var5 = var0.anInt252 != 0 ? var0.anInt252 : var0.zoom;
     GlobalStatics_5.method2183(var0.anInt279, var1, var4, 235, var5,
         GlobalStatics_9.aClass11ArrayArray1834[var0.anInt279 >> 16]);
     if (var0.aClass11Array262 != null) {

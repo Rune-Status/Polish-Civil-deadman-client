@@ -74,7 +74,7 @@ public abstract class Mobile extends SceneNode {
   public GameString aClass94_2825;
   public int anInt2826 = -1;
   public int anInt2828;
-  public int anInt2829;
+  public int sceneY;
   public int anInt2831;
   public int anInt2832;
   public int anInt2833;
@@ -145,7 +145,7 @@ public abstract class Mobile extends SceneNode {
       this.waypointsY[0] = y;
       this.anInt2816 = 0;
       this.anInt2811 = 0;
-      this.anInt2829 = 64 * size + this.waypointsY[0] * 128;
+      this.sceneY = 64 * size + this.waypointsY[0] * 128;
       this.anInt2819 = size * 64 + 128 * this.waypointsX[0];
       if (GlRenderer.USE_OPENGL && GlobalStatics_9.localPlayer == this) {
         GlobalStatics_10.method236((byte) 64);
@@ -234,7 +234,7 @@ public abstract class Mobile extends SceneNode {
         int var11 = var7 * var10 + var8 * var9 >> 16;
         int var13 =
           GlobalStatics_6.method1736(GlobalStatics_9.currentPlane, 1, var11 + this.anInt2819,
-              this.anInt2829 + var12);
+              this.sceneY + var12);
         int var14 = var5 / 2;
         int var15 = -var6 / 2;
         int var16 = var14 * var8 + var15 * var7 >> 16;
@@ -242,7 +242,7 @@ public abstract class Mobile extends SceneNode {
         int var17 = var15 * var8 - var14 * var7 >> 16;
         int var18 =
           GlobalStatics_6.method1736(GlobalStatics_9.currentPlane, 1, var16 + this.anInt2819,
-              this.anInt2829 + var17);
+              this.sceneY + var17);
         int var19 = -var5 / 2;
         int var22 = -(var7 * var19) + var20 * var8 >> 16;
         int var25 = var6 / 2;
@@ -253,11 +253,11 @@ public abstract class Mobile extends SceneNode {
         int var23 =
           GlobalStatics_6.method1736(GlobalStatics_9.currentPlane, 1,
               this.anInt2819 + var21,
-            var22 + this.anInt2829);
+            var22 + this.sceneY);
         int var29 = var18 > var13 ? var13 : var18;
         int var28 =
           GlobalStatics_6.method1736(GlobalStatics_9.currentPlane, 1, var26 + this.anInt2819,
-            var27 + this.anInt2829);
+            var27 + this.sceneY);
         int var30 = var28 > var23 ? var23 : var28;
         int var31 = var28 > var18 ? var18 : var28;
         int var32 = var23 <= var13 ? var23 : var13;

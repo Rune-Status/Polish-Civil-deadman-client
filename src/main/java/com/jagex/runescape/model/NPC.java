@@ -58,7 +58,7 @@ public final class NPC extends Mobile {
             var17 = GlobalStatics_8.method1957(this.config.aByte1287,
                 this.aBoolean2810,
                 var14 == null ? var13 : var14, this.anInt2819, this.config.aShort1256,
-                this.anInt2829,
+                this.sceneY,
                 this.config.aShort1286, this.config.size, var15, var1,
                 var14 != null ? this.anInt2813 : this.anInt2832, this.anInt2831,
                 this.config.aByte1275, (byte) -49);

@@ -505,8 +505,8 @@ public class GlobalStatics_5 {
             var7.anInt247 = var7.anInt240 - var7.anInt168;
           }
 
-          if (var7.anInt208 > -var7.anInt193 + var7.anInt252) {
-            var7.anInt208 = var7.anInt252 - var7.anInt193;
+          if (var7.anInt208 > -var7.zoom + var7.anInt252) {
+            var7.anInt208 = var7.anInt252 - var7.zoom;
           }
 
           if (var7.anInt208 < 0) {
@@ -716,9 +716,9 @@ public class GlobalStatics_5 {
           if (var16 != null) {
             if (GLStatics.adjacentTileOnScreen[
                 var14 - GLStatics.CAMERA_TILE_X
-                    + GLStatics.VIEWPORT_SIZE][
+                    + GLStatics.CURRENT_VIEWPORT_SIZE][
                 var15 - GLStatics.CAMERA_TILE_Y
-                    + GLStatics.VIEWPORT_SIZE] && (var3 == null
+                    + GLStatics.CURRENT_VIEWPORT_SIZE] && (var3 == null
                 || var12 < var4
                 || var3[var12][var14][var15] != var5)) {
               var16.aBoolean2222 = true;
@@ -796,12 +796,12 @@ public class GlobalStatics_5 {
         ++var23) {
       var27 = GLStatics.sceneGraphTiles[var23];
 
-      for (var15 = -GLStatics.VIEWPORT_SIZE; var15 <= 0; ++var15) {
+      for (var15 = -GLStatics.CURRENT_VIEWPORT_SIZE; var15 <= 0; ++var15) {
         var32 = GLStatics.CAMERA_TILE_X + var15;
         var29 = GLStatics.CAMERA_TILE_X - var15;
         if (var32 >= GLStatics.viewportLowerX
             || var29 < GLStatics.viewportUpperX) {
-          for (var34 = -GLStatics.VIEWPORT_SIZE; var34 <= 0; ++var34) {
+          for (var34 = -GLStatics.CURRENT_VIEWPORT_SIZE; var34 <= 0; ++var34) {
             var19 = GLStatics.CAMERA_TILE_Y + var34;
             var20 = GLStatics.CAMERA_TILE_Y - var34;
             if (var32 >= GLStatics.viewportLowerX) {
@@ -852,12 +852,12 @@ public class GlobalStatics_5 {
         ++var23) {
       var27 = GLStatics.sceneGraphTiles[var23];
 
-      for (var15 = -GLStatics.VIEWPORT_SIZE; var15 <= 0; ++var15) {
+      for (var15 = -GLStatics.CURRENT_VIEWPORT_SIZE; var15 <= 0; ++var15) {
         var32 = GLStatics.CAMERA_TILE_X + var15;
         var29 = GLStatics.CAMERA_TILE_X - var15;
         if (var32 >= GLStatics.viewportLowerX
             || var29 < GLStatics.viewportUpperX) {
-          for (var34 = -GLStatics.VIEWPORT_SIZE; var34 <= 0; ++var34) {
+          for (var34 = -GLStatics.CURRENT_VIEWPORT_SIZE; var34 <= 0; ++var34) {
             var19 = GLStatics.CAMERA_TILE_Y + var34;
             var20 = GLStatics.CAMERA_TILE_Y - var34;
             if (var32 >= GLStatics.viewportLowerX) {

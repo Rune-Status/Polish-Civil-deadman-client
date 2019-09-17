@@ -92,7 +92,6 @@ import com.jagex.runescape.opengl.SomethingGl0;
 import com.jagex.runescape.sprite.SoftwareIndexedColorSprite;
 import com.jagex.runescape.sprite.SoftwareIndexedColorSpriteStatics;
 import java.nio.charset.StandardCharsets;
-import java.util.Arrays;
 import java.util.Random;
 
 public final class GlobalStatics_0 {
@@ -1427,7 +1426,7 @@ public final class GlobalStatics_0 {
         var3.anInt2773 = 0;
         var3.anInt2828 = var0;
         GlobalStatics_4
-            .method1470(var3.anInt2829, var4, 183921384, var3.anInt2819, false,
+            .method1470(var3.sceneY, var4, 183921384, var3.anInt2819, false,
                 var3.anInt2832);
       }
 
@@ -1447,7 +1446,7 @@ public final class GlobalStatics_0 {
       var3.anInt2811 = var3.anInt2816;
       var3.anInt2832 = 0;
       if (var3.animationId != -1) {
-        GlobalStatics_4.method1470(var3.anInt2829,
+        GlobalStatics_4.method1470(var3.sceneY,
             GlobalStatics_8.method45(var3.animationId, (byte) -20),
             var2 + 183921345, var3.anInt2819, false, var3.anInt2832);
       }
@@ -1781,9 +1780,9 @@ public final class GlobalStatics_0 {
       var5.anInt2321 =
           var5.aClass140_Sub4_Sub2_2324.anInt2819
               + var5.aClass140_Sub4_Sub2_2324.getSize() * 64;
-      var5.anInt2308 = var5.aClass140_Sub4_Sub2_2324.anInt2829;
+      var5.anInt2308 = var5.aClass140_Sub4_Sub2_2324.sceneY;
       var5.anInt2307 =
-          var5.aClass140_Sub4_Sub2_2324.anInt2829
+          var5.aClass140_Sub4_Sub2_2324.sceneY
               + var5.aClass140_Sub4_Sub2_2324.getSize() * 64;
       GlobalStatics_9.method606(var1, var5, var3, var0, var2, var4 ^ 113);
     }
@@ -1834,9 +1833,9 @@ public final class GlobalStatics_0 {
         var5.anInt2321 =
             var5.aClass140_Sub4_Sub1_2327.anInt2819
                 + 64 * var5.aClass140_Sub4_Sub1_2327.getSize();
-        var5.anInt2308 = var5.aClass140_Sub4_Sub1_2327.anInt2829;
+        var5.anInt2308 = var5.aClass140_Sub4_Sub1_2327.sceneY;
         var5.anInt2307 =
-            var5.aClass140_Sub4_Sub1_2327.anInt2829
+            var5.aClass140_Sub4_Sub1_2327.sceneY
                 + var5.aClass140_Sub4_Sub1_2327.getSize() * 64;
         GlobalStatics_9.method606(var1, var5, var3, var0, var2, 110);
       }

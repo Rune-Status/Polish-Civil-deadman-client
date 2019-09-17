@@ -1735,8 +1735,8 @@ public final class SoftwareModel extends AbstractModel {
     int var13 = var16 + (this.aShort3884 * var3 + this.aShort3892 * var2 >> 16);
     int var14 =
         var16 + (-this.aShort3884 * var3 + this.aShort3894 * var2 >> 16);
-    if (var13 > 50) {
-      if (var14 < 3500) {
+    if (var13 > GlobalStatics_6.NEAR) {
+      if (var14 < GlobalStatics_6.FAR) {
         int var17 = var8 * var4 + var6 * var5 >> 16;
         int var18 = var17 + this.aShort3884 << 9;
         if (var18 / var13 > DummyClass17.screenLowerX) {

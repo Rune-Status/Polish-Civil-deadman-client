@@ -42,7 +42,7 @@ public final class DummyClass41 {
       boolean var6) {
     int var7 = var3 * var3 + var4 * var4;
     if (var7 <= 360000) {
-      int var8 = Math.min(var5.anInt168 / 2, var5.anInt193 / 2);
+      int var8 = Math.min(var5.anInt168 / 2, var5.zoom / 2);
       if (var6) {
         DummyClass41.anInt865 = -79;
       }
@@ -67,13 +67,13 @@ public final class DummyClass41 {
           ((GlDirectColorSprite) GlobalStatics_9.aClass3_Sub28_Sub16Array3458[var0])
               .method648(
                   240, 240, (var5.anInt168 / 2 + var2 + var16) * 16,
-                  16 * (-var17 + var5.anInt193 / 2 + var1),
+                  16 * (-var17 + var5.zoom / 2 + var1),
                   (int) (10430.378D * var14), 4096);
         } else {
           ((SoftwareDirectColorSprite) GlobalStatics_9.aClass3_Sub28_Sub16Array3458[var0])
               .method660(
                   -10 + var16 + var5.anInt168 / 2 + var2,
-                  -10 + var5.anInt193 / 2 + var1 - var17, 20,
+                  -10 + var5.zoom / 2 + var1 - var17, 20,
                   20, 15, 15, var14, 256);
         }
       }

@@ -61,7 +61,7 @@ public final class Widget {
   public int anInt190;
   public int anInt191 = -1;
   public int anInt192;
-  public int anInt193;
+  public int zoom;
   public int anInt194;
   public boolean aBoolean195;
   public int[] anIntArray197;

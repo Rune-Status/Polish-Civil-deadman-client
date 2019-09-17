@@ -72,13 +72,13 @@ public final class DummyClass59 {
 
   public static void method1045(int var0) {
     if (var0 != -19761) {
-      DummyClass59.method1046(-110);
+      DummyClass59.method1046();
     }
 
     GlobalStatics_10.aClass93_1683.method1524(3);
   }
 
-  public static void method1046(int var0) {
+  public static void method1046() {
     DummyClass5.method2210((byte) -90, false);
     GlobalStatics_8.anInt3293 = 0;
     boolean var1 = true;
@@ -212,10 +212,6 @@ public final class DummyClass59 {
         }
       }
 
-      if (var0 >= -92) {
-        DummyClass59.clear66(true);
-      }
-
       if (var1) {
         if (DummyClass8.anInt4019 != 0) {
           GlobalStatics_3.drawLoadingBox(GlobalStatics_9.concat(
@@ -241,7 +237,7 @@ public final class DummyClass59 {
 
         // 28x28
         //TODO
-        int viewportLength = GlRenderer.USE_OPENGL ? 104 : 25;
+        int viewportLength = 104;
         GlobalStatics_9.initializeScene(4, 104, 104, viewportLength);
 
         for (var12 = 0; var12 < 4; ++var12) {

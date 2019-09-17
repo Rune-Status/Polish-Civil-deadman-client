@@ -232,7 +232,7 @@ public final class DummyClass38 {
                 .method45(var7, (byte) -20);
             if (var24.anIntArray1851 != null) {
               GlobalStatics_4
-                  .method1470(var3.anInt2829, var24, 183921384, var3.anInt2819,
+                  .method1470(var3.sceneY, var24, 183921384, var3.anInt2819,
                       var3 == GlobalStatics_9.localPlayer, 0);
             }
           }

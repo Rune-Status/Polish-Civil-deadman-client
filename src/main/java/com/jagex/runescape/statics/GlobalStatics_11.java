@@ -990,7 +990,7 @@ public final class GlobalStatics_11 {
                   continue;
                 }
                 if (j1 == 1503) {
-                  GlobalStatics_9.anIntArray2929[k++] = class11_4.anInt193;
+                  GlobalStatics_9.anIntArray2929[k++] = class11_4.zoom;
                   continue;
                 }
                 if (j1 == 1504) {
@@ -1111,7 +1111,7 @@ public final class GlobalStatics_11 {
                     continue;
                   }
                   if (j1 == 2503) {
-                    GlobalStatics_9.anIntArray2929[k++] = class11_7.anInt193;
+                    GlobalStatics_9.anIntArray2929[k++] = class11_7.zoom;
                     continue;
                   }
                   if (j1 == 2504) {
@@ -1294,7 +1294,7 @@ public final class GlobalStatics_11 {
                           int k47 =
                               GlobalStatics_10.anInt1716 + (
                                   GlobalStatics_9.localPlayer.anInt2819 >> 7);
-                          int i68 = (GlobalStatics_9.localPlayer.anInt2829 >> 7)
+                          int i68 = (GlobalStatics_9.localPlayer.sceneY >> 7)
                               + GlobalStatics_9.anInt1152;
                           GlobalStatics_9.anIntArray2929[k++] =
                               (l9 << 28) - (-(k47 << 14) - i68);
@@ -4159,29 +4159,33 @@ public final class GlobalStatics_11 {
                                 }
                                 if (j1 == 6200) {
                                   k -= 2;
+                                  System.out.println("Updating zoom things 1 (opengl)");
+                                  //TODO tthis thing updates something with zooming
                                   GlobalStatics_7.aShort1444 = (short) GlobalStatics_9.anIntArray2929[k];
                                   if (GlobalStatics_7.aShort1444 <= 0) {
                                     GlobalStatics_7.aShort1444 = 256;
                                   }
-                                  GlobalStatics_10.aShort3052 =
+                                  GlobalStatics_10.SOMETHING_ZOOM_0 =
                                       (short) GlobalStatics_9.anIntArray2929[1
                                           + k];
-                                  if (GlobalStatics_10.aShort3052 <= 0) {
-                                    GlobalStatics_10.aShort3052 = 205;
+                                  if (GlobalStatics_10.SOMETHING_ZOOM_0 <= 0) {
+                                    GlobalStatics_10.SOMETHING_ZOOM_0 = 205;
                                   }
                                   continue;
                                 }
                                 if (j1 == 6201) {
                                   k -= 2;
+                                  //TODO this thing updates camera zoom
+                                  System.out.println("Updating zoom things 0");
                                   GlobalStatics_11.aShort46 = (short) GlobalStatics_9.anIntArray2929[k];
                                   if (GlobalStatics_11.aShort46 <= 0) {
                                     GlobalStatics_11.aShort46 = 256;
                                   }
-                                  GlobalStatics_8.aShort1535 =
+                                  GlobalStatics_8.SOMETHING_ZOOM_1 =
                                       (short) GlobalStatics_9.anIntArray2929[1
                                           + k];
-                                  if (GlobalStatics_8.aShort1535 <= 0) {
-                                    GlobalStatics_8.aShort1535 = 320;
+                                  if (GlobalStatics_8.SOMETHING_ZOOM_1 <= 0) {
+                                    GlobalStatics_8.SOMETHING_ZOOM_1 = 320;
                                   }
                                   continue;
                                 }
@@ -4223,23 +4227,22 @@ public final class GlobalStatics_11 {
                                 if (j1 == 6203) {
                                   DummyClass45.method1239(
                                       GlobalStatics_8.aClass11_2091.anInt168,
-                                      81,
-                                      0, GlobalStatics_8.aClass11_2091.anInt193,
+                                      0, GlobalStatics_8.aClass11_2091.zoom,
                                       0, false);
                                   GlobalStatics_9.anIntArray2929[k++] = GlobalStatics_9.anInt1358;
-                                  GlobalStatics_9.anIntArray2929[k++] = GlobalStatics_8.anInt31;
+                                  GlobalStatics_9.anIntArray2929[k++] = GlobalStatics_8.CURRENT_CAMERA_ZOOM;
                                   continue;
                                 }
                                 if (j1 == 6204) {
                                   GlobalStatics_9.anIntArray2929[k++] = GlobalStatics_11.aShort46;
-                                  GlobalStatics_9.anIntArray2929[k++] = GlobalStatics_8.aShort1535;
+                                  GlobalStatics_9.anIntArray2929[k++] = GlobalStatics_8.SOMETHING_ZOOM_1;
                                   continue;
                                 }
                                 if (j1 != 6205) {
                                   break;
                                 }
                                 GlobalStatics_9.anIntArray2929[k++] = GlobalStatics_7.aShort1444;
-                                GlobalStatics_9.anIntArray2929[k++] = GlobalStatics_10.aShort3052;
+                                GlobalStatics_9.anIntArray2929[k++] = GlobalStatics_10.SOMETHING_ZOOM_0;
                                 continue;
                               }
                               if (j1 == 5600) {
@@ -5179,8 +5182,8 @@ public final class GlobalStatics_11 {
             class11_16.anInt247 = 0;
           }
           class11_16.anInt208 = GlobalStatics_9.anIntArray2929[k + 1];
-          if (class11_16.anInt208 > class11_16.anInt252 - class11_16.anInt193) {
-            class11_16.anInt208 = class11_16.anInt252 - class11_16.anInt193;
+          if (class11_16.anInt208 > class11_16.anInt252 - class11_16.zoom) {
+            class11_16.anInt208 = class11_16.anInt252 - class11_16.zoom;
           }
           if (class11_16.anInt208 < 0) {
             class11_16.anInt208 = 0;
@@ -5762,28 +5765,28 @@ public final class GlobalStatics_11 {
       GlobalStatics_9.method1950(var2, true);
     }
 
-    if (var2.anInt2819 < 128 || var2.anInt2829 < 128
+    if (var2.anInt2819 < 128 || var2.sceneY < 128
         || var2.anInt2819 >= 13184
-        || var2.anInt2829 >= 13184) {
+        || var2.sceneY >= 13184) {
       var2.animationId = -1;
       var2.anInt2842 = -1;
       var2.anInt2800 = 0;
       var2.anInt2790 = 0;
       var2.anInt2819 = 128 * var2.waypointsX[0] + 64 * var2.getSize();
-      var2.anInt2829 = var2.waypointsY[0] * 128 + var2.getSize() * 64;
+      var2.sceneY = var2.waypointsY[0] * 128 + var2.getSize() * 64;
       var2.method1973(var1 - 2395);
     }
 
     if (var1 == 2279) {
       if (var2 == GlobalStatics_9.localPlayer && (var2.anInt2819 < 1536 ||
-          var2.anInt2829 < 1536
-          || var2.anInt2819 >= 11776 || var2.anInt2829 >= 11776)) {
+          var2.sceneY < 1536
+          || var2.anInt2819 >= 11776 || var2.sceneY >= 11776)) {
         var2.anInt2842 = -1;
         var2.anInt2800 = 0;
         var2.anInt2790 = 0;
         var2.animationId = -1;
         var2.anInt2819 = var2.waypointsX[0] * 128 + var2.getSize() * 64;
-        var2.anInt2829 = 128 * var2.waypointsY[0] + 64 * var2.getSize();
+        var2.sceneY = 128 * var2.waypointsY[0] + 64 * var2.getSize();
         var2.method1973(-98);
       }
 

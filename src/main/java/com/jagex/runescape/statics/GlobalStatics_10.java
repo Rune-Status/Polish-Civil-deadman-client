@@ -280,7 +280,7 @@ public class GlobalStatics_10 {
   public static GameString aClass94_3048 = GameStringStatics.create("Hidden");
   public static GameString aClass94_3051 = GlobalStatics_10.aClass94_3048;
   public static Keyboard KEYBOARD = new Keyboard();
-  public static short aShort3052 = 205;
+  public static short SOMETHING_ZOOM_0 = 205;
   public static GameString aClass94_3053 = GameStringStatics
       .create("Lade Schrifts-=tze )2 ");
   public static int anInt3054;
@@ -1439,8 +1439,8 @@ public class GlobalStatics_10 {
                                 .getWidget((byte) 116, var4);
                             var6 = var16.anInt3598;
                             if (var20 != null && var20.anInt187 == 0) {
-                              if (var6 > var20.anInt252 - var20.anInt193) {
-                                var6 = var20.anInt252 - var20.anInt193;
+                              if (var6 > var20.anInt252 - var20.zoom) {
+                                var6 = var20.anInt252 - var20.zoom;
                               }
 
                               if (var6 < 0) {
@@ -2209,7 +2209,7 @@ public class GlobalStatics_10 {
       var4 = GlobalStatics_9.viewHeight;
       var3 = DummyClass30.viewWidth;
     } else {
-      var4 = var2.anInt193;
+      var4 = var2.zoom;
       var3 = var2.anInt168;
     }
 
@@ -3100,20 +3100,20 @@ public class GlobalStatics_10 {
     int var1;
     for (var1 = 0; var1 < DummyClass17.anInt1829; ++var1) {
       int var2 = GlobalStatics_10.anIntArray2292[var1];
-      if (GlobalStatics_8.npcs[var2].anInt2838
+      if (GlobalStatics_8.NPCS[var2].anInt2838
           != GlobalStatics_4.updateCycle) {
-        if (GlobalStatics_8.npcs[var2].config.method1474(-1)) {
-          GlobalStatics_6.method574(GlobalStatics_8.npcs[var2], false);
+        if (GlobalStatics_8.NPCS[var2].config.method1474(-1)) {
+          GlobalStatics_6.method574(GlobalStatics_8.NPCS[var2], false);
         }
 
-        GlobalStatics_8.npcs[var2].setConfiguration(-1, null);
-        GlobalStatics_8.npcs[var2] = null;
+        GlobalStatics_8.NPCS[var2].setConfiguration(-1, null);
+        GlobalStatics_8.NPCS[var2] = null;
       }
     }
     if (GlobalStatics_0.packetLength
         == GlobalStatics_9.gameBuffer.position) {
       for (var1 = 0; var1 < DummyClass6.anInt2046; ++var1) {
-        if (GlobalStatics_8.npcs[GlobalStatics_2.anIntArray347[var1]] == null) {
+        if (GlobalStatics_8.NPCS[GlobalStatics_2.anIntArray347[var1]] == null) {
           throw new RuntimeException(
               "gnp2 pos:" + var1 + " size:" + DummyClass6.anInt2046);
         }
@@ -3169,14 +3169,14 @@ public class GlobalStatics_10 {
           && projectile.anInt2899 >= GlobalStatics_4.updateCycle) {
         if (GlobalStatics_4.updateCycle >= projectile.anInt2925) {
           if (projectile.targetId > 0) {
-            NPC var3 = GlobalStatics_8.npcs[-1 + projectile.targetId];
+            NPC var3 = GlobalStatics_8.NPCS[-1 + projectile.targetId];
             if (var3 != null && var3.anInt2819 >= 0 && var3.anInt2819 < 13312
-                && var3.anInt2829 >= 0 && var3.anInt2829 < 13312) {
+                && var3.sceneY >= 0 && var3.sceneY < 13312) {
               projectile
-                  .method2024(var3.anInt2829, 1, GlobalStatics_4.updateCycle,
+                  .method2024(var3.sceneY, 1, GlobalStatics_4.updateCycle,
                       GlobalStatics_6
                           .method1736(projectile.anInt2907, 1, var3.anInt2819,
-                              var3.anInt2829)
+                              var3.sceneY)
                           - projectile.anInt2903, var3.anInt2819);
             }
           }
@@ -3192,12 +3192,12 @@ public class GlobalStatics_10 {
 
             if (player != null && player.anInt2819 >= 0 && player.anInt2819
                 < 13312
-                && player.anInt2829 >= 0 && player.anInt2829 < 13312) {
+                && player.sceneY >= 0 && player.sceneY < 13312) {
               projectile
-                  .method2024(player.anInt2829, 1, GlobalStatics_4.updateCycle,
+                  .method2024(player.sceneY, 1, GlobalStatics_4.updateCycle,
                       GlobalStatics_6
                           .method1736(projectile.anInt2907, 1, player.anInt2819,
-                              player.anInt2829)
+                              player.sceneY)
                           - projectile.anInt2903, player.anInt2819);
             }
           }
@@ -3218,10 +3218,6 @@ public class GlobalStatics_10 {
     GlobalStatics_10.aClass94_3053 = null;
     GlobalStatics_10.aClass94_3051 = null;
     GlobalStatics_10.aClass94_3048 = null;
-    if (var0 != 119) {
-      GlobalStatics_10.aShort3052 = 109;
-    }
-
     GlobalStatics_10.KEYBOARD = null;
   }
 
@@ -3445,7 +3441,7 @@ public class GlobalStatics_10 {
 
     for (var1 = 0; DummyClass6.anInt2046 > var1; ++var1) {
       var2 = GlobalStatics_2.anIntArray347[var1];
-      NPC var6 = GlobalStatics_8.npcs[var2];
+      NPC var6 = GlobalStatics_8.NPCS[var2];
       if (var6 != null && var6.anInt2814 > 0) {
         --var6.anInt2814;
         if (var6.anInt2814 == 0) {
@@ -3539,28 +3535,28 @@ public class GlobalStatics_10 {
     GlobalStatics_10.aClass94_3325 = null;
   }
 
-  public static void method338(int var0, int var1, boolean var2, int var3,
+  public static void method338(int var0, int zoom, boolean var2, int var3,
       int var4, int var5) {
     ++GlobalStatics_6.anInt1127;
     DummyClass23.method1745(0);
     if (!var2) {
       GlobalStatics_9.method116(true, 670232012);
-      GlobalStatics_9.method1611(71, true);
+      GlobalStatics_9.method1611(true);
       GlobalStatics_9.method116(false, 670232012);
     }
 
-    GlobalStatics_9.method1611(100, false);
+    GlobalStatics_9.method1611(false);
     if (!var2) {
       GlobalStatics_10.updateProjectiles();
     }
 
     GlobalStatics_6.method2067(false);
     if (GlRenderer.USE_OPENGL) {
-      DummyClass45.method1239(var4, 125, var5, var1, var3, true);
+      DummyClass45.method1239(var4, var5, zoom, var3, true);
       var3 = DummyClass5.anInt2989;
       var5 = GlobalStatics_9.anInt3564;
       var4 = GlobalStatics_9.anInt1358;
-      var1 = GlobalStatics_8.anInt31;
+      zoom = GlobalStatics_8.CURRENT_CAMERA_ZOOM;
     }
 
     int var6;
@@ -3578,217 +3574,210 @@ public class GlobalStatics_10 {
         var6 = 128 + GlobalStatics_9.anIntArray2073[4];
       }
 
-      GlobalStatics_9.method1952(GlobalStatics_10.anInt3155, var1,
+      GlobalStatics_9.method1952(GlobalStatics_10.anInt3155, zoom,
           GlobalStatics_6.method1736(GlobalStatics_9.currentPlane, 1,
               GlobalStatics_9.localPlayer.anInt2819,
-              GlobalStatics_9.localPlayer.anInt2829) - 50,
+              GlobalStatics_9.localPlayer.sceneY) - 50,
           600 + var6 * 3, var7, GlobalStatics_8.anInt942, var6);
     }
 
-    if (var0 == -6403) {
-      var7 = GlobalStatics_7.SCENE_CAMERA_Y;
-      var6 = GlobalStatics_9.SCENE_CAMERA_X;
-      int var8 = DummyClass49.SCENE_CAMERA_Z;
-      int var9 = DummyClass17.SCENE_CAMERA_PITCH;
-      int var10 = GlobalStatics_10.SCENE_CAMERA_YAW;
+    var7 = GlobalStatics_7.SCENE_CAMERA_Y;
+    var6 = GlobalStatics_9.SCENE_CAMERA_X;
+    int var8 = DummyClass49.SCENE_CAMERA_Z;
+    int var9 = DummyClass17.SCENE_CAMERA_PITCH;
+    int var10 = GlobalStatics_10.SCENE_CAMERA_YAW;
 
-      int var11;
-      int var12;
-      for (var11 = 0; var11 < 5; ++var11) {
-        if (MaterialShader5.aBooleanArray2169[var11]) {
-          var12 = (int) (-GlobalStatics_10.anIntArray3383[var11]
-              + (GlobalStatics_10.anIntArray3383[var11] * 2 + 1) * Math.random()
-              +
-              Math.sin(DummyClass9.anIntArray4009[var11] * (
-                  GlobalStatics_9.anIntArray3359[var11] / 100.0D))
-                  * GlobalStatics_9.anIntArray2073[var11]);
-          if (var11 == 3) {
-            GlobalStatics_10.SCENE_CAMERA_YAW =
-                var12 + GlobalStatics_10.SCENE_CAMERA_YAW & 2047;
-          }
-
-          if (var11 == 4) {
-            DummyClass17.SCENE_CAMERA_PITCH += var12;
-            if (DummyClass17.SCENE_CAMERA_PITCH < 128) {
-              DummyClass17.SCENE_CAMERA_PITCH = 128;
-            }
-
-            if (DummyClass17.SCENE_CAMERA_PITCH > 383) {
-              DummyClass17.SCENE_CAMERA_PITCH = 383;
-            }
-          }
-
-          if (var11 == 2) {
-            DummyClass49.SCENE_CAMERA_Z += var12;
-          }
-
-          if (var11 == 1) {
-            GlobalStatics_7.SCENE_CAMERA_Y += var12;
-          }
-
-          if (var11 == 0) {
-            GlobalStatics_9.SCENE_CAMERA_X += var12;
-          }
-        }
-      }
-
-      Texture.method725(-118);
-      if (GlRenderer.USE_OPENGL) {
-        GlUtils.clip(var3, var5, var3 + var4, var5 + var1);
-        float var17 = DummyClass17.SCENE_CAMERA_PITCH * 0.17578125F;
-        float var16 = 0.17578125F * GlobalStatics_10.SCENE_CAMERA_YAW;
-        if (GlobalStatics_9.anInt1753 == 3) {
-          var17 = 360.0F * DummyClass52.aFloat1169 / 6.2831855F;
-          var16 = DummyClass38.aFloat730 * 360.0F / 6.2831855F;
+    int var11;
+    int var12;
+    for (var11 = 0; var11 < 5; ++var11) {
+      if (MaterialShader5.aBooleanArray2169[var11]) {
+        var12 = (int) (-GlobalStatics_10.anIntArray3383[var11]
+            + (GlobalStatics_10.anIntArray3383[var11] * 2 + 1) * Math.random()
+            +
+            Math.sin(DummyClass9.anIntArray4009[var11] * (
+                GlobalStatics_9.anIntArray3359[var11] / 100.0D))
+                * GlobalStatics_9.anIntArray2073[var11]);
+        if (var11 == 3) {
+          GlobalStatics_10.SCENE_CAMERA_YAW =
+              var12 + GlobalStatics_10.SCENE_CAMERA_YAW & 2047;
         }
 
-        GlRenderer.method1844(var3, var5, var4, var1, var4 / 2 + var3,
-            var5 + var1 / 2, var17,
-            var16, GlobalStatics_0.anInt1705,
-            GlobalStatics_0.anInt1705);
-      } else {
-        DummyClass47.method1324(var3, var5, var4 + var3, var1 + var5);
-        DummyClass40.method1134();
+        if (var11 == 4) {
+          DummyClass17.SCENE_CAMERA_PITCH += var12;
+          if (DummyClass17.SCENE_CAMERA_PITCH < 128) {
+            DummyClass17.SCENE_CAMERA_PITCH = 128;
+          }
+
+          if (DummyClass17.SCENE_CAMERA_PITCH > 383) {
+            DummyClass17.SCENE_CAMERA_PITCH = 383;
+          }
+        }
+
+        if (var11 == 2) {
+          DummyClass49.SCENE_CAMERA_Z += var12;
+        }
+
+        if (var11 == 1) {
+          GlobalStatics_7.SCENE_CAMERA_Y += var12;
+        }
+
+        if (var11 == 0) {
+          GlobalStatics_9.SCENE_CAMERA_X += var12;
+        }
+      }
+    }
+
+    Texture.method725();
+    if (GlRenderer.USE_OPENGL) {
+      GlUtils.clip(var3, var5, var3 + var4, var5 + zoom);
+      float var17 = DummyClass17.SCENE_CAMERA_PITCH * 0.17578125F;
+      float var16 = 0.17578125F * GlobalStatics_10.SCENE_CAMERA_YAW;
+      if (GlobalStatics_9.anInt1753 == 3) {
+        var17 = 360.0F * DummyClass52.aFloat1169 / 6.2831855F;
+        var16 = DummyClass38.aFloat730 * 360.0F / 6.2831855F;
       }
 
-      if (!DummyClass36.aBoolean2615 && GlobalStatics_9.anInt1297 >= var3
-          && GlobalStatics_9.anInt1297 < var4 + var3
-          && var5 <= DummyClass36.anInt2612
-          && var1 + var5 > DummyClass36.anInt2612) {
-        GlobalStatics_10.aBoolean3094 = true;
-        GlobalStatics_9.anInt59 = 0;
-        var12 = GlobalStatics_10.screenUpperX;
-        int var13 = DummyClass3.screenUpperY;
-        var11 = DummyClass17.screenLowerX;
-        GlobalStatics_9.anInt3642 =
-            var11
-                + (var12 - var11) * (-var3 + GlobalStatics_9.anInt1297) / var4;
-        int var14 = GLStatics.screenLowerY;
-        GlobalStatics_9.anInt384 =
-            (-var13 + var14) * (DummyClass36.anInt2612 - var5) / var1 + var13;
+      GlRenderer.method1844(var3, var5, var4, zoom, var4 / 2 + var3,
+          var5 + zoom / 2, var17,
+          var16, GlobalStatics_0.anInt1705,
+          GlobalStatics_0.anInt1705);
+    } else {
+      DummyClass47.method1324(var3, var5, var4 + var3, zoom + var5);
+      DummyClass40.method1134();
+    }
+
+    if (!DummyClass36.aBoolean2615 && GlobalStatics_9.anInt1297 >= var3
+        && GlobalStatics_9.anInt1297 < var4 + var3
+        && var5 <= DummyClass36.anInt2612
+        && zoom + var5 > DummyClass36.anInt2612) {
+      GlobalStatics_10.aBoolean3094 = true;
+      GlobalStatics_9.anInt59 = 0;
+      var12 = GlobalStatics_10.screenUpperX;
+      int var13 = DummyClass3.screenUpperY;
+      var11 = DummyClass17.screenLowerX;
+      GlobalStatics_9.anInt3642 =
+          var11
+              + (var12 - var11) * (-var3 + GlobalStatics_9.anInt1297) / var4;
+      int var14 = GLStatics.screenLowerY;
+      GlobalStatics_9.anInt384 =
+          (-var13 + var14) * (DummyClass36.anInt2612 - var5) / zoom + var13;
+    } else {
+      GlobalStatics_10.aBoolean3094 = false;
+      GlobalStatics_9.anInt59 = 0;
+    }
+
+    DummyClass43.method1194();
+    byte var19 = DummyClass20.method1817((byte) 70) == 2
+        ? (byte) GlobalStatics_6.anInt1127 : 1;
+    if (GlRenderer.USE_OPENGL) {
+      GlRenderer.method1846();
+      GlRenderer.setDepthTestEnabled(true);
+      GlRenderer.setFogEnabled(true);
+      if (DummyClass15.state == 10) {
+        var12 = GlobalStatics_8.method809(GlobalStatics_7.loopCycle,
+            DummyClass49.SCENE_CAMERA_Z >> 10,
+            GlobalStatics_4.brightnessSetting,
+            GlobalStatics_9.SCENE_CAMERA_X >> 10,
+            1);
       } else {
-        GlobalStatics_10.aBoolean3094 = false;
-        GlobalStatics_9.anInt59 = 0;
+        var12 = GlobalStatics_8.method809(GlobalStatics_7.loopCycle,
+            GlobalStatics_9.localPlayer.waypointsY[0] >> 3,
+            GlobalStatics_4.brightnessSetting,
+            GlobalStatics_9.localPlayer.waypointsX[0] >> 3, 1);
       }
 
+      DummyClass46.method1269(GlobalStatics_4.updateCycle,
+          !GlobalStatics_9.aBoolean2623);
+      GlRenderer.clearBuffers(var12);
+      GlobalStatics_8
+          .method2285(DummyClass17.SCENE_CAMERA_PITCH,
+              DummyClass49.SCENE_CAMERA_Z,
+              GlobalStatics_7.SCENE_CAMERA_Y, GlobalStatics_9.SCENE_CAMERA_X,
+              GlobalStatics_10.SCENE_CAMERA_YAW);
+      GlRenderer.anInt1791 = GlobalStatics_4.updateCycle;
+      GlobalStatics_6
+          .drawScene(GlobalStatics_9.SCENE_CAMERA_X,
+              GlobalStatics_7.SCENE_CAMERA_Y,
+              DummyClass49.SCENE_CAMERA_Z, DummyClass17.SCENE_CAMERA_PITCH,
+              GlobalStatics_10.SCENE_CAMERA_YAW,
+              GlobalStatics_5.aByteArrayArrayArray2008,
+              GlobalStatics_7.anIntArray686,
+              GlobalStatics_9.anIntArray2696, DummyClass13.anIntArray2021,
+              GlobalStatics_9.anIntArray3959,
+              GlobalStatics_3.anIntArray1871,
+              GlobalStatics_9.currentPlane + 1, var19,
+              GlobalStatics_9.localPlayer.anInt2819 >> 7,
+              GlobalStatics_9.localPlayer.sceneY >> 7);
+      GlobalStatics_11.aBoolean47 = true;
+      DummyClass46.disableLights();
+      GlobalStatics_8.method2285(0, 0, 0, 0, 0);
       DummyClass43.method1194();
-      byte var19 = DummyClass20.method1817((byte) 70) == 2
-          ? (byte) GlobalStatics_6.anInt1127 : 1;
+      GlobalStatics_0.method1775();
+      GlobalStatics_9
+          .method1405(var5, var4, var3,
+              GlobalStatics_0.anInt1705, zoom,
+              GlobalStatics_0.anInt1705, -7397);
+      DummyClass8
+          .method2221(var4, var3, zoom, true,
+              GlobalStatics_0.anInt1705,
+              GlobalStatics_0.anInt1705,
+              var5);
+    } else {
+      DummyClass47.method1323(var3, var5, var4, zoom, 0);
+      GlobalStatics_6
+          .drawScene(GlobalStatics_9.SCENE_CAMERA_X,
+              GlobalStatics_7.SCENE_CAMERA_Y,
+              DummyClass49.SCENE_CAMERA_Z, DummyClass17.SCENE_CAMERA_PITCH,
+              GlobalStatics_10.SCENE_CAMERA_YAW,
+              GlobalStatics_5.aByteArrayArrayArray2008,
+              GlobalStatics_7.anIntArray686,
+              GlobalStatics_9.anIntArray2696, DummyClass13.anIntArray2021,
+              GlobalStatics_9.anIntArray3959,
+              GlobalStatics_3.anIntArray1871,
+              GlobalStatics_9.currentPlane + 1, var19,
+              GlobalStatics_9.localPlayer.anInt2819 >> 7,
+              GlobalStatics_9.localPlayer.sceneY >> 7);
+      DummyClass43.method1194();
+      GlobalStatics_0.method1775();
+      GlobalStatics_9
+          .method1405(var5, var4, var3, 256, zoom, 256, var0 - 994);
+      DummyClass8.method2221(var4, var3, zoom, true, 256, 256, var5);
+    }
+
+    ((TextureCache) GLStatics.textureCache)
+        .update(true, GlobalStatics_7.loopCycle);
+    DummyClass45.method1235(var4, var5, zoom, var3, (byte) -121);
+    DummyClass17.SCENE_CAMERA_PITCH = var9;
+    DummyClass49.SCENE_CAMERA_Z = var8;
+    GlobalStatics_7.SCENE_CAMERA_Y = var7;
+    GlobalStatics_9.SCENE_CAMERA_X = var6;
+    GlobalStatics_10.SCENE_CAMERA_YAW = var10;
+    if (GlobalStatics_10.aBoolean3064
+        && DummyClass43.ondemandRequester.method1253(4) == 0) {
+      GlobalStatics_10.aBoolean3064 = false;
+    }
+
+    if (GlobalStatics_10.aBoolean3064) {
       if (GlRenderer.USE_OPENGL) {
-        GlRenderer.method1846();
-        GlRenderer.setDepthTestEnabled(true);
-        GlRenderer.setFogEnabled(true);
-        if (DummyClass15.state == 10) {
-          var12 = GlobalStatics_8.method809(GlobalStatics_7.loopCycle,
-              DummyClass49.SCENE_CAMERA_Z >> 10,
-              GlobalStatics_4.brightnessSetting,
-              GlobalStatics_9.SCENE_CAMERA_X >> 10,
-              1);
-        } else {
-          var12 = GlobalStatics_8.method809(GlobalStatics_7.loopCycle,
-              GlobalStatics_9.localPlayer.waypointsY[0] >> 3,
-              GlobalStatics_4.brightnessSetting,
-              GlobalStatics_9.localPlayer.waypointsX[0] >> 3, 1);
-        }
-
-        DummyClass46.method1269(GlobalStatics_4.updateCycle,
-            !GlobalStatics_9.aBoolean2623);
-        GlRenderer.clearBuffers(var12);
-        GlobalStatics_8
-            .method2285(DummyClass17.SCENE_CAMERA_PITCH,
-                DummyClass49.SCENE_CAMERA_Z,
-                GlobalStatics_7.SCENE_CAMERA_Y, GlobalStatics_9.SCENE_CAMERA_X,
-                GlobalStatics_10.SCENE_CAMERA_YAW);
-        GlRenderer.anInt1791 = GlobalStatics_4.updateCycle;
-        GlobalStatics_6
-            .drawScene(GlobalStatics_9.SCENE_CAMERA_X,
-                GlobalStatics_7.SCENE_CAMERA_Y,
-                DummyClass49.SCENE_CAMERA_Z, DummyClass17.SCENE_CAMERA_PITCH,
-                GlobalStatics_10.SCENE_CAMERA_YAW,
-                GlobalStatics_5.aByteArrayArrayArray2008,
-                GlobalStatics_7.anIntArray686,
-                GlobalStatics_9.anIntArray2696, DummyClass13.anIntArray2021,
-                GlobalStatics_9.anIntArray3959,
-                GlobalStatics_3.anIntArray1871,
-                GlobalStatics_9.currentPlane + 1, var19,
-                GlobalStatics_9.localPlayer.anInt2819 >> 7,
-                GlobalStatics_9.localPlayer.anInt2829 >> 7);
-        GlobalStatics_11.aBoolean47 = true;
-        DummyClass46.disableLights();
-        GlobalStatics_8.method2285(0, 0, 0, 0, 0);
-        DummyClass43.method1194();
-        GlobalStatics_0.method1775();
-        GlobalStatics_9
-            .method1405(var5, var4, var3,
-                GlobalStatics_0.anInt1705, var1,
-                GlobalStatics_0.anInt1705, -7397);
-        DummyClass8
-            .method2221(var4, var3, var1, true,
-                GlobalStatics_0.anInt1705,
-                GlobalStatics_0.anInt1705,
-                var5);
+        GlUtils.fillQuad(var3, var5, var4, zoom, 0);
       } else {
-        DummyClass47.method1323(var3, var5, var4, var1, 0);
-        GlobalStatics_6
-            .drawScene(GlobalStatics_9.SCENE_CAMERA_X,
-                GlobalStatics_7.SCENE_CAMERA_Y,
-                DummyClass49.SCENE_CAMERA_Z, DummyClass17.SCENE_CAMERA_PITCH,
-                GlobalStatics_10.SCENE_CAMERA_YAW,
-                GlobalStatics_5.aByteArrayArrayArray2008,
-                GlobalStatics_7.anIntArray686,
-                GlobalStatics_9.anIntArray2696, DummyClass13.anIntArray2021,
-                GlobalStatics_9.anIntArray3959,
-                GlobalStatics_3.anIntArray1871,
-                GlobalStatics_9.currentPlane + 1, var19,
-                GlobalStatics_9.localPlayer.anInt2819 >> 7,
-                GlobalStatics_9.localPlayer.anInt2829 >> 7);
-        DummyClass43.method1194();
-        GlobalStatics_0.method1775();
-        GlobalStatics_9
-            .method1405(var5, var4, var3, 256, var1, 256, var0 - 994);
-        DummyClass8.method2221(var4, var3, var1, true, 256, 256, var5);
+        DummyClass47.method1323(var3, var5, var4, zoom, 0);
       }
 
-      ((TextureCache) GLStatics.textureCache)
-          .update(true, GlobalStatics_7.loopCycle);
-      DummyClass45.method1235(var4, var5, var1, var3, (byte) -121);
-      DummyClass17.SCENE_CAMERA_PITCH = var9;
-      DummyClass49.SCENE_CAMERA_Z = var8;
-      GlobalStatics_7.SCENE_CAMERA_Y = var7;
-      GlobalStatics_9.SCENE_CAMERA_X = var6;
-      GlobalStatics_10.SCENE_CAMERA_YAW = var10;
-      if (GlobalStatics_10.aBoolean3064
-          && DummyClass43.ondemandRequester.method1253(4) == 0) {
-        GlobalStatics_10.aBoolean3064 = false;
-      }
+      GlobalStatics_3
+          .drawLoadingBox(GlobalStatics_10.LOADING_PLEASE_WAIT, false);
+    }
 
-      if (GlobalStatics_10.aBoolean3064) {
-        if (GlRenderer.USE_OPENGL) {
-          GlUtils.fillQuad(var3, var5, var4, var1, 0);
-        } else {
-          DummyClass47.method1323(var3, var5, var4, var1, 0);
-        }
-
-        GlobalStatics_3
-            .drawLoadingBox(GlobalStatics_10.LOADING_PLEASE_WAIT, false);
-      }
-
-      if (!var2 && !GlobalStatics_10.aBoolean3064 && !DummyClass36.aBoolean2615
-          && var3 <= GlobalStatics_9.anInt1297
-          && var4 + var3 > GlobalStatics_9.anInt1297
-          && var5 <= DummyClass36.anInt2612
-          && var1 + var5 > DummyClass36.anInt2612) {
-        MaterialShader5
-            .method1628(var5, var4, var1, var3, DummyClass36.anInt2612,
-                GlobalStatics_9.anInt1297, (byte) 97);
-      }
+    if (!var2 && !GlobalStatics_10.aBoolean3064 && !DummyClass36.aBoolean2615
+        && var3 <= GlobalStatics_9.anInt1297
+        && var4 + var3 > GlobalStatics_9.anInt1297
+        && var5 <= DummyClass36.anInt2612
+        && zoom + var5 > DummyClass36.anInt2612) {
+      MaterialShader5
+          .method1628(var5, var4, zoom, var3, DummyClass36.anInt2612,
+              GlobalStatics_9.anInt1297, (byte) 97);
 
     }
-  }
-
-  public static int method340(int var0, int var1) {
-    int var2 = 74 % ((8 - var1) / 54);
-    return var0 >>> 8;
   }
 
   public static void method341(byte var0) {
@@ -4071,12 +4060,12 @@ public class GlobalStatics_10 {
               & GlobalStatics_6.regionHashes[var2]);
           NpcConfiguration var13 = GlobalStatics_2
               .getNpcConfiguration(var16.readUnsignedShort());
-          if (GlobalStatics_8.npcs[var6] == null && (var13.aByte1267 & 1) > 0
+          if (GlobalStatics_8.NPCS[var6] == null && (var13.aByte1267 & 1) > 0
               && var8 == GlobalStatics_8.plane && var11 >= 0 &&
               var13.size + var11 < 104
               && var12 >= 0 && var12 + var13.size < 104) {
-            GlobalStatics_8.npcs[var6] = new NPC();
-            NPC npc = GlobalStatics_8.npcs[var6];
+            GlobalStatics_8.NPCS[var6] = new NPC();
+            NPC npc = GlobalStatics_8.NPCS[var6];
             GlobalStatics_2.anIntArray347[DummyClass6.anInt2046++] = var6;
             npc.anInt2838 = GlobalStatics_4.updateCycle;
             npc.setConfiguration(-1, var13);
@@ -4238,7 +4227,7 @@ public class GlobalStatics_10 {
     DummyClass46.LIGHTS = new Light[255];
     GlModel.method1929();
     SomethingShadows.method2043();
-    DummyClass45.method1240(false);
+    DummyClass45.method1240();
     GlobalStatics_9.method1250(17, var0);
     GlobalStatics_10.method247((byte) 51);
 
@@ -4438,7 +4427,7 @@ public class GlobalStatics_10 {
             var8 = 201.5F;
             GlRenderer.method1832(var8);
           } else {
-            var8 = 201.5F - 50.0F * (var6 + 1);
+            var8 = 201.5F - GlobalStatics_6.NEAR * (var6 + 1);
             GlRenderer.method1832(var8);
           }
         }
@@ -4505,7 +4494,7 @@ public class GlobalStatics_10 {
           if (var2.aClass3_Sub2_2235 != null) {
             var21 = var2.aClass3_Sub2_2235;
             if (GlRenderer.USE_OPENGL) {
-              GlRenderer.method1832(201.5F - 50.0F * (var21.anInt2238 + 1));
+              GlRenderer.method1832(201.5F - GlobalStatics_6.NEAR * (var21.anInt2238 + 1));
             }
 
             if (var21.aClass126_2240 != null) {

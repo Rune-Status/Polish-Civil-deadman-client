@@ -108,18 +108,18 @@ public final class DummyClass45 {
     }
   }
 
-  public static void method1239(int var0, int var1, int var2, int var3,
+  public static void method1239(int var0, int var2, int zoom,
       int var4, boolean var5) {
     if (var0 < 1) {
       var0 = 1;
     }
 
-    if (var3 < 1) {
-      var3 = 1;
+    if (zoom < 1) {
+      zoom = 1;
     }
 
     if (GlRenderer.USE_OPENGL) {
-      int var6 = var3 - 334;
+      int var6 = zoom - 334;
       if (var6 >= 0) {
         if (var6 > 100) {
           var6 = 100;
@@ -129,7 +129,7 @@ public final class DummyClass45 {
       }
 
       int var7 =
-          var6 * (GlobalStatics_10.aShort3052 - GlobalStatics_7.aShort1444)
+          var6 * (GlobalStatics_10.SOMETHING_ZOOM_0 - GlobalStatics_7.aShort1444)
               / 100
               + GlobalStatics_7.aShort1444;
       if (GlobalStatics_9.aShort3241 <= var7) {
@@ -140,39 +140,39 @@ public final class DummyClass45 {
         var7 = GlobalStatics_9.aShort3241;
       }
 
-      int var8 = var7 * var3 * 512 / (var0 * 334);
+      int var8 = var7 * zoom * 512 / (var0 * 334);
       int var9;
       int var10;
       short var12;
       if (var8 >= GlobalStatics_9.aShort505) {
         if (GlobalStatics_10.aShort4038 < var8) {
           var12 = GlobalStatics_10.aShort4038;
-          var7 = var12 * var0 * 334 / (var3 * 512);
+          var7 = var12 * var0 * 334 / (zoom * 512);
           if (GlobalStatics_9.aShort3241 > var7) {
             var7 = GlobalStatics_9.aShort3241;
             var9 = var12 * var0 * 334 / (512 * var7);
-            var10 = (-var9 + var3) / 2;
+            var10 = (-var9 + zoom) / 2;
             if (var5) {
               GlUtils.resetClip();
               GlUtils.fillQuad(var4, var2, var0, var10, 0);
-              GlUtils.fillQuad(var4, var2 + var3 - var10, var0, var10, 0);
+              GlUtils.fillQuad(var4, var2 + zoom - var10, var0, var10, 0);
             }
 
-            var3 -= var10 * 2;
+            zoom -= var10 * 2;
             var2 += var10;
           }
         }
       } else {
         var12 = GlobalStatics_9.aShort505;
-        var7 = 334 * var0 * var12 / (512 * var3);
+        var7 = 334 * var0 * var12 / (512 * zoom);
         if (DummyClass18.aShort83 < var7) {
           var7 = DummyClass18.aShort83;
-          var9 = 512 * var3 * var7 / (334 * var12);
+          var9 = 512 * zoom * var7 / (334 * var12);
           var10 = (var0 - var9) / 2;
           if (var5) {
             GlUtils.resetClip();
-            GlUtils.fillQuad(var4, var2, var10, var3, 0);
-            GlUtils.fillQuad(var0 + var4 - var10, var2, var10, var3, 0);
+            GlUtils.fillQuad(var4, var2, var10, zoom, 0);
+            GlUtils.fillQuad(var0 + var4 - var10, var2, var10, zoom, 0);
           }
 
           var4 += var10;
@@ -180,20 +180,15 @@ public final class DummyClass45 {
         }
       }
 
-      GlobalStatics_0.anInt1705 = var7 * var3 / 334;
+      GlobalStatics_0.anInt1705 = var7 * zoom / 334;
     }
-
     GlobalStatics_9.anInt1358 = (short) var0;
-    GlobalStatics_8.anInt31 = (short) var3;
-    if (var1 < 11) {
-      DummyClass45.method1233(null, 18);
-    }
-
+    GlobalStatics_8.CURRENT_CAMERA_ZOOM = (short) zoom;
     GlobalStatics_9.anInt3564 = var2;
     DummyClass5.anInt2989 = var4;
   }
 
-  public static void method1240(boolean var0) {
+  public static void method1240() {
     GlobalStatics_9.p12Font = null;
     GlobalStatics_9.aClass3_Sub28_Sub16Array2656 = null;
     DummyClass17.aClass3_Sub28_Sub16Array1825 = null;
@@ -213,9 +208,6 @@ public final class DummyClass45 {
     GlobalStatics_9.aClass3_Sub28_Sub16Array2072 = null;
     GlobalStatics_9.aClass3_Sub28_Sub16Array3373 = null;
     GlobalStatics_9.aClass109Array1831 = null;
-    if (var0) {
-      DummyClass45.method1233(null, -51);
-    }
   }
 
 }

@@ -170,8 +170,7 @@ public final class SomethingGl0 extends Node {
     this.aFloatArray2346 = null;
   }
 
-  public void method149(SceneGraphTile[][][] var1, float var2,
-      boolean var3) {
+  public void renderSceneGroundTiles(SceneGraphTile[][][] var1, float y) {
     if (SomethingGl0.aClass3_Sub30_2372 != null
         && SomethingGl0.aClass3_Sub30_2372.bytes.length >=
         this.anInt2359 * 4) {
@@ -255,7 +254,7 @@ public final class SomethingGl0 extends Node {
 
     if (SomethingGl0.aClass3_Sub30_2372.position != 0
         || SomethingGl0.aClass3_Sub30_2362.position != 0) {
-      if (this.materialId != -1 && !var3) {
+      if (this.materialId != -1) {
         GLStatics.textureCache.initializeMaterial(this.materialId, true);
       } else {
         GlRenderer.bindTexture(-1);
@@ -323,7 +322,7 @@ public final class SomethingGl0 extends Node {
             .put(SomethingGl0.aClass3_Sub30_2372.bytes, 0,
                 SomethingGl0.aClass3_Sub30_2372.position);
         SomethingGl0.aByteBuffer2368.flip();
-        GlRenderer.method1832(var2);
+        GlRenderer.method1832(y);
         GlRenderer.GL
             .glDrawElements(4, SomethingGl0.aClass3_Sub30_2372.position / 4,
                 5125,
@@ -346,7 +345,7 @@ public final class SomethingGl0 extends Node {
             .put(SomethingGl0.aClass3_Sub30_2362.bytes, 0,
                 SomethingGl0.aClass3_Sub30_2362.position);
         SomethingGl0.aByteBuffer2361.flip();
-        GlRenderer.method1832(var2 - 100.0F);
+        GlRenderer.method1832(y - 100.0F);
         GlRenderer.method1851();
         GlRenderer.GL
             .glDrawElements(4, SomethingGl0.aClass3_Sub30_2362.position / 4,

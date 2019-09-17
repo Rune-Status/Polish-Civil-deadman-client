@@ -48,7 +48,7 @@ public final class DummyClass27 {
         }
       } else {
         var3 = var1.anInt2273 - 1;
-        var2 = GlobalStatics_8.npcs[var3];
+        var2 = GlobalStatics_8.NPCS[var3];
       }
 
       if (var2 != null) {

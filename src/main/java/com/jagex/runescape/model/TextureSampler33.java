@@ -15,10 +15,6 @@ public final class TextureSampler33 extends AbstractTextureSampler {
   }
 
   public void parseConfig(int var1, Buffer var2, boolean var3 ) {
-    if (!var3) {
-        GlobalStatics_10.aShort3052 = -37;
-      }
-
       if (var1 == 0) {
         this.anInt3047 = var2.readUnsignedShort();
       } else if (var1 == 1) {

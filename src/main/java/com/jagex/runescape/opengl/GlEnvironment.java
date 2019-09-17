@@ -86,16 +86,16 @@ public final class GlEnvironment {
       GlRenderer.GL.glFogf(GL2ES1.GL_FOG_DENSITY, 0.95F);
       GlRenderer.GL.glHint(GL2ES1.GL_FOG_HINT, GL.GL_NICEST);
       // 7 tiles
-      int fogEnd = GlobalStatics_6.FAR;
-      int minimumStart = GlobalStatics_6.NEAR;
-      int fogStart = fogEnd - 512 - offset;
-      if (fogStart < minimumStart) {
-        fogStart = minimumStart;
-      }
-      GlRenderer.GL.glFogf(GL2ES1.GL_FOG_START, fogStart);
-      GlRenderer.GL.glFogf(GL2ES1.GL_FOG_END, fogEnd - 256);
-      GlRenderer.GL
-          .glFogfv(GL2ES1.GL_FOG_COLOR, GlEnvironment.FOG_COLOR_RGB, 0);
+//      int fogEnd = GlobalStatics_6.FAR;
+//      int minimumStart = GlobalStatics_6.NEAR;
+//      int fogStart = fogEnd - offset;
+//      if (fogStart < minimumStart) {
+//        fogStart = minimumStart;
+//      }
+//      GlRenderer.GL.glFogf(GL2ES1.GL_FOG_START, fogStart);
+//      GlRenderer.GL.glFogf(GL2ES1.GL_FOG_END, fogEnd);
+//      GlRenderer.GL
+//          .glFogfv(GL2ES1.GL_FOG_COLOR, GlEnvironment.FOG_COLOR_RGB, 0);
     }
   }
 

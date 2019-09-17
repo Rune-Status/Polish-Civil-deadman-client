@@ -2029,7 +2029,7 @@ public class GlobalStatics_9 {
                 + GlobalStatics_10.anInt1716;
         var1 += -5 + (int) (Math.random() * 10.0D);
         int var2 =
-            -GlobalStatics_9.anInt1152 - (GlobalStatics_9.localPlayer.anInt2829
+            -GlobalStatics_9.anInt1152 - (GlobalStatics_9.localPlayer.sceneY
                 >> 7)
                 + GlobalStatics_9.anInt65 - 1 + DummyClass58.anInt1460;
         var2 += -5 + (int) (Math.random() * 10.0D);
@@ -2211,7 +2211,7 @@ public class GlobalStatics_9 {
         var3.anInt2832 = 0;
         var3.anInt2773 = 0;
         GlobalStatics_4
-            .method1470(var3.anInt2829, var4, var0 + 183921384, var3.anInt2819,
+            .method1470(var3.sceneY, var4, var0 + 183921384, var3.anInt2819,
                 GlobalStatics_9.localPlayer == var3, var3.anInt2832);
       }
 
@@ -2230,7 +2230,7 @@ public class GlobalStatics_9 {
       var3.anInt2760 = 0;
       var3.animationId = var2;
       if (var3.animationId != -1) {
-        GlobalStatics_4.method1470(var3.anInt2829,
+        GlobalStatics_4.method1470(var3.sceneY,
             GlobalStatics_8.method45(var3.animationId, (byte) -20),
             183921384, var3.anInt2819, var3 == GlobalStatics_9.localPlayer,
             var3.anInt2832);
@@ -2487,7 +2487,7 @@ public class GlobalStatics_9 {
       com.jagex.runescape.statics.GlobalStatics_0
           .method1214(GlobalStatics_7.loopCycle,
               GlobalStatics_9.localPlayer.anInt2819,
-              GlobalStatics_9.localPlayer.anInt2829,
+              GlobalStatics_9.localPlayer.sceneY,
               GlobalStatics_9.currentPlane,
               1);
       GlobalStatics_7.loopCycle = 0;
@@ -2867,7 +2867,7 @@ public class GlobalStatics_9 {
 
       for (var2 = 0; var2 < var1; ++var2) {
         int var3 = GlobalStatics_2.anIntArray347[var2];
-        NPC var4 = GlobalStatics_8.npcs[var3];
+        NPC var4 = GlobalStatics_8.NPCS[var3];
         int var5 = GlobalStatics_9.gameBuffer.readBits(1);
         if (var5 == 0) {
           GlobalStatics_2.anIntArray347[DummyClass6.anInt2046++] = var3;
@@ -2973,7 +2973,7 @@ public class GlobalStatics_9 {
           font = GlobalStatics_8.aClass3_Sub28_Sub17_2096;
         }
 
-        font.method702(var4, var3, var2, var0.anInt168, var0.anInt193,
+        font.method702(var4, var3, var2, var0.anInt168, var0.zoom,
             var0.anInt218,
             var0.anInt287, var0.anInt194, var0.anInt225,
             GlobalStatics_10.random,
@@ -3393,7 +3393,7 @@ public class GlobalStatics_9 {
       int var1 =
           GlobalStatics_9.localPlayer.anInt2819 + GlobalStatics_10.anInt3216;
       int var2 =
-          GlobalStatics_9.localPlayer.anInt2829 + GlobalStatics_2.anInt42;
+          GlobalStatics_9.localPlayer.sceneY + GlobalStatics_2.anInt42;
       if (-var1 + GlobalStatics_10.anInt3155 < 499
           || -var1 + GlobalStatics_10.anInt3155 > 500
           || GlobalStatics_8.anInt942 - var2 < 499
@@ -3677,7 +3677,7 @@ public class GlobalStatics_9 {
   public static void method603(int var0, int var1, int var2, Widget var3,
       boolean var4) {
     int var5 = var3.anInt168;
-    int var6 = var3.anInt193;
+    int var6 = var3.zoom;
     if (var1 != 13987) {
       GlobalStatics_9.method602(-115, 65, (byte) -119, null);
     }
@@ -3705,42 +3705,42 @@ public class GlobalStatics_9 {
     }
 
     if (var3.aByte241 == 0) {
-      var3.anInt193 = var3.anInt244;
+      var3.zoom = var3.anInt244;
     } else if (var3.aByte241 == 1) {
-      var3.anInt193 = -var3.anInt244 + var0;
+      var3.zoom = -var3.anInt244 + var0;
     } else if (var3.aByte241 == 2) {
-      var3.anInt193 = var0 * var3.anInt244 >> 14;
+      var3.zoom = var0 * var3.anInt244 >> 14;
     } else if (var3.aByte241 == 3) {
       if (var3.anInt187 == 2) {
-        var3.anInt193 =
+        var3.zoom =
             (var3.anInt244 - 1) * var3.anInt290 + var3.anInt244 * 32;
       } else if (var3.anInt187 == 7) {
-        var3.anInt193 =
+        var3.zoom =
             var3.anInt244 * 12 + (-1 + var3.anInt244) * var3.anInt290;
       }
     }
 
     if (var3.aByte304 == 4) {
-      var3.anInt168 = var3.anInt216 * var3.anInt193 / var3.anInt160;
+      var3.anInt168 = var3.anInt216 * var3.zoom / var3.anInt160;
     }
 
     if (var3.aByte241 == 4) {
-      var3.anInt193 = var3.anInt160 * var3.anInt168 / var3.anInt216;
+      var3.zoom = var3.anInt160 * var3.anInt168 / var3.anInt216;
     }
 
     if (GlobalStatics_9.aBoolean1040 && (
         GlobalStatics_8.method44(var3).anInt2205 != 0
             || var3.anInt187 == 0)) {
-      if (var3.anInt193 < 5 && var3.anInt168 < 5) {
-        var3.anInt193 = 5;
+      if (var3.zoom < 5 && var3.anInt168 < 5) {
+        var3.zoom = 5;
         var3.anInt168 = 5;
       } else {
         if (var3.anInt168 <= 0) {
           var3.anInt168 = 5;
         }
 
-        if (var3.anInt193 <= 0) {
-          var3.anInt193 = 5;
+        if (var3.zoom <= 0) {
+          var3.zoom = 5;
         }
       }
     }
@@ -3750,7 +3750,7 @@ public class GlobalStatics_9 {
     }
 
     if (var4 && var3.anObjectArray235 != null && (var5 != var3.anInt168
-        || var3.anInt193 != var6)) {
+        || var3.zoom != var6)) {
       ClientScriptCall var7 = new ClientScriptCall();
       var7.arguments = var3.anObjectArray235;
       var7.aClass11_2449 = var3;
@@ -3763,10 +3763,6 @@ public class GlobalStatics_9 {
     GlobalStatics_9.aClass94_3638 = null;
     GlobalStatics_9.aClass94_3639 = null;
     GlobalStatics_9.aClass94_3643 = null;
-    if (var0 != 221301966) {
-      GlobalStatics_9.method603(-111, -64, -10, null, false);
-    }
-
     GlobalStatics_9.aClass94_3645 = null;
   }
 
@@ -6572,7 +6568,7 @@ public class GlobalStatics_9 {
       } else if (DummyClass13.anInt2022 > var7) {
         var8 = GlobalStatics_9.players[DummyClass42.anIntArray887[var7]];
       } else {
-        var8 = GlobalStatics_8.npcs[GlobalStatics_2.anIntArray347[
+        var8 = GlobalStatics_8.NPCS[GlobalStatics_2.anIntArray347[
             -DummyClass13.anInt2022 + var7]];
       }
 
@@ -7291,7 +7287,7 @@ public class GlobalStatics_9 {
           ++var0.anInt2813;
           ++var0.anInt2793;
           GlobalStatics_4
-              .method1470(var0.anInt2829, var2, 183921384, var0.anInt2819,
+              .method1470(var0.sceneY, var2, 183921384, var0.anInt2819,
                   var0 == GlobalStatics_9.localPlayer, var0.anInt2813);
         }
 
@@ -7299,7 +7295,7 @@ public class GlobalStatics_9 {
           var0.anInt2813 = 0;
           var0.anInt2802 = 0;
           GlobalStatics_4
-              .method1470(var0.anInt2829, var2, 183921384, var0.anInt2819,
+              .method1470(var0.sceneY, var2, 183921384, var0.anInt2819,
                   GlobalStatics_9.localPlayer == var0, var0.anInt2813);
         }
 
@@ -7324,7 +7320,7 @@ public class GlobalStatics_9 {
           if (var0.anInt2805 < 0) {
             var0.anInt2805 = 0;
             GlobalStatics_4
-                .method1470(var0.anInt2829, var3, 183921384, var0.anInt2819,
+                .method1470(var0.sceneY, var3, 183921384, var0.anInt2819,
                     GlobalStatics_9.localPlayer == var0, 0);
           }
 
@@ -7333,7 +7329,7 @@ public class GlobalStatics_9 {
               && var3.anIntArray1869[var0.anInt2805] < var0.anInt2761) {
             ++var0.anInt2805;
             var0.anInt2761 = 1;
-            GlobalStatics_4.method1470(var0.anInt2829, var3, var1 ^ -183911469,
+            GlobalStatics_4.method1470(var0.sceneY, var3, var1 ^ -183911469,
                 var0.anInt2819,
                 GlobalStatics_9.localPlayer == var0, var0.anInt2805);
           }
@@ -7372,7 +7368,7 @@ public class GlobalStatics_9 {
             var0.anInt2760 = 1;
             ++var0.anInt2832;
             GlobalStatics_4
-                .method1470(var0.anInt2829, var2, 183921384, var0.anInt2819,
+                .method1470(var0.sceneY, var2, 183921384, var0.anInt2819,
                     var0 == GlobalStatics_9.localPlayer, var0.anInt2832);
           }
 
@@ -7383,7 +7379,7 @@ public class GlobalStatics_9 {
               if (var0.anInt2832 >= 0
                   && var2.anIntArray1851.length > var0.anInt2832) {
                 GlobalStatics_4
-                    .method1470(var0.anInt2829, var2, 183921384, var0.anInt2819,
+                    .method1470(var0.sceneY, var2, 183921384, var0.anInt2819,
                         GlobalStatics_9.localPlayer == var0, var0.anInt2832);
               } else {
                 var0.animationId = -1;
@@ -7429,7 +7425,7 @@ public class GlobalStatics_9 {
                 ++var7.anInt1893;
                 var7.anInt1897 = 1;
                 GlobalStatics_4
-                    .method1470(var0.anInt2829, var4, 183921384, var0.anInt2819,
+                    .method1470(var0.sceneY, var4, 183921384, var0.anInt2819,
                         var0 == GlobalStatics_9.localPlayer, var7.anInt1893);
               }
 
@@ -7440,7 +7436,7 @@ public class GlobalStatics_9 {
                   if (var7.anInt1893 >= 0 && var7.anInt1893
                       < var4.anIntArray1851.length) {
                     GlobalStatics_4
-                        .method1470(var0.anInt2829, var4, 183921384,
+                        .method1470(var0.sceneY, var4, 183921384,
                             var0.anInt2819,
                             GlobalStatics_9.localPlayer == var0,
                             var7.anInt1893);
@@ -8442,7 +8438,7 @@ public class GlobalStatics_9 {
 
           if (var8 == 19) {
             var9 = (
-                GlobalStatics_9.localPlayer.anInt2829 >> 7)
+                GlobalStatics_9.localPlayer.sceneY >> 7)
                 + GlobalStatics_9.anInt1152;
           }
 
@@ -8882,7 +8878,7 @@ public class GlobalStatics_9 {
   public static void method116(boolean var0, int var1) {
     int var2 = DummyClass13.anInt2022;
     if (DummyClass45.anInt987 == GlobalStatics_9.localPlayer.anInt2819 >> 7
-        && GlobalStatics_9.localPlayer.anInt2829 >> 7
+        && GlobalStatics_9.localPlayer.sceneY >> 7
         == DummyClass38.anInt733) {
       DummyClass45.anInt987 = 0;
     }
@@ -8909,20 +8905,20 @@ public class GlobalStatics_9 {
         int var5 = var4.getSize();
         int var6;
         if (var5 == 1) {
-          if ((127 & var4.anInt2819) == 64 && (127 & var4.anInt2829) == 64) {
+          if ((127 & var4.anInt2819) == 64 && (127 & var4.sceneY) == 64) {
             var6 = var4.anInt2819 >> 7;
-            var7 = var4.anInt2829 >> 7;
+            var7 = var4.sceneY >> 7;
             if (var6 >= 0 && var6 < 104 && var7 >= 0 && var7 < 104) {
               ++DummyClass9.anIntArrayArray4010[var6][var7];
             }
           }
         } else if (
             ((1 & var5) != 0 || (var4.anInt2819 & 127) == 0
-                && (127 & var4.anInt2829) == 0) && (
+                && (127 & var4.sceneY) == 0) && (
                 (1 & var5) != 1 || (var4.anInt2819 & 127) == 64 && (127
-                    & var4.anInt2829) == 64)) {
+                    & var4.sceneY) == 64)) {
           var6 = var4.anInt2819 - var5 * 64 >> 7;
-          var7 = var4.anInt2829 - var5 * 64 >> 7;
+          var7 = var4.sceneY - var5 * 64 >> 7;
           var8 = var4.getSize() + var6;
           if (var8 > 104) {
             var8 = 104;
@@ -8971,9 +8967,9 @@ public class GlobalStatics_9 {
 
           var7 = var4.getSize();
           if (var7 == 1) {
-            if ((127 & var4.anInt2819) == 64 && (127 & var4.anInt2829) == 64) {
+            if ((127 & var4.anInt2819) == 64 && (127 & var4.sceneY) == 64) {
               var8 = var4.anInt2819 >> 7;
-              var9 = var4.anInt2829 >> 7;
+              var9 = var4.sceneY >> 7;
               if (var8 < 0 || var8 >= 104 || var9 < 0 || var9 >= 104) {
                 continue;
               }
@@ -8985,12 +8981,12 @@ public class GlobalStatics_9 {
             }
           } else if (
               (1 & var7) == 0 && (127 & var4.anInt2819) == 0
-                  && (var4.anInt2829 & 127) == 0
+                  && (var4.sceneY & 127) == 0
                   || (1 & var7) == 1 && (127 & var4.anInt2819) == 64
-                  && (var4.anInt2829 & 127) == 0) {
+                  && (var4.sceneY & 127) == 0) {
             var8 = var4.anInt2819 - 64 * var7 >> 7;
             var10 = var7 + var8;
-            var9 = -(var7 * 64) + var4.anInt2829 >> 7;
+            var9 = -(var7 * 64) + var4.sceneY >> 7;
             if (var10 > 104) {
               var10 = 104;
             }
@@ -9044,20 +9040,20 @@ public class GlobalStatics_9 {
             var4.anInt2831 =
                 GlobalStatics_6
                     .method1736(GlobalStatics_9.currentPlane, 1, var4.anInt2819,
-                        var4.anInt2829);
+                        var4.sceneY);
             GlobalStatics_10
                 .method292(GlobalStatics_9.currentPlane, var4.anInt2819,
-                    var4.anInt2829, var4.anInt2831, var4, var4.rotationY, var16,
+                    var4.sceneY, var4.anInt2831, var4, var4.rotationY, var16,
                     var4.anInt2788,
                     var4.anInt2777, var4.anInt2818, var4.anInt2817);
           } else {
             var4.anInt2831 =
                 GlobalStatics_6
                     .method1736(GlobalStatics_9.currentPlane, 1, var4.anInt2819,
-                        var4.anInt2829);
+                        var4.sceneY);
             DummyClass29.addNodeToSceneGraph(GlobalStatics_9.currentPlane,
                 var4.anInt2819,
-                var4.anInt2829, var4.anInt2831, 64 * (var7 - 1) + 60, var4,
+                var4.sceneY, var4.anInt2831, 64 * (var7 - 1) + 60, var4,
                 var4.rotationY, var16,
                 var4.aBoolean2810);
           }
@@ -9582,21 +9578,24 @@ public class GlobalStatics_9 {
       if (var1.anInt1554 == 1) {
         var2 =
             var1.anInt1553 - GLStatics.CAMERA_TILE_X
-                + GLStatics.VIEWPORT_SIZE;
+                + GLStatics.CURRENT_VIEWPORT_SIZE;
         if (var2 >= 0
-            && var2 <= GLStatics.VIEWPORT_SIZE + GLStatics.VIEWPORT_SIZE) {
+            && var2 <= GLStatics.CURRENT_VIEWPORT_SIZE
+            + GLStatics.CURRENT_VIEWPORT_SIZE) {
           var3 =
               var1.anInt1563 - GLStatics.CAMERA_TILE_Y
-                  + GLStatics.VIEWPORT_SIZE;
+                  + GLStatics.CURRENT_VIEWPORT_SIZE;
           if (var3 < 0) {
             var3 = 0;
           }
 
           var4 =
               var1.anInt1566 - GLStatics.CAMERA_TILE_Y
-                  + GLStatics.VIEWPORT_SIZE;
-          if (var4 > GLStatics.VIEWPORT_SIZE + GLStatics.VIEWPORT_SIZE) {
-            var4 = GLStatics.VIEWPORT_SIZE + GLStatics.VIEWPORT_SIZE;
+                  + GLStatics.CURRENT_VIEWPORT_SIZE;
+          if (var4 > GLStatics.CURRENT_VIEWPORT_SIZE
+              + GLStatics.CURRENT_VIEWPORT_SIZE) {
+            var4 = GLStatics.CURRENT_VIEWPORT_SIZE
+                + GLStatics.CURRENT_VIEWPORT_SIZE;
           }
 
           var5 = false;
@@ -9635,21 +9634,24 @@ public class GlobalStatics_9 {
       } else if (var1.anInt1554 == 2) {
         var2 =
             var1.anInt1563 - GLStatics.CAMERA_TILE_Y
-                + GLStatics.VIEWPORT_SIZE;
+                + GLStatics.CURRENT_VIEWPORT_SIZE;
         if (var2 >= 0
-            && var2 <= GLStatics.VIEWPORT_SIZE + GLStatics.VIEWPORT_SIZE) {
+            && var2 <= GLStatics.CURRENT_VIEWPORT_SIZE
+            + GLStatics.CURRENT_VIEWPORT_SIZE) {
           var3 =
               var1.anInt1553 - GLStatics.CAMERA_TILE_X
-                  + GLStatics.VIEWPORT_SIZE;
+                  + GLStatics.CURRENT_VIEWPORT_SIZE;
           if (var3 < 0) {
             var3 = 0;
           }
 
           var4 =
               var1.anInt1547 - GLStatics.CAMERA_TILE_X
-                  + GLStatics.VIEWPORT_SIZE;
-          if (var4 > GLStatics.VIEWPORT_SIZE + GLStatics.VIEWPORT_SIZE) {
-            var4 = GLStatics.VIEWPORT_SIZE + GLStatics.VIEWPORT_SIZE;
+                  + GLStatics.CURRENT_VIEWPORT_SIZE;
+          if (var4 > GLStatics.CURRENT_VIEWPORT_SIZE
+              + GLStatics.CURRENT_VIEWPORT_SIZE) {
+            var4 = GLStatics.CURRENT_VIEWPORT_SIZE
+                + GLStatics.CURRENT_VIEWPORT_SIZE;
           }
 
           var5 = false;
@@ -9690,31 +9692,35 @@ public class GlobalStatics_9 {
         if (var2 > 128) {
           var3 =
               var1.anInt1563 - GLStatics.CAMERA_TILE_Y
-                  + GLStatics.VIEWPORT_SIZE;
+                  + GLStatics.CURRENT_VIEWPORT_SIZE;
           if (var3 < 0) {
             var3 = 0;
           }
 
           var4 =
               var1.anInt1566 - GLStatics.CAMERA_TILE_Y
-                  + GLStatics.VIEWPORT_SIZE;
-          if (var4 > GLStatics.VIEWPORT_SIZE + GLStatics.VIEWPORT_SIZE) {
-            var4 = GLStatics.VIEWPORT_SIZE + GLStatics.VIEWPORT_SIZE;
+                  + GLStatics.CURRENT_VIEWPORT_SIZE;
+          if (var4 > GLStatics.CURRENT_VIEWPORT_SIZE
+              + GLStatics.CURRENT_VIEWPORT_SIZE) {
+            var4 = GLStatics.CURRENT_VIEWPORT_SIZE
+                + GLStatics.CURRENT_VIEWPORT_SIZE;
           }
 
           if (var3 <= var4) {
             int var10 =
                 var1.anInt1553 - GLStatics.CAMERA_TILE_X
-                    + GLStatics.VIEWPORT_SIZE;
+                    + GLStatics.CURRENT_VIEWPORT_SIZE;
             if (var10 < 0) {
               var10 = 0;
             }
 
             var6 =
                 var1.anInt1547 - GLStatics.CAMERA_TILE_X
-                    + GLStatics.VIEWPORT_SIZE;
-            if (var6 > GLStatics.VIEWPORT_SIZE + GLStatics.VIEWPORT_SIZE) {
-              var6 = GLStatics.VIEWPORT_SIZE + GLStatics.VIEWPORT_SIZE;
+                    + GLStatics.CURRENT_VIEWPORT_SIZE;
+            if (var6 > GLStatics.CURRENT_VIEWPORT_SIZE
+                + GLStatics.CURRENT_VIEWPORT_SIZE) {
+              var6 = GLStatics.CURRENT_VIEWPORT_SIZE
+                  + GLStatics.CURRENT_VIEWPORT_SIZE;
             }
 
             boolean var7 = false;
@@ -9939,7 +9945,7 @@ public class GlobalStatics_9 {
                     var12.anInt1900 = var8;
                     var12.anInt1897 = 0;
                     GlobalStatics_4
-                        .method1470(var2.anInt2829, var10, 183921384,
+                        .method1470(var2.sceneY, var10, 183921384,
                             var2.anInt2819,
                             var2 == GlobalStatics_9.localPlayer, 0);
                   } else if (var11 == 2) {
@@ -9962,7 +9968,7 @@ public class GlobalStatics_9 {
               var12.anInt1893 = 0;
               var12.anInt1894 = 0;
               GlobalStatics_4
-                  .method1470(var2.anInt2829, var10, 183921384, var2.anInt2819,
+                  .method1470(var2.sceneY, var10, 183921384, var2.anInt2819,
                       var2 == GlobalStatics_9.localPlayer, 0);
             }
           }
@@ -10111,7 +10117,7 @@ public class GlobalStatics_9 {
     int var1;
     for (var1 = 0; GlobalStatics_9.anInt997 > var1; ++var1) {
       int var2 = DummyClass60.anIntArray441[var1];
-      NPC var3 = GlobalStatics_8.npcs[var2];
+      NPC var3 = GlobalStatics_8.NPCS[var2];
       int var4 = GlobalStatics_9.gameBuffer.readUnsignedByte();
       if ((var4 & 8) != 0) {
         var4 += GlobalStatics_9.gameBuffer.readUnsignedByte() << 8;
@@ -10188,7 +10194,7 @@ public class GlobalStatics_9 {
               AnimationSequence var9 = GlobalStatics_8
                   .method45(var8, (byte) -20);
               if (var9.anIntArray1851 != null) {
-                GlobalStatics_4.method1470(var3.anInt2829, var9, 183921384,
+                GlobalStatics_4.method1470(var3.sceneY, var9, 183921384,
                     var3.anInt2819, false,
                     0);
               }
@@ -10761,10 +10767,10 @@ public class GlobalStatics_9 {
   }
 
   public static void initializeScene(int planes, int sceneWidth,
-      int sceneHeight, int viewportLength) {
+      int sceneHeight, int viewportSize) {
     GlobalStatics_4.SCENE_WIDTH = sceneWidth;
     GlobalStatics_1.SCENE_HEIGHT = sceneHeight;
-    GLStatics.VIEWPORT_SIZE = viewportLength;
+    GLStatics.CURRENT_VIEWPORT_SIZE = viewportSize;
     GlobalStatics_9.tiles =
         new SceneGraphTile[planes][GlobalStatics_4.SCENE_WIDTH][GlobalStatics_1.SCENE_HEIGHT];
     DummyClass43.somethingHeightMap =
@@ -10797,11 +10803,15 @@ public class GlobalStatics_9 {
     GlobalStatics_10.anInt3070 = 0;
     GlobalStatics_7.aClass25Array4060 = new SceneSomething[100];
     GLStatics.adjacentTileOnScreen =
-        new boolean[GLStatics.VIEWPORT_SIZE + GLStatics.VIEWPORT_SIZE + 1][
-            GLStatics.VIEWPORT_SIZE + GLStatics.VIEWPORT_SIZE + 1];
+        new boolean[GLStatics.CURRENT_VIEWPORT_SIZE
+            + GLStatics.CURRENT_VIEWPORT_SIZE + 1][
+            GLStatics.CURRENT_VIEWPORT_SIZE + GLStatics.CURRENT_VIEWPORT_SIZE
+                + 1];
     GlobalStatics_9.tileOnScreen =
-        new boolean[GLStatics.VIEWPORT_SIZE + GLStatics.VIEWPORT_SIZE + 2][
-            GLStatics.VIEWPORT_SIZE + GLStatics.VIEWPORT_SIZE + 2];
+        new boolean[GLStatics.CURRENT_VIEWPORT_SIZE
+            + GLStatics.CURRENT_VIEWPORT_SIZE + 2][
+            GLStatics.CURRENT_VIEWPORT_SIZE + GLStatics.CURRENT_VIEWPORT_SIZE
+                + 2];
     GlobalStatics_9.aByteArrayArrayArray1774 =
         new byte[planes][GlobalStatics_4.SCENE_WIDTH][GlobalStatics_1.SCENE_HEIGHT];
   }
@@ -10842,7 +10852,7 @@ public class GlobalStatics_9 {
       }
 
       var0.anInt2819 += (-var0.anInt2819 + var3) / var2;
-      var0.anInt2829 += (var4 - var0.anInt2829) / var2;
+      var0.sceneY += (var4 - var0.sceneY) / var2;
       if (var0.anInt2840 == 1) {
         var0.anInt2806 = 1536;
       }
@@ -10869,24 +10879,21 @@ public class GlobalStatics_9 {
 
   public static void method1952(
       int cameraXOffset,
-      int var2,
+      int zoom,
       int cameraYOffset,
       int cameraZ,
       int yaw,
       int cameraZOffset,
       int pitch
   ) {
-    if (GlRenderer.USE_OPENGL) {
-      int zoom = 700 + var2;
 
-      int var9 =
-          zoom * (GlobalStatics_8.aShort1535 - GlobalStatics_11.aShort46) / 100
-              + GlobalStatics_11.aShort46;
-      cameraZ = var9 * cameraZ >> 8;
-    }
+    int var9 =
+        zoom * (GlobalStatics_8.SOMETHING_ZOOM_1 - GlobalStatics_11.aShort46) / 100
+            + GlobalStatics_11.aShort46;
+    cameraZ = var9 * cameraZ >> 8;
 
     int var8 = -pitch + 2048 & 2047;
-    int var9 = 2047 & -yaw + 2048;
+    var9 = 2047 & -yaw + 2048;
     int cameraX = 0;
     int cameraY = 0;
     if (var8 != 0) {
@@ -11021,7 +11028,7 @@ public class GlobalStatics_9 {
     }
   }
 
-  public static void method1611(int var0, boolean var1) {
+  public static void method1611(boolean var1) {
     int var2;
     NPC var3;
     int var6;
@@ -11030,7 +11037,7 @@ public class GlobalStatics_9 {
     int var9;
     int var10;
     for (var2 = 0; var2 < DummyClass6.anInt2046; ++var2) {
-      var3 = GlobalStatics_8.npcs[GlobalStatics_2.anIntArray347[var2]];
+      var3 = GlobalStatics_8.NPCS[GlobalStatics_2.anIntArray347[var2]];
       if (var3 != null
           && var3.hasConfiguration((byte) 17)
           && !var3.config.aBoolean1263 != var1
@@ -11039,11 +11046,11 @@ public class GlobalStatics_9 {
         int var5;
         if (var4 != 1) {
           if (((1 & var4) != 0 || (127 & var3.anInt2819) == 0 &&
-              (127 & var3.anInt2829) == 0)
+              (127 & var3.sceneY) == 0)
               && ((var4 & 1) != 1 || (127 & var3.anInt2819) == 64 && (127
-              & var3.anInt2829) == 64)) {
+              & var3.sceneY) == 64)) {
             var5 = var3.anInt2819 - var4 * 64 >> 7;
-            var6 = -(var4 * 64) + var3.anInt2829 >> 7;
+            var6 = -(var4 * 64) + var3.sceneY >> 7;
             var7 = var3.getSize() + var5;
             if (var5 < 0) {
               var5 = 0;
@@ -11069,9 +11076,9 @@ public class GlobalStatics_9 {
             }
           }
         } else if (
-            (127 & var3.anInt2819) == 64 && (var3.anInt2829 & 127) == 64) {
+            (127 & var3.anInt2819) == 64 && (var3.sceneY & 127) == 64) {
           var5 = var3.anInt2819 >> 7;
-          var6 = var3.anInt2829 >> 7;
+          var6 = var3.sceneY >> 7;
           if (var5 >= 0 && var5 < 104 && var6 >= 0 && var6 < 104) {
             ++DummyClass9.anIntArrayArray4010[var5][var6];
           }
@@ -11081,7 +11088,7 @@ public class GlobalStatics_9 {
 
     label200:
     for (var2 = 0; var2 < DummyClass6.anInt2046; ++var2) {
-      var3 = GlobalStatics_8.npcs[GlobalStatics_2.anIntArray347[var2]];
+      var3 = GlobalStatics_8.NPCS[GlobalStatics_2.anIntArray347[var2]];
       long var15 =
           (long) GlobalStatics_2.anIntArray347[var2] << 32 | 536870912L;
       if (var3 != null && var3.hasConfiguration((byte) 17)
@@ -11090,11 +11097,11 @@ public class GlobalStatics_9 {
         var6 = var3.getSize();
         if (var6 != 1) {
           if ((var6 & 1) == 0 && (var3.anInt2819 & 127) == 0 &&
-              (127 & var3.anInt2829) == 0
+              (127 & var3.sceneY) == 0
               || (var6 & 1) == 1 && (var3.anInt2819 & 127) == 64
-              && (127 & var3.anInt2829) == 64) {
+              && (127 & var3.sceneY) == 64) {
             var7 = -(64 * var6) + var3.anInt2819 >> 7;
-            var8 = -(var6 * 64) + var3.anInt2829 >> 7;
+            var8 = -(var6 * 64) + var3.sceneY >> 7;
             var10 = var8 + var6;
             if (var8 < 0) {
               var8 = 0;
@@ -11141,10 +11148,10 @@ public class GlobalStatics_9 {
               }
             }
           }
-        } else if ((127 & var3.anInt2819) == 64 && (127 & var3.anInt2829)
+        } else if ((127 & var3.anInt2819) == 64 && (127 & var3.sceneY)
             == 64) {
           var7 = var3.anInt2819 >> 7;
-          var8 = var3.anInt2829 >> 7;
+          var8 = var3.sceneY >> 7;
           if (var7 < 0 || var7 >= 104 || var8 < 0 || var8 >= 104) {
             continue;
           }
@@ -11161,16 +11168,14 @@ public class GlobalStatics_9 {
 
         var3.anInt2831 = GlobalStatics_6
             .method1736(GlobalStatics_9.currentPlane, 1, var3.anInt2819,
-                var3.anInt2829);
+                var3.sceneY);
         DummyClass29
             .addNodeToSceneGraph(GlobalStatics_9.currentPlane, var3.anInt2819,
-                var3.anInt2829, var3.anInt2831, -64 + 64 * var6 + 60, var3,
+                var3.sceneY, var3.anInt2831, -64 + 64 * var6 + 60, var3,
                 var3.rotationY, var15,
                 var3.aBoolean2810);
       }
     }
-
-    var2 = -28 / ((var0 + 7) / 34);
   }
 
   public static void method1612(int var0) {
@@ -11291,7 +11296,7 @@ public class GlobalStatics_9 {
                   var12.anInt1897 = 0;
                   var12.anInt1900 = var8;
                   GlobalStatics_4
-                      .method1470(var2.anInt2829, var10, 183921384,
+                      .method1470(var2.sceneY, var10, 183921384,
                           var2.anInt2819, false,
                           0);
                 } else if (var11 == 2) {
@@ -11308,7 +11313,7 @@ public class GlobalStatics_9 {
                 var12.anInt1894 = 0;
                 var12.anInt1893 = 0;
                 GlobalStatics_4
-                    .method1470(var2.anInt2829, var10, 183921384,
+                    .method1470(var2.sceneY, var10, 183921384,
                         var2.anInt2819, false,
                         0);
               }
@@ -11375,7 +11380,7 @@ public class GlobalStatics_9 {
     GlobalStatics_6.anInt3590 = -1;
     GlobalStatics_10.method229(DummyClass12.anInt2027, 20827);
     GlobalStatics_9.localPlayer = new Player();
-    GlobalStatics_9.localPlayer.anInt2829 = 3000;
+    GlobalStatics_9.localPlayer.sceneY = 3000;
     GlobalStatics_9.localPlayer.anInt2819 = var1;
     if (GlRenderer.USE_OPENGL) {
       if (GlobalStatics_9.anInt1753 == 2) {
@@ -12465,7 +12470,7 @@ public class GlobalStatics_9 {
     int var1 =
         GlobalStatics_10.anInt1716 + (GlobalStatics_9.localPlayer.anInt2819
             >> 7);
-    int var2 = (GlobalStatics_9.localPlayer.anInt2829 >> 7)
+    int var2 = (GlobalStatics_9.localPlayer.sceneY >> 7)
         + GlobalStatics_9.anInt1152;
     if (var1 >= 3053 && var1 <= 3156 && var2 >= 3056 && var2 <= 3136) {
       GlobalStatics_9.anInt2622 = 1;

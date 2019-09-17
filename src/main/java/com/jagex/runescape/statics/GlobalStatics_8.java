@@ -91,7 +91,7 @@ public class GlobalStatics_8 {
           .create("; Expires=Thu)1 01)2Jan)21970 00:00:00 GMT; Max)2Age=0");
   public static boolean aBoolean29;
   public static int anInt30;
-  public static int anInt31;
+  public static int CURRENT_CAMERA_ZOOM;
   public static GameString aClass94_35 = GameStringStatics.create("Annuler");
   public static GameString aClass94_2198 = GameStringStatics.create("cyan:");
   public static boolean aBoolean2201;
@@ -126,7 +126,7 @@ public class GlobalStatics_8 {
   public static int anInt1521;
   public static GameString aClass94_1523 =
       GameStringStatics.create("Chargement en cours)3 Veuillez patienter)3");
-  public static short aShort1535 = 320;
+  public static short SOMETHING_ZOOM_1 = 320;
   public static GameString aClass94_5 =
       GameStringStatics.create(" from your ignore list first)3");
   public static GameString aClass94_4 = GlobalStatics_8.aClass94_5;
@@ -145,7 +145,7 @@ public class GlobalStatics_8 {
   public static int[] anIntArray3290;
   public static GameString aClass94_3291 = GameStringStatics
       .create("Schlie-8en");
-  public static NPC[] npcs = new NPC[0x8000];
+  public static NPC[] NPCS = new NPC[0x8000];
   public static int anInt3293;
   public static GameString aClass94_3295;
   public static long aLong3296;
@@ -166,17 +166,17 @@ public class GlobalStatics_8 {
       var0.anInt210 = var0.anInt166;
     } else {
       if (var0.aByte162 == 1) {
-        var0.anInt210 = (var2 - var0.anInt193) / 2 + var0.anInt166;
+        var0.anInt210 = (var2 - var0.zoom) / 2 + var0.anInt166;
       } else {
         if (var0.aByte162 == 2) {
-          var0.anInt210 = var2 - var0.anInt193 - var0.anInt166;
+          var0.anInt210 = var2 - var0.zoom - var0.anInt166;
         } else if (var0.aByte162 != 3) {
           if (var0.aByte162 == 4) {
             var0.anInt210 =
-                (var2 * var0.anInt166 >> 14) + (-var0.anInt193 + var2) / 2;
+                (var2 * var0.anInt166 >> 14) + (-var0.zoom + var2) / 2;
           } else {
             var0.anInt210 =
-                -(var2 * var0.anInt166 >> 14) - var0.anInt193 + var2;
+                -(var2 * var0.anInt166 >> 14) - var0.zoom + var2;
           }
         } else {
           var0.anInt210 = var0.anInt166 * var2 >> 14;
@@ -209,8 +209,8 @@ public class GlobalStatics_8 {
             || var0.anInt187 == 0)) {
       if (var0.anInt210 < 0) {
         var0.anInt210 = 0;
-      } else if (var0.anInt193 + var0.anInt210 > var2) {
-        var0.anInt210 = var2 - var0.anInt193;
+      } else if (var0.zoom + var0.anInt210 > var2) {
+        var0.anInt210 = var2 - var0.zoom;
       }
 
       if (var0.anInt306 < 0) {
@@ -286,7 +286,7 @@ public class GlobalStatics_8 {
       int var6 = 128 * var0.anInt2823 + var0.getSize() * 64;
       int var7 = 128 * var0.anInt2798 + var0.getSize() * 64;
       var0.anInt2819 = (var3 * var6 + var4 * (var2 - var3)) / var2;
-      var0.anInt2829 = (var7 * var3 + var5 * (var2 - var3)) / var2;
+      var0.sceneY = (var7 * var3 + var5 * (var2 - var3)) / var2;
     }
 
     if (var1 <= -51) {
@@ -1378,7 +1378,7 @@ public class GlobalStatics_8 {
 
       NPC var11;
       if (var4 == 19) {
-        var11 = GlobalStatics_8.npcs[var5];
+        var11 = GlobalStatics_8.NPCS[var5];
         if (var11 != null) {
           GlobalStatics_9
               .method582(GlobalStatics_9.localPlayer.waypointsY[0], 0, 1, false,
@@ -1396,7 +1396,7 @@ public class GlobalStatics_8 {
       }
 
       if (var4 == 17) {
-        var11 = GlobalStatics_8.npcs[var5];
+        var11 = GlobalStatics_8.NPCS[var5];
         if (var11 != null) {
           GlobalStatics_9
               .method582(GlobalStatics_9.localPlayer.waypointsY[0], 0, 1, false,
@@ -1461,7 +1461,7 @@ public class GlobalStatics_8 {
       }
 
       if (var4 == 45) {
-        var11 = GlobalStatics_8.npcs[var5];
+        var11 = GlobalStatics_8.NPCS[var5];
         if (var11 != null) {
           GlobalStatics_9
               .method582(GlobalStatics_9.localPlayer.waypointsY[0], 0, 1, false,
@@ -1592,7 +1592,7 @@ public class GlobalStatics_8 {
               GlobalStatics_9.secureBuffer
                   .writeShort(GlobalStatics_9.localPlayer.anInt2819);
               GlobalStatics_9.secureBuffer
-                  .writeShort(GlobalStatics_9.localPlayer.anInt2829);
+                  .writeShort(GlobalStatics_9.localPlayer.sceneY);
               GlobalStatics_9.secureBuffer
                   .writeByte(GlobalStatics_4.anInt1692);
               GlobalStatics_9.secureBuffer.writeByte(63);
@@ -1606,7 +1606,7 @@ public class GlobalStatics_8 {
         GlobalStatics_0.anInt638 = 2;
         GlobalStatics_7.anInt4062 = DummyClass36.anInt2614;
         GlobalStatics_9.anInt1053 = DummyClass5.anInt2993;
-        var11 = GlobalStatics_8.npcs[var5];
+        var11 = GlobalStatics_8.NPCS[var5];
         if (var11 != null) {
           NpcConfiguration var9 = var11.config;
           if (var9.anIntArray1292 != null) {
@@ -1789,7 +1789,7 @@ public class GlobalStatics_8 {
       }
 
       if (var4 == 4) {
-        var11 = GlobalStatics_8.npcs[var5];
+        var11 = GlobalStatics_8.NPCS[var5];
         if (var11 != null) {
           GlobalStatics_9
               .method582(GlobalStatics_9.localPlayer.waypointsY[0], 0, 1, false,
@@ -1934,7 +1934,7 @@ public class GlobalStatics_8 {
         }
 
         if (var4 == 2) {
-          var11 = GlobalStatics_8.npcs[var5];
+          var11 = GlobalStatics_8.NPCS[var5];
           if (var11 != null) {
             GlobalStatics_9
                 .method582(GlobalStatics_9.localPlayer.waypointsY[0], 0, 1,
@@ -1970,7 +1970,7 @@ public class GlobalStatics_8 {
         }
 
         if (var4 == 26) {
-          var11 = GlobalStatics_8.npcs[var5];
+          var11 = GlobalStatics_8.NPCS[var5];
           if (var11 != null) {
             ++GlobalStatics_9.anInt3439;
             GlobalStatics_9
@@ -2399,7 +2399,7 @@ public class GlobalStatics_8 {
             }
 
             if (var4 == 16) {
-              var11 = GlobalStatics_8.npcs[var5];
+              var11 = GlobalStatics_8.NPCS[var5];
               if (var11 != null) {
                 ++GlobalStatics_9.anInt3677;
                 GlobalStatics_9
@@ -2670,7 +2670,7 @@ public class GlobalStatics_8 {
           var15 = var5;
         } else {
           int var16 = var10 + var9.anInt168;
-          int var17 = var11 + var9.anInt193;
+          int var17 = var11 + var9.zoom;
           if (var9.anInt187 == 9) {
             ++var16;
             ++var17;
@@ -2848,7 +2848,7 @@ public class GlobalStatics_8 {
                               / GlobalStatics_4.aFloat727);
                       var29 =
                           (int) ((DummyClass36.anInt2614 - var11
-                              - var9.anInt193 / 2)
+                              - var9.zoom / 2)
                               * 2.0D
                               / GlobalStatics_4.aFloat727);
                       var21 = GlobalStatics_9.anInt3536 + var19;
@@ -2903,7 +2903,7 @@ public class GlobalStatics_8 {
                     GlobalStatics_10.method253(-22611, var9.anInt168,
                         GlobalStatics_0.anInt1709
                             - var11,
-                        GlobalStatics_9.anInt1676 - var10, var9.anInt193);
+                        GlobalStatics_9.anInt1676 - var10, var9.zoom);
                   }
                   continue;
                 }
@@ -3260,11 +3260,11 @@ public class GlobalStatics_8 {
               DummyClass29.aClass11_439 = var9;
             }
 
-            if (var9.anInt252 > var9.anInt193) {
+            if (var9.anInt252 > var9.zoom) {
               DummyClass20
                   .method1819(
                       GlobalStatics_0.anInt1709,
-                      var9.anInt193, var9,
+                      var9.zoom, var9,
                       (byte) -101,
                       GlobalStatics_9.anInt1676, var10 + var9.anInt168, var11,
                       var9.anInt252);
@@ -3732,7 +3732,7 @@ public class GlobalStatics_8 {
     GlobalStatics_8.anIntArray3290 = null;
     GlobalStatics_8.aClass94_3298 = null;
     GlobalStatics_8.aClass94_3291 = null;
-    GlobalStatics_8.npcs = null;
+    GlobalStatics_8.NPCS = null;
     GlobalStatics_8.aClass94_3295 = null;
   }
 

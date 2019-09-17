@@ -30,7 +30,7 @@ public class GLStatics {
   public static ITextureCache textureCache;
   public static boolean aBoolean1685 = true;
   public static int CAMERA_TILE_Y;
-  public static int VIEWPORT_SIZE;
+  public static int CURRENT_VIEWPORT_SIZE;
   public static boolean[][] adjacentTileOnScreen;
   public static int anInt1137 = 2;
   public static float[] FOG_COLOR = new float[4];

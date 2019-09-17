@@ -20,8 +20,9 @@ public final class CommonGL {
         GlRenderer.GL
             .glColor4fv(GLStatics.method1705(var2.anInt2355, 0),
                 0);
+        //TODO 201.5F
         float var3 = 201.5F - (var2.aBoolean2364 ? 1.0F : 0.5F);
-        var2.method149(GLStatics.sceneGraphTiles, var3, true);
+        var2.renderSceneGroundTiles(GLStatics.sceneGraphTiles, var3);
       }
     }
 
@@ -49,6 +50,8 @@ public final class CommonGL {
       if (array[0] != null) {
         for (int y = 0; y < array[0].length; ++y) {
           SomethingGl0 var28 = array[0][y];
+
+          //TODO 251.5F -
           float var26 = 251.5F - (var28.aBoolean2364 ? 1.0F : 0.5F);
           if (var28.anInt2355 != GLStatics.anInt1244) {
             GLStatics.anInt1244 = var28.anInt2355;
@@ -56,32 +59,35 @@ public final class CommonGL {
             GlEnvironment.setFogColor(GLStatics.calculateFogColor());
           }
 
-          var28.method149(GLStatics.sceneGraphTiles, var26, false);
+          var28.renderSceneGroundTiles(GLStatics.sceneGraphTiles, var26);
         }
 
         MaterialShader3.method2253();
       }
     } else {
 
-      //TODO this draws ground tiles
-      for (int x = GLStatics.anInt3419; x < GLStatics.anInt2456; ++x) {
-        for (int y = 0; y < array[x].length; ++y) {
-          SomethingGl0 var25 = array[x][y];
+//      //TODO this draws ground tiles
+      for (int plane = GLStatics.anInt3419; plane < GLStatics.anInt2456; ++plane) {
+        for (int y = 0; y < array[plane].length; ++y) {
+          SomethingGl0 var25 = array[plane][y];
+          //TODO was 201.5F
           float var33 =
-              201.5F - GlobalStatics_6.NEAR * x - (var25.aBoolean2364 ? 1.0F : 0.5F);
+              201.5F - GlobalStatics_6.NEAR * plane - (var25.aBoolean2364 ? 1.0F
+                  : 0.5F);
           if (var25.materialId != -1
               && GLStatics.textureCache.method18(var25.materialId, 255) == 4
               && GLStatics.aBoolean1685) {
             GLStatics.method535(var25.anInt2355);
           }
 
-          var25.method149(GLStatics.sceneGraphTiles, var33, false);
+          var25.renderSceneGroundTiles(GLStatics.sceneGraphTiles, var33);
         }
 
-        if (x == 0 && GLStatics.anInt1137 > 0) {
+        if (plane == 0 && GLStatics.anInt1137 > 0) {
+          //TODO 101.5F
           GlRenderer.method1832(101.5F);
           SomethingShadows.drawShadows(GLStatics.CAMERA_TILE_X,
-              GLStatics.CAMERA_TILE_Y, GLStatics.VIEWPORT_SIZE,
+              GLStatics.CAMERA_TILE_Y, GLStatics.CURRENT_VIEWPORT_SIZE,
               GLStatics.adjacentTileOnScreen);
         }
       }

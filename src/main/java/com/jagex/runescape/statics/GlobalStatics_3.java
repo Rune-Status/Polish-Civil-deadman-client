@@ -503,7 +503,7 @@ public class GlobalStatics_3 {
     }
 
     for (var1 = 0; var1 < 0x8000; ++var1) {
-      GlobalStatics_8.npcs[var1] = null;
+      GlobalStatics_8.NPCS[var1] = null;
     }
 
     GlobalStatics_9.localPlayer = GlobalStatics_9.players[2047] = new Player();

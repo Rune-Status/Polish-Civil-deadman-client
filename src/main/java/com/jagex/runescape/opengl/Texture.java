@@ -226,7 +226,8 @@ public final class Texture extends SubNode {
                 buffer
             );
             GlRenderer.GL.glTexParameteri(GL.GL_TEXTURE_2D, 10241, 9987);
-            GlRenderer.GL.glTexParameteri(GL.GL_TEXTURE_2D, 10240, GL.GL_LINEAR);
+            GlRenderer.GL
+                .glTexParameteri(GL.GL_TEXTURE_2D, 10240, GL.GL_LINEAR);
             DummyClass33.textureMemory +=
                 4 * buffer.limit() / 3 - this.anInt3796;
             this.anInt3796 = buffer.limit() * 4 / 3;
@@ -243,7 +244,8 @@ public final class Texture extends SubNode {
                 size >>= 1;
                 if (size == 0) {
                   GlRenderer.GL.glTexParameteri(GL.GL_TEXTURE_2D, 10241, 9987);
-                  GlRenderer.GL.glTexParameteri(GL.GL_TEXTURE_2D, 10240, GL.GL_LINEAR);
+                  GlRenderer.GL
+                      .glTexParameteri(GL.GL_TEXTURE_2D, 10240, GL.GL_LINEAR);
                   DummyClass33.textureMemory +=
                       buffer.limit() * 4 / 3 - this.anInt3796;
                   this.anInt3796 = 4 * buffer.limit() / 3;
@@ -261,8 +263,10 @@ public final class Texture extends SubNode {
                       GL.GL_RGBA,
                       GL.GL_UNSIGNED_BYTE,
                       buffer);
-              GlRenderer.GL.glTexParameteri(GL.GL_TEXTURE_2D, 10241, GL.GL_LINEAR);
-              GlRenderer.GL.glTexParameteri(GL.GL_TEXTURE_2D, 10240, GL.GL_LINEAR);
+              GlRenderer.GL
+                  .glTexParameteri(GL.GL_TEXTURE_2D, 10241, GL.GL_LINEAR);
+              GlRenderer.GL
+                  .glTexParameteri(GL.GL_TEXTURE_2D, 10240, GL.GL_LINEAR);
               DummyClass33.textureMemory += buffer.limit() - this.anInt3796;
               this.anInt3796 = buffer.limit();
             }
@@ -378,62 +382,59 @@ public final class Texture extends SubNode {
   public static void method724(int var0) {
     DummyClass8.aClass93_4015.method1523();
     if (var0 > -106) {
-      Texture.method725(71);
+      Texture.method725();
     }
   }
 
-  public static void method725(int var0) {
-    int var1 = 67 / ((-60 - var0) / 41);
+  public static void method725() {
     if (DummyClass20.method1817((byte) 70) == 2) {
       byte var2 = (byte) (255 & GlobalStatics_6.anInt1127 - 4);
-      int var3 = GlobalStatics_6.anInt1127 % 104;
-
-      int var4;
-      int var5;
-      for (var4 = 0; var4 < 4; ++var4) {
-        for (var5 = 0; var5 < 104; ++var5) {
-          GlobalStatics_5.aByteArrayArrayArray2008[var4][var3][var5] = var2;
+      for (int plane = 0; plane < 4; ++plane) {
+        for (int y = 0; y < 104; ++y) {
+          int x = GlobalStatics_6.anInt1127 % 104;
+          GlobalStatics_5.aByteArrayArrayArray2008[plane][x][y] = var2;
         }
       }
 
       if (GlobalStatics_9.currentPlane != 3) {
-        for (var4 = 0; var4 < 2; ++var4) {
-          GlobalStatics_7.anIntArray686[var4] = -1000000;
-          GlobalStatics_9.anIntArray2696[var4] = 1000000;
-          DummyClass13.anIntArray2021[var4] = 0;
-          GlobalStatics_3.anIntArray1871[var4] = 1000000;
-          GlobalStatics_9.anIntArray3959[var4] = 0;
+        for (int x = 0; x < 2; ++x) {
+          GlobalStatics_7.anIntArray686[x] = -1000000;
+          GlobalStatics_9.anIntArray2696[x] = 1000000;
+          DummyClass13.anIntArray2021[x] = 0;
+          GlobalStatics_3.anIntArray1871[x] = 1000000;
+          GlobalStatics_9.anIntArray3959[x] = 0;
         }
 
         if (GlobalStatics_9.anInt1753 == 1) {
           if ((4
               & GlobalStatics_10.tileFlags[GlobalStatics_9.currentPlane][
               GlobalStatics_9.localPlayer.anInt2819 >> 7][
-              GlobalStatics_9.localPlayer.anInt2829 >> 7])
+              GlobalStatics_9.localPlayer.sceneY >> 7])
               != 0) {
             GlobalStatics_9.method2031((byte) -85, false,
                 GlobalStatics_9.localPlayer.anInt2819 >> 7,
-                GlobalStatics_9.localPlayer.anInt2829 >> 7,
+                GlobalStatics_9.localPlayer.sceneY >> 7,
                 GLStatics.sceneGraphTiles, 0);
           }
 
           if (DummyClass17.SCENE_CAMERA_PITCH < 310) {
-            int var7 = GlobalStatics_9.localPlayer.anInt2829 >> 7;
-            var5 = DummyClass49.SCENE_CAMERA_Z >> 7;
+            int var7 = GlobalStatics_9.localPlayer.sceneY >> 7;
+            int var6 = GlobalStatics_9.localPlayer.anInt2819 >> 7;
+            int x = GlobalStatics_9.SCENE_CAMERA_X >> 7;
+            int y = DummyClass49.SCENE_CAMERA_Z >> 7;
+
             int var9;
-            if (var5 < var7) {
-              var9 = var7 - var5;
+            if (y < var7) {
+              var9 = var7 - y;
             } else {
-              var9 = -var7 + var5;
+              var9 = -var7 + y;
             }
 
-            var4 = GlobalStatics_9.SCENE_CAMERA_X >> 7;
-            int var6 = GlobalStatics_9.localPlayer.anInt2819 >> 7;
             int var8;
-            if (var6 > var4) {
-              var8 = -var4 + var6;
+            if (var6 > x) {
+              var8 = -x + var6;
             } else {
-              var8 = -var6 + var4;
+              var8 = -var6 + x;
             }
 
             int var10;
@@ -442,36 +443,36 @@ public final class Texture extends SubNode {
               var11 = 0x8000;
               var10 = var9 * 65536 / var8;
 
-              while (var6 != var4) {
-                if (var6 <= var4) {
-                  --var4;
+              while (var6 != x && x > 0 && y > 0) {
+                if (var6 <= x) {
+                  --x;
                 } else {
-                  ++var4;
+                  ++x;
                 }
 
                 if ((
-                    GlobalStatics_10.tileFlags[GlobalStatics_9.currentPlane][var4][var5]
+                    GlobalStatics_10.tileFlags[GlobalStatics_9.currentPlane][x][y]
                         & 4) != 0) {
-                  GlobalStatics_9.method2031((byte) -29, false, var4, var5,
+                  GlobalStatics_9.method2031((byte) -29, false, x, y,
                       GLStatics.sceneGraphTiles, 1);
                   break;
                 }
 
                 var11 += var10;
                 if (var11 >= 65536) {
-                  if (var5 >= var7) {
-                    if (var7 < var5) {
-                      --var5;
+                  if (y >= var7) {
+                    if (var7 < y) {
+                      --y;
                     }
                   } else {
-                    ++var5;
+                    ++y;
                   }
 
                   var11 -= 65536;
                   if ((4
-                      & GlobalStatics_10.tileFlags[GlobalStatics_9.currentPlane][var4][var5])
+                      & GlobalStatics_10.tileFlags[GlobalStatics_9.currentPlane][x][y])
                       != 0) {
-                    GlobalStatics_9.method2031((byte) -120, false, var4, var5,
+                    GlobalStatics_9.method2031((byte) -120, false, x, y,
                         GLStatics.sceneGraphTiles, 1);
                     break;
                   }
@@ -481,34 +482,34 @@ public final class Texture extends SubNode {
               var11 = 0x8000;
               var10 = 65536 * var8 / var9;
 
-              while (var5 != var7) {
-                if (var5 < var7) {
-                  ++var5;
-                } else if (var5 > var7) {
-                  --var5;
+              while (y != var7 && x > 0 && y > 0) {
+                if (y < var7) {
+                  ++y;
+                } else if (y > var7) {
+                  --y;
                 }
 
                 if ((4
-                    & GlobalStatics_10.tileFlags[GlobalStatics_9.currentPlane][var4][var5])
+                    & GlobalStatics_10.tileFlags[GlobalStatics_9.currentPlane][x][y])
                     != 0) {
-                  GlobalStatics_9.method2031((byte) -13, false, var4, var5,
+                  GlobalStatics_9.method2031((byte) -13, false, x, y,
                       GLStatics.sceneGraphTiles, 1);
                   break;
                 }
 
                 var11 += var10;
                 if (var11 >= 65536) {
-                  if (var6 > var4) {
-                    ++var4;
-                  } else if (var6 < var4) {
-                    --var4;
+                  if (var6 > x) {
+                    ++x;
+                  } else if (var6 < x) {
+                    --x;
                   }
 
                   var11 -= 65536;
                   if ((4
-                      & GlobalStatics_10.tileFlags[GlobalStatics_9.currentPlane][var4][var5])
+                      & GlobalStatics_10.tileFlags[GlobalStatics_9.currentPlane][x][y])
                       != 0) {
-                    GlobalStatics_9.method2031((byte) -37, false, var4, var5,
+                    GlobalStatics_9.method2031((byte) -37, false, x, y,
                         GLStatics.sceneGraphTiles, 1);
                     break;
                   }
@@ -517,11 +518,11 @@ public final class Texture extends SubNode {
             }
           }
         } else {
-          var4 = GlobalStatics_6
+          int x = GlobalStatics_6
               .method1736(GlobalStatics_9.currentPlane, 1,
                   GlobalStatics_9.SCENE_CAMERA_X,
                   DummyClass49.SCENE_CAMERA_Z);
-          if (var4 - GlobalStatics_7.SCENE_CAMERA_Y < 800 &&
+          if (x - GlobalStatics_7.SCENE_CAMERA_Y < 800 &&
               (4
                   & GlobalStatics_10.tileFlags[GlobalStatics_9.currentPlane][
                   GlobalStatics_9.SCENE_CAMERA_X

@@ -567,7 +567,7 @@ public final class DummyClass37 {
                     var17 = var6 - 1;
                     var18 = 2047 & var17;
                     var15 = 15 & var17 >> 11;
-                    var16 = GlobalStatics_8.npcs[var18];
+                    var16 = GlobalStatics_8.NPCS[var18];
                   } else {
                     var17 = -1 - var6;
                     var15 = (31085 & var17) >> 11;

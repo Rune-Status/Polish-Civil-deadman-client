@@ -24,7 +24,7 @@ public final class DummyClass44 {
   public static void method1207(int var0) {
     for (int var1 = 0; var1 < DummyClass6.anInt2046; ++var1) {
       int var2 = GlobalStatics_2.anIntArray347[var1];
-      NPC var3 = GlobalStatics_8.npcs[var2];
+      NPC var3 = GlobalStatics_8.NPCS[var2];
       if (var3 != null) {
         GlobalStatics_11.method68(var3.config.size, 2279, var3);
       }

@@ -74,8 +74,9 @@ import java.util.TimeZone;
 
 public class GlobalStatics_6 {
 
-  public static int FAR = 512 * 28;
+  public static int FAR = 128 * 104;
   public static int NEAR = 50;
+
   public static GameString aClass94_3582 = GameStringStatics.create("K");
   public static GameString aClass94_3586 = GlobalStatics_6.aClass94_3582;
   public static GameString aClass94_3584 = GlobalStatics_6.aClass94_3582;
@@ -450,59 +451,54 @@ public class GlobalStatics_6 {
     GLStatics.CAMERA_TILE_X = cameraX / 128;
     GLStatics.CAMERA_TILE_Y = cameraZ / 128;
     GLStatics.viewportLowerX =
-        GLStatics.CAMERA_TILE_X - GLStatics.VIEWPORT_SIZE;
+        GLStatics.CAMERA_TILE_X - GLStatics.CURRENT_VIEWPORT_SIZE;
     if (GLStatics.viewportLowerX < 0) {
       GLStatics.viewportLowerX = 0;
     }
 
     GLStatics.viewportLowerZ =
-        GLStatics.CAMERA_TILE_Y - GLStatics.VIEWPORT_SIZE;
+        GLStatics.CAMERA_TILE_Y - GLStatics.CURRENT_VIEWPORT_SIZE;
     if (GLStatics.viewportLowerZ < 0) {
       GLStatics.viewportLowerZ = 0;
     }
 
     GLStatics.viewportUpperX =
-        GLStatics.CAMERA_TILE_X + GLStatics.VIEWPORT_SIZE;
+        GLStatics.CAMERA_TILE_X + GLStatics.CURRENT_VIEWPORT_SIZE;
     if (GLStatics.viewportUpperX > GlobalStatics_4.SCENE_WIDTH) {
       GLStatics.viewportUpperX = GlobalStatics_4.SCENE_WIDTH;
     }
 
     GlobalStatics_9.viewportUpperZ =
-        GLStatics.CAMERA_TILE_Y + GLStatics.VIEWPORT_SIZE;
+        GLStatics.CAMERA_TILE_Y + GLStatics.CURRENT_VIEWPORT_SIZE;
     if (GlobalStatics_9.viewportUpperZ > GlobalStatics_1.SCENE_HEIGHT) {
       GlobalStatics_9.viewportUpperZ = GlobalStatics_1.SCENE_HEIGHT;
     }
 
-    int far;
-    if (GlRenderer.USE_OPENGL) {
-      far = GlobalStatics_6.FAR;
-    } else {
-      far = 3500;
-    }
-
+    int far = GlobalStatics_6.FAR;
     int offsetX;
     int offsetZ;
     for (
         offsetX = 0;
         offsetX
-            < GLStatics.VIEWPORT_SIZE + GLStatics.VIEWPORT_SIZE
+            < GLStatics.CURRENT_VIEWPORT_SIZE + GLStatics.CURRENT_VIEWPORT_SIZE
             + 2; offsetX++) {
       for (
           offsetZ = 0;
           offsetZ
-              < GLStatics.VIEWPORT_SIZE + GLStatics.VIEWPORT_SIZE
+              < GLStatics.CURRENT_VIEWPORT_SIZE
+              + GLStatics.CURRENT_VIEWPORT_SIZE
               + 2; offsetZ++) {
         int sceneX =
-            (offsetX - GLStatics.VIEWPORT_SIZE << 7) - (
+            (offsetX - GLStatics.CURRENT_VIEWPORT_SIZE << 7) - (
                 GlobalStatics_9.CAMERA_X & 127);
         int sceneZ =
-            (offsetZ - GLStatics.VIEWPORT_SIZE << 7) - (
+            (offsetZ - GLStatics.CURRENT_VIEWPORT_SIZE << 7) - (
                 GlobalStatics_9.CAMERA_Z & 127);
         int sceneTileX =
             offsetX + GLStatics.CAMERA_TILE_X
-                - GLStatics.VIEWPORT_SIZE;
+                - GLStatics.CURRENT_VIEWPORT_SIZE;
         int sceneTileZ = offsetZ + GLStatics.CAMERA_TILE_Y
-            - GLStatics.VIEWPORT_SIZE;
+            - GLStatics.CURRENT_VIEWPORT_SIZE;
         if (sceneTileX >= 0 && sceneTileZ >= 0
             && sceneTileX < GlobalStatics_4.SCENE_WIDTH
             && sceneTileZ < GlobalStatics_1.SCENE_HEIGHT) {
@@ -533,12 +529,13 @@ public class GlobalStatics_6 {
     for (
         offsetX = 0;
         offsetX
-            < GLStatics.VIEWPORT_SIZE + GLStatics.VIEWPORT_SIZE
+            < GLStatics.CURRENT_VIEWPORT_SIZE + GLStatics.CURRENT_VIEWPORT_SIZE
             + 1; offsetX++) {
       for (
           offsetZ = 0;
           offsetZ
-              < GLStatics.VIEWPORT_SIZE + GLStatics.VIEWPORT_SIZE
+              < GLStatics.CURRENT_VIEWPORT_SIZE
+              + GLStatics.CURRENT_VIEWPORT_SIZE
               + 1; offsetZ++) {
         GLStatics.adjacentTileOnScreen[offsetX][offsetZ] =
             GlobalStatics_9.tileOnScreen[offsetX][offsetZ]
@@ -1863,7 +1860,7 @@ public class GlobalStatics_6 {
     }
   }
 
-  public static void method1095(int x, int var1, int var2, Widget[] var3,
+  public static void method1095(int x, int var1, int var2, Widget[] widgets,
       int width, int var5, int y,
       int height, byte var8, int var9) {
     if (GlRenderer.USE_OPENGL) {
@@ -1873,45 +1870,45 @@ public class GlobalStatics_6 {
       DummyClass40.method1134();
     }
 
-    for (Widget var11 : var3) {
-      if (var11 != null && (var11.anInt190 == var5
-          || var5 == 0xabcdabcd && var11 == DummyClass42.aClass11_886)) {
+    for (Widget widget : widgets) {
+      if (widget != null && (widget.anInt190 == var5
+          || var5 == 0xabcdabcd && widget == DummyClass42.aClass11_886)) {
         int var12;
         if (var9 == -1) {
           GlobalStatics_5.quadx0[GlobalStatics_9.widgetQuads] =
-              var2 + var11.anInt306;
+              var2 + widget.anInt306;
           GlobalStatics_9.quady0[GlobalStatics_9.widgetQuads] =
-              var11.anInt210 + var1;
-          GlTexture2d.quadx1[GlobalStatics_9.widgetQuads] = var11.anInt168;
-          GlobalStatics_9.quady1[GlobalStatics_9.widgetQuads] = var11.anInt193;
+              widget.anInt210 + var1;
+          GlTexture2d.quadx1[GlobalStatics_9.widgetQuads] = widget.anInt168;
+          GlobalStatics_9.quady1[GlobalStatics_9.widgetQuads] = widget.zoom;
           var12 = GlobalStatics_9.widgetQuads++;
         } else {
           var12 = var9;
         }
 
-        var11.anInt204 = GlobalStatics_4.updateCycle;
-        var11.anInt292 = var12;
-        if (!var11.aBoolean233 || !GlobalStatics_8.method51(var11)) {
-          if (var11.anInt189 > 0) {
-            GlobalStatics_9.method81((byte) -128, var11);
+        widget.anInt204 = GlobalStatics_4.updateCycle;
+        widget.anInt292 = var12;
+        if (!widget.aBoolean233 || !GlobalStatics_8.method51(widget)) {
+          if (widget.anInt189 > 0) {
+            GlobalStatics_9.method81((byte) -128, widget);
           }
 
-          int var14 = var1 + var11.anInt210;
-          int var15 = var11.anInt223;
-          int var13 = var11.anInt306 + var2;
+          int var14 = var1 + widget.anInt210;
+          int var15 = widget.anInt223;
+          int var13 = widget.anInt306 + var2;
           if (GlobalStatics_9.aBoolean1040 && (
-              GlobalStatics_8.method44(var11).anInt2205 != 0
-                  || var11.anInt187 == 0) && var15 > 127) {
+              GlobalStatics_8.method44(widget).anInt2205 != 0
+                  || widget.anInt187 == 0) && var15 > 127) {
             var15 = 127;
           }
 
           int var17;
           int var16;
-          if (var11 == DummyClass42.aClass11_886) {
-            if (var5 != -1412584499 && !var11.aBoolean200) {
+          if (widget == DummyClass42.aClass11_886) {
+            if (var5 != -1412584499 && !widget.aBoolean200) {
               GlobalStatics_2.anInt3602 = var2;
               GlobalStatics_7.anInt1082 = var1;
-              GlobalStatics_9.aClass11Array1836 = var3;
+              GlobalStatics_9.aClass11Array1836 = widgets;
               continue;
             }
 
@@ -1923,10 +1920,10 @@ public class GlobalStatics_6 {
                 var17 = DummyClass21.anInt1761;
               }
 
-              if (var17 + var11.anInt193 > DummyClass18.aClass11_88.anInt193
+              if (var17 + widget.zoom > DummyClass18.aClass11_88.zoom
                   + DummyClass21.anInt1761) {
                 var17 =
-                    -var11.anInt193 + DummyClass18.aClass11_88.anInt193
+                    -widget.zoom + DummyClass18.aClass11_88.zoom
                         + DummyClass21.anInt1761;
               }
 
@@ -1937,15 +1934,15 @@ public class GlobalStatics_6 {
               }
 
               if (DummyClass18.aClass11_88.anInt168
-                  + GlobalStatics_10.anInt3156 < var11.anInt168 + var16) {
-                var16 = -var11.anInt168 + DummyClass18.aClass11_88.anInt168
+                  + GlobalStatics_10.anInt3156 < widget.anInt168 + var16) {
+                var16 = -widget.anInt168 + DummyClass18.aClass11_88.anInt168
                     + GlobalStatics_10.anInt3156;
               }
 
               var13 = var16;
             }
 
-            if (!var11.aBoolean200) {
+            if (!widget.aBoolean200) {
               var15 = 128;
             }
           }
@@ -1954,7 +1951,7 @@ public class GlobalStatics_6 {
           int var18;
           int var21;
           int var20;
-          if (var11.anInt187 == 2) {
+          if (widget.anInt187 == 2) {
             var19 = height;
             var18 = width;
             var17 = y;
@@ -1962,9 +1959,9 @@ public class GlobalStatics_6 {
           } else {
             var17 = var14 > y ? var14 : y;
             var16 = x < var13 ? var13 : x;
-            var20 = var11.anInt168 + var13;
-            var21 = var14 + var11.anInt193;
-            if (var11.anInt187 == 9) {
+            var20 = widget.anInt168 + var13;
+            var21 = var14 + widget.zoom;
+            if (widget.anInt187 == 9) {
               ++var21;
               ++var20;
             }
@@ -1973,7 +1970,7 @@ public class GlobalStatics_6 {
             var18 = var20 >= width ? width : var20;
           }
 
-          if (!var11.aBoolean233 || var18 > var16 && var17 < var19) {
+          if (!widget.aBoolean233 || var18 > var16 && var17 < var19) {
             int var23;
             int var22;
             int var25;
@@ -1982,16 +1979,16 @@ public class GlobalStatics_6 {
             int var29;
             int var28;
             int var47;
-            if (var11.anInt189 != 0) {
-              if (var11.anInt189 == 1337
-                  || var11.anInt189 == 1403 && GlRenderer.USE_OPENGL) {
-                GlobalStatics_8.aClass11_2091 = var11;
+            if (widget.anInt189 != 0) {
+              if (widget.anInt189 == 1337
+                  || widget.anInt189 == 1403 && GlRenderer.USE_OPENGL) {
+                GlobalStatics_8.aClass11_2091 = widget;
                 GlobalStatics_2.anInt2567 = var14;
                 DummyClass41.anInt865 = var13;
                 GlobalStatics_10
-                    .method338(-6403, var11.anInt193, var11.anInt189 == 1403,
+                    .method338(-6403, widget.zoom, widget.anInt189 == 1403,
                         var13,
-                        var11.anInt168, var14);
+                        widget.anInt168, var14);
                 if (GlRenderer.USE_OPENGL) {
                   GlUtils.clip(x, y, width, height);
                 } else {
@@ -2000,13 +1997,13 @@ public class GlobalStatics_6 {
                 continue;
               }
 
-              if (var11.anInt189 == 1338) {
-                if (!var11.method855(-30721)) {
+              if (widget.anInt189 == 1338) {
+                if (!widget.method855(-30721)) {
                   continue;
                 }
 
                 GlobalStatics_6
-                    .method125(var12, (byte) 59, var14, var13, var11);
+                    .method125(var12, (byte) 59, var14, var13, widget);
                 if (GlRenderer.USE_OPENGL) {
                   GlUtils.clip(x, y, width, height);
                 } else {
@@ -2025,16 +2022,16 @@ public class GlobalStatics_6 {
 
                 var20 = GlobalStatics_9.anInt1297 - var13;
                 var21 = -var14 + DummyClass36.anInt2612;
-                var22 = var11.anIntArray207[var21];
+                var22 = widget.anIntArray207[var21];
                 if (var20 < var22 || var20 > var22
-                    + var11.anIntArray291[var21]) {
+                    + widget.anIntArray291[var21]) {
                   continue;
                 }
 
-                var21 -= var11.anInt193 / 2;
+                var21 -= widget.zoom / 2;
                 var23 =
                     2047 & GlobalStatics_9.anInt531 + GlobalStatics_9.anInt3102;
-                var20 -= var11.anInt168 / 2;
+                var20 -= widget.anInt168 / 2;
                 var24 = GLStatics.SINE_TABLE[var23];
                 var25 = DummyClass40.COSINE_TABLE[var23];
                 var24 = (GlobalStatics_9.anInt3020 + 256) * var24 >> 8;
@@ -2042,7 +2039,7 @@ public class GlobalStatics_6 {
                 var47 = -(var24 * var20) + var25 * var21 >> 11;
                 var26 = var21 * var24 + var20 * var25 >> 11;
                 var28 = GlobalStatics_9.localPlayer.anInt2819 + var26 >> 7;
-                var29 = -var47 + GlobalStatics_9.localPlayer.anInt2829 >> 7;
+                var29 = -var47 + GlobalStatics_9.localPlayer.sceneY >> 7;
                 if (GlobalStatics_9.aBoolean1837
                     && (GlobalStatics_9.anInt2051 & 64)
                     != 0) {
@@ -2074,10 +2071,10 @@ public class GlobalStatics_6 {
                 continue;
               }
 
-              if (var11.anInt189 == 1339) {
-                if (var11.method855(-30721)) {
+              if (widget.anInt189 == 1339) {
+                if (widget.method855(-30721)) {
                   GlobalStatics_7
-                      .method1493(var13, var14, var11, var12, (byte) 59);
+                      .method1493(var13, var14, widget, var12, (byte) 59);
                   if (GlRenderer.USE_OPENGL) {
                     GlUtils.clip(x, y, width, height);
                   } else {
@@ -2087,10 +2084,10 @@ public class GlobalStatics_6 {
                 continue;
               }
 
-              if (var11.anInt189 == 1400) {
+              if (widget.anInt189 == 1400) {
                 GlobalStatics_0
-                    .method799(var13, 64, var14, var11.anInt193,
-                        var11.anInt168);
+                    .method799(var13, 64, var14, widget.zoom,
+                        widget.anInt168);
                 GlobalStatics_9.aBooleanArray3674[var12] = true;
                 DummyClass9.aBooleanArray4008[var12] = true;
                 if (GlRenderer.USE_OPENGL) {
@@ -2101,9 +2098,9 @@ public class GlobalStatics_6 {
                 continue;
               }
 
-              if (var11.anInt189 == 1401) {
+              if (widget.anInt189 == 1401) {
                 DummyClass3
-                    .method72(var13, var11.anInt193, var11.anInt168, 19481,
+                    .method72(var13, widget.zoom, widget.anInt168, 19481,
                         var14);
                 GlobalStatics_9.aBooleanArray3674[var12] = true;
                 DummyClass9.aBooleanArray4008[var12] = true;
@@ -2115,7 +2112,7 @@ public class GlobalStatics_6 {
                 continue;
               }
 
-              if (var11.anInt189 == 1402) {
+              if (widget.anInt189 == 1402) {
                 if (!GlRenderer.USE_OPENGL) {
                   GlobalStatics_4.method1768(var13, 95, var14);
                   GlobalStatics_9.aBooleanArray3674[var12] = true;
@@ -2124,12 +2121,12 @@ public class GlobalStatics_6 {
                 continue;
               }
 
-              if (var11.anInt189 == 1405) {
+              if (widget.anInt189 == 1405) {
                 if (!DummyClass29.aBoolean438) {
                   continue;
                 }
 
-                var20 = var11.anInt168 + var13;
+                var20 = widget.anInt168 + var13;
                 var21 = 15 + var14;
                 GlobalStatics_9.p12Font
                     .method688(GlobalStatics_9.concat(new GameString[]{
@@ -2201,16 +2198,16 @@ public class GlobalStatics_6 {
                 continue;
               }
 
-              if (var11.anInt189 == 1406) {
+              if (widget.anInt189 == 1406) {
                 GlobalStatics_8.anInt2115 = var14;
-                GlobalStatics_2.aClass11_3708 = var11;
+                GlobalStatics_2.aClass11_3708 = widget;
                 GlobalStatics_10.anInt4041 = var13;
                 continue;
               }
             }
 
             if (!DummyClass36.aBoolean2615) {
-              if (var11.anInt187 == 0 && var11.aBoolean219
+              if (widget.anInt187 == 0 && widget.aBoolean219
                   && GlobalStatics_9.anInt1297 >= var16
                   && DummyClass36.anInt2612 >= var17
                   && GlobalStatics_9.anInt1297 < var18
@@ -2228,39 +2225,39 @@ public class GlobalStatics_6 {
                   && var18 > GlobalStatics_9.anInt1297
                   && var19 > DummyClass36.anInt2612) {
                 GlobalStatics_6.method477(DummyClass36.anInt2612 - var14, true,
-                    -var13 + GlobalStatics_9.anInt1297, var11);
+                    -var13 + GlobalStatics_9.anInt1297, widget);
               }
             }
 
-            if (var11.anInt187 == 0) {
-              if (!var11.aBoolean233 && GlobalStatics_8.method51(var11)
-                  && DummyClass56.aClass11_1453 != var11) {
+            if (widget.anInt187 == 0) {
+              if (!widget.aBoolean233 && GlobalStatics_8.method51(widget)
+                  && DummyClass56.aClass11_1453 != widget) {
                 continue;
               }
 
-              if (!var11.aBoolean233) {
-                if (-var11.anInt193 + var11.anInt252 < var11.anInt208) {
-                  var11.anInt208 = -var11.anInt193 + var11.anInt252;
+              if (!widget.aBoolean233) {
+                if (-widget.zoom + widget.anInt252 < widget.anInt208) {
+                  widget.anInt208 = -widget.zoom + widget.anInt252;
                 }
 
-                if (var11.anInt208 < 0) {
-                  var11.anInt208 = 0;
+                if (widget.anInt208 < 0) {
+                  widget.anInt208 = 0;
                 }
               }
 
-              GlobalStatics_6.method1095(var16, -var11.anInt208 + var14,
-                  -var11.anInt247 + var13, var3, var18,
-                  var11.anInt279, var17, var19, (byte) 87, var12);
-              if (var11.aClass11Array262 != null) {
-                GlobalStatics_6.method1095(var16, -var11.anInt208 + var14,
-                    -var11.anInt247 + var13,
-                    var11.aClass11Array262, var18, var11.anInt279, var17, var19,
+              GlobalStatics_6.method1095(var16, -widget.anInt208 + var14,
+                  -widget.anInt247 + var13, widgets, var18,
+                  widget.anInt279, var17, var19, (byte) 87, var12);
+              if (widget.aClass11Array262 != null) {
+                GlobalStatics_6.method1095(var16, -widget.anInt208 + var14,
+                    -widget.anInt247 + var13,
+                    widget.aClass11Array262, var18, widget.anInt279, var17, var19,
                     (byte) 52, var12);
               }
 
               SomethingPacket151 var36 =
                   (SomethingPacket151) GlobalStatics_10.aClass130_3208.get(
-                      var11.anInt279);
+                      widget.anInt279);
               if (var36 != null) {
                 if (var36.anInt2603 == 0 && !DummyClass36.aBoolean2615
                     && GlobalStatics_9.anInt1297 >= var16 && var17
@@ -2291,35 +2288,35 @@ public class GlobalStatics_6 {
 
             if (GlobalStatics_0.aBooleanArray1712[var12]
                 || GlobalStatics_6.rectangleDebugType > 1) {
-              if (var11.anInt187 == 0 && !var11.aBoolean233
-                  && var11.anInt252 > var11.anInt193) {
+              if (widget.anInt187 == 0 && !widget.aBoolean233
+                  && widget.anInt252 > widget.zoom) {
                 GlobalStatics_10
-                    .method224((byte) 120, var11.anInt208, var11.anInt252,
-                        var11.anInt168 + var13, var14, var11.anInt193);
+                    .method224((byte) 120, widget.anInt208, widget.anInt252,
+                        widget.anInt168 + var13, var14, widget.zoom);
               }
 
-              if (var11.anInt187 != 1) {
+              if (widget.anInt187 != 1) {
                 boolean var39;
                 boolean var46;
-                if (var11.anInt187 == 2) {
+                if (widget.anInt187 == 2) {
                   var20 = 0;
 
-                  for (var21 = 0; var21 < var11.anInt244; ++var21) {
-                    for (var22 = 0; var11.anInt177 > var22; ++var22) {
-                      var24 = var14 + var21 * (32 + var11.anInt290);
-                      var23 = (var11.anInt285 + 32) * var22 + var13;
+                  for (var21 = 0; var21 < widget.anInt244; ++var21) {
+                    for (var22 = 0; widget.anInt177 > var22; ++var22) {
+                      var24 = var14 + var21 * (32 + widget.anInt290);
+                      var23 = (widget.anInt285 + 32) * var22 + var13;
                       if (var20 < 20) {
-                        var24 += var11.anIntArray300[var20];
-                        var23 += var11.anIntArray272[var20];
+                        var24 += widget.anIntArray300[var20];
+                        var23 += widget.anIntArray272[var20];
                       }
 
-                      if (var11.anIntArray254[var20] <= 0) {
-                        if (var11.anIntArray197 != null && var20 < 20) {
-                          AbstractDirectColorSprite var58 = var11
+                      if (widget.anIntArray254[var20] <= 0) {
+                        if (widget.anIntArray197 != null && var20 < 20) {
+                          AbstractDirectColorSprite var58 = widget
                               .method859(true, var20);
                           if (var58 == null) {
                             if (GlobalStatics_8.aBoolean6) {
-                              DummyClass29.method909(125, var11);
+                              DummyClass29.method909(125, widget);
                             }
                           } else {
                             var58.method643(var23, var24);
@@ -2328,25 +2325,25 @@ public class GlobalStatics_6 {
                       } else {
                         var39 = false;
                         var46 = false;
-                        var47 = var11.anIntArray254[var20] - 1;
+                        var47 = widget.anIntArray254[var20] - 1;
                         if (x < 32 + var23 && var23 < width && y < var24
                             + 32
                             && var24 < height
-                            || var11 == GlobalStatics_9.aClass11_1017
+                            || widget == GlobalStatics_9.aClass11_1017
                             && DummyClass18.anInt86 == var20) {
                           AbstractDirectColorSprite var54;
                           if (GlobalStatics_9.anInt3012 == 1
                               && DummyClass31.anInt1473 == var20
-                              && var11.anInt279 == GlTexture2d.anInt3764) {
+                              && widget.anInt279 == GlTexture2d.anInt3764) {
                             var54 =
                                 GlobalStatics_9
-                                    .method1707(2, var47, var11.aBoolean227,
-                                        var11.anIntArray317[var20], 0, 65536);
+                                    .method1707(2, var47, widget.aBoolean227,
+                                        widget.anIntArray317[var20], 0, 65536);
                           } else {
                             var54 =
                                 GlobalStatics_9
-                                    .method1707(1, var47, var11.aBoolean227,
-                                        var11.anIntArray317[var20], 3153952,
+                                    .method1707(1, var47, widget.aBoolean227,
+                                        widget.anIntArray317[var20], 3153952,
                                         65536);
                           }
 
@@ -2355,8 +2352,8 @@ public class GlobalStatics_6 {
                           }
 
                           if (var54 == null) {
-                            DummyClass29.method909(-106, var11);
-                          } else if (GlobalStatics_9.aClass11_1017 == var11
+                            DummyClass29.method909(-106, widget);
+                          } else if (GlobalStatics_9.aClass11_1017 == widget
                               && var20 == DummyClass18.anInt86) {
                             var25 = GlobalStatics_9.anInt1676
                                 - GlobalStatics_9.anInt2693;
@@ -2377,7 +2374,7 @@ public class GlobalStatics_6 {
 
                             var54.method637(var23 + var25, var24 + var26, 128);
                             if (var5 != -1) {
-                              Widget var51 = var3[var5 & 0xffff];
+                              Widget var51 = widgets[var5 & 0xffff];
                               int var31;
                               int var30;
                               if (GlRenderer.USE_OPENGL) {
@@ -2409,7 +2406,7 @@ public class GlobalStatics_6 {
 
                               if (var31 < 32 + var26 + var24
                                   && var51.anInt208
-                                  < -var51.anInt193 + var51.anInt252) {
+                                  < -var51.zoom + var51.anInt252) {
                                 var32 =
                                     (-var31 + 32 + var24 + var26)
                                         * GlobalStatics_7.loopCycle / 3;
@@ -2418,8 +2415,8 @@ public class GlobalStatics_6 {
                                 }
 
                                 if (-var51.anInt208 + var51.anInt252
-                                    - var51.anInt193 < var32) {
-                                  var32 = var51.anInt252 - var51.anInt193
+                                    - var51.zoom < var32) {
+                                  var32 = var51.anInt252 - var51.zoom
                                       - var51.anInt208;
                                 }
 
@@ -2428,7 +2425,7 @@ public class GlobalStatics_6 {
                                 DummyClass29.method909(-81, var51);
                               }
                             }
-                          } else if (var11 == GlobalStatics_5.aClass11_1933
+                          } else if (widget == GlobalStatics_5.aClass11_1933
                               && var20 == GlobalStatics_9.anInt1918) {
                             var54.method637(var23, var24, 128);
                           } else {
@@ -2440,175 +2437,175 @@ public class GlobalStatics_6 {
                       ++var20;
                     }
                   }
-                } else if (var11.anInt187 == 3) {
-                  if (GlobalStatics_9.method609(var11, 26)) {
-                    var20 = var11.anInt253;
-                    if (DummyClass56.aClass11_1453 == var11
-                        && var11.anInt222 != 0) {
-                      var20 = var11.anInt222;
+                } else if (widget.anInt187 == 3) {
+                  if (GlobalStatics_9.method609(widget, 26)) {
+                    var20 = widget.anInt253;
+                    if (DummyClass56.aClass11_1453 == widget
+                        && widget.anInt222 != 0) {
+                      var20 = widget.anInt222;
                     }
                   } else {
-                    var20 = var11.anInt218;
-                    if (var11 == DummyClass56.aClass11_1453
-                        && var11.anInt228 != 0) {
-                      var20 = var11.anInt228;
+                    var20 = widget.anInt218;
+                    if (widget == DummyClass56.aClass11_1453
+                        && widget.anInt228 != 0) {
+                      var20 = widget.anInt228;
                     }
                   }
 
                   if (var15 != 0) {
-                    if (var11.aBoolean226) {
+                    if (widget.aBoolean226) {
                       if (GlRenderer.USE_OPENGL) {
-                        GlUtils.fillQuad(var13, var14, var11.anInt168,
-                            var11.anInt193, var20,
+                        GlUtils.fillQuad(var13, var14, widget.anInt168,
+                            widget.zoom, var20,
                             256 - (var15 & 255));
                       } else {
-                        DummyClass47.method1312(var13, var14, var11.anInt168,
-                            var11.anInt193,
+                        DummyClass47.method1312(var13, var14, widget.anInt168,
+                            widget.zoom,
                             var20, 256 - (255 & var15));
                       }
                     } else if (GlRenderer.USE_OPENGL) {
-                      GlUtils.drawQuad(var13, var14, var11.anInt168,
-                          var11.anInt193, var20,
+                      GlUtils.drawQuad(var13, var14, widget.anInt168,
+                          widget.zoom, var20,
                           256 - (var15 & 255));
                     } else {
-                      DummyClass47.method1315(var13, var14, var11.anInt168,
-                          var11.anInt193, var20,
+                      DummyClass47.method1315(var13, var14, widget.anInt168,
+                          widget.zoom, var20,
                           -(var15 & 255) + 256);
                     }
-                  } else if (var11.aBoolean226) {
+                  } else if (widget.aBoolean226) {
                     if (GlRenderer.USE_OPENGL) {
-                      GlUtils.fillQuad(var13, var14, var11.anInt168,
-                          var11.anInt193, var20);
+                      GlUtils.fillQuad(var13, var14, widget.anInt168,
+                          widget.zoom, var20);
                     } else {
-                      DummyClass47.method1323(var13, var14, var11.anInt168,
-                          var11.anInt193,
+                      DummyClass47.method1323(var13, var14, widget.anInt168,
+                          widget.zoom,
                           var20);
                     }
                   } else if (!GlRenderer.USE_OPENGL) {
-                    DummyClass47.method1311(var13, var14, var11.anInt168,
-                        var11.anInt193, var20);
+                    DummyClass47.method1311(var13, var14, widget.anInt168,
+                        widget.zoom, var20);
                   } else {
                     GlUtils
-                        .drawQuad(var13, var14, var11.anInt168, var11.anInt193,
+                        .drawQuad(var13, var14, widget.anInt168, widget.zoom,
                             var20);
                   }
                 } else {
                   AbstractFont var34;
-                  if (var11.anInt187 == 4) {
-                    var34 = var11
+                  if (widget.anInt187 == 4) {
+                    var34 = widget
                         .method868(GlobalStatics_9.aClass109Array3270, 0);
                     if (var34 != null) {
-                      GameString var45 = var11.aClass94_232;
-                      if (GlobalStatics_9.method609(var11, 97)) {
-                        var21 = var11.anInt253;
-                        if (DummyClass56.aClass11_1453 == var11
-                            && var11.anInt222 != 0) {
-                          var21 = var11.anInt222;
+                      GameString var45 = widget.aClass94_232;
+                      if (GlobalStatics_9.method609(widget, 97)) {
+                        var21 = widget.anInt253;
+                        if (DummyClass56.aClass11_1453 == widget
+                            && widget.anInt222 != 0) {
+                          var21 = widget.anInt222;
                         }
 
-                        if (var11.aClass94_172.getLength() > 0) {
-                          var45 = var11.aClass94_172;
+                        if (widget.aClass94_172.getLength() > 0) {
+                          var45 = widget.aClass94_172;
                         }
                       } else {
-                        var21 = var11.anInt218;
-                        if (DummyClass56.aClass11_1453 == var11
-                            && var11.anInt228 != 0) {
-                          var21 = var11.anInt228;
+                        var21 = widget.anInt218;
+                        if (DummyClass56.aClass11_1453 == widget
+                            && widget.anInt228 != 0) {
+                          var21 = widget.anInt228;
                         }
                       }
 
-                      if (var11.aBoolean233 && var11.anInt192 != -1) {
+                      if (widget.aBoolean233 && widget.anInt192 != -1) {
                         ItemConfig var50 = DummyClass35
-                            .getItemConfig(var11.anInt192, (byte) 113);
+                            .getItemConfig(widget.anInt192, (byte) 113);
                         var45 = var50.aClass94_770;
                         if (var45 == null) {
                           var45 = GlobalStatics_4.aClass94_829;
                         }
 
-                        if ((var50.anInt764 == 1 || var11.anInt271 != 1)
-                            && var11.anInt271 != -1) {
+                        if ((var50.anInt764 == 1 || widget.anInt271 != 1)
+                            && widget.anInt271 != -1) {
                           var45 = GlobalStatics_9.concat(new GameString[]{
                               GlobalStatics_9.aClass94_3042, var45,
                               GlobalStatics_6.aClass94_2306,
                               GlobalStatics_0.method1013(
-                                  (byte) -125, var11.anInt271)
+                                  (byte) -125, widget.anInt271)
                           });
                         }
                       }
 
-                      if (GlobalStatics_10.aClass11_3087 == var11) {
-                        var21 = var11.anInt218;
+                      if (GlobalStatics_10.aClass11_3087 == widget) {
+                        var21 = widget.anInt218;
                         var45 = GlobalStatics_2.aClass94_2216;
                       }
 
-                      if (!var11.aBoolean233) {
-                        var45 = GlobalStatics_7.method1303(var11, var45, 0);
+                      if (!widget.aBoolean233) {
+                        var45 = GlobalStatics_7.method1303(widget, var45, 0);
                       }
 
-                      var34.draw(var45, var13, var14, var11.anInt168,
-                          var11.anInt193, var21,
-                          var11.aBoolean215 ? 0 : -1, var11.anInt194,
-                          var11.anInt225,
-                          var11.anInt205);
+                      var34.draw(var45, var13, var14, widget.anInt168,
+                          widget.zoom, var21,
+                          widget.aBoolean215 ? 0 : -1, widget.anInt194,
+                          widget.anInt225,
+                          widget.anInt205);
                     } else if (GlobalStatics_8.aBoolean6) {
-                      DummyClass29.method909(-13, var11);
+                      DummyClass29.method909(-13, widget);
                     }
-                  } else if (var11.anInt187 != 5) {
+                  } else if (widget.anInt187 != 5) {
                     ItemConfig var42;
-                    if (var11.anInt187 == 6) {
-                      boolean var41 = GlobalStatics_9.method609(var11, 110);
+                    if (widget.anInt187 == 6) {
+                      boolean var41 = GlobalStatics_9.method609(widget, 110);
                       AbstractModel var38 = null;
                       if (var41) {
-                        var21 = var11.anInt198;
+                        var21 = widget.anInt198;
                       } else {
-                        var21 = var11.anInt305;
+                        var21 = widget.anInt305;
                       }
 
                       var23 = 0;
-                      if (var11.anInt192 != -1) {
+                      if (widget.anInt192 != -1) {
                         var42 = DummyClass35
-                            .getItemConfig(var11.anInt192, (byte) 76);
+                            .getItemConfig(widget.anInt192, (byte) 76);
                         if (var42 != null) {
-                          var42 = var42.method1106(var11.anInt271, 78);
+                          var42 = var42.method1106(widget.anInt271, 78);
                           AnimationSequence var52 =
                               var21 == -1 ? null
                                   : GlobalStatics_8.method45(var21, (byte) -20);
                           var38 = var42
-                              .getModel(100, var11.anInt260, var11.anInt267,
+                              .getModel(100, widget.anInt260, widget.anInt267,
                                   var52, 1,
-                                  var11.anInt283);
+                                  widget.anInt283);
                           if (var38 == null) {
-                            DummyClass29.method909(116, var11);
+                            DummyClass29.method909(116, widget);
                           } else {
                             var23 = -var38.getMinimumY() / 2;
                           }
                         }
-                      } else if (var11.anInt202 != 5) {
+                      } else if (widget.anInt202 != 5) {
                         if (var21 == -1) {
-                          var38 = var11.method865(-1, null, -1, 126, 0, var41,
+                          var38 = widget.method865(-1, null, -1, 126, 0, var41,
                               GlobalStatics_9.localPlayer.appearance);
                           if (var38 == null && GlobalStatics_8.aBoolean6) {
-                            DummyClass29.method909(122, var11);
+                            DummyClass29.method909(122, widget);
                           }
                         } else {
                           AnimationSequence var48 = GlobalStatics_8
                               .method45(var21, (byte) -20);
-                          var38 = var11
-                              .method865(var11.anInt260, var48, var11.anInt283,
+                          var38 = widget
+                              .method865(widget.anInt260, var48, widget.anInt283,
                                   127,
-                                  var11.anInt267, var41,
+                                  widget.anInt267, var41,
                                   GlobalStatics_9.localPlayer.appearance);
                           if (var38 == null && GlobalStatics_8.aBoolean6) {
-                            DummyClass29.method909(3, var11);
+                            DummyClass29.method909(3, widget);
                           }
                         }
-                      } else if (var11.anInt201 == -1) {
+                      } else if (widget.anInt201 == -1) {
                         var38 =
                             DummyClass49.aClass52_1112
                                 .method1165(null, -1, null, null, 0, -1, 100,
                                     0, true, -1, -1);
                       } else {
-                        var24 = 2047 & var11.anInt201;
+                        var24 = 2047 & widget.anInt201;
                         if (var24 == GlobalStatics_10.localPlayerId) {
                           var24 = 2047;
                         }
@@ -2619,43 +2616,43 @@ public class GlobalStatics_6 {
                                 : GlobalStatics_8.method45(var21, (byte) -20);
                         if (var49 != null
                             && (int) var49.name.toBase37() << 11 == (
-                            -2048 & var11.anInt201)) {
+                            -2048 & widget.anInt201)) {
                           var38 =
                               var49.appearance
                                   .method1165(null, -1, null, var56, 0, -1,
                                       -126, 0,
-                                      true, var11.anInt283, 0);
+                                      true, widget.anInt283, 0);
                         }
                       }
 
                       if (var38 != null) {
-                        if (var11.anInt184 > 0) {
-                          var24 = (var11.anInt168 << 8) / var11.anInt184;
+                        if (widget.anInt184 > 0) {
+                          var24 = (widget.anInt168 << 8) / widget.anInt184;
                         } else {
                           var24 = 256;
                         }
 
-                        if (var11.anInt312 <= 0) {
+                        if (widget.anInt312 <= 0) {
                           var25 = 256;
                         } else {
-                          var25 = (var11.anInt193 << 8) / var11.anInt312;
+                          var25 = (widget.zoom << 8) / widget.anInt312;
                         }
 
-                        var26 = var13 + var11.anInt168 / 2 + (
-                            var24 * var11.anInt259
+                        var26 = var13 + widget.anInt168 / 2 + (
+                            var24 * widget.anInt259
                                 >> 8);
                         var47 =
-                            var11.anInt193 / 2 + var14 + (var25 * var11.anInt230
+                            widget.zoom / 2 + var14 + (var25 * widget.anInt230
                                 >> 8);
                         if (GlRenderer.USE_OPENGL) {
-                          if (var11.aBoolean181) {
-                            GlRenderer.ortho(var26, var47, var11.anInt164,
-                                var11.aShort293, var24,
+                          if (widget.aBoolean181) {
+                            GlRenderer.ortho(var26, var47, widget.anInt164,
+                                widget.aShort293, var24,
                                 var25);
                           } else {
                             GlRenderer.method1821(var26, var47, var24, var25);
-                            GlRenderer.method1825(var11.aShort169,
-                                1.5F * var11.aShort293);
+                            GlRenderer.method1825(widget.aShort169,
+                                1.5F * widget.aShort293);
                           }
 
                           GlRenderer.method1846();
@@ -2670,83 +2667,83 @@ public class GlobalStatics_6 {
                             GlobalStatics_11.aBoolean47 = false;
                           }
 
-                          if (var11.aBoolean309) {
+                          if (widget.aBoolean309) {
                             GlRenderer.method1851();
                           }
 
-                          var28 = GLStatics.SINE_TABLE[var11.rotationX0]
-                              * var11.anInt164
+                          var28 = GLStatics.SINE_TABLE[widget.rotationX0]
+                              * widget.anInt164
                               >> 16;
-                          var29 = var11.anInt164
-                              * DummyClass40.COSINE_TABLE[var11.rotationX0]
+                          var29 = widget.anInt164
+                              * DummyClass40.COSINE_TABLE[widget.rotationX0]
                               >> 16;
-                          if (var11.aBoolean233) {
-                            var38.draw(0, var11.rotationY, var11.rotationZ,
-                                var11.rotationX0,
-                                var11.anInt258, var11.anInt264 + var28 + var23,
-                                var11.anInt264 + var29, -1L);
+                          if (widget.aBoolean233) {
+                            var38.draw(0, widget.rotationY, widget.rotationZ,
+                                widget.rotationX0,
+                                widget.anInt258, widget.anInt264 + var28 + var23,
+                                widget.anInt264 + var29, -1L);
                           } else {
-                            var38.draw(0, var11.rotationY, 0, var11.rotationX0,
+                            var38.draw(0, widget.rotationY, 0, widget.rotationX0,
                                 0, var28, var29,
                                 -1L);
                           }
 
-                          if (var11.aBoolean309) {
+                          if (widget.aBoolean309) {
                             GlRenderer.method1830();
                           }
                         } else {
                           DummyClass40.method1145(var26, var47);
-                          var28 = GLStatics.SINE_TABLE[var11.rotationX0]
-                              * var11.anInt164
+                          var28 = GLStatics.SINE_TABLE[widget.rotationX0]
+                              * widget.anInt164
                               >> 16;
-                          var29 = var11.anInt164
-                              * DummyClass40.COSINE_TABLE[var11.rotationX0]
+                          var29 = widget.anInt164
+                              * DummyClass40.COSINE_TABLE[widget.rotationX0]
                               >> 16;
-                          if (!var11.aBoolean233) {
-                            var38.draw(0, var11.rotationY, 0, var11.rotationX0,
+                          if (!widget.aBoolean233) {
+                            var38.draw(0, widget.rotationY, 0, widget.rotationX0,
                                 0, var28, var29,
                                 -1L);
-                          } else if (var11.aBoolean181) {
+                          } else if (widget.aBoolean181) {
                             ((SoftwareModel) var38)
-                                .method1946(0, var11.rotationY,
-                                    var11.rotationZ, var11.rotationX0,
-                                    var11.anInt258,
-                                    var11.anInt264 + var23 + var28,
-                                    var29 + var11.anInt264,
-                                    var11.anInt164);
+                                .method1946(0, widget.rotationY,
+                                    widget.rotationZ, widget.rotationX0,
+                                    widget.anInt258,
+                                    widget.anInt264 + var23 + var28,
+                                    var29 + widget.anInt264,
+                                    widget.anInt164);
                           } else {
-                            var38.draw(0, var11.rotationY, var11.rotationZ,
-                                var11.rotationX0,
-                                var11.anInt258,
-                                var11.anInt264 + var28 + var23,
-                                var29 + var11.anInt264, -1L);
+                            var38.draw(0, widget.rotationY, widget.rotationZ,
+                                widget.rotationX0,
+                                widget.anInt258,
+                                widget.anInt264 + var28 + var23,
+                                var29 + widget.anInt264, -1L);
                           }
 
                           DummyClass40.method1141();
                         }
                       }
                     } else {
-                      if (var11.anInt187 == 7) {
-                        var34 = var11
+                      if (widget.anInt187 == 7) {
+                        var34 = widget
                             .method868(GlobalStatics_9.aClass109Array3270, 0);
                         if (var34 == null) {
                           if (GlobalStatics_8.aBoolean6) {
-                            DummyClass29.method909(-115, var11);
+                            DummyClass29.method909(-115, widget);
                           }
                           continue;
                         }
 
                         var21 = 0;
 
-                        for (var22 = 0; var11.anInt244 > var22; ++var22) {
-                          for (var23 = 0; var23 < var11.anInt177; ++var23) {
-                            if (var11.anIntArray254[var21] > 0) {
+                        for (var22 = 0; widget.anInt244 > var22; ++var22) {
+                          for (var23 = 0; var23 < widget.anInt177; ++var23) {
+                            if (widget.anIntArray254[var21] > 0) {
                               var42 = DummyClass35
-                                  .getItemConfig(var11.anIntArray254[var21] - 1,
+                                  .getItemConfig(widget.anIntArray254[var21] - 1,
                                       (byte) 104);
                               GameString var40;
                               if (var42.anInt764 != 1 &&
-                                  var11.anIntArray317[var21] == 1) {
+                                  widget.anIntArray317[var21] == 1) {
                                 var40 = GlobalStatics_9.concat(new GameString[]{
                                     GlobalStatics_9.aClass94_3042,
                                     var42.aClass94_770,
@@ -2759,25 +2756,25 @@ public class GlobalStatics_6 {
                                     GlobalStatics_6.aClass94_2306,
                                     GlobalStatics_0.method1013(
                                         (byte) -100,
-                                        var11.anIntArray317[var21])
+                                        widget.anIntArray317[var21])
                                 });
                               }
 
-                              var26 = var13 + var23 * (var11.anInt285 + 115);
-                              var47 = (var11.anInt290 + 12) * var22 + var14;
-                              if (var11.anInt194 == 0) {
+                              var26 = var13 + var23 * (widget.anInt285 + 115);
+                              var47 = (widget.anInt290 + 12) * var22 + var14;
+                              if (widget.anInt194 == 0) {
                                 var34.method681(var40, var26, var47,
-                                    var11.anInt218,
-                                    var11.aBoolean215 ? 0 : -1);
+                                    widget.anInt218,
+                                    widget.aBoolean215 ? 0 : -1);
                               } else {
-                                if (var11.anInt194 == 1) {
+                                if (widget.anInt194 == 1) {
                                   var34.draw(var40, 57 + var26, var47,
-                                      var11.anInt218,
-                                      var11.aBoolean215 ? 0 : -1);
+                                      widget.anInt218,
+                                      widget.aBoolean215 ? 0 : -1);
                                 } else {
                                   var34.method688(var40, -1 + var26 + 115,
-                                      var47, var11.anInt218,
-                                      var11.aBoolean215 ? 0 : -1);
+                                      var47, widget.anInt218,
+                                      widget.aBoolean215 ? 0 : -1);
                                 }
                               }
                             }
@@ -2787,15 +2784,15 @@ public class GlobalStatics_6 {
                         }
                       }
 
-                      if (var11.anInt187 == 8
-                          && DummyClass29.aClass11_439 == var11
+                      if (widget.anInt187 == 8
+                          && DummyClass29.aClass11_439 == widget
                           && GlobalStatics_3.anInt1109
                           == GlobalStatics_10.anInt3323) {
                         var21 = 0;
                         var20 = 0;
-                        GameString var43 = var11.aClass94_232;
+                        GameString var43 = widget.aClass94_232;
                         AbstractFont var35 = GlobalStatics_9.p12Font;
-                        var43 = GlobalStatics_7.method1303(var11, var43, 0);
+                        var43 = GlobalStatics_7.method1303(widget, var43, 0);
 
                         GameString var44;
                         while (var43.getLength() > 0) {
@@ -2816,14 +2813,14 @@ public class GlobalStatics_6 {
                           }
                         }
 
-                        var26 = var14 + var11.anInt193 + 5;
+                        var26 = var14 + widget.zoom + 5;
                         var20 += 6;
                         var21 += 7;
                         if (var26 + var21 > height) {
                           var26 = -var21 + height;
                         }
 
-                        var25 = -var20 - 5 + var13 + var11.anInt168;
+                        var25 = -var20 - 5 + var13 + widget.anInt168;
                         if (var25 < 5 + var13) {
                           var25 = 5 + var13;
                         }
@@ -2843,11 +2840,11 @@ public class GlobalStatics_6 {
                               .method1311(var25, var26, var20, var21, 0);
                         }
 
-                        var43 = var11.aClass94_232;
+                        var43 = widget.aClass94_232;
                         var47 = 2 + var26 + var35.anInt3727;
 
                         for (
-                            var43 = GlobalStatics_7.method1303(var11, var43, 0);
+                            var43 = GlobalStatics_7.method1303(widget, var43, 0);
                             var43.getLength() > 0;
                             var47 += var35.anInt3727 + 1) {
                           var28 = var43.indexOf(
@@ -2864,65 +2861,65 @@ public class GlobalStatics_6 {
                         }
                       }
 
-                      if (var11.anInt187 == 9) {
-                        if (var11.aBoolean167) {
+                      if (widget.anInt187 == 9) {
+                        if (widget.aBoolean167) {
                           var20 = var13;
-                          var22 = var13 + var11.anInt168;
-                          var21 = var14 + var11.anInt193;
+                          var22 = var13 + widget.anInt168;
+                          var21 = var14 + widget.zoom;
                           var23 = var14;
                         } else {
                           var20 = var13;
                           var21 = var14;
-                          var23 = var14 + var11.anInt193;
-                          var22 = var13 + var11.anInt168;
+                          var23 = var14 + widget.zoom;
+                          var22 = var13 + widget.anInt168;
                         }
 
-                        if (var11.anInt250 == 1) {
+                        if (widget.anInt250 == 1) {
                           if (GlRenderer.USE_OPENGL) {
                             GlUtils.method933(var20, var21, var22, var23,
-                                var11.anInt218);
+                                widget.anInt218);
                           } else {
                             DummyClass47
                                 .method1328(var20, var21, var22, var23,
-                                    var11.anInt218);
+                                    widget.anInt218);
                           }
                         } else if (!GlRenderer.USE_OPENGL) {
                           DummyClass47.method1322(var20, var21, var22, var23,
-                              var11.anInt218,
-                              var11.anInt250);
+                              widget.anInt218,
+                              widget.anInt250);
                         } else {
                           GlUtils.method929(var20, var21, var22, var23,
-                              var11.anInt218,
-                              var11.anInt250);
+                              widget.anInt218,
+                              widget.anInt250);
                         }
                       }
                     }
                   } else {
                     AbstractDirectColorSprite var37;
-                    if (var11.aBoolean233) {
-                      if (var11.anInt192 == -1) {
-                        var37 = var11.method866((byte) -113, false);
+                    if (widget.aBoolean233) {
+                      if (widget.anInt192 == -1) {
+                        var37 = widget.method866((byte) -113, false);
                       } else {
                         var37 = GlobalStatics_9
-                            .method1707(var11.anInt288, var11.anInt192,
-                                var11.aBoolean227, var11.anInt271,
-                                var11.anInt287, 65536);
+                            .method1707(widget.anInt288, widget.anInt192,
+                                widget.aBoolean227, widget.anInt271,
+                                widget.anInt287, 65536);
                       }
 
                       if (var37 == null) {
                         if (GlobalStatics_8.aBoolean6) {
-                          DummyClass29.method909(-40, var11);
+                          DummyClass29.method909(-40, widget);
                         }
                       } else {
                         var21 = var37.anInt3697;
                         var22 = var37.anInt3706;
-                        if (var11.aBoolean186) {
-                          var23 = (var21 - 1 + var11.anInt168) / var21;
-                          var24 = (var11.anInt193 - 1 + var22) / var22;
+                        if (widget.aBoolean186) {
+                          var23 = (var21 - 1 + widget.anInt168) / var21;
+                          var24 = (widget.zoom - 1 + var22) / var22;
                           if (GlRenderer.USE_OPENGL) {
                             GlUtils.method931(var13, var14,
-                                var11.anInt168 + var13,
-                                var11.anInt193 + var14);
+                                widget.anInt168 + var13,
+                                widget.zoom + var14);
                             var39 = GlobalStatics_9
                                 .isPo2((byte) -94, var37.anInt3707);
                             var46 = GlobalStatics_9
@@ -2977,12 +2974,12 @@ public class GlobalStatics_6 {
                             GlUtils.clip(x, y, width, height);
                           } else {
                             DummyClass47.method1326(var13, var14,
-                                var13 + var11.anInt168,
-                                var14 + var11.anInt193);
+                                var13 + widget.anInt168,
+                                var14 + widget.zoom);
 
                             for (var25 = 0; var25 < var23; ++var25) {
                               for (var26 = 0; var26 < var24; ++var26) {
-                                if (var11.anInt301 == 0) {
+                                if (widget.anInt301 == 0) {
                                   if (var15 == 0) {
                                     var37.method643(var25 * var21 + var13,
                                         var22 * var26 + var14);
@@ -2994,7 +2991,7 @@ public class GlobalStatics_6 {
                                 } else {
                                   var37.method640(
                                       var14 + var22 * var26 + var22 / 2,
-                                      var11.anInt301, 4096,
+                                      widget.anInt301, 4096,
                                       var25 * var21 + var13 + var21 / 2,
                                       -1470985020);
                                 }
@@ -3004,33 +3001,33 @@ public class GlobalStatics_6 {
                             DummyClass47.method1324(x, y, width, height);
                           }
                         } else {
-                          var23 = var11.anInt168 * 4096 / var21;
-                          if (var11.anInt301 == 0) {
+                          var23 = widget.anInt168 * 4096 / var21;
+                          if (widget.anInt301 == 0) {
                             if (var15 != 0) {
-                              var37.method642(var13, var14, var11.anInt168,
-                                  var11.anInt193,
+                              var37.method642(var13, var14, widget.anInt168,
+                                  widget.zoom,
                                   -(255 & var15) + 256);
-                            } else if (var21 == var11.anInt168
-                                && var22 == var11.anInt193) {
+                            } else if (var21 == widget.anInt168
+                                && var22 == widget.zoom) {
                               var37.method643(var13, var14);
                             } else {
-                              var37.draw(var13, var14, var11.anInt168,
-                                  var11.anInt193);
+                              var37.draw(var13, var14, widget.anInt168,
+                                  widget.zoom);
                             }
                           } else {
-                            var37.method640(var14 + var11.anInt193 / 2,
-                                var11.anInt301, var23,
-                                var13 + var11.anInt168 / 2, -1470985020);
+                            var37.method640(var14 + widget.zoom / 2,
+                                widget.anInt301, var23,
+                                var13 + widget.anInt168 / 2, -1470985020);
                           }
                         }
                       }
                     } else {
-                      var37 = var11.method866((byte) -113,
-                          GlobalStatics_9.method609(var11, 69));
+                      var37 = widget.method866((byte) -113,
+                          GlobalStatics_9.method609(widget, 69));
                       if (var37 != null) {
                         var37.method643(var13, var14);
                       } else if (GlobalStatics_8.aBoolean6) {
-                        DummyClass29.method909(118, var11);
+                        DummyClass29.method909(118, widget);
                       }
                     }
                   }
@@ -3049,10 +3046,6 @@ public class GlobalStatics_6 {
 
   public static void clear100(byte var0) {
     GlobalStatics_6.quickchats = null;
-    if (var0 < 84) {
-      GlobalStatics_6.method1091(true, -127);
-    }
-
     GlobalStatics_6.aClass94_750 = null;
     GlobalStatics_6.aClass93_743 = null;
   }
@@ -3062,14 +3055,13 @@ public class GlobalStatics_6 {
       GlobalStatics_6.anInt2309 = 128;
     }
 
+
+    //TODO
     if (GlobalStatics_6.anInt2309 > 383) {
       GlobalStatics_6.anInt2309 = 383;
     }
 
     GlobalStatics_9.anInt531 &= 2047;
-    if (var0 >= -31) {
-      GlobalStatics_6.quickchats = null;
-    }
 
     int var1 = GlobalStatics_10.anInt3155 >> 7;
     int var2 = GlobalStatics_8.anInt942 >> 7;
@@ -3357,27 +3349,27 @@ public class GlobalStatics_6 {
       Widget var4) {
     DummyClass43.method1194();
     if (GlRenderer.USE_OPENGL) {
-      GlUtils.clip(var3, var2, var3 + var4.anInt168, var2 + var4.anInt193);
+      GlUtils.clip(var3, var2, var3 + var4.anInt168, var2 + var4.zoom);
     } else {
       DummyClass47
-          .method1324(var3, var2, var3 + var4.anInt168, var2 + var4.anInt193);
+          .method1324(var3, var2, var3 + var4.anInt168, var2 + var4.zoom);
     }
 
     if (DummyClass12.minimapMode != 2 && DummyClass12.minimapMode != 5
         && GlobalStatics_9.aClass3_Sub28_Sub16_812 != null) {
       int var19 = GlobalStatics_9.anInt3102 + GlobalStatics_9.anInt531 & 2047;
       int var6 = GlobalStatics_9.localPlayer.anInt2819 / 32 + 48;
-      int var7 = -(GlobalStatics_9.localPlayer.anInt2829 / 32) + 464;
+      int var7 = -(GlobalStatics_9.localPlayer.sceneY / 32) + 464;
       if (GlRenderer.USE_OPENGL) {
         ((GlDirectColorSprite) GlobalStatics_9.aClass3_Sub28_Sub16_812)
             .draw(var3, var2,
-                var4.anInt168, var4.anInt193, var6, var7, var19,
+                var4.anInt168, var4.zoom, var6, var7, var19,
                 GlobalStatics_9.anInt3020 + 256,
                 (GlDirectColorSprite) var4.method866((byte) -113, false));
       } else {
         ((SoftwareDirectColorSprite) GlobalStatics_9.aClass3_Sub28_Sub16_812)
             .method664(var3,
-                var2, var4.anInt168, var4.anInt193, var6, var7, var19,
+                var2, var4.anInt168, var4.zoom, var6, var7, var19,
                 256 + GlobalStatics_9.anInt3020,
                 var4.anIntArray207, var4.anIntArray291);
       }
@@ -3404,7 +3396,7 @@ public class GlobalStatics_6 {
             var11 = var11 * 256 / (256 + GlobalStatics_9.anInt3020);
             var10 = 2 + 4 * (-GlobalStatics_9.anInt1152
                 + GlobalStatics_10.aClass131_3421.aShortArray1718[var8])
-                - GlobalStatics_9.localPlayer.anInt2829 / 32;
+                - GlobalStatics_9.localPlayer.sceneY / 32;
             var12 = var12 * 256 / (256 + GlobalStatics_9.anInt3020);
             var14 = -(var9 * var11) + var10 * var12 >> 16;
             if (GlobalStatics_10.aClass131_3421.method1791(var8, var1 - 51)
@@ -3421,8 +3413,8 @@ public class GlobalStatics_6 {
                 GlobalStatics_10.aClass131_3421.aClass94Array1721[var8], 100);
             var13 -= var16 / 2;
             if (var13 >= -var4.anInt168 && var13 <= var4.anInt168
-                && var14 >= -var4.anInt193
-                && var14 <= var4.anInt193) {
+                && var14 >= -var4.zoom
+                && var14 <= var4.zoom) {
               var17 = 16777215;
               if (GlobalStatics_10.aClass131_3421.anIntArray1725[var8]
                   != -1) {
@@ -3440,7 +3432,7 @@ public class GlobalStatics_6 {
               var15.method693(
                   GlobalStatics_10.aClass131_3421.aClass94Array1721[var8],
                   var3 + var13 + var4.anInt168 / 2,
-                  var2 + var4.anInt193 / 2 - var14, var16, 50,
+                  var2 + var4.zoom / 2 - var14, var16, 50,
                   var17, 0, 256, 1, 0, 0);
               if (GlRenderer.USE_OPENGL) {
                 GlUtils.method921();
@@ -3457,7 +3449,7 @@ public class GlobalStatics_6 {
             -(GlobalStatics_9.localPlayer.anInt2819 / 32) + 2
                 + 4 * DummyClass51.anIntArray1163[var9];
         var11 =
-            -(GlobalStatics_9.localPlayer.anInt2829 / 32) + 2
+            -(GlobalStatics_9.localPlayer.sceneY / 32) + 2
                 + GlobalStatics_9.anIntArray4050[var9] * 4;
         GameObjectConfig var20 = DummyClass11
             .method2207(4, GlobalStatics_6.anIntArray3693[var9]);
@@ -3480,7 +3472,7 @@ public class GlobalStatics_6 {
           if (var25 != null) {
             var12 = 2 + var9 * 4 - GlobalStatics_9.localPlayer.anInt2819 / 32;
             var13 =
-                -(GlobalStatics_9.localPlayer.anInt2829 / 32) + 2 + 4 * var10;
+                -(GlobalStatics_9.localPlayer.sceneY / 32) + 2 + 4 * var10;
             DummyClass36.method1030(var4,
                 GlobalStatics_9.aClass3_Sub28_Sub16Array1136[0],
                 var13, var12, var2, (byte) 11, var3);
@@ -3489,7 +3481,7 @@ public class GlobalStatics_6 {
       }
 
       for (var9 = 0; DummyClass6.anInt2046 > var9; ++var9) {
-        NPC var21 = GlobalStatics_8.npcs[GlobalStatics_2.anIntArray347[var9]];
+        NPC var21 = GlobalStatics_8.NPCS[GlobalStatics_2.anIntArray347[var9]];
         if (var21 != null && var21.hasConfiguration((byte) 17)) {
           NpcConfiguration var22 = var21.config;
           if (var22 != null && var22.anIntArray1292 != null) {
@@ -3500,7 +3492,7 @@ public class GlobalStatics_6 {
             var12 = var21.anInt2819 / 32
                 - GlobalStatics_9.localPlayer.anInt2819 / 32;
             var13 =
-                var21.anInt2829 / 32 - GlobalStatics_9.localPlayer.anInt2829
+                var21.sceneY / 32 - GlobalStatics_9.localPlayer.sceneY
                     / 32;
             if (var22.anInt1283 == -1) {
               DummyClass36.method1030(var4,
@@ -3519,7 +3511,7 @@ public class GlobalStatics_6 {
         Player var23 = GlobalStatics_9.players[DummyClass42.anIntArray887[var9]];
         if (var23 != null && var23.hasConfiguration((byte) 17)) {
           var12 =
-              var23.anInt2829 / 32 - GlobalStatics_9.localPlayer.anInt2829 / 32;
+              var23.sceneY / 32 - GlobalStatics_9.localPlayer.sceneY / 32;
           var11 = -(GlobalStatics_9.localPlayer.anInt2819 / 32)
               + var23.anInt2819 / 32;
           long var29 = var23.name.toBase37();
@@ -3578,13 +3570,13 @@ public class GlobalStatics_6 {
         if (var26 != null && var26.anInt1360 != 0
             && GlobalStatics_4.updateCycle % 20 < 10) {
           if (var26.anInt1360 == 1 && var26.anInt1359 >= 0
-              && var26.anInt1359 < GlobalStatics_8.npcs.length) {
-            NPC var27 = GlobalStatics_8.npcs[var26.anInt1359];
+              && var26.anInt1359 < GlobalStatics_8.NPCS.length) {
+            NPC var27 = GlobalStatics_8.NPCS[var26.anInt1359];
             if (var27 != null) {
               var13 = -(GlobalStatics_9.localPlayer.anInt2819 / 32)
                   + var27.anInt2819 / 32;
               var14 =
-                  var27.anInt2829 / 32 - GlobalStatics_9.localPlayer.anInt2829
+                  var27.sceneY / 32 - GlobalStatics_9.localPlayer.sceneY
                       / 32;
               DummyClass41
                   .method1171(var26.anInt1351, var2, var3, var13, var14, var4,
@@ -3595,7 +3587,7 @@ public class GlobalStatics_6 {
           if (var26.anInt1360 == 2) {
             var12 = (-GlobalStatics_10.anInt1716 + var26.anInt1356) * 4 + 2
                 - GlobalStatics_9.localPlayer.anInt2819 / 32;
-            var13 = -(GlobalStatics_9.localPlayer.anInt2829 / 32) + 2
+            var13 = -(GlobalStatics_9.localPlayer.sceneY / 32) + 2
                 + (-GlobalStatics_9.anInt1152 + var26.anInt1347) * 4;
             DummyClass41
                 .method1171(var26.anInt1351, var2, var3, var12, var13, var4,
@@ -3607,7 +3599,7 @@ public class GlobalStatics_6 {
             Player var30 = GlobalStatics_9.players[var26.anInt1359];
             if (var30 != null) {
               var14 =
-                  var30.anInt2829 / 32 - GlobalStatics_9.localPlayer.anInt2829
+                  var30.sceneY / 32 - GlobalStatics_9.localPlayer.sceneY
                       / 32;
               var13 =
                   var30.anInt2819 / 32 - GlobalStatics_9.localPlayer.anInt2819
@@ -3624,7 +3616,7 @@ public class GlobalStatics_6 {
         var9 = 4 * DummyClass45.anInt987 + 2
             - GlobalStatics_9.localPlayer.anInt2819 / 32;
         var10 = 2 + 4 * DummyClass38.anInt733
-            - GlobalStatics_9.localPlayer.anInt2829 / 32;
+            - GlobalStatics_9.localPlayer.sceneY / 32;
         DummyClass36
             .method1030(var4, DummyClass38.aClass3_Sub28_Sub16_736, var10, var9,
                 var2,
@@ -3633,11 +3625,11 @@ public class GlobalStatics_6 {
 
       if (GlRenderer.USE_OPENGL) {
         GlUtils.fillQuad(-1 + var3 + var4.anInt168 / 2,
-            -1 + var2 + var4.anInt193 / 2, 3,
+            -1 + var2 + var4.zoom / 2, 3,
             3, 16777215);
       } else {
         DummyClass47.method1323(-1 + var4.anInt168 / 2 + var3,
-            -1 + var4.anInt193 / 2 + var2, 3,
+            -1 + var4.zoom / 2 + var2, 3,
             3, 16777215);
       }
     } else if (!GlRenderer.USE_OPENGL) {
@@ -3799,7 +3791,7 @@ public class GlobalStatics_6 {
             int var4 = 128 * (255 & GlobalStatics_10.anIntArray3083[var1]);
             int var7 = GlobalStatics_10.anIntArray3083[var1] >> 8 & 255;
             int var5 = 255 & GlobalStatics_10.anIntArray3083[var1] >> 16;
-            int var8 = -GlobalStatics_9.localPlayer.anInt2829 + 64 + 128 * var7;
+            int var8 = -GlobalStatics_9.localPlayer.sceneY + 64 + 128 * var7;
             if (var8 < 0) {
               var8 = -var8;
             }
