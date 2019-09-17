@@ -1406,7 +1406,7 @@ public final class Model extends SceneNode {
 
   public AbstractModel method2008(int var1, int var2, int var3, int var4,
                                   int var5 ) {
-    if (GlRenderer.useOpenGlRenderer) {
+    if (GlRenderer.USE_OPENGL) {
       GlModel var6 = new GlModel(this, var1, var2, true);
       var6.method1908();
       return var6;

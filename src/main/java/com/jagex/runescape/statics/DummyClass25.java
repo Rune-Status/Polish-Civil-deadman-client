@@ -1,14 +1,10 @@
 package com.jagex.runescape.statics;
 
 import com.jagex.runescape.model.WorldMapLabel;
-import com.jagex.runescape.buffer.Buffer;
 import com.jagex.runescape.common.GameString;
 import com.jagex.runescape.common.GameStringStatics;
-import com.jagex.runescape.model.FileOnDisk;
 import com.jagex.runescape.model.FileUnpacker;
 import com.jagex.runescape.model.GameWorldSomething;
-import com.jagex.runescape.model.SignLink;
-import com.jagex.runescape.model.SignLinkRequest;
 import com.jagex.runescape.model.SomethingFont;
 import com.jagex.runescape.opengl.GlRenderer;
 import java.awt.Component;
@@ -25,7 +21,7 @@ public final class DummyClass25 {
   public static int anInt1629;
   public static GameString MEMORY_PREFIX = GameStringStatics.create("Mem:");
 
-  public static void method1728(int var0) {
+  public static void clear55(int var0) {
     DummyClass25.aClass33_1626 = null;
     DummyClass25.aClass131_1624 = null;
     DummyClass25.aClass26Array1627 = null;
@@ -33,7 +29,7 @@ public final class DummyClass25 {
     DummyClass25.aClass153_1628 = null;
     DummyClass25.aClass94_1625 = null;
     if (var0 != -14256) {
-      DummyClass25.method1728(46);
+      DummyClass25.clear55(46);
     }
   }
 
@@ -68,7 +64,7 @@ public final class DummyClass25 {
       DummyClass30.viewWidth = 765;
     }
 
-    if (GlRenderer.useOpenGlRenderer) {
+    if (GlRenderer.USE_OPENGL) {
       GlRenderer.setViewportDimensions(DummyClass30.viewWidth,
           GlobalStatics_9.viewHeight);
     }

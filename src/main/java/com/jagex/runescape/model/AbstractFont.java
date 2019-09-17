@@ -157,7 +157,7 @@ public abstract class AbstractFont extends SubNode {
 
           int var11 = this.anIntArray3736[var8];
           if (GlobalStatics_4.anInt3746 != -1) {
-            if (GlRenderer.useOpenGlRenderer) {
+            if (GlRenderer.USE_OPENGL) {
               GlUtils.drawHorizontalLine(var2, var3 + (int) (this.anInt3727
                       * 0.7D), var11,
                   GlobalStatics_4.anInt3746);
@@ -169,7 +169,7 @@ public abstract class AbstractFont extends SubNode {
           }
 
           if (GlobalStatics_4.anInt3747 != -1) {
-            if (GlRenderer.useOpenGlRenderer) {
+            if (GlRenderer.USE_OPENGL) {
               GlUtils.drawHorizontalLine(var2, var3 + this.anInt3727 + 1, var11,
                   GlobalStatics_4.anInt3747);
             } else {
@@ -994,7 +994,7 @@ public abstract class AbstractFont extends SubNode {
 
           int var16 = this.anIntArray3736[var11];
           if (GlobalStatics_4.anInt3746 != -1) {
-            if (GlRenderer.useOpenGlRenderer) {
+            if (GlRenderer.USE_OPENGL) {
               GlUtils.drawHorizontalLine(var2, var3 + (int) (this.anInt3727
                       * 0.7D), var16,
                   GlobalStatics_4.anInt3746);
@@ -1006,7 +1006,7 @@ public abstract class AbstractFont extends SubNode {
           }
 
           if (GlobalStatics_4.anInt3747 != -1) {
-            if (GlRenderer.useOpenGlRenderer) {
+            if (GlRenderer.USE_OPENGL) {
               GlUtils.drawHorizontalLine(var2, var3 + this.anInt3727, var16,
                   GlobalStatics_4.anInt3747);
             } else {

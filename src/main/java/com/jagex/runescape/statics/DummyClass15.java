@@ -71,7 +71,7 @@ public final class DummyClass15 {
     }
   }
 
-  public static void method2063(int var0) {
+  public static void clear94(int var0) {
     DummyClass15.aClass94_1878 = null;
     DummyClass15.aClass93_1874 = null;
     DummyClass15.aClass94_1880 = null;

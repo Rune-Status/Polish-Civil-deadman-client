@@ -86,7 +86,7 @@ public final class BufferedFile {
 
   private File method977(int var1) {
     if (var1 != 281669816) {
-        GlobalStatics_6.method974(true);
+        GlobalStatics_6.clear18(true);
       }
 
       return this.aClass122_573.file();

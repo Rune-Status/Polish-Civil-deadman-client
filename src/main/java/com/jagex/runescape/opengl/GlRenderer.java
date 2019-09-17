@@ -8,9 +8,8 @@ import com.jagex.runescape.statics.DummyClass55;
 import com.jagex.runescape.statics.GlobalStatics_10;
 import com.jagex.runescape.statics.GlobalStatics_4;
 import com.jagex.runescape.statics.GlobalStatics_6;
-import com.jagex.runescape.statics.GlobalStatics_8;
 import com.jogamp.nativewindow.NativeSurface;
-import com.jogamp.nativewindow.awt.JAWTWindow;
+import com.jogamp.nativewindow.awt.AWTGraphicsConfiguration;
 import com.jogamp.opengl.GL2;
 import com.jogamp.opengl.GLCapabilities;
 import com.jogamp.opengl.GLContext;
@@ -18,9 +17,11 @@ import com.jogamp.opengl.GLDrawable;
 import com.jogamp.opengl.GLDrawableFactory;
 import com.jogamp.opengl.GLProfile;
 import java.awt.Canvas;
+import java.awt.GraphicsConfiguration;
 import java.nio.ByteOrder;
 import java.nio.IntBuffer;
 import java.nio.charset.StandardCharsets;
+import jogamp.newt.awt.NewtFactoryAWT;
 
 public final class GlRenderer {
 
@@ -44,7 +45,7 @@ public final class GlRenderer {
   private static int anInt1812;
   private static int anInt1814;
   private static GLDrawable GL_DRAWABLE;
-  private static boolean fogEnabled = true;
+  private static boolean FOG_ENABLED = true;
   private static GameString RADEON_STRING = GameStringStatics
       .create("radeon");
   public static int maxTextureUnits;
@@ -53,11 +54,11 @@ public final class GlRenderer {
   public static boolean aBoolean1798 = true;
   public static boolean texture3dSupport;
   public static GL2 GL;
-  public static boolean useOpenGlRenderer;
+  public static boolean USE_OPENGL;
   public static boolean multiSampleSupport;
   public static int anInt1810;
   public static int viewHeight;
-  public static boolean vertexBufferSupport;
+  public static boolean VERTEX_BUFFER_SUPPORT;
   public static boolean aBoolean1817;
   public static boolean vertexProgramSupport;
   public static int viewWidth;
@@ -136,14 +137,15 @@ public final class GlRenderer {
     GlRenderer.GL_DRAWABLE.swapBuffers();
   }
 
-  public static void setFogEnabled(boolean var0) {
-    if (var0 != GlRenderer.fogEnabled) {
-      if (var0) {
+  public static void setFogEnabled(boolean enable) {
+    enable = false;
+    if (enable != GlRenderer.FOG_ENABLED) {
+      if (enable) {
         GlRenderer.GL.glEnable(2912);
       } else {
         GlRenderer.GL.glDisable(2912);
       }
-      GlRenderer.fogEnabled = var0;
+      GlRenderer.FOG_ENABLED = enable;
     }
   }
 
@@ -172,7 +174,7 @@ public final class GlRenderer {
     GlRenderer.GL.glEnable(2929);
     GlRenderer.lightingEnabled = true;
     GlRenderer.depthTestEnabled = true;
-    GlRenderer.fogEnabled = true;
+    GlRenderer.FOG_ENABLED = true;
     GlobalStatics_4.method1073(97);
     GlRenderer.GL.glActiveTexture(0x84c1);
     GlRenderer.GL.glTexEnvi(8960, 8704, 0x8570);
@@ -202,7 +204,7 @@ public final class GlRenderer {
     GlRenderer.GL.glMatrixMode(5888);
     GlRenderer.GL.glLoadIdentity();
     GlEnvironment.method1511();
-    DummyClass46.method1275();
+    DummyClass46.disableLight();
   }
 
   public static void method1830() {
@@ -299,7 +301,7 @@ public final class GlRenderer {
     }
   }
 
-  public static void method1838() {
+  public static void clear6() {
     GlRenderer.RADEON_STRING = null;
     GlRenderer.aString1786 = null;
     GlRenderer.aString1785 = null;
@@ -313,7 +315,7 @@ public final class GlRenderer {
     return GlRenderer.aFloat1794;
   }
 
-  private static int initializeCompatibility() {
+  private static void initializeCompatibility() {
     int var0 = 0;
     GlRenderer.aString1785 = GlRenderer.GL.glGetString(7936);
     GlRenderer.aString1786 = GlRenderer.GL.glGetString(7937);
@@ -362,7 +364,7 @@ public final class GlRenderer {
 
     if (var0 == 0) {
       GlRenderer.bigEndian = ByteOrder.nativeOrder() == ByteOrder.BIG_ENDIAN;
-      GlRenderer.vertexBufferSupport = GlRenderer.GL
+      GlRenderer.VERTEX_BUFFER_SUPPORT = GlRenderer.GL
           .isExtensionAvailable("GL_ARB_vertex_buffer_object");
       GlRenderer.multiSampleSupport = GlRenderer.GL
           .isExtensionAvailable("GL_ARB_multisample");
@@ -387,35 +389,27 @@ public final class GlRenderer {
         }
 
         if (var6 >= 7000 && var6 <= 7999) {
-          GlRenderer.vertexBufferSupport = false;
+          GlRenderer.VERTEX_BUFFER_SUPPORT = false;
         }
 
         if (var6 >= 7000 && var6 <= 9250) {
           GlRenderer.texture3dSupport = false;
         }
 
-        GlRenderer.aBoolean1817 = GlRenderer.vertexBufferSupport;
+        GlRenderer.aBoolean1817 = GlRenderer.VERTEX_BUFFER_SUPPORT;
       }
 
-      if (GlRenderer.vertexBufferSupport) {
+      if (GlRenderer.VERTEX_BUFFER_SUPPORT) {
         int[] var14 = new int[1];
         GlRenderer.GL.glGenBuffers(1, var14, 0);
       }
 
-      return 0;
-    } else {
-      return var0;
     }
-  }
-
-  public static void method1841() {
-    GlRenderer.GL.glClear(256);
   }
 
   public static void releaseGlResources() {
     if (GlRenderer.GL != null) {
-      System.out.println("Releasing GL resources");
-      JAWTWindow surface = GlobalStatics_8.NATIVE_WINDOW;
+      NativeSurface surface = GlRenderer.GL_DRAWABLE.getNativeSurface();
       surface.lockSurface();
       DummyClass55.method1609(90);
       GlRenderer.GL = null;
@@ -424,16 +418,14 @@ public final class GlRenderer {
       if (GLContext.getCurrent() == GlRenderer.GL_CONTEXT) {
         GlRenderer.GL_CONTEXT.release();
       }
-
       GlRenderer.GL_CONTEXT.destroy();
       GlRenderer.GL_CONTEXT = null;
 
       GlRenderer.GL_DRAWABLE.setRealized(false);
       GlRenderer.GL_DRAWABLE = null;
-      System.out.println("GL released");
     }
     DummyClass46.method1273();
-    GlRenderer.useOpenGlRenderer = false;
+    GlRenderer.USE_OPENGL = false;
   }
 
   public static void translateTexture(float var0, float var1, float var2) {
@@ -459,7 +451,7 @@ public final class GlRenderer {
     GlRenderer.setProjectionMatrix(left * GlRenderer.aFloat1801,
         right * GlRenderer.aFloat1801,
         -bottom * GlRenderer.aFloat1801, -top * GlRenderer.aFloat1801,
-        50.0F, 3584F);
+        GlobalStatics_6.NEAR, GlobalStatics_6.FAR);
     GlRenderer.GL
         .glViewport(x, GlRenderer.viewHeight - y - height, width, height);
     GlRenderer.GL.glMatrixMode(5888);
@@ -493,14 +485,13 @@ public final class GlRenderer {
   }
 
   public static void method1846() {
-    if (GLStatics.useBumpMaps) {
+    if (GLStatics.USE_BUMP_MAPS) {
       GlRenderer.setLightingEnabled(true);
       GlRenderer.method1845(true);
     } else {
       GlRenderer.setLightingEnabled(false);
       GlRenderer.method1845(false);
     }
-
   }
 
   public static void method1847(int var0) {
@@ -580,7 +571,6 @@ public final class GlRenderer {
   }
 
   public static void bindCanvas(Canvas canvas, int samples) {
-    System.out.printf("Binding canvas with samples%d%n", samples);
     if (!canvas.isDisplayable()) {
       return;
     }
@@ -592,7 +582,7 @@ public final class GlRenderer {
       capabilities.setNumSamples(samples);
     }
 
-    JAWTWindow surface = GlobalStatics_8.NATIVE_WINDOW;
+    NativeSurface surface = GlRenderer.getSurface(canvas, capabilities);
     GLDrawable drawable =
         GlRenderer.bindDrawable(surface, profile);
     GLContext context = GlRenderer.acquireGLContext(drawable);
@@ -602,11 +592,10 @@ public final class GlRenderer {
       GlRenderer.releaseGlResources();
       return;
     }
-    System.out.println("GL bound");
     GlRenderer.GL_CONTEXT = context;
     GlRenderer.GL_DRAWABLE = drawable;
     GlRenderer.GL = (GL2) GlRenderer.GL_CONTEXT.getGL();
-    GlRenderer.useOpenGlRenderer = true;
+    GlRenderer.USE_OPENGL = true;
     GlRenderer.viewWidth = canvas.getSize().width;
     GlRenderer.viewHeight = canvas.getSize().height;
     GlRenderer.initializeCompatibility();
@@ -617,11 +606,22 @@ public final class GlRenderer {
     GlRenderer.GL.glClear(16384);
   }
 
+  private static NativeSurface getSurface(Canvas canvas,
+      GLCapabilities capabilities) {
+    GraphicsConfiguration graphicsConfiguration =
+        canvas.getGraphicsConfiguration();
+
+    AWTGraphicsConfiguration awtGraphicsConfiguration =
+        AWTGraphicsConfiguration
+            .create(graphicsConfiguration, capabilities, capabilities);
+
+    return NewtFactoryAWT.getNativeWindow(canvas, awtGraphicsConfiguration);
+  }
+
   private static GLDrawable bindDrawable(
       NativeSurface surface,
       GLProfile profile
   ) {
-    System.out.println("Binding drawable");
     GLDrawableFactory drawableFactory = GLDrawableFactory.getFactory(profile);
     GLDrawable drawable = drawableFactory.createGLDrawable(surface);
     drawable.setRealized(true);
@@ -629,7 +629,6 @@ public final class GlRenderer {
   }
 
   private static GLContext acquireGLContext(GLDrawable drawable) {
-    System.out.println("Acquiring GL context ");
     GLContext context = drawable.createContext(null);
     int result = context.makeCurrent();
     if (result != 0) {
@@ -657,8 +656,8 @@ public final class GlRenderer {
     float var12 = var10 * (256.0F / var5);
     GlRenderer.GL.glOrtho(var6 * var11, var7 * var11,
         -var9 * var12, -var8 * var12,
-        50 - far,
-        3584 - far);
+        GlobalStatics_6.NEAR - far,
+        GlobalStatics_6.FAR - far);
     GlRenderer.GL.glViewport(0, 0, GlRenderer.viewWidth, GlRenderer.viewHeight);
     GlRenderer.GL.glMatrixMode(5888);
     GlRenderer.GL.glLoadIdentity();

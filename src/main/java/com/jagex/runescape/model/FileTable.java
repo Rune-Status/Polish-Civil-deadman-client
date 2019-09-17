@@ -81,9 +81,6 @@ public final class FileTable {
             for (int y = 0; y < 255; y++) {
               String a = "l" + x + "_" + y;
               int i = this.fileNameTable.get(Djb2.djb2(a));
-              if (i != -1) {
-                System.out.println("{" + i + ", " + x + ", " + y + "},");
-              }
             }
           }
         }

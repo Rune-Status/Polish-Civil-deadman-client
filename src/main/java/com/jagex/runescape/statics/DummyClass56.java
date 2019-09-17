@@ -65,7 +65,7 @@ public final class DummyClass56 {
   }
 
   public static void method1650(int var0) {
-    GlobalStatics_0.aClass93_939.method1523((byte) -113);
+    GlobalStatics_0.aClass93_939.method1523();
     if (var0 != 21) {
       DummyClass56.aClass11_1453 = null;
     }

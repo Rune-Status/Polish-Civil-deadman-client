@@ -11,7 +11,7 @@ public final class DummyClass40 {
   public static boolean aBoolean842;
   public static int anInt844;
   public static boolean aBoolean845;
-  public static float brightness = 1.0F;
+  public static float BRIGHTNESS = 1.0F;
   public static int anInt835;
   public static boolean aBoolean837;
   public static int[] anIntArray841 = new int[2048];
@@ -54,7 +54,7 @@ public final class DummyClass40 {
       int var7, int var8, int var9, int var10, int var11, int var12,
       int var13, int var14, int var15, int var16, int var17, int var18) {
     int[] var19 = GLStatics.textureCache
-        .method13(var18, true, DummyClass40.brightness);
+        .method13(var18, true, DummyClass40.BRIGHTNESS);
     int var20;
     if (var19 == null) {
       var20 = GLStatics.textureCache.method15(var18, 0xffff);
@@ -818,7 +818,7 @@ public final class DummyClass40 {
       int var7, int var8, int var9, int var10, int var11, int var12,
       int var13, int var14, int var15, int var16, int var17, int var18) {
     int[] var19 = GLStatics.textureCache
-        .method13(var18, true, DummyClass40.brightness);
+        .method13(var18, true, DummyClass40.BRIGHTNESS);
     int var20;
     if (var19 != null && DummyClass40.anInt850 <= 10) {
       DummyClass40.aBoolean845 = GLStatics.textureCache
@@ -3766,9 +3766,9 @@ public final class DummyClass40 {
           }
         }
 
-        var11 = Math.pow(var11, DummyClass40.brightness);
-        var13 = Math.pow(var13, DummyClass40.brightness);
-        var15 = Math.pow(var15, DummyClass40.brightness);
+        var11 = Math.pow(var11, DummyClass40.BRIGHTNESS);
+        var13 = Math.pow(var13, DummyClass40.BRIGHTNESS);
+        var15 = Math.pow(var15, DummyClass40.BRIGHTNESS);
         int var27 = (int) (var11 * 256.0D);
         int var18 = (int) (var13 * 256.0D);
         int var28 = (int) (var15 * 256.0D);
@@ -3788,7 +3788,7 @@ public final class DummyClass40 {
     DummyClass40.anInt844 = var3 - var1;
     DummyClass40.method1141();
     if (DummyClass40.anIntArray836.length < DummyClass40.anInt844) {
-      DummyClass40.anIntArray836 = new int[GLStatics.nearestPo2((byte) 95,
+      DummyClass40.anIntArray836 = new int[GLStatics.nearestPo2(
           DummyClass40.anInt844)];
     }
 
@@ -3801,9 +3801,9 @@ public final class DummyClass40 {
 
   }
 
-  public static void setLightness(float var0) {
-    DummyClass40.brightness = var0;
-    DummyClass40.brightness = (float) (DummyClass40.brightness + (
+  public static void setLightness(float brightness) {
+    DummyClass40.BRIGHTNESS = brightness;
+    DummyClass40.BRIGHTNESS = (float) (DummyClass40.BRIGHTNESS + (
         Math.random() * 0.03D - 0.015D));
   }
 

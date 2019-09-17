@@ -69,7 +69,7 @@ public final class SomethingGl0 extends Node {
     this.anIntArray2349 = new int[this.anInt2344];
     this.anIntArray2367 = new int[this.anInt2344];
     this.anIntArrayArray2357 = new int[this.anInt2344][];
-    this.aClass130_2353 = new HashTable(GLStatics.nearestPo2((byte) 123,
+    this.aClass130_2353 = new HashTable(GLStatics.nearestPo2(
         this.anInt2342));
     if (this.aBoolean2364) {
       this.anIntArrayArray2360 = new int[this.anInt2344][];
@@ -147,7 +147,7 @@ public final class SomethingGl0 extends Node {
       }
     }
 
-    if (GlRenderer.vertexBufferSupport) {
+    if (GlRenderer.VERTEX_BUFFER_SUPPORT) {
       ByteBuffer var3 = ByteBuffer.wrap(var1.bytes, 0, var1.position);
       this.aClass156_2363 = new GlBufferObject();
       this.aClass156_2363.setVertexBufferData(var3);
@@ -267,7 +267,7 @@ public final class SomethingGl0 extends Node {
         this.aClass156_2363.bindVertexBuffer();
         GlRenderer.GL.glVertexPointer(3, 5126, var11, 0L);
         GlRenderer.GL.glColorPointer(4, GL.GL_UNSIGNED_BYTE, var11, 12L);
-        if (GLStatics.useBumpMaps) {
+        if (GLStatics.USE_BUMP_MAPS) {
           GlRenderer.GL.glNormalPointer(5126, var11, 16L);
         }
 
@@ -278,7 +278,7 @@ public final class SomethingGl0 extends Node {
           GlRenderer.GL.glClientActiveTexture(0x84c0);
         }
       } else {
-        if (GlRenderer.vertexBufferSupport) {
+        if (GlRenderer.VERTEX_BUFFER_SUPPORT) {
           //TODO ARB
           GlRenderer.GL.glBindBuffer(0x8892, 0);
         }
@@ -287,7 +287,7 @@ public final class SomethingGl0 extends Node {
         GlRenderer.GL.glVertexPointer(3, 5126, var11, this.aByteBuffer2345);
         this.aByteBuffer2345.position(12);
         GlRenderer.GL.glColorPointer(4, GL.GL_UNSIGNED_BYTE, var11, this.aByteBuffer2345);
-        if (GLStatics.useBumpMaps) {
+        if (GLStatics.USE_BUMP_MAPS) {
           this.aByteBuffer2345.position(16);
           GlRenderer.GL.glNormalPointer(5126, var11, this.aByteBuffer2345);
         }
@@ -302,7 +302,7 @@ public final class SomethingGl0 extends Node {
         }
       }
 
-      if (GlRenderer.vertexBufferSupport) {
+      if (GlRenderer.VERTEX_BUFFER_SUPPORT) {
         //TODO ARB
         GlRenderer.GL.glBindBuffer(0x8893, 0);
       }

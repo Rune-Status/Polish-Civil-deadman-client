@@ -36,7 +36,6 @@ public final class MapScene {
         return var3;
       } else {
         GlobalStatics_9.sprites.isLoaded(this.spriteId);
-        int var4 = 125 % ((var2 + 21) / 50);
         var3 = GlobalStatics_0
             .createSprite(0, true, this.spriteId, GlobalStatics_9.sprites);
         if (var3 != null) {

@@ -131,7 +131,7 @@ public final class DummyClass50 {
   public static void method1400(SignLink var0, Object var1) {
 
     if (var0.eventQueue != null) {
-      for (int var3 = 0; var3 < 50 && var0.eventQueue.peekEvent() != null;
+      for (int var3 = 0; var3 < 49 && var0.eventQueue.peekEvent() != null;
           ++var3) {
         GlobalStatics_10.sleep(1L);
       }

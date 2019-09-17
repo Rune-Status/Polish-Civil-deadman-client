@@ -111,6 +111,7 @@ import java.awt.Font;
 import java.awt.Graphics;
 import java.awt.Image;
 import java.awt.Insets;
+import java.awt.event.KeyEvent;
 import java.io.File;
 import java.io.IOException;
 import java.io.RandomAccessFile;
@@ -360,7 +361,7 @@ public class GlobalStatics_9 {
   public static int anInt2693;
   public static Image anImage2695;
   public static int[] anIntArray2696 = new int[2];
-  public static int cameraPosX;
+  public static int CAMERA_X;
   public static int anInt2756;
   public static GameString aClass94_2765 = GameStringStatics.create(" ");
   public static int anInt2770;
@@ -431,7 +432,7 @@ public class GlobalStatics_9 {
       .create("loginscreen");
   public static FileUnpacker fileUnpacker17;
   public static FileUnpacker fileUnpacker15;
-  public static int anInt3995;
+  public static int SCENE_CAMERA_X;
   public static int[] anIntArray3997 = {19, 55, 38, 155, 255, 110, 137, 205,
       76};
   public static GameString aClass94_3998 = GameStringStatics.create(":trade:");
@@ -475,11 +476,11 @@ public class GlobalStatics_9 {
   public static int anInt3615;
   public static Calendar aCalendar3616 = Calendar.getInstance();
   public static int anInt3618;
-  public static int anInt3620;
+  public static int KEY_QUEUE_INDEX;
   public static GameString aClass94_3621;
   public static int RENDERING_SAMPLES;
   public static int anInt3623;
-  public static int anInt3624;
+  public static int CURRENT_KEY;
   public static int[] anIntArray3951 = new int[4];
   public static byte aByte3953;
   public static int[] quady0 = new int[100];
@@ -1510,7 +1511,7 @@ public class GlobalStatics_9 {
   public static long serverCipherKey;
   public static GameString aClass94_3339 = GameStringStatics.create("null");
   public static GameString[] aClass94Array3341 = new GameString[100];
-  public static int anInt3342;
+  public static int OTHER_CURRENT_KEY;
   public static GameString aClass94_3344 = GameStringStatics.create(
       "Sie k-Onnen sich selbst nicht selbst auf Ihre Ignorieren)2Liste setzen(Q");
   public static AbstractDirectColorSprite[] aClass3_Sub28_Sub16Array3458;
@@ -1545,7 +1546,7 @@ public class GlobalStatics_9 {
       .create("<col=40ff00>");
   public static AnimationSomething[] aClass3_Sub28_Sub5Array3041 = new AnimationSomething[14];
   public static int anInt3362 = -1;
-  public static int cameraZ;
+  public static int CAMERA_Z;
   public static Deque projectiles = new Deque();
   public static int anInt3365;
   public static long lastWrittenTime;
@@ -1992,8 +1993,7 @@ public class GlobalStatics_9 {
             64 + (
                 com.jagex.runescape.statics.GlobalStatics_0.aClass3_Sub28_Sub3_2600.anInt3559
                     >> 6 << 6) - GlobalStatics_10.anInt3256;
-        if (com.jagex.runescape.statics.GlobalStatics_0.aClass3_Sub28_Sub3_2600.anInt3563
-            == 37) {
+        if (GlobalStatics_0.aClass3_Sub28_Sub3_2600.anInt3563 == 37) {
           GlobalStatics_4.aFloat727 = 3.0F;
           GlobalStatics_9.aFloat3979 = 3.0F;
         } else {
@@ -2241,7 +2241,7 @@ public class GlobalStatics_9 {
   public static void method1121(boolean var0, byte var1) {
     byte var2;
     byte[][] var3;
-    if (GlRenderer.useOpenGlRenderer && var0) {
+    if (GlRenderer.USE_OPENGL && var0) {
       var2 = 1;
       var3 = GlobalStatics_9.updatedMapsData;
     } else {
@@ -2250,7 +2250,7 @@ public class GlobalStatics_9 {
     }
 
     for (int var4 = 0; var4 < var2; ++var4) {
-      DummyClass43.method1194(-16385);
+      DummyClass43.method1194();
 
       for (int var5 = 0; var5 < 13; ++var5) {
         for (int var6 = 0; var6 < 13; ++var6) {
@@ -2404,7 +2404,7 @@ public class GlobalStatics_9 {
       DummyClass41.anInt865 = -1;
       GlobalStatics_2.anInt2567 = -1;
       DummyClass54.aClass11_1402 = null;
-      if (GlRenderer.useOpenGlRenderer) {
+      if (GlRenderer.USE_OPENGL) {
         GlobalStatics_11.aBoolean47 = true;
       }
 
@@ -2414,7 +2414,7 @@ public class GlobalStatics_9 {
         GlobalStatics_10.method841(true);
       }
 
-      if (GlRenderer.useOpenGlRenderer) {
+      if (GlRenderer.USE_OPENGL) {
         GlUtils.resetClip();
       } else {
         DummyClass47.method1331();
@@ -2456,7 +2456,7 @@ public class GlobalStatics_9 {
         for (int var2 = 0; var2 < GlobalStatics_9.widgetQuads; ++var2) {
           if (!com.jagex.runescape.statics.GlobalStatics_0.aBooleanArray1712[var2]) {
             if (DummyClass9.aBooleanArray4008[var2]) {
-              if (GlRenderer.useOpenGlRenderer) {
+              if (GlRenderer.USE_OPENGL) {
                 GlUtils.fillQuad(GlobalStatics_5.quadx0[var2],
                     GlobalStatics_9.quady0[var2],
                     GlTexture2d.quadx1[var2], GlobalStatics_9.quady1[var2],
@@ -2470,7 +2470,7 @@ public class GlobalStatics_9 {
                         0x80);
               }
             }
-          } else if (!GlRenderer.useOpenGlRenderer) {
+          } else if (!GlRenderer.USE_OPENGL) {
             DummyClass47.method1312(GlobalStatics_5.quadx0[var2],
                 GlobalStatics_9.quady0[var2],
                 GlTexture2d.quadx1[var2], GlobalStatics_9.quady1[var2],
@@ -2574,7 +2574,7 @@ public class GlobalStatics_9 {
     }
   }
 
-  public static void method1130(int var0) {
+  public static void clear97(int var0) {
     GlobalStatics_9.aClass3_Sub28_Sub16_812 = null;
     if (var0 < 54) {
       GlobalStatics_9.anInt819 = -109;
@@ -2775,9 +2775,9 @@ public class GlobalStatics_9 {
     }
   }
 
-  public static void method1588(byte var0) {
+  public static void clear10(byte var0) {
     if (var0 <= 38) {
-      GlobalStatics_9.method1588((byte) -126);
+      GlobalStatics_9.clear10((byte) -126);
     }
 
     GlobalStatics_9.aClass94_1349 = null;
@@ -3151,7 +3151,7 @@ public class GlobalStatics_9 {
             GlobalStatics_2
                 .method562(GlobalStatics_10.sprites, 0, DummyClass54.anInt1400,
                     (byte) 39);
-        if (GlRenderer.useOpenGlRenderer) {
+        if (GlRenderer.USE_OPENGL) {
           if (GlobalStatics_10.aClass3_Sub28_Sub16_3099 instanceof SoftwareDirectFullColorSprite) {
             GlobalStatics_10.aClass3_Sub28_Sub16_3099 = new GlDirectFullColorSprite(
                 (SoftwareDirectColorSprite) GlobalStatics_10.aClass3_Sub28_Sub16_3099);
@@ -3168,7 +3168,7 @@ public class GlobalStatics_9 {
                 (SoftwareDirectColorSprite) DummyClass58.aClass3_Sub28_Sub16_1457);
           }
         }
-      } else if (GlRenderer.useOpenGlRenderer) {
+      } else if (GlRenderer.USE_OPENGL) {
         GlUtils.fillQuad(var1, var2, var3, 20, GlobalStatics_10.anInt3600,
             -GlobalStatics_8.anInt963 + 256);
       } else {
@@ -3199,7 +3199,7 @@ public class GlobalStatics_9 {
     GlobalStatics_8.aClass3_Sub28_Sub17_2096
         .method681(GlobalStatics_9.aClass94_2667, var1 + 3,
             14 + var2, GlobalStatics_10.anInt3351, -1);
-    if (GlRenderer.useOpenGlRenderer) {
+    if (GlRenderer.USE_OPENGL) {
       GlUtils
           .fillQuad(var1, 20 + var2, var3, var4 - 20,
               GlobalStatics_10.anInt3600,
@@ -3223,7 +3223,7 @@ public class GlobalStatics_9 {
           + 35;
       if (var1 < var5 && var5 < var1 + var3 && var6 > -13 + var8
           && var6 < var8 + 3) {
-        if (GlRenderer.useOpenGlRenderer) {
+        if (GlRenderer.USE_OPENGL) {
           GlUtils.fillQuad(var1, var8 - 13, var3, 16, GlobalStatics_9.anInt1926,
               -GlobalStatics_9.anInt1771 + 256);
         } else {
@@ -3253,7 +3253,7 @@ public class GlobalStatics_9 {
           GlobalStatics_2
               .method562(GlobalStatics_10.sprites, 0, GlobalStatics_9.anInt2937,
                   (byte) 39);
-      if (GlRenderer.useOpenGlRenderer) {
+      if (GlRenderer.USE_OPENGL) {
         if (DummyClass53.aClass3_Sub28_Sub16_1339 instanceof SoftwareDirectFullColorSprite) {
           DummyClass53.aClass3_Sub28_Sub16_1339 = new GlDirectFullColorSprite(
               (SoftwareDirectColorSprite) DummyClass53.aClass3_Sub28_Sub16_1339);
@@ -3334,7 +3334,7 @@ public class GlobalStatics_9 {
         GlobalStatics_9.anInt3552);
   }
 
-  public static void method1231(int var0) {
+  public static void clear47(int var0) {
     GlobalStatics_9.aClass94_973 = null;
     GlobalStatics_9.aClass94_965 = null;
     if (var0 <= 116) {
@@ -3377,7 +3377,7 @@ public class GlobalStatics_9 {
     }
   }
 
-  public static void method2085(int var0) {
+  public static void clear72(int var0) {
     GlobalStatics_9.aClass93_1911 = null;
     GlobalStatics_9.sprites = null;
     if (var0 > 81) {
@@ -3413,18 +3413,18 @@ public class GlobalStatics_9 {
       if (GlobalStatics_2.aBoolean346) {
         for (int var3 = 0; GlobalStatics_9.anInt2537 > var3; ++var3) {
           int var4 = GlobalStatics_9.anIntArray1755[var3];
-          if (var4 == 98) {
+          if (var4 == KeyEvent.VK_QUOTEDBL) {
             GlobalStatics_6.anInt2309 = -16 & GlobalStatics_6.anInt2309 + 47;
           } else {
-            if (var4 == 99) {
+            if (var4 == KeyEvent.VK_LESS) {
               GlobalStatics_6.anInt2309 =
                   -16 & GlobalStatics_6.anInt2309 - 17;
             } else {
-              if (var4 == 96) {
+              if (var4 == KeyEvent.VK_AMPERSAND) {
                 GlobalStatics_9.anInt531 =
                     GlobalStatics_9.anInt531 - 65 & -128;
               } else {
-                if (var4 == 97) {
+                if (var4 == KeyEvent.VK_ASTERISK) {
                   GlobalStatics_9.anInt531 =
                       GlobalStatics_9.anInt531 + 191 & -128;
                 }
@@ -3614,7 +3614,7 @@ public class GlobalStatics_9 {
     }
   }
 
-  public static void method821(int var0) {
+  public static void clear43(int var0) {
     GlobalStatics_9.aClass93_2604 = null;
     GlobalStatics_9.anIntArray2606 = null;
     GlobalStatics_9.COMMAND_DROP_JS5 = null;
@@ -3627,7 +3627,7 @@ public class GlobalStatics_9 {
   public static GameString[] method822(int var0, GameString[] var1) {
     GameString[] var2 = new GameString[5];
     if (var0 != 19406) {
-      GlobalStatics_9.method821(-26);
+      GlobalStatics_9.clear43(-26);
     }
 
     for (int var3 = 0; var3 < 5; ++var3) {
@@ -4759,18 +4759,18 @@ public class GlobalStatics_9 {
 
   public static int getWindowMode() {
     if (GlobalStatics_10.fullScreenFrame == null) {
-      if (GlRenderer.useOpenGlRenderer && GlobalStatics_9.aBoolean2427) {
+      if (GlRenderer.USE_OPENGL && GlobalStatics_9.aBoolean2427) {
         return 2;
       } else {
 
-        return GlRenderer.useOpenGlRenderer ? 1 : 0;
+        return GlRenderer.USE_OPENGL ? 1 : 0;
       }
     } else {
       return 3;
     }
   }
 
-  public static void method1414(int var0) {
+  public static void clear75(int var0) {
     if (var0 < 86) {
       GlobalStatics_9
           .method1410(73, 59, 119, 60, 89, -42, -25, 37, 88, -62, 69);
@@ -4791,7 +4791,7 @@ public class GlobalStatics_9 {
     GlobalStatics_9.aClass47_2686 = null;
   }
 
-  public static void method1974(byte var0) {
+  public static void clear38(byte var0) {
     if (var0 > -101) {
       GlobalStatics_9.aClass3_Sub28_Sub16Array2839 = null;
     }
@@ -4923,7 +4923,7 @@ public class GlobalStatics_9 {
     }
   }
 
-  public static void method2088(boolean var0) {
+  public static void clear73(boolean var0) {
     GlobalStatics_9.aClass94_1922 = null;
     GlobalStatics_9.anIntArray1920 = null;
 
@@ -4931,7 +4931,7 @@ public class GlobalStatics_9 {
   }
 
   public static void method2089(byte var0) {
-    GlobalStatics_7.aClass93_2982.method1523((byte) -105);
+    GlobalStatics_7.aClass93_2982.method1523();
   }
 
   public static void method2090(int var0) {
@@ -5018,7 +5018,7 @@ public class GlobalStatics_9 {
     }
   }
 
-  public static void method1257(int var0) {
+  public static void clear9(int var0) {
     if (var0 == 25951) {
       GlobalStatics_9.aClass11_1017 = null;
       GlobalStatics_9.aByteArrayArrayArray1014 = null;
@@ -5121,7 +5121,7 @@ public class GlobalStatics_9 {
     }
 
     if (var0 != 23206) {
-      GlobalStatics_9.method1257(107);
+      GlobalStatics_9.clear9(107);
     }
   }
 
@@ -5164,7 +5164,7 @@ public class GlobalStatics_9 {
     return var1 & 127;
   }
 
-  public static void method1983(int var0) {
+  public static void clear21(int var0) {
     GlobalStatics_9.anIntArray3986 = null;
     GlobalStatics_9.aClass94_3984 = null;
     GlobalStatics_9.aClass94_3983 = null;
@@ -5213,7 +5213,7 @@ public class GlobalStatics_9 {
       return var2 ? GlobalStatics_9.method873((byte) 62, var5) : var5;
     } else {
       if (var0 > -118) {
-        GlobalStatics_9.method1983(19);
+        GlobalStatics_9.clear21(19);
       }
 
       if (var1 instanceof BufferObject) {
@@ -5230,7 +5230,7 @@ public class GlobalStatics_9 {
       GlobalStatics_9.method1984(-48, 88, 31);
     }
 
-    return GlRenderer.useOpenGlRenderer || GlobalStatics_7.aBoolean3665;
+    return GlRenderer.USE_OPENGL || GlobalStatics_7.aBoolean3665;
   }
 
   public static boolean method1988(boolean var0) {
@@ -5285,7 +5285,7 @@ public class GlobalStatics_9 {
     return false;
   }
 
-  public static void method1473(byte var0) {
+  public static void clear42(byte var0) {
     GlobalStatics_9.anIntArray1277 = null;
     if (var0 != 103) {
       GlobalStatics_9.anInt1297 = -20;
@@ -5399,7 +5399,7 @@ public class GlobalStatics_9 {
     return var0 ^ var1;
   }
 
-  public static void method1521(int var0) {
+  public static void clear20(int var0) {
     GlobalStatics_9.tileOrientation = null;
     GlobalStatics_9.aClass94_1326 = null;
     if (var0 != 3101) {
@@ -5482,7 +5482,7 @@ public class GlobalStatics_9 {
         }
 
         if (var0 != 10) {
-          GlobalStatics_9.method597((byte) -74);
+          GlobalStatics_9.clear63();
         }
 
         return var4;
@@ -5492,7 +5492,7 @@ public class GlobalStatics_9 {
     }
   }
 
-  public static void method597(byte var0) {
+  public static void clear63() {
     GlobalStatics_9.aClass94_4072 = null;
     GlobalStatics_9.tiles = null;
     GlobalStatics_9.aClass94_4066 = null;
@@ -5506,7 +5506,7 @@ public class GlobalStatics_9 {
     if (releaseGlResources) {
       GlRenderer.releaseGlResources();
     }
-
+    ///fullscreen things
     if (GlobalStatics_10.fullScreenFrame != null && (var1 != 3
         || var5 != GlobalStatics_3.anInt2378
         || var6 != GlobalStatics_10.anInt3071)) {
@@ -5542,9 +5542,8 @@ public class GlobalStatics_9 {
 
       GlobalStatics_6.windowWidth = var7.getSize().width;
       GlobalStatics_9.windowHeight = var7.getSize().height;
-      Insets var8;
       if (GlobalStatics_10.FRAME == var7) {
-        var8 = GlobalStatics_10.FRAME.getInsets();
+        Insets var8 = GlobalStatics_10.FRAME.getInsets();
         GlobalStatics_6.windowWidth -= var8.right + var8.left;
         GlobalStatics_9.windowHeight -= var8.bottom + var8.top;
       }
@@ -5571,7 +5570,6 @@ public class GlobalStatics_9 {
         if (DummyClass35.mouseWheel != null) {
           DummyClass35.mouseWheel.unbind(false, GlobalStatics_8.GAME_CANVAS);
         }
-
         GlobalStatics_9.client.initializeCanvas();
         GlobalStatics_10.method193((byte) 97, GlobalStatics_8.GAME_CANVAS);
         GlobalStatics_9.bindMouseListener(GlobalStatics_8.GAME_CANVAS);
@@ -5579,7 +5577,7 @@ public class GlobalStatics_9 {
           DummyClass35.mouseWheel.bind(GlobalStatics_8.GAME_CANVAS, -103);
         }
       } else {
-        if (GlRenderer.useOpenGlRenderer) {
+        if (GlRenderer.USE_OPENGL) {
           GlRenderer.setViewportDimensions(DummyClass30.viewWidth,
               GlobalStatics_9.viewHeight);
         }
@@ -5587,7 +5585,7 @@ public class GlobalStatics_9 {
         GlobalStatics_8.GAME_CANVAS
             .setSize(DummyClass30.viewWidth, GlobalStatics_9.viewHeight);
         if (GlobalStatics_10.FRAME == var7) {
-          var8 = GlobalStatics_10.FRAME.getInsets();
+          Insets var8 = GlobalStatics_10.FRAME.getInsets();
           GlobalStatics_8.GAME_CANVAS
               .setLocation(var8.left + DummyClass51.viewX,
                   var8.top + GlobalStatics_7.viewY);
@@ -5652,7 +5650,7 @@ public class GlobalStatics_9 {
         }
       }
 
-      if (!GlRenderer.useOpenGlRenderer && var1 > 0) {
+      if (!GlRenderer.USE_OPENGL && var1 > 0) {
         GlobalStatics_9
             .setWindowMode(true, 0, true, antialiasing, false, -1, -1);
       } else {
@@ -5661,7 +5659,7 @@ public class GlobalStatics_9 {
           GlobalStatics_9.viewImageProducer = null;
           GlobalStatics_1.method1935();
           ((TextureCache) GLStatics.textureCache).method1619(200, -1);
-          if (GLStatics.useBumpMaps) {
+          if (GLStatics.USE_BUMP_MAPS) {
             DummyClass40.updateLightness(0.7F);
           }
 
@@ -5674,7 +5672,7 @@ public class GlobalStatics_9 {
           GlobalStatics_1.method1938();
           DummyClass0.method1756();
           ((TextureCache) GLStatics.textureCache).method1619(20, -1);
-          if (GLStatics.useBumpMaps) {
+          if (GLStatics.USE_BUMP_MAPS) {
             if (GlobalStatics_4.brightnessSetting == 1) {
               DummyClass40.updateLightness(0.9F);
             }
@@ -5722,7 +5720,7 @@ public class GlobalStatics_9 {
     }
   }
 
-  public static void method1242(byte var0) {
+  public static void clear13(byte var0) {
     GlobalStatics_9.aClass3_Sub28_Sub16Array996 = null;
     if (var0 != -88) {
       GlobalStatics_9.method1250(-72, true);
@@ -5787,7 +5785,7 @@ public class GlobalStatics_9 {
         GlobalStatics_10.anIntArray3076[0] * GlobalStatics_9.anIntArray2931[0];
     byte[] var2 = DummyClass5.aByteArrayArray2987[0];
     if (var0 != 115) {
-      GlobalStatics_9.anInt3624 = 112;
+      GlobalStatics_9.CURRENT_KEY = 112;
     }
 
     SoftwareDirectColorSprite var3;
@@ -5840,7 +5838,7 @@ public class GlobalStatics_9 {
         GlobalStatics_7
             .createFont(0, GlobalStatics_9.p11FontFileId, (byte) 124, var2,
                 var0);
-    if (GlRenderer.useOpenGlRenderer) {
+    if (GlRenderer.USE_OPENGL) {
       GlobalStatics_9.aClass3_Sub28_Sub17_Sub1_2000 =
           GlobalStatics_9
               .method1287(GlobalStatics_9.p11FontFileId, 0, var0, var2, -1);
@@ -5876,7 +5874,7 @@ public class GlobalStatics_9 {
             var0);
   }
 
-  public static void method584(int var0) {
+  public static void clear98(int var0) {
     GlobalStatics_9.aCalendar3616 = null;
     if (var0 != 0) {
       GlobalStatics_9.method580((byte) -90);
@@ -5885,14 +5883,14 @@ public class GlobalStatics_9 {
     GlobalStatics_9.aClass94_3621 = null;
   }
 
-  public static void method1982(byte var0) {
+  public static void clear26(byte var0) {
     GlobalStatics_9.aClass94_3971 = null;
     GlobalStatics_9.aClass94_3957 = null;
     GlobalStatics_9.anIntArray3951 = null;
     GlobalStatics_9.FORCED_TWEENING_ENABLED = null;
     GlobalStatics_9.anIntArray3959 = null;
     if (var0 <= 116) {
-      GlobalStatics_9.method1982((byte) -48);
+      GlobalStatics_9.clear26((byte) -48);
     }
 
     GlobalStatics_9.quady0 = null;
@@ -5902,7 +5900,7 @@ public class GlobalStatics_9 {
   public static void method1160(int var0, int var1) {
     if (GlobalStatics_11.method57(var1, 104)) {
       if (var0 > -100) {
-        GlobalStatics_9.method1168(52);
+        GlobalStatics_9.clear36(52);
       }
 
       GlobalStatics_9
@@ -6283,7 +6281,7 @@ public class GlobalStatics_9 {
     }
   }
 
-  public static void method1168(int var0) {
+  public static void clear36(int var0) {
     GlobalStatics_9.aClass94_853 = null;
     GlobalStatics_9.aClass94_852 = null;
     if (var0 == 8160) {
@@ -6763,7 +6761,7 @@ public class GlobalStatics_9 {
             var23.method643(var12, var29);
             var32 = var23.anInt3707 * var8.anInt2775 / 255;
             var15 = var23.anInt3696;
-            if (GlRenderer.useOpenGlRenderer) {
+            if (GlRenderer.USE_OPENGL) {
               GlUtils.method931(var12, var29, var12 + var32, var29 + var15);
             } else {
               DummyClass47
@@ -6771,7 +6769,7 @@ public class GlobalStatics_9 {
             }
 
             var25.method643(var12, var29);
-            if (GlRenderer.useOpenGlRenderer) {
+            if (GlRenderer.USE_OPENGL) {
               GlUtils.clip(var2, var0, var1 + var2, var0 + var4);
             } else {
               DummyClass47.method1324(var2, var0, var1 + var2, var4 + var0);
@@ -6958,7 +6956,7 @@ public class GlobalStatics_9 {
           var15 = (-GlobalStatics_10.anIntArray3318[var7] + 150) * (
               GlobalStatics_8.aClass3_Sub28_Sub17_2096.method682(var33) + 100)
               / 150;
-          if (GlRenderer.useOpenGlRenderer) {
+          if (GlRenderer.USE_OPENGL) {
             GlUtils.method931(DummyClass34.anInt590 + var2 - 50, var0,
                 DummyClass34.anInt590 + var2 + 50, var4 + var0);
           } else {
@@ -6971,7 +6969,7 @@ public class GlobalStatics_9 {
               var2 - (-DummyClass34.anInt590 - 50) - var15,
               var0 + GlobalStatics_10.anInt2208, var32,
               0);
-          if (GlRenderer.useOpenGlRenderer) {
+          if (GlRenderer.USE_OPENGL) {
             GlUtils.clip(var2, var0, var1 + var2, var4 + var0);
           } else {
             DummyClass47.method1324(var2, var0, var2 + var1, var0 + var4);
@@ -6981,7 +6979,7 @@ public class GlobalStatics_9 {
         if (GlobalStatics_10.anIntArray3336[var7] == 5) {
           int var16 = 0;
           var15 = -GlobalStatics_10.anIntArray3318[var7] + 150;
-          if (GlRenderer.useOpenGlRenderer) {
+          if (GlRenderer.USE_OPENGL) {
             GlUtils.method931(var2,
                 -1 - GlobalStatics_8.aClass3_Sub28_Sub17_2096.anInt3727
                     + GlobalStatics_10.anInt2208
@@ -7002,7 +7000,7 @@ public class GlobalStatics_9 {
           GlobalStatics_8.aClass3_Sub28_Sub17_2096
               .draw(var33, DummyClass34.anInt590 + var2,
                   var16 + var0 + GlobalStatics_10.anInt2208, var32, 0);
-          if (GlRenderer.useOpenGlRenderer) {
+          if (GlRenderer.USE_OPENGL) {
             GlUtils.clip(var2, var0, var2 + var1, var0 + var4);
           } else {
             DummyClass47.method1324(var2, var0, var2 + var1, var0 + var4);
@@ -7120,7 +7118,7 @@ public class GlobalStatics_9 {
     }
   }
 
-  public static void method875(byte var0) {
+  public static void clear46(byte var0) {
     int var1 = -102 / ((var0 - 35) / 48);
     GlobalStatics_9.globalQuickchats = null;
     GlobalStatics_9.aClass94_334 = null;
@@ -7130,7 +7128,7 @@ public class GlobalStatics_9 {
     if (var1 != null) {
       if (var0 == -22376) {
         AbstractFont var2;
-        if (GlRenderer.useOpenGlRenderer) {
+        if (GlRenderer.USE_OPENGL) {
           var2 = new GlFont(var1, GlobalStatics_9.anIntArray2048,
               com.jagex.runescape.statics.GlobalStatics_0.anIntArray2591,
               GlobalStatics_9.anIntArray2931, GlobalStatics_10.anIntArray3076,
@@ -7757,7 +7755,7 @@ public class GlobalStatics_9 {
     }
   }
 
-  public static void method1815(byte var0) {
+  public static void clear68(byte var0) {
     GlobalStatics_9.aShortArray1779 = null;
     GlobalStatics_9.aClass93_1772 = null;
     GlobalStatics_9.aClass64_1778 = null;
@@ -8067,20 +8065,20 @@ public class GlobalStatics_9 {
       int var8 = GlobalStatics_6
           .method1736(GlobalStatics_9.currentPlane, 1, var6, var7)
           - GlobalStatics_9.anInt529;
-      int var10 = var8 - GlobalStatics_7.anInt2162;
-      int var9 = var6 - GlobalStatics_9.anInt3995;
-      int var11 = -DummyClass49.anInt1111 + var7;
+      int var10 = var8 - GlobalStatics_7.SCENE_CAMERA_Y;
+      int var9 = var6 - GlobalStatics_9.SCENE_CAMERA_X;
+      int var11 = -DummyClass49.SCENE_CAMERA_Z + var7;
       int var12 = (int) Math.sqrt(var11 * var11 + var9 * var9);
-      DummyClass17.anInt1823 =
+      DummyClass17.SCENE_CAMERA_PITCH =
           2047 & (int) (Math.atan2(var10, var12) * 325.949D);
-      GlobalStatics_10.anInt3315 =
+      GlobalStatics_10.SCENE_CAMERA_YAW =
           2047 & (int) (Math.atan2(var9, var11) * -325.949);
-      if (DummyClass17.anInt1823 < 128) {
-        DummyClass17.anInt1823 = 128;
+      if (DummyClass17.SCENE_CAMERA_PITCH < 128) {
+        DummyClass17.SCENE_CAMERA_PITCH = 128;
       }
 
-      if (DummyClass17.anInt1823 > 383) {
-        DummyClass17.anInt1823 = 383;
+      if (DummyClass17.SCENE_CAMERA_PITCH > 383) {
+        DummyClass17.SCENE_CAMERA_PITCH = 383;
       }
     }
 
@@ -8097,7 +8095,7 @@ public class GlobalStatics_9 {
       int var9 = var6 - 238;
       if (var3 < 16) {
         if (var3 == 1) {
-          if (var4 > GlobalStatics_9.cameraPosX) {
+          if (var4 > GlobalStatics_9.CAMERA_X) {
             if (!GlobalStatics_9.method349(var4, var6, var5)) {
               return false;
             }
@@ -8126,7 +8124,7 @@ public class GlobalStatics_9 {
         }
 
         if (var3 == 2) {
-          if (var5 < GlobalStatics_9.cameraZ) {
+          if (var5 < GlobalStatics_9.CAMERA_Z) {
             if (!GlobalStatics_9.method349(var4, var6, var5 + 128)) {
               return false;
             }
@@ -8155,7 +8153,7 @@ public class GlobalStatics_9 {
         }
 
         if (var3 == 4) {
-          if (var4 < GlobalStatics_9.cameraPosX) {
+          if (var4 < GlobalStatics_9.CAMERA_X) {
             if (!GlobalStatics_9.method349(var4 + 128, var6, var5)) {
               return false;
             }
@@ -8184,7 +8182,7 @@ public class GlobalStatics_9 {
         }
 
         if (var3 == 8) {
-          if (var5 > GlobalStatics_9.cameraZ) {
+          if (var5 > GlobalStatics_9.CAMERA_Z) {
             if (!GlobalStatics_9.method349(var4, var6, var5)) {
               return false;
             }
@@ -8527,7 +8525,7 @@ public class GlobalStatics_9 {
         : 0L;
   }
 
-  public static void method2175(byte var0) {
+  public static void clear35(byte var0) {
     GlobalStatics_9.aClass94_2002 = null;
     GlobalStatics_9.CONNECTING_TO_UPDATE_SERVER = null;
     GlobalStatics_9.aClass3_Sub28_Sub17_Sub1_2000 = null;
@@ -8652,7 +8650,7 @@ public class GlobalStatics_9 {
 
   public static AbstractIndexedColorSprite createIndexedColorSprite() {
     AbstractIndexedColorSprite var1;
-    if (GlRenderer.useOpenGlRenderer) {
+    if (GlRenderer.USE_OPENGL) {
       var1 = new GlIndexedColorSprite(GlobalStatics_9.anInt2426,
           GlobalStatics_9.anInt1748,
           GlobalStatics_9.anIntArray2048[0],
@@ -9142,7 +9140,7 @@ public class GlobalStatics_9 {
     }
   }
 
-  public static void method1369() {
+  public static void clear84() {
     GlobalStatics_9.aByteArray1117 = null;
   }
 
@@ -9186,19 +9184,16 @@ public class GlobalStatics_9 {
     GlobalStatics_9.aBooleanArray919 = null;
   }
 
-  public static void method405(boolean var0) {
+  public static void method405() {
     GlobalStatics_9.aClass153_2536 = null;
     GlobalStatics_9.anIntArray2533 = null;
     GLStatics.aClass3_Sub11ArrayArray2542 = null;
     GlobalStatics_9.aBooleanArray2538 = null;
-    if (!var0) {
-      GlobalStatics_9.method408(-65, (byte) -3, 110, null, -123, 122);
-    }
   }
 
   public static void drawLoadingScreen(AbstractFont var2, boolean var1) {
     int var3;
-    if (GlRenderer.useOpenGlRenderer || var1) {
+    if (GlRenderer.USE_OPENGL || var1) {
       var3 = GlobalStatics_9.viewHeight;
       int var4 = var3 * 956 / 503;
       DummyClass59.titlebackground
@@ -9211,7 +9206,7 @@ public class GlobalStatics_9 {
     var2.draw(GlobalStatics_9.aClass94_485, DummyClass30.viewWidth / 2,
         GlobalStatics_9.viewHeight / 2 - 26, 16777215, -1);
     var3 = GlobalStatics_9.viewHeight / 2 - 18;
-    if (GlRenderer.useOpenGlRenderer) {
+    if (GlRenderer.USE_OPENGL) {
       GlUtils
           .drawQuad(DummyClass30.viewWidth / 2 - 152, var3, 304, 34, 9179409);
       GlUtils.drawQuad(-151 + DummyClass30.viewWidth / 2, var3 + 1, 302, 32, 0);
@@ -9311,7 +9306,7 @@ public class GlobalStatics_9 {
     return var6 * (128 - var5) + var5 * var7 >> 7;
   }
 
-  public static void method1802() {
+  public static void clear32() {
     GlobalStatics_9.aClass94_1745 = null;
     GlobalStatics_9.anIntArray1743 = null;
     GlobalStatics_9.anIntArray1755 = null;
@@ -9321,8 +9316,8 @@ public class GlobalStatics_9 {
 
   public static void method1803(byte var0) {
     if (var0 >= 4) {
-      GlobalStatics_9.aClass93_1146.method1523((byte) -119);
-      DummyClass13.aClass93_2016.method1523((byte) -103);
+      GlobalStatics_9.aClass93_1146.method1523();
+      DummyClass13.aClass93_2016.method1523();
     }
   }
 
@@ -9586,19 +9581,22 @@ public class GlobalStatics_9 {
       int var6;
       if (var1.anInt1554 == 1) {
         var2 =
-            var1.anInt1553 - GLStatics.cameraTileX + GLStatics.viewportLength;
+            var1.anInt1553 - GLStatics.CAMERA_TILE_X
+                + GLStatics.VIEWPORT_SIZE;
         if (var2 >= 0
-            && var2 <= GLStatics.viewportLength + GLStatics.viewportLength) {
+            && var2 <= GLStatics.VIEWPORT_SIZE + GLStatics.VIEWPORT_SIZE) {
           var3 =
-              var1.anInt1563 - GLStatics.cameraTileZ + GLStatics.viewportLength;
+              var1.anInt1563 - GLStatics.CAMERA_TILE_Y
+                  + GLStatics.VIEWPORT_SIZE;
           if (var3 < 0) {
             var3 = 0;
           }
 
           var4 =
-              var1.anInt1566 - GLStatics.cameraTileZ + GLStatics.viewportLength;
-          if (var4 > GLStatics.viewportLength + GLStatics.viewportLength) {
-            var4 = GLStatics.viewportLength + GLStatics.viewportLength;
+              var1.anInt1566 - GLStatics.CAMERA_TILE_Y
+                  + GLStatics.VIEWPORT_SIZE;
+          if (var4 > GLStatics.VIEWPORT_SIZE + GLStatics.VIEWPORT_SIZE) {
+            var4 = GLStatics.VIEWPORT_SIZE + GLStatics.VIEWPORT_SIZE;
           }
 
           var5 = false;
@@ -9611,7 +9609,7 @@ public class GlobalStatics_9 {
           }
 
           if (var5) {
-            var6 = GlobalStatics_9.cameraPosX - var1.anInt1562;
+            var6 = GlobalStatics_9.CAMERA_X - var1.anInt1562;
             if (var6 > 32) {
               var1.anInt1564 = 1;
             } else {
@@ -9624,31 +9622,34 @@ public class GlobalStatics_9 {
             }
 
             var1.anInt1555 =
-                (var1.anInt1560 - GlobalStatics_9.cameraZ << 8) / var6;
+                (var1.anInt1560 - GlobalStatics_9.CAMERA_Z << 8) / var6;
             var1.anInt1551 =
-                (var1.anInt1550 - GlobalStatics_9.cameraZ << 8) / var6;
+                (var1.anInt1550 - GlobalStatics_9.CAMERA_Z << 8) / var6;
             var1.anInt1561 =
-                (var1.anInt1544 - GlobalStatics_7.cameraY << 8) / var6;
+                (var1.anInt1544 - GlobalStatics_7.CAMERA_Y << 8) / var6;
             var1.anInt1565 =
-                (var1.anInt1548 - GlobalStatics_7.cameraY << 8) / var6;
+                (var1.anInt1548 - GlobalStatics_7.CAMERA_Y << 8) / var6;
             GlobalStatics_10.aClass113Array1895[GlobalStatics_9.anInt1672++] = var1;
           }
         }
       } else if (var1.anInt1554 == 2) {
         var2 =
-            var1.anInt1563 - GLStatics.cameraTileZ + GLStatics.viewportLength;
+            var1.anInt1563 - GLStatics.CAMERA_TILE_Y
+                + GLStatics.VIEWPORT_SIZE;
         if (var2 >= 0
-            && var2 <= GLStatics.viewportLength + GLStatics.viewportLength) {
+            && var2 <= GLStatics.VIEWPORT_SIZE + GLStatics.VIEWPORT_SIZE) {
           var3 =
-              var1.anInt1553 - GLStatics.cameraTileX + GLStatics.viewportLength;
+              var1.anInt1553 - GLStatics.CAMERA_TILE_X
+                  + GLStatics.VIEWPORT_SIZE;
           if (var3 < 0) {
             var3 = 0;
           }
 
           var4 =
-              var1.anInt1547 - GLStatics.cameraTileX + GLStatics.viewportLength;
-          if (var4 > GLStatics.viewportLength + GLStatics.viewportLength) {
-            var4 = GLStatics.viewportLength + GLStatics.viewportLength;
+              var1.anInt1547 - GLStatics.CAMERA_TILE_X
+                  + GLStatics.VIEWPORT_SIZE;
+          if (var4 > GLStatics.VIEWPORT_SIZE + GLStatics.VIEWPORT_SIZE) {
+            var4 = GLStatics.VIEWPORT_SIZE + GLStatics.VIEWPORT_SIZE;
           }
 
           var5 = false;
@@ -9661,7 +9662,7 @@ public class GlobalStatics_9 {
           }
 
           if (var5) {
-            var6 = GlobalStatics_9.cameraZ - var1.anInt1560;
+            var6 = GlobalStatics_9.CAMERA_Z - var1.anInt1560;
             if (var6 > 32) {
               var1.anInt1564 = 3;
             } else {
@@ -9674,44 +9675,46 @@ public class GlobalStatics_9 {
             }
 
             var1.anInt1549 =
-                (var1.anInt1562 - GlobalStatics_9.cameraPosX << 8) / var6;
+                (var1.anInt1562 - GlobalStatics_9.CAMERA_X << 8) / var6;
             var1.anInt1557 =
-                (var1.anInt1545 - GlobalStatics_9.cameraPosX << 8) / var6;
+                (var1.anInt1545 - GlobalStatics_9.CAMERA_X << 8) / var6;
             var1.anInt1561 =
-                (var1.anInt1544 - GlobalStatics_7.cameraY << 8) / var6;
+                (var1.anInt1544 - GlobalStatics_7.CAMERA_Y << 8) / var6;
             var1.anInt1565 =
-                (var1.anInt1548 - GlobalStatics_7.cameraY << 8) / var6;
+                (var1.anInt1548 - GlobalStatics_7.CAMERA_Y << 8) / var6;
             GlobalStatics_10.aClass113Array1895[GlobalStatics_9.anInt1672++] = var1;
           }
         }
       } else if (var1.anInt1554 == 4) {
-        var2 = var1.anInt1544 - GlobalStatics_7.cameraY;
+        var2 = var1.anInt1544 - GlobalStatics_7.CAMERA_Y;
         if (var2 > 128) {
           var3 =
-              var1.anInt1563 - GLStatics.cameraTileZ + GLStatics.viewportLength;
+              var1.anInt1563 - GLStatics.CAMERA_TILE_Y
+                  + GLStatics.VIEWPORT_SIZE;
           if (var3 < 0) {
             var3 = 0;
           }
 
           var4 =
-              var1.anInt1566 - GLStatics.cameraTileZ + GLStatics.viewportLength;
-          if (var4 > GLStatics.viewportLength + GLStatics.viewportLength) {
-            var4 = GLStatics.viewportLength + GLStatics.viewportLength;
+              var1.anInt1566 - GLStatics.CAMERA_TILE_Y
+                  + GLStatics.VIEWPORT_SIZE;
+          if (var4 > GLStatics.VIEWPORT_SIZE + GLStatics.VIEWPORT_SIZE) {
+            var4 = GLStatics.VIEWPORT_SIZE + GLStatics.VIEWPORT_SIZE;
           }
 
           if (var3 <= var4) {
             int var10 =
-                var1.anInt1553 - GLStatics.cameraTileX
-                    + GLStatics.viewportLength;
+                var1.anInt1553 - GLStatics.CAMERA_TILE_X
+                    + GLStatics.VIEWPORT_SIZE;
             if (var10 < 0) {
               var10 = 0;
             }
 
             var6 =
-                var1.anInt1547 - GLStatics.cameraTileX
-                    + GLStatics.viewportLength;
-            if (var6 > GLStatics.viewportLength + GLStatics.viewportLength) {
-              var6 = GLStatics.viewportLength + GLStatics.viewportLength;
+                var1.anInt1547 - GLStatics.CAMERA_TILE_X
+                    + GLStatics.VIEWPORT_SIZE;
+            if (var6 > GLStatics.VIEWPORT_SIZE + GLStatics.VIEWPORT_SIZE) {
+              var6 = GLStatics.VIEWPORT_SIZE + GLStatics.VIEWPORT_SIZE;
             }
 
             boolean var7 = false;
@@ -9729,13 +9732,13 @@ public class GlobalStatics_9 {
             if (var7) {
               var1.anInt1564 = 5;
               var1.anInt1549 =
-                  (var1.anInt1562 - GlobalStatics_9.cameraPosX << 8) / var2;
+                  (var1.anInt1562 - GlobalStatics_9.CAMERA_X << 8) / var2;
               var1.anInt1557 =
-                  (var1.anInt1545 - GlobalStatics_9.cameraPosX << 8) / var2;
+                  (var1.anInt1545 - GlobalStatics_9.CAMERA_X << 8) / var2;
               var1.anInt1555 =
-                  (var1.anInt1560 - GlobalStatics_9.cameraZ << 8) / var2;
+                  (var1.anInt1560 - GlobalStatics_9.CAMERA_Z << 8) / var2;
               var1.anInt1551 =
-                  (var1.anInt1550 - GlobalStatics_9.cameraZ << 8) / var2;
+                  (var1.anInt1550 - GlobalStatics_9.CAMERA_Z << 8) / var2;
               GlobalStatics_10.aClass113Array1895[GlobalStatics_9.anInt1672++] = var1;
             }
           }
@@ -10042,7 +10045,7 @@ public class GlobalStatics_9 {
                 -16777216 & var5[var7] << 24);
           }
 
-          if (GlRenderer.useOpenGlRenderer) {
+          if (GlRenderer.USE_OPENGL) {
             var1[var2] = new GlDirectFullColorSprite(
                 GlobalStatics_9.anInt2426,
                 GlobalStatics_9.anInt1748,
@@ -10067,7 +10070,7 @@ public class GlobalStatics_9 {
                 & 255];
           }
 
-          if (GlRenderer.useOpenGlRenderer) {
+          if (GlRenderer.USE_OPENGL) {
             var1[var2] =
                 new GlDirectColorSprite(GlobalStatics_9.anInt2426,
                     GlobalStatics_9.anInt1748,
@@ -10346,7 +10349,7 @@ public class GlobalStatics_9 {
 
   public static SomethingWorldMapy method371(int var0, GameString var1) {
     if (var0 != 2) {
-      GlobalStatics_9.method372(false);
+      GlobalStatics_9.clear86(false);
     }
 
     for (
@@ -10362,7 +10365,7 @@ public class GlobalStatics_9 {
     return null;
   }
 
-  public static void method372(boolean var0) {
+  public static void clear86(boolean var0) {
     GlobalStatics_9.COMMAND_TWEEN = null;
     if (var0) {
       GlobalStatics_9.aClass93_2428 = null;
@@ -10380,7 +10383,7 @@ public class GlobalStatics_9 {
       int var8 = var6.method773((byte) -126);
       if (var8 == 0) {
         if (var4 != 0) {
-          GlobalStatics_9.method372(true);
+          GlobalStatics_9.clear86(true);
         }
 
         return;
@@ -10446,9 +10449,9 @@ public class GlobalStatics_9 {
     int var12;
     int var13;
     for (var9 = 0; var9 < var8; ++var9) {
-      var10 = var0.anIntArray627[var9] - GlobalStatics_9.cameraPosX;
-      var11 = var0.anIntArray615[var9] - GlobalStatics_7.cameraY;
-      var12 = var0.anIntArray618[var9] - GlobalStatics_9.cameraZ;
+      var10 = var0.anIntArray627[var9] - GlobalStatics_9.CAMERA_X;
+      var11 = var0.anIntArray615[var9] - GlobalStatics_7.CAMERA_Y;
+      var12 = var0.anIntArray618[var9] - GlobalStatics_9.CAMERA_Z;
       var13 = var12 * var3 + var10 * var4 >> 16;
       var12 = var12 * var4 - var10 * var3 >> 16;
       var10 = var13;
@@ -10494,7 +10497,7 @@ public class GlobalStatics_9 {
           GlobalStatics_9.anInt999 = var6;
         }
 
-        if (!GlRenderer.useOpenGlRenderer && !var7) {
+        if (!GlRenderer.USE_OPENGL && !var7) {
           DummyClass40.aBoolean849 =
               var13 < 0 || var14 < 0 || var15 < 0
                   || var13 > DummyClass40.anInt847
@@ -10575,7 +10578,7 @@ public class GlobalStatics_9 {
 
   public static void method539(int var0, int var1) {
     if (var0 != 0) {
-      GlobalStatics_9.method542((byte) 73);
+      GlobalStatics_9.clear3((byte) 73);
     }
 
     GlobalStatics_9.aClass93_1772.method1522(var0 ^ -126, var1);
@@ -10643,7 +10646,7 @@ public class GlobalStatics_9 {
     GlobalStatics_9.method307(var13, DummyClass54.aShortArray1398, 100);
   }
 
-  public static void method542(byte var0) {
+  public static void clear3(byte var0) {
     if (var0 != -46) {
       GlobalStatics_9.anInt3552 = 7;
     }
@@ -10708,7 +10711,7 @@ public class GlobalStatics_9 {
     }
 
     if (var1 > -124) {
-      GlobalStatics_9.method109(68);
+      GlobalStatics_9.clear41(68);
     }
 
     if (var0.isLoaded(GlobalStatics_10.anInt3061)) {
@@ -10746,48 +10749,40 @@ public class GlobalStatics_9 {
     return var2;
   }
 
-  public static void method109(int var0) {
+  public static void clear41(int var0) {
     GlobalStatics_9.aClass94_2255 = null;
     GlobalStatics_9.aClass94_2260 = null;
     GlobalStatics_9.aClass94_2252 = null;
     if (var0 != 2) {
-      GlobalStatics_9.method109(-22);
+      GlobalStatics_9.clear41(-22);
     }
 
     GlobalStatics_9.fileUnpacker25 = null;
   }
 
   public static void initializeScene(int planes, int sceneWidth,
-      int sceneHeight, int viewportLength,
-      boolean var4) {
-    GlobalStatics_4.sceneWidth = sceneWidth;
-    GlobalStatics_1.sceneHeight = sceneHeight;
-    GLStatics.viewportLength = viewportLength;
+      int sceneHeight, int viewportLength) {
+    GlobalStatics_4.SCENE_WIDTH = sceneWidth;
+    GlobalStatics_1.SCENE_HEIGHT = sceneHeight;
+    GLStatics.VIEWPORT_SIZE = viewportLength;
     GlobalStatics_9.tiles =
-        new SceneGraphTile[planes][GlobalStatics_4.sceneWidth][GlobalStatics_1.sceneHeight];
+        new SceneGraphTile[planes][GlobalStatics_4.SCENE_WIDTH][GlobalStatics_1.SCENE_HEIGHT];
     DummyClass43.somethingHeightMap =
-        new int[planes][GlobalStatics_4.sceneWidth + 1][
-            GlobalStatics_1.sceneHeight + 1];
-    if (GlRenderer.useOpenGlRenderer) {
+        new int[planes][GlobalStatics_4.SCENE_WIDTH + 1][
+            GlobalStatics_1.SCENE_HEIGHT + 1];
+    if (GlRenderer.USE_OPENGL) {
       GLStatics.aClass3_Sub11ArrayArray2199 = new SomethingGl0[4][];
     }
 
-    if (var4) {
-      GlobalStatics_9.aClass3_Sub2ArrayArrayArray2065 =
-          new SceneGraphTile[1][GlobalStatics_4.sceneWidth][GlobalStatics_1.sceneHeight];
-      GlobalStatics_10.anIntArrayArray3115 =
-          new int[GlobalStatics_4.sceneWidth][GlobalStatics_1.sceneHeight];
-      GlobalStatics_2.othrrHeightMap =
-          new int[1][GlobalStatics_4.sceneWidth + 1][GlobalStatics_1.sceneHeight
-              + 1];
-      if (GlRenderer.useOpenGlRenderer) {
-        GlobalStatics_10.aClass3_Sub11ArrayArray3346 = new SomethingGl0[1][];
-      }
-    } else {
-      GlobalStatics_9.aClass3_Sub2ArrayArrayArray2065 = null;
-      GlobalStatics_10.anIntArrayArray3115 = null;
-      GlobalStatics_2.othrrHeightMap = null;
-      GlobalStatics_10.aClass3_Sub11ArrayArray3346 = null;
+    GlobalStatics_9.aClass3_Sub2ArrayArrayArray2065 =
+        new SceneGraphTile[1][GlobalStatics_4.SCENE_WIDTH][GlobalStatics_1.SCENE_HEIGHT];
+    GlobalStatics_10.anIntArrayArray3115 =
+        new int[GlobalStatics_4.SCENE_WIDTH][GlobalStatics_1.SCENE_HEIGHT];
+    GlobalStatics_2.othrrHeightMap =
+        new int[1][GlobalStatics_4.SCENE_WIDTH + 1][GlobalStatics_1.SCENE_HEIGHT
+            + 1];
+    if (GlRenderer.USE_OPENGL) {
+      GlobalStatics_10.aClass3_Sub11ArrayArray3346 = new SomethingGl0[1][];
     }
 
     DummyClass10.method2264(false);
@@ -10796,19 +10791,19 @@ public class GlobalStatics_9 {
     GlobalStatics_10.aClass113Array1895 = new SomethingLight0[500];
     GlobalStatics_9.anInt1672 = 0;
     DummyClass50.anIntArrayArrayArray1142 =
-        new int[planes][GlobalStatics_4.sceneWidth + 1][
-            GlobalStatics_1.sceneHeight + 1];
+        new int[planes][GlobalStatics_4.SCENE_WIDTH + 1][
+            GlobalStatics_1.SCENE_HEIGHT + 1];
     GlobalStatics_3.aClass25Array1868 = new SceneSomething[5000];
     GlobalStatics_10.anInt3070 = 0;
     GlobalStatics_7.aClass25Array4060 = new SceneSomething[100];
     GLStatics.adjacentTileOnScreen =
-        new boolean[GLStatics.viewportLength + GLStatics.viewportLength + 1][
-            GLStatics.viewportLength + GLStatics.viewportLength + 1];
+        new boolean[GLStatics.VIEWPORT_SIZE + GLStatics.VIEWPORT_SIZE + 1][
+            GLStatics.VIEWPORT_SIZE + GLStatics.VIEWPORT_SIZE + 1];
     GlobalStatics_9.tileOnScreen =
-        new boolean[GLStatics.viewportLength + GLStatics.viewportLength + 2][
-            GLStatics.viewportLength + GLStatics.viewportLength + 2];
+        new boolean[GLStatics.VIEWPORT_SIZE + GLStatics.VIEWPORT_SIZE + 2][
+            GLStatics.VIEWPORT_SIZE + GLStatics.VIEWPORT_SIZE + 2];
     GlobalStatics_9.aByteArrayArrayArray1774 =
-        new byte[planes][GlobalStatics_4.sceneWidth][GlobalStatics_1.sceneHeight];
+        new byte[planes][GlobalStatics_4.SCENE_WIDTH][GlobalStatics_1.SCENE_HEIGHT];
   }
 
   public static void method964(int var0) {
@@ -10872,57 +10867,47 @@ public class GlobalStatics_9 {
     return var0 >>> 8;
   }
 
-  public static void method1952(int var0, int var1, int var2, int var3,
-      int var4, int var5, int var6,
-      int var7) {
-    int var8;
-    int var9;
-    if (GlRenderer.useOpenGlRenderer) {
-      var8 = -334 + var2;
-      if (var8 >= 0) {
-        if (var8 > 100) {
-          var8 = 100;
-        }
-      } else {
-        var8 = 0;
-      }
+  public static void method1952(
+      int cameraXOffset,
+      int var2,
+      int cameraYOffset,
+      int cameraZ,
+      int yaw,
+      int cameraZOffset,
+      int pitch
+  ) {
+    if (GlRenderer.USE_OPENGL) {
+      int zoom = 700 + var2;
 
-      var9 =
-          var8 * (-GlobalStatics_11.aShort46 + GlobalStatics_8.aShort1535) / 100
+      int var9 =
+          zoom * (GlobalStatics_8.aShort1535 - GlobalStatics_11.aShort46) / 100
               + GlobalStatics_11.aShort46;
-      var4 = var9 * var4 >> 8;
+      cameraZ = var9 * cameraZ >> 8;
     }
 
-    var8 = -var7 + 2048 & 2047;
-    var9 = 2047 & -var5 + 2048;
-    int var10 = 0;
-    int var12 = var4;
-    int var11 = 0;
-    int var13;
-    int var14;
+    int var8 = -pitch + 2048 & 2047;
+    int var9 = 2047 & -yaw + 2048;
+    int cameraX = 0;
+    int cameraY = 0;
     if (var8 != 0) {
-      var14 = DummyClass40.COSINE_TABLE[var8];
-      var13 = GLStatics.SINE_TABLE[var8];
-      var11 = var13 * -var4 >> 16;
-      var12 = var14 * var4 >> 16;
+      int var14 = DummyClass40.COSINE_TABLE[var8];
+      int var13 = GLStatics.SINE_TABLE[var8];
+      cameraY = var13 * -cameraZ >> 16;
+      cameraZ = var14 * cameraZ >> 16;
     }
 
     if (var9 != 0) {
-      var13 = GLStatics.SINE_TABLE[var9];
-      var14 = DummyClass40.COSINE_TABLE[var9];
-      var10 = var13 * var12 >> 16;
-      var12 = var12 * var14 >> 16;
+      int var13 = GLStatics.SINE_TABLE[var9];
+      int var14 = DummyClass40.COSINE_TABLE[var9];
+      cameraX = var13 * cameraZ >> 16;
+      cameraZ = cameraZ * var14 >> 16;
     }
 
-    if (var1 != -1907397104) {
-      GlobalStatics_9.method1950(null, false);
-    }
-
-    DummyClass17.anInt1823 = var7;
-    GlobalStatics_10.anInt3315 = var5;
-    DummyClass49.anInt1111 = var6 - var12;
-    GlobalStatics_9.anInt3995 = var0 - var10;
-    GlobalStatics_7.anInt2162 = -var11 + var3;
+    DummyClass17.SCENE_CAMERA_PITCH = pitch;
+    GlobalStatics_10.SCENE_CAMERA_YAW = yaw;
+    DummyClass49.SCENE_CAMERA_Z = cameraZOffset - cameraZ;
+    GlobalStatics_9.SCENE_CAMERA_X = cameraXOffset - cameraX;
+    GlobalStatics_7.SCENE_CAMERA_Y = cameraYOffset - cameraY;
   }
 
   public static GameWorld method1953(byte var0) {
@@ -10958,7 +10943,6 @@ public class GlobalStatics_9 {
     GlobalStatics_9.aClass94_3546 = null;
     GlobalStatics_9.aClass94_3548 = null;
     GlobalStatics_9.aClass94_3543 = null;
-    int var1 = 101 % ((-29 - var0) / 45);
     GlobalStatics_9.aClass94_3544 = null;
     GlobalStatics_9.aClass94_3547 = null;
     GlobalStatics_9.aClass94_3541 = null;
@@ -10993,7 +10977,6 @@ public class GlobalStatics_9 {
   }
 
   public static boolean method140(int var0, int var1) {
-    int var2 = -11 / ((-29 - var1) / 49);
     return
         var0 >= 0 && GlobalStatics_6.aBooleanArray3503.length > var0
             && GlobalStatics_6.aBooleanArray3503[var0];
@@ -11394,10 +11377,10 @@ public class GlobalStatics_9 {
     GlobalStatics_9.localPlayer = new Player();
     GlobalStatics_9.localPlayer.anInt2829 = 3000;
     GlobalStatics_9.localPlayer.anInt2819 = var1;
-    if (GlRenderer.useOpenGlRenderer) {
+    if (GlRenderer.USE_OPENGL) {
       if (GlobalStatics_9.anInt1753 == 2) {
-        GlobalStatics_9.anInt3995 = GlobalStatics_8.anInt30 << 7;
-        DummyClass49.anInt1111 = GlobalStatics_5.anInt1904 << 7;
+        GlobalStatics_9.SCENE_CAMERA_X = GlobalStatics_8.anInt30 << 7;
+        DummyClass49.SCENE_CAMERA_Z = GlobalStatics_5.anInt1904 << 7;
       } else {
         GlobalStatics_10.d(var1 ^ 0xf447);
       }
@@ -11905,12 +11888,9 @@ public class GlobalStatics_9 {
     var3.text = var0;
   }
 
-  public static void method296(byte var0) {
+  public static void method296() {
     GlobalStatics_9.aClass94Array3341 = null;
-    if (var0 >= -56) {
-      GLStatics.cameraTileZ = 30;
-    }
-
+    GLStatics.CAMERA_TILE_Y = 30;
     GlobalStatics_9.aClass94_3344 = null;
     GlobalStatics_9.aClass94_3339 = null;
   }
@@ -12337,10 +12317,6 @@ public class GlobalStatics_9 {
 
   public static void method354(int var0, int var1) {
     GlobalStatics_9.anInt3362 = -1;
-    if (var0 >= -121) {
-      GLStatics.viewportLength = -58;
-    }
-
     GlobalStatics_9.anInt2251 = var1;
     GlobalStatics_9.method117((byte) 87);
   }
@@ -12609,10 +12585,10 @@ public class GlobalStatics_9 {
   }
 
   public static void method167(int var0) {
-    if (GlobalStatics_10.keyboard != null) {
-      Keyboard var1 = GlobalStatics_10.keyboard;
+    if (GlobalStatics_10.KEYBOARD != null) {
+      Keyboard var1 = GlobalStatics_10.KEYBOARD;
       synchronized (var1) {
-        GlobalStatics_10.keyboard = null;
+        GlobalStatics_10.KEYBOARD = null;
       }
     }
 
@@ -12860,7 +12836,7 @@ public class GlobalStatics_9 {
     DummyClass58.method1659(16712751);
     GlobalStatics_9.method142(true);
     GlobalStatics_9.aClass93_1135.method1524(3);
-    if (!GlRenderer.useOpenGlRenderer) {
+    if (!GlRenderer.USE_OPENGL) {
       ((TextureCache) GLStatics.textureCache).method1618(0);
     }
 

@@ -29,8 +29,8 @@ public final class GlIndexedColorSprite extends AbstractIndexedColorSprite {
   }
 
   private void initialize(byte[] index, int[] palette) {
-    this.textureWidth = GLStatics.nearestPo2((byte) 62, this.width);
-    this.textureHeight = GLStatics.nearestPo2((byte) 99, this.height);
+    this.textureWidth = GLStatics.nearestPo2(this.width);
+    this.textureHeight = GLStatics.nearestPo2(this.height);
     byte[] dest = new byte[this.textureWidth * this.textureHeight * 4];
     int destOff = 0;
     int indexOff = 0;

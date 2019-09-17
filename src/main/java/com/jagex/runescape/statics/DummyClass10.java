@@ -7,6 +7,7 @@ import com.jagex.runescape.model.Inventory;
 import com.jagex.runescape.model.NPC;
 import com.jagex.runescape.model.SomethingLight0;
 import com.jagex.runescape.opengl.GLStatics;
+import java.util.Arrays;
 
 public final class DummyClass10 {
 
@@ -90,7 +91,7 @@ public final class DummyClass10 {
     }
   }
 
-  public static void method2262(byte var0) {
+  public static void clear61(byte var0) {
     DummyClass10.aClass94_2083 = null;
     if (var0 > 0) {
       DummyClass10.aClass94_2086 = null;
@@ -128,7 +129,8 @@ public final class DummyClass10 {
       GlobalStatics_4.heightMap = DummyClass43.somethingHeightMap;
       GLStatics.aClass3_Sub11ArrayArray2542 = GLStatics.aClass3_Sub11ArrayArray2199;
     }
-
+    System.out.println(
+        Arrays.deepToString(GLStatics.aClass3_Sub11ArrayArray2542));
     GLStatics.anInt2456 = GLStatics.sceneGraphTiles.length;
   }
 

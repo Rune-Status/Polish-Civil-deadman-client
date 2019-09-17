@@ -26,7 +26,7 @@ public class DummyClass5 extends DummyClass6 {
   public static GameString aClass94_2992 = DummyClass5.aClass94_2988;
 
   public static void method2210(byte var0, boolean var1) {
-    DummyClass43.method1194(-16385);
+    DummyClass43.method1194();
     if (DummyClass15.state == 30 || DummyClass15.state == 25) {
       ++GlobalStatics_10.anInt4032;
       if (GlobalStatics_10.anInt4032 >= 50 || var1) {
@@ -48,7 +48,7 @@ public class DummyClass5 extends DummyClass6 {
             ++GlobalStatics_9.anInt3569;
           }
 
-          DummyClass43.method1194(var0 ^ 16473);
+          DummyClass43.method1194();
         }
       }
     }

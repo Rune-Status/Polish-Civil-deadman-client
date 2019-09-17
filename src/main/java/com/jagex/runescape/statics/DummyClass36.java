@@ -29,7 +29,7 @@ public final class DummyClass36 {
       int var4, byte var5, int var6) {
     if (var1 != null) {
       if (var5 != 11) {
-        DummyClass36.method1032(true);
+        DummyClass36.clear87(true);
       }
 
       int var9 = var3 * var3 + var2 * var2;
@@ -42,7 +42,7 @@ public final class DummyClass36 {
         var11 = 256 * var11 / (256 + GlobalStatics_9.anInt3020);
         int var12 = var10 * var2 + var3 * var11 >> 16;
         int var13 = var11 * var2 - var3 * var10 >> 16;
-        if (GlRenderer.useOpenGlRenderer) {
+        if (GlRenderer.USE_OPENGL) {
           ((GlDirectColorSprite) var1).method645(
               var0.anInt168 / 2 + var6 + var12 - var1.anInt3697 / 2,
               var0.anInt193 / 2 + var4 - (var13 + var1.anInt3706 / 2),
@@ -67,14 +67,14 @@ public final class DummyClass36 {
     return var0 >>> 7;
   }
 
-  public static void method1032(boolean var0) {
+  public static void clear87(boolean var0) {
     DummyClass36.anIntArrayArrayArray2609 = null;
     DummyClass36.aString2611 = null;
     DummyClass36.aClass94_2616 = null;
     DummyClass36.aClass94_2610 = null;
     DummyClass36.aClass15_2613 = null;
     if (var0) {
-      DummyClass36.method1032(true);
+      DummyClass36.clear87(true);
     }
   }
 

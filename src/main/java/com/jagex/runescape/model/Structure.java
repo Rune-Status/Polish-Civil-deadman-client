@@ -32,7 +32,7 @@ public final class Structure extends SubNode {
           int var4 = var1.readUnsignedByte();
           int var5;
           if (this.aClass130_3636 == null) {
-            var5 = GLStatics.nearestPo2((byte) 105, var4);
+            var5 = GLStatics.nearestPo2(var4);
             this.aClass130_3636 = new HashTable(var5);
           }
 

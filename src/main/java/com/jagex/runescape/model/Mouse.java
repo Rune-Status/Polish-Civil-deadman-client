@@ -72,11 +72,9 @@ public final class Mouse implements MouseListener, MouseMotionListener,
   }
 
   public void focusGained(FocusEvent e) {
-    System.out.println("Mouse.focusGained");
   }
 
   public void focusLost(FocusEvent e) {
-    System.out.println("Mouse.focusLost");
     GlobalStatics_9.anInt549 = 0;
   }
 

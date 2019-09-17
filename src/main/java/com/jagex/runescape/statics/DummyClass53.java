@@ -24,7 +24,7 @@ public final class DummyClass53 {
   public static int anInt1344;
   public static GameString aClass94_1335 = DummyClass53.aClass94_1334;
 
-  public static void method1582(int var0) {
+  public static void clear48(int var0) {
     DummyClass53.aClass94_1335 = null;
     DummyClass53.aClass3_Sub28_Sub16_1339 = null;
     DummyClass53.aClass94_1342 = null;
@@ -42,7 +42,7 @@ public final class DummyClass53 {
       int var4, int var5, int var6,
       int var7, int var8, int var9) {
     if (var3 != 3) {
-      DummyClass53.method1582(45);
+      DummyClass53.clear48(45);
     }
 
     if (var0 == var1 && var9 == var2 && var8 == var7 && var5 == var6) {

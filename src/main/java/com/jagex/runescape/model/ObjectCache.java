@@ -101,7 +101,7 @@ public final class ObjectCache {
       }
   }
 
-  public void method1523(byte var1 ) {
+  public void method1523() {
     for (AbstractObjectNode var2 = (AbstractObjectNode) this.aClass13_1329.getFirst();
            var2 != null; var2 = (AbstractObjectNode) this.aClass13_1329.getNext()) {
         if (var2.method568(-22358)) {
@@ -109,10 +109,6 @@ public final class ObjectCache {
           var2.unlinkSubNode();
           ++this.anInt1327;
         }
-      }
-
-      if (var1 > -98) {
-        this.anInt1331 = 56;
       }
   }
 

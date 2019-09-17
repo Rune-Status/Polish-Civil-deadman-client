@@ -121,7 +121,7 @@ public final class SomethingLight {
       }
     }
 
-    if (GlRenderer.vertexBufferSupport) {
+    if (GlRenderer.VERTEX_BUFFER_SUPPORT) {
       this.aClass156_642 = new GlBufferObject();
       ByteBuffer var4 = ByteBuffer.wrap(var2.bytes);
       this.aClass156_642.setVertexBufferData(var4);
@@ -155,12 +155,12 @@ public final class SomethingLight {
     this.aByteArray654 = new byte[this.anInt657];
     this.aByteArray644 = new byte[this.anInt657];
     this.aByteArray650 = new byte[this.anInt657];
-    this.aClass130_656 = new HashTable(GLStatics.nearestPo2((byte) 70,
+    this.aClass130_656 = new HashTable(GLStatics.nearestPo2(
         this.anInt657));
   }
 
   public void draw() {
-    if (GlRenderer.vertexBufferSupport) {
+    if (GlRenderer.VERTEX_BUFFER_SUPPORT) {
       this.aClass156_642.bindVertexBuffer();
       GlRenderer.GL.glInterleavedArrays(10787, 16, 0L);
       GlRenderer.aBoolean1798 = false;

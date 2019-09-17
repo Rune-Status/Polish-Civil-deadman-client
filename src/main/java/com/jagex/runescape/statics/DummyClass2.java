@@ -409,7 +409,7 @@ public class DummyClass2 {
     return (var0 & 0xff80) + var1;
   }
 
-  public static void method1754(int var0) {
+  public static void clear56(int var0) {
     DummyClass2.aClass153_1680 = null;
     DummyClass2.anIntArray1679 = null;
     if (var0 >= -49) {

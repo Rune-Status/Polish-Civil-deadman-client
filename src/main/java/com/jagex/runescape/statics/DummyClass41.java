@@ -63,7 +63,7 @@ public final class DummyClass41 {
         double var14 = Math.atan2(var12, var13);
         int var16 = (int) (Math.sin(var14) * var8);
         int var17 = (int) (Math.cos(var14) * var8);
-        if (GlRenderer.useOpenGlRenderer) {
+        if (GlRenderer.USE_OPENGL) {
           ((GlDirectColorSprite) GlobalStatics_9.aClass3_Sub28_Sub16Array3458[var0])
               .method648(
                   240, 240, (var5.anInt168 / 2 + var2 + var16) * 16,
@@ -140,7 +140,7 @@ public final class DummyClass41 {
       DummyClass25.aClass26Array1627[var3] = new GameWorldSomething();
       DummyClass25.aClass26Array1627[var3].anInt507 = var0
           .readUnsignedShortSmart();
-      DummyClass25.aClass26Array1627[var3].aClass94_508 = var0.method761(105);
+      DummyClass25.aClass26Array1627[var3].aClass94_508 = var0.method761();
     }
 
     if (var1 > -10) {
@@ -160,8 +160,8 @@ public final class DummyClass41 {
       var5.anInt721 = var0.readUnsignedByte();
       var5.flags = var0.readInt();
       var5.anInt2621 = var4 + GlobalStatics_10.anInt3054;
-      var5.aClass94_2620 = var0.method761(98);
-      var5.aClass94_2625 = var0.method761(79);
+      var5.aClass94_2620 = var0.method761();
+      var5.aClass94_2625 = var0.method761();
     }
 
     GlobalStatics_2.anInt3608 = var0.readInt();

@@ -25,7 +25,7 @@ public final class DummyClass8 extends DummyClass7 {
   public static GameString aClass94_4022 = GameStringStatics.create(
       "Your friend list is full)3 Max of 100 for free users)1 and 200 for members)3");
   public static SocketStream aClass89_4012;
-  public static volatile boolean focused = true;
+  public static volatile boolean FOCUSED = true;
   public static int anInt4014;
   public static ObjectCache aClass93_4015 = new ObjectCache(64);
   public static GameString[] aClass94Array4016 = new GameString[500];
@@ -76,9 +76,9 @@ public final class DummyClass8 extends DummyClass7 {
   }
 
   public static void method2222(byte var0) {
-    GlobalStatics_9.aClass93_4043.method1523((byte) -117);
-    GlobalStatics_7.aClass93_2442.method1523((byte) -108);
-    DummyClass14.aClass93_1964.method1523((byte) -117);
+    GlobalStatics_9.aClass93_4043.method1523();
+    GlobalStatics_7.aClass93_2442.method1523();
+    DummyClass14.aClass93_1964.method1523();
     if (var0 <= 122) {
       DummyClass8.method2223(true, (byte) -67);
     }
@@ -88,7 +88,7 @@ public final class DummyClass8 extends DummyClass7 {
     int var2 = 85 % ((-17 - var1) / 59);
     byte var3;
     byte[][] var4;
-    if (GlRenderer.useOpenGlRenderer && var0) {
+    if (GlRenderer.USE_OPENGL && var0) {
       var4 = GlobalStatics_10.updatedLandscapesData;
       var3 = 1;
     } else {
@@ -97,7 +97,7 @@ public final class DummyClass8 extends DummyClass7 {
     }
 
     for (int var5 = 0; var5 < var3; ++var5) {
-      DummyClass43.method1194(-16385);
+      DummyClass43.method1194();
 
       for (int var6 = 0; var6 < 13; ++var6) {
         for (int var7 = 0; var7 < 13; ++var7) {

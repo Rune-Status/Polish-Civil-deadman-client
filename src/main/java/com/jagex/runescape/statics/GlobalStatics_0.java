@@ -92,6 +92,7 @@ import com.jagex.runescape.opengl.SomethingGl0;
 import com.jagex.runescape.sprite.SoftwareIndexedColorSprite;
 import com.jagex.runescape.sprite.SoftwareIndexedColorSpriteStatics;
 import java.nio.charset.StandardCharsets;
+import java.util.Arrays;
 import java.util.Random;
 
 public final class GlobalStatics_0 {
@@ -307,7 +308,7 @@ public final class GlobalStatics_0 {
     GlobalStatics_9.aClass93_1013.method1524(3);
   }
 
-  public static void method767(int var0) {
+  public static void clear11(int var0) {
     GlobalStatics_0.aClass94_2599 = null;
     GlobalStatics_0.anIntArray2591 = null;
     GlobalStatics_0.LOADED_INTERFACES = null;
@@ -490,7 +491,7 @@ public final class GlobalStatics_0 {
 
     if (var4 == 4) {
       int var23;
-      if (GlRenderer.useOpenGlRenderer && !var1) {
+      if (GlRenderer.USE_OPENGL && !var1) {
         BlockConfig var22 = null;
 
         while (var20.position < var20.bytes.length) {
@@ -603,7 +604,7 @@ public final class GlobalStatics_0 {
       GlobalStatics_9.method626(64);
     }
 
-    if (GlRenderer.useOpenGlRenderer) {
+    if (GlRenderer.USE_OPENGL) {
       GlUtils.clip(var0, var2, var0 + var4, var3 + var2);
     } else {
       DummyClass47.method1324(var0, var2, var0 + var4, var3 + var2);
@@ -634,7 +635,7 @@ public final class GlobalStatics_0 {
         GlobalStatics_0.aClass94Array2596 = null;
       }
 
-      if (GlRenderer.useOpenGlRenderer) {
+      if (GlRenderer.USE_OPENGL) {
         if (GlobalStatics_9.aClass3_Sub28_Sub16_Sub2_3221 == null ||
             GlobalStatics_9.aClass3_Sub28_Sub16_Sub2_3221.anInt3707 != var4 ||
             GlobalStatics_9.aClass3_Sub28_Sub16_Sub2_3221.anInt3696 != var3) {
@@ -700,7 +701,7 @@ public final class GlobalStatics_0 {
       byte var5 = 20;
       var6 = var0 + var4 / 2;
       var7 = var3 / 2 + var2 - 18 - var5;
-      if (GlRenderer.useOpenGlRenderer) {
+      if (GlRenderer.USE_OPENGL) {
         GlUtils.fillQuad(var0, var2, var4, var3, 0);
         GlUtils.drawQuad(var6 - 152, var7, 304, 34, 9179409);
         GlUtils.drawQuad(var6 - 151, var7 + 1, 302, 32, 0);
@@ -832,7 +833,7 @@ public final class GlobalStatics_0 {
     GlobalStatics_0.aClass3_Sub28_Sub16_637 = null;
   }
 
-  public static void method83(byte var0) {
+  public static void clear45(byte var0) {
     GlobalStatics_0.aClass94_77 = null;
     GlobalStatics_0.aClass94Array75 = null;
     if (var0 != 30) {
@@ -857,7 +858,7 @@ public final class GlobalStatics_0 {
   }
 
   public static void method85(byte var0) {
-    GlobalStatics_9.aClass93_1772.method1523((byte) -99);
+    GlobalStatics_9.aClass93_1772.method1523();
   }
 
   public static void setupLanguagePacket(int var1) {
@@ -1135,7 +1136,7 @@ public final class GlobalStatics_0 {
         : null;
   }
 
-  public static void method1541(int var0) {
+  public static void clear1(int var0) {
     GlobalStatics_0.aClass94_2151 = null;
 
     GlobalStatics_0.anIntArray2157 = null;
@@ -1242,7 +1243,7 @@ public final class GlobalStatics_0 {
       DummyClass47.method1316(var14);
       DummyClass40.method1134();
       DummyClass40.aBoolean843 = true;
-      return GlRenderer.useOpenGlRenderer && !var2
+      return GlRenderer.USE_OPENGL && !var2
           ? new GlDirectColorSprite(var15)
           : var15;
     }
@@ -1390,7 +1391,6 @@ public final class GlobalStatics_0 {
   }
 
   public static void setSettings(int var0, GameString var1) {
-    System.out.println("StringNode.setSettings");
   }
 
   public static void method735(int var0) {
@@ -1458,7 +1458,7 @@ public final class GlobalStatics_0 {
     }
   }
 
-  public static void method1774(int var0) {
+  public static void clear29(int var0) {
     GlobalStatics_0.aClass94_1698 = null;
     GlobalStatics_0.aClass94_1707 = null;
     GlobalStatics_0.aBooleanArray1712 = null;
@@ -1721,8 +1721,8 @@ public final class GlobalStatics_0 {
     }
   }
 
-  public static void method1213(int var0, SomethingGl0[] var1) {
-    GLStatics.aClass3_Sub11ArrayArray2542[var0] = var1;
+  public static void method1213(int plane, SomethingGl0[] var1) {
+    GLStatics.aClass3_Sub11ArrayArray2542[plane] = var1;
   }
 
   public static void method1214(int var0, int var1, int var2, int var3,
@@ -1844,11 +1844,8 @@ public final class GlobalStatics_0 {
     }
   }
 
-  public static void method1217(int var0) {
+  public static void clear27() {
     GlobalStatics_0.aClass93_939 = null;
-    if (var0 != 0) {
-      GlobalStatics_0.method1213(56, null);
-    }
   }
 
   public static GameString method1218(boolean var0, int var1, int var2) {
@@ -1856,7 +1853,7 @@ public final class GlobalStatics_0 {
         : GlobalStatics_5.method1723((byte) -128, var0, 10, var2);
   }
 
-  public static void method53(int var0) {
+  public static void clear78() {
     GlobalStatics_0.aClass93_21 = null;
     GlobalStatics_0.aClass94_24 = null;
     GlobalStatics_0.aClass94_22 = null;
@@ -1868,14 +1865,10 @@ public final class GlobalStatics_0 {
     return var1 ? -81 : var0 & 127;
   }
 
-  public static void method55(int var0) {
-    if (var0 != 22683) {
-      GlobalStatics_0.method53(43);
-    }
-
-    GlobalStatics_0.aClass93_21.method1523((byte) -100);
-    DummyClass54.aClass93_1401.method1523((byte) -105);
-    GlobalStatics_9.aClass93_4051.method1523((byte) -101);
-    DummyClass14.aClass93_1965.method1523((byte) -119);
+  public static void method55() {
+    GlobalStatics_0.aClass93_21.method1523();
+    DummyClass54.aClass93_1401.method1523();
+    GlobalStatics_9.aClass93_4051.method1523();
+    DummyClass14.aClass93_1965.method1523();
   }
 }

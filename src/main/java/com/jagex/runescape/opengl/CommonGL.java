@@ -1,5 +1,7 @@
 package com.jagex.runescape.opengl;
 
+import com.jagex.runescape.statics.GlobalStatics_6;
+
 public final class CommonGL {
 
   public static void method403() {
@@ -17,7 +19,7 @@ public final class CommonGL {
           && GLStatics.textureCache.method18(var2.materialId, 255) == 4) {
         GlRenderer.GL
             .glColor4fv(GLStatics.method1705(var2.anInt2355, 0),
-            0);
+                0);
         float var3 = 201.5F - (var2.aBoolean2364 ? 1.0F : 0.5F);
         var2.method149(GLStatics.sceneGraphTiles, var3, true);
       }
@@ -31,8 +33,7 @@ public final class CommonGL {
   }
 
   public static void drawScene(int var0, int var1, int var2, boolean var22) {
-    int var14;
-    int var15;
+    SomethingGl0[][] array = GLStatics.aClass3_Sub11ArrayArray2542;
     GlRenderer.GL.glPushMatrix();
     GlRenderer.GL.glTranslatef(-var0, -var1, -var2);
     if (var22) {
@@ -43,48 +44,49 @@ public final class CommonGL {
       GLStatics.anInt1244 = -1;
       GLStatics.anInt3072 = -1;
 
-      for (
-        var14 = 0;
-        var14 < GLStatics.aClass3_Sub11ArrayArray2542[0].length; ++var14) {
-        SomethingGl0 var28 = GLStatics.aClass3_Sub11ArrayArray2542[0][var14];
-        float var26 = 251.5F - (var28.aBoolean2364 ? 1.0F : 0.5F);
-        if (var28.anInt2355 != GLStatics.anInt1244) {
-          GLStatics.anInt1244 = var28.anInt2355;
-          GLStatics.method535((byte) 56, var28.anInt2355);
-          GlEnvironment.setFogColor(GLStatics.calculateFogColor());
+      //TODO it randomy went null after some refactoring
+//      possibly synchronization issue, right now null check is fine
+      if (array[0] != null) {
+        for (int y = 0; y < array[0].length; ++y) {
+          SomethingGl0 var28 = array[0][y];
+          float var26 = 251.5F - (var28.aBoolean2364 ? 1.0F : 0.5F);
+          if (var28.anInt2355 != GLStatics.anInt1244) {
+            GLStatics.anInt1244 = var28.anInt2355;
+            GLStatics.method535(var28.anInt2355);
+            GlEnvironment.setFogColor(GLStatics.calculateFogColor());
+          }
+
+          var28.method149(GLStatics.sceneGraphTiles, var26, false);
         }
 
-        var28.method149(GLStatics.sceneGraphTiles, var26, false);
+        MaterialShader3.method2253();
       }
-
-      MaterialShader3.method2253();
     } else {
-      for (var14 = GLStatics.anInt3419; var14 < GLStatics.anInt2456; ++var14) {
-        for (
-          var15 = 0;
-          var15 < GLStatics.aClass3_Sub11ArrayArray2542[var14].length; ++var15) {
-          SomethingGl0 var25 = GLStatics.aClass3_Sub11ArrayArray2542[var14][var15];
-          float var33 = 201.5F - 50.0F * var14 - (var25.aBoolean2364 ? 1.0F : 0.5F);
+
+      //TODO this draws ground tiles
+      for (int x = GLStatics.anInt3419; x < GLStatics.anInt2456; ++x) {
+        for (int y = 0; y < array[x].length; ++y) {
+          SomethingGl0 var25 = array[x][y];
+          float var33 =
+              201.5F - GlobalStatics_6.NEAR * x - (var25.aBoolean2364 ? 1.0F : 0.5F);
           if (var25.materialId != -1
-            && GLStatics.textureCache.method18(var25.materialId, 255) == 4
-            && GLStatics.aBoolean1685) {
-            GLStatics.method535((byte) 56, var25.anInt2355);
+              && GLStatics.textureCache.method18(var25.materialId, 255) == 4
+              && GLStatics.aBoolean1685) {
+            GLStatics.method535(var25.anInt2355);
           }
 
           var25.method149(GLStatics.sceneGraphTiles, var33, false);
         }
 
-        if (var14 == 0 && GLStatics.anInt1137 > 0) {
+        if (x == 0 && GLStatics.anInt1137 > 0) {
           GlRenderer.method1832(101.5F);
-          SomethingShadows.drawShadows(GLStatics.cameraTileX,
-            GLStatics.cameraTileZ, GLStatics.viewportLength,
+          SomethingShadows.drawShadows(GLStatics.CAMERA_TILE_X,
+              GLStatics.CAMERA_TILE_Y, GLStatics.VIEWPORT_SIZE,
               GLStatics.adjacentTileOnScreen);
         }
       }
 
-      DummyClass46
-          .method1277(
-              GLStatics.sceneGraphTiles);
+      DummyClass46.method1277(GLStatics.sceneGraphTiles);
     }
 
     GlRenderer.GL.glPopMatrix();

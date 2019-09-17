@@ -108,7 +108,7 @@ public class GlobalStatics_2 {
   public static final int anInt598 = GlobalStatics_2.aString597.length();
   public static int[] anIntArray599 = new int[256];
 
-  public static void method102(int var0) {
+  public static void clear39(int var0) {
     GlobalStatics_2.aClass130_2220 = null;
     if (var0 != 3353893) {
       GlobalStatics_2.aClass94_2216 = null;
@@ -282,7 +282,7 @@ public class GlobalStatics_2 {
     GlobalStatics_3.anInt2378 = 0;
     GLStatics.anInt1137 = 2;
     GlobalStatics_9.aBoolean3275 = true;
-    GLStatics.useBumpMaps = true;
+    GLStatics.USE_BUMP_MAPS = true;
     GlobalStatics_10.anInt120 = 255;
     GlobalStatics_9.aBoolean488 = true;
     FileOnDisk var2 = null;
@@ -423,7 +423,7 @@ public class GlobalStatics_2 {
     return GlobalStatics_0.aClass3_Sub28_Sub3_2600;
   }
 
-  public static void method521(int var0) {
+  public static void clear99(int var0) {
     GlobalStatics_2.fileUnpacker11 = null;
     if (var0 == -3) {
       GlobalStatics_2.aClass94Array2566 = null;
@@ -766,7 +766,7 @@ public class GlobalStatics_2 {
         var5[var6] = GlobalStatics_10.anIntArray3446[255 & (int) var4[var6]];
       }
 
-      if (GlRenderer.useOpenGlRenderer) {
+      if (GlRenderer.USE_OPENGL) {
         var1[var2] =
             new GlDirectColorSprite(GlobalStatics_9.anInt2426,
                 GlobalStatics_9.anInt1748,
@@ -789,7 +789,7 @@ public class GlobalStatics_2 {
     return var1;
   }
 
-  public static void method892(int var0) {
+  public static void clear77(int var0) {
     GlobalStatics_2.aShortArrayArray344 = null;
     GlobalStatics_2.aClass94_343 = null;
     GlobalStatics_2.aClass64_351 = null;
@@ -860,7 +860,7 @@ public class GlobalStatics_2 {
     return var9;
   }
 
-  public static void method634(byte var0) {
+  public static void clear28(byte var0) {
     GlobalStatics_2.aClass11_3708 = null;
     GlobalStatics_2.aClass94_3702 = null;
     GlobalStatics_2.aClass94_3705 = null;
@@ -886,7 +886,7 @@ public class GlobalStatics_2 {
     return bytes == null ? null : new MidiFile(new Buffer(bytes));
   }
 
-  public static void method999() {
+  public static void clear88() {
     GlobalStatics_2.aString597 = null;
     GlobalStatics_2.anIntArray599 = null;
   }

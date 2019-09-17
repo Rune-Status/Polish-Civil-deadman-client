@@ -49,7 +49,6 @@ public final class SomethingAudio {
   }
 
   public byte[] method2173(byte[] var1, byte var2 ) {
-    int var3 = 53 % ((var2 + 39) / 50);
       if (this.anIntArrayArray1999 != null) {
         int var4 = 14 + (int) ((long) var1.length * this.anInt2001
             / this.anInt1997);

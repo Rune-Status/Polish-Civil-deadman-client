@@ -70,7 +70,7 @@ public class DummyClass35 {
     }
   }
 
-  public static void method1024(int var0) {
+  public static void clear2(int var0) {
     DummyClass35.aClass94_658 = null;
     DummyClass35.aClass94_667 = null;
     if (var0 != 21474) {
@@ -87,12 +87,12 @@ public class DummyClass35 {
   }
 
   public static void method1025(byte var0) {
-    GlobalStatics_9.aClass93_2604.method1523((byte) -121);
+    GlobalStatics_9.aClass93_2604.method1523();
     if (var0 > -51) {
       DummyClass35.method1025((byte) 86);
     }
 
-    DummyClass32.aClass93_511.method1523((byte) -120);
+    DummyClass32.aClass93_511.method1523();
   }
 
   public static int getChecksum(byte[] var0, int var1, boolean var2) {

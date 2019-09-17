@@ -14,7 +14,7 @@ public final class DummyClass39 {
   public static int anInt740;
   public static int sunPositionX;
 
-  public static void method1085(int var0) {
+  public static void clear51(int var0) {
     DummyClass39.aClass94_738 = null;
     if (var0 == -1) {
       DummyClass39.aClass153_737 = null;

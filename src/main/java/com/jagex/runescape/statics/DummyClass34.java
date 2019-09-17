@@ -46,14 +46,12 @@ public final class DummyClass34 {
   }
 
   public static void method995() {
-    int var0;
-    int var1;
-    int var2;
+
     if (GlobalStatics_9.tiles != null) {
-      for (var0 = 0; var0 < GlobalStatics_9.tiles.length; ++var0) {
-        for (var1 = 0; var1 < GlobalStatics_4.sceneWidth; ++var1) {
-          for (var2 = 0; var2 < GlobalStatics_1.sceneHeight; ++var2) {
-            GlobalStatics_9.tiles[var0][var1][var2] = null;
+      for (int plane = 0; plane < GlobalStatics_9.tiles.length; ++plane) {
+        for (int x = 0; x < GlobalStatics_4.SCENE_WIDTH; ++x) {
+          for (int y = 0; y < GlobalStatics_1.SCENE_HEIGHT; ++y) {
+            GlobalStatics_9.tiles[plane][x][y] = null;
           }
         }
       }
@@ -61,12 +59,12 @@ public final class DummyClass34 {
 
     GLStatics.aClass3_Sub11ArrayArray2199 = null;
     if (GlobalStatics_9.aClass3_Sub2ArrayArrayArray2065 != null) {
-      for (var0 = 0;
-          var0 < GlobalStatics_9.aClass3_Sub2ArrayArrayArray2065.length;
-          ++var0) {
-        for (var1 = 0; var1 < GlobalStatics_4.sceneWidth; ++var1) {
-          for (var2 = 0; var2 < GlobalStatics_1.sceneHeight; ++var2) {
-            GlobalStatics_9.aClass3_Sub2ArrayArrayArray2065[var0][var1][var2] = null;
+      for (int plane = 0;
+          plane < GlobalStatics_9.aClass3_Sub2ArrayArrayArray2065.length;
+          ++plane) {
+        for (int x = 0; x < GlobalStatics_4.SCENE_WIDTH; ++x) {
+          for (int y = 0; y < GlobalStatics_1.SCENE_HEIGHT; ++y) {
+            GlobalStatics_9.aClass3_Sub2ArrayArrayArray2065[plane][x][y] = null;
           }
         }
       }
@@ -74,21 +72,19 @@ public final class DummyClass34 {
 
     GlobalStatics_10.aClass3_Sub11ArrayArray3346 = null;
     GlobalStatics_9.anInt2249 = 0;
-    if (GlobalStatics_6.aClass113Array3610 != null) {
-      var0 = 0;
-    }
 
     if (GlobalStatics_3.aClass25Array1868 != null) {
-      for (var0 = 0; var0 < GlobalStatics_10.anInt3070; ++var0) {
-        GlobalStatics_3.aClass25Array1868[var0] = null;
+      for (int plane = 0; plane < GlobalStatics_10.anInt3070; ++plane) {
+        GlobalStatics_3.aClass25Array1868[plane] = null;
       }
 
       GlobalStatics_10.anInt3070 = 0;
     }
 
     if (GlobalStatics_7.aClass25Array4060 != null) {
-      for (var0 = 0; var0 < GlobalStatics_7.aClass25Array4060.length; ++var0) {
-        GlobalStatics_7.aClass25Array4060[var0] = null;
+      for (int plane = 0; plane < GlobalStatics_7.aClass25Array4060.length;
+          ++plane) {
+        GlobalStatics_7.aClass25Array4060[plane] = null;
       }
     }
 
@@ -99,9 +95,9 @@ public final class DummyClass34 {
       DummyClass34.perlinNoise(3, -24);
     }
 
-    Keyboard var1 = GlobalStatics_10.keyboard;
+    Keyboard var1 = GlobalStatics_10.KEYBOARD;
     synchronized (var1) {
-      GlobalStatics_9.anInt3620 = DummyClass21.anInt1762;
+      GlobalStatics_9.KEY_QUEUE_INDEX = DummyClass21.anInt1762;
       ++GlobalStatics_10.anInt3398;
       int var2;
       if (GlobalStatics_3.anInt2384 < 0) {

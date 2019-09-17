@@ -108,7 +108,7 @@ public final class GlTexture2d extends SubNode {
 
   public static void method710(byte var0) {
     if (var0 >= 122) {
-        GlobalStatics_4.floorUnderlays.method1523((byte) -104);
+        GlobalStatics_4.floorUnderlays.method1523();
       }
   }
 

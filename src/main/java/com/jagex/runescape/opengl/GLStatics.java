@@ -29,14 +29,14 @@ public class GLStatics {
   public static SomethingGl0[][] aClass3_Sub11ArrayArray2199;
   public static ITextureCache textureCache;
   public static boolean aBoolean1685 = true;
-  public static int cameraTileZ;
-  public static int viewportLength;
+  public static int CAMERA_TILE_Y;
+  public static int VIEWPORT_SIZE;
   public static boolean[][] adjacentTileOnScreen;
   public static int anInt1137 = 2;
   public static float[] FOG_COLOR = new float[4];
   public static SceneGraphTile[][][] sceneGraphTiles;
   public static boolean aBoolean3207;
-  public static int cameraTileX;
+  public static int CAMERA_TILE_X;
   public static byte[] aByteArray2111 = new byte[16384];
   public static int anInt692;
   public static GameString aClass94_699 = GameStringStatics
@@ -49,7 +49,7 @@ public class GLStatics {
   public static int anInt716;
   public static int[] hslTable = new int[65536];
   public static int[] SINE_TABLE = new int[2048];
-  public static boolean useBumpMaps = true;
+  public static boolean USE_BUMP_MAPS = true;
   public static int viewportLowerX;
   public static int viewportLowerZ;
   public static int viewportUpperX;
@@ -58,7 +58,8 @@ public class GLStatics {
   public static GameString aClass94_691 = GLStatics.aClass94_695;
 
   public static float[] method1705(int var0, int var1) {
-    float var2 = GlEnvironment.AMBIENT_INTENSITY + GlEnvironment.DIFFUSE_INTENSITY;
+    float var2 =
+        GlEnvironment.AMBIENT_INTENSITY + GlEnvironment.DIFFUSE_INTENSITY;
     int var3 = GlEnvironment.COLOR;
     float var7 = 0.58823526F;
     GLStatics.FOG_COLOR[3] = 1.0F;
@@ -108,7 +109,8 @@ public class GLStatics {
   }
 
   public static float[] calculateFogColor() {
-    float var1 = GlEnvironment.AMBIENT_INTENSITY + GlEnvironment.DIFFUSE_INTENSITY;
+    float var1 =
+        GlEnvironment.AMBIENT_INTENSITY + GlEnvironment.DIFFUSE_INTENSITY;
     int var2 = GlEnvironment.COLOR;
     float var3 = (255 & var2 >> 16) / 255.0F;
     GLStatics.FOG_COLOR[3] = 1.0F;
@@ -132,18 +134,12 @@ public class GLStatics {
     return tile.aClass12_2230.aLong328;
   }
 
-  public static void method535(byte var0, int var1) {
-    GlobalStatics_5.aFloatArray1934[0] =
-        (255 & var1 >> 16) / 255.0F;
-    GlobalStatics_5.aFloatArray1934[1] =
-        (var1 >> 8 & 255) / 255.0F;
-    GlobalStatics_5.aFloatArray1934[2] = (255 & var1)
-        / 255.0F;
+  public static void method535(int var1) {
+    GlobalStatics_5.aFloatArray1934[0] = (255 & var1 >> 16) / 255.0F;
+    GlobalStatics_5.aFloatArray1934[1] = (var1 >> 8 & 255) / 255.0F;
+    GlobalStatics_5.aFloatArray1934[2] = (255 & var1) / 255.0F;
     GlobalStatics_9.method383(-32584, 3);
     GlobalStatics_9.method383(-32584, 4);
-    if (var0 != 56) {
-      GLStatics.method535((byte) 127, 99);
-    }
   }
 
   public static void method1058(int var0, int var1, int var2, int var3) {
@@ -157,7 +153,7 @@ public class GLStatics {
     }
   }
 
-  public static void method1059(byte var0) {
+  public static void clear90(byte var0) {
     GLStatics.aClass94_695 = null;
     GLStatics.aClass94_701 = null;
     GLStatics.aClass94_699 = null;
@@ -181,7 +177,7 @@ public class GLStatics {
     }
 
     AbstractDirectColorSprite var6;
-    if (GlRenderer.useOpenGlRenderer) {
+    if (GlRenderer.USE_OPENGL) {
       var6 = new GlDirectColorSprite(GlobalStatics_9.anInt2426,
           GlobalStatics_9.anInt1748,
           GlobalStatics_9.anIntArray2048[0], GlobalStatics_0.anIntArray2591[0],
@@ -194,7 +190,9 @@ public class GLStatics {
               GlobalStatics_9.anIntArray2048[0],
               GlobalStatics_0.anIntArray2591[0],
               GlobalStatics_9.anIntArray2931[0],
-              GlobalStatics_10.anIntArray3076[0], var3);
+              GlobalStatics_10.anIntArray3076[0],
+              var3
+          );
     }
 
     DummyClass37.method1035((byte) 111);
@@ -210,7 +208,7 @@ public class GLStatics {
         GlobalStatics_2.method62(true, 14585, 8, 2048, 4, 0.4F, 8, 35);
   }
 
-  public static int nearestPo2(byte var0, int var1) {
+  public static int nearestPo2(int var1) {
     --var1;
     var1 |= var1 >>> 1;
     var1 |= var1 >>> 2;

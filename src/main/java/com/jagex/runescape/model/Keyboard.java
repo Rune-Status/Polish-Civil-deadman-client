@@ -16,13 +16,13 @@ import java.awt.event.KeyListener;
 public final class Keyboard implements KeyListener, FocusListener {
 
     public void keyTyped(KeyEvent var1) {
-    if (GlobalStatics_10.keyboard != null) {
+    if (GlobalStatics_10.KEYBOARD != null) {
         int var2 = GlobalStatics_6.method1386(true, var1);
         if (var2 >= 0) {
           int var3 = 1 + GlobalStatics_9.anInt491 & 127;
-          if (GlobalStatics_9.anInt3620 != var3) {
-            GlobalStatics_4.keyQueue[GlobalStatics_9.anInt491] = -1;
-            GlobalStatics_5.otherKeyQueue[GlobalStatics_9.anInt491] = var2;
+          if (GlobalStatics_9.KEY_QUEUE_INDEX != var3) {
+            GlobalStatics_4.KEY_QUEUE[GlobalStatics_9.anInt491] = -1;
+            GlobalStatics_5.OTHER_KEY_QUEUE[GlobalStatics_9.anInt491] = var2;
             GlobalStatics_9.anInt491 = var3;
           }
         }
@@ -32,7 +32,7 @@ public final class Keyboard implements KeyListener, FocusListener {
   }
 
   public synchronized void keyPressed(KeyEvent var1) {
-    if (GlobalStatics_10.keyboard != null) {
+    if (GlobalStatics_10.KEYBOARD != null) {
         GlobalStatics_10.anInt3398 = 0;
         int var2 = var1.getKeyCode();
         if (var2 >= 0 && DummyClass26.keyTable.length > var2) {
@@ -55,9 +55,9 @@ public final class Keyboard implements KeyListener, FocusListener {
         int var3;
         if (var2 >= 0) {
           var3 = 127 & 1 + GlobalStatics_9.anInt491;
-          if (var3 != GlobalStatics_9.anInt3620) {
-            GlobalStatics_4.keyQueue[GlobalStatics_9.anInt491] = var2;
-            GlobalStatics_5.otherKeyQueue[GlobalStatics_9.anInt491] = -1;
+          if (var3 != GlobalStatics_9.KEY_QUEUE_INDEX) {
+            GlobalStatics_4.KEY_QUEUE[GlobalStatics_9.anInt491] = var2;
+            GlobalStatics_5.OTHER_KEY_QUEUE[GlobalStatics_9.anInt491] = -1;
             GlobalStatics_9.anInt491 = var3;
           }
         }
@@ -70,7 +70,7 @@ public final class Keyboard implements KeyListener, FocusListener {
   }
 
   public synchronized void keyReleased(KeyEvent var1) {
-    if (GlobalStatics_10.keyboard != null) {
+    if (GlobalStatics_10.KEYBOARD != null) {
         GlobalStatics_10.anInt3398 = 0;
         int var2 = var1.getKeyCode();
         if (var2 >= 0 && DummyClass26.keyTable.length > var2) {
@@ -95,7 +95,7 @@ public final class Keyboard implements KeyListener, FocusListener {
   }
 
   public synchronized void focusLost(FocusEvent var1) {
-    if (GlobalStatics_10.keyboard != null) {
+    if (GlobalStatics_10.KEYBOARD != null) {
         GlobalStatics_3.anInt2384 = -1;
       }
   }

@@ -30,20 +30,16 @@ public final class DummyClass43 {
     DummyClass43.somethingHeightMap = null;
     DummyClass43.ondemandRequester = null;
     DummyClass43.anIntArray912 = null;
-
     DummyClass43.COMMAND_FPS_ON = null;
   }
 
-  public static void method1194(int var0) {
-    if (var0 == -16385) {
-      if (GlobalStatics_9.audioOutputStream1 != null) {
-        GlobalStatics_9.audioOutputStream1.process((byte) -34);
-      }
+  public static void method1194() {
+    if (GlobalStatics_9.audioOutputStream1 != null) {
+      GlobalStatics_9.audioOutputStream1.process((byte) -34);
+    }
 
-      if (GlobalStatics_9.audioOutputStream0 != null) {
-        GlobalStatics_9.audioOutputStream0.process((byte) -34);
-      }
-
+    if (GlobalStatics_9.audioOutputStream0 != null) {
+      GlobalStatics_9.audioOutputStream0.process((byte) -34);
     }
   }
 

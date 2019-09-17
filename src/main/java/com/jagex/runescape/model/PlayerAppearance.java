@@ -409,7 +409,7 @@ public final class PlayerAppearance {
             }
 
             var37 = var43.method2008(64, 850, -30, -50, -30);
-            if (GlRenderer.useOpenGlRenderer) {
+            if (GlRenderer.USE_OPENGL) {
               ((GlModel) var37)
                   .method1920(false, false, true, true, false, false, true);
             }

@@ -77,7 +77,7 @@ public final class AnimationSequence {
               !this.aBoolean1848);
         }
 
-        if (GlRenderer.useOpenGlRenderer && this.aBoolean1848) {
+        if (GlRenderer.USE_OPENGL && this.aBoolean1848) {
           if (var5 == 1) {
             ((GlModel) var10).method1902();
           } else {
@@ -103,7 +103,7 @@ public final class AnimationSequence {
 
         var10.method1880(var8, var2, var9, var3, -1 + var6, var7,
             this.aBoolean1848);
-        if (GlRenderer.useOpenGlRenderer && this.aBoolean1848) {
+        if (GlRenderer.USE_OPENGL && this.aBoolean1848) {
           if (var5 == 1) {
             ((GlModel) var10).method1925();
           } else {
@@ -230,7 +230,7 @@ public final class AnimationSequence {
               !this.aBoolean1848);
         }
 
-        if (this.aBoolean1848 && GlRenderer.useOpenGlRenderer) {
+        if (this.aBoolean1848 && GlRenderer.USE_OPENGL) {
           if (var4 == 1) {
             ((GlModel) var10).method1902();
           } else {
@@ -250,7 +250,7 @@ public final class AnimationSequence {
 
         var10.method1880(var8, var2, var9, var1, var3 - 1, var7,
             this.aBoolean1848);
-        if (this.aBoolean1848 && GlRenderer.useOpenGlRenderer) {
+        if (this.aBoolean1848 && GlRenderer.USE_OPENGL) {
           if (var4 == 1) {
             ((GlModel) var10).method1925();
           } else if (var4 == 2) {

@@ -52,7 +52,7 @@ public final class DummyClass11 {
     }
   }
 
-  public static void method2205(int var0) {
+  public static void clear79(int var0) {
     DummyClass11.anIntArrayArray2039 = null;
     DummyClass11.aByteArray2040 = null;
     if (var0 != -17413) {
@@ -67,7 +67,7 @@ public final class DummyClass11 {
 
   public static GameObjectConfig method2207(int var0, int var1) {
     if (var0 != 4) {
-      DummyClass11.method2205(95);
+      DummyClass11.clear79(95);
     }
 
     GameObjectConfig var2 = (GameObjectConfig) GlobalStatics_0.aClass93_21.get(

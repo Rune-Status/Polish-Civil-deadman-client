@@ -432,7 +432,7 @@ public final class DummyClass37 {
           byte var12 = GlobalStatics_9.gameBuffer.readByte();
           var13 = GlobalStatics_9.gameBuffer.readUnsignedShort();
           var14 = GlobalStatics_9.gameBuffer.method788(-1741292848);
-          if (!GlRenderer.useOpenGlRenderer) {
+          if (!GlRenderer.USE_OPENGL) {
             GlobalStatics_10
                 .method280(var12, var13, var14, var11, var6, var9, var3, var25,
                     var5,

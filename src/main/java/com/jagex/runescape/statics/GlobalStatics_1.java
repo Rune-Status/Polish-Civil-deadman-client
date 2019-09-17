@@ -69,7 +69,7 @@ public class GlobalStatics_1 {
   public static short[] aShortArray3949;
   public static int[] anIntArray3950;
   public static Deque stillGraphics = new Deque();
-  public static int sceneHeight;
+  public static int SCENE_HEIGHT;
   public static int[] updatedMapIds;
   public static GameString COMMAND_WM3 = GameStringStatics.create("::wm3");
   public static boolean aBoolean3184 = true;
@@ -105,7 +105,7 @@ public class GlobalStatics_1 {
     first.nextNode.prevNode = first;
   }
 
-  public static void method1663(int var0) {
+  public static void clear80(int var0) {
     GlobalStatics_1.aClass94_1466 = null;
     if (var0 != 33) {
       GlobalStatics_1.anInt1463 = 15;
@@ -202,7 +202,7 @@ public class GlobalStatics_1 {
     return (hsl & 0xff80) + lightness;
   }
 
-  public static void method1948() {
+  public static void lear71() {
     GlobalStatics_1.aClass140_Sub1_Sub2_3902 = null;
     GlobalStatics_1.aByteArray3907 = null;
     GlobalStatics_1.aShortArray3910 = null;

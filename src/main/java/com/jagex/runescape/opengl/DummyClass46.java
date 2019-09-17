@@ -1,5 +1,6 @@
 package com.jagex.runescape.opengl;
 
+import com.jagex.runescape.statics.GlobalStatics_6;
 import com.jagex.runescape.statics.GlobalStatics_9;
 import com.jagex.runescape.model.SceneGraphTile;
 
@@ -9,40 +10,40 @@ public final class DummyClass46 {
   private static int[] anIntArray1023;
   private static int anInt1024;
   private static int anInt1025;
-  private static boolean[] lightsActive;
+  private static boolean[] ACTIVE_LIGHTS;
   private static int[][][] anIntArrayArrayArray1027;
   private static int[] anIntArray1028;
   private static int anInt1029;
-  private static int amountPlanes;
+  private static int SCENE_PLANES;
   private static int anInt1031;
   private static boolean[] aBooleanArray1033;
   private static int anInt1034;
-  private static int sceneHeight;
-  private static int sceneWidth;
-  public static Light[] lights;
+  private static int SCENE_HEIGHT;
+  private static int SCENE_WIDTH;
+  public static Light[] LIGHTS;
   public static int anInt1032;
 
   public static void method1263(int var0, int var1, int var2, int var3,
       int var4, int var5,
       int var6) {
-    if (GLStatics.useBumpMaps) {
+    if (GLStatics.USE_BUMP_MAPS) {
       if (var0 == 1 && var5 > 0) {
         DummyClass46.method1268(var1, var2, var3, var4, var5 - 1, var6);
-      } else if (var0 == 4 && var5 < DummyClass46.sceneWidth - 1) {
+      } else if (var0 == 4 && var5 < DummyClass46.SCENE_WIDTH - 1) {
         DummyClass46.method1268(var1, var2, var3, var4, var5 + 1, var6);
       } else if (var0 == 8 && var6 > 0) {
         DummyClass46.method1268(var1, var2, var3, var4, var5, var6 - 1);
-      } else if (var0 == 2 && var6 < DummyClass46.sceneHeight - 1) {
+      } else if (var0 == 2 && var6 < DummyClass46.SCENE_HEIGHT - 1) {
         DummyClass46.method1268(var1, var2, var3, var4, var5, var6 + 1);
       } else if (var0 == 16 && var5 > 0
-          && var6 < DummyClass46.sceneHeight - 1) {
+          && var6 < DummyClass46.SCENE_HEIGHT - 1) {
         DummyClass46.method1268(var1, var2, var3, var4, var5 - 1, var6 + 1);
-      } else if (var0 == 32 && var5 < DummyClass46.sceneWidth - 1 && var6 <
-          DummyClass46.sceneHeight - 1) {
+      } else if (var0 == 32 && var5 < DummyClass46.SCENE_WIDTH - 1 && var6 <
+          DummyClass46.SCENE_HEIGHT - 1) {
         DummyClass46.method1268(var1, var2, var3, var4, var5 + 1, var6 + 1);
       } else if (var0 == 128 && var5 > 0 && var6 > 0) {
         DummyClass46.method1268(var1, var2, var3, var4, var5 - 1, var6 - 1);
-      } else if (var0 == 64 && var5 < DummyClass46.sceneWidth - 1 && var6 > 0) {
+      } else if (var0 == 64 && var5 < DummyClass46.SCENE_WIDTH - 1 && var6 > 0) {
         DummyClass46.method1268(var1, var2, var3, var4, var5 + 1, var6 - 1);
       }
     }
@@ -52,7 +53,7 @@ public final class DummyClass46 {
     if (DummyClass46.anInt1032 >= 255) {
       System.out.println("Number of lights added exceeds maximum!");
     } else {
-      DummyClass46.lights[DummyClass46.anInt1032++] = var0;
+      DummyClass46.LIGHTS[DummyClass46.anInt1032++] = var0;
     }
   }
 
@@ -67,7 +68,7 @@ public final class DummyClass46 {
   public static void method1266(int var0, int var1, int var2, int var3,
       int var4, int var5, int var6,
       int var7) {
-    if (GLStatics.useBumpMaps) {
+    if (GLStatics.USE_BUMP_MAPS) {
       if (DummyClass46.anInt1029 != var3 || DummyClass46.anInt1031 != var4
           || DummyClass46.anInt1024 != var5 ||
           DummyClass46.anInt1034 != var6
@@ -136,7 +137,7 @@ public final class DummyClass46 {
               DummyClass46.anIntArray1028[var11] = DummyClass46.anIntArray1023[var10];
               DummyClass46.aBooleanArray1033[var11] = true;
               DummyClass46.method1278(var11,
-                  DummyClass46.lights[DummyClass46.anIntArray1023[var10]], var0,
+                  DummyClass46.LIGHTS[DummyClass46.anIntArray1023[var10]], var0,
                   var1, var2);
             }
 
@@ -162,15 +163,15 @@ public final class DummyClass46 {
   }
 
   public static void setSceneDimensions(int var0, int var1, int var2) {
-    DummyClass46.amountPlanes = var0;
-    DummyClass46.sceneWidth = var1;
-    DummyClass46.sceneHeight = var2;
-    DummyClass46.anIntArrayArrayArray1027 = new int[DummyClass46.amountPlanes][DummyClass46.sceneWidth][DummyClass46.sceneHeight];
+    DummyClass46.SCENE_PLANES = var0;
+    DummyClass46.SCENE_WIDTH = var1;
+    DummyClass46.SCENE_HEIGHT = var2;
+    DummyClass46.anIntArrayArrayArray1027 = new int[DummyClass46.SCENE_PLANES][DummyClass46.SCENE_WIDTH][DummyClass46.SCENE_HEIGHT];
   }
 
   public static void method1268(int var0, int var1, int var2, int var3,
       int var4, int var5) {
-    if (GLStatics.useBumpMaps) {
+    if (GLStatics.USE_BUMP_MAPS) {
       if (DummyClass46.anInt1029 != var3 || DummyClass46.anInt1031 != var4
           || DummyClass46.anInt1024 != var5 ||
           DummyClass46.anInt1034 != var4
@@ -215,7 +216,7 @@ public final class DummyClass46 {
               DummyClass46.anIntArray1028[var9] = DummyClass46.anIntArray1023[var8];
               DummyClass46.aBooleanArray1033[var9] = true;
               DummyClass46.method1278(var9,
-                  DummyClass46.lights[DummyClass46.anIntArray1023[var8]], var0,
+                  DummyClass46.LIGHTS[DummyClass46.anIntArray1023[var8]], var0,
                   var1, var2);
             }
 
@@ -242,7 +243,7 @@ public final class DummyClass46 {
 
   public static void method1269(int var0, boolean var1) {
     for (int var2 = 0; var2 < DummyClass46.anInt1032; ++var2) {
-      DummyClass46.lights[var2].method1063(var1, var0, -3696);
+      DummyClass46.LIGHTS[var2].method1063(var1, var0, -3696);
     }
 
     DummyClass46.anInt1029 = -1;
@@ -254,7 +255,7 @@ public final class DummyClass46 {
 
   public static void method1270() {
     for (int var0 = 0; var0 < DummyClass46.anInt1032; ++var0) {
-      Light var1 = DummyClass46.lights[var0];
+      Light var1 = DummyClass46.LIGHTS[var0];
       int var2 = var1.anInt704;
       if (var1.aBoolean690) {
         var2 = 0;
@@ -274,8 +275,8 @@ public final class DummyClass46 {
         }
 
         int var7 = (var1.anInt708 >> 7) + var1.anInt698;
-        if (var7 > DummyClass46.sceneHeight - 1) {
-          var7 = DummyClass46.sceneHeight - 1;
+        if (var7 > DummyClass46.SCENE_HEIGHT - 1) {
+          var7 = DummyClass46.SCENE_HEIGHT - 1;
         }
 
         for (int var8 = var6; var8 <= var7; ++var8) {
@@ -286,8 +287,8 @@ public final class DummyClass46 {
             var10 = 0;
           }
 
-          if (var11 > DummyClass46.sceneWidth - 1) {
-            var11 = DummyClass46.sceneWidth - 1;
+          if (var11 > DummyClass46.SCENE_WIDTH - 1) {
+            var11 = DummyClass46.SCENE_WIDTH - 1;
           }
 
           for (int var12 = var10; var12 <= var11; ++var12) {
@@ -313,8 +314,8 @@ public final class DummyClass46 {
   }
 
   private static void disableLight(int id) {
-    if (DummyClass46.lightsActive[id]) {
-      DummyClass46.lightsActive[id] = false;
+    if (DummyClass46.ACTIVE_LIGHTS[id]) {
+      DummyClass46.ACTIVE_LIGHTS[id] = false;
       int var1 = id + 16384 + 4;
       GlRenderer.GL.glDisable(var1);
     }
@@ -322,7 +323,7 @@ public final class DummyClass46 {
 
   public static void method1272(int var0, int var1, int var2, int var3,
       int var4) {
-    if (GLStatics.useBumpMaps) {
+    if (GLStatics.USE_BUMP_MAPS) {
       label44:
       for (int var5 = 0; var5 < 4; ++var5) {
         if (DummyClass46.anIntArray1028[var5] != -1) {
@@ -356,25 +357,25 @@ public final class DummyClass46 {
   }
 
   public static void method1273() {
-    DummyClass46.lights = null;
+    DummyClass46.LIGHTS = null;
     DummyClass46.anIntArray1028 = null;
-    DummyClass46.lightsActive = null;
+    DummyClass46.ACTIVE_LIGHTS = null;
     DummyClass46.anIntArray1023 = null;
     DummyClass46.aBooleanArray1033 = null;
     DummyClass46.anIntArrayArrayArray1027 = null;
   }
 
-  public static void method1274() {
-    DummyClass46.lights = null;
+  public static void clear89() {
+    DummyClass46.LIGHTS = null;
     DummyClass46.anIntArrayArrayArray1027 = null;
     DummyClass46.anIntArray1028 = null;
-    DummyClass46.lightsActive = null;
+    DummyClass46.ACTIVE_LIGHTS = null;
     DummyClass46.aFloatArray1022 = null;
     DummyClass46.anIntArray1023 = null;
     DummyClass46.aBooleanArray1033 = null;
   }
 
-  public static void method1275() {
+  public static void disableLight() {
 
     int var1;
     for (var1 = 0; var1 < 4; ++var1) {
@@ -393,16 +394,16 @@ public final class DummyClass46 {
   }
 
   public static void setupSceneGl() {
-    DummyClass46.lights = new Light[255];
+    DummyClass46.LIGHTS = new Light[255];
     DummyClass46.anIntArray1028 = new int[4];
-    DummyClass46.lightsActive = new boolean[4];
+    DummyClass46.ACTIVE_LIGHTS = new boolean[4];
     DummyClass46.anIntArray1023 = new int[4];
     DummyClass46.aBooleanArray1033 = new boolean[4];
-    DummyClass46.anIntArrayArrayArray1027 = new int[DummyClass46.amountPlanes][DummyClass46.sceneWidth][DummyClass46.sceneHeight];
+    DummyClass46.anIntArrayArrayArray1027 = new int[DummyClass46.SCENE_PLANES][DummyClass46.SCENE_WIDTH][DummyClass46.SCENE_HEIGHT];
   }
 
   public static void method1277(SceneGraphTile[][][] var2) {
-    if (GLStatics.useBumpMaps) {
+    if (GLStatics.USE_BUMP_MAPS) {
       GLStatics.method551(0, 0);
       GlRenderer.method1856(0);
       GlRenderer.loadIdentityTextureMatrix();
@@ -417,7 +418,7 @@ public final class DummyClass46 {
 
       label69:
       for (int var4 = 0; var4 < DummyClass46.anInt1032; ++var4) {
-        Light var5 = DummyClass46.lights[var4];
+        Light var5 = DummyClass46.LIGHTS[var4];
         int var6 = var5.anInt704;
         if (var5.aBoolean696) {
           --var6;
@@ -464,7 +465,7 @@ public final class DummyClass46 {
                   continue;
                 }
 
-                GlRenderer.method1832(201.5F - var5.anInt704 * 50.0F - 1.5F);
+                GlRenderer.method1832(201.5F - var5.anInt704 * GlobalStatics_6.NEAR - 1.5F);
                 GlRenderer.GL
                     .glTexEnvfv(8960, 8705,
                         new float[]{0.0F, 0.0F, 0.0F, var5.aFloat707}, 0);
@@ -492,9 +493,9 @@ public final class DummyClass46 {
   private static void method1278(int var0, Light var1, int var2, int var3,
       int var4) {
     int var5 = var0 + 16384 + 4;
-    if (!DummyClass46.lightsActive[var0]) {
+    if (!DummyClass46.ACTIVE_LIGHTS[var0]) {
       GlRenderer.GL.glEnable(var5);
-      DummyClass46.lightsActive[var0] = true;
+      DummyClass46.ACTIVE_LIGHTS[var0] = true;
     }
 
     GlRenderer.GL.glLightf(var5, 4617, var1.aFloat710);
@@ -508,10 +509,10 @@ public final class DummyClass46 {
   public static void method1279() {
     DummyClass46.anInt1032 = 0;
 
-    for (int var0 = 0; var0 < DummyClass46.amountPlanes; ++var0) {
-      for (int var1 = 0; var1 < DummyClass46.sceneWidth; ++var1) {
-        for (int var2 = 0; var2 < DummyClass46.sceneHeight; ++var2) {
-          DummyClass46.anIntArrayArrayArray1027[var0][var1][var2] = 0;
+    for (int z = 0; z < DummyClass46.SCENE_PLANES; ++z) {
+      for (int x = 0; x < DummyClass46.SCENE_WIDTH; ++x) {
+        for (int y = 0; y < DummyClass46.SCENE_HEIGHT; ++y) {
+          DummyClass46.anIntArrayArrayArray1027[z][x][y] = 0;
         }
       }
     }

@@ -93,7 +93,7 @@ public class GlobalStatics_4 {
   public static int[] anIntArray1690;
   public static int anInt1691 = -1;
   public static int anInt1692;
-  public static int[] keyQueue = new int[128];
+  public static int[] KEY_QUEUE = new int[128];
   public static GameString aClass94_1694 = GameStringStatics
       .create("document)3cookie=(R");
   public static int[] anIntArray1695;
@@ -106,7 +106,7 @@ public class GlobalStatics_4 {
   public static ObjectCache floorUnderlays = new ObjectCache(64);
   public static int[] anIntArray726 = new int[32];
   public static float aFloat727;
-  public static int sceneWidth;
+  public static int SCENE_WIDTH;
   public static SomethingFont aClass33_1238;
   public static int anInt1240;
   public static Deque aClass61_1242 = new Deque();
@@ -223,7 +223,7 @@ public class GlobalStatics_4 {
   }
 
   public static void method1132(int var0) {
-    GlobalStatics_10.aClass93_1683.method1523((byte) -111);
+    GlobalStatics_10.aClass93_1683.method1523();
     if (var0 != 103) {
       GlobalStatics_4.method1132(14);
     }
@@ -269,7 +269,7 @@ public class GlobalStatics_4 {
     return var6;
   }
 
-  public static void method689() {
+  public static void clear81() {
     GlobalStatics_4.aClass94_3712 = null;
     GlobalStatics_4.aClass94_3711 = null;
     GlobalStatics_4.aClass94_3732 = null;
@@ -336,7 +336,7 @@ public class GlobalStatics_4 {
     return -var13;
   }
 
-  public static void method588(byte var0) {
+  public static void clear93(byte var0) {
     GlobalStatics_4.aClass94_3626 = null;
     GlobalStatics_4.aClass94_3634 = null;
     if (var0 != 120) {
@@ -377,14 +377,14 @@ public class GlobalStatics_4 {
     return var0 >>> 7;
   }
 
-  public static void method1766(int var0) {
+  public static void clear7(int var0) {
     GlobalStatics_4.anIntArray1695 = null;
     if (var0 != 24241) {
-      GlobalStatics_4.method1766(84);
+      GlobalStatics_4.clear7(84);
     }
 
     GlobalStatics_4.anIntArray1690 = null;
-    GlobalStatics_4.keyQueue = null;
+    GlobalStatics_4.KEY_QUEUE = null;
     GlobalStatics_4.aClass94_1694 = null;
     GlobalStatics_4.aClass94_1696 = null;
   }
@@ -445,7 +445,7 @@ public class GlobalStatics_4 {
     }
 
     if (var1 > 70) {
-      if (GlRenderer.useOpenGlRenderer) {
+      if (GlRenderer.USE_OPENGL) {
         GlUtils.drawImage(
             GlobalStatics_10.aClass3_Sub28_Sub16_Sub2_1381.pixels, var0,
             var2,
@@ -892,7 +892,7 @@ public class GlobalStatics_4 {
     }
   }
 
-  public static void method1463(int var0) {
+  public static void clear12(int var0) {
     if (var0 != 0) {
       GlobalStatics_4.aClass61_1242 = null;
     }
@@ -968,7 +968,7 @@ public class GlobalStatics_4 {
   public static void method1470(int var0, AnimationSequence var1, int var2,
       int var3, boolean var4,
       int var5) {
-    if (GlobalStatics_9.anInt1552 < 50) {
+    if (GlobalStatics_9.anInt1552 < GlobalStatics_6.NEAR) {
       if (var1.anIntArrayArray1867 != null
           && var5 < var1.anIntArrayArray1867.length
           && var1.anIntArrayArray1867[var5] != null) {

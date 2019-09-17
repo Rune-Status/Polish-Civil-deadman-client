@@ -351,7 +351,7 @@ public final class NpcConfiguration {
 
           assert var34 != null;
           var11 = var34.method2008(this.anInt1251 + 64, this.anInt1282 + 850, -30, -50, -30);
-          if (GlRenderer.useOpenGlRenderer) {
+          if (GlRenderer.USE_OPENGL) {
             ((GlModel) var11).method1920(false, false, false, true, false, false, true);
           }
 
@@ -771,7 +771,7 @@ public final class NpcConfiguration {
                                           var4 = var3.readUnsignedByte();
                                           if (this.aClass130_1272 == null) {
                                             var5 = GLStatics
-                                                .nearestPo2((byte) 109, var4);
+                                                .nearestPo2(var4);
                                             this.aClass130_1272 = new HashTable(
                                                 var5);
                                           }

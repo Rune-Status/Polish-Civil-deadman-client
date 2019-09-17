@@ -148,12 +148,12 @@ public final class DummyClass27 {
   }
 
   public static void method1714(byte var0) {
-    GlobalStatics_9.aClass93_1911.method1523((byte) -112);
+    GlobalStatics_9.aClass93_1911.method1523();
     if (var0 != -6) {
       DummyClass27.method1712(-114);
     }
 
-    GlobalStatics_9.aClass93_1131.method1523((byte) -100);
+    GlobalStatics_9.aClass93_1131.method1523();
   }
 
 }

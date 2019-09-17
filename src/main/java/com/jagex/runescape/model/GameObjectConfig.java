@@ -576,7 +576,6 @@ public final class GameObjectConfig {
                                                                       == null) {
                                                                     var5 = GLStatics
                                                                         .nearestPo2(
-                                                                            (byte) 83,
                                                                             var4);
                                                                     this.aClass130_1501 =
                                                                         new HashTable(
@@ -911,7 +910,7 @@ public final class GameObjectConfig {
         return null;
       } else {
         long var12;
-        if (GlRenderer.useOpenGlRenderer) {
+        if (GlRenderer.USE_OPENGL) {
           if (this.anIntArray1487 != null) {
             var12 = var1 + (this.anInt1527 << 10) + (var4 << 3);
           } else {
@@ -1055,7 +1054,7 @@ public final class GameObjectConfig {
       }
 
       long var15;
-      if (GlRenderer.useOpenGlRenderer) {
+      if (GlRenderer.USE_OPENGL) {
         if (this.anIntArray1487 != null) {
           var15 = (var13 << 3) + (this.anInt1527 << 10) + var6;
         } else {

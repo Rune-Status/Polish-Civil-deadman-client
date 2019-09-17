@@ -16,7 +16,6 @@ public final class DummyClass44 {
   public static GameString aClass94_935 = DummyClass44.aClass94_931;
 
   public static void method1206(byte var0) {
-    int var1 = 50 % ((-41 - var0) / 57);
     DummyClass44.aClass94_931 = null;
     DummyClass44.aClass94_933 = null;
     DummyClass44.aClass94_935 = null;

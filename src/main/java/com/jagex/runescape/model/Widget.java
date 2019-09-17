@@ -883,7 +883,7 @@ public final class Widget {
             }
 
             AbstractDirectColorSprite var9;
-            if (GlRenderer.useOpenGlRenderer) {
+            if (GlRenderer.USE_OPENGL) {
               if (var7 instanceof SoftwareDirectFullColorSprite) {
                 var9 = new GlDirectFullColorSprite(var7);
               } else {

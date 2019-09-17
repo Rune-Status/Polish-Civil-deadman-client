@@ -101,9 +101,6 @@ public class GlDirectColorSprite extends AbstractDirectColorSprite {
 
   public final void method646(int var1, int var2, int var3, int var4,
       int var5) {
-    if (true) {
-      return;
-    }
     GlRenderer.method1828();
     GlRenderer.bindTexture(this.textureId);
     this.initializeParameters(1);
@@ -134,10 +131,6 @@ public class GlDirectColorSprite extends AbstractDirectColorSprite {
       int angle,
       int var8,
       GlDirectColorSprite sprite) {
-
-    if (true) {
-      return;
-    }
     if (sprite != null) {
       GlRenderer.method1822();
       GlRenderer.bindTexture(sprite.textureId);
@@ -438,8 +431,8 @@ public class GlDirectColorSprite extends AbstractDirectColorSprite {
   }
 
   public void initialize(int[] var1) {
-    this.anInt4075 = GLStatics.nearestPo2((byte) 125, this.anInt3707);
-    this.anInt4079 = GLStatics.nearestPo2((byte) 59, this.anInt3696);
+    this.anInt4075 = GLStatics.nearestPo2(this.anInt3707);
+    this.anInt4079 = GLStatics.nearestPo2(this.anInt3696);
     byte[] var2 = new byte[this.anInt4075 * this.anInt4079 * 4];
     int var3 = 0;
     int var4 = 0;

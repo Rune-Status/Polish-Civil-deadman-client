@@ -33,7 +33,7 @@ public final class DummyClass33 {
     }
   }
 
-  public static void method987() {
+  public static void clear76() {
     DummyClass33.aClass61_581 = null;
     DummyClass33.aClass61_586 = null;
     DummyClass33.aClass61_587 = null;

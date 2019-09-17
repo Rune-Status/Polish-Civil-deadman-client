@@ -36,7 +36,7 @@ public final class TextureCache implements ITextureCache {
       this.cacheSize = var4;
       this.textures = textures;
       this.aClass47_2142 = new Cache(this.cacheSize);
-      if (GlRenderer.useOpenGlRenderer) {
+      if (GlRenderer.USE_OPENGL) {
         this.glTextures = new Cache(this.cacheSize);
       } else {
         this.glTextures = null;
@@ -289,7 +289,7 @@ public final class TextureCache implements ITextureCache {
 
       this.cacheSize = var1;
       this.aClass47_2142 = new Cache(this.cacheSize);
-      if (GlRenderer.useOpenGlRenderer) {
+      if (GlRenderer.USE_OPENGL) {
         this.glTextures = new Cache(this.cacheSize);
       } else {
         this.glTextures = null;

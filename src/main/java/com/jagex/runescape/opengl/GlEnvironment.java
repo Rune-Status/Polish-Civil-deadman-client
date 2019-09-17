@@ -1,5 +1,6 @@
 package com.jagex.runescape.opengl;
 
+import com.jagex.runescape.statics.GlobalStatics_6;
 import com.jogamp.opengl.GL;
 import com.jogamp.opengl.GL2ES1;
 import com.jogamp.opengl.fixedfunc.GLLightingFunc;
@@ -85,8 +86,8 @@ public final class GlEnvironment {
       GlRenderer.GL.glFogf(GL2ES1.GL_FOG_DENSITY, 0.95F);
       GlRenderer.GL.glHint(GL2ES1.GL_FOG_HINT, GL.GL_NICEST);
       // 7 tiles
-      int fogEnd = 3584;
-      int minimumStart = 50;
+      int fogEnd = GlobalStatics_6.FAR;
+      int minimumStart = GlobalStatics_6.NEAR;
       int fogStart = fogEnd - 512 - offset;
       if (fogStart < minimumStart) {
         fogStart = minimumStart;
@@ -116,10 +117,11 @@ public final class GlEnvironment {
   public static void method1511() {
     GlRenderer.GL.glColorMaterial(1028, 5634);
     GlRenderer.GL.glEnable(2903);
-    float[] light = {0.0F, 0.0F, 0.0F, 1.0F};
-    GlRenderer.GL.glLightfv(16384, 4608, light, 0);
+    float[] light0 = {0.0F, 0.0F, 0.0F, 1.0F};
+    GlRenderer.GL.glLightfv(16384, 4608, light0, 0);
     GlRenderer.GL.glEnable(16384);
-    GlRenderer.GL.glLightfv(16385, 4608, light, 0);
+    float[] light1 = {0.0F, 0.0F, 0.0F, 1.0F};
+    GlRenderer.GL.glLightfv(16385, 4608, light1, 0);
     GlRenderer.GL.glEnable(16385);
     GlEnvironment.COLOR = -1;
     GlEnvironment.FOG_COLOR = -1;

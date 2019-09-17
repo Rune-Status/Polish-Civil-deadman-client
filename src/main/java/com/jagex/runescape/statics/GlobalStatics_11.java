@@ -301,7 +301,7 @@ public final class GlobalStatics_11 {
 
     boolean var27 = false;
     int var28;
-    if (GlRenderer.useOpenGlRenderer && !var10) {
+    if (GlRenderer.USE_OPENGL && !var10) {
       BlockConfig var26 = null;
 
       while (var25.bytes.length > var25.position) {
@@ -3484,8 +3484,8 @@ public final class GlobalStatics_11 {
                                   GlobalStatics_9.anInt531 = GlobalStatics_9.anIntArray2929[
                                       k + 1];
                                   if (GlobalStatics_9.anInt1753 == 2) {
-                                    GlobalStatics_10.anInt3315 = GlobalStatics_9.anInt531;
-                                    DummyClass17.anInt1823 = GlobalStatics_6.anInt2309;
+                                    GlobalStatics_10.SCENE_CAMERA_YAW = GlobalStatics_9.anInt531;
+                                    DummyClass17.SCENE_CAMERA_PITCH = GlobalStatics_6.anInt2309;
                                   }
                                   GlobalStatics_6.method1098((byte) -74);
                                   continue;
@@ -3511,8 +3511,8 @@ public final class GlobalStatics_11 {
                                       k34 = 4;
                                     }
                                     GlobalStatics_4.brightnessSetting = k34;
-                                    if (!GlRenderer.useOpenGlRenderer
-                                        || !GLStatics.useBumpMaps) {
+                                    if (!GlRenderer.USE_OPENGL
+                                        || !GLStatics.USE_BUMP_MAPS) {
                                       if (GlobalStatics_4.brightnessSetting
                                           == 1) {
                                         DummyClass40.updateLightness(0.9F);
@@ -3530,9 +3530,9 @@ public final class GlobalStatics_11 {
                                         DummyClass40.updateLightness(0.6F);
                                       }
                                     }
-                                    if (GlRenderer.useOpenGlRenderer) {
+                                    if (GlRenderer.USE_OPENGL) {
                                       GlobalStatics_10.method236((byte) 64);
-                                      if (!GLStatics.useBumpMaps) {
+                                      if (!GLStatics.USE_BUMP_MAPS) {
                                         DummyClass51.method1417(104);
                                       }
                                     }
@@ -3635,14 +3635,14 @@ public final class GlobalStatics_11 {
                                     continue;
                                   }
                                   if (j1 == 6012) {
-                                    if (GlRenderer.useOpenGlRenderer) {
+                                    if (GlRenderer.USE_OPENGL) {
                                       GLStatics.method551(0, 0);
                                     }
-                                    GLStatics.useBumpMaps =
+                                    GLStatics.USE_BUMP_MAPS =
                                         GlobalStatics_9.anIntArray2929[--k]
                                             == 1;
-                                    if (GlRenderer.useOpenGlRenderer
-                                        && GLStatics.useBumpMaps) {
+                                    if (GlRenderer.USE_OPENGL
+                                        && GLStatics.USE_BUMP_MAPS) {
                                       DummyClass40.updateLightness(0.7F);
                                     } else {
                                       if (GlobalStatics_4.brightnessSetting
@@ -3672,7 +3672,7 @@ public final class GlobalStatics_11 {
                                     GLStatics.aBoolean1685 =
                                         GlobalStatics_9.anIntArray2929[--k]
                                             == 1;
-                                    if (GlRenderer.useOpenGlRenderer) {
+                                    if (GlRenderer.USE_OPENGL) {
                                       DummyClass51.method1417(109);
                                     }
                                     SettingsStatics
@@ -3684,7 +3684,7 @@ public final class GlobalStatics_11 {
                                     DummyClass35.aBoolean661 =
                                         GlobalStatics_9.anIntArray2929[--k]
                                             == 1;
-                                    if (GlRenderer.useOpenGlRenderer) {
+                                    if (GlRenderer.USE_OPENGL) {
                                       GlobalStatics_10.method236((byte) 64);
                                     }
                                     SettingsStatics
@@ -3694,8 +3694,8 @@ public final class GlobalStatics_11 {
                                   }
                                   if (j1 == 6016) {
                                     int value = GlobalStatics_9.anIntArray2929[--k];
-                                    if (GlRenderer.useOpenGlRenderer) {
-                                      GlobalStatics_6.replaceCanvas = true;
+                                    if (GlRenderer.USE_OPENGL) {
+                                      GlobalStatics_6.REPLACE_CANVAS = true;
                                     }
                                     if (value < 0 || value > 2) {
                                       value = 0;
@@ -3874,7 +3874,7 @@ public final class GlobalStatics_11 {
                                   }
                                   if (j1 == 6112) {
                                     GlobalStatics_9.anIntArray2929[k++] =
-                                        GLStatics.useBumpMaps ? 1 : 0;
+                                        GLStatics.USE_BUMP_MAPS ? 1 : 0;
                                     continue;
                                   }
                                   if (j1 == 6114) {
@@ -3909,7 +3909,7 @@ public final class GlobalStatics_11 {
                                     continue;
                                   }
                                   if (j1 == 6121) {
-                                    if (GlRenderer.useOpenGlRenderer) {
+                                    if (GlRenderer.USE_OPENGL) {
                                       GlobalStatics_9.anIntArray2929[k++] =
                                           GlRenderer.multiSampleSupport ? 1 : 0;
                                     } else {
@@ -5409,7 +5409,7 @@ public final class GlobalStatics_11 {
     }
   }
 
-  public static void method1111(int var0) {
+  public static void clear70(int var0) {
     GlobalStatics_11.aClass94_808 = null;
     GlobalStatics_11.anIntArray781 = null;
     GlobalStatics_11.aClass94_809 = null;

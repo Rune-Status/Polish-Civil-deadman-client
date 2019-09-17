@@ -110,8 +110,8 @@ public final class GameClient extends GameStub {
         GlobalStatics_9.anInt2537 = 0; GlobalStatics_7.hasKeyInput()
         && GlobalStatics_9.anInt2537 < 128;
         ++GlobalStatics_9.anInt2537) {
-      GlobalStatics_9.anIntArray1755[GlobalStatics_9.anInt2537] = GlobalStatics_9.anInt3624;
-      GlobalStatics_7.anIntArray1638[GlobalStatics_9.anInt2537] = GlobalStatics_9.anInt3342;
+      GlobalStatics_9.anIntArray1755[GlobalStatics_9.anInt2537] = GlobalStatics_9.CURRENT_KEY;
+      GlobalStatics_7.anIntArray1638[GlobalStatics_9.anInt2537] = GlobalStatics_9.OTHER_CURRENT_KEY;
     }
 
     ++GlobalStatics_7.loopCycle;
@@ -122,7 +122,7 @@ public final class GameClient extends GameStub {
     }
 
     ++GlobalStatics_10.anInt3213;
-    if (GlRenderer.useOpenGlRenderer) {
+    if (GlRenderer.USE_OPENGL) {
       int var2 = 19137023;
 
       label191:
@@ -187,7 +187,7 @@ public final class GameClient extends GameStub {
       GlobalStatics_1.aClass94_2196 = null;
     }
 
-    if (!GlRenderer.useOpenGlRenderer) {
+    if (!GlRenderer.USE_OPENGL) {
       GlobalStatics_0.method744(true);
     } else if (GlobalStatics_10.loginState == 0
         && GlobalStatics_0.anInt23 == 0) {
@@ -197,9 +197,10 @@ public final class GameClient extends GameStub {
         GlobalStatics_10.d(0xffff);
       }
 
-      if (GlobalStatics_9.anInt3995 >> 7 < 14
-          || GlobalStatics_9.anInt3995 >> 7 >= 90
-          || DummyClass49.anInt1111 >> 7 < 14 || DummyClass49.anInt1111
+      if (GlobalStatics_9.SCENE_CAMERA_X >> 7 < 14
+          || GlobalStatics_9.SCENE_CAMERA_X >> 7 >= 90
+          || DummyClass49.SCENE_CAMERA_Z
+          >> 7 < 14 || DummyClass49.SCENE_CAMERA_Z
               >> 7 >= 90) {
         GlobalStatics_10.method195(var1 ^ 20478);
       }
@@ -420,8 +421,8 @@ public final class GameClient extends GameStub {
   private void handleLoading() {
     if (!GlobalStatics_0.SAFE_MODE) {
       while (GlobalStatics_7.hasKeyInput()) {
-        if (GlobalStatics_9.anInt3342 == 115
-            || GlobalStatics_9.anInt3342 == 83) {
+        if (GlobalStatics_9.OTHER_CURRENT_KEY == 115
+            || GlobalStatics_9.OTHER_CURRENT_KEY == 83) {
           GlobalStatics_0.SAFE_MODE = true;
         }
       }
@@ -598,31 +599,31 @@ public final class GameClient extends GameStub {
               if (GlobalStatics_9.loadingState == 70) {
                 GlobalStatics_2.configs.method2113((byte) 34);
                 byte var7 = 0;
-                var2 = var7 + GlobalStatics_2.configs.method2136((byte) -124);
+                var2 = var7 + GlobalStatics_2.configs.method2136();
                 GlobalStatics_8.fileUnpacker16.method2113((byte) 120);
-                var2 += GlobalStatics_8.fileUnpacker16.method2136((byte) -128);
+                var2 += GlobalStatics_8.fileUnpacker16.method2136();
                 GlobalStatics_9.fileUnpacker17.method2113((byte) 70);
-                var2 += GlobalStatics_9.fileUnpacker17.method2136((byte) -123);
+                var2 += GlobalStatics_9.fileUnpacker17.method2136();
                 DummyClass55.fileUnpacker18.method2113((byte) 32);
-                var2 += DummyClass55.fileUnpacker18.method2136((byte) -127);
+                var2 += DummyClass55.fileUnpacker18.method2136();
                 GlobalStatics_8.fileUnpacker19.method2113((byte) 48);
-                var2 += GlobalStatics_8.fileUnpacker19.method2136((byte) -128);
+                var2 += GlobalStatics_8.fileUnpacker19.method2136();
                 GlobalStatics_10.animationSequences.method2113((byte) 43);
                 var2 += GlobalStatics_10.animationSequences
-                    .method2136((byte) -122);
+                    .method2136();
                 GlobalStatics_9.fileUnpacker21.method2113((byte) 23);
                 var2 += GlobalStatics_9.fileUnpacker21
-                    .method2136((byte) -122);
+                    .method2136();
                 GlobalStatics_6.fileUnpacker22.method2113((byte) 94);
                 var2 += GlobalStatics_6.fileUnpacker22
-                    .method2136((byte) -128);
+                    .method2136();
                 GlobalStatics_9.fileUnpacker24.method2113((byte) 91);
-                var2 += GlobalStatics_9.fileUnpacker24.method2136((byte) -126);
+                var2 += GlobalStatics_9.fileUnpacker24.method2136();
                 GlobalStatics_9.fileUnpacker25.method2113((byte) 102);
                 var2 += GlobalStatics_9.fileUnpacker25
-                    .method2136((byte) -128);
+                    .method2136();
                 DummyClass22.particles.method2113((byte) 126);
-                var2 += DummyClass22.particles.method2136((byte) -124);
+                var2 += DummyClass22.particles.method2136();
                 if (var2 >= 1100) {
                   DummyClass22.method1799((byte) 96, GlobalStatics_2.configs);
                   GlobalStatics_6
@@ -748,7 +749,7 @@ public final class GameClient extends GameStub {
                                       GlobalStatics_7.aClass94_2961,
                                       GlobalStatics_9.toString(
                                           85 + GlobalStatics_8.fileUnpacker13
-                                              .method2136((byte) -124)
+                                              .method2136()
                                               / 20),
                                       GlobalStatics_9.aClass94_468
                                   });
@@ -760,7 +761,7 @@ public final class GameClient extends GameStub {
                                     GlobalStatics_7.aClass94_2961,
                                     GlobalStatics_9.toString(
                                         75 + GlobalStatics_10.scripts
-                                            .method2136((byte) -128) / 10),
+                                            .method2136() / 10),
                                     GlobalStatics_9.aClass94_468
                                 });
                             GlobalStatics_6.loadingPercent = 85;
@@ -771,7 +772,7 @@ public final class GameClient extends GameStub {
                                   GlobalStatics_7.aClass94_2961,
                                   GlobalStatics_9.toString(
                                       GlobalStatics_8.widgets
-                                          .method2136((byte) -123) * 3 / 4),
+                                          .method2136() * 3 / 4),
                                   GlobalStatics_9.aClass94_468
                               });
                           GlobalStatics_6.loadingPercent = 85;
@@ -868,7 +869,7 @@ public final class GameClient extends GameStub {
                           GlobalStatics_10.aClass94_1892,
                           GlobalStatics_9.toString(
                               GlobalStatics_10.materials
-                                  .method2136((byte) -125)),
+                                  .method2136()),
                           GlobalStatics_9.aClass94_468
                       });
                   GlobalStatics_6.loadingPercent = 70;
@@ -973,10 +974,10 @@ public final class GameClient extends GameStub {
       }
 
       GlobalStatics_0.method728(false);
-      DummyClass43.method1194(-16385);
+      DummyClass43.method1194();
       DummyClass34.method996(-43);
       GlobalStatics_8.method1225(18074);
-      if (GlRenderer.useOpenGlRenderer) {
+      if (GlRenderer.USE_OPENGL) {
         DummyClass33.clearGlResources();
       }
 
@@ -1019,7 +1020,7 @@ public final class GameClient extends GameStub {
   }
 
   public void destroy(byte var1) {
-    if (GlRenderer.useOpenGlRenderer) {
+    if (GlRenderer.USE_OPENGL) {
       GlRenderer.releaseGlResources();
     }
 
@@ -1092,110 +1093,110 @@ public final class GameClient extends GameStub {
     }
   }
 
-  public void method33(int var1) {
-    GlobalStatics_8.method43(true);
-    GlobalStatics_0.method1541(-8635);
-    DummyClass35.method1024(21474);
-    GlobalStatics_9.method542((byte) -46);
-    GlobalStatics_10.method1792(0);
-    GlobalStatics_8.method26(113);
-    GlRenderer.method1838();
-    GlobalStatics_4.method1766(24241);
-    GlobalStatics_5.method2181(false);
-    GlobalStatics_9.method1257(25951);
-    GlobalStatics_9.method1588((byte) 106);
-    GlobalStatics_0.method767(0);
-    GlobalStatics_4.method1463(0);
-    GlobalStatics_9.method1242((byte) -88);
-    GlobalStatics_7.method1306(-16222);
-    GlobalStatics_10.method836(-114);
-    GlobalStatics_7.method2105(false);
-    GlobalStatics_8.method2119(100);
-    GlobalStatics_6.method974(true);
-    GlobalStatics_7.method1049(true);
-    GlobalStatics_9.method1521(3101);
-    GlobalStatics_9.method1983(-3);
-    GlobalStatics_8.method808(1);
-    GlobalStatics_7.method1491((byte) -124);
-    GlobalStatics_10.method860(126);
-    GlobalStatics_7.method1644((byte) 121);
-    GlobalStatics_9.method1982((byte) 121);
-    GlobalStatics_0.method1217(0);
-    GlobalStatics_2.method634((byte) 108);
-    GlobalStatics_0.method1774(103);
-    GlobalStatics_5.method2081(0);
-    GlobalStatics_6.method387(103);
-    GlobalStatics_9.method1802();
-    GlobalStatics_6.method491((byte) 85);
-    GlobalStatics_5.method2165(0);
-    GlobalStatics_9.method2175((byte) -110);
-    GlobalStatics_9.method1168(8160);
-    GlobalStatics_3.method2057((byte) -108);
-    GlobalStatics_9.method1974((byte) -116);
-    GlobalStatics_2.method102(3353893);
-    GlobalStatics_8.method1687(-11);
-    GlobalStatics_9.method109(2);
-    GlobalStatics_9.method1473((byte) 103);
-    GlobalStatics_9.method821(26971);
-    GlobalStatics_10.method91((byte) 120);
-    GlobalStatics_0.method83((byte) 30);
-    GlobalStatics_9.method875((byte) 106);
-    GlobalStatics_9.method1231(119);
-    DummyClass53.method1582(3);
-    GlobalStatics_6.method558(-29679);
-    GlobalStatics_10.method2071((byte) 59);
-    DummyClass39.method1085(-1);
-    DummyClass22.method1800((byte) 104);
-    DummyClass28.method886((byte) 35);
-    DummyClass25.method1728(-14256);
-    DummyClass2.method1754(-79);
-    DummyClass1.method905(-24912);
-    GlobalStatics_10.method1761((byte) -55);
-    GlobalStatics_8.method2288(false);
-    DummyClass29.method908(5157);
-    DummyClass10.method2262((byte) 126);
-    GlobalStatics_7.method592((byte) 38);
-    GlobalStatics_9.method597((byte) 108);
-    DummyClass54.method1598(-126);
-    DummyClass51.method1422((byte) 24);
+  public void clearThings(int var1) {
+    GlobalStatics_8.clear0(true);
+    GlobalStatics_0.clear1(-8635);
+    DummyClass35.clear2(21474);
+    GlobalStatics_9.clear3((byte) -46);
+    GlobalStatics_10.clear4(0);
+    GlobalStatics_8.clear5(113);
+    GlRenderer.clear6();
+    GlobalStatics_4.clear7(24241);
+    GlobalStatics_5.clear8(false);
+    GlobalStatics_9.clear9(25951);
+    GlobalStatics_9.clear10((byte) 106);
+    GlobalStatics_0.clear11(0);
+    GlobalStatics_4.clear12(0);
+    GlobalStatics_9.clear13((byte) -88);
+    GlobalStatics_7.clear14(-16222);
+    GlobalStatics_10.clear15(-114);
+    GlobalStatics_7.clear16(false);
+    GlobalStatics_8.clear17(100);
+    GlobalStatics_6.clear18(true);
+    GlobalStatics_7.clear19(true);
+    GlobalStatics_9.clear20(3101);
+    GlobalStatics_9.clear21(-3);
+    GlobalStatics_8.clear22(1);
+    GlobalStatics_7.clear23((byte) -124);
+    GlobalStatics_10.clear24(126);
+    GlobalStatics_7.clear25((byte) 121);
+    GlobalStatics_9.clear26((byte) 121);
+    GlobalStatics_0.clear27();
+    GlobalStatics_2.clear28((byte) 108);
+    GlobalStatics_0.clear29(103);
+    GlobalStatics_5.clear30(0);
+    GlobalStatics_6.clear31(103);
+    GlobalStatics_9.clear32();
+    GlobalStatics_6.clear33((byte) 85);
+    GlobalStatics_5.clear34(0);
+    GlobalStatics_9.clear35((byte) -110);
+    GlobalStatics_9.clear36(8160);
+    GlobalStatics_3.clear37((byte) -108);
+    GlobalStatics_9.clear38((byte) -116);
+    GlobalStatics_2.clear39(3353893);
+    GlobalStatics_8.clear40(-11);
+    GlobalStatics_9.clear41(2);
+    GlobalStatics_9.clear42((byte) 103);
+    GlobalStatics_9.clear43(26971);
+    GlobalStatics_10.clear44((byte) 120);
+    GlobalStatics_0.clear45((byte) 30);
+    GlobalStatics_9.clear46((byte) 106);
+    GlobalStatics_9.clear47(119);
+    DummyClass53.clear48(3);
+    GlobalStatics_6.clear49(-29679);
+    GlobalStatics_10.clear50((byte) 59);
+    DummyClass39.clear51(-1);
+    DummyClass22.clear52((byte) 104);
+    DummyClass28.clear53((byte) 35);
+    DummyClass25.clear55(-14256);
+    DummyClass2.clear56(-79);
+    DummyClass1.clear57(-24912);
+    GlobalStatics_10.clear58((byte) -55);
+    GlobalStatics_8.clear59(false);
+    DummyClass29.clear60(5157);
+    DummyClass10.clear61((byte) 126);
+    GlobalStatics_7.clear62((byte) 38);
+    GlobalStatics_9.clear63();
+    DummyClass54.clear64(-126);
+    DummyClass51.clear65((byte) 24);
     GlEnvironment.clear();
-    DummyClass59.method1042(true);
-    GlobalStatics_10.destroy();
-    GlobalStatics_9.method1815((byte) -45);
-    GlModel.method1915();
-    GlobalStatics_11.method1111(3327);
-    GlobalStatics_1.method1948();
-    GlobalStatics_9.method2085(118);
-    GlobalStatics_9.method2088(true);
-    DummyClass30.method937(0);
-    GlobalStatics_9.method1414(90);
-    DummyClass33.method987();
-    GlobalStatics_2.method892(100);
-    GlobalStatics_0.method53(0);
-    DummyClass11.method2205(-17413);
-    GlobalStatics_1.method1663(33);
-    GlobalStatics_4.method689();
-    DummyClass52.method1426(-25247);
-    GlobalStatics_6.method399(186);
-    GlobalStatics_9.method1369();
-    GlobalStatics_6.method463(-28918);
-    GlobalStatics_9.method372(true);
-    DummyClass36.method1032(false);
-    GlobalStatics_2.method999();
-    DummyClass46.method1274();
-    GLStatics.method1059((byte) -2);
-    GlobalStatics_5.method2093(1);
-    GlobalStatics_8.method1223(0);
-    GlobalStatics_4.method588((byte) 120);
-    DummyClass15.method2063(0);
-    DummyClass47.method1333();
-    DummyClass18.method828(-90);
-    GlobalStatics_9.method1130(99);
-    GlobalStatics_9.method584(0);
-    GlobalStatics_2.method521(-3);
-    GlobalStatics_6.method1096((byte) 89);
-    GlobalStatics_8.method2276(-2);
-    DummyClass17.method1858(-17124);
+    DummyClass59.clear66(true);
+    GlobalStatics_10.clear67();
+    GlobalStatics_9.clear68((byte) -45);
+    GlModel.clear69();
+    GlobalStatics_11.clear70(3327);
+    GlobalStatics_1.lear71();
+    GlobalStatics_9.clear72(118);
+    GlobalStatics_9.clear73(true);
+    DummyClass30.clear74(0);
+    GlobalStatics_9.clear75(90);
+    DummyClass33.clear76();
+    GlobalStatics_2.clear77(100);
+    GlobalStatics_0.clear78();
+    DummyClass11.clear79(-17413);
+    GlobalStatics_1.clear80(33);
+    GlobalStatics_4.clear81();
+    DummyClass52.clear82(-25247);
+    GlobalStatics_6.clear83(186);
+    GlobalStatics_9.clear84();
+    GlobalStatics_6.clear85(-28918);
+    GlobalStatics_9.clear86(true);
+    DummyClass36.clear87(false);
+    GlobalStatics_2.clear88();
+    DummyClass46.clear89();
+    GLStatics.clear90((byte) -2);
+    GlobalStatics_5.clear91(1);
+    GlobalStatics_8.clear92(0);
+    GlobalStatics_4.clear93((byte) 120);
+    DummyClass15.clear94(0);
+    DummyClass47.clear95();
+    DummyClass18.clear96(-90);
+    GlobalStatics_9.clear97(99);
+    GlobalStatics_9.clear98(0);
+    GlobalStatics_2.clear99(-3);
+    GlobalStatics_6.clear100((byte) 89);
+    GlobalStatics_8.clear101(-2);
+    DummyClass17.clear102(-17124);
     GlobalStatics_8.method1606((byte) -48);
     GlobalStatics_9.method943(-9893);
     GlobalStatics_9.method605(221301966);
@@ -1313,7 +1314,6 @@ public final class GameClient extends GameStub {
     GlobalStatics_6.method131(-109);
     DummyClass34.method994(0x93bd);
     DummyClass44.method1206((byte) 26);
-    int var2 = 87 % ((68 - var1) / 49);
     GlobalStatics_9.method274(-2);
     GlobalStatics_9.method217(1);
     GlobalStatics_9.method317(7759444);
@@ -1321,7 +1321,7 @@ public final class GameClient extends GameStub {
     GlobalStatics_9.method261(-125);
     GlobalStatics_8.method288((byte) 110);
     GlobalStatics_9.method172(11597);
-    GlobalStatics_9.method296((byte) -107);
+    GlobalStatics_9.method296();
     GlobalStatics_9.method357(false);
     GlobalStatics_9.method206(true);
     GlobalStatics_9.method348(48);
@@ -1361,7 +1361,7 @@ public final class GameClient extends GameStub {
     GlobalStatics_9.method627((byte) -122);
     GlobalStatics_9.method717(109);
     GlobalStatics_9.method534(99);
-    GlobalStatics_9.method405(true);
+    GlobalStatics_9.method405();
     GlobalStatics_2.method61(-93);
     GlobalStatics_11.method67(true);
     GlobalStatics_6.method573(-11346);
@@ -1380,7 +1380,7 @@ public final class GameClient extends GameStub {
   }
 
   public void init() {
-    if (this.isValidHost()) {
+    if (true) {
       GlobalStatics_8.portOffset = Integer
           .parseInt(this.getParameter("worldid"));
       GlobalStatics_4.usageLocation = Integer
@@ -1461,10 +1461,10 @@ public final class GameClient extends GameStub {
         GlobalStatics_9.audioOutputStream0.method2158((byte) -78);
       }
       if ((DummyClass15.state == 30 || DummyClass15.state == 10) && (
-          GlobalStatics_6.replaceCanvas || DummyClass41.aLong866 != 0L
+          GlobalStatics_6.REPLACE_CANVAS || DummyClass41.aLong866 != 0L
               && DummyClass41.aLong866 < GlobalStatics_10
               .getCurrentTimeMillis())) {
-        GlobalStatics_9.setWindowMode(GlobalStatics_6.replaceCanvas,
+        GlobalStatics_9.setWindowMode(GlobalStatics_6.REPLACE_CANVAS,
             GlobalStatics_9.getWindowMode(),
             GlobalStatics_3.anInt2378,
             GlobalStatics_10.anInt3071);
@@ -1503,7 +1503,7 @@ public final class GameClient extends GameStub {
       }
 
       if (GlobalStatics_10.fullScreenFrame != null
-          && !GlobalStatics_10.focused && (
+          && !GlobalStatics_10.FOCUSED && (
           DummyClass15.state == 30 || DummyClass15.state == 10)) {
         GlobalStatics_9
             .setWindowMode(false, GlobalStatics_2.anInt2577, -1, -1);
@@ -1523,7 +1523,7 @@ public final class GameClient extends GameStub {
         GlobalStatics_9.method1396(var1 ^ -41);
       }
 
-      if (GlRenderer.useOpenGlRenderer) {
+      if (GlRenderer.USE_OPENGL) {
         for (var4 = 0; var4 < 100; ++var4) {
           GlobalStatics_9.aBooleanArray3674[var4] = true;
         }
@@ -1589,7 +1589,7 @@ public final class GameClient extends GameStub {
       } else {
         GlobalStatics_3.method381(true);
       }
-      if (GlRenderer.useOpenGlRenderer && DummyClass15.state != 0) {
+      if (GlRenderer.USE_OPENGL && DummyClass15.state != 0) {
         GlRenderer.swapBuffers();
         Arrays.fill(DummyClass9.aBooleanArray4008, false);
       } else {

@@ -8,7 +8,7 @@ import com.jagex.runescape.sprite.SoftwareIndexedColorSprite;
 public final class DummyClass49 {
 
   public static GameString aClass94_1110 = GameStringStatics.create("Attaquer");
-  public static int anInt1111;
+  public static int SCENE_CAMERA_Z;
   public static PlayerAppearance aClass52_1112 = new PlayerAppearance();
 
   public static SoftwareIndexedColorSprite method1364(byte var0) {
@@ -33,7 +33,7 @@ public final class DummyClass49 {
     DummyClass49.aClass52_1112 = null;
     DummyClass49.aClass94_1110 = null;
     if (var0 <= 96) {
-      DummyClass49.anInt1111 = 55;
+      DummyClass49.SCENE_CAMERA_Z = 55;
     }
   }
 

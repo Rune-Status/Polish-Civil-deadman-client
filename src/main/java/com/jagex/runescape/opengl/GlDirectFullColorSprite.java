@@ -18,8 +18,8 @@ public final class GlDirectFullColorSprite extends GlDirectColorSprite {
   }
 
   public void initialize(int[] var1) {
-    this.anInt4075 = GLStatics.nearestPo2((byte) 111, this.anInt3707);
-    this.anInt4079 = GLStatics.nearestPo2((byte) 76, this.anInt3696);
+    this.anInt4075 = GLStatics.nearestPo2(this.anInt3707);
+    this.anInt4079 = GLStatics.nearestPo2(this.anInt3696);
     byte[] var2 = new byte[this.anInt4075 * this.anInt4079 * 4];
     int var3 = 0;
     int var4 = 0;

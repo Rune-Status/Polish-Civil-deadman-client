@@ -121,7 +121,7 @@ public final class DummyClass26 {
         }
       }
 
-      if (GlRenderer.useOpenGlRenderer && (var0 == 25 || var0 == 28 || var0
+      if (GlRenderer.USE_OPENGL && (var0 == 25 || var0 == 28 || var0
           == 40)) {
         GlRenderer.method1833();
       }

@@ -939,8 +939,8 @@ public final class DummyClass18 {
         GlobalStatics_9.anInt531 = var20;
         GlobalStatics_6.anInt2309 = var21;
         if (GlobalStatics_9.anInt1753 == 2) {
-          DummyClass17.anInt1823 = GlobalStatics_6.anInt2309;
-          GlobalStatics_10.anInt3315 = GlobalStatics_9.anInt531;
+          DummyClass17.SCENE_CAMERA_PITCH = GlobalStatics_6.anInt2309;
+          GlobalStatics_10.SCENE_CAMERA_YAW = GlobalStatics_9.anInt531;
         }
 
         GlobalStatics_6.method1098((byte) -117);
@@ -956,7 +956,7 @@ public final class DummyClass18 {
       var5 = GlobalStatics_9.gameBuffer.readShortLEAdd();
       var6 = GlobalStatics_9.gameBuffer.readInt();
       if (GlobalStatics_5.updateInterfaceCounter(var3, (byte) -25)) {
-        GlobalStatics_8.method2143((byte) -124, var21, var6, var5, var20);
+        GlobalStatics_8.method2143(var21, var6, var5, var20);
       }
 
       GlobalStatics_0.packetId = -1;
@@ -2073,7 +2073,7 @@ public final class DummyClass18 {
           GlobalStatics_9.method2026((byte) 122, var3, var20, var21);
           var43 = DummyClass35.getItemConfig(var21, (byte) 70);
           GlobalStatics_8
-              .method2143((byte) -128, var43.anInt810, var3, var43.rotationY,
+              .method2143(var43.anInt810, var3, var43.rotationY,
                   var43.rotationX);
           DummyClass51.method1420(var3, var43.rotationZ, var43.translateOther,
               var43.translateX,
@@ -2196,12 +2196,12 @@ public final class DummyClass18 {
     return true;
   }
 
-  public static void method828(int var0) {
+  public static void clear96(int var0) {
     DummyClass18.DEFAULT_RENDER_ANIMATION = null;
     DummyClass18.aByteArrayArrayArray81 = null;
     DummyClass18.aClass94_85 = null;
     if (var0 > -88) {
-      DummyClass18.method828(-84);
+      DummyClass18.clear96(-84);
     }
 
     DummyClass18.aClass61_82 = null;

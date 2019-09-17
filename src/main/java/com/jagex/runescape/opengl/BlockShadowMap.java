@@ -50,7 +50,7 @@ public final class BlockShadowMap {
       }
     }
 
-    if (GlRenderer.vertexBufferSupport) {
+    if (GlRenderer.VERTEX_BUFFER_SUPPORT) {
       ByteBuffer buffer = ByteBuffer
           .wrap(vertexBuffers.bytes, 0, vertexBuffers.position);
       this.vertexBufferObject = new GlBufferObject();
@@ -85,7 +85,7 @@ public final class BlockShadowMap {
       }
     }
 
-    if (GlRenderer.vertexBufferSupport) {
+    if (GlRenderer.VERTEX_BUFFER_SUPPORT) {
       ByteBuffer var10 = ByteBuffer.wrap(var8.bytes, 0, var8.position);
       this.elementBufferObject = new GlBufferObject();
       this.elementBufferObject.setElementBufferData(var10);
@@ -172,7 +172,7 @@ public final class BlockShadowMap {
       GlRenderer.GL.glInterleavedArrays(10791, 20, 0L);
       GlRenderer.aBoolean1798 = false;
     } else {
-      if (GlRenderer.vertexBufferSupport) {
+      if (GlRenderer.VERTEX_BUFFER_SUPPORT) {
         //TODO ARB
         GlRenderer.GL.glBindBuffer(0x8892, 0);
       }
@@ -185,7 +185,7 @@ public final class BlockShadowMap {
       this.elementBufferObject.bindElementBuffer();
       GlRenderer.GL.glDrawElements(4, 384, 5125, 0L);
     } else {
-      if (GlRenderer.vertexBufferSupport) {
+      if (GlRenderer.VERTEX_BUFFER_SUPPORT) {
         //TODO ARB
         GlRenderer.GL.glBindBuffer(0x8893, 0);
       }

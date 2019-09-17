@@ -30,7 +30,7 @@ public final class DummyClass28 {
         ? GlobalStatics_9.createSprites(0) : null;
   }
 
-  public static void method886(byte var0) {
+  public static void clear53(byte var0) {
     if (var0 < 26) {
       DummyClass28.aClass94_339 = null;
     }
@@ -81,7 +81,7 @@ public final class DummyClass28 {
     GlobalStatics_9.p12Font.method697(GlobalStatics_9.aClass109Array3270, null);
     GlobalStatics_8.aClass3_Sub28_Sub17_2096
         .method697(GlobalStatics_9.aClass109Array3270, null);
-    if (GlRenderer.useOpenGlRenderer) {
+    if (GlRenderer.USE_OPENGL) {
       SomethingShadows.floorShadows = DummyClass28
           .method885(true, DummyClass38.floorShadowsFileId, var1, 0);
 
@@ -96,7 +96,7 @@ public final class DummyClass28 {
             .method1043(0, var1, var0 - 3199, GlobalStatics_9.anInt1325);
     assert var10 != null;
     var10.method665();
-    if (GlRenderer.useOpenGlRenderer) {
+    if (GlRenderer.USE_OPENGL) {
       GlobalStatics_9.aClass3_Sub28_Sub16_895 = new GlDirectColorSprite(var10);
     } else {
       GlobalStatics_9.aClass3_Sub28_Sub16_895 = var10;
@@ -111,7 +111,7 @@ public final class DummyClass28 {
       var3[var4].method665();
     }
 
-    if (GlRenderer.useOpenGlRenderer) {
+    if (GlRenderer.USE_OPENGL) {
       GlobalStatics_9.aClass3_Sub28_Sub16Array3458 = new AbstractDirectColorSprite[var3.length];
 
       for (var4 = 0; var4 < var3.length; ++var4) {
@@ -136,7 +136,7 @@ public final class DummyClass28 {
               var7 + var6);
     }
 
-    if (GlRenderer.useOpenGlRenderer) {
+    if (GlRenderer.USE_OPENGL) {
       GlobalStatics_9.aClass3_Sub28_Sub16Array2839 =
           new AbstractDirectColorSprite[GlobalStatics_9.aClass3_Sub28_Sub16_Sub2Array2140.length];
 

@@ -9,6 +9,7 @@ import com.jagex.runescape.statics.DummyClass45;
 import com.jagex.runescape.statics.DummyClass55;
 import com.jagex.runescape.statics.GlobalStatics_1;
 import com.jagex.runescape.statics.GlobalStatics_10;
+import com.jagex.runescape.statics.GlobalStatics_6;
 import com.jagex.runescape.statics.GlobalStatics_9;
 import java.util.Arrays;
 
@@ -826,7 +827,7 @@ public final class SoftwareModel extends AbstractModel {
     int var12;
     int var13;
     int var14;
-    if (var8 >= 50) {
+    if (var8 >= GlobalStatics_6.NEAR) {
       GlobalStatics_1.anIntArray3919[var4] = GlobalStatics_1.anIntArray3943[var5];
       GlobalStatics_1.anIntArray3925[var4] = GlobalStatics_1.anIntArray3932[var5];
       GlobalStatics_1.anIntArray3936[var4++] =
@@ -835,38 +836,38 @@ public final class SoftwareModel extends AbstractModel {
       var11 = GlobalStatics_1.anIntArray3948[var5];
       var12 = GlobalStatics_1.anIntArray3928[var5];
       var13 = this.anIntArray3898[var1] & 0xffff;
-      if (var10 >= 50) {
-        var14 = (50 - var8) * DummyClass40.anIntArray841[var10 - var8];
+      if (var10 >= GlobalStatics_6.NEAR) {
+        var14 = (GlobalStatics_6.NEAR - var8) * DummyClass40.anIntArray841[var10 - var8];
         GlobalStatics_1.anIntArray3919[var4] =
             var2 +
                 (var11 + ((GlobalStatics_1.anIntArray3948[var7] - var11) * var14
-                    >> 16) << 9) / 50;
+                    >> 16) << 9) / GlobalStatics_6.NEAR;
         GlobalStatics_1.anIntArray3925[var4] =
             var3 +
                 (var12 + ((GlobalStatics_1.anIntArray3928[var7] - var12) * var14
-                    >> 16) << 9) / 50;
+                    >> 16) << 9) / GlobalStatics_6.NEAR;
         GlobalStatics_1.anIntArray3936[var4++] =
             var13 + (((this.anIntArray3896[var1] & 0xffff) - var13) * var14
                 >> 16);
       }
 
-      if (var9 >= 50) {
-        var14 = (50 - var8) * DummyClass40.anIntArray841[var9 - var8];
+      if (var9 >= GlobalStatics_6.NEAR) {
+        var14 = (GlobalStatics_6.NEAR - var8) * DummyClass40.anIntArray841[var9 - var8];
         GlobalStatics_1.anIntArray3919[var4] =
             var2 +
                 (var11 + ((GlobalStatics_1.anIntArray3948[var6] - var11) * var14
-                    >> 16) << 9) / 50;
+                    >> 16) << 9) / GlobalStatics_6.NEAR;
         GlobalStatics_1.anIntArray3925[var4] =
             var3 +
                 (var12 + ((GlobalStatics_1.anIntArray3928[var6] - var12) * var14
-                    >> 16) << 9) / 50;
+                    >> 16) << 9) / GlobalStatics_6.NEAR;
         GlobalStatics_1.anIntArray3936[var4++] =
             var13 + (((this.anIntArray3874[var1] & 0xffff) - var13) * var14
                 >> 16);
       }
     }
 
-    if (var9 >= 50) {
+    if (var9 >= GlobalStatics_6.NEAR) {
       GlobalStatics_1.anIntArray3919[var4] = GlobalStatics_1.anIntArray3943[var6];
       GlobalStatics_1.anIntArray3925[var4] = GlobalStatics_1.anIntArray3932[var6];
       GlobalStatics_1.anIntArray3936[var4++] =
@@ -875,38 +876,38 @@ public final class SoftwareModel extends AbstractModel {
       var11 = GlobalStatics_1.anIntArray3948[var6];
       var12 = GlobalStatics_1.anIntArray3928[var6];
       var13 = this.anIntArray3874[var1] & 0xffff;
-      if (var8 >= 50) {
-        var14 = (50 - var9) * DummyClass40.anIntArray841[var8 - var9];
+      if (var8 >= GlobalStatics_6.NEAR) {
+        var14 = (GlobalStatics_6.NEAR - var9) * DummyClass40.anIntArray841[var8 - var9];
         GlobalStatics_1.anIntArray3919[var4] =
             var2 +
                 (var11 + ((GlobalStatics_1.anIntArray3948[var5] - var11) * var14
-                    >> 16) << 9) / 50;
+                    >> 16) << 9) / GlobalStatics_6.NEAR;
         GlobalStatics_1.anIntArray3925[var4] =
             var3 +
                 (var12 + ((GlobalStatics_1.anIntArray3928[var5] - var12) * var14
-                    >> 16) << 9) / 50;
+                    >> 16) << 9) / GlobalStatics_6.NEAR;
         GlobalStatics_1.anIntArray3936[var4++] =
             var13 + (((this.anIntArray3898[var1] & 0xffff) - var13) * var14
                 >> 16);
       }
 
-      if (var10 >= 50) {
-        var14 = (50 - var9) * DummyClass40.anIntArray841[var10 - var9];
+      if (var10 >= GlobalStatics_6.NEAR) {
+        var14 = (GlobalStatics_6.NEAR - var9) * DummyClass40.anIntArray841[var10 - var9];
         GlobalStatics_1.anIntArray3919[var4] =
             var2 +
                 (var11 + ((GlobalStatics_1.anIntArray3948[var7] - var11) * var14
-                    >> 16) << 9) / 50;
+                    >> 16) << 9) / GlobalStatics_6.NEAR;
         GlobalStatics_1.anIntArray3925[var4] =
             var3 +
                 (var12 + ((GlobalStatics_1.anIntArray3928[var7] - var12) * var14
-                    >> 16) << 9) / 50;
+                    >> 16) << 9) / GlobalStatics_6.NEAR;
         GlobalStatics_1.anIntArray3936[var4++] =
             var13 + (((this.anIntArray3896[var1] & 0xffff) - var13) * var14
                 >> 16);
       }
     }
 
-    if (var10 >= 50) {
+    if (var10 >= GlobalStatics_6.NEAR) {
       GlobalStatics_1.anIntArray3919[var4] = GlobalStatics_1.anIntArray3943[var7];
       GlobalStatics_1.anIntArray3925[var4] = GlobalStatics_1.anIntArray3932[var7];
       GlobalStatics_1.anIntArray3936[var4++] =
@@ -915,31 +916,31 @@ public final class SoftwareModel extends AbstractModel {
       var11 = GlobalStatics_1.anIntArray3948[var7];
       var12 = GlobalStatics_1.anIntArray3928[var7];
       var13 = this.anIntArray3896[var1] & 0xffff;
-      if (var9 >= 50) {
-        var14 = (50 - var10) * DummyClass40.anIntArray841[var9 - var10];
+      if (var9 >= GlobalStatics_6.NEAR) {
+        var14 = (GlobalStatics_6.NEAR - var10) * DummyClass40.anIntArray841[var9 - var10];
         GlobalStatics_1.anIntArray3919[var4] =
             var2 +
                 (var11 + ((GlobalStatics_1.anIntArray3948[var6] - var11) * var14
-                    >> 16) << 9) / 50;
+                    >> 16) << 9) / GlobalStatics_6.NEAR;
         GlobalStatics_1.anIntArray3925[var4] =
             var3 +
                 (var12 + ((GlobalStatics_1.anIntArray3928[var6] - var12) * var14
-                    >> 16) << 9) / 50;
+                    >> 16) << 9) / GlobalStatics_6.NEAR;
         GlobalStatics_1.anIntArray3936[var4++] =
             var13 + (((this.anIntArray3874[var1] & 0xffff) - var13) * var14
                 >> 16);
       }
 
-      if (var8 >= 50) {
-        var14 = (50 - var10) * DummyClass40.anIntArray841[var8 - var10];
+      if (var8 >= GlobalStatics_6.NEAR) {
+        var14 = (GlobalStatics_6.NEAR - var10) * DummyClass40.anIntArray841[var8 - var10];
         GlobalStatics_1.anIntArray3919[var4] =
             var2 +
                 (var11 + ((GlobalStatics_1.anIntArray3948[var5] - var11) * var14
-                    >> 16) << 9) / 50;
+                    >> 16) << 9) / GlobalStatics_6.NEAR;
         GlobalStatics_1.anIntArray3925[var4] =
             var3 +
                 (var12 + ((GlobalStatics_1.anIntArray3928[var5] - var12) * var14
-                    >> 16) << 9) / 50;
+                    >> 16) << 9) / GlobalStatics_6.NEAR;
         GlobalStatics_1.anIntArray3936[var4++] =
             var13 + (((this.anIntArray3898[var1] & 0xffff) - var13) * var14
                 >> 16);

@@ -62,7 +62,7 @@ public final class NPC extends Mobile {
                 this.config.aShort1286, this.config.size, var15, var1,
                 var14 != null ? this.anInt2813 : this.anInt2832, this.anInt2831,
                 this.config.aByte1275, (byte) -49);
-            if (GlRenderer.useOpenGlRenderer) {
+            if (GlRenderer.USE_OPENGL) {
               float var18 = GlRenderer.method1852();
               float var19 = GlRenderer.method1839();
               GlRenderer.method1851();
@@ -105,7 +105,7 @@ public final class NPC extends Mobile {
             }
           }
 
-          if (GlRenderer.useOpenGlRenderer) {
+          if (GlRenderer.USE_OPENGL) {
             if (this.config.size == 1) {
               var15.aBoolean2699 = true;
             }

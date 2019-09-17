@@ -770,7 +770,7 @@ public final class DummyClass3 {
 
   public static void method72(int var0, int var1, int var2, int var3,
       int var4) {
-    if (GlRenderer.useOpenGlRenderer) {
+    if (GlRenderer.USE_OPENGL) {
       GlUtils.clip(var0, var4, var2 + var0, var1 + var4);
       GlUtils.fillQuad(var0, var4, var2, var1, 0);
     } else {
@@ -789,14 +789,14 @@ public final class DummyClass3 {
             .method523(var2, 0, 0, DummyClass30.anInt455, 0, 0,
                 DummyClass58.anInt1460, var1,
                 0);
-        if (GlRenderer.useOpenGlRenderer) {
+        if (GlRenderer.USE_OPENGL) {
           GlobalStatics_0.aClass3_Sub28_Sub16_637 = new GlDirectColorSprite(
               var5);
         } else {
           GlobalStatics_0.aClass3_Sub28_Sub16_637 = var5;
         }
 
-        if (GlRenderer.useOpenGlRenderer) {
+        if (GlRenderer.USE_OPENGL) {
           SoftwareIndexedColorSpriteStatics.anIntArray1100 = null;
         } else {
           GlobalStatics_9.viewImageProducer.method2182(0);
@@ -819,7 +819,7 @@ public final class DummyClass3 {
         var9 = 16777215;
       }
 
-      if (GlRenderer.useOpenGlRenderer) {
+      if (GlRenderer.USE_OPENGL) {
         GlUtils.fillQuad(var15, var6, var7, var8, var9, 128);
         GlUtils.drawQuad(var15, var6, var7, var8, var9);
       } else {
@@ -844,7 +844,7 @@ public final class DummyClass3 {
             int var13 =
                 var4 + var11.anInt2539 * var1 / DummyClass58.anInt1460;
             int var12 = var2 * var11.anInt2531 / DummyClass30.anInt455 + var0;
-            if (GlRenderer.useOpenGlRenderer) {
+            if (GlRenderer.USE_OPENGL) {
               GlUtils.fillQuad(-2 + var12, -2 + var13, 4, 4, 16776960, var10);
             } else {
               DummyClass47

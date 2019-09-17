@@ -23,7 +23,7 @@ public final class DummyClass52 {
 
   public static int method1423(boolean var0, Buffer var1, GameString var2) {
     if (var0) {
-      DummyClass52.method1426(17);
+      DummyClass52.clear82(17);
     }
 
     int var3 = var1.position;
@@ -51,8 +51,8 @@ public final class DummyClass52 {
   public static void method1425(int var0) {
     GLStatics.anInt3419 = var0;
 
-    for (int var1 = 0; var1 < GlobalStatics_4.sceneWidth; ++var1) {
-      for (int var2 = 0; var2 < GlobalStatics_1.sceneHeight; ++var2) {
+    for (int var1 = 0; var1 < GlobalStatics_4.SCENE_WIDTH; ++var1) {
+      for (int var2 = 0; var2 < GlobalStatics_1.SCENE_HEIGHT; ++var2) {
         if (GLStatics.sceneGraphTiles[var0][var1][var2] == null) {
           GLStatics.sceneGraphTiles[var0][var1][var2] =
               new SceneGraphTile(var0, var1, var2);
@@ -62,7 +62,7 @@ public final class DummyClass52 {
 
   }
 
-  public static void method1426(int var0) {
+  public static void clear82(int var0) {
     DummyClass52.aClass153_1171 = null;
     if (var0 != -25247) {
       DummyClass52.aClass142Array1168 = null;

@@ -23,7 +23,7 @@ public final class DummyClass51 {
       DummyClass51.method1418(55, null);
     }
 
-    if (DummyClass15.state == 10 && GlRenderer.useOpenGlRenderer) {
+    if (DummyClass15.state == 10 && GlRenderer.USE_OPENGL) {
       DummyClass26.setState(28, 5);
     }
 
@@ -81,7 +81,7 @@ public final class DummyClass51 {
     int var1 = GlobalStatics_1.anInt1462;
     int var5 = 6116423;
     int var4 = GlobalStatics_9.anInt3537;
-    if (GlRenderer.useOpenGlRenderer) {
+    if (GlRenderer.USE_OPENGL) {
       GlUtils.fillQuad(var1, var2, var3, var4, var5);
       GlUtils.fillQuad(1 + var1, 1 + var2, var3 - 2, 16, 0);
       GlUtils.drawQuad(1 + var1, var2 + 18, var3 - 2, -19 + var4, 0);
@@ -135,7 +135,7 @@ public final class DummyClass51 {
     return ((GlobalStatics_1.aBoolean3184 ? 1 : 0) << 19) + (
         (DummyClass35.aBoolean661 ? 1 : 0) << 16) + (
         (GLStatics.aBoolean1685 ? 1 : 0) << 15)
-        + ((GLStatics.useBumpMaps ? 1 : 0) << 13) + (
+        + ((GLStatics.USE_BUMP_MAPS ? 1 : 0) << 13) + (
         (GlobalStatics_9.aBoolean2910 ? 1 : 0) << 10)
         + ((GlobalStatics_9.aBoolean3275 ? 1 : 0) << 9) + (
         (GlobalStatics_10.aBoolean236 ? 1 : 0) << 7) + (
@@ -153,7 +153,7 @@ public final class DummyClass51 {
             << 23);
   }
 
-  public static void method1422(byte var0) {
+  public static void clear65(byte var0) {
     DummyClass51.anIntArrayArray1160 = null;
     DummyClass51.anIntArray1161 = null;
     DummyClass51.aClass61_1162 = null;

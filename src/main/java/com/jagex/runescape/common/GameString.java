@@ -409,7 +409,6 @@ public final class GameString {
     var2 = new String(this.bytes, 0, this.length,
         StandardCharsets.ISO_8859_1);
 
-    System.out.println(var2);
   }
 
   public boolean endsWith(GameString var2) {
@@ -883,7 +882,6 @@ public final class GameString {
   }
 
   public GameString getParameter(byte var1) {
-    System.out.println("GameString.getParameter");
     return null;
   }
 
@@ -925,7 +923,6 @@ public final class GameString {
   }
 
   public Object method1577(int var1) {
-    System.out.println("GameString.method1577");
     return null;
   }
 

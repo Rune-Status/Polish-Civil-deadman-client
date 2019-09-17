@@ -199,11 +199,8 @@ public class Buffer extends Node {
     return this.bytes[this.position++];
   }
 
-  public final GameString method761(int var1) {
+  public final GameString method761() {
     byte var2 = this.bytes[this.position++];
-    if (var1 < 50) {
-      this.bytes = null;
-    }
 
     if (var2 == 0) {
       int var3 = this.position;
@@ -460,8 +457,6 @@ public class Buffer extends Node {
     int var2 = ((this.bytes[this.position - 1] & 255) << 8) -
         -(this.bytes[-2 + this.position] - 128 & 255);
     if (var1 != -1741292848) {
-      //TODO rsa
-      System.out.println("Buffer.method788");
       this.encipherRSA(null, null);
     }
 

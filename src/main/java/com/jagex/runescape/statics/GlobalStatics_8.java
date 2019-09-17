@@ -36,12 +36,10 @@ import com.jagex.runescape.opengl.GlModel;
 import com.jagex.runescape.opengl.GlRenderer;
 import com.jagex.runescape.opengl.GlTexture2d;
 import com.jagex.runescape.sprite.SoftwareIndexedColorSpriteStatics;
-import com.jogamp.nativewindow.awt.JAWTWindow;
 import java.util.Random;
 
 public class GlobalStatics_8 {
 
-  public static JAWTWindow NATIVE_WINDOW;
   public static GameString aClass94_948 =
       GameStringStatics
           .create("You can(Wt add yourself to your own friend list)3");
@@ -56,7 +54,7 @@ public class GlobalStatics_8 {
   public static int anInt963;
   public static int anInt1944;
   public static FileUnpacker fileUnpacker13;
-  public static int sunColor;
+  public static int SUN_COLOR;
   public static boolean aBoolean1951;
   public static int updateMemoryCounter;
   public static float[][] aFloatArrayArray1431 = new float[2][8];
@@ -154,7 +152,7 @@ public class GlobalStatics_8 {
   public static GameString aClass94_3298 = GameStringStatics
       .create("<col=ff0000>");
 
-  public static void method1223(int var0) {
+  public static void clear92(int var0) {
     GlobalStatics_8.aClass94_951 = null;
     GlobalStatics_8.aClass94_946 = null;
     if (var0 == 0) {
@@ -208,7 +206,7 @@ public class GlobalStatics_8 {
 
     if (GlobalStatics_9.aBoolean1040 && (
         GlobalStatics_8.method44(var0).anInt2205 != 0
-        || var0.anInt187 == 0)) {
+            || var0.anInt187 == 0)) {
       if (var0.anInt210 < 0) {
         var0.anInt210 = 0;
       } else if (var0.anInt193 + var0.anInt210 > var2) {
@@ -223,7 +221,7 @@ public class GlobalStatics_8 {
     }
 
     if (var1 != 23730) {
-      GlobalStatics_8.method1223(19);
+      GlobalStatics_8.clear92(19);
     }
   }
 
@@ -236,7 +234,7 @@ public class GlobalStatics_8 {
 
       GlobalStatics_10.anInt3069 = GlobalStatics_9.anInt549;
       GlobalStatics_9.anInt1676 = GlobalStatics_9.lastMouseX;
-      com.jagex.runescape.statics.GlobalStatics_0.anInt1709 = DummyClass53.lastMouseY;
+      GlobalStatics_0.anInt1709 = DummyClass53.lastMouseY;
       GlobalStatics_9.anInt3644 = GlobalStatics_8.anInt2743;
       DummyClass5.anInt2993 = GlobalStatics_9.anInt362;
       ++GlobalStatics_9.anInt4045;
@@ -246,22 +244,19 @@ public class GlobalStatics_8 {
     }
   }
 
-  public static void method2119(int var0) {
+  public static void clear17(int var0) {
     if (var0 != 100) {
-      GlobalStatics_8.method2143((byte) -45, -91, 7, -83, 24);
+      GlobalStatics_8.method2143(-91, 7, -83, 24);
     }
 
     GlobalStatics_8.fileUnpacker13 = null;
   }
 
-  public static void method2143(byte var0, int var1, int var2, int var3,
+  public static void method2143(int var1, int var2, int var3,
       int var4) {
     WidgetUpdate var5 = GlobalStatics_6.method466(4, 8, var2);
     var5.g((byte) 33);
     var5.anInt3596 = var1;
-    if (var0 >= -120) {
-      GlobalStatics_8.sunColor = -14;
-    }
 
     var5.anInt3598 = var4;
     var5.anInt3597 = var3;
@@ -282,8 +277,8 @@ public class GlobalStatics_8 {
         == -1
         || var0.anInt2828 != 0 || 1 + var0.anInt2760 > GlobalStatics_8
         .method45(
-        var0.animationId,
-        (byte) -20).anIntArray1869[var0.anInt2832]) {
+            var0.animationId,
+            (byte) -20).anIntArray1869[var0.anInt2832]) {
       int var2 = var0.anInt2790 - var0.anInt2800;
       int var3 = GlobalStatics_4.updateCycle - var0.anInt2800;
       int var4 = var0.anInt2784 * 128 + 64 * var0.getSize();
@@ -1166,7 +1161,7 @@ public class GlobalStatics_8 {
     }
   }
 
-  public static void method2276(int var0) {
+  public static void clear101(int var0) {
     GlobalStatics_8.aClass3_Sub28_Sub17_2096 = null;
     if (var0 == -2) {
       GlobalStatics_8.aClass94_2089 = null;
@@ -1343,7 +1338,7 @@ public class GlobalStatics_8 {
                   0, 2,
                   var8.waypointsX[0], 1, 0, 2, var8.waypointsY[0],
                   GlobalStatics_9.localPlayer.waypointsX[0]);
-          com.jagex.runescape.statics.GlobalStatics_0.anInt638 = 2;
+          GlobalStatics_0.anInt638 = 2;
           GlobalStatics_7.anInt2958 = 0;
           GlobalStatics_9.anInt1053 = DummyClass5.anInt2993;
           GlobalStatics_7.anInt4062 = DummyClass36.anInt2614;
@@ -1392,7 +1387,7 @@ public class GlobalStatics_8 {
                   GlobalStatics_9.localPlayer.waypointsX[0]);
           ++DummyClass32.anInt513;
           GlobalStatics_9.anInt1053 = DummyClass5.anInt2993;
-          com.jagex.runescape.statics.GlobalStatics_0.anInt638 = 2;
+          GlobalStatics_0.anInt638 = 2;
           GlobalStatics_7.anInt2958 = 0;
           GlobalStatics_7.anInt4062 = DummyClass36.anInt2614;
           GlobalStatics_9.secureBuffer.writePacket(30);
@@ -1411,7 +1406,7 @@ public class GlobalStatics_8 {
           GlobalStatics_9.anInt1053 = DummyClass5.anInt2993;
           GlobalStatics_7.anInt2958 = 0;
           ++GlobalStatics_4.anInt3627;
-          com.jagex.runescape.statics.GlobalStatics_0.anInt638 = 2;
+          GlobalStatics_0.anInt638 = 2;
           GlobalStatics_7.anInt4062 = DummyClass36.anInt2614;
           GlobalStatics_9.secureBuffer.writePacket(78);
           GlobalStatics_9.secureBuffer.writeShortLE(-1, var5);
@@ -1428,7 +1423,7 @@ public class GlobalStatics_8 {
                   var8.waypointsX[0], 1, 0, 2, var8.waypointsY[0],
                   GlobalStatics_9.localPlayer.waypointsX[0]);
           GlobalStatics_9.anInt1053 = DummyClass5.anInt2993;
-          com.jagex.runescape.statics.GlobalStatics_0.anInt638 = 2;
+          GlobalStatics_0.anInt638 = 2;
           GlobalStatics_7.anInt4062 = DummyClass36.anInt2614;
           GlobalStatics_7.anInt2958 = 0;
           GlobalStatics_9.secureBuffer.writePacket(133);
@@ -1474,7 +1469,7 @@ public class GlobalStatics_8 {
                   var11.waypointsX[0], 1, 0, 2, var11.waypointsY[0],
                   GlobalStatics_9.localPlayer.waypointsX[0]);
           GlobalStatics_9.anInt1053 = DummyClass5.anInt2993;
-          com.jagex.runescape.statics.GlobalStatics_0.anInt638 = 2;
+          GlobalStatics_0.anInt638 = 2;
           ++GlobalStatics_10.anInt3205;
           GlobalStatics_7.anInt2958 = 0;
           GlobalStatics_7.anInt4062 = DummyClass36.anInt2614;
@@ -1511,7 +1506,7 @@ public class GlobalStatics_8 {
         ++GlobalStatics_9.anInt3615;
         GlobalStatics_9.anInt1053 = DummyClass5.anInt2993;
         GlobalStatics_7.anInt2958 = 0;
-        com.jagex.runescape.statics.GlobalStatics_0.anInt638 = 2;
+        GlobalStatics_0.anInt638 = 2;
         GlobalStatics_7.anInt4062 = DummyClass36.anInt2614;
         GlobalStatics_9.secureBuffer.writePacket(66);
         GlobalStatics_9.secureBuffer
@@ -1535,10 +1530,10 @@ public class GlobalStatics_8 {
       }
 
       if (var4 == 1002) {
-        com.jagex.runescape.statics.GlobalStatics_0.anInt638 = 2;
+        GlobalStatics_0.anInt638 = 2;
         GlobalStatics_9.anInt1053 = DummyClass5.anInt2993;
         GlobalStatics_7.anInt4062 = DummyClass36.anInt2614;
-        ++com.jagex.runescape.statics.GlobalStatics_0.anInt1701;
+        ++GlobalStatics_0.anInt1701;
         GlobalStatics_7.anInt2958 = 0;
         GlobalStatics_9.secureBuffer.writePacket(92);
         GlobalStatics_9.secureBuffer.method765(var5, (byte) 3);
@@ -1557,7 +1552,7 @@ public class GlobalStatics_8 {
               }), -1);
         } else {
           GlobalStatics_9.secureBuffer.writePacket(92);
-          ++com.jagex.runescape.statics.GlobalStatics_0.anInt1701;
+          ++GlobalStatics_0.anInt1701;
           GlobalStatics_9.secureBuffer.method765(var5, (byte) 3);
         }
 
@@ -1608,7 +1603,7 @@ public class GlobalStatics_8 {
 
       if (var4 == 1007) {
         GlobalStatics_7.anInt2958 = 0;
-        com.jagex.runescape.statics.GlobalStatics_0.anInt638 = 2;
+        GlobalStatics_0.anInt638 = 2;
         GlobalStatics_7.anInt4062 = DummyClass36.anInt2614;
         GlobalStatics_9.anInt1053 = DummyClass5.anInt2993;
         var11 = GlobalStatics_8.npcs[var5];
@@ -1662,7 +1657,7 @@ public class GlobalStatics_8 {
                   0, 2,
                   var8.waypointsX[0], 1, 0, 2, var8.waypointsY[0],
                   GlobalStatics_9.localPlayer.waypointsX[0]);
-          com.jagex.runescape.statics.GlobalStatics_0.anInt638 = 2;
+          GlobalStatics_0.anInt638 = 2;
           GlobalStatics_7.anInt4062 = DummyClass36.anInt2614;
           GlobalStatics_9.anInt1053 = DummyClass5.anInt2993;
           GlobalStatics_7.anInt2958 = 0;
@@ -1731,7 +1726,7 @@ public class GlobalStatics_8 {
                   GlobalStatics_9.localPlayer.waypointsX[0]);
           GlobalStatics_7.anInt2958 = 0;
           ++DummyClass29.anInt437;
-          com.jagex.runescape.statics.GlobalStatics_0.anInt638 = 2;
+          GlobalStatics_0.anInt638 = 2;
           GlobalStatics_7.anInt4062 = DummyClass36.anInt2614;
           GlobalStatics_9.anInt1053 = DummyClass5.anInt2993;
           GlobalStatics_9.secureBuffer.writePacket(114);
@@ -1780,7 +1775,7 @@ public class GlobalStatics_8 {
           }
         }
 
-        com.jagex.runescape.statics.GlobalStatics_0.anInt638 = 2;
+        GlobalStatics_0.anInt638 = 2;
         GlobalStatics_9.anInt1053 = DummyClass5.anInt2993;
         GlobalStatics_7.anInt2958 = 0;
         GlobalStatics_7.anInt4062 = DummyClass36.anInt2614;
@@ -1801,7 +1796,7 @@ public class GlobalStatics_8 {
                   0, 2,
                   var11.waypointsX[0], 1, 0, 2, var11.waypointsY[0],
                   GlobalStatics_9.localPlayer.waypointsX[0]);
-          com.jagex.runescape.statics.GlobalStatics_0.anInt638 = 2;
+          GlobalStatics_0.anInt638 = 2;
           GlobalStatics_7.anInt2958 = 0;
           GlobalStatics_7.anInt4062 = DummyClass36.anInt2614;
           GlobalStatics_9.anInt1053 = DummyClass5.anInt2993;
@@ -1852,7 +1847,7 @@ public class GlobalStatics_8 {
                     GlobalStatics_9.localPlayer.waypointsX[0]);
             GlobalStatics_7.anInt4062 = DummyClass36.anInt2614;
             GlobalStatics_7.anInt2958 = 0;
-            com.jagex.runescape.statics.GlobalStatics_0.anInt638 = 2;
+            GlobalStatics_0.anInt638 = 2;
             GlobalStatics_9.anInt1053 = DummyClass5.anInt2993;
             GlobalStatics_9.secureBuffer.writePacket(180);
             GlobalStatics_9.secureBuffer.method765(var5, (byte) 3);
@@ -1880,7 +1875,7 @@ public class GlobalStatics_8 {
                     var8.waypointsX[0], 1, 0, 2, var8.waypointsY[0],
                     GlobalStatics_9.localPlayer.waypointsX[0]);
             GlobalStatics_7.anInt2958 = 0;
-            com.jagex.runescape.statics.GlobalStatics_0.anInt638 = 2;
+            GlobalStatics_0.anInt638 = 2;
             GlobalStatics_9.anInt1053 = DummyClass5.anInt2993;
             GlobalStatics_7.anInt4062 = DummyClass36.anInt2614;
             GlobalStatics_9.secureBuffer.writePacket(195);
@@ -1914,7 +1909,7 @@ public class GlobalStatics_8 {
           }
 
           GlobalStatics_9.anInt1053 = DummyClass5.anInt2993;
-          com.jagex.runescape.statics.GlobalStatics_0.anInt638 = 2;
+          GlobalStatics_0.anInt638 = 2;
           ++GlobalStatics_9.anInt3277;
           GlobalStatics_7.anInt4062 = DummyClass36.anInt2614;
           GlobalStatics_7.anInt2958 = 0;
@@ -1948,7 +1943,7 @@ public class GlobalStatics_8 {
                     var11.waypointsY[0],
                     GlobalStatics_9.localPlayer.waypointsX[0]);
             GlobalStatics_7.anInt4062 = DummyClass36.anInt2614;
-            com.jagex.runescape.statics.GlobalStatics_0.anInt638 = 2;
+            GlobalStatics_0.anInt638 = 2;
             GlobalStatics_9.anInt1053 = DummyClass5.anInt2993;
             ++GlobalStatics_10.anInt2204;
             GlobalStatics_7.anInt2958 = 0;
@@ -1983,7 +1978,7 @@ public class GlobalStatics_8 {
                     false, 0, 2,
                     var11.waypointsX[0], 1, 0, 2, var11.waypointsY[0],
                     GlobalStatics_9.localPlayer.waypointsX[0]);
-            com.jagex.runescape.statics.GlobalStatics_0.anInt638 = 2;
+            GlobalStatics_0.anInt638 = 2;
             GlobalStatics_7.anInt2958 = 0;
             GlobalStatics_7.anInt4062 = DummyClass36.anInt2614;
             GlobalStatics_9.anInt1053 = DummyClass5.anInt2993;
@@ -2019,7 +2014,7 @@ public class GlobalStatics_8 {
                   .method582(GlobalStatics_9.localPlayer.waypointsY[0], 0, 0,
                       false, 0, 2, var2,
                       0, 0, 2, var3, GlobalStatics_9.localPlayer.waypointsX[0]);
-          ++com.jagex.runescape.statics.GlobalStatics_0.anInt938;
+          ++GlobalStatics_0.anInt938;
           if (!var14) {
             GlobalStatics_9
                 .method582(GlobalStatics_9.localPlayer.waypointsY[0], 0, 1,
@@ -2031,7 +2026,7 @@ public class GlobalStatics_8 {
           GlobalStatics_9.anInt1053 = DummyClass5.anInt2993;
           GlobalStatics_7.anInt2958 = 0;
           GlobalStatics_7.anInt4062 = DummyClass36.anInt2614;
-          com.jagex.runescape.statics.GlobalStatics_0.anInt638 = 2;
+          GlobalStatics_0.anInt638 = 2;
           GlobalStatics_9.secureBuffer.writePacket(101);
           GlobalStatics_9.secureBuffer
               .method765(var2 + GlobalStatics_10.anInt1716, (byte) 3);
@@ -2049,7 +2044,7 @@ public class GlobalStatics_8 {
         if (var4 == 1004) {
           GlobalStatics_7.anInt2958 = 0;
           GlobalStatics_9.anInt1053 = DummyClass5.anInt2993;
-          com.jagex.runescape.statics.GlobalStatics_0.anInt638 = 2;
+          GlobalStatics_0.anInt638 = 2;
           GlobalStatics_7.anInt4062 = DummyClass36.anInt2614;
           GlobalStatics_9.secureBuffer.writePacket(94);
           ++GlobalStatics_9.anInt2770;
@@ -2105,7 +2100,7 @@ public class GlobalStatics_8 {
                     GlobalStatics_9.localPlayer.waypointsX[0]);
             GlobalStatics_7.anInt2958 = 0;
             GlobalStatics_7.anInt4062 = DummyClass36.anInt2614;
-            com.jagex.runescape.statics.GlobalStatics_0.anInt638 = 2;
+            GlobalStatics_0.anInt638 = 2;
             GlobalStatics_9.anInt1053 = DummyClass5.anInt2993;
             GlobalStatics_9.secureBuffer.writePacket(248);
             GlobalStatics_9.secureBuffer.method765(var5, (byte) 3);
@@ -2151,7 +2146,7 @@ public class GlobalStatics_8 {
             }
           }
 
-          com.jagex.runescape.statics.GlobalStatics_0.anInt638 = 2;
+          GlobalStatics_0.anInt638 = 2;
           ++GlobalStatics_9.anInt1060;
           GlobalStatics_7.anInt4062 = DummyClass36.anInt2614;
           GlobalStatics_9.anInt1053 = DummyClass5.anInt2993;
@@ -2201,7 +2196,7 @@ public class GlobalStatics_8 {
                     false, 0, 2,
                     var8.waypointsX[0], 1, 0, 2, var8.waypointsY[0],
                     GlobalStatics_9.localPlayer.waypointsX[0]);
-            com.jagex.runescape.statics.GlobalStatics_0.anInt638 = 2;
+            GlobalStatics_0.anInt638 = 2;
             GlobalStatics_7.anInt4062 = DummyClass36.anInt2614;
             ++GlobalStatics_7.anInt685;
             GlobalStatics_9.anInt1053 = DummyClass5.anInt2993;
@@ -2263,7 +2258,7 @@ public class GlobalStatics_8 {
               GlobalStatics_7.anInt2958 = 0;
               GlobalStatics_9.anInt1053 = DummyClass5.anInt2993;
               GlobalStatics_7.anInt4062 = DummyClass36.anInt2614;
-              com.jagex.runescape.statics.GlobalStatics_0.anInt638 = 2;
+              GlobalStatics_0.anInt638 = 2;
               GlobalStatics_9.secureBuffer.writePacket(68);
               GlobalStatics_9.secureBuffer.method765(var5, (byte) 3);
             }
@@ -2298,7 +2293,7 @@ public class GlobalStatics_8 {
 
             GlobalStatics_7.anInt4062 = DummyClass36.anInt2614;
             GlobalStatics_9.anInt1053 = DummyClass5.anInt2993;
-            com.jagex.runescape.statics.GlobalStatics_0.anInt638 = 2;
+            GlobalStatics_0.anInt638 = 2;
             GlobalStatics_7.anInt2958 = 0;
             GlobalStatics_9.secureBuffer.writePacket(73);
             GlobalStatics_9.secureBuffer
@@ -2359,7 +2354,7 @@ public class GlobalStatics_8 {
                 GlobalStatics_7.anInt4062 = DummyClass36.anInt2614;
                 ++GlobalStatics_9.anInt3640;
                 GlobalStatics_7.anInt2958 = 0;
-                com.jagex.runescape.statics.GlobalStatics_0.anInt638 = 2;
+                GlobalStatics_0.anInt638 = 2;
                 GlobalStatics_9.anInt1053 = DummyClass5.anInt2993;
                 GlobalStatics_9.secureBuffer.writePacket(106);
                 GlobalStatics_9.secureBuffer.writeShort(var5);
@@ -2394,7 +2389,7 @@ public class GlobalStatics_8 {
               GlobalStatics_7.anInt4062 = DummyClass36.anInt2614;
               GlobalStatics_7.anInt2958 = 0;
               GlobalStatics_9.anInt1053 = DummyClass5.anInt2993;
-              com.jagex.runescape.statics.GlobalStatics_0.anInt638 = 2;
+              GlobalStatics_0.anInt638 = 2;
               GlobalStatics_9.secureBuffer.writePacket(33);
               GlobalStatics_9.secureBuffer.writeShort(var5);
               GlobalStatics_9.secureBuffer
@@ -2415,7 +2410,7 @@ public class GlobalStatics_8 {
                 GlobalStatics_9.anInt1053 = DummyClass5.anInt2993;
                 GlobalStatics_7.anInt2958 = 0;
                 GlobalStatics_7.anInt4062 = DummyClass36.anInt2614;
-                com.jagex.runescape.statics.GlobalStatics_0.anInt638 = 2;
+                GlobalStatics_0.anInt638 = 2;
                 GlobalStatics_9.secureBuffer.writePacket(3);
                 GlobalStatics_9.secureBuffer.method765(var5, (byte) 3);
               }
@@ -2444,7 +2439,7 @@ public class GlobalStatics_8 {
     }
   }
 
-  public static void method808(int var0) {
+  public static void clear22(int var0) {
     GlobalStatics_8.MAP_PREFIX = null;
     if (var0 != 1) {
       GlobalStatics_8.anIntArray3804 = null;
@@ -2484,25 +2479,23 @@ public class GlobalStatics_8 {
       GlobalStatics_5.anInt1971 = GlobalStatics_9.fogColor;
       GlobalStatics_8.anInt1407 = GlobalStatics_7.fogOffset;
       GlobalStatics_10.aFloat246 = var9;
-      com.jagex.runescape.statics.GlobalStatics_0.anInt72 = 0;
-      GlobalStatics_10.anInt4037 = GlobalStatics_8.sunColor;
+      GlobalStatics_0.anInt72 = 0;
+      GlobalStatics_10.anInt4037 = GlobalStatics_8.SUN_COLOR;
       DummyClass22.anInt1736 = var11;
       GlobalStatics_9.aFloat3044 = var8;
       GlobalStatics_9.anInt1345 = var10;
       DummyClass31.aFloat1475 = GlobalStatics_9.aFloat319;
     }
 
-    if (com.jagex.runescape.statics.GlobalStatics_0.anInt72 < 65536) {
-      com.jagex.runescape.statics.GlobalStatics_0.anInt72 += 250 * var0;
+    if (GlobalStatics_0.anInt72 < 65536) {
+      GlobalStatics_0.anInt72 += 250 * var0;
       if (GlobalStatics_0.anInt72 >= 65536) {
-        com.jagex.runescape.statics.GlobalStatics_0.anInt72 = 65536;
+        GlobalStatics_0.anInt72 = 65536;
       }
 
-      float var15 =
-          com.jagex.runescape.statics.GlobalStatics_0.anInt72 / 65536.0F;
-      int var13 = com.jagex.runescape.statics.GlobalStatics_0.anInt72 >> 8;
-      int var12 =
-          com.jagex.runescape.statics.GlobalStatics_0.anInt72 + 65536 >> 8;
+      float var15 = GlobalStatics_0.anInt72 / 65536.0F;
+      int var13 = GlobalStatics_0.anInt72 >> 8;
+      int var12 = GlobalStatics_0.anInt72 + 65536 >> 8;
       GlobalStatics_9.fogColor =
           (-16711936 & var13 * (GlobalStatics_9.anInt1345 & 16711935)
               + (16711935 & GlobalStatics_5.anInt1971) * var12) + (
@@ -2510,10 +2503,8 @@ public class GlobalStatics_8 {
                   & var12 * (GlobalStatics_5.anInt1971 & 0xff00)
                   + (0xff00 & GlobalStatics_9.anInt1345) * var13) >> 8;
       GlobalStatics_9.fogColor = GlEnvironment.DEFAULT_FOG_COLOR;
-      System.out
-          .println("GlobalStatics_9.fogColor = " + GlobalStatics_9.fogColor);
       float var14 =
-          (65536 - com.jagex.runescape.statics.GlobalStatics_0.anInt72)
+          (65536 - GlobalStatics_0.anInt72)
               / 65536.0F;
       GlobalStatics_6.ambientIntensity =
           var14 * GlobalStatics_9.aFloat3105
@@ -2523,11 +2514,13 @@ public class GlobalStatics_8 {
               + var15 * GlobalStatics_9.aFloat3044;
       GlobalStatics_9.aFloat319 =
           var15 * GlobalStatics_10.aFloat246 + var14 * DummyClass31.aFloat1475;
-      GlobalStatics_8.sunColor =
+
+      //TODO there is something wrong with this sun color updating
+      GlobalStatics_8.SUN_COLOR =
           (16711680 & (DummyClass44.anInt932 & 0xff00) * var13 + var12 * (
               GlobalStatics_10.anInt4037 & 0xff00)) + (
               (16711935 & GlobalStatics_10.anInt4037) * var12 +
-                  (DummyClass44.anInt932 & 16711935)
+                  (DummyClass44.anInt932 & 0xff00ff)
                       * var13 & -16711936) >> 8;
       GlobalStatics_7.fogOffset =
           var13 * DummyClass22.anInt1736 + var12 * GlobalStatics_8.anInt1407
@@ -2535,13 +2528,14 @@ public class GlobalStatics_8 {
     }
 
     GlEnvironment
-        .setSunColor(GlobalStatics_8.sunColor, GlobalStatics_6.ambientIntensity,
+        .setSunColor(GlobalStatics_8.SUN_COLOR,
+            GlobalStatics_6.ambientIntensity,
             GlobalStatics_10.diffuseIntensity, GlobalStatics_9.aFloat319);
     GlEnvironment
         .setFogColor(GlobalStatics_9.fogColor, GlobalStatics_7.fogOffset);
     GlEnvironment.setSunPosition(DummyClass39.sunPositionX,
         GlobalStatics_9.sunPositionY,
-        com.jagex.runescape.statics.GlobalStatics_0.sunPositionZ);
+        GlobalStatics_0.sunPositionZ);
     GlEnvironment.updateSunPosition();
     return GlobalStatics_9.fogColor;
   }
@@ -2551,10 +2545,10 @@ public class GlobalStatics_8 {
   }
 
   public static void method813(int var0) {
-    GlobalStatics_9.aClass93_3572.method1523((byte) -127);
+    GlobalStatics_9.aClass93_3572.method1523();
     if (var0 == 1974) {
-      DummyClass15.aClass93_1874.method1523((byte) -113);
-      GlobalStatics_9.aClass93_1013.method1523((byte) -108);
+      DummyClass15.aClass93_1874.method1523();
+      GlobalStatics_9.aClass93_1013.method1523();
     }
   }
 
@@ -2607,7 +2601,7 @@ public class GlobalStatics_8 {
     }
   }
 
-  public static void method43(boolean var0) {
+  public static void clear0(boolean var0) {
     if (!var0) {
       GLStatics.aClass3_Sub11ArrayArray2199 = null;
     }
@@ -2915,7 +2909,7 @@ public class GlobalStatics_8 {
                 }
 
                 if (var9.anInt189 == 1402) {
-                  if (!GlRenderer.useOpenGlRenderer) {
+                  if (!GlRenderer.USE_OPENGL) {
                     DummyClass29.method909(113, var9);
                   }
                   continue;
@@ -3320,14 +3314,12 @@ public class GlobalStatics_8 {
   }
 
   public static void method2285(int var0, int var1, int var2, int var3,
-      boolean var4, int var5) {
-    com.jagex.runescape.statics.GlobalStatics_0.anInt2587 = var1;
-    if (!var4) {
-      GlobalStatics_9.anInt3103 = var5;
-      GlobalStatics_9.anInt2938 = var0;
-      GlobalStatics_10.anInt144 = var3;
-      GlobalStatics_6.anInt3695 = var2;
-    }
+      int var5) {
+    GlobalStatics_0.anInt2587 = var1;
+    GlobalStatics_9.anInt3103 = var5;
+    GlobalStatics_9.anInt2938 = var0;
+    GlobalStatics_10.anInt144 = var3;
+    GlobalStatics_6.anInt3695 = var2;
   }
 
   public static int method2286(byte var0) {
@@ -3345,7 +3337,7 @@ public class GlobalStatics_8 {
         var0 - 32;
   }
 
-  public static void method2288(boolean var0) {
+  public static void clear59(boolean var0) {
     GlobalStatics_8.anIntArray2113 = null;
     GlobalStatics_8.aClass94_2116 = null;
     GlobalStatics_8.aClass96Array2114 = null;
@@ -3494,7 +3486,7 @@ public class GlobalStatics_8 {
         var16.method1876(var9);
       }
 
-      if (GlRenderer.useOpenGlRenderer) {
+      if (GlRenderer.USE_OPENGL) {
         GlModel var36 = (GlModel) var16;
         if (GlobalStatics_6
             .method1736(GlobalStatics_9.currentPlane, var13 ^ -50,
@@ -3562,7 +3554,7 @@ public class GlobalStatics_8 {
         GlobalStatics_8.OPTION_DROP = null;
       }
 
-      com.jagex.runescape.statics.GlobalStatics_0.stereo = var3;
+      GlobalStatics_0.stereo = var3;
       DummyClass60.sampleRate = var2;
     } else {
       throw new IllegalArgumentException();
@@ -3644,7 +3636,7 @@ public class GlobalStatics_8 {
     }
   }
 
-  public static void method1687(int var0) {
+  public static void clear40(int var0) {
     GlobalStatics_8.aClass94_1508 = null;
     GlobalStatics_8.aClass94_1523 = null;
     GlobalStatics_8.anIntArrayArrayArray1497 = null;
@@ -3666,7 +3658,7 @@ public class GlobalStatics_8 {
     }
   }
 
-  public static void method26(int var0) {
+  public static void clear5(int var0) {
     if (var0 < 15) {
       GlobalStatics_8.method27(null, true);
     }
@@ -3681,7 +3673,7 @@ public class GlobalStatics_8 {
 
   public static GameString method27(GameString var0, boolean var1) {
     if (!var1) {
-      GlobalStatics_8.method26(-78);
+      GlobalStatics_8.clear5(-78);
     }
 
     int var2 = GlobalStatics_8.method1602(0, var0);
@@ -3704,7 +3696,7 @@ public class GlobalStatics_8 {
     }
 
     if (var0 != -32589) {
-      GlobalStatics_8.method26(-25);
+      GlobalStatics_8.clear5(-25);
     }
 
     if (GlobalStatics_9.audioOutputStream1 != null) {
@@ -3718,7 +3710,7 @@ public class GlobalStatics_8 {
             0, 14);
     GlobalStatics_9.audioOutputStream0
         .method2154(114,
-            com.jagex.runescape.statics.GlobalStatics_0.aClass3_Sub24_Sub4_1193);
+            GlobalStatics_0.aClass3_Sub24_Sub4_1193);
     GlobalStatics_9.audioOutputStream1 =
         DummyClass43.createAudioOutputStream(2048, DummyClass35.signLink,
             GlobalStatics_8.GAME_CANVAS, 1,

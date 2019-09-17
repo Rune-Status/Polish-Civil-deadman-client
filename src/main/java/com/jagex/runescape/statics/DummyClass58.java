@@ -60,7 +60,7 @@ public final class DummyClass58 {
   }
 
   public static void method1654(int var0) {
-    GlobalStatics_9.aClass93_2792.method1523((byte) -108);
+    GlobalStatics_9.aClass93_2792.method1523();
   }
 
   public static byte[] method1655(byte var0, byte[] var1) {
@@ -79,7 +79,7 @@ public final class DummyClass58 {
 
   public static void loadTitleScreenSprites(FileUnpacker var0, byte var1) {
     if (!GlobalStatics_9.aBoolean2713) {
-      if (GlRenderer.useOpenGlRenderer) {
+      if (GlRenderer.USE_OPENGL) {
         GlUtils.clear();
       } else {
         DummyClass47.method1320();

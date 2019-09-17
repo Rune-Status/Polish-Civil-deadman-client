@@ -147,7 +147,7 @@ public abstract class Mobile extends SceneNode {
       this.anInt2811 = 0;
       this.anInt2829 = 64 * size + this.waypointsY[0] * 128;
       this.anInt2819 = size * 64 + 128 * this.waypointsX[0];
-      if (GlRenderer.useOpenGlRenderer && GlobalStatics_9.localPlayer == this) {
+      if (GlRenderer.USE_OPENGL && GlobalStatics_9.localPlayer == this) {
         GlobalStatics_10.method236((byte) 64);
       }
   }

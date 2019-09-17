@@ -22,7 +22,7 @@ public final class FloorOverlay {
         int var4 = var2.readUnsignedByte();
         if (var4 == 0) {
           if (var1 != 24559) {
-            GlobalStatics_8.method2276(-85);
+            GlobalStatics_8.clear101(-85);
           }
 
           return;

@@ -18,16 +18,10 @@ import com.jagex.runescape.statics.GlobalStatics_6;
 import com.jagex.runescape.statics.GlobalStatics_7;
 import com.jagex.runescape.statics.GlobalStatics_8;
 import com.jagex.runescape.statics.GlobalStatics_9;
-import com.jogamp.nativewindow.awt.AWTGraphicsConfiguration;
-import com.jogamp.nativewindow.awt.JAWTWindow;
-import com.jogamp.opengl.GLCapabilities;
-import com.jogamp.opengl.GLProfile;
 import java.applet.AppletContext;
-import java.awt.Canvas;
 import java.awt.Container;
 import java.awt.Frame;
 import java.awt.Graphics;
-import java.awt.GraphicsConfiguration;
 import java.awt.Insets;
 import java.awt.Rectangle;
 import java.awt.event.FocusEvent;
@@ -37,7 +31,6 @@ import java.awt.event.WindowListener;
 import java.io.IOException;
 import java.net.URL;
 import java.util.Objects;
-import jogamp.newt.awt.NewtFactoryAWT;
 
 public abstract class GameStub implements Runnable,
     FocusListener, WindowListener {
@@ -47,21 +40,19 @@ public abstract class GameStub implements Runnable,
   public abstract void update();
 
   public final void focusGained(FocusEvent var1) {
-    System.out.println("GameStub.focusGained");
-    DummyClass8.focused = true;
+    DummyClass8.FOCUSED = true;
     GlobalStatics_10.aBoolean3116 = true;
   }
 
   public final void focusLost(FocusEvent var1) {
-    System.out.println("GameStub.focusLost");
-    DummyClass8.focused = false;
-  }
-
-  public final boolean isValidHost() {
-    return true;
+    DummyClass8.FOCUSED = false;
   }
 
   public final void initializeCanvas() {
+    GameCanvas previousCanvas = GlobalStatics_8.GAME_CANVAS;
+    if (previousCanvas != null) {
+      previousCanvas.getParent().remove(previousCanvas);
+    }
     Container container = null;
     if (GlobalStatics_10.fullScreenFrame != null) {
       container = GlobalStatics_10.fullScreenFrame;
@@ -84,30 +75,16 @@ public abstract class GameStub implements Runnable,
     canvas.requestFocus();
     container.setLayout(null);
     container.add(canvas);
-    initializeNativeWindow(canvas);
     GlobalStatics_8.GAME_CANVAS = canvas;
-    DummyClass8.focused = true;
+    DummyClass8.FOCUSED = true;
     GlobalStatics_10.aBoolean3116 = true;
-    GlobalStatics_10.focused = true;
-    GlobalStatics_6.replaceCanvas = false;
+    GlobalStatics_10.FOCUSED = true;
+    GlobalStatics_6.REPLACE_CANVAS = false;
     GlobalStatics_3.canvasInitializedTime =
         GlobalStatics_10.getCurrentTimeMillis();
 
   }
 
-  private void initializeNativeWindow(Canvas canvas) {
-    GLProfile profile = GLProfile.getDefault();
-    GLCapabilities capabilities = new GLCapabilities(profile);
-    GraphicsConfiguration graphicsConfiguration =
-        canvas.getGraphicsConfiguration();
-
-    AWTGraphicsConfiguration awtGraphicsConfiguration =
-        AWTGraphicsConfiguration
-            .create(graphicsConfiguration, capabilities, capabilities);
-
-    GlobalStatics_8.NATIVE_WINDOW =
-        NewtFactoryAWT.getNativeWindow(canvas, awtGraphicsConfiguration);
-  }
 
   public final void reportError(String var1) {
     if (!this.encounteredError) {
@@ -118,7 +95,7 @@ public abstract class GameStub implements Runnable,
 
   public abstract void destroy(byte var1);
 
-  public abstract void method33(int var1);
+  public abstract void clearThings(int var1);
 
   public final URL getDocumentBase() {
     return null;
@@ -163,13 +140,13 @@ public abstract class GameStub implements Runnable,
   public final void paint(Graphics var1) {
     if (this == GlobalStatics_0.applet && !GlobalStatics_9.aBoolean554) {
       GlobalStatics_10.aBoolean3116 = true;
-      if (DummyClass20.aBoolean1784 && !GlRenderer.useOpenGlRenderer
+      if (DummyClass20.aBoolean1784 && !GlRenderer.USE_OPENGL
           && -GlobalStatics_3.canvasInitializedTime + GlobalStatics_10
           .getCurrentTimeMillis() > 1000L) {
         Rectangle var2 = var1.getClipBounds();
         if (var2 == null || var2.width >= GlobalStatics_6.windowWidth
             && GlobalStatics_9.windowHeight <= var2.height) {
-          GlobalStatics_6.replaceCanvas = true;
+          GlobalStatics_6.REPLACE_CANVAS = true;
         }
       }
 
@@ -199,7 +176,7 @@ public abstract class GameStub implements Runnable,
 
     }
 
-    this.method33(126);
+    this.clearThings(126);
     if (var1 <= 31) {
       this.start(-50, -104, -76, 78, null, 49, false);
     }
@@ -219,7 +196,7 @@ public abstract class GameStub implements Runnable,
     GlobalStatics_8.updateMemoryCounter =
         31 & GlobalStatics_8.updateMemoryCounter + 1;
     synchronized (this) {
-      GlobalStatics_10.focused = DummyClass8.focused;
+      GlobalStatics_10.FOCUSED = DummyClass8.FOCUSED;
     }
     this.update();
   }

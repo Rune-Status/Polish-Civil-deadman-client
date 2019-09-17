@@ -25,7 +25,7 @@ public final class SettingsStatics {
     if (buffer.bytes.length == 0) {
       return;
     }
-    int var2 = buffer.readUnsignedByte();
+    int version = buffer.readUnsignedByte();
     int expectedSize = 33;
 
     if (buffer.bytes.length - buffer.position >= expectedSize) {
@@ -50,15 +50,15 @@ public final class SettingsStatics {
       if (GLStatics.anInt1137 > 2) {
         GLStatics.anInt1137 = 2;
       }
-
-      GLStatics.useBumpMaps = buffer.readUnsignedByte() == 1;
-      if (var2 < 2) {
+      GLStatics.USE_BUMP_MAPS = buffer.readUnsignedByte() == 1;
+      if (version < 2) {
         buffer.readUnsignedByte();
       }
 
       GLStatics.aBoolean1685 = buffer.readUnsignedByte() == 1;
       DummyClass35.aBoolean661 = buffer.readUnsignedByte() == 1;
       GlobalStatics_9.RENDERING_SAMPLES = buffer.readUnsignedByte();
+
       if (GlobalStatics_9.RENDERING_SAMPLES > 2) {
         GlobalStatics_9.RENDERING_SAMPLES = 2;
       }
@@ -76,16 +76,16 @@ public final class SettingsStatics {
         DummyClass28.anInt340 = 127;
       }
 
-      if (var2 >= 1) {
+      if (version >= 1) {
         GlobalStatics_3.anInt2378 = buffer.readUnsignedShort();
         GlobalStatics_10.anInt3071 = buffer.readUnsignedShort();
       }
 
-      if (var2 >= 3 && var2 < 6) {
+      if (version >= 3 && version < 6) {
         buffer.readUnsignedByte();
       }
 
-      if (var2 >= 4) {
+      if (version >= 4) {
         int var4 = buffer.readUnsignedByte();
         if (GlobalStatics_6.anInt3492 < 96) {
           var4 = 0;
@@ -94,7 +94,7 @@ public final class SettingsStatics {
         DummyClass0.method1758(var4);
       }
 
-      if (var2 >= 5) {
+      if (version >= 5) {
         GlobalStatics_0.anInt2148 = buffer.readInt();
       }
 
@@ -102,27 +102,27 @@ public final class SettingsStatics {
         GlobalStatics_6.CLIENT_SCRIPT_ERROR = null;
       }
 
-      if (var2 >= 6) {
+      if (version >= 6) {
         GlobalStatics_2.anInt2577 = buffer.readUnsignedByte();
       }
 
-      if (var2 >= 7) {
+      if (version >= 7) {
         GlobalStatics_0.SAFE_MODE = buffer.readUnsignedByte() == 1;
       }
 
-      if (var2 >= 8) {
+      if (version >= 8) {
         GlobalStatics_2.aBoolean346 = buffer.readUnsignedByte() == 1;
       }
 
-      if (var2 >= 9) {
+      if (version >= 9) {
         GlobalStatics_10.anInt2488 = buffer.readUnsignedByte();
       }
 
-      if (var2 >= 10) {
+      if (version >= 10) {
         GlobalStatics_7.aBoolean1080 = buffer.readUnsignedByte() != 0;
       }
 
-      if (var2 >= 11) {
+      if (version >= 11) {
         DummyClass4.aBoolean3004 = buffer.readUnsignedByte() != 0;
       }
 
@@ -162,7 +162,7 @@ public final class SettingsStatics {
     buffer.writeByte(GlobalStatics_9.aBoolean3275 ? 1 : 0);
     buffer.writeByte(GlobalStatics_9.aBoolean2910 ? 1 : 0);
     buffer.writeByte(GLStatics.anInt1137);
-    buffer.writeByte(GLStatics.useBumpMaps ? 1 : 0);
+    buffer.writeByte(GLStatics.USE_BUMP_MAPS ? 1 : 0);
     buffer.writeByte(GLStatics.aBoolean1685 ? 1 : 0);
     buffer.writeByte(DummyClass35.aBoolean661 ? 1 : 0);
     buffer.writeByte(GlobalStatics_9.RENDERING_SAMPLES);

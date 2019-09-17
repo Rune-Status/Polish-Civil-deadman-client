@@ -240,7 +240,7 @@ public final class DummyClass1 {
     }
   }
 
-  public static void method905(int var0) {
+  public static void clear57(int var0) {
     DummyClass1.anInterface2_408 = null;
     DummyClass1.aClass94_414 = null;
     DummyClass1.aClass94_415 = null;

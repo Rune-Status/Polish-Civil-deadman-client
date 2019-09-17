@@ -17,7 +17,7 @@ public final class DummyClass30 {
   public static int anInt456;
   public static GameString aClass94_459 = DummyClass30.aClass94_458;
 
-  public static void method937(int var0) {
+  public static void clear74(int var0) {
     GLStatics.adjacentTileOnScreen = null;
     DummyClass30.aClass94_458 = null;
 

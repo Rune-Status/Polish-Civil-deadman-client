@@ -147,7 +147,7 @@ public final class ItemConfig {
         return var2;
       } else {
         if (var1 < 90) {
-          GlobalStatics_11.method1111(-111);
+          GlobalStatics_11.clear70(-111);
         }
 
         StringNode var4 = (StringNode) this.aClass130_798.get(var3);
@@ -315,7 +315,7 @@ public final class ItemConfig {
         }
 
         var11.aBoolean2699 = true;
-        if (GlRenderer.useOpenGlRenderer) {
+        if (GlRenderer.USE_OPENGL) {
           ((GlModel) var11).method1920(false, false, false, true, false, false, true);
         }
 
@@ -493,7 +493,7 @@ public final class ItemConfig {
                                               var5 = var2.readUnsignedByte();
                                               if (this.aClass130_798 == null) {
                                                 var6 = GLStatics.nearestPo2(
-                                                    (byte) 97, var5);
+                                                    var5);
                                                 this.aClass130_798 = new HashTable(
                                                     var6);
                                               }

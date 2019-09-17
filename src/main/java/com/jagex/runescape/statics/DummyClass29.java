@@ -85,7 +85,7 @@ public final class DummyClass29 {
     }
   }
 
-  public static void method908(int var0) {
+  public static void clear60(int var0) {
     DummyClass29.aClass11_439 = null;
     if (var0 != 5157) {
       DummyClass29.aClass94_434 = null;
@@ -178,7 +178,7 @@ public final class DummyClass29 {
           }
         }
 
-        if (GlRenderer.useOpenGlRenderer && var12.aBoolean1503) {
+        if (GlRenderer.USE_OPENGL && var12.aBoolean1503) {
           if (var19 == 2) {
             if (var13 instanceof GameObject) {
               ((GameObject) var13).method1960(-1);

@@ -1,19 +1,15 @@
 package com.jagex.runescape.opengl;
 
-import com.jagex.runescape.opengl.GLStatics;
-import com.jagex.runescape.opengl.GlRenderer;
-import com.jagex.runescape.opengl.MaterialShader;
-
 public final class BumpShader implements MaterialShader {
 
   public void disable() {
-    if (GLStatics.useBumpMaps) {
+    if (GLStatics.USE_BUMP_MAPS) {
       GlRenderer.setLightingEnabled(true);
     }
   }
 
   public void enable() {
-    if (GLStatics.useBumpMaps) {
+    if (GLStatics.USE_BUMP_MAPS) {
       GlRenderer.setLightingEnabled(false);
     }
   }

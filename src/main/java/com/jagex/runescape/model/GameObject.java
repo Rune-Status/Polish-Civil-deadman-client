@@ -51,7 +51,7 @@ public final class GameObject extends SceneNode {
       this.anInt2729 = var1;
       this.anInt2730 = var6;
       GameObjectConfig var10;
-      if (GlRenderer.useOpenGlRenderer && var9 != null) {
+      if (GlRenderer.USE_OPENGL && var9 != null) {
         if (var9 instanceof GameObject) {
           ((GameObject) var9).method1960(-1);
         } else {
@@ -108,7 +108,7 @@ public final class GameObject extends SceneNode {
         }
       }
 
-      if (GlRenderer.useOpenGlRenderer && var9 != null) {
+      if (GlRenderer.USE_OPENGL && var9 != null) {
         this.method1962(true, -2);
       }
 
@@ -121,7 +121,7 @@ public final class GameObject extends SceneNode {
   }
 
   public void method1867(int var1, int var2, int var3, int var4, int var5 ) {
-    if (GlRenderer.useOpenGlRenderer) {
+    if (GlRenderer.USE_OPENGL) {
         this.method1962(true, -2);
       } else {
         this.method1961(var5, var4, -101);
@@ -232,7 +232,7 @@ public final class GameObject extends SceneNode {
       }
 
       if (var4 == null) {
-        if (GlRenderer.useOpenGlRenderer && !var3) {
+        if (GlRenderer.USE_OPENGL && !var3) {
           this.method1960(-1);
         }
 
@@ -305,7 +305,7 @@ public final class GameObject extends SceneNode {
             }
           }
 
-          if (GlRenderer.useOpenGlRenderer && var13) {
+          if (GlRenderer.USE_OPENGL && var13) {
             SomethingShadows.method2047(this.aClass109_Sub1_2738, this.anInt2725,
                 this.anInt2720,
                 this.anInt2748);
@@ -330,7 +330,7 @@ public final class GameObject extends SceneNode {
           if (var20 == null) {
             return null;
           } else {
-            if (GlRenderer.useOpenGlRenderer && var13) {
+            if (GlRenderer.USE_OPENGL && var13) {
               if (var19) {
                 GlobalStatics_9.aClass109_Sub1_2631 = var20.shadow;
               }

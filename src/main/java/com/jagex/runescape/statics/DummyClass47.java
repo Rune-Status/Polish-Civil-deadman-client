@@ -705,7 +705,7 @@ public final class DummyClass47 {
 
   }
 
-  public static void method1333() {
+  public static void clear95() {
     SoftwareIndexedColorSpriteStatics.anIntArray1100 = null;
     DummyClass47.anIntArray1097 = null;
     DummyClass47.anIntArray1098 = null;

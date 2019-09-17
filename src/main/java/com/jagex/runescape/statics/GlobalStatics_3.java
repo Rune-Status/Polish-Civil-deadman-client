@@ -178,7 +178,7 @@ public class GlobalStatics_3 {
     int var5 = var3 + 6;
     int var6 = GlobalStatics_9.p12Font.method680(text, 250);
     int var7 = GlobalStatics_9.p12Font.method684(text, 250) * 13;
-    if (GlRenderer.useOpenGlRenderer) {
+    if (GlRenderer.USE_OPENGL) {
       GlUtils.fillQuad(var4 - var3, -var3 + var5, var3 + var6 + var3,
           var3 + var3 + var7, 0);
       GlUtils.drawQuad(-var3 + var4, -var3 + var5, var6 + var3 + var3,
@@ -198,7 +198,7 @@ public class GlobalStatics_3 {
     GlobalStatics_3.method1340(var4 - var3, var6 + var3 + var3, (byte) -40,
         -var3 + var5, var3 + var7 + var3);
     if (draw) {
-      if (GlRenderer.useOpenGlRenderer) {
+      if (GlRenderer.USE_OPENGL) {
         GlRenderer.swapBuffers();
       } else {
         try {
@@ -262,7 +262,7 @@ public class GlobalStatics_3 {
     DummyClass41.anInt865 = -1;
     DummyClass54.aClass11_1402 = null;
     GlobalStatics_9.anInt2535 = GlobalStatics_4.updateCycle;
-    if (GlRenderer.useOpenGlRenderer) {
+    if (GlRenderer.USE_OPENGL) {
       GlobalStatics_11.aBoolean47 = true;
     }
 
@@ -276,7 +276,7 @@ public class GlobalStatics_3 {
       GlobalStatics_10.method841(true);
     }
 
-    if (GlRenderer.useOpenGlRenderer) {
+    if (GlRenderer.USE_OPENGL) {
       GlUtils.resetClip();
     } else {
       DummyClass47.method1331();
@@ -306,7 +306,7 @@ public class GlobalStatics_3 {
     return var5;
   }
 
-  public static void method2057(byte var0) {
+  public static void clear37(byte var0) {
     GlobalStatics_3.aClass25Array1868 = null;
     GlobalStatics_3.logoSprite = null;
     GlobalStatics_3.animationSequences = null;
@@ -455,7 +455,7 @@ public class GlobalStatics_3 {
     GlobalStatics_8.anInt2088 = 0;
     GlobalStatics_10.anInt3084 = 0;
     GlobalStatics_7.aClass67_1443.anInt1018 = 0;
-    GlobalStatics_10.focused = true;
+    GlobalStatics_10.FOCUSED = true;
     GlobalStatics_3.method153(112);
     GlobalStatics_9.lastPacketId2 = -1;
     GlobalStatics_7.lastPacketId1 = -1;
@@ -587,7 +587,7 @@ public class GlobalStatics_3 {
       GlobalStatics_9.anIntArray1743[var1] = 0;
     }
 
-    if (GlRenderer.useOpenGlRenderer) {
+    if (GlRenderer.USE_OPENGL) {
       GlobalStatics_10.method236((byte) 64);
     }
 

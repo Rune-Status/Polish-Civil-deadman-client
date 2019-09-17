@@ -26,7 +26,7 @@ public final class ClientScriptEnum extends SubNode {
 
   private void parseOpcode(int opcode, Buffer var2, byte var3) {
     if (var3 > -29) {
-        GlobalStatics_7.cameraY = 70;
+        GlobalStatics_7.CAMERA_Y = 70;
       }
 
       if (opcode == 1) {
@@ -41,7 +41,7 @@ public final class ClientScriptEnum extends SubNode {
             if (opcode == 5 || opcode == 6) {
               int size = var2.readUnsignedShort();
               this.table = new HashTable(
-                  GLStatics.nearestPo2((byte) 94, size));
+                  GLStatics.nearestPo2(size));
 
               for (int var5 = 0; var5 < size; ++var5) {
                 int key = var2.readInt();

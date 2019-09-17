@@ -161,12 +161,12 @@ public final class DummyClass13 {
   }
 
   public static void method2196(int var0) {
-    GlobalStatics_10.aClass93_3412.method1523((byte) -107);
+    GlobalStatics_10.aClass93_3412.method1523();
     if (var0 != 128) {
       DummyClass13.anInt2024 = 111;
     }
 
-    GlobalStatics_9.aClass93_3369.method1523((byte) -110);
+    GlobalStatics_9.aClass93_3369.method1523();
   }
 
   public static void method2197(boolean var0) {

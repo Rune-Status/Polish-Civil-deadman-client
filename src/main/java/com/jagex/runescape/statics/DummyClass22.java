@@ -62,7 +62,7 @@ public final class DummyClass22 {
     GlobalStatics_10.aClass153_3098 = var1;
   }
 
-  public static void method1800(byte var0) {
+  public static void clear52(byte var0) {
     DummyClass22.aClass94Array1739 = null;
     DummyClass22.aClass94_1738 = null;
     DummyClass22.particles = null;

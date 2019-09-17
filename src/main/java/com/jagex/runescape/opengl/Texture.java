@@ -376,7 +376,7 @@ public final class Texture extends SubNode {
   }
 
   public static void method724(int var0) {
-    DummyClass8.aClass93_4015.method1523((byte) -102);
+    DummyClass8.aClass93_4015.method1523();
     if (var0 > -106) {
       Texture.method725(71);
     }
@@ -417,9 +417,9 @@ public final class Texture extends SubNode {
                 GLStatics.sceneGraphTiles, 0);
           }
 
-          if (DummyClass17.anInt1823 < 310) {
+          if (DummyClass17.SCENE_CAMERA_PITCH < 310) {
             int var7 = GlobalStatics_9.localPlayer.anInt2829 >> 7;
-            var5 = DummyClass49.anInt1111 >> 7;
+            var5 = DummyClass49.SCENE_CAMERA_Z >> 7;
             int var9;
             if (var5 < var7) {
               var9 = var7 - var5;
@@ -427,7 +427,7 @@ public final class Texture extends SubNode {
               var9 = -var7 + var5;
             }
 
-            var4 = GlobalStatics_9.anInt3995 >> 7;
+            var4 = GlobalStatics_9.SCENE_CAMERA_X >> 7;
             int var6 = GlobalStatics_9.localPlayer.anInt2819 >> 7;
             int var8;
             if (var6 > var4) {
@@ -519,16 +519,17 @@ public final class Texture extends SubNode {
         } else {
           var4 = GlobalStatics_6
               .method1736(GlobalStatics_9.currentPlane, 1,
-                  GlobalStatics_9.anInt3995,
-                  DummyClass49.anInt1111);
-          if (var4 - GlobalStatics_7.anInt2162 < 800 &&
+                  GlobalStatics_9.SCENE_CAMERA_X,
+                  DummyClass49.SCENE_CAMERA_Z);
+          if (var4 - GlobalStatics_7.SCENE_CAMERA_Y < 800 &&
               (4
                   & GlobalStatics_10.tileFlags[GlobalStatics_9.currentPlane][
-                  GlobalStatics_9.anInt3995
-                      >> 7][DummyClass49.anInt1111 >> 7]) != 0) {
+                  GlobalStatics_9.SCENE_CAMERA_X
+                      >> 7][DummyClass49.SCENE_CAMERA_Z >> 7]) != 0) {
             GlobalStatics_9
-                .method2031((byte) -107, false, GlobalStatics_9.anInt3995 >> 7,
-                    DummyClass49.anInt1111 >> 7,
+                .method2031((byte) -107, false, GlobalStatics_9.SCENE_CAMERA_X
+                        >> 7,
+                    DummyClass49.SCENE_CAMERA_Z >> 7,
                     GLStatics.sceneGraphTiles, 1);
           }
         }

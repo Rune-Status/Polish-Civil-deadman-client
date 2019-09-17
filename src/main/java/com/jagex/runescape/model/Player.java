@@ -162,7 +162,7 @@ public final class Player extends Mobile {
               this.anInt2819, var3,
               this.anInt2831);
         if (var18 != null) {
-          if (GlRenderer.useOpenGlRenderer) {
+          if (GlRenderer.USE_OPENGL) {
             float var19 = GlRenderer.method1852();
             float var20 = GlRenderer.method1839();
             GlRenderer.method1851();
@@ -242,13 +242,13 @@ public final class Player extends Mobile {
                     this.anInt2832,
                     this.anInt2813);
         int var16 = GlobalStatics_5.method1727((byte) 123);
-        if (GlRenderer.useOpenGlRenderer && GlobalStatics_6.anInt3492 < 96 &&
-            var16 > 50) {
+        if (GlRenderer.USE_OPENGL && GlobalStatics_6.anInt3492 < 96 &&
+            var16 > GlobalStatics_6.NEAR) {
           GlobalStatics_10.method90(1);
         }
 
         int var17;
-        if (GlobalStatics_10.usageMode != 0 && var16 < 50) {
+        if (GlobalStatics_10.usageMode != 0 && var16 < GlobalStatics_6.NEAR) {
           for (var17 = 50 - var16; DummyClass42.anInt893 < var17; ++DummyClass42.anInt893) {
             GlobalStatics_9.byteArrayPool[DummyClass42.anInt893] = new byte[102400];
           }
@@ -268,7 +268,7 @@ public final class Player extends Mobile {
                 this.aBoolean2810, var14 == null ? var13 : var14,
                 this.anInt2819, 0, this.anInt2829, 0, 1, var15, var1,
                 var14 != null ? this.anInt2813 : this.anInt2832, this.anInt2831, 240, (byte) -49);
-            if (GlRenderer.useOpenGlRenderer) {
+            if (GlRenderer.USE_OPENGL) {
               float var18 = GlRenderer.method1852();
               float var19 = GlRenderer.method1839();
               GlRenderer.method1851();
@@ -382,7 +382,7 @@ public final class Player extends Mobile {
             }
           }
 
-          if (GlRenderer.useOpenGlRenderer) {
+          if (GlRenderer.USE_OPENGL) {
             var15.aBoolean2699 = true;
             var15.draw(var1, var2, var3, var4, var5, var6, var7, var8, var9, var11,
                 this.aClass127_Sub1_2801);

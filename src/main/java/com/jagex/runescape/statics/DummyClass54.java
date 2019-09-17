@@ -67,7 +67,7 @@ public final class DummyClass54 {
     }
   }
 
-  public static void method1598(int var0) {
+  public static void clear64(int var0) {
     if (var0 <= -106) {
       DummyClass54.aShortArray1398 = null;
       DummyClass54.aClass11_1402 = null;
