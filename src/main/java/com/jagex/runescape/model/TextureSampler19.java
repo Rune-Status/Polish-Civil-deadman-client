@@ -43,10 +43,6 @@ public final class TextureSampler19 extends AbstractTextureSampler {
           this.monoChromatic = var2.readUnsignedByte() == 1;
         }
       }
-
-      if (!var3) {
-        GlobalStatics_10.anInt3216 = -7;
-      }
   }
 
   public void method158(int var1 ) {
