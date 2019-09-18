@@ -126,7 +126,7 @@ public class GlobalStatics_8 {
   public static int anInt1521;
   public static GameString aClass94_1523 =
       GameStringStatics.create("Chargement en cours)3 Veuillez patienter)3");
-  public static short SOMETHING_ZOOM_1 = 320;
+  public static short SOMETHING_SCENE_Y_0_1 = 320;
   public static GameString aClass94_5 =
       GameStringStatics.create(" from your ignore list first)3");
   public static GameString aClass94_4 = GlobalStatics_8.aClass94_5;

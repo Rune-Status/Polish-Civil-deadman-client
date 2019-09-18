@@ -82,7 +82,7 @@ public class GlobalStatics_7 {
   public static int anInt1439;
   public static int viewY;
   public static MouseRecorder aClass67_1443;
-  public static short aShort1444 = 256;
+  public static short SOMETHING_SCENE_Y_1_0 = 256;
   public static int loopCycle;
   public static boolean aBoolean1451;
   public static FileUnpacker animationFrames;

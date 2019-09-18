@@ -10887,13 +10887,8 @@ public class GlobalStatics_9 {
       int pitch
   ) {
 
-    int var9 =
-        zoom * (GlobalStatics_8.SOMETHING_ZOOM_1 - GlobalStatics_11.aShort46) / 100
-            + GlobalStatics_11.aShort46;
-    cameraZ = var9 * cameraZ >> 8;
-
     int var8 = -pitch + 2048 & 2047;
-    var9 = 2047 & -yaw + 2048;
+    int var9 = 2047 & -yaw + 2048;
     int cameraX = 0;
     int cameraY = 0;
     if (var8 != 0) {

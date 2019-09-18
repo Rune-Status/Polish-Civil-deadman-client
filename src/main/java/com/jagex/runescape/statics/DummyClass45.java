@@ -129,9 +129,9 @@ public final class DummyClass45 {
       }
 
       int var7 =
-          var6 * (GlobalStatics_10.SOMETHING_ZOOM_0 - GlobalStatics_7.aShort1444)
+          var6 * (GlobalStatics_10.SOMETHING_SCENE_Y_1_1 - GlobalStatics_7.SOMETHING_SCENE_Y_1_0)
               / 100
-              + GlobalStatics_7.aShort1444;
+              + GlobalStatics_7.SOMETHING_SCENE_Y_1_0;
       if (GlobalStatics_9.aShort3241 <= var7) {
         if (DummyClass18.aShort83 < var7) {
           var7 = DummyClass18.aShort83;

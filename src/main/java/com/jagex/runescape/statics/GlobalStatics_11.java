@@ -78,7 +78,7 @@ public final class GlobalStatics_11 {
   public static int[] anIntArray2420;
   public static SomethingMidiInstrument[] aClass71Array2406;
   public static GameString[] titleSuffixes;
-  public static short aShort46 = 256;
+  public static short SOMETHING_SCENE_Y_0 = 256;
   public static boolean aBoolean47;
   public static int anInt48 = 2;
   public static int[] anIntArray49;
@@ -4161,15 +4161,15 @@ public final class GlobalStatics_11 {
                                   k -= 2;
                                   System.out.println("Updating zoom things 1 (opengl)");
                                   //TODO tthis thing updates something with zooming
-                                  GlobalStatics_7.aShort1444 = (short) GlobalStatics_9.anIntArray2929[k];
-                                  if (GlobalStatics_7.aShort1444 <= 0) {
-                                    GlobalStatics_7.aShort1444 = 256;
+                                  GlobalStatics_7.SOMETHING_SCENE_Y_1_0 = (short) GlobalStatics_9.anIntArray2929[k];
+                                  if (GlobalStatics_7.SOMETHING_SCENE_Y_1_0 <= 0) {
+                                    GlobalStatics_7.SOMETHING_SCENE_Y_1_0 = 256;
                                   }
-                                  GlobalStatics_10.SOMETHING_ZOOM_0 =
+                                  GlobalStatics_10.SOMETHING_SCENE_Y_1_1 =
                                       (short) GlobalStatics_9.anIntArray2929[1
                                           + k];
-                                  if (GlobalStatics_10.SOMETHING_ZOOM_0 <= 0) {
-                                    GlobalStatics_10.SOMETHING_ZOOM_0 = 205;
+                                  if (GlobalStatics_10.SOMETHING_SCENE_Y_1_1 <= 0) {
+                                    GlobalStatics_10.SOMETHING_SCENE_Y_1_1 = 205;
                                   }
                                   continue;
                                 }
@@ -4177,15 +4177,15 @@ public final class GlobalStatics_11 {
                                   k -= 2;
                                   //TODO this thing updates camera zoom
                                   System.out.println("Updating zoom things 0");
-                                  GlobalStatics_11.aShort46 = (short) GlobalStatics_9.anIntArray2929[k];
-                                  if (GlobalStatics_11.aShort46 <= 0) {
-                                    GlobalStatics_11.aShort46 = 256;
+                                  GlobalStatics_11.SOMETHING_SCENE_Y_0 = (short) GlobalStatics_9.anIntArray2929[k];
+                                  if (GlobalStatics_11.SOMETHING_SCENE_Y_0 <= 0) {
+                                    GlobalStatics_11.SOMETHING_SCENE_Y_0 = 256;
                                   }
-                                  GlobalStatics_8.SOMETHING_ZOOM_1 =
+                                  GlobalStatics_8.SOMETHING_SCENE_Y_0_1 =
                                       (short) GlobalStatics_9.anIntArray2929[1
                                           + k];
-                                  if (GlobalStatics_8.SOMETHING_ZOOM_1 <= 0) {
-                                    GlobalStatics_8.SOMETHING_ZOOM_1 = 320;
+                                  if (GlobalStatics_8.SOMETHING_SCENE_Y_0_1 <= 0) {
+                                    GlobalStatics_8.SOMETHING_SCENE_Y_0_1 = 320;
                                   }
                                   continue;
                                 }
@@ -4234,15 +4234,15 @@ public final class GlobalStatics_11 {
                                   continue;
                                 }
                                 if (j1 == 6204) {
-                                  GlobalStatics_9.anIntArray2929[k++] = GlobalStatics_11.aShort46;
-                                  GlobalStatics_9.anIntArray2929[k++] = GlobalStatics_8.SOMETHING_ZOOM_1;
+                                  GlobalStatics_9.anIntArray2929[k++] = GlobalStatics_11.SOMETHING_SCENE_Y_0;
+                                  GlobalStatics_9.anIntArray2929[k++] = GlobalStatics_8.SOMETHING_SCENE_Y_0_1;
                                   continue;
                                 }
                                 if (j1 != 6205) {
                                   break;
                                 }
-                                GlobalStatics_9.anIntArray2929[k++] = GlobalStatics_7.aShort1444;
-                                GlobalStatics_9.anIntArray2929[k++] = GlobalStatics_10.SOMETHING_ZOOM_0;
+                                GlobalStatics_9.anIntArray2929[k++] = GlobalStatics_7.SOMETHING_SCENE_Y_1_0;
+                                GlobalStatics_9.anIntArray2929[k++] = GlobalStatics_10.SOMETHING_SCENE_Y_1_1;
                                 continue;
                               }
                               if (j1 == 5600) {

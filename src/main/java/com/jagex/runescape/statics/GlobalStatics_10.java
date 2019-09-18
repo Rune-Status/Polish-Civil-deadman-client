@@ -280,7 +280,7 @@ public class GlobalStatics_10 {
   public static GameString aClass94_3048 = GameStringStatics.create("Hidden");
   public static GameString aClass94_3051 = GlobalStatics_10.aClass94_3048;
   public static Keyboard KEYBOARD = new Keyboard();
-  public static short SOMETHING_ZOOM_0 = 205;
+  public static short SOMETHING_SCENE_Y_1_1 = 205;
   public static GameString aClass94_3053 = GameStringStatics
       .create("Lade Schrifts-=tze )2 ");
   public static int anInt3054;
