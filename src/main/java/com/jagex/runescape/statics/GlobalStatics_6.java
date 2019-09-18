@@ -74,7 +74,7 @@ import java.util.TimeZone;
 
 public class GlobalStatics_6 {
 
-  public static int FAR = 3072;
+  public static int FAR = 28 * 128;
   public static int NEAR = 50;
 
   public static GameString aClass94_3582 = GameStringStatics.create("K");

@@ -53,8 +53,6 @@ import com.jagex.runescape.model.Player;
 import com.jagex.runescape.model.PlayerVariable;
 import com.jagex.runescape.model.Queue;
 import com.jagex.runescape.model.RenderAnimation;
-import com.jagex.runescape.scene.SceneGraphTile;
-import com.jagex.runescape.scene.SceneSomething;
 import com.jagex.runescape.model.ScriptState;
 import com.jagex.runescape.model.SignLink;
 import com.jagex.runescape.model.SignLinkRequest;
@@ -69,9 +67,6 @@ import com.jagex.runescape.model.SomethingOtherWorldMap;
 import com.jagex.runescape.model.SomethingPacket151;
 import com.jagex.runescape.model.SomethingQuickChat;
 import com.jagex.runescape.model.SomethingQuickChatK;
-import com.jagex.runescape.scene.SceneStatics;
-import com.jagex.runescape.scene.SomethingSceneI;
-import com.jagex.runescape.scene.SomethingSceneTile;
 import com.jagex.runescape.model.SomethingTexture3;
 import com.jagex.runescape.model.SomethingVolume15;
 import com.jagex.runescape.model.SomethingWorldMapy;
@@ -101,6 +96,11 @@ import com.jagex.runescape.opengl.MaterialShader;
 import com.jagex.runescape.opengl.MaterialShader5;
 import com.jagex.runescape.opengl.SomethingGl0;
 import com.jagex.runescape.opengl.Texture;
+import com.jagex.runescape.scene.SceneGraphTile;
+import com.jagex.runescape.scene.SceneSomething;
+import com.jagex.runescape.scene.SceneStatics;
+import com.jagex.runescape.scene.SomethingSceneI;
+import com.jagex.runescape.scene.SomethingSceneTile;
 import com.jagex.runescape.settings.SettingsStatics;
 import com.jagex.runescape.sprite.AbstractIndexedColorSprite;
 import com.jagex.runescape.sprite.SoftwareIndexedColorSprite;
@@ -10739,8 +10739,9 @@ public class GlobalStatics_9 {
     GlobalStatics_10.anIntArrayArray3115 =
         new int[GlobalStatics_4.REGION_WIDTH][GlobalStatics_1.REGION_HEIGHT];
     GlobalStatics_2.othrrHeightMap =
-        new int[1][GlobalStatics_4.REGION_WIDTH + 1][GlobalStatics_1.REGION_HEIGHT
-            + 1];
+        new int[1][GlobalStatics_4.REGION_WIDTH + 1][
+            GlobalStatics_1.REGION_HEIGHT
+                + 1];
     if (GlRenderer.USE_OPENGL) {
       GlobalStatics_10.aClass3_Sub11ArrayArray3346 = new SomethingGl0[1][];
     }
@@ -10840,9 +10841,25 @@ public class GlobalStatics_9 {
       int cameraZOffset,
       int pitch
   ) {
+    int var8;
+    int var9;
+    if (GlRenderer.USE_OPENGL) {
+      var8 = zoom - 334;
+      if (var8 >= 0) {
+        if (100 > var8) {
+          var8 = 100;
+        }
+      } else {
+        var8 = 0;
+      }
 
-    int var8 = -pitch + 2048 & 2047;
-    int var9 = 2047 & -yaw + 2048;
+      var9 = var8 * (GlobalStatics_11.SOMETHING_SCENE_Y_0
+          - GlobalStatics_8.SOMETHING_SCENE_Y_0_1) / 100
+          + GlobalStatics_11.SOMETHING_SCENE_Y_0;
+      cameraZ = var9 * cameraZ >> 8;
+    }
+    var8 = -pitch + 2048 & 2047;
+    var9 = 2047 & -yaw + 2048;
     int cameraX = 0;
     int cameraY = 0;
     if (var8 != 0) {
@@ -12240,7 +12257,8 @@ public class GlobalStatics_9 {
     GlobalStatics_9.secureBuffer
         .method790(GlobalStatics_8.aBooleanArray1490[82] ? 1 : 0,
             -13071);
-    GlobalStatics_9.secureBuffer.writeShort(GlobalStatics_10.REGION_BASE_X + var4);
+    GlobalStatics_9.secureBuffer
+        .writeShort(GlobalStatics_10.REGION_BASE_X + var4);
     GlobalStatics_9.secureBuffer
         .method783(GlobalStatics_9.REGION_BASE_Y + var5, -268435456);
     DummyClass38.anInt733 = DummyClass38.anIntArray729[0];
@@ -12429,7 +12447,8 @@ public class GlobalStatics_9 {
       GlobalStatics_9.IS_ON_TUTORIAL_ISLAND = 1;
     }
 
-    if (GlobalStatics_9.IS_ON_TUTORIAL_ISLAND == 1 && var1 >= 3139 && var1 <= 3199
+    if (GlobalStatics_9.IS_ON_TUTORIAL_ISLAND == 1 && var1 >= 3139
+        && var1 <= 3199
         && var2 >= 3008
         && var2 <= 3062) {
       GlobalStatics_9.IS_ON_TUTORIAL_ISLAND = 0;
