@@ -1,6 +1,7 @@
 package com.jagex.runescape.settings;
 
 import com.jagex.runescape.buffer.Buffer;
+import com.jagex.runescape.common.GameStringStatics;
 import com.jagex.runescape.model.FileOnDisk;
 import com.jagex.runescape.model.SignLink;
 import com.jagex.runescape.model.SignLinkRequest;
@@ -99,7 +100,7 @@ public final class SettingsStatics {
       }
 
       if (var1 != -1) {
-        GlobalStatics_6.CLIENT_SCRIPT_ERROR = null;
+        GameStringStatics.CLIENT_SCRIPT_ERROR = null;
       }
 
       if (version >= 6) {

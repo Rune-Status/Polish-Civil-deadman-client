@@ -759,7 +759,7 @@ public final class GlobalStatics_0 {
           GlobalStatics_9.concat(new GameString[]{
               GlobalStatics_10.aClass94_3211,
               var2.substring(-4 + var2.getLength(), 0, 0),
-              GlobalStatics_6.aClass94_3586, GlobalStatics_9.aClass94_1072,
+              GameStringStatics.aClass94_3586, GlobalStatics_9.aClass94_1072,
               var2,
               GlobalStatics_9.aClass94_995
           }) :

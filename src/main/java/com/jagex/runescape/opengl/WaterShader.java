@@ -36,7 +36,7 @@ public final class WaterShader implements MaterialShader {
         int[] var8 = var4[var6];
 
         for (int var9 = 0; var9 < 64; ++var9) {
-          if (GlRenderer.bigEndian) {
+          if (GlRenderer.USE_BIG_ENDIAN) {
             var5.writeFloat(var7[var9] / 4096.0F);
             var5.writeFloat(var8[var9] / 4096.0F);
             var5.writeFloat(1.0F);

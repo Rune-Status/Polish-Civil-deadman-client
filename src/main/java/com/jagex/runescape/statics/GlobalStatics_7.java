@@ -1977,7 +1977,7 @@ public class GlobalStatics_7 {
                 ?
                 var0.aClass94Array171[var2] :
                 GlobalStatics_9.aBoolean1040 ? GlobalStatics_9.concat(
-                    new GameString[]{GlobalStatics_6.aClass94_1645,
+                    new GameString[]{GameStringStatics.aClass94_1645,
                         GlobalStatics_9.toString(var2)}) : null;
   }
 
@@ -2447,7 +2447,7 @@ public class GlobalStatics_7 {
         DummyClass29.aBoolean438 = true;
       }
 
-      if (command.method1531(GlobalStatics_6.COMMAND_FPS_OFF)) {
+      if (command.method1531(GameStringStatics.COMMAND_FPS_OFF)) {
         DummyClass29.aBoolean438 = false;
       }
 
@@ -2459,7 +2459,7 @@ public class GlobalStatics_7 {
         GlobalStatics_9.setWindowMode(false, 1, -1, -1);
       }
 
-      if (command.method1531(GlobalStatics_6.COMMAND_WM2)) {
+      if (command.method1531(GameStringStatics.COMMAND_WM2)) {
         GlobalStatics_9.setWindowMode(false, 2, -1, -1);
       }
 

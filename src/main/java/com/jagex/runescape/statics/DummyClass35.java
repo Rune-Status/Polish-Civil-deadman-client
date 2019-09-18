@@ -56,7 +56,7 @@ public class DummyClass35 {
       }
 
       if (!DummyClass17.aBoolean1827 && var2.aBoolean779) {
-        var2.aClass94_770 = GlobalStatics_6.aClass94_3691;
+        var2.aClass94_770 = GameStringStatics.aClass94_3691;
         var2.anInt782 = 0;
         var2.inventoryOptions = GlobalStatics_8.DEFAULT_INVENTORY_OPTIONS;
         var2.aBoolean807 = false;

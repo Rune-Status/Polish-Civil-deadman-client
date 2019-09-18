@@ -184,7 +184,7 @@ public final class DummyClass18 {
               var0 + 82);
         }
       } else {
-        if (var70.endsWith(GlobalStatics_6.CHALLENGE_REQ)) {
+        if (var70.endsWith(GameStringStatics.CHALLENGE_REQ)) {
           var24 = var70.substring(
               var70.indexOf(GlobalStatics_5.aClass94_1970), 0, 0);
           var4 = var24.toBase37();

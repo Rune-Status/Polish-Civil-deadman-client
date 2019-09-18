@@ -1077,7 +1077,7 @@ public final class GlobalStatics_11 {
                     if (class11_6.aClass94Array171 == null
                         || l45 >= class11_6.aClass94Array171.length
                         || class11_6.aClass94Array171[l45] == null) {
-                      GlobalStatics_0.aClass94Array75[l++] = GlobalStatics_6.aClass94_2331;
+                      GlobalStatics_0.aClass94Array75[l++] = GameStringStatics.aClass94_2331;
                     } else {
                       GlobalStatics_0.aClass94Array75[l++] = class11_6.aClass94Array171[l45];
                     }
@@ -1089,7 +1089,7 @@ public final class GlobalStatics_11 {
                   if (class11_6.aClass94_277 != null) {
                     GlobalStatics_0.aClass94Array75[l++] = class11_6.aClass94_277;
                   } else {
-                    GlobalStatics_0.aClass94Array75[l++] = GlobalStatics_6.aClass94_2331;
+                    GlobalStatics_0.aClass94Array75[l++] = GameStringStatics.aClass94_2331;
                   }
                   continue;
                 }
@@ -1131,7 +1131,7 @@ public final class GlobalStatics_11 {
                         if (j1 == 3100) {
                           GameString class94_3 = GlobalStatics_0.aClass94Array75[--l];
                           GlobalStatics_8
-                              .printMessage(GlobalStatics_6.aClass94_2331, 0,
+                              .printMessage(GameStringStatics.aClass94_2331, 0,
                                   class94_3, -1);
                           continue;
                         }
@@ -1553,7 +1553,7 @@ public final class GlobalStatics_11 {
                           int l13 = GlobalStatics_9.anIntArray2929[--k];
                           if (GlobalStatics_9.anInt1357 != 2 || l13
                               >= GlobalStatics_10.anInt104) {
-                            GlobalStatics_0.aClass94Array75[l++] = GlobalStatics_6.aClass94_2331;
+                            GlobalStatics_0.aClass94Array75[l++] = GameStringStatics.aClass94_2331;
                           } else {
                             GlobalStatics_0.aClass94Array75[l++] = GlobalStatics_9.aClass94Array1046[l13];
                           }
@@ -1609,7 +1609,7 @@ public final class GlobalStatics_11 {
                         if (j1 == 3609) {
                           GameString class94_12 = GlobalStatics_0.aClass94Array75[--l];
                           if (class94_12
-                              .method1558(GlobalStatics_6.aClass94_2323, 0)
+                              .method1558(GameStringStatics.aClass94_2323, 0)
                               || class94_12
                               .method1558(GlobalStatics_10.aClass94_3190, 0)) {
                             class94_12 = class94_12.substring(7);
@@ -1625,7 +1625,7 @@ public final class GlobalStatics_11 {
                               && GlobalStatics_10.anInt104 > k14) {
                             GlobalStatics_0.aClass94Array75[l++] = GlobalStatics_2.aClass94Array2566[k14];
                           } else {
-                            GlobalStatics_0.aClass94Array75[l++] = GlobalStatics_6.aClass94_2331;
+                            GlobalStatics_0.aClass94Array75[l++] = GameStringStatics.aClass94_2331;
                           }
                           continue;
                         }
@@ -1634,7 +1634,7 @@ public final class GlobalStatics_11 {
                             GlobalStatics_0.aClass94Array75[l++] = GlobalStatics_10.aClass94_251
                                 .formatName((byte) -50);
                           } else {
-                            GlobalStatics_0.aClass94Array75[l++] = GlobalStatics_6.aClass94_2331;
+                            GlobalStatics_0.aClass94Array75[l++] = GameStringStatics.aClass94_2331;
                           }
                           continue;
                         }
@@ -1650,7 +1650,7 @@ public final class GlobalStatics_11 {
                           int l14 = GlobalStatics_9.anIntArray2929[--k];
                           if (GlobalStatics_10.aClass94_251 == null ||
                               GlobalStatics_2.anInt2572 <= l14) {
-                            GlobalStatics_0.aClass94Array75[l++] = GlobalStatics_6.aClass94_2331;
+                            GlobalStatics_0.aClass94Array75[l++] = GameStringStatics.aClass94_2331;
                           } else {
                             GlobalStatics_0.aClass94Array75[l++] =
                                 GlobalStatics_6.aClass3_Sub19Array3694[l14].name
@@ -1714,7 +1714,7 @@ public final class GlobalStatics_11 {
                           int k15 = GlobalStatics_9.anIntArray2929[--k];
                           if (GlobalStatics_9.anInt1357 == 0
                               || GlobalStatics_6.anInt3591 <= k15) {
-                            GlobalStatics_0.aClass94Array75[l++] = GlobalStatics_6.aClass94_2331;
+                            GlobalStatics_0.aClass94Array75[l++] = GameStringStatics.aClass94_2331;
                           } else {
                             GlobalStatics_0.aClass94Array75[l++] = GameStringStatics
                                 .stringFromBase37(-29664,
@@ -1726,7 +1726,7 @@ public final class GlobalStatics_11 {
                         if (j1 == 3623) {
                           GameString class94_15 = GlobalStatics_0.aClass94Array75[--l];
                           if (class94_15
-                              .method1558(GlobalStatics_6.aClass94_2323, 0)
+                              .method1558(GameStringStatics.aClass94_2323, 0)
                               || class94_15
                               .method1558(GlobalStatics_10.aClass94_3190, 0)) {
                             class94_15 = class94_15.substring(7);
@@ -1750,7 +1750,7 @@ public final class GlobalStatics_11 {
                         }
                         if (j1 == 3625) {
                           if (DummyClass12.aClass94_2035 == null) {
-                            GlobalStatics_0.aClass94Array75[l++] = GlobalStatics_6.aClass94_2331;
+                            GlobalStatics_0.aClass94Array75[l++] = GameStringStatics.aClass94_2331;
                           } else {
                             GlobalStatics_0.aClass94Array75[l++] =
                                 DummyClass12.aClass94_2035
@@ -1762,7 +1762,7 @@ public final class GlobalStatics_11 {
                           int i16 = GlobalStatics_9.anIntArray2929[--k];
                           if (GlobalStatics_10.aClass94_251 == null ||
                               GlobalStatics_2.anInt2572 <= i16) {
-                            GlobalStatics_0.aClass94Array75[l++] = GlobalStatics_6.aClass94_2331;
+                            GlobalStatics_0.aClass94Array75[l++] = GameStringStatics.aClass94_2331;
                           } else {
                             GlobalStatics_0.aClass94Array75[l++] =
                                 GlobalStatics_6.aClass3_Sub19Array3694[i16].aClass94_2473;
@@ -1783,7 +1783,7 @@ public final class GlobalStatics_11 {
                         if (j1 == 3628) {
                           GameString class94_16 = GlobalStatics_0.aClass94Array75[--l];
                           if (class94_16
-                              .method1558(GlobalStatics_6.aClass94_2323, 0)
+                              .method1558(GameStringStatics.aClass94_2323, 0)
                               || class94_16
                               .method1558(GlobalStatics_10.aClass94_3190, 0)) {
                             class94_16 = class94_16.substring(7);
@@ -2098,7 +2098,7 @@ public final class GlobalStatics_11 {
                                     class94_46 = GlobalStatics_0.aClass94Array2580[i24];
                                   }
                                   if (class94_46 == null) {
-                                    class94_46 = GlobalStatics_6.aClass94_2331;
+                                    class94_46 = GameStringStatics.aClass94_2331;
                                   }
                                   GlobalStatics_0.aClass94Array75[l++] = class94_46;
                                   continue;
@@ -2477,7 +2477,7 @@ public final class GlobalStatics_11 {
                                     class94_49 = GlobalStatics_9.aClass94Array3226[k24];
                                   }
                                   if (class94_49 == null) {
-                                    class94_49 = GlobalStatics_6.aClass94_2331;
+                                    class94_49 = GameStringStatics.aClass94_2331;
                                   }
                                   GlobalStatics_0.aClass94Array75[l++] = class94_49;
                                   continue;
@@ -2489,7 +2489,7 @@ public final class GlobalStatics_11 {
                                     class94_50 = DummyClass4.aClass94Array3003[l24];
                                   }
                                   if (class94_50 == null) {
-                                    class94_50 = GlobalStatics_6.aClass94_2331;
+                                    class94_50 = GameStringStatics.aClass94_2331;
                                   }
                                   GlobalStatics_0.aClass94Array75[l++] = class94_50;
                                   continue;
@@ -2889,7 +2889,7 @@ public final class GlobalStatics_11 {
                                   if (class3_sub28_sub3_4 != null) {
                                     GlobalStatics_0.aClass94Array75[l++] = class3_sub28_sub3_4.aClass94_3561;
                                   } else {
-                                    GlobalStatics_0.aClass94Array75[l++] = GlobalStatics_6.aClass94_2331;
+                                    GlobalStatics_0.aClass94Array75[l++] = GameStringStatics.aClass94_2331;
                                   }
                                   continue;
                                 }
@@ -2902,7 +2902,7 @@ public final class GlobalStatics_11 {
                                       != null) {
                                     GlobalStatics_0.aClass94Array75[l++] = class3_sub28_sub3.aClass94_3554;
                                   } else {
-                                    GlobalStatics_0.aClass94Array75[l++] = GlobalStatics_6.aClass94_2331;
+                                    GlobalStatics_0.aClass94Array75[l++] = GameStringStatics.aClass94_2331;
                                   }
                                   continue;
                                 }
@@ -2957,7 +2957,7 @@ public final class GlobalStatics_11 {
                                   int k70 = 0;
                                   GameString class94_51;
                                   if (j30 == -1) {
-                                    class94_51 = GlobalStatics_6.aClass94_2331;
+                                    class94_51 = GameStringStatics.aClass94_2331;
                                   } else {
                                     class94_51 = DummyClass25.aClass131_1624.aClass94Array1721[j30];
                                     k70 = DummyClass25.aClass131_1624
@@ -2976,7 +2976,7 @@ public final class GlobalStatics_11 {
                                   int k30 = GlobalStatics_10.method251(-1);
                                   GameString class94_52;
                                   if (k30 == -1) {
-                                    class94_52 = GlobalStatics_6.aClass94_2331;
+                                    class94_52 = GameStringStatics.aClass94_2331;
                                   } else {
                                     class94_52 = DummyClass25.aClass131_1624.aClass94Array1721[k30];
                                     i71 = DummyClass25.aClass131_1624
@@ -3255,7 +3255,7 @@ public final class GlobalStatics_11 {
                                   continue;
                                 }
                                 if (j1 == 5419) {
-                                  GameString class94_24 = GlobalStatics_6.aClass94_2331;
+                                  GameString class94_24 = GameStringStatics.aClass94_2331;
                                   if (GlobalStatics_9.aClass64_1778 != null) {
                                     class94_24 =
                                         DummyClass58.method1653(
@@ -4020,9 +4020,9 @@ public final class GlobalStatics_11 {
                                         if (class44_sub1 == null) {
                                           GlobalStatics_9.anIntArray2929[k++] = -1;
                                           GlobalStatics_9.anIntArray2929[k++] = 0;
-                                          GlobalStatics_0.aClass94Array75[l++] = GlobalStatics_6.aClass94_2331;
+                                          GlobalStatics_0.aClass94Array75[l++] = GameStringStatics.aClass94_2331;
                                           GlobalStatics_9.anIntArray2929[k++] = 0;
-                                          GlobalStatics_0.aClass94Array75[l++] = GlobalStatics_6.aClass94_2331;
+                                          GlobalStatics_0.aClass94Array75[l++] = GameStringStatics.aClass94_2331;
                                           GlobalStatics_9.anIntArray2929[k++] = 0;
                                         } else {
                                           GlobalStatics_9.anIntArray2929[k++] = class44_sub1.anInt2621;
@@ -4043,9 +4043,9 @@ public final class GlobalStatics_11 {
                                         if (class44_sub1_1 == null) {
                                           GlobalStatics_9.anIntArray2929[k++] = -1;
                                           GlobalStatics_9.anIntArray2929[k++] = 0;
-                                          GlobalStatics_0.aClass94Array75[l++] = GlobalStatics_6.aClass94_2331;
+                                          GlobalStatics_0.aClass94Array75[l++] = GameStringStatics.aClass94_2331;
                                           GlobalStatics_9.anIntArray2929[k++] = 0;
-                                          GlobalStatics_0.aClass94Array75[l++] = GlobalStatics_6.aClass94_2331;
+                                          GlobalStatics_0.aClass94Array75[l++] = GameStringStatics.aClass94_2331;
                                           GlobalStatics_9.anIntArray2929[k++] = 0;
                                         } else {
                                           GlobalStatics_9.anIntArray2929[k++] = class44_sub1_1.anInt2621;
@@ -4098,9 +4098,9 @@ public final class GlobalStatics_11 {
                                           GlobalStatics_9.anIntArray2929[k++] = class44_sub1_2.anInt722;
                                         } else {
                                           GlobalStatics_9.anIntArray2929[k++] = -1;
-                                          GlobalStatics_0.aClass94Array75[l++] = GlobalStatics_6.aClass94_2331;
+                                          GlobalStatics_0.aClass94Array75[l++] = GameStringStatics.aClass94_2331;
                                           GlobalStatics_9.anIntArray2929[k++] = 0;
-                                          GlobalStatics_0.aClass94Array75[l++] = GlobalStatics_6.aClass94_2331;
+                                          GlobalStatics_0.aClass94Array75[l++] = GameStringStatics.aClass94_2331;
                                           GlobalStatics_9.anIntArray2929[k++] = 0;
                                         }
                                         continue;
@@ -4341,7 +4341,7 @@ public final class GlobalStatics_11 {
                                   GlobalStatics_0.aClass94Array75[l++] =
                                       GlobalStatics_10.aClass94Array3391.length
                                           <= l37 ?
-                                          GlobalStatics_6.aClass94_2331 :
+                                          GameStringStatics.aClass94_2331 :
                                           GlobalStatics_10.aClass94Array3391[l37]
                                               .formatName(
                                                   (byte) -50);
@@ -4414,7 +4414,7 @@ public final class GlobalStatics_11 {
                               .getItemConfig(l38, (byte) 77);
                           if (k61 < 1 || k61 > 5
                               || class48_2.aClass94Array801[-1 + k61] == null) {
-                            GlobalStatics_0.aClass94Array75[l++] = GlobalStatics_6.aClass94_2331;
+                            GlobalStatics_0.aClass94Array75[l++] = GameStringStatics.aClass94_2331;
                           } else {
                             GlobalStatics_0.aClass94Array75[l++] = class48_2.aClass94Array801[
                                 k61 - 1];
@@ -4433,7 +4433,7 @@ public final class GlobalStatics_11 {
                             GlobalStatics_0.aClass94Array75[l++] = class48_3.inventoryOptions[
                                 -1 + l61];
                           } else {
-                            GlobalStatics_0.aClass94Array75[l++] = GlobalStatics_6.aClass94_2331;
+                            GlobalStatics_0.aClass94Array75[l++] = GameStringStatics.aClass94_2331;
                           }
                           continue;
                         }
@@ -4786,7 +4786,7 @@ public final class GlobalStatics_11 {
                           && class11_8.aClass94Array171[l64] != null) {
                         GlobalStatics_0.aClass94Array75[l++] = class11_8.aClass94Array171[l64];
                       } else {
-                        GlobalStatics_0.aClass94Array75[l++] = GlobalStatics_6.aClass94_2331;
+                        GlobalStatics_0.aClass94Array75[l++] = GameStringStatics.aClass94_2331;
                       }
                       continue;
                     }
@@ -4796,7 +4796,7 @@ public final class GlobalStatics_11 {
                     if (class11_8.aClass94_277 != null) {
                       GlobalStatics_0.aClass94Array75[l++] = class11_8.aClass94_277;
                     } else {
-                      GlobalStatics_0.aClass94Array75[l++] = GlobalStatics_6.aClass94_2331;
+                      GlobalStatics_0.aClass94Array75[l++] = GameStringStatics.aClass94_2331;
                     }
                     continue;
                   }

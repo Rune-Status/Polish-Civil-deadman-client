@@ -14,7 +14,6 @@ import com.jagex.runescape.opengl.GlUtils;
 import com.jagex.runescape.opengl.MaterialShader4;
 import com.jagex.runescape.opengl.MaterialShader5;
 import com.jagex.runescape.opengl.SomethingGl;
-import com.jagex.runescape.opengl.SomethingGl0;
 import com.jagex.runescape.opengl.SomethingShadows;
 import com.jagex.runescape.opengl.Texture;
 import com.jagex.runescape.opengl.WaterShader;
@@ -1231,7 +1230,7 @@ public final class GameClient extends GameStub {
     GlobalStatics_7.method376(false);
     GlobalStatics_9.method1860(0);
     GlobalStatics_0.method1429((byte) 53);
-    SomethingGl0.method147();
+    GLStatics.method147();
     GlobalStatics_9.method954(128);
     GlobalStatics_9.method1703(10967);
     GlobalStatics_9.method1284((byte) -87);

@@ -123,7 +123,7 @@ public final class DummyClass50 {
         }
       } else {
         GlobalStatics_8.printMessage(GlobalStatics_9.EMPTY_STRING, 0,
-            GlobalStatics_6.aClass94_1884, -1);
+            GameStringStatics.aClass94_1884, -1);
       }
     }
   }

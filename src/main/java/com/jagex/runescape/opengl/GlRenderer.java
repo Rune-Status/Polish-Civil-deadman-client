@@ -49,7 +49,7 @@ public final class GlRenderer {
   private static GameString RADEON_STRING = GameStringStatics
       .create("radeon");
   public static int maxTextureUnits;
-  public static boolean bigEndian;
+  public static boolean USE_BIG_ENDIAN;
   public static int anInt1791;
   public static boolean aBoolean1798 = true;
   public static boolean texture3dSupport;
@@ -362,7 +362,7 @@ public final class GlRenderer {
     }
 
     if (var0 == 0) {
-      GlRenderer.bigEndian = ByteOrder.nativeOrder() == ByteOrder.BIG_ENDIAN;
+      GlRenderer.USE_BIG_ENDIAN = ByteOrder.nativeOrder() == ByteOrder.BIG_ENDIAN;
       GlRenderer.VERTEX_BUFFER_SUPPORT = GlRenderer.GL
           .isExtensionAvailable("GL_ARB_vertex_buffer_object");
       GlRenderer.multiSampleSupport = GlRenderer.GL

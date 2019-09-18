@@ -1,5 +1,6 @@
 package com.jagex.runescape.opengl;
 
+import com.jagex.runescape.statics.GlobalStatics_11;
 import com.jagex.runescape.statics.GlobalStatics_6;
 import com.jogamp.opengl.GL;
 import com.jogamp.opengl.GL2ES1;
@@ -84,8 +85,8 @@ public final class GlEnvironment {
       GlEnvironment.FOG_COLOR_RGB[2] = (color & 255) / 255.0F;
       GlRenderer.GL.glFogi(GL2ES1.GL_FOG_MODE, GL.GL_LINEAR);
       GlRenderer.GL.glFogf(GL2ES1.GL_FOG_DENSITY, 0.95F);
-      GlRenderer.GL.glHint(GL2ES1.GL_FOG_HINT, GL.GL_NICEST);
-      int fogEnd = 3584;
+      GlRenderer.GL.glHint(GL2ES1.GL_FOG_HINT, GL.GL_FASTEST);
+      int fogEnd = GlobalStatics_6.FAR;
       int minimumStart = GlobalStatics_6.NEAR;
       int fogStart = fogEnd - 512 - offset;
       if (fogStart < minimumStart) {

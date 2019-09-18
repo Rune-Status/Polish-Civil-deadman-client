@@ -2288,7 +2288,7 @@ public final class GlModel extends AbstractModel {
     }
 
     int var1;
-    if (GlRenderer.bigEndian) {
+    if (GlRenderer.USE_BIG_ENDIAN) {
       for (var1 = 0; var1 < this.anInt3852; ++var1) {
         GlModel.indicesBuffer.writeInt(this.v0[var1]);
         GlModel.indicesBuffer.writeInt(this.v1[var1]);
@@ -2692,7 +2692,7 @@ public final class GlModel extends AbstractModel {
       int var13;
       if (var2) {
         int var14;
-        if (GlRenderer.bigEndian) {
+        if (GlRenderer.USE_BIG_ENDIAN) {
           for (var7 = 0; var7 < this.vertexCCC; ++var7) {
             var8 = Float.floatToRawIntBits(this.vx[var7]);
             var9 = Float.floatToRawIntBits(this.vy[var7]);
@@ -2880,7 +2880,7 @@ public final class GlModel extends AbstractModel {
         GlModel.indicesBuffer.position = this.vertexNormalData.pointer;
         short var30;
         float var32;
-        if (GlRenderer.bigEndian) {
+        if (GlRenderer.USE_BIG_ENDIAN) {
           for (var9 = 0; var9 < this.amountVertices; ++var9) {
             var30 = this.aShortArray3841[var9];
             if (var30 == 0) {
@@ -2933,7 +2933,7 @@ public final class GlModel extends AbstractModel {
 
       if (var5) {
         GlModel.indicesBuffer.position = this.vertexTextureData.pointer;
-        if (GlRenderer.bigEndian) {
+        if (GlRenderer.USE_BIG_ENDIAN) {
           for (var7 = 0; var7 < this.amountVertices; ++var7) {
             GlModel.indicesBuffer.writeFloat(this.aFloatArray3824[var7]);
             GlModel.indicesBuffer.writeFloat(this.aFloatArray3847[var7]);

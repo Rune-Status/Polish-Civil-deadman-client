@@ -15,8 +15,8 @@ public final class CommonGL {
     for (int var1 = 0; var1 < GLStatics.aClass3_Sub11ArrayArray2199[0].length;
         ++var1) {
       SomethingGl0 var2 = GLStatics.aClass3_Sub11ArrayArray2199[0][var1];
-      if (var2.materialId >= 0
-          && GLStatics.textureCache.method18(var2.materialId, 255) == 4) {
+      if (var2.material >= 0
+          && GLStatics.textureCache.method18(var2.material, 255) == 4) {
         GlRenderer.GL
             .glColor4fv(GLStatics.method1705(var2.anInt2355, 0),
                 0);
@@ -46,11 +46,11 @@ public final class CommonGL {
       GLStatics.anInt3072 = -1;
 
       //TODO it randomy went null after some refactoring
-//      possibly synchronization issue, right now null check is fine
+      //possibly synchronization issue, right now null check is fine
+      //this has something todo with water
       if (array[0] != null) {
         for (int y = 0; y < array[0].length; ++y) {
           SomethingGl0 var28 = array[0][y];
-
           //TODO 251.5F -
           float var26 = 251.5F - (var28.aBoolean2364 ? 1.0F : 0.5F);
           if (var28.anInt2355 != GLStatics.anInt1244) {
@@ -61,7 +61,6 @@ public final class CommonGL {
 
           var28.renderSceneGroundTiles(GLStatics.sceneGraphTiles, var26);
         }
-
         MaterialShader3.method2253();
       }
     } else {
@@ -74,8 +73,8 @@ public final class CommonGL {
           float var33 =
               201.5F - GlobalStatics_6.NEAR * plane - (var25.aBoolean2364 ? 1.0F
                   : 0.5F);
-          if (var25.materialId != -1
-              && GLStatics.textureCache.method18(var25.materialId, 255) == 4
+          if (var25.material != -1
+              && GLStatics.textureCache.method18(var25.material, 255) == 4
               && GLStatics.aBoolean1685) {
             GLStatics.method535(var25.anInt2355);
           }

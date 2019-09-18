@@ -91,7 +91,7 @@ public final class SomethingLight {
     Buffer var1 = new Buffer(this.anInt655 * 4);
     Buffer var2 = new Buffer(this.anInt653 * 16);
     int var3;
-    if (GlRenderer.bigEndian) {
+    if (GlRenderer.USE_BIG_ENDIAN) {
       for (var3 = 0; var3 < this.anInt653; ++var3) {
         var2.writeByte(this.aByteArray654[var3]);
         var2.writeByte(this.aByteArray644[var3]);

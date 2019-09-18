@@ -1,5 +1,6 @@
 package com.jagex.runescape.opengl;
 
+import com.jagex.runescape.buffer.Buffer;
 import com.jagex.runescape.common.GameString;
 import com.jagex.runescape.common.GameStringStatics;
 import com.jagex.runescape.model.AbstractDirectColorSprite;
@@ -18,6 +19,7 @@ import com.jagex.runescape.statics.GlobalStatics_11;
 import com.jagex.runescape.statics.GlobalStatics_2;
 import com.jagex.runescape.statics.GlobalStatics_5;
 import com.jagex.runescape.statics.GlobalStatics_9;
+import java.nio.ByteBuffer;
 
 public class GLStatics {
 
@@ -56,6 +58,10 @@ public class GLStatics {
   public static int screenLowerY;
   static GameString aClass94_695 = GameStringStatics.create("Unable to find ");
   public static GameString aClass94_691 = GLStatics.aClass94_695;
+  static ByteBuffer aByteBuffer2361;
+  static Buffer aClass3_Sub30_2362;
+  static ByteBuffer aByteBuffer2368;
+  static Buffer aClass3_Sub30_2372;
 
   public static float[] method1705(int var0, int var1) {
     float var2 =
@@ -216,5 +222,19 @@ public class GLStatics {
     var1 |= var1 >>> 8;
     var1 |= var1 >>> 16;
     return 1 + var1;
+  }
+
+  public static void method144() {
+    aClass3_Sub30_2372 = null;
+    aClass3_Sub30_2362 = null;
+    aByteBuffer2368 = null;
+    aByteBuffer2361 = null;
+  }
+
+  public static void method147() {
+    aClass3_Sub30_2372 = null;
+    aClass3_Sub30_2362 = null;
+    aByteBuffer2368 = null;
+    aByteBuffer2361 = null;
   }
 }

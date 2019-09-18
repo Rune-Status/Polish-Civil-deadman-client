@@ -5466,8 +5466,8 @@ public class GlobalStatics_10 {
           GlobalStatics_9.toString(var1 / 1000000),
           GlobalStatics_10.aClass94_3117, GlobalStatics_9.aClass94_1076
       }) : GlobalStatics_9.concat(new GameString[]{
-          GlobalStatics_6.aClass94_2477, GlobalStatics_9.toString(var1 / 1000),
-          GlobalStatics_6.aClass94_3584, GlobalStatics_9.aClass94_1076
+          GameStringStatics.aClass94_2477, GlobalStatics_9.toString(var1 / 1000),
+          GameStringStatics.aClass94_3584, GlobalStatics_9.aClass94_1076
       });
     }
   }
@@ -5490,7 +5490,7 @@ public class GlobalStatics_10 {
     }
 
     return GlobalStatics_9.concat(new GameString[]{
-        GlobalStatics_6.aClass94_577, var1, GlobalStatics_2.aClass94_3601,
+        GameStringStatics.aClass94_577, var1, GlobalStatics_2.aClass94_3601,
         GlobalStatics_9.toString(GlobalStatics_10.languageId),
         GlobalStatics_5.aClass94_1932,
         GlobalStatics_9.toString(GlobalStatics_9.affiliateId), var2,
@@ -6055,8 +6055,8 @@ public class GlobalStatics_10 {
     GlobalStatics_10.aClass94_1688 = DummyClass15.aClass94_1878;
     GlobalStatics_9.aClass94_461 = DummyClass41.aClass94_868;
     GlobalStatics_10.aClass94_3426 = GlobalStatics_9.aClass94_1907;
-    DummyClass30.aClass94_459 = GlobalStatics_6.aClass94_3585;
-    GlobalStatics_2.aClass94_2576 = GlobalStatics_6.aClass94_1882;
+    DummyClass30.aClass94_459 = GameStringStatics.aClass94_3585;
+    GlobalStatics_2.aClass94_2576 = GameStringStatics.aClass94_1882;
     GlobalStatics_2.aClass94_2216 = GlobalStatics_0.aClass94_1179;
     GlTexture2d.aClass94_3762 = GlobalStatics_10.aClass94_3172;
     GlobalStatics_10.aClass94_3117 = DummyClass4.aClass94_3002;
@@ -6067,12 +6067,12 @@ public class GlobalStatics_10 {
     DummyClass27.aClass94_1583 = GlobalStatics_9.OK;
     DummyClass53.aClass94_1335 = GlobalStatics_9.aClass94_2274;
     GlobalStatics_10.aClass94_3167 = GlobalStatics_4.aClass94_3633;
-    DummyClass5.aClass94_2991 = GlobalStatics_6.aClass94_3583;
+    DummyClass5.aClass94_2991 = GameStringStatics.aClass94_3583;
     GlobalStatics_9.aClass94_2267 = GlobalStatics_9.aClass94_3646;
     GlobalStatics_9.aClass94_327 = DummyClass35.aClass94_659;
     DummyClass14.ATTEMPTING_TO_RECONNECT = GlTexture2d.aClass94_3758;
     GlobalStatics_9.aClass94_551 = GlobalStatics_10.aClass94_3345;
-    GlobalStatics_10.aClass94_4040 = GlobalStatics_6.aClass94_1122;
+    GlobalStatics_10.aClass94_4040 = GameStringStatics.aClass94_1122;
     GlobalStatics_10.aClass94_1731 = GlobalStatics_10.aClass94_3206;
     GlobalStatics_0.aClass94_2151 = GlobalStatics_9.aClass94_3251;
     GlobalStatics_8.OPTION_DROP = GlobalStatics_6.aClass94_2518;
@@ -6082,11 +6082,11 @@ public class GlobalStatics_10 {
     GlobalStatics_9.aClass94_3575 = GlobalStatics_9.aClass94_325;
     GlobalStatics_9.aClass94_4071 = DummyClass20.aClass94_1783;
     GlobalStatics_10.aClass94_3445 = GlobalStatics_7.aClass94_1089;
-    GlobalStatics_6.aClass94_3691 = GlobalStatics_0.aClass94_77;
+    GameStringStatics.aClass94_3691 = GlobalStatics_0.aClass94_77;
     GlobalStatics_9.aClass94_2624 = GlobalStatics_9.aClass94_897;
     DummyClass15.aClass94_1879 = GlobalStatics_0.aClass94_2594;
     GlobalStatics_10.aClass94_3397 = DummyClass20.aClass94_1782;
-    GlobalStatics_6.aClass94_2526 = DummyClass26.aClass94_1612;
+    GameStringStatics.aClass94_2526 = DummyClass26.aClass94_1612;
     GlobalStatics_9.aClass94_361 = GlobalStatics_9.aClass94_550;
     GlobalStatics_10.aClass94_3097 = GlobalStatics_9.aClass94_3650;
     GlobalStatics_9.aClass94_2285 = DummyClass45.aClass94_988;
@@ -6103,12 +6103,12 @@ public class GlobalStatics_10 {
     DummyClass12.aClass94_2031 = GlobalStatics_8.aClass94_35;
     DummyClass26.aClass94_1615 = GlobalStatics_3.aClass94_2458;
     GlobalStatics_4.aClass94_3629 = DummyClass39.aClass94_738;
-    GlobalStatics_6.aClass94_3584 = GlobalStatics_9.aClass94_2641;
+    GameStringStatics.aClass94_3584 = GlobalStatics_9.aClass94_2641;
     DummyClass32.aClass94_525 = DummyClass45.aClass94_982;
-    GlobalStatics_6.aClass94_3586 = GlobalStatics_9.aClass94_2641;
+    GameStringStatics.aClass94_3586 = GlobalStatics_9.aClass94_2641;
     GlobalStatics_10.aClass94_1722 = DummyClass45.aClass94_981;
     GlobalStatics_9.CONNECTION_LOST = GlobalStatics_10.aClass94_3302;
-    GlobalStatics_6.aClass94_1884 = GlobalStatics_9.aClass94_1294;
+    GameStringStatics.aClass94_1884 = GlobalStatics_9.aClass94_1294;
     GlobalStatics_0.LOADED_INTERFACES = GlobalStatics_8.aClass94_951;
     GlobalStatics_9.aClass94_485 = GlobalStatics_0.aClass94_24;
     GlobalStatics_9.aClass94_3249 = GlobalStatics_9.aClass94_3774;

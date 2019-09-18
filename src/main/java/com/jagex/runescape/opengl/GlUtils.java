@@ -1,7 +1,6 @@
 package com.jagex.runescape.opengl;
 
 import com.jogamp.opengl.GL;
-import com.jogamp.opengl.GL2;
 import java.nio.IntBuffer;
 
 public final class GlUtils {
@@ -61,7 +60,7 @@ public final class GlUtils {
     GlRenderer.GL.glDisable(3042);
     GlRenderer.GL.glDisable(3008);
     GlRenderer.GL
-        .glDrawPixels(var3, var4, 0x80e1, GlRenderer.bigEndian ? 0x8367 : GL.GL_UNSIGNED_BYTE,
+        .glDrawPixels(var3, var4, 0x80e1, GlRenderer.USE_BIG_ENDIAN ? 0x8367 : GL.GL_UNSIGNED_BYTE,
       IntBuffer.wrap(var0));
     GlRenderer.GL.glEnable(3008);
     GlRenderer.GL.glEnable(3042);

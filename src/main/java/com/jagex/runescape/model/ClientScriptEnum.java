@@ -1,6 +1,6 @@
 package com.jagex.runescape.model;
 
-import com.jagex.runescape.statics.GlobalStatics_6;
+import com.jagex.runescape.common.GameStringStatics;
 import com.jagex.runescape.statics.GlobalStatics_7;
 import com.jagex.runescape.buffer.Buffer;
 import com.jagex.runescape.common.GameString;
@@ -21,7 +21,7 @@ public final class ClientScriptEnum extends SubNode {
 
 
   public ClientScriptEnum() {
-    this.defaultValue = GlobalStatics_6.aClass94_750;
+    this.defaultValue = GameStringStatics.aClass94_750;
   }
 
   private void parseOpcode(int opcode, Buffer var2, byte var3) {

@@ -3832,27 +3832,27 @@ public class GlobalStatics_9 {
     GlobalStatics_10.aClass94_2210 = GlobalStatics_9.aClass94_1922;
     GlobalStatics_8.OPTION_DROP = GlobalStatics_9.aClass94_2687;
     GlobalStatics_7.aClass94_4058 = GlobalStatics_10.aClass94_3324;
-    GlobalStatics_6.aClass94_2526 = GlobalStatics_9.aClass94_1348;
-    GlobalStatics_6.aClass94_3586 = GlobalStatics_7.aClass94_3661;
+    GameStringStatics.aClass94_2526 = GlobalStatics_9.aClass94_1348;
+    GameStringStatics.aClass94_3586 = GlobalStatics_7.aClass94_3661;
     DummyClass24.aClass94_1653 = GlobalStatics_5.aClass94_2013;
     GlobalStatics_2.aClass94_43 = GlobalStatics_9.aClass94_1558;
     GlobalStatics_11.aClass94_809 = DummyClass52.aClass94_1173;
     GlobalStatics_9.aClass94_62 = GlobalStatics_10.aClass94_3326;
     GlobalStatics_8.aClass94_1409 = GlobalStatics_10.aClass94_1728;
     GlobalStatics_10.aClass94_2481 = GlobalStatics_9.aClass94_2276;
-    DummyClass27.aClass94_1583 = GlobalStatics_6.aClass94_2499;
+    DummyClass27.aClass94_1583 = GameStringStatics.aClass94_2499;
     GlobalStatics_9.aClass94_485 = Texture.aClass94_3798;
     if (var0) {
       GlobalStatics_9.aBoolean3641 = false;
     }
 
     GlobalStatics_4.aClass94_825 = GlobalStatics_9.aClass94_2269;
-    GlobalStatics_4.aClass94_3629 = GlobalStatics_6.aClass94_3496;
+    GlobalStatics_4.aClass94_3629 = GameStringStatics.aClass94_3496;
     DummyClass35.aClass94_666 = GlobalStatics_9.aClass94_463;
     GlobalStatics_9.aClass94_3643 = GlobalStatics_10.aClass94_3053;
     DummyClass12.aClass94_2031 = GlobalStatics_10.aClass94_1377;
     GlobalStatics_10.aClass94_1688 = GlobalStatics_10.aClass94_3281;
-    GlobalStatics_6.aClass94_1884 = GlobalStatics_9.aClass94_901;
+    GameStringStatics.aClass94_1884 = GlobalStatics_9.aClass94_901;
     DummyClass44.aClass94_935 = GlobalStatics_10.aClass94_3401;
     GlobalStatics_10.LOADING_PLEASE_WAIT = DummyClass44.aClass94_933;
     GlobalStatics_10.aClass94_3427 = GlobalStatics_10.aClass94_3355;
@@ -3862,13 +3862,13 @@ public class GlobalStatics_9 {
     com.jagex.runescape.statics.GlobalStatics_0.aClass94_1180 = GlobalStatics_10.aClass94_3408;
     GlobalStatics_9.CONNECTION_LOST = DummyClass1.aClass94_414;
     DummyClass32.SKILL = MaterialShader5.aClass94_2170;
-    GlobalStatics_6.aClass94_3691 = GlobalStatics_7.aClass94_2163;
+    GameStringStatics.aClass94_3691 = GlobalStatics_7.aClass94_2163;
     GlobalStatics_9.aClass94_374 = GlTexture2d.aClass94_3763;
     GlobalStatics_8.aClass94_4 = GlobalStatics_11.aClass94_808;
     GlobalStatics_2.aClass94_2216 = GlobalStatics_9.aClass94_2340;
     GlobalStatics_4.aClass94_822 = DummyClass56.aClass94_1455;
-    GlobalStatics_9.aClass94_2267 = GlobalStatics_6.aClass94_2524;
-    GlobalStatics_6.aClass94_3584 = GlobalStatics_7.aClass94_3661;
+    GlobalStatics_9.aClass94_2267 = GameStringStatics.aClass94_2524;
+    GameStringStatics.aClass94_3584 = GlobalStatics_7.aClass94_3661;
     GlobalStatics_10.aClass94_1722 = GlobalStatics_9.aClass94_150;
     DummyClass14.aClass94_1962 = DummyClass38.aClass94_728;
     GlobalStatics_10.aClass94_3397 = GlobalStatics_10.aClass94_297;
@@ -3885,7 +3885,7 @@ public class GlobalStatics_9 {
     GlobalStatics_10.aClass94_4040 = GlobalStatics_9.aClass94_3547;
     DummyClass14.ATTEMPTING_TO_RECONNECT = com.jagex.runescape.statics.GlobalStatics_0.aClass94_2149;
     com.jagex.runescape.statics.GlobalStatics_0.LOADED_INTERFACES = Texture.aClass94_3785;
-    GlobalStatics_9.aClass94_551 = GlobalStatics_6.aClass94_1647;
+    GlobalStatics_9.aClass94_551 = GameStringStatics.aClass94_1647;
     GlobalStatics_9.aClass94_2624 = GlobalStatics_9.aClass94_2053;
     GlobalStatics_9.aClass94_3544 = GlobalStatics_10.aClass94_145;
     GlobalStatics_8.aClass94_36 = GlobalStatics_10.aClass94_1889;
@@ -3897,7 +3897,7 @@ public class GlobalStatics_9 {
     GlobalStatics_9.aClass94_3575 = GlobalStatics_9.aClass94_1044;
     DummyClass5.aClass94_2991 = GlobalStatics_0.aClass94_22;
     GlobalStatics_8.aClass94_957 = GlobalStatics_4.aClass94_1696;
-    DummyClass26.aClass94_1615 = GlobalStatics_6.aClass94_2297;
+    DummyClass26.aClass94_1615 = GameStringStatics.aClass94_2297;
     GlobalStatics_10.aClass94_3311 = DummyClass50.aClass94_1140;
     GlobalStatics_7.CONNECTED_TO_UPDATE_SERVER = GlobalStatics_5.aClass94_1618;
     GlobalStatics_9.aClass94_361 = DummyClass28.aClass94_338;
@@ -5641,7 +5641,7 @@ public class GlobalStatics_9 {
             }
           }
 
-          SomethingGl0.method144();
+          GLStatics.method144();
           GlobalStatics_3.method165(-7878);
         }
 
@@ -12670,7 +12670,7 @@ public class GlobalStatics_9 {
           }
 
           GameString var13 =
-              GlobalStatics_5.gameId == 1 ? GlobalStatics_6.aClass94_2526
+              GlobalStatics_5.gameId == 1 ? GameStringStatics.aClass94_2526
                   : DummyClass32.aClass94_525;
           if (var3.combatLevel < var3.anInt3965) {
             var5 = GlobalStatics_9.concat(new GameString[]{
@@ -12682,7 +12682,7 @@ public class GlobalStatics_9 {
                 GlobalStatics_9.toString(var3.combatLevel),
                 DummyClass59.aClass94_673,
                 GlobalStatics_9.toString(var3.anInt3965 - var3.combatLevel),
-                GlobalStatics_6.aClass94_2335
+                GameStringStatics.aClass94_2335
             });
           } else {
             var5 = GlobalStatics_9.concat(new GameString[]{
@@ -12692,7 +12692,7 @@ public class GlobalStatics_9 {
                 GlobalStatics_9.aClass94_2562, GlobalStatics_9.aClass94_1072,
                 var13,
                 GlobalStatics_9.toString(var3.combatLevel),
-                GlobalStatics_6.aClass94_2335
+                GameStringStatics.aClass94_2335
             });
           }
         } else {
@@ -12700,7 +12700,7 @@ public class GlobalStatics_9 {
               var3.getFullName(), GlobalStatics_9.aClass94_1072,
               DummyClass32.SKILL,
               GlobalStatics_9.toString(var3.skillTotal),
-              GlobalStatics_6.aClass94_2335
+              GameStringStatics.aClass94_2335
           });
         }
 

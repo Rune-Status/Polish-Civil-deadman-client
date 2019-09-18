@@ -34,7 +34,7 @@ public final class BlockShadowMap {
     int offsetX;
     for (int offsetY = 0; offsetY <= 8; ++offsetY) {
       for (offsetX = 0; offsetX <= 8; ++offsetX) {
-        if (GlRenderer.bigEndian) {
+        if (GlRenderer.USE_BIG_ENDIAN) {
           vertexBuffers.writeFloat(offsetX / 8.0F);
           vertexBuffers.writeFloat(offsetY / 8.0F);
           vertexBuffers.writeFloat(offsetX * 128);
@@ -67,7 +67,7 @@ public final class BlockShadowMap {
 
     for (offsetX = 0; offsetX < 8; ++offsetX) {
       for (int var7 = 0; var7 < 8; ++var7) {
-        if (GlRenderer.bigEndian) {
+        if (GlRenderer.USE_BIG_ENDIAN) {
           var8.writeInt(var7 + (offsetX + 1) * 9);
           var8.writeInt(var7 + offsetX * 9);
           var8.writeInt(var7 + 1 + offsetX * 9);

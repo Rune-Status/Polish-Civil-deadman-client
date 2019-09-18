@@ -42,6 +42,41 @@ public final class GameStringStatics {
       (byte) 51, (byte) 52,
       (byte) 53, (byte) 54, (byte) 55, (byte) 56, (byte) 57
   };
+  public static GameString aClass94_3582 = create("K");
+  public static GameString aClass94_3584 = aClass94_3582;
+  public static GameString aClass94_3586 = aClass94_3582;
+  public static GameString aClass94_3583 = create("brillant3:");
+  public static GameString aClass94_3585 = create(",Mcran)2titre ouvert");
+  public static GameString aClass94_2323 = create("<img=0>");
+  public static GameString aClass94_2331 = create("");
+  public static GameString aClass94_2335 = create("(Y");
+  public static GameString aClass94_2525 = create("rating: ");
+  public static GameString aClass94_2526 = aClass94_2525;
+  public static GameString aClass94_2499 = create("Okay");
+  public static GameString aClass94_2524 =
+      create("Starte 3D)2Softwarebibliothek)3");
+  public static GameString aClass94_3496 = create("Spielwelt erstellt)3");
+  public static GameString aClass94_1122 =
+      create("M-Bmoire en cours d(Wattribution");
+  public static GameString CLIENT_SCRIPT_ERROR =
+      create("Clientscript error )2 check log for details");
+  public static GameString aClass94_1645 = create("Hidden)2");
+  public static GameString COMMAND_WM2 = create("::wm2");
+  public static GameString aClass94_1647 = create("gleiten:");
+  public static GameString COMMAND_FPS_OFF = create("::fpsoff");
+  public static GameString CHALLENGE_REQ = create(":chalreq:");
+  public static GameString aClass94_577 = create("http:)4)4");
+  public static GameString aClass94_1888 =
+      create("Your ignore list is full)3 Max of 100 users)3");
+  public static GameString aClass94_1884 = aClass94_1888;
+  public static GameString aClass94_1882 = create("Librairie 3D d-Bmarr-Be");
+  public static GameString COOKIE_HOST = create("cookiehost");
+  public static GameString aClass94_750 = create("null");
+  public static GameString aClass94_2477 = create("<col=ffffff>");
+  public static GameString aClass94_2297 = create("Wordpack geladen)3");
+  public static GameString aClass94_2306 = create("<)4col> x");
+  public static GameString aClass94_3692 = create("Members object");
+  public static GameString aClass94_3691 = aClass94_3692;
 
   public static GameString createString(byte[] bytes, int off, int len) {
     GameString string = new GameString();

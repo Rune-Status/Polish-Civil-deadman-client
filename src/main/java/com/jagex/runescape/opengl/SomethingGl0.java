@@ -11,14 +11,10 @@ import java.nio.ByteOrder;
 
 public final class SomethingGl0 extends Node {
 
-  private static ByteBuffer aByteBuffer2361;
-  private static Buffer aClass3_Sub30_2362;
-  private static ByteBuffer aByteBuffer2368;
-  private static Buffer aClass3_Sub30_2372;
   public int anInt2342;
   public int anInt2343;
   public int anInt2344;
-  public int materialId;
+  public int material;
   public int anInt2355;
   public boolean aBoolean2364;
   private ByteBuffer aByteBuffer2345;
@@ -46,7 +42,7 @@ public final class SomethingGl0 extends Node {
 
   public SomethingGl0(int var1, float var2, boolean var3, boolean var4,
       int var5) {
-    this.materialId = var1;
+    this.material = var1;
     this.aFloat2373 = var2;
     this.aBoolean2364 = var3;
     this.aBoolean2347 = var4;
@@ -118,7 +114,7 @@ public final class SomethingGl0 extends Node {
         ? 40 : 36) * this.anInt2343);
 
     for (int var2 = 0; var2 < this.anInt2343; ++var2) {
-      if (GlRenderer.bigEndian) {
+      if (GlRenderer.USE_BIG_ENDIAN) {
         var1.writeFloat(this.anIntArray2371[var2]);
         var1.writeFloat(this.anIntArray2358[var2]);
         var1.writeFloat(this.anIntArray2352[var2]);
@@ -171,30 +167,30 @@ public final class SomethingGl0 extends Node {
   }
 
   public void renderSceneGroundTiles(SceneGraphTile[][][] var1, float y) {
-    if (SomethingGl0.aClass3_Sub30_2372 != null
-        && SomethingGl0.aClass3_Sub30_2372.bytes.length >=
+    if (GLStatics.aClass3_Sub30_2372 != null
+        && GLStatics.aClass3_Sub30_2372.bytes.length >=
         this.anInt2359 * 4) {
-      SomethingGl0.aClass3_Sub30_2372.position = 0;
+      GLStatics.aClass3_Sub30_2372.position = 0;
     } else {
-      SomethingGl0.aClass3_Sub30_2372 = new Buffer(this.anInt2359 * 4);
+      GLStatics.aClass3_Sub30_2372 = new Buffer(this.anInt2359 * 4);
     }
 
-    if (SomethingGl0.aClass3_Sub30_2362 != null
-        && SomethingGl0.aClass3_Sub30_2362.bytes.length >=
+    if (GLStatics.aClass3_Sub30_2362 != null
+        && GLStatics.aClass3_Sub30_2362.bytes.length >=
         this.anInt2356 * 4) {
-      SomethingGl0.aClass3_Sub30_2362.position = 0;
+      GLStatics.aClass3_Sub30_2362.position = 0;
     } else {
-      SomethingGl0.aClass3_Sub30_2362 = new Buffer(this.anInt2356 * 4);
+      GLStatics.aClass3_Sub30_2362 = new Buffer(this.anInt2356 * 4);
     }
 
     int var4;
     SceneGraphTile var5;
-    Buffer var6;
+    Buffer buffer;
     int[] var7;
     int[] var8;
     int var9;
     int var12;
-    if (GlRenderer.bigEndian) {
+    if (GlRenderer.USE_BIG_ENDIAN) {
       for (var4 = 0; var4 < this.anInt2366; ++var4) {
         var5 =
             var1[this.anIntArray2367[var4]][this.anIntArray2350[var4]][this.anIntArray2349[var4]];
@@ -204,21 +200,21 @@ public final class SomethingGl0 extends Node {
             var8 = this.anIntArrayArray2360[var4];
             if (var8 != null) {
               for (var9 = 0; var9 < var8.length; ++var9) {
-                SomethingGl0.aClass3_Sub30_2362.writeInt(var8[var9]);
+                GLStatics.aClass3_Sub30_2362.writeInt(var8[var9]);
               }
             }
 
-            var6 =
-                this.aBooleanArray2370[var4] ? SomethingGl0.aClass3_Sub30_2362
-                    : SomethingGl0.aClass3_Sub30_2372;
+            buffer =
+                this.aBooleanArray2370[var4] ? GLStatics.aClass3_Sub30_2362
+                    : GLStatics.aClass3_Sub30_2372;
           } else {
-            var6 = SomethingGl0.aClass3_Sub30_2372;
+            buffer = GLStatics.aClass3_Sub30_2372;
           }
 
           for (var12 = 1; var12 < var7.length - 1; ++var12) {
-            var6.writeInt(var7[0]);
-            var6.writeInt(var7[var12]);
-            var6.writeInt(var7[var12 + 1]);
+            buffer.writeInt(var7[0]);
+            buffer.writeInt(var7[var12]);
+            buffer.writeInt(var7[var12 + 1]);
           }
         }
       }
@@ -232,30 +228,30 @@ public final class SomethingGl0 extends Node {
             var8 = this.anIntArrayArray2360[var4];
             if (var8 != null) {
               for (var9 = 0; var9 < var8.length; ++var9) {
-                SomethingGl0.aClass3_Sub30_2362.writeIntLE(var8[var9], 79);
+                GLStatics.aClass3_Sub30_2362.writeIntLE(var8[var9], 79);
               }
             }
 
-            var6 =
-                this.aBooleanArray2370[var4] ? SomethingGl0.aClass3_Sub30_2362
-                    : SomethingGl0.aClass3_Sub30_2372;
+            buffer =
+                this.aBooleanArray2370[var4] ? GLStatics.aClass3_Sub30_2362
+                    : GLStatics.aClass3_Sub30_2372;
           } else {
-            var6 = SomethingGl0.aClass3_Sub30_2372;
+            buffer = GLStatics.aClass3_Sub30_2372;
           }
 
           for (var12 = 1; var12 < var7.length - 1; ++var12) {
-            var6.writeIntLE(var7[0], 84);
-            var6.writeIntLE(var7[var12], 103);
-            var6.writeIntLE(var7[var12 + 1], 82);
+            buffer.writeIntLE(var7[0], 84);
+            buffer.writeIntLE(var7[var12], 103);
+            buffer.writeIntLE(var7[var12 + 1], 82);
           }
         }
       }
     }
 
-    if (SomethingGl0.aClass3_Sub30_2372.position != 0
-        || SomethingGl0.aClass3_Sub30_2362.position != 0) {
-      if (this.materialId != -1) {
-        GLStatics.textureCache.initializeMaterial(this.materialId, true);
+    if (GLStatics.aClass3_Sub30_2372.position != 0
+        || GLStatics.aClass3_Sub30_2362.position != 0) {
+      if (this.material != -1) {
+        GLStatics.textureCache.initializeMaterial(this.material, true);
       } else {
         GlRenderer.bindTexture(-1);
         GLStatics.method551(0, 0);
@@ -306,51 +302,51 @@ public final class SomethingGl0 extends Node {
         GlRenderer.GL.glBindBuffer(0x8893, 0);
       }
 
-      if (SomethingGl0.aClass3_Sub30_2372.position != 0) {
-        if (SomethingGl0.aByteBuffer2368 != null
-            && SomethingGl0.aByteBuffer2368.capacity()
-            >= SomethingGl0.aClass3_Sub30_2372.position) {
-          SomethingGl0.aByteBuffer2368.clear();
+      if (GLStatics.aClass3_Sub30_2372.position != 0) {
+        if (GLStatics.aByteBuffer2368 != null
+            && GLStatics.aByteBuffer2368.capacity()
+            >= GLStatics.aClass3_Sub30_2372.position) {
+          GLStatics.aByteBuffer2368.clear();
         } else {
-          SomethingGl0.aByteBuffer2368 =
+          GLStatics.aByteBuffer2368 =
               ByteBuffer
-                  .allocateDirect(SomethingGl0.aClass3_Sub30_2372.position)
+                  .allocateDirect(GLStatics.aClass3_Sub30_2372.position)
                   .order(ByteOrder.nativeOrder());
         }
 
-        SomethingGl0.aByteBuffer2368
-            .put(SomethingGl0.aClass3_Sub30_2372.bytes, 0,
-                SomethingGl0.aClass3_Sub30_2372.position);
-        SomethingGl0.aByteBuffer2368.flip();
+        GLStatics.aByteBuffer2368
+            .put(GLStatics.aClass3_Sub30_2372.bytes, 0,
+                GLStatics.aClass3_Sub30_2372.position);
+        GLStatics.aByteBuffer2368.flip();
         GlRenderer.method1832(y);
         GlRenderer.GL
-            .glDrawElements(4, SomethingGl0.aClass3_Sub30_2372.position / 4,
+            .glDrawElements(4, GLStatics.aClass3_Sub30_2372.position / 4,
                 5125,
-                SomethingGl0.aByteBuffer2368);
+                GLStatics.aByteBuffer2368);
       }
 
-      if (SomethingGl0.aClass3_Sub30_2362.position != 0) {
-        if (SomethingGl0.aByteBuffer2361 != null
-            && SomethingGl0.aByteBuffer2361.capacity()
-            >= SomethingGl0.aClass3_Sub30_2362.position) {
-          SomethingGl0.aByteBuffer2361.clear();
+      if (GLStatics.aClass3_Sub30_2362.position != 0) {
+        if (GLStatics.aByteBuffer2361 != null
+            && GLStatics.aByteBuffer2361.capacity()
+            >= GLStatics.aClass3_Sub30_2362.position) {
+          GLStatics.aByteBuffer2361.clear();
         } else {
-          SomethingGl0.aByteBuffer2361 =
+          GLStatics.aByteBuffer2361 =
               ByteBuffer
-                  .allocateDirect(SomethingGl0.aClass3_Sub30_2362.position)
+                  .allocateDirect(GLStatics.aClass3_Sub30_2362.position)
                   .order(ByteOrder.nativeOrder());
         }
 
-        SomethingGl0.aByteBuffer2361
-            .put(SomethingGl0.aClass3_Sub30_2362.bytes, 0,
-                SomethingGl0.aClass3_Sub30_2362.position);
-        SomethingGl0.aByteBuffer2361.flip();
+        GLStatics.aByteBuffer2361
+            .put(GLStatics.aClass3_Sub30_2362.bytes, 0,
+                GLStatics.aClass3_Sub30_2362.position);
+        GLStatics.aByteBuffer2361.flip();
         GlRenderer.method1832(y - 100.0F);
         GlRenderer.method1851();
         GlRenderer.GL
-            .glDrawElements(4, SomethingGl0.aClass3_Sub30_2362.position / 4,
+            .glDrawElements(4, GLStatics.aClass3_Sub30_2362.position / 4,
                 5125,
-                SomethingGl0.aByteBuffer2361);
+                GLStatics.aByteBuffer2361);
         GlRenderer.method1830();
       }
 
@@ -382,17 +378,4 @@ public final class SomethingGl0 extends Node {
     return this.anInt2366++;
   }
 
-  public static void method144() {
-    SomethingGl0.aClass3_Sub30_2372 = null;
-    SomethingGl0.aClass3_Sub30_2362 = null;
-    SomethingGl0.aByteBuffer2368 = null;
-    SomethingGl0.aByteBuffer2361 = null;
-  }
-
-  public static void method147() {
-    SomethingGl0.aClass3_Sub30_2372 = null;
-    SomethingGl0.aClass3_Sub30_2362 = null;
-    SomethingGl0.aByteBuffer2368 = null;
-    SomethingGl0.aByteBuffer2361 = null;
-  }
 }
