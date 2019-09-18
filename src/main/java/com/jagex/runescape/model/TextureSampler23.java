@@ -1,11 +1,11 @@
 package com.jagex.runescape.model;
 
 import com.jagex.runescape.buffer.Buffer;
+import com.jagex.runescape.common.GameStringStatics;
 import com.jagex.runescape.statics.DummyClass13;
 import com.jagex.runescape.statics.DummyClass4;
 import com.jagex.runescape.statics.DummyClass55;
 import com.jagex.runescape.statics.GlobalStatics_10;
-import com.jagex.runescape.statics.GlobalStatics_4;
 import com.jagex.runescape.statics.GlobalStatics_9;
 
 public final class TextureSampler23 extends AbstractTextureSampler {
@@ -21,33 +21,33 @@ public final class TextureSampler23 extends AbstractTextureSampler {
         int var5 = DummyClass4.anIntArray2999[var1];
         float var6 = (float) Math.atan2(var4 - 2048, var5 - 2048);
         if (var6 >= -3.141592653589793 && var6 <= -2.356194490192345) {
-          GlobalStatics_4.anInt828 = var1;
+          GameStringStatics.anInt828 = var1;
           DummyClass13.anInt2024 = var3;
         } else if (var6 <= -1.5707963267948966 && var6 >= -2.356194490192345) {
           DummyClass13.anInt2024 = var1;
-          GlobalStatics_4.anInt828 = var3;
+          GameStringStatics.anInt828 = var3;
         } else if (var6 <= -0.7853981633974483 && var6 >= -1.5707963267948966) {
           DummyClass13.anInt2024 = -var1 + GlobalStatics_9.anInt1559;
-          GlobalStatics_4.anInt828 = var3;
+          GameStringStatics.anInt828 = var3;
         } else if (var6 <= 0.0F && var6 >= -0.7853981633974483) {
           DummyClass13.anInt2024 = var3;
-          GlobalStatics_4.anInt828 = DummyClass55.anInt1427 - var1;
+          GameStringStatics.anInt828 = DummyClass55.anInt1427 - var1;
         } else if (var6 >= 0.0F && var6 <= 0.7853981633974483D) {
           DummyClass13.anInt2024 = -var3 + GlobalStatics_9.anInt1559;
-          GlobalStatics_4.anInt828 = -var1 + DummyClass55.anInt1427;
+          GameStringStatics.anInt828 = -var1 + DummyClass55.anInt1427;
         } else if (var6 >= 0.7853981633974483D && var6 <= 1.5707963267948966D) {
           DummyClass13.anInt2024 = -var1 + GlobalStatics_9.anInt1559;
-          GlobalStatics_4.anInt828 = -var3 + DummyClass55.anInt1427;
+          GameStringStatics.anInt828 = -var3 + DummyClass55.anInt1427;
         } else if (var6 >= 1.5707963267948966D && var6 <= 2.356194490192345D) {
-          GlobalStatics_4.anInt828 = -var3 + DummyClass55.anInt1427;
+          GameStringStatics.anInt828 = -var3 + DummyClass55.anInt1427;
           DummyClass13.anInt2024 = var1;
         } else if (var6 >= 2.356194490192345D && var6 <= 3.141592653589793D) {
           DummyClass13.anInt2024 = -var3 + GlobalStatics_9.anInt1559;
-          GlobalStatics_4.anInt828 = var1;
+          GameStringStatics.anInt828 = var1;
         }
 
         DummyClass13.anInt2024 &= GlobalStatics_9.anInt396;
-        GlobalStatics_4.anInt828 &= GlobalStatics_10.anInt2487;
+        GameStringStatics.anInt828 &= GlobalStatics_10.anInt2487;
       }
   }
 
@@ -57,7 +57,7 @@ public final class TextureSampler23 extends AbstractTextureSampler {
       if (this.monoChromaticImageCache.aBoolean1580) {
         for (int var5 = 0; var5 < GlobalStatics_9.anInt1559; ++var5) {
           this.method248(var1, (byte) 105, var5);
-          int[] var6 = this.method152(0, GlobalStatics_4.anInt828, 32755);
+          int[] var6 = this.method152(0, GameStringStatics.anInt828, 32755);
           var4[var5] = var6[DummyClass13.anInt2024];
         }
       }
@@ -89,7 +89,7 @@ public final class TextureSampler23 extends AbstractTextureSampler {
 
         for (int var7 = 0; GlobalStatics_9.anInt1559 > var7; ++var7) {
           this.method248(var2, (byte) 107, var7);
-          int[][] var8 = this.method162(GlobalStatics_4.anInt828, 0, (byte) -49);
+          int[][] var8 = this.method162(GameStringStatics.anInt828, 0, (byte) -49);
           assert var8 != null;
           var4[var7] = var8[0][DummyClass13.anInt2024];
           var5[var7] = var8[1][DummyClass13.anInt2024];

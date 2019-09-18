@@ -62,7 +62,7 @@ public final class SomethingQuickChat extends SubNode {
 
   public int method549(int var1, int var2, int var3 ) {
     if (var1 > -99) {
-        GlobalStatics_9.aClass94_3577 = null;
+        GameStringStatics.aClass94_3577 = null;
       }
 
       return this.anIntArray3566 != null
@@ -78,7 +78,7 @@ public final class SomethingQuickChat extends SubNode {
     if (this.anIntArray3566 != null
           && var2 >= 0 && var2 <= this.anIntArray3566.length) {
         if (var1 <= 33) {
-          GlobalStatics_9.aClass94_3578 = null;
+          GameStringStatics.aClass94_3578 = null;
         }
 
         return this.anIntArray3566[var2];
@@ -140,7 +140,7 @@ public final class SomethingQuickChat extends SubNode {
     if (var1 == -1) {
         GameString var2 = GameStringStatics.createString(80);
         if (this.strings == null) {
-          return GlobalStatics_9.aClass94_3357;
+          return GameStringStatics.aClass94_3357;
         } else {
           var2.append(this.strings[0]);
 

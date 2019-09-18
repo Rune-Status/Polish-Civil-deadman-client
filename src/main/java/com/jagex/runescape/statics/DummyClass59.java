@@ -215,8 +215,8 @@ public final class DummyClass59 {
       if (var1) {
         if (DummyClass8.anInt4019 != 0) {
           GlobalStatics_3.drawLoadingBox(GlobalStatics_9.concat(
-              new GameString[]{GlobalStatics_10.LOADING_PLEASE_WAIT,
-                  GlobalStatics_9.aClass94_2707}),
+              new GameString[]{GameStringStatics.LOADING_PLEASE_WAIT,
+                  GameStringStatics.aClass94_2707}),
               true);
         }
 

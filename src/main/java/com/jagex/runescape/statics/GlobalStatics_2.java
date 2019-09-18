@@ -818,13 +818,13 @@ public class GlobalStatics_2 {
     int var8 = GlobalStatics_6.aCalendar3581.get(12);
     int var9 = GlobalStatics_6.aCalendar3581.get(13);
     return GlobalStatics_9.concat(new GameString[]{
-        GlobalStatics_9.aClass94Array3376[var3 - 1],
-        GlobalStatics_10.aClass94_3145,
+        GameStringStatics.aClass94Array3376[var3 - 1],
+        GameStringStatics.aClass94_3145,
         GlobalStatics_9.toString(var4 / 10),
         GlobalStatics_9.toString(var4 % 10),
-        DummyClass12.aClass94_2025, GlobalStatics_9.aClass94Array3985[var5],
+        DummyClass12.aClass94_2025, GameStringStatics.aClass94Array3985[var5],
         DummyClass12.aClass94_2025,
-        GlobalStatics_9.toString(var6), GlobalStatics_9.aClass94_465,
+        GlobalStatics_9.toString(var6), GameStringStatics.aClass94_465,
         GlobalStatics_9.toString(var7 / 10),
         GlobalStatics_9.toString(var7 % 10),
         GlobalStatics_5.aClass94_1970,
@@ -832,7 +832,7 @@ public class GlobalStatics_2 {
         GlobalStatics_9.toString(var8 % 10),
         GlobalStatics_5.aClass94_1970,
         GlobalStatics_9.toString(var9 / 10),
-        GlobalStatics_9.toString(var9 % 10), GlobalStatics_9.aClass94_500
+        GlobalStatics_9.toString(var9 % 10), GameStringStatics.aClass94_500
     });
   }
 

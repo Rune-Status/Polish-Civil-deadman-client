@@ -708,12 +708,12 @@ public final class DummyClass37 {
 
   public static void method1039(int var0, FileUnpacker var1) {
     GlobalStatics_9.p11FontFileId = var1.getFileId(GlobalStatics_9.FONT_P11);
-    GlobalStatics_9.p12FontFileId = var1.getFileId(GlobalStatics_9.FONT_P12);
+    GlobalStatics_9.p12FontFileId = var1.getFileId(GameStringStatics.FONT_P12);
     GlobalStatics_9.b12FontFileId = var1.getFileId(GlobalStatics_9.FONT_B12);
     GlobalStatics_8.anInt2104 = var1.getFileId(GlobalStatics_7.aClass94_2959);
-    GlobalStatics_10.anInt4042 = var1.getFileId(GlobalStatics_9.aClass94_3370);
-    GlobalStatics_1.anInt2195 = var1.getFileId(GlobalStatics_9.aClass94_3008);
-    GlobalStatics_2.anInt2575 = var1.getFileId(GlobalStatics_9.aClass94_1070);
+    GlobalStatics_10.anInt4042 = var1.getFileId(GameStringStatics.aClass94_3370);
+    GlobalStatics_1.anInt2195 = var1.getFileId(GameStringStatics.aClass94_3008);
+    GlobalStatics_2.anInt2575 = var1.getFileId(GameStringStatics.aClass94_1070);
     if (var0 != 208) {
       DummyClass37.anInt670 = 0;
     }
@@ -721,15 +721,15 @@ public final class DummyClass37 {
     GlobalStatics_9.headIconsPrayerFileId = var1
         .getFileId(DummyClass21.HEAD_ICONS_PRAYER);
     GlobalStatics_9.hintHeadIconsFileId = var1
-        .getFileId(GlobalStatics_9.HINT_HEAD_ICONS);
-    GlobalStatics_9.anInt2689 = var1.getFileId(GlobalStatics_9.aClass94_1556);
-    GlobalStatics_10.anInt3061 = var1.getFileId(GlobalStatics_10.aClass94_3452);
-    GlobalStatics_9.anInt2633 = var1.getFileId(GlobalStatics_10.aClass94_3168);
-    DummyClass59.anInt678 = var1.getFileId(GlobalStatics_9.aClass94_1567);
-    GlobalStatics_9.anInt2436 = var1.getFileId(GlobalStatics_9.aClass94_1913);
-    GlTexture2d.anInt3757 = var1.getFileId(GlobalStatics_9.aClass94_3576);
+        .getFileId(GameStringStatics.HINT_HEAD_ICONS);
+    GlobalStatics_9.anInt2689 = var1.getFileId(GameStringStatics.aClass94_1556);
+    GlobalStatics_10.anInt3061 = var1.getFileId(GameStringStatics.aClass94_3452);
+    GlobalStatics_9.anInt2633 = var1.getFileId(GameStringStatics.aClass94_3168);
+    DummyClass59.anInt678 = var1.getFileId(GameStringStatics.aClass94_1567);
+    GlobalStatics_9.anInt2436 = var1.getFileId(GameStringStatics.aClass94_1913);
+    GlTexture2d.anInt3757 = var1.getFileId(GameStringStatics.aClass94_3576);
     DummyClass38.floorShadowsFileId = var1
-        .getFileId(GlobalStatics_9.FLOOR_SHADOWS);
+        .getFileId(GameStringStatics.FLOOR_SHADOWS);
     GlobalStatics_9.anInt1325 = var1.getFileId(GlobalStatics_8.aClass94_2089);
     GlobalStatics_9.anInt2471 = var1.getFileId(GlobalStatics_7.aClass94_2164);
   }

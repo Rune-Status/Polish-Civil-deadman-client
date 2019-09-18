@@ -1,5 +1,6 @@
 package com.jagex.runescape.model;
 
+import com.jagex.runescape.common.GameStringStatics;
 import com.jagex.runescape.statics.DummyClass58;
 import com.jagex.runescape.statics.GlobalStatics_9;
 
@@ -48,7 +49,7 @@ public final class SomethingTexture3 extends AbstractSomethingTexture {
       int var9 = var1 * this.anInt2652 >> 12;
       int var10 = this.anInt2659 * var3 >> 12;
       if (!var2) {
-        GlobalStatics_9.aClass94_2653 = null;
+        GameStringStatics.aClass94_2653 = null;
       }
 
       int var11 = var1 * this.anInt2650 >> 12;

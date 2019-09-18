@@ -1218,10 +1218,10 @@ public class GlobalStatics_8 {
           DummyClass8.aClass94Array4016[var2] = DummyClass8.aClass94Array4016[1
               + var2];
           DummyClass8.aClass94Array4016[1 + var2] = var3;
-          GameString var4 = GlobalStatics_9.aClass94Array2935[var2];
-          GlobalStatics_9.aClass94Array2935[var2] = GlobalStatics_9.aClass94Array2935[
+          GameString var4 = GameStringStatics.aClass94Array2935[var2];
+          GameStringStatics.aClass94Array2935[var2] = GameStringStatics.aClass94Array2935[
               var2 + 1];
-          GlobalStatics_9.aClass94Array2935[var2 + 1] = var4;
+          GameStringStatics.aClass94Array2935[var2 + 1] = var4;
           int var5 = DummyClass26.anIntArray1613[var2];
           DummyClass26.anIntArray1613[var2] = DummyClass26.anIntArray1613[1
               + var2];
@@ -1265,7 +1265,7 @@ public class GlobalStatics_8 {
       for (int var2 = var0; DummyClass25.aClass131_1624.anInt1720 > var2;
           ++var2) {
         if (DummyClass25.aClass131_1624.aClass94Array1721[var2].method1560(
-            GlobalStatics_10.aClass94_3192, true, GlobalStatics_9.aClass94_4066)
+            GameStringStatics.aClass94_3192, true, GameStringStatics.aClass94_4066)
             .method1562((byte) -32, var1)) {
           return var2;
         }
@@ -1543,10 +1543,10 @@ public class GlobalStatics_8 {
       if (var4 == 1006) {
         var13 = GlobalStatics_7.getWidget((byte) 119, var3);
         if (var13 != null && var13.anIntArray317[var2] >= 100000) {
-          GlobalStatics_8.printMessage(GlobalStatics_9.EMPTY_STRING, 0,
+          GlobalStatics_8.printMessage(GameStringStatics.EMPTY_STRING, 0,
               GlobalStatics_9.concat(new GameString[]{
                   GlobalStatics_9.toString(var13.anIntArray317[var2]),
-                  GlobalStatics_9.aClass94_3777,
+                  GameStringStatics.aClass94_3777,
                   DummyClass35
                       .getItemConfig(var5, (byte) 125).aClass94_770
               }), -1);
@@ -1816,21 +1816,21 @@ public class GlobalStatics_8 {
                   var13.anInt266,
                   -120, var13.anInt238);
           GlobalStatics_9.anInt3012 = 0;
-          GlobalStatics_9.aClass94_3621 = DummyClass41
+          GameStringStatics.aClass94_3621 = DummyClass41
               .method1174(var13, (byte) -94);
-          if (GlobalStatics_9.aClass94_3621 == null) {
-            GlobalStatics_9.aClass94_3621 = GlobalStatics_9.aClass94_1915;
+          if (GameStringStatics.aClass94_3621 == null) {
+            GameStringStatics.aClass94_3621 = GameStringStatics.aClass94_1915;
           }
 
           if (var13.aBoolean233) {
             DummyClass59.aClass94_676 = GlobalStatics_9.concat(
                 new GameString[]{var13.aClass94_277,
-                    GlobalStatics_9.aClass94_2562});
+                    GameStringStatics.aClass94_2562});
           } else {
             DummyClass59.aClass94_676 = GlobalStatics_9
                 .concat(new GameString[]{
-                    GlobalStatics_4.aClass94_431, var13.aClass94_243,
-                    GlobalStatics_9.aClass94_2562
+                    GameStringStatics.aClass94_431, var13.aClass94_243,
+                    GameStringStatics.aClass94_2562
                 });
           }
         }
@@ -2214,11 +2214,11 @@ public class GlobalStatics_8 {
           GlobalStatics_9.anInt3012 = 1;
           GlobalStatics_9.anInt2050 = var5;
           DummyClass29.method909(var0 ^ -2612, var13);
-          GlobalStatics_9.aClass94_378 = GlobalStatics_9
+          GameStringStatics.aClass94_378 = GlobalStatics_9
               .concat(new GameString[]{
-                  GlobalStatics_9.aClass94_3042,
+                  GameStringStatics.aClass94_3042,
                   DummyClass35.getItemConfig(var5, (byte) 109).aClass94_770,
-                  GlobalStatics_9.aClass94_2562
+                  GameStringStatics.aClass94_2562
               });
 
         } else {
@@ -2763,7 +2763,7 @@ public class GlobalStatics_8 {
                       (var20 & 4) == 0
                           || GlobalStatics_8.PRESSED_KEYS[81])) {
                     GlobalStatics_11
-                        .method66(GlobalStatics_9.EMPTY_STRING, -1, var19 + 1,
+                        .method66(GameStringStatics.EMPTY_STRING, -1, var19 + 1,
                             (byte) -29, var9.anInt279);
                     var21 = var9.anIntArray299[var19];
                     if (var9.anIntArray310 == null) {
@@ -3677,10 +3677,10 @@ public class GlobalStatics_8 {
     }
 
     int var2 = GlobalStatics_8.method1602(0, var0);
-    return var2 == -1 ? GlobalStatics_9.aClass94_4049
+    return var2 == -1 ? GameStringStatics.aClass94_4049
         : DummyClass25.aClass131_1624.aClass94Array1721[var2].method1560(
-            GlobalStatics_10.aClass94_3192, true,
-            GlobalStatics_9.aClass94_4066);
+            GameStringStatics.aClass94_3192, true,
+            GameStringStatics.aClass94_4066);
   }
 
   public static void method28(boolean var0) {

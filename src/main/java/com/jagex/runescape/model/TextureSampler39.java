@@ -1,7 +1,7 @@
 package com.jagex.runescape.model;
 
 import com.jagex.runescape.buffer.Buffer;
-import com.jagex.runescape.opengl.MaterialShader5;
+import com.jagex.runescape.opengl.GLStatics;
 import com.jagex.runescape.statics.DummyClass55;
 import com.jagex.runescape.statics.DummyClass59;
 import com.jagex.runescape.statics.GlobalStatics_0;
@@ -26,10 +26,10 @@ public class TextureSampler39 extends AbstractTextureSampler {
           return false;
         } else {
           SoftwareDirectColorSprite var3 = GlobalStatics_9.anInt1668 < 0 ?
-            GlobalStatics_0.method1537(MaterialShader5.aClass153_2172,
+            GlobalStatics_0.method1537(GLStatics.aClass153_2172,
                 this.anInt3278, false) :
             DummyClass59
-                .method1043(this.anInt3278, MaterialShader5.aClass153_2172, -3178,
+                .method1043(this.anInt3278, GLStatics.aClass153_2172, -3178,
               GlobalStatics_9.anInt1668);
           assert var3 != null;
           assert var3 != null;

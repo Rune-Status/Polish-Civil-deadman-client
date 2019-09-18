@@ -2,6 +2,7 @@ package com.jagex.runescape.model;
 
 import com.jagex.runescape.buffer.Buffer;
 import com.jagex.runescape.common.GameString;
+import com.jagex.runescape.common.GameStringStatics;
 import com.jagex.runescape.common.HashTable;
 import com.jagex.runescape.common.StringNode;
 import com.jagex.runescape.node.Node;
@@ -83,7 +84,7 @@ public final class GameObjectConfig {
 
 
   public GameObjectConfig() {
-    this.aClass94_1504 = GlobalStatics_10.aClass94_3150;
+    this.aClass94_1504 = GameStringStatics.aClass94_3150;
     this.aBoolean1503 = true;
     this.anInt1493 = -1;
     this.anInt1515 = 0;
@@ -455,7 +456,7 @@ public final class GameObjectConfig {
                             this.aClass94Array1499[var2 - 30] = var1
                                 .readString();
                             if (this.aClass94Array1499[-30 + var2].method1531(
-                                GlobalStatics_10.aClass94_3051)) {
+                                GameStringStatics.aClass94_3051)) {
                               this.aClass94Array1499[-30 + var2] = null;
                             }
                           } else if (var2 == 40) {

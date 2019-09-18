@@ -1,8 +1,8 @@
 package com.jagex.runescape.model;
 
 import com.jagex.runescape.buffer.Buffer;
+import com.jagex.runescape.common.GameStringStatics;
 import com.jagex.runescape.statics.DummyClass4;
-import com.jagex.runescape.statics.GlobalStatics_10;
 import com.jagex.runescape.statics.GlobalStatics_9;
 
 public final class TextureSampler31 extends AbstractTextureSampler {
@@ -51,7 +51,7 @@ public final class TextureSampler31 extends AbstractTextureSampler {
 
   public void parseConfig(int var1, Buffer var2, boolean var3 ) {
     if (!var3) {
-        GlobalStatics_10.aClass94_3168 = null;
+        GameStringStatics.aClass94_3168 = null;
       }
 
       if (var1 == 0) {

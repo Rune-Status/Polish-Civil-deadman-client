@@ -41,7 +41,6 @@ import com.jagex.runescape.opengl.GlEnvironment;
 import com.jagex.runescape.opengl.GlRenderer;
 import com.jagex.runescape.opengl.GlTexture2d;
 import com.jagex.runescape.opengl.GlUtils;
-import com.jagex.runescape.opengl.MaterialShader5;
 import com.jagex.runescape.opengl.SomethingGl0;
 import com.jagex.runescape.settings.SettingsStatics;
 import com.jagex.runescape.sprite.SoftwareIndexedColorSprite;
@@ -1065,7 +1064,7 @@ public class GlobalStatics_7 {
               var21 = var35[1 + lightPosX][lightPosY];
               var22 = var35[lightPosX + 1][lightPosY + 1];
               if (lightMagnitude == 0) {
-                MaterialShader5
+                GLStatics
                     .method1629(var8, lightPosX, lightPosY, 0, 0, -1, var14,
                         var15,
                         var16, var44,
@@ -1218,7 +1217,7 @@ public class GlobalStatics_7 {
                       .method729((byte) -101, var32, 96)];
                 }
 
-                MaterialShader5
+                GLStatics
                     .method1629(var8, lightPosX, lightPosY, var24, var25,
                         var27, var14,
                         var15, var16, var44,
@@ -2072,7 +2071,7 @@ public class GlobalStatics_7 {
       }
 
       GlobalStatics_3
-          .drawLoadingBox(GlobalStatics_10.LOADING_PLEASE_WAIT, true);
+          .drawLoadingBox(GameStringStatics.LOADING_PLEASE_WAIT, true);
       int var8 = GlobalStatics_9.REGION_BASE_Y;
       int var7 = GlobalStatics_10.REGION_BASE_X;
       GlobalStatics_9.REGION_BASE_Y = var1 * 8 - 48;
@@ -2249,32 +2248,32 @@ public class GlobalStatics_7 {
   }
 
   public static GameString method1303(Widget var0, GameString var1, int var2) {
-    if (~var1.indexOf(GlobalStatics_9.aClass94_468) == var2) {
+    if (~var1.indexOf(GameStringStatics.aClass94_468) == var2) {
       return var1;
     } else {
       while (true) {
-        int var3 = var1.indexOf(GlobalStatics_9.aClass94_331);
+        int var3 = var1.indexOf(GameStringStatics.aClass94_331);
         if (var3 == -1) {
           while (true) {
-            var3 = var1.indexOf(GlobalStatics_9.aClass94_2080);
+            var3 = var1.indexOf(GameStringStatics.aClass94_2080);
             if (var3 == -1) {
               while (true) {
                 var3 = var1.indexOf(GlobalStatics_7.aClass94_1301);
                 if (var3 == -1) {
                   while (true) {
-                    var3 = var1.indexOf(GlobalStatics_9.aClass94_852);
+                    var3 = var1.indexOf(GameStringStatics.aClass94_852);
                     if (var3 == -1) {
                       while (true) {
-                        var3 = var1.indexOf(GlobalStatics_10.aClass94_3418);
+                        var3 = var1.indexOf(GameStringStatics.aClass94_3418);
                         if (var3 == -1) {
                           while (true) {
                             var3 = var1
-                                .indexOf(GlobalStatics_9.aClass94_1051);
+                                .indexOf(GameStringStatics.aClass94_1051);
                             if (var3 == -1) {
                               return var1;
                             }
 
-                            GameString var4 = GlobalStatics_9.EMPTY_STRING;
+                            GameString var4 = GameStringStatics.EMPTY_STRING;
                             if (GlobalStatics_9.aClass64_1778 != null) {
                               var4 =
                                   DummyClass58.method1653(
@@ -2358,7 +2357,7 @@ public class GlobalStatics_7 {
       int var2;
       int var3;
       Runtime var6;
-      if (command.method1531(GlobalStatics_10.COMMAND_GC)) {
+      if (command.method1531(GameStringStatics.COMMAND_GC)) {
         GlobalStatics_10.method246(8);
 
         for (var2 = 0; var2 < 10; ++var2) {
@@ -2369,13 +2368,13 @@ public class GlobalStatics_7 {
         var3 = (int) ((var6.totalMemory() - var6.freeMemory()) / 1024L);
         GlobalStatics_8
             .printMessage(null, 0, GlobalStatics_9.concat(new GameString[]{
-                GlobalStatics_9.aClass94_3360, GlobalStatics_9.toString(var3),
+                GameStringStatics.aClass94_3360, GlobalStatics_9.toString(var3),
                 GlobalStatics_7.aClass94_2951
             }), -1);
       }
 
       int var4;
-      if (command.method1531(GlobalStatics_9.aClass94_3651)) {
+      if (command.method1531(GameStringStatics.aClass94_3651)) {
         GlobalStatics_10.method246(8);
 
         for (var2 = 0; var2 < 10; ++var2) {
@@ -2451,7 +2450,7 @@ public class GlobalStatics_7 {
         DummyClass29.aBoolean438 = false;
       }
 
-      if (command.method1531(GlobalStatics_9.COMMAND_WM0)) {
+      if (command.method1531(GameStringStatics.COMMAND_WM0)) {
         GlobalStatics_9.setWindowMode(false, 0, -1, -1);
       }
 
@@ -2467,7 +2466,7 @@ public class GlobalStatics_7 {
         GlobalStatics_9.setWindowMode(false, 3, 1024, 768);
       }
 
-      if (command.method1531(GlobalStatics_10.COMMAND_NOCLIP)) {
+      if (command.method1531(GameStringStatics.COMMAND_NOCLIP)) {
         for (var2 = 0; var2 < 4; ++var2) {
           for (var3 = 1; var3 < 103; ++var3) {
             for (var4 = 1; var4 < 103; ++var4) {
@@ -2477,13 +2476,13 @@ public class GlobalStatics_7 {
         }
       }
 
-      if (command.method1558(GlobalStatics_9.COMMAND_SET_PARTICLES, 0)) {
+      if (command.method1558(GameStringStatics.COMMAND_SET_PARTICLES, 0)) {
         DummyClass0.method1758(command.substring(15).toInteger());
         SettingsStatics.writeSettings(DummyClass35.signLink);
         GlobalStatics_9.aBoolean2705 = false;
       }
 
-      if (command.method1558(GlobalStatics_10.aClass94_3289, 0)
+      if (command.method1558(GameStringStatics.aClass94_3289, 0)
           && GlobalStatics_4.usageLocation != 0) {
         DummyClass45.method1237(command.substring(6).toInteger(), 1000);
       }
@@ -2497,7 +2496,7 @@ public class GlobalStatics_7 {
             .toInteger();
         GlobalStatics_8
             .printMessage(null, 0, GlobalStatics_9.concat(new GameString[]{
-                GlobalStatics_9.RECTANGLE_DEBUG_EQ,
+                GameStringStatics.RECTANGLE_DEBUG_EQ,
                 GlobalStatics_9.toString(GlobalStatics_6.rectangleDebugType)
             }), -1);
       }
@@ -2506,15 +2505,15 @@ public class GlobalStatics_7 {
         GlobalStatics_9.aBoolean1040 = true;
       }
 
-      if (command.method1531(GlobalStatics_9.COMMAND_TWEEN)) {
+      if (command.method1531(GameStringStatics.COMMAND_TWEEN)) {
         if (GlobalStatics_9.tweening) {
           GlobalStatics_9.tweening = false;
           GlobalStatics_8
-              .printMessage(null, 0, GlobalStatics_9.aClass94_2061, -1);
+              .printMessage(null, 0, GameStringStatics.aClass94_2061, -1);
         } else {
           GlobalStatics_9.tweening = true;
           GlobalStatics_8
-              .printMessage(null, 0, GlobalStatics_9.FORCED_TWEENING_ENABLED,
+              .printMessage(null, 0, GameStringStatics.FORCED_TWEENING_ENABLED,
                   -1);
         }
       }

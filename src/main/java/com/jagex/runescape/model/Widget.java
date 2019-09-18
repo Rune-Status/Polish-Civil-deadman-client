@@ -2,10 +2,10 @@ package com.jagex.runescape.model;
 
 import com.jagex.runescape.buffer.Buffer;
 import com.jagex.runescape.common.GameString;
+import com.jagex.runescape.common.GameStringStatics;
 import com.jagex.runescape.opengl.GlDirectColorSprite;
 import com.jagex.runescape.opengl.GlDirectFullColorSprite;
 import com.jagex.runescape.opengl.GlRenderer;
-import com.jagex.runescape.opengl.MaterialShader5;
 import com.jagex.runescape.sprite.AbstractIndexedColorSprite;
 import com.jagex.runescape.sprite.SoftwareIndexedColorSprite;
 import com.jagex.runescape.statics.DummyClass25;
@@ -183,7 +183,7 @@ public final class Widget {
 
 
   public Widget() {
-    this.aClass94_243 = MaterialShader5.aClass94_2171;
+    this.aClass94_243 = GameStringStatics.aClass94_2171;
     this.aBoolean163 = false;
     this.anInt225 = 0;
     this.anInt212 = -1;
@@ -199,7 +199,7 @@ public final class Widget {
     this.aBoolean233 = false;
     this.aClass3_Sub1_257 = GlobalStatics_7.aClass3_Sub1_2980;
     this.anInt253 = 0;
-    this.aClass94_232 = MaterialShader5.aClass94_2171;
+    this.aClass94_232 = GameStringStatics.aClass94_2171;
     this.anInt168 = 0;
     this.anInt247 = 0;
     this.aBoolean219 = false;
@@ -209,7 +209,7 @@ public final class Widget {
     this.anInt192 = -1;
     this.anInt222 = 0;
     this.anInt264 = 0;
-    this.aClass94_277 = MaterialShader5.aClass94_2171;
+    this.aClass94_277 = GameStringStatics.aClass94_2171;
     this.anInt284 = 0;
     this.anInt177 = 0;
     this.anInt285 = 0;
@@ -218,9 +218,9 @@ public final class Widget {
     this.anInt184 = 0;
     this.anInt223 = 0;
     this.anInt258 = 0;
-    this.aClass94_245 = MaterialShader5.aClass94_2171;
+    this.aClass94_245 = GameStringStatics.aClass94_2171;
     this.anInt237 = 0;
-    this.aClass94_172 = MaterialShader5.aClass94_2171;
+    this.aClass94_172 = GameStringStatics.aClass94_2171;
     this.anInt288 = 0;
     this.anInt265 = -1;
     this.anInt242 = 0;
@@ -595,11 +595,11 @@ public final class Widget {
           }
 
           if (this.anInt318 == 4) {
-            this.aClass94_289 = GlobalStatics_10.aClass94_1722;
+            this.aClass94_289 = GameStringStatics.aClass94_1722;
           }
 
           if (this.anInt318 == 5) {
-            this.aClass94_289 = GlobalStatics_10.aClass94_1722;
+            this.aClass94_289 = GameStringStatics.aClass94_1722;
           }
 
           if (this.anInt318 == 6) {

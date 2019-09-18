@@ -74,7 +74,7 @@ public final class DummyClass22 {
     }
 
     int var1 = GlobalStatics_8.aClass3_Sub28_Sub17_2096
-        .method682(GlobalStatics_9.aClass94_2667);
+        .method682(GameStringStatics.aClass94_2667);
 
     int var2;
     int var3;

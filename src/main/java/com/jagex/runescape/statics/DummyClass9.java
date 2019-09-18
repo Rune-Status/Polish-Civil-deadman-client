@@ -3,7 +3,7 @@ package com.jagex.runescape.statics;
 import com.jagex.runescape.common.GameString;
 import com.jagex.runescape.common.GameStringStatics;
 import com.jagex.runescape.model.SocketStream;
-import com.jagex.runescape.opengl.MaterialShader5;
+import com.jagex.runescape.opengl.GLStatics;
 import java.awt.Component;
 import java.io.IOException;
 import java.net.Socket;
@@ -152,7 +152,7 @@ public final class DummyClass9 extends DummyClass5 {
 
           var1 = GlobalStatics_9.GAME_SOCKET.read() << 8
               | GlobalStatics_9.GAME_SOCKET.read();
-          MaterialShader5.method1627(var1, (byte) -16);
+          GLStatics.method1627(var1, (byte) -16);
           if (GlobalStatics_7.anInt2451 == -1) {
             GlobalStatics_9.anInt3375 = 0;
             GlobalStatics_5.loginResponse = 6;

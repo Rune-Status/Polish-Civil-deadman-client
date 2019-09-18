@@ -216,7 +216,7 @@ public class GlobalStatics_3 {
   public static void method165(int var0) {
     DummyClass53.aClass3_Sub28_Sub16_1339 = null;
     GlobalStatics_10.aClass3_Sub28_Sub16_3099 = null;
-    GlobalStatics_4.aClass3_Sub28_Sub16_824 = null;
+    GameStringStatics.aClass3_Sub28_Sub16_824 = null;
     if (var0 != -7878) {
       GlobalStatics_3.drawLoadingBox(null, false);
     }
@@ -575,7 +575,7 @@ public class GlobalStatics_3 {
 
     GlobalStatics_2.anInt2572 = 0;
     GlobalStatics_6.aClass3_Sub19Array3694 = null;
-    GlobalStatics_10.aClass94_251 = null;
+    GameStringStatics.aClass94_251 = null;
 
     for (var1 = 0; var1 < 6; ++var1) {
       GlobalStatics_10.aClass133Array3393[var1] = new SomethingPacket116();
@@ -593,7 +593,7 @@ public class GlobalStatics_3 {
 
     GlobalStatics_9.aBoolean4068 = var0;
     GlobalStatics_9.interfaceCounter = 0;
-    GlobalStatics_10.walkTooltip = DummyClass42.DEFAULT_WALK_TOOLTIP;
+    GameStringStatics.walkTooltip = DummyClass42.DEFAULT_WALK_TOOLTIP;
     GlobalStatics_7.aBoolean1084 = false;
     GlobalStatics_10.aShortArray3455 = GlobalStatics_10.aShortArray3110 =
         GlobalStatics_9.aShortArray1779 = GlobalStatics_10.aShortArray3453 = new short[256];

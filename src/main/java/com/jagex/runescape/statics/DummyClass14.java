@@ -79,7 +79,7 @@ public final class DummyClass14 {
         DummyClass14.method2145((byte) -8);
       }
 
-      return GlobalStatics_10.aClass94_1687;
+      return GameStringStatics.aClass94_1687;
     } else {
       return GlobalStatics_9.toString(var0);
     }

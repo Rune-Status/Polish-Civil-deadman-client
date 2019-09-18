@@ -1,8 +1,8 @@
 package com.jagex.runescape.model;
 
 import com.jagex.runescape.buffer.Buffer;
+import com.jagex.runescape.common.GameStringStatics;
 import com.jagex.runescape.node.SubNode;
-import com.jagex.runescape.statics.GlobalStatics_9;
 
 public final class InventoryConfig extends SubNode {
 
@@ -10,7 +10,7 @@ public final class InventoryConfig extends SubNode {
 
   public void method610(Buffer var1, int var2 ) {
     if (var2 != 0) {
-        GlobalStatics_9.aClass94_3649 = null;
+        GameStringStatics.aClass94_3649 = null;
       }
 
       while (true) {

@@ -1,6 +1,7 @@
 package com.jagex.runescape.model;
 
 import com.jagex.runescape.buffer.Buffer;
+import com.jagex.runescape.common.GameStringStatics;
 import com.jagex.runescape.statics.GlobalStatics_9;
 
 public final class LightIntensity {
@@ -15,7 +16,7 @@ public final class LightIntensity {
         int var4 = var2.readUnsignedByte();
         if (var4 == 0) {
           if (var1 != 2) {
-            GlobalStatics_9.aClass94_905 = null;
+            GameStringStatics.aClass94_905 = null;
           }
 
           return;

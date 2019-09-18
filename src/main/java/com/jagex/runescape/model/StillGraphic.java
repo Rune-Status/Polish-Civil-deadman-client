@@ -1,5 +1,6 @@
 package com.jagex.runescape.model;
 
+import com.jagex.runescape.common.GameStringStatics;
 import com.jagex.runescape.scene.SceneNode;
 import com.jagex.runescape.statics.DummyClass0;
 import com.jagex.runescape.statics.GlobalStatics_8;
@@ -43,7 +44,7 @@ public final class StillGraphic extends SceneNode {
     SpotAnimationConfig var2 = GlobalStatics_9.method898((byte) 42,
           this.anInt2708);
       if (var1) {
-        GlobalStatics_9.aClass94_2707 = null;
+        GameStringStatics.aClass94_2707 = null;
       }
 
       AbstractModel var3;

@@ -69,7 +69,7 @@ public final class DummyClass38 {
             var25 = var14.aClass3_Sub28_Sub4_151.method555(var2 + 28100,
                 DummyClass12.aClass3_Sub30_2030);
           } else {
-            var25 = GlobalStatics_4.otherFormat(
+            var25 = GameStringStatics.otherFormat(
                 Objects.requireNonNull(DummyClass34
                     .decompressString(DummyClass12.aClass3_Sub30_2030)
                     .format(78)));

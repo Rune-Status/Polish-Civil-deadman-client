@@ -90,27 +90,27 @@ public final class DummyClass50 {
         int var5;
         for (var5 = 0; GlobalStatics_6.anInt3591 > var5; ++var5) {
           if (GlobalStatics_9.aLongArray1574[var5] == var1) {
-            GlobalStatics_8.printMessage(GlobalStatics_9.EMPTY_STRING, 0,
+            GlobalStatics_8.printMessage(GameStringStatics.EMPTY_STRING, 0,
                 GlobalStatics_9.concat(
-                    new GameString[]{var4, GlobalStatics_10.aClass94_3311}),
+                    new GameString[]{var4, GameStringStatics.aClass94_3311}),
                 -1);
             return;
           }
         }
 
         for (var5 = 0; GlobalStatics_10.anInt104 > var5; ++var5) {
-          if (GlobalStatics_4.aLongArray826[var5] == var1) {
-            GlobalStatics_8.printMessage(GlobalStatics_9.EMPTY_STRING, 0,
+          if (GameStringStatics.aLongArray826[var5] == var1) {
+            GlobalStatics_8.printMessage(GameStringStatics.EMPTY_STRING, 0,
                 GlobalStatics_9.concat(new GameString[]{
                     DummyClass35.aClass94_666, var4,
-                    GlobalStatics_9.aClass94_4071
+                    GameStringStatics.aClass94_4071
                 }), -1);
             return;
           }
         }
 
         if (var4.method1528((byte) -42, GlobalStatics_9.localPlayer.name)) {
-          GlobalStatics_8.printMessage(GlobalStatics_9.EMPTY_STRING, 0,
+          GlobalStatics_8.printMessage(GameStringStatics.EMPTY_STRING, 0,
               DummyClass53.aClass94_1335, -1);
         } else {
           ++GlobalStatics_9.anInt3267;
@@ -122,7 +122,7 @@ public final class DummyClass50 {
           GlobalStatics_9.secureBuffer.writeLong(var1);
         }
       } else {
-        GlobalStatics_8.printMessage(GlobalStatics_9.EMPTY_STRING, 0,
+        GlobalStatics_8.printMessage(GameStringStatics.EMPTY_STRING, 0,
             GameStringStatics.aClass94_1884, -1);
       }
     }

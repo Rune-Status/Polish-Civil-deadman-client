@@ -1,7 +1,7 @@
 package com.jagex.runescape.model;
 
 import com.jagex.runescape.buffer.Buffer;
-import com.jagex.runescape.opengl.MaterialShader5;
+import com.jagex.runescape.opengl.GLStatics;
 import com.jagex.runescape.statics.DummyClass1;
 import com.jagex.runescape.statics.GlobalStatics_10;
 import com.jagex.runescape.statics.GlobalStatics_2;
@@ -98,7 +98,7 @@ public final class ProceduralTexture {
       boolean var9 ) {
     GlobalStatics_9.method1859(var4, var6 ^ 359938);
       DummyClass1.anInterface2_408 = var8;
-      MaterialShader5.aClass153_2172 = var7;
+      GLStatics.aClass153_2172 = var7;
       GlobalStatics_10.method180(-1, var1, var3);
 
       int var11;
@@ -199,7 +199,7 @@ public final class ProceduralTexture {
     byte[] var9 = new byte[4 * var2 * var1];
       if (var7 == 8839) {
         GlobalStatics_9.method1859(var5, 32258);
-        MaterialShader5.aClass153_2172 = var8;
+        GLStatics.aClass153_2172 = var8;
         DummyClass1.anInterface2_408 = var4;
         GlobalStatics_10.method180(-32, var1, var2);
 

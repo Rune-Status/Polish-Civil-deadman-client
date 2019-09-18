@@ -82,17 +82,17 @@ public final class DummyClass4 extends DummyClass6 {
 
         int var4;
         for (var4 = 0; GlobalStatics_10.anInt104 > var4; ++var4) {
-          if (GlobalStatics_4.aLongArray826[var4] == var0) {
-            GlobalStatics_8.printMessage(GlobalStatics_9.EMPTY_STRING, 0,
+          if (GameStringStatics.aLongArray826[var4] == var0) {
+            GlobalStatics_8.printMessage(GameStringStatics.EMPTY_STRING, 0,
                 GlobalStatics_9.concat(
-                    new GameString[]{var3, GlobalStatics_9.aClass94_3645}), -1);
+                    new GameString[]{var3, GameStringStatics.aClass94_3645}), -1);
             return;
           }
         }
 
         for (var4 = 0; GlobalStatics_6.anInt3591 > var4; ++var4) {
           if (var0 == GlobalStatics_9.aLongArray1574[var4]) {
-            GlobalStatics_8.printMessage(GlobalStatics_9.EMPTY_STRING, 0,
+            GlobalStatics_8.printMessage(GameStringStatics.EMPTY_STRING, 0,
                 GlobalStatics_9.concat(
                     new GameString[]{DummyClass35.aClass94_662, var3,
                         GlobalStatics_8.aClass94_4}), -1);
@@ -101,14 +101,14 @@ public final class DummyClass4 extends DummyClass6 {
         }
 
         if (var3.method1528((byte) -42, GlobalStatics_9.localPlayer.name)) {
-          GlobalStatics_8.printMessage(GlobalStatics_9.EMPTY_STRING, 0,
+          GlobalStatics_8.printMessage(GameStringStatics.EMPTY_STRING, 0,
               GlobalStatics_8.aClass94_957, -1);
         } else {
           ++GlobalStatics_9.anInt544;
-          GlobalStatics_9.aClass94Array1046[GlobalStatics_10.anInt104] = var3;
-          GlobalStatics_4.aLongArray826[GlobalStatics_10.anInt104] = var0;
+          GameStringStatics.aClass94Array1046[GlobalStatics_10.anInt104] = var3;
+          GameStringStatics.aLongArray826[GlobalStatics_10.anInt104] = var0;
           GlobalStatics_7.anIntArray882[GlobalStatics_10.anInt104] = 0;
-          GlobalStatics_2.aClass94Array2566[GlobalStatics_10.anInt104] = GlobalStatics_9.EMPTY_STRING;
+          GlobalStatics_2.aClass94Array2566[GlobalStatics_10.anInt104] = GameStringStatics.EMPTY_STRING;
           GlobalStatics_9.anIntArray904[GlobalStatics_10.anInt104] = 0;
           com.jagex.runescape.statics.GlobalStatics_0.aBooleanArray73[GlobalStatics_10.anInt104] = false;
           ++GlobalStatics_10.anInt104;
@@ -117,7 +117,7 @@ public final class DummyClass4 extends DummyClass6 {
           GlobalStatics_9.secureBuffer.writeLong(var0);
         }
       } else {
-        GlobalStatics_8.printMessage(GlobalStatics_9.EMPTY_STRING, 0,
+        GlobalStatics_8.printMessage(GameStringStatics.EMPTY_STRING, 0,
             DummyClass8.aClass94_4024, -1);
       }
     }

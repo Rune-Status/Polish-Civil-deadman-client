@@ -2,6 +2,7 @@ package com.jagex.runescape.model;
 
 import com.jagex.runescape.buffer.Buffer;
 import com.jagex.runescape.common.GameString;
+import com.jagex.runescape.common.GameStringStatics;
 import com.jagex.runescape.common.HashTable;
 import com.jagex.runescape.common.StringNode;
 import com.jagex.runescape.math.MathUtilities;
@@ -665,7 +666,7 @@ public final class NpcConfiguration {
           if (var2 >= 30 && var2 < 35) {
             this.aClass94Array1259[-30 + var2] = var3.readString();
             if (this.aClass94Array1259[-30 + var2]
-                .method1531(GlobalStatics_10.aClass94_3051)) {
+                .method1531(GameStringStatics.aClass94_3051)) {
               this.aClass94Array1259[var2 - 30] = null;
             }
           } else if (var2 != 40) {

@@ -8,6 +8,7 @@ import java.nio.charset.StandardCharsets;
 
 public final class GameString {
 
+  public static GameString OK = GameStringStatics.create("OK");
   public byte[] bytes;
   public int length;
   private boolean immutable = true;

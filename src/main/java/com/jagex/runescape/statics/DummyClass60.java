@@ -119,7 +119,7 @@ public final class DummyClass60 {
           GlobalStatics_9.anInt3552, (byte) -40, GlobalStatics_10.anInt3395,
           GlobalStatics_9.anInt3537);
       var7 = GlobalStatics_8.aClass3_Sub28_Sub17_2096
-          .method682(GlobalStatics_9.aClass94_2667);
+          .method682(GameStringStatics.aClass94_2667);
 
       for (int var8 = 0; GlobalStatics_10.amountContextActions > var8; ++var8) {
         int var9 = GlobalStatics_8.aClass3_Sub28_Sub17_2096.method682(

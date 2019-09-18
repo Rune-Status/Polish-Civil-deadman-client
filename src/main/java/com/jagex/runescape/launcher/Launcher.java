@@ -74,7 +74,7 @@ public class Launcher {
       GlobalStatics_9.anInt2607 = 0;
       GlobalStatics_7.aBoolean1451 = false;
       GlobalStatics_9.affiliateId = 0;
-      DummyClass7.settings = GlobalStatics_9.EMPTY_STRING;
+      DummyClass7.settings = GameStringStatics.EMPTY_STRING;
       GameClient client = new GameClient();
       GlobalStatics_9.client = client;
       client

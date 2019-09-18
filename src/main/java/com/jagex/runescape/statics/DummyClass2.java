@@ -1,5 +1,6 @@
 package com.jagex.runescape.statics;
 
+import com.jagex.runescape.common.GameStringStatics;
 import com.jagex.runescape.model.FileUnpacker;
 import com.jagex.runescape.model.SocketStream;
 import java.io.IOException;
@@ -15,7 +16,7 @@ public class DummyClass2 {
     if (GlobalStatics_10.LOGIN_STATE != 0
         && GlobalStatics_10.LOGIN_STATE != 5) {
       try {
-        if (++GlobalStatics_4.anInt820 > 2000) {
+        if (++GameStringStatics.anInt820 > 2000) {
           if (GlobalStatics_9.GAME_SOCKET != null) {
             GlobalStatics_9.GAME_SOCKET.destroy();
             GlobalStatics_9.GAME_SOCKET = null;
@@ -27,7 +28,7 @@ public class DummyClass2 {
             return;
           }
 
-          GlobalStatics_4.anInt820 = 0;
+          GameStringStatics.anInt820 = 0;
           if (GlobalStatics_9.anInt2894 == DummyClass11.anInt2036) {
             GlobalStatics_9.anInt2894 = GlobalStatics_9.anInt506;
           } else {
@@ -61,7 +62,7 @@ public class DummyClass2 {
                   DummyClass35.signLink);
           GlobalStatics_6.socketRequest = null;
           long encodedUsername =
-              GlobalStatics_10.encodedUsername = GlobalStatics_9.username
+              GlobalStatics_10.encodedUsername = GameStringStatics.username
                   .toBase37();
           GlobalStatics_9.secureBuffer.position = 0;
           GlobalStatics_9.secureBuffer.writeByte(14);
@@ -119,8 +120,8 @@ public class DummyClass2 {
           GlobalStatics_9.secureBuffer.writeInt(keys[2]);
           GlobalStatics_9.secureBuffer.writeInt(keys[3]);
           GlobalStatics_9.secureBuffer
-              .writeLong(GlobalStatics_9.username.toBase37());
-          GlobalStatics_9.secureBuffer.writeString(GlobalStatics_9.password);
+              .writeLong(GameStringStatics.username.toBase37());
+          GlobalStatics_9.secureBuffer.writeString(GameStringStatics.password);
           GlobalStatics_9.secureBuffer
               .encipherRSA(RSAConfiguration.PUBLIC_EXPONENT,
                   RSAConfiguration.MODULUS);
@@ -248,7 +249,7 @@ public class DummyClass2 {
                   if (response == 23 && GlobalStatics_9.anInt2079 < 1) {
                     GlobalStatics_10.LOGIN_STATE = 1;
                     ++GlobalStatics_9.anInt2079;
-                    GlobalStatics_4.anInt820 = 0;
+                    GameStringStatics.anInt820 = 0;
                     GlobalStatics_9.GAME_SOCKET.destroy();
                     GlobalStatics_9.GAME_SOCKET = null;
                     return;
@@ -345,7 +346,7 @@ public class DummyClass2 {
                 && !GlobalStatics_9.aBoolean3358) {
               DummyClass32.aClass94_516.method1577(-1857);
             } else {
-              GlobalStatics_10.aClass94_1374.method1577(-1857);
+              GameStringStatics.aClass94_1374.method1577(-1857);
             }
           }
 
@@ -385,7 +386,7 @@ public class DummyClass2 {
           GlobalStatics_5.loginResponse = -4;
         } else {
           GlobalStatics_10.LOGIN_STATE = 1;
-          GlobalStatics_4.anInt820 = 0;
+          GameStringStatics.anInt820 = 0;
           ++GlobalStatics_9.anInt2079;
           if (DummyClass11.anInt2036 == GlobalStatics_9.anInt2894) {
             GlobalStatics_9.anInt2894 = GlobalStatics_9.anInt506;

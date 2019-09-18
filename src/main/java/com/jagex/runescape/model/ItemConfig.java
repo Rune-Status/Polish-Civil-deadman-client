@@ -2,6 +2,7 @@ package com.jagex.runescape.model;
 
 import com.jagex.runescape.buffer.Buffer;
 import com.jagex.runescape.common.GameString;
+import com.jagex.runescape.common.GameStringStatics;
 import com.jagex.runescape.common.HashTable;
 import com.jagex.runescape.common.StringNode;
 import com.jagex.runescape.node.Node;
@@ -14,7 +15,6 @@ import com.jagex.runescape.statics.DummyClass59;
 import com.jagex.runescape.statics.GlobalStatics_10;
 import com.jagex.runescape.statics.GlobalStatics_11;
 import com.jagex.runescape.statics.GlobalStatics_8;
-import com.jagex.runescape.statics.GlobalStatics_9;
 
 public final class ItemConfig {
 
@@ -105,7 +105,7 @@ public final class ItemConfig {
     this.anInt802 = 0;
     this.anInt793 = -1;
     this.aClass94Array801 =
-      new GameString[] {null, null, GlobalStatics_10.aClass94_3397, null, null};
+      new GameString[] {null, null, GameStringStatics.aClass94_3397, null, null};
     this.anInt805 = 128;
     this.anInt790 = 0;
     this.anInt778 = 0;
@@ -253,7 +253,7 @@ public final class ItemConfig {
         }
       }
 
-      this.inventoryOptions[4] = GlobalStatics_9.aClass94_361;
+      this.inventoryOptions[4] = GameStringStatics.aClass94_361;
   }
 
   public AbstractModel getModel(int var1, int var2, int var3,
@@ -387,7 +387,7 @@ public final class ItemConfig {
                     if (var3 >= 30 && var3 < 35) {
                       this.aClass94Array801[-30 + var3] = var2.readString();
                       if (this.aClass94Array801[var3 - 30].method1531(
-                          GlobalStatics_10.aClass94_3051)) {
+                          GameStringStatics.aClass94_3051)) {
                         this.aClass94Array801[-30 + var3] = null;
                       }
                     } else if (var3 >= 35 && var3 < 40) {

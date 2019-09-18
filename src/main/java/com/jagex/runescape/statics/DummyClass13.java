@@ -33,7 +33,7 @@ public final class DummyClass13 {
 
   public static boolean method2194(int var0) {
     if (GlobalStatics_9.aBoolean3641) {
-      return !((Boolean) GlobalStatics_10.aClass94_3209.method1577(var0 - 2112))
+      return !((Boolean) GameStringStatics.aClass94_3209.method1577(var0 - 2112))
           .booleanValue();
     }
 

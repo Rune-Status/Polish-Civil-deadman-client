@@ -3,6 +3,7 @@ package com.jagex.runescape.model;
 import com.jagex.runescape.buffer.Buffer;
 import com.jagex.runescape.camera.CameraStatics;
 import com.jagex.runescape.common.GameString;
+import com.jagex.runescape.common.GameStringStatics;
 import com.jagex.runescape.huffman.HuffmanEncoder;
 import com.jagex.runescape.opengl.DummyClass33;
 import com.jagex.runescape.opengl.DummyClass46;
@@ -13,7 +14,6 @@ import com.jagex.runescape.opengl.GlRenderer;
 import com.jagex.runescape.opengl.GlTexture2d;
 import com.jagex.runescape.opengl.GlUtils;
 import com.jagex.runescape.opengl.MaterialShader4;
-import com.jagex.runescape.opengl.MaterialShader5;
 import com.jagex.runescape.opengl.SomethingGl;
 import com.jagex.runescape.opengl.SomethingShadows;
 import com.jagex.runescape.opengl.Texture;
@@ -445,7 +445,7 @@ public final class GameClient extends GameStub {
         }
 
         GlobalStatics_6.loadingPercent = 5;
-        GlobalStatics_3.loadingText = GlobalStatics_10.aClass94_4040;
+        GlobalStatics_3.loadingText = GameStringStatics.aClass94_4040;
       } else {
         GlobalStatics_3.loadingText = GlobalStatics_0.aClass94_2151;
         GlobalStatics_9.loadingState = 10;
@@ -463,7 +463,7 @@ public final class GameClient extends GameStub {
 
         GlobalStatics_6.loadingPercent = 10;
         GlobalStatics_9.loadingState = 30;
-        GlobalStatics_3.loadingText = GlobalStatics_4.aClass94_3629;
+        GlobalStatics_3.loadingText = GameStringStatics.aClass94_3629;
       } else if (GlobalStatics_9.loadingState == 30) {
         if (GlobalStatics_5.fileSystem == null) {
           GlobalStatics_5.fileSystem =
@@ -532,7 +532,7 @@ public final class GameClient extends GameStub {
           GlobalStatics_3.loadingText = GlobalStatics_7.CONNECTED_TO_UPDATE_SERVER;
           GlobalStatics_9.loadingState = 40;
         } else {
-          GlobalStatics_3.loadingText = GlobalStatics_9.CONNECTING_TO_UPDATE_SERVER;
+          GlobalStatics_3.loadingText = GameStringStatics.CONNECTING_TO_UPDATE_SERVER;
           GlobalStatics_6.loadingPercent = 12;
         }
       } else if (GlobalStatics_9.loadingState != 40) {
@@ -569,21 +569,21 @@ public final class GameClient extends GameStub {
                   .getFileId(DummyClass3.openingMusic);
           GlobalStatics_6.loadingPercent = 30;
           GlobalStatics_9.loadingState = 50;
-          GlobalStatics_3.loadingText = GlobalStatics_10.aClass94_1731;
+          GlobalStatics_3.loadingText = GameStringStatics.aClass94_1731;
         } else if (GlobalStatics_9.loadingState != 50) {
           if (GlobalStatics_9.loadingState == 60) {
             var2 = GlobalStatics_9.method599(-20916, GlobalStatics_10.sprites);
             kkkk = GlobalStatics_7.method1185(6098);
             if (kkkk <= var2) {
-              GlobalStatics_3.loadingText = GlobalStatics_9.aClass94_3575;
+              GlobalStatics_3.loadingText = GameStringStatics.aClass94_3575;
               GlobalStatics_9.loadingState = 65;
               GlobalStatics_6.loadingPercent = 40;
             } else {
               GlobalStatics_3.loadingText = GlobalStatics_9
                   .concat(new GameString[]{
-                      GlobalStatics_9.aClass94_461,
+                      GameStringStatics.aClass94_461,
                       GlobalStatics_9.toString(100 * var2 / kkkk),
-                      GlobalStatics_9.aClass94_468
+                      GameStringStatics.aClass94_468
                   });
               GlobalStatics_6.loadingPercent = 40;
             }
@@ -676,15 +676,15 @@ public final class GameClient extends GameStub {
                           GlobalStatics_10.sprites,
                           (byte) -67);
                   GlobalStatics_6.loadingPercent = 50;
-                  GlobalStatics_3.loadingText = GlobalStatics_10.aClass94_3142;
+                  GlobalStatics_3.loadingText = GameStringStatics.aClass94_3142;
                   GlobalStatics_9.method968(128);
                   GlobalStatics_9.loadingState = 80;
                 } else {
                   GlobalStatics_3.loadingText = GlobalStatics_9
                       .concat(new GameString[]{
-                          GlobalStatics_9.aClass94_3546,
+                          GameStringStatics.aClass94_3546,
                           GlobalStatics_9.toString(var2 / 11),
-                          GlobalStatics_9.aClass94_468
+                          GameStringStatics.aClass94_468
                       });
                   GlobalStatics_6.loadingPercent = 50;
                 }
@@ -696,9 +696,9 @@ public final class GameClient extends GameStub {
                   if (kkkk > var2) {
                     GlobalStatics_3.loadingText = GlobalStatics_9
                         .concat(new GameString[]{
-                            GlobalStatics_10.aClass94_3445,
+                            GameStringStatics.aClass94_3445,
                             GlobalStatics_9.toString(var2 * 100 / kkkk),
-                            GlobalStatics_9.aClass94_468
+                            GameStringStatics.aClass94_468
                         });
                     GlobalStatics_6.loadingPercent = 60;
                   } else {
@@ -739,7 +739,7 @@ public final class GameClient extends GameStub {
                                                 .method2116(22813,
                                                     DummyClass53.aClass94_1342)
                                                 / 10),
-                                        GlobalStatics_9.aClass94_468
+                                        GameStringStatics.aClass94_468
                                     });
                                 GlobalStatics_6.loadingPercent = 85;
                               }
@@ -751,7 +751,7 @@ public final class GameClient extends GameStub {
                                           85 + GlobalStatics_8.fileUnpacker13
                                               .method2136()
                                               / 20),
-                                      GlobalStatics_9.aClass94_468
+                                      GameStringStatics.aClass94_468
                                   });
                               GlobalStatics_6.loadingPercent = 85;
                             }
@@ -762,7 +762,7 @@ public final class GameClient extends GameStub {
                                     GlobalStatics_9.toString(
                                         75 + GlobalStatics_10.scripts
                                             .method2136() / 10),
-                                    GlobalStatics_9.aClass94_468
+                                    GameStringStatics.aClass94_468
                                 });
                             GlobalStatics_6.loadingPercent = 85;
                           }
@@ -773,7 +773,7 @@ public final class GameClient extends GameStub {
                                   GlobalStatics_9.toString(
                                       GlobalStatics_8.widgets
                                           .method2136() * 3 / 4),
-                                  GlobalStatics_9.aClass94_468
+                                  GameStringStatics.aClass94_468
                               });
                           GlobalStatics_6.loadingPercent = 85;
                         }
@@ -784,7 +784,7 @@ public final class GameClient extends GameStub {
                           GlobalStatics_3.loadingText = DummyClass24.aClass94_1653;
                         } else if (var2 != 7 && var2 != 9) {
                           if (GlobalStatics_6.aBoolean579) {
-                            GlobalStatics_3.loadingText = GlobalStatics_9.aClass94_374;
+                            GlobalStatics_3.loadingText = GameStringStatics.aClass94_374;
                             GlobalStatics_9.loadingState = 140;
                             GlobalStatics_6.loadingPercent = 96;
                           } else {
@@ -820,7 +820,7 @@ public final class GameClient extends GameStub {
                       } else {
                         GlobalStatics_6.anInt2529 =
                             GlobalStatics_8.widgets
-                                .getFileId(GlobalStatics_9.aClass94_3992);
+                                .getFileId(GameStringStatics.aClass94_3992);
                         GlobalStatics_10.maps.method2115(-9, false, true);
                         GlobalStatics_9.fileUnpacker6
                             .method2115(111, true, true);
@@ -831,16 +831,16 @@ public final class GameClient extends GameStub {
                             .method2115(-116, true, true);
                         GlobalStatics_8.widgets.method2115(99, true, true);
                         GlobalStatics_6.loadingPercent = 97;
-                        GlobalStatics_3.loadingText = GlobalStatics_9.aClass94_2267;
+                        GlobalStatics_3.loadingText = GameStringStatics.aClass94_2267;
                         GlobalStatics_9.loadingState = 150;
                         DummyClass43.aBoolean913 = true;
                       }
                     } else if (GlobalStatics_10.fileUnpacker10.method2125(
-                        GlobalStatics_9.EMPTY_STRING, (byte) 116,
+                        GameStringStatics.EMPTY_STRING, (byte) 116,
                         Texture.aClass94_3792)) {
                       HuffmanEncoder var9 = new HuffmanEncoder(
                           GlobalStatics_10.fileUnpacker10
-                              .method2123(0, GlobalStatics_9.EMPTY_STRING,
+                              .method2123(0, GameStringStatics.EMPTY_STRING,
                                   Texture.aClass94_3792));
                       DummyClass3.method69(var9, 104);
                       GlobalStatics_3.loadingText = DummyClass26.aClass94_1615;
@@ -866,11 +866,11 @@ public final class GameClient extends GameStub {
                     .method2113((byte) 58)) {
                   GlobalStatics_3.loadingText = GlobalStatics_9
                       .concat(new GameString[]{
-                          GlobalStatics_10.aClass94_1892,
+                          GameStringStatics.aClass94_1892,
                           GlobalStatics_9.toString(
                               GlobalStatics_10.materials
                                   .method2136()),
-                          GlobalStatics_9.aClass94_468
+                          GameStringStatics.aClass94_468
                       });
                   GlobalStatics_6.loadingPercent = 70;
                 } else {
@@ -896,7 +896,7 @@ public final class GameClient extends GameStub {
                     DummyClass40.updateLightness(0.6F);
                   }
 
-                  GlobalStatics_3.loadingText = GlobalStatics_10.aClass94_3167;
+                  GlobalStatics_3.loadingText = GameStringStatics.aClass94_3167;
                   GlobalStatics_9.loadingState = 100;
                   GlobalStatics_6.loadingPercent = 70;
                 }
@@ -917,9 +917,9 @@ public final class GameClient extends GameStub {
           } else {
             GlobalStatics_3.loadingText = GlobalStatics_9
                 .concat(new GameString[]{
-                    GlobalStatics_9.aClass94_3643,
+                    GameStringStatics.aClass94_3643,
                     GlobalStatics_9.toString(100 * var2 / kkkk),
-                    GlobalStatics_9.aClass94_468
+                    GameStringStatics.aClass94_468
                 });
             GlobalStatics_6.loadingPercent = 35;
           }
@@ -936,7 +936,7 @@ public final class GameClient extends GameStub {
 
         if (var2 == 100) {
           GlobalStatics_6.loadingPercent = 20;
-          GlobalStatics_3.loadingText = GlobalStatics_9.aClass94_2624;
+          GlobalStatics_3.loadingText = GameStringStatics.aClass94_2624;
           DummyClass37.method1039(208, GlobalStatics_10.sprites);
           GlobalStatics_10.method1593(111, GlobalStatics_10.sprites);
           GlobalStatics_10.setRunesFileId(GlobalStatics_10.sprites);
@@ -945,9 +945,9 @@ public final class GameClient extends GameStub {
           if (var2 != 0) {
             GlobalStatics_3.loadingText = GlobalStatics_9
                 .concat(new GameString[]{
-                    GlobalStatics_9.aClass94_327,
+                    GameStringStatics.aClass94_327,
                     GlobalStatics_9.toString(var2),
-                    GlobalStatics_9.aClass94_468
+                    GameStringStatics.aClass94_468
                 });
           }
 
@@ -1295,7 +1295,7 @@ public final class GameClient extends GameStub {
     DummyClass14.method2145((byte) -69);
     WaterShader.method1748();
     MaterialShader4.method1700();
-    MaterialShader5.method1630((byte) -113);
+    GLStatics.method1630((byte) -113);
     DummyClass45.method1238(-112);
     GlobalStatics_11.method361();
     GlobalStatics_9.method1204();
@@ -1428,10 +1428,10 @@ public final class GameClient extends GameStub {
         GlobalStatics_9.affiliateId = 0;
       }
 
-      DummyClass7.settings = GlobalStatics_9.aClass94_1745
+      DummyClass7.settings = GameStringStatics.aClass94_1745
           .getParameter((byte) 126);
       if (DummyClass7.settings == null) {
-        DummyClass7.settings = GlobalStatics_9.EMPTY_STRING;
+        DummyClass7.settings = GameStringStatics.EMPTY_STRING;
       }
 
       String var5 = this.getParameter("country");
@@ -1541,7 +1541,7 @@ public final class GameClient extends GameStub {
           } else if (DummyClass15.state == 40) {
             GlobalStatics_3
                 .drawLoadingBox(GlobalStatics_9.concat(new GameString[]{
-                    GlobalStatics_9.CONNECTION_LOST,
+                    GameStringStatics.CONNECTION_LOST,
                     GlobalStatics_0.LINE_BREAK,
                     DummyClass14.ATTEMPTING_TO_RECONNECT
                 }), false);
@@ -1558,14 +1558,14 @@ public final class GameClient extends GameStub {
                 / GlobalStatics_9.anInt2275 + 50;
             GlobalStatics_3
                 .drawLoadingBox(GlobalStatics_9.concat(new GameString[]{
-                    GlobalStatics_10.LOADING_PLEASE_WAIT,
-                    GlobalStatics_10.aClass94_3399,
+                    GameStringStatics.LOADING_PLEASE_WAIT,
+                    GameStringStatics.aClass94_3399,
                     GlobalStatics_9.toString(var4),
-                    GlobalStatics_9.aClass94_148
+                    GameStringStatics.aClass94_148
                 }), false);
           } else {
             GlobalStatics_3
-                .drawLoadingBox(GlobalStatics_10.LOADING_PLEASE_WAIT, false);
+                .drawLoadingBox(GameStringStatics.LOADING_PLEASE_WAIT, false);
           }
         } else {
           if (GlobalStatics_0.anInt2579
@@ -1578,10 +1578,10 @@ public final class GameClient extends GameStub {
               / GlobalStatics_0.anInt2579;
           GlobalStatics_3
               .drawLoadingBox(GlobalStatics_9.concat(new GameString[]{
-                  GlobalStatics_10.LOADING_PLEASE_WAIT,
-                  GlobalStatics_10.aClass94_3399,
+                  GameStringStatics.LOADING_PLEASE_WAIT,
+                  GameStringStatics.aClass94_3399,
                   GlobalStatics_9.toString(var4),
-                  GlobalStatics_9.aClass94_148
+                  GameStringStatics.aClass94_148
               }), false);
         }
       } else {
@@ -1734,7 +1734,7 @@ public final class GameClient extends GameStub {
       GlobalStatics_0.tableCache = null;
     }
 
-    DummyClass10.aClass94_2083 = GlobalStatics_9.aClass94_485;
+    DummyClass10.aClass94_2083 = GameStringStatics.aClass94_485;
     if (GlobalStatics_4.usageLocation != 0) {
       DummyClass29.aBoolean438 = true;
     }

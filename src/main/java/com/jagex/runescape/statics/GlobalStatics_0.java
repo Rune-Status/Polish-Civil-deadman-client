@@ -88,7 +88,6 @@ import com.jagex.runescape.opengl.GlRenderer;
 import com.jagex.runescape.opengl.GlTexture2d;
 import com.jagex.runescape.opengl.GlUtils;
 import com.jagex.runescape.opengl.Light;
-import com.jagex.runescape.opengl.MaterialShader5;
 import com.jagex.runescape.opengl.SomethingGl0;
 import com.jagex.runescape.sprite.SoftwareIndexedColorSprite;
 import com.jagex.runescape.sprite.SoftwareIndexedColorSpriteStatics;
@@ -290,10 +289,10 @@ public final class GlobalStatics_0 {
 
     return DummyClass8.aClass94Array4016[var0].getLength() > 0
         ? GlobalStatics_9.concat(
-        new GameString[]{GlobalStatics_9.aClass94Array2935[var0],
+        new GameString[]{GameStringStatics.aClass94Array2935[var0],
             GlobalStatics_2.aClass94_43,
             DummyClass8.aClass94Array4016[var0]})
-        : GlobalStatics_9.aClass94Array2935[var0];
+        : GameStringStatics.aClass94Array2935[var0];
   }
 
   public static void method744(boolean var0) {
@@ -692,7 +691,7 @@ public final class GlobalStatics_0 {
         GlobalStatics_9.p12Font.method688(
             GlobalStatics_9.concat(new GameString[]{
                 DummyClass25.MEMORY_PREFIX, GlobalStatics_9.toString(var12),
-                GlobalStatics_10.aClass94_3055}),
+                GameStringStatics.aClass94_3055}),
             var9, var10, var13, -1);
         var10 -= 15;
       }
@@ -722,7 +721,7 @@ public final class GlobalStatics_0 {
       }
 
       GlobalStatics_8.aClass3_Sub28_Sub17_2096.draw(
-          GlobalStatics_9.aClass94_462, var6, var5 + var7, 16777215, -1);
+          GameStringStatics.aClass94_462, var6, var5 + var7, 16777215, -1);
     }
   }
 
@@ -746,21 +745,21 @@ public final class GlobalStatics_0 {
     } else {
       for (int var3 = var2.getLength() - 3; var3 > 0; var3 -= 3) {
         var2 = GlobalStatics_9.concat(new GameString[]{
-            var2.substring(var3, 0, 0), GlobalStatics_9.aClass94_3268,
+            var2.substring(var3, 0, 0), GameStringStatics.aClass94_3268,
             var2.substring(var3)
         });
       }
 
       return var2.getLength() > 9 ? GlobalStatics_9.concat(new GameString[]{
-          GlobalStatics_9.aClass94_1917,
+          GameStringStatics.aClass94_1917,
           var2.substring(-8 + var2.getLength(), 0, 0),
-          GlobalStatics_10.aClass94_3124, GlobalStatics_9.aClass94_1072, var2,
+          GameStringStatics.aClass94_3124, GameStringStatics.aClass94_1072, var2,
           GlobalStatics_9.aClass94_995
       }) : var2.getLength() > 6 ?
           GlobalStatics_9.concat(new GameString[]{
-              GlobalStatics_10.aClass94_3211,
+              GameStringStatics.aClass94_3211,
               var2.substring(-4 + var2.getLength(), 0, 0),
-              GameStringStatics.aClass94_3586, GlobalStatics_9.aClass94_1072,
+              GameStringStatics.aClass94_3586, GameStringStatics.aClass94_1072,
               var2,
               GlobalStatics_9.aClass94_995
           }) :
@@ -1325,7 +1324,7 @@ public final class GlobalStatics_0 {
     if (var0 >= DummyClass55.anInt1425 && var4 <= GlTexture2d.anInt3765
         && DummyClass13.anInt2020 <= var5
         && GlobalStatics_9.anInt902 >= var3) {
-      MaterialShader5.method1632(95, var3, var4, var5, var0, var1);
+      GLStatics.method1632(95, var3, var4, var5, var0, var1);
     } else {
       GlobalStatics_9.method1525(3074, var1, var4, var5, var0, var3);
     }

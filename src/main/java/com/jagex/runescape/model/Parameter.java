@@ -2,6 +2,7 @@ package com.jagex.runescape.model;
 
 import com.jagex.runescape.buffer.Buffer;
 import com.jagex.runescape.common.GameString;
+import com.jagex.runescape.common.GameStringStatics;
 import com.jagex.runescape.node.SubNode;
 import com.jagex.runescape.statics.GlobalStatics_9;
 
@@ -43,7 +44,7 @@ public final class Parameter extends SubNode {
 
   public boolean method585(int var1 ) {
     if (var1 != 0) {
-        GlobalStatics_9.aClass94_3621 = null;
+        GameStringStatics.aClass94_3621 = null;
       }
 
       return this.anInt3617 == 115;

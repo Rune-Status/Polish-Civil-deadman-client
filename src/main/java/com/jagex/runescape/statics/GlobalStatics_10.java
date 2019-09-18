@@ -66,7 +66,6 @@ import com.jagex.runescape.opengl.GlRenderer;
 import com.jagex.runescape.opengl.GlTexture2d;
 import com.jagex.runescape.opengl.GlUtils;
 import com.jagex.runescape.opengl.Light;
-import com.jagex.runescape.opengl.MaterialShader5;
 import com.jagex.runescape.opengl.SomethingGl0;
 import com.jagex.runescape.opengl.SomethingLight;
 import com.jagex.runescape.opengl.SomethingShadows;
@@ -93,38 +92,26 @@ import java.util.zip.CRC32;
 
 public class GlobalStatics_10 {
 
-  public static GameString aClass94_3386 = GameStringStatics.create("Use");
-  public static GameString aClass94_3388 = GlobalStatics_10.aClass94_3386;
   public static int[] anIntArray3383 = new int[5];
   public static Font aFont3384;
   public static boolean aBoolean3387 = true;
   public static volatile int anInt3389;
-  public static GameString aClass94_3190 = GameStringStatics.create("<img=1>");
-  public static GameString aClass94_3192 = GameStringStatics.create(" ");
-  public static GameString aClass94_3196 = GameStringStatics.create("Fps:");
   public static int anInt3198;
   public static int anInt3199;
   public static GameWorld[] aClass44_Sub1Array3201 = new GameWorld[0];
   public static long encodedUsername;
   public static int anInt3205;
-  public static GameString aClass94_3206 = GameStringStatics
-      .create("Moteur son pr-Bpar-B");
   public static int[] anIntArray3107;
   public static short[] aShortArray3110 = new short[256];
   public static int anInt3111;
   public static HuffmanEncoder huffmanEncoder;
   public static int anInt3114;
   public static int[][] anIntArrayArray3115;
-  public static GameString aClass94_4030 = GameStringStatics
-      .create("Allocating memory");
-  public static GameString aClass94_4040 = GlobalStatics_10.aClass94_4030;
   public static AnimationSomething[] aClass3_Sub28_Sub5Array4031 = new AnimationSomething[14];
   public static int anInt4032;
   public static int build;
   public static int anInt4034 = -8 + (int) (17.0D * Math.random());
   public static int[] anIntArray4035 = {1, 1, 0, 0, 0, 8, 0, 0, 8};
-  public static GameString aClass94_4036 =
-      GameStringStatics.create("Connect-B au serveur de mise -9 jour");
   public static int anInt4037;
   public static short aShort4038 = 32767;
   public static int anInt4039;
@@ -148,45 +135,26 @@ public class GlobalStatics_10 {
   };
   public static int anInt3216;
   public static int[] anIntArray3218 = {1, 4};
-  public static GameString aClass94_3146 = GameStringStatics
-      .create(" s(West connect-B)3");
   public static int usageMode;
-  public static GameString aClass94_3150 = GameStringStatics.create("null");
   public static int anInt3151;
-  public static GameString COMMAND_GC = GameStringStatics.create("::gc");
   public static int yawCosine;
   public static FileUnpacker aClass153_3154;
   public static int CAMERA_X_OFFSET;
   public static int anInt3156 = -1;
-  public static GameString aClass94_3157 =
-      GameStringStatics.create(" est d-Bj-9 dans votre liste noire)3");
   public static int anInt3068;
   public static int anInt3069;
   public static int anInt3070;
   public static int anInt3071;
-  public static GameString aClass94_3418 = GameStringStatics.create("(U5");
   public static int anInt3420;
   public static WorldMapLabel aClass131_3421;
   public static HashTable aClass130_3208 = new HashTable(8);
-  public static GameString aClass94_3209 = GameStringStatics
-      .create("showingVideoAd");
   public static FileUnpacker worldMaps;
-  public static GameString aClass94_3211 = GameStringStatics
-      .create(" <col=ffffff>");
   public static int[] anIntArray3212;
   public static int anInt3213 = 1;
-  public static GameString aClass94_3141 = GameStringStatics
-      .create("Loaded config");
-  public static GameString aClass94_3142 = GlobalStatics_10.aClass94_3141;
   public static CRC32 aCRC32_3143 = new CRC32();
   public static int anInt3144;
-  public static GameString aClass94_3145 = GameStringStatics.create(")1 ");
   public static int anInt3402;
   public static Cache aClass47_3407 = new Cache(64);
-  public static GameString aClass94_3408 = GameStringStatics
-      .create("Untersuchen");
-  public static GameString aClass94_3409 = GameStringStatics
-      .create("Musik)2Engine vorbereitet)3");
   public static long aLong3411;
   public static ObjectCache aClass93_3412 = new ObjectCache(64);
   public static int anInt3413;
@@ -198,14 +166,10 @@ public class GlobalStatics_10 {
   public static int[] anIntArray3076;
   public static FileUnpacker maps;
   public static boolean FOCUSED;
-  public static GameString aClass94_3079 = GameStringStatics.create("Examiner");
-  public static GameString aClass94_3080 = DummyClass53.method1586(23161, 160);
   public static int anInt3081;
   public static int[] anIntArray3082 = new int[100];
   public static int[] anIntArray3083 = new int[50];
   public static int anInt3084;
-  public static GameString aClass94_3096 = GameStringStatics.create("Close");
-  public static GameString aClass94_3097 = GlobalStatics_10.aClass94_3096;
   public static Widget aClass11_3087;
   public static Random random = new Random();
   public static int anInt3090;
@@ -214,31 +178,17 @@ public class GlobalStatics_10 {
   public static short[] aShortArray3095 = new short[500];
   public static FileUnpacker aClass153_3098;
   public static AbstractDirectColorSprite aClass3_Sub28_Sub16_3099;
-  public static GameString aClass94_3306 =
-      GameStringStatics.create(" is already on your ignore list)3");
-  public static GameString aClass94_3311 = GlobalStatics_10.aClass94_3306;
-  public static GameString aClass94_3302 = GameStringStatics
-      .create("Connexion perdue)3");
   public static FileUnpacker fileUnpacker10;
   public static int LOGIN_STATE;
   public static GameString aClass94_3307 = GameStringStatics
       .create("<col=00ff80>");
   public static int anInt3313 = 500;
-  public static GameString aClass94_3400 = GameStringStatics.create("Take");
-  public static GameString aClass94_3397 = GlobalStatics_10.aClass94_3400;
   public static byte[][][] aByteArrayArrayArray3390;
   public static GameString[] aClass94Array3391;
   public static SomethingPacket116[] aClass133Array3393 = new SomethingPacket116[6];
-  public static GameString aClass94_3394 = GameStringStatics
-      .create("<col=ffb000>");
   public static int anInt3395;
   public static byte[] aByteArray3396;
   public static volatile int anInt3398;
-  public static GameString aClass94_3399 = GameStringStatics.create("<br>(X");
-  public static GameString aClass94_3401 = GameStringStatics.create("Weiter");
-  public static GameString aClass94_3120 = GameStringStatics.create("M");
-  public static GameString aClass94_3117 = GlobalStatics_10.aClass94_3120;
-  public static GameString aClass94_3124 = GlobalStatics_10.aClass94_3120;
   public static volatile boolean aBoolean3116 = true;
   public static boolean[][] aBooleanArrayArray3118 = {
       new boolean[0], {true, false, true}, {true, false, false, true},
@@ -248,50 +198,28 @@ public class GlobalStatics_10 {
       {true, false, true, true, true},
       {false, true, true, true, true}, {false, true, true, true, true, false}
   };
-  public static GameString aClass94_3119 = GameStringStatics.create("vert:");
   public static Frame fullScreenFrame;
   public static int anInt3122;
-  public static GameString COMMAND_NOCLIP = GameStringStatics
-      .create("::noclip");
   public static SignLink signLink;
-  public static GameString aClass94_3170 = GameStringStatics
-      .create("Loaded textures");
-  public static GameString aClass94_3167 = GlobalStatics_10.aClass94_3170;
   public static int anInt3158 = -8 + (int) (17.0D * Math.random());
   public static FileCacheRequester fileCacheRequester;
   public static GameString UNDERSCORE = GameStringStatics.create("_");
   public static boolean aBoolean3166;
-  public static GameString aClass94_3168 = GameStringStatics.create("cross");
-  public static GameString aClass94_3169 = GameStringStatics
-      .create("Lade Sprites )2 ");
   public static int[] anIntArray3171 = {0, 4, 4, 8, 0, 0, 8, 0, 0};
   public static GameString aClass94_3172 = GameStringStatics
       .create("Regarder dans cette direction");
   public static FileUnpacker aClass153_3173;
-  public static GameString aClass94_3345 = GameStringStatics
-      .create("glissement:");
   public static SomethingGl0[][] aClass3_Sub11ArrayArray3346;
   public static short[] aShortArray3349 =
       {(short) -10304, (short) 9104, (short) -1, (short) -1, (short) -1};
   public static int anInt3351;
   public static FileUnpacker textures;
-  public static GameString walkTooltip;
-  public static GameString aClass94_3355 = GameStringStatics
-      .create("Angreifen");
-  public static GameString aClass94_3048 = GameStringStatics.create("Hidden");
-  public static GameString aClass94_3051 = GlobalStatics_10.aClass94_3048;
   public static Keyboard KEYBOARD = new Keyboard();
   public static short SOMETHING_SCENE_Y_1_1 = 205;
-  public static GameString aClass94_3053 = GameStringStatics
-      .create("Lade Schrifts-=tze )2 ");
   public static int anInt3054;
-  public static GameString aClass94_3055 = GameStringStatics.create("k");
   public static byte[][] updatedLandscapesData;
   public static int anInt3061;
   public static boolean aBoolean3064 = true;
-  public static GameString aClass94_3334 = GameStringStatics.create("wave2:");
-  public static GameString aClass94_3333 = GlobalStatics_10.aClass94_3334;
-  public static GameString aClass94_3325 = GlobalStatics_10.aClass94_3334;
   public static int anInt3332 = 50;
   public static int[] anIntArray3337 = new int[GlobalStatics_10.anInt3332];
   public static int[] anIntArray3336 = new int[GlobalStatics_10.anInt3332];
@@ -300,31 +228,17 @@ public class GlobalStatics_10 {
   public static int[] anIntArray3327 = new int[GlobalStatics_10.anInt3332];
   public static int[] anIntArray3319 = new int[GlobalStatics_10.anInt3332];
   public static int[] anIntArray3318 = new int[GlobalStatics_10.anInt3332];
-  public static GameString[] aClass94Array3317 = new GameString[GlobalStatics_10.anInt3332];
   public static int PLAYER_RIGHTS;
   public static int[] anIntArray3321 = {76, 8, 137, 4, 0, 1, 38, 2, 19};
   public static int anInt3323 = 50;
-  public static GameString aClass94_3324 = GameStringStatics
-      .create(" loggt sich ein)3");
-  public static GameString aClass94_3326 = GameStringStatics
-      .create("leuchten1:");
   public static int[] anIntArray3328 = new int[8];
-  public static GameString ASSIST_REQ = GameStringStatics.create(":assistreq:");
   public static byte[][] aByteArrayArray3335;
-  public static GameString aClass94_3428 = GameStringStatics
-      .create(" more options");
-  public static GameString aClass94_3426 = GlobalStatics_10.aClass94_3428;
-  public static GameString aClass94_3437 = GameStringStatics.create("Attack");
-  public static GameString aClass94_3427 = GlobalStatics_10.aClass94_3437;
   public static int anInt3422;
   public static int anInt3423;
   public static float diffuseIntensity;
   public static FileUnpacker animationSequences;
   public static byte[][][] floorUnderlayIds;
-  public static GameString aClass94_3432 = GameStringStatics
-      .create("Schrifts-=tze geladen)3");
   public static float aFloat3435;
-  public static GameString aClass94_3436 = GameStringStatics.create("jaune:");
   public static int anInt3255;
   public static int anInt3256;
   public static int anInt3259;
@@ -332,77 +246,43 @@ public class GlobalStatics_10 {
   public static boolean aBoolean3261;
   public static int anInt3263;
   public static SomethingWorldMapy aClass3_Sub28_Sub3_3264;
-  public static GameString aClass94_3449 = GameStringStatics
-      .create("Loading sprites )2 ");
-  public static GameString aClass94_3445 = GlobalStatics_10.aClass94_3449;
   public static int[] anIntArray3446;
   public static long[] entityKeys = new long[1000];
-  public static GameString aClass94_3452 = GameStringStatics.create("mapflag");
   public static short[] aShortArray3453 = new short[256];
   public static short[] aShortArray3455;
   public static int[] anIntArray3456 = new int[4096];
-  public static GameString aClass94_3286 =
-      GameStringStatics.create("Loading )2 please wait)3");
-  public static GameString LOADING_PLEASE_WAIT = GlobalStatics_10.aClass94_3286;
-  public static GameString aClass94_3279 = GameStringStatics
-      .create("Lade)3)3)3");
-  public static GameString aClass94_3281 = GameStringStatics
-      .create("sch-Utteln:");
   public static int anInt3285 = 128;
   public static int anInt3287;
   public static int[] anIntArray3288 =
       {4, 4, 1, 2, 6, 4, 2, 49, 2, 2, 2, 2, 2, 2, 2, 2, 1, 1, 1, 1, 1, 1, 1, 1,
           1, 1, 1, 1};
-  public static GameString aClass94_3289 = GameStringStatics.create("::fps ");
   public static long deltaTime;
   public static long lastSampledTime;
-  public static GameString aClass94_2486 = GameStringStatics.create("red:");
-  public static GameString aClass94_2481 = GlobalStatics_10.aClass94_2486;
-  public static GameString aClass94_2490 = GlobalStatics_10.aClass94_2486;
   public static int[] anIntArray2480 = new int[25];
-  public static GameString aClass94_2482 = GameStringStatics.create(":clan:");
   public static int anInt2484;
   public static int languageId;
   public static int anInt2487;
   public static int anInt2488;
-  public static GameString aClass94_1363 = GameStringStatics
-      .create("Clientscript error in: ");
   public static byte[] aByteArray1364 = new byte[0x8080];
   public static FileUnpacker aClass153_1370;
   public static FileUnpacker aClass153_1372;
   public static int[][] anIntArrayArray1373;
-  public static GameString aClass94_1374;
   public static FileUnpacker materials;
   public static GameString aClass94_1377;
   public static FileUnpacker aClass153_1378;
-  public static GameString aClass94_1380;
   public static SoftwareDirectColorSprite aClass3_Sub28_Sub16_Sub2_1381;
-  public static GameString aClass94_1899 = GameStringStatics
-      .create("Loading textures )2 ");
-  public static GameString aClass94_1892 = GlobalStatics_10.aClass94_1899;
-  public static GameString aClass94_1889 = GameStringStatics
-      .create("blinken2:");
   public static SomethingLight0[] aClass113Array1895;
   public static int anInt1896;
   public static int screenUpperX;
   public static int[] anIntArray2292 = new int[1000];
   public static int anInt2293 = -1;
   public static int anInt2294;
-  public static GameString EVENT_OP_BASE = GameStringStatics
-      .create("event_opbase");
   public static boolean aBoolean236 = true;
   public static float aFloat246;
-  public static GameString aClass94_251;
   public static long aLong261;
   public static int anInt278 = -1;
-  public static GameString aClass94_297 = GameStringStatics.create("Nehmen");
-  public static GameString aClass94_2206 = GameStringStatics.create("white:");
-  public static GameString aClass94_2214 = GlobalStatics_10.aClass94_2206;
-  public static GameString aClass94_2210 = GlobalStatics_10.aClass94_2206;
   public static FileUnpacker scripts;
   public static int anInt2204;
-  public static GameString aClass94_2207 = GameStringStatics
-      .create("brillant2:");
   public static int anInt2208 = -1;
   public static int[] anIntArray2209 = {2, 2, 4, 2, 1, 8, 4, 1, 4, 4, 2, 1, 1,
       1, 4, 1};
@@ -411,45 +291,26 @@ public class GlobalStatics_10 {
   public static int[] anIntArray2213 =
       {16776960, 16711680, 0xff00, 0xffff, 16711935, 16777215};
   public static boolean aBoolean3594;
-  public static GameString aClass94_3595 = GameStringStatics
-      .create("(U0a )2 via: ");
   public static int anInt3600;
-  public static GameString aClass94_1717 = GameStringStatics
-      .create("Prepared sound engine");
-  public static GameString aClass94_1731 = GlobalStatics_10.aClass94_1717;
-  public static GameString aClass94_1726 = GameStringStatics.create("Select");
-  public static GameString aClass94_1722 = GlobalStatics_10.aClass94_1726;
   public static int REGION_BASE_X;
   public static int anInt1719 = -1;
   public static FileUnpacker animationBases;
-  public static GameString aClass94_1724 = GameStringStatics.create(" )2>");
-  public static GameString aClass94_1728 = GameStringStatics
-      .create("Eingabeprozedur geladen)3");
   public static int[] anIntArray1729 = {12543016, 15504954, 15914854, 16773818};
   public static byte[][][] tileFlags = new byte[4][104][104];
-  public static GameString FILE_RUNES = GameStringStatics.create("runes");
   public static int anInt120 = 255;
-  public static GameString COMMAND_PREFIX = GameStringStatics.create("::");
   public static int anInt136;
   public static int anInt144;
-  public static GameString aClass94_145 = GameStringStatics.create("gelb:");
   public static int anInt101;
   public static int anInt104;
   public static FileUnpacker aClass153_105;
-  public static GameString aClass94_106 = GameStringStatics
-      .create("showVideoAd");
   public static int[] anIntArray2861 = new int[10000];
   public static int[] COSINE_TABLE = MathUtilities.COSINE_TABLE;
   public static int anInt2868;
   public static int[] SINE_TABLE = MathUtilities.SINE_TABLE;
   public static int[] anIntArray2875 = new int[10000];
   public static FileUnpacker sprites;
-  public static GameString aClass94_1686 = GameStringStatics.create("shake:");
-  public static GameString aClass94_1689 = GlobalStatics_10.aClass94_1686;
-  public static GameString aClass94_1688 = GlobalStatics_10.aClass94_1686;
   public static int anInt1682 = 1;
   public static ObjectCache aClass93_1683 = new ObjectCache(64);
-  public static GameString aClass94_1687 = GameStringStatics.create("(Z");
 
   public static int method319(int var0, int var1, int var2) {
     if (var1 >= -99) {
@@ -478,18 +339,18 @@ public class GlobalStatics_10 {
   }
 
   public static void method321(int var0) {
-    GlobalStatics_10.aClass94_3386 = null;
+    GameStringStatics.aClass94_3386 = null;
     GlobalStatics_10.anIntArray3383 = null;
     GlobalStatics_10.aFont3384 = null;
-    GlobalStatics_10.aClass94_3388 = null;
+    GameStringStatics.aClass94_3388 = null;
     if (var0 != -21136) {
       GlobalStatics_10.method319(-38, -96, -102);
     }
   }
 
   public static int getLanguageForTag(GameString var0) {
-    for (int i = 0; i < GlobalStatics_9.LANGUAGES.length; ++i) {
-      if (GlobalStatics_9.LANGUAGES[i].method1531(var0)) {
+    for (int i = 0; i < GameStringStatics.LANGUAGES.length; ++i) {
+      if (GameStringStatics.LANGUAGES[i].method1531(var0)) {
         return i;
       }
     }
@@ -517,14 +378,14 @@ public class GlobalStatics_10 {
 
   public static void method245(int var0) {
     GlobalStatics_10.aClass44_Sub1Array3201 = null;
-    GlobalStatics_10.aClass94_3192 = null;
-    GlobalStatics_10.aClass94_3206 = null;
+    GameStringStatics.aClass94_3192 = null;
+    GameStringStatics.aClass94_3206 = null;
     if (var0 != 0) {
       GlobalStatics_10.method245(111);
     }
 
-    GlobalStatics_10.aClass94_3190 = null;
-    GlobalStatics_10.aClass94_3196 = null;
+    GameStringStatics.aClass94_3190 = null;
+    GameStringStatics.aClass94_3196 = null;
   }
 
   public static int method208(int var0) {
@@ -693,9 +554,9 @@ public class GlobalStatics_10 {
   }
 
   public static void method287(boolean var0) {
-    GlobalStatics_10.aClass94_4030 = null;
-    GlobalStatics_10.aClass94_4036 = null;
-    GlobalStatics_10.aClass94_4040 = null;
+    GameStringStatics.aClass94_4030 = null;
+    GameStringStatics.aClass94_4036 = null;
+    GameStringStatics.aClass94_4040 = null;
     GlobalStatics_10.anIntArray4035 = null;
     GlobalStatics_10.aClass3_Sub28_Sub5Array4031 = null;
     if (var0) {
@@ -746,7 +607,7 @@ public class GlobalStatics_10 {
               GlobalStatics_10.anInt3395,
               GlobalStatics_9.anInt3537);
       var7 = GlobalStatics_8.aClass3_Sub28_Sub17_2096
-          .method682(GlobalStatics_9.aClass94_2667);
+          .method682(GameStringStatics.aClass94_2667);
 
       for (int var8 = 0; var8 < GlobalStatics_10.amountContextActions;
           ++var8) {
@@ -1051,19 +912,19 @@ public class GlobalStatics_10 {
   }
 
   public static void setRunesFileId(FileUnpacker var1) {
-    GlobalStatics_9.runesFileId = var1.getFileId(GlobalStatics_10.FILE_RUNES);
+    GlobalStatics_9.runesFileId = var1.getFileId(GameStringStatics.FILE_RUNES);
   }
 
   public static void method234(int var0) {
-    GlobalStatics_10.aClass94_3157 = null;
-    GlobalStatics_10.aClass94_3150 = null;
+    GameStringStatics.aClass94_3157 = null;
+    GameStringStatics.aClass94_3150 = null;
     if (var0 != -3) {
       GlobalStatics_10.setRunesFileId(null);
     }
 
-    GlobalStatics_10.aClass94_3146 = null;
+    GameStringStatics.aClass94_3146 = null;
     GlobalStatics_10.aClass153_3154 = null;
-    GlobalStatics_10.COMMAND_GC = null;
+    GameStringStatics.COMMAND_GC = null;
   }
 
   public static void method235(boolean var0) {
@@ -1999,7 +1860,7 @@ public class GlobalStatics_10 {
   }
 
   public static void method337(int var0) {
-    GlobalStatics_10.aClass94_3418 = null;
+    GameStringStatics.aClass94_3418 = null;
     if (var0 != 2) {
       GLStatics.anInt3419 = -53;
     }
@@ -2045,10 +1906,10 @@ public class GlobalStatics_10 {
 
   public static void method249(int var0) {
     GlobalStatics_10.anIntArray3212 = null;
-    GlobalStatics_10.aClass94_3211 = null;
+    GameStringStatics.aClass94_3211 = null;
     GlobalStatics_10.aClass130_3208 = null;
     GlobalStatics_10.worldMaps = null;
-    GlobalStatics_10.aClass94_3209 = null;
+    GameStringStatics.aClass94_3209 = null;
   }
 
   public static void method250(int var0, FileUnpacker var1) {
@@ -2241,11 +2102,11 @@ public class GlobalStatics_10 {
   }
 
   public static void method227(boolean var0) {
-    GlobalStatics_10.aClass94_3142 = null;
-    GlobalStatics_10.aClass94_3145 = null;
+    GameStringStatics.aClass94_3142 = null;
+    GameStringStatics.aClass94_3145 = null;
     GlobalStatics_10.aCRC32_3143 = null;
 
-    GlobalStatics_10.aClass94_3141 = null;
+    GameStringStatics.aClass94_3141 = null;
   }
 
   public static int method228(FileUnpacker var0, FileUnpacker var1,
@@ -2268,7 +2129,7 @@ public class GlobalStatics_10 {
     }
 
     if (var2) {
-      GlobalStatics_10.aClass94_3142 = null;
+      GameStringStatics.aClass94_3142 = null;
     }
 
     if (var1.isLoaded(GlobalStatics_9.p12FontFileId)) {
@@ -2597,8 +2458,8 @@ public class GlobalStatics_10 {
   public static void method333(byte var0) {
     int var1 = 100 / ((76 - var0) / 44);
     GlobalStatics_10.aClass93_3412 = null;
-    GlobalStatics_10.aClass94_3409 = null;
-    GlobalStatics_10.aClass94_3408 = null;
+    GameStringStatics.aClass94_3409 = null;
+    GameStringStatics.aClass94_3408 = null;
     GlobalStatics_10.aClass47_3407 = null;
   }
 
@@ -2705,11 +2566,11 @@ public class GlobalStatics_10 {
   }
 
   public static void method197(int var0) {
-    GlobalStatics_10.aClass94_3079 = null;
+    GameStringStatics.aClass94_3079 = null;
     GlobalStatics_10.anIntArray3076 = null;
     GlobalStatics_10.aClass61_3075 = null;
     GlobalStatics_10.anIntArray3082 = null;
-    GlobalStatics_10.aClass94_3080 = null;
+    GameStringStatics.aClass94_3080 = null;
     if (var0 == 1) {
       GlobalStatics_10.anIntArray3083 = null;
       GlobalStatics_10.maps = null;
@@ -2762,7 +2623,7 @@ public class GlobalStatics_10 {
   }
 
   public static void method200(byte var0) {
-    GlobalStatics_10.aClass94_3097 = null;
+    GameStringStatics.aClass94_3097 = null;
     GlobalStatics_10.aShortArray3095 = null;
     if (var0 != 122) {
       GlobalStatics_10.method201(62, -109, 127);
@@ -2770,7 +2631,7 @@ public class GlobalStatics_10 {
 
     GlobalStatics_10.FRAME = null;
     GlobalStatics_10.random = null;
-    GlobalStatics_10.aClass94_3096 = null;
+    GameStringStatics.aClass94_3096 = null;
     GlobalStatics_10.aClass3_Sub28_Sub16_3099 = null;
     GlobalStatics_10.aClass11_3087 = null;
     GlobalStatics_10.aClass153_3098 = null;
@@ -2784,11 +2645,11 @@ public class GlobalStatics_10 {
 
   public static void method290(int var0) {
     GlobalStatics_10.aClass94_3307 = null;
-    GlobalStatics_10.aClass94_3302 = null;
+    GameStringStatics.aClass94_3302 = null;
     if (var0 == -9) {
       GlobalStatics_10.fileUnpacker10 = null;
-      GlobalStatics_10.aClass94_3306 = null;
-      GlobalStatics_10.aClass94_3311 = null;
+      GameStringStatics.aClass94_3306 = null;
+      GameStringStatics.aClass94_3311 = null;
     }
   }
 
@@ -2823,16 +2684,16 @@ public class GlobalStatics_10 {
   }
 
   public static void method325(int var0) {
-    GlobalStatics_10.aClass94_3401 = null;
+    GameStringStatics.aClass94_3401 = null;
     GlobalStatics_10.aByteArrayArrayArray3390 = null;
     if (var0 == 0) {
       GlobalStatics_10.aByteArray3396 = null;
       GlobalStatics_10.aClass133Array3393 = null;
-      GlobalStatics_10.aClass94_3400 = null;
+      GameStringStatics.aClass94_3400 = null;
       GlobalStatics_10.aClass94Array3391 = null;
-      GlobalStatics_10.aClass94_3397 = null;
-      GlobalStatics_10.aClass94_3399 = null;
-      GlobalStatics_10.aClass94_3394 = null;
+      GameStringStatics.aClass94_3397 = null;
+      GameStringStatics.aClass94_3399 = null;
+      GameStringStatics.aClass94_3394 = null;
     }
   }
 
@@ -2842,7 +2703,7 @@ public class GlobalStatics_10 {
 
   public static void method327(int var0, int var1, byte var2) {
     if (var2 != 68) {
-      GlobalStatics_10.aClass94_3397 = null;
+      GameStringStatics.aClass94_3397 = null;
     }
 
     WidgetUpdate var3 = GlobalStatics_6.method466(var2 - 64, 12, var1);
@@ -2869,17 +2730,17 @@ public class GlobalStatics_10 {
   }
 
   public static void method211(int var0) {
-    GlobalStatics_10.aClass94_3124 = null;
-    GlobalStatics_10.aClass94_3117 = null;
+    GameStringStatics.aClass94_3124 = null;
+    GameStringStatics.aClass94_3117 = null;
     if (var0 != 1024) {
       GlobalStatics_10.signLink = null;
     }
 
-    GlobalStatics_10.aClass94_3120 = null;
-    GlobalStatics_10.COMMAND_NOCLIP = null;
+    GameStringStatics.aClass94_3120 = null;
+    GameStringStatics.COMMAND_NOCLIP = null;
     GlobalStatics_10.fullScreenFrame = null;
     GlobalStatics_10.aBooleanArrayArray3118 = null;
-    GlobalStatics_10.aClass94_3119 = null;
+    GameStringStatics.aClass94_3119 = null;
     GlobalStatics_10.signLink = null;
   }
 
@@ -3081,7 +2942,7 @@ public class GlobalStatics_10 {
     }
 
     if (var1 != -14991) {
-      GlobalStatics_10.COMMAND_NOCLIP = null;
+      GameStringStatics.COMMAND_NOCLIP = null;
     }
   }
 
@@ -3130,28 +2991,28 @@ public class GlobalStatics_10 {
   public static void method238(int var0) {
     if (var0 == 9423) {
       RSAConfiguration.PUBLIC_EXPONENT = null;
-      GlobalStatics_10.aClass94_3169 = null;
+      GameStringStatics.aClass94_3169 = null;
       GlobalStatics_10.anIntArray3171 = null;
       GlobalStatics_10.fileCacheRequester = null;
       GlobalStatics_10.aClass153_3173 = null;
-      GlobalStatics_10.aClass94_3168 = null;
-      GlobalStatics_10.aClass94_3167 = null;
+      GameStringStatics.aClass94_3168 = null;
+      GameStringStatics.aClass94_3167 = null;
       GlobalStatics_10.UNDERSCORE = null;
-      GlobalStatics_10.aClass94_3170 = null;
+      GameStringStatics.aClass94_3170 = null;
       GlobalStatics_10.aClass94_3172 = null;
     }
   }
 
   public static void method300(int var0) {
-    GlobalStatics_10.walkTooltip = null;
+    GameStringStatics.walkTooltip = null;
     if (var0 <= 6) {
-      GlobalStatics_10.aClass94_3345 = null;
+      GameStringStatics.aClass94_3345 = null;
     }
 
     GlobalStatics_10.aShortArray3349 = null;
     GlobalStatics_10.aClass3_Sub11ArrayArray3346 = null;
-    GlobalStatics_10.aClass94_3355 = null;
-    GlobalStatics_10.aClass94_3345 = null;
+    GameStringStatics.aClass94_3355 = null;
+    GameStringStatics.aClass94_3345 = null;
     GlobalStatics_10.textures = null;
   }
 
@@ -3216,9 +3077,9 @@ public class GlobalStatics_10 {
   }
 
   public static void method177(byte var0) {
-    GlobalStatics_10.aClass94_3053 = null;
-    GlobalStatics_10.aClass94_3051 = null;
-    GlobalStatics_10.aClass94_3048 = null;
+    GameStringStatics.aClass94_3053 = null;
+    GameStringStatics.aClass94_3051 = null;
+    GameStringStatics.aClass94_3048 = null;
     GlobalStatics_10.KEYBOARD = null;
   }
 
@@ -3405,10 +3266,10 @@ public class GlobalStatics_10 {
   public static void method187(boolean var0) {
     GlobalStatics_10.updatedLandscapesData = null;
     if (var0) {
-      GlobalStatics_10.aClass94_3055 = null;
+      GameStringStatics.aClass94_3055 = null;
     }
 
-    GlobalStatics_10.aClass94_3055 = null;
+    GameStringStatics.aClass94_3055 = null;
   }
 
   public static void method188(int var0, int var1) {
@@ -3518,22 +3379,22 @@ public class GlobalStatics_10 {
   public static void method294(byte var0) {
     GlobalStatics_10.anIntArray3327 = null;
     GlobalStatics_10.anIntArray3337 = null;
-    GlobalStatics_10.aClass94_3326 = null;
-    GlobalStatics_10.aClass94Array3317 = null;
-    GlobalStatics_10.aClass94_3334 = null;
+    GameStringStatics.aClass94_3326 = null;
+    GameStringStatics.aClass94Array3317 = null;
+    GameStringStatics.aClass94_3334 = null;
     GlobalStatics_10.anIntArray3328 = null;
-    GlobalStatics_10.ASSIST_REQ = null;
-    GlobalStatics_10.aClass94_3324 = null;
+    GameStringStatics.ASSIST_REQ = null;
+    GameStringStatics.aClass94_3324 = null;
     GlobalStatics_10.anIntArray3319 = null;
     GlobalStatics_10.aByteArrayArray3335 = null;
     GlobalStatics_10.anIntArray3329 = null;
-    GlobalStatics_10.aClass94_3333 = null;
+    GameStringStatics.aClass94_3333 = null;
     GlobalStatics_10.anIntArray3336 = null;
     int var1 = -62 % ((-59 - var0) / 47);
     GlobalStatics_10.anIntArray3321 = null;
     GlobalStatics_10.anIntArray3318 = null;
     GlobalStatics_10.anIntArray3331 = null;
-    GlobalStatics_10.aClass94_3325 = null;
+    GameStringStatics.aClass94_3325 = null;
   }
 
   public static void method338(int var0, int zoom, boolean var2, int var3,
@@ -3570,7 +3431,7 @@ public class GlobalStatics_10 {
         var6 = GlobalStatics_9.anInt2670 / 256;
       }
 
-      if (MaterialShader5.aBooleanArray2169[4]
+      if (GLStatics.aBooleanArray2169[4]
           && GlobalStatics_9.anIntArray2073[4] + 128 > var6) {
         var6 = 128 + GlobalStatics_9.anIntArray2073[4];
       }
@@ -3592,7 +3453,7 @@ public class GlobalStatics_10 {
     int var11;
     int var12;
     for (var11 = 0; var11 < 5; ++var11) {
-      if (MaterialShader5.aBooleanArray2169[var11]) {
+      if (GLStatics.aBooleanArray2169[var11]) {
         var12 = (int) (-GlobalStatics_10.anIntArray3383[var11]
             + (GlobalStatics_10.anIntArray3383[var11] * 2 + 1) * Math.random()
             +
@@ -3767,7 +3628,7 @@ public class GlobalStatics_10 {
       }
 
       GlobalStatics_3
-          .drawLoadingBox(GlobalStatics_10.LOADING_PLEASE_WAIT, false);
+          .drawLoadingBox(GameStringStatics.LOADING_PLEASE_WAIT, false);
     }
 
     if (!var2 && !GlobalStatics_10.aBoolean3064 && !DummyClass36.aBoolean2615
@@ -3775,7 +3636,7 @@ public class GlobalStatics_10 {
         && var4 + var3 > GlobalStatics_9.anInt1297
         && var5 <= DummyClass36.anInt2612
         && zoom + var5 > DummyClass36.anInt2612) {
-      MaterialShader5
+      GLStatics
           .method1628(var5, var4, zoom, var3, DummyClass36.anInt2612,
               GlobalStatics_9.anInt1297, (byte) 97);
 
@@ -3783,15 +3644,15 @@ public class GlobalStatics_10 {
   }
 
   public static void method341(byte var0) {
-    GlobalStatics_10.aClass94_3428 = null;
-    GlobalStatics_10.aClass94_3437 = null;
-    GlobalStatics_10.aClass94_3427 = null;
-    GlobalStatics_10.aClass94_3426 = null;
-    GlobalStatics_10.aClass94_3432 = null;
+    GameStringStatics.aClass94_3428 = null;
+    GameStringStatics.aClass94_3437 = null;
+    GameStringStatics.aClass94_3427 = null;
+    GameStringStatics.aClass94_3426 = null;
+    GameStringStatics.aClass94_3432 = null;
     if (var0 > 66) {
       GlobalStatics_10.animationSequences = null;
       GlobalStatics_10.floorUnderlayIds = null;
-      GlobalStatics_10.aClass94_3436 = null;
+      GameStringStatics.aClass94_3436 = null;
     }
   }
 
@@ -3844,7 +3705,7 @@ public class GlobalStatics_10 {
     }
 
     if (var0 != 1854847236) {
-      GlobalStatics_10.aClass94_3428 = null;
+      GameStringStatics.aClass94_3428 = null;
     }
 
     DummyClass37.method1035((byte) 113);
@@ -4089,14 +3950,14 @@ public class GlobalStatics_10 {
 
   public static void method351(int var0) {
     GlobalStatics_10.aShortArray3455 = null;
-    GlobalStatics_10.aClass94_3449 = null;
+    GameStringStatics.aClass94_3449 = null;
     GlobalStatics_10.anIntArray3446 = null;
     if (var0 == -1) {
-      GlobalStatics_10.aClass94_3445 = null;
+      GameStringStatics.aClass94_3445 = null;
       GlobalStatics_10.aShortArray3453 = null;
       GlobalStatics_10.entityKeys = null;
       GlobalStatics_10.anIntArray3456 = null;
-      GlobalStatics_10.aClass94_3452 = null;
+      GameStringStatics.aClass94_3452 = null;
     }
   }
 
@@ -4131,16 +3992,16 @@ public class GlobalStatics_10 {
   }
 
   public static void method277(byte var0) {
-    GlobalStatics_10.aClass94_3281 = null;
-    GlobalStatics_10.aClass94_3286 = null;
+    GameStringStatics.aClass94_3281 = null;
+    GameStringStatics.aClass94_3286 = null;
     if (var0 >= -11) {
       GlobalStatics_10.anInt3287 = -68;
     }
 
-    GlobalStatics_10.LOADING_PLEASE_WAIT = null;
-    GlobalStatics_10.aClass94_3289 = null;
+    GameStringStatics.LOADING_PLEASE_WAIT = null;
+    GameStringStatics.aClass94_3289 = null;
     GlobalStatics_10.anIntArray3288 = null;
-    GlobalStatics_10.aClass94_3279 = null;
+    GameStringStatics.aClass94_3279 = null;
   }
 
   public static boolean method278(int var0, byte[] var1) {
@@ -4211,9 +4072,9 @@ public class GlobalStatics_10 {
 
   public static void method388(byte var0) {
     int var1 = 44 / ((-2 - var0) / 52);
-    if (GlobalStatics_9.aClass94_3220 != null) {
-      GlobalStatics_9.method138(GlobalStatics_9.aClass94_3220, 0);
-      GlobalStatics_9.aClass94_3220 = null;
+    if (GameStringStatics.aClass94_3220 != null) {
+      GlobalStatics_9.method138(GameStringStatics.aClass94_3220, 0);
+      GameStringStatics.aClass94_3220 = null;
     }
   }
 
@@ -4250,7 +4111,7 @@ public class GlobalStatics_10 {
     DummyClass28.method887(21, GlobalStatics_10.sprites);
     GlobalStatics_9.aClass3_Sub28_Sub16_2560 = null;
     GlobalStatics_10.aClass3_Sub28_Sub16_3099 = null;
-    GlobalStatics_4.aClass3_Sub28_Sub16_824 = null;
+    GameStringStatics.aClass3_Sub28_Sub16_824 = null;
     DummyClass53.aClass3_Sub28_Sub16_1339 = null;
     DummyClass58.aClass3_Sub28_Sub16_1457 = null;
     if (DummyClass15.state == 5) {
@@ -4288,15 +4149,15 @@ public class GlobalStatics_10 {
   }
 
   public static void method391(int var0) {
-    GlobalStatics_10.aClass94_2490 = null;
+    GameStringStatics.aClass94_2490 = null;
     GlobalStatics_10.anIntArray2480 = null;
-    GlobalStatics_10.aClass94_2481 = null;
+    GameStringStatics.aClass94_2481 = null;
     if (var0 != 25) {
       GlobalStatics_10.method388((byte) -58);
     }
 
-    GlobalStatics_10.aClass94_2486 = null;
-    GlobalStatics_10.aClass94_2482 = null;
+    GameStringStatics.aClass94_2486 = null;
+    GameStringStatics.aClass94_2482 = null;
   }
 
   public static void setAnimationFileUnpackers(FileUnpacker var0,
@@ -4329,29 +4190,29 @@ public class GlobalStatics_10 {
     GlobalStatics_10.materials = null;
     GlobalStatics_10.aClass153_1378 = null;
     GlobalStatics_10.anIntArrayArray1373 = null;
-    GlobalStatics_10.aClass94_1363 = null;
+    GameStringStatics.aClass94_1363 = null;
     GlobalStatics_10.aClass3_Sub28_Sub16_Sub2_1381 = null;
     if (var0 > 25) {
       GlobalStatics_10.aClass94_1377 = null;
-      GlobalStatics_10.aClass94_1380 = null;
+      GameStringStatics.aClass94_1380 = null;
       GlobalStatics_10.aClass153_1372 = null;
       GlobalStatics_10.aClass153_1370 = null;
       GlobalStatics_10.aByteArray1364 = null;
-      GlobalStatics_10.aClass94_1374 = null;
+      GameStringStatics.aClass94_1374 = null;
     }
   }
 
   public static void method1593(int var0, FileUnpacker var1) {
     DummyClass14.titleBackgroundFileId = var1
-        .getFileId(GlobalStatics_9.TITLE_BACKGROUND);
+        .getFileId(GameStringStatics.TITLE_BACKGROUND);
     GlobalStatics_6.logoFileId = var1.getFileId(DummyClass53.LOGO);
   }
 
   public static void clear50(byte var0) {
-    GlobalStatics_10.aClass94_1892 = null;
-    GlobalStatics_10.aClass94_1889 = null;
+    GameStringStatics.aClass94_1892 = null;
+    GameStringStatics.aClass94_1889 = null;
     GlobalStatics_10.aClass113Array1895 = null;
-    GlobalStatics_10.aClass94_1899 = null;
+    GameStringStatics.aClass94_1899 = null;
     if (var0 <= 1) {
       GlobalStatics_10.method2075(112, (byte) 44);
     }
@@ -5417,7 +5278,7 @@ public class GlobalStatics_10 {
   public static void method2077(boolean var0) {
     GlobalStatics_9.aClass93_2604.method1524(3);
     if (!var0) {
-      GlobalStatics_10.aClass94_1899 = null;
+      GameStringStatics.aClass94_1899 = null;
     }
 
     DummyClass32.aClass93_511.method1524(3);
@@ -5457,7 +5318,7 @@ public class GlobalStatics_10 {
     if (var1 < 100000) {
       return GlobalStatics_9.concat(new GameString[]{
           DummyClass42.aClass94_888, GlobalStatics_9.toString(var1),
-          GlobalStatics_9.aClass94_1076
+          GameStringStatics.aClass94_1076
       });
     } else {
       if (var0 != 1000) {
@@ -5467,11 +5328,11 @@ public class GlobalStatics_10 {
       return var1 >= 10000000 ? GlobalStatics_9.concat(new GameString[]{
           GlobalStatics_10.aClass94_3307,
           GlobalStatics_9.toString(var1 / 1000000),
-          GlobalStatics_10.aClass94_3117, GlobalStatics_9.aClass94_1076
+          GameStringStatics.aClass94_3117, GameStringStatics.aClass94_1076
       }) : GlobalStatics_9.concat(new GameString[]{
           GameStringStatics.aClass94_2477,
           GlobalStatics_9.toString(var1 / 1000),
-          GameStringStatics.aClass94_3584, GlobalStatics_9.aClass94_1076
+          GameStringStatics.aClass94_3584, GameStringStatics.aClass94_1076
       });
     }
   }
@@ -5481,15 +5342,15 @@ public class GlobalStatics_10 {
       GlobalStatics_10.method869(127, -68);
     }
 
-    GameString var1 = GlobalStatics_9.aClass94_4052;
-    GameString var2 = GlobalStatics_9.EMPTY_STRING;
+    GameString var1 = GameStringStatics.aClass94_4052;
+    GameString var2 = GameStringStatics.EMPTY_STRING;
     if (GlobalStatics_4.usageLocation != 0) {
-      var1 = GlobalStatics_9.aClass94_3971;
+      var1 = GameStringStatics.aClass94_3971;
     }
 
     if (DummyClass7.settings != null) {
       var2 =
-          GlobalStatics_9.concat(new GameString[]{GlobalStatics_9.aClass94_3637,
+          GlobalStatics_9.concat(new GameString[]{GameStringStatics.aClass94_3637,
               DummyClass7.settings});
     }
 
@@ -5503,13 +5364,13 @@ public class GlobalStatics_10 {
   }
 
   public static void clear24(int var0) {
-    GlobalStatics_10.aClass94_297 = null;
-    GlobalStatics_10.EVENT_OP_BASE = null;
+    GameStringStatics.aClass94_297 = null;
+    GameStringStatics.EVENT_OP_BASE = null;
     if (var0 < 63) {
       GlobalStatics_10.clear24(42);
     }
 
-    GlobalStatics_10.aClass94_251 = null;
+    GameStringStatics.aClass94_251 = null;
   }
 
   public static int method861(int var0, int var1, int var2) {
@@ -5530,7 +5391,7 @@ public class GlobalStatics_10 {
       if (!GlobalStatics_10.aBoolean3416) {
         SceneGraphTile[][][] var1 = GLStatics.sceneGraphTiles;
         if (var0 != 1) {
-          GlobalStatics_10.aClass94_2214 = null;
+          GameStringStatics.aClass94_2214 = null;
         }
 
         for (SceneGraphTile[][] var3 : var1) {
@@ -5627,10 +5488,10 @@ public class GlobalStatics_10 {
 
     GlobalStatics_10.scripts = null;
     GlobalStatics_10.anIntArray2209 = null;
-    GlobalStatics_10.aClass94_2206 = null;
-    GlobalStatics_10.aClass94_2210 = null;
-    GlobalStatics_10.aClass94_2207 = null;
-    GlobalStatics_10.aClass94_2214 = null;
+    GameStringStatics.aClass94_2206 = null;
+    GameStringStatics.aClass94_2210 = null;
+    GameStringStatics.aClass94_2207 = null;
+    GameStringStatics.aClass94_2214 = null;
   }
 
   public static void d(int var0) {
@@ -5753,7 +5614,7 @@ public class GlobalStatics_10 {
     } else {
       byte[] var3 = GlobalStatics_9.configs.getBytes(34, var0);
       if (var1 != 0) {
-        GlobalStatics_10.aClass94_3595 = null;
+        GameStringStatics.aClass94_3595 = null;
       }
 
       var2 = new MapScene();
@@ -5831,7 +5692,7 @@ public class GlobalStatics_10 {
 
   public static void f(int var0) {
     if (var0 == 3) {
-      GlobalStatics_10.aClass94_3595 = null;
+      GameStringStatics.aClass94_3595 = null;
     }
   }
 
@@ -5919,7 +5780,7 @@ public class GlobalStatics_10 {
 
   public static void method1790(int var0, int var1, int var2) {
     if (var2 < 90) {
-      GlobalStatics_10.aClass94_1731 = null;
+      GameStringStatics.aClass94_1731 = null;
     }
 
     WidgetUpdate var3 = GlobalStatics_6.method466(4, 5, var0);
@@ -5931,24 +5792,24 @@ public class GlobalStatics_10 {
     GlobalStatics_10.anIntArray1729 = null;
     if (var0 == 0) {
       GlobalStatics_10.animationBases = null;
-      GlobalStatics_10.aClass94_1726 = null;
-      GlobalStatics_10.aClass94_1731 = null;
-      GlobalStatics_10.aClass94_1717 = null;
-      GlobalStatics_10.aClass94_1722 = null;
-      GlobalStatics_10.aClass94_1728 = null;
-      GlobalStatics_10.aClass94_1724 = null;
+      GameStringStatics.aClass94_1726 = null;
+      GameStringStatics.aClass94_1731 = null;
+      GameStringStatics.aClass94_1717 = null;
+      GameStringStatics.aClass94_1722 = null;
+      GameStringStatics.aClass94_1728 = null;
+      GameStringStatics.aClass94_1724 = null;
     }
   }
 
   public static void method1793(GameString var0, GameString var1, int var2,
       byte var3) {
-    GlobalStatics_9.password = var1;
+    GameStringStatics.password = var1;
     GlobalStatics_7.anInt2161 = var2;
-    GlobalStatics_9.username = var0;
-    if (!GlobalStatics_9.username
-        .method1528((byte) -42, GlobalStatics_9.EMPTY_STRING)
-        && !GlobalStatics_9.password
-        .method1528((byte) -42, GlobalStatics_9.EMPTY_STRING)) {
+    GameStringStatics.username = var0;
+    if (!GameStringStatics.username
+        .method1528((byte) -42, GameStringStatics.EMPTY_STRING)
+        && !GameStringStatics.password
+        .method1528((byte) -42, GameStringStatics.EMPTY_STRING)) {
       if (GlobalStatics_7.anInt2451 == -1) {
         GlobalStatics_2.anInt2246 = 0;
         DummyClass26.anInt1616 = 0;
@@ -5958,9 +5819,9 @@ public class GlobalStatics_10 {
         var4.writeByte(10);
         var4.writeShort((int) (Math.random() * 99999.0D));
         var4.writeShort(530);
-        var4.writeLong(GlobalStatics_9.username.toBase37());
+        var4.writeLong(GameStringStatics.username.toBase37());
         var4.writeInt((int) (Math.random() * 9.9999999E7D));
-        var4.writeString(GlobalStatics_9.password);
+        var4.writeString(GameStringStatics.password);
         var4.writeInt((int) (Math.random() * 9.9999999E7D));
         var4.encipherRSA(RSAConfiguration.PUBLIC_EXPONENT,
             RSAConfiguration.MODULUS);
@@ -6017,115 +5878,115 @@ public class GlobalStatics_10 {
     }
 
     if (var0 != 4) {
-      GlobalStatics_10.COMMAND_PREFIX = null;
+      GameStringStatics.COMMAND_PREFIX = null;
     }
   }
 
   public static void method849(int var0) {
-    GlobalStatics_10.aClass94_145 = null;
+    GameStringStatics.aClass94_145 = null;
     if (var0 == 2) {
       BufferStatics.aByteArrayArray125 = null;
-      GlobalStatics_10.FILE_RUNES = null;
-      GlobalStatics_10.COMMAND_PREFIX = null;
+      GameStringStatics.FILE_RUNES = null;
+      GameStringStatics.COMMAND_PREFIX = null;
       GlobalStatics_10.tileFlags = null;
     }
   }
 
   public static void method850(byte var0) {
-    GlobalStatics_10.aClass94_3142 = GlobalStatics_9.aClass94_3649;
-    GlobalStatics_9.aClass94_3546 = GlobalStatics_9.aClass94_2002;
-    GlobalStatics_4.aClass94_825 = GlobalStatics_9.aClass94_1281;
+    GameStringStatics.aClass94_3142 = GameStringStatics.aClass94_3649;
+    GameStringStatics.aClass94_3546 = GameStringStatics.aClass94_2002;
+    GameStringStatics.aClass94_825 = GameStringStatics.aClass94_1281;
     DummyClass44.aClass94_935 = DummyClass10.aClass94_2086;
     DummyClass32.SKILL = DummyClass1.aClass94_415;
-    GlobalStatics_0.aClass94_1180 = GlobalStatics_10.aClass94_3079;
+    GlobalStatics_0.aClass94_1180 = GameStringStatics.aClass94_3079;
     GlobalStatics_0.aClass94_1183 = DummyClass50.aClass94_1143;
-    DummyClass14.aClass94_1962 = GlobalStatics_10.aClass94_2207;
-    GlobalStatics_10.aClass94_3124 = DummyClass4.aClass94_3002;
-    GlobalStatics_8.aClass94_36 = GlobalStatics_9.aClass94_3106;
-    GlobalStatics_10.aClass94_3333 = DummyClass35.aClass94_667;
-    GlobalStatics_10.aClass94_3427 = DummyClass49.aClass94_1110;
+    DummyClass14.aClass94_1962 = GameStringStatics.aClass94_2207;
+    GameStringStatics.aClass94_3124 = DummyClass4.aClass94_3002;
+    GlobalStatics_8.aClass94_36 = GameStringStatics.aClass94_3106;
+    GameStringStatics.aClass94_3333 = DummyClass35.aClass94_667;
+    GameStringStatics.aClass94_3427 = DummyClass49.aClass94_1110;
     DummyClass8.aClass94_4024 = GlobalStatics_7.aClass94_2945;
-    GlobalStatics_10.aClass94_3311 = GlobalStatics_10.aClass94_3157;
-    GlobalStatics_9.aClass94_374 = GlobalStatics_4.aClass94_3634;
-    GlobalStatics_8.aClass94_1409 = GlobalStatics_9.aClass94_3957;
-    GlobalStatics_10.aClass94_2481 = GlobalStatics_7.aClass94_1636;
-    GlobalStatics_8.aClass94_2751 = GlobalStatics_9.aClass94_3991;
-    GlobalStatics_9.CONNECTING_TO_UPDATE_SERVER = GlobalStatics_0.aClass94_2585;
+    GameStringStatics.aClass94_3311 = GameStringStatics.aClass94_3157;
+    GameStringStatics.aClass94_374 = GameStringStatics.aClass94_3634;
+    GlobalStatics_8.aClass94_1409 = GameStringStatics.aClass94_3957;
+    GameStringStatics.aClass94_2481 = GlobalStatics_7.aClass94_1636;
+    GlobalStatics_8.aClass94_2751 = GameStringStatics.aClass94_3991;
+    GameStringStatics.CONNECTING_TO_UPDATE_SERVER = GlobalStatics_0.aClass94_2585;
     if (var0 != 121) {
       GlobalStatics_10.method848(-68);
     }
 
-    GlobalStatics_9.aClass94_3645 = DummyClass45.aClass94_989;
-    GlobalStatics_10.aClass94_1688 = DummyClass15.aClass94_1878;
-    GlobalStatics_9.aClass94_461 = DummyClass41.aClass94_868;
-    GlobalStatics_10.aClass94_3426 = GlobalStatics_9.aClass94_1907;
+    GameStringStatics.aClass94_3645 = DummyClass45.aClass94_989;
+    GameStringStatics.aClass94_1688 = DummyClass15.aClass94_1878;
+    GameStringStatics.aClass94_461 = DummyClass41.aClass94_868;
+    GameStringStatics.aClass94_3426 = GameStringStatics.aClass94_1907;
     DummyClass30.aClass94_459 = GameStringStatics.aClass94_3585;
     GlobalStatics_2.aClass94_2576 = GameStringStatics.aClass94_1882;
     GlobalStatics_2.aClass94_2216 = GlobalStatics_0.aClass94_1179;
     GlTexture2d.aClass94_3762 = GlobalStatics_10.aClass94_3172;
-    GlobalStatics_10.aClass94_3117 = DummyClass4.aClass94_3002;
-    GlobalStatics_7.aClass94_4058 = GlobalStatics_10.aClass94_3146;
+    GameStringStatics.aClass94_3117 = DummyClass4.aClass94_3002;
+    GlobalStatics_7.aClass94_4058 = GameStringStatics.aClass94_3146;
     GlobalStatics_1.aClass94_2196 = DummyClass58.aClass94_1459;
-    GlobalStatics_9.aClass94_3643 = GlobalStatics_5.aClass94_1621;
-    GlobalStatics_9.aClass94_3988 = GLStatics.aClass94_699;
-    DummyClass27.aClass94_1583 = GlobalStatics_9.OK;
-    DummyClass53.aClass94_1335 = GlobalStatics_9.aClass94_2274;
-    GlobalStatics_10.aClass94_3167 = GlobalStatics_4.aClass94_3633;
+    GameStringStatics.aClass94_3643 = GlobalStatics_5.aClass94_1621;
+    GameStringStatics.aClass94_3988 = GameStringStatics.aClass94_699;
+    DummyClass27.aClass94_1583 = GameString.OK;
+    DummyClass53.aClass94_1335 = GameStringStatics.aClass94_2274;
+    GameStringStatics.aClass94_3167 = GameStringStatics.aClass94_3633;
     DummyClass5.aClass94_2991 = GameStringStatics.aClass94_3583;
-    GlobalStatics_9.aClass94_2267 = GlobalStatics_9.aClass94_3646;
-    GlobalStatics_9.aClass94_327 = DummyClass35.aClass94_659;
+    GameStringStatics.aClass94_2267 = GameStringStatics.aClass94_3646;
+    GameStringStatics.aClass94_327 = DummyClass35.aClass94_659;
     DummyClass14.ATTEMPTING_TO_RECONNECT = GlTexture2d.aClass94_3758;
-    GlobalStatics_9.aClass94_551 = GlobalStatics_10.aClass94_3345;
-    GlobalStatics_10.aClass94_4040 = GameStringStatics.aClass94_1122;
-    GlobalStatics_10.aClass94_1731 = GlobalStatics_10.aClass94_3206;
-    GlobalStatics_0.aClass94_2151 = GlobalStatics_9.aClass94_3251;
+    GameStringStatics.aClass94_551 = GameStringStatics.aClass94_3345;
+    GameStringStatics.aClass94_4040 = GameStringStatics.aClass94_1122;
+    GameStringStatics.aClass94_1731 = GameStringStatics.aClass94_3206;
+    GlobalStatics_0.aClass94_2151 = GameStringStatics.aClass94_3251;
     GlobalStatics_8.OPTION_DROP = GlobalStatics_6.aClass94_2518;
-    GlobalStatics_2.aClass94_43 = GlobalStatics_9.aClass94_3131;
-    DummyClass42.DEFAULT_WALK_TOOLTIP = GlobalStatics_9.aClass94_2252;
-    GLStatics.aClass94_691 = GlobalStatics_9.aClass94_3656;
-    GlobalStatics_9.aClass94_3575 = GlobalStatics_9.aClass94_325;
-    GlobalStatics_9.aClass94_4071 = DummyClass20.aClass94_1783;
-    GlobalStatics_10.aClass94_3445 = GlobalStatics_7.aClass94_1089;
+    GlobalStatics_2.aClass94_43 = GameStringStatics.aClass94_3131;
+    DummyClass42.DEFAULT_WALK_TOOLTIP = GameStringStatics.aClass94_2252;
+    GameStringStatics.aClass94_691 = GameStringStatics.aClass94_3656;
+    GameStringStatics.aClass94_3575 = GameStringStatics.aClass94_325;
+    GameStringStatics.aClass94_4071 = DummyClass20.aClass94_1783;
+    GameStringStatics.aClass94_3445 = GlobalStatics_7.aClass94_1089;
     GameStringStatics.aClass94_3691 = GlobalStatics_0.aClass94_77;
-    GlobalStatics_9.aClass94_2624 = GlobalStatics_9.aClass94_897;
+    GameStringStatics.aClass94_2624 = GameStringStatics.aClass94_897;
     DummyClass15.aClass94_1879 = GlobalStatics_0.aClass94_2594;
-    GlobalStatics_10.aClass94_3397 = DummyClass20.aClass94_1782;
+    GameStringStatics.aClass94_3397 = DummyClass20.aClass94_1782;
     GameStringStatics.aClass94_2526 = DummyClass26.aClass94_1612;
-    GlobalStatics_9.aClass94_361 = GlobalStatics_9.aClass94_550;
-    GlobalStatics_10.aClass94_3097 = GlobalStatics_9.aClass94_3650;
-    GlobalStatics_9.aClass94_2285 = DummyClass45.aClass94_988;
-    GlobalStatics_9.aClass94_3544 = GlobalStatics_10.aClass94_3436;
-    GlobalStatics_8.aClass94_4 = GlobalStatics_9.aClass94_973;
-    GlobalStatics_9.aClass94_62 = GlobalStatics_7.aClass94_1085;
-    GlobalStatics_9.aClass94_2667 = GlobalStatics_8.aClass94_1508;
-    GlobalStatics_9.aClass94_462 = GlobalStatics_9.aClass94_3771;
-    GlobalStatics_10.aClass94_2210 = GlobalStatics_2.aClass94_343;
-    GlobalStatics_0.aClass94_1707 = GlobalStatics_9.aClass94_905;
+    GameStringStatics.aClass94_361 = GameStringStatics.aClass94_550;
+    GameStringStatics.aClass94_3097 = GameStringStatics.aClass94_3650;
+    GameStringStatics.aClass94_2285 = DummyClass45.aClass94_988;
+    GameStringStatics.aClass94_3544 = GameStringStatics.aClass94_3436;
+    GlobalStatics_8.aClass94_4 = GameStringStatics.aClass94_973;
+    GameStringStatics.aClass94_62 = GlobalStatics_7.aClass94_1085;
+    GameStringStatics.aClass94_2667 = GlobalStatics_8.aClass94_1508;
+    GameStringStatics.aClass94_462 = GameStringStatics.aClass94_3771;
+    GameStringStatics.aClass94_2210 = GlobalStatics_2.aClass94_343;
+    GlobalStatics_0.aClass94_1707 = GameStringStatics.aClass94_905;
     GlobalStatics_7.aClass94_2961 = DummyClass32.aClass94_520;
     GlobalStatics_8.aClass94_957 = DummyClass1.aClass94_412;
     DummyClass35.aClass94_662 = DummyClass5.aClass94_2995;
     DummyClass12.aClass94_2031 = GlobalStatics_8.aClass94_35;
     DummyClass26.aClass94_1615 = GlobalStatics_3.aClass94_2458;
-    GlobalStatics_4.aClass94_3629 = DummyClass39.aClass94_738;
-    GameStringStatics.aClass94_3584 = GlobalStatics_9.aClass94_2641;
+    GameStringStatics.aClass94_3629 = DummyClass39.aClass94_738;
+    GameStringStatics.aClass94_3584 = GameStringStatics.aClass94_2641;
     DummyClass32.aClass94_525 = DummyClass45.aClass94_982;
-    GameStringStatics.aClass94_3586 = GlobalStatics_9.aClass94_2641;
-    GlobalStatics_10.aClass94_1722 = DummyClass45.aClass94_981;
-    GlobalStatics_9.CONNECTION_LOST = GlobalStatics_10.aClass94_3302;
+    GameStringStatics.aClass94_3586 = GameStringStatics.aClass94_2641;
+    GameStringStatics.aClass94_1722 = DummyClass45.aClass94_981;
+    GameStringStatics.CONNECTION_LOST = GameStringStatics.aClass94_3302;
     GameStringStatics.aClass94_1884 = GlobalStatics_9.aClass94_1294;
     GlobalStatics_0.LOADED_INTERFACES = GlobalStatics_8.aClass94_951;
-    GlobalStatics_9.aClass94_485 = GlobalStatics_0.aClass94_24;
-    GlobalStatics_9.aClass94_3249 = GlobalStatics_9.aClass94_3774;
+    GameStringStatics.aClass94_485 = GlobalStatics_0.aClass94_24;
+    GameStringStatics.aClass94_3249 = GameStringStatics.aClass94_3774;
     DummyClass35.aClass94_666 = DummyClass5.aClass94_2995;
-    GlobalStatics_11.aClass94_809 = GlobalStatics_10.aClass94_3119;
-    GlobalStatics_10.aClass94_3051 = GlobalStatics_5.aClass94_1620;
-    GlobalStatics_10.LOADING_PLEASE_WAIT = GlobalStatics_8.aClass94_1523;
-    GlobalStatics_7.CONNECTED_TO_UPDATE_SERVER = GlobalStatics_10.aClass94_4036;
-    GlobalStatics_4.aClass94_822 = GlobalStatics_8.aClass94_7;
-    GlobalStatics_10.aClass94_1892 = GlobalStatics_8.aClass94_1509;
-    GlobalStatics_10.aClass94_3388 = DummyClass34.aClass94_593;
+    GlobalStatics_11.aClass94_809 = GameStringStatics.aClass94_3119;
+    GameStringStatics.aClass94_3051 = GlobalStatics_5.aClass94_1620;
+    GameStringStatics.LOADING_PLEASE_WAIT = GlobalStatics_8.aClass94_1523;
+    GlobalStatics_7.CONNECTED_TO_UPDATE_SERVER = GameStringStatics.aClass94_4036;
+    GameStringStatics.aClass94_822 = GlobalStatics_8.aClass94_7;
+    GameStringStatics.aClass94_1892 = GlobalStatics_8.aClass94_1509;
+    GameStringStatics.aClass94_3388 = DummyClass34.aClass94_593;
     DummyClass32.aClass94_523 = GlobalStatics_0.aClass94_2599;
-    DummyClass24.aClass94_1653 = GLStatics.aClass94_701;
+    DummyClass24.aClass94_1653 = GameStringStatics.aClass94_701;
   }
 
   public static void clear15(int var0) {
@@ -6134,7 +5995,7 @@ public class GlobalStatics_10 {
       GlobalStatics_10.method843(-80, null);
     }
 
-    GlobalStatics_10.aClass94_106 = null;
+    GameStringStatics.aClass94_106 = null;
   }
 
   public static void method840(GameObjectConfig var0, byte var1, int var2,
@@ -6142,7 +6003,7 @@ public class GlobalStatics_10 {
       int var5, int var6, int var7, int var8) {
     int var9 = 3 & var3;
     if (var1 >= -1) {
-      GlobalStatics_10.aClass94_106 = null;
+      GameStringStatics.aClass94_106 = null;
     }
 
     int var10;
@@ -6266,7 +6127,7 @@ public class GlobalStatics_10 {
 
   public static void method844(byte var0) {
     if (var0 != -9) {
-      GlobalStatics_10.aClass94_106 = null;
+      GameStringStatics.aClass94_106 = null;
     }
 
     if (GlobalStatics_10.anIntArray3212 == null ||
@@ -6287,10 +6148,10 @@ public class GlobalStatics_10 {
     if (var0 == !DummyClass17.aBoolean1827) {
       DummyClass17.aBoolean1827 = var0;
       if (var1 != 255) {
-        GlobalStatics_10.aClass94_106 = null;
+        GameStringStatics.aClass94_106 = null;
       }
 
-      MaterialShader5.method1626((byte) -126);
+      GLStatics.method1626((byte) -126);
     }
   }
 
@@ -6412,10 +6273,10 @@ public class GlobalStatics_10 {
   }
 
   public static void clear58(byte var0) {
-    GlobalStatics_10.aClass94_1688 = null;
-    GlobalStatics_10.aClass94_1686 = null;
-    GlobalStatics_10.aClass94_1689 = null;
-    GlobalStatics_10.aClass94_1687 = null;
+    GameStringStatics.aClass94_1688 = null;
+    GameStringStatics.aClass94_1686 = null;
+    GameStringStatics.aClass94_1689 = null;
+    GameStringStatics.aClass94_1687 = null;
     if (var0 < -46) {
       GlobalStatics_10.aClass93_1683 = null;
     }

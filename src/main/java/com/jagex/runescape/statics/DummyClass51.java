@@ -1,5 +1,6 @@
 package com.jagex.runescape.statics;
 
+import com.jagex.runescape.common.GameStringStatics;
 import com.jagex.runescape.model.WidgetUpdate;
 import com.jagex.runescape.model.FileUnpacker;
 import com.jagex.runescape.model.SoftwareDirectColorSprite;
@@ -89,7 +90,7 @@ public final class DummyClass51 {
     }
 
     GlobalStatics_8.aClass3_Sub28_Sub17_2096
-        .method681(GlobalStatics_9.aClass94_2667, var1 + 3,
+        .method681(GameStringStatics.aClass94_2667, var1 + 3,
             var2 + 14, var5, -1);
     int var7 = GlobalStatics_0.anInt1709;
     int var6 = GlobalStatics_9.anInt1676;
