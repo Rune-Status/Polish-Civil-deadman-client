@@ -37,25 +37,20 @@ public final class DummyClass18 {
   public static int anInt87;
   public static Widget aClass11_88;
 
-  public static int method823(int var0, int var1, int var2, int var3) {
-    if (var2 >= -76) {
-      DummyClass18.aShort83 = -91;
-    }
+  public static int method823(int planeY, int planeX, int var2, int plane) {
 
-    return (8 & GlobalStatics_10.tileFlags[var3][var1][var0]) == 0 ?
-        var3 > 0 && (GlobalStatics_10.tileFlags[1][var1][var0] & 2) != 0 ?
-            -1 + var3 :
-            var3 :
+    return (8 & GlobalStatics_10.tileFlags[plane][planeX][planeY]) == 0 ?
+        plane > 0 && (GlobalStatics_10.tileFlags[1][planeX][planeY] & 2) != 0 ?
+            -1 + plane :
+            plane :
         0;
   }
 
   public static void method824(long[] var0, Object[] var1, int var2) {
-    int var3 = 38 % ((var2 - 28) / 52);
     DummyClass21.method1809(var0.length - 1, var0, 122, 0, var1);
   }
 
   public static void method825(byte var0, int var1) {
-    int var2 = -51 % ((26 - var0) / 33);
     WidgetUpdate var3 = GlobalStatics_6.method466(4, 1, var1);
     var3.createIndexedColorSprite(true);
   }

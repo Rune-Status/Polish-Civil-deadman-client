@@ -131,7 +131,7 @@ public final class DummyClass42 {
     GlobalStatics_9.anIntArray2469 = null;
     GlobalStatics_9.tileOrientation = null;
     DummyClass18.aByteArrayArrayArray81 = null;
-    GlobalStatics_9.aByteArrayArrayArray1014 = null;
+    GlobalStatics_9.SCENE_SHADOW = null;
     DummyClass17.tileFloors = null;
     GlobalStatics_10.floorUnderlayIds = null;
     GlobalStatics_9.anIntArray1138 = null;

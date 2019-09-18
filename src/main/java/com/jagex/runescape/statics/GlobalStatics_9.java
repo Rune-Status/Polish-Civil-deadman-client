@@ -396,7 +396,7 @@ public class GlobalStatics_9 {
       .create(" weitere Optionen");
   public static int[] anIntArray1578 = new int[500];
   public static ObjectCache aClass93_1013 = new ObjectCache(100);
-  public static byte[][][] aByteArrayArrayArray1014;
+  public static byte[][][] SCENE_SHADOW;
   public static Widget aClass11_1017;
   public static GameString aClass94_3978 = GameStringStatics.create("Dec");
   public static GameString aClass94_3980 = GameStringStatics.create("Jul");
@@ -4997,7 +4997,7 @@ public class GlobalStatics_9 {
   public static void clear9(int var0) {
     if (var0 == 25951) {
       GlobalStatics_9.aClass11_1017 = null;
-      GlobalStatics_9.aByteArrayArrayArray1014 = null;
+      GlobalStatics_9.SCENE_SHADOW = null;
       GlobalStatics_9.aClass93_1013 = null;
     }
   }
@@ -9775,7 +9775,7 @@ public class GlobalStatics_9 {
     for (var6 = var2; var4 + var2 >= var6; ++var6) {
       for (var7 = var3; var5 + var3 >= var7; ++var7) {
         if (var7 >= 0 && var7 < 104 && var6 >= 0 && var6 < 104) {
-          GlobalStatics_9.aByteArrayArrayArray1014[var0][var7][var6] = 127;
+          GlobalStatics_9.SCENE_SHADOW[var0][var7][var6] = 127;
         }
       }
     }

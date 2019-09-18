@@ -834,7 +834,7 @@ public class GlobalStatics_7 {
     int lightPosZ;
     int var44;
     for (var8 = 0; var3 > var8; ++var8) {
-      byte[][] var9 = GlobalStatics_9.aByteArrayArrayArray1014[var8];
+      byte[][] var9 = GlobalStatics_9.SCENE_SHADOW[var8];
       int var21;
       int var23;
       int var22;
@@ -1332,7 +1332,7 @@ public class GlobalStatics_7 {
       DummyClass17.tileFloors[var8] = null;
       GlobalStatics_9.tileOrientation[var8] = null;
       DummyClass18.aByteArrayArrayArray81[var8] = null;
-      GlobalStatics_9.aByteArrayArrayArray1014[var8] = null;
+      GlobalStatics_9.SCENE_SHADOW[var8] = null;
     }
 
     if (var2 <= 26) {

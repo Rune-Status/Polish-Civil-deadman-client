@@ -145,7 +145,7 @@ public final class DummyClass26 {
     GlobalStatics_9.tileOrientation = new byte[var2][104][104];
     GlobalStatics_9.anIntArray2469 = new int[104];
     DummyClass36.anIntArrayArrayArray2609 = new int[var2][105][var1];
-    GlobalStatics_9.aByteArrayArrayArray1014 = new byte[var2][105][105];
+    GlobalStatics_9.SCENE_SHADOW = new byte[var2][105][105];
     DummyClass17.tileFloors = new byte[var2][104][104];
     GlobalStatics_9.anIntArray2606 = new int[104];
     DummyClass18.aByteArrayArrayArray81 = new byte[var2][104][104];
