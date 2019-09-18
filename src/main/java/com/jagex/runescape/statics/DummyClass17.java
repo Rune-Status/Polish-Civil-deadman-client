@@ -8,7 +8,6 @@ import java.awt.FontMetrics;
 public final class DummyClass17 {
 
   public static FontMetrics aFontMetrics1822;
-  public static int SCENE_CAMERA_PITCH;
   public static int screenLowerX;
   public static AbstractDirectColorSprite[] aClass3_Sub28_Sub16Array1825;
   public static GameString aClass94_1826 = GameStringStatics

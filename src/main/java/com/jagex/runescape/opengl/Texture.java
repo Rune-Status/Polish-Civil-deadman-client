@@ -1,6 +1,7 @@
 package com.jagex.runescape.opengl;
 
 import com.jagex.runescape.buffer.Buffer;
+import com.jagex.runescape.camera.CameraStatics;
 import com.jagex.runescape.common.GameString;
 import com.jagex.runescape.common.GameStringStatics;
 import com.jagex.runescape.model.AbstractObjectNodeWrapper;
@@ -9,10 +10,8 @@ import com.jagex.runescape.model.ITextureCache;
 import com.jagex.runescape.model.ProceduralTexture;
 import com.jagex.runescape.node.SubNode;
 import com.jagex.runescape.statics.DummyClass13;
-import com.jagex.runescape.statics.DummyClass17;
 import com.jagex.runescape.statics.DummyClass20;
 import com.jagex.runescape.statics.DummyClass32;
-import com.jagex.runescape.statics.DummyClass49;
 import com.jagex.runescape.statics.DummyClass60;
 import com.jagex.runescape.statics.DummyClass8;
 import com.jagex.runescape.statics.GlobalStatics_10;
@@ -415,11 +414,11 @@ public final class Texture extends SubNode {
                 GLStatics.sceneGraphTiles, 0);
           }
 
-          if (DummyClass17.SCENE_CAMERA_PITCH < 310) {
+          if (CameraStatics.CURRENT_PITCH < 310) {
             int var7 = GlobalStatics_9.localPlayer.sceneY >> 7;
             int var6 = GlobalStatics_9.localPlayer.sceneX >> 7;
-            int x = GlobalStatics_9.SCENE_CAMERA_X >> 7;
-            int y = DummyClass49.SCENE_CAMERA_Z >> 7;
+            int x = CameraStatics.CURRENT_X >> 7;
+            int y = CameraStatics.CURRENT_Z >> 7;
 
             int var9;
             if (y < var7) {
@@ -518,17 +517,17 @@ public final class Texture extends SubNode {
         } else {
           int x = GlobalStatics_6
               .method1736(GlobalStatics_9.currentPlane, 1,
-                  GlobalStatics_9.SCENE_CAMERA_X,
-                  DummyClass49.SCENE_CAMERA_Z);
-          if (x - GlobalStatics_7.SCENE_CAMERA_Y < 800 &&
+                  CameraStatics.CURRENT_X,
+                  CameraStatics.CURRENT_Z);
+          if (x - CameraStatics.CURRENT_Y < 800 &&
               (4
                   & GlobalStatics_10.tileFlags[GlobalStatics_9.currentPlane][
-                  GlobalStatics_9.SCENE_CAMERA_X
-                      >> 7][DummyClass49.SCENE_CAMERA_Z >> 7]) != 0) {
+                  CameraStatics.CURRENT_X
+                      >> 7][CameraStatics.CURRENT_Z >> 7]) != 0) {
             GlobalStatics_9
-                .method2031((byte) -107, false, GlobalStatics_9.SCENE_CAMERA_X
+                .method2031((byte) -107, false, CameraStatics.CURRENT_X
                         >> 7,
-                    DummyClass49.SCENE_CAMERA_Z >> 7,
+                    CameraStatics.CURRENT_Z >> 7,
                     GLStatics.sceneGraphTiles, 1);
           }
         }

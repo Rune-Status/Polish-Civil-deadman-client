@@ -1,5 +1,6 @@
 package com.jagex.runescape.statics;
 
+import com.jagex.runescape.camera.CameraStatics;
 import com.jagex.runescape.model.SpawnedGameObject;
 import com.jagex.runescape.model.StillGraphic;
 import com.jagex.runescape.model.StillGraphicNode;
@@ -931,11 +932,11 @@ public final class DummyClass18 {
       var3 = GlobalStatics_9.gameBuffer.readUnsignedShort();
       var21 = GlobalStatics_9.gameBuffer.readUnsignedShort();
       if (GlobalStatics_5.updateInterfaceCounter(var3, (byte) -25)) {
-        GlobalStatics_9.anInt531 = var20;
-        GlobalStatics_6.anInt2309 = var21;
+        GlobalStatics_9.NEXT_CAMERA_YAW = var20;
+        GlobalStatics_6.NEXT_CAMERA_PITCH = var21;
         if (GlobalStatics_9.anInt1753 == 2) {
-          DummyClass17.SCENE_CAMERA_PITCH = GlobalStatics_6.anInt2309;
-          GlobalStatics_10.SCENE_CAMERA_YAW = GlobalStatics_9.anInt531;
+          CameraStatics.CURRENT_PITCH = GlobalStatics_6.NEXT_CAMERA_PITCH;
+          CameraStatics.CURRENT_YAW = GlobalStatics_9.NEXT_CAMERA_YAW;
         }
 
         GlobalStatics_6.method1098((byte) -117);

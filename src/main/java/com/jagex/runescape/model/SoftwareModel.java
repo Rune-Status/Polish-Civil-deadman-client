@@ -1,5 +1,6 @@
 package com.jagex.runescape.model;
 
+import com.jagex.runescape.math.MathUtilities;
 import com.jagex.runescape.opengl.GLStatics;
 import com.jagex.runescape.statics.DummyClass17;
 import com.jagex.runescape.statics.DummyClass3;
@@ -1157,8 +1158,8 @@ public final class SoftwareModel extends AbstractModel {
   }
 
   public void method1876(int var1) {
-    int var2 = GLStatics.SINE_TABLE[var1];
-    int var3 = DummyClass40.COSINE_TABLE[var1];
+    int var2 = MathUtilities.SINE_TABLE[var1];
+    int var3 = MathUtilities.COSINE_TABLE[var1];
 
     for (int var4 = 0; var4 < this.anInt3891; ++var4) {
       int var5 =
@@ -1238,8 +1239,8 @@ public final class SoftwareModel extends AbstractModel {
   }
 
   public void method1886(int var1) {
-    int var2 = GLStatics.SINE_TABLE[var1];
-    int var3 = DummyClass40.COSINE_TABLE[var1];
+    int var2 = MathUtilities.SINE_TABLE[var1];
+    int var3 = MathUtilities.COSINE_TABLE[var1];
 
     for (int var4 = 0; var4 < this.anInt3891; ++var4) {
       int var5 =
@@ -1304,8 +1305,8 @@ public final class SoftwareModel extends AbstractModel {
           this.anIntArray3883[var5] -= GlobalStatics_1.anInt3934;
           this.anIntArray3895[var5] -= GlobalStatics_1.anInt3940;
           if (var4 != 0) {
-            var6 = GLStatics.SINE_TABLE[var4];
-            var7 = DummyClass40.COSINE_TABLE[var4];
+            var6 = MathUtilities.SINE_TABLE[var4];
+            var7 = MathUtilities.COSINE_TABLE[var4];
             var8 =
                 this.anIntArray3883[var5] * var6
                     + this.anIntArray3885[var5] * var7 + 32767 >> 16;
@@ -1316,8 +1317,8 @@ public final class SoftwareModel extends AbstractModel {
           }
 
           if (var2 != 0) {
-            var6 = GLStatics.SINE_TABLE[var2];
-            var7 = DummyClass40.COSINE_TABLE[var2];
+            var6 = MathUtilities.SINE_TABLE[var2];
+            var7 = MathUtilities.COSINE_TABLE[var2];
             var8 =
                 this.anIntArray3883[var5] * var7
                     - this.anIntArray3895[var5] * var6 + 32767 >> 16;
@@ -1328,8 +1329,8 @@ public final class SoftwareModel extends AbstractModel {
           }
 
           if (var3 != 0) {
-            var6 = GLStatics.SINE_TABLE[var3];
-            var7 = DummyClass40.COSINE_TABLE[var3];
+            var6 = MathUtilities.SINE_TABLE[var3];
+            var7 = MathUtilities.COSINE_TABLE[var3];
             var8 =
                 this.anIntArray3895[var5] * var6
                     + this.anIntArray3885[var5] * var7 + 32767 >> 16;
@@ -1491,8 +1492,8 @@ public final class SoftwareModel extends AbstractModel {
                 this.anIntArray3883[var12] -= GlobalStatics_1.anInt3934;
                 this.anIntArray3895[var12] -= GlobalStatics_1.anInt3940;
                 if (var5 != 0) {
-                  var13 = GLStatics.SINE_TABLE[var5];
-                  var14 = DummyClass40.COSINE_TABLE[var5];
+                  var13 = MathUtilities.SINE_TABLE[var5];
+                  var14 = MathUtilities.COSINE_TABLE[var5];
                   var15 =
                       this.anIntArray3883[var12] * var13
                           + this.anIntArray3885[var12] * var14 + 32767
@@ -1505,8 +1506,8 @@ public final class SoftwareModel extends AbstractModel {
                 }
 
                 if (var3 != 0) {
-                  var13 = GLStatics.SINE_TABLE[var3];
-                  var14 = DummyClass40.COSINE_TABLE[var3];
+                  var13 = MathUtilities.SINE_TABLE[var3];
+                  var14 = MathUtilities.COSINE_TABLE[var3];
                   var15 =
                       this.anIntArray3883[var12] * var14
                           - this.anIntArray3895[var12] * var13 + 32767
@@ -1519,8 +1520,8 @@ public final class SoftwareModel extends AbstractModel {
                 }
 
                 if (var4 != 0) {
-                  var13 = GLStatics.SINE_TABLE[var4];
-                  var14 = DummyClass40.COSINE_TABLE[var4];
+                  var13 = MathUtilities.SINE_TABLE[var4];
+                  var14 = MathUtilities.COSINE_TABLE[var4];
                   var15 =
                       this.anIntArray3895[var12] * var13
                           + this.anIntArray3885[var12] * var14 + 32767
@@ -1636,14 +1637,14 @@ public final class SoftwareModel extends AbstractModel {
 
     int var10 = DummyClass40.anInt846;
     int var11 = DummyClass40.anInt835;
-    int var12 = GLStatics.SINE_TABLE[var1];
-    int var13 = DummyClass40.COSINE_TABLE[var1];
-    int var14 = GLStatics.SINE_TABLE[var2];
-    int var15 = DummyClass40.COSINE_TABLE[var2];
-    int var16 = GLStatics.SINE_TABLE[var3];
-    int var17 = DummyClass40.COSINE_TABLE[var3];
-    int var18 = GLStatics.SINE_TABLE[var4];
-    int var19 = DummyClass40.COSINE_TABLE[var4];
+    int var12 = MathUtilities.SINE_TABLE[var1];
+    int var13 = MathUtilities.COSINE_TABLE[var1];
+    int var14 = MathUtilities.SINE_TABLE[var2];
+    int var15 = MathUtilities.COSINE_TABLE[var2];
+    int var16 = MathUtilities.SINE_TABLE[var3];
+    int var17 = MathUtilities.COSINE_TABLE[var3];
+    int var18 = MathUtilities.SINE_TABLE[var4];
+    int var19 = MathUtilities.COSINE_TABLE[var4];
     int var20 = var6 * var18 + var7 * var19 >> 16;
 
     for (int var21 = 0; var21 < this.anInt3891; ++var21) {
@@ -1709,8 +1710,8 @@ public final class SoftwareModel extends AbstractModel {
   }
 
   public void method1896(int var1) {
-    int var2 = GLStatics.SINE_TABLE[var1];
-    int var3 = DummyClass40.COSINE_TABLE[var1];
+    int var2 = MathUtilities.SINE_TABLE[var1];
+    int var3 = MathUtilities.COSINE_TABLE[var1];
 
     for (int var4 = 0; var4 < this.anInt3891; ++var4) {
       int var5 =
@@ -1761,8 +1762,8 @@ public final class SoftwareModel extends AbstractModel {
                 int var28 = 0;
                 int var29 = 0;
                 if (var1 != 0) {
-                  var28 = GLStatics.SINE_TABLE[var1];
-                  var29 = DummyClass40.COSINE_TABLE[var1];
+                  var28 = MathUtilities.SINE_TABLE[var1];
+                  var29 = MathUtilities.COSINE_TABLE[var1];
                 }
 
                 boolean var30 = false;
@@ -2074,12 +2075,12 @@ public final class SoftwareModel extends AbstractModel {
             }
 
             int[] var49 = new int[9];
-            var17 = DummyClass40.COSINE_TABLE[var3] >> 1;
-            var18 = GLStatics.SINE_TABLE[var3] >> 1;
-            var19 = DummyClass40.COSINE_TABLE[var4] >> 1;
-            var20 = GLStatics.SINE_TABLE[var4] >> 1;
-            var21 = DummyClass40.COSINE_TABLE[var5] >> 1;
-            var22 = GLStatics.SINE_TABLE[var5] >> 1;
+            var17 = MathUtilities.COSINE_TABLE[var3] >> 1;
+            var18 = MathUtilities.SINE_TABLE[var3] >> 1;
+            var19 = MathUtilities.COSINE_TABLE[var4] >> 1;
+            var20 = MathUtilities.SINE_TABLE[var4] >> 1;
+            var21 = MathUtilities.COSINE_TABLE[var5] >> 1;
+            var22 = MathUtilities.SINE_TABLE[var5] >> 1;
             var23 = var18 * var21 + 16384 >> 15;
             var24 = var18 * var22 + 16384 >> 15;
             var49[0] = var19 * var21 + var20 * var24 + 16384 >> 15;
@@ -2206,8 +2207,8 @@ public final class SoftwareModel extends AbstractModel {
                     this.anIntArray3883[var14] -= GlobalStatics_1.anInt3934;
                     this.anIntArray3895[var14] -= GlobalStatics_1.anInt3940;
                     if (var5 != 0) {
-                      var15 = GLStatics.SINE_TABLE[var5];
-                      var16 = DummyClass40.COSINE_TABLE[var5];
+                      var15 = MathUtilities.SINE_TABLE[var5];
+                      var16 = MathUtilities.COSINE_TABLE[var5];
                       var17 =
                           this.anIntArray3883[var14] * var15
                               + this.anIntArray3885[var14] * var16
@@ -2220,8 +2221,8 @@ public final class SoftwareModel extends AbstractModel {
                     }
 
                     if (var3 != 0) {
-                      var15 = GLStatics.SINE_TABLE[var3];
-                      var16 = DummyClass40.COSINE_TABLE[var3];
+                      var15 = MathUtilities.SINE_TABLE[var3];
+                      var16 = MathUtilities.COSINE_TABLE[var3];
                       var17 =
                           this.anIntArray3883[var14] * var16
                               - this.anIntArray3895[var14] * var15
@@ -2234,8 +2235,8 @@ public final class SoftwareModel extends AbstractModel {
                     }
 
                     if (var4 != 0) {
-                      var15 = GLStatics.SINE_TABLE[var4];
-                      var16 = DummyClass40.COSINE_TABLE[var4];
+                      var15 = MathUtilities.SINE_TABLE[var4];
+                      var16 = MathUtilities.COSINE_TABLE[var4];
                       var17 =
                           this.anIntArray3895[var14] * var15
                               + this.anIntArray3885[var14] * var16
@@ -2895,14 +2896,14 @@ public final class SoftwareModel extends AbstractModel {
 
     int var9 = DummyClass40.anInt846;
     int var10 = DummyClass40.anInt835;
-    int var11 = GLStatics.SINE_TABLE[var1];
-    int var12 = DummyClass40.COSINE_TABLE[var1];
-    int var13 = GLStatics.SINE_TABLE[var2];
-    int var14 = DummyClass40.COSINE_TABLE[var2];
-    int var15 = GLStatics.SINE_TABLE[var3];
-    int var16 = DummyClass40.COSINE_TABLE[var3];
-    int var17 = GLStatics.SINE_TABLE[var4];
-    int var18 = DummyClass40.COSINE_TABLE[var4];
+    int var11 = MathUtilities.SINE_TABLE[var1];
+    int var12 = MathUtilities.COSINE_TABLE[var1];
+    int var13 = MathUtilities.SINE_TABLE[var2];
+    int var14 = MathUtilities.COSINE_TABLE[var2];
+    int var15 = MathUtilities.SINE_TABLE[var3];
+    int var16 = MathUtilities.COSINE_TABLE[var3];
+    int var17 = MathUtilities.SINE_TABLE[var4];
+    int var18 = MathUtilities.COSINE_TABLE[var4];
     int var19 = var6 * var17 + var7 * var18 >> 16;
 
     for (int var20 = 0; var20 < this.anInt3891; ++var20) {

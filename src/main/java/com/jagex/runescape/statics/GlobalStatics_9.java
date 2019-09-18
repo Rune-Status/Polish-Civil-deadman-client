@@ -2,6 +2,7 @@ package com.jagex.runescape.statics;
 
 import com.jagex.runescape.buffer.Buffer;
 import com.jagex.runescape.buffer.BufferStatics;
+import com.jagex.runescape.camera.CameraStatics;
 import com.jagex.runescape.common.ArrayUtils;
 import com.jagex.runescape.common.GameString;
 import com.jagex.runescape.common.GameStringStatics;
@@ -432,7 +433,6 @@ public class GlobalStatics_9 {
       .create("loginscreen");
   public static FileUnpacker fileUnpacker17;
   public static FileUnpacker fileUnpacker15;
-  public static int SCENE_CAMERA_X;
   public static int[] anIntArray3997 = {19, 55, 38, 155, 255, 110, 137, 205,
       76};
   public static GameString aClass94_3998 = GameStringStatics.create(":trade:");
@@ -653,7 +653,7 @@ public class GlobalStatics_9 {
           "Vous ne pouvez pas ajouter votre nom -9 votre liste noire)3");
   public static int anInt2275 = 1;
   public static GameString aClass94_2276 = GameStringStatics.create("rot:");
-  public static int anInt2281;
+  public static int NEXT_CAMERA_YAW_DELTA;
   public static int interfaceCounter;
   public static GameString aClass94_1546 = GameStringStatics.create("welle:");
   public static int anInt1552;
@@ -1383,7 +1383,7 @@ public class GlobalStatics_9 {
   public static GameString aClass94_551 = GlobalStatics_9.aClass94_553;
   public static GameString aClass94_547 = GlobalStatics_9.aClass94_553;
   public static int anInt529;
-  public static int anInt531;
+  public static int NEXT_CAMERA_YAW;
   public static GameBuffer gameBuffer = new GameBuffer(5000);
   public static int anInt544;
   public static int anInt546;
@@ -3349,11 +3349,11 @@ public class GlobalStatics_9 {
           GlobalStatics_9.localPlayer.sceneX + GlobalStatics_10.anInt3216;
       int var2 =
           GlobalStatics_9.localPlayer.sceneY + GlobalStatics_2.anInt42;
-      if (-var1 + GlobalStatics_10.anInt3155 < 499
-          || -var1 + GlobalStatics_10.anInt3155 > 500
+      if (-var1 + GlobalStatics_10.CAMERA_X_OFFSET < 499
+          || -var1 + GlobalStatics_10.CAMERA_X_OFFSET > 500
           || GlobalStatics_8.anInt942 - var2 < 499
           || -var2 + GlobalStatics_8.anInt942 > 500) {
-        GlobalStatics_10.anInt3155 = var1;
+        GlobalStatics_10.CAMERA_X_OFFSET = var1;
         GlobalStatics_8.anInt942 = var2;
       }
 
@@ -3361,55 +3361,67 @@ public class GlobalStatics_9 {
         GlobalStatics_8.anInt942 += (-GlobalStatics_8.anInt942 + var2) / 16;
       }
 
-      if (GlobalStatics_10.anInt3155 != var1) {
-        GlobalStatics_10.anInt3155 += (-GlobalStatics_10.anInt3155 + var1) / 16;
+      if (GlobalStatics_10.CAMERA_X_OFFSET != var1) {
+        GlobalStatics_10.CAMERA_X_OFFSET +=
+            (-GlobalStatics_10.CAMERA_X_OFFSET + var1) / 16;
       }
-
-      if (GlobalStatics_2.aBoolean346) {
+      if (GlobalStatics_2.USE_INT_ARRAY_KEYBOARD_EVENTS) {
         for (int var3 = 0; GlobalStatics_9.anInt2537 > var3; ++var3) {
           int var4 = GlobalStatics_9.anIntArray1755[var3];
-          if (var4 == KeyEvent.VK_QUOTEDBL) {
-            GlobalStatics_6.anInt2309 = -16 & GlobalStatics_6.anInt2309 + 47;
+          if (var4 == KeyEvent.VK_NUMPAD2) {
+            GlobalStatics_6.NEXT_CAMERA_PITCH =
+                -16 & GlobalStatics_6.NEXT_CAMERA_PITCH
+                    + 47;
           } else {
-            if (var4 == KeyEvent.VK_LESS) {
-              GlobalStatics_6.anInt2309 =
-                  -16 & GlobalStatics_6.anInt2309 - 17;
+            if (var4 == 6) {
+              GlobalStatics_6.NEXT_CAMERA_PITCH =
+                  -16 & GlobalStatics_6.NEXT_CAMERA_PITCH
+                      - 17;
             } else {
-              if (var4 == KeyEvent.VK_AMPERSAND) {
-                GlobalStatics_9.anInt531 =
-                    GlobalStatics_9.anInt531 - 65 & -128;
+              if (var4 == KeyEvent.VK_NUMPAD0) {
+                GlobalStatics_9.NEXT_CAMERA_YAW =
+                    GlobalStatics_9.NEXT_CAMERA_YAW - 65 & -128;
               } else {
-                if (var4 == KeyEvent.VK_ASTERISK) {
-                  GlobalStatics_9.anInt531 =
-                      GlobalStatics_9.anInt531 + 191 & -128;
+                if (var4 == KeyEvent.VK_NUMPAD1) {
+                  GlobalStatics_9.NEXT_CAMERA_YAW =
+                      GlobalStatics_9.NEXT_CAMERA_YAW + 191 & -128;
                 }
               }
             }
           }
         }
       } else {
-        if (GlobalStatics_8.aBooleanArray1490[98]) {
-          DummyClass32.anInt517 += (-DummyClass32.anInt517 + 12) / 2;
-        } else if (!GlobalStatics_8.aBooleanArray1490[99]) {
-          DummyClass32.anInt517 /= 2;
+
+        if (GlobalStatics_8.PRESSED_KEYS[KeyEvent.VK_NUMPAD2]) {
+          DummyClass32.NEXT_CAMERA_PITCH_DELTA +=
+              (-DummyClass32.NEXT_CAMERA_PITCH_DELTA
+                  + 12) / 2;
+        } else if (!GlobalStatics_8.PRESSED_KEYS[KeyEvent.VK_NUMPAD3]) {
+          DummyClass32.NEXT_CAMERA_PITCH_DELTA /= 2;
         } else {
-          DummyClass32.anInt517 += (-DummyClass32.anInt517 - 12) / 2;
+          DummyClass32.NEXT_CAMERA_PITCH_DELTA +=
+              (-DummyClass32.NEXT_CAMERA_PITCH_DELTA
+                  - 12) / 2;
         }
 
-        if (GlobalStatics_8.aBooleanArray1490[96]) {
-          GlobalStatics_9.anInt2281 +=
-              (-GlobalStatics_9.anInt2281 - 24) / 2;
+        if (GlobalStatics_8.PRESSED_KEYS[KeyEvent.VK_NUMPAD0]) {
+          GlobalStatics_9.NEXT_CAMERA_YAW_DELTA +=
+              (-GlobalStatics_9.NEXT_CAMERA_YAW_DELTA
+                  - 24) / 2;
         } else {
-          if (GlobalStatics_8.aBooleanArray1490[97]) {
-            GlobalStatics_9.anInt2281 +=
-                (-GlobalStatics_9.anInt2281 + 24) / 2;
+          if (GlobalStatics_8.PRESSED_KEYS[KeyEvent.VK_NUMPAD1]) {
+            GlobalStatics_9.NEXT_CAMERA_YAW_DELTA +=
+                (-GlobalStatics_9.NEXT_CAMERA_YAW_DELTA
+                    + 24) / 2;
           } else {
-            GlobalStatics_9.anInt2281 /= 2;
+            GlobalStatics_9.NEXT_CAMERA_YAW_DELTA /= 2;
           }
         }
 
-        GlobalStatics_6.anInt2309 += DummyClass32.anInt517 / 2;
-        GlobalStatics_9.anInt531 += GlobalStatics_9.anInt2281 / 2;
+        GlobalStatics_6.NEXT_CAMERA_PITCH +=
+            DummyClass32.NEXT_CAMERA_PITCH_DELTA / 2;
+        GlobalStatics_9.NEXT_CAMERA_YAW +=
+            GlobalStatics_9.NEXT_CAMERA_YAW_DELTA / 2;
       }
 
       GlobalStatics_6.method1098((byte) -94);
@@ -8016,20 +8028,20 @@ public class GlobalStatics_9 {
       int var8 = GlobalStatics_6
           .method1736(GlobalStatics_9.currentPlane, 1, var6, var7)
           - GlobalStatics_9.anInt529;
-      int var10 = var8 - GlobalStatics_7.SCENE_CAMERA_Y;
-      int var9 = var6 - GlobalStatics_9.SCENE_CAMERA_X;
-      int var11 = -DummyClass49.SCENE_CAMERA_Z + var7;
+      int var10 = var8 - CameraStatics.CURRENT_Y;
+      int var9 = var6 - CameraStatics.CURRENT_X;
+      int var11 = -CameraStatics.CURRENT_Z + var7;
       int var12 = (int) Math.sqrt(var11 * var11 + var9 * var9);
-      DummyClass17.SCENE_CAMERA_PITCH =
+      CameraStatics.CURRENT_PITCH =
           2047 & (int) (Math.atan2(var10, var12) * 325.949D);
-      GlobalStatics_10.SCENE_CAMERA_YAW =
+      CameraStatics.CURRENT_YAW =
           2047 & (int) (Math.atan2(var9, var11) * -325.949);
-      if (DummyClass17.SCENE_CAMERA_PITCH < 128) {
-        DummyClass17.SCENE_CAMERA_PITCH = 128;
+      if (CameraStatics.CURRENT_PITCH < 128) {
+        CameraStatics.CURRENT_PITCH = 128;
       }
 
-      if (DummyClass17.SCENE_CAMERA_PITCH > 383) {
-        DummyClass17.SCENE_CAMERA_PITCH = 383;
+      if (CameraStatics.CURRENT_PITCH > 383) {
+        CameraStatics.CURRENT_PITCH = 383;
       }
     }
 
@@ -8738,7 +8750,7 @@ public class GlobalStatics_9 {
     }
 
     if (var1 != 55) {
-      GlobalStatics_9.anInt2281 = -87;
+      GlobalStatics_9.NEXT_CAMERA_YAW_DELTA = -87;
     }
 
     for (int var2 = 0; var2 < 4; ++var2) {
@@ -9312,7 +9324,7 @@ public class GlobalStatics_9 {
           GlobalStatics_10.aClass94_1724
       });
     } else if (DummyClass55.aBoolean1419
-        && GlobalStatics_8.aBooleanArray1490[81]
+        && GlobalStatics_8.PRESSED_KEYS[81]
         && GlobalStatics_10.amountContextActions > 2) {
       var1 = com.jagex.runescape.statics.GlobalStatics_0
           .method802(GlobalStatics_10.amountContextActions - 2, true);
@@ -10832,57 +10844,6 @@ public class GlobalStatics_9 {
     return var0 >>> 8;
   }
 
-  public static void method1952(
-      int cameraXOffset,
-      int zoom,
-      int cameraYOffset,
-      int cameraZ,
-      int yaw,
-      int cameraZOffset,
-      int pitch
-  ) {
-    int var8;
-    int var9;
-    if (GlRenderer.USE_OPENGL) {
-      var8 = zoom - 334;
-      if (var8 >= 0) {
-        if (100 > var8) {
-          var8 = 100;
-        }
-      } else {
-        var8 = 0;
-      }
-
-      var9 = var8 * (GlobalStatics_11.SOMETHING_SCENE_Y_0
-          - GlobalStatics_8.SOMETHING_SCENE_Y_0_1) / 100
-          + GlobalStatics_11.SOMETHING_SCENE_Y_0;
-      cameraZ = var9 * cameraZ >> 8;
-    }
-    var8 = -pitch + 2048 & 2047;
-    var9 = 2047 & -yaw + 2048;
-    int cameraX = 0;
-    int cameraY = 0;
-    if (var8 != 0) {
-      int var14 = DummyClass40.COSINE_TABLE[var8];
-      int var13 = GLStatics.SINE_TABLE[var8];
-      cameraY = var13 * -cameraZ >> 16;
-      cameraZ = var14 * cameraZ >> 16;
-    }
-
-    if (var9 != 0) {
-      int var13 = GLStatics.SINE_TABLE[var9];
-      int var14 = DummyClass40.COSINE_TABLE[var9];
-      cameraX = var13 * cameraZ >> 16;
-      cameraZ = cameraZ * var14 >> 16;
-    }
-
-    DummyClass17.SCENE_CAMERA_PITCH = pitch;
-    GlobalStatics_10.SCENE_CAMERA_YAW = yaw;
-    DummyClass49.SCENE_CAMERA_Z = cameraZOffset - cameraZ;
-    GlobalStatics_9.SCENE_CAMERA_X = cameraXOffset - cameraX;
-    GlobalStatics_7.SCENE_CAMERA_Y = cameraYOffset - cameraY;
-  }
-
   public static GameWorld method1953(byte var0) {
     if (var0 <= 97) {
       GlobalStatics_3.BIT_MASKS = null;
@@ -11350,8 +11311,8 @@ public class GlobalStatics_9 {
     GlobalStatics_9.localPlayer.sceneX = var1;
     if (GlRenderer.USE_OPENGL) {
       if (GlobalStatics_9.anInt1753 == 2) {
-        GlobalStatics_9.SCENE_CAMERA_X = GlobalStatics_8.anInt30 << 7;
-        DummyClass49.SCENE_CAMERA_Z = GlobalStatics_5.anInt1904 << 7;
+        CameraStatics.CURRENT_X = GlobalStatics_8.anInt30 << 7;
+        CameraStatics.CURRENT_Z = GlobalStatics_5.anInt1904 << 7;
       } else {
         GlobalStatics_10.d(var1 ^ 0xf447);
       }
@@ -12255,7 +12216,7 @@ public class GlobalStatics_9 {
     }
 
     GlobalStatics_9.secureBuffer
-        .method790(GlobalStatics_8.aBooleanArray1490[82] ? 1 : 0,
+        .method790(GlobalStatics_8.PRESSED_KEYS[82] ? 1 : 0,
             -13071);
     GlobalStatics_9.secureBuffer
         .writeShort(GlobalStatics_10.REGION_BASE_X + var4);
@@ -12309,7 +12270,7 @@ public class GlobalStatics_9 {
       if (GlobalStatics_9.anInt1297 == GlobalStatics_9.anInt3460
           && DummyClass36.anInt2612 == GlobalStatics_8.anInt2099) {
         GlobalStatics_7.anInt3660 = 0;
-        if (DummyClass55.aBoolean1419 && GlobalStatics_8.aBooleanArray1490[81]
+        if (DummyClass55.aBoolean1419 && GlobalStatics_8.PRESSED_KEYS[81]
             && GlobalStatics_10.amountContextActions > 2) {
           GlobalStatics_8
               .method806(2597, GlobalStatics_10.amountContextActions - 2);
@@ -12321,7 +12282,7 @@ public class GlobalStatics_9 {
     } else if (GlobalStatics_9.anInt1297 == DummyClass5.anInt2993
         && DummyClass36.anInt2612 == DummyClass36.anInt2614) {
       GlobalStatics_7.anInt3660 = 0;
-      if (DummyClass55.aBoolean1419 && GlobalStatics_8.aBooleanArray1490[81]
+      if (DummyClass55.aBoolean1419 && GlobalStatics_8.PRESSED_KEYS[81]
           && GlobalStatics_10.amountContextActions > 2) {
         GlobalStatics_8
             .method806(2597, GlobalStatics_10.amountContextActions - 2);

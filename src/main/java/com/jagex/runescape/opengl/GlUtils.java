@@ -48,7 +48,6 @@ public final class GlUtils {
     GlUtils.anInt448 = 0;
     GlUtils.anInt450 = GlRenderer.viewWidth;
     GlUtils.anInt451 = GlRenderer.viewHeight;
-    // 	GL_SCISSOR_TEST	3089
     GlRenderer.GL.glDisable(3089);
     GlUtils.method921();
   }

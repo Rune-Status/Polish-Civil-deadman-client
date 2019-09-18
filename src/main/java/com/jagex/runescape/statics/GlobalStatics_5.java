@@ -1,5 +1,7 @@
 package com.jagex.runescape.statics;
 
+import com.jagex.runescape.camera.CameraStatics;
+import com.jagex.runescape.math.MathUtilities;
 import com.jagex.runescape.model.Widget;
 import com.jagex.runescape.buffer.Buffer;
 import com.jagex.runescape.common.GameString;
@@ -963,13 +965,13 @@ public class GlobalStatics_5 {
     if (var5 >= 128 && var2 >= 128 && var5 <= 13056 && var2 <= 13056) {
       int var8 = GlobalStatics_6
           .method1736(GlobalStatics_9.currentPlane, 1, var5, var2) - var3;
-      var2 -= DummyClass49.SCENE_CAMERA_Z;
-      var8 -= GlobalStatics_7.SCENE_CAMERA_Y;
-      var5 -= GlobalStatics_9.SCENE_CAMERA_X;
-      int var9 = GLStatics.SINE_TABLE[DummyClass17.SCENE_CAMERA_PITCH];
-      int var10 = DummyClass40.COSINE_TABLE[DummyClass17.SCENE_CAMERA_PITCH];
-      int var11 = GLStatics.SINE_TABLE[GlobalStatics_10.SCENE_CAMERA_YAW];
-      int var12 = DummyClass40.COSINE_TABLE[GlobalStatics_10.SCENE_CAMERA_YAW];
+      var2 -= CameraStatics.CURRENT_Z;
+      var8 -= CameraStatics.CURRENT_Y;
+      var5 -= CameraStatics.CURRENT_X;
+      int var9 = MathUtilities.SINE_TABLE[CameraStatics.CURRENT_PITCH];
+      int var10 = MathUtilities.COSINE_TABLE[CameraStatics.CURRENT_PITCH];
+      int var11 = MathUtilities.SINE_TABLE[CameraStatics.CURRENT_YAW];
+      int var12 = MathUtilities.COSINE_TABLE[CameraStatics.CURRENT_YAW];
       int var13 = var5 * var12 + var11 * var2 >> 16;
       var2 = var2 * var12 - var11 * var5 >> 16;
       var5 = var13;

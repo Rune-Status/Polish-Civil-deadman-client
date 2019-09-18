@@ -73,7 +73,7 @@ public class GlobalStatics_2 {
   public static GameString aClass94_343 = GameStringStatics
       .create("blanc:");
   public static short[][] aShortArrayArray344;
-  public static boolean aBoolean346;
+  public static boolean USE_INT_ARRAY_KEYBOARD_EVENTS;
   public static int[] anIntArray347 = new int[0x8000];
   public static int anInt348;
   public static int anInt349;
@@ -295,7 +295,7 @@ public class GlobalStatics_2 {
 
     GlobalStatics_0.anInt2148 = var1;
     GlobalStatics_10.anInt2488 = 0;
-    GlobalStatics_2.aBoolean346 = false;
+    GlobalStatics_2.USE_INT_ARRAY_KEYBOARD_EVENTS = false;
     DummyClass4.aBoolean3004 = true;
     GlobalStatics_0.SAFE_MODE = false;
     GlobalStatics_7.aBoolean1080 = false;
@@ -794,7 +794,7 @@ public class GlobalStatics_2 {
     GlobalStatics_2.aClass94_343 = null;
     GlobalStatics_2.aClass64_351 = null;
     if (var0 <= 75) {
-      GlobalStatics_2.aBoolean346 = false;
+      GlobalStatics_2.USE_INT_ARRAY_KEYBOARD_EVENTS = false;
     }
 
     GlobalStatics_2.anIntArray347 = null;

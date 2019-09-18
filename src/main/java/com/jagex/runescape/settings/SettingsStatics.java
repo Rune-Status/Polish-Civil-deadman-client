@@ -112,7 +112,7 @@ public final class SettingsStatics {
       }
 
       if (version >= 8) {
-        GlobalStatics_2.aBoolean346 = buffer.readUnsignedByte() == 1;
+        GlobalStatics_2.USE_INT_ARRAY_KEYBOARD_EVENTS = buffer.readUnsignedByte() == 1;
       }
 
       if (version >= 9) {
@@ -177,7 +177,7 @@ public final class SettingsStatics {
     buffer.writeInt(GlobalStatics_0.anInt2148);
     buffer.writeByte(GlobalStatics_2.anInt2577);
     buffer.writeByte(GlobalStatics_0.SAFE_MODE ? 1 : 0);
-    buffer.writeByte(GlobalStatics_2.aBoolean346 ? 1 : 0);
+    buffer.writeByte(GlobalStatics_2.USE_INT_ARRAY_KEYBOARD_EVENTS ? 1 : 0);
     buffer.writeByte(GlobalStatics_10.anInt2488);
     buffer.writeByte(GlobalStatics_7.aBoolean1080 ? 1 : 0);
     buffer.writeByte(DummyClass4.aBoolean3004 ? 1 : 0);

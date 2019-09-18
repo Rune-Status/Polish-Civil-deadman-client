@@ -1,6 +1,7 @@
 package com.jagex.runescape.model;
 
 import com.jagex.runescape.buffer.Buffer;
+import com.jagex.runescape.camera.CameraStatics;
 import com.jagex.runescape.common.GameString;
 import com.jagex.runescape.huffman.HuffmanEncoder;
 import com.jagex.runescape.opengl.DummyClass33;
@@ -196,10 +197,10 @@ public final class GameClient extends GameStub {
         GlobalStatics_10.d(0xffff);
       }
 
-      if (GlobalStatics_9.SCENE_CAMERA_X >> 7 < 14
-          || GlobalStatics_9.SCENE_CAMERA_X >> 7 >= 90
-          || DummyClass49.SCENE_CAMERA_Z
-          >> 7 < 14 || DummyClass49.SCENE_CAMERA_Z
+      if (CameraStatics.CURRENT_X >> 7 < 14
+          || CameraStatics.CURRENT_X >> 7 >= 90
+          || CameraStatics.CURRENT_Z
+          >> 7 < 14 || CameraStatics.CURRENT_Z
               >> 7 >= 90) {
         GlobalStatics_10.method195(var1 ^ 20478);
       }

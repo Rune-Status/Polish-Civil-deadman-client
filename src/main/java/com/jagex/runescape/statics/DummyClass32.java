@@ -21,7 +21,7 @@ public final class DummyClass32 {
       .create(":duelstake:");
   public static int anInt515 = -1;
   public static GameString aClass94_516 = GameStringStatics.create("unzap");
-  public static int anInt517;
+  public static int NEXT_CAMERA_PITCH_DELTA;
   public static SoftwareDirectColorSprite aClass3_Sub28_Sub16_Sub2_518;
   public static GameString aClass94_520 = GameStringStatics
       .create("Chargement des interfaces )2 ");

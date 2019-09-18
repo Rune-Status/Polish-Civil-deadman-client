@@ -483,7 +483,7 @@ public class GlobalStatics_3 {
     GlobalStatics_9.anInt3012 = 0;
     GlobalStatics_10.anInt3216 = (int) (Math.random() * 100.0D) - 50;
     DummyClass38.anInt733 = 0;
-    GlobalStatics_9.anInt531 = 2047 & (int) (Math.random() * 20.0D) - 10;
+    GlobalStatics_9.NEXT_CAMERA_YAW = 2047 & (int) (Math.random() * 20.0D) - 10;
     DummyClass43.anInt909 = -1;
     DummyClass13.anInt2022 = 0;
     DummyClass12.minimapMode = 0;

@@ -1,5 +1,6 @@
 package com.jagex.runescape.opengl;
 
+import com.jagex.runescape.math.MathUtilities;
 import com.jagex.runescape.statics.GlobalStatics_10;
 import com.jagex.runescape.buffer.Buffer;
 
@@ -79,7 +80,7 @@ public final class Light {
     int var6 = this.anInt694;
     int var4;
     if (var6 == 1) {
-      var4 = 1024 + (GLStatics.SINE_TABLE[var5] >> 6);
+      var4 = 1024 + (MathUtilities.SINE_TABLE[var5] >> 6);
     } else if (var6 != 3) {
       if (var6 == 4) {
         var4 = var5 >> 10 << 11;

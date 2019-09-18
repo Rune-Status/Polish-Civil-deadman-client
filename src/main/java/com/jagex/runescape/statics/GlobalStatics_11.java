@@ -1,6 +1,7 @@
 package com.jagex.runescape.statics;
 
 import com.jagex.runescape.buffer.Buffer;
+import com.jagex.runescape.camera.CameraStatics;
 import com.jagex.runescape.common.ArrayUtils;
 import com.jagex.runescape.common.GameString;
 import com.jagex.runescape.common.GameStringStatics;
@@ -77,7 +78,6 @@ public final class GlobalStatics_11 {
   public static int[] anIntArray2420;
   public static SomethingMidiInstrument[] aClass71Array2406;
   public static GameString[] titleSuffixes;
-  public static short SOMETHING_SCENE_Y_0 = 256;
   public static boolean aBoolean47;
   public static int anInt48 = 2;
   public static int[] anIntArray49;
@@ -2819,7 +2819,7 @@ public final class GlobalStatics_11 {
                               }
                               if (j1 < 5200) {
                                 if (j1 == 5100) {
-                                  if (GlobalStatics_8.aBooleanArray1490[86]) {
+                                  if (GlobalStatics_8.PRESSED_KEYS[86]) {
                                     GlobalStatics_9.anIntArray2929[k++] = 1;
                                   } else {
                                     GlobalStatics_9.anIntArray2929[k++] = 0;
@@ -2827,7 +2827,7 @@ public final class GlobalStatics_11 {
                                   continue;
                                 }
                                 if (j1 == 5101) {
-                                  if (GlobalStatics_8.aBooleanArray1490[82]) {
+                                  if (GlobalStatics_8.PRESSED_KEYS[82]) {
                                     GlobalStatics_9.anIntArray2929[k++] = 1;
                                   } else {
                                     GlobalStatics_9.anIntArray2929[k++] = 0;
@@ -2837,7 +2837,7 @@ public final class GlobalStatics_11 {
                                 if (j1 != 5102) {
                                   break;
                                 }
-                                if (GlobalStatics_8.aBooleanArray1490[81]) {
+                                if (GlobalStatics_8.PRESSED_KEYS[81]) {
                                   GlobalStatics_9.anIntArray2929[k++] = 1;
                                 } else {
                                   GlobalStatics_9.anIntArray2929[k++] = 0;
@@ -3477,24 +3477,24 @@ public final class GlobalStatics_11 {
                                 }
                                 if (j1 == 5504) {
                                   k -= 2;
-                                  GlobalStatics_6.anInt2309 = GlobalStatics_9.anIntArray2929[k];
-                                  GlobalStatics_9.anInt531 = GlobalStatics_9.anIntArray2929[
+                                  GlobalStatics_6.NEXT_CAMERA_PITCH = GlobalStatics_9.anIntArray2929[k];
+                                  GlobalStatics_9.NEXT_CAMERA_YAW = GlobalStatics_9.anIntArray2929[
                                       k + 1];
                                   if (GlobalStatics_9.anInt1753 == 2) {
-                                    GlobalStatics_10.SCENE_CAMERA_YAW = GlobalStatics_9.anInt531;
-                                    DummyClass17.SCENE_CAMERA_PITCH = GlobalStatics_6.anInt2309;
+                                    CameraStatics.CURRENT_YAW = GlobalStatics_9.NEXT_CAMERA_YAW;
+                                    CameraStatics.CURRENT_PITCH = GlobalStatics_6.NEXT_CAMERA_PITCH;
                                   }
                                   GlobalStatics_6.method1098((byte) -74);
                                   continue;
                                 }
                                 if (j1 == 5505) {
-                                  GlobalStatics_9.anIntArray2929[k++] = GlobalStatics_6.anInt2309;
+                                  GlobalStatics_9.anIntArray2929[k++] = GlobalStatics_6.NEXT_CAMERA_PITCH;
                                   continue;
                                 }
                                 if (j1 != 5506) {
                                   break;
                                 }
-                                GlobalStatics_9.anIntArray2929[k++] = GlobalStatics_9.anInt531;
+                                GlobalStatics_9.anIntArray2929[k++] = GlobalStatics_9.NEXT_CAMERA_YAW;
                                 continue;
                               }
                               if (j1 >= 5700) {
@@ -4127,7 +4127,7 @@ public final class GlobalStatics_11 {
                                       break;
                                     }
                                     if (j1 == 6600) {
-                                      GlobalStatics_2.aBoolean346 =
+                                      GlobalStatics_2.USE_INT_ARRAY_KEYBOARD_EVENTS =
                                           GlobalStatics_9.anIntArray2929[--k]
                                               == 1;
                                       SettingsStatics
@@ -4138,7 +4138,8 @@ public final class GlobalStatics_11 {
                                       break;
                                     }
                                     GlobalStatics_9.anIntArray2929[k++] =
-                                        GlobalStatics_2.aBoolean346 ? 1 : 0;
+                                        GlobalStatics_2.USE_INT_ARRAY_KEYBOARD_EVENTS
+                                            ? 1 : 0;
                                     continue;
                                   }
                                   if (j1 == 6405) {
@@ -4174,15 +4175,15 @@ public final class GlobalStatics_11 {
                                   k -= 2;
                                   //TODO this thing updates camera zoom
                                   System.out.println("Updating zoom things 0");
-                                  GlobalStatics_11.SOMETHING_SCENE_Y_0 = (short) GlobalStatics_9.anIntArray2929[k];
-                                  if (GlobalStatics_11.SOMETHING_SCENE_Y_0 <= 0) {
-                                    GlobalStatics_11.SOMETHING_SCENE_Y_0 = 256;
+                                  CameraStatics.SOMETHING_SCENE_Y_0 = (short) GlobalStatics_9.anIntArray2929[k];
+                                  if (CameraStatics.SOMETHING_SCENE_Y_0 <= 0) {
+                                    CameraStatics.SOMETHING_SCENE_Y_0 = 256;
                                   }
-                                  GlobalStatics_8.SOMETHING_SCENE_Y_0_1 =
+                                  CameraStatics.SOMETHING_SCENE_Y_0_1 =
                                       (short) GlobalStatics_9.anIntArray2929[1
                                           + k];
-                                  if (GlobalStatics_8.SOMETHING_SCENE_Y_0_1 <= 0) {
-                                    GlobalStatics_8.SOMETHING_SCENE_Y_0_1 = 320;
+                                  if (CameraStatics.SOMETHING_SCENE_Y_0_1 <= 0) {
+                                    CameraStatics.SOMETHING_SCENE_Y_0_1 = 320;
                                   }
                                   continue;
                                 }
@@ -4231,8 +4232,8 @@ public final class GlobalStatics_11 {
                                   continue;
                                 }
                                 if (j1 == 6204) {
-                                  GlobalStatics_9.anIntArray2929[k++] = GlobalStatics_11.SOMETHING_SCENE_Y_0;
-                                  GlobalStatics_9.anIntArray2929[k++] = GlobalStatics_8.SOMETHING_SCENE_Y_0_1;
+                                  GlobalStatics_9.anIntArray2929[k++] = CameraStatics.SOMETHING_SCENE_Y_0;
+                                  GlobalStatics_9.anIntArray2929[k++] = CameraStatics.SOMETHING_SCENE_Y_0_1;
                                   continue;
                                 }
                                 if (j1 != 6205) {

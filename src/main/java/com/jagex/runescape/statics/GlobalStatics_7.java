@@ -1,6 +1,7 @@
 package com.jagex.runescape.statics;
 
 import com.jagex.runescape.buffer.Buffer;
+import com.jagex.runescape.camera.CameraStatics;
 import com.jagex.runescape.common.GameString;
 import com.jagex.runescape.common.GameStringStatics;
 import com.jagex.runescape.model.AbstractDirectColorSprite;
@@ -86,7 +87,6 @@ public class GlobalStatics_7 {
   public static boolean aBoolean1451;
   public static FileUnpacker animationFrames;
   public static int anInt2161 = -1;
-  public static int SCENE_CAMERA_Y;
   public static GameString aClass94_2163 = GameStringStatics
       .create("Gegenstand f-Ur Mitglieder");
   public static GameString aClass94_2164 = GameStringStatics
@@ -198,66 +198,66 @@ public class GlobalStatics_7 {
         GlobalStatics_6.method1736(GlobalStatics_9.currentPlane, 1, var1, var2)
             - GlobalStatics_10.anInt3414;
     if (GlobalStatics_4.anInt3631 >= 100) {
-      GlobalStatics_9.SCENE_CAMERA_X = 64 + GlobalStatics_8.anInt30 * 128;
-      DummyClass49.SCENE_CAMERA_Z = 64 + GlobalStatics_5.anInt1904 * 128;
-      GlobalStatics_7.SCENE_CAMERA_Y =
+      CameraStatics.CURRENT_X = 64 + GlobalStatics_8.anInt30 * 128;
+      CameraStatics.CURRENT_Z = 64 + GlobalStatics_5.anInt1904 * 128;
+      CameraStatics.CURRENT_Y =
           GlobalStatics_6.method1736(GlobalStatics_9.currentPlane, var0 - 1023,
-              GlobalStatics_9.SCENE_CAMERA_X,
-              DummyClass49.SCENE_CAMERA_Z) - GlobalStatics_10.anInt3414;
+              CameraStatics.CURRENT_X,
+              CameraStatics.CURRENT_Z) - GlobalStatics_10.anInt3414;
     } else {
-      if (GlobalStatics_9.SCENE_CAMERA_X < var1) {
-        GlobalStatics_9.SCENE_CAMERA_X +=
+      if (CameraStatics.CURRENT_X < var1) {
+        CameraStatics.CURRENT_X +=
             DummyClass8.anInt4021 +
-                GlobalStatics_4.anInt3631 * (-GlobalStatics_9.SCENE_CAMERA_X + var1)
+                GlobalStatics_4.anInt3631 * (-CameraStatics.CURRENT_X + var1)
                     / 1000;
-        if (GlobalStatics_9.SCENE_CAMERA_X > var1) {
-          GlobalStatics_9.SCENE_CAMERA_X = var1;
+        if (CameraStatics.CURRENT_X > var1) {
+          CameraStatics.CURRENT_X = var1;
         }
       }
 
-      if (GlobalStatics_7.SCENE_CAMERA_Y < var3) {
-        GlobalStatics_7.SCENE_CAMERA_Y +=
-            (-GlobalStatics_7.SCENE_CAMERA_Y + var3) * GlobalStatics_4.anInt3631 / 1000
+      if (CameraStatics.CURRENT_Y < var3) {
+        CameraStatics.CURRENT_Y +=
+            (-CameraStatics.CURRENT_Y + var3) * GlobalStatics_4.anInt3631 / 1000
                 + DummyClass8.anInt4021;
-        if (GlobalStatics_7.SCENE_CAMERA_Y > var3) {
-          GlobalStatics_7.SCENE_CAMERA_Y = var3;
+        if (CameraStatics.CURRENT_Y > var3) {
+          CameraStatics.CURRENT_Y = var3;
         }
       }
 
-      if (GlobalStatics_9.SCENE_CAMERA_X > var1) {
-        GlobalStatics_9.SCENE_CAMERA_X -=
+      if (CameraStatics.CURRENT_X > var1) {
+        CameraStatics.CURRENT_X -=
             DummyClass8.anInt4021
-                + (GlobalStatics_9.SCENE_CAMERA_X - var1) * GlobalStatics_4.anInt3631
+                + (CameraStatics.CURRENT_X - var1) * GlobalStatics_4.anInt3631
                 / 1000;
-        if (GlobalStatics_9.SCENE_CAMERA_X < var1) {
-          GlobalStatics_9.SCENE_CAMERA_X = var1;
+        if (CameraStatics.CURRENT_X < var1) {
+          CameraStatics.CURRENT_X = var1;
         }
       }
 
-      if (DummyClass49.SCENE_CAMERA_Z < var2) {
-        DummyClass49.SCENE_CAMERA_Z += DummyClass8.anInt4021
-            + GlobalStatics_4.anInt3631 * (var2 - DummyClass49.SCENE_CAMERA_Z)
+      if (CameraStatics.CURRENT_Z < var2) {
+        CameraStatics.CURRENT_Z += DummyClass8.anInt4021
+            + GlobalStatics_4.anInt3631 * (var2 - CameraStatics.CURRENT_Z)
             / 1000;
-        if (var2 < DummyClass49.SCENE_CAMERA_Z) {
-          DummyClass49.SCENE_CAMERA_Z = var2;
+        if (var2 < CameraStatics.CURRENT_Z) {
+          CameraStatics.CURRENT_Z = var2;
         }
       }
 
-      if (var3 < GlobalStatics_7.SCENE_CAMERA_Y) {
-        GlobalStatics_7.SCENE_CAMERA_Y -=
-            (GlobalStatics_7.SCENE_CAMERA_Y - var3) * GlobalStatics_4.anInt3631 / 1000
+      if (var3 < CameraStatics.CURRENT_Y) {
+        CameraStatics.CURRENT_Y -=
+            (CameraStatics.CURRENT_Y - var3) * GlobalStatics_4.anInt3631 / 1000
                 + DummyClass8.anInt4021;
-        if (var3 > GlobalStatics_7.SCENE_CAMERA_Y) {
-          GlobalStatics_7.SCENE_CAMERA_Y = var3;
+        if (var3 > CameraStatics.CURRENT_Y) {
+          CameraStatics.CURRENT_Y = var3;
         }
       }
 
-      if (DummyClass49.SCENE_CAMERA_Z > var2) {
-        DummyClass49.SCENE_CAMERA_Z -= DummyClass8.anInt4021 +
-            (-var2 + DummyClass49.SCENE_CAMERA_Z) * GlobalStatics_4.anInt3631
+      if (CameraStatics.CURRENT_Z > var2) {
+        CameraStatics.CURRENT_Z -= DummyClass8.anInt4021 +
+            (-var2 + CameraStatics.CURRENT_Z) * GlobalStatics_4.anInt3631
                 / 1000;
-        if (var2 > DummyClass49.SCENE_CAMERA_Z) {
-          DummyClass49.SCENE_CAMERA_Z = var2;
+        if (var2 > CameraStatics.CURRENT_Z) {
+          CameraStatics.CURRENT_Z = var2;
         }
       }
     }
@@ -267,9 +267,9 @@ public class GlobalStatics_7 {
     var3 =
         GlobalStatics_6.method1736(GlobalStatics_9.currentPlane, 1, var1, var2)
             - GlobalStatics_9.anInt529;
-    int var5 = var3 - GlobalStatics_7.SCENE_CAMERA_Y;
-    int var6 = -DummyClass49.SCENE_CAMERA_Z + var2;
-    int var4 = -GlobalStatics_9.SCENE_CAMERA_X + var1;
+    int var5 = var3 - CameraStatics.CURRENT_Y;
+    int var6 = -CameraStatics.CURRENT_Z + var2;
+    int var4 = -CameraStatics.CURRENT_X + var1;
     int var7 = (int) Math.sqrt(var4 * var4 + var6 * var6);
     int var8 = (int) (325.949D * Math.atan2(var5, var7)) & 2047;
     if (var8 < 128) {
@@ -281,24 +281,24 @@ public class GlobalStatics_7 {
     }
 
     int var9 = (int) (-325.949 * Math.atan2(var4, var6)) & 2047;
-    if (DummyClass17.SCENE_CAMERA_PITCH < var8) {
-      DummyClass17.SCENE_CAMERA_PITCH += GlobalStatics_3.anInt1105
-          + DummyClass8.anInt4014 * (-DummyClass17.SCENE_CAMERA_PITCH + var8) / 1000;
-      if (DummyClass17.SCENE_CAMERA_PITCH > var8) {
-        DummyClass17.SCENE_CAMERA_PITCH = var8;
+    if (CameraStatics.CURRENT_PITCH < var8) {
+      CameraStatics.CURRENT_PITCH += GlobalStatics_3.anInt1105
+          + DummyClass8.anInt4014 * (-CameraStatics.CURRENT_PITCH + var8) / 1000;
+      if (CameraStatics.CURRENT_PITCH > var8) {
+        CameraStatics.CURRENT_PITCH = var8;
       }
     }
 
-    if (DummyClass17.SCENE_CAMERA_PITCH > var8) {
-      DummyClass17.SCENE_CAMERA_PITCH -=
-          (DummyClass17.SCENE_CAMERA_PITCH - var8) * DummyClass8.anInt4014 / 1000
+    if (CameraStatics.CURRENT_PITCH > var8) {
+      CameraStatics.CURRENT_PITCH -=
+          (CameraStatics.CURRENT_PITCH - var8) * DummyClass8.anInt4014 / 1000
               + GlobalStatics_3.anInt1105;
-      if (DummyClass17.SCENE_CAMERA_PITCH < var8) {
-        DummyClass17.SCENE_CAMERA_PITCH = var8;
+      if (CameraStatics.CURRENT_PITCH < var8) {
+        CameraStatics.CURRENT_PITCH = var8;
       }
     }
 
-    int var10 = -GlobalStatics_10.SCENE_CAMERA_YAW + var9;
+    int var10 = -CameraStatics.CURRENT_YAW + var9;
     if (var10 > var0) {
       var10 -= 2048;
     }
@@ -308,18 +308,18 @@ public class GlobalStatics_7 {
     }
 
     if (var10 > 0) {
-      GlobalStatics_10.SCENE_CAMERA_YAW +=
+      CameraStatics.CURRENT_YAW +=
           var10 * DummyClass8.anInt4014 / 1000 + GlobalStatics_3.anInt1105;
-      GlobalStatics_10.SCENE_CAMERA_YAW &= 2047;
+      CameraStatics.CURRENT_YAW &= 2047;
     }
 
     if (var10 < 0) {
-      GlobalStatics_10.SCENE_CAMERA_YAW -=
+      CameraStatics.CURRENT_YAW -=
           DummyClass8.anInt4014 * -var10 / 1000 + GlobalStatics_3.anInt1105;
-      GlobalStatics_10.SCENE_CAMERA_YAW &= 2047;
+      CameraStatics.CURRENT_YAW &= 2047;
     }
 
-    int var11 = -GlobalStatics_10.SCENE_CAMERA_YAW + var9;
+    int var11 = -CameraStatics.CURRENT_YAW + var9;
     if (var11 > 1024) {
       var11 -= 2048;
     }
@@ -329,7 +329,7 @@ public class GlobalStatics_7 {
     }
 
     if (var11 < 0 && var10 > 0 || var11 > 0 && var10 < 0) {
-      GlobalStatics_10.SCENE_CAMERA_YAW = var9;
+      CameraStatics.CURRENT_YAW = var9;
     }
   }
 
@@ -417,7 +417,7 @@ public class GlobalStatics_7 {
                 var2.anInt168, var2.zoom,
                 GlobalStatics_9.aClass3_Sub28_Sub16_895.anInt3707 / 2,
                 GlobalStatics_9.aClass3_Sub28_Sub16_895.anInt3696 / 2,
-                GlobalStatics_9.anInt531, 256,
+                GlobalStatics_9.NEXT_CAMERA_YAW, 256,
                 (GlDirectColorSprite) var2.method866((byte) -113, false));
       } else {
         ((SoftwareDirectColorSprite) GlobalStatics_9.aClass3_Sub28_Sub16_895)
@@ -425,7 +425,7 @@ public class GlobalStatics_7 {
                 var2.anInt168, var2.zoom,
                 GlobalStatics_9.aClass3_Sub28_Sub16_895.anInt3707 / 2,
                 GlobalStatics_9.aClass3_Sub28_Sub16_895.anInt3696 / 2,
-                GlobalStatics_9.anInt531, 256,
+                GlobalStatics_9.NEXT_CAMERA_YAW, 256,
                 var2.anIntArray207, var2.anIntArray291);
       }
 
@@ -2191,8 +2191,8 @@ public class GlobalStatics_7 {
       }
 
       if (var4) {
-        GlobalStatics_9.SCENE_CAMERA_X -= 128 * var9;
-        DummyClass49.SCENE_CAMERA_Z -= var10 * 128;
+        CameraStatics.CURRENT_X -= 128 * var9;
+        CameraStatics.CURRENT_Z -= var10 * 128;
         GlobalStatics_5.anInt1904 -= var10;
         GlobalStatics_9.anInt1923 -= var9;
         GlobalStatics_9.anInt1996 -= var10;

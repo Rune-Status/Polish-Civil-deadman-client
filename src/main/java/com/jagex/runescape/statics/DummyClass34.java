@@ -102,7 +102,7 @@ public final class DummyClass34 {
       int var2;
       if (GlobalStatics_3.anInt2384 < 0) {
         for (var2 = 0; var2 < 112; ++var2) {
-          GlobalStatics_8.aBooleanArray1490[var2] = false;
+          GlobalStatics_8.PRESSED_KEYS[var2] = false;
         }
 
         GlobalStatics_3.anInt2384 = GlobalStatics_9.anInt1744;
@@ -111,9 +111,9 @@ public final class DummyClass34 {
           var2 = GlobalStatics_7.anIntArray2952[GlobalStatics_9.anInt1744];
           GlobalStatics_9.anInt1744 = 127 & 1 + GlobalStatics_9.anInt1744;
           if (var2 >= 0) {
-            GlobalStatics_8.aBooleanArray1490[var2] = true;
+            GlobalStatics_8.PRESSED_KEYS[var2] = true;
           } else {
-            GlobalStatics_8.aBooleanArray1490[~var2] = false;
+            GlobalStatics_8.PRESSED_KEYS[~var2] = false;
           }
         }
       }

@@ -1,5 +1,6 @@
 package com.jagex.runescape.statics;
 
+import com.jagex.runescape.math.MathUtilities;
 import com.jagex.runescape.model.StillGraphic;
 import com.jagex.runescape.model.StillGraphicNode;
 import com.jagex.runescape.common.GameString;
@@ -588,8 +589,8 @@ public final class DummyClass37 {
                       var18 = var38.anIntArrayArray359[var15][0];
                       var28 -= var38.anIntArrayArray359[var15][1];
                       int var19 = var38.anIntArrayArray359[var15][2];
-                      int var20 = GLStatics.SINE_TABLE[var16.rotationY];
-                      int var21 = DummyClass40.COSINE_TABLE[var16.rotationY];
+                      int var20 = MathUtilities.SINE_TABLE[var16.rotationY];
+                      int var21 = MathUtilities.COSINE_TABLE[var16.rotationY];
                       int var22 = var18 * var21 + var19 * var20 >> 16;
                       var19 = -(var18 * var20) + var21 * var19 >> 16;
                       var3 += var19;

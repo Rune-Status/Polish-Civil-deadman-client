@@ -8,6 +8,8 @@ java_library(
         "statics/*.java",
         "settings/*.java",
         "opengl/**/*.java",
+        "math/**/*.java",
+        "camera/**/*.java",
     ]),
     deps = [
         "//lib:client.jar",

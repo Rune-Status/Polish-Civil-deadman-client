@@ -1,12 +1,11 @@
 package com.jagex.runescape.model;
 
 import com.jagex.runescape.common.GameString;
-import com.jagex.runescape.opengl.GLStatics;
+import com.jagex.runescape.math.MathUtilities;
 import com.jagex.runescape.opengl.GlRenderer;
 import com.jagex.runescape.scene.SceneNode;
 import com.jagex.runescape.statics.DummyClass0;
 import com.jagex.runescape.statics.DummyClass18;
-import com.jagex.runescape.statics.DummyClass40;
 import com.jagex.runescape.statics.GlobalStatics_10;
 import com.jagex.runescape.statics.GlobalStatics_6;
 import com.jagex.runescape.statics.GlobalStatics_8;
@@ -227,8 +226,8 @@ public abstract class Mobile extends SceneNode {
       int var5 = var4.anInt395;
       int var6 = var4.anInt381;
       if (var5 != 0 && var6 != 0) {
-        int var7 = GLStatics.SINE_TABLE[var3];
-        int var8 = DummyClass40.COSINE_TABLE[var3];
+        int var7 = MathUtilities.SINE_TABLE[var3];
+        int var8 = MathUtilities.COSINE_TABLE[var3];
         int var9 = -var5 / 2;
         int var10 = -var6 / 2;
         int var12 = -(var9 * var7) + var10 * var8 >> 16;

@@ -1,13 +1,12 @@
 package com.jagex.runescape.model;
 
-import com.jagex.runescape.opengl.GLStatics;
+import com.jagex.runescape.math.MathUtilities;
 import com.jagex.runescape.opengl.GlModel;
 import com.jagex.runescape.opengl.GlRenderer;
 import com.jagex.runescape.statics.DummyClass14;
 import com.jagex.runescape.statics.DummyClass2;
 import com.jagex.runescape.statics.DummyClass24;
 import com.jagex.runescape.statics.DummyClass35;
-import com.jagex.runescape.statics.DummyClass40;
 import com.jagex.runescape.statics.DummyClass55;
 import com.jagex.runescape.statics.DummyClass6;
 import com.jagex.runescape.statics.GlobalStatics_10;
@@ -345,12 +344,12 @@ public final class PlayerAppearance {
                       var27[0] = var27[4] = var27[8] = 0x8000;
                       var27[14] = -var23;
                     } else {
-                      var28 = DummyClass40.COSINE_TABLE[var24] >> 1;
-                      var29 = GLStatics.SINE_TABLE[var24] >> 1;
-                      int var30 = DummyClass40.COSINE_TABLE[var25] >> 1;
-                      int var31 = GLStatics.SINE_TABLE[var25] >> 1;
-                      var32 = DummyClass40.COSINE_TABLE[var26] >> 1;
-                      var33 = GLStatics.SINE_TABLE[var26] >> 1;
+                      var28 = MathUtilities.COSINE_TABLE[var24] >> 1;
+                      var29 = MathUtilities.SINE_TABLE[var24] >> 1;
+                      int var30 = MathUtilities.COSINE_TABLE[var25] >> 1;
+                      int var31 = MathUtilities.SINE_TABLE[var25] >> 1;
+                      var32 = MathUtilities.COSINE_TABLE[var26] >> 1;
+                      var33 = MathUtilities.SINE_TABLE[var26] >> 1;
                       var27[4] = var28 * var32 + 16384 >> 15;
                       var27[5] = -var29;
                       var27[3] = 16384 + var33 * var28 >> 15;

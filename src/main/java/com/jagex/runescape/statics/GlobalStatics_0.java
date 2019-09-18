@@ -1,5 +1,6 @@
 package com.jagex.runescape.statics;
 
+import com.jagex.runescape.math.MathUtilities;
 import com.jagex.runescape.model.VariableUpdate;
 import com.jagex.runescape.model.Widget;
 import com.jagex.runescape.buffer.Buffer;
@@ -1203,8 +1204,8 @@ public final class GlobalStatics_0 {
         var16 = (int) (1.04D * var16);
       }
 
-      int var18 = DummyClass40.COSINE_TABLE[var8.rotationX] * var16 >> 16;
-      int var17 = GLStatics.SINE_TABLE[var8.rotationX] * var16 >> 16;
+      int var18 = MathUtilities.COSINE_TABLE[var8.rotationX] * var16 >> 16;
+      int var17 = MathUtilities.SINE_TABLE[var8.rotationX] * var16 >> 16;
       var21.draw(0, var8.rotationY, var8.rotationZ, var8.rotationX,
           var8.translateX,
           var17 - (var21.getMinimumY() / 2 - var8.translateOther),

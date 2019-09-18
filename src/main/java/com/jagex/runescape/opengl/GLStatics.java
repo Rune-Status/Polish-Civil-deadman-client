@@ -50,7 +50,6 @@ public class GLStatics {
   public static int anInt715;
   public static int anInt716;
   public static int[] hslTable = new int[65536];
-  public static int[] SINE_TABLE = new int[2048];
   public static boolean USE_BUMP_MAPS = true;
   public static int viewportLowerX;
   public static int viewportLowerZ;

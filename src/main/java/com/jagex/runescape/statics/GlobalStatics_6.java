@@ -4,6 +4,7 @@ import com.jagex.runescape.buffer.Buffer;
 import com.jagex.runescape.common.GameString;
 import com.jagex.runescape.common.GameStringStatics;
 import com.jagex.runescape.common.HashTable;
+import com.jagex.runescape.math.MathUtilities;
 import com.jagex.runescape.model.AbstractDirectColorSprite;
 import com.jagex.runescape.model.AbstractFont;
 import com.jagex.runescape.model.AbstractModel;
@@ -86,7 +87,7 @@ public class GlobalStatics_6 {
   public static int anInt3591;
   public static int[] anIntArray3592 = new int[256];
   public static volatile boolean REPLACE_CANVAS;
-  public static int anInt2309 = 128;
+  public static int NEXT_CAMERA_PITCH = 128;
   public static boolean aBoolean2311;
   public static long destroyTime;
   public static int anInt2317;
@@ -393,10 +394,10 @@ public class GlobalStatics_6 {
       cameraZ = GlobalStatics_1.REGION_HEIGHT * 128 - 1;
     }
 
-    DummyClass44.pitchSine = GLStatics.SINE_TABLE[pitch];
-    GlobalStatics_9.pitchCosine = DummyClass40.COSINE_TABLE[pitch];
-    GlobalStatics_10.yawSine = GLStatics.SINE_TABLE[yaw];
-    GlobalStatics_10.yawCosine = DummyClass40.COSINE_TABLE[yaw];
+    DummyClass44.pitchSine = MathUtilities.SINE_TABLE[pitch];
+    GlobalStatics_9.pitchCosine = MathUtilities.COSINE_TABLE[pitch];
+    GlobalStatics_10.yawSine = MathUtilities.SINE_TABLE[yaw];
+    GlobalStatics_10.yawCosine = MathUtilities.COSINE_TABLE[yaw];
     GlobalStatics_9.CAMERA_X = cameraX;
     GlobalStatics_7.CAMERA_Y = cameraY;
     GlobalStatics_9.CAMERA_Z = cameraZ;
@@ -1982,10 +1983,10 @@ public class GlobalStatics_6 {
 
                 var21 -= widget.zoom / 2;
                 var23 =
-                    2047 & GlobalStatics_9.anInt531 + GlobalStatics_9.anInt3102;
+                    2047 & GlobalStatics_9.NEXT_CAMERA_YAW + GlobalStatics_9.anInt3102;
                 var20 -= widget.anInt168 / 2;
-                var24 = GLStatics.SINE_TABLE[var23];
-                var25 = DummyClass40.COSINE_TABLE[var23];
+                var24 = MathUtilities.SINE_TABLE[var23];
+                var25 = MathUtilities.COSINE_TABLE[var23];
                 var24 = (GlobalStatics_9.anInt3020 + 256) * var24 >> 8;
                 var25 = (GlobalStatics_9.anInt3020 + 256) * var25 >> 8;
                 var47 = -(var24 * var20) + var25 * var21 >> 11;
@@ -2623,11 +2624,11 @@ public class GlobalStatics_6 {
                             GlRenderer.method1851();
                           }
 
-                          var28 = GLStatics.SINE_TABLE[widget.rotationX0]
+                          var28 = MathUtilities.SINE_TABLE[widget.rotationX0]
                               * widget.anInt164
                               >> 16;
                           var29 = widget.anInt164
-                              * DummyClass40.COSINE_TABLE[widget.rotationX0]
+                              * MathUtilities.COSINE_TABLE[widget.rotationX0]
                               >> 16;
                           if (widget.aBoolean233) {
                             var38.draw(0, widget.rotationY, widget.rotationZ,
@@ -2645,11 +2646,11 @@ public class GlobalStatics_6 {
                           }
                         } else {
                           DummyClass40.method1145(var26, var47);
-                          var28 = GLStatics.SINE_TABLE[widget.rotationX0]
+                          var28 = MathUtilities.SINE_TABLE[widget.rotationX0]
                               * widget.anInt164
                               >> 16;
                           var29 = widget.anInt164
-                              * DummyClass40.COSINE_TABLE[widget.rotationX0]
+                              * MathUtilities.COSINE_TABLE[widget.rotationX0]
                               >> 16;
                           if (!widget.aBoolean233) {
                             var38.draw(0, widget.rotationY, 0, widget.rotationX0,
@@ -3003,24 +3004,24 @@ public class GlobalStatics_6 {
   }
 
   public static void method1098(byte var0) {
-    if (GlobalStatics_6.anInt2309 < 128) {
-      GlobalStatics_6.anInt2309 = 128;
+    if (GlobalStatics_6.NEXT_CAMERA_PITCH < 128) {
+      GlobalStatics_6.NEXT_CAMERA_PITCH = 128;
     }
 
 
     //TODO
-    if (GlobalStatics_6.anInt2309 > 383) {
-      GlobalStatics_6.anInt2309 = 383;
+    if (GlobalStatics_6.NEXT_CAMERA_PITCH > 383) {
+      GlobalStatics_6.NEXT_CAMERA_PITCH = 383;
     }
 
-    GlobalStatics_9.anInt531 &= 2047;
+    GlobalStatics_9.NEXT_CAMERA_YAW &= 2047;
 
-    int var1 = GlobalStatics_10.anInt3155 >> 7;
+    int var1 = GlobalStatics_10.CAMERA_X_OFFSET >> 7;
     int var2 = GlobalStatics_8.anInt942 >> 7;
     int var3 =
         GlobalStatics_6
             .method1736(GlobalStatics_9.currentPlane, 1,
-                GlobalStatics_10.anInt3155,
+                GlobalStatics_10.CAMERA_X_OFFSET,
                 GlobalStatics_8.anInt942);
     int var4 = 0;
     int var5;
@@ -3309,7 +3310,7 @@ public class GlobalStatics_6 {
 
     if (DummyClass12.minimapMode != 2 && DummyClass12.minimapMode != 5
         && GlobalStatics_9.aClass3_Sub28_Sub16_812 != null) {
-      int var19 = GlobalStatics_9.anInt3102 + GlobalStatics_9.anInt531 & 2047;
+      int var19 = GlobalStatics_9.anInt3102 + GlobalStatics_9.NEXT_CAMERA_YAW & 2047;
       int var6 = GlobalStatics_9.localPlayer.sceneX / 32 + 48;
       int var7 = -(GlobalStatics_9.localPlayer.sceneY / 32) + 464;
       if (GlRenderer.USE_OPENGL) {
@@ -3342,8 +3343,8 @@ public class GlobalStatics_6 {
                 2 + 4 * (GlobalStatics_10.aClass131_3421.aShortArray1727[var8]
                     - GlobalStatics_10.REGION_BASE_X)
                     - GlobalStatics_9.localPlayer.sceneX / 32;
-            var11 = GLStatics.SINE_TABLE[var19];
-            var12 = DummyClass40.COSINE_TABLE[var19];
+            var11 = MathUtilities.SINE_TABLE[var19];
+            var12 = MathUtilities.COSINE_TABLE[var19];
             AbstractFont var15 = GlobalStatics_3.aClass3_Sub28_Sub17_2379;
             var11 = var11 * 256 / (256 + GlobalStatics_9.anInt3020);
             var10 = 2 + 4 * (-GlobalStatics_9.REGION_BASE_Y

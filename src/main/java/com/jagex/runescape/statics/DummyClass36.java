@@ -1,12 +1,12 @@
 package com.jagex.runescape.statics;
 
+import com.jagex.runescape.math.MathUtilities;
 import com.jagex.runescape.model.Widget;
 import com.jagex.runescape.common.GameString;
 import com.jagex.runescape.common.GameStringStatics;
 import com.jagex.runescape.model.AbstractDirectColorSprite;
 import com.jagex.runescape.model.AudioWorker;
 import com.jagex.runescape.model.SoftwareDirectColorSprite;
-import com.jagex.runescape.opengl.GLStatics;
 import com.jagex.runescape.opengl.GlDirectColorSprite;
 import com.jagex.runescape.opengl.GlRenderer;
 
@@ -33,12 +33,12 @@ public final class DummyClass36 {
       }
 
       int var9 = var3 * var3 + var2 * var2;
-      int var7 = 2047 & GlobalStatics_9.anInt3102 + GlobalStatics_9.anInt531;
+      int var7 = 2047 & GlobalStatics_9.anInt3102 + GlobalStatics_9.NEXT_CAMERA_YAW;
       int var8 = Math.max(var0.anInt168 / 2, var0.zoom / 2) + 10;
       if (var8 * var8 >= var9) {
-        int var10 = GLStatics.SINE_TABLE[var7];
+        int var10 = MathUtilities.SINE_TABLE[var7];
         var10 = var10 * 256 / (GlobalStatics_9.anInt3020 + 256);
-        int var11 = DummyClass40.COSINE_TABLE[var7];
+        int var11 = MathUtilities.COSINE_TABLE[var7];
         var11 = 256 * var11 / (256 + GlobalStatics_9.anInt3020);
         int var12 = var10 * var2 + var3 * var11 >> 16;
         int var13 = var11 * var2 - var3 * var10 >> 16;

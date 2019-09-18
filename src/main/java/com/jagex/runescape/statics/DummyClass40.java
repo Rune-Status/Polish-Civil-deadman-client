@@ -1,5 +1,6 @@
 package com.jagex.runescape.statics;
 
+import com.jagex.runescape.math.MathUtilities;
 import com.jagex.runescape.model.ITextureCache;
 import com.jagex.runescape.opengl.GLStatics;
 import com.jagex.runescape.sprite.SoftwareIndexedColorSpriteStatics;
@@ -20,7 +21,6 @@ public final class DummyClass40 {
   public static int anInt847;
   public static boolean aBoolean849;
   public static int anInt850;
-  public static int[] COSINE_TABLE = new int[2048];
 
   static {
     int var0;
@@ -33,9 +33,9 @@ public final class DummyClass40 {
     }
 
     for (var0 = 0; var0 < 2048; var0++) {
-      GLStatics.SINE_TABLE[var0] = (int) (65536.0D * Math
+      MathUtilities.SINE_TABLE[var0] = (int) (65536.0D * Math
           .sin(var0 * 0.0030679615D));
-      DummyClass40.COSINE_TABLE[var0] = (int) (65536.0D * Math
+      MathUtilities.COSINE_TABLE[var0] = (int) (65536.0D * Math
           .cos(var0 * 0.0030679615D));
     }
 
@@ -4420,8 +4420,8 @@ public final class DummyClass40 {
     GLStatics.textureCache = null;
     DummyClass40.anIntArray839 = null;
     DummyClass40.anIntArray841 = null;
-    GLStatics.SINE_TABLE = null;
-    DummyClass40.COSINE_TABLE = null;
+    MathUtilities.SINE_TABLE = null;
+    MathUtilities.COSINE_TABLE = null;
   }
 
   public static void method1156(byte[] var0, int var1, int var2, int var3,
