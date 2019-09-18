@@ -37,7 +37,7 @@ public final class DummyClass18 {
   public static int anInt87;
   public static Widget aClass11_88;
 
-  public static int method823(int planeY, int planeX, int var2, int plane) {
+  public static int method823(int planeY, int planeX, int plane) {
 
     return (8 & GlobalStatics_10.tileFlags[plane][planeX][planeY]) == 0 ?
         plane > 0 && (GlobalStatics_10.tileFlags[1][planeX][planeY] & 2) != 0 ?

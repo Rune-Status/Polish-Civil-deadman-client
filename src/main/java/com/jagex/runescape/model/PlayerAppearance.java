@@ -1,6 +1,5 @@
 package com.jagex.runescape.model;
 
-import com.jagex.runescape.huffman.HuffmanEncoderStatics;
 import com.jagex.runescape.opengl.GLStatics;
 import com.jagex.runescape.opengl.GlModel;
 import com.jagex.runescape.opengl.GlRenderer;
@@ -162,7 +161,7 @@ public final class PlayerAppearance {
                 ? GlobalStatics_9.anIntArray3228[var7]
                 : GlobalStatics_9.anIntArray2559[var7])) {
               var5[DummyClass6.anIntArray2043[var7]] =
-                HuffmanEncoderStatics.method308(Integer.MIN_VALUE, var8);
+                  Integer.MIN_VALUE | var8;
               break;
             }
           }
@@ -204,7 +203,7 @@ public final class PlayerAppearance {
     int var4 = DummyClass6.anIntArray2043[var1];
       if (this.anIntArray857[var4] != 0) {
         GlobalStatics_10.getIdentityKit(var2, var3);
-        this.anIntArray857[var4] = HuffmanEncoderStatics.method308(var2, Integer.MIN_VALUE);
+        this.anIntArray857[var4] = var2 | Integer.MIN_VALUE;
         this.method1158(459557008);
       }
   }
@@ -235,7 +234,7 @@ public final class PlayerAppearance {
               var13 ^= -4294967296L;
               var15[5] = 0;
             } else {
-              var15[5] = HuffmanEncoderStatics.method308(1073741824, var4.anInt1854);
+              var15[5] = 1073741824 | var4.anInt1854;
               var13 ^= (long) var15[5] << 32;
             }
           }
@@ -245,7 +244,7 @@ public final class PlayerAppearance {
               var15[3] = 0;
               var13 ^= 4294967295L;
             } else {
-              var15[3] = HuffmanEncoderStatics.method308(1073741824, var4.anInt1849);
+              var15[3] = 1073741824 | var4.anInt1849;
               var13 ^= var15[3];
             }
           }

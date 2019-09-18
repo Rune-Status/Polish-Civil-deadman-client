@@ -3,7 +3,6 @@ package com.jagex.runescape.statics;
 import com.jagex.runescape.model.WidgetUpdate;
 import com.jagex.runescape.model.FileUnpacker;
 import com.jagex.runescape.model.SoftwareDirectColorSprite;
-import com.jagex.runescape.huffman.HuffmanEncoderStatics;
 import com.jagex.runescape.node.Deque;
 import com.jagex.runescape.opengl.GLStatics;
 import com.jagex.runescape.opengl.GlRenderer;
@@ -51,10 +50,8 @@ public final class DummyClass51 {
       float var11 = (var10 - var9) / 64.0F;
 
       for (int var12 = 0; var12 < 64; ++var12) {
-        GlobalStatics_9.anIntArray861[var12 + 64 * var2] = HuffmanEncoderStatics
-            .method308((int) var9,
-                HuffmanEncoderStatics
-                    .method308((int) var6 << 8, (int) var3 << 16));
+        GlobalStatics_9.anIntArray861[var12 + 64 * var2] =
+            (int) var9 | ((int) var6 << 8 | (int) var3 << 16);
         var6 += var8;
         var9 += var11;
         var3 += var5;

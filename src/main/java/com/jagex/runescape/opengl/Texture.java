@@ -3,7 +3,6 @@ package com.jagex.runescape.opengl;
 import com.jagex.runescape.buffer.Buffer;
 import com.jagex.runescape.common.GameString;
 import com.jagex.runescape.common.GameStringStatics;
-import com.jagex.runescape.huffman.HuffmanEncoderStatics;
 import com.jagex.runescape.model.AbstractObjectNodeWrapper;
 import com.jagex.runescape.model.FileUnpacker;
 import com.jagex.runescape.model.ITextureCache;
@@ -149,8 +148,7 @@ public final class Texture extends SubNode {
               --var27;
               var20 = var28 / 9;
               --var25;
-              var10[var25] = HuffmanEncoderStatics.method308(var22,
-                  HuffmanEncoderStatics.method308(var20 << 16, var21 << 8));
+              var10[var25] = var22 | (var20 << 16 | var21 << 8);
               var28 += var7[var27] - var7[var26];
               var29 += var9[var27] - var9[var26];
               var30 += -var8[var26] + var8[var27];

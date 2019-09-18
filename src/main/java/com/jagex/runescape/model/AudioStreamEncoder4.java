@@ -1,7 +1,6 @@
 package com.jagex.runescape.model;
 
 import com.jagex.runescape.common.HashTable;
-import com.jagex.runescape.huffman.HuffmanEncoderStatics;
 import com.jagex.runescape.statics.DummyClass60;
 import com.jagex.runescape.statics.GlobalStatics_11;
 import com.jagex.runescape.statics.GlobalStatics_6;
@@ -494,8 +493,7 @@ public final class AudioStreamEncoder4 extends AudioStreamEncoder {
 
           if (var5 == 64) {
             if (var6 >= 64) {
-              this.anIntArray3518[var4] = HuffmanEncoderStatics.method308(
-                  this.anIntArray3518[var4], 1);
+              this.anIntArray3518[var4] = this.anIntArray3518[var4] | 1;
             } else {
               this.anIntArray3518[var4] = this.anIntArray3518[var4] & -2;
             }
@@ -506,8 +504,7 @@ public final class AudioStreamEncoder4 extends AudioStreamEncoder {
               this.method502(var4, var1 ^ -57);
               this.anIntArray3518[var4] = this.anIntArray3518[var4] & -3;
             } else {
-              this.anIntArray3518[var4] = HuffmanEncoderStatics.method308(
-                  this.anIntArray3518[var4], 2);
+              this.anIntArray3518[var4] = this.anIntArray3518[var4] | 2;
             }
           }
 
@@ -572,8 +569,7 @@ public final class AudioStreamEncoder4 extends AudioStreamEncoder {
 
           if (var5 == 81) {
             if (var6 >= 64) {
-              this.anIntArray3518[var4] = HuffmanEncoderStatics.method308(
-                  this.anIntArray3518[var4], 4);
+              this.anIntArray3518[var4] = this.anIntArray3518[var4] | 4;
             } else {
               this.method497(var4, -102);
               this.anIntArray3518[var4] = this.anIntArray3518[var4] & -5;

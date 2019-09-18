@@ -3,7 +3,6 @@ package com.jagex.runescape.model;
 import com.jagex.runescape.buffer.Buffer;
 import com.jagex.runescape.common.GameString;
 import com.jagex.runescape.common.GameStringStatics;
-import com.jagex.runescape.huffman.HuffmanEncoderStatics;
 import com.jagex.runescape.opengl.GlRenderer;
 import com.jagex.runescape.statics.DummyClass0;
 import com.jagex.runescape.statics.DummyClass11;
@@ -73,14 +72,13 @@ public final class Player extends Mobile {
 
           if (var13 >= 0x8000) {
             var13 = GlobalStatics_9.anIntArray2664[var13 - 0x8000];
-            var9[var10] = HuffmanEncoderStatics.method308(1073741824, var13);
+            var9[var10] = 1073741824 | var13;
             var14 = DummyClass35.getItemConfig(var13, (byte) 119).anInt782;
             if (var14 != 0) {
               this.anInt3956 = var14;
             }
           } else {
-            var9[var10] = HuffmanEncoderStatics
-                .method308(-256 + var13, Integer.MIN_VALUE);
+            var9[var10] = -256 + var13 | Integer.MIN_VALUE;
           }
         }
       }

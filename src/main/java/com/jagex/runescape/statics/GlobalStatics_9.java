@@ -6,7 +6,6 @@ import com.jagex.runescape.common.ArrayUtils;
 import com.jagex.runescape.common.GameString;
 import com.jagex.runescape.common.GameStringStatics;
 import com.jagex.runescape.common.HashTable;
-import com.jagex.runescape.huffman.HuffmanEncoderStatics;
 import com.jagex.runescape.model.AbstractAudioOutputStream;
 import com.jagex.runescape.model.AbstractDirectColorSprite;
 import com.jagex.runescape.model.AbstractFont;
@@ -1757,12 +1756,8 @@ public class GlobalStatics_9 {
                   -1
                       + var9][var12] != var6) {
             GlobalStatics_10.anIntArray3456[var23] =
-                HuffmanEncoderStatics
-                    .method308(
-                        HuffmanEncoderStatics.method308(var9 - 1, 1179648),
-                        -754974720);
-            DummyClass38.anIntArray729[var23] = HuffmanEncoderStatics
-                .method308(var12, 1245184);
+                var9 - 1 | 1179648 | -754974720;
+            DummyClass38.anIntArray729[var23] = var12 | 1245184;
             var23 = 1 + var23 & 4095;
             GlobalStatics_5.aByteArrayArrayArray2008[GlobalStatics_9.currentPlane][
                 var9
@@ -1780,11 +1775,9 @@ public class GlobalStatics_9 {
                 (GlobalStatics_10.tileFlags[GlobalStatics_9.currentPlane][-1
                     + var9][var12
                     - 1] & 4) == 0) {
-              GlobalStatics_10.anIntArray3456[var23] = HuffmanEncoderStatics
-                  .method308(1375731712,
-                      HuffmanEncoderStatics.method308(1179648, -1 + var9));
-              DummyClass38.anIntArray729[var23] = HuffmanEncoderStatics
-                  .method308(var12, 1245184);
+              GlobalStatics_10.anIntArray3456[var23] =
+                  1375731712 | (1179648 | -1 + var9);
+              DummyClass38.anIntArray729[var23] = var12 | 1245184;
               GlobalStatics_5.aByteArrayArrayArray2008[GlobalStatics_9.currentPlane][
                   -1
                       + var9][var12] = var6;
@@ -1794,11 +1787,8 @@ public class GlobalStatics_9 {
             if (var6
                 != GlobalStatics_5.aByteArrayArrayArray2008[GlobalStatics_9.currentPlane][var9][var12]) {
               GlobalStatics_10.anIntArray3456[var23] =
-                  HuffmanEncoderStatics
-                      .method308(318767104, HuffmanEncoderStatics
-                          .method308(var9, 5373952));
-              DummyClass38.anIntArray729[var23] = HuffmanEncoderStatics
-                  .method308(5439488, var12);
+                  318767104 | (var9 | 5373952);
+              DummyClass38.anIntArray729[var23] = 5439488 | var12;
               var23 = 4095 & 1 + var23;
               GlobalStatics_5.aByteArrayArrayArray2008[GlobalStatics_9.currentPlane][var9][var12] =
                   var6;
@@ -1814,11 +1804,9 @@ public class GlobalStatics_9 {
                 (GlobalStatics_10.tileFlags[GlobalStatics_9.currentPlane][1
                     + var9][var12
                     - 1] & 4) == 0) {
-              GlobalStatics_10.anIntArray3456[var23] = HuffmanEncoderStatics
-                  .method308(-1845493760,
-                      HuffmanEncoderStatics.method308(5373952, var9 + 1));
-              DummyClass38.anIntArray729[var23] = HuffmanEncoderStatics
-                  .method308(5439488, var12);
+              GlobalStatics_10.anIntArray3456[var23] =
+                  -1845493760 | (5373952 | var9 + 1);
+              DummyClass38.anIntArray729[var23] = 5439488 | var12;
               GlobalStatics_5.aByteArrayArrayArray2008[GlobalStatics_9.currentPlane][
                   var9
                       + 1][var12] = var6;
@@ -1831,12 +1819,8 @@ public class GlobalStatics_9 {
               != GlobalStatics_5.aByteArrayArrayArray2008[GlobalStatics_9.currentPlane][
               var9 + 1][var12]) {
             GlobalStatics_10.anIntArray3456[var23] =
-                HuffmanEncoderStatics
-                    .method308(
-                        HuffmanEncoderStatics.method308(1 + var9, 9568256),
-                        1392508928);
-            DummyClass38.anIntArray729[var23] = HuffmanEncoderStatics
-                .method308(var12, 9633792);
+                1 + var9 | 9568256 | 1392508928;
+            DummyClass38.anIntArray729[var23] = var12 | 9633792;
             GlobalStatics_5.aByteArrayArrayArray2008[GlobalStatics_9.currentPlane][
                 1
                     + var9][var12] = var6;
@@ -1856,11 +1840,8 @@ public class GlobalStatics_9 {
                     - 1][1
                     + var12] & 4) == 0) {
               GlobalStatics_10.anIntArray3456[var23] =
-                  HuffmanEncoderStatics.method308(
-                      HuffmanEncoderStatics.method308(-1 + var9, 13762560),
-                      301989888);
-              DummyClass38.anIntArray729[var23] = HuffmanEncoderStatics
-                  .method308(var12, 13828096);
+                  -1 + var9 | 13762560 | 301989888;
+              DummyClass38.anIntArray729[var23] = var12 | 13828096;
               GlobalStatics_5.aByteArrayArrayArray2008[GlobalStatics_9.currentPlane][
                   -1
                       + var9][var12] = var6;
@@ -1870,12 +1851,8 @@ public class GlobalStatics_9 {
             if (var6
                 != GlobalStatics_5.aByteArrayArrayArray2008[GlobalStatics_9.currentPlane][var9][var12]) {
               GlobalStatics_10.anIntArray3456[var23] =
-                  HuffmanEncoderStatics
-                      .method308(
-                          HuffmanEncoderStatics.method308(var9, 13762560),
-                          -1828716544);
-              DummyClass38.anIntArray729[var23] = HuffmanEncoderStatics
-                  .method308(13828096, var12);
+                  var9 | 13762560 | -1828716544;
+              DummyClass38.anIntArray729[var23] = 13828096 | var12;
               var23 = var23 + 1 & 4095;
               GlobalStatics_5.aByteArrayArrayArray2008[GlobalStatics_9.currentPlane][var9][var12] =
                   var6;
@@ -1891,11 +1868,9 @@ public class GlobalStatics_9 {
                 (GlobalStatics_10.tileFlags[GlobalStatics_9.currentPlane][1
                     + var9][1
                     + var12] & 4) == 0) {
-              GlobalStatics_10.anIntArray3456[var23] = HuffmanEncoderStatics
-                  .method308(-771751936,
-                      HuffmanEncoderStatics.method308(var9 + 1, 9568256));
-              DummyClass38.anIntArray729[var23] = HuffmanEncoderStatics
-                  .method308(9633792, var12);
+              GlobalStatics_10.anIntArray3456[var23] =
+                  -771751936 | (var9 + 1 | 9568256);
+              DummyClass38.anIntArray729[var23] = 9633792 | var12;
               GlobalStatics_5.aByteArrayArrayArray2008[GlobalStatics_9.currentPlane][
                   var9
                       + 1][var12] = var6;
@@ -5770,9 +5745,9 @@ public class GlobalStatics_9 {
       int[] var5 = new int[var1];
 
       for (int var6 = 0; var6 < var1; ++var6) {
-        var5[var6] = HuffmanEncoderStatics
-            .method308(var4[var6] << 24 & -16777216,
-                GlobalStatics_10.anIntArray3446[255 & (int) var2[var6]]);
+        var5[var6] =
+            var4[var6] << 24 & -16777216 | GlobalStatics_10.anIntArray3446[255
+                & (int) var2[var6]];
       }
 
       var3 = new SoftwareDirectFullColorSprite(GlobalStatics_9.anInt2426,
@@ -10026,9 +10001,8 @@ public class GlobalStatics_9 {
           byte[] var5 = DummyClass4.aByteArrayArray3005[var2];
 
           for (int var7 = 0; var3 > var7; ++var7) {
-            var6[var7] = HuffmanEncoderStatics.method308(
-                GlobalStatics_10.anIntArray3446[(int) var4[var7] & 255],
-                -16777216 & var5[var7] << 24);
+            var6[var7] = GlobalStatics_10.anIntArray3446[(int) var4[var7] & 255]
+                | -16777216 & var5[var7] << 24;
           }
 
           if (GlRenderer.USE_OPENGL) {

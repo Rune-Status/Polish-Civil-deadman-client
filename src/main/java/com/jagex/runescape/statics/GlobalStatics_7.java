@@ -3,7 +3,6 @@ package com.jagex.runescape.statics;
 import com.jagex.runescape.buffer.Buffer;
 import com.jagex.runescape.common.GameString;
 import com.jagex.runescape.common.GameStringStatics;
-import com.jagex.runescape.huffman.HuffmanEncoderStatics;
 import com.jagex.runescape.model.AbstractDirectColorSprite;
 import com.jagex.runescape.model.AbstractFont;
 import com.jagex.runescape.model.AnimationSequence;
@@ -1003,7 +1002,7 @@ public class GlobalStatics_7 {
               != 0
               || (16 & GlobalStatics_10.tileFlags[var8][lightPosX][lightPosY])
               == 0
-              && DummyClass18.method823(lightPosY, lightPosX, -87, var8)
+              && DummyClass18.method823(lightPosY, lightPosX, var8)
               == GlobalStatics_8.plane) {
             if (DummyClass52.anInt1174 > var8) {
               DummyClass52.anInt1174 = var8;
@@ -1037,9 +1036,8 @@ public class GlobalStatics_7 {
                 if (var47 && var14 == var15 && var14 == var16 && var44
                     == var14) {
                   DummyClass36.anIntArrayArrayArray2609[var8][lightPosX][lightPosY] =
-                      HuffmanEncoderStatics.method308(
-                          DummyClass36.anIntArrayArrayArray2609[var8][lightPosX][lightPosY],
-                          4);
+                      DummyClass36.anIntArrayArrayArray2609[var8][lightPosX][lightPosY]
+                          | 4;
                 }
               }
 

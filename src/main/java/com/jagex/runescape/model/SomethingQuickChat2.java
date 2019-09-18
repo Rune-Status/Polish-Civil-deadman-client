@@ -2,7 +2,6 @@ package com.jagex.runescape.model;
 
 import com.jagex.runescape.buffer.Buffer;
 import com.jagex.runescape.common.GameString;
-import com.jagex.runescape.huffman.HuffmanEncoderStatics;
 import com.jagex.runescape.node.SubNode;
 import com.jagex.runescape.statics.GlobalStatics_10;
 
@@ -19,14 +18,14 @@ public final class SomethingQuickChat2 extends SubNode {
       if (this.anIntArray3540 != null) {
         for (var2 = 0; this.anIntArray3540.length > var2; ++var2) {
           this.anIntArray3540[var2] =
-            HuffmanEncoderStatics.method308(this.anIntArray3540[var2], 0x8000);
+              this.anIntArray3540[var2] | 0x8000;
         }
       }
 
       if (this.anIntArray3534 != null) {
         for (var2 = 0; this.anIntArray3534.length > var2; ++var2) {
           this.anIntArray3534[var2] =
-            HuffmanEncoderStatics.method308(this.anIntArray3534[var2], 0x8000);
+              this.anIntArray3534[var2] | 0x8000;
         }
       }
 

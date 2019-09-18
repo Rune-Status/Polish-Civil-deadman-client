@@ -1,7 +1,6 @@
 package com.jagex.runescape.model;
 
 import com.jagex.runescape.buffer.Buffer;
-import com.jagex.runescape.huffman.HuffmanEncoderStatics;
 import com.jagex.runescape.statics.GlobalStatics_9;
 
 public final class TextureSampler10 extends AbstractTextureSampler {
@@ -344,8 +343,7 @@ public final class TextureSampler10 extends AbstractTextureSampler {
           }
 
           this.anIntArray3443[var6] =
-              HuffmanEncoderStatics.method308(var4,
-                  HuffmanEncoderStatics.method308(var3 << 8, var2 << 16));
+              var4 | (var3 << 8 | var2 << 16);
         }
       }
   }

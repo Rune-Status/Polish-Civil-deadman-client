@@ -5,7 +5,6 @@ import com.jagex.runescape.common.ArrayUtils;
 import com.jagex.runescape.common.GameString;
 import com.jagex.runescape.common.GameStringStatics;
 import com.jagex.runescape.common.HashTable;
-import com.jagex.runescape.huffman.HuffmanEncoderStatics;
 import com.jagex.runescape.model.AudioStreamEncoder1;
 import com.jagex.runescape.model.BlockConfig;
 import com.jagex.runescape.model.ClientScript;
@@ -1934,8 +1933,7 @@ public final class GlobalStatics_11 {
                           k -= 2;
                           int i21 = GlobalStatics_9.anIntArray2929[k];
                           int k52 = GlobalStatics_9.anIntArray2929[1 + k];
-                          GlobalStatics_9.anIntArray2929[k++] = HuffmanEncoderStatics
-                              .method308(i21, 1 << k52);
+                          GlobalStatics_9.anIntArray2929[k++] = i21 | 1 << k52;
                           continue;
                         }
                         if (j1 == 4009) {
@@ -2000,8 +1998,7 @@ public final class GlobalStatics_11 {
                           k -= 2;
                           int l22 = GlobalStatics_9.anIntArray2929[k];
                           int j54 = GlobalStatics_9.anIntArray2929[k + 1];
-                          GlobalStatics_9.anIntArray2929[k++] = HuffmanEncoderStatics
-                              .method308(l22, j54);
+                          GlobalStatics_9.anIntArray2929[k++] = l22 | j54;
                           continue;
                         }
                         if (j1 == 4016) {

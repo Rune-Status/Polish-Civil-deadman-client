@@ -37,7 +37,7 @@ public final class HuffmanEncoder {
               break;
             }
 
-            var3[var10] = HuffmanEncoderStatics.method308(var12, var11);
+            var3[var10] = var12 | var11;
           }
 
           var9 = var8 | var7;
@@ -108,8 +108,7 @@ public final class HuffmanEncoder {
       int var14 = var12 + (var13 + var11 - 1 >> 3);
       var7 &= -var13 >> 31;
       var13 += 24;
-      var3[var12] = (byte) (var7 = HuffmanEncoderStatics
-          .method308(var7, var10 >>> var13));
+      var3[var12] = (byte) (var7 = var7 | var10 >>> var13);
       if (var12 < var14) {
         ++var12;
         var13 -= 8;
