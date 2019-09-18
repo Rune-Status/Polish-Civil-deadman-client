@@ -317,7 +317,7 @@ public class DummyClass2 {
           GlobalStatics_9.gameSocket
               .read(GlobalStatics_9.gameBuffer.bytes, 0, 14);
           GlobalStatics_9.gameBuffer.position = 0;
-          GlobalStatics_10.rights = GlobalStatics_9.gameBuffer
+          GlobalStatics_10.PLAYER_RIGHTS = GlobalStatics_9.gameBuffer
               .readUnsignedByte();
           GlobalStatics_9.anInt3775 = GlobalStatics_9.gameBuffer
               .readUnsignedByte();

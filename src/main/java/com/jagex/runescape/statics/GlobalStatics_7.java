@@ -2354,7 +2354,7 @@ public class GlobalStatics_7 {
   }
 
   public static void handleCommand(GameString command) {
-    if (GlobalStatics_10.rights >= 2) {
+    if (GlobalStatics_10.PLAYER_RIGHTS >= 2) {
       int var2;
       int var3;
       Runtime var6;

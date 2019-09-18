@@ -85,6 +85,7 @@ import java.awt.Component;
 import java.awt.Font;
 import java.awt.Frame;
 import java.awt.Point;
+import java.awt.event.KeyEvent;
 import java.io.IOException;
 import java.net.Socket;
 import java.util.Arrays;
@@ -301,7 +302,7 @@ public class GlobalStatics_10 {
   public static int[] anIntArray3319 = new int[GlobalStatics_10.anInt3332];
   public static int[] anIntArray3318 = new int[GlobalStatics_10.anInt3332];
   public static GameString[] aClass94Array3317 = new GameString[GlobalStatics_10.anInt3332];
-  public static int rights;
+  public static int PLAYER_RIGHTS;
   public static int[] anIntArray3321 = {76, 8, 137, 4, 0, 1, 38, 2, 19};
   public static int anInt3323 = 50;
   public static GameString aClass94_3324 = GameStringStatics
@@ -1091,7 +1092,7 @@ public class GlobalStatics_10 {
         int var2;
         int var3;
         int var4;
-        int var5;
+        int regionLevel;
         int var6;
         int var8;
         int var9;
@@ -1110,12 +1111,12 @@ public class GlobalStatics_10 {
                   && GlobalStatics_9.secureBuffer.position - var2 < 240;
                   ++var4) {
                 ++var3;
-                var5 = GlobalStatics_7.aClass67_1443.anIntArray1019[var4];
+                regionLevel = GlobalStatics_7.aClass67_1443.anIntArray1019[var4];
                 var6 = GlobalStatics_7.aClass67_1443.anIntArray1020[var4];
-                if (var5 < 0) {
-                  var5 = 0;
-                } else if (var5 > 65534) {
-                  var5 = 0xfffe;
+                if (regionLevel < 0) {
+                  regionLevel = 0;
+                } else if (regionLevel > 65534) {
+                  regionLevel = 0xfffe;
                 }
 
                 if (var6 >= 0) {
@@ -1131,20 +1132,20 @@ public class GlobalStatics_10 {
                     && GlobalStatics_7.aClass67_1443.anIntArray1020[var4]
                     == -1) {
                   var7 = true;
-                  var5 = -1;
+                  regionLevel = -1;
                   var6 = -1;
                 }
 
                 if (GlobalStatics_5.anInt1977 == var6
-                    && var5 == GlobalStatics_0.anInt14) {
+                    && regionLevel == GlobalStatics_0.anInt14) {
                   if (GlobalStatics_9.anInt2556 < 2047) {
                     ++GlobalStatics_9.anInt2556;
                   }
                 } else {
                   var8 = -GlobalStatics_5.anInt1977 + var6;
                   GlobalStatics_5.anInt1977 = var6;
-                  var9 = var5 - GlobalStatics_0.anInt14;
-                  GlobalStatics_0.anInt14 = var5;
+                  var9 = regionLevel - GlobalStatics_0.anInt14;
+                  GlobalStatics_0.anInt14 = regionLevel;
                   if (GlobalStatics_9.anInt2556 < 8 && var8 >= -32 &&
                       var8 <= 31
                       && var9 >= -32 && var9 <= 31) {
@@ -1167,7 +1168,7 @@ public class GlobalStatics_10 {
                     if (var7) {
                       GlobalStatics_9.secureBuffer.writeInt(Integer.MIN_VALUE);
                     } else {
-                      GlobalStatics_9.secureBuffer.writeInt(var6 | var5 << 16);
+                      GlobalStatics_9.secureBuffer.writeInt(var6 | regionLevel << 16);
                     }
 
                     GlobalStatics_9.anInt2556 = 0;
@@ -1177,7 +1178,7 @@ public class GlobalStatics_10 {
                     if (var7) {
                       GlobalStatics_9.secureBuffer.writeInt(Integer.MIN_VALUE);
                     } else {
-                      GlobalStatics_9.secureBuffer.writeInt(var6 | var5 << 16);
+                      GlobalStatics_9.secureBuffer.writeInt(var6 | regionLevel << 16);
                     }
 
                     GlobalStatics_9.anInt2556 = 0;
@@ -1463,10 +1464,10 @@ public class GlobalStatics_10 {
                       }
                     }
                   } else {
-                    var5 = var16.anInt3598;
-                    var6 = (32195 & var5) >> 10;
-                    var8 = var5 & 31;
-                    var22 = (var5 & 1000) >> 5;
+                    regionLevel = var16.anInt3598;
+                    var6 = (32195 & regionLevel) >> 10;
+                    var8 = regionLevel & 31;
+                    var22 = (regionLevel & 1000) >> 5;
                     Widget var10 = GlobalStatics_7
                         .getWidget((byte) 120, var4);
                     var9 = (var8 << 3) + (var22 << 11) + (var6 << 19);
@@ -1527,24 +1528,24 @@ public class GlobalStatics_10 {
                     }
 
                     if (GlobalStatics_8.method44(var17).method93(572878952)) {
-                      var5 = DummyClass18.anInt86;
+                      regionLevel = DummyClass18.anInt86;
                       var6 = GlobalStatics_9.anInt2701;
-                      var17.anIntArray254[var6] = var17.anIntArray254[var5];
-                      var17.anIntArray317[var6] = var17.anIntArray317[var5];
-                      var17.anIntArray254[var5] = -1;
-                      var17.anIntArray317[var5] = 0;
+                      var17.anIntArray254[var6] = var17.anIntArray254[regionLevel];
+                      var17.anIntArray317[var6] = var17.anIntArray317[regionLevel];
+                      var17.anIntArray254[regionLevel] = -1;
+                      var17.anIntArray317[regionLevel] = 0;
                     } else {
                       if (var18 == 1) {
                         var6 = GlobalStatics_9.anInt2701;
-                        var5 = DummyClass18.anInt86;
+                        regionLevel = DummyClass18.anInt86;
 
-                        while (var6 != var5) {
-                          if (var5 > var6) {
-                            var17.method864(-1 + var5, var5, -71);
-                            --var5;
-                          } else if (var6 > var5) {
-                            var17.method864(1 + var5, var5, -95);
-                            ++var5;
+                        while (var6 != regionLevel) {
+                          if (regionLevel > var6) {
+                            var17.method864(-1 + regionLevel, regionLevel, -71);
+                            --regionLevel;
+                          } else if (var6 > regionLevel) {
+                            var17.method864(1 + regionLevel, regionLevel, -95);
+                            ++regionLevel;
                           }
                         }
                       } else {
@@ -1627,17 +1628,17 @@ public class GlobalStatics_10 {
                           DummyClass18.method829(-1);
                         }
 
-                        if (GlobalStatics_10.rights > 0
-                            && GlobalStatics_8.PRESSED_KEYS[82]
-                            && GlobalStatics_8.PRESSED_KEYS[81]
+                        if (GlobalStatics_10.PLAYER_RIGHTS > 0
+                            && GlobalStatics_8.PRESSED_KEYS[0x52]//ctrl
+                            && GlobalStatics_8.PRESSED_KEYS[0x51]//shift
                             && GlobalStatics_9.mouseWheelOffset != 0) {
-                          var5 =
+                          regionLevel =
                               GlobalStatics_9.currentPlane
                                   - GlobalStatics_9.mouseWheelOffset;
-                          if (var5 < 0) {
-                            var5 = 0;
-                          } else if (var5 > 3) {
-                            var5 = 3;
+                          if (regionLevel < 0) {
+                            regionLevel = 0;
+                          } else if (regionLevel > 3) {
+                            regionLevel = 3;
                           }
 
                           GlobalStatics_6.method979(
@@ -1645,12 +1646,12 @@ public class GlobalStatics_10 {
                                   + GlobalStatics_10.REGION_BASE_X,
                               GlobalStatics_9.localPlayer.waypointsY[0]
                                   + GlobalStatics_9.REGION_BASE_Y,
-                              var5, (byte) -4);
+                              regionLevel, (byte) -4);
                         }
 
-                        if (GlobalStatics_10.rights > 0
-                            && GlobalStatics_8.PRESSED_KEYS[82]
-                            && GlobalStatics_8.PRESSED_KEYS[81]) {
+                        if (GlobalStatics_10.PLAYER_RIGHTS > 0
+                            && GlobalStatics_8.PRESSED_KEYS[0x52]
+                            && GlobalStatics_8.PRESSED_KEYS[0x51]) {
                           if (DummyClass32.anInt515 != -1) {
                             GlobalStatics_6.method979(
                                 GlobalStatics_10.REGION_BASE_X
@@ -1767,13 +1768,13 @@ public class GlobalStatics_10 {
                           GlobalStatics_10.d(0xffff);
                         }
 
-                        for (var5 = 0; var5 < 5; ++var5) {
-                          ++DummyClass9.anIntArray4009[var5];
+                        for (regionLevel = 0; regionLevel < 5; ++regionLevel) {
+                          ++DummyClass9.anIntArray4009[regionLevel];
                         }
 
-                        var5 = GlobalStatics_9.method1406((byte) -43);
+                        regionLevel = GlobalStatics_9.method1406((byte) -43);
                         var6 = GlobalStatics_10.method301((byte) -119);
-                        if (var5 > 15000 && var6 > 15000) {
+                        if (regionLevel > 15000 && var6 > 15000) {
                           DummyClass13.anInt2023 = 250;
                           DummyClass30.method940(112, 14500);
                           ++GlobalStatics_9.anInt1330;

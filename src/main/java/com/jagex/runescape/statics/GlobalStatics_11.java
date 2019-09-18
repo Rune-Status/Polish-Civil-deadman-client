@@ -1345,10 +1345,10 @@ public final class GlobalStatics_11 {
                           continue;
                         }
                         if (j1 == 3316) {
-                          if (GlobalStatics_10.rights < 2) {
+                          if (GlobalStatics_10.PLAYER_RIGHTS < 2) {
                             GlobalStatics_9.anIntArray2929[k++] = 0;
                           } else {
-                            GlobalStatics_9.anIntArray2929[k++] = GlobalStatics_10.rights;
+                            GlobalStatics_9.anIntArray2929[k++] = GlobalStatics_10.PLAYER_RIGHTS;
                           }
                           continue;
                         }
@@ -2123,7 +2123,7 @@ public final class GlobalStatics_11 {
                                   if (string.method1558(
                                       GlobalStatics_10.COMMAND_PREFIX, 0)) {
                                     GlobalStatics_7.handleCommand(string);
-                                  } else if (GlobalStatics_10.rights != 0
+                                  } else if (GlobalStatics_10.PLAYER_RIGHTS != 0
                                       || (!GlobalStatics_9.aBoolean2433
                                       || GlobalStatics_6.aBoolean1641)
                                       && !GlobalStatics_10.aBoolean3166) {
@@ -2449,7 +2449,7 @@ public final class GlobalStatics_11 {
                                   GameString class94_48 = GlobalStatics_0.aClass94Array75[
                                       l + 1];
                                   GameString class94_19 = GlobalStatics_0.aClass94Array75[l];
-                                  if (GlobalStatics_10.rights != 0
+                                  if (GlobalStatics_10.PLAYER_RIGHTS != 0
                                       || (!GlobalStatics_9.aBoolean2433
                                       || GlobalStatics_6.aBoolean1641)
                                       && !GlobalStatics_10.aBoolean3166) {

@@ -1568,7 +1568,7 @@ public class GlobalStatics_8 {
               .method589(GlobalStatics_9.currentPlane, var2, var3);
         } else {
           if (var5 == 1) {
-            if (GlobalStatics_10.rights > 0
+            if (GlobalStatics_10.PLAYER_RIGHTS > 0
                 && GlobalStatics_8.PRESSED_KEYS[82]
                 && GlobalStatics_8.PRESSED_KEYS[81]) {
               GlobalStatics_6.method979(GlobalStatics_10.REGION_BASE_X + var2,
@@ -2325,7 +2325,7 @@ public class GlobalStatics_8 {
                 GlobalStatics_4
                     .method589(GlobalStatics_9.currentPlane, var2, var3);
               } else {
-                if (GlobalStatics_10.rights > 0
+                if (GlobalStatics_10.PLAYER_RIGHTS > 0
                     && GlobalStatics_8.PRESSED_KEYS[82]
                     && GlobalStatics_8.PRESSED_KEYS[81]) {
                   GlobalStatics_6.method979(var2 + GlobalStatics_10.REGION_BASE_X,
@@ -2840,7 +2840,7 @@ public class GlobalStatics_8 {
                   GlobalStatics_9.aClass11_3551 = var9;
                   if (var18) {
                     if (GlobalStatics_8.PRESSED_KEYS[82]
-                        && GlobalStatics_10.rights > 0) {
+                        && GlobalStatics_10.PLAYER_RIGHTS > 0) {
                       var19 =
                           (int) ((DummyClass5.anInt2993 - var10
                               - var9.anInt168 / 2)
