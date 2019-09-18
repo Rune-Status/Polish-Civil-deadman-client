@@ -412,10 +412,6 @@ public class DummyClass2 {
   public static void clear56(int var0) {
     DummyClass2.aClass153_1680 = null;
     DummyClass2.anIntArray1679 = null;
-    if (var0 >= -49) {
-      DummyClass2.handleLogin();
-    }
-
     DummyClass2.anIntArray1681 = null;
   }
 
