@@ -136,11 +136,11 @@ public final class GameClient extends GameStub {
             int var7 = (int) Math.round(Math.random() * 2.0D - 1.0D);
             if (var6 != 0 || var7 != 0) {
               var4.aByteArray2795[0] = 1;
-              var4.waypointsX[0] = var6 + (var4.anInt2819 >> 7);
+              var4.waypointsX[0] = var6 + (var4.sceneX >> 7);
               var4.waypointsY[0] = var7 + (var4.sceneY >> 7);
               GlobalStatics_0.collisionMaps[GlobalStatics_9.currentPlane]
                   .method1502(var1 + 20850,
-                      var4.anInt2819 >> 7, var4.getSize(), false, 0,
+                      var4.sceneX >> 7, var4.getSize(), false, 0,
                       var4.getSize(),
                       var4.sceneY >> 7);
               if (var4.waypointsX[0] >= 0 && var4.waypointsX[0] <= 104 - var4
@@ -151,7 +151,7 @@ public final class GameClient extends GameStub {
                   .method1500(-2,
                       var4.sceneY >> 7, var4.waypointsY[0],
                       var4.waypointsX[0],
-                      var4.anInt2819 >> 7)) {
+                      var4.sceneX >> 7)) {
                 if (var4.getSize() > 1) {
                   for (int var8 = var4.waypointsX[0];
                       var4.waypointsX[0] + var4.getSize() > var8;
@@ -177,7 +177,7 @@ public final class GameClient extends GameStub {
           GlobalStatics_9.method900(var4, var1 ^ -11974);
           GlobalStatics_0.collisionMaps[GlobalStatics_9.currentPlane]
               .method1489(
-                  var4.anInt2819 >> 7, false, (byte) 85, var4.sceneY >> 7,
+                  var4.sceneX >> 7, false, (byte) 85, var4.sceneY >> 7,
                   var4.getSize(), var4.getSize());
         }
       }
@@ -1380,7 +1380,6 @@ public final class GameClient extends GameStub {
   }
 
   public void init() {
-    if (true) {
       GlobalStatics_8.portOffset = Integer
           .parseInt(this.getParameter("worldid"));
       GlobalStatics_4.usageLocation = Integer
@@ -1450,7 +1449,6 @@ public final class GameClient extends GameStub {
       GlobalStatics_9.client = this;
       this.method41((byte) -56, 765, 32 + GlobalStatics_10.usageMode, 1530,
           503);
-    }
   }
 
   public void handleDraw(int var1) {

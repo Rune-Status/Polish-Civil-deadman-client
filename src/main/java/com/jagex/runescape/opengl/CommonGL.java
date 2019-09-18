@@ -20,7 +20,7 @@ public final class CommonGL {
         GlRenderer.GL
             .glColor4fv(GLStatics.method1705(var2.anInt2355, 0),
                 0);
-        //TODO 201.5F
+        //TODO 201.5FF
         float var3 = 201.5F - (var2.aBoolean2364 ? 1.0F : 0.5F);
         var2.renderSceneGroundTiles(GLStatics.sceneGraphTiles, var3);
       }
@@ -33,10 +33,10 @@ public final class CommonGL {
     GlRenderer.method1830();
   }
 
-  public static void drawScene(int var0, int var1, int var2, boolean var22) {
+  public static void drawScene(int tx, int ty, int tz, boolean var22) {
     SomethingGl0[][] array = GLStatics.aClass3_Sub11ArrayArray2542;
     GlRenderer.GL.glPushMatrix();
-    GlRenderer.GL.glTranslatef(-var0, -var1, -var2);
+    GlRenderer.GL.glTranslatef(-tx, -ty, -tz);
     if (var22) {
       CommonGL.method403();
       GLStatics.method551(-1, 3);

@@ -571,7 +571,7 @@ public class GlobalStatics_5 {
 
   public static void method2162(SceneNode var0, int var1, int var2, int var3) {
     SceneGraphTile var4;
-    if (var2 < GlobalStatics_4.SCENE_WIDTH) {
+    if (var2 < GlobalStatics_4.REGION_WIDTH) {
       var4 = GLStatics.sceneGraphTiles[var1][var2 + 1][var3];
       if (var4 != null && var4.aClass12_2230 != null
           && var4.aClass12_2230.aClass140_320.method1865()) {
@@ -579,7 +579,7 @@ public class GlobalStatics_5 {
       }
     }
 
-    if (var3 < GlobalStatics_4.SCENE_WIDTH) {
+    if (var3 < GlobalStatics_4.REGION_WIDTH) {
       var4 = GLStatics.sceneGraphTiles[var1][var2][var3 + 1];
       if (var4 != null && var4.aClass12_2230 != null
           && var4.aClass12_2230.aClass140_320.method1865()) {
@@ -587,8 +587,8 @@ public class GlobalStatics_5 {
       }
     }
 
-    if (var2 < GlobalStatics_4.SCENE_WIDTH
-        && var3 < GlobalStatics_1.SCENE_HEIGHT) {
+    if (var2 < GlobalStatics_4.REGION_WIDTH
+        && var3 < GlobalStatics_1.REGION_HEIGHT) {
       var4 = GLStatics.sceneGraphTiles[var1][var2 + 1][var3 + 1];
       if (var4 != null && var4.aClass12_2230 != null
           && var4.aClass12_2230.aClass140_320.method1865()) {
@@ -596,7 +596,7 @@ public class GlobalStatics_5 {
       }
     }
 
-    if (var2 < GlobalStatics_4.SCENE_WIDTH && var3 > 0) {
+    if (var2 < GlobalStatics_4.REGION_WIDTH && var3 > 0) {
       var4 = GLStatics.sceneGraphTiles[var1][var2 + 1][var3 - 1];
       if (var4 != null && var4.aClass12_2230 != null
           && var4.aClass12_2230.aClass140_320.method1865()) {

@@ -51,8 +51,8 @@ public final class DummyClass52 {
   public static void method1425(int var0) {
     GLStatics.anInt3419 = var0;
 
-    for (int var1 = 0; var1 < GlobalStatics_4.SCENE_WIDTH; ++var1) {
-      for (int var2 = 0; var2 < GlobalStatics_1.SCENE_HEIGHT; ++var2) {
+    for (int var1 = 0; var1 < GlobalStatics_4.REGION_WIDTH; ++var1) {
+      for (int var2 = 0; var2 < GlobalStatics_1.REGION_HEIGHT; ++var2) {
         if (GLStatics.sceneGraphTiles[var0][var1][var2] == null) {
           GLStatics.sceneGraphTiles[var0][var1][var2] =
               new SceneGraphTile(var0, var1, var2);

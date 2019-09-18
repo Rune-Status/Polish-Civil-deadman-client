@@ -494,7 +494,7 @@ public class GlobalStatics_7 {
         }
       }
 
-      int var18 = var1.anInt2819;
+      int var18 = var1.sceneX;
       int var4 = var1.sceneY;
       int var5 =
           var1.waypointsX[-1 + var1.anInt2816] * 128 + var1.getSize() * 64;
@@ -503,7 +503,7 @@ public class GlobalStatics_7 {
       if (var5 - var18 > 256 || -var18 + var5 < -256
           || var6 - var4 > 256
           || var6 - var4 < -256) {
-        var1.anInt2819 = var5;
+        var1.sceneX = var5;
         var1.sceneY = var6;
         return;
       }
@@ -627,8 +627,8 @@ public class GlobalStatics_7 {
         var9 <<= 7;
         if (var1.anInt2816 == 1) {
           int var13 =
-              (var5 >= var1.anInt2819 ? var5 - var1.anInt2819
-                  : -var5 + var1.anInt2819) << 7;
+              (var5 >= var1.sceneX ? var5 - var1.sceneX
+                  : -var5 + var1.sceneX) << 7;
           int var12 = var1.anInt2758 * var1.anInt2758;
           int var14 =
               (var6 < var1.sceneY ? -var6 + var1.sceneY
@@ -669,14 +669,14 @@ public class GlobalStatics_7 {
       }
 
       if (var18 < var5) {
-        var1.anInt2819 += var9;
-        if (var5 < var1.anInt2819) {
-          var1.anInt2819 = var5;
+        var1.sceneX += var9;
+        if (var5 < var1.sceneX) {
+          var1.sceneX = var5;
         }
       } else if (var18 > var5) {
-        var1.anInt2819 -= var9;
-        if (var5 > var1.anInt2819) {
-          var1.anInt2819 = var5;
+        var1.sceneX -= var9;
+        if (var5 > var1.sceneX) {
+          var1.sceneX = var5;
         }
       }
 
@@ -694,7 +694,7 @@ public class GlobalStatics_7 {
         }
       }
 
-      if (var1.anInt2819 == var5 && var6 == var1.sceneY) {
+      if (var1.sceneX == var5 && var6 == var1.sceneY) {
         --var1.anInt2816;
         if (var1.anInt2811 > 0) {
           --var1.anInt2811;
@@ -2073,17 +2073,17 @@ public class GlobalStatics_7 {
 
       GlobalStatics_3
           .drawLoadingBox(GlobalStatics_10.LOADING_PLEASE_WAIT, true);
-      int var8 = GlobalStatics_9.anInt1152;
-      int var7 = GlobalStatics_10.anInt1716;
-      GlobalStatics_9.anInt1152 = var1 * 8 - 48;
-      GlobalStatics_10.anInt1716 = 8 * (-6 + var2);
+      int var8 = GlobalStatics_9.REGION_BASE_Y;
+      int var7 = GlobalStatics_10.REGION_BASE_X;
+      GlobalStatics_9.REGION_BASE_Y = var1 * 8 - 48;
+      GlobalStatics_10.REGION_BASE_X = 8 * (-6 + var2);
       GlobalStatics_10.aClass3_Sub28_Sub3_3264 =
           GlobalStatics_9.method884(8 * GlobalStatics_2.anInt3606, (byte) 88,
               8 * GlobalStatics_10.anInt2294);
-      int var10 = -var8 + GlobalStatics_9.anInt1152;
-      int var9 = GlobalStatics_10.anInt1716 - var7;
-      var7 = GlobalStatics_10.anInt1716;
-      var8 = GlobalStatics_9.anInt1152;
+      int var10 = -var8 + GlobalStatics_9.REGION_BASE_Y;
+      int var9 = GlobalStatics_10.REGION_BASE_X - var7;
+      var7 = GlobalStatics_10.REGION_BASE_X;
+      var8 = GlobalStatics_9.REGION_BASE_Y;
       GlobalStatics_10.aClass131_3421 = null;
       int var11;
       NPC var12;
@@ -2094,9 +2094,9 @@ public class GlobalStatics_7 {
         for (var11 = 0; var11 < 32768; ++var11) {
           var12 = GlobalStatics_8.NPCS[var11];
           if (var12 != null) {
-            var12.anInt2819 -= 128 * var9;
+            var12.sceneX -= 128 * var9;
             var12.sceneY -= 128 * var10;
-            if (var12.anInt2819 >= 0 && var12.anInt2819 <= 13184
+            if (var12.sceneX >= 0 && var12.sceneX <= 13184
                 && var12.sceneY >= 0
                 && var12.sceneY <= 13184) {
               for (var13 = 0; var13 < 10; ++var13) {
@@ -2120,7 +2120,7 @@ public class GlobalStatics_7 {
               var12.waypointsY[var13] -= var10;
             }
 
-            var12.anInt2819 -= 128 * var9;
+            var12.sceneX -= 128 * var9;
             var12.sceneY -= var10 * 128;
           }
         }
@@ -2134,7 +2134,7 @@ public class GlobalStatics_7 {
             var23.waypointsY[var13] -= var10;
           }
 
-          var23.anInt2819 -= 128 * var9;
+          var23.sceneX -= 128 * var9;
           var23.sceneY -= 128 * var10;
         }
       }

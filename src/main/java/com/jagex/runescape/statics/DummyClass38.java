@@ -52,7 +52,7 @@ public final class DummyClass38 {
           }
         }
 
-        if (!var11 && GlobalStatics_9.anInt2622 == 0) {
+        if (!var11 && GlobalStatics_9.IS_ON_TUTORIAL_ISLAND == 0) {
           DummyClass12.aClass3_Sub30_2030.position = 0;
           GlobalStatics_9.gameBuffer
               .method774(2, var6, DummyClass12.aClass3_Sub30_2030.bytes,
@@ -232,7 +232,7 @@ public final class DummyClass38 {
                 .method45(var7, (byte) -20);
             if (var24.anIntArray1851 != null) {
               GlobalStatics_4
-                  .method1470(var3.sceneY, var24, 183921384, var3.anInt2819,
+                  .method1470(var3.sceneY, var24, 183921384, var3.sceneX,
                       var3 == GlobalStatics_9.localPlayer, 0);
             }
           }

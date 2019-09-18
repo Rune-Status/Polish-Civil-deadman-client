@@ -179,7 +179,7 @@ public final class DummyClass18 {
           }
         }
 
-        if (!var31 && GlobalStatics_9.anInt2622 == 0) {
+        if (!var31 && GlobalStatics_9.IS_ON_TUTORIAL_ISLAND == 0) {
           GlobalStatics_8.printMessage(var24, 4, GlobalStatics_9.aClass94_2285,
               var0 + 82);
         }
@@ -197,7 +197,7 @@ public final class DummyClass18 {
             }
           }
 
-          if (!var31 && GlobalStatics_9.anInt2622 == 0) {
+          if (!var31 && GlobalStatics_9.IS_ON_TUTORIAL_ISLAND == 0) {
             var41 = var70.substring(var70.getLength() - 9, var0 ^ -83,
                 1 + var70.indexOf(GlobalStatics_5.aClass94_1970));
             GlobalStatics_8.printMessage(var24, 8, var41, var0 ^ 82);
@@ -215,7 +215,7 @@ public final class DummyClass18 {
             }
           }
 
-          if (!var31 && GlobalStatics_9.anInt2622 == 0) {
+          if (!var31 && GlobalStatics_9.IS_ON_TUTORIAL_ISLAND == 0) {
             GlobalStatics_8
                 .printMessage(var24, 10, GlobalStatics_9.EMPTY_STRING, -1);
           }
@@ -228,14 +228,14 @@ public final class DummyClass18 {
         } else if (var70.endsWith(GlobalStatics_9.aClass94_3998)) {
           var24 = var70
               .substring(var70.indexOf(GlobalStatics_9.aClass94_3998), 0, 0);
-          if (GlobalStatics_9.anInt2622 == 0) {
+          if (GlobalStatics_9.IS_ON_TUTORIAL_ISLAND == 0) {
             GlobalStatics_8
                 .printMessage(GlobalStatics_9.EMPTY_STRING, 12, var24, -1);
           }
         } else if (var70.endsWith(DummyClass15.aClass94_1877)) {
           var24 = var70
               .substring(var70.indexOf(DummyClass15.aClass94_1877), 0, 0);
-          if (GlobalStatics_9.anInt2622 == 0) {
+          if (GlobalStatics_9.IS_ON_TUTORIAL_ISLAND == 0) {
             GlobalStatics_8
                 .printMessage(GlobalStatics_9.EMPTY_STRING, 13, var24, -1);
           }
@@ -253,7 +253,7 @@ public final class DummyClass18 {
               }
             }
 
-            if (!var31 && GlobalStatics_9.anInt2622 == 0) {
+            if (!var31 && GlobalStatics_9.IS_ON_TUTORIAL_ISLAND == 0) {
               GlobalStatics_8
                   .printMessage(var24, 15, GlobalStatics_9.EMPTY_STRING, -1);
             }
@@ -274,7 +274,7 @@ public final class DummyClass18 {
                 }
               }
 
-              if (!var31 && GlobalStatics_9.anInt2622 == 0) {
+              if (!var31 && GlobalStatics_9.IS_ON_TUTORIAL_ISLAND == 0) {
                 GlobalStatics_8
                     .printMessage(var24, 16, GlobalStatics_9.EMPTY_STRING, -1);
               }
@@ -295,7 +295,7 @@ public final class DummyClass18 {
                 }
               }
 
-              if (!var31 && GlobalStatics_9.anInt2622 == 0) {
+              if (!var31 && GlobalStatics_9.IS_ON_TUTORIAL_ISLAND == 0) {
                 var41 = var70.substring(var70.getLength() - 9, var0 ^ -83,
                     1 + var70
                         .indexOf(GlobalStatics_5.aClass94_1970));
@@ -320,7 +320,7 @@ public final class DummyClass18 {
             }
           }
 
-          if (!var31 && GlobalStatics_9.anInt2622 == 0) {
+          if (!var31 && GlobalStatics_9.IS_ON_TUTORIAL_ISLAND == 0) {
             GlobalStatics_8
                 .printMessage(var24, 14, GlobalStatics_9.EMPTY_STRING, -1);
           }
@@ -421,7 +421,7 @@ public final class DummyClass18 {
         break;
       }
 
-      if (!var63 && GlobalStatics_9.anInt2622 == 0) {
+      if (!var63 && GlobalStatics_9.IS_ON_TUTORIAL_ISLAND == 0) {
         DummyClass8.aLongArray4017[GlobalStatics_9.anInt1921] = var55;
         GlobalStatics_9.anInt1921 = (1 + GlobalStatics_9.anInt1921) % 100;
         GameString var61 =
@@ -783,7 +783,7 @@ public final class DummyClass18 {
                   if (var53 != null && var53.anIntArray1851 != null) {
                     GlobalStatics_4
                         .method1470(var62.sceneY, var53, 183921384,
-                            var62.anInt2819,
+                            var62.sceneX,
                             false, 0);
                   }
                 }
@@ -836,7 +836,7 @@ public final class DummyClass18 {
                   if (var53 != null && var53.anIntArray1851 != null) {
                     GlobalStatics_4
                         .method1470(var60.sceneY, var53, 183921384,
-                            var60.anInt2819,
+                            var60.sceneX,
                             var60 == GlobalStatics_9.localPlayer, 0);
                   }
                 }
@@ -846,8 +846,8 @@ public final class DummyClass18 {
         }
       } else {
         var6 = 3 & var21 >> 28;
-        var30 = ((var21 & 268434277) >> 14) - GlobalStatics_10.anInt1716;
-        var8 = (var21 & 16383) - GlobalStatics_9.anInt1152;
+        var30 = ((var21 & 268434277) >> 14) - GlobalStatics_10.REGION_BASE_X;
+        var8 = (var21 & 16383) - GlobalStatics_9.REGION_BASE_Y;
         if (var30 >= 0 && var8 >= 0 && var30 < 104 && var8 < 104) {
           var8 = var8 * 128 + 64;
           var30 = 128 * var30 + 64;
@@ -1230,7 +1230,7 @@ public final class DummyClass18 {
         break;
       }
 
-      if (!var49 && GlobalStatics_9.anInt2622 == 0) {
+      if (!var49 && GlobalStatics_9.IS_ON_TUTORIAL_ISLAND == 0) {
         DummyClass8.aLongArray4017[GlobalStatics_9.anInt1921] = var51;
         GlobalStatics_9.anInt1921 = (1 + GlobalStatics_9.anInt1921) % 100;
         var64 =
@@ -1609,8 +1609,8 @@ public final class DummyClass18 {
 
       var10 = 16383 & var30;
       var33 = 16383 & var30 >> 14;
-      var33 -= GlobalStatics_10.anInt1716;
-      var10 -= GlobalStatics_9.anInt1152;
+      var33 -= GlobalStatics_10.REGION_BASE_X;
+      var10 -= GlobalStatics_9.REGION_BASE_Y;
       var8 = 3 & var30 >> 28;
       GlobalStatics_4
           .method1131(var8, 110, var21, var3, var10, var5, var33, var6);
@@ -1653,7 +1653,7 @@ public final class DummyClass18 {
         ++var12;
       }
 
-      if (!var42 && GlobalStatics_9.anInt2622 == 0) {
+      if (!var42 && GlobalStatics_9.IS_ON_TUTORIAL_ISLAND == 0) {
         DummyClass8.aLongArray4017[GlobalStatics_9.anInt1921] = var35;
         GlobalStatics_9.anInt1921 = (GlobalStatics_9.anInt1921 + 1) % 100;
         GameString var52 = GlobalStatics_4.otherFormat(
@@ -1724,7 +1724,7 @@ public final class DummyClass18 {
         ++var14;
       }
 
-      if (!var13 && GlobalStatics_9.anInt2622 == 0) {
+      if (!var13 && GlobalStatics_9.IS_ON_TUTORIAL_ISLAND == 0) {
         DummyClass8.aLongArray4017[GlobalStatics_9.anInt1921] = var44;
         GlobalStatics_9.anInt1921 = (GlobalStatics_9.anInt1921 + 1) % 100;
         var57 = GlobalStatics_4.otherFormat(

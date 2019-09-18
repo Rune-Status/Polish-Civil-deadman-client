@@ -392,18 +392,18 @@ public final class MaterialShader5 implements MaterialShader {
           int var37;
           if (var14 == 1) {
             NPC var31 = GlobalStatics_8.NPCS[var15];
-            if ((var31.config.size & 1) == 0 && (127 & var31.anInt2819) == 0
+            if ((var31.config.size & 1) == 0 && (127 & var31.sceneX) == 0
                 && (var31.sceneY & 127) == 0
-                || (var31.config.size & 1) == 1 && (127 & var31.anInt2819) == 64
+                || (var31.config.size & 1) == 1 && (127 & var31.sceneX) == 64
                 &&
                 (
                     var31.sceneY & 127) == 64) {
-              var33 = var31.anInt2819 + 64 - 64 * var31.config.size;
+              var33 = var31.sceneX + 64 - 64 * var31.config.size;
               var18 = -((-1 + var31.config.size) * 64) + var31.sceneY;
 
               for (var37 = 0; var37 < DummyClass6.anInt2046; ++var37) {
                 var36 = GlobalStatics_8.NPCS[GlobalStatics_2.anIntArray347[var37]];
-                var21 = -(var36.config.size * 64) + 64 + var36.anInt2819;
+                var21 = -(var36.config.size * 64) + 64 + var36.sceneX;
                 var22 = var36.sceneY - var36.config.size * 64 + 64;
                 if (var31 != var36 && var21 >= var33
                     && var31.config.size - (-var33 + var21 >> 7)
@@ -417,7 +417,7 @@ public final class MaterialShader5 implements MaterialShader {
 
               for (var37 = 0; DummyClass13.anInt2022 > var37; ++var37) {
                 var38 = GlobalStatics_9.players[DummyClass42.anIntArray887[var37]];
-                var21 = var38.anInt2819 + 64 - 64 * var38.getSize();
+                var21 = var38.sceneX + 64 - 64 * var38.getSize();
                 var22 = var38.sceneY - (var38.getSize() * 64 - 64);
                 if (var21 >= var33 && var38.getSize() <= var31.config.size
                     - (
@@ -437,14 +437,14 @@ public final class MaterialShader5 implements MaterialShader {
 
           if (var14 == 0) {
             Player var30 = GlobalStatics_9.players[var15];
-            if ((127 & var30.anInt2819) == 64 && (127 & var30.sceneY)
+            if ((127 & var30.sceneX) == 64 && (127 & var30.sceneY)
                 == 64) {
-              var33 = var30.anInt2819 - 64 * (-1 + var30.getSize());
+              var33 = var30.sceneX - 64 * (-1 + var30.getSize());
               var18 = var30.sceneY + 64 - var30.getSize() * 64;
 
               for (var37 = 0; var37 < DummyClass6.anInt2046; ++var37) {
                 var36 = GlobalStatics_8.NPCS[GlobalStatics_2.anIntArray347[var37]];
-                var21 = var36.anInt2819 - var36.config.size * 64 + 64;
+                var21 = var36.sceneX - var36.config.size * 64 + 64;
                 var22 = var36.sceneY - 64 * var36.config.size + 64;
                 if (var21 >= var33
                     && var36.config.size <= -(var21 - var33 >> 7) + var30
@@ -457,7 +457,7 @@ public final class MaterialShader5 implements MaterialShader {
 
               for (var37 = 0; var37 < DummyClass13.anInt2022; ++var37) {
                 var38 = GlobalStatics_9.players[DummyClass42.anIntArray887[var37]];
-                var21 = var38.anInt2819 - (var38.getSize() - 1) * 64;
+                var21 = var38.sceneX - (var38.getSize() - 1) * 64;
                 var22 = var38.sceneY - (-64 + 64 * var38.getSize());
                 if (var38 != var30 && var33 <= var21
                     && var38.getSize() <= var30.getSize() - (var21 - var33

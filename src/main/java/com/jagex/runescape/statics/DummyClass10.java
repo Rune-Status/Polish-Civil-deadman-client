@@ -279,10 +279,10 @@ public final class DummyClass10 {
     GlobalStatics_4.anInt1691 = -1;
     GlobalStatics_9.method2241((byte) -77, true);
     GlobalStatics_0.dynamicScene = false;
-    GlobalStatics_9.anInt1152 = 0;
+    GlobalStatics_9.REGION_BASE_Y = 0;
     GlobalStatics_2.anInt3606 = 0;
     GlobalStatics_10.anInt2294 = 0;
-    GlobalStatics_10.anInt1716 = 0;
+    GlobalStatics_10.REGION_BASE_X = 0;
 
     for (var1 = 0; GlobalStatics_8.aClass96Array2114.length > var1; ++var1) {
       GlobalStatics_8.aClass96Array2114[var1] = null;

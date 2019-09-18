@@ -154,8 +154,8 @@ public final class DummyClass42 {
     int x;
     for (int var15 = var1; var15 < var1 + var3; ++var15) {
       for (x = var2; x < var2 + var4; ++x) {
-        if (var15 < 0 || x < 0 || var15 >= GlobalStatics_4.SCENE_WIDTH
-            || x >= GlobalStatics_1.SCENE_HEIGHT) {
+        if (var15 < 0 || x < 0 || var15 >= GlobalStatics_4.REGION_WIDTH
+            || x >= GlobalStatics_1.REGION_HEIGHT) {
           return false;
         }
 

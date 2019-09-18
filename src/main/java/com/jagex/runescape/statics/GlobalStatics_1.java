@@ -69,7 +69,7 @@ public class GlobalStatics_1 {
   public static short[] aShortArray3949;
   public static int[] anIntArray3950;
   public static Deque stillGraphics = new Deque();
-  public static int SCENE_HEIGHT;
+  public static int REGION_HEIGHT;
   public static int[] updatedMapIds;
   public static GameString COMMAND_WM3 = GameStringStatics.create("::wm3");
   public static boolean aBoolean3184 = true;

@@ -49,8 +49,8 @@ public final class DummyClass34 {
 
     if (GlobalStatics_9.tiles != null) {
       for (int plane = 0; plane < GlobalStatics_9.tiles.length; ++plane) {
-        for (int x = 0; x < GlobalStatics_4.SCENE_WIDTH; ++x) {
-          for (int y = 0; y < GlobalStatics_1.SCENE_HEIGHT; ++y) {
+        for (int x = 0; x < GlobalStatics_4.REGION_WIDTH; ++x) {
+          for (int y = 0; y < GlobalStatics_1.REGION_HEIGHT; ++y) {
             GlobalStatics_9.tiles[plane][x][y] = null;
           }
         }
@@ -62,8 +62,8 @@ public final class DummyClass34 {
       for (int plane = 0;
           plane < GlobalStatics_9.aClass3_Sub2ArrayArrayArray2065.length;
           ++plane) {
-        for (int x = 0; x < GlobalStatics_4.SCENE_WIDTH; ++x) {
-          for (int y = 0; y < GlobalStatics_1.SCENE_HEIGHT; ++y) {
+        for (int x = 0; x < GlobalStatics_4.REGION_WIDTH; ++x) {
+          for (int y = 0; y < GlobalStatics_1.REGION_HEIGHT; ++y) {
             GlobalStatics_9.aClass3_Sub2ArrayArrayArray2065[plane][x][y] = null;
           }
         }

@@ -1291,10 +1291,10 @@ public final class GlobalStatics_11 {
                         if (j1 == 3308) {
                           int l9 = GlobalStatics_9.currentPlane;
                           int k47 =
-                              GlobalStatics_10.anInt1716 + (
-                                  GlobalStatics_9.localPlayer.anInt2819 >> 7);
+                              GlobalStatics_10.REGION_BASE_X + (
+                                  GlobalStatics_9.localPlayer.sceneX >> 7);
                           int i68 = (GlobalStatics_9.localPlayer.sceneY >> 7)
-                              + GlobalStatics_9.anInt1152;
+                              + GlobalStatics_9.REGION_BASE_Y;
                           GlobalStatics_9.anIntArray2929[k++] =
                               (l9 << 28) - (-(k47 << 14) - i68);
                           continue;
@@ -3411,10 +3411,10 @@ public final class GlobalStatics_11 {
                                   GlobalStatics_10
                                       .method390(false, j72, i60, l77,
                                           (byte) -128,
-                                          -GlobalStatics_9.anInt1152 + (0x3fff
+                                          -GlobalStatics_9.REGION_BASE_Y + (0x3fff
                                               & l33),
                                           ((0xffffe30 & l33) >> 14)
-                                              - GlobalStatics_10.anInt1716);
+                                              - GlobalStatics_10.REGION_BASE_X);
                                   continue;
                                 }
                                 if (j1 == 5501) {
@@ -3428,8 +3428,8 @@ public final class GlobalStatics_11 {
                                       + 2];
                                   GlobalStatics_9.method2238(j60,
                                       (0x3fff & i34)
-                                          - GlobalStatics_9.anInt1152, k72,
-                                      -GlobalStatics_10.anInt1716 + (
+                                          - GlobalStatics_9.REGION_BASE_Y, k72,
+                                      -GlobalStatics_10.REGION_BASE_X + (
                                           (0xffff221 & i34) >> 14),
                                       (byte) -21, i78);
                                   continue;
@@ -5762,27 +5762,27 @@ public final class GlobalStatics_11 {
       GlobalStatics_9.method1950(var2, true);
     }
 
-    if (var2.anInt2819 < 128 || var2.sceneY < 128
-        || var2.anInt2819 >= 13184
+    if (var2.sceneX < 128 || var2.sceneY < 128
+        || var2.sceneX >= 13184
         || var2.sceneY >= 13184) {
       var2.animationId = -1;
       var2.anInt2842 = -1;
       var2.anInt2800 = 0;
       var2.anInt2790 = 0;
-      var2.anInt2819 = 128 * var2.waypointsX[0] + 64 * var2.getSize();
+      var2.sceneX = 128 * var2.waypointsX[0] + 64 * var2.getSize();
       var2.sceneY = var2.waypointsY[0] * 128 + var2.getSize() * 64;
       var2.method1973(var1 - 2395);
     }
 
     if (var1 == 2279) {
-      if (var2 == GlobalStatics_9.localPlayer && (var2.anInt2819 < 1536 ||
+      if (var2 == GlobalStatics_9.localPlayer && (var2.sceneX < 1536 ||
           var2.sceneY < 1536
-          || var2.anInt2819 >= 11776 || var2.sceneY >= 11776)) {
+          || var2.sceneX >= 11776 || var2.sceneY >= 11776)) {
         var2.anInt2842 = -1;
         var2.anInt2800 = 0;
         var2.anInt2790 = 0;
         var2.animationId = -1;
-        var2.anInt2819 = var2.waypointsX[0] * 128 + var2.getSize() * 64;
+        var2.sceneX = var2.waypointsX[0] * 128 + var2.getSize() * 64;
         var2.sceneY = 128 * var2.waypointsY[0] + 64 * var2.getSize();
         var2.method1973(-98);
       }

@@ -106,7 +106,7 @@ public class GlobalStatics_4 {
   public static ObjectCache floorUnderlays = new ObjectCache(64);
   public static int[] anIntArray726 = new int[32];
   public static float aFloat727;
-  public static int SCENE_WIDTH;
+  public static int REGION_WIDTH;
   public static SomethingFont aClass33_1238;
   public static int anInt1240;
   public static Deque aClass61_1242 = new Deque();

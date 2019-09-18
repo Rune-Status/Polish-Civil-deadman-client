@@ -1426,7 +1426,7 @@ public final class GlobalStatics_0 {
         var3.anInt2773 = 0;
         var3.anInt2828 = var0;
         GlobalStatics_4
-            .method1470(var3.sceneY, var4, 183921384, var3.anInt2819, false,
+            .method1470(var3.sceneY, var4, 183921384, var3.sceneX, false,
                 var3.anInt2832);
       }
 
@@ -1448,7 +1448,7 @@ public final class GlobalStatics_0 {
       if (var3.animationId != -1) {
         GlobalStatics_4.method1470(var3.sceneY,
             GlobalStatics_8.method45(var3.animationId, (byte) -20),
-            var2 + 183921345, var3.anInt2819, false, var3.anInt2832);
+            var2 + 183921345, var3.sceneX, false, var3.anInt2832);
       }
     }
 
@@ -1776,9 +1776,9 @@ public final class GlobalStatics_0 {
         var5.anInt2322 = var6;
       }
 
-      var5.anInt2326 = var5.aClass140_Sub4_Sub2_2324.anInt2819;
+      var5.anInt2326 = var5.aClass140_Sub4_Sub2_2324.sceneX;
       var5.anInt2321 =
-          var5.aClass140_Sub4_Sub2_2324.anInt2819
+          var5.aClass140_Sub4_Sub2_2324.sceneX
               + var5.aClass140_Sub4_Sub2_2324.getSize() * 64;
       var5.anInt2308 = var5.aClass140_Sub4_Sub2_2324.sceneY;
       var5.anInt2307 =
@@ -1829,9 +1829,9 @@ public final class GlobalStatics_0 {
           var5.anInt2322 = var6;
         }
 
-        var5.anInt2326 = var5.aClass140_Sub4_Sub1_2327.anInt2819;
+        var5.anInt2326 = var5.aClass140_Sub4_Sub1_2327.sceneX;
         var5.anInt2321 =
-            var5.aClass140_Sub4_Sub1_2327.anInt2819
+            var5.aClass140_Sub4_Sub1_2327.sceneX
                 + 64 * var5.aClass140_Sub4_Sub1_2327.getSize();
         var5.anInt2308 = var5.aClass140_Sub4_Sub1_2327.sceneY;
         var5.anInt2307 =

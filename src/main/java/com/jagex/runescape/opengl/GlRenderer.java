@@ -138,8 +138,6 @@ public final class GlRenderer {
   }
 
   public static void setFogEnabled(boolean enable) {
-    //TODO disable forg for now
-    enable = false;
     if (enable != GlRenderer.FOG_ENABLED) {
       if (enable) {
         GlRenderer.GL.glEnable(2912);

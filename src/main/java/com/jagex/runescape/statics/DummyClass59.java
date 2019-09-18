@@ -182,9 +182,9 @@ public final class DummyClass59 {
         byte[] var3 = GlobalStatics_6.landscapesData[var2];
         if (var3 != null) {
           var5 =
-              -GlobalStatics_9.anInt1152
+              -GlobalStatics_9.REGION_BASE_Y
                   + (GlobalStatics_6.regionHashes[var2] & 255) * 64;
-          var4 = -GlobalStatics_10.anInt1716
+          var4 = -GlobalStatics_10.REGION_BASE_X
               + (GlobalStatics_6.regionHashes[var2] >> 8) * 64;
           if (GlobalStatics_0.dynamicScene) {
             var5 = 10;
@@ -197,10 +197,10 @@ public final class DummyClass59 {
         if (GlRenderer.USE_OPENGL) {
           var3 = GlobalStatics_10.updatedLandscapesData[var2];
           if (var3 != null) {
-            var4 = -GlobalStatics_10.anInt1716 + 64 * (
+            var4 = -GlobalStatics_10.REGION_BASE_X + 64 * (
                 GlobalStatics_6.regionHashes[var2] >> 8);
             var5 =
-                -GlobalStatics_9.anInt1152 + 64 * (
+                -GlobalStatics_9.REGION_BASE_Y + 64 * (
                     GlobalStatics_6.regionHashes[var2] & 255);
             if (GlobalStatics_0.dynamicScene) {
               var5 = 10;
@@ -237,7 +237,7 @@ public final class DummyClass59 {
 
         // 28x28
         //TODO
-        int viewportLength = 104;
+        int viewportLength = 28;
         GlobalStatics_9.initializeScene(4, 104, 104, viewportLength);
 
         for (var12 = 0; var12 < 4; ++var12) {

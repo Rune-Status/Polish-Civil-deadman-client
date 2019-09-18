@@ -406,18 +406,18 @@ public final class Texture extends SubNode {
         if (GlobalStatics_9.anInt1753 == 1) {
           if ((4
               & GlobalStatics_10.tileFlags[GlobalStatics_9.currentPlane][
-              GlobalStatics_9.localPlayer.anInt2819 >> 7][
+              GlobalStatics_9.localPlayer.sceneX >> 7][
               GlobalStatics_9.localPlayer.sceneY >> 7])
               != 0) {
             GlobalStatics_9.method2031((byte) -85, false,
-                GlobalStatics_9.localPlayer.anInt2819 >> 7,
+                GlobalStatics_9.localPlayer.sceneX >> 7,
                 GlobalStatics_9.localPlayer.sceneY >> 7,
                 GLStatics.sceneGraphTiles, 0);
           }
 
           if (DummyClass17.SCENE_CAMERA_PITCH < 310) {
             int var7 = GlobalStatics_9.localPlayer.sceneY >> 7;
-            int var6 = GlobalStatics_9.localPlayer.anInt2819 >> 7;
+            int var6 = GlobalStatics_9.localPlayer.sceneX >> 7;
             int x = GlobalStatics_9.SCENE_CAMERA_X >> 7;
             int y = DummyClass49.SCENE_CAMERA_Z >> 7;
 

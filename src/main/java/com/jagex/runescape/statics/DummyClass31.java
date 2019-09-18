@@ -39,12 +39,14 @@ public final class DummyClass31 {
     }
   }
 
-  public static void method1683(int var0, boolean var1, int regionLevel, boolean var3,
+  public static void method1683(int var0, boolean var1, int regionLevel,
+      boolean var3,
       CollisionMap var4,
       int var5, int var6, int regionX, byte var8, int regionY, int var10) {
     if (var1 && !GlobalStatics_9.method1986(103) && (2
         & GlobalStatics_10.tileFlags[0][regionX][regionY]) == 0) {
-      if ((16 & GlobalStatics_10.tileFlags[regionLevel][regionX][regionY]) != 0) {
+      if ((16 & GlobalStatics_10.tileFlags[regionLevel][regionX][regionY])
+          != 0) {
         return;
       }
 
@@ -109,7 +111,8 @@ public final class DummyClass31 {
         }
 
         var23 = null;
-        long var24 = 1073741824 | regionX | regionY << 7 | var6 << 14 | var10 << 20;
+        long var24 =
+            1073741824 | regionX | regionY << 7 | var6 << 14 | var10 << 20;
         if (var3) {
           var23 = DummyClass43.somethingHeightMap[0];
         } else if (var0 < 3) {
@@ -130,7 +133,8 @@ public final class DummyClass31 {
 
         if (var11.method1690(28933)) {
           GlobalStatics_9
-              .method1286(regionY, false, var11, var10, null, regionX, regionLevel, null);
+              .method1286(regionY, false, var11, var10, null, regionX,
+                  regionLevel, null);
         }
 
         boolean var26 = var11.aBoolean1503 & !var3;
@@ -147,7 +151,6 @@ public final class DummyClass31 {
                         null,
                         (byte) -82, var26, var21);
                 if (GlRenderer.USE_OPENGL && var26) {
-                  assert var28 != null;
                   SomethingShadows
                       .method2051(var28.shadow, var20, var22, var21);
                 }
@@ -155,14 +158,16 @@ public final class DummyClass31 {
                 assert var28 != null;
                 var27 = var28.node;
               } else {
-                var27 = new GameObject(var5, var6, var10, var0, regionX, regionY,
+                var27 = new GameObject(var5, var6, var10, var0, regionX,
+                    regionY,
                     var11.anInt1531,
                     var11.aBoolean1492, null);
               }
 
-              GlobalStatics_7.method835(regionLevel, regionX, regionY, var19, 1, 1,
-                  var27, 0,
-                  var24);
+              GlobalStatics_7
+                  .method835(regionLevel, regionX, regionY, var19, 1, 1,
+                      var27, 0,
+                      var24);
               if (var1 && var6 <= 17 && var6 != 13 && regionLevel > 0) {
                 DummyClass36.anIntArrayArrayArray2609[regionLevel][regionX][regionY] =
                     DummyClass36.anIntArrayArrayArray2609[regionLevel][regionX][regionY]
@@ -195,8 +200,9 @@ public final class DummyClass31 {
                     var11.aBoolean1492, null);
               }
 
-              DummyClass14.method2146(regionLevel, regionX, regionY, var19, var27, null,
-                  DummyClass13.anIntArray2017[var10], 0, var24);
+              DummyClass14
+                  .method2146(regionLevel, regionX, regionY, var19, var27, null,
+                      DummyClass13.anIntArray2017[var10], 0, var24);
               if (var1) {
                 if (var10 == 0) {
                   if (var11.aBoolean1525) {
@@ -250,8 +256,9 @@ public final class DummyClass31 {
                   }
 
                   if (var11.aBoolean1542) {
-                    DummyClass36.anIntArrayArrayArray2609[regionLevel][regionX][1
-                        + regionY] =
+                    DummyClass36.anIntArrayArrayArray2609[regionLevel][regionX][
+                        1
+                            + regionY] =
                         DummyClass36.anIntArrayArrayArray2609[regionLevel][regionX][
                             1
                                 + regionY] | 2;
@@ -260,11 +267,13 @@ public final class DummyClass31 {
               }
 
               if (var11.anInt1538 != 0 && var4 != null) {
-                var4.method1486(var10, 2, 0, var11.aBoolean1486, regionY, regionX);
+                var4.method1486(var10, 2, 0, var11.aBoolean1486, regionY,
+                    regionX);
               }
 
               if (var11.anInt1528 != 16) {
-                GlobalStatics_9.method1956(regionLevel, regionX, regionY, var11.anInt1528);
+                GlobalStatics_9
+                    .method1956(regionLevel, regionX, regionY, var11.anInt1528);
               }
 
             } else if (var6 == 1) {
@@ -288,8 +297,9 @@ public final class DummyClass31 {
                     var11.aBoolean1492, null);
               }
 
-              DummyClass14.method2146(regionLevel, regionX, regionY, var19, var27, null,
-                  DummyClass59.anIntArray675[var10], 0, var24);
+              DummyClass14
+                  .method2146(regionLevel, regionX, regionY, var19, var27, null,
+                      DummyClass59.anIntArray675[var10], 0, var24);
               if (var11.aBoolean1525 && var1) {
                 if (var10 == 0) {
                   GlobalStatics_9.SCENE_SHADOW[regionLevel][regionX][regionY
@@ -310,7 +320,8 @@ public final class DummyClass31 {
               }
 
               if (var11.anInt1538 != 0 && var4 != null) {
-                var4.method1486(var10, 2, var6, var11.aBoolean1486, regionY, regionX);
+                var4.method1486(var10, 2, var6, var11.aBoolean1486, regionY,
+                    regionX);
               }
 
             } else {
@@ -346,7 +357,8 @@ public final class DummyClass31 {
                   assert var45 != null;
                   var38 = var45.node;
                 } else {
-                  var42 = new GameObject(var5, 2, 4 + var10, var0, regionX, regionY,
+                  var42 = new GameObject(var5, 2, 4 + var10, var0, regionX,
+                      regionY,
                       var11.anInt1531,
                       var11.aBoolean1492, null);
                   var38 = new GameObject(var5, 2, var43, var0, regionX, regionY,
@@ -354,22 +366,25 @@ public final class DummyClass31 {
                       var11.aBoolean1492, null);
                 }
 
-                DummyClass14.method2146(regionLevel, regionX, regionY, var19, var42,
-                    var38, DummyClass13.anIntArray2017[var10],
-                    DummyClass13.anIntArray2017[var43], var24);
+                DummyClass14
+                    .method2146(regionLevel, regionX, regionY, var19, var42,
+                        var38, DummyClass13.anIntArray2017[var10],
+                        DummyClass13.anIntArray2017[var43], var24);
                 if (var11.aBoolean1542 && var1) {
                   if (var10 == 0) {
                     DummyClass36.anIntArrayArrayArray2609[regionLevel][regionX][regionY] =
                         DummyClass36.anIntArrayArrayArray2609[regionLevel][regionX][regionY]
                             | 1;
-                    DummyClass36.anIntArrayArrayArray2609[regionLevel][regionX][1
-                        + regionY] =
+                    DummyClass36.anIntArrayArrayArray2609[regionLevel][regionX][
+                        1
+                            + regionY] =
                         DummyClass36.anIntArrayArrayArray2609[regionLevel][regionX][
                             1 + regionY] | 2;
                   } else {
                     if (var10 == 1) {
-                      DummyClass36.anIntArrayArrayArray2609[regionLevel][regionX][regionY
-                          + 1] =
+                      DummyClass36.anIntArrayArrayArray2609[regionLevel][regionX][
+                          regionY
+                              + 1] =
                           DummyClass36.anIntArrayArrayArray2609[regionLevel][regionX][
                               regionY + 1] | 2;
                       DummyClass36.anIntArrayArrayArray2609[regionLevel][regionX
@@ -404,7 +419,8 @@ public final class DummyClass31 {
                 }
 
                 if (var11.anInt1528 != 16) {
-                  GlobalStatics_9.method1956(regionLevel, regionX, regionY, var11.anInt1528);
+                  GlobalStatics_9.method1956(regionLevel, regionX, regionY,
+                      var11.anInt1528);
                 }
 
               } else if (var6 == 3) {
@@ -428,8 +444,10 @@ public final class DummyClass31 {
                       var11.aBoolean1492, null);
                 }
 
-                DummyClass14.method2146(regionLevel, regionX, regionY, var19, var27, null,
-                    DummyClass59.anIntArray675[var10], 0, var24);
+                DummyClass14
+                    .method2146(regionLevel, regionX, regionY, var19, var27,
+                        null,
+                        DummyClass59.anIntArray675[var10], 0, var24);
                 if (var11.aBoolean1525 && var1) {
                   if (var10 == 0) {
                     GlobalStatics_9.SCENE_SHADOW[regionLevel][regionX][regionY
@@ -450,7 +468,8 @@ public final class DummyClass31 {
                 }
 
                 if (var11.anInt1538 != 0 && var4 != null) {
-                  var4.method1486(var10, 2, 3, var11.aBoolean1486, regionY, regionX);
+                  var4.method1486(var10, 2, 3, var11.aBoolean1486, regionY,
+                      regionX);
                 }
 
               } else if (var6 != 9) {
@@ -470,7 +489,8 @@ public final class DummyClass31 {
                     assert var28 != null;
                     var27 = var28.node;
                   } else {
-                    var27 = new GameObject(var5, 4, var10, var0, regionX, regionY,
+                    var27 = new GameObject(var5, 4, var10, var0, regionX,
+                        regionY,
                         var11.anInt1531,
                         var11.aBoolean1492, null);
                   }
@@ -485,7 +505,8 @@ public final class DummyClass31 {
                   long var44;
                   if (var6 == 5) {
                     var43 = 16;
-                    var44 = GlobalStatics_9.method2174(regionLevel, regionX, regionY);
+                    var44 = GlobalStatics_9
+                        .method2174(regionLevel, regionX, regionY);
                     if (var44 != 0L) {
                       var43 = DummyClass11.method2207(4,
                           Integer.MAX_VALUE & (int) (var44 >>> 32)).anInt1528;
@@ -509,7 +530,8 @@ public final class DummyClass31 {
                       assert var47 != null;
                       var39 = var47.node;
                     } else {
-                      var39 = new GameObject(var5, 4, var10, var0, regionX, regionY,
+                      var39 = new GameObject(var5, 4, var10, var0, regionX,
+                          regionY,
                           var11.anInt1531,
                           var11.aBoolean1492, null);
                     }
@@ -524,7 +546,8 @@ public final class DummyClass31 {
                   } else {
                     if (var6 == 6) {
                       var43 = 8;
-                      var44 = GlobalStatics_9.method2174(regionLevel, regionX, regionY);
+                      var44 = GlobalStatics_9
+                          .method2174(regionLevel, regionX, regionY);
                       if (var44 != 0L) {
                         var43 = DummyClass11.method2207(4,
                             Integer.MAX_VALUE & (int) (var44
@@ -558,11 +581,12 @@ public final class DummyClass31 {
                                 var11.aBoolean1492, null);
                       }
 
-                      GlobalStatics_6.method577(regionLevel, regionX, regionY, var19,
-                          var39, null,
-                          256, var10, var43
-                              * GlobalStatics_3.anIntArray2386[var10],
-                          var43 * DummyClass4.anIntArray3007[var10], var24);
+                      GlobalStatics_6
+                          .method577(regionLevel, regionX, regionY, var19,
+                              var39, null,
+                              256, var10, var43
+                                  * GlobalStatics_3.anIntArray2386[var10],
+                              var43 * DummyClass4.anIntArray3007[var10], var24);
                     } else {
                       if (var6 == 7) {
                         int var40 = 3 & var10 + 2;
@@ -589,13 +613,15 @@ public final class DummyClass31 {
                                   var11.aBoolean1492, null);
                         }
 
-                        GlobalStatics_6.method577(regionLevel, regionX, regionY, var19,
-                            var27, null,
-                            256, var40, 0, 0, var24);
+                        GlobalStatics_6
+                            .method577(regionLevel, regionX, regionY, var19,
+                                var27, null,
+                                256, var40, 0, 0, var24);
                       } else {
                         if (var6 == 8) {
                           var43 = 8;
-                          var44 = GlobalStatics_9.method2174(regionLevel, regionX, regionY);
+                          var44 = GlobalStatics_9
+                              .method2174(regionLevel, regionX, regionY);
                           if (var44 != 0L) {
                             var43 = DummyClass11.method2207(4,
                                 Integer.MAX_VALUE & (int) (var44
@@ -648,13 +674,14 @@ public final class DummyClass31 {
                                 var11.anInt1531, var11.aBoolean1492, null);
                           }
 
-                          GlobalStatics_6.method577(regionLevel, regionX, regionY, var19,
-                              var39,
-                              var46, 256, var10,
-                              var43
-                                  * GlobalStatics_3.anIntArray2386[var10],
-                              DummyClass4.anIntArray3007[var10] * var43,
-                              var24);
+                          GlobalStatics_6
+                              .method577(regionLevel, regionX, regionY, var19,
+                                  var39,
+                                  var46, 256, var10,
+                                  var43
+                                      * GlobalStatics_3.anIntArray2386[var10],
+                                  DummyClass4.anIntArray3007[var10] * var43,
+                                  var24);
                         }
                       }
                     }
@@ -676,21 +703,25 @@ public final class DummyClass31 {
                   assert var28 != null;
                   var27 = var28.node;
                 } else {
-                  var27 = new GameObject(var5, var6, var10, var0, regionX, regionY,
+                  var27 = new GameObject(var5, var6, var10, var0, regionX,
+                      regionY,
                       var11.anInt1531,
                       var11.aBoolean1492, null);
                 }
 
-                GlobalStatics_7.method835(regionLevel, regionX, regionY, var19, 1, 1,
-                    var27, 0,
-                    var24);
+                GlobalStatics_7
+                    .method835(regionLevel, regionX, regionY, var19, 1, 1,
+                        var27, 0,
+                        var24);
                 if (var11.anInt1538 != 0 && var4 != null) {
-                  var4.method1489(regionX, var11.aBoolean1486, (byte) 127, regionY,
+                  var4.method1489(regionX, var11.aBoolean1486, (byte) 127,
+                      regionY,
                       var12, var13);
                 }
 
                 if (var11.anInt1528 != 16) {
-                  GlobalStatics_9.method1956(regionLevel, regionX, regionY, var11.anInt1528);
+                  GlobalStatics_9.method1956(regionLevel, regionX, regionY,
+                      var11.anInt1528);
                 }
 
               }
@@ -742,7 +773,8 @@ public final class DummyClass31 {
             }
 
             if (var11.anInt1538 != 0 && var4 != null) {
-              var4.method1489(regionX, var11.aBoolean1486, (byte) 96, regionY, var12,
+              var4.method1489(regionX, var11.aBoolean1486, (byte) 96, regionY,
+                  var12,
                   var13);
             }
 
@@ -769,8 +801,9 @@ public final class DummyClass31 {
                 var11.aBoolean1492, null);
           }
 
-          GlobalStatics_10.method276(regionLevel, regionX, regionY, var19, var27, var24,
-              var11.aBoolean1502);
+          GlobalStatics_10
+              .method276(regionLevel, regionX, regionY, var19, var27, var24,
+                  var11.aBoolean1502);
           if (var11.anInt1538 == 1 && var4 != null) {
             var4.method1503(regionX, regionY);
           }
