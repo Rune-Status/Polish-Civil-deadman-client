@@ -4,7 +4,7 @@ import com.jagex.runescape.buffer.Buffer;
 import com.jagex.runescape.common.HashTable;
 import com.jagex.runescape.model.IntegerNode;
 import com.jagex.runescape.node.Node;
-import com.jagex.runescape.model.SceneGraphTile;
+import com.jagex.runescape.scene.SceneGraphTile;
 import com.jogamp.opengl.GL;
 import java.nio.ByteBuffer;
 import java.nio.ByteOrder;

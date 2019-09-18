@@ -2,7 +2,7 @@ package com.jagex.runescape.opengl;
 
 import com.jagex.runescape.statics.GlobalStatics_6;
 import com.jagex.runescape.statics.GlobalStatics_9;
-import com.jagex.runescape.model.SceneGraphTile;
+import com.jagex.runescape.scene.SceneGraphTile;
 
 public final class DummyClass46 {
 

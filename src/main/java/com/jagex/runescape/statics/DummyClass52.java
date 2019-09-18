@@ -5,7 +5,7 @@ import com.jagex.runescape.common.GameString;
 import com.jagex.runescape.common.GameStringStatics;
 import com.jagex.runescape.model.AnimationSequence;
 import com.jagex.runescape.model.FileUnpacker;
-import com.jagex.runescape.model.SceneGraphTile;
+import com.jagex.runescape.scene.SceneGraphTile;
 import com.jagex.runescape.opengl.GLStatics;
 import com.jagex.runescape.sprite.AbstractIndexedColorSprite;
 

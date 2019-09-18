@@ -1,4 +1,4 @@
-package com.jagex.runescape.model;
+package com.jagex.runescape.scene;
 
 import com.jagex.runescape.node.Node;
 

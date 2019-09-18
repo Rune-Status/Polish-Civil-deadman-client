@@ -4,8 +4,8 @@ import com.jagex.runescape.common.GameString;
 import com.jagex.runescape.common.GameStringStatics;
 import com.jagex.runescape.model.FileUnpacker;
 import com.jagex.runescape.model.ObjectCache;
-import com.jagex.runescape.model.SceneGraphTile;
-import com.jagex.runescape.model.SomethingSceneJ;
+import com.jagex.runescape.scene.SceneGraphTile;
+import com.jagex.runescape.scene.SomethingSceneJ;
 import com.jagex.runescape.opengl.GLStatics;
 
 public final class DummyClass13 {

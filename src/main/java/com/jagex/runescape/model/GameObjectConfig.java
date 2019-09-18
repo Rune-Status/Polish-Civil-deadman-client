@@ -8,6 +8,7 @@ import com.jagex.runescape.node.Node;
 import com.jagex.runescape.opengl.GLStatics;
 import com.jagex.runescape.opengl.GlModel;
 import com.jagex.runescape.opengl.GlRenderer;
+import com.jagex.runescape.scene.SceneNode;
 import com.jagex.runescape.sprite.SoftwareIndexedColorSprite;
 import com.jagex.runescape.statics.DummyClass11;
 import com.jagex.runescape.statics.DummyClass14;

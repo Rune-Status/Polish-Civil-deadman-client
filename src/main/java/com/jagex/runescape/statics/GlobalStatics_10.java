@@ -37,11 +37,11 @@ import com.jagex.runescape.model.Player;
 import com.jagex.runescape.model.PlayerVariable;
 import com.jagex.runescape.model.Projectile;
 import com.jagex.runescape.model.ProjectileNode;
-import com.jagex.runescape.model.SceneGraphTile;
-import com.jagex.runescape.model.SceneNode;
+import com.jagex.runescape.scene.SceneGraphTile;
+import com.jagex.runescape.scene.SceneNode;
 import com.jagex.runescape.model.SceneShadowMap;
-import com.jagex.runescape.model.SceneSomething;
-import com.jagex.runescape.model.SceneSomething2;
+import com.jagex.runescape.scene.SceneSomething;
+import com.jagex.runescape.scene.SceneSomething2;
 import com.jagex.runescape.model.SignLink;
 import com.jagex.runescape.model.SocketStream;
 import com.jagex.runescape.model.SoftwareDirectColorSprite;
@@ -51,11 +51,11 @@ import com.jagex.runescape.model.SomethingLight0;
 import com.jagex.runescape.model.SomethingPacket116;
 import com.jagex.runescape.model.SomethingPacket151;
 import com.jagex.runescape.model.SomethingQuickChat2;
-import com.jagex.runescape.model.SomethingScene;
-import com.jagex.runescape.model.SomethingSceneI;
-import com.jagex.runescape.model.SomethingSceneJ;
+import com.jagex.runescape.scene.SomethingScene;
+import com.jagex.runescape.scene.SomethingSceneI;
+import com.jagex.runescape.scene.SomethingSceneJ;
 import com.jagex.runescape.model.SomethingTexture;
-import com.jagex.runescape.model.SomethingTilek;
+import com.jagex.runescape.scene.SomethingTilek;
 import com.jagex.runescape.model.SomethingWorldMapy;
 import com.jagex.runescape.model.TextureCache;
 import com.jagex.runescape.model.VariableUpdate;
@@ -4548,7 +4548,7 @@ public class GlobalStatics_10 {
                       var23.positionX - GlobalStatics_9.CAMERA_X,
                       var23.positionY - GlobalStatics_7.CAMERA_Y,
                       var23.positionZ - GlobalStatics_9.CAMERA_Z, var23.key,
-                      var5, null);
+                      var5);
             }
 
             for (var11 = 0; var11 < var21.anInt2223; ++var11) {
@@ -4566,7 +4566,7 @@ public class GlobalStatics_10 {
                     var25.anInt482 - GlobalStatics_9.CAMERA_X,
                     var25.anInt489 - GlobalStatics_7.CAMERA_Y,
                     var25.anInt484 - GlobalStatics_9.CAMERA_Z, var25.aLong498,
-                    var5, null);
+                    var5);
               }
             }
 
@@ -4631,7 +4631,7 @@ public class GlobalStatics_10 {
                       var24.anInt324 - GlobalStatics_9.CAMERA_X,
                       var24.anInt326 - GlobalStatics_7.CAMERA_Y,
                       var24.anInt330 - GlobalStatics_9.CAMERA_Z, var24.aLong328,
-                      var5, null);
+                      var5);
               if (GlRenderer.USE_OPENGL && var24.aBoolean329) {
                 GlRenderer.method1832(var8);
               }
@@ -4698,7 +4698,7 @@ public class GlobalStatics_10 {
                       var26.positionX - GlobalStatics_9.CAMERA_X,
                       var26.positionY - GlobalStatics_7.CAMERA_Y,
                       var26.positionZ - GlobalStatics_9.CAMERA_Z, var26.key,
-                      var5, null);
+                      var5);
             }
 
             if ((var26.anInt1059 & var11) != 0 && !GlobalStatics_9
@@ -4716,7 +4716,7 @@ public class GlobalStatics_10 {
                       var26.positionX - GlobalStatics_9.CAMERA_X,
                       var26.positionY - GlobalStatics_7.CAMERA_Y,
                       var26.positionZ - GlobalStatics_9.CAMERA_Z, var26.key,
-                      var5, null);
+                      var5);
             }
           }
 
@@ -4741,8 +4741,8 @@ public class GlobalStatics_10 {
                       var13.anInt425 - GlobalStatics_7.CAMERA_Y,
                       var13.anInt427 - GlobalStatics_9.CAMERA_Z
                           + var13.anInt426,
-                      var13.aLong428, var5,
-                      null);
+                      var13.aLong428, var5
+                  );
             } else if (var13.anInt432 == 256) {
               var14 = var13.anInt424 - GlobalStatics_9.CAMERA_X;
               var15 = var13.anInt425 - GlobalStatics_7.CAMERA_Y;
@@ -4772,7 +4772,7 @@ public class GlobalStatics_10 {
                     GlobalStatics_9.pitchCosine,
                     GlobalStatics_10.yawSine,
                     GlobalStatics_10.yawCosine, var14 + var13.anInt430,
-                    var15, var16 + var13.anInt426, var13.aLong428, var5, null);
+                    var15, var16 + var13.anInt426, var13.aLong428, var5);
               } else if (var13.aClass140_423 != null) {
                 if (GlRenderer.USE_OPENGL) {
                   DummyClass46.method1268(GlobalStatics_9.CAMERA_X,
@@ -4784,7 +4784,7 @@ public class GlobalStatics_10 {
                     GlobalStatics_9.pitchCosine,
                     GlobalStatics_10.yawSine, GlobalStatics_10.yawCosine, var14,
                     var15, var16,
-                    var13.aLong428, var5, null);
+                    var13.aLong428, var5);
               }
             }
 
@@ -4812,7 +4812,7 @@ public class GlobalStatics_10 {
                       var30.anInt324 - GlobalStatics_9.CAMERA_X,
                       var30.anInt326 - GlobalStatics_7.CAMERA_Y,
                       var30.anInt330 - GlobalStatics_9.CAMERA_Z, var30.aLong328,
-                      var5, null);
+                      var5);
               if (GlRenderer.USE_OPENGL && var30.aBoolean329) {
                 GlRenderer.method1832(var8);
               }
@@ -4833,7 +4833,7 @@ public class GlobalStatics_10 {
                     var28.anInt1078 - GlobalStatics_9.CAMERA_X,
                     var28.anInt1068 - GlobalStatics_7.CAMERA_Y,
                     var28.anInt1075 - GlobalStatics_9.CAMERA_Z, var28.aLong1079,
-                    var5, null);
+                    var5);
               }
 
               if (var28.aClass140_1069 != null) {
@@ -4843,7 +4843,7 @@ public class GlobalStatics_10 {
                     var28.anInt1078 - GlobalStatics_9.CAMERA_X,
                     var28.anInt1068 - GlobalStatics_7.CAMERA_Y,
                     var28.anInt1075 - GlobalStatics_9.CAMERA_Z, var28.aLong1079,
-                    var5, null);
+                    var5);
               }
 
               if (var28.aClass140_1073 != null) {
@@ -4853,7 +4853,7 @@ public class GlobalStatics_10 {
                     var28.anInt1078 - GlobalStatics_9.CAMERA_X,
                     var28.anInt1068 - GlobalStatics_7.CAMERA_Y,
                     var28.anInt1075 - GlobalStatics_9.CAMERA_Z, var28.aLong1079,
-                    var5, null);
+                    var5);
               }
             }
           }
@@ -4975,7 +4975,7 @@ public class GlobalStatics_10 {
                       var23.positionX - GlobalStatics_9.CAMERA_X,
                       var23.positionY - GlobalStatics_7.CAMERA_Y,
                       var23.positionZ - GlobalStatics_9.CAMERA_Z, var23.key,
-                      var5, null);
+                      var5);
             }
 
             var2.anInt2227 = 0;
@@ -5114,7 +5114,7 @@ public class GlobalStatics_10 {
                   var32.anInt482 - GlobalStatics_9.CAMERA_X,
                   var32.anInt489 - GlobalStatics_7.CAMERA_Y,
                   var32.anInt484 - GlobalStatics_9.CAMERA_Z, var32.aLong498,
-                  var5, null);
+                  var5);
             }
 
             for (var14 = var32.anInt483; var14 <= var32.anInt495; ++var14) {
@@ -5186,7 +5186,7 @@ public class GlobalStatics_10 {
                       var29.anInt1068 - GlobalStatics_7.CAMERA_Y
                           - var29.anInt1077,
                       var29.anInt1075 - GlobalStatics_9.CAMERA_Z,
-                      var29.aLong1079, var5, null);
+                      var29.aLong1079, var5);
             }
 
             if (var29.aClass140_1069 != null) {
@@ -5197,7 +5197,7 @@ public class GlobalStatics_10 {
                       var29.anInt1068 - GlobalStatics_7.CAMERA_Y
                           - var29.anInt1077,
                       var29.anInt1075 - GlobalStatics_9.CAMERA_Z,
-                      var29.aLong1079, var5, null);
+                      var29.aLong1079, var5);
             }
 
             if (var29.aClass140_1073 != null) {
@@ -5208,7 +5208,7 @@ public class GlobalStatics_10 {
                       var29.anInt1068 - GlobalStatics_7.CAMERA_Y
                           - var29.anInt1077,
                       var29.anInt1075 - GlobalStatics_9.CAMERA_Z,
-                      var29.aLong1079, var5, null);
+                      var29.aLong1079, var5);
             }
           }
 
@@ -5230,8 +5230,8 @@ public class GlobalStatics_10 {
                         + var36.anInt430,
                     var36.anInt425 - GlobalStatics_7.CAMERA_Y,
                     var36.anInt427 - GlobalStatics_9.CAMERA_Z + var36.anInt426,
-                    var36.aLong428, var5,
-                    null);
+                    var36.aLong428, var5
+                );
               } else if (var36.anInt432 == 256) {
                 var11 = var36.anInt424 - GlobalStatics_9.CAMERA_X;
                 var12 = var36.anInt425 - GlobalStatics_7.CAMERA_Y;
@@ -5261,8 +5261,8 @@ public class GlobalStatics_10 {
                       GlobalStatics_9.pitchCosine,
                       GlobalStatics_10.yawSine, GlobalStatics_10.yawCosine,
                       var11 + var36.anInt430,
-                      var12, var27 + var36.anInt426, var36.aLong428, var5,
-                      null);
+                      var12, var27 + var36.anInt426, var36.aLong428, var5
+                  );
                 } else if (var36.aClass140_423 != null) {
                   if (GlRenderer.USE_OPENGL) {
                     DummyClass46.method1268(GlobalStatics_9.CAMERA_X,
@@ -5275,7 +5275,7 @@ public class GlobalStatics_10 {
                       GlobalStatics_9.pitchCosine,
                       GlobalStatics_10.yawSine, GlobalStatics_10.yawCosine,
                       var11, var12, var27,
-                      var36.aLong428, var5, null);
+                      var36.aLong428, var5);
                 }
               }
             }
@@ -5297,8 +5297,8 @@ public class GlobalStatics_10 {
                     GlobalStatics_10.yawSine, GlobalStatics_10.yawCosine,
                     var31.positionX - GlobalStatics_9.CAMERA_X,
                     var31.positionY - GlobalStatics_7.CAMERA_Y,
-                    var31.positionZ - GlobalStatics_9.CAMERA_Z, var31.key, var5,
-                    null);
+                    var31.positionZ - GlobalStatics_9.CAMERA_Z, var31.key, var5
+                );
               }
 
               if ((var31.anInt1055 & var2.anInt2241) != 0 && !GlobalStatics_9
@@ -5316,8 +5316,8 @@ public class GlobalStatics_10 {
                     GlobalStatics_10.yawSine, GlobalStatics_10.yawCosine,
                     var31.positionX - GlobalStatics_9.CAMERA_X,
                     var31.positionY - GlobalStatics_7.CAMERA_Y,
-                    var31.positionZ - GlobalStatics_9.CAMERA_Z, var31.key, var5,
-                    null);
+                    var31.positionZ - GlobalStatics_9.CAMERA_Z, var31.key, var5
+                );
               }
             }
           }

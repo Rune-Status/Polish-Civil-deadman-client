@@ -5,7 +5,7 @@ import com.jagex.runescape.common.GameStringStatics;
 import com.jagex.runescape.model.AbstractDirectColorSprite;
 import com.jagex.runescape.model.ClientScriptCall;
 import com.jagex.runescape.model.ITextureCache;
-import com.jagex.runescape.model.SceneGraphTile;
+import com.jagex.runescape.scene.SceneGraphTile;
 import com.jagex.runescape.model.SoftwareDirectColorSprite;
 import com.jagex.runescape.statics.DummyClass13;
 import com.jagex.runescape.statics.DummyClass30;

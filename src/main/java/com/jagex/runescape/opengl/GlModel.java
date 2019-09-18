@@ -6,7 +6,7 @@ import com.jagex.runescape.statics.GlobalStatics_11;
 import com.jagex.runescape.statics.GlobalStatics_6;
 import com.jagex.runescape.statics.GlobalStatics_9;
 import com.jagex.runescape.model.Model;
-import com.jagex.runescape.model.SceneNode;
+import com.jagex.runescape.scene.SceneNode;
 import com.jagex.runescape.model.VertexNormal;
 import com.jagex.runescape.buffer.Buffer;
 import com.jagex.runescape.common.ArrayUtils;
@@ -14,7 +14,6 @@ import com.jagex.runescape.model.AbstractModel;
 import com.jagex.runescape.model.BufferData;
 import com.jagex.runescape.model.FaceNormal;
 import com.jagex.runescape.sprite.SoftwareIndexedColorSprite;
-import com.jagex.runescape.statics.DummyClass0;
 import com.jagex.runescape.statics.DummyClass17;
 import com.jagex.runescape.statics.DummyClass3;
 import com.jagex.runescape.statics.DummyClass40;
@@ -1343,8 +1342,7 @@ public final class GlModel extends AbstractModel {
       int translateY,
       int translateZ,
       long key,
-      int var11,
-      DummyClass0 var12) {
+      int var11) {
     if (this.amountVertices != 0) {
       if (!this.aClass6_3835.aBoolean98) {
         this.method1917();

@@ -1,4 +1,6 @@
-package com.jagex.runescape.model;
+package com.jagex.runescape.scene;
+
+import com.jagex.runescape.scene.SceneNode;
 
 public final class SomethingSceneI {
 

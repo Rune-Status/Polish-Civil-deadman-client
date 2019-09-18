@@ -6,11 +6,11 @@ import com.jagex.runescape.common.GameStringStatics;
 import com.jagex.runescape.model.CollisionMap;
 import com.jagex.runescape.model.GameObject;
 import com.jagex.runescape.model.GameObjectConfig;
-import com.jagex.runescape.model.SceneNode;
-import com.jagex.runescape.model.SceneSomething;
-import com.jagex.runescape.model.SceneSomething2;
-import com.jagex.runescape.model.SomethingSceneI;
-import com.jagex.runescape.model.SomethingSceneJ;
+import com.jagex.runescape.scene.SceneNode;
+import com.jagex.runescape.scene.SceneSomething;
+import com.jagex.runescape.scene.SceneSomething2;
+import com.jagex.runescape.scene.SomethingSceneI;
+import com.jagex.runescape.scene.SomethingSceneJ;
 import com.jagex.runescape.opengl.GLStatics;
 import com.jagex.runescape.opengl.GlRenderer;
 

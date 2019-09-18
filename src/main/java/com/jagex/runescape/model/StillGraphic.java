@@ -1,5 +1,6 @@
 package com.jagex.runescape.model;
 
+import com.jagex.runescape.scene.SceneNode;
 import com.jagex.runescape.statics.DummyClass0;
 import com.jagex.runescape.statics.GlobalStatics_8;
 import com.jagex.runescape.statics.GlobalStatics_9;
@@ -84,12 +85,11 @@ public final class StillGraphic extends SceneNode {
       int var7,
       int var8,
       long var9,
-      int var11,
-      DummyClass0 var12 ) {
+      int var11) {
     AbstractModel var13 = this.getModel(false);
       if (var13 != null) {
-        var13.draw(var1, var2, var3, var4, var5, var6, var7, var8, var9, var11,
-            this.aClass127_Sub1_2704);
+        var13.draw(var1, var2, var3, var4, var5, var6, var7, var8, var9, var11
+        );
         this.anInt2715 = var13.getMinimumY();
       }
   }

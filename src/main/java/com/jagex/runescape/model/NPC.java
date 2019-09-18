@@ -2,7 +2,6 @@ package com.jagex.runescape.model;
 
 import com.jagex.runescape.opengl.GlRenderer;
 
-import com.jagex.runescape.statics.DummyClass0;
 import com.jagex.runescape.statics.GlobalStatics_10;
 import com.jagex.runescape.statics.GlobalStatics_4;
 import com.jagex.runescape.statics.GlobalStatics_5;
@@ -29,8 +28,7 @@ public final class NPC extends Mobile {
       int var7,
       int var8,
       long var9,
-      int var11,
-      DummyClass0 var12 ) {
+      int var11) {
     if (this.config != null) {
         AnimationSequence var13 = this.animationId != -1
             && this.anInt2828 == 0 ?
@@ -68,14 +66,14 @@ public final class NPC extends Mobile {
               GlRenderer.method1851();
               GlRenderer.method1825(var18, -150.0f + var19);
               assert var17 != null;
-              var17.draw(0, var2, var3, var4, var5, var6, var7, var8, -1L, var11,
-                  this.aClass127_Sub1_2801);
+              var17.draw(0, var2, var3, var4, var5, var6, var7, var8, -1L, var11
+              );
               GlRenderer.method1830();
               GlRenderer.method1825(var18, var19);
             } else {
               assert var17 != null;
-              var17.draw(0, var2, var3, var4, var5, var6, var7, var8, -1L, var11,
-                  this.aClass127_Sub1_2801);
+              var17.draw(0, var2, var3, var4, var5, var6, var7, var8, -1L, var11
+              );
             }
           }
 
@@ -111,16 +109,16 @@ public final class NPC extends Mobile {
             }
 
             var15.draw(var1, var2, var3, var4, var5, var6, var7, var8, var9,
-                var11,
-                this.aClass127_Sub1_2801);
+                var11
+            );
             if (var17 != null) {
               if (this.config.size == 1) {
                 var17.aBoolean2699 = true;
               }
 
               var17.draw(var1, var2, var3, var4, var5, var6, var7, var8, var9,
-                  var11,
-                  this.aClass127_Sub1_2801);
+                  var11
+              );
             }
           } else {
             if (var17 != null) {
@@ -132,8 +130,8 @@ public final class NPC extends Mobile {
             }
 
             var15.draw(var1, var2, var3, var4, var5, var6, var7, var8, var9,
-                var11,
-                this.aClass127_Sub1_2801);
+                var11
+            );
           }
 
         }
@@ -165,12 +163,6 @@ public final class NPC extends Mobile {
 
   public void setConfiguration(int var1, NpcConfiguration var2 ) {
     this.config = var2;
-      if (var1 == -1) {
-        if (this.aClass127_Sub1_2801 != null) {
-          this.aClass127_Sub1_2801.method1759();
-        }
-
-      }
   }
 
 }

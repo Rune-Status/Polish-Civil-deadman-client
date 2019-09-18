@@ -3,7 +3,7 @@ package com.jagex.runescape.model;
 import com.jagex.runescape.buffer.Buffer;
 import com.jagex.runescape.opengl.GlModel;
 import com.jagex.runescape.opengl.GlRenderer;
-import com.jagex.runescape.statics.DummyClass0;
+import com.jagex.runescape.scene.SceneNode;
 import com.jagex.runescape.statics.DummyClass45;
 import com.jagex.runescape.statics.GlobalStatics_10;
 
@@ -578,8 +578,7 @@ public final class Model extends SceneNode {
       int var7,
       int var8,
       long var9,
-      int var11,
-      DummyClass0 var12 ) {
+      int var11) {
   }
 
   public int getMinimumY() {

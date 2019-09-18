@@ -21,9 +21,6 @@ public final class DummyClass0 {
     new Deque();
   }
 
-  public void method1759() {
-  }
-
   public static void method1755() {
     //TODO ARB
     if (GlRenderer.GL.isExtensionAvailable("GL_ARB_point_parameters")) {

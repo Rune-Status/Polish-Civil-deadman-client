@@ -16,6 +16,7 @@ java_library(
         "//src/main/java/com/jagex/runescape/common",
         "//src/main/java/com/jagex/runescape/huffman",
         "//src/main/java/com/jagex/runescape/node",
+        "//src/main/java/com/jagex/runescape/scene",
         "//src/main/java/com/jagex/runescape/sprite",
     ],
 )

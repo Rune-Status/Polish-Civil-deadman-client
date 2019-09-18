@@ -1,7 +1,6 @@
 package com.jagex.runescape.model;
 
 import com.jagex.runescape.opengl.GLStatics;
-import com.jagex.runescape.statics.DummyClass0;
 import com.jagex.runescape.statics.DummyClass17;
 import com.jagex.runescape.statics.DummyClass3;
 import com.jagex.runescape.statics.DummyClass40;
@@ -837,7 +836,8 @@ public final class SoftwareModel extends AbstractModel {
       var12 = GlobalStatics_1.anIntArray3928[var5];
       var13 = this.anIntArray3898[var1] & 0xffff;
       if (var10 >= GlobalStatics_6.NEAR) {
-        var14 = (GlobalStatics_6.NEAR - var8) * DummyClass40.anIntArray841[var10 - var8];
+        var14 = (GlobalStatics_6.NEAR - var8) * DummyClass40.anIntArray841[var10
+            - var8];
         GlobalStatics_1.anIntArray3919[var4] =
             var2 +
                 (var11 + ((GlobalStatics_1.anIntArray3948[var7] - var11) * var14
@@ -852,7 +852,8 @@ public final class SoftwareModel extends AbstractModel {
       }
 
       if (var9 >= GlobalStatics_6.NEAR) {
-        var14 = (GlobalStatics_6.NEAR - var8) * DummyClass40.anIntArray841[var9 - var8];
+        var14 = (GlobalStatics_6.NEAR - var8) * DummyClass40.anIntArray841[var9
+            - var8];
         GlobalStatics_1.anIntArray3919[var4] =
             var2 +
                 (var11 + ((GlobalStatics_1.anIntArray3948[var6] - var11) * var14
@@ -877,7 +878,8 @@ public final class SoftwareModel extends AbstractModel {
       var12 = GlobalStatics_1.anIntArray3928[var6];
       var13 = this.anIntArray3874[var1] & 0xffff;
       if (var8 >= GlobalStatics_6.NEAR) {
-        var14 = (GlobalStatics_6.NEAR - var9) * DummyClass40.anIntArray841[var8 - var9];
+        var14 = (GlobalStatics_6.NEAR - var9) * DummyClass40.anIntArray841[var8
+            - var9];
         GlobalStatics_1.anIntArray3919[var4] =
             var2 +
                 (var11 + ((GlobalStatics_1.anIntArray3948[var5] - var11) * var14
@@ -892,7 +894,8 @@ public final class SoftwareModel extends AbstractModel {
       }
 
       if (var10 >= GlobalStatics_6.NEAR) {
-        var14 = (GlobalStatics_6.NEAR - var9) * DummyClass40.anIntArray841[var10 - var9];
+        var14 = (GlobalStatics_6.NEAR - var9) * DummyClass40.anIntArray841[var10
+            - var9];
         GlobalStatics_1.anIntArray3919[var4] =
             var2 +
                 (var11 + ((GlobalStatics_1.anIntArray3948[var7] - var11) * var14
@@ -917,7 +920,8 @@ public final class SoftwareModel extends AbstractModel {
       var12 = GlobalStatics_1.anIntArray3928[var7];
       var13 = this.anIntArray3896[var1] & 0xffff;
       if (var9 >= GlobalStatics_6.NEAR) {
-        var14 = (GlobalStatics_6.NEAR - var10) * DummyClass40.anIntArray841[var9 - var10];
+        var14 = (GlobalStatics_6.NEAR - var10) * DummyClass40.anIntArray841[var9
+            - var10];
         GlobalStatics_1.anIntArray3919[var4] =
             var2 +
                 (var11 + ((GlobalStatics_1.anIntArray3948[var6] - var11) * var14
@@ -932,7 +936,8 @@ public final class SoftwareModel extends AbstractModel {
       }
 
       if (var8 >= GlobalStatics_6.NEAR) {
-        var14 = (GlobalStatics_6.NEAR - var10) * DummyClass40.anIntArray841[var8 - var10];
+        var14 = (GlobalStatics_6.NEAR - var10) * DummyClass40.anIntArray841[var8
+            - var10];
         GlobalStatics_1.anIntArray3919[var4] =
             var2 +
                 (var11 + ((GlobalStatics_1.anIntArray3948[var5] - var11) * var14
@@ -1680,7 +1685,7 @@ public final class SoftwareModel extends AbstractModel {
     }
 
     this.method1945(false, var8 >= 0L, var8, this.aShort3886,
-        this.aShort3886 << 1, null);
+        this.aShort3886 << 1);
 
   }
 
@@ -1724,8 +1729,7 @@ public final class SoftwareModel extends AbstractModel {
       int var7,
       int var8,
       long var9,
-      int var11,
-      DummyClass0 var12) {
+      int var11) {
     if (!this.aBoolean3897) {
       this.method1947();
     }
@@ -1901,7 +1905,7 @@ public final class SoftwareModel extends AbstractModel {
                 }
 
                 this.method1945(var23, var30, var9, var16 - var14,
-                    var13 - var14 + 2, var12);
+                    var13 - var14 + 2);
 
               }
             }
@@ -2486,8 +2490,7 @@ public final class SoftwareModel extends AbstractModel {
   }
 
   private void method1945(boolean var1, boolean var2, long var3, int var5,
-      int var6,
-      DummyClass0 var7) {
+      int var6) {
     if (var6 < 1600) {
       int var8 = 0;
       int var9 = 0;
@@ -2940,8 +2943,7 @@ public final class SoftwareModel extends AbstractModel {
       }
     }
 
-    this.method1945(false, false, 0L, this.aShort3886, this.aShort3886 << 1,
-        null);
+    this.method1945(false, false, 0L, this.aShort3886, this.aShort3886 << 1);
 
   }
 

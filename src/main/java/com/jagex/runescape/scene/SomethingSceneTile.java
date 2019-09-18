@@ -1,6 +1,4 @@
-package com.jagex.runescape.model;
-
-import com.jagex.runescape.statics.GlobalStatics_9;
+package com.jagex.runescape.scene;
 
 public final class SomethingSceneTile {
 
@@ -48,7 +46,7 @@ public final class SomethingSceneTile {
     int var21 = var20 / 2;
     int var22 = var20 / 4;
     int var23 = var20 * 3 / 4;
-    int[] var24 = GlobalStatics_9.anIntArrayArray619[var1];
+    int[] var24 = SceneStatics.anIntArrayArray619[var1];
     int var25 = var24.length;
     this.anIntArray627 = new int[var25];
     this.anIntArray615 = new int[var25];
@@ -183,7 +181,7 @@ public final class SomethingSceneTile {
       var27[var30] = var36;
     }
 
-    int[] var38 = GlobalStatics_9.anIntArrayArray620[var1];
+    int[] var38 = SceneStatics.anIntArrayArray620[var1];
     var31 = var38.length / 4;
     this.anIntArray624 = new int[var31];
     this.anIntArray617 = new int[var31];

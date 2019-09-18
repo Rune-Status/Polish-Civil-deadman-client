@@ -1,6 +1,4 @@
-package com.jagex.runescape.model;
-
-import com.jagex.runescape.statics.DummyClass0;
+package com.jagex.runescape.scene;
 
 public abstract class SceneNode {
 
@@ -18,8 +16,8 @@ public abstract class SceneNode {
 
   public abstract void method1867(int var1,int var2,int var3,int var4,int var5 );
 
-  public abstract void draw(int var1,int var2,int var3,int var4,int var5,int var6,int var7,int var8,long var9,int var11,
-      DummyClass0 var12 );
+  public abstract void draw(int var1, int var2, int var3, int var4, int var5,
+      int var6, int var7, int var8, long var9, int var11);
 
   public abstract int getMinimumY();
 

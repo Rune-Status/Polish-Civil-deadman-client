@@ -54,8 +54,8 @@ import com.jagex.runescape.model.Player;
 import com.jagex.runescape.model.PlayerVariable;
 import com.jagex.runescape.model.Queue;
 import com.jagex.runescape.model.RenderAnimation;
-import com.jagex.runescape.model.SceneGraphTile;
-import com.jagex.runescape.model.SceneSomething;
+import com.jagex.runescape.scene.SceneGraphTile;
+import com.jagex.runescape.scene.SceneSomething;
 import com.jagex.runescape.model.ScriptState;
 import com.jagex.runescape.model.SignLink;
 import com.jagex.runescape.model.SignLinkRequest;
@@ -70,8 +70,9 @@ import com.jagex.runescape.model.SomethingOtherWorldMap;
 import com.jagex.runescape.model.SomethingPacket151;
 import com.jagex.runescape.model.SomethingQuickChat;
 import com.jagex.runescape.model.SomethingQuickChatK;
-import com.jagex.runescape.model.SomethingSceneI;
-import com.jagex.runescape.model.SomethingSceneTile;
+import com.jagex.runescape.scene.SceneStatics;
+import com.jagex.runescape.scene.SomethingSceneI;
+import com.jagex.runescape.scene.SomethingSceneTile;
 import com.jagex.runescape.model.SomethingTexture3;
 import com.jagex.runescape.model.SomethingVolume15;
 import com.jagex.runescape.model.SomethingWorldMapy;
@@ -851,27 +852,6 @@ public class GlobalStatics_9 {
   public static GameString aClass94_325 = GameStringStatics
       .create(",Mcran)2titre charg-B");
   public static GameString aClass94_331 = GameStringStatics.create("(U1");
-  public static int[][] anIntArrayArray619 = {
-      {1, 3, 5, 7}, {1, 3, 5, 7}, {1, 3, 5, 7}, {1, 3, 5, 7, 6},
-      {1, 3, 5, 7, 6}, {1, 3, 5, 7, 6},
-      {1, 3, 5, 7, 6}, {1, 3, 5, 7, 2, 6}, {1, 3, 5, 7, 2, 8},
-      {1, 3, 5, 7, 2, 8},
-      {1, 3, 5, 7, 11, 12}, {1, 3, 5, 7, 11, 12}, {1, 3, 5, 7, 13, 14}
-  };
-  public static int[][] anIntArrayArray620 = {
-      {0, 1, 2, 3, 0, 0, 1, 3}, {1, 1, 2, 3, 1, 0, 1, 3},
-      {0, 1, 2, 3, 1, 0, 1, 3},
-      {0, 0, 1, 2, 0, 0, 2, 4, 1, 0, 4, 3},
-      {0, 0, 1, 4, 0, 0, 4, 3, 1, 1, 2, 4},
-      {0, 0, 4, 3, 1, 0, 1, 2, 1, 0, 2, 4},
-      {0, 1, 2, 4, 1, 0, 1, 4, 1, 0, 4, 3},
-      {0, 4, 1, 2, 0, 4, 2, 5, 1, 0, 4, 5, 1, 0, 5, 3},
-      {0, 4, 1, 2, 0, 4, 2, 3, 0, 4, 3, 5, 1, 0, 4, 5},
-      {0, 0, 4, 5, 1, 4, 1, 2, 1, 4, 2, 3, 1, 4, 3, 5},
-      {0, 0, 1, 5, 0, 1, 4, 5, 0, 1, 2, 4, 1, 0, 5, 3, 1, 5, 4, 3, 1, 4, 2, 3},
-      {1, 0, 1, 5, 1, 1, 4, 5, 1, 1, 2, 4, 0, 0, 5, 3, 0, 5, 4, 3, 0, 4, 2, 3},
-      {1, 0, 5, 4, 1, 0, 1, 5, 0, 0, 4, 3, 0, 4, 5, 3, 0, 5, 2, 3, 0, 1, 2, 5}
-  };
   public static int[] anIntArray614 = new int[6];
   public static int[] anIntArray622 = new int[6];
   public static int[] anIntArray623 = new int[6];
@@ -9896,8 +9876,8 @@ public class GlobalStatics_9 {
     GlobalStatics_9.anIntArray614 = null;
     GlobalStatics_9.anIntArray630 = null;
     GlobalStatics_9.anIntArray628 = null;
-    GlobalStatics_9.anIntArrayArray619 = null;
-    GlobalStatics_9.anIntArrayArray620 = null;
+    SceneStatics.anIntArrayArray619 = null;
+    SceneStatics.anIntArrayArray620 = null;
   }
 
   public static void method1715() {

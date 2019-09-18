@@ -6,7 +6,7 @@ import com.jagex.runescape.model.AbstractModel;
 import com.jagex.runescape.model.CollisionMap;
 import com.jagex.runescape.model.GameObject;
 import com.jagex.runescape.model.GameObjectConfig;
-import com.jagex.runescape.model.SceneNode;
+import com.jagex.runescape.scene.SceneNode;
 import com.jagex.runescape.model.SceneShadowMap;
 import com.jagex.runescape.huffman.HuffmanEncoderStatics;
 import com.jagex.runescape.node.Deque;

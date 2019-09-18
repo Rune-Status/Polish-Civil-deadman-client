@@ -145,10 +145,6 @@ public final class Player extends Mobile {
         this.anInt2819 = 128 * this.waypointsX[0] + this.getSize() * 64;
         this.sceneY = 128 * this.waypointsY[0] + 64 * this.getSize();
       }
-
-      if (this.aClass127_Sub1_2801 != null) {
-        this.aClass127_Sub1_2801.method1759();
-      }
   }
 
   private void draw(DummyClass0 var1, int var2, AbstractModel var3, int var4, int var5,
@@ -167,11 +163,11 @@ public final class Player extends Mobile {
             float var20 = GlRenderer.method1839();
             GlRenderer.method1851();
             GlRenderer.method1825(var19, var20 - 150.0F);
-            var18.draw(0, var12, var14, var11, var10, var5, var15, var9, -1L, var6, var1);
+            var18.draw(0, var12, var14, var11, var10, var5, var15, var9, -1L, var6);
             GlRenderer.method1830();
             GlRenderer.method1825(var19, var20);
           } else {
-            var18.draw(0, var12, var14, var11, var10, var5, var15, var9, -1L, var6, var1);
+            var18.draw(0, var12, var14, var11, var10, var5, var15, var9, -1L, var6);
           }
         }
 
@@ -221,8 +217,7 @@ public final class Player extends Mobile {
       int var7,
       int var8,
       long var9,
-      int var11,
-      DummyClass0 var12 ) {
+      int var11) {
     if (this.appearance != null) {
         AnimationSequence var13 =
             this.animationId != -1 && this.anInt2828 == 0 ?
@@ -274,12 +269,12 @@ public final class Player extends Mobile {
               GlRenderer.method1851();
               GlRenderer.method1825(var18, -150.0f + var19);
               assert var23 != null;
-              var23.draw(0, var2, var3, var4, var5, var6, var7, var8, -1L, var11, null);
+              var23.draw(0, var2, var3, var4, var5, var6, var7, var8, -1L, var11);
               GlRenderer.method1830();
               GlRenderer.method1825(var18, var19);
             } else {
               assert var23 != null;
-              var23.draw(0, var2, var3, var4, var5, var6, var7, var8, -1L, var11, null);
+              var23.draw(0, var2, var3, var4, var5, var6, var7, var8, -1L, var11);
             }
           }
 
@@ -386,12 +381,12 @@ public final class Player extends Mobile {
 
           if (GlRenderer.USE_OPENGL) {
             var15.aBoolean2699 = true;
-            var15.draw(var1, var2, var3, var4, var5, var6, var7, var8, var9, var11,
-                this.aClass127_Sub1_2801);
+            var15.draw(var1, var2, var3, var4, var5, var6, var7, var8, var9, var11
+            );
             if (var23 != null) {
               var23.aBoolean2699 = true;
-              var23.draw(var1, var2, var3, var4, var5, var6, var7, var8, var9, var11,
-                  this.aClass127_Sub1_2801);
+              var23.draw(var1, var2, var3, var4, var5, var6, var7, var8, var9, var11
+              );
             }
           } else {
             if (var23 != null) {
@@ -403,8 +398,8 @@ public final class Player extends Mobile {
             }
 
             var15.aBoolean2699 = true;
-            var15.draw(var1, var2, var3, var4, var5, var6, var7, var8, var9, var11,
-                this.aClass127_Sub1_2801);
+            var15.draw(var1, var2, var3, var4, var5, var6, var7, var8, var9, var11
+            );
           }
 
           if (var25 != null) {
