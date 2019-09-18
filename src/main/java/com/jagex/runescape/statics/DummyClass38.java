@@ -29,10 +29,10 @@ public final class DummyClass38 {
     int var5;
     int var7;
     if ((var0 & 128) != 0) {
-      var4 = GlobalStatics_9.gameBuffer.readUnsignedShortLE();
-      var5 = GlobalStatics_9.gameBuffer.readUnsignedByte();
-      int var6 = GlobalStatics_9.gameBuffer.readUnsignedByte();
-      var7 = GlobalStatics_9.gameBuffer.position;
+      var4 = GlobalStatics_9.GAME_BUFFER.readUnsignedShortLE();
+      var5 = GlobalStatics_9.GAME_BUFFER.readUnsignedByte();
+      int var6 = GlobalStatics_9.GAME_BUFFER.readUnsignedByte();
+      var7 = GlobalStatics_9.GAME_BUFFER.position;
       boolean var8 = (0x8000 & var4) != 0;
       if (var3.name != null && var3.appearance != null) {
         long var9 = var3.name.toBase37();
@@ -54,7 +54,7 @@ public final class DummyClass38 {
 
         if (!var11 && GlobalStatics_9.IS_ON_TUTORIAL_ISLAND == 0) {
           DummyClass12.aClass3_Sub30_2030.position = 0;
-          GlobalStatics_9.gameBuffer
+          GlobalStatics_9.GAME_BUFFER
               .method774(2, var6, DummyClass12.aClass3_Sub30_2030.bytes,
                   0);
           DummyClass12.aClass3_Sub30_2030.position = 0;
@@ -101,61 +101,61 @@ public final class DummyClass38 {
         }
       }
 
-      GlobalStatics_9.gameBuffer.position = var7 + var6;
+      GlobalStatics_9.GAME_BUFFER.position = var7 + var6;
     }
 
     if ((var0 & 1) != 0) {
-      var4 = GlobalStatics_9.gameBuffer.readUnsignedShortSmart();
-      var5 = GlobalStatics_9.gameBuffer.method751((byte) -99);
+      var4 = GlobalStatics_9.GAME_BUFFER.readUnsignedShortSmart();
+      var5 = GlobalStatics_9.GAME_BUFFER.method751((byte) -99);
       var3.method1970(var5, -8, GlobalStatics_4.updateCycle, var4);
       var3.anInt2781 = 300 + GlobalStatics_4.updateCycle;
-      var3.anInt2775 = GlobalStatics_9.gameBuffer.method754(true);
+      var3.anInt2775 = GlobalStatics_9.GAME_BUFFER.method754(true);
     }
 
     if ((var0 & 8) != 0) {
-      var4 = GlobalStatics_9.gameBuffer.readUnsignedShort();
+      var4 = GlobalStatics_9.GAME_BUFFER.readUnsignedShort();
       if (var4 == 65535) {
         var4 = -1;
       }
 
-      var5 = GlobalStatics_9.gameBuffer.readUnsignedByte();
+      var5 = GlobalStatics_9.GAME_BUFFER.readUnsignedByte();
       GlobalStatics_9.method628(0, var5, var4, var3);
     }
 
     if ((4 & var0) != 0) {
-      var4 = GlobalStatics_9.gameBuffer.method751((byte) -118);
+      var4 = GlobalStatics_9.GAME_BUFFER.method751((byte) -118);
       byte[] var16 = new byte[var4];
       Buffer var19 = new Buffer(var16);
-      GlobalStatics_9.gameBuffer.copy(0, var4, var16);
+      GlobalStatics_9.GAME_BUFFER.copy(0, var4, var16);
       DummyClass45.configs[var1] = var19;
       var3.parseConfig(var19);
     }
 
     if ((2 & var0) != 0) {
-      var3.anInt2772 = GlobalStatics_9.gameBuffer.readUnsignedShortAdd();
+      var3.anInt2772 = GlobalStatics_9.GAME_BUFFER.readUnsignedShortAdd();
       if (var3.anInt2772 == 65535) {
         var3.anInt2772 = -1;
       }
     }
 
     if ((1024 & var0) != 0) {
-      var3.anInt2784 = GlobalStatics_9.gameBuffer.method786(true);
-      var3.anInt2835 = GlobalStatics_9.gameBuffer.readUnsignedByte();
-      var3.anInt2823 = GlobalStatics_9.gameBuffer.method751((byte) -106);
-      var3.anInt2798 = GlobalStatics_9.gameBuffer.readUnsignedByte();
+      var3.anInt2784 = GlobalStatics_9.GAME_BUFFER.method786(true);
+      var3.anInt2835 = GlobalStatics_9.GAME_BUFFER.readUnsignedByte();
+      var3.anInt2823 = GlobalStatics_9.GAME_BUFFER.method751((byte) -106);
+      var3.anInt2798 = GlobalStatics_9.GAME_BUFFER.readUnsignedByte();
       var3.anInt2800 =
-          GlobalStatics_9.gameBuffer.readUnsignedShortLE()
+          GlobalStatics_9.GAME_BUFFER.readUnsignedShortLE()
               + GlobalStatics_4.updateCycle;
       var3.anInt2790 =
-          GlobalStatics_9.gameBuffer.readUnsignedShortLE()
+          GlobalStatics_9.GAME_BUFFER.readUnsignedShortLE()
               + GlobalStatics_4.updateCycle;
-      var3.anInt2840 = GlobalStatics_9.gameBuffer.method786(true);
+      var3.anInt2840 = GlobalStatics_9.GAME_BUFFER.method786(true);
       var3.anInt2816 = 1;
       var3.anInt2811 = 0;
     }
 
     if ((var0 & 32) != 0) {
-      var3.aClass94_2825 = GlobalStatics_9.gameBuffer.readString();
+      var3.aClass94_2825 = GlobalStatics_9.GAME_BUFFER.readString();
       if (var3.aClass94_2825.charAt(0) == 126) {
         var3.aClass94_2825 = var3.aClass94_2825.substring(1);
         GlobalStatics_8
@@ -171,38 +171,38 @@ public final class DummyClass38 {
     }
 
     if ((var0 & 512) != 0) {
-      var4 = GlobalStatics_9.gameBuffer.readUnsignedShortSmart();
-      var5 = GlobalStatics_9.gameBuffer.method754(true);
+      var4 = GlobalStatics_9.GAME_BUFFER.readUnsignedShortSmart();
+      var5 = GlobalStatics_9.GAME_BUFFER.method754(true);
       var3.method1970(var5, var2 + 71, GlobalStatics_4.updateCycle, var4);
     }
 
     if ((2048 & var0) != 0) {
-      var4 = GlobalStatics_9.gameBuffer.method786(true);
+      var4 = GlobalStatics_9.GAME_BUFFER.method786(true);
       int[] var18 = new int[var4];
       int[] var17 = new int[var4];
       int[] var20 = new int[var4];
 
       for (int var22 = 0; var4 > var22; ++var22) {
-        int var23 = GlobalStatics_9.gameBuffer.readUnsignedShortLE();
+        int var23 = GlobalStatics_9.GAME_BUFFER.readUnsignedShortLE();
         if (var23 == 0xffff) {
           var23 = -1;
         }
 
         var18[var22] = var23;
-        var17[var22] = GlobalStatics_9.gameBuffer.method751((byte) 125);
-        var20[var22] = GlobalStatics_9.gameBuffer.readUnsignedShort();
+        var17[var22] = GlobalStatics_9.GAME_BUFFER.method751((byte) 125);
+        var20[var22] = GlobalStatics_9.GAME_BUFFER.readUnsignedShort();
       }
 
       GlobalStatics_9.method1342(var17, var18, var3, (byte) -113, var20);
     }
 
     if ((256 & var0) != 0) {
-      var4 = GlobalStatics_9.gameBuffer.readUnsignedShortLE();
+      var4 = GlobalStatics_9.GAME_BUFFER.readUnsignedShortLE();
       if (var4 == 0xffff) {
         var4 = -1;
       }
 
-      var5 = GlobalStatics_9.gameBuffer.readInt((byte) -73);
+      var5 = GlobalStatics_9.GAME_BUFFER.readInt((byte) -73);
       boolean var21 = true;
       if (var4 != -1 && var3.anInt2842 != -1 &&
           GlobalStatics_8
@@ -242,8 +242,8 @@ public final class DummyClass38 {
 
     if (var2 == -79) {
       if ((var0 & 64) != 0) {
-        var3.anInt2786 = GlobalStatics_9.gameBuffer.readUnsignedShort();
-        var3.anInt2762 = GlobalStatics_9.gameBuffer.readShortLEAdd();
+        var3.anInt2786 = GlobalStatics_9.GAME_BUFFER.readUnsignedShort();
+        var3.anInt2762 = GlobalStatics_9.GAME_BUFFER.readShortLEAdd();
       }
 
     }

@@ -1129,7 +1129,7 @@ public class GlobalStatics_6 {
           return -1;
         }
 
-        GlobalStatics_9.gameSocket =
+        GlobalStatics_9.GAME_SOCKET =
             new SocketStream((Socket) GlobalStatics_6.socketRequest.result,
                 DummyClass35.signLink);
         GlobalStatics_9.secureBuffer.position = 0;
@@ -1141,7 +1141,7 @@ public class GlobalStatics_6 {
 
         GlobalStatics_9.secureBuffer.writeByte(255);
         GlobalStatics_9.secureBuffer.writeInt(var1);
-        GlobalStatics_9.gameSocket.write(GlobalStatics_9.secureBuffer.bytes, 0,
+        GlobalStatics_9.GAME_SOCKET.write(GlobalStatics_9.secureBuffer.bytes, 0,
             GlobalStatics_9.secureBuffer.position);
         if (GlobalStatics_9.audioOutputStream0 != null) {
           GlobalStatics_9.audioOutputStream0.pause();
@@ -1151,7 +1151,7 @@ public class GlobalStatics_6 {
           GlobalStatics_9.audioOutputStream1.pause();
         }
 
-        var2 = GlobalStatics_9.gameSocket.read();
+        var2 = GlobalStatics_9.GAME_SOCKET.read();
         if (GlobalStatics_9.audioOutputStream0 != null) {
           GlobalStatics_9.audioOutputStream0.pause();
         }
@@ -1168,20 +1168,20 @@ public class GlobalStatics_6 {
       }
 
       if (GLStatics.anInt692 == 2) {
-        if (GlobalStatics_9.gameSocket.available() < 2) {
+        if (GlobalStatics_9.GAME_SOCKET.available() < 2) {
           return -1;
         }
 
-        GlobalStatics_9.anInt1002 = GlobalStatics_9.gameSocket.read();
+        GlobalStatics_9.anInt1002 = GlobalStatics_9.GAME_SOCKET.read();
         GlobalStatics_9.anInt1002 <<= 8;
-        GlobalStatics_9.anInt1002 += GlobalStatics_9.gameSocket.read();
+        GlobalStatics_9.anInt1002 += GlobalStatics_9.GAME_SOCKET.read();
         GLStatics.anInt692 = 3;
         GlobalStatics_10.anInt2484 = 0;
         GlobalStatics_10.aByteArray3396 = new byte[GlobalStatics_9.anInt1002];
       }
 
       if (GLStatics.anInt692 == 3) {
-        var1 = GlobalStatics_9.gameSocket.available();
+        var1 = GlobalStatics_9.GAME_SOCKET.available();
         if (var1 < 1) {
           return -1;
         }
@@ -1190,7 +1190,7 @@ public class GlobalStatics_6 {
           var1 = GlobalStatics_9.anInt1002 - GlobalStatics_10.anInt2484;
         }
 
-        GlobalStatics_9.gameSocket.read(GlobalStatics_10.aByteArray3396,
+        GlobalStatics_9.GAME_SOCKET.readBytes(GlobalStatics_10.aByteArray3396,
             GlobalStatics_10.anInt2484, var1);
         GlobalStatics_10.anInt2484 += var1;
         if (GlobalStatics_10.anInt2484 >= GlobalStatics_9.anInt1002) {
@@ -1206,8 +1206,8 @@ public class GlobalStatics_6 {
               }
             }
 
-            GlobalStatics_9.gameSocket.destroy();
-            GlobalStatics_9.gameSocket = null;
+            GlobalStatics_9.GAME_SOCKET.destroy();
+            GlobalStatics_9.GAME_SOCKET = null;
             GlobalStatics_7.anInt1088 = 0;
             GLStatics.anInt692 = 0;
             GlobalStatics_10.aByteArray3396 = null;
@@ -2559,7 +2559,7 @@ public class GlobalStatics_6 {
                                     0, true, -1, -1);
                       } else {
                         var24 = 2047 & widget.anInt201;
-                        if (var24 == GlobalStatics_10.localPlayerId) {
+                        if (var24 == GlobalStatics_10.LOCAL_PLAYER_ID) {
                           var24 = 2047;
                         }
 

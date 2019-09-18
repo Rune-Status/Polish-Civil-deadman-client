@@ -22,12 +22,12 @@ public final class DummyClass31 {
   public static float aFloat1475;
 
   public static void method1681(int var0) {
-    if (GlobalStatics_10.loginState == 5) {
+    if (GlobalStatics_10.LOGIN_STATE == 5) {
       if (var0 != -1) {
         DummyClass31.SERVER_JS5_DROP = null;
       }
 
-      GlobalStatics_10.loginState = 6;
+      GlobalStatics_10.LOGIN_STATE = 6;
     }
   }
 

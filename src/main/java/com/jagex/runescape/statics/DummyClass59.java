@@ -371,7 +371,7 @@ public final class DummyClass59 {
         GlobalStatics_9.method313((byte) 100);
         GlobalStatics_10.aBoolean3416 = false;
         if (GlobalStatics_10.FRAME != null
-            && GlobalStatics_9.gameSocket != null
+            && GlobalStatics_9.GAME_SOCKET != null
             && DummyClass15.state == 25) {
           GlobalStatics_9.secureBuffer.writePacket(20);
           GlobalStatics_9.secureBuffer.writeInt(1057001181);
@@ -411,7 +411,7 @@ public final class DummyClass59 {
           DummyClass26.setState(10, 5);
         } else {
           DummyClass26.setState(30, 5);
-          if (GlobalStatics_9.gameSocket != null) {
+          if (GlobalStatics_9.GAME_SOCKET != null) {
             GlobalStatics_9.secureBuffer.writePacket(110);
           }
         }

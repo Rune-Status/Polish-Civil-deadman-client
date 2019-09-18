@@ -465,7 +465,7 @@ public class GlobalStatics_3 {
     GlobalStatics_9.secureBuffer.position = 0;
     GlobalStatics_0.lastPacketId0 = -1;
     GlobalStatics_2.anInt3699 = 0;
-    GlobalStatics_9.gameBuffer.position = 0;
+    GlobalStatics_9.GAME_BUFFER.position = 0;
 
     int var1;
     for (var1 = 0; var1 < GlobalStatics_8.aClass96Array2114.length; ++var1) {

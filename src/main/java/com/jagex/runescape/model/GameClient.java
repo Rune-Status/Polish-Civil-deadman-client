@@ -189,7 +189,7 @@ public final class GameClient extends GameStub {
 
     if (!GlRenderer.USE_OPENGL) {
       GlobalStatics_0.method744(true);
-    } else if (GlobalStatics_10.loginState == 0
+    } else if (GlobalStatics_10.LOGIN_STATE == 0
         && GlobalStatics_0.anInt23 == 0) {
       if (GlobalStatics_9.anInt1753 == 2) {
         GlobalStatics_7.method379(var1 ^ 1025);
@@ -1039,9 +1039,9 @@ public final class GameClient extends GameStub {
     }
 
     GlobalStatics_7.aClass67_1443 = null;
-    if (GlobalStatics_9.gameSocket != null) {
-      GlobalStatics_9.gameSocket.destroy();
-      GlobalStatics_9.gameSocket = null;
+    if (GlobalStatics_9.GAME_SOCKET != null) {
+      GlobalStatics_9.GAME_SOCKET.destroy();
+      GlobalStatics_9.GAME_SOCKET = null;
     }
 
     DummyClass9.unbindKeyboard(GlobalStatics_8.GAME_CANVAS, -9320);

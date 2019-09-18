@@ -96,9 +96,9 @@ public final class GlobalStatics_11 {
     while (var1 < GlobalStatics_9.anInt997) {
       int var2 = DummyClass60.anIntArray441[var1];
       Player var3 = GlobalStatics_9.players[var2];
-      int var4 = GlobalStatics_9.gameBuffer.readUnsignedByte();
+      int var4 = GlobalStatics_9.GAME_BUFFER.readUnsignedByte();
       if ((16 & var4) != 0) {
-        var4 += GlobalStatics_9.gameBuffer.readUnsignedByte() << 8;
+        var4 += GlobalStatics_9.GAME_BUFFER.readUnsignedByte() << 8;
       }
 
       DummyClass38.method1080(var4, var2, (byte) -79, var3);
@@ -4003,7 +4003,7 @@ public final class GlobalStatics_11 {
                                       if (j1 == 6500) {
                                         if (DummyClass15.state != 10
                                             || GlobalStatics_9.anInt3375 != 0
-                                            || GlobalStatics_10.loginState != 0
+                                            || GlobalStatics_10.LOGIN_STATE != 0
                                             || GlobalStatics_0.anInt23 != 0) {
                                           GlobalStatics_9.anIntArray2929[k++] = 1;
                                         } else {
@@ -4063,7 +4063,7 @@ public final class GlobalStatics_11 {
                                         int i37 = GlobalStatics_9.anIntArray2929[--k];
                                         if (DummyClass15.state != 10
                                             || GlobalStatics_9.anInt3375 != 0
-                                            || GlobalStatics_10.loginState != 0
+                                            || GlobalStatics_10.LOGIN_STATE != 0
                                             || GlobalStatics_0.anInt23 != 0) {
                                           GlobalStatics_9.anIntArray2929[k++] = 0;
                                         } else {
@@ -4251,7 +4251,7 @@ public final class GlobalStatics_11 {
                                 int k73 = GlobalStatics_9.anIntArray2929[--k];
                                 if (DummyClass15.state == 10
                                     && GlobalStatics_9.anInt3375 == 0
-                                    && GlobalStatics_10.loginState == 0
+                                    && GlobalStatics_10.LOGIN_STATE == 0
                                     && GlobalStatics_0.anInt23 == 0 &&
                                     GLStatics.anInt692 == 0) {
                                   GlobalStatics_10
@@ -4265,7 +4265,7 @@ public final class GlobalStatics_11 {
                                 continue;
                               }
                               if (j1 == 5602) {
-                                if (GlobalStatics_10.loginState == 0) {
+                                if (GlobalStatics_10.LOGIN_STATE == 0) {
                                   GlobalStatics_5.loginResponse = -2;
                                 }
                                 continue;
@@ -4274,7 +4274,7 @@ public final class GlobalStatics_11 {
                                 k -= 4;
                                 if (DummyClass15.state == 10 &&
                                     GlobalStatics_9.anInt3375 == 0
-                                    && GlobalStatics_10.loginState == 0
+                                    && GlobalStatics_10.LOGIN_STATE == 0
                                     && GlobalStatics_0.anInt23 == 0
                                     && GLStatics.anInt692 == 0) {
                                   GlobalStatics_7.method377(
@@ -4289,7 +4289,7 @@ public final class GlobalStatics_11 {
                                 l--;
                                 if (DummyClass15.state == 10
                                     && GlobalStatics_9.anInt3375 == 0
-                                    && GlobalStatics_10.loginState == 0
+                                    && GlobalStatics_10.LOGIN_STATE == 0
                                     && GlobalStatics_0.anInt23 == 0
                                     && GLStatics.anInt692 == 0) {
                                   DummyClass59.method1041(
@@ -4304,7 +4304,7 @@ public final class GlobalStatics_11 {
                                 l -= 2;
                                 if (DummyClass15.state == 10 &&
                                     GlobalStatics_9.anInt3375 == 0
-                                    && GlobalStatics_10.loginState == 0
+                                    && GlobalStatics_10.LOGIN_STATE == 0
                                     && GlobalStatics_0.anInt23 == 0
                                     && GLStatics.anInt692 == 0) {
                                   GlobalStatics_10.createIndexedColorSprite(

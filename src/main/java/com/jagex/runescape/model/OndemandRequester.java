@@ -112,7 +112,7 @@ public final class OndemandRequester {
                 var7 = avail;
               }
 
-              this.socketStream.read(this.currentRequest.buffer.bytes,
+              this.socketStream.readBytes(this.currentRequest.buffer.bytes,
                   this.currentRequest.buffer.position, var7);
               if (this.encryptionKey != 0) {
                 for (var8 = 0; var7 > var8; ++var8) {
@@ -140,7 +140,7 @@ public final class OndemandRequester {
                 var6 = avail;
               }
 
-              this.socketStream.read(this.aClass3_Sub30_1008.bytes,
+              this.socketStream.readBytes(this.aClass3_Sub30_1008.bytes,
                   this.aClass3_Sub30_1008.position, var6);
               if (this.encryptionKey != 0) {
                 for (var7 = 0; var7 < var6; ++var7) {

@@ -48,7 +48,7 @@ public final class DummyClass1 {
       int var9;
       if (var1.anInt2772 >= 0x8000) {
         var9 = -32768 + var1.anInt2772;
-        if (var9 == GlobalStatics_10.localPlayerId) {
+        if (var9 == GlobalStatics_10.LOCAL_PLAYER_ID) {
           var9 = 2047;
         }
 

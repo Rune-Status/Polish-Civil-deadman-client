@@ -33,11 +33,11 @@ public class DummyClass5 extends DummyClass6 {
         GlobalStatics_10.anInt4032 = 0;
         if (var0 == -90) {
           if (!GlTexture2d.aBoolean3769
-              && GlobalStatics_9.gameSocket != null) {
+              && GlobalStatics_9.GAME_SOCKET != null) {
             GlobalStatics_9.secureBuffer.writePacket(93);
 
             try {
-              GlobalStatics_9.gameSocket
+              GlobalStatics_9.GAME_SOCKET
                   .write(GlobalStatics_9.secureBuffer.bytes, 0,
                       GlobalStatics_9.secureBuffer.position);
             } catch (IOException e) {

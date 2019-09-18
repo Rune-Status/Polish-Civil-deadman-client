@@ -69,9 +69,9 @@ public final class DummyClass9 extends DummyClass5 {
     if (GlobalStatics_9.anInt3375 != 0) {
       try {
         if (++GlobalStatics_2.anInt2246 > 1500) {
-          if (GlobalStatics_9.gameSocket != null) {
-            GlobalStatics_9.gameSocket.destroy();
-            GlobalStatics_9.gameSocket = null;
+          if (GlobalStatics_9.GAME_SOCKET != null) {
+            GlobalStatics_9.GAME_SOCKET.destroy();
+            GlobalStatics_9.GAME_SOCKET = null;
           }
 
           if (DummyClass26.anInt1616 >= 1) {
@@ -109,11 +109,11 @@ public final class DummyClass9 extends DummyClass5 {
             return;
           }
 
-          GlobalStatics_9.gameSocket =
+          GlobalStatics_9.GAME_SOCKET =
               new SocketStream((Socket) GlobalStatics_6.socketRequest.result,
                   DummyClass35.signLink);
           GlobalStatics_6.socketRequest = null;
-          GlobalStatics_9.gameSocket
+          GlobalStatics_9.GAME_SOCKET
               .write(GlobalStatics_9.secureBuffer.bytes, 0,
                   GlobalStatics_9.secureBuffer.position);
           if (GlobalStatics_9.audioOutputStream0 != null) {
@@ -124,7 +124,7 @@ public final class DummyClass9 extends DummyClass5 {
             GlobalStatics_9.audioOutputStream1.pause();
           }
 
-          var1 = GlobalStatics_9.gameSocket.read();
+          var1 = GlobalStatics_9.GAME_SOCKET.read();
           if (GlobalStatics_9.audioOutputStream0 != null) {
             GlobalStatics_9.audioOutputStream0.pause();
           }
@@ -136,8 +136,8 @@ public final class DummyClass9 extends DummyClass5 {
           if (var1 != 101) {
             GlobalStatics_5.loginResponse = var1;
             GlobalStatics_9.anInt3375 = 0;
-            GlobalStatics_9.gameSocket.destroy();
-            GlobalStatics_9.gameSocket = null;
+            GlobalStatics_9.GAME_SOCKET.destroy();
+            GlobalStatics_9.GAME_SOCKET = null;
             return;
           }
 
@@ -145,32 +145,32 @@ public final class DummyClass9 extends DummyClass5 {
         }
 
         if (GlobalStatics_9.anInt3375 == 3) {
-          assert GlobalStatics_9.gameSocket != null;
-          if (GlobalStatics_9.gameSocket.available() < 2) {
+          assert GlobalStatics_9.GAME_SOCKET != null;
+          if (GlobalStatics_9.GAME_SOCKET.available() < 2) {
             return;
           }
 
-          var1 = GlobalStatics_9.gameSocket.read() << 8
-              | GlobalStatics_9.gameSocket.read();
+          var1 = GlobalStatics_9.GAME_SOCKET.read() << 8
+              | GlobalStatics_9.GAME_SOCKET.read();
           MaterialShader5.method1627(var1, (byte) -16);
           if (GlobalStatics_7.anInt2451 == -1) {
             GlobalStatics_9.anInt3375 = 0;
             GlobalStatics_5.loginResponse = 6;
-            GlobalStatics_9.gameSocket.destroy();
-            GlobalStatics_9.gameSocket = null;
+            GlobalStatics_9.GAME_SOCKET.destroy();
+            GlobalStatics_9.GAME_SOCKET = null;
             return;
           }
 
           GlobalStatics_9.anInt3375 = 0;
-          GlobalStatics_9.gameSocket.destroy();
-          GlobalStatics_9.gameSocket = null;
+          GlobalStatics_9.GAME_SOCKET.destroy();
+          GlobalStatics_9.GAME_SOCKET = null;
           GlobalStatics_9.method951(0);
           return;
         }
       } catch (IOException var2) {
-        if (GlobalStatics_9.gameSocket != null) {
-          GlobalStatics_9.gameSocket.destroy();
-          GlobalStatics_9.gameSocket = null;
+        if (GlobalStatics_9.GAME_SOCKET != null) {
+          GlobalStatics_9.GAME_SOCKET.destroy();
+          GlobalStatics_9.GAME_SOCKET = null;
         }
 
         if (DummyClass26.anInt1616 < 1) {

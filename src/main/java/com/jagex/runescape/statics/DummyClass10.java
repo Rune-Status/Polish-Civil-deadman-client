@@ -21,9 +21,9 @@ public final class DummyClass10 {
 
   public static void method2261(int var0) {
     while (true) {
-      if (GlobalStatics_9.gameBuffer
+      if (GlobalStatics_9.GAME_BUFFER
           .method815(GlobalStatics_0.packetLength, 32666) >= 27) {
-        int var1 = GlobalStatics_9.gameBuffer.readBits(15);
+        int var1 = GlobalStatics_9.GAME_BUFFER.readBits(15);
         if (var1 != 32767) {
           boolean var2 = false;
           if (GlobalStatics_8.NPCS[var1] == null) {
@@ -38,27 +38,27 @@ public final class DummyClass10 {
             GlobalStatics_6.method574(var3, false);
           }
 
-          int var4 = GlobalStatics_9.gameBuffer.readBits(1);
-          int var5 = DummyClass32.anIntArray510[GlobalStatics_9.gameBuffer
+          int var4 = GlobalStatics_9.GAME_BUFFER.readBits(1);
+          int var5 = DummyClass32.anIntArray510[GlobalStatics_9.GAME_BUFFER
               .readBits(3)];
           if (var2) {
             var3.anInt2806 = var3.rotationY = var5;
           }
 
-          int var6 = GlobalStatics_9.gameBuffer.readBits(1);
+          int var6 = GlobalStatics_9.GAME_BUFFER.readBits(1);
           if (var6 == 1) {
             DummyClass60.anIntArray441[GlobalStatics_9.anInt997++] = var1;
           }
 
-          int var7 = GlobalStatics_9.gameBuffer.readBits(5);
+          int var7 = GlobalStatics_9.GAME_BUFFER.readBits(5);
           var3.setConfiguration(-1,
               GlobalStatics_2.getNpcConfiguration(
-                  GlobalStatics_9.gameBuffer.readBits(14)));
+                  GlobalStatics_9.GAME_BUFFER.readBits(14)));
           if (var7 > 15) {
             var7 -= 32;
           }
 
-          int var8 = GlobalStatics_9.gameBuffer.readBits(5);
+          int var8 = GlobalStatics_9.GAME_BUFFER.readBits(5);
           if (var8 > 15) {
             var8 -= 32;
           }
@@ -81,7 +81,7 @@ public final class DummyClass10 {
         }
       }
 
-      GlobalStatics_9.gameBuffer.method818(false);
+      GlobalStatics_9.GAME_BUFFER.method818(false);
       if (var0 <= 0) {
         DummyClass10.method2265(-16);
       }
@@ -259,9 +259,9 @@ public final class DummyClass10 {
   }
 
   public static void destroyGame(byte var0) {
-    if (GlobalStatics_9.gameSocket != null) {
-      GlobalStatics_9.gameSocket.destroy();
-      GlobalStatics_9.gameSocket = null;
+    if (GlobalStatics_9.GAME_SOCKET != null) {
+      GlobalStatics_9.GAME_SOCKET.destroy();
+      GlobalStatics_9.GAME_SOCKET = null;
     }
 
     GlobalStatics_9.method313((byte) 110);

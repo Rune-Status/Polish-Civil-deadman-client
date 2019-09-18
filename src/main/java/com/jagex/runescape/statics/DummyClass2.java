@@ -12,18 +12,18 @@ public class DummyClass2 {
   public static int[] anIntArray1681;
 
   public static void handleLogin() {
-    if (GlobalStatics_10.loginState != 0
-        && GlobalStatics_10.loginState != 5) {
+    if (GlobalStatics_10.LOGIN_STATE != 0
+        && GlobalStatics_10.LOGIN_STATE != 5) {
       try {
         if (++GlobalStatics_4.anInt820 > 2000) {
-          if (GlobalStatics_9.gameSocket != null) {
-            GlobalStatics_9.gameSocket.destroy();
-            GlobalStatics_9.gameSocket = null;
+          if (GlobalStatics_9.GAME_SOCKET != null) {
+            GlobalStatics_9.GAME_SOCKET.destroy();
+            GlobalStatics_9.GAME_SOCKET = null;
           }
 
           if (GlobalStatics_9.anInt2079 >= 1) {
             GlobalStatics_5.loginResponse = -5;
-            GlobalStatics_10.loginState = 0;
+            GlobalStatics_10.LOGIN_STATE = 0;
             return;
           }
 
@@ -34,19 +34,19 @@ public class DummyClass2 {
             GlobalStatics_9.anInt2894 = DummyClass11.anInt2036;
           }
 
-          GlobalStatics_10.loginState = 1;
+          GlobalStatics_10.LOGIN_STATE = 1;
           ++GlobalStatics_9.anInt2079;
         }
 
-        if (GlobalStatics_10.loginState == 1) {
+        if (GlobalStatics_10.LOGIN_STATE == 1) {
           GlobalStatics_6.socketRequest =
               DummyClass35.signLink
                   .method1441((byte) 8, DummyClass36.aString2611,
                       GlobalStatics_9.anInt2894);
-          GlobalStatics_10.loginState = 2;
+          GlobalStatics_10.LOGIN_STATE = 2;
         }
 
-        if (GlobalStatics_10.loginState == 2) {
+        if (GlobalStatics_10.LOGIN_STATE == 2) {
           assert GlobalStatics_6.socketRequest != null;
           if (GlobalStatics_6.socketRequest.status == 2) {
             throw new IOException();
@@ -56,7 +56,7 @@ public class DummyClass2 {
             return;
           }
 
-          GlobalStatics_9.gameSocket =
+          GlobalStatics_9.GAME_SOCKET =
               new SocketStream((Socket) GlobalStatics_6.socketRequest.result,
                   DummyClass35.signLink);
           GlobalStatics_6.socketRequest = null;
@@ -67,7 +67,7 @@ public class DummyClass2 {
           GlobalStatics_9.secureBuffer.writeByte(14);
           int hash = (int) (encodedUsername >> 16 & 31L);
           GlobalStatics_9.secureBuffer.writeByte(hash);
-          GlobalStatics_9.gameSocket
+          GlobalStatics_9.GAME_SOCKET
               .write(GlobalStatics_9.secureBuffer.bytes, 0, 2);
           if (GlobalStatics_9.audioOutputStream0 != null) {
             GlobalStatics_9.audioOutputStream0.pause();
@@ -77,7 +77,7 @@ public class DummyClass2 {
             GlobalStatics_9.audioOutputStream1.pause();
           }
 
-          int response = GlobalStatics_9.gameSocket.read();
+          int response = GlobalStatics_9.GAME_SOCKET.read();
           if (GlobalStatics_9.audioOutputStream0 != null) {
             GlobalStatics_9.audioOutputStream0.pause();
           }
@@ -88,24 +88,24 @@ public class DummyClass2 {
 
           if (response != 0) {
             GlobalStatics_5.loginResponse = response;
-            GlobalStatics_10.loginState = 0;
-            GlobalStatics_9.gameSocket.destroy();
-            GlobalStatics_9.gameSocket = null;
+            GlobalStatics_10.LOGIN_STATE = 0;
+            GlobalStatics_9.GAME_SOCKET.destroy();
+            GlobalStatics_9.GAME_SOCKET = null;
             return;
           }
 
-          GlobalStatics_10.loginState = 3;
+          GlobalStatics_10.LOGIN_STATE = 3;
         }
 
-        if (GlobalStatics_10.loginState == 3) {
-          if (GlobalStatics_9.gameSocket.available() < 8) {
+        if (GlobalStatics_10.LOGIN_STATE == 3) {
+          if (GlobalStatics_9.GAME_SOCKET.available() < 8) {
             return;
           }
 
-          GlobalStatics_9.gameSocket
-              .read(GlobalStatics_9.gameBuffer.bytes, 0, 8);
-          GlobalStatics_9.gameBuffer.position = 0;
-          GlobalStatics_9.serverCipherKey = GlobalStatics_9.gameBuffer
+          GlobalStatics_9.GAME_SOCKET
+              .readBytes(GlobalStatics_9.GAME_BUFFER.bytes, 0, 8);
+          GlobalStatics_9.GAME_BUFFER.position = 0;
+          GlobalStatics_9.serverCipherKey = GlobalStatics_9.GAME_BUFFER
               .readLong();
           GlobalStatics_9.secureBuffer.position = 0;
           int[] keys = new int[4];
@@ -212,7 +212,7 @@ public class DummyClass2 {
           GlobalStatics_7.loginBuffer
               .write(GlobalStatics_9.secureBuffer.bytes, 0,
                   GlobalStatics_9.secureBuffer.position);
-          GlobalStatics_9.gameSocket
+          GlobalStatics_9.GAME_SOCKET
               .write(GlobalStatics_7.loginBuffer.bytes, 0,
                   GlobalStatics_7.loginBuffer.position);
 
@@ -220,25 +220,25 @@ public class DummyClass2 {
           for (int i = 0; i < 4; i++) {
             keys[i] += 50;
           }
-          GlobalStatics_9.gameBuffer.initializeCipher(keys);
+          GlobalStatics_9.GAME_BUFFER.initializeCipher(keys);
 
-          GlobalStatics_10.loginState = 4;
+          GlobalStatics_10.LOGIN_STATE = 4;
         }
 
-        if (GlobalStatics_10.loginState == 4) {
-          if (GlobalStatics_9.gameSocket.available() < 1) {
+        if (GlobalStatics_10.LOGIN_STATE == 4) {
+          if (GlobalStatics_9.GAME_SOCKET.available() < 1) {
             return;
           }
 
-          int response = GlobalStatics_9.gameSocket.read();
+          int response = GlobalStatics_9.GAME_SOCKET.read();
           if (response == 21) {
-            GlobalStatics_10.loginState = 7;
+            GlobalStatics_10.LOGIN_STATE = 7;
           } else {
             if (response == 29) {
-              GlobalStatics_10.loginState = 10;
+              GlobalStatics_10.LOGIN_STATE = 10;
             } else {
               if (response == 1) {
-                GlobalStatics_10.loginState = 5;
+                GlobalStatics_10.LOGIN_STATE = 5;
                 GlobalStatics_5.loginResponse = 1;
                 return;
               }
@@ -246,97 +246,97 @@ public class DummyClass2 {
               if (response != 2) {
                 if (response != 15) {
                   if (response == 23 && GlobalStatics_9.anInt2079 < 1) {
-                    GlobalStatics_10.loginState = 1;
+                    GlobalStatics_10.LOGIN_STATE = 1;
                     ++GlobalStatics_9.anInt2079;
                     GlobalStatics_4.anInt820 = 0;
-                    GlobalStatics_9.gameSocket.destroy();
-                    GlobalStatics_9.gameSocket = null;
+                    GlobalStatics_9.GAME_SOCKET.destroy();
+                    GlobalStatics_9.GAME_SOCKET = null;
                     return;
                   }
 
                   GlobalStatics_5.loginResponse = response;
-                  GlobalStatics_10.loginState = 0;
-                  GlobalStatics_9.gameSocket.destroy();
-                  GlobalStatics_9.gameSocket = null;
+                  GlobalStatics_10.LOGIN_STATE = 0;
+                  GlobalStatics_9.GAME_SOCKET.destroy();
+                  GlobalStatics_9.GAME_SOCKET = null;
                   return;
                 }
 
-                GlobalStatics_10.loginState = 0;
+                GlobalStatics_10.LOGIN_STATE = 0;
                 GlobalStatics_5.loginResponse = response;
                 return;
               }
 
-              GlobalStatics_10.loginState = 8;
+              GlobalStatics_10.LOGIN_STATE = 8;
             }
           }
         }
 
-        if (GlobalStatics_10.loginState == 6) {
+        if (GlobalStatics_10.LOGIN_STATE == 6) {
           GlobalStatics_9.secureBuffer.position = 0;
           GlobalStatics_9.secureBuffer.writePacket(17);
-          GlobalStatics_9.gameSocket
+          GlobalStatics_9.GAME_SOCKET
               .write(GlobalStatics_9.secureBuffer.bytes, 0,
                   GlobalStatics_9.secureBuffer.position);
-          GlobalStatics_10.loginState = 4;
+          GlobalStatics_10.LOGIN_STATE = 4;
           return;
         }
 
-        if (GlobalStatics_10.loginState == 7) {
-          if (GlobalStatics_9.gameSocket.available() >= 1) {
+        if (GlobalStatics_10.LOGIN_STATE == 7) {
+          if (GlobalStatics_9.GAME_SOCKET.available() >= 1) {
             GlobalStatics_10.anInt3413 =
-                60 * (3 + GlobalStatics_9.gameSocket.read());
-            GlobalStatics_10.loginState = 0;
+                60 * (3 + GlobalStatics_9.GAME_SOCKET.read());
+            GlobalStatics_10.LOGIN_STATE = 0;
             GlobalStatics_5.loginResponse = 21;
-            GlobalStatics_9.gameSocket.destroy();
-            GlobalStatics_9.gameSocket = null;
+            GlobalStatics_9.GAME_SOCKET.destroy();
+            GlobalStatics_9.GAME_SOCKET = null;
             return;
           }
 
           return;
         }
 
-        if (GlobalStatics_10.loginState == 10) {
-          if (GlobalStatics_9.gameSocket.available() >= 1) {
-            GlobalStatics_9.anInt2561 = GlobalStatics_9.gameSocket
+        if (GlobalStatics_10.LOGIN_STATE == 10) {
+          if (GlobalStatics_9.GAME_SOCKET.available() >= 1) {
+            GlobalStatics_9.anInt2561 = GlobalStatics_9.GAME_SOCKET
                 .read();
-            GlobalStatics_10.loginState = 0;
+            GlobalStatics_10.LOGIN_STATE = 0;
             GlobalStatics_5.loginResponse = 29;
-            GlobalStatics_9.gameSocket.destroy();
-            GlobalStatics_9.gameSocket = null;
+            GlobalStatics_9.GAME_SOCKET.destroy();
+            GlobalStatics_9.GAME_SOCKET = null;
             return;
           }
 
           return;
         }
 
-        if (GlobalStatics_10.loginState == 8) {
-          if (GlobalStatics_9.gameSocket.available() < 14) {
+        if (GlobalStatics_10.LOGIN_STATE == 8) {
+          if (GlobalStatics_9.GAME_SOCKET.available() < 14) {
             return;
           }
 
-          GlobalStatics_9.gameSocket
-              .read(GlobalStatics_9.gameBuffer.bytes, 0, 14);
-          GlobalStatics_9.gameBuffer.position = 0;
-          GlobalStatics_10.PLAYER_RIGHTS = GlobalStatics_9.gameBuffer
+          GlobalStatics_9.GAME_SOCKET
+              .readBytes(GlobalStatics_9.GAME_BUFFER.bytes, 0, 14);
+          GlobalStatics_9.GAME_BUFFER.position = 0;
+          GlobalStatics_10.PLAYER_RIGHTS = GlobalStatics_9.GAME_BUFFER
               .readUnsignedByte();
-          GlobalStatics_9.anInt3775 = GlobalStatics_9.gameBuffer
+          GlobalStatics_9.anInt3775 = GlobalStatics_9.GAME_BUFFER
               .readUnsignedByte();
           GlobalStatics_9.aBoolean2433 =
-              GlobalStatics_9.gameBuffer.readUnsignedByte() == 1;
+              GlobalStatics_9.GAME_BUFFER.readUnsignedByte() == 1;
           GlobalStatics_6.aBoolean1641 =
-              GlobalStatics_9.gameBuffer.readUnsignedByte() == 1;
+              GlobalStatics_9.GAME_BUFFER.readUnsignedByte() == 1;
           GlobalStatics_7.aBoolean4063 =
-              GlobalStatics_9.gameBuffer.readUnsignedByte() == 1;
+              GlobalStatics_9.GAME_BUFFER.readUnsignedByte() == 1;
           GlobalStatics_10.aBoolean3166 =
-              GlobalStatics_9.gameBuffer.readUnsignedByte() == 1;
+              GlobalStatics_9.GAME_BUFFER.readUnsignedByte() == 1;
           GlobalStatics_8.aBoolean29 =
-              GlobalStatics_9.gameBuffer.readUnsignedByte() == 1;
-          GlobalStatics_10.localPlayerId = GlobalStatics_9.gameBuffer
+              GlobalStatics_9.GAME_BUFFER.readUnsignedByte() == 1;
+          GlobalStatics_10.LOCAL_PLAYER_ID = GlobalStatics_9.GAME_BUFFER
               .readUnsignedShort();
           GlobalStatics_9.aBoolean3358 =
-              GlobalStatics_9.gameBuffer.readUnsignedByte() == 1;
+              GlobalStatics_9.GAME_BUFFER.readUnsignedByte() == 1;
           GlobalStatics_9.aBoolean66 =
-              GlobalStatics_9.gameBuffer.readUnsignedByte() == 1;
+              GlobalStatics_9.GAME_BUFFER.readUnsignedByte() == 1;
           GlobalStatics_9.method1702((byte) -124, GlobalStatics_9.aBoolean66);
           GlobalStatics_10.method845(GlobalStatics_9.aBoolean66, 255);
           if (!GlobalStatics_9.aBoolean3779) {
@@ -349,24 +349,24 @@ public class DummyClass2 {
             }
           }
 
-          GlobalStatics_0.packetId = GlobalStatics_9.gameBuffer.readPacketId();
-          GlobalStatics_0.packetLength = GlobalStatics_9.gameBuffer
+          GlobalStatics_0.packetId = GlobalStatics_9.GAME_BUFFER.readPacketId();
+          GlobalStatics_0.packetLength = GlobalStatics_9.GAME_BUFFER
               .readUnsignedShort();
-          GlobalStatics_10.loginState = 9;
+          GlobalStatics_10.LOGIN_STATE = 9;
         }
 
-        if (GlobalStatics_10.loginState == 9) {
-          if (GlobalStatics_9.gameSocket.available()
+        if (GlobalStatics_10.LOGIN_STATE == 9) {
+          if (GlobalStatics_9.GAME_SOCKET.available()
               < GlobalStatics_0.packetLength) {
             return;
           }
 
-          GlobalStatics_9.gameBuffer.position = 0;
-          GlobalStatics_9.gameSocket
-              .read(GlobalStatics_9.gameBuffer.bytes, 0,
+          GlobalStatics_9.GAME_BUFFER.position = 0;
+          GlobalStatics_9.GAME_SOCKET
+              .readBytes(GlobalStatics_9.GAME_BUFFER.bytes, 0,
                   GlobalStatics_0.packetLength);
           GlobalStatics_5.loginResponse = 2;
-          GlobalStatics_10.loginState = 0;
+          GlobalStatics_10.LOGIN_STATE = 0;
           GlobalStatics_3.method2061(true);
           GlobalStatics_2.anInt3606 = -1;
           DummyClass37.parseSceneRebuild(false);
@@ -375,16 +375,16 @@ public class DummyClass2 {
         }
 
       } catch (IOException var7) {
-        if (GlobalStatics_9.gameSocket != null) {
-          GlobalStatics_9.gameSocket.destroy();
-          GlobalStatics_9.gameSocket = null;
+        if (GlobalStatics_9.GAME_SOCKET != null) {
+          GlobalStatics_9.GAME_SOCKET.destroy();
+          GlobalStatics_9.GAME_SOCKET = null;
         }
 
         if (GlobalStatics_9.anInt2079 >= 1) {
-          GlobalStatics_10.loginState = 0;
+          GlobalStatics_10.LOGIN_STATE = 0;
           GlobalStatics_5.loginResponse = -4;
         } else {
-          GlobalStatics_10.loginState = 1;
+          GlobalStatics_10.LOGIN_STATE = 1;
           GlobalStatics_4.anInt820 = 0;
           ++GlobalStatics_9.anInt2079;
           if (DummyClass11.anInt2036 == GlobalStatics_9.anInt2894) {

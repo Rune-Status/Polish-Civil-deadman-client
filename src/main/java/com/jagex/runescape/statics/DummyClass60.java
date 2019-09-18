@@ -37,7 +37,7 @@ public final class DummyClass60 {
     DummyClass12.minimapMode = 0;
     DummyClass36.updateTime = 0;
     GlobalStatics_9.lastPacketId2 = -1;
-    GlobalStatics_9.gameBuffer.position = 0;
+    GlobalStatics_9.GAME_BUFFER.position = 0;
     GlobalStatics_2.anInt3699 = 0;
     GlobalStatics_0.packetId = -1;
 

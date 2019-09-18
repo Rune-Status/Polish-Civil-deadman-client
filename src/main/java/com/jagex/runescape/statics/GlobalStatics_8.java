@@ -3562,7 +3562,7 @@ public class GlobalStatics_8 {
   }
 
   public static void method1964(boolean var0) {
-    int var1 = GlobalStatics_9.gameBuffer.readBits(8);
+    int var1 = GlobalStatics_9.GAME_BUFFER.readBits(8);
     int var2;
     if (DummyClass13.anInt2022 > var1) {
       for (var2 = var1; var2 < DummyClass13.anInt2022; ++var2) {
@@ -3581,12 +3581,12 @@ public class GlobalStatics_8 {
       for (; var2 < var1; ++var2) {
         int var3 = DummyClass42.anIntArray887[var2];
         Player var4 = GlobalStatics_9.players[var3];
-        int var5 = GlobalStatics_9.gameBuffer.readBits(1);
+        int var5 = GlobalStatics_9.GAME_BUFFER.readBits(1);
         if (var5 == 0) {
           DummyClass42.anIntArray887[DummyClass13.anInt2022++] = var3;
           var4.anInt2838 = GlobalStatics_4.updateCycle;
         } else {
-          int var6 = GlobalStatics_9.gameBuffer.readBits(2);
+          int var6 = GlobalStatics_9.GAME_BUFFER.readBits(2);
           if (var6 == 0) {
             DummyClass42.anIntArray887[DummyClass13.anInt2022++] = var3;
             var4.anInt2838 = GlobalStatics_4.updateCycle;
@@ -3597,9 +3597,9 @@ public class GlobalStatics_8 {
             if (var6 == 1) {
               DummyClass42.anIntArray887[DummyClass13.anInt2022++] = var3;
               var4.anInt2838 = GlobalStatics_4.updateCycle;
-              var7 = GlobalStatics_9.gameBuffer.readBits(3);
+              var7 = GlobalStatics_9.GAME_BUFFER.readBits(3);
               var4.method1968(1, (byte) 46, var7);
-              var8 = GlobalStatics_9.gameBuffer.readBits(1);
+              var8 = GlobalStatics_9.GAME_BUFFER.readBits(1);
               if (var8 == 1) {
                 DummyClass60.anIntArray441[GlobalStatics_9.anInt997++] = var3;
               }
@@ -3607,17 +3607,17 @@ public class GlobalStatics_8 {
               if (var6 == 2) {
                 DummyClass42.anIntArray887[DummyClass13.anInt2022++] = var3;
                 var4.anInt2838 = GlobalStatics_4.updateCycle;
-                if (GlobalStatics_9.gameBuffer.readBits(1) == 1) {
-                  var7 = GlobalStatics_9.gameBuffer.readBits(3);
+                if (GlobalStatics_9.GAME_BUFFER.readBits(1) == 1) {
+                  var7 = GlobalStatics_9.GAME_BUFFER.readBits(3);
                   var4.method1968(2, (byte) -92, var7);
-                  var8 = GlobalStatics_9.gameBuffer.readBits(3);
+                  var8 = GlobalStatics_9.GAME_BUFFER.readBits(3);
                   var4.method1968(2, (byte) 88, var8);
                 } else {
-                  var7 = GlobalStatics_9.gameBuffer.readBits(3);
+                  var7 = GlobalStatics_9.GAME_BUFFER.readBits(3);
                   var4.method1968(0, (byte) 113, var7);
                 }
 
-                var7 = GlobalStatics_9.gameBuffer.readBits(1);
+                var7 = GlobalStatics_9.GAME_BUFFER.readBits(1);
                 if (var7 == 1) {
                   DummyClass60.anIntArray441[GlobalStatics_9.anInt997++] = var3;
                 }
@@ -3744,8 +3744,8 @@ public class GlobalStatics_8 {
     if (DummyClass13.anInt2023 > 0) {
       DummyClass10.destroyGame((byte) 46);
     } else {
-      DummyClass8.aClass89_4012 = GlobalStatics_9.gameSocket;
-      GlobalStatics_9.gameSocket = null;
+      DummyClass8.aClass89_4012 = GlobalStatics_9.GAME_SOCKET;
+      GlobalStatics_9.GAME_SOCKET = null;
       DummyClass26.setState(40, 5);
     }
   }

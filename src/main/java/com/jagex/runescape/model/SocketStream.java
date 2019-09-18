@@ -103,7 +103,7 @@ public final class SocketStream implements Runnable {
       }
   }
 
-  public void read(byte[] var4, int var1, int var2) throws IOException {
+  public void readBytes(byte[] var4, int var1, int var2) throws IOException {
     if (!this.aBoolean1241) {
         while (var2 > 0) {
           int var5 = this.anInputStream1232.read(var4, var1, var2);

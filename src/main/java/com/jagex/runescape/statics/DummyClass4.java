@@ -52,7 +52,7 @@ public final class DummyClass4 extends DummyClass6 {
       }
 
       if (GlobalStatics_0.packetLength
-          == GlobalStatics_9.gameBuffer.position) {
+          == GlobalStatics_9.GAME_BUFFER.position) {
         for (var1 = 0; var1 < DummyClass13.anInt2022; ++var1) {
           if (GlobalStatics_9.players[DummyClass42.anIntArray887[var1]]
               == null) {
@@ -63,7 +63,7 @@ public final class DummyClass4 extends DummyClass6 {
 
       } else {
         throw new RuntimeException(
-            "gpp1 pos:" + GlobalStatics_9.gameBuffer.position + " psize:"
+            "gpp1 pos:" + GlobalStatics_9.GAME_BUFFER.position + " psize:"
                 + com.jagex.runescape.statics.GlobalStatics_0.packetLength);
       }
     }
