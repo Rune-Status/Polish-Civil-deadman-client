@@ -1,9 +1,5 @@
 package com.jagex.runescape.common;
 
-import com.jagex.runescape.model.AbstractDirectColorSprite;
-import com.jagex.runescape.statics.DummyClass53;
-import com.jagex.runescape.statics.GlobalStatics_10;
-
 public final class GameStringStatics {
 
   public static int[] anIntArray2004 = {
@@ -86,10 +82,6 @@ public final class GameStringStatics {
   public static GameString aClass94_827 = create("purple:");
   public static GameString aClass94_825 = aClass94_827;
   public static GameString aClass94_833 = aClass94_827;
-  public static int anInt820;
-  public static AbstractDirectColorSprite aClass3_Sub28_Sub16_824;
-  public static long[] aLongArray826 = new long[200];
-  public static int anInt828;
   public static GameString aClass94_829 = create("null");
   public static GameString aClass94_3711 = create("gt");
   public static GameString aClass94_3712 = create("lt");
@@ -121,7 +113,8 @@ public final class GameStringStatics {
   public static GameString aClass94_3626 = create("Created gameworld");
   public static GameString aClass94_3629 = aClass94_3626;
   public static GameString aClass94_3633 = create("Textures charg-Bes");
-  public static GameString aClass94_3634 = create("Liste des serveurs charg-Be");
+  public static GameString aClass94_3634 = create(
+      "Liste des serveurs charg-Be");
   public static GameString aClass94_1694 = create("document)3cookie=(R");
   public static GameString aClass94_1696 = create(
       "Sie k-Onnen sich selbst nicht auf Ihre Freunde)2Liste setzen(Q");
@@ -153,7 +146,8 @@ public final class GameStringStatics {
   public static GameString aClass94_2002 =
       create("Chargement des fichiers config )2 ");
   public static GameString aClass94_2003 = create("_labels");
-  public static GameString aClass94_2074 = create("; version=1; path=)4; domain=");
+  public static GameString aClass94_2074 = create(
+      "; version=1; path=)4; domain=");
   public static GameString RECTANGLE_DEBUG_EQ = create("rect_debug=");
   public static GameString aClass94_2080 = create("(U2");
   public static GameString aClass94_2280 = create("Starting 3d Library");
@@ -279,7 +273,8 @@ public final class GameStringStatics {
   public static GameString aClass94_463 = create("Bitte entfernen Sie ");
   public static GameString aClass94_465 = create(" ");
   public static GameString aClass94_468 = create("(U");
-  public static GameString aClass94_3646 = create("D-Bmarrage de la librairie 3D");
+  public static GameString aClass94_3646 = create(
+      "D-Bmarrage de la librairie 3D");
   public static GameString aClass94_3649 = create("Fichiers config charg-Bs");
   public static GameString aClass94_3650 = create("Fermer");
   public static GameString aClass94_3651 = create("::mm");
@@ -418,9 +413,10 @@ public final class GameStringStatics {
   public static GameString aClass94_3142 = aClass94_3141;
   public static GameString aClass94_3145 = create(")1 ");
   public static GameString aClass94_3408 = create("Untersuchen");
-  public static GameString aClass94_3409 = create("Musik)2Engine vorbereitet)3");
+  public static GameString aClass94_3409 = create(
+      "Musik)2Engine vorbereitet)3");
   public static GameString aClass94_3079 = create("Examiner");
-  public static GameString aClass94_3080 = DummyClass53.method1586(23161, 160);
+  public static GameString aClass94_3080 = method1586(23161, 160);
   public static GameString aClass94_3096 = create("Close");
   public static GameString aClass94_3097 = aClass94_3096;
   public static GameString aClass94_3306 =
@@ -451,7 +447,6 @@ public final class GameStringStatics {
   public static GameString aClass94_3334 = create("wave2:");
   public static GameString aClass94_3325 = aClass94_3334;
   public static GameString aClass94_3333 = aClass94_3334;
-  public static GameString[] aClass94Array3317 = new GameString[GlobalStatics_10.anInt3332];
   public static GameString aClass94_3324 = create(" loggt sich ein)3");
   public static GameString aClass94_3326 = create("leuchten1:");
   public static GameString ASSIST_REQ = create(":assistreq:");
@@ -540,7 +535,8 @@ public final class GameStringStatics {
           long var7 = var1;
           var1 /= 37L;
           --var3;
-          var6[var3] = GameStringStatics.aByteArray4005[(int) (-(var1 * 37L) + var7)];
+          var6[var3] = GameStringStatics.aByteArray4005[(int) (-(var1 * 37L)
+              + var7)];
         }
 
         GameString var10 = new GameString();
@@ -609,5 +605,17 @@ public final class GameStringStatics {
     }
 
     return var6;
+  }
+
+  public static GameString method1586(int var0, int var1) {
+    if (var1 > 0 && var1 <= 255) {
+      GameString var2 = new GameString();
+      var2.length = 1;
+      var2.bytes = new byte[1];
+      var2.bytes[0] = (byte) var1;
+      return var2;
+    } else {
+      throw new IllegalArgumentException();
+    }
   }
 }

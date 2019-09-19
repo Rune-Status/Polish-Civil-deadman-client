@@ -16,7 +16,7 @@ public class DummyClass2 {
     if (GlobalStatics_10.LOGIN_STATE != 0
         && GlobalStatics_10.LOGIN_STATE != 5) {
       try {
-        if (++GameStringStatics.anInt820 > 2000) {
+        if (++GlobalStatics_8.anInt820 > 2000) {
           if (GlobalStatics_9.GAME_SOCKET != null) {
             GlobalStatics_9.GAME_SOCKET.destroy();
             GlobalStatics_9.GAME_SOCKET = null;
@@ -28,7 +28,7 @@ public class DummyClass2 {
             return;
           }
 
-          GameStringStatics.anInt820 = 0;
+          GlobalStatics_8.anInt820 = 0;
           if (GlobalStatics_9.anInt2894 == DummyClass11.anInt2036) {
             GlobalStatics_9.anInt2894 = GlobalStatics_9.anInt506;
           } else {
@@ -249,7 +249,7 @@ public class DummyClass2 {
                   if (response == 23 && GlobalStatics_9.anInt2079 < 1) {
                     GlobalStatics_10.LOGIN_STATE = 1;
                     ++GlobalStatics_9.anInt2079;
-                    GameStringStatics.anInt820 = 0;
+                    GlobalStatics_8.anInt820 = 0;
                     GlobalStatics_9.GAME_SOCKET.destroy();
                     GlobalStatics_9.GAME_SOCKET = null;
                     return;
@@ -386,7 +386,7 @@ public class DummyClass2 {
           GlobalStatics_5.loginResponse = -4;
         } else {
           GlobalStatics_10.LOGIN_STATE = 1;
-          GameStringStatics.anInt820 = 0;
+          GlobalStatics_8.anInt820 = 0;
           ++GlobalStatics_9.anInt2079;
           if (DummyClass11.anInt2036 == GlobalStatics_9.anInt2894) {
             GlobalStatics_9.anInt2894 = GlobalStatics_9.anInt506;

@@ -99,7 +99,7 @@ public final class DummyClass50 {
         }
 
         for (var5 = 0; GlobalStatics_10.anInt104 > var5; ++var5) {
-          if (GameStringStatics.aLongArray826[var5] == var1) {
+          if (GlobalStatics_8.aLongArray826[var5] == var1) {
             GlobalStatics_8.printMessage(GameStringStatics.EMPTY_STRING, 0,
                 GlobalStatics_9.concat(new GameString[]{
                     DummyClass35.aClass94_666, var4,

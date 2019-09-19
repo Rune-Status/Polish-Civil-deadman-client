@@ -1065,7 +1065,7 @@ public final class DummyClass18 {
           .formatName((byte) -50);
 
       for (var33 = 0; var33 < GlobalStatics_10.anInt104; ++var33) {
-        if (var2 == GameStringStatics.aLongArray826[var33]) {
+        if (var2 == GlobalStatics_8.aLongArray826[var33]) {
           if (var21 != GlobalStatics_7.anIntArray882[var33]) {
             GlobalStatics_7.anIntArray882[var33] = var21;
             if (var21 > 0) {
@@ -1093,7 +1093,7 @@ public final class DummyClass18 {
 
       boolean var45 = false;
       if (var46 != null && GlobalStatics_10.anInt104 < 200) {
-        GameStringStatics.aLongArray826[GlobalStatics_10.anInt104] = var2;
+        GlobalStatics_8.aLongArray826[GlobalStatics_10.anInt104] = var2;
         GameStringStatics.aClass94Array1046[GlobalStatics_10.anInt104] = var46;
         GlobalStatics_7.anIntArray882[GlobalStatics_10.anInt104] = var21;
         GlobalStatics_2.aClass94Array2566[GlobalStatics_10.anInt104] = var41;
@@ -1129,10 +1129,10 @@ public final class DummyClass18 {
             GameStringStatics.aClass94Array1046[var11] =
                 GameStringStatics.aClass94Array1046[var11 + 1];
             GameStringStatics.aClass94Array1046[var11 + 1] = var57;
-            long var15 = GameStringStatics.aLongArray826[var11];
-            GameStringStatics.aLongArray826[var11] = GameStringStatics.aLongArray826[
+            long var15 = GlobalStatics_8.aLongArray826[var11];
+            GlobalStatics_8.aLongArray826[var11] = GlobalStatics_8.aLongArray826[
                 var11 + 1];
-            GameStringStatics.aLongArray826[var11 + 1] = var15;
+            GlobalStatics_8.aLongArray826[var11 + 1] = var15;
             int var17 = GlobalStatics_9.anIntArray904[var11];
             GlobalStatics_9.anIntArray904[var11] = GlobalStatics_9.anIntArray904[
                 var11 + 1];

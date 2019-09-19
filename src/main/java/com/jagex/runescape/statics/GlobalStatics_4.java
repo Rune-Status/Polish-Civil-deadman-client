@@ -180,11 +180,10 @@ public class GlobalStatics_4 {
     GameStringStatics.aClass94_822 = null;
     GameStringStatics.aClass94_827 = null;
     GameStringStatics.aClass94_829 = null;
-
     GameStringStatics.aClass94_832 = null;
     GameStringStatics.aClass94_825 = null;
-    GameStringStatics.aLongArray826 = null;
-    GameStringStatics.aClass3_Sub28_Sub16_824 = null;
+    GlobalStatics_8.aLongArray826 = null;
+    GlobalStatics_8.aClass3_Sub28_Sub16_824 = null;
   }
 
   public static void clear81() {

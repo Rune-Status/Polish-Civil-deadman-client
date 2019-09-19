@@ -216,7 +216,7 @@ public class GlobalStatics_3 {
   public static void method165(int var0) {
     DummyClass53.aClass3_Sub28_Sub16_1339 = null;
     GlobalStatics_10.aClass3_Sub28_Sub16_3099 = null;
-    GameStringStatics.aClass3_Sub28_Sub16_824 = null;
+    GlobalStatics_8.aClass3_Sub28_Sub16_824 = null;
     if (var0 != -7878) {
       GlobalStatics_3.drawLoadingBox(null, false);
     }

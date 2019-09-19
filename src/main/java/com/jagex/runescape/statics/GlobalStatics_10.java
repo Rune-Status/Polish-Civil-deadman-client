@@ -221,6 +221,7 @@ public class GlobalStatics_10 {
   public static int anInt3061;
   public static boolean aBoolean3064 = true;
   public static int anInt3332 = 50;
+  public static GameString[] aClass94Array3317 = new GameString[anInt3332];
   public static int[] anIntArray3337 = new int[GlobalStatics_10.anInt3332];
   public static int[] anIntArray3336 = new int[GlobalStatics_10.anInt3332];
   public static int[] anIntArray3331 = new int[GlobalStatics_10.anInt3332];
@@ -3380,7 +3381,7 @@ public class GlobalStatics_10 {
     GlobalStatics_10.anIntArray3327 = null;
     GlobalStatics_10.anIntArray3337 = null;
     GameStringStatics.aClass94_3326 = null;
-    GameStringStatics.aClass94Array3317 = null;
+    aClass94Array3317 = null;
     GameStringStatics.aClass94_3334 = null;
     GlobalStatics_10.anIntArray3328 = null;
     GameStringStatics.ASSIST_REQ = null;
@@ -4111,7 +4112,7 @@ public class GlobalStatics_10 {
     DummyClass28.method887(21, GlobalStatics_10.sprites);
     GlobalStatics_9.aClass3_Sub28_Sub16_2560 = null;
     GlobalStatics_10.aClass3_Sub28_Sub16_3099 = null;
-    GameStringStatics.aClass3_Sub28_Sub16_824 = null;
+    GlobalStatics_8.aClass3_Sub28_Sub16_824 = null;
     DummyClass53.aClass3_Sub28_Sub16_1339 = null;
     DummyClass58.aClass3_Sub28_Sub16_1457 = null;
     if (DummyClass15.state == 5) {

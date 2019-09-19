@@ -5,6 +5,7 @@ import com.jagex.runescape.buffer.BufferStatics;
 import com.jagex.runescape.common.GameString;
 import com.jagex.runescape.common.GameStringStatics;
 import com.jagex.runescape.math.MathUtilities;
+import com.jagex.runescape.model.AbstractDirectColorSprite;
 import com.jagex.runescape.model.AbstractFont;
 import com.jagex.runescape.model.AbstractModel;
 import com.jagex.runescape.model.AnimationSequence;
@@ -151,6 +152,10 @@ public class GlobalStatics_8 {
   public static long aLong3296;
   public static GameString aClass94_3298 = GameStringStatics
       .create("<col=ff0000>");
+  public static AbstractDirectColorSprite aClass3_Sub28_Sub16_824;
+  public static long[] aLongArray826 = new long[200];
+  public static int anInt820;
+  public static int anInt828;
 
   public static void clear92(int var0) {
     GlobalStatics_8.aClass94_951 = null;

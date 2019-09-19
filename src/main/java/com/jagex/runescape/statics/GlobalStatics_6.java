@@ -3471,7 +3471,7 @@ public class GlobalStatics_6 {
           boolean var28 = false;
 
           for (var16 = 0; GlobalStatics_10.anInt104 > var16; ++var16) {
-            if (var29 == GameStringStatics.aLongArray826[var16]
+            if (var29 == GlobalStatics_8.aLongArray826[var16]
                 && GlobalStatics_7.anIntArray882[var16] != 0) {
               var28 = true;
               break;

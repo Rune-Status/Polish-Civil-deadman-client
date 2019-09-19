@@ -1,17 +1,18 @@
 package com.jagex.runescape.sprite;
 
+import java.util.Arrays;
+
 public final class SoftwareIndexedColorSprite extends
     AbstractIndexedColorSprite {
 
   public byte[] aByteArray2674;
   private final int[] anIntArray2673;
 
-
   public SoftwareIndexedColorSprite(int var1, int var2, int var3, int var4,
       int var5,
       int var6,
       byte[] var7,
-      int[] var8 ) {
+      int[] var8) {
     this.anInt1469 = var1;
     this.anInt1467 = var2;
     this.offsetX = var3;
@@ -22,7 +23,7 @@ public final class SoftwareIndexedColorSprite extends
     this.anIntArray2673 = var8;
   }
 
-  public SoftwareIndexedColorSprite(int var1, int var2, int var3 ) {
+  public SoftwareIndexedColorSprite(int var1, int var2, int var3) {
     this.anInt1469 = this.width = var1;
     this.anInt1467 = this.height = var2;
     this.offsetX = this.offsetY = 0;
@@ -30,7 +31,7 @@ public final class SoftwareIndexedColorSprite extends
     this.anIntArray2673 = new int[var3];
   }
 
-  public void method1668(int var1, int var2, int var3 ) {
+  public void method1668(int var1, int var2, int var3) {
     for (int var4 = 0; var4 < this.anIntArray2673.length; ++var4) {
       int var5 = this.anIntArray2673[var4] >> 16 & 255;
       var5 += var1;
@@ -61,7 +62,7 @@ public final class SoftwareIndexedColorSprite extends
 
   }
 
-  public void method1669(int var1,int var2,int var3,int var4, int var5 ) {
+  public void method1669(int var1, int var2, int var3, int var4, int var5) {
     int var6 = this.width;
     int var7 = this.height;
     int var8 = 0;
@@ -120,42 +121,28 @@ public final class SoftwareIndexedColorSprite extends
     }
 
     SoftwareIndexedColorSpriteStatics
-        .method1673(SoftwareIndexedColorSpriteStatics.anIntArray1100, this.aByteArray2674,
+        .method1673(SoftwareIndexedColorSpriteStatics.anIntArray1100,
+            this.aByteArray2674,
             this.anIntArray2673, var8, var9,
-      var14, var15, var3, var4, var12, var13, var6, var5);
+            var14, var15, var3, var4, var12, var13, var6, var5);
   }
 
   public void clear() {
-    int var1 = 0;
-    int var2;
-    for (var2 = this.aByteArray2674.length - 7; var1 < var2; this.aByteArray2674[var1++] = 0) {
-      this.aByteArray2674[var1++] = 0;
-      this.aByteArray2674[var1++] = 0;
-      this.aByteArray2674[var1++] = 0;
-      this.aByteArray2674[var1++] = 0;
-      this.aByteArray2674[var1++] = 0;
-      this.aByteArray2674[var1++] = 0;
-      this.aByteArray2674[var1++] = 0;
-    }
-
-    for (var2 += 7; var1 < var2; this.aByteArray2674[var1++] = 0) {
-    }
-
+    Arrays.fill(this.aByteArray2674, (byte) 0);
   }
 
   public void method1674() {
     byte[] var1 = new byte[this.width * this.height];
     int var2 = 0;
 
-    int var3;
-    for (var3 = 0; var3 < this.width; ++var3) {
+    for (int var3 = 0; var3 < this.width; ++var3) {
       for (int var4 = this.height - 1; var4 >= 0; --var4) {
         var1[var2++] = this.aByteArray2674[var3 + var4 * this.width];
       }
     }
 
     this.aByteArray2674 = var1;
-    var3 = this.offsetY;
+  int  var3 = this.offsetY;
     this.offsetY = this.offsetX;
     this.offsetX = this.anInt1467 - this.height - var3;
     var3 = this.height;
@@ -166,7 +153,7 @@ public final class SoftwareIndexedColorSprite extends
     this.anInt1469 = var3;
   }
 
-  public void draw(int x,int y, int alpha) {
+  public void draw(int x, int y, int alpha) {
     x += this.offsetX;
     y += this.offsetY;
     int var4 = x + y * SoftwareIndexedColorSpriteStatics.anInt1092;
@@ -207,13 +194,14 @@ public final class SoftwareIndexedColorSprite extends
 
     if (var7 > 0 && var6 > 0) {
       SoftwareIndexedColorSpriteStatics
-          .method1676(SoftwareIndexedColorSpriteStatics.anIntArray1100, this.aByteArray2674,
+          .method1676(SoftwareIndexedColorSpriteStatics.anIntArray1100,
+              this.aByteArray2674,
               this.anIntArray2673, var5, var4,
-        var7, var6, var8, var9, alpha);
+              var7, var6, var8, var9, alpha);
     }
   }
 
-  public void draw(int x,int y) {
+  public void draw(int x, int y) {
     x += this.offsetX;
     y += this.offsetY;
     int var3 = x + y * SoftwareIndexedColorSpriteStatics.anInt1092;
@@ -254,9 +242,10 @@ public final class SoftwareIndexedColorSprite extends
 
     if (var6 > 0 && var5 > 0) {
       SoftwareIndexedColorSpriteStatics
-          .method1672(SoftwareIndexedColorSpriteStatics.anIntArray1100, this.aByteArray2674,
+          .method1672(SoftwareIndexedColorSpriteStatics.anIntArray1100,
+              this.aByteArray2674,
               this.anIntArray2673, 0, var4,
-        var3, var6, var5, var7, var8);
+              var3, var6, var5, var7, var8);
     }
   }
 
@@ -280,7 +269,7 @@ public final class SoftwareIndexedColorSprite extends
     }
   }
 
-  public void method1677(int var1,int var2,int var3,int var4 ) {
+  public void method1677(int var1, int var2, int var3, int var4) {
     int var5 = this.width;
     int var6 = this.height;
     int var7 = 0;
@@ -339,9 +328,10 @@ public final class SoftwareIndexedColorSprite extends
     }
 
     SoftwareIndexedColorSpriteStatics
-        .method1670(SoftwareIndexedColorSpriteStatics.anIntArray1100, this.aByteArray2674,
+        .method1670(SoftwareIndexedColorSpriteStatics.anIntArray1100,
+            this.aByteArray2674,
             this.anIntArray2673, var7, var8,
-      var13, var14, var3, var4, var11, var12, var5);
+            var13, var14, var3, var4, var11, var12, var5);
   }
 
 }

@@ -82,7 +82,7 @@ public final class DummyClass4 extends DummyClass6 {
 
         int var4;
         for (var4 = 0; GlobalStatics_10.anInt104 > var4; ++var4) {
-          if (GameStringStatics.aLongArray826[var4] == var0) {
+          if (GlobalStatics_8.aLongArray826[var4] == var0) {
             GlobalStatics_8.printMessage(GameStringStatics.EMPTY_STRING, 0,
                 GlobalStatics_9.concat(
                     new GameString[]{var3, GameStringStatics.aClass94_3645}), -1);
@@ -106,7 +106,7 @@ public final class DummyClass4 extends DummyClass6 {
         } else {
           ++GlobalStatics_9.anInt544;
           GameStringStatics.aClass94Array1046[GlobalStatics_10.anInt104] = var3;
-          GameStringStatics.aLongArray826[GlobalStatics_10.anInt104] = var0;
+          GlobalStatics_8.aLongArray826[GlobalStatics_10.anInt104] = var0;
           GlobalStatics_7.anIntArray882[GlobalStatics_10.anInt104] = 0;
           GlobalStatics_2.aClass94Array2566[GlobalStatics_10.anInt104] = GameStringStatics.EMPTY_STRING;
           GlobalStatics_9.anIntArray904[GlobalStatics_10.anInt104] = 0;

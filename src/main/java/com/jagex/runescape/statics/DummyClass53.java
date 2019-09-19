@@ -84,7 +84,7 @@ public final class DummyClass53 {
   public static void method1584(int var0, int var1, int var2, int var3,
       int var4, int var5) {
     if (var4 != -26571) {
-      DummyClass53.method1586(92, 25);
+      GameStringStatics.method1586(92, 25);
     }
 
     if (var1 == var5) {
@@ -99,22 +99,6 @@ public final class DummyClass53 {
         GlobalStatics_6.method556(var0, var1, var5, (byte) -123, var2, var3);
       }
 
-    }
-  }
-
-  public static GameString method1586(int var0, int var1) {
-    if (var1 > 0 && var1 <= 255) {
-      GameString var2 = new GameString();
-      if (var0 != 23161) {
-        DummyClass53.aClass3_Sub28_Sub16_1339 = null;
-      }
-
-      var2.length = 1;
-      var2.bytes = new byte[1];
-      var2.bytes[0] = (byte) var1;
-      return var2;
-    } else {
-      throw new IllegalArgumentException();
     }
   }
 
