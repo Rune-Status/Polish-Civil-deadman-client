@@ -1,3 +1,5 @@
 ### Bazel things
 /bazel-*
 .cache/
+.ijwb/
+.idea/
