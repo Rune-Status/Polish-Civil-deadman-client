@@ -1,7 +1,7 @@
 package com.jagex.runescape.model;
 
+import com.jagex.runescape.common.ThreadUtilities;
 import com.jagex.runescape.statics.GlobalStatics_0;
-import com.jagex.runescape.statics.GlobalStatics_10;
 import com.jagex.runescape.statics.GlobalStatics_9;
 
 public final class MouseRecorder implements Runnable {
@@ -13,7 +13,7 @@ public final class MouseRecorder implements Runnable {
   public int[] anIntArray1020 = new int[500];
 
   public void run() {
-    for (; this.aBoolean1015; GlobalStatics_10.sleep(50L)) {
+    for (; this.aBoolean1015; ThreadUtilities.sleep(50L)) {
         Object var1 = this.anObject1016;
         synchronized (var1) {
           if (this.anInt1018 < 500) {

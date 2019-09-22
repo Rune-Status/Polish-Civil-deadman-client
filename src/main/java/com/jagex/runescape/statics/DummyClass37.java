@@ -19,6 +19,7 @@ import com.jagex.runescape.node.Deque;
 import com.jagex.runescape.opengl.GLStatics;
 import com.jagex.runescape.opengl.GlRenderer;
 import com.jagex.runescape.opengl.GlTexture2d;
+import com.jagex.runescape.settings.SettingsStatics;
 
 public final class DummyClass37 {
 
@@ -640,7 +641,7 @@ public final class DummyClass37 {
                     && GlobalStatics_9.localPlayer.waypointsY[0]
                     >= -var28 + var3
                     && GlobalStatics_9.localPlayer.waypointsY[0] <= var28 + var3
-                    && DummyClass28.anInt340 != 0 && var7 > 0
+                    && SettingsStatics.anInt340 != 0 && var7 > 0
                     && GlobalStatics_9.anInt1552 < 50
                     && var4 != -1) {
                   GlobalStatics_9.anIntArray2550[GlobalStatics_9.anInt1552] = var4;

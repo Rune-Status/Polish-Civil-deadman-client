@@ -5,9 +5,9 @@ import com.jagex.runescape.scene.SceneGraphTile;
 import com.jagex.runescape.scene.SceneSomething;
 import com.jagex.runescape.node.SubNode;
 import com.jagex.runescape.common.GameStringStatics;
+import com.jagex.runescape.settings.SettingsStatics;
 import com.jagex.runescape.statics.DummyClass32;
 import com.jagex.runescape.statics.GlobalStatics_4;
-import com.jagex.runescape.statics.GlobalStatics_6;
 import com.jogamp.opengl.GL;
 import java.lang.reflect.Method;
 import java.nio.ByteBuffer;
@@ -131,7 +131,7 @@ public final class GlTexture2d extends SubNode {
           try {
             Runtime var2 = Runtime.getRuntime();
             Long var3 = (Long) var1.invoke(var2, (Object[]) null);
-            GlobalStatics_6.anInt3492 =
+            SettingsStatics.anInt3492 =
                 (int) (var3.longValue() / 1048576L) + 1;
           } catch (Throwable var4) {
           }

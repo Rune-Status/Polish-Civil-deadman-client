@@ -5,9 +5,9 @@ import com.jagex.runescape.model.WidgetUpdate;
 import com.jagex.runescape.cache.FileUnpacker;
 import com.jagex.runescape.model.SoftwareDirectColorSprite;
 import com.jagex.runescape.node.Deque;
-import com.jagex.runescape.opengl.GLStatics;
 import com.jagex.runescape.opengl.GlRenderer;
 import com.jagex.runescape.opengl.GlUtils;
+import com.jagex.runescape.settings.SettingsStatics;
 
 public final class DummyClass51 {
 
@@ -130,24 +130,24 @@ public final class DummyClass51 {
   }
 
   public static int getSettings() {
-    return ((GlobalStatics_1.aBoolean3184 ? 1 : 0) << 19) + (
-        (DummyClass35.aBoolean661 ? 1 : 0) << 16) + (
-        (GLStatics.aBoolean1685 ? 1 : 0) << 15)
-        + ((GLStatics.USE_BUMP_MAPS ? 1 : 0) << 13) + (
-        (GlobalStatics_9.aBoolean2910 ? 1 : 0) << 10)
-        + ((GlobalStatics_9.aBoolean3275 ? 1 : 0) << 9) + (
-        (GlobalStatics_10.aBoolean236 ? 1 : 0) << 7) + (
-        (GlobalStatics_9.aBoolean488 ? 1 : 0) << 6) + (
-        (GlobalStatics_9.aBoolean1905 ? 1 : 0) << 5) + (
-        (GlobalStatics_7.aBoolean3665 ? 1 : 0) << 3) + (
-        GlobalStatics_4.brightnessSetting
-            & 7) - (-((GlobalStatics_2.aBoolean3604 ? 1 : 0) << 4) - (
-        (GlobalStatics_9.aBoolean2623 ? 1 : 0) << 8)) - (
-        -(GLStatics.anInt1137 << 11 & 6144) - (
-            (GlobalStatics_7.anInt2453 == 0 ? 0 : 1) << 20) - (
-            ((GlobalStatics_10.anInt120 != 0 ? 1 : 0) << 21) + (
-                (DummyClass28.anInt340 == 0 ? 0 : 1) << 22))) + (
-        DummyClass0.method1757()
+    return ((SettingsStatics.aBoolean3184 ? 1 : 0) << 19) + (
+        (SettingsStatics.aBoolean661 ? 1 : 0) << 16) + (
+        (SettingsStatics.aBoolean1685 ? 1 : 0) << 15)
+        + ((SettingsStatics.USE_BUMP_MAPS ? 1 : 0) << 13) + (
+        (SettingsStatics.aBoolean2910 ? 1 : 0) << 10)
+        + ((SettingsStatics.aBoolean3275 ? 1 : 0) << 9) + (
+        (SettingsStatics.aBoolean236 ? 1 : 0) << 7) + (
+        (SettingsStatics.aBoolean488 ? 1 : 0) << 6) + (
+        (SettingsStatics.aBoolean1905 ? 1 : 0) << 5) + (
+        (SettingsStatics.SHOULD_USE_OPENGL ? 1 : 0) << 3) + (
+        SettingsStatics.BRIGHTNESS
+            & 7) - (-((SettingsStatics.aBoolean3604 ? 1 : 0) << 4) - (
+        (SettingsStatics.aBoolean2623 ? 1 : 0) << 8)) - (
+        -(SettingsStatics.anInt1137 << 11 & 6144) - (
+            (SettingsStatics.anInt2453 == 0 ? 0 : 1) << 20) - (
+            ((SettingsStatics.anInt120 != 0 ? 1 : 0) << 21) + (
+                (SettingsStatics.anInt340 == 0 ? 0 : 1) << 22))) + (
+        SettingsStatics.anInt2682
             << 23);
   }
 

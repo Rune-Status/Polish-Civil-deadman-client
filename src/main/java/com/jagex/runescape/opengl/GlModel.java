@@ -1,6 +1,7 @@
 package com.jagex.runescape.opengl;
 
 import com.jagex.runescape.math.MathUtilities;
+import com.jagex.runescape.settings.SettingsStatics;
 import com.jagex.runescape.statics.GlobalStatics_1;
 import com.jagex.runescape.statics.GlobalStatics_10;
 import com.jagex.runescape.statics.GlobalStatics_11;
@@ -177,7 +178,7 @@ public final class GlModel extends AbstractModel {
     this.aClass6_3835 = new GlModelDimensions();
     this.vertexPositionData = new BufferData();
     this.vertexColorData = new BufferData();
-    if (GLStatics.USE_BUMP_MAPS) {
+    if (SettingsStatics.USE_BUMP_MAPS) {
       this.vertexNormalData = new BufferData();
     }
 
@@ -2577,7 +2578,7 @@ public final class GlModel extends AbstractModel {
     } else if (this.amountVertices != 0) {
       if (var7) {
         boolean var8 = !this.vertexColorData.updated && (var2
-            || var3 && !GLStatics.USE_BUMP_MAPS);
+            || var3 && !SettingsStatics.USE_BUMP_MAPS);
         this.method1922(false, !this.vertexPositionData.updated && var1, var8,
             this.vertexNormalData != null && !this.vertexNormalData.updated
                 && var3,
@@ -2612,7 +2613,7 @@ public final class GlModel extends AbstractModel {
         }
       }
 
-      if (var3 && GLStatics.USE_BUMP_MAPS) {
+      if (var3 && SettingsStatics.USE_BUMP_MAPS) {
         if (this.vertexNormalData.updated) {
           this.aShortArray3810 = null;
           this.aShortArray3826 = null;
@@ -2736,7 +2737,7 @@ public final class GlModel extends AbstractModel {
       }
 
       if (var3) {
-        if (GLStatics.USE_BUMP_MAPS) {
+        if (SettingsStatics.USE_BUMP_MAPS) {
           for (var7 = 0; var7 < this.anInt3852; ++var7) {
             var8 = GlModel.method1905(
                 this.aShortArray3808[var7], this.materials[var7],
@@ -3192,7 +3193,7 @@ public final class GlModel extends AbstractModel {
         var4.aShortArray3841[var6] = this.aShortArray3841[var6];
       }
 
-      if (GLStatics.USE_BUMP_MAPS) {
+      if (SettingsStatics.USE_BUMP_MAPS) {
         if (var5.vertexNormalData == null) {
           var5.vertexNormalData = new BufferData();
         }
@@ -3506,7 +3507,7 @@ public final class GlModel extends AbstractModel {
           this.aByteArray3816);
     }
 
-    if (var3 && var4 && var5 && (var8 && var6 || GLStatics.USE_BUMP_MAPS)) {
+    if (var3 && var4 && var5 && (var8 && var6 || SettingsStatics.USE_BUMP_MAPS)) {
       var12.vertexColorData = this.vertexColorData;
     } else {
       var12.vertexColorData = new BufferData();
@@ -3528,7 +3529,7 @@ public final class GlModel extends AbstractModel {
           this.aShortArray3841);
     }
 
-    if (GLStatics.USE_BUMP_MAPS) {
+    if (SettingsStatics.USE_BUMP_MAPS) {
       if (var6 && var7 && var8) {
         var12.vertexNormalData = this.vertexNormalData;
       } else {
@@ -3663,7 +3664,7 @@ public final class GlModel extends AbstractModel {
             this.vertexColorData.pointer);
       }
 
-      if (GLStatics.USE_BUMP_MAPS && this.vertexNormalData.buffer != null) {
+      if (SettingsStatics.USE_BUMP_MAPS && this.vertexNormalData.buffer != null) {
         if (buffer != this.vertexNormalData.buffer) {
           this.vertexNormalData.buffer.bindVertexBuffer();
           buffer = this.vertexNormalData.buffer;
@@ -3689,7 +3690,7 @@ public final class GlModel extends AbstractModel {
 
       if (this.vertexPositionData.buffer == null
           || this.vertexColorData.buffer == null
-          || GLStatics.USE_BUMP_MAPS && this.vertexNormalData.buffer == null
+          || SettingsStatics.USE_BUMP_MAPS && this.vertexNormalData.buffer == null
           || this.vertexTextureData.buffer == null) {
         if (GlRenderer.VERTEX_BUFFER_SUPPORT) {
           //TODO ARB
@@ -3710,7 +3711,7 @@ public final class GlModel extends AbstractModel {
               this.vertexColorData.byteBuffer);
         }
 
-        if (GLStatics.USE_BUMP_MAPS && this.vertexNormalData.buffer == null) {
+        if (SettingsStatics.USE_BUMP_MAPS && this.vertexNormalData.buffer == null) {
           this.vertexNormalData.byteBuffer
               .position(this.vertexNormalData.pointer);
           GlRenderer.GL.glNormalPointer(5126, this.vertexNormalData.stride,

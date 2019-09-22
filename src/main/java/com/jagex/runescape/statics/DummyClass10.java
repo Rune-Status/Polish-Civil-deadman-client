@@ -7,6 +7,7 @@ import com.jagex.runescape.model.Inventory;
 import com.jagex.runescape.model.NPC;
 import com.jagex.runescape.model.SomethingLight0;
 import com.jagex.runescape.opengl.GLStatics;
+import com.jagex.runescape.settings.SettingsStatics;
 
 public final class DummyClass10 {
 
@@ -139,10 +140,10 @@ public final class DummyClass10 {
   }
 
   public static void method2266(int var0, int var1, byte var2) {
-    if (GlobalStatics_10.anInt120 != 0 && var1 != -1) {
+    if (SettingsStatics.anInt120 != 0 && var1 != -1) {
       GlobalStatics_9
           .method1285(GlobalStatics_2.fileUnpacker11, false, var1, 0, false,
-              GlobalStatics_10.anInt120);
+              SettingsStatics.anInt120);
       GlobalStatics_9.aBoolean1158 = true;
     }
 

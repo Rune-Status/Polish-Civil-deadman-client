@@ -2,6 +2,7 @@ package com.jagex.runescape.opengl;
 
 import com.jagex.runescape.common.GameString;
 import com.jagex.runescape.common.GameStringStatics;
+import com.jagex.runescape.settings.SettingsStatics;
 import com.jagex.runescape.statics.DummyClass17;
 import com.jagex.runescape.statics.DummyClass3;
 import com.jagex.runescape.statics.DummyClass55;
@@ -484,7 +485,7 @@ public final class GlRenderer {
   }
 
   public static void method1846() {
-    if (GLStatics.USE_BUMP_MAPS) {
+    if (SettingsStatics.USE_BUMP_MAPS) {
       GlRenderer.setLightingEnabled(true);
       GlRenderer.method1845(true);
     } else {

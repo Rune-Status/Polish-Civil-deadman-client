@@ -21,6 +21,7 @@ import com.jagex.runescape.opengl.GlRenderer;
 import com.jagex.runescape.opengl.GlTexture2d;
 import com.jagex.runescape.opengl.GlUtils;
 import com.jagex.runescape.opengl.SomethingGl0;
+import com.jagex.runescape.settings.SettingsStatics;
 import com.jagex.runescape.sprite.AbstractIndexedColorSprite;
 import com.jagex.runescape.sprite.SoftwareIndexedColorSpriteStatics;
 import java.awt.Graphics;
@@ -33,7 +34,6 @@ public class GlobalStatics_3 {
   public static int[] OBJECT_TYPES =
       {0, 0, 0, 0, 1, 1, 1, 1, 1, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 3};
   public static int anInt1109;
-  public static int anInt2378;
   public static AbstractFont aClass3_Sub28_Sub17_2379;
   public static GameString COMMAND_SHIFT_CLICK = GameStringStatics
       .create("::shiftclick");
@@ -158,7 +158,7 @@ public class GlobalStatics_3 {
       return null;
     } else {
       if (var1 != 25208) {
-        GlobalStatics_3.anInt2378 = 5;
+        SettingsStatics.anInt2378 = 5;
       }
 
       SoftwareFont var2 =

@@ -1,12 +1,12 @@
 package com.jagex.runescape.model;
 
-import com.jagex.runescape.statics.GlobalStatics_10;
+import com.jagex.runescape.common.ThreadUtilities;
 import java.io.InputStream;
 
 public final class DummyInputStream extends InputStream {
 
   public int read() {
-    GlobalStatics_10.sleep(30000L);
+    ThreadUtilities.sleep(30000L);
     return -1;
   }
 

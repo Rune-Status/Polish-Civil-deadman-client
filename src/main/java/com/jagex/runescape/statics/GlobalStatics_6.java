@@ -36,6 +36,7 @@ import com.jagex.runescape.model.SocketStream;
 import com.jagex.runescape.model.SoftwareDirectColorSprite;
 import com.jagex.runescape.model.SoftwareModel;
 import com.jagex.runescape.model.SomethingLight0;
+import com.jagex.runescape.settings.SettingsStatics;
 import com.jagex.runescape.sound.MidiSomethingStatics;
 import com.jagex.runescape.sound.SomethingMusic0;
 import com.jagex.runescape.model.SomethingPacket151;
@@ -104,7 +105,6 @@ public class GlobalStatics_6 {
   public static int anInt2529;
   public static FileUnpacker aClass153_3490;
   public static int[] anIntArray3491 = {0, -1, 0, 1};
-  public static int anInt3492 = 64;
   public static int[] regionHashes;
   public static boolean[] aBooleanArray3503;
   public static int anInt3507;
@@ -125,7 +125,6 @@ public class GlobalStatics_6 {
   public static SomethingLight0[] aClass113Array3610;
   public static int anInt3611;
   public static int anInt3613;
-  public static boolean aBoolean742;
   public static ObjectCache aClass93_743 = new ObjectCache(20);
   public static FileUnpacker quickchats;
   public static FileUnpacker midiInstruments;
@@ -2612,7 +2611,7 @@ public class GlobalStatics_6 {
                           GlRenderer.setDepthTestEnabled(true);
                           GlRenderer.setFogEnabled(false);
                           GlobalStatics_10.setupDefaultSun(
-                              GlobalStatics_4.brightnessSetting);
+                              SettingsStatics.BRIGHTNESS);
                           if (GlobalStatics_11.aBoolean47) {
                             GlUtils.resetClip();
                             GlRenderer.GL.glClear(256);
@@ -3739,7 +3738,7 @@ public class GlobalStatics_6 {
             < 0) {
           int var3;
           if (GlobalStatics_10.anIntArray3083[var1] == 0) {
-            var3 = GlobalStatics_7.anInt2453;
+            var3 = SettingsStatics.anInt2453;
           } else {
             int var4 = 128 * (255 & GlobalStatics_10.anIntArray3083[var1]);
             int var7 = GlobalStatics_10.anIntArray3083[var1] >> 8 & 255;
@@ -3764,7 +3763,7 @@ public class GlobalStatics_6 {
               var9 = 0;
             }
 
-            var3 = DummyClass28.anInt340 * (var4 - var9) / var4;
+            var3 = SettingsStatics.anInt340 * (var4 - var9) / var4;
           }
 
           if (var3 > 0) {
@@ -3787,14 +3786,14 @@ public class GlobalStatics_6 {
     }
 
     if (GlobalStatics_9.aBoolean1158 && !GlobalStatics_6.method1391(-1)) {
-      if (GlobalStatics_10.anInt120 != 0
+      if (SettingsStatics.anInt120 != 0
           && GlobalStatics_4.anInt1691 != -1) {
         GlobalStatics_9.method1285(GlobalStatics_9.fileUnpacker6, false,
-            GlobalStatics_4.anInt1691, 0, false, GlobalStatics_10.anInt120);
+            GlobalStatics_4.anInt1691, 0, false, SettingsStatics.anInt120);
       }
 
       GlobalStatics_9.aBoolean1158 = false;
-    } else if (GlobalStatics_10.anInt120 != 0
+    } else if (SettingsStatics.anInt120 != 0
         && GlobalStatics_4.anInt1691 != -1
         && !GlobalStatics_6.method1391(var0 + 91)) {
       GlobalStatics_9.SECURE_BUFFER.writePacket(137);

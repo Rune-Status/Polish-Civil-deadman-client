@@ -23,6 +23,7 @@ import com.jagex.runescape.opengl.GlTexture2d;
 import com.jagex.runescape.opengl.GlUtils;
 import com.jagex.runescape.opengl.Light;
 import com.jagex.runescape.opengl.SomethingLight;
+import com.jagex.runescape.settings.SettingsStatics;
 import com.jagex.runescape.sprite.SoftwareIndexedColorSpriteStatics;
 
 public class GlobalStatics_4 {
@@ -37,7 +38,6 @@ public class GlobalStatics_4 {
   public static int anInt3754 = -1;
   public static int anInt3755;
   public static int anInt3756;
-  public static int brightnessSetting = 3;
   public static int anInt3627;
   public static int anInt3630;
   public static int anInt3631;
@@ -905,7 +905,7 @@ public class GlobalStatics_4 {
           }
 
         } else {
-          if (DummyClass28.anInt340 != 0) {
+          if (SettingsStatics.anInt340 != 0) {
             GlobalStatics_9.anIntArray2550[GlobalStatics_9.anInt1552] = var7;
             GlobalStatics_9.anIntArray2068[GlobalStatics_9.anInt1552] = var8;
             int var11 = (-64 + var0) / 128;

@@ -420,11 +420,11 @@ public final class GameClient extends GameStub {
   }
 
   private void handleLoading() {
-    if (!GlobalStatics_0.SAFE_MODE) {
+    if (!SettingsStatics.SAFE_MODE) {
       while (GlobalStatics_7.hasKeyInput()) {
         if (GlobalStatics_9.OTHER_CURRENT_KEY == 115
             || GlobalStatics_9.OTHER_CURRENT_KEY == 83) {
-          GlobalStatics_0.SAFE_MODE = true;
+          SettingsStatics.SAFE_MODE = true;
         }
       }
     }
@@ -539,7 +539,7 @@ public final class GameClient extends GameStub {
       } else if (GlobalStatics_9.loadingState != 40) {
         if (GlobalStatics_9.loadingState == 45) {
           GlobalStatics_8
-              .method1959(256, 2, 22050, GlobalStatics_1.aBoolean3184);
+              .method1959(256, 2, 22050, SettingsStatics.aBoolean3184);
           GlobalStatics_0.aClass3_Sub24_Sub4_1193 = new AudioStreamEncoder4();
           GlobalStatics_0.aClass3_Sub24_Sub4_1193
               .method479((byte) 98, 9, 128);
@@ -799,18 +799,18 @@ public final class GameClient extends GameStub {
                       } else if (GlobalStatics_9.loadingState != 140) {
                         if (GlobalStatics_9.loadingState == 150) {
                           SomethingGl.method1454();
-                          if (GlobalStatics_0.SAFE_MODE) {
+                          if (SettingsStatics.SAFE_MODE) {
                             System.out.println("Settling up safe mode config");
-                            GlobalStatics_9.RENDERING_SAMPLES = 0;
-                            GlobalStatics_9.GL_RENDERING_SAMPLES = 0;
-                            GlobalStatics_2.anInt2577 = 0;
-                            GlobalStatics_10.anInt2488 = 0;
+                            SettingsStatics.RENDERING_SAMPLES = 0;
+                            SettingsStatics.GL_RENDERING_SAMPLES = 0;
+                            SettingsStatics.anInt2577 = 0;
+                            SettingsStatics.anInt2488 = 0;
                           }
 
-                          GlobalStatics_0.SAFE_MODE = true;
+                          SettingsStatics.SAFE_MODE = true;
                           SettingsStatics.writeSettings(DummyClass35.signLink);
                           GlobalStatics_9
-                              .setWindowMode(false, GlobalStatics_2.anInt2577,
+                              .setWindowMode(false, SettingsStatics.anInt2577,
                                   -1, -1);
                           GlobalStatics_6.loadingPercent = 100;
                           GlobalStatics_9.loadingState = 160;
@@ -879,21 +879,21 @@ public final class GameClient extends GameStub {
                       new TextureCache(GlobalStatics_10.textures,
                           GlobalStatics_10.materials,
                           GlobalStatics_10.sprites, 20,
-                          !GlobalStatics_9.aBoolean488);
+                          !SettingsStatics.aBoolean488);
                   DummyClass40.setTextureCache(var8);
-                  if (GlobalStatics_4.brightnessSetting == 1) {
+                  if (SettingsStatics.BRIGHTNESS == 1) {
                     DummyClass40.updateLightness(0.9F);
                   }
 
-                  if (GlobalStatics_4.brightnessSetting == 2) {
+                  if (SettingsStatics.BRIGHTNESS == 2) {
                     DummyClass40.updateLightness(0.8F);
                   }
 
-                  if (GlobalStatics_4.brightnessSetting == 3) {
+                  if (SettingsStatics.BRIGHTNESS == 3) {
                     DummyClass40.updateLightness(0.7F);
                   }
 
-                  if (GlobalStatics_4.brightnessSetting == 4) {
+                  if (SettingsStatics.BRIGHTNESS == 4) {
                     DummyClass40.updateLightness(0.6F);
                   }
 
@@ -1465,8 +1465,8 @@ public final class GameClient extends GameStub {
               .getCurrentTimeMillis())) {
         GlobalStatics_9.setWindowMode(GlobalStatics_6.REPLACE_CANVAS,
             GlobalStatics_9.getWindowMode(),
-            GlobalStatics_3.anInt2378,
-            GlobalStatics_10.anInt3071);
+            SettingsStatics.anInt2378,
+            SettingsStatics.anInt3071);
       }
 
       int var4;
@@ -1505,7 +1505,7 @@ public final class GameClient extends GameStub {
           && !GlobalStatics_10.FOCUSED && (
           DummyClass15.state == 30 || DummyClass15.state == 10)) {
         GlobalStatics_9
-            .setWindowMode(false, GlobalStatics_2.anInt2577, -1, -1);
+            .setWindowMode(false, SettingsStatics.anInt2577, -1, -1);
       }
 
       if (var1 != 40) {
@@ -1630,10 +1630,10 @@ public final class GameClient extends GameStub {
         GlobalStatics_9.method1346(26211);
       }
 
-      if (GlobalStatics_0.SAFE_MODE
+      if (SettingsStatics.SAFE_MODE
           && DummyClass15.state == 10
           && GlobalStatics_9.anInt3655 != -1) {
-        GlobalStatics_0.SAFE_MODE = false;
+        SettingsStatics.SAFE_MODE = false;
         SettingsStatics.writeSettings(DummyClass35.signLink);
       }
 
@@ -1649,7 +1649,7 @@ public final class GameClient extends GameStub {
     }
 
     GlobalStatics_7.anInt2451 = GlobalStatics_8.portOffset;
-    GlobalStatics_2.loadSettings(DummyClass35.signLink, 0);
+    SettingsStatics.loadSettings(DummyClass35.signLink);
     if (GlobalStatics_4.usageLocation == 0) {
       GlobalStatics_8.serverHost = this.getCodeBase().getHost();
       DummyClass41.secondaryPort = 443;

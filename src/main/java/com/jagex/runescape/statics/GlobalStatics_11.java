@@ -3054,7 +3054,7 @@ public final class GlobalStatics_11 {
                                   if (GlobalStatics_10.fullScreenFrame
                                       != null) {
                                     GlobalStatics_9.setWindowMode(false,
-                                        GlobalStatics_2.anInt2577, -1,
+                                        SettingsStatics.anInt2577, -1,
                                         -1);
                                   }
                                   continue;
@@ -3074,8 +3074,8 @@ public final class GlobalStatics_11 {
                                   continue;
                                 }
                                 if (j1 == 5305) {
-                                  int j59 = GlobalStatics_10.anInt3071;
-                                  int j32 = GlobalStatics_3.anInt2378;
+                                  int j59 = SettingsStatics.anInt3071;
+                                  int j32 = SettingsStatics.anInt2378;
                                   int j71 = -1;
                                   DisplayMode[] aclass106_2 = GlobalStatics_0
                                       .method88((byte) 28);
@@ -3110,7 +3110,7 @@ public final class GlobalStatics_11 {
                                   continue;
                                 }
                                 if (j1 == 5308) {
-                                  GlobalStatics_9.anIntArray2929[k++] = GlobalStatics_2.anInt2577;
+                                  GlobalStatics_9.anIntArray2929[k++] = SettingsStatics.anInt2577;
                                   continue;
                                 }
                                 if (j1 != 5309) {
@@ -3120,7 +3120,7 @@ public final class GlobalStatics_11 {
                                 if (l32 < 0 || l32 > 2) {
                                   l32 = 0;
                                 }
-                                GlobalStatics_2.anInt2577 = l32;
+                                SettingsStatics.anInt2577 = l32;
                                 SettingsStatics
                                     .writeSettings(DummyClass35.signLink);
                                 continue;
@@ -3218,7 +3218,7 @@ public final class GlobalStatics_11 {
                                   if (GlobalStatics_10.fullScreenFrame
                                       != null) {
                                     GlobalStatics_9.setWindowMode(false,
-                                        GlobalStatics_2.anInt2577, -1,
+                                        SettingsStatics.anInt2577, -1,
                                         -1);
                                   }
                                   if (GlobalStatics_10.FRAME == null) {
@@ -3263,7 +3263,7 @@ public final class GlobalStatics_11 {
                                   if (GlobalStatics_10.fullScreenFrame
                                       != null) {
                                     GlobalStatics_9.setWindowMode(false,
-                                        GlobalStatics_2.anInt2577, -1,
+                                        SettingsStatics.anInt2577, -1,
                                         -1);
                                   }
                                   boolean flag5 =
@@ -3485,29 +3485,29 @@ public final class GlobalStatics_11 {
                                     if (k34 > 4) {
                                       k34 = 4;
                                     }
-                                    GlobalStatics_4.brightnessSetting = k34;
+                                    SettingsStatics.BRIGHTNESS = k34;
                                     if (!GlRenderer.USE_OPENGL
-                                        || !GLStatics.USE_BUMP_MAPS) {
-                                      if (GlobalStatics_4.brightnessSetting
+                                        || !SettingsStatics.USE_BUMP_MAPS) {
+                                      if (SettingsStatics.BRIGHTNESS
                                           == 1) {
                                         DummyClass40.updateLightness(0.9F);
                                       }
-                                      if (GlobalStatics_4.brightnessSetting
+                                      if (SettingsStatics.BRIGHTNESS
                                           == 2) {
                                         DummyClass40.updateLightness(0.8F);
                                       }
-                                      if (GlobalStatics_4.brightnessSetting
+                                      if (SettingsStatics.BRIGHTNESS
                                           == 3) {
                                         DummyClass40.updateLightness(0.7F);
                                       }
-                                      if (GlobalStatics_4.brightnessSetting
+                                      if (SettingsStatics.BRIGHTNESS
                                           == 4) {
                                         DummyClass40.updateLightness(0.6F);
                                       }
                                     }
                                     if (GlRenderer.USE_OPENGL) {
                                       GlobalStatics_10.method236((byte) 64);
-                                      if (!GLStatics.USE_BUMP_MAPS) {
+                                      if (!SettingsStatics.USE_BUMP_MAPS) {
                                         DummyClass51.method1417(104);
                                       }
                                     }
@@ -3518,9 +3518,9 @@ public final class GlobalStatics_11 {
                                     continue;
                                   }
                                   if (j1 == 6002) {
-                                    GlobalStatics_9.method957(
-                                        GlobalStatics_9.anIntArray2929[--k]
-                                            == 1);
+                                    boolean value = GlobalStatics_9.anIntArray2929[--k]
+                                        == 1;
+                                    SettingsStatics.SHOULD_USE_OPENGL = value;
                                     GlobalStatics_9.method139(66);
                                     DummyClass51.method1417(101);
                                     GlobalStatics_0.method792(0x8c1111);
@@ -3530,7 +3530,7 @@ public final class GlobalStatics_11 {
                                     continue;
                                   }
                                   if (j1 == 6003) {
-                                    GlobalStatics_2.aBoolean3604 =
+                                    SettingsStatics.aBoolean3604 =
                                         GlobalStatics_9.anIntArray2929[--k]
                                             == 1;
                                     GlobalStatics_0.method792(0x8c1111);
@@ -3540,7 +3540,7 @@ public final class GlobalStatics_11 {
                                     continue;
                                   }
                                   if (j1 == 6005) {
-                                    GlobalStatics_9.aBoolean1905 =
+                                    SettingsStatics.aBoolean1905 =
                                         GlobalStatics_9.anIntArray2929[--k]
                                             == 1;
                                     DummyClass51.method1417(112);
@@ -3550,12 +3550,12 @@ public final class GlobalStatics_11 {
                                     continue;
                                   }
                                   if (j1 == 6006) {
-                                    GlobalStatics_9.aBoolean488 =
+                                    SettingsStatics.aBoolean488 =
                                         GlobalStatics_9.anIntArray2929[--k]
                                             == 1;
                                     ((TextureCache) GLStatics.textureCache)
                                         .method1616(
-                                            !GlobalStatics_9.aBoolean488,
+                                            !SettingsStatics.aBoolean488,
                                             -17830);
                                     SettingsStatics
                                         .writeSettings(DummyClass35.signLink);
@@ -3563,7 +3563,7 @@ public final class GlobalStatics_11 {
                                     continue;
                                   }
                                   if (j1 == 6007) {
-                                    GlobalStatics_10.aBoolean236 =
+                                    SettingsStatics.aBoolean236 =
                                         GlobalStatics_9.anIntArray2929[--k]
                                             == 1;
                                     SettingsStatics
@@ -3572,7 +3572,7 @@ public final class GlobalStatics_11 {
                                     continue;
                                   }
                                   if (j1 == 6008) {
-                                    GlobalStatics_9.aBoolean2623 =
+                                    SettingsStatics.aBoolean2623 =
                                         GlobalStatics_9.anIntArray2929[--k]
                                             == 1;
                                     SettingsStatics
@@ -3581,7 +3581,7 @@ public final class GlobalStatics_11 {
                                     continue;
                                   }
                                   if (j1 == 6009) {
-                                    GlobalStatics_9.aBoolean3275 =
+                                    SettingsStatics.aBoolean3275 =
                                         GlobalStatics_9.anIntArray2929[--k]
                                             == 1;
                                     SettingsStatics
@@ -3590,7 +3590,7 @@ public final class GlobalStatics_11 {
                                     continue;
                                   }
                                   if (j1 == 6010) {
-                                    GlobalStatics_9.aBoolean2910 =
+                                    SettingsStatics.aBoolean2910 =
                                         GlobalStatics_9.anIntArray2929[--k]
                                             == 1;
                                     SettingsStatics
@@ -3603,7 +3603,7 @@ public final class GlobalStatics_11 {
                                     if (l34 < 0 || l34 > 2) {
                                       l34 = 0;
                                     }
-                                    GLStatics.anInt1137 = l34;
+                                    SettingsStatics.anInt1137 = l34;
                                     SettingsStatics
                                         .writeSettings(DummyClass35.signLink);
                                     GlobalStatics_9.aBoolean2705 = false;
@@ -3613,26 +3613,26 @@ public final class GlobalStatics_11 {
                                     if (GlRenderer.USE_OPENGL) {
                                       GLStatics.method551(0, 0);
                                     }
-                                    GLStatics.USE_BUMP_MAPS =
+                                    SettingsStatics.USE_BUMP_MAPS =
                                         GlobalStatics_9.anIntArray2929[--k]
                                             == 1;
                                     if (GlRenderer.USE_OPENGL
-                                        && GLStatics.USE_BUMP_MAPS) {
+                                        && SettingsStatics.USE_BUMP_MAPS) {
                                       DummyClass40.updateLightness(0.7F);
                                     } else {
-                                      if (GlobalStatics_4.brightnessSetting
+                                      if (SettingsStatics.BRIGHTNESS
                                           == 1) {
                                         DummyClass40.updateLightness(0.9F);
                                       }
-                                      if (GlobalStatics_4.brightnessSetting
+                                      if (SettingsStatics.BRIGHTNESS
                                           == 2) {
                                         DummyClass40.updateLightness(0.8F);
                                       }
-                                      if (GlobalStatics_4.brightnessSetting
+                                      if (SettingsStatics.BRIGHTNESS
                                           == 3) {
                                         DummyClass40.updateLightness(0.7F);
                                       }
-                                      if (GlobalStatics_4.brightnessSetting
+                                      if (SettingsStatics.BRIGHTNESS
                                           == 4) {
                                         DummyClass40.updateLightness(0.6F);
                                       }
@@ -3644,7 +3644,7 @@ public final class GlobalStatics_11 {
                                     continue;
                                   }
                                   if (j1 == 6014) {
-                                    GLStatics.aBoolean1685 =
+                                    SettingsStatics.aBoolean1685 =
                                         GlobalStatics_9.anIntArray2929[--k]
                                             == 1;
                                     if (GlRenderer.USE_OPENGL) {
@@ -3656,7 +3656,7 @@ public final class GlobalStatics_11 {
                                     continue;
                                   }
                                   if (j1 == 6015) {
-                                    DummyClass35.aBoolean661 =
+                                    SettingsStatics.aBoolean661 =
                                         GlobalStatics_9.anIntArray2929[--k]
                                             == 1;
                                     if (GlRenderer.USE_OPENGL) {
@@ -3678,11 +3678,11 @@ public final class GlobalStatics_11 {
                                     System.out.printf(
                                         "Setting rendering samples %d%n",
                                         value);
-                                    GlobalStatics_9.GL_RENDERING_SAMPLES = value;
+                                    SettingsStatics.GL_RENDERING_SAMPLES = value;
                                     continue;
                                   }
                                   if (j1 == 6017) {
-                                    GlobalStatics_1.aBoolean3184 =
+                                    SettingsStatics.aBoolean3184 =
                                         GlobalStatics_9.anIntArray2929[--k]
                                             == 1;
                                     GlobalStatics_8.method34(-32589);
@@ -3699,7 +3699,7 @@ public final class GlobalStatics_11 {
                                     if (j35 > 127) {
                                       j35 = 127;
                                     }
-                                    GlobalStatics_7.anInt2453 = j35;
+                                    SettingsStatics.anInt2453 = j35;
                                     SettingsStatics
                                         .writeSettings(DummyClass35.signLink);
                                     GlobalStatics_9.aBoolean2705 = false;
@@ -3713,8 +3713,8 @@ public final class GlobalStatics_11 {
                                     if (k35 > 255) {
                                       k35 = 255;
                                     }
-                                    if (k35 != GlobalStatics_10.anInt120) {
-                                      if (GlobalStatics_10.anInt120 == 0
+                                    if (k35 != SettingsStatics.anInt120) {
+                                      if (SettingsStatics.anInt120 == 0
                                           && GlobalStatics_4.anInt1691
                                           != -1) {
                                         GlobalStatics_9.method1285(
@@ -3729,7 +3729,7 @@ public final class GlobalStatics_11 {
                                         GlobalStatics_0
                                             .method736(k35, 115);
                                       }
-                                      GlobalStatics_10.anInt120 = k35;
+                                      SettingsStatics.anInt120 = k35;
                                     }
                                     SettingsStatics
                                         .writeSettings(DummyClass35.signLink);
@@ -3744,7 +3744,7 @@ public final class GlobalStatics_11 {
                                     if (l35 > 127) {
                                       l35 = 127;
                                     }
-                                    DummyClass28.anInt340 = l35;
+                                    SettingsStatics.anInt340 = l35;
                                     SettingsStatics
                                         .writeSettings(DummyClass35.signLink);
                                     GlobalStatics_9.aBoolean2705 = false;
@@ -3766,11 +3766,11 @@ public final class GlobalStatics_11 {
                                       i36 = 2;
                                     }
                                     boolean flag6 = false;
-                                    if (GlobalStatics_6.anInt3492 < 96) {
+                                    if (SettingsStatics.anInt3492 < 96) {
                                       flag6 = true;
                                       i36 = 0;
                                     }
-                                    DummyClass0.method1758(i36);
+                                    SettingsStatics.anInt2682 = i36;
                                     SettingsStatics
                                         .writeSettings(DummyClass35.signLink);
                                     GlobalStatics_9.aBoolean2705 = false;
@@ -3783,7 +3783,7 @@ public final class GlobalStatics_11 {
                                     if (value < 0 || value > 2) {
                                       value = 0;
                                     }
-                                    GlobalStatics_9.RENDERING_SAMPLES = value;
+                                    SettingsStatics.RENDERING_SAMPLES = value;
                                     SettingsStatics
                                         .writeSettings(DummyClass35.signLink);
                                     continue;
@@ -3791,7 +3791,7 @@ public final class GlobalStatics_11 {
                                   if (j1 != 6028) {
                                     break;
                                   }
-                                  DummyClass4.aBoolean3004 =
+                                  SettingsStatics.aBoolean3004 =
                                       GlobalStatics_9.anIntArray2929[--k] != 0;
                                   SettingsStatics
                                       .writeSettings(DummyClass35.signLink);
@@ -3800,87 +3800,87 @@ public final class GlobalStatics_11 {
                                 if (j1 < 6200) {
                                   if (j1 == 6101) {
                                     GlobalStatics_9.anIntArray2929[k++] =
-                                        GlobalStatics_4.brightnessSetting;
+                                        SettingsStatics.BRIGHTNESS;
                                     continue;
                                   }
                                   if (j1 == 6102) {
                                     GlobalStatics_9.anIntArray2929[k++] =
-                                        GlobalStatics_9.method1986(109) ? 1 : 0;
+                                        GlobalStatics_9.method1986() ? 1 : 0;
                                     continue;
                                   }
                                   if (j1 == 6103) {
                                     GlobalStatics_9.anIntArray2929[k++] =
-                                        GlobalStatics_2.aBoolean3604 ? 1 : 0;
+                                        SettingsStatics.aBoolean3604 ? 1 : 0;
                                     continue;
                                   }
                                   if (j1 == 6105) {
                                     GlobalStatics_9.anIntArray2929[k++] =
-                                        GlobalStatics_9.aBoolean1905 ? 1 : 0;
+                                        SettingsStatics.aBoolean1905 ? 1 : 0;
                                     continue;
                                   }
                                   if (j1 == 6106) {
                                     GlobalStatics_9.anIntArray2929[k++] =
-                                        GlobalStatics_9.aBoolean488 ? 1 : 0;
+                                        SettingsStatics.aBoolean488 ? 1 : 0;
                                     continue;
                                   }
                                   if (j1 == 6107) {
                                     GlobalStatics_9.anIntArray2929[k++] =
-                                        GlobalStatics_10.aBoolean236 ? 1 : 0;
+                                        SettingsStatics.aBoolean236 ? 1 : 0;
                                     continue;
                                   }
                                   if (j1 == 6108) {
                                     GlobalStatics_9.anIntArray2929[k++] =
-                                        GlobalStatics_9.aBoolean2623 ? 1 : 0;
+                                        SettingsStatics.aBoolean2623 ? 1 : 0;
                                     continue;
                                   }
                                   if (j1 == 6109) {
                                     GlobalStatics_9.anIntArray2929[k++] =
-                                        GlobalStatics_9.aBoolean3275 ? 1 : 0;
+                                        SettingsStatics.aBoolean3275 ? 1 : 0;
                                     continue;
                                   }
                                   if (j1 == 6110) {
                                     GlobalStatics_9.anIntArray2929[k++] =
-                                        GlobalStatics_9.aBoolean2910 ? 1 : 0;
+                                        SettingsStatics.aBoolean2910 ? 1 : 0;
                                     continue;
                                   }
                                   if (j1 == 6111) {
-                                    GlobalStatics_9.anIntArray2929[k++] = GLStatics.anInt1137;
+                                    GlobalStatics_9.anIntArray2929[k++] = SettingsStatics.anInt1137;
                                     continue;
                                   }
                                   if (j1 == 6112) {
                                     GlobalStatics_9.anIntArray2929[k++] =
-                                        GLStatics.USE_BUMP_MAPS ? 1 : 0;
+                                        SettingsStatics.USE_BUMP_MAPS ? 1 : 0;
                                     continue;
                                   }
                                   if (j1 == 6114) {
                                     GlobalStatics_9.anIntArray2929[k++] =
-                                        GLStatics.aBoolean1685 ? 1 : 0;
+                                        SettingsStatics.aBoolean1685 ? 1 : 0;
                                     continue;
                                   }
                                   if (j1 == 6115) {
                                     GlobalStatics_9.anIntArray2929[k++] =
-                                        DummyClass35.aBoolean661 ? 1 : 0;
+                                        SettingsStatics.aBoolean661 ? 1 : 0;
                                     continue;
                                   }
                                   if (j1 == 6116) {
-                                    GlobalStatics_9.anIntArray2929[k++] = GlobalStatics_9.GL_RENDERING_SAMPLES;
+                                    GlobalStatics_9.anIntArray2929[k++] = SettingsStatics.GL_RENDERING_SAMPLES;
                                     continue;
                                   }
                                   if (j1 == 6117) {
                                     GlobalStatics_9.anIntArray2929[k++] =
-                                        GlobalStatics_1.aBoolean3184 ? 1 : 0;
+                                        SettingsStatics.aBoolean3184 ? 1 : 0;
                                     continue;
                                   }
                                   if (j1 == 6118) {
-                                    GlobalStatics_9.anIntArray2929[k++] = GlobalStatics_7.anInt2453;
+                                    GlobalStatics_9.anIntArray2929[k++] = SettingsStatics.anInt2453;
                                     continue;
                                   }
                                   if (j1 == 6119) {
-                                    GlobalStatics_9.anIntArray2929[k++] = GlobalStatics_10.anInt120;
+                                    GlobalStatics_9.anIntArray2929[k++] = SettingsStatics.anInt120;
                                     continue;
                                   }
                                   if (j1 == 6120) {
-                                    GlobalStatics_9.anIntArray2929[k++] = DummyClass28.anInt340;
+                                    GlobalStatics_9.anIntArray2929[k++] = SettingsStatics.anInt340;
                                     continue;
                                   }
                                   if (j1 == 6121) {
@@ -3893,19 +3893,18 @@ public final class GlobalStatics_11 {
                                     continue;
                                   }
                                   if (j1 == 6123) {
-                                    GlobalStatics_9.anIntArray2929[k++] = DummyClass0
-                                        .method1757();
+                                    GlobalStatics_9.anIntArray2929[k++] = SettingsStatics.anInt2682;
                                     continue;
                                   }
                                   if (j1 == 6124) {
-                                    GlobalStatics_9.anIntArray2929[k++] = GlobalStatics_9.RENDERING_SAMPLES;
+                                    GlobalStatics_9.anIntArray2929[k++] = SettingsStatics.RENDERING_SAMPLES;
                                     continue;
                                   }
                                   if (j1 != 6128) {
                                     break;
                                   }
                                   GlobalStatics_9.anIntArray2929[k++] =
-                                      DummyClass4.aBoolean3004 ? 1 : 0;
+                                      SettingsStatics.aBoolean3004 ? 1 : 0;
                                   continue;
                                 }
                                 if (j1 >= 6300) {
@@ -4053,13 +4052,13 @@ public final class GlobalStatics_11 {
                                         continue;
                                       }
                                       if (j1 == 6504) {
-                                        GlobalStatics_0.anInt2148 = GlobalStatics_9.anIntArray2929[--k];
+                                        SettingsStatics.anInt2148 = GlobalStatics_9.anIntArray2929[--k];
                                         SettingsStatics.writeSettings(
                                             DummyClass35.signLink);
                                         continue;
                                       }
                                       if (j1 == 6505) {
-                                        GlobalStatics_9.anIntArray2929[k++] = GlobalStatics_0.anInt2148;
+                                        GlobalStatics_9.anIntArray2929[k++] = SettingsStatics.anInt2148;
                                         continue;
                                       }
                                       if (j1 == 6506) {
@@ -4105,7 +4104,7 @@ public final class GlobalStatics_11 {
                                       break;
                                     }
                                     if (j1 == 6600) {
-                                      GlobalStatics_2.USE_INT_ARRAY_KEYBOARD_EVENTS =
+                                      SettingsStatics.USE_INT_ARRAY_KEYBOARD_EVENTS =
                                           GlobalStatics_9.anIntArray2929[--k]
                                               == 1;
                                       SettingsStatics
@@ -4116,7 +4115,7 @@ public final class GlobalStatics_11 {
                                       break;
                                     }
                                     GlobalStatics_9.anIntArray2929[k++] =
-                                        GlobalStatics_2.USE_INT_ARRAY_KEYBOARD_EVENTS
+                                        SettingsStatics.USE_INT_ARRAY_KEYBOARD_EVENTS
                                             ? 1 : 0;
                                     continue;
                                   }

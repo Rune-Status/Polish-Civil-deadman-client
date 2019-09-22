@@ -3,6 +3,7 @@ package com.jagex.runescape.statics;
 import com.jagex.runescape.model.Widget;
 import com.jagex.runescape.common.GameString;
 import com.jagex.runescape.common.GameStringStatics;
+import com.jagex.runescape.settings.SettingsStatics;
 
 public final class DummyClass20 {
 
@@ -18,7 +19,7 @@ public final class DummyClass20 {
     }
 
     return GlobalStatics_7.aBoolean1084 ? 0
-        : GlobalStatics_9.method1986(var0 ^ 28) ? GlobalStatics_2.aBoolean3604
+        : GlobalStatics_9.method1986() ? SettingsStatics.aBoolean3604
             ? 2
             : 1 : 1;
   }

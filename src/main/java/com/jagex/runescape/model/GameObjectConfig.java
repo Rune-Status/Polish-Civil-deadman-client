@@ -16,7 +16,6 @@ import com.jagex.runescape.statics.DummyClass14;
 import com.jagex.runescape.statics.DummyClass5;
 import com.jagex.runescape.statics.DummyClass54;
 import com.jagex.runescape.statics.GlobalStatics_10;
-import com.jagex.runescape.statics.GlobalStatics_6;
 import com.jagex.runescape.statics.GlobalStatics_8;
 import com.jagex.runescape.statics.GlobalStatics_9;
 
@@ -404,7 +403,7 @@ public final class GameObjectConfig {
       if (var2 == 1) {
         var4 = var1.readUnsignedByte();
         if (var4 > 0) {
-          if (this.anIntArray1519 != null && !GlobalStatics_6.aBoolean742) {
+          if (this.anIntArray1519 != null && GlobalStatics_9.method1986()) {
             var1.position += var4 * 3;
           } else {
             this.anIntArray1487 = new int[var4];
@@ -714,7 +713,7 @@ public final class GameObjectConfig {
       } else {
         var4 = var1.readUnsignedByte();
         if (var4 > 0) {
-          if (this.anIntArray1519 != null && !GlobalStatics_6.aBoolean742) {
+          if (this.anIntArray1519 != null && GlobalStatics_9.method1986()) {
             var1.position += var4 * 2;
           } else {
             this.anIntArray1519 = new int[var4];

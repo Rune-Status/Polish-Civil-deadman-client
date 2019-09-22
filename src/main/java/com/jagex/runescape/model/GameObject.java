@@ -1,9 +1,9 @@
 package com.jagex.runescape.model;
 
-import com.jagex.runescape.opengl.GLStatics;
 import com.jagex.runescape.opengl.GlRenderer;
 import com.jagex.runescape.opengl.SomethingShadows;
 import com.jagex.runescape.scene.SceneNode;
+import com.jagex.runescape.settings.SettingsStatics;
 import com.jagex.runescape.sprite.SoftwareIndexedColorSprite;
 
 import com.jagex.runescape.statics.DummyClass0;
@@ -286,7 +286,7 @@ public final class GameObject extends SceneNode {
             ||
           (this.anInt2726 != this.anInt2752 || this.aClass142_2722 != null && (
               this.aClass142_2722.aBoolean1872 || GlobalStatics_9.tweening)
-            && this.anInt2726 != this.anInt2733) && GLStatics.anInt1137 >= 2);
+            && this.anInt2726 != this.anInt2733) && SettingsStatics.anInt1137 >= 2);
         if (var1 && !var13) {
           return null;
         } else {

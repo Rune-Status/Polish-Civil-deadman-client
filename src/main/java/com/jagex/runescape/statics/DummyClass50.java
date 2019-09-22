@@ -1,5 +1,6 @@
 package com.jagex.runescape.statics;
 
+import com.jagex.runescape.common.ThreadUtilities;
 import com.jagex.runescape.model.WorldMapLabel;
 import com.jagex.runescape.buffer.Buffer;
 import com.jagex.runescape.common.GameString;
@@ -133,7 +134,7 @@ public final class DummyClass50 {
     if (var0.eventQueue != null) {
       for (int var3 = 0; var3 < 49 && var0.eventQueue.peekEvent() != null;
           ++var3) {
-        GlobalStatics_10.sleep(1L);
+        ThreadUtilities.sleep(1L);
       }
       if (var1 != null) {
         var0.eventQueue.postEvent(new ActionEvent(var1, 1001, "dummy"));

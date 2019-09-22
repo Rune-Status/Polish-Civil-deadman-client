@@ -4,6 +4,7 @@ import com.jagex.runescape.buffer.Buffer;
 import com.jagex.runescape.common.GameString;
 import com.jagex.runescape.common.GameStringStatics;
 import com.jagex.runescape.opengl.GlRenderer;
+import com.jagex.runescape.settings.SettingsStatics;
 import com.jagex.runescape.statics.DummyClass0;
 import com.jagex.runescape.statics.DummyClass11;
 import com.jagex.runescape.statics.DummyClass35;
@@ -235,7 +236,7 @@ public final class Player extends Mobile {
                     this.anInt2832,
                     this.anInt2813);
         int var16 = GlobalStatics_5.method1727((byte) 123);
-        if (GlRenderer.USE_OPENGL && GlobalStatics_6.anInt3492 < 96 &&
+        if (GlRenderer.USE_OPENGL && SettingsStatics.anInt3492 < 96 &&
             var16 > GlobalStatics_6.NEAR) {
           GlobalStatics_10.method90(1);
         }
@@ -255,7 +256,7 @@ public final class Player extends Mobile {
         if (var15 != null) {
           this.anInt2820 = var15.getMinimumY();
           AbstractModel var23;
-          if (GlobalStatics_9.aBoolean2910 && (this.appearance.npcId == -1
+          if (SettingsStatics.aBoolean2910 && (this.appearance.npcId == -1
             || GlobalStatics_2.getNpcConfiguration(this.appearance.npcId).aBoolean1249)) {
             var23 = GlobalStatics_8.method1957(160,
                 this.aBoolean2810, var14 == null ? var13 : var14,

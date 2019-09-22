@@ -33,7 +33,7 @@ public final class DummyClass9 extends DummyClass5 {
       GameStringStatics.aByteArray4005 = null;
     }
 
-    if (!GlobalStatics_9.method1986(90) && GlobalStatics_8.plane
+    if (!GlobalStatics_9.method1986() && GlobalStatics_8.plane
         != GlobalStatics_9.currentPlane) {
       GlobalStatics_7
           .rebuildScene(GlobalStatics_9.currentPlane,

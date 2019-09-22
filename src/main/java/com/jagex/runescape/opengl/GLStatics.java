@@ -20,6 +20,7 @@ import com.jagex.runescape.scene.SceneGraphTile;
 import com.jagex.runescape.model.SoftwareDirectColorSprite;
 import com.jagex.runescape.scene.SomethingSceneTile;
 import com.jagex.runescape.scene.SomethingTilek;
+import com.jagex.runescape.settings.SettingsStatics;
 import com.jagex.runescape.statics.DummyClass11;
 import com.jagex.runescape.statics.DummyClass13;
 import com.jagex.runescape.statics.DummyClass15;
@@ -62,11 +63,9 @@ public class GLStatics {
   public static int anInt2456;
   public static SomethingGl0[][] aClass3_Sub11ArrayArray2199;
   public static ITextureCache textureCache;
-  public static boolean aBoolean1685 = true;
   public static int CAMERA_TILE_Y;
   public static int CURRENT_VIEWPORT_SIZE;
   public static boolean[][] adjacentTileOnScreen;
-  public static int anInt1137 = 2;
   public static float[] FOG_COLOR = new float[4];
   public static SceneGraphTile[][][] sceneGraphTiles;
   public static boolean aBoolean3207;
@@ -76,7 +75,6 @@ public class GLStatics {
   public static int anInt715;
   public static int anInt716;
   public static int[] hslTable = new int[65536];
-  public static boolean USE_BUMP_MAPS = true;
   public static int viewportLowerX;
   public static int viewportLowerZ;
   public static int viewportUpperX;
@@ -108,7 +106,7 @@ public class GLStatics {
   }
 
   public static void method551(int var1, int var2) {
-    if (var2 == 4 && !GLStatics.aBoolean1685) {
+    if (var2 == 4 && !SettingsStatics.aBoolean1685) {
       var2 = 2;
       var1 = 2;
     }

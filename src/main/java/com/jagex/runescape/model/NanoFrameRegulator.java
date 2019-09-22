@@ -1,6 +1,6 @@
 package com.jagex.runescape.model;
 
-import com.jagex.runescape.statics.GlobalStatics_10;
+import com.jagex.runescape.common.ThreadUtilities;
 
 public final class NanoFrameRegulator extends AbstractFrameRegulator {
 
@@ -14,7 +14,7 @@ public final class NanoFrameRegulator extends AbstractFrameRegulator {
         var6 = var4;
       }
 
-      GlobalStatics_10.sleep(var6 / 1000000L);
+      ThreadUtilities.sleep(var6 / 1000000L);
       int var10 = 0;
 
       long var8;

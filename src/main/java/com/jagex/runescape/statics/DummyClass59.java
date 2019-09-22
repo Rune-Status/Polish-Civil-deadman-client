@@ -7,9 +7,9 @@ import com.jagex.runescape.cache.FileUnpacker;
 import com.jagex.runescape.model.SoftwareDirectColorSprite;
 import com.jagex.runescape.model.WorldMapLabel;
 import com.jagex.runescape.opengl.DummyClass46;
-import com.jagex.runescape.opengl.GLStatics;
 import com.jagex.runescape.opengl.GlRenderer;
 import com.jagex.runescape.opengl.SomethingShadows;
+import com.jagex.runescape.settings.SettingsStatics;
 
 public final class DummyClass59 {
 
@@ -224,7 +224,7 @@ public final class DummyClass59 {
         GlobalStatics_9.method313((byte) 58);
         boolean var11 = false;
         int var12;
-        if (GlRenderer.USE_OPENGL && GLStatics.aBoolean1685) {
+        if (GlRenderer.USE_OPENGL && SettingsStatics.aBoolean1685) {
           for (var12 = 0; GlobalStatics_9.aByteArrayArray3027.length > var12;
               ++var12) {
             if (GlobalStatics_10.updatedLandscapesData[var12] != null
@@ -318,7 +318,7 @@ public final class DummyClass59 {
           var12 = -1 + GlobalStatics_9.currentPlane;
         }
 
-        if (GlobalStatics_9.method1986(39)) {
+        if (GlobalStatics_9.method1986()) {
           DummyClass52.method1425(0);
         } else {
           DummyClass52.method1425(DummyClass52.anInt1174);

@@ -4,15 +4,13 @@ import com.jagex.runescape.buffer.Buffer;
 import com.jagex.runescape.model.DummyHashTable;
 import com.jagex.runescape.node.Deque;
 import com.jagex.runescape.opengl.GlRenderer;
+import com.jagex.runescape.settings.SettingsStatics;
 import java.nio.FloatBuffer;
 
 public final class DummyClass0 {
 
-  public static int anInt2682;
-
   static {
     new DummyHashTable(8);
-    DummyClass0.anInt2682 = 2;
     new Buffer(131056);
   }
 
@@ -45,11 +43,4 @@ public final class DummyClass0 {
   public static void method1756() {
   }
 
-  public static int method1757() {
-    return DummyClass0.anInt2682;
-  }
-
-  public static void method1758(int var0) {
-    DummyClass0.anInt2682 = var0;
-  }
 }

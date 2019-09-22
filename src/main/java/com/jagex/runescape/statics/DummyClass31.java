@@ -11,6 +11,7 @@ import com.jagex.runescape.node.Deque;
 import com.jagex.runescape.opengl.GlRenderer;
 import com.jagex.runescape.opengl.SomethingShadows;
 import com.jagex.runescape.scene.SceneNode;
+import com.jagex.runescape.settings.SettingsStatics;
 
 public final class DummyClass31 {
 
@@ -43,7 +44,7 @@ public final class DummyClass31 {
       boolean var3,
       CollisionMap var4,
       int var5, int var6, int regionX, byte var8, int regionY, int var10) {
-    if (var1 && !GlobalStatics_9.method1986(103) && (2
+    if (var1 && !GlobalStatics_9.method1986() && (2
         & GlobalStatics_10.tileFlags[0][regionX][regionY]) == 0) {
       if ((16 & GlobalStatics_10.tileFlags[regionLevel][regionX][regionY])
           != 0) {
@@ -779,7 +780,7 @@ public final class DummyClass31 {
             }
 
           }
-        } else if (GlobalStatics_9.aBoolean1905 || var11.anInt1529 != 0 ||
+        } else if (SettingsStatics.aBoolean1905 || var11.anInt1529 != 0 ||
             var11.anInt1538 == 1
             || var11.aBoolean1483) {
           if (var11.anInt1531 == -1 && var11.anIntArray1524 == null

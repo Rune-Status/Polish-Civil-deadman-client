@@ -17,7 +17,6 @@ public final class DummyClass28 {
   public static boolean aBoolean337;
   public static GameString aClass94_338 = GameStringStatics.create("Ablegen");
   public static GameString aClass94_339 = GameStringStatics.create("1");
-  public static int anInt340 = 127;
   public static GameString aClass94_341 = GameStringStatics.create(")3");
 
   public static SoftwareIndexedColorSprite[] method885(boolean var0, int var1,

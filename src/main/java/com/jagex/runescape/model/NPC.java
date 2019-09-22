@@ -2,6 +2,7 @@ package com.jagex.runescape.model;
 
 import com.jagex.runescape.opengl.GlRenderer;
 
+import com.jagex.runescape.settings.SettingsStatics;
 import com.jagex.runescape.statics.GlobalStatics_10;
 import com.jagex.runescape.statics.GlobalStatics_4;
 import com.jagex.runescape.statics.GlobalStatics_5;
@@ -52,7 +53,7 @@ public final class NPC extends Mobile {
 
           AbstractModel var17;
           assert var16 != null;
-          if (GlobalStatics_9.aBoolean2910 && var16.aBoolean1249) {
+          if (SettingsStatics.aBoolean2910 && var16.aBoolean1249) {
             var17 = GlobalStatics_8.method1957(this.config.aByte1287,
                 this.aBoolean2810,
                 var14 == null ? var13 : var14, this.sceneX, this.config.aShort1256,

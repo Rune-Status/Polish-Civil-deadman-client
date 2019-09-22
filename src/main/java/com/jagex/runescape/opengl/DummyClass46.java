@@ -1,5 +1,6 @@
 package com.jagex.runescape.opengl;
 
+import com.jagex.runescape.settings.SettingsStatics;
 import com.jagex.runescape.statics.GlobalStatics_6;
 import com.jagex.runescape.statics.GlobalStatics_9;
 import com.jagex.runescape.scene.SceneGraphTile;
@@ -26,7 +27,7 @@ public final class DummyClass46 {
   public static void method1263(int var0, int var1, int var2, int var3,
       int var4, int var5,
       int var6) {
-    if (GLStatics.USE_BUMP_MAPS) {
+    if (SettingsStatics.USE_BUMP_MAPS) {
       if (var0 == 1 && var5 > 0) {
         DummyClass46.method1268(var1, var2, var3, var4, var5 - 1, var6);
       } else if (var0 == 4 && var5 < DummyClass46.SCENE_WIDTH - 1) {
@@ -68,7 +69,7 @@ public final class DummyClass46 {
   public static void method1266(int var0, int var1, int var2, int var3,
       int var4, int var5, int var6,
       int var7) {
-    if (GLStatics.USE_BUMP_MAPS) {
+    if (SettingsStatics.USE_BUMP_MAPS) {
       if (DummyClass46.anInt1029 != var3 || DummyClass46.anInt1031 != var4
           || DummyClass46.anInt1024 != var5 ||
           DummyClass46.anInt1034 != var6
@@ -171,7 +172,7 @@ public final class DummyClass46 {
 
   public static void method1268(int var0, int var1, int var2, int var3,
       int var4, int var5) {
-    if (GLStatics.USE_BUMP_MAPS) {
+    if (SettingsStatics.USE_BUMP_MAPS) {
       if (DummyClass46.anInt1029 != var3 || DummyClass46.anInt1031 != var4
           || DummyClass46.anInt1024 != var5 ||
           DummyClass46.anInt1034 != var4
@@ -323,7 +324,7 @@ public final class DummyClass46 {
 
   public static void method1272(int var0, int var1, int var2, int var3,
       int var4) {
-    if (GLStatics.USE_BUMP_MAPS) {
+    if (SettingsStatics.USE_BUMP_MAPS) {
       label44:
       for (int var5 = 0; var5 < 4; ++var5) {
         if (DummyClass46.anIntArray1028[var5] != -1) {
@@ -403,7 +404,7 @@ public final class DummyClass46 {
   }
 
   public static void method1277(SceneGraphTile[][][] var2) {
-    if (GLStatics.USE_BUMP_MAPS) {
+    if (SettingsStatics.USE_BUMP_MAPS) {
       GLStatics.method551(0, 0);
       GlRenderer.method1856(0);
       GlRenderer.loadIdentityTextureMatrix();

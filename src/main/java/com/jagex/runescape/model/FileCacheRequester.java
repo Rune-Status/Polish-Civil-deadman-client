@@ -1,7 +1,7 @@
 package com.jagex.runescape.model;
 
+import com.jagex.runescape.common.ThreadUtilities;
 import com.jagex.runescape.statics.DummyClass35;
-import com.jagex.runescape.statics.GlobalStatics_10;
 import com.jagex.runescape.statics.GlobalStatics_7;
 import com.jagex.runescape.statics.GlobalStatics_9;
 
@@ -18,7 +18,7 @@ public final class FileCacheRequester implements Runnable {
 
       assert var1 != null;
       while (var1.status == 0) {
-        GlobalStatics_10.sleep(10L);
+        ThreadUtilities.sleep(10L);
       }
 
       if (var1.status == 2) {

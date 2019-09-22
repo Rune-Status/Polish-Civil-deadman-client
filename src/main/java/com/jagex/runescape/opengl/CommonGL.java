@@ -1,5 +1,6 @@
 package com.jagex.runescape.opengl;
 
+import com.jagex.runescape.settings.SettingsStatics;
 import com.jagex.runescape.statics.GlobalStatics_6;
 
 public final class CommonGL {
@@ -75,14 +76,14 @@ public final class CommonGL {
                   : 0.5F);
           if (var25.material != -1
               && GLStatics.textureCache.method18(var25.material, 255) == 4
-              && GLStatics.aBoolean1685) {
+              && SettingsStatics.aBoolean1685) {
             GLStatics.method535(var25.anInt2355);
           }
 
           var25.renderSceneGroundTiles(GLStatics.sceneGraphTiles, var33);
         }
 
-        if (plane == 0 && GLStatics.anInt1137 > 0) {
+        if (plane == 0 && SettingsStatics.anInt1137 > 0) {
           //TODO 101.5F
           GlRenderer.method1832(101.5F);
           SomethingShadows.drawShadows(GLStatics.CAMERA_TILE_X,

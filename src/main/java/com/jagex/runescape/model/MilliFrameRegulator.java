@@ -1,5 +1,6 @@
 package com.jagex.runescape.model;
 
+import com.jagex.runescape.common.ThreadUtilities;
 import com.jagex.runescape.statics.GlobalStatics_10;
 
 public final class MilliFrameRegulator extends AbstractFrameRegulator {
@@ -71,7 +72,7 @@ public final class MilliFrameRegulator extends AbstractFrameRegulator {
         this.anInt2691 = var2;
       }
 
-      GlobalStatics_10.sleep(this.anInt2691);
+      ThreadUtilities.sleep(this.anInt2691);
 
       for (var6 = 0; this.anInt2692 < 256; ++var6) {
         this.anInt2692 += this.anInt2688;

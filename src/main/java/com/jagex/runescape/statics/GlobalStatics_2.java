@@ -1,5 +1,6 @@
 package com.jagex.runescape.statics;
 
+import com.jagex.runescape.common.ThreadUtilities;
 import com.jagex.runescape.model.Widget;
 import com.jagex.runescape.model.WidgetUpdate;
 import com.jagex.runescape.buffer.Buffer;
@@ -49,7 +50,6 @@ public class GlobalStatics_2 {
   public static GameString aClass94_3601 = GameStringStatics
       .create(")3runescape)3com)4l=");
   public static int anInt3602;
-  public static boolean aBoolean3604 = true;
   public static int[][][] othrrHeightMap;
   public static int anInt3606;
   public static int[] anIntArray3607 = {0, 2, 2, 2, 1, 1, 2, 2, 1, 3, 1, 1};
@@ -61,7 +61,6 @@ public class GlobalStatics_2 {
   public static FileUnpacker fileUnpacker11;
   public static int[] anIntArray2574 = new int[14];
   public static int anInt2575;
-  public static int anInt2577;
   public static GameString aClass94_37 = GameStringStatics.create("0(U");
   public static GameString aClass94_38 = GameStringStatics.create("tbrefresh");
   public static int[] anIntArray39;
@@ -72,7 +71,6 @@ public class GlobalStatics_2 {
   public static GameString aClass94_343 = GameStringStatics
       .create("blanc:");
   public static short[][] aShortArrayArray344;
-  public static boolean USE_INT_ARRAY_KEYBOARD_EVENTS;
   public static int[] anIntArray347 = new int[0x8000];
   public static int anInt348;
   public static int anInt349;
@@ -260,75 +258,6 @@ public class GlobalStatics_2 {
     GlobalStatics_2.anIntArray3607 = null;
     if (var0 != 3) {
       GLStatics.viewportLowerZ = -108;
-    }
-  }
-
-  public static void loadSettings(SignLink var0, int var1) {
-    GlobalStatics_4.brightnessSetting = 3;
-    GlobalStatics_9.method957(true);
-    GlobalStatics_2.aBoolean3604 = true;
-    GlobalStatics_1.aBoolean3184 = true;
-    GLStatics.aBoolean1685 = true;
-    GlobalStatics_9.RENDERING_SAMPLES = 0;
-    GlobalStatics_9.GL_RENDERING_SAMPLES = 0;
-    GlobalStatics_10.anInt3071 = 0;
-    GlobalStatics_9.aBoolean1905 = true;
-    GlobalStatics_9.aBoolean2623 = true;
-    GlobalStatics_10.aBoolean236 = true;
-    DummyClass28.anInt340 = 127;
-    DummyClass35.aBoolean661 = true;
-    GlobalStatics_9.aBoolean2910 = true;
-    GlobalStatics_3.anInt2378 = 0;
-    GLStatics.anInt1137 = 2;
-    GlobalStatics_9.aBoolean3275 = true;
-    GLStatics.USE_BUMP_MAPS = true;
-    GlobalStatics_10.anInt120 = 255;
-    GlobalStatics_9.aBoolean488 = true;
-    FileOnDisk var2 = null;
-    GlobalStatics_7.anInt2453 = 127;
-    if (GlobalStatics_6.anInt3492 >= 96) {
-      DummyClass0.method1758(2);
-    } else {
-      DummyClass0.method1758(0);
-    }
-
-    GlobalStatics_0.anInt2148 = var1;
-    GlobalStatics_10.anInt2488 = 0;
-    GlobalStatics_2.USE_INT_ARRAY_KEYBOARD_EVENTS = false;
-    DummyClass4.aBoolean3004 = true;
-    GlobalStatics_0.SAFE_MODE = false;
-    GlobalStatics_7.aBoolean1080 = false;
-    GlobalStatics_2.anInt2577 = 0;
-
-    try {
-      SignLinkRequest var3 = var0.getSettings("runescape");
-
-      while (var3.status == 0) {
-        GlobalStatics_10.sleep(1L);
-      }
-
-      if (var3.status == 1) {
-        var2 = (FileOnDisk) var3.result;
-        byte[] var4 = new byte[(int) var2.length()];
-
-        int var6;
-        for (int var5 = 0; var5 < var4.length; var5 += var6) {
-          var6 = var2.readBytes(var5, var1, var4.length - var5, var4);
-          if (var6 == -1) {
-            throw new IOException("EOF");
-          }
-        }
-
-        SettingsStatics.parseSettings(new Buffer(var4), -1);
-      }
-    } catch (Exception var8) {
-    }
-
-    try {
-      if (var2 != null) {
-        var2.close();
-      }
-    } catch (Exception var7) {
     }
   }
 
@@ -770,7 +699,7 @@ public class GlobalStatics_2 {
     GlobalStatics_2.aClass94_343 = null;
     GlobalStatics_2.aClass64_351 = null;
     if (var0 <= 75) {
-      GlobalStatics_2.USE_INT_ARRAY_KEYBOARD_EVENTS = false;
+      SettingsStatics.USE_INT_ARRAY_KEYBOARD_EVENTS = false;
     }
 
     GlobalStatics_2.anIntArray347 = null;

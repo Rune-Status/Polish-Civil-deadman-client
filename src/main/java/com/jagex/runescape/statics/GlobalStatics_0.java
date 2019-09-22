@@ -89,6 +89,7 @@ import com.jagex.runescape.opengl.GlTexture2d;
 import com.jagex.runescape.opengl.GlUtils;
 import com.jagex.runescape.opengl.Light;
 import com.jagex.runescape.opengl.SomethingGl0;
+import com.jagex.runescape.settings.SettingsStatics;
 import com.jagex.runescape.sound.SomethingSoundEffectStatics;
 import com.jagex.runescape.sprite.SoftwareIndexedColorSprite;
 import com.jagex.runescape.sprite.SoftwareIndexedColorSpriteStatics;
@@ -125,9 +126,7 @@ public final class GlobalStatics_0 {
       GameStringStatics.create("Allocated memory");
   public static GameString aClass94_2151 = GlobalStatics_0.aClass94_2158;
   public static int anInt2145;
-  public static boolean SAFE_MODE;
   public static int packetId;
-  public static int anInt2148;
   public static boolean stereo;
   public static boolean aBoolean2154;
   public static int[] anIntArray2157 = new int[50];
@@ -1625,11 +1624,11 @@ public final class GlobalStatics_0 {
       GlobalStatics_9.method1870(false);
     } else if (var1 != -1 && (GlobalStatics_4.anInt1691 != var1
         || !GlobalStatics_6.method1391(
-        -1)) && GlobalStatics_10.anInt120 != 0
+        -1)) && SettingsStatics.anInt120 != 0
         && !GlobalStatics_9.aBoolean1158) {
       GlobalStatics_5
           .method2099(true, var1, 0, GlobalStatics_9.fileUnpacker6, false,
-              GlobalStatics_10.anInt120, 2);
+              SettingsStatics.anInt120, 2);
     }
 
     if (!var0) {

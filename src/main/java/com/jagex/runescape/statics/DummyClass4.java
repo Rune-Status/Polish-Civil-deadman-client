@@ -12,7 +12,6 @@ public final class DummyClass4 extends DummyClass6 {
   public static int anInt3001;
   public static GameString aClass94_3002 = GameStringStatics.create("M");
   public static GameString[] aClass94Array3003 = new GameString[100];
-  public static boolean aBoolean3004 = true;
   public static byte[][] aByteArrayArray3005;
   public static GameString aClass94_3006 = GameStringStatics
       .create("<col=ff3000>");

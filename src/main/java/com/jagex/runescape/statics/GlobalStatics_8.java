@@ -37,6 +37,7 @@ import com.jagex.runescape.opengl.GlEnvironment;
 import com.jagex.runescape.opengl.GlModel;
 import com.jagex.runescape.opengl.GlRenderer;
 import com.jagex.runescape.opengl.GlTexture2d;
+import com.jagex.runescape.settings.SettingsStatics;
 import com.jagex.runescape.sound.FilterPossiblyStatics;
 import com.jagex.runescape.sound.SomethingSoundEffectStatics;
 import com.jagex.runescape.sprite.SoftwareIndexedColorSpriteStatics;
@@ -2460,7 +2461,7 @@ public class GlobalStatics_8 {
     int var6 = config.anInt1177;
     int var11 = config.anInt1184;
     int var10 = config.anInt1175;
-    if (!DummyClass35.aBoolean661) {
+    if (!SettingsStatics.aBoolean661) {
       var11 = 0;
     }
 
@@ -3701,7 +3702,7 @@ public class GlobalStatics_8 {
       GlobalStatics_9.audioOutputStream1.method2163(false);
     }
 
-    GlobalStatics_8.method1959(256, 2, 22050, GlobalStatics_1.aBoolean3184);
+    GlobalStatics_8.method1959(256, 2, 22050, SettingsStatics.aBoolean3184);
     GlobalStatics_9.audioOutputStream0 =
         DummyClass43.createAudioOutputStream(22050, DummyClass35.signLink,
             GlobalStatics_8.GAME_CANVAS,

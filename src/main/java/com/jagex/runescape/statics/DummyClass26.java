@@ -5,6 +5,7 @@ import com.jagex.runescape.common.GameStringStatics;
 import com.jagex.runescape.model.GameWorld;
 import com.jagex.runescape.model.SoftwareDirectColorSprite;
 import com.jagex.runescape.opengl.GlRenderer;
+import com.jagex.runescape.settings.SettingsStatics;
 
 public final class DummyClass26 {
 
@@ -106,7 +107,7 @@ public final class DummyClass26 {
       if (var3 == !var2) {
         if (var2) {
           GlobalStatics_4.anInt1691 = GlobalStatics_9.openingMusicFileId;
-          if (GlobalStatics_10.anInt120 == 0) {
+          if (SettingsStatics.anInt120 == 0) {
             GlobalStatics_9.method882(-1, 2);
           } else {
             GlobalStatics_5

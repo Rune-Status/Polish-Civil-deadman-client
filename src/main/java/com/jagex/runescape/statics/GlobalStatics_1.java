@@ -72,7 +72,6 @@ public class GlobalStatics_1 {
   public static int REGION_HEIGHT;
   public static int[] updatedMapIds;
   public static GameString COMMAND_WM3 = GameStringStatics.create("::wm3");
-  public static boolean aBoolean3184 = true;
   public static int[] anIntArray3185 = new int[25];
   public static int anInt3187;
 

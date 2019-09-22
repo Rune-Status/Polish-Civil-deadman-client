@@ -10,7 +10,6 @@ import com.jagex.runescape.model.SignLink;
 public class DummyClass35 {
 
   public static int anInt660;
-  public static boolean aBoolean661 = true;
   public static int[][] anIntArrayArray663;
   public static int[] anIntArray664 = new int[14];
   public static SignLink signLink;

@@ -1,5 +1,6 @@
 package com.jagex.runescape.statics;
 
+import com.jagex.runescape.common.ThreadUtilities;
 import com.jagex.runescape.model.Widget;
 import com.jagex.runescape.common.GameString;
 import com.jagex.runescape.model.DisplayMode;
@@ -48,7 +49,7 @@ public final class DummyClass54 {
       SignLinkRequest var10 = var5.method1450(var1, var2, var3, var4, -121);
 
       while (var10.status == 0) {
-        GlobalStatics_10.sleep(10L);
+        ThreadUtilities.sleep(10L);
       }
 
       Frame var11 = (Frame) var10.result;

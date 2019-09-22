@@ -78,6 +78,7 @@ import com.jagex.runescape.scene.SomethingScene;
 import com.jagex.runescape.scene.SomethingSceneI;
 import com.jagex.runescape.scene.SomethingSceneJ;
 import com.jagex.runescape.scene.SomethingTilek;
+import com.jagex.runescape.settings.SettingsStatics;
 import com.jagex.runescape.sprite.AbstractIndexedColorSprite;
 import com.jagex.runescape.sprite.SoftwareIndexedColorSprite;
 import java.awt.Component;
@@ -144,7 +145,6 @@ public class GlobalStatics_10 {
   public static int anInt3068;
   public static int anInt3069;
   public static int anInt3070;
-  public static int anInt3071;
   public static int anInt3420;
   public static WorldMapLabel aClass131_3421;
   public static HashTable aClass130_3208 = new HashTable(8);
@@ -263,7 +263,6 @@ public class GlobalStatics_10 {
   public static int anInt2484;
   public static int languageId;
   public static int anInt2487;
-  public static int anInt2488;
   public static byte[] aByteArray1364 = new byte[0x8080];
   public static FileUnpacker aClass153_1370;
   public static FileUnpacker aClass153_1372;
@@ -278,7 +277,6 @@ public class GlobalStatics_10 {
   public static int[] anIntArray2292 = new int[1000];
   public static int anInt2293 = -1;
   public static int anInt2294;
-  public static boolean aBoolean236 = true;
   public static float aFloat246;
   public static long aLong261;
   public static int anInt278 = -1;
@@ -298,7 +296,6 @@ public class GlobalStatics_10 {
   public static FileUnpacker animationBases;
   public static int[] anIntArray1729 = {12543016, 15504954, 15914854, 16773818};
   public static byte[][][] tileFlags = new byte[4][104][104];
-  public static int anInt120 = 255;
   public static int anInt136;
   public static int anInt144;
   public static int anInt101;
@@ -758,7 +755,7 @@ public class GlobalStatics_10 {
                         .method1154(var27, var29, var25, var26, var28, var24,
                             var0.anInt1664, var0.anInt1663, var0.anInt1667);
                   }
-                } else if (GlobalStatics_9.aBoolean3275) {
+                } else if (SettingsStatics.aBoolean3275) {
                   if (var0.aBoolean1674) {
                     DummyClass40
                         .method1135(var27, var29, var25, var26, var28, var24,
@@ -808,7 +805,7 @@ public class GlobalStatics_10 {
                         .method1154(var23, var25, var29, var22, var24, var28,
                             var0.anInt1675, var0.anInt1667, var0.anInt1663);
                   }
-                } else if (GlobalStatics_9.aBoolean3275) {
+                } else if (SettingsStatics.aBoolean3275) {
                   DummyClass40
                       .method1135(var23, var25, var29, var22, var24, var28,
                           var0.anInt1675,
@@ -834,7 +831,7 @@ public class GlobalStatics_10 {
   }
 
   public static void method229(int var0, int var1) {
-    if (!DummyClass4.aBoolean3004) {
+    if (!SettingsStatics.aBoolean3004) {
       var0 = -1;
     }
 
@@ -1112,7 +1109,7 @@ public class GlobalStatics_10 {
           --GlobalStatics_10.anInt2212;
         }
 
-        if (GlobalStatics_2.USE_INT_ARRAY_KEYBOARD_EVENTS) {
+        if (SettingsStatics.USE_INT_ARRAY_KEYBOARD_EVENTS) {
           for (var1 = 0; var1 < GlobalStatics_9.anInt2537; ++var1) {
             var2 = GlobalStatics_9.anIntArray1755[var1];
             if (var2 == 98 || var2 == 99 || var2 == 96 || var2 == 97) {
@@ -2439,14 +2436,6 @@ public class GlobalStatics_10 {
     }
   }
 
-  public static void sleep(long var0) {
-    try {
-      Thread.sleep(var0);
-    } catch (InterruptedException e) {
-      e.printStackTrace();
-    }
-  }
-
   public static int method332(int var0, int var1) {
     if (var0 != 2) {
       GlobalStatics_10.anInt3414 = -40;
@@ -2613,7 +2602,7 @@ public class GlobalStatics_10 {
       GlobalStatics_10.FOCUSED = true;
     }
 
-    if (GlobalStatics_7.anInt2453 != 0
+    if (SettingsStatics.anInt2453 != 0
         && var0 != 0 && GlobalStatics_9.anInt1552 < 50
         && var1 != -1) {
       GlobalStatics_9.anIntArray2550[GlobalStatics_9.anInt1552] = var1;
@@ -3542,18 +3531,18 @@ public class GlobalStatics_10 {
       if (DummyClass15.state == 10) {
         var12 = GlobalStatics_8.method809(GlobalStatics_7.loopCycle,
             CameraStatics.CURRENT_Z >> 10,
-            GlobalStatics_4.brightnessSetting,
+            SettingsStatics.BRIGHTNESS,
             CameraStatics.CURRENT_X >> 10,
             1);
       } else {
         var12 = GlobalStatics_8.method809(GlobalStatics_7.loopCycle,
             GlobalStatics_9.localPlayer.waypointsY[0] >> 3,
-            GlobalStatics_4.brightnessSetting,
+            SettingsStatics.BRIGHTNESS,
             GlobalStatics_9.localPlayer.waypointsX[0] >> 3, 1);
       }
 
       DummyClass46.method1269(GlobalStatics_4.updateCycle,
-          !GlobalStatics_9.aBoolean2623);
+          !SettingsStatics.aBoolean2623);
       GlRenderer.clearBuffers(var12);
       GlobalStatics_8
           .method2285(CameraStatics.CURRENT_PITCH,

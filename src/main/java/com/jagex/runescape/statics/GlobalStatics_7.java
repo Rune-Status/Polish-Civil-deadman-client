@@ -5,6 +5,7 @@ import com.jagex.runescape.cache.CacheStatics;
 import com.jagex.runescape.camera.CameraStatics;
 import com.jagex.runescape.common.GameString;
 import com.jagex.runescape.common.GameStringStatics;
+import com.jagex.runescape.common.ThreadUtilities;
 import com.jagex.runescape.model.AbstractDirectColorSprite;
 import com.jagex.runescape.model.AbstractFont;
 import com.jagex.runescape.model.AnimationSequence;
@@ -56,12 +57,10 @@ public class GlobalStatics_7 {
   public static ObjectCache aClass93_2450 = new ObjectCache(64);
   public static int anInt2451 = -1;
   public static byte[][][] aByteArrayArrayArray2452;
-  public static int anInt2453 = 127;
   public static int CAMERA_Y;
   public static int anInt3659;
   public static int anInt3660;
   public static GameString aClass94_3661 = GameStringStatics.create("T");
-  public static boolean aBoolean3665 = true;
   public static GameString[] playerOptions = new GameString[8];
   public static GameString aClass94_1301 = GameStringStatics.create("(U3");
   public static int anInt1302;
@@ -111,7 +110,6 @@ public class GlobalStatics_7 {
   public static SceneSomething[] aClass25Array4060;
   public static int anInt4062;
   public static boolean aBoolean4063;
-  public static boolean aBoolean1080;
   public static int anInt1081;
   public static int anInt1082;
   public static int[] anIntArray1083;
@@ -803,7 +801,7 @@ public class GlobalStatics_7 {
       int var22;
       int var24;
       if (GlRenderer.USE_OPENGL) {
-        if (GLStatics.USE_BUMP_MAPS) {
+        if (SettingsStatics.USE_BUMP_MAPS) {
           for (lightPosX = 1; lightPosX < 103; ++lightPosX) {
             for (lightPosY = 1; lightPosY < 103; ++lightPosY) {
               lightMagnitude =
@@ -961,7 +959,7 @@ public class GlobalStatics_7 {
       for (lightPosX = 1; lightPosX < 103; ++lightPosX) {
         label754:
         for (lightPosY = 1; lightPosY < 103; ++lightPosY) {
-          if (var1 || GlobalStatics_9.method1986(66)
+          if (var1 || GlobalStatics_9.method1986()
               || (2 & GlobalStatics_10.tileFlags[0][lightPosX][lightPosY])
               != 0
               || (16 & GlobalStatics_10.tileFlags[var8][lightPosX][lightPosY])
@@ -1976,7 +1974,7 @@ public class GlobalStatics_7 {
       SignLinkRequest var3 = var2.method1436(var0, 86);
 
       while (var3.status == 0) {
-        GlobalStatics_10.sleep(10L);
+        ThreadUtilities.sleep(10L);
       }
 
       if (var3.status == 1) {
@@ -1985,7 +1983,7 @@ public class GlobalStatics_7 {
         return;
       }
 
-      GlobalStatics_10.sleep(100L);
+      ThreadUtilities.sleep(100L);
     }
   }
 
@@ -2008,7 +2006,7 @@ public class GlobalStatics_7 {
       FileUnpacker var3,
       FileUnpacker var4) {
     if (var2 < 123) {
-      GlobalStatics_7.aBoolean1080 = false;
+      SettingsStatics.aBoolean1080 = false;
     }
 
     return GlobalStatics_9.loadSprites(var3, var0, var1, -30901)
@@ -2021,11 +2019,11 @@ public class GlobalStatics_7 {
     if (GlobalStatics_2.anInt3606 != var2 || var1
         != GlobalStatics_10.anInt2294
         || GlobalStatics_8.plane != plane && !GlobalStatics_9
-        .method1986(45)) {
+        .method1986()) {
       GlobalStatics_2.anInt3606 = var2;
       GlobalStatics_10.anInt2294 = var1;
       GlobalStatics_8.plane = plane;
-      if (GlobalStatics_9.method1986(105)) {
+      if (GlobalStatics_9.method1986()) {
         GlobalStatics_8.plane = 0;
       }
 
@@ -2442,7 +2440,7 @@ public class GlobalStatics_7 {
       }
 
       if (command.method1558(GameStringStatics.COMMAND_SET_PARTICLES, 0)) {
-        DummyClass0.method1758(command.substring(15).toInteger());
+        SettingsStatics.anInt2682 = command.substring(15).toInteger();
         SettingsStatics.writeSettings(DummyClass35.signLink);
         GlobalStatics_9.aBoolean2705 = false;
       }
@@ -2544,7 +2542,7 @@ public class GlobalStatics_7 {
 
     if (var1 >= 1 && var4 >= 1 && var1 <= 102 && var4 <= 102) {
       int var8;
-      if (!GlobalStatics_9.method1986(41) &&
+      if (!GlobalStatics_9.method1986() &&
           (2 & GlobalStatics_10.tileFlags[0][var1][var4]) == 0) {
         var8 = var2;
         if ((8 & GlobalStatics_10.tileFlags[var2][var1][var4]) != 0) {
@@ -2565,13 +2563,13 @@ public class GlobalStatics_7 {
       DummyClass29.method910(-96, var4, var1, var2, var7, var8,
           com.jagex.runescape.statics.GlobalStatics_0.collisionMaps[var2]);
       if (var0 >= 0) {
-        boolean var9 = GlobalStatics_9.aBoolean1905;
-        GlobalStatics_9.aBoolean1905 = true;
+        boolean var9 = SettingsStatics.aBoolean1905;
+        SettingsStatics.aBoolean1905 = true;
         DummyClass31.method1683(var8, false, var2, false,
             com.jagex.runescape.statics.GlobalStatics_0.collisionMaps[var2],
             var0,
             var6, var1, (byte) 50, var4, var3);
-        GlobalStatics_9.aBoolean1905 = var9;
+        SettingsStatics.aBoolean1905 = var9;
       }
     }
   }

@@ -1,5 +1,6 @@
 package com.jagex.runescape.model;
 
+import com.jagex.runescape.common.ThreadUtilities;
 import com.jagex.runescape.opengl.GlRenderer;
 import com.jagex.runescape.opengl.GlTexture2d;
 import com.jagex.runescape.statics.DummyClass1;
@@ -131,7 +132,7 @@ public abstract class GameStub implements Runnable,
   public final void destroy() {
     if (this == GlobalStatics_0.applet && !GlobalStatics_9.aBoolean554) {
       GlobalStatics_6.destroyTime = GlobalStatics_10.getCurrentTimeMillis();
-      GlobalStatics_10.sleep(5000L);
+      ThreadUtilities.sleep(5000L);
       GlobalStatics_10.signLink = null;
       this.shutdown(46, false);
     }
@@ -295,7 +296,7 @@ public abstract class GameStub implements Runnable,
     SignLinkRequest request = DummyClass35.signLink
         .createThread(0, 1, this);
     while (request.status == 0) {
-      GlobalStatics_10.sleep(10L);
+      ThreadUtilities.sleep(10L);
     }
     DummyClass1.gameThread = (Thread) request.result;
   }
@@ -361,7 +362,7 @@ public abstract class GameStub implements Runnable,
 
       assert var7 != null;
       while (var7.status == 0) {
-        GlobalStatics_10.sleep(10L);
+        ThreadUtilities.sleep(10L);
       }
 
       DummyClass1.gameThread = (Thread) var7.result;

@@ -3,6 +3,7 @@ package com.jagex.runescape.statics;
 import com.jagex.runescape.common.GameStringStatics;
 import com.jagex.runescape.cache.FileUnpacker;
 import com.jagex.runescape.model.SocketStream;
+import com.jagex.runescape.settings.SettingsStatics;
 import java.io.IOException;
 import java.net.Socket;
 
@@ -145,7 +146,7 @@ public class DummyClass2 {
               .writeByte(GlobalStatics_9.getWindowMode());
           GlobalStatics_7.loginBuffer.writeShort(DummyClass30.viewWidth);
           GlobalStatics_7.loginBuffer.writeShort(GlobalStatics_9.viewHeight);
-          GlobalStatics_7.loginBuffer.writeByte(GlobalStatics_9.GL_RENDERING_SAMPLES);
+          GlobalStatics_7.loginBuffer.writeByte(SettingsStatics.GL_RENDERING_SAMPLES);
           DummyClass50.writeUUID(GlobalStatics_7.loginBuffer, true);
           GlobalStatics_7.loginBuffer.writeString(DummyClass7.settings);
           GlobalStatics_7.loginBuffer

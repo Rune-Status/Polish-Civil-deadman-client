@@ -1,6 +1,6 @@
 package com.jagex.runescape.model;
 
-import com.jagex.runescape.statics.GlobalStatics_10;
+import com.jagex.runescape.common.ThreadUtilities;
 import com.jagex.runescape.statics.GlobalStatics_9;
 import java.io.EOFException;
 import java.io.IOException;
@@ -184,7 +184,7 @@ public final class SocketStream implements Runnable {
 
         if (this.aClass64_1237 != null) {
           while (this.aClass64_1237.status == 0) {
-            GlobalStatics_10.sleep(1L);
+            ThreadUtilities.sleep(1L);
           }
 
           if (this.aClass64_1237.status == 1) {

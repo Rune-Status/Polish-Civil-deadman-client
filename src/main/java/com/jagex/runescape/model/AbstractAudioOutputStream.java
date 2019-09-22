@@ -2,6 +2,7 @@ package com.jagex.runescape.model;
 
 import com.jagex.runescape.common.ArrayUtils;
 
+import com.jagex.runescape.common.ThreadUtilities;
 import com.jagex.runescape.sound.AbstractSomethingMusic;
 import com.jagex.runescape.statics.DummyClass36;
 import com.jagex.runescape.statics.DummyClass60;
@@ -311,7 +312,7 @@ public class AbstractAudioOutputStream {
           DummyClass36.aClass15_2613.aBoolean345 = true;
 
           while (DummyClass36.aClass15_2613.aBoolean353) {
-            GlobalStatics_10.sleep(50L);
+            ThreadUtilities.sleep(50L);
           }
 
           DummyClass36.aClass15_2613 = null;

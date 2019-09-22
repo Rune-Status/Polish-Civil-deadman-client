@@ -21,6 +21,7 @@ import com.jagex.runescape.model.SomethingPacket116;
 import com.jagex.runescape.model.SomethingPacket151;
 import com.jagex.runescape.node.Deque;
 import com.jagex.runescape.opengl.GLStatics;
+import com.jagex.runescape.settings.SettingsStatics;
 import java.io.IOException;
 import java.nio.charset.StandardCharsets;
 
@@ -1423,7 +1424,7 @@ public final class DummyClass18 {
     if (GlobalStatics_0.packetId == 42) {
       if (GlobalStatics_10.fullScreenFrame != null) {
         GlobalStatics_9
-            .setWindowMode(false, GlobalStatics_2.anInt2577, -1, -1);
+            .setWindowMode(false, SettingsStatics.anInt2577, -1, -1);
       }
 
       byte[] var22 = new byte[GlobalStatics_0.packetLength];
