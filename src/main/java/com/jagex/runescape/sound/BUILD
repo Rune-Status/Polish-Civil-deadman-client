@@ -4,6 +4,7 @@ java_library(
     name = "sound",
     srcs = glob([
         "*.java",
+        "midi/*.java",
     ]),
     deps = [
         "//src/main/java/com/jagex/runescape/buffer",

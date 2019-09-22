@@ -26,7 +26,7 @@ import com.jagex.runescape.opengl.GlEnvironment;
 import com.jagex.runescape.opengl.GlRenderer;
 import com.jagex.runescape.opengl.SomethingShadows;
 import com.jagex.runescape.settings.SettingsStatics;
-import com.jagex.runescape.sound.MidiFile;
+import com.jagex.runescape.sound.midi.MidiFile;
 import com.jagex.runescape.sprite.SoftwareIndexedColorSprite;
 import java.util.Date;
 

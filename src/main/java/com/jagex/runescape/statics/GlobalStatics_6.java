@@ -66,7 +66,7 @@ import com.jagex.runescape.scene.SceneNode;
 import com.jagex.runescape.scene.SceneSomething;
 import com.jagex.runescape.scene.SomethingSceneI;
 import com.jagex.runescape.settings.SettingsStatics;
-import com.jagex.runescape.sound.MidiSomethingStatics;
+import com.jagex.runescape.sound.midi.MidiSomethingStatics;
 import com.jagex.runescape.sound.SomethingMusic0;
 import com.jagex.runescape.sound.SoundEffect;
 import com.jagex.runescape.sprite.SoftwareIndexedColorSpriteStatics;

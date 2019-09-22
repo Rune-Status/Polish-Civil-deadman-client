@@ -2,7 +2,7 @@ package com.jagex.runescape.model;
 
 import com.jagex.runescape.buffer.Buffer;
 import com.jagex.runescape.node.Node;
-import com.jagex.runescape.sound.MidiSomething;
+import com.jagex.runescape.sound.midi.MidiSomething;
 import com.jagex.runescape.sound.SomethingMusic0;
 import com.jagex.runescape.statics.GlobalStatics_10;
 

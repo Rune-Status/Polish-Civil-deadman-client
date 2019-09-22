@@ -1,7 +1,8 @@
-package com.jagex.runescape.sound;
+package com.jagex.runescape.sound.midi;
 
 import com.jagex.runescape.buffer.Buffer;
 import com.jagex.runescape.node.Node;
+import com.jagex.runescape.sound.SomethingMusic0;
 
 public final class MidiInstrument extends Node {
 

@@ -1,7 +1,9 @@
-package com.jagex.runescape.sound;
+package com.jagex.runescape.sound.midi;
 
 import com.jagex.runescape.cache.FileUnpacker;
 import com.jagex.runescape.common.HashTable;
+import com.jagex.runescape.sound.SomethingMusic0;
+import com.jagex.runescape.sound.SoundEffect;
 
 public final class MidiSomething {
 

@@ -1,7 +1,8 @@
-package com.jagex.runescape.sound;
+package com.jagex.runescape.sound.midi;
 
 import com.jagex.runescape.buffer.Buffer;
 import com.jagex.runescape.cache.FileUnpacker;
+import com.jagex.runescape.sound.SoundEffect;
 
 public class MidiSomethingStatics {
 

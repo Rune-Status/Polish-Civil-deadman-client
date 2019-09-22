@@ -1,13 +1,16 @@
 package com.jagex.runescape.statics;
 
-import com.jagex.runescape.cache.FileUnpacker;
+import com.jagex.runescape.model.UnusedInterface0;
 import com.jagex.runescape.common.GameString;
 import com.jagex.runescape.common.GameStringStatics;
 import com.jagex.runescape.common.HashTable;
 import com.jagex.runescape.model.AbstractFont;
 import com.jagex.runescape.model.AnimationSomething;
+import com.jagex.runescape.cache.FileUnpacker;
 import com.jagex.runescape.model.FloorOverlay;
 import com.jagex.runescape.model.Player;
+import com.jagex.runescape.scene.SceneGraphTile;
+import com.jagex.runescape.scene.SceneSomething;
 import com.jagex.runescape.model.SoftwareFont;
 import com.jagex.runescape.model.SomethingPacket116;
 import com.jagex.runescape.model.SomethingPacket151;
@@ -18,8 +21,6 @@ import com.jagex.runescape.opengl.GlRenderer;
 import com.jagex.runescape.opengl.GlTexture2d;
 import com.jagex.runescape.opengl.GlUtils;
 import com.jagex.runescape.opengl.SomethingGl0;
-import com.jagex.runescape.scene.SceneGraphTile;
-import com.jagex.runescape.scene.SceneSomething;
 import com.jagex.runescape.settings.SettingsStatics;
 import com.jagex.runescape.sprite.AbstractIndexedColorSprite;
 import com.jagex.runescape.sprite.SoftwareIndexedColorSpriteStatics;
@@ -65,12 +66,11 @@ public class GlobalStatics_3 {
       GameStringStatics.create(" steht bereits auf Ihrer Freunde)2Liste(Q");
   public static SceneSomething[] aClass25Array1868;
   public static int[] anIntArray1871 = new int[2];
+  public static UnusedInterface0 anInterface1_2970;
   public static int[] BIT_MASKS = {
-      0, 1, 3, 7, 15, 31, 63, 127, 255, 511, 1023, 2047, 4095, 8191, 16383,
-      32767, 0xffff, 131071,
-      262143, 524287, 1048575, 2097151, 4194303, 8388607, 16777215, 33554431,
-      67108863, 134217727,
-      268435455, 536870911, 1073741823, Integer.MAX_VALUE, -1
+    0, 1, 3, 7, 15, 31, 63, 127, 255, 511, 1023, 2047, 4095, 8191, 16383, 32767, 0xffff, 131071,
+    262143, 524287, 1048575, 2097151, 4194303, 8388607, 16777215, 33554431, 67108863, 134217727,
+    268435455, 536870911, 1073741823, Integer.MAX_VALUE, -1
   };
 
   public static void method1334(byte var0) {
@@ -598,6 +598,10 @@ public class GlobalStatics_3 {
     GlobalStatics_3.method165(-7878);
     GlobalStatics_8.aBoolean1951 = false;
     GlobalStatics_9.method204(-3);
+  }
+
+  public static void method2166() {
+    GlobalStatics_3.anInterface1_2970 = null;
   }
 
   public static void method704(int[] var0, byte[] var1, int var2, int var3,

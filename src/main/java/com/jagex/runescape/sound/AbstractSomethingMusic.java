@@ -6,5 +6,4 @@ public abstract class AbstractSomethingMusic extends Node {
 
   public int anInt2374;
 
-
 }
