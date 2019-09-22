@@ -257,8 +257,9 @@ public class SignLink implements Runnable {
                   }
 
                   var4 =
-                      (request.anInt979 >> 24 & 255) + "." + (request.anInt979 >> 16
-                          & 255) + "." + (
+                      (request.anInt979 >> 24 & 255) + "." + (
+                          request.anInt979 >> 16
+                              & 255) + "." + (
                           request.anInt979 >> 8 & 255) + "." + (255
                           & request.anInt979);
                   request.result = InetAddress.getByName(var4).getHostName();

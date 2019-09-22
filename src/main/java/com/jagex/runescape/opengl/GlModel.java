@@ -1,25 +1,25 @@
 package com.jagex.runescape.opengl;
 
-import com.jagex.runescape.common.MathUtilities;
-import com.jagex.runescape.settings.SettingsStatics;
-import com.jagex.runescape.statics.GlobalStatics_1;
-import com.jagex.runescape.statics.GlobalStatics_10;
-import com.jagex.runescape.statics.GlobalStatics_11;
-import com.jagex.runescape.statics.GlobalStatics_6;
-import com.jagex.runescape.statics.GlobalStatics_9;
-import com.jagex.runescape.model.Model;
-import com.jagex.runescape.scene.SceneNode;
-import com.jagex.runescape.model.VertexNormal;
 import com.jagex.runescape.buffer.Buffer;
 import com.jagex.runescape.common.ArrayUtils;
+import com.jagex.runescape.common.MathUtilities;
 import com.jagex.runescape.model.AbstractModel;
 import com.jagex.runescape.model.FaceNormal;
+import com.jagex.runescape.model.Model;
+import com.jagex.runescape.model.VertexNormal;
+import com.jagex.runescape.scene.SceneNode;
+import com.jagex.runescape.settings.SettingsStatics;
 import com.jagex.runescape.sprite.SoftwareIndexedColorSprite;
 import com.jagex.runescape.statics.DummyClass17;
 import com.jagex.runescape.statics.DummyClass3;
 import com.jagex.runescape.statics.DummyClass40;
 import com.jagex.runescape.statics.DummyClass45;
 import com.jagex.runescape.statics.DummyClass58;
+import com.jagex.runescape.statics.GlobalStatics_1;
+import com.jagex.runescape.statics.GlobalStatics_10;
+import com.jagex.runescape.statics.GlobalStatics_11;
+import com.jagex.runescape.statics.GlobalStatics_6;
+import com.jagex.runescape.statics.GlobalStatics_9;
 import com.jogamp.opengl.GL;
 import java.nio.ByteBuffer;
 
@@ -3507,7 +3507,8 @@ public final class GlModel extends AbstractModel {
           this.aByteArray3816);
     }
 
-    if (var3 && var4 && var5 && (var8 && var6 || SettingsStatics.USE_BUMP_MAPS)) {
+    if (var3 && var4 && var5 && (var8 && var6
+        || SettingsStatics.USE_BUMP_MAPS)) {
       var12.vertexColorData = this.vertexColorData;
     } else {
       var12.vertexColorData = new BufferData();
@@ -3660,11 +3661,13 @@ public final class GlModel extends AbstractModel {
           buffer = this.vertexColorData.buffer;
         }
 
-        GlRenderer.GL.glColorPointer(4, GL.GL_UNSIGNED_BYTE, this.vertexColorData.stride,
-            this.vertexColorData.pointer);
+        GlRenderer.GL
+            .glColorPointer(4, GL.GL_UNSIGNED_BYTE, this.vertexColorData.stride,
+                this.vertexColorData.pointer);
       }
 
-      if (SettingsStatics.USE_BUMP_MAPS && this.vertexNormalData.buffer != null) {
+      if (SettingsStatics.USE_BUMP_MAPS
+          && this.vertexNormalData.buffer != null) {
         if (buffer != this.vertexNormalData.buffer) {
           this.vertexNormalData.buffer.bindVertexBuffer();
           buffer = this.vertexNormalData.buffer;
@@ -3690,7 +3693,8 @@ public final class GlModel extends AbstractModel {
 
       if (this.vertexPositionData.buffer == null
           || this.vertexColorData.buffer == null
-          || SettingsStatics.USE_BUMP_MAPS && this.vertexNormalData.buffer == null
+          || SettingsStatics.USE_BUMP_MAPS
+          && this.vertexNormalData.buffer == null
           || this.vertexTextureData.buffer == null) {
         if (GlRenderer.VERTEX_BUFFER_SUPPORT) {
           //TODO ARB
@@ -3707,11 +3711,13 @@ public final class GlModel extends AbstractModel {
         if (this.vertexColorData.buffer == null) {
           this.vertexColorData.byteBuffer
               .position(this.vertexColorData.pointer);
-          GlRenderer.GL.glColorPointer(4, GL.GL_UNSIGNED_BYTE, this.vertexColorData.stride,
+          GlRenderer.GL.glColorPointer(4, GL.GL_UNSIGNED_BYTE,
+              this.vertexColorData.stride,
               this.vertexColorData.byteBuffer);
         }
 
-        if (SettingsStatics.USE_BUMP_MAPS && this.vertexNormalData.buffer == null) {
+        if (SettingsStatics.USE_BUMP_MAPS
+            && this.vertexNormalData.buffer == null) {
           this.vertexNormalData.byteBuffer
               .position(this.vertexNormalData.pointer);
           GlRenderer.GL.glNormalPointer(5126, this.vertexNormalData.stride,

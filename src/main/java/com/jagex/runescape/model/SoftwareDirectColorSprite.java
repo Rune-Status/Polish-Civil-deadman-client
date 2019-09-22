@@ -8,11 +8,10 @@ public class SoftwareDirectColorSprite extends AbstractDirectColorSprite {
 
   public int[] pixels;
 
-
   public SoftwareDirectColorSprite(int var1, int var2, int var3, int var4,
       int var5,
       int var6,
-      int[] var7 ) {
+      int[] var7) {
     this.anInt3697 = var1;
     this.anInt3706 = var2;
     this.anInt3701 = var3;
@@ -22,7 +21,7 @@ public class SoftwareDirectColorSprite extends AbstractDirectColorSprite {
     this.pixels = var7;
   }
 
-  public SoftwareDirectColorSprite(int var1, int var2 ) {
+  public SoftwareDirectColorSprite(int var1, int var2) {
     this.pixels = new int[var1 * var2];
     this.anInt3707 = this.anInt3697 = var1;
     this.anInt3696 = this.anInt3706 = var2;
@@ -57,8 +56,9 @@ public class SoftwareDirectColorSprite extends AbstractDirectColorSprite {
 
       for (int var9 = 0; var9 < this.anInt3696; ++var9) {
         for (int var10 = 0; var10 < this.anInt3707; ++var10) {
-          var8[(var9 + var4) * var6 + var10 + var2] = this.pixels[var9 * this.anInt3707
-              + var10];
+          var8[(var9 + var4) * var6 + var10 + var2] = this.pixels[
+              var9 * this.anInt3707
+                  + var10];
         }
       }
 
@@ -84,7 +84,7 @@ public class SoftwareDirectColorSprite extends AbstractDirectColorSprite {
     this.anInt3701 = this.anInt3697 - this.anInt3707 - this.anInt3701;
   }
 
-  public void method635(int var1,int var2 ) {
+  public void method635(int var1, int var2) {
     var1 += this.anInt3701;
     var2 += this.anInt3698;
     int var3 = var1 + var2 * SoftwareIndexedColorSpriteStatics.anInt1092;
@@ -125,11 +125,13 @@ public class SoftwareDirectColorSprite extends AbstractDirectColorSprite {
 
     if (var6 > 0 && var5 > 0) {
       GlobalStatics_10
-          .method659(SoftwareIndexedColorSpriteStatics.anIntArray1100, this.pixels, var4, var3, var6, var5, var7, var8);
+          .method659(SoftwareIndexedColorSpriteStatics.anIntArray1100,
+              this.pixels, var4, var3, var6, var5, var7, var8);
     }
   }
 
-  public void method636(int var1,int var2, int var3, int var4, int var5, int var6 ) {
+  public void method636(int var1, int var2, int var3, int var4, int var5,
+      int var6) {
     if (var6 != 0) {
       var1 -= this.anInt3701 << 4;
       var2 -= this.anInt3698 << 4;
@@ -230,7 +232,8 @@ public class SoftwareDirectColorSprite extends AbstractDirectColorSprite {
       if (var20 < 0) {
         var22 = var21 - var22;
         if (var22 < 0) {
-          int var23 = var21 * SoftwareIndexedColorSpriteStatics.anInt1092 + var19;
+          int var23 =
+              var21 * SoftwareIndexedColorSpriteStatics.anInt1092 + var19;
           double var24 = 1.6777216E7D / var6;
           int var26 = (int) Math.floor(Math.sin(var7) * var24 + 0.5D);
           int var27 = (int) Math.floor(Math.cos(var7) * var24 + 0.5D);
@@ -247,15 +250,18 @@ public class SoftwareDirectColorSprite extends AbstractDirectColorSprite {
           int var37;
           if (var27 == 0) {
             if (var26 == 0) {
-              for (var33 = var22; var33 < 0; var23 += SoftwareIndexedColorSpriteStatics.anInt1092) {
+              for (var33 = var22; var33 < 0;
+                  var23 += SoftwareIndexedColorSpriteStatics.anInt1092) {
                 var34 = var23;
                 var35 = var30;
                 var36 = var31;
                 var37 = var20;
-                if (var30 >= 0 && var31 >= 0 && var30 - (this.anInt3707 << 12) < 0
-                  && var31 - (this.anInt3696 << 12) < 0) {
+                if (var30 >= 0 && var31 >= 0
+                    && var30 - (this.anInt3707 << 12) < 0
+                    && var31 - (this.anInt3696 << 12) < 0) {
                   for (; var37 < 0; ++var37) {
-                    var38 = this.pixels[(var36 >> 12) * this.anInt3707 + (var35 >> 12)];
+                    var38 = this.pixels[(var36 >> 12) * this.anInt3707 + (var35
+                        >> 12)];
                     if (var38 == 0) {
                       ++var34;
                     } else {
@@ -267,7 +273,8 @@ public class SoftwareDirectColorSprite extends AbstractDirectColorSprite {
                 ++var33;
               }
             } else if (var26 < 0) {
-              for (var33 = var22; var33 < 0; var23 += SoftwareIndexedColorSpriteStatics.anInt1092) {
+              for (var33 = var22; var33 < 0;
+                  var23 += SoftwareIndexedColorSpriteStatics.anInt1092) {
                 var34 = var23;
                 var35 = var30;
                 var36 = var31 + (var28 * var26 >> 4);
@@ -285,7 +292,8 @@ public class SoftwareDirectColorSprite extends AbstractDirectColorSprite {
                   }
 
                   while (var37 < 0) {
-                    var38 = this.pixels[(var36 >> 12) * this.anInt3707 + (var35 >> 12)];
+                    var38 = this.pixels[(var36 >> 12) * this.anInt3707 + (var35
+                        >> 12)];
                     if (var38 == 0) {
                       ++var34;
                     } else {
@@ -301,7 +309,8 @@ public class SoftwareDirectColorSprite extends AbstractDirectColorSprite {
                 var30 -= var26;
               }
             } else {
-              for (var33 = var22; var33 < 0; var23 += SoftwareIndexedColorSpriteStatics.anInt1092) {
+              for (var33 = var22; var33 < 0;
+                  var23 += SoftwareIndexedColorSpriteStatics.anInt1092) {
                 var34 = var23;
                 var35 = var30;
                 var36 = var31 + (var28 * var26 >> 4);
@@ -314,12 +323,15 @@ public class SoftwareDirectColorSprite extends AbstractDirectColorSprite {
                     var34 = var23 + var32;
                   }
 
-                  if ((var32 = (1 + var36 - (this.anInt3696 << 12) - var26) / var26) > var37) {
+                  if ((var32 =
+                      (1 + var36 - (this.anInt3696 << 12) - var26) / var26)
+                      > var37) {
                     var37 = var32;
                   }
 
                   while (var37 < 0) {
-                    var38 = this.pixels[(var36 >> 12) * this.anInt3707 + (var35 >> 12)];
+                    var38 = this.pixels[(var36 >> 12) * this.anInt3707 + (var35
+                        >> 12)];
                     if (var38 == 0) {
                       ++var34;
                     } else {
@@ -337,7 +349,8 @@ public class SoftwareDirectColorSprite extends AbstractDirectColorSprite {
             }
           } else if (var27 < 0) {
             if (var26 == 0) {
-              for (var33 = var22; var33 < 0; var23 += SoftwareIndexedColorSpriteStatics.anInt1092) {
+              for (var33 = var22; var33 < 0;
+                  var23 += SoftwareIndexedColorSpriteStatics.anInt1092) {
                 var34 = var23;
                 var35 = var30 + (var28 * var27 >> 4);
                 var36 = var31;
@@ -355,7 +368,8 @@ public class SoftwareDirectColorSprite extends AbstractDirectColorSprite {
                   }
 
                   while (var37 < 0) {
-                    var38 = this.pixels[(var36 >> 12) * this.anInt3707 + (var35 >> 12)];
+                    var38 = this.pixels[(var36 >> 12) * this.anInt3707 + (var35
+                        >> 12)];
                     if (var38 == 0) {
                       ++var34;
                     } else {
@@ -371,7 +385,8 @@ public class SoftwareDirectColorSprite extends AbstractDirectColorSprite {
                 var31 += var27;
               }
             } else if (var26 < 0) {
-              for (var33 = var22; var33 < 0; var23 += SoftwareIndexedColorSpriteStatics.anInt1092) {
+              for (var33 = var22; var33 < 0;
+                  var23 += SoftwareIndexedColorSpriteStatics.anInt1092) {
                 var34 = var23;
                 var35 = var30 + (var28 * var27 >> 4);
                 var36 = var31 + (var28 * var26 >> 4);
@@ -401,7 +416,8 @@ public class SoftwareDirectColorSprite extends AbstractDirectColorSprite {
                 }
 
                 while (var37 < 0) {
-                  var38 = this.pixels[(var36 >> 12) * this.anInt3707 + (var35 >> 12)];
+                  var38 = this.pixels[(var36 >> 12) * this.anInt3707 + (var35
+                      >> 12)];
                   if (var38 == 0) {
                     ++var34;
                   } else {
@@ -418,7 +434,8 @@ public class SoftwareDirectColorSprite extends AbstractDirectColorSprite {
                 var31 += var27;
               }
             } else {
-              for (var33 = var22; var33 < 0; var23 += SoftwareIndexedColorSpriteStatics.anInt1092) {
+              for (var33 = var22; var33 < 0;
+                  var23 += SoftwareIndexedColorSpriteStatics.anInt1092) {
                 var34 = var23;
                 var35 = var30 + (var28 * var27 >> 4);
                 var36 = var31 + (var28 * var26 >> 4);
@@ -443,12 +460,15 @@ public class SoftwareDirectColorSprite extends AbstractDirectColorSprite {
                   var34 += var32;
                 }
 
-                if ((var32 = (1 + var36 - (this.anInt3696 << 12) - var26) / var26) > var37) {
+                if ((var32 =
+                    (1 + var36 - (this.anInt3696 << 12) - var26) / var26)
+                    > var37) {
                   var37 = var32;
                 }
 
                 while (var37 < 0) {
-                  var38 = this.pixels[(var36 >> 12) * this.anInt3707 + (var35 >> 12)];
+                  var38 = this.pixels[(var36 >> 12) * this.anInt3707 + (var35
+                      >> 12)];
                   if (var38 == 0) {
                     ++var34;
                   } else {
@@ -466,7 +486,8 @@ public class SoftwareDirectColorSprite extends AbstractDirectColorSprite {
               }
             }
           } else if (var26 == 0) {
-            for (var33 = var22; var33 < 0; var23 += SoftwareIndexedColorSpriteStatics.anInt1092) {
+            for (var33 = var22; var33 < 0;
+                var23 += SoftwareIndexedColorSpriteStatics.anInt1092) {
               var34 = var23;
               var35 = var30 + (var28 * var27 >> 4);
               var36 = var31;
@@ -479,12 +500,15 @@ public class SoftwareDirectColorSprite extends AbstractDirectColorSprite {
                   var34 = var23 + var32;
                 }
 
-                if ((var32 = (1 + var35 - (this.anInt3707 << 12) - var27) / var27) > var37) {
+                if ((var32 =
+                    (1 + var35 - (this.anInt3707 << 12) - var27) / var27)
+                    > var37) {
                   var37 = var32;
                 }
 
                 while (var37 < 0) {
-                  var38 = this.pixels[(var36 >> 12) * this.anInt3707 + (var35 >> 12)];
+                  var38 = this.pixels[(var36 >> 12) * this.anInt3707 + (var35
+                      >> 12)];
                   if (var38 == 0) {
                     ++var34;
                   } else {
@@ -500,7 +524,8 @@ public class SoftwareDirectColorSprite extends AbstractDirectColorSprite {
               var31 += var27;
             }
           } else if (var26 < 0) {
-            for (var33 = var22; var33 < 0; var23 += SoftwareIndexedColorSpriteStatics.anInt1092) {
+            for (var33 = var22; var33 < 0;
+                var23 += SoftwareIndexedColorSpriteStatics.anInt1092) {
               var34 = var23;
               var35 = var30 + (var28 * var27 >> 4);
               var36 = var31 + (var28 * var26 >> 4);
@@ -513,7 +538,8 @@ public class SoftwareDirectColorSprite extends AbstractDirectColorSprite {
                 var34 = var23 + var32;
               }
 
-              if ((var32 = (1 + var35 - (this.anInt3707 << 12) - var27) / var27) > var37) {
+              if ((var32 = (1 + var35 - (this.anInt3707 << 12) - var27) / var27)
+                  > var37) {
                 var37 = var32;
               }
 
@@ -530,7 +556,8 @@ public class SoftwareDirectColorSprite extends AbstractDirectColorSprite {
               }
 
               while (var37 < 0) {
-                var38 = this.pixels[(var36 >> 12) * this.anInt3707 + (var35 >> 12)];
+                var38 = this.pixels[(var36 >> 12) * this.anInt3707 + (var35
+                    >> 12)];
                 if (var38 == 0) {
                   ++var34;
                 } else {
@@ -547,7 +574,8 @@ public class SoftwareDirectColorSprite extends AbstractDirectColorSprite {
               var31 += var27;
             }
           } else {
-            for (var33 = var22; var33 < 0; var23 += SoftwareIndexedColorSpriteStatics.anInt1092) {
+            for (var33 = var22; var33 < 0;
+                var23 += SoftwareIndexedColorSpriteStatics.anInt1092) {
               var34 = var23;
               var35 = var30 + (var28 * var27 >> 4);
               var36 = var31 + (var28 * var26 >> 4);
@@ -560,7 +588,8 @@ public class SoftwareDirectColorSprite extends AbstractDirectColorSprite {
                 var34 = var23 + var32;
               }
 
-              if ((var32 = (1 + var35 - (this.anInt3707 << 12) - var27) / var27) > var37) {
+              if ((var32 = (1 + var35 - (this.anInt3707 << 12) - var27) / var27)
+                  > var37) {
                 var37 = var32;
               }
 
@@ -572,12 +601,14 @@ public class SoftwareDirectColorSprite extends AbstractDirectColorSprite {
                 var34 += var32;
               }
 
-              if ((var32 = (1 + var36 - (this.anInt3696 << 12) - var26) / var26) > var37) {
+              if ((var32 = (1 + var36 - (this.anInt3696 << 12) - var26) / var26)
+                  > var37) {
                 var37 = var32;
               }
 
               while (var37 < 0) {
-                var38 = this.pixels[(var36 >> 12) * this.anInt3707 + (var35 >> 12)];
+                var38 = this.pixels[(var36 >> 12) * this.anInt3707 + (var35
+                    >> 12)];
                 if (var38 == 0) {
                   ++var34;
                 } else {
@@ -600,7 +631,7 @@ public class SoftwareDirectColorSprite extends AbstractDirectColorSprite {
     }
   }
 
-  public void method637(int var1,int var2, int var3 ) {
+  public void method637(int var1, int var2, int var3) {
     var1 += this.anInt3701;
     var2 += this.anInt3698;
     int var4 = var1 + var2 * SoftwareIndexedColorSpriteStatics.anInt1092;
@@ -641,12 +672,13 @@ public class SoftwareDirectColorSprite extends AbstractDirectColorSprite {
 
     if (var7 > 0 && var6 > 0) {
       GlobalStatics_10
-          .method662(SoftwareIndexedColorSpriteStatics.anIntArray1100, this.pixels, 0, var5, var4, var7, var6, var8, var9,
-        var3);
+          .method662(SoftwareIndexedColorSpriteStatics.anIntArray1100,
+              this.pixels, 0, var5, var4, var7, var6, var8, var9,
+              var3);
     }
   }
 
-  public void draw(int var1,int var2,int var3,int var4 ) {
+  public void draw(int var1, int var2, int var3, int var4) {
     if (var3 > 0 && var4 > 0) {
       int var5 = this.anInt3707;
       int var6 = this.anInt3696;
@@ -706,12 +738,13 @@ public class SoftwareDirectColorSprite extends AbstractDirectColorSprite {
       }
 
       GlobalStatics_10
-          .method670(SoftwareIndexedColorSpriteStatics.anIntArray1100, this.pixels, 0, var7, var8, var13, var14, var3, var4,
-        var11, var12, var5);
+          .method670(SoftwareIndexedColorSpriteStatics.anIntArray1100,
+              this.pixels, 0, var7, var8, var13, var14, var3, var4,
+              var11, var12, var5);
     }
   }
 
-  public void method641(int var1,int var2 ) {
+  public void method641(int var1, int var2) {
     var1 += this.anInt3697 - this.anInt3707 - this.anInt3701;
     var2 += this.anInt3698;
     int var3 = var1 + var2 * SoftwareIndexedColorSpriteStatics.anInt1092;
@@ -752,11 +785,12 @@ public class SoftwareDirectColorSprite extends AbstractDirectColorSprite {
 
     if (var6 > 0 && var5 > 0) {
       GlobalStatics_10
-          .method656(SoftwareIndexedColorSpriteStatics.anIntArray1100, this.pixels, 0, var4, var3, var6, var5, var7, var8);
+          .method656(SoftwareIndexedColorSpriteStatics.anIntArray1100,
+              this.pixels, 0, var4, var3, var6, var5, var7, var8);
     }
   }
 
-  public void method642(int var1,int var2,int var3,int var4, int var5 ) {
+  public void method642(int var1, int var2, int var3, int var4, int var5) {
     if (var3 > 0 && var4 > 0) {
       int var6 = this.anInt3707;
       int var7 = this.anInt3696;
@@ -816,12 +850,13 @@ public class SoftwareDirectColorSprite extends AbstractDirectColorSprite {
       }
 
       GlobalStatics_10
-          .method661(SoftwareIndexedColorSpriteStatics.anIntArray1100, this.pixels, 0, var8, var9, var14, var15, var3, var4,
-        var12, var13, var6, var5);
+          .method661(SoftwareIndexedColorSpriteStatics.anIntArray1100,
+              this.pixels, 0, var8, var9, var14, var15, var3, var4,
+              var12, var13, var6, var5);
     }
   }
 
-  public void method643(int var1,int var2 ) {
+  public void method643(int var1, int var2) {
     var1 += this.anInt3701;
     var2 += this.anInt3698;
     int var3 = var1 + var2 * SoftwareIndexedColorSpriteStatics.anInt1092;
@@ -862,7 +897,8 @@ public class SoftwareDirectColorSprite extends AbstractDirectColorSprite {
 
     if (var6 > 0 && var5 > 0) {
       GlobalStatics_10
-          .method654(SoftwareIndexedColorSpriteStatics.anIntArray1100, this.pixels, 0, var4, var3, var6, var5, var7, var8);
+          .method654(SoftwareIndexedColorSpriteStatics.anIntArray1100,
+              this.pixels, 0, var4, var3, var6, var5, var7, var8);
     }
   }
 
@@ -913,40 +949,41 @@ public class SoftwareDirectColorSprite extends AbstractDirectColorSprite {
     DummyClass47.method1319(this.pixels, this.anInt3707, this.anInt3696);
   }
 
-  public void method660(int var1,int var2, int var3, int var4, int var5, int var6,
+  public void method660(int var1, int var2, int var3, int var4, int var5,
+      int var6,
       double var7,
-      int var9 ) {
+      int var9) {
     int var10 = -var3 / 2;
-      int var11 = -var4 / 2;
-      int var12 = (int) (Math.sin(var7) * 65536.0D);
-      int var13 = (int) (Math.cos(var7) * 65536.0D);
-      var12 = var12 * var9 >> 8;
-      var13 = var13 * var9 >> 8;
-      int var14 = (var5 << 16) + var11 * var12 + var10 * var13;
-      int var15 = (var6 << 16) + var11 * var13 - var10 * var12;
-      int var16 = var1 + var2 * SoftwareIndexedColorSpriteStatics.anInt1092;
+    int var11 = -var4 / 2;
+    int var12 = (int) (Math.sin(var7) * 65536.0D);
+    int var13 = (int) (Math.cos(var7) * 65536.0D);
+    var12 = var12 * var9 >> 8;
+    var13 = var13 * var9 >> 8;
+    int var14 = (var5 << 16) + var11 * var12 + var10 * var13;
+    int var15 = (var6 << 16) + var11 * var13 - var10 * var12;
+    int var16 = var1 + var2 * SoftwareIndexedColorSpriteStatics.anInt1092;
 
-      for (var2 = 0; var2 < var4; ++var2) {
-        int var17 = var16;
-        int var18 = var14;
-        int var19 = var15;
+    for (var2 = 0; var2 < var4; ++var2) {
+      int var17 = var16;
+      int var18 = var14;
+      int var19 = var15;
 
-        for (var1 = -var3; var1 < 0; ++var1) {
-          int var20 = this.pixels[(var18 >> 16) + (var19 >> 16) * this.anInt3707];
-          if (var20 == 0) {
-            ++var17;
-          } else {
-            SoftwareIndexedColorSpriteStatics.anIntArray1100[var17++] = var20;
-          }
-
-          var18 += var13;
-          var19 -= var12;
+      for (var1 = -var3; var1 < 0; ++var1) {
+        int var20 = this.pixels[(var18 >> 16) + (var19 >> 16) * this.anInt3707];
+        if (var20 == 0) {
+          ++var17;
+        } else {
+          SoftwareIndexedColorSpriteStatics.anIntArray1100[var17++] = var20;
         }
 
-        var14 += var12;
-        var15 += var13;
-        var16 += SoftwareIndexedColorSpriteStatics.anInt1092;
+        var18 += var13;
+        var19 -= var12;
       }
+
+      var14 += var12;
+      var15 += var13;
+      var16 += SoftwareIndexedColorSpriteStatics.anInt1092;
+    }
 
   }
 
@@ -964,38 +1001,39 @@ public class SoftwareDirectColorSprite extends AbstractDirectColorSprite {
     this.anInt3698 = this.anInt3706 - this.anInt3696 - this.anInt3698;
   }
 
-  public void method664(int var1,int var2, int var3, int var4, int var5, int var6,
+  public void method664(int var1, int var2, int var3, int var4, int var5,
+      int var6,
       int var7,
       int var8,
       int[] var9,
-      int[] var10 ) {
+      int[] var10) {
     int var11 = -var3 / 2;
-      int var12 = -var4 / 2;
-      int var13 = (int) (Math.sin(var7 / 326.11D) * 65536.0D);
-      int var14 = (int) (Math.cos(var7 / 326.11D) * 65536.0D);
-      var13 = var13 * var8 >> 8;
-      var14 = var14 * var8 >> 8;
-      int var15 = (var5 << 16) + var12 * var13 + var11 * var14;
-      int var16 = (var6 << 16) + var12 * var14 - var11 * var13;
-      int var17 = var1 + var2 * SoftwareIndexedColorSpriteStatics.anInt1092;
+    int var12 = -var4 / 2;
+    int var13 = (int) (Math.sin(var7 / 326.11D) * 65536.0D);
+    int var14 = (int) (Math.cos(var7 / 326.11D) * 65536.0D);
+    var13 = var13 * var8 >> 8;
+    var14 = var14 * var8 >> 8;
+    int var15 = (var5 << 16) + var12 * var13 + var11 * var14;
+    int var16 = (var6 << 16) + var12 * var14 - var11 * var13;
+    int var17 = var1 + var2 * SoftwareIndexedColorSpriteStatics.anInt1092;
 
-      for (var2 = 0; var2 < var4; ++var2) {
-        int var18 = var9[var2];
-        int var19 = var17 + var18;
-        int var20 = var15 + var14 * var18;
-        int var21 = var16 - var13 * var18;
+    for (var2 = 0; var2 < var4; ++var2) {
+      int var18 = var9[var2];
+      int var19 = var17 + var18;
+      int var20 = var15 + var14 * var18;
+      int var21 = var16 - var13 * var18;
 
-        for (var1 = -var10[var2]; var1 < 0; ++var1) {
-          SoftwareIndexedColorSpriteStatics.anIntArray1100[var19++] =
-              this.pixels[(var20 >> 16) + (var21 >> 16) * this.anInt3707];
-          var20 += var14;
-          var21 -= var13;
-        }
-
-        var15 += var13;
-        var16 += var14;
-        var17 += SoftwareIndexedColorSpriteStatics.anInt1092;
+      for (var1 = -var10[var2]; var1 < 0; ++var1) {
+        SoftwareIndexedColorSpriteStatics.anIntArray1100[var19++] =
+            this.pixels[(var20 >> 16) + (var21 >> 16) * this.anInt3707];
+        var20 += var14;
+        var21 -= var13;
       }
+
+      var15 += var13;
+      var16 += var14;
+      var17 += SoftwareIndexedColorSpriteStatics.anInt1092;
+    }
 
   }
 
@@ -1005,7 +1043,8 @@ public class SoftwareDirectColorSprite extends AbstractDirectColorSprite {
 
       for (int var2 = 0; var2 < this.anInt3696; ++var2) {
         for (int var3 = 0; var3 < this.anInt3707; ++var3) {
-          var1[(var2 + this.anInt3698) * this.anInt3697 + var3 + this.anInt3701] =
+          var1[(var2 + this.anInt3698) * this.anInt3697 + var3
+              + this.anInt3701] =
               this.pixels[var2 * this.anInt3707 + var3];
         }
       }
@@ -1019,7 +1058,8 @@ public class SoftwareDirectColorSprite extends AbstractDirectColorSprite {
   }
 
   public final void method666(int var1, int var2, int[] var3, int[] var4) {
-    if (SoftwareIndexedColorSpriteStatics.anInt1099 - SoftwareIndexedColorSpriteStatics.anInt1095 == var3.length) {
+    if (SoftwareIndexedColorSpriteStatics.anInt1099
+        - SoftwareIndexedColorSpriteStatics.anInt1095 == var3.length) {
       var1 += this.anInt3701;
       var2 += this.anInt3698;
       int var5 = 0;
@@ -1115,43 +1155,44 @@ public class SoftwareDirectColorSprite extends AbstractDirectColorSprite {
     }
   }
 
-  public void method667(int var1,int var2, int var3, int var4, int var5, int var6,
+  public void method667(int var1, int var2, int var3, int var4, int var5,
+      int var6,
       int var7,
       int var8,
       int[] var9,
-      int[] var10 ) {
+      int[] var10) {
     int var11 = -var3 / 2;
-      int var12 = -var4 / 2;
-      int var13 = (int) (Math.sin(var7 / 326.11D) * 65536.0D);
-      int var14 = (int) (Math.cos(var7 / 326.11D) * 65536.0D);
-      var13 = var13 * var8 >> 8;
-      var14 = var14 * var8 >> 8;
-      int var15 = (var5 << 16) + var12 * var13 + var11 * var14;
-      int var16 = (var6 << 16) + var12 * var14 - var11 * var13;
-      int var17 = var1 + var2 * SoftwareIndexedColorSpriteStatics.anInt1092;
+    int var12 = -var4 / 2;
+    int var13 = (int) (Math.sin(var7 / 326.11D) * 65536.0D);
+    int var14 = (int) (Math.cos(var7 / 326.11D) * 65536.0D);
+    var13 = var13 * var8 >> 8;
+    var14 = var14 * var8 >> 8;
+    int var15 = (var5 << 16) + var12 * var13 + var11 * var14;
+    int var16 = (var6 << 16) + var12 * var14 - var11 * var13;
+    int var17 = var1 + var2 * SoftwareIndexedColorSpriteStatics.anInt1092;
 
-      for (var2 = 0; var2 < var4; ++var2) {
-        int var18 = var9[var2];
-        int var19 = var17 + var18;
-        int var20 = var15 + var14 * var18;
-        int var21 = var16 - var13 * var18;
+    for (var2 = 0; var2 < var4; ++var2) {
+      int var18 = var9[var2];
+      int var19 = var17 + var18;
+      int var20 = var15 + var14 * var18;
+      int var21 = var16 - var13 * var18;
 
-        for (var1 = -var10[var2]; var1 < 0; ++var1) {
-          int var22 = this.pixels[(var20 >> 16) + (var21 >> 16) * this.anInt3707];
-          if (var22 == 0) {
-            ++var19;
-          } else {
-            SoftwareIndexedColorSpriteStatics.anIntArray1100[var19++] = var22;
-          }
-
-          var20 += var14;
-          var21 -= var13;
+      for (var1 = -var10[var2]; var1 < 0; ++var1) {
+        int var22 = this.pixels[(var20 >> 16) + (var21 >> 16) * this.anInt3707];
+        if (var22 == 0) {
+          ++var19;
+        } else {
+          SoftwareIndexedColorSpriteStatics.anIntArray1100[var19++] = var22;
         }
 
-        var15 += var13;
-        var16 += var14;
-        var17 += SoftwareIndexedColorSpriteStatics.anInt1092;
+        var20 += var14;
+        var21 -= var13;
       }
+
+      var15 += var13;
+      var16 += var14;
+      var17 += SoftwareIndexedColorSpriteStatics.anInt1092;
+    }
 
   }
 
@@ -1160,7 +1201,8 @@ public class SoftwareDirectColorSprite extends AbstractDirectColorSprite {
       int var3 = var2 * this.anInt3707;
 
       for (int var4 = this.anInt3707 - 1; var4 > 0; --var4) {
-        if (this.pixels[var4 + var3] == 0 && this.pixels[var4 + var3 - 1 - this.anInt3707] != 0) {
+        if (this.pixels[var4 + var3] == 0
+            && this.pixels[var4 + var3 - 1 - this.anInt3707] != 0) {
           this.pixels[var4 + var3] = var1;
         }
       }

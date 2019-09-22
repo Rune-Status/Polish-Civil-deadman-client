@@ -1,8 +1,8 @@
 package com.jagex.runescape.statics;
 
+import com.jagex.runescape.cache.FileUnpacker;
 import com.jagex.runescape.common.GameString;
 import com.jagex.runescape.common.GameStringStatics;
-import com.jagex.runescape.cache.FileUnpacker;
 import java.util.Objects;
 
 public final class DummyClass39 {

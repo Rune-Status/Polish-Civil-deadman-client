@@ -1,8 +1,8 @@
 package com.jagex.runescape.statics;
 
-import com.jagex.runescape.model.Widget;
 import com.jagex.runescape.common.GameString;
 import com.jagex.runescape.common.GameStringStatics;
+import com.jagex.runescape.model.Widget;
 import com.jagex.runescape.settings.SettingsStatics;
 
 public final class DummyClass20 {

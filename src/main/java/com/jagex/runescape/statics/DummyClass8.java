@@ -56,9 +56,11 @@ public final class DummyClass8 extends DummyClass7 {
       HintMarker var9 = var7[var8];
       if (var9 != null && var9.anInt1360 == 2) {
         GlobalStatics_5.method1724(var0 >> 1, var5,
-            (-GlobalStatics_9.REGION_BASE_Y + var9.anInt1347 << 7) + var9.anInt1350,
+            (-GlobalStatics_9.REGION_BASE_Y + var9.anInt1347 << 7)
+                + var9.anInt1350,
             var9.anInt1353 * 2, var2 >> 1,
-            var9.anInt1346 + (var9.anInt1356 - GlobalStatics_10.REGION_BASE_X << 7),
+            var9.anInt1346 + (var9.anInt1356 - GlobalStatics_10.REGION_BASE_X
+                << 7),
             (byte) -114, var4);
         if (DummyClass34.anInt590 > -1
             && GlobalStatics_4.updateCycle % 20 < 10) {

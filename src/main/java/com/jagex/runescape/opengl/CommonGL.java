@@ -67,7 +67,8 @@ public final class CommonGL {
     } else {
 
 //      //TODO this draws ground tiles
-      for (int plane = GLStatics.anInt3419; plane < GLStatics.anInt2456; ++plane) {
+      for (int plane = GLStatics.anInt3419; plane < GLStatics.anInt2456;
+          ++plane) {
         for (int y = 0; y < array[plane].length; ++y) {
           SomethingGl0 var25 = array[plane][y];
           //TODO was 201.5F

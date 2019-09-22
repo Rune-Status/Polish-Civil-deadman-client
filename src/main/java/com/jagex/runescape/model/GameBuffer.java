@@ -74,9 +74,9 @@ public final class GameBuffer extends Buffer {
 
   public void method818(boolean var1) {
     this.position = (this.bitOffset + 7) / 8;
-      if (var1) {
-        this.readBits(-75);
-      }
+    if (var1) {
+      this.readBits(-75);
+    }
   }
 
 }

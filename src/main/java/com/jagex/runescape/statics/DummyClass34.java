@@ -3,8 +3,6 @@ package com.jagex.runescape.statics;
 import com.jagex.runescape.buffer.Buffer;
 import com.jagex.runescape.common.GameString;
 import com.jagex.runescape.common.GameStringStatics;
-import com.jagex.runescape.input.Keyboard;
-import com.jagex.runescape.input.KeyboardStatics;
 import com.jagex.runescape.opengl.GLStatics;
 
 public final class DummyClass34 {

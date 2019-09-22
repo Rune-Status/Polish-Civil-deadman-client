@@ -1,8 +1,8 @@
 package com.jagex.runescape.opengl;
 
+import com.jagex.runescape.buffer.Buffer;
 import com.jagex.runescape.common.MathUtilities;
 import com.jagex.runescape.statics.GlobalStatics_10;
-import com.jagex.runescape.buffer.Buffer;
 
 public final class Light {
 

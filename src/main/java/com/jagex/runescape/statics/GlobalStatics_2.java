@@ -1,37 +1,33 @@
 package com.jagex.runescape.statics;
 
-import com.jagex.runescape.common.ThreadUtilities;
-import com.jagex.runescape.model.Widget;
-import com.jagex.runescape.model.WidgetUpdate;
 import com.jagex.runescape.buffer.Buffer;
+import com.jagex.runescape.cache.FileUnpacker;
 import com.jagex.runescape.common.GameString;
 import com.jagex.runescape.common.GameStringStatics;
 import com.jagex.runescape.common.HashTable;
 import com.jagex.runescape.model.AbstractDirectColorSprite;
 import com.jagex.runescape.model.AbstractTextureSampler;
 import com.jagex.runescape.model.AreaSoundEffect;
-import com.jagex.runescape.model.FileOnDisk;
-import com.jagex.runescape.cache.FileUnpacker;
 import com.jagex.runescape.model.FloorUnderlay;
 import com.jagex.runescape.model.GameObjectConfig;
 import com.jagex.runescape.model.MapScene;
-import com.jagex.runescape.sound.MidiFile;
 import com.jagex.runescape.model.NpcConfiguration;
 import com.jagex.runescape.model.Player;
-import com.jagex.runescape.model.SignLink;
 import com.jagex.runescape.model.SignLinkRequest;
 import com.jagex.runescape.model.SocketStream;
 import com.jagex.runescape.model.SoftwareDirectColorSprite;
 import com.jagex.runescape.model.SomethingWorldMapy;
 import com.jagex.runescape.model.TextureSampler34;
+import com.jagex.runescape.model.Widget;
+import com.jagex.runescape.model.WidgetUpdate;
 import com.jagex.runescape.opengl.GLStatics;
 import com.jagex.runescape.opengl.GlDirectColorSprite;
 import com.jagex.runescape.opengl.GlEnvironment;
 import com.jagex.runescape.opengl.GlRenderer;
 import com.jagex.runescape.opengl.SomethingShadows;
 import com.jagex.runescape.settings.SettingsStatics;
+import com.jagex.runescape.sound.MidiFile;
 import com.jagex.runescape.sprite.SoftwareIndexedColorSprite;
-import java.io.IOException;
 import java.util.Date;
 
 public class GlobalStatics_2 {
@@ -95,13 +91,17 @@ public class GlobalStatics_2 {
   static GameString aClass94_44 = GameStringStatics.create(" ");
   public static GameString aClass94_43 = GlobalStatics_2.aClass94_44;
   public static String aString597 =
-    "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!\"£$%^&*()-_=+[{]};:\'@#~,<.>/?\\| "
-      + 0x00c4 + 0x00cb + 0x00cf + 0x00d6 + 0x00dc + 0x00e4 + 0x00eb
-      + 0x00ef + 0x00f6 + 0x00fc + 0x00ff + 0x00df + 0x00c1 + 0x00c0 + 0x00c9
-      + 0x00c8 + 0x00cd + 0x00cc + 0x00d3 + 0x00d2 + 0x00da + 0x00d9 + 0x00e1
-      + 0x00e0 + 0x00e9 + 0x00e8 + 0x00ed + 0x00ec + 0x00f3 + 0x00f2 + 0x00fa
-      + 0x00f9 + 0x00c2 + 0x00ca + 0x00ce + 0x00d4 + 0x00db + 0x00e2 + 0x00ea
-      + 0x00ee + 0x00f4 + 0x00fb + 0x00c6 + 0x00e6;
+      "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!\"£$%^&*()-_=+[{]};:\'@#~,<.>/?\\| "
+          + 0x00c4 + 0x00cb + 0x00cf + 0x00d6 + 0x00dc + 0x00e4 + 0x00eb
+          + 0x00ef + 0x00f6 + 0x00fc + 0x00ff + 0x00df + 0x00c1 + 0x00c0
+          + 0x00c9
+          + 0x00c8 + 0x00cd + 0x00cc + 0x00d3 + 0x00d2 + 0x00da + 0x00d9
+          + 0x00e1
+          + 0x00e0 + 0x00e9 + 0x00e8 + 0x00ed + 0x00ec + 0x00f3 + 0x00f2
+          + 0x00fa
+          + 0x00f9 + 0x00c2 + 0x00ca + 0x00ce + 0x00d4 + 0x00db + 0x00e2
+          + 0x00ea
+          + 0x00ee + 0x00f4 + 0x00fb + 0x00c6 + 0x00e6;
   public static final int anInt598 = GlobalStatics_2.aString597.length();
   public static int[] anIntArray599 = new int[256];
 
@@ -233,11 +233,11 @@ public class GlobalStatics_2 {
       if (var5) {
         GlobalStatics_2
             .method2046(var1.aByteArray2674, var0.aByteArray2674, var8, var6,
-            var7, var9, var10);
+                var7, var9, var10);
       } else {
         GlobalStatics_2
             .method2048(var1.aByteArray2674, var0.aByteArray2674, var8, var6,
-            var7, var9, var10);
+                var7, var9, var10);
       }
 
       SomethingShadows.method2036(var2, var3, 16, 16);
@@ -343,7 +343,8 @@ public class GlobalStatics_2 {
       GlobalStatics_2.method520((byte) -89);
     }
 
-    return var0 != 0 ? var0 == 1 ? var2 : var0 == 2 ? -var3 + 7 : -var2 + 7 : var3;
+    return var0 != 0 ? var0 == 1 ? var2 : var0 == 2 ? -var3 + 7 : -var2 + 7
+        : var3;
   }
 
   public static SomethingWorldMapy method520(byte var0) {

@@ -8,7 +8,6 @@ public final class SoundEffect {
   private final SomethingSoundEffect[] aClass116Array1768 = new SomethingSoundEffect[10];
   private int anInt1769;
 
-
   public SoundEffect(Buffer var1) {
     for (int var2 = 0; var2 < 10; ++var2) {
       int var3 = var1.readUnsignedByte();
@@ -32,9 +31,11 @@ public final class SoundEffect {
     int var2;
     for (var2 = 0; var2 < 10; ++var2) {
       if (this.aClass116Array1768[var2] != null
-        && this.aClass116Array1768[var2].anInt1586 + this.aClass116Array1768[var2].anInt1593
-        > var1) {
-        var1 = this.aClass116Array1768[var2].anInt1586 + this.aClass116Array1768[var2].anInt1593;
+          && this.aClass116Array1768[var2].anInt1586
+          + this.aClass116Array1768[var2].anInt1593
+          > var1) {
+        var1 = this.aClass116Array1768[var2].anInt1586
+            + this.aClass116Array1768[var2].anInt1593;
       }
     }
 
@@ -49,7 +50,8 @@ public final class SoundEffect {
           int var5 = this.aClass116Array1768[var4].anInt1586 * 22050 / 1000;
           int var6 = this.aClass116Array1768[var4].anInt1593 * 22050 / 1000;
           int[] var7 =
-              this.aClass116Array1768[var4].method1717(var5, this.aClass116Array1768[var4].anInt1586);
+              this.aClass116Array1768[var4]
+                  .method1717(var5, this.aClass116Array1768[var4].anInt1586);
 
           for (int var8 = 0; var8 < var5; ++var8) {
             int var9 = var3[var8 + var6] + (var7[var8] >> 8);
@@ -69,7 +71,7 @@ public final class SoundEffect {
   public SomethingMusic0 method1812() {
     byte[] var1 = this.method1810();
     return new SomethingMusic0(22050, var1, 22050 * this.anInt1769 / 1000,
-      22050 * this.anInt1767 / 1000);
+        22050 * this.anInt1767 / 1000);
   }
 
   public int method1813() {
@@ -78,7 +80,7 @@ public final class SoundEffect {
     int var2;
     for (var2 = 0; var2 < 10; ++var2) {
       if (this.aClass116Array1768[var2] != null
-        && this.aClass116Array1768[var2].anInt1593 / 20 < var1) {
+          && this.aClass116Array1768[var2].anInt1593 / 20 < var1) {
         var1 = this.aClass116Array1768[var2].anInt1593 / 20;
       }
     }

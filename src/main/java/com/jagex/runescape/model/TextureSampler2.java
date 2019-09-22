@@ -8,9 +8,9 @@ public final class TextureSampler2 extends AbstractTextureSampler {
     super(0, true);
   }
 
-  public int[] method154(int var1, byte var2 ) {
+  public int[] method154(int var1, byte var2) {
     int var3 = -96 / ((var2 - 30) / 36);
-      return GlobalStatics_9.anIntArray2125;
+    return GlobalStatics_9.anIntArray2125;
   }
 
 }

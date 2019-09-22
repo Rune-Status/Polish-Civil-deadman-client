@@ -1,7 +1,5 @@
 package com.jagex.runescape.scene;
 
-import com.jagex.runescape.scene.SceneNode;
-
 public final class SomethingSceneJ {
 
   public SceneNode aClass140_320;

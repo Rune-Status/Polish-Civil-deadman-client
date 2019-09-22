@@ -16,13 +16,12 @@ public final class Something2SounfEffect {
   private int anInt609;
   private int anInt610;
 
-
   public Something2SounfEffect() {
     this.anIntArray604[1] = 0xffff;
     this.anIntArray602[1] = 0xffff;
   }
 
-  public int method1007(int var1 ) {
+  public int method1007(int var1) {
     if (this.anInt610 >= this.anInt609) {
       this.anInt607 = this.anIntArray602[this.anInt606++] << 15;
       if (this.anInt606 >= this.anInt600) {
@@ -35,7 +34,7 @@ public final class Something2SounfEffect {
         this.anInt608 = ((
             this.anIntArray602[this.anInt606] << 15) - this.anInt607) / (
             this.anInt609
-          - this.anInt610);
+                - this.anInt610);
       }
     }
 
@@ -52,7 +51,7 @@ public final class Something2SounfEffect {
     this.anInt610 = 0;
   }
 
-  public void method1009(Buffer var1 ) {
+  public void method1009(Buffer var1) {
     this.anInt600 = var1.readUnsignedByte();
     this.anIntArray604 = new int[this.anInt600];
     this.anIntArray602 = new int[this.anInt600];
@@ -64,7 +63,7 @@ public final class Something2SounfEffect {
 
   }
 
-  public void method1010(Buffer var1 ) {
+  public void method1010(Buffer var1) {
     this.anInt601 = var1.readUnsignedByte();
     this.anInt603 = var1.readInt();
     this.anInt605 = var1.readInt();

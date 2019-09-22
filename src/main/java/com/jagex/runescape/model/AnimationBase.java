@@ -1,7 +1,7 @@
 package com.jagex.runescape.model;
 
-import com.jagex.runescape.statics.GlobalStatics_3;
 import com.jagex.runescape.buffer.Buffer;
+import com.jagex.runescape.statics.GlobalStatics_3;
 
 public final class AnimationBase {
 
@@ -16,8 +16,7 @@ public final class AnimationBase {
   public short[] aShortArray1395;
   public short[] aShortArray1396;
 
-
-  public AnimationBase(byte[] var1, AnimationFrame var2 ) {
+  public AnimationBase(byte[] var1, AnimationFrame var2) {
     this.aClass3_Sub17_1384 = var2;
     Buffer var3 = new Buffer(var1);
     Buffer var4 = new Buffer(var1);
@@ -71,14 +70,14 @@ public final class AnimationBase {
         GlobalStatics_3.aByteArray1389[var6] = (byte) (var11 >>> 3 & 3);
         if (var10 == 2) {
           GlobalStatics_3.aShortArray1394[var6] =
-            (short) (((GlobalStatics_3.aShortArray1394[var6] & 255) << 3) + (
-                GlobalStatics_3.aShortArray1394[var6] >> 8 & 7));
+              (short) (((GlobalStatics_3.aShortArray1394[var6] & 255) << 3) + (
+                  GlobalStatics_3.aShortArray1394[var6] >> 8 & 7));
           GlobalStatics_3.aShortArray1391[var6] =
-            (short) (((GlobalStatics_3.aShortArray1391[var6] & 255) << 3) + (
-                GlobalStatics_3.aShortArray1391[var6] >> 8 & 7));
+              (short) (((GlobalStatics_3.aShortArray1391[var6] & 255) << 3) + (
+                  GlobalStatics_3.aShortArray1391[var6] >> 8 & 7));
           GlobalStatics_3.aShortArray1390[var6] =
-            (short) (((GlobalStatics_3.aShortArray1390[var6] & 255) << 3) + (
-                GlobalStatics_3.aShortArray1390[var6] >> 8 & 7));
+              (short) (((GlobalStatics_3.aShortArray1390[var6] & 255) << 3) + (
+                  GlobalStatics_3.aShortArray1390[var6] >> 8 & 7));
         }
 
         GlobalStatics_3.aShortArray1392[var6] = -1;

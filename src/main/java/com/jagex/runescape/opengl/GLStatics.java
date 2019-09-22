@@ -1,11 +1,11 @@
 package com.jagex.runescape.opengl;
 
 import com.jagex.runescape.buffer.Buffer;
+import com.jagex.runescape.cache.FileUnpacker;
 import com.jagex.runescape.common.GameString;
 import com.jagex.runescape.common.GameStringStatics;
 import com.jagex.runescape.model.AbstractDirectColorSprite;
 import com.jagex.runescape.model.ClientScriptCall;
-import com.jagex.runescape.cache.FileUnpacker;
 import com.jagex.runescape.model.GameObjectConfig;
 import com.jagex.runescape.model.GameWorld;
 import com.jagex.runescape.model.GroundItemNode;
@@ -14,10 +14,10 @@ import com.jagex.runescape.model.ItemConfig;
 import com.jagex.runescape.model.NPC;
 import com.jagex.runescape.model.Parameter;
 import com.jagex.runescape.model.Player;
+import com.jagex.runescape.model.SoftwareDirectColorSprite;
 import com.jagex.runescape.model.Widget;
 import com.jagex.runescape.node.Deque;
 import com.jagex.runescape.scene.SceneGraphTile;
-import com.jagex.runescape.model.SoftwareDirectColorSprite;
 import com.jagex.runescape.scene.SomethingSceneTile;
 import com.jagex.runescape.scene.SomethingTilek;
 import com.jagex.runescape.settings.SettingsStatics;
@@ -367,7 +367,8 @@ public class GLStatics {
         }
 
         GlobalStatics_9
-            .method1177(-1, 0L, (byte) -75, GameStringStatics.EMPTY_STRING, var11,
+            .method1177(-1, 0L, (byte) -75, GameStringStatics.EMPTY_STRING,
+                var11,
                 (short) 60,
                 GameStringStatics.walkTooltip, var12);
       }
@@ -550,7 +551,8 @@ public class GLStatics {
                 if (var21 >= var33
                     && var36.config.size <= -(var21 - var33 >> 7) + var30
                     .getSize() && var22 >= var18 &&
-                    var36.config.size <= -(-var18 + var22 >> 7) + var30.getSize()) {
+                    var36.config.size <= -(-var18 + var22 >> 7) + var30
+                        .getSize()) {
                   GlobalStatics_6.method2068(var36.config, var12, -121,
                       GlobalStatics_2.anIntArray347[var37], var27);
                 }
@@ -563,7 +565,8 @@ public class GLStatics {
                 if (var38 != var30 && var33 <= var21
                     && var38.getSize() <= var30.getSize() - (var21 - var33
                     >> 7) && var22 >= var18 &&
-                    var38.getSize() <= -(var22 - var18 >> 7) + var30.getSize()) {
+                    var38.getSize() <= -(var22 - var18 >> 7) + var30
+                        .getSize()) {
                   GlobalStatics_9
                       .method312(DummyClass42.anIntArray887[var37], 9, var27,
                           var38,
@@ -591,7 +594,8 @@ public class GLStatics {
                           GlobalStatics_9.concat(new GameString[]{
                               GameStringStatics.aClass94_378,
                               GlobalStatics_0.aClass94_1699, var40.aClass94_770
-                          }), var12, (short) 33, GameStringStatics.aClass94_3388,
+                          }), var12, (short) 33,
+                          GameStringStatics.aClass94_3388,
                           var27);
                 } else if (!GlobalStatics_9.aBoolean1837) {
                   ++GlobalStatics_9.anInt2901;

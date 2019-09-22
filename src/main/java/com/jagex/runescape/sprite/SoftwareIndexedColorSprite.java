@@ -142,7 +142,7 @@ public final class SoftwareIndexedColorSprite extends
     }
 
     this.aByteArray2674 = var1;
-  int  var3 = this.offsetY;
+    int var3 = this.offsetY;
     this.offsetY = this.offsetX;
     this.offsetX = this.anInt1467 - this.height - var3;
     var3 = this.height;

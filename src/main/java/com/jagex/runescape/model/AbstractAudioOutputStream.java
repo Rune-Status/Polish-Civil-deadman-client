@@ -1,7 +1,6 @@
 package com.jagex.runescape.model;
 
 import com.jagex.runescape.common.ArrayUtils;
-
 import com.jagex.runescape.common.ThreadUtilities;
 import com.jagex.runescape.common.TimeUtilities;
 import com.jagex.runescape.sound.AbstractSomethingMusic;
@@ -34,7 +33,7 @@ public class AbstractAudioOutputStream {
   void write() throws Exception {
   }
 
-  public void setBufferSize(int var1 ) throws Exception {
+  public void setBufferSize(int var1) throws Exception {
   }
 
   public void flush() throws LineUnavailableException {
@@ -51,7 +50,8 @@ public class AbstractAudioOutputStream {
     if (this.aClass3_Sub24_1973 != null && this.anInt1987 <= 0) {
       this.anInt1987 += DummyClass60.sampleRate >> 4;
       GlobalStatics_10.method1591(this.aClass3_Sub24_1973);
-      this.method2155(this.aClass3_Sub24_1973, this.aClass3_Sub24_1973.method412(), (byte) -24);
+      this.method2155(this.aClass3_Sub24_1973,
+          this.aClass3_Sub24_1973.method412(), (byte) -24);
       int var4 = 0;
       int var5 = 255;
 
@@ -94,8 +94,10 @@ public class AbstractAudioOutputStream {
 
                 AudioStreamEncoder var14 = var11.method411();
                 if (var14 != null) {
-                  for (int var15 = var11.anInt2543; var14 != null; var14 = var11.method414()) {
-                    this.method2155(var14, var15 * var14.method412() >> 8, (byte) -24);
+                  for (int var15 = var11.anInt2543; var14 != null;
+                      var14 = var11.method414()) {
+                    this.method2155(var14, var15 * var14.method412() >> 8,
+                        (byte) -24);
                   }
                 }
 
@@ -127,7 +129,7 @@ public class AbstractAudioOutputStream {
         AudioStreamEncoder var17;
         for (
             this.aClass3_Sub24Array1980[var6] = this.aClass3_Sub24Array1983[var6] = null;
-          var16 != null; var16 = var17) {
+            var16 != null; var16 = var17) {
           var17 = var16.aClass3_Sub24_2546;
           var16.aClass3_Sub24_2546 = null;
         }
@@ -147,94 +149,94 @@ public class AbstractAudioOutputStream {
 
   public final synchronized void process(byte var1) {
     if (this.samples != null) {
-        long start = TimeUtilities.getCurrentTimeMillis();
+      long start = TimeUtilities.getCurrentTimeMillis();
 
-        try {
-          if (this.pauseTime != 0L) {
-            if (start < this.pauseTime) {
-              return;
-            }
-
-            this.setBufferSize(this.sampleBufferSize);
-            this.paused = true;
-            this.pauseTime = 0L;
-          }
-
-          int amountBufferedSamples = this.getAmountBufferedSamples();
-          if (this.anInt1981 < this.anInt1985 - amountBufferedSamples) {
-            this.anInt1981 = this.anInt1985 - amountBufferedSamples;
-          }
-
-          int writeLen = this.sampleRate + this.overflow;
-          if (writeLen + 256 > 16384) {
-            writeLen = 16128;
-          }
-
-          if (this.sampleBufferSize < writeLen + 256) {
-            this.sampleBufferSize += 1024;
-            if (this.sampleBufferSize > 16384) {
-              this.sampleBufferSize = 16384;
-            }
-
-            this.close();
-            amountBufferedSamples = 0;
-            this.setBufferSize(this.sampleBufferSize);
-            if (this.sampleBufferSize < 256 + writeLen) {
-              writeLen = this.sampleBufferSize - 256;
-              this.overflow = writeLen - this.sampleRate;
-            }
-
-            this.paused = true;
-          }
-
-          while (writeLen > amountBufferedSamples) {
-            amountBufferedSamples += 256;
-            this.fill(this.samples, 256);
-            this.write();
-          }
-
-          if (start > this.aLong1979) {
-            if (this.paused) {
-              this.paused = false;
-            } else {
-              if (this.anInt1981 == 0 && this.anInt1988 == 0) {
-                this.close();
-                this.pauseTime = start + 2000L;
-                return;
-              }
-
-              this.overflow = Math.min(this.anInt1988, this.anInt1981);
-              this.anInt1988 = this.anInt1981;
-            }
-
-            this.aLong1979 = 2000L + start;
-            this.anInt1981 = 0;
-          }
-
-          this.anInt1985 = amountBufferedSamples;
-        } catch (Exception var7) {
-          this.close();
-          this.pauseTime = start + 2000L;
-        }
-
-        try {
-          if (start > 500000L + this.aLong1972) {
-            start = this.aLong1972;
-          }
-
-          if (var1 != -34) {
+      try {
+        if (this.pauseTime != 0L) {
+          if (start < this.pauseTime) {
             return;
           }
 
-          while (start > this.aLong1972 + 5000L) {
-            this.method2161(256, 1);
-            this.aLong1972 += 256000 / DummyClass60.sampleRate;
-          }
-        } catch (Exception var6) {
-          this.aLong1972 = start;
+          this.setBufferSize(this.sampleBufferSize);
+          this.paused = true;
+          this.pauseTime = 0L;
         }
 
+        int amountBufferedSamples = this.getAmountBufferedSamples();
+        if (this.anInt1981 < this.anInt1985 - amountBufferedSamples) {
+          this.anInt1981 = this.anInt1985 - amountBufferedSamples;
+        }
+
+        int writeLen = this.sampleRate + this.overflow;
+        if (writeLen + 256 > 16384) {
+          writeLen = 16128;
+        }
+
+        if (this.sampleBufferSize < writeLen + 256) {
+          this.sampleBufferSize += 1024;
+          if (this.sampleBufferSize > 16384) {
+            this.sampleBufferSize = 16384;
+          }
+
+          this.close();
+          amountBufferedSamples = 0;
+          this.setBufferSize(this.sampleBufferSize);
+          if (this.sampleBufferSize < 256 + writeLen) {
+            writeLen = this.sampleBufferSize - 256;
+            this.overflow = writeLen - this.sampleRate;
+          }
+
+          this.paused = true;
+        }
+
+        while (writeLen > amountBufferedSamples) {
+          amountBufferedSamples += 256;
+          this.fill(this.samples, 256);
+          this.write();
+        }
+
+        if (start > this.aLong1979) {
+          if (this.paused) {
+            this.paused = false;
+          } else {
+            if (this.anInt1981 == 0 && this.anInt1988 == 0) {
+              this.close();
+              this.pauseTime = start + 2000L;
+              return;
+            }
+
+            this.overflow = Math.min(this.anInt1988, this.anInt1981);
+            this.anInt1988 = this.anInt1981;
+          }
+
+          this.aLong1979 = 2000L + start;
+          this.anInt1981 = 0;
+        }
+
+        this.anInt1985 = amountBufferedSamples;
+      } catch (Exception var7) {
+        this.close();
+        this.pauseTime = start + 2000L;
       }
+
+      try {
+        if (start > 500000L + this.aLong1972) {
+          start = this.aLong1972;
+        }
+
+        if (var1 != -34) {
+          return;
+        }
+
+        while (start > this.aLong1972 + 5000L) {
+          this.method2161(256, 1);
+          this.aLong1972 += 256000 / DummyClass60.sampleRate;
+        }
+      } catch (Exception var6) {
+        this.aLong1972 = start;
+      }
+
+    }
   }
 
   public final synchronized void method2154(int var1, AudioStreamEncoder var2) {
@@ -243,19 +245,19 @@ public class AbstractAudioOutputStream {
 
   private void method2155(AudioStreamEncoder var1, int var2, byte var3) {
     if (var3 != -24) {
-        this.method2155(null, -105, (byte) 87);
-      }
+      this.method2155(null, -105, (byte) 87);
+    }
 
-      int var4 = var2 >> 5;
-      AudioStreamEncoder var5 = this.aClass3_Sub24Array1983[var4];
-      if (var5 == null) {
-        this.aClass3_Sub24Array1980[var4] = var1;
-      } else {
-        var5.aClass3_Sub24_2546 = var1;
-      }
+    int var4 = var2 >> 5;
+    AudioStreamEncoder var5 = this.aClass3_Sub24Array1983[var4];
+    if (var5 == null) {
+      this.aClass3_Sub24Array1980[var4] = var1;
+    } else {
+      var5.aClass3_Sub24_2546 = var1;
+    }
 
-      this.aClass3_Sub24Array1983[var4] = var1;
-      var1.anInt2543 = var2;
+    this.aClass3_Sub24Array1983[var4] = var1;
+    var1.anInt2543 = var2;
   }
 
   public int getAmountBufferedSamples() {
@@ -265,12 +267,12 @@ public class AbstractAudioOutputStream {
   public final synchronized void method2158(byte var1) {
     this.paused = true;
 
-      try {
-        this.flush();
-      } catch (Exception var3) {
-        this.close();
-        this.pauseTime = TimeUtilities.getCurrentTimeMillis() + 2000L;
-      }
+    try {
+      this.flush();
+    } catch (Exception var3) {
+      this.close();
+      this.pauseTime = TimeUtilities.getCurrentTimeMillis() + 2000L;
+    }
   }
 
   public final void pause() {
@@ -282,49 +284,49 @@ public class AbstractAudioOutputStream {
 
   private void method2161(int var1, int var2) {
     this.anInt1987 -= var1;
-      if (this.anInt1987 < 0) {
-        this.anInt1987 = 0;
-      }
+    if (this.anInt1987 < 0) {
+      this.anInt1987 = 0;
+    }
 
-      if (var2 != 1) {
-        this.aLong1972 = -60L;
-      }
+    if (var2 != 1) {
+      this.aLong1972 = -60L;
+    }
 
-      if (this.aClass3_Sub24_1973 != null) {
-        this.aClass3_Sub24_1973.method415(var1);
-      }
+    if (this.aClass3_Sub24_1973 != null) {
+      this.aClass3_Sub24_1973.method415(var1);
+    }
   }
 
   public final synchronized void method2163(boolean var1) {
     if (DummyClass36.aClass15_2613 != null) {
-        boolean var2 = true;
+      boolean var2 = true;
 
-        for (int var3 = 0; var3 < 2; ++var3) {
-          if (this == DummyClass36.aClass15_2613.aClass155Array352[var3]) {
-            DummyClass36.aClass15_2613.aClass155Array352[var3] = null;
-          }
-
-          if (DummyClass36.aClass15_2613.aClass155Array352[var3] != null) {
-            var2 = false;
-          }
+      for (int var3 = 0; var3 < 2; ++var3) {
+        if (this == DummyClass36.aClass15_2613.aClass155Array352[var3]) {
+          DummyClass36.aClass15_2613.aClass155Array352[var3] = null;
         }
 
-        if (var2) {
-          DummyClass36.aClass15_2613.aBoolean345 = true;
-
-          while (DummyClass36.aClass15_2613.aBoolean353) {
-            ThreadUtilities.sleep(50L);
-          }
-
-          DummyClass36.aClass15_2613 = null;
+        if (DummyClass36.aClass15_2613.aClass155Array352[var3] != null) {
+          var2 = false;
         }
       }
 
-      this.close();
-      this.samples = null;
+      if (var2) {
+        DummyClass36.aClass15_2613.aBoolean345 = true;
+
+        while (DummyClass36.aClass15_2613.aBoolean353) {
+          ThreadUtilities.sleep(50L);
+        }
+
+        DummyClass36.aClass15_2613 = null;
+      }
+    }
+
+    this.close();
+    this.samples = null;
   }
 
-  public void bind(Component var1 ) throws Exception {
+  public void bind(Component var1) throws Exception {
   }
 
 }

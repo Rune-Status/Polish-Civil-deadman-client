@@ -2,10 +2,10 @@ package com.jagex.runescape.statics;
 
 import com.jagex.runescape.buffer.Buffer;
 import com.jagex.runescape.buffer.BufferStatics;
+import com.jagex.runescape.cache.FileUnpacker;
 import com.jagex.runescape.common.ArrayUtils;
 import com.jagex.runescape.common.GameString;
 import com.jagex.runescape.common.GameStringStatics;
-import com.jagex.runescape.cache.FileUnpacker;
 import com.jagex.runescape.node.Deque;
 import com.jagex.runescape.opengl.GlRenderer;
 import com.jagex.runescape.opengl.GlUtils;
@@ -129,7 +129,8 @@ public final class DummyClass45 {
       }
 
       int var7 =
-          var6 * (GlobalStatics_10.SOMETHING_SCENE_Y_1_1 - GlobalStatics_7.SOMETHING_SCENE_Y_1_0)
+          var6 * (GlobalStatics_10.SOMETHING_SCENE_Y_1_1
+              - GlobalStatics_7.SOMETHING_SCENE_Y_1_0)
               / 100
               + GlobalStatics_7.SOMETHING_SCENE_Y_1_0;
 

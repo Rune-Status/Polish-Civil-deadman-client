@@ -2,7 +2,6 @@ package com.jagex.runescape.model;
 
 import com.jagex.runescape.statics.DummyClass60;
 import com.jagex.runescape.statics.GlobalStatics_0;
-
 import java.awt.Component;
 import javax.sound.midi.MidiSystem;
 import javax.sound.midi.MidiUnavailableException;
@@ -49,13 +48,13 @@ public final class BufferedAudioOutputStream extends AbstractAudioOutputStream {
   public void setBufferSize(int bufferSize)
       throws LineUnavailableException {
     javax.sound.sampled.DataLine.Info var2 =
-          new javax.sound.sampled.DataLine.Info(SourceDataLine.class,
-              this.audioFormat,
-              bufferSize << (GlobalStatics_0.stereo ? 2 : 1));
-      this.sourceDataLine = (SourceDataLine) AudioSystem.getLine(var2);
-      this.sourceDataLine.open();
-      this.sourceDataLine.start();
-      this.bufferSize = bufferSize;
+        new javax.sound.sampled.DataLine.Info(SourceDataLine.class,
+            this.audioFormat,
+            bufferSize << (GlobalStatics_0.stereo ? 2 : 1));
+    this.sourceDataLine = (SourceDataLine) AudioSystem.getLine(var2);
+    this.sourceDataLine.open();
+    this.sourceDataLine.start();
+    this.bufferSize = bufferSize;
   }
 
   public void flush() throws LineUnavailableException {

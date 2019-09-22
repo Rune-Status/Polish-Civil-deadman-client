@@ -1,12 +1,6 @@
 package com.jagex.runescape.statics;
 
 import com.jagex.runescape.camera.CameraStatics;
-import com.jagex.runescape.model.SpawnedGameObject;
-import com.jagex.runescape.model.StillGraphic;
-import com.jagex.runescape.model.StillGraphicNode;
-import com.jagex.runescape.model.Widget;
-import com.jagex.runescape.model.WidgetAccess;
-import com.jagex.runescape.model.WidgetUpdate;
 import com.jagex.runescape.common.GameString;
 import com.jagex.runescape.common.GameStringStatics;
 import com.jagex.runescape.model.AnimationSequence;
@@ -19,6 +13,12 @@ import com.jagex.runescape.model.Player;
 import com.jagex.runescape.model.RenderAnimation;
 import com.jagex.runescape.model.SomethingPacket116;
 import com.jagex.runescape.model.SomethingPacket151;
+import com.jagex.runescape.model.SpawnedGameObject;
+import com.jagex.runescape.model.StillGraphic;
+import com.jagex.runescape.model.StillGraphicNode;
+import com.jagex.runescape.model.Widget;
+import com.jagex.runescape.model.WidgetAccess;
+import com.jagex.runescape.model.WidgetUpdate;
 import com.jagex.runescape.node.Deque;
 import com.jagex.runescape.opengl.GLStatics;
 import com.jagex.runescape.settings.SettingsStatics;
@@ -83,7 +83,8 @@ public final class DummyClass18 {
       return false;
     }
     if (GlobalStatics_0.packetId == -1) {
-      GlobalStatics_9.GAME_SOCKET.readBytes(GlobalStatics_9.GAME_BUFFER.bytes, 0, 1);
+      GlobalStatics_9.GAME_SOCKET
+          .readBytes(GlobalStatics_9.GAME_BUFFER.bytes, 0, 1);
       GlobalStatics_9.GAME_BUFFER.position = 0;
       GlobalStatics_0.packetId = GlobalStatics_9.GAME_BUFFER.readPacketId();
       GlobalStatics_0.packetLength = GlobalStatics_9.PACKET_LENGTHS[GlobalStatics_0.packetId];
@@ -94,7 +95,8 @@ public final class DummyClass18 {
       if (available <= 0) {
         return false;
       }
-      GlobalStatics_9.GAME_SOCKET.readBytes(GlobalStatics_9.GAME_BUFFER.bytes, 0, 1);
+      GlobalStatics_9.GAME_SOCKET
+          .readBytes(GlobalStatics_9.GAME_BUFFER.bytes, 0, 1);
       GlobalStatics_0.packetLength = GlobalStatics_9.GAME_BUFFER.bytes[0] & 255;
       --available;
     }
@@ -105,7 +107,8 @@ public final class DummyClass18 {
       }
 
       available -= 2;
-      GlobalStatics_9.GAME_SOCKET.readBytes(GlobalStatics_9.GAME_BUFFER.bytes, 0, 2);
+      GlobalStatics_9.GAME_SOCKET
+          .readBytes(GlobalStatics_9.GAME_BUFFER.bytes, 0, 2);
       GlobalStatics_9.GAME_BUFFER.position = 0;
       GlobalStatics_0.packetLength = GlobalStatics_9.GAME_BUFFER
           .readUnsignedShort();
@@ -181,8 +184,9 @@ public final class DummyClass18 {
         }
 
         if (!var31 && GlobalStatics_9.IS_ON_TUTORIAL_ISLAND == 0) {
-          GlobalStatics_8.printMessage(var24, 4, GameStringStatics.aClass94_2285,
-              var0 + 82);
+          GlobalStatics_8
+              .printMessage(var24, 4, GameStringStatics.aClass94_2285,
+                  var0 + 82);
         }
       } else {
         if (var70.endsWith(GameStringStatics.CHALLENGE_REQ)) {
@@ -277,7 +281,8 @@ public final class DummyClass18 {
 
               if (!var31 && GlobalStatics_9.IS_ON_TUTORIAL_ISLAND == 0) {
                 GlobalStatics_8
-                    .printMessage(var24, 16, GameStringStatics.EMPTY_STRING, -1);
+                    .printMessage(var24, 16, GameStringStatics.EMPTY_STRING,
+                        -1);
               }
             } else if (var70.endsWith(GlobalStatics_0.aClass94_2155)) {
               var24 =
@@ -558,7 +563,8 @@ public final class DummyClass18 {
     }
 
     if (GlobalStatics_0.packetId == 232) {
-      GlobalStatics_9.anInt3101 = GlobalStatics_9.GAME_BUFFER.readUnsignedByte();
+      GlobalStatics_9.anInt3101 = GlobalStatics_9.GAME_BUFFER
+          .readUnsignedByte();
       GlobalStatics_9.anInt467 = GlobalStatics_9.GAME_BUFFER.readUnsignedByte();
       DummyClass38.anInt734 = GlobalStatics_9.GAME_BUFFER.readUnsignedByte();
       GlobalStatics_0.packetId = -1;
@@ -1361,7 +1367,8 @@ public final class DummyClass18 {
     }
     if (GlobalStatics_0.packetId == 234) {
       GlobalStatics_8.method819(false);
-      GlobalStatics_10.anInt136 = GlobalStatics_9.GAME_BUFFER.readUnsignedByte();
+      GlobalStatics_10.anInt136 = GlobalStatics_9.GAME_BUFFER
+          .readUnsignedByte();
       GlobalStatics_9.anInt2905 = GlobalStatics_10.anInt3213;
       GlobalStatics_0.packetId = -1;
       return true;
@@ -1955,7 +1962,8 @@ public final class DummyClass18 {
     }
 
     if (GlobalStatics_0.packetId == 197) {
-      GlobalStatics_9.anInt1357 = GlobalStatics_9.GAME_BUFFER.readUnsignedByte();
+      GlobalStatics_9.anInt1357 = GlobalStatics_9.GAME_BUFFER
+          .readUnsignedByte();
       DummyClass31.anInt1472 = GlobalStatics_10.anInt3213;
       GlobalStatics_0.packetId = -1;
       return true;
@@ -2216,7 +2224,7 @@ public final class DummyClass18 {
 
       int var2 = GlobalStatics_0.anInt1709;
       if (GlobalStatics_10.anInt3156 + DummyClass18.aClass11_88.anInt168 < var1
-              + DummyClass42.aClass11_886.anInt168) {
+          + DummyClass42.aClass11_886.anInt168) {
         var1 =
             -DummyClass42.aClass11_886.anInt168 + GlobalStatics_10.anInt3156
                 + DummyClass18.aClass11_88.anInt168;

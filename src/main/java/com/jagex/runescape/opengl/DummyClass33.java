@@ -1,8 +1,8 @@
 package com.jagex.runescape.opengl;
 
 import com.jagex.runescape.common.TimeUtilities;
-import com.jagex.runescape.node.Deque;
 import com.jagex.runescape.model.IntegerNode;
+import com.jagex.runescape.node.Deque;
 
 public final class DummyClass33 {
 
@@ -64,7 +64,8 @@ public final class DummyClass33 {
     int var1 = 0;
 
     while (true) {
-      IntegerNode var2 = (IntegerNode) DummyClass33.aClass61_581.method1220((byte) -3);
+      IntegerNode var2 = (IntegerNode) DummyClass33.aClass61_581
+          .method1220((byte) -3);
       if (var2 == null) {
         if (var1 > 0) {
           GlRenderer.GL.glDeleteBuffers(var1, DummyClass33.anIntArray589, 0);
@@ -75,7 +76,8 @@ public final class DummyClass33 {
           var2 = (IntegerNode) DummyClass33.aClass61_586.method1220((byte) -3);
           if (var2 == null) {
             while (true) {
-              var2 = (IntegerNode) DummyClass33.aClass61_587.method1220((byte) -3);
+              var2 = (IntegerNode) DummyClass33.aClass61_587
+                  .method1220((byte) -3);
               if (var2 == null) {
                 if (var1 > 0) {
                   GlRenderer.GL
@@ -84,13 +86,17 @@ public final class DummyClass33 {
                 }
 
                 while (true) {
-                  var2 = (IntegerNode) DummyClass33.aClass61_588.method1220((byte) -3);
+                  var2 = (IntegerNode) DummyClass33.aClass61_588
+                      .method1220((byte) -3);
                   if (var2 == null) {
-                    if (DummyClass33.anInt585 + DummyClass33.texture2dMemory + DummyClass33.textureMemory
+                    if (DummyClass33.anInt585 + DummyClass33.texture2dMemory
+                        + DummyClass33.textureMemory
                         > 100663296
-                      && TimeUtilities.getCurrentTimeMillis() > DummyClass33.aLong583 + 60000L) {
+                        && TimeUtilities.getCurrentTimeMillis()
+                        > DummyClass33.aLong583 + 60000L) {
                       System.gc();
-                      DummyClass33.aLong583 = TimeUtilities.getCurrentTimeMillis();
+                      DummyClass33.aLong583 = TimeUtilities
+                          .getCurrentTimeMillis();
                     }
 
                     return;

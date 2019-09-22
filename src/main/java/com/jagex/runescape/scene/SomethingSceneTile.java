@@ -18,7 +18,6 @@ public final class SomethingSceneTile {
   public int[] anIntArray631;
   public int[] anIntArray632;
 
-
   public SomethingSceneTile(int var1, int var2, int var3, int var4, int var5,
       int var6,
       int var7,
@@ -33,7 +32,7 @@ public final class SomethingSceneTile {
       int var16,
       int var17,
       int var18,
-      int var19 ) {
+      int var19) {
     if (var6 != var7 || var6 != var8 || var6 != var9) {
       this.aBoolean629 = false;
     }

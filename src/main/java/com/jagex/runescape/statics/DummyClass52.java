@@ -1,12 +1,12 @@
 package com.jagex.runescape.statics;
 
 import com.jagex.runescape.buffer.Buffer;
+import com.jagex.runescape.cache.FileUnpacker;
 import com.jagex.runescape.common.GameString;
 import com.jagex.runescape.common.GameStringStatics;
 import com.jagex.runescape.model.AnimationSequence;
-import com.jagex.runescape.cache.FileUnpacker;
-import com.jagex.runescape.scene.SceneGraphTile;
 import com.jagex.runescape.opengl.GLStatics;
+import com.jagex.runescape.scene.SceneGraphTile;
 import com.jagex.runescape.sprite.AbstractIndexedColorSprite;
 
 public final class DummyClass52 {

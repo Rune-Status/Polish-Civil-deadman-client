@@ -1,10 +1,10 @@
 package com.jagex.runescape.statics;
 
-import com.jagex.runescape.model.Widget;
-import com.jagex.runescape.model.WidgetAccess;
 import com.jagex.runescape.common.GameString;
 import com.jagex.runescape.common.GameStringStatics;
 import com.jagex.runescape.model.ObjectCache;
+import com.jagex.runescape.model.Widget;
+import com.jagex.runescape.model.WidgetAccess;
 import com.jagex.runescape.node.Deque;
 import com.jagex.runescape.opengl.GlTexture2d;
 import java.io.IOException;

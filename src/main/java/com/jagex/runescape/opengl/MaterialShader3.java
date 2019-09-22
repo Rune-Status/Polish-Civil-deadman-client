@@ -26,7 +26,8 @@ public final class MaterialShader3 implements MaterialShader {
       GlRenderer.GL.glGenTextures(1, var1, 0);
       GlRenderer.GL.glBindTexture(3552, var1[0]);
       GlRenderer.GL
-          .glTexImage1D(3552, 0, 6406, 8, 0, 6406, GL.GL_UNSIGNED_BYTE, ByteBuffer.wrap(var2));
+          .glTexImage1D(3552, 0, 6406, 8, 0, 6406, GL.GL_UNSIGNED_BYTE,
+              ByteBuffer.wrap(var2));
       GlRenderer.GL.glTexParameteri(3552, 10241, GL.GL_LINEAR);
       GlRenderer.GL.glTexParameteri(3552, 10240, GL.GL_LINEAR);
       GlRenderer.GL.glTexParameteri(3552, 10242, 0x812f);
@@ -120,7 +121,8 @@ public final class MaterialShader3 implements MaterialShader {
       GlRenderer.GL.glLoadIdentity();
       GlRenderer.GL.glRotatef(180.0F, 1.0F, 0.0F, 0.0F);
       GlRenderer.GL
-          .glRotatef(GlobalStatics_9.anInt2938 * 360.0F / 2048.0F, 1.0F, 0.0F, 0.0F);
+          .glRotatef(GlobalStatics_9.anInt2938 * 360.0F / 2048.0F, 1.0F, 0.0F,
+              0.0F);
       GlRenderer.GL
           .glRotatef(GlobalStatics_9.anInt3103 * 360.0F / 2048.0F, 0.0F, 1.0F,
               0.0F);

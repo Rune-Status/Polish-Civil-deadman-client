@@ -61,7 +61,8 @@ public final class FilterPossibly {
           + (this.anIntArray1437[1] - this.anIntArray1437[0]) * var2;
       var3 *= 0.0030517578F;
       FilterPossiblyStatics.aFloat1433 = (float) Math.pow(0.1D, var3 / 20.0F);
-      SomethingSoundEffectStatics.anInt1436 = (int) (FilterPossiblyStatics.aFloat1433 * 65536.0F);
+      SomethingSoundEffectStatics.anInt1436 = (int) (
+          FilterPossiblyStatics.aFloat1433 * 65536.0F);
     }
 
     if (this.anIntArray1434[var1] == 0) {
@@ -79,16 +80,19 @@ public final class FilterPossibly {
             this.method1625(var1, var4, var2));
         float var6 = var3 * var3;
         FilterPossiblyStatics.aFloatArrayArray1431[var1][var4 * 2 + 1] =
-            FilterPossiblyStatics.aFloatArrayArray1431[var1][var4 * 2 - 1] * var6;
+            FilterPossiblyStatics.aFloatArrayArray1431[var1][var4 * 2 - 1]
+                * var6;
         FilterPossiblyStatics.aFloatArrayArray1431[var1][var4 * 2] =
-            FilterPossiblyStatics.aFloatArrayArray1431[var1][var4 * 2 - 1] * var5
+            FilterPossiblyStatics.aFloatArrayArray1431[var1][var4 * 2 - 1]
+                * var5
                 + FilterPossiblyStatics.aFloatArrayArray1431[var1][var4 * 2 - 2]
                 * var6;
 
         for (int var7 = var4 * 2 - 1; var7 >= 2; --var7) {
           FilterPossiblyStatics.aFloatArrayArray1431[var1][var7] +=
               FilterPossiblyStatics.aFloatArrayArray1431[var1][var7 - 1] * var5
-                  + FilterPossiblyStatics.aFloatArrayArray1431[var1][var7 - 2] * var6;
+                  + FilterPossiblyStatics.aFloatArrayArray1431[var1][var7 - 2]
+                  * var6;
         }
 
         FilterPossiblyStatics.aFloatArrayArray1431[var1][1] +=

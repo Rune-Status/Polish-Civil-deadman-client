@@ -1,13 +1,13 @@
 package com.jagex.runescape.model;
 
-import com.jagex.runescape.common.GameStringStatics;
-import com.jagex.runescape.statics.DummyClass47;
-import com.jagex.runescape.statics.GlobalStatics_4;
 import com.jagex.runescape.common.GameString;
+import com.jagex.runescape.common.GameStringStatics;
 import com.jagex.runescape.node.SubNode;
 import com.jagex.runescape.opengl.GlRenderer;
 import com.jagex.runescape.opengl.GlUtils;
 import com.jagex.runescape.sprite.AbstractIndexedColorSprite;
+import com.jagex.runescape.statics.DummyClass47;
+import com.jagex.runescape.statics.GlobalStatics_4;
 import java.util.Random;
 
 public abstract class AbstractFont extends SubNode {
@@ -80,17 +80,23 @@ public abstract class AbstractFont extends SubNode {
           var4 = -1;
           if (var9.method1528((byte) -42, GameStringStatics.aClass94_3712)) {
             var8 = 60;
-          } else if (var9.method1528((byte) -42, GameStringStatics.aClass94_3711)) {
+          } else if (var9
+              .method1528((byte) -42, GameStringStatics.aClass94_3711)) {
             var8 = 62;
-          } else if (var9.method1528((byte) -42, GameStringStatics.aClass94_3732)) {
+          } else if (var9
+              .method1528((byte) -42, GameStringStatics.aClass94_3732)) {
             var8 = 160;
-          } else if (var9.method1528((byte) -42, GameStringStatics.aClass94_3714)) {
+          } else if (var9
+              .method1528((byte) -42, GameStringStatics.aClass94_3714)) {
             var8 = 173;
-          } else if (var9.method1528((byte) -42, GameStringStatics.aClass94_3729)) {
+          } else if (var9
+              .method1528((byte) -42, GameStringStatics.aClass94_3729)) {
             var8 = 215;
-          } else if (var9.method1528((byte) -42, GameStringStatics.aClass94_3718)) {
+          } else if (var9
+              .method1528((byte) -42, GameStringStatics.aClass94_3718)) {
             var8 = 128;
-          } else if (var9.method1528((byte) -42, GameStringStatics.aClass94_3741)) {
+          } else if (var9
+              .method1528((byte) -42, GameStringStatics.aClass94_3741)) {
             var8 = 169;
           } else {
             if (!var9.method1528((byte) -42, GameStringStatics.aClass94_3743)) {
@@ -254,11 +260,12 @@ public abstract class AbstractFont extends SubNode {
                 .method1528((byte) -42, GameStringStatics.aClass94_3741)) {
               var7 = 169;
             } else {
-              if (!var8.method1528((byte) -42, GameStringStatics.aClass94_3743)) {
+              if (!var8
+                  .method1528((byte) -42, GameStringStatics.aClass94_3743)) {
                 if (var8.method1558(GameStringStatics.aClass94_3739, 0)) {
                   int var9 = var8.substring(4).toInteger();
-                    var4 += this.aClass109Array3740[var9].anInt1469;
-                    var3 = 0;
+                  var4 += this.aClass109Array3740[var9].anInt1469;
+                  var3 = 0;
                 }
                 continue;
               }
@@ -314,35 +321,35 @@ public abstract class AbstractFont extends SubNode {
 
   private void method685(GameString var1) {
     if (var1.method1558(GameStringStatics.aClass94_3725, 0)) {
-        GlobalStatics_4.anInt3755 = var1.substring(4).method1530((byte) 70, 16);
-      } else if (var1.method1528((byte) -42, GameStringStatics.aClass94_3720)) {
-        GlobalStatics_4.anInt3755 = GlobalStatics_4.anInt3749;
-      } else if (var1.method1558(GameStringStatics.aClass94_3715, 0)) {
-        GlobalStatics_4.anInt3750 = var1.substring(6).toInteger();
-      } else if (var1.method1528((byte) -42, GameStringStatics.aClass94_3731)) {
-        GlobalStatics_4.anInt3750 = GlobalStatics_4.anInt3751;
-      } else if (var1.method1558(GameStringStatics.aClass94_3717, 0)) {
-        GlobalStatics_4.anInt3746 = var1.substring(4).method1530((byte) 54, 16);
-      } else if (var1.method1528((byte) -42, GameStringStatics.aClass94_3744)) {
-        GlobalStatics_4.anInt3746 = 8388608;
-      } else if (var1.method1528((byte) -42, GameStringStatics.aClass94_3742)) {
-        GlobalStatics_4.anInt3746 = -1;
-      } else if (var1.method1558(GameStringStatics.aClass94_3716, 0)) {
-        GlobalStatics_4.anInt3747 = var1.substring(2).method1530((byte) 62, 16);
-      } else if (var1.method1528((byte) -42, GameStringStatics.aClass94_3728)) {
-        GlobalStatics_4.anInt3747 = 0;
-      } else if (var1.method1528((byte) -42, GameStringStatics.aClass94_3735)) {
-        GlobalStatics_4.anInt3747 = -1;
-      } else if (var1.method1558(GameStringStatics.aClass94_3713, 0)) {
-        GlobalStatics_4.anInt3754 = var1.substring(5).method1530((byte) 82, 16);
-      } else if (var1.method1528((byte) -42, GameStringStatics.aClass94_3738)) {
-        GlobalStatics_4.anInt3754 = 0;
-      } else if (var1.method1528((byte) -42, GameStringStatics.aClass94_3724)) {
-        GlobalStatics_4.anInt3754 = GlobalStatics_4.anInt3752;
-      } else if (var1.method1528((byte) -42, GameStringStatics.aClass94_3737)) {
-        this.method701(GlobalStatics_4.anInt3749, GlobalStatics_4.anInt3752,
-            GlobalStatics_4.anInt3751);
-      }
+      GlobalStatics_4.anInt3755 = var1.substring(4).method1530((byte) 70, 16);
+    } else if (var1.method1528((byte) -42, GameStringStatics.aClass94_3720)) {
+      GlobalStatics_4.anInt3755 = GlobalStatics_4.anInt3749;
+    } else if (var1.method1558(GameStringStatics.aClass94_3715, 0)) {
+      GlobalStatics_4.anInt3750 = var1.substring(6).toInteger();
+    } else if (var1.method1528((byte) -42, GameStringStatics.aClass94_3731)) {
+      GlobalStatics_4.anInt3750 = GlobalStatics_4.anInt3751;
+    } else if (var1.method1558(GameStringStatics.aClass94_3717, 0)) {
+      GlobalStatics_4.anInt3746 = var1.substring(4).method1530((byte) 54, 16);
+    } else if (var1.method1528((byte) -42, GameStringStatics.aClass94_3744)) {
+      GlobalStatics_4.anInt3746 = 8388608;
+    } else if (var1.method1528((byte) -42, GameStringStatics.aClass94_3742)) {
+      GlobalStatics_4.anInt3746 = -1;
+    } else if (var1.method1558(GameStringStatics.aClass94_3716, 0)) {
+      GlobalStatics_4.anInt3747 = var1.substring(2).method1530((byte) 62, 16);
+    } else if (var1.method1528((byte) -42, GameStringStatics.aClass94_3728)) {
+      GlobalStatics_4.anInt3747 = 0;
+    } else if (var1.method1528((byte) -42, GameStringStatics.aClass94_3735)) {
+      GlobalStatics_4.anInt3747 = -1;
+    } else if (var1.method1558(GameStringStatics.aClass94_3713, 0)) {
+      GlobalStatics_4.anInt3754 = var1.substring(5).method1530((byte) 82, 16);
+    } else if (var1.method1528((byte) -42, GameStringStatics.aClass94_3738)) {
+      GlobalStatics_4.anInt3754 = 0;
+    } else if (var1.method1528((byte) -42, GameStringStatics.aClass94_3724)) {
+      GlobalStatics_4.anInt3754 = GlobalStatics_4.anInt3752;
+    } else if (var1.method1528((byte) -42, GameStringStatics.aClass94_3737)) {
+      this.method701(GlobalStatics_4.anInt3749, GlobalStatics_4.anInt3752,
+          GlobalStatics_4.anInt3751);
+    }
 
   }
 
@@ -488,8 +495,8 @@ public abstract class AbstractFont extends SubNode {
               var10 = 174;
             } else if (var15.method1558(GameStringStatics.aClass94_3739, 0)) {
               int var16 = var15.substring(4).toInteger();
-                var4 += this.aClass109Array3740[var16].anInt1469;
-                var10 = 0;
+              var4 += this.aClass109Array3740[var16].anInt1469;
+              var10 = 0;
             }
 
             var14 = 0;
@@ -547,8 +554,9 @@ public abstract class AbstractFont extends SubNode {
               .method1542(1, GameStringStatics.aClass94_3745, var5,
                   GameStringStatics.aClass94_3745.getLength());
         } else {
-          var3[var11] = GameStringStatics.aClass94_3745.method1563(94).substring(
-              GameStringStatics.aClass94_3745.getLength(), 0, var5);
+          var3[var11] = GameStringStatics.aClass94_3745.method1563(94)
+              .substring(
+                  GameStringStatics.aClass94_3745.getLength(), 0, var5);
         }
 
         ++var11;
@@ -600,7 +608,8 @@ public abstract class AbstractFont extends SubNode {
         var12 = null;
       }
 
-      int var13 = this.method691(var1, var12, GameStringStatics.aClass94Array3753);
+      int var13 = this
+          .method691(var1, var12, GameStringStatics.aClass94Array3753);
       if (var10 == 3 && var13 == 1) {
         var10 = 1;
       }
@@ -629,21 +638,26 @@ public abstract class AbstractFont extends SubNode {
 
       for (var15 = 0; var15 < var13; ++var15) {
         if (var9 == 0) {
-          this.method677(GameStringStatics.aClass94Array3753[var15], var2, var14);
+          this.method677(GameStringStatics.aClass94Array3753[var15], var2,
+              var14);
         } else if (var9 == 1) {
           this.method677(GameStringStatics.aClass94Array3753[var15],
               var2 +
-                  (var4 - this.method682(GameStringStatics.aClass94Array3753[var15]))
+                  (var4 - this
+                      .method682(GameStringStatics.aClass94Array3753[var15]))
                       / 2, var14);
         } else if (var9 == 2) {
           this.method677(GameStringStatics.aClass94Array3753[var15],
               var2 + var4 - this
-                  .method682(GameStringStatics.aClass94Array3753[var15]), var14);
+                  .method682(GameStringStatics.aClass94Array3753[var15]),
+              var14);
         } else if (var15 == var13 - 1) {
-          this.method677(GameStringStatics.aClass94Array3753[var15], var2, var14);
+          this.method677(GameStringStatics.aClass94Array3753[var15], var2,
+              var14);
         } else {
           this.method690(GameStringStatics.aClass94Array3753[var15], var4);
-          this.method677(GameStringStatics.aClass94Array3753[var15], var2, var14);
+          this.method677(GameStringStatics.aClass94Array3753[var15], var2,
+              var14);
           GlobalStatics_4.anInt3756 = 0;
         }
 
@@ -885,50 +899,57 @@ public abstract class AbstractFont extends SubNode {
           var6 = -1;
           if (var12.method1528((byte) -42, GameStringStatics.aClass94_3712)) {
             var11 = 60;
-          } else if (var12.method1528((byte) -42, GameStringStatics.aClass94_3711)) {
+          } else if (var12
+              .method1528((byte) -42, GameStringStatics.aClass94_3711)) {
             var11 = 62;
-          } else if (var12.method1528((byte) -42, GameStringStatics.aClass94_3732)) {
+          } else if (var12
+              .method1528((byte) -42, GameStringStatics.aClass94_3732)) {
             var11 = 160;
-          } else if (var12.method1528((byte) -42, GameStringStatics.aClass94_3714)) {
+          } else if (var12
+              .method1528((byte) -42, GameStringStatics.aClass94_3714)) {
             var11 = 173;
-          } else if (var12.method1528((byte) -42, GameStringStatics.aClass94_3729)) {
+          } else if (var12
+              .method1528((byte) -42, GameStringStatics.aClass94_3729)) {
             var11 = 215;
-          } else if (var12.method1528((byte) -42, GameStringStatics.aClass94_3718)) {
+          } else if (var12
+              .method1528((byte) -42, GameStringStatics.aClass94_3718)) {
             var11 = 128;
-          } else if (var12.method1528((byte) -42, GameStringStatics.aClass94_3741)) {
+          } else if (var12
+              .method1528((byte) -42, GameStringStatics.aClass94_3741)) {
             var11 = 169;
           } else {
-            if (!var12.method1528((byte) -42, GameStringStatics.aClass94_3743)) {
+            if (!var12
+                .method1528((byte) -42, GameStringStatics.aClass94_3743)) {
               if (var12.method1558(GameStringStatics.aClass94_3739, 0)) {
                 if (var4 != null) {
-                    var13 = var4[var8];
-                  } else {
-                    var13 = 0;
-                  }
+                  var13 = var4[var8];
+                } else {
+                  var13 = 0;
+                }
 
-                  if (var5 != null) {
-                    var14 = var5[var8];
-                  } else {
-                    var14 = 0;
-                  }
+                if (var5 != null) {
+                  var14 = var5[var8];
+                } else {
+                  var14 = 0;
+                }
 
-                  ++var8;
-                  var15 = var12.substring(4).toInteger();
-                  AbstractIndexedColorSprite var20 = this.aClass109Array3740[var15];
-                  int var17 =
-                      this.anIntArray3723 != null ? this.anIntArray3723[var15]
-                          : var20.anInt1467;
-                  if (GlobalStatics_4.anInt3750 == 256) {
-                    var20.draw(var2 + var13,
-                        var3 + this.anInt3727 - var17 + var14);
-                  } else {
-                    var20.draw(var2 + var13,
-                        var3 + this.anInt3727 - var17 + var14,
-                        GlobalStatics_4.anInt3750);
-                  }
+                ++var8;
+                var15 = var12.substring(4).toInteger();
+                AbstractIndexedColorSprite var20 = this.aClass109Array3740[var15];
+                int var17 =
+                    this.anIntArray3723 != null ? this.anIntArray3723[var15]
+                        : var20.anInt1467;
+                if (GlobalStatics_4.anInt3750 == 256) {
+                  var20.draw(var2 + var13,
+                      var3 + this.anInt3727 - var17 + var14);
+                } else {
+                  var20.draw(var2 + var13,
+                      var3 + this.anInt3727 - var17 + var14,
+                      GlobalStatics_4.anInt3750);
+                }
 
-                  var2 += var20.anInt1469;
-                  var7 = 0;
+                var2 += var20.anInt1469;
+                var7 = 0;
               } else {
                 this.method685(var12);
               }

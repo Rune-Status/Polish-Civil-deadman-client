@@ -66,7 +66,8 @@ public final class SomethingShadows {
                     BlockShadowMap shadows = SomethingShadows.blockShadows[blockX][blockY];
                     if (shadows.needsUpdate) {
                       shadows
-                          .update(SomethingShadows.shadowsSprite, blockX, blockY);
+                          .update(SomethingShadows.shadowsSprite, blockX,
+                              blockY);
                       shadows.needsUpdate = false;
                     }
                     GlRenderer.GL.glPushMatrix();
@@ -99,7 +100,8 @@ public final class SomethingShadows {
     SomethingShadows.sceneWidthBlocks = var0 + 7 >> 3;
     SomethingShadows.sceneHeightBlocks = var1 + 7 >> 3;
     SomethingShadows.shadowsSprite =
-        new SoftwareIndexedColorSprite(SomethingShadows.sceneWidthBlocks * 128 + 2,
+        new SoftwareIndexedColorSprite(
+            SomethingShadows.sceneWidthBlocks * 128 + 2,
             SomethingShadows.sceneHeightBlocks * 128 + 2, 0);
     SomethingShadows.blockShadows = new BlockShadowMap[SomethingShadows.sceneWidthBlocks][SomethingShadows.sceneHeightBlocks];
 

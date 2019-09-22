@@ -186,7 +186,8 @@ public final class GlFont extends AbstractFont {
 
       GlRenderer.bindTexture(this.anInt4084);
       GlRenderer.GL
-          .glTexImage2D(GL.GL_TEXTURE_2D, 0, 6410, this.anInt4087, this.anInt4087, 0, 6410,
+          .glTexImage2D(GL.GL_TEXTURE_2D, 0, 6410, this.anInt4087,
+              this.anInt4087, 0, 6410,
               GL.GL_UNSIGNED_BYTE, var14);
       DummyClass33.texture2dMemory += var14.limit() - this.anInt4083;
       this.anInt4083 = var14.limit();

@@ -3,6 +3,7 @@ package com.jagex.runescape.input;
 import java.awt.event.KeyEvent;
 
 public class KeyboardStatics {
+
   public static Keyboard KEYBOARD = new Keyboard();
   public static int[] KEY_QUEUE = new int[128];
   public static int[] OTHER_KEY_QUEUE = new int[128];

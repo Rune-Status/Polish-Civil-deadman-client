@@ -1,6 +1,7 @@
 package com.jagex.runescape.sound;
 
 public final class SomethingMidik {
+
   private final int anInt1937;
   private final int anInt1938;
   private final int anInt1939 = SomethingMidiInstrumentStatics.method368(16);
@@ -27,12 +28,13 @@ public final class SomethingMidik {
     }
     this.anIntArray1942 = new int[this.anInt1943 * 8];
     for (int i = 0; i < this.anInt1943 * 8; i++) {
-      this.anIntArray1942[i] = (is[i >> 3] & 1 << (i & 0x7)) != 0 ? SomethingMidiInstrumentStatics
-          .method368(8) : -1;
+      this.anIntArray1942[i] =
+          (is[i >> 3] & 1 << (i & 0x7)) != 0 ? SomethingMidiInstrumentStatics
+              .method368(8) : -1;
     }
   }
 
-  public void method2112(float[] fs, int i, boolean bool ) {
+  public void method2112(float[] fs, int i, boolean bool) {
     for (int i_2_ = 0; i_2_ < i; i_2_++) {
       fs[i_2_] = 0.0F;
     }
@@ -45,7 +47,8 @@ public final class SomethingMidik {
         int i_7_ = 0;
         while (i_7_ < i_5_) {
           if (i_6_ == 0) {
-            int i_8_ = MidiSomethingStatics.aClass71Array2406[this.anInt1937].method1290();
+            int i_8_ = MidiSomethingStatics.aClass71Array2406[this.anInt1937]
+                .method1290();
             for (int i_9_ = i_3_ - 1; i_9_ >= 0; i_9_--) {
               if (i_7_ + i_9_ < i_5_) {
                 is[i_7_ + i_9_] = i_8_ % this.anInt1943;

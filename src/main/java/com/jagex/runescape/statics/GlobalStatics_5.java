@@ -1,24 +1,24 @@
 package com.jagex.runescape.statics;
 
-import com.jagex.runescape.camera.CameraStatics;
-import com.jagex.runescape.input.KeyboardStatics;
-import com.jagex.runescape.common.MathUtilities;
-import com.jagex.runescape.model.Widget;
 import com.jagex.runescape.buffer.Buffer;
+import com.jagex.runescape.cache.FileUnpacker;
+import com.jagex.runescape.camera.CameraStatics;
 import com.jagex.runescape.common.GameString;
 import com.jagex.runescape.common.GameStringStatics;
+import com.jagex.runescape.common.MathUtilities;
+import com.jagex.runescape.input.KeyboardStatics;
 import com.jagex.runescape.model.FileSystem;
-import com.jagex.runescape.cache.FileUnpacker;
+import com.jagex.runescape.model.SomethingQuickChatK;
+import com.jagex.runescape.model.Widget;
+import com.jagex.runescape.opengl.CommonGL;
+import com.jagex.runescape.opengl.GLStatics;
+import com.jagex.runescape.opengl.GlRenderer;
 import com.jagex.runescape.scene.SceneGraphTile;
 import com.jagex.runescape.scene.SceneNode;
 import com.jagex.runescape.scene.SceneSomething;
 import com.jagex.runescape.scene.SceneSomething2;
-import com.jagex.runescape.model.SomethingQuickChatK;
 import com.jagex.runescape.scene.SomethingSceneI;
 import com.jagex.runescape.scene.SomethingSceneJ;
-import com.jagex.runescape.opengl.CommonGL;
-import com.jagex.runescape.opengl.GLStatics;
-import com.jagex.runescape.opengl.GlRenderer;
 import java.util.Arrays;
 
 public class GlobalStatics_5 {

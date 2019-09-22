@@ -1,7 +1,5 @@
 package com.jagex.runescape.opengl;
 
-import com.jagex.runescape.opengl.GlBufferObject;
-
 import java.nio.ByteBuffer;
 
 public final class BufferData {

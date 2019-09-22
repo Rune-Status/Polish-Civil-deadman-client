@@ -56,7 +56,6 @@ public final class Model extends SceneNode {
   private short maximumZ;
   private short minimumZ;
 
-
   private Model() {
   }
 
@@ -68,7 +67,7 @@ public final class Model extends SceneNode {
     }
   }
 
-  public Model(int var1, int var2, int var3 ) {
+  public Model(int var1, int var2, int var3) {
     this.vx = new int[var1];
     this.vy = new int[var1];
     this.vz = new int[var1];
@@ -100,7 +99,7 @@ public final class Model extends SceneNode {
 
   }
 
-  public Model(Model[] var1, int var2 ) {
+  public Model(Model[] var1, int var2) {
     boolean var3 = false;
     boolean var4 = false;
     boolean var5 = false;
@@ -231,9 +230,10 @@ public final class Model extends SceneNode {
           }
 
           if (var8) {
-            if (var13.aByteArray2866 != null && var13.aByteArray2866[var14] != -1) {
+            if (var13.aByteArray2866 != null
+                && var13.aByteArray2866[var14] != -1) {
               this.aByteArray2866[this.amountFaces] =
-                (byte) (var13.aByteArray2866[var14] + this.anInt2862);
+                  (byte) (var13.aByteArray2866[var14] + this.anInt2862);
             } else {
               this.aByteArray2866[this.amountFaces] = -1;
             }
@@ -256,11 +256,14 @@ public final class Model extends SceneNode {
           if (var15 == 0) {
             assert this.aShortArray2884 != null;
             this.aShortArray2884[this.anInt2862] =
-              (short) this.method1995(var13, var13.aShortArray2884[var14], var18);
+                (short) this
+                    .method1995(var13, var13.aShortArray2884[var14], var18);
             this.aShortArray2846[this.anInt2862] =
-              (short) this.method1995(var13, var13.aShortArray2846[var14], var18);
+                (short) this
+                    .method1995(var13, var13.aShortArray2846[var14], var18);
             this.aShortArray2891[this.anInt2862] =
-              (short) this.method1995(var13, var13.aShortArray2891[var14], var18);
+                (short) this
+                    .method1995(var13, var13.aShortArray2891[var14], var18);
           }
 
           if (var15 >= 1 && var15 <= 3) {
@@ -298,7 +301,8 @@ public final class Model extends SceneNode {
 
   }
 
-  public Model(Model var1, boolean var2, boolean var3, boolean var4, boolean var5 ) {
+  public Model(Model var1, boolean var2, boolean var3, boolean var4,
+      boolean var5) {
     this.amountVertices = var1.amountVertices;
     this.amountFaces = var1.amountFaces;
     this.anInt2862 = var1.anInt2862;
@@ -464,7 +468,7 @@ public final class Model extends SceneNode {
     }
   }
 
-  public void scale(int scalarX, int scalarY, int scalarZ ) {
+  public void scale(int scalarX, int scalarY, int scalarZ) {
     for (int var4 = 0; var4 < this.amountVertices; ++var4) {
       this.vx[var4] = this.vx[var4] * scalarX / 128;
       this.vy[var4] = this.vy[var4] * scalarY / 128;
@@ -474,7 +478,7 @@ public final class Model extends SceneNode {
     this.invalidate();
   }
 
-  public SceneNode method1861(int var1, int var2, int var3 ) {
+  public SceneNode method1861(int var1, int var2, int var3) {
     return this.method2008(this.aShort2879, this.aShort2876, var1, var2, var3);
   }
 
@@ -483,7 +487,7 @@ public final class Model extends SceneNode {
   }
 
   public void method1866(SceneNode var1, int var2, int var3, int var4,
-      boolean var5 ) {
+      boolean var5) {
     Model var6 = (Model) var1;
     var6.updateDimensions();
     var6.updateNormals();
@@ -504,8 +508,9 @@ public final class Model extends SceneNode {
             if (var14 >= var6.minimumZ && var14 <= var6.maximumZ) {
               for (int var15 = 0; var15 < var9; ++var15) {
                 VertexNormal var16 = var6.vertexNormals[var15];
-                if (var13 == var8[var15] && var14 == var6.vz[var15] && var12 == var6.vy[var15]
-                  && var16.c != 0) {
+                if (var13 == var8[var15] && var14 == var6.vz[var15]
+                    && var12 == var6.vy[var15]
+                    && var16.c != 0) {
                   if (this.aClass50Array2883 == null) {
                     this.aClass50Array2883 = new VertexNormal[this.amountVertices];
                   }
@@ -516,12 +521,14 @@ public final class Model extends SceneNode {
 
                   VertexNormal var17 = this.aClass50Array2883[var10];
                   if (var17 == null) {
-                    var17 = this.aClass50Array2883[var10] = new VertexNormal(var11);
+                    var17 = this.aClass50Array2883[var10] = new VertexNormal(
+                        var11);
                   }
 
                   VertexNormal var18 = var6.aClass50Array2883[var15];
                   if (var18 == null) {
-                    var18 = var6.aClass50Array2883[var15] = new VertexNormal(var16);
+                    var18 = var6.aClass50Array2883[var15] = new VertexNormal(
+                        var16);
                   }
 
                   var17.x += var16.x;
@@ -545,9 +552,12 @@ public final class Model extends SceneNode {
 
     if (var7 >= 3 && var5) {
       for (var10 = 0; var10 < this.amountFaces; ++var10) {
-        if (GlobalStatics_10.anIntArray2861[this.v0[var10]] == GlobalStatics_10.anInt2868
-          && GlobalStatics_10.anIntArray2861[this.v1[var10]] == GlobalStatics_10.anInt2868
-          && GlobalStatics_10.anIntArray2861[this.v2[var10]] == GlobalStatics_10.anInt2868) {
+        if (GlobalStatics_10.anIntArray2861[this.v0[var10]]
+            == GlobalStatics_10.anInt2868
+            && GlobalStatics_10.anIntArray2861[this.v1[var10]]
+            == GlobalStatics_10.anInt2868
+            && GlobalStatics_10.anIntArray2861[this.v2[var10]]
+            == GlobalStatics_10.anInt2868) {
           if (this.normalTypes == null) {
             this.normalTypes = new byte[this.amountFaces];
           }
@@ -557,9 +567,12 @@ public final class Model extends SceneNode {
       }
 
       for (var10 = 0; var10 < var6.amountFaces; ++var10) {
-        if (GlobalStatics_10.anIntArray2875[var6.v0[var10]] == GlobalStatics_10.anInt2868
-          && GlobalStatics_10.anIntArray2875[var6.v1[var10]] == GlobalStatics_10.anInt2868
-          && GlobalStatics_10.anIntArray2875[var6.v2[var10]] == GlobalStatics_10.anInt2868) {
+        if (GlobalStatics_10.anIntArray2875[var6.v0[var10]]
+            == GlobalStatics_10.anInt2868
+            && GlobalStatics_10.anIntArray2875[var6.v1[var10]]
+            == GlobalStatics_10.anInt2868
+            && GlobalStatics_10.anIntArray2875[var6.v2[var10]]
+            == GlobalStatics_10.anInt2868) {
           if (var6.normalTypes == null) {
             var6.normalTypes = new byte[var6.amountFaces];
           }
@@ -571,7 +584,7 @@ public final class Model extends SceneNode {
     }
   }
 
-  public void method1867(int var1, int var2, int var3, int var4, int var5 ) {
+  public void method1867(int var1, int var2, int var3, int var4, int var5) {
   }
 
   public void draw(int var1, int var2, int var3, int var4, int var5, int var6,
@@ -595,7 +608,8 @@ public final class Model extends SceneNode {
     int var6 = var1.vz[var2];
 
     for (int var7 = 0; var7 < this.amountVertices; ++var7) {
-      if (var4 == this.vx[var7] && var5 == this.vy[var7] && var6 == this.vz[var7]) {
+      if (var4 == this.vx[var7] && var5 == this.vy[var7]
+          && var6 == this.vz[var7]) {
         this.aShortArray2893[var7] |= var3;
         return var7;
       }
@@ -612,7 +626,8 @@ public final class Model extends SceneNode {
     return this.amountVertices++;
   }
 
-  private void method1996(int[][] var1, int var2, int var3, int var4, int var5, int var6) {
+  private void method1996(int[][] var1, int var2, int var3, int var4, int var5,
+      int var6) {
     boolean var7 = false;
     boolean var8 = false;
     boolean var9 = false;
@@ -681,8 +696,9 @@ public final class Model extends SceneNode {
 
         int vz;
         for (
-          vz = vx0 * vy1 - vx1 * vy0;
-          vx > 8192 || vy > 8192 || vz > 8192 || vx < -8192 || vy < -8192 || vz < -8192; vz >>= 1) {
+            vz = vx0 * vy1 - vx1 * vy0;
+            vx > 8192 || vy > 8192 || vz > 8192 || vx < -8192 || vy < -8192
+                || vz < -8192; vz >>= 1) {
           vx >>= 1;
           vy >>= 1;
         }
@@ -733,7 +749,7 @@ public final class Model extends SceneNode {
     }
   }
 
-  public void replaceMaterial(short var1, short var2 ) {
+  public void replaceMaterial(short var1, short var2) {
     if (this.materials != null) {
       for (int var3 = 0; var3 < this.amountFaces; ++var3) {
         if (this.materials[var3] == var1) {
@@ -749,14 +765,15 @@ public final class Model extends SceneNode {
       int var6,
       int var7,
       boolean var8,
-      boolean var9 ) {
+      boolean var9) {
     this.updateDimensions();
     int var10 = var5 + this.minimumX;
     int var11 = var5 + this.maximumX;
     int var12 = var7 + this.minimumZ;
     int var13 = var7 + this.maximumZ;
     if ((var1 == 1 || var1 == 2 || var1 == 3 || var1 == 5) && (var10 < 0
-      || var11 + 128 >> 7 >= var3.length || var12 < 0 || var13 + 128 >> 7 >= var3[0].length)) {
+        || var11 + 128 >> 7 >= var3.length || var12 < 0
+        || var13 + 128 >> 7 >= var3[0].length)) {
       return this;
     } else {
       if (var1 != 4 && var1 != 5) {
@@ -764,8 +781,9 @@ public final class Model extends SceneNode {
         var11 = var11 + 127 >> 7;
         var12 >>= 7;
         var13 = var13 + 127 >> 7;
-        if (var3[var10][var12] == var6 && var3[var11][var12] == var6 && var3[var10][var13] == var6
-          && var3[var11][var13] == var6) {
+        if (var3[var10][var12] == var6 && var3[var11][var12] == var6
+            && var3[var10][var13] == var6
+            && var3[var11][var13] == var6) {
           return this;
         }
       } else {
@@ -774,7 +792,7 @@ public final class Model extends SceneNode {
         }
 
         if (var10 < 0 || var11 + 128 >> 7 >= var4.length || var12 < 0
-          || var13 + 128 >> 7 >= var4[0].length) {
+            || var13 + 128 >> 7 >= var4[0].length) {
           return this;
         }
       }
@@ -847,8 +865,10 @@ public final class Model extends SceneNode {
           var19 = var17 & 127;
           var20 = var16 >> 7;
           var21 = var17 >> 7;
-          var22 = var3[var20][var21] * (128 - var18) + var3[var20 + 1][var21] * var18 >> 7;
-          var23 = var3[var20][var21 + 1] * (128 - var18) + var3[var20 + 1][var21 + 1] * var18 >> 7;
+          var22 = var3[var20][var21] * (128 - var18)
+              + var3[var20 + 1][var21] * var18 >> 7;
+          var23 = var3[var20][var21 + 1] * (128 - var18)
+              + var3[var20 + 1][var21 + 1] * var18 >> 7;
           var24 = var22 * (128 - var19) + var23 * var19 >> 7;
           var14.vy[var15] = this.vy[var15] + var24 - var6;
         }
@@ -864,11 +884,14 @@ public final class Model extends SceneNode {
               var20 = var18 & 127;
               var21 = var17 >> 7;
               var22 = var18 >> 7;
-              var23 = var3[var21][var22] * (128 - var19) + var3[var21 + 1][var22] * var19 >> 7;
+              var23 = var3[var21][var22] * (128 - var19)
+                  + var3[var21 + 1][var22] * var19 >> 7;
               var24 =
-                var3[var21][var22 + 1] * (128 - var19) + var3[var21 + 1][var22 + 1] * var19 >> 7;
+                  var3[var21][var22 + 1] * (128 - var19)
+                      + var3[var21 + 1][var22 + 1] * var19 >> 7;
               var25 = var23 * (128 - var20) + var24 * var20 >> 7;
-              var14.vy[var15] = this.vy[var15] + (var25 - var6) * (var2 - var16) / var2;
+              var14.vy[var15] =
+                  this.vy[var15] + (var25 - var6) * (var2 - var16) / var2;
             } else {
               var14.vy[var15] = this.vy[var15];
             }
@@ -887,9 +910,11 @@ public final class Model extends SceneNode {
             var20 = var18 & 127;
             var21 = var17 >> 7;
             var22 = var18 >> 7;
-            var23 = var4[var21][var22] * (128 - var19) + var4[var21 + 1][var22] * var19 >> 7;
+            var23 = var4[var21][var22] * (128 - var19)
+                + var4[var21 + 1][var22] * var19 >> 7;
             var24 =
-              var4[var21][var22 + 1] * (128 - var19) + var4[var21 + 1][var22 + 1] * var19 >> 7;
+                var4[var21][var22 + 1] * (128 - var19)
+                    + var4[var21 + 1][var22 + 1] * var19 >> 7;
             var25 = var23 * (128 - var20) + var24 * var20 >> 7;
             var14.vy[var16] = this.vy[var16] + var25 - var6 + var15;
           }
@@ -903,16 +928,21 @@ public final class Model extends SceneNode {
             var20 = var18 & 127;
             var21 = var17 >> 7;
             var22 = var18 >> 7;
-            var23 = var3[var21][var22] * (128 - var19) + var3[var21 + 1][var22] * var19 >> 7;
+            var23 = var3[var21][var22] * (128 - var19)
+                + var3[var21 + 1][var22] * var19 >> 7;
             var24 =
-              var3[var21][var22 + 1] * (128 - var19) + var3[var21 + 1][var22 + 1] * var19 >> 7;
+                var3[var21][var22 + 1] * (128 - var19)
+                    + var3[var21 + 1][var22 + 1] * var19 >> 7;
             var25 = var23 * (128 - var20) + var24 * var20 >> 7;
-            var23 = var4[var21][var22] * (128 - var19) + var4[var21 + 1][var22] * var19 >> 7;
+            var23 = var4[var21][var22] * (128 - var19)
+                + var4[var21 + 1][var22] * var19 >> 7;
             var24 =
-              var4[var21][var22 + 1] * (128 - var19) + var4[var21 + 1][var22 + 1] * var19 >> 7;
+                var4[var21][var22 + 1] * (128 - var19)
+                    + var4[var21 + 1][var22 + 1] * var19 >> 7;
             int var26 = var23 * (128 - var20) + var24 * var20 >> 7;
             int var27 = var25 - var26;
-            var14.vy[var16] = ((this.vy[var16] << 8) / var15 * var27 >> 8) - (var6 - var25);
+            var14.vy[var16] =
+                ((this.vy[var16] << 8) / var15 * var27 >> 8) - (var6 - var25);
           }
         }
       }
@@ -928,11 +958,11 @@ public final class Model extends SceneNode {
   }
 
   public SoftwareModel method2000(int var1, int var2, int var3, int var4,
-      int var5 ) {
+      int var5) {
     return new SoftwareModel(this, var1, var2, var3, var4, var5);
   }
 
-  public void translate(int vx, int vy, int vz ) {
+  public void translate(int vx, int vy, int vz) {
     for (int var4 = 0; var4 < this.amountVertices; var4++) {
       this.vx[var4] += vx;
       this.vy[var4] += vy;
@@ -1371,7 +1401,7 @@ public final class Model extends SceneNode {
   }
 
   public int appendFace(int v0, int v1, int v2, byte normalType, short color,
-      byte var6 ) {
+      byte var6) {
     this.v0[this.amountFaces] = v0;
     this.v1[this.amountFaces] = v1;
     this.v2[this.amountFaces] = v2;
@@ -1404,7 +1434,7 @@ public final class Model extends SceneNode {
   }
 
   public AbstractModel method2008(int var1, int var2, int var3, int var4,
-                                  int var5 ) {
+      int var5) {
     if (GlRenderer.USE_OPENGL) {
       GlModel var6 = new GlModel(this, var1, var2, true);
       var6.method1908();
@@ -1421,7 +1451,7 @@ public final class Model extends SceneNode {
     this.skinGroups = null;
   }
 
-  public void method2011(int var1 ) {
+  public void method2011(int var1) {
     int var2 = GlobalStatics_10.SINE_TABLE[var1];
     int var3 = GlobalStatics_10.COSINE_TABLE[var1];
 
@@ -1458,7 +1488,8 @@ public final class Model extends SceneNode {
         var1[var3] = 0;
       }
 
-      for (var3 = 0; var3 < this.amountVertices; this.boneGroups[var4][var1[var4]++] = var3++) {
+      for (var3 = 0; var3 < this.amountVertices;
+          this.boneGroups[var4][var1[var4]++] = var3++) {
         var4 = this.anIntArray2860[var3];
       }
 
@@ -1484,7 +1515,8 @@ public final class Model extends SceneNode {
         var1[var3] = 0;
       }
 
-      for (var3 = 0; var3 < this.amountFaces; this.skinGroups[var4][var1[var4]++] = var3++) {
+      for (var3 = 0; var3 < this.amountFaces;
+          this.skinGroups[var4][var1[var4]++] = var3++) {
         var4 = this.anIntArray2847[var3];
       }
 
@@ -1493,7 +1525,7 @@ public final class Model extends SceneNode {
 
   }
 
-  public void rotate(int rotationX, int rotationY, int rotationZ ) {
+  public void rotate(int rotationX, int rotationY, int rotationZ) {
     int var4;
     int var5;
     int var6;
@@ -1533,7 +1565,7 @@ public final class Model extends SceneNode {
 
   }
 
-  public int addVertex(int x, int y, int z ) {
+  public int addVertex(int x, int y, int z) {
     for (int var4 = 0; var4 < this.amountVertices; ++var4) {
       if (this.vx[var4] == x && this.vy[var4] == y && this.vz[var4] == z) {
         return var4;
@@ -1546,7 +1578,7 @@ public final class Model extends SceneNode {
     return this.amountVertices++;
   }
 
-  public void replaceColor(short color, short replace ) {
+  public void replaceColor(short color, short replace) {
     for (int var3 = 0; var3 < this.amountFaces; ++var3) {
       if (this.triangleColors[var3] == color) {
         this.triangleColors[var3] = replace;
@@ -1809,8 +1841,8 @@ public final class Model extends SceneNode {
         var44 = this.aByteArray2866[var43] & 255;
         if (var44 != 255) {
           if ((this.aShortArray2884[var44] & 0xffff) == this.v0[var43]
-            && (this.aShortArray2846[var44] & 0xffff) == this.v1[var43]
-            && (this.aShortArray2891[var44] & 0xffff) == this.v2[var43]) {
+              && (this.aShortArray2846[var44] & 0xffff) == this.v1[var43]
+              && (this.aShortArray2891[var44] & 0xffff) == this.v2[var43]) {
             this.aByteArray2866[var43] = -1;
           } else {
             var46 = true;

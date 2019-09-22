@@ -9,7 +9,6 @@ public final class SomethingMidiInstrument {
   public final int anInt1065;
   public int[] anIntArray1066;
 
-
   public SomethingMidiInstrument() {
     SomethingMidiInstrumentStatics.method368(24);
     this.anInt1063 = SomethingMidiInstrumentStatics.method368(16);
@@ -22,10 +21,12 @@ public final class SomethingMidiInstrument {
     if (var1) {
       var2 = 0;
 
-      for (var3 = SomethingMidiInstrumentStatics.method368(5) + 1; var2 < this.anInt1065; ++var3) {
+      for (var3 = SomethingMidiInstrumentStatics.method368(5) + 1;
+          var2 < this.anInt1065; ++var3) {
         int var4 =
-          SomethingMidiInstrumentStatics.method368(MidiInstrumentStatics.method513(
-              this.anInt1065 - var2, 4));
+            SomethingMidiInstrumentStatics
+                .method368(MidiInstrumentStatics.method513(
+                    this.anInt1065 - var2, 4));
 
         for (var5 = 0; var5 < var4; ++var5) {
           this.anIntArray1061[var2++] = var3;
@@ -38,7 +39,8 @@ public final class SomethingMidiInstrument {
         if (var14 && MidiInstrumentStatics.method364() == 0) {
           this.anIntArray1061[var3] = 0;
         } else {
-          this.anIntArray1061[var3] = SomethingMidiInstrumentStatics.method368(5) + 1;
+          this.anIntArray1061[var3] =
+              SomethingMidiInstrumentStatics.method368(5) + 1;
         }
       }
     }
@@ -64,7 +66,8 @@ public final class SomethingMidiInstrument {
 
       int var8;
       for (var8 = 0; var8 < var7; ++var8) {
-        this.anIntArray1064[var8] = SomethingMidiInstrumentStatics.method368(var5);
+        this.anIntArray1064[var8] = SomethingMidiInstrumentStatics
+            .method368(var5);
       }
 
       this.aFloatArrayArray1062 = new float[this.anInt1065][this.anInt1063];
@@ -207,9 +210,11 @@ public final class SomethingMidiInstrument {
   public int method1290() {
     int var1;
     for (
-      var1 = 0;
+        var1 = 0;
         this.anIntArray1066[var1] >= 0;
-      var1 = MidiInstrumentStatics.method364() != 0 ? this.anIntArray1066[var1] : var1 + 1) {
+        var1 =
+            MidiInstrumentStatics.method364() != 0 ? this.anIntArray1066[var1]
+                : var1 + 1) {
     }
 
     return ~this.anIntArray1066[var1];

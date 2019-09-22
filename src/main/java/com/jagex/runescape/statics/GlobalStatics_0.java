@@ -1,15 +1,14 @@
 package com.jagex.runescape.statics;
 
-import com.jagex.runescape.common.TimeUtilities;
-import com.jagex.runescape.input.MouseStatics;
-import com.jagex.runescape.common.MathUtilities;
-import com.jagex.runescape.model.VariableUpdate;
-import com.jagex.runescape.model.Widget;
 import com.jagex.runescape.buffer.Buffer;
 import com.jagex.runescape.buffer.BufferStatics;
+import com.jagex.runescape.cache.FileUnpacker;
 import com.jagex.runescape.common.ArrayUtils;
 import com.jagex.runescape.common.GameString;
 import com.jagex.runescape.common.GameStringStatics;
+import com.jagex.runescape.common.MathUtilities;
+import com.jagex.runescape.common.TimeUtilities;
+import com.jagex.runescape.input.MouseStatics;
 import com.jagex.runescape.model.AbstractDirectColorSprite;
 import com.jagex.runescape.model.AbstractFrameRegulator;
 import com.jagex.runescape.model.AbstractTextureSampler;
@@ -21,7 +20,6 @@ import com.jagex.runescape.model.CollisionMap;
 import com.jagex.runescape.model.DisplayMode;
 import com.jagex.runescape.model.FileCache;
 import com.jagex.runescape.model.FileRequester;
-import com.jagex.runescape.cache.FileUnpacker;
 import com.jagex.runescape.model.FloorOverlay;
 import com.jagex.runescape.model.GameObjectConfig;
 import com.jagex.runescape.model.GameStub;
@@ -33,14 +31,10 @@ import com.jagex.runescape.model.NPC;
 import com.jagex.runescape.model.ObjectCache;
 import com.jagex.runescape.model.Parameter;
 import com.jagex.runescape.model.RenderAnimation;
-import com.jagex.runescape.scene.SceneGraphTile;
-import com.jagex.runescape.scene.SceneSomething;
-import com.jagex.runescape.scene.SceneSomething2;
 import com.jagex.runescape.model.SoftwareDirectColorSprite;
 import com.jagex.runescape.model.SoftwareFont;
 import com.jagex.runescape.model.SoftwareModel;
 import com.jagex.runescape.model.SomethingQuickChat;
-import com.jagex.runescape.scene.SomethingSceneJ;
 import com.jagex.runescape.model.SomethingWorldMapy;
 import com.jagex.runescape.model.TextureSampler0;
 import com.jagex.runescape.model.TextureSampler1;
@@ -82,6 +76,8 @@ import com.jagex.runescape.model.TextureSampler6;
 import com.jagex.runescape.model.TextureSampler7;
 import com.jagex.runescape.model.TextureSampler8;
 import com.jagex.runescape.model.TextureSampler9;
+import com.jagex.runescape.model.VariableUpdate;
+import com.jagex.runescape.model.Widget;
 import com.jagex.runescape.node.Deque;
 import com.jagex.runescape.opengl.DummyClass46;
 import com.jagex.runescape.opengl.GLStatics;
@@ -91,6 +87,10 @@ import com.jagex.runescape.opengl.GlTexture2d;
 import com.jagex.runescape.opengl.GlUtils;
 import com.jagex.runescape.opengl.Light;
 import com.jagex.runescape.opengl.SomethingGl0;
+import com.jagex.runescape.scene.SceneGraphTile;
+import com.jagex.runescape.scene.SceneSomething;
+import com.jagex.runescape.scene.SceneSomething2;
+import com.jagex.runescape.scene.SomethingSceneJ;
 import com.jagex.runescape.settings.SettingsStatics;
 import com.jagex.runescape.sound.SomethingSoundEffectStatics;
 import com.jagex.runescape.sprite.SoftwareIndexedColorSprite;
@@ -266,14 +266,16 @@ public final class GlobalStatics_0 {
 
     int var1;
     for (var1 = 0; var1 < 0x8000; ++var1) {
-      SomethingSoundEffectStatics.anIntArray1594[var1] = (random.nextInt() & 2) - 1;
+      SomethingSoundEffectStatics.anIntArray1594[var1] =
+          (random.nextInt() & 2) - 1;
     }
 
     SomethingSoundEffectStatics.anIntArray1591 = new int[0x8000];
 
     for (var1 = 0; var1 < 0x8000; ++var1) {
-      SomethingSoundEffectStatics.anIntArray1591[var1] = (int) (Math.sin(var1 / 5215.1903D)
-          * 16384.0D);
+      SomethingSoundEffectStatics.anIntArray1591[var1] = (int) (
+          Math.sin(var1 / 5215.1903D)
+              * 16384.0D);
     }
 
     SomethingSoundEffectStatics.anIntArray1598 = new int[220500];
@@ -755,7 +757,8 @@ public final class GlobalStatics_0 {
       return var2.getLength() > 9 ? GlobalStatics_9.concat(new GameString[]{
           GameStringStatics.aClass94_1917,
           var2.substring(-8 + var2.getLength(), 0, 0),
-          GameStringStatics.aClass94_3124, GameStringStatics.aClass94_1072, var2,
+          GameStringStatics.aClass94_3124, GameStringStatics.aClass94_1072,
+          var2,
           GlobalStatics_9.aClass94_995
       }) : var2.getLength() > 6 ?
           GlobalStatics_9.concat(new GameString[]{
@@ -1570,7 +1573,7 @@ public final class GlobalStatics_0 {
                                                   if (!var1) {
                                                     GlobalStatics_0
                                                         .method1772(8, 6, 81,
-                                                        null);
+                                                            null);
                                                   }
 
                                                   return null;
@@ -1731,7 +1734,8 @@ public final class GlobalStatics_0 {
     AreaSoundEffect var5;
     for (
         var5 = (AreaSoundEffect) GlobalStatics_0.aClass61_78.getFirst();
-        var5 != null; var5 = (AreaSoundEffect) GlobalStatics_0.aClass61_78.getNext()) {
+        var5 != null;
+        var5 = (AreaSoundEffect) GlobalStatics_0.aClass61_78.getNext()) {
       GlobalStatics_9.method606(var1, var5, var3, var0, var2, 126);
     }
 

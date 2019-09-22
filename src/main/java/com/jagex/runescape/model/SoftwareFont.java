@@ -8,13 +8,13 @@ public final class SoftwareFont extends AbstractFont {
 
   public byte[][] aByteArrayArray4082 = new byte[256][];
 
-
-  public SoftwareFont(byte[] var1 ) {
+  public SoftwareFont(byte[] var1) {
     super(var1);
   }
 
-  public SoftwareFont(byte[] var1, int[] var2, int[] var3, int[] var4, int[] var5,
-      byte[][] var6 ) {
+  public SoftwareFont(byte[] var1, int[] var2, int[] var3, int[] var4,
+      int[] var5,
+      byte[][] var6) {
     super(var1, var2, var3, var4, var5);
     this.aByteArrayArray4082 = var6;
   }
@@ -58,13 +58,16 @@ public final class SoftwareFont extends AbstractFont {
     if (var4 > 0 && var5 > 0) {
       if (DummyClass47.anIntArray1097 != null) {
         GlobalStatics_3
-            .method705(SoftwareIndexedColorSpriteStatics.anIntArray1100, this.aByteArrayArray4082[var1], var2, var3, var4,
-          var5, var6, var11, var8, var9, var10, DummyClass47.anIntArray1097,
-          DummyClass47.anIntArray1098);
+            .method705(SoftwareIndexedColorSpriteStatics.anIntArray1100,
+                this.aByteArrayArray4082[var1], var2, var3, var4,
+                var5, var6, var11, var8, var9, var10,
+                DummyClass47.anIntArray1097,
+                DummyClass47.anIntArray1098);
       } else {
         GlobalStatics_3
-            .method704(SoftwareIndexedColorSpriteStatics.anIntArray1100, this.aByteArrayArray4082[var1], var6, var11, var8,
-          var4, var5, var9, var10);
+            .method704(SoftwareIndexedColorSpriteStatics.anIntArray1100,
+                this.aByteArrayArray4082[var1], var6, var11, var8,
+                var4, var5, var9, var10);
       }
 
     }
@@ -109,8 +112,9 @@ public final class SoftwareFont extends AbstractFont {
 
     if (var4 > 0 && var5 > 0) {
       GlobalStatics_3
-          .method706(SoftwareIndexedColorSpriteStatics.anIntArray1100, this.aByteArrayArray4082[var1], var6, var12, var9,
-        var4, var5, var10, var11, var7);
+          .method706(SoftwareIndexedColorSpriteStatics.anIntArray1100,
+              this.aByteArrayArray4082[var1], var6, var12, var9,
+              var4, var5, var10, var11, var7);
     }
   }
 

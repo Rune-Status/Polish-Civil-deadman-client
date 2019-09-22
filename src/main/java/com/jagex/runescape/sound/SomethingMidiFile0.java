@@ -13,15 +13,14 @@ public final class SomethingMidiFile0 {
   private int[] anIntArray1120;
   private int anInt1121;
 
-
   public SomethingMidiFile0() {
   }
 
-  public SomethingMidiFile0(byte[] var1 ) {
+  public SomethingMidiFile0(byte[] var1) {
     this.method1380(var1);
   }
 
-  public long method1370(int var1 ) {
+  public long method1370(int var1) {
     return this.aLong1119 + (long) var1 * this.anInt1121;
   }
 
@@ -37,7 +36,7 @@ public final class SomethingMidiFile0 {
     return true;
   }
 
-  public void method1372(long var1 ) {
+  public void method1372(long var1) {
     this.aLong1119 = var1;
     int var3 = this.anIntArray1115.length;
 
@@ -59,16 +58,16 @@ public final class SomethingMidiFile0 {
     return this.anIntArray1115.length;
   }
 
-  public int method1375(int var1 ) {
+  public int method1375(int var1) {
     int var2 = this.method1379(var1);
     return var2;
   }
 
-  public void method1376(int var1 ) {
+  public void method1376(int var1) {
     this.aClass3_Sub30_1113.position = this.anIntArray1115[var1];
   }
 
-  public void method1377(int var1 ) {
+  public void method1377(int var1) {
     int var2 = this.aClass3_Sub30_1113.method741();
     this.anIntArray1114[var1] += var2;
   }
@@ -125,9 +124,11 @@ public final class SomethingMidiFile0 {
       int var3 = this.aClass3_Sub30_1113.method741();
       if (var5 == 247 && var3 > 0) {
         int var4 =
-            this.aClass3_Sub30_1113.bytes[this.aClass3_Sub30_1113.position] & 255;
-        if (var4 >= 241 && var4 <= 243 || var4 == 246 || var4 == 248 || var4 >= 250 && var4 <= 252
-          || var4 == 254) {
+            this.aClass3_Sub30_1113.bytes[this.aClass3_Sub30_1113.position]
+                & 255;
+        if (var4 >= 241 && var4 <= 243 || var4 == 246 || var4 == 248
+            || var4 >= 250 && var4 <= 252
+            || var4 == 254) {
           ++this.aClass3_Sub30_1113.position;
           this.anIntArray1120[var1] = var4;
           return this.method1378(var1, var4);
@@ -139,7 +140,7 @@ public final class SomethingMidiFile0 {
     }
   }
 
-  public void method1380(byte[] var1 ) {
+  public void method1380(byte[] var1) {
     this.aClass3_Sub30_1113.bytes = var1;
     this.aClass3_Sub30_1113.position = 10;
     int var2 = this.aClass3_Sub30_1113.readUnsignedShort();
@@ -169,7 +170,7 @@ public final class SomethingMidiFile0 {
     this.anIntArray1120 = new int[var2];
   }
 
-  public void method1381(int var1 ) {
+  public void method1381(int var1) {
     this.anIntArray1115[var1] = this.aClass3_Sub30_1113.position;
   }
 

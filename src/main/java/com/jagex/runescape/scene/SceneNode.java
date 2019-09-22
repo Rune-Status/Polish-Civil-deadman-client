@@ -2,7 +2,7 @@ package com.jagex.runescape.scene;
 
 public abstract class SceneNode {
 
-  public SceneNode method1861(int var1, int var2, int var3 ) {
+  public SceneNode method1861(int var1, int var2, int var3) {
     return this;
   }
 
@@ -11,10 +11,11 @@ public abstract class SceneNode {
   }
 
   public void method1866(SceneNode var1, int var2, int var3, int var4,
-      boolean var5 ) {
+      boolean var5) {
   }
 
-  public abstract void method1867(int var1,int var2,int var3,int var4,int var5 );
+  public abstract void method1867(int var1, int var2, int var3, int var4,
+      int var5);
 
   public abstract void draw(int var1, int var2, int var3, int var4, int var5,
       int var6, int var7, int var8, long var9, int var11);

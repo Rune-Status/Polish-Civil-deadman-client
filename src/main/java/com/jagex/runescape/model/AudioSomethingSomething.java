@@ -30,12 +30,12 @@ public final class AudioSomethingSomething extends Node {
 
   public void method401(int var1) {
     this.aClass166_2504 = null;
-      this.aClass3_Sub12_Sub1_2509 = null;
-      this.aClass3_Sub24_Sub1_2507 = null;
-      this.aClass3_Sub15_2527 = null;
-      if (var1 != 221) {
-        GlobalStatics_6.aClass94_2518 = null;
-      }
+    this.aClass3_Sub12_Sub1_2509 = null;
+    this.aClass3_Sub24_Sub1_2507 = null;
+    this.aClass3_Sub15_2527 = null;
+    if (var1 != 221) {
+      GlobalStatics_6.aClass94_2518 = null;
+    }
   }
 
 }

@@ -40,8 +40,10 @@ public class MidiSomethingStatics {
 
   public static void method367(byte[] var0) {
     MidiInstrumentStatics.setSomething(var0, 0);
-    MidiInstrumentStatics.anInt2402 = 1 << SomethingMidiInstrumentStatics.method368(4);
-    MidiInstrumentStatics.anInt2396 = 1 << SomethingMidiInstrumentStatics.method368(4);
+    MidiInstrumentStatics.anInt2402 =
+        1 << SomethingMidiInstrumentStatics.method368(4);
+    MidiInstrumentStatics.anInt2396 =
+        1 << SomethingMidiInstrumentStatics.method368(4);
     MidiInstrumentStatics.aFloatArray2403 = new float[MidiInstrumentStatics.anInt2396];
 
     int var1;

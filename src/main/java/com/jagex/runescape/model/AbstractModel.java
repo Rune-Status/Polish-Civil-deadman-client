@@ -13,9 +13,10 @@ public abstract class AbstractModel extends SceneNode {
 
   public abstract void method1874();
 
-  public void somethingAnimation(AnimationFrame var1, AnimationBase var2, AnimationBase var3,
-                                  int var4, int var5, boolean[] var6, boolean var7,
-                                  boolean var8, int var9, int[] var10) {
+  public void somethingAnimation(AnimationFrame var1, AnimationBase var2,
+      AnimationBase var3,
+      int var4, int var5, boolean[] var6, boolean var7,
+      boolean var8, int var9, int[] var10) {
     int var11;
     if (var3 != null && var4 != 0) {
       var11 = 0;
@@ -33,7 +34,8 @@ public abstract class AbstractModel extends SceneNode {
         }
 
         if (var36 || var15) {
-          if (var6 != null && var6[var35] != var7 && var1.anIntArray2466[var35] != 0) {
+          if (var6 != null && var6[var35] != var7
+              && var1.anIntArray2466[var35] != 0) {
             if (var36) {
               ++var11;
             }
@@ -135,18 +137,22 @@ public abstract class AbstractModel extends SceneNode {
             if (var21 != -1) {
               var31 = var9 & var1.anIntArray2455[var21];
               if (var31 == 0xffff) {
-                this.method1891(0, var1.anIntArrayArray2460[var21], 0, 0, 0, var8);
+                this.method1891(0, var1.anIntArrayArray2460[var21], 0, 0, 0,
+                    var8);
               } else {
-                this.applyAnimationFrame(0, var1.anIntArrayArray2460[var21], 0, 0, 0,
+                this.applyAnimationFrame(0, var1.anIntArrayArray2460[var21], 0,
+                    0, 0,
                     var8, var31,
                     var10);
               }
             } else if (var26 != -1) {
               var31 = var9 & var1.anIntArray2455[var26];
               if (var31 == 0xffff) {
-                this.method1891(0, var1.anIntArrayArray2460[var26], 0, 0, 0, var8);
+                this.method1891(0, var1.anIntArrayArray2460[var26], 0, 0, 0,
+                    var8);
               } else {
-                this.applyAnimationFrame(0, var1.anIntArrayArray2460[var26], 0, 0, 0,
+                this.applyAnimationFrame(0, var1.anIntArrayArray2460[var26], 0,
+                    0, 0,
                     var8, var31,
                     var10);
               }
@@ -154,10 +160,12 @@ public abstract class AbstractModel extends SceneNode {
 
             var31 = var9 & var1.anIntArray2455[var35];
             if (var31 == 0xffff) {
-              this.method1891(var17, var1.anIntArrayArray2460[var35], var28, var29,
+              this.method1891(var17, var1.anIntArrayArray2460[var35], var28,
+                  var29,
                   var30, var8);
             } else {
-              this.applyAnimationFrame(var17, var1.anIntArrayArray2460[var35], var28,
+              this.applyAnimationFrame(var17, var1.anIntArrayArray2460[var35],
+                  var28,
                   var29, var30,
                   var8, var31, var10);
             }
@@ -168,15 +176,18 @@ public abstract class AbstractModel extends SceneNode {
     } else {
       for (var11 = 0; var11 < var2.anInt1383; ++var11) {
         short var12 = var2.aShortArray1385[var11];
-        if (var6 == null || var6[var12] == var7 || var1.anIntArray2466[var12] == 0) {
+        if (var6 == null || var6[var12] == var7
+            || var1.anIntArray2466[var12] == 0) {
           short var13 = var2.aShortArray1387[var11];
           int var14;
           if (var13 != -1) {
             var14 = var9 & var1.anIntArray2455[var13];
             if (var14 == 0xffff) {
-              this.method1891(0, var1.anIntArrayArray2460[var13], 0, 0, 0, var8);
+              this.method1891(0, var1.anIntArrayArray2460[var13], 0, 0, 0,
+                  var8);
             } else {
-              this.applyAnimationFrame(0, var1.anIntArrayArray2460[var13], 0, 0, 0,
+              this.applyAnimationFrame(0, var1.anIntArrayArray2460[var13], 0, 0,
+                  0,
                   var8, var14,
                   var10);
             }
@@ -202,7 +213,7 @@ public abstract class AbstractModel extends SceneNode {
     }
   }
 
-  public abstract void method1876(int var1 );
+  public abstract void method1876(int var1);
 
   public final void method1877(AnimationSomething var1, int var2) {
     if (var2 != -1) {
@@ -217,8 +228,9 @@ public abstract class AbstractModel extends SceneNode {
               this.method1889(0, 0, 0, 0);
             }
 
-            this.method1889(var4.anIntArray2466[var6], var3.aShortArray1388[var5],
-              var3.aShortArray1396[var5], var3.aShortArray1395[var5]);
+            this.method1889(var4.anIntArray2466[var6],
+                var3.aShortArray1388[var5],
+                var3.aShortArray1396[var5], var3.aShortArray1395[var5]);
           }
         }
 
@@ -247,15 +259,17 @@ public abstract class AbstractModel extends SceneNode {
           }
         }
 
-        this.somethingAnimation(var9, var8, var10, var5, var6, null, false, var7, 0xffff, null);
+        this.somethingAnimation(var9, var8, var10, var5, var6, null, false,
+            var7, 0xffff, null);
         this.method1879();
       }
     }
   }
 
-  public abstract void scale(int var1,int var2,int var3 );
+  public abstract void scale(int var1, int var2, int var3);
 
-  public abstract AbstractModel method1882(boolean var1,boolean var2,boolean var3 );
+  public abstract AbstractModel method1882(boolean var1, boolean var2,
+      boolean var3);
 
   public abstract int method1883();
 
@@ -263,7 +277,7 @@ public abstract class AbstractModel extends SceneNode {
 
   public abstract void rotateQuarterY();
 
-  public abstract void method1886(int var1 );
+  public abstract void method1886(int var1);
 
   public final void method1887(AnimationSomething var1, int var2,
       AnimationSomething var3,
@@ -285,7 +299,8 @@ public abstract class AbstractModel extends SceneNode {
           }
         }
 
-        this.somethingAnimation(var11, var10, var12, var5, var6, null, false, var8, var7, var9);
+        this.somethingAnimation(var11, var10, var12, var5, var6, null, false,
+            var8, var7, var9);
         this.method1879();
       }
     }
@@ -293,11 +308,13 @@ public abstract class AbstractModel extends SceneNode {
 
   public abstract int method1888();
 
-  public abstract void method1889(int var1,int var2,int var3,int var4 );
+  public abstract void method1889(int var1, int var2, int var3, int var4);
 
-  public abstract AbstractModel method1890(boolean var1,boolean var2,boolean var3 );
+  public abstract AbstractModel method1890(boolean var1, boolean var2,
+      boolean var3);
 
-  public abstract void method1891(int var1,int[] var2,int var3,int var4,int var5,boolean var6 );
+  public abstract void method1891(int var1, int[] var2, int var3, int var4,
+      int var5, boolean var6);
 
   public final void method1892(AnimationSomething var1, int var2,
       AnimationSomething var3,
@@ -334,11 +351,13 @@ public abstract class AbstractModel extends SceneNode {
             }
           }
 
-          this.somethingAnimation(var16, var15, var17, var5, var6, var13, false, var14, 0xffff,
-            null);
+          this.somethingAnimation(var16, var15, var17, var5, var6, var13, false,
+              var14, 0xffff,
+              null);
           this.method1891(0, new int[0], 0, 0, 0, var14);
-          this.somethingAnimation(var16, var18, var19, var11, var12, var13, true, var14, 0xffff,
-            null);
+          this.somethingAnimation(var16, var18, var19, var11, var12, var13,
+              true, var14, 0xffff,
+              null);
           this.method1879();
         }
       } else {
@@ -347,9 +366,11 @@ public abstract class AbstractModel extends SceneNode {
     }
   }
 
-  public abstract void draw(int var1,int var2,int var3,int var4,int var5,int var6,int var7,long var8 );
+  public abstract void draw(int var1, int var2, int var3, int var4, int var5,
+      int var6, int var7, long var8);
 
-  public abstract AbstractModel method1894(boolean var1,boolean var2,boolean var3 );
+  public abstract AbstractModel method1894(boolean var1, boolean var2,
+      boolean var3);
 
   public final void method1895(int[][] var1, int var2, int var3, int var4,
       int var5,
@@ -396,9 +417,9 @@ public abstract class AbstractModel extends SceneNode {
 
   }
 
-  public abstract void method1896(int var1 );
+  public abstract void method1896(int var1);
 
-  public void method1867(int var1, int var2, int var3, int var4, int var5 ) {
+  public void method1867(int var1, int var2, int var3, int var4, int var5) {
   }
 
   public abstract void draw(int var1, int var2, int var3, int var4, int var5,
@@ -406,11 +427,12 @@ public abstract class AbstractModel extends SceneNode {
 
   public abstract int getMinimumY();
 
-  public abstract void method1897(int var1,int var2,int var3 );
+  public abstract void method1897(int var1, int var2, int var3);
 
   public abstract int method1898();
 
-  public abstract void applyAnimationFrame(int var1,int[] var2,int var3,int var4,int var5,boolean var6,int var7,int[] var8 );
+  public abstract void applyAnimationFrame(int var1, int[] var2, int var3,
+      int var4, int var5, boolean var6, int var7, int[] var8);
 
   public abstract void method1900();
 

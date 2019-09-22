@@ -1,6 +1,7 @@
 package com.jagex.runescape.model;
 
 import com.jagex.runescape.buffer.Buffer;
+import com.jagex.runescape.cache.BZipDecompressorStatics;
 import com.jagex.runescape.camera.CameraStatics;
 import com.jagex.runescape.common.GameString;
 import com.jagex.runescape.common.GameStringStatics;
@@ -24,7 +25,6 @@ import com.jagex.runescape.opengl.Texture;
 import com.jagex.runescape.opengl.WaterShader;
 import com.jagex.runescape.settings.SettingsStatics;
 import com.jagex.runescape.sound.SomethingAudio;
-import com.jagex.runescape.cache.BZipDecompressorStatics;
 import com.jagex.runescape.statics.DummyClass1;
 import com.jagex.runescape.statics.DummyClass10;
 import com.jagex.runescape.statics.DummyClass11;
@@ -206,7 +206,7 @@ public final class GameClient extends GameStub {
           || CameraStatics.CURRENT_X >> 7 >= 90
           || CameraStatics.CURRENT_Z
           >> 7 < 14 || CameraStatics.CURRENT_Z
-              >> 7 >= 90) {
+          >> 7 >= 90) {
         GlobalStatics_10.method195(var1 ^ 20478);
       }
     }
@@ -969,7 +969,8 @@ public final class GameClient extends GameStub {
       if (GlobalStatics_4.updateCycle % 1000 == 1) {
         GregorianCalendar calendar = new GregorianCalendar();
         DummyClass36.anInt2618 =
-            calendar.get(11) * 600 - (-(calendar.get(12) * 10) - calendar.get(13) / 6);
+            calendar.get(11) * 600 - (-(calendar.get(12) * 10)
+                - calendar.get(13) / 6);
         GlobalStatics_10.random.setSeed(DummyClass36.anInt2618);
       }
 
@@ -1385,75 +1386,75 @@ public final class GameClient extends GameStub {
   }
 
   public void init() {
-      GlobalStatics_8.portOffset = Integer
-          .parseInt(this.getParameter("worldid"));
-      GlobalStatics_4.usageLocation = Integer
-          .parseInt(this.getParameter("modewhere"));
-      if (GlobalStatics_4.usageLocation < 0
-          || GlobalStatics_4.usageLocation > 1) {
-        GlobalStatics_4.usageLocation = 0;
-      }
+    GlobalStatics_8.portOffset = Integer
+        .parseInt(this.getParameter("worldid"));
+    GlobalStatics_4.usageLocation = Integer
+        .parseInt(this.getParameter("modewhere"));
+    if (GlobalStatics_4.usageLocation < 0
+        || GlobalStatics_4.usageLocation > 1) {
+      GlobalStatics_4.usageLocation = 0;
+    }
 
-      GlobalStatics_10.usageMode = Integer
-          .parseInt(this.getParameter("modewhat"));
-      if (GlobalStatics_10.usageMode < 0
-          || GlobalStatics_10.usageMode > 2) {
-        GlobalStatics_10.usageMode = 0;
-      }
+    GlobalStatics_10.usageMode = Integer
+        .parseInt(this.getParameter("modewhat"));
+    if (GlobalStatics_10.usageMode < 0
+        || GlobalStatics_10.usageMode > 2) {
+      GlobalStatics_10.usageMode = 0;
+    }
 
-      String var1 = this.getParameter("advertsuppressed");
-      GlobalStatics_9.aBoolean3779 = "1".equals(var1);
+    String var1 = this.getParameter("advertsuppressed");
+    GlobalStatics_9.aBoolean3779 = "1".equals(var1);
 
+    try {
+      GlobalStatics_10.languageId = Integer.parseInt(
+          this.getParameter("lang"));
+    } catch (Exception var10) {
+      GlobalStatics_10.languageId = 0;
+    }
+
+    GlobalStatics_0
+        .setupLanguagePacket(GlobalStatics_10.languageId);
+    String var2 = this.getParameter("objecttag");
+    DummyClass8.aBoolean4018 = "1".equals(var2);
+
+    String var3 = this.getParameter("js");
+    GlobalStatics_9.aBoolean3641 = "1".equals(var3);
+
+    String var4 = this.getParameter("game");
+    if ("1".equals(var4)) {
+      GlobalStatics_5.gameId = 1;
+    } else {
+      GlobalStatics_5.gameId = 0;
+    }
+
+    try {
+      GlobalStatics_9.affiliateId = Integer.parseInt(
+          this.getParameter("affid"));
+    } catch (Exception var9) {
+      GlobalStatics_9.affiliateId = 0;
+    }
+
+    DummyClass7.settings = GameStringStatics.aClass94_1745
+        .getParameter((byte) 126);
+    if (DummyClass7.settings == null) {
+      DummyClass7.settings = GameStringStatics.EMPTY_STRING;
+    }
+
+    String var5 = this.getParameter("country");
+    if (var5 != null) {
       try {
-        GlobalStatics_10.languageId = Integer.parseInt(
-            this.getParameter("lang"));
-      } catch (Exception var10) {
-        GlobalStatics_10.languageId = 0;
+        GlobalStatics_9.anInt2607 = Integer.parseInt(var5);
+      } catch (Exception var8) {
+        GlobalStatics_9.anInt2607 = 0;
       }
+    }
 
-      GlobalStatics_0
-          .setupLanguagePacket(GlobalStatics_10.languageId);
-      String var2 = this.getParameter("objecttag");
-      DummyClass8.aBoolean4018 = "1".equals(var2);
+    String var6 = this.getParameter("haveie6");
+    GlobalStatics_7.aBoolean1451 = "1".equals(var6);
 
-      String var3 = this.getParameter("js");
-      GlobalStatics_9.aBoolean3641 = "1".equals(var3);
-
-      String var4 = this.getParameter("game");
-      if ("1".equals(var4)) {
-        GlobalStatics_5.gameId = 1;
-      } else {
-        GlobalStatics_5.gameId = 0;
-      }
-
-      try {
-        GlobalStatics_9.affiliateId = Integer.parseInt(
-            this.getParameter("affid"));
-      } catch (Exception var9) {
-        GlobalStatics_9.affiliateId = 0;
-      }
-
-      DummyClass7.settings = GameStringStatics.aClass94_1745
-          .getParameter((byte) 126);
-      if (DummyClass7.settings == null) {
-        DummyClass7.settings = GameStringStatics.EMPTY_STRING;
-      }
-
-      String var5 = this.getParameter("country");
-      if (var5 != null) {
-        try {
-          GlobalStatics_9.anInt2607 = Integer.parseInt(var5);
-        } catch (Exception var8) {
-          GlobalStatics_9.anInt2607 = 0;
-        }
-      }
-
-      String var6 = this.getParameter("haveie6");
-      GlobalStatics_7.aBoolean1451 = "1".equals(var6);
-
-      GlobalStatics_9.client = this;
-      this.method41((byte) -56, 765, 32 + GlobalStatics_10.usageMode, 1530,
-          503);
+    GlobalStatics_9.client = this;
+    this.method41((byte) -56, 765, 32 + GlobalStatics_10.usageMode, 1530,
+        503);
   }
 
   public void handleDraw(int var1) {

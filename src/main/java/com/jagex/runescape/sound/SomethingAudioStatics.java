@@ -1,7 +1,5 @@
 package com.jagex.runescape.sound;
 
-import com.jagex.runescape.common.GameString;
-
 public class SomethingAudioStatics {
 
   public static int method1651(int var1, int var2) {

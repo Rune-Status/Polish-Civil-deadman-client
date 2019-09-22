@@ -4,7 +4,6 @@ import com.jagex.runescape.buffer.Buffer;
 import com.jagex.runescape.model.DummyHashTable;
 import com.jagex.runescape.node.Deque;
 import com.jagex.runescape.opengl.GlRenderer;
-import com.jagex.runescape.settings.SettingsStatics;
 import java.nio.FloatBuffer;
 
 public final class DummyClass0 {

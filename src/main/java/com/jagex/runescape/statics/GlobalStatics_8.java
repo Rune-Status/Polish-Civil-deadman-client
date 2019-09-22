@@ -2,11 +2,12 @@ package com.jagex.runescape.statics;
 
 import com.jagex.runescape.buffer.Buffer;
 import com.jagex.runescape.buffer.BufferStatics;
+import com.jagex.runescape.cache.FileUnpacker;
 import com.jagex.runescape.common.GameString;
 import com.jagex.runescape.common.GameStringStatics;
+import com.jagex.runescape.common.MathUtilities;
 import com.jagex.runescape.input.KeyboardStatics;
 import com.jagex.runescape.input.MouseStatics;
-import com.jagex.runescape.common.MathUtilities;
 import com.jagex.runescape.model.AbstractDirectColorSprite;
 import com.jagex.runescape.model.AbstractFont;
 import com.jagex.runescape.model.AbstractModel;
@@ -14,7 +15,6 @@ import com.jagex.runescape.model.AnimationSequence;
 import com.jagex.runescape.model.AnimationSomething;
 import com.jagex.runescape.model.BlockConfig;
 import com.jagex.runescape.model.ClientScriptCall;
-import com.jagex.runescape.cache.FileUnpacker;
 import com.jagex.runescape.model.GameCanvas;
 import com.jagex.runescape.model.HashTableIterator;
 import com.jagex.runescape.model.HintMarker;
@@ -24,12 +24,10 @@ import com.jagex.runescape.model.Model;
 import com.jagex.runescape.model.NPC;
 import com.jagex.runescape.model.NpcConfiguration;
 import com.jagex.runescape.model.Player;
-import com.jagex.runescape.scene.SceneGraphTile;
 import com.jagex.runescape.model.SceneShadowMap;
 import com.jagex.runescape.model.SignLink;
 import com.jagex.runescape.model.SoftwareModel;
 import com.jagex.runescape.model.SomethingPacket151;
-import com.jagex.runescape.scene.SomethingScene;
 import com.jagex.runescape.model.Widget;
 import com.jagex.runescape.model.WidgetAccess;
 import com.jagex.runescape.model.WidgetUpdate;
@@ -38,6 +36,8 @@ import com.jagex.runescape.opengl.GlEnvironment;
 import com.jagex.runescape.opengl.GlModel;
 import com.jagex.runescape.opengl.GlRenderer;
 import com.jagex.runescape.opengl.GlTexture2d;
+import com.jagex.runescape.scene.SceneGraphTile;
+import com.jagex.runescape.scene.SomethingScene;
 import com.jagex.runescape.settings.SettingsStatics;
 import com.jagex.runescape.sound.FilterPossiblyStatics;
 import com.jagex.runescape.sound.SomethingSoundEffectStatics;
@@ -1258,7 +1258,8 @@ public class GlobalStatics_8 {
       for (int var2 = var0; DummyClass25.aClass131_1624.anInt1720 > var2;
           ++var2) {
         if (DummyClass25.aClass131_1624.aClass94Array1721[var2].method1560(
-            GameStringStatics.aClass94_3192, true, GameStringStatics.aClass94_4066)
+            GameStringStatics.aClass94_3192, true,
+            GameStringStatics.aClass94_4066)
             .method1562((byte) -32, var1)) {
           return var2;
         }
@@ -1580,7 +1581,8 @@ public class GlobalStatics_8 {
               GlobalStatics_9.SECURE_BUFFER.writeByte(57);
               GlobalStatics_9.SECURE_BUFFER
                   .writeByte(GlobalStatics_9.anInt3102);
-              GlobalStatics_9.SECURE_BUFFER.writeByte(GlobalStatics_9.anInt3020);
+              GlobalStatics_9.SECURE_BUFFER
+                  .writeByte(GlobalStatics_9.anInt3020);
               GlobalStatics_9.SECURE_BUFFER.writeByte(89);
               GlobalStatics_9.SECURE_BUFFER
                   .writeShort(GlobalStatics_9.localPlayer.sceneX);
@@ -2321,10 +2323,11 @@ public class GlobalStatics_8 {
                 if (GlobalStatics_10.PLAYER_RIGHTS > 0
                     && KeyboardStatics.PRESSED_KEYS[82]
                     && KeyboardStatics.PRESSED_KEYS[81]) {
-                  GlobalStatics_6.method979(var2 + GlobalStatics_10.REGION_BASE_X,
-                      GlobalStatics_9.REGION_BASE_Y + var3,
-                      GlobalStatics_9.currentPlane,
-                      (byte) -4);
+                  GlobalStatics_6
+                      .method979(var2 + GlobalStatics_10.REGION_BASE_X,
+                          GlobalStatics_9.REGION_BASE_Y + var3,
+                          GlobalStatics_9.currentPlane,
+                          (byte) -4);
                 } else {
                   ++GlobalStatics_6.anInt2479;
                   GlobalStatics_9.SECURE_BUFFER.writePacket(179);

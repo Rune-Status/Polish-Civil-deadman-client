@@ -9,14 +9,7 @@ import com.jagex.runescape.model.GameException;
 import com.jagex.runescape.model.GameObject;
 import com.jagex.runescape.model.GameObjectConfig;
 import com.jagex.runescape.model.ObjectCache;
-import com.jagex.runescape.scene.SceneGraphTile;
-import com.jagex.runescape.scene.SceneSomething;
-import com.jagex.runescape.scene.SceneSomething2;
 import com.jagex.runescape.model.SomethingFont;
-import com.jagex.runescape.scene.SomethingSceneI;
-import com.jagex.runescape.scene.SomethingSceneJ;
-import com.jagex.runescape.scene.SomethingSceneTile;
-import com.jagex.runescape.scene.SomethingTilek;
 import com.jagex.runescape.node.Deque;
 import com.jagex.runescape.opengl.GLStatics;
 import com.jagex.runescape.opengl.GlRenderer;
@@ -24,6 +17,13 @@ import com.jagex.runescape.opengl.GlTexture2d;
 import com.jagex.runescape.opengl.GlUtils;
 import com.jagex.runescape.opengl.Light;
 import com.jagex.runescape.opengl.SomethingLight;
+import com.jagex.runescape.scene.SceneGraphTile;
+import com.jagex.runescape.scene.SceneSomething;
+import com.jagex.runescape.scene.SceneSomething2;
+import com.jagex.runescape.scene.SomethingSceneI;
+import com.jagex.runescape.scene.SomethingSceneJ;
+import com.jagex.runescape.scene.SomethingSceneTile;
+import com.jagex.runescape.scene.SomethingTilek;
 import com.jagex.runescape.settings.SettingsStatics;
 import com.jagex.runescape.sprite.SoftwareIndexedColorSpriteStatics;
 
@@ -344,7 +344,8 @@ public class GlobalStatics_4 {
           GlobalStatics_10.aClass3_Sub28_Sub16_Sub2_1381.pixels[var6++] =
               (var13 * (var11 & 16711935)
                   + (16711935 & var10) * var12 & -16711936)
-                  + ((var10 & (int) 0xff00) * var12 + ((int) 0xff00 & var11) * var13
+                  + ((var10 & (int) 0xff00) * var12
+                  + ((int) 0xff00 & var11) * var13
                   & 16711680)
                   >> 8;
         }

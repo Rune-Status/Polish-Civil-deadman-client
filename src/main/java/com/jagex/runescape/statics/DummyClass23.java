@@ -1,10 +1,10 @@
 package com.jagex.runescape.statics;
 
 import com.jagex.runescape.buffer.Buffer;
+import com.jagex.runescape.cache.FileUnpacker;
 import com.jagex.runescape.common.GameString;
 import com.jagex.runescape.common.GameStringStatics;
 import com.jagex.runescape.common.HashTable;
-import com.jagex.runescape.cache.FileUnpacker;
 import com.jagex.runescape.model.SomethingWorldMappy;
 import com.jagex.runescape.model.SomethingWorldMapy;
 

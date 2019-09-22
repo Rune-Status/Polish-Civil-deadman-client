@@ -46,7 +46,8 @@ public class SomethingMidiInstrumentStatics {
     int var2;
     for (
         var2 = (int) Math.pow(var0, 1.0D / var1) + 1;
-        SomethingMidiInstrumentStatics.method2028(var1, var2, -122) > var0; --var2) {
+        SomethingMidiInstrumentStatics.method2028(var1, var2, -122) > var0;
+        --var2) {
     }
 
     return var2;

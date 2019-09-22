@@ -2,6 +2,7 @@ package com.jagex.runescape.statics;
 
 import com.jagex.runescape.buffer.Buffer;
 import com.jagex.runescape.cache.CacheStatics;
+import com.jagex.runescape.cache.FileUnpacker;
 import com.jagex.runescape.camera.CameraStatics;
 import com.jagex.runescape.common.GameString;
 import com.jagex.runescape.common.GameStringStatics;
@@ -13,7 +14,6 @@ import com.jagex.runescape.model.AbstractFont;
 import com.jagex.runescape.model.AnimationSequence;
 import com.jagex.runescape.model.BitVariable;
 import com.jagex.runescape.model.CollisionMap;
-import com.jagex.runescape.cache.FileUnpacker;
 import com.jagex.runescape.model.FloorOverlay;
 import com.jagex.runescape.model.FloorUnderlay;
 import com.jagex.runescape.model.GameBuffer;
@@ -27,8 +27,6 @@ import com.jagex.runescape.model.NPC;
 import com.jagex.runescape.model.ObjectCache;
 import com.jagex.runescape.model.Player;
 import com.jagex.runescape.model.RenderAnimation;
-import com.jagex.runescape.scene.SceneNode;
-import com.jagex.runescape.scene.SceneSomething;
 import com.jagex.runescape.model.SignLink;
 import com.jagex.runescape.model.SignLinkRequest;
 import com.jagex.runescape.model.SoftwareDirectColorSprite;
@@ -46,6 +44,8 @@ import com.jagex.runescape.opengl.GlRenderer;
 import com.jagex.runescape.opengl.GlTexture2d;
 import com.jagex.runescape.opengl.GlUtils;
 import com.jagex.runescape.opengl.SomethingGl0;
+import com.jagex.runescape.scene.SceneNode;
+import com.jagex.runescape.scene.SceneSomething;
 import com.jagex.runescape.settings.SettingsStatics;
 import com.jagex.runescape.sprite.SoftwareIndexedColorSprite;
 import java.awt.Frame;
@@ -282,7 +282,8 @@ public class GlobalStatics_7 {
     int var9 = (int) (-325.949 * Math.atan2(var4, var6)) & 2047;
     if (CameraStatics.CURRENT_PITCH < var8) {
       CameraStatics.CURRENT_PITCH += GlobalStatics_3.anInt1105
-          + DummyClass8.anInt4014 * (-CameraStatics.CURRENT_PITCH + var8) / 1000;
+          + DummyClass8.anInt4014 * (-CameraStatics.CURRENT_PITCH + var8)
+          / 1000;
       if (CameraStatics.CURRENT_PITCH > var8) {
         CameraStatics.CURRENT_PITCH = var8;
       }
@@ -1463,7 +1464,8 @@ public class GlobalStatics_7 {
 
               for (
                   var14 = var36; var14 < 104
-                  && (DummyClass36.anIntArrayArrayArray2609[var8][lightPosX][var14
+                  &&
+                  (DummyClass36.anIntArrayArrayArray2609[var8][lightPosX][var14
                       + 1] & 4) != 0; ++var14) {
               }
 
@@ -1951,7 +1953,8 @@ public class GlobalStatics_7 {
       } else {
         GlobalStatics_9.CURRENT_KEY = KeyboardStatics.KEY_QUEUE[KeyboardStatics.KEY_QUEUE_INDEX];
         GlobalStatics_9.OTHER_CURRENT_KEY = KeyboardStatics.OTHER_KEY_QUEUE[KeyboardStatics.KEY_QUEUE_INDEX];
-        KeyboardStatics.KEY_QUEUE_INDEX = 1 + KeyboardStatics.KEY_QUEUE_INDEX & 127;
+        KeyboardStatics.KEY_QUEUE_INDEX =
+            1 + KeyboardStatics.KEY_QUEUE_INDEX & 127;
         return true;
       }
     }
@@ -2528,7 +2531,8 @@ public class GlobalStatics_7 {
         GlobalStatics_10.aClass44_Sub1Array3201[var8] = var9;
         GlobalStatics_7
             .method1047(var0, var1, -1 + var8, var3, var4, var5, false);
-        GlobalStatics_7.method1047(var0, var1, var2, var3, var8 + 1, var5, false);
+        GlobalStatics_7
+            .method1047(var0, var1, var2, var3, var8 + 1, var5, false);
       }
 
     }

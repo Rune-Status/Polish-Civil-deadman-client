@@ -282,7 +282,8 @@ public final class SomethingGl0 extends Node {
         this.aByteBuffer2345.position(0);
         GlRenderer.GL.glVertexPointer(3, 5126, var11, this.aByteBuffer2345);
         this.aByteBuffer2345.position(12);
-        GlRenderer.GL.glColorPointer(4, GL.GL_UNSIGNED_BYTE, var11, this.aByteBuffer2345);
+        GlRenderer.GL.glColorPointer(4, GL.GL_UNSIGNED_BYTE, var11,
+            this.aByteBuffer2345);
         if (SettingsStatics.USE_BUMP_MAPS) {
           this.aByteBuffer2345.position(16);
           GlRenderer.GL.glNormalPointer(5126, var11, this.aByteBuffer2345);

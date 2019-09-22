@@ -1,7 +1,5 @@
 package com.jagex.runescape.cache;
 
-import com.jagex.runescape.cache.FileTable;
-
 public abstract class AbstractFileRequester {
 
   public abstract FileTable method2094(int var1);

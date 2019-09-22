@@ -1,10 +1,10 @@
 package com.jagex.runescape.statics;
 
+import com.jagex.runescape.cache.FileUnpacker;
 import com.jagex.runescape.common.GameString;
 import com.jagex.runescape.common.GameStringStatics;
 import com.jagex.runescape.model.AbstractAudioOutputStream;
 import com.jagex.runescape.model.AudioWorker;
-import com.jagex.runescape.cache.FileUnpacker;
 import com.jagex.runescape.model.Interface4;
 import com.jagex.runescape.model.OndemandRequester;
 import com.jagex.runescape.model.SignLink;

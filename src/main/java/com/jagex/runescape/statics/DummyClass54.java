@@ -1,13 +1,13 @@
 package com.jagex.runescape.statics;
 
-import com.jagex.runescape.common.ThreadUtilities;
-import com.jagex.runescape.model.Widget;
 import com.jagex.runescape.common.GameString;
+import com.jagex.runescape.common.ThreadUtilities;
 import com.jagex.runescape.model.DisplayMode;
 import com.jagex.runescape.model.ObjectCache;
 import com.jagex.runescape.model.SignLink;
 import com.jagex.runescape.model.SignLinkRequest;
 import com.jagex.runescape.model.SomethingFont;
+import com.jagex.runescape.model.Widget;
 import java.awt.Frame;
 
 public final class DummyClass54 {

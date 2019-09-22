@@ -10,7 +10,6 @@ public final class SomethingMidiI {
   private final int[] anIntArray924;
   private final int[] anIntArray926;
 
-
   public SomethingMidiI() {
     int var1 = SomethingMidiInstrumentStatics.method368(16);
     if (var1 == 1) {
@@ -35,10 +34,13 @@ public final class SomethingMidiI {
 
       int var7;
       for (var4 = 0; var4 < var3; ++var4) {
-        this.anIntArray926[var4] = SomethingMidiInstrumentStatics.method368(3) + 1;
-        var5 = this.anIntArray924[var4] = SomethingMidiInstrumentStatics.method368(2);
+        this.anIntArray926[var4] =
+            SomethingMidiInstrumentStatics.method368(3) + 1;
+        var5 = this.anIntArray924[var4] = SomethingMidiInstrumentStatics
+            .method368(2);
         if (var5 != 0) {
-          this.anIntArray918[var4] = SomethingMidiInstrumentStatics.method368(8);
+          this.anIntArray918[var4] = SomethingMidiInstrumentStatics
+              .method368(8);
         }
 
         var5 = 1 << var5;
@@ -68,7 +70,8 @@ public final class SomethingMidiI {
         var7 = this.anIntArray922[var9];
 
         for (int var8 = 0; var8 < this.anIntArray926[var7]; ++var8) {
-          this.anIntArray921[var5++] = SomethingMidiInstrumentStatics.method368(var4);
+          this.anIntArray921[var5++] = SomethingMidiInstrumentStatics
+              .method368(var4);
         }
       }
 
@@ -84,7 +87,8 @@ public final class SomethingMidiI {
     }
   }
 
-  private void method1198(int var1, int var2, int var3, int var4, float[] var5, int var6) {
+  private void method1198(int var1, int var2, int var3, int var4, float[] var5,
+      int var6) {
     int var7 = var4 - var2;
     int var8 = var3 - var1;
     int var9 = var7 < 0 ? -var7 : var7;
@@ -149,7 +153,7 @@ public final class SomethingMidiI {
     return var6 < 0 ? var2 - var10 : var2 + var10;
   }
 
-  public void method1202(float[] var1, int var2 ) {
+  public void method1202(float[] var1, int var2) {
     int var3 = this.anIntArray921.length;
     int var4 = SomethingMidiIStatics.anIntArray928[this.anInt923 - 1];
     SomethingMidiIStatics.aBooleanArray919[0] = SomethingMidiIStatics.aBooleanArray919[1] = true;
@@ -164,9 +168,11 @@ public final class SomethingMidiI {
           .method1201(SomethingMidiIStatics.anIntArray925, var5);
       var7 = SomethingMidiIStatics
           .method1203(SomethingMidiIStatics.anIntArray925, var5);
-      var8 = this.method1200(SomethingMidiIStatics.anIntArray925[var6], SomethingMidiIStatics.anIntArray927[var6],
+      var8 = this.method1200(SomethingMidiIStatics.anIntArray925[var6],
+          SomethingMidiIStatics.anIntArray927[var6],
           SomethingMidiIStatics.anIntArray925[var7],
-          SomethingMidiIStatics.anIntArray927[var7], SomethingMidiIStatics.anIntArray925[var5]);
+          SomethingMidiIStatics.anIntArray927[var7],
+          SomethingMidiIStatics.anIntArray925[var5]);
       var9 = SomethingMidiIStatics.anIntArray927[var5];
       int var10 = var4 - var8;
       int var12 = (var10 < var8 ? var10 : var8) << 1;
@@ -224,8 +230,10 @@ public final class SomethingMidiI {
 
       var3 = SomethingMidiIStatics.anIntArray928[this.anInt923 - 1];
       int var4 = MidiInstrumentStatics.method513(var3 - 1, 4);
-      SomethingMidiIStatics.anIntArray927[0] = SomethingMidiInstrumentStatics.method368(var4);
-      SomethingMidiIStatics.anIntArray927[1] = SomethingMidiInstrumentStatics.method368(var4);
+      SomethingMidiIStatics.anIntArray927[0] = SomethingMidiInstrumentStatics
+          .method368(var4);
+      SomethingMidiIStatics.anIntArray927[1] = SomethingMidiInstrumentStatics
+          .method368(var4);
       int var5 = 2;
 
       for (int var7 : this.anIntArray922) {

@@ -19,12 +19,11 @@ public final class MidiInstrument extends Node {
   private int anInt2418;
   private int anInt2419;
 
-
   public MidiInstrument(byte[] var1) {
     this.method360(var1);
   }
 
-  public SomethingMusic0 method359(int[] var1 ) {
+  public SomethingMusic0 method359(int[] var1) {
     if (var1 != null && var1[0] <= 0) {
       return null;
     } else {
@@ -36,7 +35,8 @@ public final class MidiInstrument extends Node {
         this.anInt2418 = 0;
       }
 
-      for (; this.anInt2418 < this.aByteArrayArray2410.length; ++this.anInt2418) {
+      for (; this.anInt2418 < this.aByteArrayArray2410.length;
+          ++this.anInt2418) {
         if (var1 != null && var1[0] <= 0) {
           return null;
         }
@@ -108,10 +108,12 @@ public final class MidiInstrument extends Node {
   private float[] method366(int var1) {
     MidiInstrumentStatics.setSomething(this.aByteArrayArray2410[var1], 0);
     MidiInstrumentStatics.method364();
-    int var2 = SomethingMidiInstrumentStatics.method368(MidiInstrumentStatics.method513(
-        MidiInstrumentStatics.anIntArray2420.length - 1, 4));
+    int var2 = SomethingMidiInstrumentStatics
+        .method368(MidiInstrumentStatics.method513(
+            MidiInstrumentStatics.anIntArray2420.length - 1, 4));
     boolean var3 = MidiInstrumentStatics.aBooleanArray2393[var2];
-    int var4 = var3 ? MidiInstrumentStatics.anInt2396 : MidiInstrumentStatics.anInt2402;
+    int var4 = var3 ? MidiInstrumentStatics.anInt2396
+        : MidiInstrumentStatics.anInt2402;
     boolean var5 = false;
     boolean var6 = false;
     if (var3) {
@@ -149,7 +151,8 @@ public final class MidiInstrument extends Node {
     SomethingMidiOther var14 = MidiInstrumentStatics.aClass150Array2398[MidiInstrumentStatics.anIntArray2420[var2]];
     int var16 = var14.anInt1928;
     int var17 = var14.anIntArray1929[var16];
-    boolean var15 = !MidiInstrumentStatics.aClass59Array2407[var17].method1205();
+    boolean var15 = !MidiInstrumentStatics.aClass59Array2407[var17]
+        .method1205();
     boolean var40 = var15;
 
     for (var17 = 0; var17 < var14.anInt1931; ++var17) {
@@ -186,10 +189,14 @@ public final class MidiInstrument extends Node {
         var20[var21] = -var20[var4 - var21 - 1];
       }
 
-      float[] var46 = var3 ? MidiInstrumentStatics.aFloatArray2399 : MidiInstrumentStatics.aFloatArray2400;
-      float[] var22 = var3 ? MidiInstrumentStatics.aFloatArray2387 : MidiInstrumentStatics.aFloatArray2413;
-      float[] var23 = var3 ? MidiInstrumentStatics.aFloatArray2388 : MidiInstrumentStatics.aFloatArray2416;
-      int[] var24 = var3 ? MidiInstrumentStatics.anIntArray2409 : MidiInstrumentStatics.anIntArray2391;
+      float[] var46 = var3 ? MidiInstrumentStatics.aFloatArray2399
+          : MidiInstrumentStatics.aFloatArray2400;
+      float[] var22 = var3 ? MidiInstrumentStatics.aFloatArray2387
+          : MidiInstrumentStatics.aFloatArray2413;
+      float[] var23 = var3 ? MidiInstrumentStatics.aFloatArray2388
+          : MidiInstrumentStatics.aFloatArray2416;
+      int[] var24 = var3 ? MidiInstrumentStatics.anIntArray2409
+          : MidiInstrumentStatics.anIntArray2391;
 
       int var25;
       float var27;
@@ -216,8 +223,10 @@ public final class MidiInstrument extends Node {
         var20[var17 + 1 + 4 * var25] = var27 + var29;
         var30 = var46[var17 - 4 - 4 * var25];
         var31 = var46[var17 - 3 - 4 * var25];
-        var20[4 * var25 + 3] = (var26 - var28) * var30 - (var27 - var29) * var31;
-        var20[4 * var25 + 1] = (var27 - var29) * var30 + (var26 - var28) * var31;
+        var20[4 * var25 + 3] =
+            (var26 - var28) * var30 - (var27 - var29) * var31;
+        var20[4 * var25 + 1] =
+            (var27 - var29) * var30 + (var26 - var28) * var31;
       }
 
       var25 = MidiInstrumentStatics.method513(var4 - 1, 4);
@@ -244,8 +253,10 @@ public final class MidiInstrument extends Node {
             var20[var50 - 3 - var33] = var35 + var37;
             float var38 = var46[var32 * var48];
             float var39 = var46[var32 * var48 + 1];
-            var20[var51 - 1 - var33] = (var34 - var36) * var38 - (var35 - var37) * var39;
-            var20[var51 - 3 - var33] = (var35 - var37) * var38 + (var34 - var36) * var39;
+            var20[var51 - 1 - var33] =
+                (var34 - var36) * var38 - (var35 - var37) * var39;
+            var20[var51 - 3 - var33] =
+                (var35 - var37) * var38 + (var34 - var36) * var39;
           }
         }
       }
@@ -298,11 +309,13 @@ public final class MidiInstrument extends Node {
 
       for (var49 = 0; var49 < var44; ++var49) {
         var20[var49] =
-          var20[2 * var49 + var17] * var22[2 * var49] + var20[2 * var49 + 1 + var17] * var22[
-            2 * var49 + 1];
+            var20[2 * var49 + var17] * var22[2 * var49]
+                + var20[2 * var49 + 1 + var17] * var22[
+                2 * var49 + 1];
         var20[var17 - 1 - var49] =
-          var20[2 * var49 + var17] * var22[2 * var49 + 1] - var20[2 * var49 + 1 + var17] * var22[2
-            * var49];
+            var20[2 * var49 + var17] * var22[2 * var49 + 1]
+                - var20[2 * var49 + 1 + var17] * var22[2
+                * var49];
       }
 
       for (var49 = 0; var49 < var44; ++var49) {
@@ -323,17 +336,17 @@ public final class MidiInstrument extends Node {
 
       for (var49 = var8; var49 < var9; ++var49) {
         var27 = (float) Math.sin(
-          ((var49 - var8) + 0.5D) / var10 * 0.5D * 3.141592653589793D);
+            ((var49 - var8) + 0.5D) / var10 * 0.5D * 3.141592653589793D);
         MidiInstrumentStatics.aFloatArray2403[var49] *=
-          (float) Math.sin(1.5707963267948966D * var27 * var27);
+            (float) Math.sin(1.5707963267948966D * var27 * var27);
       }
 
       for (var49 = var11; var49 < var12; ++var49) {
         var27 = (float) Math.sin(
-          ((var49 - var11) + 0.5D) / var13 * 0.5D * 3.141592653589793D
-            + 1.5707963267948966D);
+            ((var49 - var11) + 0.5D) / var13 * 0.5D * 3.141592653589793D
+                + 1.5707963267948966D);
         MidiInstrumentStatics.aFloatArray2403[var49] *=
-          (float) Math.sin(1.5707963267948966D * var27 * var27);
+            (float) Math.sin(1.5707963267948966D * var27 * var27);
       }
     }
 

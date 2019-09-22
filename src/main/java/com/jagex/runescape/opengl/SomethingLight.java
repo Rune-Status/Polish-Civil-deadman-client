@@ -26,7 +26,7 @@ public final class SomethingLight {
 
   public int method1018(Light var1, int var2, int var3, int var4, float var5,
       float var6,
-      float var7 ) {
+      float var7) {
     long var8 = 0L;
     if ((var2 & 127) == 0 || (var4 & 127) == 0) {
       var8 = var2 + (var4 << 16);
@@ -175,7 +175,7 @@ public final class SomethingLight {
 
   }
 
-  public void method1022(int[] var1 ) {
+  public void method1022(int[] var1) {
     for (int var2 = 1; var2 < var1.length - 1; ++var2) {
       this.anIntArray643[this.anInt655++] = var1[0];
       this.anIntArray643[this.anInt655++] = var1[var2];

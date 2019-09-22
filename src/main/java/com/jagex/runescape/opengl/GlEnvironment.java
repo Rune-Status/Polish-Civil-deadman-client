@@ -1,6 +1,5 @@
 package com.jagex.runescape.opengl;
 
-import com.jagex.runescape.statics.GlobalStatics_11;
 import com.jagex.runescape.statics.GlobalStatics_6;
 import com.jogamp.opengl.GL;
 import com.jogamp.opengl.GL2ES1;

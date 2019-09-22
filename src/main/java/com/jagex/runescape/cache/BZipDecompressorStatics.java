@@ -548,12 +548,14 @@ public final class BZipDecompressorStatics {
 
       for (var35 = 0; var35 < var47; ++var35) {
         var1 = (byte) (BZipDecompressorStatics.anIntArray1690[var35] & 255);
-        BZipDecompressorStatics.anIntArray1690[var0.anIntArray122[var1 & 255]] |=
+        BZipDecompressorStatics.anIntArray1690[var0.anIntArray122[var1
+            & 255]] |=
             var35 << 8;
         ++var0.anIntArray122[var1 & 255];
       }
 
-      var0.anInt133 = BZipDecompressorStatics.anIntArray1690[var0.anInt135] >> 8;
+      var0.anInt133 =
+          BZipDecompressorStatics.anIntArray1690[var0.anInt135] >> 8;
       var0.anInt131 = 0;
       var0.anInt133 = BZipDecompressorStatics.anIntArray1690[var0.anInt133];
       var0.anInt129 = (byte) (var0.anInt133 & 255);

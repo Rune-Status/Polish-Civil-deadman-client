@@ -1,7 +1,5 @@
 package com.jagex.runescape.node;
 
-import com.jagex.runescape.node.AbstractObjectNode;
-
 public final class ObjectNode extends AbstractObjectNode {
 
   private final Object anObject4044;

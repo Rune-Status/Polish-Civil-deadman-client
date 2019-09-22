@@ -10,7 +10,6 @@ public abstract class AudioStreamEncoder extends Node {
   public volatile boolean aBoolean2545 = true;
   public AudioStreamEncoder aClass3_Sub24_2546;
 
-
   public abstract int method409();
 
   public final void method410(int[] var1, int var2, int var3) {
@@ -28,9 +27,9 @@ public abstract class AudioStreamEncoder extends Node {
     return 255;
   }
 
-  public abstract void method413(int[] var1,int var2,int var3 );
+  public abstract void method413(int[] var1, int var2, int var3);
 
   public abstract AudioStreamEncoder method414();
 
-  public abstract void method415(int var1 );
+  public abstract void method415(int var1);
 }

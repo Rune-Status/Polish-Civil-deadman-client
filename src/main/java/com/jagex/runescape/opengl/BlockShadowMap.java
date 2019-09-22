@@ -160,7 +160,8 @@ public final class BlockShadowMap {
       ByteBuffer var13 = ByteBuffer.wrap(GLStatics.aByteArray2111);
       var13.limit(16384);
       GlRenderer.bindTexture(this.textureId);
-      GlRenderer.GL.glTexImage2D(GL.GL_TEXTURE_2D, 0, 6406, 128, 128, 0, 6406, GL.GL_UNSIGNED_BYTE, var13);
+      GlRenderer.GL.glTexImage2D(GL.GL_TEXTURE_2D, 0, 6406, 128, 128, 0, 6406,
+          GL.GL_UNSIGNED_BYTE, var13);
       return true;
     }
   }

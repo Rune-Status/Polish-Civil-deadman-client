@@ -1,9 +1,9 @@
 package com.jagex.runescape.statics;
 
-import com.jagex.runescape.common.GameStringStatics;
-import com.jagex.runescape.model.WidgetUpdate;
 import com.jagex.runescape.cache.FileUnpacker;
+import com.jagex.runescape.common.GameStringStatics;
 import com.jagex.runescape.model.SoftwareDirectColorSprite;
+import com.jagex.runescape.model.WidgetUpdate;
 import com.jagex.runescape.node.Deque;
 import com.jagex.runescape.opengl.GlRenderer;
 import com.jagex.runescape.opengl.GlUtils;

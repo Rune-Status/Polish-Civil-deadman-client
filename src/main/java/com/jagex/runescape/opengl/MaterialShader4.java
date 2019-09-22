@@ -2,7 +2,6 @@ package com.jagex.runescape.opengl;
 
 import com.jagex.runescape.statics.GlobalStatics_5;
 import com.jagex.runescape.statics.GlobalStatics_9;
-
 import com.jogamp.opengl.GL;
 import java.nio.ByteBuffer;
 
@@ -14,7 +13,6 @@ public final class MaterialShader4 implements MaterialShader {
   private int anInt2180 = -1;
   private int anInt2181 = -1;
 
-
   public MaterialShader4() {
     this.method1699();
     this.method1701();
@@ -25,7 +23,8 @@ public final class MaterialShader4 implements MaterialShader {
     int[] var3 = new int[1];
     GlRenderer.GL.glGenTextures(1, var3, 0);
     GlRenderer.GL.glBindTexture(3552, var3[0]);
-    GlRenderer.GL.glTexImage1D(3552, 0, 6406, 2, 0, 6406, GL.GL_UNSIGNED_BYTE, ByteBuffer.wrap(var1));
+    GlRenderer.GL.glTexImage1D(3552, 0, 6406, 2, 0, 6406, GL.GL_UNSIGNED_BYTE,
+        ByteBuffer.wrap(var1));
     GlRenderer.GL.glTexParameteri(3552, 10241, GL.GL_LINEAR);
     GlRenderer.GL.glTexParameteri(3552, 10240, GL.GL_LINEAR);
     GlRenderer.GL.glTexParameteri(3552, 10242, 0x812f);
@@ -42,9 +41,9 @@ public final class MaterialShader4 implements MaterialShader {
     GlRenderer.GL.glTexGeni(8192, 9472, 9217);
     GlRenderer.GL.glTexGeni(8193, 9472, 9217);
     GlRenderer.GL
-        .glTexGenfv(8192, 9473, new float[] {9.765625E-4F, 0.0F, 0.0F, 0.0F}, 0);
+        .glTexGenfv(8192, 9473, new float[]{9.765625E-4F, 0.0F, 0.0F, 0.0F}, 0);
     GlRenderer.GL
-        .glTexGenfv(8193, 9473, new float[] {0.0F, 0.0F, 9.765625E-4F, 0.0F}, 0);
+        .glTexGenfv(8193, 9473, new float[]{0.0F, 0.0F, 9.765625E-4F, 0.0F}, 0);
     GlRenderer.GL.glEnable(3168);
     GlRenderer.GL.glEnable(3169);
     if (SomethingGl.aBoolean1227) {
@@ -52,7 +51,7 @@ public final class MaterialShader4 implements MaterialShader {
       GlRenderer.GL.glTexGeni(8194, 9472, 9217);
       GlRenderer.GL.glTexGeni(8195, 9472, 9217);
       GlRenderer.GL
-          .glTexGenfv(8195, 9473, new float[] {0.0F, 0.0F, 0.0F, 1.0F}, 0);
+          .glTexGenfv(8195, 9473, new float[]{0.0F, 0.0F, 0.0F, 1.0F}, 0);
       GlRenderer.GL.glEnable(3170);
       GlRenderer.GL.glEnable(3171);
       GlRenderer.GL.glEnable(0x806f);
@@ -139,7 +138,8 @@ public final class MaterialShader4 implements MaterialShader {
           this.anInt2181 = GlRenderer.anInt1791;
         }
       } else {
-        GlRenderer.bindTexture(SomethingGl.anIntArray1224[GlRenderer.anInt1791 * 64 / 100 % 64]);
+        GlRenderer.bindTexture(
+            SomethingGl.anIntArray1224[GlRenderer.anInt1791 * 64 / 100 % 64]);
       }
     } else if (SomethingGl.aBoolean1227) {
       this.aFloatArray2179[0] = 0.0F;

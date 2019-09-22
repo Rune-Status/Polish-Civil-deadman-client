@@ -1,24 +1,24 @@
 package com.jagex.runescape.statics;
 
-import com.jagex.runescape.common.MathUtilities;
-import com.jagex.runescape.model.StillGraphic;
-import com.jagex.runescape.model.StillGraphicNode;
+import com.jagex.runescape.cache.FileUnpacker;
 import com.jagex.runescape.common.GameString;
 import com.jagex.runescape.common.GameStringStatics;
+import com.jagex.runescape.common.MathUtilities;
 import com.jagex.runescape.model.BlockConfig;
-import com.jagex.runescape.cache.FileUnpacker;
 import com.jagex.runescape.model.GroundItem;
 import com.jagex.runescape.model.GroundItemNode;
 import com.jagex.runescape.model.Mobile;
 import com.jagex.runescape.model.Projectile;
 import com.jagex.runescape.model.ProjectileNode;
 import com.jagex.runescape.model.RenderAnimation;
-import com.jagex.runescape.scene.SceneGraphTile;
-import com.jagex.runescape.scene.SomethingSceneI;
+import com.jagex.runescape.model.StillGraphic;
+import com.jagex.runescape.model.StillGraphicNode;
 import com.jagex.runescape.node.Deque;
 import com.jagex.runescape.opengl.GLStatics;
 import com.jagex.runescape.opengl.GlRenderer;
 import com.jagex.runescape.opengl.GlTexture2d;
+import com.jagex.runescape.scene.SceneGraphTile;
+import com.jagex.runescape.scene.SomethingSceneI;
 import com.jagex.runescape.settings.SettingsStatics;
 
 public final class DummyClass37 {
@@ -712,7 +712,8 @@ public final class DummyClass37 {
     GlobalStatics_9.p12FontFileId = var1.getFileId(GameStringStatics.FONT_P12);
     GlobalStatics_9.b12FontFileId = var1.getFileId(GlobalStatics_9.FONT_B12);
     GlobalStatics_8.anInt2104 = var1.getFileId(GlobalStatics_7.aClass94_2959);
-    GlobalStatics_10.anInt4042 = var1.getFileId(GameStringStatics.aClass94_3370);
+    GlobalStatics_10.anInt4042 = var1
+        .getFileId(GameStringStatics.aClass94_3370);
     GlobalStatics_1.anInt2195 = var1.getFileId(GameStringStatics.aClass94_3008);
     GlobalStatics_2.anInt2575 = var1.getFileId(GameStringStatics.aClass94_1070);
     if (var0 != 208) {
@@ -724,7 +725,8 @@ public final class DummyClass37 {
     GlobalStatics_9.hintHeadIconsFileId = var1
         .getFileId(GameStringStatics.HINT_HEAD_ICONS);
     GlobalStatics_9.anInt2689 = var1.getFileId(GameStringStatics.aClass94_1556);
-    GlobalStatics_10.anInt3061 = var1.getFileId(GameStringStatics.aClass94_3452);
+    GlobalStatics_10.anInt3061 = var1
+        .getFileId(GameStringStatics.aClass94_3452);
     GlobalStatics_9.anInt2633 = var1.getFileId(GameStringStatics.aClass94_3168);
     DummyClass59.anInt678 = var1.getFileId(GameStringStatics.aClass94_1567);
     GlobalStatics_9.anInt2436 = var1.getFileId(GameStringStatics.aClass94_1913);

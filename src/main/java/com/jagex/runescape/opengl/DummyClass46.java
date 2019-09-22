@@ -1,9 +1,9 @@
 package com.jagex.runescape.opengl;
 
+import com.jagex.runescape.scene.SceneGraphTile;
 import com.jagex.runescape.settings.SettingsStatics;
 import com.jagex.runescape.statics.GlobalStatics_6;
 import com.jagex.runescape.statics.GlobalStatics_9;
-import com.jagex.runescape.scene.SceneGraphTile;
 
 public final class DummyClass46 {
 
@@ -44,7 +44,8 @@ public final class DummyClass46 {
         DummyClass46.method1268(var1, var2, var3, var4, var5 + 1, var6 + 1);
       } else if (var0 == 128 && var5 > 0 && var6 > 0) {
         DummyClass46.method1268(var1, var2, var3, var4, var5 - 1, var6 - 1);
-      } else if (var0 == 64 && var5 < DummyClass46.SCENE_WIDTH - 1 && var6 > 0) {
+      } else if (var0 == 64 && var5 < DummyClass46.SCENE_WIDTH - 1
+          && var6 > 0) {
         DummyClass46.method1268(var1, var2, var3, var4, var5 + 1, var6 - 1);
       }
     }
@@ -466,7 +467,8 @@ public final class DummyClass46 {
                   continue;
                 }
 
-                GlRenderer.method1832(201.5F - var5.anInt704 * GlobalStatics_6.NEAR - 1.5F);
+                GlRenderer.method1832(
+                    201.5F - var5.anInt704 * GlobalStatics_6.NEAR - 1.5F);
                 GlRenderer.GL
                     .glTexEnvfv(8960, 8705,
                         new float[]{0.0F, 0.0F, 0.0F, var5.aFloat707}, 0);

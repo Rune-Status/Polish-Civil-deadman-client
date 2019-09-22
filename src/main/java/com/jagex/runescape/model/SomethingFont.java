@@ -13,11 +13,12 @@ import java.awt.Image;
 import java.awt.image.PixelGrabber;
 
 public final class SomethingFont {
+
   private byte[] aByteArray594 = new byte[100000];
   private boolean aBoolean595;
   private int anInt596;
 
-  public SomethingFont(int var1, boolean bold, Component var3 ) {
+  public SomethingFont(int var1, boolean bold, Component var3) {
     this.anInt596 = GlobalStatics_2.anInt598 * 9;
     this.aBoolean595 = false;
     Font var4 = new Font("Helvetica", bold ? 1 : 0, var1);
@@ -25,7 +26,8 @@ public final class SomethingFont {
 
     int var6;
     for (var6 = 0; var6 < GlobalStatics_2.anInt598; ++var6) {
-      this.method1004(var4, var5, GlobalStatics_2.aString597.charAt(var6), var6, false);
+      this.method1004(var4, var5, GlobalStatics_2.aString597.charAt(var6), var6,
+          false);
     }
 
     if (bold && this.aBoolean595) {
@@ -35,7 +37,8 @@ public final class SomethingFont {
       var5 = var3.getFontMetrics(var4);
 
       for (var6 = 0; var6 < GlobalStatics_2.anInt598; ++var6) {
-        this.method1004(var4, var5, GlobalStatics_2.aString597.charAt(var6), var6, false);
+        this.method1004(var4, var5, GlobalStatics_2.aString597.charAt(var6),
+            var6, false);
       }
 
       if (!this.aBoolean595) {
@@ -43,7 +46,8 @@ public final class SomethingFont {
         this.aBoolean595 = false;
 
         for (var6 = 0; var6 < GlobalStatics_2.anInt598; ++var6) {
-          this.method1004(var4, var5, GlobalStatics_2.aString597.charAt(var6), var6, true);
+          this.method1004(var4, var5, GlobalStatics_2.aString597.charAt(var6),
+              var6, true);
         }
       }
     }
@@ -57,7 +61,8 @@ public final class SomethingFont {
     this.aByteArray594 = var8;
   }
 
-  private void method997(GameString var1, int var2, int var3, int var4, boolean var5) {
+  private void method997(GameString var1, int var2, int var3, int var4,
+      boolean var5) {
     if (this.aBoolean595 || var4 == 0) {
       var5 = false;
     }
@@ -79,8 +84,9 @@ public final class SomethingFont {
     return this.aByteArray594[8] - 1;
   }
 
-  private void method1000(int[] var1, byte[] var2, int var3, int var4, int var5, int var6,
-                                int var7, int var8, int var9) {
+  private void method1000(int[] var1, byte[] var2, int var3, int var4, int var5,
+      int var6,
+      int var7, int var8, int var9) {
     for (int var10 = -var7; var10 < 0; ++var10) {
       for (int var11 = -var6; var11 < 0; ++var11) {
         int var12 = var2[var4++] & 255;
@@ -90,8 +96,10 @@ public final class SomethingFont {
           } else {
             int var13 = var1[var5];
             var1[var5++] =
-              ((var3 & 16711935) * var12 + (var13 & 16711935) * (256 - var12) & -16711936) + (
-                (var3 & 0xff00) * var12 + (var13 & 0xff00) * (256 - var12) & 16711680) >> 8;
+                ((var3 & 16711935) * var12 + (var13 & 16711935) * (256 - var12)
+                    & -16711936) + (
+                    (var3 & 0xff00) * var12 + (var13 & 0xff00) * (256 - var12)
+                        & 16711680) >> 8;
           }
         } else {
           ++var5;
@@ -145,18 +153,21 @@ public final class SomethingFont {
 
     if (var8 > 0 && var9 > 0) {
       if (this.aBoolean595) {
-        this.method1000(SoftwareIndexedColorSpriteStatics.anIntArray1100, var5, var4, var10, var11, var8, var9, var12,
-          var13);
+        this.method1000(SoftwareIndexedColorSpriteStatics.anIntArray1100, var5,
+            var4, var10, var11, var8, var9, var12,
+            var13);
       } else {
-        this.method1002(SoftwareIndexedColorSpriteStatics.anIntArray1100, var5, var4, var10, var11, var8, var9, var12,
-          var13);
+        this.method1002(SoftwareIndexedColorSpriteStatics.anIntArray1100, var5,
+            var4, var10, var11, var8, var9, var12,
+            var13);
       }
     }
 
   }
 
-  private void method1002(int[] var1, byte[] var2, int var3, int var4, int var5, int var6,
-                                int var7, int var8, int var9) {
+  private void method1002(int[] var1, byte[] var2, int var3, int var4, int var5,
+      int var6,
+      int var7, int var8, int var9) {
     int var10 = -(var6 >> 2);
     var6 = -(var6 & 3);
 
@@ -203,7 +214,7 @@ public final class SomethingFont {
   }
 
   public void method1003(GameString var1, int var2, int var3, int var4,
-      boolean var5 ) {
+      boolean var5) {
     int var6 = this.method1005(var1) / 2;
     int var7 = this.method1006();
     if (var2 - var6 <= SoftwareIndexedColorSpriteStatics.anInt1096) {
@@ -217,18 +228,20 @@ public final class SomethingFont {
     }
   }
 
-  private void method1004(Font var1, FontMetrics var2, char var3, int var4, boolean var5) {
+  private void method1004(Font var1, FontMetrics var2, char var3, int var4,
+      boolean var5) {
     int var6 = var2.charWidth(var3);
     int var7 = var6;
     if (var5) {
       if (var3 == 47) {
-          var5 = false;
-        }
+        var5 = false;
+      }
 
-        if (var3 == 102 || var3 == 116 || var3 == 119 || var3 == 118 || var3 == 107 || var3 == 120
+      if (var3 == 102 || var3 == 116 || var3 == 119 || var3 == 118
+          || var3 == 107 || var3 == 120
           || var3 == 121 || var3 == 65 || var3 == 86 || var3 == 87) {
-          ++var6;
-        }
+        ++var6;
+      }
     }
 
     int var8 = var2.getMaxAscent();
@@ -246,7 +259,8 @@ public final class SomethingFont {
     }
 
     int[] var13 = new int[var6 * var9];
-    PixelGrabber var14 = new PixelGrabber(var11, 0, 0, var6, var9, var13, 0, var6);
+    PixelGrabber var14 = new PixelGrabber(var11, 0, 0, var6, var9, var13, 0,
+        var6);
 
     try {
       var14.grabPixels();
@@ -335,13 +349,15 @@ public final class SomethingFont {
     int var2 = 0;
 
     for (int var3 = 0; var3 < var1.getLength(); ++var3) {
-      if (var1.charAt(var3) == 64 && var3 + 4 < var1.getLength() && var1.charAt(var3 + 4) == 64) {
+      if (var1.charAt(var3) == 64 && var3 + 4 < var1.getLength()
+          && var1.charAt(var3 + 4) == 64) {
         var3 += 4;
       } else if (var1.charAt(var3) == 126 && var3 + 4 < var1.getLength()
-        && var1.charAt(var3 + 4) == 126) {
+          && var1.charAt(var3 + 4) == 126) {
         var3 += 4;
       } else {
-        var2 += this.aByteArray594[GlobalStatics_2.anIntArray599[var1.charAt(var3)] + 7];
+        var2 += this.aByteArray594[
+            GlobalStatics_2.anIntArray599[var1.charAt(var3)] + 7];
       }
     }
 

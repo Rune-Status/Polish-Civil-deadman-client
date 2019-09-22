@@ -87,7 +87,6 @@ public abstract class GameStub implements Runnable,
 
   }
 
-
   public final void reportError(String var1) {
     if (!this.encounteredError) {
       this.encounteredError = true;

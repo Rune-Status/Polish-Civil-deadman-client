@@ -2044,7 +2044,8 @@ public final class GlobalStatics_11 {
                                       1 + k];
                                   DummyClass38.anInt734 = GlobalStatics_9.anIntArray2929[
                                       2 + k];
-                                  GlobalStatics_9.SECURE_BUFFER.writePacket(157);
+                                  GlobalStatics_9.SECURE_BUFFER
+                                      .writePacket(157);
                                   GlobalStatics_9.SECURE_BUFFER.writeByte(
                                       GlobalStatics_9.anInt3101);
                                   GlobalStatics_9.SECURE_BUFFER
@@ -2606,7 +2607,8 @@ public final class GlobalStatics_11 {
                                 }
                                 if (j1 == 5059) {
                                   GlobalStatics_6.anInt3613++;
-                                  GlobalStatics_9.SECURE_BUFFER.writePacket(167);
+                                  GlobalStatics_9.SECURE_BUFFER
+                                      .writePacket(167);
                                   GlobalStatics_9.SECURE_BUFFER.writeByte(0);
                                   int j27 = GlobalStatics_9.SECURE_BUFFER.position;
                                   GlobalStatics_9.SECURE_BUFFER.writeByte(0);
@@ -2626,7 +2628,8 @@ public final class GlobalStatics_11 {
                                 if (j1 == 5060) {
                                   GlobalStatics_9.anInt1906++;
                                   GameString class94_21 = GlobalStatics_0.aClass94Array75[--l];
-                                  GlobalStatics_9.SECURE_BUFFER.writePacket(178);
+                                  GlobalStatics_9.SECURE_BUFFER
+                                      .writePacket(178);
                                   GlobalStatics_9.SECURE_BUFFER.writeByte(0);
                                   int l56 = GlobalStatics_9.SECURE_BUFFER.position;
                                   GlobalStatics_9.SECURE_BUFFER
@@ -2645,7 +2648,8 @@ public final class GlobalStatics_11 {
                                   continue;
                                 }
                                 if (j1 == 5061) {
-                                  GlobalStatics_9.SECURE_BUFFER.writePacket(167);
+                                  GlobalStatics_9.SECURE_BUFFER
+                                      .writePacket(167);
                                   GlobalStatics_6.anInt3613++;
                                   GlobalStatics_9.SECURE_BUFFER.writeByte(0);
                                   int k27 = GlobalStatics_9.SECURE_BUFFER.position;
@@ -3135,7 +3139,8 @@ public final class GlobalStatics_11 {
                                       l + 1];
                                   int k71 = GlobalStatics_9.anIntArray2929[--k];
                                   GlobalStatics_3.anInt1853++;
-                                  GlobalStatics_9.SECURE_BUFFER.writePacket(117);
+                                  GlobalStatics_9.SECURE_BUFFER
+                                      .writePacket(117);
                                   GlobalStatics_9.SECURE_BUFFER.writeByte(
                                       GlobalStatics_10.getByteLength(class94_23)
                                           - (
@@ -3519,8 +3524,9 @@ public final class GlobalStatics_11 {
                                     continue;
                                   }
                                   if (j1 == 6002) {
-                                    boolean value = GlobalStatics_9.anIntArray2929[--k]
-                                        == 1;
+                                    boolean value =
+                                        GlobalStatics_9.anIntArray2929[--k]
+                                            == 1;
                                     SettingsStatics.SHOULD_USE_OPENGL = value;
                                     GlobalStatics_9.method139(66);
                                     DummyClass51.method1417(101);

@@ -17,63 +17,63 @@ public final class BlockConfig {
 
   public BlockConfig() {
     this.anInt1177 = GlEnvironment.DEFAULT_SUN_COLOR;
-      this.aFloat1189 = 1.2F;
-      this.sunPosZ = -50;
-      this.aFloat1187 = 1.1523438F;
-      this.anInt1175 = GlEnvironment.DEFAULT_FOG_COLOR;
-      this.sunPositionY = -60;
-      this.aFloat1190 = 0.69921875F;
-      this.anInt1184 = 0;
-      this.sunPositionX = -50;
+    this.aFloat1189 = 1.2F;
+    this.sunPosZ = -50;
+    this.aFloat1187 = 1.1523438F;
+    this.anInt1175 = GlEnvironment.DEFAULT_FOG_COLOR;
+    this.sunPositionY = -60;
+    this.aFloat1190 = 0.69921875F;
+    this.anInt1184 = 0;
+    this.sunPositionX = -50;
   }
 
-  public BlockConfig(Buffer var1 ) {
+  public BlockConfig(Buffer var1) {
     int var2 = var1.readUnsignedByte();
-      if ((var2 & 1) == 0) {
-        this.anInt1177 = GlEnvironment.DEFAULT_SUN_COLOR;
-      } else {
-        this.anInt1177 = var1.readInt();
-      }
+    if ((var2 & 1) == 0) {
+      this.anInt1177 = GlEnvironment.DEFAULT_SUN_COLOR;
+    } else {
+      this.anInt1177 = var1.readInt();
+    }
 
-      if ((2 & var2) == 0) {
-        this.aFloat1187 = 1.1523438F;
-      } else {
-        this.aFloat1187 = var1.readUnsignedShort() / 256.0F;
-      }
+    if ((2 & var2) == 0) {
+      this.aFloat1187 = 1.1523438F;
+    } else {
+      this.aFloat1187 = var1.readUnsignedShort() / 256.0F;
+    }
 
-      if ((var2 & 4) == 0) {
-        this.aFloat1190 = 0.69921875F;
-      } else {
-        this.aFloat1190 = var1.readUnsignedShort() / 256.0F;
-      }
+    if ((var2 & 4) == 0) {
+      this.aFloat1190 = 0.69921875F;
+    } else {
+      this.aFloat1190 = var1.readUnsignedShort() / 256.0F;
+    }
 
-      if ((var2 & 8) == 0) {
-        this.aFloat1189 = 1.2F;
-      } else {
-        this.aFloat1189 = var1.readUnsignedShort() / 256.0F;
-      }
+    if ((var2 & 8) == 0) {
+      this.aFloat1189 = 1.2F;
+    } else {
+      this.aFloat1189 = var1.readUnsignedShort() / 256.0F;
+    }
 
-      if ((16 & var2) == 0) {
-        this.sunPosZ = -50;
-        this.sunPositionX = -50;
-        this.sunPositionY = -60;
-      } else {
-        this.sunPositionX = var1.method787((byte) 53);
-        this.sunPositionY = var1.method787((byte) 15);
-        this.sunPosZ = var1.method787((byte) 50);
-      }
+    if ((16 & var2) == 0) {
+      this.sunPosZ = -50;
+      this.sunPositionX = -50;
+      this.sunPositionY = -60;
+    } else {
+      this.sunPositionX = var1.method787((byte) 53);
+      this.sunPositionY = var1.method787((byte) 15);
+      this.sunPosZ = var1.method787((byte) 50);
+    }
 
-      if ((32 & var2) == 0) {
-        this.anInt1175 = GlEnvironment.DEFAULT_FOG_COLOR;
-      } else {
-        this.anInt1175 = var1.readInt();
-      }
+    if ((32 & var2) == 0) {
+      this.anInt1175 = GlEnvironment.DEFAULT_FOG_COLOR;
+    } else {
+      this.anInt1175 = var1.readInt();
+    }
 
-      if ((64 & var2) == 0) {
-        this.anInt1184 = 0;
-      } else {
-        this.anInt1184 = var1.readUnsignedShort();
-      }
+    if ((64 & var2) == 0) {
+      this.anInt1184 = 0;
+    } else {
+      this.anInt1184 = var1.readUnsignedShort();
+    }
   }
 
 }

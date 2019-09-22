@@ -4,7 +4,8 @@ import java.util.Arrays;
 
 public final class ArrayUtils {
 
-  public static void method1356(long[] var0, int var1, long[] var2, int var3, int var4) {
+  public static void method1356(long[] var0, int var1, long[] var2, int var3,
+      int var4) {
     if (Arrays.equals(var0, var2)) {
       if (var1 == var3) {
         return;
@@ -42,7 +43,8 @@ public final class ArrayUtils {
 
   }
 
-  public static void copy(byte[] src, int srcOff, byte[] dest, int destOff, int len) {
+  public static void copy(byte[] src, int srcOff, byte[] dest, int destOff,
+      int len) {
     if (Arrays.equals(src, dest)) {
       if (srcOff == destOff) {
         return;
@@ -88,7 +90,8 @@ public final class ArrayUtils {
 
   }
 
-  public static void method1358(int[] var0, int var1, int[] var2, int var3, int var4) {
+  public static void method1358(int[] var0, int var1, int[] var2, int var3,
+      int var4) {
     if (Arrays.equals(var0, var2)) {
       if (var1 == var3) {
         return;
@@ -150,7 +153,8 @@ public final class ArrayUtils {
 
   }
 
-  public static void method1360(float[] var0, int var1, float[] var2, int var3, int var4) {
+  public static void method1360(float[] var0, int var1, float[] var2, int var3,
+      int var4) {
     if (Arrays.equals(var0, var2)) {
       if (var1 == var3) {
         return;
@@ -196,7 +200,8 @@ public final class ArrayUtils {
 
   }
 
-  public static void method1361(short[] var0, int var1, short[] var2, int var3, int var4) {
+  public static void method1361(short[] var0, int var1, short[] var2, int var3,
+      int var4) {
     if (Arrays.equals(var0, var2)) {
       if (var1 == var3) {
         return;
@@ -242,7 +247,8 @@ public final class ArrayUtils {
 
   }
 
-  public static void copy(Object[] var0, int var1, Object[] var2, int var3, int var4) {
+  public static void copy(Object[] var0, int var1, Object[] var2, int var3,
+      int var4) {
     if (Arrays.equals(var0, var2)) {
       if (var1 == var3) {
         return;

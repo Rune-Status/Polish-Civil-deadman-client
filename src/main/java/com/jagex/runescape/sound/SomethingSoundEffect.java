@@ -27,13 +27,16 @@ public final class SomethingSoundEffect {
     return var3 == 1 ?
         (var1 & 32767) < 16384 ? var2 : -var2 :
         var3 == 2 ?
-            SomethingSoundEffectStatics.anIntArray1591[var1 & 32767] * var2 >> 14 :
+            SomethingSoundEffectStatics.anIntArray1591[var1 & 32767] * var2
+                >> 14 :
             var3 == 3 ?
-            ((var1 & 32767) * var2 >> 14) - var2 :
-                var3 == 4 ? SomethingSoundEffectStatics.anIntArray1594[var1 / 2607 & 32767] * var2 : 0;
+                ((var1 & 32767) * var2 >> 14) - var2 :
+                var3 == 4 ?
+                    SomethingSoundEffectStatics.anIntArray1594[var1 / 2607
+                        & 32767] * var2 : 0;
   }
 
-  public int[] method1717(int var1, int var2 ) {
+  public int[] method1717(int var1, int var2) {
     ArrayUtils.clear(SomethingSoundEffectStatics.anIntArray1598, 0, var1);
     if (var2 < 10) {
       return SomethingSoundEffectStatics.anIntArray1598;
@@ -49,7 +52,7 @@ public final class SomethingSoundEffect {
         this.aClass34_1607.method1008();
         var5 = (int) ((
             this.aClass34_1608.anInt605 - this.aClass34_1608.anInt603) * 32.768D
-          / var3);
+            / var3);
         var6 = (int) (this.aClass34_1608.anInt603 * 32.768D / var3);
       }
 
@@ -61,7 +64,7 @@ public final class SomethingSoundEffect {
         this.aClass34_1584.method1008();
         var8 = (int) ((
             this.aClass34_1595.anInt605 - this.aClass34_1595.anInt603) * 32.768D
-          / var3);
+            / var3);
         var9 = (int) (this.aClass34_1595.anInt603 * 32.768D / var3);
       }
 
@@ -69,12 +72,16 @@ public final class SomethingSoundEffect {
       for (var11 = 0; var11 < 5; ++var11) {
         if (this.anIntArray1596[var11] != 0) {
           SomethingSoundEffectStatics.anIntArray1601[var11] = 0;
-          SomethingSoundEffectStatics.anIntArray1602[var11] = (int) (this.anIntArray1597[var11]
-              * var3);
-          SomethingSoundEffectStatics.anIntArray1603[var11] = (this.anIntArray1596[var11] << 14) / 100;
+          SomethingSoundEffectStatics.anIntArray1602[var11] = (int) (
+              this.anIntArray1597[var11]
+                  * var3);
+          SomethingSoundEffectStatics.anIntArray1603[var11] =
+              (this.anIntArray1596[var11] << 14) / 100;
           SomethingSoundEffectStatics.anIntArray1599[var11] = (int) (
-            (this.aClass34_1589.anInt605 - this.aClass34_1589.anInt603) * 32.768D
-              * Math.pow(1.0057929410678534D, this.anIntArray1605[var11]) / var3);
+              (this.aClass34_1589.anInt605 - this.aClass34_1589.anInt603)
+                  * 32.768D
+                  * Math.pow(1.0057929410678534D, this.anIntArray1605[var11])
+                  / var3);
           SomethingSoundEffectStatics.anIntArray1600[var11] = (int) (
               this.aClass34_1589.anInt603 * 32.768D / var3);
         }
@@ -90,7 +97,8 @@ public final class SomethingSoundEffect {
         if (this.aClass34_1608 != null) {
           var14 = this.aClass34_1608.method1007(var1);
           var15 = this.aClass34_1607.method1007(var1);
-          var12 += this.method1716(var7, var15, this.aClass34_1608.anInt601) >> 1;
+          var12 +=
+              this.method1716(var7, var15, this.aClass34_1608.anInt601) >> 1;
           var7 += (var14 * var5 >> 16) + var6;
         }
 
@@ -98,8 +106,10 @@ public final class SomethingSoundEffect {
           var14 = this.aClass34_1595.method1007(var1);
           var15 = this.aClass34_1584.method1007(var1);
           var13 =
-            var13 * ((this.method1716(var10, var15, this.aClass34_1595.anInt601) >> 1) + 0x8000)
-              >> 15;
+              var13 * (
+                  (this.method1716(var10, var15, this.aClass34_1595.anInt601)
+                      >> 1) + 0x8000)
+                  >> 15;
           var10 += (var14 * var8 >> 16) + var9;
         }
 
@@ -108,10 +118,15 @@ public final class SomethingSoundEffect {
             var15 = var11 + SomethingSoundEffectStatics.anIntArray1602[var14];
             if (var15 < var1) {
               SomethingSoundEffectStatics.anIntArray1598[var15] +=
-                  this.method1716(SomethingSoundEffectStatics.anIntArray1601[var14], var13 * SomethingSoundEffectStatics.anIntArray1603[var14] >> 15,
+                  this.method1716(
+                      SomethingSoundEffectStatics.anIntArray1601[var14],
+                      var13 * SomethingSoundEffectStatics.anIntArray1603[var14]
+                          >> 15,
                       this.aClass34_1589.anInt601);
               SomethingSoundEffectStatics.anIntArray1601[var14] +=
-                (var12 * SomethingSoundEffectStatics.anIntArray1599[var14] >> 16) + SomethingSoundEffectStatics.anIntArray1600[var14];
+                  (var12 * SomethingSoundEffectStatics.anIntArray1599[var14]
+                      >> 16)
+                      + SomethingSoundEffectStatics.anIntArray1600[var14];
             }
           }
         }
@@ -130,10 +145,12 @@ public final class SomethingSoundEffect {
           var16 = this.aClass34_1588.method1007(var1);
           if (var18) {
             var12 = this.aClass34_1585.anInt603 + (
-              (this.aClass34_1585.anInt605 - this.aClass34_1585.anInt603) * var15 >> 8);
+                (this.aClass34_1585.anInt605 - this.aClass34_1585.anInt603)
+                    * var15 >> 8);
           } else {
             var12 = this.aClass34_1585.anInt603 + (
-              (this.aClass34_1585.anInt605 - this.aClass34_1585.anInt603) * var16 >> 8);
+                (this.aClass34_1585.anInt605 - this.aClass34_1585.anInt603)
+                    * var16 >> 8);
           }
 
           var11 += 256;
@@ -153,12 +170,14 @@ public final class SomethingSoundEffect {
 
         for (var12 = var11; var12 < var1; ++var12) {
           SomethingSoundEffectStatics.anIntArray1598[var12] +=
-              SomethingSoundEffectStatics.anIntArray1598[var12 - var11] * this.anInt1604
+              SomethingSoundEffectStatics.anIntArray1598[var12 - var11]
+                  * this.anInt1604
                   / 100;
         }
       }
 
-      if (this.aClass103_1606.anIntArray1434[0] > 0 || this.aClass103_1606.anIntArray1434[1] > 0) {
+      if (this.aClass103_1606.anIntArray1434[0] > 0
+          || this.aClass103_1606.anIntArray1434[1] > 0) {
         this.aClass34_1592.method1008();
         var11 = this.aClass34_1592.method1007(var1 + 1);
         var12 = this.aClass103_1606.method1622(0, var11 / 65536.0F);
@@ -173,17 +192,23 @@ public final class SomethingSoundEffect {
           int var17;
           while (var14 < var15) {
             var16 =
-              (int) ((long) SomethingSoundEffectStatics.anIntArray1598[var14 + var12] * SomethingSoundEffectStatics.anInt1436
-                  >> 16);
+                (int) ((long) SomethingSoundEffectStatics.anIntArray1598[var14
+                    + var12] * SomethingSoundEffectStatics.anInt1436
+                    >> 16);
 
             for (var17 = 0; var17 < var12; ++var17) {
-              var16 += (int) ((long) SomethingSoundEffectStatics.anIntArray1598[var14 + var12 - 1 - var17]
-                * SomethingSoundEffectStatics.anIntArrayArray1435[0][var17] >> 16);
+              var16 += (int) ((long) SomethingSoundEffectStatics.anIntArray1598[
+                  var14 + var12 - 1 - var17]
+                  * SomethingSoundEffectStatics.anIntArrayArray1435[0][var17]
+                  >> 16);
             }
 
             for (var17 = 0; var17 < var14; ++var17) {
-              var16 -= (int) ((long) SomethingSoundEffectStatics.anIntArray1598[var14 - 1 - var17]
-                * SomethingSoundEffectStatics.anIntArrayArray1435[1][var17] >> 16);
+              var16 -= (int) (
+                  (long) SomethingSoundEffectStatics.anIntArray1598[var14 - 1
+                      - var17]
+                      * SomethingSoundEffectStatics.anIntArrayArray1435[1][var17]
+                      >> 16);
             }
 
             SomethingSoundEffectStatics.anIntArray1598[var14] = var16;
@@ -199,17 +224,25 @@ public final class SomethingSoundEffect {
             }
 
             while (var14 < var15) {
-              var16 = (int) ((long) SomethingSoundEffectStatics.anIntArray1598[var14 + var12] * SomethingSoundEffectStatics.anInt1436
-                >> 16);
+              var16 = (int) (
+                  (long) SomethingSoundEffectStatics.anIntArray1598[var14
+                      + var12] * SomethingSoundEffectStatics.anInt1436
+                      >> 16);
 
               for (var17 = 0; var17 < var12; ++var17) {
-                var16 += (int) ((long) SomethingSoundEffectStatics.anIntArray1598[var14 + var12 - 1 - var17]
-                  * SomethingSoundEffectStatics.anIntArrayArray1435[0][var17] >> 16);
+                var16 += (int) (
+                    (long) SomethingSoundEffectStatics.anIntArray1598[
+                        var14 + var12 - 1 - var17]
+                        * SomethingSoundEffectStatics.anIntArrayArray1435[0][var17]
+                        >> 16);
               }
 
               for (var17 = 0; var17 < var13; ++var17) {
-                var16 -= (int) ((long) SomethingSoundEffectStatics.anIntArray1598[var14 - 1 - var17]
-                  * SomethingSoundEffectStatics.anIntArrayArray1435[1][var17] >> 16);
+                var16 -= (int) (
+                    (long) SomethingSoundEffectStatics.anIntArray1598[var14 - 1
+                        - var17]
+                        * SomethingSoundEffectStatics.anIntArrayArray1435[1][var17]
+                        >> 16);
               }
 
               SomethingSoundEffectStatics.anIntArray1598[var14] = var16;
@@ -222,13 +255,19 @@ public final class SomethingSoundEffect {
                 var16 = 0;
 
                 for (var17 = var14 + var12 - var1; var17 < var12; ++var17) {
-                  var16 += (int) ((long) SomethingSoundEffectStatics.anIntArray1598[var14 + var12 - 1 - var17]
-                    * SomethingSoundEffectStatics.anIntArrayArray1435[0][var17] >> 16);
+                  var16 += (int) (
+                      (long) SomethingSoundEffectStatics.anIntArray1598[
+                          var14 + var12 - 1 - var17]
+                          * SomethingSoundEffectStatics.anIntArrayArray1435[0][var17]
+                          >> 16);
                 }
 
                 for (var17 = 0; var17 < var13; ++var17) {
-                  var16 -= (int) ((long) SomethingSoundEffectStatics.anIntArray1598[var14 - 1 - var17]
-                    * SomethingSoundEffectStatics.anIntArrayArray1435[1][var17] >> 16);
+                  var16 -= (int) (
+                      (long) SomethingSoundEffectStatics.anIntArray1598[var14
+                          - 1 - var17]
+                          * SomethingSoundEffectStatics.anIntArrayArray1435[1][var17]
+                          >> 16);
                 }
 
                 SomethingSoundEffectStatics.anIntArray1598[var14] = var16;
@@ -259,7 +298,7 @@ public final class SomethingSoundEffect {
     }
   }
 
-  public void method1718(Buffer var1 ) {
+  public void method1718(Buffer var1) {
     this.aClass34_1589 = new Something2SounfEffect();
     this.aClass34_1589.method1010(var1);
     this.aClass34_1587 = new Something2SounfEffect();

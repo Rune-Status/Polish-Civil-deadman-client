@@ -1,11 +1,10 @@
 package com.jagex.runescape.statics;
 
-import com.jagex.runescape.model.Widget;
 import com.jagex.runescape.common.GameString;
 import com.jagex.runescape.common.GameStringStatics;
-import com.jagex.runescape.input.AbstractMouseWheel;
-import com.jagex.runescape.node.AbstractObjectNodeWrapper;
 import com.jagex.runescape.model.SomethingPacket151;
+import com.jagex.runescape.model.Widget;
+import com.jagex.runescape.node.AbstractObjectNodeWrapper;
 
 public final class DummyClass60 {
 

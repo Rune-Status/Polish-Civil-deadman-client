@@ -9,8 +9,7 @@ public final class SignLinkAudioOutputStream extends AbstractAudioOutputStream {
 
   private final int anInt2969;
 
-
-  public SignLinkAudioOutputStream(SignLink var1, int var2 ) {
+  public SignLinkAudioOutputStream(SignLink var1, int var2) {
     GlobalStatics_3.anInterface1_2970 = var1.method1446((byte) 99);
     this.anInt2969 = var2;
   }
@@ -20,7 +19,7 @@ public final class SignLinkAudioOutputStream extends AbstractAudioOutputStream {
         this.samples);
   }
 
-  public void setBufferSize(int var1 ) throws Exception {
+  public void setBufferSize(int var1) throws Exception {
     if (var1 > 0x8000) {
       throw new IllegalArgumentException();
     } else {
@@ -42,9 +41,10 @@ public final class SignLinkAudioOutputStream extends AbstractAudioOutputStream {
         this.anInt2969);
   }
 
-  public void bind(Component var1 ) throws Exception {
+  public void bind(Component var1) throws Exception {
     GlobalStatics_3.anInterface1_2970
-        .method5(DummyClass60.sampleRate, (byte) -39, var1, GlobalStatics_0.stereo);
+        .method5(DummyClass60.sampleRate, (byte) -39, var1,
+            GlobalStatics_0.stereo);
   }
 
 }

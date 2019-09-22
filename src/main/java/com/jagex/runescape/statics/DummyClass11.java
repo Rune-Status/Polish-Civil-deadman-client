@@ -1,10 +1,10 @@
 package com.jagex.runescape.statics;
 
-import com.jagex.runescape.model.WidgetUpdate;
 import com.jagex.runescape.buffer.Buffer;
 import com.jagex.runescape.model.AreaSoundEffect;
 import com.jagex.runescape.model.GameObjectConfig;
 import com.jagex.runescape.model.Player;
+import com.jagex.runescape.model.WidgetUpdate;
 
 public final class DummyClass11 {
 

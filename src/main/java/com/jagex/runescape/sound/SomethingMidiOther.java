@@ -7,11 +7,11 @@ public final class SomethingMidiOther {
   public int[] anIntArray1930;
   public int anInt1931;
 
-
   public SomethingMidiOther() {
     SomethingMidiInstrumentStatics.method368(16);
-    this.anInt1931 = MidiInstrumentStatics.method364() != 0 ? SomethingMidiInstrumentStatics
-        .method368(4) + 1 : 1;
+    this.anInt1931 =
+        MidiInstrumentStatics.method364() != 0 ? SomethingMidiInstrumentStatics
+            .method368(4) + 1 : 1;
     if (MidiInstrumentStatics.method364() != 0) {
       SomethingMidiInstrumentStatics.method368(8);
     }

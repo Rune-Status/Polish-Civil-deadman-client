@@ -6,8 +6,7 @@ public final class StillGraphicNode extends SubNode {
 
   public StillGraphic aClass140_Sub2_3545;
 
-
-  public StillGraphicNode(StillGraphic var1 ) {
+  public StillGraphicNode(StillGraphic var1) {
     this.aClass140_Sub2_3545 = var1;
   }
 

@@ -2,12 +2,13 @@ package com.jagex.runescape.statics;
 
 import com.jagex.runescape.buffer.Buffer;
 import com.jagex.runescape.cache.CacheStatics;
+import com.jagex.runescape.cache.FileUnpacker;
 import com.jagex.runescape.common.GameString;
 import com.jagex.runescape.common.GameStringStatics;
 import com.jagex.runescape.common.HashTable;
+import com.jagex.runescape.common.MathUtilities;
 import com.jagex.runescape.common.TimeUtilities;
 import com.jagex.runescape.input.KeyboardStatics;
-import com.jagex.runescape.common.MathUtilities;
 import com.jagex.runescape.model.AbstractDirectColorSprite;
 import com.jagex.runescape.model.AbstractFont;
 import com.jagex.runescape.model.AbstractModel;
@@ -17,7 +18,6 @@ import com.jagex.runescape.model.AreaSoundEffect;
 import com.jagex.runescape.model.AudioStreamEncoder1;
 import com.jagex.runescape.model.ClanChatUser;
 import com.jagex.runescape.model.ClientScript;
-import com.jagex.runescape.cache.FileUnpacker;
 import com.jagex.runescape.model.FloorUnderlay;
 import com.jagex.runescape.model.GameObjectConfig;
 import com.jagex.runescape.model.GameWorld;
@@ -30,22 +30,14 @@ import com.jagex.runescape.model.NpcConfiguration;
 import com.jagex.runescape.model.ObjectCache;
 import com.jagex.runescape.model.Parameter;
 import com.jagex.runescape.model.Player;
-import com.jagex.runescape.scene.SceneGraphTile;
-import com.jagex.runescape.scene.SceneNode;
-import com.jagex.runescape.scene.SceneSomething;
 import com.jagex.runescape.model.SignLinkRequest;
 import com.jagex.runescape.model.SocketStream;
 import com.jagex.runescape.model.SoftwareDirectColorSprite;
 import com.jagex.runescape.model.SoftwareModel;
 import com.jagex.runescape.model.SomethingLight0;
-import com.jagex.runescape.settings.SettingsStatics;
-import com.jagex.runescape.sound.MidiSomethingStatics;
-import com.jagex.runescape.sound.SomethingMusic0;
 import com.jagex.runescape.model.SomethingPacket151;
-import com.jagex.runescape.scene.SomethingSceneI;
 import com.jagex.runescape.model.SomethingTexture1;
 import com.jagex.runescape.model.SomethingTexture4;
-import com.jagex.runescape.sound.SoundEffect;
 import com.jagex.runescape.model.StillGraphic;
 import com.jagex.runescape.model.StillGraphicNode;
 import com.jagex.runescape.model.Widget;
@@ -69,6 +61,14 @@ import com.jagex.runescape.opengl.SkyboxMaterialShader;
 import com.jagex.runescape.opengl.SomethingGl;
 import com.jagex.runescape.opengl.SomethingGl0;
 import com.jagex.runescape.opengl.WaterShader;
+import com.jagex.runescape.scene.SceneGraphTile;
+import com.jagex.runescape.scene.SceneNode;
+import com.jagex.runescape.scene.SceneSomething;
+import com.jagex.runescape.scene.SomethingSceneI;
+import com.jagex.runescape.settings.SettingsStatics;
+import com.jagex.runescape.sound.MidiSomethingStatics;
+import com.jagex.runescape.sound.SomethingMusic0;
+import com.jagex.runescape.sound.SoundEffect;
 import com.jagex.runescape.sprite.SoftwareIndexedColorSpriteStatics;
 import java.io.IOException;
 import java.net.Socket;
@@ -674,7 +674,8 @@ public class GlobalStatics_6 {
       if (var4 != null) {
         ++GlobalStatics_10.anInt3090;
         GlobalStatics_9.method1177(-1, 0L, (byte) -120, GlobalStatics_9.concat(
-            new GameString[]{GameStringStatics.aClass94_431, var3.aClass94_243}),
+            new GameString[]{GameStringStatics.aClass94_431,
+                var3.aClass94_243}),
             -1, (short) 32,
             var4, var3.anInt279);
       }
@@ -1126,8 +1127,9 @@ public class GlobalStatics_6 {
 
         GlobalStatics_9.SECURE_BUFFER.writeByte(255);
         GlobalStatics_9.SECURE_BUFFER.writeInt(var1);
-        GlobalStatics_9.GAME_SOCKET.write(GlobalStatics_9.SECURE_BUFFER.bytes, 0,
-            GlobalStatics_9.SECURE_BUFFER.position);
+        GlobalStatics_9.GAME_SOCKET
+            .write(GlobalStatics_9.SECURE_BUFFER.bytes, 0,
+                GlobalStatics_9.SECURE_BUFFER.position);
         if (GlobalStatics_9.audioOutputStream0 != null) {
           GlobalStatics_9.audioOutputStream0.pause();
         }
@@ -1343,7 +1345,8 @@ public class GlobalStatics_6 {
                     GlobalStatics_9.concat(new GameString[]{
                         GameStringStatics.aClass94_378,
                         GlobalStatics_2.aClass94_3702, var5
-                    }), var1, (short) 26, GameStringStatics.aClass94_3388, var4);
+                    }), var1, (short) 26, GameStringStatics.aClass94_3388,
+                    var4);
             ++GlobalStatics_9.anInt816;
           } else if (!GlobalStatics_9.aBoolean1837) {
             ++com.jagex.runescape.statics.GlobalStatics_0.anInt2592;
@@ -1752,8 +1755,9 @@ public class GlobalStatics_6 {
     byte[] bytes;
     for (var5 = 0; var4 > var5; ++var5) {
       var6 =
-          -GlobalStatics_10.REGION_BASE_X + 64 * (GlobalStatics_6.regionHashes[var5]
-              >> 8);
+          -GlobalStatics_10.REGION_BASE_X + 64 * (
+              GlobalStatics_6.regionHashes[var5]
+                  >> 8);
       var7 = -GlobalStatics_9.REGION_BASE_Y + 64 * (255
           & GlobalStatics_6.regionHashes[var5]);
       bytes = fileData[var5];
@@ -1773,8 +1777,9 @@ public class GlobalStatics_6 {
 
     for (; var4 > var5; ++var5) {
       var6 =
-          -GlobalStatics_10.REGION_BASE_X + 64 * (GlobalStatics_6.regionHashes[var5]
-              >> 8);
+          -GlobalStatics_10.REGION_BASE_X + 64 * (
+              GlobalStatics_6.regionHashes[var5]
+                  >> 8);
       var7 = -GlobalStatics_9.REGION_BASE_Y + 64 * (255
           & GlobalStatics_6.regionHashes[var5]);
       bytes = fileData[var5];
@@ -1968,7 +1973,8 @@ public class GlobalStatics_6 {
 
                 var21 -= widget.zoom / 2;
                 var23 =
-                    2047 & GlobalStatics_9.NEXT_CAMERA_YAW + GlobalStatics_9.anInt3102;
+                    2047 & GlobalStatics_9.NEXT_CAMERA_YAW
+                        + GlobalStatics_9.anInt3102;
                 var20 -= widget.anInt168 / 2;
                 var24 = MathUtilities.SINE_TABLE[var23];
                 var25 = MathUtilities.COSINE_TABLE[var23];
@@ -2189,7 +2195,8 @@ public class GlobalStatics_6 {
               if (widget.aClass11Array262 != null) {
                 GlobalStatics_6.method1095(var16, -widget.anInt208 + var14,
                     -widget.anInt247 + var13,
-                    widget.aClass11Array262, var18, widget.anInt279, var17, var19,
+                    widget.aClass11Array262, var18, widget.anInt279, var17,
+                    var19,
                     (byte) 52, var12);
               }
 
@@ -2529,7 +2536,8 @@ public class GlobalStatics_6 {
                           AnimationSequence var48 = GlobalStatics_8
                               .method45(var21, (byte) -20);
                           var38 = widget
-                              .method865(widget.anInt260, var48, widget.anInt283,
+                              .method865(widget.anInt260, var48,
+                                  widget.anInt283,
                                   127,
                                   widget.anInt267, var41,
                                   GlobalStatics_9.localPlayer.appearance);
@@ -2618,12 +2626,14 @@ public class GlobalStatics_6 {
                           if (widget.aBoolean233) {
                             var38.draw(0, widget.rotationY, widget.rotationZ,
                                 widget.rotationX0,
-                                widget.anInt258, widget.anInt264 + var28 + var23,
+                                widget.anInt258,
+                                widget.anInt264 + var28 + var23,
                                 widget.anInt264 + var29, -1L);
                           } else {
-                            var38.draw(0, widget.rotationY, 0, widget.rotationX0,
-                                0, var28, var29,
-                                -1L);
+                            var38
+                                .draw(0, widget.rotationY, 0, widget.rotationX0,
+                                    0, var28, var29,
+                                    -1L);
                           }
 
                           if (widget.aBoolean309) {
@@ -2638,9 +2648,10 @@ public class GlobalStatics_6 {
                               * MathUtilities.COSINE_TABLE[widget.rotationX0]
                               >> 16;
                           if (!widget.aBoolean233) {
-                            var38.draw(0, widget.rotationY, 0, widget.rotationX0,
-                                0, var28, var29,
-                                -1L);
+                            var38
+                                .draw(0, widget.rotationY, 0, widget.rotationX0,
+                                    0, var28, var29,
+                                    -1L);
                           } else if (widget.aBoolean181) {
                             ((SoftwareModel) var38)
                                 .method1946(0, widget.rotationY,
@@ -2782,7 +2793,8 @@ public class GlobalStatics_6 {
                         var47 = 2 + var26 + var35.anInt3727;
 
                         for (
-                            var43 = GlobalStatics_7.method1303(widget, var43, 0);
+                            var43 = GlobalStatics_7
+                                .method1303(widget, var43, 0);
                             var43.getLength() > 0;
                             var47 += var35.anInt3727 + 1) {
                           var28 = var43.indexOf(
@@ -2992,7 +3004,6 @@ public class GlobalStatics_6 {
     if (GlobalStatics_6.NEXT_CAMERA_PITCH < 128) {
       GlobalStatics_6.NEXT_CAMERA_PITCH = 128;
     }
-
 
     //TODO
     if (GlobalStatics_6.NEXT_CAMERA_PITCH > 383) {
@@ -3295,7 +3306,8 @@ public class GlobalStatics_6 {
 
     if (DummyClass12.minimapMode != 2 && DummyClass12.minimapMode != 5
         && GlobalStatics_9.aClass3_Sub28_Sub16_812 != null) {
-      int var19 = GlobalStatics_9.anInt3102 + GlobalStatics_9.NEXT_CAMERA_YAW & 2047;
+      int var19 =
+          GlobalStatics_9.anInt3102 + GlobalStatics_9.NEXT_CAMERA_YAW & 2047;
       int var6 = GlobalStatics_9.localPlayer.sceneX / 32 + 48;
       int var7 = -(GlobalStatics_9.localPlayer.sceneY / 32) + 464;
       if (GlRenderer.USE_OPENGL) {

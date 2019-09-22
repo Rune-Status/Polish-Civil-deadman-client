@@ -68,7 +68,8 @@ public final class MaterialShader5 implements MaterialShader {
       GlRenderer.GL.glTexGenfv(8194, 9473, this.aFloatArray2174, 0);
     } else {
       int var7 = (int) (GlRenderer.anInt1791 * var4 * 64.0F);
-      GlRenderer.GL.glBindTexture(GL.GL_TEXTURE_2D, SomethingGl.anIntArray1223[var7 % 64]);
+      GlRenderer.GL.glBindTexture(GL.GL_TEXTURE_2D,
+          SomethingGl.anIntArray1223[var7 % 64]);
     }
 
     GlRenderer.GL.glActiveTexture(0x84c0);

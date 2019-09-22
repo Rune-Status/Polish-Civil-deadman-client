@@ -1,16 +1,16 @@
 package com.jagex.runescape.statics;
 
-import com.jagex.runescape.common.ThreadUtilities;
-import com.jagex.runescape.model.WorldMapLabel;
 import com.jagex.runescape.buffer.Buffer;
+import com.jagex.runescape.cache.FileUnpacker;
 import com.jagex.runescape.common.GameString;
 import com.jagex.runescape.common.GameStringStatics;
-import com.jagex.runescape.cache.FileUnpacker;
+import com.jagex.runescape.common.ThreadUtilities;
 import com.jagex.runescape.model.LightIntensity;
 import com.jagex.runescape.model.Player;
 import com.jagex.runescape.model.Queue;
 import com.jagex.runescape.model.RenderAnimation;
 import com.jagex.runescape.model.SignLink;
+import com.jagex.runescape.model.WorldMapLabel;
 import java.awt.event.ActionEvent;
 import java.io.IOException;
 import java.util.Objects;

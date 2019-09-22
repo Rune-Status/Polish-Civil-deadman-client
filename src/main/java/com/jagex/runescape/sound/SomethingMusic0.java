@@ -8,15 +8,15 @@ public final class SomethingMusic0 extends AbstractSomethingMusic {
   public int anInt3033;
   public int anInt3034;
 
-
-  public SomethingMusic0(int var1, byte[] var2, int var3, int var4 ) {
+  public SomethingMusic0(int var1, byte[] var2, int var3, int var4) {
     this.anInt3034 = var1;
     this.aByteArray3030 = var2;
     this.anInt3033 = var3;
     this.anInt3032 = var4;
   }
 
-  public SomethingMusic0(int var1, byte[] var2, int var3, int var4, boolean var5 ) {
+  public SomethingMusic0(int var1, byte[] var2, int var3, int var4,
+      boolean var5) {
     this.anInt3034 = var1;
     this.aByteArray3030 = var2;
     this.anInt3033 = var3;
@@ -24,7 +24,7 @@ public final class SomethingMusic0 extends AbstractSomethingMusic {
     this.aBoolean3031 = var5;
   }
 
-  public SomethingMusic0 method151(SomethingAudio var1 ) {
+  public SomethingMusic0 method151(SomethingAudio var1) {
     this.aByteArray3030 = var1.method2173(this.aByteArray3030, (byte) -105);
     this.anInt3034 = var1.method2177(this.anInt3034, (byte) 90);
     if (this.anInt3033 == this.anInt3032) {

@@ -1,13 +1,13 @@
 package com.jagex.runescape.statics;
 
+import com.jagex.runescape.cache.FileUnpacker;
 import com.jagex.runescape.common.GameString;
 import com.jagex.runescape.common.GameStringStatics;
-import com.jagex.runescape.cache.FileUnpacker;
 import com.jagex.runescape.model.ObjectCache;
+import com.jagex.runescape.opengl.GLStatics;
 import com.jagex.runescape.scene.SceneGraphTile;
 import com.jagex.runescape.scene.SceneNode;
 import com.jagex.runescape.scene.SceneSomething2;
-import com.jagex.runescape.opengl.GLStatics;
 
 public final class DummyClass14 {
 

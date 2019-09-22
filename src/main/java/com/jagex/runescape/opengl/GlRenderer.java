@@ -363,7 +363,8 @@ public final class GlRenderer {
     }
 
     if (var0 == 0) {
-      GlRenderer.USE_BIG_ENDIAN = ByteOrder.nativeOrder() == ByteOrder.BIG_ENDIAN;
+      GlRenderer.USE_BIG_ENDIAN =
+          ByteOrder.nativeOrder() == ByteOrder.BIG_ENDIAN;
       GlRenderer.VERTEX_BUFFER_SUPPORT = GlRenderer.GL
           .isExtensionAvailable("GL_ARB_vertex_buffer_object");
       GlRenderer.multiSampleSupport = GlRenderer.GL
@@ -700,8 +701,10 @@ public final class GlRenderer {
     int[] var0 = new int[1];
     GlRenderer.GL.glGenTextures(1, var0, 0);
     GlRenderer.anInt1810 = var0[0];
-    GlRenderer.GL.glBindTexture(GlRenderer.GL.GL_TEXTURE_2D, GlRenderer.anInt1810);
-    GlRenderer.GL.glTexImage2D(GlRenderer.GL.GL_TEXTURE_2D, 0, 4, 1, 1, 0, GlRenderer.GL.GL_RGBA,
+    GlRenderer.GL
+        .glBindTexture(GlRenderer.GL.GL_TEXTURE_2D, GlRenderer.anInt1810);
+    GlRenderer.GL.glTexImage2D(GlRenderer.GL.GL_TEXTURE_2D, 0, 4, 1, 1, 0,
+        GlRenderer.GL.GL_RGBA,
         GlRenderer.GL.GL_UNSIGNED_BYTE,
         IntBuffer.wrap(new int[]{-1}));
     DummyClass46.setupSceneGl();

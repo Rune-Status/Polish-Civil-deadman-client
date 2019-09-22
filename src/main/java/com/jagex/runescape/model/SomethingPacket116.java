@@ -26,10 +26,10 @@ public final class SomethingPacket116 {
 
   public int method1804(boolean var1) {
     if (var1) {
-        GlobalStatics_9.anInt1753 = -21;
-      }
+      GlobalStatics_9.anInt1753 = -21;
+    }
 
-      return this.aByte1742 & 7;
+    return this.aByte1742 & 7;
   }
 
   public int method1805(byte var1) {

@@ -84,7 +84,8 @@ public final class DummyClass4 extends DummyClass6 {
           if (GlobalStatics_8.aLongArray826[var4] == var0) {
             GlobalStatics_8.printMessage(GameStringStatics.EMPTY_STRING, 0,
                 GlobalStatics_9.concat(
-                    new GameString[]{var3, GameStringStatics.aClass94_3645}), -1);
+                    new GameString[]{var3, GameStringStatics.aClass94_3645}),
+                -1);
             return;
           }
         }

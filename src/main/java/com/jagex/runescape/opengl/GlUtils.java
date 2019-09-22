@@ -21,7 +21,8 @@ public final class GlUtils {
     float xx1 = xx0 + length;
     float yy0 = GlRenderer.viewHeight - (y + 0.3F);
     GlRenderer.GL.glBegin(1);
-    GlRenderer.GL.glColor3ub((byte) (var3 >> 16), (byte) (var3 >> 8), (byte) var3);
+    GlRenderer.GL
+        .glColor3ub((byte) (var3 >> 16), (byte) (var3 >> 8), (byte) var3);
     GlRenderer.GL.glVertex2f(xx0, yy0);
     GlRenderer.GL.glVertex2f(xx1, yy0);
     GlRenderer.GL.glEnd();
@@ -37,7 +38,8 @@ public final class GlUtils {
     float var5 = GlRenderer.viewHeight - (var1 + 0.3F);
     float var6 = var5 - var2;
     GlRenderer.GL.glBegin(1);
-    GlRenderer.GL.glColor3ub((byte) (var3 >> 16), (byte) (var3 >> 8), (byte) var3);
+    GlRenderer.GL
+        .glColor3ub((byte) (var3 >> 16), (byte) (var3 >> 8), (byte) var3);
     GlRenderer.GL.glVertex2f(var4, var5);
     GlRenderer.GL.glVertex2f(var4, var6);
     GlRenderer.GL.glEnd();
@@ -52,28 +54,32 @@ public final class GlUtils {
     GlUtils.method921();
   }
 
-  public static void drawImage(int[] var0, int var1, int var2, int var3, int var4) {
+  public static void drawImage(int[] var0, int var1, int var2, int var3,
+      int var4) {
     GlRenderer.resetState();
     GlRenderer.GL.glRasterPos2i(var1, GlRenderer.viewHeight - var2);
     GlRenderer.GL.glPixelZoom(1.0F, -1.0f);
     GlRenderer.GL.glDisable(3042);
     GlRenderer.GL.glDisable(3008);
     GlRenderer.GL
-        .glDrawPixels(var3, var4, 0x80e1, GlRenderer.USE_BIG_ENDIAN ? 0x8367 : GL.GL_UNSIGNED_BYTE,
-      IntBuffer.wrap(var0));
+        .glDrawPixels(var3, var4, 0x80e1,
+            GlRenderer.USE_BIG_ENDIAN ? 0x8367 : GL.GL_UNSIGNED_BYTE,
+            IntBuffer.wrap(var0));
     GlRenderer.GL.glEnable(3008);
     GlRenderer.GL.glEnable(3042);
     GlRenderer.GL.glPixelZoom(1.0F, 1.0F);
   }
 
-  public static void drawQuad(int var0, int var1, int var2, int var3, int var4) {
+  public static void drawQuad(int var0, int var1, int var2, int var3,
+      int var4) {
     GlRenderer.resetState();
     float var5 = var0 + 0.3F;
     float var6 = var5 + (var2 - 1);
     float var7 = GlRenderer.viewHeight - (var1 + 0.3F);
     float var8 = var7 - (var3 - 1);
     GlRenderer.GL.glBegin(2);
-    GlRenderer.GL.glColor3ub((byte) (var4 >> 16), (byte) (var4 >> 8), (byte) var4);
+    GlRenderer.GL
+        .glColor3ub((byte) (var4 >> 16), (byte) (var4 >> 8), (byte) var4);
     GlRenderer.GL.glVertex2f(var5, var7);
     GlRenderer.GL.glVertex2f(var5, var8);
     GlRenderer.GL.glVertex2f(var6, var8);
@@ -81,15 +87,17 @@ public final class GlUtils {
     GlRenderer.GL.glEnd();
   }
 
-  public static void drawQuad(int x0, int y0, int width, int height, int color, int alpha) {
+  public static void drawQuad(int x0, int y0, int width, int height, int color,
+      int alpha) {
     GlRenderer.resetState();
     float var6 = x0 + 0.3F;
     float var7 = var6 + (width - 1);
     float var8 = GlRenderer.viewHeight - (y0 + 0.3F);
     float var9 = var8 - (height - 1);
     GlRenderer.GL.glBegin(2);
-    GlRenderer.GL.glColor4ub((byte) (color >> 16), (byte) (color >> 8), (byte) color,
-      alpha > 255 ? -1 : (byte) alpha);
+    GlRenderer.GL
+        .glColor4ub((byte) (color >> 16), (byte) (color >> 8), (byte) color,
+            alpha > 255 ? -1 : (byte) alpha);
     GlRenderer.GL.glVertex2f(var6, var8);
     GlRenderer.GL.glVertex2f(var6, var9);
     GlRenderer.GL.glVertex2f(var7, var9);
@@ -97,7 +105,8 @@ public final class GlUtils {
     GlRenderer.GL.glEnd();
   }
 
-  public static void method929(int var0, int var1, int var2, int var3, int color, int var5) {
+  public static void method929(int var0, int var1, int var2, int var3,
+      int color, int var5) {
     int var6 = var2 - var0;
     int var7 = var3 - var1;
     int var8 = var6 >= 0 ? var6 : -var6;
@@ -129,7 +138,8 @@ public final class GlUtils {
       int y1 = var1 + var7 - var16;
       int y0 = var1 + var7 + var15;
       GlRenderer.resetState();
-      GlRenderer.GL.glColor3ub((byte) (color >> 16), (byte) (color >> 8), (byte) color);
+      GlRenderer.GL
+          .glColor3ub((byte) (color >> 16), (byte) (color >> 8), (byte) color);
       GlRenderer.GL.glBegin(6);
       if (var12 <= var11) {
         GlRenderer.GL.glVertex2f(x0, GlRenderer.viewHeight - y0);
@@ -147,15 +157,17 @@ public final class GlUtils {
     }
   }
 
-  public static void fillQuad(int x0, int y0, int x1, int y1, int color, int alpha) {
+  public static void fillQuad(int x0, int y0, int x1, int y1, int color,
+      int alpha) {
     GlRenderer.resetState();
     float xx0 = x0;
     float xx1 = xx0 + x1;
     float yy0 = GlRenderer.viewHeight - y0;
     float yy1 = yy0 - y1;
     GlRenderer.GL.glBegin(6);
-    GlRenderer.GL.glColor4ub((byte) (color >> 16), (byte) (color >> 8), (byte) color,
-      alpha > 255 ? -1 : (byte) alpha);
+    GlRenderer.GL
+        .glColor4ub((byte) (color >> 16), (byte) (color >> 8), (byte) color,
+            alpha > 255 ? -1 : (byte) alpha);
     GlRenderer.GL.glVertex2f(xx0, yy0);
     GlRenderer.GL.glVertex2f(xx0, yy1);
     GlRenderer.GL.glVertex2f(xx1, yy1);
@@ -181,10 +193,12 @@ public final class GlUtils {
     }
 
     GlRenderer.GL.glEnable(3089);
-    if (GlUtils.anInt449 <= GlUtils.anInt450 && GlUtils.anInt448 <= GlUtils.anInt451) {
-      GlRenderer.GL.glScissor(GlUtils.anInt449, GlRenderer.viewHeight - GlUtils.anInt451,
-          GlUtils.anInt450 - GlUtils.anInt449,
-          GlUtils.anInt451 - GlUtils.anInt448);
+    if (GlUtils.anInt449 <= GlUtils.anInt450
+        && GlUtils.anInt448 <= GlUtils.anInt451) {
+      GlRenderer.GL
+          .glScissor(GlUtils.anInt449, GlRenderer.viewHeight - GlUtils.anInt451,
+              GlUtils.anInt450 - GlUtils.anInt449,
+              GlUtils.anInt451 - GlUtils.anInt448);
     } else {
       GlRenderer.GL.glScissor(0, 0, 0, 0);
     }
@@ -198,14 +212,16 @@ public final class GlUtils {
     GlRenderer.GL.glClear(16640);
   }
 
-  public static void method933(int var0, int var1, int var2, int var3, int var4) {
+  public static void method933(int var0, int var1, int var2, int var3,
+      int var4) {
     GlRenderer.resetState();
     float var5 = var0 + 0.3F;
     float var6 = var2 + 0.3F;
     float var7 = GlRenderer.viewHeight - (var1 + 0.3F);
     float var8 = GlRenderer.viewHeight - (var3 + 0.3F);
     GlRenderer.GL.glBegin(2);
-    GlRenderer.GL.glColor3ub((byte) (var4 >> 16), (byte) (var4 >> 8), (byte) var4);
+    GlRenderer.GL
+        .glColor3ub((byte) (var4 >> 16), (byte) (var4 >> 8), (byte) var4);
     GlRenderer.GL.glVertex2f(var5, var7);
     GlRenderer.GL.glVertex2f(var6, var8);
     GlRenderer.GL.glEnd();
@@ -218,7 +234,8 @@ public final class GlUtils {
     float yy0 = GlRenderer.viewHeight - y0;
     float yy1 = yy0 - y1;
     GlRenderer.GL.glBegin(6);
-    GlRenderer.GL.glColor3ub((byte) (color >> 16), (byte) (color >> 8), (byte) color);
+    GlRenderer.GL
+        .glColor3ub((byte) (color >> 16), (byte) (color >> 8), (byte) color);
     GlRenderer.GL.glVertex2f(xx0, yy0);
     GlRenderer.GL.glVertex2f(xx0, yy1);
     GlRenderer.GL.glVertex2f(xx1, yy1);
@@ -248,10 +265,12 @@ public final class GlUtils {
     GlUtils.anInt450 = var2;
     GlUtils.anInt451 = var3;
     GlRenderer.GL.glEnable(3089);
-    if (GlUtils.anInt449 <= GlUtils.anInt450 && GlUtils.anInt448 <= GlUtils.anInt451) {
-      GlRenderer.GL.glScissor(GlUtils.anInt449, GlRenderer.viewHeight - GlUtils.anInt451,
-          GlUtils.anInt450 - GlUtils.anInt449,
-          GlUtils.anInt451 - GlUtils.anInt448);
+    if (GlUtils.anInt449 <= GlUtils.anInt450
+        && GlUtils.anInt448 <= GlUtils.anInt451) {
+      GlRenderer.GL
+          .glScissor(GlUtils.anInt449, GlRenderer.viewHeight - GlUtils.anInt451,
+              GlUtils.anInt450 - GlUtils.anInt449,
+              GlUtils.anInt451 - GlUtils.anInt448);
     } else {
       GlRenderer.GL.glScissor(0, 0, 0, 0);
     }
