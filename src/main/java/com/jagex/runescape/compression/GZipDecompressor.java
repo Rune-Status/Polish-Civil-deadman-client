@@ -1,4 +1,4 @@
-package com.jagex.runescape.cache;
+package com.jagex.runescape.compression;
 
 import com.jagex.runescape.buffer.Buffer;
 import java.util.zip.Inflater;

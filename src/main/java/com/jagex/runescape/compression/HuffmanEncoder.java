@@ -1,4 +1,4 @@
-package com.jagex.runescape.huffman;
+package com.jagex.runescape.compression;
 
 public final class HuffmanEncoder {
 

@@ -3,7 +3,7 @@ package com.jagex.runescape.statics;
 import com.jagex.runescape.common.GameString;
 import com.jagex.runescape.common.GameStringStatics;
 import com.jagex.runescape.common.HashTable;
-import com.jagex.runescape.huffman.HuffmanEncoder;
+import com.jagex.runescape.compression.HuffmanEncoder;
 import com.jagex.runescape.model.FloorOverlay;
 import com.jagex.runescape.model.SoftwareDirectColorSprite;
 import com.jagex.runescape.model.SomethingOtherWorldMap;

@@ -1,4 +1,4 @@
-package com.jagex.runescape.cache;
+package com.jagex.runescape.compression;
 
 public final class BZipDecompressor {
 

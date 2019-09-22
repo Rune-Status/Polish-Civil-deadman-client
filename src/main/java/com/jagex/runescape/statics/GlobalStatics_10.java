@@ -9,7 +9,7 @@ import com.jagex.runescape.common.GameStringStatics;
 import com.jagex.runescape.common.HashTable;
 import com.jagex.runescape.common.MathUtilities;
 import com.jagex.runescape.common.TimeUtilities;
-import com.jagex.runescape.huffman.HuffmanEncoder;
+import com.jagex.runescape.compression.HuffmanEncoder;
 import com.jagex.runescape.input.KeyboardStatics;
 import com.jagex.runescape.model.AbstractDirectColorSprite;
 import com.jagex.runescape.model.AbstractImageProducer;

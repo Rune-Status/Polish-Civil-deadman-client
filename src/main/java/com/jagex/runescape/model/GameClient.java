@@ -1,12 +1,12 @@
 package com.jagex.runescape.model;
 
 import com.jagex.runescape.buffer.Buffer;
-import com.jagex.runescape.cache.BZipDecompressorStatics;
+import com.jagex.runescape.compression.BZipDecompressorStatics;
 import com.jagex.runescape.camera.CameraStatics;
 import com.jagex.runescape.common.GameString;
 import com.jagex.runescape.common.GameStringStatics;
 import com.jagex.runescape.common.TimeUtilities;
-import com.jagex.runescape.huffman.HuffmanEncoder;
+import com.jagex.runescape.compression.HuffmanEncoder;
 import com.jagex.runescape.input.KeyboardStatics;
 import com.jagex.runescape.input.MouseStatics;
 import com.jagex.runescape.input.MouseWheelStatics;

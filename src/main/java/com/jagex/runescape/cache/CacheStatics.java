@@ -5,6 +5,8 @@ import com.jagex.runescape.buffer.BufferObject;
 import com.jagex.runescape.buffer.BufferStatics;
 import com.jagex.runescape.buffer.NativeBufferObject;
 import com.jagex.runescape.common.ArrayUtils;
+import com.jagex.runescape.compression.BZipDecompressorStatics;
+import com.jagex.runescape.compression.GZipDecompressor;
 
 public class CacheStatics {
 

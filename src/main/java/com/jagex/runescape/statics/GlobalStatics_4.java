@@ -1,6 +1,6 @@
 package com.jagex.runescape.statics;
 
-import com.jagex.runescape.cache.BZipDecompressorStatics;
+import com.jagex.runescape.compression.BZipDecompressorStatics;
 import com.jagex.runescape.common.GameStringStatics;
 import com.jagex.runescape.input.KeyboardStatics;
 import com.jagex.runescape.model.AnimationSequence;

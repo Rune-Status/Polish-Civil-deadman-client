@@ -8,5 +8,6 @@ java_library(
     deps = [
         "//src/main/java/com/jagex/runescape/buffer",
         "//src/main/java/com/jagex/runescape/common",
+        "//src/main/java/com/jagex/runescape/compression",
     ],
 )
