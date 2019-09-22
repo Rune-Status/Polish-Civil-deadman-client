@@ -3,7 +3,7 @@ package com.jagex.runescape.sound.midi;
 import com.jagex.runescape.cache.FileUnpacker;
 import com.jagex.runescape.common.HashTable;
 import com.jagex.runescape.sound.SomethingMusic0;
-import com.jagex.runescape.sound.SoundEffect;
+import com.jagex.runescape.sound.effect.SoundEffect;
 
 public final class MidiSomething {
 

@@ -1,4 +1,4 @@
-package com.jagex.runescape.sound;
+package com.jagex.runescape.sound.effect;
 
 public class SomethingSoundEffectStatics {
 

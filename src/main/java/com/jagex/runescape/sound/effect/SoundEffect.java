@@ -1,6 +1,8 @@
-package com.jagex.runescape.sound;
+package com.jagex.runescape.sound.effect;
 
 import com.jagex.runescape.buffer.Buffer;
+import com.jagex.runescape.sound.SomethingMusic0;
+import com.jagex.runescape.sound.effect.SomethingSoundEffect;
 
 public final class SoundEffect {
 

@@ -1,6 +1,8 @@
 package com.jagex.runescape.sound;
 
 import com.jagex.runescape.buffer.Buffer;
+import com.jagex.runescape.sound.effect.Something2SounfEffect;
+import com.jagex.runescape.sound.effect.SomethingSoundEffectStatics;
 
 public final class FilterPossibly {
 

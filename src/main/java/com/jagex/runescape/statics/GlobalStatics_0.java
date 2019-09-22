@@ -92,7 +92,7 @@ import com.jagex.runescape.scene.SceneSomething;
 import com.jagex.runescape.scene.SceneSomething2;
 import com.jagex.runescape.scene.SomethingSceneJ;
 import com.jagex.runescape.settings.SettingsStatics;
-import com.jagex.runescape.sound.SomethingSoundEffectStatics;
+import com.jagex.runescape.sound.effect.SomethingSoundEffectStatics;
 import com.jagex.runescape.sprite.SoftwareIndexedColorSprite;
 import com.jagex.runescape.sprite.SoftwareIndexedColorSpriteStatics;
 import java.nio.charset.StandardCharsets;

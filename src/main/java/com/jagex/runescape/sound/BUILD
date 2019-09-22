@@ -5,6 +5,7 @@ java_library(
     srcs = glob([
         "*.java",
         "midi/*.java",
+        "effect/*.java",
     ]),
     deps = [
         "//src/main/java/com/jagex/runescape/buffer",

@@ -40,7 +40,7 @@ import com.jagex.runescape.scene.SceneGraphTile;
 import com.jagex.runescape.scene.SomethingScene;
 import com.jagex.runescape.settings.SettingsStatics;
 import com.jagex.runescape.sound.FilterPossiblyStatics;
-import com.jagex.runescape.sound.SomethingSoundEffectStatics;
+import com.jagex.runescape.sound.effect.SomethingSoundEffectStatics;
 import com.jagex.runescape.sprite.SoftwareIndexedColorSpriteStatics;
 import java.util.Random;
 
