@@ -1,6 +1,7 @@
 package com.jagex.runescape.model;
 
 import com.jagex.runescape.common.HashTable;
+import com.jagex.runescape.common.Queue;
 import com.jagex.runescape.node.AbstractObjectNode;
 import com.jagex.runescape.node.ObjectNode;
 import com.jagex.runescape.opengl.Texture;

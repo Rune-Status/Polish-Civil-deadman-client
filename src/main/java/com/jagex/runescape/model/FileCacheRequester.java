@@ -1,5 +1,6 @@
 package com.jagex.runescape.model;
 
+import com.jagex.runescape.common.Queue;
 import com.jagex.runescape.common.ThreadUtilities;
 import com.jagex.runescape.statics.DummyClass35;
 import com.jagex.runescape.statics.GlobalStatics_7;

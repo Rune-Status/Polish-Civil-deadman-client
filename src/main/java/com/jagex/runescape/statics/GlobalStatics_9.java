@@ -54,7 +54,7 @@ import com.jagex.runescape.model.NpcConfiguration;
 import com.jagex.runescape.model.ObjectCache;
 import com.jagex.runescape.model.Player;
 import com.jagex.runescape.model.PlayerVariable;
-import com.jagex.runescape.model.Queue;
+import com.jagex.runescape.common.Queue;
 import com.jagex.runescape.model.RenderAnimation;
 import com.jagex.runescape.model.ScriptState;
 import com.jagex.runescape.model.SignLink;

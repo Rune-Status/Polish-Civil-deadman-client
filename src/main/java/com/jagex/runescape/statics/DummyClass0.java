@@ -1,7 +1,7 @@
 package com.jagex.runescape.statics;
 
 import com.jagex.runescape.buffer.Buffer;
-import com.jagex.runescape.model.DummyHashTable;
+import com.jagex.runescape.common.DummyHashTable;
 import com.jagex.runescape.node.Deque;
 import com.jagex.runescape.opengl.GlRenderer;
 import java.nio.FloatBuffer;

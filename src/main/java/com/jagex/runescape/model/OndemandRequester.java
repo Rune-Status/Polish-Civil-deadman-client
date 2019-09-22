@@ -1,6 +1,7 @@
 package com.jagex.runescape.model;
 
 import com.jagex.runescape.buffer.Buffer;
+import com.jagex.runescape.common.Queue;
 import com.jagex.runescape.common.TimeUtilities;
 import com.jagex.runescape.statics.GlobalStatics_9;
 import java.io.IOException;

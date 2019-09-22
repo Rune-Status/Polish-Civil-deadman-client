@@ -24,7 +24,7 @@ import com.jagex.runescape.model.LightIntensity;
 import com.jagex.runescape.model.Mobile;
 import com.jagex.runescape.model.Parameter;
 import com.jagex.runescape.model.Player;
-import com.jagex.runescape.model.Queue;
+import com.jagex.runescape.common.Queue;
 import com.jagex.runescape.model.ScriptState;
 import com.jagex.runescape.model.SomethingPacket151;
 import com.jagex.runescape.model.SomethingQuickChat;

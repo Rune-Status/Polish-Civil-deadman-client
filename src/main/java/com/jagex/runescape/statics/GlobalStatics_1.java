@@ -3,11 +3,10 @@ package com.jagex.runescape.statics;
 import com.jagex.runescape.common.GameString;
 import com.jagex.runescape.common.GameStringStatics;
 import com.jagex.runescape.common.HashTable;
-import com.jagex.runescape.model.Queue;
+import com.jagex.runescape.common.Queue;
 import com.jagex.runescape.model.SoftwareModel;
 import com.jagex.runescape.model.SomethingWorldMapy;
 import com.jagex.runescape.node.Deque;
-import com.jagex.runescape.node.Node;
 
 public class GlobalStatics_1 {
 

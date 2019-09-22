@@ -1,6 +1,7 @@
 package com.jagex.runescape.model;
 
 import com.jagex.runescape.common.HashTable;
+import com.jagex.runescape.common.Queue;
 import com.jagex.runescape.node.Node;
 import com.jagex.runescape.node.SubNode;
 import com.jagex.runescape.statics.GlobalStatics_6;

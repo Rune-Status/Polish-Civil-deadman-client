@@ -1916,7 +1916,7 @@ public class GlobalStatics_10 {
       while (GlobalStatics_9.anInt1780
           < DummyClass25.aClass131_1624.anInt1720) {
         if (DummyClass25.aClass131_1624
-            .method1794(GlobalStatics_9.anInt1780, -20138)) {
+            .method1794(GlobalStatics_9.anInt1780)) {
           return GlobalStatics_9.anInt1780++;
         }
 

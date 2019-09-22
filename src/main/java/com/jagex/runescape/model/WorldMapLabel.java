@@ -1,7 +1,6 @@
 package com.jagex.runescape.model;
 
 import com.jagex.runescape.common.GameString;
-import com.jagex.runescape.statics.GlobalStatics_10;
 
 public final class WorldMapLabel {
 
@@ -22,18 +21,10 @@ public final class WorldMapLabel {
   }
 
   public boolean method1787(int var1, byte var2) {
-    if (var2 != -124) {
-      GlobalStatics_10.method1793(null, null, -17, (byte) 94);
-    }
-
     return (this.aByteArray1730[var1] & 8) != 0;
   }
 
   public boolean method1789(int var1, int var2) {
-    if (var2 != 530) {
-      this.method1794(-111, 26);
-    }
-
     return (4 & this.aByteArray1730[var1]) != 0;
   }
 
@@ -41,11 +32,7 @@ public final class WorldMapLabel {
     return var2 == 8 ? this.aByteArray1730[var1] & 3 : 35;
   }
 
-  public boolean method1794(int var1, int var2) {
-    if (var2 != -20138) {
-      GlobalStatics_10.method1788(122, 38, -120, -29, false);
-    }
-
+  public boolean method1794(int var1) {
     return (this.aByteArray1730[var1] & 16) == 0;
   }
 

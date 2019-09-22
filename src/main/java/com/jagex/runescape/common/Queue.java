@@ -1,4 +1,4 @@
-package com.jagex.runescape.model;
+package com.jagex.runescape.common;
 
 import com.jagex.runescape.node.SubNode;
 

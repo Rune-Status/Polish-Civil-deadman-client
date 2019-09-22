@@ -7,7 +7,7 @@ import com.jagex.runescape.common.GameStringStatics;
 import com.jagex.runescape.common.ThreadUtilities;
 import com.jagex.runescape.model.LightIntensity;
 import com.jagex.runescape.model.Player;
-import com.jagex.runescape.model.Queue;
+import com.jagex.runescape.common.Queue;
 import com.jagex.runescape.model.RenderAnimation;
 import com.jagex.runescape.model.SignLink;
 import com.jagex.runescape.model.WorldMapLabel;
