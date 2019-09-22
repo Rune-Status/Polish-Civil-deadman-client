@@ -295,7 +295,7 @@ public final class DummyClass10 {
     }
 
     for (var1 = 0; var1 < 2048; ++var1) {
-      GlobalStatics_9.players[var1] = null;
+      GlobalStatics_9.PLAYERS[var1] = null;
       DummyClass45.configs[var1] = null;
     }
 

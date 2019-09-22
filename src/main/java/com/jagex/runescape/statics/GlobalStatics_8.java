@@ -1295,10 +1295,10 @@ public class GlobalStatics_8 {
 
   public static void method1605(int var0, GameString var1, int var2) {
     ++GlobalStatics_4.anInt421;
-    GlobalStatics_9.secureBuffer.writePacket(188);
-    GlobalStatics_9.secureBuffer.method790(var2, var0 - 13326);
+    GlobalStatics_9.SECURE_BUFFER.writePacket(188);
+    GlobalStatics_9.SECURE_BUFFER.method790(var2, var0 - 13326);
     if (var0 == 255) {
-      GlobalStatics_9.secureBuffer.writeLong(var1.toBase37());
+      GlobalStatics_9.SECURE_BUFFER.writeLong(var1.toBase37());
     }
   }
 
@@ -1328,7 +1328,7 @@ public class GlobalStatics_8 {
       int var5 = (int) GlobalStatics_9.aLongArray3271[var1];
       Player var8;
       if (var4 == 31) {
-        var8 = GlobalStatics_9.players[var5];
+        var8 = GlobalStatics_9.PLAYERS[var5];
         if (var8 != null) {
           ++GlobalStatics_9.anInt2059;
           GlobalStatics_9
@@ -1340,34 +1340,34 @@ public class GlobalStatics_8 {
           GlobalStatics_7.anInt2958 = 0;
           GlobalStatics_9.anInt1053 = DummyClass5.anInt2993;
           GlobalStatics_7.anInt4062 = DummyClass36.anInt2614;
-          GlobalStatics_9.secureBuffer.writePacket(71);
-          GlobalStatics_9.secureBuffer.method765(var5, (byte) 3);
+          GlobalStatics_9.SECURE_BUFFER.writePacket(71);
+          GlobalStatics_9.SECURE_BUFFER.method765(var5, (byte) 3);
         }
       }
 
       if (var4 == 46) {
         ++GlobalStatics_9.anInt2534;
         DummyClass8.method2224((byte) 39, var6, var3, var2);
-        GlobalStatics_9.secureBuffer.writePacket(247);
-        GlobalStatics_9.secureBuffer
+        GlobalStatics_9.SECURE_BUFFER.writePacket(247);
+        GlobalStatics_9.SECURE_BUFFER
             .writeShortLE(-1, GlobalStatics_9.REGION_BASE_Y + var3);
-        GlobalStatics_9.secureBuffer
+        GlobalStatics_9.SECURE_BUFFER
             .method765(var2 + GlobalStatics_10.REGION_BASE_X, (byte) 3);
-        GlobalStatics_9.secureBuffer
+        GlobalStatics_9.SECURE_BUFFER
             .writeShort(Integer.MAX_VALUE & (int) (var6 >>> 32));
       }
 
       if (var4 == 40) {
-        GlobalStatics_9.secureBuffer.writePacket(27);
-        GlobalStatics_9.secureBuffer.writeShort(DummyClass31.anInt1473);
+        GlobalStatics_9.SECURE_BUFFER.writePacket(27);
+        GlobalStatics_9.SECURE_BUFFER.writeShort(DummyClass31.anInt1473);
         ++GlobalStatics_9.anInt1776;
-        GlobalStatics_9.secureBuffer.method785(var3, (byte) -122);
-        GlobalStatics_9.secureBuffer.writeShortLE(-1, var2);
-        GlobalStatics_9.secureBuffer
+        GlobalStatics_9.SECURE_BUFFER.method785(var3, (byte) -122);
+        GlobalStatics_9.SECURE_BUFFER.writeShortLE(-1, var2);
+        GlobalStatics_9.SECURE_BUFFER
             .method785(GlTexture2d.anInt3764, (byte) -122);
-        GlobalStatics_9.secureBuffer
+        GlobalStatics_9.SECURE_BUFFER
             .method765(GlobalStatics_9.anInt2050, (byte) 3);
-        GlobalStatics_9.secureBuffer.method765(var5, (byte) 3);
+        GlobalStatics_9.SECURE_BUFFER.method765(var5, (byte) 3);
         GlobalStatics_6.anInt2330 = 0;
         GlobalStatics_5.aClass11_1933 = GlobalStatics_7
             .getWidget((byte) 120, var3);
@@ -1388,8 +1388,8 @@ public class GlobalStatics_8 {
           GlobalStatics_0.anInt638 = 2;
           GlobalStatics_7.anInt2958 = 0;
           GlobalStatics_7.anInt4062 = DummyClass36.anInt2614;
-          GlobalStatics_9.secureBuffer.writePacket(30);
-          GlobalStatics_9.secureBuffer.writeShort(var5);
+          GlobalStatics_9.SECURE_BUFFER.writePacket(30);
+          GlobalStatics_9.SECURE_BUFFER.writeShort(var5);
         }
       }
 
@@ -1406,13 +1406,13 @@ public class GlobalStatics_8 {
           ++GlobalStatics_4.anInt3627;
           GlobalStatics_0.anInt638 = 2;
           GlobalStatics_7.anInt4062 = DummyClass36.anInt2614;
-          GlobalStatics_9.secureBuffer.writePacket(78);
-          GlobalStatics_9.secureBuffer.writeShortLE(-1, var5);
+          GlobalStatics_9.SECURE_BUFFER.writePacket(78);
+          GlobalStatics_9.SECURE_BUFFER.writeShortLE(-1, var5);
         }
       }
 
       if (var4 == 44) {
-        var8 = GlobalStatics_9.players[var5];
+        var8 = GlobalStatics_9.PLAYERS[var5];
         if (var8 != null) {
           ++GlobalStatics_6.anInt3517;
           GlobalStatics_9
@@ -1424,17 +1424,17 @@ public class GlobalStatics_8 {
           GlobalStatics_0.anInt638 = 2;
           GlobalStatics_7.anInt4062 = DummyClass36.anInt2614;
           GlobalStatics_7.anInt2958 = 0;
-          GlobalStatics_9.secureBuffer.writePacket(133);
-          GlobalStatics_9.secureBuffer.writeShortLE(-1, var5);
+          GlobalStatics_9.SECURE_BUFFER.writePacket(133);
+          GlobalStatics_9.SECURE_BUFFER.writeShortLE(-1, var5);
         }
       }
 
       if (var4 == 58) {
-        GlobalStatics_9.secureBuffer.writePacket(135);
-        GlobalStatics_9.secureBuffer.method783(var5, -268435456);
+        GlobalStatics_9.SECURE_BUFFER.writePacket(135);
+        GlobalStatics_9.SECURE_BUFFER.method783(var5, -268435456);
         ++GlobalStatics_10.anInt3255;
-        GlobalStatics_9.secureBuffer.method783(var2, -268435456);
-        GlobalStatics_9.secureBuffer.method759(-68, var3);
+        GlobalStatics_9.SECURE_BUFFER.method783(var2, -268435456);
+        GlobalStatics_9.SECURE_BUFFER.method759(-68, var3);
         GlobalStatics_6.anInt2330 = 0;
         GlobalStatics_5.aClass11_1933 = GlobalStatics_7
             .getWidget((byte) 117, var3);
@@ -1443,14 +1443,14 @@ public class GlobalStatics_8 {
 
       if (var4 == 42) {
         DummyClass8.method2224((byte) 39, var6, var3, var2);
-        GlobalStatics_9.secureBuffer.writePacket(254);
-        GlobalStatics_9.secureBuffer
+        GlobalStatics_9.SECURE_BUFFER.writePacket(254);
+        GlobalStatics_9.SECURE_BUFFER
             .writeShortLE(-1, var2 + GlobalStatics_10.REGION_BASE_X);
         ++GlobalStatics_9.anInt3248;
-        GlobalStatics_9.secureBuffer
+        GlobalStatics_9.SECURE_BUFFER
             .method783((int) (var6 >>> 32) & Integer.MAX_VALUE,
                 -268435456);
-        GlobalStatics_9.secureBuffer
+        GlobalStatics_9.SECURE_BUFFER
             .writeShort(var3 + GlobalStatics_9.REGION_BASE_Y);
       }
 
@@ -1471,12 +1471,12 @@ public class GlobalStatics_8 {
           ++GlobalStatics_10.anInt3205;
           GlobalStatics_7.anInt2958 = 0;
           GlobalStatics_7.anInt4062 = DummyClass36.anInt2614;
-          GlobalStatics_9.secureBuffer.writePacket(239);
-          GlobalStatics_9.secureBuffer
+          GlobalStatics_9.SECURE_BUFFER.writePacket(239);
+          GlobalStatics_9.SECURE_BUFFER
               .method785(GlobalStatics_9.anInt872, (byte) -123);
-          GlobalStatics_9.secureBuffer
+          GlobalStatics_9.SECURE_BUFFER
               .method783(GlobalStatics_10.anInt278, -268435456);
-          GlobalStatics_9.secureBuffer.method765(var5, (byte) 3);
+          GlobalStatics_9.SECURE_BUFFER.method765(var5, (byte) 3);
         }
       }
 
@@ -1506,24 +1506,24 @@ public class GlobalStatics_8 {
         GlobalStatics_7.anInt2958 = 0;
         GlobalStatics_0.anInt638 = 2;
         GlobalStatics_7.anInt4062 = DummyClass36.anInt2614;
-        GlobalStatics_9.secureBuffer.writePacket(66);
-        GlobalStatics_9.secureBuffer
+        GlobalStatics_9.SECURE_BUFFER.writePacket(66);
+        GlobalStatics_9.SECURE_BUFFER
             .writeShortLE(-1, GlobalStatics_10.REGION_BASE_X + var2);
-        GlobalStatics_9.secureBuffer.writeShort(var5);
-        GlobalStatics_9.secureBuffer
+        GlobalStatics_9.SECURE_BUFFER.writeShort(var5);
+        GlobalStatics_9.SECURE_BUFFER
             .method765(var3 + GlobalStatics_9.REGION_BASE_Y, (byte) 3);
       }
 
       if (var4 == 1001) {
         ++GlobalStatics_10.anInt1896;
         DummyClass8.method2224((byte) 39, var6, var3, var2);
-        GlobalStatics_9.secureBuffer.writePacket(170);
-        GlobalStatics_9.secureBuffer
+        GlobalStatics_9.SECURE_BUFFER.writePacket(170);
+        GlobalStatics_9.SECURE_BUFFER
             .method765(Integer.MAX_VALUE & (int) (var6 >>> 32),
                 (byte) 3);
-        GlobalStatics_9.secureBuffer
+        GlobalStatics_9.SECURE_BUFFER
             .method765(var2 + GlobalStatics_10.REGION_BASE_X, (byte) 3);
-        GlobalStatics_9.secureBuffer
+        GlobalStatics_9.SECURE_BUFFER
             .method765(var3 + GlobalStatics_9.REGION_BASE_Y, (byte) 3);
       }
 
@@ -1533,8 +1533,8 @@ public class GlobalStatics_8 {
         GlobalStatics_7.anInt4062 = DummyClass36.anInt2614;
         ++GlobalStatics_0.anInt1701;
         GlobalStatics_7.anInt2958 = 0;
-        GlobalStatics_9.secureBuffer.writePacket(92);
-        GlobalStatics_9.secureBuffer.method765(var5, (byte) 3);
+        GlobalStatics_9.SECURE_BUFFER.writePacket(92);
+        GlobalStatics_9.SECURE_BUFFER.method765(var5, (byte) 3);
       }
 
       Widget var13;
@@ -1546,12 +1546,12 @@ public class GlobalStatics_8 {
                   GlobalStatics_9.toString(var13.anIntArray317[var2]),
                   GameStringStatics.aClass94_3777,
                   DummyClass35
-                      .getItemConfig(var5, (byte) 125).aClass94_770
+                      .getItemConfig(var5).aClass94_770
               }), -1);
         } else {
-          GlobalStatics_9.secureBuffer.writePacket(92);
+          GlobalStatics_9.SECURE_BUFFER.writePacket(92);
           ++GlobalStatics_0.anInt1701;
-          GlobalStatics_9.secureBuffer.method765(var5, (byte) 3);
+          GlobalStatics_9.SECURE_BUFFER.method765(var5, (byte) 3);
         }
 
         GlobalStatics_6.anInt2330 = 0;
@@ -1578,22 +1578,22 @@ public class GlobalStatics_8 {
                     0,
                     2, var2, 0, 0, 1, var3,
                     GlobalStatics_9.localPlayer.waypointsX[0])) {
-              GlobalStatics_9.secureBuffer.writeByte(DummyClass3.anInt56);
-              GlobalStatics_9.secureBuffer.writeByte(DummyClass43.anInt916);
-              GlobalStatics_9.secureBuffer
+              GlobalStatics_9.SECURE_BUFFER.writeByte(DummyClass3.anInt56);
+              GlobalStatics_9.SECURE_BUFFER.writeByte(DummyClass43.anInt916);
+              GlobalStatics_9.SECURE_BUFFER
                   .writeShort(GlobalStatics_9.NEXT_CAMERA_YAW);
-              GlobalStatics_9.secureBuffer.writeByte(57);
-              GlobalStatics_9.secureBuffer
+              GlobalStatics_9.SECURE_BUFFER.writeByte(57);
+              GlobalStatics_9.SECURE_BUFFER
                   .writeByte(GlobalStatics_9.anInt3102);
-              GlobalStatics_9.secureBuffer.writeByte(GlobalStatics_9.anInt3020);
-              GlobalStatics_9.secureBuffer.writeByte(89);
-              GlobalStatics_9.secureBuffer
+              GlobalStatics_9.SECURE_BUFFER.writeByte(GlobalStatics_9.anInt3020);
+              GlobalStatics_9.SECURE_BUFFER.writeByte(89);
+              GlobalStatics_9.SECURE_BUFFER
                   .writeShort(GlobalStatics_9.localPlayer.sceneX);
-              GlobalStatics_9.secureBuffer
+              GlobalStatics_9.SECURE_BUFFER
                   .writeShort(GlobalStatics_9.localPlayer.sceneY);
-              GlobalStatics_9.secureBuffer
+              GlobalStatics_9.SECURE_BUFFER
                   .writeByte(GlobalStatics_4.anInt1692);
-              GlobalStatics_9.secureBuffer.writeByte(63);
+              GlobalStatics_9.SECURE_BUFFER.writeByte(63);
             }
           }
         }
@@ -1613,17 +1613,17 @@ public class GlobalStatics_8 {
 
           if (var9 != null) {
             ++GlobalStatics_9.anInt2549;
-            GlobalStatics_9.secureBuffer.writePacket(72);
-            GlobalStatics_9.secureBuffer.writeShort(var9.anInt1284);
+            GlobalStatics_9.SECURE_BUFFER.writePacket(72);
+            GlobalStatics_9.SECURE_BUFFER.writeShort(var9.anInt1284);
           }
         }
       }
 
       if (var4 == 47) {
-        GlobalStatics_9.secureBuffer.writePacket(156);
-        GlobalStatics_9.secureBuffer.method765(var2, (byte) 3);
-        GlobalStatics_9.secureBuffer.method783(var5, -268435456);
-        GlobalStatics_9.secureBuffer.method785(var3, (byte) -120);
+        GlobalStatics_9.SECURE_BUFFER.writePacket(156);
+        GlobalStatics_9.SECURE_BUFFER.method765(var2, (byte) 3);
+        GlobalStatics_9.SECURE_BUFFER.method783(var5, -268435456);
+        GlobalStatics_9.SECURE_BUFFER.method785(var3, (byte) -120);
         GlobalStatics_6.anInt2330 = 0;
         GlobalStatics_5.aClass11_1933 = GlobalStatics_7
             .getWidget((byte) 109, var3);
@@ -1631,14 +1631,14 @@ public class GlobalStatics_8 {
       }
 
       if (var4 == 3) {
-        GlobalStatics_9.secureBuffer.writePacket(253);
+        GlobalStatics_9.SECURE_BUFFER.writePacket(253);
         ++GlobalStatics_9.anInt555;
-        GlobalStatics_9.secureBuffer
+        GlobalStatics_9.SECURE_BUFFER
             .method785(GlobalStatics_9.anInt872, (byte) -126);
-        GlobalStatics_9.secureBuffer.method765(var2, (byte) 3);
-        GlobalStatics_9.secureBuffer.method785(var3, (byte) -124);
-        GlobalStatics_9.secureBuffer.method783(var5, -268435456);
-        GlobalStatics_9.secureBuffer
+        GlobalStatics_9.SECURE_BUFFER.method765(var2, (byte) 3);
+        GlobalStatics_9.SECURE_BUFFER.method785(var3, (byte) -124);
+        GlobalStatics_9.SECURE_BUFFER.method783(var5, -268435456);
+        GlobalStatics_9.SECURE_BUFFER
             .writeShortLE(var0 ^ -2598, GlobalStatics_10.anInt278);
         GlobalStatics_6.anInt2330 = 0;
         GlobalStatics_5.aClass11_1933 = GlobalStatics_7
@@ -1647,7 +1647,7 @@ public class GlobalStatics_8 {
       }
 
       if (var4 == 10) {
-        var8 = GlobalStatics_9.players[var5];
+        var8 = GlobalStatics_9.PLAYERS[var5];
         if (var8 != null) {
           ++GlobalStatics_4.anInt1240;
           GlobalStatics_9
@@ -1659,8 +1659,8 @@ public class GlobalStatics_8 {
           GlobalStatics_7.anInt4062 = DummyClass36.anInt2614;
           GlobalStatics_9.anInt1053 = DummyClass5.anInt2993;
           GlobalStatics_7.anInt2958 = 0;
-          GlobalStatics_9.secureBuffer.writePacket(4);
-          GlobalStatics_9.secureBuffer.writeShortLE(-1, var5);
+          GlobalStatics_9.SECURE_BUFFER.writePacket(4);
+          GlobalStatics_9.SECURE_BUFFER.writeShortLE(-1, var5);
         }
       }
 
@@ -1674,22 +1674,22 @@ public class GlobalStatics_8 {
       if (var4 == 49) {
         ++GlobalStatics_4.anInt3630;
         DummyClass8.method2224((byte) 39, var6, var3, var2);
-        GlobalStatics_9.secureBuffer.writePacket(84);
-        GlobalStatics_9.secureBuffer
+        GlobalStatics_9.SECURE_BUFFER.writePacket(84);
+        GlobalStatics_9.SECURE_BUFFER
             .method765(Integer.MAX_VALUE & (int) (var6 >>> 32),
                 (byte) 3);
-        GlobalStatics_9.secureBuffer
+        GlobalStatics_9.SECURE_BUFFER
             .method765(GlobalStatics_9.REGION_BASE_Y + var3, (byte) 3);
-        GlobalStatics_9.secureBuffer
+        GlobalStatics_9.SECURE_BUFFER
             .writeShortLE(var0 - 2598, var2 + GlobalStatics_10.REGION_BASE_X);
       }
 
       if (var4 == 23) {
         ++GlobalStatics_6.anInt1886;
-        GlobalStatics_9.secureBuffer.writePacket(206);
-        GlobalStatics_9.secureBuffer.method783(var5, -268435456);
-        GlobalStatics_9.secureBuffer.writeShortLE(var0 ^ -2598, var2);
-        GlobalStatics_9.secureBuffer.method785(var3, (byte) -127);
+        GlobalStatics_9.SECURE_BUFFER.writePacket(206);
+        GlobalStatics_9.SECURE_BUFFER.method783(var5, -268435456);
+        GlobalStatics_9.SECURE_BUFFER.writeShortLE(var0 ^ -2598, var2);
+        GlobalStatics_9.SECURE_BUFFER.method785(var3, (byte) -127);
         GlobalStatics_6.anInt2330 = 0;
         GlobalStatics_5.aClass11_1933 = GlobalStatics_7
             .getWidget((byte) 115, var3);
@@ -1699,23 +1699,23 @@ public class GlobalStatics_8 {
       if (var4 == 14 && DummyClass8
           .method2224((byte) 39, var6, var3, var2)) {
         ++GlobalStatics_9.anInt4065;
-        GlobalStatics_9.secureBuffer.writePacket(134);
-        GlobalStatics_9.secureBuffer
+        GlobalStatics_9.SECURE_BUFFER.writePacket(134);
+        GlobalStatics_9.SECURE_BUFFER
             .method783(GlobalStatics_10.REGION_BASE_X + var2,
                 var0 ^ -268432859);
-        GlobalStatics_9.secureBuffer.writeShort(GlobalStatics_9.anInt2050);
-        GlobalStatics_9.secureBuffer
+        GlobalStatics_9.SECURE_BUFFER.writeShort(GlobalStatics_9.anInt2050);
+        GlobalStatics_9.SECURE_BUFFER
             .writeShortLE(-1, var3 + GlobalStatics_9.REGION_BASE_Y);
-        GlobalStatics_9.secureBuffer.writeShort(DummyClass31.anInt1473);
-        GlobalStatics_9.secureBuffer
+        GlobalStatics_9.SECURE_BUFFER.writeShort(DummyClass31.anInt1473);
+        GlobalStatics_9.SECURE_BUFFER
             .method759(var0 ^ -2588, GlTexture2d.anInt3764);
-        GlobalStatics_9.secureBuffer
+        GlobalStatics_9.SECURE_BUFFER
             .method783((int) (var6 >>> 32) & Integer.MAX_VALUE,
                 -268435456);
       }
 
       if (var4 == 37) {
-        var8 = GlobalStatics_9.players[var5];
+        var8 = GlobalStatics_9.PLAYERS[var5];
         if (var8 != null) {
           GlobalStatics_9
               .method582(GlobalStatics_9.localPlayer.waypointsY[0], 0, 1, false,
@@ -1727,8 +1727,8 @@ public class GlobalStatics_8 {
           GlobalStatics_0.anInt638 = 2;
           GlobalStatics_7.anInt4062 = DummyClass36.anInt2614;
           GlobalStatics_9.anInt1053 = DummyClass5.anInt2993;
-          GlobalStatics_9.secureBuffer.writePacket(114);
-          GlobalStatics_9.secureBuffer.method765(var5, (byte) 3);
+          GlobalStatics_9.SECURE_BUFFER.writePacket(114);
+          GlobalStatics_9.SECURE_BUFFER.method765(var5, (byte) 3);
         }
       }
 
@@ -1740,11 +1740,11 @@ public class GlobalStatics_8 {
       }
 
       if (var4 == 5) {
-        GlobalStatics_9.secureBuffer.writePacket(55);
-        GlobalStatics_9.secureBuffer.writeShortLE(-1, var5);
-        GlobalStatics_9.secureBuffer.method783(var2, -268435456);
+        GlobalStatics_9.SECURE_BUFFER.writePacket(55);
+        GlobalStatics_9.SECURE_BUFFER.writeShortLE(-1, var5);
+        GlobalStatics_9.SECURE_BUFFER.method783(var2, -268435456);
         ++GlobalStatics_10.anInt3084;
-        GlobalStatics_9.secureBuffer.method775(var3, 1437452424);
+        GlobalStatics_9.SECURE_BUFFER.method775(var3, 1437452424);
         GlobalStatics_6.anInt2330 = 0;
         GlobalStatics_5.aClass11_1933 = GlobalStatics_7
             .getWidget((byte) 116, var3);
@@ -1777,12 +1777,12 @@ public class GlobalStatics_8 {
         GlobalStatics_9.anInt1053 = DummyClass5.anInt2993;
         GlobalStatics_7.anInt2958 = 0;
         GlobalStatics_7.anInt4062 = DummyClass36.anInt2614;
-        GlobalStatics_9.secureBuffer.writePacket(228);
+        GlobalStatics_9.SECURE_BUFFER.writePacket(228);
         ++DummyClass10.anInt2085;
-        GlobalStatics_9.secureBuffer.writeShort(var5);
-        GlobalStatics_9.secureBuffer
+        GlobalStatics_9.SECURE_BUFFER.writeShort(var5);
+        GlobalStatics_9.SECURE_BUFFER
             .writeShortLE(var0 ^ -2598, GlobalStatics_10.REGION_BASE_X + var2);
-        GlobalStatics_9.secureBuffer
+        GlobalStatics_9.SECURE_BUFFER
             .method765(GlobalStatics_9.REGION_BASE_Y + var3, (byte) 3);
       }
 
@@ -1799,8 +1799,8 @@ public class GlobalStatics_8 {
           GlobalStatics_7.anInt4062 = DummyClass36.anInt2614;
           GlobalStatics_9.anInt1053 = DummyClass5.anInt2993;
           ++GlobalStatics_10.anInt3259;
-          GlobalStatics_9.secureBuffer.writePacket(148);
-          GlobalStatics_9.secureBuffer.method783(var5, var0 - 268438053);
+          GlobalStatics_9.SECURE_BUFFER.writePacket(148);
+          GlobalStatics_9.SECURE_BUFFER.method783(var5, var0 - 268438053);
         }
       }
 
@@ -1835,7 +1835,7 @@ public class GlobalStatics_8 {
 
       } else {
         if (var4 == 29) {
-          var8 = GlobalStatics_9.players[var5];
+          var8 = GlobalStatics_9.PLAYERS[var5];
           if (var8 != null) {
             ++GlobalStatics_9.anInt1910;
             GlobalStatics_9
@@ -1847,16 +1847,16 @@ public class GlobalStatics_8 {
             GlobalStatics_7.anInt2958 = 0;
             GlobalStatics_0.anInt638 = 2;
             GlobalStatics_9.anInt1053 = DummyClass5.anInt2993;
-            GlobalStatics_9.secureBuffer.writePacket(180);
-            GlobalStatics_9.secureBuffer.method765(var5, (byte) 3);
+            GlobalStatics_9.SECURE_BUFFER.writePacket(180);
+            GlobalStatics_9.SECURE_BUFFER.method765(var5, (byte) 3);
           }
         }
 
         if (var4 == 35) {
-          GlobalStatics_9.secureBuffer.writePacket(161);
-          GlobalStatics_9.secureBuffer.method785(var3, (byte) -119);
-          GlobalStatics_9.secureBuffer.method765(var5, (byte) 3);
-          GlobalStatics_9.secureBuffer.method765(var2, (byte) 3);
+          GlobalStatics_9.SECURE_BUFFER.writePacket(161);
+          GlobalStatics_9.SECURE_BUFFER.method785(var3, (byte) -119);
+          GlobalStatics_9.SECURE_BUFFER.method765(var5, (byte) 3);
+          GlobalStatics_9.SECURE_BUFFER.method765(var2, (byte) 3);
           ++GlobalStatics_9.anInt3459;
           GlobalStatics_6.anInt2330 = 0;
           GlobalStatics_5.aClass11_1933 = GlobalStatics_7
@@ -1865,7 +1865,7 @@ public class GlobalStatics_8 {
         }
 
         if (var4 == 15) {
-          var8 = GlobalStatics_9.players[var5];
+          var8 = GlobalStatics_9.PLAYERS[var5];
           if (var8 != null) {
             GlobalStatics_9
                 .method582(GlobalStatics_9.localPlayer.waypointsY[0], 0, 1,
@@ -1876,13 +1876,13 @@ public class GlobalStatics_8 {
             GlobalStatics_0.anInt638 = 2;
             GlobalStatics_9.anInt1053 = DummyClass5.anInt2993;
             GlobalStatics_7.anInt4062 = DummyClass36.anInt2614;
-            GlobalStatics_9.secureBuffer.writePacket(195);
+            GlobalStatics_9.SECURE_BUFFER.writePacket(195);
             ++GlobalStatics_9.anInt3542;
-            GlobalStatics_9.secureBuffer
+            GlobalStatics_9.SECURE_BUFFER
                 .method783(GlobalStatics_10.anInt278, -268435456);
-            GlobalStatics_9.secureBuffer
+            GlobalStatics_9.SECURE_BUFFER
                 .method785(GlobalStatics_9.anInt872, (byte) -124);
-            GlobalStatics_9.secureBuffer.method765(var5, (byte) 3);
+            GlobalStatics_9.SECURE_BUFFER.method765(var5, (byte) 3);
           }
         }
 
@@ -1911,20 +1911,20 @@ public class GlobalStatics_8 {
           ++GlobalStatics_9.anInt3277;
           GlobalStatics_7.anInt4062 = DummyClass36.anInt2614;
           GlobalStatics_7.anInt2958 = 0;
-          GlobalStatics_9.secureBuffer.writePacket(109);
-          GlobalStatics_9.secureBuffer
+          GlobalStatics_9.SECURE_BUFFER.writePacket(109);
+          GlobalStatics_9.SECURE_BUFFER
               .writeShortLE(-1, var3 + GlobalStatics_9.REGION_BASE_Y);
-          GlobalStatics_9.secureBuffer
+          GlobalStatics_9.SECURE_BUFFER
               .writeShort(var2 + GlobalStatics_10.REGION_BASE_X);
-          GlobalStatics_9.secureBuffer.method765(var5, (byte) 3);
+          GlobalStatics_9.SECURE_BUFFER.method765(var5, (byte) 3);
         }
 
         if (var4 == 25) {
           ++DummyClass1.anInt411;
-          GlobalStatics_9.secureBuffer.writePacket(81);
-          GlobalStatics_9.secureBuffer.method783(var2, -268435456);
-          GlobalStatics_9.secureBuffer.writeShort(var5);
-          GlobalStatics_9.secureBuffer.method775(var3, 1437452424);
+          GlobalStatics_9.SECURE_BUFFER.writePacket(81);
+          GlobalStatics_9.SECURE_BUFFER.method783(var2, -268435456);
+          GlobalStatics_9.SECURE_BUFFER.writeShort(var5);
+          GlobalStatics_9.SECURE_BUFFER.method775(var3, 1437452424);
           GlobalStatics_6.anInt2330 = 0;
           GlobalStatics_5.aClass11_1933 = GlobalStatics_7
               .getWidget((byte) 126, var3);
@@ -1945,16 +1945,16 @@ public class GlobalStatics_8 {
             GlobalStatics_9.anInt1053 = DummyClass5.anInt2993;
             ++GlobalStatics_10.anInt2204;
             GlobalStatics_7.anInt2958 = 0;
-            GlobalStatics_9.secureBuffer.writePacket(218);
-            GlobalStatics_9.secureBuffer.writeShortLE(-1, var5);
+            GlobalStatics_9.SECURE_BUFFER.writePacket(218);
+            GlobalStatics_9.SECURE_BUFFER.writeShortLE(-1, var5);
           }
         }
 
         int var12;
         if (var4 == 51) {
-          GlobalStatics_9.secureBuffer.writePacket(10);
+          GlobalStatics_9.SECURE_BUFFER.writePacket(10);
           ++GlobalStatics_6.anInt3681;
-          GlobalStatics_9.secureBuffer.writeInt(var3);
+          GlobalStatics_9.SECURE_BUFFER.writeInt(var3);
           var13 = GlobalStatics_7.getWidget((byte) 117, var3);
           assert var13 != null;
           if (var13.anIntArrayArray298 != null
@@ -1980,21 +1980,21 @@ public class GlobalStatics_8 {
             GlobalStatics_7.anInt2958 = 0;
             GlobalStatics_7.anInt4062 = DummyClass36.anInt2614;
             GlobalStatics_9.anInt1053 = DummyClass5.anInt2993;
-            GlobalStatics_9.secureBuffer.writePacket(115);
-            GlobalStatics_9.secureBuffer
+            GlobalStatics_9.SECURE_BUFFER.writePacket(115);
+            GlobalStatics_9.SECURE_BUFFER
                 .method759(var0 ^ -2667, GlTexture2d.anInt3764);
-            GlobalStatics_9.secureBuffer
+            GlobalStatics_9.SECURE_BUFFER
                 .writeShortLE(-1, DummyClass31.anInt1473);
-            GlobalStatics_9.secureBuffer.writeShortLE(var0 ^ -2598, var5);
-            GlobalStatics_9.secureBuffer
+            GlobalStatics_9.SECURE_BUFFER.writeShortLE(var0 ^ -2598, var5);
+            GlobalStatics_9.SECURE_BUFFER
                 .method765(GlobalStatics_9.anInt2050, (byte) 3);
           }
         }
 
         if (var4 == 59) {
-          GlobalStatics_9.secureBuffer.writePacket(10);
+          GlobalStatics_9.SECURE_BUFFER.writePacket(10);
           ++GlobalStatics_6.anInt3681;
-          GlobalStatics_9.secureBuffer.writeInt(var3);
+          GlobalStatics_9.SECURE_BUFFER.writeInt(var3);
           var13 = GlobalStatics_7.getWidget((byte) 122, var3);
           assert var13 != null;
           if (var13.anIntArrayArray298 != null
@@ -2025,17 +2025,17 @@ public class GlobalStatics_8 {
           GlobalStatics_7.anInt2958 = 0;
           GlobalStatics_7.anInt4062 = DummyClass36.anInt2614;
           GlobalStatics_0.anInt638 = 2;
-          GlobalStatics_9.secureBuffer.writePacket(101);
-          GlobalStatics_9.secureBuffer
+          GlobalStatics_9.SECURE_BUFFER.writePacket(101);
+          GlobalStatics_9.SECURE_BUFFER
               .method765(var2 + GlobalStatics_10.REGION_BASE_X, (byte) 3);
-          GlobalStatics_9.secureBuffer
+          GlobalStatics_9.SECURE_BUFFER
               .writeShortLE(var0 ^ -2598, DummyClass31.anInt1473);
-          GlobalStatics_9.secureBuffer
+          GlobalStatics_9.SECURE_BUFFER
               .writeShortLE(-1, GlobalStatics_9.anInt2050);
-          GlobalStatics_9.secureBuffer.writeShortLE(-1, var5);
-          GlobalStatics_9.secureBuffer
+          GlobalStatics_9.SECURE_BUFFER.writeShortLE(-1, var5);
+          GlobalStatics_9.SECURE_BUFFER
               .method765(GlobalStatics_9.REGION_BASE_Y + var3, (byte) 3);
-          GlobalStatics_9.secureBuffer
+          GlobalStatics_9.SECURE_BUFFER
               .method759(-118, GlTexture2d.anInt3764);
         }
 
@@ -2044,9 +2044,9 @@ public class GlobalStatics_8 {
           GlobalStatics_9.anInt1053 = DummyClass5.anInt2993;
           GlobalStatics_0.anInt638 = 2;
           GlobalStatics_7.anInt4062 = DummyClass36.anInt2614;
-          GlobalStatics_9.secureBuffer.writePacket(94);
+          GlobalStatics_9.SECURE_BUFFER.writePacket(94);
           ++GlobalStatics_9.anInt2770;
-          GlobalStatics_9.secureBuffer.method765(var5, (byte) 3);
+          GlobalStatics_9.SECURE_BUFFER.method765(var5, (byte) 3);
         }
 
         if (var4 == 11) {
@@ -2056,16 +2056,16 @@ public class GlobalStatics_8 {
                 .method589(GlobalStatics_9.currentPlane, var2, var3);
           } else {
             if (var5 == 1) {
-              GlobalStatics_9.secureBuffer.writePacket(131);
+              GlobalStatics_9.SECURE_BUFFER.writePacket(131);
               ++GlobalStatics_9.anInt994;
-              GlobalStatics_9.secureBuffer
+              GlobalStatics_9.SECURE_BUFFER
                   .method759(-57, GlobalStatics_9.anInt872);
-              GlobalStatics_9.secureBuffer
+              GlobalStatics_9.SECURE_BUFFER
                   .method783(GlobalStatics_10.REGION_BASE_X + var2,
                       var0 - 268438053);
-              GlobalStatics_9.secureBuffer
+              GlobalStatics_9.SECURE_BUFFER
                   .method765(GlobalStatics_10.anInt278, (byte) 3);
-              GlobalStatics_9.secureBuffer
+              GlobalStatics_9.SECURE_BUFFER
                   .method783(var3 + GlobalStatics_9.REGION_BASE_Y,
                       -268435456);
             }
@@ -2082,13 +2082,13 @@ public class GlobalStatics_8 {
 
           if (var15) {
             ++GlobalStatics_6.anInt3681;
-            GlobalStatics_9.secureBuffer.writePacket(10);
-            GlobalStatics_9.secureBuffer.writeInt(var3);
+            GlobalStatics_9.SECURE_BUFFER.writePacket(10);
+            GlobalStatics_9.SECURE_BUFFER.writeInt(var3);
           }
         }
 
         if (var4 == 1) {
-          var8 = GlobalStatics_9.players[var5];
+          var8 = GlobalStatics_9.PLAYERS[var5];
           if (var8 != null) {
             ++GlobalStatics_9.anInt969;
             GlobalStatics_9
@@ -2100,22 +2100,22 @@ public class GlobalStatics_8 {
             GlobalStatics_7.anInt4062 = DummyClass36.anInt2614;
             GlobalStatics_0.anInt638 = 2;
             GlobalStatics_9.anInt1053 = DummyClass5.anInt2993;
-            GlobalStatics_9.secureBuffer.writePacket(248);
-            GlobalStatics_9.secureBuffer.method765(var5, (byte) 3);
-            GlobalStatics_9.secureBuffer
+            GlobalStatics_9.SECURE_BUFFER.writePacket(248);
+            GlobalStatics_9.SECURE_BUFFER.method765(var5, (byte) 3);
+            GlobalStatics_9.SECURE_BUFFER
                 .writeShort(GlobalStatics_9.anInt2050);
-            GlobalStatics_9.secureBuffer.writeShort(DummyClass31.anInt1473);
-            GlobalStatics_9.secureBuffer
+            GlobalStatics_9.SECURE_BUFFER.writeShort(DummyClass31.anInt1473);
+            GlobalStatics_9.SECURE_BUFFER
                 .method759(-110, GlTexture2d.anInt3764);
           }
         }
 
         if (var4 == 7) {
-          GlobalStatics_9.secureBuffer.writePacket(85);
+          GlobalStatics_9.SECURE_BUFFER.writePacket(85);
           ++GlobalStatics_10.anInt3144;
-          GlobalStatics_9.secureBuffer.method775(var3, 1437452424);
-          GlobalStatics_9.secureBuffer.writeShort(var2);
-          GlobalStatics_9.secureBuffer.method783(var5, -268435456);
+          GlobalStatics_9.SECURE_BUFFER.method775(var3, 1437452424);
+          GlobalStatics_9.SECURE_BUFFER.writeShort(var2);
+          GlobalStatics_9.SECURE_BUFFER.method783(var5, -268435456);
           GlobalStatics_6.anInt2330 = 0;
           GlobalStatics_5.aClass11_1933 = GlobalStatics_7
               .getWidget((byte) 125, var3);
@@ -2149,37 +2149,37 @@ public class GlobalStatics_8 {
           GlobalStatics_7.anInt4062 = DummyClass36.anInt2614;
           GlobalStatics_9.anInt1053 = DummyClass5.anInt2993;
           GlobalStatics_7.anInt2958 = 0;
-          GlobalStatics_9.secureBuffer.writePacket(48);
-          GlobalStatics_9.secureBuffer
+          GlobalStatics_9.SECURE_BUFFER.writePacket(48);
+          GlobalStatics_9.SECURE_BUFFER
               .method783(var2 + GlobalStatics_10.REGION_BASE_X, -268435456);
-          GlobalStatics_9.secureBuffer.method765(var5, (byte) 3);
-          GlobalStatics_9.secureBuffer
+          GlobalStatics_9.SECURE_BUFFER.method765(var5, (byte) 3);
+          GlobalStatics_9.SECURE_BUFFER
               .writeShortLE(-1, GlobalStatics_9.REGION_BASE_Y + var3);
         }
 
         if (var4 == 38 && DummyClass8
             .method2224((byte) 39, var6, var3, var2)) {
-          GlobalStatics_9.secureBuffer.writePacket(233);
-          GlobalStatics_9.secureBuffer
+          GlobalStatics_9.SECURE_BUFFER.writePacket(233);
+          GlobalStatics_9.SECURE_BUFFER
               .method765(var3 + GlobalStatics_9.REGION_BASE_Y, (byte) 3);
           ++GlobalStatics_9.anInt3017;
-          GlobalStatics_9.secureBuffer
+          GlobalStatics_9.SECURE_BUFFER
               .method783(GlobalStatics_10.REGION_BASE_X + var2, -268435456);
-          GlobalStatics_9.secureBuffer
+          GlobalStatics_9.SECURE_BUFFER
               .method765(GlobalStatics_10.anInt278, (byte) 3);
-          GlobalStatics_9.secureBuffer
+          GlobalStatics_9.SECURE_BUFFER
               .method775(GlobalStatics_9.anInt872, 1437452424);
-          GlobalStatics_9.secureBuffer
+          GlobalStatics_9.SECURE_BUFFER
               .method783((int) (var6 >>> 32) & Integer.MAX_VALUE,
                   var0 ^ -268432859);
         }
 
         if (var4 == 13) {
-          GlobalStatics_9.secureBuffer.writePacket(6);
-          GlobalStatics_9.secureBuffer.writeInt(var3);
-          GlobalStatics_9.secureBuffer.method783(var2, -268435456);
+          GlobalStatics_9.SECURE_BUFFER.writePacket(6);
+          GlobalStatics_9.SECURE_BUFFER.writeInt(var3);
+          GlobalStatics_9.SECURE_BUFFER.method783(var2, -268435456);
           ++GlobalStatics_8.anInt2088;
-          GlobalStatics_9.secureBuffer.writeShortLE(-1, var5);
+          GlobalStatics_9.SECURE_BUFFER.writeShortLE(-1, var5);
           GlobalStatics_6.anInt2330 = 0;
           GlobalStatics_5.aClass11_1933 = GlobalStatics_7
               .getWidget((byte) 115, var3);
@@ -2187,7 +2187,7 @@ public class GlobalStatics_8 {
         }
 
         if (var4 == 57) {
-          var8 = GlobalStatics_9.players[var5];
+          var8 = GlobalStatics_9.PLAYERS[var5];
           if (var8 != null) {
             GlobalStatics_9
                 .method582(GlobalStatics_9.localPlayer.waypointsY[0], 0, 1,
@@ -2199,8 +2199,8 @@ public class GlobalStatics_8 {
             ++GlobalStatics_7.anInt685;
             GlobalStatics_9.anInt1053 = DummyClass5.anInt2993;
             GlobalStatics_7.anInt2958 = 0;
-            GlobalStatics_9.secureBuffer.writePacket(175);
-            GlobalStatics_9.secureBuffer.method783(var5, -268435456);
+            GlobalStatics_9.SECURE_BUFFER.writePacket(175);
+            GlobalStatics_9.SECURE_BUFFER.method783(var5, -268435456);
           }
         }
 
@@ -2215,7 +2215,7 @@ public class GlobalStatics_8 {
           GameStringStatics.aClass94_378 = GlobalStatics_9
               .concat(new GameString[]{
                   GameStringStatics.aClass94_3042,
-                  DummyClass35.getItemConfig(var5, (byte) 109).aClass94_770,
+                  DummyClass35.getItemConfig(var5).aClass94_770,
                   GameStringStatics.aClass94_2562
               });
 
@@ -2223,21 +2223,21 @@ public class GlobalStatics_8 {
           if (var4 == 50) {
             ++GlobalStatics_3.anInt1858;
             DummyClass8.method2224((byte) 39, var6, var3, var2);
-            GlobalStatics_9.secureBuffer.writePacket(194);
-            GlobalStatics_9.secureBuffer
+            GlobalStatics_9.SECURE_BUFFER.writePacket(194);
+            GlobalStatics_9.SECURE_BUFFER
                 .method765(var3 + GlobalStatics_9.REGION_BASE_Y, (byte) 3);
-            GlobalStatics_9.secureBuffer
+            GlobalStatics_9.SECURE_BUFFER
                 .writeShortLE(-1, GlobalStatics_10.REGION_BASE_X + var2);
-            GlobalStatics_9.secureBuffer
+            GlobalStatics_9.SECURE_BUFFER
                 .writeShort((int) (var6 >>> 32) & Integer.MAX_VALUE);
           }
 
           if (var4 == 48) {
             ++GlobalStatics_9.anInt1677;
-            GlobalStatics_9.secureBuffer.writePacket(154);
-            GlobalStatics_9.secureBuffer.writeShortLE(-1, var2);
-            GlobalStatics_9.secureBuffer.method775(var3, 1437452424);
-            GlobalStatics_9.secureBuffer.method765(var5, (byte) 3);
+            GlobalStatics_9.SECURE_BUFFER.writePacket(154);
+            GlobalStatics_9.SECURE_BUFFER.writeShortLE(-1, var2);
+            GlobalStatics_9.SECURE_BUFFER.method775(var3, 1437452424);
+            GlobalStatics_9.SECURE_BUFFER.method765(var5, (byte) 3);
             GlobalStatics_6.anInt2330 = 0;
             GlobalStatics_5.aClass11_1933 = GlobalStatics_7
                 .getWidget((byte) 119, var3);
@@ -2245,7 +2245,7 @@ public class GlobalStatics_8 {
           }
 
           if (var4 == 30) {
-            var8 = GlobalStatics_9.players[var5];
+            var8 = GlobalStatics_9.PLAYERS[var5];
             if (var8 != null) {
               ++GlobalStatics_11.anInt759;
               GlobalStatics_9
@@ -2257,17 +2257,17 @@ public class GlobalStatics_8 {
               GlobalStatics_9.anInt1053 = DummyClass5.anInt2993;
               GlobalStatics_7.anInt4062 = DummyClass36.anInt2614;
               GlobalStatics_0.anInt638 = 2;
-              GlobalStatics_9.secureBuffer.writePacket(68);
-              GlobalStatics_9.secureBuffer.method765(var5, (byte) 3);
+              GlobalStatics_9.SECURE_BUFFER.writePacket(68);
+              GlobalStatics_9.SECURE_BUFFER.method765(var5, (byte) 3);
             }
           }
 
           if (var4 == 43) {
             ++GlobalStatics_9.anInt3442;
-            GlobalStatics_9.secureBuffer.writePacket(153);
-            GlobalStatics_9.secureBuffer.method785(var3, (byte) -124);
-            GlobalStatics_9.secureBuffer.writeShortLE(-1, var2);
-            GlobalStatics_9.secureBuffer.writeShortLE(var0 - 2598, var5);
+            GlobalStatics_9.SECURE_BUFFER.writePacket(153);
+            GlobalStatics_9.SECURE_BUFFER.method785(var3, (byte) -124);
+            GlobalStatics_9.SECURE_BUFFER.writeShortLE(-1, var2);
+            GlobalStatics_9.SECURE_BUFFER.writeShortLE(var0 - 2598, var5);
             GlobalStatics_6.anInt2330 = 0;
             GlobalStatics_5.aClass11_1933 = GlobalStatics_7
                 .getWidget((byte) 112, var3);
@@ -2293,28 +2293,28 @@ public class GlobalStatics_8 {
             GlobalStatics_9.anInt1053 = DummyClass5.anInt2993;
             GlobalStatics_0.anInt638 = 2;
             GlobalStatics_7.anInt2958 = 0;
-            GlobalStatics_9.secureBuffer.writePacket(73);
-            GlobalStatics_9.secureBuffer
+            GlobalStatics_9.SECURE_BUFFER.writePacket(73);
+            GlobalStatics_9.SECURE_BUFFER
                 .method775(GlobalStatics_9.anInt872, 1437452424);
-            GlobalStatics_9.secureBuffer
+            GlobalStatics_9.SECURE_BUFFER
                 .writeShort(GlobalStatics_9.REGION_BASE_Y + var3);
-            GlobalStatics_9.secureBuffer.method765(var5, (byte) 3);
-            GlobalStatics_9.secureBuffer
+            GlobalStatics_9.SECURE_BUFFER.method765(var5, (byte) 3);
+            GlobalStatics_9.SECURE_BUFFER
                 .method765(var2 + GlobalStatics_10.REGION_BASE_X, (byte) 3);
-            GlobalStatics_9.secureBuffer
+            GlobalStatics_9.SECURE_BUFFER
                 .writeShortLE(-1, GlobalStatics_10.anInt278);
           }
 
           if (var0 == 2597) {
             if (var4 == 12) {
               ++DummyClass18.anInt79;
-              GlobalStatics_9.secureBuffer.writePacket(82);
-              GlobalStatics_9.secureBuffer
+              GlobalStatics_9.SECURE_BUFFER.writePacket(82);
+              GlobalStatics_9.SECURE_BUFFER
                   .writeShort(GlobalStatics_10.anInt278);
-              GlobalStatics_9.secureBuffer
+              GlobalStatics_9.SECURE_BUFFER
                   .method775(var3, 1437452424);
-              GlobalStatics_9.secureBuffer.writeInt(GlobalStatics_9.anInt872);
-              GlobalStatics_9.secureBuffer.method765(var2, (byte) 3);
+              GlobalStatics_9.SECURE_BUFFER.writeInt(GlobalStatics_9.anInt872);
+              GlobalStatics_9.SECURE_BUFFER.method765(var2, (byte) 3);
             }
 
             if (var4 == 36) {
@@ -2332,17 +2332,17 @@ public class GlobalStatics_8 {
                       (byte) -4);
                 } else {
                   ++GlobalStatics_6.anInt2479;
-                  GlobalStatics_9.secureBuffer.writePacket(179);
-                  GlobalStatics_9.secureBuffer
+                  GlobalStatics_9.SECURE_BUFFER.writePacket(179);
+                  GlobalStatics_9.SECURE_BUFFER
                       .writeShort(var3 + GlobalStatics_9.REGION_BASE_Y);
-                  GlobalStatics_9.secureBuffer
+                  GlobalStatics_9.SECURE_BUFFER
                       .writeShort(var2 + GlobalStatics_10.REGION_BASE_X);
                 }
               }
             }
 
             if (var4 == 6) {
-              var8 = GlobalStatics_9.players[var5];
+              var8 = GlobalStatics_9.PLAYERS[var5];
               if (var8 != null) {
                 GlobalStatics_9
                     .method582(GlobalStatics_9.localPlayer.waypointsY[0], 0, 1,
@@ -2354,8 +2354,8 @@ public class GlobalStatics_8 {
                 GlobalStatics_7.anInt2958 = 0;
                 GlobalStatics_0.anInt638 = 2;
                 GlobalStatics_9.anInt1053 = DummyClass5.anInt2993;
-                GlobalStatics_9.secureBuffer.writePacket(106);
-                GlobalStatics_9.secureBuffer.writeShort(var5);
+                GlobalStatics_9.SECURE_BUFFER.writePacket(106);
+                GlobalStatics_9.SECURE_BUFFER.writeShort(var5);
               }
             }
 
@@ -2388,11 +2388,11 @@ public class GlobalStatics_8 {
               GlobalStatics_7.anInt2958 = 0;
               GlobalStatics_9.anInt1053 = DummyClass5.anInt2993;
               GlobalStatics_0.anInt638 = 2;
-              GlobalStatics_9.secureBuffer.writePacket(33);
-              GlobalStatics_9.secureBuffer.writeShort(var5);
-              GlobalStatics_9.secureBuffer
+              GlobalStatics_9.SECURE_BUFFER.writePacket(33);
+              GlobalStatics_9.SECURE_BUFFER.writeShort(var5);
+              GlobalStatics_9.SECURE_BUFFER
                   .writeShort(GlobalStatics_10.REGION_BASE_X + var2);
-              GlobalStatics_9.secureBuffer
+              GlobalStatics_9.SECURE_BUFFER
                   .writeShortLE(-1, GlobalStatics_9.REGION_BASE_Y + var3);
             }
 
@@ -2409,8 +2409,8 @@ public class GlobalStatics_8 {
                 GlobalStatics_7.anInt2958 = 0;
                 GlobalStatics_7.anInt4062 = DummyClass36.anInt2614;
                 GlobalStatics_0.anInt638 = 2;
-                GlobalStatics_9.secureBuffer.writePacket(3);
-                GlobalStatics_9.secureBuffer.method765(var5, (byte) 3);
+                GlobalStatics_9.SECURE_BUFFER.writePacket(3);
+                GlobalStatics_9.SECURE_BUFFER.method765(var5, (byte) 3);
               }
             }
 
@@ -3578,7 +3578,7 @@ public class GlobalStatics_8 {
 
       for (; var2 < var1; ++var2) {
         int var3 = DummyClass42.anIntArray887[var2];
-        Player var4 = GlobalStatics_9.players[var3];
+        Player var4 = GlobalStatics_9.PLAYERS[var3];
         int var5 = GlobalStatics_9.GAME_BUFFER.readBits(1);
         if (var5 == 0) {
           DummyClass42.anIntArray887[DummyClass13.anInt2022++] = var3;

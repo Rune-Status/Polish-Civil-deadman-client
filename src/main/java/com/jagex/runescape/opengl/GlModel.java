@@ -12,7 +12,6 @@ import com.jagex.runescape.model.VertexNormal;
 import com.jagex.runescape.buffer.Buffer;
 import com.jagex.runescape.common.ArrayUtils;
 import com.jagex.runescape.model.AbstractModel;
-import com.jagex.runescape.model.BufferData;
 import com.jagex.runescape.model.FaceNormal;
 import com.jagex.runescape.sprite.SoftwareIndexedColorSprite;
 import com.jagex.runescape.statics.DummyClass17;

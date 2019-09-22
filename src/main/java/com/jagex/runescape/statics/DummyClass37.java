@@ -576,7 +576,7 @@ public final class DummyClass37 {
                     if (GlobalStatics_10.LOCAL_PLAYER_ID == var18) {
                       var16 = GlobalStatics_9.localPlayer;
                     } else {
-                      var16 = GlobalStatics_9.players[var18];
+                      var16 = GlobalStatics_9.PLAYERS[var18];
                     }
                   }
 

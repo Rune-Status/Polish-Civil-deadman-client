@@ -461,7 +461,7 @@ public class GlobalStatics_3 {
     GlobalStatics_0.packetId = -1;
     DummyClass13.anInt2023 = 0;
     DummyClass36.updateTime = 0;
-    GlobalStatics_9.secureBuffer.position = 0;
+    GlobalStatics_9.SECURE_BUFFER.position = 0;
     GlobalStatics_0.lastPacketId0 = -1;
     GlobalStatics_2.anInt3699 = 0;
     GlobalStatics_9.GAME_BUFFER.position = 0;
@@ -497,7 +497,7 @@ public class GlobalStatics_3 {
     DummyClass6.anInt2046 = 0;
 
     for (var1 = 0; var1 < 2048; ++var1) {
-      GlobalStatics_9.players[var1] = null;
+      GlobalStatics_9.PLAYERS[var1] = null;
       DummyClass45.configs[var1] = null;
     }
 
@@ -505,7 +505,7 @@ public class GlobalStatics_3 {
       GlobalStatics_8.NPCS[var1] = null;
     }
 
-    GlobalStatics_9.localPlayer = GlobalStatics_9.players[2047] = new Player();
+    GlobalStatics_9.localPlayer = GlobalStatics_9.PLAYERS[2047] = new Player();
     GlobalStatics_9.projectiles.clear(-112);
     GlobalStatics_1.stillGraphics.clear(-58);
     if (GlobalStatics_9.groundItems != null) {

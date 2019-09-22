@@ -42,19 +42,19 @@ public final class DummyClass4 extends DummyClass6 {
       for (var1 = 0; DummyClass17.anInt1829 > var1; ++var1) {
         int var2 = GlobalStatics_10.anIntArray2292[var1];
         if (GlobalStatics_4.updateCycle
-            != GlobalStatics_9.players[var2].anInt2838) {
-          if (GlobalStatics_9.players[var2].anInt3969 > 0) {
-            DummyClass11.method2203(GlobalStatics_9.players[var2], 8);
+            != GlobalStatics_9.PLAYERS[var2].anInt2838) {
+          if (GlobalStatics_9.PLAYERS[var2].anInt3969 > 0) {
+            DummyClass11.method2203(GlobalStatics_9.PLAYERS[var2], 8);
           }
 
-          GlobalStatics_9.players[var2] = null;
+          GlobalStatics_9.PLAYERS[var2] = null;
         }
       }
 
       if (GlobalStatics_0.packetLength
           == GlobalStatics_9.GAME_BUFFER.position) {
         for (var1 = 0; var1 < DummyClass13.anInt2022; ++var1) {
-          if (GlobalStatics_9.players[DummyClass42.anIntArray887[var1]]
+          if (GlobalStatics_9.PLAYERS[DummyClass42.anIntArray887[var1]]
               == null) {
             throw new RuntimeException(
                 "gpp2 pos:" + var1 + " size:" + DummyClass13.anInt2022);
@@ -94,7 +94,7 @@ public final class DummyClass4 extends DummyClass6 {
           if (var0 == GlobalStatics_9.aLongArray1574[var4]) {
             GlobalStatics_8.printMessage(GameStringStatics.EMPTY_STRING, 0,
                 GlobalStatics_9.concat(
-                    new GameString[]{DummyClass35.aClass94_662, var3,
+                    new GameString[]{GameStringStatics.aClass94_662, var3,
                         GlobalStatics_8.aClass94_4}), -1);
             return;
           }
@@ -113,8 +113,8 @@ public final class DummyClass4 extends DummyClass6 {
           com.jagex.runescape.statics.GlobalStatics_0.aBooleanArray73[GlobalStatics_10.anInt104] = false;
           ++GlobalStatics_10.anInt104;
           DummyClass31.anInt1472 = GlobalStatics_10.anInt3213;
-          GlobalStatics_9.secureBuffer.writePacket(120);
-          GlobalStatics_9.secureBuffer.writeLong(var0);
+          GlobalStatics_9.SECURE_BUFFER.writePacket(120);
+          GlobalStatics_9.SECURE_BUFFER.writeLong(var0);
         }
       } else {
         GlobalStatics_8.printMessage(GameStringStatics.EMPTY_STRING, 0,

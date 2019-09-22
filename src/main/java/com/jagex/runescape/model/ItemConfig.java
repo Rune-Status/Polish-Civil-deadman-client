@@ -167,7 +167,7 @@ public final class ItemConfig {
         }
 
         if (var4 != -1) {
-          return DummyClass35.getItemConfig(var4, (byte) 97);
+          return DummyClass35.getItemConfig(var4);
         }
       }
 
@@ -274,7 +274,7 @@ public final class ItemConfig {
         }
 
         if (var7 != -1) {
-          return DummyClass35.getItemConfig(var7, (byte) 109)
+          return DummyClass35.getItemConfig(var7)
             .getModel(113, var2, var3, var4, 1, var6);
         }
       }

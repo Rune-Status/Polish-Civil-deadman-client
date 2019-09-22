@@ -537,8 +537,8 @@ public class GlobalStatics_6 {
 
   public static void method400(long var0, int var2) {
     if (var2 != var0) {
-      GlobalStatics_9.secureBuffer.writePacket(104);
-      GlobalStatics_9.secureBuffer.writeLong(var0);
+      GlobalStatics_9.SECURE_BUFFER.writePacket(104);
+      GlobalStatics_9.SECURE_BUFFER.writeLong(var0);
       ++DummyClass4.anInt3001;
     }
   }
@@ -734,7 +734,7 @@ public class GlobalStatics_6 {
               WidgetAccess var9 = GlobalStatics_8.method44(var3);
               ItemConfig var10 =
                   DummyClass35
-                      .getItemConfig(var3.anIntArray254[var15] - 1, (byte) 69);
+                      .getItemConfig(var3.anIntArray254[var15] - 1);
               if (GlobalStatics_9.anInt3012 == 1 && var9.method99(31595)) {
                 if (GlTexture2d.anInt3764 != var3.anInt279
                     || DummyClass31.anInt1473 != var15) {
@@ -1132,17 +1132,17 @@ public class GlobalStatics_6 {
         GlobalStatics_9.GAME_SOCKET =
             new SocketStream((Socket) GlobalStatics_6.socketRequest.result,
                 DummyClass35.signLink);
-        GlobalStatics_9.secureBuffer.position = 0;
+        GlobalStatics_9.SECURE_BUFFER.position = 0;
         GlobalStatics_6.socketRequest = null;
         var1 = 0;
         if (GlobalStatics_6.aBoolean579) {
           var1 = GlobalStatics_2.anInt3608;
         }
 
-        GlobalStatics_9.secureBuffer.writeByte(255);
-        GlobalStatics_9.secureBuffer.writeInt(var1);
-        GlobalStatics_9.GAME_SOCKET.write(GlobalStatics_9.secureBuffer.bytes, 0,
-            GlobalStatics_9.secureBuffer.position);
+        GlobalStatics_9.SECURE_BUFFER.writeByte(255);
+        GlobalStatics_9.SECURE_BUFFER.writeInt(var1);
+        GlobalStatics_9.GAME_SOCKET.write(GlobalStatics_9.SECURE_BUFFER.bytes, 0,
+            GlobalStatics_9.SECURE_BUFFER.position);
         if (GlobalStatics_9.audioOutputStream0 != null) {
           GlobalStatics_9.audioOutputStream0.pause();
         }
@@ -2469,7 +2469,7 @@ public class GlobalStatics_6 {
 
                       if (widget.aBoolean233 && widget.anInt192 != -1) {
                         ItemConfig var50 = DummyClass35
-                            .getItemConfig(widget.anInt192, (byte) 113);
+                            .getItemConfig(widget.anInt192);
                         var45 = var50.aClass94_770;
                         if (var45 == null) {
                           var45 = GameStringStatics.aClass94_829;
@@ -2517,7 +2517,7 @@ public class GlobalStatics_6 {
                       var23 = 0;
                       if (widget.anInt192 != -1) {
                         var42 = DummyClass35
-                            .getItemConfig(widget.anInt192, (byte) 76);
+                            .getItemConfig(widget.anInt192);
                         if (var42 != null) {
                           var42 = var42.method1106(widget.anInt271, 78);
                           AnimationSequence var52 =
@@ -2563,7 +2563,7 @@ public class GlobalStatics_6 {
                           var24 = 2047;
                         }
 
-                        Player var49 = GlobalStatics_9.players[var24];
+                        Player var49 = GlobalStatics_9.PLAYERS[var24];
                         AnimationSequence var56 =
                             var21 == -1 ? null
                                 : GlobalStatics_8.method45(var21, (byte) -20);
@@ -2692,8 +2692,8 @@ public class GlobalStatics_6 {
                           for (var23 = 0; var23 < widget.anInt177; ++var23) {
                             if (widget.anIntArray254[var21] > 0) {
                               var42 = DummyClass35
-                                  .getItemConfig(widget.anIntArray254[var21] - 1,
-                                      (byte) 104);
+                                  .getItemConfig(widget.anIntArray254[var21] - 1
+                                  );
                               GameString var40;
                               if (var42.anInt764 != 1 &&
                                   widget.anIntArray317[var21] == 1) {
@@ -3461,7 +3461,7 @@ public class GlobalStatics_6 {
       }
 
       for (var9 = 0; var9 < DummyClass13.anInt2022; ++var9) {
-        Player var23 = GlobalStatics_9.players[DummyClass42.anIntArray887[var9]];
+        Player var23 = GlobalStatics_9.PLAYERS[DummyClass42.anIntArray887[var9]];
         if (var23 != null && var23.hasConfiguration((byte) 17)) {
           var12 =
               var23.sceneY / 32 - GlobalStatics_9.localPlayer.sceneY / 32;
@@ -3548,8 +3548,8 @@ public class GlobalStatics_6 {
           }
 
           if (var26.anInt1360 == 10 && var26.anInt1359 >= 0
-              && GlobalStatics_9.players.length > var26.anInt1359) {
-            Player var30 = GlobalStatics_9.players[var26.anInt1359];
+              && GlobalStatics_9.PLAYERS.length > var26.anInt1359) {
+            Player var30 = GlobalStatics_9.PLAYERS[var26.anInt1359];
             if (var30 != null) {
               var14 =
                   var30.sceneY / 32 - GlobalStatics_9.localPlayer.sceneY
@@ -3797,8 +3797,8 @@ public class GlobalStatics_6 {
     } else if (GlobalStatics_10.anInt120 != 0
         && GlobalStatics_4.anInt1691 != -1
         && !GlobalStatics_6.method1391(var0 + 91)) {
-      GlobalStatics_9.secureBuffer.writePacket(137);
-      GlobalStatics_9.secureBuffer.writeInt(GlobalStatics_4.anInt1691);
+      GlobalStatics_9.SECURE_BUFFER.writePacket(137);
+      GlobalStatics_9.SECURE_BUFFER.writeInt(GlobalStatics_4.anInt1691);
       GlobalStatics_4.anInt1691 = -1;
       ++GlobalStatics_9.anInt3618;
     }

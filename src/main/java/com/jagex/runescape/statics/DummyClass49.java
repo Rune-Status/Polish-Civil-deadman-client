@@ -65,8 +65,8 @@ public final class DummyClass49 {
   public static void method1368(int var0) {
     ++DummyClass4.anInt3001;
     int var1 = -126 / ((-26 - var0) / 52);
-    GlobalStatics_9.secureBuffer.writePacket(104);
-    GlobalStatics_9.secureBuffer.writeLong(0L);
+    GlobalStatics_9.SECURE_BUFFER.writePacket(104);
+    GlobalStatics_9.SECURE_BUFFER.writeLong(0L);
   }
 
 }

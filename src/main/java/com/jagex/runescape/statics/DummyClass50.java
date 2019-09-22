@@ -102,7 +102,7 @@ public final class DummyClass50 {
           if (GlobalStatics_8.aLongArray826[var5] == var1) {
             GlobalStatics_8.printMessage(GameStringStatics.EMPTY_STRING, 0,
                 GlobalStatics_9.concat(new GameString[]{
-                    DummyClass35.aClass94_666, var4,
+                    GameStringStatics.aClass94_666, var4,
                     GameStringStatics.aClass94_4071
                 }), -1);
             return;
@@ -118,8 +118,8 @@ public final class DummyClass50 {
           GlobalStatics_9.aClass94Array3341[GlobalStatics_6.anInt3591++] =
               GameStringStatics.stringFromBase37(-29664, var1);
           DummyClass31.anInt1472 = GlobalStatics_10.anInt3213;
-          GlobalStatics_9.secureBuffer.writePacket(34);
-          GlobalStatics_9.secureBuffer.writeLong(var1);
+          GlobalStatics_9.SECURE_BUFFER.writePacket(34);
+          GlobalStatics_9.SECURE_BUFFER.writeLong(var1);
         }
       } else {
         GlobalStatics_8.printMessage(GameStringStatics.EMPTY_STRING, 0,

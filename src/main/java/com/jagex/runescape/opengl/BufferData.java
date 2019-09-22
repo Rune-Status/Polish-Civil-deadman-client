@@ -1,4 +1,4 @@
-package com.jagex.runescape.model;
+package com.jagex.runescape.opengl;
 
 import com.jagex.runescape.opengl.GlBufferObject;
 

@@ -26,7 +26,7 @@ public final class DummyClass44 {
       int var2 = GlobalStatics_2.anIntArray347[var1];
       NPC var3 = GlobalStatics_8.NPCS[var2];
       if (var3 != null) {
-        GlobalStatics_11.method68(var3.config.size, 2279, var3);
+        GlobalStatics_11.method68(var3.config.size, var3);
       }
     }
 

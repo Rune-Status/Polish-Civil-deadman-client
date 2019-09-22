@@ -114,8 +114,8 @@ public final class DummyClass9 extends DummyClass5 {
                   DummyClass35.signLink);
           GlobalStatics_6.socketRequest = null;
           GlobalStatics_9.GAME_SOCKET
-              .write(GlobalStatics_9.secureBuffer.bytes, 0,
-                  GlobalStatics_9.secureBuffer.position);
+              .write(GlobalStatics_9.SECURE_BUFFER.bytes, 0,
+                  GlobalStatics_9.SECURE_BUFFER.position);
           if (GlobalStatics_9.audioOutputStream0 != null) {
             GlobalStatics_9.audioOutputStream0.pause();
           }

@@ -29,9 +29,9 @@ public final class DummyClass59 {
   }
 
   public static void method1041(long var0, int var2) {
-    GlobalStatics_9.secureBuffer.position = 0;
-    GlobalStatics_9.secureBuffer.writeByte(186);
-    GlobalStatics_9.secureBuffer.writeLong(var0);
+    GlobalStatics_9.SECURE_BUFFER.position = 0;
+    GlobalStatics_9.SECURE_BUFFER.writeByte(186);
+    GlobalStatics_9.SECURE_BUFFER.writeLong(var0);
     GlobalStatics_0.anInt23 = 1;
     if (var2 == -28236) {
       DummyClass22.anInt1734 = 0;
@@ -373,8 +373,8 @@ public final class DummyClass59 {
         if (GlobalStatics_10.FRAME != null
             && GlobalStatics_9.GAME_SOCKET != null
             && DummyClass15.state == 25) {
-          GlobalStatics_9.secureBuffer.writePacket(20);
-          GlobalStatics_9.secureBuffer.writeInt(1057001181);
+          GlobalStatics_9.SECURE_BUFFER.writePacket(20);
+          GlobalStatics_9.SECURE_BUFFER.writeInt(1057001181);
           ++GlobalStatics_9.anInt3365;
         }
 
@@ -412,7 +412,7 @@ public final class DummyClass59 {
         } else {
           DummyClass26.setState(30, 5);
           if (GlobalStatics_9.GAME_SOCKET != null) {
-            GlobalStatics_9.secureBuffer.writePacket(110);
+            GlobalStatics_9.SECURE_BUFFER.writePacket(110);
           }
         }
 

@@ -796,7 +796,7 @@ public final class DummyClass18 {
           if (GlobalStatics_10.LOCAL_PLAYER_ID == var6) {
             var60 = GlobalStatics_9.localPlayer;
           } else {
-            var60 = GlobalStatics_9.players[var6];
+            var60 = GlobalStatics_9.PLAYERS[var6];
           }
 
           if (var60 != null) {
@@ -1489,9 +1489,9 @@ public final class DummyClass18 {
     }
 
     if (GlobalStatics_0.packetId == 131) {
-      for (var20 = 0; var20 < GlobalStatics_9.players.length; ++var20) {
-        if (GlobalStatics_9.players[var20] != null) {
-          GlobalStatics_9.players[var20].animationId = -1;
+      for (var20 = 0; var20 < GlobalStatics_9.PLAYERS.length; ++var20) {
+        if (GlobalStatics_9.PLAYERS[var20] != null) {
+          GlobalStatics_9.PLAYERS[var20].animationId = -1;
         }
       }
 
@@ -2066,7 +2066,7 @@ public final class DummyClass18 {
         ItemConfig var43;
         if (var34.aBoolean233) {
           GlobalStatics_9.method2026((byte) 122, var3, var20, var21);
-          var43 = DummyClass35.getItemConfig(var21, (byte) 70);
+          var43 = DummyClass35.getItemConfig(var21);
           GlobalStatics_8
               .method2143(var43.anInt810, var3, var43.rotationY,
                   var43.rotationX);
@@ -2080,7 +2080,7 @@ public final class DummyClass18 {
             return true;
           }
 
-          var43 = DummyClass35.getItemConfig(var21, (byte) 91);
+          var43 = DummyClass35.getItemConfig(var21);
           var34.rotationX0 = var43.rotationX;
           var34.anInt164 = 100 * var43.anInt810 / var20;
           var34.anInt202 = 4;
@@ -2275,15 +2275,15 @@ public final class DummyClass18 {
 
           if (DummyClass32.aClass11_526 != null
               && GlobalStatics_8.method42(DummyClass42.aClass11_886) != null) {
-            GlobalStatics_9.secureBuffer.writePacket(79);
+            GlobalStatics_9.SECURE_BUFFER.writePacket(79);
             ++DummyClass30.anInt456;
-            GlobalStatics_9.secureBuffer
+            GlobalStatics_9.SECURE_BUFFER
                 .method759(-93, DummyClass42.aClass11_886.anInt279);
-            GlobalStatics_9.secureBuffer.writeShortLE(var0,
+            GlobalStatics_9.SECURE_BUFFER.writeShortLE(var0,
                 DummyClass32.aClass11_526.anInt191);
-            GlobalStatics_9.secureBuffer
+            GlobalStatics_9.SECURE_BUFFER
                 .writeInt(DummyClass32.aClass11_526.anInt279);
-            GlobalStatics_9.secureBuffer
+            GlobalStatics_9.SECURE_BUFFER
                 .writeShortLE(-1, DummyClass42.aClass11_886.anInt191);
           }
         } else if (

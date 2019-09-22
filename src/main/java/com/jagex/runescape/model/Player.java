@@ -73,7 +73,7 @@ public final class Player extends Mobile {
           if (var13 >= 0x8000) {
             var13 = GlobalStatics_9.anIntArray2664[var13 - 0x8000];
             var9[var10] = 1073741824 | var13;
-            var14 = DummyClass35.getItemConfig(var13, (byte) 119).anInt782;
+            var14 = DummyClass35.getItemConfig(var13).anInt782;
             if (var14 != 0) {
               this.anInt3956 = var14;
             }
@@ -306,8 +306,8 @@ public final class Player extends Mobile {
                 }
 
                 if (var27.anInt1360 == 10 && var27.anInt1359 >= 0
-                  && GlobalStatics_9.players.length > var27.anInt1359) {
-                  Player var28 = GlobalStatics_9.players[var27.anInt1359];
+                  && GlobalStatics_9.PLAYERS.length > var27.anInt1359) {
+                  Player var28 = GlobalStatics_9.PLAYERS[var27.anInt1359];
                   if (var28 != null) {
                     var20 = -(GlobalStatics_9.localPlayer.sceneX
                         / 32) + var28.sceneX / 32;

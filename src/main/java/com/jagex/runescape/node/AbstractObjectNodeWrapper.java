@@ -1,4 +1,4 @@
-package com.jagex.runescape.model;
+package com.jagex.runescape.node;
 
 import com.jagex.runescape.node.AbstractObjectNode;
 

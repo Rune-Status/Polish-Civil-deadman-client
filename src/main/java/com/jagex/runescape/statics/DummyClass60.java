@@ -4,7 +4,7 @@ import com.jagex.runescape.model.Widget;
 import com.jagex.runescape.common.GameString;
 import com.jagex.runescape.common.GameStringStatics;
 import com.jagex.runescape.model.AbstractMouseWheel;
-import com.jagex.runescape.model.AbstractObjectNodeWrapper;
+import com.jagex.runescape.node.AbstractObjectNodeWrapper;
 import com.jagex.runescape.model.SomethingPacket151;
 
 public final class DummyClass60 {
@@ -27,7 +27,7 @@ public final class DummyClass60 {
   }
 
   public static void method912(boolean var0) {
-    GlobalStatics_9.secureBuffer.position = 0;
+    GlobalStatics_9.SECURE_BUFFER.position = 0;
     GlobalStatics_7.lastPacketId1 = -1;
     DummyClass36.aBoolean2615 = var0;
     GlobalStatics_0.packetLength = 0;
@@ -42,9 +42,9 @@ public final class DummyClass60 {
     GlobalStatics_0.packetId = -1;
 
     int var1;
-    for (var1 = 0; GlobalStatics_9.players.length > var1; ++var1) {
-      if (GlobalStatics_9.players[var1] != null) {
-        GlobalStatics_9.players[var1].anInt2772 = -1;
+    for (var1 = 0; GlobalStatics_9.PLAYERS.length > var1; ++var1) {
+      if (GlobalStatics_9.PLAYERS[var1] != null) {
+        GlobalStatics_9.PLAYERS[var1].anInt2772 = -1;
       }
     }
 

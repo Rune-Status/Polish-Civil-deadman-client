@@ -17,7 +17,7 @@ public final class EnumStringFetcher implements Interface4 {
               GlobalStatics_10.getEnum(enums[0], true)
                   .getString((int) key, (byte) -69);
         } else {
-          ItemConfig var8 = DummyClass35.getItemConfig((int) key, (byte) 82);
+          ItemConfig var8 = DummyClass35.getItemConfig((int) key);
           return var8.aClass94_770;
         }
       }

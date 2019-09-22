@@ -519,7 +519,7 @@ public class GLStatics {
               }
 
               for (var37 = 0; DummyClass13.anInt2022 > var37; ++var37) {
-                var38 = GlobalStatics_9.players[DummyClass42.anIntArray887[var37]];
+                var38 = GlobalStatics_9.PLAYERS[DummyClass42.anIntArray887[var37]];
                 var21 = var38.sceneX + 64 - 64 * var38.getSize();
                 var22 = var38.sceneY - (var38.getSize() * 64 - 64);
                 if (var21 >= var33 && var38.getSize() <= var31.config.size
@@ -539,7 +539,7 @@ public class GLStatics {
           }
 
           if (var14 == 0) {
-            Player var30 = GlobalStatics_9.players[var15];
+            Player var30 = GlobalStatics_9.PLAYERS[var15];
             if ((127 & var30.sceneX) == 64 && (127 & var30.sceneY)
                 == 64) {
               var33 = var30.sceneX - 64 * (-1 + var30.getSize());
@@ -559,7 +559,7 @@ public class GLStatics {
               }
 
               for (var37 = 0; var37 < DummyClass13.anInt2022; ++var37) {
-                var38 = GlobalStatics_9.players[DummyClass42.anIntArray887[var37]];
+                var38 = GlobalStatics_9.PLAYERS[DummyClass42.anIntArray887[var37]];
                 var21 = var38.sceneX - (var38.getSize() - 1) * 64;
                 var22 = var38.sceneY - (-64 + 64 * var38.getSize());
                 if (var38 != var30 && var33 <= var21
@@ -585,7 +585,7 @@ public class GLStatics {
                   var32 != null;
                   var32 = (GroundItemNode) var28.method1219(41)) {
                 var18 = var32.aClass140_Sub7_3676.anInt2936;
-                ItemConfig var40 = DummyClass35.getItemConfig(var18, (byte) 71);
+                ItemConfig var40 = DummyClass35.getItemConfig(var18);
                 if (GlobalStatics_9.anInt3012 == 1) {
                   ++GlobalStatics_9.anInt2290;
                   GlobalStatics_9

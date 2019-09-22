@@ -44,7 +44,7 @@ public final class DummyClass27 {
         if (var3 == GlobalStatics_10.LOCAL_PLAYER_ID) {
           var2 = GlobalStatics_9.localPlayer;
         } else {
-          var2 = GlobalStatics_9.players[var3];
+          var2 = GlobalStatics_9.PLAYERS[var3];
         }
       } else {
         var3 = var1.anInt2273 - 1;

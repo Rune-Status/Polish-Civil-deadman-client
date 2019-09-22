@@ -1149,7 +1149,7 @@ public final class GlobalStatics_0 {
       boolean var2, int var3,
       boolean var4, int var5,
       int var6, boolean var7) {
-    ItemConfig var8 = DummyClass35.getItemConfig(var3, (byte) 106);
+    ItemConfig var8 = DummyClass35.getItemConfig(var3);
     if (var6 > 1 && var8.anIntArray804 != null) {
       int var9 = -1;
 
@@ -1161,7 +1161,7 @@ public final class GlobalStatics_0 {
       }
 
       if (var9 != -1) {
-        var8 = DummyClass35.getItemConfig(var9, (byte) 84);
+        var8 = DummyClass35.getItemConfig(var9);
       }
     }
 

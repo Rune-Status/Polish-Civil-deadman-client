@@ -157,12 +157,12 @@ public class GlobalStatics_7 {
 
   public static void method377(int var0, int var1, int var2, int var3,
       int var4) {
-    GlobalStatics_9.secureBuffer.position = 0;
-    GlobalStatics_9.secureBuffer.writeByte(147);
-    GlobalStatics_9.secureBuffer.writeByte(var2);
-    GlobalStatics_9.secureBuffer.writeByte(var3);
-    GlobalStatics_9.secureBuffer.writeShort(var0);
-    GlobalStatics_9.secureBuffer.writeShort(var1);
+    GlobalStatics_9.SECURE_BUFFER.position = 0;
+    GlobalStatics_9.SECURE_BUFFER.writeByte(147);
+    GlobalStatics_9.SECURE_BUFFER.writeByte(var2);
+    GlobalStatics_9.SECURE_BUFFER.writeByte(var3);
+    GlobalStatics_9.SECURE_BUFFER.writeShort(var0);
+    GlobalStatics_9.SECURE_BUFFER.writeShort(var1);
     DummyClass22.anInt1734 = 0;
     GlobalStatics_9.anInt548 = 0;
     GlobalStatics_0.anInt23 = var4;
@@ -1808,8 +1808,8 @@ public class GlobalStatics_7 {
         if (var2 < GlobalStatics_6.aClass3_Sub19Array3694.length
             && GlobalStatics_6.aClass3_Sub19Array3694[var2] != null) {
           ++DummyClass37.anInt671;
-          GlobalStatics_9.secureBuffer.writePacket(162);
-          GlobalStatics_9.secureBuffer
+          GlobalStatics_9.SECURE_BUFFER.writePacket(162);
+          GlobalStatics_9.SECURE_BUFFER
               .writeLong(GlobalStatics_6.aClass3_Sub19Array3694[var2].key);
         }
       }
@@ -1829,7 +1829,7 @@ public class GlobalStatics_7 {
         if (var4.ids[var6] >= 0
             && GlobalStatics_10.anInt3287 > var4.ids[var6]) {
           ItemConfig var7 = DummyClass35
-              .getItemConfig(var4.ids[var6], (byte) 79);
+              .getItemConfig(var4.ids[var6]);
           if (var7.aClass130_798 != null) {
             IntegerNode var8 = (IntegerNode) var7.aClass130_798.get(var3);
             if (var8 != null) {
@@ -2091,7 +2091,7 @@ public class GlobalStatics_7 {
       }
 
       for (var11 = 0; var11 < 2048; ++var11) {
-        Player var23 = GlobalStatics_9.players[var11];
+        Player var23 = GlobalStatics_9.PLAYERS[var11];
         if (var23 != null) {
           for (var13 = 0; var13 < 10; ++var13) {
             var23.waypointsX[var13] -= var9;
@@ -2494,9 +2494,9 @@ public class GlobalStatics_7 {
       }
     }
 
-    GlobalStatics_9.secureBuffer.writePacket(44);
-    GlobalStatics_9.secureBuffer.writeByte(command.getLength() - 2 + 1);
-    GlobalStatics_9.secureBuffer.writeString(command.substring(2));
+    GlobalStatics_9.SECURE_BUFFER.writePacket(44);
+    GlobalStatics_9.SECURE_BUFFER.writeByte(command.getLength() - 2 + 1);
+    GlobalStatics_9.SECURE_BUFFER.writeString(command.substring(2));
     ++GlobalStatics_7.anInt1633;
   }
 

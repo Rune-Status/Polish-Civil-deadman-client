@@ -269,7 +269,7 @@ public final class PlayerAppearance {
           for (int var18 = 0; var18 < 12; ++var18) {
             var19 = var15[var18];
             if ((var19 & 1073741824) != 0) {
-              if (!DummyClass35.getItemConfig(1073741823 & var19, (byte) 92)
+              if (!DummyClass35.getItemConfig(1073741823 & var19)
                   .method1108((byte) 95, this.aBoolean864)) {
                 var17 = true;
               }
@@ -308,7 +308,7 @@ public final class PlayerAppearance {
                 }
               } else {
                 var21 = DummyClass35
-                    .getItemConfig(var20 & 1073741823, (byte) 115)
+                    .getItemConfig(var20 & 1073741823)
                     .method1117(this.aBoolean864, 80);
                 if (var21 != null) {
                   var39[var19] = var21;
@@ -625,7 +625,7 @@ public final class PlayerAppearance {
                 var9 & 1073741823, 0).method948(18991)) {
                 var7 = true;
               }
-            } else if (!DummyClass35.getItemConfig(1073741823 & var9, (byte) 127)
+            } else if (!DummyClass35.getItemConfig(1073741823 & var9)
               .method1102(this.aBoolean864, false)) {
               var7 = true;
             }
@@ -650,7 +650,7 @@ public final class PlayerAppearance {
                 }
               }
             } else {
-              var12 = DummyClass35.getItemConfig(var11 & 1073741823, (byte) 89)
+              var12 = DummyClass35.getItemConfig(var11 & 1073741823)
                 .method1116(this.aBoolean864, (byte) -109);
               if (var12 != null) {
                 var14[var9++] = var12;

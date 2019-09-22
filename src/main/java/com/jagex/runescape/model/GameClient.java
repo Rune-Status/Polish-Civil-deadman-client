@@ -1097,7 +1097,7 @@ public final class GameClient extends GameStub {
   public void clearThings(int var1) {
     GlobalStatics_8.clear0(true);
     GlobalStatics_0.clear1(-8635);
-    DummyClass35.clear2(21474);
+    DummyClass35.clear2();
     GlobalStatics_9.clear3((byte) -46);
     GlobalStatics_10.clear4(0);
     GlobalStatics_8.clear5(113);

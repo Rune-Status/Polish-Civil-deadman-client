@@ -34,16 +34,16 @@ public class DummyClass5 extends DummyClass6 {
         if (var0 == -90) {
           if (!GlTexture2d.aBoolean3769
               && GlobalStatics_9.GAME_SOCKET != null) {
-            GlobalStatics_9.secureBuffer.writePacket(93);
+            GlobalStatics_9.SECURE_BUFFER.writePacket(93);
 
             try {
               GlobalStatics_9.GAME_SOCKET
-                  .write(GlobalStatics_9.secureBuffer.bytes, 0,
-                      GlobalStatics_9.secureBuffer.position);
+                  .write(GlobalStatics_9.SECURE_BUFFER.bytes, 0,
+                      GlobalStatics_9.SECURE_BUFFER.position);
             } catch (IOException e) {
               e.printStackTrace();
             }
-            GlobalStatics_9.secureBuffer.position = 0;
+            GlobalStatics_9.SECURE_BUFFER.position = 0;
 
             ++GlobalStatics_9.anInt3569;
           }

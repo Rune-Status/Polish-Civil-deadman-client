@@ -759,7 +759,7 @@ public final class Widget {
           } else if (var8 != 2) {
             if (var8 != 3) {
               if (var8 == 4) {
-                ItemConfig var16 = DummyClass35.getItemConfig(var9, (byte) 94);
+                ItemConfig var16 = DummyClass35.getItemConfig(var9);
                 AbstractModel var17 = var16.getModel(110, var1, var5, var2, 10, var3);
                 if (var17 != null) {
                   return var17;

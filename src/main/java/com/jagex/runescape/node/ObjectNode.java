@@ -1,4 +1,4 @@
-package com.jagex.runescape.model;
+package com.jagex.runescape.node;
 
 import com.jagex.runescape.node.AbstractObjectNode;
 
@@ -11,7 +11,7 @@ public final class ObjectNode extends AbstractObjectNode {
   }
 
   public Object getObject(boolean var1) {
-    return var1 ? this.anObject4044 : null;
+    return this.anObject4044;
   }
 
   public boolean method568(int var1) {

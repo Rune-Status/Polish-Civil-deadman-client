@@ -948,7 +948,7 @@ public class GlobalStatics_10 {
       }
 
       if (DummyClass15.state == 30) {
-        DummyClass8.method2226(GlobalStatics_9.secureBuffer, 163, -116);
+        DummyClass8.method2226(GlobalStatics_9.SECURE_BUFFER, 163, -116);
         Object var14 = GlobalStatics_7.aClass67_1443.anObject1016;
         int var2;
         int var3;
@@ -962,14 +962,14 @@ public class GlobalStatics_10 {
             if (GlobalStatics_9.anInt3644 != 0
                 || GlobalStatics_7.aClass67_1443.anInt1018 >= 40) {
               ++GlobalStatics_0.anInt2145;
-              GlobalStatics_9.secureBuffer.writePacket(123);
+              GlobalStatics_9.SECURE_BUFFER.writePacket(123);
               var3 = 0;
-              GlobalStatics_9.secureBuffer.writeByte(0);
-              var2 = GlobalStatics_9.secureBuffer.position;
+              GlobalStatics_9.SECURE_BUFFER.writeByte(0);
+              var2 = GlobalStatics_9.SECURE_BUFFER.position;
 
               for (
                   var4 = 0; GlobalStatics_7.aClass67_1443.anInt1018 > var4
-                  && GlobalStatics_9.secureBuffer.position - var2 < 240;
+                  && GlobalStatics_9.SECURE_BUFFER.position - var2 < 240;
                   ++var4) {
                 ++var3;
                 regionLevel = GlobalStatics_7.aClass67_1443.anIntArray1019[var4];
@@ -1012,34 +1012,36 @@ public class GlobalStatics_10 {
                       && var9 >= -32 && var9 <= 31) {
                     var9 += 32;
                     var8 += 32;
-                    GlobalStatics_9.secureBuffer.writeShort(
+                    GlobalStatics_9.SECURE_BUFFER.writeShort(
                         var9 + (GlobalStatics_9.anInt2556 << 12) + (var8 << 6));
                     GlobalStatics_9.anInt2556 = 0;
                   } else if (GlobalStatics_9.anInt2556 < 32 && var8 >= 127
                       && var8 <= 127 && var9 >= -128 && var9 <= 127) {
-                    GlobalStatics_9.secureBuffer.writeByte(
+                    GlobalStatics_9.SECURE_BUFFER.writeByte(
                         128 + GlobalStatics_9.anInt2556);
                     var9 += 128;
                     var8 += 128;
-                    GlobalStatics_9.secureBuffer.writeShort((var8 << 8) + var9);
+                    GlobalStatics_9.SECURE_BUFFER.writeShort((var8 << 8) + var9);
                     GlobalStatics_9.anInt2556 = 0;
                   } else if (GlobalStatics_9.anInt2556 < 32) {
-                    GlobalStatics_9.secureBuffer.writeByte(
+                    GlobalStatics_9.SECURE_BUFFER.writeByte(
                         192 + GlobalStatics_9.anInt2556);
                     if (var7) {
-                      GlobalStatics_9.secureBuffer.writeInt(Integer.MIN_VALUE);
+                      GlobalStatics_9.SECURE_BUFFER.writeInt(Integer.MIN_VALUE);
                     } else {
-                      GlobalStatics_9.secureBuffer.writeInt(var6 | regionLevel << 16);
+                      GlobalStatics_9.SECURE_BUFFER
+                          .writeInt(var6 | regionLevel << 16);
                     }
 
                     GlobalStatics_9.anInt2556 = 0;
                   } else {
-                    GlobalStatics_9.secureBuffer.writeShort(
+                    GlobalStatics_9.SECURE_BUFFER.writeShort(
                         GlobalStatics_9.anInt2556 + 0xe000);
                     if (var7) {
-                      GlobalStatics_9.secureBuffer.writeInt(Integer.MIN_VALUE);
+                      GlobalStatics_9.SECURE_BUFFER.writeInt(Integer.MIN_VALUE);
                     } else {
-                      GlobalStatics_9.secureBuffer.writeInt(var6 | regionLevel << 16);
+                      GlobalStatics_9.SECURE_BUFFER
+                          .writeInt(var6 | regionLevel << 16);
                     }
 
                     GlobalStatics_9.anInt2556 = 0;
@@ -1047,8 +1049,8 @@ public class GlobalStatics_10 {
                 }
               }
 
-              GlobalStatics_9.secureBuffer.method769((byte) -126,
-                  -var2 + GlobalStatics_9.secureBuffer.position);
+              GlobalStatics_9.SECURE_BUFFER.method769((byte) -126,
+                  -var2 + GlobalStatics_9.SECURE_BUFFER.position);
               if (GlobalStatics_7.aClass67_1443.anInt1018 > var3) {
                 GlobalStatics_7.aClass67_1443.anInt1018 -= var3;
 
@@ -1101,9 +1103,9 @@ public class GlobalStatics_10 {
             var19 = 1;
           }
 
-          GlobalStatics_9.secureBuffer.writePacket(75);
-          GlobalStatics_9.secureBuffer.method765(var19 << 15 | var6, (byte) 3);
-          GlobalStatics_9.secureBuffer.method759(-105, var4 | var3 << 16);
+          GlobalStatics_9.SECURE_BUFFER.writePacket(75);
+          GlobalStatics_9.SECURE_BUFFER.method765(var19 << 15 | var6, (byte) 3);
+          GlobalStatics_9.SECURE_BUFFER.method759(-105, var4 | var3 << 16);
         }
 
         if (GlobalStatics_10.anInt2212 > 0) {
@@ -1129,10 +1131,10 @@ public class GlobalStatics_10 {
           GlobalStatics_10.anInt2212 = 20;
           GlobalStatics_9.aBoolean4068 = false;
           ++GlobalStatics_9.anInt1756;
-          GlobalStatics_9.secureBuffer.writePacket(21);
-          GlobalStatics_9.secureBuffer
+          GlobalStatics_9.SECURE_BUFFER.writePacket(21);
+          GlobalStatics_9.SECURE_BUFFER
               .method783(GlobalStatics_6.NEXT_CAMERA_PITCH, -268435456);
-          GlobalStatics_9.secureBuffer
+          GlobalStatics_9.SECURE_BUFFER
               .writeShortLE(-1, GlobalStatics_9.NEXT_CAMERA_YAW);
         }
 
@@ -1140,21 +1142,21 @@ public class GlobalStatics_10 {
             && !GlobalStatics_9.aBoolean2774) {
           ++GlobalStatics_1.anInt3187;
           GlobalStatics_9.aBoolean2774 = true;
-          GlobalStatics_9.secureBuffer.writePacket(22);
-          GlobalStatics_9.secureBuffer.writeByte(1);
+          GlobalStatics_9.SECURE_BUFFER.writePacket(22);
+          GlobalStatics_9.SECURE_BUFFER.writeByte(1);
         }
 
         if (!GlobalStatics_10.FOCUSED && GlobalStatics_9.aBoolean2774) {
           ++GlobalStatics_1.anInt3187;
           GlobalStatics_9.aBoolean2774 = false;
-          GlobalStatics_9.secureBuffer.writePacket(22);
-          GlobalStatics_9.secureBuffer.writeByte(0);
+          GlobalStatics_9.SECURE_BUFFER.writePacket(22);
+          GlobalStatics_9.SECURE_BUFFER.writeByte(0);
         }
 
         if (!GlobalStatics_9.aBoolean2705) {
           ++GlobalStatics_7.anInt3659;
-          GlobalStatics_9.secureBuffer.writePacket(98);
-          GlobalStatics_9.secureBuffer.writeInt(DummyClass51.getSettings());
+          GlobalStatics_9.SECURE_BUFFER.writePacket(98);
+          GlobalStatics_9.SECURE_BUFFER.writeInt(DummyClass51.getSettings());
           GlobalStatics_9.aBoolean2705 = true;
         }
 
@@ -1167,7 +1169,7 @@ public class GlobalStatics_10 {
           if (GlobalStatics_2.anInt3699 > 750) {
             GlobalStatics_8.method289(false);
           } else {
-            DummyClass35.method1028(-102);
+            DummyClass35.method1028();
             DummyClass44.method1207(-72);
             GlobalStatics_10.method189((byte) -62);
             if (GlobalStatics_9.aClass11_3551 != null) {
@@ -1415,15 +1417,15 @@ public class GlobalStatics_10 {
                       }
                     }
 
-                    GlobalStatics_9.secureBuffer.writePacket(231);
-                    GlobalStatics_9.secureBuffer
+                    GlobalStatics_9.SECURE_BUFFER.writePacket(231);
+                    GlobalStatics_9.SECURE_BUFFER
                         .writeShort(DummyClass18.anInt86);
-                    GlobalStatics_9.secureBuffer
+                    GlobalStatics_9.SECURE_BUFFER
                         .method785(GlobalStatics_9.aClass11_1017.anInt279,
                             (byte) -125);
-                    GlobalStatics_9.secureBuffer
+                    GlobalStatics_9.SECURE_BUFFER
                         .method783(GlobalStatics_9.anInt2701, -268435456);
-                    GlobalStatics_9.secureBuffer.method743(var18);
+                    GlobalStatics_9.SECURE_BUFFER.method743(var18);
                   }
                 } else if ((GlobalStatics_9.anInt998 == 1 || GlobalStatics_9
                     .method353(
@@ -1526,16 +1528,16 @@ public class GlobalStatics_10 {
                           GlobalStatics_7.anInt2440 = 0;
                         } else if (GlobalStatics_7.anInt2440 == 2) {
                           if (DummyClass32.anInt515 != -1) {
-                            GlobalStatics_9.secureBuffer.writePacket(131);
+                            GlobalStatics_9.SECURE_BUFFER.writePacket(131);
                             ++GlobalStatics_9.anInt2651;
-                            GlobalStatics_9.secureBuffer
+                            GlobalStatics_9.SECURE_BUFFER
                                 .method759(-123, GlobalStatics_9.anInt872);
-                            GlobalStatics_9.secureBuffer.method783(
+                            GlobalStatics_9.SECURE_BUFFER.method783(
                                 GlobalStatics_10.REGION_BASE_X
                                     + DummyClass32.anInt515, -268435456);
-                            GlobalStatics_9.secureBuffer
+                            GlobalStatics_9.SECURE_BUFFER
                                 .method765(GlobalStatics_10.anInt278, (byte) 3);
-                            GlobalStatics_9.secureBuffer.method783(
+                            GlobalStatics_9.SECURE_BUFFER.method783(
                                 GlobalStatics_9.anInt999
                                     + GlobalStatics_9.REGION_BASE_Y,
                                 -268435456);
@@ -1548,12 +1550,12 @@ public class GlobalStatics_10 {
                           GlobalStatics_7.anInt2440 = 0;
                         } else if (GlobalStatics_8.anInt1521 == 2) {
                           if (DummyClass32.anInt515 != -1) {
-                            GlobalStatics_9.secureBuffer.writePacket(179);
-                            GlobalStatics_9.secureBuffer.writeShort(
+                            GlobalStatics_9.SECURE_BUFFER.writePacket(179);
+                            GlobalStatics_9.SECURE_BUFFER.writeShort(
                                 GlobalStatics_9.REGION_BASE_Y
                                     + GlobalStatics_9.anInt999);
                             ++GlobalStatics_9.anInt2130;
-                            GlobalStatics_9.secureBuffer.writeShort(
+                            GlobalStatics_9.SECURE_BUFFER.writeShort(
                                 DummyClass32.anInt515
                                     + GlobalStatics_10.REGION_BASE_X);
                             GlobalStatics_7.anInt2958 = 0;
@@ -1639,7 +1641,7 @@ public class GlobalStatics_10 {
                           DummyClass13.anInt2023 = 250;
                           DummyClass30.method940(112, 14500);
                           ++GlobalStatics_9.anInt1330;
-                          GlobalStatics_9.secureBuffer.writePacket(245);
+                          GlobalStatics_9.SECURE_BUFFER.writePacket(245);
                         }
 
                         if (GlobalStatics_2.aClass64_351 != null
@@ -1731,7 +1733,7 @@ public class GlobalStatics_10 {
 
                         if (GlobalStatics_10.anInt4032 > 50) {
                           ++GlobalStatics_9.anInt3569;
-                          GlobalStatics_9.secureBuffer.writePacket(93);
+                          GlobalStatics_9.SECURE_BUFFER.writePacket(93);
                         }
 
                         if (GlobalStatics_9.interfaceCounterUpdated) {
@@ -1741,12 +1743,12 @@ public class GlobalStatics_10 {
 
                         try {
                           if (GlobalStatics_9.GAME_SOCKET != null
-                              && GlobalStatics_9.secureBuffer.position > 0) {
+                              && GlobalStatics_9.SECURE_BUFFER.position > 0) {
                             GlobalStatics_9.GAME_SOCKET.write(
-                                GlobalStatics_9.secureBuffer.bytes, 0,
-                                GlobalStatics_9.secureBuffer.position);
+                                GlobalStatics_9.SECURE_BUFFER.bytes, 0,
+                                GlobalStatics_9.SECURE_BUFFER.position);
                             GlobalStatics_10.anInt4032 = 0;
-                            GlobalStatics_9.secureBuffer.position = 0;
+                            GlobalStatics_9.SECURE_BUFFER.position = 0;
                           }
                         } catch (IOException var11) {
                           GlobalStatics_8.method289(false);
@@ -1877,7 +1879,7 @@ public class GlobalStatics_10 {
     DummyClass8.method2222((byte) 127);
     GlobalStatics_8.method813(1974);
     GlobalStatics_9.method1803((byte) 22);
-    DummyClass35.method1025((byte) -93);
+    DummyClass35.method1025();
     DummyClass59.method1044(-3782);
     GlobalStatics_0.method85((byte) -114);
     GlobalStatics_7.method2192(-68);
@@ -2760,8 +2762,8 @@ public class GlobalStatics_10 {
           }
 
           DummyClass31.anInt1472 = GlobalStatics_10.anInt3213;
-          GlobalStatics_9.secureBuffer.writePacket(213);
-          GlobalStatics_9.secureBuffer.writeLong(var0);
+          GlobalStatics_9.SECURE_BUFFER.writePacket(213);
+          GlobalStatics_9.SECURE_BUFFER.writeLong(var0);
           break;
         }
       }
@@ -3050,7 +3052,7 @@ public class GlobalStatics_10 {
             if (GlobalStatics_10.LOCAL_PLAYER_ID == var4) {
               player = GlobalStatics_9.localPlayer;
             } else {
-              player = GlobalStatics_9.players[var4];
+              player = GlobalStatics_9.PLAYERS[var4];
             }
 
             if (player != null && player.sceneX >= 0 && player.sceneX
@@ -3293,7 +3295,7 @@ public class GlobalStatics_10 {
         var3 = DummyClass42.anIntArray887[var1];
       }
 
-      Player var4 = GlobalStatics_9.players[var3];
+      Player var4 = GlobalStatics_9.PLAYERS[var3];
       if (var4 != null && var4.anInt2814 > 0) {
         --var4.anInt2814;
         if (var4.anInt2814 == 0) {
@@ -3772,8 +3774,8 @@ public class GlobalStatics_10 {
                   DummyClass35.signLink);
           GlobalStatics_6.socketRequest = null;
           GlobalStatics_9.GAME_SOCKET
-              .write(GlobalStatics_9.secureBuffer.bytes, 0,
-                  GlobalStatics_9.secureBuffer.position);
+              .write(GlobalStatics_9.SECURE_BUFFER.bytes, 0,
+                  GlobalStatics_9.SECURE_BUFFER.position);
           if (GlobalStatics_9.audioOutputStream0 != null) {
             GlobalStatics_9.audioOutputStream0.pause();
           }
@@ -4096,7 +4098,7 @@ public class GlobalStatics_10 {
     GlobalStatics_10.method247((byte) 51);
 
     for (int var1 = 0; var1 < 2048; ++var1) {
-      Player var2 = GlobalStatics_9.players[var1];
+      Player var2 = GlobalStatics_9.PLAYERS[var1];
       if (var2 != null) {
         var2.anObject2796 = null;
       }
@@ -5681,10 +5683,10 @@ public class GlobalStatics_10 {
     var8.writeInt((int) (9.9999999E7D * Math.random()));
     var8.encipherRSA(RSAConfiguration.PUBLIC_EXPONENT,
         RSAConfiguration.MODULUS);
-    GlobalStatics_9.secureBuffer.position = 0;
-    GlobalStatics_9.secureBuffer.writeByte(36);
-    GlobalStatics_9.secureBuffer.writeByte(var8.position);
-    GlobalStatics_9.secureBuffer.write(var8.bytes, 0, var8.position);
+    GlobalStatics_9.SECURE_BUFFER.position = 0;
+    GlobalStatics_9.SECURE_BUFFER.writeByte(36);
+    GlobalStatics_9.SECURE_BUFFER.writeByte(var8.position);
+    GlobalStatics_9.SECURE_BUFFER.write(var8.bytes, 0, var8.position);
     GlobalStatics_0.anInt1711 = -3;
     GlobalStatics_0.anInt23 = 1;
     DummyClass22.anInt1734 = 0;
@@ -5715,17 +5717,17 @@ public class GlobalStatics_10 {
         int var1 = GlobalStatics_9.GAME_BUFFER.readBits(11);
         if (var1 != 2047) {
           boolean var2 = false;
-          if (GlobalStatics_9.players[var1] == null) {
-            GlobalStatics_9.players[var1] = new Player();
+          if (GlobalStatics_9.PLAYERS[var1] == null) {
+            GlobalStatics_9.PLAYERS[var1] = new Player();
             var2 = true;
             if (DummyClass45.configs[var1] != null) {
-              GlobalStatics_9.players[var1]
+              GlobalStatics_9.PLAYERS[var1]
                   .parseConfig(DummyClass45.configs[var1]);
             }
           }
 
           DummyClass42.anIntArray887[DummyClass13.anInt2022++] = var1;
-          Player var3 = GlobalStatics_9.players[var1];
+          Player var3 = GlobalStatics_9.PLAYERS[var1];
           var3.anInt2838 = GlobalStatics_4.updateCycle;
           int var4 = GlobalStatics_9.GAME_BUFFER.readBits(1);
           if (var4 == 1) {
@@ -5826,10 +5828,10 @@ public class GlobalStatics_10 {
         var4.writeInt((int) (Math.random() * 9.9999999E7D));
         var4.encipherRSA(RSAConfiguration.PUBLIC_EXPONENT,
             RSAConfiguration.MODULUS);
-        GlobalStatics_9.secureBuffer.position = 0;
-        GlobalStatics_9.secureBuffer.writeByte(210);
-        GlobalStatics_9.secureBuffer.writeByte(var4.position);
-        GlobalStatics_9.secureBuffer.write(var4.bytes, 0, var4.position);
+        GlobalStatics_9.SECURE_BUFFER.position = 0;
+        GlobalStatics_9.SECURE_BUFFER.writeByte(210);
+        GlobalStatics_9.SECURE_BUFFER.writeByte(var4.position);
+        GlobalStatics_9.SECURE_BUFFER.write(var4.bytes, 0, var4.position);
       } else {
         GlobalStatics_9.method951(0);
       }
@@ -5904,7 +5906,7 @@ public class GlobalStatics_10 {
     DummyClass14.aClass94_1962 = GameStringStatics.aClass94_2207;
     GameStringStatics.aClass94_3124 = DummyClass4.aClass94_3002;
     GlobalStatics_8.aClass94_36 = GameStringStatics.aClass94_3106;
-    GameStringStatics.aClass94_3333 = DummyClass35.aClass94_667;
+    GameStringStatics.aClass94_3333 = GameStringStatics.aClass94_667;
     GameStringStatics.aClass94_3427 = DummyClass49.aClass94_1110;
     DummyClass8.aClass94_4024 = GlobalStatics_7.aClass94_2945;
     GameStringStatics.aClass94_3311 = GameStringStatics.aClass94_3157;
@@ -5935,7 +5937,7 @@ public class GlobalStatics_10 {
     GameStringStatics.aClass94_3167 = GameStringStatics.aClass94_3633;
     DummyClass5.aClass94_2991 = GameStringStatics.aClass94_3583;
     GameStringStatics.aClass94_2267 = GameStringStatics.aClass94_3646;
-    GameStringStatics.aClass94_327 = DummyClass35.aClass94_659;
+    GameStringStatics.aClass94_327 = GameStringStatics.aClass94_659;
     DummyClass14.ATTEMPTING_TO_RECONNECT = GlTexture2d.aClass94_3758;
     GameStringStatics.aClass94_551 = GameStringStatics.aClass94_3345;
     GameStringStatics.aClass94_4040 = GameStringStatics.aClass94_1122;
@@ -5965,7 +5967,7 @@ public class GlobalStatics_10 {
     GlobalStatics_0.aClass94_1707 = GameStringStatics.aClass94_905;
     GlobalStatics_7.aClass94_2961 = DummyClass32.aClass94_520;
     GlobalStatics_8.aClass94_957 = DummyClass1.aClass94_412;
-    DummyClass35.aClass94_662 = DummyClass5.aClass94_2995;
+    GameStringStatics.aClass94_662 = DummyClass5.aClass94_2995;
     DummyClass12.aClass94_2031 = GlobalStatics_8.aClass94_35;
     DummyClass26.aClass94_1615 = GlobalStatics_3.aClass94_2458;
     GameStringStatics.aClass94_3629 = DummyClass39.aClass94_738;
@@ -5978,7 +5980,7 @@ public class GlobalStatics_10 {
     GlobalStatics_0.LOADED_INTERFACES = GlobalStatics_8.aClass94_951;
     GameStringStatics.aClass94_485 = GlobalStatics_0.aClass94_24;
     GameStringStatics.aClass94_3249 = GameStringStatics.aClass94_3774;
-    DummyClass35.aClass94_666 = DummyClass5.aClass94_2995;
+    GameStringStatics.aClass94_666 = DummyClass5.aClass94_2995;
     GlobalStatics_11.aClass94_809 = GameStringStatics.aClass94_3119;
     GameStringStatics.aClass94_3051 = GlobalStatics_5.aClass94_1620;
     GameStringStatics.LOADING_PLEASE_WAIT = GlobalStatics_8.aClass94_1523;
@@ -6225,8 +6227,8 @@ public class GlobalStatics_10 {
             var6 = (GroundItemNode) var3.getFirst();
             var6 != null; var6 = (GroundItemNode) var3.getNext()) {
           ItemConfig var7 =
-              DummyClass35.getItemConfig(var6.aClass140_Sub7_3676.anInt2936,
-                  (byte) 104);
+              DummyClass35.getItemConfig(var6.aClass140_Sub7_3676.anInt2936
+              );
           int var8 = var7.anInt757;
           if (var7.anInt764 == 1) {
             var8 *= 1 + var6.aClass140_Sub7_3676.anInt2930;

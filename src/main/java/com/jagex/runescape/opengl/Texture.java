@@ -4,7 +4,7 @@ import com.jagex.runescape.buffer.Buffer;
 import com.jagex.runescape.camera.CameraStatics;
 import com.jagex.runescape.common.GameString;
 import com.jagex.runescape.common.GameStringStatics;
-import com.jagex.runescape.model.AbstractObjectNodeWrapper;
+import com.jagex.runescape.node.AbstractObjectNodeWrapper;
 import com.jagex.runescape.cache.FileUnpacker;
 import com.jagex.runescape.model.ITextureCache;
 import com.jagex.runescape.model.ProceduralTexture;

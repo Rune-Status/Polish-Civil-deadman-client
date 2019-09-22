@@ -18,7 +18,7 @@ public final class GroundItem extends SceneNode {
       int translateZ,
       long var9,
       int var11) {
-    AbstractModel var13 = DummyClass35.getItemConfig(this.anInt2936, (byte) 84)
+    AbstractModel var13 = DummyClass35.getItemConfig(this.anInt2936)
         .getModel(124, -1, 0, null, this.anInt2930, 0);
       if (var13 != null) {
         var13.draw(var1, var2, var3, var4, var5, translateX, translateY, translateZ, var9, var11

@@ -52,7 +52,7 @@ public final class DummyClass1 {
           var9 = 2047;
         }
 
-        Player var10 = GlobalStatics_9.players[var9];
+        Player var10 = GlobalStatics_9.PLAYERS[var9];
         if (var10 != null) {
           var6 = -var10.sceneY + var1.sceneY;
           var5 = -var10.sceneX + var1.sceneX;

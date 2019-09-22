@@ -64,12 +64,12 @@ public class DummyClass2 {
           long encodedUsername =
               GlobalStatics_10.encodedUsername = GameStringStatics.username
                   .toBase37();
-          GlobalStatics_9.secureBuffer.position = 0;
-          GlobalStatics_9.secureBuffer.writeByte(14);
+          GlobalStatics_9.SECURE_BUFFER.position = 0;
+          GlobalStatics_9.SECURE_BUFFER.writeByte(14);
           int hash = (int) (encodedUsername >> 16 & 31L);
-          GlobalStatics_9.secureBuffer.writeByte(hash);
+          GlobalStatics_9.SECURE_BUFFER.writeByte(hash);
           GlobalStatics_9.GAME_SOCKET
-              .write(GlobalStatics_9.secureBuffer.bytes, 0, 2);
+              .write(GlobalStatics_9.SECURE_BUFFER.bytes, 0, 2);
           if (GlobalStatics_9.audioOutputStream0 != null) {
             GlobalStatics_9.audioOutputStream0.pause();
           }
@@ -108,21 +108,21 @@ public class DummyClass2 {
           GlobalStatics_9.GAME_BUFFER.position = 0;
           GlobalStatics_9.serverCipherKey = GlobalStatics_9.GAME_BUFFER
               .readLong();
-          GlobalStatics_9.secureBuffer.position = 0;
+          GlobalStatics_9.SECURE_BUFFER.position = 0;
           int[] keys = new int[4];
           keys[2] = (int) (GlobalStatics_9.serverCipherKey >> 32);
           keys[3] = (int) GlobalStatics_9.serverCipherKey;
           keys[1] = (int) (Math.random() * 9.9999999E7D);
           keys[0] = (int) (Math.random() * 9.9999999E7D);
-          GlobalStatics_9.secureBuffer.writeByte(10);
-          GlobalStatics_9.secureBuffer.writeInt(keys[0]);
-          GlobalStatics_9.secureBuffer.writeInt(keys[1]);
-          GlobalStatics_9.secureBuffer.writeInt(keys[2]);
-          GlobalStatics_9.secureBuffer.writeInt(keys[3]);
-          GlobalStatics_9.secureBuffer
+          GlobalStatics_9.SECURE_BUFFER.writeByte(10);
+          GlobalStatics_9.SECURE_BUFFER.writeInt(keys[0]);
+          GlobalStatics_9.SECURE_BUFFER.writeInt(keys[1]);
+          GlobalStatics_9.SECURE_BUFFER.writeInt(keys[2]);
+          GlobalStatics_9.SECURE_BUFFER.writeInt(keys[3]);
+          GlobalStatics_9.SECURE_BUFFER
               .writeLong(GameStringStatics.username.toBase37());
-          GlobalStatics_9.secureBuffer.writeString(GameStringStatics.password);
-          GlobalStatics_9.secureBuffer
+          GlobalStatics_9.SECURE_BUFFER.writeString(GameStringStatics.password);
+          GlobalStatics_9.SECURE_BUFFER
               .encipherRSA(RSAConfiguration.PUBLIC_EXPONENT,
                   RSAConfiguration.MODULUS);
           GlobalStatics_7.loginBuffer.position = 0;
@@ -133,7 +133,7 @@ public class DummyClass2 {
           }
 
           GlobalStatics_7.loginBuffer.writeShort(
-              GlobalStatics_9.secureBuffer.position + 159 + GlobalStatics_10
+              GlobalStatics_9.SECURE_BUFFER.position + 159 + GlobalStatics_10
                   .getByteLength(
                       DummyClass7.settings));
           GlobalStatics_7.loginBuffer.writeInt(530);
@@ -211,13 +211,13 @@ public class DummyClass2 {
           GlobalStatics_7.loginBuffer
               .writeInt(DummyClass22.particles.getTableChecksum());
           GlobalStatics_7.loginBuffer
-              .write(GlobalStatics_9.secureBuffer.bytes, 0,
-                  GlobalStatics_9.secureBuffer.position);
+              .write(GlobalStatics_9.SECURE_BUFFER.bytes, 0,
+                  GlobalStatics_9.SECURE_BUFFER.position);
           GlobalStatics_9.GAME_SOCKET
               .write(GlobalStatics_7.loginBuffer.bytes, 0,
                   GlobalStatics_7.loginBuffer.position);
 
-          GlobalStatics_9.secureBuffer.initializeCipher(keys);
+          GlobalStatics_9.SECURE_BUFFER.initializeCipher(keys);
           for (int i = 0; i < 4; i++) {
             keys[i] += 50;
           }
@@ -273,11 +273,11 @@ public class DummyClass2 {
         }
 
         if (GlobalStatics_10.LOGIN_STATE == 6) {
-          GlobalStatics_9.secureBuffer.position = 0;
-          GlobalStatics_9.secureBuffer.writePacket(17);
+          GlobalStatics_9.SECURE_BUFFER.position = 0;
+          GlobalStatics_9.SECURE_BUFFER.writePacket(17);
           GlobalStatics_9.GAME_SOCKET
-              .write(GlobalStatics_9.secureBuffer.bytes, 0,
-                  GlobalStatics_9.secureBuffer.position);
+              .write(GlobalStatics_9.SECURE_BUFFER.bytes, 0,
+                  GlobalStatics_9.SECURE_BUFFER.position);
           GlobalStatics_10.LOGIN_STATE = 4;
           return;
         }

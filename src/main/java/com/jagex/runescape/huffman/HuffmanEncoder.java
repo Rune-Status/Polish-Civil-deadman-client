@@ -97,15 +97,15 @@ public final class HuffmanEncoder {
     for (var8 = var6 << 3; var1 > var5; ++var5) {
       int var9 = var4[var5] & 255;
       int var10 = this.lengths[var9];
-      byte var11 = this.codewords[var9];
-      if (var11 == 0) {
+      byte codeword = this.codewords[var9];
+      if (codeword == 0) {
         throw new RuntimeException("No codeword for data value " + var9);
       }
 
       int var12 = var8 >> 3;
       int var13 = var8 & 7;
-      var8 += var11;
-      int var14 = var12 + (var13 + var11 - 1 >> 3);
+      var8 += codeword;
+      int var14 = var12 + (var13 + codeword - 1 >> 3);
       var7 &= -var13 >> 31;
       var13 += 24;
       var3[var12] = (byte) (var7 = var7 | var10 >>> var13);
