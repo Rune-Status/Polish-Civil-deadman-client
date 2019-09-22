@@ -10,7 +10,6 @@ java_library(
         "opengl/**/*.java",
     ]),
     deps = [
-        "//lib:client.jar",
         "//lib:jogamp-fat.jar",
         "//src/main/java/com/jagex/runescape/image_producer",
         "//src/main/java/com/jagex/runescape/buffer",
