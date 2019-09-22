@@ -5,6 +5,7 @@ import com.jagex.runescape.common.GameStringStatics;
 import com.jagex.runescape.model.SomethingPacket151;
 import com.jagex.runescape.model.Widget;
 import com.jagex.runescape.node.AbstractObjectNodeWrapper;
+import com.jagex.runescape.node.SoftReferenceObjectNodeWrapper;
 
 public final class DummyClass60 {
 
@@ -64,17 +65,7 @@ public final class DummyClass60 {
   }
 
   public static AbstractObjectNodeWrapper method913(int var0) {
-    try {
-      if (var0 != 31431) {
-        DummyClass60.method913(123);
-      }
-
-      return (AbstractObjectNodeWrapper) Class.forName(
-          "com.jagex.runescape.node.SoftReferenceObjectNodeWrapper")
-          .newInstance();
-    } catch (Throwable var2) {
-      return null;
-    }
+    return new SoftReferenceObjectNodeWrapper();
   }
 
   public static SomethingPacket151 method914(int var0, int var1, int var2,

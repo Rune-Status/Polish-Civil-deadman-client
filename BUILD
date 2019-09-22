@@ -9,7 +9,7 @@ java_binary(
         "game1",
         "127.0.0.1",
     ],
-    jvm_flags = ["-Djogamp.debug"],
+    jvm_flags = [""],
     main_class = "com.jagex.runescape.launcher.Launcher",
     runtime_deps = [
         "//src/main/java/com/jagex/runescape/common",

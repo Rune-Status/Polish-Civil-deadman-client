@@ -11925,9 +11925,6 @@ public class GlobalStatics_9 {
 
   public static Class method170(int var0, String var1)
       throws ClassNotFoundException {
-    if (var0 != 6092) {
-      GlobalStatics_9.aClass3_Sub28_Sub5Array3041 = null;
-    }
 
     return var1.equals("B") ?
         Byte.TYPE :

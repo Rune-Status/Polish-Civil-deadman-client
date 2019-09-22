@@ -276,7 +276,7 @@ public class SignLink implements Runnable {
                     } else {
                       int var18;
                       if (var2 == 11) {
-                        Field var20 = Class.forName("java.lang.ClassLoader")
+                        Field var20 = ClassLoader.class
                             .getDeclaredField("nativeLibraries");
                         var20.setAccessible(true);
                         Vector var24 =
@@ -456,9 +456,7 @@ public class SignLink implements Runnable {
 
   public final SignLinkRequest method1450(int var1, int var2, int var3,
       int var4, int var5) {
-    int var6 = -68 % ((var5 - 4) / 53);
-    return this
-        .method1435(6, var1 + (var2 << 16), null, (var4 << 16) + var3);
+    return this.method1435(6, var1 + (var2 << 16), null, (var4 << 16) + var3);
   }
 
   public final SignLinkRequest createThread(int var1, int var2, Runnable var3) {

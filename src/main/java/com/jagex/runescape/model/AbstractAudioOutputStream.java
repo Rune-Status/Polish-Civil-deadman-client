@@ -3,11 +3,11 @@ package com.jagex.runescape.model;
 import com.jagex.runescape.common.ArrayUtils;
 import com.jagex.runescape.common.ThreadUtilities;
 import com.jagex.runescape.common.TimeUtilities;
-import com.jagex.runescape.model.AbstractAudioOutputStreamStatics;
 import com.jagex.runescape.sound.AbstractSomethingMusic;
 import com.jagex.runescape.sound.audio.AudioStatics;
 import com.jagex.runescape.sound.audio.AudioStreamEncoder;
 import com.jagex.runescape.sound.audio.AudioStreamEncoder3Statics;
+import java.awt.Component;
 import javax.sound.sampled.LineUnavailableException;
 
 public class AbstractAudioOutputStream {
@@ -327,4 +327,8 @@ public class AbstractAudioOutputStream {
     this.samples = null;
   }
 
+  public void bind(Component component) throws Exception {
+    throw new IllegalStateException(
+        "Tried to bind undefined audio output stream");
+  }
 }

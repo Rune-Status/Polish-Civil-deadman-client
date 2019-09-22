@@ -5,14 +5,15 @@ import com.jagex.runescape.common.GameString;
 import com.jagex.runescape.common.GameStringStatics;
 import com.jagex.runescape.model.AbstractAudioOutputStream;
 import com.jagex.runescape.model.AbstractAudioOutputStreamStatics;
-import com.jagex.runescape.sound.audio.AudioStatics;
-import com.jagex.runescape.sound.audio.AudioStreamEncoder3Statics;
 import com.jagex.runescape.model.AudioWorker;
+import com.jagex.runescape.model.BufferedAudioOutputStream;
 import com.jagex.runescape.model.Interface4;
 import com.jagex.runescape.model.OndemandRequester;
 import com.jagex.runescape.model.SignLink;
 import com.jagex.runescape.model.SignLinkAudioOutputStream;
 import com.jagex.runescape.opengl.GlTexture2d;
+import com.jagex.runescape.sound.audio.AudioStatics;
+import com.jagex.runescape.sound.audio.AudioStreamEncoder3Statics;
 import java.awt.Component;
 
 public final class DummyClass43 {
@@ -58,11 +59,9 @@ public final class DummyClass43 {
       }
 
       try {
-        AbstractAudioOutputStream var9 =
-            (AbstractAudioOutputStream) Class.forName(
-                "com.jagex.runescape.model.BufferedAudioOutputStream")
-                .newInstance();
+        AbstractAudioOutputStream var9 = new BufferedAudioOutputStream();
         var9.sampleRate = var0;
+        var9.bind(var2);
         var9.samples = new int[(AudioStatics.STEREO ? 2 : 1) * 256];
         var9.sampleBufferSize = (var0 & 0xfffffc00) + 1024;
         if (var9.sampleBufferSize > 16384) {
@@ -70,7 +69,8 @@ public final class DummyClass43 {
         }
 
         var9.setBufferSize(var9.sampleBufferSize);
-        if (GlobalStatics_6.anInt3507 > 0 && AbstractAudioOutputStreamStatics.aClass15_2613
+        if (GlobalStatics_6.anInt3507 > 0
+            && AbstractAudioOutputStreamStatics.aClass15_2613
             == null) {
           AbstractAudioOutputStreamStatics.aClass15_2613 = new AudioWorker();
           AbstractAudioOutputStreamStatics.aClass15_2613.aClass87_350 = var1;
@@ -79,7 +79,8 @@ public final class DummyClass43 {
         }
 
         if (AbstractAudioOutputStreamStatics.aClass15_2613 != null) {
-          if (AbstractAudioOutputStreamStatics.aClass15_2613.aClass155Array352[var3] != null) {
+          if (AbstractAudioOutputStreamStatics.aClass15_2613.aClass155Array352[var3]
+              != null) {
             throw new IllegalArgumentException();
           }
 
@@ -109,7 +110,8 @@ public final class DummyClass43 {
           }
 
           if (AbstractAudioOutputStreamStatics.aClass15_2613 != null) {
-            if (AbstractAudioOutputStreamStatics.aClass15_2613.aClass155Array352[var3] != null) {
+            if (AbstractAudioOutputStreamStatics.aClass15_2613.aClass155Array352[var3]
+                != null) {
               throw new IllegalArgumentException();
             }
 

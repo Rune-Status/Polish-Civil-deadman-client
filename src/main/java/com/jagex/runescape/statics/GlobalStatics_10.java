@@ -16,6 +16,7 @@ import com.jagex.runescape.model.AbstractImageProducer;
 import com.jagex.runescape.model.AbstractModel;
 import com.jagex.runescape.model.AnimationSomething;
 import com.jagex.runescape.model.AreaSoundEffect;
+import com.jagex.runescape.model.ComponentImageProducer;
 import com.jagex.runescape.sound.SomethingVolumeStatics;
 import com.jagex.runescape.model.Cache;
 import com.jagex.runescape.model.ClientScriptCall;
@@ -513,8 +514,7 @@ public class GlobalStatics_10 {
       try {
         Class var4 = Class.forName(
             "com.jagex.runescape.model.ComponentImageProducer");
-        AbstractImageProducer var8 = (AbstractImageProducer) var4
-            .newInstance();
+        AbstractImageProducer var8 =new ComponentImageProducer();
         var8.setDimensions(var0, false, var1, var3);
         return var8;
       } catch (Throwable var6) {

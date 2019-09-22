@@ -14,8 +14,6 @@ import com.jagex.runescape.model.AbstractFrameRegulator;
 import com.jagex.runescape.model.AbstractTextureSampler;
 import com.jagex.runescape.model.AnimationSequence;
 import com.jagex.runescape.model.AreaSoundEffect;
-import com.jagex.runescape.sound.audio.AudioStatics;
-import com.jagex.runescape.sound.audio.AudioStreamEncoder4;
 import com.jagex.runescape.model.BlockConfig;
 import com.jagex.runescape.model.CollisionMap;
 import com.jagex.runescape.model.DisplayMode;
@@ -27,8 +25,8 @@ import com.jagex.runescape.model.GameStub;
 import com.jagex.runescape.model.GameWorld;
 import com.jagex.runescape.model.ItemConfig;
 import com.jagex.runescape.model.LightIntensity;
-import com.jagex.runescape.model.MilliFrameRegulator;
 import com.jagex.runescape.model.NPC;
+import com.jagex.runescape.model.NanoFrameRegulator;
 import com.jagex.runescape.model.ObjectCache;
 import com.jagex.runescape.model.Parameter;
 import com.jagex.runescape.model.RenderAnimation;
@@ -93,6 +91,8 @@ import com.jagex.runescape.scene.SceneSomething;
 import com.jagex.runescape.scene.SceneSomething2;
 import com.jagex.runescape.scene.SomethingSceneJ;
 import com.jagex.runescape.settings.SettingsStatics;
+import com.jagex.runescape.sound.audio.AudioStatics;
+import com.jagex.runescape.sound.audio.AudioStreamEncoder4;
 import com.jagex.runescape.sound.effect.SomethingSoundEffectStatics;
 import com.jagex.runescape.sprite.SoftwareIndexedColorSprite;
 import com.jagex.runescape.sprite.SoftwareIndexedColorSpriteStatics;
@@ -730,16 +730,7 @@ public final class GlobalStatics_0 {
   }
 
   public static AbstractFrameRegulator method1012(byte var0) {
-    try {
-      if (var0 != -31) {
-        GlobalStatics_0.aClass3_Sub28_Sub16_637 = null;
-      }
-
-      return (AbstractFrameRegulator) Class.forName(
-          "com.jagex.runescape.model.NanoFrameRegulator").newInstance();
-    } catch (Throwable var2) {
-      return new MilliFrameRegulator();
-    }
+    return new NanoFrameRegulator();
   }
 
   public static GameString method1013(byte var0, int var1) {
