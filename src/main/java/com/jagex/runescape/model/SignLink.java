@@ -31,7 +31,6 @@ public class SignLink implements Runnable {
   private final String gameName;
   private SignLinkRequest aClass64_1213;
   private final int anInt1215;
-  private UnusedInterface0 anInterface1_1217;
 
   public SignLink(int var2, String gameName, int var4)
       throws IOException {
@@ -428,14 +427,6 @@ public class SignLink implements Runnable {
       }
     }
 
-  }
-
-  public final UnusedInterface0 method1446(byte var1) {
-    if (var1 < 71) {
-      this.method1452(null, true);
-    }
-
-    return this.anInterface1_1217;
   }
 
   public final SignLinkRequest method1447(int var1, String var2, Class var3) {

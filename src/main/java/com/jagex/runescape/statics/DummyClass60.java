@@ -71,7 +71,7 @@ public final class DummyClass60 {
       }
 
       return (AbstractObjectNodeWrapper) Class.forName(
-          "com.jagex.runescape.model.SoftReferenceObjectNodeWrapper")
+          "com.jagex.runescape.node.SoftReferenceObjectNodeWrapper")
           .newInstance();
     } catch (Throwable var2) {
       return null;
