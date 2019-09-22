@@ -1,6 +1,7 @@
 package com.jagex.runescape.model;
 
 import com.jagex.runescape.node.Node;
+import com.jagex.runescape.sound.SomethingMusic0;
 import com.jagex.runescape.statics.GlobalStatics_6;
 
 public final class AudioSomethingSomething extends Node {

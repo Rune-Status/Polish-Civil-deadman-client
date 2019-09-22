@@ -1,6 +1,7 @@
 package com.jagex.runescape.statics;
 
 import com.jagex.runescape.buffer.Buffer;
+import com.jagex.runescape.cache.CacheStatics;
 import com.jagex.runescape.common.GameString;
 import com.jagex.runescape.common.GameStringStatics;
 import com.jagex.runescape.common.HashTable;
@@ -14,9 +15,8 @@ import com.jagex.runescape.model.AreaSoundEffect;
 import com.jagex.runescape.model.AudioStreamEncoder1;
 import com.jagex.runescape.model.ClanChatUser;
 import com.jagex.runescape.model.ClientScript;
-import com.jagex.runescape.model.FileUnpacker;
+import com.jagex.runescape.cache.FileUnpacker;
 import com.jagex.runescape.model.FloorUnderlay;
-import com.jagex.runescape.model.GZipDecompressor;
 import com.jagex.runescape.model.GameObjectConfig;
 import com.jagex.runescape.model.GameWorld;
 import com.jagex.runescape.model.HintMarker;
@@ -36,12 +36,13 @@ import com.jagex.runescape.model.SocketStream;
 import com.jagex.runescape.model.SoftwareDirectColorSprite;
 import com.jagex.runescape.model.SoftwareModel;
 import com.jagex.runescape.model.SomethingLight0;
-import com.jagex.runescape.model.SomethingMusic0;
+import com.jagex.runescape.sound.MidiSomethingStatics;
+import com.jagex.runescape.sound.SomethingMusic0;
 import com.jagex.runescape.model.SomethingPacket151;
 import com.jagex.runescape.scene.SomethingSceneI;
 import com.jagex.runescape.model.SomethingTexture1;
 import com.jagex.runescape.model.SomethingTexture4;
-import com.jagex.runescape.model.SoundEffect;
+import com.jagex.runescape.sound.SoundEffect;
 import com.jagex.runescape.model.StillGraphic;
 import com.jagex.runescape.model.StillGraphicNode;
 import com.jagex.runescape.model.Widget;
@@ -96,7 +97,6 @@ public class GlobalStatics_6 {
   public static int anInt2330;
   public static int windowWidth;
   public static int anInt2500;
-  public static GZipDecompressor aClass49_2505 = new GZipDecompressor();
   public static GameString aClass94_2518 = GameStringStatics
       .create("Poser");
   public static byte[][] landscapesData;
@@ -531,7 +531,7 @@ public class GlobalStatics_6 {
     GlobalStatics_6.fileUnpacker22 = null;
     GameStringStatics.aClass94_2526 = null;
     GameStringStatics.aClass94_2499 = null;
-    GlobalStatics_6.aClass49_2505 = null;
+    CacheStatics.aClass49_2505 = null;
     GlobalStatics_6.aClass94_2518 = null;
   }
 
@@ -1715,7 +1715,7 @@ public class GlobalStatics_6 {
     if (var3 <= 71) {
       return null;
     } else {
-      int[] var6 = bases.getChildIds((byte) -128, var4);
+      int[] var6 = bases.getChildIds(var4);
 
       for (int i : var6) {
         byte[] var8 = bases.getBytes(i, var4, 0);
@@ -3724,7 +3724,7 @@ public class GlobalStatics_6 {
       } else {
         SoundEffect var11 = GlobalStatics_9.aClass135Array2131[var1];
         if (var11 == null) {
-          var11 = GlobalStatics_4.method1811(GlobalStatics_5.soundEffects,
+          var11 = MidiSomethingStatics.method1811(GlobalStatics_5.soundEffects,
               GlobalStatics_9.anIntArray2550[var1], 0);
           if (var11 == null) {
             continue;

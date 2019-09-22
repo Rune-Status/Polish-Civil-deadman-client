@@ -3,7 +3,7 @@ package com.jagex.runescape.statics;
 import com.jagex.runescape.model.WorldMapLabel;
 import com.jagex.runescape.common.GameString;
 import com.jagex.runescape.common.GameStringStatics;
-import com.jagex.runescape.model.FileUnpacker;
+import com.jagex.runescape.cache.FileUnpacker;
 import com.jagex.runescape.model.GameWorldSomething;
 import com.jagex.runescape.model.SomethingFont;
 import com.jagex.runescape.opengl.GlRenderer;

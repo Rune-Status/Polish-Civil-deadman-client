@@ -9,13 +9,12 @@ import com.jagex.runescape.common.HashTable;
 import com.jagex.runescape.model.AbstractDirectColorSprite;
 import com.jagex.runescape.model.AbstractTextureSampler;
 import com.jagex.runescape.model.AreaSoundEffect;
-import com.jagex.runescape.model.BufferObject;
 import com.jagex.runescape.model.FileOnDisk;
-import com.jagex.runescape.model.FileUnpacker;
+import com.jagex.runescape.cache.FileUnpacker;
 import com.jagex.runescape.model.FloorUnderlay;
 import com.jagex.runescape.model.GameObjectConfig;
 import com.jagex.runescape.model.MapScene;
-import com.jagex.runescape.model.MidiFile;
+import com.jagex.runescape.sound.MidiFile;
 import com.jagex.runescape.model.NpcConfiguration;
 import com.jagex.runescape.model.Player;
 import com.jagex.runescape.model.SignLink;
@@ -724,29 +723,6 @@ public class GlobalStatics_2 {
           }
         }
       }
-    }
-  }
-
-  public static Object method890(boolean var0, int var1, byte[] var2) {
-    if (var2 == null) {
-      return null;
-    } else {
-      if (var1 >= -67) {
-        GlobalStatics_2.method891(19);
-      }
-
-      if (var2.length > 136 && !DummyClass38.aBoolean732) {
-        try {
-          BufferObject var3 = (BufferObject) Class.forName(
-              "com.jagex.runescape.model.NativeBufferObject").newInstance();
-          var3.put(400, var2);
-          return var3;
-        } catch (Throwable var4) {
-          DummyClass38.aBoolean732 = true;
-        }
-      }
-
-      return var0 ? GlobalStatics_9.method873((byte) 62, var2) : var2;
     }
   }
 

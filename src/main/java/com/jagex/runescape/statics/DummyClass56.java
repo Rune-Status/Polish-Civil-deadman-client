@@ -4,14 +4,13 @@ import com.jagex.runescape.model.Widget;
 import com.jagex.runescape.model.WidgetUpdate;
 import com.jagex.runescape.common.GameString;
 import com.jagex.runescape.common.GameStringStatics;
-import com.jagex.runescape.model.FileUnpacker;
+import com.jagex.runescape.cache.FileUnpacker;
 import com.jagex.runescape.model.Mobile;
 
 public final class DummyClass56 {
 
   public static int spawnSceneY;
   public static Widget aClass11_1453;
-  public static GameString[] aClass94Array1454;
   public static GameString aClass94_1455 = GameStringStatics
       .create(" loggt sich aus)3");
 
@@ -34,7 +33,7 @@ public final class DummyClass56 {
   public static void method1646(boolean var0) {
     DummyClass56.aClass94_1455 = null;
 
-    DummyClass56.aClass94Array1454 = null;
+    GameStringStatics.aClass94Array1454 = null;
     DummyClass56.aClass11_1453 = null;
   }
 
@@ -69,27 +68,6 @@ public final class DummyClass56 {
     if (var0 != 21) {
       DummyClass56.aClass11_1453 = null;
     }
-  }
-
-  public static int method1651(int var0, int var1, int var2) {
-    int var3;
-    if (var2 < var1) {
-      var3 = var2;
-      var2 = var1;
-      var1 = var3;
-    }
-
-    while (var1 != 0) {
-      var3 = var2 % var1;
-      var2 = var1;
-      var1 = var3;
-    }
-
-    if (var0 != 19067) {
-      DummyClass56.aClass94Array1454 = null;
-    }
-
-    return var2;
   }
 
 }

@@ -1,6 +1,7 @@
 package com.jagex.runescape.statics;
 
 import com.jagex.runescape.buffer.Buffer;
+import com.jagex.runescape.cache.CacheStatics;
 import com.jagex.runescape.camera.CameraStatics;
 import com.jagex.runescape.common.GameString;
 import com.jagex.runescape.common.GameStringStatics;
@@ -9,7 +10,7 @@ import com.jagex.runescape.model.AbstractFont;
 import com.jagex.runescape.model.AnimationSequence;
 import com.jagex.runescape.model.BitVariable;
 import com.jagex.runescape.model.CollisionMap;
-import com.jagex.runescape.model.FileUnpacker;
+import com.jagex.runescape.cache.FileUnpacker;
 import com.jagex.runescape.model.FloorOverlay;
 import com.jagex.runescape.model.FloorUnderlay;
 import com.jagex.runescape.model.GameBuffer;
@@ -339,46 +340,10 @@ public class GlobalStatics_7 {
         null;
   }
 
-  public static byte[] method623(byte var0, byte[] var1) {
-    if (var0 > -112) {
-      GlobalStatics_7.createSprites((byte) 43, -121, null);
-    }
-
-    Buffer var2 = new Buffer(var1);
-    int var3 = var2.readUnsignedByte();
-    int var4 = var2.readInt();
-    if (var4 >= 0 && (GlobalStatics_3.anInt1108 == 0
-        || GlobalStatics_3.anInt1108 >= var4)) {
-      if (var3 == 0) {
-        byte[] var8 = new byte[var4];
-        var2.copy(0, var4, var8);
-        return var8;
-      } else {
-        int var5 = var2.readInt();
-        if (var5 >= 0 && (GlobalStatics_3.anInt1108 == 0
-            || GlobalStatics_3.anInt1108 >= var5)) {
-          byte[] var6 = new byte[var5];
-          if (var3 == 1) {
-            BZipDecompressor.method1640(var6, var5, var1, 9);
-          } else {
-            GlobalStatics_6.aClass49_2505
-                .decompress(var6, var2, false);
-          }
-
-          return var6;
-        } else {
-          throw new RuntimeException();
-        }
-      }
-    } else {
-      throw new RuntimeException();
-    }
-  }
-
   public static void method624(int var0) {
     GlobalStatics_7.aClass94_3661 = null;
     if (var0 != -1) {
-      GlobalStatics_7.method623((byte) -86, null);
+      CacheStatics.method623((byte) -86, null);
     }
   }
 

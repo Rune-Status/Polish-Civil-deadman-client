@@ -7,7 +7,7 @@ import com.jagex.runescape.buffer.Buffer;
 import com.jagex.runescape.common.GameString;
 import com.jagex.runescape.common.GameStringStatics;
 import com.jagex.runescape.model.FileSystem;
-import com.jagex.runescape.model.FileUnpacker;
+import com.jagex.runescape.cache.FileUnpacker;
 import com.jagex.runescape.scene.SceneGraphTile;
 import com.jagex.runescape.scene.SceneNode;
 import com.jagex.runescape.scene.SceneSomething;

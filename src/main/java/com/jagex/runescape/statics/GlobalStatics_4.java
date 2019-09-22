@@ -1,9 +1,8 @@
 package com.jagex.runescape.statics;
 
-import com.jagex.runescape.buffer.Buffer;
+import com.jagex.runescape.cache.BZipDecompressorStatics;
 import com.jagex.runescape.common.GameStringStatics;
 import com.jagex.runescape.model.AnimationSequence;
-import com.jagex.runescape.model.FileUnpacker;
 import com.jagex.runescape.model.FloorOverlay;
 import com.jagex.runescape.model.GameException;
 import com.jagex.runescape.model.GameObject;
@@ -17,7 +16,6 @@ import com.jagex.runescape.scene.SomethingSceneI;
 import com.jagex.runescape.scene.SomethingSceneJ;
 import com.jagex.runescape.scene.SomethingSceneTile;
 import com.jagex.runescape.scene.SomethingTilek;
-import com.jagex.runescape.model.SoundEffect;
 import com.jagex.runescape.node.Deque;
 import com.jagex.runescape.opengl.GLStatics;
 import com.jagex.runescape.opengl.GlRenderer;
@@ -43,7 +41,6 @@ public class GlobalStatics_4 {
   public static int anInt3627;
   public static int anInt3630;
   public static int anInt3631;
-  public static int[] anIntArray1690;
   public static int anInt1691 = -1;
   public static int anInt1692;
   public static int[] KEY_QUEUE = new int[128];
@@ -300,7 +297,7 @@ public class GlobalStatics_4 {
       GlobalStatics_4.clear7(84);
     }
 
-    GlobalStatics_4.anIntArray1690 = null;
+    BZipDecompressorStatics.anIntArray1690 = null;
     GlobalStatics_4.KEY_QUEUE = null;
     GameStringStatics.aClass94_1694 = null;
     GameStringStatics.aClass94_1696 = null;
@@ -928,16 +925,6 @@ public class GlobalStatics_4 {
     }
   }
 
-  public static int method1291(int var0, int var1) {
-    int var2;
-    for (
-        var2 = (int) Math.pow(var0, 1.0D / var1) + 1;
-        GlobalStatics_9.method2028(var1, var2, -122) > var0; --var2) {
-    }
-
-    return var2;
-  }
-
   public static void method906(byte var0) {
     GameStringStatics.aClass94_422 = null;
     if (var0 != 112) {
@@ -947,8 +934,4 @@ public class GlobalStatics_4 {
     GameStringStatics.aClass94_431 = null;
   }
 
-  public static SoundEffect method1811(FileUnpacker var0, int var1, int var2) {
-    byte[] var3 = var0.getBytes(var1, var2);
-    return var3 == null ? null : new SoundEffect(new Buffer(var3));
-  }
 }

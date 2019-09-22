@@ -19,7 +19,6 @@ import com.jagex.runescape.model.AudioStreamEncoder1;
 import com.jagex.runescape.model.AudioStreamEncoder2;
 import com.jagex.runescape.model.AudioStreamEncoder4;
 import com.jagex.runescape.model.BitVariable;
-import com.jagex.runescape.model.BufferObject;
 import com.jagex.runescape.model.BufferedFile;
 import com.jagex.runescape.model.ByteArrayNode;
 import com.jagex.runescape.model.Cache;
@@ -29,7 +28,7 @@ import com.jagex.runescape.model.CollisionMap;
 import com.jagex.runescape.model.Cursor;
 import com.jagex.runescape.model.DisplayMode;
 import com.jagex.runescape.model.FileOnDisk;
-import com.jagex.runescape.model.FileUnpacker;
+import com.jagex.runescape.cache.FileUnpacker;
 import com.jagex.runescape.model.FloorOverlay;
 import com.jagex.runescape.model.FloorUnderlay;
 import com.jagex.runescape.model.GameBuffer;
@@ -42,8 +41,9 @@ import com.jagex.runescape.model.Inventory;
 import com.jagex.runescape.model.ItemConfig;
 import com.jagex.runescape.model.Keyboard;
 import com.jagex.runescape.model.MapScene;
-import com.jagex.runescape.model.MidiFile;
-import com.jagex.runescape.model.MidiSomething;
+import com.jagex.runescape.sound.MidiFile;
+import com.jagex.runescape.sound.MidiInstrumentStatics;
+import com.jagex.runescape.sound.MidiSomething;
 import com.jagex.runescape.model.Mobile;
 import com.jagex.runescape.model.Model;
 import com.jagex.runescape.model.Mouse;
@@ -63,7 +63,10 @@ import com.jagex.runescape.model.SoftwareDirectFullColorSprite;
 import com.jagex.runescape.model.SoftwareFont;
 import com.jagex.runescape.model.SomethingFont;
 import com.jagex.runescape.model.SomethingLight0;
-import com.jagex.runescape.model.SomethingMusic0;
+import com.jagex.runescape.sound.MidiSomethingStatics;
+import com.jagex.runescape.sound.SomethingMidiFile0Statics;
+import com.jagex.runescape.sound.SomethingMidiIStatics;
+import com.jagex.runescape.sound.SomethingMusic0;
 import com.jagex.runescape.model.SomethingOtherWorldMap;
 import com.jagex.runescape.model.SomethingPacket151;
 import com.jagex.runescape.model.SomethingQuickChat;
@@ -71,7 +74,8 @@ import com.jagex.runescape.model.SomethingQuickChatK;
 import com.jagex.runescape.model.SomethingTexture3;
 import com.jagex.runescape.model.SomethingVolume15;
 import com.jagex.runescape.model.SomethingWorldMapy;
-import com.jagex.runescape.model.SoundEffect;
+import com.jagex.runescape.sound.SomethingSoundEffectStatics;
+import com.jagex.runescape.sound.SoundEffect;
 import com.jagex.runescape.model.SpawnedGameObject;
 import com.jagex.runescape.model.SpotAnimationConfig;
 import com.jagex.runescape.model.Structure;
@@ -460,125 +464,6 @@ public class GlobalStatics_9 {
   public static int[] BIT_MASKS = new int[32];
   public static int anInt2290;
   public static int anInt2291;
-  public static byte[] aByteArray1117 = {
-      (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2,
-      (byte) 2, (byte) 2,
-      (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2,
-      (byte) 2, (byte) 2,
-      (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2,
-      (byte) 2, (byte) 2,
-      (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2,
-      (byte) 2, (byte) 2,
-      (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2,
-      (byte) 2, (byte) 2,
-      (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2,
-      (byte) 2, (byte) 2,
-      (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2,
-      (byte) 2, (byte) 2,
-      (byte) 2, (byte) 1, (byte) 1, (byte) 1, (byte) 1, (byte) 1, (byte) 1,
-      (byte) 1, (byte) 1,
-      (byte) 1, (byte) 1, (byte) 1, (byte) 1, (byte) 1, (byte) 1, (byte) 1,
-      (byte) 1, (byte) 1,
-      (byte) 1, (byte) 1, (byte) 1, (byte) 1, (byte) 1, (byte) 1, (byte) 1,
-      (byte) 1, (byte) 1,
-      (byte) 1, (byte) 1, (byte) 1, (byte) 1, (byte) 1, (byte) 1, (byte) 2,
-      (byte) 2, (byte) 2,
-      (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2,
-      (byte) 2, (byte) 2,
-      (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 0, (byte) 1, (byte) 2,
-      (byte) 1, (byte) 0,
-      (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0,
-      (byte) 0, (byte) 0,
-      (byte) 0, (byte) 0
-  };
-  public static boolean[] aBooleanArray919;
-  public static int[] anIntArray925;
-  public static int[] anIntArray927;
-  public static int[] anIntArray928 = {256, 128, 86, 64};
-  public static float[] aFloatArray929 = {
-      1.0649863E-7F, 1.1341951E-7F, 1.2079015E-7F, 1.2863978E-7F, 1.369995E-7F,
-      1.459025E-7F,
-      1.5538409E-7F, 1.6548181E-7F, 1.7623574E-7F, 1.8768856E-7F, 1.998856E-7F,
-      2.128753E-7F,
-      2.2670913E-7F, 2.4144197E-7F, 2.5713223E-7F, 2.7384212E-7F, 2.9163792E-7F,
-      3.1059022E-7F,
-      3.307741E-7F, 3.5226967E-7F, 3.7516213E-7F, 3.995423E-7F, 4.255068E-7F,
-      4.5315863E-7F,
-      4.8260745E-7F, 5.1397E-7F, 5.4737063E-7F, 5.829419E-7F, 6.208247E-7F,
-      6.611694E-7F,
-      7.041359E-7F, 7.4989464E-7F, 7.98627E-7F, 8.505263E-7F, 9.057983E-7F,
-      9.646621E-7F,
-      1.0273513E-6F, 1.0941144E-6F, 1.1652161E-6F, 1.2409384E-6F, 1.3215816E-6F,
-      1.4074654E-6F,
-      1.4989305E-6F, 1.5963394E-6F, 1.7000785E-6F, 1.8105592E-6F, 1.9282195E-6F,
-      2.053526E-6F,
-      2.1869757E-6F, 2.3290977E-6F, 2.4804558E-6F, 2.6416496E-6F, 2.813319E-6F,
-      2.9961443E-6F,
-      3.1908505E-6F, 3.39821E-6F, 3.619045E-6F, 3.8542307E-6F, 4.1047006E-6F,
-      4.371447E-6F,
-      4.6555283E-6F, 4.958071E-6F, 5.280274E-6F, 5.623416E-6F, 5.988857E-6F,
-      6.3780467E-6F,
-      6.7925284E-6F, 7.2339453E-6F, 7.704048E-6F, 8.2047E-6F, 8.737888E-6F,
-      9.305725E-6F,
-      9.910464E-6F, 1.0554501E-5F, 1.1240392E-5F, 1.1970856E-5F, 1.2748789E-5F,
-      1.3577278E-5F,
-      1.4459606E-5F, 1.5399271E-5F, 1.6400005E-5F, 1.7465769E-5F, 1.8600793E-5F,
-      1.9809577E-5F,
-      2.1096914E-5F, 2.2467912E-5F, 2.3928002E-5F, 2.5482977E-5F, 2.7139005E-5F,
-      2.890265E-5F,
-      3.078091E-5F, 3.2781227E-5F, 3.4911533E-5F, 3.718028E-5F, 3.9596467E-5F,
-      4.2169668E-5F,
-      4.491009E-5F, 4.7828602E-5F, 5.0936775E-5F, 5.424693E-5F, 5.7772202E-5F,
-      6.152657E-5F,
-      6.552491E-5F, 6.9783084E-5F, 7.4317984E-5F, 7.914758E-5F, 8.429104E-5F,
-      8.976875E-5F,
-      9.560242E-5F, 1.0181521E-4F, 1.0843174E-4F, 1.1547824E-4F, 1.2298267E-4F,
-      1.3097477E-4F,
-      1.3948625E-4F, 1.4855085E-4F, 1.5820454E-4F, 1.6848555E-4F, 1.7943469E-4F,
-      1.9109536E-4F,
-      2.0351382E-4F, 2.167393E-4F, 2.3082423E-4F, 2.4582449E-4F, 2.6179955E-4F,
-      2.7881275E-4F,
-      2.9693157E-4F, 3.1622787E-4F, 3.3677815E-4F, 3.5866388E-4F, 3.8197188E-4F,
-      4.0679457E-4F,
-      4.3323037E-4F, 4.613841E-4F, 4.913675E-4F, 5.2329927E-4F, 5.573062E-4F,
-      5.935231E-4F,
-      6.320936E-4F, 6.731706E-4F, 7.16917E-4F, 7.635063E-4F, 8.1312325E-4F,
-      8.6596457E-4F,
-      9.2223985E-4F, 9.821722E-4F, 0.0010459992F, 0.0011139743F, 0.0011863665F,
-      0.0012634633F,
-      0.0013455702F, 0.0014330129F, 0.0015261382F, 0.0016253153F, 0.0017309374F,
-      0.0018434235F,
-      0.0019632196F, 0.0020908006F, 0.0022266726F, 0.0023713743F, 0.0025254795F,
-      0.0026895993F,
-      0.0028643848F, 0.0030505287F, 0.003248769F, 0.0034598925F, 0.0036847359F,
-      0.0039241905F,
-      0.0041792067F, 0.004450795F, 0.004740033F, 0.005048067F, 0.0053761187F,
-      0.005725489F,
-      0.0060975635F, 0.0064938175F, 0.0069158226F, 0.0073652514F, 0.007843887F,
-      0.008353627F,
-      0.008896492F, 0.009474637F, 0.010090352F, 0.01074608F, 0.011444421F,
-      0.012188144F, 0.012980198F,
-      0.013823725F, 0.014722068F, 0.015678791F, 0.016697686F, 0.017782796F,
-      0.018938422F,
-      0.020169148F, 0.021479854F, 0.022875736F, 0.02436233F, 0.025945531F,
-      0.027631618F, 0.029427277F,
-      0.031339627F, 0.03337625F, 0.035545226F, 0.037855156F, 0.0403152F,
-      0.042935107F, 0.045725275F,
-      0.048696756F, 0.05186135F, 0.05523159F, 0.05882085F, 0.062643364F,
-      0.06671428F, 0.07104975F,
-      0.075666964F, 0.08058423F, 0.08582105F, 0.09139818F, 0.097337745F,
-      0.1036633F, 0.11039993F,
-      0.11757434F, 0.12521498F, 0.13335215F, 0.14201812F, 0.15124726F,
-      0.16107617F, 0.1715438F,
-      0.18269168F, 0.19456401F, 0.20720787F, 0.22067343F, 0.23501402F,
-      0.25028655F, 0.26655158F,
-      0.28387362F, 0.3023213F, 0.32196787F, 0.34289113F, 0.36517414F,
-      0.3889052F, 0.41417846F,
-      0.44109413F, 0.4697589F, 0.50028646F, 0.53279793F, 0.5674221F, 0.6042964F,
-      0.64356697F,
-      0.6853896F, 0.72993004F, 0.777365F, 0.8278826F, 0.88168305F, 0.9389798F,
-      1.0F
-  };
   public static int anInt2530 = 2301979;
   public static int[] anIntArray2533;
   public static int anInt2534;
@@ -623,14 +508,6 @@ public class GlobalStatics_9 {
   public static int[] anIntArray623 = new int[6];
   public static int[] anIntArray628 = new int[6];
   public static int[] anIntArray630 = new int[6];
-  public static int[] anIntArray1591;
-  public static int[] anIntArray1594 = new int[0x8000];
-  public static int[] anIntArray1598;
-  public static int[] anIntArray1599;
-  public static int[] anIntArray1600;
-  public static int[] anIntArray1601;
-  public static int[] anIntArray1602;
-  public static int[] anIntArray1603;
   public static SoftwareIndexedColorSprite aClass109_Sub1_2631;
   public static int anInt2633;
   public static short[][] aShortArrayArray2634 = {
@@ -3441,7 +3318,7 @@ public class GlobalStatics_9 {
           if (var1.aClass3_Sub24_Sub1_2312 == null) {
             if (var1.anInt2332 >= 0) {
               SoundEffect var8 =
-                  GlobalStatics_4
+                  MidiSomethingStatics
                       .method1811(GlobalStatics_5.soundEffects, var1.anInt2332,
                           0);
               if (var8 != null) {
@@ -3468,7 +3345,7 @@ public class GlobalStatics_9 {
               <= 0) {
             int var13 = (int) (var1.anIntArray2333.length * Math.random());
             SoundEffect var14 =
-                GlobalStatics_4.method1811(GlobalStatics_5.soundEffects,
+                MidiSomethingStatics.method1811(GlobalStatics_5.soundEffects,
                     var1.anIntArray2333[var13],
                     0);
             if (var14 != null) {
@@ -4459,40 +4336,10 @@ public class GlobalStatics_9 {
     }
   }
 
-  public static int method513(int var0, int var1) {
-    int var2 = 0;
-    if (var0 < 0 || var0 >= 65536) {
-      var2 += 16;
-      var0 >>>= 16;
-    }
-
-    if (var0 >= 256) {
-      var2 += 8;
-      var0 >>>= 8;
-    }
-
-    if (var0 >= 16) {
-      var2 += 4;
-      var0 >>>= 4;
-    }
-
-    if (var1 <= var0) {
-      var0 >>>= 2;
-      var2 += 2;
-    }
-
-    if (var0 >= 1) {
-      var0 >>>= 1;
-      ++var2;
-    }
-
-    return var0 + var2;
-  }
-
   public static int method514(int var0, int var1, byte var2, int var3) {
     var0 &= 3;
     if (var2 >= -66) {
-      GlobalStatics_9.method513(-92, 76);
+      MidiInstrumentStatics.method513(-92, 76);
     }
 
     return var0 == 0 ? var1 : var0 == 1
@@ -4840,26 +4687,6 @@ public class GlobalStatics_9 {
       return (var4 & 133802063) >> 19;
     } else {
       return 88;
-    }
-  }
-
-  public static byte[] method1985(int var0, Object var1, boolean var2) {
-    if (var1 == null) {
-      return null;
-    } else if (var1 instanceof byte[]) {
-      byte[] var5 = (byte[]) var1;
-      return var2 ? GlobalStatics_9.method873((byte) 62, var5) : var5;
-    } else {
-      if (var0 > -118) {
-        GlobalStatics_9.clear21(19);
-      }
-
-      if (var1 instanceof BufferObject) {
-        BufferObject var3 = (BufferObject) var1;
-        return var3.get(26);
-      } else {
-        throw new IllegalArgumentException();
-      }
     }
   }
 
@@ -6735,25 +6562,6 @@ public class GlobalStatics_9 {
       FileUnpacker var3) {
     return GlobalStatics_9.loadSprites(var3, var0, var2, -30901) ? var1 == 11
         ? GlobalStatics_9.method1347(-26802) : null : null;
-  }
-
-  public static int method2028(int var0, int var1, int var2) {
-    int var3 = 96 / ((var2 + 75) / 33);
-
-    int var4;
-    for (var4 = 1; var0 > 1; var0 >>= 1) {
-      if ((1 & var0) != 0) {
-        var4 *= var1;
-      }
-
-      var1 *= var1;
-    }
-
-    if (var0 == 1) {
-      return var4 * var1;
-    } else {
-      return var4;
-    }
   }
 
   public static void clear46(byte var0) {
@@ -8779,47 +8587,15 @@ public class GlobalStatics_9 {
   }
 
   public static void clear84() {
-    GlobalStatics_9.aByteArray1117 = null;
-  }
-
-  public static int method1201(int[] var0, int var1) {
-    int var2 = var0[var1];
-    int var3 = -1;
-    int var4 = Integer.MIN_VALUE;
-
-    for (int var5 = 0; var5 < var1; ++var5) {
-      int var6 = var0[var5];
-      if (var6 < var2 && var6 > var4) {
-        var3 = var5;
-        var4 = var6;
-      }
-    }
-
-    return var3;
-  }
-
-  public static int method1203(int[] var0, int var1) {
-    int var2 = var0[var1];
-    int var3 = -1;
-    int var4 = Integer.MAX_VALUE;
-
-    for (int var5 = 0; var5 < var1; ++var5) {
-      int var6 = var0[var5];
-      if (var6 > var2 && var6 < var4) {
-        var3 = var5;
-        var4 = var6;
-      }
-    }
-
-    return var3;
+    SomethingMidiFile0Statics.aByteArray1117 = null;
   }
 
   public static void method1204() {
-    GlobalStatics_9.anIntArray928 = null;
-    GlobalStatics_9.aFloatArray929 = null;
-    GlobalStatics_9.anIntArray925 = null;
-    GlobalStatics_9.anIntArray927 = null;
-    GlobalStatics_9.aBooleanArray919 = null;
+    SomethingMidiIStatics.anIntArray928 = null;
+    SomethingMidiIStatics.aFloatArray929 = null;
+    SomethingMidiIStatics.anIntArray925 = null;
+    SomethingMidiIStatics.anIntArray927 = null;
+    SomethingMidiIStatics.aBooleanArray919 = null;
   }
 
   public static void method405() {
@@ -9521,17 +9297,6 @@ public class GlobalStatics_9 {
         var0 >= ~var2 && var2 < var3.counts.length ? var3.counts[var2] : 0;
   }
 
-  public static byte[] method873(byte var0, byte[] var1) {
-    int var2 = var1.length;
-    byte[] var3 = new byte[var2];
-    if (var0 == 62) {
-      ArrayUtils.copy(var1, 0, var3, 0, var2);
-      return var3;
-    } else {
-      return null;
-    }
-  }
-
   public static void method1011() {
     GlobalStatics_9.anIntArray623 = null;
     GlobalStatics_9.anIntArray622 = null;
@@ -9543,14 +9308,14 @@ public class GlobalStatics_9 {
   }
 
   public static void method1715() {
-    GlobalStatics_9.anIntArray1598 = null;
-    GlobalStatics_9.anIntArray1594 = null;
-    GlobalStatics_9.anIntArray1591 = null;
-    GlobalStatics_9.anIntArray1601 = null;
-    GlobalStatics_9.anIntArray1602 = null;
-    GlobalStatics_9.anIntArray1603 = null;
-    GlobalStatics_9.anIntArray1599 = null;
-    GlobalStatics_9.anIntArray1600 = null;
+    SomethingSoundEffectStatics.anIntArray1598 = null;
+    SomethingSoundEffectStatics.anIntArray1594 = null;
+    SomethingSoundEffectStatics.anIntArray1591 = null;
+    SomethingSoundEffectStatics.anIntArray1601 = null;
+    SomethingSoundEffectStatics.anIntArray1602 = null;
+    SomethingSoundEffectStatics.anIntArray1603 = null;
+    SomethingSoundEffectStatics.anIntArray1599 = null;
+    SomethingSoundEffectStatics.anIntArray1600 = null;
   }
 
   public static void method1342(int[] var0, int[] var1, Player var2, byte var3,
@@ -9940,7 +9705,7 @@ public class GlobalStatics_9 {
       DummyClass21.aClass61_1758.clear(-68);
       int var3 = GlobalStatics_10.worldMaps
           .getFileId(GlobalStatics_6.DETAILS);
-      int[] var4 = GlobalStatics_10.worldMaps.getChildIds((byte) -128, var3);
+      int[] var4 = GlobalStatics_10.worldMaps.getChildIds(var3);
 
       assert var4 != null;
       for (int i : var4) {
@@ -10229,20 +9994,6 @@ public class GlobalStatics_9 {
     }
 
     GlobalStatics_9.aClass93_1772.method1522(var0 ^ -126, var1);
-  }
-
-  public static int method540(int var0, int var1, int var2) {
-    if (var1 == -14314) {
-      int var3;
-      for (var3 = 0; var0 > 0; --var0) {
-        var3 = var3 << 1 | 1 & var2;
-        var2 >>>= 1;
-      }
-
-      return var3;
-    } else {
-      return 116;
-    }
   }
 
   public static void method541(byte var0, boolean var1, GameString var2) {

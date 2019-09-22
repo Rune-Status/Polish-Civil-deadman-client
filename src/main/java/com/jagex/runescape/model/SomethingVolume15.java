@@ -2,6 +2,8 @@ package com.jagex.runescape.model;
 
 import com.jagex.runescape.buffer.Buffer;
 import com.jagex.runescape.node.Node;
+import com.jagex.runescape.sound.MidiSomething;
+import com.jagex.runescape.sound.SomethingMusic0;
 import com.jagex.runescape.statics.GlobalStatics_10;
 
 public final class SomethingVolume15 extends Node {
@@ -479,7 +481,7 @@ public final class SomethingVolume15 extends Node {
                 if ((var9 & 1) == 0) {
                   var7 = var3.method1413(var9 >> 2, 33, var2);
                 } else {
-                  var7 = var3.method1416(10089, var9 >> 2, var2);
+                  var7 = var3.method1416(var9 >> 2, var2);
                 }
 
                 if (var7 == null) {

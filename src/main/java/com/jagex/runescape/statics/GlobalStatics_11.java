@@ -13,23 +13,20 @@ import com.jagex.runescape.model.ClientScriptCall;
 import com.jagex.runescape.model.ClientScriptEnum;
 import com.jagex.runescape.model.CollisionMap;
 import com.jagex.runescape.model.DisplayMode;
-import com.jagex.runescape.model.FileUnpacker;
+import com.jagex.runescape.cache.FileUnpacker;
 import com.jagex.runescape.model.GameWorld;
 import com.jagex.runescape.model.GameWorldSomething;
 import com.jagex.runescape.model.IntegerNode;
 import com.jagex.runescape.model.ItemConfig;
 import com.jagex.runescape.model.LightIntensity;
-import com.jagex.runescape.model.MidiInstrument;
 import com.jagex.runescape.model.Mobile;
 import com.jagex.runescape.model.Parameter;
 import com.jagex.runescape.model.Player;
 import com.jagex.runescape.model.Queue;
 import com.jagex.runescape.model.ScriptState;
-import com.jagex.runescape.model.SomethingMidiI;
-import com.jagex.runescape.model.SomethingMidiInstrument;
-import com.jagex.runescape.model.SomethingMidiOther;
-import com.jagex.runescape.model.SomethingMidik;
-import com.jagex.runescape.model.SomethingMusic0;
+import com.jagex.runescape.sound.MidiInstrumentStatics;
+import com.jagex.runescape.sound.MidiSomethingStatics;
+import com.jagex.runescape.sound.SomethingMusic0;
 import com.jagex.runescape.model.SomethingPacket151;
 import com.jagex.runescape.model.SomethingQuickChat;
 import com.jagex.runescape.model.SomethingQuickChat2;
@@ -55,27 +52,6 @@ public final class GlobalStatics_11 {
   public static int[] anIntArray781 = new int[99];
   public static GameString aClass94_808;
   public static GameString aClass94_809;
-  public static float[] aFloatArray2387;
-  public static float[] aFloatArray2388;
-  public static int[] anIntArray2391;
-  public static SomethingMidik[] aClass152Array2392;
-  public static boolean[] aBooleanArray2393;
-  public static int anInt2396;
-  public static SomethingMidiOther[] aClass150Array2398;
-  public static float[] aFloatArray2399;
-  public static float[] aFloatArray2400;
-  public static int anInt2402;
-  public static float[] aFloatArray2403;
-  public static int anInt2404;
-  public static boolean aBoolean2405;
-  public static SomethingMidiI[] aClass59Array2407;
-  public static int[] anIntArray2409;
-  public static float[] aFloatArray2413;
-  public static int anInt2414;
-  public static float[] aFloatArray2416;
-  public static byte[] aByteArray2417;
-  public static int[] anIntArray2420;
-  public static SomethingMidiInstrument[] aClass71Array2406;
   public static GameString[] titleSuffixes;
   public static boolean aBoolean47;
   public static int anInt48 = 2;
@@ -409,7 +385,7 @@ public final class GlobalStatics_11 {
     byte byte1 = -1;
     GlobalStatics_9.anIntArray1662 = new int[class3_sub28_sub15.anInt3680];
     int k1 = 0;
-    DummyClass56.aClass94Array1454 = new GameString[class3_sub28_sub15.anInt3687];
+    GameStringStatics.aClass94Array1454 = new GameString[class3_sub28_sub15.anInt3687];
     int l1 = 0;
     for (int i2 = 1; i2 < aobj.length; i2++) {
       if (aobj[i2] instanceof Integer) {
@@ -455,7 +431,7 @@ public final class GlobalStatics_11 {
       if (class94.method1528((byte) -42, GameStringStatics.EVENT_OP_BASE)) {
         class94 = class3_sub16.aClass94_2439;
       }
-      DummyClass56.aClass94Array1454[l1++] = class94;
+      GameStringStatics.aClass94Array1454[l1++] = class94;
     }
 
     int j2 = 0;
@@ -531,7 +507,7 @@ public final class GlobalStatics_11 {
           GlobalStatics_9.anIntArray1662 = class54.anIntArray870;
           ai = class3_sub28_sub15.anIntArray3683;
           i1 = class54.anInt877;
-          DummyClass56.aClass94Array1454 = class54.aClass94Array873;
+          GameStringStatics.aClass94Array1454 = class54.aClass94Array873;
           ai1 = class3_sub28_sub15.anIntArray3690;
           continue;
         }
@@ -572,11 +548,11 @@ public final class GlobalStatics_11 {
           continue;
         }
         if (j1 == 35) {
-          GlobalStatics_0.aClass94Array75[l++] = DummyClass56.aClass94Array1454[ai1[i1]];
+          GlobalStatics_0.aClass94Array75[l++] = GameStringStatics.aClass94Array1454[ai1[i1]];
           continue;
         }
         if (j1 == 36) {
-          DummyClass56.aClass94Array1454[ai1[i1]] = GlobalStatics_0.aClass94Array75[--l];
+          GameStringStatics.aClass94Array1454[ai1[i1]] = GlobalStatics_0.aClass94Array75[--l];
           continue;
         }
         if (j1 == 37) {
@@ -614,7 +590,7 @@ public final class GlobalStatics_11 {
           k -= class3_sub28_sub15_1.anInt3678;
           l -= class3_sub28_sub15_1.anInt3682;
           ScriptState class54_1 = new ScriptState();
-          class54_1.aClass94Array873 = DummyClass56.aClass94Array1454;
+          class54_1.aClass94Array873 = GameStringStatics.aClass94Array1454;
           class54_1.anIntArray870 = GlobalStatics_9.anIntArray1662;
           class54_1.anInt877 = i1;
           class54_1.aClass3_Sub28_Sub15_874 = class3_sub28_sub15;
@@ -628,7 +604,7 @@ public final class GlobalStatics_11 {
           GlobalStatics_9.anIntArray1662 = ai2;
           ai1 = class3_sub28_sub15.anIntArray3690;
           ai = class3_sub28_sub15.anIntArray3683;
-          DummyClass56.aClass94Array1454 = aclass94;
+          GameStringStatics.aClass94Array1454 = aclass94;
           continue;
         }
         if (j1 == 42) {
@@ -5419,216 +5395,23 @@ public final class GlobalStatics_11 {
     }
   }
 
-  public static float method358(int var0) {
-    int var1 = var0 & 2097151;
-    int var2 = var0 & Integer.MIN_VALUE;
-    int var3 = (var0 & 2145386496) >> 21;
-    if (var2 != 0) {
-      var1 = -var1;
-    }
-
-    return (float) (var1 * Math.pow(2.0D, var3 - 788));
-  }
-
   public static void method361() {
-    GlobalStatics_11.aByteArray2417 = null;
-    GlobalStatics_11.aClass71Array2406 = null;
-    GlobalStatics_11.aClass59Array2407 = null;
-    GlobalStatics_11.aClass152Array2392 = null;
-    GlobalStatics_11.aClass150Array2398 = null;
-    GlobalStatics_11.aBooleanArray2393 = null;
-    GlobalStatics_11.anIntArray2420 = null;
-    GlobalStatics_11.aFloatArray2403 = null;
-    GlobalStatics_11.aFloatArray2400 = null;
-    GlobalStatics_11.aFloatArray2413 = null;
-    GlobalStatics_11.aFloatArray2416 = null;
-    GlobalStatics_11.aFloatArray2399 = null;
-    GlobalStatics_11.aFloatArray2387 = null;
-    GlobalStatics_11.aFloatArray2388 = null;
-    GlobalStatics_11.anIntArray2391 = null;
-    GlobalStatics_11.anIntArray2409 = null;
-  }
-
-  public static boolean method362(FileUnpacker var0) {
-    if (!GlobalStatics_11.aBoolean2405) {
-      byte[] var1 = var0.getBytes(0, 0);
-      if (var1 == null) {
-        return false;
-      }
-
-      GlobalStatics_11.method367(var1);
-      GlobalStatics_11.aBoolean2405 = true;
-    }
-
-    return true;
-  }
-
-  public static MidiInstrument method363(FileUnpacker var0, int var1,
-      int var2) {
-    if (GlobalStatics_11.method362(var0)) {
-      byte[] var3 = var0.getBytes(var1, var2);
-      return var3 == null ? null : new MidiInstrument(var3);
-    } else {
-      var0.method2129((byte) 95, var2, var1);
-      return null;
-    }
-  }
-
-  public static int method364() {
-    int var0 = GlobalStatics_11.aByteArray2417[GlobalStatics_11.anInt2404]
-        >> GlobalStatics_11.anInt2414
-        & 1;
-    ++GlobalStatics_11.anInt2414;
-    GlobalStatics_11.anInt2404 += GlobalStatics_11.anInt2414 >> 3;
-    GlobalStatics_11.anInt2414 &= 7;
-    return var0;
-  }
-
-  public static void method365(byte[] var0, int var1) {
-    GlobalStatics_11.aByteArray2417 = var0;
-    GlobalStatics_11.anInt2404 = var1;
-    GlobalStatics_11.anInt2414 = 0;
-  }
-
-  public static void method367(byte[] var0) {
-    GlobalStatics_11.method365(var0, 0);
-    GlobalStatics_11.anInt2402 = 1 << GlobalStatics_11.method368(4);
-    GlobalStatics_11.anInt2396 = 1 << GlobalStatics_11.method368(4);
-    GlobalStatics_11.aFloatArray2403 = new float[GlobalStatics_11.anInt2396];
-
-    int var1;
-    int var2;
-    int var3;
-    int var4;
-    int var5;
-    for (var1 = 0; var1 < 2; ++var1) {
-      var2 = var1 != 0 ? GlobalStatics_11.anInt2396
-          : GlobalStatics_11.anInt2402;
-      var3 = var2 >> 1;
-      var4 = var2 >> 2;
-      var5 = var2 >> 3;
-      float[] var6 = new float[var3];
-
-      for (int var7 = 0; var7 < var4; ++var7) {
-        var6[2 * var7] = (float) Math.cos(
-            (4 * var7) * 3.141592653589793D / var2);
-        var6[2 * var7 + 1] =
-            -((float) Math.sin((4 * var7) * 3.141592653589793D / var2));
-      }
-
-      float[] var13 = new float[var3];
-
-      for (int var8 = 0; var8 < var4; ++var8) {
-        var13[2 * var8] =
-            (float) Math.cos((2 * var8 + 1) * 3.141592653589793D / (2 * var2));
-        var13[2 * var8 + 1] =
-            (float) Math.sin((2 * var8 + 1) * 3.141592653589793D / (2 * var2));
-      }
-
-      float[] var14 = new float[var4];
-
-      for (int var9 = 0; var9 < var5; ++var9) {
-        var14[2 * var9] =
-            (float) Math.cos((4 * var9 + 2) * 3.141592653589793D / var2);
-        var14[2 * var9 + 1] =
-            -((float) Math.sin((4 * var9 + 2) * 3.141592653589793D / var2));
-      }
-
-      int[] var15 = new int[var5];
-      int var10 = GlobalStatics_9.method513(var5 - 1, 4);
-
-      for (int var11 = 0; var11 < var5; ++var11) {
-        var15[var11] = GlobalStatics_9.method540(var10, -14314, var11);
-      }
-
-      if (var1 == 0) {
-        GlobalStatics_11.aFloatArray2400 = var6;
-        GlobalStatics_11.aFloatArray2413 = var13;
-        GlobalStatics_11.aFloatArray2416 = var14;
-        GlobalStatics_11.anIntArray2391 = var15;
-      } else {
-        GlobalStatics_11.aFloatArray2399 = var6;
-        GlobalStatics_11.aFloatArray2387 = var13;
-        GlobalStatics_11.aFloatArray2388 = var14;
-        GlobalStatics_11.anIntArray2409 = var15;
-      }
-    }
-
-    var1 = GlobalStatics_11.method368(8) + 1;
-    GlobalStatics_11.aClass71Array2406 = new SomethingMidiInstrument[var1];
-
-    for (var2 = 0; var2 < var1; ++var2) {
-      GlobalStatics_11.aClass71Array2406[var2] = new SomethingMidiInstrument();
-    }
-
-    var2 = GlobalStatics_11.method368(6) + 1;
-
-    for (var3 = 0; var3 < var2; ++var3) {
-      GlobalStatics_11.method368(16);
-    }
-
-    var2 = GlobalStatics_11.method368(6) + 1;
-    GlobalStatics_11.aClass59Array2407 = new SomethingMidiI[var2];
-
-    for (var3 = 0; var3 < var2; ++var3) {
-      GlobalStatics_11.aClass59Array2407[var3] = new SomethingMidiI();
-    }
-
-    var3 = GlobalStatics_11.method368(6) + 1;
-    GlobalStatics_11.aClass152Array2392 = new SomethingMidik[var3];
-
-    for (var4 = 0; var4 < var3; ++var4) {
-      GlobalStatics_11.aClass152Array2392[var4] = new SomethingMidik();
-    }
-
-    var4 = GlobalStatics_11.method368(6) + 1;
-    GlobalStatics_11.aClass150Array2398 = new SomethingMidiOther[var4];
-
-    for (var5 = 0; var5 < var4; ++var5) {
-      GlobalStatics_11.aClass150Array2398[var5] = new SomethingMidiOther();
-    }
-
-    var5 = GlobalStatics_11.method368(6) + 1;
-    GlobalStatics_11.aBooleanArray2393 = new boolean[var5];
-    GlobalStatics_11.anIntArray2420 = new int[var5];
-
-    for (int var12 = 0; var12 < var5; ++var12) {
-      GlobalStatics_11.aBooleanArray2393[var12] =
-          GlobalStatics_11.method364() != 0;
-      GlobalStatics_11.method368(16);
-      GlobalStatics_11.method368(16);
-      GlobalStatics_11.anIntArray2420[var12] = GlobalStatics_11.method368(8);
-    }
-
-  }
-
-  public static int method368(int var0) {
-    int var1 = 0;
-
-    int var2;
-    int var3;
-    for (var2 = 0; var0 >= 8 - GlobalStatics_11.anInt2414; var0 -= var3) {
-      var3 = 8 - GlobalStatics_11.anInt2414;
-      int var4 = (1 << var3) - 1;
-      var1 += (
-          GlobalStatics_11.aByteArray2417[GlobalStatics_11.anInt2404]
-              >> GlobalStatics_11.anInt2414
-              & var4) << var2;
-      GlobalStatics_11.anInt2414 = 0;
-      ++GlobalStatics_11.anInt2404;
-      var2 += var3;
-    }
-
-    if (var0 > 0) {
-      var3 = (1 << var0) - 1;
-      var1 += (
-          GlobalStatics_11.aByteArray2417[GlobalStatics_11.anInt2404]
-              >> GlobalStatics_11.anInt2414
-              & var3) << var2;
-      GlobalStatics_11.anInt2414 += var0;
-    }
-
-    return var1;
+    MidiInstrumentStatics.aByteArray2417 = null;
+    MidiSomethingStatics.aClass71Array2406 = null;
+    MidiInstrumentStatics.aClass59Array2407 = null;
+    MidiInstrumentStatics.aClass152Array2392 = null;
+    MidiInstrumentStatics.aClass150Array2398 = null;
+    MidiInstrumentStatics.aBooleanArray2393 = null;
+    MidiInstrumentStatics.anIntArray2420 = null;
+    MidiInstrumentStatics.aFloatArray2403 = null;
+    MidiInstrumentStatics.aFloatArray2400 = null;
+    MidiInstrumentStatics.aFloatArray2413 = null;
+    MidiInstrumentStatics.aFloatArray2416 = null;
+    MidiInstrumentStatics.aFloatArray2399 = null;
+    MidiInstrumentStatics.aFloatArray2387 = null;
+    MidiInstrumentStatics.aFloatArray2388 = null;
+    MidiInstrumentStatics.anIntArray2391 = null;
+    MidiInstrumentStatics.anIntArray2409 = null;
   }
 
   public static short[] copy(int var0, short[] var1) {

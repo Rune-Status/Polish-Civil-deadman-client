@@ -2,6 +2,7 @@ package com.jagex.runescape.model;
 
 import com.jagex.runescape.common.ArrayUtils;
 
+import com.jagex.runescape.sound.AbstractSomethingMusic;
 import com.jagex.runescape.statics.DummyClass36;
 import com.jagex.runescape.statics.DummyClass60;
 import com.jagex.runescape.statics.GlobalStatics_0;

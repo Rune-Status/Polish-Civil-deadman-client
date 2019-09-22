@@ -12,7 +12,7 @@ import com.jagex.runescape.model.AnimationSequence;
 import com.jagex.runescape.model.AnimationSomething;
 import com.jagex.runescape.model.BlockConfig;
 import com.jagex.runescape.model.ClientScriptCall;
-import com.jagex.runescape.model.FileUnpacker;
+import com.jagex.runescape.cache.FileUnpacker;
 import com.jagex.runescape.model.GameCanvas;
 import com.jagex.runescape.model.HashTableIterator;
 import com.jagex.runescape.model.HintMarker;
@@ -37,6 +37,8 @@ import com.jagex.runescape.opengl.GlEnvironment;
 import com.jagex.runescape.opengl.GlModel;
 import com.jagex.runescape.opengl.GlRenderer;
 import com.jagex.runescape.opengl.GlTexture2d;
+import com.jagex.runescape.sound.FilterPossiblyStatics;
+import com.jagex.runescape.sound.SomethingSoundEffectStatics;
 import com.jagex.runescape.sprite.SoftwareIndexedColorSpriteStatics;
 import java.util.Random;
 
@@ -59,10 +61,6 @@ public class GlobalStatics_8 {
   public static int SUN_COLOR;
   public static boolean aBoolean1951;
   public static int updateMemoryCounter;
-  public static float[][] aFloatArrayArray1431 = new float[2][8];
-  public static float aFloat1433;
-  public static int[][] anIntArrayArray1435 = new int[2][8];
-  public static int anInt1436;
   public static int anInt2088;
   public static GameString aClass94_2089 = GameStringStatics.create("compass");
   public static Widget aClass11_2091;
@@ -267,14 +265,9 @@ public class GlobalStatics_8 {
     var5.anInt3597 = var3;
   }
 
-  public static float method1621(float var0) {
-    float var1 = 32.703197F * (float) Math.pow(2.0D, var0);
-    return var1 * 3.1415927F / 11025.0F;
-  }
-
   public static void method1623() {
-    GlobalStatics_8.aFloatArrayArray1431 = null;
-    GlobalStatics_8.anIntArrayArray1435 = null;
+    FilterPossiblyStatics.aFloatArrayArray1431 = null;
+    SomethingSoundEffectStatics.anIntArrayArray1435 = null;
   }
 
   public static void method2270(Mobile var0, byte var1) {

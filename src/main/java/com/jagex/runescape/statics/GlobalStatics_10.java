@@ -21,7 +21,7 @@ import com.jagex.runescape.model.Cursor;
 import com.jagex.runescape.model.DirectImageProducer;
 import com.jagex.runescape.model.FileCache;
 import com.jagex.runescape.model.FileCacheRequester;
-import com.jagex.runescape.model.FileUnpacker;
+import com.jagex.runescape.cache.FileUnpacker;
 import com.jagex.runescape.model.GameObjectConfig;
 import com.jagex.runescape.model.GameWorld;
 import com.jagex.runescape.model.GroundItem;

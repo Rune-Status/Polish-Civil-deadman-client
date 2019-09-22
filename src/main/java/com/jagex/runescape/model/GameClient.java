@@ -19,7 +19,8 @@ import com.jagex.runescape.opengl.SomethingShadows;
 import com.jagex.runescape.opengl.Texture;
 import com.jagex.runescape.opengl.WaterShader;
 import com.jagex.runescape.settings.SettingsStatics;
-import com.jagex.runescape.statics.BZipDecompressor;
+import com.jagex.runescape.sound.SomethingAudio;
+import com.jagex.runescape.cache.BZipDecompressorStatics;
 import com.jagex.runescape.statics.DummyClass1;
 import com.jagex.runescape.statics.DummyClass10;
 import com.jagex.runescape.statics.DummyClass11;
@@ -1282,7 +1283,7 @@ public final class GameClient extends GameStub {
     GlobalStatics_4.method1133((byte) 81);
     GlobalStatics_9.method1283((byte) 122);
     GlobalStatics_6.method2070((byte) 67);
-    BZipDecompressor.method1641();
+    BZipDecompressorStatics.method1641();
     GlobalStatics_10.method849(2);
     GlobalStatics_2.method563(3);
     GlobalStatics_9.method570(-119);

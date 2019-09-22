@@ -1,7 +1,7 @@
 package com.jagex.runescape.statics;
 
 import com.jagex.runescape.common.GameStringStatics;
-import com.jagex.runescape.model.FileUnpacker;
+import com.jagex.runescape.cache.FileUnpacker;
 import com.jagex.runescape.model.SocketStream;
 import java.io.IOException;
 import java.net.Socket;

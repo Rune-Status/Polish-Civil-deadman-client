@@ -5,7 +5,7 @@ import com.jagex.runescape.common.GameString;
 import com.jagex.runescape.common.GameStringStatics;
 import com.jagex.runescape.model.ObjectCache;
 import com.jagex.runescape.model.SoftwareDirectColorSprite;
-import com.jagex.runescape.model.SomethingAudio;
+import com.jagex.runescape.sound.SomethingAudio;
 
 public final class DummyClass32 {
 

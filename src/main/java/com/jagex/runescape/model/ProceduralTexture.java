@@ -1,6 +1,7 @@
 package com.jagex.runescape.model;
 
 import com.jagex.runescape.buffer.Buffer;
+import com.jagex.runescape.cache.FileUnpacker;
 import com.jagex.runescape.opengl.GLStatics;
 import com.jagex.runescape.statics.DummyClass1;
 import com.jagex.runescape.statics.GlobalStatics_10;

@@ -1,5 +1,7 @@
 package com.jagex.runescape.model;
 
+import com.jagex.runescape.cache.AbstractFileRequester;
+import com.jagex.runescape.cache.FileTable;
 import com.jagex.runescape.common.HashTable;
 import com.jagex.runescape.node.Deque;
 import com.jagex.runescape.node.Node;

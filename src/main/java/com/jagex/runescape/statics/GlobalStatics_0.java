@@ -19,7 +19,7 @@ import com.jagex.runescape.model.CollisionMap;
 import com.jagex.runescape.model.DisplayMode;
 import com.jagex.runescape.model.FileCache;
 import com.jagex.runescape.model.FileRequester;
-import com.jagex.runescape.model.FileUnpacker;
+import com.jagex.runescape.cache.FileUnpacker;
 import com.jagex.runescape.model.FloorOverlay;
 import com.jagex.runescape.model.GameObjectConfig;
 import com.jagex.runescape.model.GameStub;
@@ -89,6 +89,7 @@ import com.jagex.runescape.opengl.GlTexture2d;
 import com.jagex.runescape.opengl.GlUtils;
 import com.jagex.runescape.opengl.Light;
 import com.jagex.runescape.opengl.SomethingGl0;
+import com.jagex.runescape.sound.SomethingSoundEffectStatics;
 import com.jagex.runescape.sprite.SoftwareIndexedColorSprite;
 import com.jagex.runescape.sprite.SoftwareIndexedColorSpriteStatics;
 import java.nio.charset.StandardCharsets;
@@ -264,22 +265,22 @@ public final class GlobalStatics_0 {
 
     int var1;
     for (var1 = 0; var1 < 0x8000; ++var1) {
-      GlobalStatics_9.anIntArray1594[var1] = (random.nextInt() & 2) - 1;
+      SomethingSoundEffectStatics.anIntArray1594[var1] = (random.nextInt() & 2) - 1;
     }
 
-    GlobalStatics_9.anIntArray1591 = new int[0x8000];
+    SomethingSoundEffectStatics.anIntArray1591 = new int[0x8000];
 
     for (var1 = 0; var1 < 0x8000; ++var1) {
-      GlobalStatics_9.anIntArray1591[var1] = (int) (Math.sin(var1 / 5215.1903D)
+      SomethingSoundEffectStatics.anIntArray1591[var1] = (int) (Math.sin(var1 / 5215.1903D)
           * 16384.0D);
     }
 
-    GlobalStatics_9.anIntArray1598 = new int[220500];
-    GlobalStatics_9.anIntArray1599 = new int[5];
-    GlobalStatics_9.anIntArray1600 = new int[5];
-    GlobalStatics_9.anIntArray1601 = new int[5];
-    GlobalStatics_9.anIntArray1603 = new int[5];
-    GlobalStatics_9.anIntArray1602 = new int[5];
+    SomethingSoundEffectStatics.anIntArray1598 = new int[220500];
+    SomethingSoundEffectStatics.anIntArray1599 = new int[5];
+    SomethingSoundEffectStatics.anIntArray1600 = new int[5];
+    SomethingSoundEffectStatics.anIntArray1601 = new int[5];
+    SomethingSoundEffectStatics.anIntArray1603 = new int[5];
+    SomethingSoundEffectStatics.anIntArray1602 = new int[5];
   }
 
   public static GameString method802(int var0, boolean var1) {

@@ -1,11 +1,12 @@
 package com.jagex.runescape.statics;
 
 import com.jagex.runescape.buffer.Buffer;
+import com.jagex.runescape.cache.CacheStatics;
 import com.jagex.runescape.common.GameString;
 import com.jagex.runescape.common.GameStringStatics;
 import com.jagex.runescape.model.AbstractDirectColorSprite;
 import com.jagex.runescape.model.AnimationSequence;
-import com.jagex.runescape.model.FileUnpacker;
+import com.jagex.runescape.cache.FileUnpacker;
 import com.jagex.runescape.model.Player;
 import com.jagex.runescape.model.SomethingQuickChatK;
 import com.jagex.runescape.node.SubNode;
@@ -18,7 +19,6 @@ public final class DummyClass38 {
   public static int[] anIntArray729 = new int[4096];
   public static float aFloat730;
   public static FileUnpacker aClass153_731;
-  public static boolean aBoolean732;
   public static int anInt733;
   public static int anInt734;
   public static int floorShadowsFileId;
@@ -364,7 +364,7 @@ public final class DummyClass38 {
     var1.nextSubNode = var0.nextSubNode;
     var1.prevSubNode.nextSubNode = var1;
     if (var2 <= 101) {
-      DummyClass38.aBoolean732 = true;
+      CacheStatics.errorOccurred = true;
     }
 
     var1.nextSubNode.prevSubNode = var1;

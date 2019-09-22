@@ -95,10 +95,6 @@ public class DummyClass35 {
     DummyClass32.aClass93_511.method1523();
   }
 
-  public static int getChecksum(byte[] var0, int var1, boolean var2) {
-    return var2 ? -3 : BufferStatics.method1599(0, var1, var0);
-  }
-
   public static void method1027(int var0, byte var1) {
     GlobalStatics_4.floorUnderlays.method1522(-128, var0);
     int var2 = -38 % ((var1 - 29) / 40);

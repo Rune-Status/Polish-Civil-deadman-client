@@ -1,5 +1,6 @@
 package com.jagex.runescape.model;
 
+import com.jagex.runescape.cache.FileUnpacker;
 import com.jagex.runescape.node.Deque;
 import com.jagex.runescape.node.SubNode;
 
@@ -12,7 +13,7 @@ public final class AnimationSomething extends SubNode {
     Deque var5 = new Deque();
     int var6 = bases.getAmountChildren(var3, (byte) 69);
     this.aClass98Array3588 = new AnimationBase[var6];
-    int[] var7 = bases.getChildIds((byte) -128, var3);
+    int[] var7 = bases.getChildIds(var3);
     int var8 = 0;
 
     assert var7 != null;

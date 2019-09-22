@@ -497,6 +497,7 @@ public final class GameStringStatics {
   public static GameString aClass94_1688 = aClass94_1686;
   public static GameString aClass94_1689 = aClass94_1686;
   public static GameString aClass94_1687 = create("(Z");
+  public static GameString[] aClass94Array1454;
 
   public static GameString createString(byte[] bytes, int off, int len) {
     GameString string = new GameString();

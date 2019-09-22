@@ -15,10 +15,12 @@ java_library(
         "//lib:client.jar",
         "//lib:jogamp-fat.jar",
         "//src/main/java/com/jagex/runescape/buffer",
+        "//src/main/java/com/jagex/runescape/cache",
         "//src/main/java/com/jagex/runescape/common",
         "//src/main/java/com/jagex/runescape/huffman",
         "//src/main/java/com/jagex/runescape/node",
         "//src/main/java/com/jagex/runescape/scene",
+        "//src/main/java/com/jagex/runescape/sound",
         "//src/main/java/com/jagex/runescape/sprite",
     ],
 )

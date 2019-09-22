@@ -6,7 +6,7 @@ import com.jagex.runescape.common.GameStringStatics;
 import com.jagex.runescape.common.HashTable;
 import com.jagex.runescape.model.AbstractFont;
 import com.jagex.runescape.model.AnimationSomething;
-import com.jagex.runescape.model.FileUnpacker;
+import com.jagex.runescape.cache.FileUnpacker;
 import com.jagex.runescape.model.FloorOverlay;
 import com.jagex.runescape.model.Player;
 import com.jagex.runescape.scene.SceneGraphTile;
@@ -32,7 +32,6 @@ public class GlobalStatics_3 {
   public static int anInt1105;
   public static int[] OBJECT_TYPES =
       {0, 0, 0, 0, 1, 1, 1, 1, 1, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 3};
-  public static int anInt1108;
   public static int anInt1109;
   public static int anInt2378;
   public static AbstractFont aClass3_Sub28_Sub17_2379;

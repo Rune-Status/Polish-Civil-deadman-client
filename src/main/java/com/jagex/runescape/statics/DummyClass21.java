@@ -23,7 +23,6 @@ public final class DummyClass21 {
   };
   public static GameString HEAD_ICONS_PRAYER = GameStringStatics
       .create("headicons_prayer");
-  public static boolean aBoolean1765;
   public static long[] updateMemory = new long[32];
 
   public static void method1808(int var0, boolean var1, byte var2, int var3,

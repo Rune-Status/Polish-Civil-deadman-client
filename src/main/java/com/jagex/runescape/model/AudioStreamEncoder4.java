@@ -1,6 +1,12 @@
 package com.jagex.runescape.model;
 
+import com.jagex.runescape.cache.FileUnpacker;
 import com.jagex.runescape.common.HashTable;
+import com.jagex.runescape.sound.MidiFile;
+import com.jagex.runescape.sound.MidiSomething;
+import com.jagex.runescape.sound.SomethingMidiFile;
+import com.jagex.runescape.sound.SomethingMidiFile0;
+import com.jagex.runescape.sound.SomethingMusic0;
 import com.jagex.runescape.statics.DummyClass60;
 import com.jagex.runescape.statics.GlobalStatics_11;
 import com.jagex.runescape.statics.GlobalStatics_6;

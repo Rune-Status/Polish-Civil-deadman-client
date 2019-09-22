@@ -4,7 +4,7 @@ import com.jagex.runescape.model.WorldMapLabel;
 import com.jagex.runescape.buffer.Buffer;
 import com.jagex.runescape.common.GameString;
 import com.jagex.runescape.common.GameStringStatics;
-import com.jagex.runescape.model.FileUnpacker;
+import com.jagex.runescape.cache.FileUnpacker;
 import com.jagex.runescape.model.LightIntensity;
 import com.jagex.runescape.model.Player;
 import com.jagex.runescape.model.Queue;
@@ -177,7 +177,7 @@ public final class DummyClass50 {
     } else if (var0 > -38) {
       return null;
     } else {
-      int[] var4 = var2.getChildIds((byte) -128, var3);
+      int[] var4 = var2.getChildIds(var3);
       assert var4 != null;
       WorldMapLabel var5 = new WorldMapLabel(var4.length);
 

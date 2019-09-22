@@ -6,7 +6,7 @@ import com.jagex.runescape.model.StillGraphicNode;
 import com.jagex.runescape.common.GameString;
 import com.jagex.runescape.common.GameStringStatics;
 import com.jagex.runescape.model.BlockConfig;
-import com.jagex.runescape.model.FileUnpacker;
+import com.jagex.runescape.cache.FileUnpacker;
 import com.jagex.runescape.model.GroundItem;
 import com.jagex.runescape.model.GroundItemNode;
 import com.jagex.runescape.model.Mobile;
