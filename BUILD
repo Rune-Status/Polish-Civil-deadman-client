@@ -29,7 +29,7 @@ java_binary(
     # ... How to make it good
     jvm_flags = ["-javaagent:lib/hotswap/hotswap-agent-1.3.1-SNAPSHOT.jar"],
     main_class = "com.jagex.runescape.launcher.Launcher",
-    resources = [":hotswap-agent.properties"],
+    resources = ["src/main/resources/hotswap-agent.properties"],
     runtime_deps = [
         ":hotswap-agent",
         "//src/main/java/com/jagex/runescape/common",
