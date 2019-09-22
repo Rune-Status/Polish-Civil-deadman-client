@@ -1,7 +1,7 @@
 package com.jagex.runescape.model;
 
 import com.jagex.runescape.common.ThreadUtilities;
-import com.jagex.runescape.statics.GlobalStatics_10;
+import com.jagex.runescape.common.TimeUtilities;
 
 public final class MilliFrameRegulator extends AbstractFrameRegulator {
 
@@ -17,7 +17,7 @@ public final class MilliFrameRegulator extends AbstractFrameRegulator {
     this.anInt2688 = 256;
       this.anInt2691 = 1;
       this.anInt2692 = 0;
-      this.aLong2683 = GlobalStatics_10.getCurrentTimeMillis();
+      this.aLong2683 = TimeUtilities.getCurrentTimeMillis();
 
       for (int var1 = 0; var1 < 10; ++var1) {
         this.aLongArray2694[var1] = this.aLong2683;
@@ -33,7 +33,7 @@ public final class MilliFrameRegulator extends AbstractFrameRegulator {
       int var4 = this.anInt2688;
       this.anInt2688 = 300;
       this.anInt2691 = 1;
-      this.aLong2683 = GlobalStatics_10.getCurrentTimeMillis();
+      this.aLong2683 = TimeUtilities.getCurrentTimeMillis();
       if (this.aLongArray2694[this.anInt2685] == 0L) {
         this.anInt2688 = var4;
         this.anInt2691 = var5;

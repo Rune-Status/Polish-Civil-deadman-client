@@ -3,6 +3,7 @@ package com.jagex.runescape.model;
 import com.jagex.runescape.common.ArrayUtils;
 
 import com.jagex.runescape.common.ThreadUtilities;
+import com.jagex.runescape.common.TimeUtilities;
 import com.jagex.runescape.sound.AbstractSomethingMusic;
 import com.jagex.runescape.statics.DummyClass36;
 import com.jagex.runescape.statics.DummyClass60;
@@ -17,7 +18,7 @@ public class AbstractAudioOutputStream {
   public int sampleRate;
   public int sampleBufferSize;
   private final int anInt1968 = 32;
-  private long aLong1972 = GlobalStatics_10.getCurrentTimeMillis();
+  private long aLong1972 = TimeUtilities.getCurrentTimeMillis();
   private AudioStreamEncoder aClass3_Sub24_1973;
   private long aLong1979;
   private final AudioStreamEncoder[] aClass3_Sub24Array1980 = new AudioStreamEncoder[8];
@@ -49,7 +50,7 @@ public class AbstractAudioOutputStream {
     this.anInt1987 -= len;
     if (this.aClass3_Sub24_1973 != null && this.anInt1987 <= 0) {
       this.anInt1987 += DummyClass60.sampleRate >> 4;
-      GlobalStatics_10.method1591(true, this.aClass3_Sub24_1973);
+      GlobalStatics_10.method1591(this.aClass3_Sub24_1973);
       this.method2155(this.aClass3_Sub24_1973, this.aClass3_Sub24_1973.method412(), (byte) -24);
       int var4 = 0;
       int var5 = 255;
@@ -141,12 +142,12 @@ public class AbstractAudioOutputStream {
       this.aClass3_Sub24_1973.method413(samples, 0, len);
     }
 
-    this.aLong1972 = GlobalStatics_10.getCurrentTimeMillis();
+    this.aLong1972 = TimeUtilities.getCurrentTimeMillis();
   }
 
   public final synchronized void process(byte var1) {
     if (this.samples != null) {
-        long start = GlobalStatics_10.getCurrentTimeMillis();
+        long start = TimeUtilities.getCurrentTimeMillis();
 
         try {
           if (this.pauseTime != 0L) {
@@ -268,7 +269,7 @@ public class AbstractAudioOutputStream {
         this.flush();
       } catch (Exception var3) {
         this.close();
-        this.pauseTime = GlobalStatics_10.getCurrentTimeMillis() + 2000L;
+        this.pauseTime = TimeUtilities.getCurrentTimeMillis() + 2000L;
       }
   }
 

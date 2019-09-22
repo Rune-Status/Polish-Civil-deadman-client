@@ -2,6 +2,7 @@ package com.jagex.runescape.statics;
 
 import com.jagex.runescape.common.GameString;
 import com.jagex.runescape.common.GameStringStatics;
+import com.jagex.runescape.input.KeyboardStatics;
 import com.jagex.runescape.model.SocketStream;
 import com.jagex.runescape.opengl.GLStatics;
 import java.awt.Component;
@@ -55,9 +56,9 @@ public final class DummyClass9 extends DummyClass5 {
 
   public static void unbindKeyboard(Component var0, int var1) {
     if (var1 == -9320) {
-      var0.removeKeyListener(GlobalStatics_10.KEYBOARD);
-      var0.removeFocusListener(GlobalStatics_10.KEYBOARD);
-      GlobalStatics_3.anInt2384 = -1;
+      var0.removeKeyListener(KeyboardStatics.KEYBOARD);
+      var0.removeFocusListener(KeyboardStatics.KEYBOARD);
+      KeyboardStatics.anInt2384 = -1;
     }
   }
 

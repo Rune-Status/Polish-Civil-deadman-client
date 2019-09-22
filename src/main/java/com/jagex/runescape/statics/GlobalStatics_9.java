@@ -2,12 +2,18 @@ package com.jagex.runescape.statics;
 
 import com.jagex.runescape.buffer.Buffer;
 import com.jagex.runescape.buffer.BufferStatics;
+import com.jagex.runescape.cache.FileUnpacker;
 import com.jagex.runescape.camera.CameraStatics;
 import com.jagex.runescape.common.ArrayUtils;
 import com.jagex.runescape.common.GameString;
 import com.jagex.runescape.common.GameStringStatics;
 import com.jagex.runescape.common.HashTable;
 import com.jagex.runescape.common.ThreadUtilities;
+import com.jagex.runescape.common.TimeUtilities;
+import com.jagex.runescape.input.Keyboard;
+import com.jagex.runescape.input.KeyboardStatics;
+import com.jagex.runescape.input.MouseStatics;
+import com.jagex.runescape.input.MouseWheelStatics;
 import com.jagex.runescape.model.AbstractAudioOutputStream;
 import com.jagex.runescape.model.AbstractDirectColorSprite;
 import com.jagex.runescape.model.AbstractFont;
@@ -29,7 +35,6 @@ import com.jagex.runescape.model.CollisionMap;
 import com.jagex.runescape.model.Cursor;
 import com.jagex.runescape.model.DisplayMode;
 import com.jagex.runescape.model.FileOnDisk;
-import com.jagex.runescape.cache.FileUnpacker;
 import com.jagex.runescape.model.FloorOverlay;
 import com.jagex.runescape.model.FloorUnderlay;
 import com.jagex.runescape.model.GameBuffer;
@@ -40,14 +45,9 @@ import com.jagex.runescape.model.HintMarker;
 import com.jagex.runescape.model.Interface4;
 import com.jagex.runescape.model.Inventory;
 import com.jagex.runescape.model.ItemConfig;
-import com.jagex.runescape.model.Keyboard;
 import com.jagex.runescape.model.MapScene;
-import com.jagex.runescape.sound.MidiFile;
-import com.jagex.runescape.sound.MidiInstrumentStatics;
-import com.jagex.runescape.sound.MidiSomething;
 import com.jagex.runescape.model.Mobile;
 import com.jagex.runescape.model.Model;
-import com.jagex.runescape.model.Mouse;
 import com.jagex.runescape.model.NPC;
 import com.jagex.runescape.model.NpcConfiguration;
 import com.jagex.runescape.model.ObjectCache;
@@ -64,10 +64,6 @@ import com.jagex.runescape.model.SoftwareDirectFullColorSprite;
 import com.jagex.runescape.model.SoftwareFont;
 import com.jagex.runescape.model.SomethingFont;
 import com.jagex.runescape.model.SomethingLight0;
-import com.jagex.runescape.sound.MidiSomethingStatics;
-import com.jagex.runescape.sound.SomethingMidiFile0Statics;
-import com.jagex.runescape.sound.SomethingMidiIStatics;
-import com.jagex.runescape.sound.SomethingMusic0;
 import com.jagex.runescape.model.SomethingOtherWorldMap;
 import com.jagex.runescape.model.SomethingPacket151;
 import com.jagex.runescape.model.SomethingQuickChat;
@@ -75,8 +71,6 @@ import com.jagex.runescape.model.SomethingQuickChatK;
 import com.jagex.runescape.model.SomethingTexture3;
 import com.jagex.runescape.model.SomethingVolume15;
 import com.jagex.runescape.model.SomethingWorldMapy;
-import com.jagex.runescape.sound.SomethingSoundEffectStatics;
-import com.jagex.runescape.sound.SoundEffect;
 import com.jagex.runescape.model.SpawnedGameObject;
 import com.jagex.runescape.model.SpotAnimationConfig;
 import com.jagex.runescape.model.Structure;
@@ -107,6 +101,15 @@ import com.jagex.runescape.scene.SceneStatics;
 import com.jagex.runescape.scene.SomethingSceneI;
 import com.jagex.runescape.scene.SomethingSceneTile;
 import com.jagex.runescape.settings.SettingsStatics;
+import com.jagex.runescape.sound.MidiFile;
+import com.jagex.runescape.sound.MidiInstrumentStatics;
+import com.jagex.runescape.sound.MidiSomething;
+import com.jagex.runescape.sound.MidiSomethingStatics;
+import com.jagex.runescape.sound.SomethingMidiFile0Statics;
+import com.jagex.runescape.sound.SomethingMidiIStatics;
+import com.jagex.runescape.sound.SomethingMusic0;
+import com.jagex.runescape.sound.SomethingSoundEffectStatics;
+import com.jagex.runescape.sound.SoundEffect;
 import com.jagex.runescape.sprite.AbstractIndexedColorSprite;
 import com.jagex.runescape.sprite.SoftwareIndexedColorSprite;
 import com.jagex.runescape.sprite.SoftwareIndexedColorSpriteStatics;
@@ -232,7 +235,6 @@ public class GlobalStatics_9 {
   public static int anInt1918;
   public static Cache aClass47_480 = new Cache(16);
   public static int anInt486 = 5063219;
-  public static int anInt491;
   public static int anInt494;
   public static int anInt497;
   public static int[][] anIntArrayArray499 = {
@@ -312,7 +314,6 @@ public class GlobalStatics_9 {
   public static int anInt1924;
   public static int anInt1925;
   public static int anInt1926;
-  public static Mouse INSTANCE = new Mouse();
   public static ObjectCache aClass93_1569 = new ObjectCache(200);
   public static BufferedFile tableIndexFile;
   public static long[] aLongArray1574 = new long[100];
@@ -340,7 +341,6 @@ public class GlobalStatics_9 {
   public static byte[][][] tileOrientation;
   public static int anInt1330;
   public static ObjectCache aClass93_4043 = new ObjectCache(64);
-  public static volatile int anInt4045;
   public static HashTable aClass130_4046 = new HashTable(16);
   public static FileUnpacker models;
   public static int[] anIntArray4050 = new int[1000];
@@ -359,7 +359,6 @@ public class GlobalStatics_9 {
   public static int anInt3615;
   public static Calendar aCalendar3616 = Calendar.getInstance();
   public static int anInt3618;
-  public static int KEY_QUEUE_INDEX;
   public static int anInt3623;
   public static int CURRENT_KEY;
   public static int[] anIntArray3951 = new int[4];
@@ -381,10 +380,8 @@ public class GlobalStatics_9 {
   public static int anInt2894;
   public static int anInt2901;
   public static int anInt2905;
-  public static volatile long lastMousePressedTime;
   public static FileUnpacker globalQuickchats;
   public static int[] anIntArray356 = {1, 0, -1, 0};
-  public static volatile int anInt362;
   public static int anInt377;
   public static int headIconsPrayerFileId;
   public static byte[][][] aByteArrayArrayArray383;
@@ -473,7 +470,6 @@ public class GlobalStatics_9 {
   public static int anInt2540;
   public static int anInt2541;
   public static int[] anIntArray1743 = new int[25];
-  public static int anInt1744;
   public static int anInt1748;
   public static Widget aClass11_1749;
   public static FileUnpacker worldMapData;
@@ -991,7 +987,6 @@ public class GlobalStatics_9 {
   public static boolean aBoolean2433;
   public static int anInt2436;
   public static AbstractAudioOutputStream audioOutputStream1;
-  public static volatile int lastMouseX = -1;
   public static Widget aClass11_3551;
   public static int anInt3552;
   public static int widgetQuads;
@@ -1005,7 +1000,6 @@ public class GlobalStatics_9 {
   public static int anInt544;
   public static int anInt546;
   public static int anInt548;
-  public static volatile int anInt549;
   public static GameString FONT_P11 = GameStringStatics.create("p11_full");
   public static int anInt2701;
   public static boolean aBoolean2705 = true;
@@ -2938,11 +2932,11 @@ public class GlobalStatics_9 {
         }
       } else {
 
-        if (GlobalStatics_8.PRESSED_KEYS[KeyEvent.VK_NUMPAD2]) {
+        if (KeyboardStatics.PRESSED_KEYS[KeyEvent.VK_NUMPAD2]) {
           DummyClass32.NEXT_CAMERA_PITCH_DELTA +=
               (-DummyClass32.NEXT_CAMERA_PITCH_DELTA
                   + 12) / 2;
-        } else if (!GlobalStatics_8.PRESSED_KEYS[KeyEvent.VK_NUMPAD3]) {
+        } else if (!KeyboardStatics.PRESSED_KEYS[KeyEvent.VK_NUMPAD3]) {
           DummyClass32.NEXT_CAMERA_PITCH_DELTA /= 2;
         } else {
           DummyClass32.NEXT_CAMERA_PITCH_DELTA +=
@@ -2950,12 +2944,12 @@ public class GlobalStatics_9 {
                   - 12) / 2;
         }
 
-        if (GlobalStatics_8.PRESSED_KEYS[KeyEvent.VK_NUMPAD0]) {
+        if (KeyboardStatics.PRESSED_KEYS[KeyEvent.VK_NUMPAD0]) {
           GlobalStatics_9.NEXT_CAMERA_YAW_DELTA +=
               (-GlobalStatics_9.NEXT_CAMERA_YAW_DELTA
                   - 24) / 2;
         } else {
-          if (GlobalStatics_8.PRESSED_KEYS[KeyEvent.VK_NUMPAD1]) {
+          if (KeyboardStatics.PRESSED_KEYS[KeyEvent.VK_NUMPAD1]) {
             GlobalStatics_9.NEXT_CAMERA_YAW_DELTA +=
                 (-GlobalStatics_9.NEXT_CAMERA_YAW_DELTA
                     + 24) / 2;
@@ -3303,7 +3297,8 @@ public class GlobalStatics_9 {
           }
 
           int var7 =
-              (-var6 + var1.anInt2328) * SettingsStatics.anInt340 / var1.anInt2328;
+              (-var6 + var1.anInt2328) * SettingsStatics.anInt340
+                  / var1.anInt2328;
           if (var1.aClass3_Sub24_Sub1_2312 == null) {
             if (var1.anInt2332 >= 0) {
               SoundEffect var8 =
@@ -4335,21 +4330,6 @@ public class GlobalStatics_9 {
         ? var3 : var0 == 2 ? 1023 - var1 : -var3 + 1023;
   }
 
-  public static void bindMouseListener(Component component) {
-    System.out.println("Mouse.bindMouseListener");
-    component.addMouseListener(GlobalStatics_9.INSTANCE);
-    component.addMouseMotionListener(GlobalStatics_9.INSTANCE);
-    component.addFocusListener(GlobalStatics_9.INSTANCE);
-  }
-
-  public static void unbind(Component var1) {
-    System.out.println("Mouse.unbind");
-    var1.removeMouseListener(GlobalStatics_9.INSTANCE);
-    var1.removeMouseMotionListener(GlobalStatics_9.INSTANCE);
-    var1.removeFocusListener(GlobalStatics_9.INSTANCE);
-    GlobalStatics_9.anInt549 = 0;
-  }
-
   public static void method2087(byte var0) {
     SpawnedGameObject var1 = (SpawnedGameObject) GlobalStatics_10.aClass61_3075
         .getFirst();
@@ -4406,15 +4386,6 @@ public class GlobalStatics_9 {
 
   public static void method2089(byte var0) {
     GlobalStatics_7.aClass93_2982.method1523();
-  }
-
-  public static void method2090(int var0) {
-    if (GlobalStatics_9.INSTANCE != null) {
-      Mouse var1 = GlobalStatics_9.INSTANCE;
-      synchronized (var1) {
-        GlobalStatics_9.INSTANCE = null;
-      }
-    }
   }
 
   public static void method2091(int var0, int var1) {
@@ -4896,15 +4867,11 @@ public class GlobalStatics_9 {
   public static void method570(int var0) {
     GameStringStatics.aClass94_4049 = null;
     GlobalStatics_9.anIntArray4050 = null;
-    GlobalStatics_9.INSTANCE = null;
+    MouseStatics.INSTANCE = null;
     GlobalStatics_9.aClass130_4046 = null;
     GameStringStatics.aClass94_4052 = null;
     GlobalStatics_9.aClass93_4043 = null;
     GlobalStatics_9.models = null;
-    if (var0 > -101) {
-      GlobalStatics_9.method570(-94);
-    }
-
     GlobalStatics_9.aClass93_4051 = null;
   }
 
@@ -5016,15 +4983,15 @@ public class GlobalStatics_9 {
 
       if (replaceCanvas) {
         DummyClass9.unbindKeyboard(GlobalStatics_8.GAME_CANVAS, -9320);
-        GlobalStatics_9.unbind(GlobalStatics_8.GAME_CANVAS);
-        if (DummyClass35.mouseWheel != null) {
-          DummyClass35.mouseWheel.unbind(false, GlobalStatics_8.GAME_CANVAS);
+        MouseStatics.unbind(GlobalStatics_8.GAME_CANVAS);
+        if (MouseWheelStatics.MOUSE_WHEEL != null) {
+          MouseWheelStatics.MOUSE_WHEEL.unbind(GlobalStatics_8.GAME_CANVAS);
         }
         GlobalStatics_9.client.initializeCanvas();
-        GlobalStatics_10.method193((byte) 97, GlobalStatics_8.GAME_CANVAS);
-        GlobalStatics_9.bindMouseListener(GlobalStatics_8.GAME_CANVAS);
-        if (DummyClass35.mouseWheel != null) {
-          DummyClass35.mouseWheel.bind(GlobalStatics_8.GAME_CANVAS, -103);
+        GlobalStatics_10.method193(GlobalStatics_8.GAME_CANVAS);
+        MouseStatics.bindMouseListener(GlobalStatics_8.GAME_CANVAS);
+        if (MouseWheelStatics.MOUSE_WHEEL != null) {
+          MouseWheelStatics.MOUSE_WHEEL.bind(GlobalStatics_8.GAME_CANVAS);
         }
       } else {
         if (GlRenderer.USE_OPENGL) {
@@ -6465,7 +6432,7 @@ public class GlobalStatics_9 {
 
   public static int method1406(byte var0) {
     int var1 = -21 % ((63 - var0) / 49);
-    return GlobalStatics_9.anInt4045;
+    return MouseStatics.anInt4045;
   }
 
   public static void method1409(boolean var0) {
@@ -8074,7 +8041,8 @@ public class GlobalStatics_9 {
     if (!var4) {
       GlobalStatics_8.printMessage(GameStringStatics.EMPTY_STRING, 0,
           GlobalStatics_9
-              .concat(new GameString[]{GameStringStatics.aClass94_691, var3}), -1);
+              .concat(new GameString[]{GameStringStatics.aClass94_691, var3}),
+          -1);
     }
   }
 
@@ -8283,7 +8251,7 @@ public class GlobalStatics_9 {
   }
 
   public static int method115(boolean var0, int var1) {
-    long var2 = GlobalStatics_10.getCurrentTimeMillis();
+    long var2 = TimeUtilities.getCurrentTimeMillis();
     if (var1 != -1) {
       GlobalStatics_9.method116(false, 11);
     }
@@ -8759,7 +8727,7 @@ public class GlobalStatics_9 {
           GameStringStatics.aClass94_1724
       });
     } else if (DummyClass55.aBoolean1419
-        && GlobalStatics_8.PRESSED_KEYS[81]
+        && KeyboardStatics.PRESSED_KEYS[81]
         && GlobalStatics_10.amountContextActions > 2) {
       var1 = com.jagex.runescape.statics.GlobalStatics_0
           .method802(GlobalStatics_10.amountContextActions - 2, true);
@@ -11626,7 +11594,7 @@ public class GlobalStatics_9 {
     }
 
     GlobalStatics_9.SECURE_BUFFER
-        .method790(GlobalStatics_8.PRESSED_KEYS[82] ? 1 : 0,
+        .method790(KeyboardStatics.PRESSED_KEYS[82] ? 1 : 0,
             -13071);
     GlobalStatics_9.SECURE_BUFFER
         .writeShort(GlobalStatics_10.REGION_BASE_X + var4);
@@ -11680,7 +11648,7 @@ public class GlobalStatics_9 {
       if (GlobalStatics_9.anInt1297 == GlobalStatics_9.anInt3460
           && DummyClass36.anInt2612 == GlobalStatics_8.anInt2099) {
         GlobalStatics_7.anInt3660 = 0;
-        if (DummyClass55.aBoolean1419 && GlobalStatics_8.PRESSED_KEYS[81]
+        if (DummyClass55.aBoolean1419 && KeyboardStatics.PRESSED_KEYS[81]
             && GlobalStatics_10.amountContextActions > 2) {
           GlobalStatics_8
               .method806(2597, GlobalStatics_10.amountContextActions - 2);
@@ -11692,7 +11660,7 @@ public class GlobalStatics_9 {
     } else if (GlobalStatics_9.anInt1297 == DummyClass5.anInt2993
         && DummyClass36.anInt2612 == DummyClass36.anInt2614) {
       GlobalStatics_7.anInt3660 = 0;
-      if (DummyClass55.aBoolean1419 && GlobalStatics_8.PRESSED_KEYS[81]
+      if (DummyClass55.aBoolean1419 && KeyboardStatics.PRESSED_KEYS[81]
           && GlobalStatics_10.amountContextActions > 2) {
         GlobalStatics_8
             .method806(2597, GlobalStatics_10.amountContextActions - 2);
@@ -11929,10 +11897,10 @@ public class GlobalStatics_9 {
   }
 
   public static void method167(int var0) {
-    if (GlobalStatics_10.KEYBOARD != null) {
-      Keyboard var1 = GlobalStatics_10.KEYBOARD;
+    if (KeyboardStatics.KEYBOARD != null) {
+      Keyboard var1 = KeyboardStatics.KEYBOARD;
       synchronized (var1) {
-        GlobalStatics_10.KEYBOARD = null;
+        KeyboardStatics.KEYBOARD = null;
       }
     }
 
@@ -12048,7 +12016,8 @@ public class GlobalStatics_9 {
                 var3.getFullName(), var6 ?
                 GlobalStatics_9.method1295(var3.combatLevel, (byte) -73,
                     GlobalStatics_9.localPlayer.combatLevel) :
-                GameStringStatics.aClass94_2562, GameStringStatics.aClass94_1072,
+                GameStringStatics.aClass94_2562,
+                GameStringStatics.aClass94_1072,
                 var13,
                 GlobalStatics_9.toString(var3.combatLevel),
                 DummyClass59.aClass94_673,
@@ -12060,7 +12029,8 @@ public class GlobalStatics_9 {
                 var3.getFullName(), var6 ?
                 GlobalStatics_9.method1295(var3.combatLevel, (byte) -128,
                     GlobalStatics_9.localPlayer.combatLevel) :
-                GameStringStatics.aClass94_2562, GameStringStatics.aClass94_1072,
+                GameStringStatics.aClass94_2562,
+                GameStringStatics.aClass94_1072,
                 var13,
                 GlobalStatics_9.toString(var3.combatLevel),
                 GameStringStatics.aClass94_2335

@@ -1191,7 +1191,7 @@ public final class DummyClass18 {
       var30 = GlobalStatics_9.GAME_BUFFER.readUnsignedByte();
       if (GlobalStatics_5.updateInterfaceCounter(var20, (byte) -25)) {
         GlobalStatics_10
-            .method390(true, var6, var5, var30, (byte) -124, var21, var3);
+            .method390(true, var6, var5, var30, var21, var3);
       }
 
       GlobalStatics_0.packetId = -1;

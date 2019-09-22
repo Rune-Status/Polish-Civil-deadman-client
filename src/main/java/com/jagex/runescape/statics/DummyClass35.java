@@ -2,7 +2,7 @@ package com.jagex.runescape.statics;
 
 import com.jagex.runescape.buffer.Buffer;
 import com.jagex.runescape.common.GameStringStatics;
-import com.jagex.runescape.model.AbstractMouseWheel;
+import com.jagex.runescape.input.MouseWheelStatics;
 import com.jagex.runescape.model.ItemConfig;
 import com.jagex.runescape.model.Player;
 import com.jagex.runescape.model.SignLink;
@@ -13,7 +13,6 @@ public class DummyClass35 {
   public static int[][] anIntArrayArray663;
   public static int[] anIntArray664 = new int[14];
   public static SignLink signLink;
-  public static AbstractMouseWheel mouseWheel;
 
   public static ItemConfig getItemConfig(int var0) {
     ItemConfig var2 = (ItemConfig) GlobalStatics_9.aClass93_3572.get(var0);
@@ -61,7 +60,7 @@ public class DummyClass35 {
     GameStringStatics.aClass94_667 = null;
     DummyClass35.anIntArray664 = null;
     DummyClass35.anIntArrayArray663 = null;
-    DummyClass35.mouseWheel = null;
+    MouseWheelStatics.MOUSE_WHEEL = null;
     DummyClass35.signLink = null;
     GameStringStatics.aClass94_659 = null;
     GameStringStatics.aClass94_662 = null;

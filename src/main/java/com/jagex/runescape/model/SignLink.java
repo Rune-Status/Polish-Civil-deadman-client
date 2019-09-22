@@ -1,6 +1,6 @@
 package com.jagex.runescape.model;
 
-import com.jagex.runescape.statics.GlobalStatics_10;
+import com.jagex.runescape.common.TimeUtilities;
 import com.jagex.runescape.statics.GlobalStatics_9;
 import java.awt.Component;
 import java.awt.EventQueue;
@@ -95,7 +95,7 @@ public class SignLink implements Runnable {
       this.method1442(null, 99);
     }
 
-    GlobalStatics_9.aLong1221 = GlobalStatics_10.getCurrentTimeMillis() + 5000L;
+    GlobalStatics_9.aLong1221 = TimeUtilities.getCurrentTimeMillis() + 5000L;
   }
 
   public final boolean method1432(boolean var1) {
@@ -210,7 +210,7 @@ public class SignLink implements Runnable {
       try {
         int var2 = request.anInt975;
         if (var2 == 1) {
-          if (GlobalStatics_9.aLong1221 > GlobalStatics_10
+          if (GlobalStatics_9.aLong1221 > TimeUtilities
               .getCurrentTimeMillis()) {
             throw new IOException();
           }
@@ -220,7 +220,7 @@ public class SignLink implements Runnable {
           request.result = new Socket(InetAddress.getByName(host), port);
         } else if (var2 != 2) {
           if (var2 == 4) {
-            if (GlobalStatics_9.aLong1221 > GlobalStatics_10
+            if (GlobalStatics_9.aLong1221 > TimeUtilities
                 .getCurrentTimeMillis()) {
               throw new IOException();
             }
@@ -251,7 +251,7 @@ public class SignLink implements Runnable {
               } else {
                 String var4;
                 if (var2 == 3) {
-                  if (GlobalStatics_10.getCurrentTimeMillis()
+                  if (TimeUtilities.getCurrentTimeMillis()
                       < GlobalStatics_9.aLong1221) {
                     throw new IOException();
                   }

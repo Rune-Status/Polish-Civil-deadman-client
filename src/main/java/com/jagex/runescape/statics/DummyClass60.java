@@ -3,7 +3,7 @@ package com.jagex.runescape.statics;
 import com.jagex.runescape.model.Widget;
 import com.jagex.runescape.common.GameString;
 import com.jagex.runescape.common.GameStringStatics;
-import com.jagex.runescape.model.AbstractMouseWheel;
+import com.jagex.runescape.input.AbstractMouseWheel;
 import com.jagex.runescape.node.AbstractObjectNodeWrapper;
 import com.jagex.runescape.model.SomethingPacket151;
 
@@ -153,19 +153,6 @@ public final class DummyClass60 {
       GlobalStatics_2.method565((byte) 86,
           DummyClass25.aClass131_1624.aShortArray1727[var2],
           DummyClass25.aClass131_1624.aShortArray1718[var2]);
-    }
-  }
-
-  public static AbstractMouseWheel createMouseWheel(byte var0) {
-    if (var0 != 15) {
-      DummyClass60.aClass94_442 = null;
-    }
-
-    try {
-      return (AbstractMouseWheel) Class.forName(
-          "com.jagex.runescape.model.MouseWheel").newInstance();
-    } catch (Throwable var2) {
-      return null;
     }
   }
 

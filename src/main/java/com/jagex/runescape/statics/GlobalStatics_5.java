@@ -1,7 +1,8 @@
 package com.jagex.runescape.statics;
 
 import com.jagex.runescape.camera.CameraStatics;
-import com.jagex.runescape.math.MathUtilities;
+import com.jagex.runescape.input.KeyboardStatics;
+import com.jagex.runescape.common.MathUtilities;
 import com.jagex.runescape.model.Widget;
 import com.jagex.runescape.buffer.Buffer;
 import com.jagex.runescape.common.GameString;
@@ -38,7 +39,6 @@ public class GlobalStatics_5 {
   public static int[] anIntArray1976 = {1, 0, 0, 0, 1, 0, 2, 1, 1, 1, 0, 2, 0,
       0, 1, 0};
   public static int anInt1977;
-  public static int[] OTHER_KEY_QUEUE = new int[128];
   public static GameString aClass94_1932 = GameStringStatics.create(")4a=");
   public static Widget aClass11_1933;
   public static float[] aFloatArray1934 = {0.073F, 0.169F, 0.24F, 1.0F};
@@ -617,7 +617,7 @@ public class GlobalStatics_5 {
     }
 
     GlobalStatics_5.quadx0 = null;
-    GlobalStatics_5.OTHER_KEY_QUEUE = null;
+    KeyboardStatics.OTHER_KEY_QUEUE = null;
   }
 
   public static void clear91(int var0) {

@@ -1,6 +1,6 @@
 package com.jagex.runescape.model;
 
-import com.jagex.runescape.math.MathUtilities;
+import com.jagex.runescape.common.MathUtilities;
 import com.jagex.runescape.opengl.GlModel;
 import com.jagex.runescape.opengl.GlRenderer;
 import com.jagex.runescape.statics.DummyClass14;

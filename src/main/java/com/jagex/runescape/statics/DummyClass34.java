@@ -3,7 +3,8 @@ package com.jagex.runescape.statics;
 import com.jagex.runescape.buffer.Buffer;
 import com.jagex.runescape.common.GameString;
 import com.jagex.runescape.common.GameStringStatics;
-import com.jagex.runescape.model.Keyboard;
+import com.jagex.runescape.input.Keyboard;
+import com.jagex.runescape.input.KeyboardStatics;
 import com.jagex.runescape.opengl.GLStatics;
 
 public final class DummyClass34 {
@@ -88,38 +89,6 @@ public final class DummyClass34 {
       }
     }
 
-  }
-
-  public static void method996(int var0) {
-    if (var0 >= -35) {
-      DummyClass34.perlinNoise(3, -24);
-    }
-
-    Keyboard var1 = GlobalStatics_10.KEYBOARD;
-    synchronized (var1) {
-      GlobalStatics_9.KEY_QUEUE_INDEX = DummyClass21.anInt1762;
-      ++GlobalStatics_10.anInt3398;
-      int var2;
-      if (GlobalStatics_3.anInt2384 < 0) {
-        for (var2 = 0; var2 < 112; ++var2) {
-          GlobalStatics_8.PRESSED_KEYS[var2] = false;
-        }
-
-        GlobalStatics_3.anInt2384 = GlobalStatics_9.anInt1744;
-      } else {
-        while (GlobalStatics_3.anInt2384 != GlobalStatics_9.anInt1744) {
-          var2 = GlobalStatics_7.anIntArray2952[GlobalStatics_9.anInt1744];
-          GlobalStatics_9.anInt1744 = 127 & 1 + GlobalStatics_9.anInt1744;
-          if (var2 >= 0) {
-            GlobalStatics_8.PRESSED_KEYS[var2] = true;
-          } else {
-            GlobalStatics_8.PRESSED_KEYS[~var2] = false;
-          }
-        }
-      }
-
-      DummyClass21.anInt1762 = GlobalStatics_9.anInt491;
-    }
   }
 
 }

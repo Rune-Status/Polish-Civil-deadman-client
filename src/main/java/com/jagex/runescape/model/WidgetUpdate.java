@@ -1,6 +1,7 @@
 package com.jagex.runescape.model;
 
 import com.jagex.runescape.common.GameString;
+import com.jagex.runescape.common.TimeUtilities;
 import com.jagex.runescape.node.SubNode;
 import com.jagex.runescape.statics.DummyClass50;
 import com.jagex.runescape.statics.GlobalStatics_10;
@@ -19,7 +20,7 @@ public final class WidgetUpdate extends SubNode {
   }
 
   public void createIndexedColorSprite(boolean var1 ) {
-    this.subnodeKey = GlobalStatics_10.getCurrentTimeMillis() + 500L | Long.MIN_VALUE & this.subnodeKey;
+    this.subnodeKey = TimeUtilities.getCurrentTimeMillis() + 500L | Long.MIN_VALUE & this.subnodeKey;
       if (!var1) {
         GlobalStatics_10.f(-42);
       }

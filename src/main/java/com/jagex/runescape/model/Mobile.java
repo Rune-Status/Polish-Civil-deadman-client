@@ -1,7 +1,7 @@
 package com.jagex.runescape.model;
 
 import com.jagex.runescape.common.GameString;
-import com.jagex.runescape.math.MathUtilities;
+import com.jagex.runescape.common.MathUtilities;
 import com.jagex.runescape.opengl.GlRenderer;
 import com.jagex.runescape.scene.SceneNode;
 import com.jagex.runescape.statics.DummyClass0;

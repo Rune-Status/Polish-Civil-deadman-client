@@ -3,6 +3,7 @@ package com.jagex.runescape.model;
 import com.jagex.runescape.cache.AbstractFileRequester;
 import com.jagex.runescape.cache.FileTable;
 import com.jagex.runescape.common.HashTable;
+import com.jagex.runescape.common.TimeUtilities;
 import com.jagex.runescape.node.Deque;
 import com.jagex.runescape.node.Node;
 import com.jagex.runescape.statics.GlobalStatics_10;
@@ -328,7 +329,7 @@ public final class FileRequester extends AbstractFileRequester {
           }
         }
 
-        if (this.aBoolean2968 && this.aLong2967 <= GlobalStatics_10.getCurrentTimeMillis()) {
+        if (this.aBoolean2968 && this.aLong2967 <= TimeUtilities.getCurrentTimeMillis()) {
           for (AbstractFileRequest var6 = (AbstractFileRequest) this.aClass130_2946
               .getFirst(71);
                var6 != null; var6 = (AbstractFileRequest) this.aClass130_2946.getNext(-115)) {
@@ -345,7 +346,7 @@ public final class FileRequester extends AbstractFileRequester {
             }
           }
 
-          this.aLong2967 = 1000L + GlobalStatics_10.getCurrentTimeMillis();
+          this.aLong2967 = 1000L + TimeUtilities.getCurrentTimeMillis();
         }
 
       }

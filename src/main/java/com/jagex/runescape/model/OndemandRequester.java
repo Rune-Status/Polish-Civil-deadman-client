@@ -2,7 +2,7 @@ package com.jagex.runescape.model;
 
 import com.jagex.runescape.buffer.Buffer;
 
-import com.jagex.runescape.statics.GlobalStatics_10;
+import com.jagex.runescape.common.TimeUtilities;
 import com.jagex.runescape.statics.GlobalStatics_9;
 import java.io.IOException;
 
@@ -33,7 +33,7 @@ public final class OndemandRequester {
   public boolean method1243(byte var1 ) {
     int avail;
       if (this.socketStream != null) {
-        long currentTime = GlobalStatics_10.getCurrentTimeMillis();
+        long currentTime = TimeUtilities.getCurrentTimeMillis();
         int diff = (int) (currentTime - this.lastUpdatedTime);
         this.lastUpdatedTime = currentTime;
         if (diff > 200) {
@@ -332,7 +332,7 @@ public final class OndemandRequester {
               }
 
               this.timeDiff = 0;
-              this.lastUpdatedTime = GlobalStatics_10.getCurrentTimeMillis();
+              this.lastUpdatedTime = TimeUtilities.getCurrentTimeMillis();
               return;
             }
 

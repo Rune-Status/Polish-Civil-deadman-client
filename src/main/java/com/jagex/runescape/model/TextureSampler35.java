@@ -43,7 +43,7 @@ public final class TextureSampler35 extends AbstractTextureSampler {
 
   public void parseConfig(int var1, Buffer var2, boolean var3 ) {
     if (!var3) {
-        GlobalStatics_10.method294((byte) -57);
+        GlobalStatics_10.method294();
       }
 
       if (var1 == 0) {

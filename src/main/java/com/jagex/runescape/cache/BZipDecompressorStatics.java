@@ -24,7 +24,7 @@ public final class BZipDecompressorStatics {
     int var3 = var0.anInt143;
     int var4 = var0.anInt131;
     int var5 = var0.anInt129;
-    int[] var6 = anIntArray1690;
+    int[] var6 = BZipDecompressorStatics.anIntArray1690;
     int var7 = var0.anInt133;
     byte[] var8 = var0.aByteArray117;
     int var9 = var0.anInt118;
@@ -132,7 +132,7 @@ public final class BZipDecompressorStatics {
     var0.anInt143 = var3;
     var0.anInt131 = var4;
     var0.anInt129 = var5;
-    anIntArray1690 = var6;
+    BZipDecompressorStatics.anIntArray1690 = var6;
     var0.anInt133 = var7;
     var0.aByteArray117 = var8;
     var0.anInt118 = var9;
@@ -224,8 +224,8 @@ public final class BZipDecompressorStatics {
     int[] var24 = null;
     int[] var25 = null;
     var0.anInt142 = 1;
-    if (anIntArray1690 == null) {
-      anIntArray1690 = new int[var0.anInt142 * 100000];
+    if (BZipDecompressorStatics.anIntArray1690 == null) {
+      BZipDecompressorStatics.anIntArray1690 = new int[var0.anInt142 * 100000];
     }
 
     boolean var26 = true;
@@ -465,7 +465,7 @@ public final class BZipDecompressorStatics {
           }
 
           ++var0.anIntArray134[var0.aByteArray114[var1 & 255] & 255];
-          anIntArray1690[var47] =
+          BZipDecompressorStatics.anIntArray1690[var47] =
               var0.aByteArray114[var1 & 255] & 255;
           ++var47;
           if (var45 == 0) {
@@ -528,7 +528,7 @@ public final class BZipDecompressorStatics {
               & 255];
 
           for (var0.anIntArray134[var1 & 255] += var46; var46 > 0; --var46) {
-            anIntArray1690[var47] = var1 & 255;
+            BZipDecompressorStatics.anIntArray1690[var47] = var1 & 255;
             ++var47;
           }
         }
@@ -547,15 +547,15 @@ public final class BZipDecompressorStatics {
       }
 
       for (var35 = 0; var35 < var47; ++var35) {
-        var1 = (byte) (anIntArray1690[var35] & 255);
-        anIntArray1690[var0.anIntArray122[var1 & 255]] |=
+        var1 = (byte) (BZipDecompressorStatics.anIntArray1690[var35] & 255);
+        BZipDecompressorStatics.anIntArray1690[var0.anIntArray122[var1 & 255]] |=
             var35 << 8;
         ++var0.anIntArray122[var1 & 255];
       }
 
-      var0.anInt133 = anIntArray1690[var0.anInt135] >> 8;
+      var0.anInt133 = BZipDecompressorStatics.anIntArray1690[var0.anInt135] >> 8;
       var0.anInt131 = 0;
-      var0.anInt133 = anIntArray1690[var0.anInt133];
+      var0.anInt133 = BZipDecompressorStatics.anIntArray1690[var0.anInt133];
       var0.anInt129 = (byte) (var0.anInt133 & 255);
       var0.anInt133 >>= 8;
       ++var0.anInt131;

@@ -7,6 +7,8 @@ import com.jagex.runescape.common.ArrayUtils;
 import com.jagex.runescape.common.GameString;
 import com.jagex.runescape.common.GameStringStatics;
 import com.jagex.runescape.common.HashTable;
+import com.jagex.runescape.common.TimeUtilities;
+import com.jagex.runescape.input.KeyboardStatics;
 import com.jagex.runescape.model.AudioStreamEncoder1;
 import com.jagex.runescape.model.BlockConfig;
 import com.jagex.runescape.model.ClientScript;
@@ -2794,7 +2796,7 @@ public final class GlobalStatics_11 {
                               }
                               if (j1 < 5200) {
                                 if (j1 == 5100) {
-                                  if (GlobalStatics_8.PRESSED_KEYS[86]) {
+                                  if (KeyboardStatics.PRESSED_KEYS[86]) {
                                     GlobalStatics_9.anIntArray2929[k++] = 1;
                                   } else {
                                     GlobalStatics_9.anIntArray2929[k++] = 0;
@@ -2802,7 +2804,7 @@ public final class GlobalStatics_11 {
                                   continue;
                                 }
                                 if (j1 == 5101) {
-                                  if (GlobalStatics_8.PRESSED_KEYS[82]) {
+                                  if (KeyboardStatics.PRESSED_KEYS[82]) {
                                     GlobalStatics_9.anIntArray2929[k++] = 1;
                                   } else {
                                     GlobalStatics_9.anIntArray2929[k++] = 0;
@@ -2812,7 +2814,7 @@ public final class GlobalStatics_11 {
                                 if (j1 != 5102) {
                                   break;
                                 }
-                                if (GlobalStatics_8.PRESSED_KEYS[81]) {
+                                if (KeyboardStatics.PRESSED_KEYS[81]) {
                                   GlobalStatics_9.anIntArray2929[k++] = 1;
                                 } else {
                                   GlobalStatics_9.anIntArray2929[k++] = 0;
@@ -3387,7 +3389,6 @@ public final class GlobalStatics_11 {
                                       + 1];
                                   GlobalStatics_10
                                       .method390(false, j72, i60, l77,
-                                          (byte) -128,
                                           -GlobalStatics_9.REGION_BASE_Y + (
                                               0x3fff
                                                   & l33),
@@ -3911,13 +3912,13 @@ public final class GlobalStatics_11 {
                                   if (j1 < 6400) {
                                     if (j1 == 6300) {
                                       GlobalStatics_9.anIntArray2929[k++] =
-                                          (int) (GlobalStatics_10
+                                          (int) (TimeUtilities
                                               .getCurrentTimeMillis() / 60000L);
                                       continue;
                                     }
                                     if (j1 == 6301) {
                                       GlobalStatics_9.anIntArray2929[k++] =
-                                          -11745 + (int) (GlobalStatics_10
+                                          -11745 + (int) (TimeUtilities
                                               .getCurrentTimeMillis()
                                               / 0x5265c00L);
                                       continue;
@@ -3943,7 +3944,7 @@ public final class GlobalStatics_11 {
                                     if (j1 == 6303) {
                                       GlobalStatics_9.aCalendar3616.clear();
                                       GlobalStatics_9.aCalendar3616.setTime(
-                                          new Date(GlobalStatics_10
+                                          new Date(TimeUtilities
                                               .getCurrentTimeMillis()));
                                       GlobalStatics_9.anIntArray2929[k++] =
                                           GlobalStatics_9.aCalendar3616.get(1);

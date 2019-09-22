@@ -4,7 +4,11 @@ import com.jagex.runescape.buffer.Buffer;
 import com.jagex.runescape.camera.CameraStatics;
 import com.jagex.runescape.common.GameString;
 import com.jagex.runescape.common.GameStringStatics;
+import com.jagex.runescape.common.TimeUtilities;
 import com.jagex.runescape.huffman.HuffmanEncoder;
+import com.jagex.runescape.input.KeyboardStatics;
+import com.jagex.runescape.input.MouseStatics;
+import com.jagex.runescape.input.MouseWheelStatics;
 import com.jagex.runescape.opengl.DummyClass33;
 import com.jagex.runescape.opengl.DummyClass46;
 import com.jagex.runescape.opengl.GLStatics;
@@ -379,14 +383,14 @@ public final class GameClient extends GameStub {
           buffer.writeInt(530);
           GlobalStatics_2.updateSocket.write(buffer.bytes, 0, 5);
           ++DummyClass18.anInt80;
-          GlobalStatics_9.lastWrittenTime = GlobalStatics_10
+          GlobalStatics_9.lastWrittenTime = TimeUtilities
               .getCurrentTimeMillis();
         }
 
         if (DummyClass18.anInt80 == 3) {
           if (DummyClass15.state != 0 && DummyClass15.state != 5
               && GlobalStatics_2.updateSocket.available() <= 0) {
-            if (GlobalStatics_10.getCurrentTimeMillis()
+            if (TimeUtilities.getCurrentTimeMillis()
                 - GlobalStatics_9.lastWrittenTime > 30000L) {
               this.setUpdateError(1001);
               return;
@@ -434,7 +438,7 @@ public final class GameClient extends GameStub {
       Runtime runtime = Runtime.getRuntime();
       int usedMemory = (int) ((runtime.totalMemory() - runtime.freeMemory())
           / 1024L);
-      long var4 = GlobalStatics_10.getCurrentTimeMillis();
+      long var4 = TimeUtilities.getCurrentTimeMillis();
       if (GlobalStatics_8.aLong3296 == 0L) {
         GlobalStatics_8.aLong3296 = var4;
       }
@@ -644,7 +648,7 @@ public final class GameClient extends GameStub {
                   GlobalStatics_9.method969(GlobalStatics_2.configs, 59);
                   GlobalStatics_10.setAnimationFileUnpackers(
                       GlobalStatics_9.animationBases,
-                      GlobalStatics_10.animationSequences, -77,
+                      GlobalStatics_10.animationSequences,
                       GlobalStatics_9.animationFrames);
                   GlobalStatics_7
                       .method1053((byte) -117, GlobalStatics_2.configs);
@@ -976,15 +980,15 @@ public final class GameClient extends GameStub {
 
       GlobalStatics_0.method728(false);
       DummyClass43.method1194();
-      DummyClass34.method996(-43);
-      GlobalStatics_8.method1225(18074);
+      KeyboardStatics.method996();
+      GlobalStatics_8.method1225();
       if (GlRenderer.USE_OPENGL) {
         DummyClass33.clearGlResources();
       }
 
       int var4;
-      if (DummyClass35.mouseWheel != null) {
-        var4 = DummyClass35.mouseWheel.pollOffset();
+      if (MouseWheelStatics.MOUSE_WHEEL != null) {
+        var4 = MouseWheelStatics.MOUSE_WHEEL.pollOffset();
         GlobalStatics_9.mouseWheelOffset = var4;
       }
 
@@ -1046,14 +1050,14 @@ public final class GameClient extends GameStub {
     }
 
     DummyClass9.unbindKeyboard(GlobalStatics_8.GAME_CANVAS, -9320);
-    GlobalStatics_9.unbind(GlobalStatics_8.GAME_CANVAS);
-    if (DummyClass35.mouseWheel != null) {
-      DummyClass35.mouseWheel.unbind(false, GlobalStatics_8.GAME_CANVAS);
+    MouseStatics.unbind(GlobalStatics_8.GAME_CANVAS);
+    if (MouseWheelStatics.MOUSE_WHEEL != null) {
+      MouseWheelStatics.MOUSE_WHEEL.unbind(GlobalStatics_8.GAME_CANVAS);
     }
 
     GlobalStatics_9.method167(0);
-    GlobalStatics_9.method2090(8);
-    DummyClass35.mouseWheel = null;
+    MouseStatics.clearMouse();
+    MouseWheelStatics.MOUSE_WHEEL = null;
     if (GlobalStatics_9.audioOutputStream0 != null) {
       GlobalStatics_9.audioOutputStream0.method2163(false);
     }
@@ -1304,7 +1308,7 @@ public final class GameClient extends GameStub {
     DummyClass13.method2197(true);
     GlobalStatics_3.method156(2);
     GlobalStatics_9.method2235(4);
-    GlobalStatics_10.method1592((byte) 102);
+    GlobalStatics_10.method1592();
     GlobalStatics_9.method1704(65536);
     GlobalStatics_9.method143(-46);
     GlobalStatics_9.method1409(false);
@@ -1349,7 +1353,7 @@ public final class GameClient extends GameStub {
     GlobalStatics_10.method238(9423);
     GlobalStatics_10.method300(103);
     GlobalStatics_10.method177((byte) 119);
-    GlobalStatics_10.method294((byte) 30);
+    GlobalStatics_10.method294();
     GlobalStatics_10.method341((byte) 85);
     GlobalStatics_10.method268((byte) -91);
     GlobalStatics_10.method351(-1);
@@ -1366,7 +1370,7 @@ public final class GameClient extends GameStub {
     GlobalStatics_2.method61(-93);
     GlobalStatics_11.method67(true);
     GlobalStatics_6.method573(-11346);
-    GlobalStatics_10.method391(25);
+    GlobalStatics_10.method391();
     GlobalStatics_9.method511((byte) 121);
     GlobalStatics_3.method1334((byte) -115);
     GlobalStatics_9.method1343(false);
@@ -1461,7 +1465,7 @@ public final class GameClient extends GameStub {
       }
       if ((DummyClass15.state == 30 || DummyClass15.state == 10) && (
           GlobalStatics_6.REPLACE_CANVAS || DummyClass41.aLong866 != 0L
-              && DummyClass41.aLong866 < GlobalStatics_10
+              && DummyClass41.aLong866 < TimeUtilities
               .getCurrentTimeMillis())) {
         GlobalStatics_9.setWindowMode(GlobalStatics_6.REPLACE_CANVAS,
             GlobalStatics_9.getWindowMode(),
@@ -1497,7 +1501,7 @@ public final class GameClient extends GameStub {
           }
 
           DummyClass41.aLong866 =
-              GlobalStatics_10.getCurrentTimeMillis() + 500L;
+              TimeUtilities.getCurrentTimeMillis() + 500L;
         }
       }
 
@@ -1695,11 +1699,11 @@ public final class GameClient extends GameStub {
     }
 
     GlobalStatics_6.initializeKeyTable();
-    GlobalStatics_10.method193((byte) 115, GlobalStatics_8.GAME_CANVAS);
-    GlobalStatics_9.bindMouseListener(GlobalStatics_8.GAME_CANVAS);
-    DummyClass35.mouseWheel = DummyClass60.createMouseWheel((byte) 15);
-    if (DummyClass35.mouseWheel != null) {
-      DummyClass35.mouseWheel.bind(GlobalStatics_8.GAME_CANVAS, -97);
+    GlobalStatics_10.method193(GlobalStatics_8.GAME_CANVAS);
+    MouseStatics.bindMouseListener(GlobalStatics_8.GAME_CANVAS);
+    MouseWheelStatics.MOUSE_WHEEL = MouseWheelStatics.createMouseWheel();
+    if (MouseWheelStatics.MOUSE_WHEEL != null) {
+      MouseWheelStatics.MOUSE_WHEEL.bind(GlobalStatics_8.GAME_CANVAS);
     }
 
     DummyClass5.anInt2994 = GlobalStatics_9.anInt1214;

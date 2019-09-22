@@ -1,6 +1,6 @@
 package com.jagex.runescape.camera;
 
-import com.jagex.runescape.math.MathUtilities;
+import com.jagex.runescape.common.MathUtilities;
 
 public class CameraStatics {
 
@@ -31,8 +31,9 @@ public class CameraStatics {
       zoom = 0;
     }
 
-    int zoomOffset = zoom * (SOMETHING_SCENE_Y_0 - SOMETHING_SCENE_Y_0_1) / 100
-        + SOMETHING_SCENE_Y_0;
+    int zoomOffset = zoom * (CameraStatics.SOMETHING_SCENE_Y_0
+        - CameraStatics.SOMETHING_SCENE_Y_0_1) / 100
+        + CameraStatics.SOMETHING_SCENE_Y_0;
     cameraZ = cameraZ * zoomOffset >> 8;
     //update zoom end
 
@@ -55,10 +56,10 @@ public class CameraStatics {
       cameraZ = cameraZ * cos >> 16;
     }
 
-    CURRENT_PITCH = pitch;
-    CURRENT_YAW = yaw;
-    CURRENT_Z = cameraZOffset - cameraZ;
-    CURRENT_X = cameraXOffset - cameraX;
-    CURRENT_Y = cameraYOffset - cameraY;
+    CameraStatics.CURRENT_PITCH = pitch;
+    CameraStatics.CURRENT_YAW = yaw;
+    CameraStatics.CURRENT_Z = cameraZOffset - cameraZ;
+    CameraStatics.CURRENT_X = cameraXOffset - cameraX;
+    CameraStatics.CURRENT_Y = cameraYOffset - cameraY;
   }
 }

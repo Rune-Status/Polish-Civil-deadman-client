@@ -1,9 +1,8 @@
 package com.jagex.runescape.statics;
 
-import com.jagex.runescape.buffer.Buffer;
 import com.jagex.runescape.common.GameString;
 import com.jagex.runescape.common.GameStringStatics;
-import com.jagex.runescape.model.Mouse;
+import com.jagex.runescape.input.MouseStatics;
 import com.jagex.runescape.opengl.GLStatics;
 
 public final class DummyClass30 {
@@ -40,12 +39,9 @@ public final class DummyClass30 {
             var5);
   }
 
-  public static void method940(int var0, int var1) {
-    if (var0 >= 101) {
-      Mouse var2 = GlobalStatics_9.INSTANCE;
-      synchronized (var2) {
-        GlobalStatics_9.anInt4045 = var1;
-      }
+  public static void method940(int value) {
+    synchronized (MouseStatics.INSTANCE) {
+      MouseStatics.anInt4045 = value;
     }
   }
 

@@ -1,4 +1,4 @@
-package com.jagex.runescape.math;
+package com.jagex.runescape.common;
 
 public class MathUtilities {
 

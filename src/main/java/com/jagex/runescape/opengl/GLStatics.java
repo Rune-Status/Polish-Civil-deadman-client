@@ -245,17 +245,17 @@ public class GLStatics {
   }
 
   public static void method144() {
-    aClass3_Sub30_2372 = null;
-    aClass3_Sub30_2362 = null;
-    aByteBuffer2368 = null;
-    aByteBuffer2361 = null;
+    GLStatics.aClass3_Sub30_2372 = null;
+    GLStatics.aClass3_Sub30_2362 = null;
+    GLStatics.aByteBuffer2368 = null;
+    GLStatics.aByteBuffer2361 = null;
   }
 
   public static void method147() {
-    aClass3_Sub30_2372 = null;
-    aClass3_Sub30_2362 = null;
-    aByteBuffer2368 = null;
-    aByteBuffer2361 = null;
+    GLStatics.aClass3_Sub30_2372 = null;
+    GLStatics.aClass3_Sub30_2362 = null;
+    GLStatics.aByteBuffer2368 = null;
+    GLStatics.aByteBuffer2361 = null;
   }
 
   public static void method1626(byte var0) {
@@ -338,7 +338,7 @@ public class GLStatics {
     int var9;
     int var12;
     if (GlobalStatics_9.anInt3012 == 0) {
-      int var10 = screenLowerY;
+      int var10 = GLStatics.screenLowerY;
       var9 = DummyClass3.screenUpperY;
       int var8 = GlobalStatics_10.screenUpperX;
       int var7 = DummyClass17.screenLowerX;
@@ -406,7 +406,7 @@ public class GLStatics {
                           var16.aClass94_1504
                       }), var12, (short) 14, GameStringStatics.aClass94_3388,
                       var27);
-              ++anInt715;
+              ++GLStatics.anInt715;
             } else if (!GlobalStatics_9.aBoolean1837) {
               ++DummyClass28.anInt336;
               GameString[] var29 = var16.aClass94Array1499;
@@ -685,13 +685,13 @@ public class GLStatics {
       var20 = new SomethingTilek(var10, var11, var12, var13, -1, var18, false);
 
       for (var21 = var0; var21 >= 0; --var21) {
-        if (sceneGraphTiles[var21][var1][var2] == null) {
-          sceneGraphTiles[var21][var1][var2] =
+        if (GLStatics.sceneGraphTiles[var21][var1][var2] == null) {
+          GLStatics.sceneGraphTiles[var21][var1][var2] =
               new SceneGraphTile(var21, var1, var2);
         }
       }
 
-      sceneGraphTiles[var0][var1][var2].aClass126_2240 = var20;
+      GLStatics.sceneGraphTiles[var0][var1][var2].aClass126_2240 = var20;
     } else if (var3 != 1) {
       SomethingSceneTile var22 =
           new SomethingSceneTile(var3, var4, var5, var1, var2, var6, var7, var8,
@@ -699,35 +699,35 @@ public class GLStatics {
               var12, var13, var14, var15, var16, var17, var18, var19);
 
       for (var21 = var0; var21 >= 0; --var21) {
-        if (sceneGraphTiles[var21][var1][var2] == null) {
-          sceneGraphTiles[var21][var1][var2] =
+        if (GLStatics.sceneGraphTiles[var21][var1][var2] == null) {
+          GLStatics.sceneGraphTiles[var21][var1][var2] =
               new SceneGraphTile(var21, var1, var2);
         }
       }
 
-      sceneGraphTiles[var0][var1][var2].aClass35_2226 = var22;
+      GLStatics.sceneGraphTiles[var0][var1][var2].aClass35_2226 = var22;
     } else {
       var20 = new SomethingTilek(var14, var15, var16, var17, var5, var19,
           var6 == var7 && var6 == var8 && var6 == var9);
 
       for (var21 = var0; var21 >= 0; --var21) {
-        if (sceneGraphTiles[var21][var1][var2] == null) {
-          sceneGraphTiles[var21][var1][var2] =
+        if (GLStatics.sceneGraphTiles[var21][var1][var2] == null) {
+          GLStatics.sceneGraphTiles[var21][var1][var2] =
               new SceneGraphTile(var21, var1, var2);
         }
       }
 
-      sceneGraphTiles[var0][var1][var2].aClass126_2240 = var20;
+      GLStatics.sceneGraphTiles[var0][var1][var2].aClass126_2240 = var20;
     }
   }
 
   public static void method1630(byte var0) {
     GameStringStatics.aClass94_2171 = null;
-    aClass153_2172 = null;
-    aBooleanArray2169 = null;
+    GLStatics.aClass153_2172 = null;
+    GLStatics.aBooleanArray2169 = null;
     GameStringStatics.aClass94_2176 = null;
     if (var0 > -112) {
-      method1632(-116, 108, 54, -120, 44, 6);
+      GLStatics.method1632(-116, 108, 54, -120, 44, 6);
     }
 
     GameStringStatics.aClass94_2170 = null;
@@ -737,7 +737,7 @@ public class GLStatics {
   public static void method1632(int var0, int var1, int var2, int var3,
       int var4, int var5) {
     if (var0 <= 66) {
-      method1630((byte) -33);
+      GLStatics.method1630((byte) -33);
     }
 
     for (int var6 = var3; var1 >= var6; ++var6) {

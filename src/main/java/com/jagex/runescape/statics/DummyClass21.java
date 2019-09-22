@@ -9,7 +9,6 @@ public final class DummyClass21 {
   public static Deque aClass61_1758 = new Deque();
   public static int anInt1759;
   public static int anInt1761 = -1;
-  public static int anInt1762;
   public static int[][] anIntArrayArray1763 = {
       {0, 128, 0, 0, 128, 0, 128, 128}, {0, 128, 0, 0, 128, 0},
       {0, 0, 64, 128, 0, 128},

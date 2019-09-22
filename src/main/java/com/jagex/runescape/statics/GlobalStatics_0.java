@@ -1,6 +1,8 @@
 package com.jagex.runescape.statics;
 
-import com.jagex.runescape.math.MathUtilities;
+import com.jagex.runescape.common.TimeUtilities;
+import com.jagex.runescape.input.MouseStatics;
+import com.jagex.runescape.common.MathUtilities;
 import com.jagex.runescape.model.VariableUpdate;
 import com.jagex.runescape.model.Widget;
 import com.jagex.runescape.buffer.Buffer;
@@ -1466,7 +1468,7 @@ public final class GlobalStatics_0 {
     GlobalStatics_0.aClass94_1699 = null;
     GlobalStatics_0.aClass94_1714 = null;
     if (var0 <= 96) {
-      GlobalStatics_9.unbind(null);
+      MouseStatics.unbind(null);
     }
 
     GlobalStatics_0.aClass94_1710 = null;
@@ -1647,10 +1649,10 @@ public final class GlobalStatics_0 {
     VariableUpdate var3 = (VariableUpdate) GlobalStatics_6.variableUpdates.get(
         var0);
     if (var3 == null) {
-      var3 = new VariableUpdate(GlobalStatics_10.getCurrentTimeMillis() + 500L);
+      var3 = new VariableUpdate(TimeUtilities.getCurrentTimeMillis() + 500L);
       GlobalStatics_6.variableUpdates.put(var0, var3);
     } else {
-      var3.timestamp = 500L + GlobalStatics_10.getCurrentTimeMillis();
+      var3.timestamp = 500L + TimeUtilities.getCurrentTimeMillis();
     }
   }
 

@@ -6,6 +6,8 @@ import com.jagex.runescape.camera.CameraStatics;
 import com.jagex.runescape.common.GameString;
 import com.jagex.runescape.common.GameStringStatics;
 import com.jagex.runescape.common.ThreadUtilities;
+import com.jagex.runescape.common.TimeUtilities;
+import com.jagex.runescape.input.KeyboardStatics;
 import com.jagex.runescape.model.AbstractDirectColorSprite;
 import com.jagex.runescape.model.AbstractFont;
 import com.jagex.runescape.model.AnimationSequence;
@@ -131,7 +133,6 @@ public class GlobalStatics_7 {
   public static GameString aClass94_2945 = GameStringStatics.create(
       "Votre liste d(Wamis est pleine (X100 noms maximum pour la version gratuite et 200 pour les abonn-Bs(Y)3");
   public static GameString aClass94_2951 = GameStringStatics.create("k");
-  public static int[] anIntArray2952 = new int[128];
   public static int anInt2958;
   public static GameString aClass94_2959 = GameStringStatics
       .create("mapfunction");
@@ -1944,13 +1945,13 @@ public class GlobalStatics_7 {
   }
 
   public static boolean hasKeyInput() {
-    synchronized (GlobalStatics_10.KEYBOARD) {
-      if (DummyClass21.anInt1762 == GlobalStatics_9.KEY_QUEUE_INDEX) {
+    synchronized (KeyboardStatics.KEYBOARD) {
+      if (KeyboardStatics.anInt1762 == KeyboardStatics.KEY_QUEUE_INDEX) {
         return false;
       } else {
-        GlobalStatics_9.CURRENT_KEY = GlobalStatics_4.KEY_QUEUE[GlobalStatics_9.KEY_QUEUE_INDEX];
-        GlobalStatics_9.OTHER_CURRENT_KEY = GlobalStatics_5.OTHER_KEY_QUEUE[GlobalStatics_9.KEY_QUEUE_INDEX];
-        GlobalStatics_9.KEY_QUEUE_INDEX = 1 + GlobalStatics_9.KEY_QUEUE_INDEX & 127;
+        GlobalStatics_9.CURRENT_KEY = KeyboardStatics.KEY_QUEUE[KeyboardStatics.KEY_QUEUE_INDEX];
+        GlobalStatics_9.OTHER_CURRENT_KEY = KeyboardStatics.OTHER_KEY_QUEUE[KeyboardStatics.KEY_QUEUE_INDEX];
+        KeyboardStatics.KEY_QUEUE_INDEX = 1 + KeyboardStatics.KEY_QUEUE_INDEX & 127;
         return true;
       }
     }
@@ -2198,7 +2199,7 @@ public class GlobalStatics_7 {
           return null;
         }
 
-        if (var1.b(true) > GlobalStatics_10.getCurrentTimeMillis()) {
+        if (var1.b(true) > TimeUtilities.getCurrentTimeMillis()) {
           return null;
         }
 
@@ -2661,7 +2662,7 @@ public class GlobalStatics_7 {
     GlobalStatics_7.aClass94_2959 = null;
     GlobalStatics_7.aClass94_2951 = null;
     if (!var0) {
-      GlobalStatics_7.anIntArray2952 = null;
+      KeyboardStatics.anIntArray2952 = null;
       GlobalStatics_7.loginBuffer = null;
       GlobalStatics_7.aClass94_2960 = null;
       GlobalStatics_7.aClass94_2961 = null;

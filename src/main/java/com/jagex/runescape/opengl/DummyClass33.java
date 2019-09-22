@@ -1,6 +1,6 @@
 package com.jagex.runescape.opengl;
 
-import com.jagex.runescape.statics.GlobalStatics_10;
+import com.jagex.runescape.common.TimeUtilities;
 import com.jagex.runescape.node.Deque;
 import com.jagex.runescape.model.IntegerNode;
 
@@ -88,9 +88,9 @@ public final class DummyClass33 {
                   if (var2 == null) {
                     if (DummyClass33.anInt585 + DummyClass33.texture2dMemory + DummyClass33.textureMemory
                         > 100663296
-                      && GlobalStatics_10.getCurrentTimeMillis() > DummyClass33.aLong583 + 60000L) {
+                      && TimeUtilities.getCurrentTimeMillis() > DummyClass33.aLong583 + 60000L) {
                       System.gc();
-                      DummyClass33.aLong583 = GlobalStatics_10.getCurrentTimeMillis();
+                      DummyClass33.aLong583 = TimeUtilities.getCurrentTimeMillis();
                     }
 
                     return;

@@ -2,12 +2,15 @@ package com.jagex.runescape.statics;
 
 import com.jagex.runescape.buffer.Buffer;
 import com.jagex.runescape.buffer.BufferStatics;
+import com.jagex.runescape.cache.FileUnpacker;
 import com.jagex.runescape.camera.CameraStatics;
 import com.jagex.runescape.common.GameString;
 import com.jagex.runescape.common.GameStringStatics;
 import com.jagex.runescape.common.HashTable;
+import com.jagex.runescape.common.TimeUtilities;
 import com.jagex.runescape.huffman.HuffmanEncoder;
-import com.jagex.runescape.math.MathUtilities;
+import com.jagex.runescape.input.KeyboardStatics;
+import com.jagex.runescape.common.MathUtilities;
 import com.jagex.runescape.model.AbstractDirectColorSprite;
 import com.jagex.runescape.model.AbstractImageProducer;
 import com.jagex.runescape.model.AbstractModel;
@@ -21,7 +24,6 @@ import com.jagex.runescape.model.Cursor;
 import com.jagex.runescape.model.DirectImageProducer;
 import com.jagex.runescape.model.FileCache;
 import com.jagex.runescape.model.FileCacheRequester;
-import com.jagex.runescape.cache.FileUnpacker;
 import com.jagex.runescape.model.GameObjectConfig;
 import com.jagex.runescape.model.GameWorld;
 import com.jagex.runescape.model.GroundItem;
@@ -29,7 +31,6 @@ import com.jagex.runescape.model.GroundItemNode;
 import com.jagex.runescape.model.IdentityKit;
 import com.jagex.runescape.model.Inventory;
 import com.jagex.runescape.model.ItemConfig;
-import com.jagex.runescape.model.Keyboard;
 import com.jagex.runescape.model.MapScene;
 import com.jagex.runescape.model.Model;
 import com.jagex.runescape.model.NPC;
@@ -96,7 +97,6 @@ public class GlobalStatics_10 {
   public static int[] anIntArray3383 = new int[5];
   public static Font aFont3384;
   public static boolean aBoolean3387 = true;
-  public static volatile int anInt3389;
   public static int anInt3198;
   public static int anInt3199;
   public static GameWorld[] aClass44_Sub1Array3201 = new GameWorld[0];
@@ -188,7 +188,6 @@ public class GlobalStatics_10 {
   public static SomethingPacket116[] aClass133Array3393 = new SomethingPacket116[6];
   public static int anInt3395;
   public static byte[] aByteArray3396;
-  public static volatile int anInt3398;
   public static volatile boolean aBoolean3116 = true;
   public static boolean[][] aBooleanArrayArray3118 = {
       new boolean[0], {true, false, true}, {true, false, false, true},
@@ -214,14 +213,13 @@ public class GlobalStatics_10 {
       {(short) -10304, (short) 9104, (short) -1, (short) -1, (short) -1};
   public static int anInt3351;
   public static FileUnpacker textures;
-  public static Keyboard KEYBOARD = new Keyboard();
   public static short SOMETHING_SCENE_Y_1_1 = 205;
   public static int anInt3054;
   public static byte[][] updatedLandscapesData;
   public static int anInt3061;
   public static boolean aBoolean3064 = true;
   public static int anInt3332 = 50;
-  public static GameString[] aClass94Array3317 = new GameString[anInt3332];
+  public static GameString[] aClass94Array3317 = new GameString[GlobalStatics_10.anInt3332];
   public static int[] anIntArray3337 = new int[GlobalStatics_10.anInt3332];
   public static int[] anIntArray3336 = new int[GlobalStatics_10.anInt3332];
   public static int[] anIntArray3331 = new int[GlobalStatics_10.anInt3332];
@@ -257,8 +255,6 @@ public class GlobalStatics_10 {
   public static int[] anIntArray3288 =
       {4, 4, 1, 2, 6, 4, 2, 49, 2, 2, 2, 2, 2, 2, 2, 2, 1, 1, 1, 1, 1, 1, 1, 1,
           1, 1, 1, 1};
-  public static long deltaTime;
-  public static long lastSampledTime;
   public static int[] anIntArray2480 = new int[25];
   public static int anInt2484;
   public static int languageId;
@@ -1018,7 +1014,8 @@ public class GlobalStatics_10 {
                         128 + GlobalStatics_9.anInt2556);
                     var9 += 128;
                     var8 += 128;
-                    GlobalStatics_9.SECURE_BUFFER.writeShort((var8 << 8) + var9);
+                    GlobalStatics_9.SECURE_BUFFER
+                        .writeShort((var8 << 8) + var9);
                     GlobalStatics_9.anInt2556 = 0;
                   } else if (GlobalStatics_9.anInt2556 < 32) {
                     GlobalStatics_9.SECURE_BUFFER.writeByte(
@@ -1117,10 +1114,10 @@ public class GlobalStatics_10 {
               break;
             }
           }
-        } else if (GlobalStatics_8.PRESSED_KEYS[96]
-            || GlobalStatics_8.PRESSED_KEYS[97]
-            || GlobalStatics_8.PRESSED_KEYS[98]
-            || GlobalStatics_8.PRESSED_KEYS[99]) {
+        } else if (KeyboardStatics.PRESSED_KEYS[96]
+            || KeyboardStatics.PRESSED_KEYS[97]
+            || KeyboardStatics.PRESSED_KEYS[98]
+            || KeyboardStatics.PRESSED_KEYS[99]) {
           GlobalStatics_9.aBoolean4068 = true;
         }
 
@@ -1489,8 +1486,8 @@ public class GlobalStatics_10 {
                         }
 
                         if (GlobalStatics_10.PLAYER_RIGHTS > 0
-                            && GlobalStatics_8.PRESSED_KEYS[0x52]//ctrl
-                            && GlobalStatics_8.PRESSED_KEYS[0x51]//shift
+                            && KeyboardStatics.PRESSED_KEYS[0x52]//ctrl
+                            && KeyboardStatics.PRESSED_KEYS[0x51]//shift
                             && GlobalStatics_9.mouseWheelOffset != 0) {
                           regionLevel =
                               GlobalStatics_9.currentPlane
@@ -1510,8 +1507,8 @@ public class GlobalStatics_10 {
                         }
 
                         if (GlobalStatics_10.PLAYER_RIGHTS > 0
-                            && GlobalStatics_8.PRESSED_KEYS[0x52]
-                            && GlobalStatics_8.PRESSED_KEYS[0x51]) {
+                            && KeyboardStatics.PRESSED_KEYS[0x52]
+                            && KeyboardStatics.PRESSED_KEYS[0x51]) {
                           if (DummyClass32.anInt515 != -1) {
                             GlobalStatics_6.method979(
                                 GlobalStatics_10.REGION_BASE_X
@@ -1636,7 +1633,7 @@ public class GlobalStatics_10 {
                         var6 = GlobalStatics_10.method301((byte) -119);
                         if (regionLevel > 15000 && var6 > 15000) {
                           DummyClass13.anInt2023 = 250;
-                          DummyClass30.method940(112, 14500);
+                          DummyClass30.method940(14500);
                           ++GlobalStatics_9.anInt1330;
                           GlobalStatics_9.SECURE_BUFFER.writePacket(245);
                         }
@@ -1820,7 +1817,7 @@ public class GlobalStatics_10 {
       GlobalStatics_10.aClass131_3421 = null;
     }
 
-    return DummyClass55.aBoolean1419 && GlobalStatics_8.PRESSED_KEYS[81]
+    return DummyClass55.aBoolean1419 && KeyboardStatics.PRESSED_KEYS[81]
         && GlobalStatics_10.amountContextActions > 2 ?
         GlobalStatics_9.anIntArray1578[-2
             + GlobalStatics_10.amountContextActions] :
@@ -3010,7 +3007,7 @@ public class GlobalStatics_10 {
 
   public static int method301(byte var0) {
     int var1 = -47 / ((45 - var0) / 57);
-    return GlobalStatics_10.anInt3398;
+    return KeyboardStatics.anInt3398;
   }
 
   public static void updateProjectiles() {
@@ -3072,7 +3069,7 @@ public class GlobalStatics_10 {
     GameStringStatics.aClass94_3053 = null;
     GameStringStatics.aClass94_3051 = null;
     GameStringStatics.aClass94_3048 = null;
-    GlobalStatics_10.KEYBOARD = null;
+    KeyboardStatics.KEYBOARD = null;
   }
 
   public static int method179(byte var0, int var1) {
@@ -3176,7 +3173,7 @@ public class GlobalStatics_10 {
 
   public static void method183(int var0) {
     if (var0 > -91) {
-      GlobalStatics_10.KEYBOARD = null;
+      KeyboardStatics.KEYBOARD = null;
     }
 
     GlobalStatics_7.aClass93_684.method1524(3);
@@ -3359,20 +3356,17 @@ public class GlobalStatics_10 {
     return var5;
   }
 
-  public static void method193(byte var0, Component var1) {
-    if (var0 < 49) {
-      GlobalStatics_10.anInt3054 = 85;
-    }
-    var1.setFocusTraversalKeysEnabled(false);
-    var1.addKeyListener(GlobalStatics_10.KEYBOARD);
-    var1.addFocusListener(GlobalStatics_10.KEYBOARD);
+  public static void method193(Component component) {
+    component.setFocusTraversalKeysEnabled(false);
+    component.addKeyListener(KeyboardStatics.KEYBOARD);
+    component.addFocusListener(KeyboardStatics.KEYBOARD);
   }
 
-  public static void method294(byte var0) {
+  public static void method294() {
     GlobalStatics_10.anIntArray3327 = null;
     GlobalStatics_10.anIntArray3337 = null;
     GameStringStatics.aClass94_3326 = null;
-    aClass94Array3317 = null;
+    GlobalStatics_10.aClass94Array3317 = null;
     GameStringStatics.aClass94_3334 = null;
     GlobalStatics_10.anIntArray3328 = null;
     GameStringStatics.ASSIST_REQ = null;
@@ -3382,7 +3376,6 @@ public class GlobalStatics_10 {
     GlobalStatics_10.anIntArray3329 = null;
     GameStringStatics.aClass94_3333 = null;
     GlobalStatics_10.anIntArray3336 = null;
-    int var1 = -62 % ((-59 - var0) / 47);
     GlobalStatics_10.anIntArray3321 = null;
     GlobalStatics_10.anIntArray3318 = null;
     GlobalStatics_10.anIntArray3331 = null;
@@ -3814,8 +3807,9 @@ public class GlobalStatics_10 {
           }
 
           GlobalStatics_9.GAME_BUFFER.position = 0;
-          GlobalStatics_9.GAME_SOCKET.readBytes(GlobalStatics_9.GAME_BUFFER.bytes, 0,
-              8 * GlobalStatics_10.aClass94Array3391.length);
+          GlobalStatics_9.GAME_SOCKET
+              .readBytes(GlobalStatics_9.GAME_BUFFER.bytes, 0,
+                  8 * GlobalStatics_10.aClass94Array3391.length);
 
           for (var1 = 0; GlobalStatics_10.aClass94Array3391.length > var1;
               ++var1) {
@@ -4043,7 +4037,7 @@ public class GlobalStatics_10 {
         id);
     if (var3 != null) {
       if (var3.timestamp != 0x4000000000000001L) {
-        var3.timestamp = GlobalStatics_10.getCurrentTimeMillis() + 500L
+        var3.timestamp = TimeUtilities.getCurrentTimeMillis() + 500L
             | 0x4000000000000000L;
       }
     } else {
@@ -4052,18 +4046,7 @@ public class GlobalStatics_10 {
     }
   }
 
-  public static synchronized long getCurrentTimeMillis() {
-    long currentTime = System.currentTimeMillis();
-    if (GlobalStatics_10.lastSampledTime > currentTime) {
-      GlobalStatics_10.deltaTime +=
-          GlobalStatics_10.lastSampledTime - currentTime;
-    }
-    GlobalStatics_10.lastSampledTime = currentTime;
-    return GlobalStatics_10.deltaTime + currentTime;
-  }
-
   public static void method388(byte var0) {
-    int var1 = 44 / ((-2 - var0) / 52);
     if (GameStringStatics.aClass94_3220 != null) {
       GlobalStatics_9.method138(GameStringStatics.aClass94_3220, 0);
       GameStringStatics.aClass94_3220 = null;
@@ -4120,7 +4103,7 @@ public class GlobalStatics_10 {
   }
 
   public static void method390(boolean var0, int var1, int var2, int var3,
-      byte var4, int var5,
+      int var5,
       int var6) {
     GlobalStatics_4.anInt3631 = var3;
     GlobalStatics_10.anInt3414 = var2;
@@ -4136,62 +4119,52 @@ public class GlobalStatics_10 {
               CameraStatics.CURRENT_Z) - GlobalStatics_10.anInt3414;
     }
 
-    int var7 = 76 % ((-79 - var4) / 35);
     GlobalStatics_9.anInt1753 = 2;
   }
 
-  public static void method391(int var0) {
+  public static void method391() {
     GameStringStatics.aClass94_2490 = null;
     GlobalStatics_10.anIntArray2480 = null;
     GameStringStatics.aClass94_2481 = null;
-    if (var0 != 25) {
-      GlobalStatics_10.method388((byte) -58);
-    }
-
     GameStringStatics.aClass94_2486 = null;
     GameStringStatics.aClass94_2482 = null;
   }
 
-  public static void setAnimationFileUnpackers(FileUnpacker var0,
-      FileUnpacker var1, int var2,
-      FileUnpacker var3) {
-    GlobalStatics_3.animationSequences = var1;
-    int var4 = -110 / ((-7 - var2) / 43);
-    GlobalStatics_7.animationFrames = var0;
-    GlobalStatics_10.animationBases = var3;
+  public static void setAnimationFileUnpackers(
+      FileUnpacker animationFrames,
+      FileUnpacker animationSequences,
+      FileUnpacker animationBases
+  ) {
+    GlobalStatics_3.animationSequences = animationSequences;
+    GlobalStatics_7.animationFrames = animationFrames;
+    GlobalStatics_10.animationBases = animationBases;
   }
 
-  public static void method1591(boolean var0, AudioStreamEncoder var1) {
-    if (var1.aClass3_Sub12_2544 != null) {
-      var1.aClass3_Sub12_2544.anInt2374 = 0;
+  public static void method1591(AudioStreamEncoder encoder) {
+    if (encoder.aClass3_Sub12_2544 != null) {
+      encoder.aClass3_Sub12_2544.anInt2374 = 0;
     }
 
-    var1.aBoolean2545 = false;
+    encoder.aBoolean2545 = false;
 
-    for (AudioStreamEncoder var2 = var1.method411(); var2 != null;
-        var2 = var1.method414()) {
-      GlobalStatics_10.method1591(true, var2);
-    }
-
-    if (!var0) {
-      GLStatics.CAMERA_TILE_X = -103;
+    for (AudioStreamEncoder var2 = encoder.method411(); var2 != null;
+        var2 = encoder.method414()) {
+      GlobalStatics_10.method1591(var2);
     }
   }
 
-  public static void method1592(byte var0) {
+  public static void method1592() {
     GlobalStatics_10.materials = null;
     GlobalStatics_10.aClass153_1378 = null;
     GlobalStatics_10.anIntArrayArray1373 = null;
     GameStringStatics.aClass94_1363 = null;
     GlobalStatics_10.aClass3_Sub28_Sub16_Sub2_1381 = null;
-    if (var0 > 25) {
-      GlobalStatics_10.aClass94_1377 = null;
-      GameStringStatics.aClass94_1380 = null;
-      GlobalStatics_10.aClass153_1372 = null;
-      GlobalStatics_10.aClass153_1370 = null;
-      GlobalStatics_10.aByteArray1364 = null;
-      GameStringStatics.aClass94_1374 = null;
-    }
+    GlobalStatics_10.aClass94_1377 = null;
+    GameStringStatics.aClass94_1380 = null;
+    GlobalStatics_10.aClass153_1372 = null;
+    GlobalStatics_10.aClass153_1370 = null;
+    GlobalStatics_10.aByteArray1364 = null;
+    GameStringStatics.aClass94_1374 = null;
   }
 
   public static void method1593(int var0, FileUnpacker var1) {
@@ -5342,8 +5315,9 @@ public class GlobalStatics_10 {
 
     if (DummyClass7.settings != null) {
       var2 =
-          GlobalStatics_9.concat(new GameString[]{GameStringStatics.aClass94_3637,
-              DummyClass7.settings});
+          GlobalStatics_9
+              .concat(new GameString[]{GameStringStatics.aClass94_3637,
+                  DummyClass7.settings});
     }
 
     return GlobalStatics_9.concat(new GameString[]{

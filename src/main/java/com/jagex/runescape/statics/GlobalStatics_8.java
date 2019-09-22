@@ -4,7 +4,9 @@ import com.jagex.runescape.buffer.Buffer;
 import com.jagex.runescape.buffer.BufferStatics;
 import com.jagex.runescape.common.GameString;
 import com.jagex.runescape.common.GameStringStatics;
-import com.jagex.runescape.math.MathUtilities;
+import com.jagex.runescape.input.KeyboardStatics;
+import com.jagex.runescape.input.MouseStatics;
+import com.jagex.runescape.common.MathUtilities;
 import com.jagex.runescape.model.AbstractDirectColorSprite;
 import com.jagex.runescape.model.AbstractFont;
 import com.jagex.runescape.model.AbstractModel;
@@ -19,7 +21,6 @@ import com.jagex.runescape.model.HintMarker;
 import com.jagex.runescape.model.Inventory;
 import com.jagex.runescape.model.Mobile;
 import com.jagex.runescape.model.Model;
-import com.jagex.runescape.model.Mouse;
 import com.jagex.runescape.model.NPC;
 import com.jagex.runescape.model.NpcConfiguration;
 import com.jagex.runescape.model.Player;
@@ -115,9 +116,7 @@ public class GlobalStatics_8 {
   public static FileUnpacker widgets;
   public static GameString aClass94_2735 = GameStringStatics.create(")4");
   public static int anInt2737;
-  public static volatile int anInt2743;
   public static int plane;
-  public static boolean[] PRESSED_KEYS = new boolean[112];
   public static int[][][] anIntArrayArrayArray1497 = new int[4][13][13];
   public static GameString aClass94_1508 = GameStringStatics
       .create("Choisir une option");
@@ -229,22 +228,17 @@ public class GlobalStatics_8 {
     }
   }
 
-  public static void method1225(int var0) {
-    Mouse var1 = GlobalStatics_9.INSTANCE;
-    synchronized (var1) {
-      if (var0 != 18074) {
-        GlobalStatics_8.aClass94_946 = null;
-      }
-
-      GlobalStatics_10.anInt3069 = GlobalStatics_9.anInt549;
-      GlobalStatics_9.anInt1676 = GlobalStatics_9.lastMouseX;
-      GlobalStatics_0.anInt1709 = DummyClass53.lastMouseY;
-      GlobalStatics_9.anInt3644 = GlobalStatics_8.anInt2743;
-      DummyClass5.anInt2993 = GlobalStatics_9.anInt362;
-      ++GlobalStatics_9.anInt4045;
-      DummyClass36.anInt2614 = GlobalStatics_10.anInt3389;
-      GlobalStatics_3.aLong1102 = GlobalStatics_9.lastMousePressedTime;
-      GlobalStatics_8.anInt2743 = 0;
+  public static void method1225() {
+    synchronized (MouseStatics.INSTANCE) {
+      GlobalStatics_10.anInt3069 = MouseStatics.anInt549;
+      GlobalStatics_9.anInt1676 = MouseStatics.LAST_MOUSE_X;
+      GlobalStatics_0.anInt1709 = MouseStatics.LAST_MOUSE_Y;
+      GlobalStatics_9.anInt3644 = MouseStatics.anInt2743;
+      DummyClass5.anInt2993 = MouseStatics.anInt362;
+      ++MouseStatics.anInt4045;
+      DummyClass36.anInt2614 = MouseStatics.anInt3389;
+      GlobalStatics_3.aLong1102 = MouseStatics.LAST_MOUSE_PRESS_TIME;
+      MouseStatics.anInt2743 = 0;
     }
   }
 
@@ -1568,8 +1562,8 @@ public class GlobalStatics_8 {
         } else {
           if (var5 == 1) {
             if (GlobalStatics_10.PLAYER_RIGHTS > 0
-                && GlobalStatics_8.PRESSED_KEYS[82]
-                && GlobalStatics_8.PRESSED_KEYS[81]) {
+                && KeyboardStatics.PRESSED_KEYS[82]
+                && KeyboardStatics.PRESSED_KEYS[81]) {
               GlobalStatics_6.method979(GlobalStatics_10.REGION_BASE_X + var2,
                   GlobalStatics_9.REGION_BASE_Y + var3,
                   GlobalStatics_9.currentPlane, (byte) -4);
@@ -2325,8 +2319,8 @@ public class GlobalStatics_8 {
                     .method589(GlobalStatics_9.currentPlane, var2, var3);
               } else {
                 if (GlobalStatics_10.PLAYER_RIGHTS > 0
-                    && GlobalStatics_8.PRESSED_KEYS[82]
-                    && GlobalStatics_8.PRESSED_KEYS[81]) {
+                    && KeyboardStatics.PRESSED_KEYS[82]
+                    && KeyboardStatics.PRESSED_KEYS[81]) {
                   GlobalStatics_6.method979(var2 + GlobalStatics_10.REGION_BASE_X,
                       GlobalStatics_9.REGION_BASE_Y + var3,
                       GlobalStatics_9.currentPlane,
@@ -2746,7 +2740,7 @@ public class GlobalStatics_8 {
             int var21;
             if (var9.aByteArray263 != null) {
               for (var19 = 0; var19 < var9.aByteArray263.length; ++var19) {
-                if (!GlobalStatics_8.PRESSED_KEYS[var9.aByteArray263[var19]]) {
+                if (!KeyboardStatics.PRESSED_KEYS[var9.aByteArray263[var19]]) {
                   if (var9.anIntArray310 != null) {
                     var9.anIntArray310[var19] = 0;
                   }
@@ -2756,11 +2750,11 @@ public class GlobalStatics_8 {
                   byte var20 = var9.aByteArray231[var19];
                   if (var20 == 0
                       || ((var20 & 2) == 0
-                      || GlobalStatics_8.PRESSED_KEYS[86]) && (
+                      || KeyboardStatics.PRESSED_KEYS[86]) && (
                       (var20 & 1) == 0
-                          || GlobalStatics_8.PRESSED_KEYS[82]) && (
+                          || KeyboardStatics.PRESSED_KEYS[82]) && (
                       (var20 & 4) == 0
-                          || GlobalStatics_8.PRESSED_KEYS[81])) {
+                          || KeyboardStatics.PRESSED_KEYS[81])) {
                     GlobalStatics_11
                         .method66(GameStringStatics.EMPTY_STRING, -1, var19 + 1,
                             (byte) -29, var9.anInt279);
@@ -2838,7 +2832,7 @@ public class GlobalStatics_8 {
                 if (var9.anInt189 == 1400) {
                   GlobalStatics_9.aClass11_3551 = var9;
                   if (var18) {
-                    if (GlobalStatics_8.PRESSED_KEYS[82]
+                    if (KeyboardStatics.PRESSED_KEYS[82]
                         && GlobalStatics_10.PLAYER_RIGHTS > 0) {
                       var19 =
                           (int) ((DummyClass5.anInt2993 - var10
@@ -3639,7 +3633,7 @@ public class GlobalStatics_8 {
     GlobalStatics_8.aClass94_1508 = null;
     GlobalStatics_8.aClass94_1523 = null;
     GlobalStatics_8.anIntArrayArrayArray1497 = null;
-    GlobalStatics_8.PRESSED_KEYS = null;
+    KeyboardStatics.PRESSED_KEYS = null;
     GlobalStatics_8.aClass94_1509 = null;
     if (var0 != -11) {
       GlobalStatics_8.anInt1521 = -96;

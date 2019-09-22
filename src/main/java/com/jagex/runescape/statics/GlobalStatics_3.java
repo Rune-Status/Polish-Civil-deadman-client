@@ -38,7 +38,6 @@ public class GlobalStatics_3 {
   public static GameString COMMAND_SHIFT_CLICK = GameStringStatics
       .create("::shiftclick");
   public static int anInt2383;
-  public static int anInt2384;
   public static GameString COMMAND_REPLACE_CANVAS = GameStringStatics
       .create("::replacecanvas");
   public static int[] anIntArray2386 = {1, -1, -1, 1};
@@ -473,7 +472,7 @@ public class GlobalStatics_3 {
 
     GlobalStatics_10.amountContextActions = 0;
     DummyClass36.aBoolean2615 = false;
-    DummyClass30.method940(119, 0);
+    DummyClass30.method940(0);
 
     for (var1 = 0; var1 < 100; ++var1) {
       GlobalStatics_0.aClass94Array2580[var1] = null;

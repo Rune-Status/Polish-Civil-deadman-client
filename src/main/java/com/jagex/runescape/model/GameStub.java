@@ -1,6 +1,7 @@
 package com.jagex.runescape.model;
 
 import com.jagex.runescape.common.ThreadUtilities;
+import com.jagex.runescape.common.TimeUtilities;
 import com.jagex.runescape.opengl.GlRenderer;
 import com.jagex.runescape.opengl.GlTexture2d;
 import com.jagex.runescape.statics.DummyClass1;
@@ -82,7 +83,7 @@ public abstract class GameStub implements Runnable,
     GlobalStatics_10.FOCUSED = true;
     GlobalStatics_6.REPLACE_CANVAS = false;
     GlobalStatics_3.canvasInitializedTime =
-        GlobalStatics_10.getCurrentTimeMillis();
+        TimeUtilities.getCurrentTimeMillis();
 
   }
 
@@ -125,13 +126,13 @@ public abstract class GameStub implements Runnable,
   public final void stop() {
     if (GlobalStatics_0.applet == this && !GlobalStatics_9.aBoolean554) {
       GlobalStatics_6.destroyTime =
-          4000L + GlobalStatics_10.getCurrentTimeMillis();
+          4000L + TimeUtilities.getCurrentTimeMillis();
     }
   }
 
   public final void destroy() {
     if (this == GlobalStatics_0.applet && !GlobalStatics_9.aBoolean554) {
-      GlobalStatics_6.destroyTime = GlobalStatics_10.getCurrentTimeMillis();
+      GlobalStatics_6.destroyTime = TimeUtilities.getCurrentTimeMillis();
       ThreadUtilities.sleep(5000L);
       GlobalStatics_10.signLink = null;
       this.shutdown(46, false);
@@ -142,7 +143,7 @@ public abstract class GameStub implements Runnable,
     if (this == GlobalStatics_0.applet && !GlobalStatics_9.aBoolean554) {
       GlobalStatics_10.aBoolean3116 = true;
       if (DummyClass20.aBoolean1784 && !GlRenderer.USE_OPENGL
-          && -GlobalStatics_3.canvasInitializedTime + GlobalStatics_10
+          && -GlobalStatics_3.canvasInitializedTime + TimeUtilities
           .getCurrentTimeMillis() > 1000L) {
         Rectangle var2 = var1.getClipBounds();
         if (var2 == null || var2.width >= GlobalStatics_6.windowWidth
@@ -191,7 +192,7 @@ public abstract class GameStub implements Runnable,
   }
 
   private void handleUpdate() {
-    long currentTime = GlobalStatics_10.getCurrentTimeMillis();
+    long currentTime = TimeUtilities.getCurrentTimeMillis();
     long sampledTime = DummyClass21.updateMemory[GlobalStatics_8.updateMemoryCounter];
     DummyClass21.updateMemory[GlobalStatics_8.updateMemoryCounter] = currentTime;
     GlobalStatics_8.updateMemoryCounter =
@@ -203,7 +204,7 @@ public abstract class GameStub implements Runnable,
   }
 
   private void draw() {
-    long var2 = GlobalStatics_10.getCurrentTimeMillis();
+    long var2 = TimeUtilities.getCurrentTimeMillis();
     long var4 = DummyClass5.drawMemory[GlobalStatics_8.drawMemoryCounter];
 
     DummyClass5.drawMemory[GlobalStatics_8.drawMemoryCounter] = var2;
@@ -248,7 +249,7 @@ public abstract class GameStub implements Runnable,
     GlobalStatics_9.frameRateRegulator = GlobalStatics_0.method1012((byte) -31);
 
     while (GlobalStatics_6.destroyTime == 0L
-        || GlobalStatics_6.destroyTime > GlobalStatics_10
+        || GlobalStatics_6.destroyTime > TimeUtilities
         .getCurrentTimeMillis()) {
       GlobalStatics_9.cycles =
           GlobalStatics_9.frameRateRegulator

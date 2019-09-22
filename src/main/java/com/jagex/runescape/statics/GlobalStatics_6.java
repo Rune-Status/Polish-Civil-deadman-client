@@ -5,7 +5,9 @@ import com.jagex.runescape.cache.CacheStatics;
 import com.jagex.runescape.common.GameString;
 import com.jagex.runescape.common.GameStringStatics;
 import com.jagex.runescape.common.HashTable;
-import com.jagex.runescape.math.MathUtilities;
+import com.jagex.runescape.common.TimeUtilities;
+import com.jagex.runescape.input.KeyboardStatics;
+import com.jagex.runescape.common.MathUtilities;
 import com.jagex.runescape.model.AbstractDirectColorSprite;
 import com.jagex.runescape.model.AbstractFont;
 import com.jagex.runescape.model.AbstractModel;
@@ -68,7 +70,6 @@ import com.jagex.runescape.opengl.SomethingGl;
 import com.jagex.runescape.opengl.SomethingGl0;
 import com.jagex.runescape.opengl.WaterShader;
 import com.jagex.runescape.sprite.SoftwareIndexedColorSpriteStatics;
-import java.awt.event.KeyEvent;
 import java.io.IOException;
 import java.net.Socket;
 import java.util.Calendar;
@@ -546,36 +547,36 @@ public class GlobalStatics_6 {
     if (GlobalStatics_9.aString1216.toLowerCase().indexOf("microsoft")
         == -1) {
       if (GlobalStatics_9.setFocusTraversalKeyEnabledMethod == null) {
-        DummyClass26.keyTable[192] = 58;
-        DummyClass26.keyTable[222] = 59;
+        KeyboardStatics.KEY_TABLE[192] = 58;
+        KeyboardStatics.KEY_TABLE[222] = 59;
       } else {
-        DummyClass26.keyTable[222] = 58;
-        DummyClass26.keyTable[192] = 28;
-        DummyClass26.keyTable[520] = 59;
+        KeyboardStatics.KEY_TABLE[222] = 58;
+        KeyboardStatics.KEY_TABLE[192] = 28;
+        KeyboardStatics.KEY_TABLE[520] = 59;
       }
 
-      DummyClass26.keyTable[45] = 26;
-      DummyClass26.keyTable[61] = 27;
-      DummyClass26.keyTable[91] = 42;
-      DummyClass26.keyTable[59] = 57;
-      DummyClass26.keyTable[93] = 43;
-      DummyClass26.keyTable[44] = 71;
-      DummyClass26.keyTable[92] = 74;
-      DummyClass26.keyTable[46] = 72;
-      DummyClass26.keyTable[47] = 73;
+      KeyboardStatics.KEY_TABLE[45] = 26;
+      KeyboardStatics.KEY_TABLE[61] = 27;
+      KeyboardStatics.KEY_TABLE[91] = 42;
+      KeyboardStatics.KEY_TABLE[59] = 57;
+      KeyboardStatics.KEY_TABLE[93] = 43;
+      KeyboardStatics.KEY_TABLE[44] = 71;
+      KeyboardStatics.KEY_TABLE[92] = 74;
+      KeyboardStatics.KEY_TABLE[46] = 72;
+      KeyboardStatics.KEY_TABLE[47] = 73;
     } else {
-      DummyClass26.keyTable[187] = 27;
-      DummyClass26.keyTable[223] = 28;
-      DummyClass26.keyTable[221] = 43;
-      DummyClass26.keyTable[188] = 71;
-      DummyClass26.keyTable[222] = 59;
-      DummyClass26.keyTable[192] = 58;
-      DummyClass26.keyTable[191] = 73;
-      DummyClass26.keyTable[219] = 42;
-      DummyClass26.keyTable[190] = 72;
-      DummyClass26.keyTable[186] = 57;
-      DummyClass26.keyTable[220] = 74;
-      DummyClass26.keyTable[189] = 26;
+      KeyboardStatics.KEY_TABLE[187] = 27;
+      KeyboardStatics.KEY_TABLE[223] = 28;
+      KeyboardStatics.KEY_TABLE[221] = 43;
+      KeyboardStatics.KEY_TABLE[188] = 71;
+      KeyboardStatics.KEY_TABLE[222] = 59;
+      KeyboardStatics.KEY_TABLE[192] = 58;
+      KeyboardStatics.KEY_TABLE[191] = 73;
+      KeyboardStatics.KEY_TABLE[219] = 42;
+      KeyboardStatics.KEY_TABLE[190] = 72;
+      KeyboardStatics.KEY_TABLE[186] = 57;
+      KeyboardStatics.KEY_TABLE[220] = 74;
+      KeyboardStatics.KEY_TABLE[189] = 26;
     }
   }
 
@@ -973,21 +974,6 @@ public class GlobalStatics_6 {
     var3.anInt3598 = var0;
   }
 
-  public static int method1386(boolean var0, KeyEvent var1) {
-    int var2 = var1.getKeyChar();
-    if (!var0) {
-      return -90;
-    } else if (var2 == 8364) {
-      return 128;
-    } else {
-      if (var2 <= 0 || var2 >= 256) {
-        var2 = -1;
-      }
-
-      return var2;
-    }
-  }
-
   public static void method1388(boolean var0) {
     GameStringStatics.aClass94_1122 = null;
     GameStringStatics.CLIENT_SCRIPT_ERROR = null;
@@ -1099,7 +1085,7 @@ public class GlobalStatics_6 {
   public static int method1735(int var0) {
     try {
       if (GLStatics.anInt692 == 0) {
-        if (GlobalStatics_10.getCurrentTimeMillis() - 5000L
+        if (TimeUtilities.getCurrentTimeMillis() - 5000L
             < GlobalStatics_10.aLong3411) {
           return 0;
         }
@@ -1108,11 +1094,11 @@ public class GlobalStatics_6 {
             DummyClass35.signLink
                 .method1441((byte) 8, GlobalStatics_8.serverHost,
                     DummyClass24.anInt1658);
-        GlobalStatics_10.aLong261 = GlobalStatics_10.getCurrentTimeMillis();
+        GlobalStatics_10.aLong261 = TimeUtilities.getCurrentTimeMillis();
         GLStatics.anInt692 = 1;
       }
 
-      if (30000L + GlobalStatics_10.aLong261 < GlobalStatics_10
+      if (30000L + GlobalStatics_10.aLong261 < TimeUtilities
           .getCurrentTimeMillis()) {
         return GlobalStatics_10.method179((byte) 92, 1000);
       }
@@ -1210,7 +1196,7 @@ public class GlobalStatics_6 {
             GlobalStatics_7.anInt1088 = 0;
             GLStatics.anInt692 = 0;
             GlobalStatics_10.aByteArray3396 = null;
-            GlobalStatics_10.aLong3411 = GlobalStatics_10
+            GlobalStatics_10.aLong3411 = TimeUtilities
                 .getCurrentTimeMillis();
             return 0;
           }

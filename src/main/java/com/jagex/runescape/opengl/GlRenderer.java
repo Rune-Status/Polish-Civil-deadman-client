@@ -162,7 +162,7 @@ public final class GlRenderer {
 
   private static void method1829() {
     GlRenderer.viewportSetup = false;
-    GlRenderer.GL.glDisable(GL.GL_TEXTURE_2D);
+    GlRenderer.GL.glDisable(GlRenderer.GL.GL_TEXTURE_2D);
     GlRenderer.TEXTURE = -1;
     GlRenderer.GL.glTexEnvi(8960, 8704, 0x8570);
     GlRenderer.GL.glTexEnvi(8960, 0x8571, 8448);
@@ -549,13 +549,13 @@ public final class GlRenderer {
   public static void bindTexture(int var0) {
     if (var0 != GlRenderer.TEXTURE) {
       if (var0 == -1) {
-        GlRenderer.GL.glDisable(GL.GL_TEXTURE_2D);
+        GlRenderer.GL.glDisable(GlRenderer.GL.GL_TEXTURE_2D);
       } else {
         if (GlRenderer.TEXTURE == -1) {
-          GlRenderer.GL.glEnable(GL.GL_TEXTURE_2D);
+          GlRenderer.GL.glEnable(GlRenderer.GL.GL_TEXTURE_2D);
         }
 
-        GlRenderer.GL.glBindTexture(GL.GL_TEXTURE_2D, var0);
+        GlRenderer.GL.glBindTexture(GlRenderer.GL.GL_TEXTURE_2D, var0);
       }
 
       GlRenderer.TEXTURE = var0;
@@ -700,9 +700,9 @@ public final class GlRenderer {
     int[] var0 = new int[1];
     GlRenderer.GL.glGenTextures(1, var0, 0);
     GlRenderer.anInt1810 = var0[0];
-    GlRenderer.GL.glBindTexture(GL.GL_TEXTURE_2D, GlRenderer.anInt1810);
-    GlRenderer.GL.glTexImage2D(GL.GL_TEXTURE_2D, 0, 4, 1, 1, 0, GL.GL_RGBA,
-        GL.GL_UNSIGNED_BYTE,
+    GlRenderer.GL.glBindTexture(GlRenderer.GL.GL_TEXTURE_2D, GlRenderer.anInt1810);
+    GlRenderer.GL.glTexImage2D(GlRenderer.GL.GL_TEXTURE_2D, 0, 4, 1, 1, 0, GlRenderer.GL.GL_RGBA,
+        GlRenderer.GL.GL_UNSIGNED_BYTE,
         IntBuffer.wrap(new int[]{-1}));
     DummyClass46.setupSceneGl();
     GlobalStatics_6.method468(6);

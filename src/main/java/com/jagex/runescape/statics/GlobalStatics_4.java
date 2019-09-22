@@ -2,6 +2,7 @@ package com.jagex.runescape.statics;
 
 import com.jagex.runescape.cache.BZipDecompressorStatics;
 import com.jagex.runescape.common.GameStringStatics;
+import com.jagex.runescape.input.KeyboardStatics;
 import com.jagex.runescape.model.AnimationSequence;
 import com.jagex.runescape.model.FloorOverlay;
 import com.jagex.runescape.model.GameException;
@@ -43,7 +44,6 @@ public class GlobalStatics_4 {
   public static int anInt3631;
   public static int anInt1691 = -1;
   public static int anInt1692;
-  public static int[] KEY_QUEUE = new int[128];
   public static int[] anIntArray1695;
   public static int usageLocation;
   public static int updateCycle;
@@ -298,7 +298,7 @@ public class GlobalStatics_4 {
     }
 
     BZipDecompressorStatics.anIntArray1690 = null;
-    GlobalStatics_4.KEY_QUEUE = null;
+    KeyboardStatics.KEY_QUEUE = null;
     GameStringStatics.aClass94_1694 = null;
     GameStringStatics.aClass94_1696 = null;
   }

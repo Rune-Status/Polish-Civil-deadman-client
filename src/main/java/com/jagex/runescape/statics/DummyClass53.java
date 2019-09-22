@@ -2,6 +2,7 @@ package com.jagex.runescape.statics;
 
 import com.jagex.runescape.common.GameString;
 import com.jagex.runescape.common.GameStringStatics;
+import com.jagex.runescape.input.MouseStatics;
 import com.jagex.runescape.model.AbstractDirectColorSprite;
 import com.jagex.runescape.opengl.GLStatics;
 import com.jagex.runescape.opengl.GlTexture2d;
@@ -17,7 +18,6 @@ public final class DummyClass53 {
       .create("::breakcon");
   public static int spriteCount;
   public static AbstractDirectColorSprite aClass3_Sub28_Sub16_1339;
-  public static volatile int lastMouseY = -1;
   public static GameString LOGO = GameStringStatics.create("logo");
   public static GameString aClass94_1342 = GameStringStatics.create("details");
   public static int anInt1343;
@@ -31,7 +31,7 @@ public final class DummyClass53 {
     DummyClass53.UM_PREFIX = null;
     DummyClass53.LOGO = null;
     if (var0 != 3) {
-      DummyClass53.lastMouseY = -18;
+      MouseStatics.LAST_MOUSE_Y = -18;
     }
 
     DummyClass53.aClass94_1334 = null;

@@ -1,8 +1,8 @@
 package com.jagex.runescape.model;
 
 import com.jagex.runescape.buffer.Buffer;
+import com.jagex.runescape.input.MouseStatics;
 import com.jagex.runescape.statics.DummyClass4;
-import com.jagex.runescape.statics.GlobalStatics_10;
 import com.jagex.runescape.statics.GlobalStatics_9;
 
 public final class TextureSampler14 extends AbstractTextureSampler {
@@ -63,7 +63,7 @@ public final class TextureSampler14 extends AbstractTextureSampler {
 
   public void parseConfig(int var1, Buffer var2, boolean var3 ) {
     if (!var3) {
-        GlobalStatics_10.anInt3389 = 99;
+        MouseStatics.anInt3389 = 99;
       }
 
       if (var1 == 0) {

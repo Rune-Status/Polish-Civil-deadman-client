@@ -1,6 +1,6 @@
 package com.jagex.runescape.statics;
 
-import com.jagex.runescape.math.MathUtilities;
+import com.jagex.runescape.common.MathUtilities;
 import com.jagex.runescape.model.Widget;
 import com.jagex.runescape.buffer.Buffer;
 import com.jagex.runescape.common.GameString;

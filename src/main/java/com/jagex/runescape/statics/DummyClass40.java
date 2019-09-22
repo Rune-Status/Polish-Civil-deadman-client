@@ -1,6 +1,6 @@
 package com.jagex.runescape.statics;
 
-import com.jagex.runescape.math.MathUtilities;
+import com.jagex.runescape.common.MathUtilities;
 import com.jagex.runescape.model.ITextureCache;
 import com.jagex.runescape.opengl.GLStatics;
 import com.jagex.runescape.sprite.SoftwareIndexedColorSpriteStatics;

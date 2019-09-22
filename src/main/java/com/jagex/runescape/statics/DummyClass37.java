@@ -1,6 +1,6 @@
 package com.jagex.runescape.statics;
 
-import com.jagex.runescape.math.MathUtilities;
+import com.jagex.runescape.common.MathUtilities;
 import com.jagex.runescape.model.StillGraphic;
 import com.jagex.runescape.model.StillGraphicNode;
 import com.jagex.runescape.common.GameString;

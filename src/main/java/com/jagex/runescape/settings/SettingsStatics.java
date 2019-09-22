@@ -201,7 +201,7 @@ public final class SettingsStatics {
   }
 
   public static void loadSettings(SignLink var0) {
-    reset();
+    SettingsStatics.reset();
 
     FileOnDisk file = null;
     try {
