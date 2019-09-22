@@ -1,5 +1,6 @@
 package com.jagex.runescape.statics;
 
+import com.jagex.runescape.image_producer.AbstractImageProducerStatics;
 import com.jagex.runescape.model.UnusedInterface0;
 import com.jagex.runescape.common.GameString;
 import com.jagex.runescape.common.GameStringStatics;
@@ -23,7 +24,6 @@ import com.jagex.runescape.opengl.GlUtils;
 import com.jagex.runescape.opengl.SomethingGl0;
 import com.jagex.runescape.settings.SettingsStatics;
 import com.jagex.runescape.sprite.AbstractIndexedColorSprite;
-import com.jagex.runescape.sprite.SoftwareIndexedColorSpriteStatics;
 import java.awt.Graphics;
 
 public class GlobalStatics_3 {
@@ -656,8 +656,8 @@ public class GlobalStatics_3 {
       int var4,
       int var5, int var6, int var7, int var8, int var9, int var10,
       int[] var11, int[] var12) {
-    int var13 = var2 - SoftwareIndexedColorSpriteStatics.anInt1093;
-    int var14 = var3 - SoftwareIndexedColorSpriteStatics.anInt1095;
+    int var13 = var2 - AbstractImageProducerStatics.anInt1093;
+    int var14 = var3 - AbstractImageProducerStatics.anInt1095;
 
     for (int var15 = var14; var15 < var14 + var5; ++var15) {
       int var16 = var11[var15];
@@ -697,7 +697,7 @@ public class GlobalStatics_3 {
         if (var1[var7++] == 0) {
           ++var8;
         } else {
-          SoftwareIndexedColorSpriteStatics.anIntArray1100[var8++] = var6;
+          AbstractImageProducerStatics.anIntArray1100[var8++] = var6;
         }
       }
 

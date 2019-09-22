@@ -8,6 +8,7 @@ import com.jagex.runescape.common.GameStringStatics;
 import com.jagex.runescape.common.HashTable;
 import com.jagex.runescape.common.MathUtilities;
 import com.jagex.runescape.common.TimeUtilities;
+import com.jagex.runescape.image_producer.AbstractImageProducerStatics;
 import com.jagex.runescape.input.KeyboardStatics;
 import com.jagex.runescape.model.AbstractDirectColorSprite;
 import com.jagex.runescape.model.AbstractFont;
@@ -69,7 +70,6 @@ import com.jagex.runescape.settings.SettingsStatics;
 import com.jagex.runescape.sound.midi.MidiSomethingStatics;
 import com.jagex.runescape.sound.SomethingMusic0;
 import com.jagex.runescape.sound.effect.SoundEffect;
-import com.jagex.runescape.sprite.SoftwareIndexedColorSpriteStatics;
 import java.io.IOException;
 import java.net.Socket;
 import java.util.Calendar;
@@ -1809,7 +1809,7 @@ public class GlobalStatics_6 {
     if (GlRenderer.USE_OPENGL) {
       GlUtils.clip(x, y, width, height);
     } else {
-      DummyClass47.method1324(x, y, width, height);
+      AbstractImageProducerStatics.method1324(x, y, width, height);
       DummyClass40.method1134();
     }
 
@@ -1935,7 +1935,7 @@ public class GlobalStatics_6 {
                 if (GlRenderer.USE_OPENGL) {
                   GlUtils.clip(x, y, width, height);
                 } else {
-                  DummyClass47.method1324(x, y, width, height);
+                  AbstractImageProducerStatics.method1324(x, y, width, height);
                 }
                 continue;
               }
@@ -1950,7 +1950,7 @@ public class GlobalStatics_6 {
                 if (GlRenderer.USE_OPENGL) {
                   GlUtils.clip(x, y, width, height);
                 } else {
-                  DummyClass47.method1324(x, y, width, height);
+                  AbstractImageProducerStatics.method1324(x, y, width, height);
                 }
 
                 if (DummyClass12.minimapMode != 0 && DummyClass12.minimapMode
@@ -2022,7 +2022,7 @@ public class GlobalStatics_6 {
                   if (GlRenderer.USE_OPENGL) {
                     GlUtils.clip(x, y, width, height);
                   } else {
-                    DummyClass47.method1324(x, y, width, height);
+                    AbstractImageProducerStatics.method1324(x, y, width, height);
                   }
                 }
                 continue;
@@ -2037,7 +2037,7 @@ public class GlobalStatics_6 {
                 if (GlRenderer.USE_OPENGL) {
                   GlUtils.clip(x, y, width, height);
                 } else {
-                  DummyClass47.method1324(x, y, width, height);
+                  AbstractImageProducerStatics.method1324(x, y, width, height);
                 }
                 continue;
               }
@@ -2051,7 +2051,7 @@ public class GlobalStatics_6 {
                 if (GlRenderer.USE_OPENGL) {
                   GlUtils.clip(x, y, width, height);
                 } else {
-                  DummyClass47.method1324(x, y, width, height);
+                  AbstractImageProducerStatics.method1324(x, y, width, height);
                 }
                 continue;
               }
@@ -2226,7 +2226,7 @@ public class GlobalStatics_6 {
               if (GlRenderer.USE_OPENGL) {
                 GlUtils.clip(x, y, width, height);
               } else {
-                DummyClass47.method1324(x, y, width, height);
+                AbstractImageProducerStatics.method1324(x, y, width, height);
                 DummyClass40.method1134();
               }
             }
@@ -2326,8 +2326,8 @@ public class GlobalStatics_6 {
                                 var31 = GlUtils.anInt451;
                                 var30 = GlUtils.anInt448;
                               } else {
-                                var30 = SoftwareIndexedColorSpriteStatics.anInt1095;
-                                var31 = SoftwareIndexedColorSpriteStatics.anInt1099;
+                                var30 = AbstractImageProducerStatics.anInt1095;
+                                var31 = AbstractImageProducerStatics.anInt1099;
                               }
 
                               int var32;
@@ -2948,7 +2948,8 @@ public class GlobalStatics_6 {
                               }
                             }
 
-                            DummyClass47.method1324(x, y, width, height);
+                            AbstractImageProducerStatics
+                                .method1324(x, y, width, height);
                           }
                         } else {
                           var23 = widget.anInt168 * 4096 / var21;
@@ -3219,7 +3220,7 @@ public class GlobalStatics_6 {
             && !com.jagex.runescape.statics.GlobalStatics_0
             .method1529(var3, var7, var18, var6, var5, var2, var1, true)) {
           if (GlRenderer.USE_OPENGL) {
-            SoftwareIndexedColorSpriteStatics.anIntArray1100 = null;
+            AbstractImageProducerStatics.anIntArray1100 = null;
           } else {
             GlobalStatics_9.viewImageProducer.method2182(0);
           }
@@ -3234,7 +3235,7 @@ public class GlobalStatics_6 {
             && !com.jagex.runescape.statics.GlobalStatics_0
             .method1529(var3, var7, var18, var6, var5, var2, 1 + var1, true)) {
           if (GlRenderer.USE_OPENGL) {
-            SoftwareIndexedColorSpriteStatics.anIntArray1100 = null;
+            AbstractImageProducerStatics.anIntArray1100 = null;
           } else {
             GlobalStatics_9.viewImageProducer.method2182(0);
           }
@@ -3261,7 +3262,7 @@ public class GlobalStatics_6 {
     }
 
     if (GlRenderer.USE_OPENGL) {
-      SoftwareIndexedColorSpriteStatics.anIntArray1100 = null;
+      AbstractImageProducerStatics.anIntArray1100 = null;
     } else {
       GlobalStatics_9.viewImageProducer.method2182(0);
     }
@@ -3300,7 +3301,7 @@ public class GlobalStatics_6 {
     if (GlRenderer.USE_OPENGL) {
       GlUtils.clip(var3, var2, var3 + var4.anInt168, var2 + var4.zoom);
     } else {
-      DummyClass47
+      AbstractImageProducerStatics
           .method1324(var3, var2, var3 + var4.anInt168, var2 + var4.zoom);
     }
 
@@ -3387,7 +3388,7 @@ public class GlobalStatics_6 {
               if (GlRenderer.USE_OPENGL) {
                 GlUtils.method921();
               } else {
-                DummyClass47.method1310();
+                AbstractImageProducerStatics.method1310();
               }
             }
           }

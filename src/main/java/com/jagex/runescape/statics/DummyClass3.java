@@ -4,6 +4,7 @@ import com.jagex.runescape.common.GameString;
 import com.jagex.runescape.common.GameStringStatics;
 import com.jagex.runescape.common.HashTable;
 import com.jagex.runescape.compression.HuffmanEncoder;
+import com.jagex.runescape.image_producer.AbstractImageProducerStatics;
 import com.jagex.runescape.model.FloorOverlay;
 import com.jagex.runescape.model.SoftwareDirectColorSprite;
 import com.jagex.runescape.model.SomethingOtherWorldMap;
@@ -11,7 +12,6 @@ import com.jagex.runescape.opengl.GlDirectColorSprite;
 import com.jagex.runescape.opengl.GlRenderer;
 import com.jagex.runescape.opengl.GlUtils;
 import com.jagex.runescape.opengl.SomethingGl0;
-import com.jagex.runescape.sprite.SoftwareIndexedColorSpriteStatics;
 
 public final class DummyClass3 {
 
@@ -774,7 +774,7 @@ public final class DummyClass3 {
       GlUtils.clip(var0, var4, var2 + var0, var1 + var4);
       GlUtils.fillQuad(var0, var4, var2, var1, 0);
     } else {
-      DummyClass47.method1324(var0, var4, var2 + var0, var4 + var1);
+      AbstractImageProducerStatics.method1324(var0, var4, var2 + var0, var4 + var1);
       DummyClass47.method1323(var0, var4, var2, var1, 0);
     }
 
@@ -784,7 +784,7 @@ public final class DummyClass3 {
           || GlobalStatics_0.aClass3_Sub28_Sub16_637.anInt3696 != var1) {
         SoftwareDirectColorSprite var5 = new SoftwareDirectColorSprite(var2,
             var1);
-        DummyClass47.method1319(var5.pixels, var2, var1);
+        AbstractImageProducerStatics.method1319(var5.pixels, var2, var1);
         GlobalStatics_2
             .method523(var2, 0, 0, DummyClass30.anInt455, 0, 0,
                 DummyClass58.anInt1460, var1,
@@ -797,7 +797,7 @@ public final class DummyClass3 {
         }
 
         if (GlRenderer.USE_OPENGL) {
-          SoftwareIndexedColorSpriteStatics.anIntArray1100 = null;
+          AbstractImageProducerStatics.anIntArray1100 = null;
         } else {
           GlobalStatics_9.viewImageProducer.method2182(0);
         }

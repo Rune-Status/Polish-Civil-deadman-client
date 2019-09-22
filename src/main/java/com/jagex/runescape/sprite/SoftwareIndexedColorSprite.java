@@ -1,5 +1,6 @@
 package com.jagex.runescape.sprite;
 
+import com.jagex.runescape.image_producer.AbstractImageProducerStatics;
 import java.util.Arrays;
 
 public final class SoftwareIndexedColorSprite extends
@@ -92,28 +93,28 @@ public final class SoftwareIndexedColorSprite extends
       var4 = ((var7 << 16) - var9 + var13 - 1) / var13;
     }
 
-    var14 = var1 + var2 * SoftwareIndexedColorSpriteStatics.anInt1092;
-    int var15 = SoftwareIndexedColorSpriteStatics.anInt1092 - var3;
-    if (var2 + var4 > SoftwareIndexedColorSpriteStatics.anInt1099) {
-      var4 -= var2 + var4 - SoftwareIndexedColorSpriteStatics.anInt1099;
+    var14 = var1 + var2 * AbstractImageProducerStatics.anInt1092;
+    int var15 = AbstractImageProducerStatics.anInt1092 - var3;
+    if (var2 + var4 > AbstractImageProducerStatics.anInt1099) {
+      var4 -= var2 + var4 - AbstractImageProducerStatics.anInt1099;
     }
 
     int var16;
-    if (var2 < SoftwareIndexedColorSpriteStatics.anInt1095) {
-      var16 = SoftwareIndexedColorSpriteStatics.anInt1095 - var2;
+    if (var2 < AbstractImageProducerStatics.anInt1095) {
+      var16 = AbstractImageProducerStatics.anInt1095 - var2;
       var4 -= var16;
-      var14 += var16 * SoftwareIndexedColorSpriteStatics.anInt1092;
+      var14 += var16 * AbstractImageProducerStatics.anInt1092;
       var9 += var13 * var16;
     }
 
-    if (var1 + var3 > SoftwareIndexedColorSpriteStatics.anInt1096) {
-      var16 = var1 + var3 - SoftwareIndexedColorSpriteStatics.anInt1096;
+    if (var1 + var3 > AbstractImageProducerStatics.anInt1096) {
+      var16 = var1 + var3 - AbstractImageProducerStatics.anInt1096;
       var3 -= var16;
       var15 += var16;
     }
 
-    if (var1 < SoftwareIndexedColorSpriteStatics.anInt1093) {
-      var16 = SoftwareIndexedColorSpriteStatics.anInt1093 - var1;
+    if (var1 < AbstractImageProducerStatics.anInt1093) {
+      var16 = AbstractImageProducerStatics.anInt1093 - var1;
       var3 -= var16;
       var14 += var16;
       var8 += var12 * var16;
@@ -121,7 +122,7 @@ public final class SoftwareIndexedColorSprite extends
     }
 
     SoftwareIndexedColorSpriteStatics
-        .method1673(SoftwareIndexedColorSpriteStatics.anIntArray1100,
+        .method1673(AbstractImageProducerStatics.anIntArray1100,
             this.aByteArray2674,
             this.anIntArray2673, var8, var9,
             var14, var15, var3, var4, var12, var13, var6, var5);
@@ -156,37 +157,37 @@ public final class SoftwareIndexedColorSprite extends
   public void draw(int x, int y, int alpha) {
     x += this.offsetX;
     y += this.offsetY;
-    int var4 = x + y * SoftwareIndexedColorSpriteStatics.anInt1092;
+    int var4 = x + y * AbstractImageProducerStatics.anInt1092;
     int var5 = 0;
     int var6 = this.height;
     int var7 = this.width;
-    int var8 = SoftwareIndexedColorSpriteStatics.anInt1092 - var7;
+    int var8 = AbstractImageProducerStatics.anInt1092 - var7;
     int var9 = 0;
     int var10;
-    if (y < SoftwareIndexedColorSpriteStatics.anInt1095) {
-      var10 = SoftwareIndexedColorSpriteStatics.anInt1095 - y;
+    if (y < AbstractImageProducerStatics.anInt1095) {
+      var10 = AbstractImageProducerStatics.anInt1095 - y;
       var6 -= var10;
-      y = SoftwareIndexedColorSpriteStatics.anInt1095;
+      y = AbstractImageProducerStatics.anInt1095;
       var5 += var10 * var7;
-      var4 += var10 * SoftwareIndexedColorSpriteStatics.anInt1092;
+      var4 += var10 * AbstractImageProducerStatics.anInt1092;
     }
 
-    if (y + var6 > SoftwareIndexedColorSpriteStatics.anInt1099) {
-      var6 -= y + var6 - SoftwareIndexedColorSpriteStatics.anInt1099;
+    if (y + var6 > AbstractImageProducerStatics.anInt1099) {
+      var6 -= y + var6 - AbstractImageProducerStatics.anInt1099;
     }
 
-    if (x < SoftwareIndexedColorSpriteStatics.anInt1093) {
-      var10 = SoftwareIndexedColorSpriteStatics.anInt1093 - x;
+    if (x < AbstractImageProducerStatics.anInt1093) {
+      var10 = AbstractImageProducerStatics.anInt1093 - x;
       var7 -= var10;
-      x = SoftwareIndexedColorSpriteStatics.anInt1093;
+      x = AbstractImageProducerStatics.anInt1093;
       var5 += var10;
       var4 += var10;
       var9 += var10;
       var8 += var10;
     }
 
-    if (x + var7 > SoftwareIndexedColorSpriteStatics.anInt1096) {
-      var10 = x + var7 - SoftwareIndexedColorSpriteStatics.anInt1096;
+    if (x + var7 > AbstractImageProducerStatics.anInt1096) {
+      var10 = x + var7 - AbstractImageProducerStatics.anInt1096;
       var7 -= var10;
       var9 += var10;
       var8 += var10;
@@ -194,7 +195,7 @@ public final class SoftwareIndexedColorSprite extends
 
     if (var7 > 0 && var6 > 0) {
       SoftwareIndexedColorSpriteStatics
-          .method1676(SoftwareIndexedColorSpriteStatics.anIntArray1100,
+          .method1676(AbstractImageProducerStatics.anIntArray1100,
               this.aByteArray2674,
               this.anIntArray2673, var5, var4,
               var7, var6, var8, var9, alpha);
@@ -204,37 +205,37 @@ public final class SoftwareIndexedColorSprite extends
   public void draw(int x, int y) {
     x += this.offsetX;
     y += this.offsetY;
-    int var3 = x + y * SoftwareIndexedColorSpriteStatics.anInt1092;
+    int var3 = x + y * AbstractImageProducerStatics.anInt1092;
     int var4 = 0;
     int var5 = this.height;
     int var6 = this.width;
-    int var7 = SoftwareIndexedColorSpriteStatics.anInt1092 - var6;
+    int var7 = AbstractImageProducerStatics.anInt1092 - var6;
     int var8 = 0;
     int var9;
-    if (y < SoftwareIndexedColorSpriteStatics.anInt1095) {
-      var9 = SoftwareIndexedColorSpriteStatics.anInt1095 - y;
+    if (y < AbstractImageProducerStatics.anInt1095) {
+      var9 = AbstractImageProducerStatics.anInt1095 - y;
       var5 -= var9;
-      y = SoftwareIndexedColorSpriteStatics.anInt1095;
+      y = AbstractImageProducerStatics.anInt1095;
       var4 += var9 * var6;
-      var3 += var9 * SoftwareIndexedColorSpriteStatics.anInt1092;
+      var3 += var9 * AbstractImageProducerStatics.anInt1092;
     }
 
-    if (y + var5 > SoftwareIndexedColorSpriteStatics.anInt1099) {
-      var5 -= y + var5 - SoftwareIndexedColorSpriteStatics.anInt1099;
+    if (y + var5 > AbstractImageProducerStatics.anInt1099) {
+      var5 -= y + var5 - AbstractImageProducerStatics.anInt1099;
     }
 
-    if (x < SoftwareIndexedColorSpriteStatics.anInt1093) {
-      var9 = SoftwareIndexedColorSpriteStatics.anInt1093 - x;
+    if (x < AbstractImageProducerStatics.anInt1093) {
+      var9 = AbstractImageProducerStatics.anInt1093 - x;
       var6 -= var9;
-      x = SoftwareIndexedColorSpriteStatics.anInt1093;
+      x = AbstractImageProducerStatics.anInt1093;
       var4 += var9;
       var3 += var9;
       var8 += var9;
       var7 += var9;
     }
 
-    if (x + var6 > SoftwareIndexedColorSpriteStatics.anInt1096) {
-      var9 = x + var6 - SoftwareIndexedColorSpriteStatics.anInt1096;
+    if (x + var6 > AbstractImageProducerStatics.anInt1096) {
+      var9 = x + var6 - AbstractImageProducerStatics.anInt1096;
       var6 -= var9;
       var8 += var9;
       var7 += var9;
@@ -242,7 +243,7 @@ public final class SoftwareIndexedColorSprite extends
 
     if (var6 > 0 && var5 > 0) {
       SoftwareIndexedColorSpriteStatics
-          .method1672(SoftwareIndexedColorSpriteStatics.anIntArray1100,
+          .method1672(AbstractImageProducerStatics.anIntArray1100,
               this.aByteArray2674,
               this.anIntArray2673, 0, var4,
               var3, var6, var5, var7, var8);
@@ -299,28 +300,28 @@ public final class SoftwareIndexedColorSprite extends
       var4 = ((var6 << 16) - var8 + var12 - 1) / var12;
     }
 
-    var13 = var1 + var2 * SoftwareIndexedColorSpriteStatics.anInt1092;
-    int var14 = SoftwareIndexedColorSpriteStatics.anInt1092 - var3;
-    if (var2 + var4 > SoftwareIndexedColorSpriteStatics.anInt1099) {
-      var4 -= var2 + var4 - SoftwareIndexedColorSpriteStatics.anInt1099;
+    var13 = var1 + var2 * AbstractImageProducerStatics.anInt1092;
+    int var14 = AbstractImageProducerStatics.anInt1092 - var3;
+    if (var2 + var4 > AbstractImageProducerStatics.anInt1099) {
+      var4 -= var2 + var4 - AbstractImageProducerStatics.anInt1099;
     }
 
     int var15;
-    if (var2 < SoftwareIndexedColorSpriteStatics.anInt1095) {
-      var15 = SoftwareIndexedColorSpriteStatics.anInt1095 - var2;
+    if (var2 < AbstractImageProducerStatics.anInt1095) {
+      var15 = AbstractImageProducerStatics.anInt1095 - var2;
       var4 -= var15;
-      var13 += var15 * SoftwareIndexedColorSpriteStatics.anInt1092;
+      var13 += var15 * AbstractImageProducerStatics.anInt1092;
       var8 += var12 * var15;
     }
 
-    if (var1 + var3 > SoftwareIndexedColorSpriteStatics.anInt1096) {
-      var15 = var1 + var3 - SoftwareIndexedColorSpriteStatics.anInt1096;
+    if (var1 + var3 > AbstractImageProducerStatics.anInt1096) {
+      var15 = var1 + var3 - AbstractImageProducerStatics.anInt1096;
       var3 -= var15;
       var14 += var15;
     }
 
-    if (var1 < SoftwareIndexedColorSpriteStatics.anInt1093) {
-      var15 = SoftwareIndexedColorSpriteStatics.anInt1093 - var1;
+    if (var1 < AbstractImageProducerStatics.anInt1093) {
+      var15 = AbstractImageProducerStatics.anInt1093 - var1;
       var3 -= var15;
       var13 += var15;
       var7 += var11 * var15;
@@ -328,7 +329,7 @@ public final class SoftwareIndexedColorSprite extends
     }
 
     SoftwareIndexedColorSpriteStatics
-        .method1670(SoftwareIndexedColorSpriteStatics.anIntArray1100,
+        .method1670(AbstractImageProducerStatics.anIntArray1100,
             this.aByteArray2674,
             this.anIntArray2673, var7, var8,
             var13, var14, var3, var4, var11, var12, var5);

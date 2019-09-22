@@ -2,6 +2,7 @@ package com.jagex.runescape.statics;
 
 import com.jagex.runescape.compression.BZipDecompressorStatics;
 import com.jagex.runescape.common.GameStringStatics;
+import com.jagex.runescape.image_producer.AbstractImageProducerStatics;
 import com.jagex.runescape.input.KeyboardStatics;
 import com.jagex.runescape.model.AnimationSequence;
 import com.jagex.runescape.model.FloorOverlay;
@@ -25,7 +26,6 @@ import com.jagex.runescape.scene.SomethingSceneJ;
 import com.jagex.runescape.scene.SomethingSceneTile;
 import com.jagex.runescape.scene.SomethingTilek;
 import com.jagex.runescape.settings.SettingsStatics;
-import com.jagex.runescape.sprite.SoftwareIndexedColorSpriteStatics;
 
 public class GlobalStatics_4 {
 
@@ -311,7 +311,7 @@ public class GlobalStatics_4 {
 
     short var3 = 256;
     int var4 = 0;
-    int var5 = SoftwareIndexedColorSpriteStatics.anInt1092 * var2;
+    int var5 = AbstractImageProducerStatics.anInt1092 * var2;
     int var6 = 0;
 
     for (int var7 = 1; var7 < var3 - 1; ++var7) {
@@ -324,7 +324,7 @@ public class GlobalStatics_4 {
 
       int var9;
       for (var9 = var8; var9 < 128; ++var9) {
-        int var11 = SoftwareIndexedColorSpriteStatics.anIntArray1100[var5++
+        int var11 = AbstractImageProducerStatics.anIntArray1100[var5++
             + var0];
         int var10 = DummyClass2.anIntArray1681[var4++];
         if (var10 == 0) {
@@ -353,10 +353,10 @@ public class GlobalStatics_4 {
 
       for (var9 = 0; var9 < var8; ++var9) {
         GlobalStatics_10.aClass3_Sub28_Sub16_Sub2_1381.pixels[var6++] =
-            SoftwareIndexedColorSpriteStatics.anIntArray1100[var0 + var5++];
+            AbstractImageProducerStatics.anIntArray1100[var0 + var5++];
       }
 
-      var5 += SoftwareIndexedColorSpriteStatics.anInt1092 - 128;
+      var5 += AbstractImageProducerStatics.anInt1092 - 128;
     }
 
     if (var1 > 70) {

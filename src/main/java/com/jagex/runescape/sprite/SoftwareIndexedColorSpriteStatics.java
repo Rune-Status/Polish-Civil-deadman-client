@@ -2,13 +2,6 @@ package com.jagex.runescape.sprite;
 
 public class SoftwareIndexedColorSpriteStatics {
 
-  public static int anInt1092;
-  public static int anInt1099;
-  public static int anInt1095;
-  public static int anInt1096;
-  public static int anInt1093;
-  public static int[] anIntArray1100;
-
   static void method1670(int[] var0, byte[] var1, int[] var2, int var3,
       int var4,
       int var5, int var6, int var7, int var8, int var9, int var10,

@@ -6,6 +6,7 @@ import com.jagex.runescape.cache.FileUnpacker;
 import com.jagex.runescape.common.GameString;
 import com.jagex.runescape.common.GameStringStatics;
 import com.jagex.runescape.common.MathUtilities;
+import com.jagex.runescape.image_producer.AbstractImageProducerStatics;
 import com.jagex.runescape.input.KeyboardStatics;
 import com.jagex.runescape.input.MouseStatics;
 import com.jagex.runescape.model.AbstractDirectColorSprite;
@@ -43,7 +44,6 @@ import com.jagex.runescape.sound.FilterPossiblyStatics;
 import com.jagex.runescape.sound.audio.AudioStatics;
 import com.jagex.runescape.sound.audio.AudioStreamEncoder3Statics;
 import com.jagex.runescape.sound.effect.SomethingSoundEffectStatics;
-import com.jagex.runescape.sprite.SoftwareIndexedColorSpriteStatics;
 import java.util.Random;
 
 public class GlobalStatics_8 {
@@ -321,39 +321,39 @@ public class GlobalStatics_8 {
       int var4, int var5,
       int var6, int var7, int var8, boolean var9, byte var10) {
     int var11 = var2;
-    if (SoftwareIndexedColorSpriteStatics.anInt1096 > var2) {
-      if (var2 < SoftwareIndexedColorSpriteStatics.anInt1093) {
-        var11 = SoftwareIndexedColorSpriteStatics.anInt1093;
+    if (AbstractImageProducerStatics.anInt1096 > var2) {
+      if (var2 < AbstractImageProducerStatics.anInt1093) {
+        var11 = AbstractImageProducerStatics.anInt1093;
       }
 
       int var12 = var7 + var2;
-      if (SoftwareIndexedColorSpriteStatics.anInt1093 < var12) {
-        if (SoftwareIndexedColorSpriteStatics.anInt1096 < var12) {
-          var12 = SoftwareIndexedColorSpriteStatics.anInt1096;
+      if (AbstractImageProducerStatics.anInt1093 < var12) {
+        if (AbstractImageProducerStatics.anInt1096 < var12) {
+          var12 = AbstractImageProducerStatics.anInt1096;
         }
 
         int var13 = var8;
-        if (SoftwareIndexedColorSpriteStatics.anInt1099 > var8) {
+        if (AbstractImageProducerStatics.anInt1099 > var8) {
           int var14 = var8 + var6;
-          if (var8 < SoftwareIndexedColorSpriteStatics.anInt1095) {
-            var13 = SoftwareIndexedColorSpriteStatics.anInt1095;
+          if (var8 < AbstractImageProducerStatics.anInt1095) {
+            var13 = AbstractImageProducerStatics.anInt1095;
           }
 
-          if (var14 > SoftwareIndexedColorSpriteStatics.anInt1095) {
+          if (var14 > AbstractImageProducerStatics.anInt1095) {
             if (var10 == 21) {
               int var15 =
-                  var11 + SoftwareIndexedColorSpriteStatics.anInt1092 * var13;
+                  var11 + AbstractImageProducerStatics.anInt1092 * var13;
               if (var5 == 9) {
                 var3 = 3 & var3 + 1;
                 var5 = 1;
               }
 
               int var16 =
-                  -var12 + var11 + SoftwareIndexedColorSpriteStatics.anInt1092;
+                  -var12 + var11 + AbstractImageProducerStatics.anInt1092;
               var13 -= var8;
               int var20 = var6 - var13;
-              if (SoftwareIndexedColorSpriteStatics.anInt1099 < var14) {
-                var14 = SoftwareIndexedColorSpriteStatics.anInt1099;
+              if (AbstractImageProducerStatics.anInt1099 < var14) {
+                var14 = AbstractImageProducerStatics.anInt1099;
               }
 
               if (var5 == 10) {

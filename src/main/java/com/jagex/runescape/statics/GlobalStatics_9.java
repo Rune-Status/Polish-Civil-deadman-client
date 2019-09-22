@@ -10,6 +10,7 @@ import com.jagex.runescape.common.GameStringStatics;
 import com.jagex.runescape.common.HashTable;
 import com.jagex.runescape.common.ThreadUtilities;
 import com.jagex.runescape.common.TimeUtilities;
+import com.jagex.runescape.image_producer.AbstractImageProducerStatics;
 import com.jagex.runescape.input.Keyboard;
 import com.jagex.runescape.input.KeyboardStatics;
 import com.jagex.runescape.input.MouseStatics;
@@ -18,7 +19,7 @@ import com.jagex.runescape.model.AbstractAudioOutputStream;
 import com.jagex.runescape.model.AbstractDirectColorSprite;
 import com.jagex.runescape.model.AbstractFont;
 import com.jagex.runescape.model.AbstractFrameRegulator;
-import com.jagex.runescape.model.AbstractImageProducer;
+import com.jagex.runescape.image_producer.AbstractImageProducer;
 import com.jagex.runescape.model.AnimationSequence;
 import com.jagex.runescape.model.AnimationSomething;
 import com.jagex.runescape.model.AreaSoundEffect;
@@ -111,7 +112,6 @@ import com.jagex.runescape.sound.effect.SomethingSoundEffectStatics;
 import com.jagex.runescape.sound.effect.SoundEffect;
 import com.jagex.runescape.sprite.AbstractIndexedColorSprite;
 import com.jagex.runescape.sprite.SoftwareIndexedColorSprite;
-import com.jagex.runescape.sprite.SoftwareIndexedColorSpriteStatics;
 import java.awt.Color;
 import java.awt.Component;
 import java.awt.Font;
@@ -4039,7 +4039,7 @@ public class GlobalStatics_9 {
                   var36 = var35 & 252;
                   if (var36 != 0 && var16 > 1 && var27 > 1) {
                     GlobalStatics_8.method2272(
-                        SoftwareIndexedColorSpriteStatics.anIntArray1100, var33,
+                        AbstractImageProducerStatics.anIntArray1100, var33,
                         var14, var35 & 3,
                         var32, var36 >> 2, var27, var16, var25, true,
                         (byte) 21);
@@ -4060,7 +4060,7 @@ public class GlobalStatics_9 {
                   }
 
                   GlobalStatics_8.method2272(
-                      SoftwareIndexedColorSpriteStatics.anIntArray1100, var34,
+                      AbstractImageProducerStatics.anIntArray1100, var34,
                       var14, var35 & 3, 0,
                       var36 >> 2, var27, var16, var25, var33 == 0, (byte) 21);
                 }
@@ -6177,7 +6177,8 @@ public class GlobalStatics_9 {
             if (GlRenderer.USE_OPENGL) {
               GlUtils.clip(var2, var0, var1 + var2, var0 + var4);
             } else {
-              DummyClass47.method1324(var2, var0, var1 + var2, var4 + var0);
+              AbstractImageProducerStatics
+                  .method1324(var2, var0, var1 + var2, var4 + var0);
             }
           }
         }
@@ -6377,7 +6378,8 @@ public class GlobalStatics_9 {
           if (GlRenderer.USE_OPENGL) {
             GlUtils.clip(var2, var0, var1 + var2, var4 + var0);
           } else {
-            DummyClass47.method1324(var2, var0, var2 + var1, var0 + var4);
+            AbstractImageProducerStatics
+                .method1324(var2, var0, var2 + var1, var0 + var4);
           }
         }
 
@@ -6408,7 +6410,8 @@ public class GlobalStatics_9 {
           if (GlRenderer.USE_OPENGL) {
             GlUtils.clip(var2, var0, var2 + var1, var0 + var4);
           } else {
-            DummyClass47.method1324(var2, var0, var2 + var1, var0 + var4);
+            AbstractImageProducerStatics
+                .method1324(var2, var0, var2 + var1, var0 + var4);
           }
         }
       } else {

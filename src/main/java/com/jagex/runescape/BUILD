@@ -12,6 +12,7 @@ java_library(
     deps = [
         "//lib:client.jar",
         "//lib:jogamp-fat.jar",
+        "//src/main/java/com/jagex/runescape/image_producer",
         "//src/main/java/com/jagex/runescape/buffer",
         "//src/main/java/com/jagex/runescape/input",
         "//src/main/java/com/jagex/runescape/cache",

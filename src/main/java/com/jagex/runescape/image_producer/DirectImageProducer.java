@@ -1,6 +1,5 @@
-package com.jagex.runescape.model;
+package com.jagex.runescape.image_producer;
 
-import com.jagex.runescape.statics.GlobalStatics_7;
 import java.awt.Component;
 import java.awt.Graphics;
 import java.awt.Image;
@@ -49,10 +48,6 @@ public final class DirectImageProducer extends AbstractImageProducer
           this.aColorModel2979,
           this.anIntArray2007, var5 * this.anInt2012 + var3, this.anInt2012);
       this.anImageConsumer2978.imageComplete(2);
-      if (var4 > -29) {
-        GlobalStatics_7.method2189(null, false, -53);
-      }
-
     }
   }
 
@@ -68,10 +63,6 @@ public final class DirectImageProducer extends AbstractImageProducer
   }
 
   public void draw(int var1, int var2, Graphics var3, int var4) {
-    if (var4 != 0) {
-      GlobalStatics_7.aBoolean2981 = true;
-    }
-
     this.method2190(var4 ^ 19661184);
     var3.drawImage(this.anImage2009, var1, var2, this);
   }

@@ -1,4 +1,4 @@
-package com.jagex.runescape.model;
+package com.jagex.runescape.image_producer;
 
 import java.awt.Component;
 import java.awt.Graphics;

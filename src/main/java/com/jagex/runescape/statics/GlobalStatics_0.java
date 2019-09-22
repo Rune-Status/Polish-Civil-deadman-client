@@ -8,6 +8,7 @@ import com.jagex.runescape.common.GameString;
 import com.jagex.runescape.common.GameStringStatics;
 import com.jagex.runescape.common.MathUtilities;
 import com.jagex.runescape.common.TimeUtilities;
+import com.jagex.runescape.image_producer.AbstractImageProducerStatics;
 import com.jagex.runescape.input.MouseStatics;
 import com.jagex.runescape.model.AbstractDirectColorSprite;
 import com.jagex.runescape.model.AbstractFrameRegulator;
@@ -95,7 +96,6 @@ import com.jagex.runescape.sound.audio.AudioStatics;
 import com.jagex.runescape.sound.audio.AudioStreamEncoder4;
 import com.jagex.runescape.sound.effect.SomethingSoundEffectStatics;
 import com.jagex.runescape.sprite.SoftwareIndexedColorSprite;
-import com.jagex.runescape.sprite.SoftwareIndexedColorSpriteStatics;
 import java.nio.charset.StandardCharsets;
 import java.util.Random;
 
@@ -610,7 +610,7 @@ public final class GlobalStatics_0 {
     if (GlRenderer.USE_OPENGL) {
       GlUtils.clip(var0, var2, var0 + var4, var3 + var2);
     } else {
-      DummyClass47.method1324(var0, var2, var0 + var4, var3 + var2);
+      AbstractImageProducerStatics.method1324(var0, var2, var0 + var4, var3 + var2);
     }
 
     int var6;
@@ -647,7 +647,7 @@ public final class GlobalStatics_0 {
               new SoftwareDirectColorSprite(var4, var3);
         }
 
-        DummyClass47.method1319(
+        AbstractImageProducerStatics.method1319(
             GlobalStatics_9.aClass3_Sub28_Sub16_Sub2_3221.pixels, var4, var3);
         GlobalStatics_2.method523(var4, 0, 0, var7, var6, 0, var8, var3, var15);
         DummyClass30.method938(var4, 0, var7, var8, var3, 0, 1, var15, var6);
@@ -656,7 +656,7 @@ public final class GlobalStatics_0 {
         GlUtils.drawImage(
             GlobalStatics_9.aClass3_Sub28_Sub16_Sub2_3221.pixels, var0, var2,
             var4, var3);
-        SoftwareIndexedColorSpriteStatics.anIntArray1100 = null;
+        AbstractImageProducerStatics.anIntArray1100 = null;
       } else {
         GlobalStatics_2.method523(var4 + var0, var2, 0, var7, var6, var0, var8,
             var2 + var3, var15);
@@ -956,7 +956,7 @@ public final class GlobalStatics_0 {
           var14 = var4;
         }
 
-        var15 = SoftwareIndexedColorSpriteStatics.anIntArray1100;
+        var15 = AbstractImageProducerStatics.anIntArray1100;
         var16 = 4 * (-(var3 * 512) + 0xce00) + var1 * 4 + 24624;
         if (var11 == 0 || var11 == 2) {
           if (var10 == 0) {
@@ -1053,7 +1053,7 @@ public final class GlobalStatics_0 {
         }
 
         var16 = var1 * 4 + 24624 + 2048 * (103 - var3);
-        var15 = SoftwareIndexedColorSpriteStatics.anIntArray1100;
+        var15 = AbstractImageProducerStatics.anIntArray1100;
         if (var10 != 0 && var10 != 2) {
           var15[var16] = var14;
           var15[var16 + 512 + 1] = var14;
@@ -1182,13 +1182,13 @@ public final class GlobalStatics_0 {
         }
       }
 
-      int[] var11 = SoftwareIndexedColorSpriteStatics.anIntArray1100;
-      int var12 = SoftwareIndexedColorSpriteStatics.anInt1092;
-      int var13 = DummyClass47.anInt1094;
+      int[] var11 = AbstractImageProducerStatics.anIntArray1100;
+      int var12 = AbstractImageProducerStatics.anInt1092;
+      int var13 = AbstractImageProducerStatics.anInt1094;
       int[] var14 = new int[4];
       DummyClass47.method1325(var14);
       SoftwareDirectColorSprite var15 = new SoftwareDirectColorSprite(36, 32);
-      DummyClass47.method1319(var15.pixels, 36, 32);
+      AbstractImageProducerStatics.method1319(var15.pixels, 36, 32);
       DummyClass40.method1134();
       DummyClass40.method1145(16, 16);
       int var16 = var8.anInt810;
@@ -1211,7 +1211,7 @@ public final class GlobalStatics_0 {
           var15.method657(16777215);
         }
 
-        DummyClass47.method1319(var15.pixels, 36, 32);
+        AbstractImageProducerStatics.method1319(var15.pixels, 36, 32);
       }
 
       if (var0 != 0) {
@@ -1224,7 +1224,7 @@ public final class GlobalStatics_0 {
         var22.method643(0, 0);
       } else if (var8.anInt762 != -1) {
         assert var22 != null;
-        DummyClass47.method1319(var22.pixels, 36, 32);
+        AbstractImageProducerStatics.method1319(var22.pixels, 36, 32);
         var15.method643(0, 0);
         var15 = var22;
       }
@@ -1234,7 +1234,7 @@ public final class GlobalStatics_0 {
             GlobalStatics_10.method123(1000, var6), 0, 9, 16776960, 1);
       }
 
-      DummyClass47.method1319(var11, var12, var13);
+      AbstractImageProducerStatics.method1319(var11, var12, var13);
       DummyClass47.method1316(var14);
       DummyClass40.method1134();
       DummyClass40.aBoolean843 = true;

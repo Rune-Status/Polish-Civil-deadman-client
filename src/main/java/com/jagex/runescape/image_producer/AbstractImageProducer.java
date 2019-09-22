@@ -1,7 +1,5 @@
-package com.jagex.runescape.model;
+package com.jagex.runescape.image_producer;
 
-import com.jagex.runescape.statics.DummyClass47;
-import com.jagex.runescape.statics.GlobalStatics_5;
 import java.awt.Component;
 import java.awt.Graphics;
 import java.awt.Image;
@@ -16,11 +14,8 @@ public abstract class AbstractImageProducer {
   public abstract void draw(int var1, int var2, Graphics var3, int var4);
 
   public final void method2182(int var1) {
-    DummyClass47.method1319(this.anIntArray2007, this.anInt2012,
+    AbstractImageProducerStatics.method1319(this.anIntArray2007, this.anInt2012,
         this.anInt2011);
-    if (var1 != 0) {
-      GlobalStatics_5.anInt2015 = -118;
-    }
   }
 
   public abstract void draw(Graphics var5, int var1, int var2, int var4,

@@ -10,19 +10,20 @@ import com.jagex.runescape.common.HashTable;
 import com.jagex.runescape.common.MathUtilities;
 import com.jagex.runescape.common.TimeUtilities;
 import com.jagex.runescape.compression.HuffmanEncoder;
+import com.jagex.runescape.image_producer.AbstractImageProducerStatics;
 import com.jagex.runescape.input.KeyboardStatics;
 import com.jagex.runescape.model.AbstractDirectColorSprite;
-import com.jagex.runescape.model.AbstractImageProducer;
+import com.jagex.runescape.image_producer.AbstractImageProducer;
 import com.jagex.runescape.model.AbstractModel;
 import com.jagex.runescape.model.AnimationSomething;
 import com.jagex.runescape.model.AreaSoundEffect;
-import com.jagex.runescape.model.ComponentImageProducer;
+import com.jagex.runescape.image_producer.ComponentImageProducer;
 import com.jagex.runescape.sound.SomethingVolumeStatics;
 import com.jagex.runescape.model.Cache;
 import com.jagex.runescape.model.ClientScriptCall;
 import com.jagex.runescape.model.ClientScriptEnum;
 import com.jagex.runescape.model.Cursor;
-import com.jagex.runescape.model.DirectImageProducer;
+import com.jagex.runescape.image_producer.DirectImageProducer;
 import com.jagex.runescape.model.FileCache;
 import com.jagex.runescape.model.FileCacheRequester;
 import com.jagex.runescape.model.GameObjectConfig;
@@ -513,7 +514,7 @@ public class GlobalStatics_10 {
     if (var2) {
       try {
         Class var4 = Class.forName(
-            "com.jagex.runescape.model.ComponentImageProducer");
+            "com.jagex.runescape.image_producer.ComponentImageProducer");
         AbstractImageProducer var8 =new ComponentImageProducer();
         var8.setDimensions(var0, false, var1, var3);
         return var8;
@@ -3481,7 +3482,7 @@ public class GlobalStatics_10 {
           var16, GlobalStatics_0.anInt1705,
           GlobalStatics_0.anInt1705);
     } else {
-      DummyClass47.method1324(var3, var5, var4 + var3, zoom + var5);
+      AbstractImageProducerStatics.method1324(var3, var5, var4 + var3, zoom + var5);
       DummyClass40.method1134();
     }
 
