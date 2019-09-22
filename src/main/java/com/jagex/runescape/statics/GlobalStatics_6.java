@@ -1577,7 +1577,7 @@ public class GlobalStatics_6 {
         }
 
         var4.position = 0;
-        var2.aClass94_3686 = var4.method750((byte) 78);
+        var2.aClass94_3686 = var4.method750();
         var2.anIntArray3683 = new int[var7];
         var2.aClass94Array3688 = new GameString[var7];
         var9 = 0;

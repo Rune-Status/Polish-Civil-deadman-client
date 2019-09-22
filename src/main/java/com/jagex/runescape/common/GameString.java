@@ -956,9 +956,10 @@ public final class GameString {
         : var2 == null ? GameStringStatics.aClass94_1760 : var2;
   }
 
-  public int method1580(byte[] dest, int destOffset, int srcOffset,
+  public int copyBytes(byte[] dest, int destOffset, int srcOffset,
       int length) {
-    ArrayUtils.copy(this.bytes, srcOffset, dest, destOffset, -srcOffset + length);
+    ArrayUtils
+        .copy(this.bytes, srcOffset, dest, destOffset, -srcOffset + length);
     return -srcOffset + length;
   }
 

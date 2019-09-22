@@ -171,12 +171,12 @@ public final class MidiFile extends Node {
     int var50 = var1.position;
     var1.position += var5 * 3;
     this.aByteArray2565 = new byte[var4];
-    Buffer var51 = new Buffer(this.aByteArray2565);
-    var51.writeInt(1297377380);
-    var51.writeInt(6);
-    var51.writeShort(var2 > 1 ? 1 : 0);
-    var51.writeShort(var2);
-    var51.writeShort(var3);
+    Buffer buffer = new Buffer(this.aByteArray2565);
+    buffer.writeInt(1297377380);
+    buffer.writeInt(6);
+    buffer.writeShort(var2 > 1 ? 1 : 0);
+    buffer.writeShort(var2);
+    buffer.writeShort(var3);
     var1.position = var13;
     int var52 = 0;
     int var53 = 0;
@@ -190,66 +190,67 @@ public final class MidiFile extends Node {
     int var60 = 0;
 
     while (var60 < var2) {
-      var51.writeInt(1297379947);
-      var51.position += 4;
-      int var61 = var51.position;
+      buffer.writeInt(1297379947);
+      buffer.position += 4;
+      int start = buffer.position;
       int var62 = -1;
 
       while (true) {
         int var63 = var1.method741();
-        var51.method771(17038, var63);
+        buffer.method771(var63);
         int var64 = var1.bytes[var29++] & 255;
         boolean var65 = var64 != var62;
         var62 = var64 & 15;
         if (var64 == 7) {
           if (var65) {
-            var51.writeByte(255);
+            buffer.writeByte(255);
           }
 
-          var51.writeByte(47);
-          var51.writeByte(0);
-          var51.method742(83, var51.position - var61);
+          buffer.writeByte(47);
+          buffer.writeByte(0);
+          int length = buffer.position - start;
+          buffer.writeLength(length);
           ++var60;
           break;
         }
 
         if (var64 == 23) {
           if (var65) {
-            var51.writeByte(255);
+            buffer.writeByte(255);
           }
 
-          var51.writeByte(81);
-          var51.writeByte(3);
-          var51.writeByte(var1.bytes[var50++]);
-          var51.writeByte(var1.bytes[var50++]);
-          var51.writeByte(var1.bytes[var50++]);
+          buffer.writeByte(81);
+          buffer.writeByte(3);
+          buffer.writeByte(var1.bytes[var50++]);
+          buffer.writeByte(var1.bytes[var50++]);
+          buffer.writeByte(var1.bytes[var50++]);
         } else {
           var52 ^= var64 >> 4;
           if (var62 == 0) {
             if (var65) {
-              var51.writeByte(144 + var52);
+              buffer.writeByte(144 + var52);
             }
 
             var53 += var1.bytes[var37++];
             var54 += var1.bytes[var38++];
-            var51.writeByte(var53 & 127);
-            var51.writeByte(var54 & 127);
+            buffer.writeByte(var53 & 127);
+            buffer.writeByte(var54 & 127);
           } else if (var62 == 1) {
             if (var65) {
-              var51.writeByte(128 + var52);
+              buffer.writeByte(128 + var52);
             }
 
             var53 += var1.bytes[var37++];
             var55 += var1.bytes[var40++];
-            var51.writeByte(var53 & 127);
-            var51.writeByte(var55 & 127);
+            buffer.writeByte(var53 & 127);
+            buffer.writeByte(var55 & 127);
           } else if (var62 == 2) {
             if (var65) {
-              var51.writeByte(176 + var52);
+              buffer.writeByte(176 + var52);
             }
 
             var28 = var28 + var1.bytes[var15++] & 127;
-            var51.writeByte(var28);
+            buffer.writeByte(var28);
             byte var66;
             if (var28 != 0 && var28 != 32) {
               if (var28 == 1) {
@@ -285,42 +286,42 @@ public final class MidiFile extends Node {
 
             int var67 = var66 + var59[var28];
             var59[var28] = var67;
-            var51.writeByte(var67 & 127);
+            buffer.writeByte(var67 & 127);
           } else if (var62 == 3) {
             if (var65) {
-              var51.writeByte(224 + var52);
+              buffer.writeByte(224 + var52);
             }
 
             var56 += var1.bytes[var45++];
             var56 += var1.bytes[var33++] << 7;
-            var51.writeByte(var56 & 127);
-            var51.writeByte(var56 >> 7 & 127);
+            buffer.writeByte(var56 & 127);
+            buffer.writeByte(var56 >> 7 & 127);
           } else if (var62 == 4) {
             if (var65) {
-              var51.writeByte(208 + var52);
+              buffer.writeByte(208 + var52);
             }
 
             var57 += var1.bytes[var32++];
-            var51.writeByte(var57 & 127);
+            buffer.writeByte(var57 & 127);
           } else if (var62 == 5) {
             if (var65) {
-              var51.writeByte(160 + var52);
+              buffer.writeByte(160 + var52);
             }
 
             var53 += var1.bytes[var37++];
             var58 += var1.bytes[var31++];
-            var51.writeByte(var53 & 127);
-            var51.writeByte(var58 & 127);
+            buffer.writeByte(var53 & 127);
+            buffer.writeByte(var58 & 127);
           } else {
             if (var62 != 6) {
               throw new RuntimeException();
             }
 
             if (var65) {
-              var51.writeByte(192 + var52);
+              buffer.writeByte(192 + var52);
             }
 
-            var51.writeByte(var1.bytes[var44++]);
+            buffer.writeByte(var1.bytes[var44++]);
           }
         }
       }

@@ -350,7 +350,7 @@ public final class DummyClass18 {
     // Bulk entity update
     if (GlobalStatics_0.packetId == 230) {
       DummyClass56.spawnSceneY = GlobalStatics_9.GAME_BUFFER
-          .method751((byte) -88);
+          .method751();
       DummyClass45.spawnSceneX = GlobalStatics_9.GAME_BUFFER.method754(true);
 
       while (GlobalStatics_0.packetLength
@@ -612,7 +612,7 @@ public final class DummyClass18 {
 
     if (GlobalStatics_0.packetId == 145) {
       var20 = GlobalStatics_9.GAME_BUFFER.readShortLEAdd();
-      var3 = GlobalStatics_9.GAME_BUFFER.method751((byte) -101);
+      var3 = GlobalStatics_9.GAME_BUFFER.method751();
       var21 = GlobalStatics_9.GAME_BUFFER.readShortLEAdd();
       if (GlobalStatics_5.updateInterfaceCounter(var21, (byte) -25)) {
         if (var3 == 2) {
@@ -877,7 +877,7 @@ public final class DummyClass18 {
 
     if (GlobalStatics_0.packetId == 38) {
       GlobalStatics_8.method819(false);
-      var20 = GlobalStatics_9.GAME_BUFFER.method751((byte) -111);
+      var20 = GlobalStatics_9.GAME_BUFFER.method751();
       var3 = GlobalStatics_9.GAME_BUFFER.method780(-1);
       var21 = GlobalStatics_9.GAME_BUFFER.readUnsignedByte();
       GlobalStatics_9.anIntArray1743[var21] = var3;
@@ -1034,7 +1034,7 @@ public final class DummyClass18 {
     // Set player position
     if (GlobalStatics_0.packetId == 13) {
       var20 = GlobalStatics_9.GAME_BUFFER.method754(true);
-      var3 = GlobalStatics_9.GAME_BUFFER.method751((byte) 108);
+      var3 = GlobalStatics_9.GAME_BUFFER.method751();
       var21 = GlobalStatics_9.GAME_BUFFER.readUnsignedByte();
       GlobalStatics_9.currentPlane = var3 >> 1;
       GlobalStatics_9.localPlayer
@@ -1463,7 +1463,7 @@ public final class DummyClass18 {
     }
 
     if (GlobalStatics_0.packetId == 37) {
-      var20 = GlobalStatics_9.GAME_BUFFER.method751((byte) 122);
+      var20 = GlobalStatics_9.GAME_BUFFER.method751();
       var3 = GlobalStatics_9.GAME_BUFFER.readUnsignedShortLE();
       DummyClass6.method2209((byte) -122, var20, var3);
       GlobalStatics_0.packetId = -1;
@@ -1588,7 +1588,7 @@ public final class DummyClass18 {
       var20 = GlobalStatics_9.GAME_BUFFER.readUnsignedShortAdd();
       var3 = GlobalStatics_9.GAME_BUFFER.method782(-48);
       var21 = GlobalStatics_9.GAME_BUFFER.method787((byte) 74);
-      var5 = GlobalStatics_9.GAME_BUFFER.method747(-58);
+      var5 = GlobalStatics_9.GAME_BUFFER.method747();
       if (GlobalStatics_5.updateInterfaceCounter(var20, (byte) -25)) {
         GlobalStatics_8.method2271(var21, var3, 1, var5);
       }
