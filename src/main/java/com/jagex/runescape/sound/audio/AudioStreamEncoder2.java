@@ -1,8 +1,8 @@
-package com.jagex.runescape.model;
+package com.jagex.runescape.sound.audio;
 
 import com.jagex.runescape.node.Deque;
 import com.jagex.runescape.node.Node;
-import com.jagex.runescape.statics.GlobalStatics_1;
+import com.jagex.runescape.node.NodeStatics;
 
 public final class AudioStreamEncoder2 extends AudioStreamEncoder {
 
@@ -151,7 +151,7 @@ public final class AudioStreamEncoder2 extends AudioStreamEncoder {
       var1 = var1.nextNode;
     }
 
-    GlobalStatics_1.addLast(var2, var1);
+    NodeStatics.addLast(var2, var1);
     this.anInt3488 = ((SomeNode_0) this.aClass61_3486.root.nextNode).anInt2247;
   }
 

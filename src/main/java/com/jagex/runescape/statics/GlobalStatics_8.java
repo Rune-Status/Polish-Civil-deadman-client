@@ -40,6 +40,8 @@ import com.jagex.runescape.scene.SceneGraphTile;
 import com.jagex.runescape.scene.SomethingScene;
 import com.jagex.runescape.settings.SettingsStatics;
 import com.jagex.runescape.sound.FilterPossiblyStatics;
+import com.jagex.runescape.sound.audio.AudioStatics;
+import com.jagex.runescape.sound.audio.AudioStreamEncoder3Statics;
 import com.jagex.runescape.sound.effect.SomethingSoundEffectStatics;
 import com.jagex.runescape.sprite.SoftwareIndexedColorSpriteStatics;
 import java.util.Random;
@@ -3550,8 +3552,8 @@ public class GlobalStatics_8 {
         GlobalStatics_8.OPTION_DROP = null;
       }
 
-      GlobalStatics_0.stereo = var3;
-      DummyClass60.sampleRate = var2;
+      AudioStatics.STEREO = var3;
+      AudioStreamEncoder3Statics.sampleRate = var2;
     } else {
       throw new IllegalArgumentException();
     }

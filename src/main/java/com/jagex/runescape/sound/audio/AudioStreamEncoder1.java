@@ -1,8 +1,6 @@
-package com.jagex.runescape.model;
+package com.jagex.runescape.sound.audio;
 
 import com.jagex.runescape.sound.SomethingMusic0;
-import com.jagex.runescape.statics.GlobalStatics_0;
-import com.jagex.runescape.statics.GlobalStatics_11;
 
 public final class AudioStreamEncoder1 extends AudioStreamEncoder {
 
@@ -56,8 +54,8 @@ public final class AudioStreamEncoder1 extends AudioStreamEncoder {
       var2 = 0;
       var1 = 0;
     } else {
-      var2 = GlobalStatics_11.method452(var1, this.anInt3478);
-      var3 = GlobalStatics_11.method454(var1, this.anInt3478);
+      var2 = AudioStreamEncoder1Statics.method452(var1, this.anInt3478);
+      var3 = AudioStreamEncoder1Statics.method454(var1, this.anInt3478);
     }
 
     if (this.anInt3476 == var1 && this.anInt3484 == var2
@@ -167,8 +165,8 @@ public final class AudioStreamEncoder1 extends AudioStreamEncoder {
 
         this.anInt3480 += var2;
         if (this.anInt3470 == 256 && (this.anInt3474 & 255) == 0) {
-          if (GlobalStatics_0.stereo) {
-            var2 = GlobalStatics_11.method426(
+          if (AudioStatics.STEREO) {
+            var2 = AudioStreamEncoder1Statics.method426(
                 ((SomethingMusic0) this.aClass3_Sub12_2544).aByteArray3030,
                 var1,
                 this.anInt3474, var2, this.anInt3484, this.anInt3481,
@@ -176,21 +174,21 @@ public final class AudioStreamEncoder1 extends AudioStreamEncoder {
                 this.anInt3483,
                 0, var6, var3, this);
           } else {
-            var2 = GlobalStatics_11.method428(
+            var2 = AudioStreamEncoder1Statics.method428(
                 ((SomethingMusic0) this.aClass3_Sub12_2544).aByteArray3030,
                 var1,
                 this.anInt3474, var2, this.anInt3476, this.anInt3472, 0, var6,
                 var3, this);
           }
-        } else if (GlobalStatics_0.stereo) {
-          var2 = GlobalStatics_11.method421(0, 0,
+        } else if (AudioStatics.STEREO) {
+          var2 = AudioStreamEncoder1Statics.method421(0, 0,
               ((SomethingMusic0) this.aClass3_Sub12_2544).aByteArray3030, var1,
               this.anInt3474, var2, this.anInt3484, this.anInt3481,
               this.anInt3475,
               this.anInt3483, 0,
               var6, var3, this, this.anInt3470, var5);
         } else {
-          var2 = GlobalStatics_11.method422(0,
+          var2 = AudioStreamEncoder1Statics.method422(0,
               ((SomethingMusic0) this.aClass3_Sub12_2544).aByteArray3030, var1,
               this.anInt3474, var2, this.anInt3476, this.anInt3472, 0, var6,
               var3, this,
@@ -210,20 +208,20 @@ public final class AudioStreamEncoder1 extends AudioStreamEncoder {
       }
 
       if (this.anInt3470 == 256 && (this.anInt3474 & 255) == 0) {
-        if (GlobalStatics_0.stereo) {
-          return GlobalStatics_11.method420(
+        if (AudioStatics.STEREO) {
+          return AudioStreamEncoder1Statics.method420(
               ((SomethingMusic0) this.aClass3_Sub12_2544).aByteArray3030, var1,
               this.anInt3474, var2, this.anInt3484, this.anInt3481, 0, var4,
               var3, this);
         }
 
-        return GlobalStatics_11.method424(
+        return AudioStreamEncoder1Statics.method424(
             ((SomethingMusic0) this.aClass3_Sub12_2544).aByteArray3030, var1,
             this.anInt3474, var2, this.anInt3476, 0, var4, var3, this);
       }
 
-      if (GlobalStatics_0.stereo) {
-        return GlobalStatics_11.method433(0, 0,
+      if (AudioStatics.STEREO) {
+        return AudioStreamEncoder1Statics.method433(0, 0,
             ((SomethingMusic0) this.aClass3_Sub12_2544).aByteArray3030, var1,
             this.anInt3474, var2, this.anInt3484, this.anInt3481, 0, var4, var3,
             this,
@@ -231,7 +229,7 @@ public final class AudioStreamEncoder1 extends AudioStreamEncoder {
             var5);
       }
 
-      return GlobalStatics_11
+      return AudioStreamEncoder1Statics
           .method455(0,
               ((SomethingMusic0) this.aClass3_Sub12_2544).aByteArray3030, var1,
               this.anInt3474, var2, this.anInt3476, 0, var4, var3, this,
@@ -686,8 +684,8 @@ public final class AudioStreamEncoder1 extends AudioStreamEncoder {
 
         this.anInt3480 += var2;
         if (this.anInt3470 == -256 && (this.anInt3474 & 255) == 0) {
-          if (GlobalStatics_0.stereo) {
-            var2 = GlobalStatics_11.method435(
+          if (AudioStatics.STEREO) {
+            var2 = AudioStreamEncoder1Statics.method435(
                 ((SomethingMusic0) this.aClass3_Sub12_2544).aByteArray3030,
                 samples,
                 this.anInt3474, var2, this.anInt3484, this.anInt3481,
@@ -695,15 +693,15 @@ public final class AudioStreamEncoder1 extends AudioStreamEncoder {
                 this.anInt3483,
                 0, var6, var3, this);
           } else {
-            var2 = GlobalStatics_11.method427(
+            var2 = AudioStreamEncoder1Statics.method427(
                 ((SomethingMusic0) this.aClass3_Sub12_2544).aByteArray3030,
                 samples,
                 this.anInt3474, var2, this.anInt3476, this.anInt3472, 0, var6,
                 var3, this);
           }
-        } else if (GlobalStatics_0.stereo) {
+        } else if (AudioStatics.STEREO) {
           var2 =
-              GlobalStatics_11.method440(0, 0,
+              AudioStreamEncoder1Statics.method440(0, 0,
                   ((SomethingMusic0) this.aClass3_Sub12_2544).aByteArray3030,
                   samples,
                   this.anInt3474, var2, this.anInt3484, this.anInt3481,
@@ -712,7 +710,7 @@ public final class AudioStreamEncoder1 extends AudioStreamEncoder {
                   0, var6, var3, this, this.anInt3470, var5);
         } else {
           var2 =
-              GlobalStatics_11.method448(0, 0,
+              AudioStreamEncoder1Statics.method448(0, 0,
                   ((SomethingMusic0) this.aClass3_Sub12_2544).aByteArray3030,
                   samples,
                   this.anInt3474, var2, this.anInt3476, this.anInt3472, 0, var6,
@@ -733,21 +731,21 @@ public final class AudioStreamEncoder1 extends AudioStreamEncoder {
       }
 
       if (this.anInt3470 == -256 && (this.anInt3474 & 255) == 0) {
-        if (GlobalStatics_0.stereo) {
-          return GlobalStatics_11.method447(
+        if (AudioStatics.STEREO) {
+          return AudioStreamEncoder1Statics.method447(
               ((SomethingMusic0) this.aClass3_Sub12_2544).aByteArray3030,
               samples,
               this.anInt3474, var2, this.anInt3484, this.anInt3481, 0, var4,
               var3, this);
         }
 
-        return GlobalStatics_11.method446(
+        return AudioStreamEncoder1Statics.method446(
             ((SomethingMusic0) this.aClass3_Sub12_2544).aByteArray3030, samples,
             this.anInt3474, var2, this.anInt3476, 0, var4, var3, this);
       }
 
-      if (GlobalStatics_0.stereo) {
-        return GlobalStatics_11.method453(0, 0,
+      if (AudioStatics.STEREO) {
+        return AudioStreamEncoder1Statics.method453(0, 0,
             ((SomethingMusic0) this.aClass3_Sub12_2544).aByteArray3030, samples,
             this.anInt3474, var2, this.anInt3484, this.anInt3481, 0, var4, var3,
             this,
@@ -755,7 +753,7 @@ public final class AudioStreamEncoder1 extends AudioStreamEncoder {
             var5);
       }
 
-      return GlobalStatics_11
+      return AudioStreamEncoder1Statics
           .method423(0, 0,
               ((SomethingMusic0) this.aClass3_Sub12_2544).aByteArray3030,
               samples,
@@ -818,9 +816,9 @@ public final class AudioStreamEncoder1 extends AudioStreamEncoder {
 
   public void method449() {
     this.anInt3476 = this.anInt3471;
-    this.anInt3484 = GlobalStatics_11.method452(this.anInt3471,
+    this.anInt3484 = AudioStreamEncoder1Statics.method452(this.anInt3471,
         this.anInt3478);
-    this.anInt3481 = GlobalStatics_11.method454(this.anInt3471,
+    this.anInt3481 = AudioStreamEncoder1Statics.method454(this.anInt3471,
         this.anInt3478);
   }
 
@@ -828,8 +826,8 @@ public final class AudioStreamEncoder1 extends AudioStreamEncoder {
     if (var1 == 0) {
       this.method441(var2, var3);
     } else {
-      int var4 = GlobalStatics_11.method452(var2, var3);
-      int var5 = GlobalStatics_11.method454(var2, var3);
+      int var4 = AudioStreamEncoder1Statics.method452(var2, var3);
+      int var5 = AudioStreamEncoder1Statics.method454(var2, var3);
       if (this.anInt3484 == var4 && this.anInt3481 == var5) {
         this.anInt3480 = 0;
       } else {

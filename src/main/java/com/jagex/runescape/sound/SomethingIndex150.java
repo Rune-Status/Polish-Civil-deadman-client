@@ -1,4 +1,4 @@
-package com.jagex.runescape.model;
+package com.jagex.runescape.sound;
 
 public final class SomethingIndex150 {
 

@@ -1,7 +1,7 @@
 package com.jagex.runescape.statics;
 
 import com.jagex.runescape.cache.FileUnpacker;
-import com.jagex.runescape.model.AudioStreamEncoder4;
+import com.jagex.runescape.sound.audio.AudioStreamEncoder4;
 import com.jagex.runescape.model.BufferedFile;
 import com.jagex.runescape.node.Deque;
 import com.jagex.runescape.opengl.SomethingGl;

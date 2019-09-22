@@ -12,7 +12,6 @@ public final class DummyClass60 {
   public static int[] anIntArray441 = new int[2048];
   public static GameString aClass94_442 =
       GameStringStatics.create("Number of player models in cache:");
-  public static int sampleRate;
   public static GameString aClass94_444 = GameStringStatics.create("<img=1>");
 
   public static void method911(int var0) {

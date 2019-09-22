@@ -6,6 +6,7 @@ java_library(
         "*.java",
         "midi/*.java",
         "effect/*.java",
+        "audio/*.java",
     ]),
     deps = [
         "//src/main/java/com/jagex/runescape/buffer",

@@ -22,9 +22,9 @@ import com.jagex.runescape.model.AbstractImageProducer;
 import com.jagex.runescape.model.AnimationSequence;
 import com.jagex.runescape.model.AnimationSomething;
 import com.jagex.runescape.model.AreaSoundEffect;
-import com.jagex.runescape.model.AudioStreamEncoder1;
-import com.jagex.runescape.model.AudioStreamEncoder2;
-import com.jagex.runescape.model.AudioStreamEncoder4;
+import com.jagex.runescape.sound.audio.AudioStreamEncoder1;
+import com.jagex.runescape.sound.audio.AudioStreamEncoder2;
+import com.jagex.runescape.sound.audio.AudioStreamEncoder4;
 import com.jagex.runescape.model.BitVariable;
 import com.jagex.runescape.model.BufferedFile;
 import com.jagex.runescape.model.ByteArrayNode;
@@ -69,7 +69,6 @@ import com.jagex.runescape.model.SomethingPacket151;
 import com.jagex.runescape.model.SomethingQuickChat;
 import com.jagex.runescape.model.SomethingQuickChatK;
 import com.jagex.runescape.model.SomethingTexture3;
-import com.jagex.runescape.model.SomethingVolume15;
 import com.jagex.runescape.model.SomethingWorldMapy;
 import com.jagex.runescape.model.SpawnedGameObject;
 import com.jagex.runescape.model.SpotAnimationConfig;
@@ -5143,16 +5142,6 @@ public class GlobalStatics_9 {
     }
 
     GlobalStatics_9.aClass94_995 = null;
-  }
-
-  public static SomethingVolume15 method1245(int var0, FileUnpacker var1,
-      int var2) {
-    if (var0 <= 12) {
-      GlobalStatics_9.anInt1002 = 107;
-    }
-
-    byte[] var3 = var1.getBytes(var2);
-    return var3 != null ? new SomethingVolume15(var3) : null;
   }
 
   public static void method1250(int var0, boolean var1) {

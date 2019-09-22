@@ -1,16 +1,14 @@
-package com.jagex.runescape.model;
+package com.jagex.runescape.sound.audio;
 
 import com.jagex.runescape.cache.FileUnpacker;
 import com.jagex.runescape.common.HashTable;
+import com.jagex.runescape.sound.SomethingIndex150;
+import com.jagex.runescape.sound.SomethingMusic0;
+import com.jagex.runescape.sound.SomethingVolume;
 import com.jagex.runescape.sound.midi.MidiFile;
 import com.jagex.runescape.sound.midi.MidiSomething;
 import com.jagex.runescape.sound.midi.SomethingMidiFile;
 import com.jagex.runescape.sound.midi.SomethingMidiFile0;
-import com.jagex.runescape.sound.SomethingMusic0;
-import com.jagex.runescape.statics.DummyClass60;
-import com.jagex.runescape.statics.GlobalStatics_11;
-import com.jagex.runescape.statics.GlobalStatics_6;
-import com.jagex.runescape.statics.GlobalStatics_9;
 
 public final class AudioStreamEncoder4 extends AudioStreamEncoder {
 
@@ -71,10 +69,10 @@ public final class AudioStreamEncoder4 extends AudioStreamEncoder {
         var9 != null;
         var9 = (SomethingMidiFile) var1.aClass130_2564.getNext(-107)) {
       int var10 = (int) var9.key;
-      SomethingVolume15 var11 = (SomethingVolume15) this.aClass130_3508.get(
+      SomethingVolume var11 = (SomethingVolume) this.aClass130_3508.get(
           var10);
       if (var11 == null) {
-        var11 = GlobalStatics_9.method1245(117, var3, var10);
+        var11 = AudioStreamEncoder4Statics.method1245(117, var3, var10);
         if (var11 == null) {
           var6 = false;
           continue;
@@ -97,10 +95,10 @@ public final class AudioStreamEncoder4 extends AudioStreamEncoder {
 
   public synchronized void method471(byte var1) {
     if (var1 == 53) {
-      for (SomethingVolume15 var2 = (SomethingVolume15) this.aClass130_3508
+      for (SomethingVolume var2 = (SomethingVolume) this.aClass130_3508
           .getFirst(75);
           var2 != null;
-          var2 = (SomethingVolume15) this.aClass130_3508.getNext(-117)) {
+          var2 = (SomethingVolume) this.aClass130_3508.getNext(-117)) {
         var2.method369((byte) -124);
       }
 
@@ -162,7 +160,7 @@ public final class AudioStreamEncoder4 extends AudioStreamEncoder {
   public synchronized void method413(int[] var1, int var2, int var3) {
     if (this.aClass78_3505.method1373()) {
       int var4 = this.aClass78_3505.anInt1116 * this.anInt3511
-          / DummyClass60.sampleRate;
+          / AudioStreamEncoder3Statics.sampleRate;
 
       while (true) {
         long var5 = this.aLong3526 + (long) var3 * var4;
@@ -195,7 +193,7 @@ public final class AudioStreamEncoder4 extends AudioStreamEncoder {
   public synchronized void method415(int var1) {
     if (this.aClass78_3505.method1373()) {
       int var2 = this.aClass78_3505.anInt1116 * this.anInt3511
-          / DummyClass60.sampleRate;
+          / AudioStreamEncoder3Statics.sampleRate;
 
       while (true) {
         long var3 = this.aLong3526 + (long) var1 * var2;
@@ -228,9 +226,6 @@ public final class AudioStreamEncoder4 extends AudioStreamEncoder {
 
   public synchronized void method479(byte var1, int var2, int var3) {
     this.method472(var3, var2, 85);
-    if (var1 != 98) {
-      GlobalStatics_6.aBooleanArray3503 = null;
-    }
   }
 
   private void method480(int var1, int var2) {
@@ -267,7 +262,8 @@ public final class AudioStreamEncoder4 extends AudioStreamEncoder {
             .getNext()) {
       if (var2 < 0 || var4.anInt2514 == var2) {
         if (var4.aClass3_Sub24_Sub1_2507 != null) {
-          var4.aClass3_Sub24_Sub1_2507.method417(DummyClass60.sampleRate / 100);
+          var4.aClass3_Sub24_Sub1_2507.method417(
+              AudioStreamEncoder3Statics.sampleRate / 100);
           if (var4.aClass3_Sub24_Sub1_2507.method445()) {
             this.aClass3_Sub24_Sub3_3527.aClass3_Sub24_Sub2_3495.method457(
                 var4.aClass3_Sub24_Sub1_2507);
@@ -322,10 +318,10 @@ public final class AudioStreamEncoder4 extends AudioStreamEncoder {
   }
 
   public synchronized void method485(int var1) {
-    for (SomethingVolume15 var2 = (SomethingVolume15) this.aClass130_3508
+    for (SomethingVolume var2 = (SomethingVolume) this.aClass130_3508
         .getFirst(63);
         var2 != null;
-        var2 = (SomethingVolume15) this.aClass130_3508.getNext(-106)) {
+        var2 = (SomethingVolume) this.aClass130_3508.getNext(-106)) {
       var2.unlinkNode();
     }
   }
@@ -353,8 +349,8 @@ public final class AudioStreamEncoder4 extends AudioStreamEncoder {
       }
     }
 
-    SomethingVolume15 var11 =
-        (SomethingVolume15) this.aClass130_3508.get(this.anIntArray3515[var2]);
+    SomethingVolume var11 =
+        (SomethingVolume) this.aClass130_3508.get(this.anIntArray3515[var2]);
     if (var11 != null) {
       SomethingMusic0 var12 = var11.aClass3_Sub12_Sub1Array2431[var4];
       if (var12 != null) {
@@ -377,12 +373,12 @@ public final class AudioStreamEncoder4 extends AudioStreamEncoder {
         var7.anInt2501 = 0;
         if (this.anIntArray3519[var2] == 0) {
           var7.aClass3_Sub24_Sub1_2507 =
-              GlobalStatics_11.method432(var12,
+              AudioStreamEncoder3Statics.method432(var12,
                   this.method498((byte) 85, var7),
                   this.method508((byte) 36, var7), this.method496(0, var7));
         } else {
           var7.aClass3_Sub24_Sub1_2507 =
-              GlobalStatics_11.method432(var12,
+              AudioStreamEncoder3Statics.method432(var12,
                   this.method498((byte) 85, var7), 0,
                   this.method496(0, var7));
           this.method501(var7, var11.aShortArray2434[var4] < 0, (byte) -114);
@@ -641,7 +637,7 @@ public final class AudioStreamEncoder4 extends AudioStreamEncoder {
       AudioSomethingSomething var3,
       byte var4,
       int[] var5) {
-    var3.anInt2512 = DummyClass60.sampleRate / 100;
+    var3.anInt2512 = AudioStreamEncoder3Statics.sampleRate / 100;
     if (var3.anInt2506 >= 0 && (var3.aClass3_Sub24_Sub1_2507 == null
         || var3.aClass3_Sub24_Sub1_2507.method444())) {
       var3.method401(221);
@@ -916,7 +912,7 @@ public final class AudioStreamEncoder4 extends AudioStreamEncoder {
 
     var5 = (int) (0.5D
         + (256 * var2.aClass3_Sub12_Sub1_2509.anInt3034) * Math.pow(2.0D,
-        var3 * 3.255208333333333E-4D) / DummyClass60.sampleRate);
+        var3 * 3.255208333333333E-4D) / AudioStreamEncoder3Statics.sampleRate);
     if (var1 != 85) {
       this.method414();
     }

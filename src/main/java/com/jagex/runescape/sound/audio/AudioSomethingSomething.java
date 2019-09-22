@@ -1,8 +1,9 @@
-package com.jagex.runescape.model;
+package com.jagex.runescape.sound.audio;
 
+import com.jagex.runescape.sound.SomethingIndex150;
+import com.jagex.runescape.sound.SomethingVolume;
 import com.jagex.runescape.node.Node;
 import com.jagex.runescape.sound.SomethingMusic0;
-import com.jagex.runescape.statics.GlobalStatics_6;
 
 public final class AudioSomethingSomething extends Node {
 
@@ -26,16 +27,13 @@ public final class AudioSomethingSomething extends Node {
   public int anInt2520;
   public int anInt2522;
   public int anInt2523;
-  public SomethingVolume15 aClass3_Sub15_2527;
+  public SomethingVolume aClass3_Sub15_2527;
 
   public void method401(int var1) {
     this.aClass166_2504 = null;
     this.aClass3_Sub12_Sub1_2509 = null;
     this.aClass3_Sub24_Sub1_2507 = null;
     this.aClass3_Sub15_2527 = null;
-    if (var1 != 221) {
-      GlobalStatics_6.aClass94_2518 = null;
-    }
   }
 
 }

@@ -1,8 +1,6 @@
-package com.jagex.runescape.model;
+package com.jagex.runescape.sound.audio;
 
 import com.jagex.runescape.node.Deque;
-import com.jagex.runescape.statics.DummyClass60;
-import com.jagex.runescape.statics.GlobalStatics_11;
 
 public final class AudioStreamEncoder3 extends AudioStreamEncoder {
 
@@ -19,19 +17,19 @@ public final class AudioStreamEncoder3 extends AudioStreamEncoder {
         && var1.anInt2506 < 0) {
       int var4 =
           this.aClass3_Sub24_Sub4_3493.anIntArray3509[var1.anInt2514]
-              / DummyClass60.sampleRate;
+              / AudioStreamEncoder3Statics.sampleRate;
       int var5 = (var4 + 1048575 - var1.anInt2516) / var4;
       var1.anInt2516 = 1048575 & var4 * var3 + var1.anInt2516;
       if (var3 >= var5) {
         if (this.aClass3_Sub24_Sub4_3493.anIntArray3519[var1.anInt2514] == 0) {
           var1.aClass3_Sub24_Sub1_2507 =
-              GlobalStatics_11.method432(var1.aClass3_Sub12_Sub1_2509,
+              AudioStreamEncoder3Statics.method432(var1.aClass3_Sub12_Sub1_2509,
                   var1.aClass3_Sub24_Sub1_2507.method438(),
                   var1.aClass3_Sub24_Sub1_2507.method425(),
                   var1.aClass3_Sub24_Sub1_2507.method451());
         } else {
           var1.aClass3_Sub24_Sub1_2507 =
-              GlobalStatics_11.method432(var1.aClass3_Sub12_Sub1_2509,
+              AudioStreamEncoder3Statics.method432(var1.aClass3_Sub12_Sub1_2509,
                   var1.aClass3_Sub24_Sub1_2507.method438(), 0,
                   var1.aClass3_Sub24_Sub1_2507.method451());
           this.aClass3_Sub24_Sub4_3493.method501(var1,
@@ -151,7 +149,7 @@ public final class AudioStreamEncoder3 extends AudioStreamEncoder {
         && var2.anInt2506 < 0) {
       int var7 =
           this.aClass3_Sub24_Sub4_3493.anIntArray3509[var2.anInt2514]
-              / DummyClass60.sampleRate;
+              / AudioStreamEncoder3Statics.sampleRate;
 
       while (true) {
         int var8 = (-var2.anInt2516 + 1048575 + var7) / var7;
@@ -162,7 +160,7 @@ public final class AudioStreamEncoder3 extends AudioStreamEncoder {
 
         var4 -= var8;
         var2.aClass3_Sub24_Sub1_2507.method413(var1, var3, var8);
-        int var9 = DummyClass60.sampleRate / 100;
+        int var9 = AudioStreamEncoder3Statics.sampleRate / 100;
         AudioStreamEncoder1 var11 = var2.aClass3_Sub24_Sub1_2507;
         int var10 = 262144 / var7;
         if (var10 < var9) {
@@ -172,12 +170,12 @@ public final class AudioStreamEncoder3 extends AudioStreamEncoder {
         var2.anInt2516 += var7 * var8 - 1048576;
         if (this.aClass3_Sub24_Sub4_3493.anIntArray3519[var2.anInt2514] == 0) {
           var2.aClass3_Sub24_Sub1_2507 =
-              GlobalStatics_11
+              AudioStreamEncoder3Statics
                   .method432(var2.aClass3_Sub12_Sub1_2509, var11.method438(),
                       var11.method425(), var11.method451());
         } else {
           var2.aClass3_Sub24_Sub1_2507 =
-              GlobalStatics_11
+              AudioStreamEncoder3Statics
                   .method432(var2.aClass3_Sub12_Sub1_2509, var11.method438(),
                       0,
                       var11.method451());

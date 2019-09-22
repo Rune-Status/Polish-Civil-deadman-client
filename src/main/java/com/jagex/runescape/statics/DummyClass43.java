@@ -4,6 +4,9 @@ import com.jagex.runescape.cache.FileUnpacker;
 import com.jagex.runescape.common.GameString;
 import com.jagex.runescape.common.GameStringStatics;
 import com.jagex.runescape.model.AbstractAudioOutputStream;
+import com.jagex.runescape.model.AbstractAudioOutputStreamStatics;
+import com.jagex.runescape.sound.audio.AudioStatics;
+import com.jagex.runescape.sound.audio.AudioStreamEncoder3Statics;
 import com.jagex.runescape.model.AudioWorker;
 import com.jagex.runescape.model.Interface4;
 import com.jagex.runescape.model.OndemandRequester;
@@ -47,7 +50,7 @@ public final class DummyClass43 {
       SignLink var1,
       Component var2, int var3,
       int var4) {
-    if (DummyClass60.sampleRate == 0) {
+    if (AudioStreamEncoder3Statics.sampleRate == 0) {
       throw new IllegalStateException();
     } else if (var3 >= 0 && var3 < 2) {
       if (var0 < 256) {
@@ -60,28 +63,27 @@ public final class DummyClass43 {
                 "com.jagex.runescape.model.BufferedAudioOutputStream")
                 .newInstance();
         var9.sampleRate = var0;
-        var9.samples = new int[(GlobalStatics_0.stereo ? 2 : 1) * 256];
-        var9.bind(var2);
+        var9.samples = new int[(AudioStatics.STEREO ? 2 : 1) * 256];
         var9.sampleBufferSize = (var0 & 0xfffffc00) + 1024;
         if (var9.sampleBufferSize > 16384) {
           var9.sampleBufferSize = 16384;
         }
 
         var9.setBufferSize(var9.sampleBufferSize);
-        if (GlobalStatics_6.anInt3507 > 0 && DummyClass36.aClass15_2613
+        if (GlobalStatics_6.anInt3507 > 0 && AbstractAudioOutputStreamStatics.aClass15_2613
             == null) {
-          DummyClass36.aClass15_2613 = new AudioWorker();
-          DummyClass36.aClass15_2613.aClass87_350 = var1;
+          AbstractAudioOutputStreamStatics.aClass15_2613 = new AudioWorker();
+          AbstractAudioOutputStreamStatics.aClass15_2613.aClass87_350 = var1;
           var1.createThread(0, GlobalStatics_6.anInt3507,
-              DummyClass36.aClass15_2613);
+              AbstractAudioOutputStreamStatics.aClass15_2613);
         }
 
-        if (DummyClass36.aClass15_2613 != null) {
-          if (DummyClass36.aClass15_2613.aClass155Array352[var3] != null) {
+        if (AbstractAudioOutputStreamStatics.aClass15_2613 != null) {
+          if (AbstractAudioOutputStreamStatics.aClass15_2613.aClass155Array352[var3] != null) {
             throw new IllegalArgumentException();
           }
 
-          DummyClass36.aClass15_2613.aClass155Array352[var3] = var9;
+          AbstractAudioOutputStreamStatics.aClass15_2613.aClass155Array352[var3] = var9;
         }
 
         return var9;
@@ -93,25 +95,25 @@ public final class DummyClass43 {
         try {
           SignLinkAudioOutputStream var5 = new SignLinkAudioOutputStream(var1,
               var3);
-          var5.samples = new int[256 * (GlobalStatics_0.stereo ? 2 : 1)];
+          var5.samples = new int[256 * (AudioStatics.STEREO ? 2 : 1)];
           var5.sampleRate = var0;
           var5.bind(var2);
           var5.sampleBufferSize = 16384;
           var5.setBufferSize(var5.sampleBufferSize);
           if (GlobalStatics_6.anInt3507 > 0 &&
-              DummyClass36.aClass15_2613 == null) {
-            DummyClass36.aClass15_2613 = new AudioWorker();
-            DummyClass36.aClass15_2613.aClass87_350 = var1;
+              AbstractAudioOutputStreamStatics.aClass15_2613 == null) {
+            AbstractAudioOutputStreamStatics.aClass15_2613 = new AudioWorker();
+            AbstractAudioOutputStreamStatics.aClass15_2613.aClass87_350 = var1;
             var1.createThread(var4 ^ 14, GlobalStatics_6.anInt3507,
-                DummyClass36.aClass15_2613);
+                AbstractAudioOutputStreamStatics.aClass15_2613);
           }
 
-          if (DummyClass36.aClass15_2613 != null) {
-            if (DummyClass36.aClass15_2613.aClass155Array352[var3] != null) {
+          if (AbstractAudioOutputStreamStatics.aClass15_2613 != null) {
+            if (AbstractAudioOutputStreamStatics.aClass15_2613.aClass155Array352[var3] != null) {
               throw new IllegalArgumentException();
             }
 
-            DummyClass36.aClass15_2613.aClass155Array352[var3] = var5;
+            AbstractAudioOutputStreamStatics.aClass15_2613.aClass155Array352[var3] = var5;
           }
 
           return var5;

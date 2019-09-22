@@ -1,7 +1,8 @@
 package com.jagex.runescape.model;
 
-import com.jagex.runescape.statics.DummyClass60;
-import com.jagex.runescape.statics.GlobalStatics_0;
+import com.jagex.runescape.model.AbstractAudioOutputStream;
+import com.jagex.runescape.sound.audio.AudioStatics;
+import com.jagex.runescape.sound.audio.AudioStreamEncoder3Statics;
 import java.awt.Component;
 import javax.sound.midi.MidiSystem;
 import javax.sound.midi.MidiUnavailableException;
@@ -29,7 +30,7 @@ public final class BufferedAudioOutputStream extends AbstractAudioOutputStream {
     }
     synthesizer.getLatency();
     int sampleLen = 256;
-    if (GlobalStatics_0.stereo) {
+    if (AudioStatics.STEREO) {
       sampleLen <<= 1;
     }
     for (int i = 0; i < sampleLen; ++i) {
@@ -50,7 +51,7 @@ public final class BufferedAudioOutputStream extends AbstractAudioOutputStream {
     javax.sound.sampled.DataLine.Info var2 =
         new javax.sound.sampled.DataLine.Info(SourceDataLine.class,
             this.audioFormat,
-            bufferSize << (GlobalStatics_0.stereo ? 2 : 1));
+            bufferSize << (AudioStatics.STEREO ? 2 : 1));
     this.sourceDataLine = (SourceDataLine) AudioSystem.getLine(var2);
     this.sourceDataLine.open();
     this.sourceDataLine.start();
@@ -65,7 +66,7 @@ public final class BufferedAudioOutputStream extends AbstractAudioOutputStream {
       javax.sound.sampled.DataLine.Info var1 =
           new javax.sound.sampled.DataLine.Info(SourceDataLine.class,
               this.audioFormat,
-              this.bufferSize << (GlobalStatics_0.stereo ? 2 : 1));
+              this.bufferSize << (AudioStatics.STEREO ? 2 : 1));
       this.sourceDataLine = (SourceDataLine) AudioSystem.getLine(var1);
       this.sourceDataLine.open();
       this.sourceDataLine.start();
@@ -75,7 +76,7 @@ public final class BufferedAudioOutputStream extends AbstractAudioOutputStream {
 
   public int getAmountBufferedSamples() {
     return this.bufferSize - (this.sourceDataLine.available() >> (
-        GlobalStatics_0.stereo ? 2 : 1));
+        AudioStatics.STEREO ? 2 : 1));
   }
 
   public void close() {
@@ -101,8 +102,8 @@ public final class BufferedAudioOutputStream extends AbstractAudioOutputStream {
     }
 
     this.audioFormat =
-        new AudioFormat(DummyClass60.sampleRate, 16,
-            GlobalStatics_0.stereo ? 2 : 1, true, false);
-    this.buffer = new byte[256 << (GlobalStatics_0.stereo ? 2 : 1)];
+        new AudioFormat(AudioStreamEncoder3Statics.sampleRate, 16,
+            AudioStatics.STEREO ? 2 : 1, true, false);
+    this.buffer = new byte[256 << (AudioStatics.STEREO ? 2 : 1)];
   }
 }

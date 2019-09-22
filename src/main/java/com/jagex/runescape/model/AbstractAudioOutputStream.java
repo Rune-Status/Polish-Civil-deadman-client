@@ -3,12 +3,11 @@ package com.jagex.runescape.model;
 import com.jagex.runescape.common.ArrayUtils;
 import com.jagex.runescape.common.ThreadUtilities;
 import com.jagex.runescape.common.TimeUtilities;
+import com.jagex.runescape.model.AbstractAudioOutputStreamStatics;
 import com.jagex.runescape.sound.AbstractSomethingMusic;
-import com.jagex.runescape.statics.DummyClass36;
-import com.jagex.runescape.statics.DummyClass60;
-import com.jagex.runescape.statics.GlobalStatics_0;
-import com.jagex.runescape.statics.GlobalStatics_10;
-import java.awt.Component;
+import com.jagex.runescape.sound.audio.AudioStatics;
+import com.jagex.runescape.sound.audio.AudioStreamEncoder;
+import com.jagex.runescape.sound.audio.AudioStreamEncoder3Statics;
 import javax.sound.sampled.LineUnavailableException;
 
 public class AbstractAudioOutputStream {
@@ -41,15 +40,15 @@ public class AbstractAudioOutputStream {
 
   private void fill(int[] samples, int len) {
     int length = len;
-    if (GlobalStatics_0.stereo) {
+    if (AudioStatics.STEREO) {
       length = len << 1;
     }
 
     ArrayUtils.clear(samples, 0, length);
     this.anInt1987 -= len;
     if (this.aClass3_Sub24_1973 != null && this.anInt1987 <= 0) {
-      this.anInt1987 += DummyClass60.sampleRate >> 4;
-      GlobalStatics_10.method1591(this.aClass3_Sub24_1973);
+      this.anInt1987 += AudioStreamEncoder3Statics.sampleRate >> 4;
+      AbstractAudioOutputStreamStatics.method1591(this.aClass3_Sub24_1973);
       this.method2155(this.aClass3_Sub24_1973,
           this.aClass3_Sub24_1973.method412(), (byte) -24);
       int var4 = 0;
@@ -230,7 +229,7 @@ public class AbstractAudioOutputStream {
 
         while (start > this.aLong1972 + 5000L) {
           this.method2161(256, 1);
-          this.aLong1972 += 256000 / DummyClass60.sampleRate;
+          this.aLong1972 += 256000 / AudioStreamEncoder3Statics.sampleRate;
         }
       } catch (Exception var6) {
         this.aLong1972 = start;
@@ -298,35 +297,34 @@ public class AbstractAudioOutputStream {
   }
 
   public final synchronized void method2163(boolean var1) {
-    if (DummyClass36.aClass15_2613 != null) {
+    if (AbstractAudioOutputStreamStatics.aClass15_2613 != null) {
       boolean var2 = true;
 
       for (int var3 = 0; var3 < 2; ++var3) {
-        if (this == DummyClass36.aClass15_2613.aClass155Array352[var3]) {
-          DummyClass36.aClass15_2613.aClass155Array352[var3] = null;
+        if (this
+            == AbstractAudioOutputStreamStatics.aClass15_2613.aClass155Array352[var3]) {
+          AbstractAudioOutputStreamStatics.aClass15_2613.aClass155Array352[var3] = null;
         }
 
-        if (DummyClass36.aClass15_2613.aClass155Array352[var3] != null) {
+        if (AbstractAudioOutputStreamStatics.aClass15_2613.aClass155Array352[var3]
+            != null) {
           var2 = false;
         }
       }
 
       if (var2) {
-        DummyClass36.aClass15_2613.aBoolean345 = true;
+        AbstractAudioOutputStreamStatics.aClass15_2613.aBoolean345 = true;
 
-        while (DummyClass36.aClass15_2613.aBoolean353) {
+        while (AbstractAudioOutputStreamStatics.aClass15_2613.aBoolean353) {
           ThreadUtilities.sleep(50L);
         }
 
-        DummyClass36.aClass15_2613 = null;
+        AbstractAudioOutputStreamStatics.aClass15_2613 = null;
       }
     }
 
     this.close();
     this.samples = null;
-  }
-
-  public void bind(Component var1) throws Exception {
   }
 
 }

@@ -4,11 +4,11 @@ import com.jagex.runescape.common.GameString;
 import com.jagex.runescape.common.GameStringStatics;
 import com.jagex.runescape.common.MathUtilities;
 import com.jagex.runescape.model.AbstractDirectColorSprite;
-import com.jagex.runescape.model.AudioWorker;
 import com.jagex.runescape.model.SoftwareDirectColorSprite;
 import com.jagex.runescape.model.Widget;
 import com.jagex.runescape.opengl.GlDirectColorSprite;
 import com.jagex.runescape.opengl.GlRenderer;
+import com.jagex.runescape.model.AbstractAudioOutputStreamStatics;
 
 public final class DummyClass36 {
 
@@ -16,7 +16,6 @@ public final class DummyClass36 {
   public static GameString aClass94_2610 = GameStringStatics.create(")1o");
   public static String aString2611;
   public static int anInt2612;
-  public static AudioWorker aClass15_2613;
   public static int anInt2614;
   public static boolean aBoolean2615;
   public static GameString aClass94_2616 = GameStringStatics
@@ -73,7 +72,7 @@ public final class DummyClass36 {
     DummyClass36.aString2611 = null;
     DummyClass36.aClass94_2616 = null;
     DummyClass36.aClass94_2610 = null;
-    DummyClass36.aClass15_2613 = null;
+    AbstractAudioOutputStreamStatics.aClass15_2613 = null;
     if (var0) {
       DummyClass36.clear87(true);
     }

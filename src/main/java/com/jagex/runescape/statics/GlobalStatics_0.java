@@ -14,7 +14,8 @@ import com.jagex.runescape.model.AbstractFrameRegulator;
 import com.jagex.runescape.model.AbstractTextureSampler;
 import com.jagex.runescape.model.AnimationSequence;
 import com.jagex.runescape.model.AreaSoundEffect;
-import com.jagex.runescape.model.AudioStreamEncoder4;
+import com.jagex.runescape.sound.audio.AudioStatics;
+import com.jagex.runescape.sound.audio.AudioStreamEncoder4;
 import com.jagex.runescape.model.BlockConfig;
 import com.jagex.runescape.model.CollisionMap;
 import com.jagex.runescape.model.DisplayMode;
@@ -129,7 +130,6 @@ public final class GlobalStatics_0 {
   public static GameString aClass94_2151 = GlobalStatics_0.aClass94_2158;
   public static int anInt2145;
   public static int packetId;
-  public static boolean stereo;
   public static boolean aBoolean2154;
   public static int[] anIntArray2157 = new int[50];
   public static GameString aClass94_2149 = GameStringStatics.create(
@@ -1090,7 +1090,7 @@ public final class GlobalStatics_0 {
     }
 
     if (!var7) {
-      GlobalStatics_0.stereo = true;
+      AudioStatics.STEREO = true;
     }
 
     return true;

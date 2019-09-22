@@ -24,6 +24,9 @@ import com.jagex.runescape.opengl.SomethingShadows;
 import com.jagex.runescape.opengl.Texture;
 import com.jagex.runescape.opengl.WaterShader;
 import com.jagex.runescape.settings.SettingsStatics;
+import com.jagex.runescape.sound.audio.AudioStreamEncoder2;
+import com.jagex.runescape.sound.audio.AudioStreamEncoder3Statics;
+import com.jagex.runescape.sound.audio.AudioStreamEncoder4;
 import com.jagex.runescape.sound.SomethingAudio;
 import com.jagex.runescape.statics.DummyClass1;
 import com.jagex.runescape.statics.DummyClass10;
@@ -568,7 +571,7 @@ public final class GameClient extends GameStub {
           GlobalStatics_9.audioOutputStream1.method2154(-128,
               GlobalStatics_9.aClass3_Sub24_Sub2_2563);
           DummyClass32.aClass157_524 = new SomethingAudio(22050,
-              DummyClass60.sampleRate);
+              AudioStreamEncoder3Statics.sampleRate);
           GlobalStatics_9.openingMusicFileId =
               GlobalStatics_9.fileUnpacker6
                   .getFileId(DummyClass3.openingMusic);

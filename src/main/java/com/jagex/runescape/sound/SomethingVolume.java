@@ -1,12 +1,10 @@
-package com.jagex.runescape.model;
+package com.jagex.runescape.sound;
 
 import com.jagex.runescape.buffer.Buffer;
 import com.jagex.runescape.node.Node;
 import com.jagex.runescape.sound.midi.MidiSomething;
-import com.jagex.runescape.sound.SomethingMusic0;
-import com.jagex.runescape.statics.GlobalStatics_10;
 
-public final class SomethingVolume15 extends Node {
+public final class SomethingVolume extends Node {
 
   public byte[] aByteArray2422;
   public int anInt2424;
@@ -17,10 +15,10 @@ public final class SomethingVolume15 extends Node {
   public SomethingIndex150[] aClass166Array2435;
   private int[] anIntArray2423;
 
-  public SomethingVolume15() {
+  public SomethingVolume() {
   }
 
-  public SomethingVolume15(byte[] var1) {
+  public SomethingVolume(byte[] var1) {
     this.aShortArray2434 = new short[128];
     this.aByteArray2430 = new byte[128];
     this.aClass3_Sub12_Sub1Array2431 = new SomethingMusic0[128];
@@ -343,7 +341,7 @@ public final class SomethingVolume15 extends Node {
         var32 = (var30 - var48) * var46 + (var30 - var48) / 2;
 
         for (var33 = var48; var33 < var30; ++var33) {
-          var34 = GlobalStatics_10.method319(var32, -125, -var48 + var30);
+          var34 = SomethingVolumeStatics.method319(var32, -var48 + var30);
           var32 += var31 - var46;
           this.aByteArray2430[var33] = (byte) (
               var34 * this.aByteArray2430[var33] + 32 >> 6);
@@ -393,7 +391,7 @@ public final class SomethingVolume15 extends Node {
         var29 += 2;
 
         for (var33 = var48; var30 > var33; ++var33) {
-          var34 = GlobalStatics_10.method319(var32, -116, -var48 + var30);
+          var34 = SomethingVolumeStatics.method319(var32, -var48 + var30);
           var32 += -var47 + var45;
           int var35 = var34 + (this.aByteArray2422[var33] & 255);
           if (var35 < 0) {

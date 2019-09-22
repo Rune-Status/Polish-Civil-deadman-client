@@ -1,7 +1,7 @@
 package com.jagex.runescape.model;
 
-import com.jagex.runescape.statics.DummyClass60;
-import com.jagex.runescape.statics.GlobalStatics_0;
+import com.jagex.runescape.sound.audio.AudioStatics;
+import com.jagex.runescape.sound.audio.AudioStreamEncoder3Statics;
 import com.jagex.runescape.statics.GlobalStatics_3;
 import java.awt.Component;
 
@@ -43,8 +43,8 @@ public final class SignLinkAudioOutputStream extends AbstractAudioOutputStream {
 
   public void bind(Component var1) throws Exception {
     GlobalStatics_3.anInterface1_2970
-        .method5(DummyClass60.sampleRate, (byte) -39, var1,
-            GlobalStatics_0.stereo);
+        .method5(AudioStreamEncoder3Statics.sampleRate, (byte) -39, var1,
+            AudioStatics.STEREO);
   }
 
 }

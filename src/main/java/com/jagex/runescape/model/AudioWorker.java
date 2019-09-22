@@ -1,7 +1,6 @@
 package com.jagex.runescape.model;
 
 import com.jagex.runescape.common.ThreadUtilities;
-import com.jagex.runescape.statics.GlobalStatics_9;
 
 public final class AudioWorker implements Runnable {
 
@@ -24,8 +23,8 @@ public final class AudioWorker implements Runnable {
 
         ThreadUtilities.sleep(10L);
       }
-    } catch (Exception var7) {
-      GlobalStatics_9.reportError(null, var7, (byte) 111);
+    } catch (Exception exception) {
+      exception.printStackTrace();
     } finally {
       this.aBoolean353 = false;
     }

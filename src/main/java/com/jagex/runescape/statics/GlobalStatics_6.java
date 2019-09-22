@@ -15,7 +15,7 @@ import com.jagex.runescape.model.AbstractModel;
 import com.jagex.runescape.model.AnimationSequence;
 import com.jagex.runescape.model.AnimationSomething;
 import com.jagex.runescape.model.AreaSoundEffect;
-import com.jagex.runescape.model.AudioStreamEncoder1;
+import com.jagex.runescape.sound.audio.AudioStreamEncoder1;
 import com.jagex.runescape.model.ClanChatUser;
 import com.jagex.runescape.model.ClientScript;
 import com.jagex.runescape.model.FloorUnderlay;

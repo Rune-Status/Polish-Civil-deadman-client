@@ -1,6 +1,7 @@
-package com.jagex.runescape.model;
+package com.jagex.runescape.sound.audio;
 
 import com.jagex.runescape.node.Node;
+import com.jagex.runescape.sound.audio.AudioStreamEncoder2;
 
 public abstract class SomeNode_0 extends Node {
 

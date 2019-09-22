@@ -1,6 +1,7 @@
 package com.jagex.runescape.model;
 
 import com.jagex.runescape.node.Node;
+import com.jagex.runescape.sound.audio.AudioStreamEncoder1;
 import com.jagex.runescape.statics.DummyClass50;
 import com.jagex.runescape.statics.GlobalStatics_9;
 

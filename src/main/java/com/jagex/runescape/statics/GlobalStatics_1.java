@@ -93,17 +93,6 @@ public class GlobalStatics_1 {
     GlobalStatics_9.anInt2291 = 1;
   }
 
-  public static void addLast(Node first, Node second) {
-    if (first.prevNode != null) {
-      first.unlinkNode();
-    }
-
-    first.nextNode = second;
-    first.prevNode = second.prevNode;
-    first.prevNode.nextNode = first;
-    first.nextNode.prevNode = first;
-  }
-
   public static void clear80(int var0) {
     GlobalStatics_1.aClass94_1466 = null;
     if (var0 != 33) {

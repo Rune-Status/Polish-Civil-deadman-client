@@ -16,7 +16,7 @@ import com.jagex.runescape.model.AbstractImageProducer;
 import com.jagex.runescape.model.AbstractModel;
 import com.jagex.runescape.model.AnimationSomething;
 import com.jagex.runescape.model.AreaSoundEffect;
-import com.jagex.runescape.model.AudioStreamEncoder;
+import com.jagex.runescape.sound.SomethingVolumeStatics;
 import com.jagex.runescape.model.Cache;
 import com.jagex.runescape.model.ClientScriptCall;
 import com.jagex.runescape.model.ClientScriptEnum;
@@ -306,15 +306,6 @@ public class GlobalStatics_10 {
   public static int anInt1682 = 1;
   public static ObjectCache aClass93_1683 = new ObjectCache(64);
 
-  public static int method319(int var0, int var1, int var2) {
-    if (var1 >= -99) {
-      GlobalStatics_10.aBoolean3387 = true;
-    }
-
-    int var3 = var0 >>> 31;
-    return (var0 + var3) / var2 - var3;
-  }
-
   public static void method320(int var0, int var1, int var2, byte var3,
       int var4) {
     if (var4 <= var2) {
@@ -338,7 +329,7 @@ public class GlobalStatics_10 {
     GlobalStatics_10.aFont3384 = null;
     GameStringStatics.aClass94_3388 = null;
     if (var0 != -21136) {
-      GlobalStatics_10.method319(-38, -96, -102);
+      SomethingVolumeStatics.method319(-38, -102);
     }
   }
 
@@ -4138,19 +4129,6 @@ public class GlobalStatics_10 {
     GlobalStatics_3.animationSequences = animationSequences;
     GlobalStatics_7.animationFrames = animationFrames;
     GlobalStatics_10.animationBases = animationBases;
-  }
-
-  public static void method1591(AudioStreamEncoder encoder) {
-    if (encoder.aClass3_Sub12_2544 != null) {
-      encoder.aClass3_Sub12_2544.anInt2374 = 0;
-    }
-
-    encoder.aBoolean2545 = false;
-
-    for (AudioStreamEncoder var2 = encoder.method411(); var2 != null;
-        var2 = encoder.method414()) {
-      GlobalStatics_10.method1591(var2);
-    }
   }
 
   public static void method1592() {
